@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/seq24
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.20 2005/03/26 14:08:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.21 2005/11/06 03:59:56 matsuu Exp $
+
+*seq24-0.7.0 (06 Nov 2005)
+
+  06 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> -seq24-0.5.1.ebuild,
+  -seq24-0.6.0_rc3.ebuild, -seq24-0.6.0_rc5.ebuild, -seq24-0.6.0.ebuild,
+  -seq24-0.6.1.ebuild, -seq24-0.6.2.ebuild, seq24-0.6.3.ebuild,
+  +seq24-0.7.0.ebuild:
+  Version bumped. Bug 108736.
+  Marked 0.6.3 stable on x86.
+  Removed old versions.
 
 *seq24-0.6.3 (26 Mar 2005)
 

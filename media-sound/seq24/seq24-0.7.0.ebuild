@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.6.1.ebuild,v 1.1 2005/02/26 21:17:29 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.7.0.ebuild,v 1.1 2005/11/06 03:59:56 matsuu Exp $
 
 IUSE="jack"
 DESCRIPTION="Seq24 is a loop based MIDI sequencer with focus on live performances."
@@ -9,14 +9,15 @@ SRC_URI="http://www.filter24.org/seq24/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0
 	=dev-cpp/gtkmm-2.2*
-	jack? ( media-sound/jack-audio-connection-kit )"
+	jack? ( >=media-sound/jack-audio-connection-kit-0.90.0 )"
 
 src_compile() {
 	econf $(use_enable jack jack-support) || die
+	emake || die
 }
 
 src_install() {
