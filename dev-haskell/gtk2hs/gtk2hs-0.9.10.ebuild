@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.1 2005/11/05 16:20:37 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.2 2005/11/06 12:33:24 dcoutts Exp $
 
 inherit base ghc-package multilib
 
@@ -84,7 +84,7 @@ src_install() {
 
 	# build ghci .o files from .a files
 	ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHSglib.a"
-	if use cairo; then
+	if has_version '>=x11-libs/gtk+-2.8'; then
 		ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHScairo.a"
 	fi
 	ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHSgtk.a"
