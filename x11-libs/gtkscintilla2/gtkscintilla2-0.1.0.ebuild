@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.7 2004/10/19 09:07:43 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.8 2005/11/06 10:53:13 blubb Exp $
+
+inherit multilib
 
 MY_P="GtkScintilla2-${PV}"
 DESCRIPTION="Gtk-2 wrappers for the Scintilla source editing components."
@@ -27,7 +29,7 @@ src_unpack() {
 
 	# some quick touches to the Makefile, bump the version
 	# and make use of our CFLAGS
-	GTHREAD_LDFLAGS="$(pkg-config gthread-2.0 --libs)"
+	GTHREAD_LDFLAGS=$(echo "$(pkg-config gthread-2.0 --libs)" | sed 's|/|\\/|g')
 	sed -e "/CFLAGS/s/-g/${CFLAGS} -fPIC/" \
 		-e "s/^LDFLAGS_PRE =/LDFLAGS_PRE = ${GTHREAD_LDFLAGS}/" \
 		-i Makefile
@@ -44,7 +46,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} LIB_DIR=/usr/$(get_libdir) install || die
 	dodoc COPYING README
 
 }
