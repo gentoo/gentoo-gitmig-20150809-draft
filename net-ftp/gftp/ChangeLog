@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.46 2005/10/14 23:05:57 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.47 2005/11/06 05:57:10 obz Exp $
+
+*gftp-2.0.18-r3 (06 Nov 2005)
+
+  06 Nov 2005; Mike Gardiner <obz@gentoo.org>
+  +files/gftp-2.0.18-ssh2-read.patch, +gftp-2.0.18-r3.ebuild:
+  Added revision -r3 with a fix for downloading files over ssh2 that are
+  read-only (non-writable). See bug #91269 and the upstream link.
 
 *gftp-2.0.18-r2 (14 Oct 2005)
 
