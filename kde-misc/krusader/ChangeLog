@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.26 2005/11/05 22:06:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.27 2005/11/06 05:46:41 halcy0n Exp $
+
+  06 Nov 2005; Mark Loeser <halcy0n@gentoo.org> krusader-1.60.1.ebuild:
+  Stable on x86; bug #111076
 
   05 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> krusader-1.60.1.ebuild:
   Readd workaround to avoid a wrongly installed file.

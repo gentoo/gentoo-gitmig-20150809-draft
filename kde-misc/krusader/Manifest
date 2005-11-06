@@ -1,8 +1,18 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 fca1ac57741d1327d8a82d4c4870fc83 krusader-1.60.0.ebuild 1451
-MD5 4d0bb2f6410efd6fda5747b33b9ed8e9 krusader-1.60.1.ebuild 1531
-MD5 0b9ad63cce4d36a0aaf052a6cf684454 ChangeLog 7349
-MD5 7375a40f9959feb71f69a5389f4b875c krusader-1.70.0_beta1.ebuild 1508
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2a5033c04c2ee007a11d112484d4865e ChangeLog 7452
 MD5 5114fe81b3da50dc171889c659b60a34 files/digest-krusader-1.60.0 68
 MD5 197fa5c939ba779dbd4ee97668c43233 files/digest-krusader-1.60.1 68
 MD5 f1bf274c06d0a559f975579ed684bfdf files/digest-krusader-1.70.0_beta1 74
+MD5 fca1ac57741d1327d8a82d4c4870fc83 krusader-1.60.0.ebuild 1451
+MD5 6d77bb6e752d1dc2de0a5b3f416c30ee krusader-1.60.1.ebuild 1531
+MD5 7375a40f9959feb71f69a5389f4b875c krusader-1.70.0_beta1.ebuild 1508
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbZjeCRZPokWLroQRAsR3AJ98I9jsaoiwpe5LNuht9QiiWDJ9wQCdEq41
+uXYmjspJlzxFjkzm8WecJP8=
+=YmCI
+-----END PGP SIGNATURE-----
