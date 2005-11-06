@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.16 2005/11/05 20:07:00 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.17 2005/11/06 16:53:05 greg_g Exp $
+
+  06 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kid3-0.6.ebuild:
+  Forcing KDE support on, as kid3 cannot be configured without having the KDE
+  libraries installed. Also fixes bug #111692.
 
 *kid3-0.6 (05 Nov 2005)
 
