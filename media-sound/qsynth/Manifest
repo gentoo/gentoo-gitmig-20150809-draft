@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3ba3f081208c5d9d84eca8c08e0efce qsynth-0.1.0.ebuild 655
-MD5 8470209196da493fad77f4fabcc6be99 ChangeLog 4219
-MD5 853c6433459ef0e7fee63cf8902f7c0e qsynth-0.2.2.ebuild 668
-MD5 8d4f94b4ae3269e744b39cb0a6ede91f qsynth-0.2.1.ebuild 659
-MD5 bed98f5cc72fd626b638bfcae4593ce6 metadata.xml 647
-MD5 f00be449906448cbfa26ff2dc768103e qsynth-0.2.3.ebuild 668
-MD5 c8736c07a5030eb5fe6ffac7629d16de files/digest-qsynth-0.2.2 64
+MD5 22a68c0791672a2d694208e5f80b5207 ChangeLog 4400
 MD5 fde45970ba4d6681ef829f9fde4b7e72 files/digest-qsynth-0.1.0 63
 MD5 0ad37e882f8d5b9c5e58810f9e646468 files/digest-qsynth-0.2.1 63
+MD5 c8736c07a5030eb5fe6ffac7629d16de files/digest-qsynth-0.2.2 64
 MD5 e5168eb8696836b38d31c1bf6cf3d640 files/digest-qsynth-0.2.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtM/j5H05b2HAEkRAifjAKCaDHOlF2Xl+ZL9dsKswEU7iC16oQCgnhKn
-Ty079bm3neLr39xlmEhdwZI=
-=7Xv+
------END PGP SIGNATURE-----
+MD5 6cc21c5de2034c4424db5292b02735c7 files/digest-qsynth-0.2.4 64
+MD5 bed98f5cc72fd626b638bfcae4593ce6 metadata.xml 647
+MD5 a3ba3f081208c5d9d84eca8c08e0efce qsynth-0.1.0.ebuild 655
+MD5 8d4f94b4ae3269e744b39cb0a6ede91f qsynth-0.2.1.ebuild 659
+MD5 853c6433459ef0e7fee63cf8902f7c0e qsynth-0.2.2.ebuild 668
+MD5 cbe7a2696a633c1e89dd94258048ae14 qsynth-0.2.3.ebuild 664
+MD5 e534e89bdfcd9e314da29d1b607b646e qsynth-0.2.4.ebuild 684

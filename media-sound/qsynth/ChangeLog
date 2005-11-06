@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.12 2005/09/04 10:57:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.13 2005/11/06 06:42:04 matsuu Exp $
+
+*qsynth-0.2.4 (06 Nov 2005)
+
+  06 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> qsynth-0.2.3.ebuild,
+  +qsynth-0.2.4.ebuild:
+  Version bumped.
+  Marked 0.2.3 stable on x86. Bug 104730.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> qsynth-0.1.0.ebuild,
   qsynth-0.2.1.ebuild, qsynth-0.2.2.ebuild, qsynth-0.2.3.ebuild:
