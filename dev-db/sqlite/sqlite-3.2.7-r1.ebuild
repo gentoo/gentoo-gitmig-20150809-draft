@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.7.ebuild,v 1.2 2005/11/06 17:38:28 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.7-r1.ebuild,v 1.1 2005/11/06 17:38:28 arj Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sqlite.org/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="nothreadsafe doc"
 
 DEPEND="virtual/libc
@@ -54,7 +54,11 @@ src_compile() {
 src_install () {
 	make DESTDIR="${D}" install || die
 
+	if ! [ -e ${DESTDIR}/usr/bin/lemon ]
+	then
 	dobin lemon
+	fi
+
 	dodoc README VERSION
 	doman sqlite3.1
 
