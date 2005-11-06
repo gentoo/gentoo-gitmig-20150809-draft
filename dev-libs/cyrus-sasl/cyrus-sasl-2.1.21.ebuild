@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21.ebuild,v 1.2 2005/06/03 17:54:19 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21.ebuild,v 1.3 2005/11/06 04:35:04 matsuu Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="berkdb crypt gdbm ldap mysql postgres kerberos static ssl java pam
 		authdaemond sample urandom srp ntlm_unsupported_patch"
 
