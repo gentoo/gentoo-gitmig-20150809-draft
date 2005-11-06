@@ -1,50 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05a30a9c99d63ba959a0ea62a6e3213e ChangeLog 16844
-MD5 cc21a816357d93a1d31cd44f861183c7 files/digest-php-cgi-4.3.11-r1 287
-MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r2 364
-MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r4 364
-MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r5 364
+MD5 8fda78bb823dd3a060fefdde916d8828 ChangeLog 16978
+MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 daa51bac42996b36311b5c6049f95b4e php-cgi-4.4.0.ebuild 972
+MD5 56118eb0c5d90c47c6f73c9db6eccb69 php-cgi-4.4.0-r1.ebuild 972
+MD5 f03786f41f7eb2be4bf8854c52d09f97 php-cgi-4.3.11-r2.ebuild 1866
+MD5 d9deaac08b78b996c648e1cbc9640ffa php-cgi-4.4.0-r2.ebuild 1711
+MD5 0c9a7ada8a0d25557a23085f12325d39 php-cgi-4.3.11-r4.ebuild 2792
+MD5 806d1e1d7328261507b266b11849344a php-cgi-4.4.0-r4.ebuild 2631
+MD5 cb3f2c7f9dc7a879b7e1b32ab4b368e7 php-cgi-4.3.11-r5.ebuild 2787
+MD5 f0335588cf763cc6acfc333c4d897401 php-cgi-4.4.0-r5.ebuild 2626
+MD5 ff97ecdd5c6b9744c3770bf335bb1157 php-cgi-4.3.11-r1.ebuild 1116
 MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-php-cgi-4.4.0 285
 MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-php-cgi-4.4.0-r1 285
+MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r2 364
 MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-php-cgi-4.4.0-r2 362
-MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-php-cgi-4.4.0-r4 362
-MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-php-cgi-4.4.0-r5 362
-MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
-MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
-MD5 09637e8f6f861b1f3698ec0390ec6b57 files/php4.3.11-curl_safemode.patch 5129
-MD5 cb36a386184ed6a887f62d2205f57173 files/php4.3.11-fopen_wrappers.patch 1481
-MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/php4.3.11-gd_safe_mode.patch 1573
-MD5 89d12226b1726b681df274be79043411 files/php4.3.11-globals_overwrite.patch 18011
 MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
 MD5 a9b932952f12aa01a9f98a7fcbf32ed9 files/php4.3.11-pcre-security.patch 6031
-MD5 43b4113d1fb159955b0d5ed307cac143 files/php4.3.11-phpinfo_xss.patch 2518
-MD5 48d9c939434e9b01d0696410d59c503c files/php4.3.11-pspell-ext-segf.patch 8482
-MD5 2646498369dc5c64c318ee6da2f9487a files/php4.3.11-session_save_path-segf.patch 4961
-MD5 0429f8334ba4bab659a2e41ce5debc80 files/php4.4.0-curl_safemode.patch 1937
-MD5 cb36a386184ed6a887f62d2205f57173 files/php4.4.0-fopen_wrappers.patch 1481
-MD5 a540c54ba22dc16b157edcf1ecb6258f files/php4.4.0-gd_safe_mode.patch 883
-MD5 7c45198e6118d82c680e9ed56e7d1df0 files/php4.4.0-globals_overwrite.patch 9731
 MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
 MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
-MD5 57644300fb52ad610fa52ae8ba6b522b files/php4.4.0-phpinfo_xss.patch 1284
+MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r4 364
+MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-php-cgi-4.4.0-r4 362
+MD5 cb36a386184ed6a887f62d2205f57173 files/php4.3.11-fopen_wrappers.patch 1481
+MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/php4.3.11-gd_safe_mode.patch 1573
+MD5 48d9c939434e9b01d0696410d59c503c files/php4.3.11-pspell-ext-segf.patch 8482
+MD5 2646498369dc5c64c318ee6da2f9487a files/php4.3.11-session_save_path-segf.patch 4961
+MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r5 364
+MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
+MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 cc21a816357d93a1d31cd44f861183c7 files/digest-php-cgi-4.3.11-r1 287
+MD5 cb36a386184ed6a887f62d2205f57173 files/php4.4.0-fopen_wrappers.patch 1481
+MD5 a540c54ba22dc16b157edcf1ecb6258f files/php4.4.0-gd_safe_mode.patch 883
 MD5 48d9c939434e9b01d0696410d59c503c files/php4.4.0-pspell-ext-segf.patch 8482
 MD5 3d3986815e0e06adce512b36959e6f26 files/php4.4.0-session_save_path-segf.patch 4155
-MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 ff97ecdd5c6b9744c3770bf335bb1157 php-cgi-4.3.11-r1.ebuild 1116
-MD5 f03786f41f7eb2be4bf8854c52d09f97 php-cgi-4.3.11-r2.ebuild 1866
-MD5 0c9a7ada8a0d25557a23085f12325d39 php-cgi-4.3.11-r4.ebuild 2792
-MD5 d53a1af3eaf71396bfd5987de4b5c807 php-cgi-4.3.11-r5.ebuild 2790
-MD5 56118eb0c5d90c47c6f73c9db6eccb69 php-cgi-4.4.0-r1.ebuild 972
-MD5 d9deaac08b78b996c648e1cbc9640ffa php-cgi-4.4.0-r2.ebuild 1711
-MD5 806d1e1d7328261507b266b11849344a php-cgi-4.4.0-r4.ebuild 2631
-MD5 b7400e31e022e73b6de85e418364d4ef php-cgi-4.4.0-r5.ebuild 2629
-MD5 daa51bac42996b36311b5c6049f95b4e php-cgi-4.4.0.ebuild 972
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDa8rQCRZPokWLroQRAjeEAKCo39IWVOQwleyS0B7dsABQbsk6kwCfaT/X
-vY3fiVrl749YoNNnM+8mxMk=
-=w8Co
------END PGP SIGNATURE-----
+MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-php-cgi-4.4.0-r5 362
+MD5 09637e8f6f861b1f3698ec0390ec6b57 files/php4.3.11-curl_safemode.patch 5129
+MD5 89d12226b1726b681df274be79043411 files/php4.3.11-globals_overwrite.patch 18011
+MD5 43b4113d1fb159955b0d5ed307cac143 files/php4.3.11-phpinfo_xss.patch 2518
+MD5 0429f8334ba4bab659a2e41ce5debc80 files/php4.4.0-curl_safemode.patch 1937
+MD5 7c45198e6118d82c680e9ed56e7d1df0 files/php4.4.0-globals_overwrite.patch 9731
+MD5 57644300fb52ad610fa52ae8ba6b522b files/php4.4.0-phpinfo_xss.patch 1284
