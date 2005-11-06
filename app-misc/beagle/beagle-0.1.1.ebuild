@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.1.ebuild,v 1.5 2005/11/06 13:31:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.1.ebuild,v 1.6 2005/11/06 18:16:47 blubb Exp $
 
 inherit gnome.org eutils mono
 
@@ -8,7 +8,7 @@ DESCRIPTION="Beagle is a search tool that ransacks your personal information spa
 HOMEPAGE="http://www.beagle-project.org/"
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="spreadsheet pdf webservices wv chm debug"
 
 RDEPEND=">=dev-lang/mono-1.1.9.1

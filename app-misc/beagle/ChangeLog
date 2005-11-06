@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.4 2005/11/06 13:31:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.5 2005/11/06 18:16:47 blubb Exp $
+
+  06 Nov 2005; Simon Stelling <blubb@gentoo.org> beagle-0.1.1.ebuild:
+  remove ~amd64 keyword again as it requires gmime to be built with USE=mono,
+  but mono is masked on amd64; bug 111702
 
   06 Nov 2005; Simon Stelling <blubb@gentoo.org> beagle-0.1.1.ebuild:
   added ~amd64 keyword

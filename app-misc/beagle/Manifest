@@ -1,5 +1,5 @@
-MD5 d2b97baf43f77a0f5fe28033ba706c3b ChangeLog 923
-MD5 a8cb9be859964475ab29c596b89ef96f beagle-0.1.1.ebuild 3106
+MD5 ceb8fc187c64bb7bed7473220c72923a ChangeLog 1114
+MD5 76fc6dcf5b9e19be1671056ac3189cff beagle-0.1.1.ebuild 3099
 MD5 43c872252a620e391c449e150e344a3a metadata.xml 224
 MD5 3375984ea7d16737cd465bae6ed3d928 files/beagle-0.1.1-null-task-source.patch 1347
 MD5 9c5c2f0ad3f959022b402ddba4dc671d files/beagle-0.1.1-uri-serialization.patch 2704
