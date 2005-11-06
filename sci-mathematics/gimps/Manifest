@@ -1,18 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 267ef463c05b267257a0901d0f14184e ChangeLog 2810
+MD5 851ace909b8d15c8fec9da1c3cbf160e ChangeLog 3093
 MD5 d84449f9d7cdf190e22c6be4ccd485fa files/digest-gimps-24.13 62
 MD5 59b44ec0de10774c77941413d23f7608 files/digest-gimps-24.14 62
+MD5 59b44ec0de10774c77941413d23f7608 files/digest-gimps-24.14-r1 62
+MD5 317ec6140b05f0e8fbb5eab409f0ef4a files/gimps-24.14-conf.d 306
+MD5 b7719db3d3bfe39c0df6d95b34691d5c files/gimps-24.14-init.d 686
 MD5 33a08082d7b3dfeef6076ff5a4bdb1d0 files/gimps-conf.d 276
 MD5 f7593578a8d077eda7d23c5a894ff1d9 files/gimps-init.d 535
 MD5 66ef0bb965fdfd6791cf3ea20a37c5a6 gimps-24.13.ebuild 1565
+MD5 f163430b9e6ca6524881736eff8f8213 gimps-24.14-r1.ebuild 1614
 MD5 936cb0c6477a4c19f39342db7a23952a gimps-24.14.ebuild 1600
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTVFRwUpWvClEHQoRAmLOAJ4+GKayjNX4SPY3YjUNPp1hp+uXFgCeK1tr
-j7OEZyn6JSqUT/09c0It91I=
-=nI/8
+iD8DBQFDbgeDchej4aZK9/cRAkZNAJ4hRKXtuHRYrEcXt4qJZSQr8zICSACfZcIL
+sTvZzciiP05AvbLB6oVns9M=
+=pW7s
 -----END PGP SIGNATURE-----
