@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 92ffcef903eacf54a9eaad8a4c530dbf ChangeLog 2107
 MD5 b38f2e4778a7bc69cc6b8b85d39b04d3 cxfe-0.7.5.ebuild 724
 MD5 2b6d56b572e270e8bb121ba1c7aad624 cxfe-0.9.1-r1.ebuild 960
@@ -15,3 +18,10 @@ MD5 b7df88994713f7337645ce491f5d76d9 files/max-osd-fix.patch 728
 MD5 89258150099c21b29f6ba5c5f27cdb56 files/position-osd.patch 1784
 MD5 b3b0eb83642ffd1d2e89799f70169edb files/xv-default.patch 650
 MD5 5bf3ce68ed1923dc3a3996a58987a360 metadata.xml 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbyoMj5H05b2HAEkRAsejAJ9MfMB1F0Ka4SXkslIA6hSsFBxv4wCginpe
+w6Ar2tU1uJOSawtWVpcqOt0=
+=Aw70
+-----END PGP SIGNATURE-----
