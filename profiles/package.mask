@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4661 2005/11/07 18:52:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4662 2005/11/07 21:16:28 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -278,11 +278,6 @@ www-apps/open-xchange
 # Hardmasking in accordance with g2boojum
 # as it has weird unresolved issues
 =net-mail/dovecot-1.0_alpha2
-
-# Andrej Kacian <ticho@gentoo.org> (22 Sep 2005)
-# Upstream re-released with same version number. Masking until I'm sure which
-# distfile is correct.
-=net-mail/p3scan-2.2.1
 
 # Gustavo Felisberto <humpback@gentoo.org> (21 Sep 2005)
 # This is beta code and is only of interest for testers
