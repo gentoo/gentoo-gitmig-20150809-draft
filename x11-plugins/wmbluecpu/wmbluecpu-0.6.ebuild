@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.3 2005/09/02 19:26:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.4 2005/11/07 16:07:23 s4t4n Exp $
 
 IUSE=""
 
@@ -23,5 +23,5 @@ src_install()
 {
 	dobin wmbluecpu
 	doman wmbluecpu.1
-	dodoc ChangeLog TODO INSTALL README THANKS AUTHORS
+	dodoc ChangeLog TODO README THANKS AUTHORS
 }
