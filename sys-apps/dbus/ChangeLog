@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.55 2005/11/05 15:06:08 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.56 2005/11/07 02:56:35 steev Exp $
+
+*dbus-0.50 (07 Nov 2005)
+
+  07 Nov 2005; Steev Klimaszewski <steev@gentoo.org>
+  +files/dbus-dnotify_configure-01.diff,
+  +files/dbus-dnotify_watchdirs-01.diff, +dbus-0.50.ebuild:
+  Version bump.  Add patches to fix dnotify support.
 
   05 Nov 2005; Stephen P. Becker <geoman@gentoo.org> dbus-0.36.2.ebuild:
   added ~mips keyword
