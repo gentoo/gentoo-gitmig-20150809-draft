@@ -1,11 +1,21 @@
-MD5 7f117de227b731663c575d9cd8d57571 noteedit-2.7.4.ebuild 830
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 dbd15ba893dc4b59e18cb6d4b43c2f22 noteedit-2.6.2.ebuild 966
-MD5 7c37d213730443ff8089ef54fbbe2fe2 noteedit-2.8.0.ebuild 920
-MD5 97e722a66419c0117ac80c8afa9bff56 ChangeLog 2497
-MD5 59bc45abcb4453ffe5b57bc2ff83c3a8 files/digest-noteedit-2.7.4 67
-MD5 e4d9e7d1a9ceafde0c6cbe9a7c9692b7 files/noteedit-2.6.2-gcc34.patch 2142
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 02b4f28906d61f2034d3403caf00fa01 ChangeLog 2642
 MD5 872c8c5d5228329ce0f644c2b5a542da files/digest-noteedit-2.6.2 64
+MD5 59bc45abcb4453ffe5b57bc2ff83c3a8 files/digest-noteedit-2.7.4 67
+MD5 60892ba74f680cb83f554f7ee038b017 files/digest-noteedit-2.8.0 67
+MD5 e4d9e7d1a9ceafde0c6cbe9a7c9692b7 files/noteedit-2.6.2-gcc34.patch 2142
 MD5 d95dc7b5a8641782c01f35eb18b26a98 files/noteedit-2.8.0-qt-3.3.5.patch 1149
 MD5 a0edf432c74d20c17c78a828167cd272 files/noteedit-gcc4.patch 1073
-MD5 60892ba74f680cb83f554f7ee038b017 files/digest-noteedit-2.8.0 67
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7a58a30a31eced3414dfed83a0738ee1 noteedit-2.6.2.ebuild 948
+MD5 9a077b36f700cdfad993fec824d5ecf1 noteedit-2.7.4.ebuild 811
+MD5 7c37d213730443ff8089ef54fbbe2fe2 noteedit-2.8.0.ebuild 920
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbzzgj5H05b2HAEkRAgkgAKCGhw7sTKAEkhDUgYFtL7a+DvEzSwCbBXAE
+21kycggjSkl6J/gjPhPBjP4=
+=LMVP
+-----END PGP SIGNATURE-----

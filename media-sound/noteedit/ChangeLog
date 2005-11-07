@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.16 2005/10/30 15:12:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.17 2005/11/07 11:37:49 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> noteedit-2.6.2.ebuild,
+  noteedit-2.7.4.ebuild:
+  Don't install COPYING and INSTALL files.
 
 *noteedit-2.8.0 (30 Oct 2005)
 

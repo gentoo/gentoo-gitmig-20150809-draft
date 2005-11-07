@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.6.2.ebuild,v 1.7 2005/01/14 23:57:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.6.2.ebuild,v 1.8 2005/11/07 11:37:49 flameeyes Exp $
 
 IUSE=""
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	kde_src_install
-	dodoc FAQ FAQ.de INSTALL INSTALL.de examples
+	dodoc FAQ FAQ.de examples
 	docinto examples
 	dodoc noteedit/examples/*
 }
