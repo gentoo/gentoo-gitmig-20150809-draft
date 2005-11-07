@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.15 2005/11/07 11:57:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.16 2005/11/07 12:17:02 dragonheart Exp $
+
+  07 Nov 2005; Daniel Black <dragonheart@gentoo.org> testdisk-5.9.ebuild,
+  testdisk-6.2.ebuild:
+  changed sys-fs/progsreiserfs dependancy to sys-fs/reiserfsprogs thanks to
+  Chris Gianellonis suggestion in bug #84514. Made version 5.9 x86 stable
 
 *testdisk-6.2 (07 Nov 2005)
 
