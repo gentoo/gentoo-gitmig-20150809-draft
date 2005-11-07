@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50.ebuild,v 1.1 2005/11/07 02:56:35 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50.ebuild,v 1.2 2005/11/07 04:42:56 steev Exp $
 
 inherit eutils mono python multilib autotools debug
 
@@ -82,7 +82,7 @@ src_compile() {
 		--enable-checks \
 		--enable-asserts \
 		--with-system-pid-file=/var/run/dbus.pid \
-		--with-system-socket=/var/lib/dbus/system_bus_socket \
+		--with-system-socket=/var/run/dbus/system_bus_socket \
 		--with-session-socket-dir=/tmp \
 		--with-dbus-user=messagebus \
 		`use_enable doc doxygen-docs` \
@@ -121,7 +121,7 @@ src_install() {
 	doexe ${FILESDIR}/30-dbus
 
 	# needs to exist for the system socket
-	keepdir /var/lib/dbus
+	keepdir /var/run/dbus
 
 	keepdir /usr/lib/dbus-1.0/services
 	keepdir /usr/share/dbus-1/services
