@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b750040b46ac4c3a3800156ee526a3d3 ChangeLog 8900
 MD5 c130fa68ebab7bcfec283e3daa759b65 files/3.3.0-crashfix.patch 845
 MD5 2ec6b15aa9b163f9c0a79e80038f987e files/digest-grip-3.3.0 62
@@ -6,3 +9,10 @@ MD5 994c1c45aa0d6d352db1b5dbd94b9248 files/grip-3.2.0-proxy.patch 1291
 MD5 31c1bb68652bca39ce9cd4c0d4c07d7e grip-3.3.0.ebuild 1253
 MD5 b67ddbafdfaf6a7b31d1a9819a2b10ad grip-3.3.1.ebuild 1205
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDby12j5H05b2HAEkRArPZAKCdRgC4lgVJU4BAIBl51ZXar81d8QCglQMx
+iU+UW8/ORjJ2RXoEiewu8BA=
+=Tk4N
+-----END PGP SIGNATURE-----
