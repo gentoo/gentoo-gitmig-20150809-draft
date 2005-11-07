@@ -1,6 +1,8 @@
-diff -urpwN svgalib-1.9.18/kernel/svgalib_helper/Makefile.alt svgalib-1.9.18.kernel2.6/kernel/svgalib_helper/Makefile.alt
---- svgalib-1.9.18/kernel/svgalib_helper/Makefile.alt   2002-10-28 18:25:47.000000000 +0200
-+++ svgalib-1.9.18.kernel2.6/kernel/svgalib_helper/Makefile.alt 2003-08-03 14:34:40.000000000 +0200
+ - touch up the Makefile to let the ebuild handle the module details
+ - fix support with io remap stuff in newer kernels
+
+--- svgalib/kernel/svgalib_helper/Makefile.alt
++++ svgalib/kernel/svgalib_helper/Makefile.alt
 @@ -37,7 +37,7 @@
  CFLAGS += -DSVGALIB_HELPER_MAJOR=$(SVGALIB_HELPER_MAJOR)
  
@@ -31,14 +33,19 @@ diff -urpwN svgalib-1.9.18/kernel/svgalib_helper/Makefile.alt svgalib-1.9.18.ker
  
  device:
  	rm -f /dev/svgalib_helper* /dev/svga_helper* /dev/svga /dev/svga?
---- svgalib-1.9.19/kernel/svgalib_helper/kernel26compat.h.orig	2004-07-20 19:05:13.491390800 -0400
-+++ svgalib-1.9.19/kernel/svgalib_helper/kernel26compat.h	2004-07-20 19:05:29.217999992 -0400
-@@ -7,7 +7,7 @@
- #  undef KERNEL_2_6
- # endif
+--- svgalib/kernel/svgalib_helper/kernel26compat.h
++++ svgalib/kernel/svgalib_helper/kernel26compat.h
+@@ -10,9 +10,12 @@
+ # define PCI_GET_CLASS pci_find_class
+ # define PCI_GET_DEVICE pci_find_device
  
 -# if defined (PG_chainlock)
 +# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,3)
  #  define my_io_remap_page_range(vma, start, ofs, len, prot) \
  		io_remap_page_range(vma,start,ofs,len,prot)
++# elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,14)
++#  define my_io_remap_page_range(vma, start, ofs, len, prot) \
++		io_remap_pfn_range(vma,start,ofs,len,prot)
  # else
+ #  ifdef __alpha__ /* Is alpha really the issue here ??? */
+ #   define my_io_remap_page_range(vma, start, ofs, len, prot) \
