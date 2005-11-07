@@ -1,6 +1,13 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.55 2005/10/31 04:03:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.56 2005/11/07 00:06:47 weeve Exp $
+
+*bitlbee-0.99 (07 Nov 2005)
+
+  07 Nov 2005; Jason Wever <weeve@gentoo.org> +bitlbee-0.99.ebuild:
+  Version bump, resolves bug #111419. Thanks to Ludvig Ericson
+  <ludvig.ericson@gmail.com> for the ebuild. The aimextras use flag is no
+  longer used as that functionality is natively present in this release.
 
 *bitlbee-0.92-r3 (31 Oct 2005)
 
