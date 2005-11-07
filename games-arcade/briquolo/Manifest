@@ -1,4 +1,6 @@
+MD5 f38539513f33eb086af27f7a8111198b briquolo-0.5.4.ebuild 1094
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 593b2f8fcd4d0ef7bb2c87e023e3090a ChangeLog 1073
+MD5 e80fb6f94d00cb95799b77e02d64a7c9 ChangeLog 1201
 MD5 687138ba8afdf56d5bd76a84b12f6737 briquolo-0.5.3.ebuild 1094
 MD5 e73b7dc9a50baa2f6870a58214a5f984 files/digest-briquolo-0.5.3 68
+MD5 eecf19df4e9ca8274670cef945e52f65 files/digest-briquolo-0.5.4 68
