@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.5 2005/07/28 10:38:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.6 2005/11/07 10:05:22 flameeyes Exp $
 
 DESCRIPTION="small-'n-simple GUI for the MJPEG-tools"
 HOMEPAGE="http://ronald.bitfreak.net/"
@@ -31,5 +31,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS ChangeLog README TODO README.stv ChangeLog.stv INSTALL.stv INSTALL
+	dodoc AUTHORS ChangeLog README TODO README.stv ChangeLog.stv
 }
