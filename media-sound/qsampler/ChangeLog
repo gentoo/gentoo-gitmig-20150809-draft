@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qsampler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/ChangeLog,v 1.7 2005/07/28 14:47:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/ChangeLog,v 1.8 2005/11/07 11:45:31 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> qsampler-0.1.0.ebuild,
+  qsampler-0.1.2.ebuild:
+  Don't install INSTALL files.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> qsampler-0.1.0.ebuild,
   qsampler-0.1.2.ebuild:
