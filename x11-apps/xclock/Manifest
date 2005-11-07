@@ -1,6 +1,16 @@
-MD5 ed5e22eaa770e3b38a0cd1b54b5f095c ChangeLog 849
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 52f97b55fba3cc329bc21de9d3bf2763 ChangeLog 946
 MD5 1a3cf8d56e130ea86fe79f9d716061e6 files/digest-xclock-0.99.0 65
 MD5 f72386976e619d0c9cfe8197b47c1bbd files/digest-xclock-0.99.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 dfef70ad4c11a9b38755a19dd6fdf1ca xclock-0.99.0.ebuild 691
-MD5 eb32784ee5aea109c5d1c6c3c5b54fb8 xclock-0.99.1.ebuild 696
+MD5 ce2a18e462d4113320cf16020d85be90 xclock-0.99.1.ebuild 703
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbuUCBtvusYtCZMsRAmzcAJ9hoBMdhW9fyR2nlKfKY94+cWjTTACfbJmv
+Kr0J4YZ0Rw3KXr2VjB5yd+I=
+=k5K2
+-----END PGP SIGNATURE-----
