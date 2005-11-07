@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kavi2svcd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.10 2005/08/24 16:22:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.11 2005/11/07 09:51:05 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> kavi2svcd-0.8.2.ebuild:
+  Add eutils inherit for epatch, for safety.
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> kavi2svcd-0.8.4.ebuild:
   Remove comments that doesn't apply anymore.

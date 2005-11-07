@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.2.ebuild,v 1.10 2005/01/20 16:59:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.2.ebuild,v 1.11 2005/11/07 09:51:05 flameeyes Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="GUI for generating VCD-compliant MPEG files from an AVI or MPEG file"
 HOMEPAGE="http://kavi2svcd.sourceforge.net/"
