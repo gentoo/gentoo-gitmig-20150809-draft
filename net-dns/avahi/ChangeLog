@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.16 2005/11/04 07:33:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.17 2005/11/07 16:05:25 swegener Exp $
+
+  07 Nov 2005; Sven Wegener <swegener@gentoo.org> avahi-0.5.2.ebuild,
+  avahi-0.5.2-r1.ebuild:
+  Make the pygtk support dependant on the gtk USE flag in addition to the
+  python USE flag.
 
 *avahi-0.5.2-r1 (04 Nov 2005)
 

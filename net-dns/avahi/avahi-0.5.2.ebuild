@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.5.2.ebuild,v 1.2 2005/11/04 07:23:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.5.2.ebuild,v 1.3 2005/11/07 16:05:25 swegener Exp $
 
 inherit eutils qt3 mono
 
@@ -26,7 +26,7 @@ RDEPEND="dev-libs/libdaemon
 		>=sys-apps/dbus-0.30
 		python? (
 			>=virtual/python-2.4
-			>=dev-python/pygtk-2
+			gtk? ( >=dev-python/pygtk-2 )
 		)
 	)"
 DEPEND="${RDEPEND}
@@ -53,12 +53,18 @@ src_compile() {
 	if use python && use dbus
 	then
 		myconf="${myconf} --enable-python"
+
+		if use gtk
+		then
+			myconf="${myconf} --enable-pygtk"
+		fi
 	fi
 
 	econf \
 		--localstatedir=/var \
 		--with-distro=gentoo \
 		--disable-python \
+		--disable-pygtk \
 		--disable-qt4 \
 		--disable-xmltoman \
 		--disable-mono-docs \
