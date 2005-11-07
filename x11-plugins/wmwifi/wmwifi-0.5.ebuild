@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/wmwifi-0.5.ebuild,v 1.1 2005/11/04 16:18:59 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/wmwifi-0.5.ebuild,v 1.2 2005/11/07 13:05:46 s4t4n Exp $
 
 IUSE=""
 HOMEPAGE="http://wmwifi.digitalssg.net"
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86 ~amd64"
 
 DEPEND="virtual/x11"
-RDEPEND="${DEPEND}"
 
 src_unpack()
 {
