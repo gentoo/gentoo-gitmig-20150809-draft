@@ -1,28 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 7fa242c550bd9216fff6ef29c0b82e3d ChangeLog 6451
 MD5 49642086df408e27d9c50e8759b6f8e3 eix-0.2.2.ebuild 1152
-MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
 MD5 c54871b1c3d77224848568572d63c710 eix-0.2.6.ebuild 1301
-MD5 39e8d718b4e1c785eeafdb242a99ed29 eix-0.3.0.ebuild 1179
-MD5 2445a399a313237390682b1292f5fe52 ChangeLog 6330
 MD5 9453c685fa99329b88b782086419847f eix-0.3.0-r1.ebuild 1283
+MD5 39e8d718b4e1c785eeafdb242a99ed29 eix-0.3.0.ebuild 1179
+MD5 1e7b8737862ec1bbf7e0d10fc5417ebf eix-0.5.0_beta.ebuild 1249
 MD5 b012df8992488da6f22e677cba2e1f9c files/0.2.2-incorrect-masks.patch 1661
 MD5 9033adc2410fa5477618aa28ae6d8582 files/0.2.2-unistd.h.patch 716
-MD5 3a36ef63cff165b67afeb774a7edf9d1 files/0.2.6-package.cc.patch 461
 MD5 1df3eabe7a20b27cf2d3c1c0b2b5a090 files/0.2.6-cdb-cast.patch 516
-MD5 451cd103e930d34810d0c426b7ad0ddb files/0.3.0-if-else-fi.patch 635
+MD5 3a36ef63cff165b67afeb774a7edf9d1 files/0.2.6-package.cc.patch 461
 MD5 309a6ba7043e7941a8effc552ec3a1a0 files/0.3.0-datatype-mix.patch 2066
 MD5 026ea1bfa86dd00de37c3e3d1305c9c7 files/0.3.0-dbmatchcriteria-fix.patch 445
 MD5 7efa28889b9a45d2abc52e51c5155a7f files/0.3.0-getParentProfile.patch 1016
+MD5 451cd103e930d34810d0c426b7ad0ddb files/0.3.0-if-else-fi.patch 635
 MD5 3eff250e62af117080bac27f4f2a9655 files/digest-eix-0.2.2 62
 MD5 79cb9eb15d5c16732f94bf126ee8ca2f files/digest-eix-0.2.6 62
-MD5 f0687628fdeca80bbcebef82a7a82e6f files/digest-eix-0.3.0-r1 62
 MD5 f0687628fdeca80bbcebef82a7a82e6f files/digest-eix-0.3.0 62
+MD5 f0687628fdeca80bbcebef82a7a82e6f files/digest-eix-0.3.0-r1 62
+MD5 5eab90cc00475299b8435821f08915bf files/digest-eix-0.5.0_beta 67
+MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLry9mPFBzbX68WERAi1iAJ4/A4WaLm8hR8Iep4jhdJUZdUbdWwCeP6Hx
-ml0LGESOjnpCMJ62D7dKiNc=
-=EdJH
+iD8DBQFDb7NfmPFBzbX68WERAsq3AJ9V3D8mlSFI+7fx1G5njQ3Hacu6OQCfcBLe
+3Mh1PCdG6Lwuzy6qnvUcK8E=
+=jlJ0
 -----END PGP SIGNATURE-----
