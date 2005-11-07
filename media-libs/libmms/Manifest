@@ -1,4 +1,14 @@
-MD5 f76ac196234a8e54b876ef15e15e4f54 libmms-0.1.ebuild 703
-MD5 adba781989975607cefd31051cef2fe6 ChangeLog 412
-MD5 ee8187af1037122f09238b1622b8ed52 metadata.xml 219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af1a1ea7431cfc32b19fa0c47abde5bb ChangeLog 522
 MD5 2c5cdb1470350b02a113e540d3f35bd6 files/digest-libmms-0.1 62
+MD5 2212cc14c348bdad98ef338b15f853a2 libmms-0.1.ebuild 695
+MD5 ee8187af1037122f09238b1622b8ed52 metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbyBsj5H05b2HAEkRAlwqAKCSJW/FZdTXfSOmlffPiWszVg1lwACfV1tW
+8JaN1xbjVoM94Kd+PK6RFC4=
+=lfo7
+-----END PGP SIGNATURE-----
