@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.5 2005/07/25 15:54:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.6 2005/11/07 11:17:33 flameeyes Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
 	cd ${WORKDIR}/${MY_P}
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README README.CVS README.de README.instruments README.ladspaguis README.shortcuts README.softsynth README.translate SECURITY
+	dodoc AUTHORS ChangeLog NEWS README README.CVS README.de README.instruments README.ladspaguis README.shortcuts README.softsynth README.translate SECURITY
 	mv ${D}/usr/bin/muse ${D}/usr/bin/museseq
 }
 

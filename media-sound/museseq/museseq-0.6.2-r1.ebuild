@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.9 2005/07/25 15:54:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.10 2005/11/07 11:17:33 flameeyes Exp $
 
 IUSE="jack fluidsynth ladcca doc alsa"
 
@@ -77,7 +77,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc COPYING INSTALL README README.softsynth SECURITY TODO
+	dodoc README README.softsynth SECURITY TODO
 
 	mv ${D}/usr/share/muse/html ${D}/usr/share/doc/${PF}/html
 	dosym /usr/share/doc/${PF}/html /usr/share/muse/html
