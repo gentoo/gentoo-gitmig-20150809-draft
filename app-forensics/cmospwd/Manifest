@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 3693c3faf669c2e6b632087556c0b65c ChangeLog 652
 MD5 8c50d379ff493eeb34eaca8a15a72d46 cmospwd-4.4.ebuild 652
-MD5 7294342c2d2b7beb07120906dd76011a metadata.xml 750
-MD5 6a78f78241f253eda072244fc4f4c76a ChangeLog 534
 MD5 212841be9d1b47c9dd404388da4b7cf4 cmospwd-4.6.ebuild 664
+MD5 f6a66af395e5957178f57c000c91faab cmospwd-4.7.ebuild 665
 MD5 1ca3acd7a0cc94c59a81c4ffa987369e files/digest-cmospwd-4.4 62
 MD5 df64eb704687cb1c07f4176eb6ce955d files/digest-cmospwd-4.6 62
+MD5 7279ba9270850ef2aa00a4e133a4a0b9 files/digest-cmospwd-4.7 62
+MD5 7294342c2d2b7beb07120906dd76011a metadata.xml 750
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDGnGWmdTrptrqvGERAmLoAJ9kV/ZMiAATOIqcZRaVAFjuklK3zgCePN+D
-VWPN3bGWCirA4ZucmKtTSmM=
-=t195
+iD8DBQFDb7MRmdTrptrqvGERAvhrAJwJStS75ZodOs+TfLx1PcffXXa9sQCgkpUa
+tAyV3dXg48JYLjB19kRXtcw=
+=gZI4
 -----END PGP SIGNATURE-----
