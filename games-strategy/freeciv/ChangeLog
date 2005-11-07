@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.35 2005/09/28 17:20:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.36 2005/11/07 09:11:35 mr_bones_ Exp $
+
+*freeciv-2.0.7 (07 Nov 2005)
+
+  07 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +freeciv-2.0.7.ebuild:
+  version bump
 
 *freeciv-2.0.6 (28 Sep 2005)
 
