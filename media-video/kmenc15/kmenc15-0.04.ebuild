@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmenc15/kmenc15-0.04.ebuild,v 1.2 2005/08/24 21:21:38 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmenc15/kmenc15-0.04.ebuild,v 1.3 2005/11/07 10:02:38 flameeyes Exp $
 
 inherit eutils kde
 
@@ -19,7 +19,7 @@ src_compile() {
 
 src_install() {
 	dobin kmenc15
-	dodoc AUTHORS COPYING README
+	dodoc AUTHORS README
 }
 
 need-kde 3.3
