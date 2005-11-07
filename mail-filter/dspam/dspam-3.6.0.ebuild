@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.5 2005/11/06 17:22:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.6 2005/11/07 12:18:42 swegener Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 		http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
@@ -22,7 +21,7 @@ DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
 RDEPEND="sys-process/cronbase
 		clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
-		sqlite? ( <dev-db/sqlite-3* )
+		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( =dev-db/sqlite-3* )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		>=sys-libs/db-4.0
@@ -84,7 +83,7 @@ pkg_setup() {
 		ewarn "If the users are virtual, then they probably should not have home directories."
 	fi
 	if use user-homedirs ; then
-		ewarn "WARNING: dspam-web will not work with user-homedirs.  Disable this USE flag "
+		ewarn "WARNING: dspam-web will not work with user-homedirs.  Disable this USE flag"
 		ewarn "if you intend on using dspam-web."
 	fi
 	id dspam 2>/dev/null || enewgroup dspam 26
@@ -418,7 +417,7 @@ pkg_config () {
 		DSPAM_MySQL_DB="${DSPAM_DB_DATA[4]}"
 
 		ewarn "When prompted for a password, please enter your MySQL root password"
-		ewarn ""
+		ewarn
 
 		einfo "Creating DSPAM MySQL database \"${DSPAM_MySQL_DB}\""
 		/usr/bin/mysqladmin -u root -p create ${DSPAM_MySQL_DB}
@@ -462,7 +461,7 @@ pkg_config () {
 		DSPAM_PgSQL_DB="${DSPAM_DB_DATA[4]}"
 
 		ewarn "When prompted for a password, please enter your PgSQL postgres password"
-		ewarn ""
+		ewarn
 
 		einfo "Creating DSPAM PostgreSQL database \"${DSPAM_PgSQL_DB}\" and user \"${DSPAM_PgSQL_USER}\""
 		/usr/bin/psql -h localhost -d template1 -U postgres -c "CREATE USER ${DSPAM_PgSQL_USER} WITH PASSWORD '${DSPAM_PgSQL_PWD}' NOCREATEDB NOCREATEUSER; CREATE DATABASE ${DSPAM_PgSQL_DB}; GRANT ALL PRIVILEGES ON DATABASE ${DSPAM_PgSQL_DB} TO ${DSPAM_PgSQL_USER}; GRANT ALL PRIVILEGES ON SCHEMA public TO ${DSPAM_PgSQL_USER}; UPDATE pg_database SET datdba=(SELECT usesysid FROM pg_shadow WHERE usename='${DSPAM_PgSQL_USER}') WHERE datname='${DSPAM_PgSQL_DB}';"
@@ -478,7 +477,7 @@ pkg_config () {
 		einfo "We have not enought Oracle knowledge to configure Oracle"
 		einfo "automatically. If you know how, please post a message in"
 		einfo "Gentoo Bugzilla."
-		einfo ""
+		einfo
 		einfo "You need manually to create the Oracle user for DSPAM and"
 		einfo "the necessary database."
 		einfo "But the DSPAM configuration file dspam.conf and oracle.data"
