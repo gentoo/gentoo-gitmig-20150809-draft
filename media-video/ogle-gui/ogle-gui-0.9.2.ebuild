@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.14 2005/10/11 14:20:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.15 2005/11/07 10:10:29 flameeyes Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="GUI interface for the Ogle DVD player."
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
-SRC_URI="${HOMEPAGE}/dist/${MY_P}.tar.gz"
+SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${MY_P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"

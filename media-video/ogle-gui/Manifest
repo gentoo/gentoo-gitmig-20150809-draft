@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7c6c03be413e40430808b57e20964a48 ChangeLog 2913
+MD5 e2dbe4c6d4f4a2f4195895e9ea530f08 ChangeLog 3052
 MD5 9818a741e3f477c9b2fe6aa2320196a4 files/digest-ogle-gui-0.9.1 66
 MD5 80217a38b8b29d30b601752e68b22ec5 files/digest-ogle-gui-0.9.2 66
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 f5dec016ca6bfcc44a2b9dba5e6d1c42 ogle-gui-0.9.1.ebuild 921
-MD5 b55a44d2963a160c4c01c1e457625f52 ogle-gui-0.9.2.ebuild 1114
+MD5 c6fbfdca59326b93505e32c5e97d5adb ogle-gui-0.9.1.ebuild 948
+MD5 efccf68fbeb5f52549a27c3b03997c71 ogle-gui-0.9.2.ebuild 1142
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDS8p0KRy60XGEcJIRAhVnAJ43dUvsxiQnY7f5Dj919eFSTLuU3ACfUVIl
-kzwCUQhbEgaQ9170da5bpGY=
-=fqFh
+iD8DBQFDbygtj5H05b2HAEkRAjgWAJ44fl55LNUkth+xGsnsqz3hXyC3hgCfYbdu
+M9OAwpEmBagE/CL3Jo9Cwko=
+=idA/
 -----END PGP SIGNATURE-----
