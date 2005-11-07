@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.29 2005/08/12 15:06:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.30 2005/11/07 09:45:14 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  win32codecs-20050216.ebuild, win32codecs-20050412.ebuild:
+  use mirror://mplayer/ to get the codecs.
 
   12 Aug 2005; <dang@gentoo.org> win32codecs-20050412.ebuild:
   Add multilib support. This makes the libs get installed in the correct spot
