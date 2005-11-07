@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf2a73ff675f1c3d65e2966fcdc089bf mpich-1.2.6-r3.ebuild 3851
-MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 8eacbf2545cb734881325949b4917bcb ChangeLog 2878
-MD5 98a487c171803a3afbb88e803d5fb8ff mpich-1.2.5.2.ebuild 3168
+MD5 1901517965a53722a8af01a58db196ad ChangeLog 3301
 MD5 e878381a3b6165630ef1a8b3989076c8 files/1.2.6-fix-romio-sandbox-breakage.patch 690
 MD5 11a56e15994b5f4fe1ae37ebde20fa50 files/digest-mpich-1.2.5.2 67
 MD5 049b041ef984698a3827b0f24e11669e files/digest-mpich-1.2.6-r3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHE1FKtJO8LeSoosRAtyRAJ9p59qBUnzIOsLx23Ijfq8FMyNYmQCfW45h
-s6qlek2TSNgAzTPh35od7kc=
-=flAZ
------END PGP SIGNATURE-----
+MD5 049b041ef984698a3827b0f24e11669e files/digest-mpich-1.2.6-r4 65
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
+MD5 98a487c171803a3afbb88e803d5fb8ff mpich-1.2.5.2.ebuild 3168
+MD5 cf2a73ff675f1c3d65e2966fcdc089bf mpich-1.2.6-r3.ebuild 3851
+MD5 76e7f94d8ae8ac8372fc56a14d84333e mpich-1.2.6-r4.ebuild 4058

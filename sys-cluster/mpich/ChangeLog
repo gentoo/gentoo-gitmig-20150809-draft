@@ -1,6 +1,16 @@
 # ChangeLog for sys-cluster/mpich
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.21 2005/09/05 13:48:40 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.22 2005/11/07 01:31:39 spyderous Exp $
+
+*mpich-1.2.6-r4 (07 Nov 2005)
+
+  07 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +mpich-1.2.6-r4.ebuild:
+  (#103218) Overrule mpich's broken build system to get datadir set to
+  /usr/share/mpich. Also, add dependency on libX11 or virtual/x11 for
+  cxgraphics and cpi_anim. I'm open to patches to stop building them and
+  prevent the X dependency. In addition, change 'make' to 'emake' to allow
+  parallel builds.
 
 *mpich-1.2.6-r3 (05 Sep 2005)
 
