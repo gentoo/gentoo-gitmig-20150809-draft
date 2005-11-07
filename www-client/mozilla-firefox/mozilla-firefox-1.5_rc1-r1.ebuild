@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc1.ebuild,v 1.2 2005/11/03 16:13:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc1-r1.ebuild,v 1.1 2005/11/07 03:10:13 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -8,7 +8,7 @@ MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
 MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
 	                 # when older is removed from tree.
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib fdo-mime versionator
+inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime versionator
 
 MY_P="$(replace_version_separator 2 '')"
 FV=${MY_P/beta/b}
@@ -96,8 +96,7 @@ src_unpack() {
 	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
 
-	ewarn ""
-	ewarn ""
+	echo
 	ewarn "This firefox-1.5rc1 ebuild is provided for your convenience,"
 	ewarn "the use of this ebuild is not supported by gentoo developers. "
 	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
@@ -257,43 +256,21 @@ src_install() {
 pkg_postinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
-	####################################
-	#
-	# The registration is done here,
-	# mozilla-launcher do not do it correctly for now
-	#
-	####################################
-
-	touch ${MOZILLA_FIVE_HOME}/components/compreg.dat
-	touch ${MOZILLA_FIVE_HOME}/components/xpti.dat
-	[ -x ${MOZILLA_FIVE_HOME}/firefox ] && ${MOZILLA_FIVE_HOME}/firefox -register
-	[ -x ${MOZILLA_FIVE_HOME}/regxpcom ] && ${MOZILLA_FIVE_HOME}/regxpcom
-
 	# This should be called in the postinst and postrm of all the
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
 
-	ewarn ""
-	ewarn ""
+	echo
 	ewarn "This firefox-1.5rc1 ebuild is provided for your convenience,"
 	ewarn "the use of this ebuild is not supported by gentoo developers. "
 	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
 	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
-	ewarn "Thank you Anarchy"
+	ewarn "Thank you. anarchy@gentoo.org for more info"
 }
 
 pkg_postrm() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
-	####################################
-	#
-	# The registration is done here,
-	# mozilla-launcher do not do it correctly for now
-	#
-	####################################
-
-	[ -x ${MOZILLA_FIVE_HOME}/firefox ] && ${MOZILLA_FIVE_HOME}/firefox -register
-	[ -x ${MOZILLA_FIVE_HOME}/regxpcom ] && ${MOZILLA_FIVE_HOME}/regxpcom
 	update_mozilla_launcher_symlinks
 }
