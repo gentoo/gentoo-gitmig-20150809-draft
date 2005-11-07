@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/clamsmtp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.6 2005/10/03 12:14:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.7 2005/11/07 20:09:07 ticho Exp $
+
+*clamsmtp-1.6 (07 Nov 2005)
+
+  07 Nov 2005; Andrej Kacian <ticho@gentoo.org> +clamsmtp-1.6.ebuild:
+  Version bump. Closes bug #111497, by Brad Schuetz <brad.schuetz at gmail.com>.
 
   03 Oct 2005; Andrej Kacian <ticho@gentoo.org> clamsmtp-1.4.1.ebuild,
   clamsmtp-1.5.ebuild:
