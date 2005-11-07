@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/ignorance
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ChangeLog,v 1.7 2005/10/17 03:38:51 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ChangeLog,v 1.8 2005/11/07 23:35:37 gothgirl Exp $
+
+*ignorance-2.3 (08 Nov 2005)
+
+  08 Nov 2005; <gothgirl@gentoo.org> +ignorance-2.3.ebuild:
+  version bump
 
   17 Oct 2005; <gothgirl@gentoo.org> -ignorance-1.3.0.ebuild,
   -ignorance-1.3.1.2.ebuild, -ignorance-1.3.1.3.ebuild,
