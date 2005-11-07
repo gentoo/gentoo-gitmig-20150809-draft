@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmalbum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalbum/ChangeLog,v 1.4 2004/08/02 11:12:14 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalbum/ChangeLog,v 1.5 2005/11/07 16:14:32 s4t4n Exp $
+
+  07 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmalbum-0.1.5.ebuild:
+  Removed COPYING and INSTALL from dodoc.
 
   02 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmalbum-0.1.5.ebuild:
   Stable for x86.
