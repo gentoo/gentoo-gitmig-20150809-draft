@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.10.ebuild,v 1.2 2005/07/16 16:45:29 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.10.ebuild,v 1.3 2005/11/07 12:48:35 s4t4n Exp $
 
 DESCRIPTION="An interactive Imlib2 console for the X Window system"
 HOMEPAGE="http://adesklets.sf.net/"
@@ -33,7 +33,7 @@ src_install()
 	make DESTDIR=${D} install || die
 	doinfo doc/adesklets_en.info doc/adesklets_fr.info
 	doman doc/adesklets.1
-	dodoc ChangeLog INSTALL NEWS TODO AUTHORS
+	dodoc ChangeLog NEWS TODO AUTHORS
 	dohtml -r doc/html/*
 }
 
