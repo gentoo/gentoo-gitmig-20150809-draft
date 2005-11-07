@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.15 2005/09/14 07:24:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.16 2005/11/07 10:44:48 flameeyes Exp $
 
 MY_P=${P/_p/.p}
 S=${WORKDIR}/${MY_P}
@@ -26,5 +26,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc README README.euc TODO NEWS INSTALL AUTHORS ABOUT-NLS COPYING
+	dodoc README README.euc TODO NEWS AUTHORS
 }

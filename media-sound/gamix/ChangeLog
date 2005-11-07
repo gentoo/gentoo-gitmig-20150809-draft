@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gamix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.19 2005/10/23 02:26:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.20 2005/11/07 10:44:48 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gamix-1.99_p14-r1.ebuild:
+  Don't install COPYING, ABOUT-NLS and INSTALL files.
 
 *gamix-1.99_p14-r2 (23 Oct 2005)
 
