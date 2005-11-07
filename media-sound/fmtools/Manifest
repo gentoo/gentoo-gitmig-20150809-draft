@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e928d85a9f56f01da471407f7ecaf9f7 ChangeLog 1235
 MD5 fa94f4db1de686293eed401f22883e5b files/digest-fmtools-0.99.1 65
 MD5 786cb9e92477ee620abefa7a3e0cf12b files/digest-fmtools-1.0 62
 MD5 47bf9bd39c80f8005ac919303cac9020 fmtools-0.99.1.ebuild 626
 MD5 5ec5f637b0eaef8a1e96efe20c5c0f5c fmtools-1.0.ebuild 625
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDby81j5H05b2HAEkRAiKGAKCGEwUhRHT73L/+nkwkXBwwlA1WoACXeocD
+du4JPelcbsshFf7q4iQxQg==
+=6hNY
+-----END PGP SIGNATURE-----
