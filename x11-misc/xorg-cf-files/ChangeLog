@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.3 2005/11/02 19:32:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.4 2005/11/07 14:57:52 geoman Exp $
+
+  07 Nov 2005; Stephen P. Becker <geoman@gentoo.org>
+  xorg-cf-files-0.99.1.ebuild:
+  added ~mips keyword
 
   02 Nov 2005; Ferris McCormick <fmccor@gentoo.org>
   xorg-cf-files-0.99.1.ebuild:
