@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.19-r1.ebuild,v 1.4 2004/11/16 18:40:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.19-r1.ebuild,v 1.5 2005/11/07 16:19:37 s4t4n Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install () {
 	dobin wmbattery
-	dodoc README COPYING TODO
+	dodoc README TODO
 
 	mv wmbattery.1x wmbattery.1
 	doman wmbattery.1
