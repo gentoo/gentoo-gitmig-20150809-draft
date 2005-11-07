@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomad-tool/nomad-tool-1.3-r1.ebuild,v 1.8 2005/11/07 12:21:00 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomad-tool/nomad-tool-1.3-r1.ebuild,v 1.9 2005/11/07 12:22:56 george Exp $
 
 GUI_V=0.5.5
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.swiss.ai.mit.edu/~cph/nomad/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86"
 IUSE="tcltk"
 
 DEPEND="=dev-libs/glib-1*"
