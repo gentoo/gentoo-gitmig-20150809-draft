@@ -1,6 +1,16 @@
-MD5 5fdbd420bc2288814287a076673ef54b ChangeLog 838
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bddfb3d817409ad384b73b6fe268b866 ChangeLog 949
 MD5 3156d15ead919b9a87c84bfb1e614cf3 files/digest-twm-0.99.0 63
 MD5 2f12e0ba0736b09cb87017002ac29156 files/digest-twm-0.99.1 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 3a9775502b53151b134f16250dc28c74 twm-0.99.0.ebuild 452
-MD5 96955a156d84597e08b9b6560d2f8d0f twm-0.99.1.ebuild 454
+MD5 fe4fbaddaa3ba5bec926b3b0f432344a twm-0.99.0.ebuild 454
+MD5 f27439ce39febf92e882ba157de7f6c6 twm-0.99.1.ebuild 461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbuQuBtvusYtCZMsRAvVZAJ9DGWi+mpbWDw0is4UgnB48IbU1qgCdH8vW
+QbjK2raa1iIowY6ZaKSXP/4=
+=VYrJ
+-----END PGP SIGNATURE-----
