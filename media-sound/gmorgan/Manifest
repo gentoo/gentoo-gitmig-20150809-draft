@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 853381d1ff7b4d9279b0669dd45e0d83 ChangeLog 1848
-MD5 b6a13196217c126167ced5039279cf5b gmorgan-0.16.ebuild 632
-MD5 9a56bf8d0d07497aed86c1b83e55caea gmorgan-0.22-r1.ebuild 876
-MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
-MD5 6354f8e7b9bdc8d0cea81e4fae2c87c2 gmorgan-0.23.ebuild 859
+MD5 0bdaf2cfc686c6167fd0873d8cb5a26b ChangeLog 1991
 MD5 62394940168b5d609833cdbc5a89d3cd files/digest-gmorgan-0.16 64
 MD5 19dd8c42204a066ea57a537453d294be files/digest-gmorgan-0.22-r1 64
 MD5 1228b302acf942da77c35e02c1a4c170 files/digest-gmorgan-0.23 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxRT5ArHZZzCEUG0RAqs6AJ9sX/YYnMPRtooKrJ4DT8FCv7OJ6gCdFjOM
-kF1weSm42obxlQlTmnD9XmE=
-=1NTt
------END PGP SIGNATURE-----
+MD5 9f9c7e33e88dfa646f1dc907afbee901 gmorgan-0.16.ebuild 617
+MD5 7c6c082c2f00e5b80d2fa2591b9fc6cb gmorgan-0.22-r1.ebuild 861
+MD5 6354f8e7b9bdc8d0cea81e4fae2c87c2 gmorgan-0.23.ebuild 859
+MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219

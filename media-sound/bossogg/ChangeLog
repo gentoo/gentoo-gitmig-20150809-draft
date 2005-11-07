@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/bossogg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.15 2005/09/02 16:59:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.16 2005/11/07 10:42:52 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> bossogg-0.13.5.ebuild,
+  bossogg-0.13.6.ebuild, bossogg-0.13.6-r2.ebuild, bossogg-0.13.6-r3.ebuild:
+  Don't install INSTALL and COPYING files. When using eautoreconf it takes
+  care of using foreign automake when needed, so no need to touch NEWS and
+  AUTHORS.
 
 *bossogg-0.13.6-r3 (02 Sep 2005)
 
