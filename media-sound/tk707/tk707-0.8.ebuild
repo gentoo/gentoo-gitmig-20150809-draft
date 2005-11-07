@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8.ebuild,v 1.1 2005/02/04 03:49:43 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8.ebuild,v 1.2 2005/11/07 12:16:18 flameeyes Exp $
 
 inherit eutils
 
@@ -16,12 +16,12 @@ KEYWORDS="~x86"
 #IUSE="timidity lame"
 IUSE=""
 
-DEPEND=">=media-libs/alsa-lib-0.9.0
+RDEPEND=">=media-libs/alsa-lib-0.9.0
 		>=dev-lang/tcl-8.4
 		>=dev-lang/tk-8.4"
 #		timidity? ( media-sound/timidity++ )
 #		lame? ( media-sound/lame )"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 		>=sys-devel/automake-1.7
 		>=sys-devel/autoconf-2.5"
 
