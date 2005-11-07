@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.8.0.ebuild,v 1.1 2005/11/05 17:13:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.8.0.ebuild,v 1.2 2005/11/07 09:28:27 flameeyes Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-libs/libebml-0.7.3"
+DEPEND=">=dev-libs/libebml-0.7.6"
 
 src_unpack() {
 	unpack ${A}
