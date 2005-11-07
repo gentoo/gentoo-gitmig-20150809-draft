@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/astrolog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.8 2005/04/21 19:01:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.9 2005/11/07 12:03:20 george Exp $
+
+  07 Nov 2005; George Shapovalov <george@gentoo.org> astrolog-5.40.ebuild:
+  fixed missing DEPEND on (optional) X (#109227)
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> astrolog-5.40.ebuild:
   stable on amd64
