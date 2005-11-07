@@ -1,5 +1,15 @@
-MD5 9c66b5db2aba403bdecd266f4243eb87 qmbtagger-0.07.ebuild 1082
-MD5 3c9ff15a4b578b23155482b21a02aa40 ChangeLog 1786
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 8201bc5ae9dc0b533146e1669029612b files/qmbtagger-0.07-errno.patch 841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd804bcaec81ffa0c960e1a362d9ceb8 ChangeLog 1898
 MD5 df565fdedc570429d548a729dbe9746f files/digest-qmbtagger-0.07 67
+MD5 8201bc5ae9dc0b533146e1669029612b files/qmbtagger-0.07-errno.patch 841
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 1755d73928439444b3c1a4506f60f326 qmbtagger-0.07.ebuild 1078
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDb0LRj5H05b2HAEkRAsVxAJ9EHGX/NxbbW1lLx3kVkaKC9rDLMgCfZRWM
+ovktv0ereqUIBwqUOSTTiks=
+=/7WL
+-----END PGP SIGNATURE-----
