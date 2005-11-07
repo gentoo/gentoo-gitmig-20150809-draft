@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.142 2005/10/20 18:46:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.143 2005/11/07 20:01:01 suka Exp $
+
+  07 Nov 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-ximian-1.9.199.ebuild:
+  Marked ~sparc to get users over to openoffice-2.0
 
 *openoffice-ximian-1.9.199 (20 Oct 2005)
 
