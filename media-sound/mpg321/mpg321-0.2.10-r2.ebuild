@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r2.ebuild,v 1.10 2005/04/15 03:33:18 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r2.ebuild,v 1.11 2005/11/07 11:14:06 flameeyes Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS BUGS COPYING ChangeLog HACKING INSTALL NEWS README README.remote THANKS TODO
+	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README README.remote THANKS TODO
 }
 
 pkg_postinst() {

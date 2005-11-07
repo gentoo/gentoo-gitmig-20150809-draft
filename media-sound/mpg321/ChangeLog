@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.31 2005/08/29 09:48:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.32 2005/11/07 11:14:06 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mpg321-0.2.10-r1.ebuild, mpg321-0.2.10-r2.ebuild:
+  Don't install INSTALL and COPYING files.
 
 *mpg321-0.2.10-r3 (29 Aug 2005)
 
