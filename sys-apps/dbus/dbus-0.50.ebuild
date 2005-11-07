@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50.ebuild,v 1.2 2005/11/07 04:42:56 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50.ebuild,v 1.3 2005/11/07 09:57:18 flameeyes Exp $
 
 inherit eutils mono python multilib autotools debug
 
@@ -76,8 +76,8 @@ src_compile() {
 		`use_enable qt` \
 		`use_enable python` \
 		`use_enable mono` \
+		`use_enable kernel_linux dnotify` \
 		--enable-glib \
-		--enable-dnotify \
 		--enable-verbose-mode \
 		--enable-checks \
 		--enable-asserts \
