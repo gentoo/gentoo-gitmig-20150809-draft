@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/specimen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.9 2005/06/12 12:14:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.10 2005/11/07 12:09:20 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> specimen-0.4.1.ebuild:
+  Don't install INSTALL or COPYING files.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> specimen-0.4.1.ebuild,
   specimen-0.4.5.ebuild:

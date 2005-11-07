@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.4.1.ebuild,v 1.5 2005/06/12 12:14:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.4.1.ebuild,v 1.6 2005/11/07 12:09:20 flameeyes Exp $
 
 DESCRIPTION="A Midi Controllable Audio Sampler"
 HOMEPAGE="http://www.gazuga.net"
@@ -32,5 +32,5 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	#dobin src/specimen
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

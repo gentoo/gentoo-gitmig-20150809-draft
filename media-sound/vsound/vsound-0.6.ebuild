@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.6.ebuild,v 1.3 2005/04/09 02:37:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.6.ebuild,v 1.4 2005/11/07 12:14:36 flameeyes Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS COPYING Changelog INSTALL NEWS README
+	dodoc AUTHORS Changelog NEWS README
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vsound
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.11 2005/04/09 02:37:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.12 2005/11/07 12:14:36 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vsound-0.5.ebuild,
+  vsound-0.6.ebuild:
+  Don't install INSTALL or COPYING files.
 
   08 Apr 2005; Joseph Jezak <josejx@gentoo.org> vsound-0.6.ebuild:
   Marked ~ppc for bug #88231.

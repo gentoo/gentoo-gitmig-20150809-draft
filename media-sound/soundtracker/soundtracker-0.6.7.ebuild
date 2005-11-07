@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.10 2004/12/19 06:46:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.11 2005/11/07 12:07:04 flameeyes Exp $
 
 IUSE="nls esd gnome oss alsa jack"
 
@@ -61,7 +61,7 @@ src_install () {
 	chmod -s ${D}/usr/bin/soundtracker
 
 	# documentation
-	dodoc AUTHORS COPYING ChangeLog FAQ INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
 	dodoc doc/*.txt
 	dohtml -r doc
 }

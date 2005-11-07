@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.2.4.ebuild,v 1.5 2004/09/03 20:21:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.2.4.ebuild,v 1.6 2005/11/07 12:11:28 flameeyes Exp $
 
 inherit flag-o-matic eutils
 DESCRIPTION="JACK client record button remembering the last 10 seconds when pressed."
@@ -31,5 +31,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc COPYING ChangeLog
+	dodoc ChangeLog
 }

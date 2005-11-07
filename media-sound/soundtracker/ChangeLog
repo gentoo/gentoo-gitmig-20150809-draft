@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundtracker
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.15 2004/12/19 06:46:38 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.16 2005/11/07 12:07:04 flameeyes Exp $
+
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  soundtracker-0.6.6.ebuild, soundtracker-0.6.7.ebuild:
+  Don't install INSTALL or COPYING files.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   soundtracker-0.6.7.ebuild:
