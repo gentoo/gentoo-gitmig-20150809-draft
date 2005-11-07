@@ -1,23 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8fc118f8babb7ec691aa146c3dd3c17b ChangeLog 8793
+MD5 72476f6cc80d3e09fa2597133929bb8b ChangeLog 8940
+MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
+MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
+MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
+MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
+MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1-r1 67
+MD5 72e64d81017126496070072ae2f3421b files/digest-libgcrypt-1.2.2 67
+MD5 af5915592167ae4fd16bab42364d3c8a files/libgcrypt-1.2.1-GNU-stack-fix.patch 22394
 MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
-MD5 4e5086ca6645aed250079bd046fcb78c libgcrypt-1.2.1.ebuild 1032
-MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
 MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
 MD5 713d351bd0021c65c59db7bfd734375e libgcrypt-1.2.1-r1.ebuild 1108
-MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
-MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
-MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1-r1 67
-MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
-MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
-MD5 af5915592167ae4fd16bab42364d3c8a files/libgcrypt-1.2.1-GNU-stack-fix.patch 22394
+MD5 4e5086ca6645aed250079bd046fcb78c libgcrypt-1.2.1.ebuild 1032
+MD5 27ec73eb30a43599906954d2fbf18b22 libgcrypt-1.2.2.ebuild 1121
+MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDGxMHmdTrptrqvGERAt7lAJ9IONordHINekx85qbrBivrrGys4wCcCVnt
-Bq+RFBaAgOTrbA6ybBzCF9E=
-=KXkC
+iD8DBQFDb7kPmdTrptrqvGERAgetAJ9e3Wpq36SGwK7IyYl8kXmq9HYuLgCgmiwT
+FDVXLv0kn0vL8mCjuyDO5es=
+=ObRJ
 -----END PGP SIGNATURE-----

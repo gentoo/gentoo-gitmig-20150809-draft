@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.59 2005/09/04 15:29:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.60 2005/11/07 20:28:51 dragonheart Exp $
+
+*libgcrypt-1.2.2 (07 Nov 2005)
+
+  07 Nov 2005; Daniel Black <dragonheart@gentoo.org>
+  +libgcrypt-1.2.2.ebuild:
+  verison bump as per bug #108677
 
   04 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   +files/libgcrypt-1.2.1-GNU-stack-fix.patch, libgcrypt-1.2.1-r1.ebuild:
