@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.3.ebuild,v 1.11 2005/01/01 11:43:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.3.ebuild,v 1.12 2005/11/07 10:29:31 flameeyes Exp $
 
 inherit eutils kernel-mod flag-o-matic
 
@@ -94,7 +94,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	rm doc/Makefile
-	dodoc CARDS-STATUS COPYING FAQ INSTALL README WARNING TODO doc/*
+	dodoc CARDS-STATUS FAQ README WARNING TODO doc/*
 }
 
 pkg_postinst() {

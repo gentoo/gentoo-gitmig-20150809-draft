@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9b.ebuild,v 1.9 2005/08/25 22:17:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9b.ebuild,v 1.10 2005/11/07 10:29:31 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -109,7 +109,7 @@ src_install() {
 	test -e ${D}/etc/init.d/alsasound && rm ${D}/etc/init.d/alsasound
 	test -e ${D}/etc/rc.d/init.d/alsasound && rm ${D}/etc/rc.d/init.d/alsasound
 
-	dodoc CARDS-STATUS INSTALL FAQ README WARNING TODO
+	dodoc CARDS-STATUS FAQ README WARNING TODO
 
 	if use doc; then
 		docinto doc
