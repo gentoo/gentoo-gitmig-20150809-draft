@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nomad-tool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomad-tool/ChangeLog,v 1.6 2005/01/01 15:17:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomad-tool/ChangeLog,v 1.7 2005/11/07 12:21:00 george Exp $
+
+  07 Nov 2005; George Shapovalov <george@gentoo.org> nomad-tool-1.3-r1.ebuild:
+  added dependencies: =dev-libs/glib-1* per checks in #109230
+  and (optional) RDEPEND on python/tcl for the gui frontend.
 
   24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> nomad-tool-1.3-r1.ebuild:
   stable x86.
