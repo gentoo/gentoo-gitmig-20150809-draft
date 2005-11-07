@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/jack-rack
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.17 2004/11/12 08:47:18 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.18 2005/11/07 14:09:42 matsuu Exp $
+
+*jack-rack-1.4.4 (07 Nov 2005)
+
+  07 Nov 2005; MATSUU Takuto <matsuu@gentoo.org>
+  +files/jack-rack-1.4.4-gtkdep.patch, +jack-rack-1.4.4.ebuild:
+  Version bumped. Bug 109836.
+  Added nls and xml2 USE flag.
 
   12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -jack-rack-1.4.1.ebuild, -jack-rack-1.4.2.ebuild, jack-rack-1.4.3.ebuild:
