@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.1/package.mask,v 1.4 2005/09/29 19:02:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.1/package.mask,v 1.5 2005/11/08 17:04:47 gustavoz Exp $
 
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
@@ -64,7 +64,9 @@ media-video/gephe
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by the dev/ profile and linux-headers-2.6
 gnome-base/gnome-volume-manager
+gnome-extra/hal-device-manager
 sys-apps/hal
+sys-apps/pmount
 # This probably won't work since -bin is ultra
 dev-haskell/haddock
 dev-lang/ghc
