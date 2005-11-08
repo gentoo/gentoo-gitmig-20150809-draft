@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.16 2005/11/08 11:36:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.17 2005/11/08 12:59:48 flameeyes Exp $
+
+  08 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libarchive-1.2.37.ebuild:
+  036 shouldn't have been stable. Make sure 37 it's not.
 
 *libarchive-1.2.37 (08 Nov 2005)
 
