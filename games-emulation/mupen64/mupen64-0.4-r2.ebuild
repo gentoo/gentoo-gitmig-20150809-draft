@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.6 2005/09/20 15:29:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.7 2005/11/08 01:33:05 morfic Exp $
 
 inherit eutils games
 
@@ -13,14 +13,13 @@ SRC_URI="http://mupen64.emulation64.com/files/${PV}/mupen64_src-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
-IUSE="asm avi"
+KEYWORDS="-amd64 x86"
+IUSE="asm"
 
 RDEPEND="sys-libs/zlib
 	media-libs/libsdl
 	virtual/glu
 	virtual/opengl
-	avi? ( media-video/avifile )
 	=x11-libs/gtk+-2*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -36,9 +35,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-makefiles.patch" \
 		"${FILESDIR}/${PN}-confdir.patch" \
 		"${FILESDIR}/${PN}-gtk2-makefile.patch"
-	if use avi; then
-		epatch "${FILESDIR}/${PN}-gentoo-avi.patch"
-	fi
 
 	if ! use asm ; then
 		epatch "${FILESDIR}/${PN}-noasm.patch"

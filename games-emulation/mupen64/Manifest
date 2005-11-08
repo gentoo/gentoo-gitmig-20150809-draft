@@ -1,15 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc84826291bd32f93d21767d8101d457 ChangeLog 3338
 MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
-MD5 32ad799fcf944bd2c2889cc96fa28f01 ChangeLog 3148
-MD5 7707985771663481aa96e7567ea2cb83 mupen64-0.4-r2.ebuild 2515
-MD5 8a58a3ce196f2d69b21339244722e957 files/mupen64-makefiles.patch 2052
+MD5 49a7654deda668a03424e9b35090ba40 mupen64-0.4-r2.ebuild 2410
 MD5 e2b006764c1bac03ac2667ad60a66101 files/0.3-gcc3.patch 3662
-MD5 72f9db08fce1cb715c16d28c11f1cf9a files/mupen64-confdir.patch 171
-MD5 a7ebb16b1b250e889d5acd49537a9ece files/mupen64 751
-MD5 87053b50f759d8d4b65a2369fe42338a files/mupen64-rice-confdir.patch 1208
 MD5 b21462ab51b383d28ca9d83f6531c664 files/digest-mupen64-0.4-r2 265
+MD5 a7ebb16b1b250e889d5acd49537a9ece files/mupen64 751
+MD5 f63e1260b9d35674f21fdcfff3be5c16 files/mupen64-SDL_ttf.patch 353
+MD5 72f9db08fce1cb715c16d28c11f1cf9a files/mupen64-confdir.patch 171
+MD5 e2b006764c1bac03ac2667ad60a66101 files/mupen64-gcc3.patch 3662
 MD5 623f09fd7f622d43901a028d7069ac04 files/mupen64-gentoo-sdl.patch 1558
 MD5 c9949136ca13fb53bdbe8cdcf0374ead files/mupen64-gtk2-makefile.patch 4845
-MD5 f63e1260b9d35674f21fdcfff3be5c16 files/mupen64-SDL_ttf.patch 353
-MD5 04a919e368e803ceda85d809cc767b0a files/mupen64-gentoo-avi.patch 255
+MD5 8a58a3ce196f2d69b21339244722e957 files/mupen64-makefiles.patch 2052
 MD5 638046a5841774d744611e9f38751bcc files/mupen64-noasm.patch 229
-MD5 e2b006764c1bac03ac2667ad60a66101 files/mupen64-gcc3.patch 3662
+MD5 87053b50f759d8d4b65a2369fe42338a files/mupen64-rice-confdir.patch 1208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDcABK/aM9DdBw91cRApbTAJ9TZeXzSalBKJLbXk76ig4jGfWh0wCeOyS3
+awRl6gBOlwl2vVs+GP3solw=
+=2V7I
+-----END PGP SIGNATURE-----

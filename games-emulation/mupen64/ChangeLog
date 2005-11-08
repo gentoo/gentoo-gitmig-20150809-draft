@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mupen64
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.17 2005/09/20 15:29:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.18 2005/11/08 01:33:05 morfic Exp $
+
+  08 Nov 2005; Daniel Goller <morfic@gentoo.org>
+  -files/mupen64-gentoo-avi.patch, mupen64-0.4-r2.ebuild:
+  remove avifile dep and avi support wrt bug #111337, -amd64 since it doesn't
+  work
 
   20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
   mupen64-0.4-r2.ebuild:
