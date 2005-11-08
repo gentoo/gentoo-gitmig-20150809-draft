@@ -1,4 +1,4 @@
-MD5 d4220fcb7942650538b1f1bce7ec38b0 ChangeLog 8661
+MD5 d581d037cc738857b76db1250ee80e57 ChangeLog 8750
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
 MD5 fedfd2a1281d8773038a8036a2a75ef8 dbus-0.23.2-r1.ebuild 3454
 MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
@@ -8,7 +8,7 @@ MD5 f127ffa8cdc75cbd0befadcb16d08401 dbus-0.36.2.ebuild 3620
 MD5 36c0119912a6585c12c8ef05b9687074 dbus-0.50-r1.ebuild 3749
 MD5 0a1ae7c5d57aceed3246ab0627f0c356 dbus-0.50.ebuild 3767
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
-MD5 41552c39bbbe0027bee798f296c1a3f4 files/dbus 946
+MD5 2a21cd128b106bc728a0566c13e727e3 files/dbus 938
 MD5 768e500cfda89809161576ea2080a7aa files/dbus-0.23-dbus_session_connect.patch 1185
 MD5 f3ab25d85c77b7f859d4d2cefc787aef files/dbus-0.23-fd_set.patch 293
 MD5 403b7724a698be1509916991e87224a4 files/dbus-0.23-pyexecdir.patch 1131
