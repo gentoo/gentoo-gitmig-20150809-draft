@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20b.ebuild,v 1.4 2005/11/08 13:16:13 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20b.ebuild,v 1.5 2005/11/08 13:28:01 satya Exp $
 
 inherit eutils versionator
 
@@ -296,7 +296,7 @@ pkg_preinst() {
 pkg_postinst() {
 	if use swat; then
 		einfo "swat must be enabled by xinetd:"
-		einfo "    change the /etc/xinetd/swat configuration"
+		einfo "    change the /etc/xinetd.d/swat configuration"
 	fi
 	einfo "Latest info: README.gentoo in documentation directory"
 }
