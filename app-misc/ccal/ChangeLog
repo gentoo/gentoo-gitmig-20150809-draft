@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ccal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ChangeLog,v 1.6 2005/09/01 03:28:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ChangeLog,v 1.7 2005/11/08 03:32:29 weeve Exp $
+
+  08 Nov 2005; Jason Wever <weeve@gentoo.org> ccal-0.6.ebuild:
+  Added ~sparc keyword wrt bug #111759.
 
   01 Sep 2005; Luis Medinas <metalgod@gentoo.org> ccal-0.6.ebuild:
   Added ~amd64 keywords.
