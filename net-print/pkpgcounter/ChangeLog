@@ -1,0 +1,10 @@
+# ChangeLog for net-print/pkpgcounter
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.1 2005/11/08 10:58:00 satya Exp $
+
+*pkpgcounter-1.72 (08 Nov 2005)
+
+  08 Nov 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
+  +pkpgcounter-1.72.ebuild:
+  new ebuild submission: net-print/pykota dependency (bug #110679)
+
