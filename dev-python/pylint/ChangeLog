@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.19 2005/11/07 18:05:52 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.20 2005/11/08 17:08:46 pythonhead Exp $
+
+  08 Nov 2005; Rob Cakebread <pythonhead@gentoo.org> pylint-0.8.1.ebuild:
+  Added new dependency on dev-python/astng.
 
 *pylint-0.8.1 (07 Nov 2005)
 
