@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 4eaf7bca1468316d69ebf97c5c7042b6 monster-masher-1.7.ebuild 742
-MD5 8ba249ba055c5699c6cba49aa29888ed ChangeLog 1556
+MD5 9b258b26b079f3d7e1cdaf098aceb287 monster-masher-1.8.ebuild 721
+MD5 73bf89dc78f03927d57345701dee17f1 ChangeLog 1692
+MD5 a67e80854f1a2d09d5291b1c189d46f4 files/digest-monster-masher-1.8 72
 MD5 e0530281ed02defde7939c13678b3da6 files/digest-monster-masher-1.7 72
