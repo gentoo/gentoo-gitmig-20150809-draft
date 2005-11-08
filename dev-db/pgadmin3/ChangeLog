@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.23 2005/10/18 21:39:33 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.24 2005/11/08 16:37:01 nakano Exp $
+
+*pgadmin3-1.4.0 (08 Nov 2005)
+
+  08 Nov 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/pgadmin3-1.4.0-beta2-configure.patch,
+  +files/pgadmin3-1.4.0-configure.patch, -pgadmin3-1.4.0_beta2.ebuild,
+  +pgadmin3-1.4.0.ebuild:
+  version bump.
 
 *pgadmin3-1.4.0_beta2 (18 Oct 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.4.0_beta2.ebuild,v 1.1 2005/10/18 21:39:33 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.4.0.ebuild,v 1.1 2005/11/08 16:37:01 nakano Exp $
 
 inherit eutils libtool wxwidgets
 
@@ -9,8 +9,7 @@ IUSE=""
 RESTRICT="nomirror"
 DESCRIPTION="wxWindows GUI for PostgreSQL"
 HOMEPAGE="http://www.pgadmin.org/"
-MY_P=${P/_/-}
-SRC_URI="mirror://postgresql/pgadmin3/beta/src/${MY_P}.tar.gz"
+SRC_URI="mirror://postgresql/pgadmin3/release/v${PV}/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -18,8 +17,6 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=x11-libs/wxGTK-2.6.0
 	dev-db/libpq"
-
-S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if ! built_with_use '>=x11-libs/wxGTK-2.6.0' unicode ; then
@@ -30,7 +27,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die "Couldn't cd to ${S}"
-	epatch ${FILESDIR}/${MY_P}-configure.patch
+	epatch ${FILESDIR}/${P}-configure.patch
 }
 
 src_compile() {
