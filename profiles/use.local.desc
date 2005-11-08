@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1543 2005/11/08 04:57:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1544 2005/11/08 18:42:17 azarah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -596,7 +596,8 @@ media-sound/amarok:noamazon - Disable support for downloading covers from amazon
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/audacity:libsamplerate - Build with libsamplerate support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
-media-sound/bmpx:xchat - Install xchat plugins (need dbus and perl/python)
+media-sound/bmpx:irssi - Install irssi script (need dbus and perl)
+media-sound/bmpx:xchat - Install xchat script (need dbus and perl/python)
 media-sound/daapd:mpeg4 - Enable AAC metadata support
 media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
