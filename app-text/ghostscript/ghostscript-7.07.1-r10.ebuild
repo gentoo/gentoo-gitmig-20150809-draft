@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r10.ebuild,v 1.5 2005/11/08 03:59:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r10.ebuild,v 1.6 2005/11/08 07:20:11 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -32,12 +32,11 @@ RDEPEND="${DEP}
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
 	X? ( || ( (
-			x11-proto/libXt
-			x11-proto/libXt
-			x11-proto/libSM
-			x11-proto/libICE
-			x11-proto/libXau
-			x11-proto/libXdmcp )
+			x11-libs/libXt
+			x11-libs/libSM
+			x11-libs/libICE
+			x11-libs/libXau
+			x11-libs/libXdmcp )
 		virtual/x11 ) )
 	media-fonts/gnu-gs-fonts-std"
 
