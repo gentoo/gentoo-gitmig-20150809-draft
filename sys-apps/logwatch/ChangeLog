@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.26 2005/11/04 03:36:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.27 2005/11/08 03:40:04 vapier Exp $
+
+*logwatch-7.0-r1 (08 Nov 2005)
+
+  08 Nov 2005; Mike Frysinger <vapier@gentoo.org> +logwatch-7.0-r1.ebuild:
+  Fixes by Rod Begbie so that the install actually works #111477.
 
 *logwatch-7.0 (04 Nov 2005)
 

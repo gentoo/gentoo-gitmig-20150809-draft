@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79a2ee893db72368ad9b25fb5ee37bb4 ChangeLog 4428
+MD5 5430f6dec4da88527d626205e29fda56 ChangeLog 4602
 MD5 cf548a7143dce1aba3792d0647ae4f90 files/digest-logwatch-4.3.2 65
 MD5 4a5e8c25106385b7e823785f6c61855d files/digest-logwatch-5.0 63
 MD5 e8d38d01460c2fcf26e92e8853bf6c84 files/digest-logwatch-5.2.2 66
 MD5 bdcfb03932e5e0dd4ea2b3eebc6d714e files/digest-logwatch-6.0.2 66
 MD5 bbb413bd38d41f27258575befdb63754 files/digest-logwatch-6.1.2 66
-MD5 55416a8b2b8431979d677d2b8eacfa73 files/digest-logwatch-7.0 64
+MD5 55416a8b2b8431979d677d2b8eacfa73 files/digest-logwatch-7.0-r1 64
 MD5 edb003cbc0686ed4cf37db16025635f3 files/logwatch 98
 MD5 6d9bd0a39a1ce3e71cfc95ccd3761604 files/logwatch-6.1.2-emerge-applydate.patch 469
 MD5 4e550750cdcb0a6432c46d259d38e4db logwatch-4.3.2.ebuild 1345
@@ -15,12 +15,12 @@ MD5 70cb3442dbd2bafb307ea09f5eea8d03 logwatch-5.0.ebuild 1398
 MD5 8eb1d712eab6b882df0d6d9e490d73db logwatch-5.2.2.ebuild 1404
 MD5 ea7d9d5b4ba13bf8be8fb325b870a619 logwatch-6.0.2.ebuild 1340
 MD5 225cfc0762705b111d7649aa0c78b77d logwatch-6.1.2.ebuild 1520
-MD5 b91a350d409db15d9e02b24f7cbfa206 logwatch-7.0.ebuild 1403
+MD5 efbd0439573d9f818cb572da2fed77d0 logwatch-7.0-r1.ebuild 1602
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDatdigIKl8Uu19MoRAtUsAJ4jecmesp3hYABNsMvOE36b9uSJywCcD1ad
-kUO400uOmjniD7uAnuKBJzw=
-=Aijf
+iD8DBQFDcB47gIKl8Uu19MoRAsXpAJ98bcv3ZcE7JEejvJYfrG8DWpk3LACfeUzL
+VdXqfnFr5y/vJc602qWenXM=
+=R3qD
 -----END PGP SIGNATURE-----
