@@ -8,12 +8,12 @@ MD5 af6288d3f3035f1894125ba8c9b22982 files/digest-libarchive-1.2.37 69
 MD5 7fe214e0de0090f3344a9e4a1792a5b3 files/libarchive-1.02.027-osx.patch 609
 MD5 6530e11ad3afae081d8c1cd12c6fdd39 libarchive-1.02.027.ebuild 691
 MD5 f067afe25b7c47e0b31688b11a8f6d7a libarchive-1.02.036.ebuild 855
-MD5 c1feb66e0657dcec6f5872e2eb93e8a2 libarchive-1.2.37.ebuild 614
+MD5 58af84c00d03fd7756c95f3aa00cf8de libarchive-1.2.37.ebuild 853
 MD5 985eb3e6f7fb60fd3651ba1cae41c609 metadata.xml 464
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDcKFQj5H05b2HAEkRAg2KAJ91U4aIX5YgKwtEkIvjfXyODUO3KwCgl+w9
-jszDSaBz8Outp+V6KjzrpeI=
-=G//5
+iD8DBQFDcKH7j5H05b2HAEkRAuVFAJ933DVT3iJ1BNssjDpz32ATjGYAJQCfSXWN
+8K4FQI9GG7ppBqImxsg10xk=
+=byf9
 -----END PGP SIGNATURE-----

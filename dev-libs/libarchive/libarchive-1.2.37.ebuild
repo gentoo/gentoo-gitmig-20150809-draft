@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.2.37.ebuild,v 1.2 2005/11/08 12:59:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.2.37.ebuild,v 1.3 2005/11/08 13:02:39 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Library to create and read several different archive formats."
 HOMEPAGE="http://people.freebsd.org/~kientzle/libarchive/"
@@ -13,10 +13,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE=""
 
-DEPEND="app-arch/bzip2
+RDEPEND="app-arch/bzip2
 	sys-libs/zlib"
+DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	elibtoolize
+	epunt_cxx
+}
 
 src_install() {
 	make DESTDIR="${D}" install
-}
 
+	if ! use userland_Darwin; then
+		dodir /$(get_libdir)
+		mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
+		gen_usr_ldscript libarchive.so
+	fi
+}
