@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.19 2005/08/22 21:00:17 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.20 2005/11/08 19:19:36 ranger Exp $
+
+  08 Nov 2005; Brent Baude <ranger@gentoo.org> meanwhile-0.4.2.ebuild:
+  Marking ppc64 stable after 30 days
 
   22 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> meanwhile-0.4.2.ebuild:
   Add missing dependencies.
