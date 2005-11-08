@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.58 2005/11/07 09:57:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.59 2005/11/08 04:46:00 compnerd Exp $
+
+*dbus-0.50-r1 (08 Nov 2005)
+
+  08 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> files/dbus,
+  +dbus-0.50-r1.ebuild:
+  Changing the initscript (with revbump).  Minor cosmetic changes (changed to
+  doinit).
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> dbus-0.50.ebuild:
   Don't enable dnotify for every system, but just when using Linux kernel, as

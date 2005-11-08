@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus,v 1.5 2005/03/11 21:21:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus,v 1.6 2005/11/08 04:46:00 compnerd Exp $
 
 start() {
 
@@ -25,7 +25,11 @@ stop() {
 	eend ${retval}
 
 	# This should vanish when baselayout-1.12.0 is marked stable.
-	rm -f /var/run/dbus.pid
+	[[ -f /var/run/dbus.pid ]] && rm -f /var/run/dbus.pid
+
+   # Changes to the system dbus socket run file force us to take care of both
+   [[ -f /var/lib/dbus/system_bus_socket ]] && rm -rf /var/lib/dbus/system_bus_socket
+   [[ -f /var/run/dbus/system_bus_socket ]] && rm -rf /var/run/dbus/system_bus_socket
 
 	return ${retval}
 
