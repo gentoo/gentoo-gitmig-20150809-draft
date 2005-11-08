@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.15 2005/11/05 14:58:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.16 2005/11/08 11:36:54 flameeyes Exp $
+
+*libarchive-1.2.37 (08 Nov 2005)
+
+  08 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +libarchive-1.2.37.ebuild:
+  Updated to latest upstream version. OSX patch shouldn't be needed anymore.
+  Changed versioning scheme by upstream.
 
   05 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/libarchive-1.02.027-libtool.patch, -libarchive-1.02.027-r1.ebuild,
