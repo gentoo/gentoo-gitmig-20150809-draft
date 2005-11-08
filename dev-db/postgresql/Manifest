@@ -10,10 +10,9 @@ MD5 a089623ae6622767f891ab6791c353fa postgresql-8.0.3.ebuild 7528
 MD5 a9b7a8e8da7324d1b521f0c7ea9bb4ec postgresql-8.0.1-r4.ebuild 7842
 MD5 09d773248e8468fbaffe556e38897ac0 postgresql-7.4.7-r2.ebuild 10871
 MD5 3afbecf7eedb479ff199b5d1ea2dbabc postgresql-7.3.6-r2.ebuild 7855
-MD5 96751fd27205a07552e457258c0fc8da ChangeLog 46581
+MD5 c6d76f40cfe9540f19ea42b106744382 ChangeLog 46841
 MD5 68ff24159f8b56651a6676de71e828b4 postgresql-7.3.11.ebuild 8157
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 10810d7c1821272047708d46128d76e6 postgresql-8.1_beta3.ebuild 7551
 MD5 90acacf5efb7b8a73ec5d34128358c32 files/CAN-2005-1409.patch 1698
 MD5 2e87af398df0a957bf2f2dff754ac174 files/postgresql-7.4.7-vacuum-delay.patch 8918
 MD5 df4fedbfa30df690a6f78da9f5a44196 files/postgresql-7.4.7-securityfix.patch 1773
@@ -67,12 +66,8 @@ MD5 999379432735e7e6a71ec6ccd5a784e1 files/pg_autovacuum.conf-8.0.4 302
 MD5 dbe0601754b798a4d08f080137a57c43 files/postgresql-7.3.9-securityfix.patch 1443
 MD5 4501816025cc701e272b5e57937d0de0 files/postgresql-7.3.9-gentoo.patch 529
 MD5 1b27a8ad9d652b6d292ff34ad385b208 files/postgresql-7.4.8-gentoo.patch 1729
-MD5 fa95ac5bd802d7220fe9196de93fbe97 files/postgresql-8.1_beta3-sh.patch 618
-MD5 37936bee1d8130df88f5524c3211e455 files/digest-postgresql-8.1_beta3 232
-MD5 21971340a83349339d245da160e77fab files/postgresql.init-8.1_beta3 1283
 MD5 3665230043dd69d562482d92f2d08286 files/postgresql-8.0.1-gentoo.patch 808
 MD5 66ade3cf803c867e04bb2ab9dfde3dbf files/postgresql-8.1.0-gentoo.patch 1200
-MD5 1111542635fa3a360dd148690cff0fef files/postgresql-8.1_beta3-gentoo.patch 1224
 MD5 3b4cbf59561d655b882ab335b892909d files/digest-postgresql-7.3.6-r2 223
 MD5 f96713c7df9eb83197d57a6e22cdeedf files/digest-postgresql-7.3.9-r1 223
 MD5 b6200bc7bb2b1078ce182692c618f8a5 files/digest-postgresql-7.4.7-r1 290
@@ -82,7 +77,6 @@ MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.7-hppa-testandset.patc
 MD5 8ec4fecf36cf856f2d3afc97419c2f93 files/postgresql-8.0.1-gentoo-libpq.patch 1200
 MD5 2b0c84d2c26622573d4e2b7e0518fdad files/postgresql.conf 375
 MD5 fa95ac5bd802d7220fe9196de93fbe97 files/postgresql-8.0.3-sh.patch 618
-MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-8.1_beta3 390
 MD5 314c9147f25d4676c60a4761bbe500e2 files/digest-postgresql-7.3.10 226
 MD5 419268f051162aee7f36e9c0b384fcc1 files/digest-postgresql-7.3.11 226
 MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.8-hppa-testandset.patch 1596
