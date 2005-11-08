@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 786bc173e686b79d58154e9fd3df1b4d ChangeLog 4716
+MD5 7fcd37730017f8057a58a717ba764785 ChangeLog 4815
 MD5 3aeda907194d0ce63ad841586ea3187f files/digest-sysfsutils-0.2.0 67
 MD5 0384b6e5908a20cdcd66447733b28194 files/digest-sysfsutils-0.3.0 68
 MD5 ae9dcbf820cd304b04eb37505fbc3831 files/digest-sysfsutils-0.4.0 68
@@ -22,11 +22,11 @@ MD5 7e7075f23dac634652d9ba42796bba14 sysfsutils-1.2.0-r1.ebuild 801
 MD5 7894c65938bd31ea2a302ea6a58ddfac sysfsutils-1.2.0-r2.ebuild 1038
 MD5 909c224dc06c03330657f1495c856263 sysfsutils-1.2.0-r3.ebuild 1264
 MD5 5bad6609c165bea1fa4f294f84195d08 sysfsutils-1.2.0.ebuild 707
-MD5 3d0875712b1842ea8aa4266d1a425b45 sysfsutils-1.3.0.ebuild 1240
+MD5 849d474db3da9faeafe7414a715f8701 sysfsutils-1.3.0.ebuild 1241
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDakbgomPajV0RnrERAptqAJkBPMVP1jbE4llVlM3ItYVl9Uk2wACfZahD
-igEj6RsygpAT81aa61rUxbA=
-=HiSX
+iD8DBQFDcFzh1ZcsMnZjRyIRAls1AJ9fTLJuvtH8A2PuDtZ9pdHFqOgtwQCeLIEF
+RK0ibaT8bLzeH0Zqchpqk60=
+=tTIS
 -----END PGP SIGNATURE-----
