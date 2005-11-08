@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.52 2005/08/21 02:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.53 2005/11/08 02:53:47 vapier Exp $
+
+*grub-0.97-r1 (08 Nov 2005)
+
+  08 Nov 2005; Mike Frysinger <vapier@gentoo.org> +grub-0.97-r1.ebuild:
+  Fixes by Jon Bernard/Roy Walker for address checks on machines with lots of
+  ram #99897 and add support for Reiser4 #69590.
 
   21 Aug 2005; Mike Frysinger <vapier@gentoo.org> grub-0.94-r1.ebuild,
   grub-0.96-r1.ebuild, grub-0.96-r2.ebuild, grub-0.96-r3.ebuild,
