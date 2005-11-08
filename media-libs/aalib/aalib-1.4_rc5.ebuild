@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.4 2005/06/30 21:56:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.5 2005/11/08 18:05:42 dang Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -16,8 +16,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="X slang gpm"
 
-DEPEND=">=sys-libs/ncurses-5.1
-	X? ( virtual/x11 )
+RDEPEND="X? ( || ( (
+		x11-libs/libX11 )
+		virtual/x11 ) )"
+
+DEPEND="${RDEPEND}
+	>=sys-libs/ncurses-5.1
+	X? ( || ( (
+		x11-proto/xproto )
+		virtual/x11 ) )
 	gpm? ( sys-libs/gpm )
 	slang? ( >=sys-libs/slang-1.4.2 )"
 

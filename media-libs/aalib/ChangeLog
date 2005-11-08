@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.21 2005/06/30 21:56:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.22 2005/11/08 18:05:42 dang Exp $
+
+  08 Nov 2005; <dang@gentoo.org> aalib-1.4_rc5.ebuild:
+  Modular X deps
 
   30 Jun 2005; Aron Griffis <agriffis@gentoo.org> aalib-1.4_rc4-r2.ebuild,
   aalib-1.4_rc5.ebuild:
