@@ -1,4 +1,4 @@
-MD5 d14df94f0f8de5f01073b592b04c4980 ChangeLog 5323
+MD5 55086a810d57dfb4c89392f4a64e80e7 ChangeLog 5426
 MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r4 63
 MD5 2fd9906f2bf293fdad42d572846508de files/digest-pari-2.1.6 60
 MD5 c3f89da5ddbdb73646e3d64ee31ea887 files/docs.patch 915
@@ -6,4 +6,4 @@ MD5 dccf7ef464f99fa750a5c7fc3ec67e8f files/wrong_functype-r1.patch 1498
 MD5 cbd309a01e2fee1a5ba6cb3a93ba5708 files/wrong_functype.patch 1946
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 c49cfeebeab95672f9d228b76c63522b pari-2.1.5-r4.ebuild 2520
-MD5 908ff95d7cba6248193933919c69f905 pari-2.1.6.ebuild 2312
+MD5 8aca1c2d2f15f55900235c498da7a34a pari-2.1.6.ebuild 2482
