@@ -1,0 +1,11 @@
+# ChangeLog for dev-dotnet/nini
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/ChangeLog,v 1.1 2005/11/08 06:00:05 compnerd Exp $
+
+*nini-1.0.0 (08 Nov 2005)
+
+  08 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/nini-1.0.0.build, +files/nini.pc.in, +metadata.xml,
+  +nini-1.0.0.ebuild:
+  Initial import of Nini.  Resolves bug #101676.
+

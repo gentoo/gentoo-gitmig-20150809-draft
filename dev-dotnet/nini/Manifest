@@ -1,0 +1,6 @@
+MD5 3d76bed5a3f579acb3d16c0d9c2c337f ChangeLog 421
+MD5 3eb6b2b4d8bd7af0b522fd82eb2d7bdf files/digest-nini-1.0.0 60
+MD5 517b7a772a58a6e6fd80b643c2be584b files/nini-1.0.0.build 2111
+MD5 387a2b28d8c145d04360c42db79b2771 files/nini.pc.in 143
+MD5 30f80a060407365f6c87eedde0dfdbfd metadata.xml 341
+MD5 e6bb8f38bdb400cbcc3a75a8e23765c8 nini-1.0.0.ebuild 1218
