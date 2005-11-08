@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.210 2005/10/29 11:07:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.211 2005/11/08 13:16:13 satya Exp $
+
+  08 Nov 2005; Christian Andreetta <satya@gentoo.org>
+  samba-3.0.14a-r2.ebuild, samba-3.0.14a-r3.ebuild, samba-3.0.20-r1.ebuild,
+  samba-3.0.20a.ebuild, samba-3.0.20b.ebuild:
+  'examples' IUSE flag (bug #111508)
 
   29 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> samba-3.0.20b.ebuild:
   Disable pie support for *BSD systems as it's not supported. Fixes bug #110278.

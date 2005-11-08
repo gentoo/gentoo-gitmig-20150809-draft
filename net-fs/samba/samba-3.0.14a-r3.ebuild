@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r3.ebuild,v 1.6 2005/10/03 11:59:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r3.ebuild,v 1.7 2005/11/08 13:16:13 satya Exp $
 
 inherit eutils versionator
 
 IUSE_LINGUAS="ja pl"
-IUSE="acl cups doc kerberos ldap mysql pam postgres python quotas readline
-winbind xml xml2 libclamav oav selinux"
+IUSE="acl cups doc examples kerberos ldap mysql pam postgres python quotas
+	readline winbind xml xml2 libclamav oav selinux"
 
 VSCAN_VER=0.3.6
 PATCH_VER=0.3.4
@@ -230,14 +230,15 @@ src_install() {
 
 	# docs
 	dodoc ${S2}/{COPYING,Manifest,README,Roadmap,WHATSNEW.txt}
-	docinto examples
 	dodoc ${CONFDIR}/nsswitch.conf-wins
 	use winbind && dodoc ${CONFDIR}/nsswitch.conf-winbind
 
-	cp -pPR ${S2}/examples/* ${D}/usr/share/doc/${PF}/examples
-
-	chmod -R 755 `find ${D}/usr/share/doc/${PF}/examples -type d`
-	chmod -R 644 `find ${D}/usr/share/doc/${PF}/examples ! -type d`
+	if use examples; then
+		docinto examples
+		cp -pPR ${S2}/examples/* ${D}/usr/share/doc/${PF}/examples
+		chmod -R 755 `find ${D}/usr/share/doc/${PF}/examples -type d`
+		chmod -R 644 `find ${D}/usr/share/doc/${PF}/examples ! -type d`
+	fi
 
 	if use oav; then
 		docinto ${PFVSCAN}
