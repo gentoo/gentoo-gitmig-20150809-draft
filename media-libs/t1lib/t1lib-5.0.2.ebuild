@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.20 2005/11/08 04:10:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.21 2005/11/08 07:15:28 swegener Exp $
 
 inherit eutils gnuconfig flag-o-matic libtool
 
@@ -21,14 +21,14 @@ RDEPEND="X? ( || ( (
 		x11-libs/libSM
 		x11-libs/libICE
 		x11-libs/libXext )
-	virtual/x11 ) )" 
+	virtual/x11 ) )"
 
 DEPEND="${RDEPEND}
 	X? ( || ( (
 		x11-libs/libXfont
 		x11-proto/xproto
 		x11-proto/fontsproto )
-	virtual/x11 ) )" 
+	virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
