@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4665 2005/11/08 07:15:10 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4666 2005/11/08 13:58:24 nakano Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -706,11 +706,6 @@ x11-misc/driconf
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
 net-im/jive-messenger
-
-# Masatomo Nakano <nakano@gentoo.org> (28 Aug 2005)
-# masked for testing
->=dev-db/postgresql-8.1_beta1
->=dev-db/libpq-8.1_beta1
 
 # Stefan Knoblich <stkn@gentoo.org> (27 August 2005)
 # Asterisk-1.2.0_beta and related ebuilds, still work-in-progress.
