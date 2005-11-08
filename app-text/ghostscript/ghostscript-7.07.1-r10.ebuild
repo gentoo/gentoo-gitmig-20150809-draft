@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r10.ebuild,v 1.4 2005/11/08 03:58:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r10.ebuild,v 1.5 2005/11/08 03:59:21 dang Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -19,7 +19,7 @@ DEP="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
-	X? ( || ( ( 
+	X? ( || ( (
 			x11-libs/libX11
 			x11-libs/libXt )
 		virtual/x11 ) )
@@ -31,7 +31,7 @@ RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
-	X? ( || ( ( 
+	X? ( || ( (
 			x11-proto/libXt
 			x11-proto/libXt
 			x11-proto/libSM
@@ -42,7 +42,7 @@ RDEPEND="${DEP}
 	media-fonts/gnu-gs-fonts-std"
 
 DEPEND="${DEP}
-	X? ( || ( ( 
+	X? ( || ( (
 			x11-proto/xproto )
 		virtual/x11 ) )
 	gtk? ( dev-util/pkgconfig )"
