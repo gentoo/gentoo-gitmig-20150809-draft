@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.7 2005/10/06 22:52:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.8 2005/11/08 07:42:43 latexer Exp $
+
+  08 Nov 2005; Peter Johanson <latexer@gentoo.org> boo-0.7.0.1921.ebuild:
+  Fix for resource/locale issue. See bug #109351.
 
 *boo-0.7.0.1921 (06 Oct 2005)
 
