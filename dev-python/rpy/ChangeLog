@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.10 2005/11/03 20:25:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.11 2005/11/08 21:17:41 mr_bones_ Exp $
+
+  08 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/rpy-0.3.5-cvs_backport.patch, -rpy-0.3.5-r1.ebuild:
+  clean old ebuild
 
 *rpy-0.4.6 (03 Nov 2005)
 
