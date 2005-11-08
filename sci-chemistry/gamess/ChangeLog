@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.1 2005/09/20 02:20:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.2 2005/11/08 17:13:05 markusle Exp $
+
+  08 Nov 2005; Markus Dittrich <markusle@gentoo.org> ChangeLog:
+  marked gamess-05272005.ebuild as ~x86
 
 *gamess-05272005 (20 Sep 2005)
 
