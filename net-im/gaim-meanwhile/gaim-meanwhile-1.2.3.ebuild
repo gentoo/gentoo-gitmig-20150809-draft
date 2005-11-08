@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/gaim-meanwhile-1.2.3.ebuild,v 1.3 2005/08/19 19:06:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/gaim-meanwhile-1.2.3.ebuild,v 1.4 2005/11/08 19:20:36 ranger Exp $
 
 inherit debug
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://meanwhile.sourceforge.net/"
 SRC_URI="mirror://sourceforge/meanwhile/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 DEPEND=">=net-libs/meanwhile-0.4.2
 	>=net-im/gaim-1.2.1"
 IUSE=""
