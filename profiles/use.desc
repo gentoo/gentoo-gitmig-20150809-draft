@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.271 2005/10/30 19:32:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.272 2005/11/08 19:47:01 ferdy Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -141,7 +141,7 @@ ibm - Add support for IBM ppc64 specific systems
 icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
 iconv - Enable support for the iconv character set conversion library
 icq - Enable ICQ IM protocol support
-idn - Enable support for Internalized Domain Names
+idn - Enable support for Internationalized Domain Names
 ieee1394 - Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
 ifc - use ifc instead of g77 to build
 imagemagick - Enables support for Imagemagick (image converter)
