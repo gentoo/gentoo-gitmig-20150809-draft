@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.101 2005/10/22 16:01:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.102 2005/11/08 22:55:57 compnerd Exp $
+
+  09 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  pcmcia-cs-3.2.8-r2.ebuild:
+  Adding modular X dependencies.
 
   22 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   -files/pcmcia-cs-3.2.7-move-pnp-ids-to-usr-share-misc.patch,
