@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.1 2005/11/08 17:06:07 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.2 2005/11/08 17:44:57 fmccor Exp $
+
+  08 Nov 2005; Ferris McCormick <fmccor@gentoo.org> astng-0.13.1.ebuild:
+  Add ~sparc keyword at developer's request, partially closing
+  Bug #111891.
 
 *astng-0.13.1 (08 Nov 2005)
 

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 528c769e15664162cc60d51e59e3ae63 ChangeLog 2707
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 71029c2683e4c6292583fa2a51b055d4 pylint-0.4.0.ebuild 561
-MD5 9133bf532408e4246fdef24fd5457038 pylint-0.7.0.ebuild 618
-MD5 e8e6b1fc4e905258ea15c16e28fc1a87 pylint-0.8.1.ebuild 629
-MD5 edddecc290a5a1f3dbfc2e19ec4a2af2 pylint-0.6.4.ebuild 617
+MD5 8cb35d120f99bfec07ae33ea32dd0f9e ChangeLog 2987
 MD5 7dc504c0fc2deb503cde73e6c3b60578 files/digest-pylint-0.4.0 63
+MD5 09d4c3f716af850083a78c62dde806ed files/digest-pylint-0.6.4 63
 MD5 2a7e58da5e8b5efe228c4a1775b21698 files/digest-pylint-0.7.0 64
 MD5 417bed66e335a218f5a651136604725c files/digest-pylint-0.8.1 64
-MD5 09d4c3f716af850083a78c62dde806ed files/digest-pylint-0.6.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDcNukTry2jroju7wRAseIAJsHAmScAuj/7lMLRiDECznkchchRgCbBvdX
-ieazR9xZzTU4h73lzWfCgs4=
-=Qk3G
------END PGP SIGNATURE-----
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 71029c2683e4c6292583fa2a51b055d4 pylint-0.4.0.ebuild 561
+MD5 edddecc290a5a1f3dbfc2e19ec4a2af2 pylint-0.6.4.ebuild 617
+MD5 9133bf532408e4246fdef24fd5457038 pylint-0.7.0.ebuild 618
+MD5 cda1aff3568ffb56832dce5d07f8aeb0 pylint-0.8.1.ebuild 632
