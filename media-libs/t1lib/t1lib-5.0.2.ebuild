@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.19 2005/06/17 20:05:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.20 2005/11/08 04:10:36 dang Exp $
 
 inherit eutils gnuconfig flag-o-matic libtool
 
@@ -13,7 +13,22 @@ SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sparc x86"
 IUSE="X doc"
 
-DEPEND="X? ( virtual/x11 )"
+RDEPEND="X? ( || ( (
+		x11-libs/libX11
+		x11-libs/libXaw
+		x11-libs/libXt
+		x11-libs/libXmu
+		x11-libs/libSM
+		x11-libs/libICE
+		x11-libs/libXext )
+	virtual/x11 ) )" 
+
+DEPEND="${RDEPEND}
+	X? ( || ( (
+		x11-libs/libXfont
+		x11-proto/xproto
+		x11-proto/fontsproto )
+	virtual/x11 ) )" 
 
 src_unpack() {
 	unpack ${A}
