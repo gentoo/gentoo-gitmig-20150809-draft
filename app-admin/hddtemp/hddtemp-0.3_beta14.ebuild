@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta14.ebuild,v 1.1 2005/11/06 12:20:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta14.ebuild,v 1.2 2005/11/08 18:10:45 spock Exp $
 
 inherit eutils
 
@@ -15,14 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	net-misc/wget"
+DEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-#	epatch ${FILESDIR}/${P}-setsid.patch
+	unpack ${A}
+	cd ${S}
 
 	ebegin "Trying to download the latest hddtemp.db file"
 	wget -q --timeout=10 http://www.guzu.net/linux/hddtemp.db
