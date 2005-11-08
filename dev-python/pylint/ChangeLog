@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.20 2005/11/08 17:08:46 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.21 2005/11/08 17:49:16 fmccor Exp $
+
+  08 Nov 2005; Ferris McCormick <fmccor@gentoo.org> pylint-0.8.1.ebuild:
+  Add ~sparc keyword at developer's request.  This version (and
+  dev-python/astng) build and install fine, and initial indications
+  are that pylint does what it is supposed to do.  Tlis closes
+  Bug #111891.
 
   08 Nov 2005; Rob Cakebread <pythonhead@gentoo.org> pylint-0.8.1.ebuild:
   Added new dependency on dev-python/astng.
