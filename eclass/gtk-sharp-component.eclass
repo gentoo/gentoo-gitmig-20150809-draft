@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.21 2005/08/17 00:37:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.22 2005/11/08 16:54:16 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -177,4 +177,15 @@ gtk-sharp-component_src_install() {
 		DESTDIR=${D} install || die
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+gtk-sharp-component_pkg_postinst() {
+	if [ "${PV:0:3}" == "2.6" ]; then
+		ewarn "gtk-sharp-2.6.x is completely, and utterly unsupported by upstream."
+		ewarn "If you experience any bugs related to using gtk-sharp-2.6.x, do"
+		ewarn "*not* submit them upstream, ask about them on IRC, or email any"
+		ewarn "mailinglists. If you think you have found a genuine bug or need help,"
+		ewarn "first down grade *all* *-sharp packages to the 2.4.x release and"
+		ewarn "test there."
+	fi
+}
+
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
