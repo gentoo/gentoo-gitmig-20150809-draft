@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/misen/misen-0.11.1.ebuild,v 1.1 2005/09/20 17:16:06 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/misen/misen-0.11.1.ebuild,v 1.2 2005/11/08 19:04:05 killerfox Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://devel.korinkan.co.jp/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/ruby
