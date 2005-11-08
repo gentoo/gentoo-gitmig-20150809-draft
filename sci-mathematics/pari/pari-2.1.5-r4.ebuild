@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r4.ebuild,v 1.2 2005/06/26 13:49:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r4.ebuild,v 1.3 2005/11/08 14:01:07 george Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://www.parigp-home.de/"
@@ -21,9 +21,20 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/docs.patch
 	epatch ${FILESDIR}/wrong_functype.patch
+
 }
 
 src_compile() {
+	#need to force optimization here, as it breaks without
+	if   is-flag -O0; then
+		replace-flags -O0 -O2
+	elif ! is-flag -O?; then
+		append-flags -O2
+	fi
+
+	#we also need to force -fPIC
+	if ! is-flag -fPIC; then append-flags -fPIC; fi
+
 	./Configure \
 		--host="$(echo ${CHOST} | cut -f "1 3" -d '-')" \
 		--prefix=/usr \
