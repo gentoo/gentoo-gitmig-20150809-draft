@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.7 2005/09/11 15:58:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1-r1.ebuild,v 1.1 2005/11/08 15:35:21 stkn Exp $
 
 inherit eutils
 
@@ -122,6 +122,9 @@ src_unpack() {
 #		einfo "Patching asterisk w/ BRI stuff"
 #		epatch ${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
 #	fi
+
+	# security fix, bug #11836
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.9-vmail.cgi.patch
 }
 
 src_compile() {

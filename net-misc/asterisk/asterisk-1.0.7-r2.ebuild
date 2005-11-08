@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.20 2005/09/15 02:40:34 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r2.ebuild,v 1.1 2005/11/08 15:35:21 stkn Exp $
 
 inherit eutils perl-module
 
@@ -275,6 +275,9 @@ src_unpack() {
 
 	# fix segfault on amd64 and possibly other 64bit systems (#105762)
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.8-ptr64fix.diff
+
+	# security fix, bug #11836
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.9-vmail.cgi.patch
 }
 
 src_compile() {

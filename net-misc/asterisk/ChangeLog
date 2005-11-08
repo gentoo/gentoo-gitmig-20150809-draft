@@ -1,6 +1,24 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.87 2005/10/29 02:53:16 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.88 2005/11/08 15:35:21 stkn Exp $
+
+*asterisk-1.2.0_beta1-r1 (08 Nov 2005)
+*asterisk-1.0.9-r2 (08 Nov 2005)
+*asterisk-1.0.8-r1 (08 Nov 2005)
+*asterisk-1.0.7-r2 (08 Nov 2005)
+*asterisk-1.0.6-r2 (08 Nov 2005)
+*asterisk-1.0.5-r3 (08 Nov 2005)
+
+  08 Nov 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.9-vmail.cgi.patch, -asterisk-1.0.5-r2.ebuild,
+  +asterisk-1.0.5-r3.ebuild, -asterisk-1.0.6-r1.ebuild,
+  +asterisk-1.0.6-r2.ebuild, -asterisk-1.0.7-r1.ebuild,
+  +asterisk-1.0.7-r2.ebuild, -asterisk-1.0.8.ebuild,
+  +asterisk-1.0.8-r1.ebuild, -asterisk-1.0.9.ebuild,
+  -asterisk-1.0.9-r1.ebuild, +asterisk-1.0.9-r2.ebuild,
+  -asterisk-1.2.0_beta1.ebuild, +asterisk-1.2.0_beta1-r1.ebuild:
+  Security revbump, fixes #11836. Removed old insecure versions. Thanks to
+  Rajiv Manglani <rajiv@gentoo.org> for reporting this one.
 
   29 Oct 2005; Stefan Knoblich <stkn@gentoo.org>
   files/1.0.0/asterisk-1.0.9-freetds.diff:
