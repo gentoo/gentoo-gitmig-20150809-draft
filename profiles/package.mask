@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4664 2005/11/08 05:42:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4665 2005/11/08 07:15:10 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -378,10 +378,6 @@ x11-misc/driconf
 #
 # Broken (many compile errors).
 >=www-apps/swish-e-2.4
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (7 Sep 2005)
-# HAL-Device-Manager needs the matching version
->=gnome-extra/hal-device-manager-0.5
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Sep 2005)
 # KDE 3.5_alpha1 (and later) split ebuilds.
