@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1542 2005/11/06 17:44:25 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1543 2005/11/08 04:57:16 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -374,6 +374,7 @@ dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/strace:aio - Enable libaio support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
+games-action/xshipwars:yiff - Add support for the YIFF sound server
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
