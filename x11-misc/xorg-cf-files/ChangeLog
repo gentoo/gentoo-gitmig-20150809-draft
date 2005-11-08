@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.4 2005/11/07 14:57:52 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.5 2005/11/08 05:28:26 joshuabaergen Exp $
+
+*xorg-cf-files-0.99.1-r1 (08 Nov 2005)
+
+  08 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xorg-cf-files-0.99.1.ebuild, +xorg-cf-files-0.99.1-r1.ebuild:
+  Fix libdir so that empty *.def files install correctly on AMD64.
 
   07 Nov 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-cf-files-0.99.1.ebuild:
