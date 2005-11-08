@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.95.2.ebuild,v 1.1 2005/07/12 09:11:37 tove Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.96.5.ebuild,v 1.1 2005/11/08 21:17:35 tove Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -15,64 +13,53 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gsl berkdb sqlite"
 
 DEPEND="
-	|| (
-		sys-libs/glibc
-		dev-libs/libiconv
-	)
+	|| ( sys-libs/glibc dev-libs/libiconv )
 	berkdb?  ( >=sys-libs/db-3.2 )
 	!berkdb? (
-		sqlite?  ( >=dev-db/sqlite-3.2.2 )
-		!sqlite? ( >=sys-libs/db-3.2 )
-	)
+		sqlite?  ( >=dev-db/sqlite-3.2.6 )
+		!sqlite? ( >=sys-libs/db-3.2 ) )
 	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
 
-pkg_setup() {
-	einfo ""
-	einfo "It is best to dump or backup your wordlists BEFORE upgrading!"
-	einfo ""
-	epause 3
-}
-
 src_compile() {
 	local myconf=""
-	useq !gsl && myconf="${myconf} --with-included-gsl" # 'without-' doesn't work
-#	myconf="$(use_with !gsl included-gsl)"
+	myconf="$(use_with !gsl included-gsl)"
 
 	# determine backend: berkdb *is* default
-	if useq berkdb && useq sqlite ; then
+	if use berkdb && use sqlite ; then
 		einfo "Both berkdb and sqlite are in USE."
 		einfo "Choosing berkdb as default database backend."
-	elif useq sqlite ; then
+	elif use sqlite ; then
 		myconf="${myconf} --with-database=sqlite"
-	elif ! useq berkdb ; then
+	elif ! use berkdb ; then
 		einfo "Using berkdb as database backend."
 	fi
 
-	econf ${myconf} || die "could not configure"
+	econf ${myconf} || die "configure failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	exeinto /usr/share/${PN}/contrib
-	doexe contrib/{bogofilter-qfe,bogogrep,mime.get.rfc822,parmtest.sh}
-	doexe contrib/{randomtrain,scramble,*.pl}
+	doexe contrib/{bogofilter-qfe,parmtest,randomtrain}.sh \
+		contrib/{bfproxy,bogominitrain,mime.get.rfc822,printmaildir}.pl \
+		contrib/{spamitarium,stripsearch}.pl || die "doexec failed"
 
 	insinto /usr/share/${PN}/contrib
-	doins contrib/{README.*,bogo.R,bogogrep.c,dot-qmail-bogofilter-default}
-	doins contrib/{trainbogo.sh,*.example}
+	doins contrib/{README.*,dot-qmail-bogofilter-default} \
+		contrib/{bogogrep.c,bogo.R,bogofilter-milter.pl,*.example} \
+		contrib/{trainbogo,scramble}.sh || die "doins failed"
 
-	dodoc AUTHORS COPYING INSTALL NEWS README
-	dodoc RELEASE.NOTES* TODO doc/integrating-with-*
-	dodoc GETTING.STARTED doc/README.{db,sqlite}
+	dodoc AUTHORS NEWS README RELEASE.NOTES* TODO GETTING.STARTED \
+		doc/integrating-with-* doc/README.{db,sqlite}
 
 	dodir /usr/share/doc/${PF}/samples
-	mv ${D}/etc/* ${D}/usr/share/doc/${PF}/samples/
-	rmdir ${D}/etc
+	mv "${D}"/etc/* "${D}"/usr/share/doc/${PF}/samples/
+	rmdir "${D}"/etc
 
-	if useq doc; then
+	if use doc; then
 		dohtml doc/*.html
 	else
 		dohtml doc/bogofilter-faq{,-fr}.html doc/bogofilter-tuning.HOWTO.html
