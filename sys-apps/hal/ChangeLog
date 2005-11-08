@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.51 2005/10/19 02:07:39 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.52 2005/11/08 17:25:24 compnerd Exp $
+
+  08 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> hal-0.5.4.ebuild:
+  Fixing the deps for doc building.  Resolves bug #108994
 
   19 Oct 2005; Stephen P. Becker <geoman@gentoo.org> hal-0.4.8.ebuild:
   fixed RDEPEND for mips-headers, added ~mips keyword

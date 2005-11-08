@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.4 2005/10/17 16:26:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.5 2005/11/08 17:25:24 compnerd Exp $
 
 inherit eutils linux-info
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.6
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.29
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen app-text/docbook-sgml-utils )"
 
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS="haldaemon,disk,cdrom,cdrw,floppy,usb"
