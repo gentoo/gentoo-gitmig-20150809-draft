@@ -10,11 +10,11 @@ MD5 ed89b718110f543135fe63d2e29ac249 files/xshipwars-2.4.7-64bit-warnings.patch 
 MD5 83d712c227f57834b2d4dc250ba60d41 files/xshipwars-2.4.7-build.patch 3279
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 bbf219f5bb56ba64a8367cc40c386156 xshipwars-1.34.0.ebuild 2686
-MD5 8a9736df46191b50eeb2ea601c5c93ff xshipwars-2.4.7.ebuild 2680
+MD5 62ccd557e63c941e9b6a7338733fafe0 xshipwars-2.4.7.ebuild 2671
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDcC/mgIKl8Uu19MoRAkKkAJsHzt0gbAwTmEtwlO6CMqdSGCcBvACbBPAg
-WgihYiGrn+hNb5zoBAaV45M=
-=mc7b
+iD8DBQFDcDARgIKl8Uu19MoRAnC8AJ42UhOPK31kWyxMEZec31w/+6DtJQCfbDyP
+j1NnNY73e7Vpk/kcXVFmlwM=
+=3ph9
 -----END PGP SIGNATURE-----

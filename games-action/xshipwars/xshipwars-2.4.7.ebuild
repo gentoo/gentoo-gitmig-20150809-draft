@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.4.7.ebuild,v 1.1 2005/11/08 04:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.4.7.ebuild,v 1.2 2005/11/08 04:56:09 vapier Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -15,12 +15,12 @@ SRC_URI="http://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 LICENSE="GPL-2 xshipwars"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="joystick yiff esound"
+IUSE="joystick yiff esd"
 
 DEPEND="virtual/x11
 	joystick? ( media-libs/libjsw )
 	yiff? ( media-libs/yiff )
-	esound? ( >=media-sound/esound-0.2.23 )"
+	esd? ( >=media-sound/esound-0.2.23 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -47,7 +47,7 @@ src_compile() {
 		--enable-X11 \
 		--enable-libXpm \
 		$(use_enable yiff Y2) \
-		$(use_enable esound ESounD) \
+		$(use_enable esd ESounD) \
 	"
 	# xsw uses --{en,dis}able=FEATURE syntax
 	myconf=${myconf//able-/able=}
