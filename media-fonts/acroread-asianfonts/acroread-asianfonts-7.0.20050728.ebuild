@@ -1,0 +1,59 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.1 2005/11/08 23:14:27 matsuu Exp $
+
+BASE_URI="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc"
+
+DESCRIPTION="Asian font packs for Adobe Acrobat Reader"
+HOMEPAGE="http://www.adobe.com/products/acrobat/acrrasianfontpack.html"
+SRC_URI="linguas_zh_CN? ( ${BASE_URI}/chsfont.tar.gz )
+	linguas_zh_TW? ( ${BASE_URI}/chtfont.tar.gz )
+	linguas_ja? ( ${BASE_URI}/jpnfont.tar.gz )
+	linguas_ko? ( ${BASE_URI}/korfont.tar.gz )"
+
+SLOT="0"
+LICENSE="Adobe"
+KEYWORDS="~x86 ~amd64"
+IUSE=""
+RESTRICT="nomirror"
+
+DEPEND="=app-text/acroread-7*"
+
+S="${WORKDIR}"
+
+pkg_setup() {
+	einfo
+	einfo "You need to set LINGUAS to desired font pack name."
+	einfo "e.g. set LINGUAS=\"ja zh_TW\" to get Japanese and"
+	einfo "Traditional Chinese font packs. Available LINGUAS"
+	einfo "are: zh_CN, zh_TW, ja and ko."
+	einfo
+	if ! useq linguas_zh_CN && ! useq linguas_zh_TW && ! useq linguas_ja && ! useq linguas_ko ; then
+		die "You need to set LINGUAS variable to emerge ${PN}."
+	fi
+}
+
+src_install() {
+	INSTALLDIR="/opt/Acrobat7/Resource"
+	INST_LANG=""
+	useq linguas_zh_CN && INST_LANG="${INST_LANG} CHS"
+	useq linguas_zh_TW && INST_LANG="${INST_LANG} CHT"
+	useq linguas_ja    && INST_LANG="${INST_LANG} JPN"
+	useq linguas_ko    && INST_LANG="${INST_LANG} KOR"
+
+	cd ${WORKDIR}
+	dodir ${INSTALLDIR}
+	for lang in ${INST_LANG}
+	do
+		einfo "Installing ${lang} pack ..."
+		tar xf "${lang}KIT/LANG${lang}.TAR" --no-same-owner -C  ${D}/${INSTALLDIR}
+	done
+
+	einfo "Installing Asian CMaps ..."
+	tar xf ${INST_LANG/* /}KIT/LANGCOM.TAR --no-same-owner -C ${D}/${INSTALLDIR}
+
+	insinto ${INSTALLDIR}
+	doins ${INST_LANG/* /}KIT/LICREAD.TXT || die
+
+	chown -R --dereference 0:0 ${D}/${INSTALLDIR}
+}
