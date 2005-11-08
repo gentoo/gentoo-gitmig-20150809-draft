@@ -19,6 +19,7 @@ lesspipe_file() {
 	local out=$(file -L -- "$1")
 	case ${out} in
 		*" ar archive"*)    lesspipe "$1" ".a" ;;
+		*" tar archive"*)   lesspipe "$1" ".tar" ;;
 		*" CAB-Installer"*) lesspipe "$1" ".cab" ;;
 		*" troff "*)        lesspipe "$1" ".man" ;;
 		*" shared object"*) lesspipe "$1" ".so" ;;

@@ -6,7 +6,7 @@ MD5 0f015b2ac33a3d039f77c6f15b768895 files/code2color.patch 221
 MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
 MD5 c9bb99cd4f916916f975c59d38c3d590 files/digest-less-385 60
 MD5 f5d6d65946fd9d3091b3d06bc3615492 files/digest-less-385_p4-r2 181
-MD5 899f587503779dff4cbd7ed85da44f10 files/lesspipe.sh 4083
+MD5 e7d23b3be643f69db9fe6a0c6162dbda files/lesspipe.sh 4129
 MD5 adb0b1124c355f33197454d2be87bfd3 less-382-r2.ebuild 791
 MD5 147e4c10285042fad83d0c3592498e8c less-385.ebuild 800
 MD5 4011fc14d9d06c6e8500ddc95e26ecd2 less-385_p4-r2.ebuild 1528
@@ -14,7 +14,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDZFBigIKl8Uu19MoRAqXVAJwJ8zdjDEjmrhxOhkunKm0cFpP3DACfWo0B
-rMnOK+j+gnOHQF8cXQ0hfGw=
-=Z+bK
+iD8DBQFDcA2ogIKl8Uu19MoRAgH7AJ4qf+BRRNevpBGwAFOwT+Ok+S/wyQCeI3MH
+aLqcNTlxNgXh7HOE/I9TcUY=
+=vmoU
 -----END PGP SIGNATURE-----
