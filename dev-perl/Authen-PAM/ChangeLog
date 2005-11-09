@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Authen-PAM
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.19 2004/09/13 09:59:12 gmsoft Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.20 2005/11/09 11:25:18 chriswhite Exp $
+
+*Authen-PAM-0.16 (09 Nov 2005)
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org> +Authen-PAM-0.16.ebuild:
+  Version bump to 0.16 for bug 111933.
 
   13 Sep 2004; Guy Martin <gmsoft@gentoo.org> Authen-PAM-0.14.ebuild:
   Stable on hppa.
