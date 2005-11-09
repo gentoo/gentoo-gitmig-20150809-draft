@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.209 2005/10/29 22:12:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.210 2005/11/09 14:22:50 dsd Exp $
+
+*gentoo-sources-2.6.14-r1 (09 Nov 2005)
+
+  09 Nov 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.14-r1.ebuild:
+  Update to Linux 2.6.14.1 (includes important security fix). Fix a bug
+  causing BIND to break. Fix compile on alpha. Fix a slight NLS problem. Minor
+  fbsplash + vesfafb-tng updates. This will be marked stable soon, please
+  test.
 
   29 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-sources-2.6.14.ebuild:
