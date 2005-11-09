@@ -35,7 +35,7 @@
  	rm -f /dev/svgalib_helper* /dev/svga_helper* /dev/svga /dev/svga?
 --- svgalib/kernel/svgalib_helper/kernel26compat.h
 +++ svgalib/kernel/svgalib_helper/kernel26compat.h
-@@ -10,9 +10,12 @@
+@@ -10,7 +10,7 @@
  # define PCI_GET_CLASS pci_find_class
  # define PCI_GET_DEVICE pci_find_device
  
@@ -43,9 +43,18 @@
 +# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,3)
  #  define my_io_remap_page_range(vma, start, ofs, len, prot) \
  		io_remap_page_range(vma,start,ofs,len,prot)
-+# elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,14)
-+#  define my_io_remap_page_range(vma, start, ofs, len, prot) \
-+		io_remap_pfn_range(vma,start,ofs,len,prot)
  # else
- #  ifdef __alpha__ /* Is alpha really the issue here ??? */
- #   define my_io_remap_page_range(vma, start, ofs, len, prot) \
+@@ -50,8 +50,13 @@
+ # define DEVFS_MK_SYMLINK(a,b)
+ #endif
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,14)
+ # define my_io_remap_page_range(vma, start, ofs, len, prot) \
+ 		io_remap_page_range(vma,start,ofs,len,prot)
++#else
++# define my_io_remap_page_range(vma, start, ofs, len, prot) \
++		io_remap_pfn_range(vma,start,ofs>>PAGE_SHIFT,len,prot)
++#endif
+ 
+ # define pci_present() 1
+ 

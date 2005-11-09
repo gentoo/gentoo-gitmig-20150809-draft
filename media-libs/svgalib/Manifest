@@ -14,7 +14,7 @@ MD5 4a5014126880edffad4f4f209e3e7e68 files/svgalib-1.9.19-linux2.6.patch 7776
 MD5 1c4684bfc1f4a5ff9daf7cbf5da699b1 files/svgalib-1.9.19-pci-get-class.patch 458
 MD5 91fa4baff3dfb211bcb57a068ed7495f files/svgalib-1.9.19-pic.patch 422
 MD5 8305fd946083dbe190a4fc42512e0e13 files/svgalib-1.9.21-gentoo.patch 3122
-MD5 3c32f17eaa514a736d422ee0f26d5e5a files/svgalib-1.9.21-linux2.6.patch 1703
+MD5 08f20bf4736bd6a4fa83eafcca8f8776 files/svgalib-1.9.21-linux2.6.patch 1799
 MD5 690144017f69486a911d88c0932a7d45 files/svgalib-1.9.23-gentoo.patch 2994
 MD5 d137b721449f3fe88d6ec08a3cf6c51a files/svgalib.devfs 219
 MD5 80fafe8076ab52d6f02f90b7f9580ddd files/svgalib.udev.perms.d 22
@@ -26,7 +26,7 @@ MD5 2d42280d70d9833840db725d273fb8bd svgalib-1.9.23.ebuild 4361
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDb+QRgIKl8Uu19MoRAmqbAJ9w0G+XS8eKSeOMOJZxYbKaSuVUqQCfTsgM
-VgLKgOfyBECmGxTamrimDI8=
-=+0X7
+iD8DBQFDcZEDgIKl8Uu19MoRAoiBAJ4xE3wRvlI8/CZIpUy+AmMogWI1PQCeMhZi
+V8Mmk564pJaOczzAl8WfK3U=
+=AXra
 -----END PGP SIGNATURE-----
