@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.42 2005/11/09 22:33:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.43 2005/11/09 22:35:04 chriswhite Exp $
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
+  But then it gets better.. now I forgot to set the default GPG key.. one more
+  time for the win...
 
   09 Nov 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
   Chroot gpg key wasn't coppied over.. doing that commit again :|
