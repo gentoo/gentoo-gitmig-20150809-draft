@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.31 2005/10/22 17:45:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.32 2005/11/09 05:03:53 weeve Exp $
+
+  09 Nov 2005; Jason Wever <weeve@gentoo.org> ncbi-tools-20050605.ebuild:
+  Stable on SPARC wrt bug #108334.
 
   22 Oct 2005; Olivier Fisette <ribosome@gentoo.org> -files/21ncbi,
   -ncbi-tools-20041020-r1.ebuild, -ncbi-tools-20050429.ebuild:

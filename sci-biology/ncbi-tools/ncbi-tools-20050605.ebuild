@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605.ebuild,v 1.9 2005/10/22 16:02:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605.ebuild,v 1.10 2005/11/09 05:03:53 weeve Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	doc? ( mirror://gentoo/${PN}-sdk-doc.tar.bz2 )"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc-macos ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc-macos ppc64 sparc x86"
 IUSE="doc X"
 
 DEPEND="app-shells/tcsh
