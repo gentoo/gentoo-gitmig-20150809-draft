@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.2.ebuild,v 1.4 2005/02/20 00:09:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.1 2005/11/09 21:31:36 arj Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -17,8 +17,8 @@ DEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( sys-libs/gpm )"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A}; cd ${S}
+	epatch ${FILESDIR}/aspell-0.60.3-templateinstantiations.patch
 }
 
 src_compile() {
