@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c541a63dd9eb135d3a10a7d1dbf3aecc ChangeLog 12355
 MD5 0a45793fc070f81d4d6f6806706a8a57 files/digest-netpbm-10.26.17 139
 MD5 08ce9acb79a75a5d63c62122a4d4c8ae files/digest-netpbm-10.26.18 139
@@ -21,3 +24,10 @@ MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
 MD5 4b1a6bc24bd0b85afb5756e7c1e218e8 netpbm-10.29-r1.ebuild 2937
 MD5 44a56191027bdda13f3bd51f336a971a netpbm-10.29.ebuild 2423
 MD5 616e416b2017c1a2f0d85b78fd62fb0b netpbm-10.30-r1.ebuild 2957
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDcZFtgIKl8Uu19MoRAqYFAJ924FizBzwH9DOHtl7kZKKZT3jEbgCfVxGu
+fE4vazl2IMmMLLmZSx4kI8o=
+=U7/I
+-----END PGP SIGNATURE-----
