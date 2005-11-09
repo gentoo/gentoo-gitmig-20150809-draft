@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.39 2005/10/31 11:04:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.40 2005/11/09 18:50:58 dang Exp $
+
+  09 Nov 2005; <dang@gentoo.org> gamin-0.1.7.ebuild:
+  Add kernel_linux use flag to IUSE
 
 *gamin-0.1.7 (31 Oct 2005)
 
