@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ignorance-2.0.ebuild,v 1.2 2005/10/17 03:38:51 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ignorance-2.0.ebuild,v 1.3 2005/11/09 12:10:36 gothgirl Exp $
 
 inherit eutils
 
 DESCRIPTION="GAIM Advanced Ignore filter"
 HOMEPAGE="http://ignorance.sf.net"
-SRC_URI="mirror:sourceforge/ignorance/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/ignorance/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
