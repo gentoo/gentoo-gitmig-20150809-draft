@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2.ebuild,v 1.6 2005/02/20 10:46:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2.ebuild,v 1.7 2005/11/09 12:58:43 gustavoz Exp $
 
 IUSE="truetype xinerama"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc -alpha -sparc"
+KEYWORDS="x86 ~ppc -alpha ~sparc"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )
