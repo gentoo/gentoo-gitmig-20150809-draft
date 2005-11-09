@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fa6218792ae76f43f99589d6b4e5efdc ChangeLog 2368
+MD5 fadf6ff53b21fa49d4e2ff76b679e58c ChangeLog 2515
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17 66
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17-r1 66
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17-r2 66
+MD5 d6140676fe7acab811160aa574573e83 files/digest-ftpd-0.17-r3 135
 MD5 c77f5bcf2f56d61c7e8845d94df88164 files/ftp.xinetd 313
 MD5 fb54312525ec906691ee16975f1658be files/ftpd-0.17+ssl-0.3-overflowpatch.diff 532
 MD5 7e1217f2de231dda2c8e842a7d7dfb7b files/ftpd-0.17-shadowfix.patch 895
 MD5 0630d5a4a420220cc8b912bdad705f6c files/ssl.diff.gz 10444
 MD5 753fb4b95ec8ae858ff343a599376b18 ftpd-0.17-r1.ebuild 1461
 MD5 7bfd62aa7556709bd5f5192594ac3230 ftpd-0.17-r2.ebuild 1523
+MD5 65c18fe57a1d3fbe54818671392e8281 ftpd-0.17-r3.ebuild 1415
 MD5 a49ca8164b73a5b126e5d4403ec0e6ef ftpd-0.17.ebuild 1410
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDbfeNmdTrptrqvGERAsMDAJ9UiBnfZW6UyNpWTXo7d9dKJzDqgQCeIlC/
-s9dlc3JqIncVc44eBCa5h9w=
-=BkVz
+iD8DBQFDcmsbmdTrptrqvGERArrcAJ9GAbqY8QN3h0d47pNUr8OvfRanXgCfWnjQ
+xKwdogqXsLB5PhreLPg2qes=
+=gjf3
 -----END PGP SIGNATURE-----
