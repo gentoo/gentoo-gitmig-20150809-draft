@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac4699f6088cd54cffe025c484f2a913 ChangeLog 10708
+MD5 144a830b4db48e541650a55d99110d95 ChangeLog 10814
 MD5 13c4abf06e236e8835011a387f90ecc9 files/digest-ocaml-3.06-r2 63
 MD5 c42de320103c2d3eb1aa4002e2e0716b files/digest-ocaml-3.07-r1 130
 MD5 3854a7d6aaedc7d5fde7239776cec5cf files/digest-ocaml-3.08.1 66
@@ -17,11 +14,4 @@ MD5 d3e28c5c99b056007b6b5b0781a4e542 ocaml-3.06-r2.ebuild 1660
 MD5 ef7cc12a4ff8aeec9ddb58ff65f7e3c0 ocaml-3.07-r1.ebuild 2910
 MD5 e3554fd0d2b4cbd09694d68ca3edb0d8 ocaml-3.08.1.ebuild 2149
 MD5 cfcf2e84fee42ef8460d98c45a4b947f ocaml-3.08.3.ebuild 2292
-MD5 81eab9946cf3cd1b0705e302711e6723 ocaml-3.08.4.ebuild 2503
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVD5wgIKl8Uu19MoRAsmmAJ9EdBR64IvlAGGK1YttSWssZi+gCgCfSIux
-h2dwfUNGYAk4qx3w/hfNjHI=
-=beSi
------END PGP SIGNATURE-----
+MD5 876fd2e041258c5781f5adf98576e334 ocaml-3.08.4.ebuild 2501
