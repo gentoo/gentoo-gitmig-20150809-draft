@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kimera
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/ChangeLog,v 1.1 2005/10/30 04:24:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/ChangeLog,v 1.2 2005/11/09 20:23:08 usata Exp $
+
+  09 Nov 2005; Mamoru KOMACHI <usata@gentoo.org> kimera-1.0.ebuild:
+  Fixed compile error when anthy not present. Thanks to AOYAMA Kazuharu.
 
 *kimera-1.0 (30 Oct 2005)
 
