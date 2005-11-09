@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.215 2005/10/27 07:28:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.216 2005/11/09 05:57:17 mr_bones_ Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -850,7 +850,7 @@ make_desktop_entry() {
 
 			sci)
 				case ${catmin} in
-					astro*) type=Astronomoy;;
+					astro*) type=Astronomy;;
 					bio*)   type=Biology;;
 					calc*)  type=Calculator;;
 					chem*)  type=Chemistry;;
