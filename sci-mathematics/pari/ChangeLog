@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.19 2005/11/08 17:41:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.20 2005/11/09 16:23:26 george Exp $
+
+*pari-2.1.7 (09 Nov 2005)
+
+  09 Nov 2005; <gerr@gentoo.org> +pari-2.1.7.ebuild:
+  new version (#110772), the patch to sources seems no longer necessary, 
+  as the corresponding upstream bug said "it's in cvs" for previous version (and it tests fine).
 
   08 Nov 2005; George Shapovalov <george@gentoo.org> pari-2.1.6.ebuild:
   fix for sparc arch (#87790)
