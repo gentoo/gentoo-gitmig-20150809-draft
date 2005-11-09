@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.57 2005/11/09 21:14:04 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.58 2005/11/09 23:57:06 ranger Exp $
+
+  09 Nov 2005; Brent Baude <ranger@gentoo.org> mirrorselect-1.2.ebuild:
+  Marking mirrorselect-1.2 ppc64 stable per bug 111999
 
   09 Nov 2005; <tercel@gentoo.org> mirrorselect-1.2.ebuild:
   Bump version 1.2 to stable on x86
