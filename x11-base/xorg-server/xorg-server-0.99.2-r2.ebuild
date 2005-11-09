@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.2-r1.ebuild,v 1.3 2005/10/29 02:24:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.2-r2.ebuild,v 1.1 2005/11/09 07:31:37 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -11,7 +11,7 @@ inherit flag-o-matic x-modular multilib
 OPENGL_DIR="xorg-x11"
 
 MESA_PN="Mesa"
-MESA_PV="6.3.2"
+MESA_PV="6.4"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
