@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.76 2005/10/16 08:49:24 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.77 2005/11/09 21:19:16 wolf31o2 Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -8,7 +8,7 @@
 
 # KEEP THIS FILE SORTED ALPHABETICALLY OR RISK WRATH
 
-virtual/alsa				media-sound/alsa-driver
+virtual/alsa				sys-kernel/gentoo-sources
 virtual/antivirus			app-antivirus/clamav
 virtual/aspell-dict			app-dicts/aspell-en
 virtual/baselayout			sys-apps/baselayout

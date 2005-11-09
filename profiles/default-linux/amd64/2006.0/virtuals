@@ -1,6 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/virtuals,v 1.1 2005/10/07 02:22:32 eradicator Exp $
-
-virtual/alsa				media-sound/alsa-drivers
-virtual/linux-sources                   sys-kernel/gentoo-sources
