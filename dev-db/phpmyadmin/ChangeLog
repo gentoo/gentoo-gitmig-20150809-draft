@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.139 2005/11/09 19:10:18 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.140 2005/11/09 19:11:36 rl03 Exp $
+
+  09 Nov 2005; Renat Lumpau <rl03@gentoo.org> phpmyadmin-2.7.0_beta1.ebuild:
+  new version should be unstable on x86
 
 *phpmyadmin-2.7.0_beta1 (09 Nov 2005)
 
