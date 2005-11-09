@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dtach
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.8 2005/01/01 14:59:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.9 2005/11/09 02:58:02 metalgod Exp $
+
+  09 Nov 2005; Luis Medinas <metalgod@gentoo.org> dtach-0.7.ebuild:
+  Added ~amd64 keyword. Closes bug #111362.
 
   13 Oct 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Added to the shell-tools herd.
