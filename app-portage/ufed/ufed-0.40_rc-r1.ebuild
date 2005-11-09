@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_rc.ebuild,v 1.1 2005/11/04 09:48:04 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_rc-r1.ebuild,v 1.1 2005/11/09 13:39:40 truedfx Exp $
 
 inherit flag-o-matic
 
@@ -17,6 +17,12 @@ DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	dev-lang/perl"
 S=${WORKDIR}/${P%_*}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-usedefaults.patch
+}
 
 src_compile() {
 	./configure || die "configure failed"

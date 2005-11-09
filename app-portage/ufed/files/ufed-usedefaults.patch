@@ -1,0 +1,11 @@
+--- ufed-0.40/Portage.pm
++++ ufed-0.40/Portage.pm
+@@ -156,7 +156,7 @@
+ 			if(open my $provide, '<', "/var/db/pkg/$cat/$pkg/PROVIDE") {
+ 				if(open my $use, '<', "/var/db/pkg/$cat/$pkg/USE") {
+ 					# could be shortened, but make sure not to strip off part of the name
+-					s/-\d+(?:\.\d+)*\w?(?:_(?:alpha|beta|pre|rc|p)\d*)?(?:-r\d+)?$//;
++					$pkg =~ s/-\d+(?:\.\d+)*\w?(?:_(?:alpha|beta|pre|rc|p)\d*)?(?:-r\d+)?$//;
+ 					$packages{"$cat/$pkg"} = 1;
+ 					local $/;
+ 					my @provide = split ' ', <$provide>;
