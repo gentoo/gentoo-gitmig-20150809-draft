@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta9.ebuild,v 1.2 2005/11/09 00:38:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta9.ebuild,v 1.3 2005/11/09 01:32:02 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -46,7 +46,7 @@ src_install() {
 	keepdir "${GAMES_DATADIR}/${PN}/"{ai_modules,music,terrain}
 
 	# Generate scenario data:
-	"${WORKDIR}/lgc-pg/lgc-pg/lgc-pg" \
+	SDL_VIDEODRIVER=dummy "${WORKDIR}/lgc-pg/lgc-pg/lgc-pg" \
 		-s "${WORKDIR}/${DATA}" \
 		-d "${D}/${GAMES_DATADIR}/lgeneral" \
 		|| die "Failed to generate scenario data."
