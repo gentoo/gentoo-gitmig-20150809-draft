@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.25 2005/09/15 01:43:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.26 2005/11/09 07:19:24 compnerd Exp $
+
+  10 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  apmd-3.2.1_p4.ebuild:
+  Adding modular X dependencies
 
   15 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> apmd-3.2.1_p4.ebuild:
   proper quoting and error checking
