@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.4 2005/11/05 08:14:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.5 2005/11/09 01:58:03 vapier Exp $
 
 ESVN_REPO_URI="http://svn.initng.thinktux.net/initng"
 ESVN_PROJECT="initng"
@@ -37,7 +37,7 @@ src_install() {
 	# Dont need libtool linker scripts, so punt em
 	find "${D}" -name '*.la' -exec rm {} \;
 	# other packages install these
-	rm "${D}"/sbin/{{ifplugd,wpa_cli}.action,killall5} || die
+	rm "${D}"/sbin/{{ifplugd,wpa_cli}.action} || die
 	dodoc README FAQ AUTHORS ChangeLog NEWS TEMPLATE_HEADER TODO
 }
 
