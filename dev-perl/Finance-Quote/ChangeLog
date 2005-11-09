@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.22 2005/10/03 13:02:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.23 2005/11/09 07:48:51 chriswhite Exp $
+
+*Finance-Quote-1.10 (09 Nov 2005)
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org>
+  +Finance-Quote-1.10.ebuild:
+  Version bump to 1.10. Part of the extensive bug #111933 fun.
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   Finance-Quote-1.08-r1.ebuild:
