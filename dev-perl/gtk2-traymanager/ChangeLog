@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/gtk2-traymanager
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.1 2005/11/09 21:37:18 mcummings Exp $
+
+*gtk2-traymanager-0.05 (09 Nov 2005)
+
+  09 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +gtk2-traymanager-0.05.ebuild:
+  Missing dep for perlpanel
+
