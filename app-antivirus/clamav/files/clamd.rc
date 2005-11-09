@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc,v 1.7 2005/09/29 11:54:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc,v 1.8 2005/11/09 16:40:05 ticho Exp $
 
 depend() {
 	use net
@@ -9,7 +9,7 @@ depend() {
 }
 
 start() {
-	local clamd_socket=`grep ^LocalSocket /etc/clamd.conf | cut -d\  -f 2`
+	local clamd_socket=`awk '$1 == "LocalSocket" { print $2 }' /etc/clamd.conf`
 	if [ "${START_CLAMD}" = "yes" ]; then
 		if [ -S "${clamd_socket:-/tmp/clamd}" ]; then
 			rm -f ${clamd_socket:-/tmp/clamd}
@@ -36,8 +36,8 @@ start() {
 			rm -f ${MILTER_SOCKET}
 		fi
 
-		local logfile=`grep -e "^LogFile" /etc/clamd.conf | cut -d\  -f 2`
-		local clamav_user=`grep -e "^User" /etc/clamd.conf | cut -d\  -f 2`
+		local logfile=`awk '$1 == "LogFile" { print $2 }' /etc/clamd.conf`
+		local clamav_user=`awk '$1 == "User" { print $2 }' /etc/clamd.conf`
 		if [[ -n "${logfile}" && -n "${clamav_user}" ]]; then
 			if [ ! -f "${logfile}" ]; then
 				touch ${logfile}
