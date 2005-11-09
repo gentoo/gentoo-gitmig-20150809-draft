@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.19 2005/10/02 12:18:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.20 2005/11/09 11:35:50 chriswhite Exp $
+
+*BerkeleyDB-0.27 (09 Nov 2005)
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org> -BerkeleyDB-0.25.ebuild,
+  +BerkeleyDB-0.27.ebuild:
+  Version bump to 0.27. Removed older versions. Added SRC_TEST='do'. Helps to
+  fix bug #111933.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> BerkeleyDB-0.26.ebuild:
   Mark 0.26 stable on ia64
