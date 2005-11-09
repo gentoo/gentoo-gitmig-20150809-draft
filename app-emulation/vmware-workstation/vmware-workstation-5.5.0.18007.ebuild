@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.16958.ebuild,v 1.2 2005/10/01 13:34:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18007.ebuild,v 1.1 2005/11/09 02:07:14 humpback Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -10,7 +10,7 @@ inherit eutils
 
 S=${WORKDIR}/vmware-distrib
 #ANY_ANY="vmware-any-any-update93"
-NP="VMware-workstation-5.5.0-16958"
+NP="VMware-workstation-5.5.0-18007"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="${NP}.tar.gz"
@@ -44,7 +44,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${NP}.tar.gz
 	cd ${S}
-	# patch the config to not install desktop/icon files
+	# patch the config to not install desktop/icon files and proper gentoo init
 	epatch ${FILESDIR}/${P}-config.patch
 
 	chmod 755 lib/bin/vmware bin/vmnet-bridge lib/bin/vmware-vmx lib/bin-debug/vmware-vmx
