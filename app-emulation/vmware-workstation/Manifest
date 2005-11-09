@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ecea11611f6f69f3a1f3dde2d4d7b998 ChangeLog 23279
+MD5 5ba3c753a30b17970f3f36d03a38a069 ChangeLog 24029
 MD5 48c1667773503fee21a1068da07440b9 files/3.2.1.2242/90vmware 70
 MD5 cd2c7dfb0ea80293b3647713f5e35969 files/3.2.1.2242/vmware 1419
 MD5 3bfb39f5e96f60db67c7246f74c21501 files/3.2.1.2242/vmware-config.pl-gcc-generalized.patch 2948
 MD5 b95a250f31a6d2005176b27b8d48c182 files/3.2.1.2242/vmware-glibc-2.3.2-compat.c 1039
 MD5 48c1667773503fee21a1068da07440b9 files/90vmware 70
-MD5 227d86a502f1a78cc8f0f1eb2cceda6a files/digest-vmware-workstation-3.2.1.2242-r4 210
-MD5 3d52845458d26fe7602a53a6716c4484 files/digest-vmware-workstation-4.5.2.8848-r7 210
-MD5 39940ffef13b8c05110826e5ec26d88b files/digest-vmware-workstation-5.0.0.13124-r2 159
-MD5 9fae039a2b6e4c1623190cc195d0bb6d files/digest-vmware-workstation-5.5.0.18007 84
+MD5 227d86a502f1a78cc8f0f1eb2cceda6a files/digest-vmware-workstation-3.2.1.2242-r5 210
+MD5 3d52845458d26fe7602a53a6716c4484 files/digest-vmware-workstation-4.5.2.8848-r8 210
+MD5 39940ffef13b8c05110826e5ec26d88b files/digest-vmware-workstation-5.0.0.13124-r3 159
+MD5 9fae039a2b6e4c1623190cc195d0bb6d files/digest-vmware-workstation-5.5.0.18007-r1 84
 MD5 87e9f24e29aaec45c84f7e57a50f96f2 files/vmware-workstation-4.5.2.8848-librarypath.patch 807
 MD5 55441829b237e3efd78d06a1b1a73035 files/vmware-workstation-5.0.0.13124-config.patch 443
 MD5 23d97e5e436a0d827b48db3ed9948aa7 files/vmware-workstation-5.5.0.18007-config.patch 1131
 MD5 c2dc0111fb5bf45ff99578b57d349cb3 files/vmware.rc 1417
 MD5 aa1b576735134579f04b29763901dc4f files/vmware.xml 1592
 MD5 a4e5ebe5e931d6196fd49550e067b078 metadata.xml 339
-MD5 57ca08fdcf66e6a4bc0596b8a0c0b012 vmware-workstation-3.2.1.2242-r4.ebuild 7989
-MD5 f6ff1ff7da77185cd1a446a896f7bbb1 vmware-workstation-4.5.2.8848-r7.ebuild 8334
-MD5 74763bea39350b142da34a0faf9d2d02 vmware-workstation-5.0.0.13124-r2.ebuild 8285
-MD5 56ce3e38b16e0793234227c8293a90bd vmware-workstation-5.5.0.18007.ebuild 7304
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDcVnq8zY1VwezZiERAhUWAJwOBr2J87Eb8LNZdhaSWub7AkBlAwCghJLt
-fSGtvT9WvtrrTsrOIM4wyBg=
-=UCsh
------END PGP SIGNATURE-----
+MD5 b3074d27398fd8342b1aa891be51e36f vmware-workstation-3.2.1.2242-r5.ebuild 7972
+MD5 2f6ee29c5d442a0bac4de9f24d0742ae vmware-workstation-4.5.2.8848-r8.ebuild 8333
+MD5 dfa2edf2d8cd187ae984948b3aa09068 vmware-workstation-5.0.0.13124-r3.ebuild 8271
+MD5 57826926cad5d37d81d219f00d05efe5 vmware-workstation-5.5.0.18007-r1.ebuild 7293

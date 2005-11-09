@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.101 2005/11/09 02:07:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.102 2005/11/09 16:49:32 wolf31o2 Exp $
+
+*vmware-workstation-5.5.0.18007-r1 (09 Nov 2005)
+*vmware-workstation-5.0.0.13124-r3 (09 Nov 2005)
+*vmware-workstation-4.5.2.8848-r8 (09 Nov 2005)
+*vmware-workstation-3.2.1.2242-r5 (09 Nov 2005)
+
+  09 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-3.2.1.2242-r4.ebuild,
+  +vmware-workstation-3.2.1.2242-r5.ebuild,
+  -vmware-workstation-4.5.2.8848-r7.ebuild,
+  +vmware-workstation-4.5.2.8848-r8.ebuild,
+  -vmware-workstation-5.0.0.13124-r2.ebuild,
+  +vmware-workstation-5.0.0.13124-r3.ebuild,
+  -vmware-workstation-5.5.0.18007.ebuild,
+  +vmware-workstation-5.5.0.18007-r1.ebuild:
+  Changed default location from /opt/vmware to /opt/vmware/workstation to
+  allow for side-by-side installations of VMware Workstation and Player.
 
 *vmware-workstation-5.5.0.18007 (09 Nov 2005)
 

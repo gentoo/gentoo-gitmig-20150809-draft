@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18007.ebuild,v 1.1 2005/11/09 02:07:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18007-r1.ebuild,v 1.1 2005/11/09 16:49:32 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-#ANY_ANY="vmware-any-any-update93"
+#ANY_ANY="vmware-any-any-update94"
 NP="VMware-workstation-5.5.0-18007"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -30,7 +30,7 @@ RDEPEND="sys-libs/glibc
 	>=dev-lang/perl-5
 	sys-apps/pciutils"
 
-dir=/opt/vmware
+dir=/opt/vmware/workstation
 Ddir=${D}/${dir}
 VMWARE_GROUP=${VMWARE_GROUP:-vmware}
 
@@ -128,10 +128,10 @@ src_install() {
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
 	locations="${D}/etc/vmware/locations"
-	echo "answer BINDIR /opt/vmware/bin" >> ${locations}
-	echo "answer LIBDIR /opt/vmware/lib" >> ${locations}
-	echo "answer MANDIR /opt/vmware/man" >> ${locations}
-	echo "answer DOCDIR /opt/vmware/doc" >> ${locations}
+	echo "answer BINDIR ${dir}/bin" >> ${locations}
+	echo "answer LIBDIR ${dir}/lib" >> ${locations}
+	echo "answer MANDIR ${dir}/man" >> ${locations}
+	echo "answer DOCDIR ${dir}/doc" >> ${locations}
 	echo "answer RUN_CONFIGURATOR no" >> ${locations}
 	echo "answer INITDIR /etc/vmware/init.d" >> ${locations}
 	echo "answer INITSCRIPTSDIR /etc/vmware/init.d" >> ${locations}
@@ -143,14 +143,14 @@ pkg_preinst() {
 	# perl -e "@a = stat('bin/vmware'); print \$a[9]"
 	# The above perl line and the find line below output the same thing.
 	# I would think the find line is faster to execute.
-	# find /opt/vmware/bin/vmware -printf %T@
+	# find /opt/vmware/workstation/bin/vmware -printf %T@
 
 	#Note: it's a bit weird to use ${D} in a preinst script but it should work
 	#(drobbins, 1 Feb 2002)
 
 	einfo "Generating /etc/vmware/locations file."
 	d=`echo ${D} | wc -c`
-	for x in `find ${D}/opt/vmware ${D}/etc/vmware` ; do
+	for x in `find ${Ddir} ${D}/etc/vmware` ; do
 		x="`echo ${x} | cut -c ${d}-`"
 		if [ -d ${D}/${x} ] ; then
 			echo "directory ${x}" >> ${D}/etc/vmware/locations
@@ -171,7 +171,7 @@ pkg_preinst() {
 }
 
 pkg_config() {
-	einfo "Running /opt/vmware/bin/vmware-config.pl"
+	einfo "Running ${dir}/bin/vmware-config.pl"
 	${dir}/bin/vmware-config.pl
 }
 
@@ -190,7 +190,7 @@ pkg_postinst() {
 	done
 
 	einfo
-	einfo "You need to run /opt/vmware/bin/vmware-config.pl to complete the install."
+	einfo "You need to run ${dir}/bin/vmware-config.pl to complete the install."
 	einfo
 	einfo "For VMware Add-Ons just visit"
 	einfo "http://www.vmware.com/download/downloadaddons.html"
