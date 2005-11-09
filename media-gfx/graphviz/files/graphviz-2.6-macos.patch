@@ -1,0 +1,16 @@
+diff -Naur graphviz-2.6-orig/lib/ast/pathpath.c graphviz-2.6/lib/ast/pathpath.c
+--- graphviz-2.6-orig/lib/ast/pathpath.c	2005-10-30 15:15:30.000000000 +0100
++++ graphviz-2.6/lib/ast/pathpath.c	2005-10-30 15:16:20.000000000 +0100
+@@ -33,7 +33,12 @@
+ #include <unistd.h>
+ 
+ /* #include <option.h> */
++#ifdef __APPLE__
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
++#else
+ extern char **environ;
++#endif
+ char **opt_info_argv;
+ 
+ char *pathpath(register char *path, const char *p, const char *a, int mode)
