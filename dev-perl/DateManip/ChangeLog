@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.22 2005/04/25 13:48:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.23 2005/11/09 10:26:37 chriswhite Exp $
+
+*DateManip-5.44 (09 Nov 2005)
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org> +DateManip-5.44.ebuild:
+  Version bump to 5.44 for bug #111933.  Added SRC_TEST='do' since it works.
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -DateManip-5.40-r1.ebuild, -DateManip-5.40-r2.ebuild,
