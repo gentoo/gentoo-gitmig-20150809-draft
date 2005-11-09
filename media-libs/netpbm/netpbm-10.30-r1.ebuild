@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.30-r1.ebuild,v 1.2 2005/10/31 15:58:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.30-r1.ebuild,v 1.3 2005/11/09 06:33:54 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -52,6 +52,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/netpbm-10.30-anytopnm.patch
 	epatch "${FILESDIR}"/netpbm-10.30-pngtopnm.patch
 	epatch "${FILESDIR}"/netpbm-10.30-tifftopnm.patch
+	epatch "${FILESDIR}"/netpbm-10.30-jpeg-prototypes.patch #111895
 
 	rm -f configure
 	cp Makefile.config.in Makefile.config
@@ -83,6 +84,7 @@ src_unpack() {
 	URTLIB = -lrle
 	URTHDR_DIR =
 	EOF
+	append-flags -Wall
 
 	# Sparc support ...
 	replace-flags -mcpu=ultrasparc "-mcpu=v8 -mtune=ultrasparc"
