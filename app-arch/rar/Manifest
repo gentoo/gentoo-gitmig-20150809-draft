@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f29d79f96910529c13ae9b41707e2678 ChangeLog 3756
+MD5 14ec0860e8b41a99f900f42cc8694581 ChangeLog 3889
+MD5 4b467c549217fe94ee7f0451eb3120e6 files/digest-rar-3.3.0 66
+MD5 984d2d6046899e6a0f79c215637962b9 files/digest-rar-3.4.0 66
+MD5 b6df69e5f00a2b3ef333828436b9cb1d files/digest-rar-3.4.1 66
+MD5 8ea1988823a4b02717bb272abfd59d81 files/digest-rar-3.5.1 66
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 9ab7c0fa7933dde8df8ac23cccc593ed rar-3.3.0.ebuild 796
 MD5 7a044c335491b3aae742f02125453208 rar-3.4.0.ebuild 790
 MD5 b4bfba4744de103b04a63a1321547610 rar-3.4.1.ebuild 792
-MD5 4b467c549217fe94ee7f0451eb3120e6 files/digest-rar-3.3.0 66
-MD5 984d2d6046899e6a0f79c215637962b9 files/digest-rar-3.4.0 66
-MD5 b6df69e5f00a2b3ef333828436b9cb1d files/digest-rar-3.4.1 66
+MD5 cbf87a4c1f351cbdf77ffb0726c60842 rar-3.5.1.ebuild 822
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFB7/T7ArHZZzCEUG0RAvJ4AJ0Ulefm8uS1mjbqNuu8YcT8wCEywQCfT3C3
-ykHHhjffvxdcxqd7ULigh8g=
-=1Khv
+iD8DBQFDcVJ0gIKl8Uu19MoRArXTAJ9aHrQuDS5JhSGLWBX3PFrAGxLzIACfRJfe
+sKB6WKS8nnptrZXwzxiiB5U=
+=+6yN
 -----END PGP SIGNATURE-----
