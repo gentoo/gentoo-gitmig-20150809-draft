@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.95 2005/11/02 10:26:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.96 2005/11/09 09:25:52 voxus Exp $
+
+*bind-9.3.2_beta2 (09 Nov 2005)
+*bind-9.3.1-r7 (09 Nov 2005)
+*bind-9.2.5-r9 (09 Nov 2005)
+
+  09 Nov 2005; Konstantin Arkhipov <voxus@gentoo.org> -bind-9.2.5-r8.ebuild,
+  -bind-9.3.1-r6.ebuild, -bind-9.3.2_beta1.ebuild, -files/named.init-r3,
+  -files/named.confd-r1, +bind-9.3.2_beta2.ebuild, +bind-9.3.1-r7.ebuild,
+  +bind-9.2.5-r9.ebuild, +files/named.init-r3, +files/named.confd-r1:
+  Once again closing #107724. Also parallel build is now disabled only for
+  distcc-systems.
 
   02 Nov 2005; Konstantin Arkhipov <voxus@gentoo.org> bind-9.3.1-r6.ebuild:
   Dropped all stable keywords due to compile races and bug #107724.

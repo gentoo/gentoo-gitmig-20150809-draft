@@ -1,14 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r6.ebuild,v 1.4 2005/11/02 10:26:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2_beta2.ebuild,v 1.1 2005/11/09 09:25:52 voxus Exp $
 
 inherit eutils libtool
+
+BETA="${PV/_beta/b}"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
-	dlz? ( http://projects.navynet.it/DLZ/ctrix_dlz_9.3.1-1.patch.gz )"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${BETA}/${PN}-${BETA}.tar.gz
+	dlz? ( http://dev.gentoo.org/~voxus/bind/ctrix_dlz_${BETA/b2/b1}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -24,6 +26,8 @@ DEPEND="sys-apps/groff
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
+
+S="${WORKDIR}/${PN}-${BETA}"
 
 pkg_setup() {
 	use threads && {
@@ -55,13 +59,13 @@ src_unpack() {
 	done
 
 	use dlz && {
-		epatch ${DISTDIR}/ctrix_dlz_${PV}-1.patch.gz || \
+		epatch ${DISTDIR}/ctrix_dlz_${BETA/b2/b1}.patch.bz2 || \
 			die "dlz patch failed"
 	}
 
 	use idn && {
-		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch || \
-			die "idn patch failed"
+		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${PN}-${BETA/b2}-patch \
+			|| die "idn patch failed"
 	}
 
 	# it should be installed by bind-tools
@@ -115,7 +119,16 @@ src_compile() {
 		`use_enable ipv6` \
 		${myconf} || die "econf failed"
 
-	emake -j1 || die "failed to compile bind"
+	# idea from dev-libs/cyrus-sasl
+	if has distcc ${FEATURES}; then
+		einfo "You have \"distcc\" enabled"
+		einfo "build with MAKEOPTS=\"-j1\""
+		MAKEOPTS="-j1"
+	else
+		einfo "build with MAKEOPTS=${MAKEOPTS}"
+	fi
+
+	emake ${MAKEOPTS} || die "failed to compile bind"
 
 	use idn && {
 		cd ${S}/contrib/idn/idnkit-1.0-src
@@ -162,8 +175,8 @@ src_install() {
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
 	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}.zone
 
-	cp ${FILESDIR}/named.init-r2 ${T}/named && doinitd ${T}/named
-	cp ${FILESDIR}/named.confd ${T}/named && doconfd ${T}/named
+	cp ${FILESDIR}/named.init-r3 ${T}/named && doinitd ${T}/named
+	cp ${FILESDIR}/named.confd-r1 ${T}/named && doconfd ${T}/named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri

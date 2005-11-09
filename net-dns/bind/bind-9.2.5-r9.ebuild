@@ -1,35 +1,30 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2_beta1.ebuild,v 1.2 2005/10/30 01:36:11 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r9.ebuild,v 1.1 2005/11/09 09:25:52 voxus Exp $
 
 inherit eutils libtool
 
-BETA_VERSION="${PV/_beta/b}"
-
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${BETA_VERSION}/${PN}-${BETA_VERSION}.tar.gz
-	dlz? ( http://dev.gentoo.org/~voxus/bind/ctrix_dlz_${BETA_VERSION}.patch.bz2 )"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
+	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${PV}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux idn threads"
 
 DEPEND="sys-apps/groff
 	sys-devel/autoconf
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=dev-db/mysql-4 )
+	bind-mysql? ( >=dev-db/mysql-4 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )"
-
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
 
-S="${WORKDIR}/${PN}-${BETA_VERSION}"
-
-pkg_setup() {
+src_unpack() {
 	use threads && {
 		echo
 		ewarn "If you're in vserver enviroment, you're probably want to"
@@ -37,17 +32,6 @@ pkg_setup() {
 		echo
 	}
 
-	if use dlz && use idn;
-	then
-		echo
-		eerror "DLZ currently doesn't supports IDN"
-		eerror "You should disable 'idn' or 'dlz' use flag to continue"
-
-		die "dlz doesn't support idn currently"
-	fi
-}
-
-src_unpack() {
 	unpack ${A} && cd ${S}
 
 	# Adjusting PATHs in manpages
@@ -58,12 +42,36 @@ src_unpack() {
 		       ${i}
 	done
 
-	use dlz && {
-		epatch ${DISTDIR}/ctrix_dlz_${BETA_VERSION}.patch.bz2 || \
-			die "dlz patch failed"
-	}
+	if use dlz; then
+		epatch ${DISTDIR}/dlz-${PV}.patch.bz2
+		epatch ${FILESDIR}/${P}-berkdb_fix.patch
+	fi
 
-	use idn && die "idn patch is broken for this beta"
+	if use bind-mysql; then
+		if use dlz; then
+			MP=${P}-dlz-mysql.patch
+		else
+			MP=${P}-mysql.patch
+		fi
+
+		ebegin "Fixing mysql patch"
+		eindent
+
+		cp ${FILESDIR}/${MP} ${T}/${MP}
+
+		sed -e "s:-I/usr/local/include:`mysql_config --include`:" \
+			-e "s:-L/usr/local/lib/mysql -lmysqlclient:`mysql_config --libs`:" \
+			-i ${T}/${MP}
+
+		epatch ${T}/${MP}
+
+		eoutdent
+		eend $?
+	fi
+
+	if use idn; then
+		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
+	fi
 
 	# it should be installed by bind-tools
 	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
@@ -77,7 +85,6 @@ src_compile() {
 	local myconf=""
 
 	use ssl && myconf="${myconf} --with-openssl"
-
 	use dlz && {
 		myconf="${myconf} --with-dlz-filesystem --with-dlz-stub"
 		use postgres && myconf="${myconf} --with-dlz-postgres"
@@ -95,8 +102,8 @@ src_compile() {
 			einfo "requires that each thread of an application execute a MySQL"
 			einfo "\"thread initialization\" to setup the thread local storage."
 			einfo "This is impossible to do safely while staying within the DLZ"
-			einfo "driver API. This is a limitation caused by MySQL, and not"
-			einfo "the DLZ API."
+			einfo "driver API. This is a limitation caused by MySQL, and not the"
+			einfo "DLZ API."
 			ewarn "Because of this BIND MUST only run with a single thread when"
 			ewarn "using the MySQL driver."
 			echo
@@ -112,17 +119,26 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
-		--with-libtool \
 		`use_enable ipv6` \
+		--with-libtool \
 		${myconf} || die "econf failed"
 
-	emake -j1 || die "failed to compile bind"
+	# idea from dev-libs/cyrus-sasl
+	if has distcc ${FEATURES}; then
+		einfo "You have \"distcc\" enabled"
+		einfo "build with MAKEOPTS=\"-j1\""
+		MAKEOPTS="-j1"
+	else
+		einfo "build with MAKEOPTS=${MAKEOPTS}"
+	fi
 
-	use idn && {
+	emake ${MAKEOPTS} || die "failed to compile bind"
+
+	if use idn; then
 		cd ${S}/contrib/idn/idnkit-1.0-src
 		econf || die "idn econf failed"
 		emake || die "idn emake failed"
-	}
+	fi
 }
 
 src_install() {
@@ -131,29 +147,20 @@ src_install() {
 	dodoc CHANGES COPYRIGHT FAQ README
 
 	use doc && {
-		docinto misc
-		dodoc doc/misc/*
-
-		docinto html
-		dohtml doc/arm/*
-
-		docinto	draft
-		dodoc doc/draft/*
-
-		docinto rfc
-		dodoc doc/rfc/*
-
-		docinto contrib
-		dodoc contrib/named-bootconf/named-bootconf.sh \
-			contrib/nanny/nanny.pl
-
-		# some handy-dandy dynamic dns examples
-		cd ${D}/usr/share/doc/${PF}
-		tar pjxf ${FILESDIR}/dyndns-samples.tbz2
+		docinto misc ; dodoc doc/misc/*
+		docinto html ; dohtml doc/arm/*
+		docinto	draft ; dodoc doc/draft/*
+		docinto rfc ; dodoc doc/rfc/*
+		docinto contrib ; dodoc contrib/named-bootconf/named-bootconf.sh \
+		contrib/nanny/nanny.pl
 	}
 
 	insinto /etc/env.d
 	newins ${FILESDIR}/10bind.env 10bind
+
+	# some handy-dandy dynamic dns examples
+	cd ${D}/usr/share/doc/${PF}
+	tar pjxf ${FILESDIR}/dyndns-samples.tbz2
 
 	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec
@@ -163,8 +170,8 @@ src_install() {
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
 	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}.zone
 
-	cp ${FILESDIR}/named.init-r2 ${T}/named && doinitd ${T}/named
-	cp ${FILESDIR}/named.confd ${T}/named && doconfd ${T}/named
+	cp ${FILESDIR}/named.init-r3 ${T}/named && doinitd ${T}/named
+	cp ${FILESDIR}/named.confd-r1 ${T}/named && doconfd ${T}/named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
@@ -205,7 +212,7 @@ pkg_postinst() {
 	einfo "The BIND ebuild now includes chroot support."
 	einfo "If you like to run bind in chroot AND this is a new install OR"
 	einfo "your bind doesn't already run in chroot, simply run:"
-	einfo "\`emerge --config '=${CATEGORY}/${PF}'\`"
+	einfo "\`ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\`"
 	einfo "Before running the above command you might want to change the chroot"
 	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
 	echo
