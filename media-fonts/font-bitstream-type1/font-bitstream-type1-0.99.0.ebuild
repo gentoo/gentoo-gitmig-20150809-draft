@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/font-bitstream-type1-0.99.0.ebuild,v 1.7 2005/11/06 02:10:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/font-bitstream-type1-0.99.0.ebuild,v 1.8 2005/11/09 15:02:25 geoman Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -9,7 +9,7 @@ inherit x-modular
 
 
 DESCRIPTION="BigReqs prototype headers"
-KEYWORDS="~amd64 ~arm ~ia64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~mips ~s390 ~sparc ~x86"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	x11-apps/mkfontdir

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-type1
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/ChangeLog,v 1.6 2005/11/06 02:10:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/ChangeLog,v 1.7 2005/11/09 15:02:25 geoman Exp $
+
+  09 Nov 2005; Stephen P. Becker <geoman@gentoo.org>
+  font-bitstream-type1-0.99.0.ebuild:
+  added ~mips keyword
 
   06 Nov 2005; <dang@gentoo.org> font-bitstream-type1-0.99.0.ebuild:
   Marked ~amd64
