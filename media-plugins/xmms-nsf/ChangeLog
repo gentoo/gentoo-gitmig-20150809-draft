@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-nsf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/ChangeLog,v 1.13 2005/09/09 11:30:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/ChangeLog,v 1.14 2005/11/09 03:25:02 metalgod Exp $
+
+*xmms-nsf-0.0.3-r1 (09 Nov 2005)
+
+  09 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/xmms-nsf-0.0.3-about.patch, +xmms-nsf-0.0.3-r1.ebuild:
+  Added a patch to control window to display when an nsf song is played and
+  change 'Fadeout' option to 'Silence Until Next Song' thanks to
+  <qube99@hotmail.com>.
 
   09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-nsf-0.0.3.ebuild:
   Don't install INSTALL file.
