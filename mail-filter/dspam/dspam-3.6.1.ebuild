@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.1.ebuild,v 1.1 2005/11/09 14:31:38 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.1.ebuild,v 1.2 2005/11/09 15:28:55 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users user-homedirs"
 DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
-		sqlite? ( <dev-db/sqlite-3* )
+		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( =dev-db/sqlite-3* )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		>=sys-libs/db-4.0
