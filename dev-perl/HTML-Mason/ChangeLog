@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.37 2005/09/08 18:42:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.38 2005/11/09 08:33:47 chriswhite Exp $
+
+*HTML-Mason-1.3101 (09 Nov 2005)
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org>
+  +HTML-Mason-1.3101.ebuild:
+  Version bump to 1.3101 for bug #111933. This also includes the addition of a
+  doc USE flag for optional installation of the html documentation.
 
   08 Sep 2005; Aron Griffis <agriffis@gentoo.org> HTML-Mason-1.26.ebuild:
   Mark 1.26 stable on alpha
