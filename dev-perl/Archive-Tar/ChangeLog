@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Archive-Tar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.40 2005/05/25 14:49:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.41 2005/11/09 11:17:55 chriswhite Exp $
+
+*Archive-Tar-1.26 (09 Nov 2005)
+
+  09 Nov 2005; Chris White <chriswhite@gentoo.org> -Archive-Tar-1.24.ebuild,
+  +Archive-Tar-1.26.ebuild:
+  Version bump to 1.26. Removed older ~arch version. Added SRC_TEST='do'.
+  Helps fix bug #111933.
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Archive-Tar-1.23-r1.ebuild:
