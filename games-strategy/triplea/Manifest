@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b212a10ebb65cefb29ded7ad1f22ee4 ChangeLog 2535
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d43df205b3fd3057cb8b2919db6171e7 triplea-0.4.8.ebuild 1978
 MD5 02b0891d8f006d387fc71f6acb03adea triplea-0.5.1.1.ebuild 2126
-MD5 5013075c9e29c6ffa77e47ede5022cb7 triplea-0.6.0.1.ebuild 1874
-MD5 b609ff3eb027151169803aa25b5edd75 files/digest-triplea-0.4.8 70
-MD5 9a6bab7f4d8f6d017eb9fd91481706d1 files/digest-triplea-0.5.1.1 72
-MD5 e24d20d31aa44732ab64d3f599dd253f files/digest-triplea-0.6.0.1 72
-MD5 7ffbd6e44e385dd4730e14206aae6cd8 files/triplea-0.5.1.1.patch 3254
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 6b98bd0909e9308dad276dc65fe73659 triplea-0.6.0.1.ebuild 1879
+MD5 d43df205b3fd3057cb8b2919db6171e7 triplea-0.4.8.ebuild 1978
+MD5 330a71855aa17069692d3a3b9af883e8 ChangeLog 2665
 MD5 c8d37e2b98977adc8b30d8ff6249486f files/triplea-0.6.0.1-gentoo.patch 1956
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDNF9rwUpWvClEHQoRAjSHAJ9FTrtR0/f1UwioLIeFwAjxWE9lLwCdEEsV
-7i7HRXKcSw2Ccg/buZ6/3p0=
-=Xy7x
------END PGP SIGNATURE-----
+MD5 7ffbd6e44e385dd4730e14206aae6cd8 files/triplea-0.5.1.1.patch 3254
+MD5 9a6bab7f4d8f6d017eb9fd91481706d1 files/digest-triplea-0.5.1.1 72
+MD5 b609ff3eb027151169803aa25b5edd75 files/digest-triplea-0.4.8 70
+MD5 e24d20d31aa44732ab64d3f599dd253f files/digest-triplea-0.6.0.1 72
