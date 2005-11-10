@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.1 2005/11/10 15:11:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.2 2005/11/10 16:30:46 swegener Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -16,13 +16,14 @@ IUSE="cmkopt tcp smp doc icc"
 RESTRICT="fetch"
 
 DEPEND="icc? ( >=dev-lang/icc-8.1 )
-	doc? ( app-text/pdftohtml )
-	doc? ( dev-tex/latex2html )
-	doc? ( virtual/tetex )"
+	doc? (
+		app-text/pdftohtml
+		dev-tex/latex2html
+		virtual/tetex
+	)"
 
 CHARM_ARCH="net-linux"
 CHARM_DOWNLOAD="http://charm.cs.uiuc.edu/download/"
-
 
 pkg_nofetch() {
 	echo
@@ -79,7 +80,6 @@ src_unpack() {
 
 src_compile() {
 	# build charmm++ first
-	cd "${S}"
 	./build charm++ net-linux ${CHARM_OPTS} ${CFLAGS} || \
 		die "Failed to build charm++"
 
@@ -91,8 +91,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
-
 	# make charmc play well with gentoo before
 	# we move it into /usr/bin
 	einfo "Fixing paths in charmc wrapper"

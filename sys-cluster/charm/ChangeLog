@@ -1,6 +1,6 @@
-# ChangeLog for sci-libs/charm
+# ChangeLog for sys-cluster/charm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/ChangeLog,v 1.1 2005/11/10 15:11:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/ChangeLog,v 1.2 2005/11/10 16:30:46 swegener Exp $
 
   10 Nov 2005; Markus Dittrich <markusle@gentoo.org>
   +files/charm-charmc-gentoo.patch, +files/charm-doc-makefile-gentoo.patch,
