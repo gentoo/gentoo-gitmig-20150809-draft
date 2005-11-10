@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4de20195c054549f506a07b8e8bd4b08 kid-0.7.1.ebuild 738
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 69e6361c88135ee23f4e6624352b1e28 ChangeLog 378
+MD5 6afe8df6927655a755c858926a52bc5e files/kid-0.7.1-ezsetup-gentoo.patch 785
+MD5 fe1c90896206e3460519d78d6c59862b files/digest-kid-0.7.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDc9h/Try2jroju7wRAqiWAJ9W9++VpJsXGgbdZZxkDLlzVaLYmwCeOnic
+AbSJuACnmO25QuFdsedJ74I=
+=iy+n
+-----END PGP SIGNATURE-----
