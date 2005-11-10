@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.8 2005/08/23 13:41:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.9 2005/11/10 13:05:16 ferdy Exp $
 
-IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
+# gnutls breaks
+#IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
+IUSE="debug ipv6 ldap mbox pam postgres sasl ssl vpopmail nopop3d mysql"
 inherit eutils
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
@@ -51,13 +53,13 @@ src_compile() {
 	# gnutls support no longer working
 	# (http://www.dovecot.org/list/dovecot/2004-November/005169.html)
 	use ssl && myconf="${myconf} --with-ssl=openssl"
-	if use gnutls; then
-		eerror 'GNUTLS support no longer available, see'
-		eerror 'http://www.dovecot.org/list/dovecot/2004-November/005169.html'
-		eerror
-		eerror 'Please set USE="-gnutls ssl" if you want TLS support.'
-		die
-	fi
+	#if use gnutls; then
+	#	eerror 'GNUTLS support no longer available, see'
+	#	eerror 'http://www.dovecot.org/list/dovecot/2004-November/005169.html'
+	#	eerror
+	#	eerror 'Please set USE="-gnutls ssl" if you want TLS support.'
+	#	die
+	#fi
 	# prefer gnutls to ssl if both gnutls and ssl are defined
 	#use gnutls && myconf="${myconf} --with-ssl=gnutls"
 	#use ssl && ! use gnutls && myconf="${myconf} --with-ssl=openssl"
