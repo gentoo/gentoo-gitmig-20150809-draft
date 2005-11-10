@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.80 2005/09/17 12:10:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.81 2005/11/10 18:02:22 vanquirius Exp $
+
+*gnutls-1.2.9 (10 Nov 2005)
+
+  10 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> -gnutls-1.2.5.ebuild,
+  +gnutls-1.2.9.ebuild:
+  1.2.9 version bump for bug 111928. Depends on libgcrypt-1.2.2 instead of
+  1.2.0. Thanks to Kai <altkai at ml1 dot net>.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnutls-1.2.4.ebuild:
   Mark 1.2.4 stable on alpha

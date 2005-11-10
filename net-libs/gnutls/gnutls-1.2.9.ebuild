@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.5.ebuild,v 1.1 2005/07/17 00:23:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.9.ebuild,v 1.1 2005/11/10 18:02:22 vanquirius Exp $
 
 inherit eutils gnuconfig
 
@@ -14,12 +14,12 @@ LICENSE="LGPL-2.1 GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
 
 # Removed keywords awaiting >=dev-libs/libtasn1-0.2.10 keywords (bug #61944)
 #  ~ia64 ~hppa
 
-RDEPEND=">=dev-libs/libgcrypt-1.2.0
+RDEPEND=">=dev-libs/libgcrypt-1.2.2
 	>=app-crypt/opencdk-0.5.5
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc
@@ -53,6 +53,7 @@ src_compile() {
 		--without-included-minilzo \
 		--without-included-libtasn1 \
 		--without-included-opencdk \
+		`use_enable doc gtk-doc` \
 		${myconf} || die
 	emake || die
 }
