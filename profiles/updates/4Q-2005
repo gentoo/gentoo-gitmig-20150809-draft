@@ -7,3 +7,4 @@ move app-text/open_c-lit app-text/convertlit
 move sys-apps/kudzu sys-libs/libkudzu
 move sys-apps/kudzu-knoppix sys-libs/libkudzu
 move sys-libs/libkudzu-knoppix sys-libs/libkudzu
+move sci-libs/charm sys-cluster/charm
