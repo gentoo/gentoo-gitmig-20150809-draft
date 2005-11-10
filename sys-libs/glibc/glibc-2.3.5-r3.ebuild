@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.5 2005/11/03 18:34:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.6 2005/11/10 03:02:41 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="2.3.5"
 GLIBC_INFOPAGE_VERSION="2.3.5"
 
 # Gentoo patchset
-PATCH_VER="1.14"
+PATCH_VER="1.15"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
@@ -759,7 +759,7 @@ want_nptl() {
 
 	# Archs that can use NPTL
 	case $(tc-arch) in
-		alpha|amd64|ia64|mips|ppc|ppc64|s390|x86)
+		alpha|amd64|ia64|mips|ppc|ppc64|s390|sh|x86)
 			return 0;
 		;;
 		sparc)
@@ -781,7 +781,7 @@ want_linuxthreads() {
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	case $(tc-arch) in
-		alpha|amd64|ia64|mips|ppc|ppc64|s390)
+		alpha|amd64|ia64|mips|ppc|ppc64|s390|sh)
 			return 0;
 		;;
 		sparc)
