@@ -1,4 +1,4 @@
-MD5 63920b02a256f3a393c8cd403d050558 ChangeLog 2680
+MD5 3adec788b428826d904e94f8ca5da768 ChangeLog 2771
 MD5 2688b95b2c0bcb242edc0d4a1f312928 files/digest-rmagick-1.3.2 67
 MD5 5d83ae860b1cd79e3ee89f047245760b files/digest-rmagick-1.7.3 66
 MD5 c3dc74371543b743f5c349007dda60d7 files/digest-rmagick-1.9.2 62
@@ -8,5 +8,5 @@ MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 18fc03a386cdf11422c44a19dd754e38 rmagick-1.3.2.ebuild 902
 MD5 ae6eb40d692d597e3e94f1e0873d0f20 rmagick-1.7.3.ebuild 919
 MD5 7b060c6c927454d32941615a9b25aeaa rmagick-1.9.2.ebuild 539
-MD5 ecd1bd581a9782db1745089e61e88cd7 rmagick-1.9.3-r1.ebuild 924
+MD5 5b5aef94fe4a5965aeac2ae2b82cd1b2 rmagick-1.9.3-r1.ebuild 923
 MD5 9449b8ff91e5565b6b66f783f5382716 rmagick-1.9.3.ebuild 540
