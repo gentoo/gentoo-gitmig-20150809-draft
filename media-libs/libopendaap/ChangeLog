@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopendaap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.10 2005/09/29 13:48:24 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.11 2005/11/10 04:05:34 weeve Exp $
+
+  10 Nov 2005; Jason Wever <weeve@gentoo.org> libopendaap-0.4.0.ebuild:
+  Added ~sparc keyword as it went missing in the version bump :(
 
 *libopendaap-0.4.0 (29 Sep 2005)
 
