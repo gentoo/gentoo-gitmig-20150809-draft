@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-010.ebuild,v 1.1 2005/10/20 15:01:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-010.ebuild,v 1.2 2005/11/10 13:31:04 brix Exp $
 
 inherit toolchain-funcs linux-info
 
 DESCRIPTION="PCMCIA userspace utilities for Linux kernel 2.6.13 and beyond"
 
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/pcmcia/"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/pcmcia/pcmcia.html"
 SRC_URI="mirror://kernel/linux/utils/kernel/pcmcia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
