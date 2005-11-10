@@ -1,0 +1,315 @@
+Index: net.modules.d/pppd
+===================================================================
+--- lib/rcscripts/net.modules.d/pppd	(revision 1605)
++++ net.modules.d/pppd	(working copy)
+@@ -142,8 +142,8 @@
+     # Load any commandline options
+     eval opts=\"\$\{pppd_${ifvar}\[@\]}\"
+ 
+-    # We don't work if nodetach or unit is set
+-    for i in nodetach updetach unit ; do
++    # We don't work if unit, no detach or linkname is set.
++    for i in unit nodetach linkname ; do
+         if [[ " ${opts} " == *" ${i} "* ]]; then
+             eerror "The option \"${i}\" is not allowed"
+             return 1
+@@ -158,9 +158,9 @@
+         [[ " ${opts} " != *" mru "* ]] && opts="${opts} mru ${mtu}"
+     fi
+ 
+-    # Detach if we're not idling
+-    [[ " ${opts} " != *" idle "* && " ${opts} " != *" updetach "* ]] \
+-        && opts="${opts} updetach"
++    # Set linkname because we need /var/run/ppp-${linkname}.pid
++    # This pidfile has the advantage of being there, even if ${iface} interface was never started
++    opts="linkname ${iface} ${opts}"
+ 
+     # Setup auth info
+     [[ -n ${username} ]] && opts="user \"${username}\" ${opts}"
+@@ -228,11 +228,13 @@
+     [[ ${insert_link_in_opts} -eq 0 ]] || opts="${link} ${opts}"
+     
+     ebegin "Running pppd"
+-    i=$( eval /usr/sbin/pppd ${opts}  )
++    i=$( eval /usr/sbin/pppd ${opts} 2>&1 )
+     eend $? "${i}" || return 1
+ 
+-    local addr=$( interface_get_address "${iface}" )
+-    einfo "${iface} received address ${addr}"
++    if [[ " ${opts} " == *" updetach "* ]]; then
++        local addr=$( interface_get_address "${iface}" )
++        einfo "${iface} received address ${addr}"
++    fi
+ }
+ 
+ # bool pppd_stop(char *iface)
+@@ -242,11 +244,12 @@
+ # Returns 0 (true) if no process to kill or it terminates successfully,
+ # otherwise non-zero (false)
+ pppd_stop() {
+-    local iface="$1" pidfile="/var/run/$1.pid"
++    local iface="$1" pidfile="/var/run/ppp-$1.pid"
+ 
+     [[ ! -s ${pidfile} ]] && return 0 
+ 
+-    local pid=$(<"${pidfile}")
++    local pid
++    read pid <"${pidfile}" #PID is the first line of the pidfile
+     einfo "Stopping pppd on ${iface}"
+     kill -s TERM "${pid}"
+     process_finished "${pid}" /usr/sbin/pppd
+Index: net.modules.d/netplugd
+===================================================================
+--- lib/rcscripts/net.modules.d/netplugd	(revision 1605)
++++ net.modules.d/netplugd	(working copy)
+@@ -85,11 +85,11 @@
+ 
+ 	eindent
+ 
+-	eval timeout=\"\$\{plug_timeout_${ifvar}\:-10}\"
++	eval timeout=\"\$\{plug_timeout_${ifvar}\:--1}\"
+ 	if [[ ${timeout} == "0" ]]; then
+ 		ewarn "WARNING: infinite timeout set for ${iface} to come up"
+ 	elif [[ ${timeout} -lt 0 ]]; then
+-		ewarn "WARNING: negative timeout set for ${iface}"
++		einfo "Backgrounding ..."
+ 		exit 0
+ 	fi
+ 
+Index: net.modules.d/wpa_supplicant
+===================================================================
+--- lib/rcscripts/net.modules.d/wpa_supplicant	(revision 1605)
++++ net.modules.d/wpa_supplicant	(working copy)
+@@ -106,8 +106,7 @@
+ 	pidfile="/var/run/wpa_cli-${iface}.pid"
+ 	if ! clean_pidfile "${pidfile}" ; then
+ 		${report} && ebegin "Stopping wpa_cli on ${iface}"
+-		start-stop-daemon --stop --exec /bin/wpa_cli \
+-		--pidfile "${pidfile}"
++		start-stop-daemon --stop --exec /bin/wpa_cli --pidfile "${pidfile}"
+ 		${report} && eend "$?"
+ 	fi
+ 
+@@ -116,7 +115,7 @@
+ 	if ! clean_pidfile "${pidfile}" ; then
+ 		${report} && ebegin "Stopping wpa_supplicant on ${iface}"
+ 		start-stop-daemon --stop --exec /sbin/wpa_supplicant \
+-		--pidfile "${pidfile}"
++			--pidfile "${pidfile}"
+ 		${report} && eend "$?"
+ 	else
+ 		# Support wpa_supplicant-0.3.x
+@@ -130,7 +129,7 @@
+ 
+ 	# If wpa_supplicant exits uncleanly, we need to remove the stale dir
+ 	[[ -S "/var/run/wpa_supplicant/${iface}" ]] \
+-	&& rm -f "/var/run/wpa_supplicant/${iface}"
++		&& rm -f "/var/run/wpa_supplicant/${iface}"
+ }
+ 
+ # bool wpa_supplicant_associate(char *interface)
+@@ -140,12 +139,12 @@
+ wpa_supplicant_associate() {
+ 	local iface="$1" ifvar=$( bash_variable "$1" ) timeout i
+ 	eval timeout=\"\$\{associate_timeout_${ifvar}\}\"
+-	[[ -z ${timeout} ]] && eval timeout=\"\$\{wpa_timeout_${ifvar}:-60\}\"
++	[[ -z ${timeout} ]] && eval timeout=\"\$\{wpa_timeout_${ifvar}:--1\}\"
+ 
+ 	if [[ ${timeout} == "0" ]]; then
+ 		ewarn "WARNING: infinite timeout set for association on ${iface}"
+ 	elif [[ ${timeout} -lt 0 ]]; then
+-		ewarn "WARNING: negative timeout set for ${iface}"
++		einfo "Backgrounding ..."
+ 		exit 0
+ 	fi
+ 
+@@ -187,8 +186,7 @@
+ # Start wpa_supplicant on an interface and wait for association
+ # Returns 0 (true) when successful, non-zero otherwise
+ wpa_supplicant_pre_start() {
+-	local iface="$1" opts timeout action=false
+-	local cfgfile="/etc/wpa_supplicant.conf"
++	local iface="$1" opts timeout action=false cfgfile
+ 	local actfile="/sbin/wpa_cli.action"
+ 
+ 	# We don't configure wireless if we're being called from
+@@ -242,6 +240,15 @@
+ 
+ 	ebegin "Starting wpa_supplicant on ${iface}"
+ 
++	cfgfile="${opts##* -c}"
++	if [[ -n ${cfgfile} && ${cfgfile} != "${opts}" ]]; then
++		[[ ${cfgfile:0:1} == " " ]] && cfgfile="${cfgfile# *}"
++		cfgfile="${cfgfile%% *}"
++	else
++		cfgfile="/etc/wpa_supplicant.conf"
++		opts="${opts} -c/etc/wpa_supplicant.conf"
++	fi
++
+ 	if [[ ! -f ${cfgfile} ]]; then
+ 		eend 1 "configuration file ${cfgfile} not found!"
+ 		return 1
+@@ -275,7 +282,8 @@
+ 	fi
+ 
+ 	start-stop-daemon --start --exec /sbin/wpa_supplicant \
+-		-- ${opts} -B -c/etc/wpa_supplicant.conf -i"${iface}"
++		--pidfile "/var/run/wpa_supplicant-${iface}.pid" \
++		-- ${opts} -B -i"${iface}"
+ 	eend "$?" || return 1
+ 
+ 	# Starting wpa_supplication-0.4.0, we can get wpa_cli to
+@@ -284,6 +292,7 @@
+ 		mark_service_inactive "net.${iface}"
+ 		ebegin "Starting wpa_cli on ${iface}"
+ 		start-stop-daemon --start --exec /bin/wpa_cli \
++			--pidfile "/var/run/wpa_cli-${iface}.pid" \
+ 			-- -a"${actfile}" -i"${iface}" \
+ 			-P"/var/run/wpa_cli-${iface}.pid" -B
+ 		eend "$?" || return 1
+Index: net.modules.d/ifplugd
+===================================================================
+--- lib/rcscripts/net.modules.d/ifplugd	(revision 1605)
++++ net.modules.d/ifplugd	(working copy)
+@@ -98,11 +98,11 @@
+ 
+ 	eindent
+ 
+-	eval timeout=\"\$\{plug_timeout_${ifvar}\:-10}\"
++	eval timeout=\"\$\{plug_timeout_${ifvar}\:--1}\"
+ 	if [[ ${timeout} == "0" ]]; then
+ 		ewarn "WARNING: infinite timeout set for ${iface} to come up"
+ 	elif [[ ${timeout} -lt 0 ]]; then
+-		ewarn "WARNING: negative timeout set for ${iface}"
++		einfo "Backgrounding ..."
+ 		exit 0
+ 	fi
+ 
+Index: net.modules.d/iwconfig
+===================================================================
+--- lib/rcscripts/net.modules.d/iwconfig	(revision 1605)
++++ net.modules.d/iwconfig	(working copy)
+@@ -325,7 +325,6 @@
+ 	local iface="$1" mode="${2:-managed}"
+ 	local mac="$3" wep_required="$4" w="(WEP Disabled)"
+ 	local dessid="${ESSID//\\\\/\\\\}" key
+-	wep_required="${wep_required:-off}"
+ 
+ 	iwconfig "${iface}" mode "${mode}" 2>/dev/null
+ 	if [[ ${ESSID} == "any" ]]; then
+Index: conf.d/net.example
+===================================================================
+--- etc/conf.d/net.example	(revision 1605)
++++ conf.d/net.example	(working copy)
+@@ -160,9 +160,10 @@
+ #wpa_supplicant_eth0="-Dprism54" # For Prism54 based cards
+ #wpa_supplicant_ath0="-Dmadwifi" # For Atheros based cards
+ # Consult wpa_supplicant for more drivers
+-# By default we give wpa_suppliant 60 seconds to associate and authenticate
+-# 0 means we wait indefinitely
++# By default don't wait for wpa_suppliant to associate and authenticate.
++# If you would like to, so can specify how long in seconds
+ #associate_timeout_eth0=60
++# A value of 0 means wait forever.
+ 
+ # GENERIC WIRELESS OPTIONS
+ # PLEASE READ THE INSTRUCTIONS IN /etc/conf.d/wireless.example FOR
+@@ -350,19 +351,31 @@
+ #ln -s net.lo net.ppp0
+ #
+ # Each PPP interface requires an interface to use as a "Link"
++#link_ppp0="/dev/ttyS0" # Most PPP links will use a serial port
+ #link_ppp0="eth0"       # PPPoE requires an ethernet interface
+-#link_ppp0="/dev/ttyS0" # Most PPP links will use a serial port
++#link_ppp0="/dev/null"	# PPPoA and ISDN links should have this
+ #
++# Here you should specify what pppd plugins you want to use
++# Available plugins are: pppoe, pppoa, capi, dhcpc, minconn, radius,
++#			 radattr, radrealms and winbind 
++#plugins_ppp0=(
++#	"pppoe"	# Required plugin for PPPoE
++#	"pppoa"	# Required plugin for PPPoA
++#	"capi"	# Required plugin for ISDN
++#)
++#
+ # PPP requires at least a username. You can optionally set a password here too
+ # If you don't, then it will use the password specified in /etc/ppp/*-secrets
+ # against the specified username
+-#username_ppp0="user"
+-#password_ppp0="password"
++#username_ppp0='user'
++#password_ppp0='password'
+ #
+ # The PPP daemon has many options you can specify - although there are many
+-# and may seem daunting, it is recommended that you read the ppp man page
++# and may seem daunting, it is recommended that you read the pppd man page
+ # before enabling any of them
+ #pppd_ppp0=(
++#	"updetach" 	# WARNING: If you don't specify this then we will
++#			# not wait for the actual PPP link to go up
+ #	"debug" 	# Enables syslog debugging
+ #	"noauth"	# Do not require the peer to authenticate itself
+ #	"defaultroute"	# Make this PPP interface the default route
+@@ -388,8 +401,8 @@
+ #	"192.168.0.1:192.168.0.2"	# Local and remote IP addresses
+ #)
+ #
+-# Dial-up PPP users need to specify a telephone number
+-#phone_number_ppp0=( "12345689" )
++# Dial-up PPP users need to specify at least one telephone number
++#phone_number_ppp0=( "12345689" ) # Maximum 2 phone numbers are supported
+ # They will also need a chat script - here's a good one
+ #chat_ppp0=(
+ #	'ABORT' 'BUSY'
+@@ -530,18 +543,18 @@
+ # To use dns settings such as these, dns_servers_eth0 must be set!
+ # If you omit the _eth0 suffix, then it applies to all interfaces unless
+ # overridden by the interface suffix.
+-# dns_domain_eth0="your.domain"
+-# dns_servers_eth0="192.168.0.2 192.168.0.3"
+-# dns_search_eth0="this.domain that.domain"
+-# dns_options_eth0=( "timeout 1" "rotate" )
+-# dns_sortlist_eth0="130.155.160.0/255.255.240.0 130.155.0.0"
++#dns_domain_eth0="your.domain"
++#dns_servers_eth0="192.168.0.2 192.168.0.3"
++#dns_search_eth0="this.domain that.domain"
++#dns_options_eth0=( "timeout 1" "rotate" )
++#dns_sortlist_eth0="130.155.160.0/255.255.240.0 130.155.0.0"
+ # See the man page for resolv.conf for details about the options and sortlist
+ # directives
+ 
+-# ntp_servers_eth0="192.168.0.2 192.168.0.3"
++#ntp_servers_eth0="192.168.0.2 192.168.0.3"
+ 
+-# nis_domain_eth0="domain"
+-# nis_servers_eth0="192.168.0.2 192.168.0.3"
++#nis_domain_eth0="domain"
++#nis_servers_eth0="192.168.0.2 192.168.0.3"
+ 
+ #-----------------------------------------------------------------------------
+ # Cable in/out detection
+@@ -555,15 +568,19 @@
+ # emerge sys-apps/ifplugd
+ # and you're done :)
+ 
+-# By default we wait 10 seconds for netplug to configure the interface for us
+-# if it doesn't, we abort but leave netplug running and the net.eth0 service
+-# marked as inactive so when a cable is plugged in it starts fine.
+-# plug_timeout="10"
++# By default we don't wait for netplug/ifplugd to configure the interface.
++# If you would like it to wait so that other services now that network is up
++# then you can specify a timeout here.
++#plug_timeout="10"
++# A value of 0 means wait forever.
+ 
+ # If you don't want to use netplug on a specific interface but you have it
+ # installed, you can disable it for that interface via the modules statement
+-# modules_eth0=( "!netplug" )
++#modules_eth0=( "!netplug" )
+ # You can do the same for ifplugd
++#
++# You can disable them both with the generic plug
++#modules_eth0=( "!plug" )
+ 
+ # To use specific ifplugd options, fex specifying wiress mode
+ #ifplugd_eth0="--api-mode wlan"
