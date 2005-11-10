@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.25 2005/11/10 05:40:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.26 2005/11/10 06:15:21 tester Exp $
+
+  10 Nov 2005; Olivier Crête <tester@gentoo.org>
+  -files/mpeg4ip-1.2-mp4encode-template-path.patch, -mpeg4ip-1.0.ebuild,
+  mpeg4ip-1.1.ebuild, -mpeg4ip-1.2.ebuild, mpeg4ip-1.3.ebuild,
+  mpeg4ip-1.4.ebuild:
+  Block faad2, mpeg4ip should be made a dep of faad2
 
 *mpeg4ip-1.4 (10 Nov 2005)
 
