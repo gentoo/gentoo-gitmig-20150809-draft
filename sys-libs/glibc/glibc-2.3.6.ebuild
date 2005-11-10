@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.1 2005/11/10 14:34:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.2 2005/11/10 15:42:20 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1067,7 +1067,10 @@ fi
 
 pkg_setup() {
 	eerror "Portage have a serious bug in regards to symlinks, and merging"
-	eerror "this with current versions will fail!"
+	eerror "this with current versions will fail!  See:"
+	echo
+	eerror "  http://bugs.gentoo.org/show_bug.cgi?id=112082"
+	echo
 	die "Portage sucks."
 
 	if use nptlonly && ! use nptl ; then
