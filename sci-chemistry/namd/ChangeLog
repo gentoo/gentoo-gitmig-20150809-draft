@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/namd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.1 2005/10/05 00:33:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.2 2005/11/10 15:21:59 markusle Exp $
+
+  10 Nov 2005; Markus Dittrich <markusle@gentoo.org> metadata.xml,
+  namd-2.6_beta1.ebuild:
+  Changed charm dependency to sys-cluster/charm since charm
+  has moved from sci-libs/charm to sys-cluster/charm
 
 *namd-2.6_beta1 (05 Oct 2005)
 

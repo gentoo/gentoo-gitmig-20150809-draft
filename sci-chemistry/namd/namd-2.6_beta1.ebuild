@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.6_beta1.ebuild,v 1.1 2005/10/05 00:33:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.6_beta1.ebuild,v 1.2 2005/11/10 15:21:59 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -21,7 +21,7 @@ RESTRICT="fetch"
 
 DEPEND="app-shells/csh
 	virtual/libc
-	=sci-libs/charm-5.9
+	=sys-cluster/charm-5.9
 	=sci-libs/fftw-2*
 	=dev-lang/tcl-8.4*
 	hardened? ( sys-apps/paxctl )"
