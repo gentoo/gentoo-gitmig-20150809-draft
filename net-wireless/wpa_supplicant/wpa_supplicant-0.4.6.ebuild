@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.6.ebuild,v 1.1 2005/10/29 10:41:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.6.ebuild,v 1.2 2005/11/10 09:56:50 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,14 +14,13 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug gsm madwifi qt readline ssl"
+IUSE="debug gsm qt readline ssl"
 
 DEPEND="gsm? ( sys-apps/pcsc-lite )
 		qt? ( =x11-libs/qt-3* )
 		readline? ( sys-libs/ncurses
 					sys-libs/readline )
-		ssl? ( dev-libs/openssl )
-		madwifi? ( >=net-wireless/madwifi-driver-0.1_pre20050420-r1 )"
+		ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	local CONFIG=${S}/.config
@@ -78,12 +77,6 @@ src_unpack() {
 	echo "CONFIG_DRIVER_PRISM54=y"     >> ${CONFIG}
 	echo "CONFIG_DRIVER_WEXT=y"        >> ${CONFIG}
 	echo "CONFIG_DRIVER_WIRED=y"       >> ${CONFIG}
-
-	if use madwifi; then
-		# Add include path for madwifi-driver headers
-		echo "CFLAGS += -I/usr/include/madwifi" >> ${CONFIG}
-		echo "CONFIG_DRIVER_MADWIFI=y"           >> ${CONFIG}
-	fi
 }
 
 src_compile() {
@@ -129,10 +122,4 @@ pkg_postinst() {
 	einfo "An example configuration file has been installed as"
 	einfo "/etc/wpa_supplicant.conf.example"
 	einfo
-	if use madwifi; then
-		einfo "This package now compiles against the headers installed by"
-		einfo "net-wireless/madwifi-driver. You should remerge ${PN} after"
-		einfo "upgrading net-wireless/madwifi-driver."
-		einfo
-	fi
 }
