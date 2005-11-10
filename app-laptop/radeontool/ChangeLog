@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/radeontool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.13 2005/10/15 20:38:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.14 2005/11/10 01:01:35 compnerd Exp $
+
+*radeontool-1.5-r3 (10 Nov 2005)
+
+  10 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +radeontool-1.5-r3.ebuild:
+  Changing the install location into sbin since the application needs root to
+  run.  Resovles bug #111067
 
   15 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   radeontool-1.5-r2.ebuild:
