@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xstroke
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.16 2005/09/30 15:56:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.17 2005/11/10 21:54:10 nelchael Exp $
+
+  11 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xstroke-0.6.ebuild:
+  Stable on x86.
 
 *xstroke-0.6 (30 Sep 2005)
 
