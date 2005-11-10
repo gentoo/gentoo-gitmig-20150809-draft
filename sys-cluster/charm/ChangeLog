@@ -1,0 +1,21 @@
+# ChangeLog for sci-libs/charm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/ChangeLog,v 1.1 2005/11/10 15:11:55 markusle Exp $
+
+  10 Nov 2005; Markus Dittrich <markusle@gentoo.org>
+  +files/charm-charmc-gentoo.patch, +files/charm-doc-makefile-gentoo.patch,
+  +files/charm-examples-gentoo.patch, +files/charm-fpic-gentoo.patch,
+  +files/charm-python-configure-gentoo.patch, +metadata.xml,
+  +charm-5.9.ebuild:
+  moved from sci-libs/charm to sys-cluster/charm
+
+*charm-5.9 (05 Oct 2005)
+
+  05 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/charm-charmc-gentoo.patch, +files/charm-doc-makefile-gentoo.patch,
+  +files/charm-examples-gentoo.patch, +files/charm-fpic-gentoo.patch,
+  +files/charm-python-configure-gentoo.patch, +metadata.xml,
+  +charm-5.9.ebuild:
+  Initial import. Ebuild contributed by Markus Dittrich <markusle@gmail.com>
+  (bug #108031).
+
