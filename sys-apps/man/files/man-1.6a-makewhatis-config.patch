@@ -1,0 +1,49 @@
+Use sections from config files rather than hardcoding.
+
+http://bugs.gentoo.org/86863
+
+--- src/makewhatis.sh
++++ src/makewhatis.sh
+@@ -92,7 +92,15 @@
+ defmanpath=$DEFMANPATH
+ defcatpath=
+ 
+-sections="1 2 3 4 5 6 7 8 9 n l"
++if [ -n "$MANSECT" ]; then
++	sections=$MANSECT
++else
++	sections=`$AWK '($1 == "MANSECT") { print $2 }' @man_config_file@`
++	if [ x"$sections" = x ]; then
++		sections="1 2 3 4 5 6 7 8 9 n l"
++	fi
++fi
++sections=`echo $sections | sed -e 's/:/ /g'`
+ 
+ for name in "$@"
+ do
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -93,8 +93,8 @@
+ 
+ makewhatis: makewhatis.sh Makefile
+ 	rm -f makewhatis
+-	sed -e 's,%version%,@version@,' \
+-	    -e 's,%awk%,@awk@,' makewhatis.sh > makewhatis
++	cp makewhatis.sh makewhatis.in
++	../conf_script makewhatis
+ 	chmod +x makewhatis
+ 
+ MANCONFIG=$(DESTDIR)$(PREFIX)@man_config_file@
+--- man/en/makewhatis.man
++++ man/en/makewhatis.man
+@@ -62,8 +62,8 @@
+ .I sections
+ of
+ .IR manpath " or " catpath .
+-If the option is absent, its value is assumed to be
+-.I  \'1 2 3 4 5 6 7 8 9 n l\'
++If the option is absent, the MANSECT env var will be used.  If it too
++is absent, the MANSECT setting in man.conf will be used.
+ .TP 
+ .BI -c " catpath"
+ The preformatted manual pages located in

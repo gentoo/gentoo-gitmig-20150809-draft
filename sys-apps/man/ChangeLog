@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.76 2005/09/17 00:31:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.77 2005/11/10 23:49:58 vapier Exp $
+
+*man-1.6b (10 Nov 2005)
+
+  10 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/man-1.5m2-apropos.patch, +files/man-1.5p-man2html.patch,
+  +files/man-1.5p-mandirlist.patch, +files/man-1.6a-makewhatis-config.patch,
+  +files/man-1.6b-build.patch, files/makewhatis.cron, +man-1.6b.ebuild:
+  Version bump and fix makewhatis section hardcode #86863 by OKUMURA N. Shin-ya.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
