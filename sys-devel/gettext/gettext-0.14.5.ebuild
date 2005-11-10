@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.2 2005/09/01 07:40:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.3 2005/11/10 04:05:05 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -45,6 +45,13 @@ src_unpack() {
 	if use ppc-macos ; then
 		glibtoolize
 		append-flags -bind_at_load
+	fi
+
+	# sanity check for Bug 105304
+	if [[ -z ${USERLAND} ]] ; then
+		eerror "You just hit Bug 105304, please post your 'emerge info' here:"
+		eerror "http://bugs.gentoo.org/105304"
+		die "Aborting to prevent screwing your system"
 	fi
 }
 
