@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.7.0_beta1.ebuild,v 1.2 2005/11/09 19:11:36 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.7.0_beta1.ebuild,v 1.3 2005/11/10 14:00:51 rl03 Exp $
 
 inherit eutils webapp
 
@@ -58,7 +58,7 @@ src_install() {
 
 	webapp_configfile ${MY_HTDOCSDIR}/config.default.php
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
-	webapp_hook_script ${FILESDIR}/reconfig
+	webapp_hook_script ${FILESDIR}/reconfig-2.7
 	webapp_src_install
 
 	fperms 0640 ${MY_HTDOCSDIR}/config.default.php
