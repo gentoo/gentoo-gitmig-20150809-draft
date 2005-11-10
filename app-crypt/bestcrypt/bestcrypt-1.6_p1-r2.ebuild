@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1-r2.ebuild,v 1.1 2005/09/27 21:56:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1-r2.ebuild,v 1.2 2005/11/10 18:56:09 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -38,6 +38,7 @@ MODULE_NAMES="bc(block:"${S}"/mod)
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-makefile_fix.patch
+	epatch "${FILESDIR}"/${P}-kgsha256makefile_fix.patch
 
 	if use x86;
 	then
@@ -50,9 +51,9 @@ src_unpack() {
 src_compile() {
 	filter-flags -fforce-addr
 
-	emake -C kgsha EXTRA_CXXFLAGS="${CXXFLAGS} -fPIC" || die "library compile failed"
-	emake -C kgsha256 EXTRA_CXXFLAGS="${CXXFLAGS} -fPIC" || die "library compile failed"
-	emake -C src EXTRA_CFLAGS="${CFLAGS} -I../kgsha256" || die "bctool compile failed"
+	emake -C kgsha CPP="$(tc-getCXX)" EXTRA_CXXFLAGS="${CXXFLAGS} -fPIC" || die "library compile failed"
+	emake -C kgsha256 CPP="$(tc-getCXX)" EXTRA_CXXFLAGS="${CXXFLAGS} -fPIC" || die "library compile failed"
+	emake -C src CC="$(tc-getCC)"  EXTRA_CFLAGS="${CFLAGS} -I../kgsha256" || die "bctool compile failed"
 
 	# Don't put stack protection in the kernel - it just is bad
 	append-flags -fno-stack-protector-all -fno-stack-protector
