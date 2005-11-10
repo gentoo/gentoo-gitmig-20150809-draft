@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.5.ebuild,v 1.10 2005/11/06 22:36:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.5.ebuild,v 1.11 2005/11/10 21:32:33 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="JZlib is a re-implementation of zlib in pure Java."
 HOMEPAGE="http://www.jcraft.com/jzlib/"
 SRC_URI="http://www.jcraft.com/${PN}/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="jcraft"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc ppc64"
 IUSE="doc jikes source"
