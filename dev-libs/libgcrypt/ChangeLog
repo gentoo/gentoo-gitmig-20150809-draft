@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.61 2005/11/08 09:33:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.62 2005/11/10 15:18:47 s4t4n Exp $
+
+  10 Nov 2005; Michele Noberasco <s4t4n@gentoo.org>  libgcrypt-1.2.2-r1.ebuild files/digest-libgcrypt-1.2.2-r1
+  libgcrypt-1.2.2.ebuild files/digest-libgcrypt-1.2.2 +files/libgcrypt-1.2.1-info-entry-fix.patch:
+  Added small patch to fix info file so that its subsequent index entry works.
 
 *libgcrypt-1.2.2-r1 (08 Nov 2005)
 
