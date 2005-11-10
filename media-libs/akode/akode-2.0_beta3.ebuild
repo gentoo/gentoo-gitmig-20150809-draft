@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0_beta3.ebuild,v 1.1 2005/10/24 15:33:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0_beta3.ebuild,v 1.2 2005/11/10 17:07:15 greg_g Exp $
 
-MY_P=${P/_beta/b}
-S=${WORKDIR}/${MY_P}
+MY_P="${P/_beta/b}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A simple framework to decode the most common audio formats."
 HOMEPAGE="http://www.carewolf.com/"
-SRC_URI="http://www.carewolf.com/akode/${MY_P}.tar.gz"
+SRC_URI="http://www.kde-look.org/content/files/30375-${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc akode/AUTHORS akode/ChangeLog akode/NEWS akode/README
 }
