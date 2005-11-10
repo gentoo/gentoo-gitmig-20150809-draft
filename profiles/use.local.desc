@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1546 2005/11/10 04:27:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1547 2005/11/10 05:39:07 tester Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -662,7 +662,8 @@ media-video/mpeg4ip:lame - Support LAME mp3 encoding in the server/mp4live
 media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
 media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
 media-video/mpeg4ip:player - Build the player
-media-video/mpeg4ip:v4l2 - Enable video4linux2 support
+media-video/mpeg4ip:v4l2 - Enable video4linux2 support for mp4live
+media-video/mpeg4ip:x264 - Enable x264 codec for mp4live (using x264-svn)
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
