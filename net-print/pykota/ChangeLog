@@ -1,6 +1,11 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.9 2005/11/10 13:56:38 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.10 2005/11/10 15:50:43 satya Exp $
+
+  10 Nov 2005; Christian Andreetta <satya@gentoo.org>
+  pykota-1.23_p1869.ebuild, pykota-1.23_p1869-r1.ebuild,
+  pykota-1.23_p1874.ebuild:
+  pysnmp version must be equal to 3.4.x
 
 *pykota-1.23_p1874 (10 Nov 2005)
 
