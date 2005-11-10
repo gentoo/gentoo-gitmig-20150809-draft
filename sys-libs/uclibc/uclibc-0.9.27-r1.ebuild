@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.9 2005/09/05 07:35:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.10 2005/11/10 04:21:46 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -25,7 +25,7 @@ fi
 
 MY_P=${P/ucl/uCl}
 SVN_VER="20050114"
-PATCH_VER="1.4"
+PATCH_VER="1.5"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -74,6 +74,7 @@ alt_rprefix() {
 }
 
 pkg_setup() {
+	[[ -n ${UCLIBC_AND_GLIBC} ]] && return 0
 	if ! built_with_use ${CATEGORY}/uclibc nls && use nls && ! use pregen ; then
 		eerror "You previously built uclibc with USE=-nls."
 		eerror "You cannot generate locale data with this"
