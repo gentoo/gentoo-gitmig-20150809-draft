@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.11 2005/10/01 07:45:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.12 2005/11/10 16:35:01 ranger Exp $
+
+  10 Nov 2005; Brent Baude <ranger@gentoo.org> tftp-hpa-0.40.1.ebuild:
+  Marking tftp-hpa-0.40.1 ~ppc64 for bug 112068
 
 *tftp-hpa-0.40.1 (01 Oct 2005)
 
