@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.24 2005/09/13 17:02:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.25 2005/11/10 18:15:19 vanquirius Exp $
+
+  10 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> jhead-2.2.ebuild,
+  jhead-2.4.ebuild:
+  Inherit toolchain-funcs to get CC for 2.2 and 2.4. Marking 2.2 x86 stable
+  for bug 110242, on Renat Lumpau's <rl03 at gentoo dot org> request.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> jhead-2.2.ebuild:
   Mark 2.2 stable on alpha
