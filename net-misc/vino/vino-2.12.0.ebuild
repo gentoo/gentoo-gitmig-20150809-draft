@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.12.0.ebuild,v 1.1 2005/09/12 00:06:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.12.0.ebuild,v 1.2 2005/11/10 20:20:56 dang Exp $
 
 inherit eutils gnome2
 
@@ -18,7 +18,11 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2.5.2
 	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
-	virtual/x11
+	|| ( (
+		x11-libs/libICE
+		x11-libs/libXtst
+		x11-libs/libSM )
+	virtual/x11 )
 	jpeg? ( media-libs/jpeg )
 	gnutls? ( >=net-libs/gnutls-1 )
 	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
