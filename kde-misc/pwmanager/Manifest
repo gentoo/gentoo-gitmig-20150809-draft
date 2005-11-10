@@ -1,6 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b810adc453553f577f375f34b436b1ff pwmanager-1.2.3.ebuild 1144
 MD5 d63d80da57cdc52d9416158a908b73e7 ChangeLog 1009
-MD5 a529e6dc05cbe26728a0da9b184199e4 pwmanager-1.2.4.ebuild 1784
+MD5 bb1c5a9d15623c3409c6462d4c2ad5ac pwmanager-1.2.4.ebuild 1777
 MD5 43c58493312a9cb9a04ff820f0f8de67 files/digest-pwmanager-1.2.3 68
 MD5 bd97a5bace12e5b222e66941c7af4dfc files/digest-pwmanager-1.2.4 141
