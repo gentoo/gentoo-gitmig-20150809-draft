@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pxp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.10 2005/03/09 00:22:40 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.11 2005/11/10 22:53:15 mattam Exp $
+
+*pxp-1.1.95 (10 Nov 2005)
+
+  10 Nov 2005; Matthieu Sozeau <mattam@gentoo.org> +pxp-1.1.96.ebuild:
+  Version bump, compatible with ocaml 3.09.
 
 *pxp-1.1.95 (09 Mar 2005)
 
