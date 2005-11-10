@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.7 2004/11/24 05:09:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.8 2005/11/10 08:44:13 s4t4n Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_install ()
 {
 	dobin wmcalc
 
-	dodoc README COPYING
+	dodoc README
 
 	newman ${FILESDIR}/wmcalc.man wmcalc.1
 
