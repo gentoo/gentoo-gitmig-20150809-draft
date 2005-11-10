@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.4 2005/04/01 19:20:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.5 2005/11/10 09:18:12 s4t4n Exp $
 
 inherit eutils
 
@@ -39,5 +39,5 @@ src_install ()
 	insinto /usr/share/wmifs
 	doins sample.wmifsrc
 	cd ..
-	dodoc BUGS  CHANGES  COPYING  HINTS  INSTALL  README  TODO
+	dodoc BUGS  CHANGES  HINTS  README  TODO
 }
