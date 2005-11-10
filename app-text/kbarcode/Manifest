@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e1beaaf96426a98abeac9458f024aaad kbarcode-1.8.1.ebuild 529
-MD5 f14a661c688d0f5d5d7bd25046838745 kbarcode-1.9.6.ebuild 540
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 0e4079f1d69b20bcb9b9bac18d51bdd5 ChangeLog 4470
-MD5 9b77ca43e8aa87e2dbbff2970e042233 files/digest-kbarcode-1.8.1 66
+MD5 f14a661c688d0f5d5d7bd25046838745 kbarcode-1.9.6.ebuild 540
+MD5 e1beaaf96426a98abeac9458f024aaad kbarcode-1.8.1.ebuild 529
+MD5 cac0db3ac9a9eacdd01d469e512dfdb3 ChangeLog 4600
+MD5 fb45fcf475d14a2b3231f011fd9f1b52 kbarcode-1.9.7.ebuild 544
 MD5 8c0eef2472f08f66b475614995e25939 files/digest-kbarcode-1.9.6 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKzwRLLFUmVNQ7rkRAgo3AJ4lPeferrmqTpCVyaSVpIQZU99TFwCgnlLs
-YKQH0vJmTqmKZ7t+PB9/Y9c=
-=62ma
------END PGP SIGNATURE-----
+MD5 7b78cefb8232be9cd04cfddd78b47f86 files/digest-kbarcode-1.9.7 67
+MD5 9b77ca43e8aa87e2dbbff2970e042233 files/digest-kbarcode-1.8.1 66
