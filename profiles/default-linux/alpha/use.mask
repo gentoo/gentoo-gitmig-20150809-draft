@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.29 2005/11/04 23:48:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.30 2005/11/10 18:48:06 kloeri Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -15,10 +15,6 @@ svga
 # These are debatable, since technically an alpha could support this hardware
 pcmcia
 3dfx
-
-# The rest should work in theory. Feel free to test and remove.
-# doesn't compile
-alsa
 
 # avifile is broken atm
 avi
