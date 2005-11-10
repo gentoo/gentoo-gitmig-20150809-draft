@@ -1,4 +1,6 @@
 MD5 01ba4a24c895931d11a8e08565712090 metadata.xml 175
+MD5 fce97dc70d24c44480ff169f0af76831 ksubtile-1.2.ebuild 492
 MD5 32dbb91a92c13545d36e23531e188939 ksubtile-1.1.ebuild 491
-MD5 cffdcc3ab01dccc36853c27a4a9c07c2 ChangeLog 742
+MD5 dcd58c2b567ba08f888fd15383f2a604 ChangeLog 859
+MD5 89d7d5b6df696b39f4572488c8e2ce7f files/digest-ksubtile-1.2 64
 MD5 adb768142f4f9e60195bdab2a3c1e581 files/digest-ksubtile-1.1 67
