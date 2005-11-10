@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/vis5d+/vis5d+-1.2.1.ebuild,v 1.1 2004/12/29 02:00:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/vis5d+/vis5d+-1.2.1.ebuild,v 1.2 2005/11/10 19:00:48 metalgod Exp $
+
+inherit eutils
 
 DESCRIPTION="3dimensional weather modeling software"
 HOMEPAGE="http://vis5d.sourceforge.net"
@@ -17,6 +19,7 @@ src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--without-mixkit \
 		--enable-threads || die "./configure failed"
 
