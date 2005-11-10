@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4668 2005/11/09 22:48:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4669 2005/11/10 15:32:14 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -257,7 +257,7 @@ sci-chemistry/namd
 
 # Olivier Fisette <ribosome@gentoo.org> (04 Oct 2005)
 # New package; requires testing.
-sci-libs/charm
+sys-cluster/charm
 
 # Diego Pettenò <flameeyes@gentoo.org> (02 Oct 2005)
 # This is a test version, unmask only after asking.
