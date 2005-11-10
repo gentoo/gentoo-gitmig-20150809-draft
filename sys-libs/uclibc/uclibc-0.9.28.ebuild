@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.5 2005/11/09 18:50:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.6 2005/11/10 04:24:45 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -21,20 +21,24 @@ fi
 
 MY_P=${P/ucl/uCl}
 SVN_VER=""
-PATCH_VER=""
+PATCH_VER="1.0"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
 	nls? ( !userlocales? ( pregen? (
 		x86? ( http://www.uclibc.org/downloads/uClibc-locale-030818.tgz )
 	) ) )"
+[[ -z ${SVN_VER} ]] || \
+	SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-svn-update-${SVN_VER}.patch.bz2"
+[[ -z ${PATCH_VER} ]] || \
+	SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="-* sh" #~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
-IUSE="build debug hardened ipv6 minimal nls pregen userlocales wordexp"
+KEYWORDS="-* ~arm ~m68k ~mips ~ppc sh ~sparc ~x86"
+IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen userlocales wordexp"
 RESTRICT="nostrip"
 
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -72,7 +76,8 @@ alt_rprefix() {
 }
 
 pkg_setup() {
-	[[ -z $(best_version ${CATEGORY}/uclibc) ]] && return 0
+	has_version ${CATEGORY}/uclibc || return 0
+	[[ -n ${UCLIBC_AND_GLIBC} ]] && return 0
 
 	if ! built_with_use ${CATEGORY}/uclibc nls && use nls && ! use pregen ; then
 		eerror "You previously built uclibc with USE=-nls."
@@ -158,7 +163,8 @@ src_unpack() {
 		EPATCH_SUFFIX="patch"
 		epatch "${WORKDIR}"/patch
 		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
-		use build || epatch "${WORKDIR}"/patch/math
+		cp "${WORKDIR}"/patch/math/libm/* "${S}"/libm/ || die
+		epatch "${WORKDIR}"/patch/math
 	fi
 
 	########## CPU SELECTION ##########
@@ -171,6 +177,7 @@ src_unpack() {
 		mips)  target="mips";    config_target="MIPS_ISA_1";;
 		ppc)   target="powerpc"; config_target="no cpu-specific options";;
 		sh)    target="sh";      config_target="SH4";;
+		sparc) target="sparc";   config_target="no cpu-specific options";;
 		x86)   target="i386";    config_target="GENERIC_386";;
 		*)     die "$(tc-arch) lists no defaults :/";;
 	esac
@@ -183,12 +190,14 @@ src_unpack() {
 
 	make defconfig >/dev/null || die "could not config"
 
-	for def in UCLIBC_PROFILING DO{DEBUG,ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
+	for def in DO{DEBUG{,_PT},ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
 		sed -i -e "s:${def}=y:# ${def} is not set:" .config
 	done
 	if use debug ; then
+		#echo "SUPPORT_LD_DEBUG_EARLY=y" >> .config
 		echo "SUPPORT_LD_DEBUG=y" >> .config
 		echo "DODEBUG=y" >> .config
+		#echo "DODEBUG_PT=y" >> .config
 	fi
 
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
@@ -199,19 +208,26 @@ src_unpack() {
 		echo 'HAS_FPU=n' >> .config
 	fi
 
-	for def in DL_FINI_CRT_COMPAT DO_C99_MATH MALLOC_GLIBC_COMPAT UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
+	local moredefs=""
+	use uclibc-compat && moredefs="DL_FINI_CRT_COMPAT MALLOC_GLIBC_COMPAT"
+	for def in DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
 		sed -i -e "s:# ${def} is not set:${def}=y:" .config
 	done
 	echo "UCLIBC_HAS_FULL_RPC=y" >> .config
 	echo "PTHREADS_DEBUG_SUPPORT=y" >> .config
 	echo "UCLIBC_HAS_TZ_FILE_READ_MANY=n" >> .config
 
-	if use nls ; then
+	if use iconv ; then
 		sed -i -e "s:# UCLIBC_HAS_LOCALE is not set:UCLIBC_HAS_LOCALE=y:" .config
 		echo "UCLIBC_HAS_XLOCALE=n" >> .config
 		echo "UCLIBC_HAS_GLIBC_DIGIT_GROUPING=y" >> .config
 		echo "UCLIBC_HAS_SCANF_LENIENT_DIGIT_GROUPING=y" >> .config
-		echo "UCLIBC_HAS_GETTEXT_AWARENESS=y" >> .config
+
+		if use nls ; then
+			echo "UCLIBC_HAS_GETTEXT_AWARENESS=y" >> .config
+		else
+			echo "UCLIBC_HAS_GETTEXT_AWARENESS=n" >> .config
+		fi
 
 		if use pregen ; then
 			echo "UCLIBC_PREGENERATED_LOCALE_DATA=y" >> .config
@@ -250,18 +266,27 @@ src_unpack() {
 		echo "PROPOLICE_BLOCK_KILL=y" >> .config
 	fi
 
-	echo "UCLIBC_BUILD_RELRO=y" >> .config
-	echo "UCLIBC_BUILD_NOEXECSTACK=y" >> .config
-	if use hardened && has $(tc-arch) ${PIE_STABLE} ; then
-		echo "UCLIBC_BUILD_PIE=y" >> .config
+	# arm/mips do not emit PT_GNU_STACK, but if we enable this here
+	# it will be emitted as RWE, ppc has to be checked, x86 needs it
+	# this option should be used independently of hardened
+	# relro could be also moved out of hardened
+	if has $(tc-arch) x86 ; then
+		echo "UCLIBC_BUILD_NOEXECSTACK=y" >> .config
 	else
-		echo "UCLIBC_BUILD_PIE=n" >> .config
+		echo "UCLIBC_BUILD_NOEXECSTACK=n" >> .config
 	fi
+	echo "UCLIBC_BUILD_RELRO=y" >> .config
 	if use hardened ; then
+		if has $(tc-arch) ${PIE_STABLE} ; then
+			echo "UCLIBC_BUILD_PIE=y" >> .config
+		else
+			echo "UCLIBC_BUILD_PIE=n" >> .config
+		fi
 		echo "SSP_QUICK_CANARY=n" >> .config
 		echo "UCLIBC_BUILD_SSP=y" >> .config
 		echo "UCLIBC_BUILD_NOW=y" >> .config
 	else
+		echo "UCLIBC_BUILD_PIE=n" >> .config
 		echo "SSP_QUICK_CANARY=y" >> .config
 		echo "UCLIBC_BUILD_SSP=n" >> .config
 		echo "UCLIBC_BUILD_NOW=n" >> .config
@@ -310,7 +335,7 @@ src_compile() {
 	cp myconfig .config
 
 	emake headers || die "make headers failed"
-	if use nls && ! use pregen ; then
+	if use iconv && ! use pregen ; then
 		cd extra/locale
 		make clean || die "make locale clean failed"
 		setup_locales
@@ -329,10 +354,6 @@ src_compile() {
 src_test() {
 	[[ ${CHOST} != ${CTARGET} ]] && return 0
 	[[ ${CBUILD} != ${CHOST} ]] && return 0
-
-	# This is wrong, but uclibc's tests fail bad when screwing 
-	# around with sandbox, so lets just punt it
-	unset LD_PRELOAD
 
 	# assert test fails on pax/grsec enabled kernels - normal
 	# vfork test fails in sandbox (both glibc/uclibc)
