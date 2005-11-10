@@ -1,7 +1,17 @@
-MD5 fc8ccc6bfb5600efd3ea8c9db8e179ab cook-2.20.ebuild 749
-MD5 46f52d85cfe8dd066e129b0e2f2d3696 cook-2.24.ebuild 852
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c49c5b0d53ba7d18a653440749c214ba ChangeLog 1443
-MD5 f5ca48222c20db748f67d924018d9ea2 metadata.xml 1152
+MD5 fc8ccc6bfb5600efd3ea8c9db8e179ab cook-2.20.ebuild 749
+MD5 98f88585115690f32aa9db07e5fd121a cook-2.24.ebuild 871
+MD5 afb193d4c33dba59d6ced46f08e96e6d files/cook-2.24-gcc4.patch 289
 MD5 4be1f5bce7cfcda18e62970a88d5e081 files/digest-cook-2.20 61
 MD5 29e53f56f421381adba874bde0ec4393 files/digest-cook-2.24 61
-MD5 afb193d4c33dba59d6ced46f08e96e6d files/cook-2.24-gcc4.patch 289
+MD5 f5ca48222c20db748f67d924018d9ea2 metadata.xml 1152
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDcuGlgIKl8Uu19MoRAjsJAJ9G7RrBA00RS12sFl2oBwCPbpXp6gCffo+x
+kbF8C2FlaLtW7yTGnl3oJAQ=
+=SWDQ
+-----END PGP SIGNATURE-----
