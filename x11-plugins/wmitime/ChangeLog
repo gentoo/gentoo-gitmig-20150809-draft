@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmitime
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.9 2004/11/24 23:07:16 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.10 2005/11/10 09:37:23 s4t4n Exp $
+
+  10 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmitime-0.3.ebuild:
+  Removed COPYING from dodoc.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmitime-0.3.ebuild:
   Added ~sparc keyword.

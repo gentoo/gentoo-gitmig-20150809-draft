@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/wmitime-0.3.ebuild,v 1.13 2004/11/24 23:07:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/wmitime-0.3.ebuild,v 1.14 2005/11/10 09:37:23 s4t4n Exp $
 
 inherit eutils
 
@@ -32,5 +32,5 @@ src_install() {
 	dobin wmitime
 
 	cd ${S}
-	dodoc BUGS CHANGES COPYING README
+	dodoc BUGS CHANGES README
 }
