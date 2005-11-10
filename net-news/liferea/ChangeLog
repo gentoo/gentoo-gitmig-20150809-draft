@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.25 2005/11/05 23:35:08 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.26 2005/11/10 00:56:47 weeve Exp $
+
+  10 Nov 2005; Jason Wever <weeve@gentoo.org> liferea-1.0_rc3.ebuild:
+  Added ~sparc keyword because it mysteriously disappeared in the version bump :(
 
   05 Nov 2005; Michael Kohl <citizen428@gentoo.org> -liferea-0.9.3.ebuild,
   -liferea-0.9.4.ebuild, -liferea-0.9.5.ebuild:
