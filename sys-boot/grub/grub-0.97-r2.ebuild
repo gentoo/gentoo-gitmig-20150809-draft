@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r1.ebuild,v 1.1 2005/11/08 02:53:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.1 2005/11/10 02:37:12 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -41,6 +41,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# patch breaks booting for some people #111885
+	rm "${WORKDIR}"/patch/400_*
 
 	if [[ -n ${PATCHVER} ]] ; then
 		EPATCH_SUFFIX="patch"
