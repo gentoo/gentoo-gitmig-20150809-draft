@@ -1,13 +1,23 @@
-MD5 b70628555b2aca552c1a1b4e397731c4 ChangeLog 2711
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7bfd62aa7556709bd5f5192594ac3230 ftpd-0.17-r2.ebuild 1523
+MD5 753fb4b95ec8ae858ff343a599376b18 ftpd-0.17-r1.ebuild 1461
+MD5 d94a40a0fbdbad7596478edbb45bcda5 ftpd-0.17-r3.ebuild 1408
+MD5 c0021a10a8437d3ebc10af54cd50f36c ChangeLog 2831
+MD5 a49ca8164b73a5b126e5d4403ec0e6ef ftpd-0.17.ebuild 1410
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17 66
+MD5 7e1217f2de231dda2c8e842a7d7dfb7b files/ftpd-0.17-shadowfix.patch 895
+MD5 c77f5bcf2f56d61c7e8845d94df88164 files/ftp.xinetd 313
+MD5 0630d5a4a420220cc8b912bdad705f6c files/ssl.diff.gz 10444
+MD5 fb54312525ec906691ee16975f1658be files/ftpd-0.17+ssl-0.3-overflowpatch.diff 532
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17-r1 66
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17-r2 66
 MD5 d6140676fe7acab811160aa574573e83 files/digest-ftpd-0.17-r3 135
-MD5 c77f5bcf2f56d61c7e8845d94df88164 files/ftp.xinetd 313
-MD5 fb54312525ec906691ee16975f1658be files/ftpd-0.17+ssl-0.3-overflowpatch.diff 532
-MD5 7e1217f2de231dda2c8e842a7d7dfb7b files/ftpd-0.17-shadowfix.patch 895
-MD5 0630d5a4a420220cc8b912bdad705f6c files/ssl.diff.gz 10444
-MD5 753fb4b95ec8ae858ff343a599376b18 ftpd-0.17-r1.ebuild 1461
-MD5 7bfd62aa7556709bd5f5192594ac3230 ftpd-0.17-r2.ebuild 1523
-MD5 a4e8211fd74987af7d396da8132f4ca5 ftpd-0.17-r3.ebuild 1407
-MD5 a49ca8164b73a5b126e5d4403ec0e6ef ftpd-0.17.ebuild 1410
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDc8bp3og80iZgVQgRAgcjAJsFkq9yi4uM4897KXaJdBafjYe5dQCfXw03
+FhpmVnwE07au9b1XjRKjuJU=
+=tytw
+-----END PGP SIGNATURE-----
