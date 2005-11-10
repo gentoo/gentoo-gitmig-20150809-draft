@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e42fc713d917c91a9f03484a934a228b ChangeLog 86039
+MD5 59290493e91202f9e41c00d891e103c5 ChangeLog 86154
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 MD5 67b125cec4f1f0d26ce4df706451fee6 files/2.3.1/glibc-2.3.1-fpu-cw-mips.patch 433
 MD5 1c4e567ed001f9489e11ee06c1ced0b7 files/2.3.1/glibc-2.3.1-libc_wait-compat.patch 1053
@@ -109,6 +109,7 @@ MD5 a839a12be46a8fa315fd6244a60e1886 files/digest-glibc-2.3.5-r2 516
 MD5 b91f86f93c20eea8553de49ce7db0614 files/digest-glibc-2.3.5-r3 516
 MD5 7a909f8df7cc20f37fb7553c8dcb47b4 files/digest-glibc-2.3.5.20050421 604
 MD5 e8833674518301b1dc7798d5f856aad4 files/digest-glibc-2.3.5.20050722 604
+MD5 f295e29df3aee1bba08e2a8eac7d9494 files/digest-glibc-2.3.6 515
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
@@ -135,11 +136,12 @@ MD5 238cdafc41962e84dfbdf9dc3287e576 glibc-2.3.5-r3.ebuild 39000
 MD5 1cb57f1757c26c0e0286cb0ef6c36171 glibc-2.3.5.20050421.ebuild 40152
 MD5 48b60115273ba9fa755a6ef94fe8c3b6 glibc-2.3.5.20050722.ebuild 39299
 MD5 9c15c32a0bbef91769c4fd0c0d7a66c3 glibc-2.3.5.ebuild 40143
+MD5 25d4377e56446832e528cc8e10584fa9 glibc-2.3.6.ebuild 39887
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDcriCgIKl8Uu19MoRAhaUAJ96xKgVWYWcrqvKRim6T0BqHlhIOgCeP8SY
-jAKus1rMH/fSJnHrFcjZ2L8=
-=+ne7
+iD8DBQFDc1t31ZcsMnZjRyIRAuTUAJ4ql3C1ejBjFwYzYaEQM+lgEC/L+QCfV3st
+2aFXB+s78mKBuKX6YM3uJKo=
+=FwSk
 -----END PGP SIGNATURE-----
