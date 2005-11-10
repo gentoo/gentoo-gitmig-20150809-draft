@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/colorgcc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.17 2005/06/09 11:43:40 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.18 2005/11/10 20:32:14 grobian Exp $
+
+  10 Nov 2005; Fabian Groffen <grobian@gentoo.org> colorgcc-1.3.2-r4.ebuild:
+  Marked ~ppc-macos (bug #111589)
 
   09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
   -files/colorgcc-1.3.2-gcc_config.patch, -colorgcc-1.3.2-r1.ebuild,
