@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdiskmon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdiskmon/ChangeLog,v 1.7 2004/11/24 05:29:19 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdiskmon/ChangeLog,v 1.8 2005/11/10 08:56:26 s4t4n Exp $
+
+  10 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmdiskmon-0.0.1.ebuild:
+  Removed INSTALL from dodoc.
 
   23 Nov 2004; Jason Wever <weeve@gentoo.org> wmdiskmon-0.0.1.ebuild:
   Added ~sparc keyword.

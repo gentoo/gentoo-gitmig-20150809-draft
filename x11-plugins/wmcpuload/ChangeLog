@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.18 2005/09/17 10:10:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.19 2005/11/10 08:52:59 s4t4n Exp $
+
+  10 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmcpuload-1.0.1.ebuild:
+  Removed INSTALL from dodoc.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> wmcpuload-1.0.1.ebuild:
   Mark 1.0.1 stable on alpha
