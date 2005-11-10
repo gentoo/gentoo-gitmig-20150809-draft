@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.14 2005/09/08 17:09:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.15 2005/11/10 03:57:57 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -49,13 +49,20 @@ src_unpack() {
 	ln -s "${ROOT}"/usr/include/ss/ss_err.h lib/ss/
 	ln -s "${ROOT}"/$(get_libdir)/libss.so lib/libss.so
 
+	# sanity check for Bug 105304
+	if [[ -z ${USERLAND} ]] ; then
+		eerror "You just hit Bug 105304, please post your 'emerge info' here:"
+		eerror "http://bugs.gentoo.org/105304"
+		die "Aborting to prevent screwing your system"
+	fi
+}
+
+src_compile() {
 	# Keep the package from doing silly things
 	export LDCONFIG=/bin/true
 	export CC=$(tc-getCC)
 	export STRIP=/bin/true
-}
 
-src_compile() {
 	econf \
 		--bindir=/bin \
 		--sbindir=/sbin \
