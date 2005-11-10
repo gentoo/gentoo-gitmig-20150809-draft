@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0-r2.ebuild,v 1.1 2005/10/12 16:55:20 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0-r3.ebuild,v 1.1 2005/11/10 21:37:57 fuzzyray Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/qpkg-deprecated.patch
+	epatch ${FILESDIR}/revdep-rebuild.112099.patch
 }
 
 src_install() {

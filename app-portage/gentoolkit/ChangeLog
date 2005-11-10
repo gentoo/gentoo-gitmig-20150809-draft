@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.57 2005/11/05 14:58:19 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.58 2005/11/10 21:37:57 fuzzyray Exp $
+
+*gentoolkit-0.2.0-r3 (10 Nov 2005)
+
+  10 Nov 2005; Paul Varner <fuzzyray@gentoo.org>
+  +files/revdep-rebuild.112099.patch, -gentoolkit-0.2.0-r2.ebuild,
+  +gentoolkit-0.2.0-r3.ebuild:
+  Patch revdep-rebuild to accept --library parameter for documentation
+  consistency.
 
 *gentoolkit-0.2.1_pre10 (05 Nov 2005)
 
