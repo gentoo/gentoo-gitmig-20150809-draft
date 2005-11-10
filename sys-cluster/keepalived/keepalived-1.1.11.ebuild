@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.11.ebuild,v 1.8 2005/08/23 20:29:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.11.ebuild,v 1.9 2005/11/10 20:13:02 markusle Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="add a strong & robust keepalive facility to the Linux Virtual Server project"
 HOMEPAGE="http://www.keepalived.org/"
@@ -20,7 +22,12 @@ src_compile() {
 	myconf="--prefix=/"
 
 	use debug && myconf="${myconf} --enable-debug"
-	use profile && myconf="${myconf} --enable-profile"
+
+	# disable -fomit-frame-pointer for profiling	
+	if use profile; then
+		filter-flags -fomit-frame-pointer
+		myconf="${myconf} --enable-profile"
+	fi
 
 	./configure ${myconf} || die "configure failed"
 	emake || die "make failed (myconf=${myconf})"

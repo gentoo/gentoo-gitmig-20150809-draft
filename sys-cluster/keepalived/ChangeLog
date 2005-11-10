@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.26 2005/08/23 20:29:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.27 2005/11/10 20:13:02 markusle Exp $
+
+  10 Nov 2005; Markus Dittrich <markusle@gentoo.org>
+  keepalived-1.1.11.ebuild:
+  filter -fomit-frame-pointer for USE=profile, since -pg and
+  -fomit-frame-pointer are incompatible, this closes bug 112071
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> keepalived-1.1.11.ebuild:
   stable on ia64
