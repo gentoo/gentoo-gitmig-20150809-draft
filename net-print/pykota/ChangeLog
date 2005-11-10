@@ -1,6 +1,12 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.8 2005/11/08 11:07:01 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.9 2005/11/10 13:56:38 satya Exp $
+
+*pykota-1.23_p1874 (10 Nov 2005)
+
+  10 Nov 2005; Christian Andreetta <satya@gentoo.org>
+  +pykota-1.23_p1874.ebuild:
+  version bump: v1.23HotFix1 (job lost on some types of printer errors)
 
 *pykota-1.23_p1869-r1 (08 Nov 2005)
 
