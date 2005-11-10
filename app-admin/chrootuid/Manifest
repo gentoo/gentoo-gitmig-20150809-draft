@@ -1,4 +1,14 @@
-MD5 6383652ae1acad372a5e6e361b7d2245 chrootuid-1.3.ebuild 794
-MD5 2e0559209747f32f35e062e1167827c8 ChangeLog 875
-MD5 ecd1755a0e459c4d1b1c1430326892ff metadata.xml 231
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec7a649cf4e75a63d88578f184394c71 ChangeLog 951
+MD5 2ea689761a220bec1d977ed4645af63d chrootuid-1.3.ebuild 788
 MD5 bff480a632a036477f25549e12058ca9 files/digest-chrootuid-1.3 62
+MD5 ecd1755a0e459c4d1b1c1430326892ff metadata.xml 231
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDc4pWomPajV0RnrERAt4nAKCEajE+3lsBDovnnhlqCDv/i/VhgwCdHvtW
+JdXYjLDceYxObSNMemyDG0Y=
+=3KYP
+-----END PGP SIGNATURE-----
