@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2e0f300a6d79db90ff84e80bb76b7de0 ChangeLog 565
 MD5 225ddbe49e396030ee5753790be83987 PEAR-Calendar-0.5.3.ebuild 409
 MD5 8e36487e9f1413cd2bfc999322216fd7 files/digest-PEAR-Calendar-0.5.3 62
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDcyDjaGfFFLhbXWkRAmmIAJ42ZSXv0H4ZtAtqY4ZzH31B7cfr5gCgliwn
+l3b8BbWQKTDovSzY7PGu7aI=
+=hGbg
+-----END PGP SIGNATURE-----
