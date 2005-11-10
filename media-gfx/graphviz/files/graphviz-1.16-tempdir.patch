@@ -5,10 +5,7 @@
              return;
      if (otype == 'printer') {
 -        name = '/tmp/dottyout.ps';
-+        if (~getenv ('TMPDIR'))
-+            name = concat (getenv ('HOME'), '/.dottyout.ps');
-+        else
-+            name = concat (getenv ('TMPDIR'), '/.dottyout.ps', random (10000));
++        name = concat (getenv ('HOME'), '/.dottyout.ps');
          if (getenv ('LEFTYWINSYS') ~= 'mswin' & ~pr)
              if (~(pr = ask ('printer command', 'string', 'lpr')))
                  return;
