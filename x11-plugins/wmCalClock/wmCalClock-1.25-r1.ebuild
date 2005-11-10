@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/wmCalClock-1.25-r1.ebuild,v 1.14 2005/09/13 10:01:22 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/wmCalClock-1.25-r1.ebuild,v 1.15 2005/11/10 08:48:03 s4t4n Exp $
 
 IUSE=""
 
@@ -37,5 +37,5 @@ src_install()
 	doman ${PN}.1
 
 	cd ..
-	dodoc BUGS CHANGES COPYING HINTS INSTALL README TODO
+	dodoc BUGS CHANGES HINTS README TODO
 }
