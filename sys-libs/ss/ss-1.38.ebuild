@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.15 2005/09/25 22:16:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.16 2005/11/10 21:26:46 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,12 +24,13 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.38-locale.patch
 	epatch "${FILESDIR}"/${PN}-1.37-makefile.patch
-	export LDCONFIG=/bin/true
-	export CC=$(tc-getCC)
-	export STRIP=/bin/true
 }
 
 src_compile() {
+	export LDCONFIG=/bin/true
+	export CC=$(tc-getCC)
+	export STRIP=/bin/true
+
 	local libtype
 	case ${USERLAND} in
 		Darwin) libtype=bsd;;
@@ -49,6 +50,10 @@ src_test() {
 }
 
 src_install() {
+	export LDCONFIG=/bin/true
+	export CC=$(tc-getCC)
+	export STRIP=/bin/true
+
 	dodir /usr/share/man/man1
 	make -C lib/ss DESTDIR="${D}" install || die
 

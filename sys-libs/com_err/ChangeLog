@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/com_err
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.20 2005/09/08 17:02:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.21 2005/11/10 21:22:09 flameeyes Exp $
+
+  10 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> com_err-1.38.ebuild:
+  Move exporting of vars in src_compile() and src_install() to work around
+  portage env bug, similar to sys-fs/e2fsprogs-1.38.
 
   08 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> com_err-1.38.ebuild:
   Stable on mips.

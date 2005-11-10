@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.38.ebuild,v 1.15 2005/10/13 13:02:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.38.ebuild,v 1.16 2005/11/10 21:22:09 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,12 +22,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.37-makefile.patch
-	export LDCONFIG=/bin/true
-	export CC=$(tc-getCC)
-	export STRIP=/bin/true
 }
 
 src_compile() {
+	export LDCONFIG=/bin/true
+	export CC=$(tc-getCC)
+	export STRIP=/bin/true
+
 	local libtype
 	case ${USERLAND} in
 		Darwin) libtype=bsd;;
@@ -47,6 +48,10 @@ src_test() {
 }
 
 src_install() {
+	export LDCONFIG=/bin/true
+	export CC=$(tc-getCC)
+	export STRIP=/bin/true
+
 	make -C lib/et DESTDIR="${D}" install || die
 	dosed '/^ET_DIR=/s:=.*:=/usr/share/et:' /usr/bin/compile_et
 	dosym et/com_err.h /usr/include/com_err.h
