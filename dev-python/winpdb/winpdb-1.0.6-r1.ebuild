@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.0.6.ebuild,v 1.1 2005/11/01 04:20:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.0.6-r1.ebuild,v 1.1 2005/11/10 18:53:51 pythonhead Exp $
 
 inherit distutils
 
@@ -19,7 +19,9 @@ DEPEND=">=dev-python/pycrypto-2.0.1
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die "Failed to cd to ${S}"
-	echo "#!/usr/bin/python" > _winpdb.py
-	echo "import winpdb" >> _winpdb.py
-	echo "winpdb.main()" >> _winpdb.py
+	#Fix DOS line-endings:
+	mv _winpdb.py tmpwinpdb.py
+	mv _rpdb2.py tmprpdb2.py
+	tr -d '\015' < tmpwinpdb.py > _winpdb.py
+	tr -d '\015' < tmprpdb2.py > _rpdb2.py
 }

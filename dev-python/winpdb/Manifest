@@ -1,4 +1,14 @@
-MD5 a26e28080a060a1db35c15fa5d841be0 winpdb-1.0.6.ebuild 772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-MD5 3ccf4716582e78663ae9116100583c01 ChangeLog 479
-MD5 6f419399c8c146e18c5a9e3bd4d142ed files/digest-winpdb-1.0.6 63
+MD5 2ee08dd77e6c01de7a24ed78cffea851 ChangeLog 685
+MD5 a168888d0727fb340b8a8c926f02d403 winpdb-1.0.6-r1.ebuild 824
+MD5 6f419399c8c146e18c5a9e3bd4d142ed files/digest-winpdb-1.0.6-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDcybOTry2jroju7wRApfcAJ9yUdwXqUYj6Prf+jZuRKeRkr1WAgCffdxK
+ZD/6lDAax5UtGfIi74frPsc=
+=1GrP
+-----END PGP SIGNATURE-----
