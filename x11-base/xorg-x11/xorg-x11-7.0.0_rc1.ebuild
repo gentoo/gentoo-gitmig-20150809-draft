@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.8 2005/11/09 15:04:16 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.9 2005/11/10 01:10:37 joshuabaergen Exp $
+
+inherit eutils
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta
 package)"
