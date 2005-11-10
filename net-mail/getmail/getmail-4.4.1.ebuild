@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.3.12.ebuild,v 1.1 2005/10/14 06:06:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.4.1.ebuild,v 1.1 2005/11/10 23:25:46 ticho Exp $
 
 inherit distutils
 
@@ -14,14 +14,6 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-lang/python-2.3.3"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	if has_version "=dev-lang/python-2.4*" ; then
-		sed -i -e "s:strict=False::" getmailcore/message.py
-	fi
-}
 
 src_compile() {
 	distutils_src_compile
