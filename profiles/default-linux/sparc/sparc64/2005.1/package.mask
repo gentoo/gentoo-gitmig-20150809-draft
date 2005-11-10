@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.1/package.mask,v 1.4 2005/11/08 17:02:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.1/package.mask,v 1.5 2005/11/10 18:01:29 gustavoz Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
@@ -52,6 +52,7 @@ media-sound/qmidiarp
 media-sound/rosegarden
 media-sound/seq24
 media-sound/sfc
+media-sound/specimen
 media-sound/supercollider
 media-sound/tapiir
 media-video/gephe
