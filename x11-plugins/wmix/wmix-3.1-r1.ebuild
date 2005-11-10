@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r1.ebuild,v 1.1 2004/07/19 09:22:11 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r1.ebuild,v 1.2 2005/11/10 09:39:32 s4t4n Exp $
 
 inherit eutils
 
@@ -38,5 +38,5 @@ src_install ()
 	# Original manpage does not work, we provide a fixed (and updated) one
 	doman ${FILESDIR}/wmix.1
 
-	dodoc README COPYING INSTALL NEWS BUGS AUTHORS sample.wmixrc
+	dodoc README NEWS BUGS AUTHORS sample.wmixrc
 }
