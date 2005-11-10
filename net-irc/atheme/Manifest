@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 27f27a86c9e22c058dcfb942c36cfc3c atheme-0.2.2.ebuild 1431
+MD5 670bd500d34608227819c18a9092e610 atheme-0.2.2.ebuild 1443
+MD5 5c4924ed1f8ebb6ff0ecafb78eaf5e7f ChangeLog 531
 MD5 768955ffa40609049cdfead22879443d metadata.xml 261
-MD5 17d480d0ce2b8b1ae63007eecc03a8d8 ChangeLog 419
 MD5 d9426639feac91a74b80c4f246c53f31 files/digest-atheme-0.2.2 61
-MD5 919862d853f6089d8ff610e008bf776b files/makefile-DESTDIR-support.patch 4632
 MD5 fe5c707d98c7536cfde95e9fcbe5117e files/make-postgresql-support-optional.patch 3008
+MD5 919862d853f6089d8ff610e008bf776b files/makefile-DESTDIR-support.patch 4632
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGp21jUHll2nfF60RAmGFAJ4iDQXvNVTO2qdo5eO/GJvO8Hel+wCfT/sK
-1Nz5buXwsWu3hUFCjF4Gtes=
-=/cvu
+iD8DBQFDc48zKRy60XGEcJIRAqqCAJ9EIEOnfnvSHbDlgpMzexle5WMJVACfYZQA
+lhDE3hXAV1Yu2LIwZNaN3nE=
+=h28a
 -----END PGP SIGNATURE-----

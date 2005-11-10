@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/atheme
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.1 2005/09/04 06:08:56 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.2 2005/11/10 18:19:09 gustavoz Exp $
+
+  10 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> atheme-0.2.2.ebuild:
+  Keyworded ~sparc wrt #111971
 
 *atheme-0.2.2 (04 Sep 2005)
 
