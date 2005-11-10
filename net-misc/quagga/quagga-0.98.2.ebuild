@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.10 2005/10/14 05:19:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.11 2005/11/10 05:19:51 mrness Exp $
 
 inherit eutils
 
@@ -19,7 +19,9 @@ RDEPEND="sys-apps/iproute2
 	pam? ( sys-libs/pam )"
 DEPEND="${RDEPEND}
 	virtual/libc
-	sys-devel/binutils"
+	sys-devel/binutils
+	sys-devel/autoconf-wrapper
+	sys-devel/libtool"
 
 # TCP MD5 for BGP patch for Linux (RFC 2385) 
 MD5_PATCH="ht-20050110-0.98.0-bgp-md5.patch"

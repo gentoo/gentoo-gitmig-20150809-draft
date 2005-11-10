@@ -2,7 +2,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.22 2005/10/18 03:58:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.23 2005/11/10 05:19:51 mrness Exp $
+
+*quagga-0.98.5 (10 Nov 2005)
+
+  10 Nov 2005; Alin Nastac <mrness@gentoo.org> quagga-0.98.2.ebuild,
+  quagga-0.98.4.ebuild, +quagga-0.98.5.ebuild:
+  Add autoconf-wrapper and libtool to DEPEND. Version bump.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> quagga-0.98.4.ebuild:
   Mark 0.98.4 stable on alpha
