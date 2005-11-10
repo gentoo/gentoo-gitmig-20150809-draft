@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-1.ebuild,v 1.4 2005/08/27 21:14:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-1.ebuild,v 1.5 2005/11/10 03:05:29 vapier Exp $
 
 DESCRIPTION="Meta package for all fortune-mod packages, with exception of fortune-mod packages for specific non-english languages"
 
@@ -13,7 +13,7 @@ IUSE=""
 RDEPEND="games-misc/fortune-mod
 	games-misc/fortune-mod-bofh-excuses
 	games-misc/fortune-mod-calvin
-	games-misc/fortune-mod-debilneho
+	linguas_sk? ( games-misc/fortune-mod-debilneho )
 	games-misc/fortune-mod-dubya
 	games-misc/fortune-mod-dune
 	games-misc/fortune-mod-familyguy
