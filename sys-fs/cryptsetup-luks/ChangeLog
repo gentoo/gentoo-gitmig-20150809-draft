@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.12 2005/10/18 19:21:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.13 2005/11/10 18:22:01 gustavoz Exp $
+
+  10 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  cryptsetup-luks-1.0.1.ebuild:
+  Stable on sparc wrt #109039
 
   18 Oct 2005; Brent Baude <ranger@gentoo.org> cryptsetup-luks-1.0.1.ebuild:
   Marking cryptsetup-luks-1.0.1 ~ppc64 as dep to pmount
