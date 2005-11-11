@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.151 2005/11/02 00:01:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.152 2005/11/11 02:33:50 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -375,7 +375,7 @@ compile_headers() {
 	if kernel_is 2 4; then
 		yes "" | make oldconfig ${xmakeopts}
 		echo ">>> make oldconfig complete"
-		use sparc && make dep ${xmakeopts}
+		make dep ${xmakeopts}
 	elif kernel_is 2 6; then
 		# autoconf.h isnt generated unless it already exists. plus, we have
 		# no guarantee that any headers are installed on the system...
