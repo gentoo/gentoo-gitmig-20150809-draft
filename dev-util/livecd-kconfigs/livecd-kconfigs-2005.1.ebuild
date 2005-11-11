@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/livecd-kconfigs-2005.0.ebuild,v 1.5 2005/11/11 17:05:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/livecd-kconfigs-2005.1.ebuild,v 1.1 2005/11/11 17:05:39 wolf31o2 Exp $
 
 DESCRIPTION="Gentoo Linux official release spec files"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
