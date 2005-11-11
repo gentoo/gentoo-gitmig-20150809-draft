@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dec74b4142db1023038830085713b183 ChangeLog 676
-MD5 e2c5e67d1238ff794d34d9fec8172a98 files/13_mod_bwshare.conf 458
+MD5 5c9bbafd99d6a22a01de3756f127e698 ChangeLog 884
+MD5 69a67307004294debe4be69562c2ce5f files/13_mod_bwshare.conf 421
 MD5 248f368d7a7cdfea8b13522fd0e80463 files/digest-mod_bwshare-0.1.3 61
+MD5 d3e83737f74dd2ea48c0cfd6896f46cc files/digest-mod_bwshare-0.1.6 61
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 69fc749aae013a5fe415470286dad381 mod_bwshare-0.1.3.ebuild 628
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSXVSKf2g/qXtneoRAkB8AJ4y05PkszH6BFx6FgofUIaaWtUpVgCeMtT5
-7BGx+UA3n5sIuqgdZCC/Q4M=
-=pYKS
------END PGP SIGNATURE-----
+MD5 dda74b2a7a1a903d8b9dd50a349dca78 mod_bwshare-0.1.6.ebuild 694
