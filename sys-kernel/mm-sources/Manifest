@@ -1,9 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb6c1d878d3ccf5bbbaae355fc716d20 ChangeLog 44388
+MD5 d8e41d638bc5c2024a15eb6e85f8b476 ChangeLog 44509
 MD5 e45b7ee0ecff0d5ab786e001098123db files/digest-mm-sources-2.6.13-r1 127
 MD5 0be73573833fd6a1132c609c4696c058 files/digest-mm-sources-2.6.14-r1 127
+MD5 7561fd9febd6edbdd3e5156bc2d3a4f0 files/digest-mm-sources-2.6.14-r2 127
 MD5 617adc5b2ce0c6337a9ac64eb7ef82c6 files/digest-mm-sources-2.6.14_rc1-r1 197
 MD5 bbf5c5f28dfc0c43b61c189253917480 files/digest-mm-sources-2.6.14_rc2-r2 197
 MD5 494f35da34125c339c874bc28ce8ff20 files/digest-mm-sources-2.6.14_rc4-r1 197
@@ -11,6 +12,7 @@ MD5 0af6285be7a5a6b7ac6514fc964b5243 files/digest-mm-sources-2.6.14_rc5-r1 197
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 MD5 33e2b0b6ec343c0437c58f3294776111 mm-sources-2.6.13-r1.ebuild 1008
 MD5 edd016d37466fa62105411e3a4a495e6 mm-sources-2.6.14-r1.ebuild 1009
+MD5 228390ef436fa7e9adf63097aa342929 mm-sources-2.6.14-r2.ebuild 1009
 MD5 fe5c91b4d80e7ccd2141a1aa01630e91 mm-sources-2.6.14_rc1-r1.ebuild 1013
 MD5 9420489ebd975f8333d41b69ee1e8c84 mm-sources-2.6.14_rc2-r2.ebuild 1013
 MD5 ad2c5ba9b5f6a2fbb127ebdced20ab13 mm-sources-2.6.14_rc4-r1.ebuild 1013
@@ -18,7 +20,7 @@ MD5 c29dcc4e501333c3bddef60c5155e334 mm-sources-2.6.14_rc5-r1.ebuild 1013
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDb9iwp5vW4rUFj5oRAmpmAJ9QEdu8eojQUHJ4VlA4O23fxqNjBACeP3TA
-LEG8f4/kg7e2qrHbwzDBIT8=
-=gF43
+iD8DBQFDdPEhp5vW4rUFj5oRApGLAJwJZkWjkyghwX5dKqBm4+/cXxlzWQCgtCSj
+wYiMGbq2yzQYX1QwHOeANWE=
+=W+n8
 -----END PGP SIGNATURE-----
