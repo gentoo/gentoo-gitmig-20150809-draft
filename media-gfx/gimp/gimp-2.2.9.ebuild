@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.9.ebuild,v 1.2 2005/11/01 11:43:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.9.ebuild,v 1.3 2005/11/11 13:07:37 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -77,7 +77,9 @@ src_compile() {
 	# only use mmx if hardened is not set
 	local USE_MMX=
 
-	replace-flags "-march=k6*" "-march=i586"
+	# remove this for now, since I have 3 reports that this is
+	# not necessary
+	# replace-flags "-march=k6*" "-march=i586"
 
 	# gimp uses inline functions (plug-ins/common/grid.c) (#23078)
 	# gimp uses floating point math, needs accuracy (#98685)

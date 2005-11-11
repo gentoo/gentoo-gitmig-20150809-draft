@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.134 2005/11/01 11:43:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.135 2005/11/11 13:07:37 allanonjl Exp $
+
+  11 Nov 2005; John N. Laliberte <allanonjl@gentoo.org> gimp-2.2.9.ebuild:
+  remove -march=k6 filtering, #105036
 
   01 Nov 2005; Martin Schlemmer <azarah@gentoo.org> gimp-2.2.9.ebuild:
   Fix icon png being removed on upgrade.
