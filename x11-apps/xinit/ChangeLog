@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.23 2005/11/02 10:55:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.24 2005/11/11 19:38:36 joshuabaergen Exp $
+
+*xinit-0.99.3 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/gentoo-startx-customization-0.99.3.patch, +xinit-0.99.3.ebuild:
+  Bump for 7.0RC2.  Also add regenerated startx customization patch, which was
+  probably around longer than I've been using Linux.
 
   02 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> xinit-0.99.2-r1.ebuild:
   If you use dopamd, inherit pam eclass.

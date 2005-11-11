@@ -1,10 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ecf17f5831cd61c98916f617307143d ChangeLog 3887
+MD5 8ec14e4616d8c6139e0aafa216bd4a42 ChangeLog 4183
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/Xsession 2187
 MD5 2b07bc84cc3afab6b4de90b9e9c597c3 files/chooser.sh 1566
 MD5 25ca8e4cacf6c712886ea0e8a69a05fe files/digest-xinit-0.99.2-r1 64
+MD5 30803bb817492ff1c760da0c48d4b144 files/digest-xinit-0.99.3 64
+MD5 8eeb098734b1dde61e349ed74f7e8b28 files/gentoo-startx-customization-0.99.3.patch 3987
 MD5 c6b1ec1d810ca971703b0cc7291d3e7c files/gentoo-startx-customization.patch 3931
 MD5 8d14d094be7182b9870a0727a5d8e87b files/nolisten-tcp-and-black-background.patch 381
 MD5 965333ca03efda8a7302620a63c429f6 files/startDM.sh 922
@@ -13,10 +12,4 @@ MD5 49f1bd860cfa5fc4adb6023d8a1bb4f8 files/xinitrc 900
 MD5 708a3daf8950bbfe3aa231efb7533cb0 files/xserver.pamd 125
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 ffc35e70872b2bcf32d0338bfefd2fd3 xinit-0.99.2-r1.ebuild 1144
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDaJs+j5H05b2HAEkRAlTqAJ9ivMANBD1mxzxII1+hDc/IpMYADQCbBoTi
-MMCa0849IbZ5ZZ7CU4IaLDw=
-=F/Ci
------END PGP SIGNATURE-----
+MD5 bc5712924900c54f22f63aca90231cc9 xinit-0.99.3.ebuild 1152
