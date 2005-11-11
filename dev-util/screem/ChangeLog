@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/screem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.9 2005/09/15 21:04:19 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.10 2005/11/11 14:30:12 allanonjl Exp $
+
+*screem-0.16.0 (11 Nov 2005)
+
+  11 Nov 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +screem-0.16.0.ebuild:
+  version bump. remove scrollkeeper hack, move G2CONF into pkg_setup, add
+  spell useflag to enable enchant spellchecking, cleanup ebuild. fixes #111798
 
   15 Sep 2005; John N. Laliberte <allanonjl@gentoo.org>
   screem-0.14.1.ebuild, screem-0.14.3.ebuild:
