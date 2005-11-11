@@ -1,6 +1,18 @@
-MD5 93e37ab833ab4a1b0dc745067663c1e2 rawdog-1.12.ebuild 648
-MD5 3f7721a5556bc687940f835383cd74c6 metadata.xml 588
-MD5 1abd83d27f504053c5df6c0ef5d2fbe9 ChangeLog 948
-MD5 738e5f0fdd6a4dfee81b90e79115a9ea rawdog-2.4.ebuild 1032
-MD5 59c85b3786abf66f3af1c802ec542899 files/digest-rawdog-2.4 61
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5551435982a3cfb5d0f7d4ccede42c49 ChangeLog 1085
 MD5 32e49b8b285e3dff8489cd95a9020220 files/digest-rawdog-1.12 62
+MD5 59c85b3786abf66f3af1c802ec542899 files/digest-rawdog-2.4 61
+MD5 b8804c3b4211d44f7533ed72899c264d files/digest-rawdog-2.6 61
+MD5 3f7721a5556bc687940f835383cd74c6 metadata.xml 588
+MD5 93e37ab833ab4a1b0dc745067663c1e2 rawdog-1.12.ebuild 648
+MD5 738e5f0fdd6a4dfee81b90e79115a9ea rawdog-2.4.ebuild 1032
+MD5 94d91f9eabc176592066e7cf3e6e5b18 rawdog-2.6.ebuild 1032
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDdE3k2jLqHNfbg2URAuHsAJ0TktDDpkIsI3tYybF1DqfrXbvXVwCfcQvA
+r1+YFKUJZqNY+0/DWRgHNe0=
+=6UK+
+-----END PGP SIGNATURE-----
