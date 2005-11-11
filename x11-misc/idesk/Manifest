@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ac05e8a275984178d6b85a1118d4e94 ChangeLog 5423
+MD5 e087c90c03053f69d0b27cb14438ba7d ChangeLog 5519
 MD5 5e31e5eb7d0cfc2bc90454a7f4354605 files/digest-idesk-0.5.6 62
 MD5 e6dbe5d03053f90f9af131a2af23a5b3 files/digest-idesk-0.7.3-r1 63
 MD5 b0f0dd588dfad60594b8bb6d34ff5248 files/digest-idesk-0.7.4 64
@@ -11,12 +8,5 @@ MD5 7391b893cc28213bef73f7f929155698 files/ideskrc.5 2329
 MD5 d6f779298131bfbc97f59b71dea6e5ce files/ideskrc05.5 7091
 MD5 f2d95dda422d93aa01721baa62137a58 idesk-0.5.6.ebuild 1171
 MD5 33334cc453618ae274a98289335f4fed idesk-0.7.3-r1.ebuild 1030
-MD5 f6019fc932766dc77eeebc292d607000 idesk-0.7.4.ebuild 1025
+MD5 39f72d62f438d3fe74d0019fa0cc33ba idesk-0.7.4.ebuild 1021
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDaNApwUpWvClEHQoRAogFAJ9N5pbtiFmc4XCW2vNdGR9hNFqiXgCfWyOm
-mp4C+KBzjM8of6ziPQ1ineY=
-=1UH5
------END PGP SIGNATURE-----
