@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1550 2005/11/11 19:19:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1551 2005/11/11 20:53:42 mcummings Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -506,6 +506,8 @@ mail-filter/dspam:user-homedirs - Build with user homedir support
 mail-filter/dspam:virtual-users  - Build with virtual-users support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
+mail-filter/spamassassin:spf - Adds support for Sender Policy Framework
+mail-filter/spamassassin:tools - Enables tools for spamassassin
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
