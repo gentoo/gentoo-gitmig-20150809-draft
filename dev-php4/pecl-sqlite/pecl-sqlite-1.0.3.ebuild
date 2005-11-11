@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3.ebuild,v 1.8 2005/11/02 00:07:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3.ebuild,v 1.9 2005/11/11 02:06:41 vapier Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_INI="yes"
@@ -14,7 +14,7 @@ DESCRIPTION="PHP bindings for the SQLite database engine"
 HOMEPAGE="http://pear.php.net/SQLite"
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sparc ~x86"
 
 need_php_by_category
 
