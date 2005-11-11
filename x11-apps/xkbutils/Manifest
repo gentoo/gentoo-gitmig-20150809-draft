@@ -1,4 +1,6 @@
-MD5 5276a16bafc8163320f08be7b154cdd0 ChangeLog 563
+MD5 fe22db07d77a128fda70be1c4ca7114d ChangeLog 703
 MD5 d005ea700b22101a43beaafc75fabdbd files/digest-xkbutils-0.99.0 67
+MD5 6fcf907309fc4376e367af78f136c230 files/digest-xkbutils-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a8c757fc70ad3335234089cff09690ff xkbutils-0.99.0.ebuild 642
+MD5 139a2b706b7ff7f58e589f1bf6de2dbf xkbutils-0.99.1.ebuild 649

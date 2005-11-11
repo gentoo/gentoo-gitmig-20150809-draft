@@ -1,4 +1,6 @@
-MD5 dfaab03e87bdca7fd430488b88bd8e70 ChangeLog 355
+MD5 30d2d190c0a4c44df32a9fb86d51f445 ChangeLog 489
 MD5 4e0156c9c00a57d2c580d2dbf9ba50dd files/digest-mkcfm-0.99.1 64
+MD5 1ca5e9170a449b5ff7e0c0a28d1e1747 files/digest-mkcfm-0.99.2 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 824ca34a97821eb597109616b1b0ce6d mkcfm-0.99.1.ebuild 577
+MD5 e5149746f5a83a4db16c51ba451443c3 mkcfm-0.99.2.ebuild 581
