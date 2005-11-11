@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.81 2005/11/10 18:02:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.82 2005/11/11 09:25:53 dragonheart Exp $
+
+  11 Nov 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.2.6.ebuild,
+  gnutls-1.2.9.ebuild:
+  really only need lzo-1 dependancy - bug #112139
 
 *gnutls-1.2.9 (10 Nov 2005)
 
