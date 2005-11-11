@@ -9,8 +9,8 @@
 +	    destdir="${build.dest}" 
 +	    classpath="${class.path}" 
 +	    debug="off" 
-+	    target="1.4" 
-+	    source="1.4">
++	    target="1.2" 
++	    source="1.2">
 +    	<classpath>
 +		<pathelement path="${regexp.jar}"/>
 +	</classpath>
@@ -33,7 +33,7 @@
    <!-- Compile the examples -->
    <target name="examples" depends="compile">
 -    <javac srcdir="${examples.dir}" destdir="${build.dest}" classpath="${class.path}" />
-+    <javac srcdir="${examples.dir}" destdir="${build.dest}" classpath="${class.path}" target="1.4" source="1.4"/>
++    <javac srcdir="${examples.dir}" destdir="${build.dest}" classpath="${class.path}" target="1.2" source="1.2"/>
    </target>
  
    <!-- Creates the API documentation -->
