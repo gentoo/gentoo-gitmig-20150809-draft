@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.2.0.ebuild,v 1.2 2004/09/29 09:33:33 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.2.0.ebuild,v 1.3 2005/11/11 08:45:45 s4t4n Exp $
 
 DESCRIPTION="A dockapp to monitor LongRun on a Transmeta Crusoe processor"
 HOMEPAGE="http://www.sh.rim.or.jp/~ssato/dockapp/index.shtml"
@@ -21,5 +21,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "Installation failed"
-	dodoc README AUTHORS TODO COPYING MAKEDEV-cpuid-msr
+	dodoc README AUTHORS TODO MAKEDEV-cpuid-msr
 }
