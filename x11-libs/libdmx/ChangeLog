@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdmx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdmx/ChangeLog,v 1.7 2005/11/04 17:28:45 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdmx/ChangeLog,v 1.8 2005/11/11 23:02:24 matsuu Exp $
+
+  11 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> libdmx-0.99.1.ebuild:
+  Marked ~sh
 
   04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -libdmx-0.99.0.ebuild:

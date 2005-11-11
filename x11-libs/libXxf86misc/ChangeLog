@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXxf86misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86misc/ChangeLog,v 1.7 2005/11/04 20:08:05 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86misc/ChangeLog,v 1.8 2005/11/11 23:01:00 matsuu Exp $
+
+  11 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> libXxf86misc-0.99.1.ebuild:
+  Marked ~sh
 
   04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -libXxf86misc-0.99.0.ebuild:
