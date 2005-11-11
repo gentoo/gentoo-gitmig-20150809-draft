@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6-r1.ebuild,v 1.4 2005/11/04 23:48:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6-r1.ebuild,v 1.5 2005/11/11 00:46:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,10 +33,12 @@ src_unpack() {
 }
 
 src_compile() {
+	# don't use the internal mikmod library, use the system one if USE=mikmod
 	econf \
+		--disable-music-mod \
+		--disable-dependency-tracking \
 		$(use_enable timidity timidity-midi) \
 		$(use_enable mikmod music-libmikmod) \
-		$(use_enable mikmod music-mod) \
 		$(use_enable mp3 music-mp3) \
 		$(use_enable vorbis music-ogg) \
 		|| die
