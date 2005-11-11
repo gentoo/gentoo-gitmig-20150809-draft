@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/wmupmon-0.1.2.ebuild,v 1.6 2004/09/03 03:07:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/wmupmon-0.1.2.ebuild,v 1.7 2005/11/11 11:17:11 s4t4n Exp $
 
 DESCRIPTION="wmUpMon is a program to monitor your Uptime"
 HOMEPAGE="http://j-z-s.com/projects/index.php?project=wmupmon"
@@ -22,5 +22,5 @@ src_compile()
 src_install()
 {
 	einstall || die "make install failed"
-	dodoc AUTHORS COPYING INSTALL README THANKS ChangeLog
+	dodoc AUTHORS README THANKS ChangeLog
 }

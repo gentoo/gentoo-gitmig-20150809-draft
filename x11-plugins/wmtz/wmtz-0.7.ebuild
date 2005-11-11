@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.12 2005/05/16 07:48:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.13 2005/11/11 11:13:23 s4t4n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -36,5 +36,5 @@ src_install () {
 	dobin wmtz/wmtz
 	insinto /etc
 	doins wmtz/wmtzrc
-	dodoc BUGS CHANGES COPYING README INSTALL
+	dodoc BUGS CHANGES README
 }
