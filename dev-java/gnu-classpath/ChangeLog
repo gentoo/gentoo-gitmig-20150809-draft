@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.42 2005/10/29 11:26:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.43 2005/11/11 19:20:31 betelgeuse Exp $
+
+*gnu-classpath-0.19 (11 Nov 2005)
+
+  11 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> +files/0.19-dssi.patch,
+  +files/0.19-dssi_data.h, +gnu-classpath-0.19.ebuild:
+  Version bump. In this release the cairo use flag was added back. The new
+  alsa and dssi use flags are for different MIDI providers. Also added a debug
+  use flag. The ebuild now installs files like README and NEWS. The keywords
+  for sparc, ppc and ppc64 were dropped until they can test media-libs/dssi.
 
   28 Oct 2005; Thomas Matthijs <axxo@gentoo.org> +files/gtk28.patch,
   gnu-classpath-0.18.ebuild:
