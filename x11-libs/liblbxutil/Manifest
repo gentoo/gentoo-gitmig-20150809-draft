@@ -1,6 +1,16 @@
-MD5 dcbe209372f55bab96a2f560dee0d807 ChangeLog 959
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 655ffebd777e4401d0b75730953609df ChangeLog 1030
 MD5 cb4e63e8e439c62766a84d43a3d8700e files/digest-liblbxutil-0.99.1 70
 MD5 dff000c14be2bcbc5a9f4ee6e6087e86 files/digest-liblbxutil-0.99.2 70
-MD5 ef3734fbcc12bf5b99b04bb0f681b70a liblbxutil-0.99.1.ebuild 553
+MD5 b390287124b6379de5673dc3abb82e26 liblbxutil-0.99.1.ebuild 555
 MD5 ad28e5e38aa5997e751adf1139d4e403 liblbxutil-0.99.2.ebuild 553
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDdPO0omPajV0RnrERAhwkAJ4yUkU52Gcv7Fu6IFBl3a0AYJz97QCfQhG9
+U1lj0/dUVXG/HL1Up+/apzM=
+=KMyZ
+-----END PGP SIGNATURE-----
