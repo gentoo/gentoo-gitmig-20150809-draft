@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.ebuild,v 1.3 2005/04/19 01:05:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.ebuild,v 1.4 2005/11/11 18:51:45 halcy0n Exp $
 
 inherit distutils
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 ~amd64"
 
 IUSE="doc"
 DEPEND=">=dev-lang/python-2.1.3-r1
-	>=dev-python/elementtree-1.2"
+	>=dev-python/elementtree-1.2
+	app-arch/unzip"
 S=${WORKDIR}/${MY_P}
 
 src_install() {
