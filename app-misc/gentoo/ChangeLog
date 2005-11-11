@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.65 2005/11/02 01:34:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.66 2005/11/11 22:00:46 nelchael Exp $
+
+  12 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -gentoo-0.11.54.ebuild:
+  Removed old ebuild.
 
   02 Nov 2005; Brent Baude <ranger@gentoo.org> gentoo-0.11.55.ebuild:
   Marking gentoo-0.11.55 ppc64 for bug 111002
