@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/wmmsens-0.29.6.ebuild,v 1.3 2004/08/05 16:41:28 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/wmmsens-0.29.6.ebuild,v 1.4 2005/11/11 09:34:27 s4t4n Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dodoc Artistic CREDITS ChangeLog INSTALL README TODO
+	dodoc CREDITS ChangeLog README TODO
 
 	cd src
 	mkdir -p ${D}/usr/bin

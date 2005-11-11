@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmsens
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/ChangeLog,v 1.4 2005/06/30 07:09:28 s4t4n Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/ChangeLog,v 1.5 2005/11/11 09:34:27 s4t4n Exp $
+
+  11 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmmsens-0.29.6.ebuild:
+  removed Artistic and INSTALL from dodoc.
 
   30 Jun 2005; Michele Noberasco <s4t4n@gentoo.org> wmmsens-0.29.6.ebuild:
   Assigned to desktop-dock herd.
