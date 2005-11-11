@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.103 2005/10/28 10:06:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.104 2005/11/11 18:41:54 azarah Exp $
+
+*nvidia-glx-1.0.7676-r2 (11 Nov 2005)
+
+  11 Nov 2005; Martin Schlemmer <azarah@gentoo.org>
+  +nvidia-glx-1.0.7676-r2.ebuild:
+  Use $IMAGE in pkg_preinst() if $D not set.  Possible fix for bug #82595.
 
   28 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   nvidia-glx-1.0.7676-r1.ebuild:
