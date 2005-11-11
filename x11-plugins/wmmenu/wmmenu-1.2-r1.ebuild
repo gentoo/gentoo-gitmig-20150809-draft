@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.3 2005/09/27 13:13:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.4 2005/11/11 09:20:20 s4t4n Exp $
 
 inherit eutils
 
@@ -38,5 +38,5 @@ src_install ()
 {
 	dobin wmmenu
 	doman wmmenu.1
-	dodoc COPYING README TODO example/apps example/defaults example/extract_icon_back
+	dodoc README TODO example/apps example/defaults example/extract_icon_back
 }

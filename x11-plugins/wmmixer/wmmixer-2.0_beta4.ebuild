@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.7 2004/08/02 10:52:48 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.8 2005/11/11 09:23:17 s4t4n Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
 
 	einstall || die
-	dodoc README COPYING AUTHORS example/home.wmmixerrc example/home.wmmixer
+	dodoc README AUTHORS example/home.wmmixerrc example/home.wmmixer
 
 	einfo
 	einfo "Two sample configuration files have been installed in /usr/share/doc/${PF}/."

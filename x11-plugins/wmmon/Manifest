@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 588040ddec444867ae5d4effaf38a84b wmmon-1.0_beta2-r2.ebuild 850
-MD5 c08cad89bd54253c18e4f54f7e631c8c ChangeLog 2611
+MD5 9464741d8bf20aa784e602944ac7b673 wmmon-1.0_beta2-r2.ebuild 834
+MD5 ff7695cb13755fd27cc2151f6ea61876 ChangeLog 2759
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 25357e85158bf7084b17146ffd451bbc wmmon-1.0_beta2-r3.ebuild 857
+MD5 a6f933572e706e82b89219566fb94802 wmmon-1.0_beta2-r3.ebuild 838
 MD5 d434dabec24a1ef4e400c474adfb024c files/wmmon-1.0_beta2-kernel26-v2.patch 5675
 MD5 98b814408937f2d47b59cfedac2640e1 files/digest-wmmon-1.0_beta2-r2 62
 MD5 98b814408937f2d47b59cfedac2640e1 files/digest-wmmon-1.0_beta2-r3 62
 MD5 449f55da66d8174cae657ae52c58ebea files/wmmon-1.0_beta2-kernel26.patch 3333
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFJtbKRy60XGEcJIRAqrDAKCs72FVUxpCVu9A4Gz7s3zDYkLHywCeKNDn
-uNs4fdj8Pn3BqKXft11TUP0=
-=cGpp
------END PGP SIGNATURE-----
