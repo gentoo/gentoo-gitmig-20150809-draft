@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.7 2005/07/28 14:24:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.8 2005/11/11 14:13:10 flameeyes Exp $
+
+  11 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kftpgrabber-0.6.0-gcc4.patch, +files/kftpgrabber-0.6.0-uic.patch,
+  kftpgrabber-0.6.0.ebuild:
+  Added patches to compile using Qt 3.3.5 (stricter uic) and GCC4 (stricter
+  compiler).
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> -kftpgrabber-0.5.0.ebuild:
   Remove old build

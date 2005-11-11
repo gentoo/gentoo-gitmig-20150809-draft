@@ -1,4 +1,16 @@
-MD5 6f5f4d442878b5be833a487c912fdea2 kftpgrabber-0.6.0.ebuild 542
-MD5 16471c268055299cd411923d937d913c ChangeLog 1023
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 70d2ec6d51ac5cd293c55f85678bfde5 ChangeLog 1273
 MD5 655b1b8780d7db4a2af5b6ce1ce0cfd8 files/digest-kftpgrabber-0.6.0 71
+MD5 288e8f880999088f99c5d33c19b875f3 files/kftpgrabber-0.6.0-gcc4.patch 2222
+MD5 225f4b81821c40c533b31665a32de321 files/kftpgrabber-0.6.0-uic.patch 1049
+MD5 6063a712f85738f73e99c5e5a691b229 kftpgrabber-0.6.0.ebuild 663
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDdKcKAiZjviIA2XgRArETAKDkSKBB5CYK9LmWC2Kc5cTTa5YALwCfdRBf
+5EU4Lb5+7TvwR0VSvGUBtXc=
+=LXjJ
+-----END PGP SIGNATURE-----
