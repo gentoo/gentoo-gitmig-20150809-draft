@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmp3
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.7 2005/09/25 16:05:36 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.8 2005/11/11 09:31:14 s4t4n Exp $
+
+  11 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmmp3-0.12.ebuild:
+  Remvoed COPYING from dodoc.
 
   25 Sep 2005; Homer Parker <hparker@gentoo.org> wmmp3-0.12.ebuild:
   Marked ~amd64.

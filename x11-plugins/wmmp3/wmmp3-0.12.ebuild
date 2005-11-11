@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.7 2005/09/25 16:05:36 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.8 2005/11/11 09:31:14 s4t4n Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile()
 src_install()
 {
 	einstall || die "Installation failed"
-	dodoc AUTHORS COPYING ChangeLog sample.wmmp3 README TODO
+	dodoc AUTHORS ChangeLog sample.wmmp3 README TODO
 }
 
 pkg_postinst()
