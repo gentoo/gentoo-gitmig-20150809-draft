@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ef8bb92f263fee54228e3b7be049bfb ChangeLog 28172
+MD5 823fe5d38a9564f9c97ad95da5754a21 ChangeLog 28272
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
 MD5 f56b08a8f40b528e72b6406ea337c51c files/digest-gtk+-2.6.10 212
@@ -16,14 +13,7 @@ MD5 88f458873590e6a355d2bcb76fa859f7 files/gtk+-2.8.6-freebsd.patch 507
 MD5 36d00cf3b4035e6cb9873ade9ed1a9ce files/gtkrc 627
 MD5 afb0e5aa8f6410c088c2e177a17efe5d gtk+-1.2.10-r10.ebuild 1719
 MD5 88d6d5cc6a5a4f0e0426646667134046 gtk+-1.2.10-r11.ebuild 1831
-MD5 a036ea42a87172019dbb501f93f2bf99 gtk+-2.6.10.ebuild 2967
+MD5 fdb299cf5baed0029831b89b864f0933 gtk+-2.6.10.ebuild 2963
 MD5 5033b22f68c770cc1738680edc951abf gtk+-2.6.8.ebuild 2884
 MD5 545a7e3859a6cae85dea63a55b7ebe05 gtk+-2.8.6.ebuild 4097
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDa8ZQomPajV0RnrERAra3AJ937NkR5x1pCqop2rClrTjDw4+BrQCdH9cl
-9H+W7jdNZsS/vp6hFbuVlDE=
-=ebEd
------END PGP SIGNATURE-----
