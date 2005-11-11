@@ -1,0 +1,25 @@
+# ChangeLog for dev-php5/onphp
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.1 2005/11/11 01:09:58 voxus Exp $
+
+*onphp-0.2.2 (23 Sep 2005)
+
+  23 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> +onphp-0.2.2.ebuild:
+  Version bump.
+
+*onphp-0.2.1 (11 Sep 2005)
+
+  11 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> +onphp-0.2.1.ebuild,
+  -onphp-0.2.0-r1.ebuild:
+  Version bump.
+
+*onphp-0.2.0-r1 (04 Sep 2005)
+
+  04 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> +onphp-0.2.0-r1.ebuild,
+  -onphp-0.2.0.ebuild:
+  Fixed RDEPEND and installation dir with regard to Stuart's feedback.
+
+*onphp-0.2.0 (03 Sep 2005)
+
+  03 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> +onphp-0.2.0.ebuild:
+  Initial import.
