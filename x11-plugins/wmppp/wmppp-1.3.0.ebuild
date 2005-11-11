@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/wmppp-1.3.0.ebuild,v 1.10 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/wmppp-1.3.0.ebuild,v 1.11 2005/11/11 10:30:56 s4t4n Exp $
 
 IUSE=""
 S=${WORKDIR}/wmppp.app/wmppp
@@ -24,5 +24,5 @@ src_install () {
 	doexe getmodemspeed
 	dodoc user.wmppprc
 	cd ..
-	dodoc BUGS  CHANGES  COPYING  HINTS  INSTALL  README  TODO
+	dodoc BUGS CHANGES HINTS README TODO
 }

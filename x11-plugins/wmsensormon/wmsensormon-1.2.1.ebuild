@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2.1.ebuild,v 1.4 2005/04/07 17:17:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2.1.ebuild,v 1.5 2005/11/11 10:35:04 s4t4n Exp $
 
 IUSE=""
 S=${WORKDIR}/${P/_/-}/${PN}
@@ -27,5 +27,5 @@ src_install () {
 	#unbzip manpage - Will be updated in 1.2 release
 	doman wmsensormon.1
 	cd ..
-	dodoc CHANGELOG COPYING INSTALL README TODO
+	dodoc CHANGELOG README TODO
 }
