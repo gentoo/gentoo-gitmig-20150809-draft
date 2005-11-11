@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.9 2005/10/31 21:43:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.10 2005/11/11 19:55:14 joshuabaergen Exp $
+
+*xfs-0.99.2 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org> +xfs-0.99.2.ebuild:
+  Bump for 7.0RC2.
 
   31 Oct 2005; <dang@gentoo.org> xfs-0.99.1.ebuild:
   Marked ~amd64

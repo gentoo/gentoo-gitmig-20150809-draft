@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/ico
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ico/ChangeLog,v 1.8 2005/10/31 17:42:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ico/ChangeLog,v 1.9 2005/11/11 19:48:50 joshuabaergen Exp $
+
+*ico-0.99.3 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org> +ico-0.99.3.ebuild:
+  Bump for 7.0RC2.
 
   31 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>; -ico-0.99.0.ebuild,
   -ico-0.99.1_pre20050905.ebuild:

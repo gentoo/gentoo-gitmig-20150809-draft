@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xmh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/ChangeLog,v 1.4 2005/10/20 00:45:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/ChangeLog,v 1.5 2005/11/11 19:57:59 joshuabaergen Exp $
+
+*xmh-0.99.2 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org> +xmh-0.99.2.ebuild:
+  Bump for 7.0RC2.
 
 *xmh-0.99.1 (20 Oct 2005)
 
