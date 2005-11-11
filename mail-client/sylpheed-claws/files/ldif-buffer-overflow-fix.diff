@@ -1,0 +1,200 @@
+diff -ru sylpheed-claws-1.9.99/work/sylpheed-claws-1.9.99/src/ldif.c sylpheed-claws-1.9.100/work/sylpheed-claws-1.9.100/src/ldif.c
+--- sylpheed-claws-1.9.99/work/sylpheed-claws-1.9.99/src/ldif.c	2005-09-21 19:52:31.000000000 +0200
++++ sylpheed-claws-1.9.100/work/sylpheed-claws-1.9.100/src/ldif.c	2005-11-07 19:41:26.000000000 +0100
+@@ -306,26 +306,28 @@
+ static gchar *ldif_get_line( LdifFile *ldifFile ) {
+ 	gchar buf[ LDIFBUFSIZE ];
+ 	gint ch;
+-	gchar *ptr;
++	int i = 0;
+ 
+-	if( feof( ldifFile->file ) ) return NULL;
++	if( feof( ldifFile->file ) ) 
++		return NULL;
+ 
+-	ptr = buf;
+-	while( TRUE ) {
+-		*ptr = '\0';
++	while( i < LDIFBUFSIZE-1 ) {
+ 		ch = fgetc( ldifFile->file );
+ 		if( ch == '\0' || ch == EOF ) {
+-			if( *buf == '\0' ) return NULL;
++			if( i == 0 ) return NULL;
+ 			break;
+ 		}
+ #if HAVE_DOSISH_SYSTEM
+ #else
+-		if( ch == '\r' ) continue;
++		if( ch == '\r' ) 
++			continue;
+ #endif
+-		if( ch == '\n' ) break;
+-		*ptr = ch;
+-		ptr++;
++		if( ch == '\n' ) 
++			break;
++		buf[i] = ch;
++		i++;
+ 	}
++	buf[i] = '\0';
+ 
+ 	/* Return a copy of buffer */
+ 	return g_strdup( buf );
+@@ -483,6 +485,14 @@
+ 			fullName = g_strdup_printf( "%s", lastName );
+ 		}
+ 	}
++	
++	if (!fullName || strlen(fullName) == 0) {
++		g_free(fullName);
++		fullName = NULL;
++		if (rec->listCName)
++			fullName = g_strdup(rec->listCName->data);
++	}
++	
+ 	if( fullName ) {
+ 		g_strchug( fullName ); g_strchomp( fullName );
+ 	}
+@@ -723,7 +733,17 @@
+ 			if( lastTag ) {
+ 				/* Save record */
+ 				fullValue = mgu_list_coalesce( listValue );
+-
++				if (fullValue && last64) {
++					gchar *out = g_malloc(strlen(fullValue));
++					int len = 0;
++					if ((len = base64_decode(out, fullValue,
++							strlen(fullValue))) >= 0) {
++						g_free(fullValue);
++						fullValue = out;
++						fullValue[len] = '\0';
++					} else
++						g_free(out);
++				}
+ 				/* Base-64 encoded data */
+ 				/*
+ 				if( last64 ) {
+@@ -764,6 +784,17 @@
+ 							/* Save data */
+ 							fullValue =
+ 								mgu_list_coalesce( listValue );
++							if (fullValue && last64) {
++								gchar *out = g_malloc(strlen(fullValue));
++								int len = 0;
++								if ((len = base64_decode(out, fullValue,
++										strlen(fullValue))) >= 0) {
++									g_free(fullValue);
++									fullValue = out;
++									fullValue[len] = '\0';
++								} else
++									g_free(out);
++							}
+ 							/* Base-64 encoded data */
+ 							/*
+ 							if( last64 ) {
+@@ -908,7 +939,6 @@
+ 	/* Process file */
+ 	while( ! flagEOF ) {
+ 		gchar *line = ldif_get_line( ldifFile );
+-
+ 		posCur = ftell( ldifFile->file );
+ 		if( ldifFile->cbProgress ) {
+ 			/* Call progress indicator */
+diff -ru sylpheed-claws-1.9.99/work/sylpheed-claws-1.9.99/src/mutt.c sylpheed-claws-1.9.100/work/sylpheed-claws-1.9.100/src/mutt.c
+--- sylpheed-claws-1.9.99/work/sylpheed-claws-1.9.99/src/mutt.c	2005-09-21 19:52:32.000000000 +0200
++++ sylpheed-claws-1.9.100/work/sylpheed-claws-1.9.100/src/mutt.c	2005-11-07 11:59:11.000000000 +0100
+@@ -159,34 +159,37 @@
+ static gchar *mutt_get_line( MuttFile *muttFile, gboolean *flagCont ) {
+ 	gchar buf[ MUTTBUFSIZE ];
+ 	int ch, lch;
+-	gchar *ptr, *lptr;
++	int i = 0, li = 0;
+ 
+ 	*flagCont = FALSE;
+-	if( feof( muttFile->file ) ) return NULL;
++	if( feof( muttFile->file ) ) 
++		return NULL;
++
++	memset(buf, 0, MUTTBUFSIZE);
+ 
+-	ptr = buf;
+ 	lch = '\0';
+-	lptr = NULL;
+-	while( TRUE ) {
+-		*ptr = '\0';
++	while( i < MUTTBUFSIZE-1 ) {
+ 		ch = fgetc( muttFile->file );
+ 		if( ch == '\0' || ch == EOF ) {
+-			if( *buf == '\0' ) return NULL;
++			if( i == 0 ) 
++				return NULL;
+ 			break;
+ 		}
+ 		if( ch == '\n' ) {
+ 			if( lch == '\\' ) {
+ 				/* Replace backslash with NULL */
+-				if( lptr ) *lptr = '\0';
++				if( li != 0 ) 
++					buf[li] = '\0';
+ 				*flagCont = TRUE;
+ 			}
+ 			break;
+ 		}
+-		*ptr = ch;
+-		lptr = ptr;
++		buf[i] = ch;
++		li = i;
+ 		lch = ch;
+-		ptr++;
++		i++;
+ 	}
++	buf[i]='\0';
+ 
+ 	/* Copy into private buffer */
+ 	return g_strdup( buf );
+diff -ru sylpheed-claws-1.9.99/work/sylpheed-claws-1.9.99/src/pine.c sylpheed-claws-1.9.100/work/sylpheed-claws-1.9.100/src/pine.c
+--- sylpheed-claws-1.9.99/work/sylpheed-claws-1.9.99/src/pine.c	2005-09-21 19:52:32.000000000 +0200
++++ sylpheed-claws-1.9.100/work/sylpheed-claws-1.9.100/src/pine.c	2005-11-07 11:59:11.000000000 +0100
+@@ -163,31 +163,32 @@
+  */
+ static gchar *pine_read_line( PineFile *pineFile ) {
+ 	gchar buf[ PINEBUFSIZE ];
+-	int c;
++	int c, i = 0;
+ 	gchar ch;
+-	gchar *ptr;
+ 
+-	if( feof( pineFile->file ) ) return NULL;
++	if( feof( pineFile->file ) ) 
++		return NULL;
+ 
+-	ptr = buf;
+-	while( TRUE ) {
+-		*ptr = '\0';
++	while( i < PINEBUFSIZE-1 ) {
+ 		c = fgetc( pineFile->file );
+ 		if( c == EOF ) {
+-			if( *buf == '\0' ) return NULL;
++			if( i == 0 ) 
++				return NULL;
+ 			break;
+ 		}
+ 		ch = (gchar) c;
+ 		if( ch == '\0' ) {
+-			if( *buf == '\0' ) return NULL;
++			if( i == 0 ) 
++				return NULL;
+ 			break;
+ 		}
+ 		if( ch == '\n' ) {
+ 			break;
+ 		}
+-		*ptr = ch;
+-		ptr++;
++		buf[i] = ch;
++		i++;
+ 	}
++	buf[i] = '\0';
+ 
+ 	/* Copy into private buffer */
+ 	return g_strdup( buf );
