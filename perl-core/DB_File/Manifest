@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1c5a320caf4a141a503ceb25a81c46bb ChangeLog 5005
 MD5 fd70565e0d9cc8afeb68fd536f908510 DB_File-1.811-r1.ebuild 818
 MD5 29ec4bf3df6cd0b8c361ec5f07d2a56e DB_File-1.811.ebuild 815
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1c5a320caf4a141a503ceb25a81c46bb ChangeLog 5005
+MD5 8157620765ae818d74e949cfe9846847 DB_File-1.813.ebuild 725
 MD5 a8508928a7565d049db19d4045693201 files/DB_File-MakeMaker.patch 569
 MD5 2259e73a14e4f2c7bd63215dba073b10 files/config.in 3121
 MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811 64
 MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK/v+Kf2g/qXtneoRAmgxAJ4hp1udIiq+nTFl0vheI7ebudjz4QCffc7d
-5Qajwadl+Ri7ma9Zin0wAFs=
-=Ly8U
------END PGP SIGNATURE-----
+MD5 be1f6d276d491e58897fd1011deaae51 files/digest-DB_File-1.813 64
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
