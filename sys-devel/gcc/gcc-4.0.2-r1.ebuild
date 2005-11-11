@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r1.ebuild,v 1.7 2005/11/10 05:17:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r1.ebuild,v 1.8 2005/11/11 02:29:31 vapier Exp $
 
 PATCH_VER="1.2"
 PATCH_GCC_VER="4.0.2"
@@ -65,6 +65,9 @@ src_unpack() {
 	gcc_src_unpack
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
+
+	# Fix cross-compiling
+	epatch "${FILESDIR}"/4.0.2/gcc-4.0.2-cross-compile.patch
 }
 
 pkg_postinst() {

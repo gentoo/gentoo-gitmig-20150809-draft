@@ -1,0 +1,14 @@
+--- gcc/unwind-dw2.c
++++ gcc/unwind-dw2.c
+@@ -253,9 +253,11 @@
+ }
+ #endif
+ 
++#ifndef inhibit_libc
+ #ifdef MD_UNWIND_SUPPORT
+ #include MD_UNWIND_SUPPORT
+ #endif
++#endif
+ 
+ /* Extract any interesting information from the CIE for the translation
+    unit F belongs to.  Return a pointer to the byte after the augmentation,

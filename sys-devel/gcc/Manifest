@@ -50,6 +50,7 @@ MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 165
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
 MD5 50f1f564c568b9e28231c592d4df2f36 files/3.4.4/gcc-3.4.4-cross-compile.patch 1728
 MD5 2c355d808b490994c6566b10f3c0ba27 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
+MD5 3a634a8482dd879e171f0e5bb49a7d8d files/4.0.2/gcc-4.0.2-cross-compile.patch 321
 MD5 fed3620378df7a876d6709ddf3f7bbec files/awk/fixlafiles.awk 7865
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 MD5 4ecf0f5cb735c81ca4b61a9c6db74269 files/digest-gcc-2.95.3-r9 139
@@ -95,13 +96,13 @@ MD5 71e25d702be3dd13ee277b7383345fad gcc-3.4.3-r1.ebuild 5477
 MD5 769273e24a52732ce892d08ebeb4bbeb gcc-3.4.3.20050110-r2.ebuild 5240
 MD5 cc5f85a9c8cf186ea7e30e88aecedbcd gcc-3.4.4-r1.ebuild 5083
 MD5 f54475af196c9dc5a3648da2f5f8a9ef gcc-4.0.1.ebuild 1937
-MD5 70e44227c5b5502e4dd37db318ab94ea gcc-4.0.2-r1.ebuild 2194
+MD5 3bf5930bfa6db1252967b631a634ef5b gcc-4.0.2-r1.ebuild 2275
 MD5 31b11f040eb5b679e4c656b407e8ea9a gcc-4.1.0_beta20051105.ebuild 2044
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDctgLCRZPokWLroQRAm77AKDOwezifvZol0L29Dxaqt/Vum6w9ACgqBZK
-XDyTUS+K+N6YGSu7s/QpUa8=
-=p6mD
+iD8DBQFDdAJAgIKl8Uu19MoRAoliAJ9yZj6ZS2T0qh0iLe14fF9KloQpyACfeJtC
+fk6bwttS1Xo3I1MjeMf+lpc=
+=Ezyh
 -----END PGP SIGNATURE-----
