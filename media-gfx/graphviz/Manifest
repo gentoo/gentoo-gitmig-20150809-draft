@@ -1,4 +1,4 @@
-MD5 e8791dd6d2a2e29f407b0bc1dc607eeb ChangeLog 10229
+MD5 ef1f9d2b6835d81ec9f224d487ffd227 ChangeLog 10330
 MD5 ea7e00b7c49179d3961458a98aee9d6c files/digest-graphviz-1.10 66
 MD5 cea8244a5db85a3bc5e74e4ecd3c9a2b files/digest-graphviz-1.12 66
 MD5 54cdc52906c56a19e4e09cd0773d4633 files/digest-graphviz-1.12-r1 139
@@ -13,7 +13,7 @@ MD5 5e8726d7d859188692efcfe9e9155761 files/gdgen.c.patch 756
 MD5 6700ac8c3ea388f54326ca2a57784a1c files/graphviz-1.12-build.patch 1514
 MD5 280fc858f990639d5d8fb7102b2636ac files/graphviz-1.16-build.patch 6200
 MD5 5c7f01258da58810d0175461e0c1d14b files/graphviz-1.16-common_h.patch 292
-MD5 f254eab885ea6b61e6ae84c409de7b29 files/graphviz-1.16-tempdir.patch 735
+MD5 8fed3224525598a951c26b4d88af2899 files/graphviz-1.16-tempdir.patch 1247
 MD5 6f4c558cccabd9d79fe071b4b21fa67b files/graphviz-2.4.conf 236
 MD5 3d944d385ea2770498a6f99cd4d2db3f files/graphviz-2.6-macos.patch 519
 MD5 b208c7d4ddd47dc60e3e1b5bb78e8bfd files/graphviz-2.6-no-undefined.patch 1900
