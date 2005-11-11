@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-via
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.7 2005/11/05 03:48:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.8 2005/11/11 19:16:24 joshuabaergen Exp $
+
+*xf86-video-via-0.1.32 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-via-0.1.32.ebuild:
+  Bump for 7.0RC2.
 
   05 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xf86-video-via-0.1.31.1-r1.ebuild:
