@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.0-r1.ebuild,v 1.2 2005/10/28 00:09:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.0-r1.ebuild,v 1.3 2005/11/11 19:46:34 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/pcimodules-${P}.patch
 	epatch "${FILESDIR}"/${P}-shared-lib.patch
+	epatch "${FILESDIR}"/${PN}-2.1.11-malloc.patch
 
 	# Set Gentoo paths
 	sed -i \

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r5.ebuild,v 1.10 2005/10/28 00:09:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r5.ebuild,v 1.11 2005/11/11 19:46:34 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
 	epatch "${FILESDIR}"/${PV}-scan.patch #from fedora
 	epatch "${FILESDIR}"/${P}-bsd.patch #103241
+	epatch "${FILESDIR}"/${P}-malloc.patch
 
 	# Unconditionally use -fPIC for libs (#55238)
 	# Make sure we respect $AR / $RANLIB / $CFLAGS
