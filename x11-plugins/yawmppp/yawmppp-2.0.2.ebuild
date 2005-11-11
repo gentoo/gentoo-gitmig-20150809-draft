@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.4 2005/08/07 12:49:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.5 2005/11/11 11:41:24 s4t4n Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install () {
-	dodoc README COPYING CHANGELOG INSTALL FAQ
+	dodoc README CHANGELOG FAQ
 
 	cd src
 
