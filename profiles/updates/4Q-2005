@@ -8,3 +8,4 @@ move sys-apps/kudzu sys-libs/libkudzu
 move sys-apps/kudzu-knoppix sys-libs/libkudzu
 move sys-libs/libkudzu-knoppix sys-libs/libkudzu
 move sci-libs/charm sys-cluster/charm
+move dev-php/onphp dev-php5/onphp
