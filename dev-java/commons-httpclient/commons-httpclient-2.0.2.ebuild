@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2.ebuild,v 1.10 2005/11/02 14:24:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2.ebuild,v 1.11 2005/11/11 23:00:20 hansmi Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/httpclient/source/${P/_/-}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.3
