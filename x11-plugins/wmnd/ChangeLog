@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.35 2005/09/02 19:20:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.36 2005/11/11 10:10:08 s4t4n Exp $
+
+  11 Nov 2005; Michele Noberaco <s4t4n@gentoo.org> wmnd-0.4.11-r1.ebuild,
+  wmnd-0.4.11.ebuild:
+  Removed COPYING and INSTALL from dodoc.
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> wmnd-0.4.11-r1.ebuild:
   Stable on ppc.
