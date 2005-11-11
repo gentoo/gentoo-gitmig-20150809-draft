@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07bd8a887111679d7775f3604e4381a5 grace-5.1.14.ebuild 3392
-MD5 1b39674501cdd64d1c932a71a970981b grace-5.1.18.ebuild 3402
-MD5 a72e08d77007cb78983d3bb4dd421364 ChangeLog 6272
-MD5 3862c6034595e39fcd14a6bd239f749b metadata.xml 270
-MD5 97e5d164e32726698f9e90f93d723c8f files/grace-helpviewer-gentoo.diff 384
+MD5 2d82fb1aa15d46de6cfe544c546e48c5 ChangeLog 6363
+MD5 79d4cd7b5bb6c28a0b393294202477cb files/10grace 28
 MD5 b45d65feb380f4734584d415500e8ffd files/digest-grace-5.1.14 65
 MD5 4d77fc740f63f5c45037cd1bd1db14d9 files/digest-grace-5.1.18 65
-MD5 79d4cd7b5bb6c28a0b393294202477cb files/10grace 28
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDcNz9KRy60XGEcJIRAsZ7AJ9mp0oQ0BHwGJaCODAdSYcdwQDKAgCfUR2J
-7a7+hf83dZ57Vdr0OJLROHk=
-=jRdt
------END PGP SIGNATURE-----
+MD5 97e5d164e32726698f9e90f93d723c8f files/grace-helpviewer-gentoo.diff 384
+MD5 07bd8a887111679d7775f3604e4381a5 grace-5.1.14.ebuild 3392
+MD5 9a49dd5686076a1da28d3a6c759a27c6 grace-5.1.18.ebuild 3399
+MD5 3862c6034595e39fcd14a6bd239f749b metadata.xml 270
