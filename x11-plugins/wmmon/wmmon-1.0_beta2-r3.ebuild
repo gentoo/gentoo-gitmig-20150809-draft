@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.3 2005/08/30 17:45:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.4 2005/11/11 09:25:33 s4t4n Exp $
 
 inherit eutils
 
@@ -30,5 +30,5 @@ src_compile() {
 
 src_install () {
 	dobin wmmon/wmmon
-	dodoc BUGS CHANGES COPYING HINTS INSTALL README TODO
+	dodoc BUGS CHANGES HINTS README TODO
 }
