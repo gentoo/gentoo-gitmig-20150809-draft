@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/socat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.24 2005/10/26 04:48:25 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.25 2005/11/11 23:15:26 hansmi Exp $
+
+  11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  socat-1.4.2.0-r1.ebuild:
+  Stable on ppc.
 
   25 Oct 2005; <soulse@gentoo.org> socat-1.4.2.0-r1.ebuild,
   socat-1.4.3.0-r1.ebuild:
