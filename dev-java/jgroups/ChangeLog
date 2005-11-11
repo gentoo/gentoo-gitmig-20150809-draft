@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jgroups
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.6 2005/10/15 13:18:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.7 2005/11/11 23:47:07 betelgeuse Exp $
+
+*jgroups-2.2.7-r1 (11 Nov 2005)
+
+  11 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +jgroups-2.2.7-r1.ebuild:
+  New revision with fixed dependencies after bug #112007. Also removed the
+  installation of the LICENSE file.
 
   15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> jgroups-2.2.7.ebuild:
   move dev-java/jms dev-java/sun-jms
