@@ -1,4 +1,6 @@
-MD5 60f66907da18ae1a189022612bfd9eb0 ChangeLog 1243
+MD5 24f55227ea6765d962ce8de1a049b160 ChangeLog 1374
 MD5 e5454e746ed2a1bf0c57081f6f9eea91 files/digest-libXfixes-3.0.0 68
+MD5 4d5abc718c149caf006288ef1e5152af files/digest-libXfixes-3.0.1 68
 MD5 b0b3106ed2f4a147b97ba38fc23df896 libXfixes-3.0.0.ebuild 604
+MD5 dcccc7229eb14e0c7f17febd7d54c8b7 libXfixes-3.0.1.ebuild 599
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

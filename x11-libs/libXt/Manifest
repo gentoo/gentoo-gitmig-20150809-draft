@@ -1,4 +1,6 @@
-MD5 7aafe6ffc4058797abb07e6a8aeb9db9 ChangeLog 1113
+MD5 adaa935f46ef90d09e41ac2a9d6a2fa6 ChangeLog 1235
 MD5 b85bf2a89d0e70ba79ffb587c684499a files/digest-libXt-0.99.1 65
+MD5 1111b769bd50b7f0b48d70ebdf57619a files/digest-libXt-0.99.2 65
 MD5 d2605a24a730ff0d6c4e1b3702d18e27 libXt-0.99.1.ebuild 586
+MD5 9602159bf18510a1f3a1397376e77e1b libXt-0.99.2.ebuild 582
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

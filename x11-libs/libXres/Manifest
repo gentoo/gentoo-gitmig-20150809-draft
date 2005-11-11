@@ -1,4 +1,6 @@
-MD5 6f974d54f6d11c526fd910fcec41b990 ChangeLog 1111
+MD5 2094ca55ec57a3733f6c1187783ce49e ChangeLog 1239
 MD5 39e7ee6f1c8d2e2e5acdf8f72145ebfd files/digest-libXres-0.99.1 67
+MD5 6d2181abe68938186f792ad8820fbef2 files/digest-libXres-0.99.2 67
 MD5 6a5675c6b2339427573ba378b648af1b libXres-0.99.1.ebuild 615
+MD5 67f5a0d0844d80a18321350be8482bd3 libXres-0.99.2.ebuild 611
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

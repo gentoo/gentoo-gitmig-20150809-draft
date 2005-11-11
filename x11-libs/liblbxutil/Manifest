@@ -1,4 +1,6 @@
-MD5 77b7eb57a4654fc55e72b2767c096bf1 ChangeLog 825
+MD5 dcbe209372f55bab96a2f560dee0d807 ChangeLog 959
 MD5 cb4e63e8e439c62766a84d43a3d8700e files/digest-liblbxutil-0.99.1 70
+MD5 dff000c14be2bcbc5a9f4ee6e6087e86 files/digest-liblbxutil-0.99.2 70
 MD5 ef3734fbcc12bf5b99b04bb0f681b70a liblbxutil-0.99.1.ebuild 553
+MD5 ad28e5e38aa5997e751adf1139d4e403 liblbxutil-0.99.2.ebuild 553
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

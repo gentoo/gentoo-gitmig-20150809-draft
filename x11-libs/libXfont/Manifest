@@ -1,4 +1,6 @@
-MD5 b27c116cc58553ff246e785215c07dc0 ChangeLog 1799
+MD5 0194ecbfdc8e2033e0c127a04a56ce7f ChangeLog 1929
 MD5 dd0c0304a6075f824a2878eea6579315 files/digest-libXfont-0.99.1 68
+MD5 171ae24ee1c999cef301062401c94654 files/digest-libXfont-0.99.2 68
 MD5 9759ed4a026f2b1034b653c782608a2e libXfont-0.99.1.ebuild 864
+MD5 e16576a27e21d84a39b8edd318fe5402 libXfont-0.99.2.ebuild 860
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
