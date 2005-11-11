@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.2 2005/11/10 15:42:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.3 2005/11/11 10:46:32 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1071,7 +1071,7 @@ pkg_setup() {
 	echo
 	eerror "  http://bugs.gentoo.org/show_bug.cgi?id=112082"
 	echo
-	die "Portage sucks."
+	die "Might break upgrading."
 
 	if use nptlonly && ! use nptl ; then
 		eerror "If you want nptlonly, add nptl to your USE too ;p"
