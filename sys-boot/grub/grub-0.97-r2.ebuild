@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.1 2005/11/10 02:37:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.2 2005/11/11 00:17:55 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -144,13 +144,14 @@ pkg_postinst() {
 	[[ -e /boot/grub/stage2 ]] && mv /boot/grub/stage2{,.old}
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to /boot"
-	for x in /lib/grub/*/* /usr/lib/grub/*/* ; do
-		[[ -f ${x} ]] && cp -p ${x} /boot/grub
+	for x in /lib*/grub/*/* /usr/lib*/grub/*/* ; do
+		[[ -f ${x} ]] && cp -p ${x} /boot/grub/
 	done
 
-	[[ -e /boot/grub/grub.conf ]] \
-		&& /sbin/grub \
-			--batch \
+	if [[ -e /boot/grub/grub.conf ]] ; then
+		egrep -v '^[[:space:]]*(#|$|default|fallback|splashimage|timeout|title)' /boot/grub/grub.conf | \
+		/sbin/grub --batch \
 			--device-map=/boot/grub/device.map \
-			< /boot/grub/grub.conf > /dev/null 2>&1
+			> /dev/null
+	fi
 }
