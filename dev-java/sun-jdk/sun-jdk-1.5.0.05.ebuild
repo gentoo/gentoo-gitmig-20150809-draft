@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.05.ebuild,v 1.4 2005/10/18 20:22:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.05.ebuild,v 1.5 2005/11/11 11:21:07 axxo Exp $
 
 inherit java eutils
 
@@ -27,7 +27,7 @@ SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~amd64 -*"
 RESTRICT="fetch nostrip"
-IUSE="doc browserplugin nsplugin jce mozilla"
+IUSE="doc browserplugin nsplugin jce mozilla examples"
 
 #
 DEPEND=">=dev-java/java-config-1.2
@@ -112,18 +112,22 @@ src_unpack() {
 }
 
 src_install() {
-	local dirs="bin include jre lib man"
 	dodir /opt/${P}
 
-	for i in $dirs ; do
-		cp -pPR $i ${D}/opt/${P}/ || die "failed to copy"
+	for i in bin include jre lib man; do
+		cp -pPR $i ${D}/opt/${P}/ || die "failed to copy ${i}"
 	done
 	dodoc COPYRIGHT LICENSE README.html
 	dohtml README.html
 	dodir /opt/${P}/share/
-	cp -pPR demo src.zip ${D}/opt/${P}/share/
-	if ( use x86 || use amd64 ); then
-		cp -pPR sample ${D}/opt/${P}/share/
+
+	cp -pPR src.zip ${D}/opt/${P}/share/
+
+	if use examples; then
+		cp -pPR demo ${D}/opt/${P}/share/
+		if ( use x86 || use amd64 ); then
+			cp -pPR sample ${D}/opt/${P}/share/
+		fi
 	fi
 
 	if use jce ; then
@@ -164,10 +168,6 @@ src_install() {
 	domenu ${T}/sun_java.desktop
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
-
-	# TODO prepman "fixes" symlink ja -> ja__JP.eucJP in 'man' directory,
-	#	  creating ja.gz -> ja_JP.eucJP.gz. This is broken as ja_JP.eucJP
-	#	  is a directory and will not be gzipped ;)
 }
 
 pkg_postinst() {
