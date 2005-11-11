@@ -1,4 +1,6 @@
-MD5 63bb6bfb73a6eb6e4555e79d05051dc3 ChangeLog 660
+MD5 982f65d5dcda3129c67403cb76da82ec ChangeLog 790
 MD5 2ac8c99149a38ceab27b730f81d7b697 files/digest-imake-0.99.1 64
+MD5 0d864421a5bb4c6bffe5ad7a524e859a files/digest-imake-0.99.2 64
 MD5 073ddaf1b6f64426bb570a0161e48500 imake-0.99.1.ebuild 459
+MD5 073ddaf1b6f64426bb570a0161e48500 imake-0.99.2.ebuild 459
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

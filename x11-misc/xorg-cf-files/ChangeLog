@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.5 2005/11/08 05:28:26 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.6 2005/11/11 19:58:23 joshuabaergen Exp $
+
+*xorg-cf-files-0.99.2 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-cf-files-0.99.2.ebuild:
+  Bump for 7.0RC2.
 
 *xorg-cf-files-0.99.1-r1 (08 Nov 2005)
 
