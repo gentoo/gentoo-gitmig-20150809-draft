@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmufo/wmufo-1.2.0.ebuild,v 1.5 2005/03/02 08:37:00 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmufo/wmufo-1.2.0.ebuild,v 1.6 2005/11/11 11:15:02 s4t4n Exp $
 
 inherit eutils
 
@@ -23,5 +23,5 @@ DEPEND="virtual/x11
 src_install () {
 	einstall || die "make install failed"
 
-	dodoc AUTHORS ALL_I_GET_IS_AN_ALIEN_FACE ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ALL_I_GET_IS_AN_ALIEN_FACE ChangeLog NEWS README
 }
