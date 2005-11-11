@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.68 2005/08/16 09:52:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.69 2005/11/11 21:05:34 mcummings Exp $
+
+*spamassassin-3.1.0 (11 Nov 2005)
+
+  11 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  +spamassassin-3.1.0.ebuild:
+  Upstream bump, ebuild worked heavily by Brian G. Peterson in bug 106028.
+  Should also close bug (request for said bump). Additional use flag information that Brian added needed to be removed for the time being - not all arch's are up to date on the relevant dependancies. Will open a bug against arch's for 3.1.0-r1.ebuild.
 
   16 Aug 2005; Michael Cummings <mcummings@gentoo.org> files/3.0.0-spamd.conf,
   +files/secrets.cf, -spamassassin-2.64-r1.ebuild,
