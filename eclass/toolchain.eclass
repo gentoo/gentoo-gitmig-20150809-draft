@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.215 2005/11/05 23:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.216 2005/11/11 02:30:51 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1173,8 +1173,9 @@ gcc_do_configure() {
 			avr)        confgcc="${confgcc} --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
-			if ! has_version ${CATEGORY}/${needed_libc} ; then
-				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+			if ! has_version ${CATEGORY}/${needed_libc} && \
+			   ! has_version ${CATEGORY}/${needed_libc}-headers ; then
+				confgcc="${confgcc} --disable-shared --disable-threads --without-headers --disable-libmudflap"
 			else
 				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
