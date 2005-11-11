@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.24 2005/09/26 10:57:00 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.25 2005/11/11 10:12:18 s4t4n Exp $
+
+  11 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmnetload-1.3-r2.ebuild:
+  Removed COPYING and INSTALL from dodoc.
 
 *wmnetload-1.3-r2 (26 Sep 2005)
 
