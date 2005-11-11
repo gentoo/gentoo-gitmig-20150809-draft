@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.6 2005/10/25 14:38:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.7 2005/11/11 23:23:56 hansmi Exp $
+
+  11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> libmpd-0.01.ebuild:
+  Stable on ppc.
 
   25 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> libmpd-0.01.ebuild:
   Stable on sparc
