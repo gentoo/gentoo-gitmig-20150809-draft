@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.6 2004/09/02 18:22:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.7 2005/11/11 11:36:29 s4t4n Exp $
 
 IUSE=""
 S="${WORKDIR}/wmwave"
@@ -19,5 +19,5 @@ src_compile() {
 src_install () {
 	dobin wmwave
 	doman wmwave.1
-	dodoc COPYING README
+	dodoc README
 }
