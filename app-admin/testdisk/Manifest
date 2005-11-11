@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31214f99681cc99c7bf4daf424af9a2a ChangeLog 2803
+MD5 1c483a4d558771cc952bbe909107de1d ChangeLog 2891
 MD5 c20ec4c0b429ad420cd79fa49b334e24 files/digest-testdisk-5.2 64
 MD5 38ac24202d2e5ac3b576956cca428e4e files/digest-testdisk-5.7 64
 MD5 c590941db124e10085899f3724557022 files/digest-testdisk-5.9 68
@@ -9,12 +6,5 @@ MD5 8ad7771dcf24e978d4b1084629fea125 files/digest-testdisk-6.2 69
 MD5 e18eb10540dc80dac5f436b82cd48528 metadata.xml 398
 MD5 60fd4cf89afdb8428dee1477dd67c8e9 testdisk-5.2.ebuild 882
 MD5 8a20706de4506c16a11cf363e05a0016 testdisk-5.7.ebuild 1093
-MD5 8ada79ce0d999f8eede64a2069e0f11e testdisk-5.9.ebuild 1137
+MD5 e4aa0b948ea9b9fa782622667d360ac9 testdisk-5.9.ebuild 1131
 MD5 8e0fadaf04e3e90dda99bbb1746bf55e testdisk-6.2.ebuild 1064
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDb0XLmdTrptrqvGERAsQbAKCa/dZ0tGLo35Y6BvnCr1aWF/AtlgCeMpj6
-hEcW4+LnuXHYzAbFw50Prh8=
-=sBMF
------END PGP SIGNATURE-----
