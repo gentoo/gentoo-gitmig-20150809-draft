@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.36 2005/11/03 12:43:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.37 2005/11/11 22:04:39 nelchael Exp $
+
+  12 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/synergy-1.2.5-print-buffer.patch, synergy-1.2.5.ebuild:
+  Fix bug 110562 - segfault when server is started with --help.
 
   03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -synergy-1.2.2.ebuild,
   -synergy-1.2.3.ebuild, synergy-1.2.4.ebuild, synergy-1.2.5.ebuild:
