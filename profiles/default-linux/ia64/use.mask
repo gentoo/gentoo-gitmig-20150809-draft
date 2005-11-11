@@ -78,3 +78,5 @@ wifi
 pike
 
 timidity
+
+firebird
