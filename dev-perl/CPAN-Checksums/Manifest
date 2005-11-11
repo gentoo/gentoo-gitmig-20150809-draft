@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eb962fd9a0449bcd689a416b9c5c9f61 CPAN-Checksums-1.018.ebuild 532
 MD5 172e114ded6023dc6338963658628136 CPAN-Checksums-1.032.ebuild 628
 MD5 539c418b752bd8bc3341e8c936d8d37f ChangeLog 530
 MD5 8b381ba8a942eb3f34e6a3c54f21b5fc files/digest-CPAN-Checksums-1.018 70
 MD5 dc5ae15f59af4d63bbbe52b44e35d7f5 files/digest-CPAN-Checksums-1.032 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDdAUptG5z4I8BtQoRAl5QAJ9shSRY8sn+IZH+jby5yekHZEHqDACfWGR6
+GNA0rjC4vnG/rAnkuQQkM04=
+=hxJa
+-----END PGP SIGNATURE-----
