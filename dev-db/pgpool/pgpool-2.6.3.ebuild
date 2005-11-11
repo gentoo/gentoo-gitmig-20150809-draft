@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.6.3.ebuild,v 1.3 2005/10/19 18:18:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.6.3.ebuild,v 1.4 2005/11/11 22:46:48 hansmi Exp $
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://pgpool.projects.postgresql.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://pgfoundry.org/frs/download.php/426/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-db/libpq"
