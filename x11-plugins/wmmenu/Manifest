@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7807e8717c7aeeea1532a482875ce80 ChangeLog 989
+MD5 c83c1fe9b243dd6b0658435dd6f70489 wmmenu-1.2-r1.ebuild 1050
+MD5 e7e0b7f39b50b5f7905a5968413e8c3c ChangeLog 1091
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 ad15856cc16f98329fea046788af8307 wmmenu-1.2-r1.ebuild 1061
 MD5 5477a4c7105bb065b867046de221b6f4 files/wmmenu-1.2-Makefile.patch 918
 MD5 75ce08b9efb5328f48a500ee9adc66e2 files/wmmenu-1.2-support-libdockapp-0.5.0.patch 506
 MD5 662859fc24714fd26e0abc75f154b3dc files/digest-wmmenu-1.2-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDOVNEwUpWvClEHQoRAl35AJ9HAoleWxBWLo8Q4fg/+/Q7CpkRTACfbds6
-pCES4GzuvVx4VJHA3iFwP28=
-=dfCn
------END PGP SIGNATURE-----
