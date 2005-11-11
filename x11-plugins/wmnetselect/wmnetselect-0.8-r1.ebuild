@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/wmnetselect-0.8-r1.ebuild,v 1.10 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/wmnetselect-0.8-r1.ebuild,v 1.11 2005/11/11 10:23:42 s4t4n Exp $
 
 IUSE=""
 DESCRIPTION="WindowMaker browser launcher docklet"
@@ -19,6 +19,6 @@ src_compile() {
 }
 
 src_install () {
-	dobin   wmnetselect
-	dodoc   COPYING README ChangeLog TODO README.html
+	dobin wmnetselect
+	dodoc README ChangeLog TODO README.html
 }
