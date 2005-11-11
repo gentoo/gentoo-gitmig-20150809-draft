@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 27da8da7ac1bca3b63c444c6b99f385c mftrace-1.1.16.ebuild 1151
-MD5 85dba6cfc2427975a21b45ae2bb953ae mftrace-1.1.2.ebuild 1228
-MD5 1d10364a7e5fe1ed10d0838e38dccaba mftrace-1.0.34.ebuild 1229
-MD5 0dcda13708942d5eb5c8b340bdecc99b mftrace-1.1.17.ebuild 1150
-MD5 a666612f8616076cb39ffd4dd13300a7 ChangeLog 3559
-MD5 2ff0f713422507205e9611141006ae08 metadata.xml 183
+MD5 3ddef172ffc903c6a3fa93c005a477f9 ChangeLog 3652
 MD5 de1d30aed8d0bc3ad7de89005689d7fb files/digest-mftrace-1.0.34 65
 MD5 32022fdf89eb4c9eb1a75f0c6f2f6366 files/digest-mftrace-1.1.16 65
 MD5 711af975cb107aeb5d7c8e3a4e87e3b8 files/digest-mftrace-1.1.17 65
 MD5 b61de718872bea699323bbb544752a6d files/digest-mftrace-1.1.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDZjHmKRy60XGEcJIRArUfAJ9HGu6G7ZwQDD2Zlp+ceq4YNYfrNwCaAxrr
-y7OW8q23MCigLZiTQjYIFnA=
-=6n0Z
------END PGP SIGNATURE-----
+MD5 2ff0f713422507205e9611141006ae08 metadata.xml 183
+MD5 1d10364a7e5fe1ed10d0838e38dccaba mftrace-1.0.34.ebuild 1229
+MD5 0c254df6ef8ad86dc48bf79454b80cb7 mftrace-1.1.16.ebuild 1148
+MD5 0dcda13708942d5eb5c8b340bdecc99b mftrace-1.1.17.ebuild 1150
+MD5 85dba6cfc2427975a21b45ae2bb953ae mftrace-1.1.2.ebuild 1228
