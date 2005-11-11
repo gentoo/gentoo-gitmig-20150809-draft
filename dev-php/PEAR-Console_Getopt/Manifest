@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0d122a6bb88bf65778a6c35daedd560a ChangeLog 2078
-MD5 32807d5838ad7f9da850745b35b542ac PEAR-Console_Getopt-1.2-r1.ebuild 384
-MD5 13b78bf05bb0e526d0b5fbd674035a07 PEAR-Console_Getopt-1.2.ebuild 395
+MD5 92f91f9541addac7d4606dc49fe786b4 PEAR-Console_Getopt-1.2-r1.ebuild 398
+MD5 f6f5f3bb8736517de5f16d778f5605b6 PEAR-Console_Getopt-1.2.ebuild 397
 MD5 c9d76029e885ac56a75a03019d4e0907 files/digest-PEAR-Console_Getopt-1.2 65
 MD5 c9d76029e885ac56a75a03019d4e0907 files/digest-PEAR-Console_Getopt-1.2-r1 65
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDaAKygIKl8Uu19MoRAtKIAJ99iKegCZ2grENnUPRSv9ROflG2LQCeMdI4
-sZCPaPe4XF9sNKQk7ovTe2M=
-=sTnB
------END PGP SIGNATURE-----
