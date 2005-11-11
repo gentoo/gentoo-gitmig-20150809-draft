@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4673 2005/11/11 15:58:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4674 2005/11/11 21:11:23 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -63,10 +63,6 @@
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Nov 2005)
 # Security masked due to remote exploitable bugs (bug #111421)
 games-strategy/scorched3d
-
-# Diego Pettenò <flameeyes@gentoo.org> (04 Nov 2005)
-# Too many problems, and there are better rippers out there
-media-video/drip
 
 # Sven Wegener <swegener@gentoo.org> (04 Nov 2005)
 # Needs >=dev-util/monodoc-1.1.8
