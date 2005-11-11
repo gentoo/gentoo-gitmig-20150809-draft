@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r2.ebuild,v 1.1 2005/11/11 18:41:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r2.ebuild,v 1.2 2005/11/11 18:49:45 azarah Exp $
 
 inherit eutils multilib versionator
 
@@ -250,13 +250,15 @@ src_install-libs() {
 
 pkg_preinst() {
 	# Can we make up our minds ?!?!?
-	[[ -n ${IMAGE} ]] && D=${IMAGE}
+	[[ -n ${IMAGE} ]] && \
+		NV_D="${IMAGE}" || \
+		NV_D="${D}"
 
 	if ! has_version x11-base/xorg-server ; then
 		for dir in lib lib32 lib64 ; do
-			if [[ -d ${D}/usr/${dir}/xorg ]] ; then
-				mv ${D}/usr/${dir}/xorg/* ${D}/usr/${dir}
-				rmdir ${D}/usr/${dir}/xorg
+			if [[ -d ${NV_D}/usr/${dir}/xorg ]] ; then
+				mv ${NV_D}/usr/${dir}/xorg/* ${NV_D}/usr/${dir}
+				rmdir ${NV_D}/usr/${dir}/xorg
 			fi
 		done
 	fi
@@ -265,9 +267,9 @@ pkg_preinst() {
 	# Since we moved away from libs in /usr/X11R6 need to check this
 	if has_version "<x11-base/xorg-x11-6.8.0-r4" || \
 	   has_version "x11-base/xfree86" ; then
-		mkdir -p ${D}/usr/X11R6
+		mkdir -p ${NV_D}/usr/X11R6
 		for dir in lib lib32 lib64 ; do
-			[[ -d ${D}/usr/${dir} ]] && mv ${D}/usr/${dir} ${D}/usr/X11R6
+			[[ -d ${NV_D}/usr/${dir} ]] && mv ${NV_D}/usr/${dir} ${NV_D}/usr/X11R6
 		done
 	fi
 
