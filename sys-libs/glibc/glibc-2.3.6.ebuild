@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.3 2005/11/11 10:46:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.4 2005/11/11 13:22:46 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -21,7 +21,7 @@ KEYWORDS="-*"
 BRANCH_UPDATE=""
 
 # From linuxthreads/man
-GLIBC_MANPAGE_VERSION="2.3.6"
+GLIBC_MANPAGE_VERSION="2.3.6-1"
 
 # From manual
 GLIBC_INFOPAGE_VERSION="2.3.6"
