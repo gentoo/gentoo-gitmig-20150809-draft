@@ -1,4 +1,4 @@
-MD5 d32eee4e977da7d0c528ab7e16740125 ChangeLog 1650
+MD5 e0140c0be9d59e84fdfb151ca7e92818 ChangeLog 1746
 MD5 d70a42e3ead229a1001fbe2b09ee2937 files/digest-jacksum-1.4.0 62
 MD5 a309849eb2163c087c093b09be3c0787 files/digest-jacksum-1.5.0 62
 MD5 0576f4f7649b4c5a354c44d3effd44a6 files/digest-jacksum-1.5.1 62
@@ -6,5 +6,5 @@ MD5 9615b477e6967d5b36e1a68962f8ac3f files/digest-jacksum-1.6.0 62
 MD5 dcd8cccba544153de14ec45f597dc1cf jacksum-1.4.0.ebuild 1116
 MD5 e225e69868246434ca443e7dc17f376e jacksum-1.5.0.ebuild 1124
 MD5 17cabec9b18090d5bf4d6abf566fb0c1 jacksum-1.5.1.ebuild 1128
-MD5 80fc23f5a2a57cfdb0eb81de1e25f69b jacksum-1.6.0.ebuild 1128
+MD5 3e4961f5fd3af308bb5e7763628ffc77 jacksum-1.6.0.ebuild 1129
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
