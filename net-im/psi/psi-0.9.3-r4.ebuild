@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.13 2005/08/13 00:09:22 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.14 2005/11/11 13:54:57 ferdy Exp $
 
 inherit eutils qt3
 
@@ -50,7 +50,7 @@ SLOT="0"
 LICENSE="GPL-2"
 #Amd64 devs: I now have a x86 and amd64 boxes so I can now test
 #and mark on both arches
-KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ~ppc64 sparc x86"
 
 #After final relase we do not need this
 S="${WORKDIR}/${MY_P}"

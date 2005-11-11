@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.80 2005/09/03 23:06:09 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.81 2005/11/11 13:54:57 ferdy Exp $
+
+  11 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> psi-0.9.3-r4.ebuild:
+  marked ~alpha wrt bug #108985
 
 *psi-0.10_rc2 (03 Sep 2005)
 
