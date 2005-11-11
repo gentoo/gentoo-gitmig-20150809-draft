@@ -5,5 +5,5 @@ $TTL 1W
                                       14400      ; Retry
                                       604800     ; Expire - 1 week
                                       86400 )    ; Minimum
-		IN      NS      ns
+		IN      NS      127.0.0.1
 localhost.	IN	A	127.0.0.1

@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.96 2005/11/09 09:25:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.97 2005/11/11 00:13:22 voxus Exp $
+
+*bind-9.3.2_beta2-r1 (11 Nov 2005)
+
+  11 Nov 2005; Konstantin Arkhipov <voxus@gentoo.org> -files/127,
+  -files/localhost, -files/named.conf-r1, -files/named.conf-r2,
+  -bind-9.3.2_beta2.ebuild, +bind-9.3.2_beta2-r1.ebuild:
+  Cleaned out unused files, bug #108123 fixed only in 9.3.2_beta2 for now.
 
 *bind-9.3.2_beta2 (09 Nov 2005)
 *bind-9.3.1-r7 (09 Nov 2005)

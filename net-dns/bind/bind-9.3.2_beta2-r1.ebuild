@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2_beta2.ebuild,v 1.1 2005/11/09 09:25:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2_beta2-r1.ebuild,v 1.1 2005/11/11 00:13:22 voxus Exp $
 
 inherit eutils libtool
 
@@ -173,7 +173,7 @@ src_install() {
 	insinto /etc/bind ; newins ${FILESDIR}/named.conf-r3 named.conf
 	# ftp://ftp.rs.internic.net/domain/named.ca:
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
-	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}.zone
+	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost-r1}.zone
 
 	cp ${FILESDIR}/named.init-r3 ${T}/named && doinitd ${T}/named
 	cp ${FILESDIR}/named.confd-r1 ${T}/named && doconfd ${T}/named
