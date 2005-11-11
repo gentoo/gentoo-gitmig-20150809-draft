@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bubblemon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.17 2005/11/02 13:38:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.18 2005/11/11 23:09:01 hansmi Exp $
+
+  11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> bubblemon-1.46.ebuild:
+  Stable on ppc.
 
   02 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> bubblemon-1.46.ebuild:
   Stable on sparc
