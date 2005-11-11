@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1549 2005/11/11 00:16:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1550 2005/11/11 19:19:06 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -223,7 +223,8 @@ dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon - Add optional support for the avalon-framework
 dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
-dev-java/gnu-classpath:cairo - Compile classpath with support for cairo
+dev-java/gnu-classpath:cairo - Compile classpath gtk-peer with support for cairo
+dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/hibernate:c3p0 - Enable c3p0 support
 dev-java/hibernate:dbcp - Enable Database Connection Pooling support
 dev-java/hibernate:jboss - Enable JBoss support
