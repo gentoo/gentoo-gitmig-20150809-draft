@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4672 2005/11/11 11:29:47 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4673 2005/11/11 15:58:11 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (11 Nov 2005)
+# Masked for testing as it is not 100% compatible with catalyst 1.0 spec files
+# and needs further user testing before a final version is released.
+>=dev-util/catalyst-2.0_pre20051111
 
 # Henrik Brix Andersen <brix@gentoo.org> (09 Nov 2005)
 # Masked for testing due to new configuration method.
