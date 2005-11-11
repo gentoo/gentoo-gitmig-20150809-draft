@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f39283f94db7bdb2c0701974246853a1 lshw-02.06b.ebuild 1155
-MD5 96c8e28217010ebc1c8c79663edfdea6 lshw-02.05.01b.ebuild 1361
-MD5 1cb9d6696052adc9d947bae8ed964ab3 ChangeLog 3510
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8acb70976be17c39d5349c85e31a76f8 lshw-02.04b.ebuild 1384
+MD5 4013a2f14b0bf28966e7942b57cd7a13 ChangeLog 3603
 MD5 555b9015ffbcc8fd484c63ab096069d7 files/02.00b-cpuid-PIC.patch 1098
 MD5 29a53d370bf1395481ea9d8528f410d1 files/digest-lshw-02.04b 64
-MD5 83309023b708d6b03a2cc931a71e2352 files/digest-lshw-02.06b 64
-MD5 fab2fbfdcae14bdfd177df3194e261ac files/lshw-02.06b-cpuid-PIC.patch 1023
 MD5 aa4eb15e3a195e90ce0bf111bcd37e2f files/digest-lshw-02.05.01b 67
+MD5 83309023b708d6b03a2cc931a71e2352 files/digest-lshw-02.06b 64
 MD5 7fbeefb274e662632462f5a5465f24d9 files/lshw-02.06b-build.patch 1652
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDcKeiKRy60XGEcJIRAp76AKCkK7/i3WfUk5uRIr/LCeVXpgTcpQCgpvNR
-k4dn1bURZZh4tazF98BUMKE=
-=7c9m
------END PGP SIGNATURE-----
+MD5 fab2fbfdcae14bdfd177df3194e261ac files/lshw-02.06b-cpuid-PIC.patch 1023
+MD5 8acb70976be17c39d5349c85e31a76f8 lshw-02.04b.ebuild 1384
+MD5 8493c243aa959741074b74c904978b72 lshw-02.05.01b.ebuild 1358
+MD5 f39283f94db7bdb2c0701974246853a1 lshw-02.06b.ebuild 1155
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
