@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 710416228b464a22ba04ab9b6b7c0e1f ChangeLog 6371
+MD5 fe9d50d80cdd9f335d1f11d9578e3aa7 ChangeLog 6508
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205-r1 74
 MD5 fa04b4cbc865fd7ef34386bee737b4e6 files/digest-util-vserver-0.30.208-r3 157
 MD5 75019019ddd3be6dea9c7b26611427fa files/digest-util-vserver-0.30.208-r4 157
 MD5 0722ed435a03b8e1c03b0b319045891c files/digest-util-vserver-0.30.208-r5 157
+MD5 2c8a53015c77a0f7222ab5e18ca59246 files/digest-util-vserver-0.30.209 154
 MD5 09276c3e50cf5c0f8d30ef0422f05fd8 files/vprocunhide 570
 MD5 bb0aa3e0f3b2d4216d303bd8ff6ebcb4 files/vserver-new_dev-fix.patch 393
 MD5 5e3714a49fe3701ba1d3e5a0c210f888 files/vserver-new_drop-defaulttar.patch 840
@@ -16,10 +17,11 @@ MD5 c5f348ce535b90b26e953ef356181e1d util-vserver-0.30.205-r1.ebuild 1946
 MD5 4ad677a3bd9403ff6243365f42fd5250 util-vserver-0.30.208-r3.ebuild 2701
 MD5 ab43eabdf469de7dff04968715e60859 util-vserver-0.30.208-r4.ebuild 2542
 MD5 684b6fb370d6611653e553c9c8fcb559 util-vserver-0.30.208-r5.ebuild 2542
+MD5 90fe6ccb91be17f3502c102146df99d8 util-vserver-0.30.209.ebuild 2525
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYQxymPFBzbX68WERAmYDAJ9qIWzPEb61nImE4XLyED/nGytbkwCghh6h
-0kfyZ9uNSasH7h21qt9JFM0=
-=gPdW
+iD8DBQFDdh0uflZ8QqxhrsMRAvp0AJsGYXIRMtdzdDI1dSssmK/h6aABUACbBHaA
+SNatwAVOKqVXHhWe8dwH8Hc=
+=Sy6Q
 -----END PGP SIGNATURE-----
