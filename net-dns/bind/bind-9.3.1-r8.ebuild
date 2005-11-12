@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r7.ebuild,v 1.1 2005/11/09 09:25:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r8.ebuild,v 1.1 2005/11/12 00:11:09 voxus Exp $
 
 inherit eutils libtool
 
@@ -99,13 +99,15 @@ src_compile() {
 			ewarn "Because of this BIND MUST only run with a single thread when"
 			ewarn "using the MySQL driver."
 			echo
-			myconf="${myconf} --disable-threads"
+			myconf="${myconf} --disable-linux-caps --disable-threads"
 			einfo "Threading support disabled"
 			epause 10
 		else
 			myconf="${myconf} --enable-linux-caps --enable-threads"
 			einfo "Threading support enabled"
 		fi
+	else
+		myconf="${myconf} --disable-linux-caps --disable-threads"
 	fi
 
 	econf \
@@ -197,7 +199,15 @@ src_install() {
 
 pkg_postinst() {
 	if [ ! -f '/etc/bind/rndc.key' ]; then
-		/usr/sbin/rndc-confgen -a -u named
+		if [ -c /dev/urandom ]; then
+			einfo "Using /dev/urandom for generating rndc.key"
+			/usr/sbin/rndc-confgen -r /dev/urandom -a -u named
+			echo
+		else
+			einfo "Using /dev/random for generating rndc.key"
+			/usr/sbin/rndc-confgen -a -u named
+			echo
+		fi
 	fi
 
 	install -d -o named -g named ${ROOT}/var/run/named \

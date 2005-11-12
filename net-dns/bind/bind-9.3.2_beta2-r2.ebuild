@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2_beta2-r1.ebuild,v 1.1 2005/11/11 00:13:22 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2_beta2-r2.ebuild,v 1.1 2005/11/12 00:11:09 voxus Exp $
 
 inherit eutils libtool
 
@@ -103,13 +103,15 @@ src_compile() {
 			ewarn "Because of this BIND MUST only run with a single thread when"
 			ewarn "using the MySQL driver."
 			echo
-			myconf="${myconf} --disable-threads"
+			myconf="${myconf} --disable-linux-caps --disable-threads"
 			einfo "Threading support disabled"
 			epause 10
 		else
 			myconf="${myconf} --enable-linux-caps --enable-threads"
 			einfo "Threading support enabled"
 		fi
+	else
+		myconf="${myconf} --disable-linux-caps --disable-threads"
 	fi
 
 	econf \
@@ -171,9 +173,13 @@ src_install() {
 	keepdir /var/bind/sec
 
 	insinto /etc/bind ; newins ${FILESDIR}/named.conf-r3 named.conf
+
 	# ftp://ftp.rs.internic.net/domain/named.ca:
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
-	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost-r1}.zone
+
+	insinto /var/bind/pri
+	doins ${FILESDIR}/127.zone
+	newins ${FILESDIR}/localhost.zone-r1 localhost.zone
 
 	cp ${FILESDIR}/named.init-r3 ${T}/named && doinitd ${T}/named
 	cp ${FILESDIR}/named.confd-r1 ${T}/named && doconfd ${T}/named
@@ -201,7 +207,15 @@ src_install() {
 
 pkg_postinst() {
 	if [ ! -f '/etc/bind/rndc.key' ]; then
-		/usr/sbin/rndc-confgen -a -u named
+		if [ -c /dev/urandom ]; then
+			einfo "Using /dev/urandom for generating rndc.key"
+			/usr/sbin/rndc-confgen -r /dev/urandom -a -u named
+			echo
+		else
+			einfo "Using /dev/random for generating rndc.key"
+			/usr/sbin/rndc-confgen -a -u named
+			echo
+		fi
 	fi
 
 	install -d -o named -g named ${ROOT}/var/run/named \
