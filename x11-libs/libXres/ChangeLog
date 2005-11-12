@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXres
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.8 2005/11/11 17:33:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.9 2005/11/12 23:27:29 matsuu Exp $
+
+  12 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> libXres-0.99.2.ebuild:
+  Marked ~sh
 
 *libXres-0.99.2 (11 Nov 2005)
 
