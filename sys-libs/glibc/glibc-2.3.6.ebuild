@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.4 2005/11/11 13:22:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.5 2005/11/12 19:20:35 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-*"
+KEYWORDS="-* ~x86 ~amd64"
 
 BRANCH_UPDATE=""
 
@@ -1039,10 +1039,10 @@ RESTRICT="nostrip multilib-pkg-force"
 # should work with userspace apps, at least on amd64 and ppc64.
 #
 # We need a new-enough binutils for as-needed
-DEPEND=">=sys-devel/gcc-3.2.3-r1
-	nptl? ( >=sys-devel/gcc-3.3.1-r1 >=sys-kernel/linux-headers-2.6.5 )
-	>=sys-devel/binutils-2.15
-	>=sys-devel/gcc-config-1.3.9
+DEPEND=">=sys-devel/gcc-3.3.3
+	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
+	>=sys-devel/binutils-2.16.1
+	>=sys-devel/gcc-config-1.3.12
 	virtual/os-headers
 	sys-libs/timezone-data
 	nls? ( sys-devel/gettext )
@@ -1071,7 +1071,7 @@ pkg_setup() {
 	echo
 	eerror "  http://bugs.gentoo.org/show_bug.cgi?id=112082"
 	echo
-	die "Might break upgrading."
+	#die "Might break upgrading."
 
 	if use nptlonly && ! use nptl ; then
 		eerror "If you want nptlonly, add nptl to your USE too ;p"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.408 2005/11/11 13:22:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.409 2005/11/12 19:20:35 azarah Exp $
+
+  12 Nov 2005; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.6.ebuild:
+  Update DEPEND .. we need later binutils. Also update gcc and gcc-config
+  dependencies to be sure.
 
   11 Nov 2005; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.6.ebuild:
   Fix pthread manpages not installing with nptl.
