@@ -1,4 +1,18 @@
-MD5 86bd4d60c8ba18b7eb9ffa9fa9c70c33 ChangeLog 2190
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3181e8bf6601cea6f8c9a870a8e8579 ChangeLog 2342
+MD5 4522407c3158529f4f2c56dce0c498b5 files/digest-vconfig-1.8 60
+MD5 4dd77294f21b543a02d809ac585aa12b files/digest-vconfig-1.9 60
 MD5 5a9b16815d29150da06fa36dba3535f2 metadata.xml 500
 MD5 cdadfe60a8f4b0dfd4a7f55002ff3bdb vconfig-1.8.ebuild 1515
-MD5 4522407c3158529f4f2c56dce0c498b5 files/digest-vconfig-1.8 60
+MD5 32045b10ead649d097fe22b473753850 vconfig-1.9.ebuild 1415
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iQCVAwUBQ3XqD54WFLgrx1GWAQKWLQP9HDZGpnHZ8J7aLIlRorbB+sxviBTtz/pN
+iwsO+UJyOa7AZlCW2IaWQYDA8dHkZCQQtqzN5JVXZcjc/UJTi3MMTg1aPGQLkVnG
+Ed/FtGZlNGxdfdfW4fLlGAAqtJHNgOrYcu+c1gtoYFhh4TRvkraxbMM51LtIYtkj
+d6BY3nkIX8Y=
+=z79n
+-----END PGP SIGNATURE-----
