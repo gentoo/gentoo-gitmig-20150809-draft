@@ -1,0 +1,150 @@
+# ChangeLog for media-video/ati-drivers-extra
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/.#ChangeLog.1.27,v 1.1 2005/11/12 22:30:20 lu_zero Exp $
+
+*ati-drivers-extra-8.13.3 (21 May 2005)
+
+  21 May 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-8.13.3-improvements.patch.bz2,
+  +ati-drivers-extra-8.13.3.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> as usual for the
+  updates to the improvements patch
+
+*ati-drivers-extra-8.12.10 (11 Apr 2005)
+
+  11 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-8.12.10-improvements.patch.bz2,
+  +ati-drivers-extra-8.12.10.ebuild:
+  New version
+
+  18 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
+  -files/fglrx-3.7.0-fix-fglrx_panel-includes.patch,
+  -files/ati-drivers-extra-3.14.1-ui-improvements.patch,
+  -files/ati-drivers-extra-3.14.6-improvements.patch.bz2,
+  -ati-drivers-extra-3.9.0.ebuild, -ati-drivers-extra-3.11.1.ebuild,
+  -ati-drivers-extra-3.12.0.ebuild, -ati-drivers-extra-3.14.1.ebuild,
+  -ati-drivers-extra-3.14.1-r1.ebuild, -ati-drivers-extra-3.14.6.ebuild:
+  Cleanup
+
+*ati-drivers-extra-8.10.19 (16 Feb 2005)
+
+  16 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-8.10.19-improvements.patch.bz2,
+  +ati-drivers-extra-8.10.19.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> for the updated patch
+
+  06 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-8.8.25.ebuild:
+  Marked x86
+
+  21 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-8.8.25.ebuild:
+  Minor QA fix, enhancements added back
+
+*ati-drivers-extra-8.8.25 (18 Jan 2005)
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  -ati-drivers-extra-3.2.8-r1.ebuild, -ati-drivers-extra-3.7.6.ebuild,
+  +ati-drivers-extra-8.8.25.ebuild:
+  New version
+
+  04 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.14.6.ebuild:
+  Marked x86
+
+*ati-drivers-extra-3.14.6 (12 Nov 2004)
+
+  12 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-3.14.6-improvements.patch.bz2,
+  +ati-drivers-extra-3.14.6.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> and Ernst Persson
+  <ernstp@gmail.com> for the notice and the patches
+
+  20 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.14.1-r1.ebuild:
+  Make sure the .desktop file got installed
+
+*ati-drivers-extra-3.14.1-r1 (20 Oct 2004)
+
+  20 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-3.14.1-ui-improvements.patch,
+  +files/fireglcontrol.desktop, +ati-drivers-extra-3.14.1-r1.ebuild:
+  Improvements from Ernst Persson <ernstp@gmail.com>, see bug #66368
+
+  08 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.14.1.ebuild:
+  Marked stable
+
+*ati-drivers-extra-3.14.1 (04 Oct 2004)
+
+  04 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-extra-3.14.1.ebuild:
+  New version
+
+*ati-drivers-extra-3.12.0 (14 Sep 2004)
+
+  14 Sep 2004; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-extra-3.12.0.ebuild:
+  New version, thanks to Steve Bamber <bugzilla@thebambers.me.uk> for pointing it
+
+  30 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.11.1.ebuild:
+  Generic tidy up, see bug #61921
+
+*ati-drivers-extra-3.11.1 (09 Aug 2004)
+
+  09 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-extra-3.11.1.ebuild:
+  New version
+
+  19 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.9.0.ebuild:
+  Marked stable
+
+  09 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  ati-drivers-extra-3.2.8-r1.ebuild, ati-drivers-extra-3.7.6.ebuild,
+  ati-drivers-extra-3.9.0.ebuild:
+  Fix use invocation
+
+  02 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.2.8-r1.ebuild:
+  Removed an unnecessary dep
+
+  31 May 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.2.8-r1.ebuild:
+  Minor fix, solution for bug #52519
+
+*ati-drivers-extra-3.9.0 (27 May 2004)
+
+  27 May 2004; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-extra-3.9.0.ebuild:
+  New version
+
+  16 Apr 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.7.6.ebuild:
+  Eventually fixing the issue
+
+  11 Apr 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.7.6.ebuild:
+  Workaround for ~cat/pkg-version not behaving
+
+  10 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-extra-3.7.6.ebuild:
+  Change dep on ati-drivers to dep only on version, not Gentoo revision (#47401).
+
+  11 Mar 2004; Luca Barbato <lu_zero@gentoo.org>
+  files/fglrx-3.7.0-fix-fglrx_panel-includes.patch:
+  Missing patch added
+
+*ati-drivers-extra-3.7.6 (11 Mar 2004)
+
+  11 Mar 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.7.6.ebuild:
+  New version, nwn players beware
+
+*ati-drivers-extra-3.2.8-r1 (24 Feb 2004)
+
+  24 Feb 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.2.8-r1.ebuild, metadata.xml:
+  First import, split from ati-drivers
+
