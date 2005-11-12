@@ -1,0 +1,12 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/vserver/packages,v 1.1 2005/11/12 13:32:24 hollow Exp $
+
+# we need baselayout-vserver instead of baselayout
+-*sys-apps/baselayout
+*sys-apps/baselayout-vserver
+
+# we don't want those by default
+-*sys-apps/kbd
+-*sys-fs/e2fsprogs
+-*virtual/dev-manager
+-*virtual/modutils
+-*virtual/ssh
