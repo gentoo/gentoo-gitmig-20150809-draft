@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.17 2005/11/06 12:33:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.18 2005/11/12 10:51:11 dcoutts Exp $
+
+  12 Nov 2005; <duncan@gentoo.org> gtk2hs-0.9.10.ebuild:
+  Fix failure when USE="glade -gnome" (bug #112227)
 
   06 Nov 2005; <duncan@gentoo.org> gtk2hs-0.9.10.ebuild:
   Fix generation of cairo GHCi lib.

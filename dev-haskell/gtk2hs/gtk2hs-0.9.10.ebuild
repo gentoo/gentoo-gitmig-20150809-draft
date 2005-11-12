@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.2 2005/11/06 12:33:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.3 2005/11/12 10:51:11 dcoutts Exp $
 
 inherit base ghc-package multilib
 
@@ -30,8 +30,7 @@ src_compile() {
 	econf \
 		--enable-packager-mode \
 		$(has_version '>=x11-libs/gtk+-2.8' && echo --enable-cairo) \
-		$(use_enable glade libglade) \
-		$(use_enable gnome libglade) \
+		$(use glade || use gnome && echo --enable-libglade) \
 		$(use_enable gnome gconf) \
 		$(use_enable gnome sourceview) \
 		$(use_enable mozilla mozilla) \
