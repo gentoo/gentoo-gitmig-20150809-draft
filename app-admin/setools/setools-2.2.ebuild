@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.2.ebuild,v 1.1 2005/11/08 01:42:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.2.ebuild,v 1.2 2005/11/12 23:23:09 pebenito Exp $
+
+inherit eutils
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -32,6 +34,8 @@ RDEPEND="dev-libs/libxml2
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/setools-2.2-nogui.diff
 
 	# fix the Makefile to listen to portage CFLAGS
 	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/g" ${S}/Makefile
