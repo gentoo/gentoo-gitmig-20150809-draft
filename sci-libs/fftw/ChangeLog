@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.24 2005/08/26 00:11:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.25 2005/11/12 03:12:15 lu_zero Exp $
+
+  12 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/fftw-3.0.1-altivec.patch, fftw-3.0.1-r2.ebuild:
+  Altivec support for gcc-fsf fixed
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> fftw-3.0.1-r2.ebuild:
   stable on ia64

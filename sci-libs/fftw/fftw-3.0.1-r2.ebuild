@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.9 2005/08/26 00:11:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.10 2005/11/12 03:12:15 lu_zero Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -19,6 +19,9 @@ src_unpack() {
 	unpack "${P}.tar.gz"
 	cd "${WORKDIR}/${P}"
 	epatch ${FILESDIR}/3-tmpfile.patch
+	epatch ${FILESDIR}/${P}-altivec.patch
+	autoreconf
+	libtoolize --copy --force
 	cd "${WORKDIR}"
 	use ppc-macos && epatch ${FILESDIR}/${PN}-ppc-macos.patch
 	mv ${P} ${P}-single
