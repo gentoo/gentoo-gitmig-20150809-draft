@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.38 2005/11/10 19:19:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.39 2005/11/12 10:02:43 dragonheart Exp $
+
+*bestcrypt-1.6_p2-r1 (12 Nov 2005)
+
+  12 Nov 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/bestcrypt-1.6_p2-path.patch, -bestcrypt-1.6_p1.ebuild,
+  -bestcrypt-1.6_p1-r1.ebuild, -bestcrypt-1.6_p2.ebuild,
+  +bestcrypt-1.6_p2-r1.ebuild:
+  path fix for mkfs.{dos,vfat,ntfs} from bug #107572. Did a bit of a cleanout
+  too. Thanks to Alexander Wigen
 
 *bestcrypt-1.6_p2 (10 Nov 2005)
 
