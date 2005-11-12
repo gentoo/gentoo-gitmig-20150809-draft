@@ -10,3 +10,4 @@ move sys-libs/libkudzu-knoppix sys-libs/libkudzu
 move sci-libs/charm sys-cluster/charm
 move dev-php/onphp dev-php5/onphp
 move app-mobilephone/ussp-push net-wireless/ussp-push
+move media-video/ati-drivers x11-drivers/ati-drivers
