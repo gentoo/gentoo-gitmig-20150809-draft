@@ -1,30 +1,27 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-2.44.ebuild,v 1.6 2004/07/01 10:48:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-3.10.ebuild,v 1.1 2005/11/12 14:37:12 vanquirius Exp $
 
 DESCRIPTION="HTML photo album generator"
 HOMEPAGE="http://MarginalHacks.com/Hacks/album/"
-SRC_URI="http://MarginalHacks.com/bin/album.tar.gz
-	http://MarginalHacks.com/bin/album.versions/mpeg2decode.patch-1.tar.gz"
+SRC_URI="http://marginalhacks.com/bin/album.versions/${P}.tar.gz"
 
 LICENSE="marginalhacks"
 SLOT="0"
-KEYWORDS="x86"
-IUSE=""
+KEYWORDS="~x86 ~amd64 ~ppc ~ppc64"
+IUSE="ffmpeg"
 
 DEPEND="virtual/libc"
-RDEPEND="${DEPEND}
+RDEPEND="dev-lang/perl
 	media-gfx/imagemagick
-	media-video/mpeg2vidcodec"
-
-S=${WORKDIR}
+	media-gfx/jhead
+	ffmpeg? ( media-video/ffmpeg )"
 
 src_install() {
 	dobin album
-	dodir /usr/share/${PN}
-	cp -R Themes/* ${D}/usr/share/${PN}/
-	dodoc mpeg2dec/{README,PATCH}
+	doman album.1
 	dohtml Documentation.html
+	dodoc License.txt
 }
 
 pkg_postinst() {

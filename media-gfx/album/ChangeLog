@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/album
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.14 2005/09/09 00:42:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.15 2005/11/12 14:37:12 vanquirius Exp $
+
+*album-3.10 (12 Nov 2005)
+
+  12 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> -album-2.44.ebuild,
+  -album-3.00.ebuild, album-3.07.ebuild, +album-3.10.ebuild:
+  3.07 x86 stable, 3.10 version bump.
 
   09 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> album-3.07.ebuild:
   Add ~amd64 keyword. See bug 49688. Thanks to all testers.
