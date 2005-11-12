@@ -1,0 +1,613 @@
+# ChangeLog for media-video/ati-drivers
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.1 2005/11/12 22:17:04 lu_zero Exp $
+
+  12 Nov 2005; Luca Barbato <lu_zero@gentoo.org> +files/09ati,
+  +files/fglrx-2.6.12-inter_module_get.patch,
+  +files/fglrx-2.6.14-access_ok.patch, +files/8.8.25-smp.patch,
+  +files/p1.patch, +files/fglrx-2.6.12-pci_name.patch,
+  +files/fglrx-2.6.14-compat_ioctl.patch, +.#ati-drivers-8.14.13.ebuild.1.1,
+  +files/8.8.25-via-amd64.patch, +files/fglrx-8.14.13-alt-2.6.12-agp.patch,
+  +.#ati-drivers-8.16.20.ebuild.1.2, +files/ioctl32.patch, +metadata.xml,
+  +ati-drivers-8.14.13-r2.ebuild, +ati-drivers-8.14.13-r3.ebuild,
+  +ati-drivers-8.14.13-r4.ebuild, +ati-drivers-8.14.13-r5.ebuild,
+  +ati-drivers-8.16.20.ebuild, +ati-drivers-8.16.20-r1.ebuild,
+  +ati-drivers-8.18.6.ebuild, +ati-drivers-8.18.6-r1.ebuild,
+  +ati-drivers-8.18.8.ebuild, +ati-drivers-8.18.8-r1.ebuild:
+  Moved from media-video/ati-drivers to x11-drivers/ati-drivers.
+
+  06 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.18.8-r1.ebuild:
+  Minor fix for modular X
+
+  05 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.18.8-r1.ebuild:
+  compat_ioctl should apply just on amd64 for now, I'll properly fix later
+
+*ati-drivers-8.18.8-r1 (04 Nov 2005)
+
+  04 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6.14-access_ok.patch,
+  +files/fglrx-2.6.14-compat_ioctl.patch, +ati-drivers-8.18.8-r1.ebuild:
+  New ebuild with linux 2.6.14 and modular X support, thanks to Mike Auty
+  <m.auty@softhome.net> and George L. Emigh <george@georgelemigh.com>, kernel
+  patches from ati unofficial bugzilla
+
+*ati-drivers-8.18.8 (28 Oct 2005)
+
+  28 Oct 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.18.8.ebuild:
+  New version
+
+*ati-drivers-8.18.6-r1 (27 Oct 2005)
+
+  27 Oct 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.18.6-r1.ebuild:
+  New version with improved xorg and gcc support, thanks to Robert Führicht
+  <the_master_of_disaster@gmx.at>
+
+  22 Oct 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.18.6.ebuild:
+  Minor changes
+
+  19 Oct 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.18.6.ebuild:
+  Fix the verify_area/access_ok symbol, as reported in bug #109493 (thank you
+  Alex Giouzenis <agios@computer.org>), fixed the bug #109689 ( thank you Jakub
+  Argasiñski <argasek@tekla.art.pl>)
+
+  16 Oct 2005; Luca Barbato <lu_zero@gentoo.org>
+  files/digest-ati-drivers-8.18.6, Manifest:
+  digest fix
+
+*ati-drivers-8.18.6 (15 Oct 2005)
+
+  15 Oct 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.18.6.ebuild:
+  New version
+
+  08 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  ati-drivers-8.14.13-r3.ebuild, ati-drivers-8.14.13-r5.ebuild:
+  close quotes
+
+  08 Oct 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r3.ebuild, ati-drivers-8.14.13-r5.ebuild:
+  Backported linux-mod fix.
+
+  02 Oct 2005; Chris Bainbridge <chrb@gentoo.org>
+  ati-drivers-8.16.20-r1.ebuild:
+  Fix linux-mod_src_install call so it actually installs fglrx.
+
+  27 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r3.ebuild, ati-drivers-8.14.13-r5.ebuild,
+  ati-drivers-8.16.20-r1.ebuild:
+  Fixed bug #104216
+
+  15 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  files/digest-ati-drivers-8.14.13-r5, Manifest:
+  Fix digest
+
+*ati-drivers-8.16.20-r1 (13 Sep 2005)
+*ati-drivers-8.14.13-r5 (13 Sep 2005)
+
+  13 Sep 2005; Herbie Hopkins <herbs@gentoo.org>
+  +ati-drivers-8.14.13-r5.ebuild, +ati-drivers-8.16.20-r1.ebuild:
+  Fix 32bit dri support on amd64, bug 101539.
+
+  10 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.14.13-r3.ebuild,
+  ati-drivers-8.14.13-r4.ebuild, ati-drivers-8.16.20.ebuild:
+  Make it depend on libstdc++ 5
+
+  04 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.14.13-r2.ebuild:
+  Recovered the latest stable ebuild
+
+*ati-drivers-8.14.13-r4 (03 Sep 2005)
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/3.2.5-linux-2.6.0-test6-mm.patch,
+  -files/fglrx-2.6.10-pci_get_class.patch, -files/8.08-kernel-2.6.10.patch,
+  -files/fglrx-2.6-amd-adv-spec-fix.patch, -files/fglrx-2.6-get-page.patch,
+  -files/fglrx-2.6-makefile.patch, -files/8.14.13-amd64.patch,
+  -files/fglrx-2.6-fix-deprecated.patch, -files/fglrx-2.6-iminor.patch,
+  -files/fglrx-2.6-pagetable.patch, -files/fglrx-2.6-vmalloc-vmaddr.patch,
+  -ati-drivers-8.8.25-r3.ebuild, -ati-drivers-8.10.19.ebuild,
+  -ati-drivers-8.12.10.ebuild, -ati-drivers-8.13.3.ebuild,
+  -ati-drivers-8.13.4.ebuild, -ati-drivers-8.14.13.ebuild,
+  -ati-drivers-8.14.13-r1.ebuild, -ati-drivers-8.14.13-r2.ebuild,
+  ati-drivers-8.14.13-r3.ebuild, +ati-drivers-8.14.13-r4.ebuild,
+  ati-drivers-8.16.20.ebuild:
+  Clean outold cruft.  Revbump to transition to eselect over opengl-update.
+
+  23 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.16.20.ebuild:
+  BSD support
+
+  19 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.16.20.ebuild:
+  8.16.20 seems to have too many issues.
+  8.14.13-r2 marked stable on x86 and amd64
+
+  18 Aug 2005; Luca Barbato <lu_zero@gentoo.org> ChangeLog:
+  Readded ioctl32.patch for amd64
+
+*ati-drivers-8.16.20 (17 Aug 2005)
+
+  17 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.16.20.ebuild:
+  New release, should support both onboard chips and standard ones
+
+  04 Aug 2005; Luca Barbato <lu_zero@gentoo.org> files/p1.patch:
+  Fix a wrong patch, solves bug #101078
+
+*ati-drivers-8.14.13-r3 (04 Aug 2005)
+
+  04 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.14.13-r3.ebuild:
+  dlloader support, thanks to Wolfgang Kroworsch <wolfgang@kroworsch.de> for
+  the updated ebuild
+
+*ati-drivers-8.14.13-r2 (29 Jul 2005)
+
+  29 Jul 2005; Chris Bainbridge <chrb@gentoo.org> +files/ioctl32.patch,
+  +files/fglrx-8.14.13-alt-2.6.12-agp.patch, +files/p1.patch,
+  +ati-drivers-8.14.13-r2.ebuild:
+  Remove 8.14.13-amd64.patch. Add fglrx-8.14.13-alt-2.6.12-agp.patch,
+  ioctl32.patch, p1.patch. Bug #88767.
+
+*ati-drivers-8.13.4 (25 Jun 2005)
+
+  25 Jun 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.13.4.ebuild:
+  New Xpress 200 driver, p.masked as usual since I cannot test it
+
+  25 Jun 2005; Luca Barbato <lu_zero@gentoo.org> +files/8.14.13-amd64.patch,
+  ati-drivers-8.14.13.ebuild, ati-drivers-8.14.13-r1.ebuild:
+  fix for bug #96740, thanks to Marcin Deranekl <gringo@slonko.net> for
+  reporting and providing the patch
+
+  19 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6.12-inter_module_get.patch,
+  files/fglrx-2.6.12-pci_name.patch, ati-drivers-8.14.13.ebuild,
+  ati-drivers-8.14.13-r1.ebuild:
+  Final fix for 2.6.12 support
+
+  19 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6.12-pci_name.patch, ati-drivers-8.14.13.ebuild,
+  ati-drivers-8.14.13-r1.ebuild:
+  Fix for linux 2.6.12
+
+  13 Jun 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.14.13.ebuild,
+  ati-drivers-8.14.13-r1.ebuild:
+  Fix for the latest driver, thanks to Robinson Sathaseevan
+  <robysath@hotmail.com> for pointing out the issue
+
+  11 Jun 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.14.13.ebuild:
+  Fixed wrong URL
+
+  10 Jun 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.14.13.ebuild,
+  ati-drivers-8.14.13-r1.ebuild:
+  Cosmetic change
+
+*ati-drivers-8.14.13-r1 (09 Jun 2005)
+*ati-drivers-8.14.13 (09 Jun 2005)
+
+  09 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.14.13.ebuild, +ati-drivers-8.14.13-r1.ebuild:
+  New version
+
+*ati-drivers-8.13.3 (21 May 2005)
+
+  21 May 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.13.3.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> as usual for the notice
+
+  07 May 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.12.10.ebuild:
+  Marked stable
+
+  04 May 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.12.10.ebuild:
+  fix a bogus code in the ebuild, many thanks to Christoph Nodes
+  <cnodes@gmail.com> for pointing the issue and making me fix it
+
+  26 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  ati-drivers-8.12.10.ebuild:
+  Make sure we have a valid opengl implementation when uninstalling. Closes
+  bug #55142.
+
+  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update herd to x11-drivers.
+
+  18 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  ati-drivers-8.8.25-r3.ebuild:
+  Stable x86.
+
+  17 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -ati-drivers-8.8.25.ebuild:
+  Removing version incompatible with remaining xorg-x11 and opengl-update
+  versions.
+
+  11 Apr 2005; Luca Barbato <lu_zero@gentoo.org> +files/8.8.25-smp.patch,
+  ati-drivers-8.12.10.ebuild:
+  Fix smp issues (bug #72311) and gcc version issues (bug #84834, bug #83897),
+  thanks to every people listed in the bugs for reporting and providing
+  solutions
+
+  10 Apr 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.12.10.ebuild:
+  Marked ~amd64
+
+  10 Apr 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.12.10.ebuild:
+  Added kernel features check, warns if fails, in future it will block the ebuild
+
+*ati-drivers-8.12.10 (08 Apr 2005)
+
+  08 Apr 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.10.19.ebuild,
+  +ati-drivers-8.12.10.ebuild:
+  New version and minor fix, amd64 requires an updated patch.
+
+  07 Apr 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.10.19.ebuild:
+  opengl useflag added
+
+  21 Mar 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.10.19.ebuild:
+  Marked x86
+
+  18 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
+  -files/fglrx-3.2.8-fix-amd-adv-spec.patch,
+  -files/fglrx-3.9.0-allocation.patch, -files/fglrx-3.9.0-regparm.patch,
+  -ati-drivers-3.9.0.ebuild, -ati-drivers-3.9.0-r1.ebuild,
+  -ati-drivers-3.11.1.ebuild, -ati-drivers-3.12.0.ebuild,
+  -ati-drivers-3.14.1.ebuild, -ati-drivers-3.14.6.ebuild:
+  Cleanup
+
+  24 Feb 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.10.19.ebuild:
+  Minor fix, thanks to Karl Tomlinson <tomlinso+gentoo@esu1.auckland.ac.nz>
+
+  18 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  files/fglrx-2.6-pagetable.patch:
+  Another typo fixed, thanks to Mark S <mszilveszter@gmail.com> for reporting it
+
+  17 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  files/fglrx-2.6-pagetable.patch:
+  Fix a typo on the pagetable patch, thanks to Marcelo Penna Guerra
+  <eu@marcelopenna.org> for pointing out
+
+*ati-drivers-8.10.19 (16 Feb 2005)
+
+  16 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.10.19.ebuild:
+  New version
+
+  06 Feb 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
+  Marked x86
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
+  +files/fglrx-2.6-pagetable.patch, ati-drivers-8.8.25-r3.ebuild:
+  4-level page table patch for 2.6.11 kernels (should be ok with =< 2.6.10 too).
+
+  01 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/8.8.25-via-amd64.patch, ati-drivers-8.8.25-r3.ebuild,
+  ati-drivers-8.8.25.ebuild:
+  Minor changes
+
+*ati-drivers-8.8.25 (01 Feb 2005)
+
+  01 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.8.25-r3.ebuild, +ati-drivers-8.8.25.ebuild:
+  Added back an x86 only ebuild, made the custom header install in the X11_DIR
+  instead of /usr/X11R6
+
+  27 Jan 2005; Luca Barbato <lu_zero@gentoo.org> :
+  Fix for bug #78870
+
+  24 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  ati-drivers-8.8.25-r3.ebuild:
+  Adding >=x11-base/opengl-update-2.1_pre1 as an RDEPEND for MesaGL relatedness.
+
+*ati-drivers-8.8.25-r3 (24 Jan 2005)
+
+  24 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -ati-drivers-8.8.25-r1.ebuild, -ati-drivers-8.8.25-r2.ebuild,
+  +ati-drivers-8.8.25-r3.ebuild, -ati-drivers-8.8.25.ebuild:
+  Don't install libMesaGL (bug #47598).  Set proper libdir in .la.
+
+*ati-drivers-8.8.25-r2 (23 Jan 2005)
+
+  23 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.8.25-r2.ebuild:
+  Fixed the libGL.la, solves bug #78937
+
+  21 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.8.25-r1.ebuild:
+  Added back the libGL.la symlink
+
+*ati-drivers-8.8.25-r1 (20 Jan 2005)
+
+  20 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +ati-drivers-8.8.25-r1.ebuild:
+  Multilib cleanups.
+
+  19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
+  typo in the multilib support section, fixed thanks Robert FÃ¼hricht
+  <the_master_of_disaster@gmx.at>
+
+  19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
+  Revert back the include symlink removal
+
+  19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> :
+  fixed amd64 digests
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
+  Added support for amd64, multilib support should work, converted to the
+  linux-mod eclass.
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
+  minor change
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  -files/fglrx-3.7.0-fix-fglrx_panel-includes.patch,
+  -ati-drivers-2.9.12.ebuild, -ati-drivers-2.9.13-r1.ebuild,
+  -ati-drivers-2.9.13.ebuild, -ati-drivers-3.2.0.ebuild,
+  -ati-drivers-3.2.4.ebuild, -ati-drivers-3.2.5-r1.ebuild,
+  -ati-drivers-3.2.5.ebuild, -ati-drivers-3.2.8-r1.ebuild,
+  -ati-drivers-3.2.8-r2.ebuild, -ati-drivers-3.2.8.ebuild,
+  -ati-drivers-3.7.0.ebuild, -ati-drivers-3.7.6-r1.ebuild,
+  -ati-drivers-3.7.6.ebuild:
+  Cleanup
+
+*ati-drivers-8.8.25 (18 Jan 2005)
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.8.25.ebuild:
+  New version, the amd64 support will come later
+
+  08 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/8.08-kernel-2.6.10.patch:
+  Adding the official patch
+
+  27 Dec 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.6.ebuild:
+  Marked x86
+
+  12 Nov 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.6.ebuild:
+  Marked ~x86
+
+*ati-drivers-3.14.6 (11 Nov 2004)
+
+  11 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6.10-pci_get_class.patch, +ati-drivers-3.14.6.ebuild:
+  New version, linux-2.6.10-rc1 partial support added
+
+  08 Oct 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.1.ebuild:
+  Marked stable
+
+  02 Oct 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.1.ebuild:
+  Cleanup + remove a stray patch
+
+*ati-drivers-3.14.1 (02 Oct 2004)
+
+  02 Oct 2004; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-3.14.1.ebuild:
+  New version, it still doesn't work with the latest xorg
+
+  24 Sep 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.12.0.ebuild:
+  Minor fix
+
+  23 Sep 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.12.0.ebuild:
+  Pinning the deps, should be a better way to handle the issue
+
+*ati-drivers-3.12.0 (11 Sep 2004)
+
+  11 Sep 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.11.1.ebuild,
+  +ati-drivers-3.12.0.ebuild:
+  New version and added a check for xorg.
+
+  30 Aug 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.11.1.ebuild:
+  Minor cleanup
+
+*ati-drivers-3.11.1 (09 Aug 2004)
+
+  09 Aug 2004; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-3.11.1.ebuild:
+  New version
+
+  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-2.9.13-r1.ebuild, ati-drivers-3.2.0.ebuild,
+  ati-drivers-3.2.4.ebuild, ati-drivers-3.2.5-r1.ebuild,
+  ati-drivers-3.2.5.ebuild, ati-drivers-3.2.8-r1.ebuild,
+  ati-drivers-3.2.8-r2.ebuild, ati-drivers-3.2.8.ebuild,
+  ati-drivers-3.7.0.ebuild, ati-drivers-3.7.6-r1.ebuild,
+  ati-drivers-3.7.6.ebuild, ati-drivers-3.9.0-r1.ebuild,
+  ati-drivers-3.9.0.ebuild:
+  /usr/src/linux needs ${ROOT}.
+
+  19 Jun 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.9.0-r1.ebuild:
+  Marked stable
+
+  09 Jun 2004; Aron Griffis <agriffis@gentoo.org> ati-drivers-2.9.12.ebuild,
+  ati-drivers-2.9.13-r1.ebuild, ati-drivers-2.9.13.ebuild,
+  ati-drivers-3.2.0.ebuild, ati-drivers-3.2.4.ebuild,
+  ati-drivers-3.2.5-r1.ebuild, ati-drivers-3.2.5.ebuild,
+  ati-drivers-3.2.8-r1.ebuild, ati-drivers-3.2.8-r2.ebuild,
+  ati-drivers-3.2.8.ebuild, ati-drivers-3.7.0.ebuild,
+  ati-drivers-3.7.6-r1.ebuild, ati-drivers-3.7.6.ebuild,
+  ati-drivers-3.9.0.ebuild:
+  Fix use invocation
+
+  03 Jun 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.9.0-r1.ebuild:
+  Reverted the memory allocation patch, added some instructions how to solve
+  that, thanks again Aric Cyr <acyr76@yahoo.ca> for the notice.
+
+*ati-drivers-3.9.0-r1 (02 Jun 2004)
+
+  02 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-3.9.0-allocation.patch, +files/fglrx-3.9.0-regparm.patch,
+  +ati-drivers-3.9.0-r1.ebuild:
+  Various patches to solve different issues, thanks to Tarmo Tanav
+  <sn4ip3r@estprog.ee> for the regparm patch and Aric Cyr <acyr76@yahoo.ca> for
+  the memory allocation fix.
+
+*ati-drivers-3.2.8-r2 (28 May 2004)
+
+  28 May 2004; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-3.2.8-r2.ebuild:
+  Backport from 3.9.0, thanks to Edward Kaplan <theymight.begiants@verizon.net>
+  for asking it and posting an ebuild.
+
+*ati-drivers-3.9.0 (27 May 2004)
+
+  27 May 2004; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-3.9.0.ebuild:
+  New version
+
+  27 May 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6-get-page.patch, ati-drivers-3.7.6-r1.ebuild:
+  Fix for 2.6.7 kernel
+
+  02 May 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-3.7.6-r1.ebuild:
+  Remove needless call to portageq.
+
+  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-3.7.6-r1.ebuild:
+  Provide virtual/opengl (#30107).
+
+  09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-3.7.6-r1.ebuild:
+  Fix X11_IMPLEM. Fix from merkaba@quantumfish.com (#47282).
+
+*ati-drivers-3.7.6-r1 (08 Apr 2004)
+
+  08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-3.7.6-r1.ebuild:
+  Update for xorg-x11 compatibility.
+
+  01 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-2.5.1-r1.ebuild, ati-drivers-2.5.1.ebuild, files/ati-2.5.1.diff:
+  These only work with xfree 4.2 or lower. Since that's not around anymore,
+  these shouldn't be either. Reported by Michael Sterrett
+  <mr_bones_@gentoo.org>.
+
+  11 Mar 2004; Luca Barbato <lu_zero@gentoo.org> :
+  Fixed executable perms
+
+*ati-drivers-3.7.6 (10 Mar 2004)
+
+  10 Mar 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.7.6.ebuild:
+  New version, nwn players beware
+
+*ati-drivers-3.2.8-r1 (24 Feb 2004)
+
+  24 Feb 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8-r1.ebuild:
+  driver only ebuild, optional stuff in ati-drivers-extra
+
+  30 Dec 2003; Martin Schlemmer <azarah@gentoo.org> ati-drivers-3.7.0.ebuild:
+  Fix path to ATI control panel in .desktop files.
+
+*ati-drivers-3.7.0 (30 Dec 2003)
+
+  30 Dec 2003; Martin Schlemmer <azarah@gentoo.org> ati-drivers-3.7.0.ebuild,
+  files/fglrx-3.7.0-fix-fglrx_panel-includes.patch:
+  Update version.  This closes bug #36743, with thanks for ebuild and patch
+  to Alex Plank <aplank@notsohotmail.com>.  Further did a major overhaul of
+  the ebuild - lots of cleanups and form fixes.
+
+  28 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8.ebuild:
+  Marked x86.
+
+  12 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8.ebuild:
+  Small fix: bug #30975, thanks to Wedge_ <wedge__@fastmail.fm> for the
+  suggestion
+
+*ati-drivers-3.2.8 (08 Oct 2003)
+
+  08 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8.ebuild:
+  New version
+
+  07 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.5-r1.ebuild,
+  ati-drivers-3.2.5-r1.ebuild:
+  Removed a patch not required anymore for the latest mm sources.
+
+  02 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.5-r1.ebuild,
+  ati-drivers-3.2.5.ebuild:
+  Make direct use of the provided Makefile
+
+*ati-drivers-3.2.5-r1 (30 Sep 2003)
+
+  30 Sep 2003; Brandon Low <lostlogic@gentoo.org> ati-drivers-3.2.5-r1.ebuild:
+  Add support for most recent -mm kernels (1 line patch) and make ebuild a bit
+  neater
+
+  08 Sep 2003 Luca Barbato <lu_zero@gentoo.org> :
+  Removed old 2.9.8 and 2.9.6 ebuilds
+
+*ati-drivers-3.2.5 (05 Sep 2003)
+  
+  05 Sep 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.5.ebuild:
+  Some typos fixed
+  
+  05 Sep 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.5.ebuild:
+  New Version
+  
+  05 Sep 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.4.ebuild,
+  files/fglrx-2.6-vmalloc-vmaddr.patch:
+  Added a workaround for mm-sources, cleaned a bit the ebuild.
+  thanks to wedge_ for the patch, solves bug #27912
+
+*ati-drivers-3.2.4 (12 Aug 2003)
+
+*ati-drivers-3.2.0 (12 Aug 2003)
+
+  12 Aug 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.0.ebuild,
+  ati-drivers-3.2.4.ebuild, files/fglrx-2.6-amd-adv-spec-fix.patch,
+  files/fglrx-2.6-fix-deprecated.patch, files/fglrx-2.6-makefile.patch:
+  New versions, thanks to Wedge_ for the work.
+
+  22 Jul 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.13-r1.ebuild,
+  ChangeLog: Added experimental support for 2.6 kernels.
+
+*ati-drivers-2.9.13 (03 Jul 2003)
+  
+  03 Jul 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.13.ebuild,
+  ChangeLog: Version bump, support for later board.
+
+*ati-drivers-2.9.12 (19 May 2003)
+  
+  19 May 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.12.ebuild,
+  ChangeLog: Updated, thanks to Koen Geeraerts <ir007252@worldonline.be>
+  for the notice.
+
+  11 May 2003; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-2.5.1-r1.ebuild, ati-2.5.1.diff: Added a patch to solve 
+  bug #20104, backported drobbins' tweaks.
+   
+  01 May 2003; Daniel Robbins <drobbins@gentoo.org>
+  ati-drivers-2.9.8.ebuild: Tweaked compile process to work even with NVIDIA
+  headers (defined USE_GLU,) moved unpack stuff to src_unpack, and removed
+  automatic calls to "opengl-update" (messed up gamecd.) Also unmasking for
+  x86. And no longer installs app sources. And now auto-downloads and unpacks
+  everthing. And dep fixes :)
+
+*ati-drivers-2.9.8 (26 Apr 2003)
+  
+  26 Feb 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.8.ebuild,
+  ChangeLog: New update, should had support to the 9800 serie.
+
+  23 Apr 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.6.ebuild,
+  ati-drivers-2.5.1-r1,ChangeLog : Fix some stuff
+
+*ati-drivers-2.9.6 (3 Apr 2003)
+  3 Apr 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.6.ebuild,
+    ChangeLog :
+    As requested I update the ebuild, I do not suggest the use of those
+    drivers
+
+  1 Mar 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.5.1-r1.ebuild,
+    ChangeLog:
+    make sure that the opengl is set to xfree while compiling and after 
+    unmerge.
+
+*ati-drivers-2.5.1-r1 (3 Feb 2003)
+  3 Feb 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.5.1-r1.ebuild,
+    ChangeLog, files/digest-ati-drivers-2.5.1-r1:
+    add the xfree dependency to avoid the xfree 4.2.99 incompatibility.
+    removed the previous ebuild.
+
+*ati-drivers-2.5.1 (26 Dec 2002)
+  
+  26 Dec 2002;Brad Cowan <bcowan@gentoo.org> ati-drivers-2.5.1.ebuild,
+    ChangeLog, files/digest-ati-drivers-2.5.1: Initial import.
+   
+  29 Nov 2002; Luca Barbato <lu_zero@psxfanatics.com> ati-drivers-2.5.1.ebuild,
+  ChangeLog, files/digest-ati-drivers-2.5.1:
+  Initial ebuild for the ati precompiled drivers.
+  The idea of using cpio is from the icc ebuilds, the rest is from the nvidia-*
+  ebuilds.
+
