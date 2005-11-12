@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.54 2005/10/18 06:53:35 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.55 2005/11/12 12:40:58 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -65,55 +65,58 @@ if [ "$KDEBASE" = "true" ]; then
 	# unset, making src_unpack extract directly from the tarball in distfiles
 	# Does anyone really want to make this code generic based on $TARBALLVER above?
 	case "$PV" in
-		3.4.0_beta1)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-				XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta"
+		3.4.0_beta1)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta"
 				;;
-		3.4.0_beta2)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-				XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta"
+		3.4.0_beta2)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta"
 				;;
-		3.4.0_rc1)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-				XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
+		3.4.0_rc1)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta mirror://kde/unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
 				;;
 		3.4.0)		;; 	# xdeltas break off at first stable version, since most people
 					# don't have prerelease tarballs handy
-		3.4.1)		XDELTA_BASE="stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
-				XDELTA_DELTA="stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta"
+		3.4.1)		XDELTA_BASE="mirror://kde/stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
+				XDELTA_DELTA="mirror://kde/stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta"
 				;;
-		3.4.2)		XDELTA_BASE="stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
-				XDELTA_DELTA="stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta stable/3.4.2/src/$KMNAME-3.4.1-3.4.2.tar.xdelta"
+		3.4.2)		XDELTA_BASE="mirror://kde/stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
+				XDELTA_DELTA="mirror://kde/stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta mirror://kde/stable/3.4.2/src/$KMNAME-3.4.1-3.4.2.tar.xdelta"
 				;;
-		3.5.0_beta2)	XDELTA_BASE="unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
-				XDELTA_DELTA="unstable/3.4.92/src/$KMNAME-3.4.91-3.4.92.tar.xdelta"
+		3.5.0_beta2)	XDELTA_BASE="mirror://kde/unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
+				XDELTA_DELTA="mirror://kde/unstable/3.4.92/src/$KMNAME-3.4.91-3.4.92.tar.xdelta"
+				;;
+		3.5.0_rc1)	XDELTA_BASE="mirror://kde/unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
+				XDELTA_DELTA="mirror://kde/unstable/3.4.92/src/$KMNAME-3.4.91-3.4.92.tar.xdelta mirror://gentoo/$KMNAME-3.4.92-3.5.0_rc1.tar.xdelta"
 				;;
 		*)		;;
 	esac
 
 elif [ "$KMNAME" == "koffice" ]; then
-	SRC_PATH="stable/koffice-$PV/src/koffice-$PV.tar.bz2"
+	SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
 	XDELTA_BASE=""
 	XDELTA_DELTA=""
 	case $PV in
 		1.3.5)
-			SRC_PATH="stable/koffice-$PV/src/koffice-$PV.tar.bz2"
-			XDELTA_BASE="stable/koffice-1.3.4/src/koffice-1.3.4.tar.bz2"
-			XDELTA_DELTA="stable/koffice-1.3.5/src/koffice-1.3.4-1.3.5.tar.xdelta"
+			SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
+			XDELTA_BASE="mirror://kde/stable/koffice-1.3.4/src/koffice-1.3.4.tar.bz2"
+			XDELTA_DELTA="mirror://kde/stable/koffice-1.3.5/src/koffice-1.3.4-1.3.5.tar.xdelta"
 			;;
 		1.4.0_rc1)
-			SRC_PATH="unstable/koffice-1.4-rc1/src/koffice-1.3.98.tar.bz2"
+			SRC_PATH="mirror://kde/unstable/koffice-1.4-rc1/src/koffice-1.3.98.tar.bz2"
 			;;
 		1.4.0)
-			SRC_PATH="stable/koffice-1.4/src/koffice-$PV.tar.bz2"
+			SRC_PATH="mirror://kde/stable/koffice-1.4/src/koffice-$PV.tar.bz2"
 			;;
 	esac
 fi
 
 # Common xdelta code
 if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_URI inside it
-	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
+	SRC_URI="$SRC_URI kdexdeltas? ( $XDELTA_BASE "
 	for x in $XDELTA_DELTA; do
-		SRC_URI="$SRC_URI mirror://kde/$x"
+		SRC_URI="$SRC_URI $x"
 	done
-	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+	SRC_URI="$SRC_URI ) !kdexdeltas? ( $SRC_PATH )"
 else # xdelta don't available, for example with kde 3.4 alpha/beta/rc ebuilds.
 	SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
 fi
