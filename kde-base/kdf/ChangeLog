@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.19 2005/10/22 06:54:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.20 2005/11/12 15:49:28 danarmak Exp $
+
+*kdf-3.5.0_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdf-3.5.0_rc1.ebuild:
+  Ebuild for new version 3.5.0_rc1.
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kdf-3.5_beta1.ebuild:
   Adding ~x86 to keywords

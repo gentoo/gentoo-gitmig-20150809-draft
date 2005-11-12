@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 23a7a4ed162c5f0ff7c930c173c777c1 ChangeLog 2832
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ksync-3.4.1 208
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-ksync-3.4.3 67
 MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-ksync-3.5.0_beta2 212
+MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-ksync-3.5.0_rc1 294
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-ksync-3.5_beta1 68
 MD5 521ed1d679fa08dbd31159c2e4a9a029 ksync-3.4.1.ebuild 528
 MD5 585097ed5d80f18e827256d01a596294 ksync-3.4.3.ebuild 537
 MD5 6c045c30496a2bac8df80c2586ced954 ksync-3.5.0_beta2.ebuild 483
+MD5 6c045c30496a2bac8df80c2586ced954 ksync-3.5.0_rc1.ebuild 483
 MD5 f28160baf6a170e17ad2a18be4b0631f ksync-3.5_beta1.ebuild 514
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDWesqCRZPokWLroQRAkcTAKCdUOfF8tYt0pTDpQROHVlvXr/0+QCdEPSe
-UT/gy7H2btMyCSIzdp7hEy8=
-=8VnQ
------END PGP SIGNATURE-----

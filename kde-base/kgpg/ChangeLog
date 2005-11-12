@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.21 2005/10/15 11:08:43 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.22 2005/11/12 15:49:28 danarmak Exp $
+
+*kgpg-3.5.0_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Dan Armak <danarmak@gentoo.org> +kgpg-3.5.0_rc1.ebuild:
+  Ebuild for new version 3.5.0_rc1.
 
 *kgpg-3.5.0_beta2 (14 Oct 2005)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.18 2005/10/22 07:55:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.19 2005/11/12 15:49:31 danarmak Exp $
+
+*korundum-3.5.0_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Dan Armak <danarmak@gentoo.org> +korundum-3.5.0_rc1.ebuild:
+  Ebuild for new version 3.5.0_rc1.
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> korundum-3.5.0_beta2.ebuild:
   Adding ~x86 to keywords

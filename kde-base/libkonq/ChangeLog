@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.22 2005/10/20 23:10:07 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.23 2005/11/12 15:49:35 danarmak Exp $
+
+*libkonq-3.5.0_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Dan Armak <danarmak@gentoo.org> +libkonq-3.5.0_rc1.ebuild:
+  Ebuild for new version 3.5.0_rc1.
 
   20 Oct 2005; Douglas Russell <puggy@gentoo.org>
   libkonq-3.5.0_beta2.ebuild:

@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.283 2005/10/18 19:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.284 2005/11/12 15:49:26 danarmak Exp $
+
+*kdelibs-3.5.0_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdelibs-3.5.0_rc1.ebuild:
+  Ebuild for new version 3.5.0_rc1.
+
+*kdelibs-3.5.0_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdelibs-3.5.0_rc1.ebuild:
+  Ebuild for new version 3.5.0_rc1. This is package.masked since it's a
+  prerelease.
 
   18 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   +files/kdelibs-3.4.3-inttypes.patch, kdelibs-3.4.3.ebuild:

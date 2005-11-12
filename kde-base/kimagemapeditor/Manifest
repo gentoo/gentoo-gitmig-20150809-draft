@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 384c79a160400879fb732d66f3a72110 ChangeLog 3050
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kimagemapeditor-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kimagemapeditor-3.4.2 292
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kimagemapeditor-3.4.3 69
+MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-kimagemapeditor-3.5.0_rc1 304
 MD5 dbf048ce767888392930a6446896b4c7 files/digest-kimagemapeditor-3.5_beta1 70
 MD5 e7931928e133dc7f3db0efb9eb8975c1 kimagemapeditor-3.4.1.ebuild 400
 MD5 7b060ffc2d95147cb3a0c4a863a8ce1e kimagemapeditor-3.4.2.ebuild 413
 MD5 65cba17ed585c767d409d5ddaa970d35 kimagemapeditor-3.4.3.ebuild 415
+MD5 67cd7e8507fcdccfc07f44dbc30571f9 kimagemapeditor-3.5.0_rc1.ebuild 392
 MD5 d848e60721e3a3c335c345efced9acd4 kimagemapeditor-3.5_beta1.ebuild 400
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDWeQLCRZPokWLroQRAhHiAJ4/knuF+JStGb8NtdiT7TIaW8tA/gCgmrQI
-CM+gS2qSsDfQVNL7U2ivZik=
-=VRdX
------END PGP SIGNATURE-----
