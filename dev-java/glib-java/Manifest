@@ -1,0 +1,6 @@
+MD5 9f1dc97d56e7adca87f4e9b5fe55b1cd ChangeLog 439
+MD5 6f1550893a37966aca2b2c7ceb220b71 files/aclocal_voodoo.patch 749
+MD5 1d2e28a6488384bd29477c8488017453 files/digest-glib-java-0.2.1 67
+MD5 b1e11a9eba5947c307093c7e951155fe files/jg_common-macromagic.patch 482
+MD5 7ed2be06f236732c5dd1a74c7260fdfe glib-java-0.2.1.ebuild 1955
+MD5 5c652987877650c412fa53be7fdc9210 metadata.xml 351

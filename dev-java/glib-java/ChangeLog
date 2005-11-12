@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/glib-java
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.1 2005/11/12 23:28:39 compnerd Exp $
+
+*glib-java-0.2.1 (12 Nov 2005)
+
+  12 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/aclocal_voodoo.patch, +files/jg_common-macromagic.patch,
+  +metadata.xml, +glib-java-0.2.1.ebuild:
+  Initial import of glib-java.
+
