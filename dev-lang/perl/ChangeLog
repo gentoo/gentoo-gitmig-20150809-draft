@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.163 2005/10/02 00:54:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.164 2005/11/12 10:37:55 chriswhite Exp $
+
+  12 Nov 2005; Chris White <chriswhite@gentoo.org> perl-5.8.6-r6.ebuild:
+  Backported some get_libdir functionality from 5.8.7 to 5.8.6-r6 to resolve
+  bug #112243. This is mainly a multi-lib support fix it seems.
 
   02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.7-r1.ebuild:
   Stable on ia64, bug 106678.
