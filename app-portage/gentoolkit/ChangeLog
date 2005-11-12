@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.58 2005/11/10 21:37:57 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.59 2005/11/12 15:53:37 fuzzyray Exp $
+
+*gentoolkit-0.2.1_rc1 (12 Nov 2005)
+
+  12 Nov 2005; Paul Varner <fuzzyray@gentoo.org>
+  +gentoolkit-0.2.1_rc1.ebuild:
+  First release candidate for stable.  Fixes the following bugs: #75983, #85653,
+  #90384, #99191, #109392
 
 *gentoolkit-0.2.0-r3 (10 Nov 2005)
 
