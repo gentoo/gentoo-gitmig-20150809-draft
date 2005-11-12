@@ -1,4 +1,4 @@
-MD5 8637c8dbfc8abe0e9f51b11886437ec4 ChangeLog 10974
+MD5 3782305b6f92017d9435f6f11881f629 ChangeLog 11138
 MD5 c18e90be9c36c7efb06211733ad765ff files/1.2.7-debugflag.patch 396
 MD5 5f64e4b71c311ff7b6489953fc8bf1f9 files/1.2.7-nptl.patch 1178
 MD5 5dbb2a47d1d863a55f564e874c871d30 files/1.3.0-gpgme3_hack.patch 878
@@ -8,7 +8,9 @@ MD5 60faacd9044ad4dd88db77e0bd53dc7f files/1.3.2-email_typo.patch 620
 MD5 3795e526fdf015e985be17fca698e2d1 files/digest-licq-1.2.7 64
 MD5 b0a924ef22c21dd596d7918631f18559 files/digest-licq-1.3.0 64
 MD5 b7d176e7d3091d82fed1f4931604b327 files/digest-licq-1.3.2 64
+MD5 b7d176e7d3091d82fed1f4931604b327 files/digest-licq-1.3.2-r1 64
 MD5 f30c97a120a37f90edd8abdf612cd52a licq-1.2.7.ebuild 3368
 MD5 f8691d71dd37438ad228897e6e32b908 licq-1.3.0.ebuild 3800
+MD5 39976c399125cfc20eb56d93a9c13bdd licq-1.3.2-r1.ebuild 4997
 MD5 be3db28b37bde83712d9f00b55ffc640 licq-1.3.2.ebuild 4868
 MD5 7adc6310a4dbd42bad26caa80683d4ec metadata.xml 249
