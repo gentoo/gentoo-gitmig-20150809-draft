@@ -9,12 +9,12 @@ MD5 dc88a6c8a1a049ee0aa85387225bdc3d files/digest-gnomebaker-0.5.0 69
 MD5 d208ff69b17a886c9f8904a65a9b7f63 gnomebaker-0.4.1.ebuild 1078
 MD5 7fb9a181e1ab15ca966dfc2eeb37968e gnomebaker-0.4.2.ebuild 1100
 MD5 1e83d407e119c06c0950cff283758e71 gnomebaker-0.4.ebuild 1075
-MD5 b534e5dc7aa1fb04974fedbc2670aa32 gnomebaker-0.5.0.ebuild 1106
+MD5 1bb1c1ea903117c01423888e9cce475e gnomebaker-0.5.0.ebuild 1108
 MD5 261972da02920d2246124b6fc395ac37 metadata.xml 168
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDdjZQwUpWvClEHQoRAi9HAJoCmxrEpAE/0jlQG18W2BV8PgYiuQCfTjhT
-rBTE48vozXyoHg92kbrMJow=
-=4tIz
+iD8DBQFDdjaxwUpWvClEHQoRAg5rAJ4wpA4v58ymRNN4AN1DprhnvJicZgCeMZU7
+EQntzo5y3Oa6pauiOJDYRMo=
+=Emcz
 -----END PGP SIGNATURE-----

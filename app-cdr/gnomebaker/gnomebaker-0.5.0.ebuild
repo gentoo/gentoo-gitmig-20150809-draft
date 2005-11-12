@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.0.ebuild,v 1.2 2005/11/12 18:36:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.0.ebuild,v 1.3 2005/11/12 18:38:34 metalgod Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ IUSE="dvdr nls mp3 flac vorbis"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=gnome-base/libglade-2.0
-	>=gnome-base/libgnome-2.10
+	>=gnome-base/libgnomeui-2.10
 	>=media-libs/libogg-1.1.2
 	media-libs/gstreamer"
 
