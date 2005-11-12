@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.11.ebuild,v 1.6 2005/04/08 17:42:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.11.ebuild,v 1.7 2005/11/12 17:27:47 metalgod Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86 ppc64"
+KEYWORDS="amd64 ppc ppc64 ~sparc ~x86"
 
 RDEPEND="media-sound/xmms
 	>=media-libs/bio2jack-0.4
