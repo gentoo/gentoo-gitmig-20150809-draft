@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.4.ebuild,v 1.2 2005/10/22 06:48:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.4.ebuild,v 1.3 2005/11/12 22:48:12 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -100,7 +100,6 @@ src_compile() {
 		--with-docdir=/usr/share/doc/${PF} \
 		--libdir=/usr/$(get_libdir) \
 		--enable-depend \
-		--with-gnu-ld \
 		$myconf || die
 
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.8.ebuild,v 1.5 2005/10/22 06:48:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.8.ebuild,v 1.6 2005/11/12 22:48:12 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
@@ -131,7 +131,6 @@ src_compile() {
 		--libdir=/usr/$(get_libdir) \
 		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
-		--with-gnu-ld \
 		--with-maxbackends=${MAX_CONNECTIONS} \
 		$myconf || die
 

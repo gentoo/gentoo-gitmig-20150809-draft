@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.9-r1.ebuild,v 1.11 2005/10/22 06:48:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.9-r1.ebuild,v 1.12 2005/11/12 22:48:12 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -107,7 +107,6 @@ src_compile() {
 		--libdir=/usr/lib \
 		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
-		--with-gnu-ld \
 		--with-maxbackends=1024 \
 		$myconf || die
 
