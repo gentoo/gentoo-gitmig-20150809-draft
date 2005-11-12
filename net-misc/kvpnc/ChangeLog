@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/kvpnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.13 2005/10/30 01:28:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.14 2005/11/12 21:18:22 voxus Exp $
+
+*kvpnc-0.8.1 (13 Nov 2005)
+
+  13 Nov 2005; Konstantin Arkhipov <voxus@gentoo.org> +kvpnc-0.8.1.ebuild:
+  Version bump, closing bug #112330. Sparc keyword dropped due to new
+  crpyto++ dependency.
 
   30 Oct 2005; Konstantin Arkhipov <voxus@gentoo.org> -kvpnc-0.7.ebuild,
   kvpnc-0.7.2.ebuild, kvpnc-0.8.ebuild:
