@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.16 2005/10/14 01:38:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.17 2005/11/12 15:46:21 mcummings Exp $
+
+*crypt-cbc-2.15 (12 Nov 2005)
+
+  12 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  +crypt-cbc-2.15.ebuild:
+  Version bump upstream
 
   14 Oct 2005; Aron Griffis <agriffis@gentoo.org> crypt-cbc-2.11.ebuild:
   Mark 2.11 stable on alpha
