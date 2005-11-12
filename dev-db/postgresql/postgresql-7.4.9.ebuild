@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.9.ebuild,v 1.3 2005/11/12 22:48:12 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.9.ebuild,v 1.4 2005/11/12 23:09:52 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
@@ -61,6 +61,10 @@ pkg_setup() {
 			exit 1
 		fi
 	fi
+	enewgroup postgres 70 \
+		|| die "problem adding group postgres"
+	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres \
+		|| die "problem adding user postgres"
 }
 
 check_java_config() {
