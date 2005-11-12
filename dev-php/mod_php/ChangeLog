@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.292 2005/11/06 18:56:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.293 2005/11/12 21:29:53 ranger Exp $
+
+  12 Nov 2005; Brent Baude <ranger@gentoo.org> mod_php-4.3.11-r4.ebuild,
+  mod_php-4.4.0-r8.ebuild, mod_php-4.4.0-r9.ebuild:
+  Marking mod_php-4.4.0-r9 && mod_php-4.4.0-r8 && mod_php-4.3.11-r4 ppc64
+  stable per 111032
 
   06 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
   files/php4.3.11-pcre-security.patch, files/php4.4.0-pcre-security.patch:
