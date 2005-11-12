@@ -30,11 +30,11 @@ MD5 18ddb38a7595329ad585c74ee979ffaf nvidia-glx-1.0.7167-r3.ebuild 8284
 MD5 630dc45be727342243d06af61e06d6dd nvidia-glx-1.0.7174-r5.ebuild 8446
 MD5 413c2a51514bb61b54b1c9f3ae2e6463 nvidia-glx-1.0.7667-r1.ebuild 8446
 MD5 226c3e5fe5d6e5be93b0a3937e563c06 nvidia-glx-1.0.7676-r1.ebuild 9204
-MD5 a699cf5ee272cc61bb943c77bbfe75f9 nvidia-glx-1.0.7676-r2.ebuild 9321
+MD5 a41f37198145f27b1bd3f674d191e0d2 nvidia-glx-1.0.7676-r2.ebuild 9287
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDdOi61ZcsMnZjRyIRAiITAJ9rF1gl8smdr+osDSvcb1Rk7UL44gCfX/pw
-GK5jAfve4KLd7afNMLI4Hl4=
-=l3S/
+iD8DBQFDdVx91ZcsMnZjRyIRAppXAJ9yxSG65Ld6bitwnirD1MxOeNmJZACfR08i
+bf/YlCD9e6UelHfes2zhsOM=
+=BAyr
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r2.ebuild,v 1.2 2005/11/11 18:49:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r2.ebuild,v 1.3 2005/11/12 03:03:37 azarah Exp $
 
 inherit eutils multilib versionator
 
@@ -250,9 +250,7 @@ src_install-libs() {
 
 pkg_preinst() {
 	# Can we make up our minds ?!?!?
-	[[ -n ${IMAGE} ]] && \
-		NV_D="${IMAGE}" || \
-		NV_D="${D}"
+	local NV_D=${IMAGE:-${D}}
 
 	if ! has_version x11-base/xorg-server ; then
 		for dir in lib lib32 lib64 ; do
