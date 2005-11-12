@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e64cbee02429b94e01a2114bd4302e7b ChangeLog 1276
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 cec94efdc27bc47ce7cefb94ca787a14 xmms-jess-2.9.1.ebuild 760
+MD5 3c699b7f818bc4565d2b16017b381099 ChangeLog 1487
 MD5 f4856328ab7b220af943402e1dc92475 files/digest-xmms-jess-2.9.1 62
+MD5 f4856328ab7b220af943402e1dc92475 files/digest-xmms-jess-2.9.1-r1 62
+MD5 6e770b3e58478540ee969f83929e15e4 files/xmms-jess-2.9.1-fixissues.patch 6026
 MD5 54c6a61d455728c63b489b057d9d4f3d files/xmms-jess-2.9.1-gcc34.patch 973
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 f7e1a9ea76e9e7c0a4d0e0466e86f71e xmms-jess-2.9.1-r1.ebuild 769
+MD5 cec94efdc27bc47ce7cefb94ca787a14 xmms-jess-2.9.1.ebuild 760
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGsy0j5H05b2HAEkRArLeAJ4n2rOb3DVt6r8VrhqO1hycMT+lgACcCMpu
-VhjdGDa6s2CJdDZro6InjGg=
-=bHlB
+iD8DBQFDdjEDwUpWvClEHQoRAtKtAJ9w7k1jdrZ8L6xnMXXLW9Pzm/r73QCfSO7i
+aM+AIgmxUPjk6cSrpUfQfxQ=
+=pLgu
 -----END PGP SIGNATURE-----
