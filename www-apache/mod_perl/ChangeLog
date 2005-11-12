@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.11 2005/08/25 09:12:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.12 2005/11/12 16:25:09 mcummings Exp $
+
+  12 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  mod_perl-1.27-r1.ebuild, mod_perl-1.27-r2.ebuild, mod_perl-1.27-r4.ebuild,
+  mod_perl-1.29.ebuild:
+  Fixed config syntax, bug 109482
 
   25 Aug 2005; Michael Cummings <mcummings@gentoo.org>
   mod_perl-1.99.11.ebuild, mod_perl-1.99.16.ebuild, mod_perl-2.0.1-r1.ebuild,
