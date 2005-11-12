@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 65dbf927ad917c6dbfdff95290ffb30d ChangeLog 912
 MD5 3b2985c7057b5000b272a85ad2fe5a77 files/digest-gmfsk-0.6 61
 MD5 3b2985c7057b5000b272a85ad2fe5a77 files/digest-gmfsk-0.6-r1 61
 MD5 6f6f711166a2d339c81540d1ef9954af files/gmfsk-patch-mt63_dsp.h 800
 MD5 5298f11cf6f4925cab324d5f1b6cdcbb gmfsk-0.6-r1.ebuild 955
 MD5 99f43feef7b504ee834ec897ce0e74e0 gmfsk-0.6.ebuild 829
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDdj2cKf2g/qXtneoRAl8/AJwPl/2xYA8eOx/GAj64Tzbx901ZswCeIFAi
+hkl1nd1JxuYoHZLwqW7DuQQ=
+=vKSL
+-----END PGP SIGNATURE-----

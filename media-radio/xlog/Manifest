@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1ecbbd460b318a1b1eb5ad708843090f ChangeLog 5899
 MD5 cdcd0221e0bc5d8be27eb3ba47d55cee files/digest-xlog-0.9.12 63
 MD5 d0afee6be83642f398db70c755d275c8 files/digest-xlog-0.9.7 63
@@ -7,3 +10,10 @@ MD5 e520958231d2dbdfbdd7a4e82a0f2788 xlog-0.9.12.ebuild 840
 MD5 b087b9ca3eacc1b21199c9cf94af42a9 xlog-0.9.7.ebuild 830
 MD5 2858df15a9052107b3c57873f59458c6 xlog-1.1.ebuild 810
 MD5 e6949d7de520e58ed9fc7c2d221b1b33 xlog-1.2.2.ebuild 690
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDdj1IKf2g/qXtneoRAj4hAKC1Z307eraylxLCv7E6xSCkRvxFjACfRtTX
+y8/lfYAzL6H2JxaflQMT5Pg=
+=uO0p
+-----END PGP SIGNATURE-----
