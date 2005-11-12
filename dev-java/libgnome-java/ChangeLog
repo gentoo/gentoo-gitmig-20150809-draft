@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/libgnome-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.11 2005/09/11 11:25:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.12 2005/11/12 23:40:45 compnerd Exp $
+
+*libgnome-java-2.12.1 (12 Nov 2005)
+
+  12 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml,
+  +libgnome-java-2.12.1.ebuild:
+  Version bump with mask
 
   11 Sep 2005; Thomas Matthijs <axxo@gentoo.org>
   libgnome-java-2.8.3.1.ebuild:
