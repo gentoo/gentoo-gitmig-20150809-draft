@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/ltris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.11 2005/10/09 00:40:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.12 2005/11/12 06:59:07 mr_bones_ Exp $
+
+  12 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org> ltris-1.0.11.ebuild:
+  stable for x86
 
 *ltris-1.0.11 (09 Oct 2005)
 
