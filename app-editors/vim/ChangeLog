@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.194 2005/11/12 00:02:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.195 2005/11/12 01:16:59 voxus Exp $
+
+  12 Nov 2005; Konstantin Arkhipov <voxus@gentoo.org> vim-6.4.ebuild:
+  Stable on amd64.
 
   12 Nov 2005; Andrej Kacian <ticho@gentoo.org> vim-6.4.ebuild:
   Stable on x86, bug #112226.

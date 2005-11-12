@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.4.ebuild,v 1.2 2005/11/12 00:12:46 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.4.ebuild,v 1.3 2005/11/12 01:16:58 voxus Exp $
 
 inherit vim
 
@@ -19,7 +19,7 @@ SRC_URI="${SRC_URI}
 
 S=${WORKDIR}/vim${VIM_VERSION/.}
 DESCRIPTION="GUI version of the Vim text editor"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="gnome gtk motif nls"
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
