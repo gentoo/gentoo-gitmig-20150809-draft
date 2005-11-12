@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.ebuild,v 1.1 2005/08/26 23:15:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.ebuild,v 1.2 2005/11/12 10:42:54 mr_bones_ Exp $
 
 inherit distutils eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://alpha.uhasselt.be/Research/Algebra/Members/pytraffic/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-python/pygame
