@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2e966310c397cd365610cfc6b8c2b01e wordnet-2.0.ebuild 925
-MD5 547ea0d4e8412cfb88940286834867f7 ChangeLog 829
+MD5 6773910be9415e12e50741b874e53746 wordnet-2.0.ebuild 973
+MD5 1d99fe4cfcc0daba6940b565c025f3d2 ChangeLog 1038
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+MD5 6c0a2d852702e5e23085ce1cbe80c665 files/wordnet-2.0-macos.patch 287
 MD5 295bc3b2d65fc6db177d69c4e54491a5 files/Makefiles.diff 2633
 MD5 660184f847c527e0e6a1024bb0c44318 files/digest-wordnet-2.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCajAt06ebR+OMO78RAm9nAJ4mu4Kur+nA2p+xwM+COnmRFgmkPgCggIK+
-nOhWwXs+Y+NmmtxZ26yetUw=
-=gw9d
------END PGP SIGNATURE-----

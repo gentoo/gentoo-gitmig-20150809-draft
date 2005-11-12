@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.5 2005/04/23 11:23:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.6 2005/11/12 17:50:44 grobian Exp $
 
 inherit eutils
 
@@ -12,12 +12,13 @@ DEPEND="dev-lang/tcl
 LICENSE="Princeton"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 S=${WORKDIR}/WordNet-${PV}
 
 src_unpack() {
 	unpack $A
 	epatch ${FILESDIR}/Makefiles.diff
+	epatch "${FILESDIR}/${P}"-macos.patch
 }
 
 src_compile() {
