@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.26 2005/11/09 05:57:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.27 2005/11/12 23:23:59 genstef Exp $
+
+  12 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  madwifi-driver-0.1_pre20051031.ebuild:
+  Add wlan_scan_sta, wlan_scan_ap, postinst einfo note, new homepage, extra
+  docs, madwifi-tools DEPEND
 
 *madwifi-driver-0.1_pre20051031 (09 Nov 2005)
 

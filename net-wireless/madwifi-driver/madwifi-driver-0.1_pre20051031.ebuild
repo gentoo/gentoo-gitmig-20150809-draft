@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051031.ebuild,v 1.1 2005/11/09 05:57:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051031.ebuild,v 1.2 2005/11/12 23:23:59 genstef Exp $
 
 inherit linux-mod
 
 MADWIFI_SVN_REV="1227"
 DESCRIPTION="Wireless driver for Atheros chipset a/b/g cards"
-HOMEPAGE="http://madwifi.sourceforge.net/"
+HOMEPAGE="http://www.madwifi.org"
 SRC_URI="http://snapshots.madwifi.org/madwifi-trunk-r${MADWIFI_SVN_REV}-${PV:7:8}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND="app-arch/sharutils"
-RDEPEND=""
+RDEPEND=">=net-wireless/madwifi-tools-0.1_pre20051031"
 S=${WORKDIR}/madwifi-trunk-r${MADWIFI_SVN_REV}-${PV:7:8}
 CONFIG_CHECK="NET_RADIO"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
@@ -25,9 +25,10 @@ pkg_setup() {
 	use ppc && TARGET=powerpc-be-eabi
 	MODULE_NAMES="ath_hal(net:${S}/ath_hal)	wlan(net:${S}/net80211) wlan_acl(net:${S}/net80211)
 		wlan_ccmp(net:${S}/net80211) wlan_tkip(net:${S}/net80211) wlan_wep(net:${S}/net80211)
-		wlan_xauth(net:${S}/net80211) ath_rate_onoe(net:${S}/ath_rate/onoe)
+		wlan_xauth(net:${S}/net80211) wlan_scan_sta(net:${S}/net80211) wlan_scan_ap(net:${S}/net80211)
 		ath_rate_onoe(net:${S}/ath_rate/onoe)
 		ath_rate_sample(net:${S}/ath_rate/sample) ath_pci(net:${S}/ath)"
+	#	does not compile ath_rate_amrr(net:${S}/ath_rate/amrr)
 	BUILD_PARAMS="KERNELPATH=${ROOT}${KV_OUT_DIR} KERNELRELEASE=${KV_FULL}
 		TARGET=${TARGET} TOOLPREFIX=/usr/bin/"
 	BUILD_TARGETS="all"
@@ -47,7 +48,7 @@ src_unpack() {
 src_install() {
 	linux-mod_src_install
 
-	dodoc README COPYRIGHT
+	dodoc README COPYRIGHT docs/users-guide.pdf docs/WEP-HOWTO.txt
 
 	# install headers for use by
 	# net-wireless/wpa_supplicant and net-wireless/hostapd
@@ -61,8 +62,21 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	einfo ""
-	einfo "The madwifi drivers create an interface named 'athX'"
-	einfo "Create /etc/init.d/net.ath0 and add a line for athX"
-	einfo "in /etc/conf.d/net"
-	einfo ""
+	einfo "You need to create athX using wlanconfig"
+	einfo "Baselayout will do that with the following in /etc/conf.d/net:"
+	cat <<EOF
+preup() {
+	if [ "${IFACE}" = "ath0" ]; then
+		/sbin/wlanconfig ath0 create wlandev wifi0 wlanmode sta
+		return $?
+	fi
+}
+ 
+postdown() {
+	if [ "${IFACE}" = "ath0" ]; then
+		/sbin/wlanconfig ath0 destroy
+		return $?
+	fi
+}
+EOF
 }
