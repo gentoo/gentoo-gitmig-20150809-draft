@@ -1,4 +1,4 @@
-MD5 891d0074473efbd2233941cd18d6f7a7 ChangeLog 3282
+MD5 56454c1a4c281ba4d9cf7165c355a978 ChangeLog 3468
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kdeaccessibility-iconthemes-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kdeaccessibility-iconthemes-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-iconthemes-3.4.3 76
@@ -9,6 +9,6 @@ MD5 711fa18fa936b375e5d1f7be92a09f72 kdeaccessibility-iconthemes-3.4.1.ebuild 48
 MD5 e1672d47e6f0b710288757784135c351 kdeaccessibility-iconthemes-3.4.2.ebuild 499
 MD5 ccf34da7d9bd3ce4deeb664b7d334933 kdeaccessibility-iconthemes-3.4.3.ebuild 501
 MD5 e1bce11974e63251102b4145ce0a787d kdeaccessibility-iconthemes-3.5.0_beta2.ebuild 480
-MD5 e1bce11974e63251102b4145ce0a787d kdeaccessibility-iconthemes-3.5.0_rc1.ebuild 480
+MD5 17a8496e895e849055c071bd6256a1ca kdeaccessibility-iconthemes-3.5.0_rc1.ebuild 479
 MD5 057c4bfe1e4454ef7aac92a192db4707 kdeaccessibility-iconthemes-3.5_beta1.ebuild 478
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

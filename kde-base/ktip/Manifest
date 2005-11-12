@@ -1,4 +1,4 @@
-MD5 2e04f511a8d1933135978ed7ea9a695e ChangeLog 2769
+MD5 ee9b399be2ad6fef1672a8b5de8f9ef7 ChangeLog 2909
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ktip-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ktip-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ktip-3.4.3 68
@@ -9,6 +9,6 @@ MD5 714cdec14532c8effa7385165a847ad5 ktip-3.4.1.ebuild 386
 MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.2.ebuild 399
 MD5 7dff5934cb98b2d9917ca8f0c11046bf ktip-3.4.3.ebuild 401
 MD5 7d52f07571c21e8dd21174fbb4cdd625 ktip-3.5.0_beta2.ebuild 380
-MD5 7d52f07571c21e8dd21174fbb4cdd625 ktip-3.5.0_rc1.ebuild 380
+MD5 0e693c7dcca0f6fecc2b21a482c45176 ktip-3.5.0_rc1.ebuild 379
 MD5 cc09b948dd856141826c7a1aa621fd59 ktip-3.5_beta1.ebuild 378
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

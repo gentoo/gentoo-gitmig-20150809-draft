@@ -1,4 +1,4 @@
-MD5 7a4916e462575ced09eb7333134ac66a ChangeLog 3203
+MD5 1388ecc279bb4f30ad82574a788a00c3 ChangeLog 3357
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcheckpass-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcheckpass-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcheckpass-3.4.3 68
@@ -10,6 +10,6 @@ MD5 b401a538cf13f910f1d1feaf4c6af086 kcheckpass-3.4.1.ebuild 517
 MD5 c6405bea7c47189c312b88797fac75c6 kcheckpass-3.4.2.ebuild 529
 MD5 414ed7724cc4369d795b1fa77e950561 kcheckpass-3.4.3.ebuild 531
 MD5 3bb52311ac100edf44ac503b15eb240d kcheckpass-3.5.0_beta2.ebuild 664
-MD5 3bb52311ac100edf44ac503b15eb240d kcheckpass-3.5.0_rc1.ebuild 664
+MD5 2682b160a7e8db39d335c3bf1c6e2529 kcheckpass-3.5.0_rc1.ebuild 665
 MD5 d8e6f992e888f8a83ce7e3d10553f6bc kcheckpass-3.5_beta1.ebuild 511
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

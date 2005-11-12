@@ -1,4 +1,4 @@
-MD5 7fb68d31516f18ea73536d797134f01f ChangeLog 3280
+MD5 fd8e2a2a3e495ef4e0ccc4b8e4c8d0b5 ChangeLog 3436
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1-r1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khelpcenter-3.4.2 287
@@ -11,6 +11,6 @@ MD5 a158fe8d8cf86fa350a761f90c9394d4 khelpcenter-3.4.1.ebuild 399
 MD5 de16b613dd354c9f6358995c94e460c3 khelpcenter-3.4.2.ebuild 482
 MD5 cfbd15720377cdcb08428bab166e0877 khelpcenter-3.4.3.ebuild 484
 MD5 673c0b6dd39047cb43981ba97c43ed8b khelpcenter-3.5.0_beta2.ebuild 466
-MD5 673c0b6dd39047cb43981ba97c43ed8b khelpcenter-3.5.0_rc1.ebuild 466
+MD5 6098e318d9ff7ab9e07f1adb3254ed61 khelpcenter-3.5.0_rc1.ebuild 467
 MD5 9c3da7a029e48bd7bd812648e7761a00 khelpcenter-3.5_beta1.ebuild 464
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

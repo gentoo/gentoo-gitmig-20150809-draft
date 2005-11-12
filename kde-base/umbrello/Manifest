@@ -1,4 +1,4 @@
-MD5 d9618925fc5652eeee53674779e280c4 ChangeLog 3164
+MD5 a578955b25b5a86f436b6de4464bc568 ChangeLog 3312
 MD5 9b4e9e38740207531ab771519519d01e files/digest-umbrello-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-umbrello-3.4.2 280
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-umbrello-3.4.3 66
@@ -13,5 +13,5 @@ MD5 15c59514c459c17d1785f7a7eaf3efea umbrello-3.4.1.ebuild 390
 MD5 d90d841849894a72dda6b8329d44183b umbrello-3.4.2.ebuild 398
 MD5 d7daf221c28c642a2377ce35807ec5d1 umbrello-3.4.3.ebuild 398
 MD5 bf769ffa174a4d2c7561c4cfbb1da22a umbrello-3.5.0_beta2.ebuild 383
-MD5 bf769ffa174a4d2c7561c4cfbb1da22a umbrello-3.5.0_rc1.ebuild 383
+MD5 ab4aea069b2646bc5b097cdd43bb0c08 umbrello-3.5.0_rc1.ebuild 382
 MD5 94d4e5502048ac39cc91428ad2bef924 umbrello-3.5_beta1-r1.ebuild 550

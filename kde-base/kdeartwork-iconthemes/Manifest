@@ -1,4 +1,4 @@
-MD5 6bbc069416b892ac1c280b47b7262412 ChangeLog 3417
+MD5 73a1de2618d8d65670b0a5b7be2ae8d2 ChangeLog 3591
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-iconthemes-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-iconthemes-3.4.2 298
 MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-iconthemes-3.4.3 71
@@ -9,6 +9,6 @@ MD5 49c82deba802d55d2811f10d0438d9b1 kdeartwork-iconthemes-3.4.1.ebuild 435
 MD5 ceca23e226349a196bb13bb517b44830 kdeartwork-iconthemes-3.4.2.ebuild 448
 MD5 dafc043cee20557b1aae7e26ec669820 kdeartwork-iconthemes-3.4.3.ebuild 450
 MD5 1e9da6e78d11476167534dbc855474d5 kdeartwork-iconthemes-3.5.0_beta2.ebuild 429
-MD5 1e9da6e78d11476167534dbc855474d5 kdeartwork-iconthemes-3.5.0_rc1.ebuild 429
+MD5 8557520d8e984bfb0d72a94c4dd67cd4 kdeartwork-iconthemes-3.5.0_rc1.ebuild 428
 MD5 4e588b6a9424c3523013051054a6062b kdeartwork-iconthemes-3.5_beta1.ebuild 427
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

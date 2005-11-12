@@ -4,5 +4,5 @@ MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kode-3.4.3 67
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kode-3.5_beta1 68
 MD5 3b6dedfbeddb8eb849bc3c7b1b726d2f kode-3.4.1.ebuild 385
 MD5 69c153dd7ca617183231013f1c6ebe5e kode-3.4.3.ebuild 389
-MD5 ff6277b455e7dd5aa757b22bc744f9d4 kode-3.5_beta1.ebuild 377
+MD5 9ec566b38da9dfcb7cb1ec96ba2b04e2 kode-3.5_beta1.ebuild 378
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
