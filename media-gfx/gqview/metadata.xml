@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>graphics</herd>
 <maintainer>
-<email>avenj@gentoo.org</email>
-<name>Jon Portnoy</name>
-</maintainer>
-<maintainer>
 <email>mr_bones_@gentoo.org</email>
 <name>Michael Sterrett</name>
 </maintainer>
