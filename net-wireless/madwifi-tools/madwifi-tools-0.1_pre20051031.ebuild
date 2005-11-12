@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20051031.ebuild,v 1.1 2005/11/09 05:57:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20051031.ebuild,v 1.2 2005/11/12 22:22:23 latexer Exp $
 
 MADWIFI_SVN_REV="1227"
 DESCRIPTION="Wireless tools for Atheros chipset a/b/g cards"
@@ -28,4 +28,5 @@ src_unpack() {
 
 src_install() {
 	dobin 80211debug 80211stats athchans athctrl athdebug athkey athstats
+	dosbin wlanconfig
 }
