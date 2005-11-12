@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.18.6.ebuild,v 1.1 2005/11/12 22:30:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.18.6.ebuild,v 1.2 2005/11/12 23:20:12 lu_zero Exp $
 
 IUSE="qt"
 
@@ -15,7 +15,7 @@ SRC_URI="x86? ( http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm )
 LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="-amd64 ~x86"  # (~amd64 yet to be fixed)(see bug 95684)
 
-DEPEND="=media-video/ati-drivers-${PV}*
+DEPEND="=x11-drivers/ati-drivers-${PV}*
 	qt? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
