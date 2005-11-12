@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.16 2005/11/05 12:32:13 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.17 2005/11/12 20:12:02 chrb Exp $
+
+*ode-0.5-r4 (12 Nov 2005)
+
+  12 Nov 2005; <chrb@gentoo.org> +ode-0.5-r4.ebuild:
+  Added drawstuff headers to go with lib, request by Ulrich Hertlein.
 
   05 Nov 2005; <chrb@gentoo.org> ode-0.5-r3.ebuild:
   fix for gcc-3.4
