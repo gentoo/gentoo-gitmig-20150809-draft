@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13-r1.ebuild,v 1.3 2005/10/04 13:51:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13-r1.ebuild,v 1.4 2005/11/12 15:20:44 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/baselayout/rc-scripts-${SV}${SVREV}-vserver.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="bootstrap build fakelog static"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
