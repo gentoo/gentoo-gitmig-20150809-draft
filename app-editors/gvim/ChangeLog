@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.154 2005/10/15 20:19:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.155 2005/11/12 00:12:46 ticho Exp $
+
+  12 Nov 2005; Andrej Kacian <ticho@gentoo.org> gvim-6.4.ebuild:
+  Stable on x86, bug #112226.
 
 *gvim-6.4 (15 Oct 2005)
 
