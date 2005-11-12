@@ -149,7 +149,7 @@
  
  	psxM = (char*)malloc(0x00200000);
  	psxP = (char*)malloc(0x00010000);
-@@ -67,10 +67,10 @@
+@@ -67,16 +67,16 @@
  		printf("Error allocating memory"); return -1;
  	}
  
@@ -161,8 +161,17 @@
 -	memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
 +	memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * sizeof *psxMemLUT);
  
- 	for (i=0; i<0x01; i++) psxMemLUT[i + 0x1f00] = (u32)&psxP[i << 16];
+-	for (i=0; i<0x01; i++) psxMemLUT[i + 0x1f00] = (u32)&psxP[i << 16];
++	for (i=0; i<0x01; i++) psxMemLUT[i + 0x1f00] = &psxP[i << 16];
  
+-	for (i=0; i<0x01; i++) psxMemLUT[i + 0x1f80] = (u32)&psxH[i << 16];
++	for (i=0; i<0x01; i++) psxMemLUT[i + 0x1f80] = &psxH[i << 16];
+ 
+-	for (i=0; i<0x08; i++) psxMemLUT[i + 0xbfc0] = (u32)&psxR[i << 16];
++	for (i=0; i<0x08; i++) psxMemLUT[i + 0xbfc0] = &psxR[i << 16];
+ 
+ 	return 0;
+ }
 @@ -215,16 +215,16 @@
  					case 0x800: case 0x804:
  						if (writeok == 0) break;
