@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac7c22e2d0af31d734f01754ddfd4876 ChangeLog 792
-MD5 7250e1faf27ed5760ea225f502f6fddc files/digest-pdf-writer-1.1.1 65
-MD5 8bbda6ffbe45f4ac11d60ed8f3e469fa files/digest-pdf-writer-1.1.2 65
-MD5 837a8be7f700f1deff24ee69018f958e files/digest-pdf-writer-1.1.3 65
-MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
-MD5 ace95a1b796caceddef2b4c1ce2cf927 pdf-writer-1.1.1.ebuild 780
-MD5 9955d2a16aa6cd71ae4e2e0a5bab367a pdf-writer-1.1.2.ebuild 768
 MD5 b5a047d0a00a33da0df81ab6d3df1477 pdf-writer-1.1.3.ebuild 764
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDa9SqCRZPokWLroQRAiHcAJ95iRrkgB0R4z00h77MMB6wQDGb1gCfZZD+
-GiryBbANAnD9ENsfrfuecxg=
-=vyh0
------END PGP SIGNATURE-----
+MD5 a13c388a019bafeac2cb626cd6192fd5 ChangeLog 959
+MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
+MD5 837a8be7f700f1deff24ee69018f958e files/digest-pdf-writer-1.1.3 65
