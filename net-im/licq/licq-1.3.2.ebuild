@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2.ebuild,v 1.2 2005/11/12 12:09:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2.ebuild,v 1.3 2005/11/12 12:52:41 voxus Exp $
 
 inherit eutils kde-functions multilib
 
@@ -36,7 +36,6 @@ src_unpack() {
 	if use kde
 	then
 		# fix for #12436
-		inherit
 		ebegin "Setting kde plugin as default"
 		cp ${S}/src/licq.conf.h ${T}
 		sed "s:Plugin1 = qt-gui:Plugin1 = kde-gui:" \
