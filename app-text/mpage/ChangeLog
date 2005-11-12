@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mpage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.16 2005/05/31 22:45:26 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.17 2005/11/12 14:06:31 vanquirius Exp $
+
+*mpage-2.5.4 (12 Nov 2005)
+
+  12 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  -mpage-2.5.1.ebuild, +mpage-2.5.4.ebuild:
+  2.5.4 version bump for bug 112080. Thanks to Chris Gentle <gentlec at hiwaay
+  dot net>.
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   mpage-2.5.3.ebuild:
