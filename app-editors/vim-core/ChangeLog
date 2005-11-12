@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.181 2005/11/12 11:15:22 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.182 2005/11/12 22:10:19 ranger Exp $
+
+  12 Nov 2005; Brent Baude <ranger@gentoo.org> vim-core-6.4.ebuild:
+  Marking vim-core-6.4 ppc64 for bug 112226
 
   12 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> vim-core-6.4.ebuild:
   stable on alpha wrt bug #112226
