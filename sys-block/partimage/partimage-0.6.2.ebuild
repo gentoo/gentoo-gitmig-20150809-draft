@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.2.ebuild,v 1.2 2005/10/07 00:20:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.2.ebuild,v 1.3 2005/11/12 16:48:00 xmerlin Exp $
 
 inherit gnuconfig
 
@@ -38,7 +38,7 @@ src_compile() {
 	use ssl || sslconf="--disable-ssl"
 	econf \
 		${sslconf} \
-		--sysconfdir=${D}/etc \
+		--sysconfdir=/etc \
 		--infodir=/usr/share/doc/${PF} || die "econf failed"
 	cp Makefile Makefile.orig
 	sed -e "s/partimag\.root/root:root/g" Makefile.orig > Makefile

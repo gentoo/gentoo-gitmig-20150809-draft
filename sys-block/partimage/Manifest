@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3519c93c8e8fc7439818dc2e716d553f ChangeLog 6387
+MD5 22276ab78647ed084e4bc70460ff93ac ChangeLog 6660
 MD5 6b4c83400b7b7a44afb53e1a7ac388af metadata.xml 300
-MD5 7bde7e05d6c25d018346d3e5a453b580 partimage-0.6.2.ebuild 1708
-MD5 9ef73289c30e790525188f1cb90376c6 partimage-0.6.4-r1.ebuild 4468
-MD5 5df2047315544d74f0a3dbeff6a841dd partimage-0.6.4-r2.ebuild 3916
-MD5 22e80b82bcf14b9c03032c2f68b7f38e partimage-0.6.4-r3.ebuild 4132
-MD5 b0c9ff9e6eb72f9dad6740311686c434 partimage-0.6.4.ebuild 4137
-MD5 efb451fdf73dd0ed3a62cd9210c5b8ab partimage-0.6.4-r4.ebuild 4718
+MD5 0f2ae57da42f298111442dbed1698e37 partimage-0.6.2.ebuild 1704
+MD5 3842bd9bf95cd80d2702726bd962fa07 partimage-0.6.4-r1.ebuild 4464
+MD5 8d2691568adcc78816245bce843a5f0c partimage-0.6.4-r2.ebuild 3913
+MD5 7e94fba96f91ecc6f8d46839aa83df5c partimage-0.6.4-r3.ebuild 4128
+MD5 d2c77adccec6d7a46a58f8b9e6e6f4c6 partimage-0.6.4.ebuild 4133
+MD5 8b9da5e9fcea742185d21c36e7e68646 partimage-0.6.4-r4.ebuild 4714
 MD5 6fd04332b7f640a2aa71f208d2bd2dc8 files/digest-partimage-0.6.2 68
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4 68
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r1 68
@@ -30,7 +30,7 @@ MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r4 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDXBDQgMUyd/cdjWsRAn9sAJ4srUy5T6LloLFtiX6ie5CuPavxAACeJruR
-RZtjGzAVwmyCuMfcIYhV/lw=
-=ADr+
+iD8DBQFDdh0VgMUyd/cdjWsRAkqWAJ9lpAHrsi6XbYfsxH0cSZy3ZWoHtgCeIR7u
+qXqQi3Q/9ahmuPdx5rJGwfY=
+=llF0
 -----END PGP SIGNATURE-----
