@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.4.ebuild,v 1.1 2005/11/11 03:05:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.4.ebuild,v 1.2 2005/11/12 03:12:33 azarah Exp $
 
 inherit gnome2 eutils
 
@@ -73,6 +73,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
+
 	if useq irssi || useq xchat ; then
 		ewarn "To use the Perl Irssi/XChat scripts, please do:"
 		echo
