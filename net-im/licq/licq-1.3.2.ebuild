@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2.ebuild,v 1.1 2005/10/21 16:08:34 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2.ebuild,v 1.2 2005/11/12 12:09:31 voxus Exp $
 
 inherit eutils kde-functions multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 amd64"
 IUSE="ssl socks5 qt kde ncurses crypt msn"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
