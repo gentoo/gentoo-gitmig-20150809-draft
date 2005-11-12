@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.197 2005/11/12 11:15:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.198 2005/11/12 22:11:39 ranger Exp $
+
+  12 Nov 2005; Brent Baude <ranger@gentoo.org> vim-6.4.ebuild:
+  Marking vim-6.4 ppc64 stable per bug 112226
 
   12 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> vim-6.4.ebuild:
   stable on alpha wrt bug #112226
