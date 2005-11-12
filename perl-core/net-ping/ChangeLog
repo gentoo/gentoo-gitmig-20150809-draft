@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/net-ping
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.4 2005/08/23 20:21:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.5 2005/11/12 22:56:40 ranger Exp $
+
+  12 Nov 2005; Brent Baude <ranger@gentoo.org> net-ping-2.31.ebuild:
+  Marking net-ping-2.31 ~ppc64 for bug# 112220
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> net-ping-2.31.ebuild:
   stable on ia64
