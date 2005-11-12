@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.31.ebuild,v 1.1 2005/10/25 00:38:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.31.ebuild,v 1.2 2005/11/12 22:20:37 lu_zero Exp $
 
 inherit eutils games
 
@@ -23,7 +23,7 @@ RDEPEND="sys-libs/glibc
 		opengl? (
 			app-emulation/emul-linux-x86-xlibs
 			|| ( >=media-video/nvidia-glx-1.0.6629-r3
-			>=media-video/ati-drivers-8.8.25-r1 ) ) )"
+			>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/quake3
