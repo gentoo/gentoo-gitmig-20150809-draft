@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 decebd533fd5cec60b84e6b84289116a pyzor-0.4.0-r1.ebuild 837
-MD5 3c170e1cf94bfddbe3588e4b6e231510 pyzor-0.4.0.ebuild 656
-MD5 cc8465dbfdc5fb9e8ab54d7bb5b12c5c ChangeLog 1433
+MD5 de7fd6116ffba813725cf4ffce2a454f ChangeLog 1553
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 4dd40a91442aabc2cf2e923c67608e55 pyzor-0.4.0-r1.ebuild 846
+MD5 3c170e1cf94bfddbe3588e4b6e231510 pyzor-0.4.0.ebuild 656
 MD5 3f779e11cd93d820e75567bf24ab2e37 files/digest-pyzor-0.4.0 63
 MD5 3f779e11cd93d820e75567bf24ab2e37 files/digest-pyzor-0.4.0-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdd+wViELBEf1JB0RAvsOAJ9MivsCry5y/zirj6ZSPMUEEa+WVQCbBhC5
-33qy6t/VnhY+zZ1/3P4tm78=
-=AFNu
------END PGP SIGNATURE-----
