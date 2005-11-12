@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/liblbxutil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liblbxutil/ChangeLog,v 1.7 2005/11/11 19:40:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liblbxutil/ChangeLog,v 1.8 2005/11/12 01:53:33 dang Exp $
+
+  12 Nov 2005; <dang@gentoo.org> liblbxutil-0.99.2.ebuild:
+  Marked ~amd64
 
   11 Nov 2005; <dang@gentoo.org> liblbxutil-0.99.1.ebuild:
   Marked ~amd64
