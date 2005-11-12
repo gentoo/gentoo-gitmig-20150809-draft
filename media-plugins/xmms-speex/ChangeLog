@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/xmms-speex
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-speex/ChangeLog,v 1.1 2005/11/12 19:32:16 metalgod Exp $
+
+*xmms-speex-0.9.1 (12 Nov 2005)
+
+  12 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/xmms-speex-0.9.1-Makefile.patch,
+  +files/xmms-speex-0.9.1-fPIC.patch, +files/xmms-speex-0.9.1.patch,
+  +metadata.xml, +xmms-speex-0.9.1.ebuild:
+  New Package. Thanks to all people involved on bug #60542. Added two patches
+  made by me to fix build on amd64 and add utf8 support.
+

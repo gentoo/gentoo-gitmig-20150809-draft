@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d1e6789b7e7b7a2d7d69b4dc03afea1 ChangeLog 596
+MD5 f1b246361021de7240b8d42d3bfc6628 files/digest-xmms-speex-0.9.1 67
+MD5 20e928b88139b6dd35e4ae5111a33e2b files/xmms-speex-0.9.1-Makefile.patch 1310
+MD5 cac9166ed35aa72f4f0578b13f23edd3 files/xmms-speex-0.9.1-fPIC.patch 265
+MD5 f541bb0c9411ed470faae2ada9afefde files/xmms-speex-0.9.1.patch 3211
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 d95a474d9545112ddccce81b44034d64 xmms-speex-0.9.1.ebuild 882
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDdkNxwUpWvClEHQoRAlP1AJ4+QkBgUmfxeBkkCYpAc8OSwBXzRgCggO9X
+y2IYF+C+q4rwZYA99CjsZcM=
+=uSam
+-----END PGP SIGNATURE-----
