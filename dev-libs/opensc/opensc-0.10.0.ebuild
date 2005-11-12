@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1-r1.ebuild,v 1.3 2005/09/17 00:59:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.0.ebuild,v 1.1 2005/11/12 15:06:19 vanquirius Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensc.org/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~ppc64"
+KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="ldap pam pcsc-lite X"
 
 RDEPEND="ldap? ( net-nds/openldap )
@@ -24,7 +24,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use X || echo 'all:'$'\n''install:' > src/signer/Makefile.in
-	epatch ${FILESDIR}/${PV}-64bit.patch
+	EPATCH_SINGLE_MSG="Applying libtool reverse deps patch ..." \
+		epatch ${ELT_PATCH_DIR}/fix-relink/1.5.0
 }
 
 src_compile() {
@@ -34,22 +35,26 @@ src_compile() {
 		|| mycard="--with-openct=/usr"
 	econf \
 		--disable-usbtoken \
-		--without-plugin-dir \
+		--with-plugin-dir=/usr/lib/mozilla/plugins \
 		`use_enable ldap` \
 		`use_with pam` \
 		${mycard} \
 		|| die
+
+	# --without-plugin-dir generates a /no directory
+
+
 	emake -j1 || die
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 
 	if use pam ; then
 		dodir /lib/security/
 		dosym ../../usr/lib/security/pam_opensc.so /lib/security/
 	fi
 
-	dodoc ANNOUNCE AUTHORS ChangeLog NEWS README
-	dohtml docs/opensc.html docs/opensc.css
+	dodoc NEWS README
+	dohtml docs/opensc.{html,css}
 }
