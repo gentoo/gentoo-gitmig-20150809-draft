@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.23 2005/11/12 15:49:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.24 2005/11/12 23:29:59 flameeyes Exp $
+
+  12 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  kcheckpass-3.5.0_rc1.ebuild:
+  Remove the pie patch as it's already applied upstream. Bug #112342.
 
 *kcheckpass-3.5.0_rc1 (12 Nov 2005)
 
