@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.13.ebuild,v 1.2 2005/11/04 23:41:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.13.ebuild,v 1.3 2005/11/13 00:59:05 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -193,7 +193,7 @@ src_install() {
 	else
 		insinto /etc
 		insopts -m0644
-		newins etc/login.defs.linux login.defs
+		newins etc/login.defs login.defs
 	fi
 
 	# Remove manpages that are handled by other packages
