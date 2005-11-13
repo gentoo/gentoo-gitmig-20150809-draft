@@ -7,5 +7,9 @@
 	<longdescription lang="ja">
 		x11-appsカテゴリにはX.Org X11のパッケージソフトが含まれます。
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-apps enthält Applikationen welche mit X.Org 
+		X11 ausgeliefert werden.
+	</longdescription>
 </catmetadata>
 
