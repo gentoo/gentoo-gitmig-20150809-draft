@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.2 2005/11/13 16:47:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.3 2005/11/13 18:53:49 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -30,8 +30,9 @@ MODULE_NAMES="fglrx(video:${WORKDIR}/common/lib/modules/fglrx/build_mod)"
 
 
 choose_driver_folder() {
-	#new modular X paths
-	if [ "$(get_version_component_range 1 ${X11_IMPLEM_V})" = 7 ]
+	#new modular X paths, 0 is a workaround.
+	if [ "$(get_version_component_range 1 ${X11_IMPLEM_V})" = 7 ] \
+		|| [ "$(get_version_component_range 1 ${X11_IMPLEM_V})" = 0 ]
 	then
 		BASE_NAME="${WORKDIR}/x690"
 		xlibdir="xorg"
