@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-cachesaver/sylpheed-claws-cachesaver-0.5.ebuild,v 1.3 2005/10/22 12:55:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-cachesaver/sylpheed-claws-cachesaver-0.5.ebuild,v 1.4 2005/11/13 10:06:38 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 MY_PN="${PN##sylpheed-claws-}"
@@ -17,12 +17,10 @@ DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
 	make DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README
+
+	# kill useless files
+	rm -f ${D}/usr/lib*/sylpheed-claws/plugins/*.{a,la}
 }

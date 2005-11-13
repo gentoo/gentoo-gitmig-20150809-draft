@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-cachesaver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-cachesaver/ChangeLog,v 1.2 2005/10/13 04:59:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-cachesaver/ChangeLog,v 1.3 2005/11/13 10:06:38 genone Exp $
+
+  13 Nov 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-cachesaver-0.5.ebuild:
+  Kill useless static and libtool libs, bug #111481.
 
   13 Oct 2005; Jason Wever <weeve@gentoo.org>
   sylpheed-claws-cachesaver-0.5.ebuild:
