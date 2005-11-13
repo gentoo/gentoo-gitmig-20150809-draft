@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.12 2005/11/09 18:50:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.13 2005/11/13 23:52:11 solar Exp $
+
+  13 Nov 2005; <solar@gentoo.org> uclibc-0.9.28.ebuild:
+  - moredefs..
 
   07 Nov 2005; <solar@gentoo.org> uclibc-0.9.28.ebuild:
   Enabled DL_FINI_CRT_COMPAT by default
