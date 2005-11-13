@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xwine/xwine-1.0.1.ebuild,v 1.1 2005/05/08 01:09:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xwine/xwine-1.0.1.ebuild,v 1.2 2005/11/13 04:22:06 vapier Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ DEPEND="=x11-libs/gtk+-1*
 	=gnome-base/orbit-0*
 	dev-libs/libxml2
 	=sys-libs/db-1*
+	app-emulation/wine
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
