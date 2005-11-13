@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051111.ebuild,v 1.1 2005/11/13 16:34:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051111.ebuild,v 1.2 2005/11/13 20:33:19 genstef Exp $
 
 inherit linux-mod
 
@@ -66,16 +66,16 @@ pkg_postinst() {
 	einfo "Baselayout will do that with the following in /etc/conf.d/net:"
 	cat <<EOF
 preup() {
-	if [ "${IFACE}" = "ath0" ]; then
+	if [ "\${IFACE}" = "ath0" ]; then
 		/sbin/wlanconfig ath0 create wlandev wifi0 wlanmode sta
-		return $?
+		return \$?
 	fi
 }
  
 postdown() {
-	if [ "${IFACE}" = "ath0" ]; then
+	if [ "\${IFACE}" = "ath0" ]; then
 		/sbin/wlanconfig ath0 destroy
-		return $?
+		return \$?
 	fi
 }
 EOF
