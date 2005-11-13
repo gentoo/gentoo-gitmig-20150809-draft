@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f63c6ec7628090dc4ad378a408c1bbf ChangeLog 1237
-MD5 ca15548535afe7a5da29a3eda90d71f0 celementtree-1.0.2.ebuild 766
-MD5 87f65e0b38b04882636289543b545ff2 celementtree-1.0.ebuild 773
-MD5 7114aac4b8ef9d62582c8aa90f1fe647 files/digest-celementtree-1.0 73
-MD5 f020095277e15dd11616d0ad527d59b6 files/digest-celementtree-1.0.2 78
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 0fae9dd027028b93309e2b795e347f6b ChangeLog 1360
+MD5 87f65e0b38b04882636289543b545ff2 celementtree-1.0.ebuild 773
+MD5 3184a0248b5ec8f782a63f6b0b122c9d celementtree-1.0.2.ebuild 777
+MD5 f020095277e15dd11616d0ad527d59b6 files/digest-celementtree-1.0.2 78
+MD5 7114aac4b8ef9d62582c8aa90f1fe647 files/digest-celementtree-1.0 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDdOhRCRZPokWLroQRAjVRAKCL1r9gmy589KuMwYu7TzWXHpdq4ACeOpRT
-pf5sM0q5PKVFDH2l546XLGA=
-=1K6J
+iD4DBQFDdtuJTry2jroju7wRAostAJicJDu1lipsmMi2u15LVEkAVX10AJ9pKK1P
+I7cA1zvvmLrGmPW5AalMug==
+=QNFv
 -----END PGP SIGNATURE-----
