@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.130 2005/11/13 12:57:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.131 2005/11/13 13:05:20 betelgeuse Exp $
+
+  13 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  alsa-lib-1.0.10_rc2.ebuild:
+  Marked stable on x86 for bug #111968.
 
   13 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   alsa-lib-1.0.10_rc2.ebuild:
