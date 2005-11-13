@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.3 2005/04/22 13:55:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.4 2005/11/13 05:40:26 ribosome Exp $
+
+*lapack-reference-3.0-r1 (13 Nov 2005)
+
+  13 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
+  +lapack-reference-3.0-r1.ebuild:
+  Migrated to fortran.eclass (bug #65950).
 
   22 Apr 2005; Danny van Dyk <kugelfang@gentoo.org>
   lapack-reference-3.0.ebuild:

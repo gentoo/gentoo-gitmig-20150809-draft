@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.4 2005/04/22 13:49:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.5 2005/11/13 05:42:14 ribosome Exp $
+
+*blas-reference-19940131-r2 (13 Nov 2005)
+
+  13 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
+  +blas-reference-19940131-r2.ebuild:
+  Migrated to fortran.eclass (bug #65950).
 
   22 Apr 2005; Danny van Dyk <kugelfang@gentoo.org>
   blas-reference-19940131.ebuild:
