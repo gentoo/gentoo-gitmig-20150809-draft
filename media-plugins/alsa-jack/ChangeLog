@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-jack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.39 2005/10/14 09:39:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.40 2005/11/13 13:06:09 betelgeuse Exp $
+
+  13 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  alsa-jack-1.0.10_rc1.ebuild:
+  Marked stable on x86 for bug #111968.
 
   14 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   alsa-jack-1.0.10_rc1.ebuild:
