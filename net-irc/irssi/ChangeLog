@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.69 2005/11/10 12:28:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.70 2005/11/13 12:22:39 swegener Exp $
+
+  13 Nov 2005; Sven Wegener <swegener@gentoo.org>
+  +files/0.8.9-gcc4-fix.patch, irssi-0.8.9-r1.ebuild:
+  Apply the gcc4 patch to 0.8.9 too, bug #110361.
 
 *irssi-0.8.10_rc7 (10 Nov 2005)
 
