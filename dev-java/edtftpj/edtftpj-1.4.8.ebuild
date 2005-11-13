@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.8.ebuild,v 1.2 2005/07/16 13:52:06 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.8.ebuild,v 1.3 2005/11/13 20:57:53 hansmi Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.enterprisedt.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.4
