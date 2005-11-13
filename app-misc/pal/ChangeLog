@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.14 2005/04/21 19:33:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.15 2005/11/13 16:07:31 port001 Exp $
+
+*pal-0.3.5_pre1 (13 Nov 2005)
+
+  13 Nov 2005; Ian Leitch <port001@gentoo.org> +pal-0.3.5_pre1.ebuild:
+  Version bump.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> pal-0.3.4.ebuild:
   stable on amd64
