@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/glib-java-0.2.1.ebuild,v 1.1 2005/11/12 23:28:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/glib-java-0.2.1.ebuild,v 1.2 2005/11/13 00:01:46 compnerd Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -29,7 +29,7 @@ RDEPEND=">=virtual/jre-1.4
 
 pkg_setup() {
 	if use gcj ; then
-		if ! built_with_use sys-devel/gcc gcc ; then
+		if ! built_with_use sys-devel/gcc gcj ; then
 			ewarn
 			ewarn "You must build gcc with the gcj support to build with gcj"
 			ewarn
