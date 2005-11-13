@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.14 2005/11/13 03:12:37 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.15 2005/11/13 10:26:01 grobian Exp $
+
+  13 Nov 2005; Fabian Groffen <grobian@gentoo.org>
+  files/lynx-2.8.5-darwin.patch, lynx-2.8.5-r1.ebuild, lynx-2.8.5-r2.ebuild:
+  Changed darwin patch so it can be applied unconditional.  Marked 2.8.5-r2
+  stable (bug #112213)
 
   13 Nov 2005; Homer Parker <hparker@gentoo.org> lynx-2.8.5-r2.ebuild:
   Stable on amd64 fixing bug 112213
