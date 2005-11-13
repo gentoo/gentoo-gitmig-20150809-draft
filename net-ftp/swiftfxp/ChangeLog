@@ -1,0 +1,8 @@
+# ChangeLog for net-ftp/swiftfxp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/swiftfxp/ChangeLog,v 1.1 2005/11/13 07:32:12 vapier Exp $
+
+*swiftfxp-0.4.4 (13 Nov 2005)
+
+  13 Nov 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

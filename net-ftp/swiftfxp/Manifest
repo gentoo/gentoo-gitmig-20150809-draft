@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5e971eb737c778f35b8f2250a75863d4 ChangeLog 331
+MD5 e27f8098d95ef36dd7bde34b75ce56b5 files/digest-swiftfxp-0.4.4 62
+MD5 78ab80bde7035b5fdaebfa422280fde3 files/swiftfxp-0.4.4-build.patch 475
+MD5 6ddf4d6b959e47b83414d889ffb1b9f6 swiftfxp-0.4.4.ebuild 686
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDduw6gIKl8Uu19MoRAnHUAJsF1kXSulsytEFgyJMz6eML+uca0wCfTfn5
+l0Qs5XACcxS/NFsVnmI8Mas=
+=g4+J
+-----END PGP SIGNATURE-----
