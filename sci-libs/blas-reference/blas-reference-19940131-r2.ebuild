@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r2.ebuild,v 1.1 2005/11/13 05:42:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r2.ebuild,v 1.2 2005/11/13 16:54:03 markusle Exp $
 
 inherit eutils fortran
 
@@ -60,8 +60,8 @@ src_compile() {
 	if use ifc; then
 		ifc_info
 		make static FC="ifc" FFLAGS="${IFCFLAGS}" || die
-		ifc -shared ${IFCFLAGS} -Wl,-soname,libblas.so.0 \
-			-o libblas.so.0.0.0 *.lo || die
+		libtool --tag=F77 --mode=link ifc -shared ${IFCFLAGS} \
+			-Wl,-soname,libblas.so.0 -o libblas.so.0.0.0 *.lo || die
 	else
 		# libg2c is required to link to libblas.so using ifc:
 		make libs FC="g77" FFLAGS="${CFLAGS}" \

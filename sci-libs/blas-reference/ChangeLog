@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.5 2005/11/13 05:42:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.6 2005/11/13 16:54:03 markusle Exp $
+
+  13 Nov 2005; Markus Dittrich <markusle@gentoo.org>
+  blas-reference-19940131-r2.ebuild:
+  use libtool to link shared library when compiling with ifc, this closes bug #112390
 
 *blas-reference-19940131-r2 (13 Nov 2005)
 
