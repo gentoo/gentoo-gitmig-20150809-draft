@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.17 2005/09/24 12:17:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.18 2005/11/13 02:32:45 wormo Exp $
+
+  13 Nov 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  wxpython-docs-2.4.2.4-r1.ebuild:
+  mark ~ppc
 
   24 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   wxpython-docs-2.6.0.0-r1.ebuild:
