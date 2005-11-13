@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/digest-base
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.10 2005/10/10 07:42:18 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.11 2005/11/13 14:24:23 mcummings Exp $
+
+*digest-base-1.13 (13 Nov 2005)
+
+  13 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  +digest-base-1.13.ebuild:
+  Version bump upstream
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org> digest-base-1.10.ebuild:
   Stable on mips.
