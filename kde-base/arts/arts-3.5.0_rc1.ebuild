@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0_rc1.ebuild,v 1.2 2005/11/13 00:23:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0_rc1.ebuild,v 1.3 2005/11/13 00:25:38 flameeyes Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -45,7 +45,7 @@ src_unpack() {
 		nosspflags="${nosspflags} -fno-stack-protector"
 	[[ -n $(test_flag -fno-stack-protector-all) ]] && \
 		nosspflags="${nosspflags} -fno-stack-protector-all"
-	
+
 	sed -i -e "s:KDE_CXXFLAGS =\(.*\):KDE_CXXFLAGS = \1 ${nosspflags}:" \
 		${S}/mcopidl/Makefile.am
 }
