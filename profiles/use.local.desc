@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1554 2005/11/13 16:06:06 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1555 2005/11/13 17:37:12 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -508,8 +508,8 @@ mail-filter/dspam:virtual-users  - Build with virtual-users support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:dcc - Enable Distributed Checksum Clearinghouse support
 mail-filter/spamassassin:pyzor - Enable pyzor support
-mail-filter/spamassassin:razor - Enable Vipul's Razor support
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
+mail-filter/spamassassin:razor - Enable Vipul's Razor support
 mail-filter/spamassassin:spf - Adds support for Sender Policy Framework
 mail-filter/spamassassin:tools - Enables tools for spamassassin
 mail-mta/courier:fax - Enables fax support in the courier mail server
@@ -646,7 +646,6 @@ media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
 media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
 media-tv/xdtv:zvbi - Enable VBI Decoding Library for Zapping
-media-video/ati-drivers:dlloader - Experimental relink to support dlloader
 media-video/avifile:dmalloc - Enable support for the Debug Malloc Library
 media-video/avifile:dpms - Enable support for DPMS
 media-video/avifile:sblive - Enable the AC3 passthrough plugin for SBlive soundcards
@@ -1015,9 +1014,6 @@ sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
 sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-libs/acml:sse2 - Enables sse2 support
-sys-cluster/charm:cmkopt - Enable CMK optimisation
-sys-cluster/charm:smp - Enable direct SMP support using shared memory
-sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sci-libs/fftw:sse2 - Enables sse2 support
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
@@ -1087,6 +1083,9 @@ sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
 sys-boot/yaboot:ibm - Indicate the usage of ibm based ppc64 hardware
+sys-cluster/charm:cmkopt - Enable CMK optimisation
+sys-cluster/charm:smp - Enable direct SMP support using shared memory
+sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
@@ -1237,6 +1236,7 @@ x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 a
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
+x11-drivers/ati-drivers:dlloader - Experimental relink to support dlloader
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
