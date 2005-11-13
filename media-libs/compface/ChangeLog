@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/compface
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.27 2005/09/19 12:18:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.28 2005/11/13 10:43:10 hattya Exp $
+
+*compface-1.5.2 (13 Nov 2005)
+
+  13 Nov 2005; Akinori Hattori <hattya@gentoo.org>
+  +files/compface-1.5.2-destdir.diff, +compface-1.5.2.ebuild:
+  new upstream release. fixes bug #111005.
 
   19 Sep 2005; Seemant Kulleen <seemant@gentoo.org> compface-1.5.1.ebuild:
   crlf fix thanks to James Rowe in bug #106246
