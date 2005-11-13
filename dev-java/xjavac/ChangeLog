@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.7 2005/07/09 13:04:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.8 2005/11/13 21:00:22 hansmi Exp $
+
+  13 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xjavac-20041208-r1.ebuild:
+  Stable on ppc.
 
 *xjavac-20041208-r1 (09 Jul 2005)
 
