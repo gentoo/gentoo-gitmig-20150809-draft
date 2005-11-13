@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7adcb4b5e6987e83c9b7d14294100584 ChangeLog 323
+MD5 4883f3004485dbd9944260595b0dec30 files/digest-gtkfxp-0.5 61
+MD5 3682ebd8522dc0deb868bdf100677c7f files/gtkfxp-0.5-build.patch 527
+MD5 843ae6cca460fbccdd05970217e4bdf3 gtkfxp-0.5.ebuild 658
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDduSFgIKl8Uu19MoRAnHuAJ0ad5SKtPeQxqrAdVNC7tSi38IJFACeN0m1
+GLz8cIWI62P27Sf0hVg9gH4=
+=Rx3S
+-----END PGP SIGNATURE-----
