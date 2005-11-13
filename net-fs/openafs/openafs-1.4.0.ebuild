@@ -1,17 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0_rc8.ebuild,v 1.2 2005/11/13 15:14:19 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0.ebuild,v 1.1 2005/11/13 15:14:19 stefaan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
-PATCHVER=0.3
-MY_PV=${PV/_/-}
-MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+PATCHVER=0.4
 DESCRIPTION="The OpenAFS distributed file system"
 HOMEPAGE="http://www.openafs.org/"
-SRC_URI="http://openafs.org/dl/${PN}/candidate/${MY_PV}/${MY_P}-src.tar.bz2
-	doc? ( http://openafs.org/dl/${PN}/candidate/${MY_PV}/${MY_P}-doc.tar.bz2 )
+SRC_URI="http://openafs.org/dl/${PN}/${PV}/${P}-src.tar.bz2
+	doc? ( http://openafs.org/dl/${PN}/${PV}/${P}-doc.tar.bz2 )
 	mirror://gentoo/${PN}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="IPL-1"
@@ -19,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug kerberos pam doc"
 
-RDEPEND="=net-fs/openafs-kernel-${PV}*
+RDEPEND="=net-fs/openafs-kernel-${PV}
 	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )"
 
@@ -74,7 +71,7 @@ src_install() {
 	use pam && doman src/pam/pam_afs.5
 
 	# minimal documentation
-	dodoc ${CONFDIR}/README ${CONFDIR}/ChangeLog* ${CONFDIR}/CellServDB
+	dodoc ${CONFDIR}/README ${CONFDIR}/CellServDB
 
 	# documentation package
 	if use doc; then
@@ -296,7 +293,7 @@ pkg_postinst() {
 	mkdir /afs 2>/dev/null
 
 	einfo ""
-	einfo "If you are upgrading from a < 1.4.1_rc1 version of the ebuild,"
+	einfo "If you are upgrading from a < 1.4.0_rc8 version of the ebuild,"
 	einfo "we urge you to look at the upgrade-section of the"
 	einfo "Gentoo OpenAFS documentation.  (If you're upgrading from"
 	einfo "< 1.3.85, then you really really should)"
