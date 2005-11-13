@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.18 2005/10/20 15:52:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.19 2005/11/13 22:49:03 weeve Exp $
+
+  13 Nov 2005; Jason Wever <weeve@gentoo.org> rubygems-0.8.11.ebuild:
+  Stable on SPARC.
 
 *rubygems-0.8.11-r1 (20 Oct 2005)
 

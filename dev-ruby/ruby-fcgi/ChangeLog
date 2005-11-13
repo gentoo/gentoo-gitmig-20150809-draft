@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.8 2005/10/20 00:17:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.9 2005/11/13 22:54:48 weeve Exp $
+
+  13 Nov 2005; Jason Wever <weeve@gentoo.org> ruby-fcgi-0.8.5-r1.ebuild:
+  Stable on SPARC.
 
   20 Oct 2005; Luca Barbato <lu_zero@gentoo.org> ruby-fcgi-0.8.5-r1.ebuild:
   Marked ppc
