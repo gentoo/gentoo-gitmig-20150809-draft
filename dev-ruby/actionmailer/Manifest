@@ -1,5 +1,5 @@
-MD5 cb476c8291a3d2357d90c98bf4a905ff ChangeLog 2621
-MD5 47fcd37f33337dc8dceac65b2e60cc22 actionmailer-1.0.1.ebuild 710
+MD5 d083e651faa03eb0c4bdfa6bfc564397 ChangeLog 2714
+MD5 56aa013443f7e280f82e4b8df1823bcd actionmailer-1.0.1.ebuild 707
 MD5 c7ae2699b3fb718f585a16df82d1599b actionmailer-1.1.3.ebuild 699
 MD5 04139e3ec4a93cf3d3f686308904b0d1 files/digest-actionmailer-1.0.1 66
 MD5 9ee66befa68a4cd2c0418b3cde9f585f files/digest-actionmailer-1.1.3 66
