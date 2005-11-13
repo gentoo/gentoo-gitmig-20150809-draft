@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.15 2005/10/22 23:39:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.16 2005/11/13 05:34:47 ribosome Exp $
+
+*octave-2.1.71-r1 (13 Nov 2005)
+
+  13 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
+  +octave-2.1.71-r1.ebuild:
+  Migrated to fortran.eclass (bug #65950).
 
   22 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> octave-2.1.71.ebuild:
   Allow the use of gfortran too for gcc4, closes bug 108781.
