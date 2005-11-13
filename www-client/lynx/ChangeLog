@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.15 2005/11/13 10:26:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.16 2005/11/13 11:45:53 ferdy Exp $
+
+  13 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> lynx-2.8.5-r2.ebuild:
+  stable on alpha wrt bug #112213
 
   13 Nov 2005; Fabian Groffen <grobian@gentoo.org>
   files/lynx-2.8.5-darwin.patch, lynx-2.8.5-r1.ebuild, lynx-2.8.5-r2.ebuild:
