@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minisip/minisip-0.7.0.ebuild,v 1.1 2005/06/02 01:25:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minisip/minisip-0.7.0.ebuild,v 1.2 2005/11/13 11:37:28 dragonheart Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ DEPEND=">=dev-libs/openssl-0.9.6d
 		~net-misc/libmnetutil-0.3.0
 		~net-misc/libmikey-0.4.0
 		~net-misc/libmsip-0.3.0
+		>=media-libs/libsamplerate-0.1.1-r1
 		alsa? ( >=media-libs/alsa-lib-1 )
 		gtk? ( >=dev-cpp/libglademm-2.0 )"
 
