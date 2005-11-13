@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.216 2005/11/11 02:30:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.217 2005/11/13 04:40:44 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -126,7 +126,7 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	IUSE="nls build"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="altivec bootstrap build fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc vanilla"
+	IUSE="altivec bootstrap build fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc objc-gc vanilla"
 	[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 	[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 	[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
@@ -1076,8 +1076,11 @@ gcc-compiler-configure() {
 
 	GCC_LANG="c"
 	is_cxx && GCC_LANG="${GCC_LANG},c++"
-	is_objc && GCC_LANG="${GCC_LANG},objc"
 	is_gcj && GCC_LANG="${GCC_LANG},java"
+	if is_objc ; then
+		GCC_LANG="${GCC_LANG},objc"
+		use objc-gc && confgcc="${confgcc} --enable-objc-gc"
+	fi
 
 	# fortran support just got sillier! the lang value can be f77 for
 	# fortran77, f95 for fortran95, or just plain old fortran for the
