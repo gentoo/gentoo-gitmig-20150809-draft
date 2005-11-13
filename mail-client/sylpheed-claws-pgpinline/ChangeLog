@@ -1,8 +1,12 @@
 # ChangeLog for mail-client/sylpheed-claws-pgpinline
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.19 2005/08/23 14:34:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.20 2005/11/13 11:22:55 genone Exp $
 
-  23 Aug 2005; <genone@gentoo.org> sylpheed-claws-pgpinline-0.5.ebuild,
+  13 Nov 2005; Marius Mauch <genone@gentoo.org>
+  -sylpheed-claws-pgpinline-0.5-r1.ebuild:
+  Remove ebuild as it's incompatible with all SC versions present in the tree.
+
+  23 Aug 2005; Marius Mauch <genone@gentoo.org> sylpheed-claws-pgpinline-0.5.ebuild,
   sylpheed-claws-pgpinline-0.5-r1.ebuild:
   Fix dependencies to match current sylpheed-claws versions.
 
