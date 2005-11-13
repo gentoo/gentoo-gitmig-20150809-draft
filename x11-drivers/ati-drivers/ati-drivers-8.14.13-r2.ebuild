@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.14.13-r2.ebuild,v 1.1 2005/11/12 22:17:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.14.13-r2.ebuild,v 1.2 2005/11/13 16:47:16 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -41,12 +41,21 @@ pkg_setup(){
 	ebegin "Checking for AGP support enabled"
 	linux_chkconfig_present AGP
 	eend $?
-	if [[ $? -ne 0 ]] ; then
-	ewarn "You don't have AGP support enabled, the direct rendering"
-	ewarn "will not work."
+	
+		if [[ $? -ne 0 ]] ; then
+
+		ebegin "Checking for PCI Express support enabled"
+		linux_chkconfig_present PCIEPORTBUS
+		eend $?
+
+		if [[ $? -ne 0 ]] ; then
+			ewarn "If you don't have either AGP or PCI Express support enabled, direct rendering"
+			ewarn "could work only using the internal support."
+		fi
+
 	fi
 	ebegin "Checking for DRM support disabled"
-	! linux_chkconfig_present DRM
+	! linux_chkconfig_builtin DRM
 	eend $?
 	if [[ $? -ne 0 ]] ; then
 	ewarn "You have DRM support enabled, the direct rendering"
@@ -75,11 +84,16 @@ src_unpack() {
 		epatch ${FILESDIR}/fglrx-2.6.12-pci_name.patch
 		epatch ${FILESDIR}/fglrx-2.6.12-inter_module_get.patch
 		epatch ${FILESDIR}/fglrx-8.14.13-alt-2.6.12-agp.patch
+		epatch ${FILESDIR}/fglrx-2.6.14-access_ok.patch
 	fi
 	epatch ${FILESDIR}/8.8.25-via-amd64.patch
 	epatch ${FILESDIR}/8.8.25-smp.patch
 	epatch ${FILESDIR}/ioctl32.patch
 	epatch ${FILESDIR}/p1.patch
+	if use amd64
+	then
+	epatch ${FILESDIR}/fglrx-2.6.14-compat_ioctl.patch
+	fi
 
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }

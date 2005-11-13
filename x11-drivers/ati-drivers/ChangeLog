@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.2 2005/11/12 22:45:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.3 2005/11/13 16:47:16 lu_zero Exp $
+
+  13 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.19.10.ebuild:
+  Backport fixes for 2.6.14
 
 *ati-drivers-8.19.10 (12 Nov 2005)
 
