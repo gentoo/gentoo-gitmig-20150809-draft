@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/freeze
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.13 2005/09/09 15:09:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.14 2005/11/13 03:51:26 weeve Exp $
+
+  13 Nov 2005; Jason Wever <weeve@gentoo.org> freeze-2.5.0.ebuild:
+  Stable on SPARC.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> freeze-2.5.0.ebuild:
   Mark 2.5.0 stable on alpha
