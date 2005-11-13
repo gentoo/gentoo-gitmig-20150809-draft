@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
- <email>aliz@gentoo.org</email>
-</maintainer>
-<maintainer>
- <email>hardened@gentoo.org</email>
-</maintainer>
-<maintainer>
- <email>vapier@gentoo.org</email>
-</maintainer>
+<herd>base-system</herd>
 <maintainer>
  <email>lcars@gentoo.org</email>
  <description>ldap support</description>

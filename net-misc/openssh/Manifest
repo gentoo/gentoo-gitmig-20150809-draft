@@ -40,7 +40,7 @@ MD5 eca7ba0b23754a710b42a79c1fb5e248 files/openssh-securid-1.3.1-updates.patch 4
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 2b66f75047edfac5d5e6cdbffa35383e files/sshd.pam_include 205
 MD5 5afc89edd73f522a5b3757a518dffb34 files/sshd.rc6 1293
-MD5 ff0dccf17d2b2b58a8a52554860be9a6 metadata.xml 1430
+MD5 02a1e50ab3fa841edec86694bd71c8d1 metadata.xml 1251
 MD5 3af6afd052caef27a0707c9b941d41c6 openssh-3.8.1_p1-r1.ebuild 4407
 MD5 007223c0520d91c52557714c4bc6b0ca openssh-3.9_p1-r3.ebuild 5010
 MD5 f57b335cd90d3ec4233a98c6617dce3b openssh-4.0_p1-r2.ebuild 5362
@@ -49,7 +49,7 @@ MD5 382ea44225fa43f758589017555e8859 openssh-4.2_p1.ebuild 5276
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDZF7AgIKl8Uu19MoRAugmAJ9DNTZGWUzKn0W/HewoyUx95Um3mgCfR0lT
-2AKehjBrzcUd6lZRMf5RzGE=
-=Z+9F
+iD8DBQFDdr3BgIKl8Uu19MoRAteVAJ9pba6oFKFU0V8d8dIJWZavIflZQACfbMEQ
+oj1ilRy39oK3qOyYGdEKIcU=
+=hj9b
 -----END PGP SIGNATURE-----
