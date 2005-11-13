@@ -1,6 +1,14 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.9 2005/10/17 11:59:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.10 2005/11/13 01:45:16 seemant Exp $
+
+*lynx-2.8.5-r2 (13 Nov 2005)
+
+  13 Nov 2005; Seemant Kulleen <seemant@gentoo.org> lynx-2.8.5-r1.ebuild,
+  +lynx-2.8.5-r2.ebuild:
+  Revision bump to fix CVE-2005-2929 -- bug #112213. The backported patch is
+  from Mandriva's src.rpm -- thanks to Ticho for alerting us to that available
+  patch
 
   17 Oct 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/lynx2.8.4rel.1a.patch:
