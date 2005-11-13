@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb84c2708451fa1a55d354190c856af0 iozone-3.247.ebuild 2069
-MD5 80be06d700b56905946571965479f36f iozone-3.242.ebuild 2062
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 38263ed1c99f15721f45dd9ea99d7cbc ChangeLog 3827
-MD5 0e64306cd100a3e9ab0255a2b68fa1d2 iozone-3.248.ebuild 2069
-MD5 956c35cd4b9c426556c994ee85e080c8 iozone-3.226-r1.ebuild 2144
-MD5 a83eacd4a0113b467d5d88aef021cf49 files/digest-iozone-3.247 61
-MD5 bfb280e0a5ed84a1079d5bacb7c09423 files/digest-iozone-3.242 61
-MD5 8c13cfbfeee6a903b2908add7f6b7ae8 files/digest-iozone-3.248 61
+MD5 c6dab50be4dda065afb48e1e6dcea80e ChangeLog 3947
 MD5 12fc9646500c0b8c87299cfd1e222779 files/digest-iozone-3.226-r1 61
+MD5 bfb280e0a5ed84a1079d5bacb7c09423 files/digest-iozone-3.242 61
+MD5 a83eacd4a0113b467d5d88aef021cf49 files/digest-iozone-3.247 61
+MD5 8c13cfbfeee6a903b2908add7f6b7ae8 files/digest-iozone-3.248 61
+MD5 23f034922f989324a48c2a7993969a93 files/digest-iozone-3.254 61
 MD5 28d68364294fafbeadf3f599f4ae4abd files/iozone-3.226-ppc64.patch 1484
+MD5 956c35cd4b9c426556c994ee85e080c8 iozone-3.226-r1.ebuild 2144
+MD5 80be06d700b56905946571965479f36f iozone-3.242.ebuild 2062
+MD5 cb84c2708451fa1a55d354190c856af0 iozone-3.247.ebuild 2069
+MD5 0e64306cd100a3e9ab0255a2b68fa1d2 iozone-3.248.ebuild 2069
+MD5 b6ef7fb087cff013ce4662a4ac99b715 iozone-3.254.ebuild 2069
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDGu9RmdTrptrqvGERAu2JAJ9zzRL/uG0eLXIWoIiFcKcbLdTfxgCghKgI
-RSWeZLBssLdLtD7MJHEOCbE=
-=gKTQ
+iD8DBQFDdzCImdTrptrqvGERAnkNAJ0X9dc6yUYflzf2JT3VznnmqOmZwwCfSgs9
+0x8aAECZZlmMMD3JU9pXhmM=
+=Uxjo
 -----END PGP SIGNATURE-----
