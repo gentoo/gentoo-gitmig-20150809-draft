@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.28 2005/11/13 22:08:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.29 2005/11/13 22:11:30 wolf31o2 Exp $
+
+  13 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.6.03.0190-r1.ebuild:
+  Forcing to stable since 2.6.14 has gone stable in the tree and this patch is
+  required to compile against 2.6.14 successfully.
 
 *cisco-vpnclient-3des-4.6.03.0190-r1 (13 Nov 2005)
 
