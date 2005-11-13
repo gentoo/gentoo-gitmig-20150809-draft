@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.12 2005/11/13 06:21:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.1 2005/11/13 06:21:54 dragonheart Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/vtun
 DESCRIPTION="Create virtual tunnels over TCP/IP networks with traffic shaping, encryption, and compression"
 SRC_URI="mirror://sourceforge/vtun/${P}.tar.gz"
 HOMEPAGE="http://vtun.sourceforge.net/"
-KEYWORDS="x86 sparc ~amd64 alpha ~ppc"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -18,7 +18,7 @@ SLOT="0"
 #		to do tun/tap tunneling
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
-	=dev-libs/lzo-1*
+	>=dev-libs/lzo-2
 	sys-devel/bison
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
@@ -27,8 +27,10 @@ RDEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die
-	epatch ${FILESDIR}/${PN}-${PV}-makefile.patch
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch ${FILESDIR}/${P}-lzo2.patch
 }
 
 src_compile() {

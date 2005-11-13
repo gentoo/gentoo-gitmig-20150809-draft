@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5.ebuild,v 1.15 2004/07/01 22:09:48 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5.ebuild,v 1.16 2005/11/13 06:21:54 dragonheart Exp $
 
 IUSE="ssl"
 
@@ -16,7 +16,7 @@ SLOT="0"
 #		to do tun/tap tunneling
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
-	>=dev-libs/lzo-1.07
+	=dev-libs/lzo-1*
 	sys-devel/bison
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 

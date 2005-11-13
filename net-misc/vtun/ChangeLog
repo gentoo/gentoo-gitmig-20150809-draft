@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vtun
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.24 2004/11/14 21:21:21 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.25 2005/11/13 06:21:54 dragonheart Exp $
+
+*vtun-2.6-r1 (13 Nov 2005)
+
+  13 Nov 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/vtun-2.6-lzo2.patch, vtun-2.5.ebuild, vtun-2.5-r1.ebuild,
+  vtun-2.5-r2.ebuild, vtun-2.6.ebuild, +vtun-2.6-r1.ebuild:
+  revision bump. vtun did not compile against lzo2 so dependencies
+  altered. vtun-2.6-r1 added that does work with lzo2. bug #112367
 
   14 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> vtun-2.6.ebuild:
   Stable on alpha.
