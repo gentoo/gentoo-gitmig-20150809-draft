@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.46 2005/11/08 12:16:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.47 2005/11/13 12:03:28 betelgeuse Exp $
+
+  13 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  alsa-headers-1.0.10_rc2.ebuild:
+  Marked stable on x86 for bug #111968.
 
 *alsa-headers-1.0.10_rc3 (08 Nov 2005)
 
