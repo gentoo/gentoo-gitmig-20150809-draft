@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.0.ebuild,v 1.1 2005/11/12 15:06:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.0.ebuild,v 1.2 2005/11/13 08:55:07 vapier Exp $
 
 inherit eutils libtool
 
@@ -22,7 +22,7 @@ RDEPEND="ldap? ( net-nds/openldap )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	use X || echo 'all:'$'\n''install:' > src/signer/Makefile.in
 	EPATCH_SINGLE_MSG="Applying libtool reverse deps patch ..." \
 		epatch ${ELT_PATCH_DIR}/fix-relink/1.5.0
@@ -33,16 +33,14 @@ src_compile() {
 	use pcsc-lite \
 		&& mycard="--with-pcsclite" \
 		|| mycard="--with-openct=/usr"
+	# --without-plugin-dir generates a /no directory
 	econf \
 		--disable-usbtoken \
 		--with-plugin-dir=/usr/lib/mozilla/plugins \
-		`use_enable ldap` \
-		`use_with pam` \
+		$(use_enable ldap) \
+		$(use_with pam) \
 		${mycard} \
 		|| die
-
-	# --without-plugin-dir generates a /no directory
-
 
 	emake -j1 || die
 }
