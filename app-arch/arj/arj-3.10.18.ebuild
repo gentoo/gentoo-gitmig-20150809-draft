@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.18.ebuild,v 1.9 2005/01/01 11:41:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.18.ebuild,v 1.10 2005/11/13 03:36:19 weeve Exp $
 
 inherit gnuconfig eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/arj/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc amd64"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 RESTRICT="nostrip"
 
