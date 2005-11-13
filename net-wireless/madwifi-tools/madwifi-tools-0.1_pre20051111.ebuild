@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20051031.ebuild,v 1.4 2005/11/12 22:58:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20051111.ebuild,v 1.1 2005/11/13 16:33:23 genstef Exp $
 
-MADWIFI_SVN_REV="1227"
+MADWIFI_SVN_REV="1325"
 DESCRIPTION="Wireless tools for Atheros chipset a/b/g cards"
 HOMEPAGE="http://www.madwifi.org"
 SRC_URI="http://snapshots.madwifi.org/madwifi-trunk-r${MADWIFI_SVN_REV}-${PV:7:8}.tar.gz"
