@@ -37,7 +37,7 @@ dev-php/php-4.3.2
 dev-tcltk/expect-5.32
 dev-util/cscope-15.3
 dev-util/cvs-1.10
-dev-util/diffstat-1.26
+dev-util/diffstat-1.25
 dev-util/gperf-2.7.2
 dev-util/headerdoc-7.4.8
 dev-util/jam-2.2
