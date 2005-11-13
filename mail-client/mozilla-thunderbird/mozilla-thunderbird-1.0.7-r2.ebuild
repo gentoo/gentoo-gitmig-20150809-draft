@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.7-r2.ebuild,v 1.1 2005/10/25 21:55:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.7-r2.ebuild,v 1.2 2005/11/13 20:15:21 hansmi Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -65,6 +65,16 @@ src_unpack() {
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
+
+	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
+	# PowerPC, because with that configuration, it detects a ppc64 system.
+	# -- hansmi, 2005-11-13
+	if use ppc && [[ "${PROFILE_ARCH}" == ppc64 ]]; then
+		sed -i -e "s#OS_TEST=\`uname -m\`\$#OS_TEST=${ARCH}#" \
+			${S}/configure
+		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
+			${S}/security/coreconf/arch.mk
+	fi
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.91 2005/10/25 21:55:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.92 2005/11/13 20:15:21 hansmi Exp $
+
+  13 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mozilla-thunderbird-1.0.7-r2.ebuild:
+  Fix a compilation issue using the 32-bit userland with 64-bit kernel on
+  PowerPC.
 
 *mozilla-thunderbird-1.0.7-r2 (26 Oct 2005)
 
