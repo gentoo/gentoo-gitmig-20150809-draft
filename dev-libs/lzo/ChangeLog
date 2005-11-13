@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.28 2005/07/16 23:58:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.29 2005/11/13 09:48:20 dragonheart Exp $
+
+*lzo-2.02 (13 Nov 2005)
+
+  13 Nov 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  -lzo-1.08.ebuild, -lzo-2.01.ebuild, +lzo-2.02.ebuild:
+  version bump to support slots - bug #110877 and bug #110878 thanks to
+  Francisco Jose Canizares Santofimia. remove older versions
 
 *lzo-2.01 (16 Jul 2005)
 
