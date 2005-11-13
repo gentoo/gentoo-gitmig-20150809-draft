@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/sylpheed-claws-perl-0.4.ebuild,v 1.1 2005/10/22 13:16:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/sylpheed-claws-perl-0.4.ebuild,v 1.2 2005/11/13 11:45:23 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 MY_PN="${PN##sylpheed-claws-}"
@@ -39,5 +39,10 @@ src_install() {
 	exeinto /usr/lib/sylpheed-claws/tools
 	doexe *.pl
 
-	einfo "The documentation for this plugin is contained in a manpage. Use 'man sc_perl' to read it."
+	rm -f ${D}/usr/lib*/sylpheed-claws/plugins/*.{a,la}
+}
+
+pkg_postinst() {
+	einfo "The documentation for this plugin is contained in a manpage."
+	einfo "You can access it with 'man sc_perl'"
 }

@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed-claws-mailmbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-mailmbox/ChangeLog,v 1.8 2005/10/15 21:17:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-mailmbox/ChangeLog,v 1.9 2005/11/13 11:45:23 genone Exp $
+
+*sylpheed-claws-mailmbox-1.4 (13 Nov 2005)
+
+  13 Nov 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-mailmbox-1.2.ebuild, +sylpheed-claws-mailmbox-1.4.ebuild:
+  Version bump required for newer SC versions. Also add teh .a/.la kill from
+  bug 111481.
 
   15 Oct 2005; Jason Wever <weeve@gentoo.org>
   sylpheed-claws-mailmbox-1.2.ebuild:

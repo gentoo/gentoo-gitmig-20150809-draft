@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-perl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/ChangeLog,v 1.2 2005/10/22 13:16:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/ChangeLog,v 1.3 2005/11/13 11:45:23 genone Exp $
+
+  13 Nov 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-perl-0.4.ebuild:
+  Kill useless static and libtool libs, bug 111481.
 
 *sylpheed-claws-perl-0.4 (22 Oct 2005)
 
