@@ -2,9 +2,9 @@ MD5 693bb0bca5adf98abe428a3ca435d095 scilab-2.7-r3.ebuild 4028
 MD5 d0d35035f63b012c250b165d95ac0a8d scilab-3.1.1.ebuild 5789
 MD5 40f7671ad69b1687f87850e710843f0d scilab-3.1.1-r2.ebuild 5808
 MD5 98a93c775c31d389443fdbb685449d81 scilab-3.1.1-r1.ebuild 5942
-MD5 703e496aef9cf567eb1fd7c43443846d ChangeLog 5766
+MD5 4c0bf92924dae9800994c429a4586eff ChangeLog 5922
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 e185265565e1f9652509a0247dbc5842 scilab-3.1.1-r3.ebuild 4796
+MD5 16bcc7ae423c5154b2d8e0b15dcfe40e scilab-3.1.1-r3.ebuild 4796
 MD5 bbe608fb3f1804163b4b8af882c8dcbb files/digest-scilab-3.1.1-r1 70
 MD5 bbe608fb3f1804163b4b8af882c8dcbb files/digest-scilab-3.1.1-r2 70
 MD5 bbe608fb3f1804163b4b8af882c8dcbb files/digest-scilab-3.1.1-r3 70
