@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.3.ebuild,v 1.1 2005/11/13 02:24:21 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.3.ebuild,v 1.2 2005/11/13 03:17:38 pythonhead Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://formencode.org/"
 SRC_URI="http://cheeseshop.python.org/packages/source/F/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.3"
