@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0133ecbd50dec3f32395e2e65f072544 lynx-2.8.5-r1.ebuild 1819
-MD5 74d537c06ede7b45e1e7ea4f649f7994 lynx-2.8.5-r2.ebuild 1932
-MD5 93f38e31466c04272a6c08ed53b3c365 ChangeLog 7935
+MD5 6db7bc0f0f3b088001b7027e1dd27235 lynx-2.8.5-r2.ebuild 1931
 MD5 acaa86fdf4e340e1180ce324110007cd metadata.xml 224
-MD5 69f5b66452909cba98afabb58a6e826b files/digest-lynx-2.8.5-r1 140
+MD5 2ca1ad421236c2f4458fce85d29efd8d ChangeLog 8053
+MD5 0133ecbd50dec3f32395e2e65f072544 lynx-2.8.5-r1.ebuild 1819
 MD5 3dde8ca3c7a3d6f5c26ebd480aa298f8 files/digest-lynx-2.8.5-r2 135
+MD5 69f5b66452909cba98afabb58a6e826b files/digest-lynx-2.8.5-r1 140
 MD5 a041d139e8868dac8d23fd879f31809a files/lynx-2.8.5-darwin.patch 687
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdyeRViELBEf1JB0RAqkuAJ9jIYW8+x0UP+9WSHPobXCxpWgc7ACeIV5V
-MyRCKimP/ZRKw1C3aDf61Gg=
-=KScK
------END PGP SIGNATURE-----
