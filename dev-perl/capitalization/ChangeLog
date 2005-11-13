@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/capitalization
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/capitalization/ChangeLog,v 1.1 2005/11/13 14:48:26 mcummings Exp $
+
+*capitalization-0.03 (13 Nov 2005)
+
+  13 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +capitalization-0.03.ebuild:
+  New dep for DBIx-SearchBuilder
+
