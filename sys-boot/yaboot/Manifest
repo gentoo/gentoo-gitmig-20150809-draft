@@ -1,4 +1,4 @@
-MD5 6e11a4be43913a0b8a93f1acb11d9952 ChangeLog 6641
+MD5 079a1a09501baf9e9a864c87e773a47a ChangeLog 6783
 MD5 15c7e4852d3cc4ca21044014d33737ee files/chrpfix.patch 979
 MD5 79f1707ceab2b7d7daa98a62e15ca98c files/digest-yaboot-1.3.11-r1 65
 MD5 2831519fd08125184e05a815a51d63ec files/digest-yaboot-1.3.12-r1 65
@@ -17,6 +17,6 @@ MD5 05ad83c8ec8ac7914cd6224a148daef6 files/yabootconfig-1.3.12.patch 1987
 MD5 116ac118087f29161456b653a8429522 files/yabootconfig-1.3.13.patch 1655
 MD5 9c2a69b11bc766ffdc32016e0bb1e967 metadata.xml 219
 MD5 02e04abd101bf97d1824b54f89f57559 yaboot-1.3.11-r1.ebuild 1120
-MD5 bb8c0a6b8793792cbaab2f0a9a7b8ddb yaboot-1.3.12-r1.ebuild 1339
-MD5 5e9f6eed2cf61242866b51e8786a6af4 yaboot-1.3.13-r1.ebuild 1460
-MD5 26fab11fcffe9efa9c34ab0118369c29 yaboot-1.3.13.ebuild 1404
+MD5 dff32f2623cbe13a62eefd4e69190a57 yaboot-1.3.12-r1.ebuild 1339
+MD5 9428179d1b39c102a7ee47056a61daad yaboot-1.3.13-r1.ebuild 1459
+MD5 9796d3c1a230946aaadfa8e437e4799e yaboot-1.3.13.ebuild 1404

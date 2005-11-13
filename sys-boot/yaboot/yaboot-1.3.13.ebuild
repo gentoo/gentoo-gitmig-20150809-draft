@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.7 2005/07/12 00:55:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.8 2005/11/13 23:08:37 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -40,7 +40,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Please note if you are running a 2.6 kernel the verison"
+	ewarn "Please note if you are running a 2.6 kernel the version"
 	ewarn "of ofpath included in this revision of yaboot requires"
 	ewarn "that you run a kernel >= 2.6.3, prior versions are unsupported."
 }
