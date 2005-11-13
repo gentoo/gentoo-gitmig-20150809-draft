@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.16 2005/11/12 16:48:00 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.17 2005/11/13 17:30:45 xmerlin Exp $
+
+  13 Nov 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/partimage-0.6.4-datadir-path.patch, -partimage-0.6.2.ebuild,
+  -partimage-0.6.4-r1.ebuild, -partimage-0.6.4-r2.ebuild,
+  partimage-0.6.4-r3.ebuild, partimage-0.6.4-r4.ebuild,
+  -partimage-0.6.4.ebuild:
+  removed old ebuilds, fixed datadir path.
+  removed unneeded lzo dep, fixed bug #112369.
 
   12 Nov 2005; Christian Zoffoli <xmerlin@gentoo.org> partimage-0.6.2.ebuild,
   partimage-0.6.4-r1.ebuild, partimage-0.6.4-r2.ebuild,
