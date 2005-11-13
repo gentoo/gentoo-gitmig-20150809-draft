@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4678 2005/11/13 05:36:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4679 2005/11/13 06:14:59 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1229,6 +1229,7 @@ dev-db/xmysqladmin
 # zlo ABI different - masked until packages that depend on this have been fixed.
 >=dev-libs/lzo-2
 >=app-arch/lzop-1.02_rc1-r1
+>=net-misc/vtun-2.6-r1
 
 # John N. Laliberte <allanonjl@gentoo.org> (24 Jun 2005)
 # old, unmaintained ebuilds with dead upstream
