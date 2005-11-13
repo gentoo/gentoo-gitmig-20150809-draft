@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0-r1.ebuild,v 1.1 2005/11/13 05:44:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0-r1.ebuild,v 1.2 2005/11/13 15:11:07 ribosome Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 
 SLOT="0"
 IUSE="ifc doc"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="virtual/libc
 	>=sys-devel/libtool-1.5
