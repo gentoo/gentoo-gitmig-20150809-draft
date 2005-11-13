@@ -1,8 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f9a8db6c472e89af668eeddfadbbfba ChangeLog 2494
 MD5 b5fed5a0775c693a4604db92ab303789 dbix-searchbuilder-0.95.ebuild 647
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7360cc7c18a66d5faa1e692698b2bc2c ChangeLog 2338
 MD5 e6d39b355656ab486c0b1411d02319bf dbix-searchbuilder-1.01.ebuild 695
 MD5 bddd0c61f44e5eeb56605a08b5bce20b dbix-searchbuilder-1.27.ebuild 705
-MD5 31ce4083b3b970cc289c5dc99512af59 files/digest-dbix-searchbuilder-1.01 74
+MD5 3ded81a239f17c7b3eb0cccd2ab644e3 dbix-searchbuilder-1.35.ebuild 859
 MD5 b8e5f466cabcb00dc4c5a3ab0fdfb8ed files/digest-dbix-searchbuilder-0.95 74
+MD5 31ce4083b3b970cc289c5dc99512af59 files/digest-dbix-searchbuilder-1.01 74
 MD5 4bf49fbaa280026b24ed168dd6894ec8 files/digest-dbix-searchbuilder-1.27 74
+MD5 de559bfdca62a963c7b4bd141aaa9718 files/digest-dbix-searchbuilder-1.35 74
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDd1V+tG5z4I8BtQoRAgMmAJ9XAfo8/0NZMs2ujgpKjDEozAKd8gCfUD5T
+RjotH6zbegLsXRv3I9xjH1g=
+=F6LO
+-----END PGP SIGNATURE-----
