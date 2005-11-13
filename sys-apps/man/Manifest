@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a2e486655528aae9a7fd390a171ba815 ChangeLog 11483
+MD5 4dcd8f29e40b475220943a15cee51e11 ChangeLog 11693
 MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
 MD5 90c01e3cfecc4bc92266780a9be71429 files/digest-man-1.6-r1 59
 MD5 1c3d9a443043b133adbe277b50105123 files/digest-man-1.6a 60
-MD5 bf0f39bbc9dbe51b036a060f0bcc5094 files/digest-man-1.6b 60
+MD5 bf0f39bbc9dbe51b036a060f0bcc5094 files/digest-man-1.6b-r1 60
 MD5 8b2016cc778ed4e2570b912c0f420266 files/makewhatis.cron 130
 MD5 80f2a25fb0b5692f39a1990527a93271 files/man-1.5m-groff-1.18.patch 923
 MD5 1d6fe29183fbb523a07b877255d686b4 files/man-1.5m2-apropos.patch 450
@@ -17,18 +17,18 @@ MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
 MD5 331c925e304b56d63aa2c97dcc8e08fc files/man-1.6-cross-compile.patch 1744
 MD5 ecb128fe6db790f05629a8b2eca4c4fa files/man-1.6-message-order.patch 833
 MD5 bc796c3f2d1f9becb3d0bedc1b6dc051 files/man-1.6-parallel-make.patch 1033
-MD5 337552be4f634e060fc97b19baaa1318 files/man-1.6a-makewhatis-config.patch 1226
+MD5 fda8d1252305100c69a17634a9ba5838 files/man-1.6a-makewhatis-config.patch 1818
 MD5 7b94b85c02df3b66046e3d01827cd173 files/man-1.6a-parallel-make.patch 657
 MD5 90f936cbc365fa88a17525afc2cc0d95 files/man-1.6b-build.patch 175
 MD5 816a0222228cedf51e8bc39acb32fa89 man-1.5p.ebuild 2648
 MD5 5c0c422d050f5191b66a7c4ed928835a man-1.6-r1.ebuild 2983
 MD5 9206115cdc98fb8e0d7cbd518ad9476b man-1.6a.ebuild 2897
-MD5 3e0bb5ba53d843b602dd89621d7ee4d7 man-1.6b.ebuild 2980
+MD5 49198b30903044247b59afa6147d2ea5 man-1.6b-r1.ebuild 2983
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDc9zagIKl8Uu19MoRAjpRAJwOHgJ14ctmNHcGiS9IfHZjKb8btQCeJNyQ
-zsRmQXO52b3tUqlWlclDuCs=
-=I8X9
+iD8DBQFDdrt6gIKl8Uu19MoRAjcDAJ9dX8cdV5/OY9h4+mKvCnihoXb3QgCffC8c
+FCNjj7DEF22xMlBJwPxVZ/0=
+=HdtU
 -----END PGP SIGNATURE-----
