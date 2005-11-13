@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.1 2005/11/12 15:41:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.2 2005/11/13 03:29:30 ranger Exp $
+
+  13 Nov 2005; <ranger@gentoo.org> Class-ErrorHandler-0.01.ebuild:
+  Marking Class-ErrorHandler-0.01 ~ppc64 for bug 112279
 
 *Class-ErrorHandler-0.01 (12 Nov 2005)
 
