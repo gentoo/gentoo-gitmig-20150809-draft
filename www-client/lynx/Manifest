@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 616fb345a99231bd4622b674dc31471b ChangeLog 7266
+MD5 9ab4a21b8567318f0b067303080705dd ChangeLog 7377
+MD5 7c76d97be05bb0119c9942853fe86ac4 lynx-2.8.5-r1.ebuild 1840
+MD5 dda997f57983b03e261f0b6522ad30a3 lynx-2.8.5-r2.ebuild 1958
+MD5 acaa86fdf4e340e1180ce324110007cd metadata.xml 224
 MD5 a1e9c5cf250af6de957e1986fc815ac7 files/digest-lynx-2.8.5-r1 140
 MD5 3609542671c4be7e881627bc5ca33c4f files/digest-lynx-2.8.5-r2 135
 MD5 62a95dce16ec74f3ecb3bc3df818fbbc files/lynx-2.8.5-darwin.patch 652
-MD5 7c76d97be05bb0119c9942853fe86ac4 lynx-2.8.5-r1.ebuild 1840
-MD5 287fecc1ebcce2c7500a95036eb0bda5 lynx-2.8.5-r2.ebuild 1958
-MD5 acaa86fdf4e340e1180ce324110007cd metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iQCVAwUBQ3ai9Z4WFLgrx1GWAQJBmAP+NPj4sS1khn+tIdxmsXFvjvsOLCLmm2Cf
-/G+3BlWO8J+asLc7k4L3p4K/W/lHQVr1Ouq0lgj2WumB9sqOEB+kR/9gxpR604Af
-xlItYBNSgwiDgRqdcvZ6eMAwNhekKiNlrGBJdy4NSei3itqNLthE6pND2RWRYB1/
-1IAL2lCeIHo=
-=opTd
------END PGP SIGNATURE-----
