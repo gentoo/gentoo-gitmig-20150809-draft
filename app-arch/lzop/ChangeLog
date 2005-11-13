@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/lzop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.16 2005/09/14 17:09:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.17 2005/11/13 05:43:05 dragonheart Exp $
+
+*lzop-1.02_rc1-r1 (13 Nov 2005)
+
+  13 Nov 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  lzop-1.01.ebuild, lzop-1.02_rc1.ebuild, +lzop-1.02_rc1-r1.ebuild:
+  fix dependencies for a nice easy lzo 1->2 transition - bug #105637 sort of
+  releated.
 
   14 Sep 2005; Fabian Groffen <grobian@gentoo.org> lzop-1.02_rc1.ebuild:
   Marking ~ppc-macos (bug #105845)

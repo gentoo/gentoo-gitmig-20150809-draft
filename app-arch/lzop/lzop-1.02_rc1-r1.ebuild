@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.02_rc1.ebuild,v 1.3 2005/11/13 05:43:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.02_rc1-r1.ebuild,v 1.1 2005/11/13 05:43:05 dragonheart Exp $
 
 inherit versionator
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="<dev-libs/lzo-2"
+DEPEND=">=dev-libs/lzo-2"
 S=${WORKDIR}/${MY_P}
 
 
