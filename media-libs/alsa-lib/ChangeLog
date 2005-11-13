@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.131 2005/11/13 13:05:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.132 2005/11/13 15:06:34 flameeyes Exp $
+
+  13 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-lib-1.0.10_rc2.ebuild:
+  Execute eautoreconf to avoid problems as per bug #112412.
 
   13 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   alsa-lib-1.0.10_rc2.ebuild:
