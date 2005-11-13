@@ -1,11 +1,14 @@
-MD5 9fef0ee987915faac421d89642216bca ChangeLog 23837
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8150432e950d700450e6930dea3bb60a ChangeLog 24104
 MD5 9503779c4a371ce5172784d2e8a48274 arts-1.3.2-r1.ebuild 2655
 MD5 51046f9ff099e5b3045caa3884c8d8eb arts-1.3.2.ebuild 2780
 MD5 9780af748959ac2da43677dd72a313f0 arts-3.4.1-r2.ebuild 2854
 MD5 db0f7cdd6d695cdf6af189655f4758d5 arts-3.4.2.ebuild 2941
 MD5 b48bf1d6fea6115c0b3f7bffd54ed518 arts-3.4.3.ebuild 2942
 MD5 d9248d6dc9fd9c9372024083c991f59d arts-3.5.0_beta2.ebuild 2619
-MD5 9ef302a7ab68a47c030ec87f22544e25 arts-3.5.0_rc1.ebuild 2567
+MD5 f3b94ddee980c92ef24f96e2d870ae56 arts-3.5.0_rc1.ebuild 3045
 MD5 5ab88e65406f5d0dcb2c22a7174f7806 arts-3.5_beta1-r1.ebuild 2621
 MD5 68ec6c8e74dfea13c3bb54575b1c51d4 files/1.3.0-jack-configure.in.in.patch 694
 MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.2-alsa-bigendian.patch 571
@@ -22,3 +25,10 @@ MD5 594b1aee0aa6fec867f62b1774586434 files/digest-arts-3.5.0_beta2 64
 MD5 9efe20df34c4f9e516b9d12dea825e25 files/digest-arts-3.5.0_rc1 67
 MD5 3ab1771e7a2c34e08a3c1e5dbd5af975 files/digest-arts-3.5_beta1-r1 64
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDdoekAiZjviIA2XgRAnxRAKDy3AD1HQiRFUm40BMAiahGarOT7ACeOkJC
+/acU1kI5PrfDhUJco8uQcDk=
+=jOby
+-----END PGP SIGNATURE-----
