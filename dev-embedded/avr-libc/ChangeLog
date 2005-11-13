@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avr-libc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.15 2005/10/22 10:39:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.16 2005/11/13 04:08:12 vapier Exp $
+
+*avr-libc-1.2.6 (13 Nov 2005)
+
+  13 Nov 2005; Mike Frysinger <vapier@gentoo.org> +avr-libc-1.2.6.ebuild:
+  Version bump #112267 by Ludek Stepan.
 
   22 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   -avr-libc-1.2.5.ebuild:
