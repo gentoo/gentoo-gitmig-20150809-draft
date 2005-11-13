@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.17.ebuild,v 1.3 2005/11/12 10:37:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.17.ebuild,v 1.4 2005/11/13 20:57:02 hansmi Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="X Xaw3d arts esd ffmpeg gnome nls readline sdl"
 
 DEPEND="esd? ( media-sound/esound )
