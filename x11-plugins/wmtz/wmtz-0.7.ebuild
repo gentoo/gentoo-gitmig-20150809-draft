@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.13 2005/11/11 11:13:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.14 2005/11/13 07:18:42 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,10 +20,7 @@ src_unpack() {
 	cd ${S}
 
 	#apply both patches to compile with gcc-3.4 closing bug #64556
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
-	then
 		epatch ${FILESDIR}/wmtz-0.7-gcc34.patch
-	fi
 }
 
 src_compile() {

@@ -1,6 +1,16 @@
-MD5 d578993a8fe9e54fd7d8daadf9ccb94a wmtz-0.7.ebuild 934
-MD5 9d6e95356f6dc6f9c2acc98cd3bf6bb2 ChangeLog 1521
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54929baf79793e54f538e4c20495d95e ChangeLog 1650
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 87d237cba796423d80d030a210401ed0 files/wmtz.c.patch 465
+MD5 a70cf080daa7c0c960b276f6ba41643d wmtz-0.7.ebuild 854
 MD5 6efb0655a3f8a17ecd56106d4d39ebda files/digest-wmtz-0.7 59
 MD5 f44970f0cb57d7fca808329d20d45902 files/wmtz-0.7-gcc34.patch 336
+MD5 87d237cba796423d80d030a210401ed0 files/wmtz.c.patch 465
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDdujl/aM9DdBw91cRAqTfAJ46r8rhLSbwxiKnZYpypDPdKoT0wQCcCHps
+mTB7LBbfDqBD79jTXAD+Gpg=
+=DtG6
+-----END PGP SIGNATURE-----
