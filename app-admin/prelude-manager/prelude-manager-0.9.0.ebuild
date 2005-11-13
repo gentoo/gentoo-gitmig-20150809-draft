@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0.ebuild,v 1.2 2005/09/25 02:17:42 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0.ebuild,v 1.3 2005/11/13 04:10:57 soulse Exp $
 
 inherit flag-o-matic
 
@@ -32,6 +32,8 @@ src_compile() {
 	use debug && append-flags -O -ggdb
 	use !xml && myconf="${myconf} --disable-xmltest"
 
+	myconf="${myconf} --localstatedir=/var/run"
+
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
@@ -44,6 +46,8 @@ src_install() {
 	insinto /etc/conf.d
 	insopts -m 644
 	newins "${FILESDIR}"/gentoo.conf prelude-manager
+
+	dodir /var/run/prelude-manager
 
 	keepdir /var/lib/spool/prelude-manager
 }
