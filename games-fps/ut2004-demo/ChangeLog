@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.33 2005/10/21 18:01:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.34 2005/11/13 15:37:32 wolf31o2 Exp $
+
+  13 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3334.ebuild:
+  Added libstdc++-v3 to RDEPEND and closing bug #112371.
 
   21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3334.ebuild:
