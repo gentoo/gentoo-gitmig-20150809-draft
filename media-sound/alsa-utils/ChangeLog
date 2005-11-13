@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.113 2005/11/08 12:19:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.114 2005/11/13 14:05:32 betelgeuse Exp $
+
+  13 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  alsa-utils-1.0.10_rc2.ebuild:
+  Marked stable on x86 for bug #111968.
 
 *alsa-utils-1.0.10_rc3 (08 Nov 2005)
 
