@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 016c1db546275137fca857007deb8987 ChangeLog 528
+MD5 178a873ac50643d22ef0bea2cbf11f15 files/acpi_notifier-0.3-ibm.patch 611
+MD5 306d22889cf1447ec6182916ecd22260 files/digest-sylpheed-claws-acpi-notifier-0.3 92
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+MD5 30fd4a7845b389eda78bf39f80a3a859 sylpheed-claws-acpi-notifier-0.3.ebuild 1545
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDdzAm6J2i8a8J4okRAhDQAJ4nJctrJxTr6jW1ikUvGiwUjvJAPQCcCavv
+KgjEO9/M2OK3blnxsmqqv00=
+=v7lp
+-----END PGP SIGNATURE-----
