@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r6.ebuild,v 1.4 2005/10/14 13:50:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r7.ebuild,v 1.1 2005/11/14 10:39:22 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -118,6 +118,8 @@ src_compile() {
 		ewarn "difficult to fix. Please have that in mind."
 		ewarn ""
 	fi
+	
+	append-lfs-flags
 
 	local myconf
 

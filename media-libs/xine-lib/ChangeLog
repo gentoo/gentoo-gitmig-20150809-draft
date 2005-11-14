@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.266 2005/10/31 11:11:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.267 2005/11/14 10:39:22 flameeyes Exp $
+
+*xine-lib-1.1.0-r7 (14 Nov 2005)
+
+  14 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-lib-1.1.0-r6.ebuild, +xine-lib-1.1.0-r7.ebuild:
+  Append LFS flags, as they seems to be needed for some files that does not
+  include config.h as they should. Could fix problems people were having after
+  removing optimisations.
 
   31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1_rc8-r2.ebuild:
