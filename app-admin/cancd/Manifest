@@ -3,3 +3,4 @@ MD5 4ca7e3df59e4817fd53a9b61f33f681a cancd-0.1.0.ebuild 962
 MD5 3b01d1817d6513beed0e000105ae17f7 files/cancd-conf.d 605
 MD5 c442ca1294fd06f4b84e8ba23180507f files/cancd-init.d 624
 MD5 2519af6cc0a0ad63ed00fff3929ed7ad files/digest-cancd-0.1.0 61
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
