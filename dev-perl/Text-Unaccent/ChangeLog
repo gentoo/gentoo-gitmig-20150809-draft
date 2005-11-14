@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Unaccent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unaccent/ChangeLog,v 1.1 2005/11/12 13:06:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unaccent/ChangeLog,v 1.2 2005/11/14 21:44:23 hansmi Exp $
+
+  14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Text-Unaccent-1.08.ebuild:
+  Added to ~hppa, ~ppc. See bug #112272.
 
 *Text-Unaccent-1.08 (12 Nov 2005)
 
