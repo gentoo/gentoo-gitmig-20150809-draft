@@ -1,12 +1,22 @@
-MD5 a1bf11945e6dd3e91cab8564ae89446e ChangeLog 26439
-MD5 743b9535636a8b39507545bc03a1a265 files/digest-sylpheed-claws-1.0.5 74
-MD5 743b9535636a8b39507545bc03a1a265 files/digest-sylpheed-claws-1.0.5-r1 74
-MD5 a72739cfabebb4db4cd7f05261380027 files/digest-sylpheed-claws-1.9.100 76
-MD5 5e3551b9ba068cb0188878c84d1c1c17 files/digest-sylpheed-claws-1.9.15 75
-MD5 06d23c04b3d6ddfb1431c22ecc5b28f6 files/ldif-buffer-overflow-fix.diff 5007
-MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
-MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
-MD5 9f7e6320b5ae4890cd21df9812caac2e sylpheed-claws-1.0.5-r1.ebuild 3902
-MD5 c2f43f3756d2d04b85377972c2d80223 sylpheed-claws-1.0.5.ebuild 3847
-MD5 f2740d63321fd0751083ab0ac45ceb1d sylpheed-claws-1.9.100.ebuild 4444
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 15b5c9348ba0b0a416892588256b4cbc sylpheed-claws-1.9.15.ebuild 4821
+MD5 74fa675639aa3c969c3e6215a7d2d2b0 sylpheed-claws-1.0.5-r1.ebuild 3903
+MD5 f2740d63321fd0751083ab0ac45ceb1d sylpheed-claws-1.9.100.ebuild 4444
+MD5 708367f22f1ae2dad679df3cae4dfc6e ChangeLog 26572
+MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
+MD5 c2f43f3756d2d04b85377972c2d80223 sylpheed-claws-1.0.5.ebuild 3847
+MD5 743b9535636a8b39507545bc03a1a265 files/digest-sylpheed-claws-1.0.5 74
+MD5 06d23c04b3d6ddfb1431c22ecc5b28f6 files/ldif-buffer-overflow-fix.diff 5007
+MD5 743b9535636a8b39507545bc03a1a265 files/digest-sylpheed-claws-1.0.5-r1 74
+MD5 5e3551b9ba068cb0188878c84d1c1c17 files/digest-sylpheed-claws-1.9.15 75
+MD5 a72739cfabebb4db4cd7f05261380027 files/digest-sylpheed-claws-1.9.100 76
+MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDeGUA3og80iZgVQgRAkEBAJwMUm4nRjEkF34A7nE9RDwgSKmldACeN2L+
+l66ayra0Db+hvMSQ30AUW60=
+=VcVC
+-----END PGP SIGNATURE-----
