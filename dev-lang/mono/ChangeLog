@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.65 2005/10/18 19:11:40 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.66 2005/11/14 05:06:11 latexer Exp $
+
+*mono-1.1.10 (14 Nov 2005)
+
+  14 Nov 2005; Peter Johanson <latexer@gentoo.org> +mono-1.1.10.ebuild:
+  Bump.
 
   18 Oct 2005; Herbie Hopkins <herbs@gentoo.org> mono-1.1.9.2.ebuild:
   Remove amd64 replace-flags, this issue seems to be fixed in 1.1.9*.
