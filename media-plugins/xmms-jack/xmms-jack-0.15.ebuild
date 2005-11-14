@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.15.ebuild,v 1.1 2005/11/12 17:25:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.15.ebuild,v 1.2 2005/11/14 03:14:51 metalgod Exp $
 
 IUSE="bmp"
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc64"
 RDEPEND="media-sound/xmms
 	bmp? ( media-sound/beep-media-player )
 	>=media-libs/bio2jack-0.4
+	media-libs/libsamplerate
 	media-sound/jack-audio-connection-kit"
 
 DEPEND="${RDEPEND}

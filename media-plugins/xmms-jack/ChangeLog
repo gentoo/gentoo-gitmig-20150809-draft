@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.26 2005/11/12 17:27:47 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.27 2005/11/14 03:14:51 metalgod Exp $
+
+  14 Nov 2005; Luis Medinas <metalgod@gentoo.org> xmms-jack-0.15.ebuild:
+  Added a missing dependency. Closes bug #112443.
 
   12 Nov 2005; Luis Medinas <metalgod@gentoo.org> xmms-jack-0.11.ebuild:
   Marked Stable on amd64.
