@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/steghide
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.9 2005/08/19 03:49:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.10 2005/11/14 21:51:01 hansmi Exp $
+
+  14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> steghide-0.5.1.ebuild:
+  Stable on ppc. See bug #111790.
 
   19 Aug 2005; Luis Medinas <metalgod@gentoo.org> steghide-0.5.1.ebuild:
   Added ~amd64 keywords.
