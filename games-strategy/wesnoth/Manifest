@@ -1,7 +1,17 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57059bb5bc220cf8bcc5756fc97f55e5 wesnoth-0.9.7.ebuild 1304
-MD5 0f39dfc48590404eb81c4303f4f5c0a4 wesnoth-1.0.1.ebuild 1987
-MD5 92e0d3119622ba0253d7b336435f9d6f ChangeLog 8834
+MD5 5dddc938fc8ee4ffdbf0c20e179dbd41 wesnoth-1.0.1.ebuild 1985
+MD5 6c4accdaddb70100d1598777becf297b ChangeLog 8928
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 2238ca275d6ab646096d612c46b1eb05 files/wesnothd.rc 619
 MD5 fb1fa5b4b8d2cf8cb254199744d05a69 files/digest-wesnoth-0.9.7 67
 MD5 6a73a3191925d45024cf48879c799e0e files/digest-wesnoth-1.0.1 67
-MD5 2238ca275d6ab646096d612c46b1eb05 files/wesnothd.rc 619
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDeKk+KRy60XGEcJIRAr/pAJ9AIz5NjMGXLHHsuDZB3RVbemq4iQCfWXdK
+4cf8arZod7D2tVGZJ4IBncM=
+=Bp2z
+-----END PGP SIGNATURE-----
