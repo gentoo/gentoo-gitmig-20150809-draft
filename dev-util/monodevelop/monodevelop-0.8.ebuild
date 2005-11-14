@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.8.ebuild,v 1.1 2005/10/16 02:21:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.8.ebuild,v 1.2 2005/11/14 02:55:50 latexer Exp $
 
 inherit mono eutils fdo-mime
 
@@ -25,6 +25,12 @@ DEPEND=">=dev-dotnet/gtksourceview-sharp-0.10
 
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-iso-api-update.diff
+}
 
 src_compile() {
 	econf \

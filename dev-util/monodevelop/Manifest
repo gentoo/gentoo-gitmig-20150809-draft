@@ -1,9 +1,9 @@
 MD5 35c17e64aed292e7a7f6aeb5915787a3 monodevelop-0.5.1-r4.ebuild 1559
-MD5 163de1b84e9329ba5fc3a554d169e19c ChangeLog 6347
+MD5 e8dab68a1e5f4425475dec7559b038b3 ChangeLog 6560
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 9cf588769f67de01bdb230e64b451ac5 monodevelop-0.7-r1.ebuild 1800
 MD5 a430f9561f918a21f460a4749427c249 monodevelop-0.7-r2.ebuild 1843
-MD5 669bd4818235a7209ff1b26efc8f3a87 monodevelop-0.8.ebuild 1273
+MD5 5aad04df993aec977ae3ca15a3bc192a monodevelop-0.8.ebuild 1358
 MD5 2200a01878af7bc8553e3c3181d70463 files/digest-monodevelop-0.8 68
 MD5 f36ce806f3552f974021d1a56021f67c files/monodevelop-0.5.1-iconloader.diff 1255
 MD5 9e3ea3908c299c9240a5f7689f83909a files/monodevelop-0.5.1-nemerle-gtk-sharp.diff 1874
@@ -13,3 +13,4 @@ MD5 cff7e9d967516c14789c6d0246791c9d files/monodevelop-0.7-boo-0.6.0-compat.diff
 MD5 31886624cd9fce60d5c7346c2b22960e files/monodevelop-0.7-gtksharp-update.diff 8260
 MD5 48b6815b0eb2b1996cc0bd00b3e312a6 files/monodevelop-0.7-mcs-path-fix.diff 1917
 MD5 48b44fa7ba76c3b567d260ecff9e7aea files/digest-monodevelop-0.7-r2 68
+MD5 606a61241cec46077c00541c346b0f9f files/monodevelop-0.8-iso-api-update.diff 3528
