@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111.ebuild,v 1.7 2005/10/24 16:13:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111.ebuild,v 1.8 2005/11/14 20:26:23 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -21,6 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )
 	=dev-java/xerces-2.6*
+	=dev-java/xalan-2.6*
 	dev-java/ant-core
 	=dev-java/junit-3.8*"
 RDEPEND=">=virtual/jre-1.4"
@@ -39,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="jar -Dclasspath=$(java-pkg_getjars xerces-2)"
+	local antflags="jar -Dclasspath=$(java-pkg_getjars xerces-2,xalan)"
 	use jikes && antflags="-Dbuild.compiler=jikes ${antflags}"
 	use doc && antflags="${antflags} javadoc"
 

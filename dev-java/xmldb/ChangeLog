@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmldb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.6 2005/10/24 16:13:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.7 2005/11/14 20:26:23 betelgeuse Exp $
+
+  14 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> xmldb-20011111.ebuild:
+  Added missing dependency on xalan.
 
   24 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> xmldb-20011111.ebuild:
   Added missing dependency on xerces, bug #110337.
