@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.4 2005/10/19 09:50:30 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.5 2005/11/14 07:56:59 truedfx Exp $
 
 inherit eutils libtool toolchain-funcs multilib
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="readline"
 
-RDEPEND="sys-devel/libtool
-	>=sys-libs/gdbm-1.8.0
+RDEPEND=">=sys-libs/gdbm-1.8.0
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo"
@@ -44,7 +43,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO TREE
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO TREE
 	docinto doc
 	dodoc doc/*
 }
