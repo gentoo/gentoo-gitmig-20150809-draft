@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.38 2005/11/12 14:22:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.39 2005/11/14 21:46:23 hansmi Exp $
+
+  14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> bins-1.1.29.ebuild:
+  Added to ~ppc. See bug #112272.
 
 *bins-1.1.29 (12 Nov 2005)
 
