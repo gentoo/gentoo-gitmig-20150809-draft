@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.42 2005/10/17 21:04:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.43 2005/11/14 20:17:58 betelgeuse Exp $
+
+*tomcat-5.0.28-r10 (14 Nov 2005)
+
+  14 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  files/5.0.28/tomcat.conf-r1, files/5.0.28/tomcat.init,
+  +tomcat-5.0.28-r10.ebuild:
+  New revision with support for changing the home directory of the tomcat user
+  with emerge --config. Fixes bug #109079. Also the init script now creates a
+  pidfile.
 
 *tomcat-5.0.28-r9 (17 Oct 2005)
 

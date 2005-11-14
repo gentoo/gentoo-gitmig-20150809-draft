@@ -1,4 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.0.28/tomcat.conf-r1,v 1.1 2005/09/18 14:10:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.0.28/tomcat.conf-r1,v 1.2 2005/11/14 20:17:58 betelgeuse Exp $
+
+# This file is also sourced by the catalina.sh script so all the variables you 
+# declare here are available for that script
 
 # JVM Runtime
 # Using the default setting, it will determine your JVM from the system-vm
