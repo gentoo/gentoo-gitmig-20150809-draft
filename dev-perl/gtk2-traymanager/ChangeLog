@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-traymanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.1 2005/11/09 21:37:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.2 2005/11/14 21:57:49 hansmi Exp $
+
+  14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gtk2-traymanager-0.05.ebuild:
+  Added to ~ppc. See bug #112001.
 
 *gtk2-traymanager-0.05 (09 Nov 2005)
 
