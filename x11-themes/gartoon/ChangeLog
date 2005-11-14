@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gartoon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.1 2005/11/03 21:34:44 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.2 2005/11/14 21:51:52 hansmi Exp $
+
+  14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> gartoon-0.5.ebuild:
+  Added to ~ppc. See bug #111633.
 
 *gartoon-0.5 (03 Nov 2005)
 
