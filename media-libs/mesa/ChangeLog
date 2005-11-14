@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.49 2005/11/14 19:39:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.50 2005/11/14 20:15:03 spyderous Exp $
+
+*mesa-6.4-r1 (14 Nov 2005)
+
+  14 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>; -mesa-6.4.ebuild,
+  +mesa-6.4-r1.ebuild:
+  Install GLwDrawA.h, and if USE=motif, install GLwMDrawA.h. Reported by
+  Stefaan De Roeck <stefaan@gentoo.org>.
 
   14 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -files/dont-install-gles-headers.patch,

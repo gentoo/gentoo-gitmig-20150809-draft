@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.ebuild,v 1.3 2005/11/11 22:22:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4-r1.ebuild,v 1.1 2005/11/14 20:15:03 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -128,6 +128,12 @@ src_install() {
 	exeinto /usr/$(get_libdir)/xorg/modules/dri
 	einfo "Installing drivers to ${EXEDESTTREE}."
 	find ${S}/lib* -name '*_dri.so' | xargs doexe
+
+	insinto /usr/include/GL
+	doins ${S}/src/glw/GLwDrawA.h
+	if use motif; then
+		doins ${S}/src/glw/GLwMDrawA.h
+	fi
 
 	fix_opengl_symlinks
 	dynamic_libgl_install
