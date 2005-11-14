@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.67 2005/11/11 18:09:38 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.68 2005/11/14 01:05:34 joshuabaergen Exp $
+
+*xorg-server-0.99.3-r1 (14 Nov 2005)
+
+  14 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/fix-xkb-compile-path.patch, +xorg-server-0.99.3-r1.ebuild:
+  Fix xkb issue spotted by spyderous.
 
 *xorg-server-0.99.3 (11 Nov 2005)
 
