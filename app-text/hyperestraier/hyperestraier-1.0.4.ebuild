@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.0.4.ebuild,v 1.1 2005/11/13 08:54:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.0.4.ebuild,v 1.2 2005/11/14 03:40:45 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -87,7 +87,7 @@ src_install() {
 			cd ..
 		done
 
-	else 
+	else
 		rm -rf ${D}/usr/share/doc/${P}/doc/ruby*
 
 	fi
