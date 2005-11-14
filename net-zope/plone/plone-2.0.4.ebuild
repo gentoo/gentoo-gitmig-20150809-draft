@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.5 2005/05/06 03:35:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.6 2005/11/14 13:38:11 seemant Exp $
 
 SLOT="2.0"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A Zope Content Management System, based on Zope CMF."
 HOMEPAGE="http://plone.org"
 SRC_URI="mirror://sourceforge/plone/PloneBase-${PV}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 RDEPEND=">=net-zope/cmf-1.4.7
 	>=net-zope/zope-2.7

@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 72796f7938457a98137f4c611896145e plone-1.0.5.ebuild 856
-MD5 bc2ba4471a666e7ff324f57c0b299151 plone-2.0.5.ebuild 1048
-MD5 60ce279e22850e598f24e4010f21329c plone-2.0.5-r1.ebuild 1049
-MD5 43e4f018b28d7af9d8b270f331ef7bfb plone-2.0.4.ebuild 1009
-MD5 24f1fa49d58367ae9bcbc90231b3e8ad ChangeLog 4279
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 53f432ea4742b88abd9a858322a34965 plone-1.0.6.ebuild 855
-MD5 2d1a94dd580e3db9261603947d4d172e plone-2.0.ebuild 950
-MD5 a7677837a9758dbd21316659b0f03dc5 files/digest-plone-2.0.5-r1 67
+MD5 28d9222ebc354090445fbe3d7a2d7487 ChangeLog 4383
 MD5 9e35feee29aeb8a7ecb18106d3378df0 files/digest-plone-1.0.5 66
 MD5 16d7a68ca1aee9115817c3a98c410fd0 files/digest-plone-1.0.6 63
+MD5 069f9e1bb877e5e659d3f3c8b37bce38 files/digest-plone-2.0 71
 MD5 4a7478c84170f5e7bcf8a00a6f13576f files/digest-plone-2.0.4 67
 MD5 a7677837a9758dbd21316659b0f03dc5 files/digest-plone-2.0.5 67
-MD5 069f9e1bb877e5e659d3f3c8b37bce38 files/digest-plone-2.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfzdQI1lqEGTUzyQRAjvkAKCl2bLBbyRLYA3tGdfmZU+kvf1EPACeM2h0
-9q2Tp16hgiOfd9Ok5Y6Ax30=
-=Lb5E
------END PGP SIGNATURE-----
+MD5 a7677837a9758dbd21316659b0f03dc5 files/digest-plone-2.0.5-r1 67
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 72796f7938457a98137f4c611896145e plone-1.0.5.ebuild 856
+MD5 53f432ea4742b88abd9a858322a34965 plone-1.0.6.ebuild 855
+MD5 1b5715e2a3f7fe16cd8767b1b7332f27 plone-2.0.4.ebuild 1015
+MD5 60ce279e22850e598f24e4010f21329c plone-2.0.5-r1.ebuild 1049
+MD5 bc2ba4471a666e7ff324f57c0b299151 plone-2.0.5.ebuild 1048
+MD5 2d1a94dd580e3db9261603947d4d172e plone-2.0.ebuild 950
