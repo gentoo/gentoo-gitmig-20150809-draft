@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.4 2005/11/14 13:54:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.5 2005/11/14 16:29:57 wolf31o2 Exp $
 
 MY_PV=${PV}-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -29,7 +29,7 @@ pkg_nofetch() {
 
 src_compile () {
 	unset ARCH
-	sh ./driver_build.sh /lib/modules/0/build
+	sh ./driver_build.sh /lib/modules/${KV}/build
 	[ ! -f ./cisco_ipsec -a ! -f ./cisco_ipsec.ko ] \
 		&& die "Failed to make module 'cisco_ipsec'"
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient_init
