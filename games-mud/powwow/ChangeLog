@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/powwow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.6 2005/06/15 18:56:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.7 2005/11/14 07:20:40 mr_bones_ Exp $
+
+*powwow-1.2.9 (14 Nov 2005)
+
+  14 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org> +powwow-1.2.9.ebuild:
+  version bump
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> powwow-1.2.5.ebuild:
   Removed COPYING file.
