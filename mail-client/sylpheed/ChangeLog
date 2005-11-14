@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.154 2005/11/13 18:56:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.155 2005/11/14 10:20:22 yoswink Exp $
+
+  14 Nov 2005; Jose Luis Rivero <yoswink@gentoo.org> sylpheed-2.0.4.ebuild:
+  Stable on alpha wrt security bug #111853
 
   13 Nov 2005; Jason Wever <weeve@gentoo.org> sylpheed-2.0.4.ebuild:
   Stable on SPARC wrt security bug #111853.
