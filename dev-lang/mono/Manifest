@@ -21,14 +21,14 @@ MD5 f82809daef4d783797094233672feb3f files/mono-1.1.8.3-icall.diff 433
 MD5 25426f960f7fc04c8932375f20885eda files/mono-1.1.9.1-io-layer-fix.diff 5552
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 10c58186e6ce0ab643d16c883f2071ff mono-1.0.5-r5.ebuild 3718
-MD5 e677117f5c7a5ffb4e9273cef85d466c mono-1.1.10.ebuild 2194
+MD5 7c228ddae84f1b83e790aeba4587f970 mono-1.1.10.ebuild 2355
 MD5 5415fa75de6e201ae1a0e12c17498709 mono-1.1.8.3.ebuild 2501
 MD5 9e335202b997822eafad0c2f80137f66 mono-1.1.9.1.ebuild 2285
 MD5 8a27590ee5780db41e7f4124b7de58d0 mono-1.1.9.2.ebuild 2000
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeJDK2G5bA0cA/ScRAiXqAKCBqyHOEu4/cI/lDfVx0p49wvrmNACZAVCI
-viMZV28iy5DKwUTKhXoGoHc=
-=p9yS
+iD8DBQFDeK8G2G5bA0cA/ScRAix5AKCn0iSOqWRNNYucDg8k+xMZKqWR4QCghZRY
+uivaqxx998MtcyCbJUVs7X0=
+=rsLl
 -----END PGP SIGNATURE-----
