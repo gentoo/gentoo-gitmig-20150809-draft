@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0_beta5.ebuild,v 1.2 2005/11/06 01:39:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0_beta5.ebuild,v 1.3 2005/11/14 16:53:36 seemant Exp $
 
 inherit distutils
 
 MY_PV=${PV/_beta/b}
-DESCRIPTION="PostgreSQL database adapter for the Python."
+DESCRIPTION="PostgreSQL database adapter for Python."
 SRC_URI="http://initd.org/pub/software/psycopg/${PN}2-${MY_PV}.tar.gz"
 HOMEPAGE="http://initd.org/projects/psycopg2"
 
