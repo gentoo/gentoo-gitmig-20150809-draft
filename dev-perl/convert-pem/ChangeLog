@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/convert-pem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.15 2005/11/12 15:42:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.16 2005/11/14 21:42:16 hansmi Exp $
+
+  14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  convert-pem-0.07.ebuild:
+  Added to ~hppa, ~ppc. See bug #112279.
 
 *convert-pem-0.07 (12 Nov 2005)
 
