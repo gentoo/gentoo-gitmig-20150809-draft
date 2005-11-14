@@ -1,4 +1,6 @@
-MD5 2433f4bb901a7eea7e066fc8ede340d7 ChangeLog 775
+MD5 2339469eb1dbe0ac623f0d5c93205232 ChangeLog 936
+MD5 c149f4d4c512fd5429e77f61bb07dd43 gaim-latex-0.3-r1.ebuild 787
 MD5 bab3872b102b8d67b9f9655b4b51811a metadata.xml 218
 MD5 e002155083035d2ca44079677aac531e gaim-latex-0.3.ebuild 779
 MD5 f64061875de9ea65564ed4a5081f2324 files/digest-gaim-latex-0.3 66
+MD5 f64061875de9ea65564ed4a5081f2324 files/digest-gaim-latex-0.3-r1 66
