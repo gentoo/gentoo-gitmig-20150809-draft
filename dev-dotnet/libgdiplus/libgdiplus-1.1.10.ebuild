@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.2.ebuild,v 1.2 2005/11/14 05:05:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.10.ebuild,v 1.1 2005/11/14 05:05:18 latexer Exp $
 
 inherit libtool eutils flag-o-matic toolchain-funcs
 
@@ -35,7 +35,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.1.8-giflib.diff
 	libtoolize --copy --force || die "libtoolize failed"
 	autoheader || die "autoheader failed"
 	aclocal || die "aclocal failed"
