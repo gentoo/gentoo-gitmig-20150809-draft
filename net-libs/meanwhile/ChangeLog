@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.20 2005/11/08 19:19:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.21 2005/11/14 18:44:55 rizzo Exp $
+
+*meanwhile-0.5.0 (14 Nov 2005)
+
+  14 Nov 2005; Don Seiler <rizzo@gentoo.org> +meanwhile-0.5.0.ebuild:
+  Version bump.  Closes bug #111271
 
   08 Nov 2005; Brent Baude <ranger@gentoo.org> meanwhile-0.4.2.ebuild:
   Marking ppc64 stable after 30 days
