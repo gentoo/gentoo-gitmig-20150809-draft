@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r1.ebuild,v 1.5 2005/10/02 00:54:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r1.ebuild,v 1.6 2005/11/14 21:39:25 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -147,6 +147,8 @@ src_configure() {
 
 	if [[ ${KERNEL} == "FreeBSD" && "${ELIBC}" = "FreeBSD" ]]; then
 		osname="freebsd"
+	elif [[ ${KERNEL} == "NetBSD" ]]; then
+		osname="netbsd"
 	elif [[ ${USERLAND} == "Darwin" ]]; then
 		osname="darwin"
 	else
