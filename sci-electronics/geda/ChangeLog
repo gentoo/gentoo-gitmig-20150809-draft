@@ -1,6 +1,15 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.8 2005/10/11 18:50:56 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.9 2005/11/14 19:44:10 plasmaroo Exp $
+
+*geda-20050820 (14 Nov 2005)
+
+  14 Nov 2005; <plasmaroo@gentoo.org> -geda-20040111-r1.ebuild,
+  -geda-20041228.ebuild, +geda-20050820.ebuild,
+  -files/geda-20041228-glib26.patch:
+  Version bump (#107929); remove old versions. This ebuild and future ebuilds
+  will now contain only core components, the extra "recommended" EDA features
+  have now been moved to the geda-suite metapackage.
 
   11 Oct 2005; Chris Bainbridge <chrb@gentoo.org> geda-20040111-r1.ebuild,
   geda-20041228.ebuild, geda-20050313.ebuild:
