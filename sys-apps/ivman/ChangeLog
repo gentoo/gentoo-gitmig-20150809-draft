@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.20 2005/11/07 02:52:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.21 2005/11/14 21:39:09 corsair Exp $
+
+  14 Nov 2005; Markus Rothe <corsair@gentoo.org> ivman-0.6.4.ebuild,
+  ivman-0.6.5.ebuild:
+  Added ~ppc64
 
 *ivman-0.6.5 (07 Nov 2005)
 
