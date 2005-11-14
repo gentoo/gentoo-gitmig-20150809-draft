@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9fb9231df9c51bb11fef53fd208e02f ChangeLog 1631
+MD5 e84b4f4f334e9f19b0f11b3e760a661a ChangeLog 1733
 MD5 ff6373ca4279d6a59fe72ef52ecc0308 files/digest-gnomebaker-0.4 66
 MD5 03f2e1218314d8536e6757a270fd361c files/digest-gnomebaker-0.4.1 68
 MD5 f1f3df84ffcb90188e6f78e6f42ea6f4 files/digest-gnomebaker-0.4.2 68
 MD5 dc88a6c8a1a049ee0aa85387225bdc3d files/digest-gnomebaker-0.5.0 69
 MD5 d208ff69b17a886c9f8904a65a9b7f63 gnomebaker-0.4.1.ebuild 1078
-MD5 7fb9a181e1ab15ca966dfc2eeb37968e gnomebaker-0.4.2.ebuild 1100
+MD5 7d0a633c42c40264574594dbb270979c gnomebaker-0.4.2.ebuild 1099
 MD5 1e83d407e119c06c0950cff283758e71 gnomebaker-0.4.ebuild 1075
 MD5 1bb1c1ea903117c01423888e9cce475e gnomebaker-0.5.0.ebuild 1108
 MD5 261972da02920d2246124b6fc395ac37 metadata.xml 168
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDdjaxwUpWvClEHQoRAg5rAJ4wpA4v58ymRNN4AN1DprhnvJicZgCeMZU7
-EQntzo5y3Oa6pauiOJDYRMo=
-=Emcz
+iD8DBQFDeJz9wUpWvClEHQoRAgpOAJ9wkHDfNDytU+LnN03ZqI4BUWrnEwCcCcud
+AC1Im52CJ0siCyG7M+0LZZU=
+=9jMC
 -----END PGP SIGNATURE-----
