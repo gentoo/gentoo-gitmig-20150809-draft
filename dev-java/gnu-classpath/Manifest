@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 663492938507ccdda770df7344e57270 ChangeLog 6514
-MD5 50601eed7ae1e20d101af4a58b903946 files/0.19-dssi.patch 1443
+MD5 347a938600ce9b7947b94dfe47bea836 ChangeLog 6502
+MD5 4c21037c9eaf2d9fe12e88ced8caab80 files/0.19-dssi.patch 1410
 MD5 7e2cbdd8bd825a0e9b8fff8312f08c23 files/0.19-dssi_data.h 4174
 MD5 9b2c43cfbb9e8d325407a9ddd2068a5d files/digest-gnu-classpath-0.14 67
 MD5 2690159fdd3e679de05cd6daed73f4da files/digest-gnu-classpath-0.15-r1 67
@@ -12,12 +12,12 @@ MD5 887f044e4350323f1324cc1368943c1a files/gtk28.patch 1522
 MD5 f076bc9c2bfe9d094c6255f2beec9abc gnu-classpath-0.14.ebuild 1195
 MD5 d04460407e0f569ab509eaf458ae97f3 gnu-classpath-0.15-r1.ebuild 1638
 MD5 b906f7e1050511b7a12b99e9b79d5d3b gnu-classpath-0.18.ebuild 1927
-MD5 0f0c4be71612f025d95f9fe9b103377b gnu-classpath-0.19.ebuild 2377
+MD5 952fe51754df87b3e8065dab93892115 gnu-classpath-0.19.ebuild 2307
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDePiMQiJ/wx066S4RAuG2AJ93Kz0jiZRUr5yLTrPPBYR1qPKiCgCfUqYi
-gTWc0t+a5k1e6oXqyeaiTWg=
-=73B9
+iD8DBQFDeQOcQiJ/wx066S4RAq6mAJ4lrpat/8nm86HOiEUNlRj/g3CpTQCfTjoF
+g0I0S4AO7abykqum+1vtYQw=
+=e3MT
 -----END PGP SIGNATURE-----
