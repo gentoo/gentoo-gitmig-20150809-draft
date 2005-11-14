@@ -1,4 +1,14 @@
-MD5 6ba0cb90ea4403391bcd47664c396894 shapelib-1.2.10.ebuild 694
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a86cb3f6fb9a8d9df4cb34131f9ef1e ChangeLog 1036
-MD5 8cfef0e9a4540e9d7cc628e70e95c49a metadata.xml 429
 MD5 8e119a24844842e421d7b400ff138974 files/digest-shapelib-1.2.10 67
+MD5 8cfef0e9a4540e9d7cc628e70e95c49a metadata.xml 429
+MD5 f1779c3e07dbb995e19cf1f14e8ae6d0 shapelib-1.2.10.ebuild 699
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeB1rgIKl8Uu19MoRAuazAJ0X1qDrehORQxH/Lm1bqL2ytoxsmACfdgOB
+IfuDG5VlXUkdzK2Cc2aJ1ac=
+=4lMo
+-----END PGP SIGNATURE-----

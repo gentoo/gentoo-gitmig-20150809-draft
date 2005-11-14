@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10.ebuild,v 1.4 2005/10/07 10:19:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10.ebuild,v 1.5 2005/11/14 05:14:04 vapier Exp $
 
-inherit eutils
-
-DESCRIPTION="ShapeLib"
+DESCRIPTION="library for manipulating ESRI Shapefiles"
 HOMEPAGE="http://shapelib.maptools.org/"
 SRC_URI="http://dl.maptools.org/dl/shapelib//${P}.tar.gz"
 
@@ -13,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	emake || die
