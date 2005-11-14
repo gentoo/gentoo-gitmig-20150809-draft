@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.14_p4.ebuild,v 1.1 2005/11/10 00:27:10 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.14_p5.ebuild,v 1.1 2005/11/14 17:26:03 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
 K_WANT_GENPATCHES="base"
-K_GENPATCHES_VER="2"
+K_GENPATCHES_VER="3"
 ETYPE="sources"
 inherit kernel-2
 detect_version
@@ -29,8 +29,7 @@ fi
 
 UNIPATCH_LIST="${DISTDIR}/${CK_PATCH}"
 # Note: 2.6.x.y updates in genpatches begin with 10 but are included in -ck
-UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 10
-	2100_zero-size-datagram.patch"
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 10"
 
 DESCRIPTION="Full sources for the Linux kernel with Con Kolivas' high
 performance patchset and Gentoo's basic patchset."
