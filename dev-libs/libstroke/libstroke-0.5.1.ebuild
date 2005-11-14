@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.13 2004/11/04 05:17:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.14 2005/11/14 18:09:44 plasmaroo Exp $
 
-inherit gnuconfig
+inherit eutils
 
 DESCRIPTION="A Stroke and Gesture recognition Library"
 HOMEPAGE="http://www.etla.net/libstroke/"
@@ -19,10 +19,10 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	gnuconfig_update
+	epatch ${FILESDIR}/${P}-m4_syntax.patch
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc CREDITS ChangeLog README
+	dodoc CREDITS ChangeLog README{,.libgstroke}
 }
