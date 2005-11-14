@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.14.13-r3.ebuild,v 1.2 2005/11/14 01:29:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.14.13-r3.ebuild,v 1.3 2005/11/14 17:15:03 lu_zero Exp $
 
 IUSE="opengl dlloader"
 
@@ -92,10 +92,6 @@ src_unpack() {
 	epatch ${FILESDIR}/8.8.25-smp.patch
 	epatch ${FILESDIR}/ioctl32.patch
 	epatch ${FILESDIR}/p1.patch
-	if use amd64
-	then
-	epatch ${FILESDIR}/fglrx-2.6.14-compat_ioctl.patch
-	fi
 
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
