@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b957ccb71f0408de6b202362f090394f ChangeLog 701
 MD5 ef298aaced690df60aa4661092650a69 files/digest-mono-tools-1.1.10 69
 MD5 c4e9e26f2de9880b018d52913396a564 files/digest-mono-tools-1.1.9 68
 MD5 3df553e94423a0075a61a43a56dc6726 metadata.xml 256
 MD5 88617cb64dc2951010225d8ae97520aa mono-tools-1.1.10.ebuild 1244
 MD5 6c5a33d97f8fdd2b0b0b8c5e2bddedd0 mono-tools-1.1.9.ebuild 800
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeLB32G5bA0cA/ScRAqCbAKDYpfdAk1QW/lAGzjMDJt9IZOuOQACgsJ7Z
+YzZzsF0NeoN/TSuXHyZ4BE8=
+=d9+x
+-----END PGP SIGNATURE-----
