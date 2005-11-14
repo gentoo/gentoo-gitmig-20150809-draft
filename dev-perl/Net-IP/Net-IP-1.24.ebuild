@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/Net-IP-1.24.ebuild,v 1.1 2005/11/14 14:57:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/Net-IP-1.24.ebuild,v 1.2 2005/11/14 21:36:39 hansmi Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/search?module=Net::IP"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
