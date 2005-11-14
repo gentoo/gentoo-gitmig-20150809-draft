@@ -1,26 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 945e7dcb2b48515d200fa0fdd4190b5a ChangeLog 7011
-MD5 683a44340139387ede0f0a8ec990f6af metadata.xml 252
-MD5 28825bbf0baee564c0d855e629409549 rep-gtk-0.15-r3.ebuild 1083
-MD5 f9b1914f376de058f7cd3806fd676672 rep-gtk-0.17-r1.ebuild 1332
-MD5 f0dac5e0b7c4dd18ff70243c3aec997c rep-gtk-0.18-r1.ebuild 1564
-MD5 1b25b0a0c6fc5e9ce7f37370caa59685 rep-gtk-0.18-r2.ebuild 1663
-MD5 067a6daa2422df562c31034e83780db2 rep-gtk-0.18-r3.ebuild 1586
-MD5 b14db54a43a3368a629fd5611dcd2529 files/libtool.patch 522
+MD5 e42d7d8a30a56a914bfe71e45cee743c ChangeLog 7233
 MD5 220aadeb6d56c63c76c4a8ee31e2099f files/digest-rep-gtk-0.15-r3 64
-MD5 07badea9837cd8a9183fae4ef3dcc012 files/digest-rep-gtk-0.17-r1 64
-MD5 a84fef69d72f4d670468dd74e8e788de files/digest-rep-gtk-0.18-r1 64
 MD5 a84fef69d72f4d670468dd74e8e788de files/digest-rep-gtk-0.18-r2 64
 MD5 a84fef69d72f4d670468dd74e8e788de files/digest-rep-gtk-0.18-r3 64
-MD5 e46cf05f7e6b4bc7788ab928acda4d08 files/rep-gtk-0.17-64bit.patch 698
+MD5 b14db54a43a3368a629fd5611dcd2529 files/libtool.patch 522
 MD5 7e43019a0be09f8a64bbc489fa63fd6a files/rep-gtk-0.18-gtk24.patch 1580
 MD5 b240daed7b25f7875150b314db4f26d0 files/rep-gtk-0.18-gtk26.patch 623
+MD5 683a44340139387ede0f0a8ec990f6af metadata.xml 252
+MD5 28825bbf0baee564c0d855e629409549 rep-gtk-0.15-r3.ebuild 1083
+MD5 1b25b0a0c6fc5e9ce7f37370caa59685 rep-gtk-0.18-r2.ebuild 1663
+MD5 067a6daa2422df562c31034e83780db2 rep-gtk-0.18-r3.ebuild 1586
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLy05wnQyISwouHwRAhVgAJ4iHnzSJ9s3ztQv98DYJED6ZpdDZgCfZ0sS
-uXBZZHIEwD9IlZzUUAt9DVg=
-=kdvv
+iD8DBQFDeER8wnQyISwouHwRAvH4AKC3mrboKLQWy1jWNfrB/5WYM6DaWACeMIaW
+ef9eUGXe+IRouqUc0qRdQxM=
+=4pxr
 -----END PGP SIGNATURE-----

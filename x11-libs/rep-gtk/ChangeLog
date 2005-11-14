@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.47 2005/09/19 21:28:00 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.48 2005/11/14 08:01:27 truedfx Exp $
+
+  14 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
+  -files/rep-gtk-0.17-64bit.patch, -rep-gtk-0.17-r1.ebuild,
+  -rep-gtk-0.18-r1.ebuild:
+  Remove older versions (except rep-gtk-0.15-r3, which is needed for sawfish-1.0)
 
   19 Sep 2005; Harald van Dĳk <truedfx@gentoo.org> +files/libtool.patch,
   rep-gtk-0.18-r3.ebuild:
