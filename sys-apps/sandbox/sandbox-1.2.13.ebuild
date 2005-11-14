@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.13.ebuild,v 1.3 2005/10/13 17:52:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.13.ebuild,v 1.4 2005/11/14 18:41:54 azarah Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -37,13 +37,7 @@ setup_multilib() {
 }
 
 src_unpack() {
-	setup_multilib
-	for ABI in $(get_install_abis) ; do
-		cd ${WORKDIR}
-		unpack ${A}
-		einfo "Unpacking sandbox for ABI=${ABI}..."
-		mv ${S} ${S%/}-${ABI} || die "failed moving \$S to ${ABI}"
-	done
+	unpack ${A}
 }
 
 abi_fail_check() {
@@ -79,9 +73,11 @@ src_compile() {
 		portageq has_version "${ROOT}" '<portage-2.0.51.22' && \
 			unset EXTRA_ECONF
 
-		cd ${S}-${ABI}
+		mkdir "${S}-${ABI}"
+		cd "${S}-${ABI}"
 
 		einfo "Configuring sandbox for ABI=${ABI}..."
+		ECONF_SOURCE="../${P}/" \
 		econf --libdir="/usr/$(get_libdir)"
 		einfo "Building sandbox for ABI=${ABI}..."
 		emake || {
@@ -107,8 +103,8 @@ src_install() {
 	fowners root:portage /var/log/sandbox
 	fperms 0770 /var/log/sandbox
 
-	for x in "${S}-${ABI}"/{AUTHORS,COPYING,ChangeLog,NEWS,README} ; do
-		[[ -f ${x} && $(stat -c "%s" "${x}") -gt 0 ]] && dodoc "${x}"
+	for x in "${S}"/{AUTHORS,COPYING,ChangeLog,NEWS,README} ; do
+		[[ -s ${x} ]] && dodoc "${x}"
 	done
 }
 
