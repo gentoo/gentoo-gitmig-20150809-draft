@@ -1,17 +1,8 @@
 ===================================================================
 RCS file: /cvs/xorg/xserver/xorg/configure.ac,v
-rcsdiff: /cvs/xorg/xserver/xorg/configure.ac,v: warning: Unknown phrases like `commitid ...;' are present.
-retrieving revision 1.124
-retrieving revision 1.125
 diff -u -r1.124 -r1.125
 --- configure.ac	2005/11/10 04:59:21	1.124
 +++ configure.ac	2005/11/14 00:01:34	1.125
-@@ -1,4 +1,4 @@
--dnl $Id: fix-xkb-compile-path.patch,v 1.1 2005/11/14 01:05:34 joshuabaergen Exp $
-+dnl $Id: fix-xkb-compile-path.patch,v 1.1 2005/11/14 01:05:34 joshuabaergen Exp $
- dnl
- dnl Copyright © 2003-2005 Keith Packard, Daniel Stone
- dnl
 @@ -353,7 +353,7 @@
  				[ XKBPATH="${datadir}/X11/xkb" ])
  AC_ARG_WITH(xkb-output,       AS_HELP_STRING([--with-xkb-output=PATH], [Path to XKB output dir (default: ${datadir}/X11/xkb/compiled)]),
