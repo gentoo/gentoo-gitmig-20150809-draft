@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.3 2005/07/06 13:46:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.4 2005/11/14 13:54:09 wolf31o2 Exp $
 
 MY_PV=${PV}-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -8,7 +8,7 @@ HOMEPAGE="http://cco.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
 SRC_URI="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
 
 LICENSE="cisco-vpn-client"
-SLOT="${KV}"
+SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 RESTRICT="fetch"
@@ -29,7 +29,7 @@ pkg_nofetch() {
 
 src_compile () {
 	unset ARCH
-	sh ./driver_build.sh /lib/modules/${KV}/build
+	sh ./driver_build.sh /lib/modules/0/build
 	[ ! -f ./cisco_ipsec -a ! -f ./cisco_ipsec.ko ] \
 		&& die "Failed to make module 'cisco_ipsec'"
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient_init
@@ -54,7 +54,7 @@ src_install() {
 	dodir /usr/bin
 	dosym /opt/cisco-vpnclient/bin/vpnclient /usr/bin/vpnclient
 
-	insinto /lib/modules/${KV}/CiscoVPN
+	insinto /lib/modules/0/CiscoVPN
 	doins cisco_ipsec*
 
 	insinto ${VPNDIR}
