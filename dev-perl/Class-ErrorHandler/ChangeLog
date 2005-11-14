@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.3 2005/11/14 21:40:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.4 2005/11/14 21:41:20 hansmi Exp $
 
   14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   Class-ErrorHandler-0.01.ebuild:
-  Added to ~ppc. See bug #112279.
+  Added to ~ppc and ~hppa. See bug #112279.
 
   13 Nov 2005; <ranger@gentoo.org> Class-ErrorHandler-0.01.ebuild:
   Marking Class-ErrorHandler-0.01 ~ppc64 for bug 112279
