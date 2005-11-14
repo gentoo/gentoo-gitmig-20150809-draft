@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.8 2005/11/08 07:42:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.9 2005/11/14 06:51:42 latexer Exp $
+
+  14 Nov 2005; Peter Johanson <latexer@gentoo.org> boo-0.7.0.1921.ebuild:
+  Add error messages and die pre-emptively when an older version of boo is
+  found present on the system when trying to install. See bug #108520.
 
   08 Nov 2005; Peter Johanson <latexer@gentoo.org> boo-0.7.0.1921.ebuild:
   Fix for resource/locale issue. See bug #109351.
