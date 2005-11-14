@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-jack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.40 2005/11/13 13:06:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.41 2005/11/14 17:33:55 lu_zero Exp $
+
+  14 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  alsa-jack-1.0.10_rc1.ebuild:
+  Marked ppc to match linux 2.6.14
 
   13 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   alsa-jack-1.0.10_rc1.ebuild:
