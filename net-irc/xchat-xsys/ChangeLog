@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.32 2005/11/13 22:09:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.33 2005/11/14 01:50:59 ranger Exp $
+
+  14 Nov 2005; Brent Baude <ranger@gentoo.org> xchat-xsys-2.0.9.ebuild:
+  marking xchat-xsys-2.0.9 ~ppc64 for bug request 112452
 
 *xchat-xsys-2.0.9 (13 Nov 2005)
 
