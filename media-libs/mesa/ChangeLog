@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.48 2005/11/11 22:22:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.49 2005/11/14 19:39:54 spyderous Exp $
+
+  14 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/dont-install-gles-headers.patch,
+  -files/mesa-add-dri-asm-files.patch, -mesa-6.3.2-r1.ebuild:
+  Pull old version.
 
   11 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> mesa-6.4.ebuild:
   added ~sh keyword
