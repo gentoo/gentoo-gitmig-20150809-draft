@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051111.ebuild,v 1.2 2005/11/13 20:33:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051111.ebuild,v 1.3 2005/11/14 03:44:00 mr_bones_ Exp $
 
 inherit linux-mod
 
@@ -71,7 +71,7 @@ preup() {
 		return \$?
 	fi
 }
- 
+
 postdown() {
 	if [ "\${IFACE}" = "ath0" ]; then
 		/sbin/wlanconfig ath0 destroy
