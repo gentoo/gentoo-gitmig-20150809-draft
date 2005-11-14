@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 86ef0c5c005fe560457f171b26d96236 ChangeLog 17048
 MD5 9678227c043f04d5e8561cb6ba80d3e6 files/digest-xine-lib-1.0.1-r4 137
 MD5 33da8deb9637be23cd464aba9c5c4ac4 files/digest-xine-lib-1.1.0 137
@@ -11,13 +8,6 @@ MD5 cd292167e0ca6e7910e1cf32091e3a27 files/xine-lib-formatstring.patch 315
 MD5 40462be9f1caff6326630fc3b93e7105 metadata.xml 330
 MD5 6b76f6f5129a29911fd681772ba92601 xine-lib-1.0.1-r4.ebuild 7507
 MD5 6d96166f223f8fbeecbdc2acaf32ccb3 xine-lib-1.1.0-r5.ebuild 6845
-MD5 c6b66f620887ecbf4803c9e2c87cf6a0 xine-lib-1.1.0-r7.ebuild 6853
+MD5 d57a85599064698f1a9ebf69c913cbc3 xine-lib-1.1.0-r7.ebuild 6851
 MD5 1a7fe2febb92bcbc715be3fcdb0d8361 xine-lib-1.1.0.ebuild 7277
 MD5 8e8e38d54e416b12108a0597f4d0801f xine-lib-1_rc8-r2.ebuild 5288
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeGmAAiZjviIA2XgRArr0AJ91w11/NnpsoluQp7A1ri0PKv0+7ACgkIxs
-xIfS2W6HrQvD4sa/U2sVLWU=
-=AZ4V
------END PGP SIGNATURE-----
