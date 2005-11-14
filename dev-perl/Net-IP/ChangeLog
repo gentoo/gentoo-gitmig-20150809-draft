@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Net-IP
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.1 2005/11/14 14:57:56 mcummings Exp $
+
+*Net-IP-1.24 (14 Nov 2005)
+
+  14 Nov 2005; <mcumming@gentoo.org> +metadata.xml, +Net-IP-1.24.ebuild:
+  New dep for Net-DNS
+
