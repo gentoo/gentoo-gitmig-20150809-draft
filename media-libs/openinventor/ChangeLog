@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.2 2005/11/14 13:06:12 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.3 2005/11/14 20:25:50 stefaan Exp $
+
+  14 Nov 2005; Stefaan De Roeck <stefaan@gentoo.org>
+  openinventor-2.1.5.10.ebuild:
+  Fix multilib-strict issue
 
   14 Nov 2005; Stefaan De Roeck <stefaan@gentoo.org>
   openinventor-2.1.5.10.ebuild:
