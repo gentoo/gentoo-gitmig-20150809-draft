@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4681 2005/11/13 16:30:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4682 2005/11/14 06:14:03 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -169,11 +169,6 @@ dev-lisp/cmucl-source
 # Buggy and seemingly not maintained upstream
 # Using media-gfx/gqview is a much better choice.
 media-gfx/gtksee
-
-# Peter Johanson <latexer@gentoo.org> (15 Oct 2005)
-# Masking new monodoc split ebuilds, pending gtk-sharp, etc updates.
-=dev-util/monodoc-1.1.9
-=dev-util/mono-tools-1.1.9
 
 # Rob Cakebread <pythonhead@gentoo.org> (14 Oct 2005)
 # Masked for testing
