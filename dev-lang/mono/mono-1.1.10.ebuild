@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.10.ebuild,v 1.1 2005/11/14 05:06:11 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.10.ebuild,v 1.2 2005/11/14 13:27:21 herbs Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -39,7 +39,8 @@ src_unpack() {
 	sed -i -e 's:$(prefix)/lib:$(libdir):' \
 		-e 's:$(exec_prefix)/lib:$(libdir):' \
 		-e "s:'mono_libdir=\${exec_prefix}/lib':\"mono_libdir=\$libdir\":" \
-		${S}/{scripts,mono/metadata}/Makefile.am ${S}/configure.in || die
+		${S}/{scripts,mono/metadata,mono/os/unix}/Makefile.am \
+		${S}/configure.in || die
 
 	libtoolize --copy --force || die "libtoolize failed"
 	aclocal || die "aclocal failed"
