@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.1-r1.ebuild,v 1.1 2005/11/01 00:23:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.1-r1.ebuild,v 1.2 2005/11/14 17:07:08 gustavoz Exp $
 
 IUSE="alsa esd flac gnome mmx mp3 nls oss sdl vorbis"
 
@@ -14,7 +14,7 @@ SRC_URI="http://audacious.nenolod.net/release/audacious-0.1.tgz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.4
