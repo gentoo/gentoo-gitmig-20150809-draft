@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.25 2005/11/11 19:20:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.26 2005/11/14 05:21:28 joshuabaergen Exp $
+
+*xdm-0.99.3_p20051113 (14 Nov 2005)
+
+  14 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xdm-0.99.3_p20051113.ebuild:
+  Add a new snapshot in attempt to provide a working xdm.
 
 *xdm-0.99.3 (11 Nov 2005)
 
