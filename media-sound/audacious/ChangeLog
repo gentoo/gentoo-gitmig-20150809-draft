@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.4 2005/11/01 00:23:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.5 2005/11/14 01:48:50 ranger Exp $
+
+  14 Nov 2005; Brent Baude <ranger@gentoo.org> audacious-0.1.ebuild:
+  Marking audacious-0.1 ~ppc64 for bug request 112452
 
 *audacious-0.1-r1 (01 Nov 2005)
 
