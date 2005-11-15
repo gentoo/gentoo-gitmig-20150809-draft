@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.63 2005/09/29 17:50:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.64 2005/11/15 15:52:53 agriffis Exp $
+
+  15 Nov 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.11.ebuild:
+  Mark 1.5.11 stable on alpha/amd64/ia64/x86
 
   29 Sep 2005; Fabian Groffen <grobian@gentoo.org> mutt-1.5.11.ebuild:
   Rekeywording for ~ppc-macos (bug #106498)
