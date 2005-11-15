@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc3.ebuild,v 1.3 2005/11/15 11:22:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc3.ebuild,v 1.4 2005/11/15 13:20:23 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -46,7 +46,11 @@ pkg_setup() {
 	PNP_ERROR="Some of the drivers you selected require PNP in your kernel (${PNP_DRIVERS}).  Either enable PNP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
 	if [[ "${ALSA_CARDS}" == "all" ]]; then
-		CONFIG_CHECK="${CONFIG_CHECK} PNP"
+
+		# Ignore PNP checks for ppc architecture, as PNP can't be enabled there.
+		if [[ ${ARCH} != "ppc" ]]; then
+			CONFIG_CHECK="${CONFIG_CHECK} PNP"
+		fi
 	else
 		for pnpdriver in ${PNP_DRIVERS}; do
 			hasq ${pnpdriver} ${ALSA_CARDS} && CONFIG_CHECK="${CONFIG_CHECK} PNP"

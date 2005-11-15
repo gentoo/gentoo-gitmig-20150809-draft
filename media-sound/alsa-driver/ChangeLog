@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.167 2005/11/15 11:22:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.168 2005/11/15 13:20:23 flameeyes Exp $
+
+  15 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.10_rc3.ebuild:
+  Don't try to check for PNP support on PowerPC systems.
 
   15 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsa-driver-1.0.10_rc3-ppc-unbreakage.patch,
