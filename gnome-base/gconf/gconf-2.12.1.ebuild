@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.10.0.ebuild,v 1.11 2005/07/12 02:54:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.12.1.ebuild,v 1.1 2005/11/15 22:52:41 leonardop Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
@@ -15,23 +15,30 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND=">=dev-libs/glib-2.0.1
+RDEPEND=">=dev-libs/glib-2.7
 	>=gnome-base/orbit-2.4
 	>=dev-libs/libxml2-2
 	dev-libs/popt
 	>=x11-libs/gtk+-2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
-	doc? ( dev-util/gtk-doc )"
+	>=dev-util/pkgconfig-0.9
+	doc? ( >=dev-util/gtk-doc-1 )"
 
 # FIXME : consider merging the tree (?)
-DOCS="AUTHORS ChangeLog README NEWS TODO"
+
+DOCS="ABOUT-NLS AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 MAKEOPTS="${MAKEOPTS} -j1"
+
+
+pkg_setup() {
+	G2CONF="--enable-gtk"
+	kill_gconf
+}
 
 src_install() {
 
@@ -69,12 +76,6 @@ kill_gconf() {
 
 }
 
-pkg_setup() {
-
-	kill_gconf
-
-}
-
 pkg_preinst() {
 
 	kill_gconf
@@ -84,7 +85,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	kill_gconf
 
 	#change the permissions to avoid some gconf bugs
@@ -92,6 +92,4 @@ pkg_postinst() {
 	find  /etc/gconf/ -type d -exec chmod ugo+rx "{}" \;
 	einfo "changing permissions for gconf files"
 	find  /etc/gconf/ -type f -exec chmod ugo+r "{}" \;
-
 }
-
