@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gtm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.11 2004/10/01 23:14:54 pyrania Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.12 2005/11/15 14:29:26 gustavoz Exp $
+
+  15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> gtm-0.4.11.ebuild,
+  gtm-0.4.11-r2.ebuild:
+  Removed sparc keyword, from the initial port era
 
   02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> gtm-0.4.11-r2.ebuild:
   hooray for epatch!
