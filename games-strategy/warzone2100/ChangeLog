@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.2 2005/10/12 03:09:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.3 2005/11/15 22:00:09 mr_bones_ Exp $
+
+  15 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/warzone2100-0.2.2-headers.patch, warzone2100-0.2.2.ebuild:
+  fix compile with USE=-mp3.  Patch from Harald van Dijk via bug #112483
 
   12 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   warzone2100-0.2.2.ebuild:
