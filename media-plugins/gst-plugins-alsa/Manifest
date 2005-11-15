@@ -1,10 +1,20 @@
-MD5 2042a1abb2af974908120cc2474a9cd2 gst-plugins-alsa-0.8.9.ebuild 378
-MD5 5961e6d0401599b85853b2e2c0787dd1 gst-plugins-alsa-0.8.11.ebuild 379
-MD5 ce4543c71bad206c860b2ea0695bd5ac gst-plugins-alsa-0.8.8.ebuild 369
-MD5 069ec0edc5d3fffe28aa0b100ea52daf gst-plugins-alsa-0.8.10.ebuild 372
-MD5 5512849e293cecef45ec2f2392509f24 ChangeLog 5676
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-alsa-0.8.8 71
+MD5 cad6ed45c7000c74e482933327bcc5a9 ChangeLog 5844
+MD5 2042a1abb2af974908120cc2474a9cd2 gst-plugins-alsa-0.8.9.ebuild 378
+MD5 e46907ffa485350e73a01685f776aaf5 gst-plugins-alsa-0.8.10.ebuild 379
+MD5 ce4543c71bad206c860b2ea0695bd5ac gst-plugins-alsa-0.8.8.ebuild 369
+MD5 4e3151f2929b332716e457b3b13437fa gst-plugins-alsa-0.8.11.ebuild 387
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-alsa-0.8.9 71
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-alsa-0.8.10 72
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-alsa-0.8.8 71
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-alsa-0.8.11 72
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-alsa-0.8.10 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDeTCGJrHF4yAQTrARAvs0AJsFHWEcqeaYx0Oyfgy4V8aQYfiOrgCdFdvs
+Lm16RN2nCfKa25g17magpwk=
+=in1o
+-----END PGP SIGNATURE-----
