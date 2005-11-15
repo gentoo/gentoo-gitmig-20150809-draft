@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.1/virtuals,v 1.6 2005/11/15 17:13:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.1/virtuals,v 1.7 2005/11/15 17:21:38 gustavoz Exp $
 
 virtual/cron			sys-process/dcron
 virtual/jdk			dev-java/blackdown-jdk
 virtual/jre			dev-java/blackdown-jre
 virtual/logger			app-admin/sysklogd
-virtual/mta			mail-mta/ssmtp
