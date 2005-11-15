@@ -1,5 +1,5 @@
-MD5 e5bc2e4eccabde8fe3b1fb8431b4e857 ibm-acpi-0.11-r1.ebuild 1649
-MD5 0492faf168cd0fbaf1642b755333514e ChangeLog 3688
+MD5 136da4b7338a1c3e32227dbc5a5b13e1 ibm-acpi-0.11-r1.ebuild 1884
+MD5 d9671dd5b57a0cacaf0ce1e32a08e1db ChangeLog 3846
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 d7d44a5c4f28c78dbe62bfbceeb8754a files/ibm-acpi-0.11-device_add.patch 778
 MD5 d070ee489dc550a69fcd3af725513d81 files/digest-ibm-acpi-0.11-r1 64

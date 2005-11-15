@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.4 2005/08/29 16:12:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.5 2005/11/15 13:07:36 brix Exp $
 
 inherit eutils linux-mod
 
@@ -27,6 +27,14 @@ ACPI_ERROR="${P} requires an ACPI (CONFIG_ACPI) enabled kernel."
 pkg_setup() {
 	if kernel_is 2 4; then
 		die "${P} does not support kernel 2.4.x"
+	fi
+
+	if kernel_is ge 2 6 14; then
+		ewarn
+		ewarn "Linux kernel 2.6.14 and above contains a more recent version of this"
+		ewarn "module. Please consider using the in-kernel module when using"
+		ewarn "linux-2.6.14 or above."
+		ewarn
 	fi
 
 	linux-mod_pkg_setup
