@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc2.ebuild,v 1.6 2005/11/13 03:53:25 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc2.ebuild,v 1.7 2005/11/15 11:22:45 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -75,6 +75,7 @@ src_unpack() {
 src_compile() {
 	# Should fix bug #46901
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
+	append-flags "-I${KV_DIR}/arch/$(tc-arch-kernel)/include"
 
 	econf $(use_with oss) \
 		--with-kernel="${KV_DIR}" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc3.ebuild,v 1.2 2005/11/14 15:49:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc3.ebuild,v 1.3 2005/11/15 11:22:45 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -67,6 +67,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-include.patch
+	epatch "${FILESDIR}/${P}-ppc-unbreakage.patch"
+
 	convert_to_m ${S}/Makefile
 	sed -i -e 's:\(.*depmod\):#\1:' ${S}/Makefile
 }
@@ -74,6 +76,7 @@ src_unpack() {
 src_compile() {
 	# Should fix bug #46901
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
+	append-flags "-I${KV_DIR}/arch/$(tc-arch-kernel)/include"
 
 	econf $(use_with oss) \
 		--with-kernel="${KV_DIR}" \
@@ -84,8 +87,8 @@ src_compile() {
 
 	# linux-mod_src_compile doesn't work well with alsa
 
-	# -j1 : see bug #71028
 	ARCH=$(tc-arch-kernel)
+	# -j1 : see bug #71028
 	emake -j1 HOSTCC=$(tc-getBUILD_CC) CC=$(tc-getCC) || die "Make Failed"
 	ARCH=$(tc-arch)
 
