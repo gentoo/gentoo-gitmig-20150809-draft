@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.24 2005/11/15 03:07:16 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.25 2005/11/15 04:12:35 pfeifer Exp $
+
+*openswan-2.4.3 (15 Nov 2005)
+
+  15 Nov 2005; Jay Pfeifer <pfeifer@gentoo.org>
+  -files/openswan-2.4.2-gentoo.patch, +files/openswan-2.4.3-gentoo.patch,
+  -openswan-2.4.2.ebuild, +openswan-2.4.3.ebuild:
+  Version bump fixing assert in PSK+ID and aggressive mode.
+  Remove openswan-2.4.2.
 
 *openswan-2.4.2 (15 Nov 2005)
 
