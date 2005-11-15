@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.5.ebuild,v 1.4 2005/11/11 14:01:49 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.5.ebuild,v 1.5 2005/11/15 12:30:01 brix Exp $
 
 inherit eutils linux-mod
 
@@ -44,7 +44,7 @@ pkg_setup() {
 
 	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]]; then
 		eerror
-		eerror "Your kernel source contains an incomptible version of the"
+		eerror "Your kernel source contains an incompatible version of the"
 		eerror "ieee80211 subsystem, which needs to be removed before"
 		eerror "${P} can be installed. This can be accomplished by running:"
 		eerror

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.0.1.ebuild,v 1.1 2005/07/12 21:48:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.0.1.ebuild,v 1.2 2005/11/15 12:30:01 brix Exp $
 
 inherit linux-mod
 
@@ -28,24 +28,40 @@ MODULE_NAMES="ieee80211(net/ieee80211:)
 			ieee80211_crypt_ccmp(net/ieee80211:)
 			ieee80211_crypt_tkip(net/ieee80211:)"
 
-CONFIG_CHECK="NET_RADIO CRYPTO_ARC4 CRYPTO_MICHAEL_MIC CRC32"
+CONFIG_CHECK="NET_RADIO CRYPTO_ARC4 CRYPTO_MICHAEL_MIC CRC32 !IEEE80211"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
 ERROR_CRYPTO_ARC4="${P} requires support for ARC4 cipher algorithm (CONFIG_CRYPTO_ARC4)."
 ERROR_CRYPTO_MICHAEL_MIC="${P} requires support for Michael MIC keyed digest algorithm (CONFIG_CRYPTO_MICHAEL_MIC)."
 ERROR_CRC32="${P} requires support for CRC32 functions (CONFIG_CRC32)."
+ERROR_IEEE80211="${P} requires the in-kernel version of the IEEE802.11 subsystem to be disabled (CONFIG_IEEE80211)"
 
 pkg_setup() {
+	linux-mod_pkg_setup
+
 	if kernel_is 2 4; then
 		die "${P} does not support building against kernel 2.4.x"
 	fi
 
-	if ! (linux_chkconfig_present CRYPTO_AES_586 || linux_chkconfig_present CRYPTO_AES); then
-		eerror "${P} requires support for AES cipher algorithms (i586) (CONFIG_CRYPTO_AES_586)."
-		eerror "This option is called CONFIG_CRYPTO_AES in kernels prior to 2.6.8."
-		die "CONFIG_CRYPTO_AES_586 support not detected"
+	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]]; then
+		eerror
+		eerror "Your kernel source contains an incompatible version of the"
+		eerror "ieee80211 subsystem, which needs to be removed before"
+		eerror "${P} can be installed. This can be accomplished by running:"
+		eerror
+		eerror "  # /bin/sh ${FILESDIR}/remove-old ${KV_DIR}"
+		eerror
+		eerror "Please note that this will make it impossible to use some of the"
+		eerror "in-kernel IEEE 802.11 wireless LAN drivers (eg. orinoco)."
+		eerror
+		die "Incompatible in-kernel ieee80211 subsystem detected"
 	fi
 
-	linux-mod_pkg_setup
+	if ! (linux_chkconfig_present CRYPTO_AES_586 || \
+		  linux_chkconfig_present CRYPTO_AES_X86_64 || \
+		  linux_chkconfig_present CRYPTO_AES); then
+		eerror "${P} requires support for AES cipher algorithms."
+		die "CONFIG_CRYPTO_AES{_586,_X86_64} support not detected"
+	fi
 
 	BUILD_PARAMS="KSRC=${KV_DIR} KSRC_OUTPUT=${KV_OUT_DIR}"
 }
@@ -63,7 +79,7 @@ src_install() {
 	linux-mod_src_install
 
 	insinto /usr/include/net
-	doins net/*
+	doins net/*.h
 
 	dodoc CHANGES
 }

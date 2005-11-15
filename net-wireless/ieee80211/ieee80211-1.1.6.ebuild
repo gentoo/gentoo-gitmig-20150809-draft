@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.6.ebuild,v 1.3 2005/11/11 14:01:49 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.6.ebuild,v 1.4 2005/11/15 12:30:01 brix Exp $
 
 inherit linux-mod
 
@@ -42,6 +42,20 @@ pkg_setup() {
 		die "${P} does not support building against kernel 2.4.x"
 	fi
 
+	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]]; then
+		eerror
+		eerror "Your kernel source contains an incompatible version of the"
+		eerror "ieee80211 subsystem, which needs to be removed before"
+		eerror "${P} can be installed. This can be accomplished by running:"
+		eerror
+		eerror "  # /bin/sh ${FILESDIR}/remove-old ${KV_DIR}"
+		eerror
+		eerror "Please note that this will make it impossible to use some of the"
+		eerror "in-kernel IEEE 802.11 wireless LAN drivers (eg. orinoco)."
+		eerror
+		die "Incompatible in-kernel ieee80211 subsystem detected"
+	fi
+
 	if ! (linux_chkconfig_present CRYPTO_AES_586 || \
 		  linux_chkconfig_present CRYPTO_AES_X86_64 || \
 		  linux_chkconfig_present CRYPTO_AES); then
@@ -56,20 +70,6 @@ src_unpack() {
 	local debug="n"
 
 	unpack ${A}
-
-	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]]; then
-		eerror
-		eerror "Your kernel source contains an incomptible version of the"
-		eerror "ieee80211 subsystem, which needs to be removed before"
-		eerror "${P} can be installed. This can be accomplished by running:"
-		eerror
-		eerror "  # /bin/sh ${FILESDIR}/remove-old ${KV_DIR}"
-		eerror
-		eerror "Please note that this will make it impossible to use some of the"
-		eerror "in-kernel IEEE 802.11 wireless LAN drivers (eg. orinoco)."
-		eerror
-		die "Incompatible in-kernel ieee80211 subsystem detected"
-	fi
 
 	use debug && debug="y"
 	sed -i -e "s:^\(CONFIG_IEEE80211_DEBUG\)=.*:\1=${debug}:" ${S}/Makefile
