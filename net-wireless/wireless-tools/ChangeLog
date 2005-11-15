@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.80 2005/10/22 10:51:13 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.81 2005/11/15 12:35:22 brix Exp $
+
+  15 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  wireless-tools-28_pre10.ebuild:
+  Stable on x86 for WE-18 (and WE-19) support.
 
   22 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   -wireless-tools-28_pre8-r1.ebuild, -wireless-tools-28_pre9.ebuild:
