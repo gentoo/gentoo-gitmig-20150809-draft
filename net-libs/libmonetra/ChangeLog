@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmonetra
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.15 2005/10/02 17:11:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.16 2005/11/15 14:51:51 gustavoz Exp $
+
+  15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libmonetra-4.2.2.ebuild:
+  Stable on sparc
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
   libmonetra-4.2.2.ebuild:
