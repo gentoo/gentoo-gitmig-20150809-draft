@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.11 2005/07/22 04:12:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.12 2005/11/15 01:30:53 vapier Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.parallelrealities.co.uk/starfighter.php"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT=0
+SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e "s-O3${CXXFLAGS}"  makefile \
+		-e "s:-O3:${CXXFLAGS}:" makefile \
 		|| die "sed makefile failed"
 	epatch "${FILESDIR}"/${PV}-ammo.patch
 }
@@ -34,7 +34,7 @@ src_compile() {
 	emake DATA="${GAMES_DATADIR}/parallelrealities/" || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	dogamesbin starfighter || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/parallelrealities/"
 	doins starfighter.pak || die "doins failed"

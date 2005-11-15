@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.9 2005/09/19 17:42:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.10 2005/11/15 01:30:19 vapier Exp $
 
 inherit games
 
 DESCRIPTION="GPL Arcade Volleyball"
-HOMEPAGE="http://gav.sourceforge.net"
+HOMEPAGE="http://gav.sourceforge.net/"
 # the themes are behind a lame php-counter script.
 SRC_URI="mirror://sourceforge/gav/${P}.tar.gz
 	mirror://gentoo/fabeach.tgz
@@ -30,16 +30,15 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 
-	cp Makefile.Linux Makefile               || die "cp 1 failed"
-	cp automa/Makefile.Linux automa/Makefile || die "cp 2 failed"
-	cp menu/Makefile.Linux menu/Makefile     || die "cp 3 failed"
-	cp net/Makefile.Linux net/Makefile       || die "cp 4 failed"
+	for d in . automa menu net ; do
+		cp ${d}/Makefile.Linux ${d}/Makefile || die "cp ${d}/Makefile"
+	done
 
 	sed -i \
 		-e "s:/usr/bin:${GAMES_BINDIR}:" Makefile \
 		|| die "sed failed"
 	sed -i \
-		-e "/-Wall/ s$ ${CXXFLAGS}" CommonHeader \
+		-e "/^CXXFLAGS=/s: -g : ${CXXFLAGS} :" CommonHeader \
 		|| die "sed failed"
 
 	# Now, unpack the additional themes
@@ -59,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir "${GAMES_BINDIR}"   || die "dodir failed"
+	dodir "${GAMES_BINDIR}"
 	make ROOT="${D}" install || die "make install failed"
 	cp -r sounds/ "${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
 	dodoc CHANGELOG README
