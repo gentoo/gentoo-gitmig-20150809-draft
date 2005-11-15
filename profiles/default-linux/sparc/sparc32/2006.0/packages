@@ -1,0 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/packages,v 1.1 2005/11/15 18:34:11 gustavoz Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Earlier versions aren't patched to work with 2.6 headers
+*>=sys-boot/silo-1.4.9
