@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.32 2005/11/14 16:29:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.33 2005/11/15 18:22:34 wolf31o2 Exp $
+
+  15 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.6.03.0190-r1.ebuild:
+  KV_MINOR->KV_PATCH
 
   14 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   cisco-vpnclient-3des-4.0.1a-r1.ebuild,
