@@ -15,3 +15,6 @@ mpeg
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # For now, until we check it's status wrt build b0rkage and toolchain
 xine
+
+# clisp is seriously b0rked
+clisp
