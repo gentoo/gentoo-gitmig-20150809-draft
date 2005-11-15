@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 60b357f3b338a154f2aa991d2d34adcc ChangeLog 3943
+MD5 a4776599aaf0860f865997e7fb4f8dde ChangeLog 4180
+MD5 949a1dbe6212033409dfa4ed9e5620ed dosfstools-2.11-r1.ebuild 1146
 MD5 546303e494f3db286f6afcd160061943 dosfstools-2.11.ebuild 1061
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3bf9835ac36dac3de2f6981202be596a dosfstools-2.10-r1.ebuild 1318
 MD5 bc7f130eda06c0ef85f2022829a13a2e files/digest-dosfstools-2.11 70
-MD5 af6a07ad458852ef02d58a7a3658ca15 files/errno.patch 257
+MD5 bc7f130eda06c0ef85f2022829a13a2e files/digest-dosfstools-2.11-r1 70
 MD5 15e58786d8b78987b6ff2b5b4850bd4b files/dosfstools-2.10-2.6.headers.patch 740
-MD5 9eae6c4e222bcb616db95d21959a7688 files/digest-dosfstools-2.10-r1 70
 MD5 1892bf8b14475bb28ecd9c09492ba854 files/dosfstools-2.10-lseek64.patch 5650
+MD5 c60c859ba61e196767e00c2c1071931d files/dosfstools-2.11-fat32size.patch 1428
+MD5 af6a07ad458852ef02d58a7a3658ca15 files/errno.patch 257
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCs6DHgIKl8Uu19MoRApaPAJ4hwv3REERPk7D5ozFNlHUl53AG3ACfTBEp
-Yud+naACAYG8O3xFGHxvLgo=
-=s610
+iD8DBQFDeS9BgIKl8Uu19MoRAqi/AJwMqETTLKqJrugXJYZ1gnKBJlXtTQCdGieq
+HXdEAICPzCCLA3JF2xlKXHw=
+=u/T8
 -----END PGP SIGNATURE-----
