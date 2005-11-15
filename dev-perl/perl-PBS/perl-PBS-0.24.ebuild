@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/perl-PBS-0.24.ebuild,v 1.1 2005/08/11 20:46:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/perl-PBS-0.24.ebuild,v 1.2 2005/11/15 20:03:21 robbat2 Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www-rcf.usc.edu/~garrick/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=sys-cluster/torque-1.2.0_p5
