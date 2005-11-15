@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdiskusage
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.10 2005/09/12 00:01:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.11 2005/11/15 12:19:23 nelchael Exp $
+
+  16 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xdiskusage-1.48.ebuild:
+  Stable on x86.
 
   12 Sep 2005; Krzysiek Pawlik <nelchael@gentoo.org> xdiskusage-1.46.ebuild,
   xdiskusage-1.48.ebuild:
