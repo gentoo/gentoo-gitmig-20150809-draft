@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.32 2005/11/13 17:46:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.33 2005/11/15 21:33:38 george Exp $
+
+  15 Nov 2005; <gerr@gentoo.org> gnat-3.44.ebuild:
+  fix for building gnat when older version is already installed (#86484)
 
 *gnat-3.44 (12 Nov 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44.ebuild,v 1.1 2005/11/13 17:46:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44.ebuild,v 1.2 2005/11/15 21:33:38 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -25,13 +25,19 @@ IUSE=""
 S="${WORKDIR}/gcc-${MY_PV}"
 GNATBUILD="${WORKDIR}/build"
 case ${ARCH} in
-	x86)	GNATBOOT="${WORKDIR}/boot"
-			GNATBOOTINST="${WORKDIR}/gnat-3.15p-i686-pc-linux-gnu-bin"
+	x86)
+		GNATBOOT="${WORKDIR}/boot"
+		GNATBOOTINST="${WORKDIR}/gnat-3.15p-i686-pc-linux-gnu-bin"
+		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc-lib"
 		;;
-	ppc)	GNATBOOT="${WORKDIR}/gnat-3.15p-powerpc-unknown-linux-gnu"
+	ppc)
+		GNATBOOT="${WORKDIR}/gnat-3.15p-powerpc-unknown-linux-gnu"
+		GNATBOOTINST="${GNATBOOT}"
+		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc-lib"
 		;;
-	amd64)	GNATBOOT="${WORKDIR}/usr"
-		;;
+	amd64)
+		GNATBOOT="${WORKDIR}/usr"
+		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc"
 esac
 
 #needed for shared libs
@@ -65,17 +71,22 @@ src_unpack() {
 
 src_compile() {
 	# Set some paths to our bootstrap compiler.
-	case ${ARCH} in
-		x86)    local GCC_EXEC_PREFIX="${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/3.2.3"
-			;;
-		amd64)	local GCC_EXEC_PREFIX="${GNATBOOT}/lib/gcc/x86_64-linux/3.4.5"
-			;;
-	esac
+	local GCC_EXEC_PREFIX=$(echo ${GCC_EXEC_BASE}/*/*)
 	local PATH="${GNATBOOT}/bin:${PATH}"
+
+	# hopefully this will catch one that works
+	local ADA_OBJECTS_PATH
+	local ADA_INCLUDE_PATH
+	for x in $(find "${GCC_EXEC_PREFIX}" -name adalib); do
+	   ADA_OBJECTS_PATH="${x}:${ADA_OBJECTS_PATH}"
+	done
+	for x in $(find "${GCC_EXEC_PREFIX}" -name adainclude); do
+	   ADA_INCLUDE_PATH="${x}:${ADA_INCLUDE_PATH}"
+	done
+
 	local LDFLAGS="-L${GCC_EXEC_PREFIX} -L${GNATBOOTINST}"
 	local CC="${GNATBOOT}/bin/gcc"
-	#simply assigning LD_LIBRARY_PATH, like with the other vars, does not work
-	export "LD_LIBRARY_PATH=${GNATBOOT}/lib"
+	export LD_LIBRARY_PATH="${GNATBOOT}/lib"
 
 	# Configure gcc
 	cd "${GNATBUILD}"
