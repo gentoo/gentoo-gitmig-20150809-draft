@@ -2,7 +2,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.24 2005/11/11 23:13:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.25 2005/11/15 13:14:03 amir Exp $
+
+*quagga-0.98.5-r1 (15 Nov 2005)
+
+  15 Nov 2005; Amir Guindehi <amir@gentoo.org> +quagga-0.98.5-r1.ebuild:
+  Added a local use flag 'fix-connected-rt'. It controls inclusion of the
+  patch amir-connected-route.patch which was causing more trouble than
+  it's worth for most folks. If you run into the kernel bug which routes        
+  packets to interfaces which are downed by link detect add this use flag.
+  Version bump.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> quagga-0.98.4.ebuild:
   Stable on ppc.
