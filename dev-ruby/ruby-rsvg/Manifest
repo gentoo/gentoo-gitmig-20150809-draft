@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f3730f823e2df01e74ec621acdd46a1e ruby-rsvg-0.14.1.ebuild 461
 MD5 0a01d63e8aed64988d6cf3adf5d73b67 ChangeLog 390
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-rsvg-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDeb8QZgSmR+etHJoRAmNZAJsFmGuGlqENPT8pnvB4vRyJPzzd0ACeNHkh
+xoIOrJniHicW5sngYqHror8=
+=T40Q
+-----END PGP SIGNATURE-----

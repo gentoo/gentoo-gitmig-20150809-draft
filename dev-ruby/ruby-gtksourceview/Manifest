@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f83ff0840cae7569960c536bc69fb72f ChangeLog 426
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 ed582d9a82b6f26a79899faad4910fae ruby-gtksourceview-0.14.1.ebuild 448
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gtksourceview-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDeb+SZgSmR+etHJoRAn7eAJ9lY3Ra9sgn5OO+1/J4X8V9gcmpTACdHvGH
+6E7vIDSccY25GnFRuAzZMBc=
+=yDZk
+-----END PGP SIGNATURE-----

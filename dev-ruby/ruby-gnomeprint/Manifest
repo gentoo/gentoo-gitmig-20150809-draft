@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 094be777f6950b6d1d8559a11e3dc8d3 ruby-gnomeprint-0.14.1.ebuild 509
 MD5 f1eb9b98adb9ba8481e670c9cfc209e8 ChangeLog 414
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gnomeprint-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDecCnZgSmR+etHJoRAqARAJ4x4gr8cF1rzwnzZbzhfzh3+mOzuACfSJyC
+JyG4fd5zeMBKJtWT/Ow1Dao=
+=32Yn
+-----END PGP SIGNATURE-----
