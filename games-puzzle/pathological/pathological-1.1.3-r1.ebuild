@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r1.ebuild,v 1.1 2005/10/16 05:09:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r1.ebuild,v 1.2 2005/11/15 01:26:33 vapier Exp $
 
 inherit games eutils
 
@@ -34,11 +34,11 @@ src_unpack() {
 	fi
 
 	sed -i \
-		-e "/^cd / s/usr/share/pathological${GAMES_DATADIR}/${PN}" \
+		-e "/^cd /s:/usr/share/pathological:${GAMES_DATADIR}/${PN}:" \
 		pathological || die "sed pathological failed"
 
 	sed -i \
-		-e "/^write_highscores / s/usr/lib/pathological/bin${GAMES_LIBDIR}/${PN}" \
+		-e "/^write_highscores /s:/usr/lib/pathological/bin:${GAMES_LIBDIR}/${PN}:" \
 		pathological.py || die "sed pathological.py failed"
 }
 
