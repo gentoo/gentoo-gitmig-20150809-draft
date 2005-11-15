@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.8 2005/10/14 17:27:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.9 2005/11/15 18:19:54 gustavoz Exp $
+
+  15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  tex4ht-20050406_p1623-r1.ebuild:
+  Stable on sparc
 
   14 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   tex4ht-20050406_p1623-r1.ebuild, tex4ht-20050701_p1825.ebuild:
