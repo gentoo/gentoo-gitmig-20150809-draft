@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 d1ee6aab1d53551499ace63a2b39de91 ChangeLog 4144
 MD5 fa02f20f5a615e964afe6782ca3c0531 dpkg-1.10.28.ebuild 1296
-MD5 e38aa705109b2f3c8c9ad5cf1b7c062e dpkg-1.13.11.ebuild 1129
+MD5 3985666ec002ac65225f3cb3d53ffcae dpkg-1.13.11.ebuild 1135
 MD5 0696aa314a61ed693110418de1dcb1c8 files/digest-dpkg-1.10.28 65
 MD5 29dcf84aae2a62dcfa03708de2dffdf4 files/digest-dpkg-1.13.11 65
 MD5 feb5a11111cc715877cc527c979ef699 files/dpkg-1.10.26.patch 840
@@ -12,7 +12,7 @@ MD5 4db781f2359e3218fb4847cde0179482 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDar6YgIKl8Uu19MoRAvsvAJ4/KoBXSANm8rieKGOPDhkVwf9dCQCdGkRC
-yc4tY0JckhoL67FPrJT5qgk=
-=hRte
+iD8DBQFDeU8ggIKl8Uu19MoRAohfAJ4meTChwzMXhOqdk/6F18WnSJixmQCfUZsx
+HPrLuOk/whNuLUKkh3ECMMg=
+=mKiE
 -----END PGP SIGNATURE-----
