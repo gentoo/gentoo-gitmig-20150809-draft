@@ -1,4 +1,16 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3e8ef576d54550b1a89f380aa1695b7a fortune-mod-firefly-1.5.ebuild 620
-MD5 f8b55e91dbcf876fd66d09b35f6a6727 ChangeLog 468
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f53f97658da81bd4dedc7a9b63cfd188 ChangeLog 630
 MD5 ac578867a59f64ca3e8611c70aed5778 files/digest-fortune-mod-firefly-1.5 71
+MD5 f2611c572272e88b733305c283501cd1 files/digest-fortune-mod-firefly-2.0 67
+MD5 3e8ef576d54550b1a89f380aa1695b7a fortune-mod-firefly-1.5.ebuild 620
+MD5 7385150d016d44bfda923a70253e6a4c fortune-mod-firefly-2.0.ebuild 652
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeSe5gIKl8Uu19MoRAoBsAJ439S7CMNVFh93MbEeftuMsZc0zDgCfanEr
+Dh2Hciiwywh5eofjx+c/8WA=
+=Wutb
+-----END PGP SIGNATURE-----
