@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.92 2005/11/13 20:15:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.93 2005/11/15 02:26:33 anarchy Exp $
+
+*mozilla-thunderbird-1.5_rc1 (15 Nov 2005)
+
+  15 Nov 2005; <anarchy@gentoo.org> +files/thunderbird-cairo-canvas.patch,
+  +files/thunderbird-nopangoxft.patch, +files/thunderbird-visibility.patch,
+  +mozilla-thunderbird-1.5_rc1.ebuild:
+  initial import for 1.5 testing and preparations, not intended for users
 
   13 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   mozilla-thunderbird-1.0.7-r2.ebuild:

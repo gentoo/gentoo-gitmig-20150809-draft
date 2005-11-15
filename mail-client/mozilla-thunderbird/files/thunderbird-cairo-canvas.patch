@@ -1,0 +1,14 @@
+--- content/canvas/src/Makefile.in.orig	2005-08-23 01:46:46.000000000 +0000
++++ content/canvas/src/Makefile.in	2005-08-23 01:49:49.000000000 +0000
+@@ -77,6 +77,11 @@
+ 		libpixman \
+ 		$(NULL)
+ 
++ifndef MOZ_TREE_CAIRO
++LOCAL_INCLUDES          += $(MOZ_CAIRO_CFLAGS)
++EXTRA_DSO_LDOPTS        += $(MOZ_CAIRO_LIBS)
++endif
++
+ # XXX some platforms can't handle building
+ # an empty .a/lib.  Remove this dummy.cpp
+ # whenever w have a rendering context
