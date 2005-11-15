@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.1 2005/11/07 03:04:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.2 2005/11/15 10:48:23 azarah Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
 inherit multilib flag-o-matic
 
-IUSE="debug gnome ipv6 moznoxft truetype xinerama xprint mozsvg"
+IUSE="debug gnome ipv6 truetype xinerama xprint mozsvg"
 
 RDEPEND="virtual/x11
 	!moznoxft? ( virtual/xft )
@@ -21,7 +21,7 @@ RDEPEND="virtual/x11
 	app-arch/unzip
 	>=www-client/mozilla-launcher-1.42
 	>=x11-libs/gtk+-2.8.6
-	>=dev-libs/glib-2.2.0
+	>=dev-libs/glib-2.8.2
 	>=x11-libs/pango-1.10.1
 	>=dev-libs/libIDL-0.8.0
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 
@@ -180,12 +180,8 @@ mozconfig_init() {
 	mozconfig_use_enable xinerama
 	mozconfig_use_enable xprint
 
-	if [[ ${MOZ_FREETYPE2} == "no" ]] ; then
-		mozconfig_annotate gentoo --disable-freetype2
-	else
-		mozconfig_use_enable truetype freetype2
-		mozconfig_use_enable truetype freetypetest
-	fi
+	# We use --enable-xft and --enable-pango to do truetype fonts
+	mozconfig_annotate gentoo --disable-freetype2
 
 	if use debug; then
 		mozconfig_annotate +debug \
@@ -228,15 +224,11 @@ mozconfig_init() {
 	fi
 
 	# Check if we should enable Xft support...
-	if use moznoxft; then
-		mozconfig_annotate "disabling xft2 by request (+moznoxft)" --disable-xft
+	if ! use truetype; then
+		mozconfig_annotate "disabling xft2 by request (-truetype)" --disable-xft
 	else
 		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
-			if [[ ${MOZ_PANGO} == "yes" ]]; then
-				mozconfig_annotate "-moznoxft" --enable-xft --enable-pango
-			else
-				mozconfig_annotate "-moznoxft" --enable-xft
-			fi
+			mozconfig_annotate "-moznoxft" --enable-xft --enable-pango
 		else
 			mozconfig_annotate "no pkg-config xft" --disable-xft
 		fi
