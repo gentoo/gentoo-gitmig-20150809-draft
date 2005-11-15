@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.47 2005/10/18 02:43:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.48 2005/11/15 14:44:55 gustavoz Exp $
+
+  15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> pdnsd-1.2.3.ebuild:
+  Stable on sparc - selftests fail miserably so disable them
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> pdnsd-1.2.3.ebuild:
   Mark 1.2.3 stable on alpha
