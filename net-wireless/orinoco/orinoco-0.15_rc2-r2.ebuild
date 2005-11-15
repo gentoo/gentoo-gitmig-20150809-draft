@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc2-r2.ebuild,v 1.2 2005/05/23 19:17:22 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc2-r2.ebuild,v 1.3 2005/11/15 14:07:59 brix Exp $
 
 inherit eutils linux-mod
 
@@ -27,6 +27,14 @@ ERROR_HERMES="${P} requires Hermes chipset 802.11b support (Orinoco/Prism2/Symbo
 
 pkg_setup() {
 	linux-mod_pkg_setup
+
+	if kernel_is ge 2 6 15; then
+		ewarn
+		ewarn "Linux kernel 2.6.15 and above contains a more recent version of this"
+		ewarn "driver. Please consider using the in-kernel driver when using"
+		ewarn "linux-2.6.14 or above."
+		ewarn
+	fi
 
 	MODULE_NAMES="hermes(net:)
 				  orinoco(net:)"
