@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.6 2005/11/08 22:55:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.7 2005/11/15 12:52:24 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -82,6 +82,14 @@ src_compile() {
 	else
 		einfo "Plug and Play support disabled"
 		config="${config} --nopnp"
+	fi
+
+	if linux_chkconfig_present PCI; then
+		einfo "CardBus support enabled"
+		config="${config} --cardbus"
+	else
+		einfo "CardBus support disabled"
+		config="${config} --nocardbus"
 	fi
 
 	# cardctl, cardinfo and xcardinfo are setUID
