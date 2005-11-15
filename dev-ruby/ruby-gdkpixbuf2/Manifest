@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ed46e7fc7ec16429ac3d3bae55d244b ruby-gdkpixbuf2-0.11.0.ebuild 514
 MD5 499c627d680143fe02e69ac1b5db10d0 ruby-gdkpixbuf2-0.12.0.ebuild 466
 MD5 00ee01511e660a31fe90f0819ff07454 ruby-gdkpixbuf2-0.14.1.ebuild 467
@@ -9,3 +12,10 @@ MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gdkpixbuf2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gdkpixbuf2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gdkpixbuf2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gdkpixbuf2-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDebofZgSmR+etHJoRAlmvAKC9tzLr3OAVv1HfM0+m8/fxqlEFxQCgzMCP
+85X5qt6HG8vCJ1ZtMJxvPH0=
+=qeRL
+-----END PGP SIGNATURE-----

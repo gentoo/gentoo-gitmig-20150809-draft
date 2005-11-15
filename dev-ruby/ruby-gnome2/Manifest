@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c509099987e07740c2b53d35ebd22e34 ruby-gnome2-0.12.0.ebuild 523
 MD5 e56e529a0f557ae2a3360d2a1c07f78c ruby-gnome2-0.14.1.ebuild 536
 MD5 c2dc5e8deab43270818c902269ee0968 ruby-gnome2-0.10.1.ebuild 520
@@ -8,3 +11,10 @@ MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gnome2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gnome2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gnome2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gnome2-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDebuWZgSmR+etHJoRAkgcAKCgpJimcNJe+9RRVeSxcje8jJzBngCgrh0R
+OyDtBs/ErdSUr0Oq9PSAsGM=
+=udIH
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 da458ddbb03eb013752b23ad832033d5 ruby-gnomecanvas2-0.10.1.ebuild 554
 MD5 feaafc1ede89d9a6aaf88ac1261f919c ruby-gnomecanvas2-0.11.0.ebuild 514
 MD5 675e4ec67b0c482577a2d92ac3c5bac2 ChangeLog 3328
@@ -8,3 +11,10 @@ MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gnomecanvas2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gnomecanvas2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gnomecanvas2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gnomecanvas2-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDebsLZgSmR+etHJoRAuItAKC8QIN3s/NsITQPs4eMO9X0yKsi8ACgyszA
++b4HJdFYng2yhUYgPfdOcs4=
+=XxHc
+-----END PGP SIGNATURE-----

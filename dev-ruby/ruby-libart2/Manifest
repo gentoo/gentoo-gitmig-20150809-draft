@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0538ded725c4431af7a4cd432d864cef ruby-libart2-0.11.0.ebuild 415
 MD5 7fb89138d9c6f7235c8d31f9ecab044b ruby-libart2-0.12.0.ebuild 415
 MD5 0ad0085c9516921d15159c635303ad1c ChangeLog 3418
@@ -8,3 +11,10 @@ MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-libart2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-libart2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-libart2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-libart2-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDebm3ZgSmR+etHJoRApdkAJ9mWAIOblvdU7gPeA06OLbwdUxc+ACeMgjz
+MaoxEBIwDHN1+JgHa3+omOc=
+=QEuz
+-----END PGP SIGNATURE-----

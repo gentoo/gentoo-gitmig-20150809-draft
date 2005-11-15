@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd4ab7ca7ed91612dda45048aec37c39 ruby-atk-0.12.0.ebuild 436
 MD5 2248a5c63752678344476906cf7844f1 ruby-atk-0.14.1.ebuild 437
 MD5 74c534a2115c634dc8ad079f286956cc ruby-atk-0.10.1.ebuild 456
@@ -8,3 +11,10 @@ MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-atk-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-atk-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-atk-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-atk-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDebhGZgSmR+etHJoRAhe1AJ0felMcMoZHW5RG5lJ4cdB3wUKagACdHxRq
+GKNazaTm5esGvJTeLZEaQCs=
+=SmDa
+-----END PGP SIGNATURE-----
