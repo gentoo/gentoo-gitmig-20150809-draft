@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/ispell-sl
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ChangeLog,v 1.1 2005/11/15 22:35:26 arj Exp $
+
+*ispell-sl-0.5.3 (15 Nov 2005)
+
+  15 Nov 2005; Anders Rune Jensen <arj@gentoo.org> ispell-sl-0.5.3.ebuild,
+  Initial import. Fixes #107188.
