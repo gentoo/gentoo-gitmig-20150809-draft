@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.32 2005/11/09 05:03:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.33 2005/11/15 00:29:53 ribosome Exp $
+
+*ncbi-tools-20050605-r1 (15 Nov 2005)
+
+  15 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
+  +ncbi-tools-20050605-r1.ebuild:
+  Added MPI support for the BLAST family of programs. Thanks to Brady
+  Catherman <bradyc@uidaho.edu> for his work (fixes bug #111807).
 
   09 Nov 2005; Jason Wever <weeve@gentoo.org> ncbi-tools-20050605.ebuild:
   Stable on SPARC wrt bug #108334.
