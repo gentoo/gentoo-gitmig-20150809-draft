@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.28 2005/10/24 13:46:21 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.29 2005/11/15 07:30:03 sebastian Exp $
+
+*PEAR-Date-1.4.6 (15 Nov 2005)
+
+  15 Nov 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-Date-1.4.5.ebuild, +PEAR-Date-1.4.6.ebuild:
+  Version bump.
 
   24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Date-1.4.5.ebuild:
