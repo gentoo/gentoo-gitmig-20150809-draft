@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9380c343275d66f55bc0626f896a0798 ChangeLog 338
+MD5 67ba4a8b44f135c870db3e0254972d7e files/README.shaper 1698
+MD5 8736c01b98e3b29cc1c7c8dc4f4a5ad4 files/digest-shapecfg-36 58
+MD5 d663363debcea6f0db4842a8e3c50b17 files/shapercfg-2.0.36-glibc.patch 372
+MD5 193298cc47dd9b1e1c1a3207a3de07f4 shapecfg-36.ebuild 726
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeTC/gIKl8Uu19MoRAn0RAJwL2d6IAkLiRZZAJS7QLasr0F5xuQCeI+2l
+i1+3NMiizJ3rF0T9LvAQwkU=
+=fd+i
+-----END PGP SIGNATURE-----
