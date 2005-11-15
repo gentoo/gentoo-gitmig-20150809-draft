@@ -1,10 +1,23 @@
-MD5 1a2c2ee6175e52dfc28806551ed83926 cbqinit-0.7.ebuild 1104
-MD5 0d9a87777264dcb56aa9ef37498dbe29 ChangeLog 1489
-MD5 d83f5d9ad43d6404ddf47dcf18064a46 cbqinit-0.7.3.ebuild 1199
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee6a465dd210fd74fefff067e01ddb1c ChangeLog 1758
 MD5 b3eef38201071f9bcfc3064ba27e4278 cbqinit-0.7.2.ebuild 1211
-MD5 20829547e7a1bb95dcbe6b56119650dd files/digest-cbqinit-0.7 57
-MD5 1e272f674fd1bd74d9508f4a50b74ab5 files/digest-cbqinit-0.7.3 59
-MD5 2f93290d9afb2bfe82da2a3f93a051f3 files/rc_cbqinit-r1 185
-MD5 fa0a999eda33e423e9f27ad78dc8208e files/digest-cbqinit-0.7.2 59
-MD5 bf58f1ad519fe89dc6c6b90eabb3c860 files/rc_cbqinit 188
+MD5 e2f8861d1a792b0dedc714105fa79538 cbqinit-0.7.3-r1.ebuild 860
+MD5 d83f5d9ad43d6404ddf47dcf18064a46 cbqinit-0.7.3.ebuild 1199
+MD5 1a2c2ee6175e52dfc28806551ed83926 cbqinit-0.7.ebuild 1104
 MD5 36312b31d2218761e171ebcaf2db04e8 files/cbq-1280.My_first_shaper.sample 79
+MD5 ed9e439af4639ccb33d22aa3be1e6dcf files/cbqinit-0.7.3-gentoo.patch 1904
+MD5 20829547e7a1bb95dcbe6b56119650dd files/digest-cbqinit-0.7 57
+MD5 fa0a999eda33e423e9f27ad78dc8208e files/digest-cbqinit-0.7.2 59
+MD5 1e272f674fd1bd74d9508f4a50b74ab5 files/digest-cbqinit-0.7.3 59
+MD5 1e272f674fd1bd74d9508f4a50b74ab5 files/digest-cbqinit-0.7.3-r1 59
+MD5 bf58f1ad519fe89dc6c6b90eabb3c860 files/rc_cbqinit 188
+MD5 2325b9a2bb95d33fe41ee40a511ec8bf files/rc_cbqinit-r1 504
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeTBsgIKl8Uu19MoRAqCJAJ9vN02d0FYAfM9vR3NhiiE7AgqmqgCbB9Qc
+mNXUlvPZYthrMhu/kSB0Q/M=
+=As3l
+-----END PGP SIGNATURE-----

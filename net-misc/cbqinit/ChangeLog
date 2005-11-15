@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/cbqinit
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.11 2004/12/29 03:33:17 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.12 2005/11/15 00:47:32 vapier Exp $
+
+*cbqinit-0.7.3-r1 (15 Nov 2005)
+
+  15 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/cbqinit-0.7.3-gentoo.patch, files/rc_cbqinit-r1,
+  +cbqinit-0.7.3-r1.ebuild:
+  Clean up ebuild, add a patch from Fedora, and add back in missing KEYWORDS
+  along with arm love.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
