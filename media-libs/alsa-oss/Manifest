@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a687a24c0e962dba659f8dc9dff994a ChangeLog 7159
+MD5 89b91d9654f28f4846d55724e7db3e83 ChangeLog 7275
 MD5 46be4caffaccdf4d6e938d3bd51c0a35 alsa-oss-1.0.10_rc2.ebuild 740
-MD5 56ace9d86994737b29bf1834e03789b7 alsa-oss-1.0.10_rc3.ebuild 740
+MD5 a3ac8360e813d604b41434af39f47d14 alsa-oss-1.0.10_rc3.ebuild 738
 MD5 909610af901f23e1b0f286d2bcc61c4a alsa-oss-1.0.8-r1.ebuild 696
 MD5 963438feec93dbbc295faf1dfe92eb2b alsa-oss-1.0.9.ebuild 681
 MD5 3f4059db2c2398219e73df0cd62c9594 files/digest-alsa-oss-1.0.10_rc2 71
@@ -11,10 +8,3 @@ MD5 0d30d7934b2daea0a5d3225b3a2f3a29 files/digest-alsa-oss-1.0.10_rc3 71
 MD5 9bae02d9e262fe870be4d807f546ed55 files/digest-alsa-oss-1.0.8-r1 67
 MD5 5dc114304223294838436eab84acbccb files/digest-alsa-oss-1.0.9 67
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdzysQiJ/wx066S4RAjYuAJ904G5Y2aY8Bor+VwTG/xc89/vOOwCfR0cA
-A32OTH5BrYZeDQJ74wZHDbs=
-=xOcG
------END PGP SIGNATURE-----
