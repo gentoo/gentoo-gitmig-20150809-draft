@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/sexypsf-0.4.7.ebuild,v 1.2 2005/11/06 15:37:42 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/sexypsf-0.4.7.ebuild,v 1.3 2005/11/15 20:59:30 kugelfang Exp $
 
 inherit eutils
 
@@ -11,9 +11,8 @@ SRC_URI="http://projects.raphnet.net/sexypsf/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-#-amd64: 0.4.6: Segfault on playback using sexypsf.
 #-sparc: 0.4.5: Couldn't load minispf
-KEYWORDS="-amd64 ~ppc -sparc ~x86"
+KEYWORDS="~amd64 ~ppc -sparc ~x86"
 IUSE="bmp xmms"
 
 DEPEND="sys-libs/zlib
