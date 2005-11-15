@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-gtkmozembed
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.1 2005/11/15 11:15:00 citizen428 Exp $
+
+*ruby-gtkmozembed-0.14.1 (15 Nov 2005)
+
+  15 Nov 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +ruby-gtkmozembed-0.14.1.ebuild:
+  Initial import. See bugs #103470 and #109641.
+

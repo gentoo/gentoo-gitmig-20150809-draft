@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b70aeed7b82d431d452ac375159a6ca ChangeLog 418
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+MD5 0a09117f9fd01a1a77182da270bbb560 ruby-gtkmozembed-0.14.1.ebuild 570
+MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gtkmozembed-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFDecNEZgSmR+etHJoRAsfRAJiuIkiAdnMXOQuz1eHuj0FUjxzbAKCOLWak
+uovb0T8ybGQjPfpAPBnOww==
+=4av+
+-----END PGP SIGNATURE-----
