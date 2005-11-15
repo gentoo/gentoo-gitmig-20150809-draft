@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.28 2005/11/13 16:34:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.29 2005/11/15 11:44:47 cryos Exp $
+
+  15 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  madwifi-driver-0.1_pre20051111.ebuild:
+  Marked -amd64, kernel oops caused by traffic over the interface.
 
 *madwifi-driver-0.1_pre20051111 (13 Nov 2005)
 
