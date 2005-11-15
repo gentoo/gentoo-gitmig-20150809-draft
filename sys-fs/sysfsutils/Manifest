@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d86257e3a3462466d8428f94bd76a0be ChangeLog 5020
 MD5 3aeda907194d0ce63ad841586ea3187f files/digest-sysfsutils-0.2.0 67
 MD5 0384b6e5908a20cdcd66447733b28194 files/digest-sysfsutils-0.3.0 68
@@ -19,4 +22,11 @@ MD5 7e7075f23dac634652d9ba42796bba14 sysfsutils-1.2.0-r1.ebuild 801
 MD5 7894c65938bd31ea2a302ea6a58ddfac sysfsutils-1.2.0-r2.ebuild 1038
 MD5 909c224dc06c03330657f1495c856263 sysfsutils-1.2.0-r3.ebuild 1264
 MD5 5bad6609c165bea1fa4f294f84195d08 sysfsutils-1.2.0.ebuild 707
-MD5 c041a78859fdfd924ba3548825ff74f1 sysfsutils-1.3.0.ebuild 1238
+MD5 5245fd5439d2362549ca5c50de2e7fb8 sysfsutils-1.3.0.ebuild 1237
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeYQbgIKl8Uu19MoRAr1qAJ9r5fGiXhA1csu+ymWk3RlYEJH7xgCggz2X
+Tlfy4j+7Ruq6OJN09Hi7KlI=
+=9Khn
+-----END PGP SIGNATURE-----
