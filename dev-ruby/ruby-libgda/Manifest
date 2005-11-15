@@ -1,6 +1,18 @@
-MD5 3f8aa2494a8c4b824d7dc7c8f09576e6 ChangeLog 1173
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c78d97e169340e73d01c99db06df48e8 ruby-libgda-0.12.0.ebuild 521
+MD5 df835063729ef19b2ea42667f462abf5 ruby-libgda-0.14.1.ebuild 454
+MD5 8bc4314b83683bbbbf29dab107d55a2a ruby-libgda-0.10.1.ebuild 471
+MD5 0a65a0143bf2f2e6653851a4dc545a61 ChangeLog 1372
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-libgda-0.10.1 74
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-libgda-0.12.0 75
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 8bc4314b83683bbbbf29dab107d55a2a ruby-libgda-0.10.1.ebuild 471
-MD5 c78d97e169340e73d01c99db06df48e8 ruby-libgda-0.12.0.ebuild 521
+MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-libgda-0.14.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDeb1jZgSmR+etHJoRAu9kAJ944DU9Gpx4xF54tlJn+m6Y1v7WzACg1pEl
+cMEFkpPDsmhqDpMPLpqh0kQ=
+=A5gA
+-----END PGP SIGNATURE-----
