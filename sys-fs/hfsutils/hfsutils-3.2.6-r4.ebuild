@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r4.ebuild,v 1.4 2005/09/05 18:50:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r4.ebuild,v 1.5 2005/11/15 01:02:32 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="HFS FS Access utils"
 HOMEPAGE="http://www.mars.org/home/rob/proj/hfs/"
@@ -28,6 +28,7 @@ src_compile() {
 	local myconf
 	use tcltk && myconf="--with-tcl --with-tk"
 
+	tc-export CC CPP LD RANLIB
 	econf ${myconf} || die
 	emake PREFIX=/usr MANDIR=/usr/share/man || die
 	cd ${S}/hfsck
