@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.1 2005/11/14 17:33:39 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.2 2005/11/15 06:56:43 vapier Exp $
 
 inherit gnome.org eutils mono
 
-DESCRIPTION="Beagle is a search tool that ransacks your personal information space to find whatever you're looking for."
+DESCRIPTION="search tool that ransacks your personal information space to find whatever you're looking for"
 HOMEPAGE="http://www.beagle-project.org/"
+
 LICENSE="MIT Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86"
@@ -96,7 +97,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo "If available, Beagle greatly benefits from using certain operating"
 	einfo "system features such as Extended Attributes and inotify."
 	echo
@@ -104,4 +105,3 @@ pkg_postinst () {
 	einfo "basic usage info, see the Gentoo page of the Beagle website:"
 	einfo " http://www.beagle-project.org/Gentoo_Installation"
 }
-
