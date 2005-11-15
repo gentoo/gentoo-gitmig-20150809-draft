@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gdk-pixbuf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.41 2004/12/29 00:43:15 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.42 2005/11/15 16:27:41 leonardop Exp $
+
+*gdk-pixbuf-0.22.0-r5 (15 Nov 2005)
+
+  15 Nov 2005; Leonardo Boshell <leonardop@gentoo.org>
+  files/gdk-pixbuf-0.22.0-loaders.patch, +gdk-pixbuf-0.22.0-r5.ebuild:
+  Modified patch to fix a few more probems with the XPM loader (bug #112608).
+  Revision bump to propagate the changes, and marked stable on all arches that
+  reported back successful testing.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
