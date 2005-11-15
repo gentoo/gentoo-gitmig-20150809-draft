@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 daab28ac5b3709bdd815154702de48d0 horde-3.0.6.ebuild 972
-MD5 5bfe319eedbf8cde7bf49ee3f9673825 horde-2.2.9.ebuild 926
-MD5 6524736531d7994854b73a50a0c8ffe0 horde-3.0.5.ebuild 972
-MD5 cb5e4e2ef84dba534a0c16e6db1cdfc0 ChangeLog 4182
-MD5 cb784fc68f8ebab5c112b7067200fa7f metadata.xml 475
-MD5 e1b0135f6c049420d351f89fc104f2b6 horde-2.2.8.ebuild 919
-MD5 e006efb695d97f8d93d98db662e911f3 files/horde-3.0.4-freebusy.patch 894
+MD5 67aa7e4deae6591f405038966f0c58a2 ChangeLog 4295
 MD5 0dfe32b896302fd5440a7b79bc5a9324 files/digest-horde-2.2.8 63
 MD5 5d24743096fc0e5fc9f7f722dd3a8a02 files/digest-horde-2.2.9 63
 MD5 9a28ec87236a9af3ed92026ab2a57f66 files/digest-horde-3.0.5 64
 MD5 6363f343a1660856e69cd972adb28432 files/digest-horde-3.0.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDeiC+KRy60XGEcJIRAiRYAKCluCVsW3VUyGbPEb1/be9BE4LsVwCfbYc3
-ObBtz61MC9OjeScEy7zCCyA=
-=r1FL
------END PGP SIGNATURE-----
+MD5 e006efb695d97f8d93d98db662e911f3 files/horde-3.0.4-freebusy.patch 894
+MD5 e1b0135f6c049420d351f89fc104f2b6 horde-2.2.8.ebuild 919
+MD5 8bdbc271917d8f46d8edc1b89571ec7c horde-2.2.9.ebuild 922
+MD5 6524736531d7994854b73a50a0c8ffe0 horde-3.0.5.ebuild 972
+MD5 daab28ac5b3709bdd815154702de48d0 horde-3.0.6.ebuild 972
+MD5 cb784fc68f8ebab5c112b7067200fa7f metadata.xml 475
