@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.39 2005/09/17 21:19:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.40 2005/11/15 14:21:15 gustavoz Exp $
+
+  15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  clisp-2.33.2-r2.ebuild, clisp-2.34-r1.ebuild, clisp-2.35.ebuild:
+  A perfect example of bad keywording, this doesn't even build, keywording -sparc
 
   17 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> clisp-2.34-r1.ebuild:
   Stable on ppc.
