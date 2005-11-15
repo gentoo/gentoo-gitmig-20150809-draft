@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.33 2005/09/21 19:08:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.34 2005/11/15 13:40:33 gustavoz Exp $
+
+  15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> gcl-2.6.7.ebuild:
+  Stable on sparc
 
   21 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> gcl-2.6.7.ebuild:
   Keyworded ~sparc
