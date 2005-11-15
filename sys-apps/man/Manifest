@@ -17,7 +17,7 @@ MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
 MD5 331c925e304b56d63aa2c97dcc8e08fc files/man-1.6-cross-compile.patch 1744
 MD5 ecb128fe6db790f05629a8b2eca4c4fa files/man-1.6-message-order.patch 833
 MD5 bc796c3f2d1f9becb3d0bedc1b6dc051 files/man-1.6-parallel-make.patch 1033
-MD5 fda8d1252305100c69a17634a9ba5838 files/man-1.6a-makewhatis-config.patch 1818
+MD5 e2a65941ce02530483bd966c879a8b31 files/man-1.6a-makewhatis-config.patch 1807
 MD5 7b94b85c02df3b66046e3d01827cd173 files/man-1.6a-parallel-make.patch 657
 MD5 90f936cbc365fa88a17525afc2cc0d95 files/man-1.6b-build.patch 175
 MD5 cc5bb9ed7778c068c9154f0f8c6a5e07 files/man-1.6b-more-sections.patch 291
@@ -29,7 +29,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeSa+gIKl8Uu19MoRAjEtAJ9402ia7ZOzN0AwIy38eUhNBtTQnwCeJ5RT
-rzqkxJnLfGxpTRVxEYeQBdg=
-=snzh
+iD4DBQFDeS8FgIKl8Uu19MoRAjxbAJd9ntuRbss3W6YCXVEsSUERTSw/AKCBcP6q
+oQT6sO3Ny2WIiKkM3j/cQg==
+=kuBl
 -----END PGP SIGNATURE-----

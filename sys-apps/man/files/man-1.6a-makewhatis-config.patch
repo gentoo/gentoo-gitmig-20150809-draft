@@ -32,7 +32,7 @@ http://bugs.gentoo.org/86863
 +else
 +	sections=`$AWK '($1 == "MANSECT") { print $2 }' @man_config_file@`
 +	if [ x"$sections" = x ]; then
-+		sections="1 2 3 4 5 6 7 8 9 n l"
++		sections="@sections@"
 +	fi
 +fi
 +sections=`echo $sections | sed -e 's/:/ /g'`
