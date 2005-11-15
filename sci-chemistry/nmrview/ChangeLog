@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/nmrview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/ChangeLog,v 1.5 2005/05/12 19:10:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/ChangeLog,v 1.6 2005/11/15 15:01:15 ribosome Exp $
+
+*nmrview-5.2.2-r3 (15 Nov 2005)
+
+  15 Nov 2005; Olivier Fisette <ribosome@gentoo.org> +files/README.Gentoo,
+  +files/nmrview.sh-r1, +nmrview-5.2.2-r3.ebuild:
+  Improved wrapper script to accept startup files and other parameters on the
+  command line.
 
   12 May 2005; Olivier Fisette <ribosome@gentoo.org>
   nmrview-5.2.2-r2.ebuild:
