@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6.ebuild,v 1.5 2005/11/04 20:36:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6-r1.ebuild,v 1.1 2005/11/15 16:58:27 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -52,13 +52,13 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2 )"
 
+
 pkg_setup() {
 	if ! built_with_use x11-libs/cairo X; then
 		einfo "Please re-emerge x11-libs/cairo with the X USE flag set"
 		die "cairo needs the X flag set"
 	fi
-	}
-
+}
 
 set_gtk2_confdir() {
 	# An arch specific config directory is used on multilib systems
@@ -71,6 +71,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# Fix problems in gdk-pixbuf's code regarding XPM files. Bug #112608.
+	epatch "${FILESDIR}"/${PN}-2-xpm_loader.patch
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons

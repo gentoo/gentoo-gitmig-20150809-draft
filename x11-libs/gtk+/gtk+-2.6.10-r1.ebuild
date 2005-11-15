@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10.ebuild,v 1.7 2005/11/11 23:21:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.1 2005/11/15 16:58:27 leonardop Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,8 +12,8 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
-IUSE="doc tiff jpeg static"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
+IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
 	>=dev-libs/glib-2.6
@@ -40,15 +40,16 @@ set_gtk2_confdir() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
+	# Fix problems in gdk-pixbuf's code regarding XPM files. Bug #112608.
+	epatch "${FILESDIR}"/${PN}-2-xpm_loader.patch
 	# beautifying patch for disabled icons
-	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
+	epatch "${FILESDIR}"/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
-	epatch ${DISTDIR}/${PN}-2.6-smoothscroll-r5.patch.bz2
+	epatch "${DISTDIR}"/${PN}-2.6-smoothscroll-r5.patch.bz2
 
-	cd ${S}
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	has_multilib_profile && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
@@ -60,11 +61,10 @@ src_unpack() {
 	use ppc64 && ! has_version '>=dev-libs/glib-2.8' && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
 	use ppc64 && append-flags -mminimal-toc
 
-	autoconf || die
-	automake || die
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 
 	epunt_cxx
-
 }
 
 src_compile() {
@@ -76,14 +76,13 @@ src_compile() {
 		`use_enable doc gtk-doc` \
 		`use_with jpeg libjpeg` \
 		`use_with tiff libtiff` \
-		`use_enable static` \
 		--with-libpng \
 		--with-gdktarget=x11 \
 		--with-xinput \
 		|| die
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
-	emake -j1 || die
+	emake -j1 || die "Compilation failed"
 
 }
 
@@ -92,7 +91,7 @@ src_install() {
 	dodir ${GTK2_CONFDIR}
 	keepdir ${GTK2_CONFDIR}
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "Installation failed"
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
