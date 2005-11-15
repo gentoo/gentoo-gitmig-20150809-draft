@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.23_p1874.ebuild,v 1.2 2005/11/10 15:50:43 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.23_p1874.ebuild,v 1.3 2005/11/15 20:47:02 dang Exp $
 
 inherit python eutils distutils
 
@@ -21,7 +21,7 @@ DEPEND="dev-lang/python
 	xml2?     ( dev-python/jaxml ) "
 RDEPEND="${DEPEND}"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 src_install() {
