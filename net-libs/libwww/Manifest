@@ -8,5 +8,5 @@ MD5 6853cd848815d9446ef820e3a74878ca files/libwww-5.4.0-htbound.patch 13279
 MD5 b0a8e638d02da0d0284e8555866f1f38 files/libwww-5.4.0-mysql-4.1.patch 1674
 MD5 e99f48d15e0834666b84203b48805872 files/libwww-config-liborder.patch 776
 MD5 4c70dae7ce4964982b3ebe728633f9f0 libwww-5.4.0-r3.ebuild 1943
-MD5 82c170f51a4625637843cc76c67e99fb libwww-5.4.0-r4.ebuild 2147
+MD5 5295acb31c677963104fea77126871e3 libwww-5.4.0-r4.ebuild 2145
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
