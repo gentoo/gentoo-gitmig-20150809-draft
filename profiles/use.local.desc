@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1556 2005/11/13 18:21:44 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1557 2005/11/15 01:20:52 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1105,6 +1105,7 @@ sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
 sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
+sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
