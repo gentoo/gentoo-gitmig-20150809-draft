@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.2.0.ebuild,v 1.5 2005/07/15 10:44:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.2.0.ebuild,v 1.6 2005/11/15 03:07:16 pfeifer Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ check_version_h() {
 	then
 		eerror "Please verify that your /usr/src/linux symlink is pointing"
 		eerror "to your current kernel sources, and that you have a running kernel"
-		die "/usr/src/linux symlink not setup!"
+		die "/usr/src/linux symlink not setup or kernel tree has not been configured!"
 	fi
 }
 
