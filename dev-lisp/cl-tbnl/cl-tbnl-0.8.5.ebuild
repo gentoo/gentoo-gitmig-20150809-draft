@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.8.4.ebuild,v 1.1 2005/10/26 18:37:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.8.5.ebuild,v 1.1 2005/11/15 02:26:26 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.weitz.de/tbnl/"
 SRC_URI="mirror://gentoo/tbnl_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="standalone"
 
 DEPEND="dev-lisp/cl-kmrcl
