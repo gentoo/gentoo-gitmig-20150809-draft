@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.4 2005/11/15 00:50:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.5 2005/11/15 04:38:14 mr_bones_ Exp $
 
 IUSE="opengl"
 
@@ -206,13 +206,13 @@ src_install() {
 
 	#Work around hardcoded path in 32bit libGL.so on amd64, bug 101539
 	if has_multilib_profile && [ $(get_abi_LIBDIR x86) = "lib32" ] ; then
-		ATI_LIBGL_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"	
-	fi	
+		ATI_LIBGL_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"
+	fi
 		cat >>${T}/09ati <<EOF
 
 LIBGL_DRIVERS_PATH="$ATI_LIBGL_PATH"
 EOF
-	
+
 
 	doenvd ${T}/09ati
 }
@@ -306,4 +306,3 @@ pkg_postinst() {
 pkg_postrm() {
 	/usr/bin/eselect opengl set --use-old xorg-x11
 }
-
