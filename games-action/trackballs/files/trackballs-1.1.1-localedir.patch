@@ -1,0 +1,22 @@
+--- src/mmad.cc.orig	2005-11-15 00:18:08.000000000 -0500
++++ src/mmad.cc	2005-11-15 00:18:45.000000000 -0500
+@@ -517,7 +517,7 @@
+   /* Initialialize i18n with system defaults, before anything else (eg. settings) have been loaded */
+   setlocale(LC_ALL, ""); 
+   char localedir[256];
+-  snprintf(localedir,255,"%s/locale",effectiveShareDir);
++  snprintf(localedir,255,"%s",LOCALEDIR);
+   bindtextdomain(PACKAGE,localedir);
+   textdomain(PACKAGE);
+ 
+--- src/settings.cc.orig	2005-11-15 00:17:02.000000000 -0500
++++ src/settings.cc	2005-11-15 00:17:28.000000000 -0500
+@@ -291,7 +291,7 @@
+   /* check if the correct language directory exists, otherwise use default */
+   if(language != 0) {
+ 	char localedir[256];
+-	snprintf(localedir,255,"%s/locale/%c%c",effectiveShareDir,languageCodes[language][0],languageCodes[language][1]);
++	snprintf(localedir,255,"%s/%c%c",LOCALEDIR,languageCodes[language][0],languageCodes[language][1]);
+ 	if(!dirExists(localedir)) {
+ 	  fprintf(stderr,"Warning: locale directory %s missing.\n",localedir);
+ 	  //language=0;
