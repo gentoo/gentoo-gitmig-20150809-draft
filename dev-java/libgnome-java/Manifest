@@ -1,4 +1,4 @@
-MD5 35cc1b1c7bcd70c668c473827c3eea1a ChangeLog 2816
+MD5 bc01caaa2307f376446c279aa3742ccf ChangeLog 2927
 MD5 55fb422ad6119794ac0805432ebdc410 files/digest-libgnome-java-2.10.1 73
 MD5 23d8bb8f12c8d969be6869734210969c files/digest-libgnome-java-2.12.1 72
 MD5 efea40cf1a5eb3c48001cde4ead5c123 files/digest-libgnome-java-2.8.3.1 74
@@ -6,6 +6,6 @@ MD5 6ab1ec4f4e7665d6f1e73d04e5ffea0d files/libgnome-java-2.10.0_fix-install-dir.
 MD5 b5f8aad83ed35026438574e04a3122ac files/libgnome-java-2.8.2_gentoo-PN-SLOT.patch 1310
 MD5 d8bbcf350e68bf0a42c37ecbef32c8dd files/libgnome-java-2.8.3.1_gentoo-PN-SLOT.patch 508
 MD5 677f2ff3ed6ec775266bf63bf1f2987d libgnome-java-2.10.1.ebuild 2725
-MD5 2e3dba92502e47dfd7537ffbf12de8d2 libgnome-java-2.12.1.ebuild 1877
+MD5 856bc5726a3816bd10ee2affb900a189 libgnome-java-2.12.1.ebuild 1877
 MD5 acbe31cfb56cfba1a61ab0197a594370 libgnome-java-2.8.3.1.ebuild 3062
 MD5 fb1bed94b41f514c97fb402200db1eec metadata.xml 1102
