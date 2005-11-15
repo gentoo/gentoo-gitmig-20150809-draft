@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bdd0331eafe412eb68e9ffcde2337d49 ChangeLog 6766
 MD5 078b6239f293e1cc65f3f977b3136317 files/digest-libwww-5.4.0-r3 151
 MD5 4c3f7314020d5a1a6a01463a71b4944c files/digest-libwww-5.4.0-r4 151
@@ -10,3 +13,10 @@ MD5 e99f48d15e0834666b84203b48805872 files/libwww-config-liborder.patch 776
 MD5 4c70dae7ce4964982b3ebe728633f9f0 libwww-5.4.0-r3.ebuild 1943
 MD5 5295acb31c677963104fea77126871e3 libwww-5.4.0-r4.ebuild 2145
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeYQ8gIKl8Uu19MoRAnL9AJ0ew3n0gYZNbAcaEJUay7U8idoU9gCeK4tX
+x8YUXDF/ZMIUcJ78fztB0as=
+=bbpM
+-----END PGP SIGNATURE-----
