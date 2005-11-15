@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/cancd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.1 2005/11/14 21:15:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.2 2005/11/15 19:27:35 robbat2 Exp $
+
+*cancd-0.1.0-r1 (15 Nov 2005)
+
+  15 Nov 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/netconsole-conf.d, +files/netconsole-init.d,
+  +cancd-0.1.0-r1.ebuild:
+  Add netconsole source init.d scripts.
 
 *cancd-0.1.0 (14 Nov 2005)
 
