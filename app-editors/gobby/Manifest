@@ -6,12 +6,12 @@ MD5 19d6bb1c6dde54bc3c8cc32de695bb78 files/digest-gobby-0.2.2 63
 MD5 f39d707c80d1be545284fe434cce3220 files/digest-gobby-0.3.0_rc1 66
 MD5 d4df29d4d1de91d4adccda4b540e256f files/gobby.desktop-r1 336
 MD5 1448d76e4ea01b937b6bb4dc9e12087d gobby-0.2.2.ebuild 1381
-MD5 ce8056017b8f7abfe94a05fa18f622f3 gobby-0.3.0_rc1.ebuild 1427
+MD5 94ce1e44590d24c39496367b39e64ba5 gobby-0.3.0_rc1.ebuild 1431
 MD5 08b59cdb7488971fc1ab89cfc860eee9 metadata.xml 287
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeqnl8zY1VwezZiERApdWAJ4nbiQ55iZyC0wZa6jvjraI5lyyRgCfebJf
-uSL3zMJWeDfPtWzzgH5PmFI=
-=19gh
+iD8DBQFDe5Tq8zY1VwezZiERAl9dAJ0WIfgs/nDwErWwsZBKXiLjNJniugCeOFhP
+EXmvmhFvpyPN5p/HdDRHIMY=
+=OkBb
 -----END PGP SIGNATURE-----
