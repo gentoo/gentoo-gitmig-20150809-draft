@@ -1,0 +1,13 @@
+# ChangeLog for sys-apps/hwdata
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata/ChangeLog,v 1.1 2005/11/16 15:45:56 wolf31o2 Exp $
+
+*hwdata-0.158 (16 Nov 2005)
+
+  16 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/hwdata-0.158-binary_drivers.patch,
+  +files/hwdata-0.158-binary_drivers_nv.patch, +metadata.xml,
+  +hwdata-0.158.ebuild:
+  Initial import. Ebuild by me. Since this is just a copy from hwdata-knoppix,
+  I kept the same KEYWORDS, after changing arch to ~arch on each.
+
