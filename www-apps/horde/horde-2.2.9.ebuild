@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-2.2.9.ebuild,v 1.3 2005/11/15 21:14:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-2.2.9.ebuild,v 1.4 2005/11/16 00:22:35 yoswink Exp $
 
 inherit horde
 
 DESCRIPTION="Horde Application Framework"
 HOMEPAGE="http://www.horde.org/"
 
-KEYWORDS="~alpha ~amd64 hppa ppc sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ppc sparc ~x86"
 IUSE="mysql"
 
 DEPEND=""
