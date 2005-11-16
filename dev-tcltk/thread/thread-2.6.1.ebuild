@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.1.ebuild,v 1.2 2005/07/03 01:20:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.1.ebuild,v 1.3 2005/11/16 11:27:05 herbs Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="the Tcl Thread extension"
 HOMEPAGE="http://www.tcl.tk/"
@@ -18,6 +18,16 @@ DEPEND="gdbm? ( sys-libs/gdbm )
 
 S=${WORKDIR}/${PN}${PV}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# Search for libs in libdir not just exec_prefix/lib
+	sed -i -e 's:${exec_prefix}/lib:${libdir}:' \
+		aclocal.m4 || die "sed failed"
+	aclocal || die "aclocal failed"
+	autoconf || die "autoconf failed"
+}
+
 pkg_setup() {
 	if ! built_with_use dev-lang/tcl threads ; then
 		eerror "dev-lang/tcl was not merged with threading enabled."
@@ -27,11 +37,13 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf="--with-threads --with-tclinclude=/usr/include"
+	local myconf="--with-threads --with-tclinclude=/usr/include \
+			--with-tcl=/usr/$(get_libdir)"
 
 	if use gdbm ; then
 		myconf="${myconf} --with-gdbm"
 	fi
+
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
