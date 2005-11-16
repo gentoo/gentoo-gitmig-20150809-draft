@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.62 2005/11/03 04:02:26 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.63 2005/11/16 23:49:28 anarchy Exp $
+
+  16 Nov 2005; <anarchy@gentoo.org> vpopmail-5.4.6-r1.ebuild,
+  vpopmail-5.4.9-r2.ebuild, vpopmail-5.4.10.ebuild, vpopmail-5.4.13.ebuild:
+  description fixed as postfix is not supported as of right now
 
 *vpopmail-5.4.13 (03 Nov 2005)
 
