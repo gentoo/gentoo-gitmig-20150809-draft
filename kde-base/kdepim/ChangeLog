@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.176 2005/10/17 22:35:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.177 2005/11/16 10:38:51 greg_g Exp $
+
+*kdepim-3.5.0_rc1 (16 Nov 2005)
+
+  16 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> +kdepim-3.5.0_rc1.ebuild:
+  New version.
 
   17 Oct 2005; Aron Griffis <agriffis@gentoo.org> kdepim-3.4.1-r2.ebuild:
   Mark 3.4.1-r2 stable on alpha
