@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.2.ebuild,v 1.1 2005/10/05 17:46:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.2.ebuild,v 1.2 2005/11/16 04:04:57 lu_zero Exp $
 
 inherit eutils linux-info flag-o-matic
 
@@ -11,11 +11,10 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="acpi debug"
+IUSE="acpi debug alsa oss"
 
-DEPEND="virtual/libc
-	>=sys-apps/baselayout-1.8.6.12-r1"
-RDEPEND=""
+DEPEND=">=sys-apps/baselayout-1.8.6.12-r1"
+RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )"
 
 src_compile() {
 	# Fix crash bug on some systems
@@ -38,7 +37,10 @@ src_compile() {
 	fi
 
 	econf laptop=$laptop \
-		$(use_enable debug) || die "Sorry, failed to configure pbbuttonsd"
+		$(use_enable debug) \
+		$(use_enable alsa) \
+		$(use_enable oss) \
+		|| die "Sorry, failed to configure pbbuttonsd"
 	emake || die "Sorry, failed to compile pbbuttonsd"
 }
 
