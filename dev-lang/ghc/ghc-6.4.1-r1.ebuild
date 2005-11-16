@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r1.ebuild,v 1.1 2005/10/21 11:25:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r1.ebuild,v 1.2 2005/11/16 09:24:44 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -144,6 +144,11 @@ src_compile() {
 	setup_cflags
 	echo "SRC_CC_OPTS+=${SUPPORTED_CFLAGS}" >> mk/build.mk
 	echo "SRC_HC_OPTS+=${SUPPORTED_CFLAGS// -/ -optc-}" >> mk/build.mk
+
+	# circumvent a very strange bug that seems related with ghc producing too much
+	# output while being filtered through tee (e.g. due to portage logging)
+	# reported as bug #111183
+	echo "SRC_HC_OPTS+=-fno-warn-deprecations" >> mk/build.mk
 
 	# force the config variable ArSupportsInput to be unset;
 	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.73 2005/10/21 11:25:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.74 2005/11/16 09:24:44 kosmikus Exp $
+
+  16 Nov 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.4.1-r1.ebuild:
+  Reduced the amount of output during the build slightly to work around bug
+  #111183.
 
 *ghc-6.4.1-r1 (21 Oct 2005)
 
