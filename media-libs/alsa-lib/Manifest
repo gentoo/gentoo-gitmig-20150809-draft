@@ -1,5 +1,6 @@
 MD5 2bff4fc295e32c5d9739c4efe9c0ddee ChangeLog 20068
 MD5 9c272add7e13dc69bac9eaf8c2cd0771 alsa-lib-0.9.8.ebuild 1558
+MD5 5b620b6844d3239f16c198d3ff0b329d alsa-lib-1.0.10.ebuild 2033
 MD5 56d4fd87ad9b48e621ad0de5d43ffba5 alsa-lib-1.0.10_rc2.ebuild 1982
 MD5 0f045dd4c0a80ec89e69dd934c0d31b0 alsa-lib-1.0.10_rc3.ebuild 1939
 MD5 255565a888541274148ccb6e1b226eb5 alsa-lib-1.0.7.ebuild 2051
@@ -12,6 +13,7 @@ MD5 d832d735aa8fa9959ff66276eb648cef files/alsa-lib-1.0.8-gcc4.patch 1656
 MD5 afc44aabeb36448990c19eaa9b3dfce0 files/alsa-lib-mixer.patch 264
 MD5 190a6c4ffe2eef20e3095ab70ea34941 files/configure.diff 586
 MD5 8a3190d9f23acedd006359afb79f60bc files/digest-alsa-lib-0.9.8 67
+MD5 22257ca92b0882a755f50554b5d38a5b files/digest-alsa-lib-1.0.10 68
 MD5 9983325ef78244eb4a682bbad04a4584 files/digest-alsa-lib-1.0.10_rc2 71
 MD5 36025db2dfefd31acba9ff0d31b9ad11 files/digest-alsa-lib-1.0.10_rc3 71
 MD5 86565eb0601b611f39adb8f5ad47b622 files/digest-alsa-lib-1.0.7 67
