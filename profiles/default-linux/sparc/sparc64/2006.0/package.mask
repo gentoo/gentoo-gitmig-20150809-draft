@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.4 2005/11/03 19:31:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.5 2005/11/16 14:56:46 weeve Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -152,6 +152,7 @@ dev-util/jarwizard
 dev-util/jconfig
 dev-util/netbeans
 dev-util/pmd
+dev-util/poseidonCE
 games-rpg/pcgen
 media-gfx/aoi
 net-misc/mindterm
