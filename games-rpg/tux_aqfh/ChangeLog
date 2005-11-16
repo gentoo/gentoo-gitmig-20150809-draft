@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/tux_aqfh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/ChangeLog,v 1.4 2005/08/29 06:25:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/ChangeLog,v 1.5 2005/11/16 02:19:13 mr_bones_ Exp $
+
+  16 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  tux_aqfh-1.0.14.ebuild:
+  don't use autoreconf (bug #12658)
 
   29 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
   tux_aqfh-1.0.14.ebuild:

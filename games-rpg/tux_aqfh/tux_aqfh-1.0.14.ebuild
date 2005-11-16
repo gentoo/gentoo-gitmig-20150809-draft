@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.4 2005/08/29 06:25:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.5 2005/11/16 02:19:13 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-fix-paths.patch
-	autoreconf || die "couldnt autoreconf"
+	aclocal && autoconf && automake -a -c || die "autotools failed"
 }
 
 src_install() {
