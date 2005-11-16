@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.58 2005/11/16 14:13:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.59 2005/11/16 14:30:12 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -393,25 +393,7 @@ function kde-meta_src_compile() {
 		myconf="$myconf --disable-setgid"
 	fi
 
-	# confcache support. valid only for my (danarmak's) port of stuart's confcache to portage .51,
-	# not for stuart's orig version or ferringb's ebuild-daemon version.
-	# this could be replaced by just using econf, but i don't want to make that change in kde.eclass
-	# just yet. This way is more modular.
-	callsections="$*"
-	[ -z "$callsections" -o "$callsections" == "all" ] && callsections="myconf configure make"
-	for section in $callsections; do
-		debug-print "$FUNCNAME: now in section $section"
-		if [ "$section" == "configure" ]; then
-			# don't log makefile.common stuff in confcache
-			[ ! -f "Makefile.in" ] && make -f admin/Makefile.common
-			[ "`type -t confcache_start`" == "function" ] && confcache_start
-			myconf="$EXTRA_ECONF $myconf"
-		fi
-		kde_src_compile $section
-		if [ "$section" == "configure" ]; then
-			[ "`type -t confcache_stop`" == "function" ] && confcache_stop
-		fi
-	done
+	kde_src_compile $*
 }
 
 function kde-meta_src_install() {
