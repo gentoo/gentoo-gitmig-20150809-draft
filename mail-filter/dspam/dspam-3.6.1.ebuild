@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.1.ebuild,v 1.2 2005/11/09 15:28:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.1.ebuild,v 1.3 2005/11/16 02:12:54 st_lim Exp $
 
 inherit eutils
 
@@ -10,13 +10,13 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users user-homedirs"
+IUSE="berkdb clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users user-homedirs"
 DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
 		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( =dev-db/sqlite-3* )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
-		>=sys-libs/db-4.0
+		berkdb? ( >=sys-libs/db-4.0 )
 		"
 RDEPEND="sys-process/cronbase
 		clamav? ( >=app-antivirus/clamav-0.86 )
@@ -24,7 +24,7 @@ RDEPEND="sys-process/cronbase
 		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( =dev-db/sqlite-3* )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
-		>=sys-libs/db-4.0
+		berkdb? ( >=sys-libs/db-4.0 )
 		logrotate? ( app-admin/logrotate )"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 SLOT="0"
@@ -36,7 +36,7 @@ LOGDIR="/var/log/dspam"
 
 pkg_setup() {
 	local multiple_dbs="0"
-	local supported_dbs="mysql postgres oci8 sqlite sqlite3"
+	local supported_dbs="berkdb mysql postgres oci8 sqlite sqlite3"
 	for foo in ${supported_dbs}; do
 		if use ${foo}; then
 			let multiple_dbs="((multiple_dbs + 1 ))"
@@ -56,28 +56,16 @@ pkg_setup() {
 		einfo "\`echo \"mail-filter/dspam -mysql postgres -oci8 -sqlite -sqlite3\" >> /etc/portage/package.use\`"
 		einfo "to build dspam with Postgres database as your dspam backend."
 		)
-		echo
-		ewarn "Waiting 30 seconds before starting..."
-		ewarn "(Control-C to abort)..."
-		epause 30
 	elif [ "${multiple_dbs}" -eq "0" ]; then
 		echo
-		ewarn "You did not select any SQL based database backend. DSPAM will use"
-		ewarn "Berkeley DB for storing data. If you don't want that, then enable"
-		ewarn "one of the following USE flags:"
-		ewarn "${supported_dbs}"
-		echo
-		ewarn "Waiting 30 seconds before starting..."
-		ewarn "(Control-C to abort)..."
-		epause 30
+		ewarn "You did not select any SQL based database backend."
+		ewarn "DSPAM will use self-contained Hash driver for storing data." 
+		ewarn "If you don't want that, then enable one of the following"
+		ewarn "USE flags: ${supported_dbs}"
 	fi
 	has_version ">sys-kernel/linux-headers-2.6" || (
 		einfo "To use the new DSPAM deamon mode, you need to emerge"
 		einfo ">sys-kernel/linux-headers-2.6 and rebuild glibc to support NPTL"
-		echo
-		ewarn "Waiting 30 seconds before starting..."
-		ewarn "(Control-C to abort)..."
-		epause 30
 	)
 	if use virtual-users && use user-homedirs ; then
 		ewarn "If the users are virtual, then they probably should not have home directories."
@@ -100,8 +88,8 @@ src_compile() {
 
 	myconf="${myconf} --with-dspam-home=${HOMEDIR}"
 	myconf="${myconf} --sysconfdir=${CONFDIR}"
-	use user-homedirs || myconf="${myconf} --enable-homedir"
-	use clamav || myconf="${myconf} --enable-clamav"
+	use user-homedirs && myconf="${myconf} --enable-homedir"
+	use clamav && myconf="${myconf} --enable-clamav"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
 	# optional: even MORE debugging output, use with extreme caution!
@@ -150,8 +138,10 @@ src_compile() {
 		if (expr ${ORACLE_HOME/*\/} : 10 1>/dev/null 2>&1); then
 			myconf="${myconf} --with-oracle-version=10"
 		fi
-	else
+	elif use berkdb ; then
 		myconf="${myconf} --with-storage-driver=libdb4_drv"
+	else
+		myconf="${myconf} --with-storage-driver=hash_drv"
 	fi
 
 	econf ${myconf} || die
