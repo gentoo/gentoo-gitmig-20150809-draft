@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.8 2005/09/25 17:10:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.9 2005/11/16 09:25:05 lu_zero Exp $
+
+  16 Nov 2005; Luca Barbato <lu_zero@gentoo.org> hplip-0.9.5.ebuild:
+  Fix big endian error
 
   25 Sep 2005; Luis Medinas <metalgod@gentoo.org> hplip-0.9.5.ebuild:
   Update to the latest foomatic-db-hpijs snapshot.
