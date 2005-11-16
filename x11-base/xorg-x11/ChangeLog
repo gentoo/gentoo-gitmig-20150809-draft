@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.477 2005/11/11 20:12:03 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.478 2005/11/16 05:03:33 joshuabaergen Exp $
+
+  16 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-7.0.0_rc1.ebuild, xorg-x11-7.0.0_rc2.ebuild:
+  Changed xorg-x11 blocker for clarity.
 
 *xorg-x11-7.0.0_rc2 (11 Nov 2005)
 
