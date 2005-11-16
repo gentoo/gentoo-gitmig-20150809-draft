@@ -1,21 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.2 2005/11/15 10:48:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.3 2005/11/16 21:59:59 azarah Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
 inherit multilib flag-o-matic
 
-IUSE="debug gnome ipv6 truetype xinerama xprint mozsvg"
+IUSE="debug gnome ipv6 xinerama xprint mozsvg"
 
 RDEPEND="virtual/x11
-	!moznoxft? ( virtual/xft )
-	>=media-libs/fontconfig-2.1
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
 	>=media-libs/libmng-1.0.0
 	>=media-libs/libpng-1.2.1
-	>=sys-apps/portage-2.0.36
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
@@ -174,13 +171,15 @@ mozconfig_init() {
 		--enable-single-profile \
 		--disable-profilesharing \
 		--disable-profilelocking \
-		--enable-default-toolkit=gtk2
+		--enable-default-toolkit=gtk2 \
+		--enable-pango
 
 	mozconfig_use_enable ipv6
 	mozconfig_use_enable xinerama
 	mozconfig_use_enable xprint
 
-	# We use --enable-xft and --enable-pango to do truetype fonts
+	# We use --enable-pango to do truetype fonts, and currently pango
+	# is required for it to build
 	mozconfig_annotate gentoo --disable-freetype2
 
 	if use debug; then
@@ -221,17 +220,6 @@ mozconfig_init() {
 	# Here is a strange one...
 	if is-flag '-mcpu=ultrasparc*' || is-flag '-mtune=ultrasparc*'; then
 		mozconfig_annotate "building on ultrasparc" --enable-js-ultrasparc
-	fi
-
-	# Check if we should enable Xft support...
-	if ! use truetype; then
-		mozconfig_annotate "disabling xft2 by request (-truetype)" --disable-xft
-	else
-		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
-			mozconfig_annotate "-moznoxft" --enable-xft --enable-pango
-		else
-			mozconfig_annotate "no pkg-config xft" --disable-xft
-		fi
 	fi
 }
 
