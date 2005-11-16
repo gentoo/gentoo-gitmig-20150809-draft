@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 633c678a48846de5c6ecb2729f85aedc dante-1.1.15-r2.ebuild 2500
 MD5 4d196387e01aa6fa4f0f852781b47a58 dante-1.1.15-r1.ebuild 2320
-MD5 5e777d238d82b10510315857d20689fa dante-1.1.18.ebuild 2281
-MD5 94782333471ce2757ab311039d413fbc ChangeLog 9938
+MD5 5cdd3a69ef25baf33b13784cfd060253 dante-1.1.18.ebuild 2282
+MD5 7728415b6e6de2f6f9fe7f3222794f15 ChangeLog 10034
 MD5 19688263fcbda666eeb085869012f86a metadata.xml 246
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
 MD5 7573426ad7edc9ea4dd95f020205fda4 files/sockd.conf-with-pam.patch 295
@@ -23,7 +23,7 @@ MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.18-socksify.patch 811
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDesrDNSP4Vda7IdsRAm70AJ0SaFJzP7UJg4UhikC/1XQKfTSE1wCffr89
-Ttp72bEH09Pwb2O6cTlVHZs=
-=Wrfn
+iD8DBQFDezoPKRy60XGEcJIRAjRyAJ49/Zlmi9zdRrx+RsIT8uckIynpZwCcCTA0
+Q4d21EKfn4PThKQmv8ePMJY=
+=2ekx
 -----END PGP SIGNATURE-----
