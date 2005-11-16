@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.7 2005/10/19 12:43:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.8 2005/11/16 22:45:37 kugelfang Exp $
+
+*eselect-1.0_rc2 (16 Nov 2005)
+
+  16 Nov 2005; Danny van Dyk <kugelfang@gentoo.org> +eselect-1.0_rc2.ebuild:
+  Second release candidate for eselect-1.0. Fixes some bugs in BLAS and LAPACK
+  support. Adds support for MKL72.
 
 *eselect-1.0_rc1 (19 Oct 2005)
 
