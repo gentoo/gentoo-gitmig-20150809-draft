@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-2.7.0.ebuild,v 1.2 2005/11/16 22:52:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.0.0.ebuild,v 1.1 2005/11/16 22:52:32 kugelfang Exp $
 
 inherit eutils
 
@@ -50,11 +50,13 @@ src_install() {
 
 	# Headers
 	mkdir -p ${D}/usr/include/acml/
-	cp ${S}/gnu${BITS}${SUFFIX}/include/* ${D}/usr/include/acml/
+	cp ${S}/gnu${BITS}${SUFFIX}/include/* ${D}/usr/include/acml/ \
+		|| die "Could not copy include files"
 
 	# Libraries
 	mkdir -p ${D}/usr/$(get_libdir)/
-	cp ${S}/gnu${BITS}${SUFFIX}/lib/* ${D}/usr/$(get_libdir)/
+	cp ${S}/gnu${BITS}${SUFFIX}/lib/* ${D}/usr/$(get_libdir)/ \
+		|| die "Could not copy library files"
 	unset SUFFIX
 
 	# Configfiles

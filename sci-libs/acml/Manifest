@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2ec272a70f732550acd788231861471e acml-2.7.0.ebuild 1706
-MD5 a42a87565bfb006095c3fa658c84b275 metadata.xml 879
+MD5 0341b62874dc33aff1d1b9fff23773b0 ChangeLog 1339
 MD5 881dc7081da1b498e1cb0e3f3a92337c acml-2.5.0.ebuild 1719
-MD5 3dcd2b1ba2675c8f8775b8340cde4c96 ChangeLog 1108
+MD5 dac0efd56ed751e1d1845d8d599dc534 acml-2.7.0.ebuild 1719
+MD5 42ed288f9a5f528cad4532c49fb6d237 acml-3.0.0.ebuild 1803
 MD5 e92e9b2507e25e7826de1be1cce7c7ae files/c-ACML.blas 465
+MD5 991ee1ce068d43f39da5177877a6b4ee files/digest-acml-2.5.0 134
 MD5 3c4c90e3f371d9be4feaa163e1a3c5e8 files/digest-acml-2.7.0 141
+MD5 0822a53277b9d73fcbd6114862e26914 files/digest-acml-3.0.0 141
 MD5 ed54e2d6cb585bafe8a23f0a5d07c02b files/f77-ACML.blas 430
 MD5 035015e5be8999d26202cfb042029acc files/f77-ACML.lapack 441
-MD5 991ee1ce068d43f39da5177877a6b4ee files/digest-acml-2.5.0 134
+MD5 a42a87565bfb006095c3fa658c84b275 metadata.xml 879
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDFijc5mJXAu5GbtIRAh9XAJ9zYYOLRkzaMpU6R1ETwhRZ48RpwgCeMSpK
-pyU07ZU5KxBwPzepBtv3DIA=
-=IIjV
+iD8DBQFDe7mq5mJXAu5GbtIRAm6UAJ9xCwhXsQtYd6KuPu6Eco8HdtaGfACdGDN7
+omkq9V2any5EI+qdy5Ll6es=
+=Z4bc
 -----END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.4 2005/08/31 21:33:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.5 2005/11/16 22:52:32 kugelfang Exp $
+
+*acml-3.0.0 (16 Nov 2005)
+
+  16 Nov 2005; Danny van Dyk <kugelfang@gentoo.org> acml-2.7.0.ebuild,
+  +acml-3.0.0.ebuild:
+  Bumped to version 3.0.0. Changed dependencies for testing versions to at
+  least current app-admin/eselect.
 
 *acml-2.7.0 (31 Aug 2005)
 
