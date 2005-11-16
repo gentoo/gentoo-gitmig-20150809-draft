@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cunit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.10 2005/04/12 08:00:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.11 2005/11/16 15:51:55 metalgod Exp $
+
+  16 Nov 2005; Luis Medinas <metalgod@gentoo.org> cunit-2.0.ebuild:
+  Added ~amd64 keyword. Closes bug #112662.
 
 *cunit-1.1.0.1-r1 (12 Apr 2005)
 *cunit-1.0.0.8-r1 (12 Apr 2005)
