@@ -1,4 +1,4 @@
-MD5 102f5012a02e5237264e4169013889bc ChangeLog 1083
-MD5 42e79fdc9706826a6c2b6216a65d3eb9 files/digest-onphp-0.2.4 63
+MD5 2def6589c9eb3270f03e0f5ce54398a7 ChangeLog 1254
+MD5 4c5d6e3d406b786858fac3bd9bf199c4 files/digest-onphp-0.2.5 132
 MD5 cb28be74814f0f6cbf78047995f51226 metadata.xml 233
-MD5 d99bf37951eaca53caccc36fab4cc819 onphp-0.2.4.ebuild 775
+MD5 0ca163538b3e13b608f6b8ab10ac2a46 onphp-0.2.5.ebuild 884
