@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.21 2005/11/15 03:05:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.22 2005/11/16 05:01:36 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -58,7 +58,7 @@ DEPEND="${DEPEND}
 
 # >=sys-apps/man-1.6b-r2 required to look in [0-8]x/ directories
 RDEPEND="${RDEPEND}
-	!<x11-base/xorg-x11-7.0.0_rc0
+	!<=x11-base/xorg-x11-6.9
 	>=sys-apps/man-1.6b-r2"
 # Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
