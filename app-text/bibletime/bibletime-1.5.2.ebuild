@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.5.2.ebuild,v 1.1 2005/10/17 15:30:03 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.5.2.ebuild,v 1.2 2005/11/16 11:04:41 greg_g Exp $
 
 inherit kde eutils
 
@@ -51,7 +51,7 @@ src_unpack() {
 	done
 
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
-		cd ${WORKDIR}/${LANGS_PKG}/
+		cd "${WORKDIR}/${LANGS_PKG}"
 		sed -i -e "s,^POFILES.*,POFILES = ${MAKE_LANGS}," po/Makefile.am
 		sed -i -e "s,^SUBDIRS.*,SUBDIRS = ${MAKE_LANGS_DOC}," docs/Makefile.am
 		make -f admin/Makefile.common || die
