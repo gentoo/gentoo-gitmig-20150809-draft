@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4682 2005/11/14 06:14:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4683 2005/11/16 19:36:22 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (16 Nov 2005)
+# Masking this quake4-bin version because 1.0.5 is actually newer.  I am sure
+# that this will cause some people some confusion, which is why this is here.
+>=games-fps/quake4-bin-1.0.2147.12
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (11 Nov 2005)
 # Importing new Java bindings for GNOME.  Major changes to the ebuild,
