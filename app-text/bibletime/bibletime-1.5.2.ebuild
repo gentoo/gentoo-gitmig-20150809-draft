@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.5.2.ebuild,v 1.2 2005/11/16 11:04:41 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.5.2.ebuild,v 1.3 2005/11/16 11:28:07 greg_g Exp $
 
 inherit kde eutils
 
@@ -23,7 +23,7 @@ for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/bibletime/${LANGS_PKG}.tar.bz2 )"
 done
 
-need-kde 3
+need-kde 3.4
 
 pkg_setup() {
 	if ! built_with_use app-text/sword curl; then
