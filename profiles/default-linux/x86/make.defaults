@@ -1,6 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/make.defaults,v 1.11 2005/11/16 17:01:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/make.defaults,v 1.12 2005/11/16 17:51:44 wolf31o2 Exp $
+
+# All extra USE/etc should be specified in sub-profiles.
+# DO NOT POLLUTE USE ON THIS PROFILE.
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
