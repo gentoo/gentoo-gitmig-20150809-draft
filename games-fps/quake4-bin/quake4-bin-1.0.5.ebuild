@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.2147.12.ebuild,v 1.1 2005/10/24 18:59:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.5.ebuild,v 1.1 2005/11/16 19:36:05 wolf31o2 Exp $
 
 inherit eutils games
 
