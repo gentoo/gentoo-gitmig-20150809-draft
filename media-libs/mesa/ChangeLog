@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.50 2005/11/14 20:15:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.51 2005/11/16 05:05:08 joshuabaergen Exp $
+
+  16 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org> mesa-6.4-r1.ebuild:
+  Changed xorg-x11 blocker for clarity.
 
 *mesa-6.4-r1 (14 Nov 2005)
 
