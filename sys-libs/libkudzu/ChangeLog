@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.12 2005/10/17 04:03:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.13 2005/11/16 14:31:26 wolf31o2 Exp $
+
+  16 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -libkudzu-1.1.62.ebuild, libkudzu-1.1.62-r1.ebuild:
+  Removed blockers on packages which no longer exist and remove older versions.
 
   17 Oct 2005; Joseph Jezak <josejx@gentoo.org> libkudzu-1.1.62-r1.ebuild:
   Marked ppc stable for bug #104149.
