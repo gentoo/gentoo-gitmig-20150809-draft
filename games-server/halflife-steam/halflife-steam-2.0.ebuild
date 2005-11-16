@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.10 2005/09/26 18:19:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.11 2005/11/16 03:24:56 vapier Exp $
 
 inherit eutils games
 
@@ -23,9 +23,19 @@ src_unpack() {
 
 src_install() {
 	exeinto "${GAMES_PREFIX_OPT}"/halflife
-	doexe steam
+	doexe steam || die
 
-	games_make_wrapper steam ./steam "${GAMES_PREFIX_OPT}"/halflife
+	newinitd "${FILESDIR}"/hlds.rc hlds
+	sed -i \
+		-e "s:@GAMES_USER@:${GAMES_USER_DED}:" \
+		-e "s:@GAMES_GROUP@:${GAMES_GROUP}:" \
+		"${D}"/etc/init.d/hlds || die "sed init.d"
+	newconfd "${FILESDIR}"/hlds.confd hlds
+	sed -i \
+		-e "s:@GAMESDIR@:${GAMES_PREFIX_OPT}/halflife:" \
+		"${D}"/etc/conf.d/hlds || die "sed conf.d"
+
+	games_make_wrapper steam ./steam "${GAMES_PREFIX_OPT}"/halflife "${GAMES_PREFIX_OPT}"/halflife
 
 	prepgamesdirs
 }
@@ -36,14 +46,14 @@ pkg_postinst() {
 	einfo 'Steam Usage !  (note: please do this as root)'
 	einfo '1. Run `steam` to update itself.'
 	einfo '2. Run `steam` again to get help menu.'
-	einfo '3. Create an account:'
-	einfo '     steam -command create -username foobar -email linux1@here.com -password comPlexPass -question "Your hint" -answer "answer"'
-	einfo '4. Update the halflife modules you want:'
-	einfo "     steam -command update -game cstrike -dir ${GAMES_PREFIX_OPT}/halflife -username -email linux1@here.com -password comPlexPass"
-	einfo "     steam -command update -game tfc -dir ${GAMES_PREFIX_OPT}/halflife -username -email linux1@here.com -password comPlexPass"
-	einfo "     steam -command update -game valve -dir ${GAMES_PREFIX_OPT}/halflife -username -email linux1@here.com -password comPlexPass"
+	einfo '3. Update the halflife modules you want:'
+	einfo "     steam -command update -game 'Counter-Strike Source' -dir ${GAMES_PREFIX_OPT}/halflife"
+	einfo "     steam -command update -game cstrike -dir ${GAMES_PREFIX_OPT}/halflife"
+	einfo "     steam -command update -game tfc -dir ${GAMES_PREFIX_OPT}/halflife"
+	einfo "     steam -command update -game valve -dir ${GAMES_PREFIX_OPT}/halflife"
 	einfo '     *Note: tfc contains tfc, dmc, and ricochet mods'
 	einfo '5. After your first update, you only have to run:'
+	einfo '     steam -update "Counter-Strike Source"'
 	einfo '     steam -update cstrike'
 	einfo '     steam -update tfc'
 	einfo '     steam -update valve'

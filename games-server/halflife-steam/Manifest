@@ -1,4 +1,16 @@
-MD5 5ddbf6307af25de9ee8fad90896cffeb halflife-steam-2.0.ebuild 1853
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d8e625dccd5d18d84dfc2a7bf3875d22 ChangeLog 977
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 1a2fca780fe7fa2572152ebc6327cacb files/digest-halflife-steam-2.0 64
+MD5 5360132b07c2e374ef33c824854dda83 files/hlds.confd 484
+MD5 c48e0a9edc18139fdccf414b4926f589 files/hlds.rc 925
+MD5 7fac7c162e77b378066eb3173f3549d8 halflife-steam-2.0.ebuild 2032
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDeqbVgIKl8Uu19MoRAizoAJ9KBgxcBb19rulG9eXQSYp5NIjwRACfRJAq
+OcS6ujznxBmBze0tPrfi5VM=
+=iPp5
+-----END PGP SIGNATURE-----

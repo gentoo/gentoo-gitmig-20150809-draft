@@ -1,0 +1,38 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/files/hlds.rc,v 1.1 2005/11/16 03:24:56 vapier Exp $
+
+depend() {
+	use net
+}
+
+checkconfig() {
+	local var
+	for var in HLDS_PATH HLDS_MT HLDS_OPTS ; do
+		if [[ -z ${!var} ]] ; then
+			eerror "Need to set ${var} in /etc/conf.d/HLDS_PATH"
+			return 1
+		fi
+	done
+	return 0
+}
+
+start() {
+	checkconfig || return $?
+
+	ebegin "Starting Halflife Dedicated Server"
+	export LD_LIBRARY_PATH=${HLDS_PATH}:${HLDS_PATH}/bin:${LD_LIBRARY_PATH}
+	start-stop-daemon --start \
+		--chdir ${HLDS_PATH} -c @GAMES_USER@:@GAMES_GROUP@ \
+		-n ${HLDS_MT} -b -a ${HLDS_PATH}/${HLDS_MT} \
+		-- \
+		-pidfile /var/run/hlds.pid ${HLDS_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Halflife Dedicated Server"
+	start-stop-daemon --stop --pidfile /var/run/hlds.pid
+	eend $?
+}
