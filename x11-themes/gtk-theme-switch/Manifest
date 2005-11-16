@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74e3edca1eea88d80b5f8940ff1e72e3 ChangeLog 4779
+MD5 38d10252ccbd37c8357f6fcfda9e0c9b ChangeLog 4886
+MD5 a4289a3d42f7620479f718b11b7a1fe6 gtk-theme-switch-1.0.1-r2.ebuild 1071
+MD5 f0dd75786784a456f12d9b5093837fef gtk-theme-switch-2.0.0_rc2-r2.ebuild 930
+MD5 b68fb5f668070579e860f9dacd82d413 metadata.xml 259
 MD5 1c38d179252effd8ef3279ab20bf8181 files/digest-gtk-theme-switch-1.0.1-r2 147
 MD5 a1e3741e017380e41ad84136abea9284 files/digest-gtk-theme-switch-2.0.0_rc2-r2 153
 MD5 2fd14f20a592a23b3cba7552d0c74490 files/gtk-theme-switch-2.0.0_rc2-gtk+-2.4_fix.patch 360
-MD5 a4289a3d42f7620479f718b11b7a1fe6 gtk-theme-switch-1.0.1-r2.ebuild 1071
-MD5 5d244285692740db2e5bbb885c92bac9 gtk-theme-switch-2.0.0_rc2-r2.ebuild 930
-MD5 b68fb5f668070579e860f9dacd82d413 metadata.xml 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDaM6EwUpWvClEHQoRAvmVAJ9wTgDKT/8pzMvRTjJwRdfB58N5fQCfXuUP
-7eZ1DqQTi+Mxm7LKnFInb8E=
-=ppoo
------END PGP SIGNATURE-----
