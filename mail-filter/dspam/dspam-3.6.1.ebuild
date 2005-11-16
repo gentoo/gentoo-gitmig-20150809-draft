@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.1.ebuild,v 1.3 2005/11/16 02:12:54 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.1.ebuild,v 1.4 2005/11/16 16:16:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ pkg_setup() {
 	elif [ "${multiple_dbs}" -eq "0" ]; then
 		echo
 		ewarn "You did not select any SQL based database backend."
-		ewarn "DSPAM will use self-contained Hash driver for storing data." 
+		ewarn "DSPAM will use self-contained Hash driver for storing data."
 		ewarn "If you don't want that, then enable one of the following"
 		ewarn "USE flags: ${supported_dbs}"
 	fi
