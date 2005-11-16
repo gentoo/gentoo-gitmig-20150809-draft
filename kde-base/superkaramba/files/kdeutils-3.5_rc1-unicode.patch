@@ -1,0 +1,53 @@
+diff -Nur kdeutils-3.5.0.orig/superkaramba/src/meter_python.cpp kdeutils-3.5.0/superkaramba/src/meter_python.cpp
+--- kdeutils-3.5.0.orig/superkaramba/src/meter_python.cpp	2005-11-08 23:29:27.000000000 +0100
++++ kdeutils-3.5.0/superkaramba/src/meter_python.cpp	2005-11-16 10:20:33.000000000 +0100
+@@ -119,22 +119,41 @@
+   PyObject *pyString;
+ 
+   const unsigned short* tmp = string.ucs2();
+-  Py_UNICODE *buf = new Py_UNICODE[string.length()];
+-  for(unsigned int i = 0; i < string.length(); i++)
++  bool dofree = false;
++
++  if(tmp)
+   {
+-    buf[i] = tmp[i];
++    #if Py_UNICODE_SIZE == 4
++
++      Py_UNICODE* buf = new Py_UNICODE[string.length()];
++      
++      for(unsigned int i = 0; i < string.length(); i++)
++      {
++        buf[i] = tmp[i];
++      }
++      dofree = true;
++
++    #else
++
++      Py_UNICODE* buf = (Py_UNICODE*) tmp;
++
++    #endif
++
++    pyString = PyUnicode_FromUnicode(buf, string.length());
++
++    if(dofree)
++    {
++      delete [] buf;
++    }
+   }
+-  
+-  if(tmp)
+-    pyString = PyUnicode_FromWideChar(buf, string.length());
++
+   else
+     pyString = PyString_FromString("");
+-  
+-  delete [] buf;
+ 
+   return pyString;
+ }
+ 
++
+ long getMeter(long widget, char* name)
+ {
+   karamba* theme = (karamba*)widget;

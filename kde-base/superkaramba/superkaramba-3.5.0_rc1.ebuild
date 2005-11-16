@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-3.5.0_rc1.ebuild,v 1.1 2005/11/12 15:49:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-3.5.0_rc1.ebuild,v 1.2 2005/11/16 09:29:31 greg_g Exp $
 
 KMNAME=kdeutils
 MAXKDEVER=$PV
@@ -13,3 +13,5 @@ IUSE=""
 
 RDEPEND="!x11-misc/superkaramba"
 
+# Remove for rc2.
+PATCHES="${FILESDIR}/kdeutils-3.5_rc1-unicode.patch"
