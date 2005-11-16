@@ -1,5 +1,5 @@
-MD5 cc838ac5b1ec1b12617371da7386450d ChangeLog 29591
-MD5 4be56bef9fda79fd7e51bf9264273e43 alsa-driver-1.0.10.ebuild 4678
+MD5 d3313eb3b1e14993bdabc204190a8339 ChangeLog 29746
+MD5 cbb002fb096716e5fb75f572db08c5b9 alsa-driver-1.0.10.ebuild 4686
 MD5 83e0d77659b142d24afa2a86d91b3c4d alsa-driver-1.0.10_rc2.ebuild 4555
 MD5 05d84ba8681d1e857e581caf97e6db59 alsa-driver-1.0.10_rc3.ebuild 4675
 MD5 afcbb70f92f2785ee73a764383c47611 alsa-driver-1.0.3.ebuild 3349
