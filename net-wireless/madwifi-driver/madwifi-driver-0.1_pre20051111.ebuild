@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051111.ebuild,v 1.4 2005/11/15 11:44:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20051111.ebuild,v 1.5 2005/11/16 21:59:26 genstef Exp $
 
 inherit linux-mod
 
@@ -59,6 +59,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	# remove old module to avoid segfaults, #112728
+	rate_amrr=${ROOT}/lib/modules/${KV_FULL}/net/ath_rate_amrr.ko
+	[ -f ${rate_amrr} ] && rm ${rate_amrr}
 	linux-mod_pkg_postinst
 
 	einfo ""
