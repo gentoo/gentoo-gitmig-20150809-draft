@@ -1,4 +1,4 @@
-MD5 1afd0ca1dcb94aeac76c089c42a42118 ChangeLog 13951
+MD5 96cc46b196c3091482f9c8ebcbc6d93f ChangeLog 14089
 MD5 b84b32e9963589c0f2f76d98019b44d7 files/digest-mozilla-thunderbird-1.0.7 303
 MD5 34fc13a505bfb805c539a3b4f0b1bcbf files/digest-mozilla-thunderbird-1.0.7-r1 303
 MD5 106701e2f4e5e9e73301f95dd92c3306 files/digest-mozilla-thunderbird-1.0.7-r2 227
@@ -14,6 +14,6 @@ MD5 07f9a980afa2dde67554657c00b8be18 files/thunderbird-rpath-1.patch 1716
 MD5 362f9e0b0f25b964f7120b68fb629ee0 files/thunderbird-visibility.patch 689
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 2896cc99ffbb38fe463d98feb1e954f0 mozilla-thunderbird-1.0.7-r1.ebuild 5640
-MD5 0ef89d2954584a386d1d201ebecb465c mozilla-thunderbird-1.0.7-r2.ebuild 6095
+MD5 feb3d5b0156f6a9f1af491b50907e32e mozilla-thunderbird-1.0.7-r2.ebuild 6156
 MD5 55697b53bd932c2ea9c20d3d5e3b771e mozilla-thunderbird-1.0.7.ebuild 5632
-MD5 c8bcc014803aa166aa5c972143efd405 mozilla-thunderbird-1.5_rc1.ebuild 6311
+MD5 6416de0257e20ffb69090dc0565b9acb mozilla-thunderbird-1.5_rc1.ebuild 6371
