@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.6 2005/11/15 08:43:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.7 2005/11/16 02:28:24 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -113,9 +113,13 @@ src_unpack() {
 
 	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 
-#	if kernel_is 2 6
-#	then
-#	fi
+	if kernel_is ge 2 6 14
+	then
+		if use amd64
+		then
+		epatch ${FILESDIR}/fglrx-2.6.14-compat_ioctl.patch
+		fi
+	fi
 }
 
 
@@ -246,11 +250,11 @@ src_install-libs() {
 	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
 	fi
 	# X and DRI driver
-	if has_version ">=x11-base/xorg-x11-6.8.0-r4"
+	if has_version "<x11-base/xorg-x11-6.8.0-r4"
 	then
-		local X11_DIR="/usr/"
-	else
 		local X11_DIR="/usr/X11R6/"
+	else
+		local X11_DIR="/usr/"
 	fi
 
 	local X11_LIB_DIR="${X11_DIR}${inslibdir}"
