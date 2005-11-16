@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.4 2005/11/13 05:40:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.5 2005/11/16 03:54:35 markusle Exp $
+
+*lapack-reference-3.0-r2 (16 Nov 2005)
+
+  16 Nov 2005; Markus Dittrich <markusle@gentoo.org>
+  +lapack-reference-3.0-r2.ebuild:
+  Use libtool for linking shared libraries when compiling with ifc. 
+  This closes bug #112410
 
 *lapack-reference-3.0-r1 (13 Nov 2005)
 
