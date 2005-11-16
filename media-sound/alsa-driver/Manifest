@@ -1,4 +1,5 @@
 MD5 cc838ac5b1ec1b12617371da7386450d ChangeLog 29591
+MD5 4be56bef9fda79fd7e51bf9264273e43 alsa-driver-1.0.10.ebuild 4678
 MD5 83e0d77659b142d24afa2a86d91b3c4d alsa-driver-1.0.10_rc2.ebuild 4555
 MD5 05d84ba8681d1e857e581caf97e6db59 alsa-driver-1.0.10_rc3.ebuild 4675
 MD5 afcbb70f92f2785ee73a764383c47611 alsa-driver-1.0.3.ebuild 3349
@@ -10,6 +11,7 @@ MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 
 MD5 2f9a74cca5e78c63142073f0c90b9ff8 files/alsa-driver-1.0.10_rc2-audigy2zs.patch 460
 MD5 f6a0e5f4624041d23bbd60726331310e files/alsa-driver-1.0.10_rc3-ppc-unbreakage.patch 2957
 MD5 be4912a88e538a1f620b2fd422859ef6 files/alsa-driver-1.0.9b-sparc64-ioctl-detect.patch 513
+MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10 72
 MD5 569ec84f258f90c508827a3040062f41 files/digest-alsa-driver-1.0.10_rc2 75
 MD5 ad7631557a0317471d29e4c26cfb4cf2 files/digest-alsa-driver-1.0.10_rc3 75
 MD5 938a2ee36c54416322d1acd47b249c99 files/digest-alsa-driver-1.0.3 71
