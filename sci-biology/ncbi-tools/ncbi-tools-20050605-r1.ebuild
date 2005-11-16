@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605-r1.ebuild,v 1.2 2005/11/15 15:38:33 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605-r1.ebuild,v 1.3 2005/11/16 16:52:54 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	mpi? ( mirror://gentoo/mpiBLAST-1.4.0.tgz )"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="doc mpi X"
 
 DEPEND="app-shells/tcsh

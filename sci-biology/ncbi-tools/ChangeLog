@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.34 2005/11/15 15:38:33 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.35 2005/11/16 16:52:54 ribosome Exp $
+
+  16 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
+  ncbi-tools-20050605-r1.ebuild:
+  Readded ~sparc (closes bug #111807).
 
   15 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
   ncbi-tools-20050605-r1.ebuild:
