@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r2.ebuild,v 1.3 2005/10/30 20:32:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r2.ebuild,v 1.4 2005/11/16 10:52:20 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -210,6 +210,7 @@ src_compile () {
 		--disable-portaudio \
 		--disable-slp \
 		--disable-hal \
+		--disable-x264 \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then

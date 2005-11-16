@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.18 2005/10/30 23:04:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.19 2005/11/16 10:52:20 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -177,6 +177,7 @@ src_compile () {
 		$(use_enable sdl) \
 		$(use_enable ssl gnutls) \
 		--disable-ncurses --disable-portaudio --disable-pth --disable-hal \
+		--disable-x264 \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
