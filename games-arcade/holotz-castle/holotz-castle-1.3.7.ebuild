@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/holotz-castle-1.3.7.ebuild,v 1.1 2005/11/16 17:43:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/holotz-castle-1.3.7.ebuild,v 1.2 2005/11/16 18:00:35 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -33,9 +33,9 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin holotz-castle holotz-castle-editor || die "dobin"
+	dogamesbin holotz-castle holotz-castle-editor || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}/game
-	doins -r HCedHome/* res/* || die "doins"
+	doins -r HCedHome/* res/* || die "doins failed"
 	dodoc MANUAL*.txt
 	doman doc/*.6
 	prepgamesdirs
