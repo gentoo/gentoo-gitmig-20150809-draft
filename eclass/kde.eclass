@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.138 2005/10/13 15:13:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.139 2005/11/16 12:50:02 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -94,7 +94,7 @@ kde_src_compile() {
 		case $1 in
 			myconf)
 				debug-print-section myconf
-				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm $(use_with xinerama) --with-qt-dir=${QTDIR} --enable-mt --with-qt-libraries=${QTDIR}/$(get_libdir)"
+				myconf="$myconf --with-x --enable-mitshm $(use_with xinerama) --with-qt-dir=${QTDIR} --enable-mt --with-qt-libraries=${QTDIR}/$(get_libdir)"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
 				[ -z "$UNSERMAKE" ] && myconf="$myconf --disable-dependency-tracking"
 				if use debug ; then
@@ -140,18 +140,23 @@ kde_src_compile() {
 				# Visiblity stuff is broken. Just disable it when it's present.
 				export kde_cv_prog_cxx_fvisibility_hidden=no
 
-				# If we're not a kde-base ebuild, then set up the /usr directories properly
-				# Perhaps this could get changed later to use econf instead?
-				if [[ $PREFIX = "/usr" ]]; then
-					myconf="${myconf} --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib"
+				# If we're in a kde-base ebuild, set the prefixed directories to
+				# override the ones set by econf.
+				if [[ ${PREFIX} != "/usr" ]]; then
+					myconf="${myconf} --prefix=${PREFIX}
+						--mandir=${PREFIX}/share/man
+						--infodir=${PREFIX}/share/info
+						--datadir=${PREFIX}/share
+						--sysconfdir=${PREFIX}/etc"
 				fi
 
-				# Use libsuffix instead of libdir to keep kde happy
+				# Use libsuffix to keep KDE happy, the --libdir parameter get
+				# still honored.
 				if [[ $(get_libdir) != "lib" ]] ; then
 					myconf="${myconf} --enable-libsuffix=$(get_libdir | sed s/lib//)"
 				fi
 
-				./configure \
+				econf \
 					${myconf} \
 					|| die "died running ./configure, $FUNCNAME:configure"
 
