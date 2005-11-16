@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.15 2005/11/11 22:44:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.16 2005/11/16 15:55:31 metalgod Exp $
+
+  16 Nov 2005; Luis Medinas <metalgod@gentoo.org> jacksum-1.6.0.ebuild:
+  Added ~amd64 keyword. Closes bug #112472.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> jacksum-1.6.0.ebuild:
   Stable on ppc.
