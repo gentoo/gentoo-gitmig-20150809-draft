@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.5 2005/11/16 14:56:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.6 2005/11/16 15:16:27 weeve Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -145,7 +145,7 @@ dev-java/xml-xmlbeans
 dev-java/xmlc
 dev-java/xom
 dev-java/sun-jms
-dev-java/sum-jmx
+dev-java/sun-jmx
 dev-util/checkstyle
 dev-util/eclipse-sdk
 dev-util/jarwizard
