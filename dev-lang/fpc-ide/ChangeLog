@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc-ide
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.4 2005/10/14 17:48:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.5 2005/11/17 10:16:30 herbs Exp $
+
+  17 Nov 2005; Herbie Hopkins <herbs@gentoo.org> fpc-ide-2.0.0.ebuild:
+  Marked ~amd64 wrt bug #112786.
 
   14 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> fpc-ide-2.0.0.ebuild:
   Keyworded ~sparc
