@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.26 2005/11/14 05:21:28 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.27 2005/11/17 04:12:58 joshuabaergen Exp $
+
+*xdm-0.99.3_p20051113-r1 (17 Nov 2005)
+
+  17 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xdm-0.99.3_p20051113-r1.ebuild:
+  Drop gentoo_locations patch as it was installing scripts into /etc.  Upstream
+  configure scripts now handle paths the way we want them to.
 
 *xdm-0.99.3_p20051113 (14 Nov 2005)
 
