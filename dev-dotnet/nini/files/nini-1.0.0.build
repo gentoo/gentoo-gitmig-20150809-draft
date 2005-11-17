@@ -3,7 +3,7 @@
 <project name="Nini" default="compile" basedir=".">
    <description>.NET Configuration Library</description>
 
-   <property name="debug" value="false"/>
+   <property name="debug" value="false" overwrite="false"/>
    <property name="project.name" value="Nini"/>
 
    <property name="build" value="build"/>
