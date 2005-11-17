@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 20f1eed42f87e4280d70ac72a2e01cfd ChangeLog 803
 MD5 5848d1e673d82794ab9fee74065de385 files/digest-xlsclients-0.99.0 69
 MD5 39832e41a1d681d73386a4f554ac1fdb files/digest-xlsclients-0.99.1 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 66d12973ee8878f964168e355ae2c195 xlsclients-0.99.0.ebuild 456
 MD5 6d381e3d19c477fddb86c4c8bf6d0c9e xlsclients-0.99.1.ebuild 462
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfIhQ2G5bA0cA/ScRAjKPAJ490HeODa0w/pKDMZtRLzt3a7Im+QCg4C2C
+19d1ZcgBkag9ZZM+yiABDYc=
+=HoCI
+-----END PGP SIGNATURE-----

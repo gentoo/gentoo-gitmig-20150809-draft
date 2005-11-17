@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5aaf15e8b7738fb69b4d18fcf2443c09 ChangeLog 741
 MD5 7fe6c713a5a2b9e77ed295c7c29d11e9 files/digest-xwd-0.99.0 62
 MD5 5e42e445bbda8f41018e09c84164eac2 files/digest-xwd-0.99.1 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 23dbfb30703c3bcfa0ce8f9f66f1e7d5 xwd-0.99.0.ebuild 435
 MD5 4a3484c5792aa4f37496172a0a40c17e xwd-0.99.1.ebuild 441
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfInY2G5bA0cA/ScRAmLxAJ42nEq79eA5yZsh5D+aKEFpyCQckwCgj72u
+3zLbMliH+AKFo+TQNvcQKCw=
+=SPFy
+-----END PGP SIGNATURE-----

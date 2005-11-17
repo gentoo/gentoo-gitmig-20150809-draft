@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f96e132b3812e0fe2cb43892c90f230a ChangeLog 785
 MD5 992a8cbf8469f9bfa34c2e23f296c9ef files/digest-xrefresh-0.99.0 67
 MD5 ad7c20d8742ad21970a84d66c7c97cc0 files/digest-xrefresh-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 807f46cd962aa7c1498577684fe2fbe7 xrefresh-0.99.0.ebuild 433
 MD5 96ab8013e7146fe3b77ed67b74ecfc05 xrefresh-0.99.1.ebuild 439
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfIkW2G5bA0cA/ScRAuakAJ44GXEZ7YNStIg7n5LoSeBvkQKi7QCg6Nju
+U0nEruW3iS86mLV6sd9rEdc=
+=sC/g
+-----END PGP SIGNATURE-----
