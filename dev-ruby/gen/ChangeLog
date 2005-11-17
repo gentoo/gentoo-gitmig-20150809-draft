@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/gen
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.1 2005/11/17 17:22:12 citizen428 Exp $
+
+*gen-0.25.0 (17 Nov 2005)
+
+  17 Nov 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +gen-0.25.0.ebuild:
+  Initial import.
+
