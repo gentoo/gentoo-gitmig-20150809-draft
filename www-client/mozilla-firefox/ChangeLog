@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.104 2005/11/16 22:53:28 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.105 2005/11/17 21:17:59 anarchy Exp $
+
+*mozilla-firefox-1.5_rc2-r3 (17 Nov 2005)
+
+  17 Nov 2005; <anarchy@gentoo.org> +files/firefox-pkgconfig.patch,
+  -mozilla-firefox-1.5_rc2-r2.ebuild, +mozilla-firefox-1.5_rc2-r3.ebuild:
+  patch for pkgconfig files, now accecpting bug reports
 
 *mozilla-firefox-1.5_rc2-r2 (16 Nov 2005)
 

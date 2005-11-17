@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r2.ebuild,v 1.1 2005/11/16 22:53:28 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r3.ebuild,v 1.1 2005/11/17 21:17:59 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -78,8 +78,11 @@ src_unpack() {
 
 	# patch from fedora to remove the pangoxft things
 	epatch ${FILESDIR}/1.5/firefox-nopangoxft.patch
-	#cairo-canvas patch
-	epatch ${FILESDIR}/1.5/firefox-cairo-canvas.patch
+	# cairo-canvas patch, only needed to build against system cairo
+	# epatch ${FILESDIR}/1.5/firefox-cairo-canvas.patch
+
+	# fix pkgconfig files properly
+	epatch ${FILESDIR}/firefox-pkgconfig.patch
 
 	####################################
 	#
@@ -99,12 +102,12 @@ src_unpack() {
 	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
 
-	echo
-	ewarn "This firefox-1.5rc1 ebuild is provided for your convenience,"
-	ewarn "the use of this ebuild is not supported by gentoo developers. "
-	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
-	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
-	ewarn "Thank you Anarchy"
+	echo  ""
+	ewarn "Even tho this is 1.5rc2-r3 I am gonna take bug reports"
+	ewarn "If you can attach a patch for any problems you may encounter"
+	ewarn "I will push bugs upstream if I feel it is need, do not take"
+	ewarn "offense or think I am blowing your bug report off"
+	ewarn "Thank you! Anarchy."
 }
 
 src_compile() {
@@ -195,13 +198,13 @@ src_install() {
 	install_mozilla_launcher_stub firefox ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/icon/firefox-icon.png
+	doicon ${FILESDIR}/icon/firefox-icon.png
+	domenu ${FILESDIR}/icon/mozillafirefox.desktop
 
-	# Fix bug 54179: Install .desktop file into /usr/share/applications
-	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
-	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozillafirefox.desktop
+	# Fix icons to look the same everywhere
+	insinto ${MOZILLA_FIVE_HOME}/icons
+	doins ${S}/dist/branding/mozicon16.xpm
+	doins ${S}/dist/branding/mozicon50.xpm
 
 	####################################
 	#
@@ -229,9 +232,6 @@ src_install() {
 	doexe ${S}/build/unix/firefox-config
 
 	# Fix pkgconfig files and install them
-	sed -i -e "s|-L/usr/lib/firefox-${MY_PV}|-L\$\{libdir\}|
-			s|-I/usr/include/firefox-${MY_PV}|-I\$\{includedir\}|" \
-				${S}/build/unix/firefox-nspr.pc
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in ${S}/build/unix/*.pc; do
 		sed -i -e "s|^libdir=.*|libdir=${MOZILLA_FIVE_HOME}|
@@ -264,12 +264,15 @@ pkg_postinst() {
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
 
-	echo
-	ewarn "This firefox-1.5rc1 ebuild is provided for your convenience,"
-	ewarn "the use of this ebuild is not supported by gentoo developers. "
-	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
-	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
-	ewarn "Thank you. anarchy@gentoo.org for more info"
+	# Update mimedb for the new .desktop file
+	fdo-mime_desktop_database_update
+
+	echo  ""
+	ewarn "Even tho this is 1.5rc2-r3 I am gonna take bug reports"
+	ewarn "If you can, attach a patch for any problems you may encounter"
+	ewarn "I will push bugs upstream if I feel it is need, do not take"
+	ewarn "offense or think I am blowing your bug report off"
+	ewarn "Thank you! Anarchy."
 }
 
 pkg_postrm() {
