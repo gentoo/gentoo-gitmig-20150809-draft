@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r3.ebuild,v 1.2 2005/11/17 23:20:04 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r3.ebuild,v 1.3 2005/11/17 23:26:04 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -221,10 +221,7 @@ src_install() {
 		/usr/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}/include/nsIURI.h
 
 	# Fix firefox-config and install it
-	sed -i -e "s|/usr/lib/firefox-${MY_PV}|${MOZILLA_FIVE_HOME}|g
-		s|/usr/include/firefox-${MY_PV}|${MOZILLA_FIVE_HOME}/include|g
-		s|/usr/share/idl/firefox-${MY_PV}|${MOZILLA_FIVE_HOME}/idl|g
-		s|\(echo -L.*\)\($\)|\1 -Wl,-R${MOZILLA_FIVE_HOME}\2|" \
+	sed -i -e "s|\(echo -L.*\)\($\)|\1 -Wl,-R${MOZILLA_FIVE_HOME}\2|" \
 		${S}/build/unix/firefox-config
 	exeinto ${MOZILLA_FIVE_HOME}
 	doexe ${S}/build/unix/firefox-config
