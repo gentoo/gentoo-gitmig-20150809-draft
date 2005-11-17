@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.01.09.ebuild,v 1.4 2005/09/12 19:02:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.01.09.ebuild,v 1.5 2005/11/17 02:18:46 xmerlin Exp $
 
 MY_P="${PN/clvm/LVM2}.${PV}"
 
@@ -14,9 +14,10 @@ KEYWORDS="~x86 "
 IUSE="readline nocman "
 
 DEPEND=">=sys-fs/device-mapper-1.00.17
-	!nocman? ( >=sys-cluster/cman-1.00.00 )"
+	>=sys-cluster/dlm-1.01.00
+	!nocman? ( >=sys-cluster/cman-1.01.00 )"
 
-#	nocman? ( >=sys-cluster/gulm-1.00.00 )"
+#	nocman? ( >=sys-cluster/gulm-1.01.00 )"
 
 RDEPEND="${DEPEND}
 	!sys-fs/lvm-user

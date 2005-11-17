@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 8d103416dfc26579c36395e58d30a97b ChangeLog 1327
-MD5 ca6c97c9dc27ce1ddcb1585c02aa6365 clvm-2.01.09.ebuild 1129
+MD5 af7390c39470640594a2148d23f0ce36 ChangeLog 1443
+MD5 56d6d9cd7403c81b23cbcc410200bf65 clvm-2.01.09.ebuild 1156
 MD5 bf0fb4d67afee82ab80c68968c79009c files/clvmd.rc 3668
 MD5 540e8a304be1860275577f326c7bd0f0 files/digest-clvm-2.01.09 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDJdDugMUyd/cdjWsRAocAAJ9cu5Kv///m9DBGb5UHgOkrUAUrzACdHJae
-1IGRryclg/2FtaetLwO2rlA=
-=UFyc
+iD8DBQFDe+i9gMUyd/cdjWsRAuJXAJ0dVbO4fN7nYdzEcxTM/i7342KRdACeOcl+
+0Y9jqmpjOIhnLPBJNp2wMv0=
+=NnAO
 -----END PGP SIGNATURE-----
