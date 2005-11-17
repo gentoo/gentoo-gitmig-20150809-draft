@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.20 2005/10/30 22:27:24 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.21 2005/11/17 22:21:18 kang Exp $
+
+  17 Nov 2005; Guillaume Destuynder <kang@gentoo.org>
+  -files/rsbac-bugfix-v1.2.3-5.diff, files/nsswitch.conf,
+  -rsbac-admin-1.2.3.ebuild, rsbac-admin-1.2.5.ebuild,
+  rsbac-admin-1.2.99.ebuild:
+  marked 1.2.5 ~amd64. Updated SVN ebuild to match the new, new server.
+  updated nsswitch file to use rsbac or fallback on compat.
+  removed old 1.2.3 ebuilds.
 
   30 Oct 2005; Guillaume Destuynder <kang@gentoo.org>
   rsbac-admin-1.2.5.ebuild:
