@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.4.1.ebuild,v 1.1 2005/09/23 11:55:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.4.1.ebuild,v 1.2 2005/11/17 08:50:46 flameeyes Exp $
 
 inherit kde versionator
 
@@ -25,7 +25,6 @@ src_compile() {
 	libdbver="$(get_version_component_range 1-2 ${libdbver})"
 
 	myconf="${myconf}
-		--datadir='${D}'/usr/share
 		--with-extra-includes=/usr/include/db${libdbver}/
 		$(use_enable debug)
 	"
