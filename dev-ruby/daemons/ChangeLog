@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/daemons
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.1 2005/11/17 17:15:21 citizen428 Exp $
+
+*daemons-0.4.2 (17 Nov 2005)
+
+  17 Nov 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +daemons-0.4.2.ebuild:
+  Initial import.
+
