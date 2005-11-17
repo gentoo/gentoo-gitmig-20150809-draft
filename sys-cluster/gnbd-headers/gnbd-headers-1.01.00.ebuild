@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/gnbd-headers-1.01.00.ebuild,v 1.1 2005/10/08 15:48:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/gnbd-headers-1.01.00.ebuild,v 1.2 2005/11/17 01:58:03 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND="!<=sys-cluster/gnbd-kernel-1.01.00"
+DEPEND="!<sys-cluster/gnbd-kernel-1.01.00"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}/${PN/headers/kernel}"
