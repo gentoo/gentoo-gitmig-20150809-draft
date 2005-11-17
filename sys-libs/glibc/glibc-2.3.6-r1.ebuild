@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.1 2005/11/14 22:52:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.2 2005/11/17 05:31:12 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -999,10 +999,7 @@ setup_env() {
 		if ! use multilib ; then
 			MULTILIB_ABIS=${DEFAULT_ABI}
 		else
-			case ${CTARGET} in
-			mips64*) MULTILIB_ABIS=${MULTILIB_ABIS/o32} ;;
-			*)       MULTILIB_ABIS=${MULTILIB_ABIS:-${DEFAULT_ABI}} ;;
-			esac
+			MULTILIB_ABIS=${MULTILIB_ABIS:-${DEFAULT_ABI}}
 		fi
 
 		# If the user has CFLAGS_<CTARGET> in their make.conf, use that,

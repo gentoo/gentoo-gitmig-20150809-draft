@@ -133,17 +133,17 @@ MD5 5eeb3fe6a71b64a081e642ffb08c0cbe glibc-2.3.4.20041102-r2.ebuild 41281
 MD5 9bc40ac03e72b63652f67be3dcecc184 glibc-2.3.4.20050125-r1.ebuild 39474
 MD5 2e7e5fc05139d73ced40d2cb52816b44 glibc-2.3.5-r1.ebuild 40533
 MD5 b1cba6eb03515d24e61e321c457670fd glibc-2.3.5-r2.ebuild 38859
-MD5 238cdafc41962e84dfbdf9dc3287e576 glibc-2.3.5-r3.ebuild 39000
+MD5 4536ac9d1f309dc0890741dce8cb012e glibc-2.3.5-r3.ebuild 38908
 MD5 1cb57f1757c26c0e0286cb0ef6c36171 glibc-2.3.5.20050421.ebuild 40152
 MD5 48b60115273ba9fa755a6ef94fe8c3b6 glibc-2.3.5.20050722.ebuild 39299
 MD5 9c15c32a0bbef91769c4fd0c0d7a66c3 glibc-2.3.5.ebuild 40143
-MD5 43e52d17c8b34adad3f04cd9dcdce489 glibc-2.3.6-r1.ebuild 40409
+MD5 117f5cb72f6e34b5ad0d8d9310c716b4 glibc-2.3.6-r1.ebuild 40317
 MD5 c1860f958f09de634ae4e2e0b0377bd9 glibc-2.3.6.ebuild 40082
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeRZG1ZcsMnZjRyIRAv27AJ9rey6064E5YDCxKhxhugKqpifLVACdHD3Y
-NshikB+UhJQrhkO62rJNBFg=
-=0W1U
+iD8DBQFDfBXxgIKl8Uu19MoRAqa7AJ9X3odnwW7NiXNpHplIdXAWsG2CSwCfcMuK
+5DoaMh3QOmoerTpeweHvojY=
+=78lc
 -----END PGP SIGNATURE-----
