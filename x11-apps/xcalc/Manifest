@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 95ba18f1585ba88907fe16a36372ceb6 ChangeLog 757
 MD5 5fdfd0786b43e6b9df59995bb983cc24 files/digest-xcalc-0.99.0 64
 MD5 9efcdb2f358a2423ea5827e7b42fa431 files/digest-xcalc-0.99.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 0b82ddd8ce5d1bdd02347846eae03c86 xcalc-0.99.0.ebuild 612
 MD5 5c3487a62b60b1c3961929759c62a7eb xcalc-0.99.1.ebuild 618
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfG0d2G5bA0cA/ScRAuyPAJ9vhNTHuviUctqgxru6IbEOmbbsJACfb8lt
+M0KRzsmzKynm8q5wGGSoRkk=
+=5vAT
+-----END PGP SIGNATURE-----
