@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r1.ebuild,v 1.2 2005/10/23 01:17:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r1.ebuild,v 1.3 2005/11/17 19:16:30 herbs Exp $
 
-inherit eutils mozconfig flag-o-matic
+inherit eutils mozconfig flag-o-matic multilib
 
 DESCRIPTION="A WYSIWYG web editor for linux similiar to Dreamweaver"
 HOMEPAGE="http://www.nvu.com/"
@@ -32,16 +32,20 @@ src_unpack() {
 	# cp ${FILESDIR}/mozconfig ${S}/.mozconfig
 	# remove --enable-optimize and let the code below
 	# add the appropriate one - basic
-	grep -v enable-optimize ${FILESDIR}/1.0/mozconfig-1.0 > .mozconfig
+	# Also set mozilla-five-home (and libdir) below - herbs
+	grep -v 'enable-optimize\|mozilla-five-home' \
+		${FILESDIR}/1.0/mozconfig-1.0 > .mozconfig
+
+	# Set the lib directory
+	echo "ac_add_options --libdir=/usr/$(get_libdir)" >> .mozconfig
+	echo "ac_add_options --with-default-mozilla-five-home=/usr/$(get_libdir)/nvu" \
+		>> .mozconfig
 
 	# copied from mozilla.eclass (modified slightly),
 	# otherwise it defaults to -O which crashes on startup for me - basic
 	# Set optimization level based on CFLAGS
 	if is-flag -O0; then
 		echo 'ac_add_options --enable-optimize=-O0' >> .mozconfig
-	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 ]]; then
-		# more than -O1 causes segfaults on 64-bit (bug 33767)
-		echo 'ac_add_options --enable-optimize=-O1' >> .mozconfig
 	elif is-flag -O1; then
 		echo 'ac_add_options --enable-optimize=-O1' >> .mozconfig
 	else
