@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/esvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.9 2005/10/04 20:33:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.10 2005/11/17 22:16:43 mrness Exp $
+
+  17 Nov 2005; Alin Nastac <mrness@gentoo.org> esvn-0.6.11.ebuild:
+  Fix broken compilation on machines with QT4 installed (#112783).
 
   04 Oct 2005; Alin Nastac <mrness@gentoo.org> -esvn-0.6.9.ebuild,
   esvn-0.6.11.ebuild:
