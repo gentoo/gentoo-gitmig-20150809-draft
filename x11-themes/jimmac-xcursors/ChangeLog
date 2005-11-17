@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/jimmac-xcursors
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/ChangeLog,v 1.7 2005/10/14 05:07:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/ChangeLog,v 1.8 2005/11/17 13:43:06 gothgirl Exp $
+
+  17 Nov 2005; Kathryn Kulick <gothgirl@gentoo.org>
+  jimmac-xcursors-0.0.1.ebuild:
+  adjusted einfo wrt bug#105672
 
   14 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
   jimmac-xcursors-0.0.1.ebuild:
