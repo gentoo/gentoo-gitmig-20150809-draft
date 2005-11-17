@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.19 2005/11/15 13:51:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.20 2005/11/17 09:37:10 brix Exp $
+
+  17 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -files/linux-2.6.12-try_to_freeze.patch,
+  -files/4306_dm-bbr-create_workqueue.patch,
+  -files/linux-2.6.12-skge-pm_message_t.patch,
+  -files/linux-2.6.12-vesafb-tng-suspend2.patch,
+  -suspend2-sources-2.6.12-r6.ebuild, -suspend2-sources-2.6.12-r7.ebuild:
+  Pruned 2.6.12 versions.
 
 *suspend2-sources-2.6.14-r1 (15 Nov 2005)
 
