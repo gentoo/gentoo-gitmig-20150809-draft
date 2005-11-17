@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.18 2005/05/25 14:50:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.19 2005/11/17 13:57:43 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/I/IN/INGY/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
-IUSE="gtk2"
+IUSE="gtk"
 
 DEPEND="perl-core/Digest-MD5
 	perl-core/File-Spec
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	#gtk-2 suggested patch
-	use gtk2 && epatch ${FILESDIR}/gtk2-patch.diff
+	use gtk && epatch ${FILESDIR}/gtk2-patch.diff
 }
 
 src_compile() {
