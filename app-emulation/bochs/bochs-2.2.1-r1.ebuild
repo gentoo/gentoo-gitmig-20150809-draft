@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1-r1.ebuild,v 1.1 2005/09/19 21:39:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1-r1.ebuild,v 1.2 2005/11/17 13:22:01 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
+KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 IUSE="debugger readline sdl wxwindows"
 
 RDEPEND="virtual/libc
