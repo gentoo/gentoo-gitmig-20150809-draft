@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r3.ebuild,v 1.1 2005/11/17 21:17:59 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r3.ebuild,v 1.2 2005/11/17 23:20:04 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -25,8 +25,7 @@ LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
 
 RDEPEND="java? ( virtual/jre )
-	>=www-client/mozilla-launcher-1.39
-	=x11-libs/pango-1.10.1"
+	>=www-client/mozilla-launcher-1.39"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -170,7 +169,6 @@ src_compile() {
 		's|#RPATH_FIXER|'"${MOZILLA_FIVE_HOME}"'|' \
 		${S}/config/rules.mk \
 		${S}/nsprpub/config/rules.mk \
-		${S}/security/coreconf/rules.mk \
 		${S}/security/coreconf/rules.mk
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
@@ -234,10 +232,7 @@ src_install() {
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in ${S}/build/unix/*.pc; do
-		sed -i -e "s|^libdir=.*|libdir=${MOZILLA_FIVE_HOME}|
-			s|^includedir=.*|includedir=${MOZILLA_FIVE_HOME}/include|
-			s|^idldir=.*|idldir=${MOZILLA_FIVE_HOME}/idl|
-			s|\(^Libs: -L.*\)\($\)|\1 -Wl,-R\$\{libdir\}\2|" ${x}
+		sed -i -e "s|\(^Libs: -L.*\)\($\)|\1 -Wl,-R\$\{libdir\}\2|" ${x}
 		doins ${x}
 	done
 

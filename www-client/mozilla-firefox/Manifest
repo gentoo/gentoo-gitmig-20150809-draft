@@ -40,4 +40,4 @@ MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 7ec6e77c0014718ffae4a55c76acd1db mozilla-firefox-1.0.7-r2.ebuild 8564
 MD5 b686423c9050edfcfd7ff72ea4081f09 mozilla-firefox-1.0.7-r3.ebuild 9734
-MD5 cf52f5c7bfd10d8e364fc535ae1b8dc2 mozilla-firefox-1.5_rc2-r3.ebuild 9239
+MD5 ea68b926f0b54e19029708356f1da51b mozilla-firefox-1.5_rc2-r3.ebuild 9024
