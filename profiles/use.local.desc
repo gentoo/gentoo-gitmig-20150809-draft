@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1562 2005/11/16 14:48:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1563 2005/11/17 17:29:28 citizen428 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -346,6 +346,7 @@ dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/visual:numarray - enable support for numarray
 dev-python/visual:numeric - enable support for numeric
 dev-ruby/ruby-gtkmozembed:firefox - compile against Firefox instead of Mozilla
+dev-ruby/nitro:lighttpd - install lighttpd
 dev-ruby/nitro:xslt - enable xslt support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
