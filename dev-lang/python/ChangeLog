@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.182 2005/10/21 10:07:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.183 2005/11/17 13:50:56 gmsoft Exp $
+
+  17 Nov 2005; Guy Martin <gmsoft@gentoo.org> python-2.4-r3.ebuild,
+  python-2.4.1.ebuild, python-2.4.1-r1.ebuild, python-2.4.2.ebuild:
+  Readded critical fix for HPPA.
 
   21 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> python-2.4.2.ebuild:
   Stable on mips.

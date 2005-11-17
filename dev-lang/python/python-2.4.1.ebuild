@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.10 2005/06/09 19:34:03 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.11 2005/11/17 13:50:56 gmsoft Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -75,6 +75,12 @@ src_unpack() {
 		Modules/Setup.dist \
 		Modules/getpath.c \
 		setup.py
+
+
+	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
+	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
+	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
+
 }
 
 src_configure() {

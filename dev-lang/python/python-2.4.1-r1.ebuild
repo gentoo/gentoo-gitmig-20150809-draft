@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.12 2005/10/10 17:31:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.13 2005/11/17 13:50:56 gmsoft Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -80,6 +80,11 @@ src_unpack() {
 
 	# add support for struct stat st_flags attribute (bug 94637)
 	epatch ${FILESDIR}/python-2.4.1-st_flags.patch
+
+	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
+	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
+	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
+
 
 	if tc-is-cross-compiler ; then
 		epatch "${FILESDIR}"/python-2.4.1-bindir-libdir.patch
