@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.18 2005/11/13 15:02:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.19 2005/11/17 12:10:18 mcummings Exp $
+
+  17 Nov 2005; <mcumming@gentoo.org> dbix-searchbuilder-1.35.ebuild:
+  Missing deps, thanks tigger :)
 
 *dbix-searchbuilder-1.35 (13 Nov 2005)
 

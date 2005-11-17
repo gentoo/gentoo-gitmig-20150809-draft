@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.35.ebuild,v 1.1 2005/11/13 15:02:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.35.ebuild,v 1.2 2005/11/17 12:10:18 mcummings Exp $
 
 inherit perl-module
 
@@ -22,8 +22,10 @@ DEPEND="dev-perl/DBD-SQLite
 		>=perl-core/Test-Simple-0.52"
 
 RDEPEND="dev-perl/DBI
+		dev-perl/DBIx-DBSchema
 		dev-perl/Want
 		dev-perl/Cache-Simple-TimedExpiry
 		dev-perl/Clone
 		dev-perl/Class-Accessor
+		dev-perl/capitalization
 		>=dev-perl/class-returnvalue-0.4"
