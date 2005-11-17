@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/dk-bib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dk-bib/ChangeLog,v 1.7 2005/10/22 11:09:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dk-bib/ChangeLog,v 1.8 2005/11/17 12:02:36 brix Exp $
+
+  17 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  dk-bib-20051002.ebuild:
+  Stable on x86.
 
   22 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   -dk-bib-20050120.ebuild:
