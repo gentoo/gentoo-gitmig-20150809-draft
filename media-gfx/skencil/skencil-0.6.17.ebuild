@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.17.ebuild,v 1.1 2005/09/18 07:07:12 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.17.ebuild,v 1.2 2005/11/17 23:45:20 herbs Exp $
 
-inherit python
+inherit python multilib
 
 IUSE="nls"
 S=${WORKDIR}/${P/_/}
@@ -16,10 +16,22 @@ DEPEND=">=dev-python/imaging-1.1.2-r1
 RDEPEND="!elibc_glibc? ( nls? ( sys-devel/gettext ) )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 pkg_setup() {
 	python_tkinter_exists
+}
+
+src_unpack() {
+	unpack ${A}
+	# Fix hardcoded libdir
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e "s:lib/:$(get_libdir)/:" \
+			-e "s:lib':$(get_libdir)':" \
+			${S}/{Pax,Filter,Sketch/Modules}/Makefile.pre.in \
+			${S}/Plugins/Objects/Lib/multilinetext/{TextEditor,styletext}.py \
+			${S}/setup.py || die "sed failed"
+	fi
 }
 
 src_compile() {
