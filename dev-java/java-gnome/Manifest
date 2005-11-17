@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 311f663f104f662514ab0b94b73afe22 java-gnome-2.8.3.ebuild 3664
-MD5 50a45a089da855535fac4ea7d1340bf6 java-gnome-2.10.1.ebuild 2764
-MD5 c54d47c0d4ff7add39700b767127535e ChangeLog 5723
-MD5 c690ad784a76f64ea8a11d1cdddd055c metadata.xml 1094
+MD5 93e5225b6ae3bb0db3c5f5640e54b79b ChangeLog 5903
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.10.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.12.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.8.3 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3UaE/rLF9B432nYRAnmvAJwPctowU7S1/bKUXeaUdqbtcrWdKwCaA2jM
-Dv8cYH25PwdCLT30FG059QE=
-=v2Ac
------END PGP SIGNATURE-----
+MD5 50a45a089da855535fac4ea7d1340bf6 java-gnome-2.10.1.ebuild 2764
+MD5 fe20359ac8aacbea45707bf9c00141ac java-gnome-2.12.1.ebuild 1048
+MD5 311f663f104f662514ab0b94b73afe22 java-gnome-2.8.3.ebuild 3664
+MD5 72b2dee241d27ab723accea0a0128fab metadata.xml 1194
