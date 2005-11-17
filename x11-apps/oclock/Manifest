@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4749c4b9432564c917b255c3a816b88 ChangeLog 769
 MD5 6c5397e7fc892e2faa8c32134ca092f5 files/digest-oclock-0.99.0 65
 MD5 49a6410ed5a0927e34fac58d26061622 files/digest-oclock-0.99.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 808422845ccb6cfca693013957d12ae3 oclock-0.99.0.ebuild 462
 MD5 a01defbc4cd1bc6da2f218fe9b1bd293 oclock-0.99.1.ebuild 468
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfGkF2G5bA0cA/ScRAmLkAKCK9zXP/y0omRD7vOS4QevbFrACfwCeKeh9
+K+8mKjm3GudbfBZ/Pp3SeEs=
+=wYct
+-----END PGP SIGNATURE-----
