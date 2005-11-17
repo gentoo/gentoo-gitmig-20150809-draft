@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2821c80697b1183a662ee8065219abbc ChangeLog 2944
+MD5 017a3d7be41875576be147103d5191c3 ieee80211-1.0.3.ebuild 2721
+MD5 429e2b02bd1b4c4c557ff0ae705ad14b ieee80211-1.0.3-r1.ebuild 2783
+MD5 94cfd35e9d5024ed98e4b2b6c3b53d1a ieee80211-1.1.6.ebuild 2726
+MD5 544613237e9ebe69e1a78925131c9dda ieee80211-1.0.2.ebuild 2715
+MD5 187bc564efd8fa14fa917ddfb6c60f0f ieee80211-1.1.5.ebuild 2775
+MD5 68d16a43f0caa21d3d7d5c1cfc88e53c ieee80211-1.0.3-r2.ebuild 2875
+MD5 26c7b675732d23770674e7ef10ce9311 ieee80211-1.1.5-r1.ebuild 2819
+MD5 f4f09ef679cabe0148312c1f9ac91d69 ChangeLog 3040
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 7c5302566475e0c6c55564da7eae0898 ieee80211-1.0.1.ebuild 2715
+MD5 03afa38292ff5bbcc62500c4b6163888 files/ieee80211-1.0.3-broadcast.patch 622
+MD5 61bac627a89e0cafb9996d2887d8a3e9 files/ieee80211-1.1.5-broadcast.patch 1939
 MD5 cc0dea5fff30f8ea5fe5e62a749115d3 files/digest-ieee80211-1.0.1 63
 MD5 affd67ec6900c1e7f9c123969f709181 files/digest-ieee80211-1.0.2 63
 MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3 63
-MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3-r1 63
-MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3-r2 63
 MD5 27f61bbea47540d198a62c715e33a5b4 files/digest-ieee80211-1.1.5 63
-MD5 27f61bbea47540d198a62c715e33a5b4 files/digest-ieee80211-1.1.5-r1 63
 MD5 9501aacea3c39a93671e12bdcd199254 files/digest-ieee80211-1.1.6 63
-MD5 03afa38292ff5bbcc62500c4b6163888 files/ieee80211-1.0.3-broadcast.patch 622
-MD5 f6533e7149d244dd72eb444853266a8f files/ieee80211-1.0.3-keep_restricted_bit.patch 1220
-MD5 d2bada5c8bb423cb02a88cc4f0011d39 files/ieee80211-1.0.3-open_frag.patch 2638
-MD5 61bac627a89e0cafb9996d2887d8a3e9 files/ieee80211-1.1.5-broadcast.patch 1939
 MD5 ccf8b6ee79df516fce26c5780b058ac6 files/ieee80211-1.1.5-we18.patch 1973
 MD5 a4b70427a649d55f3b24b8ef94f80897 files/remove-old 1509
-MD5 7c5302566475e0c6c55564da7eae0898 ieee80211-1.0.1.ebuild 2715
-MD5 544613237e9ebe69e1a78925131c9dda ieee80211-1.0.2.ebuild 2715
-MD5 429e2b02bd1b4c4c557ff0ae705ad14b ieee80211-1.0.3-r1.ebuild 2783
-MD5 68d16a43f0caa21d3d7d5c1cfc88e53c ieee80211-1.0.3-r2.ebuild 2875
-MD5 017a3d7be41875576be147103d5191c3 ieee80211-1.0.3.ebuild 2721
-MD5 26c7b675732d23770674e7ef10ce9311 ieee80211-1.1.5-r1.ebuild 2819
-MD5 187bc564efd8fa14fa917ddfb6c60f0f ieee80211-1.1.5.ebuild 2775
-MD5 52f6b26cffbfc93611d262ac93bc39a7 ieee80211-1.1.6.ebuild 2729
-MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeff4csIHjyDViGQRAon9AJ96IGFDpiiitO2hE214R4H2T9r0EgCggUpD
-kT5MDCGYliHKaZ2eK3OX0lo=
-=IwiG
------END PGP SIGNATURE-----
+MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3-r1 63
+MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3-r2 63
+MD5 27f61bbea47540d198a62c715e33a5b4 files/digest-ieee80211-1.1.5-r1 63
+MD5 f6533e7149d244dd72eb444853266a8f files/ieee80211-1.0.3-keep_restricted_bit.patch 1220
+MD5 d2bada5c8bb423cb02a88cc4f0011d39 files/ieee80211-1.0.3-open_frag.patch 2638
