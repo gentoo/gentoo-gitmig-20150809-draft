@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.141 2005/11/10 14:00:51 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.142 2005/11/17 22:09:12 mholzer Exp $
+
+*phpmyadmin-2.6.4_p4 (17 Nov 2005)
+
+  17 Nov 2005; Martin Holzer <mholzer@gentoo.org>
+  +phpmyadmin-2.6.4_p4.ebuild:
+  Security bump. See #112690
 
   10 Nov 2005; Renat Lumpau <rl03@gentoo.org> +files/reconfig-2.7,
   phpmyadmin-2.7.0_beta1.ebuild:
