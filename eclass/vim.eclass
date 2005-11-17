@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.125 2005/10/20 16:57:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.126 2005/11/17 17:32:25 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -85,8 +85,11 @@ else
 
 	if [[ "${MY_PN}" == "vim" ]] ; then
 		IUSE="${IUSE} vim-with-x minimal"
-		DEPEND="${DEPEND} vim-with-x? ( virtual/x11 )"
-		RDEPEND="${RDEPEND} vim-with-x? ( virtual/x11 )"
+		# see bug #111979 for modular X deps
+		DEPEND="${DEPEND} vim-with-x? ( || (
+			( x11-libs/libXt x11-libs/libX11 x11-libs/libSM x11-proto/xproto )
+			virtual/x11 ) )"
+		RDEPEND="${RDEPEND} vim-with-x? ( || ( x11-libs/libXt virtual/x11 ) )"
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		if version_is_at_least "6.3.086" ; then
 			IUSE="${IUSE} gnome gtk motif"
