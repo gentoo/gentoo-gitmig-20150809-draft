@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.24 2005/07/07 02:52:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.25 2005/11/17 13:17:00 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc amd64"
-IUSE="debugger gtk2 readline sdl wxwindows"
+IUSE="debugger readline sdl wxwindows"
 
 RDEPEND="virtual/libc
 	virtual/x11
@@ -40,11 +40,7 @@ src_unpack() {
 
 src_compile() {
 	use wxwindows && \
-	if ! use gtk2 ; then
-		need-wxwidgets gtk
-	else
 		need-wxwidgets gtk2
-	fi
 
 	[ "$ARCH" == "x86" ] \
 		&& myconf="--enable-idle-hack --enable-fast-function-calls"

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.47 2005/09/19 21:39:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.48 2005/11/17 13:17:00 lu_zero Exp $
+
+  17 Nov 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
+  gtk2 useflag removed from stable ebuild too
 
 *bochs-2.2.1-r1 (19 Sep 2005)
 
