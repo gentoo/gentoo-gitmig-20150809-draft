@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsatoms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsatoms/ChangeLog,v 1.4 2005/10/20 00:45:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsatoms/ChangeLog,v 1.5 2005/11/17 13:39:54 herbs Exp $
+
+  17 Nov 2005; Herbie Hopkins <herbs@gentoo.org> xlsatoms-0.99.1.ebuild:
+  Marked ~amd64.
 
 *xlsatoms-0.99.1 (20 Oct 2005)
 

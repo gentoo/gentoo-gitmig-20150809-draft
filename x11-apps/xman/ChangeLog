@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.5 2005/11/11 19:57:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.6 2005/11/17 13:42:58 herbs Exp $
+
+  17 Nov 2005; Herbie Hopkins <herbs@gentoo.org> xman-0.99.2.ebuild:
+  Marked ~amd64.
 
 *xman-0.99.2 (11 Nov 2005)
 
