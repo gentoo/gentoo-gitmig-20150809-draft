@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.15.ebuild,v 1.14 2005/03/09 00:50:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.15.ebuild,v 1.15 2005/11/17 13:40:26 gmsoft Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ KEYWORDS="x86 ppc sparc alpha arm mips hppa ~ppc64 amd64 ppc-macos"
 src_unpack() {
 
 	unpack ${A}
+
+	cd ${S}
 
 	use hppa && epatch ${FILESDIR}/${P}-alignement-fix.patch
 
