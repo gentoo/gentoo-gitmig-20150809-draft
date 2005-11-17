@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-status-plugin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/ChangeLog,v 1.10 2005/09/04 10:28:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/ChangeLog,v 1.11 2005/11/17 19:00:41 metalgod Exp $
+
+*xmms-status-plugin-1.0-r1 (17 Nov 2005)
+
+  17 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +xmms-status-plugin-1.0-r1.ebuild:
+  Fix build with gcc-4.x. Fixes bug #96431.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-status-plugin-1.0.ebuild:
