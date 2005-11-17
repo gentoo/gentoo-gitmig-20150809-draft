@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.172 2005/11/16 10:35:50 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.173 2005/11/17 17:47:58 greg_g Exp $
+
+  17 Nov 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdenetwork-3.5.0_rc1.ebuild:
+  Correct dependency on meanwhile (#112808).
 
 *kdenetwork-3.5.0_rc1 (16 Nov 2005)
 

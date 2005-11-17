@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.34 2005/11/15 13:24:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.35 2005/11/17 17:46:26 greg_g Exp $
+
+  17 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kopete-3.5.0_rc1.ebuild:
+  Correct dependency on meanwhile (#112808).
 
   15 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   +files/kopete-3.5.0_rc1-fix.patch, kopete-3.5.0_rc1.ebuild:
