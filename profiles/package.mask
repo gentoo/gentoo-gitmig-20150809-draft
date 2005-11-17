@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4683 2005/11/16 19:36:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4684 2005/11/17 03:32:31 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,6 +35,7 @@
 >=dev-java/libglade-java-2.12.1
 >=dev-java/libgnome-java-2.12.1
 >=dev-java/libgtk-java-2.8.1
+>=dev-java/java-gnome-2.12.1
 
 # George Shapovalov <george@gentoo.org> (11 Nov 2005)
 #new version, first port for amd64, masked for testing on other arches
