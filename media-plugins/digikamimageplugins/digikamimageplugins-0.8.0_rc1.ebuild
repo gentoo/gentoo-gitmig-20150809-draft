@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.8.0_beta2.ebuild,v 1.1 2005/09/25 19:54:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.8.0_rc1.ebuild,v 1.1 2005/11/18 19:31:19 cryos Exp $
 
 inherit kde
 
-MY_P=${P/_/-}
+MY_P=${P/_rc1/-rc}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="DigikamImagePlugins are a collection of plugins for Digikam Image Editor."
