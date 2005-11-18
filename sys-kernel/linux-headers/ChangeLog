@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.148 2005/10/31 21:17:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.149 2005/11/18 23:46:23 plasmaroo Exp $
+
+*linux-headers-2.6.11-r3 (18 Nov 2005)
+
+  18 Nov 2005; <plasmaroo@gentoo.org> +linux-headers-2.6.11-r3.ebuild:
+  Fix #82243, #100659, #104845, #108521.
 
   31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
   linux-headers-2.6.11-r2.ebuild:
