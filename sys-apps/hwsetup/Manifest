@@ -1,4 +1,4 @@
-MD5 44ead7d4a079fe656efe02e74d43e951 ChangeLog 3768
+MD5 838ac8a19f4ae59b3f24072991207638 ChangeLog 3895
 MD5 70141575b96009e82605b4f86fbe8758 files/digest-hwsetup-1.0-r3 64
 MD5 bc002ab4509c7c318c438f86d6005c71 files/digest-hwsetup-1.1 63
 MD5 eff6f85f9378f9f180386a7c34deb4c3 files/hwsetup-1.0-alsa.patch 3831
@@ -8,6 +8,6 @@ MD5 5899ca3d018df09b6e2851f3e8c2e294 files/hwsetup-1.0-gentoo.patch 3599
 MD5 331c5c1b01eaee2c066608e8dd1faf71 files/hwsetup-1.1-dyn_blacklist.patch 1949
 MD5 a01ba41c868d97350621a124fece8d25 files/hwsetup-1.1-fastprobe.patch 2802
 MD5 bb521633bf17c370c41a83edbcab2711 files/hwsetup-1.1-gentoo.patch 3805
-MD5 ec5847892757d50ea68b083d7c72630a hwsetup-1.0-r3.ebuild 1023
-MD5 0391d793650e16132b9be46177bd44a5 hwsetup-1.1.ebuild 1062
+MD5 b3d0854149d37eb965fb59560d5fccd6 hwsetup-1.0-r3.ebuild 845
+MD5 b5a023e615b0bd4d70f94a0eb51b48bf hwsetup-1.1.ebuild 884
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
