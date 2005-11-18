@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.0_beta2.ebuild,v 1.3 2005/10/03 08:10:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.0_rc1.ebuild,v 1.1 2005/11/18 19:25:29 cryos Exp $
 
 inherit kde
 
-MY_P=${P/_/-}
+MY_P=${P/_rc1/-rc}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A digital photo management application for KDE."
