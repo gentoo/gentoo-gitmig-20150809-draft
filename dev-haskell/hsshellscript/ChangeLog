@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsshellscript
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.8 2005/09/23 13:28:48 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.9 2005/11/18 11:43:54 araujo Exp $
+
+  18 Nov 2005; Luis F. Araujo <araujo@gentoo.org>
+  hsshellscript-2.6.0.ebuild:
+  Fixed bug #112707.
 
   23 Sep 2005; Luis F. Araujo <araujo@gentoo.org>
   hsshellscript-2.3.0.ebuild:

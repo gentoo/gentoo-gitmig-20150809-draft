@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.6.0.ebuild,v 1.1 2005/05/08 22:22:06 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.6.0.ebuild,v 1.2 2005/11/18 11:43:54 araujo Exp $
 
 inherit base eutils ghc-package
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="=virtual/ghc-6.4
+DEPEND=">=virtual/ghc-6.4
 	>=dev-haskell/haddock-0.6"
 RDEPEND=""
 
@@ -43,4 +43,5 @@ src_install() {
 		|| die "make failed"
 	ghc-makeghcilib ${D}/$(ghc-libdir)/libhsshellscript.a
 	ghc-install-pkg
+	fperms 0644 $(ghc-libdir)/imports/hsshellscript.h
 }
