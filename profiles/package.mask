@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4684 2005/11/17 03:32:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4685 2005/11/18 12:20:22 araujo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1125,12 +1125,6 @@ dev-util/pida
 # Renat Lumpau <rl03@gentoo.org> (01 Aug 2005)
 # Installs into /usr/local, ebuild should not have been committed
 www-apps/interchange
-
-# Luis Araujo <araujo@gentoo.org> (01 Aug 2005)
-# Added new packages to portage: 
-# The Dylan Programming Language.
-dev-lang/gwydion-dylan
-dev-lang/gwydion-dylan-bin
 
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
