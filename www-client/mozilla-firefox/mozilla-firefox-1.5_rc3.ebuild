@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc2-r3.ebuild,v 1.3 2005/11/17 23:26:04 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc3.ebuild,v 1.1 2005/11/18 04:00:51 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -102,7 +102,7 @@ src_unpack() {
 	eend $? || die "sed failed"
 
 	echo  ""
-	ewarn "Even tho this is 1.5rc2-r3 I am gonna take bug reports"
+	ewarn "Even tho this is 1.5rc3 I am gonna take bug reports"
 	ewarn "If you can attach a patch for any problems you may encounter"
 	ewarn "I will push bugs upstream if I feel it is need, do not take"
 	ewarn "offense or think I am blowing your bug report off"
@@ -260,7 +260,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 
 	echo  ""
-	ewarn "Even tho this is 1.5rc2-r3 I am gonna take bug reports"
+	ewarn "Even tho this is 1.5rc3 I am gonna take bug reports"
 	ewarn "If you can, attach a patch for any problems you may encounter"
 	ewarn "I will push bugs upstream if I feel it is need, do not take"
 	ewarn "offense or think I am blowing your bug report off"
