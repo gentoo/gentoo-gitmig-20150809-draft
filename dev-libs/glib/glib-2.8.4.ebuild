@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.2.ebuild,v 1.2 2005/10/16 15:05:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.4.ebuild,v 1.1 2005/11/18 05:05:23 leonardop Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -12,13 +12,14 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
 IUSE="debug doc hardened"
 
-DEPEND=">=dev-util/pkgconfig-0.14
+RDEPEND="virtual/libc"
+
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
 	doc? (
 		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2 )"
-
-RDEPEND="virtual/libc"
 
 
 src_unpack() {
@@ -27,8 +28,10 @@ src_unpack() {
 
 	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
-		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
+		epatch "${FILESDIR}"/glib-2.6.3-testglib-ssp.patch
 	fi
+
+	epatch "${FILESDIR}"/${PN}-2.8.3-macos.patch
 }
 
 src_compile() {
@@ -40,18 +43,12 @@ src_compile() {
 
 	epunt_cxx
 
-	if use ppc-macos; then
-		glibtoolize
-		append-ldflags "-L/usr/lib -lpthread"
-	fi
-
 	econf $myconf || die "./configure failed"
 	emake || die "Compilation failed"
 }
 
 src_install() {
-
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "Installation failed"
 
 	# Do not install charset.alias for ppc-macos since it already exists.
 	if use ppc-macos ; then
@@ -65,5 +62,4 @@ src_install() {
 	echo "G_BROKEN_FILENAMES=1" > ${D}/etc/env.d/50glib2
 
 	dodoc AUTHORS ChangeLog* NEWS* README
-
 }

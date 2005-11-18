@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.164 2005/10/22 17:48:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.165 2005/11/18 05:05:23 leonardop Exp $
+
+*glib-2.8.4 (18 Nov 2005)
+
+  18 Nov 2005; Leonardo Boshell <leonardop@gentoo.org> +glib-2.8.4.ebuild:
+  New version.
 
   22 Oct 2005; Fabian Groffen <grobian@gentoo.org>
   +files/glib-2.8.3-macos.patch, glib-2.8.3.ebuild:
