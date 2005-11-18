@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1-r1.ebuild,v 1.1 2005/11/08 15:35:21 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0.ebuild,v 1.1 2005/11/18 16:42:20 stkn Exp $
 
 inherit eutils
 
-IUSE="alsa doc gtk mmx mysql pri zaptel debug postgres odbc \
-	hardened speex h323 sqlite nosamples osp lowmem curl"
+IUSE="alsa curl debug doc gtk h323 hardened lowmem mmx mysql \
+	nosamples odbc postgres pri speex sqlite ssl ukcid zaptel"
 
 #BRI_VERSION="0.2.0-RC8f-CVS"
-AST_PATCHES="1.2.0_beta-patches-1.0"
+AST_PATCHES="1.2.0-patches-1.0"
 
 ## TODO:
 #
@@ -16,7 +16,7 @@ AST_PATCHES="1.2.0_beta-patches-1.0"
 # - bristuff (waiting...)
 # - test nosamples
 # - add some more use flags...
-#	recent additions: osp, lowmem, curl
+#	recent additions: osp, lowmem, curl, ukcid
 # - cleanup
 #
 
@@ -37,9 +37,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 RDEPEND="dev-libs/newt
 	media-sound/sox
 	media-sound/mpg123
+	ssl? ( dev-libs/openssl )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	pri? ( >=net-libs/libpri-1.1.0 )
-	osp? ( >=net-libs/osptoolkit-3.3.1 )
 	h323? ( >=dev-libs/pwlib-1.8.3
 		>=net-libs/openh323-1.15.0 )
 	alsa? ( media-libs/alsa-lib )
@@ -51,6 +51,8 @@ RDEPEND="dev-libs/newt
 	zaptel? ( >=net-misc/zaptel-1.1.0 )
 	postgres? ( dev-db/postgresql )"
 
+#	osp? ( >=net-libs/osptoolkit-3.3.4 )
+
 #	bri? ( >=net-libs/libpri-1.1.0
 #		>=net-misc/zaptel-1.1.0 )
 
@@ -60,6 +62,23 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
+	ewarn "                      Asterisk UPGRADE Warning"
+	ewarn ""
+	ewarn "!!! Read ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.gz after installation !!!"
+	ewarn ""
+	ewarn "                      Asterisk UPGRADE Warning"
+	echo
+	einfo "Press Ctrl+C to abort"
+	echo
+	ebeep
+
+	n=10
+	while [[ $n -gt 0 ]]; do
+		echo -en "  Waiting $n seconds...\r"
+		sleep 1
+		(( n-- ))
+	done
+
 	#
 	# Regular checks
 	#
@@ -77,6 +96,7 @@ pkg_setup() {
 #			die "Libpri without bri support detected"
 #		fi
 #	fi
+
 }
 
 src_unpack() {
@@ -101,8 +121,14 @@ src_unpack() {
 	fi
 
 	if ! use debug; then
-		einfo "Disabling debugging"
+		einfo "Disabling debug support"
 		sed -i -e "s:^\(DEBUG=\):#\1:" \
+			Makefile
+	fi
+
+	if ! use ssl; then
+		einfo "Disabling crypto support"
+		sed -i -e "s:^#\(NOCRYPTO=yes\):\1:" \
 			Makefile
 	fi
 
@@ -115,6 +141,14 @@ src_unpack() {
 	fi
 
 	#
+	# ukcid patch from http://www.lusyn.com/asterisk/
+	#
+	if use ukcid; then
+		einfo "Patching asterisk for UK Callerid..."
+		epatch ${FILESDIR}/1.2.0/${PN}-1.2.0_beta-ukcid.patch
+	fi
+
+	#
 	# BRI patches
 	#
 #	if use bri; then
@@ -122,9 +156,6 @@ src_unpack() {
 #		einfo "Patching asterisk w/ BRI stuff"
 #		epatch ${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
 #	fi
-
-	# security fix, bug #11836
-	epatch ${FILESDIR}/1.0.0/${PN}-1.0.9-vmail.cgi.patch
 }
 
 src_compile() {
@@ -213,7 +244,7 @@ src_install() {
 
 	# install standard docs...
 	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm
-	dodoc SECURITY doc/CODING-GUIDELINES doc/linkedlists.README
+	dodoc SECURITY doc/CODING-GUIDELINES doc/linkedlists.README UPGRADE.txt
 	dodoc doc/README.*
 	dodoc doc/*.txt
 
@@ -268,31 +299,40 @@ pkg_postinst() {
 	echo
 	einfo "Gentoo VoIP IRC Channel:"
 	einfo "#gentoo-voip @ irc.freenode.net"
+	echo
+	echo
 
 	#
 	# Warning about security changes...
 	#
-	ewarn "*********************** Important changes **************************"
-	ewarn
-	ewarn "- Asterisk runs as user asterisk, group asterisk by default"
-	ewarn "  Use usermod -G to make the asterisk user a member of additional"
-	ewarn "  groups if necessary."
-	ewarn
-	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
-	ewarn "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
-	ewarn
-	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
-	ewarn "  to asterisk:asterisk 750 / 640"
-	ewarn
-	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
-	ewarn
-	ewarn "- Asterisk cannot set the IP ToS bits when run as user,"
-	ewarn "  use something like this to make iptables set them for you:"
-	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --dport 5060 -j DSCP --set-dscp 0x28\""
-	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --sport 10000:20000 -j DSCP --set-dscp 0x28\""
-	ewarn "  (taken from voip-info.org comments (see below), thanks andrewid)"
-	ewarn
-	ewarn "For more details:"
-	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
-	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
+	ewarn "                      Asterisk UPGRADE Warning"
+	ewarn ""
+	ewarn "!!! Read ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.gz before continuing !!!"
+	ewarn ""
+	ewarn "                      Asterisk UPGRADE Warning"
+}
+
+pkg_config() {
+	einfo "Do you want to reset file permissions and ownerships (y/N)?"
+
+	read tmp
+	tmp="$(echo $tmp | tr [:upper:] [:lower:])"
+
+	if [[ "$tmp" = "y" ]] ||\
+	   [[ "$tmp" = "yes" ]]
+	then
+		einfo "Resetting permissions to defaults..."
+
+		for x in spool run lib log; do
+			chown -R asterisk:asterisk ${ROOT}var/${x}/asterisk
+			chmod -R u=rwX,g=rX,o=     ${ROOT}var/${x}/asterisk
+		done
+
+		chown -R root:asterisk ${ROOT}etc/asterisk
+		chmod -R u=rwX,g=rX,o= ${ROOT}etc/asterisk
+
+		einfo "done"
+	else
+		einfo "skipping"
+	fi
 }

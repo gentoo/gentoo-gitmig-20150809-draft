@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.88 2005/11/08 15:35:21 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.89 2005/11/18 16:42:20 stkn Exp $
+
+*asterisk-1.2.0 (18 Nov 2005)
+
+  18 Nov 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.2.0/asterisk-1.2.0_beta-ukcid.patch,
+  -asterisk-1.2.0_beta1-r1.ebuild, +asterisk-1.2.0.ebuild:
+  Version bumped and removed old beta ebuild
 
 *asterisk-1.2.0_beta1-r1 (08 Nov 2005)
 *asterisk-1.0.9-r2 (08 Nov 2005)
