@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6g_p20051023.ebuild,v 1.1 2005/10/23 22:22:32 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6g_p20051023.ebuild,v 1.2 2005/11/18 03:29:12 ramereth Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.apache
 
 MY_P=${P/_p*/}
 
@@ -22,11 +22,13 @@ IUSE="snmp"
 
 DEPEND=""
 
-# TODO: RDEPEND Not just apache... but there's no virtual/webserver (yet)
+want_apache
 
-RDEPEND="net-www/apache
+# alpha doesn't have lighttpd keyworded yet
+RDEPEND="!alpha? ( !apache? ( !apache2? ( www-servers/lighttpd ) ) )
 	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
+	!>=dev-db/mysql-5
 	dev-db/mysql
 	virtual/cron
 	virtual/php

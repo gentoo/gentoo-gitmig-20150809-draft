@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6f-r1.ebuild,v 1.3 2005/09/15 21:45:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6f-r1.ebuild,v 1.4 2005/11/18 03:29:12 ramereth Exp $
 
 inherit eutils webapp
 
@@ -24,6 +24,7 @@ DEPEND=""
 RDEPEND="net-www/apache
 	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
+	!>=dev-db/mysql-5
 	dev-db/mysql
 	virtual/cron
 	dev-php/php
