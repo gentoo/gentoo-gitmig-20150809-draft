@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pybluez
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.1 2005/11/03 20:56:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.2 2005/11/18 15:50:28 liquidx Exp $
+
+*pybluez-0.4 (18 Nov 2005)
+
+  18 Nov 2005; Alastair Tse <liquidx@gentoo.org> +pybluez-0.4.ebuild:
+  version bump (#112288)
 
 *pybluez-0.3 (03 Nov 2005)
 

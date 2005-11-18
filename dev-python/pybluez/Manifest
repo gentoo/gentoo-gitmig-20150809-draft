@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec0c3c91dc040873dfeb0a1337e427ef ChangeLog 510
+MD5 a5da0ea2340563c4545fe43f103eafd3 files/digest-pybluez-0.3 66
+MD5 c982780ff137c0ec2a0c76efb272ed9e files/digest-pybluez-0.4 66
 MD5 539454f93a140308dd2f8c03c20bf6ed metadata.xml 262
 MD5 b6544e59ef8977ecadfcf4341c94cac8 pybluez-0.3.ebuild 889
-MD5 72846ba4fb7c9a46f0d6da8a6776ab06 ChangeLog 386
-MD5 a5da0ea2340563c4545fe43f103eafd3 files/digest-pybluez-0.3 66
+MD5 be17e1e6ebf1c3ee9c038af2e43c7b2d pybluez-0.4.ebuild 887
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDffko9ZFPrqoILX8RAoedAKDCIHxjlntTqczLoRJ6qOyIJA83jQCffajk
+ZQoO+z9fn4RS54WIrr7ua9c=
+=e8Aa
+-----END PGP SIGNATURE-----
