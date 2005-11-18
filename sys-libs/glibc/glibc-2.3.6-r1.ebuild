@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.2 2005/11/17 05:31:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.3 2005/11/18 03:52:09 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -65,6 +65,10 @@ fi
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
+}
+just_headers() {
+	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
+	is_crosscompile
 }
 
 GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
@@ -246,6 +250,31 @@ toolchain-glibc_src_compile() {
 		einfo "Building GLIBC with NPTL..."
 		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
 	fi
+}
+
+toolchain-glibc_headers_compile() {
+	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
+	mkdir -p "${GBUILDDIR}"
+	cd "${GBUILDDIR}"
+
+	local myconf="--disable-sanity-checks --enable-hacker-mode"
+	myconf="${myconf}
+		--enable-add-ons=linuxthreads
+		--without-cvs
+		--enable-bind-now
+		--build=${CBUILD_OPT:-${CBUILD}}
+		--host=${CTARGET_OPT:-${CTARGET}}
+		--with-headers=${ROOT}$(alt_headers)
+		--prefix=$(alt_prefix)
+		--mandir=$(alt_prefix)/share/man
+		--infodir=$(alt_prefix)/share/info
+		--libexecdir=$(alt_prefix)/lib/misc/glibc
+		${EXTRA_ECONF}"
+
+	einfo "Configuring GLIBC headers with: ${myconf// /\n\t\t}"
+	CC=gcc \
+	CFLAGS="-O1 -pipe" \
+	${S}/configure ${myconf} || die "failed to configure glibc"
 }
 
 toolchain-glibc_src_test() {
@@ -513,6 +542,23 @@ toolchain-glibc_src_install() {
 			${x} > /dev/null \
 			|| die "simple run test (${x}) failed"
 	done
+}
+
+toolchain-glibc_headers_install() {
+	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
+	cd "${GBUILDDIR}"
+	make install_root="${D}" install-headers || die "install-headers failed"
+	# Copy over headers that are not part of install-headers ... these
+	# are pretty much taken verbatim from crosstool, see it for more details
+	insinto $(alt_headers)/bits
+	doins misc/syscall-list.h bits/stdio_lim.h || die "doins include bits"
+	insinto $(alt_headers)/gnu
+	doins "${S}"/include/gnu/stubs.h || die "doins include gnu"
+	# Make sure we install the sys-include symlink so that when 
+	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# system headers correctly.  See gcc/doc/gccinstall.info
+	dosym include $(alt_prefix)/sys-include
+	dosym . $(alt_prefix)/usr
 }
 
 toolchain-glibc_pkg_postinst() {
@@ -863,12 +909,6 @@ setup_locales() {
 glibc_do_configure() {
 	local myconf
 
-	# These should not be set, else the
-	# zoneinfo do not always get installed ...
-	unset LANGUAGE LANG LC_ALL
-	# silly users
-	unset LD_RUN_PATH
-
 	# set addons
 	pushd ${S} > /dev/null
 	ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\|glibc-compat\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
@@ -994,6 +1034,11 @@ use_multilib() {
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
 setup_env() {
+	# These should not be set, else the zoneinfo do not always get installed ...
+	unset LANGUAGE LANG LC_ALL
+	# silly users
+	unset LD_RUN_PATH
+
 	if is_crosscompile || tc-is-cross-compiler ; then
 		multilib_env ${CTARGET}
 		if ! use multilib ; then
@@ -1208,7 +1253,11 @@ src_compile() {
 		fi
 	fi
 
-	toolchain-glibc_src_compile
+	if just_headers ; then
+		toolchain-glibc_headers_compile
+	else
+		toolchain-glibc_src_compile
+	fi
 }
 
 src_test() {
@@ -1267,7 +1316,11 @@ src_install() {
 		fi
 	fi
 
-	toolchain-glibc_src_install
+	if just_headers ; then
+		toolchain-glibc_headers_install
+	else
+		toolchain-glibc_src_install
+	fi
 
 	# Handle stupid lib32 BS on amd64 and ppc64
 	if [[ -n ${OLD_LIBDIR} ]] ; then
