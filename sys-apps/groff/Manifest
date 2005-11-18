@@ -1,17 +1,31 @@
-MD5 e60e4077abb6cd2503a02609163edce7 ChangeLog 8374
-MD5 032db38ca66c2fbc5929992a4f313944 groff-1.18.1-r4.ebuild 3142
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 dee06c655e952d21181ff84957b4cc8b groff-1.18.1.1.ebuild 3155
-MD5 f5848d8ffad604e64ae98341f898ba2c groff-1.19.1-r2.ebuild 3191
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76cd621054a0207a7d654c368a3a9c20 ChangeLog 8606
 MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r4 132
 MD5 5ad2fe2219d24cfa7f9513e0671c0643 files/digest-groff-1.18.1.1 137
-MD5 b70471bdc7015ddf030d176b3a0f2d5f files/groff-1.19.1-stack.patch 3659
 MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1-r2 65
-MD5 8f3336cc924f20e480ac76ee94f0611e files/groff-1.19.1-tmpfile.patch 710
-MD5 64d15253bef046fc681356d45aecf417 files/groff-1.19.1-parallel-make.patch 1067
+MD5 2c6ae4e4871d5126cd5fc95461c87d7a files/digest-groff-1.19.2 65
 MD5 c43ddaf604dd389afc6107d79b90ce6c files/groff-1.18-infoext.patch 673
 MD5 790ff4a99ab0dd200eb710d925058fb6 files/groff-1.18-no-netpbm-depend.patch 920
 MD5 98060417290f3c427f5a3406b21f8da9 files/groff-1.18.1-no-color-segfault.patch 896
+MD5 64d15253bef046fc681356d45aecf417 files/groff-1.19.1-parallel-make.patch 1067
+MD5 b70471bdc7015ddf030d176b3a0f2d5f files/groff-1.19.1-stack.patch 3659
+MD5 8f3336cc924f20e480ac76ee94f0611e files/groff-1.19.1-tmpfile.patch 710
+MD5 5a9e270dfa9c3455b6fdfa6ab65dcc7c files/groff-1.19.2-infoext.patch 2779
+MD5 bbe55373a380c38e9bd1da7f76dd4057 files/groff-1.19.2-parallel-make.patch 620
 MD5 e0ea59264695cc68dc9947e4611dde5d files/groff-man-UTF-8.diff 391
 MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1-7-fix.patch 551
 MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1.1-10-fix.patch 551
+MD5 032db38ca66c2fbc5929992a4f313944 groff-1.18.1-r4.ebuild 3142
+MD5 dee06c655e952d21181ff84957b4cc8b groff-1.18.1.1.ebuild 3155
+MD5 f5848d8ffad604e64ae98341f898ba2c groff-1.19.1-r2.ebuild 3191
+MD5 a56500e15e87fe4a693ef6eae2eb18dc groff-1.19.2.ebuild 2206
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfWc6gIKl8Uu19MoRAjRRAJ96Kfevvc+UDBmbW/UBlN1fm5qnLgCeMfNZ
+eH+B0z61hunLptknzldc3jo=
+=vG3Q
+-----END PGP SIGNATURE-----
