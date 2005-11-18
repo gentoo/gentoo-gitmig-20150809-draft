@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwdata
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata/ChangeLog,v 1.1 2005/11/16 15:45:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata/ChangeLog,v 1.2 2005/11/18 14:18:23 wolf31o2 Exp $
+
+  18 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwdata-0.158.ebuild:
+  Added hwdata-gentoo to blocks.
 
 *hwdata-0.158 (16 Nov 2005)
 

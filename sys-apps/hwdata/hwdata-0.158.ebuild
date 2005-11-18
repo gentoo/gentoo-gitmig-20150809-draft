@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata/hwdata-0.158.ebuild,v 1.1 2005/11/16 15:45:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata/hwdata-0.158.ebuild,v 1.2 2005/11/18 14:18:23 wolf31o2 Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="!sys-apps/hwdata-knoppix"
+DEPEND="!sys-apps/hwdata-knoppix
+	!sys-apps/hwdata-gentoo"
 
 src_unpack() {
 	unpack ${A}
