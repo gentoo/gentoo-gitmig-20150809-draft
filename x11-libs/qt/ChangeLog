@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.258 2005/11/17 13:37:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.259 2005/11/18 11:18:53 cryos Exp $
+
+  18 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> qt-4.0.1.ebuild:
+  Marked ~amd64, bug 112811.
 
   17 Nov 2005; Caleb Tennis <caleb@gentoo.org> qt-4.0.1.ebuild:
   Moving to ~x86
