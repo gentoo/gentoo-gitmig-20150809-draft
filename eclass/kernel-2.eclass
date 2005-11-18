@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.152 2005/11/11 02:33:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.153 2005/11/18 03:58:21 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -247,12 +247,6 @@ kernel_is_2_6() {
 	kernel_is 2 6 || kernel_is 2 5
 }
 
-kernel_header_destdir() {
-	[[ ${CTARGET} == ${CHOST} ]] \
-		&& echo /usr/include \
-		|| echo /usr/${CTARGET}/include
-}
-
 # Capture the sources type and set DEPENDs
 if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
@@ -285,20 +279,39 @@ else
 	die "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
 fi
 
-# Unpack functions
+# Cross-compile support functions
 #==============================================================
-unpack_2_4() {
+kernel_header_destdir() {
+	[[ ${CTARGET} == ${CHOST} ]] \
+		&& echo /usr/include \
+		|| echo /usr/${CTARGET}/include
+}
+
+cross_pre_c_headers() {
+	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
+	[[ ${CHOST} == ${CTARGET} ]] && return 1
+	return 0
+}
+
+env_setup_xmakeopts() {
 	# Kernel ARCH != portage ARCH
-	local KARCH=$(tc-arch-kernel)
+	export KARCH=$(tc-arch-kernel)
 
 	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE
 	# variables properly or bad things happen !
-	local xmakeopts="ARCH=${KARCH}"
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
+	xmakeopts="ARCH=${KARCH}"
+	if [[ ${CTARGET} != ${CHOST} ]] && ! cross_pre_c_headers ; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
 	elif type -p ${CHOST}-ar > /dev/null ; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
 	fi
+	export xmakeopts
+}
+
+# Unpack functions
+#==============================================================
+unpack_2_4() {
+	env_setup_xmakeopts
 
 	cd "${S}"
 	# this file is required for other things to build properly,
@@ -307,6 +320,19 @@ unpack_2_4() {
 	make -s symlinks ${xmakeopts} || die "make symlinks failed"
 	make -s include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
 	echo ">>> version.h compiled successfully."
+}
+
+unpack_2_6() {
+	env_setup_xmakeopts
+
+	cd "${S}"
+	# this file is required for other things to build properly, so we
+	# autogenerate it ... touch .config to keep version.h build from
+	# spitting out an annoying warning
+	make -s mrproper ${xmakeopts} || die "make mrproper failed"
+	touch .config
+	make -s include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
+	rm -f .config
 }
 
 universal_unpack() {
@@ -351,6 +377,8 @@ unpack_fix_docbook() {
 # Compile Functions
 #==============================================================
 compile_headers() {
+	env_setup_xmakeopts
+
 	# Since KBUILD_OUTPUT shouldnt be used when compiling headers, lets unset it
 	# if it exists.
 	[[ -n ${KBUILD_OUTPUT} ]] && unset KBUILD_OUTPUT
@@ -359,18 +387,6 @@ compile_headers() {
 	# then set it to something sane
 	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS "${S}"/Makefile)
 	HOSTCFLAGS=${HOSTCFLAGS:--Wall -Wstrict-prototypes -O2 -fomit-frame-pointer}
-
-	# Kernel ARCH != portage ARCH
-	local KARCH=$(tc-arch-kernel)
-
-	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE
-	# variables properly or bad things happen !
-	local xmakeopts="ARCH=${KARCH}"
-	if [[ ${CTARGET} != ${CHOST} ]]; then
-		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
-	elif type -p ${CHOST}-ar; then
-		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
-	fi
 
 	if kernel_is 2 4; then
 		yes "" | make oldconfig ${xmakeopts}
@@ -393,6 +409,8 @@ compile_headers() {
 		# to force an include path with $S.
 		HOSTCFLAGS="${HOSTCFLAGS} -I${S}/include/"
 		ln -sf asm-${KARCH} "${S}"/include/asm
+		cross_pre_c_headers && return 0
+
 		make ${K_DEFCONFIG} HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed"
 		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 		make prepare-all HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
@@ -935,6 +953,7 @@ kernel-2_src_unpack() {
 	unpack_fix_install_path
 
 	kernel_is 2 4 && unpack_2_4
+	kernel_is 2 6 && unpack_2_6
 }
 
 kernel-2_src_compile() {
