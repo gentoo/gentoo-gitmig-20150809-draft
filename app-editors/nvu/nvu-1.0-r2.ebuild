@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r2.ebuild,v 1.1 2005/11/18 03:03:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r2.ebuild,v 1.2 2005/11/18 16:13:32 herbs Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -72,7 +72,9 @@ src_install() {
 
 	#menu entry for gnome/kde
 	insinto /usr/share/applications
-	doins ${FILESDIR}/1.0/nvu.desktop
+	sed -e "s:/usr/lib/nvu:/usr/$(get_libdir)/nvu:" \
+		${FILESDIR}/1.0/nvu.desktop > ${T}/nvu.desktop
+	doins ${T}/nvu.desktop
 }
 
 pkg_postinst() {
