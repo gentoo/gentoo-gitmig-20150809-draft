@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0_beta1.ebuild,v 1.3 2005/09/17 01:01:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0.ebuild,v 1.1 2005/11/18 16:34:14 stkn Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -14,7 +14,7 @@ inherit toolchain-funcs eutils linux-mod
 #BRI_VERSION="0.2.0-RC8h"
 #FLORZ_VERSION="0.2.0-RC8a_florz-6"
 
-IUSE="devfs26 rtc ecmark ecmark2 ecmark3 ecaggressive ecsteve ecsteve2 watchdog zapras zapnet"
+IUSE="devfs26 rtc ecmark ecmark2 ecmark3 ecaggressive eckb1 ecmg2 ecsteve ecsteve2 ukcid watchdog zapras zapnet"
 
 MY_P="${P/_/-}"
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="virtual/libc
 	virtual/linux-sources
@@ -36,7 +36,7 @@ DEPEND="virtual/libc
 
 # list of echo canceller use flags,
 # first active in this list is selected (=order does matter)
-ZAP_EC_FLAGS="ecmark ecmark2 ecmark3 ecsteve ecsteve2"
+ZAP_EC_FLAGS="ecmark ecmark2 ecmark3 ecsteve ecsteve2 eckb1 ecmg2"
 
 ### Begin: Helper functions
 
@@ -155,16 +155,19 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${PN}-1.2.0-gentoo.diff
 
 	if use devfs26; then
-		epatch ${FILESDIR}/${PN}-1.0.4-experimental-devfs26.diff
+		epatch ${FILESDIR}/${PN}-1.2.0-devfs26.diff
 
 		# fix Makefile to not create device nodes for
 		# devfs enabled 2.6 kernels
 		sed -i -e 's:grep -q udevd:grep -q \"udevd\\|devfsd\":' \
 			Makefile
 	fi
+
+	use ukcid && \
+		epatch ${FILESDIR}/${PN}-1.2.0-ukcid.patch
 
 	# try to apply bristuff patch
 #	if use bri; then
