@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.35 2005/10/15 11:41:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.36 2005/11/18 06:46:21 compnerd Exp $
+
+  18 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> log4j-1.2.9.ebuild:
+  Fixing compile without JMX
 
   15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> log4j-1.2.9.ebuild,
   log4j-1.2.11.ebuild, log4j-1.2.12.ebuild:

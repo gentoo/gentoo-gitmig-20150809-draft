@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.13 2005/10/15 11:41:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.14 2005/11/18 06:46:21 compnerd Exp $
 
 inherit java-pkg
 
@@ -29,6 +29,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	rm -rf dist/
+
+	# Fix for failure without JMX
+	use jmx || rm -rf ${S}/src/java/org/apache/log4j/jmx
 }
 
 src_compile() {
