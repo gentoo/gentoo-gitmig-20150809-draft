@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48a10d4b85657768894119f33a267a1b ChangeLog 369
+MD5 19feace9114bac7c0324a8c333d68ccc files/digest-latexmk-307a 61
+MD5 52cac4a60ad0c36d8753663f7b713553 latexmk-307a.ebuild 655
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfhqPaGfFFLhbXWkRAgDEAJ9zduXjZ6jI9nbkFfPVks3ROn5SPQCggFZi
+YiqiBBK4n443OLQkqTAQPfQ=
+=xWjn
+-----END PGP SIGNATURE-----
