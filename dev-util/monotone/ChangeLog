@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.21 2005/10/17 19:36:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.22 2005/11/18 02:24:44 leonardop Exp $
+
+  18 Nov 2005; Leonardo Boshell <leonardop@gentoo.org> monotone-0.18.ebuild,
+  monotone-0.19.ebuild:
+  Updated boost dependency version to >=1.32.0 (bug #90457).
 
 *monotone-0.23-r1 (17 Oct 2005)
 
