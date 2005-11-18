@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r8.ebuild,v 1.2 2005/11/18 13:05:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r8.ebuild,v 1.3 2005/11/18 14:06:22 uberlord Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ PROVIDE="virtual/dhcpc"
 src_unpack() {
 	cd "${WORKDIR}"
 	unpack "${PN}_${PV}.orig.tar.gz"
+	cd "${S}"
 
 	# Apply Debians pump patchset - they fix things good :)
 	epatch "${DISTDIR}/${PN}_${PV}-${PATCHLEVEL}.diff.gz"
