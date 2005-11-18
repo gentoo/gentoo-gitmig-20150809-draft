@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/glightoff
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glightoff/ChangeLog,v 1.1 2005/11/18 03:14:05 mr_bones_ Exp $
+
+*glightoff-1.0.0 (18 Nov 2005)
+
+  18 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +glightoff-1.0.0.ebuild:
+  initial commit - ebuild supplied by Christoph Brill (egore) via bug #82686
+
