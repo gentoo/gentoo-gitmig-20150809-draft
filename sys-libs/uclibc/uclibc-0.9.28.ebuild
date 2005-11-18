@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.10 2005/11/17 07:01:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.11 2005/11/18 03:42:19 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -19,7 +19,7 @@ if [[ ${CTARGET} == ${CHOST} ]] && [[ ${CHOST} != *-uclibc ]] ; then
 	export CTARGET=${CHOST%%-*}-pc-linux-uclibc
 fi
 
-MY_P=${P/ucl/uCl}
+MY_P=uClibc-${PV}
 SVN_VER=""
 PATCH_VER="1.1"
 DESCRIPTION="C library for developing embedded Linux systems"
@@ -70,8 +70,14 @@ alt_rprefix() {
 		echo /usr/${CTARGET}/
 	fi
 }
+just_headers() {
+	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
+	[[ ${CHOST} == ${CTARGET} ]] && return 1
+	return 0
+}
 
 pkg_setup() {
+	just_headers && return 0
 	has_version ${CATEGORY}/uclibc || return 0
 	[[ -n ${UCLIBC_AND_GLIBC} ]] && return 0
 
@@ -229,11 +235,11 @@ src_unpack() {
 			echo "UCLIBC_PREGENERATED_LOCALE_DATA=y" >> .config
 			echo "UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA=y" >> .config
 			if use userlocales ; then
-				cp "${DISTDIR}"/${P}-user-locale.tar.gz \
+				cp "${DISTDIR}"/${MY_P}-user-locale.tar.gz \
 					extra/locale/uClibc-locale-030818.tgz \
-					|| die "could not copy ${P}-user-locale.tar.gz"
+					|| die "could not copy ${MY_P}-user-locale.tar.gz"
 			else
-				cp "${DISTDIR}"/${P}-$(tc-arch)-full-locale.tar.gz \
+				cp "${DISTDIR}"/${MY_P}-$(tc-arch)-full-locale.tar.gz \
 					extra/locale/uClibc-locale-030818.tgz \
 					|| die "could not copy locale"
 			fi
@@ -331,6 +337,8 @@ src_compile() {
 	cp myconfig .config
 
 	emake headers || die "make headers failed"
+	just_headers && return 0
+
 	if use iconv && ! use pregen ; then
 		cd extra/locale
 		make clean || die "make locale clean failed"
@@ -357,7 +365,9 @@ src_test() {
 }
 
 src_install() {
-	make PREFIX="${D}" install || die "install failed"
+	local target="install"
+	just_headers && target="install_dev"
+	make PREFIX="${D}" ${target} || die "install failed"
 
 	# remove files coming from kernel-headers
 	rm -rf "${D}"$(alt_prefix)/include/{linux,asm*}
