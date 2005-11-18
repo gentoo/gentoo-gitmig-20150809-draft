@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.20 2005/11/17 09:37:10 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.21 2005/11/18 13:27:46 brix Exp $
+
+*suspend2-sources-2.6.14-r2 (18 Nov 2005)
+
+  18 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/suspend2-2.2-rc11-ro-mount-fixes.patch,
+  +suspend2-sources-2.6.14-r2.ebuild:
+  Added patch from upstream for fixing ro mount issues.
 
   17 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
   -files/linux-2.6.12-try_to_freeze.patch,

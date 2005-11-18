@@ -1,0 +1,91 @@
+Hi.
+
+Here it is.
+
+Regards,
+
+Nigel
+
+ fs/super.c             |   15 +++++++++++----
+ kernel/power/process.c |   17 +++++++++++++----
+ 2 files changed, 24 insertions(+), 8 deletions(-)
+diff -ruNp 9010.patch-old/fs/super.c 9010.patch-new/fs/super.c
+--- 9010.patch-old/fs/super.c	2005-10-25 17:15:01.000000000 +1000
++++ 9010.patch-new/fs/super.c	2005-11-16 08:03:21.000000000 +1100
+@@ -543,10 +543,17 @@ int do_remount_sb(struct super_block *sb
+ 	/* If we are remounting RDONLY and current sb is read/write,
+ 	   make sure there are no rw files opened */
+ 	if ((flags & MS_RDONLY) && !(sb->s_flags & MS_RDONLY)) {
+-		if (force)
+-			mark_files_ro(sb);
+-		else if (!fs_may_remount_ro(sb))
+-			return -EBUSY;
++		switch (force) {
++			case 0:
++				if (!fs_may_remount_ro(sb))
++					return -EBUSY;
++				break;
++			case 1:
++				mark_files_ro(sb);
++				break;
++			case 2:
++				break;
++		}
+ 	}
+ 
+ 	if (sb->s_op->remount_fs) {
+diff -ruNp 9010.patch-old/kernel/power/process.c 9010.patch-new/kernel/power/process.c
+--- 9010.patch-old/kernel/power/process.c	2005-11-16 08:19:58.000000000 +1100
++++ 9010.patch-new/kernel/power/process.c	2005-11-16 08:03:21.000000000 +1100
+@@ -88,11 +88,11 @@ void freezer_make_fses_rw(void)
+ 				this->sb->s_id);
+ 
+ 		lock_kernel();
+-		retval = do_remount_sb(this->sb, 0, NULL, 1);
++		retval = do_remount_sb(this->sb, 0, NULL, 2);
+ 		unlock_kernel();
+ 
+ 		if (retval) {
+-			freezer_message("Failed to remount %s as writable. Sorry.\n",
++			printk("Failed to remount %s as writable. Sorry.\n",
+ 					this->sb->s_id);
+ 		}
+ 
+@@ -104,7 +104,7 @@ int freezer_make_fses_ro(void)
+ {
+ 	struct remounted_fs *new;
+ 	struct super_block *sb;
+-	int retval;
++	int retval, tries;
+ 
+ 	freezer_message("Remounting filesystems read-only.\n");
+ 
+@@ -118,16 +118,25 @@ int freezer_make_fses_ro(void)
+ 
+ 		if (!(sb->s_flags & MS_RDONLY)) {
+ 
++			tries = 1;
++
+ 			new = kmalloc(sizeof(struct remounted_fs), GFP_ATOMIC);
+ 			new->sb = sb;
+ 			new->next = remounted_fs_list;
+ 
++again:
+ 			freezer_message("Attempting to remount %s ro.\n", sb->s_id);
+ 			lock_kernel();
+-			retval = do_remount_sb(sb, MS_RDONLY, NULL, 1);
++			retval = do_remount_sb(sb, MS_RDONLY, NULL, 2);
+ 			unlock_kernel();
+ 			
++			if (retval && tries < 3) {
++				tries++;
++				goto again;
++			}
++			
+ 			if (retval) {
++				freezer_message("Failed to remount %s ro.\n", sb->s_id);
+ 				kfree(new);
+ 				freezer_make_fses_rw();
+ 				up_write(&sb->s_umount);
+
+
