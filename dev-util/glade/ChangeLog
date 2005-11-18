@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.42 2005/10/16 14:51:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.43 2005/11/18 10:46:56 leonardop Exp $
+
+*glade-2.12.1 (18 Nov 2005)
+
+  18 Nov 2005; Leonardo Boshell <leonardop@gentoo.org> +glade-2.12.1.ebuild:
+  Version bump. Disabled gnomedb flag until there's a stable release of
+  libgda/libgnomedb.
 
   16 Oct 2005; Tom Gall <tgall@gentoo.org> glade-2.10.1.ebuild:
   added ~ppc64, bug #109333
