@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/darwinia-demo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.5 2005/11/14 03:35:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.6 2005/11/18 22:21:07 wolf31o2 Exp $
+
+  18 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  darwinia-demo-1.3.0.ebuild:
+  Changed icon/desktop entry to remove collision when I add the full game.
 
 *darwinia-demo-1.3.0 (14 Nov 2005)
 
