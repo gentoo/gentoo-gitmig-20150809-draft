@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.44 2005/11/16 17:12:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.45 2005/11/18 01:32:46 eradicator Exp $
+
+*gnump3d-2.9.8 (18 Nov 2005)
+*gnump3d-2.9.7-r1 (18 Nov 2005)
+
+  18 Nov 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/gnump3d-index.lok.diff, +files/gnump3d-traversal.diff,
+  +files/gnump3d-tmpfile.diff, +gnump3d-2.9.7-r1.ebuild,
+  +gnump3d-2.9.8.ebuild:
+  Revbump and version bump for security bug #111990.
 
   16 Nov 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -gnump3d-2.9.3.ebuild, -gnump3d-2.9.6.ebuild:

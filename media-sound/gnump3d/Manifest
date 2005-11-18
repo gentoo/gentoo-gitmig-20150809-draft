@@ -1,16 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e7ac085e4beba05a3999388d3ce3df42 ChangeLog 6023
+MD5 c96c18cac731509fc879d28dbfaa45d6 ChangeLog 6342
 MD5 fc8c45be4cb18a2b33cd0c321917b268 files/digest-gnump3d-2.9.7 66
+MD5 fc8c45be4cb18a2b33cd0c321917b268 files/digest-gnump3d-2.9.7-r1 66
+MD5 0bc04392e8eeeaff28091d69ab5e3b12 files/digest-gnump3d-2.9.8 66
+MD5 f82313fc517478141296f216e4e835d0 files/gnump3d-index.lok.diff 3249
+MD5 27b7feff197e10f51c5607f4bfccbcf4 files/gnump3d-tmpfile.diff 1197
+MD5 eef3ef350b208e39d1c1b99ac54b4b7e files/gnump3d-traversal.diff 702
 MD5 53ddcd88da020240ac2ec48f0100c4a9 files/gnump3d.conf.d 159
 MD5 27e1721a1708176c950425eeb3d4cfdd files/gnump3d.init.d 740
+MD5 61bfee833f598010f6c45edc467e2323 gnump3d-2.9.7-r1.ebuild 2242
 MD5 cb9bb8fdb84fc2146a4324aed5703bbb gnump3d-2.9.7.ebuild 2100
+MD5 9c542b70012885e88f1a63a5322b78f1 gnump3d-2.9.8.ebuild 2111
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDe2iUOpjtAl+gMRURAqCxAKCrFSq3o04q1XYsQXwe3+j2HlINJwCeK9m9
-GiqMAPLbvQm5dFPa2r2K3qo=
-=phzl
+iD8DBQFDfS9qOpjtAl+gMRURAo1kAKCZlo9Vl+Kp5AV8JS/5P91Qns+qXACgqw5w
+EkcHMKEiXJ+qccP+25qqTGU=
+=N2Er
 -----END PGP SIGNATURE-----
