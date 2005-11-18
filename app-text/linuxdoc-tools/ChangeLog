@@ -1,6 +1,10 @@
 # ChangeLog for app-text/linuxdoc-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.2 2005/08/30 03:45:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.3 2005/11/18 16:01:30 leonardop Exp $
+
+  18 Nov 2005; Leonardo Boshell <leonardop@gentoo.org>
+  linuxdoc-tools-0.9.21.ebuild:
+  Restrict app-text/tetex dependency to avoid access violations (bug #105905).
 
   30 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   linuxdoc-tools-0.9.21.ebuild:

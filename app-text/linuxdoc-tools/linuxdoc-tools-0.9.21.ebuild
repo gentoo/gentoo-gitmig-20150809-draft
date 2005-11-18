@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21.ebuild,v 1.2 2005/08/30 03:45:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21.ebuild,v 1.3 2005/11/18 16:01:30 leonardop Exp $
 
 inherit sgml-catalog
 
@@ -17,10 +17,11 @@ DEPEND="app-text/openjade
 	app-text/sgml-common
 	>=dev-lang/perl-5.004
 	sys-apps/gawk
-	!<app-text/sgmltools-lite-3.0.3-r10"
+	!<app-text/sgmltools-lite-3.0.3-r10
+	!<app-text/tetex-3"
 
 RDEPEND="${DEPEND}
-	tetex? ( app-text/tetex )"
+	tetex? ( >=app-text/tetex-3 )"
 
 sgml-catalog_cat_include "/etc/sgml/linuxdoc.cat" \
 	"/usr/share/linuxdoc-tools/linuxdoc-tools.catalog"
