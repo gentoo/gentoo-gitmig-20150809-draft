@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.11 2005/11/18 03:42:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.12 2005/11/18 03:44:33 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -80,6 +80,7 @@ pkg_setup() {
 	just_headers && return 0
 	has_version ${CATEGORY}/uclibc || return 0
 	[[ -n ${UCLIBC_AND_GLIBC} ]] && return 0
+	[[ ${ROOT} != "/" ]] && return 0
 
 	if ! built_with_use ${CATEGORY}/uclibc nls && use nls && ! use pregen ; then
 		eerror "You previously built uclibc with USE=-nls."
