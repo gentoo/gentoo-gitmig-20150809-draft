@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.04.ebuild,v 1.2 2005/11/03 07:46:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.05.2.ebuild,v 1.1 2005/11/18 00:08:34 ticho Exp $
 
-inherit distutils
+inherit eutils python
 
 DESCRIPTION="a Rhythmbox-like PyGTK+ client for Music Player Daemon"
 HOMEPAGE="http://sourceforge.net/projects/pympd"
@@ -11,20 +11,24 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
 
-IUSE="gnome lirc"
+IUSE="gnome"
 RDEPEND=">=virtual/python-2.4
 	>=dev-python/pygtk-2
-	gnome? ( dev-python/gnome-python-extras )
-	lirc? (  dev-python/python-xlib
-			dev-python/pyosd )"
+	gnome? ( dev-python/gnome-python-extras )"
 
 DOCS="README"
 
 src_install() {
-	distutils_src_install
+	emake PREFIX="/usr" DESTDIR="${D}" install
 
 	use gnome || cd ${D} && find -iname trayicon.* | xargs rm
-	use lirc  || cd ${D} && find -iname MpdLIRCServer.* | xargs rm
+
+	dodir /usr/share/pixmaps
+	insinto /usr/share/pixmaps
+
+	cd ${S}
+	newins src/glade/pixmaps/icon.png pympd.png
+	make_desktop_entry "pympd" "pympd" "pympd.png" "Audio"
 }
 
 pkg_postinst() {
