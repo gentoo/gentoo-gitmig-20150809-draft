@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5-r2.ebuild,v 1.2 2005/05/17 15:21:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5-r2.ebuild,v 1.3 2005/11/18 13:20:34 herbs Exp $
 
 inherit mono multilib
 
@@ -25,6 +25,12 @@ DEPEND=">=dev-lang/mono-1.0
 src_unpack() {
 	unpack ${A}
 	sed -i "s:\`monodoc:${D}\`monodoc:" ${S}/doc/Makefile.in
+
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e 's:@prefix@/lib:@libdir@:' \
+			-e 's:^libdir.*:libdir=@libdir@:' \
+			${S}/makefile.{am,in} ${S}/*.pc.in || die
+	fi
 }
 
 src_compile() {
