@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.40 2005/10/20 17:47:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.41 2005/11/18 04:02:33 vapier Exp $
 
 cd /
 
@@ -78,7 +78,7 @@ parse_target() {
 		arm*)       TARCH=arm;;
 		hppa*)      TARCH=hppa;;
 		parisc)     TARCH=hppa;   CPRE="hppa";;
-		ia64*)      TARCH=ia64;;
+		ia64*)      TARCH=ia64    WITH_DEF_HEADERS="yes";;
 		i?86*)      TARCH=x86;;
 		x86)        TARCH=x86;    CPRE="i386";;
 		m68*)       TARCH=m68k;;
@@ -195,10 +195,10 @@ uninstall() {
 
 	[[ -d ${PORTDIR_OVERLAY}/cross-${CTARGET} ]] \
 		&& rm -r ${PORTDIR_OVERLAY}/cross-${CTARGET}
-	for f in mask keywords use ; do
-		f="/etc/portage/package.${f}"
+	for f in package.{mask,keywords,use} categories ; do
+		f="/etc/portage/${f}"
 		[[ ! -e ${f} ]] && continue
-		sed -i -e "/cross-${CTARGET}\//d" ${f}
+		sed -i -e "/cross-${CTARGET}\//d" "${f}"
 	done
 
 	if [[ ! -d /var/db/pkg/cross-${CTARGET} ]] ; then
@@ -231,6 +231,20 @@ uninstall() {
 	exit 0
 }
 
+set_withval() {
+	local withval varname
+	varname=${*#--with-}
+	varname=${varname#--without-}
+	varname=${varname%%=*}
+	if [[ $* == *=* ]] ; then
+		withval=${*#*=}
+	else
+		[[ $* == --with-* ]] && withval="yes" || withval="no"
+	fi
+
+	echo WITH_`echo ${varname} | tr '[:lower:]' '[:upper:]'`=\"${withval}\"
+}
+
 is_stage() { [[ ${STAGE} -ge $1 ]] ; }
 is_s0()    { is_stage 0 ; }
 is_s1()    { is_stage 1 ; }
@@ -239,9 +253,11 @@ is_s3()    { is_stage 3 ; }
 is_s4()    { is_stage 4 ; }
 is_s5()    { is_stage 5 ; }
 
+with_headers()   { [[ ${WITH_HEADERS}   == "yes" ]] ; }
+
 ex_fast()  { [[ ${EX_FAST} == "yes" ]] ; }
-ex_gcc()   { [[ ${EX_GCC} == "yes" ]] ; }
-ex_gdb()   { [[ ${EX_GDB} == "yes" ]] ; }
+ex_gcc()   { [[ ${EX_GCC}  == "yes" ]] ; }
+ex_gdb()   { [[ ${EX_GDB}  == "yes" ]] ; }
 
 hr() {
 	local c=${COLUMNS:-0}
@@ -266,14 +282,16 @@ UOPTS=
 TARCH=
 HARCH=$(env -uARCH portageq envvar ARCH)
 CTARGET=
-STAGE=COW
+STAGE="COW"
 BCAT="sys-devel"  ; BPKG="binutils"      ; BVER="[latest]" ; BUSE=""
 GCAT="sys-devel"  ; GPKG="gcc"           ; GVER="[latest]" ; GUSE=""
 KCAT="sys-kernel" ; KPKG="linux-headers" ; KVER="[latest]" ; KUSE=""
 LCAT="sys-libs"   ; LPKG="glibc"         ; LVER="[latest]" ; LUSE=""
+WITH_HEADERS="COW"   WITH_DEF_HEADERS="no"
 EX_FAST="no"
 EX_GCC="no"
 EX_GDB="no"
+SET_X="no"
 
 while [[ $# -gt 0 ]] ; do
 	case $1 in
@@ -288,6 +306,9 @@ while [[ $# -gt 0 ]] ; do
 	--ex-only)      EX_FAST="yes";;
 	--ex-gcc)       EX_GCC="yes";;
 	--ex-gdb)       EX_GDB="yes";;
+	--with-*)       eval $(set_withval $1);;
+	--without-*)    eval $(set_withval $1);;
+	-x)             SET_X="yes";;
 	-b|-d|-p|-v)    UOPTS="${UOPTS} $1";;
 	-pv|-vp)        UOPTS="${UOPTS} -p -v";;
 	-h|--help)      usage;;
@@ -296,9 +317,14 @@ while [[ $# -gt 0 ]] ; do
 	esac
 	shift
 done
+[[ ${SET_X} == "yes" ]] && set -x
 
 [[ -z ${CTARGET} ]] && usage 1
 [[ ${STAGE} == "COW" ]] && STAGE=${STAGE_C_CPP}
+for with in HEADERS ; do
+	var=WITH_${with} defvar=WITH_DEF_${with}
+	[[ ${!var} == "COW" ]] && eval ${var}=${!defvar}
+done
 
 #####################
 ### sanity checks ###
@@ -375,20 +401,20 @@ emerge info >> ${PORT_LOGDIR}/cross-${CTARGET}-info.log
 set_keywords() {
 	local pkg=$1 ver=$2
 	[[ -z ${pkg} ]] && return 0
-	sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.keywords package.mask
+	sed -i -e "/^cross-${CTARGET}\/${pkg} /d" package.keywords
 	if [[ ${ver} == "[latest]" ]] || [[ -z ${ver} ]] ; then
 		echo "cross-${CTARGET}/${pkg} $TARCH ~$TARCH" >> package.keywords
 	else
+		sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.mask
 		echo ">cross-${CTARGET}/${pkg}-${ver}" >> package.mask
 		echo "cross-${CTARGET}/${pkg} * ~* -*" >> package.keywords
 	fi
 }
 set_use() {
 	local pkg=$1
-	[[ -z ${pkg} ]] && return 0
 	shift
 	local use=$@
-	[[ -z ${use} ]] && return
+	[[ -z ${use} ]] && return 0
 	sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.use
 	echo "cross-${CTARGET}/${pkg} ${use}" >> package.use
 }
@@ -417,13 +443,22 @@ mkdir -p "${PORTDIR_OVERLAY}"/cross-${CTARGET}
 cd /etc/portage
 touch package.{keywords,mask,use}
 
-          set_portage ${BCAT} ${BPKG} ${BVER} ${BUSE}
-is_s1  && set_portage ${GCAT} ${GPKG} ${GVER} ${GUSE}
-is_s2  && set_portage ${KCAT} ${KPKG} ${KVER} ${KUSE}
-is_s2  && set_portage ${LCAT} ${LPKG} ${LVER} ${LUSE}
-ex_gdb && set_portage sys-devel gdb
+set_portage ${BCAT} ${BPKG} ${BVER} ${BUSE}
+set_portage ${GCAT} ${GPKG} ${GVER} ${GUSE}
+set_portage ${KCAT} ${KPKG} ${KVER} ${KUSE}
+set_portage ${LCAT} ${LPKG} ${LVER} ${LUSE}
+set_portage sys-devel gdb
 
 #################
+emerged_with_use() {
+	local pkg=$1 use=$2
+	grep -qs ${use} /var/db/pkg/cross-${CTARGET}/${pkg}-*/USE
+}
+set_eopts_on_pkg_status() {
+	emerged_with_use "$@" \
+		&& EOPTS=${EOPTS_DEF} \
+		|| EOPTS=${EOPTS_UP}
+}
 doemerge() {
 	[[ $1 == "[none]" ]] && return 0
 
@@ -434,6 +469,7 @@ doemerge() {
 
 	einfo "Log: ${logfile}"
 	ebegin "Emerging cross-${2:-$1}"
+
 	if [[ ${UOPTS/-v} != ${UOPTS} ]] ; then
 		emerge cross-${CTARGET}/$1 ${EOPTS} \
 			2>&1 | tee ${logfile}
@@ -447,7 +483,9 @@ doemerge() {
 }
 
 # we include the '-u' so that we don't re-emerge packages
-EOPTS="${UOPTS} -u --nodeps"
+EOPTS_DEF="${UOPTS} --nodeps"
+EOPTS_UP="${EOPTS_DEF} -u"
+EOPTS=${EOPTS_UP}
 
 # make sure multilib crap doesn't screw us over
 export ABI=${ABI:-pos} LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
@@ -455,25 +493,34 @@ export ABI=${ABI:-pos} LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
 ex_fast || {
 
 doemerge ${BPKG}
-is_s1 || exit 0
 
-USE="${USE} -boundschecking -fortran -gcj -objc nocxx -static" \
+is_s1 || exit 0
+if with_headers ; then
+USE="${USE} _E_CROSS_HEADERS_ONLY" _E_CROSS_HEADERS_ONLY="yes" \
+	doemerge ${KPKG} ${KPKG}-quick
+USE="${USE} _E_CROSS_HEADERS_ONLY" _E_CROSS_HEADERS_ONLY="yes" \
+	doemerge ${LPKG} ${LPKG}-headers
+fi
+USE="${USE} -boundschecking -fortran -gcj -mudflap nocxx -objc -static _E_CROSS_BOOTSTRAP" \
 	doemerge ${GPKG} ${GPKG}-stage1
+
 is_s2 || exit 0
+set_eopts_on_pkg_status ${KPKG} _E_CROSS_HEADERS_ONLY
 doemerge ${KPKG}
+
 is_s3 || exit 0
+set_eopts_on_pkg_status ${LPKG} _E_CROSS_HEADERS_ONLY
 USE="${USE} $TARCH" doemerge ${LPKG}
 
 is_s4 || exit 0
-if ! type -p ${CTARGET}-g++ > /dev/null ; then
-	EOPTS="${UOPTS} --nodeps"
-fi
+set_eopts_on_pkg_status ${GPKG} _E_CROSS_BOOTSTRAP
 USE="${USE} -fortran -gcj -objc" \
 	doemerge ${GPKG} ${GPKG}-stage2
 
 }
 
-ex_gcc && doemerge ${GPKG} ${GPK}-extra
+EOPTS=${EOPTS_UP}
+ex_gcc && doemerge ${GPKG} ${GPKG}-extra
 ex_gdb && doemerge gdb
 
 exit 0
