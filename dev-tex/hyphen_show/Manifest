@@ -1,0 +1,5 @@
+MD5 5b583cecd015a42d8c2159769b0f80d5 ChangeLog 460
+MD5 e0ed767c31df3b5cbdf3cb90ce502b0b files/digest-hyphen_show-20000425 75
+MD5 a4cb3cdb30d4212802249894858c7073 files/hyphen_show-gcc34.patch 2314
+MD5 9ef6f4362f1c45a4ae9ca5fddc9c0446 hyphen_show-20000425.ebuild 819
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
