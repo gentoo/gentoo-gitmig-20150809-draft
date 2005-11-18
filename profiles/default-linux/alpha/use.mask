@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.31 2005/11/15 15:33:43 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.32 2005/11/18 17:32:18 ferdy Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -110,3 +110,7 @@ timidity
 
 # We don't have any virtual/mpi (bug 111807)
 mpi
+
+# masks required for asterisk
+pri
+zaptel
