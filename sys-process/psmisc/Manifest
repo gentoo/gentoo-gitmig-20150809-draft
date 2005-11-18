@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8ba09548aab2586f35617f6bbf83d54c ChangeLog 8019
+MD5 0a90108fa1709e4a604403cf9774717e ChangeLog 8159
 MD5 6f859fa9957d5cbc362d55aa098dfd0b files/digest-psmisc-21.6 63
 MD5 6fa1579d289a6c34d485651937fc1cc0 files/digest-psmisc-21.8 63
 MD5 70563076a6e89ee1471085d19884f8c5 files/psmisc-21.6-nonls.patch 388
@@ -9,11 +9,11 @@ MD5 c02f21e37725ecf3815688b08fb8606a files/psmisc-21.6-scanf.patch 1860
 MD5 b82b550c4133bb8a25ab43316ca04fc4 files/psmisc-21.6-selinux.diff.bz2 7709
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1166d8aabd3561f467db2ee4d10fe2f8 psmisc-21.6.ebuild 1274
-MD5 ca339e7ac4e341dbeae1a12421edfcc3 psmisc-21.8.ebuild 1207
+MD5 561a3448a607bde4ef140160eae55b86 psmisc-21.8.ebuild 1075
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDfBQrgIKl8Uu19MoRAlQrAJ9/yK+QvGaze6rQihV1SiooQ1BPEgCfRZIi
-b4dt5F4iZ5ng4ctCSYl0AQA=
-=kugA
+iD8DBQFDfSTnJ+ChZlpDtAoRAhfAAJ4pcCsh1yINdUSK6DcqhjmqOpfzVACbBpPh
+/q//eCVbaauC+clU2Ctzu6s=
+=u58v
 -----END PGP SIGNATURE-----
