@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.216 2005/11/09 05:57:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.217 2005/11/18 03:29:38 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1086,11 +1086,12 @@ unpack_pdv() {
 # - If the offset is not specified then we will attempt to extract
 #   the proper offset from the script itself.
 unpack_makeself() {
-	local src=$(find_unpackable_file "$1")
+	local src_input=${1:-${A}}
+	local src=$(find_unpackable_file "${src_input}")
 	local skip=$2
 	local exe=$3
 
-	[[ -z ${src} ]] && die "Could not locate source for '$1'"
+	[[ -z ${src} ]] && die "Could not locate source for '${src_input}'"
 
 	local shrtsrc=$(basename "${src}")
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
