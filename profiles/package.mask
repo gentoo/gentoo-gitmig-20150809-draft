@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4686 2005/11/18 13:25:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4687 2005/11/18 16:48:31 stkn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Stefan Knoblich <stkn@gentoo.org> (18 Nov 2005)
+# Asterisk-1.2.0 is up-to-date, mask packages that need testing
+# or aren't ready yet, e.g. Sangoma Wanpipe drivers.
+>=net-libs/osptoolkit-3.3.1
+>=net-misc/wanpipe-2.3.2_p4
+>=net-misc/asterisk-oh323-0.7.3
+>=net-misc/asterisk-addons-1.2.0_beta1
+>=net-misc/asterisk-sounds-1.2.0_beta1
 
 # Henrik Brix Andersen <brix@gentoo.org> (18 Nov 2005)
 # Masked due to upstream reports of corruption from the filewriter.
@@ -325,10 +334,6 @@ www-apps/open-xchange
 games-rpg/nwn-data
 =games-rpg/nwn-1.66-r1
 
-# Stefan Knoblich <stkn@gentoo.org> (20 Sep 2005)
-# Asterisk-1.2.0_beta still masked, therefore mask this one too.
->=net-misc/asterisk-oh323-0.7.3
-
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Sep 2005)
 # Adding new GGZ ebuilds to portage.  I am masking them all
 # here until they can all be added and will unmask them all
@@ -379,10 +384,6 @@ app-emulation/plex86
 # Joshua Baergen <joshuabaergen@gentoo.org> (9 Sep 2005)
 # Masking for removal
 x11-base/y-windows
-
-# Stefan Knoblich <stkn@gentoo.org> (9 Sep 2005)
-# Asterisk-1.2.0_beta ebuild, still work-in-progress.
->=net-misc/asterisk-sounds-1.2.0_beta1
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (8 Sep 2005)
 # Only tested against modular x
@@ -721,16 +722,6 @@ x11-misc/driconf
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
 net-im/jive-messenger
-
-# Stefan Knoblich <stkn@gentoo.org> (27 August 2005)
-# Asterisk-1.2.0_beta and related ebuilds, still work-in-progress.
-# Sangoma Wanpipe drivers, untested (compiles fine on 2.4 and 2.6).
->=net-libs/libpri-1.2.0_beta1
->=net-misc/zaptel-1.2.0_beta1
->=net-misc/asterisk-1.2.0_beta1
->=net-misc/asterisk-addons-1.2.0_beta1
->=net-libs/osptoolkit-3.3.1
->=net-misc/wanpipe-2.3.2_p4
 
 # Christian Parpart <trapni@gentoo.org> (25 Aug 2005)
 # masked for testing
