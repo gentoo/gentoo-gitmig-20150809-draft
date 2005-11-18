@@ -1,0 +1,6 @@
+MD5 42ec45d0c36abf6442a608ef9a2ab405 ChangeLog 426
+MD5 205c0ec7301daabd8ca6c67c437ae7e8 files/digest-hwdata-gentoo-0.1 70
+MD5 b830f494f246fd467e4156e12d016876 files/fglrx.patch 318
+MD5 c1074707476f78fda268efac7d5135bd files/nvidia.patch 385
+MD5 e418918e96429549a6b2e47e94f9e867 hwdata-gentoo-0.1.ebuild 1051
+MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
