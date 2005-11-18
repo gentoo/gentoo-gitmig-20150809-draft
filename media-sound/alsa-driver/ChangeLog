@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.170 2005/11/16 19:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.171 2005/11/18 12:55:52 flameeyes Exp $
+
+  18 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.10.ebuild:
+  Remove the ppcunbreak patch, it gets patched by the buildsystem by itself.
 
 *alsa-driver-1.0.10 (16 Nov 2005)
 

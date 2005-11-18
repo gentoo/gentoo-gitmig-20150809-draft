@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10.ebuild,v 1.1 2005/11/16 19:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10.ebuild,v 1.2 2005/11/18 12:55:52 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -71,7 +71,6 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-include.patch
-	epatch "${FILESDIR}/${PN}-1.0.10_rc3-ppc-unbreakage.patch"
 
 	convert_to_m ${S}/Makefile
 	sed -i -e 's:\(.*depmod\):#\1:' ${S}/Makefile
