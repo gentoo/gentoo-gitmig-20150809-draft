@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.10 2005/09/29 07:23:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.11 2005/11/18 09:13:19 hansmi Exp $
+
+  18 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> kasumi-0.10.ebuild:
+  Added to ~ppc.
 
 *kasumi-0.10 (29 Sep 2005)
 
