@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.13 2005/11/17 19:16:30 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.14 2005/11/18 03:03:27 anarchy Exp $
+
+*nvu-1.0-r2 (18 Nov 2005)
+
+  18 Nov 2005; <anarchy@gentoo.org> +files/1.0/nvu-1.0-gcc4-1.patch,
+  -nvu-1.0-r1.ebuild, +nvu-1.0-r2.ebuild:
+  gcc-4 patch update
 
   17 Nov 2005; Herbie Hopkins <herbs@gentoo.org> nvu-1.0-r1.ebuild:
   Fix multilib-strict issue, bug 104431.
