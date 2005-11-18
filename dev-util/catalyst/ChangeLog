@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.92 2005/11/15 22:43:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.93 2005/11/18 15:46:09 wolf31o2 Exp $
+
+*catalyst-2.0_pre20051118 (18 Nov 2005)
+
+  18 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_pre20051115-slot.patch,
+  +files/catalyst-2.0_pre20051118-slot.patch,
+  -catalyst-2.0_pre20051115.ebuild, +catalyst-2.0_pre20051118.ebuild:
+  Updated to latest pre-version, to resolve all remaining open bugs with
+  catalyst. This also fixes the nasty problems with x86/amd64 CD building.
 
 *catalyst-2.0_pre20051115 (15 Nov 2005)
 
