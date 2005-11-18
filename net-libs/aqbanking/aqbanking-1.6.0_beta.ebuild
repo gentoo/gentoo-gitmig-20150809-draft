@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.6.0_beta.ebuild,v 1.3 2005/10/03 22:19:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.6.0_beta.ebuild,v 1.4 2005/11/18 11:25:49 hanno Exp $
 
 inherit kde-functions
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-libs/gwenhywfar-1.16.0
 #	gtk2? >=dev-util/glade-2"
 
 S=${WORKDIR}/${P/_/}
-
+MAKEOPTS="${MAKEOPTS} -j1"
 
 use qt && need-qt 3.1
 use kde && need-kde 3.1
