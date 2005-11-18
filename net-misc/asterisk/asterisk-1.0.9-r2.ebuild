@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.9-r2.ebuild,v 1.1 2005/11/08 15:35:21 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.9-r2.ebuild,v 1.2 2005/11/18 17:46:09 stkn Exp $
 
 inherit eutils perl-module
 
@@ -277,8 +277,8 @@ src_unpack() {
 	# fix segfault on amd64 and possibly other 64bit systems (#105762)
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.8-ptr64fix.diff
 
-	# needed for >=freetds-0.6.3
-	if has_version ">=dev-db/freetds-0.6.3"; then
+	# needed for >=freetds-0.63
+	if has_version ">=dev-db/freetds-0.63"; then
 		epatch ${FILESDIR}/1.0.0/${P}-freetds.diff
 	fi
 
