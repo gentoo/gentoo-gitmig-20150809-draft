@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 193d0ec5ccfeb0c3ffd8b613ff237aaf gnuchess-book-1.00.ebuild 742
-MD5 7842c690488eb963bdfabb3e9b973dde ChangeLog 482
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 06764e530870f6cfaeddffcf983eccde gnuchess-book-1.00.ebuild 780
+MD5 cb02af36fe96a8bafcc7177b05953b29 ChangeLog 625
 MD5 b4391e00a72772f5f441e12e9b5e08b5 files/digest-gnuchess-book-1.00 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzFIc2G5bA0cA/ScRAkhqAJ9nEP+nqUaN5Yd8XlVzUlcNKwlxnACfU/Zl
-lw54RS/9Q8LTi4onvywkGG0=
-=QTTv
------END PGP SIGNATURE-----
