@@ -1,8 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-2.0b_p1.ebuild,v 1.4 2005/08/06 19:37:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-2.0b_p5.ebuild,v 1.1 2005/11/19 23:11:41 ramereth Exp $
 
-DESCRIPTION="The Nagios metapackage - merge this to pull install all of the nagios packages"
+DESCRIPTION="The Nagios metapackage - merge this to pull install all of the
+nagios packages"
 HOMEPAGE="http://www.nagios.org"
 
 LICENSE="GPL-2"
