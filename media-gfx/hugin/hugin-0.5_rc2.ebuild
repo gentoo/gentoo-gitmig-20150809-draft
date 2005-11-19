@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc2.ebuild,v 1.1 2005/10/01 20:11:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc2.ebuild,v 1.2 2005/11/19 05:10:01 halcy0n Exp $
 
-inherit wxwidgets
+inherit wxwidgets eutils
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
@@ -25,6 +25,9 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	sed -i -e 's/autopanog\.exe/autopanog/' "${S}"/src/include/hugin/config_defaults.h
 }
