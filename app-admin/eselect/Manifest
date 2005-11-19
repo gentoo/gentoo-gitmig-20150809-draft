@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14de1dab60cc28a88753848e82ee8804 ChangeLog 3107
-MD5 0e51d95969187ea195df42d007c7e79f eselect-0.9.6.ebuild 1309
-MD5 ad8d92f2ff904666c5b61bef95d66cf9 eselect-1.0_rc1.ebuild 1286
-MD5 13b92e0a7a72627491c50c6354b9e28d eselect-1.0_rc2.ebuild 1314
+MD5 fa8287a0eda75a7366cbab92b26fbbc3 ChangeLog 3255
+MD5 ca75babbaadabb722f6415ddec4c0ce8 metadata.xml 226
+MD5 87f1d7380ea0332635470db9c20c248b eselect-0.9.6.ebuild 1317
+MD5 205e4671b260218c2306268f03b5ac85 eselect-1.0_rc1.ebuild 1293
+MD5 d7fbc376e3aef8783786443e22621b40 eselect-1.0_rc2.ebuild 1319
 MD5 c7f28f299bf397889d5c4ffb8bcc1772 files/digest-eselect-0.9.6 65
 MD5 361d784eca93f6c4384fc4cfbc32e55f files/digest-eselect-1.0_rc1 68
 MD5 825b17d965ed7489b0351a0adbe012bb files/digest-eselect-1.0_rc2 68
-MD5 ca75babbaadabb722f6415ddec4c0ce8 metadata.xml 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDe7f+5mJXAu5GbtIRAvNcAJsG2q3ez2yhdCtMuQ2Ch8T5rZXvGgCaA77K
-Uhy9I5kuij3tLx59umvl0wc=
-=v2VX
------END PGP SIGNATURE-----
