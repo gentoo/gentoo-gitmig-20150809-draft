@@ -12,4 +12,10 @@ console (when in text mode) for a blind person using a refreshable braille
 display. It drives the braille display, and provides complete screen review
 functionality. Some speech capability has also been incorporated. 
 </longdescription>
+<longdescription lang="ja">
+BRLTTYは、盲人用ブライユ点字ディスプレイのためのLinux/Unixコンソールを制御するバ
+ックグラウンド・プロセス(デーモン)です。ブライユ点字ディスプレイを動かし、その多
+機能な完全なスクリーン・レビューを提供します。幾つかの台詞読み上げ機能も統合され
+ています。
+</longdescription>
 </pkgmetadata>
