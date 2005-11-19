@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.199 2005/11/13 01:02:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.200 2005/11/19 07:57:48 gmsoft Exp $
+
+  19 Nov 2005; Guy Martin <gmsoft@gentoo.org> vim-6.4.ebuild:
+  Stable on hppa.
 
   13 Nov 2005; Jason Wever <weeve@gentoo.org> vim-6.4.ebuild:
   Stable on SPARC wrt bug #112226.
