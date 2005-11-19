@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.27 2005/11/17 03:42:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.28 2005/11/19 21:33:48 compnerd Exp $
+
+  19 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  java-gnome-2.12.1.ebuild:
+  Keywording ~amd64 with verification from AT (chutzpah)
 
 *java-gnome-2.12.1 (17 Nov 2005)
 
