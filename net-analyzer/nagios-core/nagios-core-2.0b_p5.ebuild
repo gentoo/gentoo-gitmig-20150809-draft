@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p1.ebuild,v 1.7 2005/10/15 23:22:12 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p5.ebuild,v 1.1 2005/11/19 23:07:46 ramereth Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -36,6 +36,15 @@ pkg_setup() {
 			eerror "# USE="jpeg" emerge gd"
 			die "pkg_setup failed"
 		fi
+	fi
+
+	enewgroup nagios
+
+	if use noweb; then
+		enewuser nagios -1 /bin/bash /dev/null nagios
+	else
+		enewuser nagios -1 /bin/bash /dev/null apache
+		usermod -G apache nagios
 	fi
 }
 
@@ -78,20 +87,21 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	emake CC=$(tc-getCC) nagios contrib || die "make failed"
+	emake CC=$(tc-getCC) nagios || die "make failed"
 
 	if use !noweb ; then
 		# Only compile the CGI's if "noweb" useflag is not set.
 		make CC=$(tc-getCC) DESTDIR=${D} cgis || die
 	fi
 
-	# convert config files
-	emake -C contrib convertcfg || "config convert died"
+	emake -C contrib all || "contrib make filed"
 
 }
 
 src_install() {
 	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING
+	docinto contrib
+	dodoc contrib/README
 
 	if use noweb; then
 		sed -i -e 's/cd $(SRC_CGI) && $(MAKE) $@/# line removed due to noweb use flag/' \
@@ -111,29 +121,28 @@ src_install() {
 
 	dodoc ${S}/nagios.cfg-sample
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/nagios
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/conf.d nagios
-
-
-	rm ${S}/contrib/Makefile* ${S}/contrib/*.c ${S}/contrib/*.h
-
 	#contribs are not configured by the configure script, we'll configure them overselves...
 	find ${S}/contrib/ -type f | xargs sed -e 's:/usr/local/nagios/var/rw:/var/nagios/rw:;
 						s:/usr/local/nagios/libexec:/usr/nagios/libexec:;
 						s:/usr/local/nagios/etc:/etc/nagios:;
 						s:/usr/local/nagios/sbin:/usr/nagios/sbin:;' -i
 
-	mv contrib/ ${D}usr/nagios
+	insinto /usr/share/doc/${PF}/contrib
+	doins -r contrib/eventhandlers
 
-	for dir in etc/nagios usr/nagios var/nagios usr/nagios/contrib
-	do
-		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
+	exeinto /etc/init.d
+	doexe ${FILESDIR}/nagios
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/conf.d nagios
+
+	chmod 644 ${S}/contrib/*.cgi
+	into /usr/nagios
+	for bin in `find contrib/ -type f -perm 0755 -maxdepth 1` ; do
+		dobin $bin
 	done
 
-	#Apache Module
+	# Apache Module
 	if use !noweb; then
 		if use apache2; then
 			insinto ${APACHE2_MODULES_CONFDIR}
@@ -143,10 +152,13 @@ src_install() {
 			doins ${FILESDIR}/nagios.conf
 		fi
 		if use perl; then
-			mv ${D}usr/nagios/contrib/traceroute.cgi ${D}usr/nagios/sbin
-			fperms a+x /usr/nagios/sbin/traceroute.cgi
+			into /usr/nagios ; dosbin contrib/traceroute.cgi
 		fi
 	fi
+
+	for dir in etc/nagios usr/nagios var/nagios ; do
+		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
+	done
 }
 
 pkg_preinst() {
@@ -156,18 +168,14 @@ pkg_preinst() {
 	keepdir /usr/nagios/share/ssi
 	keepdir /var/nagios/rw
 
-	enewgroup nagios
-
 	if use noweb; then
-		enewuser nagios -1 /bin/bash /dev/null nagios
 		chown -R nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	else
-		enewuser nagios -1 /bin/bash /dev/null apache
-		usermod -G apache nagios
 		chown -R nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 
 	chmod ug+s ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
+	chmod 0750 ${D}/etc/nagios || die "Failed chmod of ${D}/etc/nagios"
 }
 
 pkg_postinst() {

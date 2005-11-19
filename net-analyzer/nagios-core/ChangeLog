@@ -1,6 +1,22 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.60 2005/10/15 23:22:12 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.61 2005/11/19 23:07:46 ramereth Exp $
+
+*nagios-core-2.0b_p5 (19 Nov 2005)
+*nagios-core-1.3 (19 Nov 2005)
+
+  19 Nov 2005; Lance Albertson <ramereth@gentoo.org> files/nagios,
+  +nagios-core-1.3.ebuild, -nagios-core-2.0b_p1.ebuild,
+  -nagios-core-2.0b_p2.ebuild, +nagios-core-2.0b_p5.ebuild:
+  * Fixed bug #77814 for 1.3
+  * Fixed bug #97669 by adding a 'after mysql postgresql' in the init script
+  * Version bump for 1.3 and 2.0b5
+  * Changed how we delt with contrib files
+    - Compile all contrib files
+    - Install them in the correct place
+    - Move misc contrib files to default share/docs location
+  * Added a chmod of /etc/nagios for security reasons
+  * Removed older 2.x ebuilds
 
   15 Oct 2005; <soulse@gentoo.org> +files/nagios-2.0b.cfg-sample.gz,
   nagios-core-2.0b_p1.ebuild, nagios-core-2.0b_p2.ebuild,

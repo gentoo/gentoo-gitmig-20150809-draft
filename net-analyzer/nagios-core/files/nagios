@@ -1,13 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios,v 1.7 2004/11/28 18:21:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios,v 1.8 2005/11/19 23:07:46 ramereth Exp $
 
 opts="${opts} reload checkconfig"
 
 depend() {
 	need net
 	use dns logger
+	after mysql postgresql
 }
 
 reload()
