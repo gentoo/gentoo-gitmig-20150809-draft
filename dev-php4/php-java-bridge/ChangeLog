@@ -1,6 +1,13 @@
 # ChangeLog for dev-php4/php-java-bridge
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/ChangeLog,v 1.3 2005/09/16 21:53:25 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/ChangeLog,v 1.4 2005/11/19 18:39:03 chtekk Exp $
+
+*php-java-bridge-2.0.8 (19 Nov 2005)
+
+  19 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  php-java-bridge-2.0.7.ebuild, +php-java-bridge-2.0.8.ebuild:
+  Add 2.0.8 to the tree, fix some stuff in 2.0.7 to be compliant with newer
+  installs of PHP.
 
   16 Sep 2005; Christian Parpart <trapni@gentoo.org>
   php-java-bridge-2.0.7.ebuild:
