@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdo-mysql
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.4 2005/09/16 23:22:40 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.5 2005/11/19 19:23:51 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> pecl-pdo-mysql-0.9.ebuild:
+  Added ~ppc64 keyword; bug #102649
 
   17 Sep 2005; Christian Parpart <trapni@gentoo.org>
   pecl-pdo-mysql-0.9.ebuild:
