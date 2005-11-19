@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.138 2005/11/19 15:57:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.139 2005/11/19 19:02:08 flameeyes Exp $
+
+  19 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-lib-1.0.10-test-ppc.patch, alsa-lib-1.0.10.ebuild:
+  Added patch to remove 'code' test on non-x86/amd64 systems as it uses i386
+  asm. See bug #99995. Also fix some more gcc4 problems.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> alsa-lib-1.0.10.ebuild:
   Stable on ppc64; bug #111968
