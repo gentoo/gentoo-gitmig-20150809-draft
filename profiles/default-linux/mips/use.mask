@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.39 2005/11/04 23:48:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.40 2005/11/19 22:13:23 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# remasking hal because of numerous dependency issues
+hal
 
 # Aaron Walker <ka0ttic@gentoo.org>
 # Temporarily masking until net-nds/c-ares can be tested properly
