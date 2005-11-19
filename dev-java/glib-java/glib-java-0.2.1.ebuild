@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/glib-java-0.2.1.ebuild,v 1.2 2005/11/13 00:01:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/glib-java-0.2.1.ebuild,v 1.3 2005/11/19 21:19:45 compnerd Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -15,7 +15,7 @@ SRC_URI="http://research.operationaldynamics.com/linux/java-gnome/dist/${PF}.tar
 
 LICENSE="LGPL-2.1"
 SLOT="0.2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc gcj"
 
 DEPS=">=dev-libs/glib-2.8.1
