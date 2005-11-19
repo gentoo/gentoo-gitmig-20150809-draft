@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Pcap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.8 2005/04/28 18:34:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.9 2005/11/19 12:56:02 mcummings Exp $
+
+*Net-Pcap-0.10 (19 Nov 2005)
+
+  19 Nov 2005; <mcumming@gentoo.org> +Net-Pcap-0.10.ebuild:
+  Version bump
 
 *Net-Pcap-0.05 (28 Apr 2005)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.19 2005/09/17 00:42:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.20 2005/11/19 12:53:07 mcummings Exp $
+
+*Net-Netmask-1.9012 (19 Nov 2005)
+
+  19 Nov 2005; <mcumming@gentoo.org> +Net-Netmask-1.9012.ebuild:
+  Version bump
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> Net-Netmask-1.9011.ebuild:
   Mark 1.9011 stable on ia64

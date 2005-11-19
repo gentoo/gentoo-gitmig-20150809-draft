@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 60e32db6073c770e83befc282c1a4f78 ChangeLog 924
 MD5 1eb80e5b2e8aaa565582d88e5a636749 Net-Pcap-0.04.ebuild 518
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e4270dc6fcf08aeb5140dcbcc4603071 Net-Pcap-0.05.ebuild 526
+MD5 5bbd56912651b82cfe319d3b028e935d Net-Pcap-0.10.ebuild 421
 MD5 b85cb3a98637130d8cb2b038dcc7fabb files/digest-Net-Pcap-0.04 63
 MD5 d6934032d14cb413153f5e4b70e97072 files/digest-Net-Pcap-0.05 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcSxHtG5z4I8BtQoRAgsLAJ42gkVKSDkBbeBmLJaaDDzUBQpuSwCfbycP
-VBu9okF6T0fILXfWE2Szr3M=
-=SKtg
------END PGP SIGNATURE-----
+MD5 94c649117902add6b6a3e7227d2f8862 files/digest-Net-Pcap-0.10 64
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

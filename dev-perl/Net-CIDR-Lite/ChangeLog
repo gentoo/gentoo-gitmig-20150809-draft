@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-CIDR-Lite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.8 2005/11/12 22:51:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.9 2005/11/19 12:39:27 mcummings Exp $
+
+*Net-CIDR-Lite-0.18 (19 Nov 2005)
+
+  19 Nov 2005; <mcumming@gentoo.org> +Net-CIDR-Lite-0.18.ebuild:
+  Version bump
 
   12 Nov 2005; Brent Baude <ranger@gentoo.org> Net-CIDR-Lite-0.15.ebuild:
   Marking Net-CIDR-Lite-0.15 ~ppc64 for bug# 112220

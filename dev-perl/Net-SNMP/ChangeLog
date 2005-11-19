@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-SNMP
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.26 2005/08/25 23:55:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.27 2005/11/19 13:01:48 mcummings Exp $
+
+*Net-SNMP-5.2.0 (19 Nov 2005)
+
+  19 Nov 2005; <mcumming@gentoo.org> +Net-SNMP-5.2.0.ebuild:
+  Version bump
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Net-SNMP-5.0.1.ebuild:
   add ~ia64

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-FTPServer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/ChangeLog,v 1.9 2005/06/09 21:58:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/ChangeLog,v 1.10 2005/11/19 12:48:33 mcummings Exp $
+
+*Net-FTPServer-1.122 (19 Nov 2005)
+
+  19 Nov 2005; <mcumming@gentoo.org> +Net-FTPServer-1.122.ebuild:
+  Version bump
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Net-FTPServer-1.120.ebuild:
