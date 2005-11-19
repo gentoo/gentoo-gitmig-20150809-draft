@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.2.6.ebuild,v 1.4 2005/09/16 21:55:53 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.2.6.ebuild,v 1.5 2005/11/19 20:47:29 corsair Exp $
 
 IUSE="png jpeg"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pslib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pslib/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="dev-perl/XML-Parser
 	png? ( media-libs/libpng )

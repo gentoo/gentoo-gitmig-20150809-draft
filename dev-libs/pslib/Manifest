@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c43f42d29605c661d92f40b8bbb3690d ChangeLog 1064
+MD5 e7bef344002601e5c8afea5a55f5149d ChangeLog 1191
 MD5 619b858577edb26a03cdf700b6997618 metadata.xml 186
-MD5 abd0dca1509ab8f654dd98bec852cdd3 pslib-0.2.4.ebuild 704
-MD5 e695cd7bdebd3419fb7ae601eff0d243 pslib-0.2.6.ebuild 735
+MD5 c655523470958d13a8c80795db8a32fc pslib-0.2.4.ebuild 712
+MD5 bb5e78ea1d932fb3fa033a18f6ad3eeb pslib-0.2.6.ebuild 741
 MD5 284307d9a72ed22ebed2eb9461ce6e92 files/digest-pslib-0.2.4 63
 MD5 6d23f69d30ea9b67f43d0c2c04ce6b29 files/digest-pslib-0.2.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK02bwUpWvClEHQoRArdBAJ4g+CSx1+Kb/WlxAnhs/YlC/xooRACggkjO
-GPhoy3JchBfYcO7Lv2N6jT8=
-=w+0f
------END PGP SIGNATURE-----
