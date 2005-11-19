@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.0.1.ebuild,v 1.1 2005/10/24 11:14:43 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.0.1.ebuild,v 1.2 2005/11/19 18:32:06 svyatogor Exp $
 
-inherit rox eutils
 
 PAGER_PATCH_FN="01_all_libwnck-2-fix.patch"
 DESCRIPTION="Pager - A pager applet for ROX-Filer"
@@ -19,6 +18,8 @@ DEPEND=">=x11-libs/libwnck-2.4.0
 ROX_LIB_VER=1.9.14
 APPNAME=Pager
 SET_PERM=true
+
+inherit rox eutils
 
 src_unpack() {
 	unpack ${A}
