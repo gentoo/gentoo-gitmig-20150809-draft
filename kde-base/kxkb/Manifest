@@ -1,14 +1,25 @@
-MD5 9eafc7b5ebf629beeb328f591ae432ca ChangeLog 2961
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7916c8ec4644de4b9973c6947073380f ChangeLog 3166
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kxkb-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kxkb-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kxkb-3.4.3 68
 MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kxkb-3.5.0_beta2 216
 MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kxkb-3.5.0_rc1 299
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kxkb-3.5_beta1 69
+MD5 6dfdd0c3f860e595b1ba5ba09d4f32f7 files/kxkb-3.5.0_rc1-modularx.patch 672
 MD5 421bfb1b3a38ff0fa7428dca89981ff3 kxkb-3.4.1.ebuild 399
 MD5 fba2ac6062d3c7e87e6c3762ee19c245 kxkb-3.4.2.ebuild 412
 MD5 52fe951560ae65919fdf933f5383f135 kxkb-3.4.3.ebuild 414
 MD5 681771e7197b4ec5df0f660984442616 kxkb-3.5.0_beta2.ebuild 393
-MD5 fce705fd8ec89a5c68c57811b4460f63 kxkb-3.5.0_rc1.ebuild 392
+MD5 9b049a9fb60ebe37aa2681057e2a87f2 kxkb-3.5.0_rc1.ebuild 536
 MD5 502fb2bcf8ae48d72ec2e1fc034d98d3 kxkb-3.5_beta1.ebuild 391
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDf7xaAiZjviIA2XgRAlyDAJ45/aiQfwtQ6gaXkhXJvYSwgoWQQgCfREjR
+bLIyZyEGNHrsIcpMZAfynHw=
+=xQeb
+-----END PGP SIGNATURE-----
