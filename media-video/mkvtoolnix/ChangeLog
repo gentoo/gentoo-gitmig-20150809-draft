@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.43 2005/11/05 14:19:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.44 2005/11/19 23:37:12 josejx Exp $
+
+  19 Nov 2005; Joseph Jezak <josejx@gentoo.org> mkvtoolnix-1.5.5.ebuild:
+  Marked ppc stable for bug #111049.
 
   05 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   -mkvtoolnix-1.0.1.ebuild:
