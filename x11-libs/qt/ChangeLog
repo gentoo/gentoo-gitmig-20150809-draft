@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.259 2005/11/18 11:18:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.260 2005/11/19 04:04:03 weeve Exp $
+
+  19 Nov 2005; Jason Wever <weeve@gentoo.org> qt-4.0.1.ebuild:
+  Added ~sparc keyword wrt bug #112811.
 
   18 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> qt-4.0.1.ebuild:
   Marked ~amd64, bug 112811.
