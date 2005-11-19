@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.1.6.ebuild,v 1.2 2005/07/03 12:03:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.1.6.ebuild,v 1.3 2005/11/19 23:26:32 dang Exp $
 
 inherit gnome2
 
@@ -14,9 +14,12 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.4.12
+	app-text/gtkspell
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
+	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2
+	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/gnome-vfs-2"
 
 DEPEND="${RDEPEND}
