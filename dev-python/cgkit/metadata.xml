@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>python</herd>
   <longdescription>Python library for creating 3D images</longdescription>
+  <longdescription lang="ja">
+  3D画像を作成するためのPython言語ライブラリです。
+  </longdescription>
 </pkgmetadata>
