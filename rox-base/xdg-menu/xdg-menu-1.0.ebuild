@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/xdg-menu-1.0.ebuild,v 1.1 2005/11/06 16:14:39 svyatogor Exp $
-
-inherit rox
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/xdg-menu-1.0.ebuild,v 1.2 2005/11/19 18:36:02 svyatogor Exp $
 
 MY_PN="XDG-Menu"
 DESCRIPTION="XDG-Menu is a ROX Menu Application that is XDG Compliant."
@@ -19,3 +17,4 @@ ROX_LIB_VER=2.0.0
 APPNAME=${MY_PN}
 S=${WORKDIR}
 
+inherit rox

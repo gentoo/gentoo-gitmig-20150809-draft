@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.26.ebuild,v 1.1 2005/10/12 20:32:47 svyatogor Exp $
-
-inherit rox eutils
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.26.ebuild,v 1.2 2005/11/19 18:33:18 svyatogor Exp $
 
 MY_PN="ROX-Session"
 DESCRIPTION="Rox-Session is a really simple session manager"
@@ -20,6 +18,8 @@ DEPEND="rox-base/rox
 
 APPNAME=${MY_PN}
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+inherit rox eutils
 
 src_unpack() {
 	if ! built_with_use sys-apps/dbus python

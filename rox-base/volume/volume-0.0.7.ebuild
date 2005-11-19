@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/volume-0.0.7.ebuild,v 1.1 2005/10/17 09:41:46 svyatogor Exp $
-
-inherit rox
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/volume-0.0.7.ebuild,v 1.2 2005/11/19 18:34:33 svyatogor Exp $
 
 MY_PN="Volume"
 MY_PV=`echo "${PV}" | sed -e 's/\.//g'`
@@ -23,3 +21,4 @@ ROX_LIB_VER=2.0.0
 APPNAME=${MY_PN}
 S=${WORKDIR}
 
+inherit rox
