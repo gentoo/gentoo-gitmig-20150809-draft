@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/aaindex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.9 2005/10/18 13:39:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.10 2005/11/19 18:22:36 blubb Exp $
+
+  19 Nov 2005; Simon Stelling <blubb@gentoo.org> aaindex-6.0.ebuild:
+  stable on amd64
 
 *aaindex-7.0 (18 Oct 2005)
 

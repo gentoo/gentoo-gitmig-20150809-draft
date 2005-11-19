@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/transfac/transfac-3.2.ebuild,v 1.9 2005/09/04 14:55:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/transfac/transfac-3.2.ebuild,v 1.10 2005/11/19 18:22:22 blubb Exp $
 
 DESCRIPTION="A database of eucaryotic transcription factors"
 HOMEPAGE="http://www.gene-regulation.com/pub/databases.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/databases/${PN}/${PN}32.tar.Z"
 LICENSE="public-domain"
 
 SLOT="3"
-KEYWORDS="~amd64 ppc ppc-macos ppc64 x86"
+KEYWORDS="amd64 ppc ppc-macos ppc64 x86"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the documentation.
 # The non-indexed database is not installed.

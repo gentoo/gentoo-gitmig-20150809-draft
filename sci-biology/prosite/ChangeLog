@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.54 2005/11/19 15:29:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.55 2005/11/19 18:23:19 blubb Exp $
 
   19 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
   files/digest-prosite-19.14:
@@ -10,6 +10,9 @@
 
   13 Nov 2005; Olivier Fisette <ribosome@gentoo.org> +prosite-19.14.ebuild:
   New version
+
+  19 Nov 2005; Simon Stelling <blubb@gentoo.org> prosite-19.10.ebuild:
+  stable on amd64
 
 *prosite-19.13 (07 Nov 2005)
 

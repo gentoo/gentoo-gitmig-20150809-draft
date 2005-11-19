@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/prints-37.0.ebuild,v 1.9 2005/09/04 14:54:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/prints-37.0.ebuild,v 1.10 2005/11/19 18:22:33 blubb Exp $
 
 DESCRIPTION="A protein motif fingerprint database"
 HOMEPAGE="http://www.bioinf.man.ac.uk/dbbrowser/PRINTS/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/databases/${PN}/newpr.lis.gz
 	ftp://ftp.ebi.ac.uk/pub/databases/${PN}/${PN}37_0.vsn.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc-macos ppc64 x86"
+KEYWORDS="amd64 ppc ppc-macos ppc64 x86"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the documentation.
 # The non-indexed database is not installed.

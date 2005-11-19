@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prints
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.10 2005/10/18 13:44:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.11 2005/11/19 18:22:33 blubb Exp $
+
+  19 Nov 2005; Simon Stelling <blubb@gentoo.org> prints-37.0.ebuild:
+  stable on amd64
 
 *prints-38.0 (18 Oct 2005)
 
