@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.15.ebuild,v 1.1 2005/11/19 08:44:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.15.ebuild,v 1.2 2005/11/19 19:42:43 swegener Exp $
 
 inherit nsplugins multilib
 
@@ -16,8 +16,7 @@ IUSE="gecko-sdk gtk"
 DEPEND=">=media-video/mplayer-0.92
 		gecko-sdk? ( net-libs/gecko-sdk )
 		!gecko-sdk? ( || ( >=www-client/mozilla-1.6 www-client/mozilla-firefox ) )
-		!gtk ( virtual/x11 )
-
+		!gtk? ( virtual/x11 )
 		gtk? (
 			>=x11-libs/gtk+-2.2.0
 			dev-libs/atk
