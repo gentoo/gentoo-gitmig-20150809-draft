@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.15 2005/10/07 16:16:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.16 2005/11/19 14:38:19 allanonjl Exp $
 
 inherit eutils
 
-IUSE="gtk2 jpeg mplayer nls static xine"
+IUSE="jpeg mplayer nls static xine"
 
 DESCRIPTION="Image viewer/manager with optional support for MPEG movies."
 HOMEPAGE="http://pornview.sourceforge.net"
@@ -13,9 +13,7 @@ LICENSE="GPL-2"
 DEPEND="media-libs/libpng
 	mplayer? ( media-video/mplayer )
 	jpeg? ( media-libs/jpeg )
-	gtk2? ( >=x11-libs/gtk+-2.0 )
-	!gtk2? ( =x11-libs/gtk+-1.2*
-		>=media-libs/gdk-pixbuf-0.16 )
+	>=x11-libs/gtk+-2.0
 	xine? ( =media-libs/xine-lib-1* )
 	nls? ( sys-devel/gettext )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.26 2005/10/07 16:16:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.27 2005/11/19 14:38:19 allanonjl Exp $
+
+  19 Nov 2005; John N. Laliberte <allanonjl@gentoo.org>
+  pornview-0.2.0_pre1.ebuild:
+  remove gtk2 useflag.
 
   07 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   pornview-0.2.0_pre1.ebuild:
