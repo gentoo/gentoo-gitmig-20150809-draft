@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.32 2005/10/12 14:15:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.33 2005/11/19 05:55:12 weeve Exp $
+
+  19 Nov 2005; Jason Wever <weeve@gentoo.org> knoda-0.7.4-r1.ebuild:
+  Stable on SPARC wrt bug #112832.
 
   12 Oct 2005; Carsten Lohrke <carlo@gentoo.org> knoda-0.7.4-r1.ebuild:
   minor dependency fix
