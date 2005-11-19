@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.37 2005/06/17 20:45:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.38 2005/11/19 13:57:21 mcummings Exp $
+
+  19 Nov 2005; <mcumming@gentoo.org> libnet-1.16.ebuild, libnet-1.17.ebuild,
+  libnet-1.19.ebuild:
+  bug 112883 - optional dep for authen::sasl
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> libnet-1.19.ebuild:
   Stable on ppc.
