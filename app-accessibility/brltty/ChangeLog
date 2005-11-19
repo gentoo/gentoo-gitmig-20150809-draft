@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.38 2005/10/10 06:54:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.39 2005/11/19 10:06:16 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
+  repoman commiting this to verify manifest doesn't go weird.
 
   10 Oct 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Initial longdescription.
