@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/pecl-crack-0.2.ebuild,v 1.4 2005/09/15 00:25:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/pecl-crack-0.2.ebuild,v 1.5 2005/11/19 20:56:39 corsair Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="crack"
@@ -13,7 +13,7 @@ DESCRIPTION="PHP interface to the cracklib (libcrack) libraries"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="${DEPEND}

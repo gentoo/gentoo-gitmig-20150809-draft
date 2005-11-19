@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.11.32.ebuild,v 1.3 2005/11/11 21:31:14 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.11.32.ebuild,v 1.4 2005/11/19 21:07:33 corsair Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_ZENDEXT="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://dd.cron.ru/dbg/"
 LICENSE="dbgphp"
 SLOT="0"
 
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 need_php_by_category
 

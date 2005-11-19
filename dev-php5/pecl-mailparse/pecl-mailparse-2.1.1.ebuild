@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/pecl-mailparse-2.1.1.ebuild,v 1.2 2005/09/10 06:11:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/pecl-mailparse-2.1.1.ebuild,v 1.3 2005/11/19 21:01:08 corsair Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_INI="yes"
@@ -11,7 +11,7 @@ IUSE=""
 DESCRIPTION="A PHP extension for parsing and working with RFC822 and RFC2045 (MIME) compliant messages."
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
 
 need_php_by_category
 
