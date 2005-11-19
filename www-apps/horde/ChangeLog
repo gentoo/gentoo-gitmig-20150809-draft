@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.18 2005/11/18 23:40:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.19 2005/11/19 13:11:35 blubb Exp $
+
+  19 Nov 2005; Simon Stelling <blubb@gentoo.org> horde-2.2.9.ebuild:
+  stable on amd64 wrt bug 112491
 
   18 Nov 2005; Mark Loeser <halcy0n@gentoo.org> horde-2.2.9.ebuild:
   Stable on x86; bug #112491
