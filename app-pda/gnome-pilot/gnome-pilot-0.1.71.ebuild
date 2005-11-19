@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.7 2005/05/17 17:13:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.8 2005/11/19 18:29:15 liquidx Exp $
 
 
 DESCRIPTION="Gnome Pilot apps"
 SRC_URI="mirror://gnome/sources/gnome-pilot/${PV:0:3}/${P}.tar.bz2"
-HOMEPAGE="http://www.gnome.org/gnome-pilot/"
+HOMEPAGE="http://live.gnome.org/GnomePilot"
 
 RDEPEND="dev-lang/perl
 	=gnome-base/control-center-1.4*
