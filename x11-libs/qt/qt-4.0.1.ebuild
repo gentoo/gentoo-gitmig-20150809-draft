@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.9 2005/11/19 11:38:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.10 2005/11/19 22:52:25 josejx Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
 
 DEPEND="virtual/x11 virtual/xft >=media-libs/freetype-2
