@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.7.0a.ebuild,v 1.3 2005/06/07 20:56:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.7.0a.ebuild,v 1.4 2005/11/19 23:17:45 dang Exp $
 
 DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files."
 HOMEPAGE="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/"
 MY_P="${PN}_${PV/_/}"
-SRC_URI="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/${MY_P}.tar.gz"
+SRC_URI="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
