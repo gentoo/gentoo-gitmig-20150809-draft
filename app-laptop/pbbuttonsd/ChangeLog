@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.36 2005/11/16 04:04:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.37 2005/11/19 20:37:53 josejx Exp $
+
+  19 Nov 2005; Joseph Jezak <josejx@gentoo.org> pbbuttonsd-0.7.2.ebuild:
+  Marked ppc stable.
 
   16 Nov 2005; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.7.2.ebuild:
   alsa and oss explicit support, kindly provided by Flameeyes

@@ -1,4 +1,7 @@
-MD5 35d15febdca8b4a5d50b846f396eeb81 ChangeLog 9659
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fdf615c878b48955a2b6352c567ed182 ChangeLog 9753
 MD5 72caa2adac6c8260c57c0ae15cc259f3 files/digest-pbbuttonsd-0.6.6 68
 MD5 0d5e37ab33c0a4177affbe953a76f8f3 files/digest-pbbuttonsd-0.7.1 68
 MD5 d0c2afca8a18bbfdc406106d85d30193 files/digest-pbbuttonsd-0.7.2 68
@@ -6,4 +9,11 @@ MD5 bfeca35f0f0f5c946cec186998f304e2 files/pbbuttonsd.rc6 472
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
 MD5 7b9b4d9f5e7b4fde48b4597c4ba8cf06 pbbuttonsd-0.6.6.ebuild 1140
 MD5 56188b69fdef709ca5c120ff8d103765 pbbuttonsd-0.7.1.ebuild 1759
-MD5 a2710fed43a98a02feed0eb409ca1f26 pbbuttonsd-0.7.2.ebuild 1911
+MD5 4cf6ded3c54e0a9a199448945316d9a1 pbbuttonsd-0.7.2.ebuild 1909
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDf40vcsIHjyDViGQRAr7JAJ0WmF0nWS5Fo6wge+GLlNEZaMgU1wCZAQ+H
+BSqpGc2AO0bga+aaZDC4/b4=
+=VByt
+-----END PGP SIGNATURE-----

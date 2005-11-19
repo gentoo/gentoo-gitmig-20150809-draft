@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.2.ebuild,v 1.2 2005/11/16 04:04:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.2.ebuild,v 1.3 2005/11/19 20:37:53 josejx Exp $
 
 inherit eutils linux-info flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE="acpi debug alsa oss"
 
 DEPEND=">=sys-apps/baselayout-1.8.6.12-r1"
