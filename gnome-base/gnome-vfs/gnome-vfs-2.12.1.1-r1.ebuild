@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.1.1.ebuild,v 1.2 2005/10/11 01:44:12 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.1.1-r1.ebuild,v 1.1 2005/11/19 22:19:27 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -58,7 +58,7 @@ pkg_setup() {
 		$(use_enable howl)"
 
 	if use hal; then
-		G2CONF="${G2CONF} --with-hal-mount=/usr/bin/pmount \
+		G2CONF="${G2CONF} --with-hal-mount=/usr/bin/pmount-hal \
 			--with-hal-umount=/usr/bin/pumount \
 			--with-hal-eject=/usr/bin/eject"
 	fi
