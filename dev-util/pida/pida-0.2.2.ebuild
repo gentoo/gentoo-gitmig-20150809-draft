@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.2.2.ebuild,v 1.3 2005/08/05 19:34:08 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.2.2.ebuild,v 1.4 2005/11/19 23:28:21 dang Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gvim gnome"
 
 DEPEND=">=dev-lang/python-2.3

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pida
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.4 2005/09/16 22:00:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.5 2005/11/19 23:28:21 dang Exp $
+
+  19 Nov 2005; <dang@gentoo.org> pida-0.2.2.ebuild:
+  Marked ~amd64
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
