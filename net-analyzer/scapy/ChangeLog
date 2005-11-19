@@ -1,0 +1,8 @@
+# ChangeLog for net-analyzer/scapy
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.1 2005/11/19 14:27:31 lcars Exp $
+
+  19 Nov 2005; Andrea Barisani <lcars@gentoo.org> :
+  Initial import, slightly modified version of <marc@noctambuls.net> ebuild, 
+  bug #112727.
+
