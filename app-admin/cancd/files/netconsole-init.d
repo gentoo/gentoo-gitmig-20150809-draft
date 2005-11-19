@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/files/netconsole-init.d,v 1.1 2005/11/15 19:27:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/files/netconsole-init.d,v 1.2 2005/11/19 01:32:21 robbat2 Exp $
 
 depend() {
 	need net
@@ -65,13 +65,5 @@ checkconfig() {
 
 	return 0
 }
-
-# netconsole=[src-port]@[src-ip]/[dev],[tgt-port]@<tgt-ip>/[tgt-macaddr]
-#        src-port      source for UDP packets (defaults to 6665)
-#        src-ip        source IP to use (interface address)
-#        dev           network interface (eth0)
-#        tgt-port      port for logging agent (6666)
-#        tgt-ip        IP address for logging agent
-#        tgt-macaddr   ethernet MAC address for logging agent (broadcast)
 
 # vim: ts=4 sw=4 sts=4:

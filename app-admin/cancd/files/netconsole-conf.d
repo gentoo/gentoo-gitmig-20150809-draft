@@ -1,13 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/files/netconsole-conf.d,v 1.1 2005/11/15 19:27:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/files/netconsole-conf.d,v 1.2 2005/11/19 01:32:21 robbat2 Exp $
 
 # required!
 TGT_IP=''
 
 DEVICE=eth0
 
-SRC_IP='' # will default to first address on $DEVICE
+SRC_IP='' 
+# will default to first address on $DEVICE
+# must be specified if the device does not have an IP at init time
 SRC_PORT=6665 # default
 
 # note that cancd daemon uses 6667 as default
