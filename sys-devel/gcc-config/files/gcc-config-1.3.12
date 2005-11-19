@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.12,v 1.8 2005/11/01 01:31:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.12,v 1.9 2005/11/19 05:23:08 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -579,7 +579,7 @@ for x in "$@" ; do
 						[[ ${y/\/config} != ${y} ]] && continue
 
 						if [[ -f ${y} ]] && [[ ${x} == ${i} ]] ; then
-							CC_COMP="${y##*/}"
+							CC_COMP=${y##*/}
 							break
 						fi
 						((++i))
@@ -590,10 +590,16 @@ for x in "$@" ; do
 					if [[ ${DOIT} == "get_current_profile" && -z $(ls "${GCC_ENV_D}"/${x}-* 2>/dev/null) ]] || \
 					   [[ ${DOIT} != "get_current_profile" && ! -f ${GCC_ENV_D}/${x} ]]
 					then
-						eerror "$0: Could not locate '$x' in '${GCC_ENV_D}/' !"
-						exit 1
+						# Maybe they just gave us a gccver ...
+						get_real_chost
+						if [[ -f ${GCC_ENV_D}/${REAL_CHOST}-${x} ]] ; then
+							x=${REAL_CHOST}-${x}
+						else
+							eerror "$0: Could not locate '$x' in '${GCC_ENV_D}/' !"
+							exit 1
+						fi
 					fi
-					CC_COMP="${x}"
+					CC_COMP=${x}
 				fi
 			else
 				eerror "$0: Too many arguments!  Run $0 without parameters for help."
