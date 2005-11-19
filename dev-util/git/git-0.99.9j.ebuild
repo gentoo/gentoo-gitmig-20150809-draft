@@ -1,62 +1,76 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9i.ebuild,v 1.1 2005/11/15 14:57:26 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9j.ebuild,v 1.1 2005/11/19 11:13:16 ferdy Exp $
 
-inherit python
+inherit python toolchain-funcs eutils
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
-SRC_URI="http://kernel.org/pub/software/scm/git/${PN}-core-${PV}.tar.bz2"
+SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="mozsha1 ppcsha1 doc curl tcltk gitsendemail"
-S="${WORKDIR}/${PN}-core-${PV}"
+IUSE="mozsha1 ppcsha1 doc curl tcltk gitsendemail webdav"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
-		app-text/rcs
 		!app-misc/git
+		curl? ( net-misc/curl )
+		webdav? ( dev-libs/expat )
 		doc? ( >=app-text/asciidoc-7.0.1 app-text/xmlto )"
 RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
+		app-text/rcs
 		tcltk? ( dev-lang/tk )
-		curl? ( net-misc/curl )
 		dev-perl/String-ShellQuote
 		gitsendemail? ( dev-perl/Mail-Sendmail dev-perl/Email-Valid )"
+
+# This is needed because for some obscure reasons future calls to make don't
+# pick up these exports if we export them in src_unpack()
+exportmakeopts() {
+	local myopts
+
+	if use mozsha1 ; then
+		myopts="${myopts} MOZILLA_SHA1=YesPlease"
+	elif use ppcsha1 ; then
+		myopts="${myopts} PPC_SHA1=YesPlease"
+	fi
+
+	if use curl ; then
+		use webdav || myopts="${myopts} NO_EXPAT=YesPlease"
+	else
+		myopts="${myopts} NO_CURL=YesPlease"
+		use webdav && ewarn "USE=webdav only matters with USE=curl. Ignoring."
+	fi
+
+	use gitsendemail && myopts="${myopts} WITH_SEND_EMAIL=YesPlease"
+
+	# Older python versions need own subproccess.py
+	python_version
+	[[ ${PYVER} < 2.4 ]] && myopts="${myopts} WITH_OWN_SUBPROCESS_PY=YesPlease"
+
+	export MY_MAKEOPTS=${myopts}
+}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i \
-		-e "s:-g -O2:${CFLAGS}:" \
-		Makefile
+		-e "s:^\(CFLAGS = \).*$:\1${CFLAGS} -Wall:" \
+		-e "s:^\(LDFLAGS = \).*$:\1${LDFLAGS}:" \
+		-e "s:^\(CC = \).*$:\1$(tc-getCC):" \
+		-e "s:^\(AR = \).*$:\1$(tc-getAR):" \
+		Makefile || die "sed failed"
+
+	epatch "${FILESDIR}/${P}-diff.patch"
+
+	exportmakeopts
 }
 
 src_compile() {
-	# Use python_version to check for python 2.4.
-	# If the user don't have version 2.4 have then we set WITH_OWN_SUBPROCESS_PY
-	# that makes use of a suplied version of subprocess.py
-	python_version()
-	[[ $PYVER < 2.4 ]] && export WITH_OWN_SUBPROCESS_PY=yes
-
-	if use mozsha1 ; then
-		export MOZILLA_SHA1=yes
-	elif use ppcsha1 ; then
-		export PPC_SHA1=yes
-	fi
-
-	if ! use curl; then
-		export NO_CURL=yes
-		ewarn "git-http-pull will not be built because you are not"
-		ewarn " using the curl use flag"
-	fi
-
-	use gitsendemail && export WITH_SEND_EMAIL=yes
-
-	emake prefix=/usr || die "make failed"
+	emake ${MY_MAKEOPTS} prefix=/usr || die "make failed"
 
 	if use doc ; then
 		sed -i \
@@ -67,21 +81,15 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} prefix=/usr install || die "make install failed"
-
-	if use gitsendemail ; then
-		exeinto /usr/bin
-		newexe git-send-email.perl git-send-email
-	else
-		sed -i -e '/^send-email *$/d' ${D}/usr/bin/git
-	fi
+	make ${MY_MAKEOPTS} DESTDIR=${D} prefix=/usr install || die "make install failed"
 
 	use tcltk || rm ${D}/usr/bin/gitk
 
-	dodoc README COPYING
+	dodoc README COPYING SubmittingPatches
 	if use doc ; then
 		doman Documentation/*.1 Documentation/*.7
 		make install-webdoc -C Documentation/
+		dodoc technical/*
 	fi
 
 	newinitd "${FILESDIR}/git-daemon.initd" git-daemon
@@ -90,7 +98,7 @@ src_install() {
 
 src_test() {
 	cd ${S}
-	make test || die "tests failed"
+	make ${MY_MAKEOPTS} test || die "tests failed"
 }
 
 pkg_postinst() {

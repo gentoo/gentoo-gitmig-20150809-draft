@@ -1,0 +1,46 @@
+From: Junio C Hamano <junkio@cox.net>
+Date: Fri, 18 Nov 2005 04:46:29 +0000 (-0800)
+Subject:     Deal with binary diff output from GNU diff 2.8.7
+X-Git-Url: http://kernel.org/git/?p=git/git.git;a=commitdiff;h=3200d1aee0c22a34d075aafefe3e92f4f7d08840
+
+  Deal with binary diff output from GNU diff 2.8.7
+  
+  Some vintage of diff says just "Files X and Y differ\n", instead
+  of "Binary files X and Y differ\n", so catch both patterns.
+  
+  Signed-off-by: Junio C Hamano <junkio@cox.net>
+---
+
+--- a/apply.c
++++ b/apply.c
+@@ -893,12 +893,24 @@ static int parse_chunk(char *buffer, uns
+ 	patchsize = parse_single_patch(buffer + offset + hdrsize, size - offset - hdrsize, patch);
+ 
+ 	if (!patchsize) {
+-		static const char binhdr[] = "Binary files ";
+-
+-		if (sizeof(binhdr) - 1 < size - offset - hdrsize &&
+-		    !memcmp(binhdr, buffer + hdrsize + offset,
+-			    sizeof(binhdr)-1))
+-			patch->is_binary = 1;
++		static const char *binhdr[] = {
++			"Binary files ",
++			"Files ",
++			NULL,
++		};
++		int i;
++		int hd = hdrsize + offset;
++		unsigned long llen = linelen(buffer + hd, size - hd);
++
++		if (!memcmp(" differ\n", buffer + hd + llen - 8, 8))
++			for (i = 0; binhdr[i]; i++) {
++				int len = strlen(binhdr[i]);
++				if (len < size - hd &&
++				    !memcmp(binhdr[i], buffer + hd, len)) {
++					patch->is_binary = 1;
++					break;
++				}
++			}
+ 
+ 		/* Empty patch cannot be applied if:
+ 		 * - it is a binary patch and we do not do binary_replace, or
