@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.66 2005/11/11 22:00:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.67 2005/11/19 13:40:51 killerfox Exp $
+
+  19 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org> gentoo-0.11.55.ebuild:
+  Stable on hppa.
 
   12 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -gentoo-0.11.54.ebuild:
   Removed old ebuild.
