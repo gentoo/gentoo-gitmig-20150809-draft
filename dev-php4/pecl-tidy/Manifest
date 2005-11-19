@@ -1,4 +1,4 @@
-MD5 4a60bfa6da4a568164ff85ad150489de ChangeLog 401
-MD5 d83ea8c3886577c14d5dec3608e13d78 files/digest-pecl-tidy-1.1 55
+MD5 376a20908697a25f89c47b067c1a3180 ChangeLog 511
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 e920a28a07f4c7dc8711c6ef1cc2332b pecl-tidy-1.1.ebuild 607
+MD5 49df34128f248ae6f2e0832f8408107e pecl-tidy-1.1.ebuild 616
+MD5 d83ea8c3886577c14d5dec3608e13d78 files/digest-pecl-tidy-1.1 55
