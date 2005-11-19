@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.30 2005/11/19 13:38:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.31 2005/11/19 23:23:15 genstef Exp $
+
+*fuse-2.4.1-r1 (19 Nov 2005)
+
+  19 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/fusermount.patch, +fuse-2.4.1-r1.ebuild:
+  Fix bug 112902
 
   19 Nov 2005; Simon Stelling <blubb@gentoo.org> fuse-2.3.0.ebuild:
   stable on amd64
