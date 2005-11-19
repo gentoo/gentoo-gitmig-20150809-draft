@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bicyclerepair
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.8 2005/02/12 10:50:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.9 2005/11/19 23:30:12 dang Exp $
+
+  19 Nov 2005; <dang@gentoo.org> bicyclerepair-0.9.ebuild:
+  Marked ~amd64
 
 *bicyclerepair-0.9 (12 Feb 2005)
 
