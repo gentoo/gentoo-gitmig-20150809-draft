@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.26 2005/11/19 13:38:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.27 2005/11/19 16:14:03 josejx Exp $
+
+  19 Nov 2005; Joseph Jezak <josejx@gentoo.org> ntfsprogs-1.11.2.ebuild:
+  Marked ppc stable for bug #109637.
 
   19 Nov 2005; Simon Stelling <blubb@gentoo.org> ntfsprogs-1.11.2.ebuild:
   stable on amd64
