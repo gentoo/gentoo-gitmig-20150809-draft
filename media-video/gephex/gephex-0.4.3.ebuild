@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.5 2005/07/07 04:49:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.6 2005/11/19 19:09:30 lu_zero Exp $
 
 DESCRIPTION="GePhex is a modular video effect framework."
 HOMEPAGE="http://www.gephex.org"
 MY_P=${P}b
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
-IUSE="aalib alsa avi ffmpeg joystick mmx mpeg opengl oss png sdl static v4l"
+IUSE="aalib alsa ffmpeg joystick mmx mpeg opengl oss png sdl static v4l"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
@@ -19,7 +19,6 @@ DEPEND="virtual/x11
 	png? ( >=media-libs/libpng-1.2.5-r4 )
 	sdl? ( >=media-libs/sdl-ttf-2.0.6 )
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )
-	avi? ( >=media-video/avifile-0.7.38.20030710 )
 	aalib?	( >=media-libs/aalib-1.4_rc4-r2 )
 	opengl? ( virtual/opengl )"
 
@@ -46,7 +45,6 @@ src_compile() {
 	`use_with sdl SDL` \
 	`use_with png LIBPNG` \
 	`use_with mpeg MPEG3` \
-	`use_with avi AVIFILE` \
 	${myconf} \
 	|| die
 	emake || die
