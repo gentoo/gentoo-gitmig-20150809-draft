@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9j.ebuild,v 1.1 2005/11/19 11:13:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9j.ebuild,v 1.2 2005/11/19 14:04:32 r3pek Exp $
 
 inherit python toolchain-funcs eutils
 
@@ -64,7 +64,7 @@ src_unpack() {
 		-e "s:^\(AR = \).*$:\1$(tc-getAR):" \
 		Makefile || die "sed failed"
 
-	epatch "${FILESDIR}/${P}-diff.patch"
+	epatch "${FILESDIR}/${P}-binary-diff-fix.patch"
 
 	exportmakeopts
 }
