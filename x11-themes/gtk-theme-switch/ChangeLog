@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-theme-switch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.29 2005/11/16 12:58:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.30 2005/11/19 12:59:45 killerfox Exp $
+
+  19 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  gtk-theme-switch-1.0.1-r2.ebuild, gtk-theme-switch-2.0.0_rc2-r2.ebuild:
+  Stable on hppa.
 
   16 Nov 2005; Markus Rothe <corsair@gentoo.org>
   gtk-theme-switch-2.0.0_rc2-r2.ebuild:
