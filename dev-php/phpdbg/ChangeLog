@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpdbg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.13 2005/05/11 05:14:42 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.14 2005/11/19 20:33:46 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> phpdbg-2.11.23.ebuild,
+  phpdbg-2.11.32.ebuild:
+  Added ~ppc64 keyword; bug #102649
 
   11 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
   phpdbg-2.11.23.ebuild, phpdbg-2.11.32.ebuild:

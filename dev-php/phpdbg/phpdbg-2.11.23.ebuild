@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.23.ebuild,v 1.10 2005/05/11 14:06:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.23.ebuild,v 1.11 2005/11/19 20:33:46 corsair Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_ZENDEXT="no"
@@ -15,7 +15,7 @@ SLOT="0"
 DEPEND="virtual/php"
 
 # support for ppc or others?
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="amd64 ~ppc64 sparc x86"
 
 src_compile() {
 	myconf="--enable-dbg=shared --with-dbg-profiler --with-php-config=/usr/bin/php-config"
