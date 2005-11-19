@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb530dbb4eab6bbc97dbc34317c5f804 ChangeLog 7319
-MD5 807da98c0435e234011c386780907a04 files/digest-xplanet-1.1.1 66
-MD5 356fe22ff0fc950df2daa1927246537f files/digest-xplanet-1.1.2-r1 66
-MD5 7a951199e920e714313c860e37d1a019 files/digest-xplanet-1.2.0 66
+MD5 7ce1112bd6abce152ea6b94f6a132dc3 ChangeLog 7416
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 5b095fab878efc658d1e834ab2142ae7 xplanet-1.1.1.ebuild 1758
 MD5 1b2665bc102b004a86f45f35c13269cb xplanet-1.1.2-r1.ebuild 1812
-MD5 881ab2218d4e6446f012a27637ca5847 xplanet-1.2.0.ebuild 1802
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDa9DXCRZPokWLroQRAro5AJ9pABrSH8AyF/uYDYX93RTL4IeUqQCfU9KF
-6H3XP78bA8SyRQQfqOirMjo=
-=OlzC
------END PGP SIGNATURE-----
+MD5 176541547afeffbb4bcac6abf890628a xplanet-1.2.0.ebuild 1803
+MD5 807da98c0435e234011c386780907a04 files/digest-xplanet-1.1.1 66
+MD5 356fe22ff0fc950df2daa1927246537f files/digest-xplanet-1.1.2-r1 66
+MD5 7a951199e920e714313c860e37d1a019 files/digest-xplanet-1.2.0 66
