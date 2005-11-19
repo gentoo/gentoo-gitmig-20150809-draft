@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/php-java-bridge-2.0.7.ebuild,v 1.4 2005/11/19 19:16:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/php-java-bridge-2.0.8.ebuild,v 1.1 2005/11/19 19:16:33 chtekk Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_NAME="java"
@@ -14,7 +14,7 @@ HOMEPAGE="http://php-java-bridge.sourceforge.net/"
 DESCRIPTION="The PHP/Java bridge is a PHP module wich connects the PHP object system with the Java or ECMA 335 object system."
 LICENSE="PHP-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="${DEPEND}
