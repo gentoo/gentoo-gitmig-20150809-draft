@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.89 2005/11/18 09:58:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.90 2005/11/19 00:12:27 cryos Exp $
+
+  19 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> iptables-1.3.4.ebuild:
+  Stable on amd64.
 
   18 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> iptables-1.3.4.ebuild:
   Stable on hppa, ppc.
