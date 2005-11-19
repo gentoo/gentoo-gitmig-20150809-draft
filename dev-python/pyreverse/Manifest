@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 54c34862c798cb86a5e586aee2674be8 ChangeLog 1330
 MD5 7c5658f1ad90f125cd69096c371aae5a files/digest-pyreverse-0.4.2-r1 66
 MD5 7200337769d44edaecff3e7834cb7c88 files/digest-pyreverse-0.5.1 67
 MD5 7d3cd53d0cd90ce598d5f9539407c86f metadata.xml 968
 MD5 6921e1897588866bec2399c4340983e8 pyreverse-0.4.2-r1.ebuild 656
 MD5 d7a4fbc20d772d110d5fde4eeac5b24a pyreverse-0.5.1.ebuild 666
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfwb7FdQwWVoAgN4RAia+AJ9EeR60bXro9/LUwGtmmCcIXt8dPQCfRxOY
+GZ88d3F8cnP8lzLnqXYJ0ik=
+=kKZL
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b1d4e57155a92c39b033493fec0dae2 ChangeLog 482
 MD5 322865f0ddcda68a3e8923b4cb050d94 files/digest-pychm-0.8.2 62
 MD5 219fb95bd17aef226050a53cba8a47c7 metadata.xml 822
 MD5 8fa9fd8fb7d66d9b789ff22bef4d989b pychm-0.8.2.ebuild 518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfwOcFdQwWVoAgN4RAjHYAJsFqlDwimOOehuiowRqwsNTofvmUACfYzbN
+DQWTzrQboYfAU8pow7GHH5w=
+=Hgw2
+-----END PGP SIGNATURE-----
