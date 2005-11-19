@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5027a3de9d8436372ba3ebaf2f0d339c gst-plugins-dvdnav-0.8.11.ebuild 338
-MD5 c44fceea72453be3e7b75f51a944eeaf ChangeLog 503
-MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+MD5 9985b766e3fa45e0a456031d8840ae4e ChangeLog 604
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-dvdnav-0.8.11 72
+MD5 5955672b0c6a173c38e0409d62889bab gst-plugins-dvdnav-0.8.11.ebuild 344
+MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIDvA2G5bA0cA/ScRAoe1AJ9rKCCCrTKueaTPgeLiQ0dtGxyT5ACgyjd7
-TJzNsdEOEqvoxPf1CkEvlMA=
-=ZfDe
+iD8DBQFDf2fCcsIHjyDViGQRAtk1AKDIpzyInu6Yx12sRAOP0z+lPeUx/wCfT3ev
+6uYF5KOT2xHZ1c+VXyY1n1I=
+=qTsX
 -----END PGP SIGNATURE-----
