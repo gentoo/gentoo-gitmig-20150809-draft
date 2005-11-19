@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce1be43a7224ad7956ff6dafc75b01c6 ChangeLog 400
+MD5 7ad2cdf032090eb30d8cd55ef6224576 ChangeLog 511
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 5e85de63df5cfaa8aed42b917f8cca56 pecl-dbx-1.1.0.ebuild 553
+MD5 a8f73d6acd041da8cfb1114130010394 pecl-dbx-1.1.0.ebuild 561
 MD5 df51e95ca52b8517a61833b1afd699d1 files/digest-pecl-dbx-1.1.0 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLXuvmPFBzbX68WERAu6fAJ0RUC1yiZcyCqGaYT4BCkY0/k0oPgCfWtQ4
-U4umZ5/e0q1Zgl/OFt4YfE0=
-=drSW
------END PGP SIGNATURE-----

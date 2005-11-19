@@ -1,5 +1,5 @@
-MD5 00d1b3de819e3a3e08f88bf570c9bb20 ChangeLog 536
+MD5 67600d825adc47e35ac9615571ee488d ChangeLog 655
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 f9b0c637c05c36feee26c2afbcc0d0f9 pecl-mailparse-2.1.1.ebuild 712
+MD5 f32c06a39dbe5832772e4bb3d72556d9 pecl-mailparse-2.1.1.ebuild 721
 MD5 35dd19f4a7b42bb6210dc30fc9897d63 files/cvs-mailparse.c-fix.diff 1914
 MD5 0e0417ccc35d51d676d71b0cf958ec46 files/digest-pecl-mailparse-2.1.1 63
