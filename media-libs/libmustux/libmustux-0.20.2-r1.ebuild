@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.1 2005/10/07 16:25:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.2 2005/11/19 14:33:51 herbs Exp $
 
-inherit kde-functions autotools libtool
+inherit kde-functions autotools libtool multilib
 
 DESCRIPTION="Protux - Library"
 HOMEPAGE="http://www.nongnu.org/protux"
@@ -30,6 +30,13 @@ src_unpack() {
 	cd ${S}
 	eautoreconf
 	elibtoolize
+}
+
+src_compile() {
+	econf \
+		--with-qt-lib-dir="${QTDIR}/$(get_libdir)" \
+		|| die "Error: econf failed"
+	emake || die "Error: emake failed"
 }
 
 src_install() {
