@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.49 2005/11/19 08:44:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.50 2005/11/19 13:45:32 josejx Exp $
+
+  19 Nov 2005; Joseph Jezak <josejx@gentoo.org> mplayerplug-in-3.11.ebuild:
+  Removed errant * from mplayerplug-in-3.11.
 
 *mplayerplug-in-3.15 (19 Nov 2005)
 

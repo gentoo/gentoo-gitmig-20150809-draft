@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 359772c3460eaa70a5e37f18167514a2 ChangeLog 8118
+MD5 7de747fc6485d2f271ceb766545e6ce8 ChangeLog 8240
 MD5 8642e3be6b1af51cbbf7e7790cc8ba12 files/digest-mplayerplug-in-2.80 71
 MD5 c2e30e3c9bd430344299015704bc28b6 files/digest-mplayerplug-in-2.85 71
 MD5 8c3b348cd7951d7c21c115f602e22f31 files/digest-mplayerplug-in-3.11 71
@@ -9,12 +9,12 @@ MD5 8cd4233707566dc0a0f8ba64f0529823 files/digest-mplayerplug-in-3.15 71
 MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
 MD5 a93db3f864de724c0408dc08506f2d90 mplayerplug-in-2.80.ebuild 1458
 MD5 dd12cc307a2fc2c00237b06a38cd20c5 mplayerplug-in-2.85.ebuild 1464
-MD5 01ba83f4cb718f82bbf7197a2deb8368 mplayerplug-in-3.11.ebuild 1911
+MD5 2fa37863bb4d865b409c41cd053e4ab3 mplayerplug-in-3.11.ebuild 1910
 MD5 8ee3702e328e428331f86d209a782db9 mplayerplug-in-3.15.ebuild 2061
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDfuYncsIHjyDViGQRAiPUAJ9s0L2bs6bXTRGqs2KdMmsLMbyIVwCguqK9
-Tmz6lOo8A9Mab8xRntvVbRo=
-=lN4C
+iD8DBQFDfyyacsIHjyDViGQRAhU0AJwKeu+cgqKFdboAOW9uc3KZqkdLvgCgvatB
+7BBkLfHXqKmnaSFK5tniy9o=
+=FvDe
 -----END PGP SIGNATURE-----
