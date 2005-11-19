@@ -1,4 +1,16 @@
-MD5 e434304178ece613e83dbf21445ffaa2 metadata.xml 178
-MD5 d7cb74ef232a84d50f78d154e8eb91c9 ChangeLog 754
-MD5 e0f0cf57c289febc9edbe915d6f09128 MP3-Tag-0.94.ebuild 569
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01e6a8cbb94abf5ece41eedd8f4486ca ChangeLog 914
+MD5 806b4cf8f0f7af5e59328413b15ae232 MP3-Tag-0.94.ebuild 564
+MD5 137541ce32f90dca767d7058d5380f86 MP3-Tag-0.9702.ebuild 543
 MD5 9a8c502af9b00ed6acbeb828096d7a16 files/digest-MP3-Tag-0.94 63
+MD5 cd5fdd0cf47b5fec982e097c625557ca files/digest-MP3-Tag-0.9702 66
+MD5 e434304178ece613e83dbf21445ffaa2 metadata.xml 178
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDfxr/tG5z4I8BtQoRAsymAJwLqjCsctOhv0LGR5mfe9W2X4bgkACaA5IF
+zmk1Cb7Z19CWXP0b74vwKyA=
+=upbf
+-----END PGP SIGNATURE-----
