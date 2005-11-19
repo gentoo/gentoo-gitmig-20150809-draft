@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-pdflib/pecl-pdflib-2.0.4-r1.ebuild,v 1.2 2005/10/15 22:10:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-pdflib/pecl-pdflib-2.0.4-r1.ebuild,v 1.3 2005/11/19 20:45:44 corsair Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="pdflib"
@@ -13,7 +13,7 @@ IUSE=""
 DESCRIPTION="PHP extension for creating PDF files."
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
 DEPEND="${DEPEND}
 		media-libs/pdflib"
 

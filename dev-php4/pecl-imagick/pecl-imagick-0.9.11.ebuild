@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-imagick/pecl-imagick-0.9.11.ebuild,v 1.3 2005/10/15 22:25:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-imagick/pecl-imagick-0.9.11.ebuild,v 1.4 2005/11/19 20:42:08 corsair Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_INI="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="PHP wrapper for the ImageMagick library."
 HOMEPAGE="http://pecl.php.net/imagick"
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="${DEPEND}
 		!graphicsmagick? ( >=media-gfx/imagemagick-6.2.0 )

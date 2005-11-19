@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/xdebug-1.3.2.ebuild,v 1.2 2005/10/15 22:36:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/xdebug-1.3.2.ebuild,v 1.3 2005/11/19 20:53:36 corsair Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="xdebug"
@@ -15,7 +15,7 @@ MY_P="${P/_/}"
 SRC_URI="http://www.xdebug.org/files/${MY_P}.tgz"
 S="${WORKDIR}/${MY_P}"
 LICENSE="Xdebug"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
 
 need_php_by_category
 
