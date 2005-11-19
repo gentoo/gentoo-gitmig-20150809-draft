@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.21 2005/08/26 12:31:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.22 2005/11/19 23:59:02 compnerd Exp $
+
+  19 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> jmeter-1.9.1.ebuild:
+  Fixing typo in ebuild; Resolves bug #110302
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> jmeter-2.0.1.ebuild,
   jmeter-2.0.1-r1.ebuild:

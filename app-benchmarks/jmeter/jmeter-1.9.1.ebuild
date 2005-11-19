@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.8 2005/07/17 11:14:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.9 2005/11/19 23:59:02 compnerd Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/jakarta-${P}
 src_compile () {
 	local antflags="package"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use doc && antflags="${antflags} alldocs"
+	use doc && antflags="${antflags} all-docs"
 	ant ${antflags} || die "build failed"
 }
 
