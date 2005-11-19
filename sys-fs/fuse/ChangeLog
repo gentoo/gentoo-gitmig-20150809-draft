@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.29 2005/10/23 09:13:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.30 2005/11/19 13:38:05 blubb Exp $
+
+  19 Nov 2005; Simon Stelling <blubb@gentoo.org> fuse-2.3.0.ebuild:
+  stable on amd64
 
 *fuse-2.4.1 (23 Oct 2005)
 
