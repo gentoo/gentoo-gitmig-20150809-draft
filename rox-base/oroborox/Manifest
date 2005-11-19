@@ -1,4 +1,6 @@
 MD5 9d458e3b36764708263a9f3254112ef3 oroborox-0.9.5.ebuild 544
 MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
-MD5 f30042a47b1e6572e251224a31b60f5d ChangeLog 443
+MD5 4134bbace3eac4b4277f6c5cb7376f4b ChangeLog 615
+MD5 ec2ffad9cdec5f8cf0972b2c4650fe0c oroborox-0.9.7.9.ebuild 874
 MD5 9381810c4900deba7459674996d12d0e files/digest-oroborox-0.9.5 67
+MD5 2ec7c4fc26682d6209c321fbd2cac9ff files/digest-oroborox-0.9.7.9 69

@@ -1,6 +1,12 @@
 # ChangeLog for rox-base/oroborox
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.1 2004/12/01 15:27:02 sergey Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.2 2005/11/19 18:07:18 svyatogor Exp $
+
+*oroborox-0.9.7.9 (19 Nov 2005)
+
+  19 Nov 2005; Sergey Kuleshov <svyatogor@gentoo.org>
+  +oroborox-0.9.7.9.ebuild:
+  Version bump. Ebuild by Peter Hyman.  Bug #106247.
 
 *oroborox-0.9.5 (01 Dec 2004)
 
