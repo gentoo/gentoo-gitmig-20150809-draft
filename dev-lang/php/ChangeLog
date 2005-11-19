@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.54 2005/11/10 14:44:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.55 2005/11/19 20:30:43 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> php-4.4.1-r2.ebuild,
+  php-5.0.5-r4.ebuild:
+  Added ~ppc64 keywords; bug #102649
 
   10 Nov 2005; Jason Wever <weeve@gentoo.org> php-4.4.1-r2.ebuild:
   Added ~sparc keyword as all arches but ~x86 were dropped from the 4.4.1
