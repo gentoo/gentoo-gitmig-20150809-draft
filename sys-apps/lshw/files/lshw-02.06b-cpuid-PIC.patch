@@ -18,7 +18,7 @@ http://bugs.gentoo.org/61947
  static void cpuid(int cpunumber,
  		  unsigned long idx,
  		  unsigned long &eax,
-@@ -96,7 +93,18 @@
+@@ -96,7 +93,21 @@
      edx = (*(unsigned long *) (buffer + 12));
    }
    else
@@ -29,12 +29,15 @@ http://bugs.gentoo.org/61947
 +        "cpuid\n"
 +        "movl %%ebx,%3\n"
 +        "movl %%edi,%%ebx\n"
-+        : "=a" (eax), "=c" (ecx), "=d" (edx), "=m" (ebx), "edi"
++        : "=a" (eax), "=c" (ecx), "=d" (edx), "=m" (ebx)
++        : "a" (idx)
++        : "edi"
 +#else
 +        "cpuid\n"
 +        : "=a" (eax), "=c" (ecx), "=d" (edx), "=b" (ebx)
++        : "a" (idx)
 +#endif
-+        : "a" (idx));
++    );
  }
  
  /* Decode Intel TLB and cache info descriptors */
