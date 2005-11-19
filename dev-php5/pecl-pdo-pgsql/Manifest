@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86ad7ca62ceb598fc16bf92eaa3b037a ChangeLog 586
-MD5 aaac3c00f864fff5c076a0b64d9ff739 files/digest-pecl-pdo-pgsql-0.9 61
+MD5 8445a43b92194a26913d4b3be551f3b0 ChangeLog 700
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 79b8ddd157b21aba42b43ef5b91eac11 pecl-pdo-pgsql-0.9.ebuild 1072
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDc/4jgIKl8Uu19MoRAjsDAJ9lOxUMYSCV2fl+lqdsPJGyKfg9wACfdkkF
-abd9D7jx3yTOQ9Z1GQitHUo=
-=WZJV
------END PGP SIGNATURE-----
+MD5 892d14ced558f4d080edca282b2f7e2f pecl-pdo-pgsql-0.9.ebuild 1080
+MD5 aaac3c00f864fff5c076a0b64d9ff739 files/digest-pecl-pdo-pgsql-0.9 61
