@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libgconf-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.10 2005/11/15 03:54:59 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.11 2005/11/19 21:32:04 compnerd Exp $
+
+  19 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  libgconf-java-2.12.1.ebuild:
+  Keywording ~amd64 with verification from AT (chutzpah)
 
   15 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   libgconf-java-2.12.1.ebuild:

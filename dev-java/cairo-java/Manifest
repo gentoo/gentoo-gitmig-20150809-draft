@@ -1,5 +1,5 @@
-MD5 235b257a84c460613e04679d54b0b66a ChangeLog 514
-MD5 34677ef049df34f94b98850edc0119e7 cairo-java-1.0.1.ebuild 1998
+MD5 cd17eb86a47434ed876fac9739d2edea ChangeLog 653
+MD5 684a22ccb13b980710ca8c44588dad00 cairo-java-1.0.1.ebuild 2005
 MD5 f629db15b5df144efde17453c0c98c34 files/cairo_jni_includes.patch 841
 MD5 a74a4781b3ab4f8d361c0b71dd4fae6d files/digest-cairo-java-1.0.1 68
 MD5 9fe190d25d088cdf4fd038710fd4ee93 metadata.xml 335
