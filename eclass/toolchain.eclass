@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.219 2005/11/18 03:59:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.220 2005/11/19 07:13:38 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -655,15 +655,17 @@ create_gcc_env_entry() {
 
 		# We want to list the default ABI's LIBPATH first so libtool
 		# searches that directory first.  This is a temporary
-		# workaround for libtool being stupid and using .las from
+		# workaround for libtool being stupid and using .la's from
 		# conflicting ABIs by using the first one in the search path
+
+		# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 		local abi=${DEFAULT_ABI}
 		local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 		if [[ ${MULTIDIR} == "." ]] ; then
-			LDPATH="${LIBPATH}"
+			LDPATH=${LIBPATH}
 		else
-			LDPATH="${LIBPATH}/${MULTIDIR}"
+			LDPATH=${LIBPATH}/${MULTIDIR}
 		fi
 
 		for abi in $(get_all_abis) ; do
@@ -671,9 +673,9 @@ create_gcc_env_entry() {
 
 			MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			if [[ ${MULTIDIR} == "." ]] ; then
-				LDPATH="${LDPATH}:${LIBPATH}"
+				LDPATH=${LDPATH}:${LIBPATH}
 			else
-				LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
+				LDPATH=${LDPATH}:${LIBPATH}/${MULTIDIR}
 			fi
 		done
 	fi
@@ -1487,7 +1489,6 @@ gcc-library_src_install() {
 	fi
 }
 
-
 gcc-compiler_src_install() {
 	local x=
 
@@ -1641,13 +1642,14 @@ gcc-compiler_src_install() {
 	create_eselect_conf
 }
 
-# Move around the libs to the right location.
+# Move around the libs to the right location.  For some reason,
+# when installing gcc, it dumps internal libraries into /usr/lib
+# instead of the private gcc lib path
 gcc_movelibs() {
 	# This one comes with binutils
-	rm -f ${D}${PREFIX}/lib/libiberty.a
-	rm -f ${D}${PREFIX}/lib/*/libiberty.a
-	rm -f ${D}${LIBPATH}/libiberty.a
-	rm -f ${D}${LIBPATH}/*/libiberty.a
+	find "${D}" -name libiberty.a -exec rm -f {} \;
+
+	# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 	local multiarg
 	for multiarg in $(${XGCC} -print-multi-lib) ; do
@@ -1658,10 +1660,6 @@ gcc_movelibs() {
 		local MULTIDIR=$(${XGCC} ${multiarg} --print-multi-directory)
 		local TODIR=${D}${LIBPATH}/${MULTIDIR}
 		local FROMDIR=
-
-		# This one comes with binutils
-		rm -f ${D}${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR}/libiberty.a
-		rm -f ${D}${PREFIX}/lib/${OS_MULTIDIR}/libiberty.a
 
 		[[ -d ${TODIR} ]] || mkdir -p ${TODIR}
 
