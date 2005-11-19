@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.46 2005/08/23 18:18:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.47 2005/11/19 19:48:07 compnerd Exp $
+
+*mp-3.3.12-r1 (19 Nov 2005)
+
+  19 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +mp-3.3.12-r1.ebuild:
+  Rev bumping 3.3.12 for removal of gtk2 useflag, dropping to unstable.
 
   23 Aug 2005; Fabian Groffen <grobian@gentoo.org> mp-3.3.14.ebuild:
   Marking ~ppc-macos
