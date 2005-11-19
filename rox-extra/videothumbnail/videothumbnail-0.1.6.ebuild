@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/videothumbnail-0.1.6.ebuild,v 1.1 2005/10/29 09:06:55 svyatogor Exp $
-
-inherit rox
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/videothumbnail-0.1.6.ebuild,v 1.2 2005/11/19 18:49:43 svyatogor Exp $
 
 MY_PN="VideoThumbnail"
 DESCRIPTION="This is a helper program for ROX-Filer. It provides images for video files. By Stephen Watson"
@@ -23,3 +21,4 @@ ROX_LIB_VER="2.0.2"
 APPNAME=${MY_PN}
 S=${WORKDIR}
 
+inherit rox
