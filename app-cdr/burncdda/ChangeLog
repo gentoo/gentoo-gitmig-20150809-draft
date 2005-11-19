@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/burncdda
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.13 2005/08/28 18:07:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.14 2005/11/19 20:00:43 metalgod Exp $
+
+*burncdda-1.4.1 (19 Nov 2005)
+
+  19 Nov 2005; Luis Medinas <metalgod@gentoo.org> metadata.xml,
+  +burncdda-1.4.1.ebuild:
+  Version Bump thanks to ArYiX <aryix@lugmen.org.ar> closes bug #112603.
+  Modify removing myself as the first maintainer since i belong to
+  media-optical herd.
 
 *burncdda-1.3.8 (28 Aug 2005)
 
