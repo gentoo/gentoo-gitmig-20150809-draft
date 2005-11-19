@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f57e095b107bfad90567c4cb8c1b9f95 ChangeLog 6915
 MD5 04c6e7d4ccb20b4bd86e3f5052a2a115 libquicktime-0.9.2.ebuild 1575
-MD5 def6c68178313a0e1dedc14f0e12cb93 libquicktime-0.9.4.ebuild 1469
-MD5 0e36737c2c016eabf9d2e8edab5ab668 libquicktime-0.9.7-r1.ebuild 1504
 MD5 b4c78b88026393e1b3e1fefb26137865 libquicktime-0.9.3-r1.ebuild 1547
-MD5 cea6845b671ac748095ccbaee000d32f ChangeLog 6773
+MD5 def6c68178313a0e1dedc14f0e12cb93 libquicktime-0.9.4.ebuild 1469
+MD5 1f1e4300f2f35b041e443643cf9f8f88 libquicktime-0.9.6-r1.ebuild 1523
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 3f2eba9ee3b5d5c22bbcb924bac9a3cc libquicktime-0.9.6-r1.ebuild 1514
-MD5 a1721b9ba48b6453245fce4f3fe04e0b files/libquicktime-0.9.4-cflags.patch 1455
+MD5 2a38ebfc5d4e16578009f55d3e99c243 libquicktime-0.9.7-r1.ebuild 1513
+MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
 MD5 2945e87a4f7f7263e45ea3c392895011 files/digest-libquicktime-0.9.3-r1 70
+MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
 MD5 c0abede6c55083f821fd971de2a17ef1 files/digest-libquicktime-0.9.6-r1 70
+MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
+MD5 a1721b9ba48b6453245fce4f3fe04e0b files/libquicktime-0.9.4-cflags.patch 1455
+MD5 d8c28d6e35d353035732b91b0ab95234 files/libquicktime-0.9.6-cflags.patch 1806
 MD5 665eeaef01d9cd6ccc580202630897be files/digest-libquicktime-0.9.7-r1 70
 MD5 71fde588b024e1d8c472afa0081010b9 files/libquicktime-0.9.7-dv.patch 651
-MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
-MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
-MD5 d8c28d6e35d353035732b91b0ab95234 files/libquicktime-0.9.6-cflags.patch 1806
-MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbRZqViELBEf1JB0RAvlkAJ9rM+8wMfr5VzEfjJatnK9KUt+yPACfWWag
-1ll2jj5Z7YNluBWhbJ99S0A=
-=O5yh
------END PGP SIGNATURE-----
