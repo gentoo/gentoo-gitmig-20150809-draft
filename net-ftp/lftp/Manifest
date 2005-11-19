@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6306d2a88363c56000b077029d99af01 ChangeLog 13117
+MD5 ef1d50acba03f1729433dd97abab9528 ChangeLog 13233
 MD5 8e29dd236e9977e83aee442106844d7e files/digest-lftp-3.0.13 65
 MD5 0401db3592b8f8ee8b750f12b84cfde3 files/digest-lftp-3.3.0 63
 MD5 500f6bc400867598be6e6ef4ee5274a5 files/digest-lftp-3.3.3 63
+MD5 16ab74adb63da682a17a18f1d7885b91 files/digest-lftp-3.3.4 63
 MD5 929ba0e30bdea8ef09f54152b9aa0c8f lftp-3.0.13.ebuild 1804
 MD5 2e06b00d03a53136c81d8d8e18c6c13f lftp-3.3.0.ebuild 1777
 MD5 c77bd1b11f4e4a6a066d37118b14196f lftp-3.3.3.ebuild 1777
+MD5 ce888787f27f2cc48623293b4616c99c lftp-3.3.4.ebuild 1777
 MD5 bd30469259dd912781df916084edcacd metadata.xml 430
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDdzMxmdTrptrqvGERAjUjAJ4peq/v7q/ts+A5bBTzDR830jrFhgCdEsAT
-+DsR6uU5OkO8pqvWGOiRPJg=
-=gAAn
+iD8DBQFDf7fJmdTrptrqvGERAgdGAJ9alDOkoMaYYIJX9KJiqFvzLn/OlACcDYkm
+pOm9/qPb5GqB1aoVLrcKhPo=
+=k5Sh
 -----END PGP SIGNATURE-----
