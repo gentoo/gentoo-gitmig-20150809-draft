@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fe95e86963c2a0787fe7173b074ac5e1 ChangeLog 2806
+MD5 fc0b96dfd059b25501f0430879e4992f ChangeLog 2961
 MD5 58d5f96660d92a89e1c9bc4316a59451 PEAR-Archive_Tar-1.2.ebuild 384
-MD5 a9787a4e6c0e0b060bfc8fabc544e729 PEAR-Archive_Tar-1.3.1-r1.ebuild 393
-MD5 d25338f198c272157f9ec67fadd1201d PEAR-Archive_Tar-1.3.1.ebuild 390
+MD5 b3bed8b501c864db87764989f93841d5 PEAR-Archive_Tar-1.3.1.ebuild 392
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 b5628ab4b7850349d3b1fee5f1e3859c PEAR-Archive_Tar-1.3.1-r1.ebuild 401
 MD5 d6e6a0abb56ce9ac771f2ebbe38f47c6 files/digest-PEAR-Archive_Tar-1.2 63
 MD5 6ab681a0eae04a2760bfbe24ee1f21d7 files/digest-PEAR-Archive_Tar-1.3.1 65
 MD5 6ab681a0eae04a2760bfbe24ee1f21d7 files/digest-PEAR-Archive_Tar-1.3.1-r1 65
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdAFRgIKl8Uu19MoRAiTNAJ9BW2RlqoLNXyqeNspxGC7YATlARACfbqGP
-XmFQLiA5RHNrMZB4XI+Ngm4=
-=8ub5
------END PGP SIGNATURE-----
