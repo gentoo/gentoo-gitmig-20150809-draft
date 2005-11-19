@@ -1,4 +1,7 @@
-MD5 d2b817245bbfe68ca4322e989f789642 ChangeLog 24131
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 88d2fbb4fe0c076fa54e21fe605dc93e ChangeLog 24133
 MD5 ad343861ae1ccea97bf3bbcdb61ba9e0 ati-drivers-8.14.13-r2.ebuild 7005
 MD5 fff3d657c788a8d71b363ae449d9a845 ati-drivers-8.14.13-r3.ebuild 7914
 MD5 c49603b680cc13d2dc3cecec1d8b45d7 ati-drivers-8.14.13-r4.ebuild 7497
@@ -32,3 +35,10 @@ MD5 275238baa6d2db2b96bc8b98275a7928 files/fglrx-8.14.13-alt-2.6.12-agp.patch 25
 MD5 73907ca81a7435350b4529ddaa7305d5 files/ioctl32.patch 368
 MD5 0a9c95a134ef4f317240c54f62e9480e files/p1.patch 1120
 MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDf4EUI1lqEGTUzyQRAtVVAJ47fu/KcgkMLzzVKgM/DBQxfc6B7ACgivBg
+0ulnwh/S7MQ21Yn71RYB1zY=
+=Pgfe
+-----END PGP SIGNATURE-----
