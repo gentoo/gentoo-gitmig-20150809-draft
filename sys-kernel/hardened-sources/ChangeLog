@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.65 2005/11/14 20:18:19 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.66 2005/11/19 22:25:14 kang Exp $
+
+*hardened-sources-2.4.32 (19 Nov 2005)
+
+  19 Nov 2005; Guillaume Destuynder <kang@gentoo.org>
+  +hardened-sources-2.4.32.ebuild:
+  Bump to 2.4.32, includes RSBAC+PaX patchset with a local 'rsbac' keyword.
+  Add the 'rsbac' USE flag in /etc/portage/package.use for hardened-sources to
+  have RSBAC instead of GrSecurity patchset. (echo sys-kernel/hardened-sources
+  rsbac >> /etc/portage/package.use)
 
 *hardened-sources-2.6.14 (14 Nov 2005)
 
