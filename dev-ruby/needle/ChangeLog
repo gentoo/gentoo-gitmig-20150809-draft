@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/needle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/ChangeLog,v 1.4 2005/10/20 15:17:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/ChangeLog,v 1.5 2005/11/19 17:07:16 josejx Exp $
+
+  19 Nov 2005; Joseph Jezak <josejx@gentoo.org> needle-1.2.1-r1.ebuild:
+  Marked ppc stable.
 
 *needle-1.2.1-r1 (20 Oct 2005)
 
