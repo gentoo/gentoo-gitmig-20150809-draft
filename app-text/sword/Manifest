@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b04860b4f828dc268f4f2e12e6fe75d5 ChangeLog 2913
-MD5 c64d2ee3bc85ebba7188cfbd40098c60 files/digest-sword-1.5.8 64
+MD5 b5434c8c9d602685c759406ba80f2769 ChangeLog 2999
+MD5 c621aa0f1f6ba6fbe77bd87fdbe80aba metadata.xml 404
+MD5 e0a22401c6ecae64f31849c6637df96d sword-1.5.8_pre1.ebuild 1620
+MD5 88a2f2530173553e9494198cc1f62b0d sword-1.5.8.ebuild 1223
 MD5 e8f2f6525057f6ef172bccb514469ff3 files/digest-sword-1.5.8_pre1 70
 MD5 eebb7c4602450ff87a76e5a693e72da7 files/sword.conf 37
-MD5 c621aa0f1f6ba6fbe77bd87fdbe80aba metadata.xml 404
-MD5 663b900119ab07cd252cde66dee9d7f5 sword-1.5.8.ebuild 1226
-MD5 e0a22401c6ecae64f31849c6637df96d sword-1.5.8_pre1.ebuild 1620
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDftexCRZPokWLroQRAvykAJ48RPIfG+vJfgV+6fygtjenMt6eJgCgkIPy
-kVf003s2X/IJSQg6CGalTq0=
-=/J2i
------END PGP SIGNATURE-----
+MD5 c64d2ee3bc85ebba7188cfbd40098c60 files/digest-sword-1.5.8 64
