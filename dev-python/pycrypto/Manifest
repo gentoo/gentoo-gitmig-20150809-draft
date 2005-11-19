@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8de27bc518f75ebaba8b048aec87f02b pycrypto-2.0.1.ebuild 593
-MD5 f9385559bb015b37c9e2ff2863e25eee pycrypto-2.0-r1.ebuild 594
-MD5 1ff484937e9f3be035fe383ea160e8ad pycrypto-2.0.ebuild 573
-MD5 44877b6ed99242a7cab50a1941a19351 pycrypto-1.9_alpha4.ebuild 710
-MD5 3172f23539eb54a31ad3a7d8321d4557 pycrypto-1.9_alpha6.ebuild 622
-MD5 7476bbccb41cfe57078eeef359464d52 ChangeLog 2346
-MD5 34ca1f78f83cb8489237bffc41f4cd24 metadata.xml 827
-MD5 b9e6cee737dea02a879ca7f8927b769a files/digest-pycrypto-2.0.1 66
+MD5 9a9f05fb111ad9ec8781460e75530756 ChangeLog 2483
 MD5 88124038f9bc0fb6771c9d12f9bcbac9 files/digest-pycrypto-1.9_alpha4 66
 MD5 b59c388eacd676d40313043ecea7841e files/digest-pycrypto-1.9_alpha6 66
 MD5 d204e299027be7fac9649389cf925a46 files/digest-pycrypto-2.0 64
 MD5 d204e299027be7fac9649389cf925a46 files/digest-pycrypto-2.0-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGHSBomPajV0RnrERAlhBAJ9iH4JJV94cwZt+sQtOTbMjfnIN/gCfSNo6
-k+cePQyG3UvIjbj3x25f/zc=
-=k/ap
------END PGP SIGNATURE-----
+MD5 b9e6cee737dea02a879ca7f8927b769a files/digest-pycrypto-2.0.1 66
+MD5 5b03cb0967f5fb96991f2463fa415797 metadata.xml 1774
+MD5 44877b6ed99242a7cab50a1941a19351 pycrypto-1.9_alpha4.ebuild 710
+MD5 3172f23539eb54a31ad3a7d8321d4557 pycrypto-1.9_alpha6.ebuild 622
+MD5 f9385559bb015b37c9e2ff2863e25eee pycrypto-2.0-r1.ebuild 594
+MD5 8de27bc518f75ebaba8b048aec87f02b pycrypto-2.0.1.ebuild 593
+MD5 1ff484937e9f3be035fe383ea160e8ad pycrypto-2.0.ebuild 573
