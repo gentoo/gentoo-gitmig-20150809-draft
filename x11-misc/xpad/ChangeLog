@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.40 2005/11/19 15:55:50 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.41 2005/11/19 17:53:21 fmccor Exp $
+
+  19 Nov 2005; Ferris McCormick <fmccor@gentoo.org> xpad-2.10.ebuild:
+  Stable on sparc at developer's request (Bug #113003).  Builds fine with
+  gtk+-2.8.7 and creates yellow sticky note pads.
 
   19 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> xpad-2.10.ebuild:
   stable on alpha
