@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Device-SerialPort
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/ChangeLog,v 1.6 2005/10/02 12:37:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/ChangeLog,v 1.7 2005/11/19 08:37:08 mcummings Exp $
+
+*Device-SerialPort-1.002 (19 Nov 2005)
+
+  19 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  +Device-SerialPort-1.002.ebuild:
+  Version bump
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   Device-SerialPort-1.000002.ebuild:

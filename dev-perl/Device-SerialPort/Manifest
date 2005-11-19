@@ -1,4 +1,6 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 05159db8e30fbba89ea3c7e09596e890 ChangeLog 920
 MD5 781c93e90d9f58d4b5ca22b841245ab2 Device-SerialPort-1.000002.ebuild 518
+MD5 12349dded38e1263340498d60f908bad Device-SerialPort-1.002.ebuild 552
 MD5 9d23d4f863fdb725c894659192410b78 files/digest-Device-SerialPort-1.000002 78
+MD5 41694e503d2a0dce8ca1dd7df65a648f files/digest-Device-SerialPort-1.002 75
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
