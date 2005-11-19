@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-sqlite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/ChangeLog,v 1.5 2005/09/16 23:04:43 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/ChangeLog,v 1.6 2005/11/19 20:27:36 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> pecl-sqlite-1.0.3.ebuild:
+  Added ~ppc64 keywords; bug #102649
 
   16 Sep 2005; Christian Parpart <trapni@gentoo.org>
   pecl-sqlite-1.0.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/php-java-bridge
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/ChangeLog,v 1.4 2005/11/19 18:39:03 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/ChangeLog,v 1.5 2005/11/19 20:24:52 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  php-java-bridge-2.0.7.ebuild, php-java-bridge-2.0.8.ebuild:
+  Added ~ppc64 keywords; bug #102649
 
 *php-java-bridge-2.0.8 (19 Nov 2005)
 
