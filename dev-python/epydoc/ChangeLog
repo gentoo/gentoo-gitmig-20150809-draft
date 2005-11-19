@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.15 2005/09/18 10:18:47 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.16 2005/11/19 10:35:00 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
 *epydoc-2.1-r2 (18 Sep 2005)
 

@@ -8,4 +8,7 @@ editing environment for developing Python  programs. It
 is intended primarily for use in schools, and is a tribute to 
 DrScheme.
 </longdescription>
+<longdescription lang="ja">
+DrPythonはPython言語プログラム用の、柔軟で、簡単で、安定した開発環境です。DrSchemeに触発され、学校での教材となる事が念頭にあります。
+</longdescription>
 </pkgmetadata>

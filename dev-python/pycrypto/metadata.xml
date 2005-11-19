@@ -18,4 +18,21 @@ the contents of the package:
 	* Some demo programs (currently all quite old and outdated).
 
 </longdescription>
+<longdescription lang="ja">
+このPython言語のクリプトグラフィー・ツールキットは、暗号手法のアルゴリズムとプロ
+トコルの集合で、Python言語から利用されるための実装です。このパッケージ内容は以下
+です。
+
+
+        * Hash ファンクション: MD2, MD4, RIPEMD, SHA256.
+        * ブロック・エンクリプション・アルゴリズム: AES, ARC2, Blowfish, CAST, DES,
+                Triple-DES, IDEA, RC5.
+        * ストリーム・エンクリプション・アルゴリズム: ARC4, simple XOR.
+        * 公開鍵アルゴリズム: RSA, DSA, ElGamal, qNEW.
+        * プロトコル: All-or-nothing transforms, chaffing/winnowing.
+        * その他: RFC1751 module for converting 128-key keys into
+                a set of English words, primality testing.
+        * デモ・プログラム(現在では完全に古く時代遅れなもの)
+
+</longdescription>
 </pkgmetadata>

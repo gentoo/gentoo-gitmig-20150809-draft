@@ -13,5 +13,11 @@ supported drawing primitives. A particular drawing context is provided
 in the form of a derived class. PIDDLE applications will be able to
 automatically select an appropriate backend for the user's environment. 
 </longdescription>
-
+<longdescription lang="ja">
+PIDDLEはクロスプラットフォームとクロスメディアの両方のマナーに沿った二次元画像を
+作成するためのPython言語モジュールです。つまり、これはファイル出力(Postscript, PDF, GIFなど)と同じ様にスクリーン・グラフィック(例えばQuickDraw, TK)をサポートし>ます。最大限の効果と品質のため、ネイティブ2D描画を各バックエンドの呼出しのように
+します。これは原始的なサポートされた描画方法を指すメソッドを持ったベース・クラス
+(Paddle.Canvas)を明確にする事で働きます。特別のドロー・コンテキストは派生元クラ>スのフォームで提供されます。PIDDLEアプリケーションはユーザー環境に適切なバックエ
+ンドを自動的に選択するでしょう。
+</longdescription>
 </pkgmetadata>

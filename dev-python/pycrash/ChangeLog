@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrash
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.7 2005/10/30 01:58:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.8 2005/11/19 10:55:07 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   30 Oct 2005; Jason Wever <weeve@gentoo.org> pycrash-0.4_pre3.ebuild:
   Added ~sparc keyword.

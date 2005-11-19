@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyclimate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.8 2005/08/26 12:50:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.9 2005/11/19 10:52:52 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> pyclimate-1.2.1-r1.ebuild:
   add ~ia64

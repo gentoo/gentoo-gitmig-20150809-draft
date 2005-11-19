@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ply
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.3 2004/09/02 08:41:08 lv Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.4 2005/11/19 10:49:30 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   02 Sep 2004; Travis Tilley <lv@gentoo.org> ply-1.5.ebuild:
   added ~amd64 keyword

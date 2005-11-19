@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/formkit
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formkit/ChangeLog,v 1.1 2004/10/23 12:16:02 satya Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formkit/ChangeLog,v 1.2 2005/11/19 10:36:23 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
 *formkit-0.6.1 (23 Oct 2004)
 

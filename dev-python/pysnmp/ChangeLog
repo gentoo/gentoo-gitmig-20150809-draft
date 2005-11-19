@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.10 2005/11/15 20:42:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.11 2005/11/19 11:06:33 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   15 Nov 2005; <dang@gentoo.org> pysnmp-3.4.2.ebuild:
   Marked ~amd64

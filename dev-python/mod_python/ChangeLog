@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.37 2005/10/14 01:58:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.38 2005/11/19 10:42:22 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   14 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   mod_python-3.1.4-r1.ebuild:

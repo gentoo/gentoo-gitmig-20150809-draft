@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygoogle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.12 2005/07/02 16:48:16 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.13 2005/11/19 10:59:44 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   02 Jul 2005; Fernando Serboncini <fserb@gentoo.org>
   -pygoogle-0.5.2.ebuild, pygoogle-0.6.ebuild:

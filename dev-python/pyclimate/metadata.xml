@@ -15,4 +15,10 @@
  filters, kernel based probability density function estimation and access 
  to DCDFLIB.C library.
 </longdescription>
+<longdescription lang="ja">
+このパッケージはPython言語を使った気候の変化を分析する必要なタスクを終えるために
+デザインされました。幾つかの単純なI/O操作、COARDS-compliant netCDFファイルの操作
+、EOF解析、カップル・データのSVDとCCA解析、幾つかのリニア・デジタル・フィルター>、カーネル・ベースのプロバビリティ・デンシティ・ファンクション・エスティメーショ
+ンとDCDFLIB.Cライブラリへのアクセス等の機能を提供します。
+</longdescription>
 </pkgmetadata>

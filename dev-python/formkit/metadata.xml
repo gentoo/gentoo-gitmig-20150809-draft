@@ -9,4 +9,7 @@
 <longdescription>
 FormKit is a python library to handle server-side www forms. Written for Webware WebKit, it can be used stand-alone as well.
 </longdescription>
+<longdescription lang="ja">
+FormKitはサーバーサイドのWWWフォームを扱うためのPython言語ライブラリです。Webware Webkit で記述され、スタンドアローンとしても使えます。
+</longdescription>
 </pkgmetadata>

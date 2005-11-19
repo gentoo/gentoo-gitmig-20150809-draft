@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.21 2005/09/26 16:06:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.22 2005/11/19 10:38:36 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   26 Sep 2005; Alastair Tse <liquidx@gentoo.org> -ipython-0.5.0.ebuild,
   -ipython-0.6.6.ebuild, -ipython-0.6.10.ebuild, -ipython-0.6.11.ebuild,

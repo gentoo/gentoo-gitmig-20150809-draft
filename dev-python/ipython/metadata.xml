@@ -22,4 +22,22 @@ Main features:
 * Easily embeddable in other Python programs.
 * Integrated access to the pdb debugger and the Python profiler.
 </longdescription>
+<longdescription lang="ja">
+対話的に利用する場合にPythonインタープリタから、より機能が豊富なIPythonへ置き換>える事ができます。
+
+主機能：
+* 内包的オブジェクトの分析。
+* 入力ヒストリーはセッションを越えて記憶し続けます。
+* 出力は自動作成されるリファレンスのセッション間はキャッシュします。
+* Readlineを利用した名前補完。
+* 環境管理とIPythonまたはOSのどちらかに関係するタスク実行のためのmagic
+  コマンドを拡張可能なシステム。
+* 異なるセットアップを簡単に交換できるコンフィグレーション・システム。
+  (毎回起動時に、$PYTHONSTARTUP環境変数を指定するよりも簡単です。)
+* セッション・ロギングとセッション・リローディング。
+* 特別な状況時のための拡張可能な構文解析。
+* ユーザー定義できるエイリアス・システムでシステム・シェルにアクセス。
+* 他のPython言語プログラムを組み込むのが簡単。
+* pdbデバッガとprofilerへの統合アクセス。
+</longdescription>
 </pkgmetadata>

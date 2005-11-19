@@ -5,5 +5,7 @@
 <longdescription>
 python-gtkextra is Python bindings for the gtk+extra libraries
 </longdescription>
-
+<longdescription lang="ja">
+Python-GTKextraはGTK+extraライブラリを目的としたPython言語バインディングです。
+</longdescription>
 </pkgmetadata>

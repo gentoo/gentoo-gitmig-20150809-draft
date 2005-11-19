@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymetar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.6 2005/04/24 13:08:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.7 2005/11/19 11:03:39 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pymetar-0.8.ebuild:
   Stable on ppc.

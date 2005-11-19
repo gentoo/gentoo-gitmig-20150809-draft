@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/drpython
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.7 2005/08/09 21:20:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.8 2005/11/19 10:30:06 chriswhite Exp $
+
+  19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added japanese metadata.xml translation thanks to Yoshino-san.
 
   09 Aug 2005; Luis Medinas <metalgod@gentoo.org> drpython-3.10.13.ebuild:
   Added ~amd64 keywords. Closes bug #98439 .
