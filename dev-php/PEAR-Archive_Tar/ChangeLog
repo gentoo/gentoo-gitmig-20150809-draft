@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Archive_Tar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.22 2005/09/17 17:38:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.23 2005/11/19 19:39:31 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-Archive_Tar-1.3.1.ebuild, PEAR-Archive_Tar-1.3.1-r1.ebuild:
+  Added ~ppc64 keyword; bug #102649
 
   17 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org>
   PEAR-Archive_Tar-1.3.1-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_RPC
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/ChangeLog,v 1.34 2005/10/20 05:57:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/ChangeLog,v 1.35 2005/11/19 19:41:31 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> PEAR-XML_RPC-1.4.4.ebuild:
+  Added ~ppc64 keyword; bug #102649
 
 *PEAR-XML_RPC-1.4.4 (20 Oct 2005)
 

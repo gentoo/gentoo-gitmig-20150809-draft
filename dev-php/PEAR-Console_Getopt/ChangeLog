@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Console_Getopt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getopt/ChangeLog,v 1.15 2005/09/17 17:43:21 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getopt/ChangeLog,v 1.16 2005/11/19 19:43:31 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-Console_Getopt-1.2.ebuild, PEAR-Console_Getopt-1.2-r1.ebuild:
+  Added ~ppc64 keyword; bug #102649
 
   17 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org>
   PEAR-Console_Getopt-1.2-r1.ebuild:
