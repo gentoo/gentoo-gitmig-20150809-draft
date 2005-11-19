@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.123 2005/10/16 10:41:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.124 2005/11/19 14:53:04 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> koffice-1.4.2.ebuild:
+  Stable on ppc64; bug #112840
 
   16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> koffice-1.4.2.ebuild:
   Sorry, kdebindings was still present here for an artifact, going back on

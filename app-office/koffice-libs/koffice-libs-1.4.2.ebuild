@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.4.2.ebuild,v 1.2 2005/10/11 18:19:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.4.2.ebuild,v 1.3 2005/11/19 14:32:23 corsair Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-data)"

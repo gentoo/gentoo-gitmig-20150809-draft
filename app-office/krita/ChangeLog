@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.17 2005/10/16 10:44:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.18 2005/11/19 14:50:07 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> krita-1.4.2.ebuild:
+  Stable on ppc64; bug #112840
 
   16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> krita-1.4.2.ebuild:
   Sorry, kdebindings was still present here for an artifact, going back on

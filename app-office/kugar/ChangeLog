@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kugar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.17 2005/10/13 16:24:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.18 2005/11/19 14:47:22 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> kugar-1.4.2.ebuild:
+  Stable on ppc64; bug #112840
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org> kugar-1.4.2.ebuild:
   Mark 1.4.2 ~ia64

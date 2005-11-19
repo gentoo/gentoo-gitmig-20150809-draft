@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.14 2005/10/13 13:29:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.15 2005/11/19 14:42:39 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> kexi-1.4.2.ebuild:
+  Stable on ppc64; bug #112840
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org> kexi-1.4.2.ebuild:
   Mark 1.4.2 ~ia64

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.20 2005/10/13 19:24:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.21 2005/11/19 14:32:23 corsair Exp $
+
+  19 Nov 2005; Markus Rothe <corsair@gentoo.org> koffice-libs-1.4.2.ebuild:
+  Stable on ppc64; bug #112840
 
   13 Oct 2005; Brent Baude <ranger@gentoo.org> koffice-libs-1.4.1.ebuild:
   Marking ppc64 stable for kword security fix
