@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pylibpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.7 2005/04/03 10:46:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.8 2005/11/19 18:30:28 liquidx Exp $
+
+*pylibpcap-0.5.1 (19 Nov 2005)
+
+  19 Nov 2005; Alastair Tse <liquidx@gentoo.org> +files/0.4-swig.patch,
+  pylibpcap-0.4.ebuild, +pylibpcap-0.5.1.ebuild:
+  added patch so 0.4 compiles with newer swig (#112464). version bump
 
   03 Apr 2005; Simon Stelling <blubb@gentoo.org> pylibpcap-0.4.ebuild:
   added ~amd64

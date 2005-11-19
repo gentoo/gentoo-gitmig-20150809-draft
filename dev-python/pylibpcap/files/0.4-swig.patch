@@ -1,0 +1,11 @@
+--- setup.py.orig	2005-11-18 00:11:02.000000000 +0100
++++ setup.py	2005-11-18 00:11:29.000000000 +0100
+@@ -21,7 +21,7 @@
+ #    self.run_command('make_clean')
+ 
+ class pcap_build_ext(build_ext):
+-  def swig_sources(self, sources):
++  def swig_sources(self, sources, extension=None):
+   
+       """Walk the list of source files in 'sources', looking for SWIG
+       interface (.i) files.  Run SWIG on all that are found, and
