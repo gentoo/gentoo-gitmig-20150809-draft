@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 31544d8d7b7e74d1dc0c885b357daa18 mpeg4ip-1.1.ebuild 1756
 MD5 1b1b7046bccf0f835f8e3c5b68063d8e metadata.xml 255
-MD5 2dbb8fe0db12471aa725a31c4762747e ChangeLog 4711
-MD5 6159e022a67b774b46b62de28083bc79 mpeg4ip-1.4.1.ebuild 3308
+MD5 4a1d2954f18bc7134095f468a9831117 ChangeLog 4821
+MD5 fa65b1bd694348c5794512bc6db1ca30 mpeg4ip-1.4.1.ebuild 3389
 MD5 3152b9a0685b9506c5ccd32eef11376c mpeg4ip-1.3.ebuild 3165
 MD5 47b75e71dec24165d7bcf3a5b55d785d files/mpeg4ip-1.1-gentoo-fixes.patch 844
 MD5 f66eabf6e140aef8962a75cf06d15df0 files/digest-mpeg4ip-1.4.1 66
@@ -14,7 +14,7 @@ MD5 9dc5a82373d611ff96499fe69690fe62 files/digest-mpeg4ip-1.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDdD6vmOfEJZHYOKcRAvjhAKDOlwAiOaIfkeAljAHswOaApDYdAwCgrPrY
-KYfOpqhKf0HbLyjFsQrqOhI=
-=TUTg
+iD8DBQFDf10HmOfEJZHYOKcRAlZTAKDTH6Ho/dUZiPPFdTrwssFZQm/jpgCgic9I
+R/QoLt+SfIMHi9JprB8yelw=
+=bEJS
 -----END PGP SIGNATURE-----
