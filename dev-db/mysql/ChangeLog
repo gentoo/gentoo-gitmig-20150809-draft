@@ -1,6 +1,21 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.260 2005/11/06 16:26:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.261 2005/11/19 03:58:40 vivo Exp $
+
+  19 Nov 2005; Francesco Riosa <vivo@gentoo.org> +files/mysql-slot.conf.d,
+  +files/mysql-slot.rc6:
+  These two are born for slotted MySQL, however they work as is on normal MySQL
+  installations too. (require my_print_defaults)
+  Features added or changed
+  - Not using mysqld_safe anymore
+  - preparsing of my.cnf file, all options outed at startup
+  - (possible to) override my.cnf option from conf.d/mysql
+  - Start multiple server with different config files
+  - using new svc "--nicelevel" option, nice level may be specified on per
+    server basis
+  - stronger error handling
+  - some new warnings
+  - slotted mysql management
 
   06 Nov 2005; Jason Wever <weeve@gentoo.org> mysql-5.0.15.ebuild:
   Added ~sparc keyword.
