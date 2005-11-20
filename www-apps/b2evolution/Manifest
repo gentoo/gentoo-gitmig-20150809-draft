@@ -1,5 +1,5 @@
-MD5 15ab915419c927e5014cf00065058c7f ChangeLog 1992
+MD5 263b1a55befd561a1f2117078c840545 ChangeLog 2091
 MD5 a87207b3b148a8e1057c02dad9d02af8 metadata.xml 247
-MD5 5215b77101e33b38b4f17fd418935ca9 b2evolution-0.9.1.ebuild 1214
+MD5 24131224d61c768490af97a3e1a4b36e b2evolution-0.9.1.ebuild 1215
 MD5 aa3594668732d94839440295a8b4fb79 files/digest-b2evolution-0.9.1 79
 MD5 d584b5d4ec8d7378cbfcc77cde85306d files/postinstall-en.txt 340

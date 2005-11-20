@@ -1,5 +1,5 @@
-MD5 c96afbb9bfe7301cd69145868835fd06 ChangeLog 9281
+MD5 50e2ea733da83a9ef08687d7d88555ec ChangeLog 9447
 MD5 24a724cdfd1390bba450f4b7c1a9dfc5 metadata.xml 360
-MD5 c84dfde7629a5ecc71042dbabdd10873 phpwebsite-0.10.2_rc2.ebuild 1415
+MD5 2d402247fb119bc714c93bc295e2a0ec phpwebsite-0.10.2_rc2.ebuild 1414
 MD5 57b645768c6c1c4f1f09c26085385b16 files/digest-phpwebsite-0.10.2_rc2 74
 MD5 e5cab3ec158303e1d64a76d9eacd5cb6 files/postinstall-en.txt 4642
