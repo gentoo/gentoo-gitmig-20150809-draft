@@ -20,5 +20,8 @@
 	<longdescription lang="vi">
 		Nhóm gnustep-libs chứa các thư viện GNUstep.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria gnustep-libs contiene le librerie di GNUstep.
+	</longdescription>
 </catmetadata>
 
