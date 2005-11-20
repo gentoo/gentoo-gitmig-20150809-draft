@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-2.4.1.ebuild,v 1.5 2005/11/20 21:11:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-2.4.1.ebuild,v 1.6 2005/11/20 22:27:30 yoswink Exp $
 
 inherit eutils webapp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://phpsysinfo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/phpsysinfo/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="$DEPEND
