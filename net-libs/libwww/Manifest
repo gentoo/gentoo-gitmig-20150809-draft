@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bdd0331eafe412eb68e9ffcde2337d49 ChangeLog 6766
+MD5 02b138b9457d514cb4d8da32d6197a69 ChangeLog 6872
 MD5 078b6239f293e1cc65f3f977b3136317 files/digest-libwww-5.4.0-r3 151
 MD5 4c3f7314020d5a1a6a01463a71b4944c files/digest-libwww-5.4.0-r4 151
 MD5 1866b237427a244b9923469b52f54473 files/libwww-5.4.0-autoconf-gentoo.diff 1089
@@ -11,12 +8,5 @@ MD5 6853cd848815d9446ef820e3a74878ca files/libwww-5.4.0-htbound.patch 13279
 MD5 b0a8e638d02da0d0284e8555866f1f38 files/libwww-5.4.0-mysql-4.1.patch 1674
 MD5 e99f48d15e0834666b84203b48805872 files/libwww-config-liborder.patch 776
 MD5 4c70dae7ce4964982b3ebe728633f9f0 libwww-5.4.0-r3.ebuild 1943
-MD5 5295acb31c677963104fea77126871e3 libwww-5.4.0-r4.ebuild 2145
+MD5 469a45f9eb035116e1c88cfaee53eff7 libwww-5.4.0-r4.ebuild 2145
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeYQ8gIKl8Uu19MoRAnL9AJ0ew3n0gYZNbAcaEJUay7U8idoU9gCeK4tX
-x8YUXDF/ZMIUcJ78fztB0as=
-=bbpM
------END PGP SIGNATURE-----

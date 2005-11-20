@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.48 2005/11/06 02:23:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.49 2005/11/20 13:21:05 hardave Exp $
+
+  20 Nov 2005; Hardave Riar <hardave@gentoo.org> libwww-5.4.0-r4.ebuild:
+  Stable on mips, bug #109040.
 
   06 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> libwww-5.4.0-r4.ebuild:
   Stable on sh.
