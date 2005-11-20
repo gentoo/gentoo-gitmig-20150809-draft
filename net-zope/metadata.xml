@@ -22,5 +22,9 @@
 		Nhóm net-zope chứa các phần mềm liên quan đến Zope (zope.org)
 		bao gồm các sản phẩm của bên thứ ba.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-zope contiene tutto il software relativo a Zope (zope.org)
+		compreso il software sviluppato da terze parti.
+	</longdescription>
 </catmetadata>
 
