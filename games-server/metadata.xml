@@ -19,5 +19,8 @@
 	<longdescription lang="vi">
 		Nhóm games-server chứa các game server.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria games-server contiene server per i giochi multigiocatore.
+	</longdescription>
 </catmetadata>
 
