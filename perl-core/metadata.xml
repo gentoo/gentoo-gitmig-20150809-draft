@@ -25,5 +25,9 @@
 		Nhóm perl-core chứa các thư viện và tiện ích liên quan
 		đến ngôn ngữ lập trình Perl.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria perl-core contiene librerie ed utilità per il linguaggio di
+		programmazione Perl.
+	</longdescription>
 </catmetadata>
 
