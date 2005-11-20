@@ -25,5 +25,8 @@
 		Nhóm dev-dotnet chứa các thư viện và tiện ích liên quan
 		đến môi trường lập trình .NET.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-dotnet contiene librerie ed utilità per l'ambiente .NET.
+	</longdescription>
 </catmetadata>
 
