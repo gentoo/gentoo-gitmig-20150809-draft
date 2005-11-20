@@ -1,9 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.5 2005/10/24 17:25:52 blubb Exp $
-
-# 2005/03/18 Danny van Dyk <kugelfang@gentoo.org>
-# Masked due to Security BUG #85347. Doesn't pass make check.
-# All versions affected.
-net-libs/openslp
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.6 2005/11/20 18:43:27 dang Exp $
 
 # 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
 # This is a stub file 'cause glibc provides 32bit libs on newer profiles
