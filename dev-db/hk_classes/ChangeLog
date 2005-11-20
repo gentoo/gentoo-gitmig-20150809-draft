@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.37 2005/11/19 05:53:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.38 2005/11/20 08:02:03 halcy0n Exp $
+
+  20 Nov 2005; Mark Loeser <halcy0n@gentoo.org> hk_classes-0.7.4a.ebuild:
+  Stable on x86; bug #112832
 
   19 Nov 2005; Jason Wever <weeve@gentoo.org> hk_classes-0.7.4a.ebuild:
   Stable on SPARC wrt bug #112832.
