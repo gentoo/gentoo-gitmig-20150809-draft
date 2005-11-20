@@ -23,5 +23,9 @@
 	<longdescription lang="vi">
 		Nhóm net-nntp chứa các phần mềm NNTP (Network News Transfer Protocol).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-nntp contiene software NNTP (Network News Transfer
+		Protocol).
+	</longdescription>
 </catmetadata>
 
