@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.25 2005/11/19 23:02:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.26 2005/11/20 02:59:10 josejx Exp $
+
+  20 Nov 2005; Joseph Jezak <josejx@gentoo.org> sword-1.5.8.ebuild:
+  Marked ppc stable for bug #112834.
 
   19 Nov 2005; Simon Stelling <blubb@gentoo.org> sword-1.5.8.ebuild:
   stable on amd64
