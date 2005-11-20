@@ -26,4 +26,8 @@
 	<longdescription lang="vi">
 		Nhóm mail-filter chứa các phần mềm lọc email.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria mail-filter contiene programmi per il filtraggio della
+		posta elettronica.
+	</longdescription>
 </catmetadata>
