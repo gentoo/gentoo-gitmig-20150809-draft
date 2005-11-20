@@ -25,5 +25,8 @@
 		Nhóm app-arch chứa những công cụ để lưu trữ, nén và
 		giải nén các tập tin hoặc nhóm các tập tin.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-arch contiene strumenti di archiviazione, compressione e decompressione di file o gruppi di files.
+	</longdescription>
 </catmetadata>
 
