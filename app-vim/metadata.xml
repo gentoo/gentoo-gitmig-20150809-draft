@@ -21,5 +21,9 @@
 		Nhóm app-vim chứa các plugin và các gói syntax cho
 		trình soạn thảo văn bản Vim.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-vim contiene estensioni e pacchetti di sintassi
+		per l'editor di testo Vim.
+	</longdescription>
 </catmetadata>
 
