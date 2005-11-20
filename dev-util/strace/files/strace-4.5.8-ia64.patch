@@ -1,6 +1,8 @@
-diff -urN strace-4.5.8/process.c /tmp/strace-4.5.8/process.c
---- strace-4.5.8/process.c	2004-10-19 19:33:47.000000000 -0400
-+++ /tmp/strace-4.5.8/process.c	2005-02-07 22:14:35.115449874 -0500
+Remove some obsolete ia64-related hacks from the strace source
+08 Feb 2005 agriffis@gentoo.org
+
+--- strace-4.5.8/process.c
++++ strace-4.5.8/process.c
 @@ -82,14 +82,10 @@
  
  #ifdef HAVE_LINUX_PTRACE_H
@@ -16,9 +18,8 @@ diff -urN strace-4.5.8/process.c /tmp/strace-4.5.8/process.c
  # undef pt_all_user_regs
  #endif
  
-diff -urN strace-4.5.8/signal.c /tmp/strace-4.5.8/signal.c
---- strace-4.5.8/signal.c	2004-10-06 18:11:54.000000000 -0400
-+++ /tmp/strace-4.5.8/signal.c	2005-02-07 23:24:18.020091998 -0500
+--- strace-4.5.8/signal.c
++++ strace-4.5.8/signal.c
 @@ -53,14 +53,10 @@
  #endif
  #elif defined(HAVE_LINUX_PTRACE_H)
@@ -34,9 +35,8 @@ diff -urN strace-4.5.8/signal.c /tmp/strace-4.5.8/signal.c
  # undef pt_all_user_regs
  #endif
  
-diff -urN strace-4.5.8/syscall.c /tmp/strace-4.5.8/syscall.c
---- strace-4.5.8/syscall.c	2004-09-04 00:20:43.000000000 -0400
-+++ /tmp/strace-4.5.8/syscall.c	2005-02-07 22:10:36.002631398 -0500
+--- strace-4.5.8/syscall.c
++++ strace-4.5.8/syscall.c
 @@ -63,14 +63,10 @@
  #endif
  #elif defined(HAVE_LINUX_PTRACE_H)
@@ -52,9 +52,8 @@ diff -urN strace-4.5.8/syscall.c /tmp/strace-4.5.8/syscall.c
  # undef pt_all_user_regs
  #endif
  
-diff -urN strace-4.5.8/system.c /tmp/strace-4.5.8/system.c
---- strace-4.5.8/system.c	2004-09-03 23:39:20.000000000 -0400
-+++ /tmp/strace-4.5.8/system.c	2005-02-07 22:26:16.747331515 -0500
+--- strace-4.5.8/system.c
++++ strace-4.5.8/system.c
 @@ -32,6 +32,23 @@
  
  #include "defs.h"
@@ -79,9 +78,8 @@ diff -urN strace-4.5.8/system.c /tmp/strace-4.5.8/system.c
  #ifdef LINUX
  #define _LINUX_SOCKET_H
  #define _LINUX_FS_H
-diff -urN strace-4.5.8/util.c /tmp/strace-4.5.8/util.c
---- strace-4.5.8/util.c	2004-10-06 18:06:28.000000000 -0400
-+++ /tmp/strace-4.5.8/util.c	2005-02-07 22:14:11.382807120 -0500
+--- strace-4.5.8/util.c
++++ strace-4.5.8/util.c
 @@ -63,14 +63,10 @@
  # define PTRACE_PEEKUSR PTRACE_PEEKUSER
  #elif defined(HAVE_LINUX_PTRACE_H)
