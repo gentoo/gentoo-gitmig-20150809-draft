@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.6 2005/11/14 17:07:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.7 2005/11/20 21:48:19 chainsaw Exp $
+
+  20 Nov 2005; <chainsaw@gentoo.org> audacious-0.1-r1.ebuild:
+  Install libFLAC.m4, which is available separately. Closes bug #112990.
 
   14 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   audacious-0.1-r1.ebuild:
