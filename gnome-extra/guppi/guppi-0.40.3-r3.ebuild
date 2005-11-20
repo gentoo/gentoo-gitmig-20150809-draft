@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.16 2004/06/24 22:07:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r3.ebuild,v 1.1 2005/11/20 01:22:33 allanonjl Exp $
+
+inherit toolchain-funcs eutils
 
 IUSE="python nls readline"
 
@@ -13,7 +15,7 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 HOMEPAGE="http://www.gnome.org/guppi/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 
 RDEPEND="=x11-libs/gtk+-1.2*
@@ -31,6 +33,16 @@ DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.11 )
 	python? ( >=dev-lang/python-2.0 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	#remove default: since we have none for gcc3.4, gcc3.3 safe closing bug #55228
+	epatch ${FILESDIR}/${P}-gcc34.patch
+
+	# gcc-4
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 src_compile() {
 
 	local myconf
@@ -49,6 +61,10 @@ src_compile() {
 	if ! use readline ; then
 		myconf="${myconf} --disable-guile-readline"
 	fi
+
+	# We need this for gnumeric support.  Note that you do
+	# not need gnumeric installed for this to work.
+	myconf="${myconf} --enable-gnumeric"
 
 # to compile with guile-1.5
 #	CFLAGS="${CFLAGS} -DGUPPI_USING_NEWER_GUILE `gnome-config --cflags libglade`"
