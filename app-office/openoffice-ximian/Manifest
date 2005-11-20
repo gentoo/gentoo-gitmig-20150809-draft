@@ -1,5 +1,6 @@
-MD5 189282812b1879950a63e0249947c6ef ChangeLog 34907
+MD5 2be2059daebdf1991f994960fb765f4b ChangeLog 35093
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
+MD5 9784ab4484e09b8230284b27d20d4264 files/1.1.4/build-new-xslt.diff 650
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
 MD5 ffcbf659ca6f54e8e15401cced99af77 files/1.1.4/gcc-instlib.patch 393
 MD5 6938dc2e28e840cebf4fdbde9d6e2d4b files/1.1.4/gentoo-1.3.9.patch 859
@@ -30,5 +31,5 @@ MD5 e84e07ee231b9ceaabacc5556a63f647 files/digest-openoffice-ximian-1.3.9-r1 492
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openoffice-ximian-1.9.199 0
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 a05de7453d373da927b2b9c6cc6c7bbe openoffice-ximian-1.3.16.ebuild 17873
-MD5 2172597e048d38d848b3ee1ffdda7790 openoffice-ximian-1.3.9-r1.ebuild 17912
+MD5 78ae49ad978e18d00d11830ec7dc740f openoffice-ximian-1.3.9-r1.ebuild 18015
 MD5 6dae04bd5081afc57b675e437606b798 openoffice-ximian-1.9.199.ebuild 1358

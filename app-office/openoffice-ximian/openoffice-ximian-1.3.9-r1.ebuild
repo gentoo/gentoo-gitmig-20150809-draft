@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.8 2005/08/23 21:18:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.9 2005/11/20 19:48:26 suka Exp $
 
 # Notes:
 #
@@ -267,6 +267,9 @@ src_unpack() {
 
 	# fix for bug #82385
 	epatch ${FILESDIR}/${OO_VER}/getcompver.awk.patch
+
+	#Allow building with libxslt >= 1.1.15
+	use java || epatch ${FILESDIR}/${OO_VER}/build-new-xslt.diff
 
 	# Security fix, bug #88863
 	epatch ${FILESDIR}/${OO_VER}/cws-heapbug_CAN-2005-0941.diff
