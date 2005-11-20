@@ -21,5 +21,8 @@
 		Nhóm app-pda chứa các ứgn dụng làm việc với các thiết
 		bị PDA hoặc hand-held.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-pda contiene programmi per lavorare con PDA e hand-held pc.
+	</longdescription>
 </catmetadata>
 
