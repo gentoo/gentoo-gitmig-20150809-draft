@@ -1,34 +1,34 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0.ebuild,v 1.1 2005/11/18 16:42:20 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0.ebuild,v 1.2 2005/11/20 21:55:37 stkn Exp $
 
 inherit eutils
 
-IUSE="alsa curl debug doc gtk h323 hardened lowmem mmx mysql \
+IUSE="alsa bri curl debug doc gtk h323 hardened lowmem mmx mysql \
 	nosamples odbc postgres pri speex sqlite ssl ukcid zaptel"
 
-#BRI_VERSION="0.2.0-RC8f-CVS"
+BRI_VERSION="0.3.0-PRE-1"
 AST_PATCHES="1.2.0-patches-1.0"
 
 ## TODO:
 #
 # - uclibc patch still needed? (still applies)
-# - bristuff (waiting...)
 # - test nosamples
 # - add some more use flags...
 #	recent additions: osp, lowmem, curl, ukcid
 # - cleanup
-#
 
 MY_P="${P/_/-}"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://ftp.digium.com/pub/asterisk/${MY_P}.tar.gz
-	 http://www.netdomination.org/pub/asterisk/${PN}-${AST_PATCHES}.tar.bz2"
-#	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
+	 http://www.netdomination.org/pub/asterisk/${PN}-${AST_PATCHES}.tar.bz2
+	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -49,12 +49,12 @@ RDEPEND="dev-libs/newt
 	speex? ( media-libs/speex )
 	sqlite? ( <dev-db/sqlite-3.0.0 )
 	zaptel? ( >=net-misc/zaptel-1.1.0 )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( dev-db/postgresql )
+	bri? (  >=net-libs/libpri-1.1.0
+		>=net-misc/zaptel-1.1.0 )"
 
 #	osp? ( >=net-libs/osptoolkit-3.3.4 )
 
-#	bri? ( >=net-libs/libpri-1.1.0
-#		>=net-misc/zaptel-1.1.0 )
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -85,17 +85,17 @@ pkg_setup() {
 	einfo "Running some pre-flight checks..."
 
 	# check if zaptel and libpri have been built with bri enabled
-#	if use bri; then
-#		if ! built_with_use net-misc/zaptel bri; then
-#			eerror "Re-emerge zaptel with bri use-flag enabled!"
-#			die "Zaptel without bri support detected"
-#		fi
-#
-#		if ! built_with_use net-libs/libpri bri; then
-#			eerror "Re-emerge libpri with bri use-flag enabled!"
-#			die "Libpri without bri support detected"
-#		fi
-#	fi
+	if use bri; then
+		if ! built_with_use net-misc/zaptel bri; then
+			eerror "Re-emerge zaptel with bri use-flag enabled!"
+			die "Zaptel without bri support detected"
+		fi
+
+		if ! built_with_use net-libs/libpri bri; then
+			eerror "Re-emerge libpri with bri use-flag enabled!"
+			die "Libpri without bri support detected"
+		fi
+	fi
 
 }
 
@@ -151,11 +151,10 @@ src_unpack() {
 	#
 	# BRI patches
 	#
-#	if use bri; then
-#		cd ${S}
-#		einfo "Patching asterisk w/ BRI stuff"
-#		epatch ${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
-#	fi
+	if use bri; then
+		einfo "Patching asterisk w/ BRI stuff"
+		epatch ${S_BRI}/patches/asterisk.patch
+	fi
 }
 
 src_compile() {
@@ -184,6 +183,10 @@ src_compile() {
 	# create api docs
 	use doc && \
 		make progdocs
+
+	# build bristuff's ISDNguard
+	use bri && \
+		make -C ${S_BRI}/ISDNguard
 }
 
 src_install() {
@@ -261,6 +264,17 @@ src_install() {
 	if use doc; then
 		insinto /usr/share/doc/${PF}/api/html
 		doins doc/api/html/*
+	fi
+
+	# install ISDNguard
+	if use bri; then
+		cd ${S_BRI}/ISDNguard
+		dosbin ISDNguard
+
+		docinto ISDNguard
+		dodoc INSTALL.ISDNguard
+
+		cd ${S}
 	fi
 
 	insinto /usr/share/doc/${PF}/cgi

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.90 2005/11/18 17:46:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.91 2005/11/20 21:55:37 stkn Exp $
+
+  20 Nov 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.2.0.ebuild:
+  Re-enabled bri support.
 
   18 Nov 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.9-r2.ebuild:
   Fix #112733, typo in the version check.
