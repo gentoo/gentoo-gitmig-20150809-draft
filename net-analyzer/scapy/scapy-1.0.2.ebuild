@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.0.2.ebuild,v 1.1 2005/11/19 14:27:31 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.0.2.ebuild,v 1.2 2005/11/20 11:21:08 lcars Exp $
 
 DESCRIPTION="A Python interactive packet manipulation program for mastering the network"
 HOMEPAGE="http://www.secdev.org/projects/scapy/"
@@ -12,12 +12,12 @@ KEYWORDS="~x86 ~ppc"
 IUSE="gnuplot pyx crypt graphviz imagemagick hostap"
 
 DEPEND="virtual/python
+	net-analyzer/tcpdump
 	gnuplot? ( dev-python/gnuplot-py )
 	pyx? ( dev-python/pyx )
 	crypt? ( dev-python/pycrypto )
 	graphviz? ( media-gfx/graphviz )
-	imagemagick? ( media-gfx/imagemagick )
-	hostap? ( net-wireless/hostap-driver )"
+	imagemagick? ( media-gfx/imagemagick )"
 
 src_install() {
 	exeinto /usr/bin
@@ -30,6 +30,8 @@ src_install() {
 	}
 
 pkg_postinst() {
+	einfo ""
+	einfo "- Check http://www.secdev.org/projects/scapy/ for additional info"
 	einfo ""
 	einfo "- To subscribe to the mailing-list, send a mail to scapy.ml-subscribe(at)secdev.org"
 	einfo "- To send a mail to the mailing-list: scapy.ml(at)secdev.org"
