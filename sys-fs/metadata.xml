@@ -17,5 +17,8 @@
 	<longdescription lang="vi">
 		Nhóm sys-fs chứa các công cụ và tiện ích về hệ tập tin.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sys-fs contiene gli strumenti e le utilità di supporto per i vari file systems.
+	</longdescription>
 </catmetadata>
 
