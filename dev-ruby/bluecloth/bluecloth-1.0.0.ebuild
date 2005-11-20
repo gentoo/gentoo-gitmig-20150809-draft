@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-1.0.0.ebuild,v 1.3 2005/11/03 07:29:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-1.0.0.ebuild,v 1.4 2005/11/20 02:08:36 josejx Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.deveiate.org/code/${MY_P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 USE_RUBY="ruby18"

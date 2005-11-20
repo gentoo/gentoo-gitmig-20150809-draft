@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9c18951c44d0e9ac41eb6685a7b1f52 ChangeLog 614
-MD5 febc93ddc328a02e46c62ec2bdf2e4f7 bluecloth-1.0.0.ebuild 784
+MD5 0b46f0900b0005173393fbdead349130 ChangeLog 723
+MD5 5d67c8edc974ccd00c27958362e40927 bluecloth-1.0.0.ebuild 782
 MD5 b0818443c2418eb08529beb014509cbc files/digest-bluecloth-1.0.0 63
 MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDabxRCRZPokWLroQRAjg7AKCPFIzLun5+pturqyGiYDwnG7VqnACfSbHh
-xooabrgmn3Op3mLEfqrAb20=
-=H3Gv
+iD8DBQFDf9qzcsIHjyDViGQRAvp8AJ9TC4Hru31ulZiPX7DVDvF8NI+uaACfeCBQ
+4jNffqPRYtFtVNokj3JzZzE=
+=bInF
 -----END PGP SIGNATURE-----
