@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.6 2005/10/31 14:08:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.7 2005/11/20 01:35:05 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
+# Maintained by the PHP Herd <php-bugs@gentoo.org>
 #
-# The php-pear eclass provides means for easy installation of PEAR
+# The php-pear-r1 eclass provides means for an easy installation of PEAR
 # packages, see http://pear.php.net
 
 # Note that this eclass doesn't handle PEAR packages' dependencies on
@@ -35,6 +36,7 @@ PEAR_PN=${PHP_PEAR_PKG_NAME}-${PEAR_PV}
 
 [ -z "${SRC_URI}" ] && SRC_URI="http://pear.php.net/get/${PEAR_PN}.tgz"
 [ -z "${HOMEPAGE}" ] && HOMEPAGE="http://pear.php.net/${PHP_PEAR_PKG_NAME}"
+
 S="${WORKDIR}/${PEAR_PN}"
 
 php-pear-r1_src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.6 2005/10/31 14:08:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.7 2005/11/20 01:35:05 chtekk Exp $
 #
 # ========================================================================
 #
@@ -8,7 +8,12 @@
 #		functions to allow ebuilds to depend on php4 and/or php5
 #
 # Author:	Stuart Herbert
-#			(stuart@gentoo.org)
+#			<stuart@gentoo.org>
+#
+# Author:	Luca Longinotti
+#			<chtekk@gentoo.org>
+#
+# Maintained by the PHP Herd <php-bugs@gentoo.org>
 #
 # ========================================================================
 
