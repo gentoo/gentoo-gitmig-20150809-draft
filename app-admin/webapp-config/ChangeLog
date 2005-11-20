@@ -1,0 +1,428 @@
+# ChangeLog for net-www/webapp-config
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.1 2005/11/20 12:22:25 stuart Exp $
+
+*webapp-config-1.11 (20 Nov 2005)
+
+  20 Nov 2005; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +webapp-config-1.11.ebuild, +webapp-config-1.50.ebuild:
+  Moved package from net-www
+  Added new webapp-config v1.50
+
+  28 Jul 2005; Renat Lumpau <rl03@gentoo.org> webapp-config-1.11-r1.ebuild:
+  Fixed SRC_URI and S
+
+  24 Jul 2005; Hardave Riar <hardave@gentoo.org> webapp-config-1.11.ebuild:
+  Stable on mips, bug #91785.
+
+  21 Jul 2005; Bret Curtis <psi29a@gentoo.org> ChangeLog:
+  added to ~mips
+
+*webapp-config-1.11-r1 (20 Jul 2005)
+
+  20 Jul 2005; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.11-r1.ebuild:
+  Version bump; requires additional testing before marking stable!!
+
+  17 Jun 2005; Olivier Crête <tester@gentoo.org> webapp-config-1.11.ebuild:
+  Stable on x86 per security bug #91785
+
+  15 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  webapp-config-1.11.ebuild:
+  Stable on ia64, bug 91785.
+
+  13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  webapp-config-1.11.ebuild:
+  stable on alpha, wrt bug #91785
+
+  13 Jun 2005; Markus Rothe <corsair@gentoo.org> webapp-config-1.11.ebuild:
+  Stable on ppc64; bug #91785
+
+  12 Jun 2005; Jason Wever <weeve@gentoo.org> webapp-config-1.11.ebuild:
+  Stable on SPARC wrt bug #91785.
+
+  12 Jun 2005; Danny van Dyk <kugelfang@gentoo.org>
+  webapp-config-1.11.ebuild:
+  Marked stable wrt BUG #91785.
+
+  12 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  webapp-config-1.11.ebuild:
+  Stable on hppa.
+
+  12 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  webapp-config-1.11.ebuild:
+  Stable on ppc.
+
+  31 May 2005; Stuart Herbert <stuart@gentoo.org>
+  webapp-config-1.10-r12.ebuild, webapp-config-1.10-r14.ebuild:
+  Urgh - seeing as -r14 just won't go away, I've removed the broken patches
+  from it (effectively making it the same as -r12)
+
+  30 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  +files/webapp-config_fixperms.patch,
+  +files/webapp-config_improved-tmpfile-handling.patch,
+  +webapp-config-1.10-r14.ebuild:
+  Restore webapp-config-1.10-r14 as many packages depends on it.
+
+*webapp-config-1.11 (30 May 2005)
+
+  30 May 2005; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r14.ebuild, +webapp-config-1.11.ebuild:
+  Removed 1.10-r14 (dangerously broken)
+  Added 1.11 (includes fixes for all known security problems, and most bugs)
+
+  18 May 2005; Elfyn McBratney <beu@gentoo.org>
+  -webapp-config-1.10-r15.ebuild:
+  Drop -r16.
+
+  16 May 2005; Jochen Maes <sejo@gentoo.org> :
+  fixed digest
+
+*webapp-config-1.10-r15 (15 May 2005)
+
+  15 May 2005; Elfyn McBratney <beu@gentoo.org>
+  +webapp-config-1.10-r15.ebuild:
+  Revision bump, bug #91785.
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  s/src_compile/src_unpack/
+
+  09 May 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on amd64, bug 91785.
+
+  09 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on alpha + ia64, bug 91785.
+
+  09 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on ppc.
+
+  09 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on hppa
+
+  09 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on sparc wrt #91785
+
+  09 May 2005; Markus Rothe <corsair@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on ppc64
+
+*webapp-config-1.10-r14 (09 May 2005)
+
+  09 May 2005; Elfyn McBratney <beu@gentoo.org>
+  +files/webapp-config_fixperms.patch,
+  +files/webapp-config_improved-tmpfile-handling.patch,
+  -files/webapp-config_unfeck-perms.patch, -webapp-config-1.10-r13.ebuild,
+  +webapp-config-1.10-r14.ebuild:
+  Rev bump, fixes bugs #88831, #87708 and #91785.  Remove old version (-r13).
+  Stable on x86.
+
+*webapp-config-1.10-r13 (07 May 2005)
+
+  07 May 2005; Elfyn McBratney <beu@gentoo.org>
+  +files/webapp-config_unfeck-perms.patch, +webapp-config-1.10-r13.ebuild:
+  Revision bump with a patch to finally kill bug #88831, and close bug #87708.
+
+*webapp-config-1.10-r12 (25 Apr 2005)
+
+  25 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +webapp-config-1.10-r12.ebuild:
+  Revision bump. Use equery instead of deprecated qpkg for bug 73867.
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Sep 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump; CONF_LIBDIR support for amd64
+
+  08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
+  Fixed herd name
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  webapp-config-1.10-r10.ebuild, webapp-config-1.10-r6.ebuild:
+  Switch to use epause and ebeep, bug #62950
+
+  04 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
+  webapp-config-1.10-r10.ebuild:
+  Marked stable on amd64.
+
+  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  webapp-config-1.10-r10.ebuild:
+  Stable on alpha.
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  webapp-config-1.10-r10.ebuild:
+  Masked webapp-config-1.10-r10.ebuild stable for ppc
+
+  31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  webapp-config-1.10-r10.ebuild:
+  Stable on sparc wrt #62018
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> webapp-config-1.10-r10.ebuild:
+  stable on ppc64, bug #59756
+
+  28 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  webapp-config-1.10-r10.ebuild:
+  Marked stable on x86
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r9.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r8.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r7.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r5.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r4.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r3.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+*webapp-config-1.10-r10 (19 Aug 2004)
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r10.ebuild:
+  Fix for permissions problem due to typo in -r8
+
+*webapp-config-1.10-r9 (19 Aug 2004)
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r9.ebuild:
+  Version bump
+
+*webapp-config-1.10-r8 (16 Aug 2004)
+
+  16 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r8.ebuild:
+  Version bump; fixed broken cgi installs
+
+  15 Aug 2004; Jason Wever <weeve@gentoo.org> webapp-config-1.10-r6.ebuild:
+  Stable on sparc wrt bug #59756.
+
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  webapp-config-1.10-r6.ebuild:
+  Stable on alpha.
+
+*webapp-config-1.10-r7 (12 Aug 2004)
+
+  12 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r7.ebuild:
+  Version bump
+
+*webapp-config-1.10-r6 (08 Aug 2004)
+
+  08 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  webapp-config-1.10-r6.ebuild:
+  Marked stable on amd64.
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump + mark stable on x86
+
+*webapp-config-1.10-r5 (11 Jul 2004)
+
+  11 Jul 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r5.ebuild:
+  Version bump; fix for broken CONFIG_PROTECT behaviour; new variables exported
+  for hook scripts & post install text files
+
+*webapp-config-1.10-r4 (07 Jul 2004)
+
+  07 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +webapp-config-1.10-r3.ebuild:
+  resurrect version needed for deps
+
+  07 Jul 2004; Stuart Herbert <stuart@gentoo.org> :
+  Added version 1.10-r4; contains fixes that should have been in -r3
+
+  07 Jul 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r2.ebuild, -webapp-config-1.10-r3.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  07 Jul 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r2.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  06 Jul 2004; Aron Griffis <agriffis@gentoo.org>
+  webapp-config-1.10-r2.ebuild, webapp-config-1.10-r3.ebuild,
+  webapp-config-1.9-r2.ebuild:
+  add ia64 keywords
+
+  03 Jul 2004; <malc@gentoo.org> webapp-config-1.9-r2.ebuild:
+  Mark stable on amd64, closes bug #55921
+
+*webapp-config-1.10-r3 (28 Jun 2004)
+
+  28 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r3.ebuild:
+  Version bump; small bug fixes
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org> -webapp-config-1.9.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.9-r1.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+*webapp-config-1.10-r1 (24 Jun 2004)
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.10-r1.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org> -webapp-config-1.10.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.9-r3.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  -webapp-config-1.8-r1.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+*webapp-config-1.10-r2 (24 Jun 2004)
+
+  24 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r2.ebuild, -webapp-config-1.8.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  15 Jun 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump; lots of fixes
+
+  12 Jun 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.10.ebuild:
+  Changed SRC_URI to get webapp-config from dev.gentoo.org, for when the
+  mirrors are not up to date.
+
+*webapp-config-1.10 (11 Jun 2004)
+
+  11 Jun 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.10.ebuild:
+  Version bump; new features + changes for bugs #53215, #53390, #53384
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  webapp-config-1.9-r2.ebuild:
+  Stable on alpha.
+
+  26 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.9-r3.ebuild:
+  Added ~hppa
+
+  25 May 2004; Guy Martin <gmsoft@gentoo.org> webapp-config-1.9-r2.ebuild:
+  Added ~hppa to KEYWORDS.
+
+*webapp-config-1.9-r3 (25 May 2004)
+
+  25 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.9-r3.ebuild:
+  Version bump; more env vars for hook functions
+
+*webapp-config-1.9-r2 (19 May 2004)
+
+  19 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.9-r1.ebuild,
+  webapp-config-1.9-r2.ebuild:
+  More fn_run_hook() fixes
+
+*webapp-config-1.9-r1 (18 May 2004)
+
+  18 May 2004; Stuart Herbert <stuart@gentoo.org> :
+  Bug fixes; see bug #51377; thanks to Sven Wegener for pointing out the bug
+
+*webapp-config-1.9 (18 May 2004)
+
+  18 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.9.ebuild:
+  Version bump; bug fixes and new features; see CHANGES.txt for details
+
+*webapp-config-1.8-r1 (16 May 2004)
+
+  16 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.8-r1.ebuild:
+  Added missing dependency on gentoolkit; thanks to Lars T. Mikkelsen
+  <lars@datascan.net>; see bug #51144
+
+*webapp-config-1.8 (11 May 2004)
+
+  11 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.4.ebuild,
+  webapp-config-1.5.ebuild, webapp-config-1.6.ebuild,
+  webapp-config-1.7.ebuild, webapp-config-1.8.ebuild:
+  Urgent bugfix; restores webapp-config -U functionality.
+
+  Removed old versions.
+
+  04 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.7.ebuild:
+  Removed rdepend on xmlto. If you need to regen the man pages from the docbook
+  source, remember to emerge xmlto first!
+
+  03 May 2004; Bryan Østergaard <kloeri@gentoo.org> webapp-config-1.7.ebuild:
+  Keyworded ~alpha.
+
+*webapp-config-1.7 (01 May 2004)
+
+  01 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.7.ebuild:
+  Fix for directories always being root-owned
+
+*webapp-config-1.6 (30 Apr 2004)
+
+  30 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.6.ebuild:
+  Version bump; some new features, and some important bug fixes
+
+*webapp-config-1.5 (28 Apr 2004)
+
+  28 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.0.ebuild,
+  webapp-config-1.1.ebuild, webapp-config-1.2.ebuild,
+  webapp-config-1.3.ebuild, webapp-config-1.5.ebuild:
+  Version bump; bug fixes for the trac ebuild
+
+  28 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.0.ebuild,
+  webapp-config-1.1.ebuild, webapp-config-1.2.ebuild,
+  webapp-config-1.3.ebuild:
+  Removed obsolete versions
+
+  24 Apr 2004; Martin Holzer <mholzer@gentoo.org> webapp-config-1.1.ebuild,
+  webapp-config-1.2.ebuild, webapp-config-1.3.ebuild,
+  webapp-config-1.4.ebuild:
+  chaning src_uri. closes 48854
+
+*webapp-config-1.4 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.4.ebuild:
+  Version bump; main change is a doc change for the latest eclass
+
+*webapp-config-1.3 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.3.ebuild:
+  Version bump
+
+*webapp-config-1.2 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.2.ebuild:
+  Version bump
+
+*webapp-config-1.1 (14 Apr 2004)
+
+  14 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.1.ebuild:
+  Version bump; marked as stable
+
+  03 Mar 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml:
+  Added the correct email address to the metadata
+
+  03 Mar 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.0.ebuild:
+  Added documentation into /usr/doc
+
+*webapp-config-1.0 (03 Mar 2004)
+
+  03 Mar 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  webapp-config-1.0.ebuild:
+  Initial commit
+
