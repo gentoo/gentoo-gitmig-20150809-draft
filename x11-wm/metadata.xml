@@ -22,5 +22,8 @@
 	<longdescription lang="vi">
 		Nhóm x11-wm chứa các trình quản lý cửa sổ X11.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria x11-wm contiene dei gestori di finestre per X11.
+	</longdescription>
 </catmetadata>
 
