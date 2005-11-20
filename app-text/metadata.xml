@@ -20,5 +20,8 @@
 		Nhóm app-text chứa các công cụ để làm việc với các tập
 		tin văn bản có thể đọc hiểu.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-text contiene utilità per lavorare con file di testo.
+	</longdescription>
 </catmetadata>
 
