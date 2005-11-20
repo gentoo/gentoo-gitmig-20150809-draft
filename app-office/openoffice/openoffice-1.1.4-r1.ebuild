@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.8 2005/08/23 21:13:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.9 2005/11/20 19:27:15 suka Exp $
 
 # Notes:
 #
@@ -257,6 +257,8 @@ src_unpack() {
 	if use ppc; then
 		epatch ${FILESDIR}/${PV}/STLport-vector.patch
 	fi
+	#Allow building with libxslt >= 1.1.15
+	use java || epatch ${FILESDIR}/${PV}/build-new-xslt.diff
 
 	#Fixes for nptl
 	if use nptl; then
