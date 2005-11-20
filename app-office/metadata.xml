@@ -25,5 +25,9 @@
 		Nhóm app-office chứa các ứng dụng 'văn phòng' (soạn
 		thảo văn bản, bảng tính, trình diễn).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-office contiene pacchetti per ufficio
+		(videoscrittura, fogli elettronici, presentazioni).
+	</longdescription>
 </catmetadata>
 
