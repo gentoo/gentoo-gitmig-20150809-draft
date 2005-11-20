@@ -19,5 +19,8 @@
 	<longdescription lang="vi">
 		Nhóm kde-base chứa các gói KDE cốt lõi.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria kde-base contiene i pacchetti base di KDE.
+	</longdescription>
 </catmetadata>
 
