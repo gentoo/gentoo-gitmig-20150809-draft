@@ -24,5 +24,9 @@
 		Nhóm app-laptop chứa các gói danh cho các loại máy
 		tính laptop và notebook.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-laptop contiene pacchetti progettaati per lavorare con alcuni
+		tipi di laptop o notebook.
+	</longdescription>
 </catmetadata>
 
