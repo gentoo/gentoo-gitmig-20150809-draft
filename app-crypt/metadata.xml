@@ -25,5 +25,8 @@
 		Nhóm app-crypto chứa các ứng dụng về mật mã (mã hóa,
 		giải mã, kỷ tên và steganography).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-crypt contiene programmi di crittografia (cifratura, decifratura, steganografia e firma).
+	</longdescription>
 </catmetadata>
 
