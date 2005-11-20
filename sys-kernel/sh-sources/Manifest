@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a9a7b5d088f4b9ff42e0c20404f8773 ChangeLog 344
+MD5 d808426589bca917cc203b917a9f400e ChangeLog 472
 MD5 6b58de60ef0cd12f65c518d64de1b06c files/digest-sh-sources-2.6.13 301
+MD5 ed1077ecd619d47d671d0ecd8115d9b3 files/digest-sh-sources-2.6.14 301
 MD5 b3c66b3038e3708ca4dbce6dcb595ecf metadata.xml 217
 MD5 c56af3d70d5916789b05f3b4b9f61ddd sh-sources-2.6.13.ebuild 858
+MD5 2b5bd7fdb29d383ef727609da870c9b6 sh-sources-2.6.14.ebuild 859
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFDRaiEgIKl8Uu19MoRAgyGAJjZzh44NFMWCaixBs34a50MG78bAJ9VvWiu
-hSX315GHOqz7y/cAgb+geg==
-=4xN7
+iD8DBQFDgBWFgIKl8Uu19MoRAoQJAJ4mIq96UdZyYxtiuRchaOlRwTayjwCggOjy
+zoPnWOvtpuSWVNLfIUc/y8k=
+=viCF
 -----END PGP SIGNATURE-----
