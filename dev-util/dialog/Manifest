@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1cd4773b0d5b4d4572359ba6866880b4 ChangeLog 8250
+MD5 2faddcc901200974f3a0374d6c732168 ChangeLog 8519
 MD5 cd7bc4ff18512a7738ebc9c7c50a2006 dialog-1.0.20050206.ebuild 1013
 MD5 87305276830661f174d9c290ea1b1028 dialog-1.0.20050306.ebuild 924
-MD5 514830267b8932ec3361e14533de640d dialog-1.0.20040731.ebuild 1016
+MD5 68a09fd7dcbd4daed172a08d077aed94 dialog-1.0.20051107.ebuild 1043
+MD5 516258483f8caafb1bbad3ca633b2a74 files/dialog-1.0.20051107-mouseselect.patch 664
 MD5 0fb57e331af29543a80113129d8d6585 files/digest-dialog-1.0.20050206 76
 MD5 6bb2fe6f496b5c53063dfb1f6971021d files/digest-dialog-1.0.20050306 76
-MD5 feeb190a733e925f05a4bda9908b79e9 files/digest-dialog-1.0.20040731 76
+MD5 8ad8276b29c5f6ffcc0e746acfc02844 files/digest-dialog-1.0.20051107 76
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCylSpmdTrptrqvGERAk7HAJ9Vc0YaUb90ZKpRuS2z2F0WAM59fgCeIzAO
-mIQ86g1Slt35dX/vyD5vAvs=
-=n8Sh
+iD8DBQFDgMmAwnQyISwouHwRAosxAJ9gyqvrLRvgQA/fadFIwbgLNTVaOQCeKTx7
+omkTxZTR1ZwTBhjqhwYfS88=
+=dSMj
 -----END PGP SIGNATURE-----
