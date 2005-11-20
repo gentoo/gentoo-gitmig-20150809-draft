@@ -1,7 +1,7 @@
 #!/bin/bash
 # Written by vapier@gentoo.org
 # public-domain code ... z0r ...
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/files/sandboxshell,v 1.2 2005/04/27 03:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/files/sandboxshell,v 1.3 2005/11/20 07:54:10 vapier Exp $
 
 . /sbin/functions.sh
 . /etc/profile
@@ -14,7 +14,7 @@ cd ${PWD} || {
 
 for SANDBOX_LIB in /lib /usr/lib ; do
 	SANDBOX_LIB=${SANDBOX_LIB}/libsandbox.so
-	[ -e ${SANDBOX_LIB} ] && break
+	[[ -e ${SANDBOX_LIB} ]] && break
 done
 export LD_PRELOAD=${SANDBOX_LIB}
 export SANDBOX_LOG="/tmp/sandboxme-$(date '+%d.%m.%Y-%H.%M.%S').log"
@@ -36,5 +36,5 @@ einfo " adddeny <path>:     deny access to <path>"
 einfo " addpredict <path>:  allow fake access to <path>"
 
 export SANDBOX_ACTIVE="armedandready"
-export SANDBOX_WRITE="${SANDBOX_WRITE}:`pwd`:/etc/mtab:/dev/ram5:/root/.ccache"
+export SANDBOX_WRITE=${SANDBOX_WRITE}:$(pwd):/etc/mtab:/dev/ram5:/root/.ccache
 exec /bin/bash --init-file /etc/sandboxshell.conf

@@ -1,6 +1,17 @@
-MD5 e653bf3bd172bfcdbc6c7bda157f2920 ChangeLog 817
-MD5 1f47e99fa0142578b3e7dccefe8ff13f sandboxshell-0.1-r2.ebuild 666
-MD5 1cec5c8a112b832f3ed8c88f27f9a0da files/sandboxshell 1354
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1d5718b8f683595a25fe3a28a285e380 ChangeLog 1116
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sandboxshell-0.2 0
+MD5 9a9a13478f46e54048795ba214e5e84d files/sandboxshell 1355
 MD5 89728cab133398dad145e13d92fff6b2 files/sandboxshell.1 3117
-MD5 e6a1ed3054d31d67233843e4624dbd98 files/sandboxshell.conf 1689
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sandboxshell-0.1-r2 0
+MD5 d43b043244f1b814b3f4d7e5ed9cf064 files/sandboxshell.conf 1908
+MD5 664d393ce2c056c10b77f1de646532fc metadata.xml 258
+MD5 dd79ec5b34a47984cfb0f918ad2d9b35 sandboxshell-0.2.ebuild 663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDgCwCgIKl8Uu19MoRAl8ZAJ9z+lR26V0g/rnaUR3yFZQ6OSwTOwCfWBJw
+sDTqn7KCrNZ7iUVHsr5W+TA=
+=jkZQ
+-----END PGP SIGNATURE-----
