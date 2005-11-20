@@ -1,8 +1,18 @@
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 204786aa53423e8583f48da41b915518 mp3gain-1.4.3.ebuild 743
-MD5 208ddd37c18d483278c9bd99b3182105 ChangeLog 1724
-MD5 da1bfaea7b754adcf542e1d9c55c4a9b mp3gain-1.4.5.ebuild 724
-MD5 52f5bab3c1b210106a10d326cd9e2bd4 mp3gain-1.4.6.ebuild 613
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23ee3d9d750991c8ef1d621954716d1f ChangeLog 1843
+MD5 2cb475750ac933f3189041233d1d250e files/digest-mp3gain-1.4.3 66
 MD5 71c78a129e96365bed918bc9b5659547 files/digest-mp3gain-1.4.5 66
 MD5 e22b92b5f03b1c1ac2b4a33f54df7249 files/digest-mp3gain-1.4.6 66
-MD5 2cb475750ac933f3189041233d1d250e files/digest-mp3gain-1.4.3 66
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 204786aa53423e8583f48da41b915518 mp3gain-1.4.3.ebuild 743
+MD5 da1bfaea7b754adcf542e1d9c55c4a9b mp3gain-1.4.5.ebuild 724
+MD5 7ae073d9d30800fef1bde46505feb4d6 mp3gain-1.4.6.ebuild 820
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDgOiEp5vW4rUFj5oRAs1oAKCjd00eyFsjzQ7of2Nm9C0XQ9FsfwCeMNp8
+bAC++Enloceb6dWbR8ozRZ8=
+=9GnS
+-----END PGP SIGNATURE-----

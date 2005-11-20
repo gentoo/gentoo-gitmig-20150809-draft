@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.14 2005/09/14 07:33:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.15 2005/11/20 21:18:01 chainsaw Exp $
+
+  20 Nov 2005; <chainsaw@gentoo.org> mp3gain-1.4.6.ebuild:
+  Respect user CFLAGS & use proper CC, closes bug #113047.
 
   14 Sep 2005; Aron Griffis <agriffis@gentoo.org> mp3gain-1.4.6.ebuild:
   Mark 1.4.6 stable on alpha
