@@ -25,5 +25,9 @@
 		Nhóm sec-policy chứa các chính sách an ninh cho các hệ thống
 		điều khiển quyền truy cập như SELinux.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sec-policy contiene le politiche di sicurezza per i sistemi di controllo
+		di accesso come SELinux.
+	</longdescription>
 </catmetadata>
 
