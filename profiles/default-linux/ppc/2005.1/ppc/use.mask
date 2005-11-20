@@ -40,3 +40,6 @@ uml
 
 # Unmask pbbuttonsd
 -pbbuttonsd
+
+# GIT's ppc sha1 implementation
+-ppcsha1
