@@ -19,5 +19,8 @@
 	<longdescription lang="vi">
 		Nhóm net-print chứa các phần mềm in ấn qua mạng.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-print contiene programmi per la stampa via rete.
+	</longdescription>
 </catmetadata>
 
