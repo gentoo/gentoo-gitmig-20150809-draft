@@ -1,18 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d977ce329f1a1bc5e7a403ffdb8c0502 ChangeLog 11358
+MD5 9e6527c50d25641df7f79d5b925720a2 ChangeLog 11548
 MD5 79b7fd0dcd4776ca1851d30a45275e78 curl-7.13.1.ebuild 1140
 MD5 c6b9b093ceb98fd1efbc9ca3700888ec curl-7.13.2.ebuild 2392
-MD5 3ee8ef17d44f0e3a44a015a8b7497aee curl-7.15.0.ebuild 2434
+MD5 89d2021f8afb5ff760a8ff36d99a8c39 curl-7.15.0.ebuild 2484
+MD5 3f45a8aa13637f8147adfe79b8cd522b files/curl-7.15.0-versionnumber.patch 550
 MD5 159b437588320b2a3f726d3aa55890e5 files/digest-curl-7.13.1 65
 MD5 71c346cc704727e0bdaef7333521adeb files/digest-curl-7.13.2 130
 MD5 7bcded56c13b85b72508c00b8d3d7e73 files/digest-curl-7.15.0 65
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDZF6pgIKl8Uu19MoRAjtJAJ4qCbZ1C71jX3FJKvB0DtpAYyXEbwCdEXsN
-GdlBJTc8nzYyhMO5thocVs0=
-=5slp
+iD8DBQFDf8cpmdTrptrqvGERAmW1AJ9irLMjfTOolCyZxDHv0tjJHRRwVACfW7vV
+sEeNfU23z7n6cklK6Mj/okc=
+=VpYF
 -----END PGP SIGNATURE-----
