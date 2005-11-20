@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kxdocker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/ChangeLog,v 1.2 2005/10/01 01:53:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/ChangeLog,v 1.3 2005/11/20 00:28:48 dragonheart Exp $
+
+*kxdocker-0.39 (20 Nov 2005)
+
+  20 Nov 2005; Daniel Black <dragonheart@gentoo.org> +kxdocker-0.39.ebuild:
+  version bump as per bug #112850 thanks Alessio Cassibba
 
 *kxdocker-0.38 (01 Oct 2005)
 
