@@ -18,5 +18,8 @@
 		Nhóm app-shells chứa các loại shell và các phần mở
 		rộng của shell.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-shells contiene shells e loro estensioni.
+	</longdescription>
 </catmetadata>
 
