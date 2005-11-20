@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r4.ebuild,v 1.9 2005/11/14 16:29:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r4.ebuild,v 1.10 2005/11/20 17:58:35 wolf31o2 Exp $
 
 inherit eutils linux-info
 
@@ -67,7 +67,7 @@ src_install() {
 	doexe cvpnd
 	dobin ipseclog cisco_cert_mgr
 
-	insinto /lib/modules/0/CiscoVPN
+	insinto /lib/modules/${KV}/CiscoVPN
 	doins cisco_ipsec
 
 	insinto ${VPNDIR}
