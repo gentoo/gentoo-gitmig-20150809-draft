@@ -25,5 +25,8 @@
 		Nhóm app-cdr chứa các phần mềm để ghi CD và DVD, làm
 		việc với các tập tin .iso.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-cdr contiene programmi per scrivere CD e DVD e lavorare con file .iso .
+	</longdescription>
 </catmetadata>
 
