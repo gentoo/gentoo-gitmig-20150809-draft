@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/jam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.16 2005/09/03 08:31:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.17 2005/11/20 22:31:17 chriswhite Exp $
+
+*jam-2.5-r3 (20 Nov 2005)
+
+  20 Nov 2005; Chris White <chriswhite@gentoo.org>
+  files/jam-2.5-dependency.patch, -jam-2.5-r2.ebuild, +jam-2.5-r3.ebuild:
+  Revision bump to -r3 to force upgrade for fix in bug #103893.  Removed old -r2.
 
   03 Sep 2005; Chris White <chriswhite@gentoo.org>
   +files/jam-2.5-dependency.patch, jam-2.5-r2.ebuild:

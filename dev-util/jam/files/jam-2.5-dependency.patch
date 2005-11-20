@@ -1,5 +1,3 @@
-Fixes dependencies of headers included by headers in another directory.
-
 --- jam-2.5/Jambase
 +++ jam-2.5/Jambase
 @@ -710,7 +710,7 @@
@@ -7,21 +5,26 @@ Fixes dependencies of headers included by headers in another directory.
  
  	Includes $(<) : $(s) ;
 -	SEARCH on $(s) = $(HDRSEARCH) ;
-+	SEARCH on $(s) = $(<:D) $(HDRSEARCH) ;
++	SEARCH on $(s) = $(3:D) $(HDRSEARCH) ;
  	NoCare $(s) ;
  
  	# Propagate on $(<) to $(>)
 --- jam-2.5/headers.c
 +++ jam-2.5/headers.c
-@@ -67,7 +67,7 @@
- 
- 	lol_init( &lol );
- 
--	lol_add( &lol, list_new( L0, t->name, 1 ) );
-+	lol_add( &lol, list_new( L0, t->boundname, 1 ) );
+@@ -71,7 +71,13 @@
  	lol_add( &lol, headers1( t->boundname, hdrscan ) );
  
  	if( lol_get( &lol, 1 ) )
++	{
++	    /* The third argument to HDRRULE is the bound name of
++	     * $(<) */
++	    lol_add( &lol, list_new( L0, t->boundname, 1 ) );
++
+ 	    list_free( evaluate_rule( hdrrule->string, &lol, L0 ) );
++	}
+ 
+ 	/* Clean up */
+ 
 --- jam-2.5/jambase.c
 +++ jam-2.5/jambase.c
 @@ -452,7 +452,7 @@
@@ -29,7 +32,7 @@ Fixes dependencies of headers included by headers in another directory.
  "local s = $(>:G=$(HDRGRIST:E)) ;\n",
  "Includes $(<) : $(s) ;\n",
 -"SEARCH on $(s) = $(HDRSEARCH) ;\n",
-+"SEARCH on $(s) = $(<:D) $(HDRSEARCH) ;\n",
++"SEARCH on $(s) = $(3:D) $(HDRSEARCH) ;\n",
  "NoCare $(s) ;\n",
  "HDRSEARCH on $(s) = $(HDRSEARCH) ;\n",
  "HDRSCAN on $(s) = $(HDRSCAN) ;\n",

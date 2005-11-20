@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6cd983f2856797ca40a0a0ecf7a1f20f ChangeLog 2207
-MD5 fc05f97cb4dbabde210cb0237a504cca jam-2.5-r2.ebuild 983
-MD5 a5686e3c1ed6f476191f125c7589d421 jam-2.5.ebuild 788
 MD5 d16e0e772acf4a3bf1cf907dc4cafafd metadata.xml 324
+MD5 6081df2c9653a7dbff532058bff909da ChangeLog 2442
+MD5 a5686e3c1ed6f476191f125c7589d421 jam-2.5.ebuild 788
+MD5 b4f89c68da8f996a4458853ec9c36d3f jam-2.5-r3.ebuild 983
+MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5-r3 56
 MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5 56
-MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5-r2 56
+MD5 0add93cb0929ead47d332051dea533ef files/jam-2.5-dependency.patch 939
 MD5 355cd982c580f42f3401def29ad621fe files/jam-2.5-amd64.patch 334
 MD5 d1bfd7c9f477fe91b1cc27f0324591a0 files/jam-2.5-cxx.patch 1089
-MD5 a1600ae1d2409408663200c6c0643e68 files/jam-2.5-dependency.patch 907
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGVhHFdQwWVoAgN4RAvbxAJ9MOXmgHmUFGFhsHMK+wZ+E6BIFqQCg+pmU
-hpAJBA9yRVi7UckDeC00nbA=
-=qqbB
+iD8DBQFDgPlIFdQwWVoAgN4RAnhNAKDol7i7Ud62Lufk7dW4rqUFuqTQPACdGtVP
+70FBE6n++ebWnXJ4jlPDJHs=
+=oUno
 -----END PGP SIGNATURE-----
