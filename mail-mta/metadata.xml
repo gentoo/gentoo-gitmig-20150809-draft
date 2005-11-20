@@ -24,4 +24,8 @@
 	<longdescription lang="vi">
 		Nhóm mail-mta chứa các mail server (Mail Transport Agent).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria mail-mta contiene pacchetti di server per la posta elettronica
+		(Mail Transport Agent).
+	</longdescription>
 </catmetadata>
