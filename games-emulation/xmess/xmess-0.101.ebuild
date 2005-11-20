@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.101.ebuild,v 1.2 2005/10/28 17:55:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.101.ebuild,v 1.3 2005/11/20 06:45:56 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~hppa ia64 ppc sparc x86"
-IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xv"
+IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
 
 RDEPEND="sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
@@ -56,7 +56,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-keyboard.patch" #Bug #110671
+	epatch "${FILESDIR}"/${P}-keyboard.patch #110671
 
 	case ${ARCH} in
 		x86)	mycpu="i386";;
@@ -102,6 +102,7 @@ src_unpack() {
 	toggle_feature expat BUILD_EXPAT
 	toggle_feature opengl X11_OPENGL
 	toggle_feature lirc LIRC
+	toggle_feature xinerama X11_XINERAMA 
 
 	case ${ARCH} in
 		x86|ia64|amd64)
