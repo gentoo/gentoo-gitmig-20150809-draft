@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.227 2005/11/16 09:50:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.228 2005/11/20 00:28:56 flameeyes Exp $
+
+  20 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kxkb-3.5.0_rc1-modularx.patch, kdebase-3.5.0_rc1.ebuild:
+  Added backport of revision 481658 to let kxkb find the data while using
+  modular X.
 
 *kdebase-3.5.0_rc1 (16 Nov 2005)
 
