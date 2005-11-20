@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.7 2005/10/28 08:58:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.8 2005/11/20 14:10:05 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -211,4 +211,70 @@ vdr-plugin_pkg_postrm() {
 	remove_vdrplugindb
 }
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm
+vdr-plugin_pkg_config_final() {
+	diff ${conf_orig} ${conf}
+	rm ${conf_orig}
+}
+
+vdr-plugin_pkg_config() {
+	if [[ -z "${INSTALLPLUGIN}" ]]; then
+		INSTALLPLUGIN="${VDRPLUGIN}"
+	fi
+	# First test if plugin is already inside PLUGINS
+	local conf=/etc/conf.d/vdr
+	conf_orig=${conf}.before_emerge_config
+	cp ${conf} ${conf_orig}
+
+	einfo "Reading ${conf}"
+	if ! grep -q "^PLUGINS=" ${conf}; then
+		local LINE=$(sed ${conf} -n -e '/^#.*PLUGINS=/=' | tail -n 1)
+		if [[ -n "${LINE}" ]]; then
+			sed -e ${LINE}'a PLUGINS=""' -i ${conf}
+		else
+			echo 'PLUGINS=""' >> ${conf}
+		fi
+		unset LINE
+	fi
+
+	unset PLUGINS
+	PLUGINS=$(source /etc/conf.d/vdr; echo ${PLUGINS})
+
+	active=0
+	for p in ${PLUGINS}; do
+		if [[ "${p}" == "${INSTALLPLUGIN}" ]]; then
+			active=1
+			break;
+		fi
+	done
+
+	if [[ "${active}" == "1" ]]; then
+		einfo "${INSTALLPLUGIN} already activated"
+		echo
+		read -p "Do you want to deactivate ${INSTALLPLUGIN} (yes/no) " answer
+		if [[ "${answer}" != "yes" ]]; then
+			einfo "aborted"
+			return
+		fi
+		einfo "Removing ${INSTALLPLUGIN} from active plugins."
+		local LINE=$(sed ${conf} -n -e '/^PLUGINS=.*\<'${INSTALLPLUGIN}'\>/=' | tail -n 1)
+		sed -i ${conf} -e ${LINE}'s/\<'${INSTALLPLUGIN}'\>//' \
+			-e ${LINE}'s/ \( \)*/ /g' \
+			-e ${LINE}'s/ "/"/g' \
+			-e ${LINE}'s/" /"/g'
+
+		vdr-plugin_pkg_config_final
+		return
+	fi
+
+
+	einfo "Adding ${INSTALLPLUGIN} to active plugins."
+	local LINE=$(sed ${conf} -n -e '/^PLUGINS=/=' | tail -n 1)
+	sed -i ${conf} -e ${LINE}'s/^PLUGINS=" *\(.*\)"/PLUGINS="\1 '${INSTALLPLUGIN}'"/' \
+		-e ${LINE}'s/ \( \)*/ /g' \
+		-e ${LINE}'s/ "/"/g' \
+		-e ${LINE}'s/" /"/g'
+
+	vdr-plugin_pkg_config_final
+}
+
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm pkg_config
