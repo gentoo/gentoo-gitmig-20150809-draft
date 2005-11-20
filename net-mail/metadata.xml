@@ -8,7 +8,7 @@
 		Die Kategorie net-mail enthält verschiede Werkzeuge zum Thema Email.
 	</longdescription>
 	<longdescription lang="es">
-		La categorí net-mail contiene varias utilidades relacionadas con el
+		La categoría net-mail contiene varias utilidades relacionadas con el
 		correo electrónico.
 	</longdescription>
 	<longdescription lang="ja">
@@ -22,5 +22,8 @@
 	</longdescription>
 	<longdescription lang="vi">
 		Nhóm net-mail chứa các tiện ích email khác nhau.
+	</longdescription>
+	<longdescription lang="it">
+		La categoria net-mail contiene varie utilità per la posta elettronica.
 	</longdescription>
 </catmetadata>
