@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.43 2005/11/02 21:48:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.44 2005/11/20 17:06:54 grobian Exp $
+
+*tcsh-6.14-r2 (20 Nov 2005)
+
+  20 Nov 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/tcsh-6.14-r2.patch, +tcsh-6.14-r2.ebuild:
+  Fix for bug #104763: now scripts from /etc/profile.d are not being sourced
+  for non-interactive shells.  Moved unused legacy scripts to example dir
+  instead of installing them and polluting the filesystem.
 
   02 Nov 2005; Fabian Groffen <grobian@gentoo.org> tcsh-6.14-r1.ebuild:
   Only add csh symlink if csh is not yet there for bug #26196
