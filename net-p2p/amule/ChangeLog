@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.55 2005/11/19 22:36:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.56 2005/11/20 03:51:39 josejx Exp $
+
+  20 Nov 2005; Joseph Jezak <josejx@gentoo.org> amule-2.0.3-r4.ebuild:
+  Marked ppc stable for bug #106380.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> amule-2.0.3-r4.ebuild:
   Stable on ppc64; bug #106380
