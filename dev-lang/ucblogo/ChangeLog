@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ucblogo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.1 2005/09/22 03:02:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.2 2005/11/20 06:42:47 vapier Exp $
+
+  20 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/ucblogo-5.5-dont-require-tetex.patch, ucblogo-5.5.ebuild:
+  Dont abort if tetex isnt installed #113023 by James Cave.
 
 *ucblogo-5.5 (21 Sep 2005)
 

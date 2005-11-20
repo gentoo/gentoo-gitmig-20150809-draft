@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ucblogo-5.5.ebuild,v 1.1 2005/09/22 03:02:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ucblogo-5.5.ebuild,v 1.2 2005/11/20 06:42:47 vapier Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-destdir.patch
 	epatch "${FILESDIR}"/${P}-fhs.patch
+	epatch "${FILESDIR}"/${P}-dont-require-tetex.patch
 	use emacs || echo 'all install:' > emacs/makefile
 }
 
