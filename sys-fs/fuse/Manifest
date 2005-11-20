@@ -1,12 +1,22 @@
-MD5 bb6396b17adacdcdecc8d1fe2419167f ChangeLog 4767
-MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
-MD5 5837867b4d824f957ac809f45e468957 fuse-2.3.0.ebuild 1446
-MD5 fb6a3ca988d45aaf47a66ae5569c5ad4 fuse-2.4.0.ebuild 1451
-MD5 7ab7607d812aadafaf30e1a038f16d10 fuse-2.4.1.ebuild 1451
-MD5 82da760eb3088f3e71731a50141d082a fuse-2.4.1-r1.ebuild 1487
-MD5 ffd57aad8c33e3452bcb35543a59e75a files/digest-fuse-2.4.0 62
-MD5 c1ef6366ba5892111ddef08887328663 files/fuse-fix-lazy-binding.patch 398
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57525d3c9ea41fdefe121925b0a2077b ChangeLog 4856
 MD5 660a7ef5693ad494967fec4297c6dfce files/digest-fuse-2.3.0 62
+MD5 ffd57aad8c33e3452bcb35543a59e75a files/digest-fuse-2.4.0 62
 MD5 ad233d63810d8501e80affb6e4b8f40f files/digest-fuse-2.4.1 62
 MD5 ad233d63810d8501e80affb6e4b8f40f files/digest-fuse-2.4.1-r1 62
+MD5 c1ef6366ba5892111ddef08887328663 files/fuse-fix-lazy-binding.patch 398
 MD5 341eb75e58827ef58b4c5b445c721362 files/fusermount.patch 1300
+MD5 5837867b4d824f957ac809f45e468957 fuse-2.3.0.ebuild 1446
+MD5 fb6a3ca988d45aaf47a66ae5569c5ad4 fuse-2.4.0.ebuild 1451
+MD5 f58cddd39198ed465734c30e8a9f5b2d fuse-2.4.1-r1.ebuild 1488
+MD5 7ab7607d812aadafaf30e1a038f16d10 fuse-2.4.1.ebuild 1451
+MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDgM7pCRZPokWLroQRAmojAKC4oKrWmc8BSBEInj7fbTFVq+5iMwCfRzeE
+TtqO2M/APNWl1dcfgb1PPX4=
+=4kNp
+-----END PGP SIGNATURE-----
