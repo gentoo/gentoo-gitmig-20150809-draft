@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.19 2005/11/15 19:40:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.20 2005/11/20 09:40:01 hardave Exp $
+
+  20 Nov 2005; Hardave Riar <hardave@gentoo.org> lynx-2.8.5-r2.ebuild:
+  Stable on mips, bug #112213.
 
   15 Nov 2005; Seemant Kulleen <seemant@gentoo.org> lynx-2.8.5-r2.ebuild:
   stabled on s390
