@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.2.ebuild,v 1.2 2005/11/20 02:37:54 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.2-r1.ebuild,v 1.1 2005/11/20 02:37:54 ramereth Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
 nagios-ssh nagios-game ups ipv6 radius"
 
@@ -25,10 +25,11 @@ DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.6.1-r7
 	samba? ( >=net-fs/samba-2.2.5-r1 )
-	snmp? (
-		>=dev-perl/Net-SNMP-4.0.1-r1
-		>=net-analyzer/net-snmp-5.0.6
-	)
+	snmp? ( >=dev-perl/Net-SNMP-4.0.1-r1
+			>=net-analyzer/net-snmp-5.0.6
+			)
+	mysql? ( dev-perl/DBI
+			 dev-perl/DBD-mysql )
 	nagios-dns? ( >=net-dns/bind-tools-9.2.2_rc1 )
 	nagios-ntp? ( >=net-misc/ntp-4.1.1a )
 	nagios-ping? ( >=net-analyzer/fping-2.4_beta2-r1 )
