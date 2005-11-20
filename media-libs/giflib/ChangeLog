@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.39 2005/11/04 10:37:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.40 2005/11/20 10:13:51 hardave Exp $
+
+  20 Nov 2005; Hardave Riar <hardave@gentoo.org> giflib-4.1.4.ebuild:
+  Stable on mips, bug #109997.
 
   04 Nov 2005; Fabian Groffen <grobian@gentoo.org> giflib-4.1.4.ebuild:
   Marked ppc-macos for bug #109997
