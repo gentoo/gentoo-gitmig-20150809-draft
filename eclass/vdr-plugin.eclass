@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.8 2005/11/20 14:10:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.9 2005/11/20 16:41:38 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -202,8 +202,10 @@ vdr-plugin_src_install() {
 vdr-plugin_pkg_postinst() {
 	update_vdrplugindb
 	einfo
-	einfo "The vdr plugin ${VDRPLUGIN} has now been installed,"
-	einfo "to activate it you have to add it to /etc/conf.d/vdr."
+	einfo "The vdr plugin ${VDRPLUGIN} has now been installed."
+	einfo "To activate execute the following command:"
+	einfo
+	einfo "  emerge --config ${PN}"
 	einfo
 }
 
