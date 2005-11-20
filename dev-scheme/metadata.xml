@@ -25,5 +25,9 @@
 		Nhóm dev-scheme chứa các thư viện và tiện ích liên quan
 		đến ngôn ngữ lập trình Scheme.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-scheme contiene librerie e utilità per il linguaggio di
+		programmazione Scheme.
+	</longdescription>
 </catmetadata>
 
