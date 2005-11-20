@@ -28,5 +28,8 @@
 	<longdescription lang="vi">
 		Nhóm net-ftp chứa các phần mềm FTP (File Transfer Protocol).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-ftp contiene programmi per l'FTP (File Transfer Protocol).
+	</longdescription>
 </catmetadata>
 
