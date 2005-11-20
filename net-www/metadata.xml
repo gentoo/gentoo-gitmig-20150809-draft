@@ -24,5 +24,9 @@
 	<longdescription lang="vi">
 		Nhóm net-www chứa các client WWW chưa được chuyển vào các nhóm www-.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-www contiene cari client WWW che non sono ancora stati
+		spostati in altre categorie www-.
+	</longdescription>
 </catmetadata>
 
