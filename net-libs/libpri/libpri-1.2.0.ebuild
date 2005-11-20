@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.0.ebuild,v 1.1 2005/11/18 16:24:14 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.0.ebuild,v 1.2 2005/11/20 21:33:56 stkn Exp $
 
 inherit eutils
 
@@ -9,18 +9,20 @@ inherit eutils
 # - bristuff (waiting for next upstream release...)
 #
 
-IUSE=""
+IUSE="bri"
 
 MY_P="${P/_/-}"
 
-#BRI_VERSION="0.2.0-RC8h"
+BRI_VERSION="0.3.0-PRE-1"
 
 DESCRIPTION="Primary Rate ISDN (PRI) library"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://ftp.digium.com/pub/libpri/${MY_P}.tar.gz"
-#	 bri? ( http://www.junghanns.net/asterisk/downloads/bristuff-${BRI_VERSION}.tar.gz )"
+SRC_URI="http://ftp.digium.com/pub/libpri/${MY_P}.tar.gz
+	bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 
 S="${WORKDIR}/${MY_P}"
+
+S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -34,10 +36,15 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2.0-gentoo.diff
 
-#	if use bri; then
-#		einfo "Patching libpri w/ BRI stuff (${BRI_VERSION})"
-#		epatch ${WORKDIR}/bristuff-${BRI_VERSION}/patches/libpri.patch
-#	fi
+	if use bri; then
+		einfo "Patching libpri w/ BRI stuff (${BRI_VERSION})"
+
+		# fix a small clash in patches
+		sed -i -e "s:CFLAGS=:CFLAGS+=:" \
+			${S_BRI}/patches/libpri.patch
+
+		epatch ${S_BRI}/patches/libpri.patch
+	fi
 }
 
 src_compile() {
