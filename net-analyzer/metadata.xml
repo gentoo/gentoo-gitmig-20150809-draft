@@ -19,5 +19,8 @@
 	<longdescription lang="vi">
 		Nhóm net-analyzer chứa các phần mềm phân tích mạng.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-analyzer contiene programmi per l'analisi della rete.
+	</longdescription>
 </catmetadata>
 
