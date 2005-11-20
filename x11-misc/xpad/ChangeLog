@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.41 2005/11/19 17:53:21 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.42 2005/11/20 11:50:17 nelchael Exp $
+
+  20 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xpad-2.10.ebuild:
+  Stable on x86 (bug 113003).
 
   19 Nov 2005; Ferris McCormick <fmccor@gentoo.org> xpad-2.10.ebuild:
   Stable on sparc at developer's request (Bug #113003).  Builds fine with
