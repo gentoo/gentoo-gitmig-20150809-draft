@@ -25,5 +25,8 @@
 		Nhóm dev-cpp chứa các thư viện và tiện ích liên quan
 		đến ngôn ngữ lập trình C++.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-cpp contiene librerie e utilità per illinguaggio C++.
+	</longdescription>
 </catmetadata>
 
