@@ -19,5 +19,8 @@
 	<longdescription lang="vi">
 		Nhóm x11-base chứa các bản cài đặt X11 cơ sở.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria x11-base contiene varie implementazioni base di X11.
+	</longdescription>
 </catmetadata>
 
