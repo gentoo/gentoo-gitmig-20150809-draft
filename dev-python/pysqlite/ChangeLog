@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.35 2005/11/06 00:30:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.36 2005/11/20 19:57:36 dang Exp $
+
+  20 Nov 2005; <dang@gentoo.org> pysqlite-1.0.1.ebuild:
+  Marked stable on amd64
 
 *pysqlite-2.0.5 (06 Nov 2005)
 
