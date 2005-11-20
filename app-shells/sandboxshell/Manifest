@@ -6,12 +6,12 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sandboxshell-0.2 0
 MD5 9a9a13478f46e54048795ba214e5e84d files/sandboxshell 1355
 MD5 89728cab133398dad145e13d92fff6b2 files/sandboxshell.1 3117
 MD5 d43b043244f1b814b3f4d7e5ed9cf064 files/sandboxshell.conf 1908
-MD5 664d393ce2c056c10b77f1de646532fc metadata.xml 258
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 dd79ec5b34a47984cfb0f918ad2d9b35 sandboxshell-0.2.ebuild 663
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgCwCgIKl8Uu19MoRAl8ZAJ9z+lR26V0g/rnaUR3yFZQ6OSwTOwCfWBJw
-sDTqn7KCrNZ7iUVHsr5W+TA=
-=jkZQ
+iD8DBQFDgCwegIKl8Uu19MoRAvBRAJoDPZC87P1VUSzrIIbZom4u3lsn8wCfUoAg
+3FPyrvvmlDQYdlG9DSSoYw4=
+=oNEj
 -----END PGP SIGNATURE-----
