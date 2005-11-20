@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.10 2005/10/19 04:46:10 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.11 2005/11/20 03:40:19 ramereth Exp $
+
+*mod_fcgid-1.07-r1 (20 Nov 2005)
+*mod_fcgid-1.07 (20 Nov 2005)
+
+  20 Nov 2005; Lance Albertson <ramereth@gentoo.org>
+  -mod_fcgid-1.05-r2.ebuild, +mod_fcgid-1.07.ebuild,
+  +mod_fcgid-1.07-r1.ebuild:
+  * Version bump
+  * Clean out old ebuilds
 
   19 Oct 2005; Lance Albertson <ramereth@gentoo.org>
   mod_fcgid-1.06-r1.ebuild:
