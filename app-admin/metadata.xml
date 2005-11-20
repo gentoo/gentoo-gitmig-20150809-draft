@@ -24,5 +24,8 @@
 		Nhóm app-admin category chứa các ứng dụng liên quan
 		đến quản trị hệ thống (không tính các ứng dụng lõi).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-admin contiene applicazioni per l'amministrazione del sistema.
+	</longdescription>
 </catmetadata>
 
