@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.53 2005/10/23 07:45:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.54 2005/11/20 06:47:32 vapier Exp $
+
+  28 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/xmess-0.101-keyboard.patch, xmess-0.101.ebuild:
+  Add upstream patch to fix possible keyboard handling issues (bug #110671)
 
 *xmame-0.101 (23 Oct 2005)
 
