@@ -1,5 +1,5 @@
---- makefile.in.orig	2005-09-21 22:20:28.000000000 -0400
-+++ makefile.in	2005-09-21 22:20:39.000000000 -0400
+--- makefile.in
++++ makefile.in
 @@ -3,6 +3,7 @@
  LDFLAGS	= @LDFLAGS@
  LIBS  = @X_PRE_LIBS@ @X_LIBS@ @LIBS@ @X_EXTRA_LIBS@
@@ -8,8 +8,8 @@
  BINDIR        = $(prefix)/bin
  LIBLOC        = $(prefix)/lib/logo
  MAKE = @MAKE@
---- docs/makefile.orig	2005-09-21 22:40:04.000000000 -0400
-+++ docs/makefile	2005-09-21 22:41:55.000000000 -0400
+--- docs/makefile
++++ docs/makefile
 @@ -1,6 +1,14 @@
  BUILDIR	      = `pwd`
 +ifdef infodir

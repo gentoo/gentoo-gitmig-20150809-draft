@@ -21,8 +21,8 @@
  #	prefix=$(prefix); LIBLOC=$(LIBLOC); BINDIR=$(BINDIR); export prefix LIBLOC BINDIR; cd emacs; $(MAKE) install
  
  logo-mode: 
---- docs/makefile.orig	2005-09-21 22:18:56.000000000 -0400
-+++ docs/makefile	2005-09-21 22:19:20.000000000 -0400
+--- docs/makefile
++++ docs/makefile
 @@ -30,10 +30,10 @@
  	-rm -f *.{aux,cp,cps,dvi,fn,ky,log,pg,toc,tp,vr}
  
