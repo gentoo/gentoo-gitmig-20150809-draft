@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10.ebuild,v 1.1 2005/09/29 08:47:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10.ebuild,v 1.2 2005/11/20 21:05:01 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -87,6 +87,8 @@ src_unpack() {
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
 	cd ${S}
 
+	epatch ${FILESDIR}/splashutils-1.1.9.10-ppc-2.6.14.patch
+
 	# Check whether the kernel tree has been patched with fbsplash.
 	if [[ ! -e ${KV_DIR}/include/linux/console_splash.h ]]; then
 		ewarn "Your kernel in ${KV_DIR} has not been patched with a compatible version"
@@ -128,7 +130,7 @@ src_compile() {
 	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
 	cd ${S}
 	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
-	emake -j1 LIB=$(get_libdir) || die "failed to build splashutils"
+	emake -j1 LIB=$(get_libdir) ARCH=$(tc-arch-kernel) || die "failed to build splashutils"
 }
 
 src_install() {
