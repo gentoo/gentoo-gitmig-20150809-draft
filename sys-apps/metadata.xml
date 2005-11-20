@@ -28,5 +28,9 @@
 		Nhóm sys-apps chứa các phần mềm hệ thống cốt lõi, và vài phần mềm
 		hệ thống không phải cốt lõi mà chưa được chuyển sang các nhóm sys- khác.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sys-apps contiene vari pacchetti essenziali per il sistema, e alcuni pacchetti
+		non essenziali che non sono ancora stati spostati in altre categorie sys-.
+	</longdescription>
 </catmetadata>
 
