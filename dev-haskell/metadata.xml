@@ -25,5 +25,8 @@
 		Nhóm dev-haskell chứa các thư viện và tiện ích liên quan
 		đến ngôn ngữ lập trình Haskell.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-haskell contiene librerie ed utilità per il linguaggio Haskell.
+	</longdescription>
 </catmetadata>
 
