@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.14 2005/10/23 22:07:59 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.15 2005/11/20 16:48:45 stuart Exp $
+
+  20 Nov 2005; Stuart Herbert <stuart@gentoo.org> otrs-1.3.2.ebuild,
+  otrs-2.0.3.ebuild:
+  Fixed broken DEPEND
 
 *otrs-2.0.3 (23 Oct 2005)
 

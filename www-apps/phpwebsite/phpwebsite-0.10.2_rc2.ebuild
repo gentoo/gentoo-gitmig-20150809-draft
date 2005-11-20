@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.2_rc2.ebuild,v 1.5 2005/08/30 23:46:51 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.2_rc2.ebuild,v 1.6 2005/11/20 16:39:00 stuart Exp $
 
 inherit webapp
 
@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND="virtual/httpd-php
 	>=dev-db/mysql-3.23.23"
 
-DEPEND="${DEPEND} ${RDEPEND} >=net-www/webapp-config-1.11"
+DEPEND="${DEPEND} ${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 

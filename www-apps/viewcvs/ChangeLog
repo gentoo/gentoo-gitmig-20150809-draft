@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.26 2005/10/18 18:04:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.27 2005/11/20 16:43:21 stuart Exp $
+
+  20 Nov 2005; Stuart Herbert <stuart@gentoo.org> viewcvs-0.9.4.ebuild:
+  Fixed broken DEPEND
 
   18 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> viewcvs-0.9.3.ebuild:
   Stable on sparc

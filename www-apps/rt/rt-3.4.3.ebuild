@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.7 2005/10/24 14:19:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.8 2005/11/20 16:50:38 stuart Exp $
 
 inherit webapp eutils
 
@@ -15,7 +15,6 @@ SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz
 KEYWORDS="~ppc ~x86"
 
 DEPEND="
-	>=net-www/webapp-config-1.11-r1
 	>=dev-lang/perl-5.8.3
 	>=dev-perl/Params-Validate-0.02
 	dev-perl/Cache-Cache

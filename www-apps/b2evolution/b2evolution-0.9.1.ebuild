@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.1.ebuild,v 1.1 2005/10/13 14:57:04 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.1.ebuild,v 1.2 2005/11/20 16:54:19 stuart Exp $
 
 inherit webapp eutils
 
@@ -16,7 +16,6 @@ RDEPEND="virtual/httpd-php
 	 >=dev-db/mysql-3.23.23"
 
 DEPEND="${DEPEND} ${RDEPEND}
-	>=net-www/webapp-config-1.10-r5
 	app-arch/unzip"
 
 S="${WORKDIR}/${PN}"

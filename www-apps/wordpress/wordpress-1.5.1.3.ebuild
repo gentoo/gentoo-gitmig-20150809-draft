@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.1.3.ebuild,v 1.6 2005/07/20 20:30:56 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.1.3.ebuild,v 1.7 2005/11/20 16:45:19 stuart Exp $
 
 inherit webapp eutils
 
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=dev-php/mod_php-4.1
 	 >=dev-db/mysql-3.23.23"
 
-DEPEND="${DEPEND} ${RDEPEND} >=net-www/webapp-config-1.10-r5"
+DEPEND="${DEPEND} ${RDEPEND}"
 
 S="${WORKDIR}/${PN}"
 

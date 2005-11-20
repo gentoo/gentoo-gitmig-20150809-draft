@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-1.3.2.ebuild,v 1.1 2005/08/02 01:59:56 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-1.3.2.ebuild,v 1.2 2005/11/20 16:48:45 stuart Exp $
 
 inherit webapp eutils
 
@@ -16,7 +16,6 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="
 	=dev-lang/perl-5*
-	>=net-www/webapp-config-1.11-r1
 	dev-perl/Date-Pcalc
 	dev-perl/DBI
 	perl-core/CGI
