@@ -20,5 +20,8 @@
 	<longdescription lang="vi">
 		Nhóm net-proxy chứa các phần mềm proxy mạng.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-proxy contiene software proxy come squid e privoxy.
+	</longdescription>
 </catmetadata>
 
