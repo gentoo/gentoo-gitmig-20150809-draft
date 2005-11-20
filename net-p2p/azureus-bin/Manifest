@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a5ccf93c3d516caa35d4533496fa1a5c ChangeLog 6015
+MD5 1231d74c804c3a3ff17d1252923dd5f9 ChangeLog 6127
 MD5 d2c866c163dd505217c5178c35e64d4b azureus-bin-2.1.0.4.ebuild 4144
-MD5 91dc12f9c728a7e6219a7ee049f28786 azureus-bin-2.3.0.4.ebuild 3851
+MD5 e6f5a8d21bd0da79aac766231f65d4f0 azureus-bin-2.3.0.4.ebuild 3848
 MD5 b950a875ce243bf3d6debd6ddfa89be6 files/azureus-bin-2.0.8.0a-gentoo.sh 1768
 MD5 17762081fd25f6928b7bd085fa61d9ee files/azureus-bin-Makefile.patch 402
 MD5 6cf2c1041726decd44a55736aadda4f7 files/azureus-bin-gentoo.sh 1056
@@ -13,9 +13,9 @@ MD5 dd1bae8b7878a07bd8103cc94c779940 files/digest-azureus-bin-2.1.0.4 295
 MD5 4f06ea39d6a719b973da167ed0d633cf files/digest-azureus-bin-2.3.0.4 382
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDaRedwUpWvClEHQoRAv7aAJ439NpxYmX78kFJ2MCoE/sfiynVFQCfU10O
-bXjqDydn4PuqqhtuBTCdh1E=
-=LzTp
+iD8DBQFDf++9csIHjyDViGQRAob5AKDO1Y1oYWPJW+5kuGUYOVMTkKuL9wCfbAIh
+zOQaz41UMW3ROMcvl6qunwM=
+=cSDu
 -----END PGP SIGNATURE-----
