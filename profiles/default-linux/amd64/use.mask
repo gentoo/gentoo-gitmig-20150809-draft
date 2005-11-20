@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.24 2005/09/19 04:19:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.25 2005/11/20 18:56:26 dang Exp $
 
 # UNKNOWN - SECTION
 
@@ -21,10 +21,6 @@ asm
 # dev-util/xdelta doesn't work as expected by this use flag, it can only use
 # xdelta-files made on a 64bit system
 kdexdeltas
-
-# 2005/03/18 - Danny van Dyk <kugelfang@gentoo.org>
-# net-libs/openslp doesn't pass make check. Security BUG #85347.
-slp
 
 # 2005/01/12 - Benjamin Schindler <config@gentoo.org>
 # Optional mono support will never work until we have a stable mono compiler
