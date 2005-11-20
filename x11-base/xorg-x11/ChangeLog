@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.478 2005/11/16 05:03:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.479 2005/11/20 14:56:09 corsair Exp $
+
+  20 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  xorg-x11-6.8.99.15-r4.ebuild:
+  Added ~ppc64 keyword
 
   16 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-x11-7.0.0_rc1.ebuild, xorg-x11-7.0.0_rc2.ebuild:
