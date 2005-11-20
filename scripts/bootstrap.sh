@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.76 2005/08/15 18:35:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.77 2005/11/20 03:08:57 solar Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -78,7 +78,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.76 2005/08/15 18:35:51 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.77 2005/11/20 03:08:57 solar Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo Linux bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -271,17 +271,13 @@ show_status 1 Configuring environment
 # Get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 # overwritten.
 
-ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
+export ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
 	CFLAGS CHOST CXXFLAGS MAKEOPTS ACCEPT_KEYWORDS PROXY HTTP_PROXY
 	FTP_PROXY FEATURES STAGE1_USE"
 
-for opt in ${ENV_EXPORTS} ; do
-	val=$(portageq envvar "${opt}")
-	if [[ -n ${val} ]] ; then
-		einfo "${opt}='${val}'"
-		export ${opt}="${val}"
-	fi
-done
+eval $(python -c'import portage,os,string;print "\n".join(["export %s=\"%s\";[[ -z \"%s\" ]] || einfo %s=\"%s\";" % (k, portage.settings[k], portage.settings[k], k, portage.settings[k]) for k in os.getenv("ENV_EXPORTS").split()])')
+unset ENV_EXPORTS
+
 echo -------------------------------------------------------------------------------
 
 [[ -x /usr/sbin/gcc-config ]] && GCC_CONFIG="/usr/sbin/gcc-config"
