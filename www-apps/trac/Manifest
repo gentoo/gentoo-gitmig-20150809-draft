@@ -1,4 +1,7 @@
-MD5 bc5ccb0a1da676ff885d45c1ab805cc3 ChangeLog 4581
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f08967cbcd0f6b25b4d58ecd436c43b6 ChangeLog 4679
 MD5 d9fb4f2a1d8f5d4653af732dd6504f7f files/0.8.1-postinst-en.txt 1242
 MD5 469236380f880bdb92903ecee4587ae3 files/0.8.4-postinst-en.txt 1035
 MD5 1ef68ae7232130e8152d6e007afc4352 files/0.9-postinst-en.txt 2275
@@ -10,5 +13,12 @@ MD5 fea08b6123da2cd35a5428f420a55dbf files/digest-trac-0.9_beta2 62
 MD5 fc3b5dec4ccef02547c54bf840024aa6 metadata.xml 220
 MD5 dc7f3171220dede396380a7d76b9d5e0 trac-0.8.2.ebuild 1838
 MD5 f605a49aef73a61cbcc7527da21fd418 trac-0.8.4.ebuild 1511
-MD5 49106540008979d06727430ca25bff92 trac-0.9.ebuild 2100
+MD5 b8efd134e63686ae9ab3eaf413cf663b trac-0.9.ebuild 2106
 MD5 bd15a5ca0c3b50a967843b84cb95f6a7 trac-0.9_beta2.ebuild 2132
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDf/EGcsIHjyDViGQRAjeTAKCCKICCbtOoXR9WYQyMOcHUWjxO+ACdHe93
+S7zonajP8lE0WmxghrZu+0Y=
+=v9gD
+-----END PGP SIGNATURE-----
