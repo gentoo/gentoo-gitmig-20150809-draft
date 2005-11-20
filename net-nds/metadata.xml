@@ -21,5 +21,9 @@
 	<longdescription lang="vi">
 		Nhóm net-nds chứa phần mềm NDS (NetWare Directory Services).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-nds contiene programmi NDS (NetWare Directory
+		Services).
+	</longdescription>
 </catmetadata>
 
