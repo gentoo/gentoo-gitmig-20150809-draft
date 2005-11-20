@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.21 2005/11/04 10:16:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.22 2005/11/20 10:12:50 hardave Exp $
+
+  20 Nov 2005; Hardave Riar <hardave@gentoo.org> urt-3.1b-r1.ebuild:
+  Stable on mips, dep for bug #109997.
 
   04 Nov 2005; Fabian Groffen <grobian@gentoo.org> urt-3.1b-r1.ebuild:
   Marked ppc-macos as dependency of bug #109997
