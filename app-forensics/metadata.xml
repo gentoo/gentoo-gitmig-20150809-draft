@@ -25,5 +25,9 @@
 		Nhóm app-forensics chứa các phần mềm hỗ trợ dò tìm,
 		phân tích các lỗ hổng bảo mật.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-forensics contiene programmi che aiutono a trovare
+		ed analizzare problemi di sicurezza.
+	</longdescription>
 </catmetadata>
 
