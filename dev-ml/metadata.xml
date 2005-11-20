@@ -25,5 +25,8 @@
 		Nhóm dev-ml chứa các thư viện và tiện ích liên quan
 		đến ngôn ngữ lập trình ML.
 	</longdescription>
+	<longdescription lang="it">
+		La categoría dev-ml contiene librerie ed utilità per il linguaggio di programmazione ML.
+	</longdescription>
 </catmetadata>
 
