@@ -24,5 +24,8 @@
 	<longdescription lang="vi">
 		Nhóm app-accessibility chứa các gói trợ giúp về truy nhập (ví dụ, trình đọc màn hình)
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-accessibility contiene strumenti per l'accessibilità del software (ad esempio lettori di schermo per ipovedenti).
+	</longdescription>
 </catmetadata>
 
