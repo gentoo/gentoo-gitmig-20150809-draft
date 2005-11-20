@@ -1,0 +1,16 @@
+diff -ru dvb-apps-orig/util/av7110_loadkeys/Makefile dvb-apps/util/av7110_loadkeys/Makefile
+--- dvb-apps-orig/util/av7110_loadkeys/Makefile	2005-11-20 01:13:12.000000000 +0100
++++ dvb-apps/util/av7110_loadkeys/Makefile	2005-11-20 01:13:44.000000000 +0100
+@@ -61,8 +61,10 @@
+ 	$(RM) core* *.o input_keynames.h av7110_loadkeys evtest
+ 
+ install: install-bin install-data
+-install-bin: av7110_loadkeys
++install-bin: av7110_loadkeys evtest
+ 	install -m 755 av7110_loadkeys $(DESTDIR)$(bindir)
++	install -m 755 evtest $(DESTDIR)$(bindir)
++
+ install-data:
+ 	mkdir -p $(DESTDIR)$(datadir)/dvb/av7110_loadkeys
+ 	cp *.rc5 *.rcmm $(DESTDIR)$(datadir)/dvb/av7110_loadkeys/
+Nur in dvb-apps/util/av7110_loadkeys: Makefile~.
