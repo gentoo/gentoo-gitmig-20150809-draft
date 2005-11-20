@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kxdocker-resources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-resources/ChangeLog,v 1.2 2005/10/01 01:50:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-resources/ChangeLog,v 1.3 2005/11/20 12:01:14 kugelfang Exp $
+
+  20 Nov 2005; Danny van Dyk <kugelfang@gentoo.org>
+  kxdocker-resources-0.14.ebuild:
+  Marked ~amd64.
 
 *kxdocker-resources-0.14 (01 Oct 2005)
 
