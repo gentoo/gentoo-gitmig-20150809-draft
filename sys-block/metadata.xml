@@ -22,5 +22,8 @@
 	<longdescription lang="vi">
 		Nhóm sys-block chứa các gói hoạt động với thiết bị khối (block device).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sys-block contiene pacchetti per la gestione dei dispositivi a blocchi.
+	</longdescription>
 </catmetadata>
 
