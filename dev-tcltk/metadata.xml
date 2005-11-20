@@ -22,5 +22,8 @@
 		Nhóm dev-tcltk chứa các thư viện và tiện ích liên quan
 		đến ngôn ngữ lập trình Tcl/Tk.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-tcltk contiene utilità e librerie per Tcl e Tk.
+	</longdescription>
 </catmetadata>
 
