@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.40 2005/11/12 22:22:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.41 2005/11/20 18:31:53 wolf31o2 Exp $
+
+  20 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -americas-army-230.ebuild, americas-army-250.ebuild:
+  Fixed amd64 dependencies for bug #113046 and marking stable on x86 and amd64.
 
   12 Nov 2005; Luca Barbato <lu_zero@gentoo.org> americas-army-230.ebuild:
   Dependency update: media-video/ati-drivers -> x11-drivers/ati-drivers.
