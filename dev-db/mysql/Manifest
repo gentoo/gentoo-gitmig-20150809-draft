@@ -1,5 +1,5 @@
-MD5 f33439a3872a7e188fbb94a4b79b5e4a ChangeLog 48482
-MD5 c6fcd70c34bed04e59808ec71c5bedfb files/digest-mysql-3.23.58-r1 140
+MD5 795364b16ca7b9946fb04f079a8e115d ChangeLog 48649
+MD5 bd6b9a577a5647c86a61e04416d21be1 files/digest-mysql-3.23.58-r1 140
 MD5 0feb3b501c47708ea13707c8e4cdde9c files/digest-mysql-4.0.25-r2 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26-r30 139
@@ -18,7 +18,7 @@ MD5 625b4007f035e3da9a4f1eeee1db6b9c files/mysql-4.0.15.rc6 1187
 MD5 d0fbdf4e41f2b52210eef6cb3a53e128 files/mysql-4.0.24-r1.rc6 1662
 MD5 08f1246e8107e4140378d429ff9773af files/mysql-4.0.24-r2.rc6 2123
 MD5 c8a9f17eb53cb46bd7ec6b3105cd8d23 files/mysql-slot.conf.d 3218
-MD5 2c8118a63df495f28f99857bd43fb86e files/mysql-slot.rc6 7484
+MD5 05b7f9542728418c0f46d9037d32e0c7 files/mysql-slot.rc6 7758
 MD5 73be6460f548f6f73c70246a4cfd13a0 files/mysql.init 886
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 eb11a08abb447b7a69b192a6f9be3dbf mysql-3.23.58-r1.ebuild 7219
