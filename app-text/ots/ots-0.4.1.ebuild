@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.1.ebuild,v 1.10 2005/09/29 01:29:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.1.ebuild,v 1.11 2005/11/20 22:57:48 vanquirius Exp $
 
 DESCRIPTION="Open source Text Summarizer, as used in newer releases of abiword and kword."
 HOMEPAGE="http://libots.sourceforge.net/"
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 src_compile() {
 	# bug 97448
 	econf --disable-gtk-doc || die
-	emake || die
+	# parallel make fails, bug 112932
+	emake -j1 || die
 }
 
 src_install() {

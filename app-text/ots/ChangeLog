@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.13 2005/10/12 19:26:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.14 2005/11/20 22:57:48 vanquirius Exp $
+
+  20 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> ots-0.4.1.ebuild,
+  ots-0.4.2.ebuild:
+  Adding -j1 to emake since parallel make fails. Fixes bug 112932. Many thanks
+  to Juergen Rose <rose at rz dot uni-potsdam dot de> for reporting.
 
   12 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> ots-0.4.2.ebuild:
   Stable on hppa, ppc.

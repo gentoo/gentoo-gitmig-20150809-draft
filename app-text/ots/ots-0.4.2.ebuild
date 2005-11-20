@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.2.ebuild,v 1.4 2005/10/12 19:26:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.2.ebuild,v 1.5 2005/11/20 22:57:48 vanquirius Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ src_unpack() {
 src_compile() {
 	# bug 97448
 	econf --disable-gtk-doc || die
-	emake || die
+	# parallel make fails, bug 112932
+	emake -j1 || die
 }
 
 src_install() {
