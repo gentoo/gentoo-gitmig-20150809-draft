@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.7 2005/10/23 20:55:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.8 2005/11/20 00:01:20 betelgeuse Exp $
+
+  19 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  at76c503a-0.12_beta19.ebuild, at76c503a-0.12_beta23.ebuild,
+  at76c503a-0.12_beta23-r1.ebuild, at76c503a-0.12_beta23-r2.ebuild:
+  Changed HOMEPAGE to http://developer.berlios.de/projects/at76c503a/ because
+  the current http://at76c503a.berlios.de does not have any content.
+  Fixes bug #113008.
 
 *at76c503a-0.12_beta23-r2 (23 Oct 2005)
 
