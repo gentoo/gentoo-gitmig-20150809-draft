@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.268 2005/11/15 16:57:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.269 2005/11/20 20:06:44 flameeyes Exp $
+
+*xine-lib-1.1.1-r1 (20 Nov 2005)
+
+  20 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.1-r1.ebuild:
+  New version with ffmpeg support, and asf dependant on asf useflag (allows to
+  play audio of wma/wmv files using ffmpeg on non-x86 arches).
 
 *xine-lib-1.1.1 (15 Nov 2005)
 
