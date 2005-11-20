@@ -23,5 +23,8 @@
 		Nhóm app-emacs chứa các gói mở rộng cho trình soạn
 		thảo văn bản Emacs.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-emacs contiene pacchetti di estensioni per l'editor di testo Emacs.
+	</longdescription>
 </catmetadata>
 
