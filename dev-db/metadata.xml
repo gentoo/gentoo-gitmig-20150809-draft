@@ -25,5 +25,8 @@
 		Nhóm dev-db chứa các thư viện và tiện ích liên quan
 		đến Cơ sở dữ liệu.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-db contiene librerie ed utilità per la programmazione di basi di dati.
+	</longdescription>
 </catmetadata>
 
