@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.0.ebuild,v 1.1 2005/11/20 02:49:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.0.ebuild,v 1.2 2005/11/20 18:15:19 markusle Exp $
 
 inherit fortran
 
@@ -71,14 +71,10 @@ src_test() {
 
 
 src_install() {
-	sed -e "s:^prefix=.*$:prefix=${D}/usr:" \
-	    -e "s:^datadir=/usr/share:datadir=${D}/usr/share:" \
-		-e "s:^scdatadir=/usr/share/mpqc/2.3.0:scdatadir=${D}/usr/share/${PN}/${PV}:" \
-		-i "lib/LocalMakefile"
+	make installroot="${D}" install install_devel install_inc \
+		|| die "install failed"
 
 	dodoc CHANGES CITATION README || die "failed to install docs"
-
-	make install install_devel install_inc || die "install failed"
 
 	# make extended docs 
 	if use doc; then
