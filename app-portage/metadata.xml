@@ -24,5 +24,8 @@
 		Nhóm app-portage chứa các ứng dụng liên quan đến
 		portage.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-portage contiene programmi per portage o per le ebuilds.
+	</longdescription>
 </catmetadata>
 
