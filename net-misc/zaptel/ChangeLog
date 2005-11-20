@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.65 2005/11/18 16:34:14 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.66 2005/11/20 21:36:46 stkn Exp $
+
+  20 Nov 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.2.0.ebuild:
+  Re-enabled bri support.
 
 *zaptel-1.2.0 (18 Nov 2005)
 

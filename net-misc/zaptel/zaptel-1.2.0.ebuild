@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0.ebuild,v 1.1 2005/11/18 16:34:14 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0.ebuild,v 1.2 2005/11/20 21:36:46 stkn Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -11,20 +11,22 @@ inherit toolchain-funcs eutils linux-mod
 # - testing of new features (zapras / -net)
 #
 
-#BRI_VERSION="0.2.0-RC8h"
+BRI_VERSION="0.3.0-PRE-1"
 #FLORZ_VERSION="0.2.0-RC8a_florz-6"
 
-IUSE="devfs26 rtc ecmark ecmark2 ecmark3 ecaggressive eckb1 ecmg2 ecsteve ecsteve2 ukcid watchdog zapras zapnet"
+IUSE="bri devfs26 ecmark ecmark2 ecmark3 ecaggressive eckb1 ecmg2 ecsteve ecsteve2 rtc ukcid watchdog zapras zapnet"
 
 MY_P="${P/_/-}"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="http://ftp.digium.com/pub/zaptel/${MY_P}.tar.gz"
-#	 bri? ( http://www.junghanns.net/asterisk/downloads/bristuff-${BRI_VERSION}.tar.gz )
+SRC_URI="http://ftp.digium.com/pub/zaptel/${MY_P}.tar.gz
+	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 #	 florz? ( http://zaphfc.florz.dyndns.org/zaphfc_${FLORZ_VERSION}.diff.gz )"
 
 S="${WORKDIR}/${MY_P}"
+
+S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -170,12 +172,12 @@ src_unpack() {
 		epatch ${FILESDIR}/${PN}-1.2.0-ukcid.patch
 
 	# try to apply bristuff patch
-#	if use bri; then
-#		einfo "Patching zaptel w/ BRI stuff (${BRI_VERSION})"
-#		epatch ${FILESDIR}/zaptel-bristuff-${BRI_VERSION}.patch
-#
-#		cd ${WORKDIR}/bristuff-${BRI_VERSION}
-#
+	if use bri; then
+		einfo "Patching zaptel w/ BRI stuff (${BRI_VERSION})"
+		epatch ${S_BRI}/patches/zaptel.patch
+
+		cd ${S_BRI}
+
 #		if use florz; then
 #			einfo "Using florz patches (${FLORZ_VERSION}) for zaphfc"
 #
@@ -185,24 +187,26 @@ src_unpack() {
 #
 #			epatch ${WORKDIR}/zaphfc_${FLORZ_VERSION}.diff
 #		fi
-#
-#		# patch includes
-#		sed -i  -e "s:^#include.*zaptel\.h.*:#include <zaptel.h>:" \
-#			qozap/qozap.c \
-#			zaphfc/zaphfc.c \
-#			cwain/cwain.c
-#
-#		# patch makefiles
-#		sed -i  -e "s:^ZAP[\t ]*=.*:ZAP=-I${S}:" \
-#			-e "s:^MODCONF=.*:MODCONF=/etc/modules.d/zaptel:" \
-#			-e "s:linux-2.6:linux:g" \
-#			qozap/Makefile \
-#			zaphfc/Makefile \
-#			cwain/Makefile
-#
-#		sed -i  -e "s:^\(CFLAGS+=-I. \).*:\1 \$(ZAP):" \
-#			zaphfc/Makefile
-#	fi
+
+		# patch includes
+		sed -i  -e "s:^#include.*zaptel\.h.*:#include <zaptel.h>:" \
+			qozap/qozap.c \
+			zaphfc/zaphfc.c \
+			cwain/cwain.c
+
+		# patch makefiles
+		sed -i  -e "s:^ZAP[\t ]*=.*:ZAP=-I${S}:" \
+			-e "s:^MODCONF=.*:MODCONF=/etc/modules.d/zaptel:" \
+			-e "s:linux-2.6:linux:g" \
+			qozap/Makefile \
+			zaphfc/Makefile \
+			cwain/Makefile
+
+		sed -i  -e "s:^\(CFLAGS+=-I. \).*:\1 \$(ZAP):" \
+			zaphfc/Makefile
+
+		cd ${S}
+	fi
 
 ### Configuration changes
 	local myEC
@@ -248,12 +252,16 @@ src_compile() {
 	make KVERS=${KV_FULL} \
 	     KSRC=/usr/src/linux ARCH=$(tc-arch-kernel) || die
 
-#	if use bri; then
-#		cd ${WORKDIR}/bristuff-${BRI_VERSION}
-#		make -C qozap  || die
-#		make -C zaphfc || die
-#		make -C cwain  || die
-#	fi
+	if use bri; then
+		cd ${S_BRI}
+		for x in cwain qozap zaphfc; do
+			einfo "Building ${x}..."
+			make KVERS=${KV_FULL} \
+				KSRC=/usr/src/linux \
+				ARCH=$(tc-arch-kernel) \
+				-C ${x} || die "make ${x} failed"
+		done
+	fi
 }
 
 src_install() {
@@ -271,38 +279,40 @@ src_install() {
 	insinto /usr/include/zaptel
 	doins *.h
 
-#	if use bri; then
-#		einfo "Installing bri"
-#		cd ${WORKDIR}/bristuff-${BRI_VERSION}
-#
-#		insinto /lib/modules/${KV_FULL}/misc
-#		doins qozap/qozap.${KV_OBJ}
-#		doins zaphfc/zaphfc.${KV_OBJ}
-#		doins cwain/cwain.${KV_OBJ}
-#
-#		# install example configs for octoBRI and quadBRI
-#		insinto /etc
-#		doins qozap/zaptel.conf.octoBRI
-#		newins qozap/zaptel.conf zaptel.conf.quadBRI
-#		newins zaphfc/zaptel.conf zaptel.conf.zaphfc
-#
-#		insinto /etc/asterisk
-#		doins qozap/zapata.conf.octoBRI
-#		newins qozap/zapata.conf zapata.conf.quadBRI
-#		newins zaphfc/zapata.conf zapata.conf.zaphfc
-#
-#		docinto bristuff
-#		dodoc CHANGES INSTALL
-#
-#		docinto bristuff/qozap
-#		dodoc qozap/LICENSE qozap/TODO qozap/*.conf*
-#
-#		docinto bristuff/zaphfc
-#		dodoc zaphfc/LICENSE zaphfc/*.conf
-#
-#		docinto bristuff/cwain
-#		dodoc cwain/TODO cwain/LICENSE
-#	fi
+	if use bri; then
+		einfo "Installing bri"
+		cd ${S_BRI}
+
+		insinto /lib/modules/${KV_FULL}/misc
+		doins qozap/qozap.${KV_OBJ}
+		doins zaphfc/zaphfc.${KV_OBJ}
+		doins cwain/cwain.${KV_OBJ}
+
+		# install example configs for octoBRI and quadBRI
+		insinto /etc
+		doins qozap/zaptel.conf.octoBRI
+		newins qozap/zaptel.conf zaptel.conf.quadBRI
+		newins zaphfc/zaptel.conf zaptel.conf.zaphfc
+
+		insinto /etc/asterisk
+		doins qozap/zapata.conf.octoBRI
+		newins qozap/zapata.conf zapata.conf.quadBRI
+		newins zaphfc/zapata.conf zapata.conf.zaphfc
+
+		docinto bristuff
+		dodoc CHANGES INSTALL
+
+		docinto bristuff/qozap
+		dodoc qozap/LICENSE qozap/TODO qozap/*.conf*
+
+		docinto bristuff/zaphfc
+		dodoc zaphfc/LICENSE zaphfc/*.conf
+
+		docinto bristuff/cwain
+		dodoc cwain/TODO cwain/LICENSE
+
+		cd ${S}
+	fi
 
 	# install init script
 	newinitd ${FILESDIR}/zaptel.rc6 zaptel

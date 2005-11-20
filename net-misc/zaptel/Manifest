@@ -5,12 +5,12 @@ MD5 6263a968f86b50a23db0b3bcaf19b0ae zaptel-1.0.8.ebuild 6370
 MD5 a9b97edfc9559f48e71f9f232590143f zaptel-1.0.9_p1-r1.ebuild 6641
 MD5 5c63aa4881f27d9421f5e005c6333687 zaptel-1.0.9_p2.ebuild 6637
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 bad97189f62f40f054b4360e1a349b03 ChangeLog 12156
-MD5 950d9aa09bd89f187b3ebceb40cb41b6 zaptel-1.2.0.ebuild 9080
+MD5 2ad493dd61ec7b75bbed24faef998bda ChangeLog 12253
+MD5 b26100fa09e5b61e0b4a9e3455497b5c zaptel-1.2.0.ebuild 9098
 MD5 69d0c3831715ccac6422b13a99fc6557 files/digest-zaptel-1.0.9_p2 214
 MD5 6029a1280d38d8c67577bc7a873fd336 files/zaptel-1.0.9-rtc.patch 4238
 MD5 3a4f554056143ac54f033cc3356821b5 files/digest-zaptel-1.0.9_p1-r1 214
-MD5 d39ef748d551fb8b4a8a6db7a083201d files/digest-zaptel-1.2.0 64
+MD5 f574df759efe80013bc3e7fa04d95232 files/digest-zaptel-1.2.0 136
 MD5 f46e4409c0bb701f8a6214e793de72a2 files/digest-zaptel-1.0.8 212
 MD5 f5d81a19c52c5e88fefed12251674134 files/zaptel-bristuff-0.2.0-RC8n.patch 6064
 MD5 c0f95d699055c3b46e5d3078bfaa2afb files/zaptel-1.2.0-devfs26.diff 6046
