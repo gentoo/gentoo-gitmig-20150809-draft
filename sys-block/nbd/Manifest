@@ -1,9 +1,22 @@
-MD5 b27c79a67c286794df0b6cd2d574bfb2 ChangeLog 2344
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6ccc31f89d7cbc4f2b959a6b4047014c nbd-2.7.3.ebuild 951
-MD5 d27ba6f296400c23a19b8c1038fb1ea3 nbd-2.7.4.ebuild 954
-MD5 dfb4b0cbd303a764e3f261b0e8d31d63 nbd-2.7.2.ebuild 991
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0edaa1eeee1e891d6ad2e09fa30f4f9e ChangeLog 2462
+MD5 55671361131ffc00d6ab74e8bebbecbd files/digest-nbd-2.7.2 127
 MD5 fd3fb561bafa4b382526a90c675be601 files/digest-nbd-2.7.3 127
 MD5 b896e2588a2d34c93efa92003c6f8407 files/digest-nbd-2.7.4 127
-MD5 55671361131ffc00d6ab74e8bebbecbd files/digest-nbd-2.7.2 127
+MD5 2f2d8719abd2a75b55141ac6c16444be files/digest-nbd-2.8.2 127
 MD5 3c92585e853a1de0f617fc02554655a4 files/docbook2man.patch 585
+MD5 0b97fc740e0f0a79a3b139f86be6623e files/nbd-2.8.2-gznbd.patch 545
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 dfb4b0cbd303a764e3f261b0e8d31d63 nbd-2.7.2.ebuild 991
+MD5 6ccc31f89d7cbc4f2b959a6b4047014c nbd-2.7.3.ebuild 951
+MD5 d27ba6f296400c23a19b8c1038fb1ea3 nbd-2.7.4.ebuild 954
+MD5 c2ac0bbe68d730f447584af47d32d3eb nbd-2.8.2.ebuild 940
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDgHS7gIKl8Uu19MoRAiMXAJ9sb3SabF4RtwdNrBHTa+6v1Ai5bQCZAcx5
+GdeNIyPQqVzhXJASSecsdi8=
+=oJI4
+-----END PGP SIGNATURE-----
