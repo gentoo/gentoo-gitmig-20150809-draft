@@ -26,5 +26,8 @@
 		đến ngôn ngữ lập trình TeX và các môi trường dựa trên
 		TeX như LaTeX.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-tex contiene librerie e utilità utili in ambiente TeX e LaTeX.
+	</longdescription>
 </catmetadata>
 
