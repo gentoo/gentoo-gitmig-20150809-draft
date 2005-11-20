@@ -20,5 +20,8 @@
 		Nhóm app-i18n chứa các gói liên quan đến
 		quốc tế hoá (i18n).
 	</longdescription>
+	<longdescription lang="it">
+		La categoria app-i18n contiene pacchetti per l'internazionalizzazione.
+	</longdescription>
 </catmetadata>
 
