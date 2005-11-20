@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.6 2005/11/07 12:18:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.7 2005/11/20 01:37:41 sbriesen Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users user-homedirs"
+IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite sqlite3 virtual-users user-homedirs"
 DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
 		sqlite? ( <dev-db/sqlite-3* )
