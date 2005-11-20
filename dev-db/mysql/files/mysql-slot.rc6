@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.1 2005/11/19 03:58:41 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.2 2005/11/20 13:37:21 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -13,6 +13,7 @@ depend() {
 function in_list() {
 	local elem=${1:-"none"}
 	local list=${2:-","}
+
 	[[ "${list}" == "${list/,${elem},/}" ]] \
 		&& return 1 \
 		|| return 0
@@ -99,24 +100,24 @@ get_slot_config() {
 	for my_default in ${my_defaults}; do
 		case "${my_default}" in
 			--basedir=*)
-				if ! $(in_list "${my_default%%=*}" "${paramlist}") ; then
+				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
 					basedir="${my_default#--basedir=}"
 				fi ;;
 			--datadir=*)
-				if ! $(in_list "${my_default%%=*}" "${paramlist}") ; then
+				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
 					datadir="${my_default#--datadir=}"
 				fi ;;
 			--pid-file=*)
-				if ! $(in_list "${my_default%%=*}" "${paramlist}") ; then
+				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
 					pidfile="${my_default#--pid-file=}"
 				fi ;;
 			--socket=*)
-				if ! $(in_list "${my_default%%=*}" "${paramlist}") ; then
+				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
 					socket="${my_default#--socket=}"
 				fi ;;
 			*)
 				# check into the list of parameters we already have
-				if ! $(in_list "${my_default%%=*}" "${paramlist}") ; then
+				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
 					paramlist="${paramlist}${my_default%%=*},"
 					unmanagedparams="${unmanagedparams} $(echo "${my_default}" | sed -e 's,\([^=/a-zA-Z0-9_.-]\),\\\1,g')"
 				fi
@@ -132,7 +133,7 @@ get_slot_config() {
 	done
 
 	for i in "server-id" "log-bin" ; do
-		if ! $(in_list "--${i}" "${paramlist}") ; then
+		if ! in_list "--${i}" "${paramlist}" ; then
 			ewarn "undefined $i, it's good practice set it"
 		fi
 	done
@@ -171,8 +172,7 @@ start() {
 	local globretstatus=1
 	local srv_slot srv_num
 	# server MUST NOT share same location for these
-	local pidfilelist=','
-	local datadirlist=','
+	local pidfilelist=',' datadirlist=',' socketlist=','
 
 	# additional security
 	rm -f "${MYSQL_GLOB_PID_FILE}" ; touch "${MYSQL_GLOB_PID_FILE}"
@@ -198,17 +198,20 @@ start() {
 		retstatus=0
 
 		get_slot_config "${srv_slot}" "${srv_num}" || retstatus=1
-
 		# pre_run checks
 		[[ "$retstatus" -eq 0 ]] && checkconfig "${datadir}" || retstatus=2
 		if [[ "$retstatus" -eq 0 ]] ; then
-			if $(in_list "${pidfile}" "${pidfilelist}"); then
+			if in_list "${pidfile}" "${pidfilelist}" ; then
 				retstatus=3
 				eerror "Cowardly refusing to start another server with same ${pidfile}"
 			fi
-			if $(in_list "${datadir}" "${datadirlist}"); then
+			if in_list "${datadir}" "${datadirlist}" ; then
 				retstatus=4
 				eerror "Cowardly refusing to start another server with same ${datadir}"
+			fi
+			if in_list "${socket}" "${socketlist}" ; then
+				retstatus=5
+				eerror "Cowardly refusing to start another server with same ${socket}"
 			fi
 		fi
 
@@ -216,6 +219,7 @@ start() {
 			# additional security
 			rm -f ${pidfile} ${socket}
 			ebegin "Starting mysqld${MY_SUFFIX:+"_"}${srv_slot}${srv_num:+"_"}${srv_num} (${MY_CNF})"
+
 			start-stop-daemon --start --quiet --background \
 				${NICE:+"--nicelevel="}${NICE} \
 				--pidfile="${pidfile}" \
@@ -235,6 +239,10 @@ start() {
 			if [[ ! -S "${socket}" ]] ; then
 				eerror "MySQL${MY_SUFFIX} NOT started (${retstatus})"
 				retstatus=1
+			else
+				pidfilelist="${pidfilelist}${pidfile},"
+				datadirlist="${datadirlist}${datadir},"
+				socketlist="${socketlist}${socket},"
 			fi
 		fi
 
@@ -244,7 +252,7 @@ start() {
 		fi
 	done
 	# successfull if at least one mysqld started
-	eend $retstatus
+	eend $globretstatus
 }
 
 stop () {
