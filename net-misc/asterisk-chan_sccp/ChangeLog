@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-chan_sccp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.12 2005/09/30 00:00:11 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.13 2005/11/20 21:29:56 stkn Exp $
+
+*asterisk-chan_sccp-0.0.20051118 (20 Nov 2005)
+
+  20 Nov 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/chan_sccp-20051118-gentoo.diff,
+  +asterisk-chan_sccp-0.0.20051118.ebuild:
+  Version bump.
 
   30 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-chan_sccp-0.0.20050826.ebuild:

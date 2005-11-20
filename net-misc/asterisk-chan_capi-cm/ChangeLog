@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk-chan_capi-cm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/ChangeLog,v 1.10 2005/09/21 12:39:08 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/ChangeLog,v 1.11 2005/11/20 21:26:09 stkn Exp $
+
+*asterisk-chan_capi-cm-0.6.1 (20 Nov 2005)
+
+  20 Nov 2005; Stefan Knoblich <stkn@gentoo.org>
+  +asterisk-chan_capi-cm-0.6.1.ebuild:
+  Version bump.
 
 *asterisk-chan_capi-cm-0.6.0 (21 Sep 2005)
 
