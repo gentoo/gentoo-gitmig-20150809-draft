@@ -24,5 +24,9 @@
 		Nhóm sys-kernel chứa ebuild mã nguồn kernel và các công cụ
 		liên quan đến kernel.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sys-kernel contiene i sorgenti del kernel e alcuni programmi
+		per la sua gestione come genkernel.
+	</longdescription>
 </catmetadata>
 
