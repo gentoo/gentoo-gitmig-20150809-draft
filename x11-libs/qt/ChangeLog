@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.262 2005/11/19 22:52:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.263 2005/11/20 13:27:59 herbs Exp $
+
+  20 Nov 2005; Herbie Hopkins <herbs@gentoo.org> qt-4.0.1.ebuild,
+  qt-4.1.0_pre20051028.ebuild:
+  Small multilib fix
 
   19 Nov 2005; Joseph Jezak <josejx@gentoo.org> qt-4.0.1.ebuild:
   Marked ~ppc for bug #112811.
