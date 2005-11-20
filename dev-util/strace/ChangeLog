@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.68 2005/09/16 22:01:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.69 2005/11/20 07:34:16 vapier Exp $
+
+  20 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  files/strace-4.5.12-libaio.patch, strace-4.5.12.ebuild:
+  Update libaio patch to work with both old and new versions #103427.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

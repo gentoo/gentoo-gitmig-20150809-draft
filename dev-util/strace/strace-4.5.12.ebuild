@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.4 2005/11/07 23:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.5 2005/11/20 07:34:16 vapier Exp $
 
 inherit flag-o-matic
 
@@ -22,11 +22,10 @@ src_unpack() {
 	[[ ${CHOST} == *-freebsd* ]] && epatch "${FILESDIR}"/${P}-fbsd.patch
 	# Fix support for newer glibc snapshots #102080
 	epatch "${FILESDIR}"/${P}-quota.patch
-	aclocal && autoheader && autoconf && automake || die "autotools failed"
 
 	# Fix SuperH support
 	epatch "${FILESDIR}"/strace-dont-use-REG_SYSCALL-for-sh.patch
-	epatch "${FILESDIR}"/strace-superh-update.patch
+	epatch "${FILESDIR}"/${P}-superh-update.patch
 
 	# Fix building on older ARM machines
 	epatch "${FILESDIR}"/strace-undef-syscall.patch
@@ -37,6 +36,8 @@ src_unpack() {
 	# Remove some obsolete ia64-related hacks from the strace source
 	# (08 Feb 2005 agriffis)
 	epatch "${FILESDIR}"/strace-4.5.8-ia64.patch
+
+	aclocal && autoheader && autoconf && automake || die "autotools failed"
 }
 
 src_compile() {
@@ -46,13 +47,12 @@ src_compile() {
 	use ia64 && append-flags -D_ASM_IA64_PAL_H
 
 	# Compile fails with -O3 on sparc but works on x86
-	use sparc && replace-flags -O[3-9] -O2
+	use sparc && replace-flags -O3 -O2
 	filter-lfs-flags
 
 	use static && append-ldflags -static
-	use aio || export ac_cv_header_libaio_h=no
 
-	econf || die
+	econf $(use_enable aio libaio) || die
 	emake || die
 }
 
