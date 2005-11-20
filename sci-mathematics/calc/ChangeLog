@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/calc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.4 2005/09/17 00:24:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.5 2005/11/20 13:20:50 corsair Exp $
+
+  20 Nov 2005; Markus Rothe <corsair@gentoo.org> calc-2.11.10.1.ebuild:
+  Added ~ppc64 keyword
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
