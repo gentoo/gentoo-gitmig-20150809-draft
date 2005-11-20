@@ -25,5 +25,8 @@
 		Nhóm dev-embedded chứa các thư viện và tiện ích liên quan
 		đến lập trình nhúng.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-embedded contiene librerie ed utilità per la programmazione di sistemi embedded.
+	</longdescription>
 </catmetadata>
 
