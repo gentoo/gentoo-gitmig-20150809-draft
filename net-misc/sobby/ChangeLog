@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.1 2005/08/14 22:01:58 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.2 2005/11/20 00:24:50 humpback Exp $
+
+*sobby-0.3.0_rc1 (20 Nov 2005)
+
+  20 Nov 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +sobby-0.3.0_rc1.ebuild:
+  Bump to version 0.3.0_rc1. Arch teams please do not mark stable, I'll open a
+  bug when i think it is ready.
 
   14 Aug 2005; Gustavo Felisberto <humpback@gentoo.org>; ChangeLog:
   Initial import
