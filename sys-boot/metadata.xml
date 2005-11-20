@@ -21,5 +21,8 @@
 	<longdescription lang="vi">
 			Nhóm sys-boot chứa các bootloader và công cụ liên quan.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sys-boot contiene bootloaders e strumenti correlati al boot del sistema.
+	</longdescription>
 </catmetadata>
 
