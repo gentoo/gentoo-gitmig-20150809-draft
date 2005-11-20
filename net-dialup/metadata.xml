@@ -20,5 +20,8 @@
 	<longdescription lang="vi">
 		Nhóm net-dialup chứa các phần mềm liên quan đến mạng quay số.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria net-dialup contiene pacchetti per la connessione telefonica dial-up.
+	</longdescription>
 </catmetadata>
 
