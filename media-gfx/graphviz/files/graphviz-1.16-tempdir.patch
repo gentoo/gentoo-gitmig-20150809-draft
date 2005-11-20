@@ -1,6 +1,6 @@
-diff -u /var/tmp/portage/graphviz-1.16-r1/work/graphviz-1.16/dotty.old/dotty.lefty /var/tmp/portage/graphviz-1.16-r1/work/graphviz-1.16/dotty/dotty.lefty
---- /var/tmp/portage/graphviz-1.16-r1/work/graphviz-1.16/dotty.old/dotty.lefty	2005-11-11 11:11:07.000000000 +0100
-+++ /var/tmp/portage/graphviz-1.16-r1/work/graphviz-1.16/dotty/dotty.lefty	2005-11-11 11:13:12.000000000 +0100
+diff -u graphviz-1.16/dotty.old/dotty.lefty graphviz-1.16/dotty/dotty.lefty
+--- graphviz-1.16/dotty.old/dotty.lefty	2005-11-11 11:11:07.000000000 +0100
++++ graphviz-1.16/dotty/dotty.lefty	2005-11-11 11:13:12.000000000 +0100
 @@ -668,8 +668,8 @@
          if (~(otype = ask ('print to', 'choice', 'file|printer')))
              return;
