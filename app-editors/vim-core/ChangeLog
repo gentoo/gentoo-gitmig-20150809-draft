@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.184 2005/11/19 07:56:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.185 2005/11/20 00:12:03 hardave Exp $
+
+  20 Nov 2005; Hardave Riar <hardave@gentoo.org> vim-core-6.4.ebuild:
+  Stable on mips, bug #112226.
 
   19 Nov 2005; Guy Martin <gmsoft@gentoo.org> vim-core-6.4.ebuild:
   Stable on hppa.
