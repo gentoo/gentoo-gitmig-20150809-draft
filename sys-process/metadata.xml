@@ -26,5 +26,9 @@
 		Nhóm sys-process chứa các phần mềm truy vấn và xử lý tiến trình.
 		Các 'cron' daemon cũng nằm trong đây.
 	</longdescription>
+	<longdescription lang="it">
+		La categoria sys-proccess contiene pacchetti per la manipolazione e l'analisi dei processi.
+		I demoni 'cron' appartengono a questa categoria.
+	</longdescription>
 </catmetadata>
 
