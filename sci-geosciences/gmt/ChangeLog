@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gmt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.7 2005/09/17 00:24:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.8 2005/11/20 18:07:07 markusle Exp $
+
+  20 Nov 2005; Markus Dittrich <markusle@gentoo.org> gmt-4.0.ebuild:
+  Provided proper ftp address in SRC_URI. This fixes bug #113078.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
