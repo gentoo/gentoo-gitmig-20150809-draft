@@ -1,6 +1,13 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.46 2005/10/07 12:11:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.47 2005/11/20 12:42:39 flameeyes Exp $
+
+  20 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> -files/mimeinfo,
+  -files/realplayer.desktop, -realplayer-8-r6.ebuild,
+  -realplayer-8-r7.ebuild, -realplayer-10.0.2.ebuild,
+  -realplayer-10.0.3.ebuild, -realplayer-10.0.3-r1.ebuild,
+  -realplayer-10.0.4.ebuild, -realplayer-10.0.5.ebuild:
+  Remove old versions.
 
   07 Oct 2005; Simon Stelling <blubb@gentoo.org> realplayer-10.0.6.ebuild:
   stable on amd64 wrt bug 107309
