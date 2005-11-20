@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.82 2005/11/03 22:36:26 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.83 2005/11/20 14:13:51 hardave Exp $
+
+  20 Nov 2005; Hardave Riar <hardave@gentoo.org> wget-1.10.2.ebuild:
+  Stable on mips.
 
   03 Nov 2005; Daniel Ostrow <dostrow@gentoo.org> wget-1.10.2.ebuild:
   Stable on ppc64.
