@@ -24,5 +24,8 @@
 	<longdescription lang="vi">
 		Nhóm x11-plugins chứa các gói plugin cho các ứng dụng X11 khác nhau.
 	</longdescription>
+	<longdescription lang="it">
+		La categoría x11-plugins contiene paccketti di estensioni per varie applicazioni X11.
+	</longdescription>
 </catmetadata>
 
