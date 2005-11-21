@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 00b1aa1c21079fa6996ea866372457df kdenetwork-3.5.0_rc1.ebuild 1761
 MD5 36e77db04c715cefb48658591d252e42 kdenetwork-3.4.3.ebuild 1764
 MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
@@ -25,3 +28,10 @@ MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kdenetwork-3.4.2 70
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kdenetwork-3.4.3 70
 MD5 18a84d8db7a6c95643f1de61e3c4c783 files/kdenetwork-3.5_beta1-gadu.patch 1876
 MD5 426360bf289efe11a499f1fa89bb2f4b files/wireless-extensions-api.diff 528
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDghGtKRy60XGEcJIRAoYpAJ9CS00sKkafrpDI56LRo6iBBnODnwCdGwhZ
+HiTSEVo3LINWj6nJeK7jtZI=
+=dYj0
+-----END PGP SIGNATURE-----
