@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 5d6d5b9ad4ef70b2ee359b6d60dbeaaf ChangeLog 4199
 MD5 4ffdb27d6c048e475e20f90469c4e3e9 align-32.ebuild 738
-MD5 b841d0359022c0c085f20f473aaf68dc align-28.ebuild 485
-MD5 e870cff5710d179dc753ac12c1457457 align-30-r1.ebuild 636
-MD5 4ea68068c46d1152d9e8847c6e2c9bff align-31.ebuild 747
-MD5 64a93c066cbc24255de984f0ec892e7a ChangeLog 4005
-MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 bcf8adf15332e65feb57ba3cf13b63df files/digest-align-28 60
-MD5 335071e175d6c88ee05baf71a7be7046 files/digest-align-31 60
+MD5 4fd39048ec8b84d0087a4f1acd4700bf align-33.ebuild 745
 MD5 16e489ffb43fa5b5b1a20cdf40967656 files/digest-align-32 60
-MD5 57b7519b6aff9ec1faeafa11a872fbf5 files/digest-align-30-r1 60
+MD5 b2e33e71e16525f86c4856c216ccd9ed files/digest-align-33 60
+MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDLzNWntT9W3vfTuoRAtHLAJ4savo2AndrTNEVLQWcYIMhLG8PzACeIxWA
-CnN4yASC/PGE6DrWc829R+8=
-=PslM
+iD8DBQFDgjIvLLFUmVNQ7rkRAmu2AJ0XSfAGXmwueqkMnIDEfSTvBRM1/gCeP2IW
+D49GoJ1hN4NT8lH6bD01CLw=
+=pxnT
 -----END PGP SIGNATURE-----
