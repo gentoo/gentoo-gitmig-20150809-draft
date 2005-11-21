@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.2 2005/11/21 20:20:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.3 2005/11/21 20:29:58 josejx Exp $
 
-inherit eutils games flag-o-matic
+inherit eutils flag-o-matic games
 
 MY_PV=${PV:0:4}_${PV:4:2}_${PV:6:2}
 MY_P=${PN}_${MY_PV}
