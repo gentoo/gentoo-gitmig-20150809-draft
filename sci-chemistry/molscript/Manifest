@@ -1,0 +1,6 @@
+MD5 51826742d8d4a3edfac57134acd89cf6 ChangeLog 483
+MD5 e1ff3a23a7b31886db0b5eca88385776 files/digest-molscript-2.1.2 67
+MD5 218484e776003634c6eb6da4d42569c1 files/fix-makefile-shared.patch 2057
+MD5 a222d271cfb2d53968f619493075b925 files/glutbitmap.h 845
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
+MD5 57438c102f454bc250fe0a476841bec6 molscript-2.1.2.ebuild 1468

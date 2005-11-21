@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/molscript
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.1 2005/11/21 20:44:37 spyderous Exp $
+
+*molscript-2.1.2 (21 Nov 2005)
+
+  21 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/fix-makefile-shared.patch, +files/glutbitmap.h, +metadata.xml,
+  +molscript-2.1.2.ebuild:
+  New molecular graphics package. GLUT license is for files/glutbitmap.h.
+
