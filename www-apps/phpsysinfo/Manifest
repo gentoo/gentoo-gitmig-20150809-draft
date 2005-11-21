@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 15fb646f5fe94be2192f032710388519 ChangeLog 6015
+MD5 4bf60d38b77cee2ade330f0f58317ae2 ChangeLog 6105
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 93c8e3bbe1ea37361175bb8c3b4e7f6d phpsysinfo-2.3-r2.ebuild 1131
+MD5 699122f557709c38ce8a1d395e762cc9 phpsysinfo-2.3-r3.ebuild 1179
+MD5 9766ceff7fe19150c68db121240d41f7 phpsysinfo-2.4.1.ebuild 1204
 MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3-r2 66
 MD5 bac44e6bc288288a1b515c8d6590386a files/digest-phpsysinfo-2.3-r3 134
 MD5 ca3c4eb21a9ecf8e0cf1036b5b9aba36 files/digest-phpsysinfo-2.4.1 68
 MD5 b31f7b9dcef2784b2ba530a58585e35c files/phpsysinfo-2.3-sparc.patch 1622
 MD5 16b448ff71e100184f32fdaec5e57a41 files/phpsysinfo-2.3-xss-and-path.patch 4400
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 93c8e3bbe1ea37361175bb8c3b4e7f6d phpsysinfo-2.3-r2.ebuild 1131
-MD5 699122f557709c38ce8a1d395e762cc9 phpsysinfo-2.3-r3.ebuild 1179
-MD5 97203f3c10533670635feb4b2fe91ccf phpsysinfo-2.4.1.ebuild 1205
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgP1hcsIHjyDViGQRApZ+AKDJV6Q9iOwYJ/1mQff9WSdP6ednKACgvgCu
-HnH+9VqAZ2bSOEC2J0qR3/E=
-=vjjo
------END PGP SIGNATURE-----
