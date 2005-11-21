@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bdd47debc3a7b3bc22c732e917b721cf ChangeLog 1667
 MD5 a9e1fb2f6d8ab968f49ceffccacb59ed PEAR-Image_IPTC-1.0.2-r1.ebuild 411
 MD5 a1d5fe9a917e346948864b393c404ee4 PEAR-Image_IPTC-1.0.2.ebuild 412
 MD5 0c3bbce64268a3bfd12a778256f01a15 files/digest-PEAR-Image_IPTC-1.0.2 63
 MD5 0c3bbce64268a3bfd12a778256f01a15 files/digest-PEAR-Image_IPTC-1.0.2-r1 63
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDge+ecsIHjyDViGQRApahAKDpoD52bnCv9YfjM0Q+IlXOLqMp8QCdFrYm
+HfsQEC0ud0oiGcAp6jPnD0Y=
+=9kWF
+-----END PGP SIGNATURE-----
