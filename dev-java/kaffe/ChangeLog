@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.38 2005/10/23 15:23:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.39 2005/11/21 19:14:37 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org> kaffe-1.1.6-r2.ebuild:
+  Marked ~ppc for bug #106829.
 
 *kaffe-1.1.6-r2 (23 Oct 2005)
 
