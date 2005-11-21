@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b0b94d20c7d268d602aa6c60e0ce5ce9 postgresql-8.0.1-r3.ebuild 7735
 MD5 d622d522e0a17e7597b0b14f8dcdee17 postgresql-8.1.0.ebuild 7622
 MD5 05efc4e61b3a14b426befcd10f84b2c3 postgresql-7.4.9.ebuild 10742
@@ -83,3 +86,10 @@ MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.8-hppa-testandset.patc
 MD5 7fad73889572ccdf114ce0024e7170c6 files/postgresql-7.3.11-gentoo.patch 1741
 MD5 01f69b667825048f2e9807555b79b73d files/postgresql-8.0.4-gentoo.patch 1200
 MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.9-hppa-testandset.patch 1596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDggJaKRy60XGEcJIRApHdAJ4qxymamctfOy6XztQTTmfYvwR1jACfbw8x
+PU9FGGixe9d02JFOIdn+tlk=
+=r3mV
+-----END PGP SIGNATURE-----
