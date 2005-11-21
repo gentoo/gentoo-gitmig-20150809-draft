@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.31 2005/10/29 20:37:06 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.32 2005/11/21 13:34:54 killerfox Exp $
+
+  21 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org> jfsutils-1.1.8.ebuild:
+  Stable on hppa.
 
 *jfsutils-1.1.10 (29 Oct 2005)
 
