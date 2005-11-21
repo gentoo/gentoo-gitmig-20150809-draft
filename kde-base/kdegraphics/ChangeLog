@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.192 2005/11/16 10:28:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.193 2005/11/21 18:06:12 gustavoz Exp $
+
+  21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdegraphics-3.4.3.ebuild:
+  Stable on sparc wrt #112842
 
 *kdegraphics-3.5.0_rc1 (16 Nov 2005)
 

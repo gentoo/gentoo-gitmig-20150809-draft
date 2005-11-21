@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.74 2005/11/16 10:46:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.75 2005/11/21 18:13:15 gustavoz Exp $
+
+  21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdewebdev-3.4.3.ebuild:
+  Stable on sparc wrt #112842
 
 *kdewebdev-3.5.0_rc1 (16 Nov 2005)
 

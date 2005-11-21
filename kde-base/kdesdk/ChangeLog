@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.101 2005/11/16 10:45:33 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.102 2005/11/21 18:22:15 gustavoz Exp $
+
+  21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kdesdk-3.4.3.ebuild:
+  Stable on sparc wrt #112842
 
 *kdesdk-3.5.0_rc1 (16 Nov 2005)
 

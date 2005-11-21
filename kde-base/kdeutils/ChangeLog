@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.135 2005/11/16 10:41:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.136 2005/11/21 18:11:53 gustavoz Exp $
+
+  21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdeutils-3.4.3-r1.ebuild:
+  Stable on sparc wrt #112842
 
 *kdeutils-3.5.0_rc1 (16 Nov 2005)
 
