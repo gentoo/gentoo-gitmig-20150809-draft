@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.19 2005/11/09 20:33:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.20 2005/11/21 21:42:12 blubb Exp $
+
+  21 Nov 2005; Simon Stelling <blubb@gentoo.org> triplea-0.6.0.1.ebuild:
+  stable on amd64
 
   09 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
   triplea-0.6.0.1.ebuild:
