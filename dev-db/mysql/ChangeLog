@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.262 2005/11/20 13:37:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.263 2005/11/21 13:17:45 gmsoft Exp $
+
+  21 Nov 2005; Guy Martin <gmsoft@gentoo.org> mysql-4.1.14.ebuild:
+  Stable on hppa.
 
   20 Nov 2005; Francesco Riosa <vivo@gentoo.org> files/mysql-slot.rc6:
   modified rc6 script for slotted server. Return status OK if at least on server
