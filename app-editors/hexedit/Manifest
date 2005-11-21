@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c18a5faedf140b41483a4cc21ea44f5a ChangeLog 2546
-MD5 f90e72c54d508c4cb1a87ce07d564959 files/digest-hexedit-1.2.10 66
-MD5 44c497343ccc5a908e95b4fe44f46f5e files/digest-hexedit-1.2.9 65
-MD5 2a9b06dcaf23e3e73109e7c8677e14fc hexedit-1.2.10.ebuild 664
+MD5 e8460315f75e42df8e036d143d40477f ChangeLog 2636
+MD5 c6e924c7d1ca57fdf79e00de0b46709d hexedit-1.2.10.ebuild 662
 MD5 1ce546986745a07b8f98f1d2ed89e515 hexedit-1.2.9.ebuild 650
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeYNKgIKl8Uu19MoRAq00AJ4g7TnXMhblbAtYFg9/4Wt9iycCRQCfaJpi
-5NKqWOFSD+dlTjzBZ+TKZmc=
-=FLag
------END PGP SIGNATURE-----
+MD5 f90e72c54d508c4cb1a87ce07d564959 files/digest-hexedit-1.2.10 66
+MD5 44c497343ccc5a908e95b4fe44f46f5e files/digest-hexedit-1.2.9 65
