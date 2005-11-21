@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.7.ebuild,v 1.1 2005/10/29 12:03:47 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.7.ebuild,v 1.2 2005/11/21 00:51:39 mkay Exp $
 
-inherit eutils
+inherit flag-o-matic eutils
 
 IUSE="gtk guionly batch threads gd doc mozilla"
 
@@ -57,6 +57,9 @@ pkg_setup() {
 		eerror "mldonkey with gd support"
 		die "Recompile media-libs/gd with enabled truetype USE flag"
 	fi
+
+	filter-flags -fomit-frame-pointer
+
 }
 
 src_compile() {
