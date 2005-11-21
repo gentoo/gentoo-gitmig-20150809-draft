@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-I18N
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.18 2005/10/24 13:46:21 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.19 2005/11/21 15:53:17 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org> PEAR-I18N-0.8.6-r2.ebuild:
+  Marked ~ppc for bug #105385.
 
   24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-I18N-0.8.6-r2.ebuild:

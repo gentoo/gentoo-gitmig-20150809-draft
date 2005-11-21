@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.22 2005/10/24 13:46:21 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.23 2005/11/21 15:46:43 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
+  PEAR-HTML_Common-1.2.2.ebuild:
+  Marked ~ppc for bug #105385.
 
   24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-HTML_Common-1.2.2.ebuild:

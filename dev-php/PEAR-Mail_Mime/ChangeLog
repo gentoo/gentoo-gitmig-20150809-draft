@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail_Mime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.32 2005/10/24 13:46:21 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.33 2005/11/21 16:07:49 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
+  PEAR-Mail_Mime-1.3.1-r1.ebuild:
+  Marked ~ppc for bug #105385.
 
   24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Mail_Mime-1.3.1-r1.ebuild:
