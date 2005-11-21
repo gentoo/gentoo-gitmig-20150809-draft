@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.57 2005/11/20 19:07:00 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.58 2005/11/21 13:34:22 truedfx Exp $
+
+  21 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
+  dialog-1.0.20051107.ebuild:
+  Don't install samples unless examples is in USE; bug #111508
 
 *dialog-1.0.20051107 (20 Nov 2005)
 
