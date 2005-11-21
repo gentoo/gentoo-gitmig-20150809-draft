@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0_pre20051028.ebuild,v 1.2 2005/11/20 13:27:59 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0_rc1.ebuild,v 1.1 2005/11/21 17:42:29 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -8,8 +8,8 @@ SRCTYPE="opensource-src"
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
 HOMEPAGE="http://www.trolltech.com/"
 
-MY_PV=${PV/_pre/-snapshot-}
-SRC_URI="ftp://ftp.trolltech.com/pub/qt/snapshots/qt-x11-${SRCTYPE}-${MY_PV}.tar.bz2"
+MY_PV=${PV/_rc1/-rc1}
+SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${SRCTYPE}-${MY_PV}.tar.gz"
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${MY_PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
