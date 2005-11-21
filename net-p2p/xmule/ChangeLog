@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.62 2005/11/21 19:01:45 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.63 2005/11/21 22:38:28 mkay Exp $
+
+  21 Nov 2005; Marcin Kryczek <mkay@gentoo.org> xmule-1.10.1-r2.ebuild:
+  I've commited broken ebuild. Sorry for that. This one should work
+
+  21 Nov 2005; Marcin Kryczek <mkay@gentoo.org> xmule-1.10.1-r2.ebuild:
+  Removing unicode from IUSE. It shouldn't be there
 
 *xmule-1.10.1-r2 (21 Nov 2005)
 
