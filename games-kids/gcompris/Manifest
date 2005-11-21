@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 8cdf0116edbb15a870577e2cf40e91e0 ChangeLog 2667
+MD5 fe3c32d12e59a1ca0cc3b1f2dc9eb953 gcompris-6.5.3-r1.ebuild 1797
+MD5 9996f11c74a761b827fa2aab50317661 ChangeLog 2867
 MD5 0f3e1b204624641e356707b88dce2171 gcompris-6.5.3.ebuild 1784
 MD5 557b7f4481b6c30ca79251c8a19af714 files/digest-gcompris-6.5.3 68
+MD5 557b7f4481b6c30ca79251c8a19af714 files/digest-gcompris-6.5.3-r1 68
