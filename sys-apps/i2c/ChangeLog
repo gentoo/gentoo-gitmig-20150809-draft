@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.41 2005/10/23 11:23:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.42 2005/11/21 19:59:52 blubb Exp $
+
+  21 Nov 2005; Simon Stelling <blubb@gentoo.org> i2c-2.8.7.ebuild,
+  i2c-2.9.0.ebuild, i2c-2.9.1.ebuild, i2c-2.9.2.ebuild:
+  amd64 doesn't support 2.4 kernels, thus setting KEYWORDS="-amd64"
 
   23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org> i2c-2.9.2.ebuild:
   Stable on x86, bug #108270.
