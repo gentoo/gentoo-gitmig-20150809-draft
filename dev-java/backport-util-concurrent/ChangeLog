@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/backport-util-concurrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.4 2005/11/09 08:38:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.5 2005/11/21 21:41:58 blubb Exp $
+
+  21 Nov 2005; Simon Stelling <blubb@gentoo.org>
+  backport-util-concurrent-1.1.01.ebuild:
+  stable on amd64
 
   09 Nov 2005; Thomas Matthijs <axxo@gentoo.org>
   backport-util-concurrent-1.1.01.ebuild:
