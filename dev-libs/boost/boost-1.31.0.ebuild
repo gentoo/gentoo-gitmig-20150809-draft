@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.12 2005/08/06 04:02:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.13 2005/11/21 23:53:49 morfic Exp $
 
 MyPV=${PV//./_}
 
@@ -96,7 +96,7 @@ src_install () {
 	cd tools/build
 	#do_whatever is too limiting here, need to move bunch of different stuff recursively
 	dodir /usr/share/${PN}
-	cp -a b* c* index.html v1/ v2/ ${D}/usr/share/${PN}
+	cp -pPR b* c* index.html v1/ v2/ ${D}/usr/share/${PN}
 	cd ${S}
 
 	# install documentation
