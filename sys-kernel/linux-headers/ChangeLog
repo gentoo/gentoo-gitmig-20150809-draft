@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.149 2005/11/18 23:46:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.150 2005/11/21 00:07:28 vapier Exp $
+
+  21 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/linux-headers-2.4-errno-in-unistd.patch,
+  linux-headers-2.4.26-r1.ebuild:
+  Add the unistd.h errno.h fix from 2.6 headers.
 
 *linux-headers-2.6.11-r3 (18 Nov 2005)
 
