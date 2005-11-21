@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.3.ebuild,v 1.6 2005/11/20 18:51:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.3.ebuild,v 1.7 2005/11/21 18:54:14 josejx Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/lineak/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 RDEPEND="virtual/x11
 		=x11-misc/lineakd-${PV}*
