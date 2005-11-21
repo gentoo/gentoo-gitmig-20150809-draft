@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0b_beta3.ebuild,v 1.1 2005/09/05 09:12:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0b_beta3.ebuild,v 1.2 2005/11/21 10:17:44 phosphan Exp $
 
 inherit kde
 
@@ -40,7 +40,9 @@ src_compile() {
 		sed -e 's/\(ac_cv_lib_ogg_ogg_stream_packetin=\)yes$/\1no/' \
 			-i configure || die "Couldn't disable ogg support"
 	fi
-	export PATH="${PATH}:/usr/kde/unsermake/"
+	if ! use lirc; then
+		sed -e 's/lirc//' -i kradio3/plugins/Makefile.in
+	fi
 	econf $(use_with arts) || die "configure failed"
 	emake || die "emake failed"
 }
