@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc3.ebuild,v 1.1 2005/11/18 04:00:51 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc3-r1.ebuild,v 1.1 2005/11/21 00:17:58 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -17,7 +17,8 @@ DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${FV}/source/firefox-${FV}-source.tar.bz2
 	mirror://gentoo/mozilla-jslibmath-alpha.patch
-	mirror://gentoo/embed-typeaheadfind.patch"
+	mirror://gentoo/embed-typeaheadfind.patch
+	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
 
 KEYWORDS="-*"
 SLOT="0"
@@ -69,6 +70,9 @@ src_unpack() {
 	# patch to fix math operations on alpha, makes maps.google.com work!
 	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
 
+	# fix pkgconfig files properly to contain gentoo-locations
+	epatch ${FILESDIR}/firefox-gentoo-pkgconfig.patch
+
 	####################################
 	#
 	# general compilation and run-time fixes
@@ -80,8 +84,8 @@ src_unpack() {
 	# cairo-canvas patch, only needed to build against system cairo
 	# epatch ${FILESDIR}/1.5/firefox-cairo-canvas.patch
 
-	# fix pkgconfig files properly
-	epatch ${FILESDIR}/firefox-pkgconfig.patch
+	# fedora patch
+	epatch ${FILESDIR}/firefox-1.1-uriloader.patch
 
 	####################################
 	#
@@ -95,6 +99,7 @@ src_unpack() {
 
 	# rpath fix
 	epatch ${FILESDIR}/mozilla-rpath-1.patch
+	epatch ${DISTDIR}/mozilla-1.7.10-nsplugins-v2.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
@@ -220,16 +225,10 @@ src_install() {
 	dosym ${MOZILLA_FIVE_HOME}/include/necko/nsIURI.h \
 		/usr/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}/include/nsIURI.h
 
-	# Fix firefox-config and install it
-	sed -i -e "s|\(echo -L.*\)\($\)|\1 -Wl,-R${MOZILLA_FIVE_HOME}\2|" \
-		${S}/build/unix/firefox-config
-	exeinto ${MOZILLA_FIVE_HOME}
-	doexe ${S}/build/unix/firefox-config
 
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in ${S}/build/unix/*.pc; do
-		sed -i -e "s|\(^Libs: -L.*\)\($\)|\1 -Wl,-R\$\{libdir\}\2|" ${x}
 		doins ${x}
 	done
 
