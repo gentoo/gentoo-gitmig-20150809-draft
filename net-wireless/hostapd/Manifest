@@ -2,8 +2,8 @@ MD5 5a79c617921133c3fb3028340573acef hostapd-0.4.6.ebuild 3066
 MD5 3d4f2d29f55f0ee2f8117fa90423bff9 hostapd-0.3.7.ebuild 2131
 MD5 6a5242726313ccf8ba14d591c8056f0f hostapd-0.4.5.ebuild 2954
 MD5 8f92a1ce62c0c91b1f31c63a7ecc8320 hostapd-0.3.9-r1.ebuild 2125
-MD5 0bb554ebcef4cf6d36ef2e7799cb79c8 hostapd-0.4.7.ebuild 2965
-MD5 8ee86f49eb7baa105ebda6567fad99f2 ChangeLog 7281
+MD5 dd28ecdc7f79c2fbb21b037ab945b621 hostapd-0.4.7.ebuild 3066
+MD5 0e6b047d9fa74ad2b810e9bfd32f1378 ChangeLog 7281
 MD5 52a4b928b36a98e530ae455b73f868f5 metadata.xml 462
 MD5 5867a1afc9ca33e76f030a3abf0460cc files/hostapd-0.4.6-conf.d 425
 MD5 af20f7c9a017ce03a0b66ca5c631dfc2 files/hostapd-0.4.5-prism54.patch 381
@@ -17,6 +17,6 @@ MD5 1a5ea229c1f23346e39a4af2abd08add files/digest-hostapd-0.3.9-r1 150
 MD5 8d58b5265d0db823769c16f29473ffa1 files/hostapd-0.4.5-conf.d 425
 MD5 076064e491084b2dbd82eed164cae453 files/hostapd-0.4.5-init.d 984
 MD5 e4b30b5fade1fe4a257be477129ae36d files/hostapd-0.3.9-conf.d 425
-MD5 9e6b7c9bb07f39226dc8b8968cc9293b files/hostapd-0.4.7-conf.d 318
+MD5 d5a08b266b9a031229e8910fe8cd18b3 files/hostapd-0.4.7-conf.d 425
 MD5 9f51596dd3a60ecf3aebee6f82f750f8 files/hostapd-0.3.9-init.d 982
-MD5 f7c0c593641102a7afbfe02072639a65 files/hostapd-0.4.7-init.d 877
+MD5 ef0d83e9caafeb54a76f6eb97cada84f files/hostapd-0.4.7-init.d 984
