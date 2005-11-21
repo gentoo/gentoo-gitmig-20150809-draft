@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.20 2005/11/02 19:33:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.21 2005/11/21 23:34:33 brix Exp $
+
+  21 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  cpufreqd-2.0.0_pre1-r1.ebuild, cpufreqd-2.0.0_pre2.ebuild:
+  Do not set RDEPEND=${DEPEND}.
 
 *cpufreqd-2.0.0_pre2 (02 Nov 2005)
 
