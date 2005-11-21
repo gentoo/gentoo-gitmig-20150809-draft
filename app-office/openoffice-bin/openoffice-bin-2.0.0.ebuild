@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0.ebuild,v 1.3 2005/10/29 21:41:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0.ebuild,v 1.4 2005/11/21 15:06:37 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -76,7 +76,7 @@ KEYWORDS="~x86 ~amd64"
 
 RDEPEND="!app-office/openoffice
 	virtual/x11
-	virtual/libc
+	sys-libs/glibc
 	>=dev-lang/perl-5.0
 	app-arch/zip
 	app-arch/unzip
