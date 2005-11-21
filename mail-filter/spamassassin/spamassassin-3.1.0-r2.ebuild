@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0.ebuild,v 1.9 2005/11/21 17:26:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.1 2005/11/21 17:26:04 mcummings Exp $
 
 inherit perl-module
 
@@ -12,41 +12,19 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
-IUSE="berkdb qmail ssl doc mysql tools"
+#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
+KEYWORDS="~alpha ~ppc ~ppc64 ~sparc ~x86"
+IUSE="berkdb qmail ssl doc mysql postgres sqlite spf tools"
 
 # To consider (not all may be in tree at this time - mcummings):
 # dev-perl/Net-SMTP
 # dev-perl/IP-Country-Fast
-# dev-perl/Net-Ident
-# perl-core/Time-HiRes
 
-# New use flags once we get all of the archs up to speed.
-#	postgres? (
-#		dev-perl/DBI
-#		dev-perl/DBD-Pg
-#	)
-#	sqlite? (
-#		dev-perl/DBI
-#		dev-perl/DBD-SQLite
-#	)
-#	spf? (
-#		dev-perl/Mail-SPF-Query
-#	)
-#
-#	pyzor? (
-#		dev-python/pyzor
-#	)
-#	razor? (
-#		mail-filter/razor
-#	)
-#	dcc? (
-#		mail-filter/dcc
-#	)
 DEPEND=">=dev-lang/perl-5.8.2-r1
 	>=dev-perl/PodParser-1.22
 	perl-core/MIME-Base64
 	perl-core/Storable
+	perl-core/Time-HiRes
 	>=dev-perl/HTML-Parser-3.31
 	>=dev-perl/Net-DNS-0.34
 	dev-perl/Digest-SHA1
@@ -64,7 +42,27 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 		dev-perl/DBI
 		dev-perl/DBD-mysql
 	)
-"
+	postgres? (
+		dev-perl/DBI
+		dev-perl/DBD-Pg
+	)
+	sqlite? (
+		dev-perl/DBI
+		dev-perl/DBD-SQLite
+	)
+	spf? (
+		dev-perl/Mail-SPF-Query
+	)
+
+	pyzor? (
+		dev-python/pyzor
+	)
+	razor? (
+		mail-filter/razor
+	)
+	dcc? (
+		mail-filter/dcc
+	)"
 
 src_compile() {
 	# - Set SYSCONFDIR explicitly so we can't get bitten by bug 48205 again
@@ -217,4 +215,8 @@ pkg_postinst() {
 	einfo
 	einfo "If you build ${PN} with optional dependancy support,"
 	einfo "you can enable them in /etc/mail/spamassassin/init.pre"
+	einfo
+	einfo "You may also consider installing the following for add on"
+	einfo "benefits: dev-perl/IO-Socket-INET6  dev-prel/Mail-DomainKeys"
+	einfo "dev-perl/Net-Ident dev-perl/IP-Country"
 }

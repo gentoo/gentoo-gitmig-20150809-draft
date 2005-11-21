@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r1.ebuild,v 1.4 2005/11/12 23:02:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r1.ebuild,v 1.5 2005/11/21 17:26:04 mcummings Exp $
 
 inherit perl-module
 
@@ -19,13 +19,12 @@ IUSE="berkdb qmail ssl doc mysql postgres sqlite spf tools"
 # To consider (not all may be in tree at this time - mcummings):
 # dev-perl/Net-SMTP
 # dev-perl/IP-Country-Fast
-# dev-perl/Net-Ident
-# perl-core/Time-HiRes
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
 	>=dev-perl/PodParser-1.22
 	perl-core/MIME-Base64
 	perl-core/Storable
+	perl-core/Time-HiRes
 	>=dev-perl/HTML-Parser-3.31
 	>=dev-perl/Net-DNS-0.34
 	dev-perl/Digest-SHA1
@@ -136,6 +135,9 @@ src_install () {
 
 	dosym /etc/mail/spamassassin /etc/spamassassin
 
+	# Disable plugin by default
+	sed -i -e 's/^loadplugin/\#loadplugin/g' ${D}/etc/mail/spamassassin/init.pre
+
 	# Add the init and config scripts.
 	newinitd "${FILESDIR}"/3.0.0-spamd.init spamd
 	newconfd "${FILESDIR}"/3.0.0-spamd.conf spamd
@@ -209,4 +211,12 @@ pkg_postinst() {
 	ewarn
 	ewarn "If you plan on using the -u flag to spamd, please read the notes"
 	ewarn "in /etc/conf.d/spamd regarding the location of the pid file."
+
+	einfo
+	einfo "If you build ${PN} with optional dependancy support,"
+	einfo "you can enable them in /etc/mail/spamassassin/init.pre"
+	einfo
+	einfo "You may also consider installing the following for add on"
+	einfo "benefits: dev-perl/IO-Socket-INET6  dev-prel/Mail-DomainKeys"
+	einfo "dev-perl/Net-Ident dev-perl/IP-Country"
 }
