@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r1.ebuild,v 1.10 2005/11/13 22:03:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r1.ebuild,v 1.11 2005/11/21 01:12:11 vapier Exp $
 
 PATCH_VER="1.2"
 PATCH_GCC_VER="4.0.2"
@@ -29,11 +29,9 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-*"
 
-RDEPEND="virtual/libc
+RDEPEND="!sys-devel/hardened-gcc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
 	>=sys-libs/zlib-1.1.4
-	!sys-devel/hardened-gcc
-	elibc_glibc? ( >=sys-libs/glibc-2.3.6 )
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	fortran? (
 	  dev-libs/gmp
@@ -47,7 +45,9 @@ RDEPEND="virtual/libc
 		>=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext )
 	)"
-
+if [[ ${CATEGORY} != cross-* ]] ; then
+	RDEPEND="${RDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
+fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
