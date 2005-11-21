@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.11 2005/08/28 14:12:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.12 2005/11/21 23:31:33 brix Exp $
+
+  21 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  cpufrequtils-0.3-r1.ebuild:
+  Use mirror://kernel/
 
   28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
   cpufrequtils-0.3-r1.ebuild:

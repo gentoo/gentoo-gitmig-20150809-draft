@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-0.3-r1.ebuild,v 1.4 2005/08/28 14:12:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-0.3-r1.ebuild,v 1.5 2005/11/21 23:31:33 brix Exp $
 
 # The following works for both releases and pre-releases
 MY_P=${P/_/-}
@@ -8,7 +8,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Userspace utilities and library for the Linux kernel cpufreq subsystem"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html"
-SRC_URI="http://www.kernel.org/pub/linux/utils/kernel/cpufreq/${MY_P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/utils/kernel/cpufreq/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
