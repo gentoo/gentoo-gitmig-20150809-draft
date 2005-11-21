@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.41 2005/11/13 18:04:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.42 2005/11/21 20:56:29 ciaranm Exp $
+
+  21 Nov 2005; Ciaran McCreesh <ciaranm@gentoo.org> ctags-5.2.3.ebuild,
+  ctags-5.5.ebuild, ctags-5.5-r1.ebuild, ctags-5.5.4.ebuild,
+  ctags-5.5.4-r1.ebuild, ctags-5.5.4-r2.ebuild, ctags-5.5.4-r3.ebuild:
+  Remove unnecessary libc dep, bug #113087
 
 *ctags-5.5.4-r3 (13 Nov 2005)
 

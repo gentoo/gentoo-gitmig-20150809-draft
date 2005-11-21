@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5.4-r1.ebuild,v 1.11 2005/07/22 22:20:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5.4-r1.ebuild,v 1.12 2005/11/21 20:56:29 ciaranm Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
