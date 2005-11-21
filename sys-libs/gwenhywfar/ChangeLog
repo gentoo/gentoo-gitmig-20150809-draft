@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.16 2005/09/26 15:58:07 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.17 2005/11/21 17:09:02 gustavoz Exp $
+
+  21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gwenhywfar-1.18.0.ebuild:
+  Stable on sparc wrt #113175 #111738
 
 *gwenhywfar-1.18.0 (26 Sep 2005)
 
