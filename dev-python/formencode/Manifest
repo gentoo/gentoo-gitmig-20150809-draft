@@ -3,16 +3,19 @@ Hash: SHA1
 
 MD5 2faecb81aa076864f85181b2309bbaaa formencode-0.2.2.ebuild 884
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-MD5 dfce0fe5d5a0dde218ea39027f7c2893 ChangeLog 695
+MD5 0801ff98694905e06ee8ca72b4e26f80 ChangeLog 864
 MD5 5b03fa936737cd27f2e1e985d257fa71 formencode-0.3.ebuild 985
+MD5 32a79b040af243cdca745f6db17cf39c formencode-0.4.ebuild 985
 MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.2.2-setup-gentoo.patch 405
 MD5 682d58dd2af7c91480246df7bdcb1fda files/digest-formencode-0.2.2 67
 MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.3-setup-gentoo.patch 405
 MD5 fed5a3e4d9c51dc110d278f52c774083 files/digest-formencode-0.3 65
+MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.4-setup-gentoo.patch 405
+MD5 c8bff20880ac0ab4bd4cbb1f4a26e645 files/digest-formencode-0.4 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDdrBYTry2jroju7wRArNkAJ95AlpR+Zmm9jau33/gzVO+1pLK7ACeJz9M
-cIYeZIQnnCfJSjZkZz9ixmQ=
-=Qj1z
+iD8DBQFDghTqTry2jroju7wRAiBcAKCQAXlhFRXO5mzhK1FxqI+39OQCuACggqkp
+XMXUoi2CGHQ9qcAUb3Go7SE=
+=kwmO
 -----END PGP SIGNATURE-----
