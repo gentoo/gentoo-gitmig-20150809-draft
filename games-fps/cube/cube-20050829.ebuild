@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.1 2005/09/25 01:14:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.2 2005/11/21 20:20:34 josejx Exp $
 
-inherit eutils games
+inherit eutils games flag-o-matic
 
 MY_PV=${PV:0:4}_${PV:4:2}_${PV:6:2}
 MY_P=${PN}_${MY_PV}
@@ -52,6 +52,7 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -fsigned-char
 	cd enet
 	egamesconf || die "egamesconf failed"
 	emake || die "emake failed"

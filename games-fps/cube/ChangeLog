@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/cube
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.10 2005/09/25 01:14:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.11 2005/11/21 20:20:34 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org> cube-20040522.ebuild,
+  cube-20050829.ebuild:
+  Added -fsigned-char to fix bug #98813.
 
 *cube-20050829 (25 Sep 2005)
 
