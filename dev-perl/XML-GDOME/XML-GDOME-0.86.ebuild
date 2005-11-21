@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.11 2005/08/03 22:37:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.12 2005/11/21 18:36:25 mcummings Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="Provides the DOM Level 2 Core API for accessing XML documents"
 SRC_URI="mirror://cpan/authors/id/T/TJ/TJMATHER/${P}.tar.gz"
@@ -16,3 +16,9 @@ IUSE=""
 DEPEND=">=dev-libs/gdome2-0.7.2
 		dev-perl/XML-LibXML-Common
 		dev-perl/XML-SAX"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gdome-version-check.patch
+}

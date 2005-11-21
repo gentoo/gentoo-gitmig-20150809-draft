@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/XML-GDOME
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.13 2005/08/03 22:37:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.14 2005/11/21 18:36:25 mcummings Exp $
 
-  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> XML-GDOME-0.86.ebuild:
+  21 Nov 2005; <mcumming@gentoo.org> +files/gdome-version-check.patch,
+  XML-GDOME-0.86.ebuild:
+  bug 112775, cpan rt ticket 16009
+
+  03 Aug 2005; Bryan Ãstergaard <kloeri@gentoo.org> XML-GDOME-0.86.ebuild:
   Stable on alpha.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> XML-GDOME-0.86.ebuild:
@@ -14,7 +18,7 @@
   30 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> XML-GDOME-0.86.ebuild:
   Stable on sparc
 
-  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> XML-GDOME-0.86.ebuild:
+  30 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> XML-GDOME-0.86.ebuild:
   ~alpha keyword.
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
