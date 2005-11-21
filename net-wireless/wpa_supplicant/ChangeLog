@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.38 2005/11/10 09:56:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.39 2005/11/21 10:40:13 brix Exp $
+
+*wpa_supplicant-0.4.7 (21 Nov 2005)
+
+  21 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/wpa_supplicant-0.4.7-wpa_cli.action, +wpa_supplicant-0.4.7.ebuild:
+  First release of new stable branch, madwifi support will follow soon.
 
   09 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
   wpa_supplicant-0.4.6.ebuild:
