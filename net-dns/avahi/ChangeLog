@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.18 2005/11/14 21:53:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.19 2005/11/21 14:23:04 swegener Exp $
+
+  21 Nov 2005; Sven Wegener <swegener@gentoo.org> avahi-0.5.2-r1.ebuild:
+  Parallel build problems, bug #113092.
 
   14 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> avahi-0.5.2-r1.ebuild:
   Added to ~ppc. See bug #111461.
