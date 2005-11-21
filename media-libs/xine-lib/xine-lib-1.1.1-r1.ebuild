@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r1.ebuild,v 1.4 2005/11/21 10:35:35 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r1.ebuild,v 1.5 2005/11/21 12:43:29 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -21,7 +21,7 @@ KEYWORDS="-* ~amd64"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
 samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts asf
-ffmpeg"
+ffmpeg debug"
 RESTRICT="nostrip"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -119,6 +119,10 @@ src_compile() {
 		ewarn "difficult to fix. Please have that in mind."
 		ewarn ""
 	fi
+
+	# debug useflag used to emulate debug make targets. See bug #112980 and the
+	# xine maintainers guide.
+	use debug && append-flags -DDEBUG
 
 	local myconf
 
