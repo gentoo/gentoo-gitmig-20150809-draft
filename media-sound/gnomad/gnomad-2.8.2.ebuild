@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.8.2.ebuild,v 1.1 2005/10/25 09:16:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.8.2.ebuild,v 1.2 2005/11/21 19:46:10 chainsaw Exp $
 
 inherit flag-o-matic gnome2
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~ppc -sparc ~x86"
 
 RDEPEND=">=dev-libs/glib-2.6.0
 	>=gnome-base/libgnomeui-2
-	>=media-libs/libnjb-2.2
+	>=media-libs/libnjb-2.2.4
 	media-libs/libid3tag
 	>=gnome-base/gconf-1.2"
 

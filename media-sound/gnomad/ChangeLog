@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.21 2005/10/25 09:16:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.22 2005/11/21 19:46:10 chainsaw Exp $
+
+  21 Nov 2005; <chainsaw@gentoo.org> gnomad-2.8.2.ebuild:
+  Update libnjb dependency, closes bug #113139 by DocWario <m.valdivia@free.fr>.
 
 *gnomad-2.8.2 (25 Oct 2005)
 
