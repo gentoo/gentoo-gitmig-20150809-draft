@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r1.ebuild,v 1.5 2005/11/21 12:43:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r1.ebuild,v 1.6 2005/11/21 14:57:44 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="17"
+PATCHLEVEL="18"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -84,9 +84,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	# This is still experimental patch
+	EPATCH_EXCLUDE="050_all_novell--alsa-resume-fix.patch" \
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
 
-	# AT_M4DIR="m4" eautoreconf
+	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }
 

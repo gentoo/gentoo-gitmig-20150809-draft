@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.273 2005/11/21 12:43:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.274 2005/11/21 14:57:44 flameeyes Exp $
+
+  21 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.1-r1.ebuild:
+  Add patch to replace -Os to -O2 to try to fix bug #113159.
 
   21 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.1-r1.ebuild:
