@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.50 2005/11/08 16:55:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.51 2005/11/21 02:54:16 latexer Exp $
+
+  21 Nov 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-2.4.0.ebuild,
+  gtk-sharp-2.6.0.ebuild:
+  Update to the proper mono version dep. Need at least 1.1.9 to have the
+  necessary publisher policy support.
 
   08 Nov 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-2.6.0.ebuild:
   Add big fat warning about gtk-sharp-2.6.x being unsupported by upstream.
