@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4694 2005/11/21 09:47:34 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4695 2005/11/21 19:15:25 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (21 Nov 2005)
+# Masked for security vulnerabilities (bad past behavior, too)
+media-video/helixplayer
 
 # Stuart Herbert <stuart@gentoo.org> (20 Nov 2005)
 # Masked for testing purposes
