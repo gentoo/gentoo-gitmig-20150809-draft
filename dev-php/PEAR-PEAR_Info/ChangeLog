@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.15 2005/10/24 13:46:22 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.16 2005/11/21 16:45:50 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org> PEAR-PEAR_Info-1.6.0.ebuild:
+  Marked ~ppc for bug #105385.
 
   24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-PEAR_Info-1.6.0.ebuild:

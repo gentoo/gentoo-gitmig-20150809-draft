@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_XPath
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.18 2005/10/16 07:06:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.19 2005/11/21 17:07:37 josejx Exp $
+
+  21 Nov 2005; Joseph Jezak <josejx@gentoo.org> PEAR-XML_XPath-1.2.2.ebuild:
+  Marked ~ppc for bug #105385.
 
   16 Oct 2005; Jason Wever <weeve@gentoo.org> PEAR-XML_XPath-1.2.2.ebuild:
   Added ~sparc keyword.
