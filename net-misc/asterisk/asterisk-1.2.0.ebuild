@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0.ebuild,v 1.2 2005/11/20 21:55:37 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0.ebuild,v 1.3 2005/11/21 17:49:43 stkn Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ IUSE="alsa bri curl debug doc gtk h323 hardened lowmem mmx mysql \
 	nosamples odbc postgres pri speex sqlite ssl ukcid zaptel"
 
 BRI_VERSION="0.3.0-PRE-1"
-AST_PATCHES="1.2.0-patches-1.0"
+AST_PATCHES="1.2.0-patches-1.1"
 
 ## TODO:
 #
