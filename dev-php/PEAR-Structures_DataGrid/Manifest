@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 96596b97e8f1b23de9ffe030a1379b5b ChangeLog 1152
+MD5 bfd68fbe658e955e4abffa1ea53b8c6b ChangeLog 1270
 MD5 7c075237075f3f50bc1c28dc3e333610 PEAR-Structures_DataGrid-0.6.2.ebuild 721
-MD5 d1d789cde36930cb64141aae8a9a1b84 PEAR-Structures_DataGrid-0.6.3.ebuild 710
+MD5 471a796e1d65d32bba53c8d8b29ae349 PEAR-Structures_DataGrid-0.6.3.ebuild 712
 MD5 a4e15e04163f4e4d0adc8e5e3d82c8bc files/digest-PEAR-Structures_DataGrid-0.6.2 73
 MD5 908904db19660511ff53cb6e29e19ff4 files/digest-PEAR-Structures_DataGrid-0.6.3 73
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZgtWaGfFFLhbXWkRAi8oAJ9Yjeeq2cF1W8rTx1bSD/R1EBbW1gCfTbey
-/3d0OLUXxzLoCt2HmQ+2coA=
-=xFZt
------END PGP SIGNATURE-----
