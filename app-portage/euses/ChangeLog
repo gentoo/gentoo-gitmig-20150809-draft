@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/euses
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.3 2005/11/19 21:37:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.4 2005/11/21 03:34:16 jer Exp $
+
+  21 Nov 2005; Jeroen Roovers <jer@gentoo.org> euses-2.3.ebuild,
+  euses-2.4.2.ebuild:
+  Added ~hppa keyword
 
   19 Nov 2005; <chainsaw@gentoo.org> euses-2.4.2.ebuild:
   Also install upstream ChangeLog.
