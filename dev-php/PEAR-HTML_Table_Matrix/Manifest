@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a2d676456ec6f38594e88d861da0930 ChangeLog 1324
+MD5 ad950491157cce25eb6d562567f80640 ChangeLog 1440
 MD5 ee5575839733569575947bf8f9b865a0 PEAR-HTML_Table_Matrix-1.0.7.ebuild 473
-MD5 bc044dac4ee64142bb5e67243f820e47 PEAR-HTML_Table_Matrix-1.0.9.ebuild 460
+MD5 da19c92af55cdbe8dc84ac6bb1cfc5a6 PEAR-HTML_Table_Matrix-1.0.9.ebuild 462
 MD5 9339a4fb698dbd7fda66f37dc749298a files/digest-PEAR-HTML_Table_Matrix-1.0.7 70
 MD5 ff485881be545a56a2087acb1325c64a files/digest-PEAR-HTML_Table_Matrix-1.0.9 70
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZgtWaGfFFLhbXWkRAmLfAJ41YiTCOVuWFLzd9drSJM2LD6YnDwCfS2Qf
-NdQaz/V1yVAkjL7+xilC0sc=
-=opQv
------END PGP SIGNATURE-----

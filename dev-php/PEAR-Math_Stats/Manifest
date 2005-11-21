@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a312715daebbd861fd70c637423baced ChangeLog 1057
-MD5 8249b12ec236c2f7500407a5017a9104 PEAR-Math_Stats-0.9.0_beta3-r1.ebuild 486
+MD5 ed911f5cddba0d91832d9a1faaaf6312 ChangeLog 1175
+MD5 4b34bd398d58f2391f4dc8adbc99bf10 PEAR-Math_Stats-0.9.0_beta3-r1.ebuild 488
 MD5 97b2e4b13acd8f9421fbebd4a54e6ecc PEAR-Math_Stats-0.9.0_beta3.ebuild 517
 MD5 8607daa6ecb55edf20515a92245d7ffe files/digest-PEAR-Math_Stats-0.9.0_beta3 69
 MD5 8607daa6ecb55edf20515a92245d7ffe files/digest-PEAR-Math_Stats-0.9.0_beta3-r1 69
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXOYYaGfFFLhbXWkRAgm5AJ4jV9WzUZKTr1WUK2sP/Sgcr+y2cQCfXK1B
-PwnQOpOTn4+TUPJojdy0INE=
-=taZs
------END PGP SIGNATURE-----
