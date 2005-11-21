@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4692 2005/11/20 12:45:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4693 2005/11/21 09:35:14 sejo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1751,3 +1751,7 @@ app-text/sgml2x
 # Pre-removal masking
 # <vivo@gentoo.org> (18 Aug 2005)
 dev-db/mysqltool
+
+# <sejo@gentoo.org> (21 November 2005)
+# ibm-jdk-bin beta should be masked untill descent testing
+dev-lang/ibm-jdk-bin-1.5_beta1
