@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6b08895a418224248fb13af75d7fe734 ChangeLog 3720
 MD5 7d34394cb4d85fa0c1aeca17e614ab85 files/digest-lineakd-0.8.2 65
 MD5 c3a210f82bfa5f48a2de86956bccec43 files/digest-lineakd-0.8.3 65
@@ -8,3 +11,10 @@ MD5 f453744ffac61ecc1c9736351cf190af lineakd-0.8.2.ebuild 841
 MD5 99264bf83bb9b5cefbc43230a769f7a6 lineakd-0.8.3-r1.ebuild 926
 MD5 159f5c76c3a78856bb20affbb6c210f1 lineakd-0.8.3.ebuild 833
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDghd+csIHjyDViGQRAm2NAJ48AAgTZ6lxq8bKLFKaOYNfyjgh5ACeIQ8/
+eJRydaunIG85l4R6PdtgJrU=
+=nt3+
+-----END PGP SIGNATURE-----
