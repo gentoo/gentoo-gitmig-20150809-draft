@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.2 2005/11/18 22:21:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.3 2005/11/22 00:26:49 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,13 +14,15 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
-S=${WORKDIR}
-dir=${GAMES_PREFIX_OPT}/${PN}
+RDEPEND="sys-libs/glibc
+	virtual/opengl
+	amd64? ( app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-compat )"
 
-pkg_setup() {
-	check_license Introversion
-	games_pkg_setup
-}
+S=${WORKDIR}
+
+GAMES_CHECK_LICENSE="yes"
+dir=${GAMES_PREFIX_OPT}/${PN}
 
 src_unpack() {
 	unpack_makeself
