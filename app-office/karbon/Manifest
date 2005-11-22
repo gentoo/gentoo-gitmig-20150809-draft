@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c22af908cf5f45f8db51adcbbc5ce1da karbon-1.4.2.ebuild 1185
-MD5 2f250fcc2c7c9a0dfe62c471d6c78cc1 karbon-1.4.1.ebuild 1177
-MD5 d9f1031fe2874a3c15744a1bf0aeff89 ChangeLog 2144
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 951dfb5ac028d5d4efa041ce58e0de87 karbon-1.3.5.ebuild 1234
+MD5 87ffcedc5c2bea6d86b6994b124e26a5 ChangeLog 2246
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-karbon-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-karbon-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-karbon-1.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDgxhmKRy60XGEcJIRAtKIAKC011Ydx+QQ7+gXl5EcWKcqkBdIugCfdyBa
-kkCs7IBePOgsYb1xuW8imV8=
-=Nkmz
------END PGP SIGNATURE-----
+MD5 951dfb5ac028d5d4efa041ce58e0de87 karbon-1.3.5.ebuild 1234
+MD5 2f250fcc2c7c9a0dfe62c471d6c78cc1 karbon-1.4.1.ebuild 1177
+MD5 82a2872fbcaafc35c6ffbc54149b2320 karbon-1.4.2.ebuild 1181
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157

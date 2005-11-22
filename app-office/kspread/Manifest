@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2951fa1fed072824c687fd98cde0572d ChangeLog 2504
+MD5 df9db9d34bdf981b60ac754756dbcb0b ChangeLog 2607
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kspread-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kspread-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kspread-1.4.2 68
 MD5 ef06322f8a12885dd5dfeea8d2d244ee kspread-1.3.5.ebuild 1275
 MD5 b321e3aa2a3ef585f20372811611557e kspread-1.4.1.ebuild 1158
-MD5 30aa5d47ce1568b19665baba60bc4874 kspread-1.4.2.ebuild 1169
+MD5 53a00431c3791efae844eda775d9960d kspread-1.4.2.ebuild 1165
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDgxzrKRy60XGEcJIRArnCAJ48yfPIfhVn0tR+aX/1PR2wRZ+PSgCeI7oi
-X3JfpGXVnqkEImYdU1UnMok=
-=1S50
------END PGP SIGNATURE-----
