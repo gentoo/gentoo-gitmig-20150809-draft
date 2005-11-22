@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41ac2dfc0ba115cf84ebd8d482ba4d6b ChangeLog 2462
+MD5 8692de527e64b86f047823f44ea8faeb ChangeLog 2570
 MD5 80e835a04c9e0b2dcb98285e4a0a2f8f files/digest-krecipes-0.6.2 72
 MD5 ac2c77f4c2dac4b10437291117132b89 files/digest-krecipes-0.7.1 72
 MD5 bc16a9f75213a67c72cbdfa3be0d8f10 files/digest-krecipes-0.8 70
 MD5 d00a1f7bbd75711a0e4f8b8c102be821 files/digest-krecipes-0.8.1 67
 MD5 61216635310e25918699db773c2e79da krecipes-0.6.2.ebuild 729
 MD5 53f701d833b47b725e29875a6116ed35 krecipes-0.7.1.ebuild 934
-MD5 2f786cefa6b028ee9dd11fe04fd02c0d krecipes-0.8.1.ebuild 1472
+MD5 08b180b0c6bab39d7fe0f9c9580a816c krecipes-0.8.1.ebuild 1473
 MD5 4410a07415be79fd4586a58403add2a1 krecipes-0.8.ebuild 936
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDgrKIcsIHjyDViGQRArtSAKCBC9PQKE9dOwB4MukX3M3YVlY25gCdHGHp
-1ZOQhw/92Ve3tIdu2g1SddE=
-=00NZ
+iD8DBQFDg6vDwUpWvClEHQoRAlnmAJ0cwTKaaVW9wkWvLMZGGW9WXboZoACeLxoh
+K0ExELEF9n/eaisuEMOuFdE=
+=B1JA
 -----END PGP SIGNATURE-----
