@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f802f11ed5ce11847abceb5f0e59307 ChangeLog 3536
-MD5 8c402c466c3575feaeb4ba79f8b26dc1 helixplayer-1.0.4.ebuild 2285
-MD5 75ed185b972cd276a339309609fba567 metadata.xml 276
-MD5 1ab341d3ade36889215f257ef27691cc helixplayer-1.0.5.ebuild 2282
+MD5 2c0f781d601ae278faf2b51483308e68 ChangeLog 3708
 MD5 b58761808153ad55d61baf4017ea8486 files/digest-helixplayer-1.0.4 139
 MD5 5ce59341635af14a578e0f26c81fce2f files/digest-helixplayer-1.0.5 139
+MD5 33d5f1a0bea946f8dd896a94ea086e87 helixplayer-1.0.4.ebuild 2260
+MD5 5e1ed06f7e1190ee4d1f3121d6bf7d94 helixplayer-1.0.5.ebuild 2257
+MD5 75ed185b972cd276a339309609fba567 metadata.xml 276
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2ANFj5H05b2HAEkRAvkCAKCSNEpii6fPSl+nMfeeSjGfWHhGQQCdHLDD
-q6PebOSXXDy/RG6nTL3K6fw=
-=NNeZ
+iD8DBQFDgvOZAiZjviIA2XgRArOKAJ9l212d60xBcmyHzolx39JK6umbmwCfWI5r
+UyurqLkh3NKAckWxcWUw8m0=
+=+lrE
 -----END PGP SIGNATURE-----

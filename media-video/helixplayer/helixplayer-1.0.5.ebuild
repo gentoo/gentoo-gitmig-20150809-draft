@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.5.ebuild,v 1.4 2005/07/15 18:40:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.5.ebuild,v 1.5 2005/11/22 10:31:12 flameeyes Exp $
 
 inherit nsplugins eutils
 
@@ -10,7 +10,7 @@ PATCHLEVEL="1"
 DESCRIPTION="A free open-source media player by real"
 HOMEPAGE="http://www.helixplayer.org/"
 SRC_URI="https://helixcommunity.org/download.php/1340/${MY_PKG}.tar.bz2
-	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
