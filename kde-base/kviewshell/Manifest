@@ -1,7 +1,8 @@
-MD5 8f3b5f405cd9aacbe834e9e0d43bfb64 ChangeLog 3345
+MD5 e4aa8adc16240495f06633ceb63ea2c2 ChangeLog 3530
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kviewshell-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kviewshell-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kviewshell-3.4.3 71
+MD5 0459ac16349d79da6246392e2454796b files/digest-kviewshell-3.5.0 71
 MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kviewshell-3.5.0_beta2 225
 MD5 c67126eaeeb2137106bb079f5d529d71 files/digest-kviewshell-3.5.0_rc1 312
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kviewshell-3.5_beta1 72
@@ -9,6 +10,7 @@ MD5 339eca37408cf1043fc3ec09e4e66db5 files/kviewshell-qt-3.3.5.patch 469
 MD5 c90e809e5a7b27ae4809d31bb1bfaefe kviewshell-3.4.1.ebuild 417
 MD5 bf8cd2a605ca59751c3572a7c340f611 kviewshell-3.4.2.ebuild 479
 MD5 67778ca900804117dd1a5c93033f6438 kviewshell-3.4.3.ebuild 431
+MD5 16bdf9273765a53a2f779ce462e35769 kviewshell-3.5.0.ebuild 408
 MD5 01595167d89556c43ed1870271411cd1 kviewshell-3.5.0_beta2.ebuild 413
 MD5 09faadeacf68e2391354541ecb1b1ceb kviewshell-3.5.0_rc1.ebuild 412
 MD5 c0b6f66737bf8843cdca465ce1560cbc kviewshell-3.5_beta1.ebuild 455
