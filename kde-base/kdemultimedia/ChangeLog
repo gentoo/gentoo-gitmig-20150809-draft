@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.179 2005/11/21 17:43:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.180 2005/11/22 22:14:02 danarmak Exp $
+
+*kdemultimedia-3.5.0 (22 Nov 2005)
+
+  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdemultimedia-3.5.0.ebuild:
+  Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   kdemultimedia-3.4.3.ebuild:

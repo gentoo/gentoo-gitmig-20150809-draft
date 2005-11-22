@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmtrace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.16 2005/10/22 07:12:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.17 2005/11/22 22:14:09 danarmak Exp $
+
+*kmtrace-3.5.0 (22 Nov 2005)
+
+  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kmtrace-3.5.0.ebuild:
+  Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kmtrace-3.5_beta1.ebuild,
   kmtrace-3.5.0_beta2.ebuild:

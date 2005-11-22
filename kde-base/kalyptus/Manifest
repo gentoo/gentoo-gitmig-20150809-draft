@@ -2,12 +2,12 @@ MD5 0c528b9d1043ea6f87581c0abb94802d ChangeLog 2656
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-kalyptus-3.3.2 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kalyptus-3.4.1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-kalyptus-3.4.2 300
-MD5 7b7cadef2c4eb7dc5409c01c4e689481 files/digest-kalyptus-3.5.0_beta2 225
+MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-kalyptus-3.5.0 71
 MD5 a41ac4f23e006a6c9c1a8c780b3aca01 files/digest-kalyptus-3.5.0_rc1 312
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 67f69a490c47381d82c77c9cde372ce5 kalyptus-3.3.2.ebuild 688
 MD5 0ee39aeccf35dcd265240cd4f12be93e kalyptus-3.4.1.ebuild 701
 MD5 034a5fbc51861b8c8baa756c341feb43 kalyptus-3.4.2.ebuild 709
-MD5 68cf30ec3e59b706686737b992032be7 kalyptus-3.5.0_beta2.ebuild 699
+MD5 15641720b2b31448a302e2ab9d4653e9 kalyptus-3.5.0.ebuild 698
 MD5 15641720b2b31448a302e2ab9d4653e9 kalyptus-3.5.0_rc1.ebuild 698
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

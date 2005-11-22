@@ -2,13 +2,11 @@ MD5 8a2ca01418dedb677eb6a4f66efd648e ChangeLog 3070
 MD5 f74830c2332cb73eaf3d752315fcecbd dcoprss-3.4.1.ebuild 535
 MD5 aab32ce961f67617b84a367ea2595564 dcoprss-3.4.2.ebuild 550
 MD5 13fddb5fcd9da04ffbeedef032d760a1 dcoprss-3.4.3.ebuild 552
-MD5 1db1be6ea042155ee43c35d75d136b5d dcoprss-3.5.0_beta2.ebuild 503
+MD5 cc0079c65e31eee857f3b91d87c4a9a4 dcoprss-3.5.0.ebuild 496
 MD5 ccf11760b06f8db27192d417e51313a8 dcoprss-3.5.0_rc1.ebuild 502
-MD5 d9ef172a91a93b3e84e3bc8721b6e82a dcoprss-3.5_beta1.ebuild 527
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-dcoprss-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-dcoprss-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-dcoprss-3.4.3 70
-MD5 e48a9939e32d172601a814622502aa3b files/digest-dcoprss-3.5.0_beta2 222
+MD5 c1796dff01cbd770e451d9686766c581 files/digest-dcoprss-3.5.0 70
 MD5 e3ae49bd33349d36b78d2df93d49089e files/digest-dcoprss-3.5.0_rc1 308
-MD5 16b903e400a8cf2d73f3c237799238db files/digest-dcoprss-3.5_beta1 71
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

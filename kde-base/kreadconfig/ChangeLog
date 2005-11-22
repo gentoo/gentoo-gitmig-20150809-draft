@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.18 2005/10/21 23:09:20 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.19 2005/11/22 22:14:11 danarmak Exp $
+
+*kreadconfig-3.5.0 (22 Nov 2005)
+
+  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kreadconfig-3.5.0.ebuild:
+  Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   21 Oct 2005; Douglas Russell <puggy@gentoo.org>
   kreadconfig-3.5_beta1.ebuild:

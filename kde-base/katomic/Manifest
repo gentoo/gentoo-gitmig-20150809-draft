@@ -2,13 +2,11 @@ MD5 6a790d27e8fb7d61f80f78e6ce6b9c42 ChangeLog 3087
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-katomic-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-katomic-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-katomic-3.4.3 68
-MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-katomic-3.5.0_beta2 218
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-katomic-3.5.0 69
 MD5 894962ff94814330209ff99f0ab9f1cb files/digest-katomic-3.5.0_rc1 302
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-katomic-3.5_beta1 70
 MD5 c33625786e9af17a8fb4a75fa4f0053e katomic-3.4.1.ebuild 542
 MD5 b53bd421e8f19c681dc48b9f56bf99d9 katomic-3.4.2.ebuild 555
 MD5 9e63fc5a329c807cfadbdd565af6fd0e katomic-3.4.3.ebuild 557
-MD5 5485ce6049d7fd10410ced5b7a2da612 katomic-3.5.0_beta2.ebuild 499
+MD5 a68308059f110b71e595b918c2428429 katomic-3.5.0.ebuild 498
 MD5 a68308059f110b71e595b918c2428429 katomic-3.5.0_rc1.ebuild 498
-MD5 e25cf14d9a7c3bd63836ce3a4d68daee katomic-3.5_beta1.ebuild 534
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

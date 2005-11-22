@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtsharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.11 2005/10/22 07:56:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.12 2005/11/22 22:14:16 danarmak Exp $
+
+*qtsharp-3.5.0 (22 Nov 2005)
+
+  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +qtsharp-3.5.0.ebuild:
+  Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> qtsharp-3.5.0_beta2.ebuild:
   Adding ~x86 to keywords

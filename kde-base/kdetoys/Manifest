@@ -1,26 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf3c1be02358440d3086ace92e341a9c kdetoys-3.5.0_rc1.ebuild 328
-MD5 10a265db43def67ff6a8ce0398854c52 kdetoys-3.4.2.ebuild 331
-MD5 71f0b15922c61fd248d816db416d72a3 kdetoys-3.5.0_beta2.ebuild 330
-MD5 1269dcaad6492eb9f45bfd14e5dea39b kdetoys-3.4.1.ebuild 325
-MD5 b1473927fc483d6ff85110c6c42d9b10 kdetoys-3.5_beta1.ebuild 328
-MD5 9d57a16557160029eb00ba7d49cdf596 kdetoys-3.4.3.ebuild 331
 MD5 7a71986254f2736e1cb59e0a0409dcd0 ChangeLog 14394
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 32ff2ded43ee9348388f418a3130f732 kdetoys-3.3.2.ebuild 330
-MD5 d4cddbda435eda3a23533c6471357fe0 files/digest-kdetoys-3.5.0_rc1 71
-MD5 f17b4a30ade1b048994696363119fcb6 files/digest-kdetoys-3.5.0_beta2 68
 MD5 0cfc1e7d7a127fc26acfa1078576bee2 files/digest-kdetoys-3.3.2 67
 MD5 b4ab9eee9546403dcb646ccba45ef2e3 files/digest-kdetoys-3.4.1 67
 MD5 cec4c0358c295f328944405dc17ded2b files/digest-kdetoys-3.4.2 67
 MD5 4792409083f3033f880840748c1ec31a files/digest-kdetoys-3.4.3 67
+MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kdetoys-3.5.0 67
+MD5 f17b4a30ade1b048994696363119fcb6 files/digest-kdetoys-3.5.0_beta2 68
+MD5 d4cddbda435eda3a23533c6471357fe0 files/digest-kdetoys-3.5.0_rc1 71
 MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kdetoys-3.5_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDgg2MKRy60XGEcJIRAuKLAKCa9uj5e7SULap4HB85Jrn+YVSM0gCcCYs0
-56InfQiSY2FoIsFsT5LjLrw=
-=Vj4g
------END PGP SIGNATURE-----
+MD5 32ff2ded43ee9348388f418a3130f732 kdetoys-3.3.2.ebuild 330
+MD5 1269dcaad6492eb9f45bfd14e5dea39b kdetoys-3.4.1.ebuild 325
+MD5 10a265db43def67ff6a8ce0398854c52 kdetoys-3.4.2.ebuild 331
+MD5 9d57a16557160029eb00ba7d49cdf596 kdetoys-3.4.3.ebuild 331
+MD5 bf3c1be02358440d3086ace92e341a9c kdetoys-3.5.0.ebuild 328
+MD5 71f0b15922c61fd248d816db416d72a3 kdetoys-3.5.0_beta2.ebuild 330
+MD5 bf3c1be02358440d3086ace92e341a9c kdetoys-3.5.0_rc1.ebuild 328
+MD5 b1473927fc483d6ff85110c6c42d9b10 kdetoys-3.5_beta1.ebuild 328
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

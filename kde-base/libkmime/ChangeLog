@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmime/ChangeLog,v 1.18 2005/10/18 23:12:35 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmime/ChangeLog,v 1.19 2005/11/22 22:14:14 danarmak Exp $
+
+*libkmime-3.5.0 (22 Nov 2005)
+
+  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +libkmime-3.5.0.ebuild:
+  Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   18 Oct 2005; Douglas Russell <puggy@gentoo.org> libkmime-3.5_beta1.ebuild:
   Keyword ~ppc and ~x86

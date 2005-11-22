@@ -1,26 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b142c69fabd5156f8799b686bfcd0439 kde-3.4.1.ebuild 935
-MD5 665e299f6f427e4198035638f1b9a191 kde-3.5.0_rc1.ebuild 918
-MD5 ea222c539a6a80612a4e5a77100dc365 kde-3.4.3.ebuild 940
-MD5 e6eb5fca5a03e9cceecd8f3883b4ec42 kde-3.3.2.ebuild 904
-MD5 4d6630a38fd27dc12e187ff5970225a6 kde-3.4.2.ebuild 940
-MD5 9d6b5090f2d386caeebe584c69c31f7d kde-3.5.0_beta2.ebuild 920
-MD5 3f2ad8ab7021776833264a6aa1cac19c kde-3.5_beta1.ebuild 918
 MD5 c3276b1b4b3fc9b85ec6bfaec154c583 ChangeLog 13572
-MD5 7a4227b8020c4b9e67023781105928ab metadata.xml 318
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_beta2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.3.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_rc1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5_beta1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDghIGKRy60XGEcJIRAhPiAKCLYm1pyf9bTuPki2sBjWfB0FRAPACgpb1g
-Z+J5tsBWUwKd1Iyl5eblpBA=
-=jjVK
------END PGP SIGNATURE-----
+MD5 e6eb5fca5a03e9cceecd8f3883b4ec42 kde-3.3.2.ebuild 904
+MD5 b142c69fabd5156f8799b686bfcd0439 kde-3.4.1.ebuild 935
+MD5 4d6630a38fd27dc12e187ff5970225a6 kde-3.4.2.ebuild 940
+MD5 ea222c539a6a80612a4e5a77100dc365 kde-3.4.3.ebuild 940
+MD5 665e299f6f427e4198035638f1b9a191 kde-3.5.0.ebuild 918
+MD5 9d6b5090f2d386caeebe584c69c31f7d kde-3.5.0_beta2.ebuild 920
+MD5 665e299f6f427e4198035638f1b9a191 kde-3.5.0_rc1.ebuild 918
+MD5 3f2ad8ab7021776833264a6aa1cac19c kde-3.5_beta1.ebuild 918
+MD5 7a4227b8020c4b9e67023781105928ab metadata.xml 318
