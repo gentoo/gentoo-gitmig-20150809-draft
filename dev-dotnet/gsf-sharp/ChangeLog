@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/gsf-sharp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.1 2005/11/22 23:26:01 dsd Exp $
+
+*gsf-sharp-0.6 (22 Nov 2005)
+
+  22 Nov 2005; Daniel Drake <dsd@gentoo.org> +metadata.xml,
+  +gsf-sharp-0.6.ebuild:
+  Initial import; closes bug #111228
+
