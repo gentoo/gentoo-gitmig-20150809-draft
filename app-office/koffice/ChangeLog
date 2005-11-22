@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.125 2005/11/22 13:01:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.126 2005/11/22 14:36:00 cryos Exp $
+
+  22 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> koffice-1.4.2.ebuild:
+  Stable on amd64, bug 112840.
 
   22 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> koffice-1.4.2.ebuild:
   Stable on sparc wrt #112840
@@ -100,7 +103,7 @@
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> koffice-1.4.0_rc1.ebuild:
   Added ~ppc64
 
-  05 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  05 Jun 2005; Marcus D. Hanwell <cryos@gentoo.org>
   koffice-1.4.0_rc1.ebuild:
   Marked ~amd64, bug 95128.
 
