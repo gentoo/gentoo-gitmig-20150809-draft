@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.183 2005/11/22 17:25:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.184 2005/11/22 18:10:41 josejx Exp $
+
+  22 Nov 2005; Joseph Jezak <josejx@gentoo.org> xchat-2.4.5.ebuild:
+  Marked -ppc since it's broken (bug #111322).
 
 *xchat-2.4.5-r1 (22 Nov 2005)
 
