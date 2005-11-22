@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.9.ebuild,v 1.5 2005/10/07 03:30:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.9.ebuild,v 1.6 2005/11/22 22:16:44 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -72,7 +72,7 @@ src_compile() {
 	ewarn "FEATURES=-sandbox emerge sandbox"
 
 	local iscross=0
-	[[ -n ${CBUILD} && ${CBUILD} != ${CHOST} ]] && iscros=1
+	[[ -n ${CBUILD} && ${CBUILD} != ${CHOST} ]] && iscross=1
 
 	OABI="${ABI}"
 	for ABI in $(get_install_abis); do
