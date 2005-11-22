@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.6 2005/11/17 19:46:44 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.7 2005/11/22 22:09:08 vanquirius Exp $
+
+*sec-2.3.2 (22 Nov 2005)
+
+  22 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> -sec-2.2.5.ebuild,
+  +sec-2.3.2.ebuild:
+  Version bump. Thanks to bramble for e-mailing.
 
   17 Nov 2005; Homer Parker <hparker@gentoo.org> sec-2.3.1.ebuild:
   Marked ~amd64 fixing bug 109712
