@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.9 2005/06/09 18:39:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.10 2005/11/22 14:00:11 mcummings Exp $
+
+*File-MimeInfo-0.12 (22 Nov 2005)
+
+  22 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  File-MimeInfo-0.11.ebuild, +File-MimeInfo-0.12.ebuild:
+  Version bump, marking stable x86
 
   09 Jun 2005; <dang@gentoo.org> File-MimeInfo-0.11.ebuild:
   Added ~amd64
