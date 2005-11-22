@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9483aec2d8a3193b6ec28cc4f8bd6de1 ChangeLog 575
-MD5 626ab5ac424939514f4bdcd6b5657d80 doom3-ducttape-0006.ebuild 734
+MD5 1a817bd104ed0dd6306e51ddf4702016 doom3-ducttape-0006.ebuild 747
 MD5 8eece47e913a31cff1e158cb4c9db32b files/digest-doom3-ducttape-0006 60
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDgrYegIKl8Uu19MoRAs2mAJ9BVwSx6q2/jQWPm7O4FsWEF8PoKACfZfOk
+q0bbWij7VwJguqnIhEjZLIg=
+=0E5k
+-----END PGP SIGNATURE-----
