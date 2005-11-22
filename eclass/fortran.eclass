@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.10 2005/09/02 21:40:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.11 2005/11/22 14:55:06 kugelfang Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -141,13 +141,14 @@ patch_fortran() {
 	if [ -z "${FORTRANC}" ]; then
 		return
 	fi
-	local PATCHES=$(find ${FILESDIR}/ -name "${P}-${FORTRANC}*")
-#local PATCHES=${FILESDIR}/${P}-${FORTRANC}*
+	local PATCHES=$(find ${FILESDIR} -name "${P}-${FORTRANC}-*")
+	einfo "Applying patches for selected FORTRAN compiler: ${FORTRANC}"
 	local PATCH
 	if [ -n "${PATCHES}" ]; then
 		for PATCH in ${PATCHES}; do
 			epatch ${PATCH}
 		done
+		eautoreconf
 	fi
 }
 
