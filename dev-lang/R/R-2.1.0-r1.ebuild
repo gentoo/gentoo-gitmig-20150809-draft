@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.9 2005/07/01 11:53:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.10 2005/11/22 15:11:55 kugelfang Exp $
 
 inherit fortran toolchain-funcs
 
 IUSE="blas jpeg nls png readline tcltk X"
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
-SRC_URI="http://cran.r-project.org/src/base/R-2/${P}.tar.gz"
+SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 #There are daily release patches, don't know how to utilize these
 #"ftp://ftp.stat.math.ethz.ch/Software/${PN}/${PN}-release.diff.gz"
 HOMEPAGE="http://www.r-project.org/"
@@ -25,6 +25,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 pkg_setup() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
 	# Thanks to vapier for providing the test.
+	cd ${T}
 	echo 'int main(){}' > test.c
 	$(tc-getCC) -c test.c -o test.o
 	if file test.o | grep -qs 64-bit ; then

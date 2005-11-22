@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.1.ebuild,v 1.6 2005/11/22 15:11:55 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.0.ebuild,v 1.1 2005/11/22 15:11:55 kugelfang Exp $
 
 inherit fortran toolchain-funcs
 
-IUSE="blas jpeg nls png readline tcltk X"
+IUSE="blas jpeg nls png readline tcltk X lapack"
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
-#There are daily release patches, don't know how to utilize these
-#"ftp://ftp.stat.math.ethz.ch/Software/${PN}/${PN}-release.diff.gz"
 HOMEPAGE="http://www.r-project.org/"
 DEPEND="virtual/libc
 		>=dev-lang/perl-5.6.1-r3
@@ -16,23 +14,27 @@ DEPEND="virtual/libc
 		jpeg? ( >=media-libs/jpeg-6b-r2 )
 		png? ( >=media-libs/libpng-1.2.1 )
 		blas? ( virtual/blas )
+		lapack? ( virtual/lapack )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+AT_M4DIR="${S}/m4"
 
 pkg_setup() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
 	# Thanks to vapier for providing the test.
+	cd ${T}
 	echo 'int main(){}' > test.c
 	$(tc-getCC) -c test.c -o test.o
 	if file test.o | grep -qs 64-bit ; then
 		einfo "64 bit architecture detected, using g77."
-		FORTRAN="g77"
+		FORTRAN="g77 ifc"
 	else
 		FORTRAN="g77 f2c"
 	fi
+	rm -f test.{c,o}
 	fortran_pkg_setup
 }
 
@@ -41,7 +43,8 @@ src_compile() {
 
 	if use tcltk; then
 		#configure needs to find the files tclConfig.sh and tkConfig.sh
-		myconf="${myconf} --with-tcltk --with-tcl-config=/usr/lib/tclConfig.sh --with-tk-config=/usr/lib/tkConfig.sh"
+		myconf="${myconf} --with-tcltk --with-tcl-config=/usr/lib/tclConfig.sh
+			--with-tk-config=/usr/lib/tkConfig.sh"
 	else
 		myconf="${myconf} --without-tcltk"
 	fi
@@ -49,6 +52,7 @@ src_compile() {
 	econf \
 		$(use_enable nls) \
 		$(use_with blas) \
+		$(use_with lapack) \
 		$(use_with jpeg jpeglib) \
 		$(use_with png libpng) \
 		$(use_with readline) \
@@ -65,21 +69,22 @@ src_install() {
 		rhome=${D}/usr/$(get_libdir)/R \
 		install || die "Installation Failed"
 
-	#fix the R wrapper script to have the correct R_HOME_DIR
-	#sed regexp borrowed from included debian rules
+	# fix the R wrapper script to have the correct R_HOME_DIR
+	# sed regexp borrowed from included debian rules
 	sed \
 		-e "/^R_HOME_DIR=.*/s::R_HOME_DIR=/usr/$(get_libdir)/R:" \
 		-i ${D}/usr/$(get_libdir)/R/bin/R \
 		|| die "sed failed"
 
-	#R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
-	#the 2nd one is corrected by above sed, for the 1st
-	#I'll just symlink it into /usr/bin
+	# R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
+	# the 2nd one is corrected by above sed, the first is replaced by a symlink
 	cd ${D}/usr/bin/
 	rm R
 	dosym ../$(get_libdir)/R/bin/R /usr/bin/R
 	dodir /etc/env.d
-	echo > ${D}/etc/env.d/99R "LDPATH=/usr/$(get_libdir)/R/lib"
+	echo -n \
+		"LDPATH=\"/usr/$(get_libdir)/R/lib\"" \
+		> ${D}/etc/env.d/99R
 	cd ${S}
 
 	dodoc AUTHORS BUGS COPYING* ChangeLog FAQ *NEWS README \
