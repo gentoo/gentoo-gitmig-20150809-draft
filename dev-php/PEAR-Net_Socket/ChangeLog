@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Socket
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.33 2005/10/24 13:46:22 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.34 2005/11/22 17:34:29 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-Net_Socket-1.0.6-r1.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
   24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Net_Socket-1.0.6-r1.ebuild:

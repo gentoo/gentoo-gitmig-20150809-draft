@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_TreeMenu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_TreeMenu/ChangeLog,v 1.5 2005/11/21 15:58:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_TreeMenu/ChangeLog,v 1.6 2005/11/22 17:31:02 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-HTML_TreeMenu-1.2.0-r1.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
   21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
   PEAR-HTML_TreeMenu-1.2.0-r1.ebuild:
