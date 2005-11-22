@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.55 2005/11/12 13:57:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.56 2005/11/22 03:59:03 josejx Exp $
+
+  22 Nov 2005; Joseph Jezak <josejx@gentoo.org>
+  vserver-sources-2.0-r1.ebuild:
+  Marked ~ppc for bug #98602.
 
 *vserver-sources-2.0.1_rc3 (12 Nov 2005)
 
