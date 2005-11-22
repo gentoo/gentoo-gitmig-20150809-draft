@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77389eb2b6fdccba9c6dd81308215f64 ChangeLog 2060
+MD5 298e0b5f59347ece44da04528aa72463 ChangeLog 2176
 MD5 aaa0fbe3461f14c454834c0e3dabc87d PEAR-XML_Parser-1.2.4.ebuild 431
-MD5 b20bbbf9acca376c78896db16cf0bb56 PEAR-XML_Parser-1.2.7.ebuild 384
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 12b9e67e73681f5f7b6d2bb8807a50a4 PEAR-XML_Parser-1.2.7.ebuild 389
 MD5 c2cd46eacb45d30f8248a3f6c1aadef8 files/digest-PEAR-XML_Parser-1.2.4 64
 MD5 8a7bf3ccb6fc798ac2e517f6d1ec6420 files/digest-PEAR-XML_Parser-1.2.7 64
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXOYYaGfFFLhbXWkRAgWRAJ9ybRyd/nXQTNWgqrIPKCrIExchSQCcCgJW
-MYqk/jBjDxvFr9ooCTWMxBw=
-=Ifon
------END PGP SIGNATURE-----
