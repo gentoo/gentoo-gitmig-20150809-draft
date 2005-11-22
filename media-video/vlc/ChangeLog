@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.113 2005/11/16 10:52:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.114 2005/11/22 10:07:20 flameeyes Exp $
+
+  22 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild,
+  vlc-0.8.2-r1.ebuild, vlc-0.8.2-r2.ebuild, vlc-0.8.4_beta1.ebuild,
+  vlc-0.8.4_beta2.ebuild:
+  Use mirror://gentoo/ for patchsets.
 
   16 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild,
   vlc-0.8.2-r1.ebuild, vlc-0.8.2-r2.ebuild, vlc-0.8.4_beta1.ebuild,
