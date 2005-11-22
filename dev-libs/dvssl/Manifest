@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 569522f698376ab7cb4dc4c9336abb8a ChangeLog 1680
 MD5 af253d3ec5ae232bf13c9841026692d2 dvssl-0.5.2.ebuild 643
 MD5 5d677fd2e7e2437e6e89fc77418bf22e dvssl-0.5.3.ebuild 725
@@ -9,3 +12,10 @@ MD5 f1e05e8523d4380060962702200d4e5b files/digest-dvssl-0.5.4-r1 66
 MD5 6fc413579541d12f915b550265f91394 files/digest-dvssl-0.5.4-r2 63
 MD5 9ee59965c06f2b6e4b38c10da5053c0a files/dvssl-0.5.4-fix-underquoted-m4.diff 507
 MD5 baecda85db8f2f90e495be668d7108a8 metadata.xml 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDgxSjEZCkKN40op4RAtF+AJ4mhzbxTIHGG7V//YKkMggJ99skoACgpTpw
+EPky61XrKJSZkx94CQi63mo=
+=qb5I
+-----END PGP SIGNATURE-----
