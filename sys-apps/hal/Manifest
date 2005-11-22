@@ -1,9 +1,10 @@
-MD5 d64a1aa1fb6c47e26b067ba48869720d ChangeLog 7381
+MD5 1a6205c027a2d0bde146645b3b785c50 ChangeLog 7542
 MD5 40a7b45f127bfdcacaa142660ad8b5f9 files/0.5-hald.rc 537
 MD5 ada3b2801b82813b4f10fd6f6caf9d6f files/digest-hal-0.4.5-r2 62
 MD5 3031a9fe74f43859c313d5f3076e68cd files/digest-hal-0.4.7-r2 62
 MD5 2bbbb519c89110dfec96cf63cf541afc files/digest-hal-0.4.8 62
 MD5 27cab5d91e93d8b692246d0ce4110122 files/digest-hal-0.5.4 62
+MD5 cf6c7a60aee75f95022e5d25562468eb files/digest-hal-0.5.5.1 64
 MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
 MD5 b0e12a62ce698e1eb2a32139498330cd files/hal-0.4.5-gentoo_gphoto2_usermap.patch 817
 MD5 f3ba6ada28cf947f8a7b7ec8fdd708ba files/hal-0.4.5-net_lockup.patch 2429
@@ -20,4 +21,5 @@ MD5 2cf5b3c9219c87b1d9aee01f4f5f19bb hal-0.4.5-r2.ebuild 3118
 MD5 1a146b79d18a689bbc8a96b81f74c7f6 hal-0.4.7-r2.ebuild 3455
 MD5 8420501e80e55b313d30f4e0309c08dd hal-0.4.8.ebuild 3419
 MD5 4b5c3135d20b391903d7a8e2626313dd hal-0.5.4.ebuild 3443
+MD5 8240c1a46e10dc67faf264db7c2f7871 hal-0.5.5.1.ebuild 3602
 MD5 a60767d83157413d549c69b98fac962c metadata.xml 303

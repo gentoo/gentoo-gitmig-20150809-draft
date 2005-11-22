@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.52 2005/11/08 17:25:24 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.53 2005/11/22 01:26:42 compnerd Exp $
+
+*hal-0.5.5.1 (22 Nov 2005)
+
+  22 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> +hal-0.5.5.1.ebuild:
+  Version bumping with upstream.  Resolves bug #112881
 
   08 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> hal-0.5.4.ebuild:
   Fixing the deps for doc building.  Resolves bug #108994
