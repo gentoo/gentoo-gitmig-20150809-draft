@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/input-utils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.1 2005/11/22 20:14:31 zzam Exp $
+
+*input-utils-0.0.1_pre20050727 (22 Nov 2005)
+
+  22 Nov 2005; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +input-utils-0.0.1_pre20050727.ebuild:
+  Initial import of ebuild written by me.
+
