@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Gtk2-Ex-PodViewer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/ChangeLog,v 1.1 2005/11/22 16:33:25 mcummings Exp $
+
+*Gtk2-Ex-PodViewer-0.14 (22 Nov 2005)
+
+  22 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Gtk2-Ex-PodViewer-0.14.ebuild:
+  New dep of Gtk2-PodViewer
+
