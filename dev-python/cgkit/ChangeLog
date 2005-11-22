@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.11 2005/11/19 10:19:02 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.12 2005/11/22 22:51:06 chrb Exp $
+
+*cgkit-2.0.0_alpha5 (22 Nov 2005)
+
+  22 Nov 2005; <chrb@gentoo.org> +cgkit-2.0.0_alpha5.ebuild:
+  bump
 
   19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Added japanese metadata.xml translation thanks to Yoshino-san.
