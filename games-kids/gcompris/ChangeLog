@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.19 2005/11/22 06:37:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.20 2005/11/22 23:28:03 mr_bones_ Exp $
+
+  22 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org> gcompris-7.1.ebuild:
+  sqlite support needs python support, disabled for now (bug #113288)
 
 *gcompris-7.1 (22 Nov 2005)
 

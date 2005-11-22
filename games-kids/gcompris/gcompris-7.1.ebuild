@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-7.1.ebuild,v 1.1 2005/11/22 06:37:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-7.1.ebuild,v 1.2 2005/11/22 23:28:03 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -21,10 +21,7 @@ RDEPEND="virtual/x11
 	media-libs/sdl-mixer
 	media-libs/libsdl
 	dev-libs/libxml2
-	dev-libs/popt
-	sqlite? (
-		=dev-db/sqlite-3*
-		=dev-python/pysqlite-2* )"
+	dev-libs/popt"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	app-text/texi2html"
@@ -43,10 +40,11 @@ src_unpack() {
 src_compile() {
 	export GNUCHESS="${GAMES_BINDIR}/gnuchess"
 	# $(use_with python python /usr/bin/python) - doesn't seem to work with 2.4
+	# $(use_enable sqlite) \ - needs python
 	econf \
 		--disable-dependency-tracking \
 		--without-python \
-		$(use_enable sqlite) \
+		--disable-sqlite \
 		|| die
 	emake -j1 || die "emake failed"
 }
