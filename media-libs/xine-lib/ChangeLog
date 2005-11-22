@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.277 2005/11/22 08:30:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.278 2005/11/22 10:34:43 flameeyes Exp $
+
+  22 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.0.1-r4.ebuild, xine-lib-1.1.0.ebuild, xine-lib-1.1.0-r5.ebuild,
+  xine-lib-1.1.0-r7.ebuild, xine-lib-1.1.1.ebuild, xine-lib-1.1.1-r1.ebuild:
+  Use mirror://gentoo/ for patchsets.
 
   22 Nov 2005; Luca Barbato <lu_zero@gentoo.org> xine-lib-1.1.1-r1.ebuild:
   Marked ~ppc
