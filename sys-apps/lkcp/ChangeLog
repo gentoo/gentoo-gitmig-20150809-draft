@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lkcp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.11 2005/11/02 23:13:03 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.12 2005/11/22 05:48:04 josejx Exp $
+
+  22 Nov 2005; Joseph Jezak <josejx@gentoo.org> lkcp-0.5.3-r3.ebuild:
+  Marked ppc stable for bug #111108.
 
 *lkcp-0.5.3-r3 (02 Nov 2005)
 
