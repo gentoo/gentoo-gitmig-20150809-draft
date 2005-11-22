@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Select_Common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.18 2005/11/21 15:54:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.19 2005/11/22 13:55:00 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-HTML_Select_Common-1.1-r2.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
   21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
   PEAR-HTML_Select_Common-1.1-r2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_IT
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.17 2005/11/21 15:50:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.18 2005/11/22 13:47:33 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-HTML_Template_IT-1.1.3.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
   21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
   PEAR-HTML_Template_IT-1.1.3.ebuild:

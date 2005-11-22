@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.8 2005/11/10 10:26:35 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.9 2005/11/22 13:36:46 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-Benchmark-1.2.2.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
 *PEAR-Benchmark-1.2.4 (10 Nov 2005)
 
