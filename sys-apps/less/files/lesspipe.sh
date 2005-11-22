@@ -1,5 +1,5 @@
 #!/bin/bash
-# 
+#
 # Preprocessor for 'less'. Used when this environment variable is set:
 # LESSOPEN="|lesspipe.sh %s"
 
@@ -11,6 +11,7 @@ guesscompress() {
 	case "$1" in
 		*.gz)  echo "gunzip -c" ;;
 		*.bz2) echo "bunzip2 -c" ;;
+		*.Z)   echo "compress -d" ;;
 		*)     echo "cat" ;;
 	esac
 }
@@ -125,13 +126,27 @@ lesspipe() {
 	*.bin|*.cue)  cd-info --no-header --no-device-info "$1" ;;
 
 	### Source code ###
-	*.awk|*.java|*.js|*.m4|*.pl|*.sh|\
-	*.[ch]|*.[ch]pp|*.[ch]xx|*.cc|*.hh|*.[sS]|\
-	*.patch)
+	*.awk|*.groff|*.java|*.js|*.m4|*.php|*.pl|*.pm|*.pod|*.sh|\
+	*.ad[asb]|*.asm|*.inc|*.[ch]|*.[ch]pp|*.[ch]xx|*.cc|*.hh|\
+	*.lsp|*.l|*.pas|*.p|*.xml|*.xps|*.xsl|*.axp|*.ppd|*.pov|\
+	*.diff|*.patch|*.py|*.rb|*.sql)
+
+		# Allow people to flip color off if they dont want it
+		case ${LESSCOLOR} in
+			[yY][eE][sS]|1|true) LESSCOLOR=1;;
+			[nN][oO]|0|false)    LESSCOLOR=0;;
+			*)                   LESSCOLOR=1;; # default to colorize
+		esac
+		[[ ${LESSCOLORIZER+set} != "set" ]] && LESSCOLORIZER=code2color
+		if [[ ${LESSCOLOR} == "0" ]] || [[ -z ${LESSCOLORIZER} ]] ; then
+			# let less itself handle these files
+			exit 0
+		fi
+
 		# Only colorize if we know less will handle raw codes
 		for opt in ${LESS} ; do
 			if [[ ${opt} == "-r" || ${opt} == "-R" ]] ; then
-				code2color "$1"
+				${LESSCOLORIZER} "$1"
 				break
 			fi
 		done
@@ -167,6 +182,30 @@ lesspipe() {
 
 if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
+elif [[ $1 == "-V" ]] ; then
+	Id="lesspipe.sh"
+	cvsid="$Id: lesspipe.sh,v 1.12 2005/11/22 22:29:08 vapier Exp $"
+	cat <<-EOF
+		$cvsid
+		Copyright 2001-2005 Gentoo Foundation
+		Mike Frysinger <vapier@gentoo.org>
+		     (with plenty of ideas stolen from other projects/distros)
+		
+		
+	EOF
+	less -V
+elif [[ $1 == "-h" || $1 == "--help" ]] ; then
+	cat <<-EOF
+		lesspipe.sh: preproccess files before sending them to less
+		
+		Usage: lesspipe.sh <file>
+		
+		lesspipe.sh specific settings:
+		  LESSCOLOR env     - toggle colorizing of output
+		  LESSCOLORIZER env - program used to colorize output (default: code2color)
+		
+		Run 'less --help' or 'man less' for more info
+	EOF
 elif [[ -d $1 ]] ; then
 	ls -alF -- "$1"
 else
