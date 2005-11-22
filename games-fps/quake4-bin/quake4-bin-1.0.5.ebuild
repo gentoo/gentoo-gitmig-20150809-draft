@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.5.ebuild,v 1.2 2005/11/17 04:05:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.5.ebuild,v 1.3 2005/11/22 19:27:50 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -72,7 +72,7 @@ src_install() {
 	then
 		games_make_wrapper quake4 ./quake4.x86 "${dir}" "${dir}"
 		newicon q4icon.bmp quake4.bmp || die "copying icon"
-		make_desktop_entry quake4 "Quake IV" quake4.bmp
+		make_desktop_entry quake4 "Quake IV" /usr/share/pixmaps/quake4.bmp
 	fi
 
 	prepgamesdirs
