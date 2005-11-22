@@ -1,4 +1,6 @@
-MD5 4dd094d4093656c3367a5034bb229d9d ChangeLog 537
+MD5 774a9bd40c41cc2f9d1aac98a7299c33 ChangeLog 805
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-rune-1.07 0
+MD5 6b6e58eea7d4f35abdc71070d6e97577 files/digest-rune-1.07-r1 67
 MD5 76efd745270c0e95649117f0347478dd metadata.xml 2123
+MD5 e1365e4377865bab1089b8d46df8ffcc rune-1.07-r1.ebuild 4255
 MD5 76fe49dfbdbbd46a0541975b02c09ead rune-1.07.ebuild 1881
