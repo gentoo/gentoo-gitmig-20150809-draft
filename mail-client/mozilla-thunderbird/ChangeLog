@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.94 2005/11/16 22:58:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.95 2005/11/22 17:28:44 anarchy Exp $
+
+*mozilla-thunderbird-1.5_rc1-r1 (22 Nov 2005)
+
+  22 Nov 2005; <anarchy@gentoo.org> +files/firefox-1.1-uriloader.patch,
+  +files/firefox-1.1-visibility.patch, -files/thunderbird-visibility.patch,
+  -mozilla-thunderbird-1.5_rc1.ebuild,
+  +mozilla-thunderbird-1.5_rc1-r1.ebuild:
+  visibility fixed, uri patch added
 
   16 Nov 2005; <anarchy@gentoo.org> mozilla-thunderbird-1.0.7-r2.ebuild,
   mozilla-thunderbird-1.5_rc1.ebuild:

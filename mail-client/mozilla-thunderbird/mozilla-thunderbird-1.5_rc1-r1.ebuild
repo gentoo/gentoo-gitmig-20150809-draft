@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5_rc1.ebuild,v 1.3 2005/11/16 22:58:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5_rc1-r1.ebuild,v 1.1 2005/11/22 17:28:44 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib versionator
@@ -47,7 +47,7 @@ src_unpack() {
 
 	# amd64 visibility patch
 	if [[ ${ARCH} == amd64 ]] && [[ $(gcc-major-version) -ge 3 ]]; then
-		epatch ${FILESDIR}/thunderbird-visibility.patch
+		epatch ${FILESDIR}/firefox-1.1-visibility.patch
 	fi
 
 	# patch to fix math operations on alpha, makes maps.google.com work!
@@ -66,6 +66,7 @@ src_unpack() {
 
 	# rpath fix
 	epatch ${FILESDIR}/thunderbird-rpath-1.patch
+	epatch ${FILESDIR}/firefox-1.1-uriloader.patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
