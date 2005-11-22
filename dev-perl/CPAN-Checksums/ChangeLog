@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/CPAN-Checksums
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/ChangeLog,v 1.2 2005/11/11 02:42:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/ChangeLog,v 1.3 2005/11/22 13:35:30 mcummings Exp $
+
+*CPAN-Checksums-1.039 (22 Nov 2005)
+
+  22 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  -CPAN-Checksums-1.018.ebuild, CPAN-Checksums-1.032.ebuild,
+  +CPAN-Checksums-1.039.ebuild:
+  Version bump, cleaning up
 
 *CPAN-Checksums-1.032 (11 Nov 2005)
 
