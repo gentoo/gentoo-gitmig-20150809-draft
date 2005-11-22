@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/color
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.10 2005/06/02 14:01:54 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.11 2005/11/22 02:36:04 jer Exp $
+
+  22 Nov 2005; Jeroen Roovers <jer@gentoo.org> color-1.1.ebuild:
+  Marked ~hppa (bug 109192).
 
   02 Jun 2005; Yuta SATOH <nigoro@gentoo.org> color-1.1.ebuild:
   Stable on ppc64
