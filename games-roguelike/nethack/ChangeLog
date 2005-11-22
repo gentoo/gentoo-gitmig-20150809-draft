@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.17 2005/11/22 01:59:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.18 2005/11/22 22:07:03 grobian Exp $
+
+  22 Nov 2005; Fabian Groffen <grobian@gentoo.org> +files/3.4.3-macos.patch,
+  nethack-3.4.3-r1.ebuild:
+  Adding small patch for OSX and compilation helper.  Marked ~ppc-macos (bug
+  #106117)
 
   22 Nov 2005; <jer@gentoo.org> nethack-3.4.3-r1.ebuild:
   Added ~hppa keyword (bug 109191).

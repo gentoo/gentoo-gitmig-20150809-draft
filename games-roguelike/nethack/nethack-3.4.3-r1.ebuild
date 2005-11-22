@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.9 2005/11/22 01:59:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.10 2005/11/22 22:07:03 grobian Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ~hppa"
+KEYWORDS="amd64 ~hppa ppc ~ppc-macos sparc x86"
 IUSE="X qt gnome"
 
 DEPEND="virtual/libc
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
 	epatch "${FILESDIR}/${PV}-default-options.patch"
 	epatch "${FILESDIR}/${PV}-bison.patch"
+	epatch "${FILESDIR}/${PV}-macos.patch"
 
 	sed -i \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h \
@@ -67,6 +68,9 @@ src_unpack() {
 
 src_compile() {
 	local qtver=
+	local lflags="-L/usr/X11R6/lib"
+
+	use ppc-macos && lflags="${lflags} -undefined dynamic_lookup"
 
 	has_version =x11-libs/qt-3* \
 		&& qtver=3 \
@@ -78,14 +82,14 @@ src_compile() {
 		QTDIR=/usr/qt/${qtver} \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
-		LFLAGS="-L/usr/X11R6/lib" \
+		LFLAGS="${lflags}" \
 		../util/makedefs \
 		|| die "initial makedefs build failed"
 	emake \
 		QTDIR=/usr/qt/${qtver} \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
-		LFLAGS="-L/usr/X11R6/lib" \
+		LFLAGS="${lflags}" \
 		|| die "main build failed"
 	cd ${S}/util
 	emake CFLAGS="${CFLAGS}" recover || die "util build failed"
