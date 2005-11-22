@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1593ee98088f092a6cb2860fd7ed43cb ChangeLog 336
 MD5 01f57d06ecb70e7ba2fe379b1e1c0055 doom3-lms-2.0.ebuild 753
 MD5 b8b05119345d6013e2d574cc1f1865a6 files/digest-doom3-lms-2.0 71
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDgrcBgIKl8Uu19MoRAna8AJ44pBk0YcTPrw1GU+0OLE+yufkyugCeLk+a
+LR6oqUHA0J38x8kqqjeMpVY=
+=sVL9
+-----END PGP SIGNATURE-----
