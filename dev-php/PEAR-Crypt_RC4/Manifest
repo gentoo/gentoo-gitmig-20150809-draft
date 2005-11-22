@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26aa76b90789ce513c3d6cdceb00dbdb ChangeLog 1674
-MD5 13ac3f65582d4d0799603c6ec59cd98d PEAR-Crypt_RC4-1.0.2-r1.ebuild 374
+MD5 073fbd4b920a773cdfeddf2d467780b5 ChangeLog 1795
 MD5 65ed79abe82f56d2058baa2ef48db592 PEAR-Crypt_RC4-1.0.2.ebuild 385
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 662b964fde02b4d185d969f73c1e1708 PEAR-Crypt_RC4-1.0.2-r1.ebuild 382
 MD5 79706c9c0acc1aab87c9a791864a05be files/digest-PEAR-Crypt_RC4-1.0.2 62
 MD5 79706c9c0acc1aab87c9a791864a05be files/digest-PEAR-Crypt_RC4-1.0.2-r1 62
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgeqJcsIHjyDViGQRAlGAAJ9Qdum4ld1ZJ1dPNrOJ2L4R5wIjPACgwFNw
-TUQeiz3VS4NwaX+cAiK6imc=
-=Jtrg
------END PGP SIGNATURE-----
