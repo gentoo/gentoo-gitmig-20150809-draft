@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.25 2005/10/25 04:00:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.26 2005/11/22 20:30:33 jer Exp $
+
+*opera-8.51 (22 Nov 2005)
+
+  22 Nov 2005; Jeroen Roovers <jer@gentoo.org> +opera-8.51.ebuild:
+  New Opera 8.51, security release as per bug 113239.
 
   25 Oct 2005; <dang@gentoo.org> opera-8.50.ebuild:
   Marked stable on amd64
