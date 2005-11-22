@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.1 2005/11/22 01:37:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.2 2005/11/22 02:50:40 jer Exp $
+
+  22 Nov 2005; Jeroen Roovers <jer@gentoo.org> an-0.93.ebuild:
+  Changed SRC_URI to something (a lot) more stable
 
 *an-0.93 (22 Nov 2005)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.1 2005/11/22 01:37:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.2 2005/11/22 02:50:40 jer Exp $
 
 DESCRIPTION="Anagram generator with dictionary lookup"
 HOMEPAGE="none"
-SRC_URI="http://bindist.finkmirrors.net/bindist/dists/fink-0.8.0/main/source/games/${P}.tar.gz"
+SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
