@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.17 2005/11/18 00:48:27 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.18 2005/11/22 03:36:44 vapier Exp $
+
+  22 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/psmisc-21.8-ipv6.patch, psmisc-21.8.ebuild:
+  Grabbed updates from upstream cvs to control ipv6 support #113212.
 
   18 Nov 2005; Chris PeBenito <pebenito@gentoo.org> psmisc-21.8.ebuild:
   Remove SELinux patching as support is now integrated upstream.
