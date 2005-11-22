@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.1 2005/11/22 04:33:36 ferringb Exp $
+
+*confcache-0.3.3 (22 Nov 2005)
+
+  22 Nov 2005; <bharring@gentoo.org> +confcache-0.3.3.ebuild:
+  initial import; version 0.3.3, keyworded ~x86, should work fine on all other
+  arches do to the nature of the package.
+
