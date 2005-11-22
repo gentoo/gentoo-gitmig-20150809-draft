@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.2 2005/11/15 06:56:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.3 2005/11/22 05:45:46 josejx Exp $
 
 inherit gnome.org eutils mono
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="spreadsheet pdf webservices chm debug"
 
 RDEPEND=">=dev-lang/mono-1.1.10
