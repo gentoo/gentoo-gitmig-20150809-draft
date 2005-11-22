@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-HomeDir
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.1 2005/11/22 13:42:42 mcummings Exp $
+
+*File-HomeDir-0.07 (22 Nov 2005)
+
+  22 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +File-HomeDir-0.07.ebuild:
+  New dep for CPAN-Mini
+
