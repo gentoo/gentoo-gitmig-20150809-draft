@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pio/ChangeLog,v 1.6 2005/10/18 03:05:07 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pio/ChangeLog,v 1.7 2005/11/22 17:14:12 wolf31o2 Exp $
+
+  22 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> pio-0.9.33.ebuild:
+  Marked stable on amd64 and x86 wrt bug #109084.
 
   18 Oct 2005; Don Seiler <rizzo@gentoo.org> pio-0.9.19.ebuild:
   Removed broken debug building for bug #109084
