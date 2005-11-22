@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df3e38fd960d14586734bcd0eb5fa566 ChangeLog 2234
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kivio-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kivio-1.4.1 68
@@ -6,3 +9,10 @@ MD5 d1244d1d7526b8f9c008f1c5cfb91b39 kivio-1.3.5.ebuild 1002
 MD5 c32f282e2aaedf170b5d1139752dcef9 kivio-1.4.1.ebuild 845
 MD5 a13329a5ee9918b0c118b2a5d89b424e kivio-1.4.2.ebuild 849
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDgzAlntT9W3vfTuoRAjJSAJ9Fce/dJAj+08i7aSU+VxsAGXEirgCgh66K
+bFk3XPHzg7mtPngmOfioP1w=
+=TkSQ
+-----END PGP SIGNATURE-----

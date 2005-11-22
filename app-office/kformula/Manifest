@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 37508c5f24f71fbf6237e0b34fe0ca6c ChangeLog 2317
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kformula-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kformula-1.4.1 68
@@ -6,3 +9,10 @@ MD5 f39d98fa9efce32ffc3da9f51fd6592b kformula-1.3.5.ebuild 917
 MD5 06ec3dd9f141552ef0d2794d7394e58b kformula-1.4.1.ebuild 852
 MD5 a66cc8b02739309b1448eb0ba957f5e5 kformula-1.4.2.ebuild 856
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDgzGVntT9W3vfTuoRAi4fAJwI8gqqtYApNUEmB64OoQzzO+R4xwCfRDO3
+gG9jKYFf3ZXNv1ZDQP/fPkE=
+=1R6l
+-----END PGP SIGNATURE-----
