@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.59 2005/11/16 14:30:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.60 2005/11/22 19:49:22 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -88,6 +88,9 @@ if [ "$KDEBASE" = "true" ]; then
 				;;
 		3.5.0_rc1)	XDELTA_BASE="mirror://kde/unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
 				XDELTA_DELTA="mirror://kde/unstable/3.4.92/src/$KMNAME-3.4.91-3.4.92.tar.xdelta mirror://gentoo/$KMNAME-3.4.92-3.5.0_rc1.tar.xdelta"
+				;;
+		3.5.0)		XDELTA_BASE="mirror://kde/stable/3.5.0/src/$KMNAME-3.5.0.tar.bz2"
+				XDELTA_DELTA=""
 				;;
 		*)		;;
 	esac
