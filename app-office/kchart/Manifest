@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b4f932f94e43ec9cc8cf381c327d9b64 kchart-1.4.1.ebuild 902
-MD5 2408b345851a8f95fc4e156294f91682 kchart-1.3.5.ebuild 920
-MD5 06d49833937ebeac9183cddc77b4b192 kchart-1.4.2.ebuild 913
 MD5 8e5d1a410b8b7644ccd7fbe9215bc078 ChangeLog 2249
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kchart-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kchart-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kchart-1.4.2 68
+MD5 2408b345851a8f95fc4e156294f91682 kchart-1.3.5.ebuild 920
+MD5 b4f932f94e43ec9cc8cf381c327d9b64 kchart-1.4.1.ebuild 902
+MD5 1af2bd28a7b82ceba440fb79a659a8c9 kchart-1.4.2.ebuild 913
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDgxiRKRy60XGEcJIRAm9eAJ93TWgDo8em8DFCZJhhxx8jqaoaVwCeMlQ+
-XX4fF6kdLQ1lYzrb7P5WyMs=
-=7pD4
+iD8DBQFDgxyrKRy60XGEcJIRAk88AJ9wS+RQyLs3VcsZn9o7Gml+tZYUNgCfbiyC
+uKW/b86tyoK1OYrK6bK5PBA=
+=XCxE
 -----END PGP SIGNATURE-----
