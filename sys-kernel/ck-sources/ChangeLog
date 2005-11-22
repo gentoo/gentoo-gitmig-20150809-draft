@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.124 2005/11/14 17:26:03 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.125 2005/11/22 03:52:03 josejx Exp $
+
+  22 Nov 2005; Joseph Jezak <josejx@gentoo.org> ck-sources-2.6.13_p8.ebuild,
+  ck-sources-2.6.14_p5.ebuild:
+  Marked ~ppc for bug 119254.
 
 *ck-sources-2.6.14_p5 (14 Nov 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.13_p8.ebuild,v 1.1 2005/10/14 21:22:25 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.13_p8.ebuild,v 1.2 2005/11/22 03:52:04 josejx Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -41,7 +41,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI}
 	!ck-server? (
 	http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}.bz2 )"
 
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 pkg_postinst() {
 	postinst_sources
