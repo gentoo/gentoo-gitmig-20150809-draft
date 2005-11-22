@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.18 2005/11/21 17:43:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.19 2005/11/22 17:33:07 gustavoz Exp $
+
+  22 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> rake-0.6.2.ebuild:
+  Stable on sparc
 
   21 Nov 2005; Caleb Tennis <caleb@gentoo.org> rake-0.6.2.ebuild:
   x86 stable
