@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r1.ebuild,v 1.1 2005/11/22 01:46:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r1.ebuild,v 1.2 2005/11/22 16:16:56 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -30,21 +30,21 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-export CDROM_SET_NAMES=("Linux Rune CD" "Windows Rune CD")
-	cdrom_get_cds System/rune.bin:System/Rune.exe
+	export CDROM_SET_NAMES=("Linux Rune CD" "Windows Rune CD")
+	cdrom_get_cds System/rune-bin:System/Rune.exe
 	games_pkg_setup
 }
 
 src_unpack() {
 	dodir "${dir}"
-	if [[ ${CDROM_SET} -eq 1 ]]
+	if [[ ${CDROM_SET} -eq 0 ]]
 	then
 		# unpack the data files
 		tar xzf "${CDROM_ROOT}"/data.tar.gz || die "Could not unpack data.tar.gz"
-	elif [[ ${CDROM_SET} -eq 2 ]]
+	elif [[ ${CDROM_SET} -eq 1 ]]
 	then
 		# unpack the runelinuxfiles.tar.gz
-		unpack ${A} || die "Could not unpack runelinuxfiles.tar.gz"
+		unpack ${A} || die "Could not unpack rune-all-0.1.tar.bz2"
 	fi
 }
 
@@ -54,7 +54,7 @@ src_install() {
 	einfo "Copying files... this may take a while..."
 
 	case ${CDROM_SET} in
-	1)
+	0)
 		for x in Help Maps Meshes Sounds System Textures Web
 		do
 			doins -r $x || die "copying $x"
@@ -74,7 +74,7 @@ src_install() {
 		dodoc "${CDROM_ROOT}"/{README,CREDITS} || die "Could not dodoc README.linux"
 		newicon "${CDROM_ROOT}"/icon.xpm rune.xpm || die "Could not copy pixmap"
 	;;
-	2)
+	1)
 		# copying Maps Sounds and Web
 		for x in Maps Sounds Web
 		do
