@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.217 2005/11/18 03:29:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.218 2005/11/22 11:15:34 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -434,7 +434,7 @@ egetent() {
 
 		pw show ${action} ${opts} "$2" -q
 		;;
-	*-netbsd*)
+	*-netbsd*|*-openbsd*)
 		grep "$2:\*:" /etc/$1
 		;;
 	*)
@@ -602,6 +602,20 @@ enewuser() {
 			useradd ${opts} ${euser} "$@" || die "enewuser failed"
 		fi
 		;;
+
+	*-openbsd*)
+		if [[ -z $@ ]] ; then
+			useradd -u ${euid} -s ${eshell} \
+				-d ${ehome} -c "Added by portage for ${PN}" \
+				-g ${egroups} ${euser} || die "enewuser failed"
+		else
+			einfo " - Extra: $@"
+			useradd -u ${euid} -s ${eshell} \
+				-d ${ehome} -c "Added by portage for ${PN}" \
+				-g ${egroups} ${euser} "$@" || die "enewuser failed"
+		fi
+		;;
+
 	*)
 		if [[ -z $@ ]] ; then
 			useradd ${opts} ${euser} \
