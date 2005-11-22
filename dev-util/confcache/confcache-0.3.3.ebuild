@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/confcache-0.3.3.ebuild,v 1.1 2005/11/22 04:33:36 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/confcache-0.3.3.ebuild,v 1.2 2005/11/22 17:12:48 swegener Exp $
 
 inherit distutils
 
@@ -13,5 +13,3 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.2"
 RDEPEND=">=dev-lang/python-2.2 >=sys-apps/sandbox-1.2.12"
-S=${WORKDIR}/${P}
-
