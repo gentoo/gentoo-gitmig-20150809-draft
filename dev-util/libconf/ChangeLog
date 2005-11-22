@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.35 2005/11/20 17:57:29 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.36 2005/11/22 17:34:38 dams Exp $
+
+*libconf-0.42.10 (22 Nov 2005)
+
+  22 Nov 2005; Damien Krotkine <dams@gentoo.org> +libconf-0.42.10.ebuild:
+  cleaned old version, version bump, added python binding compilation
 
 *libconf-0.42.00-r1 (20 Nov 2005)
 
