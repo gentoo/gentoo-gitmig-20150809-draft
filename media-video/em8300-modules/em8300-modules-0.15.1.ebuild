@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.1.ebuild,v 1.1 2005/10/18 14:45:02 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.1.ebuild,v 1.2 2005/11/22 22:37:11 arj Exp $
 
 inherit eutils linux-info
 
@@ -19,6 +19,7 @@ IUSE=""
 src_unpack () {
 
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-fix-isa.patch
 	cd ${S}
 }
 
@@ -27,7 +28,7 @@ src_compile ()  {
 	check_KV
 	set_arch_to_kernel
 	cd ..
-	for file in autotools/config.guess configure em8300.sysv.in modules/ldm modules/Makefile modules/INSTALL; do
+	for file in autotools/config.guess configure modules/ldm modules/Makefile modules/INSTALL; do
 		sed -i -e 's/uname[[:space:]]*-r/echo ${KV}/' $file
 	done
 	cd modules
