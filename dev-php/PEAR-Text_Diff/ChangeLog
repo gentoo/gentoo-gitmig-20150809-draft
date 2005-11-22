@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Text_Diff
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/ChangeLog,v 1.5 2005/11/21 16:57:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/ChangeLog,v 1.6 2005/11/22 19:10:02 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-Text_Diff-0.1.1-r1.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
   21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
   PEAR-Text_Diff-0.1.1-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.6 2005/11/21 17:02:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.7 2005/11/22 19:14:26 corsair Exp $
+
+  22 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild:
+  Added ~ppc64 keyword; bug #105385
 
   21 Nov 2005; Joseph Jezak <josejx@gentoo.org>
   PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild:
