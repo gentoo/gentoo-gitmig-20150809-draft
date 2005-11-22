@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f0308b1fe647ab47ded856d04f749f3 ChangeLog 3625
+MD5 ae9609b7d33c78b808b0f8f46afb5812 ChangeLog 3753
 MD5 0cb50f91c0070a47bcd7703e6c3e0671 PEAR-HTML_Template_Sigma-1.0.2.ebuild 435
 MD5 b44405f375df223c87a16299d67e70ca PEAR-HTML_Template_Sigma-1.1.2.ebuild 440
-MD5 a1f8c77de97792e67d2b705ccfcc40cc PEAR-HTML_Template_Sigma-1.1.4.ebuild 434
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 609aa9d0c044749282f11161ed69db03 PEAR-HTML_Template_Sigma-1.1.4.ebuild 442
 MD5 cab852583645fc48ebb3c82df03df684 files/digest-PEAR-HTML_Template_Sigma-1.0.2 73
 MD5 6e1978b38089cfbc773cad2f05a812ce files/digest-PEAR-HTML_Template_Sigma-1.1.2 73
 MD5 a074803dfc089cf6c7a9a7197aa122c7 files/digest-PEAR-HTML_Template_Sigma-1.1.4 73
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDge0ocsIHjyDViGQRAt7aAKCCYZP1f5TdO6ArX9OumWgXmSkmSgCfezrv
-8cx8BINbYDehUtjNHRnmUoY=
-=N+qH
------END PGP SIGNATURE-----
