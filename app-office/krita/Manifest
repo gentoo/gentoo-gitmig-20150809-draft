@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1212c21b2a8195b37d91cab9354ef5fb krita-1.4.2.ebuild 961
 MD5 d83915e44160ac970929eedbbd070839 krita-1.4.1.ebuild 953
 MD5 46269dfb5d7e8993421a9993334633e8 ChangeLog 2402
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-krita-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-krita-1.4.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDgxm+KRy60XGEcJIRAuIwAJ9/Si4BHS6zBBKwS8FcE32c7Q8oTQCffctj
+Bi/w06e58ywS8nOzaLvALJk=
+=qfq2
+-----END PGP SIGNATURE-----
