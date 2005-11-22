@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.19 2005/11/19 13:11:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.20 2005/11/22 22:19:52 vapier Exp $
+
+*horde-3.0.7 (22 Nov 2005)
+
+  22 Nov 2005; Mike Frysinger <vapier@gentoo.org> +horde-3.0.7.ebuild:
+  Version bump #113276 by Christoph Gysin.
 
   19 Nov 2005; Simon Stelling <blubb@gentoo.org> horde-2.2.9.ebuild:
   stable on amd64 wrt bug 112491
