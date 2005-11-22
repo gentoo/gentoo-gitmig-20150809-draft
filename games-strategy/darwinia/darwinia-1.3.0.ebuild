@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.1 2005/11/22 00:33:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.2 2005/11/22 04:59:50 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -61,5 +61,5 @@ pkg_postinst() {
 		ewarn "To play the game, you need to copy main.dat and sounds.dat"
 		ewarn "from gamefiles/ on the game CD to ${dir}/lib/."
 	fi
+	games_pkg_postinst
 }
-	
