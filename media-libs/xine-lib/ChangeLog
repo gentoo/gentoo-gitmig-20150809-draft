@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.276 2005/11/22 07:32:36 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.277 2005/11/22 08:30:44 lu_zero Exp $
+
+  22 Nov 2005; Luca Barbato <lu_zero@gentoo.org> xine-lib-1.1.1-r1.ebuild:
+  Marked ~ppc
 
   22 Nov 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.1.1-r1.ebuild:
   Marked ~x86 xine-lib-1.1.1-r1 for bug #113107.
