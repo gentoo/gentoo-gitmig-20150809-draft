@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-SHA
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA/ChangeLog,v 1.1 2005/11/11 02:40:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA/ChangeLog,v 1.2 2005/11/22 13:34:48 mcummings Exp $
+
+  22 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  Digest-SHA-5.31.ebuild:
+  Unmasking for sparc and x86
 
 *Digest-SHA-5.31 (11 Nov 2005)
 
