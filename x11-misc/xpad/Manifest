@@ -1,26 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84b518ad83e571efaa56f9518d1e3b0a ChangeLog 5888
+MD5 7cfea1a07b1748d340502f2ec9f9c735 xpad-2.10.ebuild 645
+MD5 682a9191a39ddf9c2c61f4ba72ed1fe6 xpad-1.13.ebuild 722
+MD5 2649475286acc827dbef60dccbee82ab ChangeLog 6114
+MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
 MD5 d0f0a44ba012c5a3d6863afb093890d7 files/digest-xpad-1.13 62
 MD5 aafa84e3025045f0c2c9a99661e82697 files/digest-xpad-2.10 62
-MD5 116f1b1db749a9f8d0b7c8d075e5759d files/digest-xpad-2.6 61
-MD5 f5bcc36fc73693201d9f866161a46638 files/digest-xpad-2.8 61
-MD5 e9ef69e9c2202feeddc9d9c0ec955941 files/digest-xpad-2.9 61
-MD5 e9ef69e9c2202feeddc9d9c0ec955941 files/digest-xpad-2.9-r1 61
-MD5 f163903dcdda0aa1e2dd273f5047355a files/xpad-2.9-smallicons.patch 625
-MD5 c9bd5d7230128220b1899aa4164686a9 files/xpad-2.9-toolbar-chsize.patch 12018
-MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
-MD5 682a9191a39ddf9c2c61f4ba72ed1fe6 xpad-1.13.ebuild 722
-MD5 7cfea1a07b1748d340502f2ec9f9c735 xpad-2.10.ebuild 645
-MD5 1f6bce16512ef9fc6a5ca5efb92d5c71 xpad-2.6.ebuild 659
-MD5 92f4a7bc9064e467514e882077f89734 xpad-2.8.ebuild 611
-MD5 e8aeb405f800dc06e477c50bc2e80ed4 xpad-2.9-r1.ebuild 800
-MD5 4b59820430d903d6115e8578d9c9cb3a xpad-2.9.ebuild 614
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgq7qcsIHjyDViGQRAgwbAKCIvJFPBMLxf2it6asIzJfNlwzrDgCfQ706
-eYqGAmU/wY38UjZ98sH11a0=
-=Y70i
+iD8DBQFDgtjaViELBEf1JB0RAhtzAJwOg9GUcMPvU8B6TBLY00Z9X0qREQCeLNK3
+wz4GLD4312H50bNDDChwLqg=
+=Cp0X
 -----END PGP SIGNATURE-----
