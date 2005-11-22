@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8b3042dc03c5032a0f975bba6c220a7d ChangeLog 521
 MD5 7309e43539103b9866f5e3ab9f90e977 Compress-Bzip2-2.09.ebuild 550
 MD5 a43b58a4bb47f52fa2a62aba52a4c50c files/digest-Compress-Bzip2-2.09 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDgx6atG5z4I8BtQoRAkteAJ99xAMLiJmt0vLHkLUWbLnEfsTgAgCeKC6C
+cRl4tKv3K2LncRtOJIbBJG4=
+=kCSr
+-----END PGP SIGNATURE-----
