@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Algorithm-Dependency
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.1 2005/11/23 16:50:54 mcummings Exp $
+
+*Algorithm-Dependency-1.101 (23 Nov 2005)
+
+  23 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Algorithm-Dependency-1.101.ebuild:
+  New dep for Test-Inline
+
