@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4696 2005/11/22 14:47:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4697 2005/11/23 01:22:23 mkay Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Marcin Kryczek <mkay@gentoo.org> (22 Nov 2005)
+# This is for testing only. Do NOT report bugs against that version
+# unless you're sure they're gentoo-specific or they're already
+# fixed by upstream
+=net-im/kadu-0.5*
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Nov 2005)
 # Masked for security vulnerabilities (bad past behavior, too)
