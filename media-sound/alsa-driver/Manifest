@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6de2736d691ae2dd287d8ce840f80874 ChangeLog 30127
 MD5 c55716cc7bf263f6ed218b149e8dfe91 alsa-driver-1.0.10.ebuild 4623
 MD5 83e0d77659b142d24afa2a86d91b3c4d alsa-driver-1.0.10_rc2.ebuild 4555
@@ -20,3 +23,10 @@ MD5 496627835733f8108e6b10dfc8ee9bf4 files/digest-alsa-driver-1.0.9b 72
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
 MD5 b2791ec892d9be6952fe139cc2309abf files/xbox-1.0.8.patch 1525
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDhMAQwUpWvClEHQoRAtvKAJ9fwUVvTtvIy2Z2x5opeYRBoRs3xQCdEKcm
+LpPe8WTQtGLdSfs0aSmpJiQ=
+=vq0J
+-----END PGP SIGNATURE-----
