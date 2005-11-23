@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.114 2005/11/22 16:06:49 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.115 2005/11/23 01:05:07 rocket Exp $
+
+*genkernel-3.3.8 (23 Nov 2005)
+
+  23 Nov 2005; Eric Edgar <rocket@gentoo.org> -genkernel-3.3.7.ebuild,
+  +genkernel-3.3.8.ebuild:
+  Fix bug 113287;Version bump 3.3.8
 
 *genkernel-3.3.7 (22 Nov 2005)
 
