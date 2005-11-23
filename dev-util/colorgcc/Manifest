@@ -1,6 +1,16 @@
-MD5 fccf6799e5076818fd33808e36271331 ChangeLog 2943
-MD5 a464ac9c84801792b2d4982110088dd9 colorgcc-1.3.2-r4.ebuild 2143
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 04f9a990a77a12115eb2f7f038fb8911 ChangeLog 3064
+MD5 2a3f853c66952e6d657a43997c34916d colorgcc-1.3.2-r4.ebuild 2144
 MD5 a7e0ce3a863e959031d6ebc250a24cd0 files/colorgcc-1.3.2-gentoo-one.patch 6576
 MD5 a25cb38b04323bc5db5f0a442a905f4d files/colorgcc-1.3.2-gentoo-two.patch 1953
 MD5 592ce525361d7cb9136917c8443a7c9e files/digest-colorgcc-1.3.2-r4 65
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDg8M0ntT9W3vfTuoRAqhWAJ4zHGgvuSd0bo1DJJ3CglwDRAm/sQCaA8f/
+Q859qNCOCTEDqQXgmTLV30w=
+=RwUK
+-----END PGP SIGNATURE-----
