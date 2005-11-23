@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4697 2005/11/23 01:22:23 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4698 2005/11/23 03:29:39 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -984,7 +984,6 @@ x11-drivers/xf86-input-mouse
 x11-drivers/xf86-input-mutouch
 x11-drivers/xf86-input-palmax
 x11-drivers/xf86-input-penmount
-x11-drivers/xf86-input-sample
 x11-drivers/xf86-input-spaceorb
 x11-drivers/xf86-input-summa
 x11-drivers/xf86-input-tek4957
