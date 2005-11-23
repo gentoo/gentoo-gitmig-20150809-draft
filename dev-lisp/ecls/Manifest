@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a8cd19ec0de5e7044f1d70e80c627c6b ChangeLog 3447
-MD5 c4fffb85c7522845dc9697f7a8f4cb49 metadata.xml 459
+MD5 ef7c068bcdc13db8c805ba33fc60969a ChangeLog 3688
 MD5 927b3a8bdfa395b76dd4432d68282544 ecls-0.9g.ebuild 1531
-MD5 bde461ee5b140bef924093d88e34a995 ecls-0.9f_p1.ebuild 1549
+MD5 f991112892734459cfe7d452f05d0768 ecls-0.9h.ebuild 1529
+MD5 bed677570016aaa3cf266b1f3dfb3f1d files/0.9g-headers-gentoo.patch 953
+MD5 75bc0682daa901b633e87d59aec109cf files/0.9h-headers-gentoo.patch 953
+MD5 6bb1331295f4578b761ddd80c21cad65 files/README.Gentoo 1541
 MD5 724bb27333efdd7d76a33649fb9cba42 files/clc-lite.lisp 3708
 MD5 6f8435672be37dfcc68686efa0a3cfef files/digest-ecls-0.9g 61
-MD5 6bb1331295f4578b761ddd80c21cad65 files/README.Gentoo 1541
-MD5 5bc7b2d9d3b3af9e6f6add98470aa1a3 files/digest-ecls-0.9f_p1 66
-MD5 bed677570016aaa3cf266b1f3dfb3f1d files/0.9g-headers-gentoo.patch 953
-MD5 2ba8aaefc66baa0e17b930bf9324a3ee files/0.9f_p1-headers-gentoo.patch 1007
+MD5 aac215d1238f7f6a84ec61ad684a05b0 files/digest-ecls-0.9h 58
+MD5 c4fffb85c7522845dc9697f7a8f4cb49 metadata.xml 459
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC/n4JyiNZaEAZA+ARAvGRAJwMzBxtnH3Azzi5RGWRG5+SVMyn8wCfdti1
-wxxtEj5ktChX3w80E9r11iU=
-=Fonf
+iD8DBQFDhKj/yiNZaEAZA+ARAubIAJ4lHKiX+VcI6WnvJs+wrQWYBZslngCfVJMi
+rS9B2LgIupBXY2AojbYlRPY=
+=CbSn
 -----END PGP SIGNATURE-----
