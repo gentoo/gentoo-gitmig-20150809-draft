@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.90 2005/11/19 23:39:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.91 2005/11/23 19:44:53 dragonheart Exp $
+
+*lftp-3.3.4-r1 (23 Nov 2005)
+
+  23 Nov 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/lftp-3.3.4-blocking-ssl-transfer.patch, -lftp-3.3.3.ebuild,
+  -lftp-3.3.4.ebuild, +lftp-3.3.4-r1.ebuild:
+  patch from author to fix ssl blocking. Thanks spider - bug #112487
 
 *lftp-3.3.4 (19 Nov 2005)
 

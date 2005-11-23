@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.3.3.ebuild,v 1.1 2005/11/13 12:35:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.3.4-r1.ebuild,v 1.1 2005/11/23 19:44:53 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program"
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
@@ -32,6 +34,11 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/libtool"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src
+	epatch ${FILESDIR}/${P}-blocking-ssl-transfer.patch
+}
 
 src_compile() {
 	local myconf="$(use_enable nls)"
