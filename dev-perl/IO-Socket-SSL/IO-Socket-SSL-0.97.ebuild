@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.97.ebuild,v 1.1 2005/11/23 16:04:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.97.ebuild,v 1.2 2005/11/23 16:07:38 mcummings Exp $
 
 inherit perl-module
 
@@ -18,4 +18,4 @@ IUSE=""
 # range just for this?
 #SRC_TEST="do"
 
-DEPEND="dev-perl/Net-SSLeay"
+DEPEND=">=dev-perl/Net-SSLeay-1.21"
