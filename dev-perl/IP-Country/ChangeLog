@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/IP-Country
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.5 2005/04/28 17:23:51 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.6 2005/11/23 16:12:48 mcummings Exp $
+
+*IP-Country-2.20 (23 Nov 2005)
+
+  23 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  +IP-Country-2.20.ebuild:
+  Version bump
 
 *IP-Country-2.19 (28 Apr 2005)
 
