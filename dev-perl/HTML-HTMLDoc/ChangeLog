@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-HTMLDoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-HTMLDoc/ChangeLog,v 1.4 2005/11/22 03:33:49 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-HTMLDoc/ChangeLog,v 1.5 2005/11/23 13:50:03 superlag Exp $
+
+*HTML-HTMLDoc-0.10 (23 Nov 2005)
+
+  23 Nov 2005; Aaron Kulbe <superlag@gentoo.org> +HTML-HTMLDoc-0.10.ebuild:
+  Version bump.
 
 *HTML-HTMLDoc-0.09 (22 Nov 2005)
 
