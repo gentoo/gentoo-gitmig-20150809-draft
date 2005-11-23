@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.1.0.ebuild,v 1.1 2005/11/23 17:39:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.1.0.ebuild,v 1.2 2005/11/23 18:27:14 marienz Exp $
 
 inherit eutils distutils versionator
 
@@ -106,4 +106,6 @@ src_test() {
 	echo "'''plugins stub'''" > twisted/plugins/__init__.py || die
 
 	"${T}"/tests/usr/bin/trial twisted || die "trial failed"
+	cd "${S}"
+	rm -rf "${T}/tests"
 }
