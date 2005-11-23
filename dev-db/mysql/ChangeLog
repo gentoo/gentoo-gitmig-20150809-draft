@@ -1,6 +1,30 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.263 2005/11/21 13:17:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.264 2005/11/23 02:09:51 vivo Exp $
+
+*mysql-5.0.16-r30 (23 Nov 2005)
+*mysql-5.0.16 (23 Nov 2005)
+
+  23 Nov 2005; Francesco Riosa <vivo@gentoo.org> files/mysql-slot.rc6,
+  -mysql-4.0.26-r30.ebuild, mysql-4.1.15-r30.ebuild,
+  -mysql-5.0.13_rc.ebuild, -mysql-5.0.15-r30.ebuild, +mysql-5.0.16.ebuild,
+  +mysql-5.0.16-r30.ebuild:
+  Version bump for the 5.0 series.
+  The ebuild has been rewritten, it's the first step to slot the mysql database
+  server. (diff 5.0.16 and 5.0.16-r30 if you don't belive at it)
+  
+  Also the rc scripts are changed, hopefully bug #109380 is gone (Thanks to
+  Rodrigo Severo for shaping it).
+  
+  It's possible from now start more than one server tweaking the
+  /etc/conf.d/mysql .
+  
+  The future of slotted MySQL is still uncertain but the rc script will be kept.
+  
+  More than uncertain is the slotting of MySQL-4.0 too.
+  
+  reassuming, be careful playing with these ebuilds, never ever "~ARCH" keywords
+  has been so unstable.
 
   21 Nov 2005; Guy Martin <gmsoft@gentoo.org> mysql-4.1.14.ebuild:
   Stable on hppa.

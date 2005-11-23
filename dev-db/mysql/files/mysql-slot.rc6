@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.2 2005/11/20 13:37:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.3 2005/11/23 02:09:52 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -32,6 +32,7 @@ get_slot_config() {
 	# grab the parameters from conf.d/mysql definition
 	local tmp_eval="mysql_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
 	local conf_d_parameters="${!tmp_eval}"
+	[[ ${conf_d_parameters[*]} == '()' ]] && conf_d_parameters=''
 	MY_SUFFIX="-${srv_slot}"
 	[[ "${MY_SUFFIX}" == '-0' ]] && MY_SUFFIX=''
 	MY_CNF="/etc/mysql${MY_SUFFIX}/my.cnf"
@@ -81,12 +82,17 @@ get_slot_config() {
 				socket="${my_default#socket=}"
 				paramlist="${paramlist}--${my_default%%=*},"
 				;;
-			*)
+			*=*)
 				# list of parameters we already have
 				# prepend "--" because my_print_defaults do it
 				paramlist="${paramlist}--${my_default%%=*},"
 				# little trick from mysqld_safe
 				unmanagedparams="${unmanagedparams} $(echo "--${my_default}" | sed -e 's,\([^=/a-zA-Z0-9_.-]\),\\\1,g')"
+				;;
+			*)
+				paramlist="${paramlist}--${my_default},"
+				unmanagedparams="${unmanagedparams} --${my_default}"
+				;;
 		esac
 	done
 
@@ -115,9 +121,15 @@ get_slot_config() {
 				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
 					socket="${my_default#--socket=}"
 				fi ;;
-			*)
+			*=*)
 				# check into the list of parameters we already have
-				if ! in_list "${my_default%%=*}" "${paramlist}" ; then
+				if ! in_list "${my_default%%=*}" "${paramlist}"; then
+					paramlist="${paramlist}${my_default%%=*},"
+					unmanagedparams="${unmanagedparams} $(echo "${my_default}" | sed -e 's,\([^=/a-zA-Z0-9_.-]\),\\\1,g')"
+				fi
+				;;
+			*)
+				if ! in_list "${my_default}" "${paramlist}"; then
 					paramlist="${paramlist}${my_default%%=*},"
 					unmanagedparams="${unmanagedparams} $(echo "${my_default}" | sed -e 's,\([^=/a-zA-Z0-9_.-]\),\\\1,g')"
 				fi
@@ -258,6 +270,7 @@ start() {
 stop () {
 	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
 	local runwhat pidfile shutdown_elem
+	local PID cnt
 	local retstatus=0
 	local shutdown_list="$(tac "${MYSQL_GLOB_PID_FILE}")"
 	# shutdown in reverse order
@@ -265,7 +278,32 @@ stop () {
 		runwhat=${shutdown_elem%%=*}
 		pidfile=${shutdown_elem#*=}
 		ebegin "Stopping mysqld (${runwhat})"
-		start-stop-daemon --stop --retry 5 --quiet --pidfile="${pidfile}"
+		# following code grabbed from the squid rc script
+		PID=$(cat /var/run/squid.pid 2>/dev/null)
+		start-stop-daemon --stop --quiet --pidfile="${pidfile}"
+        sleep 2
+		if test -n "$PID" && kill -0 $PID 2>/dev/null
+		then
+			einfon "Waiting ."
+			cnt=0
+			while kill -0 $PID 2>/dev/null
+			do
+				cnt=`expr $cnt + 1`
+				if [ $cnt -gt 60 ]
+				then
+					# Waited 120 seconds now. Fail.
+					eend 1 "Failed."
+					break
+				fi
+				sleep 2
+				echo -n "."
+			done
+			echo -n "done."
+				eend 0
+		else
+			eend 0
+		fi
+		# end stolen code
 		retstatus=$(( $retstatus + $? ))
 	done
 	[[ "$retstatus" -eq 0 ]] && rm -f "$MYSQL_GLOB_PID_FILE"

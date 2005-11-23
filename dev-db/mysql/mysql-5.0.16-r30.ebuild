@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r30.ebuild,v 1.2 2005/11/23 02:09:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.1 2005/11/23 02:09:51 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -11,9 +11,9 @@ stripdots() {
 }
 
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
-MYSQL_VERSION_ID=$(stripdots "4.01.26.30")
+MYSQL_VERSION_ID=$(stripdots "5.00.16.00")
 PROTOCOL_VERSION=10
-NDB_VERSION_ID=40115
+NDB_VERSION_ID=50016
 #major, minor only in the slot
 SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
 
