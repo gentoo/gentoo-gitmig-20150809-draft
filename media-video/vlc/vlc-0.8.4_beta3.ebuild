@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta1.ebuild,v 1.5 2005/11/22 10:07:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta3.ebuild,v 1.1 2005/11/23 11:20:11 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -41,7 +41,9 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 				media-libs/libdvdplay )
 		esd? ( media-sound/esound )
 		ogg? ( media-libs/libogg )
-		matroska? ( >=media-libs/libmatroska-0.7.5 )
+		matroska? (
+			>=dev-libs/libebml-0.7.6
+			>=media-libs/libmatroska-0.7.5 )
 		mp3? ( media-libs/libmad )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
 		a52? ( media-libs/a52dec )
