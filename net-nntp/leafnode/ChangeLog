@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/leafnode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.18 2005/09/25 13:48:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.19 2005/11/23 16:59:12 swegener Exp $
+
+*leafnode-1.11.4 (23 Nov 2005)
+
+  23 Nov 2005; Sven Wegener <swegener@gentoo.org> +leafnode-1.11.4.ebuild:
+  Version bump.
 
 *leafnode-2.0.0_alpha20050914 (25 Sep 2005)
 
