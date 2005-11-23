@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-0.5.0.ebuild,v 1.3 2005/09/07 11:00:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-0.5.0.ebuild,v 1.4 2005/11/23 17:35:40 marienz Exp $
 
 inherit distutils
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="doc"
 
-DEPEND=">=dev-python/twisted-2.0.0"
+DEPEND=">=dev-python/twisted-2.0.0
+	>=dev-python/pycrypto-1.9_alpha6"
 
 S=${WORKDIR}/${MY_P}
 

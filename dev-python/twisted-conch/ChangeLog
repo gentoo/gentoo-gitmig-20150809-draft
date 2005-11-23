@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.2 2005/09/07 11:00:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.3 2005/11/23 17:35:40 marienz Exp $
+
+  23 Nov 2005; Marien Zwart <marienz@gentoo.org> twisted-conch-0.5.0.ebuild:
+  add missing pycrypto dependency
 
   07 Sep 2005; Tom Martin <slarti@gentoo.org> twisted-conch-0.5.0.ebuild:
   Marked ~amd64, satisfies bug 105106.
