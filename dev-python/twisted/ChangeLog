@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.51 2005/11/05 21:42:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.52 2005/11/23 17:39:00 marienz Exp $
+
+*twisted-2.1.0 (23 Nov 2005)
+
+  23 Nov 2005; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-2.1.0-trial-tests.patch,
+  +files/twisted-2.1.0-trial-tests2.patch,
+  +files/twisted-2.1.0-zsh-head.patch, +files/twistd.conf,
+  +files/twistd.init, metadata.xml, +twisted-2.1.0.ebuild:
+  version bump to 2.1.0 to fix bug 110388, and a lot of ebuild changes to fix
+  part of bug 80639. Taking over maintainership.
 
   05 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> twisted-2.0.0.ebuild:
   marked ~alpha wrt bug #110575
