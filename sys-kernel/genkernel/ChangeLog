@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.115 2005/11/23 01:05:07 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.116 2005/11/23 15:41:52 rocket Exp $
+
+  23 Nov 2005; Eric Edgar <rocket@gentoo.org> genkernel-3.3.8.ebuild:
+  Update 3.3.8 ebuild to point to the proper dmraid binary
 
 *genkernel-3.3.8 (23 Nov 2005)
 
