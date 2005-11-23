@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.1 2005/10/26 14:19:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.2 2005/11/23 20:38:06 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -36,8 +36,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself ${CDROM_ROOT}/linux_installer.sh \
-		|| die "unpacking linux installer"
 	unzip ${DISTDIR}/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
 	tar xf ${S}/ut2003lnxbins.tar \
@@ -64,6 +62,9 @@ src_install() {
 	# Disk 3
 	einfo "Copying files from Disk 3..."
 	cp -r ${CDROM_ROOT}/Sounds ${Ddir}|| die "copying files"
+
+	unpack_makeself ${CDROM_ROOT}/linux_installer.sh \
+		|| die "unpacking linux installer"
 
 	# create empty files in Benchmark
 	for j in {CSVs,Logs,Results} ; do
