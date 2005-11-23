@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.21 2005/11/18 13:27:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.22 2005/11/23 14:49:12 brix Exp $
+
+*suspend2-sources-2.6.14-r3 (23 Nov 2005)
+
+  23 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/suspend2-2.2-rc12-freeze-sbs.patch,
+  +suspend2-sources-2.6.14-r3.ebuild:
+  Revision bump to Software Suspend 2.2-rc12.
 
 *suspend2-sources-2.6.14-r2 (18 Nov 2005)
 
