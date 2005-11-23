@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4698 2005/11/23 03:29:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4699 2005/11/23 04:05:30 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -953,13 +953,6 @@ x11-apps/xwd
 x11-apps/xwininfo
 x11-apps/xwud
 >=x11-base/kdrive-6
-x11-base/x11-apps
-x11-base/x11-data
-x11-base/x11-drivers
-x11-base/x11-fonts
-x11-base/x11-libs
-x11-base/x11-proto
-x11-base/x11-utils
 x11-base/xorg-server
 >=x11-base/xorg-x11-7.0.0_rc0
 x11-drivers/xf86-input-acecad
