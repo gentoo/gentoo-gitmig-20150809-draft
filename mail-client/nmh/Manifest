@@ -1,4 +1,7 @@
-MD5 9d2e68a7ca70763083597a03eee5f51d ChangeLog 3246
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 981e911c38e063966beca1c0df240385 ChangeLog 3362
 MD5 339b171982f2e23bb6ea3bdd5eeca163 files/digest-nmh-1.0.4-r3 61
 MD5 06add1122d19eaf6dce391f099b76d3f files/digest-nmh-1.1 59
 MD5 06add1122d19eaf6dce391f099b76d3f files/digest-nmh-1.1-r1 59
@@ -11,5 +14,12 @@ MD5 637757c29641c06801989cb38c272984 files/nmh-1.1-install.patch 1077
 MD5 fa36a4dfabf2747ec6314bd0d81e71ef files/nmh-1.1-m_getfld.patch 571
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 61328c981af8cf348a2b188506eff58c nmh-1.0.4-r3.ebuild 1391
-MD5 d012b2b834ffacbe71533d03bf75d64e nmh-1.1-r1.ebuild 1655
+MD5 81a943e459811b46fc304e26b4d15e3d nmh-1.1-r1.ebuild 1664
 MD5 2dc5ef7375ec5ed5dbc288505dff0502 nmh-1.1.ebuild 1525
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDg7mzwUpWvClEHQoRAo+vAJoDsZ1FvLuBqTCkmw0eJ/soJ5VukgCdE/P+
+hzqJ0tlktEhlkZobh4CrlNk=
+=XyqC
+-----END PGP SIGNATURE-----
