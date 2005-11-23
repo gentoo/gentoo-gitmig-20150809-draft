@@ -2,8 +2,9 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ec5ab14849cf3f9cea025bae54f4956c kdevelop-3.3.0_beta2-r1.ebuild 3132
 MD5 af2bf95f6867509e24f9d4ccda1cfba9 kdevelop-3.2.1-r1.ebuild 2858
 MD5 dec73ae3a6b2e0c29b673b50e83e7f49 kdevelop-3.2.3-r1.ebuild 2999
+MD5 2b9328335bcf094acefd680d6beb710a kdevelop-3.3.0.ebuild 2952
 MD5 be27cb0ad17d922992efa60840dda2dc kdevelop-3.1.2.ebuild 2722
-MD5 7670a55b9059ea1e05cb328bf1f43dd3 ChangeLog 16200
+MD5 cadd5169cdd9d17c018984a7f62b6c10 ChangeLog 16359
 MD5 b7b71e0c83b22cc11ddb06e001c2a2fd kdevelop-3.3.0_beta2.ebuild 3014
 MD5 e940bb0a107baa39c8a1b42e13e57e98 kdevelop-3.2.2.ebuild 2832
 MD5 accda6c7d42fc9c024903cbc09078e71 kdevelop-3.3_beta1.ebuild 3017
@@ -20,6 +21,7 @@ MD5 34af4d3547f033e0198702768d81c2ad files/digest-kdevelop-3.2.3 68
 MD5 5ea55be30c933e635663774aabe62dda files/digest-kdevelop-3.3.0_beta2-r1 69
 MD5 1760f21a5c2d5c152495c12af8232d04 files/kdevelop-3.2.1-makefiles.patch 815
 MD5 9baadc6b0dcbb08db8c865897cf4cf43 files/kdevelop-3.1.0-bdb-mutex.patch 656
+MD5 2e51b8b6ea22818559bec6f23ad1f59d files/digest-kdevelop-3.3.0 68
 MD5 2c2ec3055c3e463c416ac6d713f532e0 files/kdevelop-qt-3.3.5.patch 479
 MD5 e904b2e0a85d8e1363b48e3a3ce623d3 files/kdevelop-3.2.3-ant.patch 968
 MD5 70835c57ebb94e216c92f19bc82ac539 files/digest-kdevelop-3.3_beta1 69
