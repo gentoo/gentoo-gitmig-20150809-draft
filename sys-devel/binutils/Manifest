@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cc24ccdf48e8e2ad077baba51235ffb0 ChangeLog 46566
+MD5 2e4906b6c92359cc37b442d93b861270 ChangeLog 46670
 MD5 d60f4df7ccfeef4d4f5eea9de8a71ad3 binutils-2.14.90.0.8-r3.ebuild 363
 MD5 0680ca6de3b49aa48861d46a14a759e7 binutils-2.14.ebuild 298
 MD5 779755665878f5e4b9142a0e7d13985b binutils-2.15.90.0.1.1-r5.ebuild 343
@@ -11,7 +11,7 @@ MD5 0b2aa8431d3f1efaf12b67441381d6f8 binutils-2.15.92.0.2-r10.ebuild 375
 MD5 fae6ef750b66a27f9161bfd414a7353f binutils-2.15.94.0.2.2.ebuild 328
 MD5 b9ed4c67553ad1d493e8d91f4cece334 binutils-2.15.ebuild 480
 MD5 98d35099698542dab3713e8db109bd35 binutils-2.16-r1.ebuild 657
-MD5 2b2a05a7ac50ee852f802a25af83205a binutils-2.16.1.ebuild 663
+MD5 d82be7b2b493160ada702af82a40b7d4 binutils-2.16.1.ebuild 663
 MD5 8b4375f98fefe66f27cd8cf48bb64da7 binutils-2.16.90.0.3.ebuild 354
 MD5 9d88c0379eb30fa8756b81fed7e0796a binutils-2.16.91.0.1.ebuild 349
 MD5 3bccd125737862cfad68502423d7745d binutils-2.16.91.0.2.ebuild 354
@@ -36,7 +36,7 @@ MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgqkHgIKl8Uu19MoRAl79AJ42qDbIyIsT2C0JYSTioGYl/bxaGgCeLk5G
-bng+56tmNTndOd1291Lpkm0=
-=xz6U
+iD8DBQFDg+8tCRZPokWLroQRAtXWAJ9XMMxG0JPl9YWJvlKfAEJ3dO9nZwCfUs1L
+RapE4Siai3ltja2nUEV8tqo=
+=BIrb
 -----END PGP SIGNATURE-----
