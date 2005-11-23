@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.29 2005/10/18 20:21:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.30 2005/11/23 20:45:57 compnerd Exp $
 
 inherit java eutils
 
@@ -48,6 +48,12 @@ pkg_nofetch() {
 	einfo "Download: ${A}"
 	einfo "Place the file in: ${DISTDIR}"
 	einfo "Rerun emerge"
+
+	ewarn
+	ewarn "NOTE: Do not get the lastest SR, if you wish to use the latest SR"
+	ewarn "      use the appropriate ebuild in portage (1.4.2.03).  Use only"
+	ewarn "      the original release of the 1.4.2 release with this ebuild."
+	ewarn
 }
 
 src_compile() { :; }
