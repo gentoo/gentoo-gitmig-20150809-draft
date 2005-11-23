@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 55500857905e139066f0d4cbc1d2359c ChangeLog 9588
+MD5 bcd363f1c49133be27b5cc5a94a753dc ChangeLog 9710
 MD5 74da2d8c85c2916f8260a0dc650c9111 R-2.1.0-r1.ebuild 2657
 MD5 f4c46f25907c3aa68c31a150acaf151b R-2.1.1.ebuild 2644
 MD5 71d06aca7b637e9527e02f3b9a3965b5 R-2.2.0.ebuild 2632
@@ -10,12 +10,12 @@ MD5 44015fe4137f1326769e89f2c2c2eda7 files/R-logo.png 4867
 MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
 MD5 35b08f0bf56b91051f76faa75d70eb9f files/digest-R-2.1.0-r1 61
 MD5 1be6338417fd08a609cb02164398a26b files/digest-R-2.1.1 61
-MD5 ae95e5a8d18cc062b6d52d9b5f9d6b0c files/digest-R-2.2.0 60
+MD5 1bf0aa0599dbf556341336a582094569 files/digest-R-2.2.0 61
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDgzlS5mJXAu5GbtIRAlN7AJsG8QzhdcflBtlXD85kK1c5zvzBjwCeIcQu
-KjdwrYb5dH0dExwNREF7KnY=
-=ek/K
+iD8DBQFDhD/intT9W3vfTuoRAuysAKCu1tIw62CFc1Fmv/qXDHwL92EeTgCfT/i5
+BarPSgAvgMVPFQ0o/bIn/78=
+=yALv
 -----END PGP SIGNATURE-----
