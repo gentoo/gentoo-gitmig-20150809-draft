@@ -1,4 +1,14 @@
-MD5 1a4cdd0c864fd0d0164aca0d2ab051d0 ChangeLog 427
-MD5 d6d8f20ec128ff1c922919afb5c62c1f confcache-0.3.3.ebuild 537
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6ad592b37a576bb55776e631bd9fd9f ChangeLog 530
+MD5 62335531aca5ee9d7efed5cc4db04da6 confcache-0.3.3.ebuild 545
 MD5 51b4b79fda6cf7a25cbb19a25eec9e0e files/digest-confcache-0.3.3 67
 MD5 18b3e4dd99d7c5a2ff111fa3876fe934 metadata.xml 260
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhJZfAiZjviIA2XgRAi7HAKDcvf8nlCodQ0ZjLZWCIrIj60JAdQCg4VHp
+LyWmmT8gVWZddkhQ5vVADCg=
+=VTgO
+-----END PGP SIGNATURE-----
