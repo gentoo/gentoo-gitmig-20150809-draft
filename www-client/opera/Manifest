@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e6dc6f164c8e0f2bd3657a9d4e51238 ChangeLog 18028
-MD5 05a269373a205b54700e2265119951a0 files/digest-opera-7.54-r3 372
-MD5 5fde404310e76e32c90caff003dbbbb8 files/digest-opera-8.00 368
-MD5 8cbbc6d9dbd635e9b74831ac4209f292 files/digest-opera-8.01 372
-MD5 db1b0b78bf60d8137b84e200dacf2de7 files/digest-opera-8.02 372
-MD5 2f86a42f50ba144aae2761dc9f922906 files/digest-opera-8.50 372
-MD5 c6c7220ea4ce9eacec594ae864e0df77 files/digest-opera-8.51 371
-MD5 fa357d1def9207d9e5e81038265b52cb files/opera-qt.2.patch 416
-MD5 3fbc8c365c121ec93a041532f07942f7 files/opera-qt.patch 328
-MD5 bafbdb86632b055a10fe826d16ea5b7f files/opera.desktop 147
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 c466a4f4004881b5d1f51c8e68a0d507 opera-7.54-r3.ebuild 4987
 MD5 654eabba23cdab9ffe12a45fe6338fcd opera-8.00.ebuild 4060
-MD5 5cf989c7a198572b29f4d57d00934eb0 opera-8.01.ebuild 4063
+MD5 66702d58a7cabe0b4c238709f5567d68 opera-8.51.ebuild 4024
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 b0b18cb675840dd17053d4c810ef6640 ChangeLog 18138
 MD5 e1adc02142d88ba1be45f5e4332630da opera-8.02.ebuild 4059
 MD5 56e1b3f606c1222b19901e26a5a6a364 opera-8.50.ebuild 4061
-MD5 08ba758c45346f68eddc40ecea0f5821 opera-8.51.ebuild 4023
+MD5 5cf989c7a198572b29f4d57d00934eb0 opera-8.01.ebuild 4063
+MD5 c466a4f4004881b5d1f51c8e68a0d507 opera-7.54-r3.ebuild 4987
+MD5 3fbc8c365c121ec93a041532f07942f7 files/opera-qt.patch 328
+MD5 5fde404310e76e32c90caff003dbbbb8 files/digest-opera-8.00 368
+MD5 05a269373a205b54700e2265119951a0 files/digest-opera-7.54-r3 372
+MD5 db1b0b78bf60d8137b84e200dacf2de7 files/digest-opera-8.02 372
+MD5 9de265fb79ffe678559741194c2e9005 files/digest-opera-8.51 371
+MD5 2f86a42f50ba144aae2761dc9f922906 files/digest-opera-8.50 372
+MD5 bafbdb86632b055a10fe826d16ea5b7f files/opera.desktop 147
+MD5 fa357d1def9207d9e5e81038265b52cb files/opera-qt.2.patch 416
+MD5 8cbbc6d9dbd635e9b74831ac4209f292 files/digest-opera-8.01 372
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDg6eRwUpWvClEHQoRAoyOAJsGwFJu5ytGZ9270HMSSMkTz+tQKQCaAzSq
-5zuneNPVo3x3gqN7sfP5o0E=
-=mHn/
+iD8DBQFDhJopFdQwWVoAgN4RAlEIAKClBMsg5+/9e4Pwk6NrvFc3Cy2XlACffCvE
+x3AdE9b5+ZXL7GiOlraQmz4=
+=d7W3
 -----END PGP SIGNATURE-----
