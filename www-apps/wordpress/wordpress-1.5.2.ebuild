@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.2.ebuild,v 1.6 2005/11/20 16:45:19 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.2.ebuild,v 1.7 2005/11/23 06:50:40 superlag Exp $
 
 inherit webapp eutils
 
@@ -46,6 +46,20 @@ src_install() {
 	ewarn * If this is not an option for your web server and you NEED it set to on, then insert the following in your WordPress .htaccess file:
 	ewarn * php_flag register_globals off
 	ewarn *
+
+	ewarn *
+	ewarn * You will need to create a table for your WordPress database.  This
+	ewarn * assumes you have some knowledge of MySQL, and already have it
+	ewarn * installed and configured.  If not, please refer to
+	ewarn * the Gentoo MySQL guide at the following URL:
+	ewarn * http://www.gentoo.org/doc/en/mysql-howto.xml
+	ewarn * Log in to MySQL, and create a new database called
+	ewarn * "wordpress". From this point, you will need to edit
+	ewarn * your wp-config.php file in $DocumentRoot/wordpress/
+	ewarn * and point to your database. Once this is done, you can log in to
+	ewarn * WordPress at http://localhost/wordpress
+	ewarn *
+
 
 	# handle documentation files
 	#
