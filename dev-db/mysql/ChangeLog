@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.265 2005/11/23 10:22:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.266 2005/11/23 19:44:22 vivo Exp $
+
+*mysql-5.0.16-r2 (23 Nov 2005)
+
+  23 Nov 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15.ebuild,
+  mysql-4.1.15-r30.ebuild, -mysql-5.0.16-r1.ebuild, +mysql-5.0.16-r2.ebuild,
+  mysql-5.0.16-r30.ebuild:
+  fix Bug #113352 , mysql-5.0.16-r1 does not create
+  /usr/lib{64}/libmysqlclient.so.15 symlink
+  
+  The linkage has been somewhat improved too. It has been moved in
+  pkg_postinst() function to advise the user to use "revdep-rebuild" with the
+  right --so-name option.
+  
+  As a consequence it does not rely on "dosym" but use "ln" program
+  directly(bug).
+  
+  it work now with FEATURES="prelink notitles sandbox strict userpriv
+  usersandbox keeptemp keepwork" but in the future may be needed to advise
+  sandbox that we are messing up with the live file-system
 
 *mysql-5.0.16-r1 (23 Nov 2005)
 

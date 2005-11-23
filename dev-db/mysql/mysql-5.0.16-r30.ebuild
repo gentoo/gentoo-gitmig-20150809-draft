@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.1 2005/11/23 02:09:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.2 2005/11/23 19:44:22 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -371,7 +371,7 @@ src_compile() {
 			myconf="${myconf} $(use_with cluster ndbcluster)"
 		fi
 
-		mysql_version_is_at_least "4.01.11.00" &&  myconf="${myconf} --with-big-tables"
+		mysql_version_is_at_least "4.01.11.00" &&  myconf="${myconf} `use_with big-tables`"
 	else
 		for i in ${minimal_exclude_list}; do
 			myconf="${myconf} --without-${i}"
@@ -396,8 +396,6 @@ src_compile() {
 		mysql_version_is_at_least "4.01.11.00" \
 		&&  myconf="${myconf} --with-blackhole-storage-engine"
 	fi
-
-	myconf="${myconf} `use_with big-tables`"
 
 	#glibc-2.3.2_pre fix; bug #16496
 	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
@@ -467,15 +465,6 @@ src_install() {
 
 	mysql_init_vars
 	make install DESTDIR="${D}" benchdir_root="${MY_SHAREDSTATEDIR}" || die
-
-	# TODO : is this a work for eselect ?
-	# move client libs, install a couple of missing headers
-	dosym \
-		"${MY_LIBDIR}/libmysqlclient.so" \
-		"${MY_LIBDIR}/../libmysqlclient.so"
-	dosym \
-		"${MY_LIBDIR}/libmysqlclient_r.so" \
-		"${MY_LIBDIR}/../libmysqlclient_r.so"
 
 	insinto "${MY_INCLUDEDIR}"
 	doins "${MY_INCLUDEDIR}"/my_{config,dir}.h
@@ -595,6 +584,33 @@ pkg_preinst() {
 pkg_postinst() {
 
 	mysql_init_vars
+
+	# create globally visible symlinks
+	# TODO : what abaut ndb ?
+	local mylib mylibfullver mylibtmpver maxdots sonamelist prevlink
+	pushd "${ROOT}/${MY_LIBDIR}"
+	for mylib in libmysqlclient_r libmysqlclient; do
+		mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
+		mylibtmpver="${mylibfullver}"
+		maxdots=0
+		while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
+			(( ++maxdots ))
+			prevlink=$(readlink -f "../${mylibtmpver}")
+			if [[ -n "${prevlink}" ]] ; then
+				if [[ "${mylibtmpver}" != "${mylibfullver}" ]] \
+				&& [[ "${prevlink##*/}" != "${mylibfullver}" ]]
+				then
+					# gah this is not totally correct 
+					einfo "found previous library, please run"
+					einfo "revdep-rebuild --soname=${mylibtmpver}"
+				fi
+				rm -f "../${mylibtmpver}"
+			fi
+			ln -snf "${mylibfullver}" "../${mylibtmpver}"
+			mylibtmpver=${mylibtmpver%.*}
+		done
+	done
+	popd
 
 	# mind at FEATURES=collision-protect before to remove this
 	[ -d "${ROOT}/var/log/mysql" ] \
