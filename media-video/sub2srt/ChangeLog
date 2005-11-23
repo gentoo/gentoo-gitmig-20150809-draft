@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sub2srt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sub2srt/ChangeLog,v 1.4 2005/11/19 16:37:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sub2srt/ChangeLog,v 1.5 2005/11/23 00:50:51 metalgod Exp $
+
+  23 Nov 2005; Luis Medinas <metalgod@gentoo.org> sub2srt-0.5.3.ebuild:
+  Stable on amd64. Bug #95214.
 
   19 Nov 2005; Joseph Jezak <josejx@gentoo.org> sub2srt-0.5.3.ebuild:
   Marked ppc stable for bug #95214.
