@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.39 2005/10/30 03:27:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.40 2005/11/23 15:43:02 dams Exp $
+
+*profuse-0.24.0 (23 Nov 2005)
+
+  23 Nov 2005; Damien Krotkine <dams@gentoo.org> +profuse-0.24.0.ebuild:
+  version bump, bug 113348 implemented
 
   30 Oct 2005; Jason Wever <weeve@gentoo.org> profuse-0.23.0.ebuild:
   Stable on SPARC.
