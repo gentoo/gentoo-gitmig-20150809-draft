@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f99c7919d86ec534aa20b9eb979727c ChangeLog 360
+MD5 de6f209b35dd821d576bce5c004fea47 files/digest-prefork-1.00 63
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d54d407fed849bf4df2ecd52266ca07d prefork-1.00.ebuild 579
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDhKKItG5z4I8BtQoRAuolAKCUlVLYOvynshW8P2BHlxyq2nOpEQCeKvhs
+WhPUgflydUxtp1s5UTYwUFk=
+=7dfW
+-----END PGP SIGNATURE-----
