@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sparc-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.18 2005/03/23 18:02:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.19 2005/11/23 20:42:16 weeve Exp $
+
+  23 Nov 2005; Jason Wever <weeve@gentoo.org> sparc-utils-1.9-r2.ebuild:
+  Stable on SPARC.
 
   23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   sparc-utils-1.9-r2.ebuild:
