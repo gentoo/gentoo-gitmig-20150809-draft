@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.72 2005/11/12 12:40:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.73 2005/11/23 11:43:40 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -24,6 +24,7 @@ else
 		3.2.0)			SRC_PATH="stable/3.2/src/${P}.tar.bz2" ;;
 		3.3.0)			SRC_PATH="stable/3.3/src/${P}.tar.bz2" ;;
 		3.4.0)			SRC_PATH="stable/3.4/src/${P}.tar.bz2" ;;
+		3.5.0)			SRC_PATH="stable/3.5/src/${P}.tar.bz2" ;;
 		3.5_alpha1)		SRC_PATH="unstable/${PV/_/-}/src/${PN}-3.4.90.tar.bz2" ;;
 		3.5_beta1)		SRC_PATH="unstable/${PV/_/-}/src/${PN}-3.4.91.tar.bz2" ;;
 		3.5.0_beta2)		SRC_PATH="unstable/3.5-beta2/src/${PN}-3.4.92.tar.bz2" ;;
