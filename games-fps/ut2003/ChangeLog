@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.36 2005/11/23 16:16:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.37 2005/11/23 16:20:36 wolf31o2 Exp $
+
+  23 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r4.ebuild:
+  Revert last change since I fixed up ut2003-ded, instead.
 
   23 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r4.ebuild:
   Diabled merging dedicated server on amd64.
