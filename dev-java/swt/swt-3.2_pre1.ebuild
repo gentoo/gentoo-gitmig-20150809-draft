@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.5 2005/10/24 16:28:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.6 2005/11/23 23:50:20 metalgod Exp $
 
 inherit eutils java-pkg
 
@@ -95,7 +95,7 @@ src_compile() {
 	fi
 
 	# Identity the XTEST library location
-	export XTEST_LIB_PATH=/usr/X11R6/lib
+	export XTEST_LIB_PATH=/usr/X11R6/$(get_libdir)
 
 	# Fix the pointer size for AMD64
 	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
@@ -155,7 +155,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar swt.jar
 
-	java-pkg_sointo /usr/lib
+	java-pkg_sointo /usr/$(get_libdir)
 	java-pkg_doso *.so
 
 	dohtml about.html
