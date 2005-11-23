@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>video</herd>
-<longdescription>An open-source version of realplayer 
-that supports formats such as ogg and theora</longdescription>
-</pkgmetadata>
