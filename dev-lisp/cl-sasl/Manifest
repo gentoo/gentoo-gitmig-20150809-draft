@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e54ea2863c37cbdb05081a5730b5b8f5 ChangeLog 404
+MD5 44fa186f92a4fdda63da46e983701b29 cl-sasl-0.2.ebuild 714
+MD5 9281cc4ab0825aaf1a462d48ffad4799 files/digest-cl-sasl-0.2 61
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhK1ZyiNZaEAZA+ARAtg0AJ9/tmmeX0AmYKJiGkh7IPbge42TVACfZatq
+l3ECgUx/NLRk0XNNZ0NVj6g=
+=BfAq
+-----END PGP SIGNATURE-----
