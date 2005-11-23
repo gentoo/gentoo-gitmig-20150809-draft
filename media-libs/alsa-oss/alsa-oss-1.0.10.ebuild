@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-1.0.10.ebuild,v 1.1 2005/11/16 19:58:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-1.0.10.ebuild,v 1.2 2005/11/23 19:15:42 metalgod Exp $
 
 inherit multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://alsaproject/oss-lib/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
