@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.7 2005/07/16 18:41:43 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.8 2005/11/23 04:32:50 nichoj Exp $
 
 inherit java-pkg
 
@@ -26,8 +26,17 @@ src_compile() {
 		--mandir=/usr/share/man \
 		|| die "./configure failed"
 	emake || die
+
+	# Fix the j script to use java-config, instead of hard-coded paths
+	sed -e 's/@JAVA@/$(java-config --java)/' \
+		-e 's/@JAVA_OPTIONS@//' \
+		-e 's/@CLASSPATH@/$(java-config -p xerces-2,j)/' j.in > j
+
 }
 
 src_install() {
 	einstall || die
+
+	java-pkg_dojar ${D}/usr/share/j/j.jar
+	rm ${D}/usr/share/j/j.jar
 }
