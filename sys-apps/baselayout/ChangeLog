@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.281 2005/11/10 16:11:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.282 2005/11/23 16:01:47 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_pre11 (23 Nov 2005)
+
+  23 Nov 2005; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.12.0_pre11.ebuild:
+  New release which fixes some bugs, but mainly keeps
+  mrness happy with a new pppd module.
+
+  sys-apps/sysvinit-2.86-r3 is recommended, otherwise you get a messy reboot.
 
 *baselayout-1.12.0_pre10-r1 (10 Nov 2005)
 
