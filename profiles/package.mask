@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4700 2005/11/23 11:58:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4701 2005/11/23 14:14:42 cryos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -119,10 +119,6 @@ www-apps/phpgroupware
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Nov 2005)
 # Security masked due to remote exploitable bugs (bug #111421)
 games-strategy/scorched3d
-
-# Marcus D. Hanwell <cryos@gentoo.org> (31 Oct 2005)
-# New beta version
->=app-portage/kuroo-0.71.0_beta1
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Previous SCons upgrade broke lots of packages, so latest version is getting some testing first!
