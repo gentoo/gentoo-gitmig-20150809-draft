@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_transform
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/ChangeLog,v 1.7 2005/11/01 19:04:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/ChangeLog,v 1.8 2005/11/23 17:43:03 metalgod Exp $
+
+  23 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  mod_transform-0.6.0.ebuild:
+  Stable on amd64. Bug #106432.
 
   01 Nov 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   mod_transform-0.6.0.ebuild:
