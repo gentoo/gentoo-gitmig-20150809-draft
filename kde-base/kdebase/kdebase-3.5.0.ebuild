@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0.ebuild,v 1.1 2005/11/22 22:14:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0.ebuild,v 1.2 2005/11/23 05:23:31 danarmak Exp $
 
 inherit kde-dist eutils
 
@@ -42,10 +42,6 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466).
 	epatch "${FILESDIR}/kdebase-3.5.0_beta2-noimake.patch"
-
-	# Let kxkb search in Xorg 7.0 default path (kde rev 481658, applied for
-	# final).
-	epatch "${FILESDIR}/kxkb-${PV}-modularx.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die

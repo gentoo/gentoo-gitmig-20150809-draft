@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.230 2005/11/22 22:14:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.231 2005/11/23 05:23:31 danarmak Exp $
+
+  23 Nov 2005; Dan Armak <danarmak@gentoo.org> kdebase-3.5.0.ebuild:
+  Removed kxkb patch applied upstream.
 
 *kdebase-3.5.0 (22 Nov 2005)
 
