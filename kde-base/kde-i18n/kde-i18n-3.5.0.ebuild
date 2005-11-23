@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.0.ebuild,v 1.1 2005/11/22 22:13:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.0.ebuild,v 1.2 2005/11/23 15:15:10 greg_g Exp $
 
 inherit kde
 
@@ -8,19 +8,20 @@ DESCRIPTION="KDE internationalization package"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 
+SLOT="${KDEMAJORVER}.${KDEMINORVER}"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
-SLOT="${KDEMAJORVER}.${KDEMINORVER}"
 
 need-kde ${PV}
 
 LANGS="af ar az bg bn br bs ca cs cy da de el en_GB eo es et
-eu fa fi fr fy ga gl he hi hr hu is it ja ko lt lv mk
-mn ms nb nds nl nn pa pl pt pt_BR ro ru rw se sk sl sr
-sr@Latn ss sv ta tg tr uk uz zh_CN zh_TW"
+eu fa fi fr fy ga gl he hi hr hu is it ja km ko lt lv
+mk mn ms nb nds nl nn pa pl pt pt_BR ro ru rw se sk sl
+sr sr@Latn ss sv ta tg tr uk uz zh_CN zh_TW"
 
 for X in ${LANGS} ; do
-	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/${PV}/src/kde-i18n/kde-i18n-${X}-${PV}.tar.bz2 )"
+	#SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/${PV}/src/kde-i18n/kde-i18n-${X}-${PV}.tar.bz2 )"
+	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/3.5/src/kde-i18n/kde-i18n-${X}-${PV}.tar.bz2 )"
 done
 
 pkg_setup() {
