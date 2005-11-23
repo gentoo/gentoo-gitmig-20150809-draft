@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r1.ebuild,v 1.10 2005/11/22 10:34:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r1.ebuild,v 1.11 2005/11/23 20:14:05 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,12 +8,12 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="18"
+PATCHLEVEL="19"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -128,10 +128,6 @@ src_compile() {
 
 	local myconf
 
-	# the win32 codec path should ignore $(get_libdir) and always use lib
-	use win32codecs \
-		&& myconf="${myconf} --with-w32-path=/usr/$(get_libdir)/win32"
-
 	# enable/disable appropiate optimizations on sparc
 	[[ "${PROFILE_ARCH}" == "sparc64" ]] && myconf="${myconf} --enable-vis"
 	[[ "${PROFILE_ARCH}" == "sparc" ]] && myconf="${myconf} --disable-vis"
@@ -216,10 +212,12 @@ src_compile() {
 		$(use_enable vcd) --without-internal-vcdlibs \
 		\
 		$(use_enable asf) \
+		$(use_enable win32codecs w32dll) \
 		$(use_with ffmpeg external-ffmpeg) \
 		--disable-polypaudio \
 		--disable-optimizations \
 		${myconf} \
+		--with-w32-path=/usr/lib/win32 \
 		--disable-dependency-tracking || die "econf failed"
 
 		#$(use_with dvdnav external-dvdnav) \
