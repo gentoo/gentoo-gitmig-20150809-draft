@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4699 2005/11/23 04:05:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4700 2005/11/23 11:58:58 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,10 +26,6 @@
 # unless you're sure they're gentoo-specific or they're already
 # fixed by upstream
 =net-im/kadu-0.5*
-
-# Diego Pettenò <flameeyes@gentoo.org> (21 Nov 2005)
-# Masked for security vulnerabilities (bad past behavior, too)
-media-video/helixplayer
 
 # Stuart Herbert <stuart@gentoo.org> (20 Nov 2005)
 # Masked for testing purposes
