@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/hashalot
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.25 2005/01/02 19:20:08 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.26 2005/11/24 04:02:50 vapier Exp $
+
+*hashalot-0.3-r1 (24 Nov 2005)
+
+  24 Nov 2005; Mike Frysinger <vapier@gentoo.org> +hashalot-0.3-r1.ebuild:
+  Move programs from sbin to bin.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
