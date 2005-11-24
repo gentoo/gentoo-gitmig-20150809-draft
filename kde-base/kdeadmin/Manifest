@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 64b4107aad35945f8c6a76da1463cfd4 ChangeLog 17373
 MD5 2f8513094264710dea75ca730c25b858 files/digest-kdeadmin-3.3.2 68
 MD5 8f9c012c60be21c26eb7ffdfdb2028db files/digest-kdeadmin-3.4.1 68
@@ -16,3 +19,10 @@ MD5 d1fc3c7ccdddfa93e303391d6b33ebe0 kdeadmin-3.5.0_beta2.ebuild 1045
 MD5 38cdb67f9cd5aeb3dd9883358c73146f kdeadmin-3.5.0_rc1.ebuild 1043
 MD5 020f5c9f13f9b3ab162bb0b1f94266b3 kdeadmin-3.5_beta1.ebuild 1043
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhkrantT9W3vfTuoRAuCaAKCWJHvISpSmzP/FE46/ytG9ZT0GTgCfdNmR
+io0dp0bkC4OsFuYGLfXds1Y=
+=UbY2
+-----END PGP SIGNATURE-----

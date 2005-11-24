@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 044a7554366ff9a180ae0781ceba7321 ChangeLog 4159
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2 287
@@ -17,3 +20,10 @@ MD5 777efc4b6119ade1653374a5d44d8b09 konqueror-3.5.0_beta2.ebuild 736
 MD5 015dc2f4063fd50781c11acb35930c77 konqueror-3.5.0_rc1.ebuild 737
 MD5 54a3cc81c2d2469d05f53b7607d8a081 konqueror-3.5_beta1.ebuild 769
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhkGzntT9W3vfTuoRAqa5AJ0R7+jXv1woq/OUKbuSjgonaVy6YQCeJwui
+8nms+L5VifqpAF+feFO/6Ns=
+=Bzdx
+-----END PGP SIGNATURE-----

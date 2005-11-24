@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 59446f97e4ef20484893e2779f8d1662 ChangeLog 3605
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdeprint-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdeprint-3.4.2 287
@@ -14,3 +17,10 @@ MD5 f50fb8a17c5fef4864c61e3d3e01dd7e kdeprint-3.5.0_beta2.ebuild 504
 MD5 5e50f915cb0a05ac0864f4d8f28762a5 kdeprint-3.5.0_rc1.ebuild 503
 MD5 59dd13887e1abaafc878b5d835b2e1de kdeprint-3.5_beta1.ebuild 502
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhkB5ntT9W3vfTuoRAqkYAJ42l+eOcE3vDZ7ZDbuQQ2eHU9/DrACeKUxK
+z6oplOY1qD4D45+R3ge3ylI=
+=T/Oy
+-----END PGP SIGNATURE-----

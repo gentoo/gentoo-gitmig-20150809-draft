@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1113d3f58c81ce2aeea5a9a5dec446a8 ChangeLog 3610
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konsole-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konsole-3.4.2 287
@@ -14,3 +17,10 @@ MD5 9ac84394b52af594ae612701d2e72b3c konsole-3.5.0_beta2.ebuild 389
 MD5 f926cc875f39681fafb5815b1f4f8554 konsole-3.5.0_rc1.ebuild 390
 MD5 8baaeddbe37fe611397908a85a5ac9ce konsole-3.5_beta1.ebuild 387
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhkHxntT9W3vfTuoRApiwAKCUMSHjhplzyAIINanPxeWxSDNHaACeP0fa
+K8CJFaAHVNHWefC+SINTUNY=
+=tl/m
+-----END PGP SIGNATURE-----

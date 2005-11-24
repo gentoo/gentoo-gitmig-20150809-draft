@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c5014682d51a8671129405ea14b2d13 ChangeLog 3316
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kttsd-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kttsd-3.4.2 320
@@ -15,3 +18,10 @@ MD5 3d1a3931f4bbbf592f1962a16982f184 kttsd-3.5.0_beta2.ebuild 905
 MD5 78c0d3ea1b72ea65840e22871702d8af kttsd-3.5.0_rc1.ebuild 904
 MD5 ce04d8f5138430625ab3a123c801088e kttsd-3.5_beta1.ebuild 903
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhkYtntT9W3vfTuoRAj+DAJ40fMt6lzAHnlopx6rwcJAMKT8U9ACeJRmU
+3CuEwcoWq9mPcp1pWRqEq8w=
+=PmBj
+-----END PGP SIGNATURE-----
