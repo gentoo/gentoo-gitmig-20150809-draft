@@ -1,11 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.20 2005/11/22 10:07:20 flameeyes Exp $
-
-# Missing support for...
-#	tarkin - package not in portage yet - experimental
-#	tremor - package not in portage yet - experimental
-#	ncurses - needs a patch which is applied in -r2, disabled here
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.21 2005/11/24 17:36:02 flameeyes Exp $
 
 inherit libtool toolchain-funcs eutils wxwidgets
 

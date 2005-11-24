@@ -1,14 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.8 2005/11/22 10:07:20 flameeyes Exp $
-
-# Missing USE-flags due to missing deps:
-# media-vidoe/vlc:tremor - Enables Tremor decoder support
-# media-video/vlc:tarkin - Enables experimental tarkin codec
-# media-video/vlc:h264 - Enables H264 encoding support with libx264
-
-# Missing USE-flags due to needed testing
-# media-video/vlc:dirac - Enables experimental dirac codec
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.9 2005/11/24 17:36:02 flameeyes Exp $
 
 inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
