@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.3.ebuild,v 1.1 2005/11/23 19:26:24 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.3-r1.ebuild,v 1.1 2005/11/24 13:12:00 kaiowas Exp $
 
 inherit eutils
 
@@ -34,6 +34,8 @@ src_compile() {
 #	use postgres && myconf="$myconf --with-postgre \
 #		--with-postgre-lib=/usr/$(get_libdir) --with-postgre-include=/usr/include" \
 #		|| myconf="$myconf --without-postgre"
+
+	epatch ${FILESDIR}/nepenthes-0.1.3_logger_path.diff || die
 
 	econf ${myconf} || die
 	emake || die "make failed"

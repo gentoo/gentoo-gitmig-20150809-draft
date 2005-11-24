@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.3 2005/11/23 19:26:24 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.4 2005/11/24 13:12:00 kaiowas Exp $
+
+*nepenthes-0.1.3-r1 (24 Nov 2005)
+
+  24 Nov 2005; petre rodan <kaiowas@gentoo.org>
+  +files/nepenthes-0.1.3_logger_path.diff, -nepenthes-0.1.3.ebuild,
+  +nepenthes-0.1.3-r1.ebuild:
+  added one patch from sf.net tracker
 
 *nepenthes-0.1.3 (23 Nov 2005)
 

@@ -1,0 +1,76 @@
+Index: nepenthes-core/include/FileLogger.hpp
+===================================================================
+--- nepenthes-core/include/FileLogger.hpp	(Revision 2145)
++++ nepenthes-core/include/FileLogger.hpp	(Arbeitskopie)
+@@ -47,7 +47,7 @@
+ 		virtual void	setLogFile(const char *filename);
+ 
+ 	private:
+-		const char		*m_Filename;
++		char		*m_Filename;
+ 	};
+ 
+ }
+Index: nepenthes-core/src/FileLogger.cpp
+===================================================================
+--- nepenthes-core/src/FileLogger.cpp	(Revision 2145)
++++ nepenthes-core/src/FileLogger.cpp	(Arbeitskopie)
+@@ -51,12 +51,18 @@
+ 
+ FileLogger::~FileLogger()
+ {
++	if( m_Filename != NULL)
++		free(m_Filename);
++	
+ }
+ 
+ 
+ void FileLogger::setLogFile(const char *filename)
+ {
+-	m_Filename = filename;
++	if( m_Filename != NULL)
++		free(m_Filename);
++
++	m_Filename = strdup(filename);
+ }
+ 
+ 
+Index: nepenthes-core/src/RingFileLogger.cpp
+===================================================================
+--- nepenthes-core/src/RingFileLogger.cpp	(Revision 2145)
++++ nepenthes-core/src/RingFileLogger.cpp	(Arbeitskopie)
+@@ -57,14 +57,31 @@
+ 
+ RingFileLogger::~RingFileLogger()
+ {
+-	free(m_FirstFile);
++	if (m_FileFormat != NULL)
++	{
++		free(m_FileFormat);
++	}
++
++	if (m_FirstFile != NULL)
++	{
++    	free(m_FirstFile);
++	}
+ }
+ 
+ 
+ void RingFileLogger::setLogFileFormat(char *fmt)
+ {
+-	m_FileFormat = fmt;
+-	free(m_FirstFile);
++	if (m_FileFormat != NULL)
++	{
++		free(m_FileFormat);
++	}
++	m_FileFormat = strdup(fmt);
++
++
++	if (m_FirstFile != NULL)
++	{
++		free(m_FirstFile);
++	}
+ 	asprintf(&m_FirstFile, m_FileFormat, 0);
+ }
+ 
