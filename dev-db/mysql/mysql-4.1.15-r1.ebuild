@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r30.ebuild,v 1.5 2005/11/24 20:28:11 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r1.ebuild,v 1.1 2005/11/24 20:28:11 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -11,11 +11,12 @@ stripdots() {
 }
 
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
-MYSQL_VERSION_ID=$(stripdots "4.01.15.30")
+MYSQL_VERSION_ID=$(stripdots "4.01.15.00")
 PROTOCOL_VERSION=10
 NDB_VERSION_ID=40115
 #major, minor only in the slot
-SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
+SLOT=0
+#NOSLOT SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -30,7 +31,7 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
 	mirror://gentoo/mysql-extras-20051122.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 IUSE="big-tables berkdb debug minimal perl selinux ssl static"
 RESTRICT="primaryuri"
 
@@ -138,7 +139,8 @@ mysql_mv_patches() {
 # 2005-11-19 <vivo at gentoo.org>
 mysql_init_vars() {
 
-	MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
+	MY_SUFFIX=""
+	#NOSLOT MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
 	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR:-"/usr/share/mysql${MY_SUFFIX}"}
 	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql${MY_SUFFIX}"}
 	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql${MY_SUFFIX}"}
@@ -675,117 +677,91 @@ pkg_config() {
 		die "Minimal builds do NOT include the MySQL server"
 	fi
 
-	local menusel
+	if [[ "$(pgrep mysqld)" != "" ]] ; then
+		die "Oops you already have a mysql daemon running!"
+	fi
 
-	cat <<-EOF
-	 ========
-	||
-	|| 1) Create system database
-	|| 2) [TODO] Copy needed file to chroot
-	|| 3) [TODO] Make the default server (symlink)
+	local pwd1="a"
+	local pwd2="b"
+	local maxtry=5
 
-	EOF
+	if [[ -d "${ROOT}/${DATADIR}/mysql" ]] ; then
+		ewarn "You have already a MySQL database in place."
+		ewarn "Please rename it or delete it if you wish to replace it."
+		die "MySQL database already exists!"
+	fi
 
-	read menusel
-	echo
-	[[ -z "${menusel}" ]] || [[ "${menusel}" == 0 ]] && return 0
-	if [[ "${menusel}" == '1' ]]
-	then
-		local pwd1="a"
-		local pwd2="b"
-		local maxtry=5
+	einfo "Creating the mysql database and setting proper"
+	einfo "permissions on it..."
 
-		if [[ -d "${ROOT}/${DATADIR}/mysql" ]] ; then
-			ewarn "You have already a MySQL database in place."
-			ewarn "(${ROOT}/${DATADIR}/*)"
-			ewarn "Please rename or delete it if you wish to replace it."
-			die "MySQL database already exists!"
-		fi
+	einfo "Insert a password for the mysql 'root' user"
+	ewarn "Avoid [\"'\\_%] characters in the password"
 
-		einfo "Creating the mysql database and setting proper"
-		einfo "permissions on it..."
+	read -rsp "    >" pwd1 ; echo
+	einfo "Check the password"
+	read -rsp "    >" pwd2 ; echo
 
-		einfo "Insert a password for the mysql 'root' user"
-		ewarn "Avoid [\"'\\_%] characters in the password"
+	if [[ "x$pwd1" != "x$pwd2" ]] ; then
+		die "Passwords are not the same"
+	fi
 
-		read -rsp "    >" pwd1 ; echo
-		einfo "Check the password"
-		read -rsp "    >" pwd2 ; echo
+	${ROOT}/usr/bin/mysql_install_db${MY_SUFFIX} || die "MySQL databases not installed"
 
-		if [[ "x$pwd1" != "x$pwd2" ]] ; then
-			die "Passwords are not the same"
-		fi
+	# MySQL 5.0 don't need this
+	chown -R mysql:mysql ${ROOT}/${DATADIR}
+	chmod 0750 ${ROOT}/${DATADIR}
 
-		chown -R mysql:mysql ${ROOT}/${DATADIR}
-		chmod 0750 ${ROOT}/${DATADIR}
+	local options=""
+	local sqltmp="$(emktemp)"
 
-		local options=""
-		local sqltmp="$(emktemp)"
+	if mysql_version_is_at_least "4.01.03.00"; then
+		options="--skip-ndbcluster"
 
-		local help_tables="${ROOT}/usr/share/doc/mysql-${PVR}/scripts/fill_help_tables.sql.gz"
-		[[ -r "${help_tables}" ]] \
-		&& zcat "${help_tables}" > "${TMPDIR}/fill_help_tables.sql" \
-		|| touch "${TMPDIR}/fill_help_tables.sql"
-		help_tables="${TMPDIR}/fill_help_tables.sql"
+		# Filling timezones, see
+		# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
+		${ROOT}/usr/bin/mysql_tzinfo_to_sql ${ROOT}/usr/share${MY_SUFFIX}/zoneinfo \
+		> "${sqltmp}"
+	fi
 
-		pushd "${TMPDIR}"
-		${ROOT}/usr/bin/mysql_install_db${MY_SUFFIX} || die "MySQL databases not installed"
-		popd
+	local socket=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}.sock
+	local mysqld="${ROOT}/usr/sbin/mysqld${MY_SUFFIX} \
+		${options} \
+		--skip-grant-tables \
+		--basedir=${ROOT}/usr \
+		--datadir=${ROOT}/${DATADIR} \
+		--skip-innodb \
+		--skip-bdb \
+		--max_allowed_packet=8M \
+		--net_buffer_length=16K \
+		--socket=${socket} \
+		--pid-file=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}.pid"
 
-		if mysql_version_is_at_least "4.01.03.00" ; then
-			options="--skip-ndbcluster"
+	$mysqld &
+	while ! [[ -S "${socket}" || "${maxtry}" -lt 1 ]]
+	do
+		maxtry=$(($maxtry-1))
+		echo -n "."
+		sleep 1
+	done
 
-			# Filling timezones, see
-			# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
-			${ROOT}/usr/bin/mysql_tzinfo_to_sql${MY_SUFFIX} ${ROOT}/usr/share/zoneinfo \
-			> "${sqltmp}"
+	# do this from memory we don't want clear text password in temp files
+	local sql="UPDATE mysql.user SET Password = PASSWORD('${pwd1}') WHERE USER='root'"
+	${ROOT}/usr/bin/mysql \
+		--socket=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}.sock \
+		-hlocalhost \
+		-e "${sql}"
 
-			if [[ -r "${help_tables}" ]] ; then
-				cat "${help_tables}" >> "${sqltmp}"
-			fi
-		fi
+	einfo "Loading \"zoneinfo\" this step may require few seconds"
 
-		local socket=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
-		local pidfile=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
-		local mysqld="${ROOT}/usr/sbin/mysqld${MY_SUFFIX} \
-			${options} \
-			--skip-grant-tables \
-			--basedir=${ROOT}/usr \
-			--datadir=${ROOT}/${DATADIR} \
-			--skip-innodb \
-			--skip-bdb \
-			--max_allowed_packet=8M \
-			--net_buffer_length=16K \
-			--socket=${socket} \
-			--pid-file=${pidfile}"
+	${ROOT}/usr/bin/mysql${MY_SUFFIX} \
+		--socket=${socket} \
+		-hlocalhost \
+		-uroot \
+		-p"${pwd1}" \
+		mysql < "${sqltmp}"
 
-		$mysqld &
-		while ! [[ -S "${socket}" || "${maxtry}" -lt 1 ]]
-		do
-			maxtry=$(($maxtry-1))
-			echo -n "."
-			sleep 1
-		done
-
-		# do this from memory we don't want clear text password in temp files
-		local sql="UPDATE mysql.user SET Password = PASSWORD('${pwd1}') WHERE USER='root'"
-		${ROOT}/usr/bin/mysql${MY_SUFFIX} \
-			--socket=${socket} \
-			-hlocalhost \
-			-e "${sql}"
-
-		einfo "Loading \"zoneinfo\" this step may require few seconds"
-
-		${ROOT}/usr/bin/mysql${MY_SUFFIX} \
-			--socket=${socket} \
-			-hlocalhost \
-			-uroot \
-			-p"${pwd1}" \
-			mysql < "${sqltmp}"
-
-		kill $(< "${pidfile}" )
-		rm  "${sqltmp}"
-		einfo "done"
-	fi # menusel
+	kill $( cat ${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}.pid )
+	rm  "${sqltmp}"
+	einfo "done"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.4 2005/11/24 14:03:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.5 2005/11/24 20:28:11 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -484,7 +484,7 @@ src_install() {
 	# TODO : what abaut ndb ?
 	local mylib mylibfullver mylibtmpver maxdots sonamelist
 	pushd "${D}/${MY_LIBDIR}"
-	for mylib in libmysqlclient_r libmysqlclient; do
+	for mylib in libmysqlclient_r libmysqlclient libndbclient; do
 		mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
 		mylibtmpver="${mylibfullver}"
 		maxdots=0
@@ -621,7 +621,7 @@ pkg_postinst() {
 	## TODO : what abaut ndb ?
 	#local mylib mylibfullver mylibtmpver maxdots sonamelist prevlink
 	#pushd "${ROOT}/${MY_LIBDIR}"
-	#for mylib in libmysqlclient_r libmysqlclient; do
+	#for mylib in libmysqlclient_r libmysqlclient libndbclient; do
 	#	mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
 	#	mylibtmpver="${mylibfullver}"
 	#	maxdots=0

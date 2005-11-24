@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.270 2005/11/24 18:42:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.271 2005/11/24 20:28:11 vivo Exp $
+
+*mysql-4.1.15-r1 (24 Nov 2005)
+
+  24 Nov 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15.ebuild,
+  +mysql-4.1.15-r1.ebuild, mysql-4.1.15-r30.ebuild, mysql-5.0.16-r30.ebuild:
+  - Restored messed up 4.1.15, thanks to Richard Brown for reporting.
+  - added 4.1.15-r1, basically the same ebuild as 5.0.16-r3
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> mysql-4.1.14.ebuild:
   Stable on ppc64
