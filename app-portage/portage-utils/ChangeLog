@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.18 2005/11/24 18:41:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.19 2005/11/24 21:38:05 solar Exp $
+
+*portage-utils-0.1.10 (24 Nov 2005)
+
+  24 Nov 2005; <solar@gentoo.org> -files/portage-utils-0.1.3-qdepends.patch,
+  -files/portage-utils-0.1.7-comments.patch, +portage-utils-0.1.10.ebuild,
+  -portage-utils-0.1.3-r1.ebuild, -portage-utils-0.1.5.ebuild,
+  -portage-utils-0.1.7.ebuild, -portage-utils-0.1.8.ebuild:
+  - fix segv in describe_use_flag on some 64bit arches. updated testsuite.
+  removed old ebuilds
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> portage-utils-0.1.9.ebuild:
   Stable on ppc64
