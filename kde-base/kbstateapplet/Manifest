@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 63ddf4605c25142a402a20c78811a920 ChangeLog 3652
+MD5 4aa7a4c60aeaa9e27febb5a2561b1d00 ChangeLog 3763
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kbstateapplet-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kbstateapplet-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kbstateapplet-3.4.3 76
@@ -11,16 +8,9 @@ MD5 2d4ea47288659c63d4b4d855015669bc files/digest-kbstateapplet-3.5.0_rc1 332
 MD5 174790e90449897638084f6c4bea761f files/digest-kbstateapplet-3.5_beta1 77
 MD5 41903595f1fe844227e9177091e4375e kbstateapplet-3.4.1.ebuild 481
 MD5 42cb59ec0517877178253f754357d94b kbstateapplet-3.4.2.ebuild 493
-MD5 1ed73123541d724a1a31ddb8191490e7 kbstateapplet-3.4.3.ebuild 494
+MD5 48fa92fa58a926c589022e25697b427b kbstateapplet-3.4.3.ebuild 490
 MD5 380c93842de8dd6f34efef85ba370659 kbstateapplet-3.5.0.ebuild 469
 MD5 91570fa6cc7b33f85505d67cf130e08b kbstateapplet-3.5.0_beta2.ebuild 474
 MD5 59ff6cdbd246b09ed87ab813d686331f kbstateapplet-3.5.0_rc1.ebuild 473
 MD5 f9eb809fff44220b0f61a1926775b2b0 kbstateapplet-3.5_beta1.ebuild 472
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhf5qKRy60XGEcJIRAnMBAJsFySP1laCBXy/HpAOeYMQGiDN0XgCgpdAl
-8ik6X3SZDraoXnSgXTEAsyg=
-=S2Ct
------END PGP SIGNATURE-----
