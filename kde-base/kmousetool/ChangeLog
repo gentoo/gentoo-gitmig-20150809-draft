@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmousetool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.25 2005/11/24 17:51:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.26 2005/11/24 22:58:34 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kmousetool-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   kmousetool-3.4.3.ebuild:

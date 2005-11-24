@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.29 2005/11/24 17:58:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.30 2005/11/24 23:03:30 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdeaccessibility-meta-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   kdeaccessibility-meta-3.4.3.ebuild:

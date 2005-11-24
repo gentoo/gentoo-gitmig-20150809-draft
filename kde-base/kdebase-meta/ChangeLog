@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.29 2005/11/24 20:11:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.30 2005/11/24 22:51:23 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdebase-meta-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kdebase-meta-3.4.3.ebuild:
   Stable on ppc64

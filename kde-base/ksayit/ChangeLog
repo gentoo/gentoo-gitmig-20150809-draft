@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksayit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.26 2005/11/24 17:57:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.27 2005/11/24 23:02:22 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> ksayit-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> ksayit-3.4.3.ebuild:
   Stable on sparc wrt #112842

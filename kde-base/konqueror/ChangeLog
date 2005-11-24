@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.28 2005/11/24 20:02:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.29 2005/11/24 22:41:42 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> konqueror-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> konqueror-3.4.3.ebuild:
   Stable on ppc64

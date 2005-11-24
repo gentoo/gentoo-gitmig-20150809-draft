@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.15 2005/11/22 22:14:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.16 2005/11/24 23:17:19 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> ksysv-3.4.2.ebuild:
+  Stable on amd64, bug 112842.
 
 *ksysv-3.5.0 (22 Nov 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.25 2005/11/24 22:52:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.26 2005/11/24 23:18:20 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kuser-3.4.2.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kuser-3.4.2.ebuild:
   Stable on ppc64

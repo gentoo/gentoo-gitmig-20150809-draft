@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.25 2005/11/24 17:52:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.26 2005/11/24 23:00:48 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kttsd-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kttsd-3.4.3.ebuild:
   Stable on sparc wrt #112842
