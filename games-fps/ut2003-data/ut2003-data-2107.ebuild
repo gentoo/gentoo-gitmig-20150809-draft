@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.2 2005/11/23 20:38:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.3 2005/11/24 14:30:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -38,8 +38,6 @@ pkg_setup() {
 src_unpack() {
 	unzip ${DISTDIR}/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
-	tar xf ${S}/ut2003lnxbins.tar \
-		|| die "unpacking original binaries/libraries"
 }
 
 src_install() {
@@ -65,6 +63,8 @@ src_install() {
 
 	unpack_makeself ${CDROM_ROOT}/linux_installer.sh \
 		|| die "unpacking linux installer"
+	tar xf ${S}/ut2003lnxbins.tar \
+		|| die "unpacking original binaries/libraries"
 
 	# create empty files in Benchmark
 	for j in {CSVs,Logs,Results} ; do

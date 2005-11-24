@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ChangeLog,v 1.2 2005/11/23 20:38:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ChangeLog,v 1.3 2005/11/24 14:30:04 wolf31o2 Exp $
+
+  24 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-data-2107.ebuild:
+  Fixing bug #113388 for real this time.
 
   23 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-data-2107.ebuild:
