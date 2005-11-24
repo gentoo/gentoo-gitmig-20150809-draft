@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.48 2005/11/06 22:31:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.49 2005/11/24 18:35:50 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org> seahorse-0.7.8.ebuild:
+  Stable on ppc64
 
   06 Nov 2005; <dang@gentoo.org> seahorse-0.7.9.ebuild:
   Modular X deps
