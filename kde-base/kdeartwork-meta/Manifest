@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f0f57fac0d0997b20fb2fa720fa87ac ChangeLog 3938
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0_beta2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5_beta1 0
+MD5 c9605c123f2bb25a66549419792c9332 ChangeLog 4037
 MD5 0568a67f40cae03b57bcbcd07a213f49 kdeartwork-meta-3.4.1.ebuild 989
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e203adf71436a8122d389e6860647b92 kdeartwork-meta-3.4.2.ebuild 1010
-MD5 91b445fb1074732758befb1cf5e9b934 kdeartwork-meta-3.4.3.ebuild 1010
-MD5 db7015f07754b003fc0d6c1b8a4e1fb4 kdeartwork-meta-3.5.0.ebuild 978
+MD5 74c6a5adff547c2958428fbef896ada7 kdeartwork-meta-3.5_beta1.ebuild 981
+MD5 ca677e2e3acfded80bf1b3df214b2cd6 kdeartwork-meta-3.4.3.ebuild 1008
 MD5 978736743bfbeb704fc6b17095a2daa6 kdeartwork-meta-3.5.0_beta2.ebuild 1001
 MD5 5da1ecbfd5f9fdd55aacfc3d7176bcb0 kdeartwork-meta-3.5.0_rc1.ebuild 1000
-MD5 74c6a5adff547c2958428fbef896ada7 kdeartwork-meta-3.5_beta1.ebuild 981
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcxnKRy60XGEcJIRAkfZAJ9Sq3wyQxhqz8hQtnjqWX2GGYM+5QCeIoN3
-HWM21wk3dtmIQVzefEAWImw=
-=mCZa
------END PGP SIGNATURE-----
+MD5 db7015f07754b003fc0d6c1b8a4e1fb4 kdeartwork-meta-3.5.0.ebuild 978
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0 0

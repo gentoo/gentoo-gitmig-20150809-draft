@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f77dc91e35556a8ab17ea370e803586b ChangeLog 3915
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-specialdates-3.4.1 208
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-specialdates-3.4.2 282
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kontact-specialdates-3.4.3 67
-MD5 d39afb82a428db364187e1039af79947 files/digest-kontact-specialdates-3.5.0 67
-MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-kontact-specialdates-3.5.0_beta2 212
-MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-kontact-specialdates-3.5.0_rc1 294
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kontact-specialdates-3.5_beta1 68
+MD5 0b161c6c94ff24100e2070c19febdb53 ChangeLog 4019
 MD5 ff077b11ff2c156103c5c3d4320fb66c kontact-specialdates-3.4.1.ebuild 1132
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3e548f8c524d789a670f319d5ccc5251 kontact-specialdates-3.4.2.ebuild 1145
-MD5 bba2ab331967b773d9da9b6f6cdc9554 kontact-specialdates-3.4.3.ebuild 1146
-MD5 0358791dc7bbc4ad2c1c87114d40813d kontact-specialdates-3.5.0.ebuild 1121
+MD5 faeca5543d578b94f51ea0387ad8e6f8 kontact-specialdates-3.5_beta1.ebuild 1124
+MD5 b3ed558962eb9a2537b4f00844d6e61a kontact-specialdates-3.4.3.ebuild 1144
 MD5 d079c92181da3152795087c91aa1d1dd kontact-specialdates-3.5.0_beta2.ebuild 1126
 MD5 9d873ab40a1d44879950d58c6d8d454d kontact-specialdates-3.5.0_rc1.ebuild 1133
-MD5 faeca5543d578b94f51ea0387ad8e6f8 kontact-specialdates-3.5_beta1.ebuild 1124
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhd2aKRy60XGEcJIRAl9SAJ9Va/g/UTGZmC6JbtOjSWWsh1QAkACfQljs
-lBhgquNPy5rtILOPuAGoXkY=
-=mqCP
------END PGP SIGNATURE-----
+MD5 0358791dc7bbc4ad2c1c87114d40813d kontact-specialdates-3.5.0.ebuild 1121
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-specialdates-3.4.1 208
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-specialdates-3.4.2 282
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kontact-specialdates-3.5_beta1 68
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kontact-specialdates-3.4.3 67
+MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-kontact-specialdates-3.5.0_beta2 212
+MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-kontact-specialdates-3.5.0_rc1 294
+MD5 d39afb82a428db364187e1039af79947 files/digest-kontact-specialdates-3.5.0 67

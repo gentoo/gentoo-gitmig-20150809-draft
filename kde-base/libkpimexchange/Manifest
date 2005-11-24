@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b05ff3ee3920aed17aec63c17c62514 ChangeLog 3699
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimexchange-3.4.1 208
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkpimexchange-3.4.3 67
-MD5 d39afb82a428db364187e1039af79947 files/digest-libkpimexchange-3.5.0 67
-MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-libkpimexchange-3.5.0_beta2 212
-MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-libkpimexchange-3.5.0_rc1 294
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkpimexchange-3.5_beta1 68
+MD5 32087431e328c11a8778a57212cbe49f ChangeLog 3798
 MD5 26596c7dc6ebbbcb8f61ef8078b79563 libkpimexchange-3.4.1.ebuild 960
-MD5 83f992860479e6b568531675f5855310 libkpimexchange-3.4.3.ebuild 969
-MD5 141b9fabc93523483f2e0d7a8bc59908 libkpimexchange-3.5.0.ebuild 916
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 a9b933cf7f12a39865b0ca337ca8673e libkpimexchange-3.5_beta1.ebuild 946
+MD5 d6316cad88f5a0b1d5970cbe0096e78f libkpimexchange-3.4.3.ebuild 967
 MD5 1972ef9cec95a39d33a977d1781e8c8a libkpimexchange-3.5.0_beta2.ebuild 919
 MD5 4073f2d080f78df25184267e343a0040 libkpimexchange-3.5.0_rc1.ebuild 920
-MD5 a9b933cf7f12a39865b0ca337ca8673e libkpimexchange-3.5_beta1.ebuild 946
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdqKKRy60XGEcJIRAtkJAJ9qbsLT5cIIrHimn8of7zwnHRemAQCdHUPF
-pDpFDtpZLgWxTLaSwAT0nG0=
-=rjJY
------END PGP SIGNATURE-----
+MD5 141b9fabc93523483f2e0d7a8bc59908 libkpimexchange-3.5.0.ebuild 916
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimexchange-3.4.1 208
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkpimexchange-3.5_beta1 68
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkpimexchange-3.4.3 67
+MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-libkpimexchange-3.5.0_beta2 212
+MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-libkpimexchange-3.5.0_rc1 294
+MD5 d39afb82a428db364187e1039af79947 files/digest-libkpimexchange-3.5.0 67

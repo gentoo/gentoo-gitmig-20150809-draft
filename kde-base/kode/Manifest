@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4928e4751594049a6d852d0abedf0fe5 ChangeLog 2826
+MD5 65c4d5d83ee79c2c2897c59c1ae64dec ChangeLog 2912
+MD5 3b6dedfbeddb8eb849bc3c7b1b726d2f kode-3.4.1.ebuild 385
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 9ec566b38da9dfcb7cb1ec96ba2b04e2 kode-3.5_beta1.ebuild 378
+MD5 0796cde66200845bb55dab71e6bc60b8 kode-3.4.3.ebuild 386
+MD5 09a0f3b42de5b3bea65b1cebd20c3e0b kode-3.5.0.ebuild 368
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kode-3.4.1 208
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kode-3.5_beta1 68
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kode-3.4.3 67
 MD5 d39afb82a428db364187e1039af79947 files/digest-kode-3.5.0 67
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kode-3.5_beta1 68
-MD5 3b6dedfbeddb8eb849bc3c7b1b726d2f kode-3.4.1.ebuild 385
-MD5 ba31e0b904864953fdd57eb9d2648a33 kode-3.4.3.ebuild 388
-MD5 09a0f3b42de5b3bea65b1cebd20c3e0b kode-3.5.0.ebuild 368
-MD5 9ec566b38da9dfcb7cb1ec96ba2b04e2 kode-3.5_beta1.ebuild 378
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdq9KRy60XGEcJIRAumXAKCDedCT9sE9IC41Y5wM6U1fzPUnrgCghPa5
-DQfSCnVSSX4U9IPLgg5iggQ=
-=xq1o
------END PGP SIGNATURE-----

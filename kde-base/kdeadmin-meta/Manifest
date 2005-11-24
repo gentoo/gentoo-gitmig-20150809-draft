@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09a12f0d8a6d5b8ba2cbfbf589abfba1 ChangeLog 4007
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.0_beta2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5_beta1 0
+MD5 c63fc86c923302be1dc42811b72cc2e2 ChangeLog 4102
 MD5 4532e72b8eda62bcbe43262c9721a833 kdeadmin-meta-3.4.1.ebuild 901
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 9d364fed497b9fa2907c0618205fe8eb kdeadmin-meta-3.4.2.ebuild 922
-MD5 ff483c1a46030c48d4d3be5accabbca1 kdeadmin-meta-3.4.3.ebuild 923
-MD5 43d74475b500e382714d6c9b34c40b3b kdeadmin-meta-3.5.0.ebuild 890
+MD5 0366d48bfdde4171ac3aa2b0c3babd0e kdeadmin-meta-3.5_beta1.ebuild 893
+MD5 6e278270b8a77fc40402a0b021a65f3b kdeadmin-meta-3.4.3.ebuild 921
 MD5 9e7ee37e7a256a6c053bc696034c4d6a kdeadmin-meta-3.5.0_beta2.ebuild 907
 MD5 af64873d1cc86a393aa047a546a87f4f kdeadmin-meta-3.5.0_rc1.ebuild 922
-MD5 0366d48bfdde4171ac3aa2b0c3babd0e kdeadmin-meta-3.5_beta1.ebuild 893
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdcUKRy60XGEcJIRAgDHAJsG2X2GvOk7K0mmrsQ64Q5RWu/IhgCeJ/HT
-u6OdEXQxMe3fRqkza06ANhY=
-=TnMu
------END PGP SIGNATURE-----
+MD5 43d74475b500e382714d6c9b34c40b3b kdeadmin-meta-3.5.0.ebuild 890
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.0 0

@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d348a660e7fda7749e0a3832a5afb693 ChangeLog 4344
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kresources-3.4.1 208
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kresources-3.4.2 282
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-kresources-3.4.3 67
-MD5 d39afb82a428db364187e1039af79947 files/digest-kdepim-kresources-3.5.0 67
-MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-kdepim-kresources-3.5.0_beta2 212
-MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-kdepim-kresources-3.5.0_rc1 294
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kdepim-kresources-3.5_beta1 68
-MD5 54ceeeba45d6d32a321821536b100e40 files/use-installed-kode.diff 687
+MD5 4ac051d6a09a65d9c5602bdf4584131f ChangeLog 4445
 MD5 0a2cbfdefb831eac9e2513108f3d5e0b kdepim-kresources-3.4.1.ebuild 1232
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 fe6bf70826d578fd3c7c156c2100329f kdepim-kresources-3.4.2.ebuild 1248
-MD5 825904755427a94365673b76f4dad887 kdepim-kresources-3.4.3.ebuild 1246
-MD5 c5b0c4ed9cfcf5cc49108195addbd2a8 kdepim-kresources-3.5.0.ebuild 1300
+MD5 ded2e75747453250c35e61384f4e7cd1 kdepim-kresources-3.5_beta1.ebuild 1242
+MD5 7acce1d281d53d972d59d8f39c3b12d0 kdepim-kresources-3.4.3.ebuild 1244
 MD5 a02ad46ba870efee2b8fca4a445bfc6a kdepim-kresources-3.5.0_beta2.ebuild 1309
 MD5 d7555a965e465699b428d279c262995f kdepim-kresources-3.5.0_rc1.ebuild 1310
-MD5 ded2e75747453250c35e61384f4e7cd1 kdepim-kresources-3.5_beta1.ebuild 1242
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhds8KRy60XGEcJIRAq7cAJ9WCTnfDc/3NBakkU237kx4XPpRMwCff3BA
-mbY1Tllavwb8Nha0+2FZUak=
-=/CFi
------END PGP SIGNATURE-----
+MD5 c5b0c4ed9cfcf5cc49108195addbd2a8 kdepim-kresources-3.5.0.ebuild 1300
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kresources-3.4.1 208
+MD5 54ceeeba45d6d32a321821536b100e40 files/use-installed-kode.diff 687
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kresources-3.4.2 282
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kdepim-kresources-3.5_beta1 68
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-kresources-3.4.3 67
+MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-kdepim-kresources-3.5.0_beta2 212
+MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-kdepim-kresources-3.5.0_rc1 294
+MD5 d39afb82a428db364187e1039af79947 files/digest-kdepim-kresources-3.5.0 67

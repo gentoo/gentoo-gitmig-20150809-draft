@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9121c056c74996cc54c9461cdaa22c69 ChangeLog 3677
-MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kworldwatch-3.4.1 208
-MD5 51760bf43f61d4083bb13b322559c21f files/digest-kworldwatch-3.4.2 282
-MD5 4792409083f3033f880840748c1ec31a files/digest-kworldwatch-3.4.3 67
-MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kworldwatch-3.5.0 67
-MD5 4ae7eba9ab986e6234dba1ff579990e1 files/digest-kworldwatch-3.5.0_beta2 212
-MD5 3d41e8340efb549d39c73e6c9bc0897e files/digest-kworldwatch-3.5.0_rc1 294
-MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kworldwatch-3.5_beta1 68
+MD5 fc36fbfbf44f3f4634de796bea072f8f ChangeLog 3770
 MD5 d72f0fe6eee3a7e82aeb6ac4f1bdc157 kworldwatch-3.4.1.ebuild 518
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e29100203047ae02c86e0776950b0097 kworldwatch-3.4.2.ebuild 531
-MD5 5fa7dee9f8fc7a678ebc26a82cabaa3f kworldwatch-3.4.3.ebuild 532
-MD5 48530a03a0b7be207bc8f73ac6d09b7b kworldwatch-3.5.0.ebuild 507
+MD5 1fd0b9a5b3d8ab0431e9faa917a3b6b5 kworldwatch-3.5_beta1.ebuild 510
+MD5 497eebdf5368de1a253542f7a60e23e7 kworldwatch-3.4.3.ebuild 530
 MD5 af22a9c15091fb53476f1c11f4facbf6 kworldwatch-3.5.0_beta2.ebuild 512
 MD5 51a6807f073d2c622e1ba5c7c3dfa171 kworldwatch-3.5.0_rc1.ebuild 511
-MD5 1fd0b9a5b3d8ab0431e9faa917a3b6b5 kworldwatch-3.5_beta1.ebuild 510
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcs6KRy60XGEcJIRAih6AJ9n+EVefp5cBsspaoRACJpgfaeXhQCfZHZW
-gwwwXDsaGMJnPU0NbVEckHs=
-=s8cV
------END PGP SIGNATURE-----
+MD5 48530a03a0b7be207bc8f73ac6d09b7b kworldwatch-3.5.0.ebuild 507
+MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kworldwatch-3.4.1 208
+MD5 51760bf43f61d4083bb13b322559c21f files/digest-kworldwatch-3.4.2 282
+MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kworldwatch-3.5_beta1 68
+MD5 4792409083f3033f880840748c1ec31a files/digest-kworldwatch-3.4.3 67
+MD5 4ae7eba9ab986e6234dba1ff579990e1 files/digest-kworldwatch-3.5.0_beta2 212
+MD5 3d41e8340efb549d39c73e6c9bc0897e files/digest-kworldwatch-3.5.0_rc1 294
+MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kworldwatch-3.5.0 67

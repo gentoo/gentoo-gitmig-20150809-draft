@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba3225d820c763bfdc54fb7e9e59bf44 ChangeLog 3276
-MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kmoon-3.4.1 208
-MD5 51760bf43f61d4083bb13b322559c21f files/digest-kmoon-3.4.2 282
-MD5 4792409083f3033f880840748c1ec31a files/digest-kmoon-3.4.3 67
-MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kmoon-3.5.0 67
-MD5 4ae7eba9ab986e6234dba1ff579990e1 files/digest-kmoon-3.5.0_beta2 212
-MD5 3d41e8340efb549d39c73e6c9bc0897e files/digest-kmoon-3.5.0_rc1 294
-MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kmoon-3.5_beta1 68
+MD5 71cf3aa6f9e883cac888f3b923fd5486 ChangeLog 3363
 MD5 d28639bb2adf6ef1962a01badc8ddf97 kmoon-3.4.1.ebuild 382
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ba862c567ee76fcf8c0cf25e23731df5 kmoon-3.4.2.ebuild 395
-MD5 f0aa08e4a3feff63cf4a213b49de8cbf kmoon-3.4.3.ebuild 397
-MD5 f1a365802733e36703998835ca111835 kmoon-3.5.0.ebuild 371
+MD5 cd69f09b2c77950264fc8828fb5a9061 kmoon-3.5_beta1.ebuild 374
+MD5 b03d1c2cf872ef24594dbca837e123b6 kmoon-3.4.3.ebuild 395
 MD5 cdb5837f446612b1a0563ab4ca6358af kmoon-3.5.0_beta2.ebuild 376
 MD5 144340ce4b2b664357de260d92d14662 kmoon-3.5.0_rc1.ebuild 375
-MD5 cd69f09b2c77950264fc8828fb5a9061 kmoon-3.5_beta1.ebuild 374
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdghKRy60XGEcJIRAnD3AJ0S20/uRQg0cNkUBmw6gRh2ECZ43ACbBjBC
-lTu+cTu4Zn1bF8RfF06+Evk=
-=/b/j
------END PGP SIGNATURE-----
+MD5 f1a365802733e36703998835ca111835 kmoon-3.5.0.ebuild 371
+MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kmoon-3.4.1 208
+MD5 51760bf43f61d4083bb13b322559c21f files/digest-kmoon-3.4.2 282
+MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kmoon-3.5_beta1 68
+MD5 4792409083f3033f880840748c1ec31a files/digest-kmoon-3.4.3 67
+MD5 4ae7eba9ab986e6234dba1ff579990e1 files/digest-kmoon-3.5.0_beta2 212
+MD5 3d41e8340efb549d39c73e6c9bc0897e files/digest-kmoon-3.5.0_rc1 294
+MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kmoon-3.5.0 67

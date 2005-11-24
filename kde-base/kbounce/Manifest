@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14e53306e77a4628ba4840bc8886f2d0 ChangeLog 3236
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kbounce-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kbounce-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kbounce-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kbounce-3.5.0 69
-MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kbounce-3.5.0_beta2 218
-MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kbounce-3.5.0_rc1 302
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kbounce-3.5_beta1 70
+MD5 2a8603cc985151436ce0caa2ad245406 ChangeLog 3325
 MD5 ebaf6c2739231b4a7c78ff78e133c439 kbounce-3.4.1.ebuild 690
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 040f8483350ecd97826ba1dfbf2d9c1c kbounce-3.4.2.ebuild 547
-MD5 f9b920a0c6f7151d3103c2bd5d643136 kbounce-3.4.3.ebuild 548
-MD5 06687830fb8e1b1a7e2e8c8f4fa7ec23 kbounce-3.5.0.ebuild 486
+MD5 815736cda87c9adf50b7c363a638e517 kbounce-3.5_beta1.ebuild 526
+MD5 67c344b47061efcc9c0eeb34ae5c87dc kbounce-3.4.3.ebuild 546
 MD5 51688561b2e8f3ad122071fa5c72bf14 kbounce-3.5.0_beta2.ebuild 491
 MD5 fdddcce40fb310589a6402ba1fc50685 kbounce-3.5.0_rc1.ebuild 490
-MD5 815736cda87c9adf50b7c363a638e517 kbounce-3.5_beta1.ebuild 526
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhczhKRy60XGEcJIRAtHMAKCPZ8y0LcITrI8mcB3f0Zl7kwzJMwCeO7rM
-2sU6QJO1a4RLlNuMky7FDZI=
-=TSDx
------END PGP SIGNATURE-----
+MD5 06687830fb8e1b1a7e2e8c8f4fa7ec23 kbounce-3.5.0.ebuild 486
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kbounce-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kbounce-3.4.2 288
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kbounce-3.5_beta1 70
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kbounce-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kbounce-3.5.0_beta2 218
+MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kbounce-3.5.0_rc1 302
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kbounce-3.5.0 69

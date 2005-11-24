@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 033a68c71b4c2e727ff5bd7ffd499351 ChangeLog 3536
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kjumpingcube-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kjumpingcube-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kjumpingcube-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kjumpingcube-3.5.0 69
-MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kjumpingcube-3.5.0_beta2 218
-MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kjumpingcube-3.5.0_rc1 302
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kjumpingcube-3.5_beta1 70
+MD5 a48d6c080d24f5658976a69ccaa51aae ChangeLog 3630
 MD5 73bbdcb6a9357fbcc65f6d010c1a7f6b kjumpingcube-3.4.1.ebuild 559
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ab746a29763e566c9cb829647cddb154 kjumpingcube-3.4.2.ebuild 572
-MD5 90f6c28c61c10458e2c21527faabaf75 kjumpingcube-3.4.3.ebuild 573
-MD5 74dcde9ad2f84ee1f26dc00713297b29 kjumpingcube-3.5.0.ebuild 511
+MD5 829f3a1b7f90ddd83862867722bb957d kjumpingcube-3.5_beta1.ebuild 551
+MD5 f8ddd62a6bd9ed06125430c055c31726 kjumpingcube-3.4.3.ebuild 571
 MD5 49a0609e0c8a8e9e2a98ccebcf2355f0 kjumpingcube-3.5.0_beta2.ebuild 516
 MD5 40cfa0f10d4f8c813fd582b7bd2b039a kjumpingcube-3.5.0_rc1.ebuild 515
-MD5 829f3a1b7f90ddd83862867722bb957d kjumpingcube-3.5_beta1.ebuild 551
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhc2LKRy60XGEcJIRAioYAJ0UuUcDB9gaDRYb3pFnyyFyTmF+CwCfda61
-F46SAx/uKgsM3T7LjSOJbxQ=
-=m3aX
------END PGP SIGNATURE-----
+MD5 74dcde9ad2f84ee1f26dc00713297b29 kjumpingcube-3.5.0.ebuild 511
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kjumpingcube-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kjumpingcube-3.4.2 288
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kjumpingcube-3.5_beta1 70
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kjumpingcube-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kjumpingcube-3.5.0_beta2 218
+MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kjumpingcube-3.5.0_rc1 302
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kjumpingcube-3.5.0 69

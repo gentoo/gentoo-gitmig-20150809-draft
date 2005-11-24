@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cda0afd10cc8a531e571a9259d8b5a8b ChangeLog 3426
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kmahjongg-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kmahjongg-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kmahjongg-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kmahjongg-3.5.0 69
-MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kmahjongg-3.5.0_beta2 218
-MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kmahjongg-3.5.0_rc1 302
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kmahjongg-3.5_beta1 70
+MD5 1db3fb0b90e02a92b7f7ff9a3a3198fb ChangeLog 3517
 MD5 39eb2fed1920fc8c5dfc43f5cd105b6c kmahjongg-3.4.1.ebuild 533
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3afcbda6f0ff27af980378a4798413d9 kmahjongg-3.4.2.ebuild 546
-MD5 c3adf476731e197c3af445f21bb46f8b kmahjongg-3.4.3.ebuild 547
-MD5 a26f0e22dc3238e9d1567842bd563d30 kmahjongg-3.5.0.ebuild 485
+MD5 304c0557461c41c833c26db29b56e1da kmahjongg-3.5_beta1.ebuild 525
+MD5 becb4bb9ecb7961187d50f7c83414bc8 kmahjongg-3.4.3.ebuild 545
 MD5 f116643daba2016aab47693e3efe227c kmahjongg-3.5.0_beta2.ebuild 490
 MD5 e9438dc4117fb1ec92aeee740de91f7e kmahjongg-3.5.0_rc1.ebuild 489
-MD5 304c0557461c41c833c26db29b56e1da kmahjongg-3.5_beta1.ebuild 525
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdF9KRy60XGEcJIRAl5MAJsFJMJpV0uQB/jsjIYEy2hwdP2fbgCeMh6y
-8kVmRk77zu4o0ix+m0Ywh1c=
-=PtA/
------END PGP SIGNATURE-----
+MD5 a26f0e22dc3238e9d1567842bd563d30 kmahjongg-3.5.0.ebuild 485
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kmahjongg-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kmahjongg-3.4.2 288
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kmahjongg-3.5_beta1 70
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kmahjongg-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kmahjongg-3.5.0_beta2 218
+MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kmahjongg-3.5.0_rc1 302
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kmahjongg-3.5.0 69

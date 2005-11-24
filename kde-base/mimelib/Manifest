@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a69adae35d91296736988830e62f5a80 ChangeLog 2929
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-mimelib-3.4.1 208
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-mimelib-3.4.2 282
-MD5 d39afb82a428db364187e1039af79947 files/digest-mimelib-3.5.0 67
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-mimelib-3.5_beta1 68
+MD5 5c2d21510152954aa1621c123d58ac20 ChangeLog 3018
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2739af1ccf73445db9a3428c766a36c5 mimelib-3.4.1.ebuild 378
-MD5 2cb7b4d646c21847bacdd5a30c7d7d50 mimelib-3.4.2.ebuild 394
-MD5 5df816e1423b9e45ef98b75dd526fafd mimelib-3.5.0.ebuild 372
+MD5 18d4d58096a846cb7e130b99350897c7 mimelib-3.4.2.ebuild 392
 MD5 061138f6cf79149ae7985a006c860b8a mimelib-3.5_beta1.ebuild 382
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdvkKRy60XGEcJIRAqhrAJ9e7x0+28XaRwsZKF0hSSpJohoytQCgidJx
-/kDlcoyJYaEZti8MRATnFPc=
-=+P3z
------END PGP SIGNATURE-----
+MD5 5df816e1423b9e45ef98b75dd526fafd mimelib-3.5.0.ebuild 372
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-mimelib-3.4.1 208
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-mimelib-3.4.2 282
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-mimelib-3.5_beta1 68
+MD5 d39afb82a428db364187e1039af79947 files/digest-mimelib-3.5.0 67
