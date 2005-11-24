@@ -1,4 +1,5 @@
-MD5 f027a27b7b98a6ff8d89e66eb8d83098 ChangeLog 36557
+MD5 700fcbd77de6239d7ffaf5d56f7ae5eb ChangeLog 36726
+MD5 cc5756b8c7af5c88b248b86c73fc5c8d files/1.5/firefox-1.1-visibility.patch 930
 MD5 7847d262e628dcac303586fe02f2e8c4 files/1.5/firefox-cairo-canvas.patch 446
 MD5 91661761f2f232b08b74f5adc4f1eff0 files/1.5/firefox-nopangoxft.patch 839
 MD5 362f9e0b0f25b964f7120b68fb629ee0 files/1.5/firefox-visibility.patch 689
@@ -41,4 +42,4 @@ MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 7ec6e77c0014718ffae4a55c76acd1db mozilla-firefox-1.0.7-r2.ebuild 8564
 MD5 b686423c9050edfcfd7ff72ea4081f09 mozilla-firefox-1.0.7-r3.ebuild 9734
-MD5 699f23f5022ea1b7d3b16ac41cc0fe05 mozilla-firefox-1.5_rc3-r1.ebuild 8788
+MD5 a9b9132aef328d7a91afec2cb2ec3c35 mozilla-firefox-1.5_rc3-r1.ebuild 8824

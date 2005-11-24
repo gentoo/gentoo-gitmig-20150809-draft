@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc3-r1.ebuild,v 1.1 2005/11/21 00:17:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc3-r1.ebuild,v 1.2 2005/11/24 03:45:18 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -54,10 +54,9 @@ src_unpack() {
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/1.5/mozilla-1.3-alpha-stubs.patch
 
-	# amd64 visibility patch
-	if [[ ${ARCH} == amd64 ]] && [[ $(gcc-major-version) -ge 3 ]]; then
-	    epatch ${FILESDIR}/1.5/firefox-visibility.patch
-	fi
+	# addresses visibility issues on ppc and amd64
+	# will not hurt to apply on other archs as well.
+	epatch ${FILESDIR}/1.5/firefox-1.1-visibility.patch
 
 	# hppa patches from Ivar <orskaug@stud.ntnu.no>
 	# <gmsoft@gentoo.org> (22 Dec 2004)
@@ -84,7 +83,7 @@ src_unpack() {
 	# cairo-canvas patch, only needed to build against system cairo
 	# epatch ${FILESDIR}/1.5/firefox-cairo-canvas.patch
 
-	# fedora patch
+	# patch from fedora to stop crashing with gnome-vfs
 	epatch ${FILESDIR}/firefox-1.1-uriloader.patch
 
 	####################################
