@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0.ebuild,v 1.5 2005/10/02 17:03:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0.ebuild,v 1.6 2005/11/24 19:38:16 blubb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://thekonst.net/download/${P}.tar.bz2"
 HOMEPAGE="http://thekonst.net/en/centericq"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ppc ~ppc64 sparc x86"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
