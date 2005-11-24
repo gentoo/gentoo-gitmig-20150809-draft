@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.6 2005/11/24 19:35:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.7 2005/11/24 20:24:06 chtekk Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
 
-[ -z "${EACCELERATOR_CACHEDIR}" ] && EACCELERATOR_CACHEDIR=/var/cache/eaccelerator
+[ -z "${EACCELERATOR_CACHEDIR}" ] && EACCELERATOR_CACHEDIR="/var/cache/eaccelerator"
 
 inherit php-ext-source-r1
 
@@ -23,8 +23,8 @@ DEPEND="${DEPEND}
 
 # this is a good example of why we need all web servers installed under a
 # common 'www' user and group!
-HTTPD_USER=apache
-HTTPD_GROUP=apache
+HTTPD_USER="apache"
+HTTPD_GROUP="apache"
 
 need_php_by_category
 
@@ -66,7 +66,7 @@ src_install() {
 	fowners ${HTTPD_USER}:${HTTPD_GROUP} "${EACCELERATOR_CACHEDIR}"
 	fperms 750 "${EACCELERATOR_CACHEDIR}"
 
-	insinto ${PHP_EXT_SHARED_DIR}
+	insinto "/usr/share/${PN}"
 	doins encoder.php eaccelerator.php eaccelerator_password.php
 	dodoc-php AUTHORS ChangeLog COPYING NEWS README README.eLoader
 
