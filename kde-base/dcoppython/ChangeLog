@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.15 2005/11/22 22:13:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.16 2005/11/24 18:15:44 gustavoz Exp $
+
+  24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  dcoppython-3.4.2.ebuild:
+  Stable on sparc wrt #112842
 
 *dcoppython-3.5.0 (22 Nov 2005)
 

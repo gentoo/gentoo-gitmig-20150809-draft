@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.27 2005/11/22 22:14:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.28 2005/11/24 17:33:44 gustavoz Exp $
+
+  24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdebase-meta-3.4.3.ebuild:
+  Stable on sparc wrt #112842
 
 *kdebase-meta-3.5.0 (22 Nov 2005)
 
