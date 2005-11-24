@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.73 2005/11/24 18:24:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.74 2005/11/24 18:32:36 morfic Exp $
+
+  24 Nov 2005; Daniel Goller <morfic@gentoo.org> -boost-1.29.0.ebuild,
+  -boost-1.30.0.ebuild, -boost-1.30.2.ebuild, -boost-1.31.0.ebuild,
+  -boost-1.32.0.ebuild, -boost-1.32.0-r1.ebuild, -boost-1.32.0-r2.ebuild,
+  -boost-1.32.0-r3.ebuild, -boost-1.32.0-r4.ebuild:
+  Removing OLD versions
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> boost-1.33.0-r1.ebuild:
   Stable on ppc64
