@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlunit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.5 2005/11/24 03:37:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.6 2005/11/24 18:14:44 compnerd Exp $
+
+  24 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  xmlunit-1.0-r1.ebuild:
+  Restoring dropped junit tests.
 
 *xmlunit-1.0-r1 (24 Nov 2005)
 

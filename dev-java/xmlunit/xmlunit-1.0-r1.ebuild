@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r1.ebuild,v 1.1 2005/11/24 03:37:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r1.ebuild,v 1.2 2005/11/24 18:14:44 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -10,12 +10,13 @@ HOMEPAGE="http://xmlunit.sourceforge.net/"
 LICENSE="BSD"
 SLOT="1"
 KEYWORDS="x86 amd64 ~ppc"
-IUSE="doc jikes source"
+IUSE="doc jikes junit source"
 DEPEND=">=virtual/jdk-1.3
 		>=app-arch/unzip-5.50-r1
 		>=dev-java/ant-core-1.6
 	  	  dev-java/junit
 		jikes? ( >=dev-java/jikes-1.21 )
+		junit? ( >=dev-java/ant-1.6 )
 		source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3"
 
@@ -35,6 +36,7 @@ src_compile() {
 
 	use doc && antflags="${antflags} docs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	use junit && antflags="${antflags} test"
 
 	ant ${antflags} || die "failed to build"
 }
