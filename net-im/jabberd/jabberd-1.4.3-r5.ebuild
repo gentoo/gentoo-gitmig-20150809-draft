@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r5.ebuild,v 1.4 2005/08/23 21:53:35 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r5.ebuild,v 1.5 2005/11/24 16:50:10 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -72,7 +72,7 @@ src_compile() {
 src_install() {
 	insinto /etc/conf.d ; newins ${FILESDIR}/jabber-conf.d jabber
 	exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r8 jabber
-	dodir /usr/sbin /etc/jabber /usr/lib/jabberd /var/log/jabber /usr/include/jabberd
+	dodir /usr/sbin /etc/jabber /usr/$(get_libdir)/jabberd /var/log/jabber /usr/include/jabberd
 	touch ${D}/var/log/jabber/error.log
 	touch ${D}/var/log/jabber/record.log
 	dodir /var/spool/jabber
@@ -82,7 +82,7 @@ src_install() {
 
 	exeinto /usr/sbin
 	doexe jabberd/jabberd
-	insinto /usr/lib/jabberd
+	insinto /usr/$(get_libdir)/jabberd
 	doins platform-settings
 	doins jsm/jsm.so
 	doins xdb_file/xdb_file.so
@@ -94,7 +94,7 @@ src_install() {
 		doins xdb_ldap/jabber.schema
 		doins xdb_ldap/slapd.conf
 		doins config/xdb-ldap.xml
-		insinto /usr/lib/jabberd
+		insinto /usr/$(get_libdir)/jabberd
 		doins xdb_ldap/src/xdb_ldap.so
 	fi
 	insinto /etc/jabber
