@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.4.ebuild,v 1.3 2005/11/20 02:51:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.4.ebuild,v 1.4 2005/11/24 23:04:16 betelgeuse Exp $
 
 DESCRIPTION="Azureus - Java BitTorrent Client"
 HOMEPAGE="http://azureus.sourceforge.net/"
@@ -56,8 +56,10 @@ src_compile() {
 		# Sun derived JREs (Blackdown, Sun)
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/rt.jar"
 	fi
-	ant -q -q \
-		-buildfile build.xml ${ant_extra_opts} jar \
+
+	# Fails to build on amd64 without this
+	ANT_OPTS="${ANT_OPTS} -Xmx1g" \
+		ant -q -q ${ant_extra_opts} jar \
 		|| die "ant build failed"
 }
 
