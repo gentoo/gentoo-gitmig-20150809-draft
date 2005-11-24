@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.5 2005/11/19 20:35:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.6 2005/11/24 19:35:11 chtekk Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="eaccelerator"
@@ -30,16 +30,17 @@ need_php_by_category
 
 pkg_setup() {
 	require_php_sapi_from cgi apache apache2
+
 	require_php_with_use zlib
 }
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# Patch to support Hardened-PHP from the Hardened-PHP Team
-	epatch ${FILESDIR}/eaccelerator-0.9.3-hash-fix.patch
+	epatch "${FILESDIR}/eaccelerator-0.9.3-hash-fix.patch"
 }
 
 src_compile() {
@@ -61,13 +62,13 @@ src_compile() {
 src_install() {
 	php-ext-source-r1_src_install
 
-	keepdir ${EACCELERATOR_CACHEDIR}
+	keepdir "${EACCELERATOR_CACHEDIR}"
 	fowners ${HTTPD_USER}:${HTTPD_GROUP} "${EACCELERATOR_CACHEDIR}"
 	fperms 750 "${EACCELERATOR_CACHEDIR}"
 
-	insinto /usr/share/${PN}
+	insinto ${PHP_EXT_SHARED_DIR}
 	doins encoder.php eaccelerator.php eaccelerator_password.php
-	dodoc AUTHORS ChangeLog COPYING NEWS README README.eLoader
+	dodoc-php AUTHORS ChangeLog COPYING NEWS README README.eLoader
 
 	php-ext-base-r1_addtoinifiles "eaccelerator.shm_size" '"64"'
 	php-ext-base-r1_addtoinifiles "eaccelerator.cache_dir" "\"${EACCELERATOR_CACHEDIR}\""
