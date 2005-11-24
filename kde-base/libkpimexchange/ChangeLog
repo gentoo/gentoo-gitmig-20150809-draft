@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpimexchange
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimexchange/ChangeLog,v 1.26 2005/11/24 15:21:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimexchange/ChangeLog,v 1.27 2005/11/24 22:29:58 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  libkpimexchange-3.4.3.ebuild:
+  Stable on ppc64
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libkpimexchange-3.4.3.ebuild:

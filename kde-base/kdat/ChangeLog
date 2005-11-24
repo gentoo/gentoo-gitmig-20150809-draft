@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdat/ChangeLog,v 1.23 2005/11/24 15:02:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdat/ChangeLog,v 1.24 2005/11/24 22:51:22 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org> kdat-3.4.3.ebuild:
+  Stable on ppc64
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kdat-3.4.3.ebuild:
   Stable on sparc wrt #112842
