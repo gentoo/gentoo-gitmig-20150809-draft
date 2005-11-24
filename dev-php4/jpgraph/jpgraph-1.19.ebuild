@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/jpgraph/jpgraph-1.19.ebuild,v 1.2 2005/09/24 17:21:24 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/jpgraph/jpgraph-1.19.ebuild,v 1.3 2005/11/24 21:18:50 chtekk Exp $
 
 inherit php-lib-r1
 
@@ -26,12 +26,12 @@ pkg_setup() {
 
 	# check to wich user:group the cache dir will go
 	if has_version "net-www/apache" ; then
-		HTTPD_USER=apache
-		HTTPD_GROUP=apache
+		HTTPD_USER="apache"
+		HTTPD_GROUP="apache"
 		einfo "Configuring cache dir ${JPGRAPH_CACHE_DIR} for Apache."
 	else
-		HTTPD_USER=root
-		HTTPD_GROUP=root
+		HTTPD_USER="root"
+		HTTPD_GROUP="root"
 		ewarn "No Apache webserver detected - ${JPGRAPH_CACHE_DIR} will be"
 		ewarn "owned by ${HTTPD_USER}:${HTTPD_GROUP} instead."
 	fi
@@ -69,7 +69,7 @@ src_install() {
 
 	# install documentation
 	einfo "Installing documentation"
-	dodoc README QPL.txt
+	dodoc-php README QPL.txt
 	dohtml -r docs/*
 
 	# setup the cache dir
