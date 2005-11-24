@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.4.3.ebuild,v 1.3 2005/11/24 19:47:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.4.3.ebuild,v 1.4 2005/11/24 22:10:40 cryos Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE panel housing varous applets"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ppc64 sparc ~x86"
 IUSE=""
 PATCHES="$FILESDIR/applets-configure.in.in.diff"
 OLDDEPEND="~kde-base/libkonq-3.3.1"
