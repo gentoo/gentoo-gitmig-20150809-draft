@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.5 2005/11/24 20:28:11 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.6 2005/11/24 21:00:54 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -569,7 +569,6 @@ src_install() {
 		#empty dirs...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-			addwrite "${DATADIR}"
 			dodir "${DATADIR}"
 			keepdir "${DATADIR}"
 			chown -R mysql:mysql "${D}/${DATADIR}"
@@ -577,10 +576,9 @@ src_install() {
 
 		diropts "-m0755"
 		for folder in "${MY_LOGDIR}" "/var/run/mysqld" ; do
-			addwrite "${folder}"
 			dodir "${folder}"
 			keepdir "${folder}"
-			chown -R mysql:mysql "${folder}"
+			chown -R mysql:mysql "${D}/${folder}"
 		done
 	fi
 
