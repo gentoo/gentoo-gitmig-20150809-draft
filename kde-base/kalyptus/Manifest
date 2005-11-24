@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8b2331ea134ba445bcfa5992b6cbdb36 ChangeLog 2945
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-kalyptus-3.3.2 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kalyptus-3.4.1 221
@@ -13,3 +16,10 @@ MD5 99d8b8531444c160fda223a8dce9af67 kalyptus-3.5.0.ebuild 694
 MD5 68cf30ec3e59b706686737b992032be7 kalyptus-3.5.0_beta2.ebuild 699
 MD5 15641720b2b31448a302e2ab9d4653e9 kalyptus-3.5.0_rc1.ebuild 698
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhgOlKRy60XGEcJIRAlYsAKC05ldVRqghgWriROEgxn56oLuddQCfWege
+Bze1laXCIyrN2kldns9nzAA=
+=ZGpX
+-----END PGP SIGNATURE-----

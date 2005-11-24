@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03b12465d56a135cbfd8e1d88da7d3d4 ChangeLog 4962
 MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
 MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
@@ -19,3 +22,10 @@ MD5 7a38d417f25fe1765de3b65c106ed2b9 kdebase-startkde-3.5.0_beta2.ebuild 2195
 MD5 f3407857320e2382112c204b30f7d4c4 kdebase-startkde-3.5.0_rc1.ebuild 2204
 MD5 08e1648f05e028801785181139b3a255 kdebase-startkde-3.5_beta1.ebuild 2181
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhfirKRy60XGEcJIRAlOLAKCDPkxE72f8oMJucQ3N8AVM0AnwBwCfQeXY
+8jH8CRdS245QETDaqVIGu1U=
+=P7tk
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40dad4a806747c1f50e48d61561c612e ChangeLog 3910
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-konq-plugins-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-konq-plugins-3.4.2 291
@@ -14,3 +17,10 @@ MD5 961016923bd82bb5b2aadd951d6c1887 konq-plugins-3.5.0_beta2.ebuild 657
 MD5 eac7734603dadea213bac7b761c61e44 konq-plugins-3.5.0_rc1.ebuild 656
 MD5 fbf898d234aa2e6bed1a397f7742d86e konq-plugins-3.5_beta1.ebuild 649
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhgFjKRy60XGEcJIRAlJJAJ9jSvqqVLhe/4lR0Mm13fyIAeq+0QCfUKgm
+rMdlFK14p8XrSyyW5+IsG/o=
+=OpRG
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bcc83a98c18b297a090e0673e12bb8d1 ChangeLog 3403
 MD5 440dc255b1315302c2dfbf0f1233f3bf files/configure-fix-kdeaddons-db.patch 1612
 MD5 8ad71a2139b4a330c5adfb4247b84c8c files/configure-fix-kdeaddons-sdl.patch 867
@@ -17,3 +20,10 @@ MD5 e38b6b89fed2a3df0c99327164651d2b noatun-plugins-3.5.0.ebuild 1093
 MD5 aa8754924e2e594ebec6d108c107b7a7 noatun-plugins-3.5.0_beta2.ebuild 1098
 MD5 014ef11bd39194fd3c76c57269f5730e noatun-plugins-3.5.0_rc1.ebuild 1097
 MD5 27f351db0e95b0fd178f39b0a9ac8bd4 noatun-plugins-3.5_beta1.ebuild 1096
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhgAkKRy60XGEcJIRArCCAKCMHFBQZopw4B+KK3ecsSrN3jhcbACdFIzp
+9Uf2vJ0f+AYE6Ue3QTSTDUQ=
+=HIyK
+-----END PGP SIGNATURE-----
