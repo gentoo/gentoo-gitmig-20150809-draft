@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.28 2005/11/22 22:14:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.29 2005/11/24 15:15:57 gustavoz Exp $
+
+  24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> ktnef-3.4.3.ebuild:
+  Stable on sparc wrt #112842
 
 *ktnef-3.5.0 (22 Nov 2005)
 

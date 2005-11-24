@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.23 2005/11/22 22:14:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.24 2005/11/24 14:45:28 gustavoz Exp $
+
+  24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ktuberling-3.4.3.ebuild:
+  Stable on sparc wrt #112842
 
 *ktuberling-3.5.0 (22 Nov 2005)
 
