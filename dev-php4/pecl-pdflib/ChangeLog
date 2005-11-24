@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-pdflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-pdflib/ChangeLog,v 1.4 2005/11/19 20:45:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-pdflib/ChangeLog,v 1.5 2005/11/24 23:11:24 chtekk Exp $
+
+  24 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  pecl-pdflib-2.0.4-r1.ebuild:
+  Fix some vars that could break and ordering of them.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org>
   pecl-pdflib-2.0.4-r1.ebuild:
