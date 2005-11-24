@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.19 2005/10/17 12:58:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.20 2005/11/24 12:41:19 blubb Exp $
 
-inherit gnome.org libtool eutils
+inherit gnome.org libtool eutils multilib
 
 DESCRIPTION="The Gnome Application Libraries"
 HOMEPAGE="http://www.gnome.org/"
@@ -47,7 +47,8 @@ src_compile() {
 		    --prefix=/usr \
 		    --sysconfdir=/etc \
 		    --localstatedir=/var/lib \
-		     ${myconf} || die
+			--libdir=/usr/$(get_libdir) \
+			${myconf} || die
 
 	if use alpha; then
 		# This program doesn't link on alpha, at least with the
@@ -62,16 +63,17 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr \
 	     sysconfdir=${D}/etc \
-	     localstatedir=${D}/var/lib	\
+	     localstatedir=${D}/var/lib \
+		 libdir=${D}/usr/$(get_libdir) \
 	     install || die
 
 	# Add some type of backward compat...
-	local fullname="`eval basename \`readlink ${D}/usr/lib/libgal.so\``"
-	dosym ${fullname##*/} /usr/lib/libgal.so.$((`echo ${PV} | cut -d. -f2`-1))
+	local fullname="`eval basename \`readlink ${D}/usr/$(get_libdir)/libgal.so\``"
+	dosym ${fullname##*/} /usr/$(get_libdir)/libgal.so.$((`echo ${PV} | cut -d. -f2`-1))
 
 	# gal-0.23 provides libgal.so.21, and its compatible with 0.24
 	# so we add this symlink for more backwards compatibility - liquidx.
-	dosym ${fullname##*/} /usr/lib/libgal.so.21
+	dosym ${fullname##*/} /usr/$(get_libdir)/libgal.so.21
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
