@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aed64d57af37a364c68b85f39d6437fe ChangeLog 3614
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kfilereplace-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kfilereplace-3.4.2 292
@@ -14,3 +17,10 @@ MD5 99e2844fc17a4c055469cceeaf340164 kfilereplace-3.5.0_beta2.ebuild 389
 MD5 ead319fe6fcd085dbd5bf0c194cc5fd0 kfilereplace-3.5.0_rc1.ebuild 388
 MD5 2eb8cccb39021314d9b499a1f5e98404 kfilereplace-3.5_beta1.ebuild 387
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhdUiKRy60XGEcJIRAoGiAJ0acEleLpGWMCy+TNKsM6lEbsdHQACgsT6r
+w7+o/AgDgyMvL5FJkvK8qQ8=
+=iKew
+-----END PGP SIGNATURE-----

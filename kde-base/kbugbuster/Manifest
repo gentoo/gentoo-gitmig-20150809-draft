@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 582e0d73ff49bf7a140809a63bf146b1 ChangeLog 3292
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kbugbuster-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kbugbuster-3.4.2 280
@@ -14,3 +17,10 @@ MD5 799ef4c9ebfcc3c3e49fe2a389b8078f kbugbuster-3.5.0_beta2.ebuild 559
 MD5 f591b9f5ac7861b6ab9567bcfddb3597 kbugbuster-3.5.0_rc1.ebuild 558
 MD5 e848f9d2a5575304610f06c2c929423a kbugbuster-3.5_beta1.ebuild 600
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhdokKRy60XGEcJIRAnmfAJ0Vr+hd1PqPgcsr2ViADFEnkjzaEgCdG6hO
+DSZIwvlMhlfPetOFZwEvV94=
+=K/6g
+-----END PGP SIGNATURE-----

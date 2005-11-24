@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f77dc91e35556a8ab17ea370e803586b ChangeLog 3915
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-specialdates-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-specialdates-3.4.2 282
@@ -14,3 +17,10 @@ MD5 d079c92181da3152795087c91aa1d1dd kontact-specialdates-3.5.0_beta2.ebuild 112
 MD5 9d873ab40a1d44879950d58c6d8d454d kontact-specialdates-3.5.0_rc1.ebuild 1133
 MD5 faeca5543d578b94f51ea0387ad8e6f8 kontact-specialdates-3.5_beta1.ebuild 1124
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhd2aKRy60XGEcJIRAl9SAJ9Va/g/UTGZmC6JbtOjSWWsh1QAkACfQljs
+lBhgquNPy5rtILOPuAGoXkY=
+=mqCP
+-----END PGP SIGNATURE-----

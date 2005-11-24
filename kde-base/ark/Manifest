@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d74d10599a2cf60eccc436b25d2afc8 ChangeLog 2957
 MD5 885a22e569066d08670d8cf7b4233698 ark-3.4.1.ebuild 366
 MD5 12161cc2bef39dcf1be20ba0fdaa1db6 ark-3.4.2.ebuild 382
@@ -10,3 +13,10 @@ MD5 84550abe96e8ef6f8f931c2e13b53a6e files/digest-ark-3.5.0 68
 MD5 444e9ea16b9f6261077667552887b9bb files/digest-ark-3.5.0_beta2 216
 MD5 ba38338e687742fb5a9e7458de260898 files/digest-ark-3.5_beta1 69
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhcCvKRy60XGEcJIRAvRaAJ9Rq9GOoN8CnW9AQeGjSHikgjNE0wCfbavj
+jglYdyktH9O4KZLiNnH2p+M=
+=xRC+
+-----END PGP SIGNATURE-----

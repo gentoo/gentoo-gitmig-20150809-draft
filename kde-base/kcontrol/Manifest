@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6af82cb91ef42a53a910469c2a9a13e ChangeLog 5161
 MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1 212
@@ -21,3 +24,10 @@ MD5 05b977a4624b963bb509e377371ddb93 kcontrol-3.5.0_beta2.ebuild 1623
 MD5 6b1687fc49b1b99afdca67402121c891 kcontrol-3.5.0_rc1.ebuild 1626
 MD5 d8698caadf1ce99d0e5bfa17c67ebae6 kcontrol-3.5_beta1.ebuild 1615
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDhd0aKRy60XGEcJIRArf/AKCWofj+Q5cYfrNy61IQvT4C6aAsJACgoVw7
+Z23InQiaIP3wYTTN6rsVhZ4=
+=u6BL
+-----END PGP SIGNATURE-----
