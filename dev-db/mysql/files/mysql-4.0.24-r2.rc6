@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.24-r2.rc6,v 1.1 2005/05/17 09:08:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.24-r2.rc6,v 1.2 2005/11/24 14:03:52 vivo Exp $
 
 depend() {
 	use dns net
@@ -56,7 +56,8 @@ start() {
 	retstatus=$?
 	while ! [[ -S "${socket}" || "${maxtry}" -lt "1" || "${retstatus}" -gt "0" ]] ; do
 		maxtry=$(($maxtry-1))
-		echo -n "."
+		# most people don't like it
+		#echo -n "."
 		sleep 1
 	done
 	! [[ -S "${socket}" ]] && eerror "MySQL NOT started, proceding anyway"

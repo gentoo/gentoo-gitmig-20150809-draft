@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.4 2005/11/23 10:22:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.5 2005/11/24 14:03:52 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -245,7 +245,8 @@ start() {
 			# wait for socket creation
 			while ! [[ -S "${socket}" || "${maxtry}" -lt 1 || "${retstatus}" -ne 0 ]] ; do
 				maxtry=$(($maxtry - 1))
-				echo -n "."
+				# mostt people don't like it
+				# echo -n "."
 				sleep 1
 			done
 			if [[ ! -S "${socket}" ]] ; then

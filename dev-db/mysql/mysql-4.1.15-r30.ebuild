@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r30.ebuild,v 1.3 2005/11/23 19:44:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r30.ebuild,v 1.4 2005/11/24 14:03:51 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -11,7 +11,7 @@ stripdots() {
 }
 
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
-MYSQL_VERSION_ID=$(stripdots "4.01.26.30")
+MYSQL_VERSION_ID=$(stripdots "4.01.15.30")
 PROTOCOL_VERSION=10
 NDB_VERSION_ID=40115
 #major, minor only in the slot
@@ -179,6 +179,16 @@ mysql_init_vars() {
 	export DATADIR
 }
 
+mysql_strip_double_slash() {
+	local path="${1}"
+	local newpath="${path/\/\///}"
+	while [[ ${path} != ${newpath} ]]; do
+		path=${newpath}
+		newpath="${path/\/\///}"
+	done
+	echo "${newpath}"
+}
+
 pkg_setup() {
 
 	enewgroup mysql 60 || die "problem adding group mysql"
@@ -217,6 +227,10 @@ src_unpack() {
 	rm -f "${S}/zlib/"*.[ch]
 	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
 	rm -f scripts/mysqlbug
+
+	# Multilib issue with zlib detection
+	sed -i -e "s:zlib_dir/lib:zlib_dir/$(get_libdir):g" \
+		"${S}/config/ac-macros/zlib.m4"
 
 	# Make charsets install in the right place
 	find . -name 'Makefile.am' \
@@ -371,7 +385,7 @@ src_compile() {
 			myconf="${myconf} $(use_with cluster ndbcluster)"
 		fi
 
-		mysql_version_is_at_least "4.01.11.00" &&  myconf="${myconf} --with-big-tables"
+		mysql_version_is_at_least "4.01.11.00" &&  myconf="${myconf} `use_with big-tables`"
 	else
 		for i in ${minimal_exclude_list}; do
 			myconf="${myconf} --without-${i}"
@@ -396,8 +410,6 @@ src_compile() {
 		mysql_version_is_at_least "4.01.11.00" \
 		&&  myconf="${myconf} --with-blackhole-storage-engine"
 	fi
-
-	myconf="${myconf} `use_with big-tables`"
 
 	#glibc-2.3.2_pre fix; bug #16496
 	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
@@ -467,6 +479,24 @@ src_install() {
 
 	mysql_init_vars
 	make install DESTDIR="${D}" benchdir_root="${MY_SHAREDSTATEDIR}" || die
+
+	# create globally visible symlinks
+	# TODO : what abaut ndb ?
+	local mylib mylibfullver mylibtmpver maxdots sonamelist
+	pushd "${D}/${MY_LIBDIR}"
+	for mylib in libmysqlclient_r libmysqlclient; do
+		mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
+		mylibtmpver="${mylibfullver}"
+		maxdots=0
+		while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
+			(( ++maxdots ))
+			dosym \
+				$(mysql_strip_double_slash "${MY_LIBDIR}/${mylibfullver}") \
+				$(mysql_strip_double_slash "${MY_LIBDIR}/../${mylibtmpver}")
+			mylibtmpver=${mylibtmpver%.*}
+		done
+	done
+	popd
 
 	insinto "${MY_INCLUDEDIR}"
 	doins "${MY_INCLUDEDIR}"/my_{config,dir}.h
@@ -587,29 +617,34 @@ pkg_postinst() {
 
 	mysql_init_vars
 
-	# create globally visible symlinks
-	# TODO : what abaut ndb ?
-	local mylib mylibfullver mylibtmpver maxdots sonamelist prevlink
-	pushd "${ROOT}/${MY_LIBDIR}"
-	for mylib in libmysqlclient_r libmysqlclient; do
-		mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
-		mylibtmpver="${mylibfullver}"
-		maxdots=0
-		while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
-			(( ++maxdots ))
-			prevlink=$(readlink -f "../${mylibtmpver}")
-			if [[ -n "${prevlink}" ]] ; then
-				if [[ "${mylibtmpver}" != "${mylibfullver}" ]] ; then
-					einfo "found previous library, please run"
-					einfo "revdep-rebuild --soname=${mylibtmpver}"
-				fi
-				rm -f "../${mylibtmpver}"
-			fi
-			dosym "${mylibfullver}" "../${mylibtmpver}"
-			mylibtmpver=${mylibtmpver%.*}
-		done
-	done
-	popd
+	## TODO : make the check
+	## TODO : what abaut ndb ?
+	#local mylib mylibfullver mylibtmpver maxdots sonamelist prevlink
+	#pushd "${ROOT}/${MY_LIBDIR}"
+	#for mylib in libmysqlclient_r libmysqlclient; do
+	#	mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
+	#	mylibtmpver="${mylibfullver}"
+	#	maxdots=0
+	#	while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
+	#		(( ++maxdots ))
+	#		prevlink=$(readlink -f "../${mylibtmpver}")
+	#		if [[ -n "${prevlink}" ]] ; then
+	#			if [[ "${mylibtmpver}" != "${mylibfullver}" ]] \
+	#			&& [[ "${prevlink##*/}" != "${mylibfullver}" ]]
+	#			then
+	#				# gah this is not totally correct
+	#				einfo "found previous library, please run"
+	#				einfo "revdep-rebuild --soname=${mylibtmpver}"
+	#			fi
+	#			rm -f "../${mylibtmpver}"
+	#		fi
+	#		ln -snf \
+	#			$(mysql_strip_double_slash "${ROOT}/${MY_LIBDIR}/${mylibfullver}") \
+	#			$(mysql_strip_double_slash "${ROOT}/${MY_LIBDIR}/../${mylibtmpver}")
+	#		mylibtmpver=${mylibtmpver%.*}
+	#	done
+	#done
+	#popd
 
 	# mind at FEATURES=collision-protect before to remove this
 	[ -d "${ROOT}/var/log/mysql" ] \
@@ -753,3 +788,4 @@ pkg_config() {
 		einfo "done"
 	fi # menusel
 }
+

@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.267 2005/11/24 00:55:05 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.268 2005/11/24 14:03:51 vivo Exp $
+
+*mysql-5.0.16-r3 (24 Nov 2005)
+
+  24 Nov 2005; Francesco Riosa <vivo@gentoo.org> files/mysql-4.0.24-r2.rc6,
+  files/mysql-slot.rc6, mysql-4.1.15.ebuild, mysql-4.1.15-r30.ebuild,
+  -mysql-5.0.16-r2.ebuild, +mysql-5.0.16-r3.ebuild, mysql-5.0.16-r30.ebuild:
+  refix Bug #113352 linkage back in src_config, this has still to be worked on
+  removed annoying dots in rc files
 
   24 Nov 2005; Herbie Hopkins <herbs@gentoo.org> mysql-5.0.16-r2.ebuild,
   mysql-5.0.16-r30.ebuild:

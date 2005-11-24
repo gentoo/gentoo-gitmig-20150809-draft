@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15.ebuild,v 1.8 2005/11/23 19:44:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15.ebuild,v 1.9 2005/11/24 14:03:52 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -177,6 +177,16 @@ mysql_init_vars() {
 	export MY_LIBDIR MY_LOCALSTATEDIR MY_LOGDIR
 	export MY_INCLUDEDIR
 	export DATADIR
+}
+
+mysql_strip_double_slash() {
+	local path="${1}"
+	local newpath="${path/\/\///}"
+	while [[ ${path} != ${newpath} ]]; do
+		path=${newpath}
+		newpath="${path/\/\///}"
+	done
+	echo "${newpath}"
 }
 
 pkg_setup() {
@@ -466,6 +476,24 @@ src_install() {
 	mysql_init_vars
 	make install DESTDIR="${D}" benchdir_root="${MY_SHAREDSTATEDIR}" || die
 
+	# create globally visible symlinks
+	# TODO : what abaut ndb ?
+	local mylib mylibfullver mylibtmpver maxdots sonamelist
+	pushd "${D}/${MY_LIBDIR}"
+	for mylib in libmysqlclient_r libmysqlclient; do
+		mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
+		mylibtmpver="${mylibfullver}"
+		maxdots=0
+		while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
+			(( ++maxdots ))
+			dosym \
+				$(mysql_strip_double_slash "${MY_LIBDIR}/${mylibfullver}") \
+				$(mysql_strip_double_slash "${MY_LIBDIR}/../${mylibtmpver}")
+			mylibtmpver=${mylibtmpver%.*}
+		done
+	done
+	popd
+
 	insinto "${MY_INCLUDEDIR}"
 	doins "${MY_INCLUDEDIR}"/my_{config,dir}.h
 
@@ -585,32 +613,34 @@ pkg_postinst() {
 
 	mysql_init_vars
 
-	# create globally visible symlinks
-	# TODO : what abaut ndb ?
-	local mylib mylibfullver mylibtmpver maxdots sonamelist prevlink
-	pushd "${ROOT}/${MY_LIBDIR}"
-	for mylib in libmysqlclient_r libmysqlclient; do
-		mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
-		mylibtmpver="${mylibfullver}"
-		maxdots=0
-		while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
-			(( ++maxdots ))
-			prevlink=$(readlink -f "../${mylibtmpver}")
-			if [[ -n "${prevlink}" ]] ; then
-				if [[ "${mylibtmpver}" != "${mylibfullver}" ]] \
-				&& [[ "${prevlink##*/}" != "${mylibfullver}" ]]
-				then
-					# gah this is not totally correct 
-					einfo "found previous library, please run"
-					einfo "revdep-rebuild --soname=${mylibtmpver}"
-				fi
-				rm -f "../${mylibtmpver}"
-			fi
-			ln -snf "${mylibfullver}" "../${mylibtmpver}"
-			mylibtmpver=${mylibtmpver%.*}
-		done
-	done
-	popd
+	## TODO : make the check
+	## TODO : what abaut ndb ?
+	#local mylib mylibfullver mylibtmpver maxdots sonamelist prevlink
+	#pushd "${ROOT}/${MY_LIBDIR}"
+	#for mylib in libmysqlclient_r libmysqlclient; do
+	#	mylibfullver="$(ls "${mylib}.so"* | sort | tail -n 1)"
+	#	mylibtmpver="${mylibfullver}"
+	#	maxdots=0
+	#	while [[ ${mylibtmpver} != ${mylib} ]] && [[ ${maxdots} -lt 6 ]]; do
+	#		(( ++maxdots ))
+	#		prevlink=$(readlink -f "../${mylibtmpver}")
+	#		if [[ -n "${prevlink}" ]] ; then
+	#			if [[ "${mylibtmpver}" != "${mylibfullver}" ]] \
+	#			&& [[ "${prevlink##*/}" != "${mylibfullver}" ]]
+	#			then
+	#				# gah this is not totally correct
+	#				einfo "found previous library, please run"
+	#				einfo "revdep-rebuild --soname=${mylibtmpver}"
+	#			fi
+	#			rm -f "../${mylibtmpver}"
+	#		fi
+	#		ln -snf \
+	#			$(mysql_strip_double_slash "${ROOT}/${MY_LIBDIR}/${mylibfullver}") \
+	#			$(mysql_strip_double_slash "${ROOT}/${MY_LIBDIR}/../${mylibtmpver}")
+	#		mylibtmpver=${mylibtmpver%.*}
+	#	done
+	#done
+	#popd
 
 	# mind at FEATURES=collision-protect before to remove this
 	[ -d "${ROOT}/var/log/mysql" ] \
@@ -754,3 +784,4 @@ pkg_config() {
 		einfo "done"
 	fi # menusel
 }
+
