@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mairix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.15 2005/11/05 22:17:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.16 2005/11/24 07:09:42 tove Exp $
+
+*mairix-0.17 (24 Nov 2005)
+
+  24 Nov 2005; Torsten Veller <tove@gentoo.org> -mairix-0.15.2.ebuild,
+  +mairix-0.17.ebuild:
+  Version bump.
 
   05 Nov 2005; Jason Wever <weeve@gentoo.org> mairix-0.16.1.ebuild:
   Added ~sparc keyword wrt bug #111603.
