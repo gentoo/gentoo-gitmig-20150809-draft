@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.43 2005/10/02 19:11:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.44 2005/11/24 18:41:57 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org> gtkspell-2.0.11.ebuild:
+  Stable on ppc64
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> gtkspell-2.0.11.ebuild:
   Mark 2.0.11 stable on alpha
