@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14e74e8a417785402a8cbb2994a16cfe ChangeLog 3384
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-khangman-3.4.1 208
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-khangman-3.4.2 282
-MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-khangman-3.4.3 67
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-khangman-3.5.0 67
-MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-khangman-3.5.0_beta2 212
-MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-khangman-3.5.0_rc1 294
-MD5 bb87804db4b06c40fdff58984b70c393 files/digest-khangman-3.5_beta1 68
+MD5 087b8d911e73210f7ffb90a74731505c ChangeLog 3474
 MD5 4dedcc4fed51647a43272d0049888a63 khangman-3.4.1.ebuild 561
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 55e6e6832fe5e34f563546ecd3bb5ff1 khangman-3.4.2.ebuild 574
-MD5 c329cfd3b11ff9d655021dd92de54ea8 khangman-3.4.3.ebuild 577
-MD5 1f641029fe4e5af1d897e1ab261c6fa1 khangman-3.5.0.ebuild 515
+MD5 a67e87725193192662e276e297113473 khangman-3.5_beta1.ebuild 553
+MD5 f45fe7bb80d9381b7b83c4494a115cfb khangman-3.4.3.ebuild 575
 MD5 5ee008cf34ea3b937670d6bc61baf41f khangman-3.5.0_beta2.ebuild 520
 MD5 ccce0cec0d4be3400832e73d7f583fd4 khangman-3.5.0_rc1.ebuild 519
-MD5 a67e87725193192662e276e297113473 khangman-3.5_beta1.ebuild 553
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhbrFKRy60XGEcJIRAuSpAKCb64kIEfXkPPRZQ+GfpMqwqIFAdQCggpaB
-3tevtjtb+XIUbV7wIZvHdk8=
-=ascY
------END PGP SIGNATURE-----
+MD5 1f641029fe4e5af1d897e1ab261c6fa1 khangman-3.5.0.ebuild 515
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-khangman-3.4.1 208
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-khangman-3.4.2 282
+MD5 bb87804db4b06c40fdff58984b70c393 files/digest-khangman-3.5_beta1 68
+MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-khangman-3.4.3 67
+MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-khangman-3.5.0_beta2 212
+MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-khangman-3.5.0_rc1 294
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-khangman-3.5.0 67

@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd50686cf3f74fc9ce523a678401418c ChangeLog 3524
+MD5 9046d4f8f0bfd2f92cc820ad60372d5d ChangeLog 3623
+MD5 e7931928e133dc7f3db0efb9eb8975c1 kimagemapeditor-3.4.1.ebuild 400
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 7b060ffc2d95147cb3a0c4a863a8ce1e kimagemapeditor-3.4.2.ebuild 413
+MD5 d848e60721e3a3c335c345efced9acd4 kimagemapeditor-3.5_beta1.ebuild 400
+MD5 88396671dee25e055b6c5edfddc45ad7 kimagemapeditor-3.4.3.ebuild 412
+MD5 d86aeff9c97fb5fc9c53ae268cce5929 kimagemapeditor-3.5.0_rc1.ebuild 393
+MD5 e4fc9244e87bfde50debe4f36d864778 kimagemapeditor-3.5.0.ebuild 389
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kimagemapeditor-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kimagemapeditor-3.4.2 292
-MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kimagemapeditor-3.4.3 69
-MD5 1b9c64625ee8bb6581dafc883b1d0ee1 files/digest-kimagemapeditor-3.5.0 69
-MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-kimagemapeditor-3.5.0_rc1 304
 MD5 dbf048ce767888392930a6446896b4c7 files/digest-kimagemapeditor-3.5_beta1 70
-MD5 e7931928e133dc7f3db0efb9eb8975c1 kimagemapeditor-3.4.1.ebuild 400
-MD5 7b060ffc2d95147cb3a0c4a863a8ce1e kimagemapeditor-3.4.2.ebuild 413
-MD5 397cef3800686301217b98c4a5f57c23 kimagemapeditor-3.4.3.ebuild 414
-MD5 e4fc9244e87bfde50debe4f36d864778 kimagemapeditor-3.5.0.ebuild 389
-MD5 d86aeff9c97fb5fc9c53ae268cce5929 kimagemapeditor-3.5.0_rc1.ebuild 393
-MD5 d848e60721e3a3c335c345efced9acd4 kimagemapeditor-3.5_beta1.ebuild 400
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdTsKRy60XGEcJIRAhFNAJ9CpOwMnB5A1zhTz0pmsvERObMvxwCfaf8x
-CfwJW0FyjVKirYl0SKcN6Jc=
-=KXik
------END PGP SIGNATURE-----
+MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kimagemapeditor-3.4.3 69
+MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-kimagemapeditor-3.5.0_rc1 304
+MD5 1b9c64625ee8bb6581dafc883b1d0ee1 files/digest-kimagemapeditor-3.5.0 69

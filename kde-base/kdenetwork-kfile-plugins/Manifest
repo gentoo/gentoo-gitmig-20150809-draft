@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8bf13f78900b45238c1025877142b55 ChangeLog 3882
-MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-kfile-plugins-3.4.1 218
-MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-kfile-plugins-3.4.2 296
-MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-kfile-plugins-3.5.0 70
-MD5 e48a9939e32d172601a814622502aa3b files/digest-kdenetwork-kfile-plugins-3.5.0_beta2 222
-MD5 e3ae49bd33349d36b78d2df93d49089e files/digest-kdenetwork-kfile-plugins-3.5.0_rc1 308
-MD5 16b903e400a8cf2d73f3c237799238db files/digest-kdenetwork-kfile-plugins-3.5_beta1 71
+MD5 d52892ce9e90701a368177f7b5e2f5e0 ChangeLog 3990
 MD5 d1bdfe76415a148601252e134b99ab37 kdenetwork-kfile-plugins-3.4.1.ebuild 507
-MD5 cccb2a22db46058fa675c973f3835122 kdenetwork-kfile-plugins-3.4.2.ebuild 523
-MD5 7415bf19879932a73f862c8410630c04 kdenetwork-kfile-plugins-3.5.0.ebuild 496
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 6410ce31196f3b52fdbea887e2735f78 kdenetwork-kfile-plugins-3.4.2.ebuild 521
+MD5 d4b53c506a3d75727311c62464be815e kdenetwork-kfile-plugins-3.5_beta1.ebuild 499
 MD5 2968731c972b24ba7485b4b954530d98 kdenetwork-kfile-plugins-3.5.0_beta2.ebuild 501
 MD5 08688cee1639b213094618f2735fac78 kdenetwork-kfile-plugins-3.5.0_rc1.ebuild 500
-MD5 d4b53c506a3d75727311c62464be815e kdenetwork-kfile-plugins-3.5_beta1.ebuild 499
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcmIKRy60XGEcJIRAmaxAJ9gdp1WYXWCWLiYbRmoCOUPENj96gCfeTwQ
-5LWzfmPgT+K9sXcpfbgHBZY=
-=jPRu
------END PGP SIGNATURE-----
+MD5 7415bf19879932a73f862c8410630c04 kdenetwork-kfile-plugins-3.5.0.ebuild 496
+MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-kfile-plugins-3.4.1 218
+MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-kfile-plugins-3.4.2 296
+MD5 16b903e400a8cf2d73f3c237799238db files/digest-kdenetwork-kfile-plugins-3.5_beta1 71
+MD5 e48a9939e32d172601a814622502aa3b files/digest-kdenetwork-kfile-plugins-3.5.0_beta2 222
+MD5 e3ae49bd33349d36b78d2df93d49089e files/digest-kdenetwork-kfile-plugins-3.5.0_rc1 308
+MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-kfile-plugins-3.5.0 70

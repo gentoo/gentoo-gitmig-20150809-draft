@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57a4201d3ad029140e90442ddfd3923c ChangeLog 4421
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-kfile-plugins-3.4.1 227
-MD5 453075362e3201c7f44fea430afec5d5 files/digest-kdemultimedia-kfile-plugins-3.4.2 308
-MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kdemultimedia-kfile-plugins-3.4.3 73
-MD5 1b36c77494f7990406246d8cc77ad16a files/digest-kdemultimedia-kfile-plugins-3.5.0 73
-MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-kdemultimedia-kfile-plugins-3.5.0_beta2 231
-MD5 235bf312c5ea7d7531c86c374ceddcf5 files/digest-kdemultimedia-kfile-plugins-3.5.0_rc1 320
-MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kdemultimedia-kfile-plugins-3.5_beta1 74
+MD5 25a4e61f822c469bab11a4049ef6baa3 ChangeLog 4532
 MD5 9b78ad53e5cfc93f0141e5ef62c60bb7 kdemultimedia-kfile-plugins-3.4.1.ebuild 657
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6c90d05fff7361d7217d340006873ee7 kdemultimedia-kfile-plugins-3.4.2.ebuild 670
-MD5 f3dd507e5dd1c6545e52fa1fae318efd kdemultimedia-kfile-plugins-3.4.3.ebuild 671
-MD5 dee9a458f9ddb7b8db1669b16d2d9d5d kdemultimedia-kfile-plugins-3.5.0.ebuild 646
+MD5 b5bbbd2ef7b7d3335f4b58457edd7077 kdemultimedia-kfile-plugins-3.5_beta1.ebuild 649
+MD5 f020785c21cda4d22a10e3a5595d1e68 kdemultimedia-kfile-plugins-3.4.3.ebuild 669
 MD5 84eb3b67b009759ba9f0b59ca28ea446 kdemultimedia-kfile-plugins-3.5.0_beta2.ebuild 651
 MD5 065c18328d5c403f10a681a22da9de26 kdemultimedia-kfile-plugins-3.5.0_rc1.ebuild 650
-MD5 b5bbbd2ef7b7d3335f4b58457edd7077 kdemultimedia-kfile-plugins-3.5_beta1.ebuild 649
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhft0KRy60XGEcJIRAoohAKCm9DoOgy6x9FpLXCnqPwiNy2miugCgrUaU
-gVXlvuCl0emD+0z3IP1cOMU=
-=SBFx
------END PGP SIGNATURE-----
+MD5 dee9a458f9ddb7b8db1669b16d2d9d5d kdemultimedia-kfile-plugins-3.5.0.ebuild 646
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-kfile-plugins-3.4.1 227
+MD5 453075362e3201c7f44fea430afec5d5 files/digest-kdemultimedia-kfile-plugins-3.4.2 308
+MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kdemultimedia-kfile-plugins-3.5_beta1 74
+MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kdemultimedia-kfile-plugins-3.4.3 73
+MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-kdemultimedia-kfile-plugins-3.5.0_beta2 231
+MD5 235bf312c5ea7d7531c86c374ceddcf5 files/digest-kdemultimedia-kfile-plugins-3.5.0_rc1 320
+MD5 1b36c77494f7990406246d8cc77ad16a files/digest-kdemultimedia-kfile-plugins-3.5.0 73

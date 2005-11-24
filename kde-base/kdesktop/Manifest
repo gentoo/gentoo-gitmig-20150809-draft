@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b53b69a933c5c51a4c5e79fb6c27e9e7 ChangeLog 3804
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdesktop-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdesktop-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdesktop-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdesktop-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdesktop-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdesktop-3.5_beta1 69
+MD5 fda53915690f7cda484e2d98fb230e8e ChangeLog 3894
 MD5 ffb8567a9ab217b33273996584a848f5 kdesktop-3.4.1.ebuild 1355
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 72704bb9b1063c9447f0101cb11d95b5 kdesktop-3.4.2.ebuild 1370
-MD5 52ac97b357aa7752872d3e6f18216b77 kdesktop-3.4.3.ebuild 1371
-MD5 81c2eada58052745ead72afffccafd54 kdesktop-3.5.0.ebuild 1230
+MD5 8d141f45f0b93d0828b924ea6aa4f8f2 kdesktop-3.5_beta1.ebuild 1231
+MD5 57b1da7c56ace06f023a172e85f371e9 kdesktop-3.4.3.ebuild 1369
 MD5 e1b4e831c39866b8068891d73d736cbf kdesktop-3.5.0_beta2.ebuild 1233
 MD5 9fbc5128813eb77689da8fb0a6070ee7 kdesktop-3.5.0_rc1.ebuild 1234
-MD5 8d141f45f0b93d0828b924ea6aa4f8f2 kdesktop-3.5_beta1.ebuild 1231
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDheKcKRy60XGEcJIRAviuAJ9L3+lK2d5O0IDL5P+2XY3TlIk7MwCcC358
-fC6h4Zxo21nbs/Vnm7dQ1Ow=
-=/o/E
------END PGP SIGNATURE-----
+MD5 81c2eada58052745ead72afffccafd54 kdesktop-3.5.0.ebuild 1230
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdesktop-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdesktop-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdesktop-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdesktop-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdesktop-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdesktop-3.5.0 68

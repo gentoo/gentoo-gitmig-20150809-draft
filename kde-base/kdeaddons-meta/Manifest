@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c5ba37cd2b30b72fd4c69163f0cba4df ChangeLog 5985
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0_beta2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5_beta1 0
+MD5 4b1a5d0f1d255a08b4935b0d0b52355a ChangeLog 6083
 MD5 c8bcb90d2f904bacbf363f6bc221b737 kdeaddons-meta-3.4.1.ebuild 1216
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6950192ed4daaee921df3b638c51ca50 kdeaddons-meta-3.4.2.ebuild 1243
-MD5 ceea34db9fc7af702d000a792b7e821d kdeaddons-meta-3.4.3.ebuild 1242
-MD5 d378ce547338089344c40ba850628bab kdeaddons-meta-3.5.0.ebuild 1161
+MD5 388ee8f1ac7c97372a40bb73128dbb46 kdeaddons-meta-3.5_beta1.ebuild 1164
+MD5 94a7ab333d17017e5e93d697fe8dd442 kdeaddons-meta-3.4.3.ebuild 1240
 MD5 5cf70023c6e6f7a575627043c4093ee4 kdeaddons-meta-3.5.0_beta2.ebuild 1184
 MD5 c4f66c4542b460ed24a6cfb512a0e19f kdeaddons-meta-3.5.0_rc1.ebuild 1191
-MD5 388ee8f1ac7c97372a40bb73128dbb46 kdeaddons-meta-3.5_beta1.ebuild 1164
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhgI8KRy60XGEcJIRAppPAJ44rz5axbXGWaclcMJR4t1uYp8lIQCgiwR1
-DY1gJs++fq6jrigMwPdW3mc=
-=El9e
------END PGP SIGNATURE-----
+MD5 d378ce547338089344c40ba850628bab kdeaddons-meta-3.5.0.ebuild 1161
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0 0

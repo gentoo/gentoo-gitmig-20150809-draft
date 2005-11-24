@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e77275c4c6c22e8e45dd944f72e9b72 ChangeLog 3500
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-libkdegames-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-libkdegames-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-libkdegames-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-libkdegames-3.5.0 69
-MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-libkdegames-3.5.0_beta2 218
-MD5 894962ff94814330209ff99f0ab9f1cb files/digest-libkdegames-3.5.0_rc1 302
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-libkdegames-3.5_beta1 70
+MD5 8865d3cb6fbdee0b5538a7f35c7016b3 ChangeLog 3593
 MD5 297d16110d664a5a551adb6e92ad880c libkdegames-3.4.1.ebuild 424
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 948134448cee4780547e59b72d0b2866 libkdegames-3.4.2.ebuild 679
-MD5 c4e5a1a80433d3107d7399b2b189038a libkdegames-3.4.3.ebuild 680
-MD5 c988be306842e3d9891de206d11993de libkdegames-3.5.0.ebuild 637
+MD5 5dc4f89166100dcc059a9c3a87cb6984 libkdegames-3.5_beta1.ebuild 658
+MD5 86f7db0784763d84a24cb1e1bdf3dc4c libkdegames-3.4.3.ebuild 678
 MD5 4c24d7e785544666ff48ea52dae02b84 libkdegames-3.5.0_beta2.ebuild 642
 MD5 d1165507dc6f452e005060c5e9e5e801 libkdegames-3.5.0_rc1.ebuild 641
-MD5 5dc4f89166100dcc059a9c3a87cb6984 libkdegames-3.5_beta1.ebuild 658
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcynKRy60XGEcJIRAnngAJsGN2mVVvDcmpR7obUWxO9wEEXDtgCfegfJ
-1Vfczwc0CY423T5G9Z9nW0I=
-=+Lrb
------END PGP SIGNATURE-----
+MD5 c988be306842e3d9891de206d11993de libkdegames-3.5.0.ebuild 637
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-libkdegames-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-libkdegames-3.4.2 288
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-libkdegames-3.5_beta1 70
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-libkdegames-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-libkdegames-3.5.0_beta2 218
+MD5 894962ff94814330209ff99f0ab9f1cb files/digest-libkdegames-3.5.0_rc1 302
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-libkdegames-3.5.0 69

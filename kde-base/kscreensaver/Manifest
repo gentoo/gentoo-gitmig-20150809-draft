@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86eaadc2a8358fe652a177257d132323 ChangeLog 3708
-MD5 d4f721aede14b18d9aa83c9d9f18900d files/configure-fix-kdeartwork-libart.patch 2503
-MD5 205c13a78065c2decb403b1984abab5f files/configure-fix-kdeartwork-xscreensaver.patch 1577
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kscreensaver-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kscreensaver-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kscreensaver-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kscreensaver-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kscreensaver-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kscreensaver-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kscreensaver-3.5_beta1 69
+MD5 f977c089592c3bbba79ae21ac4fff651 ChangeLog 3802
 MD5 39002f99dacfa6fcdc7ec202e3fe3790 kscreensaver-3.4.1.ebuild 520
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 0af9b25b83b198577161f5dadfd4526e kscreensaver-3.4.2.ebuild 532
-MD5 16701c9b9da80daef52bc95ead56f3d0 kscreensaver-3.4.3.ebuild 533
-MD5 bb771b94df13fb5952151e305d2f59b3 kscreensaver-3.5.0.ebuild 513
+MD5 9ea5fa0ae3ca1cb3023e865060c835b4 kscreensaver-3.5_beta1.ebuild 511
+MD5 7f83b204a443a6277f8abcf51ba91be1 kscreensaver-3.4.3.ebuild 531
 MD5 ad0205b7410093b24946d18320380724 kscreensaver-3.5.0_beta2.ebuild 516
 MD5 8a6185653c0985feca6a8767772119b0 kscreensaver-3.5.0_rc1.ebuild 517
-MD5 9ea5fa0ae3ca1cb3023e865060c835b4 kscreensaver-3.5_beta1.ebuild 511
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcvxKRy60XGEcJIRAo/zAKCgnnqd1UlXO1CUhXZaZH6ua6lJuwCfT48I
-JBzIQTyJbmQdL4tuQOZHEsE=
-=ky9Q
------END PGP SIGNATURE-----
+MD5 bb771b94df13fb5952151e305d2f59b3 kscreensaver-3.5.0.ebuild 513
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kscreensaver-3.4.1 212
+MD5 d4f721aede14b18d9aa83c9d9f18900d files/configure-fix-kdeartwork-libart.patch 2503
+MD5 205c13a78065c2decb403b1984abab5f files/configure-fix-kdeartwork-xscreensaver.patch 1577
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kscreensaver-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kscreensaver-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kscreensaver-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kscreensaver-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kscreensaver-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-kscreensaver-3.5.0 68

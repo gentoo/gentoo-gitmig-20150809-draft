@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e6b909b0cbd72c26de5026940c92c35b ChangeLog 3533
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-ktouch-3.4.1 208
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-ktouch-3.4.2 282
-MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-ktouch-3.4.3 67
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-ktouch-3.5.0 67
-MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-ktouch-3.5.0_beta2 212
-MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-ktouch-3.5.0_rc1 294
-MD5 bb87804db4b06c40fdff58984b70c393 files/digest-ktouch-3.5_beta1 68
+MD5 2a8cb7c36d6b7e5da661ec1466d57966 ChangeLog 3621
 MD5 efaf8d02d7a1a0d04de75b0f13d880da ktouch-3.4.1.ebuild 426
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5e1e319fb7514047f6ca35538b3b5724 ktouch-3.4.2.ebuild 439
-MD5 d6a08fc40e372779fb6840e4496d38c2 ktouch-3.4.3.ebuild 440
-MD5 7307c61f5f573060b5a682f1d9a4566b ktouch-3.5.0.ebuild 545
+MD5 bf8c4bb6dc7634e6743d1f4bd2b262bb ktouch-3.5_beta1.ebuild 548
+MD5 06cf18b0a04d8c1cbae5280e0ec939d6 ktouch-3.4.3.ebuild 438
 MD5 fec41cf30f77fe716a042b4c254103f3 ktouch-3.5.0_beta2.ebuild 550
 MD5 4f3dbee9ff0d97985fb1f00ac7a57036 ktouch-3.5.0_rc1.ebuild 549
-MD5 bf8c4bb6dc7634e6743d1f4bd2b262bb ktouch-3.5_beta1.ebuild 548
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhb0vKRy60XGEcJIRAtR2AJ9KW+Y7R7nJLHEfyXLG2x/qN/ePDwCggJXK
-NDAqNlyM9zcP0DF82CHpUrM=
-=F9cT
------END PGP SIGNATURE-----
+MD5 7307c61f5f573060b5a682f1d9a4566b ktouch-3.5.0.ebuild 545
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-ktouch-3.4.1 208
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-ktouch-3.4.2 282
+MD5 bb87804db4b06c40fdff58984b70c393 files/digest-ktouch-3.5_beta1 68
+MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-ktouch-3.4.3 67
+MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-ktouch-3.5.0_beta2 212
+MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-ktouch-3.5.0_rc1 294
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-ktouch-3.5.0 67

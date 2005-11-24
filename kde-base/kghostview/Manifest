@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5626a250dc89de6143f768badbd7dd33 ChangeLog 3657
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kghostview-3.4.1 221
-MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kghostview-3.4.2 300
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kghostview-3.4.3 71
-MD5 0459ac16349d79da6246392e2454796b files/digest-kghostview-3.5.0 71
-MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kghostview-3.5.0_beta2 225
-MD5 c67126eaeeb2137106bb079f5d529d71 files/digest-kghostview-3.5.0_rc1 312
-MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kghostview-3.5_beta1 72
-MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
+MD5 df51cd94771fba0dc19dd5373828439f ChangeLog 3749
 MD5 7bf336ee8e49a2aea158cb57735bdb9e kghostview-3.4.1.ebuild 520
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.2.ebuild 649
-MD5 0200c6c63b8f282ab1a5863c4ed1731d kghostview-3.4.3.ebuild 536
-MD5 5e3545aadaa8598a7d4796fbbc0f3d94 kghostview-3.5.0.ebuild 510
+MD5 d36e4a49b719abe177f434531a52480f kghostview-3.5_beta1.ebuild 513
+MD5 7e40f613961868a24ef8212467c7036c kghostview-3.4.3.ebuild 534
 MD5 8689ad53c3905de27ebe93fb61e9ff18 kghostview-3.5.0_beta2.ebuild 515
 MD5 12026f338adf248035be11edd1755080 kghostview-3.5.0_rc1.ebuild 514
-MD5 d36e4a49b719abe177f434531a52480f kghostview-3.5_beta1.ebuild 513
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcLjKRy60XGEcJIRAlOIAJwJDtnhQTDXmeVzEN++5Nvlf4e5BACeMj6+
-BsocB7eyOk+eAqtGpn73yYo=
-=/14/
------END PGP SIGNATURE-----
+MD5 5e3545aadaa8598a7d4796fbbc0f3d94 kghostview-3.5.0.ebuild 510
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kghostview-3.4.1 221
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kghostview-3.4.2 300
+MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
+MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kghostview-3.5_beta1 72
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kghostview-3.4.3 71
+MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kghostview-3.5.0_beta2 225
+MD5 c67126eaeeb2137106bb079f5d529d71 files/digest-kghostview-3.5.0_rc1 312
+MD5 0459ac16349d79da6246392e2454796b files/digest-kghostview-3.5.0 71

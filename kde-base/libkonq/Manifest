@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a45d5a318c66ee449bc8168df1e011d ChangeLog 3447
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-libkonq-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-libkonq-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-libkonq-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-libkonq-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-libkonq-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-libkonq-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-libkonq-3.5_beta1 69
+MD5 8dd5db57a2b409e53671403f6292fc28 ChangeLog 3536
 MD5 3136bcddab4b7ca984aa4bc5967fa062 libkonq-3.4.1.ebuild 396
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 9320f6e8847cf27a1364813959d3e2b4 libkonq-3.4.2.ebuild 409
-MD5 818514968eb9e2ade74c72346c52f07c libkonq-3.4.3.ebuild 410
-MD5 0a93e9908247c27884013e32b3966431 libkonq-3.5.0.ebuild 390
+MD5 f0665d3abd9f35972fc8f9e978b91465 libkonq-3.5_beta1.ebuild 391
+MD5 69c7fbe5be64e49ca927495da5e0b210 libkonq-3.4.3.ebuild 408
 MD5 ca85a869e1604c0d8ddf6037f6218ae4 libkonq-3.5.0_beta2.ebuild 393
 MD5 ad19c7e40cb938b06b184155674a7d4c libkonq-3.5.0_rc1.ebuild 394
-MD5 f0665d3abd9f35972fc8f9e978b91465 libkonq-3.5_beta1.ebuild 391
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDheCSKRy60XGEcJIRAo47AJ4mio5GRYzcLouaEs7Ftdbq43k/hACePNha
-7Dt2WRP/xykRCNLFr7QDLsI=
-=aP3o
------END PGP SIGNATURE-----
+MD5 0a93e9908247c27884013e32b3966431 libkonq-3.5.0.ebuild 390
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-libkonq-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-libkonq-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-libkonq-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-libkonq-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-libkonq-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-libkonq-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-libkonq-3.5.0 68

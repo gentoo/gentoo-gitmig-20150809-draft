@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78c051348de91e3153058bab21bd6078 ChangeLog 3421
+MD5 0436c5b57239ab3991b9cee65f432208 ChangeLog 3512
+MD5 0aa08a65a12a76768433cefa5248ce5c ksnapshot-3.4.1.ebuild 450
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 2ec5b49d0dcf056e3256053c6310da89 ksnapshot-3.5_beta1.ebuild 429
+MD5 d8b5fc8232d530fbd827d16a50af417a ksnapshot-3.4.3.ebuild 404
+MD5 179e0583740d8cd1a6dec1d9bfcdac18 ksnapshot-3.5.0_beta2.ebuild 394
+MD5 0688fb6a500a088e32a9c3450733cbb5 ksnapshot-3.5.0.ebuild 382
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-ksnapshot-3.4.1 221
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksnapshot-3.4.3 71
-MD5 0459ac16349d79da6246392e2454796b files/digest-ksnapshot-3.5.0 71
-MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-ksnapshot-3.5.0_beta2 225
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-ksnapshot-3.5_beta1 72
 MD5 b8b19abbbc49524d1043eeed31098905 files/ksnapshot-qt-3.3.5.patch 621
-MD5 0aa08a65a12a76768433cefa5248ce5c ksnapshot-3.4.1.ebuild 450
-MD5 f18427f692eefc62da1a94dfd5819e7b ksnapshot-3.4.3.ebuild 406
-MD5 0688fb6a500a088e32a9c3450733cbb5 ksnapshot-3.5.0.ebuild 382
-MD5 179e0583740d8cd1a6dec1d9bfcdac18 ksnapshot-3.5.0_beta2.ebuild 394
-MD5 2ec5b49d0dcf056e3256053c6310da89 ksnapshot-3.5_beta1.ebuild 429
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcKuKRy60XGEcJIRApvfAKCRY9w6UyMvsWqC12OEQ4WaKgc89wCfS1GX
-NSJcsj7vS90Ze2MF4N1S2OI=
-=3vmr
------END PGP SIGNATURE-----
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksnapshot-3.4.3 71
+MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-ksnapshot-3.5.0_beta2 225
+MD5 0459ac16349d79da6246392e2454796b files/digest-ksnapshot-3.5.0 71

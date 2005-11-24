@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0c6249f4bbbc8722bdeff929f3022c6 ChangeLog 3895
+MD5 643173c365e4ca8e5fde81ff084be54f ChangeLog 3997
 MD5 c9d4d9c2c2f4446a1e62871a2d56e7be artsplugin-mpeglib-3.4.1.ebuild 747
-MD5 5ab04678a018bd509cb0d0e0b5279c6a artsplugin-mpeglib-3.4.3.ebuild 757
-MD5 48aa593505bc019647b521cdfd48d01e artsplugin-mpeglib-3.5.0.ebuild 697
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 388219a52c68037cab99b5369587995a artsplugin-mpeglib-3.5_beta1.ebuild 733
+MD5 fe58ffaa119ea857579b890325e0d18a artsplugin-mpeglib-3.4.3.ebuild 755
 MD5 5e6800fad58232748d58b61dc3f0a8dd artsplugin-mpeglib-3.5.0_beta2.ebuild 702
 MD5 819b411a9384b009af6866336a83fbf0 artsplugin-mpeglib-3.5.0_rc1.ebuild 701
-MD5 388219a52c68037cab99b5369587995a artsplugin-mpeglib-3.5_beta1.ebuild 733
+MD5 48aa593505bc019647b521cdfd48d01e artsplugin-mpeglib-3.5.0.ebuild 697
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-mpeglib-3.4.1 227
+MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-artsplugin-mpeglib-3.5_beta1 74
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-artsplugin-mpeglib-3.4.3 73
-MD5 1b36c77494f7990406246d8cc77ad16a files/digest-artsplugin-mpeglib-3.5.0 73
 MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-artsplugin-mpeglib-3.5.0_beta2 231
 MD5 235bf312c5ea7d7531c86c374ceddcf5 files/digest-artsplugin-mpeglib-3.5.0_rc1 320
-MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-artsplugin-mpeglib-3.5_beta1 74
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhfq8KRy60XGEcJIRAhs3AJ4uAYaQpPNLJTWY36KpUR01W0yFpgCfZ03M
-H7lgB67StdHlz92nU+J04Ug=
-=AmUn
------END PGP SIGNATURE-----
+MD5 1b36c77494f7990406246d8cc77ad16a files/digest-artsplugin-mpeglib-3.5.0 73

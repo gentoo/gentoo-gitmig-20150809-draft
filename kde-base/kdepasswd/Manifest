@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77cf0ff5e01c23947f0b04e35ef3e348 ChangeLog 3453
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdepasswd-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdepasswd-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdepasswd-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdepasswd-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdepasswd-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdepasswd-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdepasswd-3.5_beta1 69
+MD5 c4b934172111591032f1e25d950fbbcd ChangeLog 3544
 MD5 81dd768912a60b59cde4322ff2f02db9 kdepasswd-3.4.1.ebuild 518
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 44e32e90f31926671d2c21f593504750 kdepasswd-3.4.2.ebuild 531
-MD5 95285246d2814fdab104749e3ff34fc0 kdepasswd-3.4.3.ebuild 532
-MD5 7d7d45a20f90653f0644702277964b98 kdepasswd-3.5.0.ebuild 472
+MD5 3db6efc7645b08208d64ade6d7792de0 kdepasswd-3.5_beta1.ebuild 510
+MD5 86e1dcc04f98f492e39955f728a55a7a kdepasswd-3.4.3.ebuild 530
 MD5 b852cd3ac6a98305f06c6ee27879f305 kdepasswd-3.5.0_beta2.ebuild 477
 MD5 26a8abe97bcdc98db8bc7b9a3cb1431b kdepasswd-3.5.0_rc1.ebuild 476
-MD5 3db6efc7645b08208d64ade6d7792de0 kdepasswd-3.5_beta1.ebuild 510
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDheDKKRy60XGEcJIRAjUMAJ9RzBIrcAl72z98Rg187SrqiQZlLQCfcfZb
-sAnr7VNn6sOsTw7OHHanC7U=
-=dxAR
------END PGP SIGNATURE-----
+MD5 7d7d45a20f90653f0644702277964b98 kdepasswd-3.5.0.ebuild 472
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdepasswd-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdepasswd-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdepasswd-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdepasswd-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdepasswd-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdepasswd-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdepasswd-3.5.0 68

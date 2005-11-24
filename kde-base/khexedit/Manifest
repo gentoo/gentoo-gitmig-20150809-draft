@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4352a2ce21be3d8fbd98220f410212a ChangeLog 3536
-MD5 e29bbb2db20451106f7980c7008328fa files/digest-khexedit-3.4.1 212
-MD5 062bb93297f13fe72d1e78a55a449788 files/digest-khexedit-3.4.2 288
-MD5 7693585dde083d1c2cc205db10692163 files/digest-khexedit-3.4.3 68
-MD5 84550abe96e8ef6f8f931c2e13b53a6e files/digest-khexedit-3.5.0 68
-MD5 444e9ea16b9f6261077667552887b9bb files/digest-khexedit-3.5.0_beta2 216
-MD5 ee73652c24b35ea4a7e56120462fc3b9 files/digest-khexedit-3.5.0_rc1 300
-MD5 ba38338e687742fb5a9e7458de260898 files/digest-khexedit-3.5_beta1 69
-MD5 e47625e9b59633298d5be5ff567712b7 files/khexedit-configure-magic.diff 462
+MD5 794809a4aa0a8e9ac55d468d82b09c75 ChangeLog 3626
 MD5 4e7981cce0a3f29017cccda806207c9c khexedit-3.4.1.ebuild 429
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 4212821034a16dfed2c2f683f6f51ba5 khexedit-3.4.2.ebuild 442
-MD5 71b0a6ff6fb68eadaea24a52a5e728d3 khexedit-3.4.3.ebuild 444
-MD5 52110d4f3453b07a5ccf4ee25188ab91 khexedit-3.5.0.ebuild 369
+MD5 c2b7fad914a9b6dcae077f0cd036febf khexedit-3.5_beta1.ebuild 421
+MD5 8b66239d4cce950503d9f675d068264d khexedit-3.4.3.ebuild 442
 MD5 b379a02da14cf13eca3b3efdc4e447ab khexedit-3.5.0_beta2.ebuild 374
 MD5 b2ee4c689cf964c501a98d863fee7be0 khexedit-3.5.0_rc1.ebuild 373
-MD5 c2b7fad914a9b6dcae077f0cd036febf khexedit-3.5_beta1.ebuild 421
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcYkKRy60XGEcJIRAp0MAJ9cu76tslv3bLmVp5b7R9IVUhK3IQCghYvG
-tO7TE5ERbqAePoJvubov8+8=
-=+25V
------END PGP SIGNATURE-----
+MD5 52110d4f3453b07a5ccf4ee25188ab91 khexedit-3.5.0.ebuild 369
+MD5 e29bbb2db20451106f7980c7008328fa files/digest-khexedit-3.4.1 212
+MD5 e47625e9b59633298d5be5ff567712b7 files/khexedit-configure-magic.diff 462
+MD5 062bb93297f13fe72d1e78a55a449788 files/digest-khexedit-3.4.2 288
+MD5 ba38338e687742fb5a9e7458de260898 files/digest-khexedit-3.5_beta1 69
+MD5 7693585dde083d1c2cc205db10692163 files/digest-khexedit-3.4.3 68
+MD5 444e9ea16b9f6261077667552887b9bb files/digest-khexedit-3.5.0_beta2 216
+MD5 ee73652c24b35ea4a7e56120462fc3b9 files/digest-khexedit-3.5.0_rc1 300
+MD5 84550abe96e8ef6f8f931c2e13b53a6e files/digest-khexedit-3.5.0 68

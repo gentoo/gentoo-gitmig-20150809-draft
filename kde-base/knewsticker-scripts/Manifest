@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07ba5c1486535f76c2d85f6969f4d5dc ChangeLog 3654
-MD5 60c005ebe876a0e127dcf1083620803e files/digest-knewsticker-scripts-3.4.1 215
-MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-knewsticker-scripts-3.4.3 69
-MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-knewsticker-scripts-3.5.0 69
-MD5 c87a32e577bf07599564a43d36f80fef files/digest-knewsticker-scripts-3.5.0_beta2 218
-MD5 43efceb4cdcb98066238c7d1f77bf7b4 files/digest-knewsticker-scripts-3.5.0_rc1 302
-MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-knewsticker-scripts-3.5_beta1 70
+MD5 a673b90b43b9329ebd72a7b51acca0cc ChangeLog 3757
 MD5 1202799de5a32c9aa62044367944c1e4 knewsticker-scripts-3.4.1.ebuild 520
-MD5 d4ca6b2c7b75d3848ff1dae5745cd389 knewsticker-scripts-3.4.3.ebuild 527
-MD5 97b68c8cfc352f357a160d247e1c8a0d knewsticker-scripts-3.5.0.ebuild 465
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 c40f24a2ccfd4e7cc860d7baf87b9a44 knewsticker-scripts-3.5_beta1.ebuild 505
+MD5 5bc276439811e47116c909b0e1898138 knewsticker-scripts-3.4.3.ebuild 525
 MD5 fe6ae04f9a8620125006b2b71c194554 knewsticker-scripts-3.5.0_beta2.ebuild 470
 MD5 ad11845d539256d9e9a70884341007db knewsticker-scripts-3.5.0_rc1.ebuild 469
-MD5 c40f24a2ccfd4e7cc860d7baf87b9a44 knewsticker-scripts-3.5_beta1.ebuild 505
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhf/sKRy60XGEcJIRAkhOAJ90JCVOzxIhicpsE65wOB06Mro8nwCfZxYl
-3ldeSuTNbiXTtTKpDANMfb4=
-=nhvU
------END PGP SIGNATURE-----
+MD5 97b68c8cfc352f357a160d247e1c8a0d knewsticker-scripts-3.5.0.ebuild 465
+MD5 60c005ebe876a0e127dcf1083620803e files/digest-knewsticker-scripts-3.4.1 215
+MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-knewsticker-scripts-3.5_beta1 70
+MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-knewsticker-scripts-3.4.3 69
+MD5 c87a32e577bf07599564a43d36f80fef files/digest-knewsticker-scripts-3.5.0_beta2 218
+MD5 43efceb4cdcb98066238c7d1f77bf7b4 files/digest-knewsticker-scripts-3.5.0_rc1 302
+MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-knewsticker-scripts-3.5.0 69

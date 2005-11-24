@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3807845deae6c3389580d9e6afae3506 ChangeLog 3628
-MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1 212
-MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1-r1 212
-MD5 7693585dde083d1c2cc205db10692163 files/digest-kregexpeditor-3.4.3 68
-MD5 84550abe96e8ef6f8f931c2e13b53a6e files/digest-kregexpeditor-3.5.0 68
-MD5 444e9ea16b9f6261077667552887b9bb files/digest-kregexpeditor-3.5.0_beta2 216
-MD5 ee73652c24b35ea4a7e56120462fc3b9 files/digest-kregexpeditor-3.5.0_rc1 300
-MD5 ba38338e687742fb5a9e7458de260898 files/digest-kregexpeditor-3.5_beta1 69
-MD5 0d2726deffd1ecb49751c7fe4f21a194 kregexpeditor-3.4.1-r1.ebuild 451
+MD5 a21b99aec7c4f01748f57c963b4a1770 ChangeLog 3723
 MD5 423ef3625e90b6424ac0043842ee8e7c kregexpeditor-3.4.1.ebuild 421
-MD5 e947f33385a4d0c924eb300b2d1b08c3 kregexpeditor-3.4.3.ebuild 453
-MD5 e31a049651e453516fe37b506498e695 kregexpeditor-3.5.0.ebuild 428
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 0d2726deffd1ecb49751c7fe4f21a194 kregexpeditor-3.4.1-r1.ebuild 451
+MD5 c9e5816d375325c966ef98d7c2cd0ad2 kregexpeditor-3.5_beta1.ebuild 431
+MD5 85ffda6c27e6375aaf81f803fdc781d3 kregexpeditor-3.4.3.ebuild 451
 MD5 4610b9250268ba5edb2359fc5bf04ca1 kregexpeditor-3.5.0_beta2.ebuild 433
 MD5 f1f482a8115c67708c4d5658e52a9d6a kregexpeditor-3.5.0_rc1.ebuild 432
-MD5 c9e5816d375325c966ef98d7c2cd0ad2 kregexpeditor-3.5_beta1.ebuild 431
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhb+gKRy60XGEcJIRAvCxAJwIhU+9GG6+1+9XYlvuRb/6oGSCRACfT/TO
-LhIAyuCbz0bjlhvhwFTp8ps=
-=N+NT
------END PGP SIGNATURE-----
+MD5 e31a049651e453516fe37b506498e695 kregexpeditor-3.5.0.ebuild 428
+MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1 212
+MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1-r1 212
+MD5 ba38338e687742fb5a9e7458de260898 files/digest-kregexpeditor-3.5_beta1 69
+MD5 7693585dde083d1c2cc205db10692163 files/digest-kregexpeditor-3.4.3 68
+MD5 444e9ea16b9f6261077667552887b9bb files/digest-kregexpeditor-3.5.0_beta2 216
+MD5 ee73652c24b35ea4a7e56120462fc3b9 files/digest-kregexpeditor-3.5.0_rc1 300
+MD5 84550abe96e8ef6f8f931c2e13b53a6e files/digest-kregexpeditor-3.5.0 68

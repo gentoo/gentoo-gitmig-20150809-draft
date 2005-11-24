@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3e166ea94c766a167c0fe5c49200557 ChangeLog 3356
+MD5 96928f40452e642127504c51fc2db96c ChangeLog 3445
 MD5 a9cb3e7a732e6a24bf550867143e6e81 drkonqi-3.4.1.ebuild 426
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 57aea957248a3568b5398dae0afec235 drkonqi-3.4.2.ebuild 439
-MD5 eac373a0bdf3e7e287803868aa6ae9a7 drkonqi-3.4.3.ebuild 440
-MD5 980ec2d73c1d694cb6528d1feba53cf4 drkonqi-3.5.0.ebuild 415
+MD5 899056895d87c134360a6d5ddc1c7931 drkonqi-3.5_beta1.ebuild 418
+MD5 9e5186e81437eb4bf34bbd1795905a51 drkonqi-3.4.3.ebuild 438
 MD5 552b9ddc89a130a60af1801002694cb1 drkonqi-3.5.0_beta2.ebuild 420
 MD5 7e9a0a06d1ae6a20ef3e19b3a9608df0 drkonqi-3.5.0_rc1.ebuild 419
-MD5 899056895d87c134360a6d5ddc1c7931 drkonqi-3.5_beta1.ebuild 418
+MD5 980ec2d73c1d694cb6528d1feba53cf4 drkonqi-3.5.0.ebuild 415
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-drkonqi-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-drkonqi-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-drkonqi-3.5_beta1 69
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-drkonqi-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-drkonqi-3.5.0 68
 MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-drkonqi-3.5.0_beta2 216
 MD5 14e4481daa8e322e1222522f8f5b558d files/digest-drkonqi-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-drkonqi-3.5_beta1 69
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhfjjKRy60XGEcJIRAjlrAJ9jVoHYXTV4xZ9rFsfSIgr1nO1qVgCgq3En
-19Nn1qdXnOWmkcbcV8QCDvE=
-=ZPOu
------END PGP SIGNATURE-----
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-drkonqi-3.5.0 68

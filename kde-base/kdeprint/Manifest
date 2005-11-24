@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3dbd22bea4269cbdc8ab3b6f42a26fa2 ChangeLog 3410
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdeprint-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdeprint-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdeprint-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdeprint-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdeprint-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdeprint-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdeprint-3.5_beta1 69
+MD5 f8e4ace0540353c66fecd56663b80841 ChangeLog 3500
 MD5 eef4cc9fa42b2f45b85e576280f93cd9 kdeprint-3.4.1.ebuild 510
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f640b99375ba6c2c98e77127dff658e0 kdeprint-3.4.2.ebuild 523
-MD5 c475d6f261ed200f4755c9002305b880 kdeprint-3.4.3.ebuild 524
-MD5 d1a9fbc175163c9b433f3f0c697bd4f8 kdeprint-3.5.0.ebuild 499
+MD5 59dd13887e1abaafc878b5d835b2e1de kdeprint-3.5_beta1.ebuild 502
+MD5 52353ac32d7b0bd904c16dbb2d494ac5 kdeprint-3.4.3.ebuild 522
 MD5 f50fb8a17c5fef4864c61e3d3e01dd7e kdeprint-3.5.0_beta2.ebuild 504
 MD5 5e50f915cb0a05ac0864f4d8f28762a5 kdeprint-3.5.0_rc1.ebuild 503
-MD5 59dd13887e1abaafc878b5d835b2e1de kdeprint-3.5_beta1.ebuild 502
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDheMRKRy60XGEcJIRAjejAKChHC19V6ygu/Nl5UCnkCX4bC0WnQCeItZI
-XKnzdLNONY3mkTiCTLhsiws=
-=BXnA
------END PGP SIGNATURE-----
+MD5 d1a9fbc175163c9b433f3f0c697bd4f8 kdeprint-3.5.0.ebuild 499
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdeprint-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdeprint-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdeprint-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdeprint-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdeprint-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdeprint-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdeprint-3.5.0 68

@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eecc9882abb39c7b91448afa1f5dbefb ChangeLog 3492
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kappfinder-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kappfinder-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kappfinder-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kappfinder-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kappfinder-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kappfinder-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kappfinder-3.5_beta1 69
+MD5 78438cf70dfe4118ac43831bde00aebb ChangeLog 3584
 MD5 8b8391d7802c75421cebc42ff814a926 kappfinder-3.4.1.ebuild 526
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 72094b29dee8f087631dbf12a458f391 kappfinder-3.4.2.ebuild 539
-MD5 e7dec0a683318fd43b9f044a8d177acb kappfinder-3.4.3.ebuild 540
-MD5 eaa6ea60ccb39a08b39d585e22a373b3 kappfinder-3.5.0.ebuild 515
+MD5 5cd7587ad906b25e8ef4afe20f950952 kappfinder-3.5_beta1.ebuild 518
+MD5 6bbb55aa26f52af5d785dd1795c1c4dd kappfinder-3.4.3.ebuild 538
 MD5 8c0b6306f567375b82f1be4808cf5e24 kappfinder-3.5.0_beta2.ebuild 520
 MD5 862175157a7fec2c538143a3a61b199a kappfinder-3.5.0_rc1.ebuild 519
-MD5 5cd7587ad906b25e8ef4afe20f950952 kappfinder-3.5_beta1.ebuild 518
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDheE2KRy60XGEcJIRAjaiAJ0Tuk2Rv4HvyanG0FjYnWfMEUt8RQCeIFAp
-5rQKRzBoTCmr5X+FYS4rkVc=
-=AgWu
------END PGP SIGNATURE-----
+MD5 eaa6ea60ccb39a08b39d585e22a373b3 kappfinder-3.5.0.ebuild 515
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kappfinder-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kappfinder-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kappfinder-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kappfinder-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kappfinder-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kappfinder-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-kappfinder-3.5.0 68

@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88bc47b9d80685da6c45fe0d9016d223 ChangeLog 3553
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-data-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-data-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdebase-data-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdebase-data-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdebase-data-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdebase-data-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdebase-data-3.5_beta1 69
+MD5 7b4e41697c8cc43085f474130479ab22 ChangeLog 3647
 MD5 d7f1f28b9fcacc33d401afc1ff351a55 kdebase-data-3.4.1.ebuild 633
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c99761443de0b322e1104f98697b2369 kdebase-data-3.4.2.ebuild 646
-MD5 b9fd60ae9110b7e69df0a82735abaa1b kdebase-data-3.4.3.ebuild 647
-MD5 f126109815b08dd7ffe7a82fa7bff2c3 kdebase-data-3.5.0.ebuild 627
+MD5 da15bb4ae7cbb22d031b64dc0e0ffe8f kdebase-data-3.5_beta1.ebuild 628
+MD5 61d4ddf17cc89afbbf42570306fe134e kdebase-data-3.4.3.ebuild 645
 MD5 e1bb40c0eb2876e946ee0280c1bb959c kdebase-data-3.5.0_beta2.ebuild 630
 MD5 fa4236ac64e0b91675287d4e824e856e kdebase-data-3.5.0_rc1.ebuild 631
-MD5 da15bb4ae7cbb22d031b64dc0e0ffe8f kdebase-data-3.5_beta1.ebuild 628
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhc4MKRy60XGEcJIRAltrAKCR0RPYp6sVuRPHOKNJ0zGFSFJVrACgqPEi
-hnSq/8vLhGzqikh15+ZHNOk=
-=zEJo
------END PGP SIGNATURE-----
+MD5 f126109815b08dd7ffe7a82fa7bff2c3 kdebase-data-3.5.0.ebuild 627
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-data-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-data-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdebase-data-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdebase-data-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kdebase-data-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdebase-data-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdebase-data-3.5.0 68

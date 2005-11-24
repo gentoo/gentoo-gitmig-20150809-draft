@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7dbf30986ed86390029bcf4513a59efe ChangeLog 3552
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kstars-3.4.1 208
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kstars-3.4.2 282
-MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kstars-3.4.3 67
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kstars-3.5.0 67
-MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-kstars-3.5.0_beta2 212
-MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-kstars-3.5.0_rc1 294
-MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kstars-3.5_beta1 68
+MD5 603a55837f11260215a0af48ca3daa28 ChangeLog 3640
 MD5 2903c2a4c1065de2e18011a06826afaa kstars-3.4.1.ebuild 649
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 18f1b2297565b1d2b59343c697865d65 kstars-3.4.2.ebuild 662
-MD5 3284d5dbc94cd801d8ae0d187d8d8ddf kstars-3.4.3.ebuild 665
-MD5 01d22fce1e55301a213c77e81558084d kstars-3.5.0.ebuild 657
+MD5 79749813def409c1fde782006d333a5b kstars-3.5_beta1.ebuild 695
+MD5 ed5dd924c5eb1a843acb8c28cdceee9d kstars-3.4.3.ebuild 663
 MD5 01bdbf5f52fed3b1904baac22218acc7 kstars-3.5.0_beta2.ebuild 662
 MD5 80db5c5e7f7e07a169c61236737bd0da kstars-3.5.0_rc1.ebuild 661
-MD5 79749813def409c1fde782006d333a5b kstars-3.5_beta1.ebuild 695
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhb2XKRy60XGEcJIRAouzAJ93XGXPApK5RbsCVggXdWOFbrqQkgCfez6L
-JsgeUXvhhGufhKD0LfrTldU=
-=OkNk
------END PGP SIGNATURE-----
+MD5 01d22fce1e55301a213c77e81558084d kstars-3.5.0.ebuild 657
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kstars-3.4.1 208
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kstars-3.4.2 282
+MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kstars-3.5_beta1 68
+MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kstars-3.4.3 67
+MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-kstars-3.5.0_beta2 212
+MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-kstars-3.5.0_rc1 294
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kstars-3.5.0 67

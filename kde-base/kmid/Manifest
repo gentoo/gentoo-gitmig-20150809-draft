@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 97e8a0d9ff33db2143400e48a9029d96 ChangeLog 3043
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kmid-3.4.1 227
-MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kmid-3.4.3 73
-MD5 1b36c77494f7990406246d8cc77ad16a files/digest-kmid-3.5.0 73
-MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-kmid-3.5.0_beta2 231
-MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kmid-3.5_beta1 74
+MD5 1632399a46ff8c0eb033c394c3ba6ff7 ChangeLog 3129
 MD5 8bc3e2056d87c5e50fed9c3798ef720b kmid-3.4.1.ebuild 387
-MD5 a6a21a8e7eb4506684129311b13f1383 kmid-3.4.3.ebuild 391
-MD5 3c98c6cb92eb324e32e639bce9e31f91 kmid-3.5.0.ebuild 365
-MD5 fb6d2e0c45b4e8a4d0d2ce4324d87e46 kmid-3.5.0_beta2.ebuild 377
-MD5 04a28dfd2588ea018cf12752dede1e39 kmid-3.5_beta1.ebuild 368
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhfs5KRy60XGEcJIRAq45AKCvUqIK+MxQNyjTcG+HOGtaCD4ClwCeP275
-hpmQkQuueeqebpXhxBFirpo=
-=lSpY
------END PGP SIGNATURE-----
+MD5 04a28dfd2588ea018cf12752dede1e39 kmid-3.5_beta1.ebuild 368
+MD5 2719632299f7359730558232ed9c1953 kmid-3.4.3.ebuild 389
+MD5 fb6d2e0c45b4e8a4d0d2ce4324d87e46 kmid-3.5.0_beta2.ebuild 377
+MD5 3c98c6cb92eb324e32e639bce9e31f91 kmid-3.5.0.ebuild 365
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kmid-3.4.1 227
+MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kmid-3.5_beta1 74
+MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kmid-3.4.3 73
+MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-kmid-3.5.0_beta2 231
+MD5 1b36c77494f7990406246d8cc77ad16a files/digest-kmid-3.5.0 73

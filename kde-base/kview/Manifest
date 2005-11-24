@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b78e99089e764242a0efececf442131f ChangeLog 3276
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kview-3.4.1 221
-MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kview-3.4.2 300
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kview-3.4.3 71
-MD5 0459ac16349d79da6246392e2454796b files/digest-kview-3.5.0 71
-MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kview-3.5.0_beta2 225
-MD5 c67126eaeeb2137106bb079f5d529d71 files/digest-kview-3.5.0_rc1 312
-MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kview-3.5_beta1 72
+MD5 855af139fddf3126b6093a8e94f2c2f8 ChangeLog 3363
 MD5 ac6678af014cece07fc8d1b3945a907f kview-3.4.1.ebuild 376
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ecd242e68ddcf6d213b5a0e399afba03 kview-3.4.2.ebuild 389
-MD5 ad18271ca5d5179c205b459fb7bf43de kview-3.4.3.ebuild 391
-MD5 8f028da550b23a491c96d6b5b741f29e kview-3.5.0.ebuild 365
+MD5 4aa114ebaf4e0afbfa978aeb445ff1d0 kview-3.5_beta1.ebuild 368
+MD5 c6802a678d958302b3d1519450c10486 kview-3.4.3.ebuild 389
 MD5 070d67b6acdb80009979f172c5553478 kview-3.5.0_beta2.ebuild 370
 MD5 bfdb3961e3faa24e66b08705b3a22d13 kview-3.5.0_rc1.ebuild 369
-MD5 4aa114ebaf4e0afbfa978aeb445ff1d0 kview-3.5_beta1.ebuild 368
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhcQeKRy60XGEcJIRAgQBAJ4u9IRDpQPzMbfICB0JUM/J09GFfwCfVood
-JIuczVUBK0a+JKAgrxqpEl4=
-=JHo0
------END PGP SIGNATURE-----
+MD5 8f028da550b23a491c96d6b5b741f29e kview-3.5.0.ebuild 365
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kview-3.4.1 221
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kview-3.4.2 300
+MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kview-3.5_beta1 72
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kview-3.4.3 71
+MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kview-3.5.0_beta2 225
+MD5 c67126eaeeb2137106bb079f5d529d71 files/digest-kview-3.5.0_rc1 312
+MD5 0459ac16349d79da6246392e2454796b files/digest-kview-3.5.0 71

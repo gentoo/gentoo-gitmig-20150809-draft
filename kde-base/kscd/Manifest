@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e70480937ad784135d45228ea8d1bb5 ChangeLog 3203
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kscd-3.4.1 227
-MD5 453075362e3201c7f44fea430afec5d5 files/digest-kscd-3.4.2 308
-MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kscd-3.4.3 73
-MD5 1b36c77494f7990406246d8cc77ad16a files/digest-kscd-3.5.0 73
-MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-kscd-3.5.0_beta2 231
-MD5 235bf312c5ea7d7531c86c374ceddcf5 files/digest-kscd-3.5.0_rc1 320
-MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kscd-3.5_beta1 74
+MD5 02623d9686cdab57c9790080b1509d03 ChangeLog 3289
 MD5 72c275ff2754709d9f0e881e9b56be4b kscd-3.4.1.ebuild 788
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f115f59e19ffa459280e50059a1fac34 kscd-3.4.2.ebuild 801
-MD5 f0fea9da40a061100e78986f8c9b9611 kscd-3.4.3.ebuild 802
-MD5 9f1017c72dc67bde4d2b0228c9556d29 kscd-3.5.0.ebuild 741
+MD5 bb717c84d8d971465c9e80d2b6bc91d1 kscd-3.5_beta1.ebuild 780
+MD5 9f042b40c8402be900b3ac601107c2d2 kscd-3.4.3.ebuild 800
 MD5 0390490edb59b7b3249c06cbb1dfbb46 kscd-3.5.0_beta2.ebuild 746
 MD5 d75d1b36d80d5bab31949e9d2e2ab346 kscd-3.5.0_rc1.ebuild 745
-MD5 bb717c84d8d971465c9e80d2b6bc91d1 kscd-3.5_beta1.ebuild 780
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhf0qKRy60XGEcJIRAjqVAKCFx9G785hB49EbnYkb0aavuvFwtQCgkDOA
-j7uB1cjCCYL3qAIyWsKnJek=
-=T/bT
------END PGP SIGNATURE-----
+MD5 9f1017c72dc67bde4d2b0228c9556d29 kscd-3.5.0.ebuild 741
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kscd-3.4.1 227
+MD5 453075362e3201c7f44fea430afec5d5 files/digest-kscd-3.4.2 308
+MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kscd-3.5_beta1 74
+MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kscd-3.4.3 73
+MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-kscd-3.5.0_beta2 231
+MD5 235bf312c5ea7d7531c86c374ceddcf5 files/digest-kscd-3.5.0_rc1 320
+MD5 1b36c77494f7990406246d8cc77ad16a files/digest-kscd-3.5.0 73

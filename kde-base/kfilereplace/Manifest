@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aed64d57af37a364c68b85f39d6437fe ChangeLog 3614
-MD5 e951879abebc3cb3931132db3f1c508a files/digest-kfilereplace-3.4.1 215
-MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kfilereplace-3.4.2 292
-MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kfilereplace-3.4.3 69
-MD5 1b9c64625ee8bb6581dafc883b1d0ee1 files/digest-kfilereplace-3.5.0 69
-MD5 f707b83e603df2763351c664d0943915 files/digest-kfilereplace-3.5.0_beta2 219
-MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-kfilereplace-3.5.0_rc1 304
-MD5 dbf048ce767888392930a6446896b4c7 files/digest-kfilereplace-3.5_beta1 70
+MD5 baf057a93c9f52856e6bae008dd6407b ChangeLog 3708
 MD5 72fad9e92547ed3b4523564598a35607 kfilereplace-3.4.1.ebuild 395
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 21a155d22717d5d1b48afa394f069254 kfilereplace-3.4.2.ebuild 408
-MD5 11e965121648d8d1c392845cddf62aed kfilereplace-3.4.3.ebuild 409
-MD5 b34fa7cf0f41c1b1f305ecbc9e864c8f kfilereplace-3.5.0.ebuild 384
+MD5 2eb8cccb39021314d9b499a1f5e98404 kfilereplace-3.5_beta1.ebuild 387
+MD5 5b30d1efa251a12c66b85438624b6721 kfilereplace-3.4.3.ebuild 407
 MD5 99e2844fc17a4c055469cceeaf340164 kfilereplace-3.5.0_beta2.ebuild 389
 MD5 ead319fe6fcd085dbd5bf0c194cc5fd0 kfilereplace-3.5.0_rc1.ebuild 388
-MD5 2eb8cccb39021314d9b499a1f5e98404 kfilereplace-3.5_beta1.ebuild 387
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdUiKRy60XGEcJIRAoGiAJ0acEleLpGWMCy+TNKsM6lEbsdHQACgsT6r
-w7+o/AgDgyMvL5FJkvK8qQ8=
-=iKew
------END PGP SIGNATURE-----
+MD5 b34fa7cf0f41c1b1f305ecbc9e864c8f kfilereplace-3.5.0.ebuild 384
+MD5 e951879abebc3cb3931132db3f1c508a files/digest-kfilereplace-3.4.1 215
+MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kfilereplace-3.4.2 292
+MD5 dbf048ce767888392930a6446896b4c7 files/digest-kfilereplace-3.5_beta1 70
+MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kfilereplace-3.4.3 69
+MD5 f707b83e603df2763351c664d0943915 files/digest-kfilereplace-3.5.0_beta2 219
+MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-kfilereplace-3.5.0_rc1 304
+MD5 1b9c64625ee8bb6581dafc883b1d0ee1 files/digest-kfilereplace-3.5.0 69

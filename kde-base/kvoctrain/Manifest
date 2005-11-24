@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 857a1b5bb7b38e8e8ab799d0a15fe60c ChangeLog 4279
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1 208
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1-r1 208
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kvoctrain-3.4.2 282
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kvoctrain-3.4.2-r1 282
-MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kvoctrain-3.4.3 67
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kvoctrain-3.5.0 67
-MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-kvoctrain-3.5.0_beta2 212
-MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-kvoctrain-3.5.0_rc1 294
-MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kvoctrain-3.5_beta1 68
-MD5 0e82c5810df3b04370188ba13cc50203 files/post-3.4.2-kdeedu.diff 1876
-MD5 e7a910820e20283225007708ae5fd24f kvoctrain-3.4.1-r1.ebuild 451
+MD5 76f4405b4f3eb0f56d5845017a55d637 ChangeLog 4370
 MD5 8284d599d20f0383033231206708527e kvoctrain-3.4.1.ebuild 403
-MD5 a96e66b5dcec36db53b76fc341836f2c kvoctrain-3.4.2-r1.ebuild 455
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ca8c48071edcecf35a1214f245c75ddc kvoctrain-3.4.2.ebuild 416
-MD5 bd2439b36e7b7b897163c496cc98ee3b kvoctrain-3.4.3.ebuild 417
-MD5 6b68a6877c1e289ef652d6d7266fb7e5 kvoctrain-3.5.0.ebuild 391
+MD5 e7a910820e20283225007708ae5fd24f kvoctrain-3.4.1-r1.ebuild 451
+MD5 a96e66b5dcec36db53b76fc341836f2c kvoctrain-3.4.2-r1.ebuild 455
+MD5 3b8e2f547cb7830dc94aca2e965f7335 kvoctrain-3.5_beta1.ebuild 394
+MD5 cdd13ef57a56c7212404b9791b513cd1 kvoctrain-3.4.3.ebuild 415
 MD5 039907b236f3159cadb21120a7368ec4 kvoctrain-3.5.0_beta2.ebuild 396
 MD5 4e4e88081adb8e3a4c34aa531da16d9b kvoctrain-3.5.0_rc1.ebuild 395
-MD5 3b8e2f547cb7830dc94aca2e965f7335 kvoctrain-3.5_beta1.ebuild 394
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhbszKRy60XGEcJIRAtZzAKCbOVAGZI/jhraVqlruqBPMLcvUjgCgqJgc
-p889AcfWNmrYnD4xQTjv6jg=
-=ViiW
------END PGP SIGNATURE-----
+MD5 6b68a6877c1e289ef652d6d7266fb7e5 kvoctrain-3.5.0.ebuild 391
+MD5 0e82c5810df3b04370188ba13cc50203 files/post-3.4.2-kdeedu.diff 1876
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1 208
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kvoctrain-3.4.2 282
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1-r1 208
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kvoctrain-3.4.2-r1 282
+MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kvoctrain-3.5_beta1 68
+MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kvoctrain-3.4.3 67
+MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-kvoctrain-3.5.0_beta2 212
+MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-kvoctrain-3.5.0_rc1 294
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kvoctrain-3.5.0 67

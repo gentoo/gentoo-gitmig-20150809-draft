@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f9ddf2248d40cb69e00779f5fd5d5b0 ChangeLog 3785
-MD5 e951879abebc3cb3931132db3f1c508a files/digest-quanta-3.4.1 215
-MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-quanta-3.4.2 292
-MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-quanta-3.4.3 69
-MD5 1b9c64625ee8bb6581dafc883b1d0ee1 files/digest-quanta-3.5.0 69
-MD5 f707b83e603df2763351c664d0943915 files/digest-quanta-3.5.0_beta2 219
-MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-quanta-3.5.0_rc1 304
-MD5 dbf048ce767888392930a6446896b4c7 files/digest-quanta-3.5_beta1 70
+MD5 33ac07bd5a2027021dc44e03c2a96bb8 ChangeLog 3873
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2de271d5cb0564396ad3901ab2879b63 quanta-3.4.1.ebuild 1046
 MD5 5cd5d5288de88797c173db09bd12073c quanta-3.4.2.ebuild 1077
-MD5 c42ebc119f9d2163c27a95e8c3a10bcb quanta-3.4.3.ebuild 1076
-MD5 51137b4eb68c497df86d0da1441b5a73 quanta-3.5.0.ebuild 1051
+MD5 6d8265acda77aa782286be48117b2673 quanta-3.5_beta1.ebuild 1054
+MD5 04e82773bd2e07574e583b53b4325f32 quanta-3.4.3.ebuild 1074
 MD5 0b487fcc16a38ba956a89dff2dbd6634 quanta-3.5.0_beta2.ebuild 1062
 MD5 06905dfa4d76a320e55b6d0403015e13 quanta-3.5.0_rc1.ebuild 1055
-MD5 6d8265acda77aa782286be48117b2673 quanta-3.5_beta1.ebuild 1054
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhdXFKRy60XGEcJIRAvoAAJ9w12KYzaBD5HcogW1jEZeyObtjigCgqgD8
-kEZ1axoUA13SKUUw6yRgf9I=
-=tYFF
------END PGP SIGNATURE-----
+MD5 51137b4eb68c497df86d0da1441b5a73 quanta-3.5.0.ebuild 1051
+MD5 e951879abebc3cb3931132db3f1c508a files/digest-quanta-3.4.1 215
+MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-quanta-3.4.2 292
+MD5 dbf048ce767888392930a6446896b4c7 files/digest-quanta-3.5_beta1 70
+MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-quanta-3.4.3 69
+MD5 f707b83e603df2763351c664d0943915 files/digest-quanta-3.5.0_beta2 219
+MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-quanta-3.5.0_rc1 304
+MD5 1b9c64625ee8bb6581dafc883b1d0ee1 files/digest-quanta-3.5.0 69

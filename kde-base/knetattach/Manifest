@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 122af8ee8b446e8f3b18db850828b937 ChangeLog 3464
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-knetattach-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-knetattach-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-knetattach-3.4.3 68
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-knetattach-3.5.0 68
-MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-knetattach-3.5.0_beta2 216
-MD5 14e4481daa8e322e1222522f8f5b558d files/digest-knetattach-3.5.0_rc1 299
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-knetattach-3.5_beta1 69
+MD5 8164a5b0b5764449f5beb895ad5241d2 ChangeLog 3556
 MD5 9da2056fb7b18814bb5579865fa3d886 knetattach-3.4.1.ebuild 387
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1b2c24e119b3cc70ecbef9e83891fd0e knetattach-3.4.2.ebuild 400
-MD5 50af5aea79894ae8a291a3a80c827952 knetattach-3.4.3.ebuild 401
-MD5 41ecc52824e60009c0a7ef7db2647909 knetattach-3.5.0.ebuild 376
+MD5 b4c64851c2b5b98ba39fd3ceb0cd30f4 knetattach-3.5_beta1.ebuild 379
+MD5 d841e1b963c539b30cfef63cafeb46c1 knetattach-3.4.3.ebuild 399
 MD5 aa3ae8a3853883b05df7877cf6da0dc9 knetattach-3.5.0_beta2.ebuild 381
 MD5 3103ac032bdb2d36e2d6767a9e1e7fa4 knetattach-3.5.0_rc1.ebuild 380
-MD5 b4c64851c2b5b98ba39fd3ceb0cd30f4 knetattach-3.5_beta1.ebuild 379
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDheBZKRy60XGEcJIRAuepAJ9dx33YgcOFoncto3BoToJcreIEMwCePXUR
-4wSNubnMG+eLqiRXj409/H8=
-=Kt3w
------END PGP SIGNATURE-----
+MD5 41ecc52824e60009c0a7ef7db2647909 knetattach-3.5.0.ebuild 376
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-knetattach-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-knetattach-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-knetattach-3.5_beta1 69
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-knetattach-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-knetattach-3.5.0_beta2 216
+MD5 14e4481daa8e322e1222522f8f5b558d files/digest-knetattach-3.5.0_rc1 299
+MD5 939dd1c6769066b8e1770100216e2026 files/digest-knetattach-3.5.0 68

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b6fba04664443ebae8fb26ce59c32cd ChangeLog 2929
+MD5 7a87db662b92dc17cc6183f7a9444625 ChangeLog 3018
+MD5 2d6f45d1c0d651baaa1edb61c1a9a60d kverbos-3.4.1.ebuild 398
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 7dd1caa026377fae1c5acd7dea77f9a3 kverbos-3.4.2.ebuild 412
+MD5 28c383ac04f29ec27e332d843ab1ce77 kverbos-3.5_beta1.ebuild 397
+MD5 97a8f175024fb8337e5a063d0e0fe139 kverbos-3.5.0.ebuild 387
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kverbos-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kverbos-3.4.2 282
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kverbos-3.5.0 67
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kverbos-3.5_beta1 68
-MD5 2d6f45d1c0d651baaa1edb61c1a9a60d kverbos-3.4.1.ebuild 398
-MD5 c46cd252e9525c7367b028305fdeaccc kverbos-3.4.2.ebuild 414
-MD5 97a8f175024fb8337e5a063d0e0fe139 kverbos-3.5.0.ebuild 387
-MD5 28c383ac04f29ec27e332d843ab1ce77 kverbos-3.5_beta1.ebuild 397
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDhbpUKRy60XGEcJIRAqVNAKCHqD0LYyesgqQTeDGZ+mnArTtgPgCggBdN
-5TLkFuzgGmDAbiCaz8SOIcY=
-=3I85
------END PGP SIGNATURE-----
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kverbos-3.5.0 67
