@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.6.ebuild,v 1.6 2005/11/17 13:35:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.6.ebuild,v 1.7 2005/11/24 14:30:59 brix Exp $
 
 inherit linux-mod
 
@@ -42,7 +42,8 @@ pkg_setup() {
 		die "${P} does not support building against kernel 2.4.x"
 	fi
 
-	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]]; then
+	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]] || \
+		[[ -f ${KV_DIR}/include/config/ieee80211.h ]]; then
 		eerror
 		eerror "Your kernel source contains an incompatible version of the"
 		eerror "ieee80211 subsystem, which needs to be removed before"
