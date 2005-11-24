@@ -17,7 +17,7 @@ MD5 625b4007f035e3da9a4f1eeee1db6b9c files/mysql-4.0.15.rc6 1187
 MD5 d0fbdf4e41f2b52210eef6cb3a53e128 files/mysql-4.0.24-r1.rc6 1662
 MD5 356c1b4211a0b3d229bcb09c7c8742a7 files/mysql-4.0.24-r2.rc6 2151
 MD5 c8a9f17eb53cb46bd7ec6b3105cd8d23 files/mysql-slot.conf.d 3218
-MD5 3f0cf4e6c3cb45ef2e8019cdd2423c28 files/mysql-slot.rc6 8697
+MD5 2e915001528cb4b44591d907168b6a51 files/mysql-slot.rc6 8691
 MD5 73be6460f548f6f73c70246a4cfd13a0 files/mysql.init 886
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 eb11a08abb447b7a69b192a6f9be3dbf mysql-3.23.58-r1.ebuild 7219

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.5 2005/11/24 14:03:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6,v 1.6 2005/11/24 14:59:24 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -280,7 +280,7 @@ stop () {
 		pidfile=${shutdown_elem#*=}
 		ebegin "Stopping mysqld (${runwhat})"
 		# following code grabbed from the squid rc script
-		PID=$(cat /var/run/squid.pid 2>/dev/null)
+		PID=$(cat "${pidfile}" 2>/dev/null)
 		start-stop-daemon --stop --quiet --pidfile="${pidfile}"
         sleep 2
 		if test -n "$PID" && kill -0 $PID 2>/dev/null
