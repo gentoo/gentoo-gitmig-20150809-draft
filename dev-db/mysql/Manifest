@@ -1,4 +1,7 @@
-MD5 8a233712247b5c8463f228de237d4b3e ChangeLog 50676
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75dc5ca1dea66127370bd5227416ad03 ChangeLog 50844
 MD5 c6fcd70c34bed04e59808ec71c5bedfb files/digest-mysql-3.23.58-r1 140
 MD5 0feb3b501c47708ea13707c8e4cdde9c files/digest-mysql-4.0.25-r2 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26 139
@@ -27,5 +30,12 @@ MD5 432e8894444e71bc477ef7a68ce5d819 mysql-4.1.14.ebuild 18859
 MD5 767951c93752fe52f33984b3cfa8220a mysql-4.1.15-r30.ebuild 22453
 MD5 3d68365651cc7d8a0eedccda80ae5bd8 mysql-4.1.15.ebuild 22508
 MD5 ed292dce42e38a400c1f274b65c25296 mysql-5.0.15.ebuild 19008
-MD5 56222c53e6663e803bb9b5d2bce33a72 mysql-5.0.16-r2.ebuild 21938
-MD5 114777e0dfbf33d756de4c2ccfed46cd mysql-5.0.16-r30.ebuild 22512
+MD5 1a25be83666cf467574c116d7630aac1 mysql-5.0.16-r2.ebuild 22067
+MD5 5c77c4645b044477bd47441d001eacb0 mysql-5.0.16-r30.ebuild 22641
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhQ+S2G5bA0cA/ScRAiCFAKCHBqIPs2CMA6lR1rP9NnNkhBQTZACgzSNd
+a+qhhgBASzNQbRRprjNMhyc=
+=per+
+-----END PGP SIGNATURE-----

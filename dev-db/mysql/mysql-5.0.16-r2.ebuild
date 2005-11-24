@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r2.ebuild,v 1.1 2005/11/23 19:44:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r2.ebuild,v 1.2 2005/11/24 00:55:05 herbs Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -219,6 +219,10 @@ src_unpack() {
 	rm -f "${S}/zlib/"*.[ch]
 	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
 	rm -f scripts/mysqlbug
+
+	# Multilib issue with zlib detection
+	sed -i -e "s:zlib_dir/lib:zlib_dir/$(get_libdir):g" \
+		"${S}/config/ac-macros/zlib.m4"
 
 	# Make charsets install in the right place
 	find . -name 'Makefile.am' \

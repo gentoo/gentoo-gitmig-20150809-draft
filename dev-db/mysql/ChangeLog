@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.266 2005/11/23 19:44:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.267 2005/11/24 00:55:05 herbs Exp $
+
+  24 Nov 2005; Herbie Hopkins <herbs@gentoo.org> mysql-5.0.16-r2.ebuild,
+  mysql-5.0.16-r30.ebuild:
+  Fix small multilib problem (only occurs on no-symlinks profile)
 
 *mysql-5.0.16-r2 (23 Nov 2005)
 
