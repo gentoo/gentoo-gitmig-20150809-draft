@@ -1,4 +1,4 @@
-MD5 864da94afcce6a0d348ba793d6db3849 ChangeLog 5306
+MD5 d02b7119dc74730b5d96b375b1f9fbf9 ChangeLog 5425
 MD5 00c42877b616c0d2c5df33a6eaecbfdd files/configure-fix-kdebase-openexr.patch 703
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1-r1 212
@@ -15,7 +15,7 @@ MD5 905699f5d72415ca005d2a915cb4731c kdebase-kioslaves-3.4.1-r1.ebuild 962
 MD5 3196f5d7edade715c6861def61990244 kdebase-kioslaves-3.4.1.ebuild 895
 MD5 aa60665f6528f6da8f064764de4bfe70 kdebase-kioslaves-3.4.2-r1.ebuild 1299
 MD5 baa5d6bb5f0bda49ce3e96283732ca46 kdebase-kioslaves-3.4.2.ebuild 1096
-MD5 b7583ec6467e8d473837e74c07a6fb88 kdebase-kioslaves-3.4.3.ebuild 1302
+MD5 3fcd9610c420303959bdad9df4a10e7b kdebase-kioslaves-3.4.3.ebuild 1301
 MD5 3392e7d0c0735ba8ddace32c7309d4e3 kdebase-kioslaves-3.5.0.ebuild 918
 MD5 314b5c31e180d391a5c5eebf7bde3fdb kdebase-kioslaves-3.5.0_beta2.ebuild 921
 MD5 7af8fa019f9d2973ad154473643fc9ee kdebase-kioslaves-3.5.0_rc1.ebuild 922

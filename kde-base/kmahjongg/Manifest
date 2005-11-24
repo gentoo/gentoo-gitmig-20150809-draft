@@ -1,4 +1,4 @@
-MD5 21bb545ac9d9642ec55ebac3d06511d2 ChangeLog 3315
+MD5 cda0afd10cc8a531e571a9259d8b5a8b ChangeLog 3426
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kmahjongg-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kmahjongg-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kmahjongg-3.4.3 68
@@ -8,7 +8,7 @@ MD5 894962ff94814330209ff99f0ab9f1cb files/digest-kmahjongg-3.5.0_rc1 302
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kmahjongg-3.5_beta1 70
 MD5 39eb2fed1920fc8c5dfc43f5cd105b6c kmahjongg-3.4.1.ebuild 533
 MD5 3afcbda6f0ff27af980378a4798413d9 kmahjongg-3.4.2.ebuild 546
-MD5 26dcbeee10978157f0f18d95dfb7caf5 kmahjongg-3.4.3.ebuild 548
+MD5 c3adf476731e197c3af445f21bb46f8b kmahjongg-3.4.3.ebuild 547
 MD5 a26f0e22dc3238e9d1567842bd563d30 kmahjongg-3.5.0.ebuild 485
 MD5 f116643daba2016aab47693e3efe227c kmahjongg-3.5.0_beta2.ebuild 490
 MD5 e9438dc4117fb1ec92aeee740de91f7e kmahjongg-3.5.0_rc1.ebuild 489

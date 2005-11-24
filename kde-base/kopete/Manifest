@@ -1,4 +1,4 @@
-MD5 5608bef4ba2f9ad6e90a8484c33ce243 ChangeLog 5309
+MD5 0c230ba20a10caf5f43a642fea028c98 ChangeLog 5415
 MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
 MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kopete-3.4.1 218
@@ -14,7 +14,7 @@ MD5 db3c7f3cc040e55e195767191491acaa files/kopete-3.5.0_rc1-fix.patch 709
 MD5 04a2f0cd98df7d21f30ef36d4c4f20d4 kopete-3.4.1-r1.ebuild 757
 MD5 ec7b8d63a646262499635474f93ffd3b kopete-3.4.1.ebuild 551
 MD5 3d71eb4f7bb9c12d729d0a4792976142 kopete-3.4.2.ebuild 1044
-MD5 e095c97e8d4fb931d8514a4c9f43c33e kopete-3.4.3.ebuild 1044
+MD5 b89e00c1ec16e13b5269c19997e4f82e kopete-3.4.3.ebuild 1045
 MD5 cead97c411090a0f4ff1ea3ec4297827 kopete-3.5.0.ebuild 961
 MD5 78512e3622661d63f595d83e3c20f461 kopete-3.5.0_beta2.ebuild 966
 MD5 a7ec219e7d827db6fc77a01132e058e1 kopete-3.5.0_rc1.ebuild 1001

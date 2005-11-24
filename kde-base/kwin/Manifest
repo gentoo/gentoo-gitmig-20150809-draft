@@ -1,4 +1,4 @@
-MD5 e2e5d899d8d48bae200999dac4e3772e ChangeLog 3515
+MD5 4e858d4e63ef8091fbc1d41fdf308a8a ChangeLog 3619
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kwin-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kwin-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kwin-3.4.3 68
@@ -8,7 +8,7 @@ MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kwin-3.5.0_rc1 299
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kwin-3.5_beta1 69
 MD5 2809511699650a8a076be8791e4d1567 kwin-3.4.1.ebuild 384
 MD5 83701c6ee016cca9476c28a71b8b6f8d kwin-3.4.2.ebuild 388
-MD5 a6fade0eee839bed51207d7966cc742b kwin-3.4.3.ebuild 390
+MD5 435281a3864df22aa038cf42ac143725 kwin-3.4.3.ebuild 389
 MD5 5eea5e23a535648652098d23c249092f kwin-3.5.0.ebuild 369
 MD5 55ea2cc38568d41b969f117275d6039a kwin-3.5.0_beta2.ebuild 372
 MD5 9d809ccabc91983f809a86f2e2c69840 kwin-3.5.0_rc1.ebuild 373

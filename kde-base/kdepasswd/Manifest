@@ -1,4 +1,4 @@
-MD5 879b3c9bed31b09d01dc75ee6985cf65 ChangeLog 3342
+MD5 77cf0ff5e01c23947f0b04e35ef3e348 ChangeLog 3453
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdepasswd-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdepasswd-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdepasswd-3.4.3 68
@@ -8,7 +8,7 @@ MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdepasswd-3.5.0_rc1 299
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdepasswd-3.5_beta1 69
 MD5 81dd768912a60b59cde4322ff2f02db9 kdepasswd-3.4.1.ebuild 518
 MD5 44e32e90f31926671d2c21f593504750 kdepasswd-3.4.2.ebuild 531
-MD5 1dee22072a4e561b802ba954c7e20cd5 kdepasswd-3.4.3.ebuild 533
+MD5 95285246d2814fdab104749e3ff34fc0 kdepasswd-3.4.3.ebuild 532
 MD5 7d7d45a20f90653f0644702277964b98 kdepasswd-3.5.0.ebuild 472
 MD5 b852cd3ac6a98305f06c6ee27879f305 kdepasswd-3.5.0_beta2.ebuild 477
 MD5 26a8abe97bcdc98db8bc7b9a3cb1431b kdepasswd-3.5.0_rc1.ebuild 476

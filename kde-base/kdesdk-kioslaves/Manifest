@@ -1,4 +1,4 @@
-MD5 46c5816352e4db04f542f6d0aea04732 ChangeLog 3398
+MD5 70445744651f42052b3d953f7a1277a2 ChangeLog 3516
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kdesdk-kioslaves-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kdesdk-kioslaves-3.4.2 280
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kdesdk-kioslaves-3.4.3 66
@@ -8,7 +8,7 @@ MD5 9e49e2951bd6cc8a8bbe80e713128480 files/digest-kdesdk-kioslaves-3.5.0_rc1 292
 MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-kdesdk-kioslaves-3.5_beta1 67
 MD5 39608e34e5602a69914845a449bc1b7b kdesdk-kioslaves-3.4.1.ebuild 481
 MD5 c0006eb663c9464c4e294fe73a063956 kdesdk-kioslaves-3.4.2.ebuild 491
-MD5 6314cf619697bbbe8956982a330773a8 kdesdk-kioslaves-3.4.3.ebuild 491
+MD5 75dde2cab444c0df96f81fad28e14f19 kdesdk-kioslaves-3.4.3.ebuild 490
 MD5 2c2dbf2d3ea41e120946e18924a0e8d2 kdesdk-kioslaves-3.5.0.ebuild 471
 MD5 1c77f49effd8dff0153f7e07fc2337da kdesdk-kioslaves-3.5.0_beta2.ebuild 476
 MD5 ef48787f9e4318e03fd7b14003747cbf kdesdk-kioslaves-3.5.0_rc1.ebuild 475

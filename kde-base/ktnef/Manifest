@@ -1,4 +1,4 @@
-MD5 d0add02a9f6880ea76e28f2504ebd78b ChangeLog 3655
+MD5 4ff11c9763ec9121ba594e43ef588cb7 ChangeLog 3760
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ktnef-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-ktnef-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-ktnef-3.4.3 67
@@ -8,7 +8,7 @@ MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-ktnef-3.5.0_rc1 294
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-ktnef-3.5_beta1 68
 MD5 2f91e99783b4f6d4af0db4b4a6d8810f ktnef-3.4.1.ebuild 416
 MD5 6084e984b9bc3ab97bbfe11d0f98511a ktnef-3.4.2.ebuild 420
-MD5 793b9b9404bf6cdf5e2f394d743842df ktnef-3.4.3.ebuild 422
+MD5 ec897d4d01eb661a6e06c77d5c9efb1a ktnef-3.4.3.ebuild 421
 MD5 9e9f2ed82ba254831ce559cca044c3e9 ktnef-3.5.0.ebuild 401
 MD5 9a36d72449a83752a3905f0272d242ed ktnef-3.5.0_beta2.ebuild 404
 MD5 3a8357e94a97492b3419f8bb1b621b6c ktnef-3.5.0_rc1.ebuild 405

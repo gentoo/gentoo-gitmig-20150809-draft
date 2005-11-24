@@ -1,4 +1,4 @@
-MD5 2c90cea9fa6e707c608f8e5fdbaf2185 ChangeLog 3683
+MD5 bba28466275a66ccee5287f56502933d ChangeLog 3796
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kolourpaint-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kolourpaint-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kolourpaint-3.4.3 71
@@ -9,7 +9,7 @@ MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kolourpaint-3.5_beta1 72
 MD5 2101ba9939546290111b1732a8ff440b files/kolourpaint-3.5_beta1-compile-fix.patch 1120
 MD5 a44022fb1411ba50607f4c25d6b75bf6 kolourpaint-3.4.1.ebuild 395
 MD5 5d1fec3c0695e48ce0adf2843a0b54ac kolourpaint-3.4.2.ebuild 408
-MD5 f63c6c9a3a87240b0bbfb7e5fdee32a2 kolourpaint-3.4.3.ebuild 410
+MD5 ab9c5171c8321d776429f10db04180d6 kolourpaint-3.4.3.ebuild 409
 MD5 c2d7882bec419749b29435f9a05a946e kolourpaint-3.5.0.ebuild 385
 MD5 b479d9201028fde9b4b74c5767589731 kolourpaint-3.5.0_beta2.ebuild 390
 MD5 230a590e6122fccb3b8bc513ce9a8b8a kolourpaint-3.5.0_rc1.ebuild 389

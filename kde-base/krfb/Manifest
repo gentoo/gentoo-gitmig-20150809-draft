@@ -1,4 +1,4 @@
-MD5 2f629838f070bee2d2dd00ad13f5e1ed ChangeLog 3134
+MD5 792e25a2bdfebd99f22a302c31fcb0de ChangeLog 3238
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-krfb-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-krfb-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-krfb-3.4.3 70
@@ -8,7 +8,7 @@ MD5 e3ae49bd33349d36b78d2df93d49089e files/digest-krfb-3.5.0_rc1 308
 MD5 16b903e400a8cf2d73f3c237799238db files/digest-krfb-3.5_beta1 71
 MD5 93d80d3629660ba4ee9ded624f23e937 krfb-3.4.1.ebuild 515
 MD5 bd811de4bbf079f0ea66e861e800af91 krfb-3.4.2.ebuild 528
-MD5 2f428f4d8c6e886c2ea2f7d904bb2009 krfb-3.4.3.ebuild 530
+MD5 bbd3587879af0d745828d68cedb09140 krfb-3.4.3.ebuild 530
 MD5 49db04d781cb0b33bdaaed7cc0dd59f5 krfb-3.5.0.ebuild 504
 MD5 0ff2dae4a167fc7258cfbefaeac1f66b krfb-3.5.0_beta2.ebuild 509
 MD5 8055f7466eefc6ff854940c47605cd6a krfb-3.5.0_rc1.ebuild 508

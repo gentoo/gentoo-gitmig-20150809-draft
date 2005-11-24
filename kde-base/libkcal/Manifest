@@ -1,4 +1,4 @@
-MD5 2ef30b163cb3cddd0dfbeffbd2f06422 ChangeLog 3418
+MD5 a604c8227d860de055a0029d22ae2e40 ChangeLog 3525
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkcal-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkcal-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkcal-3.4.3 67
@@ -8,7 +8,7 @@ MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-libkcal-3.5.0_rc1 294
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkcal-3.5_beta1 68
 MD5 76a87ae1b7164ffa47cfdda982cf88f5 libkcal-3.4.1.ebuild 590
 MD5 a2affe5ca8838ab9cf0ddc3fbed740be libkcal-3.4.2.ebuild 594
-MD5 c63898d85a40105a8f5de65b8e90437a libkcal-3.4.3.ebuild 596
+MD5 2d152cb38e83ec67f85f171a5e439b20 libkcal-3.4.3.ebuild 595
 MD5 3dbb8d11c2d1d97370c6ca5e4164d7a5 libkcal-3.5.0.ebuild 544
 MD5 e2fdbadb6f72222e7637417e5bbfaa70 libkcal-3.5.0_beta2.ebuild 547
 MD5 b72a75a66db5b642e38bfdb7ec244909 libkcal-3.5.0_rc1.ebuild 548

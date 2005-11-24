@@ -1,4 +1,4 @@
-MD5 5e7339d55949d15f633ef1e7207fcea7 ChangeLog 3730
+MD5 c123664d2be888ed033acc9f0eb3a73b ChangeLog 3843
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kitchensync-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kitchensync-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kitchensync-3.4.3 67
@@ -8,7 +8,7 @@ MD5 39c26c9a143b35fc1a4cfab677f4b572 files/digest-kitchensync-3.5.0_rc1 294
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kitchensync-3.5_beta1 68
 MD5 f461d1f7ec28fd73d1dd2117055452ba kitchensync-3.4.1.ebuild 895
 MD5 38ed1d66047ed62b769b32569493ec3c kitchensync-3.4.2.ebuild 908
-MD5 8415e14be50f39bc2f96e16d75572da7 kitchensync-3.4.3.ebuild 910
+MD5 71570d0188897a6781fe223b73c8d2b5 kitchensync-3.4.3.ebuild 909
 MD5 7b515d9c82e243b31057d03dc50152f6 kitchensync-3.5.0.ebuild 825
 MD5 f1cd4f602b6f75fdf8429e6d53be2416 kitchensync-3.5.0_beta2.ebuild 830
 MD5 7f397508a40235d271dbaa6bdb8865ce kitchensync-3.5.0_rc1.ebuild 829
