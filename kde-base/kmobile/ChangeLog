@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmobile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmobile/ChangeLog,v 1.20 2005/11/22 22:14:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmobile/ChangeLog,v 1.21 2005/11/24 13:30:43 greg_g Exp $
+
+  24 Nov 2005; Gregorio Guidi <greg_g@gentoo.org>
+  -files/kmobile-3.5.0_beta2-fix-compilation.diff,
+  -kmobile-3.5_beta1.ebuild, -kmobile-3.5.0_beta2.ebuild,
+  -kmobile-3.5.0_rc1.ebuild, -kmobile-3.5.0.ebuild:
+  Remove ebuilds for kmobile-3.5.x (#112589).
 
 *kmobile-3.5.0 (22 Nov 2005)
 
