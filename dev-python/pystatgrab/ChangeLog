@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pystatgrab
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.3 2005/09/02 03:46:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.4 2005/11/24 22:13:32 marienz Exp $
+
+*pystatgrab-0.4 (24 Nov 2005)
+
+  24 Nov 2005; Marien Zwart <marienz@gentoo.org> metadata.xml,
+  pystatgrab-0.3.ebuild, +pystatgrab-0.4.ebuild:
+  Make pystatgrab-0.3 block >=sys-libs/libstatgrab-0.12, add pystatgrab-0.4
+  that works with libstatgrab-0.12 (bug #106650). Move from the perl to the
+  python herd, remove dams as maintainer.
 
   02 Sep 2005; Luis Medinas <metalgod@gentoo.org> pystatgrab-0.3.ebuild:
   Added ~amd64 keywords. Closes bug #98166.

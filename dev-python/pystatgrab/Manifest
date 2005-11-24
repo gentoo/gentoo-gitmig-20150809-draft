@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bc5b72808c8d4a1c9d749a16a5fd4fa0 ChangeLog 565
-MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
-MD5 c2ae80c97bc064584b3ca666a3d9c750 pystatgrab-0.3.ebuild 588
+MD5 f78cacb26893bdeb853eca2304dbfae0 ChangeLog 902
 MD5 5ddd8627cb6d33a7b8a7bc6025df8424 files/digest-pystatgrab-0.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDF9h+wUpWvClEHQoRAqKcAJ94CrtTgDclbAQXiYfzagOa1jPE0wCeIu3+
-hlNFba+7pm6Ggjv1KPRauEk=
-=N9x9
------END PGP SIGNATURE-----
+MD5 2e40e7698cf0811a7d73508d405f416b files/digest-pystatgrab-0.4 65
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 b8210ed2b118b9a362237521398cd82c pystatgrab-0.3.ebuild 617
+MD5 00d154dc418ac3ceda678c1e425f0788 pystatgrab-0.4.ebuild 611
