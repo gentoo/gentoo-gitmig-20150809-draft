@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.15.ebuild,v 1.4 2005/11/06 16:26:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.15.ebuild,v 1.5 2005/11/24 16:15:52 anarchy Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~amd64 ~sparc ~ia64 ~ppc ~ppc64"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="-amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 IUSE="big-tables berkdb debug doc minimal perl readline selinux ssl static"
 RESTRICT="primaryuri"
 
