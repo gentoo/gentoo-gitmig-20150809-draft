@@ -1,4 +1,4 @@
-MD5 641f76e8be693836f7f56fade7f2098c ChangeLog 4844
+MD5 03b12465d56a135cbfd8e1d88da7d3d4 ChangeLog 4962
 MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
 MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-startkde-3.4.1 212
@@ -13,7 +13,7 @@ MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1
 MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1284
 MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
 MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
-MD5 21c9f59d5b120d2e598b0c5f0d00eac0 kdebase-startkde-3.4.3.ebuild 2198
+MD5 20f14413efd172edae9925bc0379ca7f kdebase-startkde-3.4.3.ebuild 2197
 MD5 e9c302b4d61fbf3ae9eea8a473db4ac9 kdebase-startkde-3.5.0.ebuild 2180
 MD5 7a38d417f25fe1765de3b65c106ed2b9 kdebase-startkde-3.5.0_beta2.ebuild 2195
 MD5 f3407857320e2382112c204b30f7d4c4 kdebase-startkde-3.5.0_rc1.ebuild 2204

@@ -1,4 +1,4 @@
-MD5 e873c6441e8da722a2429a94522fcd99 ChangeLog 4468
+MD5 a2cce83d5cf0f15e8ab706e277bc327e ChangeLog 4591
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.3 0
@@ -8,7 +8,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0_rc
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5_beta1 0
 MD5 d3bdd888a8e1b0ffed94c20d97505763 kdeaccessibility-meta-3.4.1.ebuild 836
 MD5 7af52742df7cab35a7660867e9984a89 kdeaccessibility-meta-3.4.2.ebuild 849
-MD5 aa5b767b472201f6a17031aba5e85faa kdeaccessibility-meta-3.4.3.ebuild 851
+MD5 c6d11808ce5d4549aa0a267ddec7ebac kdeaccessibility-meta-3.4.3.ebuild 850
 MD5 72c5acec5413c6c80bc6b23b50e6b524 kdeaccessibility-meta-3.5.0.ebuild 825
 MD5 36d0beb9fc77771e739c1e77c0c7ed43 kdeaccessibility-meta-3.5.0_beta2.ebuild 830
 MD5 d0caf2ccc8c51eb17344b9fa214218fd kdeaccessibility-meta-3.5.0_rc1.ebuild 829
