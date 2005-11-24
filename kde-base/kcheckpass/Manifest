@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae0ee3fb0c19fbd03aee140d933bba1b ChangeLog 4008
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcheckpass-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcheckpass-3.4.2 287
@@ -15,3 +18,10 @@ MD5 3bb52311ac100edf44ac503b15eb240d kcheckpass-3.5.0_beta2.ebuild 664
 MD5 9a7ad2f6c01fe484affa77116db3470b kcheckpass-3.5.0_rc1.ebuild 515
 MD5 d8e6f992e888f8a83ce7e3d10553f6bc kcheckpass-3.5_beta1.ebuild 511
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhjsUntT9W3vfTuoRAl0CAJ0Qf9M3FbbUIFpUujl73P5dR7E93wCeP+Ys
+SfGLj8vQKZP8/mI/BbCeO+0=
+=0LDC
+-----END PGP SIGNATURE-----
