@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jmf-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.3 2004/11/25 13:44:28 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.4 2005/11/24 06:56:55 nichoj Exp $
+
+  24 Nov 2005; Joshua Nichols <nichoj@gentoo.org> files/jmstudio:
+  Fix for jmstudio when running with Java 1.5, as reported by
+  kaouete@crazydwarves.org (bug #111411)
 
 *jmf-bin-2.1.1e-r1 (25 Nov 2004)
 
