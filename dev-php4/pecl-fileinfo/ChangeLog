@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-fileinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-fileinfo/ChangeLog,v 1.3 2005/11/19 20:39:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-fileinfo/ChangeLog,v 1.4 2005/11/24 22:18:18 chtekk Exp $
+
+  24 Nov 2005; Luca Longinotti <chtekk@gentoo.org> pecl-fileinfo-1.0.ebuild:
+  Fix ordering of some vars.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> pecl-fileinfo-1.0.ebuild:
   Added ~ppc64 keyword; bug #102649

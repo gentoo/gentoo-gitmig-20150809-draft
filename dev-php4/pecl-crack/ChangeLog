@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-crack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-crack/ChangeLog,v 1.5 2005/11/19 20:38:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-crack/ChangeLog,v 1.6 2005/11/24 22:14:05 chtekk Exp $
+
+  24 Nov 2005; Luca Longinotti <chtekk@gentoo.org> pecl-crack-0.2.ebuild,
+  pecl-crack-0.3.ebuild:
+  Fix ordering of some vars and description.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> pecl-crack-0.2.ebuild,
   pecl-crack-0.3.ebuild:
