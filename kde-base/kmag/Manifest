@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db767d3cfe025dcabb68e903db19af82 ChangeLog 3338
-MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmag-3.4.1 236
-MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmag-3.4.2 320
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmag-3.4.3 76
-MD5 307469289d5167258f2faa3684e12eb2 files/digest-kmag-3.5.0 76
-MD5 f33393ffa45cd6993ed65a63d5d5ea49 files/digest-kmag-3.5.0_beta2 240
-MD5 2d4ea47288659c63d4b4d855015669bc files/digest-kmag-3.5.0_rc1 332
-MD5 174790e90449897638084f6c4bea761f files/digest-kmag-3.5_beta1 77
+MD5 4778a466d64239fe41a56521bf56c68f ChangeLog 3427
 MD5 19c05d6c1ac39ca43f4b1485ea23586d kmag-3.4.1.ebuild 388
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c7c8dbe64461ad978a6481c99be2b5f0 kmag-3.4.2.ebuild 401
-MD5 84652a391efa94a0f89a5bf2409e497f kmag-3.4.3.ebuild 398
-MD5 9295721e4e10fe2fe51e262fd48eb2eb kmag-3.5.0.ebuild 377
+MD5 ce1cfb9d046d87b460a1f7b1f2510914 kmag-3.5_beta1.ebuild 380
+MD5 584f6bdd49919d981650615bf32a639d kmag-3.4.3.ebuild 399
 MD5 a9025d20b23454e2e4312e5875ac2058 kmag-3.5.0_beta2.ebuild 382
 MD5 1aa4169566aae0ad6acea690f71887fb kmag-3.5.0_rc1.ebuild 381
-MD5 ce1cfb9d046d87b460a1f7b1f2510914 kmag-3.5_beta1.ebuild 380
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhkVtntT9W3vfTuoRAqsJAKCGbiCSKSBt5tLm6nNLeDQ7Fom+bACfXEnY
-RTsnN+WE2iknBDzIn+MrSHw=
-=MSv+
------END PGP SIGNATURE-----
+MD5 9295721e4e10fe2fe51e262fd48eb2eb kmag-3.5.0.ebuild 377
+MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmag-3.4.1 236
+MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmag-3.4.2 320
+MD5 174790e90449897638084f6c4bea761f files/digest-kmag-3.5_beta1 77
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmag-3.4.3 76
+MD5 f33393ffa45cd6993ed65a63d5d5ea49 files/digest-kmag-3.5.0_beta2 240
+MD5 2d4ea47288659c63d4b4d855015669bc files/digest-kmag-3.5.0_rc1 332
+MD5 307469289d5167258f2faa3684e12eb2 files/digest-kmag-3.5.0 76

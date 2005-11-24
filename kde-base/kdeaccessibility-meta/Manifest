@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a13d19eb0bda7e1a2f5b473fe2b25fa1 ChangeLog 4710
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0_beta2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5_beta1 0
+MD5 41d23cd30345820e9a938bfee5a3f690 ChangeLog 4818
 MD5 d3bdd888a8e1b0ffed94c20d97505763 kdeaccessibility-meta-3.4.1.ebuild 836
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7af52742df7cab35a7660867e9984a89 kdeaccessibility-meta-3.4.2.ebuild 849
-MD5 b891d291906096cbf58bfeaadf0aa470 kdeaccessibility-meta-3.4.3.ebuild 846
-MD5 72c5acec5413c6c80bc6b23b50e6b524 kdeaccessibility-meta-3.5.0.ebuild 825
+MD5 748c0b8e0f1ee7376382afedbcfa656b kdeaccessibility-meta-3.5_beta1.ebuild 828
+MD5 222e3d2414afc754923c5aedc90883c6 kdeaccessibility-meta-3.4.3.ebuild 847
 MD5 36d0beb9fc77771e739c1e77c0c7ed43 kdeaccessibility-meta-3.5.0_beta2.ebuild 830
 MD5 d0caf2ccc8c51eb17344b9fa214218fd kdeaccessibility-meta-3.5.0_rc1.ebuild 829
-MD5 748c0b8e0f1ee7376382afedbcfa656b kdeaccessibility-meta-3.5_beta1.ebuild 828
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhkbPntT9W3vfTuoRAtaIAJ0cpE1mNJJIPy7wf1RVIV0GqZDnTQCgpS7M
-e9EP0n+LX9obQVv206N8gww=
-=7Zlo
------END PGP SIGNATURE-----
+MD5 72c5acec5413c6c80bc6b23b50e6b524 kdeaccessibility-meta-3.5.0.ebuild 825
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0 0

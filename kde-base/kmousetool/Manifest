@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5e343743c026a9023c85e94a5c4a1c7 ChangeLog 3570
-MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmousetool-3.4.1 236
-MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmousetool-3.4.2 320
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmousetool-3.4.3 76
-MD5 307469289d5167258f2faa3684e12eb2 files/digest-kmousetool-3.5.0 76
-MD5 f33393ffa45cd6993ed65a63d5d5ea49 files/digest-kmousetool-3.5.0_beta2 240
-MD5 2d4ea47288659c63d4b4d855015669bc files/digest-kmousetool-3.5.0_rc1 332
-MD5 174790e90449897638084f6c4bea761f files/digest-kmousetool-3.5_beta1 77
+MD5 7eaf204970e6b8b508cde403d90e50c8 ChangeLog 3665
 MD5 6d95fc66445c9437b2e82429eaad1d0a kmousetool-3.4.1.ebuild 430
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8ec595992afa616499f9582a9684c792 kmousetool-3.4.2.ebuild 443
-MD5 71d4dca3f2959363fddd712986f5f299 kmousetool-3.4.3.ebuild 440
-MD5 dbc04a426bf4ef658127c547b39cd396 kmousetool-3.5.0.ebuild 419
+MD5 bd866f20b54c24fb346f84916ecff905 kmousetool-3.5_beta1.ebuild 422
+MD5 26a2242e861f34e8180fc11c905a6006 kmousetool-3.4.3.ebuild 441
 MD5 194280870d1daae84631226f5842308e kmousetool-3.5.0_beta2.ebuild 424
 MD5 eb479880cd8c31a42a0c777b16f0960d kmousetool-3.5.0_rc1.ebuild 423
-MD5 bd866f20b54c24fb346f84916ecff905 kmousetool-3.5_beta1.ebuild 422
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhkWnntT9W3vfTuoRAm8MAJ49Lm8UJkd3pZ5uJ57ZBbqEejs+wwCfWD7L
-Zj7/Z1dmyQMK+9KM6bEkL+w=
-=9oFu
------END PGP SIGNATURE-----
+MD5 dbc04a426bf4ef658127c547b39cd396 kmousetool-3.5.0.ebuild 419
+MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmousetool-3.4.1 236
+MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmousetool-3.4.2 320
+MD5 174790e90449897638084f6c4bea761f files/digest-kmousetool-3.5_beta1 77
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmousetool-3.4.3 76
+MD5 f33393ffa45cd6993ed65a63d5d5ea49 files/digest-kmousetool-3.5.0_beta2 240
+MD5 2d4ea47288659c63d4b4d855015669bc files/digest-kmousetool-3.5.0_rc1 332
+MD5 307469289d5167258f2faa3684e12eb2 files/digest-kmousetool-3.5.0 76
