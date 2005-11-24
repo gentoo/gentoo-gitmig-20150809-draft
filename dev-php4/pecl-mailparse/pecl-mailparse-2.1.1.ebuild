@@ -1,35 +1,37 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-mailparse/pecl-mailparse-2.1.1.ebuild,v 1.3 2005/11/19 20:43:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-mailparse/pecl-mailparse-2.1.1.ebuild,v 1.4 2005/11/24 22:35:05 chtekk Exp $
 
-PHP_EXT_ZENDEXT="no"
+PHP_EXT_NAME="mailparse"
 PHP_EXT_INI="yes"
+PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-IUSE=""
-DESCRIPTION="A PHP extension for parsing and working with RFC822 and RFC2045 (MIME) compliant messages."
-SLOT="0"
-LICENSE="PHP"
 KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
+DESCRIPTION="A PHP extension for parsing and working with RFC822 and RFC2045 (MIME) compliant messages."
+LICENSE="PHP"
+SLOT="0"
+IUSE=""
 
 need_php_by_category
 
 pkg_setup() {
 	has_php
+
 	require_php_with_use nls
 }
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# Patch against segfaults
-	epatch ${FILESDIR}/cvs-mailparse.c-fix.diff
+	epatch "${FILESDIR}/cvs-mailparse.c-fix.diff"
 }
 
 src_install() {
 	php-ext-pecl-r1_src_install
-	dodoc README
+	dodoc-php README
 }
