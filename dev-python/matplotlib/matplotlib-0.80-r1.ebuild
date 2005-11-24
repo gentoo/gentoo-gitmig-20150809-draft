@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.80-r1.ebuild,v 1.3 2005/09/26 13:15:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.80-r1.ebuild,v 1.4 2005/11/24 20:47:18 marienz Exp $
 
 inherit distutils
 
@@ -15,7 +15,9 @@ LICENSE="PYTHON"
 
 DEPEND="virtual/python
 		>=dev-python/numeric-22
-		gtk? ( >=dev-python/pygtk-1.99.16 )"
+		gtk? ( >=dev-python/pygtk-1.99.16 )
+		!dev-python/pytz
+		!dev-python/python-dateutil"
 
 src_install() {
 	distutils_src_install

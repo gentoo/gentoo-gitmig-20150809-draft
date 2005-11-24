@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.82.ebuild,v 1.2 2005/09/26 13:15:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.82.ebuild,v 1.3 2005/11/24 20:47:18 marienz Exp $
 
 inherit distutils
 
@@ -21,7 +21,9 @@ DEPEND="virtual/python
 		>=media-libs/freetype-2.1.7
 		media-libs/libpng
 		sys-libs/zlib
-		gtk? ( >=dev-python/pygtk-1.99.16 )"
+		gtk? ( >=dev-python/pygtk-1.99.16 )
+		!dev-python/pytz
+		!dev-python/python-dateutil"
 
 src_unpack() {
 	unpack ${A}
