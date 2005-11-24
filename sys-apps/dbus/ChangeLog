@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.60 2005/11/08 10:45:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.61 2005/11/24 21:37:30 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> dbus-0.50-r1.ebuild:
+  Set the qt3 directory and moc, closes bugs 112965, 103667 and 109823.
 
   08 Nov 2005; Stefan Briesenick <sbriesen@gentoo.org> files/dbus:
   fixed init-script.
