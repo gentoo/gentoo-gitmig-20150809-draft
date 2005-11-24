@@ -1,10 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.96.6.ebuild,v 1.1 2005/11/13 00:19:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.96.6.ebuild,v 1.2 2005/11/24 07:20:15 tove Exp $
+
+inherit eutils
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
-SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2
+	mirror://sourceforge/bogofilter/patch.1120.make.check"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,6 +23,12 @@ DEPEND="
 		!sqlite? ( >=sys-libs/db-3.2 ) )
 	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
+
+src_unpack() {
+	unpack "${P}.tar.bz2"
+	cd "${S}"
+	epatch "${DISTDIR}"/patch.1120.make.check
+}
 
 src_compile() {
 	local myconf=""
