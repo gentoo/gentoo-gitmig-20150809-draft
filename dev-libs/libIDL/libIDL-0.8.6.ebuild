@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.6.ebuild,v 1.7 2005/10/06 03:46:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.6.ebuild,v 1.8 2005/11/24 18:24:52 corsair Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE="static"
 
 RDEPEND=">=dev-libs/glib-1.3.7"
