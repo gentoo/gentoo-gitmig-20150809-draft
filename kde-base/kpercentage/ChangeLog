@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpercentage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.20 2005/11/24 13:06:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.21 2005/11/24 21:07:35 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org> kpercentage-3.4.2.ebuild:
+  Stable on ppc64
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   kpercentage-3.4.2.ebuild:

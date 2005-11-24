@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-kfile-plugins/ChangeLog,v 1.23 2005/11/24 14:08:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-kfile-plugins/ChangeLog,v 1.24 2005/11/24 19:37:15 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  kdenetwork-kfile-plugins-3.4.2.ebuild:
+  Stable on ppc64
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   kdenetwork-kfile-plugins-3.4.2.ebuild:

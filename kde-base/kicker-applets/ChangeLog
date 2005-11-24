@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kicker-applets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.25 2005/11/24 18:04:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.26 2005/11/24 20:29:48 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  kicker-applets-3.4.3.ebuild:
+  Stable on ppc64
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   kicker-applets-3.4.3.ebuild:
