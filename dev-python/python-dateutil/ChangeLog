@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/python-dateutil
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.1 2005/11/24 21:16:55 marienz Exp $
+
+*python-dateutil-1.0 (24 Nov 2005)
+
+  24 Nov 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +python-dateutil-1.0.ebuild:
+  new ebuild, based on the ebuild from Jeff Kowalczyk <jtk@yahoo.com> (bug
+  #64398)
+
