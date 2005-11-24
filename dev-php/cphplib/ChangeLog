@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/cphplib
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/ChangeLog,v 1.1 2004/07/31 18:07:45 coredumb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/ChangeLog,v 1.2 2005/11/24 12:05:00 chtekk Exp $
+
+  24 Nov 2005; Luca Longinotti <chtekk@gentoo.org> cphplib-0.48.ebuild:
+  Use dodoc-php for new-style PHP, see
+  http://svn.gnqs.org/projects/gentoo-php-overlay/wiki/GuidingPrinciples.
 
 *cphplib-0.46 (31 Jul 2004)
 

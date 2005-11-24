@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 38f63b5a1668b4a604ec5e197b862391 ChangeLog 584
+MD5 3cb0260444e9af46e4fb862e12773758 ChangeLog 739
 MD5 f3f855bf6f7d1b254491799a1d897dbe files/digest-simpletest-1.0.0 65
+MD5 f3f855bf6f7d1b254491799a1d897dbe files/digest-simpletest-1.0.0-r1 65
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 4893583ed0eb798c1ddf2a0dcb5ef36f simpletest-1.0.0-r1.ebuild 373
 MD5 e05cdbed5d5990c6f66f1182bd872b40 simpletest-1.0.0.ebuild 449
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbev3aGfFFLhbXWkRAsZkAKCKBqkpu/UNy0du38UvePobl42R6ACgnH5a
-J4Qv5Y2w952nJpV787Tj9qU=
-=QuFi
------END PGP SIGNATURE-----

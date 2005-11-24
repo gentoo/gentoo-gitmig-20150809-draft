@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28ac9254a61375323debe511e421bab6 ChangeLog 394
+MD5 ac9daa342e0f54a2117915df971198c4 ChangeLog 580
 MD5 c9bba941988ccf29bbeb0087f3dd2ca7 cphplib-0.46.ebuild 656
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 13337302e78f19a540ab8e8b95fbb6e8 cphplib-0.48.ebuild 723
+MD5 90b5a02bf26af7041b73c718aafde9a1 cphplib-0.48.ebuild 727
 MD5 90b56afc911d979dfb647bcabd9de1cb files/digest-cphplib-0.46 64
 MD5 bc963514fb5a783fef4c0f7a6cb2b654 files/digest-cphplib-0.48 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLX4UmPFBzbX68WERAnr1AJ9kxMXb2kERp4mIjwHsAYrO+AbApQCgmdPT
-0U80lUHUKSCiy5gxJUVJXAU=
-=0EaF
------END PGP SIGNATURE-----
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156

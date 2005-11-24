@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.65-r1.ebuild,v 1.3 2005/11/22 05:41:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.65-r1.ebuild,v 1.4 2005/11/24 11:58:28 chtekk Exp $
 
 inherit php-lib-r1
 
@@ -30,5 +30,5 @@ src_install() {
 
 	# install documentation
 	dohtml docs/*.htm
-	dodoc *.txt xmlschema.dtd session/adodb-sess.txt pear/readme.Auth.txt
+	dodoc-php *.txt xmlschema.dtd session/adodb-sess.txt pear/readme.Auth.txt
 }

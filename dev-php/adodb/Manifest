@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6e8f14ec0121ef984a12c2314d49c44 ChangeLog 4966
+MD5 a05050b9fc4b1a587df26d1b7fc4df80 ChangeLog 5156
 MD5 bc2a3258f115652a02ff4d7d5c71e67b adodb-4.55.ebuild 892
 MD5 5f59f207c056ae590e39bbba55aea539 adodb-4.62.ebuild 896
 MD5 3dbee3340fbc3b77fb8a51a2b9566b6a adodb-4.64.ebuild 896
-MD5 3ee7a58523f4765ca30b813d8df0ba2b adodb-4.65-r1.ebuild 872
+MD5 dd912e7b08724f0cff4313f202946f03 adodb-4.65-r1.ebuild 876
 MD5 813afe901227dc593e795ce8a4ef9463 adodb-4.65.ebuild 894
 MD5 d04965ec2fb4134b68d543e6b0aafc68 files/digest-adodb-4.55 57
 MD5 c0f598ddb2f309f4f26ece61aed56147 files/digest-adodb-4.62 57
@@ -13,10 +10,3 @@ MD5 641a7d410497c3080d2dbb2833d8c2cd files/digest-adodb-4.64 57
 MD5 e85ebe955e928f96372c229434973b4b files/digest-adodb-4.65 57
 MD5 e85ebe955e928f96372c229434973b4b files/digest-adodb-4.65-r1 57
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgq+dcsIHjyDViGQRAggVAKDXDkO604Tz5A32Eoui4zSBYa74qACg6aKL
-ll5zrZ4fM+nkSvc63I4dcXY=
-=V5qh
------END PGP SIGNATURE-----

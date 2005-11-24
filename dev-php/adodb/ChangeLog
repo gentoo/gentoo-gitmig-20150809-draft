@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.43 2005/11/22 05:41:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.44 2005/11/24 11:58:28 chtekk Exp $
+
+  24 Nov 2005; Luca Longinotti <chtekk@gentoo.org> adodb-4.65-r1.ebuild:
+  New-style PHP should use dodoc-php, see
+  http://svn.gnqs.org/projects/gentoo-php-overlay/wiki/GuidingPrinciples.
 
   22 Nov 2005; Joseph Jezak <josejx@gentoo.org> adodb-4.65-r1.ebuild:
   Marked ~ppc for bug #106514.

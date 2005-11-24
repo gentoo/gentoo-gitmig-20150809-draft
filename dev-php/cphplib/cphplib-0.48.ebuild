@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.48.ebuild,v 1.1 2005/09/18 14:46:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.48.ebuild,v 1.2 2005/11/24 12:05:00 chtekk Exp $
 
 inherit php-lib-r1
 
@@ -23,5 +23,5 @@ src_install() {
 	php-lib-r1_src_install . *.inc
 
 	# install documentation
-	dodoc ChangeLog COPYRIGHT LGPL README TODO
+	dodoc-php ChangeLog COPYRIGHT LGPL README TODO
 }
