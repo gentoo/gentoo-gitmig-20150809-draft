@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77a433e9e01126aab4328498021f86b7 ChangeLog 1717
-MD5 5c95280b58164f97854a8807e94ddee3 files/digest-numarray-0.8 64
-MD5 4756d5a71aa315d2e2e695d0af41fac1 files/digest-numarray-0.9 64
-MD5 8952cb84bd61761dcb08feb920425d0f files/digest-numarray-1.0 65
-MD5 6d1fc561f9f1f99fcd00c7a8ec9f3521 files/digest-numarray-1.1.1 67
-MD5 0fabd12486f274cbf365e338e91daaf6 files/digest-numarray-1.3.1 67
+MD5 371d7ee4685f115d70098903047703ce ChangeLog 1803
 MD5 1ffa32cfa3e5c763b32594feb8047497 metadata.xml 923
 MD5 89b52cf72505529ab87a376af4a3a857 numarray-0.8.ebuild 562
 MD5 6ad7145a123adab20d62654ef82cea29 numarray-0.9.ebuild 573
 MD5 4c79c155049eed9eb80854ae4b811ab0 numarray-1.0.ebuild 723
 MD5 d5c7a5f486801dfbe179578b1cef2782 numarray-1.1.1.ebuild 732
-MD5 ab44d96e9af176fb325732f8fa751019 numarray-1.3.1.ebuild 741
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfwIrFdQwWVoAgN4RAot0AKDK5Aqr/9V5WN0nDMhFj5jSiKTX5gCg3+EQ
-Ky63Ulp/qxaBKdlYIkQ6idY=
-=vOhu
------END PGP SIGNATURE-----
+MD5 437444372cf616a10fe3914bf64a165c numarray-1.3.1.ebuild 737
+MD5 5c95280b58164f97854a8807e94ddee3 files/digest-numarray-0.8 64
+MD5 4756d5a71aa315d2e2e695d0af41fac1 files/digest-numarray-0.9 64
+MD5 8952cb84bd61761dcb08feb920425d0f files/digest-numarray-1.0 65
+MD5 6d1fc561f9f1f99fcd00c7a8ec9f3521 files/digest-numarray-1.1.1 67
+MD5 0fabd12486f274cbf365e338e91daaf6 files/digest-numarray-1.3.1 67
