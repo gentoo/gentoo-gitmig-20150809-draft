@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.86 2005/11/19 18:10:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.87 2005/11/24 06:59:48 corsair Exp $
+
+  24 Nov 2005; Markus Rothe <corsair@gentoo.org> totem-1.2.0-r1.ebuild,
+  totem-1.2.0-r2.ebuild:
+  Added ~ppc64 keyword; bug #108790
 
   19 Nov 2005; Joseph Jezak <josejx@gentoo.org> totem-1.2.0-r1.ebuild:
   Marked ~ppc for bug #108789.
