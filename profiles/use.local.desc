@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1574 2005/11/24 23:49:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1575 2005/11/25 07:25:01 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -785,6 +785,7 @@ net-dialup/ppp:atm - Enables support for PPP over ATM (PPPoA)
 net-dialup/ppp:dhcp - Enables the DHCP plugin
 net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol and Transport Level Security (EAP-TLS)
 net-dialup/ppp:mppe-mppc - Enables support for MPPE-MPPC
+net-dns/avahi:compat - Enable compat libraries for howl and mDNSResponder
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
