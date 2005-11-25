@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.5 2005/11/25 14:35:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.6 2005/11/25 15:35:05 phreak Exp $
+
+  25 Nov 2005; Christian Heim <phreak@gentoo.org>
+  openvz-sources-022.045-r1.ebuild:
+  Fixing the tarball, since EPATCH is missing patches which miss the .patch
+  suffix. On a side-note the OVZ_* got dropped!
 
 *openvz-sources-022.045-r1 (25 Nov 2005)
 
