@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-vera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.12 2005/02/27 11:39:54 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.13 2005/11/25 17:21:23 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> dictd-vera-1.12.ebuild:
+  stable on ppc64
 
   27 Feb 2005; Yuta SATOH <nigoro@gentoo.org> dictd-vera-1.12.ebuild:
   added ~ppc64
@@ -11,7 +14,7 @@
 *dictd-vera-1.12 (06 Mar 2004)
 
   06 Mar 2004; Alastair Tse <liquidx@gentoo.org> dictd-vera-1.12.ebuild:
-  version bump. added debian patches. thanks to José Romildo Malaquias
+  version bump. added debian patches. thanks to JosÃ© Romildo Malaquias
   <romildo@uber.com.br> (#38305)
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> dictd-vera-1.9_pre.ebuild:
@@ -22,7 +25,7 @@
   16 Jan 2004; Alastair Tse <liquidx@gentoo.org> dictd-vera-1.9_pre.ebuild,
   metadata.xml:
   version bump, apparently fixes issues with older version of dictd (?)
-  (#38305), thanks to José Romildo Malaquias <romildo uber.com.br>
+  (#38305), thanks to JosÃ© Romildo Malaquias <romildo uber.com.br>
 
   19 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> :
   Added ~ppc keyword
