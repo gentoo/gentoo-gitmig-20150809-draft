@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/kamikaze-0.2.1.ebuild,v 1.1 2005/08/28 22:54:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/kamikaze-0.2.1.ebuild,v 1.2 2005/11/25 21:39:45 cryos Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kamikaze.coolprojects.org/"
 SRC_URI="http://kamikaze.coolprojects.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 SLOT="0"
 IUSE=""
 
