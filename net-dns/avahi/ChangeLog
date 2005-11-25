@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.19 2005/11/21 14:23:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.20 2005/11/25 07:38:25 swegener Exp $
+
+*avahi-0.6.1 (25 Nov 2005)
+
+  25 Nov 2005; Sven Wegener <swegener@gentoo.org> +avahi-0.6.1.ebuild:
+  Version bump, bug #113110.
 
   21 Nov 2005; Sven Wegener <swegener@gentoo.org> avahi-0.5.2-r1.ebuild:
   Parallel build problems, bug #113092.

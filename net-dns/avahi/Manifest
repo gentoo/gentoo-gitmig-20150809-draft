@@ -1,4 +1,6 @@
-MD5 be362537ca14ec264b5b4067ac63bf15 ChangeLog 2723
+MD5 3a026bbf30bdb4c3a94744d064cda86c ChangeLog 2852
 MD5 5da4a9160b981e4d0f2e64e12a39de37 avahi-0.5.2-r1.ebuild 2085
+MD5 e9dae8f0b37e5d340ef53053fd140c22 avahi-0.6.1.ebuild 2342
 MD5 b06b1183ea48e210c1943f0913f63714 files/digest-avahi-0.5.2-r1 63
+MD5 82793ef545794b3d74b3094017ed5572 files/digest-avahi-0.6.1 63
 MD5 e522a390cede4510e8dbd0446e695912 metadata.xml 297
