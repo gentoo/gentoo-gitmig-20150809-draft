@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.7 2005/10/31 15:58:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.8 2005/11/25 00:59:37 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -22,18 +22,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	if use ppc ; then
-		# For some reason, ppc isn't properly using -fPIC... this
-		# patch is broken, but makes it "work" on ppc.  If someone
-		# will get me access, I'll fix it... --eradicator
-		# Bug #98494
-		epatch ${FILESDIR}/${P}-libtool2.patch
-	else
-		epatch ${FILESDIR}/${P}-libtool.patch
-	fi
-	epatch ${FILESDIR}/${P}-freebsd.patch
+	cd "${S}"
 
-	cd ${S}
+	epatch "${FILESDIR}/${P}-libtool.patch"
+	epatch "${FILESDIR}/${P}-freebsd.patch"
+
 	eautoreconf
 }
 
