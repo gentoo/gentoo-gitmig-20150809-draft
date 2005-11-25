@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/eunuchs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.1 2005/11/25 09:18:44 marienz Exp $
+
+*eunuchs-20050320.1 (25 Nov 2005)
+
+  25 Nov 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +eunuchs-20050320.1.ebuild:
+  New ebuild, thanks to Henry Bucklow (bug #84631).
+
