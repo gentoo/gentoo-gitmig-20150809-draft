@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.9 2005/11/14 06:51:42 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.10 2005/11/25 22:37:59 latexer Exp $
+
+*boo-0.7.5.2013 (25 Nov 2005)
+
+  25 Nov 2005; Peter Johanson <latexer@gentoo.org> boo-0.7.0.1921.ebuild,
+  +boo-0.7.5.2013.ebuild:
+  Fix version checks, and bump to new release.
 
   14 Nov 2005; Peter Johanson <latexer@gentoo.org> boo-0.7.0.1921.ebuild:
   Add error messages and die pre-emptively when an older version of boo is
