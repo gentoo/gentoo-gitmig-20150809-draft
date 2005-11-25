@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.7 2005/10/30 16:29:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.8 2005/11/25 11:04:45 greg_g Exp $
+
+*kchmviewer-1.2 (25 Nov 2005)
+
+  25 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> +kchmviewer-1.2.ebuild:
+  New version (#113244).
 
 *kchmviewer-1.1 (30 Oct 2005)
 
