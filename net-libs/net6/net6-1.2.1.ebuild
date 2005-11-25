@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.2.0.ebuild,v 1.1 2005/11/16 03:15:03 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.2.1.ebuild,v 1.1 2005/11/25 18:45:48 humpback Exp $
 
 DESCRIPTION="Network access framework for IPv4/IPv6 written in c++"
 HOMEPAGE="http://darcs.0x539.de/net6"
