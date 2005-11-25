@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.0.ebuild,v 1.16 2005/04/21 19:42:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.0.ebuild,v 1.17 2005/11/25 20:36:37 tgall Exp $
 
 MY_P=${PN//-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.thc.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~hppa amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha ~hppa amd64 ia64 ppc64"
 IUSE=""
 
 RDEPEND="virtual/libc"
