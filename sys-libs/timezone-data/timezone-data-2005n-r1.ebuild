@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2005n-r1.ebuild,v 1.2 2005/11/03 18:30:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2005n-r1.ebuild,v 1.3 2005/11/25 19:03:08 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://elsie.nci.nih.gov/pub/tzdata${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""

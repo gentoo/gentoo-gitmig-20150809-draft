@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.5 2005/11/03 18:30:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.6 2005/11/25 19:03:08 corsair Exp $
+
+  25 Nov 2005; Markus Rothe <corsair@gentoo.org>
+  timezone-data-2005n-r1.ebuild:
+  Added ~ppc64 keyword
 
   03 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   timezone-data-2005n-r1.ebuild:
