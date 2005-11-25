@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.130 2005/11/11 23:27:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.131 2005/11/25 11:03:36 greg_g Exp $
+
+*k3b-0.12.8 (25 Nov 2005)
+
+  25 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> +k3b-0.12.8.ebuild:
+  New version (#113492).
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> k3b-0.12.4a.ebuild:
   Stable on ppc.
