@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/moto4lin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.3 2005/10/10 19:23:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.4 2005/11/25 15:16:45 r3pek Exp $
+
+*moto4lin-0.3_p20051125 (25 Nov 2005)
+
+  25 Nov 2005; Carlos Silva <r3pek@gentoo.org>
+  +moto4lin-0.3_p20051125.ebuild:
+  Added a CVS snapshot for compatibility with new phone models
 
   10 Oct 2005; Alin Nastac <mrness@gentoo.org> moto4lin-0.3.ebuild:
   Remove INSTALL from docs.
