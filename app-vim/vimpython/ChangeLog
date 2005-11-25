@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimpython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.6 2005/01/01 16:56:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.7 2005/11/25 21:00:34 ticho Exp $
+
+  25 Nov 2005; Andrej Kacian <ticho@gentoo.org> vimpython-1.7.ebuild:
+  Stable on x86, bug #113570.
 
   27 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> vimpython-1.7.ebuild:
   Add help text, bug #63325

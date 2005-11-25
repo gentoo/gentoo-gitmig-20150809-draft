@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/vimpython-1.7.ebuild,v 1.7 2005/01/01 16:56:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/vimpython-1.7.ebuild,v 1.8 2005/11/25 21:00:34 ticho Exp $
 
 inherit vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: improvements for editing python scripts"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=30"
 
 LICENSE="vim"
-KEYWORDS="sparc ~x86 ~ppc amd64 alpha ia64"
+KEYWORDS="sparc x86 ~ppc amd64 alpha ia64"
 IUSE=""
 
 DEPEND="${DEPEND} >=sys-apps/sed-4"
