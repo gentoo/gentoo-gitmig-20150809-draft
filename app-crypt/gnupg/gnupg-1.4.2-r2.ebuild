@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.10 2005/11/24 09:19:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.11 2005/11/25 08:18:12 dragonheart Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -38,6 +38,12 @@ RDEPEND="!static? (
 
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl"
+
+pkg_setup() {
+	# fix bug #113474 - no compiled kernel needed now
+	get_running_version
+
+}
 
 src_unpack() {
 	unpack ${A}
@@ -185,9 +191,12 @@ src_test() {
 pkg_postinst() {
 	if ! use caps && kernel_is lt 2 6 9
 	then
+		chmod u+s,go-r ${ROOT}/usr/bin/gpg
 		einfo "gpg is installed suid root to make use of protected memory space"
 		einfo "This is needed in order to have a secure place to store your"
 		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
+	else
+		chmod u-s,go-r ${ROOT}/usr/bin/gpg
 	fi
 	echo
 	if use idea; then
