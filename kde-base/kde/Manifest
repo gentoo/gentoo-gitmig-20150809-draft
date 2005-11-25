@@ -1,4 +1,4 @@
-MD5 c3276b1b4b3fc9b85ec6bfaec154c583 ChangeLog 13572
+MD5 4a6477dbf01661fa0a1bbc07cfc164dc ChangeLog 13671
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.3.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.2 0
@@ -10,7 +10,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5_beta1 0
 MD5 e6eb5fca5a03e9cceecd8f3883b4ec42 kde-3.3.2.ebuild 904
 MD5 b142c69fabd5156f8799b686bfcd0439 kde-3.4.1.ebuild 935
 MD5 4d6630a38fd27dc12e187ff5970225a6 kde-3.4.2.ebuild 940
-MD5 ea222c539a6a80612a4e5a77100dc365 kde-3.4.3.ebuild 940
+MD5 277e39e2a280d45a1b3ab7a6cc4fd7f1 kde-3.4.3.ebuild 936
 MD5 ffb60a6277f5271a3ed3893bc7f1b086 kde-3.5.0.ebuild 916
 MD5 9d6b5090f2d386caeebe584c69c31f7d kde-3.5.0_beta2.ebuild 920
 MD5 665e299f6f427e4198035638f1b9a191 kde-3.5.0_rc1.ebuild 918
