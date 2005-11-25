@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.6 2005/08/10 01:37:06 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.7 2005/11/25 20:17:31 metalgod Exp $
+
+  25 Nov 2005; Luis Medinas <metalgod@gentoo.org> qcomicbook-0.2.4.ebuild:
+  Added ~amd64 keyword. Closes bug #108611.
 
 *qcomicbook-0.2.4 (10 Aug 2005)
 
