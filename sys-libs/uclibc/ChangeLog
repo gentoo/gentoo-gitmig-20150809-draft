@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.13 2005/11/13 23:52:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.14 2005/11/25 22:20:41 solar Exp $
+
+  25 Nov 2005; <solar@gentoo.org> uclibc-0.9.28.ebuild:
+  - the __uClibc_start_main is becoming a problem for users thus we need to
+  check the bins before allowing them to have uclibc-compat disabled
 
   13 Nov 2005; <solar@gentoo.org> uclibc-0.9.28.ebuild:
   - moredefs..

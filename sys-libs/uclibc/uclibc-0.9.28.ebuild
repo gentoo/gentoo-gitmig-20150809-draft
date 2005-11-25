@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.12 2005/11/18 03:44:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.13 2005/11/25 22:20:41 solar Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -41,7 +41,7 @@ KEYWORDS="-* ~arm ~m68k ~mips ~ppc sh ~sparc ~x86"
 IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen userlocales wordexp"
 RESTRICT="nostrip"
 
-DEPEND="virtual/os-headers"
+DEPEND="virtual/os-headers app-misc/pax-utils"
 RDEPEND=""
 [[ ${CTARGET} == ${CHOST} ]] && PROVIDE="virtual/libc"
 
@@ -211,8 +211,23 @@ src_unpack() {
 		echo 'HAS_FPU=n' >> .config
 	fi
 
-	local moredefs=""
-	use uclibc-compat && moredefs="DL_FINI_CRT_COMPAT"
+	local moredefs="DL_FINI_CRT_COMPAT"
+	# We need todo this for a few months. .28 is a major upgrade.
+	if ! use uclibc-compat && [[ "$UCLIBC_SCANED_COMPAT" == "" ]]; then
+		local fnames=""
+		einfo "Doing a scanelf in paths for bins containing the __uClibc_start_main symbol"
+		fnames="$(scanelf -pyqs__uClibc_start_main -F%F#s)"
+		if [ "$fnames" == ""  ]; then
+			einfo "This system is clean."
+			einfo "To prevent the scanning of files again in the future you can export UCLIBC_SCANED_COMPAT=1"
+			moredefs=""
+		else
+			ewarn "You need to remerge the packages that contain the following files before you can remerge ${P} without USE=uclibc-compat enabled."
+			ewarn "qfile ${fnames}"
+			echo
+			ewarn "Leaving on ${moredefs}"
+		fi
+	fi
 	for def in ${moredefs} MALLOC_GLIBC_COMPAT DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
 		sed -i -e "s:# ${def} is not set:${def}=y:" .config
 	done
