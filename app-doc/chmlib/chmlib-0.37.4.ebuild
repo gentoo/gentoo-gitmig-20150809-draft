@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.35-r1.ebuild,v 1.1 2005/11/24 13:16:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.37.4.ebuild,v 1.1 2005/11/25 10:08:06 taviso Exp $
 
-inherit eutils multilib flag-o-matic
+inherit eutils multilib flag-o-matic versionator
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
@@ -13,6 +13,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
+
+MY_PV=$(get_version_component_range 1-2 )
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -37,9 +40,10 @@ src_compile() {
 	append-flags "-L${S}/src/.libs"
 
 	econf || die "econf failed"
+	emake || die
 
 	# Build additional utils, making this lib useful by itself.
-	emake all chm_http extract_chmLib || die
+	emake chm_http extract_chmLib || die
 }
 
 src_install() {
