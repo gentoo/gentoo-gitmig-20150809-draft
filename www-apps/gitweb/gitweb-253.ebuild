@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-248.ebuild,v 1.2 2005/10/20 20:21:51 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-253.ebuild,v 1.1 2005/11/25 12:24:11 ferdy Exp $
 
 inherit webapp
 
