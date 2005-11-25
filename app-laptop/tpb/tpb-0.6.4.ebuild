@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.6.4.ebuild,v 1.1 2005/10/23 17:38:00 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.6.4.ebuild,v 1.2 2005/11/25 13:09:16 brix Exp $
 
 inherit linux-info eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/tpb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="-ppc x86"
 
 IUSE="nls xosd"
 
