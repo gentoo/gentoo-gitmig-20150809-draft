@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.16 2005/11/24 18:15:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.17 2005/11/25 14:39:58 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> dcoppython-3.4.2.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   dcoppython-3.4.2.ebuild:

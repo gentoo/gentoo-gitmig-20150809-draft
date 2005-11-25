@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.21 2005/11/24 18:24:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.22 2005/11/25 14:51:29 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> korundum-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> korundum-3.4.3.ebuild:
   Stable on sparc wrt #112842
