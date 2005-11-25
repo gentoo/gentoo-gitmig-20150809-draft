@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.14-r2.ebuild,v 1.1 2005/11/18 13:27:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.14-r4.ebuild,v 1.1 2005/11/25 12:54:32 brix Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="4"
 
 inherit eutils kernel-2
 detect_version
@@ -13,13 +13,12 @@ detect_arch
 DESCRIPTION="Software Suspend 2 + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches http://www.suspend2.net"
 
-SUSPEND2_VERSION="2.2-rc11"
+SUSPEND2_VERSION="2.2-rc13"
 SUSPEND2_TARGET="${PV}"
 SUSPEND2_SRC="suspend2-${SUSPEND2_VERSION}-for-${SUSPEND2_TARGET}"
 SUSPEND2_URI="http://www.suspend2.net/downloads/all/${SUSPEND2_SRC}.tar.bz2"
 
-UNIPATCH_LIST="${DISTDIR}/${SUSPEND2_SRC}.tar.bz2
-${FILESDIR}/suspend2-2.2-rc11-ro-mount-fixes.patch"
+UNIPATCH_LIST="${DISTDIR}/${SUSPEND2_SRC}.tar.bz2"
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_DOCS="${WORKDIR}/patches/${SUSPEND2_SRC}/Changelog.txt
 ${WORKDIR}/patches/${SUSPEND2_SRC}/ToDo"
