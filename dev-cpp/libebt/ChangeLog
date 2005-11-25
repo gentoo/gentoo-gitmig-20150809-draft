@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/libebt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.1 2005/11/25 12:31:27 ka0ttic Exp $
+
+*libebt-0.8.2 (25 Nov 2005)
+
+  25 Nov 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +libebt-0.8.2.ebuild:
+  Initial commit.
+
