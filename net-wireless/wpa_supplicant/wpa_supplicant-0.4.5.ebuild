@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.5.ebuild,v 1.1 2005/10/17 10:19:19 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.5.ebuild,v 1.2 2005/11/25 13:26:07 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug gsm madwifi qt readline ssl"
+IUSE="gsm madwifi qt readline ssl"
 
 DEPEND="gsm? ( sys-apps/pcsc-lite )
 		qt? ( =x11-libs/qt-3* )
@@ -43,10 +43,6 @@ src_unpack() {
 	echo "CONFIG_EAP_PSK=y"         >> ${CONFIG}
 	echo "CONFIG_IEEE8021X_EAPOL=y" >> ${CONFIG}
 	echo "CONFIG_PKCS12=y"          >> ${CONFIG}
-
-	if ! use debug; then
-		echo "CONFIG_NO_STDOUT_DEBUG=y" >> ${CONFIG}
-	fi
 
 	if use gsm; then
 		# smart card authentication
