@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/keduca
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keduca/ChangeLog,v 1.23 2005/11/24 21:00:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keduca/ChangeLog,v 1.24 2005/11/24 23:48:09 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> keduca-3.4.2.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> keduca-3.4.2.ebuild:
   Stable on ppc64

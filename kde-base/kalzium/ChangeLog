@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.27 2005/11/24 21:04:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.28 2005/11/24 23:44:47 cryos Exp $
+
+  24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kalzium-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kalzium-3.4.3.ebuild:
   Stable on ppc64
