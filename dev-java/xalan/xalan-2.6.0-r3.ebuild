@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r3.ebuild,v 1.1 2005/11/25 18:58:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r3.ebuild,v 1.2 2005/11/25 19:19:47 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -52,6 +52,5 @@ src_install() {
 	use doc && java-pkg_dohtml -r ${WORKDIR}/docs/*
 	use source && java-pkg_dosrc src/org
 
-	exeinto /usr/bin
-	newexe ${FILESDIR}/${PN}.script ${PN}
+	newbin ${FILESDIR}/${PN}.script ${PN}
 }
