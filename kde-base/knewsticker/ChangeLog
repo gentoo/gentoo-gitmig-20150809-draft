@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker/ChangeLog,v 1.25 2005/11/24 19:37:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker/ChangeLog,v 1.26 2005/11/25 10:14:33 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  knewsticker-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> knewsticker-3.4.3.ebuild:
   Stable on ppc64
