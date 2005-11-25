@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 701ecd70f443738ed67f3174526b45ee ChangeLog 3579
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klickety-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klickety-3.4.2 288
@@ -14,3 +17,10 @@ MD5 b951948ef9ff35c21d8899244528b157 klickety-3.5.0_beta2.ebuild 600
 MD5 93a8c81d55a252bb18c75b6440773a51 klickety-3.5.0_rc1.ebuild 599
 MD5 1ef13f9e431e031b7f24d725873b2857 klickety-3.5_beta1.ebuild 660
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhl5IntT9W3vfTuoRArhPAJsGGcVNYt8c2KGBoYfemD2BTlNUgACgkDF1
+ifQOTN5bttsJeXdZjcEMbQ8=
+=JlHT
+-----END PGP SIGNATURE-----

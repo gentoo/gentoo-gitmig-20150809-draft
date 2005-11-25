@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ab5679dae10b5e31f3c2a4d963ef089 ChangeLog 3703
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpovmodeler-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpovmodeler-3.4.2 300
@@ -14,3 +17,10 @@ MD5 714b6cdf772dec26e45121a6099b8142 kpovmodeler-3.5.0_beta2.ebuild 486
 MD5 d2889cc8798b07ad6df34aebb06f1d00 kpovmodeler-3.5.0_rc1.ebuild 485
 MD5 bd1bdb12bf8c5db3c7711a3a669ea011 kpovmodeler-3.5_beta1.ebuild 484
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhmiHntT9W3vfTuoRAmJZAJ9UT+PRCnIg5sEz7AaDN5RuvHvAXACgnUzW
+TihC2rPM5n1udTiHnkw1XQA=
+=qdg9
+-----END PGP SIGNATURE-----

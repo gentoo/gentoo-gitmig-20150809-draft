@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e1b2b2bdeb4a90853d13a127f2f807b6 ChangeLog 3579
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kreversi-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kreversi-3.4.2 288
@@ -14,3 +17,10 @@ MD5 078891b011d4fe1972de411ff9386560 kreversi-3.5.0_beta2.ebuild 486
 MD5 4eb018946be395af240d6375e6ccc950 kreversi-3.5.0_rc1.ebuild 485
 MD5 21a4065eddd28ad31f05c5f37eb62a98 kreversi-3.5_beta1.ebuild 521
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhmBHntT9W3vfTuoRAmJVAJ9UYw9luBr/4T9ELnHXnBJ2QEq4LQCeIwBT
+ldsZIAI2I93nmt2t+RukBtU=
+=1Nxw
+-----END PGP SIGNATURE-----

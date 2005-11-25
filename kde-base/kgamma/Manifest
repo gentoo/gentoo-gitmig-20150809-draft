@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae53e727e3657d5063eebafa451dc9e4 ChangeLog 3384
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kgamma-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kgamma-3.4.2 300
@@ -12,3 +15,10 @@ MD5 12c1fcbdfacdde571e861d5d8d293a9d kgamma-3.5.0.ebuild 392
 MD5 8fb4e27b9f3d9ab7fa1ace8c0577c5b6 kgamma-3.5.0_beta2.ebuild 404
 MD5 b28b5e9c2813dae4e77989974d114be4 kgamma-3.5_beta1.ebuild 395
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhmXvntT9W3vfTuoRAhImAJ9XE3gRGiuAwZ/oCUbNgAyM61/o7wCgiZF1
+HrK6y59RjsMqnZVsCu8KmAM=
+=fBKl
+-----END PGP SIGNATURE-----
