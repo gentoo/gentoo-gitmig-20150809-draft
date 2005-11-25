@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.13 2005/11/12 23:00:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.14 2005/11/25 21:50:58 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> pyzor-0.4.0-r1.ebuild:
+  stable on ppc64
 
   12 Nov 2005; Brent Baude <ranger@gentoo.org> pyzor-0.4.0-r1.ebuild:
   Marking pyzor-0.4.0-r1 ~ppc64 for bug# 112220
@@ -22,11 +25,11 @@
   Add ~sparc keyword at user request, closing 53481. It passes its internal
   tests.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pyzor-0.4.0-r1.ebuild,
+  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> pyzor-0.4.0-r1.ebuild,
   pyzor-0.4.0.ebuild:
   Add missing IUSE.
 
-  02 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pyzor-0.4.0-r1.ebuild:
+  02 Jan 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> pyzor-0.4.0-r1.ebuild:
   Mark 0.4.0-r1 x86, fixing bug #36962
 
 *pyzor-0.4.0-r1 (28 Oct 2003)
