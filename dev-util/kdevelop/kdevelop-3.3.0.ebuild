@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.0.ebuild,v 1.1 2005/11/23 11:31:36 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.0.ebuild,v 1.2 2005/11/25 09:01:56 greg_g Exp $
 
 inherit kde eutils
 
@@ -28,8 +28,8 @@ src_unpack() {
 	kde_src_unpack
 	cd ${S}
 
-	# See bug #86780 and kde bug 98852.
-	epatch "${FILESDIR}/kdevelop-3.2.1-makefiles.patch"
+	# Fix for kde bug 98852. Applied for 3.4.0.
+	epatch "${FILESDIR}/kdevelop-3.3.0-makefiles.patch"
 
 	# Update the admin dir used in KDE template projects.
 	# See also kde bug 104386.
