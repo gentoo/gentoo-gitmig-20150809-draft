@@ -39,4 +39,4 @@ fi
 cd ${dotazudir}
 
 CLASSPATH=$(java-config -p junit,log4j,commons-cli-1,swt-3):${azudir}/azureus.jar:${azudir}/seda.jar
-java -cp $CLASSPATH -Djava.library.path=/usr/lib org.gudy.azureus2.ui.swt.Main "$1"
+java -cp $CLASSPATH -Djava.library.path=##LIBRARY_PATH## org.gudy.azureus2.ui.swt.Main "$1"

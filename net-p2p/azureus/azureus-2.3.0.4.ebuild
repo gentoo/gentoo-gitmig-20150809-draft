@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.4.ebuild,v 1.4 2005/11/24 23:04:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.4.ebuild,v 1.5 2005/11/25 00:19:02 herbs Exp $
+
+inherit multilib
 
 DESCRIPTION="Azureus - Java BitTorrent Client"
 HOMEPAGE="http://azureus.sourceforge.net/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/azureus/Azureus_${PV}_source.zip
 		mirror://gentoo/seda-20040224.zip"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/swt-3.0-r2
 	>=dev-java/log4j-1.2.8
@@ -39,8 +41,9 @@ src_unpack() {
 
 
 	# Set runtime settings in the startup script
-	sed -i "s:##PROGRAM_DIR##:${PROGRAM_DIR}:" ${S}/azureus \
-		|| die "sed azureus program dir failed !"
+	sed -i -e "s:##PROGRAM_DIR##:${PROGRAM_DIR}:" \
+		-e "s:##LIBRARY_PATH##:/usr/$(get_libdir):" \
+		${S}/azureus || die "sed azureus program dir failed !"
 	rm -fr org/gudy/azureus2/ui/swt/osx org/gudy/azureus2/ui/swt/test org/gudy/azureus2/platform/macosx/access
 
 	cp ${FILESDIR}/UpdaterPatcher.java ${S}/org/gudy/azureus2/update/ \

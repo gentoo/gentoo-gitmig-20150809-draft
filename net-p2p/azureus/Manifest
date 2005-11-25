@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fa06dfd414a4dc1289c8b92c014978c8 ChangeLog 1393
+MD5 c87917c646460c4f64658fbef2a40505 ChangeLog 1550
 MD5 ff3e702ff946e17b534a1a0971cab592 azureus-2.2.0.0-r1.ebuild 2345
-MD5 e0f53d42b0f9005919d82d10fa28a526 azureus-2.3.0.4.ebuild 2532
+MD5 0aee5632d7755d629ae59035e6e59f92 azureus-2.3.0.4.ebuild 2603
 MD5 21218e1a7c134f02c8e42bcb63375e74 files/SWTThread.java 2549
 MD5 e3cc00baa30d499993d4f65e56ad03bc files/UpdaterPatcher.java 2523
-MD5 7aeb8af08a00d9bec6d2b7aaddc55fa8 files/azureus-gentoo-2.3.0.4.sh 1000
+MD5 6d60bd5e1461cf5f8bc467794e6a1827 files/azureus-gentoo-2.3.0.4.sh 1008
 MD5 77d299aef0633c501b998f3ec0c1f0c9 files/azureus-gentoo.sh 1010
 MD5 70c17db47c9a596929112714f82ac010 files/azureus.desktop 153
 MD5 2d3136c60488dd51bef012cbcb59201b files/azureus.png 743
@@ -17,7 +17,7 @@ MD5 a63336d02253ae5fe2ad69f813bdd7d8 metadata.xml 329
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDhkcMQiJ/wx066S4RAhi9AJ9CqgE2EZhr7wsufW6FQOdjsUFuEgCdEl4N
-BCLfEJ/wuo+2JSzDcUCPWFU=
-=msBk
+iD8DBQFDhliI2G5bA0cA/ScRAqW4AJ4+p33bi0aBoifPswbvGUoEoUPjGQCfec88
+WJ1OE8rIphIuq2/2wyUf9TI=
+=Dtoa
 -----END PGP SIGNATURE-----
