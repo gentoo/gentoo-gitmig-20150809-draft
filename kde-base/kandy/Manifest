@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e28bbbe175ad70ff5861b176e0049fca ChangeLog 3488
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kandy-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kandy-3.4.2 282
@@ -14,3 +17,10 @@ MD5 c71aa931e7f2d4a2006ca9095a142635 kandy-3.5.0_beta2.ebuild 512
 MD5 7be926d8de4e6d4ea986dc195f56b2fc kandy-3.5.0_rc1.ebuild 511
 MD5 2bdb9f0f5c07106aed1f8f87930dcfbb kandy-3.5_beta1.ebuild 545
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhvHLntT9W3vfTuoRApxaAKCiscg4KQqRUFJFqO5sVW/neJm1uACcCq71
+QAOnOTaGxV3gJaITjD0zuyA=
+=T6zT
+-----END PGP SIGNATURE-----
