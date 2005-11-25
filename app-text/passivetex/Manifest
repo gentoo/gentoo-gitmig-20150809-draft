@@ -1,4 +1,14 @@
-MD5 d061a192ca39ff60e606135a7e56a73e ChangeLog 1563
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 4d79784e2efa221de3d828b52f1f737e passivetex-1.25.ebuild 766
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b978ef0fa8641005481961935aad9e9 ChangeLog 1670
 MD5 1bd3ced9d1f28c886884b9ddcaa5f517 files/digest-passivetex-1.25 65
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 ca9e09e12a9b167ecfd8d5beab2f8289 passivetex-1.25.ebuild 768
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDh1pmntT9W3vfTuoRAjMzAJ93k9MpWv38CYOsitx2DFX+Jw0YAwCffO80
+xPWZTvMlv0TOJ0Npgud9e8o=
+=Vhmf
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/passivetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.13 2005/01/01 16:29:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.14 2005/11/25 18:39:23 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> passivetex-1.25.ebuild:
+  Marked ~amd64, closes bug 98222.
 
   08 May 2004; Mamoru KOMACHI <usata@gentoo.org> passivetex-1.25.ebuild,
   passivetex-1.4-r1.ebuild:
