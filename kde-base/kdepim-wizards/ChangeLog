@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.25 2005/11/24 22:34:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.26 2005/11/25 11:19:48 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdepim-wizards-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org>
   kdepim-wizards-3.4.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.37 2005/11/24 22:27:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.38 2005/11/25 11:26:53 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kmail-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kmail-3.4.3.ebuild:
   Stable on ppc64

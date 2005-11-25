@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.23 2005/11/24 15:41:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.24 2005/11/25 11:35:25 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kpilot-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kpilot-3.4.3.ebuild:
   Stable on sparc wrt #112842

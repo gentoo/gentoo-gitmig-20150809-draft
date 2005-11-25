@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.21 2005/11/24 22:22:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.22 2005/11/25 11:22:52 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> mimelib-3.4.2.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> mimelib-3.4.2.ebuild:
   Stable on ppc64

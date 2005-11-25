@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kitchensync
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.28 2005/11/24 22:39:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.29 2005/11/25 11:25:29 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kitchensync-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kitchensync-3.4.3.ebuild:
   Stable on ppc64
