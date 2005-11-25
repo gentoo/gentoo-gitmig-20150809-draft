@@ -1,11 +1,17 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.273 2005/11/25 17:19:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.274 2005/11/25 17:25:42 vivo Exp $
+
+  25 Nov 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15-r1.ebuild:
+  ... and btw readding some keywords to 4.1.16-r1 too
 
   25 Nov 2005; Jory A. Pratt <anarchy@gentoo.org> mysql-5.0.15.ebuild,
   mysql-5.0.16-r3.ebuild:
   ~amd64 re-added, permissions are correct allowing mysqld to start on a clean
   install
+
+  24 Nov 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15-r1.ebuild:
+  Readding missing keywords (4.1.15-r1)
 
   24 Nov 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15-r1.ebuild,
   mysql-4.1.15-r30.ebuild, mysql-5.0.16-r3.ebuild, mysql-5.0.16-r30.ebuild:
