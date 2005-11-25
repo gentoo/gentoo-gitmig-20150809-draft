@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.38 2005/11/14 02:55:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.39 2005/11/25 22:39:09 latexer Exp $
+
+*monodevelop-0.9 (25 Nov 2005)
+
+  25 Nov 2005; Peter Johanson <latexer@gentoo.org>
+  -files/monodevelop-0.5.1-iconloader.diff,
+  -files/monodevelop-0.5.1-nemerle-gtk-sharp.diff,
+  +files/monodevelop-0.9-boo-0.7.5-api.diff, -monodevelop-0.5.1-r4.ebuild,
+  +monodevelop-0.9.ebuild:
+  Bump, and remove one older version.
 
   14 Nov 2005; Peter Johanson <latexer@gentoo.org>
   +files/monodevelop-0.8-iso-api-update.diff, monodevelop-0.8.ebuild:
