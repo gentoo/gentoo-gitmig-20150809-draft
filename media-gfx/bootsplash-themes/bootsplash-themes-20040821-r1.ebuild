@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.4 2005/08/26 17:56:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.5 2005/11/25 22:08:25 cryos Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -119,7 +119,7 @@ SRC_URI="${THEME_URI}/Theme-73labAllstar.tar.bz2
 	${THEME_URI}/Theme-WarmAqua.tar.bz2"
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="|| ( media-gfx/bootsplash >=media-gfx/splashutils-1.1.9.6 )"
