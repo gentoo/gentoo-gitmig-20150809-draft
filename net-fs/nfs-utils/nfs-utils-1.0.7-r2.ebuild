@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r2.ebuild,v 1.2 2005/11/20 08:09:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r2.ebuild,v 1.3 2005/11/25 19:53:01 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,7 +73,6 @@ src_install() {
 	keepdir /var/lib/nfs/{sm,sm.bak}
 	mv "${D}"/var/lib/nfs/* "${D}"/usr/lib/nfs
 	keepdir /var/lib/nfs
-	keepdir /var/lib/nfs/v4root
 
 	# Install some client-side binaries in /sbin
 	dodir /sbin

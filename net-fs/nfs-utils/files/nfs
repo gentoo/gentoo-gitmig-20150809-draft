@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs,v 1.11 2005/10/08 20:34:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs,v 1.12 2005/11/25 19:53:01 vapier Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -35,10 +35,16 @@ depend() {
 	after quota
 }
 
+mkdir_nfsdirs() {
+	local d
+	for d in /var/lib/nfs/{rpc_pipefs,v4recovery,v4root} ; do
+		[[ ! -d ${d} ]] && mkdir -p "${d}"
+	done
+}
+
 mount_pipefs() {
 	if grep -q rpc_pipefs /proc/filesystems ; then
 		if ! grep -q "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
-			[[ ! -d /var/lib/nfs/rpc_pipefs ]] && mkdir -p /var/lib/nfs/rpc_pipefs
 			ebegin "Mounting RPC pipefs"
 			mount -t rpc_pipefs rpc_pipefs /var/lib/nfs/rpc_pipefs
 			eend $?
@@ -140,7 +146,7 @@ waitfor_exportfs() {
 
 start() {
 	# Make sure nfs support is loaded in the kernel #64709
-	if [ -e /proc/modules ] ; then
+	if [[ -e /proc/modules ]] && ! grep -qs nfsd /proc/filesystems ; then
 		modprobe nfsd &> /dev/null
 	fi
 
@@ -153,6 +159,8 @@ start() {
 		fi
 	fi
 	# now that nfsd is mounted inside /proc, we can safely start mountd later
+
+	mkdir_nfsdirs
 
 	mount_pipefs
 	start_idmapd
