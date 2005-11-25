@@ -1,4 +1,14 @@
-MD5 744dcdd86728a4a07f974b078960c9fe exif-0.6.9.ebuild 744
-MD5 74137ffc68bc5c7fb244f96876aa906e ChangeLog 434
-MD5 f6e6e21a2beceda5e45a2cabfa6176cb metadata.xml 244
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da2ace90426b33cebff3bcf8e5c0a3dd ChangeLog 521
+MD5 abfdb3ebc3dac563ea4d21a6821d97f1 exif-0.6.9.ebuild 749
 MD5 29d527c627976685861c57bab5a072ad files/digest-exif-0.6.9 62
+MD5 f6e6e21a2beceda5e45a2cabfa6176cb metadata.xml 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDh4yNntT9W3vfTuoRApSPAJ0R1+hBDxhrn1opuyDKsorktzKSXwCgth+w
+hai85b2WL6pivQ1h4ydr7BM=
+=k0Gu
+-----END PGP SIGNATURE-----
