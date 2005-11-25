@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cfbb093dd0c3b2eb89e1e52194c6aa9b ChangeLog 3324
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kiten-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kiten-3.4.2 282
@@ -12,3 +15,10 @@ MD5 93207c6621868e8202e06bb05382be50 kiten-3.5.0.ebuild 386
 MD5 6ca1378ae98d8ba4d9aae3ae226e0df8 kiten-3.5.0_beta2.ebuild 398
 MD5 9e8e1a17f4b67755c2fdf5f3bb7c32d4 kiten-3.5_beta1.ebuild 389
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhlKxntT9W3vfTuoRAkcPAJ0feNrd/ySIY65LDJlJoXTsHx1hDwCgsk09
+tXx7aqKvulf0Te8cS5FvQTw=
+=4xkO
+-----END PGP SIGNATURE-----
