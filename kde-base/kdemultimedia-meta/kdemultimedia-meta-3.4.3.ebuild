@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.4.3.ebuild,v 1.3 2005/11/24 21:51:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.4.3.ebuild,v 1.4 2005/11/25 01:52:16 cryos Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="3.4"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ppc64 sparc ~x86"
 IUSE="arts xine"
 
 RDEPEND="arts? ( $(deprange 3.4.1 $MAXKDEVER kde-base/artsplugin-audiofile)

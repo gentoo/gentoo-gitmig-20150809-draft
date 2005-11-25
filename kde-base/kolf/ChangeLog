@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.24 2005/11/24 22:20:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.25 2005/11/25 00:47:57 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kolf-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kolf-3.4.3.ebuild:
   Stable on ppc64
