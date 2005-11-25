@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.11 2005/11/20 00:09:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.12 2005/11/25 08:36:08 dragonheart Exp $
+
+*conky-1.3.4-r1 (25 Nov 2005)
+
+  25 Nov 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/conky-1.3.4-miscbug.patch, -conky-1.3.4.ebuild,
+  +conky-1.3.4-r1.ebuild:
+  fixes killed with ctrl+c from a terminal and gets glibc errors - bug #113219
+  thanks to Nathan Sullivan (reporter) and Philip Kovacs (patch author)
 
 *conky-1.3.4 (20 Nov 2005)
 

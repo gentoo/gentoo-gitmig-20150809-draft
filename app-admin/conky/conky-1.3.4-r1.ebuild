@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.4.ebuild,v 1.1 2005/11/20 00:09:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.4-r1.ebuild,v 1.1 2005/11/25 08:36:08 dragonheart Exp $
 
 inherit eutils
 
@@ -32,6 +32,11 @@ DEPEND="
 	sys-apps/sed
 	sys-devel/gcc"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-miscbug.patch
+}
 
 src_compile() {
 	local mymake
