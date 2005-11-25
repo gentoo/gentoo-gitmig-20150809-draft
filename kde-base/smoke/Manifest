@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9550142e317f6aaa9aa990d7a64f33c6 ChangeLog 3267
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-smoke-3.3.1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-smoke-3.4.1 221
@@ -14,3 +17,10 @@ MD5 0838a6715496f1786c4a560c2684af3c smoke-3.4.2.ebuild 1370
 MD5 9c2676178fef8ae840c33bf6899b644f smoke-3.5.0.ebuild 1435
 MD5 4b370de60b93ccc871ffd41a3f059d3f smoke-3.5.0_beta2.ebuild 1440
 MD5 e7b7729b6c3b5acdec5e430c2d045c00 smoke-3.5.0_rc1.ebuild 1439
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDhyPyntT9W3vfTuoRAsOWAKCTrqEdX7sv6SofJ3f4UxPjIpRD4ACfY7qT
+s/5QNtcEb3Gcu+rBs4bKyOM=
+=/DmL
+-----END PGP SIGNATURE-----
