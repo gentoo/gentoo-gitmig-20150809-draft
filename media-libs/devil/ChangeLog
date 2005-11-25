@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.16 2005/09/30 18:46:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.17 2005/11/25 19:11:33 vapier Exp $
+
+  25 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/devil-1.6.7-sdl-checks.patch, devil-1.6.7-r1.ebuild:
+  Fix by Henrik Dohlmann to make sure sdl libs/cflags arent used when sdl is
+  disabled #113441.
 
   30 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> devil-1.6.6-r2.ebuild,
   devil-1.6.7.ebuild, devil-1.6.7-r1.ebuild:
