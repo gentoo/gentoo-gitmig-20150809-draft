@@ -29,7 +29,6 @@ jikes
 junit
 
 guile
-caps
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
