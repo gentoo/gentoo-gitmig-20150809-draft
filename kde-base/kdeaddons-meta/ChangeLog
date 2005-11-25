@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.41 2005/11/24 20:49:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.42 2005/11/25 14:06:52 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdeaddons-meta-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org>
   kdeaddons-meta-3.4.3.ebuild:

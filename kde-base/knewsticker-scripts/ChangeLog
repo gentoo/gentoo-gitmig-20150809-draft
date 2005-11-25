@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker-scripts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.24 2005/11/24 20:37:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.25 2005/11/25 13:56:43 cryos Exp $
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  knewsticker-scripts-3.4.3.ebuild:
+  Stable on amd64, bug 112842.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org>
   knewsticker-scripts-3.4.3.ebuild:
