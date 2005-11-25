@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1576 2005/11/25 07:30:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1577 2005/11/25 15:57:47 strerror Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1130,6 +1130,7 @@ sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
+sys-fs/cryptsetup-luks:dynamic - Build cryptsetup-luks dynamically
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/ntfsprogs:fuse - Build a FUSE module
