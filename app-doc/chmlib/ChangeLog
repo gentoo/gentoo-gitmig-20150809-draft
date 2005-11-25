@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/chmlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.13 2005/11/25 10:08:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.14 2005/11/25 20:15:44 chriswhite Exp $
+
+  25 Nov 2005; Chris White <chriswhite@gentoo.org> chmlib-0.37.4.ebuild:
+  x86 stable wrt security bug #110557.
 
 *chmlib-0.37.4 (25 Nov 2005)
 

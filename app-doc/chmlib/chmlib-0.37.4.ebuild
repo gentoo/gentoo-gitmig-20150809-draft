@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.37.4.ebuild,v 1.1 2005/11/25 10:08:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.37.4.ebuild,v 1.2 2005/11/25 20:15:44 chriswhite Exp $
 
 inherit eutils multilib flag-o-matic versionator
 
@@ -11,7 +11,7 @@ DEPEND=">=sys-apps/sed-4"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 MY_PV=$(get_version_component_range 1-2 )
