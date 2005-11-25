@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/roundup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.5 2005/04/19 10:34:20 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.6 2005/11/25 18:38:55 vanquirius Exp $
+
+*roundup-0.8.5 (25 Nov 2005)
+
+  25 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> +roundup-0.8.5.ebuild:
+  0.8.5 version bump for bug 107417. Thanks to David Remahl <chmod007 at mac
+  dot com>.
 
   19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
