@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8eea9c11bb7acf3c381ab86ef4f32ff1 ChangeLog 1169
 MD5 4512bd4b2ffb25cd8ce57ce01ac1098c files/digest-jpeginfo-1.6.0 65
 MD5 b3ff8f60c07288836d6eb8edb906940b jpeginfo-1.6.0.ebuild 601
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDh45gntT9W3vfTuoRApw9AJ9coHBC/TUhmp0YFL6wKXdeGPrMJACfamXu
+2qENuoZTB3zQJ3ERTpPwg2k=
+=4Ilg
+-----END PGP SIGNATURE-----
