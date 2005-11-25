@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/procinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.16 2005/10/23 00:28:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.17 2005/11/25 16:45:17 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> procinfo-18-r1.ebuild:
+  stable on ppc64
 
   23 Oct 2005; Brent Baude <ranger@gentoo.org> procinfo-18-r1.ebuild:
   Marking procinfo-18-r1 as ~ppc64 for bug 110150
@@ -9,7 +12,7 @@
   procinfo-18-r1.ebuild:
   fixed url, #107084
 
-  09 Aug 2005; Olivier Crête <tester@gentoo.org> procinfo-18-r1.ebuild:
+  09 Aug 2005; Olivier CrÃªte <tester@gentoo.org> procinfo-18-r1.ebuild:
   Stable on amd64, bug #101816
 
   28 Apr 2005; Simon Stelling <blubb@gentoo.org> procinfo-18-r1.ebuild:
