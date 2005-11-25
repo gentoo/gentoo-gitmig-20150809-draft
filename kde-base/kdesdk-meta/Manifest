@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 407a08fc04fec219032d06b4a802ab43 ChangeLog 3792
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5.0_beta2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5_beta1 0
+MD5 ca48aec37af0742671d0e7d5aaf5558a ChangeLog 3888
 MD5 d7d74ad03e831442c3c9c22bce75ff3d kdesdk-meta-3.4.1.ebuild 1154
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 a408c890b609771bd640704bb99f1113 kdesdk-meta-3.4.2.ebuild 1174
-MD5 cbf51216793afe095cd1fea23ad9305e kdesdk-meta-3.4.3.ebuild 1168
-MD5 082e0cd3f1c8beec22e3079c07384d29 kdesdk-meta-3.5.0.ebuild 1142
+MD5 93b7f6f03ffb43bf3f26efdb90fff37d kdesdk-meta-3.5_beta1.ebuild 1145
+MD5 740967f85e9d9ce6190627af848d5dd3 kdesdk-meta-3.4.3.ebuild 1169
 MD5 485ad74e8aa1b852b8f13def34ea9cc4 kdesdk-meta-3.5.0_beta2.ebuild 1165
 MD5 c9715ef634224d04626265afb6ad465f kdesdk-meta-3.5.0_rc1.ebuild 1188
-MD5 93b7f6f03ffb43bf3f26efdb90fff37d kdesdk-meta-3.5_beta1.ebuild 1145
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhyePntT9W3vfTuoRAkrDAJwN4yf62jMK41YGicz206+hObiSSgCeNBgT
-tMZ7ZJ/KBau4Pi7qEGw/gQc=
-=5Or7
------END PGP SIGNATURE-----
+MD5 082e0cd3f1c8beec22e3079c07384d29 kdesdk-meta-3.5.0.ebuild 1142
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5.0 0
