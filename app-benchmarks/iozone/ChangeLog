@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.26 2005/11/13 12:24:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.27 2005/11/25 17:05:22 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> iozone-3.242.ebuild:
+  stable on ppc64
 
 *iozone-3.254 (13 Nov 2005)
 
