@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.33 2005/11/22 20:11:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.34 2005/11/25 01:59:22 halcy0n Exp $
+
+  25 Nov 2005; Mark Loeser <halcy0n@gentoo.org> libtorrent-0.7.6.ebuild:
+  Stable on x86; bug #112928
 
   22 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/libtorrent-0.8.0-inttypes.patch, libtorrent-0.8.0.ebuild:
