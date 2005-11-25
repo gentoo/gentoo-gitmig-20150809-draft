@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4702 2005/11/23 15:43:10 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4703 2005/11/25 11:39:00 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marien Zwart <marienz@gentoo.org> (25 Nov 2005)
+# this does not even pass src_unpack (cvs module no longer exists)
+dev-python/twisted-cvs
 
 # Marcin Kryczek <mkay@gentoo.org> (22 Nov 2005)
 # This is for testing only. Do NOT report bugs against that version
