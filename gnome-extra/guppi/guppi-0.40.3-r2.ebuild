@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r2.ebuild,v 1.14 2005/10/17 12:59:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r2.ebuild,v 1.15 2005/11/26 11:46:41 blubb Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils multilib
 
 IUSE="python nls readline"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 HOMEPAGE="http://www.gnome.org/guppi/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
 
 RDEPEND="=x11-libs/gtk+-1.2*
@@ -73,13 +73,14 @@ src_compile() {
 			--sysconfdir=/etc \
 			--localstatedir=/var/lib \
 			--with-bonobo \
+			--libdir=/usr/$(get_libdir) \
 			${myconf} || die
 
 	# The python 'generate' module opens some files in rw mode for some
 	# unknown reason.
-	addwrite "/usr/lib/python2.0/"
-	addwrite "/usr/lib/python2.1/"
-	addwrite "/usr/lib/python2.2/"
+	addwrite "/usr/$(get_libdir)/python2.0/"
+	addwrite "/usr/$(get_libdir)/python2.1/"
+	addwrite "/usr/$(get_libdir)/python2.2/"
 
 	emake || die
 }
@@ -90,6 +91,7 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib \
+		libdir=${D}/usr/$(get_libdir) \
 		install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
