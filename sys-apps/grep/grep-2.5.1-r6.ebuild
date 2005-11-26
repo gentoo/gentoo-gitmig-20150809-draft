@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r6.ebuild,v 1.14 2005/05/30 02:41:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r6.ebuild,v 1.15 2005/11/26 20:08:39 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils multilib
 
@@ -38,7 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-${PV}-fgrep.patch.bz2
 	epatch ${FILESDIR}/${PN}-${PV}-i18n.patch.bz2
 	epatch ${FILESDIR}/${PN}-${PV}-gofast.patch.bz2
-	epatch ${FILESDIR}/${PN}-${PV}-oi.patch.bz2
+	epatch ${FILESDIR}/${PN}-${PV}-oi.patch
 
 	# Fix configure scripts to detect linux-mips
 	gnuconfig_update

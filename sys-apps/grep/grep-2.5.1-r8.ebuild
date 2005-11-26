@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.8 2005/09/16 08:02:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.9 2005/11/26 20:08:39 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fgrep.patch.bz2
 	epatch "${FILESDIR}"/${P}-i18n.patch.bz2
 	epatch "${FILESDIR}"/${P}-gofast.patch.bz2
-	epatch "${FILESDIR}"/${P}-oi.patch.bz2
+	epatch "${FILESDIR}"/${P}-oi.patch
 	epatch "${FILESDIR}"/${P}-restrict_arr.patch
 	epatch "${FILESDIR}"/${PV}-utf8-case.patch
 	epatch "${FILESDIR}"/${P}-perl-segv.patch #95495
