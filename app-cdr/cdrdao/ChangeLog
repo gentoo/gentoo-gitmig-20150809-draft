@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.76 2005/10/24 19:15:47 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.77 2005/11/26 22:24:05 metalgod Exp $
+
+*cdrdao-1.2.1 (26 Nov 2005)
+
+  26 Nov 2005; Luis Medinas <metalgod@gentoo.org> +cdrdao-1.2.1.ebuild:
+  Version Bump. Drop previous patches.
 
 *cdrdao-1.2.0-r1 (24 Oct 2005)
 
