@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.52 2005/11/24 19:11:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.53 2005/11/26 12:03:27 ferdy Exp $
+
+*maildrop-2.0.1-r1 (26 Nov 2005)
+
+  26 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +maildrop-2.0.1-r1.ebuild:
+  filter -fomit-frame-pointer wrt bug #113263
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> maildrop-2.0.1.ebuild:
   Stable on sparc wrt #112687
