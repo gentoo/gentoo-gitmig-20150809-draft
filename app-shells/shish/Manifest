@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
-MD5 82ef02ac7150d7ed1b6da838df50746c shish-0.7_pre3.ebuild 1020
-MD5 9fe91ed4c9f254b7c15bf03482b8faff ChangeLog 371
+MD5 27a43e1936587324055bf1d3c7765753 ChangeLog 490
 MD5 e757d2d1cac83cfb7cb0ffe0c49ef5f4 files/digest-shish-0.7_pre3 67
+MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
+MD5 82ef02ac7150d7ed1b6da838df50746c shish-0.7_pre3.ebuild 1020
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPpNQmPFBzbX68WERAj1tAJ4pMBNy8PJNg9+GI7xvdKhVnr5cvwCeN//k
-pBQQkdZh7GyqJH+rQl2w5Ng=
-=tCkg
+iD8DBQFDiC2tflZ8QqxhrsMRAns+AJ9/4jP03u6FQgZHNPL5kFtwBja1qACcDvV8
+Jfj7R0cM8UANPi5fbcmaF7s=
+=EJtX
 -----END PGP SIGNATURE-----
