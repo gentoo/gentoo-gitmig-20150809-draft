@@ -1,4 +1,4 @@
-MD5 7ad2cdf032090eb30d8cd55ef6224576 ChangeLog 511
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 a8f73d6acd041da8cfb1114130010394 pecl-dbx-1.1.0.ebuild 561
+MD5 b8f3e4fd8e9cb97389d32f572469609c ChangeLog 606
 MD5 df51e95ca52b8517a61833b1afd699d1 files/digest-pecl-dbx-1.1.0 57
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 8a77c1168d4ca6e63acd24c64e7596cc pecl-dbx-1.1.0.ebuild 538
