@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-022.045.ebuild,v 1.1 2005/11/05 20:43:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-022.045.ebuild,v 1.2 2005/11/26 08:57:48 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.8"
@@ -22,7 +22,7 @@ KEYWORDS="~x86"
 
 DESCRIPTION="Full sources including OpenVZ patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="http://www.openvz.org"
-SRC_URI="${KERNEL_URI} ${ARCH_URI} http://dev.gentoo.org/~hollow/openvz/patches/${OVZ_COREPATCH}"
+SRC_URI="${KERNEL_URI} ${ARCH_URI} http://dev.gentoo.org/~hollow/distfiles/${OVZ_COREPATCH} http://dev.gentoo.org/~phreak/distfiles/${OVZ_COREPATCH}"
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/${OVZ_COREPATCH}"

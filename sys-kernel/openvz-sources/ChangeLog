@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.6 2005/11/25 15:35:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.7 2005/11/26 08:57:48 phreak Exp $
+
+  26 Nov 2005; Christian Heim <phreak@gentoo.org>
+  openvz-sources-022.044.ebuild, openvz-sources-022.045.ebuild,
+  openvz-sources-022.045-r1.ebuild:
+  Fixing SRC_URI (again)
 
   25 Nov 2005; Christian Heim <phreak@gentoo.org>
   openvz-sources-022.045-r1.ebuild:
