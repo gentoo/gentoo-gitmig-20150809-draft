@@ -1,6 +1,26 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.216 2005/11/25 12:35:05 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.217 2005/11/26 17:02:28 dsd Exp $
+
+  26 Nov 2005; Daniel Drake <dsd@gentoo.org>
+  -files/gentoo-sources-2.4.28.77181.patch,
+  -files/gentoo-sources-2.4.28.arpFix.patch,
+  -files/gentoo-sources-2.4.28.brk-locked.patch,
+  -files/gentoo-sources-2.4.77094.patch,
+  -files/gentoo-sources-2.4.77666.patch,
+  -files/gentoo-sources-2.4.78362.patch,
+  -files/gentoo-sources-2.4.78363.patch,
+  -files/gentoo-sources-2.4.81195.patch,
+  -files/gentoo-sources-2.4.81295.patch,
+  -files/gentoo-sources-2.4.82201.patch,
+  -files/gentoo-sources-2.4.CAN-2004-1016.patch,
+  -files/gentoo-sources-2.4.CAN-2004-1137.patch,
+  -files/gentoo-sources-2.4.PaX-84167.patch,
+  -files/gentoo-sources-2.4.binfmt_a.out.patch,
+  -files/gentoo-sources-2.4.cmdlineLeak.patch,
+  -files/gentoo-sources-2.4.vma.patch, -gentoo-sources-2.4.28-r9.ebuild,
+  -gentoo-sources-2.6.13-r3.ebuild:
+  Remove old versions
 
 *gentoo-sources-2.6.14-r3 (25 Nov 2005)
 
