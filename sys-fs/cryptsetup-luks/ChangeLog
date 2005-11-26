@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.13 2005/11/10 18:22:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.14 2005/11/26 04:43:50 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> cryptsetup-luks-1.0.1.ebuild:
+  stable on ppc64, in light of bug #90211 being fixed
 
   10 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   cryptsetup-luks-1.0.1.ebuild:
@@ -9,7 +12,7 @@
   18 Oct 2005; Brent Baude <ranger@gentoo.org> cryptsetup-luks-1.0.1.ebuild:
   Marking cryptsetup-luks-1.0.1 ~ppc64 as dep to pmount
 
-  17 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  17 Oct 2005; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   cryptsetup-luks-1.0.1.ebuild:
   Marked stable on x86. Bug #109039.
 
