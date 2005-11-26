@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4709 2005/11/26 16:15:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4710 2005/11/26 20:14:17 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Petteri Räty <betelgeuse@gentoo.org> (26 Nov 2005)
-# Because of major modifications to the ebuild, masking until more
-# testing has been done.
->=net-p2p/azureus-2.3.0.6
 
 # Wolfram Schlich <wschlich@gentoo.org> (26 Nov 2005)
 # has security issues and will be removed from portage
