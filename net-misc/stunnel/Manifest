@@ -15,6 +15,6 @@ MD5 2d0c9c806bbcf7f7999d1ea564e27e9d files/stunnel.rc6.4.05 591
 MD5 915cb8e081d324df458589674689652c files/stunnel.rc6.4.09 938
 MD5 3c7d56a1f6a95f21ceb95ddf5c76073c metadata.xml 703
 MD5 40938d8bb3bba86aea441e89ad04bdc9 stunnel-3.26.ebuild 1085
-MD5 f86bee858efb39f90323076c1d5d3cde stunnel-4.09-r1.ebuild 2221
+MD5 ada5bc552813f309133d5428c3a95a7c stunnel-4.09-r1.ebuild 2221
 MD5 1217dcb1ea077fa30403aa71cdaf7480 stunnel-4.09.ebuild 2127
 MD5 2e5b35dd3147164d11d25c7dd45695dd stunnel-4.14.ebuild 2223
