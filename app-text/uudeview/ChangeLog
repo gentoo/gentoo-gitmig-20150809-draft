@@ -1,6 +1,9 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.21 2005/04/21 20:33:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.22 2005/11/26 20:30:29 grobian Exp $
+
+  26 Nov 2005; Fabian Groffen <grobian@gentoo.org> uudeview-0.5.20.ebuild:
+  Marked ~ppc-macos (bug #109433)
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> uudeview-0.5.20.ebuild:
   stable on amd64
