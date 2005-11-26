@@ -92,6 +92,7 @@ lesspipe() {
 	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
 	*.cpi|*.cpio) cpio -itv < "$1" ;;
 	*.ace)        unace l -- "$1" ;;
+	*.arc)        arc v "$1" ;;
 	*.arj)        unarj l -- "$1" ;;
 	*.cab)        cabextract -l -- "$1" ;;
 	*.lha|*.lzh)  lha v "$1" ;;
@@ -183,8 +184,8 @@ lesspipe() {
 if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
-	Id="lesspipe.sh"
-	cvsid="$Id: lesspipe.sh,v 1.12 2005/11/22 22:29:08 vapier Exp $"
+	Id="cvsid"
+	cvsid="$Id: lesspipe.sh,v 1.13 2005/11/26 00:32:53 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2005 Gentoo Foundation
