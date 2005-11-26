@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a6270f5ec998954cc34747f728fe5bae ChangeLog 932
-MD5 266ee2cf5cab2ae2cf414eec11b6a932 metadata.xml 449
-MD5 00b0c0c649023c9eb2fe14c6e7610b7f libvserver-0.4.ebuild 506
+MD5 b5ebca1c3b9533d59f53fdddfa58fd6e ChangeLog 1020
 MD5 d11a959f0c30c88713f951d7fbf7505a files/digest-libvserver-0.4 67
+MD5 498ddd25e0412b1cfe9b9596832cab3d libvserver-0.4.ebuild 534
+MD5 266ee2cf5cab2ae2cf414eec11b6a932 metadata.xml 449
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPoqYmPFBzbX68WERAlpZAJ9ewE4Myk0qj0Cl6u6yYQEa8VlxrgCeL4nC
-uHO/6YMGG3TuZBIa+LD7eDA=
-=dK3U
+iD8DBQFDiDjjmPFBzbX68WERAvXmAJ9BawInQ23Yn9Cmm7FGIIgdbYdfXACfQHDz
+W3Lf3fxoRIqJruhtsRbssio=
+=0IQz
 -----END PGP SIGNATURE-----
