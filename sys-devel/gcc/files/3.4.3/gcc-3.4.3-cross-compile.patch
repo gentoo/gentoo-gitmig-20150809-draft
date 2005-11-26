@@ -1,3 +1,7 @@
+Some notes on the 'bootstrap with or without libc headers' debate:
+http://linuxfromscratch.org/pipermail/lfs-dev/2005-July/052409.html
+http://gcc.gnu.org/ml/gcc/2005-07/msg01195.html
+
 --- gcc/config/sh/linux.h
 +++ gcc/config/sh/linux.h
 @@ -154,6 +154,7 @@

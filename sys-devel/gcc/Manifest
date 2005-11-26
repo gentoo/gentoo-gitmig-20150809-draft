@@ -32,7 +32,7 @@ MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.p
 MD5 5fb5b49f3f16cc9e7e27e582c92ffa2f files/3.3.4/libffi-without-libgcj.patch 890
 MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
 MD5 184cb0a87ee2fa0197dec6f4902ef4c8 files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
-MD5 c313cea9fdb0a3a796f7e869a471da80 files/3.3.6/gcc-3.3.6-cross-compile.patch 2018
+MD5 d0f69e3626da1a439356a270e3bb8a20 files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
 MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
@@ -44,13 +44,13 @@ MD5 1134e9dabbd6dfba1d91015851f02a2b files/3.4.2/gcc-3.4.2-mips-ip28_cache_barri
 MD5 b2922cfe76692e7d2b373a0a255f405e files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
 MD5 f2395cf0f72d870e263d0dcec18fdd67 files/3.4.2/gcc34-fix-sse2_pinsrw.patch 1268
 MD5 2c1ce849de55d8c81af4e081dbb2f5e4 files/3.4.2/gcc34-m32-no-sse2.patch 1058
-MD5 0b31c7f32c0c28bafdd75c5c0dfc16a5 files/3.4.3/gcc-3.4.3-cross-compile.patch 2919
+MD5 e2b16f5452dd71980b158b2c0fda319c files/3.4.3/gcc-3.4.3-cross-compile.patch 3103
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
-MD5 50f1f564c568b9e28231c592d4df2f36 files/3.4.4/gcc-3.4.4-cross-compile.patch 1728
+MD5 520c8e6799b5c4bff0fdcb81e81fbe88 files/3.4.4/gcc-3.4.4-cross-compile.patch 1912
 MD5 2c355d808b490994c6566b10f3c0ba27 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
-MD5 3a634a8482dd879e171f0e5bb49a7d8d files/4.0.2/gcc-4.0.2-cross-compile.patch 321
+MD5 0acb1229f47bbb9e254a9824db17c25b files/4.0.2/gcc-4.0.2-cross-compile.patch 505
 MD5 6c3e9176aff0f29e30a356970e8fa307 files/4.1.0/gcc-4.1.0-pr22313.patch 2292
 MD5 fed3620378df7a876d6709ddf3f7bbec files/awk/fixlafiles.awk 7865
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
@@ -103,7 +103,7 @@ MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDh98FCRZPokWLroQRApGdAKC/7QT7AXnIOVkNBA9xqiiqOuJ12wCguyfx
-MEJjxJY7CB0Qiw5hQOllR9o=
-=wq9n
+iD8DBQFDiDnWgIKl8Uu19MoRAmvYAJ9B9NiW2+JSe6OkeVOcheq1S/t84wCdHOqa
+1K+BfCmh/w9g5OG6ktRJe8c=
+=yz8K
 -----END PGP SIGNATURE-----
