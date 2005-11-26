@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.53 2005/10/10 17:49:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.54 2005/11/26 23:17:58 josejx Exp $
+
+*mol-0.9.71_pre5 (26 Nov 2005)
+
+  26 Nov 2005; Joseph Jezak <josejx@gentoo.org> +mol-0.9.71_pre5.ebuild:
+  Fixed OSX 10.2 support, building with 2.6.15 and a few other patches.
 
 *mol-0.9.71_pre3 (10 Oct 2005)
 
