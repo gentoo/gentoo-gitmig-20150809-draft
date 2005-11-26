@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.1 2005/11/04 22:05:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.2 2005/11/26 16:04:35 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -30,11 +30,8 @@ MODULE_NAMES="
 	rt2500pci(net/wireless:) rt2500usb(net/wireless:)
 "
 
-CONFIG_CHECK="NET_RADIO BROKEN_ON_SMP !PREEMPT !4KSTACKS"
+CONFIG_CHECK="NET_RADIO"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
-ERROR_BROKEN_ON_SMP="${P} does not currently support SMP Processors and Kernels"
-ERROR_PREEMPT="${P} does not currently support pre-emption"
-ERROR_4KSTACKS="${P} does not currently support 4K Stacks"
 
 pkg_setup() {
 	kernel_is lt 2 6 13 && die "${P} requires at least kernel 2.6.13"

@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.3 2005/11/05 18:25:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.4 2005/11/26 16:04:35 uberlord Exp $
+
+  26 Nov 2005; Roy Marples <uberlord@gentoo.org> -rt2x00-2.0.0_beta2.ebuild,
+  rt2x00-2.0.0_beta2-r1.ebuild, rt2x00-9999.ebuild:
+  Removed 4KSTACKS, PREEMPT and SMP checks as the rt2x00 driver should
+  work with them.
 
 *rt2x00-2.0.0_beta2-r1 (05 Nov 2005)
 
