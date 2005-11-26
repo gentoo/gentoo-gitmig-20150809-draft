@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 91a63aa346954732ad7d3301ad0d8d6b ChangeLog 40315
+MD5 526cb7923413a8f140727822d7c8362e ChangeLog 40447
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r1/backgroundrc 342
 MD5 928f7208882e2a90d9cb633dcfa9abf9 files/3.3.2-r1/kdmrc 19878
@@ -23,7 +20,7 @@ MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-kdebase-3.4.2-r1 68
 MD5 387a99610a8332cea995ed48d7e3339b files/digest-kdebase-3.4.2-r2 143
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3 145
 MD5 567135da80c6ae6bc19c925a4ff42765 files/digest-kdebase-3.4.3-r1 145
-MD5 939dd1c6769066b8e1770100216e2026 files/digest-kdebase-3.5.0 68
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdebase-3.5.0 68
 MD5 12824ea25b96ca06a0a91f4e4bf81cab files/digest-kdebase-3.5.0_beta2 69
 MD5 7a4f5a930b2071393172484a0557bc17 files/digest-kdebase-3.5.0_rc1 72
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdebase-3.5_beta1 69
@@ -58,10 +55,3 @@ MD5 b358eab7eab8c227d0985ba4f2280470 kdebase-3.5.0_beta2.ebuild 4265
 MD5 f4815f27488d7c174d789ce94ef90afc kdebase-3.5.0_rc1.ebuild 4238
 MD5 c9a8dd6584d378e6e0130a37ab107632 kdebase-3.5_beta1.ebuild 4087
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhjhintT9W3vfTuoRAtPNAJ9VB0s9b93bxBOJ0JGlXXImFVg6pgCeJVcy
-V4pmiwtpJD8/L2h/nsjI+rg=
-=fkgx
------END PGP SIGNATURE-----

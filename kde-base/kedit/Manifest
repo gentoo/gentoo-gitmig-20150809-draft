@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c48cfe0c1e19e04a4c7545744385f9a ChangeLog 3325
+MD5 68497aaaab614cae64ce17fefc91ec20 ChangeLog 3455
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kedit-3.4.1 212
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kedit-3.4.3 68
-MD5 84550abe96e8ef6f8f931c2e13b53a6e files/digest-kedit-3.5.0 68
+MD5 61427700c31d5d6a145005b5945e00e5 files/digest-kedit-3.5.0 68
 MD5 444e9ea16b9f6261077667552887b9bb files/digest-kedit-3.5.0_beta2 216
 MD5 ba38338e687742fb5a9e7458de260898 files/digest-kedit-3.5_beta1 69
 MD5 07ddffddc00da72b15066dc0d1da4686 kedit-3.4.1.ebuild 397
@@ -13,10 +10,3 @@ MD5 b874237909f3857a734c15791b93e6e3 kedit-3.5.0.ebuild 375
 MD5 b07c945940ef6d66912d12b2199a8cda kedit-3.5.0_beta2.ebuild 387
 MD5 d22f53204859e99c64764fdf84595770 kedit-3.5_beta1.ebuild 378
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhvvIntT9W3vfTuoRAvgTAJ0bTzZy7K/K3aTPwXIWYoBODDPbjwCginYn
-mKpsZTBgyv3qB/KBHTDuxug=
-=m0d4
------END PGP SIGNATURE-----
