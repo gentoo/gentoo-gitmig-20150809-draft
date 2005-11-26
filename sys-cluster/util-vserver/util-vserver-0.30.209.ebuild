@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.209.ebuild,v 1.2 2005/11/26 09:25:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.209.ebuild,v 1.3 2005/11/26 09:44:04 hollow Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -93,5 +93,14 @@ pkg_postinst() {
 	ewarn "base directory by using the following command in a root shell:"
 	ewarn
 	ewarn " setattr --barrier ${VDIRBASE}"
+	ewarn
+	ewarn "IMPORTANT UPGRADE WARNING:"
+	ewarn
+	ewarn "Since 0.30.208-r3 the vprocunhide init-script has been merged"
+	ewarn "with the vservers init script. The following steps are"
+	ewarn "required to keep current behaviour:"
+	ewarn
+	ewarn " rc-update del vprocunhide"
+	ewarn " rc-update add vserver default"
 	ewarn
 }
