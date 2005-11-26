@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.32 2005/11/25 11:37:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.33 2005/11/26 13:48:47 greg_g Exp $
+
+  26 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kdepim-meta-3.4.3.ebuild:
+  Add akregator to the list of kdepim ebuilds.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kdepim-meta-3.4.3.ebuild:
@@ -15,7 +18,7 @@
 
 *kdepim-meta-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdepim-meta-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdepim-meta-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
 *kdepim-meta-3.5.0_rc1 (12 Nov 2005)
