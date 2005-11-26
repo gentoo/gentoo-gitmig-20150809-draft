@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.18 2005/11/10 15:18:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.19 2005/11/26 04:16:10 tgall Exp $
 
 inherit eutils
 
@@ -21,12 +21,17 @@ src_unpack() {
 	unpack ${A}
 	epunt_cxx
 
+	# fix for miss detection of 32 bit ppc
+	cd ${S}
+	epatch ${FILESDIR}/${P}-ppc64-fix.patch
+
 	# Fix info file to make subsequent index entry work
 	cd ${S}/doc
 	epatch ${FILESDIR}/${P}-info-entry-fix.patch
 }
 
 src_compile() {
+	econf $(use ppc64) --disable-asm  || die
 	econf $(use_enable nls) --disable-dependency-tracking || die
 	emake || die
 }
