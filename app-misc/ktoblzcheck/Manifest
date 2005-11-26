@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd262a8991d7f3ab4de5c628add4f6c3 ChangeLog 2837
+MD5 d5b593929b93ca773917c6d61bc496bf ChangeLog 2932
+MD5 27dbdb75cc1c963f7c06379fddf8c513 ktoblzcheck-0.7-r1.ebuild 741
+MD5 68919b1321977aaa9072261265ce8c51 ktoblzcheck-1.2.ebuild 673
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 799def37f3950b83361495eb5a568d6f ktoblzcheck-1.7.ebuild 672
 MD5 af8b6b4de58e969469ffd1e1014c04ba files/digest-ktoblzcheck-0.7-r1 67
 MD5 c9f756def30f9e3748758e7d95076df5 files/digest-ktoblzcheck-1.2 67
 MD5 7cbeecef2ba27e6185335d102bd5297a files/digest-ktoblzcheck-1.7 67
-MD5 27dbdb75cc1c963f7c06379fddf8c513 ktoblzcheck-0.7-r1.ebuild 741
-MD5 68919b1321977aaa9072261265ce8c51 ktoblzcheck-1.2.ebuild 673
-MD5 3ea8f250ebd28d83f04534f2db4da029 ktoblzcheck-1.7.ebuild 675
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiARECRZPokWLroQRAk1WAJ9rxsTowXw6ijdzaTb10H/+XKgHmgCguflM
-90XPKZszTq0SJQZcqsRqMGY=
-=Eku9
------END PGP SIGNATURE-----
