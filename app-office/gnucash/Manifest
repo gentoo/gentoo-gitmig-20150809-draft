@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 79da647c103290dc6c82b5ff03f4b35e ChangeLog 11687
-MD5 c9962cd943ec225b72ff0b1c8a40f84c files/digest-gnucash-1.8.11 138
-MD5 1b3addbc18910fb6369f03587ff0e1ef files/digest-gnucash-1.8.12 138
-MD5 401c4d468ff7625a2832b89fde8c4aa4 files/digest-gnucash-1.8.9 137
-MD5 336936f09a34afc8f68238d7299b526a gnucash-1.8.11.ebuild 3533
-MD5 c3a339dc43bf28d691a3d6a0c7f9eed3 gnucash-1.8.12.ebuild 3922
+MD5 dd8d74b78088fac6871b5914dd7fc245 ChangeLog 11781
+MD5 2e19839a2e5189dead6018be4a8091b3 gnucash-1.8.11.ebuild 3530
 MD5 62c0823f30b3adcfc14258f393231dae gnucash-1.8.9.ebuild 3511
 MD5 7a7f2ee070fc06a3289520b81a77a43a metadata.xml 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiAYECRZPokWLroQRAgt/AKCs5Mz5LfnVrvz2TMn1rQcueH/I2ACfXION
-rZbr7ufaPmNI4Phw3upGwyM=
-=5GcN
------END PGP SIGNATURE-----
+MD5 c3a339dc43bf28d691a3d6a0c7f9eed3 gnucash-1.8.12.ebuild 3922
+MD5 1b3addbc18910fb6369f03587ff0e1ef files/digest-gnucash-1.8.12 138
+MD5 c9962cd943ec225b72ff0b1c8a40f84c files/digest-gnucash-1.8.11 138
+MD5 401c4d468ff7625a2832b89fde8c4aa4 files/digest-gnucash-1.8.9 137
