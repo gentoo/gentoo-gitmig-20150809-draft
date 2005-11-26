@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.9 2005/11/16 09:25:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.10 2005/11/26 16:56:51 vanquirius Exp $
+
+*hplip-0.9.7 (26 Nov 2005)
+
+  26 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> +hplip-0.9.7.ebuild:
+  0.9.7 version bump.
 
   16 Nov 2005; Luca Barbato <lu_zero@gentoo.org> hplip-0.9.5.ebuild:
   Fix big endian error
