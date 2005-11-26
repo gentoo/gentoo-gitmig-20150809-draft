@@ -5,15 +5,6 @@ retrieving revision 1.9
 diff -u -r1.8 -r1.9
 --- hugin/hugin/src/include/PT/RemappedPanoImage.h	2005/05/11 18:13:12	1.8
 +++ hugin/hugin/src/include/PT/RemappedPanoImage.h	2005/11/16 18:50:05	1.9
-@@ -6,7 +6,7 @@
-  *
-  *  @author Pablo d'Angelo <pablo.dangelo@web.de>
-  *
-- *  $Id: hugin-0.5_rc2-gcc4.patch,v 1.1 2005/11/19 05:10:01 halcy0n Exp $
-+ *  $Id: hugin-0.5_rc2-gcc4.patch,v 1.1 2005/11/19 05:10:01 halcy0n Exp $
-  *
-  *  This is free software; you can redistribute it and/or
-  *  modify it under the terms of the GNU General Public
 @@ -436,8 +436,7 @@
  
          if (imgOpts.docrop) {

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.7 2005/11/19 05:10:01 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.8 2005/11/26 19:29:12 halcy0n Exp $
+
+  26 Nov 2005; Mark Loeser <halcy0n@gentoo.org>
+  files/hugin-0.5_rc2-gcc4.patch:
+  Fix gcc4 patch
 
   19 Nov 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/hugin-0.5_rc2-gcc4.patch, hugin-0.5_rc2.ebuild:
