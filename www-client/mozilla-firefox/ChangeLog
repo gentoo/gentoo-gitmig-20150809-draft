@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.108 2005/11/24 03:45:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.109 2005/11/26 04:20:32 anarchy Exp $
+
+*mozilla-firefox-1.5_rc3-r2 (26 Nov 2005)
+
+  26 Nov 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +files/1.5/mozilla-firefox-1.5rc3-gtk.patch,
+  +mozilla-firefox-1.5_rc3-r2.ebuild:
+  gtk2 fix from upstream not expected to make final release
 
   24 Nov 2005; <anarchy@gentoo.org> +files/1.5/firefox-1.1-visibility.patch,
   mozilla-firefox-1.5_rc3-r1.ebuild:
