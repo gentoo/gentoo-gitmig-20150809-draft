@@ -9,14 +9,14 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xorg-x11-7.0.0_rc1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xorg-x11-7.0.0_rc2 0
 MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
 MD5 aa1fdddf5e2240d1b9001668019c55a7 xorg-x11-6.8.2-r4.ebuild 55108
-MD5 a05beeddd74a4fa82fcafb28c6b6e75a xorg-x11-6.8.2-r6.ebuild 55211
+MD5 d48fb5529bd626f77bbe3b44696b0129 xorg-x11-6.8.2-r6.ebuild 55211
 MD5 b068c974395c8b72ec46ef7f9d66cac1 xorg-x11-6.8.99.15-r4.ebuild 54184
 MD5 8252e5e7dfd036c4c26cc7e44bfd0e1f xorg-x11-7.0.0_rc1.ebuild 2761
 MD5 b975e2d9781a47a6cf3c63d26b4a5bac xorg-x11-7.0.0_rc2.ebuild 2760
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDhJPnomPajV0RnrERAvuKAJ0UnWlJntQM+2OlnFQbeMCB9qDiLACghCno
-xp6fW3WwEXB7+/nChANXars=
-=x4SL
+iD8DBQFDiCsbgIKl8Uu19MoRAohxAJwOV/GF7r/uOzY1N0Grj4duRPrEPgCfYAdl
+/bipRypHUxq2F7vihR+GCtE=
+=srsV
 -----END PGP SIGNATURE-----
