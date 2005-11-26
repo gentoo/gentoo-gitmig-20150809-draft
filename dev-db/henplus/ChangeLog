@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/henplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.10 2005/11/26 03:28:22 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.11 2005/11/26 23:51:20 nichoj Exp $
+
+  27 Nov 2005; Joshua Nichols <nichoj@gentoo.org> files/henplus.patch:
+  Updated script's patch to use java-config to get the right values for
+  LD_LIBRARY_PATH.
 
   26 Nov 2005; Joshua Nichols <nichoj@gentoo.org> files/henplus.patch:
   Fixed libreadline-java support (bug #109140)

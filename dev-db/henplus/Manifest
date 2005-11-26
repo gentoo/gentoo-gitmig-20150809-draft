@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0554cadd0c2b13ce94d339d830cd3d2 ChangeLog 1144
+MD5 7bd4e9cf2027a9c48c3232ce43e56e61 ChangeLog 1307
 MD5 cde5d89f324a87299196a42dfffaf617 files/digest-henplus-0.9.5-r2 65
-MD5 f4342167b2ee4649dc37bf73e9b48974 files/henplus.patch 1320
+MD5 9dd8009f86e55c8154dcc8d97e35bc74 files/henplus.patch 1329
 MD5 1cf470255ef2513fa2acbb89289d3269 henplus-0.9.5-r2.ebuild 1146
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDh+RAndWRXhKOboURAu76AJwL7svDIQVmzbOCro+XXkYHECxmgwCg5zuW
-yjF3+s9Ema9uA1rooKi/9gI=
-=nhHU
+iD8DBQFDiQPMndWRXhKOboURAlgVAJ9Xg4ZAlRygZ+yXWktoevUogEntSgCfdrfe
+Sc8ohs5Sa1DUtFnJw8SQV4w=
+=UH1C
 -----END PGP SIGNATURE-----
