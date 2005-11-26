@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/makeme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.12 2005/04/22 08:41:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.13 2005/11/26 03:00:04 nichoj Exp $
+
+  26 Nov 2005; Joshua Nichols <nichoj@gentoo.org> makeme-0.02-r2.ebuild:
+  Disabled jikes support (bug #10020). Also did some minor cleanup.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> makeme-0.02-r2.ebuild:
   stable on amd64
