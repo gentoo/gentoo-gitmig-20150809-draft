@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/pike
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.14 2005/04/22 09:22:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.15 2005/11/26 15:20:39 kevquinn Exp $
+
+  26 Nov 2005; Kevin F. Quinn <kevquinn@gentoo.org> pike-7.6.24.ebuild:
+  Disable run-time code generation on hardened; resolves bug 73875
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> pike-7.6.24.ebuild:
   stable on amd64

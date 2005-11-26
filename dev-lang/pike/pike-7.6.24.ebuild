@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.6 2005/04/22 09:22:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.7 2005/11/26 15:20:39 kevquinn Exp $
 
-IUSE="crypt debug doc fftw gdbm gif gtk jpeg kerberos opengl pdflib scanner svg tiff truetype zlib"
+IUSE="crypt debug doc fftw gdbm gif gtk hardened jpeg kerberos opengl pdflib scanner svg tiff truetype zlib"
 
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -32,6 +32,10 @@ DEPEND="crypt?	( dev-libs/nettle )
 
 src_compile() {
 
+	# on hardened, disable runtime-generated code
+	# otherwise let configure work it out for itself
+	use hardened && conf_machine_code="-without-machine-code" || \
+		conf_machine_code=""
 	emake CONFIGUREARGS="--prefix=/usr --disable-make_conf \
 			`use_with debug` \
 			`use_with crypt nettle` \
@@ -50,6 +54,7 @@ src_compile() {
 			`use_with truetype ttflib` \
 			`use_with truetype freetype` \
 			`use_with zlib` \
+			${conf_machine_code} \
 			" || die
 
 	if use doc; then
