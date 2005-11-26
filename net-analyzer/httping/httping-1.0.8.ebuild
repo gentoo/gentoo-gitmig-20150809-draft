@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.0.4.ebuild,v 1.2 2005/06/08 05:29:31 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.0.8.ebuild,v 1.1 2005/11/26 17:35:45 vanquirius Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="http protocol ping-like program"
 HOMEPAGE="http://www.vanheusden.com/httping/"
@@ -23,6 +25,7 @@ src_unpack() {
 src_compile() {
 	local makefile
 	use ssl || makefile="-f Makefile.nossl"
+	export CC="$(tc-getCC)"
 	emake ${makefile} || die "make failed"
 }
 
