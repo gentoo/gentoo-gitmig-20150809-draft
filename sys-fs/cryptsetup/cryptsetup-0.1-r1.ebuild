@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.16 2005/10/18 13:05:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.17 2005/11/26 04:31:19 tgall Exp $
 
 inherit linux-info multilib eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.saout.de/misc/dm-crypt/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc s390 sparc x86 ppc64"
 IUSE=""
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1"

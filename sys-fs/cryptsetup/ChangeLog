@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.18 2005/10/18 13:05:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.19 2005/11/26 04:31:19 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> cryptsetup-0.1-r1.ebuild:
+  stable on ppc64
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> cryptsetup-0.1-r1.ebuild:
   Mark 0.1-r1 stable on alpha
@@ -32,7 +35,7 @@
   cryptsetup-0.1-r1.ebuild:
   Stable on sparc
 
-  25 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  25 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   cryptsetup-0.1-r1.ebuild:
   Add ~alpha keyword, bug 83684.
 
