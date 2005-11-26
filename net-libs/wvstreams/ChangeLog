@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.70 2005/11/11 23:08:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.71 2005/11/26 10:33:12 mrness Exp $
+
+*wvstreams-4.0.2-r2 (26 Nov 2005)
+
+  26 Nov 2005; Alin Nastac <mrness@gentoo.org>
+  -files/wvstreams-4.0.1-MOC-fix.patch,
+  -files/wvstreams-4.0.1-linux-serial.patch,
+  -files/wvstreams-4.0.1-tcl_8_4.patch,
+  -files/wvstreams-4.0.1-wireless-user.patch,
+  -files/wvstreams-4.0.1-without-pam.patch,
+  +files/wvstreams-4.0.2-gcc41.patch, -wvstreams-4.0.1-r2.ebuild,
+  -wvstreams-4.0.2.ebuild, +wvstreams-4.0.2-r2.ebuild:
+  Remove obsolete versions. Fix broken compilation on gcc-4.1 (#113488).
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   wvstreams-4.0.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.12 2005/10/16 11:06:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2-r2.ebuild,v 1.1 2005/11/26 10:33:12 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.csclub.uwaterloo.ca/~ja2morri/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="gtk qt vorbis speex fam qdbm pam slp doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
@@ -37,19 +37,28 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
+	epatch ${FILESDIR}/${P}-gcc41.patch
 	epatch ${FILESDIR}/${P}-linux-serial.patch
 	epatch ${FILESDIR}/${P}-wireless-user.patch
 	epatch ${FILESDIR}/${P}-speex-const.patch
 
 	if useq tcltk; then
 		epatch ${FILESDIR}/${P}-tcl_8_4.patch
-		env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed"
 	fi
+
+	epatch ${FILESDIR}/${P}-external-xplc.patch
+	local XPLC_VER=`best_version dev-libs/xplc`
+	XPLC_VER=${XPLC_VER#*/*-} #reduce it to ${PV}-${PR}
+	XPLC_VER=${XPLC_VER%%[_-]*} # main version without beta/pre/patch/revision
+	sed -i -e "s:^xplc_version=.*:xplc_version='${XPLC_VER}':" "${S}/configure.ac" \
+		|| die "failed to set current xplc version"
 
 	useq qt && epatch ${FILESDIR}/${P}-MOC-fix.patch
 }
 
 src_compile() {
+	env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed" #needed by xplc and tcl patch
+
 	local myconf
 	if useq qt; then
 		myconf="--with-qt=/usr/qt/3/"
