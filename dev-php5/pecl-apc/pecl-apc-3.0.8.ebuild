@@ -1,24 +1,25 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.8.ebuild,v 1.3 2005/11/19 20:55:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.8.ebuild,v 1.4 2005/11/26 23:06:23 chtekk Exp $
 
-PHP_EXT_ZENDEXT="no"
-PHP_EXT_PECL_PKG="APC"
 PHP_EXT_NAME="apc"
+PHP_EXT_PECL_PKG="APC"
 PHP_EXT_INI="yes"
+PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1 confutils
 
-IUSE="mmap"
-DESCRIPTION="The Alternative PHP Cache."
-SLOT="0"
-LICENSE="PHP"
 KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
-DEPEND="${DEPEND}"
+DESCRIPTION="The Alternative PHP Cache."
+LICENSE="PHP"
+SLOT="0"
+IUSE="mmap"
 
 need_php_by_category
 
 pkg_setup() {
+	has_php
+
 	require_php_sapi_from cgi apache apache2
 }
 
@@ -38,12 +39,13 @@ src_compile() {
 	enable_extension_enable "apc-mmap" "mmap" 0
 	enable_extension_with_built_with =${PHP_PKG} apache2 apxs2 /usr/sbin/apxs2 "optimisation for apache2"
 	enable_extension_with_built_with =${PHP_PKG} apache apxs /usr/sbin/apxs "optimisation for apache1"
+
 	php-ext-pecl-r1_src_compile
 }
 
 src_install() {
 	php-ext-pecl-r1_src_install
-	dodoc CHANGELOG INSTALL LICENSE NOTICE
+	dodoc-php CHANGELOG INSTALL LICENSE NOTICE
 
 	php-ext-base-r1_addtoinifiles "apc.enabled" '"1"'
 	php-ext-base-r1_addtoinifiles "apc.shm_segments" '"1"'
@@ -58,8 +60,8 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "apc.slam_defense" '"0"'
 	php-ext-base-r1_addtoinifiles "apc.file_update_protection" '"2"'
 
-	dodir ${PHP_EXT_SHARED_DIR}
-	insinto ${PHP_EXT_SHARED_DIR}
+	dodir "${PHP_EXT_SHARED_DIR}"
+	insinto "${PHP_EXT_SHARED_DIR}"
 	doins apc.php
 }
 
