@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.13 2005/07/11 15:08:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.14 2005/11/26 20:42:54 sekretarz Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -44,8 +44,8 @@ need-wxwidgets() {
 			gtk)		set-wxconfig wxgtk;;
 			gtk2)		set-wxconfig wxgtk2;;
 			unicode)	set-wxconfig wxgtk2u;;
-			*)		echo "!!! $FUNCNAME: Error: wxGTK was not comipled with $1."
-					echo "!!! Adjust your USE flags or re-emerge wxGTK with version you want."
+			*)		echo "!!! $FUNCNAME: Error: wxGTK was not compiled with $1."
+					echo "!!! Adjust your USE flags or re-emerge wxGTK with the version you want."
 			exit 1;;
 		esac
 	fi
