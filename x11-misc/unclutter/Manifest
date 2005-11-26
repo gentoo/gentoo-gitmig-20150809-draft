@@ -1,4 +1,14 @@
-MD5 6f751e4fa3892b34a754d00c544009c9 unclutter-8.ebuild 723
-MD5 8cc89f8de255df3110c15fca56382136 ChangeLog 1623
-MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6fbeeb4fdf82e77ea8d3f78658b188ec ChangeLog 1731
 MD5 f2b5f45a6a03bcb0a452b51abd1bbd72 files/digest-unclutter-8 61
+MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
+MD5 de014537e700fa43941f1ee639c9d6bc unclutter-8.ebuild 721
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiLPACHk4+ZoBpvsRAgtjAKCOOjKdccR0QZXxKQ1CD0WH2WArNQCgg2Gf
+D85vST4iU+jDCahEkYblPlk=
+=RR1R
+-----END PGP SIGNATURE-----
