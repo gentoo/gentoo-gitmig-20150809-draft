@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57a8a08627f7e44983f126aea59fc511 ChangeLog 15271
+MD5 28a2ebe75ed70b9286468ac45968d1b4 ChangeLog 15391
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r2 65
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r3 65
 MD5 d3163f84f4f7dbabab06613667542f9b files/digest-wxGTK-2.5.3 65
@@ -9,7 +9,7 @@ MD5 c8ab55f4ce498e00d800d420ba86ea08 files/digest-wxGTK-2.6.0-r1 143
 MD5 ddd05c3f9a18148cc4359579d4ad8a8a files/digest-wxGTK-2.6.1 143
 MD5 697d7fa6ade210b6af8747e4cc5816cf files/digest-wxGTK-2.6.2 143
 MD5 697d7fa6ade210b6af8747e4cc5816cf files/digest-wxGTK-2.6.2-r1 143
-MD5 b6791baa55fc6dd087489f4a917c7758 files/intl.cpp.diff 1274
+MD5 b0a51d86a603a6aa6b8447cd7ad8cc9b files/intl.cpp.diff 581
 MD5 574b30817d120dcaf7e94832c64b003a files/wxGTK-2.4.1-contrib.patch 572
 MD5 522f6b3a771ea33a1af7ede9c795ab4c files/wxGTK-2.4.1-wxpython1.patch 1102
 MD5 1e85c1c970da32626580dfef7228b314 files/wxGTK-2.4.1-wxpython2.patch 8459
@@ -27,7 +27,7 @@ MD5 5160fec1fb87f760b1cd6cc0a25860b8 wxGTK-2.6.2.ebuild 1531
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDiKt0Z/iYVBmujdURAk2wAKDCtDgtIY37DYeJgF1cPlhS1X3ENACg6s9l
-JXB7QxnNM3WJk3zsJlWpyJc=
-=GzJo
+iD8DBQFDiLtSZ/iYVBmujdURAnypAJ4+KpQn1x4rqmAM2VmPsPfc3QA1VQCbB9HW
+UWdS7tJ6MmDISkBhX1mDZ9k=
+=svQg
 -----END PGP SIGNATURE-----

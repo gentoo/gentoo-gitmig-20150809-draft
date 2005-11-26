@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.95 2005/11/26 17:32:08 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.96 2005/11/26 18:39:50 sekretarz Exp $
+
+  26 Nov 2005; Karol Wojtaszek <sekretarz@gentoo.org> files/intl.cpp.diff:
+  Fixed unicode patch not to expand cvs tag
 
 *wxGTK-2.6.2-r1 (26 Nov 2005)
 
