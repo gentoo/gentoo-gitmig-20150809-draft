@@ -1,7 +1,7 @@
 --- bin/henplus	2004-02-02 14:53:28.000000000 +0100
 +++ /usr/bin/henplus	2004-07-23 11:21:11.518166136 +0200
 @@ -2,6 +2,7 @@
- # $Id: henplus.patch,v 1.2 2004/07/23 09:25:20 axxo Exp $
+ # $Id: henplus.patch,v 1.3 2005/11/26 03:28:22 nichoj Exp $
  ##
  
 +echo $(dirname $0)
@@ -39,4 +39,4 @@
 -export CLASSPATH LD_LIBRARY_PATH
 -
 -exec $JAVA $JAVA_FLAGS henplus.HenPlus "$@"
-+LD_LIBRARY_PATH="/usr/lib:$LD_LIBRARY_PATH" exec $JAVA -cp $CLASSPATH $JAVA_FLAGS henplus.HenPlus "$@"
++LD_LIBRARY_PATH="/opt/libreadline-java/lib:$LD_LIBRARY_PATH" exec $JAVA -cp $CLASSPATH $JAVA_FLAGS henplus.HenPlus "$@"
