@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.21 2005/09/20 17:52:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.22 2005/11/26 14:51:16 betelgeuse Exp $
+
+*struts-1.2.8 (26 Nov 2005)
+
+  26 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> +struts-1.2.8.ebuild:
+  Version bump for security bug #113192. Dropped dependency on commons-lang
+  because struts does not use it any more and on struts-legacy because our
+  ebuild does not build the code using it.
 
 *struts-1.2.4-r2 (20 Sep 2005)
 *struts-1.1-r4 (20 Sep 2005)
