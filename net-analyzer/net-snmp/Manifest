@@ -2,9 +2,11 @@ MD5 d62a7ea143cb84f4378aa97a4a110bd7 net-snmp-5.3.20050624-r1.ebuild 5143
 MD5 b60f198a7739db89cfc5db54fda22d03 net-snmp-5.3.20050624.ebuild 5086
 MD5 f9c21a4768653f0035408ae5136fdafe net-snmp-5.1.3.1.ebuild 4933
 MD5 9b7f462b1de1fa21b0f3e9f79c5b72d3 net-snmp-5.2.1.2-r1.ebuild 5055
-MD5 4a0cf4683cacd9f7f64a890b31d5707c ChangeLog 19248
+MD5 1815412840ada48439add6faaeae3bfb net-snmp-5.3_pre4.ebuild 5234
+MD5 864b66e661b2b00c83b88428abdc4aad ChangeLog 19393
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 a63107c1d81a8aeb10e84be0658e2794 files/net-snmp-5.2.1-fix-insecure-fixproc.diff 1639
+MD5 f6c0b6b48b5933bb1ef85c6343f51558 files/digest-net-snmp-5.3_pre4 70
 MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
 MD5 cfce6770c86e3e3bc76800c6bd6ee8c6 files/digest-net-snmp-5.2.1.2-r1 69
 MD5 cf7d3f5d505c262b2477f1759b908bad files/digest-net-snmp-5.3.20050624-r1 74
