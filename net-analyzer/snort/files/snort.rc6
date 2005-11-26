@@ -1,15 +1,15 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/files/snort.rc6,v 1.5 2004/07/14 23:12:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/files/snort.rc6,v 1.6 2005/11/26 13:57:06 strerror Exp $
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if [ ! -e /etc/snort/snort.conf ] ; then
-		eerror "You need an /etc/snort/snort.conf to run snort"
+	if [ ! -e $CONF ] ; then
+		eerror "You need a configuration file to run snort"
 		eerror "There is an example config in /etc/snort/snort.conf.distrib"
 		return 1
 	fi
@@ -26,6 +26,5 @@ start() {
 stop() {
 	ebegin "Stopping snort"
 	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
-	#kill  -9 `cat $PIDFILE`  2>&1
 	eend $?
 }
