@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.53 2005/09/17 00:29:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.54 2005/11/26 20:09:20 vapier Exp $
+
+*grep-2.5.1-r9 (26 Nov 2005)
+
+  26 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/grep-2.5.1-fix-devices-skip.patch, +grep-2.5.1-r9.ebuild:
+  Add patch upstream to fix handling of --devices and fifos #113640 by Ingo
+  van Lil.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
