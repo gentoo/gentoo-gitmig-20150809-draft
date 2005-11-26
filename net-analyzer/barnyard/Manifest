@@ -4,7 +4,7 @@ MD5 319801a4a4735aa68ceddb8d1c80e340 ChangeLog 1969
 MD5 17784ab6e148b4abf7f6aa2390ce1bce metadata.xml 223
 MD5 20781d966c89d732a0a2b0a8d7deadad barnyard-0.1.0.ebuild 1332
 MD5 7393a1ed7bc62178acd52f2da6f01185 files/digest-barnyard-0.2.0-r1 66
-MD5 d513768e805f1e68bce21b6cffcf846a files/barnyard.rc6 762
+MD5 ad8ea362c32275fd385c370c7667fb2b files/barnyard.rc6 736
 MD5 3e857c89ec58ac318ebd669e7f427908 files/barnyard.confd 556
 MD5 e1650eb517daf81cb0abb45eee02a727 files/digest-barnyard-0.1.0 66
 MD5 7393a1ed7bc62178acd52f2da6f01185 files/digest-barnyard-0.2.0 66
