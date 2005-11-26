@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/creole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/creole/ChangeLog,v 1.1 2005/09/18 14:27:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/creole/ChangeLog,v 1.2 2005/11/26 22:20:44 chtekk Exp $
+
+  26 Nov 2005; Luca Longinotti <chtekk@gentoo.org> creole-1.0.2.ebuild:
+  Sync with PHP overlay, move to php-pear-lib-r1 eclass.
 
 *creole-1.0.2 (18 Sep 2005)
 
