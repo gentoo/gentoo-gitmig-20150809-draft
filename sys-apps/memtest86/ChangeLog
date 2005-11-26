@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.25 2005/01/11 02:44:36 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.26 2005/11/26 20:15:33 eradicator Exp $
+
+  26 Nov 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  memtest86-3.2.ebuild:
+  Added to ~amd64.
 
   10 Jan 2005; <solar@gentoo.org> +files/memtest86-3.2-solar.patch,
   memtest86-3.2.ebuild:
