@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.13 2005/05/01 17:09:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.14 2005/11/26 18:41:07 strerror Exp $
+
+*arpwatch-2.1.13 (26 Nov 2005)
+
+  26 Nov 2005; Benjamin Smee <strerror@gentoo.org>
+  +files/arpwatch-2.1.13.diff.gz, files/arpwatch.confd, files/arpwatch.init,
+  +arpwatch-2.1.13.ebuild:
+  Almost a complete rewrite. Rewrote some patches. Changed some init scripts.
+  Addressed bug #111373
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   arpwatch-2.1.11-r1.ebuild:

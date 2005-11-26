@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/files/arpwatch.init,v 1.5 2004/07/14 22:58:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/files/arpwatch.init,v 1.6 2005/11/26 18:41:07 strerror Exp $
 
 depend() {
 	need net
@@ -12,11 +12,11 @@ start() {
 	for IFACE in ${IFACES}
 	do
 		ebegin "Starting arpwatch on ${IFACE}"
-		DATAFILE=/var/arpwatch/${IFACE}.dat
+		DATAFILE=/var/lib/arpwatch/${IFACE}.dat
 		if [ ! -f ${DATAFILE} ]; then
 			touch ${DATAFILE}
 		fi
-		/usr/sbin/arpwatch -i $IFACE -f /var/arpwatch/$IFACE.dat ${OPTIONS}
+		/usr/sbin/arpwatch -i $IFACE -u ${USER} -f /var/lib/arpwatch/$IFACE.dat ${OPTIONS}
 		result=$?
 		eend $result
 	done
