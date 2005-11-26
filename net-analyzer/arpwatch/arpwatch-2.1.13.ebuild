@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13.ebuild,v 1.1 2005/11/26 18:41:07 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13.ebuild,v 1.2 2005/11/26 18:43:47 strerror Exp $
 
 inherit eutils
 
@@ -38,11 +38,6 @@ src_compile() {
 	local myconf
 	myconf="${myconf} --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man"
 
-	#./configure \
-	#	--prefix=/usr \
-	#	--infodir=/usr/share/info \
-	#	--mandir=/usr/share/man \
-	#	|| die "./configure failed"
 	econf \
 	${myconf} || die "econf failed"
 	emake || die "emake failed"
@@ -55,7 +50,6 @@ src_install () {
 	keepdir /var/lib/arpwatch
 
 	make DESTDIR="${D}" install || die "install failed"
-	#einstall || die "einstall failed"
 
 	doman *.8
 	dodoc README CHANGES
