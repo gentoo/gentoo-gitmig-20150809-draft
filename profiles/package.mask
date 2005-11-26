@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4705 2005/11/26 04:14:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4706 2005/11/26 09:01:48 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -152,11 +152,6 @@ app-office/ooodi
 # Thomas Matthijs <axxo@gentoo.org> (23 Oct 2005)
 # Preview release
 =www-client/opera-9*
-
-# Benedikt Boehm <hollow@gentoo.org> (21 Oct 2005)
-# Masked for testing
-=sys-kernel/openvz-sources-022.044
-=sys-cluster/vzctl-2.7.0.23
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Oct 2005)
 # Last updated in 2002 and doesn't work with latest xmame
