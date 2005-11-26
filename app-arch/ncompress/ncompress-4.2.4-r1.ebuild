@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4-r1.ebuild,v 1.13 2005/05/13 03:12:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4-r1.ebuild,v 1.14 2005/11/26 09:18:45 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,14 +12,13 @@ SRC_URI="ftp://ftp.leo.org/pub/comp/os/unix/linux/sunsite/utils/compress/${P}.ta
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="build"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/ncompress-gcc34.patch
-	# Add bounds checking for bug 66251
-	epatch ${DISTDIR}/ncompress_4.2.4-15.diff.gz
+	cd "${S}"
+	epatch "${FILESDIR}"/ncompress-gcc34.patch
+	epatch "${DISTDIR}"/ncompress_4.2.4-15.diff.gz
 }
 
 src_compile() {
@@ -33,5 +32,6 @@ src_compile() {
 src_install() {
 	dobin compress || die
 	dosym compress /usr/bin/uncompress
-	use build || doman compress.1
+	doman compress.1
+	dodoc Acknowleds Changes LZW.INFO README
 }
