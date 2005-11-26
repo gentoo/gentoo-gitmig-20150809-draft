@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.16 2005/09/25 13:22:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.17 2005/11/26 20:12:55 grobian Exp $
+
+*tnftp-20050625-r1 (26 Nov 2005)
+
+  26 Nov 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/tnftp-20050625-macos.patch, +tnftp-20050625-r1.ebuild:
+  Added -r1 which patches configure.in (and requires eautoreconf) to make it
+  compile on ppc-macos.  Added ~ppc-macos (bug #109142).  Patch supplied by
+  emanuele.giaquinta%40gmail.com
 
   25 Sep 2005; Sven Wegener <swegener@gentoo.org> -tnftp-20050103.ebuild,
   -tnftp-20050610.ebuild:
