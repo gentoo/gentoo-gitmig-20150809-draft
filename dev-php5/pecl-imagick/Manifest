@@ -1,4 +1,4 @@
-MD5 5beedce30fc2edc0b351271997f1f8c6 ChangeLog 529
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 1dbb73358fe31b60762d747e88506c16 pecl-imagick-0.9.11.ebuild 829
+MD5 aadea67057cfc27bfec3575eafed3841 ChangeLog 631
 MD5 ed2047d765f8569bef894def860bc3be files/digest-pecl-imagick-0.9.11 62
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 02d696dc9e95ea3c9a066476acae24a9 pecl-imagick-0.9.11.ebuild 715
