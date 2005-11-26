@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 825702ffb2b6dcb185031992c5f8b065 ChangeLog 8497
+MD5 420040cbe3341015cabcb7b825700c30 ChangeLog 8599
 MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
 MD5 ae29f04095b43ceb06e6b0cc94653c36 files/digest-pciutils-2.2.0-r1 130
@@ -14,11 +14,11 @@ MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
 MD5 cf455fe33057e081ba7aaec93e481642 files/pciutils-2.2.0-shared-lib.patch 496
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 61778080ed55196416ece68570ba885a pciutils-2.1.11-r5.ebuild 2298
-MD5 f40e1a53499bf0a736e364daf9a0a2ed pciutils-2.2.0-r1.ebuild 1671
+MD5 620871c30c873f78618d8200a60de116 pciutils-2.2.0-r1.ebuild 1668
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDdPUuAiZjviIA2XgRAmNEAKCM/9GM+9hIc/p0rMHiWbmTj/FDKQCeKZSo
-MXp9EAG2Z8zH0D19jl3h4Wo=
-=/r/2
+iD8DBQFDiB5gCRZPokWLroQRAplGAKC/AL/ELArMhA1u/FxfTZvOzPB1HgCdG4eS
+DrDMhjtgZbH0sUGD8aIgyCA=
+=7Yp9
 -----END PGP SIGNATURE-----
