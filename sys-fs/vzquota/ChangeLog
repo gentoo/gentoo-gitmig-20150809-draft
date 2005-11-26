@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/vzquota
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.1 2005/09/23 04:21:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.2 2005/11/26 09:35:57 phreak Exp $
+
+  26 Nov 2005; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fixing metadata.xml to include the maintainer email
 
 *vzquota-2.7.0.7 (23 Sep 2005)
 
