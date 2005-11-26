@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.24 2005/11/25 11:51:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.25 2005/11/26 13:36:40 danarmak Exp $
+
+  26 Nov 2005; Dan Armak <danarmak@gentoo.org> ark-3.5.0.ebuild:
+  Upstream (unreleased) tarball updated, updating digests.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> ark-3.4.2.ebuild:
   Stable on amd64, bug 112842.

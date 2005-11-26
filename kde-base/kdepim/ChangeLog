@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.180 2005/11/25 11:38:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.181 2005/11/26 13:36:42 danarmak Exp $
+
+  26 Nov 2005; Dan Armak <danarmak@gentoo.org> kdepim-3.5.0.ebuild:
+  Upstream (unreleased) tarball updated, updating digests.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kdepim-3.4.3.ebuild:
   Stable on amd64, bug 112842.

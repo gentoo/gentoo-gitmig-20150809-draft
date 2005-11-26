@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/artsplugin-audiofile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/ChangeLog,v 1.18 2005/11/22 22:13:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/ChangeLog,v 1.19 2005/11/26 13:36:40 danarmak Exp $
+
+  26 Nov 2005; Dan Armak <danarmak@gentoo.org> artsplugin-audiofile-3.5.0.ebuild:
+  Upstream (unreleased) tarball updated, updating digests.
 
 *artsplugin-audiofile-3.5.0 (22 Nov 2005)
 
