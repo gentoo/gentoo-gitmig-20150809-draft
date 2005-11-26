@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Finance-YahooQuote
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.4 2005/07/21 17:16:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.5 2005/11/26 01:41:39 superlag Exp $
+
+*Finance-YahooQuote-0.21 (26 Nov 2005)
+
+  26 Nov 2005; Aaron Kulbe <superlag@gentoo.org>
+  +Finance-YahooQuote-0.21.ebuild:
+  Cleaning up outdated dev-perl ebuilds.  Version bump.
 
   21 Jul 2005; David Holm <dholm@gentoo.org> Finance-YahooQuote-0.20.ebuild:
   Added to ~ppc.
