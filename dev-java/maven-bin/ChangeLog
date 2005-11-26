@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.7 2005/09/16 21:50:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.8 2005/11/26 00:43:57 nichoj Exp $
+
+  21 Nov 2005; Joshua Nichols <nichoj@gentoo.org> maven-bin-1.0.ebuild, +files/maven-bin-1.0-script.patch: 
+  Added a patch to fix 1.0's script (bug #96729).
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
