@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.3.ebuild,v 1.6 2005/07/22 06:22:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.3.ebuild,v 1.7 2005/11/26 01:03:35 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Standard (de)compression library"
-HOMEPAGE="http://www.gzip.org/zlib/"
+HOMEPAGE="http://www.zlib.net/"
 SRC_URI="http://www.gzip.org/zlib/${P}.tar.bz2
 	http://www.zlib.net/${P}.tar.bz2"
 
@@ -15,11 +15,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="build"
 
 RDEPEND=""
-
-pkg_setup() {
-	tc-export CC RANLIB
-	export AR="$(tc-getAR) rc"
-}
 
 src_unpack() {
 	unpack ${A}
@@ -38,6 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC RANLIB
+	export AR="$(tc-getAR) rc"
 	./configure --shared --prefix=/usr --libdir=/$(get_libdir) || die
 	emake || die
 }
