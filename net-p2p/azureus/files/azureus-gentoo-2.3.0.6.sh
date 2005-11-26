@@ -32,6 +32,9 @@ else
 # When selecting just 1, use '--ui=<ui>'
 # When selecting multiple, use '--uis=<ui>,<ui>'
 UI_OPTIONS="--ui=swt"
+
+# Options you want to pass to the java binary
+JAVA_OPTIONS=""
 END
 
 fi
@@ -40,4 +43,4 @@ cd ${dotazudir}
 
 CLASSPATH=$(java-config -p junit,log4j,commons-cli-1,swt-3,azureus)
 java -cp $CLASSPATH -Djava.library.path=$(java-config -i swt-3) \
-	org.gudy.azureus2.ui.swt.Main "${@}"
+	${JAVA_OPTIONS} org.gudy.azureus2.ui.swt.Main "${@}"
