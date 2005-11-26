@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.42 2005/10/04 12:37:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.43 2005/11/26 14:47:50 metalgod Exp $
+
+  26 Nov 2005; Luis Medinas <metalgod@gentoo.org> baghira-0.6e-r1.ebuild:
+  Stable on amd64.
 
   04 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> baghira-0.7.ebuild:
   Added missing dependency over konqueror for the sidebar plugin. Fixes #108056.
