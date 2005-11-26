@@ -1,19 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e87c7104e363ca6bf3d90e7d785205f ChangeLog 4550
+MD5 7bf2728eda8303810cd8bb92ee8e65f5 ChangeLog 4730
 MD5 4c94b074dd20cd29d231b0bf50bea06c files/digest-ufed-0.36 61
 MD5 773221c03c705b595a0aa42d003532ab files/digest-ufed-0.39 61
-MD5 2e234ab448009a536f3d6825360eb9e8 files/digest-ufed-0.40_rc-r1 64
-MD5 50d8b74fa71b0979ef40431c076b87d7 files/ufed-usedefaults.patch 514
+MD5 b67e3c8b2f81a167ba48470321e02a14 files/digest-ufed-0.40 61
 MD5 5ccf37e59ee3f6c65bd263050cf2d85e metadata.xml 265
 MD5 e0b0654bdb84c335b99618eb130b606f ufed-0.36.ebuild 661
 MD5 b5afc70abeaaee4f62f36a700488fe7e ufed-0.39.ebuild 674
-MD5 777f48a830f80b1e93420ae097c06a18 ufed-0.40_rc-r1.ebuild 917
+MD5 555fd2ee08383b1d0eb53e4008a03b59 ufed-0.40.ebuild 780
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (FreeBSD)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDcfwrwnQyISwouHwRAjbHAJ42xxG6ANqI9rUFqFG9xH4XDpN4BACgqr6u
-6HOZbwuUmYGzKYWg6aZr4E0=
-=BQeR
+iD8DBQFDiI35wnQyISwouHwRAmAYAJ9XuAilTZ1I7q495WqwgSkeAJdMfwCghHu/
+dvkoA8RKfDT7DpTgvOmmC4M=
+=bLdV
 -----END PGP SIGNATURE-----
