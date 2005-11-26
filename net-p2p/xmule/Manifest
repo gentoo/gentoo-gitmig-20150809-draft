@@ -12,6 +12,7 @@ MD5 196bcbbfbdaaaaf0a59fefae64628be6 files/digest-xmule-1.10.0 66
 MD5 7af93e9c27cecc95812aaf13b2579dc9 files/digest-xmule-1.8.4-r1 65
 MD5 69985f1cd9e88d1483c74c157463c1e7 files/digest-xmule-1.10.1-r2 66
 MD5 0b769ba5849dde993f450a9bac4a1713 files/digest-xmule-1.12.0 66
+MD5 326ee9b15e4c7613d50ac2916f6b0920 files/xmule-1.12.0-crypto-gentoo.patch 616
 MD5 326ee9b15e4c7613d50ac2916f6b0920 files/xmule-1.10.0-crypto-gentoo.patch 616
 MD5 69985f1cd9e88d1483c74c157463c1e7 files/digest-xmule-1.10.1 66
 MD5 196bcbbfbdaaaaf0a59fefae64628be6 files/digest-xmule-1.10.0-r1 66
