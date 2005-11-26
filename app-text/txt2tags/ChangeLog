@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.17 2005/04/24 11:44:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.18 2005/11/26 20:22:28 grobian Exp $
+
+  26 Nov 2005; Fabian Groffen <grobian@gentoo.org> txt2tags-2.2.ebuild:
+  Marked ~ppc-macos (bug #109432)
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> txt2tags-2.1.ebuild:
   Stable on ppc.
