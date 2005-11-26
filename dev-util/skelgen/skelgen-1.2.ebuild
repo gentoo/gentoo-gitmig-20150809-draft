@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/skelgen/skelgen-1.2.ebuild,v 1.2 2005/11/12 10:47:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/skelgen/skelgen-1.2.ebuild,v 1.3 2005/11/26 10:41:59 taviso Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -18,9 +18,8 @@ S=${WORKDIR}/source
 src_compile() {
 	# Makefile uses $STRIPPER to strip executable, so use true
 	# instead and let portage handle that.
-	append-flags -c
-
-	emake COMPILER="$(tc-getCXX)" COMPILER_OPTIONS="${CXXFLAGS}" \
+	emake COMPILER="$(tc-getCXX)" \
+		COMPILER_OPTIONS="-c ${CXXFLAGS}" \
 		LINKER="$(tc-getCXX) ${LDFLAGS}" \
 		STRIPPER="true" || die
 }
