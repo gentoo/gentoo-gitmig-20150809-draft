@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.58 2005/10/11 12:29:21 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.59 2005/11/26 00:36:43 tgall Exp $
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org> PyQt-3.13.ebuild:
+  stable on ppc64
 
   11 Oct 2005; Chris Bainbridge <chrb@gentoo.org> PyQt-3.15.ebuild:
   Fix finding qscintilla.
@@ -16,7 +19,7 @@
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> PyQt-3.13.ebuild:
   Stable on ppc.
 
-  29 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PyQt-3.14.ebuild,
+  29 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> PyQt-3.14.ebuild,
   PyQt-3.14.1.ebuild:
   ~alpha keyword.
 
@@ -89,7 +92,7 @@
   PyQt-3.8.1.ebuild, files/PyQt-3.10-qt-3.3.patch:
   removed 3.10, marked 3.8.1 stable on alpha and ppc
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> PyQt-3.5.ebuild:
+  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> PyQt-3.5.ebuild:
   Add missing IUSE.
 
   21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> PyQt-3.11.ebuild:
