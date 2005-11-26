@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd75dc8a61271e38bc54ce0e412cbabf ChangeLog 7205
 MD5 ea2086dcf69dddf6d075a7040d209335 files/digest-stunnel-3.26 64
 MD5 b562ecc7a9dab7e2e2582a0601b42569 files/digest-stunnel-4.09 64
@@ -18,3 +21,10 @@ MD5 40938d8bb3bba86aea441e89ad04bdc9 stunnel-3.26.ebuild 1085
 MD5 ada5bc552813f309133d5428c3a95a7c stunnel-4.09-r1.ebuild 2221
 MD5 1217dcb1ea077fa30403aa71cdaf7480 stunnel-4.09.ebuild 2127
 MD5 2e5b35dd3147164d11d25c7dd45695dd stunnel-4.14.ebuild 2223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiC4ZgIKl8Uu19MoRAucdAJ9OxymtK1FvW4ilST8NBA4px5Y7nACeOzvm
+ST5UXcYzKcZ2QYBdo8IJC7s=
+=0Ft0
+-----END PGP SIGNATURE-----
