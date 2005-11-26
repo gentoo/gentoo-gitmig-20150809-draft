@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.11 2005/11/26 20:11:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.12 2005/11/26 20:22:51 betelgeuse Exp $
 
   26 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   files/azureus-gentoo-2.3.0.6.sh:
@@ -13,7 +13,7 @@
   26 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   +files/azureus-gentoo-2.3.0.6.sh, +azureus-2.3.0.6.ebuild:
   Version bump and did a major ebuild cleanup. Does not install a packed seda
-  any more because it is not allowed and not needed.
+  any more because it is not allowed and not needed. Fixes bug #113318.
 
   25 Nov 2005; Herbie Hopkins <herbs@gentoo.org>
   files/azureus-gentoo-2.3.0.4.sh, azureus-2.3.0.4.ebuild:
