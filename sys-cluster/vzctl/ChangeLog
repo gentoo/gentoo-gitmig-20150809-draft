@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.5 2005/11/02 12:37:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.6 2005/11/26 09:31:11 phreak Exp $
+
+  26 Nov 2005; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fixing metadata.xml to include the maintainer email
 
 *vzctl-2.7.0.24 (02 Nov 2005)
 
