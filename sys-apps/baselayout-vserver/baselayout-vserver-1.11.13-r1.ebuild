@@ -1,16 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13-r1.ebuild,v 1.4 2005/11/12 15:20:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13-r1.ebuild,v 1.5 2005/11/26 09:11:15 phreak Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
 SV=1.6.13		# rc-scripts version
 SVREV=			# rc-scripts rev
 
+MY_P="rc-scripts-${SV}${SVREV}-vserver"
+
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}-vserver"
 DESCRIPTION="Filesystem baselayout and init scripts for Linux-VServer"
 HOMEPAGE="http://dev.gentoo.org/~hollow/vserver"
-SRC_URI="${HOMEPAGE}/baselayout/rc-scripts-${SV}${SVREV}-vserver.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~hollow/distfiles/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~phreak/distfiles/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
