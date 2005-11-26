@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.8 2005/05/01 18:21:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.9 2005/11/26 06:04:50 nerdboy Exp $
+
+inherit eutils libtool toolchain-funcs
 
 S=${WORKDIR}/build
 
@@ -20,8 +22,7 @@ src_unpack() {
 	unpack ${A}
 	mkdir ${WORKDIR}/build
 	cd ${WORKDIR}/${P}
-
-	zcat ${DISTDIR}/${PF}-gentoo.diff.gz | patch -p0 || die
+	zcat ${DISTDIR}/${PF}-gentoo.diff.gz | patch -p0 || die "patch failed"
 }
 
 src_compile() {
@@ -29,9 +30,13 @@ src_compile() {
 	../${P}/configure \
 		--host=${CHOST} \
 		--prefix=${SN} \
+		--exec-prefix=${SN} \
+		--bindir=${SN}/bin \
+		--sbindir=${SN}/sbin \
 		--mandir=${SN}/share/man \
 		--infodir=${SN}/share/info \
-		--datadir=${SN}/share || die
+		--datadir=${SN}/share \
+		--libdir=${SN}/$(get_libdir) || die "configure failed"
 
 	make || die
 }
