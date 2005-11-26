@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.34 2005/11/26 08:07:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.35 2005/11/26 14:35:16 greg_g Exp $
 
   26 Nov 2005; Markus Rothe <corsair@gentoo.org> kjsembed-3.4.3.ebuild:
   Stable on ppc64; bug #112842
@@ -10,7 +10,7 @@
 
 *kjsembed-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kjsembed-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kjsembed-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kjsembed-3.4.3.ebuild:

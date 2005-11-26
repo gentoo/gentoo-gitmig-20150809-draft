@@ -1,13 +1,13 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.19 2005/11/26 13:36:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.20 2005/11/26 14:35:20 greg_g Exp $
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> libksieve-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
 
 *libksieve-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +libksieve-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +libksieve-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   18 Oct 2005; Douglas Russell <puggy@gentoo.org>

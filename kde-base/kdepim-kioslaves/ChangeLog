@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.31 2005/11/26 13:36:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.32 2005/11/26 14:35:14 greg_g Exp $
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kdepim-kioslaves-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
@@ -19,7 +19,7 @@
 
 *kdepim-kioslaves-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdepim-kioslaves-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdepim-kioslaves-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
 *kdepim-kioslaves-3.5.0_rc1 (12 Nov 2005)

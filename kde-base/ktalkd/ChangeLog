@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/ktalkd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktalkd/ChangeLog,v 1.24 2005/11/25 10:20:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktalkd/ChangeLog,v 1.25 2005/11/26 14:35:19 greg_g Exp $
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> ktalkd-3.4.2.ebuild:
   Stable on amd64, bug 112842.
@@ -13,7 +13,7 @@
 
 *ktalkd-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +ktalkd-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +ktalkd-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> ktalkd-3.5_beta1.ebuild,

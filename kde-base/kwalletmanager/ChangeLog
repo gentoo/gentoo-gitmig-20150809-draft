@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kwalletmanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.25 2005/11/26 13:36:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.26 2005/11/26 14:35:20 greg_g Exp $
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kwalletmanager-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
@@ -19,7 +19,7 @@
 
 *kwalletmanager-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kwalletmanager-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kwalletmanager-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>

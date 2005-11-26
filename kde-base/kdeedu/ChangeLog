@@ -1,13 +1,13 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.160 2005/11/25 00:16:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.161 2005/11/26 14:35:14 greg_g Exp $
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kdeedu-3.4.3-r10.ebuild:
   Stable on amd64, bug 112842.
 
 *kdeedu-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdeedu-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdeedu-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>

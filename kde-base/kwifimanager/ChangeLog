@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.24 2005/11/25 10:22:48 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.25 2005/11/26 14:35:20 greg_g Exp $
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kwifimanager-3.4.3.ebuild:
@@ -11,7 +11,7 @@
 
 *kwifimanager-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kwifimanager-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kwifimanager-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
 *kwifimanager-3.5.0_rc1 (12 Nov 2005)

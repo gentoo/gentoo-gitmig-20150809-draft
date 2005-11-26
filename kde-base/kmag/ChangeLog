@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.27 2005/11/24 23:11:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.28 2005/11/26 14:35:16 greg_g Exp $
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kmag-3.4.3.ebuild:
   Stable on ppc64
@@ -13,7 +13,7 @@
 
 *kmag-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kmag-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kmag-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
 *kmag-3.5.0_rc1 (12 Nov 2005)

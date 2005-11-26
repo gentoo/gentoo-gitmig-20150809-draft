@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.181 2005/11/26 13:36:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.182 2005/11/26 14:35:14 greg_g Exp $
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kdepim-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
@@ -10,7 +10,7 @@
 
 *kdepim-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdepim-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdepim-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
   21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kdepim-3.4.3.ebuild:

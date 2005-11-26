@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdeedu-applnk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.23 2005/11/24 23:47:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.24 2005/11/26 14:35:14 greg_g Exp $
 
   24 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kdeedu-applnk-3.4.2.ebuild:
@@ -15,7 +15,7 @@
 
 *kdeedu-applnk-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdeedu-applnk-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdeedu-applnk-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
 *kdeedu-applnk-3.5.0_rc1 (12 Nov 2005)

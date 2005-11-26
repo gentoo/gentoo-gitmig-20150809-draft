@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.42 2005/11/25 14:06:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.43 2005/11/26 14:35:13 greg_g Exp $
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kdeaddons-meta-3.4.3.ebuild:
@@ -16,7 +16,7 @@
 
 *kdeaddons-meta-3.5.0 (22 Nov 2005)
 
-  33 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdeaddons-meta-3.5.0.ebuild:
+  22 Nov 2005; Dan Armak <danarmak@gentoo.org> +kdeaddons-meta-3.5.0.ebuild:
   Ebuilds for KDE 3.5.0 final. It is not yet released, and is package.masked.
 
 *kdeaddons-meta-3.5.0_rc1 (12 Nov 2005)
