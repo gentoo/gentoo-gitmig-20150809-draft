@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.1 2005/04/08 14:12:26 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.2 2005/11/27 21:37:37 marienz Exp $
+
+*twisted-mail-0.2.0 (27 Nov 2005)
+*twisted-mail-0.1.0-r1 (27 Nov 2005)
+
+  27 Nov 2005; Marien Zwart <marienz@gentoo.org> metadata.xml,
+  +twisted-mail-0.1.0-r1.ebuild, +twisted-mail-0.2.0.ebuild:
+  Version bump (0.2.0) and revbump (0.1.0-r1) to use the new eclass (bug
+  #80639). Set myself as maintainer.
 
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-mail-0.5.0:
   initial import
