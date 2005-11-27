@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d981dbd76fba992d5bf6f2d06dc53bd ChangeLog 715
-MD5 f35a30fe312c6556dcbd29b28cdf8833 metadata.xml 474
-MD5 e858b46f84cacfc6b97874620e21beb7 kpl-3.2.ebuild 517
+MD5 c783ad2c58856bc60330ab43fa3bc59a ChangeLog 870
 MD5 4d8d247b92777032dbf13dcbadf56857 files/digest-kpl-3.2 60
+MD5 d62965ee527ea1315d6d48df9372fa82 files/kpl-3.2-arts-configure.patch 3569
+MD5 bf473d2d9e142e16cd07095aa49a58f0 kpl-3.2.ebuild 565
+MD5 f35a30fe312c6556dcbd29b28cdf8833 metadata.xml 474
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC9qN2csIHjyDViGQRAg2RAJ9ktDdrq4gXjUURlS8d9zZoGG6rZwCbBIge
-cQ0PM/W1uPcEsJcrsW6KTRc=
-=gqMw
+iD8DBQFDifQ1ntT9W3vfTuoRAoGuAKCp+0ojTl5uqzhAfFkZXW6DqZeJ5wCeO1vX
+S3D1sHmxwpTxoyhRgIfVzGM=
+=5WUg
 -----END PGP SIGNATURE-----
