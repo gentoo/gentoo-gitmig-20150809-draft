@@ -1,0 +1,11 @@
+--- src/fstab.c.orig	2004-08-23 15:32:22 +0000
++++ src/fstab.c	2004-08-23 15:32:36 +0000
+@@ -237,7 +237,7 @@
+ /* Ensure that the lock is released if we are interrupted.  */
+ static void
+ handler (int sig) {
+-     die (EX_USER, "%s", sys_siglist[sig]);
++     die (EX_USER, "%s", strsignal(sig));
+ }
+
+ static void

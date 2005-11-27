@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.1 2005/11/27 10:07:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.2 2005/11/27 10:14:24 brix Exp $
+
+*watchdog-5.2.4_p5 (27 Nov 2005)
+
+  27 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/watchdog-5.2.4_p5-conf.d, +files/watchdog-5.2.4_p5-init.d,
+  +files/watchdog-5.2.4_p5-sundries.patch,
+  +files/watchdog-5.2.4_p5-uclibc.patch, +metadata.xml,
+  +watchdog-5.2.4_p5.ebuild:
+  Updated to patchlevel 5 from upstream. Don't check for /dev/watchdog as this
+  package can be used without it (softboot functionality), bug #109541. Took
+  ownership.
 
   27 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
   +files/5.2.4-sundries.patch, +files/5.2.4-uclibc.patch,
