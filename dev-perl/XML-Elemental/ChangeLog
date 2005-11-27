@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-Elemental
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.1 2005/02/07 10:14:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.2 2005/11/27 02:00:11 mcummings Exp $
+
+*XML-Elemental-2.0 (27 Nov 2005)
+
+  27 Nov 2005; Michael Cummings <mcummings@gentoo.org>
+  XML-Elemental-1.03.ebuild, +XML-Elemental-2.0.ebuild:
+  marking 1.03 stable; version bump
 
 *XML-Elemental-1.03 (07 Feb 2005)
 
