@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.14 2005/09/17 00:38:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.15 2005/11/27 21:57:14 tgall Exp $
+
+  27 Nov 2005; Tom Gall <tgall@gentoo.org> Devel-Symdump-2.03.ebuild:
+  stable on ppc64
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> Devel-Symdump-2.03.ebuild:
   Mark 2.03 stable on ia64
@@ -21,7 +24,7 @@
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Devel-Symdump-2.03.ebuild:
   added ~ppc64
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   Devel-Symdump-2.03.ebuild:
   Stable on alpha.
 
@@ -29,7 +32,7 @@
   Devel-Symdump-2.03.ebuild:
   KEYWORDS ~amd64.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> Devel-Symdump-2.03.ebuild:
+  10 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> Devel-Symdump-2.03.ebuild:
   Add ~alpha keyword.
 
   03 Oct 2004; Michael Cummings <mcummings@gentoo.org>
