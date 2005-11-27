@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta3.ebuild,v 1.2 2005/11/24 17:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta3.ebuild,v 1.3 2005/11/27 12:06:12 flameeyes Exp $
 
 inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -214,6 +214,7 @@ src_compile () {
 		--disable-slp \
 		--disable-hal \
 		--disable-x264 \
+		--disable-bonjour \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then

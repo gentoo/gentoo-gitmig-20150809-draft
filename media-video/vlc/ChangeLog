@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.116 2005/11/24 17:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.117 2005/11/27 12:06:12 flameeyes Exp $
+
+  27 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4_beta3.ebuild:
+  Remove bonjour support or vlc would fail if avahi 0.6 is installed. See bug
+  #113665.
 
   24 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild,
   vlc-0.8.2-r1.ebuild, vlc-0.8.2-r2.ebuild, vlc-0.8.4_beta3.ebuild:
