@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.3 2005/11/22 05:45:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.4 2005/11/27 01:00:32 herbs Exp $
 
 inherit gnome.org eutils mono
 
@@ -72,6 +72,10 @@ src_unpack() {
 	# To prevent excessive revdep-rebuild, gentoo's libexif is sticking to
 	# soversion 10 for now.
 	sed -i -e 's/EXIF_SOVERSION=12/EXIF_SOVERSION=10/' configure.in
+
+	# Multilib fix
+	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
+		${S}/{configure.in,configure} || die "sed failed"
 
 	# Don't log so much
 	! use debug && sed -i -e \
