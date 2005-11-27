@@ -1,4 +1,14 @@
-MD5 28af1583d7a3e50aa8bc1f593d7c862b ChangeLog 1287
-MD5 1102b3eb7ea877a3292eced596ee3d12 ding-1.4.ebuild 904
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 abe063bd6ceb2be20b26c9025036c903 ChangeLog 1285
+MD5 f81a482f7b2417fdff67980882730876 ding-1.4.ebuild 902
 MD5 1be0a64edb5832ed24e85d38160aa773 files/digest-ding-1.4 61
 MD5 b358653d1cbe719b45976881ed8f5914 metadata.xml 363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDieLTV3J2n04EauwRAgmkAKCndinZhqhygW03a7tE0Imni7baUACfWjRn
+cLTKWMrP2cUUCDGU4CK9PkI=
+=jltk
+-----END PGP SIGNATURE-----
