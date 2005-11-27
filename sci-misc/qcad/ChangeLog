@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/qcad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.10 2005/08/30 00:29:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.11 2005/11/27 17:31:45 cryos Exp $
+
+  27 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> qcad-2.0.4.0-r2.ebuild:
+  Added touch ${WORKDIR}, closes bug 112864.
 
 *qcad-2.0.4.0-r2 (30 Aug 2005)
 
