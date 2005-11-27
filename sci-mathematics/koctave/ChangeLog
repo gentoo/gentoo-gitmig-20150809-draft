@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/koctave
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.9 2005/08/28 01:02:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.10 2005/11/27 17:44:12 cryos Exp $
+
+  27 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> koctave-0.65-r1.ebuild:
+  Added runtime dependency on konsole or kdebase, closes bug 112620.
 
   28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> koctave-0.65-r1.ebuild:
   Stable on amd64.
