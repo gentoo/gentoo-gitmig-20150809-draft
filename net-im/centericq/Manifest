@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 665a58f3929149c9064cd31a3c554601 centericq-4.20.0-r3.ebuild 2433
-MD5 7f795e49e944fe6f3aa15fe53e8da366 metadata.xml 693
-MD5 eb76c53cadcfd847315cba2c1e880442 centericq-4.21.0.ebuild 2627
-MD5 721d479426f868ac5272e241690e46cb ChangeLog 11412
+MD5 c4e4ad5d5056803b59ff5f8c09bd1874 ChangeLog 11522
 MD5 f87bde9c0093587ef76f595a99652913 centericq-4.20.0-r2.ebuild 2492
-MD5 2ed2ff87b5e3aa19fd0445939621d940 centericq-4.21.0-r1.ebuild 2755
-MD5 0047b1881feff16b6c86bf59782e8826 files/centericq-4.21.0-memory-handling.diff.bz2 399
-MD5 73abf7a5deb27baf431c12003caeb02d files/centericq-4.20.0.CAN-2005-1914.patch.bz2 576
-MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r3 70
-MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r2 70
+MD5 665a58f3929149c9064cd31a3c554601 centericq-4.20.0-r3.ebuild 2433
+MD5 a04fbc1b1bb9c97db86c35826da4c92b centericq-4.21.0-r1.ebuild 2750
+MD5 eb76c53cadcfd847315cba2c1e880442 centericq-4.21.0.ebuild 2627
 MD5 27714944a72058a8f8c3e46444311651 files/centericq-4.20.0-libgadu.patch 4145
-MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0 70
+MD5 73abf7a5deb27baf431c12003caeb02d files/centericq-4.20.0.CAN-2005-1914.patch.bz2 576
 MD5 6c7b9cadd9a8db003e584e04cedbffb2 files/centericq-4.21.0-icq-short-read.diff.bz2 333
-MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0-r1 70
+MD5 0047b1881feff16b6c86bf59782e8826 files/centericq-4.21.0-memory-handling.diff.bz2 399
 MD5 0f60514eff0a237cf8fbdd13fd88293e files/centericq-amd64.patch 6291
+MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r2 70
+MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r3 70
+MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0 70
+MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0-r1 70
+MD5 7f795e49e944fe6f3aa15fe53e8da366 metadata.xml 693
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDh21QFdQwWVoAgN4RAoosAJwInT7cPN2t8WqS8wy+siCMXcN3VgCg3MCf
-NGRsI3QD2JW48TXQYMaut84=
-=yyut
+iD8DBQFDihA/csIHjyDViGQRAvKhAJ91dQxElnladNAfKUd7xZCX8NrKAwCfYViW
+/r16Kiij2sM3MOfcHEmBs+0=
+=ipKy
 -----END PGP SIGNATURE-----
