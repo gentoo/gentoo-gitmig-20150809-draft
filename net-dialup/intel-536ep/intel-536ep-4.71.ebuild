@@ -1,19 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.69.ebuild,v 1.4 2005/09/19 21:19:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.71.ebuild,v 1.1 2005/11/27 09:19:10 mrness Exp $
 
-inherit eutils flag-o-matic linux-mod
+inherit linux-mod
 
 DESCRIPTION="Driver for Intel 536EP modem"
 HOMEPAGE="http://developer.intel.com/design/modems/products/536ep.htm"
-SRC_URI="ftp://aiedownload.intel.com/df-support/6497/eng/${P}.tgz"
+SRC_URI="ftp://aiedownload.intel.com/df-support/9266/eng/${P}.tgz"
 
 LICENSE="Intel"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+DEPEND=""
 
-S=${WORKDIR}/intel-536EP-2.56.76.0
+S=${WORKDIR}/Intel-536
 MODULE_NAMES="Intel536(:${S}/coredrv)"
 
 pkg_setup() {
@@ -26,19 +27,6 @@ pkg_setup() {
 	fi
 
 	linux-mod_pkg_setup
-}
-
-src_unpack(){
-	unpack ${A}
-
-	cd ${S}
-	if kernel_is 2 4; then
-		#there is no way of passing this as make parameter
-		sed -i -e 's/\$(PSTN_DEF)/-DTARGET_SELAH -DTARGET_LINUX -DLINUX/' coredrv/Makefile
-	elif kernel_is ge 2 6 11; then
-		#addapt to power management changes occured in kernel
-		epatch ${FILESDIR}/${P}-kernel-2.6.11-pm.patch
-	fi
 }
 
 src_install() {

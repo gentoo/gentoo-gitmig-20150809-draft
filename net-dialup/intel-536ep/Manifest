@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 939a1906a9aaf959783a76ba31925152 intel-536ep-4.69.ebuild 1448
-MD5 b41dce1983f7643e52b189bd690008b5 ChangeLog 1092
+MD5 36b3488c4dc083d69303c6c89de578e3 intel-536ep-4.71.ebuild 1083
+MD5 31946f8abafdfd3bb09e148131278c30 ChangeLog 1273
 MD5 4a05a31c48e912c88a3677b9c597516c metadata.xml 227
 MD5 468650a3014a64d9b0b7fa9d9babb890 intel-536ep-4.69-r1.ebuild 1558
 MD5 18ed5f89cb69ae749a0c4f41abb7b5b3 files/intel536ep.confd 111
 MD5 29c69d64bc64efc141963b2fc3af1e19 files/intel536ep.initd 920
-MD5 ca1e9b07e5f36835a0332562ee1d3e64 files/digest-intel-536ep-4.69 65
+MD5 cc3df14471e1c046676fabe042ade24f files/digest-intel-536ep-4.71 65
 MD5 1c2e92f30f7fe736154568f765250211 files/intel-536ep-4.69-kernel-2.6.11-pm.patch 772
 MD5 ca1e9b07e5f36835a0332562ee1d3e64 files/digest-intel-536ep-4.69-r1 65
 MD5 0c5635ce85601cb78cbf1a9671c23bb9 files/intel-536ep-4.69-kernel-2.6.10-tty.patch 1916
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDLyt2NSP4Vda7IdsRAh/6AJ9zljdyBlbNAhRpUuzsWvXuOosbMgCfd60T
-ENtvk3wITd7SC0p0CATEtfk=
-=AjIb
+iD8DBQFDiXoeNSP4Vda7IdsRAp1IAJsEuMsgwnYl94qlqfrxoLipUH2SaQCcCwHc
+Ez9xzWct7Vklr9+8cS7o400=
+=ueMS
 -----END PGP SIGNATURE-----
