@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.29 2005/11/15 13:07:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.30 2005/11/27 17:08:20 brix Exp $
+
+  27 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  ibm-acpi-0.11-r1.ebuild:
+  Stop abusing USE=doc.
 
   15 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
   ibm-acpi-0.11-r1.ebuild:

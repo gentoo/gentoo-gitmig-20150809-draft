@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.5 2005/11/15 13:07:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.6 2005/11/27 17:08:20 brix Exp $
 
 inherit eutils linux-mod
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc"
 
-IUSE="doc"
+IUSE=""
 
 BUILD_PARAMS="KDIR=${KV_DIR}"
 BUILD_TARGETS="default"
@@ -55,29 +55,23 @@ src_install() {
 	exeinto /sbin
 	newexe ${S}/config/usr/local/sbin/idectl idectl-${PN}
 
-	if use doc; then
-		docinto examples/etc/acpi/actions
-		dodoc config/etc/acpi/actions/*
+	docinto examples/etc/acpi/actions
+	dodoc config/etc/acpi/actions/*
 
-		docinto examples/etc/acpi/events
-		dodoc config/etc/acpi/events/*
-	fi
+	docinto examples/etc/acpi/events
+	dodoc config/etc/acpi/events/*
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "You may wish to install sys-power/acpid to handle the ACPI events generated"
 	einfo "by ${PN}."
-
-	if useq doc; then
-		einfo ""
-		einfo "Example acpid configuration has been installed to"
-		einfo "/usr/share/doc/${PF}/examples/"
-	fi
-
-	einfo ""
+	einfo
+	einfo "Example acpid configuration has been installed to"
+	einfo "/usr/share/doc/${PF}/examples/"
+	einfo
 	einfo "For further instructions please see /usr/share/doc/${PF}/README.gz"
-	einfo ""
+	einfo
 
 	linux-mod_pkg_postinst
 }
