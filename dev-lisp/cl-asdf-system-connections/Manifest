@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f788fb90b10cf796043de168c2eccc9 ChangeLog 481
+MD5 c9cae8baeb4891a9b5385234f13d6cad cl-asdf-system-connections-0.1.ebuild 830
+MD5 55d3261a728db064bbf2481f4caa9303 files/digest-cl-asdf-system-connections-0.1 77
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDigv2yiNZaEAZA+ARAkqhAJwNZYW1BYfTG6CQy5jvEXsj6t3+pwCfeV3f
+g6mD2Ww3/r4w6i42Wlw8rpM=
+=ZFfQ
+-----END PGP SIGNATURE-----
