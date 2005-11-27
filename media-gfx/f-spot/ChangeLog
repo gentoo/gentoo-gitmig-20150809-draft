@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.1 2005/11/27 00:42:30 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.2 2005/11/27 00:55:29 herbs Exp $
+
+  27 Nov 2005; Herbie Hopkins <herbs@gentoo.org> f-spot-0.1.3.ebuild:
+  Multilib fix.
 
 *f-spot-0.1.3 (27 Nov 2005)
 

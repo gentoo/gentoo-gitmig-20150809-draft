@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.1.3.ebuild,v 1.1 2005/11/27 00:42:30 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.1.3.ebuild,v 1.2 2005/11/27 00:55:29 herbs Exp $
 
 inherit gnome2 mono eutils
 
@@ -54,6 +54,10 @@ src_unpack()
 
 	# Gentoo uses older EXIF so name for now
 	sed -i -e 's/EXIF_SOVERSION=12/EXIF_SOVERSION=10/' configure.in
+
+	# Multilib fix
+	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
+		configure.in || die "sed failed"
 
 	#older versions put headers in wrong spot, see #100269
 	if has_version "<=media-libs/lcms-1.13-r1" || has_version "=media-libs/lcms-1.14"; then
