@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.177 2005/11/26 14:35:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.178 2005/11/27 17:56:56 gmsoft Exp $
+
+  27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdenetwork-3.4.3.ebuild:
+  Stable on hppa.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kdenetwork-3.4.3.ebuild:
   Stable on amd64, bug 112842.
