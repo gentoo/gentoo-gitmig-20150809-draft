@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.1 2005/11/27 20:11:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.2 2005/11/27 22:34:16 metalgod Exp $
 
 inherit eutils gnome2 mono
 
-DESCRIPTION="Banshee allows you to import CDs, sync your music collection to an
-iPod, play music directly from an iPod."
+DESCRIPTION="Banshee allows you to import CDs, sync your music collection, play
+music directly from an iPod, create playlists with songs from your library, and
+create audio and MP3 CDs from subsets of your library."
 HOMEPAGE="http://banshee-project.org"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
