@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.290 2005/11/26 14:35:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.291 2005/11/27 14:49:07 gmsoft Exp $
+
+  27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdelibs-3.4.3.ebuild:
+  Stable on hppa.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kdelibs-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
