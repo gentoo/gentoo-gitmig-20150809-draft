@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.1.ebuild,v 1.3 2005/11/06 21:54:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.1.ebuild,v 1.4 2005/11/27 22:55:41 dang Exp $
 
 inherit eutils gnome2
 
@@ -37,7 +37,7 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=dev-libs/glib-2.5
 	>=gnome-base/libgnome-2.2
 	media-libs/freetype
-	>=gnome-base/orbit-2
+	>=gnome-base/orbit-2.12.4
 	eds? ( >=gnome-extra/evolution-data-server-1.3 )
 	!arm? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
 	gstreamer? ( =media-libs/gst-plugins-0.8* )"
