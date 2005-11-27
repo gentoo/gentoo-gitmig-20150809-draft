@@ -1,0 +1,11 @@
+# ChangeLog for dev-dotnet/ipod-sharp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.1 2005/11/27 19:56:34 metalgod Exp $
+
+*ipod-sharp-0.5.11.1 (27 Nov 2005)
+
+  27 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +ipod-sharp-0.5.11.1.ebuild:
+  New Package. This is a library needed to build Banshee. Thanks to all users
+  involved in bug #91419.
+
