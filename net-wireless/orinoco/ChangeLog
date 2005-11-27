@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.10 2005/11/27 18:54:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.11 2005/11/27 22:36:37 brix Exp $
+
+*orinoco-0.15_rc3-r1 (27 Nov 2005)
+
+  27 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/orinoco-0.15rc3-memleak.patch, -orinoco-0.15_rc3.ebuild,
+  +orinoco-0.15_rc3-r1.ebuild:
+  Fix memory leak, bug #113322.
 
 *orinoco-9999 (27 Nov 2005)
 

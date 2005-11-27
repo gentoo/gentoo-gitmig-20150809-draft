@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc3.ebuild,v 1.1 2005/11/27 18:52:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc3-r1.ebuild,v 1.1 2005/11/27 22:36:37 brix Exp $
 
-inherit linux-mod
+inherit eutils linux-mod
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -73,6 +73,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${MY_P}-memleak.patch
 
 	sed -i "s:^\(KERNEL_PATH\) =.*:\1 = ${KV_OUT_DIR}:" \
 		${S}/Makefile
