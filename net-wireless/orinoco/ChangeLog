@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.9 2005/11/27 18:52:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.10 2005/11/27 18:54:04 brix Exp $
+
+*orinoco-9999 (27 Nov 2005)
+
+  27 Nov 2005; Henrik Brix Andersen <brix@gentoo.org> +orinoco-9999.ebuild:
+  Added new, improved live CVS ebuild. This replaces net-wireless/orinoco-cvs.
 
 *orinoco-0.15_rc3 (27 Nov 2005)
 
