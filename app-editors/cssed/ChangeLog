@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/cssed
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.11 2005/10/25 02:47:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.12 2005/11/27 01:48:01 rl03 Exp $
+
+*cssed-0.4.0 (27 Nov 2005)
+
+  27 Nov 2005; Renat Lumpau <rl03@gentoo.org> +cssed-0.4.0.ebuild:
+  Version bump
 
   25 Oct 2005; Luis Medinas <metalgod@gentoo.org> cssed-0.3.0.ebuild:
   Added ~amd64 keyword. Closes bug #110153.
