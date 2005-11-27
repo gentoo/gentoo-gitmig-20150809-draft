@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-pair
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.1 2005/04/08 15:48:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.2 2005/11/27 21:48:17 marienz Exp $
+
+*twisted-pair-0.1.0-r1 (27 Nov 2005)
+
+  27 Nov 2005; Marien Zwart <marienz@gentoo.org> metadata.xml,
+  +twisted-pair-0.1.0-r1.ebuild:
+  Revbump to use the new eclass (bug #80639). Set myself as maintainer.
 
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-pair-0.1.0:
   initial import

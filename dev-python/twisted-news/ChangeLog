@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.1 2005/04/08 14:26:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.2 2005/11/27 21:44:30 marienz Exp $
+
+*twisted-news-0.1.0-r1 (27 Nov 2005)
+
+  27 Nov 2005; Marien Zwart <marienz@gentoo.org> metadata.xml,
+  +twisted-news-0.1.0-r1.ebuild:
+  Revbump to use the new eclass (bug #80639). Set myself as maintainer.
 
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-news-0.1.0:
   initial import
