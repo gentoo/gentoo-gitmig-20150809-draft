@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.140 2005/11/26 14:35:15 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.141 2005/11/27 18:38:48 gmsoft Exp $
+
+  27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdeutils-3.4.3-r1.ebuild:
+  Stable on hppa.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kdeutils-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
