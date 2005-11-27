@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-2.4.2.ebuild,v 1.4 2005/09/16 13:53:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-2.4.2.ebuild,v 1.5 2005/11/27 17:52:11 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -31,6 +31,9 @@ src_compile() {
 	use doc && antflags="${antflags} doc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "ant failed"
+
+	# move javadoc location to install into proper location
+	mv javadoc api
 }
 
 src_install() {
@@ -43,7 +46,7 @@ src_install() {
 	dobin ${PN}
 
 	dodoc README.txt
-	use doc && java-pkg_dohtml -r javadoc/*
+	use doc && java-pkg_dohtml -r api
 
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
