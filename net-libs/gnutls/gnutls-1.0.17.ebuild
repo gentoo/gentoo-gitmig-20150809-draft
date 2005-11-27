@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.20 2005/05/01 14:38:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.21 2005/11/27 15:55:07 vanquirius Exp $
 
 inherit eutils gnuconfig
 
@@ -64,7 +64,7 @@ src_install() {
 	# make compatibility symlinks - 0.8.x
 	#dosym /usr/lib/libgnutls.so.10 /usr/lib/libgnutls.so.7
 
-	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
+	dodoc AUTHORS ChangeLog NEWS \
 		README THANKS doc/TODO
 
 	if use doc ; then

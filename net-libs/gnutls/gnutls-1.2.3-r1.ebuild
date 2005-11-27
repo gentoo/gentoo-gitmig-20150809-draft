@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3-r1.ebuild,v 1.2 2005/06/21 11:46:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3-r1.ebuild,v 1.3 2005/11/27 15:55:07 vanquirius Exp $
 
 inherit eutils gnuconfig
 
@@ -71,7 +71,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
+	dodoc AUTHORS ChangeLog NEWS \
 		README THANKS doc/TODO
 
 	if use doc ; then

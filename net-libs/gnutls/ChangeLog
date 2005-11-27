@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.82 2005/11/11 09:25:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.83 2005/11/27 15:55:07 vanquirius Exp $
+
+  27 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> gnutls-1.0.17.ebuild,
+  gnutls-1.0.25.ebuild, gnutls-1.2.3.ebuild, gnutls-1.2.3-r1.ebuild,
+  gnutls-1.2.4.ebuild, gnutls-1.2.6.ebuild, gnutls-1.2.9.ebuild:
+  Do not install COPYING or COPYING.LIB. Fixes bug 113678. Thanks to Ryan Hill
+  <dirtyepic dot sk at gmail dot com>.
 
   11 Nov 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.2.6.ebuild,
   gnutls-1.2.9.ebuild:
