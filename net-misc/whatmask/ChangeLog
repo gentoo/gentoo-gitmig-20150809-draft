@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.10 2005/04/24 03:01:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.11 2005/11/27 11:12:44 slarti Exp $
+
+  27 Nov 2005; Tom Martin <slarti@gentoo.org> whatmask-1.2.ebuild:
+  Marked ~amd64, resolves bug #113499.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> whatmask-1.2.ebuild:
   Stable on ppc.
