@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a6477dbf01661fa0a1bbc07cfc164dc ChangeLog 13671
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.3.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_beta2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_rc1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5_beta1 0
+MD5 fff2121ed15512a9d9972dd6a05c01d2 ChangeLog 13755
+MD5 52d027970f705dce63004098c0e2dded kde-3.4.3.ebuild 936
 MD5 e6eb5fca5a03e9cceecd8f3883b4ec42 kde-3.3.2.ebuild 904
 MD5 b142c69fabd5156f8799b686bfcd0439 kde-3.4.1.ebuild 935
 MD5 4d6630a38fd27dc12e187ff5970225a6 kde-3.4.2.ebuild 940
-MD5 277e39e2a280d45a1b3ab7a6cc4fd7f1 kde-3.4.3.ebuild 936
-MD5 ffb60a6277f5271a3ed3893bc7f1b086 kde-3.5.0.ebuild 916
-MD5 9d6b5090f2d386caeebe584c69c31f7d kde-3.5.0_beta2.ebuild 920
-MD5 665e299f6f427e4198035638f1b9a191 kde-3.5.0_rc1.ebuild 918
 MD5 3f2ad8ab7021776833264a6aa1cac19c kde-3.5_beta1.ebuild 918
 MD5 7a4227b8020c4b9e67023781105928ab metadata.xml 318
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhxthntT9W3vfTuoRApMKAKCbJhiJNhGcJnuuPOA3TwZFVJ5RowCgqneE
-Uy0JZ9NPWZk4fO1z3vPGwzk=
-=rWOl
------END PGP SIGNATURE-----
+MD5 9d6b5090f2d386caeebe584c69c31f7d kde-3.5.0_beta2.ebuild 920
+MD5 665e299f6f427e4198035638f1b9a191 kde-3.5.0_rc1.ebuild 918
+MD5 ffb60a6277f5271a3ed3893bc7f1b086 kde-3.5.0.ebuild 916
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.3.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_beta2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.5.0 0
