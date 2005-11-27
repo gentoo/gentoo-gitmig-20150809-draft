@@ -1,4 +1,6 @@
 MD5 675e20e31975389285c4f2a723f26774 liboggz-0.9.1.ebuild 747
-MD5 05845fec9de18d23d24c09c11e647000 ChangeLog 354
+MD5 9a702baa6032ebca9d20a34de2c51d35 ChangeLog 481
 MD5 db927815fb608e7948a6ce5edb981ddf metadata.xml 202
+MD5 56bda3163397bbf503ebd8a4b66cfd99 liboggz-0.9.3.ebuild 747
 MD5 971dd8e05d10289ba244dad90eebf72c files/digest-liboggz-0.9.1 65
+MD5 e871be30ced0a9f8b34d964239d14dc2 files/digest-liboggz-0.9.3 65
