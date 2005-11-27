@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 488783912b30a8c5a635f7e9508c9490 ChangeLog 4622
+MD5 a38f7700fd767c2c66cac6bb5d0c13d2 ChangeLog 4728
 MD5 5a2e7c990f27ecf4a864bc72a8324695 files/0.40-radial.patch 487
 MD5 43383d33f039e916a8092b3703f3ede2 files/digest-inkscape-0.37 66
 MD5 2351ba855aa9cbb514d6b9d61c29158b files/digest-inkscape-0.38 66
@@ -27,12 +27,12 @@ MD5 4c583041c079432faa856dc42cf0c117 inkscape-0.41-r1.ebuild 2294
 MD5 240974d91790d179edb2b847e002b2d6 inkscape-0.41.ebuild 2120
 MD5 dc737b2039d3e51cf505eea83e106b33 inkscape-0.42.2.ebuild 1819
 MD5 b7eec73faa910b3210eabe052f56dcb1 inkscape-0.42.ebuild 1823
-MD5 ff2dd3919c03bebab1634105c15b86a1 inkscape-0.43.ebuild 1818
+MD5 5eb09b00437d0875f737d447e62efd44 inkscape-0.43.ebuild 1815
 MD5 45828204906035f66f3428b9f2f53eca metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDg4A0KRy60XGEcJIRAgSEAJ9yePw/EG/NZH3+yF3NkrAkJ9pCuACfSc5b
-A0qva5mE20W20C61bSNTyGE=
-=ihfX
+iD8DBQFDig7McsIHjyDViGQRAk1cAKDUfYdhioU172MGQcsRUAwvnIIf7gCeOpl3
+9kOLVleX1BnbN/SkdQK5lHM=
+=pvQn
 -----END PGP SIGNATURE-----
