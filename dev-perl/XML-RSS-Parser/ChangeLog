@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-RSS-Parser
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/ChangeLog,v 1.1 2005/11/27 02:28:37 mcummings Exp $
+
+*XML-RSS-Parser-4.0 (27 Nov 2005)
+
+  27 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +XML-RSS-Parser-4.0.ebuild:
+  New dep for XML-RAI
+
