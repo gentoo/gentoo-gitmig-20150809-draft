@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.84 2005/11/27 22:02:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.85 2005/11/27 22:46:21 cryos Exp $
+
+*kdeaccessibility-3.4.3-r1 (27 Nov 2005)
+
+  27 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/kdeaccessibility-3.4.3-pointer.patch,
+  +kdeaccessibility-3.4.3-r1.ebuild:
+  Fixes glibc problems due to invalid pointers, closes bug 91004, thanks to
+  Chris White <chriswhite@gentoo.org>.
 
   27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdeaccessibility-3.4.3.ebuild:
   Stable on hppa.
