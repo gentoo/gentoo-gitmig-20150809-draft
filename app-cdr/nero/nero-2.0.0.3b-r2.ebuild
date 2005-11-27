@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.3b-r1.ebuild,v 1.1 2005/11/26 15:41:02 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.3b-r2.ebuild,v 1.1 2005/11/27 16:30:44 wschlich Exp $
 
 inherit eutils rpm multilib
 
@@ -58,7 +58,7 @@ src_install() {
 	libdir=$(get_libdir)
 	dodir /usr/${libdir}
 	insinto /usr/${libdir}
-	doins ./usr/${libdir}/*.so
+	doins ./usr/lib/*.so
 
 	dobin ./usr/bin/nero
 
