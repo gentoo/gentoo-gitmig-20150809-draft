@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.16.ebuild,v 1.5 2005/10/05 15:11:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.16.ebuild,v 1.6 2005/11/27 00:43:35 herbs Exp $
 
 inherit gnome2 eutils mono
 
@@ -29,10 +29,11 @@ src_unpack() {
 	sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
 		docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
 		|| die "sed failed (1)"
-	# Use correct libdir in pkgconfig file
+	# Use correct libdir for mono assembly
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
 		-e 's:^prefix=:exec_prefix=:' \
-		mono/gmime-sharp.pc.in || die "sed failed (2)"
+		-e 's:prefix)/lib:libdir):' \
+		mono/gmime-sharp.pc.in mono/Makefile.{am,in} || die "sed failed (2)"
 	# Fix doc targets (bug #97154)
 	sed -i -e 's!\<\(tmpl-build.stamp\): !\1 $(srcdir)/tmpl/*.sgml: !' \
 		gtk-doc.make docs/reference/Makefile.in || die "sed failed (3)"
