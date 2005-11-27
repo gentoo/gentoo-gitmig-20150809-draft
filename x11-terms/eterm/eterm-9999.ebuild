@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.3 2005/10/06 23:00:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.4 2005/11/27 17:36:48 vapier Exp $
 
 ECVS_MODULE="eterm/Eterm"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="-*"
 IUSE="escreen etwin mmx unicode"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM x11-proto/xextproto x11-proto/xproto ) virtual/x11 )
 	>=x11-libs/libast-0.6.1
 	media-libs/imlib2
 	etwin? ( app-misc/twin )
