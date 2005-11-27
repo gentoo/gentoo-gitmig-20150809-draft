@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.39 2005/10/20 09:19:50 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.40 2005/11/27 22:34:40 dang Exp $
+
+  27 Nov 2005; <dang@gentoo.org> gnome-doc-utils-0.4.3.ebuild:
+  Bump dep on libxslt. Bug #113512
 
 *gnome-doc-utils-0.4.3 (20 Oct 2005)
 
