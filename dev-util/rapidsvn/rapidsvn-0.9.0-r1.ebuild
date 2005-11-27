@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0.ebuild,v 1.1 2005/11/08 07:11:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.1 2005/11/27 20:23:12 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="doc gtk2 static"
+IUSE="doc static"
 
 DEPEND="~net-misc/neon-0.24.7
 	>=dev-util/subversion-1.2.0
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/svncpp_0.6.1_link.patch
+	epatch ${FILESDIR}/nodoc-configure.patch.gz
 }
 
 src_compile() {
@@ -42,28 +43,30 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-static --enable-shared"
 	fi
-	if use gtk2; then
-		if test -x /usr/bin/wxgtk2-2.4-config; then
-			myconf="${myconf} --with-wx-config=/usr/bin/wxgtk2-2.4-config"
-		else
-			ewarn "wxgtk2-2.4-config not found. Trying wxgtk-2.4-config..."
-		fi
-	elif test -x /usr/bin/wxgtk-2.4-config; then
+	# look for wxgtk config file
+	if test -x /usr/bin/wxgtk2-2.4-config; then
+		myconf="${myconf} --with-wx-config=/usr/bin/wxgtk2-2.4-config"
+	else
+		ewarn "wxgtk2-2.4-config not found. Trying wxgtk-2.4-config..."
+	fi
+	if test -x /usr/bin/wxgtk-2.4-config; then
 		myconf="${myconf} --with-wx-config=/usr/bin/wxgtk-2.4-config"
 	else
 		ewarn "wxgtk-2.4-config not found. Compiling with default wxGTK."
 	fi
 	elibtoolize --portage
 
+	libtoolize --copy --force
 	econf	--with-svn-lib=/usr/$(get_libdir) \
 		--with-svn-include=/usr/include \
 		--with-neon-config=/usr/bin/neon-config \
-		${myconf} || die "./configure failed"
-	emake  || die
+		${myconf} || die "econf failed"
+	emake  || die "emake failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "einstall failed"
+	doman doc/manpage/rapidsvn.1 || die "doman failed"
 	doicon src/res/bitmaps/svn.xpm
 	make_desktop_entry rapidsvn RapidSVN svn.xpm RevisionControl
 	if use doc ; then

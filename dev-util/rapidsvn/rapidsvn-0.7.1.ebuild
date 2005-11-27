@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.7.1.ebuild,v 1.4 2005/10/10 02:53:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.7.1.ebuild,v 1.5 2005/11/27 20:23:12 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
-IUSE="doc gtk2"
+IUSE="doc"
 
 DEPEND="~net-misc/neon-0.24.7
 	>=dev-util/subversion-1.0.0
@@ -37,13 +37,13 @@ src_compile() {
 		myconf="--without-xsltproc --without-docbook-xsl --without-doxygen \
 			--without-dot"
 	fi
-	if use gtk2; then
-		if test -x /usr/bin/wxgtk2-2.4-config; then
-			myconf="${myconf} --with-wx-config=/usr/bin/wxgtk2-2.4-config"
-		else
-			ewarn "wxgtk2-2.4-config not found. Compiling with default wxGTK."
-		fi
-	elif test -x /usr/bin/wxgtk-2.4-config; then
+	# look for wxgtk config file
+	if test -x /usr/bin/wxgtk2-2.4-config; then
+		myconf="${myconf} --with-wx-config=/usr/bin/wxgtk2-2.4-config"
+	else
+		ewarn "wxgtk2-2.4-config not found. Compiling with default wxGTK."
+	fi
+	if test -x /usr/bin/wxgtk-2.4-config; then
 		myconf="${myconf} --with-wx-config=/usr/bin/wxgtk-2.4-config"
 	else
 		ewarn "wxgtk-2.4-config not found. Compiling with default wxGTK."
