@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ebookmerge-0.6.ebuild,v 1.5 2005/07/11 22:12:18 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ebookmerge-0.9.ebuild,v 1.1 2005/11/27 17:58:21 bass Exp $
 
 DESCRIPTION="Script to manage eBooks in Gentoo."
 HOMEPAGE="http://www.josealberto.org/blog/?p=35"
