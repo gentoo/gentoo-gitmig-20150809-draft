@@ -1,0 +1,5 @@
+MD5 81bed3f44d2e7c052b79e6729d4ccf03 ChangeLog 426
+MD5 ab4c7ad3d7b22f8c4b3af4c130a7e75a files/digest-twisted-web2-0.1 67
+MD5 a286dfdfc9d2f96e4478935cce11aeda files/twisted-web2-0.1-tests-2.1-compat.patch 580
+MD5 62c25629229dd97ba945ad5552132b21 metadata.xml 628
+MD5 83f70d65728a0573e954541f28c76413 twisted-web2-0.1.ebuild 594

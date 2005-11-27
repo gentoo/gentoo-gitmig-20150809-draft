@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/twisted-web2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web2/ChangeLog,v 1.1 2005/11/27 22:21:34 marienz Exp $
+
+*twisted-web2-0.1 (27 Nov 2005)
+
+  27 Nov 2005; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-web2-0.1-tests-2.1-compat.patch, +metadata.xml,
+  +twisted-web2-0.1.ebuild:
+  Initial import (bug #80639)
+
