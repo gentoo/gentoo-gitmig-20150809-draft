@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-TableExtract
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.14 2005/11/25 21:38:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.15 2005/11/27 22:43:29 tgall Exp $
+
+  27 Nov 2005; Tom Gall <tgall@gentoo.org> HTML-TableExtract-1.10.ebuild:
+  stable on ppc64
 
   25 Nov 2005; Markus Rothe <corsair@gentoo.org>
   HTML-TableExtract-2.06.ebuild:

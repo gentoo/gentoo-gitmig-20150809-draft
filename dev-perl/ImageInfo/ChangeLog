@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.25 2005/10/02 12:51:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.26 2005/11/27 22:37:28 tgall Exp $
+
+  27 Nov 2005; Tom Gall <tgall@gentoo.org> ImageInfo-1.16.ebuild:
+  stable on ppc64
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> ImageInfo-1.16.ebuild:
   Mark 1.16 stable on ia64
@@ -28,7 +31,7 @@
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> ImageInfo-1.16.ebuild:
   added ~ppc64
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> ImageInfo-1.16.ebuild:
+  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> ImageInfo-1.16.ebuild:
   Stable on alpha.
 
 *ImageInfo-1.16 (08 Jan 2004)
