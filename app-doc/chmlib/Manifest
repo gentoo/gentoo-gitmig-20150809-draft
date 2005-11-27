@@ -1,12 +1,22 @@
-MD5 242efe3b215326df07f8170106004461 ChangeLog 1946
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6c5b5281314a1e00f70f2996107e7599 ChangeLog 2055
 MD5 f30eb2324e15841bcb8d7596bcab1df1 chmlib-0.31.ebuild 1473
 MD5 2095c8fbff91172458e40a3c7f4c35c4 chmlib-0.32.ebuild 1676
 MD5 7912dfce57aa45cc73b72fb4c81d5e27 chmlib-0.33.ebuild 1676
 MD5 3841b3d02541fc293ef1f6a1b42925b5 chmlib-0.35.ebuild 1783
-MD5 a5f4a4a8acdf2c295bdb3bc50b4e0d86 metadata.xml 254
-MD5 90af9e8a03ce79c4b2d1fd355df8816b chmlib-0.37.4.ebuild 1798
+MD5 955a72d6e76a91efc42b9a37eccab3f6 chmlib-0.37.4.ebuild 1798
 MD5 5e241d7b61c20016a54f95cc7538c41c files/digest-chmlib-0.31 59
 MD5 79e2ad3061c14b4285f578bc09190b55 files/digest-chmlib-0.32 60
 MD5 d946aa58575a98474e1d1f8c01195a6e files/digest-chmlib-0.33 60
 MD5 5f72df9f154b0843fcc8986396d9e476 files/digest-chmlib-0.35 60
 MD5 67c38c77c5094d9cc49d85e7e6fab8f8 files/digest-chmlib-0.37.4 62
+MD5 a5f4a4a8acdf2c295bdb3bc50b4e0d86 metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDig14csIHjyDViGQRAhgSAKCYe7C8SRWmOKsmx8EU+nkgL4KsQACfe7pY
+5YRK0+46CNnVV/po3xab9e4=
+=chZS
+-----END PGP SIGNATURE-----
