@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.29 2005/11/23 16:33:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.30 2005/11/27 09:59:00 chriswhite Exp $
+
+  27 Nov 2005; Chris White <chriswhite@gentoo.org> files/digest-opera-8.51,
+  Manifest:
+  Fixed digest issues that were causing digest failures for USE=static wrt
+  security bug #bug #113239.
 
   23 Nov 2005; Chris White <chriswhite@gentoo.org> opera-8.51.ebuild:
   Marked x86 stable for bug #113239.
