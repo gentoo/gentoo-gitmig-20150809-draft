@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.3 2005/09/23 09:03:19 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.4 2005/11/27 21:59:32 marienz Exp $
+
+*twisted-web-0.5.0-r1 (27 Nov 2005)
+
+  27 Nov 2005; Marien Zwart <marienz@gentoo.org> metadata.xml,
+  +twisted-web-0.5.0-r1.ebuild:
+  Revbump to use the new eclass (bug #80639). Set myself as maintainer.
 
   23 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
   twisted-web-0.5.0.ebuild:
