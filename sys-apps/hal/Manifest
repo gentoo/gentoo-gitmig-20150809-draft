@@ -1,4 +1,4 @@
-MD5 fbf61b94d41914efd0c95d4b3d492d2e ChangeLog 7734
+MD5 5ed9742d08b98d3b16f0385c666441fa ChangeLog 7866
 MD5 40a7b45f127bfdcacaa142660ad8b5f9 files/0.5-hald.rc 537
 MD5 ada3b2801b82813b4f10fd6f6caf9d6f files/digest-hal-0.4.5-r2 62
 MD5 3031a9fe74f43859c313d5f3076e68cd files/digest-hal-0.4.7-r2 62
@@ -20,6 +20,6 @@ MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
 MD5 2cf5b3c9219c87b1d9aee01f4f5f19bb hal-0.4.5-r2.ebuild 3118
 MD5 1a146b79d18a689bbc8a96b81f74c7f6 hal-0.4.7-r2.ebuild 3455
 MD5 8420501e80e55b313d30f4e0309c08dd hal-0.4.8.ebuild 3419
-MD5 4b5c3135d20b391903d7a8e2626313dd hal-0.5.4.ebuild 3443
+MD5 2744acb42095e55b428f68bff0d9c2ec hal-0.5.4.ebuild 3778
 MD5 c587e7d02a20b445d6b164a8c71fc1da hal-0.5.5.1.ebuild 3937
 MD5 a60767d83157413d549c69b98fac962c metadata.xml 303
