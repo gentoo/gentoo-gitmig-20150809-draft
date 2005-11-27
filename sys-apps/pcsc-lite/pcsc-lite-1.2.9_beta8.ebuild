@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta8.ebuild,v 1.1 2005/10/04 23:55:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta8.ebuild,v 1.2 2005/11/27 18:05:29 vapier Exp $
 
 STUPID_NUM=1133
 MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://www.linuxnet.com/middle.html"
-SRC_URI="https://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.gz"
+SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
