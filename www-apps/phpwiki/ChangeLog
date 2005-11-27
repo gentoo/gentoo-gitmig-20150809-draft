@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/phpwiki
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.13 2005/11/27 15:32:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.14 2005/11/27 16:03:16 rl03 Exp $
+
+*phpwiki-1.3.11_p1 (27 Nov 2005)
+*phpwiki-1.2.10 (27 Nov 2005)
+
+  27 Nov 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-1.3-en.txt,
+  files/postinstall-en.txt, +phpwiki-1.2.10.ebuild,
+  +phpwiki-1.3.11_p1.ebuild:
+  Version bumps
 
   27 Nov 2005; Renat Lumpau <rl03@gentoo.org> -phpwiki-1.3.10.ebuild,
   -phpwiki-1.3.10-r1.ebuild:

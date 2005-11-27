@@ -1,19 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 05402f09b238564a595c82bc530e7c16 phpwiki-1.3.11_p1.ebuild 1081
 MD5 0e0656e94faa81334e0b0e937dc06b3f phpwiki-1.3.10-r2.ebuild 1229
-MD5 d65df6cc2c1d5658902a1c119f7bf1eb ChangeLog 1897
+MD5 7870ec11a758a71d9d638a7f791ef3e4 phpwiki-1.2.10.ebuild 863
+MD5 690383a77d247fcc928f2207d6486f80 ChangeLog 2135
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 34741d64857cb87b65ea9400953237d8 phpwiki-1.2.4.ebuild 803
-MD5 c913f380e9beddcca756ea5d0c6fd85f files/postinstall-en.txt 149
+MD5 0f4fc17101f4550723b32e758d195217 files/digest-phpwiki-1.2.10 66
+MD5 ff52ad7411357bb8e96d7f1c99707247 files/postinstall-en.txt 157
 MD5 d6a81010992f94a63b01bf0eb9b37b43 files/digest-phpwiki-1.3.10-r2 132
-MD5 4bd0a80d3c53ac5861e9a63e2540f996 files/postinstall-1.3-en.txt 252
+MD5 c4ad4bf7460c92c29964e31e459e4a47 files/digest-phpwiki-1.3.11_p1 69
+MD5 ff24b9aaad40f0010b48db737984659d files/postinstall-1.3-en.txt 248
 MD5 3259bf9dc4bef8f25c35478900932b96 files/phpwiki-1.3.10-xmlrpc.patch 959
 MD5 61ddc0899b2191583eb5755c954e5f14 files/digest-phpwiki-1.2.4 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDidGTEzitwsaoONoRAu07AJ4rEeMe/QWasq6aOYP4l1TVnajGJgCcCXjg
-gxzzKiuUT4yPHY2Of3NFKv0=
-=EEM9
+iD8DBQFDidjPEzitwsaoONoRAqa0AJ9fupqnWF/9eLWFtexPVr4JeNj3EgCeMx07
+WSkTx+w2o8WQtq7iWk+Jn3M=
+=Nl81
 -----END PGP SIGNATURE-----
