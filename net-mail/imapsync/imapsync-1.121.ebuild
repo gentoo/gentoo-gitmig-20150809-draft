@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.121.ebuild,v 1.3 2005/07/07 13:56:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.121.ebuild,v 1.4 2005/11/27 12:12:25 slarti Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linux-france.org/prj/imapsync/dist/${P}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="ssl"
 
 DEPEND=">=dev-perl/Mail-IMAPClient-2.1.4"
@@ -18,6 +18,8 @@ DEPEND=">=dev-perl/Mail-IMAPClient-2.1.4"
 RDEPEND="${DEPEND}
 	perl-core/Digest-MD5
 	dev-perl/Digest-HMAC"
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
