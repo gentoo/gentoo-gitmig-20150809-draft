@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_pre2.ebuild,v 1.2 2005/11/21 23:34:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0.ebuild,v 1.1 2005/11/27 09:46:06 brix Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ NVCLOCK_VERSION="0.8b"
 
 DESCRIPTION="CPU Frequency Daemon"
 HOMEPAGE="http://cpufreqd.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 		nvidia? ( http://www.linuxhardware.org/nvclock/nvclock${NVCLOCK_VERSION}.tar.gz )"
 
 LICENSE="GPL-2"
@@ -45,7 +45,7 @@ src_compile() {
 		config="--enable-nvclock=${WORKDIR}/nvclock${NVCLOCK_VERSION}"
 	fi
 
-	cd ${S}
+	cd "${S}"
 	econf \
 		$(use_enable acpi) \
 		$(use_enable apm) \
