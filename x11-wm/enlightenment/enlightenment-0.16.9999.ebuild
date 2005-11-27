@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.13 2005/11/27 17:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.14 2005/11/27 17:57:44 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
@@ -48,6 +48,7 @@ src_compile() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable esd sound) \
+		$(use_enable xinerama) \
 		$(use_enable xrandr) \
 		--enable-upgrade \
 		--enable-hints-ewmh \
@@ -60,7 +61,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die
-	mv "${D}"/usr/bin/{,e}dox
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/enlightenment
 
