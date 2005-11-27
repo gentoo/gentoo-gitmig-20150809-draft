@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim/aim-1.5.286.ebuild,v 1.5 2005/11/26 09:50:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim/aim-1.5.286.ebuild,v 1.6 2005/11/27 02:09:46 mr_bones_ Exp $
 
 IUSE=""
 DESCRIPTION="AOL's Instant Messenger client"
@@ -15,7 +15,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 		virtual/x11"
 RDEPEND="${DEPEND}
 		amd64? ( >=app-emulation/emul-linux-x86-gtklibs-2.1 )"
-		
+
 S="${WORKDIR}"
 
 pkg_nofetch() {
