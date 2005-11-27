@@ -1,4 +1,6 @@
 MD5 359834647a14ddefe1565af8462864c6 db4o-4.6.ebuild 702
 MD5 3df553e94423a0075a61a43a56dc6726 metadata.xml 256
-MD5 e974410dcc335ed9bc9f3bf27cca370b ChangeLog 354
+MD5 50ea992d17818c52e5570a1dc7dcaebc db4o-5.0.ebuild 797
+MD5 5afc757cee77a7ed065d8deebe883c4b ChangeLog 457
 MD5 1a726b071a51be9f4e9611e6fe4ba1a6 files/digest-db4o-4.6 66
+MD5 33d3287cfac9f1c6614b424849f9c9d6 files/digest-db4o-5.0 66

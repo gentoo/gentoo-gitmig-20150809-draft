@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/db4o
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.1 2005/11/02 09:02:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.2 2005/11/27 01:27:18 latexer Exp $
+
+*db4o-5.0 (27 Nov 2005)
+
+  27 Nov 2005; Peter Johanson <latexer@gentoo.org> +db4o-5.0.ebuild:
+  Bump.
 
 *db4o-4.6 (02 Nov 2005)
 
