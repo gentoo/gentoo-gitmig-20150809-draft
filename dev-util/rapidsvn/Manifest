@@ -1,23 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d759638f2232085f6f96eec86873e006 ChangeLog 3562
+MD5 848c072455ccff6904309667f7cab08f ChangeLog 3960
 MD5 33b2f551a1f5109276382650f2bb1e6f files/digest-rapidsvn-0.6.0-r1 66
 MD5 42cbed2e361c2977189f54e6ccd1c2de files/digest-rapidsvn-0.7.0 66
 MD5 700515264c7cf5aa0b3bf855fad68369 files/digest-rapidsvn-0.7.1 66
 MD5 fcc9837a24e36736d6b0e52321ae4de0 files/digest-rapidsvn-0.8.0 66
-MD5 2d19a48e0fa6f6a0a559e33a92d13568 files/digest-rapidsvn-0.9.0 66
+MD5 2d19a48e0fa6f6a0a559e33a92d13568 files/digest-rapidsvn-0.9.0-r1 66
+MD5 9b18b4f2cf99168d83defc3f7ba49977 files/nodoc-configure.patch.gz 4980
 MD5 8fbb41ca751a2e4336d85f9d0bcae422 files/svncpp_0.6.1_link.patch 304
 MD5 35d9a0711821962697d1e9a351f7ea58 metadata.xml 518
-MD5 3d686745b46bfb55e7ea68e18bb85d23 rapidsvn-0.6.0-r1.ebuild 1957
-MD5 35cd630c5e8475516aac7cee396aae76 rapidsvn-0.7.0.ebuild 2058
-MD5 e1e9e99dea796ca69dde7a6a50075459 rapidsvn-0.7.1.ebuild 2058
-MD5 1905a8c86ae8aa1b609e970a9952948e rapidsvn-0.8.0.ebuild 2196
-MD5 6aec7bc9019225bd6414584d189b7eb1 rapidsvn-0.9.0.ebuild 2198
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDg3QjwUpWvClEHQoRAsOEAKCK8xgFe+SHTiMgAM7UAK58OpYLlQCbB+q6
-65ITr9mJULn9BPhgTacuU60=
-=e4lK
------END PGP SIGNATURE-----
+MD5 b62f525a500db5984abccc595ed713d8 rapidsvn-0.6.0-r1.ebuild 1956
+MD5 03c5c5fc5d96a77119a0e2d62e6bfe6b rapidsvn-0.7.0.ebuild 2057
+MD5 ca580a3a7901b16078d1f470b8aeb912 rapidsvn-0.7.1.ebuild 2057
+MD5 a7c307ae8fda4cdf6bfbe028b3098e50 rapidsvn-0.8.0.ebuild 2200
+MD5 236d15d1a8a344c7e63bd6ae720df85b rapidsvn-0.9.0-r1.ebuild 2351
