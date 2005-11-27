@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/clock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.1 2005/10/09 13:59:28 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.2 2005/11/27 21:20:39 svyatogor Exp $
+
+*clock-2.1.6 (27 Nov 2005)
+
+  27 Nov 2005; Sergey Kuleshov <svyatogor@gentoo.org> +clock-2.1.6.ebuild:
+  New version, which is compatible with rox-clib >= 2.1.6. by Peter Hyman
 
 *clock-2.1.5 (09 Oct 2005)
 
