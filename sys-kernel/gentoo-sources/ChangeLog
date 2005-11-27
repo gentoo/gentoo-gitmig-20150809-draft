@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.218 2005/11/27 12:24:46 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.219 2005/11/27 23:51:52 kloeri Exp $
+
+  28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gentoo-sources-2.6.14-r3.ebuild:
+  ~alpha keyword.
 
   27 Nov 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.4.31-r1.ebuild:
