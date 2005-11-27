@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.126 2005/11/17 17:32:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.127 2005/11/27 01:54:59 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -506,7 +506,12 @@ vim_src_compile() {
 				die "emake failed"
 			fi
 		else
-			emake || die "emake failed"
+			if [[ $(get_major_version ) -ge 7 ]] ; then
+				# parallel make temporarily b0rked -- ciaranm, 20051127
+				emake -j1 || die "emake failed"
+			else
+				emake || die "emake failed"
+			fi
 		fi
 	fi
 
