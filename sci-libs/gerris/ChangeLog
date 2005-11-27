@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/gerris
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.1 2005/11/27 12:28:59 markusle Exp $
+
+*gerris-0.8.0 (27 Nov 2005)
+
+  27 Nov 2005; Markus Dittrich <markusle@gentoo.org> +metadata.xml,
+  +gerris-0.8.0.ebuild:
+  Initial import (fixes bug #102323). Many thanks to Tim Cera
+  <timcera@earthlink.net> for his ebuild.
+
