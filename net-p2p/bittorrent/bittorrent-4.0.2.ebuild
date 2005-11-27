@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.6.ebuild,v 1.1 2005/10/13 17:20:34 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.2.ebuild,v 1.11 2005/11/27 20:26:38 sekretarz Exp $
 
-inherit distutils fdo-mime eutils
+inherit distutils
 
 MY_P="${P/bittorrent/BitTorrent}"
 #MY_P="${MY_P/}"
@@ -14,7 +14,7 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ppc sparc x86"
 IUSE="gtk"
 
 RDEPEND="gtk? (
@@ -22,7 +22,6 @@ RDEPEND="gtk? (
 		>=dev-python/pygtk-2.4
 	)
 	>=dev-lang/python-2.3
-	>=dev-python/pycrypto-2.0
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
 	app-arch/gzip
@@ -36,16 +35,13 @@ PYTHON_MODNAME="BitTorrent"
 src_install() {
 	distutils_src_install
 	if ! use gtk; then
-		rm ${D}/usr/bin/bittorrent
+		rm ${D}/usr/bin/*gui.py
 	fi
 	dohtml redirdonate.html
 	dodir etc
 	cp -pPR /etc/mailcap ${D}/etc/
 
-	mv ${D}/usr/share/doc/${MY_P}/* ${D}/usr/share/doc/${P}/
-	rm -fr ${D}/usr/share/doc/${MY_P}
-
-	MAILCAP_STRING="application/x-bittorrent; /usr/bin/bittorrent '%s'; test=test -n \"\$DISPLAY\""
+	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
 
 	if use gtk; then
 		if [ -n "`grep 'application/x-bittorrent' ${D}/etc/mailcap`" ]; then
@@ -62,22 +58,18 @@ src_install() {
 		sed -i '/btdownloadgui/d' ${D}/etc/mailcap
 	fi
 
-	if use gtk ; then
-		cp ${D}/usr/share/pixmaps/${MY_P}/bittorrent.ico ${D}/usr/share/pixmaps/
-		make_desktop_entry "bittorrent" "BitTorrent" \
-			/usr/share/pixmaps/bittorrent.ico "Network" "/usr/bin/"
-	fi
+	insinto /usr/share/bittorrent
+	doins ${FILESDIR}/favicon.ico
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/bttrack.conf bttrack
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/bttrack.rc-4.1 bttrack
+	newexe ${FILESDIR}/bttrack.rc bttrack
 }
 
 pkg_postinst() {
-	einfo "Remember that BitTorrent has changed file naming scheme"
-	einfo "To run BitTorrent just execute /usr/bin/bittorrent"
+	einfo "BitTorrent has changed to the BitTorrent Open Source License"
+	einfo ">> http://www.bittorrent.com/license/"
 	distutils_pkg_postinst
-	fdo-mime_desktop_database_update
 }
