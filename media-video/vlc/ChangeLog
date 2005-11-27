@@ -1,6 +1,17 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.117 2005/11/27 12:06:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.118 2005/11/27 15:00:52 flameeyes Exp $
+
+*vlc-0.8.4 (27 Nov 2005)
+
+  27 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -vlc-0.8.4_beta3.ebuild, +vlc-0.8.4.ebuild:
+  New version, 0.8.4 final: closed bug #113590; applied formats patch by
+  solar; transformed sed lines in patches; fixed tests for avahi and hal to
+  avoid misunderstanding if someone tries to enable them; build DTS support as
+  plugin instead of builtin; removed comments inside the code as the
+  maintainer's guide carry all the needed informations; old for deprecated
+  interfaces are removed from upstream's package.
 
   27 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4_beta3.ebuild:
   Remove bonjour support or vlc would fail if avahi 0.6 is installed. See bug

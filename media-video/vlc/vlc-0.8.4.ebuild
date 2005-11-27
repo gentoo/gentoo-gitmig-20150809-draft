@@ -1,15 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta3.ebuild,v 1.3 2005/11/27 12:06:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.1 2005/11/27 15:00:52 flameeyes Exp $
 
-inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
+inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
 MY_P="${P/_beta/-test}"
 
-PATCHLEVEL="7"
+PATCHLEVEL="8"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
-SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.bz2
+
+[[ ${MY_P} != "${P}" ]] && \
+	SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.bz2" \
+	|| SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
+
+SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -36,8 +41,8 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 			>=media-libs/libmatroska-0.7.5 )
 		mp3? ( media-libs/libmad )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
-		a52? ( media-libs/a52dec )
-		dts? ( media-libs/libdts )
+		a52? ( >=media-libs/a52dec-0.7.4-r3 )
+		dts? ( >=media-libs/libdts-0.0.2-r3 )
 		flac? ( media-libs/flac )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
 		vorbis? ( media-libs/libvorbis )
@@ -85,6 +90,8 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.6*
 	sys-devel/autoconf
+	sys-devel/libtool
+	sys-devel/autoconf
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
@@ -102,22 +109,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	# We only have glide v3 in portage
 	cd ${S}
 
-	EPATCH_EXCLUDE="050_all_nomozconfig.patch 030_all_amd64-cpudetect.patch
-		090_all_samba-3.0.20.patch 040_all_cast.patch 070_all_debug.patch"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-
 	AT_M4DIR="m4" eautoreconf
-
-	sed -i -e \
-		"s:/usr/include/glide:/usr/include/glide3:;s:glide2x:glide3:" \
-		configure || die "sed glide failed."
-
-	# Fix the default font
-	sed -i -e "s:/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf:/usr/share/fonts/ttf-bitstream-vera/VeraBd.ttf:" modules/misc/freetype.c
 }
 
 src_compile () {
@@ -151,8 +146,6 @@ src_compile () {
 		myconf="${myconf} --disable-ffmpeg"
 	fi
 
-	# Portaudio support needs at least v19
-	# pth (threads) support is quite unstable with latest ffmpeg/libmatroska.
 	econf \
 		$(use_enable altivec) \
 		$(use_enable unicode utf8) \
@@ -221,7 +214,7 @@ src_compile () {
 		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
 	fi
 
-	emake -j1 || die "make of VLC failed"
+	emake || die "make of VLC failed"
 }
 
 src_install() {
@@ -230,12 +223,8 @@ src_install() {
 	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
-	rm -r ${D}/usr/share/vlc/vlc*.png ${D}/usr/share/vlc/vlc*.xpm ${D}/usr/share/vlc/vlc*.ico \
-		${D}/usr/share/vlc/kvlc*.png ${D}/usr/share/vlc/kvlc*.xpm ${D}/usr/share/vlc/qvlc*.png \
-		${D}/usr/share/vlc/qvlc*.xpm ${D}/usr/share/vlc/gvlc*.png ${D}/usr/share/vlc/gvlc*.xpm \
-		${D}/usr/share/vlc/gvlc*.ico ${D}/usr/share/vlc/gnome-vlc*.png \
-		${D}/usr/share/vlc/gnome-vlc*.xpm ${D}/usr/share/vlc/skins2 \
-		${D}/usr/share/doc/vlc
+	rm -rf ${D}/usr/share/vlc/skins2 ${D}/usr/share/doc/vlc \
+		${D}/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
 
 	for res in 16 32 48; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
