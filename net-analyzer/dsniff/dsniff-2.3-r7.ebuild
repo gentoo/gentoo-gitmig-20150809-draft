@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r7.ebuild,v 1.1 2005/10/15 09:34:08 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r7.ebuild,v 1.2 2005/11/27 02:44:14 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://monkey.org/~dugsong/${PN}/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 LICENSE="DSNIFF"
 SLOT="0"
-KEYWORDS="~amd64 ~alpha ~ppc ~x86"
+KEYWORDS="~amd64 ~alpha ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libpcap
@@ -27,15 +27,15 @@ src_unpack() {
 	# can find them
 	# Working around dsniff b0rky config script
 	# Data stuff goes into /etc/dsniff
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-libnet-1.0.patch
 	sed -i \
 		-e 's:-ldb:-ldb -lpthread:' \
 		-e "s:lib':':" \
 		configure || die "sed configure"
 	sed -i 's:-DDSNIFF_LIBDIR=\\\"$(libdir)/\\\"::' Makefile.in || die "sed makefile"
 	sed -i 's:/usr/local/lib:/etc/dsniff:' pathnames.h || die "sed pathnames"
-	epatch ${FILESDIR}/${PV}-makefile.patch
+	epatch "${FILESDIR}"/${PV}-makefile.patch
 
 	# Allow amd64 compilation
 	append-ldflags -lresolv
@@ -46,8 +46,8 @@ src_unpack() {
 }
 
 src_install() {
-	make install install_prefix=${D} || die
+	make install install_prefix="${D}" || die
 	dodir /etc/dsniff
-	mv ${D}/usr/{dnsspoof.hosts,dsniff.{magic,services}} ${D}/etc/dsniff/
+	mv "${D}"/usr/{dnsspoof.hosts,dsniff.{magic,services}} "${D}"/etc/dsniff/
 	dodoc CHANGES README TODO
 }

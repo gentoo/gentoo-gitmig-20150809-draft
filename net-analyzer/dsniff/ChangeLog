@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.21 2005/10/15 09:34:08 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.22 2005/11/27 02:44:14 vanquirius Exp $
+
+  27 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> -dsniff-2.3-r5.ebuild,
+  -dsniff-2.3-r6.ebuild, dsniff-2.3-r7.ebuild:
+  Mark 2.3-r7 x86 stable, remove old ebuilds.
 
 *dsniff-2.3-r7 (15 Oct 2005)
 
