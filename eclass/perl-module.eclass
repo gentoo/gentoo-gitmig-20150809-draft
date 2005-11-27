@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.79 2005/07/24 13:14:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.80 2005/11/27 22:22:22 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -10,7 +10,7 @@
 
 
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
-	src_compile src_install src_test
+	src_compile src_install src_test perlinfo fixlocalpod updatepod
 
 # 2005.04.28 mcummings
 # Mounting problems with src_test functions has forced me to make the
@@ -102,11 +102,12 @@ perl-module_src_prep() {
 			eerror
 			die
 		else
-			perl ${S}/Build.PL installdirs=vendor destdir=${D}
+			perl ${S}/Build.PL installdirs=vendor destdir=${D} libdoc=
 		fi
 	else
 		einfo "Using ExtUtils::MakeMaker"
-		perl Makefile.PL ${myconf} \
+		#perl Makefile.PL ${myconf} \
+		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
 	fi
 }
@@ -118,7 +119,7 @@ perl-module_src_compile() {
 	if [ -z ${BUILDER_VER} ]; then
 		make ${mymake} || die "compilation failed"
 	else
-		perl ${S}/Build build
+		perl ${S}/Build build 
 	fi
 
 }
