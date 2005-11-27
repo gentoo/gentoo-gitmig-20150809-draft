@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.234 2005/11/26 14:35:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.235 2005/11/27 14:59:40 gmsoft Exp $
+
+  27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdebase-3.4.3-r1.ebuild:
+  Stable on hppa.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kdebase-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
