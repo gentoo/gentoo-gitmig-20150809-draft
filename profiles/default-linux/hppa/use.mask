@@ -1,3 +1,7 @@
+# 27 Nov 2005 Guy Martin <gmsoft@gentoo.org>
+# gccxml doesn't build and boost depend on it with this use
+pyste
+
 # 25 Jul 2005 Guy Martin <gmsoft@gentoo.org>
 # lm_sensors not supported on hppa and ieee1394 not tested
 lm_sensors
