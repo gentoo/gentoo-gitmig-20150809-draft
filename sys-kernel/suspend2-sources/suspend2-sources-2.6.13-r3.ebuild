@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.13-r3.ebuild,v 1.1 2005/09/09 19:05:43 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.13-r3.ebuild,v 1.2 2005/11/27 17:27:19 brix Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -33,8 +33,8 @@ RDEPEND="${RDEPEND}
 		>=sys-power/hibernate-script-1.09"
 
 K_EXTRAEINFO="If there are issues with this kernel, please direct any
-queries to the suspend2-devel mailing list:
-http://lists.suspend2.net/cgi-bin/mailman/listinfo/suspend2-devel"
+queries to the suspend2-users mailing list:
+http://lists.suspend2.net/mailman/listinfo/suspend2-users/"
 
 pkg_setup() {
 	if use sparc; then
