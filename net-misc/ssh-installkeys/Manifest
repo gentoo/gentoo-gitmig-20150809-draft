@@ -1,4 +1,14 @@
-MD5 68c174c71ef608e73f69d635e9b63834 ssh-installkeys-1.3.ebuild 736
-MD5 3950975b55a0112341385de7089b456a ChangeLog 670
-MD5 c43fa88084625a4dd045b898e9971ad8 metadata.xml 557
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e6b8d5d32d5570b5bd327a52960dfdf4 ChangeLog 782
 MD5 3d1de513382fa874706922e521e4e4ec files/digest-ssh-installkeys-1.3 70
+MD5 c43fa88084625a4dd045b898e9971ad8 metadata.xml 557
+MD5 501bdee3a629eb190cf248c08a9b487e ssh-installkeys-1.3.ebuild 741
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiZLvCHk4+ZoBpvsRAr3NAJ4xoy7ux3obruW/NJ4QUlUiPCVxaQCfeNEZ
+INHSWpji7WZ1Mt1DfM4TNYg=
+=H825
+-----END PGP SIGNATURE-----
