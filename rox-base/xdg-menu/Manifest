@@ -1,4 +1,6 @@
 MD5 71a793179acfc3e6cd2392a88d833aa4 xdg-menu-1.0.ebuild 569
 MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
-MD5 ffc7cef4116d1a7f0b3fbc833a326e0e ChangeLog 365
+MD5 8ec73aae1a46ccbb8a82ae73fdef9c54 ChangeLog 509
+MD5 41c2cb3c4d92be55cdc6061959825a97 xdg-menu-1.1.ebuild 569
 MD5 2740a88675411a36f7b5ddaf23409322 files/digest-xdg-menu-1.0 60
+MD5 6ce5fc33ba5bb03e896c318cb3a15155 files/digest-xdg-menu-1.1 60
