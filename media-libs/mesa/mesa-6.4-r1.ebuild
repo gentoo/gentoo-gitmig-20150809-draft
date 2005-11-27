@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4-r1.ebuild,v 1.2 2005/11/16 05:05:08 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4-r1.ebuild,v 1.3 2005/11/27 20:18:19 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -46,7 +46,9 @@ S="${WORKDIR}/${MY_P}"
 # Think about: ggi, svga, fbcon, no-X configs
 
 pkg_setup() {
-	if use x86; then
+	if [[ ${KERNEL} == "FreeBSD" ]]; then
+		CONFIG="freebsd"
+	elif use x86; then
 		CONFIG="linux-dri-x86"
 	# amd64 people need to look at this file to deal with lib64 issues, unless
 	# they're fine with hardcoded lib64.
