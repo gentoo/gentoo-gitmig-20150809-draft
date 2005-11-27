@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.20 2005/01/01 13:36:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.21 2005/11/27 23:13:36 betelgeuse Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.xemacs.org/"
 SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${REAL_P}.tar.gz
 	http://ftp.xemacs.org/pub/packages/efs-${EFS}-pkg.tar.gz
 	http://ftp.xemacs.org/pub/packages/xemacs-base-${BASE}-pkg.tar.gz
-	http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz"
+	mule? ( http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
