@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.7.0_beta1.ebuild,v 1.3 2005/11/10 14:00:51 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.7.0_rc1.ebuild,v 1.1 2005/11/27 01:56:33 rl03 Exp $
 
 inherit eutils webapp
 
-MY_PV=${PV/_beta/-beta}
+MY_PV=${PV/_rc/-rc}
 MY_P=phpMyAdmin-${MY_PV}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
