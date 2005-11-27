@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r2.ebuild,v 1.1 2005/11/20 17:06:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r2.ebuild,v 1.2 2005/11/27 14:24:26 grobian Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ src_install() {
 		"${WORKDIR}"/gentoo/tcsh-aliases \
 		"${WORKDIR}"/gentoo/tcsh-complete \
 		"${WORKDIR}"/gentoo/tcsh-gentoo_legacy \
-		"${WORKDIR}"/gentoo/tcsh.config .tcsh.config
+		"${WORKDIR}"/gentoo/tcsh.config
 }
 
 pkg_postinst() {
