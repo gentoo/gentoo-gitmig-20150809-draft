@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.53 2005/11/22 01:26:42 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.54 2005/11/27 06:10:37 compnerd Exp $
+
+  27 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> hal-0.5.5.1.ebuild:
+  Adding check for CONFIG_KOBJECT_UEVENT to resolve Bug #112186. Thanks to
+  Marcel Martin for diagnosing the bug.
 
 *hal-0.5.5.1 (22 Nov 2005)
 

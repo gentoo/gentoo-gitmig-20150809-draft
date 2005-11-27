@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1.ebuild,v 1.1 2005/11/22 01:26:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1.ebuild,v 1.2 2005/11/27 06:10:37 compnerd Exp $
 
 inherit eutils linux-info
 
@@ -30,11 +30,25 @@ DEPEND="${RDEPEND}
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS="haldaemon,disk,cdrom,cdrw,floppy,usb"
 
+function notify_uevent() {
+	eerror
+	eerror "You must enable Kernel Userspace Events in your kernel."
+	eerror "This can be set under 'General Setup'.  It is marked as"
+	eerror "CONFIG_KOBJECT_UEVENT in the config file."
+	eerror
+	ebeep 5
+
+	die "KOBJECT_UEVENT is not set"
+}
+
 pkg_setup() {
 	linux-info_pkg_setup
 
 	kernel_is ge 2 6 13 \
 		|| die "You need a 2.6.13 or newer kernel to run this package"
+
+	linux_chkconfig_present KOBJECT_UEVENT \
+		|| notify_uevent
 
 	if use acpi ; then
 		linux_chkconfig_present PROC_FS \
