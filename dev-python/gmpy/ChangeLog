@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.1 2005/11/02 12:48:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.2 2005/11/27 23:36:26 sbriesen Exp $
+
+*gmpy-1.01 (27 Nov 2005)
+
+  27 Nov 2005; Stefan Briesenick <sbriesen@gentoo.org> +gmpy-1.01.ebuild:
+  version bump. solving #113728.
 
 *gmpy-1.0 (02 Nov 2005)
 
