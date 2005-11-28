@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/gwine-0.10.1.ebuild,v 1.2 2005/07/18 09:01:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/gwine-0.10.1.ebuild,v 1.3 2005/11/28 12:10:12 mcummings Exp $
 
-inherit gnome2 perl-module
+inherit gnome2 perl-app
 
 DESCRIPTION="Gnome application to manage your wine cellar"
 HOMEPAGE="http://home.gna.org/gwine/"

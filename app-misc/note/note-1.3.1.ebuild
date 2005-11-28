@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.3 2005/08/27 20:44:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.4 2005/11/28 12:09:19 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 DESCRIPTION="a note taking perl program"
 HOMEPAGE="http://www.daemon.de/NOTE"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="crypt dbm general mysql text"
 
-# inherit perl-module cause depend on dev-lang/perl
+# inherit perl-app cause depend on dev-lang/perl
 DEPEND="dev-perl/TermReadKey
 	dev-perl/Term-ReadLine-Perl
 	perl-core/Storable

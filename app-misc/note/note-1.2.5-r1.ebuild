@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.2.5-r1.ebuild,v 1.8 2005/06/05 11:53:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.2.5-r1.ebuild,v 1.9 2005/11/28 12:09:19 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 DESCRIPTION="a note taking perl program"
 HOMEPAGE="http://www.daemon.de/NOTE"
