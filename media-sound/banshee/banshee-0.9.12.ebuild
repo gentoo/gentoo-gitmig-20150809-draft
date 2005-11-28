@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.2 2005/11/27 22:34:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.3 2005/11/28 03:52:38 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -56,8 +56,17 @@ pkg_setup() {
 	fi
 	G2CONF="${G2CONF} --disable-xing"
 }
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
+	# Fix icon
+	sed -i -e 's/TryExec=banshee %U/#TryExec=banshee %U/g' \
+	data/banshee.desktop.in.in || die "sed failed"
+	sed -i -e 's/Icon=music-player-banshee/Icon=music-player-banshee.png/g' \
+	data/banshee.desktop.in.in || die "sed failed"
+}
 src_compile() {
 	gnome2_src_configure
-	emake -j1 || "compile failed"
+	emake -j1 || "make failed"
 }
