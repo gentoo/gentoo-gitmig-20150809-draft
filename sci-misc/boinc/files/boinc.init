@@ -39,7 +39,7 @@ start() {
 
 	setsid start-stop-daemon --quiet --start  --chdir ${RUNTIMEDIR} \
 		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
-		--nicelevel ${NICELEVEL} -- ${ARGS} > ${LOGFILE} 2>&1 &
+		--nicelevel ${NICELEVEL} -- ${ARGS} >> ${LOGFILE} 2>&1 &
 
 	eend $?
 }

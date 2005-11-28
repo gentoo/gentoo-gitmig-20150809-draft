@@ -1,6 +1,14 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.14 2005/10/29 22:49:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.15 2005/11/28 22:07:45 cryos Exp $
+
+*boinc-4.72.20050813-r3 (28 Nov 2005)
+
+  28 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/boinc-4.72.20050813-gcc4-fix.patch, files/boinc.init,
+  -boinc-4.72.20050813-r2.ebuild, +boinc-4.72.20050813-r3.ebuild:
+  Fix to init script to append log output, bug 103250. Also added GCC 4 fix,
+  thanks to Dario Birtic <dariobirtic@gmx.net>, closes bug 112133.
 
 *boinc-4.72.20050813-r2 (29 Oct 2005)
 

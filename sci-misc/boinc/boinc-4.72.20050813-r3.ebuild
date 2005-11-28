@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r2.ebuild,v 1.1 2005/10/29 22:49:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.1 2005/11/28 22:07:45 cryos Exp $
 
 inherit eutils
 
@@ -41,6 +41,9 @@ DEPEND=">=sys-devel/gcc-3.0.4
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# GCC 4 patch, bug 112133.
+	epatch ${FILESDIR}/${P}-gcc4-fix.patch
 
 	# point to a proper mouse device
 	sed -e "s:/dev/mouse:/dev/input/mice:g" -i client/hostinfo_unix.C || die

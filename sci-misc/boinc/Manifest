@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e3321983c30510a03c71d40a70e02ddf ChangeLog 3249
-MD5 8bced0625f85d6d134660ae998e9653f boinc-4.72.20050813-r2.ebuild 2254
+MD5 b21fd4f2428430014b25560516dc969d ChangeLog 3614
+MD5 2e4104084577e624961e3622335525e5 boinc-4.72.20050813-r3.ebuild 2323
+MD5 603e1bde6bb2873a014b6b8984e21564 files/boinc-4.72.20050813-gcc4-fix.patch 315
 MD5 5418cddcce4923a19fdf0c6bafea11bf files/boinc.conf 440
-MD5 608dcbb56aaca223e6744d16d223bb50 files/boinc.init 1731
-MD5 54ee39e6bbb50b705cb5fac638568d8b files/digest-boinc-4.72.20050813-r2 80
+MD5 2e064f401619e4905a21342edec0f4e7 files/boinc.init 1732
+MD5 54ee39e6bbb50b705cb5fac638568d8b files/digest-boinc-4.72.20050813-r3 80
 MD5 4b2e94b92c84896e0204d9e7710f9c6a metadata.xml 420
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDY/yEntT9W3vfTuoRAu0DAJ9EKubd1r1BPk/inYV/Js0G8gJ1dACgmZsd
-99lnOT8VEmFSY7IL5leFkLM=
-=+VVi
+iD8DBQFDi3/DntT9W3vfTuoRAiEUAJ9l7bsdiyYa1RROw1J7N0hbs7aFgwCcDizX
+CtkXaMyXP30gyNm9XaF/uIY=
+=Fm5K
 -----END PGP SIGNATURE-----
