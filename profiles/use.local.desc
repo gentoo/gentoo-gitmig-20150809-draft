@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1584 2005/11/28 18:29:04 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1585 2005/11/28 19:40:22 peitolm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -524,6 +524,7 @@ mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain na
 mail-mta/exim:exiscan - Patch providing support for content scanning backward-compatibility
 mail-mta/exim:exiscan-acl - Patch providing support for content scanning
 mail-mta/exim:lmtp - Adds support for lmtp
+mail-mta/exim:mbx - Adds support for  UW's mbx format 
 mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
 mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
