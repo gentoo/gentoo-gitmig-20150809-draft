@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2cde084aba63860c1fef5261aebc1f11 ChangeLog 3368
 MD5 846425777c3e9f5dcb205262a1548d7a files/digest-nkf-2.0.4 58
 MD5 36914cd105ffe822ba5703b3c521be30 files/digest-nkf-2.0.5-r1 58
@@ -5,3 +8,10 @@ MD5 7051b70711c1c06f04b58b13d41437ee files/nkf-python.patch 5459
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 b83fb86bd1bec293d802f4217ae2b304 nkf-2.0.4.ebuild 1027
 MD5 bc5b24c355a080625bee420e10e148d1 nkf-2.0.5-r1.ebuild 1267
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDivMttG5z4I8BtQoRAp2+AJipYLaj8k56UWLwHsVvYJrWbJLcAKCGMUTO
+aoDmGEG/U7oXRZ8NJZcrOA==
+=BPnb
+-----END PGP SIGNATURE-----
