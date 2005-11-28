@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.9 2005/08/23 19:26:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.10 2005/11/28 13:13:26 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 IUSE="cdr"
 MY_PV=${PV}-1
@@ -35,7 +35,7 @@ src_compile() {
 	cd ${WORKDIR}/pxesconfig-${PV}
 	SRC_PREP="yes"
 	perl Makefile.PL PREFIX=${D}/usr INSTALLDIRS=vendor DESTDIR=${D}
-	perl-module_src_compile || die
+	perl-app_src_compile || die
 }
 
 src_install() {

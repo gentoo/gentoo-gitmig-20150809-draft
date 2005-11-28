@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.4.ebuild,v 1.9 2005/05/01 18:16:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.4.ebuild,v 1.10 2005/11/28 13:14:01 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 MY_P=${P/bw/}
 
