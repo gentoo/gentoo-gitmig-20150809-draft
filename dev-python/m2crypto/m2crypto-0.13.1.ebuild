@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.13.1.ebuild,v 1.1 2005/11/02 16:29:47 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.13.1.ebuild,v 1.2 2005/11/28 11:36:08 marienz Exp $
 
-inherit distutils portability
+inherit distutils portability eutils
 
 MY_PV="${PV%.*}"
 MY_P="${PN}-${MY_PV}"

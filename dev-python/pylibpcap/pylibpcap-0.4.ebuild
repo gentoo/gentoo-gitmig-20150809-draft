@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.4.ebuild,v 1.10 2005/11/19 18:30:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.4.ebuild,v 1.11 2005/11/28 11:38:22 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python interface to libpcap"
 HOMEPAGE="http://sourceforge.net/projects/${PN}/"

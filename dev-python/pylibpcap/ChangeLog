@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.8 2005/11/19 18:30:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.9 2005/11/28 11:38:22 marienz Exp $
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org> pylibpcap-0.4.ebuild:
+  Add missing eutils inherit.
 
 *pylibpcap-0.5.1 (19 Nov 2005)
 
