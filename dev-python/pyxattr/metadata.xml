@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>python</herd>
+<longdescription>
+  pyxattr is an Python extension module wrapper for libattr. You can
+  use this module to query, list, add and remove extended attributes
+  from files and directories
+</longdescription>
+</pkgmetadata>
