@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.2.3-r1.ebuild,v 1.5 2005/08/05 01:41:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.2.3-r1.ebuild,v 1.6 2005/11/28 12:54:00 mcummings Exp $
 
-inherit libtool flag-o-matic eutils perl-module
+inherit libtool flag-o-matic eutils perl-app
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV%.*}
@@ -87,8 +87,8 @@ src_install() {
 
 	if use perl ; then
 		cd ${S}/PerlMagick
-		perl-module_src_prep
-		perl-module_src_compile
+		perl-app_src_prep
+		perl-app_src_compile
 		perl-module_src_install
 		cd ${S}
 	fi
