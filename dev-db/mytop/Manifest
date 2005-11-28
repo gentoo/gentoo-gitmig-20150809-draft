@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b6a1ce156c034840b5e907f74e3d980 ChangeLog 1212
 MD5 08416823e7c81816a0e424ae792e8926 files/digest-mytop-1.4 60
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 51f7ab8e2f914385acdfdeefc7011ab1 mytop-1.4.ebuild 763
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivWGtG5z4I8BtQoRAsaaAKCE75P3wJJjqyvWoQB0LbmS85utLwCfcj3Y
+BJrnIVyWe6uG5ydK0Vtgz4E=
+=hKid
+-----END PGP SIGNATURE-----
