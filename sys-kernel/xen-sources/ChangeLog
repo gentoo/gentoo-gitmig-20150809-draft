@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.10 2005/11/22 22:13:20 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.11 2005/11/28 11:48:10 chrb Exp $
+
+*xen-sources-2.6.12.5-r4 (28 Nov 2005)
+
+  28 Nov 2005; <chrb@gentoo.org> +xen-sources-2.6.12.5-r4.ebuild:
+  bump
 
 *xen-sources-2.6.12.5-r3 (22 Nov 2005)
 
