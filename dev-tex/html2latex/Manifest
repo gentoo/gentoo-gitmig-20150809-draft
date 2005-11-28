@@ -1,4 +1,14 @@
-MD5 27f2249e097ca9789e9636aeb5b9b564 html2latex-1.1.ebuild 828
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 f8f5172246812d64251536923367f760 ChangeLog 500
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d502ff35671b8bb1d57d7f5c3213d9d3 ChangeLog 611
 MD5 4fdf3a3373e395a85f4c45f3a6290fe1 files/digest-html2latex-1.1 65
+MD5 12a05d230bcab37c98151448ce7f34ab html2latex-1.1.ebuild 828
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivFVtG5z4I8BtQoRAq1kAJwIVmUzfazRbnnLNL5R+CgWTpRIIACdFoDg
+IjEXIPlISEZTebb+lgKzoBs=
+=+nCm
+-----END PGP SIGNATURE-----
