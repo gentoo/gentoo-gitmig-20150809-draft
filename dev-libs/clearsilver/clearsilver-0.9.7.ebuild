@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.13 2005/08/30 23:05:40 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.14 2005/11/28 13:20:49 mcummings Exp $
 
-inherit eutils perl-module
+inherit eutils perl-app
 
 DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system."
 HOMEPAGE="http://www.clearsilver.net/"
