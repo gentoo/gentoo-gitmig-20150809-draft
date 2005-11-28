@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-procmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.9 2005/10/24 15:07:10 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.10 2005/11/28 09:25:02 kaiowas Exp $
+
+*selinux-procmail-20051122 (28 Nov 2005)
+
+  28 Nov 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-procmail-20051023.ebuild, +selinux-procmail-20051122.ebuild:
+  added mips keyword, marked stable on amd64 mips ppc sparc x86, merge with
+  upstream
 
 *selinux-procmail-20051023 (24 Oct 2005)
 
