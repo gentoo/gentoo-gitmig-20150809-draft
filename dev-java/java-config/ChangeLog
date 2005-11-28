@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.77 2005/08/13 23:27:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.78 2005/11/28 17:21:01 betelgeuse Exp $
+
+  28 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
+  java-config-1.2.11-r1.ebuild:
+  Marked stable on x86 for bug #113806.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   java-config-1.2.11.ebuild:
