@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.1 2005/11/26 20:12:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.2 2005/11/28 18:11:43 grobian Exp $
 
 inherit eutils autotools
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${P}"-macos.patch
 	cd "${S}"
+	export WANT_AUTOCONF="2.5"
 	eautoreconf
 }
 
