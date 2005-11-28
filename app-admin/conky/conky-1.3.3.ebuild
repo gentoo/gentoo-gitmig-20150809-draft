@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.3.ebuild,v 1.1 2005/10/18 11:57:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.3.ebuild,v 1.2 2005/11/28 07:03:32 dragonheart Exp $
 
 inherit eutils
 
@@ -11,20 +11,17 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="truetype seti X"
+IUSE="truetype X"
 
-DEPEND_COMMON="
+RDEPEND="
 	virtual/libc
 	X? (
 		virtual/x11
 		truetype? ( >=media-libs/freetype-2 )
 	)"
 
-RDEPEND="${DEPEND_COMMON}
-	seti? ( sci-astronomy/setiathome )"
-
 DEPEND="
-	${DEPEND_COMMON}
+	${RDEPEND}
 	>=sys-devel/automake-1.9
 	>=sys-devel/autoconf-2.59
 	sys-devel/libtool
@@ -40,8 +37,7 @@ src_compile() {
 	econf \
 		${myconf} \
 		$(use_enable truetype xft) \
-		$(use_enable X x11) \
-		$(use_enable seti) || die "econf failed"
+		$(use_enable X x11)  || die "econf failed"
 	emake || die "compile failed"
 }
 

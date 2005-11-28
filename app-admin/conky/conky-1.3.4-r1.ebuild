@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.4-r1.ebuild,v 1.1 2005/11/25 08:36:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.4-r1.ebuild,v 1.2 2005/11/28 07:03:32 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="truetype seti X ipv6"
+IUSE="truetype X ipv6"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -20,13 +20,11 @@ DEPEND_COMMON="
 		truetype? ( >=media-libs/freetype-2 )
 	)"
 
-RDEPEND="${DEPEND_COMMON}
-	seti? ( sci-astronomy/setiathome )"
+RDEPEND="${DEPEND_COMMON}"
+#	seti? ( sci-astronomy/setiathome )"
 
 DEPEND="
 	${DEPEND_COMMON}
-	>=sys-devel/automake-1.9
-	>=sys-devel/autoconf-2.59
 	sys-devel/libtool
 	sys-apps/grep
 	sys-apps/sed
@@ -57,8 +55,8 @@ src_compile() {
 		${myconf} \
 		$(use_enable truetype xft) \
 		$(use_enable X x11) \
-		$(use_enable !ipv6 portmon) \
-		$(use_enable seti) || die "econf failed"
+		$(use_enable !ipv6 portmon) || die "econf failed"
+#		$(use_enable seti)
 	emake ${mymake} || die "compile failed"
 }
 
