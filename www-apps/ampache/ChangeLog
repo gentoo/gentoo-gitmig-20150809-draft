@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.6 2005/10/09 08:42:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.7 2005/11/28 20:59:52 marineam Exp $
+
+*ampache-3.3.1.5 (28 Nov 2005)
+
+  28 Nov 2005; Michael Marineau <marineam@gentoo.org>
+  -files/ampache-3.3.1.4-webinstall.txt,
+  +files/ampache-3.3.1.5-webinstall.txt, -ampache-3.3.1.4.ebuild,
+  +ampache-3.3.1.5.ebuild:
+  Security Fix for bug #110554
 
   09 Oct 2005; Doug Goldstein <cardoe@gentoo.org> ampache-3.3.1.4.ebuild:
   Fixing PHP depends bug #105419
