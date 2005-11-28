@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gscmxx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gscmxx/ChangeLog,v 1.1 2005/05/14 13:33:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gscmxx/ChangeLog,v 1.2 2005/11/28 12:05:04 mcummings Exp $
+
+  28 Nov 2005; <mcumming@gentoo.org> gscmxx-0.4.1-r1.ebuild:
+  Switched from perl-module to perl-app eclass
 
   14 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from app-misc/gscmxx to app-mobilephone/gscmxx.

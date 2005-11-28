@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gscmxx/gscmxx-0.4.1-r1.ebuild,v 1.1 2005/05/14 13:33:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gscmxx/gscmxx-0.4.1-r1.ebuild,v 1.2 2005/11/28 12:05:04 mcummings Exp $
 
-inherit perl-module eutils
+inherit perl-app eutils
 
 DESCRIPTION="A frontend for scmxx (exchange data with Siemens phones)."
 HOMEPAGE="http://gscmxx.sourceforge.net/"
