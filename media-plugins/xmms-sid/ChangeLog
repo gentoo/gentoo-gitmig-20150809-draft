@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/xmms-sid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.15 2005/09/04 10:31:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.16 2005/11/28 03:39:28 metalgod Exp $
+
+*xmms-sid-0.8.0_beta15 (28 Nov 2005)
+
+  28 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/xmms-sid-0.8.0_beta15-seek-popup-fix.patch, -xmms-sid-0.7.3.ebuild,
+  -xmms-sid-0.8.0_beta8.ebuild, +xmms-sid-0.8.0_beta15.ebuild:
+  Version Bump and added a patch to fix seek subsongs without subsong length
+  database thanks to Heikki Orsila <heikki.orsila@iki.fi> on bug #113733.
+  Removing unneeded versions.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-sid-0.7.3.ebuild,
   xmms-sid-0.7.4.ebuild, xmms-sid-0.8.0_beta8.ebuild,
