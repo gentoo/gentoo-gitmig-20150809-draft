@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.8 2005/06/04 15:18:26 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.9 2005/11/28 11:27:45 marienz Exp $
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org> gnuplot-py-1.7-r1.ebuild:
+  Add missing eutils inherit.
 
 *gnuplot-py-1.7-r1 (04 Jun 2005)
 

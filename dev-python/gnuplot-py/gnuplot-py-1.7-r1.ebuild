@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7-r1.ebuild,v 1.1 2005/06/04 15:18:26 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7-r1.ebuild,v 1.2 2005/11/28 11:27:45 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A python wrapper for Gnuplot"
 HOMEPAGE="http://gnuplot-py.sourceforge.net/"

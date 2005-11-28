@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.7.1.ebuild,v 1.1 2005/11/10 23:32:10 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.7.1.ebuild,v 1.2 2005/11/28 11:30:00 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A simple and Pythonic XML template language"
 SRC_URI="http://kid.lesscode.org/dist/${PV}/${P}.tar.gz"
