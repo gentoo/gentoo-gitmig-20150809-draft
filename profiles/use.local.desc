@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1582 2005/11/28 07:18:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1583 2005/11/28 18:27:25 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -472,6 +472,8 @@ mail-client/evolution:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabl
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
+mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
+mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozsvg -  Enable SVG support in mozilla, firefox, and thunderbird
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
