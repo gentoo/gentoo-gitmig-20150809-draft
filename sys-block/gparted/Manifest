@@ -1,4 +1,6 @@
 MD5 b3671c5600130f226403732e34d4e68d gparted-0.0.8.ebuild 771
 MD5 81476cef2aa1a3dee591c798fbdbe91c metadata.xml 409
-MD5 d08e15ac08fba6dffed99b582fc1cda1 ChangeLog 744
+MD5 0de8fdeb65435278fa2afdb12de66ec9 ChangeLog 862
+MD5 9d8f5308cd174cdd02b6f5cb2cd688f0 gparted-0.0.9.ebuild 807
 MD5 ade0dfd43f839382159b0005efb5369a files/digest-gparted-0.0.8 66
+MD5 3eea1ea327dffaf48e452fc921df4a43 files/digest-gparted-0.0.9 66
