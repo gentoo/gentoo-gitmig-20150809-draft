@@ -1,8 +1,18 @@
-MD5 8c9bf20e188665ad7e82c0df8103786a ChangeLog 5717
-MD5 ac85ccaacab6bf7a9dd356b8c92b3bac metadata.xml 326
-MD5 fde5b466342b85c1d8a14fd9db682cba psad-1.4.2.ebuild 4354
-MD5 3548d3a3ad47688c78143dd4350da6e1 psad-1.4.0.ebuild 4109
-MD5 d925a282fcb7b9d6bbf91c2d260c633f psad-1.3.4.ebuild 3405
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e650f91998dfc47d6309f2a849b0c9e ChangeLog 5863
 MD5 295923dc84bcfb6e5978b5039ffc0a3a files/digest-psad-1.3.4 63
 MD5 c43f2f1a27860fdad099c9000d373b01 files/digest-psad-1.4.0 63
 MD5 3ddd128f7239ca0bde300b2125ed63ab files/digest-psad-1.4.2 63
+MD5 ac85ccaacab6bf7a9dd356b8c92b3bac metadata.xml 326
+MD5 ea24fb515df58b96714f4cb4e49fa696 psad-1.3.4.ebuild 3404
+MD5 430edbbbbd3b839986145eb102cc933d psad-1.4.0.ebuild 4108
+MD5 5e07f9ebb83b7457fe6eabdca01e694f psad-1.4.2.ebuild 4353
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivP9tG5z4I8BtQoRAmfQAJ9uE07jRwNxNx6g27QHAMB065PZGwCeLemc
+4y2a+tL28SzgPU25LEQl86M=
+=5d0o
+-----END PGP SIGNATURE-----
