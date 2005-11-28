@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.30 2005/11/02 22:54:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.31 2005/11/28 23:10:00 wolf31o2 Exp $
+
+  28 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.65-r1.ebuild,
+  nwn-1.66.ebuild, nwn-1.66-r1.ebuild:
+  Add proper dependencies on either gcc-3.3/libstdc++-v3 for gcc stabilization.
 
   02 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66-r1.ebuild:
   Added license checking and initial language support information.
