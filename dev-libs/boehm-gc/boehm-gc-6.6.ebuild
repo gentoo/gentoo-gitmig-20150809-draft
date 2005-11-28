@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.6.ebuild,v 1.1 2005/09/23 04:25:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.6.ebuild,v 1.2 2005/11/28 18:42:16 hanno Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd ${S}
 	sed -i -e '/^SUBDIRS/s/doc//' Makefile.in || die
 	epatch ${FILESDIR}/${PN}-6.5-gentoo.patch
+	epatch ${FILESDIR}/gc6.6-gcc41.patch
 }
 
 src_compile() {
