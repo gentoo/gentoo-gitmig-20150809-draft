@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 18e4d098b57ca9eab1713b2066a45c66 ChangeLog 938
 MD5 12a0fc8be5e56321465751a53efac389 files/digest-gwine-0.10.1 63
 MD5 478df819bd55d161493480fc607c7069 files/digest-gwine-0.7.1 62
 MD5 b98c6a0f1c3181d54d14ce851852932f gwine-0.10.1.ebuild 833
 MD5 2564b3f35dc90561aa03885a8e9e9ea1 gwine-0.7.1.ebuild 767
 MD5 1c7c625d5bcc66006c50cac1c6ead8a1 metadata.xml 307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivOttG5z4I8BtQoRAqENAKCHLL/EGQ2yQAo0gXJ6mKw2DFiNtwCfa9Kk
+52OxtaZJNlArOGZ/cqIezJ8=
+=2rJw
+-----END PGP SIGNATURE-----

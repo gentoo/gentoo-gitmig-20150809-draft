@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1484b5ebf1e4cf3fd709d99cef0088f ChangeLog 744
 MD5 633389c945c9658b72f4f49e1d9be905 files/digest-pip-1.2 59
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 f87ea85589defcfbc9ad2dff56c3b8db pip-1.2.ebuild 464
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivNhtG5z4I8BtQoRAi+uAJ0cJtz4oAg8Te2ILmrNPd71JiM8wwCbBcj4
+v5UYIwSTAKWIm9GlfLhlelo=
+=zIwa
+-----END PGP SIGNATURE-----
