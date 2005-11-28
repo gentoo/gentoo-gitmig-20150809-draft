@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10.ebuild,v 1.2 2005/05/25 14:28:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10.ebuild,v 1.3 2005/11/28 12:04:08 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 DESCRIPTION="w3mir is a all purpose HTTP copying and mirroring tool"
 SRC_URI="http://langfeldt.net/w3mir/${P}.tar.gz"
