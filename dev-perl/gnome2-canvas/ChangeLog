@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-canvas
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.17 2005/10/03 13:04:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.18 2005/11/28 11:45:44 mcummings Exp $
+
+*gnome2-canvas-1.002 (28 Nov 2005)
+
+  28 Nov 2005; <mcumming@gentoo.org> +gnome2-canvas-1.002.ebuild:
+  Version bump
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> gnome2-canvas-1.00.ebuild:
   Mark 1.00 stable on ia64
