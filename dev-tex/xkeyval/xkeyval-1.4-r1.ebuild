@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-1.4.ebuild,v 1.4 2005/04/03 07:35:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-1.4-r1.ebuild,v 1.1 2005/11/28 18:38:23 nattfodd Exp $
 
 inherit latex-package
 
@@ -11,6 +11,7 @@ DESCRIPTION="xkeyval is an extension of the keyval package."
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/xkeyval.html"
 LICENSE="LPPL-1.2"
+DEPEND="!>=app-text/tetex-3.0"
 
 IUSE=""
 SLOT="0"
