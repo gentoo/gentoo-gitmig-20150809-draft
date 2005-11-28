@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r5.ebuild,v 1.1 2005/11/09 16:49:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r5.ebuild,v 1.2 2005/11/28 14:13:52 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -101,7 +101,7 @@ src_install() {
 	newinitd ${FILESDIR}/${PV}/vmware vmware || die "newinitd"
 
 	# vmware enviroment
-	doenvd ${FILESDIR}/${PV}/90vmware || die "doenvd"
+	doenvd ${FILESDIR}/${PV}/90vmware-workstation || die "doenvd"
 
 	dodir /etc/vmware/
 	cp -pPR etc/* ${D}/etc/vmware/
