@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.8.7-r1.ebuild,v 1.1 2005/05/15 17:26:54 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.8.7-r1.ebuild,v 1.2 2005/11/28 11:45:53 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Urwid is a curses-based user interface library for Python."
 HOMEPAGE="http://excess.org/urwid/"

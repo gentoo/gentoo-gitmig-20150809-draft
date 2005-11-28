@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.7.1.ebuild,v 1.2 2005/09/03 16:02:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.7.1.ebuild,v 1.3 2005/11/28 11:44:28 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P=${P/pyx/PyX}
 S=${WORKDIR}/${MY_P}

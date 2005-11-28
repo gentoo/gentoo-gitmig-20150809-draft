@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.8 2005/05/15 17:26:54 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.9 2005/11/28 11:45:53 marienz Exp $
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org> urwid-0.8.7-r1.ebuild:
+  Add missing eutils inherit.
 
 *urwid-0.8.7-r1 (15 May 2005)
 
