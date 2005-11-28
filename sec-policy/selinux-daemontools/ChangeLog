@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-daemontools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.17 2005/09/18 09:59:22 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.18 2005/11/28 08:53:45 kaiowas Exp $
+
+*selinux-daemontools-20051126 (28 Nov 2005)
+
+  28 Nov 2005; petre rodan <kaiowas@gentoo.org>
+  +selinux-daemontools-20051126.ebuild:
+  added support for openvpn
 
   18 Sep 2005; petre rodan <kaiowas@gentoo.org>
   -selinux-daemontools-20050316.ebuild, selinux-daemontools-20050903.ebuild:
