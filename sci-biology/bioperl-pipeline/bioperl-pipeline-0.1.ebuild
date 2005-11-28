@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.5 2005/07/09 22:55:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.6 2005/11/28 12:01:43 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 DESCRIPTION="A collection of tools for bioinformatics, genomics and life science research: Biopipe"
 HOMEPAGE="http://www.biopipe.org/"

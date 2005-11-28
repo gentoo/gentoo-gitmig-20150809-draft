@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.5 2005/07/09 22:54:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.6 2005/11/28 12:01:03 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 MY_PN="Generic-Genome-Browser"
 MY_P="${MY_PN}-${PV}"
