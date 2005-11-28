@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.12 2005/11/28 12:36:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.13 2005/11/28 12:45:31 marienz Exp $
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org> ldaptor-0.0.6.ebuild:
+  Fix DEPEND: this version does not work with twisted-2.
 
 *ldaptor-0.0.42 (28 Nov 2005)
 
