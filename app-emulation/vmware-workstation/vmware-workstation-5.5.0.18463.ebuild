@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18007-r1.ebuild,v 1.2 2005/11/28 14:13:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18463.ebuild,v 1.1 2005/11/28 14:33:09 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -10,16 +10,28 @@ inherit eutils
 
 S=${WORKDIR}/vmware-distrib
 #ANY_ANY="vmware-any-any-update94"
-NP="VMware-workstation-5.5.0-18007"
+NP="VMware-workstation-5.5.0-18463"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-SRC_URI="${NP}.tar.gz"
+SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://download3.vmware.com/software/wkst/${NP}.tar.gz
+	http://download.vmware.com/htdocs/software/wkst/${NP}.tar.gz
+	http://www.vmware.com/download1/software/wkst/${NP}.tar.gz
+	ftp://download1.vmware.com/pub/software/wkst/${NP}.tar.gz
+	http://vmware-chil.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
+	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz"
+#	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
+#	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+#	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+#	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
 
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
-RESTRICT="nostrip fetch"
+KEYWORDS="-* ~amd64 ~x86"
+RESTRICT="nostrip"
 
 DEPEND="${RDEPEND} virtual/os-headers"
 # vmware-workstation should not use virtual/libc as this is a 
@@ -34,20 +46,25 @@ dir=/opt/vmware/workstation
 Ddir=${D}/${dir}
 VMWARE_GROUP=${VMWARE_GROUP:-vmware}
 
-pkg_nofetch() {
-	einfo "Please download the ${NP}.tar.gz at ${HOMEPAGE}"
-}
 pkg_setup() {
 	# This is due to both bugs #104480 and #106170
 	enewgroup "${VMWARE_GROUP}"
 }
+
 src_unpack() {
 	unpack ${NP}.tar.gz
 	cd ${S}
-	# patch the config to not install desktop/icon files and proper gentoo init
+	# patch the config to not install desktop/icon files
 	epatch ${FILESDIR}/${P}-config.patch
-
-	chmod 755 lib/bin/vmware bin/vmnet-bridge lib/bin/vmware-vmx lib/bin-debug/vmware-vmx
+#	unpack ${ANY_ANY}.tar.gz
+#	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+#	cd ${S}/${ANY_ANY}
+#	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
+	# vmware any93 still doesn't patch the vmware binary
+	#./update vmware ../lib/bin/vmware || die
+	#./update bridge ../bin/vmnet-bridge || die
+	#./update vmx ../lib/bin/vmware-vmx || die
+	#./update vmxdebug ../lib/bin-debug/vmware-vmx || die
 }
 
 src_install() {
@@ -94,8 +111,8 @@ src_install() {
 	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware || die
 	dosed 's/mknod -m 600/mknod -m 660/' /etc/vmware/init.d/vmware || die
 	dosed '/c 119 "$vHubNr"/ a\
-			chown root:vmware /dev/vmnet*\
-			' /etc/vmware/init.d/vmware || die
+		chown root:vmware /dev/vmnet*\
+		' /etc/vmware/init.d/vmware || die
 
 	# This is to fix a problem where if someone merges vmware and then
 	# before configuring vmware they upgrade or re-merge the vmware
@@ -123,7 +140,7 @@ src_install() {
 	# this adds udev rules for vmmon*
 	dodir /etc/udev/rules.d
 	echo 'KERNEL=="vmmon*", GROUP="vmware" MODE=660' > \
-			${D}/etc/udev/rules.d/60-vmware.rules || die
+		${D}/etc/udev/rules.d/60-vmware.rules || die
 
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
@@ -208,7 +225,6 @@ pkg_postinst() {
 	echo
 	ewarn "VMWare allows for the potential of overwriting files as root.  Only"
 	ewarn "give VMWare access to trusted individuals."
-
 	#ewarn "For users of glibc-2.3.x, vmware-nat support is *still* broken on 2.6.x"
 }
 

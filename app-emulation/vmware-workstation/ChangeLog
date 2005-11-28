@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.104 2005/11/28 14:13:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.105 2005/11/28 14:33:09 wolf31o2 Exp $
+
+*vmware-workstation-5.5.0.18463 (28 Nov 2005)
+
+  28 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/vmware-workstation-5.5.0.18007-config.patch,
+  +files/vmware-workstation-5.5.0.18463-config.patch,
+  -vmware-workstation-5.5.0.18007-r1.ebuild,
+  +vmware-workstation-5.5.0.18463.ebuild:
+  Removed last beta VMware Workstation 5.5 version and added final 5.5
+  version. Closing bug #113652.
 
   28 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/3.2.1.2242/90vmware, +files/3.2.1.2242/90vmware-workstation,
