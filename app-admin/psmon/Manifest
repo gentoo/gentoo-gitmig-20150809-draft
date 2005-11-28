@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 42c957fd80c30f419407b90628ca2399 ChangeLog 1413
 MD5 06f2d4be3cd5410b996d2fb131f911b3 files/digest-psmon-1.0.4 60
 MD5 dc432022d6a8454850ac659cdb4c739c files/digest-psmon-1.29 61
 MD5 5319046cb885bb50d94e059f0bb66b60 psmon-1.0.4.ebuild 798
 MD5 e3ec4d4c280cdb749ad2c72f8587fa6a psmon-1.29.ebuild 801
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivKYtG5z4I8BtQoRAi9cAJ9jdFV88aDT6TLzYu0nRDFEhXQdsACeMZNA
+FBLDNY8KjfvQjCNSnQnQmkk=
+=NFFH
+-----END PGP SIGNATURE-----

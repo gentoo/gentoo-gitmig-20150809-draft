@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c9ce5e02cbd312bec8af14440d8d69a6 ChangeLog 1131
 MD5 76da7226792e224b1c67a6232833c650 files/digest-rackview-0.04-r1 66
 MD5 6fdb382498c555fbba922d4a14ee953c files/digest-rackview-0.05 66
 MD5 d6a3d54cd1dd8ea91544d1dac0ff0e09 rackview-0.04-r1.ebuild 2914
 MD5 1571abdace7c904e8c5cd440715f3ffd rackview-0.05.ebuild 2910
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivLMtG5z4I8BtQoRAs58AJ4pYsSnr+2OzOUUK65gRxBk2kB5HwCfbcSf
+UFbQdkKXId9n3AH05SJeABU=
+=O0Ik
+-----END PGP SIGNATURE-----

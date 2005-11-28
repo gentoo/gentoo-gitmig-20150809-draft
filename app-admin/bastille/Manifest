@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e92c92e2948dea9dc1a0a224028fc90b ChangeLog 3801
 MD5 c24e7e9b84fdb1e24f31ec2363262ea0 bastille-2.1.1-r1.ebuild 2533
 MD5 1806c99cadbd78b9b10f360054360716 bastille-2.1.1-r2.ebuild 2659
@@ -12,3 +15,10 @@ MD5 5952693da32f1292a5b6013e8e755799 files/digest-bastille-2.1.1-r2 146
 MD5 5952693da32f1292a5b6013e8e755799 files/digest-bastille-2.1.1-r3 146
 MD5 2a0522007297b0621c99bf3e7eb2c318 files/digest-bastille-3.0.2 146
 MD5 6866ae7fe991fa80eed96fc6c6fbb339 metadata.xml 353
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivMDtG5z4I8BtQoRApBGAJ4iD9PQKT5Uy4ipQyUUxRn5qfQabQCfUON+
+csqVQJh6do2V9B53PeTBBHA=
+=gm/e
+-----END PGP SIGNATURE-----

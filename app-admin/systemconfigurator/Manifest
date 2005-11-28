@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f182c39d0099b7325397538997b8fd9 ChangeLog 1501
 MD5 183b022e7fc1e6c4d804dbf84beb97ac files/digest-systemconfigurator-2.0.9 75
 MD5 6049a2edede6b8486c1a6058476e23e9 files/digest-systemconfigurator-2.2.2 75
@@ -5,3 +8,10 @@ MD5 e621a96771a3aad71cc73aeeb24d99e5 files/systemconfigurator-2.0.9-Makefile.PL.
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 ce0c407953cef8ebfcd4590908fd49a1 systemconfigurator-2.0.9.ebuild 644
 MD5 6600d6efcccd2de7734c64b6bcf82263 systemconfigurator-2.2.2.ebuild 604
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivK0tG5z4I8BtQoRAr3EAJ9bOueV1U+mPw9doAdt/Ecpsn8ORgCggJYu
+Sl/Ro8OlhDP/GWPfRtpeGlE=
+=Mqdn
+-----END PGP SIGNATURE-----
