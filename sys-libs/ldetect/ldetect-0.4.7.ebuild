@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.13 2005/01/03 00:18:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.14 2005/11/28 13:05:14 mcummings Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -9,7 +9,7 @@ ECVS_MODULE="soft/ldetect"
 ECVS_PASS="cvs"
 ECVS_CVS_OPTIONS="-dP"
 
-#inherit perl-module
+#inherit perl-app
 inherit cvs
 
 S=${WORKDIR}/${ECVS_MODULE}
