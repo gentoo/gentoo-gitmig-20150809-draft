@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f2d0d06c077d84c080870713c9a6a732 ChangeLog 23587
+MD5 cb5565f7cf81c2392886e2f27e818962 ChangeLog 23686
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 4b92f911e900cfd1a37439bd19412f5d files/digest-gnupg-1.4.1 190
 MD5 4b92f911e900cfd1a37439bd19412f5d files/digest-gnupg-1.4.1-r1 190
@@ -22,14 +22,14 @@ MD5 c77b579997468bf58a6fc5a5e1a2fb00 gnupg-1.4.1-r1.ebuild 6272
 MD5 6f5e7ed6dfb1ae31f877486a9ff7e441 gnupg-1.4.1.ebuild 6186
 MD5 ffd1a6a73df273ee13e112dc428eb06c gnupg-1.4.2-r1.ebuild 6241
 MD5 001a6a11b695f1715cf00856b26f8ed6 gnupg-1.4.2-r2.ebuild 6794
-MD5 1b311d508e2f617dd3b875d0285acd7d gnupg-1.4.2-r3.ebuild 6830
+MD5 04e95e1a76ed135fafd158198d801a81 gnupg-1.4.2-r3.ebuild 6832
 MD5 3fd02f30190d0919bf9a5972d40182c2 gnupg-1.9.18.ebuild 3205
 MD5 81178f9c770262366fc26114d53efc13 gnupg-1.9.19.ebuild 3205
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDiqf+QlM6RnzZP+IRAkAvAKCNN5iJq/7WnArbZQoPKzK2uYI8PwCgjtbu
-7epMeYqZNk7R9tultSMiQ80=
-=H3vX
+iD8DBQFDiwHMKRy60XGEcJIRAku/AJ9f/vvF/DMqysnv/KSTRZGSY3c1AgCfWgKS
+RxWSzW+Y5n7TgK7DvGbceZE=
+=yh1G
 -----END PGP SIGNATURE-----
