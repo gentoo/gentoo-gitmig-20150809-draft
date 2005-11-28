@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.22 2005/08/24 20:43:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.23 2005/11/28 18:30:00 slarti Exp $
+
+*mail-notification-2.0 (28 Nov 2005)
+
+  28 Nov 2005; Tom Martin <slarti@gentoo.org>
+  +files/mail-notification-2.0-buildfix.diff,
+  +files/mail-notification-2.0-evolution-2.4.diff,
+  +files/mail-notification-2.0-gmail-properties-fix.diff,
+  +mail-notification-2.0.ebuild:
+  Version bump to 2.0. Thanks to Machiel Groeneveld <michiel@ideus.nl>, Leo
+  Laursen <ll_news@stofanet.dk> and Dave Shanker <dshanker@gmail.com> in bug
+  #102091.
 
   24 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mail-notification-1.1.ebuild:
