@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.13 2005/09/01 18:02:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.14 2005/11/28 13:04:10 mcummings Exp $
 
-inherit eutils distutils perl-module
+inherit eutils distutils perl-app
 
 DESCRIPTION="Client library to create MusicBrainz enabled tagging applications"
 HOMEPAGE="http://www.musicbrainz.org/products/tunepimp"
@@ -41,7 +41,7 @@ src_compile() {
 	emake || die "emake failed"
 	if use perl; then
 		cd ${S}/perl/tunepimp-perl
-		perl-module_src_compile || die "perl module failed to compile"
+		perl-app_src_compile || die "perl module failed to compile"
 	fi
 }
 

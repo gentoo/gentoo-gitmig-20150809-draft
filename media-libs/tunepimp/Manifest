@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 42b795b068a71a9822b7a943e3604838 tunepimp-0.3.0-r1.ebuild 1711
-MD5 03eaacd7b52e84f5384cf6b95b64860a ChangeLog 3065
-MD5 23bbf2a6b56b2d5c6e4538544079076a tunepimp-0.3.0.ebuild 1522
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f79074eba8191dbaded3e898a9e6faf9 files/digest-tunepimp-0.3.0-r1 69
+MD5 ac3d44d973631c7a914d251c50007972 ChangeLog 3202
 MD5 f79074eba8191dbaded3e898a9e6faf9 files/digest-tunepimp-0.3.0 69
+MD5 f79074eba8191dbaded3e898a9e6faf9 files/digest-tunepimp-0.3.0-r1 69
 MD5 9df04c3c157b652e3e895eeabb7015e6 files/thread.patch 393
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 aad89f402df803452c0a722a2498de3f tunepimp-0.3.0-r1.ebuild 1706
+MD5 87514ccfe6474baeda0cca5a197df66d tunepimp-0.3.0.ebuild 1518
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDF0I/KRy60XGEcJIRAk/dAJ9SgrFNwdvesaogt+uJ2dzp6m3EoACgje7i
-2P8iTTj3sS3f9Qg2bjJeAhg=
-=l/RS
+iD8DBQFDiwBTtG5z4I8BtQoRAgSkAJ4qdmTcvKGAog4jvEQNMmX/J0YaCACeOZIM
+/6HnGm9YcVI6VetbI1/MoAs=
+=T71Q
 -----END PGP SIGNATURE-----
