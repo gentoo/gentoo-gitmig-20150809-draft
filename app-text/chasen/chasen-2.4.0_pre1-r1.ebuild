@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0_pre1-r1.ebuild,v 1.3 2005/08/28 19:36:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0_pre1-r1.ebuild,v 1.4 2005/11/28 12:11:09 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 MY_P="${P/_pre/-preview}"
 S="${WORKDIR}/${MY_P}"

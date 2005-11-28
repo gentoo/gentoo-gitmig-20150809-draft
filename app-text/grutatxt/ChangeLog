@@ -1,6 +1,10 @@
 # ChangeLog for app-text/grutatxt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/ChangeLog,v 1.8 2005/07/16 16:50:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/ChangeLog,v 1.9 2005/11/28 12:10:51 mcummings Exp $
+
+  28 Nov 2005; <mcumming@gentoo.org> grutatxt-2.0.11.ebuild,
+  grutatxt-2.0.5.ebuild:
+  Switched from perl-module to perl-app eclass
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> grutatxt-2.0.5.ebuild:
   Marked ~ppc for bug #99213.
