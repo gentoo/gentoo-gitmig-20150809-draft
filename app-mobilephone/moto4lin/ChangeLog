@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/moto4lin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.4 2005/11/25 15:16:45 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.5 2005/11/28 11:33:26 flameeyes Exp $
+
+  28 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  moto4lin-0.3_p20051125.ebuild:
+  Added ~amd64 keyword.
 
 *moto4lin-0.3_p20051125 (25 Nov 2005)
 
