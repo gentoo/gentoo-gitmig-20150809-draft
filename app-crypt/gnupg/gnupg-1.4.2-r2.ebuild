@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.11 2005/11/25 08:18:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.12 2005/11/28 22:31:08 dragonheart Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -154,7 +154,7 @@ src_install() {
 	dohtml doc/faq.html
 
 	# install RU documentation in right location
-	if use lingas_ru
+	if use linguas_ru
 	then
 		cp doc/gpg.ru.1 ${T}/gpg.1
 		doman -i18n=ru ${T}/gpg.1
