@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.11 2005/08/26 14:20:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.12 2005/11/28 12:36:57 marienz Exp $
+
+*ldaptor-0.0.42 (28 Nov 2005)
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org>
+  +files/ldaptor-0.0.42-trial-2.1-compat.patch, -ldaptor-0.0.41.ebuild,
+  +ldaptor-0.0.42.ebuild:
+  Version bump to 0.0.42, add a patch to make the tests work with twisted
+  2.1.0, use mirror://debian/ in SRC_URI, add missing twisted-web dependency.
+  Remove 0.0.41.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> ldaptor-0.0.6.ebuild:
   add ~ia64

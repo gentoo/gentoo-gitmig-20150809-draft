@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.41.ebuild,v 1.1 2005/07/04 16:01:15 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.1 2005/11/28 12:36:57 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://www.inoi.fi/open/trac/ldaptor"
-SRC_URI="http://ftp.debian.org/debian/pool/main/l/ldaptor/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -17,7 +17,10 @@ DEPEND=">=dev-python/twisted-2
 	dev-python/twisted-names
 	dev-python/twisted-mail
 	dev-python/pyparsing
-	web? ( >=dev-python/nevow-0.3 )
+	web? (
+		>=dev-python/nevow-0.3
+		dev-python/twisted-web
+	)
 	doc? (
 		dev-python/epydoc
 		app-office/dia
@@ -30,9 +33,8 @@ DOCS="README TODO ldaptor.schema"
 
 src_unpack() {
 	unpack ${A}
-	if [ -f ${FILESDIR}/${P}-svn-update.patch ]; then
-		epatch ${FILESDIR}/${P}-svn-update.patch
-	fi
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-trial-2.1-compat.patch"
 }
 
 src_compile() {
