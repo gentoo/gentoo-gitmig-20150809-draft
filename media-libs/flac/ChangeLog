@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.77 2005/11/26 00:23:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.78 2005/11/28 12:21:24 flameeyes Exp $
+
+*flac-1.1.2-r4 (28 Nov 2005)
+
+  28 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> +flac-1.1.2-r4.ebuild:
+  New version, that does not invalidate the configure cache (and adds a
+  --disable-doc configure option). Also installs the user documentation in the
+  right directory for Gentoo. Use eautoreconf to rebuild autotools support,
+  and add the m4 file via patch instead than copying it. Install man page
+  shipped with the package (and don't regenerate them).
 
   26 Nov 2005; Mark Loeser <halcy0n@gentoo.org> flac-1.1.2-r3.ebuild:
   Stable on x86; bug #113519
