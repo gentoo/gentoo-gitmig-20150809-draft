@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.264 2005/11/21 17:42:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.265 2005/11/28 15:25:40 caleb Exp $
+
+  28 Nov 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/qt-4.1.0-configure-no-mysql.diff, qt-4.1.0_rc1.ebuild:
+  add a patch from Trolltech to fix mysql compilation support
 
 *qt-4.1.0_rc1 (21 Nov 2005)
 
