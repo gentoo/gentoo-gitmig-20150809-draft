@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4717 2005/11/28 14:34:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4718 2005/11/28 17:59:19 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (28 Nov 2005)
+# rpath security issue
+=dev-libs/quantlib-0.3.11
 
 # Olivier Fisette <ribosome@gentoo.org> (27 Nov 2005)
 # SETI@home 3.x and related packages are masked pending removal (see bug
