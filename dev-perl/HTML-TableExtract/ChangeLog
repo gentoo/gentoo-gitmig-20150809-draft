@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-TableExtract
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.15 2005/11/27 22:43:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.16 2005/11/28 12:59:58 metalgod Exp $
+
+  28 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  HTML-TableExtract-2.06.ebuild:
+  Re-added ~amd64 keyword. See bug #113358.
 
   27 Nov 2005; Tom Gall <tgall@gentoo.org> HTML-TableExtract-1.10.ebuild:
   stable on ppc64
