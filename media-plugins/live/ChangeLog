@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.55 2005/11/02 04:09:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.56 2005/11/28 20:39:24 hanno Exp $
+
+*live-2005.11.11 (28 Nov 2005)
+
+  28 Nov 2005; Hanno Boeck <hanno@gentoo.org> +files/live-gcc41.patch,
+  +live-2005.11.11.ebuild:
+  Version bump and fix for gcc 4.1.
 
   02 Nov 2005; Luca Barbato <lu_zero@gentoo.org> live-2005.08.26.ebuild:
   url fixed
