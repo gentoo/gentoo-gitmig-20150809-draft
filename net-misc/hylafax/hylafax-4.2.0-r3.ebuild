@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r3.ebuild,v 1.1 2005/09/30 07:00:17 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r3.ebuild,v 1.2 2005/11/28 00:50:56 nerdboy Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ DEPEND="!faxonly? ( net-dialup/mgetty )
 	pam? ( sys-libs/pam )"
 
 RDEPEND="${DEPEND}
+	media-libs/netpbm
 	app-arch/sharutils"
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"

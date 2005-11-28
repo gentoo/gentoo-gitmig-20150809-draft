@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.55 2005/10/18 03:48:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.56 2005/11/28 00:50:56 nerdboy Exp $
+
+  28 Nov 2005; Steve Arnold <nerdboy@gentoo.org> hylafax-4.2.0-r3.ebuild,
+  hylafax-4.2.1-r2.ebuild, hylafax-4.2.2.ebuild:
+  Added rdepend for netpbm to address bug #112436
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> hylafax-4.2.1-r2.ebuild:
   Mark 4.2.1-r2 stable on alpha
