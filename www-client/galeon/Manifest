@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab880eb7bbb42bf738f352b617d3e00d ChangeLog 17185
-MD5 89f85dbadf0965796219c18068ece3d1 galeon-1.3.21.ebuild 1328
-MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
+MD5 571d3c8320da2ed9b968618377f24e6a ChangeLog 17351
 MD5 511883d67fd68cc5fcef2df81022339f files/digest-galeon-1.3.21 67
+MD5 c2a24e5bb4adef9844eae66296a77624 files/digest-galeon-2.0.0 66
+MD5 96546bb1b58d9e16eae70f22da8315c9 files/galeon-2.0.0-gcc41.patch 430
+MD5 89f85dbadf0965796219c18068ece3d1 galeon-1.3.21.ebuild 1328
+MD5 7b1b14732b38c792ccf6f45db217f96c galeon-2.0.0.ebuild 1413
+MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDL/PSr2QksT29OyARAt+YAJ9pV1o8b9AH6Bx0wNuEhxh0nAqQ2wCfdkbF
-AOkjps2ORs1sf4GNQ+zvavs=
-=TwMZ
+iD8DBQFDizsOr2QksT29OyARAr79AJ9SCElDdvrw8fC1fAJ2K/MyGQ8lWQCfQO3W
+GSgVrTIPfF0A2vJCYua4CJI=
+=W0LR
 -----END PGP SIGNATURE-----
