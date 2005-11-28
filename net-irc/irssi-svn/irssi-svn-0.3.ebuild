@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.13 2005/08/27 17:21:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.14 2005/11/28 13:02:29 mcummings Exp $
 
-inherit subversion perl-module flag-o-matic
+inherit subversion perl-app flag-o-matic
 
 ESVN_REPO_URI="http://svn.irssi.org/repos/irssi/trunk/"
 ESVN_PROJECT="irssi"
@@ -46,7 +46,7 @@ src_install() {
 		for dir in "${S}"/src/perl/{common,irc,textui,ui}
 		do
 			cd "${dir}"
-			perl-module_src_prep
+			perl-app_src_prep
 		done
 		cd "${S}"
 	fi

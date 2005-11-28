@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.70 2005/11/13 12:22:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.71 2005/11/28 13:02:09 mcummings Exp $
+
+  28 Nov 2005; <mcumming@gentoo.org> irssi-0.8.10_rc6.ebuild,
+  irssi-0.8.10_rc7.ebuild, irssi-0.8.9-r1.ebuild:
+  Switched from perl-module to perl-app eclass
 
   13 Nov 2005; Sven Wegener <swegener@gentoo.org>
   +files/0.8.9-gcc4-fix.patch, irssi-0.8.9-r1.ebuild:
