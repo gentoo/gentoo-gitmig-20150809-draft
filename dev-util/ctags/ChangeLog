@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.44 2005/11/26 17:17:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.45 2005/11/28 13:26:32 gustavoz Exp $
+
+  28 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> ctags-5.5.4-r2.ebuild:
+  Stable on sparc
 
   26 Nov 2005; Tom Gall <tgall@gentoo.org> ctags-5.5.4-r2.ebuild:
   stable on ppc64
