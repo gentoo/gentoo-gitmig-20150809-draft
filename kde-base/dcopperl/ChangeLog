@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcopperl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.18 2005/11/26 14:35:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.19 2005/11/28 12:19:36 mcummings Exp $
+
+  28 Nov 2005; <mcumming@gentoo.org> dcopperl-3.4.1.ebuild,
+  dcopperl-3.5.0.ebuild, dcopperl-3.5.0_beta2.ebuild:
+  Switched from perl-module to perl-app eclass
 
   24 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> dcopperl-3.4.1.ebuild:
   Stable on sparc wrt #112842
