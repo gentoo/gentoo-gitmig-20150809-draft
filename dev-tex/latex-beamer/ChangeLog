@@ -1,6 +1,14 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.17 2005/08/27 09:24:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.18 2005/11/28 18:12:28 nattfodd Exp $
+
+*latex-beamer-3.01-r1 (28 Nov 2005)
+*latex-beamer-3.00-r1 (28 Nov 2005)
+
+  28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org> +latex-beamer-3.00-r1.ebuild,
+  +latex-beamer-3.01-r1.ebuild:
+  Added block of >=tetex-3.0 as beamer is now part of tetex and the block was
+  previously not mutual (bug #94815).
 
   27 Aug 2005; Fabian Groffen <grobian@gentoo.org> latex-beamer-3.01.ebuild:
   Marking ~ppc-macos (bug #81542)
