@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.17 2005/08/19 23:33:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.18 2005/11/28 12:07:22 mcummings Exp $
+
+  28 Nov 2005; <mcumming@gentoo.org> bastille-2.1.1-r1.ebuild,
+  bastille-2.1.1-r2.ebuild, bastille-2.1.1-r3.ebuild:
+  Switched from perl-module to perl-app eclass
 
   19 Aug 2005; Bryan Stine <battousai@gentoo.org> bastille-3.0.2.ebuild:
   Fix keywords.

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.8 2005/01/01 11:22:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.9 2005/11/28 12:06:27 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 DESCRIPTION="tool for visualizing the layout of rack-mounted equipment"
 HOMEPAGE="http://rackview.sourceforge.net/"

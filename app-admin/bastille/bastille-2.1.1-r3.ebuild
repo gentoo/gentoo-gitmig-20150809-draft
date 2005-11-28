@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.2 2005/04/21 14:12:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.3 2005/11/28 12:07:22 mcummings Exp $
 
-inherit perl-module eutils
+inherit perl-app eutils
 
 PATCHVER=0.1
 MY_PN=${PN/b/B}
