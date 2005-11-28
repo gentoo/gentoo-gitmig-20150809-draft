@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.8 2005/08/26 18:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.9 2005/11/28 21:06:49 blubb Exp $
 
-inherit gnome.org libtool eutils
+inherit gnome.org libtool eutils multilib
 
 MY_PV="`echo ${PV} | cut -d. -f1,2`"
 DESCRIPTION="Lightweight HTML rendering/printing/editing engine."
@@ -68,6 +68,7 @@ src_compile() {
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
+		--libdir=/usr/$(get_libdir) \
 		${myconf} || die
 
 	emake || die "Package building failed."
@@ -87,7 +88,7 @@ conv_pkgconfig_confsh() {
 	local tmpfile="${T}/$$.env"
 
 	[ "$#" -ne 1 ] && return 1
-	[ ! -f ${D}/usr/lib/pkgconfig/${pkgconfig_file} ] && return 1
+	[ ! -f ${D}/usr/$(get_libdir)/pkgconfig/${pkgconfig_file} ] && return 1
 
 	# Remove bogus info and convert to bash type file we can
 	# source ...
@@ -100,12 +101,12 @@ conv_pkgconfig_confsh() {
 		-e '/^Name.*/ d' \
 		-e '/^Description.*/ d' \
 		-e '/^Version.*/ d' \
-		${D}/usr/lib/pkgconfig/${pkgconfig_file} > ${tmpfile}
+		${D}/usr/$(get_libdir)/pkgconfig/${pkgconfig_file} > ${tmpfile}
 
 	source ${tmpfile}
 
 	# Ok, generate our Conf.sh file
-	cat > ${D}/usr/lib/${confsh_file} <<CONFSHEND
+	cat > ${D}/usr/$(get_libdir)/${confsh_file} <<CONFSHEND
 #
 # Configuration file for using the ${package_name} library in GNOME applications
 #
@@ -118,13 +119,13 @@ MODULE_VERSION="${module_version}"
 CONFSHEND
 
 	# Fix permissions
-	fperms 0755 /usr/lib/${confsh_file}
+	fperms 0755 /usr/$(get_libdir)/${confsh_file}
 }
 
 src_install() {
 	local fullname=""
 
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	# Fix the double entry in Control Center
 	rm -f ${D}/usr/share/control-center/capplets/gtkhtml-properties.desktop
@@ -140,9 +141,9 @@ src_install() {
 	conv_pkgconfig_confsh ${PN}-${MY_PV}.pc
 
 	# Add some type of backward compat for libs...
-	fullname="`eval basename \`readlink ${D}/usr/lib/lib${PN}-${MY_PV}.so\``"
-	dosym ${fullname##*/} /usr/lib/lib${PN}.so
-	dosym ${fullname##*/} /usr/lib/lib${PN}.so.20
+	fullname="`eval basename \`readlink ${D}/usr/$(get_libdir)/lib${PN}-${MY_PV}.so\``"
+	dosym ${fullname##*/} /usr/$(get_libdir)/lib${PN}.so
+	dosym ${fullname##*/} /usr/$(get_libdir)/lib${PN}.so.20
 
 	# For older apps to be able to find the data...
 	dosym '.' /usr/share/${PN}-${MY_PV}/${PN}
