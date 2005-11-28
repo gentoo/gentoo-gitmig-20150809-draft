@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.21 2005/11/24 17:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.22 2005/11/28 01:57:51 chriswhite Exp $
 
 inherit libtool toolchain-funcs eutils wxwidgets
 
@@ -179,11 +179,10 @@ src_compile () {
 		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
 	fi
 
-	# reason why:
-	# looks for xpidl in /usr/lib/mozilla/xpidl
-	# and doesn't find it there because it's
-	# in /usr/bin! - ChrisWhite
-	if use nsplugin; then
+	# upstream fixed the previously lacking logic
+	# check for /usr/bin/xpidl and sed, otherwise
+	# assume the default. - ChrisWhite
+	if use nsplugin && [ -e /usr/bin/xpidl ] ; then
 		sed -e "s:^XPIDL = .*:XPIDL = /usr/bin/xpidl:" -i mozilla/Makefile \
 		|| die "could not fix XPIDL path"
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.119 2005/11/27 21:43:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.120 2005/11/28 01:57:51 chriswhite Exp $
+
+  28 Nov 2005; Chris White <chriswhite@gentoo.org> vlc-0.8.1-r1.ebuild:
+  Re-fixed bug #77153.
 
 *vlc-0.8.4-r1 (27 Nov 2005)
 
