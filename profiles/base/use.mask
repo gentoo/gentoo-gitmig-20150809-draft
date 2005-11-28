@@ -8,3 +8,7 @@ nvidia
 
 # dev-db/oracle-instantclient-basic is only available on x86
 oci8-instant-client
+
+# SETI@home support is no longer available. conky and torsmo need to be
+# updated. Then we can remove the mask.
+seti
