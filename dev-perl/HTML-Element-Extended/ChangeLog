@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Element-Extended
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.2 2005/11/25 21:36:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.3 2005/11/28 13:01:49 metalgod Exp $
+
+  28 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  HTML-Element-Extended-1.13.ebuild:
+  Added ~amd64 keyword. See bug #113358.
 
   25 Nov 2005; Markus Rothe <corsair@gentoo.org>
   HTML-Element-Extended-1.13.ebuild:
