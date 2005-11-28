@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r8.ebuild,v 1.2 2005/11/28 14:13:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r9.ebuild,v 1.1 2005/11/28 22:35:56 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-ANY_ANY="vmware-any-any-update94"
+ANY_ANY="vmware-any-any-update96"
 NP="VMware-workstation-4.5.2-8848"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -31,7 +31,7 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* amd64 x86"
 RESTRICT="nostrip"
 
 DEPEND=">=dev-lang/perl-5
@@ -41,6 +41,7 @@ RDEPEND=">=dev-lang/perl-5
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	sys-libs/glibc
 	virtual/x11
+	!app-emulation/vmware-player
 	sys-apps/pciutils"
 
 dir=/opt/vmware/workstation
@@ -62,7 +63,7 @@ src_unpack() {
 	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 	cd ${S}/${ANY_ANY}
 	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
-	# vmware any89 still doesn't patch the vmware binary
+	# vmware any96 still doesn't patch the vmware binary
 	#./update vmware ../lib/bin/vmware || die
 	./update bridge ../bin/vmnet-bridge || die
 	./update vmx ../lib/bin/vmware-vmx || die
