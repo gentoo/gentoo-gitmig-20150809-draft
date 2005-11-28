@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f57339dcf4be722407952fde07023fe ChangeLog 1466
 MD5 103c04e10826d7cf74295bc5c261cf75 bwwhois-3.2.ebuild 875
 MD5 b1d315dfb631769e4af892f72c959e5c bwwhois-3.4.ebuild 873
 MD5 ff6a82dfde2579397ea8c617e1a30c22 files/digest-bwwhois-3.2 57
 MD5 9dc1faf1d404599ebc8420b99d288fec files/digest-bwwhois-3.4 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiwKitG5z4I8BtQoRAp36AJ9iHBYRpgC3VjBhZnm5vg7Zm1GbJQCfaZKy
+Pym9onv4h3Uswg5V45XGluU=
+=U7JH
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 362366471df30f615f1ce2ef5111191d ChangeLog 1057
 MD5 7fe048dfb6f703771bca3a1160d3b986 files/digest-wakeonlan-0.40 64
 MD5 56229c040ac99ceaba1225016b58d0a3 files/digest-wakeonlan-0.41 64
 MD5 42480af8028c614ffade808a1d4759f7 wakeonlan-0.40.ebuild 483
 MD5 f2fb24f42636e057aabebddc33ab959d wakeonlan-0.41.ebuild 485
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiwLPtG5z4I8BtQoRAv8ZAKCTjaSS0ABuLg4TnN52Sks8evg6YQCgirfb
+ryOm9QK765dmFbdOEns6kxM=
+=ZkDH
+-----END PGP SIGNATURE-----

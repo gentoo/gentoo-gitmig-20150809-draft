@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3413e120c825cd0094990acf02546195 ChangeLog 4016
 MD5 1708574c57ea3dbb43faa2a5abe17a5d files/digest-pxes-0.6-r4 206
 MD5 587792f4ed87b201b12047186b3c19c4 files/digest-pxes-0.7 208
@@ -13,3 +16,10 @@ MD5 1b9190ecb68db2c997eecd0fe43b53e1 pxes-0.8.ebuild 1261
 MD5 b5db16d915722ef9c1565ca112d7b53a pxes-0.9-r1.ebuild 1740
 MD5 449c63cce77e9eb7cb7fa041ddb97467 pxes-0.9.ebuild 1353
 MD5 1f612d5032fce4a3748d5779106d8d25 pxes-1.0.ebuild 1721
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiwJ/tG5z4I8BtQoRAh5mAJ4nS03NqMsjjTuROQZTA6/wrTrGDwCeI2/B
+3I5fG6U8dBNmBUoeb+vRTH8=
+=T6Rt
+-----END PGP SIGNATURE-----
