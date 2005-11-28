@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.2.ebuild,v 1.11 2005/08/16 05:21:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.2.ebuild,v 1.12 2005/11/28 13:19:23 mcummings Exp $
 
-inherit perl-module eutils
+inherit perl-app eutils
 
 DESCRIPTION="Foomatic printer database engine"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
@@ -28,8 +28,8 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	# install perl modules
 	cd lib
-	perl-module_src_prep
-	perl-module_src_compile
+	perl-app_src_prep
+	perl-app_src_compile
 	perl-module_src_test
 	perl-module_src_install
 }
