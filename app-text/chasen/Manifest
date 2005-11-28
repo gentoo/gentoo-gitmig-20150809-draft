@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4689c36faf0ac02ebae6a2844845fb5 ChangeLog 2938
 MD5 2b0aca966bcafd81b846f43f21975538 chasen-2.3.3-r3.ebuild 985
 MD5 ce3c226945df05f4c4d5db10618a14b9 chasen-2.4.0_pre1-r1.ebuild 1060
@@ -7,3 +10,10 @@ MD5 dbdf469d20f447d4db95791cdc930688 files/digest-chasen-2.3.3-r3 64
 MD5 bde96f07cd17aaa246fa4b1981fd9370 files/digest-chasen-2.4.0_pre1 73
 MD5 bde96f07cd17aaa246fa4b1981fd9370 files/digest-chasen-2.4.0_pre1-r1 73
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDivPmtG5z4I8BtQoRAlZRAJ4hHF+jtlUHz+raEt+BRCrMJ1d5ewCfd5p0
+BHmgtwbiQzCQQo5ShANclEs=
+=lJ1S
+-----END PGP SIGNATURE-----
