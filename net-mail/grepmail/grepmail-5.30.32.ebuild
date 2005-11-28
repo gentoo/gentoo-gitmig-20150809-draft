@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.32.ebuild,v 1.1 2005/10/25 15:03:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.32.ebuild,v 1.2 2005/11/28 13:05:52 mcummings Exp $
 
-inherit versionator perl-module
+inherit versionator perl-app
 
 MY_P="${PN}-$(delete_version_separator 2)"
 S="${WORKDIR}/${MY_P}"

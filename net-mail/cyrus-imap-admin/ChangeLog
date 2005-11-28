@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.39 2005/07/07 01:48:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.40 2005/11/28 13:09:36 mcummings Exp $
+
+  28 Nov 2005; <mcumming@gentoo.org> cyrus-imap-admin-2.2.10.ebuild,
+  cyrus-imap-admin-2.2.12.ebuild:
+  Switched from perl-module to perl-app eclass
 
   07 Jul 2005; Andrej Kacian <ticho@gentoo.org>
   cyrus-imap-admin-2.2.12.ebuild:
