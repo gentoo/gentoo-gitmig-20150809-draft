@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.74.ebuild,v 1.7 2005/07/03 21:36:55 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.74.ebuild,v 1.8 2005/11/28 13:04:50 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 DESCRIPTION="Vipul's Razor is a distributed, collaborative spam detection and filtering network"
 HOMEPAGE="http://razor.sourceforge.net/"
