@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20050408.ebuild,v 1.1 2005/05/22 11:42:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20050408-r1.ebuild,v 1.1 2005/11/28 17:05:58 nattfodd Exp $
 
 inherit latex-package
 
@@ -27,7 +27,7 @@ src_compile() {
 src_install() {
 
 	insinto /usr/share/texmf/tex/latex/europecv
-	doins ecv* europecv.cls EuropeFlag*
+	doins ecv* europecv.cls EuropeFlag* europasslogo*
 
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*

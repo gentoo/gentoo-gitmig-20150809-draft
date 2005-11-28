@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.5 2005/08/07 13:31:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.6 2005/11/28 17:05:58 nattfodd Exp $
+
+*europecv-20050408-r1 (28 Nov 2005)
+
+  28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org> -europecv-20050408.ebuild,
+  +europecv-20050408-r1.ebuild:
+  Added installation of europasslogo.(eps|pdf), closing bug #109377. Thanks to
+  Sandro Bonazzola for the report and patch.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   europecv-20040603.ebuild:
