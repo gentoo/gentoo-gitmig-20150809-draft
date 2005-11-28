@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.2 2005/10/02 11:34:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.3 2005/11/28 18:35:27 hanno Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -30,6 +30,9 @@ src_unpack() {
 
 	# Use limits correctly -#89478
 	epatch "${FILESDIR}/${P}-limits.patch"
+
+	# Fix gcc 4.1 problems
+	epatch ${FILESDIR}/${P}-gcc41.patch
 
 	# Fix permission problems with user* in FEATURES (#35307)
 	chmod u+w ${S}/configure
