@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.19 2005/11/28 21:50:01 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.20 2005/11/28 21:59:48 nattfodd Exp $
+
+  28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org>
+  latex-beamer-3.00-r1.ebuild:
+  Back to ~arch.
 
   28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org>
   -latex-beamer-3.00.ebuild, -latex-beamer-3.01.ebuild:

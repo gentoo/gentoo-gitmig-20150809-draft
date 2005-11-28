@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.16 2005/11/28 18:26:17 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.17 2005/11/28 22:01:21 nattfodd Exp $
+
+  28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org> pgf-0.64-r1.ebuild:
+  Back to ~arch.
 
 *pgf-0.65-r1 (28 Nov 2005)
 *pgf-0.64-r1 (28 Nov 2005)
