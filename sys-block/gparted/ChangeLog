@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.6 2005/11/28 12:03:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.7 2005/11/28 20:43:16 blubb Exp $
+
+  28 Nov 2005; Simon Stelling <blubb@gentoo.org> gparted-0.0.9.ebuild:
+  add reiser4 to IUSE
 
 *gparted-0.0.9 (26 Nov 2005)
 
