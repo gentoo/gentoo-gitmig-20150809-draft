@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/DBI-Shell-11.93.ebuild,v 1.2 2005/07/24 17:28:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/DBI-Shell-11.93.ebuild,v 1.3 2005/11/28 11:33:56 mcummings Exp $
 
 inherit perl-module
 
@@ -16,4 +16,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/IO-Tee
-		dev-perl/Text-Reform"
+		dev-perl/text-reform"
