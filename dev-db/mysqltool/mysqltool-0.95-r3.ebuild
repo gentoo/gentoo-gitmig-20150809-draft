@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r3.ebuild,v 1.8 2005/08/23 17:57:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r3.ebuild,v 1.9 2005/11/28 12:18:41 mcummings Exp $
 
-inherit perl-module
+inherit perl-app
 
 S=${WORKDIR}/MysqlTool-${PV}
 DESCRIPTION="Web interface for managing one or more mysql server installations"
