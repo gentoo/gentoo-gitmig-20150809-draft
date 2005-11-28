@@ -1,18 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 065d99378d0a60fbcac163aef53187ce ChangeLog 3034
+MD5 1b5243539a69ef420dd449a5c51040a6 ChangeLog 3209
 MD5 af8b6b4de58e969469ffd1e1014c04ba files/digest-ktoblzcheck-0.7-r1 67
 MD5 c9f756def30f9e3748758e7d95076df5 files/digest-ktoblzcheck-1.2 67
 MD5 7cbeecef2ba27e6185335d102bd5297a files/digest-ktoblzcheck-1.7 67
+MD5 351942a81102d286df9d9ec37d3238f1 files/digest-ktoblzcheck-1.8 67
+MD5 6b6ea9d7b2f67f64ddf9027077b1f3ed files/ktoblzcheck-1.8-gcc41.patch 649
 MD5 27dbdb75cc1c963f7c06379fddf8c513 ktoblzcheck-0.7-r1.ebuild 741
 MD5 68919b1321977aaa9072261265ce8c51 ktoblzcheck-1.2.ebuild 673
 MD5 50e4dee4af00a027bce4da762d6590cc ktoblzcheck-1.7.ebuild 674
+MD5 9fd12ecd84ed727a5faa486496f1e705 ktoblzcheck-1.8.ebuild 825
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDiwmBKRy60XGEcJIRApaLAJ0fF0lOeeOIYjx9dzD56CMPtxDLFACeJBxN
-inKMRlC97YEYL90uviusLRM=
-=1LiW
+iD8DBQFDi5aTr2QksT29OyARAqkfAJ98uP6+Xxscbn0lY/b/zU9/udaCvwCcDdyz
+JFdYD0QfyT0nM2TnhWzIgSs=
+=58/B
 -----END PGP SIGNATURE-----
