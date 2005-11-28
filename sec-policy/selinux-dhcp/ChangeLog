@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-dhcp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dhcp/ChangeLog,v 1.16 2005/10/27 18:57:35 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dhcp/ChangeLog,v 1.17 2005/11/28 09:00:50 kaiowas Exp $
+
+*selinux-dhcp-20051122 (28 Nov 2005)
+
+  28 Nov 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-dhcp-20050219.ebuild, -selinux-dhcp-20050626.ebuild,
+  +selinux-dhcp-20051122.ebuild:
+  merge with upstream
 
   27 Oct 2005; petre rodan <kaiowas@gentoo.org>
   selinux-dhcp-20050918.ebuild:

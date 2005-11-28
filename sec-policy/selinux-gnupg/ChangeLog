@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-gnupg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.14 2005/09/18 10:04:26 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.15 2005/11/28 09:04:44 kaiowas Exp $
+
+*selinux-gnupg-20051023 (28 Nov 2005)
+
+  28 Nov 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-gnupg-20050626.ebuild, +selinux-gnupg-20051023.ebuild:
+  merge with upstream
 
   18 Sep 2005; petre rodan <kaiowas@gentoo.org>
   selinux-gnupg-20050626.ebuild, selinux-gnupg-20050823.ebuild:
