@@ -1,6 +1,16 @@
-MD5 53d80273a1560135ed1774c601beab3b ChangeLog 626
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 740b024344d850d49bac42d04999e6ac ChangeLog 738
 MD5 554c88d7f5e0707f80d8e1e510a2bec9 files/digest-loadpng-0.11 63
 MD5 c5f90f48f9460b9b77f5e597ea546e47 files/digest-loadpng-1.4 62
 MD5 f6d536c02a947597d906d3419adfc2b8 loadpng-0.11.ebuild 664
-MD5 01051044075fad539b03836148d675cc loadpng-1.4.ebuild 813
+MD5 21b90ff1bab5f87743ab924ed4e97ea8 loadpng-1.4.ebuild 878
 MD5 f8262495085fcfa7f25596eadfaa7a35 metadata.xml 236
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDiyI32G5bA0cA/ScRAqakAKC8TYKkKjX2O6Il7PVPCDgaaFQy6QCgnH5V
+u/7N4AjWQj29FsTK4I+TiOY=
+=QHYS
+-----END PGP SIGNATURE-----
