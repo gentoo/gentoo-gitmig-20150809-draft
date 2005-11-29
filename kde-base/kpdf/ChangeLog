@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.37 2005/11/29 04:51:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.38 2005/11/29 14:09:56 greg_g Exp $
+
+  29 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kpdf-3.5.0.ebuild:
+  Add check for bug #112848.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kpdf-3.5.0.ebuild:
   Added ~sparc keyword.
