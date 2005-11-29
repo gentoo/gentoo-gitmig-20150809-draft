@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 60dbf715583de01a60a8877482519795 ChangeLog 1857
 MD5 5c03a105622dbd96e30380bf94e810de dnstop-20031113.ebuild 726
-MD5 5caac2d61bf4a23319f390134f7ea0b2 dnstop-20050405.ebuild 737
+MD5 c385ec6fdba1c7fb8e30f189aa9bbbf0 dnstop-20050405.ebuild 741
 MD5 5559ca03ec5be95b7d52e70d7f2ff39d files/digest-dnstop-20031113 65
 MD5 20d96baa17f19520d6f4d948b0fd89e7 files/digest-dnstop-20050405 66
 MD5 c546ddef0d0bcf060c017bc93b2dc621 metadata.xml 257
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDiv0jwUpWvClEHQoRAvNYAJ4xpTqUktbhzIG2kiCnFxyTX56hLACeKerf
-tuijky46OOQmiuXS0B8sWN4=
-=AWdU
+iD8DBQFDi8svgIKl8Uu19MoRAuG+AJ9yNCG/rbsImX8KrgkP5lkbxpUH3wCfSLGl
+3caTiuhyM0sc/u8q/D6wvmg=
+=53bj
 -----END PGP SIGNATURE-----
