@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.38 2005/11/29 03:39:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.39 2005/11/29 13:24:47 greg_g Exp $
+
+  29 Nov 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdebase-kioslaves-3.5.0.ebuild:
+  Add dependency on sys-apps/pmount (#86283).
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org>
   kdebase-kioslaves-3.5.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.0.ebuild,v 1.2 2005/11/29 03:39:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.0.ebuild,v 1.3 2005/11/29 13:24:47 greg_g Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -15,7 +15,8 @@ DEPEND="ldap? ( net-nds/openldap )
 	samba? ( >=net-fs/samba-3.0.1 )
 	>=dev-libs/cyrus-sasl-2
 	hal? ( >=sys-apps/dbus-0.33
-	       =sys-apps/hal-0.5* )
+	       =sys-apps/hal-0.5*
+	       sys-apps/pmount )
 	openexr? ( media-libs/openexr )"
 RDEPEND="${DEPEND}
 	$(deprange $PV $MAXKDEVER kde-base/kdialog)"  # for the kdeeject script used by the devices/mounthelper ioslave
