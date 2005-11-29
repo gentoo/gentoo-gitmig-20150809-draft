@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.5-r1.ebuild,v 1.5 2005/10/01 22:39:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.5-r1.ebuild,v 1.6 2005/11/29 03:08:34 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://clueful.shagged.org/apachetop/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~mips ppc sparc x86"
 IUSE="apache2 fam pcre adns"
 
 DEPEND="sys-apps/sed
