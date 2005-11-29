@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.6.ebuild,v 1.1 2005/11/08 12:11:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.6.ebuild,v 1.2 2005/11/29 11:52:12 flameeyes Exp $
 
 inherit kde eutils
 
@@ -82,9 +82,15 @@ src_compile() {
 src_install() {
 	kde_src_install
 
+	# Workaround to use amaroK from outside KDE
+
 	# move the desktop file in /usr/share
 	dodir /usr/share/applications/kde
 	mv ${D}${KDEDIR}/share/applications/kde/amarok.desktop \
 		${D}/usr/share/applications/kde/amarok.desktop || die
+	# move icons, too
+	dodir /usr/share/icons
+	mv ${D}${KDEDIR}/share/icons/hicolor \
+		${D}/usr/share/icons || die
 }
 
