@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmousetool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.28 2005/11/26 14:35:16 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.29 2005/11/29 05:19:08 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> kmousetool-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> kmousetool-3.4.3.ebuild:
   Stable on ppc64

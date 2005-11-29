@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-iconthemes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.27 2005/11/26 14:35:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.28 2005/11/29 05:20:24 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org>
+  kdeaccessibility-iconthemes-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org>
   kdeaccessibility-iconthemes-3.4.3.ebuild:
