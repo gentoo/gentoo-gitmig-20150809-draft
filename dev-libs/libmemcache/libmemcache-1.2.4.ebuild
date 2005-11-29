@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/libmemcache-1.2.4.ebuild,v 1.3 2005/09/21 13:49:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/libmemcache-1.2.4.ebuild,v 1.4 2005/11/29 03:54:45 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freebsd.org/~seanc/libmemcache/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="net-misc/memcached"
