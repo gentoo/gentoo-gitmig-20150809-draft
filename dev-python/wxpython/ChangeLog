@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.33 2005/11/25 22:57:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.34 2005/11/29 04:11:50 metalgod Exp $
+
+  29 Nov 2005; Luis Medinas <metalgod@gentoo.org> wxpython-2.6.1.0.ebuild:
+  Stable on amd64.
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org>
   wxpython-2.6.1.0.ebuild:
