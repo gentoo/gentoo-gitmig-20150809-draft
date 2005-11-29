@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.34 2005/11/29 04:11:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.35 2005/11/29 17:41:21 metalgod Exp $
+
+  29 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  wxpython-2.4.2.4-r3.ebuild:
+  Stable on amd64. Fixes bug #113893.
 
   29 Nov 2005; Luis Medinas <metalgod@gentoo.org> wxpython-2.6.1.0.ebuild:
   Stable on amd64.
