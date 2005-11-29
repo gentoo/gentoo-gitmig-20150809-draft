@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 241a94dc6b2611304c3d9bd4e8e0c7a1 ChangeLog 1751
 MD5 c4c768958c9fb685125ffc0399983685 files/digest-par2cmdline-0.4 67
 MD5 c4c768958c9fb685125ffc0399983685 files/digest-par2cmdline-0.4-r1 67
@@ -6,3 +9,10 @@ MD5 63535457a22c3f35097d27d7af6e8d10 files/par2cmdline-0.4-wildcard-fix.patch 19
 MD5 18340e702678d0aecf6bc57cbc7ba177 metadata.xml 274
 MD5 c07cc3c6d08dc7bc5040ff8f7e7f6e12 par2cmdline-0.4-r1.ebuild 860
 MD5 c94644ad155ca9b9876df4dad13105cb par2cmdline-0.4.ebuild 630
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8SqgIKl8Uu19MoRAgpfAJ9K6jzHtOCK0bgIpEU5il/l2kP2ZwCfcOln
+6IsXVve1UiUJJpJjV3wFqow=
+=Janu
+-----END PGP SIGNATURE-----

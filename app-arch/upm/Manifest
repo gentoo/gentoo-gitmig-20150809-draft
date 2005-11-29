@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c791fc94d1b1e8bc6e947ce41ba3bd7 ChangeLog 612
 MD5 aa0bf47e505a2589041c86d337ebfc3f files/digest-upm-0.85 60
 MD5 c28ab9193761c7b15a492afb8f14442c files/upm-0.85-gentoo.diff 979
 MD5 2174862312688f52608a85f432104077 upm-0.85.ebuild 713
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8UkgIKl8Uu19MoRAqcQAJ9bXArDwKGOh4WLqPVjlL8aBJwSpgCeNyJp
+qLzx+0yP/56tzWqqAQNyIew=
+=UU/J
+-----END PGP SIGNATURE-----

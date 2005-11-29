@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6240551365d263c4f33194e174ef365a ChangeLog 525
 MD5 2d72e0d39cf3daef376d58023fcc5713 deb2targz-1.ebuild 595
 MD5 148a34ad67acc70b1a454a4ed93077fa files/digest-deb2targz-1 52
 MD5 f244a3bc4950853b234f8c3d76c08f55 metadata.xml 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8QRgIKl8Uu19MoRAlxwAJ0YDZzfEXizUr3CmBnMOjSEaUxVZwCbB093
+li24SQPCxDXru3Dz2P4jfks=
+=ikqk
+-----END PGP SIGNATURE-----

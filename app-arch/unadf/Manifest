@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a0291863c07b32c2890465c651e3be8 ChangeLog 619
 MD5 679e73724327c8771ab2b28e9d4444f0 files/digest-unadf-0.7.9b 55
 MD5 8119714e753e4ce382ab2fc6c031134f files/no.in_path.patch 1341
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 30edae8b0011502b9e2379a72ecd5ce1 unadf-0.7.9b.ebuild 966
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8TqgIKl8Uu19MoRAkhuAJ9Qw0rRDkU2GXhryZeNS0iboJ4hNQCfe9Ck
+KPZgdivIJ1EDttUkeFqme7o=
+=ag2Y
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4461c518c7d428e384f9790e8886f1e5 ChangeLog 715
 MD5 d6de84394cbec4ea28a448cbf0983596 files/digest-tarsync-0.1 63
 MD5 64b5a9bb87b7054683e6acde2279424c metadata.xml 269
 MD5 b665b68879513ab189db1f4e9e8e1635 tarsync-0.1.ebuild 622
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8TbgIKl8Uu19MoRAnAcAJ9BP1sp7GkozTh3JP+zfNBizDoXZgCfWL8C
+DSFMctxgQp0X9tp1tG66AYk=
+=IQgC
+-----END PGP SIGNATURE-----

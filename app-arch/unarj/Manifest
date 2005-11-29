@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67903f86a6ceb41d794c617c71d50338 ChangeLog 2150
 MD5 0fec2e24cfc04ee5279a349ea7ebc34b files/digest-unarj-2.63a-r1 62
 MD5 0fec2e24cfc04ee5279a349ea7ebc34b files/digest-unarj-2.63a-r2 62
@@ -5,3 +8,10 @@ MD5 c690458b8e0e69d0988b7359b4c4efa7 files/unarj-2.65-CAN-2004-0947.patch 1523
 MD5 ff29e175029520a55c6bbe96c614370b files/unarj-2.65-sanitation.patch 3040
 MD5 a657c9f358f42c0b3359c7a6cb726641 unarj-2.63a-r1.ebuild 660
 MD5 2cfc72f093e56abfc8109df0e1b0a440 unarj-2.63a-r2.ebuild 792
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8TxgIKl8Uu19MoRAhmfAJ9WRN0rrT8ETwxEUZ9nX23PkEZiyACbBEKC
+gaXZ0Y4R3DOXq9n36aC2xnY=
+=SmWS
+-----END PGP SIGNATURE-----

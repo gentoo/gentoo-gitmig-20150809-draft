@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3de366b79d3405ee0caa35e4f0875ca5 ChangeLog 1693
 MD5 32a48b430a53694588bbe69330284cdc alien-8.47.ebuild 990
 MD5 4182e33c424ee94386bbdde04528bdc1 alien-8.53.ebuild 998
 MD5 c1dd8145bb2ba4dffe27cebb2e66498f files/digest-alien-8.47 61
 MD5 869a00fbb58ca01403a80930ad635859 files/digest-alien-8.53 61
 MD5 6e77f3196f8735be5ba01cafd0c6b1bc metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8O9gIKl8Uu19MoRAhctAJ9zz1MA4tlI4oRa/7kJd/r/iVCFHgCdEwX4
+euhG6/l0ryr+SkS8fVAB1N0=
+=kq1q
+-----END PGP SIGNATURE-----
