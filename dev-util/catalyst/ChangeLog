@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.94 2005/11/22 15:55:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.95 2005/11/29 15:32:24 wolf31o2 Exp $
+
+*catalyst-2.0_pre20051129 (29 Nov 2005)
+
+  29 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_pre20051122-slot.patch,
+  +files/catalyst-2.0_pre20051129-slot.patch,
+  -catalyst-2.0_pre20051122.ebuild, +catalyst-2.0_pre20051129.ebuild:
+  This new pre-release version fixes all of the issues that have been reported
+  to us. Hopefully, this is the last pre-release version and the next release
+  will be catalyst 2.0 final.
 
 *catalyst-2.0_pre20051122 (22 Nov 2005)
 
