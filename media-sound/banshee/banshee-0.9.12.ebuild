@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.3 2005/11/28 03:52:38 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.4 2005/11/29 18:49:28 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -10,7 +10,7 @@ create audio and MP3 CDs from subsets of your library."
 HOMEPAGE="http://banshee-project.org"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="aac flac mad real vorbis"
