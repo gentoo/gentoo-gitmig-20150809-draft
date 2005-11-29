@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.7 2005/11/28 20:59:52 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.8 2005/11/29 09:33:26 marineam Exp $
+
+*ampache-3.3.1.6 (29 Nov 2005)
+
+  29 Nov 2005; Michael Marineau <marineam@gentoo.org>
+  -ampache-3.3.1.5.ebuild, +ampache-3.3.1.6.ebuild:
+  The previous release didn't really fix the security issue after all, but
+  this one does.
 
 *ampache-3.3.1.5 (28 Nov 2005)
 

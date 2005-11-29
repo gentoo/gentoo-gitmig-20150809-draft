@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.1.5.ebuild,v 1.1 2005/11/28 20:59:52 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.1.6.ebuild,v 1.1 2005/11/29 09:33:26 marineam Exp $
 
 inherit webapp
 
