@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.2.ebuild,v 1.2 2005/11/29 05:18:55 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.2.ebuild,v 1.3 2005/11/29 05:54:46 joem Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 	pda? ( >=media-libs/libgpod-0.2.0
 			>=sys-apps/hal-0.5 )
 	avahi? ( >=net-dns/avahi-0.5 )
-	!avahi ( howl? ( >=net-misc/howl-0.9.8 ) )
+	!avahi? ( howl? ( >=net-misc/howl-0.9.8 ) )
 	dbus? ( >=sys-apps/dbus-0.35 )
 	>=media-libs/gst-plugins-0.8.2
 	>=media-plugins/gst-plugins-gnomevfs-0.8.2
@@ -47,6 +47,13 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 
+	if ! use avahi && ! use howl; then
+		if use daap ; then
+		ewarn "Daap support requires either howl or avahi"
+		ewarn "to be installed. Please remerge with either"
+		ewarn "USE=avahi or USE=howl"
+		fi
+	fi
 	if use howl || use avahi ; then
 		G2CONF="${G2CONF} $(use_enable daap)"
 	fi
