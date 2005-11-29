@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.78 2005/10/20 16:51:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.79 2005/11/29 04:16:40 vapier Exp $
+
+*bash-3.0-r14 (29 Nov 2005)
+
+  29 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-3.0-cross-signals.patch, +files/bash-3.0-subshell.patch,
+  +files/bash-3.0-volatile-command.patch, +bash-3.0-r14.ebuild:
+  Grab a fix from Fedora (upstream), a fix from Debian, and try and fix signal
+  generation when cross-compiling.
 
   20 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/bash-3.0-strnlen.patch, bash-3.0-r13.ebuild:

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8da729bce0b4a17c8d70213464bfa3ae ChangeLog 16233
 MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
 MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
@@ -53,3 +56,10 @@ MD5 7d8a8ef90c1818a0cd66808ac2740638 files/dot-bash_logout 127
 MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
 MD5 6dcc418c7812b5f8ebf2f6562eb2e57c files/dot-bashrc 983
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi9azgIKl8Uu19MoRAjveAJ9stb3/Qk1iUQQyCxNEGBosRDI3VwCePGoF
+fpavfTqCo8ZvVqndGZssnkQ=
+=hsfm
+-----END PGP SIGNATURE-----
