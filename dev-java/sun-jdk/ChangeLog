@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.127 2005/11/15 16:45:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.128 2005/11/29 09:40:13 axxo Exp $
+
+  29 Nov 2005; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.4.2.10.ebuild:
+  Keyword x86
 
 *sun-jdk-1.4.2.10 (15 Nov 2005)
 
