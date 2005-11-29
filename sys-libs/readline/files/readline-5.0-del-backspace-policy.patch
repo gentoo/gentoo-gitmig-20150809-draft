@@ -2,20 +2,10 @@ ripped from Debian's readline5_5.0-10.diff
 
 # DP: Handle Debian Backspace/Delete keyboard policy
 
-http://bugs.gentoo.org/show_bug.cgi?id=74807
+http://bugs.gentoo.org/74807
 
-diff -ur readline5-5.0~alpha.orig/terminal.c readline5-5.0~alpha/terminal.c
 --- readline5-5.0~alpha.orig/terminal.c	2003-09-18 17:03:42.000000000 +0200
 +++ readline5-5.0~alpha/terminal.c	2003-09-27 17:15:30.000000000 +0200
-@@ -82,7 +82,7 @@
- 
- #if !defined (__linux__)
- #  if defined (__EMX__) || defined (NEED_EXTERN_PC)
--extern 
-+extern
- #  endif /* __EMX__ || NEED_EXTERN_PC */
- char PC, *BC, *UP;
- #endif /* __linux__ */
 @@ -148,6 +148,9 @@
  /* Insert key */
  static char *_rl_term_kI;
@@ -26,15 +16,6 @@ diff -ur readline5-5.0~alpha.orig/terminal.c readline5-5.0~alpha/terminal.c
  /* Cursor control */
  static char *_rl_term_vs;	/* very visible */
  static char *_rl_term_ve;	/* normal */
-@@ -280,7 +283,7 @@
-   if (cols)
-     *cols = _rl_screenwidth;
- }
--     
-+
- void
- rl_resize_terminal ()
- {
 @@ -314,6 +317,7 @@
    { "ic", &_rl_term_ic },
    { "im", &_rl_term_im },
