@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.5 2005/11/14 09:58:32 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.6 2005/11/29 21:47:47 hanno Exp $
 
 inherit flag-o-matic gnuconfig games multilib
 
@@ -26,6 +26,9 @@ DEPEND="virtual/opengl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch ${FILESDIR}/ppracer-0.3.1-gcc41.patch
+
 	gnuconfig_update
 	autoconf || die "autoconf failed"
 }
