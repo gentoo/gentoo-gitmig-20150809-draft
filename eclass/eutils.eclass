@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.218 2005/11/22 11:15:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.219 2005/11/29 03:37:36 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -62,7 +62,7 @@ ebeep() {
 # <azarah@gentoo.org> (26 Oct 2002)
 #
 gen_usr_ldscript() {
-	local libdir="$(get_libdir)"
+	local lib libdir=$(get_libdir)
 	# Just make sure it exists
 	dodir /usr/${libdir}
 
@@ -78,40 +78,10 @@ gen_usr_ldscript() {
 		 */
 		GROUP ( /${libdir}/${lib} )
 		END_LDSCRIPT
-		fperms a+x "/usr/${libdir}/${lib}"
+		fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
 	done
 }
 
-# Simple function to draw a line consisting of '=' the same length as $*
-#  - only to be used by epatch()
-#
-# <azarah@gentoo.org> (11 Nov 2002)
-#
-draw_line() {
-	local i=0
-	local str_length=""
-
-	# Handle calls that do not have args, or wc not being installed ...
-	if [ -z "$1" -o ! -x "$(which wc 2>/dev/null)" ]
-	then
-		echo "==============================================================="
-		return 0
-	fi
-
-	# Get the length of $*
-	str_length="$(echo -n "$*" | wc -m)"
-
-	while [ "$i" -lt "${str_length}" ]
-	do
-		echo -n "="
-
-		i=$((i + 1))
-	done
-
-	echo
-
-	return 0
-}
 
 # Default directory where patches are located
 EPATCH_SOURCE="${WORKDIR}/patch"
@@ -168,6 +138,23 @@ EPATCH_FORCE="no"
 # <azarah@gentoo.org> (10 Nov 2002)
 #
 epatch() {
+	_epatch_draw_line() {
+		local i=0 str_length="" str_out=""
+
+		# Handle calls that do not have args, or wc not being installed ...
+		if [[ -z $1 ]] || ! type -p wc >/dev/null ; then
+			str_length=65
+		else
+			str_length=$(echo -n "$*" | wc -m)
+		fi
+
+		while ((i++ < ${str_length})) ; do
+			str_out="${str_out}="
+		done
+		echo ${str_out}
+
+		return 0
+	}
 	_epatch_assert() { local _pipestatus=${PIPESTATUS[*]}; [[ ${_pipestatus// /} -eq 0 ]] ; }
 	local PIPE_CMD=""
 	local STDERR_TARGET="${T}/$$.out"
@@ -287,7 +274,7 @@ epatch() {
 			while [ "${count}" -lt 5 ]
 			do
 				# Generate some useful debug info ...
-				draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
+				_epatch_draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
 				echo >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
 
 				if [ "${PATCH_SUFFIX}" != "patch" ]
@@ -302,7 +289,7 @@ epatch() {
 				echo "patch -p${count} ${popts} < ${PATCH_TARGET}" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
 
 				echo >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
-				draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
+				_epatch_draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}
 
 				if [ "${PATCH_SUFFIX}" != "patch" ]
 				then
@@ -318,11 +305,11 @@ epatch() {
 
 				if (cat ${PATCH_TARGET} | patch -p${count} ${popts} --dry-run -f ; _epatch_assert) >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/} 2>&1
 				then
-					draw_line "***** ${patchname} *****" >	${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
+					_epatch_draw_line "***** ${patchname} *****" >	${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
 					echo >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
 					echo "ACTUALLY APPLYING ${patchname} ..." >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
 					echo >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
-					draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
+					_epatch_draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
 
 					cat ${PATCH_TARGET} | patch -p${count} ${popts} >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real 2>&1
 					_epatch_assert
