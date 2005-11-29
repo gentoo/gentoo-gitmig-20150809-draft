@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.15 2005/10/07 02:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.16 2005/11/29 03:04:52 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.3"
@@ -50,7 +50,10 @@ RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
 	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
 	!build? (
 		gcj? (
-			gtk? ( >=x11-libs/gtk+-2.2 )
+			gtk? (
+				|| ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libXtst x11-proto/xproto x11-proto/xextproto ) virtual/x11 )
+				>=x11-libs/gtk+-2.2
+			)
 			>=media-libs/libart_lgpl-2.1
 		)
 		>=sys-libs/ncurses-5.2-r2

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4-r1.ebuild,v 1.7 2005/11/22 05:15:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4-r1.ebuild,v 1.8 2005/11/29 03:04:52 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.7"
@@ -56,7 +56,10 @@ RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	!build? (
 		gcj? (
-			gtk? ( >=x11-libs/gtk+-2.2 )
+			gtk? (
+				|| ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libXtst x11-proto/xproto x11-proto/xextproto ) virtual/x11 )
+				>=x11-libs/gtk+-2.2
+			)
 			>=media-libs/libart_lgpl-2.1
 		)
 		>=sys-libs/ncurses-5.2-r2

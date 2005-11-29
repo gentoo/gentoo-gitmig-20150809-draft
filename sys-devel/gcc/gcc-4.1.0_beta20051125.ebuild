@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051125.ebuild,v 1.1 2005/11/26 04:05:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051125.ebuild,v 1.2 2005/11/29 03:04:52 vapier Exp $
 
 ETYPE="gcc-compiler"
 
@@ -22,7 +22,10 @@ RDEPEND="!sys-devel/hardened-gcc
 	)
 	!build? (
 		gcj? (
-			gtk? ( >=x11-libs/gtk+-2.2 )
+			gtk? (
+				|| ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libXtst x11-proto/xproto x11-proto/xextproto ) virtual/x11 )
+				>=x11-libs/gtk+-2.2
+			)
 			>=media-libs/libart_lgpl-2.1
 		)
 		>=sys-libs/ncurses-5.2-r2
