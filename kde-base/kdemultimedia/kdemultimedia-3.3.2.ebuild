@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.2.ebuild,v 1.15 2005/07/02 00:28:21 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.2.ebuild,v 1.16 2005/11/29 11:10:48 greg_g Exp $
 
 inherit kde-dist flag-o-matic eutils
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="alsa audiofile cdparanoia encode flac oggvorbis speex xine"
+IUSE="alsa audiofile cdparanoia encode flac speex vorbis xine"
 
 DEPEND="~kde-base/kdebase-${PV}
 	audiofile? ( media-libs/audiofile )
 	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )
-	oggvorbis? ( media-sound/vorbis-tools )
+	vorbis? ( media-sound/vorbis-tools )
 	xine? ( >=media-libs/xine-lib-1_beta12 )
 	alsa? ( media-libs/alsa-lib )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
@@ -46,7 +46,7 @@ src_compile() {
 
 	# alsa 0.9 not supported
 	use alsa	&& myconf="$myconf --with-alsa --with-arts-alsa" || myconf="$myconf --without-alsa --disable-alsa"
-	use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --without-vorbis"
+	use vorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --without-vorbis"
 	use encode	&& myconf="$myconf --with-lame=/usr" || myconf="$myconf --without-lame"
 
 	myconf="$myconf --disable-strict --disable-warnings"

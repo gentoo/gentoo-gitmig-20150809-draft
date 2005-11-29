@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2.ebuild,v 1.16 2005/10/13 13:29:17 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2.ebuild,v 1.17 2005/11/29 11:08:06 greg_g Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -12,10 +12,10 @@ SRC_URI="mirror://kde/stable/${PV/1.3.2/3.3.2}/src/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="alsa oggvorbis esd artswrappersuid jack mad hardened"
+IUSE="alsa esd artswrappersuid jack mad hardened vorbis"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
-	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
+	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad media-libs/libid3tag )
@@ -48,7 +48,7 @@ src_compile() {
 	#fix bug 41980
 	use sparc && filter-flags -fomit-frame-pointer
 
-	myconf="$myconf $(use_enable alsa) $(use_enable oggvorbis vorbis) $(use_enable mad libmad) $(use_enable jack)"
+	myconf="$myconf $(use_enable alsa) $(use_enable vorbis) $(use_enable mad libmad) $(use_enable jack)"
 
 	kde_src_compile
 }
