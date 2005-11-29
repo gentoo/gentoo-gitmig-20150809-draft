@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.18 2005/06/20 12:22:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.19 2005/11/29 04:14:28 metalgod Exp $
+
+  29 Nov 2005; Luis Medinas <metalgod@gentoo.org> wxglade-0.3.5.1.ebuild:
+  Stable on amd64.
 
   20 Jun 2005; Jason Wever <weeve@gentoo.org> wxglade-0.3.5.1.ebuild:
   Added ~sparc keyword.
