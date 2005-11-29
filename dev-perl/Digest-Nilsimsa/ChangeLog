@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-Nilsimsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.15 2005/11/12 22:58:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.16 2005/11/29 03:03:36 tgall Exp $
+
+  28 Nov 2005; Tom Gall <tgall@gentoo.org> 
+  Digest-Nilsimsa-0.06-r1.ebuild:
+  stable on ppc64
 
   12 Nov 2005; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking Digest-Nilsimsa-0.06-r1 ~ppc64 for bug# 112220

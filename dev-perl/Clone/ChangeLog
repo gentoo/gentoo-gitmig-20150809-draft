@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.15 2005/10/14 01:15:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.16 2005/11/29 03:08:18 tgall Exp $
+
+  18 Nov 2005; Tom Gall <tgall@gentoo.org> Clone-0.18.ebuild:
+  stable on ppc64
 
   14 Oct 2005; Aron Griffis <agriffis@gentoo.org> Clone-0.18.ebuild:
   Mark 0.18 stable on alpha
@@ -28,7 +31,7 @@
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> Clone-0.15.ebuild:
   Stable on sparc
 
-  22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> Clone-0.15.ebuild:
+  22 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> Clone-0.15.ebuild:
   Stable on alpha.
 
   21 Jan 2005; Michael Cummings <mcummings@gentoo.org> Clone-0.15.ebuild:
@@ -45,7 +48,7 @@
   05 Jun 2004; Michael Cummings <mcummings@gentoo.org> Clone-0.15.ebuild:
   new version on cpan
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> Clone-0.13.ebuild:
+  24 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> Clone-0.13.ebuild:
   Stable on alpha.
 
 *Clone-0.13 (04 Jun 2003)
