@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.2.ebuild,v 1.1 2005/11/29 05:07:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.2.ebuild,v 1.2 2005/11/29 05:18:55 joem Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 	pda? ( >=media-libs/libgpod-0.2.0
 			>=sys-apps/hal-0.5 )
 	avahi? ( >=net-dns/avahi-0.5 )
-	howl? ( >=net-misc/howl-0.9.8 )
+	!avahi ( howl? ( >=net-misc/howl-0.9.8 ) )
 	dbus? ( >=sys-apps/dbus-0.35 )
 	>=media-libs/gst-plugins-0.8.2
 	>=media-plugins/gst-plugins-gnomevfs-0.8.2
