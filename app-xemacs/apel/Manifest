@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b981e6db1c7289ac9136ce88eb4d78f9 ChangeLog 835
 MD5 2b17b7785adc3a84de23b61f5e9b411c apel-1.25.ebuild 438
 MD5 8201f75f4b7ee9baa4af08e79fd4838d apel-1.26.ebuild 451
 MD5 a0d827083e338d46e32f69c7a6149805 files/digest-apel-1.25 64
 MD5 7a46d047e8e6907c55af9268a1b1d031 files/digest-apel-1.26 64
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8xrgIKl8Uu19MoRAvReAJ0f9K3M5695FmMo2bSOFS+tsXgYpgCfTdJr
+LfarnklmS91k1qsUxnG6PNs=
+=If/b
+-----END PGP SIGNATURE-----
