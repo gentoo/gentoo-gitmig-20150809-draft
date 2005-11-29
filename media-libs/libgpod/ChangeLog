@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.3 2005/11/29 15:05:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.4 2005/11/29 17:49:06 metalgod Exp $
+
+  29 Nov 2005; Luis Medinas <metalgod@gentoo.org> libgpod-0.2.0.ebuild:
+  Added ~amd64 keyword.
 
   29 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> libgpod-0.2.0.ebuild:
   Keyworded ~sparc wrt #113875
