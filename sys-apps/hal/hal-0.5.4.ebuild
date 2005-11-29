@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.6 2005/11/27 06:18:11 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.7 2005/11/29 17:20:17 compnerd Exp $
 
 inherit eutils linux-info
 
@@ -121,4 +121,11 @@ pkg_postinst() {
 	einfo "work. Suggested is to add the init script to your start-up"
 	einfo "scripts, this should be done like this :"
 	einfo "\`rc-update add hald default\`"
+
+	ewarn
+	ewarn "If you are upgrading from a previous version of hal you should run"
+	ewarn "revdep-rebuild to find any programs which were built against the old"
+	ewarn "version and then rebuild them.  Not doing so may result in a broken"
+	ewarn "system."
+	ewarn
 }
