@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.27 2005/10/05 23:00:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.28 2005/11/29 15:50:25 sekretarz Exp $
+
+*sancho-bin-0.9.4.52 (29 Nov 2005)
+
+  29 Nov 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +sancho-bin-0.9.4.52.ebuild:
+  Version bump, bug #76163
 
   05 Oct 2005; Simon Stelling <blubb@gentoo.org> sancho-bin-0.9.4.21.ebuild:
   add emul-gtklibs dependency to fix bug 107726
