@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.30 2005/11/23 23:50:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.31 2005/11/29 22:46:27 compnerd Exp $
+
+  29 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.1-r1.ebuild:
+  Fixing multilib issues.  Minor cleanup
 
   23 Nov 2005; Luis Medinas <metalgod@gentoo.org> swt-3.2_pre1.ebuild:
   Fix package to be able to build with multilib-strict on amd64. Closes bug

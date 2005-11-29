@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1-r1.ebuild,v 1.3 2005/10/22 17:01:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1-r1.ebuild,v 1.4 2005/11/29 22:46:27 compnerd Exp $
 
-inherit eutils java-pkg
+inherit eutils java-pkg multilib
 
 MY_DMF="R-3.1-200506271435"
 MY_VERSION="3.1"
@@ -48,14 +48,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	# Extract based on architecture
-	if [[ ${ARCH} == 'amd64' ]] ; then
-		unpack swt-${MY_VERSION}-gtk-linux-x86_64.zip || die "Unable to unpack sources"
-	elif [[ ${ARCH} == 'ppc' ]] ; then
-		unpack swt-${MY_VERSION}-gtk-linux-ppc.zip || die "Unable to unpack	sources"
-	else
-		unpack swt-${MY_VERSION}-gtk-linux-x86.zip || die "Unable to unpack	sources"
-	fi
+	# Portage should do this magically
+	unpack ${A} || die "Unable to unpack sources"
 
 	# Clean up the directory structure
 	for f in $(ls); do
@@ -94,7 +88,7 @@ src_compile() {
 	fi
 
 	# Identity the XTEST library location
-	export XTEST_LIB_PATH=/usr/X11R6/lib
+	export XTEST_LIB_PATH=/usr/X11R6/$(get_libdir)
 
 	# Fix the pointer size for AMD64
 	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
@@ -155,7 +149,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar swt.jar
 
-	java-pkg_sointo /usr/lib
+	java-pkg_sointo /usr/$(get_libdir)
 	java-pkg_doso *.so
 
 	dohtml about.html
@@ -166,7 +160,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "CAIRO Support is experimental! We are not responsible if"
 		ewarn "enabling support for CAIRO corrupts your Gentoo install,"
-		ewarn "if it blows up your computer, or if it becoming sentient"
+		ewarn "if it blows up your computer, or if it becomes sentient"
 		ewarn "and chases you down the street yelling random binary!"
 		ewarn
 		ebeep 5
