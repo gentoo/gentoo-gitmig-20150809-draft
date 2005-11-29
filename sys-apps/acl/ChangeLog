@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.43 2005/09/25 11:20:57 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.44 2005/11/29 02:28:10 vapier Exp $
+
+*acl-2.2.32 (29 Nov 2005)
+
+  29 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/acl-2.2.32-only-symlink-when-needed.patch, +acl-2.2.32.ebuild:
+  Version bump and build cleanup.
 
   25 Sep 2005; Stuart Longland <redhatter@gentoo.org> acl-2.2.27.ebuild:
   Marking stable as per bug #73278 (which has hung around for yonks)
