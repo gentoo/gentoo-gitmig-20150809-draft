@@ -1,4 +1,4 @@
 MD5 f6a55b2c80113f781c072b9b393f990e ChangeLog 462
-MD5 c72cccd604ae93a44b3972cb79f6ab00 ipkg-utils-1.7.ebuild 997
-MD5 e6ad5c4b3b5323376c74ca8efe34381a metadata.xml 484
 MD5 2ea616c7436c738dbb0fec597510dd8d files/digest-ipkg-utils-1.7 65
+MD5 ee4bffbc4363de7b26b2320062ded48a ipkg-utils-1.7.ebuild 1004
+MD5 e6ad5c4b3b5323376c74ca8efe34381a metadata.xml 484
