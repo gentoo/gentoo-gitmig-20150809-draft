@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.0.ebuild,v 1.1 2005/11/22 22:14:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.0.ebuild,v 1.2 2005/11/29 05:02:44 weeve Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="sametime ssl xmms"
 
 DEPEND="dev-libs/libxslt

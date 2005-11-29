@@ -14,7 +14,7 @@ MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1
 MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
 MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
 MD5 af08747f97f02f8d64040a7844d3ad51 kdebase-startkde-3.4.3.ebuild 2192
-MD5 e9c302b4d61fbf3ae9eea8a473db4ac9 kdebase-startkde-3.5.0.ebuild 2180
+MD5 735b321abc00ce8aec81c069acd4974f kdebase-startkde-3.5.0.ebuild 2187
 MD5 7a38d417f25fe1765de3b65c106ed2b9 kdebase-startkde-3.5.0_beta2.ebuild 2195
 MD5 f3407857320e2382112c204b30f7d4c4 kdebase-startkde-3.5.0_rc1.ebuild 2204
 MD5 08e1648f05e028801785181139b3a255 kdebase-startkde-3.5_beta1.ebuild 2181

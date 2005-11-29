@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.27 2005/11/26 14:35:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.28 2005/11/29 04:46:33 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org>
+  kdegraphics-kfile-plugins-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kdegraphics-kfile-plugins-3.4.3.ebuild:

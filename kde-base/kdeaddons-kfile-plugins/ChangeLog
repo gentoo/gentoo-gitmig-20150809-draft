@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.19 2005/11/26 14:35:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.20 2005/11/29 03:36:15 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org>
+  kdeaddons-kfile-plugins-3.5.0.ebuild:
+  Added ~sparc keyword.
 
 *kdeaddons-kfile-plugins-3.5.0 (22 Nov 2005)
 

@@ -9,7 +9,7 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdeprint-3.5_beta1 69
 MD5 eef4cc9fa42b2f45b85e576280f93cd9 kdeprint-3.4.1.ebuild 510
 MD5 f640b99375ba6c2c98e77127dff658e0 kdeprint-3.4.2.ebuild 523
 MD5 04cf7fa9eea75abb322f7b1b7d6a211a kdeprint-3.4.3.ebuild 519
-MD5 d1a9fbc175163c9b433f3f0c697bd4f8 kdeprint-3.5.0.ebuild 499
+MD5 7add2cbe8f15d8f4cbce5c58ad29fd42 kdeprint-3.5.0.ebuild 506
 MD5 f50fb8a17c5fef4864c61e3d3e01dd7e kdeprint-3.5.0_beta2.ebuild 504
 MD5 5e50f915cb0a05ac0864f4d8f28762a5 kdeprint-3.5.0_rc1.ebuild 503
 MD5 59dd13887e1abaafc878b5d835b2e1de kdeprint-3.5_beta1.ebuild 502

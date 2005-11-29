@@ -10,7 +10,7 @@ MD5 3b51987b260bd459b22f032394a48dc0 files/kate-gcc-4.patch 287
 MD5 e3aec595f1bb9e306214befbaecc006a kate-3.4.1.ebuild 436
 MD5 c1847e2ae10a648a883ec88fd6b73ac6 kate-3.4.2.ebuild 410
 MD5 7e410ae2e60aca3a55fc63e71d6a6a18 kate-3.4.3.ebuild 406
-MD5 17d0eafc6551df79759c38aa9a7374ed kate-3.5.0.ebuild 386
+MD5 8b3f99105bd08fc8e09f46efb5a8ed37 kate-3.5.0.ebuild 393
 MD5 09339b3488273c6517f825e229c8dd4a kate-3.5.0_beta2.ebuild 391
 MD5 1f9422931b9cffc49d27c10895a04502 kate-3.5.0_rc1.ebuild 390
 MD5 f2f4020b660993a9edce1e62b08458b0 kate-3.5_beta1.ebuild 389

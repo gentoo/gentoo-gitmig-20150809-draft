@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.20 2005/11/26 14:35:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.21 2005/11/29 04:22:04 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> libksieve-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> libksieve-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.

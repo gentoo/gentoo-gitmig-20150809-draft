@@ -4,7 +4,7 @@ MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdesu-3.5.0 68
 MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdesu-3.5.0_rc1 299
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdesu-3.5_beta1 69
 MD5 a6da71a58b3249e90acd36fdd8dbeb64 kdesu-3.4.1.ebuild 390
-MD5 89384222baafd6926ed39ec4098a8514 kdesu-3.5.0.ebuild 372
+MD5 5359d38b8dd7ed8314fca672ce8a706d kdesu-3.5.0.ebuild 379
 MD5 18af578b14ebdf33d76395325656029b kdesu-3.5.0_rc1.ebuild 376
 MD5 a0f8d4ceac531a548992580f8b8d8b86 kdesu-3.5_beta1.ebuild 381
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

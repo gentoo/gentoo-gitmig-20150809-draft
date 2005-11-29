@@ -6,7 +6,7 @@ MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kdialog-3.5.0_rc1 299
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdialog-3.5_beta1 69
 MD5 6eadcc709c52bce0bf5eddfa4bf2f6cb files/kdeeject-3.4.1 983
 MD5 f7632117052a07b0225ee73f89e0a82c kdialog-3.4.1.ebuild 618
-MD5 e62123f40baa1534c5c1a1add326d74e kdialog-3.5.0.ebuild 479
+MD5 19b27bd58e77647cf8f69f770f14da25 kdialog-3.5.0.ebuild 486
 MD5 2063da5f059e47e9fd4b475986b44667 kdialog-3.5.0_beta2.ebuild 482
 MD5 25148ffa07686e5102fc46e4e0fc777b kdialog-3.5.0_rc1.ebuild 483
 MD5 0f976713d54de730190430e786b1d1e2 kdialog-3.5_beta1.ebuild 480

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.19 2005/11/26 14:35:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.20 2005/11/29 04:07:38 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> kdcop-3.5.0.ebuild:
+  Added ~sparc keyword.
 
 *kdcop-3.5.0 (22 Nov 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/kdeartwork-emoticons-3.5.0.ebuild,v 1.1 2005/11/22 22:14:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/kdeartwork-emoticons-3.5.0.ebuild,v 1.2 2005/11/29 04:42:45 weeve Exp $
 
 KMMODULE=emoticons
 KMNAME=kdeartwork
@@ -9,6 +9,6 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="EmotIcons (icons for things like smilies :-) for kde"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 DEPEND=""

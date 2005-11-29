@@ -9,7 +9,7 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-konsole-3.5_beta1 69
 MD5 6633760e033c5f04ab794e91bfdbff8f konsole-3.4.1.ebuild 392
 MD5 caded7869fdce4348fc731037bbcc504 konsole-3.4.2.ebuild 405
 MD5 834695c454857d1ed148a41a20bac600 konsole-3.4.3.ebuild 401
-MD5 da635c05195efca4034e3e8d2bdef11a konsole-3.5.0.ebuild 386
+MD5 184e1b274dd5ac7fd0ac0220d9ae3246 konsole-3.5.0.ebuild 393
 MD5 9ac84394b52af594ae612701d2e72b3c konsole-3.5.0_beta2.ebuild 389
 MD5 f926cc875f39681fafb5815b1f4f8554 konsole-3.5.0_rc1.ebuild 390
 MD5 8baaeddbe37fe611397908a85a5ac9ce konsole-3.5_beta1.ebuild 387

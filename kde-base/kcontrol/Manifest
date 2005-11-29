@@ -16,7 +16,7 @@ MD5 8c071d64261cb5641d4f140ab61debd2 kcontrol-3.4.1.ebuild 1326
 MD5 ac9c4ad066ae48aaee618b7f297f1768 kcontrol-3.4.2-r1.ebuild 1916
 MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
 MD5 4fdda4f47d80f2781ec8639977ee3623 kcontrol-3.4.3.ebuild 1775
-MD5 d45e7eeeb7123110120abf7b2d8a1951 kcontrol-3.5.0.ebuild 1614
+MD5 1477338a0865506bdb72ad3f046f3d5a kcontrol-3.5.0.ebuild 1621
 MD5 05b977a4624b963bb509e377371ddb93 kcontrol-3.5.0_beta2.ebuild 1623
 MD5 6b1687fc49b1b99afdca67402121c891 kcontrol-3.5.0_rc1.ebuild 1626
 MD5 d8698caadf1ce99d0e5bfa17c67ebae6 kcontrol-3.5_beta1.ebuild 1615

@@ -9,7 +9,7 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-ktip-3.5_beta1 69
 MD5 714cdec14532c8effa7385165a847ad5 ktip-3.4.1.ebuild 386
 MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.2.ebuild 399
 MD5 890f4c80b5a6c228481368c325b40654 ktip-3.4.3.ebuild 395
-MD5 e1a472a5963aba0f9dd1d91d77aa5c26 ktip-3.5.0.ebuild 375
+MD5 00b719a12abfbca53ff020f0fa1c3dda ktip-3.5.0.ebuild 382
 MD5 7d52f07571c21e8dd21174fbb4cdd625 ktip-3.5.0_beta2.ebuild 380
 MD5 0e693c7dcca0f6fecc2b21a482c45176 ktip-3.5.0_rc1.ebuild 379
 MD5 cc09b948dd856141826c7a1aa621fd59 ktip-3.5_beta1.ebuild 378

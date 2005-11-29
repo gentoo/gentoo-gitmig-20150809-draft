@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.26 2005/11/26 14:35:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.27 2005/11/29 04:25:14 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> kpilot-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> kpilot-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.

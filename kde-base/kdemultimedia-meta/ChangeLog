@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.31 2005/11/26 14:35:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.32 2005/11/29 05:00:05 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org>
+  kdemultimedia-meta-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kdemultimedia-meta-3.4.3.ebuild:

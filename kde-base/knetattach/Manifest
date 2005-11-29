@@ -9,7 +9,7 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-knetattach-3.5_beta1 69
 MD5 9da2056fb7b18814bb5579865fa3d886 knetattach-3.4.1.ebuild 387
 MD5 1b2c24e119b3cc70ecbef9e83891fd0e knetattach-3.4.2.ebuild 400
 MD5 3cc28ecd40a8aad69c1d72a5571d2c32 knetattach-3.4.3.ebuild 396
-MD5 41ecc52824e60009c0a7ef7db2647909 knetattach-3.5.0.ebuild 376
+MD5 c7680a347017d97044589b9f641b087f knetattach-3.5.0.ebuild 383
 MD5 aa3ae8a3853883b05df7877cf6da0dc9 knetattach-3.5.0_beta2.ebuild 381
 MD5 3103ac032bdb2d36e2d6767a9e1e7fa4 knetattach-3.5.0_rc1.ebuild 380
 MD5 b4c64851c2b5b98ba39fd3ceb0cd30f4 knetattach-3.5_beta1.ebuild 379

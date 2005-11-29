@@ -10,7 +10,7 @@ MD5 6fbfb59b6c34c3ed5a8b8bbfb5ccb1c7 files/kcheckpass-pie-final.patch 624
 MD5 b401a538cf13f910f1d1feaf4c6af086 kcheckpass-3.4.1.ebuild 517
 MD5 c6405bea7c47189c312b88797fac75c6 kcheckpass-3.4.2.ebuild 529
 MD5 b3abc7fc8c9fc2596aaa23157cb58739 kcheckpass-3.4.3.ebuild 525
-MD5 3cb594190b6058092de389d4365f48cb kcheckpass-3.5.0.ebuild 510
+MD5 b5593cad08699fc3fc8a82677f410581 kcheckpass-3.5.0.ebuild 517
 MD5 3bb52311ac100edf44ac503b15eb240d kcheckpass-3.5.0_beta2.ebuild 664
 MD5 9a7ad2f6c01fe484affa77116db3470b kcheckpass-3.5.0_rc1.ebuild 515
 MD5 d8e6f992e888f8a83ce7e3d10553f6bc kcheckpass-3.5_beta1.ebuild 511

@@ -9,7 +9,7 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdesktop-3.5_beta1 69
 MD5 ffb8567a9ab217b33273996584a848f5 kdesktop-3.4.1.ebuild 1355
 MD5 72704bb9b1063c9447f0101cb11d95b5 kdesktop-3.4.2.ebuild 1370
 MD5 52fa26378f17bcfadfeea857f14b9bde kdesktop-3.4.3.ebuild 1366
-MD5 81c2eada58052745ead72afffccafd54 kdesktop-3.5.0.ebuild 1230
+MD5 804c82de0e8ce47f15a30e95c18da2e8 kdesktop-3.5.0.ebuild 1237
 MD5 e1b4e831c39866b8068891d73d736cbf kdesktop-3.5.0_beta2.ebuild 1233
 MD5 9fbc5128813eb77689da8fb0a6070ee7 kdesktop-3.5.0_rc1.ebuild 1234
 MD5 8d141f45f0b93d0828b924ea6aa4f8f2 kdesktop-3.5_beta1.ebuild 1231

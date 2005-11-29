@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.22 2005/11/26 14:35:15 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.23 2005/11/29 03:41:14 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> kdesu-3.5.0.ebuild:
+  Added ~sparc keyword.
 
 *kdesu-3.5.0 (22 Nov 2005)
 

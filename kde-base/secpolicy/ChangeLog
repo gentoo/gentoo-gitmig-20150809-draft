@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/secpolicy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.20 2005/11/26 14:35:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.21 2005/11/29 04:45:08 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> secpolicy-3.5.0.ebuild:
+  Added ~sparc keyword.
 
 *secpolicy-3.5.0 (22 Nov 2005)
 
