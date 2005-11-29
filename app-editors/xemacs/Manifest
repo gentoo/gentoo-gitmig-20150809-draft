@@ -1,36 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c49d5e1449c0ae8eade0e5ec6e3224a1 xemacs-21.4.15-r1.ebuild 5046
-MD5 426f39c900c70c31593ec1cd16e29a46 xemacs-21.4.15-r3.ebuild 5203
-MD5 a4f298f675fc5c0ed0ceaa6bfecce583 xemacs-21.4.15.ebuild 3835
-MD5 7dc7dbe3b86bdf29083a4a85a4f232d5 xemacs-21.4.9.ebuild 4179
-MD5 e8dafe39b610ca6e4cbb4f92f9e33add xemacs-21.4.12.ebuild 4946
-MD5 1e7f35e3642c3b31d3e72ec64731e488 xemacs-21.4.15-r2.ebuild 5111
 MD5 00e36cae804bc077ff485c8e3f48698e ChangeLog 10167
-MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
-MD5 0da90396cb9e3ca915e9e00a2f99ee32 files/xemacs-21.4.15-gdbm.patch 639
-MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
-MD5 39fc9657b72b09c8b91f52ee50758ad2 files/xemacs-21.4.12-ppc.diff 1075
-MD5 c72c4643e7b5e7c44a57766a88838600 files/xemacs-21.4.9-ppc.diff 1031
+MD5 df382940daa67bb8888fbae22d617cb4 files/README.Gentoo 1426
 MD5 6d3780dc77d3dd7c017d8864d2f0b07d files/digest-xemacs-21.4.12 130
 MD5 a15e4793a81736335419229a12101bc1 files/digest-xemacs-21.4.15 274
-MD5 314a61a9a7fe98dacbfa87ee8cfe3c03 files/xemacs21-movemail-popfmt.diff 1245
-MD5 678239bc0954d838f5a9c53a6570c850 files/xemacs-21.4.9-ppc-glibc-2.3.x.diff 1112
-MD5 df382940daa67bb8888fbae22d617cb4 files/README.Gentoo 1426
-MD5 ace9b77c4d23c9500c1e81a3606545f8 files/quick-fix.patch 393
-MD5 27a8dcab7441389fc05c3406096bb8be files/emodules.info-gentoo.patch 479
-MD5 892c698f9b7d3ca42a83df34518b0946 files/digest-xemacs-21.4.9 273
 MD5 6a3d383a050855607a702a56c850ff1a files/digest-xemacs-21.4.15-r1 130
 MD5 6a3d383a050855607a702a56c850ff1a files/digest-xemacs-21.4.15-r2 130
 MD5 6a3d383a050855607a702a56c850ff1a files/digest-xemacs-21.4.15-r3 130
+MD5 892c698f9b7d3ca42a83df34518b0946 files/digest-xemacs-21.4.9 273
+MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
+MD5 27a8dcab7441389fc05c3406096bb8be files/emodules.info-gentoo.patch 479
+MD5 ace9b77c4d23c9500c1e81a3606545f8 files/quick-fix.patch 393
+MD5 39fc9657b72b09c8b91f52ee50758ad2 files/xemacs-21.4.12-ppc.diff 1075
+MD5 0da90396cb9e3ca915e9e00a2f99ee32 files/xemacs-21.4.15-gdbm.patch 639
 MD5 94beef92edcaf12edef657556fbb7a7e files/xemacs-21.4.8-ppc.diff 1032
+MD5 678239bc0954d838f5a9c53a6570c850 files/xemacs-21.4.9-ppc-glibc-2.3.x.diff 1112
+MD5 c72c4643e7b5e7c44a57766a88838600 files/xemacs-21.4.9-ppc.diff 1031
+MD5 314a61a9a7fe98dacbfa87ee8cfe3c03 files/xemacs21-movemail-popfmt.diff 1245
+MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
+MD5 e8dafe39b610ca6e4cbb4f92f9e33add xemacs-21.4.12.ebuild 4946
+MD5 c49d5e1449c0ae8eade0e5ec6e3224a1 xemacs-21.4.15-r1.ebuild 5046
+MD5 1e7f35e3642c3b31d3e72ec64731e488 xemacs-21.4.15-r2.ebuild 5111
+MD5 c8b16d9ce480a33720c9b4ad7b510b63 xemacs-21.4.15-r3.ebuild 5210
+MD5 a4f298f675fc5c0ed0ceaa6bfecce583 xemacs-21.4.15.ebuild 3835
+MD5 7dc7dbe3b86bdf29083a4a85a4f232d5 xemacs-21.4.9.ebuild 4179
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iQCVAwUBQqy8KZ4WFLgrx1GWAQIdNwQAnrlkxvbvgCoqwTO0XcmxLhP8m2/+envT
-vgnjs7y6ushlzU60gt22yxRz76FcYBF0aqvsZgTCTPcewewSbFznba+K8PZMMGBF
-dDLN93HUyuzMW6E0qGlpJnHerOF/PUSCWJps0rQXSj3M0DQXQRPCB4Lc+9l8kygM
-ApqvS8jCYw0=
-=sJub
+iD8DBQFDi8x2gIKl8Uu19MoRAg0nAJ9xg9oZXHRnqBLz4cmPDh1AyMJHzgCeOd1M
+N+HCBJN2kWTKiX9+Y6EL13c=
+=DfXv
 -----END PGP SIGNATURE-----
