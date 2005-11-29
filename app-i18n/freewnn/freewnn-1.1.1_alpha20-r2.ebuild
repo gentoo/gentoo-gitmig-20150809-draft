@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20-r2.ebuild,v 1.3 2005/02/09 23:25:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20-r2.ebuild,v 1.4 2005/11/29 03:31:45 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.freewnn.org/pub/FreeWnn/alpha/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="X ipv6"
 
 DEPEND="virtual/libc
