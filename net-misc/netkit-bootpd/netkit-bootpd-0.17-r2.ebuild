@@ -1,23 +1,23 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-0.17-r2.ebuild,v 1.2 2005/11/29 03:18:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-0.17-r2.ebuild,v 1.3 2005/11/29 03:19:18 vapier Exp $
 
 inherit eutils
 
 MY_PN=${PN/pd/paramd}
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Netkit - bootp"
-SRC_URI="mirror://debian/pool/main/n/netkit-bootparamd/${MY_PN}_${PV}.orig.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
+SRC_URI="mirror://debian/pool/main/n/netkit-bootparamd/${MY_PN}_${PV}.orig.tar.gz"
 
-KEYWORDS="~hppa ~mips ~ppc ~sparc ~x86"
-IUSE=""
 LICENSE="BSD"
 SLOT="0"
+KEYWORDS="~hppa ~mips ~ppc ~sparc ~x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/0.17-jumpstart.patch || die "failed to apply patch"
+	epatch ${FILESDIR}/0.17-jumpstart.patch
 }
 
 src_compile() {

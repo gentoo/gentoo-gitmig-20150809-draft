@@ -6,11 +6,11 @@ MD5 6d9cf6a3cff3c0b1c71ce938a7a5fc6a files/0.17-jumpstart.patch 1163
 MD5 0fff8ed5c4395d99043f3f50422826bb files/digest-netkit-bootpd-0.17-r1 78
 MD5 0fff8ed5c4395d99043f3f50422826bb files/digest-netkit-bootpd-0.17-r2 78
 MD5 0d1e04d4f16edae8ed199f5c24e49dc8 netkit-bootpd-0.17-r1.ebuild 888
-MD5 6a932b7be620fd1e6f488ee545edb958 netkit-bootpd-0.17-r2.ebuild 1057
+MD5 79cd1661a7e3a5123071e6a8d443ace4 netkit-bootpd-0.17-r2.ebuild 1026
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi8kYgIKl8Uu19MoRAqqVAJ9Il5jcjq/BKUXddQarLznkDjXj9wCfW2aL
-UXCZCg2NzmJ9GY9Rxa5xJEc=
-=x1LH
+iD8DBQFDi8lCgIKl8Uu19MoRAliVAJ4q+46C2XKNeICr1Nf/51jTvzy19wCdGwg0
+bz4XHW6Z7CSm/jQ6CBFqDt4=
+=u4m4
 -----END PGP SIGNATURE-----
