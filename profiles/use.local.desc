@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1585 2005/11/28 19:40:22 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1586 2005/11/29 03:24:43 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1194,6 +1194,7 @@ www-apps/dspam-web:exim - Build with delivery options for exim
 www-apps/dspam-web:large-domain - Builds for large domain rather than for domain scale
 www-apps/dspam-web:maildrop - Build with delivery options for maildrop
 www-apps/dspam-web:neural - Build neural support for dspam
+www-apps/dspam-web:logrotate - Build logrotate support for dspam
 www-apps/dspam-web:procmail - Build procmail filter support
 www-apps/dspam-web:sqlite3 - Build sqlite 3 support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
