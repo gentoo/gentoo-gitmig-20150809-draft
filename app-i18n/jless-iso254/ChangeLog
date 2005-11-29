@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/jless-iso254
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/ChangeLog,v 1.10 2005/01/01 14:31:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/ChangeLog,v 1.11 2005/11/29 04:29:10 jer Exp $
+
+  29 Nov 2005; Jeroen Roovers <jer@gentoo.org> jless-iso254-358.ebuild:
+  Marked ~hppa wrt bug 109187.
 
   12 Jul 2004; Tom Gall <tgall@gentoo.org> jless-is0254-358.ebuild:
   stable on ppc64, bug #55324
