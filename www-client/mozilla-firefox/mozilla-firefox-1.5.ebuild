@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc3-r1.ebuild,v 1.2 2005/11/24 03:45:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.ebuild,v 1.1 2005/11/29 22:04:37 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -10,17 +10,14 @@ MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime versionator
 
-MY_P="$(replace_version_separator 2 '')"
-FV=${MY_P/beta/b}
-
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${FV}/source/firefox-${FV}-source.tar.bz2
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
 	mirror://gentoo/mozilla-jslibmath-alpha.patch
 	mirror://gentoo/embed-typeaheadfind.patch
 	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
 
-KEYWORDS="-*"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
@@ -41,7 +38,7 @@ export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 
 src_unpack() {
-	unpack firefox-${FV}-source.tar.bz2
+	unpack firefox-${PV}-source.tar.bz2
 	cd ${S} || die "cd failed"
 
 	####################################
@@ -52,19 +49,19 @@ src_unpack() {
 
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
-	use alpha && epatch ${FILESDIR}/1.5/mozilla-1.3-alpha-stubs.patch
+	use alpha && epatch ${FILESDIR}/${PV}/mozilla-1.3-alpha-stubs.patch
 
 	# addresses visibility issues on ppc and amd64
 	# will not hurt to apply on other archs as well.
-	epatch ${FILESDIR}/1.5/firefox-1.1-visibility.patch
+	epatch ${FILESDIR}/${PV}/firefox-1.1-visibility.patch
 
 	# hppa patches from Ivar <orskaug@stud.ntnu.no>
 	# <gmsoft@gentoo.org> (22 Dec 2004)
-	epatch ${FILESDIR}/1.5/mozilla-hppa.patch
+	epatch ${FILESDIR}/${PV}/mozilla-hppa.patch
 
 	# patch to solve segfaults on ia64, from Debian, originally from David
 	# Mosberger
-	epatch ${FILESDIR}/1.5/mozilla-firefox-1.1a2-ia64.patch
+	epatch ${FILESDIR}/${PV}/mozilla-firefox-1.1a2-ia64.patch
 
 	# patch to fix math operations on alpha, makes maps.google.com work!
 	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
@@ -79,9 +76,9 @@ src_unpack() {
 	####################################
 
 	# patch from fedora to remove the pangoxft things
-	epatch ${FILESDIR}/1.5/firefox-nopangoxft.patch
+	epatch ${FILESDIR}/${PV}/firefox-nopangoxft.patch
 	# cairo-canvas patch, only needed to build against system cairo
-	# epatch ${FILESDIR}/1.5/firefox-cairo-canvas.patch
+	# epatch ${FILESDIR}/${PV}/firefox-cairo-canvas.patch
 
 	# patch from fedora to stop crashing with gnome-vfs
 	epatch ${FILESDIR}/firefox-1.1-uriloader.patch
@@ -95,6 +92,7 @@ src_unpack() {
 	# patch to fix typeahead find for browsers which embed Firefox
 	# http://bugzilla.gnome.org/show_bug.cgi?id=157435
 	epatch ${DISTDIR}/embed-typeaheadfind.patch
+	epatch ${FILESDIR}/${PV}/${P}-gtk.patch
 
 	# rpath fix
 	epatch ${FILESDIR}/mozilla-rpath-1.patch
@@ -104,13 +102,6 @@ src_unpack() {
 	ebegin "Patching smime to call perl from /usr/bin"
 	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
-
-	echo  ""
-	ewarn "Even tho this is 1.5rc3 I am gonna take bug reports"
-	ewarn "If you can attach a patch for any problems you may encounter"
-	ewarn "I will push bugs upstream if I feel it is need, do not take"
-	ewarn "offense or think I am blowing your bug report off"
-	ewarn "Thank you! Anarchy."
 }
 
 src_compile() {
@@ -237,9 +228,9 @@ src_install() {
 	#
 	####################################
 
-	dodir ${D}/${MOZILLA_FIVE_HOME}/greprefs
+	dodir ${MOZILLA_FIVE_HOME}/greprefs
 	cp ${FILESDIR}/gentoo-default-prefs.js ${D}/${MOZILLA_FIVE_HOME}/greprefs/all-gentoo.js
-	dodir ${D}/${MOZILLA_FIVE_HOME}/defaults/pref
+	dodir ${MOZILLA_FIVE_HOME}/defaults/pref
 	cp ${FILESDIR}/gentoo-default-prefs.js ${D}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js
 
 	# Install docs
@@ -258,10 +249,10 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 
 	echo  ""
-	ewarn "Even tho this is 1.5rc3 I am gonna take bug reports"
-	ewarn "If you can, attach a patch for any problems you may encounter"
-	ewarn "I will push bugs upstream if I feel it is need, do not take"
-	ewarn "offense or think I am blowing your bug report off"
+	ewarn "Please remember to rebuild any packages that you have built"
+	ewarn "against firefox. Some packages might be busted please search"
+	ewarn "http://bugs.gentoo.org if no bug is open, then please open a new"
+	ewarn "bug report so these can be fixed."
 	ewarn "Thank you! Anarchy."
 }
 
