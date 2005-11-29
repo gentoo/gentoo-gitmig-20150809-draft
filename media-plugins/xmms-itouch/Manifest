@@ -1,6 +1,16 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab6d8f820e939bbeb1b6ad854fb9be28 ChangeLog 1823
-MD5 abbef24007c334f523a75af90dd3b113 xmms-itouch-0.1.2.ebuild 1127
-MD5 90866abb436c0b427c62c61164d4718d xmms-itouch-0.1.2-r1.ebuild 1243
 MD5 dc94fa10845827bed27ded9940351f36 files/digest-xmms-itouch-0.1.2 69
 MD5 ffd2a30010902d89bae3598e20eab92c files/digest-xmms-itouch-0.1.2-r1 130
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 5e291cec27d320044aaaf88ba4df784b xmms-itouch-0.1.2-r1.ebuild 1249
+MD5 abbef24007c334f523a75af90dd3b113 xmms-itouch-0.1.2.ebuild 1127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8tMgIKl8Uu19MoRAkRtAJ0REpfBgi2f+OIK0FfKDb8hzI439QCfaKkN
+V9eYvQesyedC8O8rtsuMOBU=
+=w6MK
+-----END PGP SIGNATURE-----
