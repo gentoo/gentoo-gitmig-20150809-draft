@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.14 2005/11/29 18:31:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.15 2005/11/29 18:32:48 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://apache/xml/commons/${MY_P}.tar.gz"
 
 # Resolver is under Apache-1.1
 # SAX2 is public-domain
-# DOM documenation is W3C-document
-# DOM software is W3C
+# DOM documentation is under W3C-document
+# DOM software is under W3C
 # See ${S}/java/external for the license files
 LICENSE="Apache-1.1 public-domain W3C-document W3C"
 SLOT="0"

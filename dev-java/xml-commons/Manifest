@@ -5,11 +5,11 @@ MD5 47e8fa7424ce06153ca4fdddece7c390 ChangeLog 1842
 MD5 55bd514ef86d8fcec1e605bb9eddea1f files/1.0_beta2-jdk15.patch 1784
 MD5 ff3ac9f3ff42eef7ede2b379c9b25340 files/digest-xml-commons-1.0_beta2 71
 MD5 6c508e5bd6d1f3926eef63565d0f2cef metadata.xml 577
-MD5 6a9adc70b46bd643674a9c42c735b0a2 xml-commons-1.0_beta2.ebuild 1527
+MD5 35ea1c5ff4392ba88bd2bc67e7eefa08 xml-commons-1.0_beta2.ebuild 1540
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjJ56QiJ/wx066S4RApqPAJ0aOWFfUuDe3ELfrVx7IF4XMxycAgCglBJs
-duRSzWcH4pTJR38XN2beQro=
-=yGGt
+iD8DBQFDjJ7eQiJ/wx066S4RAtU7AJ9wlH8g371uHcXF4rmaWoAgGGhr8gCgkP9p
+gZ9/MhZeLWnxX6FwCicwYcw=
+=wwRN
 -----END PGP SIGNATURE-----
