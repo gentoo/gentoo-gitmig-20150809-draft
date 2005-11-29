@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.5.ebuild,v 1.3 2005/10/16 02:50:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.5.ebuild,v 1.4 2005/11/29 03:53:41 vapier Exp $
 
 inherit eutils
 
@@ -25,8 +25,8 @@ src_unpack() {
 	# bundled libtool sucks, so rebuild autotools #74817
 	aclocal && libtoolize -c -f && autoconf && automake || die "autotools failed"
 	cat <<-EOF > run-ldconfig
-	#!/bin/sh
-	true
+		#!/bin/sh
+		true
 	EOF
 }
 
@@ -43,7 +43,6 @@ src_compile() {
 		$(use_with readline) \
 		--enable-libminimal \
 		--sbindir=/sbin \
-		--libdir=/$(get_libdir) \
 		|| die "configure failed"
 	emake || die "make failed"
 }
@@ -54,12 +53,8 @@ src_install() {
 	#resizefs binary doesnt exist in this release
 	rm -f "${D}"/usr/share/man/man8/resizefs*
 
-	# move stupid .a out of root
-	dodir /usr/$(get_libdir)
-	local l=""
-	for l in libreiser4-minimal libreiser4 librepair ; do
-		mv "${D}"/$(get_libdir)/${l}.{a,la} "${D}"/usr/$(get_libdir)/
-		dosym ../usr/lib/${l}.a /lib/${l}.a
-		gen_usr_ldscript ${l}.so
-	done
+	# move shared libs to /
+	dodir /$(get_libdir)
+	mv "${D}"/usr/$(get_libdir)/lib*.so* "${D}"/$(get_libdir)/ || die
+	gen_usr_ldscript libreiser4-minimal.so libreiser4.so librepair.so
 }

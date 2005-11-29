@@ -7,11 +7,11 @@ MD5 9bffa88911d09dcd8a4e1fd3a80d995d files/digest-reiser4progs-1.0.5 70
 MD5 bdde60179b4f017b28cf5d1399c9bbd9 files/reiser4progs-1.0.4-gcc4.patch 1047
 MD5 564631952eab971c18ab4de2b5b721bd metadata.xml 267
 MD5 d305239e901d6351986c2bffc043fbb6 reiser4progs-1.0.4_p1.ebuild 1817
-MD5 5ba6f4da08725f3e7caffc909332af47 reiser4progs-1.0.5.ebuild 1769
+MD5 0c490e726adc570e9fc633fa556aec7d reiser4progs-1.0.5.ebuild 1666
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUcBsgIKl8Uu19MoRAgFBAJ9H9OT3uceVhToCd62dGLEJST2ZVwCeLPuV
-1LyQodvA+tYpUNcu93XWt4A=
-=XP2Q
+iD8DBQFDi9FQgIKl8Uu19MoRAvvrAJ0cXAceTxsXzXqRljPhWJ6niZTGXACfT2Ro
+H4M+YhOjre2Am1eQQIJjy4I=
+=/ef+
 -----END PGP SIGNATURE-----
