@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9ca63a146208282ecf02ebb2c7f91073 ChangeLog 400
+MD5 9df14bc853ce4e92d876a494d63408a7 files/digest-selinux-jabber-server-20050219 80
+MD5 3a0fde9a669ccb51c6165d0890553755 metadata.xml 519
+MD5 25b59646bab72b46bf606570bc8a7f90 selinux-jabber-server-20050219.ebuild 423
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFDjEYEGSBEIeh4AEYRAi5tAJ9PCip2WUTu5kJul+fT/TsHRGNl+QCeMAdJ
+2NpLHw37v3dSTaa64f3ftiw=
+=Zueq
+-----END PGP SIGNATURE-----
