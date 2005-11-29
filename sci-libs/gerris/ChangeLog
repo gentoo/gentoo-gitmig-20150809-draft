@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gerris
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.1 2005/11/27 12:28:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.2 2005/11/29 00:41:52 markusle Exp $
+
+  29 Nov 2005; Markus Dittrich <markusle@gentoo.org>
+  files/digest-gerris-0.8.0, Manifest:
+  Fixed bad digest for source tarball. This closes bug #113850.
 
 *gerris-0.8.0 (27 Nov 2005)
 
