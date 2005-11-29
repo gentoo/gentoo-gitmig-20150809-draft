@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.1 2005/11/20 22:31:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.2 2005/11/29 03:13:46 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.perforce.com/pub/jam/${P}.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/bison
