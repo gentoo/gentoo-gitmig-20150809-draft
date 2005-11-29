@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.8 2005/11/29 09:33:26 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.9 2005/11/29 09:35:20 marineam Exp $
+
+  29 Nov 2005; Michael Marineau <marineam@gentoo.org>
+  -files/ampache-3.3.1.5-webinstall.txt,
+  +files/ampache-3.3.1.6-webinstall.txt:
+  Forgot to bump the instructions' version number
 
 *ampache-3.3.1.6 (29 Nov 2005)
 
