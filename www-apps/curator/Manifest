@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea0476241c556069fb7b794b0e989e55 ChangeLog 882
 MD5 751ac9be6e2e5d8e4e33293f6e1f430e curator-2.0.ebuild 638
 MD5 c238a1f3d057b653febb27ec81e375ef files/digest-curator-2.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8qBgIKl8Uu19MoRAi3LAJsG9D1Se9Gr0VjJM8tP5wVnS7GH8gCfSQlf
+EGfsB17BxuX9wi2VBRNktPw=
+=Nwg6
+-----END PGP SIGNATURE-----
