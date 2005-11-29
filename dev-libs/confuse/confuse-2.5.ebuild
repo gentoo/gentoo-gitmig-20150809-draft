@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.12 2005/10/02 19:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.13 2005/11/29 03:51:07 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/confuse/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc-macos ppc64 sparc x86"
 IUSE="doc debug nls test"
 
 DEPEND="sys-devel/libtool
