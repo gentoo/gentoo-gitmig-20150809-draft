@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmcalendar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.8 2005/11/07 16:04:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.9 2005/11/29 15:49:35 s4t4n Exp $
+
+*wmcalendar-0.5.0-r1 (29 Nov 2005)
+
+  29 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0-r1.ebuild:
+  Revision bump, adding patch to fix gcc4 compilation issues. Closes bug #113489.
 
   07 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0.ebuild:
   Removed INSTALL and COPYING from dodoc.
