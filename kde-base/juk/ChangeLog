@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.33 2005/11/26 14:35:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.34 2005/11/29 15:18:17 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> juk-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> juk-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.
