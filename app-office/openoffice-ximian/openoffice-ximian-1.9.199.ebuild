@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.9.199.ebuild,v 1.2 2005/11/07 20:01:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.9.199.ebuild,v 1.3 2005/11/29 19:47:06 suka Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
@@ -31,9 +31,9 @@ pkg_setup() {
 	ewarn " need a working version of OOo you can get the old version back "
 	ewarn " by issueing: "
 	ewarn
-	ewarn " # emerge -k =app-office/openoffice-ximian-1.3.16 "
+	ewarn " # emerge -k =app-office/openoffice-ximian-1.3.9-r1 "
 	ewarn
-	ewarn " (Assuming the last version you used was 1.3.16, if not just replace "
+	ewarn " (Assuming the last version you used was 1.3.9-r1, if not just replace "
 	ewarn " the number) "
 
 	die
