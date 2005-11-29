@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.21 2005/04/24 11:54:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.22 2005/11/29 03:55:49 jer Exp $
+
+  29 Nov 2005; Jeroen Roovers <jer@gentoo.org> colorschemes-20040821.ebuild,
+  colorschemes-20050321.ebuild:
+  Marked ~hppa wrt bug 109182.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   colorschemes-20050321.ebuild:
