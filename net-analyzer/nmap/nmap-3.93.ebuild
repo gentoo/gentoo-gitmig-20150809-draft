@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.93.ebuild,v 1.2 2005/09/17 08:26:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.93.ebuild,v 1.3 2005/11/29 21:23:00 hanno Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,11 @@ DEPEND="virtual/libc
 	dev-libs/libpcre
 	gtk? ( =x11-libs/gtk+-1.2* )
 	ssl? ( dev-libs/openssl )"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/nmap-3.93-gcc41.patch
+}
 
 src_compile() {
 	use ppc-macos && filter-flags -fstrict-aliasing -O2

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.104 2005/10/02 02:30:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.105 2005/11/29 21:23:00 hanno Exp $
+
+  29 Nov 2005; Hanno Boeck <hanno@gentoo.org> +files/nmap-3.93-gcc41.patch,
+  nmap-3.93.ebuild:
+  Fix for gcc 4.1.
 
   02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> nmap-3.83.ebuild:
   Alpha stable.
