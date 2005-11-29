@@ -1,5 +1,7 @@
 Ripped from SuSe
 
+http://lists.gnu.org/archive/html/bug-bash/2004-08/msg00005.html
+
 From: schwab@suse.de
 To: bug-bash@gnu.org
 Subject: HISTTIMEFORMAT doesn't track locale changes

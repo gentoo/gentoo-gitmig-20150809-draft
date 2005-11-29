@@ -1,5 +1,7 @@
 Ripped from Debian
 
+http://lists.gnu.org/archive/html/bug-bash/2004-08/msg00008.html
+
 From: Enrique Perez-Terron <enrio@online.no>
 To: bug-bash@gnu.org
 Subject: When using HISTTIMEFORMAT, the date and the command are run
