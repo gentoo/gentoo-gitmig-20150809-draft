@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.10 2005/08/12 08:55:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.11 2005/11/29 02:58:19 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cwi.nl/pub/dik/${MY_P/-/}.shar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~hppa ppc x86"
 IUSE=""
 RDEPEND=""
 DEPEND="sys-apps/sed"

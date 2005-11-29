@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.18-r1.ebuild,v 1.1 2005/09/19 17:53:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.18-r1.ebuild,v 1.2 2005/11/29 02:56:25 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bsdsfv/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 DEPEND=""

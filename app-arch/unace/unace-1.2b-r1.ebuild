@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b-r1.ebuild,v 1.7 2005/06/21 20:42:12 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b-r1.ebuild,v 1.8 2005/11/29 03:00:39 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://wilma.vub.ac.be/~pdewacht/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="amd64 x86 s390 ppc"
+KEYWORDS="amd64 ~hppa ppc s390 x86"
 IUSE=""
 
 DEPEND=""

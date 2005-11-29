@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r1.ebuild,v 1.5 2005/09/11 14:03:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r1.ebuild,v 1.6 2005/11/29 02:59:56 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pdv/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~hppa ~ppc ~x86"
 IUSE="nomotif"
 
 DEPEND=">=sys-devel/autoconf-2.58
