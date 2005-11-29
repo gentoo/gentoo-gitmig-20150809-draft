@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.25 2005/11/25 21:41:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.26 2005/11/29 21:07:40 flameeyes Exp $
+
+  29 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> -rtorrent-0.3.0.ebuild:
+  Remove old version.
 
   25 Nov 2005; Markus Rothe <corsair@gentoo.org> rtorrent-0.4.0.ebuild:
   Added ~ppc64 keyword
