@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.2 2005/07/09 03:01:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.3 2005/11/29 20:19:29 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,7 +65,6 @@ src_install () {
 	if use mailwrapper; then
 		mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.nullmailer
 		mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.nullmailer
-		dosym /usr/sbin/sendmail /usr/bin/mailq
 		insinto /etc/mail
 		doins ${FILESDIR}/mailer.conf
 	fi
@@ -119,6 +118,8 @@ pkg_postinst() {
 	chown nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
 	chmod 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	chmod 660 /var/nullmailer/trigger
+
+	use mailwrapper && dosym /usr/sbin/sendmail /usr/bin/mailq
 
 	einfo "To create an initial setup, please do:"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
