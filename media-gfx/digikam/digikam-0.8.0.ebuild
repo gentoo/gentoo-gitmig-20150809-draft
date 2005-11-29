@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.0.ebuild,v 1.1 2005/11/27 15:52:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.0.ebuild,v 1.2 2005/11/29 22:03:29 hanno Exp $
 
 inherit kde
 
@@ -26,4 +26,9 @@ need-kde 3.2
 
 pkg_setup(){
 	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
+}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/digikam-0.8.0-gcc41.patch
 }
