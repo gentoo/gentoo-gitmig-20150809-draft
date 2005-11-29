@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.1.ebuild,v 1.7 2005/07/11 00:50:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.1.ebuild,v 1.8 2005/11/29 02:22:43 vapier Exp $
 
 inherit eutils
 
@@ -17,29 +17,30 @@ DEPEND="sys-fs/xfsprogs"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-only-symlink-when-needed.patch
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \
-		-e 's:^PKG_\(.*\)_DIR[[:space:]]*= \(.*\)$:PKG_\1_DIR = $(DESTDIR)\2:' \
-		include/builddefs.in || die
+		include/builddefs.in \
+		|| die "failed to update builddefs"
 }
 
 src_compile() {
 	use debug \
 		&& export DEBUG=-DDEBUG \
 		|| export DEBUG=-DNDEBUG
-	export OPTIMIZER="${CFLAGS}"
+	export OPTIMIZER=${CFLAGS}
 
-	# Some archs need the PLATFORM var unset
-	unset PLATFORM
-
-	econf \
-		--libdir=/$(get_libdir) \
-		--libexecdir=/usr/$(get_libdir) \
-		|| die
+	econf --libexecdir=/usr/$(get_libdir) || die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install install-dev || die
+	make DIST_ROOT="${D}" install install-dev || die
+	prepalldocs
+
+	# move shared libs to /
+	dodir /$(get_libdir)
+	mv "${D}"/usr/$(get_libdir)/libdm.so* "${D}"/$(get_libdir)/ || die
+	gen_usr_ldscript libdm.so
 }

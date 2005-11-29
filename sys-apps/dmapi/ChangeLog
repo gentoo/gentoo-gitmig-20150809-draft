@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dmapi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.26 2005/04/25 06:34:09 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.27 2005/11/29 02:22:43 vapier Exp $
+
+  29 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/dmapi-2.2.1-only-symlink-when-needed.patch, dmapi-2.2.1.ebuild:
+  Clean up build so that we no longer have .a or .la files in /.
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> dmapi-2.2.1.ebuild:
   Stable on alpha.
