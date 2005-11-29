@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.4.0.ebuild,v 1.1 2005/03/27 15:34:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.4.0.ebuild,v 1.2 2005/11/29 03:51:03 vapier Exp $
 
 DESCRIPTION="assembler that supports amd64"
 HOMEPAGE="http://www.tortall.net/projects/yasm/"
@@ -11,9 +11,9 @@ SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 
-DEPEND="sys-devel/gcc"
+DEPEND=""
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS COPYING INSTALL Artistic.txt BSD.txt
+	dodoc AUTHORS INSTALL
 }
