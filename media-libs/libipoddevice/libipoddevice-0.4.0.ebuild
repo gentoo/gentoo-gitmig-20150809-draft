@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.4.0.ebuild,v 1.1 2005/11/27 19:51:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.4.0.ebuild,v 1.2 2005/11/29 18:52:55 metalgod Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="libipoddevice is a device-specific layer for the Apple iPod"
 HOMEPAGE="http://banshee-project.org/Libipoddevice"
 SRC_URI="http://banshee-project.org/files/libipoddevice/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""

@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 a2ab4dd2d4f49f19b12ac5be8b298b13 ChangeLog 445
 MD5 625237e0f86264727eeb4d96cb0d31aa files/digest-libipoddevice-0.4.0 71
-MD5 6273d086bba4b1e53f479c064df57cb3 libipoddevice-0.4.0.ebuild 952
+MD5 75d1b4312e8957dd0137ddd2c991d2a6 libipoddevice-0.4.0.ebuild 953
 MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDig4NwUpWvClEHQoRAilcAJ4psgc4adAqSbgLK0w04Fkzv8YYjgCdFr6a
-5eH7iS7gbMkp8KObvc9gmA0=
-=/JJv
+iD8DBQFDjKNXwUpWvClEHQoRAvHBAJ9rVWnEzqdK7JSYC5Ce7pNyFJPAoACdE3oH
+VIKHD12QkOMnO5yUKbBvfEc=
+=A6i0
 -----END PGP SIGNATURE-----
