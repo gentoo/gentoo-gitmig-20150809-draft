@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/mii-diag-2.07.ebuild,v 1.9 2005/02/13 03:29:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/mii-diag-2.07.ebuild,v 1.10 2005/11/29 03:35:21 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI=""	# ftp://ftp.scyld.com/pub/diag/mii-diag.c
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 x86"
+KEYWORDS="alpha amd64 ~hppa x86"
 IUSE=""
 
 DEPEND=""
