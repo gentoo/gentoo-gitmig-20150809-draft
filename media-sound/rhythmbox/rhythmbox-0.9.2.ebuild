@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.2.ebuild,v 1.3 2005/11/29 05:54:46 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.2.ebuild,v 1.4 2005/11/29 18:29:50 joem Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
 KEYWORDS="~x86"
-IUSE="vorbis flac aac mad pda avahi howl daap dbus musicbrainz tagwriting"
+IUSE="vorbis flac aac mad ipod avahi howl daap dbus musicbrainz tagwriting"
 #I want tagwriting to be on by default in the future. It is just a local flag
 #now because it is still considered experimental by upstream and doesn't work
 #well with all formats
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 	>=media-video/totem-1.1.5
 	musicbrainz? ( >=media-libs/musicbrainz-2.1 )
 	>=net-libs/libsoup-2.2
-	pda? ( >=media-libs/libgpod-0.2.0
+	ipod? ( >=media-libs/libgpod-0.2.0
 			>=sys-apps/hal-0.5 )
 	avahi? ( >=net-dns/avahi-0.5 )
 	!avahi? ( howl? ( >=net-misc/howl-0.9.8 ) )
@@ -67,7 +67,7 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF} \
-	$(use_enable pda ipod) \
+	$(use_enable ipod) \
 	$(use_enable musicbrainz) \
 	$(use_with dbus) \
 	$(use_enable tagwriting tag-writing) \
