@@ -1,4 +1,4 @@
-MD5 87732ce3e520526f37501c3190daea9c ChangeLog 1374
-MD5 dbbbbdad0855ecc5ade71a4e67bc1523 dbench-2.0.ebuild 853
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 9c510f625b93031a7252d4cc4e4aafba ChangeLog 1465
+MD5 283074e2306fbf11824c06f28d834ae3 dbench-2.0.ebuild 852
 MD5 a142bb2058c79ef4a6ee2ab38def85e1 files/digest-dbench-2.0 62
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
