@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a534e91f2720bd9f7110b6c278cbf703 ChangeLog 602
 MD5 1a40a72445487613b6228a40d8aa2141 edictionary-1.2.ebuild 629
-MD5 02eef5277c2a45a29535b1ef56392beb metadata.xml 222
 MD5 3bd9ddfa8561bad8b65abb589f51293d files/digest-edictionary-1.2 60
+MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDjMNaV3J2n04EauwRAi2eAKCPeh0vdXQ3HMmDLALATaVMh2tLKACgl805
+XmUUDsWrlVK2UsOY9nyd2Mk=
+=mVhc
+-----END PGP SIGNATURE-----
