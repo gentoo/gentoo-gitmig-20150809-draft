@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.2 2005/11/17 22:21:18 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.3 2005/11/29 19:48:07 flameeyes Exp $
 
 inherit eutils
 inherit subversion
@@ -62,7 +62,7 @@ pkg_postinst() {
 	enewuser secoff 400 /bin/bash /secoff secoff || \
 	die "problem adding user secoff"
 	enewgroup audit 404 || die "problem adding group audit"
-	enewuser audit 404 /bin/false /dev/null audit || \
+	enewuser audit 404 -1 /dev/null audit || \
 	die "problem adding user audit"
 
 	chmod 700 /secoff /var/log/rsbac ||  \
