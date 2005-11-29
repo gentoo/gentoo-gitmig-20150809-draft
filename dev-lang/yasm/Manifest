@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2eb11df7eceae2e8667d032c7eb1f6f4 ChangeLog 822
 MD5 46e99d02032cfc2cc7e1b8b19ff82baa files/digest-yasm-0.3.0 63
 MD5 8398914ad2f594691d2386a599637eea files/digest-yasm-0.4.0 63
 MD5 0075a0521cc6d639918c3ae2c4e2124e metadata.xml 223
 MD5 3716bab7055e285687b5998ff73129d8 yasm-0.3.0.ebuild 589
 MD5 21494505cb0b11f7267a6ca497076d6b yasm-0.4.0.ebuild 544
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi9CtgIKl8Uu19MoRAi/AAJ9mFBfmsOIeb6DeEmT5fxJpy9wfrgCeLyMv
+jwdSg4hlG6tWgESe/9TRzTo=
+=vEMi
+-----END PGP SIGNATURE-----
