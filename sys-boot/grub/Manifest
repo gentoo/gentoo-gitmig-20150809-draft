@@ -9,7 +9,7 @@ MD5 97d88870847fafcf5fe4162f6d273e74 files/digest-grub-0.96-r2 193
 MD5 9b6b79b2fbed61b893a1333b4f0e62c6 files/digest-grub-0.96-r3 191
 MD5 80b2642d044b2ad2983d3925c4531952 files/digest-grub-0.97 191
 MD5 485041aa6ced0fae7a859d510543f1a5 files/digest-grub-0.97-r2 191
-MD5 ddd38b04f96e2cbb60f1632ff01cf6f4 files/digest-grub-1.91 118
+MD5 5c032a7ea85bc5664c377aeefd13a016 files/digest-grub-1.91 61
 MD5 c8d30bf5c47b6d9cb935d2adb12a9ac9 grub-0.92-r1.ebuild 2629
 MD5 c634a95c2668abba2e886a917b363d5d grub-0.94-r1.ebuild 3528
 MD5 39a70f2e6c41b7e432c0f5603d01c1da grub-0.96-r1.ebuild 4742
@@ -22,7 +22,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDh2rBgIKl8Uu19MoRAnTFAJ9de8Z6k8hzPO9yoRmdl0k9I9+tOQCeL4lk
-R4dVhjH4iliOhAGIRHPrxsg=
-=NmDG
+iD8DBQFDi8YSgIKl8Uu19MoRAih4AJ4kf+XjLTfhsezXDPSvSWFzwcwVIACeNHoL
+YEHuvnwNri1bxMlDglcaNvM=
+=e0ji
 -----END PGP SIGNATURE-----
