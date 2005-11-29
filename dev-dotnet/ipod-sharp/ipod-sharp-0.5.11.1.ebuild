@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.5.11.1.ebuild,v 1.1 2005/11/27 19:56:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.5.11.1.ebuild,v 1.2 2005/11/29 18:51:23 metalgod Exp $
 
 inherit mono
 
@@ -8,7 +8,7 @@ DESCRIPTION="ipod-sharp provides high-level feature support for Apple's iPod and
 HOMEPAGE="http://banshee-project.org/Ipod-sharp"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
