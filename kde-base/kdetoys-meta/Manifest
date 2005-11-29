@@ -1,4 +1,4 @@
-MD5 9a2f3b5f953db3efc5b23faaf2cd3c77 ChangeLog 4015
+MD5 1fe92e1fb47ce47a04474832e6613c82 ChangeLog 4112
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.3 0
@@ -9,7 +9,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.5_beta1 0
 MD5 ce1f15c41a4b11e43a331d24b8ff0150 kdetoys-meta-3.4.1.ebuild 857
 MD5 ca231c20af0ae5484670b1782bb3ccd7 kdetoys-meta-3.4.2.ebuild 874
 MD5 673b87cfa74dea7584e254239334bec9 kdetoys-meta-3.4.3.ebuild 870
-MD5 cebcc592ee76c7a88775e5eb4da73333 kdetoys-meta-3.5.0.ebuild 853
+MD5 7f9bac267f84f3db8253b78e7ffb4237 kdetoys-meta-3.5.0.ebuild 850
 MD5 906c5b7294bdad2574303dd848b35584 kdetoys-meta-3.5.0_beta2.ebuild 857
 MD5 c1e324073e92338a003e7df904bf85e2 kdetoys-meta-3.5.0_rc1.ebuild 856
 MD5 f706a1dbeb5aa88667a4633af3c6888a kdetoys-meta-3.5_beta1.ebuild 849

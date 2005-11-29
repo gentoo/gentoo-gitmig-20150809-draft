@@ -1,4 +1,4 @@
-MD5 f6b38a80a6d719de619f69ee5c81e619 ChangeLog 3542
+MD5 48382b0b963d43a8792802594574b71b ChangeLog 3634
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kshisen-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kshisen-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kshisen-3.4.3 68
@@ -9,7 +9,7 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kshisen-3.5_beta1 70
 MD5 c6e32aeff2e10322968812e85b00a0ce kshisen-3.4.1.ebuild 544
 MD5 89fc7a1ba7d12c04f9e6e057d15a67bc kshisen-3.4.2.ebuild 557
 MD5 c67985b99ed9a5adc88de140715c5981 kshisen-3.4.3.ebuild 553
-MD5 51926d59a641d69fc422514593781e4b kshisen-3.5.0.ebuild 503
+MD5 9fd9d7822cdff64849905e042827f3bf kshisen-3.5.0.ebuild 500
 MD5 f68f06f889b30a1889dddf6c4fa537b0 kshisen-3.5.0_beta2.ebuild 501
 MD5 cc00bcf99ad9a0fbc6f70890b5a39dc8 kshisen-3.5.0_rc1.ebuild 500
 MD5 869b6838bd54e974de7787652ab03289 kshisen-3.5_beta1.ebuild 536

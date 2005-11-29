@@ -1,4 +1,4 @@
-MD5 5ce95d411fb1e74698beeb580e468eef ChangeLog 3504
+MD5 b08d515740b544a8975c66c814db12fb ChangeLog 3595
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-klatin-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klatin-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-klatin-3.4.3 67
@@ -9,7 +9,7 @@ MD5 bb87804db4b06c40fdff58984b70c393 files/digest-klatin-3.5_beta1 68
 MD5 bba0c9dc6d023d114f7e220ba034bc14 klatin-3.4.1.ebuild 576
 MD5 83781ec0d64b7cb0d91207ecdbd6261b klatin-3.4.2.ebuild 589
 MD5 6f6a150bfba829da1a6bb7c0e028c42c klatin-3.4.3.ebuild 587
-MD5 6112d7d345b12a7cfd173d7c8a1bca0f klatin-3.5.0.ebuild 535
+MD5 4360c70da98a5d437be7501d437c079f klatin-3.5.0.ebuild 532
 MD5 ef9cafaf2db680972d69530667d0e027 klatin-3.5.0_beta2.ebuild 533
 MD5 ba8b0cc616e5f85b59780ea76b799ada klatin-3.5.0_rc1.ebuild 532
 MD5 a93a35f5660013b683ff17fc231264b4 klatin-3.5_beta1.ebuild 568

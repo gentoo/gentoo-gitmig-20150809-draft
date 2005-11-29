@@ -1,4 +1,4 @@
-MD5 29fdd352b4d0f274f41186fde04cd7f1 ChangeLog 3820
+MD5 737ebfe3ae16dada9388ae17c11f16b1 ChangeLog 3917
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kfilereplace-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kfilereplace-3.4.2 292
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kfilereplace-3.4.3 69
@@ -9,7 +9,7 @@ MD5 dbf048ce767888392930a6446896b4c7 files/digest-kfilereplace-3.5_beta1 70
 MD5 72fad9e92547ed3b4523564598a35607 kfilereplace-3.4.1.ebuild 395
 MD5 21a155d22717d5d1b48afa394f069254 kfilereplace-3.4.2.ebuild 408
 MD5 d443c447515ec6bddbfded6965d04ee2 kfilereplace-3.4.3.ebuild 404
-MD5 b09f9cdcaa7b80c78f389c559aefc2b7 kfilereplace-3.5.0.ebuild 391
+MD5 b90f825aac0dfd5ae599c0ff08f0c1bb kfilereplace-3.5.0.ebuild 388
 MD5 99e2844fc17a4c055469cceeaf340164 kfilereplace-3.5.0_beta2.ebuild 389
 MD5 ead319fe6fcd085dbd5bf0c194cc5fd0 kfilereplace-3.5.0_rc1.ebuild 388
 MD5 2eb8cccb39021314d9b499a1f5e98404 kfilereplace-3.5_beta1.ebuild 387

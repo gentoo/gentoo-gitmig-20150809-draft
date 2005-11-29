@@ -1,4 +1,4 @@
-MD5 267d89c2f6015fa64699deef664dd2ff ChangeLog 3483
+MD5 3ba0dbd8af2eb3fc2fd4a3d0116bb7cf ChangeLog 3574
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpager-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpager-3.4.2 287
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kpager-3.5.0 68
@@ -7,7 +7,7 @@ MD5 14e4481daa8e322e1222522f8f5b558d files/digest-kpager-3.5.0_rc1 299
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kpager-3.5_beta1 69
 MD5 503aba0b3e78759016f2b275744aad19 kpager-3.4.1.ebuild 390
 MD5 1a1369a207d319626b47e37b7aa0de26 kpager-3.4.2.ebuild 401
-MD5 c769225caab7603bc9a834684ba3cc47 kpager-3.5.0.ebuild 391
+MD5 a1bd1fe4793c4599b575574c562eb303 kpager-3.5.0.ebuild 388
 MD5 a24870006a6166582ad273c532cc6ae7 kpager-3.5.0_beta2.ebuild 387
 MD5 672238d98045de5dd5cecd4872c77cdc kpager-3.5.0_rc1.ebuild 388
 MD5 2cd8608de391e276496b35b89626fcfe kpager-3.5_beta1.ebuild 382

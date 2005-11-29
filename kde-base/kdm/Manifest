@@ -1,4 +1,4 @@
-MD5 639367e31564ad0aeedde604f246bfe9 ChangeLog 4164
+MD5 d1f3c5df30126b5ddc0aecd3d5761c95 ChangeLog 4252
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdm-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdm-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdm-3.4.3 68
@@ -14,7 +14,7 @@ MD5 f8fabdf3377ba617123c9c4ed476270c kdm-3.4.1.ebuild 2429
 MD5 32da1a4ba2aef00f40978e17c71c0da2 kdm-3.4.2.ebuild 2442
 MD5 01862d08745cc6680523e06450da7089 kdm-3.4.3-r1.ebuild 2690
 MD5 f5e3f03ba2148dd882645285c61bcc69 kdm-3.4.3.ebuild 2444
-MD5 f3f82da3a288af4b1dd5a948bbb91de1 kdm-3.5.0.ebuild 2174
+MD5 4626075bdd2f43c0b6a32d57dbc37931 kdm-3.5.0.ebuild 2171
 MD5 0b3d5efcf6d3227661e0290c083c3ffa kdm-3.5.0_beta2.ebuild 2254
 MD5 1574550589765e8cd46c659bba3865b8 kdm-3.5.0_rc1.ebuild 2171
 MD5 58c86c0390310e05337fc8a0082cfbe2 kdm-3.5_beta1.ebuild 2097

@@ -1,4 +1,4 @@
-MD5 189a9b6a0e3a59bbc6fe58bfa7d0d322 ChangeLog 3462
+MD5 392ab9da11c0fd6cc71b9ce6ec1ae60d ChangeLog 3555
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-klettres-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klettres-3.4.2 282
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-klettres-3.5.0 67
@@ -7,7 +7,7 @@ MD5 f647450f646f8c5727d8cb51fe855bcc files/digest-klettres-3.5.0_rc1 294
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-klettres-3.5_beta1 68
 MD5 2baa58afc1e4497ec77d3ca593a03ee0 klettres-3.4.1.ebuild 426
 MD5 3ca6777c180e85135c7662a92258f194 klettres-3.4.2.ebuild 437
-MD5 74d42d3d9b668a2a69b28ad410614690 klettres-3.5.0.ebuild 422
+MD5 d35c74509002096cd4cb61253b9fa4b2 klettres-3.5.0.ebuild 419
 MD5 5a996c69724748bfe37b714e87ed7338 klettres-3.5.0_beta2.ebuild 420
 MD5 887e7f119479a6776c68527d6c1733c9 klettres-3.5.0_rc1.ebuild 419
 MD5 879c790b66be6326261651fc5d569eba klettres-3.5_beta1.ebuild 418

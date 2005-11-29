@@ -1,4 +1,4 @@
-MD5 16903ce98ccc5ea9fc6387062eb9474f ChangeLog 3862
+MD5 c44bb12e82cda4f645278df0686f5f86 ChangeLog 3955
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-khexedit-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-khexedit-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-khexedit-3.4.3 68
@@ -10,7 +10,7 @@ MD5 e47625e9b59633298d5be5ff567712b7 files/khexedit-configure-magic.diff 462
 MD5 4e7981cce0a3f29017cccda806207c9c khexedit-3.4.1.ebuild 429
 MD5 4212821034a16dfed2c2f683f6f51ba5 khexedit-3.4.2.ebuild 442
 MD5 f06c22b6702d9686b00a8ce72989e0e1 khexedit-3.4.3.ebuild 439
-MD5 accdb80e5036f1039079c0352c4d546f khexedit-3.5.0.ebuild 376
+MD5 299c95517490e6272e43844ace3b94a1 khexedit-3.5.0.ebuild 373
 MD5 b379a02da14cf13eca3b3efdc4e447ab khexedit-3.5.0_beta2.ebuild 374
 MD5 b2ee4c689cf964c501a98d863fee7be0 khexedit-3.5.0_rc1.ebuild 373
 MD5 c2b7fad914a9b6dcae077f0cd036febf khexedit-3.5_beta1.ebuild 421

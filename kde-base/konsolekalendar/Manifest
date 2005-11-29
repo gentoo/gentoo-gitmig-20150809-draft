@@ -1,4 +1,4 @@
-MD5 15c97de26d356b8b243edd82ea13f7c4 ChangeLog 4125
+MD5 9d462f44d8f617abe7c4b0d9f4e5ecb5 ChangeLog 4225
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-konsolekalendar-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-konsolekalendar-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-konsolekalendar-3.4.3 67
@@ -9,7 +9,7 @@ MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-konsolekalendar-3.5_beta1 68
 MD5 da77ef764daa627db88692532b3dc6fa konsolekalendar-3.4.1.ebuild 758
 MD5 7e91f5d216341adc1a85677dde3284b1 konsolekalendar-3.4.2.ebuild 771
 MD5 d0dd65ab63fb548575a6a7301d51dfc8 konsolekalendar-3.4.3.ebuild 767
-MD5 afa99b39ca8d24a5cc222a1d2a8cdf1b konsolekalendar-3.5.0.ebuild 776
+MD5 95790dd769fdf3c272847b60ecbed6e1 konsolekalendar-3.5.0.ebuild 773
 MD5 3058865aee37a8fd4327025154cb1e28 konsolekalendar-3.5.0_beta2.ebuild 774
 MD5 83b4d19b5702d312cf9e592455aea055 konsolekalendar-3.5.0_rc1.ebuild 773
 MD5 66b48edfe4267aaa4f9cf9c8389a0020 konsolekalendar-3.5_beta1.ebuild 750

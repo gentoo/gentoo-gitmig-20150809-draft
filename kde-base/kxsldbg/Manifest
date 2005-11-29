@@ -1,4 +1,4 @@
-MD5 c5ce1c994712d09fe594fc966fcc4aac ChangeLog 3660
+MD5 66a49580f02fd3944bcfb9ed3757a022 ChangeLog 3752
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kxsldbg-3.4.1 215
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kxsldbg-3.4.3 69
 MD5 eefd34bb06d5f84a5f77adf4a6e69fdf files/digest-kxsldbg-3.5.0 69
@@ -7,7 +7,7 @@ MD5 50a5dfc5bdebb9f91775752768b4ca60 files/digest-kxsldbg-3.5.0_rc1 304
 MD5 dbf048ce767888392930a6446896b4c7 files/digest-kxsldbg-3.5_beta1 70
 MD5 8ba11655c4d4ca65b708a40eb4f0b850 kxsldbg-3.4.1.ebuild 567
 MD5 095e4734802b79ab2758bf8af268d45d kxsldbg-3.4.3.ebuild 475
-MD5 2138979ea8b99104ae25af4186b76170 kxsldbg-3.5.0.ebuild 460
+MD5 bca0996ca0a3d8d21a6eb142d96d86ca kxsldbg-3.5.0.ebuild 459
 MD5 ca6f1c92d092a78578e6c80cdb412ba2 kxsldbg-3.5.0_beta2.ebuild 549
 MD5 9504d04874f753519d0147fd39bf43c5 kxsldbg-3.5.0_rc1.ebuild 548
 MD5 b1016cdcee3c194420b02b442a6ed842 kxsldbg-3.5_beta1.ebuild 547

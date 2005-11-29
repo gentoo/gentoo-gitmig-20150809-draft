@@ -1,4 +1,4 @@
-MD5 174e4bcea335bff87e5e27e94269bf2d ChangeLog 3504
+MD5 8aea4803ac96eaefe32e254c69e6704f ChangeLog 3595
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klines-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klines-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-klines-3.4.3 68
@@ -9,7 +9,7 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-klines-3.5_beta1 70
 MD5 f8a30ff2b23475765116f02d38ad5894 klines-3.4.1.ebuild 582
 MD5 ecae7980e5ea1cca3bd591d610727de2 klines-3.4.2.ebuild 595
 MD5 6854018337ca3ac6e38f3156edbe7dd7 klines-3.4.3.ebuild 591
-MD5 ad08acf01d6bcb540d867c38e9f664f2 klines-3.5.0.ebuild 541
+MD5 826ea862153bb28918be6abed5d06bd3 klines-3.5.0.ebuild 538
 MD5 1858cea9cf4df5ea7a26b57bdaeed506 klines-3.5.0_beta2.ebuild 539
 MD5 d1549f387f674d2599ca439ceebf21f3 klines-3.5.0_rc1.ebuild 538
 MD5 f851d4215cf9735c3d92773a1bc382a5 klines-3.5_beta1.ebuild 574

@@ -1,4 +1,4 @@
-MD5 bc1c4eac710c19449cbaf8f1929cc48d ChangeLog 3704
+MD5 116c090b0074306ae33abc33e8f5a060 ChangeLog 3800
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-libkdegames-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-libkdegames-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-libkdegames-3.4.3 68
@@ -9,7 +9,7 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-libkdegames-3.5_beta1 70
 MD5 297d16110d664a5a551adb6e92ad880c libkdegames-3.4.1.ebuild 424
 MD5 948134448cee4780547e59b72d0b2866 libkdegames-3.4.2.ebuild 679
 MD5 a8c6b8990490e162e4e9a3b29f438332 libkdegames-3.4.3.ebuild 675
-MD5 e5fd3c2a87fb55f5b3954789fefe8f65 libkdegames-3.5.0.ebuild 644
+MD5 1cc07481fb5088a14005a61f836325ca libkdegames-3.5.0.ebuild 641
 MD5 4c24d7e785544666ff48ea52dae02b84 libkdegames-3.5.0_beta2.ebuild 642
 MD5 d1165507dc6f452e005060c5e9e5e801 libkdegames-3.5.0_rc1.ebuild 641
 MD5 5dc4f89166100dcc059a9c3a87cb6984 libkdegames-3.5_beta1.ebuild 658

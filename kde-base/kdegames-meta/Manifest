@@ -1,4 +1,4 @@
-MD5 224f5e96e68142c313264637c11a449e ChangeLog 4067
+MD5 e3d9da0e4b623e720328408be2e6779e ChangeLog 4165
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.3 0
@@ -9,7 +9,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.5_beta1 0
 MD5 7b6d9a711de2dc6c791876da178773cc kdegames-meta-3.4.1.ebuild 1867
 MD5 91d7168af2caffd9f91e900cc4d8111f kdegames-meta-3.4.2.ebuild 1877
 MD5 213b9f1df8ca8cffbd8a069abdd2527b kdegames-meta-3.4.3.ebuild 1873
-MD5 db729e74ccfee5d78f7d5e7b57cc3d4c kdegames-meta-3.5.0.ebuild 1860
+MD5 833b0650e9a0873e9ccc73d451e1e55a kdegames-meta-3.5.0.ebuild 1857
 MD5 f929e12ecbb9ffe0c20bf91d5eada4e8 kdegames-meta-3.5.0_beta2.ebuild 1858
 MD5 b7fbfd805153499ca2dd8084cbc66bd6 kdegames-meta-3.5.0_rc1.ebuild 1857
 MD5 9e6da26f72f6e76c8aabaea1c083b32b kdegames-meta-3.5_beta1.ebuild 1856

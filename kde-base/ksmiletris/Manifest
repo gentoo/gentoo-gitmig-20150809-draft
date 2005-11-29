@@ -1,4 +1,4 @@
-MD5 8a262489931f09639fbf150001c6b3e5 ChangeLog 3692
+MD5 627683574c6003c4280bfc510b90e706 ChangeLog 3787
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksmiletris-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksmiletris-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksmiletris-3.4.3 68
@@ -9,7 +9,7 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-ksmiletris-3.5_beta1 70
 MD5 11d0b674082f3d81df93d6f11162c5e5 ksmiletris-3.4.1.ebuild 532
 MD5 5315c0b44961bb44618d1a789d8b1773 ksmiletris-3.4.2.ebuild 545
 MD5 44218317d0dc274a482fa926387f7b2c ksmiletris-3.4.3.ebuild 541
-MD5 acc65fd99bfd526a0bd51529004f0566 ksmiletris-3.5.0.ebuild 491
+MD5 acb61fe07c931306ff6ad990d4f4b4e3 ksmiletris-3.5.0.ebuild 488
 MD5 70aea9597368430df68b16e91719d6bc ksmiletris-3.5.0_beta2.ebuild 489
 MD5 5915030e0dd6113eb8edae6b53399a76 ksmiletris-3.5.0_rc1.ebuild 488
 MD5 06db9b9c13c7c9660c8836a9f21598cf ksmiletris-3.5_beta1.ebuild 524

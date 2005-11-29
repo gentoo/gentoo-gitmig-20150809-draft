@@ -1,4 +1,4 @@
-MD5 696910b4725bf99ddc01f523eafe1115 ChangeLog 3529
+MD5 ca035a36cb706aa5b6e776c746f01a11 ChangeLog 3618
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-ksvg-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-ksvg-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksvg-3.4.3 71
@@ -9,7 +9,7 @@ MD5 40554f7678788d1d4cdcf0824da8434f files/digest-ksvg-3.5_beta1 72
 MD5 787a122b056c3c913abd0e620d623251 ksvg-3.4.1.ebuild 467
 MD5 e1c2cb0d2cccb98b0776cc2e421972bd ksvg-3.4.2.ebuild 528
 MD5 5c5717d1576319e3437b2f3e466eac82 ksvg-3.4.3.ebuild 524
-MD5 cb87d47a4a8d1458b18e3bcb7833a537 ksvg-3.5.0.ebuild 511
+MD5 0de4f51141a2635456aeefdde39ebb73 ksvg-3.5.0.ebuild 508
 MD5 66d74f2cacbd7dcf0b9305b38ae5f5a6 ksvg-3.5.0_beta2.ebuild 509
 MD5 b784a1d28abde87d4555aed32fe14218 ksvg-3.5.0_rc1.ebuild 508
 MD5 897f93c9b98276c1d61c08c7d99766f5 ksvg-3.5_beta1.ebuild 507

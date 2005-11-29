@@ -1,4 +1,4 @@
-MD5 e1dada81811db05483715ac2d3df5360 ChangeLog 3641
+MD5 0b7ed08554e39d88431954f1754ebe9b ChangeLog 3733
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-libkonq-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-libkonq-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-libkonq-3.4.3 68
@@ -9,7 +9,7 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-libkonq-3.5_beta1 69
 MD5 3136bcddab4b7ca984aa4bc5967fa062 libkonq-3.4.1.ebuild 396
 MD5 9320f6e8847cf27a1364813959d3e2b4 libkonq-3.4.2.ebuild 409
 MD5 72f475472d818e4ba06d891baa373821 libkonq-3.4.3.ebuild 405
-MD5 449970222a6fc57a643d7619c94d06c2 libkonq-3.5.0.ebuild 397
+MD5 e3de15d9aa26ef29b7f21dc39518c572 libkonq-3.5.0.ebuild 394
 MD5 ca85a869e1604c0d8ddf6037f6218ae4 libkonq-3.5.0_beta2.ebuild 393
 MD5 ad19c7e40cb938b06b184155674a7d4c libkonq-3.5.0_rc1.ebuild 394
 MD5 f0665d3abd9f35972fc8f9e978b91465 libkonq-3.5_beta1.ebuild 391

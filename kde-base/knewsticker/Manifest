@@ -1,4 +1,4 @@
-MD5 26806f0c6145c364f648ef01b57e9c8f ChangeLog 3704
+MD5 a155036cbfc5d08bf15ea9ef17650037 ChangeLog 3800
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-knewsticker-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-knewsticker-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-knewsticker-3.4.3 70
@@ -9,7 +9,7 @@ MD5 16b903e400a8cf2d73f3c237799238db files/digest-knewsticker-3.5_beta1 71
 MD5 c16c5dc1fe778fe64278c50c2b02c25d knewsticker-3.4.1.ebuild 540
 MD5 4a534134239b16e110819ccbe10be0e6 knewsticker-3.4.2.ebuild 555
 MD5 55e6f463d5027a2ee96e2b1b5ede5da0 knewsticker-3.4.3.ebuild 552
-MD5 b94233f55b1a0e6a9b0b82861c58bfff knewsticker-3.5.0.ebuild 502
+MD5 a1819511e899671b8b0e0083edebc604 knewsticker-3.5.0.ebuild 499
 MD5 b251457ec26199ceb760216b3d84a0b4 knewsticker-3.5.0_beta2.ebuild 506
 MD5 f08fa36bdd2b10627f66c9bc794e16da knewsticker-3.5.0_rc1.ebuild 505
 MD5 03523fc46dd972db726ae71da19b0a72 knewsticker-3.5_beta1.ebuild 532

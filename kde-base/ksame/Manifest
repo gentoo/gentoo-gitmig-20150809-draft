@@ -1,4 +1,4 @@
-MD5 007192113fceeb80e930110dbd23b198 ChangeLog 3489
+MD5 c096b2e92a8da128c865fc1455522e8d ChangeLog 3579
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksame-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksame-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksame-3.4.3 68
@@ -9,7 +9,7 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-ksame-3.5_beta1 70
 MD5 4982caa8d215131333ab264686458f37 ksame-3.4.1.ebuild 578
 MD5 71e76be79360b017968532622926d874 ksame-3.4.2.ebuild 591
 MD5 4b22b63de9256e59c73b1555f1c966cd ksame-3.4.3.ebuild 587
-MD5 021fa4afe5444a8e493292b808fbeb2c ksame-3.5.0.ebuild 537
+MD5 1f4e9806ba24769ade6d5450836d499b ksame-3.5.0.ebuild 534
 MD5 44d77be5dfb1015cd658997f1a70adb3 ksame-3.5.0_beta2.ebuild 535
 MD5 33722548da74fc7a1fd174dfc36c521f ksame-3.5.0_rc1.ebuild 534
 MD5 8eabdab2e3d16aec0b62a173c4532a24 ksame-3.5_beta1.ebuild 570

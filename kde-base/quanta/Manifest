@@ -1,4 +1,4 @@
-MD5 d6680a3aa1999472cadeee22324daffb ChangeLog 3977
+MD5 93eb826d7e784c518be7e41a42199777 ChangeLog 4068
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-quanta-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-quanta-3.4.2 292
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-quanta-3.4.3 69
@@ -10,7 +10,7 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2de271d5cb0564396ad3901ab2879b63 quanta-3.4.1.ebuild 1046
 MD5 5cd5d5288de88797c173db09bd12073c quanta-3.4.2.ebuild 1077
 MD5 d907c7b6e111dc1bc2195385a419211c quanta-3.4.3.ebuild 1071
-MD5 7e7916ea06eadae80c9b5794048bde97 quanta-3.5.0.ebuild 1058
+MD5 ef980fe2b8d590517ba23c67191b1bb4 quanta-3.5.0.ebuild 1055
 MD5 0b487fcc16a38ba956a89dff2dbd6634 quanta-3.5.0_beta2.ebuild 1062
 MD5 06905dfa4d76a320e55b6d0403015e13 quanta-3.5.0_rc1.ebuild 1055
 MD5 6d8265acda77aa782286be48117b2673 quanta-3.5_beta1.ebuild 1054

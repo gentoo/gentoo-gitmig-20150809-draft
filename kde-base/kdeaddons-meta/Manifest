@@ -1,4 +1,4 @@
-MD5 0eb501d9233158d67212084b691d2af0 ChangeLog 6197
+MD5 428bc917fe373a5cf04bf806fdf545c3 ChangeLog 6296
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.3 0
@@ -9,7 +9,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5_beta1 0
 MD5 c8bcb90d2f904bacbf363f6bc221b737 kdeaddons-meta-3.4.1.ebuild 1216
 MD5 6950192ed4daaee921df3b638c51ca50 kdeaddons-meta-3.4.2.ebuild 1243
 MD5 6b954b13565087817cd823c87bb96c66 kdeaddons-meta-3.4.3.ebuild 1237
-MD5 d03826d3fc38603f3feb8d3f47630d40 kdeaddons-meta-3.5.0.ebuild 1168
+MD5 e9ad0e5953d3e5bd41c07d97d45ae389 kdeaddons-meta-3.5.0.ebuild 1165
 MD5 5cf70023c6e6f7a575627043c4093ee4 kdeaddons-meta-3.5.0_beta2.ebuild 1184
 MD5 c4f66c4542b460ed24a6cfb512a0e19f kdeaddons-meta-3.5.0_rc1.ebuild 1191
 MD5 388ee8f1ac7c97372a40bb73128dbb46 kdeaddons-meta-3.5_beta1.ebuild 1164

@@ -1,4 +1,4 @@
-MD5 11d140c73748950a4b51cd8d93bda463 ChangeLog 4186
+MD5 07ad4db46e04d7d28c38aa73ece3e2ea ChangeLog 4295
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kwin-styles-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kwin-styles-3.4.2 298
 MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kwin-styles-3.4.3 71
@@ -9,7 +9,7 @@ MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-kwin-styles-3.5_bet
 MD5 e42a767a0366a3edd96790b9c72d6f52 kdeartwork-kwin-styles-3.4.1.ebuild 518
 MD5 bbb08f7d1ad937a126d320b1aa65767a kdeartwork-kwin-styles-3.4.2.ebuild 531
 MD5 9ad97de45bc777d41fbfd1729f82cc2c kdeartwork-kwin-styles-3.4.3.ebuild 527
-MD5 b1d171f4b1baac3e0b9f15276f9e1921 kdeartwork-kwin-styles-3.5.0.ebuild 484
+MD5 233d671982bb010949eafb3ad694e133 kdeartwork-kwin-styles-3.5.0.ebuild 481
 MD5 c03faa497b3dbe08cc438b590e735ecc kdeartwork-kwin-styles-3.5.0_beta2.ebuild 482
 MD5 7622e833c02e12a9609b4df0773dd580 kdeartwork-kwin-styles-3.5.0_rc1.ebuild 481
 MD5 b44df529c89d2bfc54dff3cdc7d66cb4 kdeartwork-kwin-styles-3.5_beta1.ebuild 510
