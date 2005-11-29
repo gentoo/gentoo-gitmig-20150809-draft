@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.0.ebuild,v 1.2 2005/10/30 15:44:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.0.ebuild,v 1.3 2005/11/29 12:35:06 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -30,8 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Fix icon as per icon theme specs.
-	sed -i -e 's:gxine-logo.png:gxine:' ${S}/gxine.desktop
+	epatch "${FILESDIR}/${P}-pixmap.patch"
 }
 
 src_compile() {
