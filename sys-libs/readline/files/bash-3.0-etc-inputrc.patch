@@ -1,3 +1,8 @@
+Patch readline's bind.c so that /etc/inputrc is read as a last resort
+following ~/.inputrc.  This is better than putting INPUTRC in
+the environment because INPUTRC will override even after the
+user creates a ~/.inputrc
+
 --- bash-3.0/lib/readline/bind.c.agriffis	2004-03-03 22:39:32.000000000 -0500
 +++ bash-3.0/lib/readline/bind.c	2004-08-02 13:53:02.365731918 -0400
 @@ -781,6 +781,7 @@
