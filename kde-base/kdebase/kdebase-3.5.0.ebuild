@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0.ebuild,v 1.3 2005/11/29 13:22:35 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0.ebuild,v 1.4 2005/11/29 13:26:14 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -26,7 +26,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( >=sys-apps/dbus-0.33
 	       =sys-apps/hal-0.5*
-	       =sys-apps/pmount )
+	       sys-apps/pmount )
 	zeroconf? ( net-misc/mDNSResponder )"
 
 RDEPEND="${DEPEND}
