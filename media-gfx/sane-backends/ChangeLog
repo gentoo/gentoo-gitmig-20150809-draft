@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.87 2005/11/08 06:53:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.88 2005/11/29 03:45:23 jer Exp $
+
+  29 Nov 2005; Jeroen Roovers <jer@gentoo.org> sane-backends-1.0.15.ebuild:
+  Marked ~hppa wrt bug 109180.
 
   08 Nov 2005; Patrick Kursawe <phosphan@gentoo.org> files/sm3600usb.patch:
   Will I ever get sm3600 right? Links with sanei now.
