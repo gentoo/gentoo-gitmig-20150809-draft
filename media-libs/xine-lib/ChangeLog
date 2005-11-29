@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.279 2005/11/23 20:14:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.280 2005/11/29 00:05:40 weeve Exp $
+
+  29 Nov 2005; Jason Wever <weeve@gentoo.org> xine-lib-1.1.1-r1.ebuild:
+  Added ~sparc keyword wrt bug #113107.
 
   23 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.1-r1.ebuild:
