@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf7bd6290f1f449cd585c282c27f5b94 ChangeLog 338
+MD5 b3bb33138651774ca75e6f158197deaa ChangeLog 447
 MD5 4d2a12dae8034b77b03aeadb458749fb files/digest-libebt-0.8.2 65
-MD5 679ea6d879d532697e6db8037a984200 libebt-0.8.2.ebuild 799
+MD5 183cd478ae666881e85b9db4f8192d8a libebt-0.8.2.ebuild 804
 MD5 49b5ca6a324b8f95eba6721c1e5e7793 metadata.xml 582
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhwQwEZCkKN40op4RAkJfAJ40a4Dg1VKB3FEsGCUZZyUjp0InZwCcDI3P
-lywm3xDEOGBMzBwtvpYrIYw=
-=24dw
------END PGP SIGNATURE-----
