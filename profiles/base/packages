@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.35 2005/09/09 17:26:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.36 2005/11/29 03:31:19 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -46,7 +46,7 @@
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools
-*>=sys-apps/portage-2.0.51
+*>=sys-apps/portage-2.0.51.22
 *sys-process/procps
 *sys-process/psmisc
 *sys-apps/sed
