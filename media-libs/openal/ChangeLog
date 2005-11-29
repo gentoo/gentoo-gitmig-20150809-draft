@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.49 2005/10/27 13:26:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.50 2005/11/29 14:18:37 wolf31o2 Exp $
+
+  29 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -openal-20040817.ebuild, openal-20050504-r1.ebuild,
+  openal-20050504-r2.ebuild, openal-20051024.ebuild:
+  Removed old version. Changed oggvorbis to vorbis for bug #94254. Changed to
+  using use_enable rather than manually adding to myconf.
 
   27 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   openal-20051024.ebuild:

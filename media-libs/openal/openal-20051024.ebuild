@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20051024.ebuild,v 1.5 2005/11/29 03:17:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20051024.ebuild,v 1.6 2005/11/29 14:18:37 wolf31o2 Exp $
 
 inherit eutils gnuconfig
 
@@ -43,18 +43,18 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	use esd && myconf="${myconf} --enable-esd"
-	use sdl && myconf="${myconf} --enable-sdl"
-	use alsa && myconf="${myconf} --enable-alsa"
-	use arts && myconf="${myconf} --enable-arts"
-	use mpeg && myconf="${myconf} --enable-smpeg"
-	use vorbis && myconf="${myconf} --enable-vorbis"
-	use debug && myconf="${myconf} --enable-debug-maximus"
-
-	econf ${myconf} --enable-paranoid-locks --libdir=/usr/$(get_libdir) \
-		--enable-capture --enable-optimization || die
+	econf \
+		--enable-paranoid-locks \
+		--libdir=/usr/$(get_libdir) \
+		--enable-capture \
+		--enable-optimization \
+		$(use_enable esd) \
+		$(use_enable sdl) \
+		$(use_enable alsa) \
+		$(use_enable arts) \
+		$(use_enable mpeg smpeg) \
+		$(use_enable vorbis) \
+		$(use_enable debug debug-maximus) || die
 	emake all || die
 }
 
