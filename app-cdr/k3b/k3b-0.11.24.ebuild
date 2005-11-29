@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.24.ebuild,v 1.5 2005/09/19 22:44:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.24.ebuild,v 1.6 2005/11/29 10:57:41 greg_g Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}b.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ~sparc x86"
-IUSE="arts dvdr encode flac kde mad oggvorbis"
+IUSE="arts dvdr encode flac kde mad vorbis"
 
 DEPEND="arts? ( kde-base/arts )
 	kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
@@ -20,7 +20,7 @@ DEPEND="arts? ( kde-base/arts )
 	>=media-libs/id3lib-3.8.0_pre2
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad )
-	oggvorbis? ( media-libs/libvorbis )"
+	vorbis? ( media-libs/libvorbis )"
 
 RDEPEND="${DEPEND}
 	virtual/cdrtools
