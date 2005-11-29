@@ -1,25 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r8.ebuild,v 1.3 2005/09/22 23:00:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r10.ebuild,v 1.1 2005/11/29 17:27:01 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20050729.tar.gz
+	mirror://gentoo/${P}-patches-20051105.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="activefilter atm dhcp gtk ipv6 mppe-mppc pam radius"
+IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius"
 
 RDEPEND="virtual/libc
 	activefilter? ( >=virtual/libpcap-0.9.3 )
 	atm? ( net-dialup/linux-atm )
 	pam? ( sys-libs/pam )
-	gtk? ( =x11-libs/gtk+-1* )"
+	gtk? ( =x11-libs/gtk+-1* )
+	eap-tls? ( net-misc/curl >=dev-libs/openssl-0.9.7 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -29,6 +30,48 @@ pkg_setup() {
 		ewarn "RADIUS plugins installation is now controled by radius useflag!"
 		ewarn "If you need them, hit Ctrl-C now!"
 		ebeep
+	fi
+
+	if has_version "<${CATEGORY}/${PF}"; then
+		local files=""
+		[ -f "${ROOT}/etc/conf.d/net.ppp0" ] && files=( "${ROOT}/etc/conf.d/net.ppp0" )
+		if [ -f "${ROOT}/etc/init.d/net.ppp0" ]; then
+			local x y
+			x=$(<"${ROOT}/etc/init.d/net.ppp0")
+			y=$(<"${ROOT}/etc/init.d/net.lo")
+			#It should be symlink to net.lo or at least have the same content
+			if [ "$x" != "$y" ] ; then
+				files=( ${files[@]} "${ROOT}/etc/init.d/net.ppp0" )
+			fi
+		fi
+
+		if [[ -n "${files[@]}" ]]; then
+			local f
+			einfo "Gentoo is moving toward common configuration file for all network"
+			einfo "interfaces. Thus starting from >=ppp-2.4.3-r10 the following files"
+			einfo "are obsoleted and should be removed to avoid future confusion:"
+			for f in ${files[@]} ; do
+				eerror "    ${f//\/\///} - conflict with baselayout"
+			done
+			for f in chat-default options-pppoe options-pptp ; do
+				f="${ROOT}/etc/ppp/${f}"
+				if [ -f "${f}" ] ; then
+					ewarn "    ${f//\/\///} - unused by this version"
+					files=( ${files[@]} "${f}" )
+				fi
+			done
+			echo
+			einfo "If you use the old net.ppp0 script, you need to:"
+			einfo "   - upgrade to >=sys-apps/baselayout-1.12.0_pre11"
+			einfo "   - set ppp0 parameters in /etc/conf.d/net (see example file)"
+			einfo "   - remove conflicting files"
+			einfo "   - upgrade net-dialup/ppp"
+			echo
+			einfo "If you never used net.ppp0 script, just run the following commands:"
+			einfo "    rm ${files[@]}"
+			einfo "    emerge --resume"
+			die "Conflicts with baselayout support detected"
+		fi
 	fi
 }
 
@@ -41,11 +84,17 @@ src_unpack() {
 	epatch ${WORKDIR}/patch/killaddr-smarter.patch
 	epatch ${WORKDIR}/patch/upstream-fixes.patch
 	epatch ${WORKDIR}/patch/rp-pppoe-any-interface.patch
-	epatch ${WORKDIR}/patch/demand-pcap-outbound.patch
+
+	use eap-tls && {
+		# see http://eaptls.spe.net/index.html for more info
+		einfo "Enabling EAP-TLS support"
+		epatch ${WORKDIR}/patch/eaptls-0.7-gentoo.patch
+	}
 
 	use mppe-mppc && {
-		einfo "Enabling mppe-mppc support"
+		einfo "Enabling MPPE-MPPC support"
 		epatch ${WORKDIR}/patch/mppe-mppc-1.1.patch
+		use eap-tls && epatch ${WORKDIR}/patch/eaptls-mppe-0.7-gentoo.patch
 	}
 
 	use atm && {
@@ -141,26 +190,16 @@ src_install() {
 
 	insopts -m0644
 	doins etc.ppp/options
-	doins ${FILESDIR}/options-pptp
-	doins ${FILESDIR}/options-pppoe
-	doins ${FILESDIR}/chat-default
 
 	insopts -m0755
-	doins ${FILESDIR}/ip-up
-	doins ${FILESDIR}/ip-down
-
-	exeinto /etc/init.d/
-	doexe ${FILESDIR}/net.ppp0
+	newins ${FILESDIR}/ip-up.baselayout ip-up
+	newins ${FILESDIR}/ip-down.baselayout ip-down
 
 	if use pam; then
 		insinto /etc/pam.d
 		insopts -m0644
 		newins pppd/ppp.pam ppp || die "not found ppp.pam"
 	fi
-
-	insinto /etc/conf.d
-	insopts -m0600
-	newins ${FILESDIR}/confd.ppp0 net.ppp0
 
 	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	#closing " for syntax coloring
@@ -201,7 +240,6 @@ src_install() {
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 	dodoc ${FILESDIR}/README.mpls
-	dohtml ${FILESDIR}/pppoe.html
 
 	dosbin scripts/pon
 	dosbin scripts/poff
@@ -249,14 +287,6 @@ pkg_postinst() {
 	[ -f "${ROOT}/etc/ppp/chap-secrets" ] || \
 		cp -pP "${ROOT}/etc/ppp/chap-secrets.example" "${ROOT}/etc/ppp/chap-secrets"
 
-	ewarn "To enable kernel-pppoe read html/pppoe.html in the doc-directory."
-	ewarn "Note: the library name has changed from pppoe.so to rp-pppoe.so."
-	ewarn "Pon, poff and plog scripts have been supplied for experienced users."
-	ewarn "New users or those requiring something more should have a look at"
-	ewarn "the /etc/init.d/net.ppp0 script."
-	ewarn "Users needing particular scripts (ssh,rsh,etc.)should check out the"
-	ewarn "/usr/share/doc/ppp*/scripts directory."
-
 	# lib name has changed
 	sed -i -e "s:^pppoe.so:rp-pppoe.so:" ${ROOT}etc/ppp/options
 
@@ -266,4 +296,16 @@ pkg_postinst() {
 		ewarn "   /etc/radiusclient to /etc/ppp/radius."
 		einfo "For your convenience, radiusclient directory was copied to the new location."
 	fi
+
+	echo
+	einfo "Pon, poff and plog scripts have been supplied for experienced users."
+	einfo "Users needing particular scripts (ssh,rsh,etc.) should check out the"
+	einfo "/usr/share/doc/ppp*/scripts directory."
+
+	echo
+	ewarn "The old /etc/init.d/net.ppp0 script has gone!"
+	einfo "The new way of handling PPP connections of any kind (PPPoE, PPPoA, etc)"
+	einfo "is through the baselayout's pppd net module."
+	einfo "Make sure you have a supported version of baselayout by running:"
+	einfo "   emerge -u '>=sys-apps/baselayout-1.12.0_pre11'"
 }

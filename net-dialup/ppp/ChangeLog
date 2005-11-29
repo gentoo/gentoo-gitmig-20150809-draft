@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.131 2005/11/14 14:38:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.132 2005/11/29 17:27:01 mrness Exp $
+
+*ppp-2.4.3-r10 (29 Nov 2005)
+
+  29 Nov 2005; Alin Nastac <mrness@gentoo.org> +files/ip-down.baselayout,
+  +files/ip-up.baselayout, -ppp-2.4.2-r12.ebuild, -ppp-2.4.3-r8.ebuild,
+  +ppp-2.4.3-r10.ebuild:
+  Remove old versions. Add support for the new pppd net module introduced by
+  sys-apps/baselayout-1.12.0_pre11.
 
   14 Nov 2005; Luis Medinas <metalgod@gentoo.org> ppp-2.4.2-r15.ebuild:
   Marked Stable on amd64.
