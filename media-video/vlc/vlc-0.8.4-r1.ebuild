@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4-r1.ebuild,v 1.1 2005/11/27 21:43:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4-r1.ebuild,v 1.2 2005/11/29 12:08:22 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -105,6 +105,11 @@ pkg_setup() {
 		else
 			need-wxwidgets gtk2 || die "You need to install wxGTK with gtk2 support."
 		fi
+	fi
+
+	if use skins && ! use freetype; then
+		eerror "Trying to build with skins support but without freetype."
+		die "You have to use 'freetype' to use 'skins'"
 	fi
 }
 
@@ -219,8 +224,10 @@ src_install() {
 	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
-	rm -rf ${D}/usr/share/vlc/skins2 ${D}/usr/share/doc/vlc \
+	rm -rf ${D}/usr/share/doc/vlc \
 		${D}/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
+
+	use skins || rm -rf ${D}/usr/share/vlc/skins2
 
 	for res in 16 32 48; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
