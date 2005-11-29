@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.2.ebuild,v 1.2 2005/10/31 16:39:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.2.ebuild,v 1.3 2005/11/29 21:27:18 hanno Exp $
 
 inherit eutils autotools
 
@@ -30,6 +30,7 @@ src_unpack(){
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/poppler-0.4.1-cairo-ft.patch
+	epatch ${FILESDIR}/poppler-gcc41.patch
 	eautoreconf
 }
 
