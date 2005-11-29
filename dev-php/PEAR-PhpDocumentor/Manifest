@@ -1,8 +1,20 @@
-MD5 16e413d0901504ecb53d141d4da96f90 ChangeLog 1907
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 91679401eb6267c6ca9e8f6b2d3014ca ChangeLog 2068
 MD5 8b1e682b8a6b40153f85b5ead488439c PEAR-PhpDocumentor-1.2.3.ebuild 425
-MD5 437838d87c820af7b8599e0c1405bc5c PEAR-PhpDocumentor-1.3.0_rc3.ebuild 434
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 9f4cc81920079773efacb962d42a7f59 PEAR-PhpDocumentor-1.3.0_rc3-r1.ebuild 451
+MD5 437838d87c820af7b8599e0c1405bc5c PEAR-PhpDocumentor-1.3.0_rc3.ebuild 434
+MD5 ba037fa02ba5af9de8be0b18680ae53f PEAR-PhpDocumentor-1.3.0_rc4.ebuild 517
 MD5 7536fefe11615d250f572cc8e9ba2834 files/digest-PEAR-PhpDocumentor-1.2.3 69
 MD5 9bb1bf8f50fd8264985669f08a332d5b files/digest-PEAR-PhpDocumentor-1.3.0_rc3 72
 MD5 9bb1bf8f50fd8264985669f08a332d5b files/digest-PEAR-PhpDocumentor-1.3.0_rc3-r1 72
+MD5 ef51a65752f9f2cb6627b418f20ef5d4 files/digest-PEAR-PhpDocumentor-1.3.0_rc4 72
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi/U/aGfFFLhbXWkRArdzAKCAnZYZvTOIh/r7Yu0Ka9a0acrlMQCgn2DD
+HYQcl8alsB3mbYaQdKSkGYk=
+=1Cu8
+-----END PGP SIGNATURE-----
