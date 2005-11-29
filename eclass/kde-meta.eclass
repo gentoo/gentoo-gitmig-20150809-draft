@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.62 2005/11/29 18:32:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.63 2005/11/29 18:56:53 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -121,7 +121,7 @@ if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_U
 	for x in $XDELTA_DELTA; do
 		SRC_URI="$SRC_URI $x"
 	done
-	SRC_URI="$SRC_URI ) !kdexdeltas? ( $SRC_PATH )"
+	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
 else # xdelta don't available, for example with kde 3.4 alpha/beta/rc ebuilds.
 	SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
 fi
