@@ -1,6 +1,11 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.5 2005/11/20 09:45:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.6 2005/11/29 09:47:01 dragonheart Exp $
+
+*twinkle-0.4.2 (29 Nov 2005)
+
+  29 Nov 2005; Daniel Black <dragonheart@gentoo.org> +twinkle-0.4.2.ebuild:
+  version bump
 
 *twinkle-0.4.1 (20 Nov 2005)
 
