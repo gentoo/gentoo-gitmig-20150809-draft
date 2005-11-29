@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.482 2005/11/29 04:49:23 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.483 2005/11/29 04:53:09 joshuabaergen Exp $
+
+  29 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-7.0.0_rc2-r1.ebuild:
+  Added note about bug #112924 for the ModulePath removal decision.
 
 *xorg-x11-7.0.0_rc2-r1 (29 Nov 2005)
 

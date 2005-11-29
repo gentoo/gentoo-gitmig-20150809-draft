@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc2-r1.ebuild,v 1.1 2005/11/29 04:49:23 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc2-r1.ebuild,v 1.2 2005/11/29 04:53:09 joshuabaergen Exp $
 
 inherit eutils
 
@@ -68,6 +68,7 @@ pkg_preinst() {
 	fi
 
 	# Filter out ModulePath line since it often holds a now-invalid path
+	# Bug #112924
 	XORGCONF="/etc/X11/xorg.conf"
 	if [ -e ${XORGCONF} ]; then
 		mkdir -p "${IMAGE}/etc/X11"
