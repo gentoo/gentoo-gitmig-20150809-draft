@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.0.ebuild,v 1.2 2005/11/29 03:26:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.0.ebuild,v 1.3 2005/11/29 15:47:23 sekretarz Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://savannah.nongnu.org/download/mldonkey/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
 
 RDEPEND="dev-lang/perl
 	gtk? ( >=gnome-base/librsvg-2.4.0
@@ -57,6 +57,13 @@ pkg_setup() {
 		eerror "mldonkey with gd support"
 		die "Recompile media-libs/gd with enabled truetype USE flag"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-endianess.patch.bz2
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.107 2005/11/21 19:24:10 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.108 2005/11/29 15:47:23 sekretarz Exp $
+
+  29 Nov 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/mldonkey-2.7.0-endianess.patch.bz2, mldonkey-2.7.0.ebuild:
+  Added patch to make mldonkey working on amd64 and other little-endian machines
 
 *mldonkey-2.7.0 (21 Nov 2005)
 
