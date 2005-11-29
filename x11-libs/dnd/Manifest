@@ -1,5 +1,15 @@
-MD5 7f6ce175e84c0530ae6d4dd47b95e221 dnd-1.1.ebuild 742
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3953f064e3274c866d4ae7382fc19278 ChangeLog 1441
-MD5 5bcbf95d481a26737a32374140b6f910 files/digest-dnd-1.1 56
+MD5 ee6aaa90328a89090bc3d44662f4ef16 dnd-1.1.ebuild 747
 MD5 1d76f13dff28550723f994fd008c172f files/Makefile-fix.patch 1100
+MD5 5bcbf95d481a26737a32374140b6f910 files/digest-dnd-1.1 56
 MD5 0004edf0ec28c4b590e0832ba2463d04 files/dnd-1.1-gentoo.diff 1533
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDi8jtgIKl8Uu19MoRAgtVAJ9d6/eYX1e6Td1choRELFhuLKU1/gCfea8+
+P7zi3UvXrpwJqxtCyo0Kwls=
+=4nlc
+-----END PGP SIGNATURE-----
