@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.3 2005/11/30 22:46:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.4 2005/11/30 22:48:34 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -319,8 +319,7 @@ src_install() {
 	if has_version '<www-servers/tomcat-5.0.28-r4' ; then
 		dosed 's:tomcat-5:tomcat5:' /etc/init.d/open-xchange
 	fi
-	
-	
+
 	insinto ${SERVLETDIR}
 	doins lib/*.war
 
@@ -348,7 +347,7 @@ src_install() {
 	dosym ../../../etc/openldap/schema/openxchange.schema /usr/share/open-xchange/openxchange.schema
 	dosym ../../openldap/ldap.conf /etc/open-xchange/groupware/ldap.conf
 	dosym ../../openldap/ldap.conf /etc/open-xchange/webmail/ldap.conf
-	
+
 	if use ssl ; then
 	    #create symlink to ssl directory for webmail
 	    dosym /etc/open-xchange/groupware/sslcerts /etc/open-xchange/webmail/sslcerts
@@ -356,7 +355,7 @@ src_install() {
 		dodir ${TOMCAT_SHARED_LIB}
 	    dosym /usr/lib/open-xchange/liboxssl.so ${TOMCAT_SHARED_LIB}/liboxssl.so
 	fi
-	
+
 	for x in settings/intranet settings/webmail filespool drafts webmailupload dictionary ; do
 		keepdir /var/open-xchange/${x}
 		fowners tomcat:tomcat /var/open-xchange/${x}
@@ -419,7 +418,7 @@ pkg_preinst(){
 		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.pem
 		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiond.csr
 		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.csr
-		
+
 		chown -R tomcat:apache ${D}/etc/open-xchange/groupware/sslcerts
 		find ${D}/etc/open-xchange/groupware/sslcerts -name '*.pem' -exec chmod 440 {} \;
 	fi
