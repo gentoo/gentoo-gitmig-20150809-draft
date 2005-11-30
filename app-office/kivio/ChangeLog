@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.20 2005/11/22 14:49:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.21 2005/11/30 06:37:32 halcy0n Exp $
+
+  30 Nov 2005; Mark Loeser <halcy0n@gentoo.org> kivio-1.4.2.ebuild:
+  Stable on x86; bug #112840
 
   22 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> kivio-1.4.2.ebuild:
   Stable on amd64, bug 112840.
