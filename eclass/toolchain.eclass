@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.220 2005/11/19 07:13:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.221 2005/11/30 04:01:31 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1515,6 +1515,10 @@ gcc-compiler_src_install() {
 	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}${BINPATH}" "${D}${LIBEXECPATH}"
 	env RESTRICT="" STRIP=${CTARGET}-strip prepstrip "${D}${LIBPATH}"
 
+	# This one comes with binutils
+	find "${D}" -name libiberty.a -exec rm -f {} \;
+
+	# Basic sanity check
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
 	dodir /lib /usr/bin
@@ -1646,9 +1650,6 @@ gcc-compiler_src_install() {
 # when installing gcc, it dumps internal libraries into /usr/lib
 # instead of the private gcc lib path
 gcc_movelibs() {
-	# This one comes with binutils
-	find "${D}" -name libiberty.a -exec rm -f {} \;
-
 	# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 	local multiarg
