@@ -5,7 +5,7 @@ MD5 9780af748959ac2da43677dd72a313f0 arts-3.4.1-r2.ebuild 2854
 MD5 676deb8b9ee5e00a41bc7a051ccf75ea ChangeLog 24792
 MD5 db0f7cdd6d695cdf6af189655f4758d5 arts-3.4.2.ebuild 2941
 MD5 2a34bacb418d79b24ba8824d8b5ead47 arts-1.3.2.ebuild 2764
-MD5 32841bcb36cb9438ff9ea2bbcdaabc75 arts-3.5.0.ebuild 3069
+MD5 6b4cf13b25246828c74fc42c7fc31cb3 arts-3.5.0.ebuild 3069
 MD5 0a66e4f219b0dee9346c9c99ae4b15d0 files/digest-arts-1.3.2-r1 63
 MD5 aee14037bb0dcd09b7dfcb784e7ad12c files/digest-arts-3.4.2 63
 MD5 c0838be4fcac1f2a9f9efd922b4b6d8d files/arts-3.4.1-configure.patch 4429

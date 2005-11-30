@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0.ebuild,v 1.2 2005/11/23 11:39:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0.ebuild,v 1.3 2005/11/30 00:44:19 greg_g Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -80,7 +80,7 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${libdirs:1}
-CONFIG_PROTECT=\"${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown\"" > ${D}/etc/env.d/45kdepaths-3.4 # number goes down with version upgrade
+CONFIG_PROTECT=\"${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown\"" > ${D}/etc/env.d/45kdepaths-3.5 # number goes down with version upgrade
 
 	# used for realtime priority, but off by default as it is a security hazard
 	use artswrappersuid && chmod u+s ${D}/${PREFIX}/bin/artswrapper
