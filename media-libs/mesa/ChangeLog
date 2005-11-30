@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.52 2005/11/27 20:18:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.53 2005/11/30 20:24:43 spyderous Exp $
+
+*mesa-6.4.1 (30 Nov 2005)
+
+  30 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>; +mesa-6.4.1.ebuild:
+  New version. This is the one that's expected to be in X.Org 7.0. Fix libGL.*
+  symlink deletion so the dot really matches a dot instead of any character,
+  so other symlinks don't get deleted. (#110840) Build with PIC, since it
+  hasn't been shown to slow it down. Remove commented-out lines about OSMesa.
+  Keep using 6.4-dont-install-gles-headers.patch, so don't delete it when
+  pulling 6.4.
 
   27 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org> mesa-6.4-r1.ebuild:
   Added Diego's patch for FreeBSD support. Closes bug #111145.
