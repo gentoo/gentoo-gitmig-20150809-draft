@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/make.defaults,v 1.1 2005/11/15 18:34:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/make.defaults,v 1.2 2005/11/30 01:37:46 gustavoz Exp $
 
 CHOST="sparc-unknown-linux-gnu"
 
@@ -17,7 +17,4 @@ CDEFINE_sparc32="!__arch64__"
 LIBDIR_sparc32="lib"
 
 # USE settings
-USE="berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gstreamer gtk gtk2 imlib jpeg libwww motif ncurses nls oss pam perl png python readline spell ssl tcpd truetype truetype-fonts type1-fonts X xml2 zlib"
-
-# Catalyst stage/grp USE
-GRP_STAGE23_USE="berkdb gpm gtk2 ipv6 ncurses nls pam perl python readline ssl tcpd"
+USE="apache2 berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gstreamer gtk gtk2 imlib jpeg libwww motif ncurses nls oss pam perl png python readline spell ssl tcpd truetype truetype-fonts type1-fonts X xml2 zlib"
