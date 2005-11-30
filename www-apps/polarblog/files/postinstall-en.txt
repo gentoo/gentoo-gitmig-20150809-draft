@@ -9,4 +9,5 @@ DB_USER, DB_PASSWORD, CSS.
 Then go to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install.php to finish the installation.
 Don't forget to delete ${MY_INSTALLDIR}/install.php when you are done.
 
-Read the docs at http://polarblog.polarlava.com/docs/
+Read the docs at http://polarblog.polarlava.com/docs/ , in particular the
+.htaccess section.

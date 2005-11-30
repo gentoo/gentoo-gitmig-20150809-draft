@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 725d588ef84681a9ab5b790358ad2a14 polarblog-1.6.2.ebuild 836
-MD5 5e376d7b816106341e6080610799fdf1 ChangeLog 2035
+MD5 43b22eba88943e7a581e806fa2e9165e polarblog-1.7.0.ebuild 836
+MD5 9a18a63e28d51dbd75786f488139f78f ChangeLog 2182
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 7e03c515e971f691c041deeec4f46dfa files/digest-polarblog-1.6.2 56
-MD5 49ea194bc029ebaabc371f02ffd7a198 files/postinstall-en.txt 507
+MD5 f266f636a273652ff740da0b9479809a files/digest-polarblog-1.7.0 56
+MD5 b46e2518f37003483cdf4cbf4c6b4a5a files/postinstall-en.txt 546
 MD5 15f47a7b879f76e31a344ac66540a22f files/reconfig 229
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDW+gdEzitwsaoONoRAhezAJ91ykXbwFTIWlRVPzU9a/9jYnkx/QCgmLNl
-tIuCQYajIX/fVP40it8wh5k=
-=ac6Z
+iD8DBQFDjQXQEzitwsaoONoRAngyAJ0YbbGyJrntBZDgrTlKCAoCvDHhswCdFm5N
+c0UL7Il4fYCICql3R2d/9FY=
+=U0iI
 -----END PGP SIGNATURE-----
