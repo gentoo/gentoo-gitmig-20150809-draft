@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.0_rc1.ebuild,v 1.1 2005/11/26 17:42:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.0.ebuild,v 1.1 2005/11/30 10:09:45 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
