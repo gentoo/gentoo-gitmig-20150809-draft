@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.411 2005/11/18 03:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.412 2005/11/30 23:19:03 kloeri Exp $
+
+  30 Nov 2005; Bryan Østergaard <kloeri@gentoo.org> glibc-2.3.5-r3.ebuild:
+  Stable on alpha. Fixes some longstanding threading issues.
 
   18 Nov 2005; Mike Frysinger <vapier@gentoo.org> glibc-2.3.6-r1.ebuild:
   Add support for just installing glibc headers when doing a cross-compile.
