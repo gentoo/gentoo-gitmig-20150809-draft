@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0.ebuild,v 1.3 2005/11/09 08:37:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0.ebuild,v 1.4 2005/11/30 01:27:53 nichoj Exp $
 
 inherit java-pkg
 
@@ -11,24 +11,27 @@ HOMEPAGE="http://www.gnu.org/software/classpathx/javamail/"
 SRC_URI="mirror://gnu/classpathx/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86"
-IUSE="doc jikes"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/gnu-jaf-1*
 	=dev-java/gnu-classpath-inetlib-1.0*"
 DEPEND=">=virtual/jdk-1.3
-	${RDEPEND}
-	jikes? ( >=dev-java/jikes-1.19 )"
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+# TODO: Re-enable jikes support (see bug #89711)
 
 src_compile() {
 	local activation=$(dirname $(java-pkg_getjar gnu-jaf-1 activation.jar))
 	local inetlib=$(dirname $(java-pkg_getjar gnu-classpath-inetlib-1.0 inetlib.jar))
 
-	# TODO: Add jikes back	
+	local my_javac="${JAVAC}"
+	# use jikes && my_javac="jikes"
+
 	# TODO: Useflag this
-	econf \
+	JAVAC="${my_javac}" econf \
 		--with-activation-jar=${activation} \
 		--with-inetlib-jar=${inetlib} \
 		--enable-smtp \
@@ -37,19 +40,17 @@ src_compile() {
 		--enable-nntp \
 		--enable-mbox \
 		--enable-maildir \
-		|| die
+		|| die "failed to configure"
 
-	echo "Configure finished. Compiling... Please wait."
-
-	emake || die
+	emake || die "failed to compile"
 
 	if use doc; then
-		emake javadoc || die
+		emake javadoc || die "failed to generate javadoc"
 	fi
 }
 
 src_install() {
-	java-pkg_dojar gnumail.jar gnumail-providers.jar || die
+	java-pkg_dojar gnumail.jar gnumail-providers.jar || die "java-pkg_dojar failed"
 	dodoc AUTHORS ChangeLog NEWS README README.*
 	use doc && java-pkg_dohtml -r docs/*
 }

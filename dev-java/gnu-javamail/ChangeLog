@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.13 2005/09/17 22:05:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.14 2005/11/30 01:27:53 nichoj Exp $
+
+  30 Nov 2005; <nichoj@gentoo.org> gnu-javamail-1.0.ebuild:
+  Added ~amd64 keyword (bug #105607). Disabled jikes support (bug #89711).
+  Added useful messages to 'die' calls.
 
 *gnu-javamail-1.0 (17 Sep 2005)
 
