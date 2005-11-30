@@ -1,19 +1,29 @@
-MD5 7e845f846fb55a60b96a66e86abb6bc0 ChangeLog 4961
-MD5 ef2265e113f71f0c35b266aa93a224cb kadu-0.3.8.ebuild 859
-MD5 c30b964070d0f19383b5da19f14b79dd kadu-0.4.0.ebuild 7598
-MD5 90287df2c186fa948a71b3864453fcad kadu-0.4.1.ebuild 7501
-MD5 33e3466c984190a7bda01f7d4089f7a6 metadata.xml 245
-MD5 c3f7107c1a5212cf9677f6ea442c7e1e kadu-0.4.1-r1.ebuild 8345
-MD5 8cde5c6edd3e864a336606340408b11a kadu-0.4.2.ebuild 8783
-MD5 872af84048e3067944b76c5c6c7913a4 kadu-0.5.0_pre20051122.ebuild 7006
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2ea03f7f8f1dc736afbc91acc242c41 ChangeLog 5058
 MD5 7259b6aef0a2d10501b79c455fe4b763 files/digest-kadu-0.3.8 63
 MD5 27947a323558dd9aaa82c5b164f398b8 files/digest-kadu-0.4.0 1699
 MD5 5ec29be748778e605f23b2efe84b78a1 files/digest-kadu-0.4.1 1699
+MD5 d1111ddea6f815f253125a727a27a2a9 files/digest-kadu-0.4.1-r1 1853
+MD5 c98e5b9e33b4231382c1420bd256186a files/digest-kadu-0.4.2 1850
+MD5 60382aa6a2e520708e4be9d17b5947b1 files/digest-kadu-0.5.0_pre20051122 1713
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.3.9-nas-gentoo.diff 986
 MD5 a749836353c0aa03308822bdcbd08422 files/kadu-0.4.0_rc2-libgsm-amd64.patch 331
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.4.0_rc2-nas-gentoo.diff 986
 MD5 0a4dbebc3ca1bcf58ddf0af2e289a663 files/kadu-toolbar_toggle-gentoo.diff 5983
 MD5 e19ebd592e5b94e0b82b481d90861819 files/xosd-gentoo.patch 1148
-MD5 d1111ddea6f815f253125a727a27a2a9 files/digest-kadu-0.4.1-r1 1853
-MD5 c98e5b9e33b4231382c1420bd256186a files/digest-kadu-0.4.2 1850
-MD5 60382aa6a2e520708e4be9d17b5947b1 files/digest-kadu-0.5.0_pre20051122 1713
+MD5 ef2265e113f71f0c35b266aa93a224cb kadu-0.3.8.ebuild 859
+MD5 c30b964070d0f19383b5da19f14b79dd kadu-0.4.0.ebuild 7598
+MD5 c3f7107c1a5212cf9677f6ea442c7e1e kadu-0.4.1-r1.ebuild 8345
+MD5 90287df2c186fa948a71b3864453fcad kadu-0.4.1.ebuild 7501
+MD5 b8f5450da56121565a9dd721b184397a kadu-0.4.2.ebuild 8787
+MD5 872af84048e3067944b76c5c6c7913a4 kadu-0.5.0_pre20051122.ebuild 7006
+MD5 33e3466c984190a7bda01f7d4089f7a6 metadata.xml 245
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDjhceZ/iYVBmujdURAiikAJ469IbZ/6FnhOIc84ibOG5cRXntGACgu7Xd
+xDjZ2FoGEwfNnLM+WBXJYkE=
+=jAPu
+-----END PGP SIGNATURE-----
