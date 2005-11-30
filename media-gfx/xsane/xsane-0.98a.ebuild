@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.97.ebuild,v 1.12 2005/11/30 07:20:39 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.98a.ebuild,v 1.1 2005/11/30 07:20:39 phosphan Exp $
 
 DESCRIPTION="graphical scanning frontend"
 HOMEPAGE="http://www.xsane.org/"
@@ -8,12 +8,11 @@ SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="gtk2 nls jpeg png tiff gimp"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="nls jpeg png tiff gimp"
 
 DEPEND="media-gfx/sane-backends
-	gtk2? ( >=x11-libs/gtk+-2.0 )
-	!gtk2? ( =x11-libs/gtk+-1.2* )
+	>=x11-libs/gtk+-2.0
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
@@ -29,12 +28,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf \
+	econf --enable-gtk2 \
 		$(use_enable nls) \
 		$(use_enable jpeg) \
 		$(use_enable png) \
 		$(use_enable tiff) \
-		$(use_enable gtk2) \
 		$(use_enable gimp) \
 		|| die
 	emake || die
