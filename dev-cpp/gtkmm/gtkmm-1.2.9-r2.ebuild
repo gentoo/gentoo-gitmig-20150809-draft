@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.12 2005/01/01 17:27:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.13 2005/11/30 07:23:19 morfic Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	# (http://marc.theaimsgroup.com/?l=gtkmm&m=101879848701486&w=2)
 	epatch ${FILESDIR}/gtkmm-1.2.9-gcc3.1-gentoo.patch
 	epatch ${FILESDIR}/gtkmm-1.2.9-gcc3.4-gentoo.patch
+	epatch ${FILESDIR}/gtkmm-1.2.9-gcc4.patch
 }
 
 src_compile() {

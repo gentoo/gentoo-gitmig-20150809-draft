@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.80 2005/10/21 17:21:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.81 2005/11/30 07:23:19 morfic Exp $
+
+  30 Nov 2005; Daniel Goller <morfic@gentoo.org>
+  +files/gtkmm-1.2.9-gcc4.patch, gtkmm-1.2.9-r2.ebuild:
+  Adding gcc4 patch to allow compilation with gcc4
 
 *gtkmm-2.8.1 (21 Oct 2005)
 *gtkmm-2.6.5 (21 Oct 2005)
