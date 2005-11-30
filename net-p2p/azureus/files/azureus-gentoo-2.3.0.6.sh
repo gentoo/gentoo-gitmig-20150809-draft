@@ -42,5 +42,5 @@ fi
 cd ${dotazudir}
 
 CLASSPATH=$(java-config -p junit,log4j,commons-cli-1,swt-3,azureus)
-exec java -cp $CLASSPATH -Djava.library.path=$(java-config -i swt-3) \
+exec $(java-config --java)  -cp $CLASSPATH -Djava.library.path=$(java-config -i swt-3) \
 	${JAVA_OPTIONS} org.gudy.azureus2.ui.swt.Main "${@}"
