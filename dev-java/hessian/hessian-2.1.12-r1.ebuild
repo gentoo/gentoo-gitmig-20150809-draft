@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-2.1.12-r1.ebuild,v 1.1 2005/10/22 20:33:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-2.1.12-r1.ebuild,v 1.2 2005/11/30 02:33:15 nichoj Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.caucho.com/hessian/download/${P}-src.jar"
 
 LICENSE="Apache-1.1"
 SLOT="2.1"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.4
