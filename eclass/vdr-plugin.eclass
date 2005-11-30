@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.9 2005/11/20 16:41:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.10 2005/11/30 06:53:16 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -125,7 +125,7 @@ vdr-plugin_src_unpack() {
 				-e 's:-I$(VDRDIR)/include:-I$(VDRDIR):' \
 				-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
 				-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):' \
-				-e 's:$(VDRDIR)/\(config.h\|Make.config\):$(VDRDIR)/vdr/\1:'
+				-e 's:$(VDRDIR)/\([a-z]*\.h\|Make.config\):$(VDRDIR)/vdr/\1:'
 			eend $?
 			;;
 		esac
