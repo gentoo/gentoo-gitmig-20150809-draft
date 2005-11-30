@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.1 2005/11/22 02:45:49 hadfield Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.2 2005/11/30 06:21:22 hadfield Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}; cd "${S}"
 	epatch "${DISTDIR}/${P}"-rel5.patch.bz2
 	epatch "${FILESDIR}/${P}"-darwin.patch
+	epatch "${FILESDIR}/${P}"-tab_to.patch
 }
 
 src_compile() {
