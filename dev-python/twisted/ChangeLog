@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.54 2005/11/27 22:13:48 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.55 2005/11/30 22:38:35 marienz Exp $
+
+  30 Nov 2005; Marien Zwart <marienz@gentoo.org> -twisted-2.0.0.ebuild:
+  Remove old ebuild.
 
 *twisted-2.0.1 (27 Nov 2005)
 

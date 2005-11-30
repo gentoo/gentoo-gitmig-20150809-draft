@@ -1,7 +1,6 @@
-MD5 c4097baa19666c84bbf188968d739cae ChangeLog 10896
+MD5 a98fdf89616f8eb5eee49ea8aba864f4 ChangeLog 10990
 MD5 9e8836d4aec3a1a4f688add9c6c64877 files/digest-twisted-1.2.0 74
 MD5 387f6df81a68c591e6f30fe8878d964b files/digest-twisted-1.3.0 74
-MD5 48ff6eb1136ce5dd8f785e589a7723d5 files/digest-twisted-2.0.0 67
 MD5 1d3126a7c14d292951e51397db90bc83 files/digest-twisted-2.0.1 67
 MD5 2b9136e1ddf2b7467c5f6a71d87f90c2 files/digest-twisted-2.1.0 67
 MD5 7ec438488427334851e2eb977e4d8073 files/twistd.conf 277
@@ -12,6 +11,5 @@ MD5 1dea79601dae42090b4d8f34ecfc62a7 files/twisted-2.1.0-zsh-head.patch 592
 MD5 f21532a778f6bd2aa2879327084e8aa5 metadata.xml 492
 MD5 b334a51322c3da107d175c71db5c5b68 twisted-1.2.0.ebuild 996
 MD5 742e8cfdb91ef5a2685eb8734f209c41 twisted-1.3.0.ebuild 1061
-MD5 7d5efe87283a25e3cf2f87d1a0e0c8b5 twisted-2.0.0.ebuild 899
 MD5 836cfb784431efbc61721c624cfbb8e3 twisted-2.0.1.ebuild 3011
 MD5 6b2ba4eb2cb562c8c94627d2327ec98e twisted-2.1.0.ebuild 3204
