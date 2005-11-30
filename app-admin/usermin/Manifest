@@ -1,4 +1,4 @@
-MD5 2114cb71e24db72292efc3ef29091b25 ChangeLog 10402
+MD5 8f88c5df0f3cf09fb2751b04ee54c572 ChangeLog 10556
 MD5 0267babe04fc651a7357b983fe40ec98 files/digest-usermin-1.160 66
 MD5 73577e1e79ca49e1a7083b3e1c53a1c6 files/digest-usermin-1.180 66
 MD5 2e7c19bb66f99c168fc2e86b4bb4862c files/init.d.usermin 825
@@ -8,4 +8,4 @@ MD5 2e7603feaff187884dd9b1e66601f02b files/usermin.pam 382
 MD5 609774f17b0470a793fb7791278e270d files/usermin.pam-include 210
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
 MD5 75570ea70b71e0c8472e09664024950f usermin-1.160.ebuild 2290
-MD5 d5ca9f50f255b6f8f5099598ea5bd36e usermin-1.180.ebuild 2294
+MD5 36f9c97801b30fdca4d0b3459c8456c8 usermin-1.180.ebuild 2298
