@@ -1,0 +1,24 @@
+--- erik_reload_module.py.old	2005-09-19 17:07:45.000000000 +0900
++++ erik_reload_module.py	2005-09-19 17:08:04.000000000 +0900
+@@ -70,6 +70,9 @@
+  
+     fds = self.ipodder.feeds
+ 
++    import wxversion
++    wxversion.select("2.6-unicode")
++
+     import wx
+     count = 0
+     self.feedsdict = {}
+--- iPodderGui.py.old	2005-09-19 17:08:48.000000000 +0900
++++ iPodderGui.py	2005-09-19 17:08:54.000000000 +0900
+@@ -19,6 +19,9 @@
+ #Version check
+ CHECK_VERSION = 2.19
+ 
++import wxversion
++wxversion.select("2.6-unicode")
++
+ import wx
+ import wx.xrc as xrc
+ import wx.lib.filebrowsebutton as filebrowse

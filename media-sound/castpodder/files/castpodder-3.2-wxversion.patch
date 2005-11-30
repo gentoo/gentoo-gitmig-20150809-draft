@@ -1,0 +1,12 @@
+diff -Nru --exclude='*.pyc' castpodder/CastPodderGui.py castpodder-patched/CastPodderGui.py
+--- castpodder/CastPodderGui.py	2005-10-07 20:23:09.000000000 +0200
++++ castpodder-patched/CastPodderGui.py	2005-11-11 22:47:42.000000000 +0100
+@@ -19,6 +19,8 @@
+ #Version check
+ CHECK_VERSION = 3.0
+ 
++import wxversion
++wxversion.ensureMinimal('2.6')
+ import wx
+ import wx.xrc as xrc
+ import wx.lib.filebrowsebutton as filebrowse
