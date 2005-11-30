@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.33 2005/11/29 05:13:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.34 2005/11/30 20:33:46 weeve Exp $
+
+  30 Nov 2005; Jason Wever <weeve@gentoo.org> kde-meta-3.5.0.ebuild:
+  Added ~sparc keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kde-meta-3.5.0.ebuild:
   Added ~sparc keyword.
