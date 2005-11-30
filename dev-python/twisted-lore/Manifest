@@ -1,6 +1,4 @@
-MD5 8b6b57d6a48046e6e97e5eba3804d09e ChangeLog 572
-MD5 c36a230912611e4218de6f5eb5e3d710 files/digest-twisted-lore-0.1.0 69
+MD5 b8f3fe211cc2531ed0c2abd6cb4fb2cb ChangeLog 671
 MD5 c36a230912611e4218de6f5eb5e3d710 files/digest-twisted-lore-0.1.0-r1 69
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 8ec813c2af177e32a47e35b3cfba5f03 twisted-lore-0.1.0-r1.ebuild 394
-MD5 0e770d4760b3ce76c2a5c38d3c60252c twisted-lore-0.1.0.ebuild 782

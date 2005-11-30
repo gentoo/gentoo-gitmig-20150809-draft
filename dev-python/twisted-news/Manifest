@@ -1,6 +1,4 @@
-MD5 66a51d2ad6234ad00c465d03ea3fd125 ChangeLog 572
-MD5 579c33f80328a50755d05ccd21c35c6d files/digest-twisted-news-0.1.0 69
+MD5 397a8f0b75a4d33dff3f831a48af62bb ChangeLog 671
 MD5 579c33f80328a50755d05ccd21c35c6d files/digest-twisted-news-0.1.0-r1 69
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 78fe805c0146fc29778654b98eed19f1 twisted-news-0.1.0-r1.ebuild 422
-MD5 93dbc56a7d8f37b0539e8809f9a17eeb twisted-news-0.1.0.ebuild 787
