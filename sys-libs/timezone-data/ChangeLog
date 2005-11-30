@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.7 2005/11/29 02:28:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.8 2005/11/30 23:16:44 kloeri Exp $
+
+  30 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  timezone-data-2005o.ebuild:
+  Stable on alpha, needed for glibc-2.3.5-r3.
 
 *timezone-data-2005o (29 Nov 2005)
 
