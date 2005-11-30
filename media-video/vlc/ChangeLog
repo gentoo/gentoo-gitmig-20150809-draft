@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.122 2005/11/29 12:08:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.123 2005/11/30 23:21:02 flameeyes Exp $
+
+  30 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild:
+  Completely remove nsplugin logic in vlc 0.8.1, too bugged.
 
   29 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4-r1.ebuild:
   Die if skins are requested but freetype is not enabled. Don't remove the

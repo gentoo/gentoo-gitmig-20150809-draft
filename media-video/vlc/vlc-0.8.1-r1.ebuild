@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.22 2005/11/28 01:57:51 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.23 2005/11/30 23:21:02 flameeyes Exp $
 
 inherit libtool toolchain-funcs eutils wxwidgets
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ppc sparc x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick nsplugin stream mad xv bidi gtk2 sdl ssl"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick stream mad xv bidi gtk2 sdl ssl"
 
 DEPEND="cdio? ( >=dev-libs/libcdio-0.70 )
 		cddb? ( >=media-libs/libcddb-0.9.4 )
@@ -46,7 +46,6 @@ DEPEND="cdio? ( >=dev-libs/libcdio-0.70 )
 		wxwindows? ( =x11-libs/wxGTK-2.4* )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )
-		nsplugin? ( www-client/mozilla )
 		3dfx? ( media-libs/glide-v3 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		gnutls? ( >=net-libs/gnutls-1.0.0 )
@@ -112,18 +111,6 @@ src_compile () {
 		myconf="${myconf} --disable-cddax"
 	fi
 
-	# reason why:
-	# mozilla-config is not in ${PATH}
-	# so the configure script won't find it
-	# unless we setup the proper variable
-	if use nsplugin ; then
-		myconf="${myconf} --enable-mozilla MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config"
-	else
-		myconf="${myconf} --disable-mozilla"
-	fi
-
-	# Portaudio support needs at least v19
-
 	econf \
 		$(use_enable altivec) \
 		$(use_enable unicode utf8) \
@@ -172,23 +159,14 @@ src_compile () {
 		$(use_enable sdl) \
 		$(use_enable ssl gnutls) \
 		--disable-ncurses --disable-portaudio --disable-pth --disable-hal \
-		--disable-x264 \
+		--disable-x264 --disable-mozilla \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
 		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
 	fi
 
-	# upstream fixed the previously lacking logic
-	# check for /usr/bin/xpidl and sed, otherwise
-	# assume the default. - ChrisWhite
-	if use nsplugin && [ -e /usr/bin/xpidl ] ; then
-		sed -e "s:^XPIDL = .*:XPIDL = /usr/bin/xpidl:" -i mozilla/Makefile \
-		|| die "could not fix XPIDL path"
-	fi
-
-	MAKEOPTS="${MAKEOPTS} -j1"
-	emake || die "make of VLC failed"
+	emake -j1 || die "make of VLC failed"
 }
 
 src_install() {
