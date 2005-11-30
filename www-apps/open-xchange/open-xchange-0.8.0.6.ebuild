@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.4 2005/11/30 22:48:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.5 2005/11/30 22:51:09 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -37,7 +37,6 @@ RDEPEND=">=virtual/jre-1.4
 	 dev-perl/Authen-SASL
 	 dev-perl/Convert-ASN1
 	 dev-perl/perl-ldap
-	 net-www/webapp-config
 	 ~dev-java/jdbc3-postgresql-7.4.5 dev-db/postgresql
 	 ssl? ( dev-libs/openssl dev-perl/IO-Socket-SSL )"
 
@@ -50,12 +49,6 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	 www-apache/mod_jk
 	 app-admin/sudo"
-
-use_postgres() {
-	true
-	# MySQL not yet supported
-	# use postgres || ! use mysql
-}
 
 #parameter $1 == 1 for config part or == 0 for preinst
 ox_setup(){
