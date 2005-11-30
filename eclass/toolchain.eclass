@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.221 2005/11/30 04:01:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.222 2005/11/30 04:16:02 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1622,11 +1622,14 @@ gcc-compiler_src_install() {
 		rm -rf "${D}"/usr/share/{man,info}
 		rm -rf "${D}"${DATAPATH}/{man,info}
 	else
-		if [[ -d ${WORKDIR}/build/${CTARGET}/libstdc++-v3/docs/doxygen/man ]] ; then
-			cp -r ${WORKDIR}/build/${CTARGET}/libstdc++-v3/docs/doxygen/man/man? ${D}/${DATAPATH}/man/
+		local cxx_mandir=${WORKDIR}/build/${CTARGET}/libstdc++-v3/docs/doxygen/man
+		if [[ -d ${cxx_mandir} ]] ; then
+			# clean bogus manpages #113902
+			find "${cxx_mandir}" -name '*_build_*' -exec rm {} \;
+			cp -r "${cxx_mandir}"/man? "${D}/${DATAPATH}"/man/
 		fi
-		prepman ${DATAPATH}
-		prepinfo ${DATAPATH}
+		prepman "${DATAPATH}"
+		prepinfo "${DATAPATH}"
 	fi
 
 	# Rather install the script, else portage with changing $FILESDIR
