@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.12.5-r4.ebuild,v 1.1 2005/11/28 11:48:10 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.12.5-r4.ebuild,v 1.2 2005/11/30 20:44:56 chrb Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
 detect_arch
 detect_version
+[ "${PR}" == "r0" ] && KV=${PV/_/-}-xen || KV=${PV/_/-}-xen-${PR}
 
 EXTRAVERSION=".${KV_EXTRA}-xen"
 
@@ -29,6 +30,6 @@ src_unpack() {
 	cp XEN-VERSION ${t}
 	echo ARCH=xen | cat - ${t}/Makefile | sed -e "s/-xen/.5-xen/" >${t}/Makefile.0
 	mv ${t}/Makefile.0 ${t}/Makefile
-	mv ${t} ${WORKDIR}/linux-2.6.12.5-xen
+	mv ${t} ${WORKDIR}/linux-${KV}
 	rm -rf ${WORKDIR}/xen-unstable-${DATE}
 }
