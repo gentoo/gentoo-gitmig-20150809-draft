@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.4 2005/11/27 21:59:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.5 2005/11/30 22:16:36 marienz Exp $
+
+  30 Nov 2005; Marien Zwart <marienz@gentoo.org> -twisted-web-0.5.0.ebuild:
+  Remove old ebuild.
 
 *twisted-web-0.5.0-r1 (27 Nov 2005)
 
