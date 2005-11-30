@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.18 2005/11/29 19:36:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.19 2005/11/30 06:57:19 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -134,9 +134,9 @@ src_unpack() {
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
+	use nas &&    echo "--with-system-nas" >> ${CONFFILE} || echo "--without-nas" >> ${CONFFILE}
 
 	echo "`use_with curl system-curl`" >> ${CONFFILE}
-	echo "`use_with nas system-nas`" >> ${CONFFILE}
 	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
 	echo "`use_with zlib system-zlib`" >> ${CONFFILE}
 

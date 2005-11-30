@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.157 2005/11/29 19:36:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.158 2005/11/30 06:57:19 suka Exp $
+
+  30 Nov 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.0.ebuild:
+  Totally disable nas with -nas in USE-flags (instead of building the internal
+  one). Otherwise the build will break with modular X.org, see bug #113706
 
   29 Nov 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.0.ebuild:
