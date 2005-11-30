@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.5 2005/11/30 00:02:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.6 2005/11/30 06:17:07 jer Exp $
+
+  30 Nov 2005; Jeroen Roovers <jer@gentoo.org> an-0.93.ebuild:
+  Removed quaint virtual/libc dependency
 
 *an-0.95.3 (29 Nov 2005)
 
