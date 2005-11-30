@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.38 2005/07/12 03:45:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.39 2005/11/30 06:40:14 vapier Exp $
+
+*usbutils-0.71-r1 (30 Nov 2005)
+
+  30 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/usbutils-0.71-new-video-format.patch, +usbutils-0.71-r1.ebuild:
+  Add support for newer format types in usb ids file with patch from upstream
+  cvs #111781.
 
 *usbutils-0.71 (12 Jul 2005)
 
