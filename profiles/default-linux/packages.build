@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages.build,v 1.8 2005/11/28 15:48:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages.build,v 1.9 2005/11/30 20:26:38 wolf31o2 Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile.  Packages in this file are built in order.
@@ -26,7 +26,9 @@ sys-apps/less
 sys-apps/net-tools
 sys-apps/portage
 sys-apps/sed
-sys-apps/shadow
+# While shadow could be in here, it breaks stage 1 and stage 2 building for the
+# releases.  PLEASE DO NOT ENABLE THIS UNLESS YOU HAVE THOROUGHLY TEST IT!
+#sys-apps/shadow
 sys-apps/texinfo
 sys-devel/binutils
 sys-devel/bison
