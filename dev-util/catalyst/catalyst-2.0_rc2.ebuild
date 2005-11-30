@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc1.ebuild,v 1.1 2005/11/29 20:51:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc2.ebuild,v 1.1 2005/11/30 21:48:13 wolf31o2 Exp $
 
 inherit eutils
 
@@ -24,7 +24,10 @@ RDEPEND="dev-lang/python
 	cdr? (
 		virtual/cdrtools
 		app-misc/zisofs-tools
-		!mips? ( >=sys-fs/squashfs-tools-2.1 ) )"
+		!mips? ( >=sys-fs/squashfs-tools-2.1 ) )
+	examples? (
+		dev-util/livecd-kconfigs
+		dev-util/livecd-specs )"
 
 pkg_setup() {
 	if use ccache

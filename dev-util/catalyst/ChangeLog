@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.96 2005/11/29 20:51:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.97 2005/11/30 21:48:13 wolf31o2 Exp $
+
+*catalyst-2.0_rc2 (30 Nov 2005)
+
+  30 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_rc1-slot.patch, +files/catalyst-2.0_rc2-slot.patch,
+  -catalyst-2.0_rc1.ebuild, +catalyst-2.0_rc2.ebuild:
+  Version bumped to 2.0_rc2. This adds autoresume points between each kernel
+  on multiple builds and fixes a nasty livecd-stage1 USE issue.
 
 *catalyst-2.0_rc1 (29 Nov 2005)
 
