@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/burlap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.1 2005/10/23 12:14:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.2 2005/11/30 02:36:31 nichoj Exp $
+
+  30 Nov 2005; <nichoj@gentoo.org> burlap-2.1.12.ebuild,
+  burlap-3.0.8.ebuild:
+  Added ~amd64 keyword (bug #110369).
 
 *burlap-3.0.8 (23 Oct 2005)
 *burlap-2.1.12 (23 Oct 2005)

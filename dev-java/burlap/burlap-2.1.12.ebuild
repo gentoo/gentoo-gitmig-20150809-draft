@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-2.1.12.ebuild,v 1.1 2005/10/23 12:14:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-2.1.12.ebuild,v 1.2 2005/11/30 02:36:31 nichoj Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.caucho.com/burlap/download/burlap-2.1.12-src.jar"
 
 LICENSE="Apache-1.1"
 SLOT="2.1"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="doc jikes source"
 
