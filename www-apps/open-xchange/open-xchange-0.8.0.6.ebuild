@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.2 2005/11/20 16:59:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.3 2005/11/30 22:46:20 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 RESTRICT="primaryuri"
 
-IUSE="ssl doc webdav mysql postgres"
+IUSE="ssl doc webdav"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -37,9 +37,8 @@ RDEPEND=">=virtual/jre-1.4
 	 dev-perl/Authen-SASL
 	 dev-perl/Convert-ASN1
 	 dev-perl/perl-ldap
-	 mysql? ( !postgres? ( dev-java/jdbc-mysql >=dev-db/mysql-4.1 ) )
-	 !mysql? ( ~dev-java/jdbc3-postgresql-7.4.5 dev-db/postgresql )
-	 postgres? ( ~dev-java/jdbc3-postgresql-7.4.5 dev-db/postgresql )
+	 net-www/webapp-config
+	 ~dev-java/jdbc3-postgresql-7.4.5 dev-db/postgresql
 	 ssl? ( dev-libs/openssl dev-perl/IO-Socket-SSL )"
 
 # COMMENT: Why is the jdbc requirement set to 7.4.5 and not >=7.4.5?
@@ -53,7 +52,9 @@ RDEPEND="${RDEPEND}
 	 app-admin/sudo"
 
 use_postgres() {
-	use postgres || ! use mysql
+	true
+	# MySQL not yet supported
+	# use postgres || ! use mysql
 }
 
 #parameter $1 == 1 for config part or == 0 for preinst
@@ -185,8 +186,10 @@ ox_setup_tomcat(){
 		local PROFILE="$(sed -n "s:^PROFILE=\(.*\):\1:p" /etc/conf.d/tomcat-5)"
 		local CATALINA_BASE="$(sed -n "s:^CATALINA_BASE=\(.*\)/$.*:\1:p" /etc/conf.d/tomcat-5)"
 		SERVLETDIR="${CATALINA_BASE}/${PROFILE}/webapps"
+		TOMCAT_SHARED_LIB="${CATALINA_BASE}/${PROFILE}/shared/lib"
 	else
 		SERVLETDIR="${TOMCAT_DIR}/webapps"
+		TOMCAT_SHARED_LIB="${TOMCAT_DIR}/shared/lib"
 	fi
 }
 
@@ -241,33 +244,13 @@ src_compile() {
 	local myconf
 	local tempvar
 
-	if use_postgres ; then
-		tempvar="$(java-config --classpath=$(java-config -l | sed -n "s:^\[\(jdbc[^-]*-postgresql[^]]*\).*:\1:p" | head -n 1))"
-		if [[ -f "${tempvar}" && "${tempvar}" != "" ]]; then
-			myconf="${myconf} --with-jdbcjar=$(java-config --classpath=$(java-config -l | sed -n "s:^\[\(jdbc[^-]*-postgresql[^]]*\).*:\1:p" | head -n 1))"
-		else
-			myconf="${myconf} --with-jdbcjar=/usr/share/jdbc3-postgresql/lib/jdbc3-postgresql.jar"
-		fi
-		myconf="${myconf} --with-dbdriver=org.postgresql.Driver"
-	else
-		tempvar="$(java-config --classpath=$(java-config -l | sed -n "s:^\[\(jdbc[^-]*-mysql[^]]*\).*:\1:p" | head -n 1))"
-		if [[ -f "${tempvar}" && "${tempvar}" != "" ]]; then
-			myconf="${myconf} --with-jdbcjar=$(java-config --classpath=$(java-config -l | sed -n "s:^\[\(jdbc[^-]*-mysql[^]]*\).*:\1:p" | head -n 1))"
-		else
-			myconf="${myconf} --with-jdbcjar=/usr/share/jdbc-mysql/lib/mysql-connector-java-3.0.11-stable-bin.jar"
-		fi
-		myconf="${myconf} --with-dbdriver=com.mysql.jdbc.Driver"
-	fi
-
+	myconf="${myconf} --with-jdbcjar=$(java-config -p jdbc3-postgresql)"
 	myconf="${myconf} $(use_enable doc) $(use_enable webdav) $(use_enable ssl)"
-
 	myconf="${myconf} --with-servletdir=${SERVLETDIR}"
-
 	myconf="${myconf} --with-jsdkjar=${TOMCAT_DIR}/common/lib/servlet-api.jar"
-
 	myconf="${myconf} --with-mailjar=/usr/share/sun-javamail-bin/lib/mail.jar"
 	myconf="${myconf} --with-activationjar=/usr/share/sun-jaf-bin/lib/activation.jar"
-	myconf="${myconf} --with-jdomjar=$(java-config --classpath=$(java-config -l | sed -n "s:^\[\(jdom[^]]*\).*:\1:p" | head -n 1))"
+	myconf="${myconf} --with-jdomjar=$(java-config -p jdom-1.0)"
 	myconf="${myconf} --with-xercesjar=/usr/share/xerces-2/lib/xercesImpl.jar"
 	myconf="${myconf} --with-jni-dir=$(java-config -O)/include"
 	myconf="${myconf} --with-runuid=tomcat"
@@ -336,13 +319,14 @@ src_install() {
 	if has_version '<www-servers/tomcat-5.0.28-r4' ; then
 		dosed 's:tomcat-5:tomcat5:' /etc/init.d/open-xchange
 	fi
-
+	
+	
 	insinto ${SERVLETDIR}
 	doins lib/*.war
 
 	# chown of war-files or tomcat gets problems with stopping itself
 	for x in umin.war servlet.war ; do
-		fowners tomcat:tomcat ${SERVLETDIR}${x}
+		fowners tomcat:tomcat ${SERVLETDIR}/${x}
 	done
 
 	# Change default icon theme
@@ -364,9 +348,15 @@ src_install() {
 	dosym ../../../etc/openldap/schema/openxchange.schema /usr/share/open-xchange/openxchange.schema
 	dosym ../../openldap/ldap.conf /etc/open-xchange/groupware/ldap.conf
 	dosym ../../openldap/ldap.conf /etc/open-xchange/webmail/ldap.conf
-	#create symlink to ssl directory for webmail
-	dosym /etc/open-xchange/groupware/sslcerts /etc/open-xchange/webmail/sslcerts
-
+	
+	if use ssl ; then
+	    #create symlink to ssl directory for webmail
+	    dosym /etc/open-xchange/groupware/sslcerts /etc/open-xchange/webmail/sslcerts
+	    #and to get the setup part working
+		dodir ${TOMCAT_SHARED_LIB}
+	    dosym /usr/lib/open-xchange/liboxssl.so ${TOMCAT_SHARED_LIB}/liboxssl.so
+	fi
+	
 	for x in settings/intranet settings/webmail filespool drafts webmailupload dictionary ; do
 		keepdir /var/open-xchange/${x}
 		fowners tomcat:tomcat /var/open-xchange/${x}
@@ -423,12 +413,15 @@ pkg_preinst(){
 		# copying the groupware-key and -cert the way ox would like it to have
 		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.key ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupwarekey.pem
 		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.crt ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupwarecert.pem
-		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.csr ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupwarereq.pem
 		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiond.key ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiondkey.pem
 		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiond.crt ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiondcert.pem
-		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiond.csr ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiondreq.pem
 		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiond.pem
 		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.pem
+		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/sessiond.csr
+		rm ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.csr
+		
+		chown -R tomcat:apache ${D}/etc/open-xchange/groupware/sslcerts
+		find ${D}/etc/open-xchange/groupware/sslcerts -name '*.pem' -exec chmod 440 {} \;
 	fi
 }
 
@@ -487,6 +480,7 @@ get_user_config() {
 pkg_config() {
 	ox_setup_tomcat
 	#execute ox_setup from pkg_config(1)
+	## at first automatially change config in init_ldap.ldif and configuration-files
 	ox_setup 1
 
 	chown -R tomcat:tomcat ${ROOT}/etc/open-xchange
@@ -509,40 +503,30 @@ pkg_config() {
 	einfo "======================"
 
 	echo
-	einfo "And set JAVA_OPTS in /etc/conf.d/tomcat5 (or tomcat-5):"
+	einfo "Set JAVA_OPTS in /etc/conf.d/tomcat5 (or tomcat-5):"
 	einfo "JAVA_OPTS=\"-Dopenexchange.propfile=${ROOT}etc/open-xchange/groupware/system.properties\""
+	if use ssl ; then
+	    einfo "CATALINA_OPTS=\"\${CATALINA_OPTS} -Djava.library.path=${TOMCAT_SHARED_LIB}\""
+	fi
 
 	echo
-	einfo "And setup /etc/conf.d/apache2"
+	einfo "Setup /etc/conf.d/apache2"
 	einfo "APACHE2_OPTS=\"-D JK\""
 
 	echo
-	einfo "And setup /etc/conf.d/postgresql"
+	einfo "Setup /etc/conf.d/postgresql"
 	einfo "PGOPTS=\"-i\""
 
 	# Tell the user how to propegate ldap and the db
-	## at first automatially change config in init_ldap.ldif and configuration-files
-
 	## create ox-dbuser
 	echo
 	einfo "HOWTO: Setup database (following commands)"
 	einfo "++++++++++++++++++++++++++++++++++++++++++"
 
-	if use_postgres ; then
-		einfo "echo \"CREATE USER ${OX_DBUSER} WITH PASSWORD '${OX_DBPASS}' CREATEDB NOCREATEUSER\" | psql -h localhost -U postgres template1 -f -"
-		einfo "echo \"CREATE DATABASE ${OX_DBNAME} WITH OWNER=${OX_DBUSER} ENCODING='UNICODE'\" | psql -h localhost -U postgres template1 -f -"
-		einfo "psql -U ${OX_DBUSER} ${OX_DBNAME} < ${ROOT}usr/share/open-xchange/init_database.sql"
-		einfo "/usr/sbin/dbinit_ox"
-	else
-		# COMMENT: we should tell them how to setup mysql also...
-		einfo "MySQL instructions coming soon..."
-		# some pre information
-		# add user
-		# INSERT INTO user (Host, User, Password) VALUES ('localhost','${OX_DBUSER}',PASSWORD('${OX_DBPASS}'));
-		# FLUSH PRIVILIGES;
-		# add database
-		# CREATE DATABASE ${OX_DBNAME};
-	fi
+	einfo "echo \"CREATE USER ${OX_DBUSER} WITH PASSWORD '${OX_DBPASS}' CREATEDB NOCREATEUSER\" | psql -h localhost -U postgres template1 -f -"
+	einfo "echo \"CREATE DATABASE ${OX_DBNAME} WITH OWNER=${OX_DBUSER} ENCODING='UNICODE'\" | psql -h localhost -U postgres template1 -f -"
+	einfo "psql -U ${OX_DBUSER} ${OX_DBNAME} < ${ROOT}usr/share/open-xchange/init_database.sql"
+	einfo "/usr/sbin/dbinit_ox"
 
 	## initialise database with ox, after configurations have been changed	
 	echo
