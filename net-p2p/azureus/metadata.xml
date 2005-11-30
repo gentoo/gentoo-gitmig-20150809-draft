@@ -2,9 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sejo@gentoo.org</email>
-		<name>Maes Jochen</name>
+		<email>betelgeuse@gentoo.org</email>
+		<name>Petteri Räty</name>
 		<description>Maintainer</description>
 	</maintainer>
-	<longdescription>Azureus P2P source build</longdescription>
 </pkgmetadata>
