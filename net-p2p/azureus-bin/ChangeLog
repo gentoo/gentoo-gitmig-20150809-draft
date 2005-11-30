@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.39 2005/11/20 03:38:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.40 2005/11/30 22:09:33 betelgeuse Exp $
+
+  30 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Took maintainership until we can get this removed in favor of the from
+  sources built version dev-java/azureus.
 
   20 Nov 2005; Joseph Jezak <josejx@gentoo.org> azureus-bin-2.3.0.4.ebuild:
   Marked ppc stable for bug #111273.
