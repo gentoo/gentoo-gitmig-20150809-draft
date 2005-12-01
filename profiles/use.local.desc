@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1592 2005/12/01 14:15:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1593 2005/12/01 20:25:24 anarchy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1234,7 +1234,8 @@ www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
 www-client/kazehakase:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase:firefox - Use firefox's Gecko engine.
 www-client/kazehakase:thumbnail - enable thumbnail support.
-www-client/mozilla-firefox:canvas- Enable firefox canvas support.
+www-client/mozilla-firefox:canvas - Enable firefox canvas support.
+www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
