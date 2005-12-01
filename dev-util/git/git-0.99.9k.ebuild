@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9j.ebuild,v 1.3 2005/12/01 05:01:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9k.ebuild,v 1.1 2005/12/01 21:10:21 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mozsha1 ppcsha1 doc curl tcltk gitsendemail webdav"
 
 DEPEND="dev-libs/openssl
@@ -63,8 +63,6 @@ src_unpack() {
 		-e "s:^\(CC = \).*$:\1$(tc-getCC):" \
 		-e "s:^\(AR = \).*$:\1$(tc-getAR):" \
 		Makefile || die "sed failed"
-
-	epatch "${FILESDIR}/${P}-binary-diff-fix.patch"
 
 	exportmakeopts
 }
