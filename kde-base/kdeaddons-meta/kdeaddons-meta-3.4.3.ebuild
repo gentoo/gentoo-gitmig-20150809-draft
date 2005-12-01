@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.3.ebuild,v 1.4 2005/11/25 14:06:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.3.ebuild,v 1.5 2005/12/01 14:56:24 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -16,7 +16,7 @@ RDEPEND="
 $(deprange $PV $MAXKDEVER kde-base/atlantikdesigner)
 $(deprange $PV $MAXKDEVER kde-base/knewsticker-scripts)
 $(deprange 3.4.1 $MAXKDEVER kde-base/ksig)
-$(deprange 3.4.1 $MAXKDEVER kde-base/vimpart)
+$(deprange 3.4.2 $MAXKDEVER kde-base/vimpart)
 $(deprange $PV $MAXKDEVER kde-base/kaddressbook-plugins)
 $(deprange $PV $MAXKDEVER kde-base/kate-plugins)
 $(deprange $PV $MAXKDEVER kde-base/kicker-applets)
