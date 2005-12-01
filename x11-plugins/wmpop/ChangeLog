@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.5 2005/11/01 10:17:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.6 2005/12/01 03:25:05 weeve Exp $
+
+  01 Dec 2005; Jason Wever <weeve@gentoo.org> wmpop-0.53.ebuild:
+  Stable on SPARC wrt bug #111103.
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> wmpop-0.53.ebuild:
   Fixed dodoc not to install COPYING and/or INSTALL.
