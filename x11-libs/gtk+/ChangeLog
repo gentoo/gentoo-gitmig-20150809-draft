@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.201 2005/11/20 06:27:34 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.202 2005/12/01 18:55:26 dang Exp $
+
+*gtk+-2.8.8 (01 Dec 2005)
+
+  01 Dec 2005; <dang@gentoo.org> +gtk+-2.8.8.ebuild:
+  New upstream release
 
   20 Nov 2005; Hardave Riar <hardave@gentoo.org> gtk+-2.6.10-r1.ebuild:
   Stable on mips, bug #112608.

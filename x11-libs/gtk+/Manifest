@@ -1,10 +1,14 @@
-MD5 d0b437db677f59faf1aebd73fdf0c0e3 ChangeLog 28956
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 13c8513ce93838a07fb6eecbd81cebc7 ChangeLog 29057
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
 MD5 f0e0f202bdf17540985215d5384480ed files/digest-gtk+-2.6.10-r1 212
 MD5 71f1edf217fe1b660ed78cd89f9832b2 files/digest-gtk+-2.6.8 208
 MD5 e9729297feed3e63e6176140ee4cb463 files/digest-gtk+-2.8.6-r1 140
 MD5 b86433093efb1cf276e40b89c7bcb832 files/digest-gtk+-2.8.7 140
+MD5 c2395b72772f29144c0b34c311e68b26 files/digest-gtk+-2.8.8 140
 MD5 5e3ff7fa761495300d3f30c9207c13f8 files/gtk+-1.2-locale_fix.patch 419
 MD5 0ec83a4bf20f79d85eb2976b58c39465 files/gtk+-1.2.10-m4.patch 220
 MD5 cd1c96c0a81026a3af29449389e455d5 files/gtk+-2-xpm_loader.patch 920
@@ -19,4 +23,12 @@ MD5 6017f72966d53602c58c288364dd61a9 gtk+-2.6.10-r1.ebuild 3125
 MD5 5033b22f68c770cc1738680edc951abf gtk+-2.6.8.ebuild 2884
 MD5 24536341521e59874250c967c2c984bd gtk+-2.8.6-r1.ebuild 4222
 MD5 4c3121a26f06dd7b0d5ef089f03ea1e9 gtk+-2.8.7.ebuild 4009
+MD5 c750967f729be73db0640badfae3819b gtk+-2.8.8.ebuild 3835
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDj0cSomPajV0RnrERAgUkAKCCiTB60ofqNrOUJepEhvm6W/SOzACfa3pd
+EQ1rHkZEp2MKRwI9CXQbO9Q=
+=g+qD
+-----END PGP SIGNATURE-----
