@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.22 2005/11/16 22:58:24 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.23 2005/12/01 03:26:22 weeve Exp $
+
+  01 Dec 2005; Jason Wever <weeve@gentoo.org> popa3d-1.0.ebuild:
+  Stable on SPARC.
 
   16 Nov 2005; Ian Leitch <port001@gentoo.org> popa3d-1.0.ebuild:
   Stable on x86.
