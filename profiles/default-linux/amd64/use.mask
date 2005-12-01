@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.25 2005/11/20 18:56:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.26 2005/12/01 18:40:03 dang Exp $
 
 # UNKNOWN - SECTION
 
@@ -12,6 +12,10 @@ drac
 # 2005/09/14 - Diego Pettenò <flameeyes@gentoo.org>
 # nVidia XvMC support works on amd64
 -nvidia
+
+# 2005/12/01 - Daniel Gryniewicz <dang@gentoo.org>
+# There is now a kqemu that works and is stable on amd64
+-kqemu
 
 # WON'T WORK - SECTION
 
