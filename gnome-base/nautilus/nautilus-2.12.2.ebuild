@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.1.ebuild,v 1.2 2005/10/11 13:30:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.2.ebuild,v 1.1 2005/12/01 19:42:29 dang Exp $
 
-inherit virtualx gnome2
+inherit virtualx gnome2 eutils
 
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -31,7 +31,10 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.10
 	>=media-libs/libexif-0.5.12
 	>=gnome-base/gconf-2
 	dev-libs/popt
-	virtual/x11
+	|| ( (
+		x11-libs/libICE
+		x11-libs/libSM )
+	virtual/x11 )
 	virtual/eject"
 #	!gstreamer? ( vorbis? ( media-sound/vorbis-tools ) )
 #	gstreamer? (
@@ -55,23 +58,12 @@ DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 USE_DESTDIR="1"
 
 
-#src_unpack() {
-#	unpack "${A}"
-#	cd "${S}"
-#
-#	# FIXME:Port this for 2.12 final
-#	# use gstreamer for audio preview (patch by <foser@gentoo.org>)
-#	use gstreamer && epatch ${FILESDIR}/${P}-icon_view_gst.patch
-#
-#	# -- Component architecture has changed in 2.9 -- libgnomeprint patches
-#	# no longer apply.
-#
-#	if use gstreamer; then
-#	WANT_AUTOCONF=2.5 autoheader || die
-#	WANT_AUTOCONF=2.5 autoconf || die
-#	WANT_AUTOMAKE=1.7 automake || die
-#	fi
-#}
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
+	epatch ${FILESDIR}/${PN}-2.12.1-symlink-del.patch
+}
 
 src_test() {
 	if hasq userpriv $FEATURES ;
