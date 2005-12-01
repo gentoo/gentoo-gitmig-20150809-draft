@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.123 2005/11/30 23:21:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.124 2005/12/01 23:58:59 flameeyes Exp $
+
+  01 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild:
+  Changing dep for ffmpeg to any revision of 20050226 snapshot to avoid dummy
+  people to use newer ffmpeg and filing tons of bugs without looking.
 
   30 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild:
   Completely remove nsplugin logic in vlc 0.8.1, too bugged.
