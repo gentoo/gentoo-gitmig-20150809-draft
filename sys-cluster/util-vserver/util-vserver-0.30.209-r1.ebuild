@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.209-r1.ebuild,v 1.1 2005/12/01 13:04:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.209-r1.ebuild,v 1.2 2005/12/01 14:25:20 hollow Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -101,6 +101,6 @@ pkg_postinst() {
 	ewarn "required to keep current behaviour:"
 	ewarn
 	ewarn " rc-update del vprocunhide"
-	ewarn " rc-update add vserver default"
+	ewarn " rc-update add vservers default"
 	ewarn
 }
