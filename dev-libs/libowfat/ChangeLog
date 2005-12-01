@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libowfat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.16 2005/09/04 15:30:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.17 2005/12/01 04:16:43 tgall Exp $
+
+  30 Nov 2005; Tom Gall <tgall@gentoo.org> libowfat-0.24.ebuild:
+  stable on ppc64
 
 *libowfat-0.24 (04 Sep 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.24.ebuild,v 1.1 2005/09/04 15:30:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.24.ebuild,v 1.2 2005/12/01 04:16:43 tgall Exp $
 
 DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.fefe.de/libowfat/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ppc64 ~amd64"
 IUSE=""
 DEPEND=">=dev-libs/dietlibc-0.23
 	>=sys-apps/sed-4"
