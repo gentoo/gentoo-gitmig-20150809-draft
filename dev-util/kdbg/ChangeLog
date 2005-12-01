@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.36 2005/10/27 16:21:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.37 2005/12/01 13:29:31 greg_g Exp $
+
+*kdbg-2.0.2 (01 Dec 2005)
+
+  01 Dec 2005; Gregorio Guidi <greg_g@gentoo.org> +kdbg-2.0.2.ebuild:
+  New version.
 
   27 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> kdbg-2.0.0.ebuild:
   Stable on amd64, bug 109809.
