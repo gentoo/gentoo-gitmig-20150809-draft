@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.69 2005/11/20 01:37:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.70 2005/12/01 12:33:37 st_lim Exp $
+
+*dspam-3.6.2 (01 Dec 2005)
+
+  01 Dec 2005; Lim Swee Tat <st_lim@gentoo.org> +dspam-3.6.2.ebuild:
+  Version bump - Maintenance release
 
   20 Nov 2005; Stefan Briesenick <sbriesen@gentoo.org> dspam-3.6.0.ebuild,
   dspam-3.6.1.ebuild:
