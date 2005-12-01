@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.3 2005/11/16 21:59:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.4 2005/12/01 02:34:41 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
 inherit multilib flag-o-matic
 
-IUSE="debug gnome ipv6 xinerama xprint mozsvg"
+IUSE="debug gnome ipv6 xinerama xprint mozsvg canvas"
 
 RDEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
@@ -24,8 +24,7 @@ RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 
 		 >=gnome-base/libgnomeui-2.2.0 )
 	mozsvg? ( !<x11-base/xorg-x11-6.7.0-r2
-		    >=x11-libs/cairo-1.0.0
-		    >=media-libs/glitz-0.4.4)"
+		    >=x11-libs/cairo-1.0.0)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -177,6 +176,7 @@ mozconfig_init() {
 	mozconfig_use_enable ipv6
 	mozconfig_use_enable xinerama
 	mozconfig_use_enable xprint
+	mozconfig_use_enable canvas
 
 	# We use --enable-pango to do truetype fonts, and currently pango
 	# is required for it to build
@@ -212,9 +212,7 @@ mozconfig_init() {
 
 	if use mozsvg; then
 		mozconfig_annotate mozsvg --enable-svg
-		mozconfig_annotate mozsvg --enable-canvas
 		mozconfig_annotate mozsvg --enable-svg-renderer=cairo
-		mozconfig_annotate mozsvg --enable-glitz
 	fi
 
 	# Here is a strange one...
