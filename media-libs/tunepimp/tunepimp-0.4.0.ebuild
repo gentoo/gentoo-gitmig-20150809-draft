@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.4.0.ebuild,v 1.1 2005/12/01 23:25:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.4.0.ebuild,v 1.2 2005/12/01 23:26:19 carlo Exp $
 
 inherit eutils distutils perl-app
 
@@ -51,7 +51,7 @@ src_install() {
 	if use python; then
 		cd ${S}/python
 		distutils_src_install
-		if use examples ; then 
+		if use examples ; then
 			insinto /usr/share/doc/${PF}/examples/
 			doins examples/*
 		fi
