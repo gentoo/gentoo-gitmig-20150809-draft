@@ -1,4 +1,4 @@
-MD5 ebb0a12544421d10deb7f201d0be776f ChangeLog 4075
+MD5 5bc6e61f8a04744995ad82e274540f52 ChangeLog 4074
 MD5 543b62c79215183872d1f43ee1033c0b files/digest-numeric-22.0 64
 MD5 a52c0be4669341bbf82129377ca75f2e files/digest-numeric-23.1 64
 MD5 f7fae5c73c85e5d2038f4b1c7d634d7b files/digest-numeric-23.7 64
@@ -10,4 +10,4 @@ MD5 e3d5095f77a67728f076a7e7f9abddcc numeric-22.0.ebuild 808
 MD5 612753ac1e044abc11a29c465a97becb numeric-23.1.ebuild 792
 MD5 598f1b5f5e58079150ed166f9abac372 numeric-23.7.ebuild 885
 MD5 1eea5e4c951a1cf20434e116fe8661cf numeric-23.8.ebuild 859
-MD5 556005b5a238eb564f421c160ea9854c numeric-24.2.ebuild 721
+MD5 08c175ec8734a7015d278eb639536e72 numeric-24.2.ebuild 820
