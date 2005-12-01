@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.1 2005/11/21 17:08:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.2 2005/12/01 22:17:15 metalgod Exp $
+
+  01 Dec 2005; Luis Medinas <metalgod@gentoo.org>
+  IO-Socket-INET6-2.51.ebuild:
+  Added ~amd64 keyword. bug #112508.
 
 *IO-Socket-INET6-2.51 (21 Nov 2005)
 
