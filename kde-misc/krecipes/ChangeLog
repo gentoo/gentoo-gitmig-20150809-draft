@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krecipes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.18 2005/11/23 09:31:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.19 2005/12/01 13:30:42 greg_g Exp $
+
+*krecipes-0.9 (01 Dec 2005)
+
+  01 Dec 2005; Gregorio Guidi <greg_g@gentoo.org> +krecipes-0.9.ebuild:
+  New version.
 
   23 Nov 2005; Chris White <chriswhite@gentoo.org> krecipes-0.8.1.ebuild:
   x86 stable per bug #112836.
