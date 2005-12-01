@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.09.ebuild,v 1.1.1.1 2005/11/30 09:59:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.09.ebuild,v 1.2 2005/12/01 16:38:24 mr_bones_ Exp $
 
 inherit perl-module webapp
 
@@ -36,8 +36,8 @@ src_install() {
 
 	insinto /etc/rackview
 	doins etc/*
-	
+
 	dodoc doc/*
-	
+
 	webapp_src_install
 }
