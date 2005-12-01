@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.78 2005/12/01 14:27:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.79 2005/12/01 23:20:24 yoswink Exp $
+
+  01 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org> usermin-1.180.ebuild:
+  Stable on alpha wrt sec bug #113888
 
   01 Dec 2005; Markus Rothe <corsair@gentoo.org> usermin-1.180.ebuild:
   Stable on ppc64; bug #113888
