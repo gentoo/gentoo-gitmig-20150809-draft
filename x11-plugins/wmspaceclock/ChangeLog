@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmspaceclock
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/ChangeLog,v 1.12 2004/11/25 06:15:47 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/ChangeLog,v 1.13 2005/12/01 14:06:50 s4t4n Exp $
+
+  01 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> wmspaceclock-1.2d.ebuild:
+  Added optional dependency to dev-libs/STLport (with local USE flag stlport).
+  Closes bug #113166.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmspaceclock-1.2d.ebuild:
   Added ~sparc keyword.
