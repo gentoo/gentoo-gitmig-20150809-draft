@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.46 2005/11/19 14:04:32 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.47 2005/12/01 05:01:14 tgall Exp $
+
+  30 Nov 2005; Tom Gall <tgall@gentoo.org> git-0.99.9j.ebuild:
+  stable on ppc64 (and works well!)
 
   19 Nov 2005; Carlos Silva <r3pek@gentoo.org>
   +files/git-0.99.9j-binary-diff-fix.patch, -files/git-0.99.9j-diff.patch,
@@ -197,7 +200,7 @@
 
 *git-0.99.3 (09 Aug 2005)
 
-  09 Aug 2005; MichaÅ Januszewski <spock@gentoo.org> +git-0.99.3.ebuild:
+  09 Aug 2005; MichaÃÂ Januszewski <spock@gentoo.org> +git-0.99.3.ebuild:
   Version bump.
 
   15 Jul 2005; Carlos Silva <r3pek@gentoo.org> git-0.7.ebuild:
