@@ -15,9 +15,3 @@ mpeg
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # For now, until we check it's status wrt build b0rkage and toolchain
 xine
-
-# clisp is seriously b0rked
-clisp
-
-# No one can use one on a sparc32 (no usb)
-ipod
