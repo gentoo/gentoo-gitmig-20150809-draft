@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.3-r1.ebuild,v 1.3 2005/12/01 20:43:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.3-r2.ebuild,v 1.1 2005/12/01 20:43:55 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,35 +12,48 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sh ~x86"
-IUSE="debug howl vorbis"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sh ~x86"
+IUSE="howl vorbis avahi"
 
 DEPEND="sys-libs/zlib
 	media-libs/libid3tag
 	sys-libs/gdbm
-	debug? ( dev-util/efence )
-	howl? ( >=net-misc/howl-0.9.2 )
+	howl? ( !avahi? ( >=net-misc/howl-0.9.2 )
+		avahi? ( net-dns/avahi ) )
 	vorbis? ( media-libs/libvorbis )"
+
+pkg_setup() {
+	if use howl && use avahi && ! built_with_use net-dns/avahi howl-compat; then
+		eerror "You requested avahi support, but this package requires"
+		eerror "the howl-compat support enabled in net-dns/avahi to work"
+		eerror "with it."
+		eerror
+		eerror "Please recompile net-dns/avahi with +howl-compat."
+		die "Missing howl-compat support in avahi."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-pidfile.patch
+	epatch "${FILESDIR}/${P}-pidfile.patch"
+	epatch "${FILESDIR}/${P}-persist-fix.patch"
 }
 
 src_compile() {
 	local myconf=""
-
-	# debugging support?
-	if use debug; then
-		myconf="${myconf} --enable-debug --enable-debug-memory --enable-efence"
-	fi
+	local howlincludes
 
 	# howl support?
 	if use howl; then
-		myconf="${myconf} --enable-howl"
-		myconf="${myconf} --with-howl-libs=/usr/$(get_libdir)"
-		myconf="${myconf} --with-howl-includes=/usr/include/howl"
+		use avahi && \
+			howlincludes="/usr/include/avahi-compat-howl" || \
+			howlincludes="/usr/include/howl"
+
+		myconf="${myconf}
+			--enable-howl
+			--with-howl-libs=/usr/$(get_libdir)
+			--with-howl-includes=${howlincludes}"
 	fi
 
 	# Bug 65723
@@ -52,9 +65,13 @@ src_compile() {
 	emake || die "make failed"
 
 	cp ${FILESDIR}/${PN}.init.2 ${WORKDIR}/initd
-	use howl && \
-		sed -i -e 's:#USEHOWL ::' ${WORKDIR}/initd || \
+	if ! use howl; then
 		sed -i -e '/#USEHOWL/d' ${WORKDIR}/initd
+	elif ! use avahi; then
+		sed -i -e 's:#USEHOWL ::' ${WORKDIR}/initd
+	else
+		sed -i -e 's:#USEHOWL ::; s:mDNSResponder:avahi-daemon:' ${WORKDIR}/initd
+	fi
 }
 
 src_install() {
@@ -78,11 +95,22 @@ pkg_postinst() {
 	einfo
 
 	if use howl; then
+		use avahi && \
+			howlservice="avahi-daemon" || \
+			howlservice="mDNSResponder"
+
 		einfo
 		einfo "Since you want to use howl instead of the internal mdnsd"
-		einfo "you need to make sure that you have mDNSResponder configured"
+		einfo "you need to make sure that you have ${howlservice} configured"
 		einfo "and running to use mt-daapd."
 		einfo
+
+		if use avahi; then
+			einfo "Avahi support is currently experimental, it does not work"
+			einfo "as intended when using more than one mt-daapd instance."
+			einfo "If you want to run more than one mt-daapd, just use the"
+			einfo "internal mdnsd by building with -howl flag."
+		fi
 	fi
 
 	if use vorbis; then

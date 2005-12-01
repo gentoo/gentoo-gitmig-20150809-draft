@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.8 2005/10/30 17:33:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.9 2005/12/01 20:43:55 flameeyes Exp $
+
+*mt-daapd-0.2.3-r2 (01 Dec 2005)
+
+  01 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mt-daapd-0.2.3-persist-fix.patch, mt-daapd-0.2.3-r1.ebuild,
+  +mt-daapd-0.2.3-r2.ebuild:
+  New revision, with optional avahi support (with howl compatibility). Moved
+  ~ppc-macos keyword to this new revision that has dropped the debug useflag
+  and has no more dependency on efence. Also apply patch for bug #111442.
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> files/mt-daapd.init.2:
   Don't provide daap to avoid warnings during start/stop of services. mt-daapd
