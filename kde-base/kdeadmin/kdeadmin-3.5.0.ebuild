@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.5.0.ebuild,v 1.2 2005/11/30 07:54:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.5.0.ebuild,v 1.3 2005/12/01 13:11:37 greg_g Exp $
 
 inherit kde-dist
 
@@ -10,6 +10,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="~kde-base/kdebase-${PV}"
+RDEPEND="${DEPEND}
+	virtual/cron"
 
 src_compile() {
 	# we only want to compile the lilo config module on x86, but there we want to make sure it's
