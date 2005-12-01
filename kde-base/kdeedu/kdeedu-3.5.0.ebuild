@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.5.0.ebuild,v 1.1 2005/11/22 22:14:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.5.0.ebuild,v 1.2 2005/12/01 14:06:42 greg_g Exp $
 
 inherit kde-dist
 
@@ -12,7 +12,8 @@ IUSE="kig-scripting"
 DEPEND="kig-scripting? ( >=dev-libs/boost-1.32 )"
 
 src_compile() {
-	local myconf="$(use_enable kig-scripting kig-python-scripting)"
+	local myconf="$(use_enable kig-scripting kig-python-scripting)
+	              --disable-ocamlsolver"
 
 	kde_src_compile
 }

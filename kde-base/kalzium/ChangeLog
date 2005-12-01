@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.30 2005/11/29 03:53:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.31 2005/12/01 14:05:27 greg_g Exp $
+
+  01 Dec 2005; Gregorio Guidi <greg_g@gentoo.org> kalzium-3.5.0.ebuild:
+  Disable the ocamlsolver feature in kalzium (#109474).
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kalzium-3.5.0.ebuild:
   Added ~sparc keyword.
