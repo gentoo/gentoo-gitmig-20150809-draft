@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.3 2005/11/30 06:17:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.4 2005/12/01 00:57:23 jer Exp $
 
-DESCRIPTION="Anagram generator with dictionary lookup"
+inherit toolchain-funcs
+
+DESCRIPTION="Very fast anagram generator with dictionary lookup"
 HOMEPAGE="none"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${P}.tar.gz"
 
@@ -12,8 +14,6 @@ KEYWORDS="~hppa ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/miscfiles"
-
-inherit toolchain-funcs
 
 src_unpack() {
 	unpack ${A}
