@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9dec53cdc95c6e7a016199e43e265024 ChangeLog 13108
+MD5 8a18d7c186a77bb6c02b14e094a2715a ChangeLog 13184
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5 64
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5-r1 64
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6 64
@@ -16,12 +16,12 @@ MD5 2fb571ee80c894f660e610ef4c717082 libperl-5.8.5-r1.ebuild 10032
 MD5 642d6d7d6f6cdd65347342bcb7970733 libperl-5.8.5.ebuild 9923
 MD5 b84aca47b4bf72b939c2058d36f9a4f5 libperl-5.8.6-r1.ebuild 10525
 MD5 95d8eb043ad2bad59f1c56d50c39afca libperl-5.8.6.ebuild 10529
-MD5 f476f95a7de3e5c3840e7580026e261d libperl-5.8.7.ebuild 11131
+MD5 2b8720f5c827485c13d78f5a0a8c8172 libperl-5.8.7.ebuild 11125
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDjK3XAiZjviIA2XgRAmM6AJ4+q9MDuKr8EGiEgIHh/OdkKzGEPgCfao1z
-CokzLRK68AE1ZooX6WdVWsM=
-=oO7L
+iD8DBQFDj0YvomPajV0RnrERAsVsAJ9aY/NPAeCnvEy6u9cpkhC1nwRMuwCdH7hE
+3vbqst75TOF63VDqeJh728s=
+=z48o
 -----END PGP SIGNATURE-----
