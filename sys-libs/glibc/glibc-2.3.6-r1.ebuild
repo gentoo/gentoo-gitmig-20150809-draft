@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.3 2005/11/18 03:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.4 2005/12/01 08:16:39 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -505,11 +505,6 @@ toolchain-glibc_src_install() {
 		for dir in $(get_all_libdirs); do
 			rm -rf ${D}/usr/${dir}/gconv &> /dev/null
 		done
-
-		einfo "Installing Timezone data..."
-		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-			install_root=${D} \
-			timezone/install-others || die
 	fi
 
 	# Is this next line actually needed or does the makefile get it right?
@@ -1076,23 +1071,15 @@ fi
 # we'll handle stripping ourself #46186
 RESTRICT="nostrip multilib-pkg-force"
 
-# We need new cleanup attribute support from gcc for NPTL among things ...
-# We also need linux26-headers if using NPTL. Including kernel headers is
-# incredibly unreliable, and this new linux-headers release from plasmaroo
-# should work with userspace apps, at least on amd64 and ppc64.
-#
 # We need a new-enough binutils for as-needed
 DEPEND=">=sys-devel/gcc-3.3.3
 	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
 	>=sys-devel/binutils-2.16.1
 	>=sys-devel/gcc-config-1.3.12
 	virtual/os-headers
-	sys-libs/timezone-data
 	nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
-
 RDEPEND="virtual/os-headers
-	sys-libs/timezone-data
 	nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
 
@@ -1100,12 +1087,15 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND} ${CATEGORY}/gcc"
 
 	if [[ ${CATEGORY} == *-linux* ]] ; then
-		if [[ ${CATEGORY/mips} != ${CATEGORY} ]] ; then
+		if [[ ${CATEGORY} == cross-mips* ]] ; then
 			DEPEND="${DEPEND} >=${CATEGORY}/mips-headers-2.6.10"
 		else
 			DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
 		fi
 	fi
+else
+	DEPEND="${DEPEND} sys-libs/timezone-data"
+	RDEPEND="${RDEPEND} sys-libs/timezone-data"
 fi
 
 pkg_setup() {
@@ -1131,7 +1121,6 @@ pkg_setup() {
 		eerror "If you want nptlonly, add nptl to your USE too ;p"
 		die "nptlonly without nptl"
 	fi
-
 
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && want_linuxthreads ; then
