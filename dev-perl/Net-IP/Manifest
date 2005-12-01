@@ -1,4 +1,14 @@
-MD5 18396a7faec152531e85e791ab2a465a ChangeLog 555
-MD5 78afe9152df9af267a86d9c3a9d40d70 Net-IP-1.24.ebuild 524
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d90ce906354039f3f6311edcda341bc3 ChangeLog 665
+MD5 a997974d3804e524d4ddc96f312a7807 Net-IP-1.24.ebuild 533
 MD5 060154fb0b98977f1b94a6fbdbd2cad6 files/digest-Net-IP-1.24 62
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDj2XUwUpWvClEHQoRArRMAJ9aiY462smX5sNi4lanEmPFPfrn6wCfa9Tj
+nQjF6MR2FdPiqbkpk1C2g1M=
+=+puS
+-----END PGP SIGNATURE-----
