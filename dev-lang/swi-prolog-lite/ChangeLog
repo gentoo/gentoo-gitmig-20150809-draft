@@ -1,11 +1,13 @@
 # ChangeLog for dev-lang/swi-prolog-lite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.22 2005/12/01 08:48:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.23 2005/12/01 09:05:56 vapier Exp $
 
 *swi-prolog-lite-5.5.39 (01 Dec 2005)
 
   01 Dec 2005; Mike Frysinger <vapier@gentoo.org>
   +files/swi-prolog-lite-5.5.39-packages-mp-DESTDIR.patch,
+  +files/swi-prolog-lite-5.5.39-packages-ltx2htm-DESTDIR.patch,
+  +files/swi-prolog-lite-5.5.39-packages-semweb-64bit.patch,
   -swi-prolog-lite-5.5.36.ebuild, +swi-prolog-lite-5.5.39.ebuild:
   Version bump and fix sandbox error #114069.
 

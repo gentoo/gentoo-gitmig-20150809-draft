@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ff4aff8518644b7da6b27b5e67835d9f ChangeLog 3247
+MD5 f56efb4fe44cfca905703450d295ca18 ChangeLog 3372
 MD5 8eed8feaa65a3ab28f60e67e609ed512 files/destdir.patch 488
 MD5 ac0b2bc6ebbb0b4d807dc2e7f88c0edf files/digest-swi-prolog-lite-5.0.10 67
 MD5 640ff31e82704bfbbd79ac576d005850 files/digest-swi-prolog-lite-5.1.13 62
@@ -13,18 +13,20 @@ MD5 e26e7dd2a9ab9cadfc1e456bff5cfb35 files/swi-prolog-lite-5.2.11-parallel-build
 MD5 fe36bbaacaf2c0a147d92541ba584670 files/swi-prolog-lite-5.3.14-parallel-build.patch 1534
 MD5 9b6190002d49e2d3ddefa40541c2ca85 files/swi-prolog-lite-5.4.7-install.patch 408
 MD5 5b26039ee25ba0666cd711bf838962d8 files/swi-prolog-lite-5.5.30-runtime-build.patch 309
+MD5 b498044bf1fdc8d27c5b5a399ba423e1 files/swi-prolog-lite-5.5.39-packages-ltx2htm-DESTDIR.patch 1138
 MD5 426062cdd96638f41290e4d0533b6056 files/swi-prolog-lite-5.5.39-packages-mp-DESTDIR.patch 824
+MD5 f69c969b54b8edba72f27dba32590241 files/swi-prolog-lite-5.5.39-packages-semweb-64bit.patch 617
 MD5 9187f53634e60ab7eb2ac7e98b0b19f7 metadata.xml 159
 MD5 279806ebf5d32d9c17d55d4ab837991e swi-prolog-lite-5.0.10.ebuild 1250
 MD5 5532502b84186d942b9e511ac418da60 swi-prolog-lite-5.1.13.ebuild 1243
 MD5 7d72dd5171c98a306021fbf58e52fb43 swi-prolog-lite-5.2.11.ebuild 1157
 MD5 e5130b48bc4c49b2a6c9fb96947892a7 swi-prolog-lite-5.3.14.ebuild 1153
 MD5 9604df1e2eb962f22c4e1a82e56dc79f swi-prolog-lite-5.4.7.ebuild 1212
-MD5 feeb52f2dec07e86064c77fd788ad600 swi-prolog-lite-5.5.39.ebuild 1681
+MD5 8d24a0928fdf917af7a407d94c159d87 swi-prolog-lite-5.5.39.ebuild 1794
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjrljgIKl8Uu19MoRArn7AJ4l4rRbYfBNNaY+zEavjVLYK8C+ggCdHk2U
-/uJQqZY51D6GD4/YXnCPFCg=
-=PWm5
+iD8DBQFDjr2JgIKl8Uu19MoRAor6AJ9/uQ7Kf9axw5PdsYZeqprHINE0rQCfRafd
+V5JG5yPa4nY5QhUPTNM3mzk=
+=dRhT
 -----END PGP SIGNATURE-----

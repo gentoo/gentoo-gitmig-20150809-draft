@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.5.39.ebuild,v 1.1 2005/12/01 08:48:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.5.39.ebuild,v 1.2 2005/12/01 09:05:56 vapier Exp $
 
 inherit eutils
 
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-packages-mp-DESTDIR.patch
+	epatch "${FILESDIR}"/${P}-packages-semweb-64bit.patch
+	epatch "${FILESDIR}"/${P}-packages-ltx2htm-DESTDIR.patch
 }
 
 src_compile() {
