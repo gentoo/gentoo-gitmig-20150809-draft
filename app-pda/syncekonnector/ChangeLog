@@ -1,0 +1,7 @@
+# ChangeLog for app-pda/syncekonnector
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.1 2005/12/01 04:25:23 chriswhite Exp $
+
+  01 Dec 2005; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Initial commit.  Added for an upcomming change to my pda guide.
+
