@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4721 2005/11/30 21:56:25 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4722 2005/12/01 05:44:55 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (30 Nov 2005)
+# API/ABI changes, this may break stuff
+>=sys-apps/dbus-0.60
 
 # Marcelo Goes <vanquirius@gentoo.org> (28 Nov 2005)
 # rpath security issue
