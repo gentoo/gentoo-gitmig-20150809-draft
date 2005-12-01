@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.110 2005/11/29 22:04:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.111 2005/12/01 22:10:34 anarchy Exp $
+
+  01 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-1.5.ebuild:
+  renamed embeded-typeaheadfind.patch so people do not have a conflict with
+  stale distfiles
 
 *mozilla-firefox-1.5 (29 Nov 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.ebuild,v 1.4 2005/12/01 21:43:27 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.ebuild,v 1.5 2005/12/01 22:10:34 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -14,7 +14,7 @@ DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
 	mirror://gentoo/mozilla-jslibmath-alpha.patch
-	mirror://gentoo/embed-typeaheadfind.patch
+	mirror://gentoo/embed-typeaheadfind-1.patch
 	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
 
 KEYWORDS="-* ~amd64 ~ppc ~x86"
@@ -91,7 +91,7 @@ src_unpack() {
 
 	# patch to fix typeahead find for browsers which embed Firefox
 	# http://bugzilla.gnome.org/show_bug.cgi?id=157435
-	epatch ${DISTDIR}/embed-typeaheadfind.patch
+	epatch ${DISTDIR}/embed-typeaheadfind-1.patch
 	epatch ${FILESDIR}/${PV}/${P}-gtk.patch
 
 	# rpath fix
