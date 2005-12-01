@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.ebuild,v 1.2 2005/12/01 18:10:55 lu_zero Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.ebuild,v 1.3 2005/12/01 21:13:43 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -125,6 +125,7 @@ src_compile() {
 	mozconfig_annotate '' --enable-oji --enable-mathml
 
 	# Other ff-specific settings
+	mozconfig_use_enable  canvas
 	mozconfig_use_enable mozdevelop jsd
 	mozconfig_use_enable mozdevelop xpctools
 	mozconfig_use_extension mozdevelop venkman
@@ -253,7 +254,11 @@ pkg_postinst() {
 	ewarn "against firefox. Some packages might be busted please search"
 	ewarn "http://bugs.gentoo.org if no bug is open, then please open a new"
 	ewarn "bug report so these can be fixed."
-	ewarn "Thank you! Anarchy."
+	ewarn "Thank you! anarchy@gentoo.org."
+	echo     ""
+	einfo "I am unable to brand firefox or thunderbird officially yet."
+	einfo "You will see that everything says Deer Park cause of this."
+	einfo "As soon as I can brand it I will commit a -r1 release."
 }
 
 pkg_postrm() {
