@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.5 2005/12/01 21:08:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.6 2005/12/01 21:41:41 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
 inherit multilib flag-o-matic
 
-IUSE="debug gnome ipv6 xinerama xprint mozsvg canvas"
+IUSE="debug gnome ipv6 xinerama xprint mozsvg"
 
 RDEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
