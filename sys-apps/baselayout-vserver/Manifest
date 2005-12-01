@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea0fce87ef3c06457bf33e3768b487ca ChangeLog 3400
-MD5 fbce6372edfc21a2f0b3b324cd20b5e8 baselayout-vserver-1.11.13-r1.ebuild 13276
+MD5 4e5b85fb06a1461ea9581d64c296a0d3 ChangeLog 3511
+MD5 f43ef2508ae4b73a177ee803b4cf6eef baselayout-vserver-1.11.13-r1.ebuild 13275
 MD5 b0c9631a23f9b94e86916fe7c48b8040 baselayout-vserver-1.12.0_pre8-r2.ebuild 12588
 MD5 cf693ea87e77c1dc6f72cf58c32b7143 files/baselayout-vserver-1.11.13-cleanup.patch 18552
 MD5 cd1ba3815d5592a3c65f185cc7585107 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
@@ -16,7 +16,7 @@ MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDiCbEflZ8QqxhrsMRAgrRAKDJ15tvQIjUwbVI6RnNEvYMDHiEIwCfeJwe
-/FH9z9AFsatjdL1rf4lLUeo=
-=ov1U
+iD8DBQFDjvW+mPFBzbX68WERAkVNAJ0QuhrXJYGJqyLKMbltj8FzO19eDACfaN07
+B8D62bVpOQwPn3Om5BQxgqs=
+=lj7k
 -----END PGP SIGNATURE-----

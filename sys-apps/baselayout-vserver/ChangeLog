@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-vserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.17 2005/11/26 09:11:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.18 2005/12/01 13:08:00 hollow Exp $
+
+  01 Dec 2005; Benedikt Boehm <hollow@gentoo.org>
+  baselayout-vserver-1.11.13-r1.ebuild:
+  mark stable amd64
 
   26 Nov 2005; Christian Heim <phreak@gentoo.org>
   baselayout-vserver-1.11.13-r1.ebuild,
