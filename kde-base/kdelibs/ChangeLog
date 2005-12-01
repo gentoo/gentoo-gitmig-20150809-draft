@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.291 2005/11/27 14:49:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.292 2005/12/01 15:20:48 flameeyes Exp $
+
+  01 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> kdelibs-3.5.0.ebuild:
+  Require acl only on Linux kernel, as acl support works on FreeBSD, without
+  sys-apps/acl that's Linux specific.
 
   27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdelibs-3.4.3.ebuild:
   Stable on hppa.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0.ebuild,v 1.2 2005/11/23 11:35:53 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0.ebuild,v 1.3 2005/12/01 15:20:48 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -27,7 +27,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	media-libs/libart_lgpl
 	net-dns/libidn
 	virtual/utempter
-	acl? ( sys-apps/acl )
+	acl? ( kernel_linux? ( sys-apps/acl ) )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	alsa? ( media-libs/alsa-lib )
 	cups? ( >=net-print/cups-1.1.19 )
