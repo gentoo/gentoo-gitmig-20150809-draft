@@ -1,3 +1,13 @@
-MD5 0ca7007f9ef35e838cad5da804adc32f gmemusage-0.2.ebuild 1203
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 22ec727a0ec4602874a94a0a15095858 files/digest-gmemusage-0.2 68
 MD5 37794dad03f7d6f57d8371956d248021 files/gmemusage-0.2-gentoo.patch 3064
+MD5 5e92c76676a496922732454985346ed3 gmemusage-0.2.ebuild 1205
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDjr7DgIKl8Uu19MoRAm9eAJ9N9Dgb+MjDVyoLI4a5dIgzAcUi9ACfbFwW
+iqZ2ukctV5NEv712jnTVOyk=
+=gEWI
+-----END PGP SIGNATURE-----
