@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.3 2005/11/05 22:55:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.4 2005/12/01 09:26:39 vapier Exp $
 
 inherit eutils games
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/lha"
+RDEPEND=""
 
 S=${WORKDIR}
 
@@ -24,9 +25,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	echo ">>> Unpacking q101_int.1 to ${PWD}"
+	echo ">>> Unpacking q101_int to ${PWD}"
 	if [[ ${CDROM_SET} == "1" ]] ; then
-		lha xqf "${CDROM_ROOT}"/q101_int.1 || die "failure unpacking q101_int.1"
+		cat "${CDROM_ROOT}"/q101_int.1 "${CDROM_ROOT}"/q101_int.2 > q101_int
+		lha xqf "${CDROM_ROOT}"/q101_int || die "failure unpacking q101_int"
+		rm -f q101_int
 	fi
 }
 
