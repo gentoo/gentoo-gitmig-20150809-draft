@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/bomns
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.1 2005/12/01 01:14:18 wolf31o2 Exp $
+
+*bomns-0.99.1 (01 Dec 2005)
+
+  01 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +bomns-0.99.1.ebuild:
+  Initial import. Ebuild by Fernando V. <email@missionaccomplish.com>. Closing
+  bug #110094.
+
