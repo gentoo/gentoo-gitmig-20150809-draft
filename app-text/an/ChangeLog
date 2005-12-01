@@ -1,6 +1,10 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.8 2005/12/01 04:28:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.9 2005/12/01 20:37:50 metalgod Exp $
+
+  01 Dec 2005; Luis Medinas <metalgod@gentoo.org> an-0.93.ebuild,
+  an-0.95.3.ebuild:
+  Added ~amd64 keyword. Bug #113966.
 
   01 Dec 2005; Jeroen Roovers <jer@gentoo.org> an-0.93.ebuild,
   an-0.95.3.ebuild:

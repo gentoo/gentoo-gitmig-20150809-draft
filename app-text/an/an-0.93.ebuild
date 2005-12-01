@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.4 2005/12/01 00:57:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.5 2005/12/01 20:37:50 metalgod Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/miscfiles"
