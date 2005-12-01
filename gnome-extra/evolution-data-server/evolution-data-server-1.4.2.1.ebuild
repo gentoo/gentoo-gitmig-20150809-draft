@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.1.ebuild,v 1.2 2005/10/25 15:17:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.2.1.ebuild,v 1.1 2005/12/01 20:36:19 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ximian.com/"
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc ipv6 kerberos krb4 ldap mozilla nntp ssl static"
+IUSE="doc ipv6 kerberos krb4 ldap mozilla nntp ssl"
 
 RDEPEND=">=dev-libs/glib-2.4
 	>=gnome-base/libbonobo-2.4.2
@@ -53,10 +53,7 @@ pkg_setup() {
 		$(use_enable ssl nss)          \
 		$(use_enable ssl smime)        \
 		$(use_enable ipv6)             \
-		$(use_enable nntp)             \
-		$(use_enable static)"
-
-	use ldap && G2CONF="${G2CONF} $(use_with static static-ldap)"
+		$(use_enable nntp)"
 
 	if use krb4 && ! built_with_use virtual/krb5 krb4; then
 		ewarn
@@ -75,14 +72,17 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
+	epatch "${FILESDIR}"/${PN}-1.2.0-gentoo_etc_services.patch
 	# upstream gcc4 fix
-	epatch ${FILESDIR}/${PN}-1.2.3-gcc4.patch
+	epatch "${FILESDIR}"/${PN}-1.2.3-gcc4.patch
 
 	# Resolve symbols at execution time for setgid binaries
-	epatch ${FILESDIR}/${PN}-no_lazy_bindings.patch
+	epatch "${FILESDIR}"/${PN}-no_lazy_bindings.patch
 
-	export WANT_AUTOMAKE=1.7
+	sed -n -e '/GNOME_COMPILE_WARNINGS/,/dnl IT_PROG_INTLTOOL/p' \
+		aclocal.m4 > gnome.m4
+	export WANT_AUTOMAKE=1.9
+	aclocal -I . || die "aclocal failed"
 	automake || die "automake failed"
 }
 
