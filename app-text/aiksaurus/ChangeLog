@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.22 2005/10/31 19:16:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.23 2005/12/01 04:20:48 tgall Exp $
+
+  30 Nov 2005; Tom Gall <tgall@gentoo.org> aiksaurus-1.2.1.ebuild:
+  stable on ppc64
 
   31 Oct 2005; Brent Baude <ranger@gentoo.org> aiksaurus-1.2.1.ebuild:
   Marking aiksaurus-1.2.1 ~ppc64 for bug 110862
@@ -25,7 +28,7 @@
   should also fix bug #48758 by Mikko Tiihonen <mikko.tiihonen@hut.fi> and bug
   #51999 by Josh Glover <jmglov@gentoo.org>
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> aiksaurus-1.0.1-r1.ebuild:
+  12 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> aiksaurus-1.0.1-r1.ebuild:
   Stable on alpha.
 
 *aiksaurus-1.0.1-r1 (24 Apr 2004)
