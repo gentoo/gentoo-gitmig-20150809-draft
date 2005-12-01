@@ -9,28 +9,28 @@ depend() {
 }
 
 checkconfig() {
-	if [ ! -e /etc/mwcollect/mwcollectd.conf ] ; then
-		eerror "You need to create /etc/mwcollect/mwcollectd.conf first."
-		eerror "An example can be found in /etc/mwcollect/mwcollectd.conf.dist"
+	if [ ! -e /etc/mwcollect/mwcollect.conf ] ; then
+		eerror "/etc/mwcollect/mwcollect.conf not found!"
 		return 1
 	fi
 }
 
 start() {
 	ebegin "Starting mwcollectd"
-	# HACK: making mwcollectd background with --background
-	# mwcollectd should have created its pid file
+
 	checkconfig && \
 	start-stop-daemon --start --quiet \
-		--exec /usr/sbin/mwcollectd -- -p /var/run/mwcollectd.pid ${OPTIONS}
+		--exec /usr/sbin/mwcollectd -- --pid-file=/var/run/mwcollect.pid \
+		--daemon --user=nobody --config=/etc/mwcollect/mwcollect.conf \
+		${OPTIONS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping mwcollectd"
 	start-stop-daemon --stop --quiet \
-		--pidfile /var/run/mwcollectd.pid \
-		--exec /usr/sbin/mwcollectd && rm /var/run/mwcollectd.pid
+		--pidfile /var/run/mwcollect.pid \
+		--exec /usr/sbin/mwcollectd && rm /var/run/mwcollect.pid
 	eend $?
 }
 

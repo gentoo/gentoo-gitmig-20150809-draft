@@ -6,17 +6,11 @@
 #
 # Usage: /usr/sbin/mwcollectd [options]
 # Where options can be one of the following:
-#         -c <config-file>        specify config file (defaults to /etc/mwcollectd.conf)
-#         -l <log-file>           add log file
-#         -C                      add console logger
-#         -L <log-level>  specify log level, inital is 3
-#         -D                      detach from console
-#         -h                      display this info
-# 
-# Example:
-#         /usr/sbin/mwcollectd -L critical -C -L info -l /var/log/mwcollectd.log -c /etc/mwcollectd.conf
+#
+# --console-log [=tagpattern] - set console logging level
+# --chroot=/opt/mwcollect/chroot - setup a chroot
 
-OPTIONS="-D -c /etc/mwcollect/mwcollectd.conf"
+OPTIONS=""
 
 # example: add log file
 # OPTIONS="$OPTIONS -l /var/log/mwcollect.log -L 3"
