@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.ebuild,v 1.2 2005/12/01 00:57:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.ebuild,v 1.3 2005/12/01 04:28:02 tgall Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/a/an/${PN}_${MY_PV}.orig.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~x86"
+KEYWORDS="~hppa ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/miscfiles"

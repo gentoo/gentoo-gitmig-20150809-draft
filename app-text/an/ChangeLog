@@ -1,10 +1,13 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.7 2005/12/01 00:57:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.8 2005/12/01 04:28:02 tgall Exp $
 
   01 Dec 2005; Jeroen Roovers <jer@gentoo.org> an-0.93.ebuild,
   an-0.95.3.ebuild:
   Fix bad positioning of inherit call (bugs #113994, #114009).
+
+  30 Nov 2005; Tom Gall <tgall@gentoo.org> an-0.95.3.ebuild:
+  add ~ppc64 per bug #113966
 
   30 Nov 2005; Jeroen Roovers <jer@gentoo.org> an-0.93.ebuild:
   Removed quaint virtual/libc dependency
