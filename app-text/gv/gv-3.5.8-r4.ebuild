@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.13 2005/11/03 00:07:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.14 2005/12/01 04:41:14 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc amd64 ~mips ~ppc-macos ~ppc64"
+KEYWORDS="x86 ppc alpha sparc amd64 ~mips ~ppc-macos ppc64"
 IUSE=""
 
 # There's probably more, but ghostscript also depends on it,
