@@ -1,10 +1,20 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b401a538cf13f910f1d1feaf4c6af086 kcheckpass-3.4.1.ebuild 517
-MD5 b04887af4849af14a8ca6040b8fe1b3a kcheckpass-3.5.0.ebuild 514
-MD5 c6405bea7c47189c312b88797fac75c6 kcheckpass-3.4.2.ebuild 529
-MD5 78333738cf8abd7ee02f8554c9f0d647 ChangeLog 4104
-MD5 b3abc7fc8c9fc2596aaa23157cb58739 kcheckpass-3.4.3.ebuild 525
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb5f2b8ead1cc04d80dcc28ca2d26da1 ChangeLog 4261
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcheckpass-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcheckpass-3.4.2 287
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kcheckpass-3.5.0 68
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcheckpass-3.4.3 68
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kcheckpass-3.5.0 68
+MD5 b401a538cf13f910f1d1feaf4c6af086 kcheckpass-3.4.1.ebuild 517
+MD5 c6405bea7c47189c312b88797fac75c6 kcheckpass-3.4.2.ebuild 529
+MD5 b3abc7fc8c9fc2596aaa23157cb58739 kcheckpass-3.4.3.ebuild 525
+MD5 70f50d91eaffaef74c8a3d332f6fa1c5 kcheckpass-3.5.0.ebuild 584
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDjvJ+AiZjviIA2XgRAic6AKDF+9GhPN2MuPYjyMwM0TVxEOTkNwCfaUbu
+u/HcTGK9lDsFwja9tCdKMhM=
+=4y9i
+-----END PGP SIGNATURE-----
