@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/utidylib
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.1 2005/12/01 00:19:37 marienz Exp $
+
+*utidylib-0.2 (01 Dec 2005)
+
+  01 Dec 2005; Marien Zwart <marienz@gentoo.org>
+  +files/utidylib-0.2-no-docs-in-site-packages.patch,
+  +files/utidylib-0.2-tests-twisted-2.1-compat.patch, +metadata.xml,
+  +utidylib-0.2.ebuild:
+  New ebuild, based on a contribution from Andy Dustman <farcepest@gmail.com>
+  (bug #79856).
+
