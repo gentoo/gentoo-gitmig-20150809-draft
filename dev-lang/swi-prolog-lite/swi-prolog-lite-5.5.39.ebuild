@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.5.39.ebuild,v 1.2 2005/12/01 09:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.5.39.ebuild,v 1.3 2005/12/01 09:51:46 vapier Exp $
 
 inherit eutils
 
@@ -19,7 +19,15 @@ DEPEND="sys-libs/ncurses
 	readline? ( sys-libs/readline )
 	gmp? ( dev-libs/gmp )
 	ssl? ( dev-libs/openssl )
-	X? ( virtual/x11 )"
+	X? ( || ( (
+		x11-libs/libX11
+		x11-libs/libXft
+		x11-libs/libXpm
+		x11-libs/libXt
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-proto/xproto )
+		virtual/x11 ) )"
 
 S=${WORKDIR}/pl-${PV}
 
