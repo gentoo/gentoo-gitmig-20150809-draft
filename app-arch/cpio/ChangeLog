@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.37 2005/06/28 05:10:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.38 2005/12/01 09:45:20 vapier Exp $
+
+*cpio-2.6-r5 (01 Dec 2005)
+
+  01 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/cpio-2.6-checksum.patch, +files/cpio-2.6-warnings.patch,
+  +files/cpio-2.6-writeOutHeaderBufferOverflow.patch, +cpio-2.6-r5.ebuild:
+  Grab fixes from Fedora to resolve buffer overflow #112140.
 
   28 Jun 2005; Joshua Kinard <kumba@gentoo.org> cpio-2.6-r4.ebuild:
   Marked stable on mips.
