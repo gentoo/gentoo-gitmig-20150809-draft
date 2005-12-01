@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 abe33cecda2df129c06492e4d6e6acb4 ChangeLog 44163
+MD5 4dca2e1fcb3004f846ca1662fd514493 ChangeLog 44377
 MD5 bd75f0242e3b7791803d089c38a3f920 files/CAN-2005-0156-suid.patch 703
 MD5 2bd41aec5e22962224dc9376e27bdde3 files/CAN-2005-0448-rmtree.patch 7629
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r5 64
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r6 64
+MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r7 64
 MD5 c10e44e47d7f702efe7d4009064a97ca files/digest-perl-5.8.7 64
 MD5 c10e44e47d7f702efe7d4009064a97ca files/digest-perl-5.8.7-r1 64
+MD5 c10e44e47d7f702efe7d4009064a97ca files/digest-perl-5.8.7-r2 64
 MD5 154013a841cbb251d7b63fb006b4006f files/file_path_rmtree.patch 1068
 MD5 44e1f1420947cc552c66fb434ba4c855 files/perl-5.8.4-NDBM-GDBM-compat.patch 428
 MD5 5dfd23c2236b382d031a9513bc12f3f1 files/perl-5.8.5-tempfiles.patch 2113
@@ -17,6 +19,7 @@ MD5 044b90a8895f8a03bef8e4cf5759eecc files/perl-5.8.7-MakeMaker-RUNPATH.patch 85
 MD5 528fa2521c530d5a47df32b663e629af files/perl-5.8.7-regexp-nossp.patch 460
 MD5 26a1e7c48c7f68f39db4262500f6a1d8 files/perl-5.8.7-tempfiles.patch 1007
 MD5 c2612d59f380ad6e0c2de4d941e83dfd files/perl-cleaner 8879
+MD5 4f510dbfd29d9e49673a64508d453d23 files/perl-exp_intwrap.patch 392
 MD5 060e9f10466fdc1268c75a7cf4dcbc7c files/perl-h2ph-ansi-header.patch 446
 MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-noksh.patch 611
 MD5 01af75daf3d222a668059e90d78a1f9d files/perl-nonblock.patch 400
@@ -29,12 +32,14 @@ MD5 ce442db939c59218a16be167f793b817 files/perl-uclibc.patch 573
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e377e6ec5a77f51ef1da80ae0600c08c perl-5.8.6-r5.ebuild 17675
 MD5 71c976f23db314752dab5af982dca654 perl-5.8.6-r6.ebuild 18053
+MD5 14ba2460ddef216f45ed85adb1d7f842 perl-5.8.6-r7.ebuild 18131
 MD5 3abc228b743a2fc63223edc90daeff7c perl-5.8.7-r1.ebuild 19533
+MD5 36fa21d350f8ae12048fe019a7a2a27e perl-5.8.7-r2.ebuild 19606
 MD5 3a9ecfb3b8b741ea324c7c05e88c5a65 perl-5.8.7.ebuild 19301
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeQQXtG5z4I8BtQoRAqULAJ9vp2xJlbuvClHC+WpiwVCvFSa3EwCeLSBL
-Db5+egTnaJYwUXDxsi5ppnw=
-=myNw
+iD8DBQFDjuqhtG5z4I8BtQoRAnvOAJ9B+MqeN5CHxRWkQbGo9zhzLD/g4gCgkWeB
+KYEJHtUTLMUV0UC1lv8LvDc=
+=JzeL
 -----END PGP SIGNATURE-----
