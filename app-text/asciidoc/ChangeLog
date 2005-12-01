@@ -1,7 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.19 2005/11/18 05:17:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.20 2005/12/01 04:33:01 tgall Exp $
 
+  30 Nov 2005; Tom Gall <tgall@gentoo.org> asciidoc-7.0.1-r1.ebuild:
+  stable on ppc64
+ 
 *asciidoc-7.0.2 (18 Nov 2005)
 
   18 Nov 2005; Leonardo Boshell <leonardop@gentoo.org>
