@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.4 2005/12/01 02:34:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.5 2005/12/01 21:08:39 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -176,7 +176,6 @@ mozconfig_init() {
 	mozconfig_use_enable ipv6
 	mozconfig_use_enable xinerama
 	mozconfig_use_enable xprint
-	mozconfig_use_enable canvas
 
 	# We use --enable-pango to do truetype fonts, and currently pango
 	# is required for it to build
