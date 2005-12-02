@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-ntp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntp/ChangeLog,v 1.18 2005/11/28 09:09:55 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntp/ChangeLog,v 1.19 2005/12/02 20:45:12 kaiowas Exp $
+
+  02 Dec 2005; petre rodan <kaiowas@gentoo.org> selinux-ntp-20051122.ebuild:
+  mark stable on amd64 mips ppc sparc x86
 
 *selinux-ntp-20051122 (28 Nov 2005)
 
