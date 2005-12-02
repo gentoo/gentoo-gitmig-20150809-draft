@@ -1,31 +1,32 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.9_p2.ebuild,v 1.2 2005/12/02 03:32:51 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10.ebuild,v 1.1 2005/12/02 03:32:51 stkn Exp $
 
-IUSE="devfs26 bri florz rtc"
+IUSE="bri devfs26 rtc ukcid"
 
 inherit toolchain-funcs eutils linux-mod
 
-BRI_VERSION="0.2.0-RC8n"
-FLORZ_VERSION="0.2.0-RC8j_florz-8"
+BRI_VERSION="0.2.0-RC8q"
+#FLORZ_VERSION="0.2.0-RC8o_florz-9"
 
 MY_PV="${PV/_p/.}"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.digium.com/pub/telephony/zaptel/old/zaptel-${MY_PV}.tar.gz
-	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
-	 florz? ( http://zaphfc.florz.dyndns.org/zaphfc_${FLORZ_VERSION}.diff.gz )"
+SRC_URI="http://ftp1.digium.com/pub/telephony/zaptel/zaptel-${MY_PV}.tar.gz
+	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
+#	 florz? ( http://zaphfc.florz.dyndns.org/zaphfc_${FLORZ_VERSION}.diff.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="virtual/libc
 	virtual/linux-sources
 	>=dev-libs/newt-0.50.0"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 pkg_setup() {
 	linux-mod_pkg_setup
@@ -57,21 +58,16 @@ src_unpack() {
 
 	cd ${S}
 	# patch makefile(s) for gentoo
-	epatch ${FILESDIR}/${PN}-1.0.9_p2-gentoo.diff
+	epatch ${FILESDIR}/${PN}-1.0.10-gentoo.diff
 
 	# devfs support
 	if use devfs26; then
 		einfo "Enabling experimental devfs support for linux-2.6..."
-		epatch ${FILESDIR}/${PN}-1.0.4-experimental-devfs26.diff
+		epatch ${FILESDIR}/${PN}-1.0.10-devfs26.diff
 
 		# disable udev
 		sed -i -e "s:#define[\t ]\+\(CONFIG_ZAP_UDEV\):#undef \1:" \
 			zconfig.h
-
-		# fix Makefile to not create device nodes for
-		# devfs enabled 2.6 kernels
-		sed -i -e 's:grep udevd:grep -q \"udevd\\|devfsd\":' \
-			Makefile || die "QA error: No substitution performed"
 	fi
 
 	# apply patch for gcc-3.4.x if that's the compiler in use...
@@ -85,13 +81,12 @@ src_unpack() {
 		einfo "Patching zaptel w/ BRI stuff (${BRI_VERSION})"
 		epatch ${FILESDIR}/zaptel-bristuff-${BRI_VERSION}.patch
 
-		cd ${WORKDIR}/bristuff-${BRI_VERSION}
+		cd ${S_BRI}
 
-		if use florz; then
-			einfo "Using florz patches (${FLORZ_VERSION}) for zaphfc"
-
-			epatch ${WORKDIR}/zaphfc_${FLORZ_VERSION}.diff
-		fi
+#		if use florz; then
+#			einfo "Using florz patches (${FLORZ_VERSION}) for zaphfc"
+#			epatch ${WORKDIR}/zaphfc_${FLORZ_VERSION}.diff
+#		fi
 
 		# patch includes
 		sed -i  -e "s:^#include.*zaptel\.h.*:#include <zaptel.h>:" \
@@ -109,10 +104,15 @@ src_unpack() {
 
 		sed -i  -e "s:^\(CFLAGS+=-I. \).*:\1 \$(ZAP):" \
 			zaphfc/Makefile
+
+		# replace uname -r with $(KVERS) 
+		# and add KVERS?="$(uname -r)" to all bristuff Makefiles
+		find ${S_BRI} -iname "Makefile" -exec sed -i \
+			-e "s:\`uname -r\`:\$(KVERS):g" \
+			-e "s:uname -r:echo -n \$(KVERS):g" \
+			-e "1 i KVERS?=\$(shell uname -r)" {} \;
 	fi
 
-	# replace `uname -r` with ${KV_FULL} in all Makefiles
-	find ${WORKDIR} -iname "Makefile" -exec sed -i -e "s:\`uname -r\`:${KV_FULL}:g" {} \;
 
 	cd ${S}
 	#######################################################################
@@ -129,21 +129,34 @@ src_unpack() {
 			ewarn "RTC is unsupported on your arch, skipping patch"
 		fi
 	fi
+
+
+	# UK callerid patch, adds support for british-telecoms callerid to x100p cards
+	# see http://www.lusyn.com/asterisk/patches.html for more information
+	use ukcid && \
+		epatch ${FILESDIR}/${PN}-1.0.10-ukcid.patch
 }
 
 src_compile() {
-	make ARCH=$(tc-arch-kernel) KERNEL_SOURCE=/usr/src/linux || die
+	make \
+		KVERS=${KV_FULL} ARCH=$(tc-arch-kernel) \
+		KERNEL_SOURCE=/usr/src/linux || die
 
 	if use bri; then
-		cd ${WORKDIR}/bristuff-${BRI_VERSION}
-		make ARCH=$(tc-arch-kernel) -C qozap  || die
-		make ARCH=$(tc-arch-kernel) -C zaphfc || die
-		make ARCH=$(tc-arch-kernel) -C cwain  || die
+		cd ${S_BRI}
+		for x in cwain qozap zaphfc; do
+			make \
+				KVERS=${KV_FULL} \
+				ARCH=$(tc-arch-kernel) \
+				KERNEL_SOURCE=/usr/src/linux \
+				-C ${x} || die "make ${x} failed"
+		done
 	fi
 }
 
 src_install() {
-	make INSTALL_PREFIX=${D} install || die
+	make INSTALL_PREFIX=${D} ARCH=$(tc-arch-kernel) \
+		KVERS=${KV_FULL} KERNEL_SOURCE=/usr/src/linux install || die
 
 	dodoc ChangeLog README README.udev README.Linux26 README.fxsusb zaptel.init
 	dodoc zaptel.conf.sample LICENSE zaptel.sysconfig
@@ -151,9 +164,13 @@ src_install() {
 	# additional tools
 	dobin ztmonitor ztspeed zttest
 
+	# install all header files for wanpipe
+	insinto /usr/include/zaptel
+	doins *.h
+
 	if use bri; then
 		einfo "Installing bri"
-		cd ${WORKDIR}/bristuff-${BRI_VERSION}
+		cd ${S_BRI}
 
 		insinto /lib/modules/${KV_FULL}/misc
 		doins qozap/qozap.${KV_OBJ}

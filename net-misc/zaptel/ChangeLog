@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.66 2005/11/20 21:36:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.67 2005/12/02 03:32:51 stkn Exp $
+
+*zaptel-1.0.10 (02 Dec 2005)
+
+  02 Dec 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-bristuff-0.2.0-RC8q.patch,
+  +files/zaptel-1.0.10-devfs26.diff, +files/zaptel-1.0.10-gentoo.diff,
+  +files/zaptel-1.0.10-ukcid.patch, zaptel-1.0.9_p2.ebuild,
+  +zaptel-1.0.10.ebuild:
+  New version, bugfixes, new bristuff version (RC8q), several cleanups
+  and uk callerid support for x100p clones added. No florz patches for
+  1.0.10 + RC8q available at the moment. Fixed SRC_URI in old ebuild.
 
   20 Nov 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.2.0.ebuild:
   Re-enabled bri support.
