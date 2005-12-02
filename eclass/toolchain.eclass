@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.222 2005/11/30 04:16:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.223 2005/12/02 22:33:39 halcy0n Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -878,6 +878,10 @@ gcc-compiler_pkg_postinst() {
 		einfo "upgrading between different versions of gcc.  For example,"
 		einfo "when moving to gcc-3.4 from gcc-3.3, emerge gentoolkit and run:"
 		einfo "  # revdep-rebuild --library libstdc++.so.5"
+		echo
+		einfo "For more information on the steps to take when upgrading "
+		einfo "from gcc-3.3 please refer to: "
+		einfo "http://www.gentoo.org/proj/en/base/x86/gcc-upgrading-guide.xml"
 		echo
 	fi
 }
