@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.2 2005/09/07 12:48:12 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.3 2005/12/02 03:47:40 chriswhite Exp $
+
+  02 Dec 2005; Chris White <chriswhite@gentoo.org> -screenie-1.26.0.ebuild:
+  Remove should not be here ebuild.
 
   07 Sep 2005; Tom Martin <slarti@gentoo.org> screenie-1.19.0.ebuild:
   Marked ~amd64, ~sparc, ~ia64.
