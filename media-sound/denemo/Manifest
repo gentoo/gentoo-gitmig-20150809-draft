@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 4ec4a9128468ddda7a618568daa8ea6e ChangeLog 1600
 MD5 25d2623b0aafb762049394cb5a982bc9 denemo-0.5.9.ebuild 640
 MD5 7c9230d3694419b6ee417d5a997c9509 denemo-0.7.2.ebuild 702
-MD5 81234fd62fb3afa00c26e6458353228c denemo-0.7.4.ebuild 700
+MD5 1fd701024a19e829810bdacf8b95b816 denemo-0.7.4.ebuild 703
 MD5 3f6f1cf45c08fe02d8aa60b1aeb756dd files/digest-denemo-0.5.9 64
 MD5 cf903ece8513fee0c0c41f6af8f1c32b files/digest-denemo-0.7.2 64
 MD5 339243033991892977c38848e9666e99 files/digest-denemo-0.7.4 65
@@ -12,7 +12,7 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDj7WxwUpWvClEHQoRAvmsAJwLsNhwfOpq+9kEsjBH5wJhsA+KLgCfZcE8
-xqj5WElZ3hvRv2dXHf6KiBg=
-=XOc6
+iD8DBQFDkB1ewUpWvClEHQoRAv6OAJ0dhf8v598w4su2rrdQFnDE/lUwDwCbBv52
+v/QUffHObkV/NSUF6BlbRgU=
+=Kxr0
 -----END PGP SIGNATURE-----
