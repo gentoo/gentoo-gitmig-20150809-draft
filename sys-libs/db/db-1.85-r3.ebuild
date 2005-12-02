@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r3.ebuild,v 1.1 2005/11/08 02:40:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r3.ebuild,v 1.2 2005/12/02 07:22:46 robbat2 Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -23,7 +23,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${PF}.patch
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
-	sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):" PORT/linux/Makefile || die
+	sed -i \
+		-e "s:@GENTOO_LIBDIR@:$(get_libdir):" \
+		-e '/$(INSTALL)/s: -m 0644 -d : -m 0755 -d :g' \
+		PORT/linux/Makefile || die
 }
 
 src_compile() {
