@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.44 2005/10/30 18:12:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.45 2005/12/02 13:10:56 flameeyes Exp $
+
+*libsndfile-1.0.12-r1 (02 Dec 2005)
+
+  02 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libsndfile-1.0.12-flac.patch, -libsndfile-1.0.12.ebuild,
+  +libsndfile-1.0.12-r1.ebuild:
+  Added patch to make flac dependency optional. See bug #114228.
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   libsndfile-1.0.12.ebuild:
