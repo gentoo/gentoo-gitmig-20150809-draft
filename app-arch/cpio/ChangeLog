@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.42 2005/12/02 16:52:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.43 2005/12/02 21:20:52 ferdy Exp $
+
+  02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> cpio-2.6-r5.ebuild:
+  stable on alpha wrt bug #112140
 
   02 Dec 2005; Andrej Kacian <ticho@gentoo.org> cpio-2.6-r5.ebuild:
   Stable on x86, security bug #112140.
