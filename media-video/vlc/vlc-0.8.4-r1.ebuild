@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4-r1.ebuild,v 1.2 2005/11/29 12:08:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4-r1.ebuild,v 1.3 2005/12/02 16:55:45 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
 MY_P="${P/_beta/-test}"
 
-PATCHLEVEL="9"
+PATCHLEVEL="10"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -25,7 +25,7 @@ IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdda ogg matr
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
 mp3 xv bidi sdl png xml2 samba daap corba screen mod speex nsplugin shout real
-win32codecs skins hal"
+win32codecs skins hal avahi"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 			>=media-libs/libcddb-0.9.5 )
@@ -86,7 +86,8 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		nsplugin? ( >=net-libs/gecko-sdk-1.7.8 )
 		shout? ( media-libs/libshout )
 		win32codecs? ( media-libs/win32codecs )
-		hal? ( sys-apps/hal )"
+		hal? ( sys-apps/hal )
+		avahi? ( >=net-dns/avahi-0.3 )"
 
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.6*
@@ -204,11 +205,11 @@ src_compile () {
 		$(use_enable win32codecs loader) \
 		$(use_enable skins skins2) \
 		$(use_enable hal) \
+		$(use_enable avahi bonjour) \
 		--disable-pth \
 		--disable-portaudio \
 		--disable-slp \
 		--disable-x264 \
-		--disable-bonjour \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
@@ -234,5 +235,5 @@ src_install() {
 		newins ${S}/share/vlc${res}x${res}.png vlc.png
 	done
 
-	make_desktop_entry vlc "VLC Media Player" vlc "AudioVideo;Player"
+	domenu "${S}/debian/vlc.desktop"
 }
