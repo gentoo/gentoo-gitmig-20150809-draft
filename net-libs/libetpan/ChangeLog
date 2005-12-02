@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.13 2005/11/08 10:22:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.14 2005/12/02 17:13:01 ticho Exp $
+
+*libetpan-0.41 (02 Dec 2005)
+
+  02 Dec 2005; Andrej Kacian <ticho@gentoo.org> +libetpan-0.41.ebuild:
+  Version bump.
 
 *libetpan-0.40 (08 Nov 2005)
 
