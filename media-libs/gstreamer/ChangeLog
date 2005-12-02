@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.116 2005/10/02 08:45:05 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.117 2005/12/02 15:38:19 zaheerm Exp $
+
+*gstreamer-0.9.7 (02 Dec 2005)
+
+  02 Dec 2005; <zaheer@gentoo.org> +gstreamer-0.9.7.ebuild:
+  Pre-release of GStreamer 0.10
 
   02 Oct 2005; Hardave Riar <hardave@gentoo.org> gstreamer-0.8.10.ebuild:
   Stable on mips.
