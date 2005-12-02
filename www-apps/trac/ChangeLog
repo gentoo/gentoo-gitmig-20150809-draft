@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.23 2005/11/20 03:43:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.24 2005/12/02 18:20:46 dju Exp $
+
+*trac-0.9.1 (02 Dec 2005)
+
+  02 Dec 2005; Julien Allanos <dju@gentoo.org> +files/0.9.1-postinst-en.txt,
+  -files/0.9_beta2-postinst-en.txt, -files/0.9-postinst-en.txt,
+  -trac-0.9_beta2.ebuild, -trac-0.9.ebuild, +trac-0.9.1.ebuild:
+  Version bump to 0.9.1 due to security issue (bug #114205). Removing
+  vulnerable versions from 0.9 serie.
 
   20 Nov 2005; Joseph Jezak <josejx@gentoo.org> trac-0.9.ebuild:
   Marked ~ppc for bug #111069.

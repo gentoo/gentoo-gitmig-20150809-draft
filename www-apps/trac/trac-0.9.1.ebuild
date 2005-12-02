@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.ebuild,v 1.4 2005/11/20 03:43:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.1.ebuild,v 1.1 2005/12/02 18:20:46 dju Exp $
 
 inherit distutils webapp
 
@@ -48,7 +48,6 @@ src_install () {
 	distutils_src_install
 
 	dodoc AUTHORS INSTALL RELEASE THANKS UPGRADE
-	rm ${D}/usr/share/doc/${P}/COPYING.gz
 	rm ${D}/usr/share/doc/${P}/MANIFEST.in.gz
 	rm ${D}/usr/share/doc/${P}/PKG-INFO.gz
 
