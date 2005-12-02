@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.15.ebuild,v 1.1 2005/12/01 18:21:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.15.ebuild,v 1.2 2005/12/02 06:44:50 mr_bones_ Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -54,7 +54,7 @@ abi_fail_check() {
 src_compile() {
 	local myconf
 	local iscross=0
-	
+
 	setup_multilib
 
 	filter-lfs-flags #90228
