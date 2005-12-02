@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1.ebuild,v 1.1 2005/12/02 19:44:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1.ebuild,v 1.2 2005/12/02 19:49:40 spyderous Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,9 +18,9 @@ RDEPEND="media-libs/tiff
 	>=dev-lang/python-2.2
 	|| ( (
 			x11-libs/libXmu
-			x11-libs/libX11
-			x11-libs/libXt
 			x11-libs/libXaw
+			x11-libs/libXp
+			x11-libs/libXi
 		)
 		virtual/x11
 	)"
