@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.14 2005/12/02 22:21:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.15 2005/12/02 23:19:03 jer Exp $
+
+  02 Dec 2005; Jeroen Roovers <jer@gentoo.org>
+  spidermonkey-1.5_rc6-r1.ebuild:
+  src_install needs CC at least, apparently. :-(
 
   02 Dec 2005; Jeroen Roovers <jer@gentoo.org>
   spidermonkey-1.5_rc6-r1.ebuild:
