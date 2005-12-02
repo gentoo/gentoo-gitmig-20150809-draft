@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc6-r1.ebuild,v 1.9 2005/12/02 22:06:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc6-r1.ebuild,v 1.10 2005/12/02 22:21:45 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,14 +33,16 @@ install-headers: $(HFILES)
 	install -g root -o root -m 555 -d $(DESTDIR)/usr/include/js
 	install -g root -o root -m 444 $^ $(DESTDIR)/usr/include/js
 EOF
-
+	local MY_CC="$(tc-getCC)"
+	local MY_LD="$(tc-getLD)"
+	local MY_AR="$(tc-getAR)"
 	do_my_compile() {
 		emake -j1 \
 		-f Makefile.ref \
 		BUILD_OPT=1 \
-		CC="$(tc-getCC)" \
-		LD="$(tc-getLD)" \
-		AR="$(tc-getAR)"
+		CC="${MY_CC}" \
+		LD="${MY_LD}" \
+		AR="${MY_AR}"
 	}
 
 	# it needs to run twice
