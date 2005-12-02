@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake4-demo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.1 2005/12/01 00:48:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.2 2005/12/02 13:10:56 wolf31o2 Exp $
+
+  02 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake4-demo-1.0.ebuild:
+  Adding some more mirrors.  Closing bug #114215.
 
 *quake4-demo-1.0 (01 Dec 2005)
 

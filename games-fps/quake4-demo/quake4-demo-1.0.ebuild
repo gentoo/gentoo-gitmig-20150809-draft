@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.1 2005/12/01 00:48:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.2 2005/12/02 13:10:56 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_P="quake4-linux-${PV}-demo"
 DESCRIPTION="Sequel to Quake 2, an Id 3D first-person shooter"
 HOMEPAGE="http://www.quake4game.com/"
-SRC_URI="http://www.3ddownloads.com/Action/Quake%204/Demos/${MY_P}.x86.run"
-#	mirror://3dgamers/quake4/${MY_P}.x86.run
-#	ftp://ftp.idsoftware.com/idstuff/quake4/linux/${MY_P}.x86.run
-#	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/quake4/linux/${MY_P}.x86.run
-#	http://filebase.gmpf.de/quake4/${MY_P}.x86.run
-#	http://www.holarse.de/mirror/${MY_P}.x86.run"
+SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake4/linux/${MY_P}.x86.run
+	http://www.3ddownloads.com/Action/Quake%204/Demos/${MY_P}.x86.run
+	mirror://3dgamers/quake4/${MY_P}.x86.run
+	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/quake4/linux/${MY_P}.x86.run
+	http://filebase.gmpf.de/quake4/${MY_P}.x86.run
+	http://www.holarse.de/mirror/${MY_P}.x86.run
+	http://sonic-lux.net/data/mirror/quake4/${MY_P}.x86.run"
 
 LICENSE="QUAKE4"
 SLOT="0"
