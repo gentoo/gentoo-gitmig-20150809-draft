@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.39 2005/12/01 13:11:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.40 2005/12/02 13:12:08 corsair Exp $
+
+  02 Dec 2005; Markus Rothe <corsair@gentoo.org> cpio-2.6-r5.ebuild:
+  Stable on ppc64; bug #112140
 
   01 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> cpio-2.6-r5.ebuild:
   Stable on sparc wrt #112140
