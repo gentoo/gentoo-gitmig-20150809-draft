@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.219 2005/11/27 23:51:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.220 2005/12/02 16:06:35 dsd Exp $
+
+*gentoo-sources-2.6.14-r4 (02 Dec 2005)
+
+  02 Dec 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-sources-2.6.9-r9.ebuild, +gentoo-sources-2.6.14-r4.ebuild:
+  Fix slowdown on pentium 4 systems. Fix boot hang for various HP/compaq
+  laptops. setkeys security fix. inode integer overflow fix.
 
   28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
   gentoo-sources-2.6.14-r3.ebuild:
