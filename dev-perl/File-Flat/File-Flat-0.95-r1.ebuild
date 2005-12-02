@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/File-Flat-0.95-r1.ebuild,v 1.2 2005/11/28 13:11:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/File-Flat-0.95-r1.ebuild,v 1.3 2005/12/02 09:17:58 josejx Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/${P}.readme"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 #KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
