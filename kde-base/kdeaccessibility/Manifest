@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 93bab6a37abf5532ea3d056b71709d86 ChangeLog 10670
 MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
 MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
@@ -14,3 +17,10 @@ MD5 dce78de160549e7684964becc0f0d6ea kdeaccessibility-3.4.3-r1.ebuild 1245
 MD5 2c05ff03003147c99aed2f493c64935d kdeaccessibility-3.4.3.ebuild 1199
 MD5 083bdef9a2775e34af27666e45980d2e kdeaccessibility-3.5.0.ebuild 827
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkGz0ntT9W3vfTuoRAiy+AJ4hdiVeC+l8sWarishmLn5el13XGwCgqeBy
+ShQKa+61zXTJNvUlJo5rNbA=
+=gZpV
+-----END PGP SIGNATURE-----
