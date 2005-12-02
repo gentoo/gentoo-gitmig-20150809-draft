@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.49 2005/09/26 11:53:29 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.50 2005/12/02 22:03:28 chriswhite Exp $
+
+  02 Dec 2005; Chris White <chriswhite@gentoo.org>
+  -files/ardour-0.99-scons.patch:
+  Removing invalid patch, bug #114080.
 
   26 Sep 2005; Eldad Zack <eldad@gentoo.org> ardour-0.99.ebuild:
   Added BUILD_SSE_OPTIMIZATIONS scons flag. Thanks to Michael Schnake
