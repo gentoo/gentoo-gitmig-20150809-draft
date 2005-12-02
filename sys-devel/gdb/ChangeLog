@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.79 2005/07/16 11:01:20 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.80 2005/12/02 22:35:43 vapier Exp $
+
+*gdb-6.4 (02 Dec 2005)
+
+  02 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gdb-6.4-relative-paths.patch, +files/gdb-6.4-uclibc.patch,
+  +gdb-6.4.ebuild:
+  Version bump.
 
   16 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> gdb-6.3-r4.ebuild:
   Marked s390.
