@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r1.ebuild,v 1.1 2005/10/07 22:47:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r1.ebuild,v 1.2 2005/12/02 12:38:11 flameeyes Exp $
 
 IUSE="nls flac speex"
 
@@ -22,6 +22,14 @@ RDEPEND=">=media-libs/libvorbis-1.0.1
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	if use flac && ! built_with_use media-libs/flac ogg; then
+		eerror "To be able to play OggFlac files you need to build"
+		eerror "media-libs/flac with +ogg, to build libOggFLAC."
+		die "Missing libOggFLAC library."
+	fi
+}
 
 src_compile() {
 	use hppa && [ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
