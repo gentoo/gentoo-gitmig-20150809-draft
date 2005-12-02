@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.75 2005/12/02 01:06:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.76 2005/12/02 02:51:57 mkennedy Exp $
+
+  02 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9.3/README.Gentoo,
+  +files/0.9.3/customize-target-features.lisp-prefix,
+  +files/0.9.3/customize-target-features.lisp-suffix,
+  +files/0.9.3/install-clc.lisp, +files/0.9.3/sbcl-gentoo.patch,
+  +files/0.9.3/sbclrc, +sbcl-0.9.3.ebuild:
+  Restore sbcl-0.9.3 for amd64 keywording; Thanks to <anarchy@gentoo.org> for
+  catching that.
 
 *sbcl-0.9.7 (01 Dec 2005)
 
