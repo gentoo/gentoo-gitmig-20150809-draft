@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.54 2005/11/06 14:55:28 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.55 2005/12/02 21:51:28 griffon26 Exp $
+
+*valgrind-3.1.0 (02 Dec 2005)
+
+  02 Dec 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +valgrind-3.1.0.ebuild:
+  Added version 3.1.0 of valgrind. To summarise, AMD64 support is much better,
+  PPC32 support is now usable, and this is the first release in the 3.0 line
+  that supports core dumping for programs running under valgrind.
 
 *valgrind-3.0.1-r1 (06 Nov 2005)
 
