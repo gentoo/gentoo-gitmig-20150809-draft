@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1.ebuild,v 1.1 2005/11/30 20:24:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1.ebuild,v 1.2 2005/12/02 06:25:48 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -70,6 +70,7 @@ src_unpack() {
 	epatch ${FILESDIR}/makedepend-location.patch
 	epatch ${FILESDIR}/6.4-dont-install-gles-headers.patch
 	epatch ${FILESDIR}/change-default-dri-driver-dir.patch
+	epatch ${FILESDIR}/${PV}-amd64-include-assyntax.patch
 
 	# Set up linux-dri configs
 	if use sparc; then

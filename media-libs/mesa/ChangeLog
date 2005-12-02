@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.53 2005/11/30 20:24:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.54 2005/12/02 06:25:48 spyderous Exp $
+
+  02 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/6.4.1-amd64-include-assyntax.patch, mesa-6.4.1.ebuild:
+  (#114066) Add 6.4.1-amd64-include-assyntax.patch to fix amd64 build.
 
 *mesa-6.4.1 (30 Nov 2005)
 
