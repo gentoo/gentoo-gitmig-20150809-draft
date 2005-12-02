@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1595 2005/12/02 03:41:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1596 2005/12/02 15:51:21 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1040,9 +1040,9 @@ sci-biology/hmmer:pvm - Add support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities
 sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
-sci-chemistry/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
-sci-chemistry/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
-sci-chemistry/libghemical:openbabel - Use the OpenBabel package for file conversions
+sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
+sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
+sci-libs/libghemical:openbabel - Use the OpenBabel package for file conversions
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
