@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.5.ebuild,v 1.1 2005/10/23 19:46:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.7.ebuild,v 1.1 2005/12/02 01:06:41 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 

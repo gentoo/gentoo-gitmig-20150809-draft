@@ -1,6 +1,6 @@
-diff -ur --exclude '*~' sbcl-0.9.3.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.9.3/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
---- sbcl-0.9.3.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-08-02 06:42:56.000000000 -0500
-+++ sbcl-0.9.3/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2005-04-25 11:08:42.000000000 -0500
+diff -ur sbcl-0.9.7.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.9.7/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
+--- sbcl-0.9.7.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-08-02 06:42:56.000000000 -0500
++++ sbcl-0.9.7/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2005-09-28 12:34:17.000000000 -0500
 @@ -102,15 +102,3 @@
  
  (defmethod perform :after ((o load-op) (c (eql (find-system :sb-bsd-sockets))))
@@ -17,30 +17,10 @@ diff -ur --exclude '*~' sbcl-0.9.3.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.as
 -(defmethod perform ((o test-op) (c (eql (find-system :sb-bsd-sockets-tests))))
 -  (or (funcall (intern "DO-TESTS" (find-package "SB-RT")))
 -      (error "test-op failed")))
-diff -ur --exclude '*~' sbcl-0.9.3.orig/contrib/sb-posix/posix-tests.lisp sbcl-0.9.3/contrib/sb-posix/posix-tests.lisp
---- sbcl-0.9.3.orig/contrib/sb-posix/posix-tests.lisp	2005-01-06 06:47:57.000000000 -0600
-+++ sbcl-0.9.3/contrib/sb-posix/posix-tests.lisp	2005-04-25 11:06:50.000000000 -0500
-@@ -96,7 +96,7 @@
-       (sb-posix:syscall-errno c)))
-   #.sb-posix::eexist)
- 
--(deftest mkdir.error.2
-+#+nil (deftest mkdir.error.2
-   (handler-case
-       (sb-posix:mkdir "/" 0)
-     (sb-posix:syscall-error (c)
-@@ -149,7 +149,7 @@
-       (sb-posix:syscall-errno c)))
-   #.sb-posix::enotdir)
- 
--(deftest rmdir.error.3
-+#+nil (deftest rmdir.error.3
-   (handler-case
-       (sb-posix:rmdir "/")
-     (sb-posix:syscall-error (c)
-diff -ur --exclude '*~' sbcl-0.9.3.orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.3/contrib/sb-posix/sb-posix.asd
---- sbcl-0.9.3.orig/contrib/sb-posix/sb-posix.asd	2004-08-04 05:54:18.000000000 -0500
-+++ sbcl-0.9.3/contrib/sb-posix/sb-posix.asd	2005-04-25 11:10:09.000000000 -0500
+Only in sbcl-0.9.7/contrib/sb-bsd-sockets: sb-bsd-sockets.asd.~1.22.~
+diff -ur sbcl-0.9.7.orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.7/contrib/sb-posix/sb-posix.asd
+--- sbcl-0.9.7.orig/contrib/sb-posix/sb-posix.asd	2004-08-04 05:54:18.000000000 -0500
++++ sbcl-0.9.7/contrib/sb-posix/sb-posix.asd	2005-09-28 12:35:34.000000000 -0500
 @@ -88,33 +88,5 @@
  		  :package :sb-posix :depends-on  ("defpackage"))
  		 (:file "interface" :depends-on ("constants" "macros" "designator" "alien"))))
@@ -75,14 +55,16 @@ diff -ur --exclude '*~' sbcl-0.9.3.orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.3
 -       t)
 -      (t
 -       (error "non-errno tests failed!")))))
-diff -ur --exclude '*~' sbcl-0.9.3.orig/src/runtime/GNUmakefile sbcl-0.9.3/src/runtime/GNUmakefile
---- sbcl-0.9.3.orig/src/runtime/GNUmakefile	2005-04-10 10:34:59.000000000 -0500
-+++ sbcl-0.9.3/src/runtime/GNUmakefile	2005-04-25 11:06:50.000000000 -0500
-@@ -33,6 +33,7 @@
- # symlink to Config-foo.
- include Config
+Only in sbcl-0.9.7/contrib/sb-posix: sb-posix.asd.~1.11.~
+diff -ur sbcl-0.9.7.orig/src/runtime/runtime.c sbcl-0.9.7/src/runtime/runtime.c
+--- sbcl-0.9.7.orig/src/runtime/runtime.c	2005-09-21 10:01:15.000000000 -0500
++++ sbcl-0.9.7/src/runtime/runtime.c	2005-09-28 16:33:46.000000000 -0500
+@@ -62,7 +62,7 @@
+ #endif
  
-+CFLAGS += -DSBCL_HOME='"/usr/lib/sbcl"'
+ #ifndef SBCL_HOME
+-#define SBCL_HOME "/usr/local/lib/sbcl/"
++#define SBCL_HOME "/usr/lib/sbcl/"
+ #endif
  
- C_SRCS = alloc.c backtrace.c breakpoint.c coreparse.c \
- 	dynbind.c gc-common.c globals.c interr.c interrupt.c \
+ 
