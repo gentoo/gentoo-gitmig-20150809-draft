@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.148 2005/11/30 07:55:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.149 2005/12/02 21:37:02 ferdy Exp $
+
+  02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> gnupg-1.4.2-r3.ebuild:
+  stable on alpha wrt bug #113289
 
   30 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> gnupg-1.4.2-r3.ebuild:
   Stable on ppc.
