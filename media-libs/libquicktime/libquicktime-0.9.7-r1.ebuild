@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.4 2005/11/19 18:58:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.5 2005/12/02 21:39:19 flameeyes Exp $
 
 inherit libtool eutils autotools
 
@@ -16,7 +16,7 @@ IUSE="gtk jpeg mmx vorbis png dv ieee1394 X"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	dv? ( media-libs/libdv )
-	gtk? ( =x11-libs/gtk+-1.2* )
+	gtk? ( >=x11-libs/gtk+-2.4.0 )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	vorbis? ( media-libs/libvorbis )
@@ -49,10 +49,10 @@ src_compile() {
 	econf --enable-shared \
 		--enable-static \
 		$(use_enable mmx) \
-		$(use_enable gtk) \
 		$(use_enable ieee1394 firewire) \
 		$(use_with dv libdv) \
-		$(use_with X x)
+		$(use_with X x) \
+		--without-cpuflags
 
 	emake || die "make failed"
 }
@@ -60,5 +60,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dosym /usr/include/lqt /usr/include/quicktime
+	# Compatibility with software that uses quicktime prefix, but
+	# don't do that when building for Darwin/MacOS
+	[[ ${CHOST} != *-darwin* ]] && \
+		dosym /usr/include/lqt /usr/include/quicktime
 }
+
