@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 212aa4612e90f992591497f5455099ea ChangeLog 4664
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r1 63
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r2 63
@@ -8,3 +11,10 @@ MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 d08c9ca7453de3d3f1520a83830e794b pyrex-0.9.3-r1.ebuild 988
 MD5 9598571eb49e6c0e788b2e875a07e1fc pyrex-0.9.3-r2.ebuild 1057
 MD5 c8637ba60c601e666afc5a9e70fbb085 pyrex-0.9.3.1.ebuild 819
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkDXm9ZFPrqoILX8RAvdcAJ4hkzvMVr0pRyNe9Qp9vKX1k07BeACggspB
+Z5Q47D/TmycbOs7MHCEq/hs=
+=sFXM
+-----END PGP SIGNATURE-----
