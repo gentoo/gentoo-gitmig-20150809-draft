@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-1.90.ebuild,v 1.4 2005/07/25 15:37:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-1.90.ebuild,v 1.5 2005/12/02 15:47:29 spyderous Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/libf2c
 	>=dev-util/pkgconfig-0.15
 	>=x11-libs/gtkglext-1.0.5
 	>=gnome-base/libglade-2.4.0
-	>=sci-chemistry/libghemical-1.90
+	>=sci-libs/libghemical-1.90
 	threads? ( >=dev-libs/glib-2.4.0 )"
 
 src_unpack() {
