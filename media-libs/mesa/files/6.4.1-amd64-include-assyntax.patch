@@ -1,3 +1,26 @@
+CVSROOT:	/cvs/mesa
+Module name:	Mesa
+Repository:	Mesa/src/mesa/x86-64/
+Changes by:	idr@gabe.	05/12/01 16:25:00
+
+Log message:
+  Fix build issues on x86-64 due to missing include path in
+  glapi_x86-64.S.
+  
+  Bug: #5602
+
+Modified files:
+      Mesa/src/mesa/glapi/:	Tag: mesa_6_4_branch
+        gl_x86-64_asm.py 
+      Mesa/src/mesa/x86-64/:	Tag: mesa_6_4_branch
+        glapi_x86-64.S 
+  
+  Revision      Changes    Path
+  1.4.2.2       +1 -1      Mesa/src/mesa/glapi/gl_x86-64_asm.py
+  http://cvs.freedesktop.org/mesa/Mesa/src/mesa/glapi/gl_x86-64_asm.py
+  1.4.2.2       +1 -1      Mesa/src/mesa/x86-64/glapi_x86-64.S
+  http://cvs.freedesktop.org/mesa/Mesa/src/mesa/x86-64/glapi_x86-64.S
+
 Index: src/mesa/x86-64/glapi_x86-64.S
 ===================================================================
 RCS file: /cvs/mesa/Mesa/src/mesa/x86-64/glapi_x86-64.S,v
