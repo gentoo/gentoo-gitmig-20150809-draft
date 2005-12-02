@@ -1,0 +1,14 @@
+# ChangeLog for sci-chemistry/viewmol
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.1 2005/12/02 19:44:14 spyderous Exp $
+
+*viewmol-2.4.1 (02 Dec 2005)
+
+  02 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/2.4.1-change-default-path-to-usr.patch,
+  +files/2.4.1-look-for-python-in-right-place.patch,
+  +files/2.4.1-remove-icc-check.patch,
+  +files/2.4.1-use-root-for-app-defaults.patch, +metadata.xml,
+  +viewmol-2.4.1.ebuild:
+  New GUI front-end for computational chemistry.
+
