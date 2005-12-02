@@ -1,5 +1,17 @@
---- config/Linux_All.mk.orig	2005-02-09 22:10:41.756776680 +0000
-+++ config/Linux_All.mk	2005-02-09 22:17:12.809327656 +0000
+diff -Nurd js/src/config/Linux_All.mk js-new/src/config/Linux_All.mk
+--- js/src/config/Linux_All.mk	2003-05-16 02:21:08.000000000 +0200
++++ js-new/src/config/Linux_All.mk	2005-12-02 16:35:38.000000000 +0100
+@@ -36,8 +36,8 @@
+ # Config for all versions of Linux
+ #
+ 
+-CC = gcc
+-CCC = g++
++#CC = gcc
++#CCC = g++
+ CFLAGS +=  -Wall -Wno-format
+ OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R
+ 
 @@ -86,7 +86,7 @@
  JS_EDITLINE = 1
  
@@ -9,7 +21,7 @@
  # FIXME: better use it everywhere
  OS_CFLAGS += -DHAVE_VA_COPY
  endif
-@@ -96,3 +96,15 @@
+@@ -96,3 +96,21 @@
  # FIXME: better patch rules.mk & fdlibm/Makefile*
  OS_CFLAGS += -DPIC -fPIC
  endif
@@ -25,8 +37,15 @@
 +# FIXME: better patch rules.mk & fdlibm/Makefile*
 +OS_CFLAGS += -DPIC -fPIC
 +endif
---- jsprf.c.orig	2005-02-09 22:22:38.017888440 +0000
-+++ jsprf.c	2005-02-09 22:16:53.509261712 +0000
++
++ifeq ($(CPU_ARCH),parisc)
++# We need PIC code for shared libraries
++# FIXME: better patch rules.mk & fdlibm/Makefile*
++OS_CFLAGS += -DPIC -fPIC
++endif
+diff -Nurd js/src/jsprf.c js-new/src/jsprf.c
+--- js/src/jsprf.c	2004-02-25 14:33:42.000000000 +0100
++++ js-new/src/jsprf.c	2005-12-02 16:30:07.000000000 +0100
 @@ -55,7 +55,7 @@
  ** and requires array notation.
  */
