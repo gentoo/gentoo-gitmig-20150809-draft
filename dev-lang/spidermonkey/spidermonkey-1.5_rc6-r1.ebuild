@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc6-r1.ebuild,v 1.8 2005/12/02 20:34:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc6-r1.ebuild,v 1.9 2005/12/02 22:06:58 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -40,8 +40,7 @@ EOF
 		BUILD_OPT=1 \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getLD)" \
-		AR="$(tc-getAR)" \
-		BUILD_OPT=1
+		AR="$(tc-getAR)"
 	}
 
 	# it needs to run twice
