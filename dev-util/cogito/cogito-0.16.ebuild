@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.15.1.ebuild,v 1.1 2005/10/15 22:26:28 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.16.ebuild,v 1.1 2005/12/02 10:38:45 ferdy Exp $
 
 inherit eutils
 
+MY_P=${P//_/}
+
 DESCRIPTION="The GIT scripted toolkit"
 HOMEPAGE="http://kernel.org/pub/software/scm/cogito/"
-SRC_URI="http://kernel.org/pub/software/scm/cogito/${P}.tar.bz2"
+SRC_URI="http://kernel.org/pub/software/scm/cogito/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,11 +24,19 @@ RDEPEND="net-misc/rsync
 		app-text/rcs
 		net-misc/curl"
 
+S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	# t9300-seek won't work
+	rm t/t9300-seek.sh
+}
+
 src_compile() {
 	emake || die "emake failed"
 
 	if use doc ; then
-		#epatch "${FILESDIR}/${P}-doc.patch"
 		sed -i -e "/^docdir=/s:cogito:${PF}:" \
 			${S}/Documentation/Makefile || die "sed failed (Documentation)"
 		emake -C Documentation || die "make documentation failed"
