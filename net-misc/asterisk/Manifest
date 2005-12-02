@@ -4,13 +4,15 @@ MD5 68d5fb7fa17a8adb2fde235305eeb444 asterisk-1.0.5-r3.ebuild 12292
 MD5 2bb329f2fddb62b6cc55b6ec95990528 asterisk-1.0.9-r2.ebuild 13817
 MD5 60c09319bc8263b96943e15c6af270b7 asterisk-1.0.6-r2.ebuild 14064
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 daab3bfcd5769a52186c4104deddd84d ChangeLog 18984
+MD5 0d999c7e56588c263dbe9656ef6a3837 ChangeLog 19282
+MD5 0d549c054422bf451091612108c0155a asterisk-1.0.10.ebuild 14560
 MD5 74a407d1898d32d28f950b74acdb1925 asterisk-1.2.0.ebuild 8455
 MD5 58b3329253168e6dfb4c8ecbb98aeecd files/digest-asterisk-1.0.9-r2 210
 MD5 48a3518349e2abfe20fa918a9db5eea2 files/digest-asterisk-1.0.7-r2 210
 MD5 770c431ec679210d12c9e486a2fc2e92 files/digest-asterisk-1.2.0 217
 MD5 97ed00bdccf7c70d5fcbf37580da91c4 files/digest-asterisk-1.0.5-r3 139
 MD5 b3bbedde09faea609a0357b21eafa596 files/digest-asterisk-1.0.8-r1 210
+MD5 df9171e8435eddc50bfc453940e88053 files/digest-asterisk-1.0.10 211
 MD5 f399592939cd5b43b7851e20744a108e files/digest-asterisk-1.0.6-r2 210
 MD5 3932983fb155e026eb10533425174f59 files/1.2.0/asterisk-1.2.0_beta-ukcid.patch 5787
 MD5 f20e5b869d5e221194187dd7f504d38b files/1.0.0/asterisk-1.0.5-astcfg-0.0.2.diff 5829
@@ -26,6 +28,7 @@ MD5 ab552fbbe803766b5291d61942dbcd9f files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.d
 MD5 85e291d6eb70a24fdc82469ed53bfe54 files/1.0.0/asterisk.confd 283
 MD5 5e1e00b71a830e487787ce48be04ccdc files/1.0.0/asterisk-1.0.8-initgroups.diff 1558
 MD5 e993bfc45e54507214329e00b3a66966 files/1.0.0/asterisk-1.0.9-freetds.diff 854
+MD5 27bf961621fb1f521bc11293df8b5ec9 files/1.0.0/asterisk-1.0.10-weak-references.diff 8579
 MD5 c25cdb98ebd69a740014cd45bea1c9ba files/1.0.0/asterisk-1.0.9-vmail.cgi.patch 770
 MD5 517587756c674978b1b24891c34564fc files/1.0.0/asterisk-1.0.8-ptr64fix.diff 485
 MD5 1d5c7f8847a95005af3ffb0699bba20f files/1.0.0/asterisk.confd.sec 528
