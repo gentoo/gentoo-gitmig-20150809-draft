@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3-r1.ebuild,v 1.5 2005/01/29 21:18:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3-r1.ebuild,v 1.6 2005/12/02 23:03:46 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="dnshijacker is a libnet/libpcap based packet sniffer and spoofer"
+DESCRIPTION="a libnet/libpcap based packet sniffer and spoofer"
 HOMEPAGE="http://pedram.redhive.com/projects.php"
 SRC_URI="http://pedram.redhive.com/downloads/${P}.tar.gz"
 
