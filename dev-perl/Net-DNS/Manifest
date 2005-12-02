@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 35115503eff1fa9e1802e98d37934ed7 Net-DNS-0.53.ebuild 774
 MD5 bb3780cb9595c775e0c62475863ea0b1 Net-DNS-0.49.ebuild 715
 MD5 e9f4ca62fdb8928381dc5ea85e56deed Net-DNS-0.48.ebuild 714
@@ -8,3 +11,10 @@ MD5 fe491e837d717cae39abbdd563f8c68d files/digest-Net-DNS-0.48 63
 MD5 0cfbffeaefd7d5bb2a2aab012bdac919 files/digest-Net-DNS-0.49 64
 MD5 d2c5511c2d991c965452192c65473100 files/digest-Net-DNS-0.53 64
 MD5 d2c5511c2d991c965452192c65473100 files/digest-Net-DNS-0.53-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkM7aViELBEf1JB0RAkrkAJoCDjMV70xr1aE0yuCrigTqnoMtbACfeP2O
+3O+nKo4lHhudcxqJXrIWjZk=
+=Lz9t
+-----END PGP SIGNATURE-----

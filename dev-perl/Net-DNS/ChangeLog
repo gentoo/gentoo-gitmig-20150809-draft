@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.67 2005/12/01 22:18:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.68 2005/12/02 22:46:31 ferdy Exp $
+
+  02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> Net-DNS-0.53-r1.ebuild:
+  re-add ~alpha wrt bug #112508
 
   01 Dec 2005; Luis Medinas <metalgod@gentoo.org> Net-DNS-0.53-r1.ebuild:
   Added ~amd64 keyword. bug #112508.
