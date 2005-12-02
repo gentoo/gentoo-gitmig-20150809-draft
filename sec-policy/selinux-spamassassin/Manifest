@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 599d065e3bc1a2a2ed599990458ce13f ChangeLog 2492
+MD5 e13e87138be2e8c0f7102d26b929951b ChangeLog 2623
 MD5 6de8adf3e2560698eda37e4209e044ed files/digest-selinux-spamassassin-20050813 80
 MD5 8d5624e8838b69e5508850fa52ed0564 files/digest-selinux-spamassassin-20051124 80
 MD5 df50b670def71c1790352df31ff8c44f metadata.xml 303
 MD5 9a0e1be33c86b629ac7e002b57105806 selinux-spamassassin-20050813.ebuild 541
-MD5 4a34c10c6a68eac569728dd55d0f5725 selinux-spamassassin-20051124.ebuild 546
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFDisbDGSBEIeh4AEYRAmqmAJ9nDIH+TvRuW/gKcnj2aIIs42MCSQCdEqoP
-XNy76qPKW5y/6oxv3Or1A9g=
-=It9Z
------END PGP SIGNATURE-----
+MD5 55cbb4ee74f10b71c055620a528ff884 selinux-spamassassin-20051124.ebuild 541
