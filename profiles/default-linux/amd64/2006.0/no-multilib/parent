@@ -1,7 +1,1 @@
-# Copyright 2004-2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/parent,v 1.1 2005/10/07 02:22:32 eradicator Exp $
-
-# This file describes the parent profile to this.  In most cases this will
-# just be the name of the parent directory
 ..
