@@ -1,6 +1,16 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.95 2005/09/30 22:48:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.96 2005/12/02 19:40:37 nattfodd Exp $
+
+*tetex-3.0-r4 (02 Dec 2005)
+*tetex-2.0.2-r7 (02 Dec 2005)
+
+  02 Dec 2005; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/tetex-2.0.2-epstopdf-wrong-rotation.patch,
+  +files/tetex-3.0-epstopdf-wrong-rotation.patch, +tetex-2.0.2-r7.ebuild,
+  +tetex-3.0-r4.ebuild:
+  Bump to fix wrong rotation and handling of filenames with spaces in epstopdf
+  (bug #85404). Thanks to Fabio Rossi and Horst Schirmeier for the patch.
 
   30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> tetex-2.0.2-r5.ebuild:
   Stable on sh.
