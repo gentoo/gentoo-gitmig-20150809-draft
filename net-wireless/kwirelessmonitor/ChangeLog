@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/kwirelessmonitor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwirelessmonitor/ChangeLog,v 1.3 2005/01/06 19:23:49 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwirelessmonitor/ChangeLog,v 1.4 2005/12/02 18:39:15 flameeyes Exp $
+
+*kwirelessmonitor-0.5.91 (02 Dec 2005)
+
+  02 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +kwirelessmonitor-0.5.91.ebuild:
+  Added the development version for who wants to tinker with it. Seems to
+  crash on ppc at least again, see bug #105378.
 
   06 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   kwirelessmonitor-0.5.4.ebuild:
