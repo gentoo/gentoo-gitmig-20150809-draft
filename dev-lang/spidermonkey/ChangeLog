@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.11 2005/12/02 18:33:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.12 2005/12/02 20:34:12 jer Exp $
+
+  02 Dec 2005; Jeroen Roovers <jer@gentoo.org>
+  spidermonkey-1.5_rc6-r1.ebuild:
+  Added AR from toolchain-funs as well for the fun of it. Slight cleanup.
 
   02 Dec 2005; Jeroen Roovers <jer@gentoo.org>
   files/spidermonkey-1.5_rc6-va_copy-fix.patch,
