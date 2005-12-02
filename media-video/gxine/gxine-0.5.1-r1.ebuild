@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.1.ebuild,v 1.1 2005/11/29 23:11:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.1-r1.ebuild,v 1.1 2005/12/02 02:57:53 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -25,6 +25,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 SRC_URI="mirror://sourceforge/xine/${P}.tar.bz2"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-pixmap-fixup.patch"
+}
 
 src_compile() {
 	econf \
