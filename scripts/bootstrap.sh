@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.77 2005/11/20 03:08:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.78 2005/12/02 15:43:57 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -78,7 +78,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.77 2005/11/20 03:08:57 solar Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.78 2005/12/02 15:43:57 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo Linux bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -176,7 +176,7 @@ export ORIGUSE=$(portageq envvar USE)
 # Check for 'build' or 'bootstrap' in USE ...
 INVALID_USE=$(gawk -v ORIGUSE="${ORIGUSE}" '
 	BEGIN { 
-		if (ORIGUSE ~ /[[:space:]]*(build|bootstrap)[[:space:]]*/)
+		if (ORIGUSE ~ /[[:space:]](build|bootstrap)[[:space:]]/)
 			print "yes"
 	}')
 
