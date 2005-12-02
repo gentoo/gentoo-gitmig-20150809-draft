@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Inline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.28 2005/12/02 09:23:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.29 2005/12/02 22:24:15 ferdy Exp $
+
+  02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  Test-Inline-2.103.ebuild:
+  re-added ~alpha wrt bug #113367
 
   02 Dec 2005; Joseph Jezak <josejx@gentoo.org> Test-Inline-2.103.ebuild:
   Marked ~ppc for bug #113367.
