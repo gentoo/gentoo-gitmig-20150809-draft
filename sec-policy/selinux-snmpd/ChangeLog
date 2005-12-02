@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-snmpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snmpd/ChangeLog,v 1.9 2005/10/24 15:10:59 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snmpd/ChangeLog,v 1.10 2005/12/02 20:11:49 kaiowas Exp $
+
+  02 Dec 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-snmpd-20051023.ebuild:
+  mark stable on amd64 mips ppc sparc x86
 
 *selinux-snmpd-20051023 (24 Oct 2005)
 
