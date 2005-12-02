@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.469 2005/12/01 10:59:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.470 2005/12/02 22:35:15 halcy0n Exp $
+
+  02 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gcc-3.4.4-r1.ebuild:
+  Stable on x86
 
   01 Dec 2005; Guy Martin <gmsoft@gentoo.org> gcc-3.3.6.ebuild:
   Stable on hppa.
