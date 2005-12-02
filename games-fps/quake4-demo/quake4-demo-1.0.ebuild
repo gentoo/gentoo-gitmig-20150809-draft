@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.2 2005/12/02 13:10:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.3 2005/12/02 17:34:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -29,8 +29,7 @@ RDEPEND="sys-libs/glibc
 		app-emulation/emul-linux-x86-xlibs )
 	opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )
-	alsa? ( >=media-libs/alsa-lib-1.0.6 )
-	cdinstall? ( games-fps/quake4-data )"
+	alsa? ( >=media-libs/alsa-lib-1.0.6 )"
 
 S=${WORKDIR}
 
