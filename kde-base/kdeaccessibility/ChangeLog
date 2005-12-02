@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.85 2005/11/27 22:46:21 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.86 2005/12/02 15:48:56 cryos Exp $
+
+  02 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdeaccessibility-3.4.3-r1.ebuild:
+  Stable on amd64, bug 112842.
 
 *kdeaccessibility-3.4.3-r1 (27 Nov 2005)
 
