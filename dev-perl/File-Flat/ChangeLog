@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Flat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.19 2005/12/02 09:17:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.20 2005/12/02 22:14:08 ferdy Exp $
+
+  02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  File-Flat-0.95-r1.ebuild:
+  marked ~alpha wrt bug #113365
 
   02 Dec 2005; Joseph Jezak <josejx@gentoo.org> File-Flat-0.95-r1.ebuild:
   Marked ~ppc for bug #113365.
