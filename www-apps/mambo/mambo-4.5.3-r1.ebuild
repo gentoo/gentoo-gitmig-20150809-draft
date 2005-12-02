@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.3.ebuild,v 1.1 2005/11/30 21:52:32 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.3-r1.ebuild,v 1.1 2005/12/02 23:51:09 rl03 Exp $
 
 inherit webapp
 
-MY_P="${PN/M/m}V${PV}-Stable"
+MY_P="${PN/m/M}V${PV}"
 DESCRIPTION="Mambo is yet another CMS"
 HOMEPAGE="http://www.mamboserver.com/"
-SRC_URI="http://mamboforge.net/frs/download.php/4004/${MY_P}.tar.gz"
+SRC_URI="http://mamboforge.net/frs/download.php/7670/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
@@ -32,7 +32,7 @@ src_install () {
 	media language administrator/modules administrator/templates cache modules
 	templates"
 
-	dodoc CHANGELOG INSTALL
+	dodoc CHANGELOG.php INSTALL.php README
 
 	cp -R [^d]* ${D}/${MY_HTDOCSDIR}
 
