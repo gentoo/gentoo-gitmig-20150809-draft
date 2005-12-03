@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.10.ebuild,v 1.1 2005/12/02 03:42:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.10.ebuild,v 1.2 2005/12/03 00:24:05 stkn Exp $
 
 inherit eutils perl-app
 
@@ -308,6 +308,9 @@ src_unpack() {
 
 	# security fix, bug #11836
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.9-vmail.cgi.patch
+
+	# patch for mISDN
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.10-misdn.patch
 }
 
 src_compile() {

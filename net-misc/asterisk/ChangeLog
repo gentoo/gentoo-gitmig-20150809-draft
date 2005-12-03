@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.95 2005/12/02 03:42:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.96 2005/12/03 00:24:05 stkn Exp $
+
+  03 Dec 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.10-misdn.patch, asterisk-1.0.10.ebuild:
+  Added patch for chan_misdn support on asterisk-1.0.x as requested by genstef.
 
 *asterisk-1.0.10 (02 Dec 2005)
 
