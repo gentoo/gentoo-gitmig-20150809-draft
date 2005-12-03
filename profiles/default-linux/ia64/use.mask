@@ -80,3 +80,6 @@ pike
 timidity
 
 firebird
+
+# emacs segfaults during build
+xemacs
