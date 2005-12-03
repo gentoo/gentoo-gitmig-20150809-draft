@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.57-r1.ebuild,v 1.11 2005/11/27 18:03:26 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.57-r1.ebuild,v 1.12 2005/12/03 00:26:50 vapier Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -10,14 +10,13 @@ DESCRIPTION="courier authentication library"
 HOMEPAGE="http://www.courier-mta.org/"
 S="${WORKDIR}/${P%%_pre}"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt debug"
 RESTRICT="nouserpriv"
 
-DEPEND="virtual/libc
-		gdbm? ( sys-libs/gdbm )
+DEPEND="gdbm? ( sys-libs/gdbm )
 		!gdbm? ( >=sys-devel/autoconf-2.5 sys-libs/db )
 		>=dev-libs/openssl-0.9.6
 		pam? ( >=sys-libs/pam-0.75 )
@@ -25,11 +24,8 @@ DEPEND="virtual/libc
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		postgres? ( >=dev-db/postgresql-7.2 )"
 
-RDEPEND="virtual/libc
-		gdbm? ( sys-libs/gdbm )
+RDEPEND="gdbm? ( sys-libs/gdbm )
 		!gdbm? ( sys-libs/db )"
-
-filter-flags '-fomit-frame-pointer'
 
 src_unpack() {
 	if ! has_version 'dev-tcltk/expect' ; then
@@ -41,7 +37,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -e"s|^chk_file .* |&\${DESTDIR}|g" -i.orig authmigrate.in
-	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 	if ! use gdbm ; then
 		epatch ${FILESDIR}/configure-db4.patch
 		export WANT_AUTOCONF="2.5"
@@ -63,6 +58,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags '-fomit-frame-pointer'
+
 	local myconf
 	myconf="`use_with pam authpam` `use_with ldap authldap`"
 
