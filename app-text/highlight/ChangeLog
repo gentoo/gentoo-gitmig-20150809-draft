@@ -1,6 +1,11 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.1 2005/03/26 02:40:12 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.2 2005/12/03 07:58:06 pclouds Exp $
+
+*highlight-2.4.3 (03 Dec 2005)
+
+  03 Dec 2005; <pclouds@gentoo.org> +highlight-2.4.3.ebuild:
+  Version bump
 
 *highlight-2.2.9 (26 Mar 2005)
 
