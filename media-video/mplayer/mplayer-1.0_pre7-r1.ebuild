@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.12 2005/11/06 23:23:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.13 2005/12/03 09:30:02 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl cpudetection
-custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
+IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
+cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
-lirc live lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia vorbis opengl
-oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2
-win32codecs X xanim xinerama xmms xv xvid xvmc"
+lirc live livecd lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia
+vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype
+v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -198,25 +198,18 @@ src_compile() {
 		export LINGUAS="en ${LINGUAS}"
 	fi
 
-	if use custom-cflags ; then
-	# let's play the filtration game!  MPlayer hates on all!
-	strip-flags
 
-	# ugly optimizations cause MPlayer to cry on x86 systems!
-	if use x86 ; then
-		replace-flags -O0 -O2
-		replace-flags -O3 -O2
-		filter-flags -fPIC -fPIE
-	fi
-	else
-	unset CFLAGS CXXFLAGS
-	fi
+
 	#FIXME make it work in the snapshot
 	local myconf="--disable-x264"
 	################
 	#Optional features#
 	###############
-	myconf="${myconf} $(use_enable cpudetection runtime-cpudetection)"
+	if use cpudetection || use livecd || use bindist
+	then
+	myconf="${myconf} --enable-runtime-cpudetection"
+	fi
+
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	myconf="${myconf} $(use_enable cdparanoia)"
 	if use dvd; then
@@ -414,7 +407,21 @@ src_compile() {
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
 	echo "${myconf}" > ${T}/configure-options
 
-	./configure \
+	if use custom-cflags
+	then
+	# let's play the filtration game!  MPlayer hates on all!
+	strip-flags
+	# ugly optimizations cause MPlayer to cry on x86 systems!
+		if use x86 ; then
+			replace-flags -O0 -O2
+			replace-flags -O3 -O2
+			filter-flags -fPIC -fPIE
+		fi
+	else
+	unset CFLAGS CXXFLAGS
+	fi
+
+	CFLAGS="$CFLAGS" ./configure \
 		--prefix=/usr \
 		--confdir=/usr/share/mplayer \
 		--datadir=/usr/share/mplayer \
