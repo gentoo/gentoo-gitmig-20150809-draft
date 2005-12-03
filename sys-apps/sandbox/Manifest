@@ -6,11 +6,11 @@ MD5 97d135bb57b8e72a00cb615055d919cc files/digest-sandbox-1.2.12 67
 MD5 ed12f6dab5b8d733c60a6495cbaa43a9 files/digest-sandbox-1.2.16 67
 MD5 4a6b419321a7e1ee609c8af41905ff1b metadata.xml 337
 MD5 3bd9114811a6ab32056c15562df7c540 sandbox-1.2.12.ebuild 3160
-MD5 59a25aeec8104a87a4e1757f339e4efd sandbox-1.2.16.ebuild 3106
+MD5 f4609f8335c1cf5310bf8f8580497233 sandbox-1.2.16.ebuild 3050
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDkES21ZcsMnZjRyIRAg5kAJ40SjBU+QpfdM694jozmCtnOB83qwCfTD8m
-vOt3hG/6UpHzsIarVgqrlpw=
-=9KZC
+iD8DBQFDkfgngIKl8Uu19MoRAr73AJ9Xcb0ItMjUoJJlt4VH13sNq8PAuQCdErgl
+HTZ1dWOPvFQzgkfy/klLZ7o=
+=EyOH
 -----END PGP SIGNATURE-----

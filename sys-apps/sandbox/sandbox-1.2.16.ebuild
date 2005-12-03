@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.16.ebuild,v 1.1 2005/12/02 12:48:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.16.ebuild,v 1.2 2005/12/03 19:52:40 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -66,8 +66,8 @@ src_compile() {
 
 	[[ -n ${CBUILD} && ${CBUILD} != ${CHOST} ]] && iscross=1
 
-	OABI="${ABI}"
-	OCHOST="${CHOST}"
+	OABI=${ABI}
+	OCHOST=${CHOST}
 	for ABI in $(get_install_abis); do
 		mkdir "${WORKDIR}/build-${ABI}-${OCHOST}"
 		cd "${WORKDIR}/build-${ABI}-${OCHOST}"
@@ -89,27 +89,26 @@ src_compile() {
 			die "emake failed for ${ABI}"
 		}
 	done
-	ABI="${OABI}"
+	ABI=${OABI}
+	CHOST=${OCHOST}
 }
 
 src_install() {
 	setup_multilib
 
-	OABI="${ABI}"
+	OABI=${ABI}
 	for ABI in $(get_install_abis); do
 		cd "${WORKDIR}/build-${ABI}-${CHOST}"
 		einfo "Installing sandbox for ABI=${ABI}..."
 		make DESTDIR="${D}" install || die "make install failed for ${ABI}"
 	done
-	ABI="${OABI}"
+	ABI=${OABI}
 
 	keepdir /var/log/sandbox
 	fowners root:portage /var/log/sandbox
 	fperms 0770 /var/log/sandbox
 
-	for x in "${S}"/{AUTHORS,COPYING,ChangeLog,NEWS,README} ; do
-		[[ -s ${x} ]] && dodoc "${x}"
-	done
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_preinst() {
