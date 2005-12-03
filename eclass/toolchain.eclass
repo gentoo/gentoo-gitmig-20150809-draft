@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.224 2005/12/03 04:40:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.225 2005/12/03 21:37:33 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1959,10 +1959,11 @@ should_we_gcc_config() {
 	use build && return 0
 
 	# if the current config is invalid, we definitely want a new one
+	local curr_config
 	if has_version 'app-admin/eselect-compiler' ; then
-		env -i eselect compiler show ${CTARGET} >&/dev/null || return 0
+		curr_config=$(env -i eselect compiler show ${CTARGET} 2>&1) || return 0
 	else
-		env -i gcc-config -c ${CTARGET} >&/dev/null || return 0
+		curr_config=$(env -i gcc-config -c ${CTARGET} 2>&1) || return 0
 	fi
 
 	# if the previously selected config has the same major.minor (branch) as
@@ -1972,7 +1973,7 @@ should_we_gcc_config() {
 	if has_version 'app-admin/eselect-compiler' ; then
 		curr_config_ver=$(env -i eselect compiler show ${CTARGET} | cut -f1 -d/ | awk -F - '{ print $5 }')
 	else
-		curr_config_ver=$(env -i gcc-config -S $(gcc-config -c ${CTARGET}) | awk '{print $2}')
+		curr_config_ver=$(env -i gcc-config -S ${curr_config} | awk '{print $2}')
 	fi
 
 	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
@@ -2013,7 +2014,7 @@ do_gcc_config() {
 		if has_version 'app-admin/eselect-compiler' ; then
 			eselect compiler update
 		else
-			gcc-config --use-old --force
+			env -i gcc-config --use-old --force
 		fi
 		return 0
 	fi
