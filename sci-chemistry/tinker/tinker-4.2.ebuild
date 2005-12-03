@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2.ebuild,v 1.1 2005/12/03 20:20:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2.ebuild,v 1.2 2005/12/03 20:29:18 spyderous Exp $
 
 inherit fortran toolchain-funcs
 
@@ -128,4 +128,5 @@ pkg_postinst() {
 	einfo "Parameter files installed to ${ROOT}usr/share/tinker/params."
 	einfo "Call the Java X front-end, Force-Field Explorer, with 'tinker.'"
 	einfo "It doesn't seem to detect installed Java3D yet, fixes welcome."
+	einfo "You must edit ${ROOT}usr/bin/tinker if you aren't using Blackdown."
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/tinker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.1 2005/12/03 20:20:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.2 2005/12/03 20:29:18 spyderous Exp $
+
+  03 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; tinker-4.2.ebuild:
+  Note that tinker script has hardcoded blackdown in it. This is needed
+  because java-config's exit codes return 0, even on failure.
 
 *tinker-4.2 (03 Dec 2005)
 
