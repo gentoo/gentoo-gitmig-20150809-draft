@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.34 2005/10/02 19:14:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.35 2005/12/03 14:42:54 spock Exp $
+
+  03 Dec 2005; Michał Januszewski <spock@gentoo.org> fbi-1.31-r2.ebuild:
+  Added libFS dependency (bug #113713).
 
 *fbi-1.31-r2 (02 Oct 2005)
 

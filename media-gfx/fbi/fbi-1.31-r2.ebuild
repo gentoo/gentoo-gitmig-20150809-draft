@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31-r2.ebuild,v 1.1 2005/10/02 19:14:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31-r2.ebuild,v 1.2 2005/12/03 14:42:54 spock Exp $
 
 inherit toolchain-funcs eutils
 
@@ -19,7 +19,7 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( media-libs/tiff )
 	curl? ( net-misc/curl )
 	lirc? ( app-misc/lirc )
-	X? ( virtual/x11 )
+	X? ( || ( <=x11-base/xorg-x11-6.99 x11-libs/libFS ) )
 	media-libs/libexif
 	!media-gfx/fbida"
 
