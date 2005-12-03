@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e4bd617e5be51f0c3d0c21e75f5f80ce ChangeLog 713
 MD5 e3ba1f7cb15c9c1e7f4265cb95a81157 files/digest-mule-base-1.42 69
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
-MD5 250d2917e39718c80551ad90171ad970 mule-base-1.42.ebuild 478
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi8ybgIKl8Uu19MoRAvpPAJ0Q7HjnIbc7zQTRL0ZjcbyuqfdQnACfeifx
-chc8marrTzMKjYfbL1wuCkM=
-=ToYX
------END PGP SIGNATURE-----
+MD5 85049f81d7707ad6bc93c040a0d65932 mule-base-1.42.ebuild 484
