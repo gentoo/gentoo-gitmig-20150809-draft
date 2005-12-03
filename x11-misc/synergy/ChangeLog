@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.37 2005/11/11 22:04:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.38 2005/12/03 18:00:38 nakano Exp $
+
+*synergy-1.2.6 (03 Dec 2005)
+
+  03 Dec 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/synergy-1.2.6-print-buffer.patch, +synergy-1.2.6.ebuild:
+  version bump.
 
   12 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/synergy-1.2.5-print-buffer.patch, synergy-1.2.5.ebuild:
