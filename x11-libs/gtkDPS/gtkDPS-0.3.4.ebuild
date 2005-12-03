@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.18 2005/04/14 20:36:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.19 2005/12/03 17:52:50 nichoj Exp $
 
-inherit gnuconfig
+inherit gnuconfig multilib
 
 IUSE="nls"
 
@@ -27,7 +27,7 @@ src_compile() {
 	fi
 
 	./configure --prefix=/usr --host=${CHOST} \
-		--with-x --with-dps $myconf || die
+		--with-x --with-dps $myconf --libdir=${D}/usr/$(get_libdir) || die
 	#Very ugly workaround 
 	use nls && echo '#define LOCALEDIR "/usr/share/locale"' >> config.h
 	make || die
