@@ -1,4 +1,14 @@
-MD5 fded49b3b47a0119a221e4cd06d71b76 XML-Generator-0.99.ebuild 608
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9fd2ec74464ecd88f9975807b1e9de51 ChangeLog 2127
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 489551218fb0780f1b23c194ab86ef51 XML-Generator-0.99.ebuild 612
 MD5 5ea50090b3948784d386d0842179ae2b files/digest-XML-Generator-0.99 69
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkfo+gIKl8Uu19MoRAmbrAJsEqjs4V04/NzjTQLFHpqbd62LXIwCeNmnl
+XVnZI5X5CHaeWQSeSgwkKYk=
+=tkYv
+-----END PGP SIGNATURE-----
