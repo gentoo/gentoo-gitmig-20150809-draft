@@ -4,9 +4,11 @@ MD5 a74c3fb974de450705cbbfa61ea59f0d asterisk-chan_sccp-0.0.20050902.ebuild 1221
 MD5 ea7d05044e9fd969f20575c1eb28831f asterisk-chan_sccp-0.0.20050807.ebuild 1220
 MD5 a9c007ccad69028c5657307f7bec6b6d asterisk-chan_sccp-0.0.20051118.ebuild 1221
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 cc4edfe1c504fbc862350e79762f3ebc ChangeLog 2339
+MD5 e6544b0691336066bdc2ad70ab0be1aa ChangeLog 2496
+MD5 acfe5ae0e3d48013eda9cf23b802923c asterisk-chan_sccp-0.0.20051125.ebuild 1221
 MD5 47e629b670190e58d8a5c9bc69987c48 asterisk-chan_sccp-0.0.20050922.ebuild 1221
 MD5 fa358f255e2c823b7d384ec8331e1f62 asterisk-chan_sccp-0.0.20050906.ebuild 1221
+MD5 b096883926efa619bbfacaf42190299f files/digest-asterisk-chan_sccp-0.0.20051125 70
 MD5 e7ee89da9be491c3bc8d35ec082fb77d files/chan_sccp-20050902-gentoo.diff 2219
 MD5 1d84bf73ca6681166fd5b99c041781a7 files/digest-asterisk-chan_sccp-0.0.20051118 70
 MD5 698d7cb54349753768338e8fc98c866b files/digest-asterisk-chan_sccp-0.0.20050906 70
