@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.3 2005/12/03 16:12:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.4 2005/12/03 17:30:54 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -174,7 +174,7 @@ src_unpack() {
 
 	cp ${FILESDIR}/get_dvb_firmware-1 get_dvb_firmware
 	sed -i get_dvb_firmware \
-		-e "s#/tmp#${T}#g" \
+		-e "s#/tmp#${T}#g"
 
 	# firmwares which have to be downloaded seperately
 	for ((CARD=0; CARD < ${#FW_NAMES[*]}; CARD++)) do
