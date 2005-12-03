@@ -1,14 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/vdict-1.94.ebuild,v 1.3 2005/12/03 10:29:16 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/vdict-1.97.ebuild,v 1.1 2005/12/03 10:29:16 pclouds Exp $
 
 inherit eutils
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 DESCRIPTION="Vdict - Vietnamese Dictionary"
-SRC_URI="mirror://sourceforge/xvnkb/${P}.tar.bz2"
+SRC_URI="http://xvnkb.sourceforge.net/vdict/${P}.tar.bz2
+	mirror://gentoo/${PN}-patches-${PV}.tar.bz2"
+#	http://dev.gentoo.org/~pclouds/${PN}-patches-${PV}.tar.bz2"
 HOMEPAGE="http://xvnkb.sourceforge.net/?menu=vdict&lang=en"
 IUSE=""
 DEPEND="x11-libs/qt
