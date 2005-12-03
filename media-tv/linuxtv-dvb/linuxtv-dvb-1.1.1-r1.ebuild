@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.8 2005/09/15 20:05:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.9 2005/12/03 17:01:49 zzam Exp $
 
 inherit eutils kernel-mod
 
-DVB_TTPCI_FW="dvb-ttpci-01.fw-261c"
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
-SRC_URI="http://www.linuxtv.org/download/dvb/${P}.tar.bz2
-		http://www.linuxtv.org/download/dvb/firmware/${DVB_TTPCI_FW}"
+SRC_URI="http://www.linuxtv.org/download/dvb/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ppc ~x86"
@@ -84,14 +82,6 @@ src_install() {
 	dodoc HOWTO-use-the-demux-api \
 	README.valgrind HOWTO-use-the-frontend-api \
 	convert.sh valgrind-2.1.0-dvb.patch
-
-	# install dvb-ttpci firmware
-	if has_version '>=sys-apps/hotplug-20040920'; then
-		insinto /lib/firmware
-	else
-		insinto /usr/lib/hotplug/firmware
-	fi
-	donewins ${DISTDIR}/${DVB_TTPCI_FW} dvb-ttpci-01.fw
 }
 
 pkg_postinst() {
@@ -102,6 +92,8 @@ pkg_postinst() {
 	einfo "Call it using 'dvb-module-load {load|debug|unload}'."
 	einfo
 	einfo "For information about firmware please see /usr/share/doc/${PF}/README."
+	einfo
+	einfo "Firmware-files can be found in media-tv/linuxtv-dvb-firmware"
 	einfo
 
 	if kernel-mod_is_2_4_kernel; then
@@ -115,8 +107,8 @@ pkg_postinst() {
 			einfo "2.6.1 and above is regularily kept up-to-date."
 			einfo "Therefore it is very likely that your kernel"
 			einfo "has newer modules then the latest release."
-			einfo "This ebuild will just install the dvb-ttpci"
-			einfo "firmware and docs on kernel 2.6 machines."
+			einfo "This ebuild will just install the docs"
+			einfo "on kernel 2.6 machines."
 			einfo
 	fi
 }
