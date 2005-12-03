@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/mtx-1.2.18.ebuild,v 1.2 2005/05/04 23:46:49 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/mtx-1.2.18.ebuild,v 1.3 2005/12/03 18:25:37 tgall Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mtx.sourceforge.net"
 LICENSE="GPL-2"
 DEPEND="virtual/libc"
 SRC_URI="ftp://ftp.badtux.net/pub/storage/${PN}/${P}rel.tar.gz"
-KEYWORDS="x86 amd64 sparc alpha ppc hppa ~ppc64"
+KEYWORDS="x86 amd64 sparc alpha ppc hppa ppc64"
 SLOT="0"
 
 src_unpack() {
