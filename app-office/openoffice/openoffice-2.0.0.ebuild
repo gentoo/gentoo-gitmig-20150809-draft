@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.20 2005/12/03 11:30:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.21 2005/12/03 18:53:16 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -8,10 +8,9 @@ IUSE="curl eds gnome gtk java kde ldap mozilla nas zlib xml2"
 
 MY_PV="${PV}.2"
 PATCHLEVEL="OOO680"
-PATCHDIR="${WORKDIR}/ooo-build-${MY_PV}"
 SRC="OOO_2_0_0"
-S="${WORKDIR}/${SRC}"
-CONFFILE="${PATCHDIR}/distro-configs/Gentoo.conf.in"
+S="${WORKDIR}/ooo-build-${MY_PV}"
+CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
 SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
@@ -118,7 +117,6 @@ pkg_setup() {
 
 src_unpack() {
 
-	cd ${WORKDIR}
 	unpack ooo-build-${MY_PV}.tar.gz
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
@@ -157,7 +155,7 @@ src_compile() {
 	# Make sure gnome-users get gtk-support
 	export GTKFLAG="`use_enable gtk`" && use gnome && GTKFLAG="--enable-gtk"
 
-	cd ${PATCHDIR}
+	cd ${S}
 	autoconf || die
 	./configure ${MYCONF} \
 		--with-distro="${DISTRO}" \
@@ -200,12 +198,11 @@ src_compile() {
 src_install() {
 
 	einfo "Preparing Installation"
-	cd ${PATCHDIR}
 	make DESTDIR=${D} install || die "Installation failed!"
 
 	# Install corrected Symbol Font
 	insinto /usr/share/fonts/TTF/
-	doins ${PATCHDIR}/fonts/*.ttf
+	doins fonts/*.ttf
 
 }
 
