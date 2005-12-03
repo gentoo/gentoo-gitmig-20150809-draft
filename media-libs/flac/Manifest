@@ -9,13 +9,13 @@ MD5 d251cedb35cba423848e2e708f0f0773 files/flac-1.1.1-altivec.patch.gz 5705
 MD5 bf28df385b4747a614fb93e31411b5de files/flac-1.1.1-libtool.patch 4041
 MD5 97d7acba1f1548757a56330dd8ba7aa0 files/flac-1.1.1-m4.patch 1175
 MD5 fd56b1b8ffec55c61c135ead55df01e6 flac-1.1.1.ebuild 1650
-MD5 b78da34d0be8ea0197bbcec57537e7bf flac-1.1.2-r3.ebuild 1774
+MD5 c80227bc963a5b36da2abd45cf12a518 flac-1.1.2-r3.ebuild 1770
 MD5 eff31071fae53fed4a82458af09000ca flac-1.1.2-r4.ebuild 1833
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDivZQAiZjviIA2XgRAlcTAJ9db/2ywFYedz/dXh189B9giO72EACfZa66
-yQ47vS9H967QLgIHLItYoQg=
-=r3ch
+iD8DBQFDkfn5gIKl8Uu19MoRAlNWAKCAxgTc9ljyRtCf5Z6q8na9wVVwdwCfXpgX
+FWTascwyDRcvDiSuq0rwa7Q=
+=uh2/
 -----END PGP SIGNATURE-----
