@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.29 2005/11/13 09:48:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.30 2005/12/03 20:23:10 carlo Exp $
+
+*lzo-2.02-r1 (03 Dec 2005)
+
+  03 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +lzo-2.02-r1.ebuild:
+  Add examples only when wanted.
 
 *lzo-2.02 (13 Nov 2005)
 
