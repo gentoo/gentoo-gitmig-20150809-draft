@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051202.ebuild,v 1.1 2005/12/03 20:19:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051202.ebuild,v 1.2 2005/12/03 20:45:19 vapier Exp $
 
 ETYPE="gcc-compiler"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-*"
 
 RDEPEND="!sys-devel/hardened-gcc
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	fortran? (
