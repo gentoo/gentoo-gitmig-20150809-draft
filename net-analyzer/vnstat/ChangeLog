@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.10 2005/05/23 00:46:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.11 2005/12/03 19:22:32 tgall Exp $
+
+  03 Dec 2005; Tom Gall <tgall@gentoo.org> vnstat-1.4-r1.ebuild:
+  stable on ppc64
 
 *vnstat-1.4-r1 (23 May 2005)
 
