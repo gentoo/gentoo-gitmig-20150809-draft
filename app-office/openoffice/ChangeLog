@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.158 2005/11/30 06:57:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.159 2005/12/03 11:30:44 suka Exp $
+
+  03 Dec 2005; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.0/gentoo-2.0.0.diff, -files/2.0.0/buildfix-new-xslt.diff,
+  -files/2.0.0/nojava-fix-stringparam.diff, openoffice-2.0.0.ebuild:
+  Silently update the ooo-build to 2.0.0.2, nothing new in there just all our
+  fixes have gone upstream :)
 
   30 Nov 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.0.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.19 2005/11/30 06:57:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.20 2005/12/03 11:30:44 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="curl eds gnome gtk java kde ldap mozilla nas zlib xml2"
 
-MY_PV="${PV}.1"
+MY_PV="${PV}.2"
 PATCHLEVEL="OOO680"
 PATCHDIR="${WORKDIR}/ooo-build-${MY_PV}"
 SRC="OOO_2_0_0"
@@ -121,20 +121,12 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ooo-build-${MY_PV}.tar.gz
 
-	#Some fixes for our patchset
-	cd ${PATCHDIR}
-	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
-
-	#Additional and new patches get here
-	cp -pPRf ${FILESDIR}/${PV}/nojava-fix-stringparam.diff ${PATCHDIR}/patches/src680 || die
-	cp -pPRf ${FILESDIR}/${PV}/buildfix-new-xslt.diff ${PATCHDIR}/patches/src680 || die
-
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
-	use nas &&    echo "--with-system-nas" >> ${CONFFILE} || echo "--without-nas" >> ${CONFFILE}
+	use nas && echo "--with-system-nas" >> ${CONFFILE} || echo "--without-nas" >> ${CONFFILE}
 
 	echo "`use_with curl system-curl`" >> ${CONFFILE}
 	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
