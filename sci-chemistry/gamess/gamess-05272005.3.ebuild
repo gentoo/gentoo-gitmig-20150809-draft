@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.ebuild,v 1.1 2005/09/20 02:20:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.3.ebuild,v 1.1 2005/12/03 18:26:15 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
 HOMEPAGE="http://www.msg.ameslab.gov/GAMESS/GAMESS.html"
-SRC_URI="${PN}-current.tar.gz"
+SRC_URI="${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -27,14 +27,16 @@ RDEPEND="app-shells/tcsh
 S="${WORKDIR}/${PN}"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
+GAMESS_VERSION="27 JUN 2005 (R3)"
+
 
 pkg_nofetch() {
 	echo
 	einfo "Please download ${PN}-current.tar.gz from"
-	einfo "${GAMESS_DOWNLOAD}"
-	einfo "after agreeing to the license and then move it to "
-	einfo "${DISTDIR}"
-	einfo "Be sure to select the version 27 JUN 2005 tarball!!"
+	einfo "${GAMESS_DOWNLOAD}."
+	einfo "Be sure to select the version ${GAMESS_VERSION} tarball!!"
+	einfo "Then move the tarball to"
+	einfo "${DISTDIR}/${P}.tar.gz"
 	echo
 }
 
@@ -175,6 +177,10 @@ src_install() {
 	insinto /usr/share/${PN}/ericfmt
 	doins ericfmt.dat || die "Failed installing ericfmt.dat"
 
+	# install mcpdata
+	insinto /usr/share/${PN}/mcpdata
+	doins mcpdata/* || die "Failed installing mcpdata"
+
 	# install rungms, also supply a copy for the test	
 	# files
 	insinto /usr/share/${PN}/rungms
@@ -201,6 +207,10 @@ pkg_postinst() {
 	ewarn "To do so copy the content of /usr/share/gamess/tests"
 	ewarn "to some temporary location and execute './runall'. "
 	ewarn "Please consult TEST.DOC and the other docs!"
+	ewarn "NOTE: Due to a g77 implementation issue the TDHF code"
+	ewarn "      currently does not work and exam39 will, therefore,"
+	ewarn "      not run properly. Please watch bug #114367 "
+	ewarn "      for this issue!"
 
 	if use ifc; then
 		echo

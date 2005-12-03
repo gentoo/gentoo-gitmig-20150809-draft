@@ -1,10 +1,7 @@
-# patch to make rungms wrapper script for GAMESS work on our
-# gentoo install
-
---- gamess/rungms	2005-07-23 20:33:54.000000000 +0000
-+++ gamess-gentoo/rungms	2005-09-04 17:01:19.000000000 +0000
-@@ -39,7 +39,7 @@
- #       its own list of further requirements.
+--- gamess/rungms	2005-11-10 22:03:42.000000000 +0000
++++ gamess-new//rungms	2005-12-02 18:47:25.000000000 +0000
+@@ -54,7 +54,7 @@
+ #       of using LoadLeveler via a "llgms" front end in ~/gamess/misc.
  #
  set TARGET=sockets
 -set SCR=/scr/$USER
@@ -12,33 +9,36 @@
  #
  set JOB=$1      # name of the input file xxx.inp, give only the xxx part
  set VERNO=$2    # revision number of the executable created by 'lked' step
-@@ -90,11 +90,11 @@
- #  is therefore most suitable to be stored only once, on the file server.
+@@ -113,13 +113,13 @@
  #
  set echo
+ #                        three ASCII input files (see explanation above)
 -setenv ERICFMT ~mike/gamess/ericfmt.dat
+-setenv MCPPATH ~mike/gamess/mcpdata
 +setenv ERICFMT /usr/share/gamess/ericfmt/ericfmt.dat
++setenv MCPPATH /usr/share/gamess/mcpdata
  setenv  EXTBAS /dev/null
--setenv IRCDATA ~/scr/$JOB.irc
+ #
+-setenv IRCDATA ~$USER/scr/$JOB.irc
 +setenv IRCDATA $SCR/$JOB.irc
  setenv   INPUT $SCR/$JOB.F05
--setenv   PUNCH ~/scr/$JOB.dat
+-setenv   PUNCH ~$USER/scr/$JOB.dat
 +setenv   PUNCH $SCR/$JOB.dat
  setenv  AOINTS $SCR/$JOB.F08
  setenv  MOINTS $SCR/$JOB.F09
  setenv DICTNRY $SCR/$JOB.F10
-@@ -124,8 +124,8 @@
+@@ -149,8 +149,8 @@
  setenv  SOINTY $SCR/$JOB.F32
  setenv  SOINTZ $SCR/$JOB.F33
  setenv  SORESC $SCR/$JOB.F34
--setenv   SIMEN ~/scr/$JOB.simen
--setenv  SIMCOR ~/scr/$JOB.simcor
+-setenv   SIMEN ~$USER/scr/$JOB.simen
+-setenv  SIMCOR ~$USER/scr/$JOB.simcor
 +setenv   SIMEN $SCR/$JOB.simen
 +setenv  SIMCOR $SCR/$JOB.simcor
  setenv GCILIST $SCR/$JOB.F37
  setenv HESSIAN $SCR/$JOB.F38
  setenv SOCCDAT $SCR/$JOB.F40
-@@ -266,7 +266,7 @@
+@@ -291,7 +291,7 @@
     if ($os == HP-UX)   set GMSPATH=/zr/mike/gamess
     if ($os == IRIX)    set GMSPATH=/home/hbar4/people/schmidt/gamess
     if ($os == IRIX64)  set GMSPATH=/home/hbar4/people/schmidt/gamess

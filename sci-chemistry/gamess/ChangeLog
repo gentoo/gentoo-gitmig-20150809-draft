@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.2 2005/11/08 17:13:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.3 2005/12/03 18:26:15 markusle Exp $
+
+*gamess-05272005.3 (03 Dec 2005)
+
+  03 Dec 2005; Markus Dittrich <markusle@gentoo.org>
+  files/rungms-gentoo.patch, -gamess-05272005.ebuild,
+  +gamess-05272005.3.ebuild:
+  Bumped GAMESS to most recent version and changed ebuild naming to properly
+  reflect the revision number; this fixes bug #114278. Removed old ebuild.
 
   08 Nov 2005; Markus Dittrich <markusle@gentoo.org> ChangeLog:
   marked gamess-05272005.ebuild as ~x86
