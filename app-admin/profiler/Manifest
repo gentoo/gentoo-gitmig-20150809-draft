@@ -1,5 +1,15 @@
-MD5 3e9db7a52284b5a43a048af9893d5504 ChangeLog 740
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 c15e81331a6517bffc55bc2fd76d70eb profiler-1.ebuild 620
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f172d362627801f41df00fdc6ca86f5c ChangeLog 830
 MD5 6c35ed2bdc409eb3e192074a62d4b126 files/digest-profiler-1 57
 MD5 a4eec5d25436a57dbd0c09113f27f2a4 files/profiler 62
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 fb7339ac75c0bc591cba67c8087b9f50 profiler-1.ebuild 630
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkd5nndWRXhKOboURAiR7AJ9W53mDEtjkrCFS/A2ml/CazLQpQQCg8Zaf
+RfkPIGhMnWNUV4092Q1jJmM=
+=rKPN
+-----END PGP SIGNATURE-----
