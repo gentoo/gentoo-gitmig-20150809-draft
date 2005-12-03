@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.17 2005/10/23 12:26:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.18 2005/12/03 17:16:27 tgall Exp $
+
+  03 Dec 2005; Tom Gall <tgall@gentoo.org> w3m-0.5.1-r3.ebuild:
+  stable on ppc64
 
   23 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> w3m-0.5.1-r3.ebuild:
   Fixed dependency issue, Bug 108228.
