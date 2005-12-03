@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.3 2005/11/02 08:48:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.4 2005/12/03 21:12:46 nerdboy Exp $
 
-inherit eutils libtool gnuconfig distutils
+inherit eutils libtool gnuconfig distutils toolchain-funcs
 
 IUSE="jpeg png geos gif jasper netcdf hdf hdf5 python postgres \
 	odbc sqlite ogdi fits gml doc debug"
@@ -36,13 +36,16 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	jasper? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( sci-libs/geos )
-	sqlite? ( dev-db/sqlite )
+	sqlite? ( >=dev-db/sqlite-3* )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-installpathfix.patch || die "epatch failed"
+	epatch ${FILESDIR}/${P}-installpathfix.patch || die "installpath patch failed"
+	if [ $(gcc-major-version) -eq 4 ] ; then
+	    epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+	fi
 	elibtoolize --patch-only
 	gnuconfig_update
 	if useq netcdf && useq hdf; then

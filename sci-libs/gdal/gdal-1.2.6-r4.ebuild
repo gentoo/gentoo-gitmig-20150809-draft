@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r4.ebuild,v 1.6 2005/11/21 19:36:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r4.ebuild,v 1.7 2005/12/03 21:12:46 nerdboy Exp $
 
-inherit eutils libtool gnuconfig distutils
+inherit eutils libtool gnuconfig distutils toolchain-funcs
 
 IUSE="jpeg png geos gif jasper netcdf hdf python postgres mysql sqlite \
 	odbc ogdi fits gml doc debug"
@@ -13,7 +13,7 @@ SRC_URI="http://dl.maptools.org/dl/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa ~ppc64"
 
@@ -38,13 +38,16 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	jasper? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( sci-libs/geos )
-	sqlite? ( dev-db/sqlite )
+	sqlite? ( >=dev-db/sqlite-3* )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-installpathfix.patch || die "epatch failed"
+	if [ $(gcc-major-version) -eq 4 ] ; then
+	    epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+	fi
 	elibtoolize --patch-only
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
