@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.64 2005/11/21 23:03:06 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.65 2005/12/03 11:55:14 mkay Exp $
+
+  03 Dec 2005; Marcin Kryczek <mkay@gentoo.org> xmule-1.12.0.ebuild:
+  Adding flag-o-matic to inherit
 
 *xmule-1.12.0 (21 Nov 2005)
 
