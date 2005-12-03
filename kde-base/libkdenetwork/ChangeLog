@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdenetwork
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.24 2005/11/29 03:44:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.25 2005/12/03 21:08:18 kloeri Exp $
+
+  03 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
+  libkdenetwork-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> libkdenetwork-3.5.0.ebuild:
   Added ~sparc keyword.
