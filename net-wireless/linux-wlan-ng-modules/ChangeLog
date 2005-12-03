@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/linux-wlan-ng-modules
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.3 2005/11/02 20:44:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.4 2005/12/03 11:52:53 blubb Exp $
+
+  03 Dec 2005; Simon Stelling <blubb@gentoo.org>
+  linux-wlan-ng-modules-0.2.2-r1.ebuild:
+  marked ~amd64 (bug 107794)
 
 *linux-wlan-ng-modules-0.2.2-r1 (02 Nov 2005)
 
