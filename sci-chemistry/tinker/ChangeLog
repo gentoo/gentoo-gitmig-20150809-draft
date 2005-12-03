@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/tinker
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.1 2005/12/03 20:20:35 spyderous Exp $
+
+*tinker-4.2 (03 Dec 2005)
+
+  03 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +tinker-4.2.ebuild:
+  (#35945) New molecular mechanics package. Heavily modified ebuild based on
+  that of Jeremy Warren <jwarren@cheesefoam.dyndns.org>.
+
