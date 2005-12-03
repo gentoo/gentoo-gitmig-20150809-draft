@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f604e143e7e0c79b84a7ca014cd5e61 ChangeLog 901
 MD5 15806c6a539e3c16e7e97c6311ce501e files/digest-fsf-compat-1.11 69
 MD5 8d91bb59184b9161508ba4e3f29d8ecc files/digest-fsf-compat-1.12 69
 MD5 6b35f73de78c0644ee150ae703c5bef0 fsf-compat-1.11.ebuild 403
 MD5 c442c5cf9038802d5577577c6c1819be fsf-compat-1.12.ebuild 423
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDkf2mgIKl8Uu19MoRAjh5AJMHC1PZHPIDuTFIHN3Jd1af+C3JAJ0TQutZ
+7nMF0BJAvs4yMiwgWjkEOA==
+=sKjB
+-----END PGP SIGNATURE-----
