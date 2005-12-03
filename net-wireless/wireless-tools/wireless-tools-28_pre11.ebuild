@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre11.ebuild,v 1.1 2005/12/02 21:45:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre11.ebuild,v 1.2 2005/12/03 12:57:51 brix Exp $
 
 inherit toolchain-funcs multilib
 
@@ -60,6 +60,8 @@ src_install() {
 				insinto /usr/share/man/${lang}/man${man}
 				doins ${lang}/*.${man}
 			done
+
+			[[ -f README.${lang} ]] && dodoc README.${lang}
 		done
 	fi
 
