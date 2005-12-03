@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.17 2005/12/01 10:59:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.18 2005/12/03 19:33:51 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.3"
@@ -40,7 +40,7 @@ KEYWORDS="-* ~alpha ~amd64 hppa -ia64 ~sparc x86"
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
-RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
+RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	elibc_glibc? ( >=sys-libs/glibc-2.3.2-r9 )
