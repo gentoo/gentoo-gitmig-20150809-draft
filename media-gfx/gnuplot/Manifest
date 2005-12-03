@@ -10,12 +10,12 @@ MD5 6bd90ea3b0173af9fe24085ca37fbfa3 files/header-order.patch 1692
 MD5 51225315add3dabcbbbde9e771bba24c files/pdflib-6-compat.patch 560
 MD5 a945cf203f726632334f896aa6f066cd gnuplot-3.8j-r1.ebuild 2117
 MD5 77cecd5626caaba8696e896a0f88ea98 gnuplot-3.8j.ebuild 2011
-MD5 f3b445e00da955fb1868e6ef86babdd0 gnuplot-4.0-r1.ebuild 3985
+MD5 507327541bf5313984c03f3f12482da4 gnuplot-4.0-r1.ebuild 3991
 MD5 0d0ccbc08efef8b97818204479649574 metadata.xml 220
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi8/2gIKl8Uu19MoRAky9AJ9ipjhlpod9jmLDJO3AkB9GyiMzIwCfbfST
-dVHZWx7NXya6zalOH8MSsQk=
-=VLnk
+iD8DBQFDkfw3gIKl8Uu19MoRAoa3AJwLPhCrcEbhVdzHfuGEpPz4p1zOjwCfYbEk
+e2/2CLbPOt8RGoMDqe5dJ+M=
+=5FXq
 -----END PGP SIGNATURE-----
