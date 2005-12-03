@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.223 2005/12/02 22:33:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.224 2005/12/03 04:40:34 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1972,7 +1972,7 @@ should_we_gcc_config() {
 	if has_version 'app-admin/eselect-compiler' ; then
 		curr_config_ver=$(env -i eselect compiler show ${CTARGET} | cut -f1 -d/ | awk -F - '{ print $5 }')
 	else
-		curr_config_ver=$(env -i gcc-config -c ${CTARGET} | awk -F - '{ print $5 }')
+		curr_config_ver=$(env -i gcc-config -S $(gcc-config -c ${CTARGET}) | awk '{print $2}')
 	fi
 
 	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
@@ -2064,7 +2064,7 @@ do_gcc_config() {
 
 		# figure out which specs-specific config is active. yes, this works
 		# even if the current config is invalid.
-		local current_specs=$(echo ${current_gcc_config} | awk -F - '{ print $6 }')
+		local current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
 
 		local use_specs=""
 		[[ -n ${current_specs} ]] && use_specs=-${current_specs}
