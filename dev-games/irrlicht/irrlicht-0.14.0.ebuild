@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.14.0.ebuild,v 1.1 2005/12/02 17:16:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.14.0.ebuild,v 1.2 2005/12/03 20:06:18 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,14 +29,14 @@ src_unpack() {
 	rm -f source.zip
 	cd Irrlicht
 
-	# works for me without this.  Maybe we can take it out?
 	# stupid nvidia / xorg GL differences
-	#if echo -e '#include <GL/glx.h>\nglXGetProcAddress blah;' | \
-	   #$(tc-getCC) -E - | \
-	   #grep -q glXGetProcAddressARB
-	#then
-		#epatch "${FILESDIR}"/${PN}-0.12.0-opengl.patch
-	#fi
+	# still needed - bug #114335
+	if echo -e '#include <GL/glx.h>\nglXGetProcAddress blah;' | \
+	   $(tc-getCC) -E - | \
+	   grep -q glXGetProcAddressARB
+	then
+		epatch "${FILESDIR}"/${PN}-0.12.0-opengl.patch
+	fi
 
 	# use the system zlib/jpeg/png
 	rm -r zlib jpeglib libpng
