@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.2 2005/12/03 14:32:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.3 2005/12/03 16:12:59 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -24,17 +24,17 @@ PACKET_SRC_URI="http://www.linuxtv.org/downloads/firmware/dvb-firmwares-1.tar.bz
 get_dvb_firmware="${FILESDIR}/get_dvb_firmware-${PV}"
 
 PACKET_FW_NAMES=(
-	"or51132-qam"
-	"or51132-vsb"
+	"or51132"
+	"or51132"
 	"or51211"
-	"avertv"
-	"dibusb"
+	"usb-a800"
+	"dibusb-usb1"
 	"dibusb-usb2"
-	"dtt200u"
-	"umt"
-	"vp702x"
-	"vp7045"
-	"wt220u"
+	"usb-dtt200u"
+	"usb-umt"
+	"usb-vp702x"
+	"usb-vp7045"
+	"usb-wt220u"
 	"ttpci"
 )
 
@@ -55,6 +55,18 @@ PACKET_FW_FILES=(
 
 # firmwares which have to be fetched with get_dvb_firmware
 FW_NAMES=(
+	"sp8870"
+	"sp887x"
+	"tda1004x"
+	"tda1004x"
+	"ttusb-dec"
+	"ttusb-dec"
+	"ttusb-dec"
+	"nxt2002"
+	"nxt200x"
+)
+
+FW_GET_PARAMETER=(
 	"sp8870"
 	"sp887x"
 	"tda10045"
@@ -141,6 +153,11 @@ pkg_setup() {
 	if [[ -z ${DVB_CARDS} ]]; then
 		einfo "DVB_CARDS is not set, installing all available firmware files."
 	fi
+	einfo "List of possible card-names to use for DVB_CARDS:"
+	echo ${PACKET_FW_NAMES[*]} ${FW_NAMES[*]}| tr ' ' '\n' | sort | uniq | fmt \
+	| while read line; do
+		einfo "   ${line}"
+	done
 }
 
 src_unpack() {
@@ -164,7 +181,7 @@ src_unpack() {
 		install_dvb_card ${FW_NAMES[CARD]} || continue
 
 		einfo "Extracting ${FW_NAMES[CARD]}"
-		./get_dvb_firmware ${FW_NAMES[CARD]}
+		./get_dvb_firmware ${FW_GET_PARAMETER[CARD]}
 	done
 }
 
