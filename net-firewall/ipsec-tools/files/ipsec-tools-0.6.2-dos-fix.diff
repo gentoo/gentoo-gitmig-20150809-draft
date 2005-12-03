@@ -1,12 +1,6 @@
 diff -aur ipsec-tools-0.6.2-orig/src/racoon/isakmp_agg.c ipsec-tools-0.6.2/src/racoon/isakmp_agg.c
 --- ipsec-tools-0.6.2-orig/src/racoon/isakmp_agg.c	2005-09-26 09:12:20.000000000 -0700
 +++ ipsec-tools-0.6.2/src/racoon/isakmp_agg.c	2005-12-02 01:04:23.000000000 -0800
-@@ -1,4 +1,4 @@
--/* $Id: ipsec-tools-0.6.2-dos-fix.diff,v 1.1 2005/12/02 09:19:07 latexer Exp $ */
-+/* $Id: ipsec-tools-0.6.2-dos-fix.diff,v 1.1 2005/12/02 09:19:07 latexer Exp $ */
- 
- /*
-  * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
 @@ -488,7 +488,11 @@
  	}
  
