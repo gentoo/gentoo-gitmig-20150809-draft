@@ -1,4 +1,14 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 233cfffbfef7767b585b086af5aaa82c ChangeLog 2501
-MD5 6f7d141f0ae566357ac0c42407565706 Test-Builder-Tester-1.01.ebuild 586
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be433973e08bf4174551e8cf18da5445 ChangeLog 2685
+MD5 82ad33055da9c2ee29a89d479880f068 Test-Builder-Tester-1.01.ebuild 586
 MD5 f62ca2af33b110d3d6e8555b44183f04 files/digest-Test-Builder-Tester-1.01 74
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDkZt1tG5z4I8BtQoRAgHqAJ9J0987j/MyquZ4OMpGIm0Ip4rngACfUAZk
+3DnKSFNBPXNwSCxC7IYY94Q=
+=0ZoQ
+-----END PGP SIGNATURE-----
