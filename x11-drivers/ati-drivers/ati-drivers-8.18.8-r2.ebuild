@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.8 2005/12/03 14:53:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.18.8-r2.ebuild,v 1.1 2005/12/03 14:53:03 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -12,10 +12,10 @@ SRC_URI="x86? ( mirror://gentoo/ati-driver-installer-${PV}-i386.run )
 	 amd64? ( mirror://gentoo/ati-driver-installer-${PV}-x86_64.run )"
 
 LICENSE="ATI"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
-	 app-admin/eselect-opengl
+	 >=x11-base/opengl-update-2.1_pre1
 	 || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* )"
 
 DEPEND=">=virtual/linux-sources-2.4
@@ -113,11 +113,13 @@ src_unpack() {
 
 	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 
-	if kernel_is ge 2 6 14
+	if kernel_is 2 6
 	then
+		epatch "${FILESDIR}/fglrx-2.6.14-access_ok.patch"
+
 		if use amd64
 		then
-		epatch ${FILESDIR}/fglrx-2.6.14-compat_ioctl.patch
+		epatch "${FILESDIR}/fglrx-2.6.14-compat_ioctl.patch"
 		fi
 	fi
 }
@@ -164,7 +166,8 @@ pkg_preinst() {
 }
 
 src_install() {
-	local ATI_LIBGL_PATH=""
+	local ATI_ROOT="/usr/lib/opengl/ati"
+
 	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 	linux-mod_src_install
 
@@ -206,20 +209,18 @@ src_install() {
 
 	#Work around hardcoded path in 32bit libGL.so on amd64, bug 101539
 	if has_multilib_profile && [ $(get_abi_LIBDIR x86) = "lib32" ] ; then
-		ATI_LIBGL_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"
-	fi
 		cat >>${T}/09ati <<EOF
 
-LIBGL_DRIVERS_PATH="$ATI_LIBGL_PATH"
+LIBGL_DRIVERS_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"
 EOF
+	fi
 
 	doenvd ${T}/09ati
 }
 
 src_install-libs() {
 	local pkglibdir=lib
-	local inslibdir="$(get_libdir)/${xlibdir}"
-	ATI_LIBGL_PATH="${ATI_LIBGL_PATH}:/usr/$(get_libdir)/${xlibdir}/modules/dri"
+	local inslibdir="$(get_libdir)/$xlibdir"
 	if [ ${#} -eq 2 ]; then
 		pkglibdir=${1}
 		inslibdir=${2}
@@ -250,11 +251,11 @@ src_install-libs() {
 	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
 	fi
 	# X and DRI driver
-	if has_version "<x11-base/xorg-x11-6.8.0-r4"
+	if has_version ">=x11-base/xorg-x11-6.8.0-r4"
 	then
-		local X11_DIR="/usr/X11R6/"
-	else
 		local X11_DIR="/usr/"
+	else
+		local X11_DIR="/usr/X11R6/"
 	fi
 
 	local X11_LIB_DIR="${X11_DIR}${inslibdir}"
@@ -287,7 +288,7 @@ src_install-libs() {
 
 
 pkg_postinst() {
-	/usr/bin/eselect opengl set --use-old ati
+	/usr/bin/opengl-update --use-old ati
 
 	echo
 	einfo "To switch to ATI OpenGL, run \"eselect opengl set ati\""
@@ -303,5 +304,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	/usr/bin/eselect opengl set --use-old xorg-x11
+	/usr/bin/opengl-update --use-old xorg-x11
 }
+

@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88d2fbb4fe0c076fa54e21fe605dc93e ChangeLog 24133
+MD5 a5e928ff7456f8fa748a8e4476d78bfb ChangeLog 24309
 MD5 ad343861ae1ccea97bf3bbcdb61ba9e0 ati-drivers-8.14.13-r2.ebuild 7005
 MD5 fff3d657c788a8d71b363ae449d9a845 ati-drivers-8.14.13-r3.ebuild 7914
 MD5 c49603b680cc13d2dc3cecec1d8b45d7 ati-drivers-8.14.13-r4.ebuild 7497
@@ -11,8 +8,9 @@ MD5 7834be6cf5952828e059827cc9b4ed57 ati-drivers-8.16.20.ebuild 6229
 MD5 709b23aa0176849c66ed9b1ed702dc29 ati-drivers-8.18.6-r1.ebuild 7910
 MD5 e1a0e8561a29e904bd4f5381da97d219 ati-drivers-8.18.6.ebuild 7086
 MD5 5d3dbd42e474d44115bc1a882763e204 ati-drivers-8.18.8-r1.ebuild 8174
+MD5 cadd24edf5d58e3a4ff345f34929cba4 ati-drivers-8.18.8-r2.ebuild 8168
 MD5 c9629a18ef6fc50af7d610577e287d58 ati-drivers-8.18.8.ebuild 7857
-MD5 d0ffe8d791657bbabb5c956daea930f3 ati-drivers-8.19.10.ebuild 8218
+MD5 febcc2320a0c3a67ad212a67df775360 ati-drivers-8.19.10.ebuild 8222
 MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 MD5 32c54a887820a2712b641217c3b54272 files/8.8.25-smp.patch 376
 MD5 f1b11573ad27da023fce7d7a67a37861 files/8.8.25-via-amd64.patch 1198
@@ -26,6 +24,7 @@ MD5 3e29001f6bcfcec91a4802e6c6e37fc1 files/digest-ati-drivers-8.18.6 156
 MD5 3f9c6083c83f1c87c4b860ef4eca55f6 files/digest-ati-drivers-8.18.6-r1 168
 MD5 b9b5079b56d44f5056ac6b7e846943be files/digest-ati-drivers-8.18.8 168
 MD5 b9b5079b56d44f5056ac6b7e846943be files/digest-ati-drivers-8.18.8-r1 168
+MD5 b9b5079b56d44f5056ac6b7e846943be files/digest-ati-drivers-8.18.8-r2 168
 MD5 77910c352e4cc0789f1e084337fe75c4 files/digest-ati-drivers-8.19.10 170
 MD5 9ae27a9d7736cb6ce30b41ff384004d8 files/fglrx-2.6.12-inter_module_get.patch 1265
 MD5 0850638c4f5ac2466c793df428fc5d84 files/fglrx-2.6.12-pci_name.patch 2807
@@ -35,10 +34,3 @@ MD5 275238baa6d2db2b96bc8b98275a7928 files/fglrx-8.14.13-alt-2.6.12-agp.patch 25
 MD5 73907ca81a7435350b4529ddaa7305d5 files/ioctl32.patch 368
 MD5 0a9c95a134ef4f317240c54f62e9480e files/p1.patch 1120
 MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf4EUI1lqEGTUzyQRAtVVAJ47fu/KcgkMLzzVKgM/DBQxfc6B7ACgivBg
-0ulnwh/S7MQ21Yn71RYB1zY=
-=Pgfe
------END PGP SIGNATURE-----
