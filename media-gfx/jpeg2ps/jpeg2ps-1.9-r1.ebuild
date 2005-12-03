@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.5 2005/11/01 19:45:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.6 2005/12/03 06:45:23 pclouds Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local pagesize=""
+	pagesize=""
 	if [ -h /etc/localtime ]; then
 		local continent=$(readlink /etc/localtime | cut -d / -f 5)
 		[ "${continent}" = "Europe" ] && pagesize="-DA4"
