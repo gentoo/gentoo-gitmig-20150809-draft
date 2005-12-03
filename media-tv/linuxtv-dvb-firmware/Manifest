@@ -1,5 +1,5 @@
-MD5 d89929713f407b7ead12f64e7c0bb902 ChangeLog 740
+MD5 59568eb614c7d5537214efb4dacba798 ChangeLog 845
 MD5 72138cbe19fa4abff6f3fb2e75265683 files/digest-linuxtv-dvb-firmware-1 469
 MD5 cf50072da5b600c439d7c82e127a7f62 files/get_dvb_firmware-1 11537
-MD5 1e3bcd10356acd0502f278ac01df2cfc linuxtv-dvb-firmware-1.ebuild 4636
+MD5 e5eb55fff71431e0212e871b266d7fcf linuxtv-dvb-firmware-1.ebuild 4643
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
