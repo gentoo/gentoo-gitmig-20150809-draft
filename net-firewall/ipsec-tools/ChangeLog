@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.32 2005/12/03 19:23:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.33 2005/12/03 19:34:28 latexer Exp $
+
+*ipsec-tools-0.4-r2 (03 Dec 2005)
+
+  03 Dec 2005; Peter Johanson <latexer@gentoo.org>
+  +files/ipsec-tools-0.4-dos-fix.diff, +ipsec-tools-0.4-r2.ebuild:
+  Bump the 0.4 release with the fix for bug #113201.
 
   03 Dec 2005; Peter Johanson <latexer@gentoo.org>
   files/ipsec-tools-0.6.2-dos-fix.diff:
