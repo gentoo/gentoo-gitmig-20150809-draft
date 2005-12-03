@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.7 2005/10/02 18:22:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.8 2005/12/03 12:01:19 dertobi123 Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="http://graveman.tuxfamily.org/sources/${PN}-${PV/_p/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc x86 ~amd64"
-IUSE="debug dvdr flac mp3 nls oggvorbis sox"
+IUSE="debug dvdr flac mp3 nls vorbis"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.4
@@ -21,19 +21,20 @@ DEPEND=">=x11-libs/gtk+-2.4
 	nls? ( sys-devel/gettext )
 	mp3? ( >=media-libs/libid3tag-0.15
 		>=media-libs/libmad-0.15 )
-	oggvorbis? ( >=media-libs/libogg-1.0
+	vorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdrtools-2.0
 	>=app-cdr/cdrdao-1.1.9
 	media-libs/libmng
 	dvdr? ( >=app-cdr/dvd+rw-tools-5.20 )
-	sox? ( >=media-sound/sox-12.17.0 )"
+	vorbis? ( >=media-sound/sox-12.17.0 )
+	mp3? ( >=media-sound/sox-12.17.0)"
 
 G2CONF="${G2CONF} \
 	$(use_enable flac) \
 	$(use_enable mp3) \
-	$(use_enable oggvorbis ogg) \
+	$(use_enable vorbis ogg) \
 	$(use_enable debug)"
 
 S=${WORKDIR}/${P/_p/-}
