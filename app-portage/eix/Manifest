@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 befa9926c5517bb8b71a64a12dc3de4a ChangeLog 7990
 MD5 9453c685fa99329b88b782086419847f eix-0.3.0-r1.ebuild 1283
-MD5 cf50e640e5f2cb466ddf602d07df44b7 eix-0.3.0-r2.ebuild 1333
+MD5 831f9fa6fc48726ee59ba48841b396e9 eix-0.3.0-r2.ebuild 1332
 MD5 ea9dbe212d004fa40de368122c9a0b26 eix-0.5.0.ebuild 1250
 MD5 309a6ba7043e7941a8effc552ec3a1a0 files/0.3.0-datatype-mix.patch 2066
 MD5 026ea1bfa86dd00de37c3e3d1305c9c7 files/0.3.0-dbmatchcriteria-fix.patch 445
@@ -17,7 +17,7 @@ MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjXp6mPFBzbX68WERAnWwAJ9YkbmbI1u+VDUI6OWerglNt7h5jACfZTND
-yreIMk8UMj1WUgPAvYs0+9s=
-=IlRA
+iD8DBQFDkfpsgIKl8Uu19MoRAp+qAJ9BZPYA89PA9yItawSZ75PFd87mfwCfVO4i
+MPjeh2UyfRpXtTtIQimLC1Q=
+=g/fH
 -----END PGP SIGNATURE-----
