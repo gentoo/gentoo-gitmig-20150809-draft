@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pgsql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.21 2005/10/24 03:54:05 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.22 2005/12/03 23:58:00 rajiv Exp $
+
+  03 Dec 2005; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  mod_auth_pgsql-2.0.2-r2.ebuild:
+  stable on x86 to work with new apache layout. bug #114395.
 
   24 Oct 2005; Masatomo Nakano <nakano@gentoo.org>
   mod_auth_pgsql-0.9.12.ebuild:
