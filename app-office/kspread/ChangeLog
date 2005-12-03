@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.23 2005/11/30 06:40:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.24 2005/12/03 19:49:39 carlo Exp $
+
+*kspread-1.4.2-r1 (03 Dec 2005)
+
+  03 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kspread-1.4.2-gcc41.patch, +kspread-1.4.2-r1.ebuild:
+  gcc 4.1 patch thanks to Hanno
 
   30 Nov 2005; Mark Loeser <halcy0n@gentoo.org> kspread-1.4.2.ebuild:
   Stable on x86; bug #112840
