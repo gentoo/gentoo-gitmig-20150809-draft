@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.332 2005/12/03 09:30:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.333 2005/12/03 22:31:00 lu_zero Exp $
+
+  03 Dec 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre7-r1.ebuild:
+  Typo fixed, thanks Oldrich Jedlicka <oldium.pro@seznam.cz> for reporting
 
   03 Dec 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre7-r1.ebuild:
   livecd and bindist support, minor changes overall
