@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.8.2.ebuild,v 1.5 2005/10/31 07:41:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.8.2.ebuild,v 1.6 2005/12/04 19:45:50 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2
