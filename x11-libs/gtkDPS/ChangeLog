@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkDPS
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.23 2005/12/03 17:52:50 nichoj Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.24 2005/12/04 19:32:08 vapier Exp $
+
+  04 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gtkDPS-0.3.4-m4.patch, gtkDPS-0.3.4.ebuild:
+  Clean up ebuild and fix m4 warnings.
 
   03 Dec 2005; Joshua Nichols <nichoj@gentoo.org> gtkDPS-0.3.4.ebuild:
   Fixed multilib-strict violation.
