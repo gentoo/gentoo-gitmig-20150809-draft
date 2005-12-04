@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-2.eclass,v 1.4 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-2.eclass,v 1.5 2005/12/04 22:19:46 nattfodd Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -40,6 +40,9 @@ tetex-2_src_install() {
 
 	rm -f ${D}/usr/bin/texi2html
 	rm -f ${D}/usr/share/man/man1/texi2html.1
+
+	# bug #112164
+	has_version 'sys-apps/texinfo' && rm -f ${D}/usr/bin/texi2pdf
 
 	dodir /etc/env.d/
 	echo 'CONFIG_PROTECT="/usr/share/texmf/tex/generic/config/ /usr/share/texmf/tex/platex/config/ /usr/share/texmf/dvips/config/ /usr/share/texmf/dvipdfm/config/ /usr/share/texmf/xdvi/"' > ${D}/etc/env.d/98tetex
