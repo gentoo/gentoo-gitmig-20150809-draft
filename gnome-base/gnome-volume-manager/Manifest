@@ -13,12 +13,12 @@ MD5 72c1bae8ef38e67c06baafe764e34065 gnome-volume-manager-1.2.1.ebuild 1008
 MD5 c6349a883ff4a07cc8acbded5dd9bd3b gnome-volume-manager-1.2.2.ebuild 1032
 MD5 a9385b6ba060065fb7d55f25902e3bbf gnome-volume-manager-1.5.1.ebuild 1527
 MD5 0f67e70ef2099c779265301e2c6f84c5 gnome-volume-manager-1.5.3.ebuild 1490
-MD5 357f2d091b0d013dbbe3a9013d15e860 gnome-volume-manager-1.5.4.ebuild 1426
+MD5 4be20af3ab299cf04b48235ab876d4ff gnome-volume-manager-1.5.4.ebuild 1432
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDaK9Q1ZcsMnZjRyIRAvI5AJwI3IQSpTAy7XbI9P1VbQ8EqXTfWwCdEr9g
-NRV/S0WLYoHgJ/dTlfZCJhY=
-=br0d
+iD8DBQFDkjnEgIKl8Uu19MoRAt+YAJwMFXTvZvobhTjbbYaBukvj9CH83ACfQ0uH
+V2lxIy4yJ4gMZQXfX18nQqM=
+=8Qwf
 -----END PGP SIGNATURE-----
