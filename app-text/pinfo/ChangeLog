@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.21 2005/01/01 16:30:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.22 2005/12/04 21:11:43 jer Exp $
+
+  04 Dec 2005; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.7.ebuild,
+  pinfo-0.6.8.ebuild:
+  Update HOMEPAGE, SRC_URI, removed old MY_P* cruft
 
   07 Sep 2004; Tom Gall <tgall@gentoo.org> pinfo-0.6.8.ebuild:
   stable on ppc64, bug #63056
