@@ -1,0 +1,34 @@
+#!/bin/bash
+
+if [ $1 = "install" ]; then
+	FILE="${MY_CGIBINDIR}/webmo/interfaces/globals.int"
+
+	sed -i \
+		-e "s:htmlBase.*:htmlBase=\"${MY_HTDOCSDIR}\":g" \
+		-e "s:cgiBase.*:cgiBase=\"${MY_CGIBINDIR}/webmo\" :g" \
+		-e "s:userBase.*:userBase=\"${MY_HOSTROOTDIR}/webmo\":g" \
+		${FILE}
+
+	# If a program is enabled, install .int.disabled changes to .int
+	pushd ${MY_CGIBINDIR}/webmo/interfaces
+	for file in ._cfg*; do
+		realfile=${file#._cfg*_}
+		enabled_file=${realfile%.disabled}
+		if [[ -e ${enabled_file} ]]; then
+			enabled_cfgfile=${enabled_file%.disabled}
+			mv ${file} ${enabled_cfgfile}
+		fi
+	done
+	popd
+else
+	echo "done."
+fi
+
+if [ $1 = "clean" ]; then
+	echo "Please examine the contents of the following directories"
+	echo "and delete anything that is no longer necessary"
+	echo
+	echo ${MY_HTDOCSDIR}
+	echo ${MY_CGIBINDIR}/webmo
+	echo ${MY_HOSTROOTDIR}/webmo
+fi

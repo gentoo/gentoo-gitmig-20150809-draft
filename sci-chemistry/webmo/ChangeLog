@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/webmo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.2 2005/12/04 08:42:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.3 2005/12/04 22:36:23 spyderous Exp $
+
+  04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/reconfig:
+  Add hook script, to be run when installing to live host.
 
   04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -files/dont-be-interactive-if-root.patch,
