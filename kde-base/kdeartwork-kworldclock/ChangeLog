@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kworldclock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.27 2005/11/29 04:40:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.28 2005/12/04 10:43:49 kloeri Exp $
+
+  04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdeartwork-kworldclock-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org>
   kdeartwork-kworldclock-3.5.0.ebuild:

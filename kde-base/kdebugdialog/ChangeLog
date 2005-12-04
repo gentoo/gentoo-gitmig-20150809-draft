@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebugdialog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.22 2005/11/29 03:57:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.23 2005/12/04 10:31:57 kloeri Exp $
+
+  04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdebugdialog-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kdebugdialog-3.5.0.ebuild:
   Added ~sparc keyword.
