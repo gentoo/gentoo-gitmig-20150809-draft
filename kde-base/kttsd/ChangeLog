@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.29 2005/11/29 15:27:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.30 2005/12/04 00:25:16 kloeri Exp $
+
+  04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kttsd-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kttsd-3.5.0.ebuild:
   Added ~sparc keyword.

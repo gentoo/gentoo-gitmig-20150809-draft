@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kodo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kodo/ChangeLog,v 1.28 2005/11/29 05:09:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kodo/ChangeLog,v 1.29 2005/12/04 00:16:37 kloeri Exp $
+
+  04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kodo-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kodo-3.5.0.ebuild:
   Added ~sparc keyword.

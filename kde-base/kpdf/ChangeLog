@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.38 2005/11/29 14:09:56 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.39 2005/12/04 01:14:30 kloeri Exp $
+
+  04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kpdf-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kpdf-3.5.0.ebuild:
   Add check for bug #112848.
