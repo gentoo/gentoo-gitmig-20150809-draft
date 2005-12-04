@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p3.ebuild,v 1.2 2005/09/02 11:19:51 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p3.ebuild,v 1.3 2005/12/04 22:50:24 rl03 Exp $
 
 inherit webapp
 MY_P="${PN}${PV/_p/r}"
@@ -59,7 +59,7 @@ src_install() {
 	dodoc CHANGELOG README
 	cp -R [[:lower:]][[:lower:]]* ${D}/${MY_HTDOCSDIR}
 
-	cp ${FILESDIR}/${PN}.conf ${D}/${MY_SERVERCONFIGDIR}
+	cp ${FILESDIR}/${PN}.conf ${D}/${MY_HOSTROOTDIR}
 
 	webapp_serverowned ${MY_HTDOCSDIR}
 	webapp_serverowned ${MY_HTDOCSDIR}/sitedata/public

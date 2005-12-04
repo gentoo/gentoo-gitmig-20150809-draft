@@ -19,8 +19,8 @@ Set your database password from step 1.
 Read the online docs! Especially if you want to use virtual servers.
 
 3. Configure Apache:
-The ebuild installed an Apache configfile into ${MY_SERVERCONFIGDIR}.
-Copy it into /etc/{apache,apache2}/vhosts.d directory and edit it to 
+The ebuild installed an Apache configfile: ${VHOST_ROOT}/${PN}.conf
+Copy it into /etc/{apache,apache2}/vhosts.d and edit it to
 suit your needs.
 
 4. Configure cronjobs.
