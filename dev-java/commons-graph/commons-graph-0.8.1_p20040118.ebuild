@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/commons-graph-0.8.1_p20040118.ebuild,v 1.2 2005/12/04 22:39:22 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/commons-graph-0.8.1_p20040118.ebuild,v 1.3 2005/12/04 22:47:12 nichoj Exp $
 
 inherit java-pkg eutils
 MY_PN=graph2
@@ -13,7 +13,7 @@ HOMEPAGE="http://cvs.apache.org/viewcvs/jakarta-commons-sandbox/graph2/"
 SRC_URI="mirror://gentoo/distfiles/${MY_P}.tar.gz"
 COMMON_DEP="dev-java/log4j
 	dev-java/commons-collections
-	dev-java/xerces"
+	dev-java/xml-commons"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( dev-java/jikes )
 	dev-java/ant-core
@@ -36,7 +36,7 @@ src_unpack(){
 	cd target/lib
 	java-pkg_jar-from log4j
 	java-pkg_jar-from commons-collections
-	java-pkg_jar-from xerces-2 xml-apis.jar
+	java-pkg_jar-from xml-commons xml-apis.jar
 
 }
 
