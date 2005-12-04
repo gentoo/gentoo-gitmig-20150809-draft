@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.18 2005/12/01 00:59:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.19 2005/12/04 20:28:43 tgall Exp $
+
+  04 Dec 2005; Tom Gall <tgall@gentoo.org> httping-1.0.7.ebuild:
+  stable on ppc64
 
   01 Dec 2005; <dang@gentoo.org> httping-1.0.7.ebuild:
   Marked stable on amd64

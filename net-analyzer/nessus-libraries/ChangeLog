@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.69 2005/11/09 19:52:21 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.70 2005/12/04 20:32:02 tgall Exp $
+
+  04 Dec 2005; Tom Gall <tgall@gentoo.org> nessus-libraries-2.2.5.ebuild:
+  stable on ppc64
 
 *nessus-libraries-2.2.6 (09 Nov 2005)
 
@@ -47,7 +50,7 @@
   -nessus-libraries-2.3.0.ebuild:
   Remove old ebuilds.
 
-  09 Jun 2005; Olivier Crête <tester@gentoo.org>
+  09 Jun 2005; Olivier CrÃªte <tester@gentoo.org>
   nessus-libraries-2.2.4.ebuild:
   Marking stable on amd64
 
@@ -55,7 +58,7 @@
   nessus-libraries-2.2.4.ebuild:
   Marked ppc stable.
 
-  22 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-libraries-2.2.4.ebuild:
   Stable on alpha.
 
@@ -86,7 +89,7 @@
   nessus-libraries-2.2.0.ebuild:
   Stable on ppc.
 
-  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-libraries-2.2.0.ebuild:
   Stable on alpha.
 
@@ -127,7 +130,7 @@
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   +nessus-libraries-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger Hoffstätte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger HoffstÃ¤tte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -149,7 +152,7 @@
   Changed optional ssl support to mandatory, since without it libnasl will not
   compile.
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
@@ -206,7 +209,7 @@
   nessus-libraries-2.0.10a.ebuild:
   marked x86 stable
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.10a.ebuild:
   Stable on alpha.
 
