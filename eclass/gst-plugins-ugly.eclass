@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.1 2005/12/04 12:01:10 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.2 2005/12/04 13:04:53 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -29,7 +29,7 @@ MY_P=${MY_PN}-${PV}
 my_gst_plugins_ugly="amrnb a52dec lame mad mpeg2dec sidplay"
 
 #SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
-SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-good/${MY_P}.tar.bz2"
+SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-ugly/${MY_P}.tar.bz2"
 
 S=${WORKDIR}/${MY_P}
 
@@ -52,7 +52,7 @@ gst-plugins-ugly_src_configure() {
 	for plugin in ${GST_PLUGINS_BUILD}; do
 		my_gst_plugins_ugly=${my_gst_plugins_ugly/${plugin}/}
 	done
-	for plugin in ${my_gst_plugins_good}; do
+	for plugin in ${my_gst_plugins_ugly}; do
 		gst_conf="${gst_conf} --disable-${plugin} "
 	done
 	for plugin in ${GST_PLUGINS_BUILD}; do
