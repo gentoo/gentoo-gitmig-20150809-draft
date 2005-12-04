@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.0.003.ebuild,v 1.1 2005/12/04 08:27:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.0.003.ebuild,v 1.2 2005/12/04 08:42:14 spyderous Exp $
 
 inherit eutils webapp
 
@@ -50,11 +50,8 @@ src_unpack() {
 	# (Depends on gentoo-locations.patch)
 	epatch ${FILESDIR}/add-gamess-data-directory.patch
 
-	# Comment out section of setup script that is interactive if run as root
-	epatch ${FILESDIR}/dont-be-interactive-if-root.patch
-
-	# Don't check for user directories, because we aren't installing in ~
-	epatch ${FILESDIR}/dont-check-unneeded-things.patch
+	# Don't run diagnose.pl or ask about being root user
+	epatch ${FILESDIR}/dont-be-interactive-or-diagnose.patch
 
 	# Make setup.conf
 	create_setup_conf
