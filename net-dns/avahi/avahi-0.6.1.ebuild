@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.1.ebuild,v 1.2 2005/11/29 15:09:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.1.ebuild,v 1.3 2005/12/04 10:41:08 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -11,10 +11,11 @@ SRC_URI="http://www.freedesktop.org/~lennart/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="howl-compat mdnsresponder-compat dbus doc mono gtk python qt"
+IUSE="howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt"
 
 RDEPEND="dev-libs/libdaemon
 	dev-libs/expat
+	gdbm? ( sys-libs/gdbm )
 	qt? ( $(qt_min_version 3.3) )
 	gtk? (
 		>=x11-libs/gtk+-2
@@ -80,6 +81,7 @@ src_compile() {
 		$(use_enable gtk) \
 		$(use_enable qt qt3) \
 		$(use_enable gtk glib) \
+		$(use_enable gdbm) \
 		${myconf} \
 		|| die "econf failed"
 	emake -j1 || die "emake failed"

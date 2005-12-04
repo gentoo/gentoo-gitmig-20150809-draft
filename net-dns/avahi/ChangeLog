@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.21 2005/11/29 15:09:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.22 2005/12/04 10:41:08 swegener Exp $
+
+  04 Dec 2005; Sven Wegener <swegener@gentoo.org> avahi-0.6.1.ebuild:
+  Add support for the gdbm USE flag.
 
   29 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> avahi-0.6.1.ebuild:
   Keyworded ~sparc wrt #113875
