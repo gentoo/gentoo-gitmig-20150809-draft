@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/clamsmtp-1.5.ebuild,v 1.3 2005/10/03 12:14:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/clamsmtp-1.5.ebuild,v 1.4 2005/12/04 19:19:17 ticho Exp $
 
 DESCRIPTION="ClamSMTP is an SMTP filter that allows you to check for viruses using the ClamAV anti-virus software."
 HOMEPAGE="http://memberwebs.com/nielsen/software/clamsmtp/"
@@ -21,9 +21,6 @@ src_install() {
 	newinitd ${FILESDIR}/clamsmtpd.init clamsmtpd
 	insinto /etc
 	newins doc/clamsmtpd.conf clamsmtpd.conf
-	dodir /var/run/clamav
-	keepdir /var/run/clamav
-	fowners clamav:root /var/run/clamav
 
 	sed -i \
 		-e "s|\#\(ClamAddress\): .*|\1: /var/run/clamav/clamd.sock|" \
