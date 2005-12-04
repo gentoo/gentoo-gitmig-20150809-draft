@@ -1,9 +1,19 @@
-MD5 312171a973391d04aa5ca833a68c5b2b ChangeLog 2679
-MD5 804f897fba70678a8e97bc0d51700780 meanwhile-0.5.0.ebuild 911
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 b5b170d60d1f9a7bc8b9ab566c2a2b72 meanwhile-0.3-r3.ebuild 753
-MD5 530b8f05294d8575bef2e6bc1ac9a7ac meanwhile-0.4.2.ebuild 626
-MD5 34c9150946cb37f0b304431f8da6d74e files/digest-meanwhile-0.5.0 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4440a14abc79783ca3342d186b8deb17 ChangeLog 2802
 MD5 1e608d7c9f446aca8fec518e6e09c98c files/digest-meanwhile-0.3-r3 65
-MD5 54a68b70aac85bd876ebba642621ea12 files/mw_debug_glib.diff 388
 MD5 e36a0161c05416f3c5d2fc09be4f8fc4 files/digest-meanwhile-0.4.2 67
+MD5 34c9150946cb37f0b304431f8da6d74e files/digest-meanwhile-0.5.0 67
+MD5 54a68b70aac85bd876ebba642621ea12 files/mw_debug_glib.diff 388
+MD5 b5b170d60d1f9a7bc8b9ab566c2a2b72 meanwhile-0.3-r3.ebuild 753
+MD5 29ca0aaad0a46f4ea5530c59a48452bf meanwhile-0.4.2.ebuild 633
+MD5 03b92539a6677467a58ccb2f68dd1150 meanwhile-0.5.0.ebuild 919
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDktOjugEuf3OQ0akRAleMAJ9SWrGJR+6HW8+mog6lcUIoWWkehwCfRDkc
+mzMhIAMEBv18vNasZcR4hxc=
+=xvdN
+-----END PGP SIGNATURE-----
