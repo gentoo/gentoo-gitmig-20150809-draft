@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.16 2005/11/27 19:14:30 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.17 2005/12/04 22:19:21 rl03 Exp $
+
+  04 Dec 2005; Renat Lumpau <rl03@gentoo.org> files/reconfig:
+  Housekeeping
 
 *otrs-2.0.4 (27 Nov 2005)
 
