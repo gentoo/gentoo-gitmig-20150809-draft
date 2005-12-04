@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.5 2005/12/04 13:47:26 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.6 2005/12/04 14:39:52 zaheerm Exp $
+
+  04 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  gst-python-0.8.1.ebuild, gst-python-0.8.2.ebuild:
+  Fix GStreamer dependencies
 
 *gst-python-0.9.7 (04 Dec 2005)
 

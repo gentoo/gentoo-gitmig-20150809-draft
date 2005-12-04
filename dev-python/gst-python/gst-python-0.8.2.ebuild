@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.8.2.ebuild,v 1.2 2005/09/06 10:10:00 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.8.2.ebuild,v 1.3 2005/12/04 14:39:52 zaheerm Exp $
 
 inherit python
 
@@ -15,8 +15,8 @@ IUSE="doc"
 RDEPEND=">=dev-python/pygtk-2.4
 		>=dev-libs/glib-2
 		>=x11-libs/gtk+-2
-		>=media-libs/gstreamer-0.8.5
-		>=media-libs/gst-plugins-0.8.5
+		=media-libs/gstreamer-0.8*
+		=media-libs/gst-plugins-0.8*
 		virtual/python"
 
 DEPEND="${RDEPEND}
