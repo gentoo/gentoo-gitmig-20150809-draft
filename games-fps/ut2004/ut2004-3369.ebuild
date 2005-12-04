@@ -1,3 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.ebuild,v 1.2 2005/12/04 20:50:53 mr_bones_ Exp $
+
 inherit eutils games
 
 MY_P="${PN}-lnxpatch${PV}.tar.bz2"
