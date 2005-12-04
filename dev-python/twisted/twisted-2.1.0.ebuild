@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.1.0.ebuild,v 1.2 2005/11/23 18:27:14 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.1.0.ebuild,v 1.3 2005/12/04 16:41:42 marienz Exp $
 
 inherit eutils distutils versionator
 
@@ -72,13 +72,6 @@ update_plugin_cache() {
 pkg_postinst() {
 	distutils_pkg_postinst
 	update_plugin_cache
-	einfo
-	einfo "If you upgraded from twisted 1.3 or earlier you may want to"
-	einfo
-	einfo " # emerge twisted-sumo"
-	einfo
-	einfo "to get all of the packages back."
-	einfo
 }
 
 pkg_postrm() {

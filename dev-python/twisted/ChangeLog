@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.55 2005/11/30 22:38:35 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.56 2005/12/04 16:41:42 marienz Exp $
+
+  04 Dec 2005; Marien Zwart <marienz@gentoo.org> twisted-2.0.1.ebuild,
+  twisted-2.1.0.ebuild:
+  Remove einfo referring to nonexistant meta-ebuild (thanks to TFKyle for
+  noticing)
 
   30 Nov 2005; Marien Zwart <marienz@gentoo.org> -twisted-2.0.0.ebuild:
   Remove old ebuild.
