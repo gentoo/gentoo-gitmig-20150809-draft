@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.9 2005/10/31 18:44:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.10 2005/12/04 22:46:32 joshuabaergen Exp $
+
+*libdrm-2.0 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> +libdrm-2.0.ebuild:
+  Version bump.
 
 *libdrm-1.0.5 (31 Oct 2005)
 
