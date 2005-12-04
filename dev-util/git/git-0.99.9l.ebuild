@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9k.ebuild,v 1.1 2005/12/01 21:10:21 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9l.ebuild,v 1.1 2005/12/04 11:18:45 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
@@ -83,7 +83,7 @@ src_install() {
 
 	use tcltk || rm ${D}/usr/bin/gitk
 
-	dodoc README COPYING SubmittingPatches
+	dodoc README COPYING Documentation/SubmittingPatches
 	if use doc ; then
 		doman Documentation/*.1 Documentation/*.7
 		make install-webdoc -C Documentation/
