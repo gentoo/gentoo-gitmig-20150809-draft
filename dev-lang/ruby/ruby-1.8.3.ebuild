@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.3.ebuild,v 1.16 2005/10/29 02:36:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.3.ebuild,v 1.17 2005/12/04 03:04:05 usata Exp $
 
 ONIGURUMA="onigd2_5_0"
 
@@ -41,7 +41,6 @@ src_unpack() {
 		einfo "Applying ${ONIGURUMA}"
 		pushd ${WORKDIR}/oniguruma
 		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
-		cp ${FILESDIR}/re.c.183.patch .
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 		popd

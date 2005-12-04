@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.168 2005/12/02 18:14:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.169 2005/12/04 03:04:05 usata Exp $
+
+  04 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.3.ebuild,
+  ruby-1.8.4_pre2.ebuild:
+  Removed epatch to oniguruma (not necessary anymore)
 
 *ruby-1.8.4_pre2 (02 Dec 2005)
 
