@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kvoctrain
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.34 2005/11/29 03:49:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.35 2005/12/04 12:08:13 kloeri Exp $
+
+  04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kvoctrain-3.5.0.ebuild:
+  ~alpha keyword.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> kvoctrain-3.5.0.ebuild:
   Added ~sparc keyword.

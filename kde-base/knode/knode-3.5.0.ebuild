@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-3.5.0.ebuild,v 1.2 2005/11/29 04:28:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-3.5.0.ebuild,v 1.3 2005/12/04 11:39:17 kloeri Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="A newsreader for KDE"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)

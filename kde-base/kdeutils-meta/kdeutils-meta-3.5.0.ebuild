@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-3.5.0.ebuild,v 1.2 2005/11/29 04:17:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-3.5.0.ebuild,v 1.3 2005/12/04 12:34:49 kloeri Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="3.5"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE="crypt lirc"
 
 RDEPEND="
