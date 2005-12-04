@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fb8f047aaca62ddd6d145b43441d50c5 ChangeLog 3672
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksame-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksame-3.4.2 288
@@ -8,3 +11,10 @@ MD5 71e76be79360b017968532622926d874 ksame-3.4.2.ebuild 591
 MD5 4b22b63de9256e59c73b1555f1c966cd ksame-3.4.3.ebuild 587
 MD5 07cbd8892a62e938cea08c1f23601479 ksame-3.5.0.ebuild 542
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDks6NugEuf3OQ0akRAvXUAJ9RBjEORIZMiNloeiwmAtUWcDAIYgCgmQxB
+6LDjAssdYyDvtUsVzwWlLx8=
+=gUO0
+-----END PGP SIGNATURE-----

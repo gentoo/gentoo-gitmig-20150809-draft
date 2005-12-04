@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a2b183f9ae511c7d85d5cc99df2db74 ChangeLog 3795
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kenolaba-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kenolaba-3.4.2 288
@@ -8,3 +11,10 @@ MD5 33c5a113e81f4401958371eae7790db0 kenolaba-3.4.2.ebuild 563
 MD5 ea18c9278bee1c204176e19ebb0cde8a kenolaba-3.4.3.ebuild 559
 MD5 0126552cd5272e6e6ec791a3e9e46f70 kenolaba-3.5.0.ebuild 514
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDks41ugEuf3OQ0akRAvqzAJ4+OYMLtZRwRsqDcToSiJL6EfucsQCeMjyA
+gDT952zqq+kYWiIgn5qjwOs=
+=BxBn
+-----END PGP SIGNATURE-----
