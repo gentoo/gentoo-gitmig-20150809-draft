@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3-r1.ebuild,v 1.11 2005/10/21 11:58:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3-r1.ebuild,v 1.12 2005/12/04 15:03:39 zaheerm Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -50,8 +50,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.8.2
 	>=gnome-base/nautilus-2.8.2-r1
 
-	>=media-libs/gstreamer-0.8.9
-	>=media-libs/gst-plugins-0.8.7
+	=media-libs/gstreamer-0.8*
+	=media-libs/gst-plugins-0.8*
 	>=gnome-extra/gnome-media-2.8
 
 	>=media-gfx/eog-2.8.2
