@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/znf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.1 2005/12/04 00:51:46 chtekk Exp $
+
+*znf-0.7.6 (04 Dec 2005)
+
+  04 Dec 2005; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +znf-0.7.6.ebuild:
+  Add initial ebuild for ZNF.
+
