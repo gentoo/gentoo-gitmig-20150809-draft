@@ -1,4 +1,14 @@
-MD5 64abc3bc91b416bc730094f156789ad0 ChangeLog 507
-MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
-MD5 86b49032f72240d7a35a899dddc290ad netwmpager-1.6.ebuild 734
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21ce1bc0eff0adc7a7f3b542ddcaacea ChangeLog 610
 MD5 6679599dba97ab6ecbe7483db8cac9c0 files/digest-netwmpager-1.6 66
+MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
+MD5 f4766f759091d72a6728118b9a576b23 netwmpager-1.6.ebuild 735
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkosMCRZPokWLroQRAmglAKDUUYn3FJthMwsClSvviy+vB/D3NACgle3V
+RxkZFzpkiryoDjtbFV7rBmw=
+=L8zM
+-----END PGP SIGNATURE-----
