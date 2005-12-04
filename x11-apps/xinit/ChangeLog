@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.24 2005/11/11 19:38:36 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.25 2005/12/04 22:06:52 joshuabaergen Exp $
+
+*xinit-0.99.4 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/gentoo-startx-customization-0.99.4.patch, +xinit-0.99.4.ebuild:
+  Bump for 7.0RC3.
 
 *xinit-0.99.3 (11 Nov 2005)
 

@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/beforelight
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/beforelight/ChangeLog,v 1.6 2005/11/11 19:47:29 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/beforelight/ChangeLog,v 1.7 2005/12/04 21:40:57 joshuabaergen Exp $
+
+*beforelight-0.99.3 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +beforelight-0.99.3.ebuild:
+  Bump for 7.0RC3.
 
 *beforelight-0.99.2 (11 Nov 2005)
 

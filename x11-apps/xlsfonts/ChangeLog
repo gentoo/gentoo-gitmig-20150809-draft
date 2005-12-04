@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xlsfonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsfonts/ChangeLog,v 1.5 2005/11/06 18:47:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsfonts/ChangeLog,v 1.6 2005/12/04 22:11:41 joshuabaergen Exp $
+
+*xlsfonts-0.99.2 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xlsfonts-0.99.2.ebuild:
+  Bump for 7.0RC3.
 
   06 Nov 2005; <dang@gentoo.org> xlsfonts-0.99.1.ebuild:
   Marked ~amd64

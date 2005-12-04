@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xconsole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/ChangeLog,v 1.6 2005/11/17 11:41:41 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/ChangeLog,v 1.7 2005/12/04 21:56:46 joshuabaergen Exp $
+
+*xconsole-0.99.3 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xconsole-0.99.3.ebuild:
+  Bump for 7.0RC3.
 
   17 Nov 2005; Herbie Hopkins <herbs@gentoo.org> xconsole-0.99.2.ebuild:
   Marked ~amd64.
