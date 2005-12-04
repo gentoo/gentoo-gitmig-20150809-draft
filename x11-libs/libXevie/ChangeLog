@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXevie
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.7 2005/11/26 09:37:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.8 2005/12/04 20:04:53 joshuabaergen Exp $
+
+*libXevie-0.99.3 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +libXevie-0.99.3.ebuild:
+  Bump for 7.0RC3.
 
   26 Nov 2005; Simon Stelling <blubb@gentoo.org> libXevie-0.99.2.ebuild:
   added ~amd64 keyword

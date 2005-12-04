@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.47 2005/11/06 22:47:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.48 2005/12/04 20:09:50 joshuabaergen Exp $
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> ChangeLog:
+  Bump for 7.0RC3.
 
   06 Nov 2005; <dang@gentoo.org> libxklavier-2.0.ebuild:
   Modular X deps

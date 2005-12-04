@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXcursor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.12 2005/11/11 17:30:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.13 2005/12/04 20:03:28 joshuabaergen Exp $
+
+*libXcursor-1.1.5.1 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/make-icondir-configurable-1.1.5.1.patch,
+  +libXcursor-1.1.5.1.ebuild:
+  Bump for 7.0RC3.
 
 *libXcursor-1.1.5 (11 Nov 2005)
 
