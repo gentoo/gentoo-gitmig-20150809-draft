@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.0-r1.ebuild,v 1.1 2005/11/28 16:08:51 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.0-r1.ebuild,v 1.2 2005/12/04 14:38:00 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -16,13 +16,13 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.10
 	>=media-libs/libogg-1.1.2
-	media-libs/gstreamer"
+	=media-libs/gstreamer-0.8*"
 
 RDEPEND="${DEPEND}
 	dvdr? ( app-cdr/dvd+rw-tools )
-	mp3? ( >=media-plugins/gst-plugins-mad-0.8 )
-	vorbis? ( >=media-plugins/gst-plugins-vorbis-0.8 )
-	flac? ( >=media-plugins/gst-plugins-flac-0.8 )
+	mp3? ( =media-plugins/gst-plugins-mad-0.8* )
+	vorbis? ( =media-plugins/gst-plugins-vorbis-0.8* )
+	flac? ( =media-plugins/gst-plugins-flac-0.8* )
 	app-cdr/cdrdao
 	virtual/cdrtools"
 
