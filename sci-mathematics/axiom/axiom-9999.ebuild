@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.2 2005/11/02 00:09:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.3 2005/12/04 21:41:10 plasmaroo Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -32,21 +32,12 @@ pkg_setup() {
 	ewarn 'WARNING: This is a *live* *CVS* ebuild and thus may have'
 	ewarn '         serious stability issues and may even not build...'
 	echo
-	ewarn 'Please make sure you have at least 0.6GB of space for Axiom'
-	ewarn 'to build. The compilation will take several *HOURS* so be'
-	ewarn 'patient...'
-	echo
-
 	epause 5
 }
 
 src_setenv() {
 	export AXIOM=`pwd`/mnt/linux
 	export PATH=${AXIOM}/bin:${PATH}
-
-	# For TeXMF and sandbox happiness
-	export VARTEXFONTS=${WORKDIR}/../temp
-	export TEXMF="{${VARTEXFONTS},!!/usr/share/texmf}"
 }
 
 src_compile() {
@@ -56,6 +47,10 @@ src_compile() {
 	# from Portage, so we need to use the BFD distributed with GCL for
 	# things to compile and work.
 	sed -i -e 's/--enable-statsysbfd/--enable-locbfd --disable-statsysbfd/' Makefile.pamphlet || die 'Failed to patch the lsp Makefile!'
+
+	# Fix gcl so the "real" Axiom can compile code after we're out of the chroot
+	cp ${FILESDIR}/gcl-2.6.7.fix-out-of-build-root-compile.patch.input ${S}/zips/gcl-2.6.7.fix-out-of-build-root-compile.patch
+	epatch ${FILESDIR}/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
 
 	# Sandbox happiness, fix noweb
 	cd ${WORKDIR}
@@ -82,7 +77,7 @@ src_install() {
 
 	dodir /usr/bin
 	einstall INSTALL=${D}/opt/axiom COMMAND=${D}/usr/bin/axiom || die 'Failed to install Axiom!'
-	sed -e '1d;2i AXIOM=/opt/axiom' -i ${D}/usr/bin/axiom || die 'Failed to patch axiom runscript!'
+	sed -e '2d;3i AXIOM=/opt/axiom' -i ${D}/usr/bin/axiom ${D}/opt/axiom/mnt/linux/bin/axiom || die 'Failed to patch axiom runscript!'
 
 	# Get rid of /mnt/linux
 	cd ${D}/opt/axiom

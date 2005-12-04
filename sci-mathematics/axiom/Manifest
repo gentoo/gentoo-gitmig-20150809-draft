@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89b31b6f5c38956e75300ec422a509bf ChangeLog 336
-MD5 31e3467519edf2226abfc483fb1ad378 axiom-9999.ebuild 2874
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-axiom-9999 0
+MD5 f62ee8a71256ad62e56897a9b1f63fb6 ChangeLog 634
+MD5 51c115f2ef0f245a210dc2b8e7294f29 axiom-9999.ebuild 2943
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDaAPogIKl8Uu19MoRAhoZAJ9eX3pfQG8+dP8AWRq1M1aKH7SJ1ACfd/i7
-R5L4Tv5h8QcmAFABjwiayaM=
-=+Mf/
------END PGP SIGNATURE-----
+MD5 84829d019c500de4d62b6f0e79fa9e0f files/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch 1422
+MD5 43fa5bf93354597104a9752dea29743f files/gcl-2.6.7.fix-out-of-build-root-compile.patch.input 843
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-axiom-9999 0
