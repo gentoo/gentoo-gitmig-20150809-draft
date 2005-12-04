@@ -1,44 +1,56 @@
-MD5 e007e390d22e9f70d515e5a73c72c50f vanilla-sources-2.6.10.ebuild 486
-MD5 5a40531e41b9057208476bd73e7f3274 vanilla-sources-2.6.11.11.ebuild 545
-MD5 5d440d3d0ce4742d769439cbfb3d1f7c vanilla-sources-2.6.15_rc1.ebuild 493
-MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
-MD5 44bfb253ac7f0845ddf3c48baf34fd76 vanilla-sources-2.6.14.3.ebuild 491
-MD5 694274c350108d418129a360bf35ce27 vanilla-sources-2.6.15_rc3.ebuild 497
-MD5 1e484778430c5f28cb2b5b494e684840 vanilla-sources-2.0.40-r1.ebuild 2748
-MD5 3a04523f1179096d3c68f62c662ed794 vanilla-sources-2.4.31.ebuild 424
-MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
-MD5 2518c62313ad8c01b4c904187b1791e6 vanilla-sources-2.6.11.8.ebuild 545
-MD5 1e9d779e2f82b2a16b997ea284bb961d vanilla-sources-2.6.13.4.ebuild 491
-MD5 fa1e792ddae1f5e1142380230390d937 vanilla-sources-2.6.14.2.ebuild 487
-MD5 78e23e1fe39af6a77403649bd3291a6b vanilla-sources-2.6.11.12.ebuild 551
-MD5 3d342f0211e75990b787e03a87e512a4 vanilla-sources-2.6.15_rc2.ebuild 497
-MD5 00572e6cc636f68c3131c9cae9f6e659 vanilla-sources-2.4.30.ebuild 475
-MD5 298e120caba751b37f2282fafa550974 vanilla-sources-2.4.21.ebuild 452
-MD5 7cb291207a0168acb9139b8efa83b9ed vanilla-sources-2.6.15_rc4.ebuild 497
-MD5 06e4974effeb26f2d6d42cb8c54d16d2 ChangeLog 24066
-MD5 2898ef0375f57a5dba22a8fb6827de57 metadata.xml 452
-MD5 ba7cf56498fc6b9478f51af3775864bf vanilla-sources-2.4.32.ebuild 428
-MD5 b61d86fd0aa64fc43e00cf644bc57c54 vanilla-sources-2.6.12.5.ebuild 487
-MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
-MD5 957d045ed53b618813f4ea241093b1e3 vanilla-sources-2.2.26-r1.ebuild 2747
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 17fc4ef292542d762470a36dca0d8132 ChangeLog 24203
+MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-vanilla-sources-2.2.26-r1 67
-MD5 34a221fb286330101bbaab2a9b5944ee files/digest-vanilla-sources-2.6.15_rc1 133
-MD5 e28a32320569918fd32324853850c86b files/digest-vanilla-sources-2.6.15_rc2 133
-MD5 2ef23f7cced935464ce33f2e9a4d3f4b files/digest-vanilla-sources-2.6.15_rc3 133
-MD5 6fe27b196a86fe471dabac7396d5f88e files/digest-vanilla-sources-2.6.15_rc4 133
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-vanilla-sources-2.4.21 67
 MD5 6228c1417a2403fb6ea20450802429b1 files/digest-vanilla-sources-2.4.28 67
 MD5 f3b8c52392a556b488e756b0a93abfc8 files/digest-vanilla-sources-2.4.30 67
 MD5 daf7498c56a0259354b1ceaec6fcd28b files/digest-vanilla-sources-2.4.31 67
 MD5 9846e3cd64adb4374ac39cbb80fa2a5f files/digest-vanilla-sources-2.4.32 67
 MD5 78b4470aebd0088d0560ca3f88387b83 files/digest-vanilla-sources-2.6.10 67
+MD5 4b8afaf94366449485ad5a919f898370 files/digest-vanilla-sources-2.6.11.11 130
+MD5 06a14308b8fa32d0bfdcbdaa29f0755c files/digest-vanilla-sources-2.6.11.12 130
 MD5 565873d025499242590ea66080fc516a files/digest-vanilla-sources-2.6.11.8 129
 MD5 3cdceca5bc99850a0ff128a97e370653 files/digest-vanilla-sources-2.6.12.5 129
 MD5 d77cb9d1120c5b2819c41340a912be27 files/digest-vanilla-sources-2.6.13.4 129
 MD5 99305439a867e07075f0f3152927990f files/digest-vanilla-sources-2.6.14.2 128
 MD5 86ba7351e107b9b0fe68b24a28dad8a1 files/digest-vanilla-sources-2.6.14.3 129
+MD5 34a221fb286330101bbaab2a9b5944ee files/digest-vanilla-sources-2.6.15_rc1 133
+MD5 e28a32320569918fd32324853850c86b files/digest-vanilla-sources-2.6.15_rc2 133
+MD5 2ef23f7cced935464ce33f2e9a4d3f4b files/digest-vanilla-sources-2.6.15_rc3 133
+MD5 6fe27b196a86fe471dabac7396d5f88e files/digest-vanilla-sources-2.6.15_rc4 133
+MD5 bcbc7817a8b91bd485598cfcb5a29f56 files/digest-vanilla-sources-2.6.15_rc5 133
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-vanilla-sources-2.6.5 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
-MD5 4b8afaf94366449485ad5a919f898370 files/digest-vanilla-sources-2.6.11.11 130
-MD5 06a14308b8fa32d0bfdcbdaa29f0755c files/digest-vanilla-sources-2.6.11.12 130
-MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
+MD5 2898ef0375f57a5dba22a8fb6827de57 metadata.xml 452
+MD5 1e484778430c5f28cb2b5b494e684840 vanilla-sources-2.0.40-r1.ebuild 2748
+MD5 957d045ed53b618813f4ea241093b1e3 vanilla-sources-2.2.26-r1.ebuild 2747
+MD5 298e120caba751b37f2282fafa550974 vanilla-sources-2.4.21.ebuild 452
+MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
+MD5 00572e6cc636f68c3131c9cae9f6e659 vanilla-sources-2.4.30.ebuild 475
+MD5 3a04523f1179096d3c68f62c662ed794 vanilla-sources-2.4.31.ebuild 424
+MD5 ba7cf56498fc6b9478f51af3775864bf vanilla-sources-2.4.32.ebuild 428
+MD5 e007e390d22e9f70d515e5a73c72c50f vanilla-sources-2.6.10.ebuild 486
+MD5 5a40531e41b9057208476bd73e7f3274 vanilla-sources-2.6.11.11.ebuild 545
+MD5 78e23e1fe39af6a77403649bd3291a6b vanilla-sources-2.6.11.12.ebuild 551
+MD5 2518c62313ad8c01b4c904187b1791e6 vanilla-sources-2.6.11.8.ebuild 545
+MD5 b61d86fd0aa64fc43e00cf644bc57c54 vanilla-sources-2.6.12.5.ebuild 487
+MD5 1e9d779e2f82b2a16b997ea284bb961d vanilla-sources-2.6.13.4.ebuild 491
+MD5 fa1e792ddae1f5e1142380230390d937 vanilla-sources-2.6.14.2.ebuild 487
+MD5 44bfb253ac7f0845ddf3c48baf34fd76 vanilla-sources-2.6.14.3.ebuild 491
+MD5 5d440d3d0ce4742d769439cbfb3d1f7c vanilla-sources-2.6.15_rc1.ebuild 493
+MD5 3d342f0211e75990b787e03a87e512a4 vanilla-sources-2.6.15_rc2.ebuild 497
+MD5 694274c350108d418129a360bf35ce27 vanilla-sources-2.6.15_rc3.ebuild 497
+MD5 7cb291207a0168acb9139b8efa83b9ed vanilla-sources-2.6.15_rc4.ebuild 497
+MD5 1d55d581e2e28473c4ebc74de1be8994 vanilla-sources-2.6.15_rc5.ebuild 497
+MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
+MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD4DBQFDkt5Up5vW4rUFj5oRAsQrAJdl+ZiWz/BFYs7a/4wdxqtBctT+AJ9wG7J1
+MwLXasGfXZypdCvaxyvwfg==
+=B3i1
+-----END PGP SIGNATURE-----
