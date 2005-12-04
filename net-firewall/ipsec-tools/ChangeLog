@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.35 2005/12/04 20:20:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.36 2005/12/04 22:15:24 latexer Exp $
+
+  04 Dec 2005; Peter Johanson <latexer@gentoo.org>
+  ipsec-tools-0.6.2-r1.ebuild:
+  Marking stable on x86 for bug #113201, at Halcy0n's request.
 
   04 Dec 2005; Jason Wever <weeve@gentoo.org> ipsec-tools-0.4-r2.ebuild:
   Marked 0.4-r2 stable on SPARC wrt bug #113201.
