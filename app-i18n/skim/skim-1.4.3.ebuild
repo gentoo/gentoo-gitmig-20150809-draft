@@ -1,6 +1,6 @@
 # Copyright 2000-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.0.ebuild,v 1.4 2005/09/02 19:57:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.3.ebuild,v 1.1 2005/12/04 02:45:47 usata Exp $
 
 inherit kde multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="|| ( >=app-i18n/scim-1.3.3 >=app-i18n/scim-cvs-1.3.3 )"
@@ -19,9 +19,6 @@ DEPEND="|| ( >=app-i18n/scim-1.3.3 >=app-i18n/scim-cvs-1.3.3 )"
 need-kde 3.2
 
 src_compile() {
-	#sed -i -e "/=.*DESTDIR/s@\(\['DESTDIR'\]\)@\1 + '/usr'@" bksys/generic.py || die
-	#sed -i -e "/basedir =.*DESTDIR/s@\(\['DESTDIR'\]\)@\1 + '/usr'@g" bksys/generic.py || die
-	#sed -i -e "s@\(basedir+subdir\)@\1+'/usr'@g" bksys/generic.py || die
 	./configure prefix=/usr libdir=/usr/$(get_libdir) || die
 	./scons || die
 }
