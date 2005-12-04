@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.38 2005/12/04 12:28:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.39 2005/12/04 12:31:19 cryos Exp $
+
+  04 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> -digikam-0.7.4.ebuild,
+  -digikam-0.8.0.ebuild:
+  Pruned old versions.
 
   04 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> digikam-0.7.4-r1.ebuild:
   Stable on amd64, bug 113723.
