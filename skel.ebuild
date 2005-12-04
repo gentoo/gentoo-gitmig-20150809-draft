@@ -53,16 +53,17 @@ LICENSE=""
 # DO NOT USE SLOT=""! This tells Portage to disable SLOTs for this package.
 SLOT="0"
 
-# Using KEYWORDS, we can record masking information *inside* an ebuild
-# instead of relying on an external package.mask file.  Right now, you
-# should set the KEYWORDS variable for every ebuild so that it contains
-# the names of all the architectures with which the ebuild works.  All of
-# the official architectures can be found in the keywords.desc file which 
-# is in /usr/portage/profiles/.  Usually you should just set this to "~x86".  
-# The ~ in front of the architecture indicates that the package is new and 
-# should be considered unstable until testing proves its stability.  Once 
-# packages go stable the ~ prefix is removed.  So, if you've confirmed that 
-# your ebuild works on x86 and ppc, you'd specify: KEYWORDS="~x86 ~ppc"
+# Using KEYWORDS, we can record masking information *inside* an ebuild 
+# instead of relying on an external package.mask file.  Right now, you should 
+# set the KEYWORDS variable for every ebuild so that it contains the names of 
+# all the architectures with which the ebuild works.  All of the official 
+# architectures can be found in the keywords.desc file which is in 
+# /usr/portage/profiles/.  Usually you should just set this to "~x86".  The ~ 
+# in front of the architecture indicates that the package is new and should be 
+# considered unstable until testing proves its stability.  So, if you've 
+# confirmed that your ebuild works on x86 and ppc, you'd specify: 
+# KEYWORDS="~x86 ~ppc"
+# Once packages go stable, the ~ prefix is removed.
 # For binary packages, use -* and then list the archs the bin package
 # exists for.  If the package was for an x86 binary package, then
 # KEYWORDS would be set like this: KEYWORDS="-* x86"
