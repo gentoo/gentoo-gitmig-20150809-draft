@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.5.ebuild,v 1.3 2005/10/09 06:58:21 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.5.ebuild,v 1.4 2005/12/04 03:56:28 usata Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ SRCTYPE="free"
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
 HOMEPAGE="http://www.trolltech.com/"
 
-IMMQT_P="qt-x11-immodule-unified-qt3.3.4-20041203"
+IMMQT_P="qt-x11-immodule-unified-qt3.3.5-20051018"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 	immqt? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )
@@ -104,7 +104,6 @@ src_unpack() {
 
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
-		epatch ${FILESDIR}/${P}-immodule-focus.patch
 		sh make-symlinks.sh || die "make symlinks failed"
 	fi
 
