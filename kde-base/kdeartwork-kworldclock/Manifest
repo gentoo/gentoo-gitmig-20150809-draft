@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a08bd0cf9e596c6db19a1706f22a14ce ChangeLog 4244
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kworldclock-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kworldclock-3.4.2 298
@@ -8,3 +11,10 @@ MD5 cb5b9a8d02e0062330eeb83fc1dcaa57 kdeartwork-kworldclock-3.4.2.ebuild 513
 MD5 d718b531d5768183e70f73ac95921c0b kdeartwork-kworldclock-3.4.3.ebuild 509
 MD5 2f903180eb0c6f1b1dc148652dda9e72 kdeartwork-kworldclock-3.5.0.ebuild 501
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkshtugEuf3OQ0akRAt3OAKCTmz6tZWsu3BILIU+7N9vv1EZFUwCfbzxe
+u9jpDYcJlB6EMiKaeru+NCA=
+=sTYU
+-----END PGP SIGNATURE-----
