@@ -1,0 +1,114 @@
+--- WebMO.install.orig/scripts/diagnose.pl	2005-11-21 07:40:28.000000000 -0800
++++ WebMO.install/scripts/diagnose.pl	2005-12-03 18:52:58.000000000 -0800
+@@ -80,26 +80,26 @@
+ print handle "\n";
+ 
+ # Check home directory
+-if ($ENV{'HOME'} ne "")
+-{
+-	print handle "<H3>Checking Home Directory</H3>";
+-	my $stat_info = stat($ENV{'HOME'});
+-	my $leng = length($ENV{'HOME'});
+-
+-	print handle "Checking home directory:";
+-	if (($stat_info->mode & 00001) != 1)
+-	{
+-		print handle "&nbsp;" x (59 - $leng);
+-		print handle "<FONT COLOR=\"red\"><B>Failed</B></FONT>\n";
+-		printf handle "<B>Home directory must be world-executable if WebMO is installed there</B>\n"
+-	}
+-	else
+-	{
+-		print handle "&nbsp;" x (59 - $leng);
+-		print handle "<FONT COLOR=\"green\"><B>Passed</B></FONT>\n";
+-	}
+-	print handle "\n";
+-}
++#if ($ENV{'HOME'} ne "")
++#{
++#	print handle "<H3>Checking Home Directory</H3>";
++#	my $stat_info = stat($ENV{'HOME'});
++#	my $leng = length($ENV{'HOME'});
++#
++#	print handle "Checking home directory:";
++#	if (($stat_info->mode & 00001) != 1)
++#	{
++#		print handle "&nbsp;" x (59 - $leng);
++#		print handle "<FONT COLOR=\"red\"><B>Failed</B></FONT>\n";
++#		printf handle "<B>Home directory must be world-executable if WebMO is installed there</B>\n"
++#	}
++#	else
++#	{
++#		print handle "&nbsp;" x (59 - $leng);
++#		print handle "<FONT COLOR=\"green\"><B>Passed</B></FONT>\n";
++#	}
++#	print handle "\n";
++#}
+ 
+ # Check permissions
+ print handle "<H3>Checking CGI Directory</H3>";
+@@ -345,36 +345,36 @@
+ 	}
+ 	
+ 	# check for AddHandler for cgi scripts	
+-	print  handle ($text = "Checking for AddHandler cgi-scripts enabled: ");
+-	$len = length($text);
+-	@results = grep(/AddHandler cgi\-script/, @contents);
+-	if ($results[0] =~ /^#/)
+-	{
+-		print handle "&nbsp;" x (70 - $len);
+-		print handle "<FONT COLOR=\"red\"><B>Failed</B></FONT>\n";
+-		print handle "<B>Uncomment the line 'AddHandle cgi-scripts .cgi'</B>\n";
+-	}
+-	else
+-	{
+-		print handle "&nbsp;" x (70 - $len);
+-		print handle "<FONT COLOR=\"green\"><B>Passed</B></FONT>\n";
+-	}
++#	print  handle ($text = "Checking for AddHandler cgi-scripts enabled: ");
++#	$len = length($text);
++#	@results = grep(/AddHandler cgi\-script/, @contents);
++#	if ($results[0] =~ /^#/)
++#	{
++#		print handle "&nbsp;" x (70 - $len);
++#		print handle "<FONT COLOR=\"red\"><B>Failed</B></FONT>\n";
++#		print handle "<B>Uncomment the line 'AddHandle cgi-scripts .cgi'</B>\n";
++#	}
++#	else
++#	{
++#		print handle "&nbsp;" x (70 - $len);
++#		print handle "<FONT COLOR=\"green\"><B>Passed</B></FONT>\n";
++#	}
+ 	
+ 	# check for user directories
+-	print  handle ($text = "Checking for UserDir enabled: ");
+-	$len = length($text);
+-	@results = grep(/UserDir /, @contents);
+-	if ($results[0] =~ /^#/)
+-	{
+-		print handle "&nbsp;" x (70 - $len);
+-		print handle "<FONT COLOR=\"red\"><B>Failed</B></FONT>\n";
+-		print handle "<B>Uncomment the line 'UserDir public_html'</B>\n";
+-	}
+-	else
+-	{
+-		print handle "&nbsp;" x (70 - $len);
+-		print handle "<FONT COLOR=\"green\"><B>Passed</B></FONT>\n";
+-	}
++#	print  handle ($text = "Checking for UserDir enabled: ");
++#	$len = length($text);
++#	@results = grep(/UserDir /, @contents);
++#	if ($results[0] =~ /^#/)
++#	{
++#		print handle "&nbsp;" x (70 - $len);
++#		print handle "<FONT COLOR=\"red\"><B>Failed</B></FONT>\n";
++#		print handle "<B>Uncomment the line 'UserDir public_html'</B>\n";
++#	}
++#	else
++#	{
++#		print handle "&nbsp;" x (70 - $len);
++#		print handle "<FONT COLOR=\"green\"><B>Passed</B></FONT>\n";
++#	}
+ 	
+ 	# check for suexec
+ 	print  handle ($text = "Checking for suExec enabled: ");

@@ -1,0 +1,17 @@
+# ChangeLog for sci-chemistry/webmo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.1 2005/12/04 08:27:33 spyderous Exp $
+
+*webmo-6.0.003 (04 Dec 2005)
+
+  04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/add-gamess-data-directory.patch,
+  +files/dont-be-interactive-if-root.patch,
+  +files/dont-check-unneeded-things.patch, +files/gentoo-locations.patch,
+  +metadata.xml, +webmo-6.0.003.ebuild:
+  Add a Web interface to a number of computational chemistry programs. Ones in
+  portage include mopac7, gamess and tinker. Also works for Gaussian, NWChem,
+  QChem, Molpro, etc. What needs work: reinstallations without screwing the
+  old configuration, and the reconfig script so editing globals.int isn't
+  required.
+

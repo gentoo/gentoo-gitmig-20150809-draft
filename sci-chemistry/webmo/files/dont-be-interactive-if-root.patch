@@ -1,0 +1,49 @@
+--- WebMO.install.orig/setup.pl	2005-11-21 07:40:28.000000000 -0800
++++ WebMO.install/setup.pl	2005-12-03 11:39:51.000000000 -0800
+@@ -82,26 +84,26 @@
+ #get a username
+ my $username = `whoami`; chomp $username;
+ my $homedir = $ENV{'HOME'} ne "" ? $ENV{'HOME'} : `echo ~`; chomp $homedir;
+-if ($username eq "root")
+-{
+-	print <<END;
+-	
+-You are installing WebMO as the user 'root'.  It is strongly suggested that
+-you do not install WebMO as 'root', but rather do one of the following:
+-  1) Create a new 'webmo'account; log into this account, and install WebMO
+-     into the 'webmo' home directory
+-  2) Log into an existing user acconut, and install WebMO into the home 
+-     directory
+-  3) Continue installation as 'root', but install WebMO into your system
+-     wide html/cgi-bin directory (do not install into a user home directory
+-     as 'root', as the cgi scripts may not run correctly)
+-     
+-END
+-	print "Do you wish to continue with setup?";
+-	my $choice = <STDIN>;
+-	chomp $choice;
+-	exit (0) unless ($choice =~ /^y/i);
+-}
++#if ($username eq "root")
++#{
++#	print <<END;
++#	
++#You are installing WebMO as the user 'root'.  It is strongly suggested that
++#you do not install WebMO as 'root', but rather do one of the following:
++#  1) Create a new 'webmo'account; log into this account, and install WebMO
++#     into the 'webmo' home directory
++#  2) Log into an existing user acconut, and install WebMO into the home 
++#     directory
++#  3) Continue installation as 'root', but install WebMO into your system
++#     wide html/cgi-bin directory (do not install into a user home directory
++#     as 'root', as the cgi scripts may not run correctly)
++#     
++#END
++#	print "Do you wish to continue with setup?";
++#	my $choice = <STDIN>;
++#	chomp $choice;
++#	exit (0) unless ($choice =~ /^y/i);
++#}
+ 
+ #get license information
+ &divider;
