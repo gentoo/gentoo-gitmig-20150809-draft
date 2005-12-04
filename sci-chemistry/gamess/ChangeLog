@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.3 2005/12/03 18:26:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.4 2005/12/04 17:00:50 markusle Exp $
+
+*gamess-05272005.3-r1 (04 Dec 2005)
+
+  04 Dec 2005; Markus Dittrich <markusle@gentoo.org>
+  +files/runall-gentoo.1.patch, +files/rungms-gentoo.1.patch,
+  +gamess-05272005.3-r1.ebuild:
+  This new revision installs the rungms wrapper into /usr/bin to avoid that
+  users have to copy it manually and to play well with WebMO.
 
 *gamess-05272005.3 (03 Dec 2005)
 
