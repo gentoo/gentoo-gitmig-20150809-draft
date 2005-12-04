@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f0bc25ca8bcb878f3d34d493b4abe3ae ChangeLog 577
-MD5 00a3322a9c8a6c531e4c188cc3552921 commons-graph-0.8.1_p20040118.ebuild 1751
+MD5 bc2504b914177aa57d43ec7f593eba23 ChangeLog 710
+MD5 d0f2cfc96f83cc6b74144e063ef799a3 commons-graph-0.8.1_p20040118.ebuild 1759
 MD5 361f23cd46c14f40fbb6590b564f20a5 files/commons-graph-0.8.1_p20040118-gentoo.diff 758
 MD5 bf85b87a012c334e20d661447bbf52b4 files/digest-commons-graph-0.8.1_p20040118 75
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDk3AqndWRXhKOboURAhBYAKCOPr9mJ39bnQ470QNsfmo5xbSOjwCgk7v0
-P3Eh77Y8gIpI/UJog2PySs8=
-=mgH1
------END PGP SIGNATURE-----
