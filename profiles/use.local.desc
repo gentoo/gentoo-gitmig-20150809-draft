@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1597 2005/12/02 16:40:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1598 2005/12/04 00:46:56 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -332,6 +332,8 @@ dev-php/php:mkconfig - Package up files required for php-config package (for mai
 dev-php4/eaccelerator:inode - Enable inode-based caching.
 dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
+dev-php5/znf:pear-db - Include support for PEAR-DB.
+dev-php5/znf:smarty - Include support for Smarty.
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
