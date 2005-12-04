@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.0.ebuild,v 1.1 2005/12/04 22:46:32 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.0.ebuild,v 1.2 2005/12/04 23:06:24 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -13,3 +13,23 @@ SRC_URI="http://dri.freedesktop.org/libdrm/${P}.tar.gz"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 RDEPEND=""
 DEPEND="${RDEPEND}"
+
+pkg_preinst() {
+	x-modular_pkg_preinst
+
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
+		cp -pPR "${ROOT}"/usr/$(get_libdir)/libdrm.so.1 "${IMAGE}"/usr/$(get_libdir)/
+	fi
+}
+
+pkg_postinst() {
+	x-modular_pkg_postinst
+
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
+		ewarn "You must re-compile all packages that are linked against"
+		ewarn "libdrm 1 by using revdep-rebuild from gentoolkit:"
+		ewarn "# revdep-rebuild --soname libdrm.so.1"
+		ewarn "After this, you can delete /usr/$(get_libdir)/libdrm.so.1"
+		epause
+	fi
+}
