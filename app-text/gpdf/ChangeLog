@@ -1,6 +1,16 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.103 2005/08/13 07:29:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.104 2005/12/04 20:49:47 dang Exp $
+
+  04 Dec 2005; <dang@gentoo.org> +files/gpdf-2.10.0-CAN-2005-3193.patch,
+  +gpdf-2.10.0-r2.ebuild:
+  Fix for bug #114428
+
+*gpdf-2.10.0-r2 (04 Dec 2005)
+
+  04 Dec 2005; <dang@gentoo.org> +files/gpdf-2.10.0-CAN-2005-3193.patch,
+  +gpdf-2.10.0-r2.ebuild:
+  -m Fix for bug #114428
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> gpdf-2.10.0-r1.ebuild:
   Stable on hppa.
