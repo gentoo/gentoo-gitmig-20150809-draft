@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-graph
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/ChangeLog,v 1.1 2005/12/04 21:12:24 nichoj Exp $
+
+*commons-graph-0.8.1_p20040118 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  +files/commons-graph-0.8.1_p20040118-gentoo.diff, +metadata.xml,
+  +commons-graph-0.8.1_p20040118.ebuild:
+  Initial import (bug #70892).
+
