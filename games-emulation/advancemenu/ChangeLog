@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.20 2005/10/17 01:39:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.21 2005/12/04 18:53:07 mr_bones_ Exp $
+
+*advancemenu-2.4.12 (04 Dec 2005)
+
+  04 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/advancemenu-2.4.12-alsa-pkg-config.patch,
+  +advancemenu-2.4.12.ebuild:
+  version bump
 
 *advancemenu-2.4.11 (17 Oct 2005)
 
