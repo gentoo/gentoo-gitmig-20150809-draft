@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.9 2005/03/31 23:10:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.10 2005/12/04 14:47:35 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -19,10 +19,10 @@ DEPEND=">=x11-libs/gtk+-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/librsvg-2.0
 	>=gnome-base/gconf-2.0
-	>=media-libs/gstreamer-0.8
+	=media-libs/gstreamer-0.8*
 	>=dev-libs/libxml2-2.6.7
 	app-text/scrollkeeper
-	media-libs/gst-plugins"
+	=media-libs/gst-plugins-0.8*"
 
 src_compile() {
 	epatch "${FILESDIR}/${P}.amd64.patch"
