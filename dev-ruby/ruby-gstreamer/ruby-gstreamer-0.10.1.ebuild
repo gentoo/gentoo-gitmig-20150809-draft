@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ruby-gstreamer-0.10.1.ebuild,v 1.3 2005/04/01 06:02:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ruby-gstreamer-0.10.1.ebuild,v 1.4 2005/12/04 14:46:02 zaheerm Exp $
 
 inherit ruby ruby-gnome2
 
@@ -11,11 +11,11 @@ IUSE=""
 DEPEND="${DEPEND}
 	>=gnome-base/libgnome-2.2
 	>=gnome-base/libgnomeui-2.2
-	>=media-libs/gstreamer-0.8"
+	=media-libs/gstreamer-0.8*"
 RDEPEND="${RDEPEND}
 	>=gnome-base/libgnome-2.2
 	>=gnome-base/libgnomeui-2.2
-	>=media-libs/gstreamer-0.8
+	=media-libs/gstreamer-0.8*
 	>=dev-ruby/ruby-gnomecanvas2-${PV}"
 
 src_test() {
