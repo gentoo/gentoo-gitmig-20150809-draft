@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.25 2005/12/04 16:19:15 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.26 2005/12/04 22:43:35 rl03 Exp $
+
+  04 Dec 2005; Renat Lumpau <rl03@gentoo.org> files/3.2.1/reconfig,
+  files/3.4.2/reconfig, files/3.4.4/reconfig:
+  Fixes for w-c-1.50
 
 *rt-3.4.4 (04 Dec 2005)
 

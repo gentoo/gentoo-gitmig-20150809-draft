@@ -1,8 +1,8 @@
 
-You are almost done! 
+You are almost done!
 
-1. Apache configs have been installed for you. You will need to restart
-   Apache for them to take effect.
+1. Apache configs have been installed for you. You will need to edit them
+   to set the correct paths!
 
 2. You may want to edit TWiki's config to suit your needs:
    ${MY_INSTALLDIR}/lib/TWiki.cfg

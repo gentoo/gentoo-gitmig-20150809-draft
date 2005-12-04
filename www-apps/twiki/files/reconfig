@@ -8,11 +8,12 @@ die() {
 }
 
 if [ $1 = "install" ]; then
-	if [ -a /etc/apache/vhosts.d/twiki.conf ]; then
-		sed -e "s|HOST|${VHOST_HOSTNAME}|
-		s|DOCROOT|${VHOST_HTDOCSDIR}|
-		s|ROOTDIR|${MY_INSTALLDIR}|g" -i /etc/apache/vhosts.d/twiki.conf || die "sed failed"
-	fi
+	# don't change Apache files - breaks sandbox
+	#if [ -a /etc/apache/vhosts.d/twiki.conf ]; then
+	#	sed -e "s|HOST|${VHOST_HOSTNAME}|
+	#	s|DOCROOT|${VHOST_HTDOCSDIR}|
+	#	s|ROOTDIR|${MY_INSTALLDIR}|g" -i /etc/apache/vhosts.d/twiki.conf || die "sed failed"
+	#fi
 
 	# fix lib locations
 	sed -e "s|../lib|${MY_INSTALLDIR}/lib|" -i ${MY_INSTALLDIR}/bin/setlib.cfg || die
