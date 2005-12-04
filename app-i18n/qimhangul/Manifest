@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4ad38641f1391f4b55a470d5eb1c6bd qimhangul-0.0.1.ebuild 1292
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 a10029d6e39bc1eb612c35ddd69f35e7 ChangeLog 662
-MD5 ed6d810c995cfccd1cdad97239443cc3 qimhangul-0.0.2.ebuild 1202
-MD5 3733fe5702155ef1ce0988b30a13e04b files/digest-qimhangul-0.0.1 67
-MD5 48935f4a1a76f440fb18dc3dda89b8ff files/qimhangul-0.0.1-thread-gentoo.diff 282
+MD5 a451fe8d8e6c6bac695a2c1277c53d25 ChangeLog 967
+MD5 4222fdf8a108a0821e1825c157bb2824 qimhangul-0.0.2.ebuild 1288
+MD5 21973d631f86ebc7720640c62fc8b9b4 qimhangul-0.0.3.ebuild 1202
+MD5 fef755a6b6899f979e723dcb597dc846 files/qimhangul-0.0.2-gentoo.patch 698
 MD5 6b4b7df5513f7114fd32c38643fe9032 files/digest-qimhangul-0.0.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7JA6VWNWqTUmv+0RAlaPAJ9UkPv+9GtLeLkRzDiTe8rBubKYqwCfSVED
-7abE5trWaDyqlNdkl6N3qBI=
-=3UW/
------END PGP SIGNATURE-----
+MD5 205cd0d5177e33c68b9b7c6b4b7a4d49 files/digest-qimhangul-0.0.3 67
