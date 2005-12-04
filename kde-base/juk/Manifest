@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4cfcd3a284380b6e24deb20b74b3abc ChangeLog 4589
 MD5 4fdb0ffd65dc5bbcb439ea875a4f1ba6 files/configure-fix-kdemultimedia-juk.patch 4482
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-juk-3.4.1 227
@@ -9,3 +12,10 @@ MD5 6839233323dd9b1caded4608bb0d7446 juk-3.4.2.ebuild 1274
 MD5 69a178652e0cfe988fbdaea15c0eb4fe juk-3.4.3.ebuild 1270
 MD5 422042671cfcc8d1ccb287c7c2887a5f juk-3.5.0.ebuild 1201
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDkjwsugEuf3OQ0akRAq5VAJ92DnTu9KCoZRvQR2QWn+3HJDNn2gCXUtQ4
+mSLteWB8PgcO2BF7jjkRlg==
+=GvFu
+-----END PGP SIGNATURE-----

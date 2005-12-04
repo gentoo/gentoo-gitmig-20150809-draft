@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1da043b691b5552909895059a7dd509f ChangeLog 3769
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kteatime-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kteatime-3.4.2 282
@@ -8,3 +11,10 @@ MD5 2fdc498738cdc31447139040b201af91 kteatime-3.4.2.ebuild 419
 MD5 0062af811d26b8c35d9979b0f00bbe8f kteatime-3.4.3.ebuild 416
 MD5 80896bc0d5d25eb8c7d4b4d20d27b937 kteatime-3.5.0.ebuild 407
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDkjUwugEuf3OQ0akRAvx/AJ0RVrN1szq1p0Gc4AHMMlRmRyEoHQCfReUc
+vQ+MSOTjuTvzHEDuyV+NhRk=
+=CMPm
+-----END PGP SIGNATURE-----
