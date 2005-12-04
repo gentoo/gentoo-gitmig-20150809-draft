@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libsrs_alt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.13 2005/10/28 17:23:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.14 2005/12/04 20:00:58 tgall Exp $
+
+  04 Dec 2005; Tom Gall <tgall@gentoo.org>
+  libsrs_alt-1.0_rc1-r1.ebuild:
+  stable on ppc64
 
   28 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libsrs_alt-1.0_rc1-r1.ebuild:
