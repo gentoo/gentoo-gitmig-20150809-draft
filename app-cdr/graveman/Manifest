@@ -3,5 +3,5 @@ MD5 718f528e4862ae730d619cc74f125360 files/digest-graveman-0.3.12_p4 69
 MD5 718f528e4862ae730d619cc74f125360 files/digest-graveman-0.3.12_p4-r1 69
 MD5 1ee3df22801325fa88de863c22241f22 files/joliet-long.patch 792
 MD5 3408953126283f20f8e6b426e9196ef8 graveman-0.3.12_p4-r1.ebuild 1339
-MD5 81fa2e632198b0e17a5aee605cfc2f21 graveman-0.3.12_p4.ebuild 1238
+MD5 e987eebeb6659d6c946a890ade7a62a5 graveman-0.3.12_p4.ebuild 1239
 MD5 76b896dd67642ee66a4c06ec76c6f898 metadata.xml 232
