@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.51 2005/11/28 13:04:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.52 2005/12/04 20:26:31 tgall Exp $
+
+  04 Dec 2005; Tom Gall <tgall@gentoo.org> razor-2.72.ebuild,
+  razor-2.77.ebuild:
+  stable for ppc64 on 2.72, ~ppc64 on 2.77
 
   28 Nov 2005; <mcumming@gentoo.org> razor-2.67.ebuild, razor-2.71.ebuild,
   razor-2.72.ebuild, razor-2.74.ebuild, razor-2.75.ebuild, razor-2.77.ebuild:
@@ -47,7 +51,7 @@
   03 Jul 2005; Herbie Hopkins <herbs@gentoo.org> razor-2.74.ebuild:
   Stable on amd64 wrt bug #96776.
 
-  30 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> razor-2.74.ebuild:
+  30 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org> razor-2.74.ebuild:
   Stable on alpha, bug 96776.
 
   30 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> razor-2.74.ebuild:
@@ -153,7 +157,7 @@
   19 Oct 2004; Michael Hanselmann <hansmi@gentoo.org> razor-2.61.ebuild:
   Stable on ppc.
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> razor-2.40-r1.ebuild,
+  19 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> razor-2.40-r1.ebuild,
   razor-2.61.ebuild:
   Stable on alpha, bug 67910.
 
