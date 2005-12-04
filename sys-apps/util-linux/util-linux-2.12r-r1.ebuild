@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r1.ebuild,v 1.1 2005/10/15 15:42:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r1.ebuild,v 1.2 2005/12/04 19:07:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -49,6 +49,9 @@ src_unpack() {
 
 	# crypto support
 	use crypt && epatch "${WORKDIR}"/loop-AES-v${LOOP_AES_VER}/${P}.diff
+
+	# Fall back to cracklib if default words file doesnt exist #114416
+	epatch "${FILESDIR}"/${PN}-2.12r-cracklib-words.patch
 
 	# Fix rare failures with -j4 or higher
 	epatch "${FILESDIR}"/${PN}-2.11z-parallel-make.patch
