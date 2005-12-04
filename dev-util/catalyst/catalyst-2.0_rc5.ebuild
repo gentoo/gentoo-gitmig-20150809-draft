@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc4.ebuild,v 1.1 2005/12/02 20:14:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc5.ebuild,v 1.1 2005/12/04 17:42:23 wolf31o2 Exp $
 
 inherit eutils
 
