@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.7.4-r1.ebuild,v 1.1 2005/12/03 20:12:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.7.4-r1.ebuild,v 1.2 2005/12/04 12:35:12 cryos Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="~media-gfx/digikam-${PV}

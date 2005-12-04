@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/digikamimageplugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.18 2005/12/03 20:12:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.19 2005/12/04 12:35:12 cryos Exp $
+
+  04 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  -digikamimageplugins-0.7.4.ebuild, digikamimageplugins-0.7.4-r1.ebuild,
+  -digikamimageplugins-0.8.0.ebuild:
+  Stable on amd64, bug 113723. Pruned old versions.
 
 *digikamimageplugins-0.8.0-r1 (03 Dec 2005)
 *digikamimageplugins-0.7.4-r1 (03 Dec 2005)
