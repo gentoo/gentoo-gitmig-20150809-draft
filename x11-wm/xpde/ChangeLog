@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpde
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.10 2004/10/09 19:44:42 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.11 2005/12/04 04:37:33 usata Exp $
+
+  04 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> xpde-0.3.5.ebuild,
+  xpde-0.4.0.ebuild, xpde-0.5.1.ebuild:
+  Added media-libs/jpeg to DEPEND. Thanks to Brett Johnson
+  <brett@blzj.com>;bug #112102.
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> xpde-0.3.5.ebuild,
   xpde-0.4.0.ebuild, xpde-0.5.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/xpde-0.4.0.ebuild,v 1.4 2004/10/09 19:44:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/xpde-0.4.0.ebuild,v 1.5 2005/12/04 04:37:33 usata Exp $
 
 DESCRIPTION="A Desktop Environment modelled after the O/S from Redmond, WA"
 HOMEPAGE="http://www.xpde.com/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	media-libs/jpeg"
 
 src_compile() {
 	einfo
