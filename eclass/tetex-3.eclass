@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.7 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.8 2005/12/04 07:36:49 pclouds Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -29,7 +29,8 @@ DEPEND="X? ( motif? ( lesstif? ( x11-libs/lesstif )
 	!dev-tex/pgf
 	!dev-tex/xcolor
 	!dev-tex/xkeyval
-	!dev-tex/latex-beamer"
+	!dev-tex/latex-beamer
+	!dev-tex/vntex"
 
 tetex-3_pkg_setup() {
 	tetex_pkg_setup
