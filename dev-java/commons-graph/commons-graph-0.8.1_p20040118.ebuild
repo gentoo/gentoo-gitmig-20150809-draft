@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/commons-graph-0.8.1_p20040118.ebuild,v 1.1 2005/12/04 21:12:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-graph/commons-graph-0.8.1_p20040118.ebuild,v 1.2 2005/12/04 22:39:22 nichoj Exp $
 
 inherit java-pkg eutils
 MY_PN=graph2
@@ -11,16 +11,16 @@ DESCRIPTION="A toolkit for managing graphs and graph based data structures"
 HOMEPAGE="http://cvs.apache.org/viewcvs/jakarta-commons-sandbox/graph2/"
 # this was extracted from a source rpm at jpackage
 SRC_URI="mirror://gentoo/distfiles/${MY_P}.tar.gz"
-CDEPEND="dev-java/log4j
+COMMON_DEP="dev-java/log4j
 	dev-java/commons-collections
 	dev-java/xerces"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( dev-java/jikes )
 	dev-java/ant-core
 	test? ( dev-java/ant-tasks )
-	${CDEPEND}"
+	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.3
-	${CDEPEND}"
+	${COMMON_DEP}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
