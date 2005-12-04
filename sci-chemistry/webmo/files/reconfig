@@ -15,7 +15,7 @@ if [ $1 = "install" ]; then
 		realfile=${file#._cfg*_}
 		enabled_file=${realfile%.disabled}
 		if [[ -e ${enabled_file} ]]; then
-			enabled_cfgfile=${enabled_file%.disabled}
+			enabled_cfgfile=${file%.disabled}
 			mv ${file} ${enabled_cfgfile}
 		fi
 	done
