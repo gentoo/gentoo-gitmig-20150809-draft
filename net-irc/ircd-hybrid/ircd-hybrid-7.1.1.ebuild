@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.1.1.ebuild,v 1.2 2005/11/03 07:31:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.1.1.ebuild,v 1.3 2005/12/04 10:32:51 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 
-RDEPEND="dev-libs/libelf
+RDEPEND="
 	zlib? ( >=sys-libs/zlib-1.1.4-r2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )"
 
