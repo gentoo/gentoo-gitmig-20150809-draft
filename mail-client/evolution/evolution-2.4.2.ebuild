@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.4.0.ebuild,v 1.2 2005/09/14 01:44:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.4.2.ebuild,v 1.1 2005/12/04 09:09:52 leonardop Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt dbus debug doc gstreamer ipv6 kerberos krb4 ldap mono mozilla nntp pda profile spell ssl static"
+IUSE="crypt dbus debug doc gstreamer ipv6 kerberos krb4 ldap mono mozilla nntp pda profile spell ssl"
 
 # Pango dependency required to avoid font rendering problems
 RDEPEND=">=x11-themes/gnome-icon-theme-1.2
@@ -19,7 +19,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	>=dev-libs/glib-2
 	>=gnome-base/orbit-2.9.8
 	>=gnome-base/libbonobo-2
-	>=gnome-extra/evolution-data-server-1.3.1
+	>=gnome-extra/evolution-data-server-1.4.1
 	>=gnome-base/libbonoboui-2.4.2
 	>=gnome-base/gnome-vfs-2.4
 	>=gnome-base/libgnomeui-2
@@ -52,10 +52,8 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 		=media-libs/gst-plugins-0.8* )
 	dbus? ( sys-apps/dbus )
 	mono? ( >=dev-lang/mono-1 )"
-
-	# For firefox, once it's fixed
 #		mozilla? ( !firefox? ( >=www-client/mozilla-1.7.3 ) )
-#		firefox? ( >=www-client/mozilla-firefox-1.0.6-r6 )
+#		firefox? ( >=www-client/mozilla-firefox-1.0.7-r3 )
 #		!mozilla? ( !firefox? (
 
 DEPEND="${RDEPEND}
@@ -74,7 +72,6 @@ ELTCONF="--reverse-deps"
 pkg_setup() {
 	G2CONF="--disable-default-binary \
 		--without-kde-applnk-path        \
-		$(use_enable static)             \
 		$(use_enable ssl nss)            \
 		$(use_enable ssl smime)          \
 		$(use_enable ipv6)               \
@@ -84,8 +81,6 @@ pkg_setup() {
 		$(use_enable profile profiling)  \
 		$(use_with ldap openldap)        \
 		$(use_with kerberos krb5 /usr)"
-
-	use ldap && G2CONF="${G2CONF} $(use_with static static-ldap)"
 
 	if use krb4 && ! built_with_use virtual/krb5 krb4; then
 		ewarn
@@ -102,13 +97,29 @@ pkg_setup() {
 	# Plug-ins to install. Normally we would want something similar to
 	# --enable-plugins=all (plugins_base + plugins_standard), except for some
 	# special cases.
-	local plugins="calendar-file calendar-http calendar-weather \
-		itip-formatter plugin-manager default-source addressbook-file \
-		startup-wizard print-message mark-all-read groupwise-features \
-		groupwise-account-setup mail-account-disable sa-junk-plugin   \
-		bbdb subject-thread save-calendar select-one-source copy-tool \
-		mail-to-task mark-calendar-offline mailing-list-actions       \
-		default-mailer"
+	local plugins="addressbook-file \
+		bbdb \
+		calendar-file \
+		calendar-http \
+		calendar-weather \
+		copy-tool \
+		default-mailer
+		default-source \
+		groupwise-account-setup \
+		groupwise-features \
+		itip-formatter \
+		mail-account-disable \
+		mark-calendar-offline \
+		mail-to-task \
+		mailing-list-actions \
+		mark-all-read \
+		plugin-manager \
+		print-message \
+		sa-junk-plugin \
+		save-calendar \
+		select-one-source \
+		startup-wizard \
+		subject-thread"
 
 	# The special cases
 	use gstreamer && plugins="${plugins} audio-inline"
@@ -135,12 +146,17 @@ src_unpack() {
 	gnome2_omf_fix help/omf.make help/C/Makefile.in
 
 	# Accept the list of plugins separated by commas instead of spaces.
-	epatch ${FILESDIR}/${PN}-2.3.7-configure_plugins.patch
+	epatch "${FILESDIR}"/${PN}-2.3.7-configure_plugins.patch
 	# Fix for linking problems, #85013 and #92682
-	epatch ${FILESDIR}/${PN}-2.2.3-linking-fix.patch
+	epatch "${FILESDIR}"/${PN}-2.2.3-linking-fix.patch
 	# Work-around for a start-up segfault (bug #104587).
-	epatch ${FILESDIR}/${PN}-2.3.8-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-2.3.8-gentoo.patch
 
+	export WANT_AUTOMAKE=1.9
+	intltoolize -c -f || die "intltoolize failed"
+	sed -n -e '/GNOME_COMPILE_WARNINGS/,/^])/p' aclocal.m4 > gnome.m4
+	aclocal -I . || die "aclocal failed"
+	libtoolize --copy --force || die "libtoolize failed"
 	autoconf || die "autoconf failed"
 	automake || die "automake failed"
 }
