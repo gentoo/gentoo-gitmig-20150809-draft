@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20be9a523bbfdaa76403e438ea7d92de ChangeLog 13363
-MD5 28717e3faee82dbca88d83de9c9afadc bogofilter-0.92.8.ebuild 1575
+MD5 09ca30078f317aa4fc1ddbe2c5bc00a8 ChangeLog 13452
+MD5 32a0ae636ed96bd26a76a557bad288a2 bogofilter-0.92.8.ebuild 1572
 MD5 0fe922bced50c25b4a3a722a910e5bee bogofilter-0.96.5.ebuild 2397
 MD5 80af9691563cdca58efeaf76f86dd6f1 bogofilter-0.96.6.ebuild 2563
 MD5 01df1db98ad3b0d6453a557b31bf2cfa bogofilter-1.0.0.ebuild 2396
+MD5 48bd0f185b30f8151e8da04a025e0373 metadata.xml 424
 MD5 1970df6e6d8dabe53d04a6f120d0b8bb files/digest-bogofilter-0.92.8 70
 MD5 4d0b162c16401cd805a8c5bededda302 files/digest-bogofilter-0.96.5 70
 MD5 0fe90ce601d03af1f4d35fec0634f298 files/digest-bogofilter-0.96.6 134
 MD5 fc42ce17f830dcc131e4cce9d1a67861 files/digest-bogofilter-1.0.0 69
-MD5 48bd0f185b30f8151e8da04a025e0373 metadata.xml 424
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjqPAV3J2n04EauwRAk2xAJ9/wNx64B8gM19vvw3GS6gA/DB2UQCfcMqX
-H45thrWbErnnF8TliDqZsvU=
-=NXZS
------END PGP SIGNATURE-----
