@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c5416cc48bfee773d0e8f8ee38e2981c ChangeLog 4173
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kworldwatch-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kworldwatch-3.4.2 282
@@ -8,3 +11,10 @@ MD5 e29100203047ae02c86e0776950b0097 kworldwatch-3.4.2.ebuild 531
 MD5 a9740c361e5e68120cb2f64bfae31d76 kworldwatch-3.4.3.ebuild 527
 MD5 1be52eae8e7817ec86587926d5f4ad7e kworldwatch-3.5.0.ebuild 519
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlJPlugEuf3OQ0akRAiX5AJ9BVzfQYIkHo+5UaqYaB6eqvfzh0gCfSyJo
+4qFyv8zAj90mEXECa/AONfY=
+=KZP6
+-----END PGP SIGNATURE-----
