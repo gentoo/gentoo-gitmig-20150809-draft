@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.9.7.ebuild,v 1.1 2005/12/02 15:38:19 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.0.ebuild,v 1.1 2005/12/05 18:45:58 zaheerm Exp $
 
 inherit eutils flag-o-matic libtool flag-o-matic
 
 # Create a major/minor combo for our SLOT and executables suffix
 PVP=(${PV//[-\._]/ })
-#PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
-PV_MAJ_MIN=0.10
+PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
+#PV_MAJ_MIN=0.10
 
 DESCRIPTION="Streaming media framework"
 HOMEPAGE="http://gstreamer.sourceforge.net"
