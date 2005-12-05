@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.225 2005/12/03 21:37:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.226 2005/12/05 05:04:28 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1515,12 +1515,15 @@ gcc-compiler_src_install() {
 	make DESTDIR="${D}" install || die
 	# Punt some tools which are really only useful while building gcc
 	rm -r "${D}${LIBEXECPATH}"/install-tools
+	# This one comes with binutils
+	find "${D}" -name libiberty.a -exec rm -f {} \;
+
+	# Move the libraries to the proper location
+	gcc_movelibs
+
 	# Now do the fun stripping stuff
 	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}${BINPATH}" "${D}${LIBEXECPATH}"
 	env RESTRICT="" STRIP=${CTARGET}-strip prepstrip "${D}${LIBPATH}"
-
-	# This one comes with binutils
-	find "${D}" -name libiberty.a -exec rm -f {} \;
 
 	# Basic sanity check
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
@@ -1544,9 +1547,6 @@ gcc-compiler_src_install() {
 
 		cp ${WORKDIR}/build/*.specs "${D}"${LIBPATH}
 	fi
-
-	# Move the libraries to the proper location
-	gcc_movelibs
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
@@ -1662,7 +1662,7 @@ gcc_movelibs() {
 	local multiarg
 	for multiarg in $(${XGCC} -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
-		multiarg=${multiarg/@/-}
+		multiarg=${multiarg//@/-}
 
 		local OS_MULTIDIR=$(${XGCC} ${multiarg} --print-multi-os-directory)
 		local MULTIDIR=$(${XGCC} ${multiarg} --print-multi-directory)
@@ -1671,40 +1671,22 @@ gcc_movelibs() {
 
 		[[ -d ${TODIR} ]] || mkdir -p ${TODIR}
 
-		FROMDIR=${D}${LIBPATH}/${OS_MULTIDIR}
-		if [[ ${FROMDIR} != "${TODIR}" && -d ${FROMDIR} ]] ; then
-			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-			rmdir ${FROMDIR}
-		fi
-
-		FROMDIR=${D}${LIBPATH}/../${MULTIDIR}
-		if [[ -d ${FROMDIR} ]] ; then
-			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-			rmdir ${FROMDIR}
-		fi
-
-		FROMDIR=${D}${PREFIX}/lib/${OS_MULTIDIR}
-		if [[ -d ${FROMDIR} ]] ; then
-			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-			rmdir ${FROMDIR}
-		fi
-
-		FROMDIR=${D}${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR}
-		if [[ -d ${FROMDIR} ]] ; then
-			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-			rmdir ${FROMDIR}
-		fi
-
-		FROMDIR=${D}${PREFIX}/lib/${MULTIDIR}
-		if [[ -d ${FROMDIR} ]] ; then
-			# The only thing that ends up here is libiberty.a (which is deleted)
-			# Lucky for us nothing mistakenly gets placed here that we need...
-			# otherwise we'd have a potential conflict when OS_MULTIDIR=../lib and
-			# MULTIDIR=. for different ABI.  If this happens, the fix is to patch
-			# the gcc Makefiles to behave with LIBDIR properly.
-			#mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
-			rmdir ${FROMDIR}
-		fi
+		for FROMDIR in \
+			${LIBPATH}/${OS_MULTIDIR} \
+			${LIBPATH}/../${MULTIDIR} \
+			${PREFIX}/lib/${OS_MULTIDIR} \
+			${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR} \
+			${PREFIX}/lib/${MULTIDIR}
+		do
+			FROMDIR=${D}${FROMDIR}
+			if [[ ${FROMDIR} != "${TODIR}" && -d ${FROMDIR} ]] ; then
+				local files=$(find "${FROMDIR}" -maxdepth 1 ! -type d 2>/dev/null)
+				if [[ -n ${files} ]] ; then
+					mv ${files} "${TODIR}"
+					rmdir "${FROMDIR}" 2>/dev/null
+				fi
+			fi
+		done
 	done
 
 	# make sure the libtool archives have libdir set to where they actually
