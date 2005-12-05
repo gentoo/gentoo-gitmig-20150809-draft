@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.3.15.ebuild,v 1.1 2005/07/26 06:44:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.3.15.ebuild,v 1.2 2005/12/05 14:56:10 suka Exp $
 
 inherit fdo-mime rpm
 
@@ -31,6 +31,7 @@ RDEPEND="!app-office/openoffice-ximian
 		>=gnome-base/gnome-vfs-2.0
 		>=dev-libs/libxml2-2.0 )
 	kde? ( kde-base/kdelibs )
+	>=media-libs/libart_lgpl-2.3.13
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.4
 	media-libs/fontconfig
