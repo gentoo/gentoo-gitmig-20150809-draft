@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.10.2.ebuild,v 1.13 2005/12/01 18:27:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.10.2.ebuild,v 1.14 2005/12/05 22:01:55 zaheerm Exp $
 
 inherit gnome2
 
@@ -24,13 +24,13 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/gail-0.0.3
 	>=media-sound/esound-0.2.23
-	>=media-libs/gstreamer-0.8
-	>=media-libs/gst-plugins-0.8.2
+	=media-libs/gstreamer-0.8*
+	=media-libs/gst-plugins-0.8*
 	>=gnome-extra/nautilus-cd-burner-2.9
-	>=media-plugins/gst-plugins-cdparanoia-0.8
-	ogg? ( >=media-plugins/gst-plugins-ogg-0.8.2 )
-	vorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.2 )
-	mad? ( >=media-plugins/gst-plugins-mad-0.8.2 )"
+	=media-plugins/gst-plugins-cdparanoia-0.8*
+	ogg? ( =media-plugins/gst-plugins-ogg-0.8* )
+	vorbis? ( =media-plugins/gst-plugins-vorbis-0.8* )
+	mad? ( =media-plugins/gst-plugins-mad-0.8* )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0

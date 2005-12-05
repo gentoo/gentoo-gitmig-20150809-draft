@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eac65c2a23bbebd062a50d611b31b30 ChangeLog 11436
-MD5 88dec384b5105a1bffd46847025909b0 files/digest-gnome-media-1.2.3-r2 70
+MD5 0d58bd87770b2439b49b23860007297b gnome-media-1.2.3-r2.ebuild 1130
+MD5 9a851876fa16d622d4b1b13f1c9f0abd gnome-media-2.10.2.ebuild 1427
+MD5 a3a12d5c60c8e6dc74bb905991cb3576 gnome-media-2.12.0.ebuild 1564
+MD5 98456098bebfa902f4ea7cfdbcfbdd2d gnome-media-2.8.0.ebuild 1233
+MD5 a86ff55601f47563c7488ae9d9968acb ChangeLog 11609
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 097229597447674a84ade529e1f51f9f files/digest-gnome-media-2.10.2 72
 MD5 778a26f4fb1b4cccc326171c7b46d80f files/digest-gnome-media-2.12.0 72
+MD5 88dec384b5105a1bffd46847025909b0 files/digest-gnome-media-1.2.3-r2 70
 MD5 cf54400021ff023a01bdafab7ee15c30 files/digest-gnome-media-2.8.0 71
-MD5 0d58bd87770b2439b49b23860007297b gnome-media-1.2.3-r2.ebuild 1130
-MD5 f3bb8294738c15f64e912c4ed81d9fcb gnome-media-2.10.2.ebuild 1432
-MD5 7ef0d46239b96903d63f8d9d1d50ea7a gnome-media-2.12.0.ebuild 1578
-MD5 059bd269aedb5eebb5f1550cc7a02125 gnome-media-2.8.0.ebuild 1239
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDj0B2omPajV0RnrERAhykAJ401z8PEHaBwIS1iUDOoCJC6XlTXwCfb9RN
-j+hpzjjEML+/1+ovMcCkg8A=
-=dVRJ
------END PGP SIGNATURE-----
