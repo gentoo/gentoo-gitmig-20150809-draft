@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-attributes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.1 2005/12/05 03:35:03 nichoj Exp $
+
+*commons-attributes-2.1 (05 Dec 2005)
+
+  05 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  +files/commons-attributes-2.1-gentoo.patch, +files/anttasks.properties,
+  +metadata.xml, +commons-attributes-2.1.ebuild:
+  Initial commit (bug #97008).
+
