@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.0-r1.ebuild,v 1.7 2005/12/01 15:07:58 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.0-r1.ebuild,v 1.8 2005/12/05 10:47:03 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.12"
@@ -15,6 +15,7 @@ detect_version
 detect_arch
 
 KEYWORDS="amd64 ~ppc x86"
+IUSE=""
 
 DESCRIPTION="Full sources including gentoo and Linux-VServer patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="http://dev.croup.de/proj/gentoo-vps"
