@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12f75fc74d42282f4b0b2d75f6515441 ChangeLog 631
-MD5 92fe167757d46c20ce0ce846c299f0cd Test-Memory-Cycle-0.02.ebuild 610
-MD5 ceec85d4933c94a6c181a9e2959284c6 Test-Memory-Cycle-1.02.ebuild 652
-MD5 bf12bdb3da13a59fb17535aebcb699a1 files/digest-Test-Memory-Cycle-0.02 72
-MD5 58f107c243f6241929c99d38db4ff6aa files/digest-Test-Memory-Cycle-1.02 72
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDkZ7AtG5z4I8BtQoRAlExAJ9mJ+8kuehdSWMUdCoEqgSnvFk8igCfeOeB
-Uj+biIdv++lTL7ejj/SeEzQ=
-=mYLx
------END PGP SIGNATURE-----
+MD5 ceec85d4933c94a6c181a9e2959284c6 Test-Memory-Cycle-1.02.ebuild 652
+MD5 e3f4aceb12c6d74c5c06bc1beafeba08 Test-Memory-Cycle-0.02.ebuild 609
+MD5 12f75fc74d42282f4b0b2d75f6515441 ChangeLog 631
+MD5 58f107c243f6241929c99d38db4ff6aa files/digest-Test-Memory-Cycle-1.02 72
+MD5 bf12bdb3da13a59fb17535aebcb699a1 files/digest-Test-Memory-Cycle-0.02 72
