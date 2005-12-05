@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.24 2005/10/18 19:09:30 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.25 2005/12/05 23:32:18 zaheerm Exp $
+
+  05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  muine-0.6.3-r2.ebuild, muine-0.6.3-r3.ebuild, muine-0.8.3.ebuild:
+  Fix GStreamer dependencies
 
   18 Oct 2005; Herbie Hopkins <herbs@gentoo.org>
   +files/muine-0.8.3-64-bit-int.diff, muine-0.8.3.ebuild:

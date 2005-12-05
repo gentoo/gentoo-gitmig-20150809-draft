@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.7 2005/10/18 18:32:55 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.8 2005/12/05 23:32:19 zaheerm Exp $
 
 inherit gnome2 mono eutils multilib
 
@@ -21,15 +21,15 @@ RDEPEND=">=dev-lang/mono-0.96
 	>=dev-dotnet/gconf-sharp-2.3.90
 	xine? ( >=media-libs/xine-lib-1_rc4 )
 	!xine? (
-		>=media-libs/gstreamer-0.8.9-r3
-		>=media-libs/gst-plugins-0.8.8
-		>=media-plugins/gst-plugins-gnomevfs-0.8.8
-		mad? ( >=media-plugins/gst-plugins-mad-0.8.8 )
-		vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.8
-			>=media-plugins/gst-plugins-vorbis-0.8.8 )
-		flac? ( >=media-plugins/gst-plugins-flac-0.8.8 )
+		=media-libs/gstreamer-0.8*
+		=media-libs/gst-plugins-0.8*
+		=media-plugins/gst-plugins-gnomevfs-0.8*
+		mad? ( =media-plugins/gst-plugins-mad-0.8* )
+		vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+			=media-plugins/gst-plugins-vorbis-0.8* )
+		flac? ( =media-plugins/gst-plugins-flac-0.8* )
 		aac? (
-			>=media-plugins/gst-plugins-faad-0.8.8
+			=media-plugins/gst-plugins-faad-0.8*
 			>=media-libs/faad2-2.0-r4
 		)
 	)
