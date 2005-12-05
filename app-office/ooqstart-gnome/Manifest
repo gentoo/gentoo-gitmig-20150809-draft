@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 17d4e3fae2c40fdfa6a5ae9274744634 ChangeLog 1354
 MD5 d262aad066c0dd58486d7a8a095b598d files/digest-ooqstart-gnome-0.8.3 62
 MD5 d262aad066c0dd58486d7a8a095b598d files/digest-ooqstart-gnome-0.8.3-r1 62
@@ -10,3 +13,10 @@ MD5 a5ea839758de85725f08a887a5fe5ea1 files/ooqstart-gnome-0.8.3-options-2.0.diff
 MD5 6e27642eb774b668fe48a47e475f2495 metadata.xml 400
 MD5 c1598112a7160c430625bafc9c00f5a4 ooqstart-gnome-0.8.3-r1.ebuild 1192
 MD5 6db62b4aff56a6bb7a2d976611e76ac2 ooqstart-gnome-0.8.3.ebuild 1114
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDk6IOCRZPokWLroQRAvtMAJ4vDMYsRYYSko6l9sAQjWai0W42SgCdFkfP
+CR2yBhA0B0EjqOZgOLCjvJY=
+=UyZQ
+-----END PGP SIGNATURE-----
