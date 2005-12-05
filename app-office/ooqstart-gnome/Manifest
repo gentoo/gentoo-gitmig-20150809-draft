@@ -1,4 +1,4 @@
-MD5 6829ba1df4aa50c6564e6e12373f5a43 ChangeLog 1239
+MD5 17d4e3fae2c40fdfa6a5ae9274744634 ChangeLog 1354
 MD5 d262aad066c0dd58486d7a8a095b598d files/digest-ooqstart-gnome-0.8.3 62
 MD5 d262aad066c0dd58486d7a8a095b598d files/digest-ooqstart-gnome-0.8.3-r1 62
 MD5 b8e5e4d8a4016a754ab52481fc66a00d files/gnome-ooqstart.png 3962
@@ -8,5 +8,5 @@ MD5 d44da1879b15d8fd3f96d3cbfd54d0d1 files/ooqstart-gnome-0.8.3-gcc4.patch 350
 MD5 22042fb74e51648408c4c53d3e7bff1b files/ooqstart-gnome-0.8.3-optflags.diff 852
 MD5 a5ea839758de85725f08a887a5fe5ea1 files/ooqstart-gnome-0.8.3-options-2.0.diff 938
 MD5 6e27642eb774b668fe48a47e475f2495 metadata.xml 400
-MD5 93667d518cd212e9cee8a59831d1057d ooqstart-gnome-0.8.3-r1.ebuild 1189
+MD5 c1598112a7160c430625bafc9c00f5a4 ooqstart-gnome-0.8.3-r1.ebuild 1192
 MD5 6db62b4aff56a6bb7a2d976611e76ac2 ooqstart-gnome-0.8.3.ebuild 1114
