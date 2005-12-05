@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.8 2005/05/25 20:41:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.9 2005/12/05 20:01:28 dang Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2.1 KQEMU"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha -sparc ~amd64"
+KEYWORDS="~x86 ~ppc -alpha -sparc"
 IUSE="softmmu sdl kqemu"  #qvm86 debug nptl qemu-fast nptlonly"
 RESTRICT="nostrip"
 
