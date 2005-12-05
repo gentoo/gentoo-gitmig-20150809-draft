@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.226 2005/12/05 05:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.227 2005/12/05 06:24:01 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -661,7 +661,7 @@ create_gcc_env_entry() {
 		# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 		local abi=${DEFAULT_ABI}
-		local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+		local MULTIDIR=$(${XGCC} -B./ $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 		if [[ ${MULTIDIR} == "." ]] ; then
 			LDPATH=${LIBPATH}
 		else
@@ -671,7 +671,7 @@ create_gcc_env_entry() {
 		for abi in $(get_all_abis) ; do
 			[[ ${abi} == ${DEFAULT_ABI} ]] && continue
 
-			MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+			MULTIDIR=$(${XGCC} -B./ $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			if [[ ${MULTIDIR} == "." ]] ; then
 				LDPATH=${LDPATH}:${LIBPATH}
 			else
@@ -739,7 +739,7 @@ add_profile_eselect_conf() {
 		fi
 	fi
 
-	local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+	local MULTIDIR=$(${XGCC} -B./ $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 	local LDPATH=${LIBPATH}
 	if [[ ${MULTIDIR} != "." ]] ; then
 		LDPATH="${LIBPATH}/${MULTIDIR}"
@@ -1659,13 +1659,14 @@ gcc-compiler_src_install() {
 gcc_movelibs() {
 	# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
+	local multilibout=$(<multilib.out) || die "could not read multilib.out"
 	local multiarg
-	for multiarg in $(${XGCC} -print-multi-lib) ; do
+	for multiarg in ${multilibout} ; do
 		multiarg=${multiarg#*;}
 		multiarg=${multiarg//@/-}
 
-		local OS_MULTIDIR=$(${XGCC} ${multiarg} --print-multi-os-directory)
-		local MULTIDIR=$(${XGCC} ${multiarg} --print-multi-directory)
+		local OS_MULTIDIR=$(${XGCC} -B./ ${multiarg} --print-multi-os-directory)
+		local MULTIDIR=$(${XGCC} -B./ ${multiarg} --print-multi-directory)
 		local TODIR=${D}${LIBPATH}/${MULTIDIR}
 		local FROMDIR=
 
