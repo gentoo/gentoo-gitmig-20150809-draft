@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4739 2005/12/05 09:43:59 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4740 2005/12/05 14:24:32 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (05 Dec 2005)
+# Masked pending removal as it's broken.
+media-video/gtranscode
 
 # Donnie Berkholz <spyderous@gentoo.org> (04 Dec 2005)
 # Testing -- particularly the reconfig script
