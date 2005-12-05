@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.11 2005/12/05 19:50:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.12 2005/12/05 20:10:59 jer Exp $
+
+  05 Dec 2005; Jeroen Roovers <jer@gentoo.org> an-0.95.3.ebuild:
+  Reverted versionator changes. Oops.
 
   05 Dec 2005; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Removed versionator dependency, simplified ebuild a lot, changed SRC_URI to
