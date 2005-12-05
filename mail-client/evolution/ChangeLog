@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.101 2005/10/04 12:54:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.102 2005/12/05 01:18:28 dang Exp $
+
+  05 Dec 2005; <dang@gentoo.org> evolution-2.4.2.ebuild:
+  -m Start removing deps on mozilla/firefox for nss/nspr per mozilla herd
 
 *evolution-2.4.1 (04 Oct 2005)
 
