@@ -1,19 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.18.ebuild,v 1.1 2005/12/05 01:10:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.18.ebuild,v 1.2 2005/12/05 01:12:01 robbat2 Exp $
 
 inherit eutils
 
 DESCRIPTION="apps for querying the sg SCSI interface (contains rescan_scsi_bus.sh)"
 HOMEPAGE="http://www.torque.net/sg/"
 SRC_URI="http://www.torque.net/sg/p/${P}.tgz
-	http://www.garloff.de/kurt/linux/rescan-scsi-bus.sh"
+		http://www.garloff.de/kurt/linux/rescan-scsi-bus.sh"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
-
 DEPEND=""
 
 src_unpack() {
