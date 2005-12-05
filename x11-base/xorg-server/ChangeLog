@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.70 2005/12/04 20:46:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.71 2005/12/05 06:36:54 joshuabaergen Exp $
+
+*xorg-server-0.99.4-r1 (05 Dec 2005)
+
+  05 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-server-0.99.4-r1.ebuild:
+  It would appear that libglx (silently) fails to build if libdrm is not >=
+  version 2.  Rev-bump so that anyone who has merged this already gets a forced
+  re-merge and thus gets a working glx extension.
 
 *xorg-server-0.99.4 (04 Dec 2005)
 
