@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.9.7.ebuild,v 1.1 2005/12/04 13:32:19 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.0.ebuild,v 1.1 2005/12/05 20:33:08 zaheerm Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,8 +9,8 @@ MY_P=${MY_PN}-${PV}
 
 # Create a major/minor combo for SLOT
 PVP=(${PV//[-\._]/ })
-#SLOT=${PVP[0]}.${PVP[1]}
-SLOT=0.10
+SLOT=${PVP[0]}.${PVP[1]}
+#SLOT=0.10
 
 DESCRIPTION="FFmpeg based gstreamer plugin"
 HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-ffmpeg.html"
@@ -22,7 +22,7 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND=">=media-libs/gstreamer-0.9.7
+DEPEND=">=media-libs/gstreamer-0.10.0
 	dev-util/pkgconfig"
 
 src_compile() {
