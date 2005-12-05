@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.12.0.ebuild,v 1.2 2005/12/03 11:55:14 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.12.0.ebuild,v 1.3 2005/12/05 03:25:37 mr_bones_ Exp $
 
-inherit flag-o-matic wxwidgets eutils 
+inherit flag-o-matic wxwidgets eutils
 
 DESCRIPTION="wxWidgets based client for the eDonkey/eMule/lMule network"
 HOMEPAGE="http://xmule.ws/"
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile () {
 
-	# replace flags -O3 with -O2 because amule can crash with this 
+	# replace flags -O3 with -O2 because amule can crash with this
 	# flag, bug #87437
 	replace-flags -O3 -O2
 
