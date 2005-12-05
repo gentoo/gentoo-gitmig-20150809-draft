@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.27 2005/07/09 16:06:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.28 2005/12/05 03:59:24 nichoj Exp $
+
+  05 Dec 2005; Joshua Nichols <nichoj@gentoo.org> files/jython:
+  Fix for jython script (bug #73655).
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jython-2.1-r6.ebuild:
   fix deps, and source useflag support
