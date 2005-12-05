@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.89 2005/12/01 18:51:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.90 2005/12/05 16:08:50 mcummings Exp $
+
+  05 Dec 2005; <mcumming@gentoo.org> -libperl-5.8.5-r1.ebuild,
+  -libperl-5.8.5.ebuild, libperl-5.8.6-r1.ebuild, libperl-5.8.6.ebuild,
+  libperl-5.8.7.ebuild:
+  Bug 113930, case statement for non-linux. Also cleaned out 5.8.5 versions
+  since we don't have perl ebuilds for them either.
 
   01 Dec 2005; <dang@gentoo.org> libperl-5.8.7.ebuild:
   Marked stable on amd64

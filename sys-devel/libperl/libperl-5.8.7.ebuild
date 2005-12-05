@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.18 2005/12/01 18:51:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.19 2005/12/05 16:08:50 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -155,15 +155,14 @@ src_compile() {
 	export LC_ALL="C"
 	local myconf=""
 
-	if [[ ${KERNEL} == "FreeBSD" && "${ELIBC}" = "FreeBSD" ]]; then
-		osname="freebsd"
-	elif [[ ${KERNEL} == "NetBSD" ]]; then
-		osname="netbsd"
-	elif [[ ${USERLAND} == "Darwin" ]]; then
-		osname="darwin"
-	else
-		osname="linux"
-	fi
+	case ${CHOST} in
+		*-freebsd*) osname="freebsd" ;;
+		*-netbsd*) osname="netbsd" ;;
+		*-openbsd*) osname="openbsd" ;;
+		*-darwin*) osname="darwin" ;;
+
+		*) osname="linux" ;;
+	esac
 
 	if use ithreads
 	then
