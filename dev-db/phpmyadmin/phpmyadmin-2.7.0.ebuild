@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.7.0_rc1.ebuild,v 1.1 2005/11/27 01:56:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.7.0.ebuild,v 1.1 2005/12/05 00:32:21 rl03 Exp $
 
 inherit eutils webapp
 
-MY_PV=${PV/_rc/-rc}
-MY_P=phpMyAdmin-${MY_PV}
+MY_P=phpMyAdmin-${PV}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
@@ -39,7 +38,7 @@ src_compile() {
 src_install() {
 	webapp_src_preinst
 
-	local docs="CREDITS Documentation.txt INSTALL README RELEASE-DATE-${MY_PV} TODO ChangeLog"
+	local docs="CREDITS Documentation.txt INSTALL README RELEASE-DATE-${PV} TODO ChangeLog"
 
 	# install the SQL scripts available to us
 	#
