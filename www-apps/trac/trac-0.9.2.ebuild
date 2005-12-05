@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.1.ebuild,v 1.1 2005/12/02 18:20:46 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.2.ebuild,v 1.1 2005/12/05 22:30:16 dju Exp $
 
 inherit distutils webapp
 
