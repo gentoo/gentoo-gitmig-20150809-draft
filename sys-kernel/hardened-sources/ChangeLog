@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.67 2005/12/04 13:42:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.68 2005/12/05 19:06:41 johnm Exp $
+
+*hardened-sources-2.6.14-r1 (05 Dec 2005)
+
+  05 Dec 2005; John Mylchreest <johnm@gentoo.org>
+  -hardened-sources-2.6.14.ebuild, +hardened-sources-2.6.14-r1.ebuild:
+  bumping to genpatches 2.6.14-5, security fixup. Also bumping grsec patchset.
 
   04 Dec 2005; <solar@gentoo.org> hardened-sources-2.4.32.ebuild:
   - stable on x86 security bug #114227 CAN-2005-3257
