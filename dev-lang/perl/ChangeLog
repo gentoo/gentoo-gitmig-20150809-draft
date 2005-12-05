@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.172 2005/12/05 11:08:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.173 2005/12/05 16:01:26 mcummings Exp $
+
+  05 Dec 2005; <mcumming@gentoo.org> perl-5.8.6-r5.ebuild,
+  perl-5.8.6-r6.ebuild, perl-5.8.6-r7.ebuild, perl-5.8.7-r1.ebuild,
+  perl-5.8.7-r2.ebuild, perl-5.8.7.ebuild:
+  Bug 113930, case statement for non-linux. Also (finally) a fix for the
+  installmanpaths (personal bug)
 
   05 Dec 2005; <mcummings@gentoo.org> perl-5.8.6-r7.ebuild,
   perl-5.8.7-r2.ebuild:

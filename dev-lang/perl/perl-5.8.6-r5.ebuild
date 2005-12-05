@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r5.ebuild,v 1.15 2005/11/14 21:39:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r5.ebuild,v 1.16 2005/12/05 16:01:26 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -146,14 +146,14 @@ src_configure() {
 	export LC_ALL="C"
 	local myconf=""
 
-	if [[ ${KERNEL} == "FreeBSD" && "${ELIBC}" = "FreeBSD" ]]; then
-		osname="freebsd"
-	elif [[ ${KERNEL} == "NetBSD" ]]; then
-		osname="netbsd"
-	else
-		# Default setting
-		osname="linux"
-	fi
+	case ${CHOST} in
+		*-freebsd*) osname="freebsd" ;;
+		*-netbsd*) osname="netbsd" ;;
+		*-openbsd*) osname="openbsd" ;;
+		*-darwin*) osname="darwin" ;;
+
+		*) osname="linux" ;;
+	esac
 
 	if use ithreads
 	then
@@ -239,8 +239,8 @@ src_configure() {
 		-Dscriptdir=/usr/bin \
 		-Dman1dir=/usr/share/man/man1 \
 		-Dman3dir=/usr/share/man/man3 \
-		-Dinstallman1dir=${D}/usr/share/man/man1 \
-		-Dinstallman3dir=${D}/usr/share/man/man3 \
+		-Dinstallman1dir=/usr/share/man/man1 \
+		-Dinstallman3dir=/usr/share/man/man3 \
 		-Dman1ext='1' \
 		-Dman3ext='3pm' \
 		-Dinc_version_list="$inclist" \
