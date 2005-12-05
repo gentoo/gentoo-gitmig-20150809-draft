@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.4 2005/11/29 18:49:28 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.9.12.ebuild,v 1.5 2005/12/05 23:24:16 zaheerm Exp $
 
 inherit eutils gnome2 mono
 
@@ -19,14 +19,14 @@ RDEPEND=">=dev-lang/mono-1.1.9.2
 	>=dev-dotnet/gtk-sharp-2.3.90
 	>=dev-dotnet/gnomevfs-sharp-1.9
 	>=dev-dotnet/gconf-sharp-2.3.90
-	>=media-libs/gstreamer-0.8.11
-	>=media-libs/gst-plugins-0.8.11
-	>=media-plugins/gst-plugins-gnomevfs-0.8.11
-	mad? ( >=media-plugins/gst-plugins-mad-0.8.11 )
-	vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.11
-		>=media-plugins/gst-plugins-vorbis-0.8.11 )
-	flac? ( >=media-plugins/gst-plugins-flac-0.8.11 )
-	aac? ( >=media-plugins/gst-plugins-faad-0.8.11
+	=media-libs/gstreamer-0.8*
+	=media-libs/gst-plugins-0.8*
+	=media-plugins/gst-plugins-gnomevfs-0.8*
+	mad? ( =media-plugins/gst-plugins-mad-0.8* )
+	vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+		=media-plugins/gst-plugins-vorbis-0.8* )
+	flac? ( =media-plugins/gst-plugins-flac-0.8* )
+	aac? ( =media-plugins/gst-plugins-faad-0.8*
 		>=media-libs/faad2-2.0-r4 )
 	>=media-libs/musicbrainz-2.1.1
 	real? ( media-video/realplayer )

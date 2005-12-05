@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.1 2005/11/27 20:11:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.2 2005/12/05 23:24:16 zaheerm Exp $
+
+  05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  banshee-0.9.12.ebuild:
+  Fix GStreamer dependencies
 
 *banshee-0.9.12 (27 Nov 2005)
 
