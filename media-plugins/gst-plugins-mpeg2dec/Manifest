@@ -3,10 +3,12 @@ MD5 ab0ab0445cf0213c09c10c471d993a6e gst-plugins-mpeg2dec-0.8.10.ebuild 432
 MD5 79c0a06e3050897618b84c2ad561815a gst-plugins-mpeg2dec-0.9.7.ebuild 405
 MD5 20b3195a6d661bb931e623ed1860c527 gst-plugins-mpeg2dec-0.8.8.ebuild 430
 MD5 ecb94407110b66aa3eeec3c190e9232d gst-plugins-mpeg2dec-0.8.11.ebuild 439
+MD5 79c0a06e3050897618b84c2ad561815a gst-plugins-mpeg2dec-0.10.0.ebuild 405
 MD5 3cec088635fa00a894563fcbebf7b2e0 ChangeLog 3692
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-mpeg2dec-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-mpeg2dec-0.8.9 71
 MD5 1046682445f7a81b38c9801f0e541ff1 files/digest-gst-plugins-mpeg2dec-0.9.7 75
+MD5 e3d10364009173b6d5e955ce5269a255 files/digest-gst-plugins-mpeg2dec-0.10.0 76
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-mpeg2dec-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-mpeg2dec-0.8.11 72

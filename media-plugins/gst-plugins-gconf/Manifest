@@ -1,4 +1,6 @@
 MD5 d71c9ffe57c226daae403e341f8cba48 gst-plugins-gconf-0.9.7.ebuild 742
+MD5 d71c9ffe57c226daae403e341f8cba48 gst-plugins-gconf-0.10.0.ebuild 742
 MD5 f0f22629db95797fc1a3ec0286498f43 ChangeLog 380
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-gconf-0.10.0 76
 MD5 0325912c1d2f4bb76987df68a557149e files/digest-gst-plugins-gconf-0.9.7 75

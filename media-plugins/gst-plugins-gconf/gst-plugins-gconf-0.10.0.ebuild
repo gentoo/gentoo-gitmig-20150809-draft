@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.9.7.ebuild,v 1.1 2005/12/02 22:32:20 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.0.ebuild,v 1.1 2005/12/05 21:23:06 zaheerm Exp $
 
 inherit gnome2 gst-plugins-good gst-plugins10
 
