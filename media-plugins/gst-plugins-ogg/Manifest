@@ -5,8 +5,10 @@ MD5 5c10c5efd9d02c0c06ad7a46b3526a8c ChangeLog 5686
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 c64b45647c6760fadc098389ca325dea gst-plugins-ogg-0.8.8.ebuild 413
 MD5 bc7db5c53650557b7a393ca50c30bb7b gst-plugins-ogg-0.8.11.ebuild 424
+MD5 28c62f8272941f9a8bc9ffcb13e752c8 gst-plugins-ogg-0.10.0.ebuild 378
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-ogg-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-ogg-0.8.9 71
 MD5 c3a5b8ef6127a8e2f33e6a7cdc3855d9 files/digest-gst-plugins-ogg-0.9.7 75
+MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-ogg-0.10.0 77
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-ogg-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-ogg-0.8.11 72
