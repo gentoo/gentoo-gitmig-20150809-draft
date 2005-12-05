@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce7e95ede49530d89ada453729bd4830 ChangeLog 378
-MD5 6afe41bf50d7f0926835021e8e1073fe banshee-0.9.12.ebuild 2307
-MD5 81d990077b77688af3d905db25b40e55 files/digest-banshee-0.9.12 67
+MD5 c7624b49705eb998830cdcbd8ea5cca8 ChangeLog 488
 MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjKJ9wUpWvClEHQoRAkkYAJ4q3E9djeiHT8MAvGJZmPz7jnUcXQCfdFY2
-bIzXcrG4rYHh/4k5Pu2kKhQ=
-=4L7/
------END PGP SIGNATURE-----
+MD5 2ce464fafc8bffde14c9b0f3effb7d8a banshee-0.9.12.ebuild 2282
+MD5 81d990077b77688af3d905db25b40e55 files/digest-banshee-0.9.12 67
