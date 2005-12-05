@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.171 2005/12/02 08:56:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.172 2005/12/05 11:08:33 mcummings Exp $
+
+  05 Dec 2005; <mcummings@gentoo.org> perl-5.8.6-r7.ebuild,
+  perl-5.8.7-r2.ebuild:
+  Mistaken commit missed the picdl patch (was working on bug 65624, which this
+  patch appears to cause a seg fault with)
 
   02 Dec 2005; Joseph Jezak <josejx@gentoo.org> perl-5.8.6-r7.ebuild:
   Marked ppc stable for bug #114113.

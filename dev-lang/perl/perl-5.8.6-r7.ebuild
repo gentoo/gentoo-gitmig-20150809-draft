@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r7.ebuild,v 1.4 2005/12/03 19:59:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r7.ebuild,v 1.5 2005/12/05 11:08:34 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -91,7 +91,7 @@ src_unpack() {
 	# extensions (like DynaLoader).  i believe this is
 	# counterproductive on a Gentoo system which has both a shared
 	# and static libperl, so effectively revert this here.
-	# cd ${S}; epatch ${FILESDIR}/${PN}-picdl.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-picdl.patch
 
 	# Configure makes an unwarranted assumption that /bin/ksh is a
 	# good shell. This patch makes it revert to using /bin/sh unless
