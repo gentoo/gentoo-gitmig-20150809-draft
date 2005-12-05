@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/clamsmtp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.8 2005/12/04 19:19:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.9 2005/12/05 06:58:13 ticho Exp $
+
+  05 Dec 2005; Andrej Kacian <ticho@gentoo.org> clamsmtp-1.6.ebuild:
+  Stable on x86.
 
   04 Dec 2005; Andrej Kacian <ticho@gentoo.org> clamsmtp-1.5.ebuild,
   clamsmtp-1.6.ebuild:
