@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.4 2005/12/05 04:22:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.5 2005/12/05 17:56:08 hansmi Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm ppc ~sparc x86"
 IUSE="static"
 
 DEPEND=""

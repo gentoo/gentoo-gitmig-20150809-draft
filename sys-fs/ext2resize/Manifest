@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 572a1294914fa14b60980b91b80fd6e4 ChangeLog 2138
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 75e2fb561dd9aac5d643b6dd8647b95a ext2resize-1.1.19.ebuild 1074
+MD5 ea73679417743fffe6620f4fa9448eb5 ChangeLog 2254
 MD5 fed316e3dcde9340318bb0c96f6eb30c ext2resize-1.1.17-r2.ebuild 1284
-MD5 24d9642b14672b4e7b733ade4a1cd635 ext2resize-1.1.19.ebuild 1076
-MD5 47b7f77e01a5ed768f6456a7e85f3962 files/digest-ext2resize-1.1.17-r2 70
-MD5 172e0ad58b9f4556aeee83fca37a6dcc files/digest-ext2resize-1.1.19 70
-MD5 fc7c47e46247f9329e3b79edbb76d986 files/ext2resize-1.1.17-gcc3.3.patch 1621
 MD5 21f465f86737e5dd17ad314e6655e85e files/ext2resize-1.1.17-linux26.patch 302
 MD5 0063af1becfb3a32d371d9e5f0c16d51 files/ext2resize-1.1.19-linux26.patch 275
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDk8CUCRZPokWLroQRAmGdAKDBQckCbW+y581fRlzQz07jdoD45ACZAd2P
-5J3B6Xv68FBJsjtwSjcKbrE=
-=Q/of
------END PGP SIGNATURE-----
+MD5 47b7f77e01a5ed768f6456a7e85f3962 files/digest-ext2resize-1.1.17-r2 70
+MD5 fc7c47e46247f9329e3b79edbb76d986 files/ext2resize-1.1.17-gcc3.3.patch 1621
+MD5 172e0ad58b9f4556aeee83fca37a6dcc files/digest-ext2resize-1.1.19 70
