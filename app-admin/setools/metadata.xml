@@ -7,5 +7,5 @@
   <name>Chris PeBenito</name>
   <description>Primary Maintainer</description>
 </maintainer>
-<longdescription>SELinux graphical policy analisis and editing tools.  On a SELinux machine, a user manager is also included for keeping the unix user and SELinux identity consistent.</longdescription>
+<longdescription>SELinux policy analysis tools.</longdescription>
 </pkgmetadata>
