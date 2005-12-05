@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/axiom
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.1 2005/12/05 16:56:19 marienz Exp $
+
+*axiom-0.3.0 (05 Dec 2005)
+
+  05 Dec 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +axiom-0.3.0.ebuild:
+  New ebuild.
+
