@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.183 2005/11/27 17:37:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.184 2005/12/05 16:44:06 greg_g Exp $
+
+*kdepim-3.5.0-r1 (05 Dec 2005)
+
+  05 Dec 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdepim-3.5.0-filter-crash.patch, +kdepim-3.5.0-r1.ebuild:
+  Add patch to fix crash when using filters (#114118).
 
   27 Nov 2005; Guy Martin <gmsoft@gentoo.org> kdepim-3.4.3.ebuild:
   Stable on hppa.
