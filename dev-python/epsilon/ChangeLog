@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/epsilon
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.1 2005/12/05 16:48:37 marienz Exp $
+
+*epsilon-0.3.2 (05 Dec 2005)
+
+  05 Dec 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +epsilon-0.3.2.ebuild:
+  New ebuild.
+
