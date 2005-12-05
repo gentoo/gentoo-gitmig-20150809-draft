@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.0.ebuild,v 1.3 2005/12/04 23:40:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.0.ebuild,v 1.4 2005/12/05 22:26:56 zaheerm Exp $
 
 inherit kde-dist
 
@@ -17,8 +17,8 @@ DEPEND="~kde-base/kdebase-${PV}
 	xine? ( >=media-libs/xine-lib-1.0 )
 	alsa? ( media-libs/alsa-lib )
 	theora? ( media-libs/libtheora )
-	gstreamer? ( >=media-libs/gstreamer-0.8
-	             >=media-libs/gst-plugins-0.8 )
+	gstreamer? ( =media-libs/gstreamer-0.8*
+	             =media-libs/gst-plugins-0.8* )
 	musicbrainz? ( media-libs/tunepimp
 	               media-libs/musicbrainz )
 	encode? ( mp3? ( media-sound/lame )
@@ -26,10 +26,10 @@ DEPEND="~kde-base/kdebase-${PV}
 	          flac? ( media-libs/flac ) )"
 
 RDEPEND="${DEPEND}
-	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8 )
-		     vorbis? ( >=media-plugins/gst-plugins-ogg-0.8
-		               >=media-plugins/gst-plugins-vorbis-0.8 )
-		     flac? ( >=media-plugins/gst-plugins-flac-0.8 ) )"
+	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
+		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+		               =media-plugins/gst-plugins-vorbis-0.8* )
+		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"

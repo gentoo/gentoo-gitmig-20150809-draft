@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.2.ebuild,v 1.4 2005/10/06 23:29:48 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.2.ebuild,v 1.5 2005/12/05 22:26:56 zaheerm Exp $
 
 inherit kde-dist eutils
 
@@ -22,16 +22,16 @@ DEPEND="~kde-base/kdebase-${PV}
 	alsa? ( media-libs/alsa-lib )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora )
-	gstreamer? ( >=media-libs/gstreamer-0.8
-	             >=media-libs/gst-plugins-0.8 )
+	gstreamer? ( =media-libs/gstreamer-0.8*
+	             =media-libs/gst-plugins-0.8* )
 	>=media-libs/taglib-1.2
 	musicbrainz? ( media-libs/tunepimp media-libs/musicbrainz )"
 
 RDEPEND="${DEPEND}
-	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8 )
-		     vorbis? ( >=media-plugins/gst-plugins-ogg-0.8
-		               >=media-plugins/gst-plugins-vorbis-0.8 )
-		     flac? ( >=media-plugins/gst-plugins-flac-0.8 ) )"
+	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
+		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+		               =media-plugins/gst-plugins-vorbis-0.8* )
+		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
