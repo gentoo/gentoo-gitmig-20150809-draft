@@ -1,13 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57c072156807cff5941f68c638c53421 ChangeLog 11686
+MD5 c386180933ba80e61d055be608f3291f ChangeLog 11830
 MD5 b1a2be73a4e3ecb6d70da68624080ba9 files/1.0.13-remote_buffer_overflow.diff 543
 MD5 15330eddda755f3d7e434c1a2f45199a files/digest-libgtop-1.0.13-r2 67
 MD5 2bfb5c28647c3fdf33bfbc685d2bb523 files/digest-libgtop-2.10.0 67
 MD5 317795152e82bc5c36a786fadf97c570 files/digest-libgtop-2.10.1 67
 MD5 5dfee32a6c61e2e01034706cf56aea12 files/digest-libgtop-2.10.2 67
 MD5 245a205fa5e9d6bb1a4643f9f55c0d04 files/digest-libgtop-2.12.0 67
+MD5 9d47b04adc6febd197a9cdb7308eaf32 files/digest-libgtop-2.12.2 67
 MD5 51a8192dea5d51a0ba39cb2753af8b84 files/libgtop-1.0.13-guile-compile.patch 1146
 MD5 06320038fe8840bedb3b08496982320f files/libgtop-2.10.0-siglist.patch 3316
 MD5 01e1743af5e23d9fa6430e0a92c57861 files/libgtop.info.diff 449
@@ -16,11 +14,5 @@ MD5 016a0c95b0ac828509be96d45e9060e5 libgtop-2.10.0.ebuild 589
 MD5 6cb186574bc79b0bc3a1672a9a164049 libgtop-2.10.1.ebuild 735
 MD5 01869ea14c131afefa9cdbe453362066 libgtop-2.10.2.ebuild 638
 MD5 f5f4a3adb9913e1318ce2e8581e4901c libgtop-2.12.0.ebuild 743
+MD5 af049ff72cff7e5af0b462b7395e7863 libgtop-2.12.2.ebuild 742
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkfvkgIKl8Uu19MoRAmanAJ4oUmS4QJfjIWl8T0gb3+KYLy2EFwCfV/nx
-uz2EYbXwf0pKvSYvKrvq+mo=
-=gpzm
------END PGP SIGNATURE-----
