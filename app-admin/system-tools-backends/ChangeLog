@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.13 2005/09/11 03:04:59 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.14 2005/12/05 03:41:36 compnerd Exp $
+
+*system-tools-backends-1.4.1 (05 Dec 2005)
+
+  05 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +system-tools-backends-1.4.1.ebuild:
+  Version bump from upstream. Added dev-lang/perl to rdep as it installs a
+  number of a perl scripts.
 
 *system-tools-backends-1.4.0 (11 Sep 2005)
 
