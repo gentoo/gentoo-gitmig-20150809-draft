@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.12 2005/11/21 18:36:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.13 2005/12/05 16:48:11 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -20,5 +20,5 @@ DEPEND=">=dev-libs/gdome2-0.7.2
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/gdome-version-check.patch
+	! has_version '=dev-libs/gdome2-0.7*'  && epatch ${FILESDIR}/gdome-version-check.patch
 }

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6cf1c9b0f824dca16d4242c77e104e47 ChangeLog 1868
+MD5 bf8e9d474e97e4d9d712e1cfefba877d ChangeLog 2046
 MD5 ed63dcc5e3bcdf1f8c56c846fedd89c6 XML-GDOME-0.85.ebuild 621
-MD5 a949af2a9021ba2b9f1bbd6017ef38e1 XML-GDOME-0.86.ebuild 727
+MD5 a51b7a8fbbd15f8fd95eb8830abac5fe XML-GDOME-0.86.ebuild 769
 MD5 f9eaccf237937fc90e3ddd5b920f3044 files/digest-XML-GDOME-0.85 65
 MD5 2cdbde03077a5bc4653bf0bdd4f44ab1 files/digest-XML-GDOME-0.86 65
 MD5 402b550c5f786d3c31da54f0c62f5f65 files/gdome-version-check.patch 704
@@ -11,7 +11,7 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDghPEtG5z4I8BtQoRAk4zAJ9TKUUHMZhFUcgc9BD1kgq7huM7JgCfdChU
-2Ln3V0s7BKfgIkZBav1aoYU=
-=5T7x
+iD8DBQFDlG9UtG5z4I8BtQoRAkjgAJ0UeCOCHxJtd9JMk8PYHXYXl4UAswCeNKGC
+vhmnK1BbjDSJ8CQ6bqKzGCs=
+=S9fW
 -----END PGP SIGNATURE-----
