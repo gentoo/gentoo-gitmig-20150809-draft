@@ -1,0 +1,11 @@
+# ChangeLog for sys-block/iscsitarget
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.1 2005/12/05 03:32:30 robbat2 Exp $
+
+*iscsitarget-0.4.12 (05 Dec 2005)
+
+  05 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +iscsitarget-0.4.12.ebuild:
+  Initial commit - bug #98781, based on ebuild submitted by Dick Marinus
+  <dm@chello.nl>.
+
