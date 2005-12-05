@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 257e95049e5a6203d6585930d3f9c7d5 kdeaccessibility-3.4.1.ebuild 997
+MD5 03677319200acb87914bcb4ed8b72d34 kdeaccessibility-3.4.3-r1.ebuild 1241
+MD5 e6281c4e1381cd7e625f749ce36aa93e kdeaccessibility-3.4.3.ebuild 1195
+MD5 d8d24de351d4616955249a64e3071e88 kdeaccessibility-3.3.2.ebuild 364
+MD5 eecff838f56c544cb47af07d959a92d0 kdeaccessibility-3.4.2.ebuild 1135
+MD5 bdc8eb14f4dacee00cfc5999ca1d6516 kdeaccessibility-3.5.0.ebuild 823
 MD5 93bab6a37abf5532ea3d056b71709d86 ChangeLog 10670
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 f5bf9356477cd9c9feb666e6e94915b0 files/kdeaccessibility-3.4.3-pointer.patch 536
+MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3-r1 76
 MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
 MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
 MD5 8340ca34cb0bed2c4acfd82f444a2624 files/digest-kdeaccessibility-3.4.2 76
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3 76
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3-r1 76
 MD5 307469289d5167258f2faa3684e12eb2 files/digest-kdeaccessibility-3.5.0 76
-MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
-MD5 f5bf9356477cd9c9feb666e6e94915b0 files/kdeaccessibility-3.4.3-pointer.patch 536
-MD5 d8d24de351d4616955249a64e3071e88 kdeaccessibility-3.3.2.ebuild 364
-MD5 ac6ca6d889d6da3a003f6c7492215086 kdeaccessibility-3.4.1.ebuild 999
-MD5 e63c5344542f80d67d7ce09949855bdf kdeaccessibility-3.4.2.ebuild 1139
-MD5 dce78de160549e7684964becc0f0d6ea kdeaccessibility-3.4.3-r1.ebuild 1245
-MD5 2c05ff03003147c99aed2f493c64935d kdeaccessibility-3.4.3.ebuild 1199
-MD5 083bdef9a2775e34af27666e45980d2e kdeaccessibility-3.5.0.ebuild 827
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkGz0ntT9W3vfTuoRAiy+AJ4hdiVeC+l8sWarishmLn5el13XGwCgqeBy
-ShQKa+61zXTJNvUlJo5rNbA=
-=gZpV
------END PGP SIGNATURE-----

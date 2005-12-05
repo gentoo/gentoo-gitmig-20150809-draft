@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.35 2005/12/04 00:45:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.36 2005/12/05 22:13:20 zaheerm Exp $
+
+  05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> juk-3.4.1.ebuild,
+  juk-3.4.2.ebuild, juk-3.4.3.ebuild, juk-3.5.0.ebuild:
+  Fix GStreamer dependencies
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> juk-3.5.0.ebuild:
   ~alpha keyword.

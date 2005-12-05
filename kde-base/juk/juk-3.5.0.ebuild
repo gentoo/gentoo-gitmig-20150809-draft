@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.0.ebuild,v 1.3 2005/12/04 00:45:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.0.ebuild,v 1.4 2005/12/05 22:13:20 zaheerm Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -15,14 +15,14 @@ DEPEND="media-libs/taglib
 	media-libs/akode
 	musicbrainz? ( 	media-libs/tunepimp
 			media-libs/musicbrainz )
-	gstreamer? ( >=media-libs/gstreamer-0.8
-	             >=media-libs/gst-plugins-0.8 )"
+	gstreamer? ( =media-libs/gstreamer-0.8*
+	             =media-libs/gst-plugins-0.8* )"
 
 RDEPEND="${DEPEND}
-	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8 )
-		     vorbis? ( >=media-plugins/gst-plugins-ogg-0.8
-				  >=media-plugins/gst-plugins-vorbis-0.8 )
-		     flac? ( >=media-plugins/gst-plugins-flac-0.8 ) )"
+	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
+		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+				  =media-plugins/gst-plugins-vorbis-0.8* )
+		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 KMEXTRACTONLY="arts/configure.in.in"
 
