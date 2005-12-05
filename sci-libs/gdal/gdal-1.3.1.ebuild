@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.4 2005/12/03 21:12:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.5 2005/12/05 17:09:37 swegener Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
@@ -36,7 +36,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	jasper? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( sci-libs/geos )
-	sqlite? ( >=dev-db/sqlite-3* )
+	sqlite? ( >=dev-db/sqlite-3 )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
