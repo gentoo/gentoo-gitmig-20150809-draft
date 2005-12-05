@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.7 2005/05/04 11:02:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.8 2005/12/05 13:20:36 dcoutts Exp $
+
+*c2hs-0.14.3 (05 Dec 2005)
+
+  05 Dec 2005; <duncan@gentoo.org> +files/cabalfix.patch,
+  +files/setupfix.patch, +c2hs-0.14.3.ebuild:
+  New version.
 
   04 May 2005; David Holm <dholm@gentoo.org> c2hs-0.13.4.ebuild:
   Added to ~ppc.
