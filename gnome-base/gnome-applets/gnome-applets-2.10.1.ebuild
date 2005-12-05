@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.10.1.ebuild,v 1.13 2005/10/10 21:37:25 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.10.1.ebuild,v 1.14 2005/12/05 21:51:06 zaheerm Exp $
 
 inherit gnome2 eutils autotools
 
@@ -30,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.5
 		apm? ( sys-apps/apmd )
 		acpi? ( sys-power/acpid )
 	)
-	gstreamer? ( >=media-libs/gstreamer-0.8.2 )"
+	gstreamer? ( =media-libs/gstreamer-0.8* )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12

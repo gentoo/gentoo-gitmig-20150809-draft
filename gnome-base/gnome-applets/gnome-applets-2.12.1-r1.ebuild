@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.1-r1.ebuild,v 1.1 2005/10/12 23:58:36 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.1-r1.ebuild,v 1.2 2005/12/05 21:51:06 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.5
 	>=gnome-base/gnome-desktop-2.11.1
 	hal? ( >=sys-apps/hal-0.5.3
 		>=sys-apps/dbus-0.34 )
-	>=media-libs/gstreamer-0.8.2
+	=media-libs/gstreamer-0.8*
 	>=gnome-extra/gucharmap-1.4
 	apm? ( sys-apps/apmd )
 	acpi? ( sys-power/acpid )"
