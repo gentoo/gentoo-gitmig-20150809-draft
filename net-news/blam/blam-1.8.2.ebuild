@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.2.ebuild,v 1.1 2005/11/08 04:36:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.2.ebuild,v 1.2 2005/12/05 14:57:28 herbs Exp $
 
 inherit mono eutils
 
@@ -26,8 +26,7 @@ src_unpack() {
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib/blam:$(libdir)/blam:' \
 			-e "s:@prefix@/lib:@prefix@/$(get_libdir):" \
-			${S}/lib/Makefile.{in,am} \
-			${S}/libblam/Makefile.{in,am} ${S}/blam.in || die
+			${S}/{,lib,libblam,src}/Makefile.{in,am} ${S}/blam.in || die
 	fi
 }
 

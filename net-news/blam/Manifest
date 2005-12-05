@@ -1,11 +1,21 @@
-MD5 23c103c1a6921b45017a24325bb3ae8c ChangeLog 4244
-MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55cac3a99f34e5139aa68185f306a99e ChangeLog 4334
 MD5 ab0b935822689433e94347df645b5de7 blam-1.6.1-r2.ebuild 995
-MD5 b4841a7f6fd9bdbc1523592c5774fb5e blam-1.8.2.ebuild 1085
 MD5 9f5a4eebb7a634d6e37b50d71a6be5e2 blam-1.8.0.ebuild 1096
+MD5 9341bf2fa885f3a5e883051dbad07224 blam-1.8.2.ebuild 1063
 MD5 00f43721ad68695ca3870578cce4a220 files/blam-1.6.0-gecko-fix.diff 614
-MD5 4d50c34081dae158dfee08c8f011571a files/blam-1.6.1-mono-1.1.7-compat.diff 609
 MD5 bc93c8091228ce883de5381bcd35c801 files/blam-1.6.1-mono-1.1.7-compat-v2.diff 768
+MD5 4d50c34081dae158dfee08c8f011571a files/blam-1.6.1-mono-1.1.7-compat.diff 609
 MD5 687962557e8232ff8b5f5b6f93d2c0f6 files/digest-blam-1.6.1-r2 62
 MD5 b12739b8bb161809852551f6f26d3af1 files/digest-blam-1.8.0 62
 MD5 898d64f02fd1e7c9f3afaa2b6d5cda29 files/digest-blam-1.8.2 62
+MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlFVm2G5bA0cA/ScRAtQVAKCYwwoBn4G9UspR2OdRFfKthi70BwCg3TRM
+WPzLDOYSAzc85qFuxyIDXUw=
+=gPdt
+-----END PGP SIGNATURE-----
