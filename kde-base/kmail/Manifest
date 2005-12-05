@@ -1,27 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4bfa50f676131fdc702b79874440488 ChangeLog 5343
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1 208
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1-r1 208
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2 282
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2-r1 282
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kmail-3.4.3 67
-MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-kmail-3.5.0 67
-MD5 0dc20eebce2c8cb4475f065683ae24ff files/kdepim-3.4.2-partnode.patch 756
-MD5 465fb4ad98b38e7c5328429eaabb1000 files/kmail-3.4.1-shift+click-crash.diff 516
-MD5 9375e74788e629b37a3636e9a64804e0 files/kmail-qt-3.3.5.patch 446
-MD5 b9964e02eff2a443f6299bb15de581b4 kmail-3.4.1-r1.ebuild 1674
-MD5 aa82a9cf16faab980f09bd8763b742d1 kmail-3.4.1.ebuild 1610
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 393bf626aee24f4dd500ca341e1d314c kmail-3.4.2-r1.ebuild 1856
 MD5 0517daa346612e50e60119680a33a3da kmail-3.4.2.ebuild 1629
 MD5 f0881d6600f939394e4b0c3dc126a75f kmail-3.4.3.ebuild 1728
 MD5 77f5791ea5ee7556ab81edc5ff9eaeec kmail-3.5.0.ebuild 1719
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDktibugEuf3OQ0akRAlgjAJ9veqtCpeCS4aatfKLXS0W0f9xuMwCgmjgb
-uTR9aWcPdaTDAoTkyTjFxEs=
-=jgfe
------END PGP SIGNATURE-----
+MD5 bf8785ec09f5a55ce9c5915d8d72ed06 ChangeLog 5546
+MD5 aa82a9cf16faab980f09bd8763b742d1 kmail-3.4.1.ebuild 1610
+MD5 b9964e02eff2a443f6299bb15de581b4 kmail-3.4.1-r1.ebuild 1674
+MD5 3b7085a76e947a5a10621de328ce2c26 kmail-3.5.0-r1.ebuild 1847
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1-r1 208
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2-r1 282
+MD5 0dc20eebce2c8cb4475f065683ae24ff files/kdepim-3.4.2-partnode.patch 756
+MD5 465fb4ad98b38e7c5328429eaabb1000 files/kmail-3.4.1-shift+click-crash.diff 516
+MD5 0d54c227778b58ec3fe43ff06458816d files/kdepim-3.5.0-filter-crash.patch 2940
+MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-kmail-3.5.0-r1 67
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kmail-3.4.3 67
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1 208
+MD5 9375e74788e629b37a3636e9a64804e0 files/kmail-qt-3.3.5.patch 446
+MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-kmail-3.5.0 67
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2 282
