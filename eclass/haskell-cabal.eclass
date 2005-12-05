@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.1 2005/09/13 12:53:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.2 2005/12/05 12:24:53 dcoutts Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -115,7 +115,8 @@ cabal-haddock() {
 
 cabal-configure() {
 	if [[ -n "${CABAL_USE_PROFILE}" ]] && use profile; then
-		cabalconf="${cabalconf} --enable-executable-profiling"
+		cabalconf="${cabalconf} --enable-executable-profiling";
+		cabalconf="${cabalconf} --enable-library-profiling"
 	fi
 
 	./setup configure \
@@ -152,8 +153,15 @@ cabal-pkg() {
 	# This does not actually register since we're using /usr/bin/true instead
 	# of ghc-pkg. So it just leaves the .installed-pkg-config and we can
 	# register that ourselves (if it exists).
+	local result
+	local err
+
 	sed -i 's:ghc-pkg:/usr/bin/true:' .setup-config
-	./setup register || die "setup register failed"
+	result="$(./setup register 2>&1)"
+	err="$?"
+	if ! echo ${result} | grep -q "no library to register"; then
+		$(exit "${err}") || die "setup register failed"
+	fi
 	if [[ -f .installed-pkg-config ]]; then
 		ghc-setup-pkg .installed-pkg-config
 		ghc-install-pkg
