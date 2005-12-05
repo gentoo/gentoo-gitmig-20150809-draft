@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 01322fdf1722f3ef0d96840458b1004a ChangeLog 11433
+MD5 af8ed74c9137d334f572182cc8ed778d ChangeLog 11545
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r2 64
 MD5 388d05f1aabd1c48c3536ac69d0d8505 files/digest-gpdf-2.10.0 65
@@ -22,15 +19,8 @@ MD5 2fce5bedd61300fad1566a41f991a782 files/gpdf-xpdf_goo_sizet.patch 1424
 MD5 d094dcab1afd170dae62b054d98e3acb gpdf-0.132-r1.ebuild 1025
 MD5 a805385ef63f46517fcdf018fb0e08d9 gpdf-0.132-r2.ebuild 1169
 MD5 8c3d9a19dbb04dec0a18a5189e9a36d6 gpdf-2.10.0-r1.ebuild 1337
-MD5 5200476368eea9ebe46874c2a4e12ad2 gpdf-2.10.0-r2.ebuild 1412
+MD5 f2a29319cbaf046277b17b0ad7c25610 gpdf-2.10.0-r2.ebuild 1415
 MD5 87c5a4b5771c292e1dbcc39fee7d4a55 gpdf-2.10.0.ebuild 1264
 MD5 3ec94b0d7a37f7330404f3197c6bfbcd gpdf-2.8.2.ebuild 1130
 MD5 b492633bcb5170b71ce72fb7d24545c5 gpdf-2.8.3.ebuild 1153
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDk1ZjomPajV0RnrERAsonAJ42sL66fVajAS6JuRqXKw96n6HN6wCghLeL
-6/ob91mIiOVtEF6dUnL7rbg=
-=tWSi
------END PGP SIGNATURE-----
