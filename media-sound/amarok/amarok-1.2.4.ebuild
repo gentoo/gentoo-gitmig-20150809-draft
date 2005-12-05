@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.4.ebuild,v 1.8 2005/11/29 11:03:34 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.4.ebuild,v 1.9 2005/12/05 23:18:37 zaheerm Exp $
 
 inherit kde eutils
 
@@ -23,11 +23,11 @@ RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	 xine? ( >=media-libs/xine-lib-1_rc4 )
 	 >=media-libs/tunepimp-0.3.0
 	 >=media-libs/taglib-1.3.1
-	 gstreamer? ( >=media-libs/gst-plugins-0.8.6
-	 	      mad? ( >=media-plugins/gst-plugins-mad-0.8.6 )
-		      vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.6
-				   >=media-plugins/gst-plugins-vorbis-0.8.6 )
-		      flac? ( >=media-plugins/gst-plugins-flac-0.8.6 ) )
+	 gstreamer? ( =media-libs/gst-plugins-0.8*
+	 	      mad? ( =media-plugins/gst-plugins-mad-0.8* )
+		      vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+				   =media-plugins/gst-plugins-vorbis-0.8* )
+		      flac? ( =media-plugins/gst-plugins-flac-0.8* ) )
 	 mysql? ( >=dev-db/mysql-4.0.16 )
 	 visualization? ( media-libs/libsdl
 			  >=media-plugins/libvisual-plugins-0.2 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.6.ebuild,v 1.2 2005/11/29 11:52:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.6.ebuild,v 1.3 2005/12/05 23:18:37 zaheerm Exp $
 
 inherit kde eutils
 
@@ -19,8 +19,8 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	arts? ( kde-base/arts
 	        || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
-	gstreamer? ( >=media-libs/gstreamer-0.8.8
-	             >=media-libs/gst-plugins-0.8.6 )
+	gstreamer? ( =media-libs/gstreamer-0.8*
+	             =media-libs/gst-plugins-0.8* )
 	musicbrainz? ( >=media-libs/tunepimp-0.3.0 )
 	>=media-libs/taglib-1.4
 	mysql? ( >=dev-db/mysql-4.0.16 )
@@ -31,10 +31,10 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	                 >=media-plugins/libvisual-plugins-0.2 )"
 
 RDEPEND="${DEPEND}
-	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8.6 )
-	             vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.6
-	                       >=media-plugins/gst-plugins-vorbis-0.8.6 )
-	             flac? ( >=media-plugins/gst-plugins-flac-0.8.6 ) )"
+	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
+	             vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+	                       =media-plugins/gst-plugins-vorbis-0.8* )
+	             flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0"
