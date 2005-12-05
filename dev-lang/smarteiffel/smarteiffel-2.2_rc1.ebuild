@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-2.2_rc1.ebuild,v 1.1 2005/12/03 21:03:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-2.2_rc1.ebuild,v 1.2 2005/12/05 16:01:55 mr_bones_ Exp $
 
 inherit toolchain-funcs multilib
 
@@ -66,7 +66,7 @@ src_compile() {
 		echo 5; #save conf file
 		echo 6; echo
 		echo 0; echo #leave the menu
-		
+
 	) | ./install.bin || die
 	einfo "finished running install"
 
