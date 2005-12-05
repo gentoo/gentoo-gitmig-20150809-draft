@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/asterisk-app_ldap-0.9.9_p2.ebuild,v 1.2 2005/09/29 23:55:06 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/asterisk-app_ldap-0.9.9_p2.ebuild,v 1.3 2005/12/05 17:18:37 stkn Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ KEYWORDS="~ppc x86"
 # depends on iconv support
 DEPEND="sys-libs/glibc
 	>=net-nds/openldap-2.0.0
-	>=net-misc/asterisk-1.0.7-r1"
+	>=net-misc/asterisk-1.0.7-r1
+	!>=net-misc/asterisk-1.2.0"
 
 S=${WORKDIR}/${MY_PN}
 
