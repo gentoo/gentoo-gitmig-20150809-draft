@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.19 2005/12/05 02:36:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.20 2005/12/05 04:03:45 halcy0n Exp $
+
+  05 Dec 2005; Mark Loeser <halcy0n@gentoo.org> arj-3.10.22-r1.ebuild:
+  Stable on x86; bug #84142
 
   05 Dec 2005; Jason Wever <weeve@gentoo.org> arj-3.10.22-r1.ebuild:
   Stable on SPARC wrt bug #84142.
