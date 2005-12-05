@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.3 2005/11/25 21:34:20 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.4 2005/12/05 12:53:51 cryos Exp $
+
+*kbibtex-0.1.3 (05 Dec 2005)
+
+  05 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> +kbibtex-0.1.3.ebuild:
+  Version bump.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> -kbibtex-0.1.2.ebuild:
   Removed old version.
