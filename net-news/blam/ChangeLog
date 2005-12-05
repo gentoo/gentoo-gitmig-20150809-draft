@@ -1,6 +1,12 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.28 2005/12/05 14:57:28 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.29 2005/12/05 15:15:02 herbs Exp $
+
+*blam-1.8.2-r1 (05 Dec 2005)
+
+  05 Dec 2005; Herbie Hopkins <herbs@gentoo.org>
+  +files/blam-1.8.2-64-bit-int.diff, +blam-1.8.2-r1.ebuild:
+  Add patch to fix bug 94524.
 
   05 Dec 2005; Herbie Hopkins <herbs@gentoo.org> blam-1.8.2.ebuild:
   Update multilib fix.
