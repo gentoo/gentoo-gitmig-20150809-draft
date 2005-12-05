@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/utidylib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.1 2005/12/01 00:19:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.2 2005/12/05 09:58:38 marienz Exp $
+
+  05 Dec 2005; Marien Zwart <marienz@gentoo.org> utidylib-0.2.ebuild:
+  Add missing eutils inherit.
 
 *utidylib-0.2 (01 Dec 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2.ebuild,v 1.1 2005/12/01 00:19:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2.ebuild,v 1.2 2005/12/05 09:58:38 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="uTidylib-${PV}"
 
