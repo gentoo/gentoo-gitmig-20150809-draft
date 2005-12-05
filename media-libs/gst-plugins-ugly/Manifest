@@ -1,4 +1,4 @@
-MD5 cc0677bb5cbad277817fc5474d941df2 gst-plugins-ugly-0.9.7.ebuild 1843
-MD5 571764bffd33cd2b67bc51f1ea2ba20c ChangeLog 391
+MD5 75508c99505fc06cc434046a63d2c7b1 gst-plugins-ugly-0.10.0.ebuild 1845
+MD5 b9f14de2155554c945460706c8e83e7c ChangeLog 572
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-MD5 1046682445f7a81b38c9801f0e541ff1 files/digest-gst-plugins-ugly-0.9.7 75
+MD5 e3d10364009173b6d5e955ce5269a255 files/digest-gst-plugins-ugly-0.10.0 76

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-0.9.7.ebuild,v 1.1 2005/12/04 12:03:08 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-0.10.0.ebuild,v 1.1 2005/12/05 20:21:57 zaheerm Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-ugly gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 #IUSE="esd alsa oss"
 
-RDEPEND=">=media-libs/gst-plugins-base-0.9.7
+RDEPEND=">=media-libs/gst-plugins-base-0.10.0
 	 >=dev-libs/liboil-0.3.0
 	 >=dev-libs/glib-2.6.0"
 
