@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4740 2005/12/05 14:24:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4741 2005/12/05 15:33:29 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -250,10 +250,6 @@ games-strategy/scorched3d
 # Fails on amd64 under some situations and also breaks backwards compatibility
 >=media-libs/openal-20051024
 media-libs/alut
-
-# Andreas Proschofsky <suka@gentoo.org> (27 Oct 2005)
-# Broken, not maintained, up for removal
-app-office/ooodi
 
 # Doug Goldstein <cardoe@gentoo.org> (25 Oct 2005)
 # ndiswrapper 1.4 causes a bunch of people's systems
