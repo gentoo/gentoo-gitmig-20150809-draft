@@ -1,4 +1,14 @@
-MD5 a9ee1866de43591dd7ab89b23f3b0d66 ChangeLog 329
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 6f2b2823683e23df3171404731eb1a62 uvconv-1.1.3b.ebuild 651
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 223143b562d87e16d23b703ef27653b3 ChangeLog 426
 MD5 f2472676acde05aa204e6eb20d6a7050 files/digest-uvconv-1.1.3b 64
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 19466bfd94fb3ff1f953f61a978a09e9 uvconv-1.1.3b.ebuild 647
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDk8MyCRZPokWLroQRApYdAJYju3JkqVMOwIQcy4CiQ+3HZYZ0AJ4nY2Z+
+1xYM+jTRoxOLzZlo9nIATg==
+=cpCH
+-----END PGP SIGNATURE-----
