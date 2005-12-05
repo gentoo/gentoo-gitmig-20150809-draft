@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.33 2005/12/02 16:27:21 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.34 2005/12/05 21:12:37 zaheerm Exp $
+
+*gst-plugins-theora-0.10.0 (05 Dec 2005)
+
+  05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  -gst-plugins-theora-0.9.7.ebuild, +gst-plugins-theora-0.10.0.ebuild:
+  0.10.0 release
 
 *gst-plugins-theora-0.9.7 (02 Dec 2005)
 
