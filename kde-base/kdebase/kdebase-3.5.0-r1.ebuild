@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0.ebuild,v 1.6 2005/12/04 23:36:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.1 2005/12/05 11:01:31 cryos Exp $
 
 inherit kde-dist eutils
 
@@ -26,7 +26,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( >=sys-apps/dbus-0.33
 	       =sys-apps/hal-0.5*
-	       sys-apps/pmount )
+		   sys-apps/pmount )
 	zeroconf? ( net-misc/mDNSResponder )"
 
 RDEPEND="${DEPEND}
@@ -43,6 +43,9 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466).
 	epatch "${FILESDIR}/kdebase-3.5.0_beta2-noimake.patch"
+
+	# Fix the location bar focus, bug 114329.
+	epatch "${FILESDIR}/konqueror-3.5.0-location-bar-focus.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die

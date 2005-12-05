@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.236 2005/11/29 13:22:35 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.237 2005/12/05 11:01:31 cryos Exp $
+
+*kdebase-3.5.0-r1 (05 Dec 2005)
+
+  05 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/konqueror-3.5.0-location-bar-focus.patch, -kdebase-3.5.0.ebuild,
+  +kdebase-3.5.0-r1.ebuild:
+  Patched to give focus to the location bar, bug 114329.
 
   29 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kdebase-3.5.0.ebuild:
   Add dependency on sys-apps/pmount (#86283).
