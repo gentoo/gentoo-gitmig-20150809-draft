@@ -1,0 +1,12 @@
+# ChangeLog for app-shells/fish
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.1 2005/12/05 22:48:22 spyderous Exp $
+
+*fish-1.17.0 (05 Dec 2005)
+
+  05 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +fish-1.17.0.ebuild:
+  The Friendly Interactive SHell. Has command-line syntax highlighting, tab
+  completion by default, 'open' to use .desktop files for opening any type of
+  file, and other cool stuff.
+
