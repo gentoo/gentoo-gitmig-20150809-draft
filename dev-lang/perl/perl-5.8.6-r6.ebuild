@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r6.ebuild,v 1.10 2005/12/05 16:01:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r6.ebuild,v 1.11 2005/12/05 17:11:53 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -150,7 +150,7 @@ src_configure() {
 
 	export LC_ALL="C"
 	local myconf=""
-	
+
 	case ${CHOST} in
 		*-freebsd*) osname="freebsd" ;;
 		*-netbsd*) osname="netbsd" ;;
