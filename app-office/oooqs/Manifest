@@ -6,5 +6,5 @@ MD5 d5a62d4399d509af355598951028ec8f files/fixxooo.patch 3350
 MD5 700208645159ca465baafc9e22eacde7 files/oooqs-20.patch 2256
 MD5 d89f6d524fdd9cce162c5959fa9fed1b metadata.xml 269
 MD5 f3855b265eefcd0fa1f90489b077cf74 oooqs-2.0.3-r1.ebuild 971
-MD5 0012fdfa31d1fa9339a7466e3d069656 oooqs-2.0.3-r2.ebuild 624
+MD5 a1b731fd422b3ea1bc261a06de77b6d5 oooqs-2.0.3-r2.ebuild 623
 MD5 1b4a6eb83c4267e11b9089d34206029b oooqs-2.0.3.ebuild 664
