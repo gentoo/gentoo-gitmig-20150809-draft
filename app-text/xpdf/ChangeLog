@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.96 2005/12/04 23:17:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.97 2005/12/05 15:43:19 ranger Exp $
+
+  05 Dec 2005; Brent Baude <ranger@gentoo.org> xpdf-3.01-r2.ebuild:
+  Marking xpdf-3.01-r2 ppc64 per bug 114428
 
 *xpdf-3.01-r2 (04 Dec 2005)
 
