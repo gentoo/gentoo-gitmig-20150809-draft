@@ -1,6 +1,9 @@
 # ChangeLog for app-text/flpsed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.5 2005/12/01 17:44:39 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.6 2005/12/05 18:49:38 dang Exp $
+
+  05 Dec 2005; <dang@gentoo.org> flpsed-0.3.5.ebuild:
+  Marked ~amd64
 
 *flpsed-0.3.5 (01 Dec 2005)
 
