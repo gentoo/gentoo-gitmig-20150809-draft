@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4738 2005/12/04 13:38:44 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4739 2005/12/05 09:43:59 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1137,10 +1137,6 @@ dev-lang/gpc
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
 =net-dns/dnsmasq-2.21
-
-# Rob Holland <tigger@gentoo.org> (21 March 2005)
-# marked due to bad code #84659
-net-misc/dyndnsupdate
 
 # Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
 # Tihs package is conflict with postgresql at the moment
