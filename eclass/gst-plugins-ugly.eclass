@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.2 2005/12/04 13:04:53 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.3 2005/12/05 17:07:17 swegener Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -33,7 +33,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-ugly/${MY_P}.tar.bz2"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=media-libs/gst-plugins-base-0.9*"
+RDEPEND=">=media-libs/gst-plugins-base-0.9"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
