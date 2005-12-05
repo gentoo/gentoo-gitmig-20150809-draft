@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1-r1.ebuild,v 1.13 2005/12/01 17:51:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1-r1.ebuild,v 1.14 2005/12/05 21:57:20 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -35,13 +35,13 @@ RDEPEND=">=dev-libs/glib-2.6
 	virtual/eject
 	!gstreamer? ( vorbis? ( media-sound/vorbis-tools ) )
 	gstreamer? (
-		>=media-libs/gstreamer-0.8
-		>=media-libs/gst-plugins-0.8
-		>=media-plugins/gst-plugins-gnomevfs-0.8
-		mad? ( >=media-plugins/gst-plugins-mad-0.8 )
-		ogg? ( >=media-plugins/gst-plugins-ogg-0.8 )
-		vorbis? ( >=media-plugins/gst-plugins-vorbis-0.8 )
-		flac? (	>=media-plugins/gst-plugins-flac-0.8 )
+		=media-libs/gstreamer-0.8*
+		=media-libs/gst-plugins-0.8*
+		=media-plugins/gst-plugins-gnomevfs-0.8*
+		mad? ( =media-plugins/gst-plugins-mad-0.8* )
+		ogg? ( =media-plugins/gst-plugins-ogg-0.8* )
+		vorbis? ( =media-plugins/gst-plugins-vorbis-0.8* )
+		flac? (	=media-plugins/gst-plugins-flac-0.8* )
 	)"
 
 # FIXME : what to do with exif/jpeg config stuff ?

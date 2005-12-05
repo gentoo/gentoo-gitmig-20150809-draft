@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.162 2005/12/01 19:42:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.163 2005/12/05 21:57:20 zaheerm Exp $
+
+  05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  nautilus-2.10.1-r1.ebuild:
+  Fix GStreamer dependencies
 
 *nautilus-2.12.2 (01 Dec 2005)
 
