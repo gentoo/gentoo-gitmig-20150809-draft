@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/gst-plugins-pitfdll-0.8.1-r1.ebuild,v 1.3 2005/06/14 10:52:38 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/gst-plugins-pitfdll-0.8.1-r1.ebuild,v 1.4 2005/12/05 23:13:56 zaheerm Exp $
 
 inherit eutils
 
@@ -22,8 +22,8 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND=">=media-libs/gstreamer-0.8.9
-		>=media-libs/gst-plugins-0.8.8-r1"
+DEPEND="=media-libs/gstreamer-0.8*
+		=media-libs/gst-plugins-0.8*"
 RDEPEND="$DEPEND
 	media-libs/win32codecs"
 

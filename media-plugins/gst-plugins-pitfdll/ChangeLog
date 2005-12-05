@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pitfdll
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.4 2005/06/14 10:52:38 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.5 2005/12/05 23:12:56 zaheerm Exp $
+
+  05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  gst-plugins-pitfdll-0.8.1.ebuild:
+  Fix GStreamer dependencies
 
   14 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   +files/gst-plugins-pitfdll-0.8.1-gcc4.patch,
