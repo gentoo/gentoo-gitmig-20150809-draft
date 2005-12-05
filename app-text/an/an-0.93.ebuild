@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.5 2005/12/01 20:37:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.93.ebuild,v 1.6 2005/12/05 16:39:15 jer Exp $
 
 inherit toolchain-funcs
 
@@ -38,15 +38,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "If you merged sys-apps/miscfiles with USE=minimal,"
-	ewarn "an will NOT work properly, as /usr/share/dict/words"
-	ewarn "will then be a symlink to a gzipped file. an currently"
-	ewarn "does not support gzipped dictionary files and will"
-	ewarn "only produce garbage."
-	ewarn "Do 'USE=-minimal emerge sys-apps/miscfiles', or run an"
-	ewarn "with the -d /path/to/dictionary option, perhaps using"
-	ewarn "one of the files mentioned below."
-	echo
+	if has_version sys-apps/miscfiles && \
+		built_with_use sys-apps/miscfiles minimal; then
+		ewarn "If you merged sys-apps/miscfiles with USE=minimal,"
+		ewarn "an will NOT work properly, as /usr/share/dict/words"
+		ewarn "will then be a symlink to a gzipped file. an currently"
+		ewarn "does not support gzipped dictionary files and will"
+		ewarn "only produce garbage."
+		ewarn "Do 'USE=-minimal emerge sys-apps/miscfiles', or run an"
+		ewarn "with the -d /path/to/dictionary option, perhaps using"
+		ewarn "one of the files mentioned below."
+		echo
+	fi
+
 	einfo "Helpful note from an's author:"
 	einfo "   If you do not have a dictionary you can obtain one from the"
 	einfo "   following site: ftp://ftp.funet.fi/pub/doc/dictionaries/"

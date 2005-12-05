@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.9 2005/12/01 20:37:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.10 2005/12/05 16:34:28 jer Exp $
+
+  05 Dec 2005; Jeroen Roovers <jer@gentoo.org> an-0.95.3.ebuild:
+  Made warning notice about sys-apps/miscfiles conditional.
 
   01 Dec 2005; Luis Medinas <metalgod@gentoo.org> an-0.93.ebuild,
   an-0.95.3.ebuild:
