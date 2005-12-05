@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/commons-attributes-2.1.ebuild,v 1.1 2005/12/05 03:35:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/commons-attributes-2.1.ebuild,v 1.2 2005/12/05 14:32:09 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -16,7 +16,8 @@ IUSE="doc jikes source"
 # TODO determine jvm version requirements
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	jikes? (dev-java/jikes)
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )
 	dev-java/xjavadoc"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/xjavadoc"
