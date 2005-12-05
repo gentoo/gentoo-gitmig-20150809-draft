@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.1.0.ebuild,v 1.1 2005/12/02 21:51:28 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.1.0.ebuild,v 1.2 2005/12/05 18:37:01 griffon26 Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,11 +21,19 @@ src_unpack() {
 	cd "${S}"
 
 	# make sure our CFLAGS are respected
-	einfo "Changing configure to respect CFLAGS"
-	sed -i -e 's:CFLAGS="-Wno-long-long":CFLAGS="$CFLAGS -Wno-long-long":' configure
+	einfo "Changing configure.in to respect CFLAGS"
+	sed -i -e 's:^CFLAGS="-Wno-long-long":CFLAGS="$CFLAGS -Wno-long-long":' configure.in
+
+	# undefined references to __guard and __stack_smash_handler in VEX (bug #114347)
+	einfo "Changing Makefile.flags.am to disable SSP"
+	sed -i -e 's:^AM_CFLAGS_BASE = :AM_CFLAGS_BASE = -fno-stack-protector :' Makefile.flags.am
 
 	# Correct hard coded doc location
-	sed -i -e "s:doc/valgrind/:doc/${P}/:" docs/Makefile.in
+	sed -i -e "s:doc/valgrind/:doc/${P}/:" docs/Makefile.am
+
+	einfo "Regenerating autotools files..."
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 }
 
 src_compile() {
@@ -35,11 +43,12 @@ src_compile() {
 	#                       while compiling insn_sse.c in none/tests/x86
 	# -fpie                 valgrind seemingly hangs when built with pie on
 	#                       amd64 (bug #102157)
-	# -fstack-protector     ???
+	# -fstack-protector     more undefined references to __guard and __stack_smash_handler 
+	#                       because valgrind doesn't link to glibc (bug #114347)
 	# -ggdb3                segmentation fault on startup
 	filter-flags -fomit-frame-pointer
 	filter-flags -fpie
-	#filter-flags -fstack-protector
+	filter-flags -fstack-protector
 	replace-flags -ggdb3 -ggdb2
 
 	# Optionally build in X suppression files

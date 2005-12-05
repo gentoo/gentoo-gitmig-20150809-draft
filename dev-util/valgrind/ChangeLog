@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.55 2005/12/02 21:51:28 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.56 2005/12/05 18:37:01 griffon26 Exp $
+
+  03 Dec 2005; Maurice van der Pot <griffon26@gentoo.org>
+  valgrind-3.1.0.ebuild:
+  Filtering out -fstack-protector again, because otherwise valgrind would need
+  __guard and __stack_smash_handler from glibc, which it doesn't link to.
+  Closes bug #114347 reported by Graham Murray <graham@gmurray.org.uk>
 
 *valgrind-3.1.0 (02 Dec 2005)
 
