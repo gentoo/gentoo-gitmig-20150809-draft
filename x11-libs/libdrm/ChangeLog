@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.11 2005/12/04 23:06:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.12 2005/12/05 17:27:46 joshuabaergen Exp $
+
+  05 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> libdrm-2.0.ebuild:
+  Doh, now libdrm stays...
 
   04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> libdrm-2.0.ebuild:
   Keep the old libdrm.so.1 around so things don't break horribly on upgrade.
