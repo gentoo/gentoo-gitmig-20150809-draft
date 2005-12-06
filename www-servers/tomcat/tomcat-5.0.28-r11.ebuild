@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r8.ebuild,v 1.1 2005/10/15 11:40:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r11.ebuild,v 1.1 2005/12/06 21:43:43 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -35,6 +35,7 @@ RDEPEND=">=virtual/jdk-1.4
 	=dev-java/struts-1.1-r4
 	dev-java/sun-jaf-bin
 	>=dev-java/xerces-2.6.2-r1
+	dev-java/xml-commons
 	jikes? ( dev-java/jikes )"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
@@ -52,10 +53,18 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PV}/build.xml-01.patch
-	epatch ${FILESDIR}/${PV}/build.xml-02.patch
-	epatch ${FILESDIR}/${PV}/gentoo.diff
-	epatch ${FILESDIR}/${PV}/scripts.patch
+	local PATCHES="
+		build.xml-01.patch
+		build.xml-02.patch
+		gentoo.diff
+		scripts.patch
+		setclasspath.patch
+	"
+
+	for patch in ${PATCHES}; do
+		epatch "${FILESDIR}/${PV}/${patch}"
+	done
+
 	use jikes && epatch ${FILESDIR}/${PV}/jikes.diff
 
 	# avoid packed jars :-)
@@ -68,7 +77,7 @@ src_unpack() {
 	java-pkg_jar-from commons-daemon
 
 	mkdir ../common/endorsed && cd ../common/endorsed
-	java-pkg_jar-from xerces-2 xml-apis.jar
+	java-pkg_jar-from xml-commons xml-apis.jar
 	java-pkg_jar-from xerces-2 xercesImpl.jar
 
 	mkdir ../lib && cd ../lib
@@ -109,12 +118,12 @@ src_compile(){
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
-	antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"
+	antflags="${antflags} -Djaxen.jar=$(java-pkg_getjars jaxen)"
 	antflags="${antflags} -Djmx.jar=$(java-pkg_getjar sun-jmx jmxri.jar)"
 	antflags="${antflags} -Djmx-tools.jar=$(java-pkg_getjar sun-jmx jmxtools.jar)"
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
-	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
+	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons xml-apis.jar)"
 	antflags="${antflags} -Dstruts.home=/usr/share/struts-1.1/"
 
 	ant ${antflags} || die "compile failed"
@@ -143,7 +152,12 @@ src_install() {
 	keepdir /var/log/${TOMCAT_NAME}/default
 	keepdir /var/tmp/${TOMCAT_NAME}/default
 	keepdir /var/run/${TOMCAT_NAME}/default
-	dodir   /var/lib/${TOMCAT_NAME}/default
+
+	local CATALINA_BASE=/var/lib/${TOMCAT_NAME}/default/
+	dodir   ${CATALINA_BASE}
+	keepdir ${CATALINA_BASE}/shared/lib
+	keepdir ${CATALINA_BASE}/shared/classes
+
 	dodir   /etc/${TOMCAT_NAME}/default
 	fperms  440 /etc/${TOMCAT_NAME}/default
 
@@ -193,7 +207,7 @@ src_install() {
 	chmod -R 750 conf/*
 	chown -R tomcat:tomcat webapps/* conf/*
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
-	cp -R bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
+	cp -R bin common server ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	keepdir               ${WEBAPPS_DIR}
 	set_webapps_perms     ${D}/${WEBAPPS_DIR}
@@ -202,14 +216,14 @@ src_install() {
 	if use examples; then
 		cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
 		cp -pr webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
-			${D}/var/lib/${TOMCAT_NAME}/default/webapps
+			${D}${CATALINA_BASE}/webapps
 	fi
 
 	# symlink the directories to make CATALINA_BASE possible
-	dosym /etc/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/conf
-	dosym /var/log/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/logs
-	dosym /var/tmp/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/temp
-	dosym /var/run/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/work
+	dosym /etc/${TOMCAT_NAME}/default ${CATALINA_BASE}/conf
+	dosym /var/log/${TOMCAT_NAME}/default ${CATALINA_BASE}/logs
+	dosym /var/tmp/${TOMCAT_NAME}/default ${CATALINA_BASE}/temp
+	dosym /var/run/${TOMCAT_NAME}/default ${CATALINA_BASE}/work
 
 	cp ${FILESDIR}/${PV}/log4j.properties ${D}/etc/${TOMCAT_NAME}/
 	chown tomcat:tomcat ${D}/etc/${TOMCAT_NAME}/log4j.properties
@@ -271,10 +285,53 @@ pkg_postinst() {
 	einfo "This is needed to deploy WAR files from the manager webapp."
 	einfo "See bug 99704. If you are upgrading tomcat you need to manually"
 	einfo "change the permissions."
+
+	einfo ""
+	einfo "Run emerge --config =${PF}"
+	einfo "to configure Tomcat if you need to for example"
+	einfo "change the home directory of the Tomcat user."
 }
 
 #helpers
 set_webapps_perms() {
 	chown  tomcat:tomcat ${1} || die "Failed to change owner off ${1}."
 	chmod  750           ${1} || die "Failed to change permissions off ${1}."
+}
+
+pkg_config() {
+	# Better suggestions are welcome
+	local currentdir="$(getent passwd tomcat | gawk -F':' '{ print $6 }')"
+
+	einfo "The default home directory for Tomcat is /dev/null."
+	einfo "You need to change it if your applications needs it to"
+	einfo "be an actual directory. Current home directory:"
+	einfo "${currentdir}"
+	einfo ""
+	einfo "Do you want to change it [yes/no]?"
+
+	local answer
+	read answer
+
+	if [[ "${answer}" == "yes" ]]; then
+		einfo ""
+		einfo "Suggestions:"
+		einfo "${WEBAPPS_DIR}"
+		einfo ""
+		einfo "If you want to suggest a directory, file a bug to"
+		einfo "http://bugs.gentoo.org"
+		einfo ""
+		einfo "Enter home directory:"
+
+		local homedir
+		read homedir
+
+		einfo ""
+		einfo "Setting home directory to: ${homedir}"
+
+		/usr/sbin/usermod -d"${homedir}" tomcat
+
+		einfo "You can run emerge --config =${PF}"
+		einfo "again to change to homedir"
+		einfo "at any time."
+	fi
 }

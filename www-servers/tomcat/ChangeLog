@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.43 2005/11/14 20:17:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.44 2005/12/06 21:43:43 betelgeuse Exp $
+
+*tomcat-5.0.28-r11 (06 Dec 2005)
+
+  06 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +files/5.0.28/setclasspath.patch, -tomcat-5.0.28-r8.ebuild,
+  +tomcat-5.0.28-r11.ebuild:
+  Fixed bug #112530 so users should now be able to set a custom CLASSPATH in
+  /etc/conf.d/tomcat-5. Also changed tomcat to use xml-apis from xml-commons
+  instead of xerces because the jar in xerces is a packed one.
 
 *tomcat-5.0.28-r10 (14 Nov 2005)
 
