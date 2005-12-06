@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.77 2005/12/06 03:54:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.78 2005/12/06 06:58:36 morfic Exp $
+
+  06 Dec 2005; Daniel Goller <morfic@gentoo.org> boost-1.33.1.ebuild:
+  adding gentoo mirror
 
 *boost-1.33.1 (06 Dec 2005)
 
