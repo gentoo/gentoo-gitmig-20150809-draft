@@ -1,6 +1,14 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.128 2005/12/03 19:43:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.129 2005/12/06 01:53:48 carlo Exp $
+
+*koffice-1.4.2-r3 (06 Dec 2005)
+*koffice-1.4.2-r2 (06 Dec 2005)
+
+  06 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kword-1.4.2-CAN-2005-3193.patch, -koffice-1.4.2-r1.ebuild,
+  +koffice-1.4.2-r2.ebuild, +koffice-1.4.2-r3.ebuild:
+  vulnerabilities in included xpdf code, #114429
 
 *koffice-1.4.2-r1 (03 Dec 2005)
 
