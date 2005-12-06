@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/enigmail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.1 2005/12/06 02:40:57 anarchy Exp $
+
+*enigmail-0.93.1 (06 Dec 2005)
+
+  06 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +files/firefox-1.1-visibility.patch, +files/50_enigmail_no_upgrade.patch,
+  +files/70_enigmail-fix.patch, +metadata.xml, +enigmail-0.93.1.ebuild:
+  initial import for >=1.5_rc1 thunderbird
+

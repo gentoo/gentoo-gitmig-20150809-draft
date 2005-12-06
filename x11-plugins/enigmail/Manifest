@@ -1,0 +1,7 @@
+MD5 581bbdccfff09ea4fe86a88c7ddcf71a ChangeLog 488
+MD5 05901c77a7e603f74cd04ead1e8c2831 enigmail-0.93.1.ebuild 4017
+MD5 f6da2f617f170f8bbc915d81d7588fa1 files/50_enigmail_no_upgrade.patch 633
+MD5 6bbab0286558a86eb8175fb601b43678 files/70_enigmail-fix.patch 343
+MD5 a9e5f97457fe82c26106daa0a6e17677 files/digest-enigmail-0.93.1 208
+MD5 cc5756b8c7af5c88b248b86c73fc5c8d files/firefox-1.1-visibility.patch 930
+MD5 d048ab0ca56f9151afdebcff86b18438 metadata.xml 303
