@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.2.ebuild,v 1.1 2005/12/04 23:59:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.2-r1.ebuild,v 1.1 2005/12/06 04:15:04 allanonjl Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="The gnome2 Desktop configuration tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -91,4 +91,9 @@ src_unpack() {
 
 	# Gentoo-specific support for xcursor themes. See bug #103638.
 	epatch ${FILESDIR}/${PN}-2.11-gentoo_xcursor.patch
+
+	# Fix for -Wextra gcc error #114533
+	epatch ${FILESDIR}/${PN}-2.12.2-gcc-Wextra.patch
+
+	eautoreconf
 }
