@@ -1,6 +1,10 @@
 # ChangeLog for media-video/flumotion
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.6 2005/09/14 19:18:27 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.7 2005/12/06 07:21:38 zaheerm Exp $
+
+  06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  flumotion-0.1.6.ebuild, flumotion-0.1.7.ebuild, flumotion-0.1.8.ebuild:
+  Fix GStreamer dependencies
 
   14 Sep 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   flumotion-0.1.6.ebuild, flumotion-0.1.7.ebuild, flumotion-0.1.8.ebuild:

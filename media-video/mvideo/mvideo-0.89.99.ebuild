@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mvideo/mvideo-0.89.99.ebuild,v 1.2 2005/03/11 03:20:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mvideo/mvideo-0.89.99.ebuild,v 1.3 2005/12/06 07:24:30 zaheerm Exp $
 
 inherit eutils mono
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.4.0
 	>=dev-db/mysql-4
 	>=sys-libs/glibc-2
-	>=media-libs/gstreamer-0.8
+	=media-libs/gstreamer-0.8*
 	>=gnome-extra/libgtkhtml-3.0.10
 	>=dev-lang/mono-0.96
 	>=dev-dotnet/gtk-sharp-0.98

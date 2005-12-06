@@ -1,6 +1,10 @@
 # ChangeLog for media-video/thoggen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.6 2005/11/21 19:04:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.7 2005/12/06 07:28:57 zaheerm Exp $
+
+  06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> thoggen-0.3.ebuild,
+  thoggen-0.4.ebuild, thoggen-0.4.1.ebuild:
+  Fix GStreamer dependencies
 
 *thoggen-0.4.1 (21 Nov 2005)
 
