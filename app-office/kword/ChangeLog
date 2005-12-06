@@ -1,6 +1,14 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.27 2005/12/03 19:45:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.28 2005/12/06 02:01:05 carlo Exp $
+
+*kword-1.4.2-r3 (06 Dec 2005)
+*kword-1.4.2-r2 (06 Dec 2005)
+
+  06 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kword-1.4.2-CAN-2005-3193.patch, -kword-1.4.2-r1.ebuild,
+  +kword-1.4.2-r2.ebuild, +kword-1.4.2-r3.ebuild:
+  vulnerabilities in included xpdf code, #114429
 
 *kword-1.4.2-r1 (03 Dec 2005)
 
