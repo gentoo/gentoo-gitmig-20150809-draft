@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac94266ffa6b7e67e9033d624aa878a7 ChangeLog 577
 MD5 174659495472c58a3ee8bc207ebead0e commons-attributes-2.1.ebuild 1654
 MD5 afa7033a8f1ac9174d37628b7734a1f8 files/anttasks.properties 856
 MD5 95c743163c69489b7e543bd18593ce3c files/commons-attributes-2.1-gentoo.patch 1651
 MD5 02d5609bcdd04538df28834127b4bf8d files/digest-commons-attributes-2.1 74
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlN5OndWRXhKOboURAm3aAJ49UiWVKQzYwdZHIcZp+zH7csRwCQCfe+hT
+n9KECIqPvuywUcA6nhtfndo=
+=9JCZ
+-----END PGP SIGNATURE-----
