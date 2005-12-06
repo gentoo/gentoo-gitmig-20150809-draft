@@ -101,10 +101,11 @@
  
  test.o:	${LIBEDITDIR}/TEST/test.c
  	
- test:	libedit.a test.o 
+-test:	libedit.a test.o 
++test:
  	${_MKTARGET_LINK}
 -	${CC} ${LDFLAGS} ${.ALLSRC} -o ${.TARGET} libedit.a ${LDADD} -ltermcap
-+	${CC} ${LDFLAGS} ${.ALLSRC} -o $@ libedit.a ${LDADD} -ltermcap
++	${CC} ${CFLAGS} ${LDFLAGS} ${.ALLSRC} -o $@ TEST/test.c libedit.a ${LDADD} ${LIBS}
  
 -.include <bsd.lib.mk>
 -.include <bsd.subdir.mk>
@@ -116,7 +117,7 @@
 +libedit.a: $(OOBJS)
 +	$(AR) -r $@ .a/*
 +libedit.so: $(OOBJS)
-+	$(CC) --shared -o $@ .so/* $(LIBS) -Wl,-soname -Wl,libedit.so
++	$(CC) --shared -o $@ .so/* $(LIBS) -Wl,-soname,libedit.so
 --- netbsd-cvs/el.c
 +++ libedit-uNF/el.c
 @@ -439,8 +439,10 @@
