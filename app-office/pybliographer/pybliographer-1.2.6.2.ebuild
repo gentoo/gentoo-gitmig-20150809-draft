@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.6.2.ebuild,v 1.1 2005/07/02 08:12:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.6.2.ebuild,v 1.2 2005/12/06 22:45:49 marienz Exp $
 
 inherit gnome2 eutils
 
@@ -22,7 +22,8 @@ DEPEND="virtual/python
 	>=dev-libs/glib-2
 	>=app-text/recode-3.6-r1
 	>=dev-python/gnome-python-2
-	>=dev-python/python-bibtex-1.2.1"
+	>=dev-python/python-bibtex-1.2.1
+	app-text/scrollkeeper"
 
 src_unpack() {
 	unpack ${A}
