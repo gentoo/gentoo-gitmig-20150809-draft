@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.50 2005/11/29 00:29:34 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.51 2005/12/06 14:56:11 nixphoeni Exp $
+
+  06 Dec 2005; Joe Sapp <nixphoeni@gentoo.org>
+  gdesklets-core-0.35.2-r1.ebuild:
+  Moved installation of the developer's book (controlled by the "doc" USE
+  flag) to a snapshot relating to the current version from a versionless, most
+  recent snapshot. This way, the digest isn't dependent on where one gets the
+  book from (a gentoo mirror or the original source).
 
   29 Nov 2005; Joe Sapp <nixphoeni@gentoo.org>
   gdesklets-core-0.35.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.2-r1.ebuild,v 1.3 2005/11/29 00:29:34 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.2-r1.ebuild,v 1.4 2005/12/06 14:56:11 nixphoeni Exp $
 
 inherit gnome2 eutils multilib
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GNOME Desktop Applets: Core library for desktop applets"
 SRC_URI="http://www.gdesklets.org/downloads/${MY_P}.tar.bz2 \
-		http://www.pycage.de/develbook/develbook.tar.bz2"
+		mirror://gentoo/gdesklets-develbook-${PV}.tar.bz2"
 HOMEPAGE="http://gdesklets.gnomedesktop.org"
 LICENSE="GPL-2"
 
@@ -47,8 +47,11 @@ src_install() {
 	# Create a global directory for Displays
 	dodir /usr/$(get_libdir)/gdesklets/Displays
 
-	# Install the Developer's book documentation
-	use doc && dohtml -r ${WORKDIR}/develbook/*
+	# Install the Developer's Book
+	use doc && \
+		einfo "Installing the Developer's Book into" && \
+		einfo "/usr/share/doc/${PF}/html" && \
+		dohtml -r ${WORKDIR}/gdesklets-develbook/*
 
 	# Remove conflicts with x11-misc/shared-mime-info
 	rm -rf ${D}/usr/share/mime/aliases ${D}/usr/share/mime/magic ${D}/usr/share/mime/globs \
