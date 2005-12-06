@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.27 2005/12/06 17:58:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.28 2005/12/06 21:14:45 metalgod Exp $
+
+  06 Dec 2005; Luis Medinas <metalgod@gentoo.org> wmakerconf-2.11.ebuild:
+  Stable on amd64. Bug #114363.
 
   06 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   wmakerconf-2.11.ebuild:
