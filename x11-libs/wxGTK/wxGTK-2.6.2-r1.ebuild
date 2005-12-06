@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.2-r1.ebuild,v 1.1 2005/11/26 17:32:08 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.2-r1.ebuild,v 1.2 2005/12/06 12:34:48 hanno Exp $
 
 inherit wxlib gnuconfig
 
@@ -28,10 +28,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-		unpack ${A}
-		cd ${S}
+	unpack ${A}
+	cd ${S}
 
-		epatch ${FILESDIR}/intl.cpp.diff
+	epatch ${FILESDIR}/wxWidgets-2.6.2-gcc41.patch
+	epatch ${FILESDIR}/intl.cpp.diff
 }
 
 src_compile() {
