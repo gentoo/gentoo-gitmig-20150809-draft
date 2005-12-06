@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.82 2005/12/06 06:12:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.83 2005/12/06 21:49:50 hansmi Exp $
+
+  06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  kdewebdev-3.4.3-r1.ebuild:
+  Stable on hppa. See bug #114583.
 
   06 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdewebdev-3.4.3-r1.ebuild:
   Marked ppc stable for bug #112842.
