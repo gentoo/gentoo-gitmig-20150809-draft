@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tunesbrowser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tunesbrowser/ChangeLog,v 1.7 2005/09/29 14:02:51 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tunesbrowser/ChangeLog,v 1.8 2005/12/06 07:13:25 zaheerm Exp $
+
+  06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  tunesbrowser-0.1.6.ebuild, tunesbrowser-0.2.0.ebuild,
+  tunesbrowser-0.3.0.ebuild:
+  Fix GStreamer dependencies
 
 *tunesbrowser-0.3.0 (29 Sep 2005)
 
