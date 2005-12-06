@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.61 2005/12/03 17:46:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.62 2005/12/06 12:23:00 johnm Exp $
+
+  06 Dec 2005; John Mylchreest <johnm@gentoo.org>
+  gradm-2.1.7.200511041858.ebuild:
+  bumping to stable due to 2.6.14 vuln push.
 
   03 Dec 2005; Tom Gall <tgall@gentoo.org> gradm-2.1.6.200506131347.ebuild:
   stable on ppc64
