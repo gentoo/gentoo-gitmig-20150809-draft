@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.71 2005/12/05 06:36:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.72 2005/12/06 07:02:35 joshuabaergen Exp $
+
+*xorg-server-0.99.4-r2 (06 Dec 2005)
+
+  06 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-server-0.99.4-r2.ebuild:
+  Build against Mesa 6.4.1 instead of Mesa 6.4.  Caught by dagb.
 
 *xorg-server-0.99.4-r1 (05 Dec 2005)
 
