@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.0c.ebuild,v 1.7 2005/10/24 16:30:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.0c.ebuild,v 1.8 2005/12/06 07:50:39 zaheerm Exp $
 
 inherit kde
 
@@ -18,10 +18,10 @@ IUSE="gstreamer mplayer xine"
 
 # Removed koffice plugin, since the compilation fails and it's not supported upstream.
 DEPEND="xine? ( >=media-libs/xine-lib-1_beta12 )
-	gstreamer? ( >=media-libs/gst-plugins-0.8.7 )"
+	gstreamer? ( =media-libs/gst-plugins-0.8* )"
 RDEPEND="mplayer? ( >=media-video/mplayer-0.90 )
 	xine? ( >=media-libs/xine-lib-1_beta12 )
-	gstreamer? ( >=media-libs/gst-plugins-0.8.7 )"
+	gstreamer? ( =media-libs/gst-plugins-0.8* )"
 need-kde 3.1
 
 pkg_setup() {

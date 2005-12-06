@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.52 2005/12/03 21:10:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.53 2005/12/06 07:50:39 zaheerm Exp $
+
+  06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  kmplayer-0.9.0c.ebuild, kmplayer-0.9.1.ebuild, kmplayer-0.9.1a.ebuild:
+  Fix GStreamer dependencies
 
 *kmplayer-0.9.1a (03 Dec 2005)
 
