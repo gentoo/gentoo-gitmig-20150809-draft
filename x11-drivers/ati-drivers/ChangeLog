@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.11 2005/12/03 14:53:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.12 2005/12/06 09:35:24 lu_zero Exp $
+
+  06 Dec 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.19.10.ebuild:
+  Minor fixes
 
 *ati-drivers-8.18.8-r2 (03 Dec 2005)
 

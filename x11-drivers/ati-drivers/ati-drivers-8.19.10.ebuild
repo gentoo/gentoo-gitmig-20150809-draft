@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.8 2005/12/03 14:53:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.9 2005/12/06 09:35:24 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -291,7 +291,7 @@ pkg_postinst() {
 
 	echo
 	einfo "To switch to ATI OpenGL, run \"eselect opengl set ati\""
-	einfo "To change your XF86Config you can use the bundled \"aticonfig\""
+	einfo "To change your xorg.conf you can use the bundled \"aticonfig\""
 	if use !opengl ; then
 	ewarn "You don't have the opengl useflag enabled, you won't be able to build"
 	ewarn "opengl applications nor use opengl driver features, if that isn't"
