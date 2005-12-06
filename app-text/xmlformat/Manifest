@@ -1,4 +1,14 @@
-MD5 de0ac1fee8fa39a48dae200c9970f736 xmlformat-1.03.ebuild 986
-MD5 414ba63d8e3682e1fe8508f321d26363 ChangeLog 624
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2bab33f0a10b4c43eb46eca730c46595 ChangeLog 723
 MD5 4e124221bbf01efc00260a2530492b4c files/digest-xmlformat-1.03 66
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 cba85bb601a0adadcacc1c83f197a1f3 xmlformat-1.03.ebuild 994
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlg5EwUpWvClEHQoRAqAaAJwJT04X5hPZ7t4eezrPi5KPSGsg0QCdEYL4
+svMxwg1MaV2yjfqOT/cGu6M=
+=Qqkr
+-----END PGP SIGNATURE-----
