@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.0.ebuild,v 1.6 2005/10/23 17:09:49 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.0.ebuild,v 1.7 2005/12/06 22:16:45 mrness Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -37,6 +37,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-mysql-list.patch
 
 	cd ${S}
 	#by default, use current directory for logging
