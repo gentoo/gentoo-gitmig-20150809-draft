@@ -1,12 +1,11 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.11 2005/12/06 02:11:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.12 2005/12/06 02:18:50 nichoj Exp $
 
 *weka-3.4.6 (06 Dec 2005)
 
   06 Dec 2005; Joshua Nichols <nichoj@gentoo.org> +weka-3.4.6.ebuild:
-  Version bump (bug #108911). Ebuild contributed by Stefan de Konink
-  <skinkie@xs4all.nl>.
+  Version bump (bug #108911). Ebuild contributed by lzap <lzap@seznam.cz>
 
   07 May 2005; David Holm <dholm@gentoo.org> weka-3.4.3_p20041113.ebuild:
   Added to ~ppc.
