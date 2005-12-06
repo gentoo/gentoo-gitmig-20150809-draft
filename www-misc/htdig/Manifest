@@ -2,19 +2,18 @@
 Hash: SHA1
 
 MD5 fdee365334b22bf39c4917647b91dccd htdig-3.1.6-r7.ebuild 1927
-MD5 074b824b5266ed0d829943e97898c3fa htdig-3.2.0_beta6.ebuild 1515
-MD5 e0ffa6629e532a16f136e4ea5fb12511 ChangeLog 5815
+MD5 faa2257a518fbfa5674b35ee067348e9 htdig-3.2.0_beta6.ebuild 1473
+MD5 596ec3cf059d53bee3ed623cdec612f8 ChangeLog 5938
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 8863dac1d260decb47f31d1a3fe422e2 files/CONFIG.in 2012
 MD5 8c097ca125d2c633f4a320d10a1cab61 files/htdig-3.2.0-fpic.patch 668
 MD5 d44854e0008c7b69a927940fe3f373d9 files/htdig-3.1.6-unescaped-output.diff 640
 MD5 6a2501fb2eb3dab0941d282339e42151 files/digest-htdig-3.2.0_beta6 66
 MD5 10558a7c02e5ea20fdfe325e6186fc9d files/digest-htdig-3.1.6-r7 64
-MD5 255a55537e852e6110bfa5924185c6c0 files/reconfig 186
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDH4STEzitwsaoONoRAgOzAJ0WHdIRAAU1PHhSqjhc4bwxzhe/7wCfZxZx
-AH7BFunwlx8dIzstXk05F+A=
-=iedk
+iD8DBQFDlaMDEzitwsaoONoRAoRjAKCsWT+UHrnkT9gFgXQfPjv16oCUUACdGygk
+2eOXNhC5u91ABmMocemGOeE=
+=yiTM
 -----END PGP SIGNATURE-----

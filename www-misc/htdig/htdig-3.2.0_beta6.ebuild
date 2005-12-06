@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6.ebuild,v 1.4 2005/09/08 00:23:30 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6.ebuild,v 1.5 2005/12/06 14:40:15 rl03 Exp $
 
 inherit webapp eutils flag-o-matic
 
@@ -51,7 +51,5 @@ src_install () {
 	dosym ${MY_CGIBINDIR}/htsearch /usr/bin/htsearch
 
 	webapp_configfile ${MY_HOSTROOTDIR}/${PN}/${PN}.conf
-	webapp_hook_script ${FILESDIR}/reconfig
-
 	webapp_src_install
 }
