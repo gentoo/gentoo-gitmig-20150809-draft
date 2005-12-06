@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.60 2005/11/29 18:39:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.61 2005/12/06 07:48:29 zaheerm Exp $
+
+  06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  rhythmbox-0.8.8-r1.ebuild, rhythmbox-0.9.2.ebuild:
+  Fix GStreamer dependencies
 
   29 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   rhythmbox-0.9.2.ebuild:

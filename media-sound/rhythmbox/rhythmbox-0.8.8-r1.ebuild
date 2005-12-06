@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.9 2005/09/26 15:31:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.10 2005/12/06 07:48:29 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -18,13 +18,13 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
-	>=media-libs/gst-plugins-0.8.2
-	>=media-plugins/gst-plugins-gnomevfs-0.8.2
-	vorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.2
-	             >=media-plugins/gst-plugins-ogg-0.8.2 )
-	mad? ( >=media-plugins/gst-plugins-mad-0.8.2 )
-	flac? ( >=media-plugins/gst-plugins-flac-0.8.2 )
-	aac? ( >=media-plugins/gst-plugins-faad-0.8.2 )"
+	=media-libs/gst-plugins-0.8*
+	=media-plugins/gst-plugins-gnomevfs-0.8*
+	vorbis? ( =media-plugins/gst-plugins-vorbis-0.8*
+	            =media-plugins/gst-plugins-ogg-0.8* )
+	mad? ( =media-plugins/gst-plugins-mad-0.8* )
+	flac? ( =media-plugins/gst-plugins-flac-0.8* )
+	aac? ( =media-plugins/gst-plugins-faad-0.8* )"
 
 #	!xine? ( =media-libs/gst-plugins-0.8*
 #		=media-plugins/gst-plugins-gnomevfs-0.8*
