@@ -9,7 +9,7 @@ MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86 132
 MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86-r3 132
 MD5 0e94e6657416b0d48d13abf86297f2e4 files/inittab 1667
 MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
-MD5 055f0a982433c7f7a58a6fd4e091cedc files/sysvinit-2.86-POSIX-1003.1e.patch 1358
+MD5 a20a459c789828c7b994e6ec93ed223a files/sysvinit-2.86-POSIX-1003.1e.patch 1358
 MD5 b956965acd5408afa0a3937001b2d55e files/sysvinit-2.86-docs.patch 1899
 MD5 907ffbfe16ebfb13e0f34cb377bf1c67 files/sysvinit-2.86-execl.patch 323
 MD5 701137886382265cf08d69a20fb89627 files/sysvinit-2.86-off-by-one.patch 310
@@ -22,7 +22,7 @@ MD5 cb1165247fe26db95505195995ecac1b sysvinit-2.86.ebuild 2501
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgG5ygIKl8Uu19MoRAlkQAJ0VTwt0jkfICuLdqo3EmuUUPgHfkwCeP6PW
-9eNc/02OTbOBtDgwiwnkWO8=
-=mY7Z
+iD8DBQFDlOgNgIKl8Uu19MoRAk2CAJ9k+2BT52fBorbRVGGW+BGkcjMS9QCcDz9Z
+RJWI93kx6Rm1RCNaEHqLjFU=
+=9Hbm
 -----END PGP SIGNATURE-----

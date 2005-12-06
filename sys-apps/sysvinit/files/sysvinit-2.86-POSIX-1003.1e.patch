@@ -13,9 +13,9 @@ http://bugs.gentoo.org/5818
 +#ifdef __linux__
 +#include <linux/capability.h>
 +#include <linux/unistd.h>
-+
-+_syscall2(int, capget, cap_user_header_t, header, cap_user_data_t, data)
-+_syscall2(int, capset, cap_user_header_t, header, const cap_user_data_t, data)
++#include <sys/syscall.h>
++#define capget(header, data) syscall(__NR_capget, header, data)
++#define capset(header, data) syscall(__NR_capset, header, data)
 +#endif
 +
  #include <sys/stat.h>
