@@ -1,4 +1,4 @@
-MD5 3361e5a1f43e2b67d4801b294ab55926 ChangeLog 26994
+MD5 3d1ec842c6779369a73c08e9dfed4d70 ChangeLog 27252
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
 MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
@@ -24,11 +24,14 @@ MD5 919632051f7ddeeed29b011f163d17f0 files/digest-openldap-2.2.27-r1 130
 MD5 a8e7c88a9f6b88fb9b88d4e66fae5d92 files/digest-openldap-2.2.28 130
 MD5 a8e7c88a9f6b88fb9b88d4e66fae5d92 files/digest-openldap-2.2.28-r1 130
 MD5 dd664a5abce13e402f1e0322ce2464fd files/digest-openldap-2.2.28-r2 130
+MD5 dd664a5abce13e402f1e0322ce2464fd files/digest-openldap-2.2.28-r3 130
 MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
 MD5 c16eada85fafe1c17bf0089d0ef90ae3 files/gencert.sh-2.2.27 2939
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
 MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
+MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.1.30-autoconf25.patch 382
 MD5 c58db81c8d7084a9abf48747134da0a8 files/openldap-2.1.30-db40.patch 718
+MD5 07a689148742f0fd74dcedf572a8f092 files/openldap-2.1.30-rpath.patch 13131
 MD5 1afdae6ce6fa709abed41ce45f41f5e8 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
 MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
 MD5 4c6ef684996786b3a7cc2dc15c4ae7a4 files/openldap-2.2.14-db40.patch 773
@@ -59,4 +62,5 @@ MD5 b33aca9604940f55ec0992f486d64605 openldap-2.2.27-r1.ebuild 12774
 MD5 44d54b94ad9be3c6a595e530ffde8e24 openldap-2.2.27.ebuild 12424
 MD5 d0b2e396543e06107bd1b2f492c246f2 openldap-2.2.28-r1.ebuild 13109
 MD5 a6c77f6fc6a7c7af923cc334d2bab94a openldap-2.2.28-r2.ebuild 13214
+MD5 fcb35d0ee0a0af9c62b33e19b55cbc03 openldap-2.2.28-r3.ebuild 13872
 MD5 72bade434d8afe3c9c9f665518a6d786 openldap-2.2.28.ebuild 12908

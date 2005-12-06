@@ -1,0 +1,11 @@
+--- ./configure.in.orig	2005-03-14 18:06:26.000000000 +0100
++++ ./configure.in	2005-12-03 01:46:39.607707750 +0100
+@@ -2133,7 +2133,7 @@
+ 			[have_setproctitle=yes
+ 			LUTIL_LIBS="$LUTIL_LIBS -lutil"],
+ 			[have_setproctitle=no
+-			LIBOBJS="$LIBOBJS setproctitle.o"
++			AC_LIBOBJ([setproctitle])
+ 			LIBSRCS="$LIBSRCS setproctitle.c"])])
+ 
+ 	if test $have_setproctitle = yes ; then

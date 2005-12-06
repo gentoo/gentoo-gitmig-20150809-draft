@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.147 2005/12/03 09:38:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.148 2005/12/06 17:10:51 robbat2 Exp $
+
+*openldap-2.2.28-r3 (06 Dec 2005)
+
+  06 Dec 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.1.30-autoconf25.patch,
+  +files/openldap-2.1.30-rpath.patch, +openldap-2.2.28-r3.ebuild:
+  Bug #105380 - RPATH again. Bug #113770 - Selinux support.
 
   03 Dec 2005; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.2.28-r2.ebuild:

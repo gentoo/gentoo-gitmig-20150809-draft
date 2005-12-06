@@ -1,0 +1,205 @@
+--- ./aclocal.m4.orig   2005-12-04 00:06:26.000000000 +0100
++++ ./aclocal.m4        2005-12-04 00:06:51.585142250 +0100
+@@ -2884,7 +2884,7 @@
+     _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname $wl$soname -o $lib'
+     _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
+ 
+-    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}--rpath ${wl}$libdir'
++    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+     _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
+ 
+     # If archive_cmds runs LD, not CC, wlarc should be empty
+@@ -3311,7 +3311,7 @@
+ 	_LT_AC_TAGVAR(link_all_deplibs, $1)=yes
+ 	;;
+     esac
+-    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+     _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+     ;;
+   linux*)
+@@ -3334,7 +3334,7 @@
+ 	# dependencies.
+ 	output_verbose_link_cmd='templist=`$CC $CFLAGS -v conftest.$objext -o libconftest$shared_ext 2>&1 | grep "ld"`; rm -f libconftest$shared_ext; list=""; for z in $templist; do case $z in conftest.$objext) list="$list $z";; *.$objext);; *) list="$list $z";;esac; done; echo $list'
+ 
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}--rpath,$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
+ 
+ 	# Archives containing C++ object files must be created using
+@@ -3362,7 +3362,7 @@
+ 	  ;;
+ 	esac
+ 	_LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
+ 	_LT_AC_TAGVAR(whole_archive_flag_spec, $1)='${wl}--whole-archive$convenience ${wl}--no-whole-archive'
+ 	;;
+@@ -3371,7 +3371,7 @@
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname ${wl}$soname -o $lib'
+   	_LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname ${wl}$soname ${wl}-retain-symbols-file ${wl}$export_symbols -o $lib'
+ 
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}--rpath ${wl}$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
+ 	_LT_AC_TAGVAR(whole_archive_flag_spec, $1)='${wl}--whole-archive`for conv in $convenience\"\"; do test  -n \"$conv\" && new_convenience=\"$new_convenience,$conv\"; done; $echo \"$new_convenience\"` ${wl}--no-whole-archive'
+         ;;
+@@ -3381,7 +3381,7 @@
+ 	_LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname $wl$soname  -o $lib ${wl}-retain-symbols-file $wl$export_symbols'
+ 
+ 	runpath_var=LD_RUN_PATH
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-rpath $libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	# Commands to make compiler produce verbose output that lists
+@@ -3435,7 +3435,7 @@
+     _LT_AC_TAGVAR(hardcode_direct, $1)=yes
+     _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
+     _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
+-    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+     if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
+       _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
+       _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
+@@ -3453,7 +3453,7 @@
+ 	# to its proper name (with version) after linking.
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='tempext=`echo $shared_ext | $SED -e '\''s/\([[^()0-9A-Za-z{}]]\)/\\\\\1/g'\''`; templib=`echo $lib | $SED -e "s/\${tempext}\..*/.so/"`; $CC $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags --soname $soname -o \$templib; mv \$templib $lib'
+ 
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	# Archives containing C++ object files must be created using
+@@ -3470,7 +3470,7 @@
+ 	_LT_AC_TAGVAR(allow_undefined_flag, $1)=' ${wl}-expect_unresolved ${wl}\*'
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared${allow_undefined_flag} $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname $soname `test -n "$verstring" && echo ${wl}-set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+ 
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	# Commands to make compiler produce verbose output that lists
+@@ -3488,7 +3488,7 @@
+ 	  _LT_AC_TAGVAR(allow_undefined_flag, $1)=' ${wl}-expect_unresolved ${wl}\*'
+ 	  _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -nostdlib ${allow_undefined_flag} $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
+ 
+-	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	  # Commands to make compiler produce verbose output that lists
+@@ -3513,7 +3513,7 @@
+ 	# to its proper name (with version) after linking.
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='tempext=`echo $shared_ext | $SED -e '\''s/\([[^()0-9A-Za-z{}]]\)/\\\\\1/g'\''`; templib=`echo $lib | $SED -e "s/\${tempext}\..*/.so/"`; $CC $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags --soname $soname -o \$templib; mv \$templib $lib'
+ 
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	# Archives containing C++ object files must be created using
+@@ -3533,7 +3533,7 @@
+ 	  $CC -shared$allow_undefined_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -msym -soname $soname -Wl,-input -Wl,$lib.exp  `test -n "$verstring" && echo -set_version	$verstring` -update_registry ${output_objdir}/so_locations -o $lib~
+ 	  $rm $lib.exp'
+ 
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-rpath $libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
+ 	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	# Commands to make compiler produce verbose output that lists
+@@ -3551,7 +3551,7 @@
+ 	  _LT_AC_TAGVAR(allow_undefined_flag, $1)=' ${wl}-expect_unresolved ${wl}\*'
+ 	 _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -nostdlib ${allow_undefined_flag} $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-msym ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
+ 
+-	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+ 
+ 	  # Commands to make compiler produce verbose output that lists
+@@ -5385,7 +5385,7 @@
+     # are reset later if shared libraries are not supported. Putting them
+     # here allows them to be overridden if necessary.
+     runpath_var=LD_RUN_PATH
+-    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}--rpath ${wl}$libdir'
++    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+     _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
+     # ancient GNU ld didn't support --whole-archive et. al.
+     if $LD --help 2>&1 | grep 'no-whole-archive' > /dev/null; then
+@@ -5884,9 +5884,9 @@
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
+       else
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -shared $libobjs $deplibs $linker_flags -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec_ld, $1)='-rpath $libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec_ld, $1)='-L$libdir'
+       fi
+-      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+       _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+       _LT_AC_TAGVAR(link_all_deplibs, $1)=yes
+       ;;
+@@ -5905,7 +5905,7 @@
+     newsos6)
+       _LT_AC_TAGVAR(archive_cmds, $1)='$LD -G -h $soname -o $lib $libobjs $deplibs $linker_flags'
+       _LT_AC_TAGVAR(hardcode_direct, $1)=yes
+-      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+       _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
+       ;;
+@@ -5916,7 +5916,7 @@
+       if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
+ 	_LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	_LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
+       else
+        case $host_os in
+@@ -5926,7 +5926,7 @@
+ 	   ;;
+ 	 *)
+ 	   _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
+-	   _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++	   _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+ 	   ;;
+        esac
+       fi
+@@ -5948,7 +5948,7 @@
+ 	_LT_AC_TAGVAR(allow_undefined_flag, $1)=' -expect_unresolved \*'
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -shared${allow_undefined_flag} $libobjs $deplibs $linker_flags -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+       fi
+-      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+       _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+       ;;
+ 
+@@ -5956,7 +5956,7 @@
+       if test "$GCC" = yes; then
+ 	_LT_AC_TAGVAR(allow_undefined_flag, $1)=' ${wl}-expect_unresolved ${wl}\*'
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared${allow_undefined_flag} $libobjs $deplibs $compiler_flags ${wl}-msym ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-L$libdir'
+       else
+ 	_LT_AC_TAGVAR(allow_undefined_flag, $1)=' -expect_unresolved \*'
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -shared${allow_undefined_flag} $libobjs $deplibs $linker_flags -msym -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+@@ -5964,7 +5964,7 @@
+ 	$LD -shared${allow_undefined_flag} -input $lib.exp $linker_flags $libobjs $deplibs -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib~$rm $lib.exp'
+ 
+ 	# Both c and cxx compiler support -rpath directly
+-	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-rpath $libdir'
++	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
+       fi
+       _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
+       ;;
+--- ./libraries/liblunicode/Makefile.in.orig	2005-01-20 18:01:03.000000000 +0100
++++ ./libraries/liblunicode/Makefile.in		2005-12-04 01:40:59.000000000 +0100
+@@ -31,7 +31,7 @@
+ 
+ ucgendat: $(XLIBS) ucgendat.o
+ 	$(LTLINK) -o $@ ucgendat.o $(LIBS)
+-	./ucgendat $(srcdir)/UnicodeData.txt -x $(srcdir)/CompositionExclusions.txt
++	LD_LIBRARY_PATH=../liblber/.libs:$LD_LIBRARY_PATH ./ucgendat $(srcdir)/UnicodeData.txt -x $(srcdir)/CompositionExclusions.txt
+ 
+ DATFILES = case.dat cmbcl.dat comp.dat ctype.dat decomp.dat num.dat kdecomp.dat
+ 
