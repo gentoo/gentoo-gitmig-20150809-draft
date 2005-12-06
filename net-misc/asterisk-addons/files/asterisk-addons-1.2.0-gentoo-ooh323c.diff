@@ -1,0 +1,30 @@
+--- asterisk-addons-1.2.0/asterisk-ooh323c/Makefile.am.orig	2005-10-26 20:49:40.000000000 +0000
++++ asterisk-addons-1.2.0/asterisk-ooh323c/Makefile.am	2005-12-06 20:28:44.000000000 +0000
+@@ -19,10 +19,10 @@
+ 	$(MAKE) "CFLAGS = -g -DGNU -D_GNU_SOURCE -D_REENTRANT" all
+ 
+ install: 
+-	cp .libs/libchan_h323.so.1.0.1 /usr/lib/asterisk/modules/chan_ooh323.so
++	$(INSTALL) -D -m755 .libs/libchan_h323.so.1.0.1 $(DESTDIR)/usr/lib/asterisk/modules/chan_ooh323.so
+ 
+ sample:
+-	cp h323.conf.sample /etc/asterisk/ooh323.conf
++	$(INSTALL) -D -m644 h323.conf.sample $(DESTDIR)/etc/asterisk/ooh323.conf
+ 
+ 
+ EXTRA_DIST = extensions.conf h323.conf README COPYING
+--- asterisk-addons-1.2.0/asterisk-ooh323c/Makefile.in.orig	2005-10-26 20:49:40.000000000 +0000
++++ asterisk-addons-1.2.0/asterisk-ooh323c/Makefile.in	2005-12-06 20:29:43.000000000 +0000
+@@ -1235,10 +1235,10 @@
+ 	$(MAKE) "CFLAGS = -g -DGNU -D_GNU_SOURCE -D_REENTRANT" all
+ 
+ install: 
+-	cp .libs/libchan_h323.so.1.0.1 /usr/lib/asterisk/modules/chan_ooh323.so
++	$(INSTALL) -D -m755 .libs/libchan_h323.so.1.0.1 $(DESTDIR)/usr/lib/asterisk/modules/chan_ooh323.so
+ 
+ sample:
+-	cp h323.conf.sample /etc/asterisk/ooh323.conf
++	$(INSTALL) -D -m644 h323.conf.sample $(DESTDIR)/etc/asterisk/ooh323.conf
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
