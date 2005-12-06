@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.227 2005/12/05 06:24:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.228 2005/12/06 01:19:33 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1065,15 +1065,12 @@ gcc-compiler-configure() {
 	fi
 
 	case $(tc-arch) in
-		# Add --with-abi flags to enable respective MIPS ABIs
+		# Add --with-abi flags to set default MIPS ABI
 		mips)
-		if is_multilib; then
-			confgcc="${confgcc} --with-abi=32 --with-abi=64 --with-abi=n32"
-		elif ! is_crosscompile ; then
-			is_multilib && confgcc="${confgcc} --with-abi=32"
-			use n64 && confgcc="${confgcc} --with-abi=64"
-			use n32 && confgcc="${confgcc} --with-abi=n32"
-		fi
+		local mips_abi=""
+		use n64 && mips_abi="--with-abi=64"
+		use n32 && mips_abi="--with-abi=n32"
+		[[ -n ${mips_abi} ]] && confgcc="${confgcc} ${mips_abi}"
 		;;
 		# Enable sjlj exceptions for backward compatibility on hppa
 		hppa)
@@ -1659,11 +1656,10 @@ gcc-compiler_src_install() {
 gcc_movelibs() {
 	# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
-	local multilibout=$(<multilib.out) || die "could not read multilib.out"
 	local multiarg
-	for multiarg in ${multilibout} ; do
+	for multiarg in $(${XGCC} -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
-		multiarg=${multiarg//@/-}
+		multiarg=${multiarg//@/ -}
 
 		local OS_MULTIDIR=$(${XGCC} -B./ ${multiarg} --print-multi-os-directory)
 		local MULTIDIR=$(${XGCC} -B./ ${multiarg} --print-multi-directory)
@@ -2044,14 +2040,15 @@ do_gcc_config() {
 			fi
 		fi
 	else
-		local current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v ^\ )
+		local current_gcc_config="" current_specs="" use_specs=""
 
-		# figure out which specs-specific config is active. yes, this works
-		# even if the current config is invalid.
-		local current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
-
-		local use_specs=""
-		[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+		# We grep out any possible errors
+		current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v '^ ')
+		if [[ -n ${current_gcc_config} ]] ; then
+			# figure out which specs-specific config is active
+			current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}') \
+			[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+		fi
 
 		if [[ -n ${use_specs} ]] && \
 		   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
