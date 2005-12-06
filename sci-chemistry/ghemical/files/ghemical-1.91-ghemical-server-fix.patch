@@ -1,0 +1,13 @@
+diff -urN ghemical-1.90.orig/Makefile.in ghemical-1.90/Makefile.in
+--- ghemical-1.90.orig/Makefile.in	2005-06-30 06:04:13.000000000 -0700
++++ ghemical-1.90/Makefile.in	2005-07-08 21:59:35.000000000 -0700
+@@ -72,7 +72,8 @@
+ 	## prefix? now goes into /usr/lib/bonobo/servers/
+ 	#################################################
+ 	@echo "Copying GNOME_Ghemical.server"
+-	cp -p $(top_srcdir)/GNOME_Ghemical.server /usr/lib/bonobo/servers/
++	$(top_srcdir)/mkinstalldirs @libdir@/bonobo/servers
++	cp -p $(top_srcdir)/GNOME_Ghemical.server @libdir@/bonobo/servers/
+ 	@echo ""
+ 	
+ 	## prefix? now goes into /usr/share/gnome-2.0/ui/
