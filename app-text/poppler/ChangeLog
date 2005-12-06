@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.19 2005/12/05 15:42:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.20 2005/12/06 14:55:02 dang Exp $
+
+*poppler-0.3.0-r1 (06 Dec 2005)
+
+  06 Dec 2005; <dang@gentoo.org> +poppler-0.3.0-r1.ebuild,
+  -poppler-0.3.2.ebuild, -poppler-0.3.3.ebuild, -poppler-0.4.1.ebuild:
+  Backport fix for bug #114428 to stable version, remove broken versions
 
   05 Dec 2005; Brent Baude <ranger@gentoo.org> poppler-0.4.2-r1.ebuild:
   Marking poppler-0.4.2-r1 ppc64 per bug 114428
