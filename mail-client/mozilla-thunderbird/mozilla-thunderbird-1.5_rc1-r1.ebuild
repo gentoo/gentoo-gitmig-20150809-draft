@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5_rc1-r1.ebuild,v 1.2 2005/11/22 19:03:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5_rc1-r1.ebuild,v 1.3 2005/12/06 01:54:38 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib versionator
@@ -96,6 +96,7 @@ src_compile() {
 	####################################
 
 	mozconfig_init
+	mozconfig_config
 
 	# tb-specific settings
 	mozconfig_use_enable ldap

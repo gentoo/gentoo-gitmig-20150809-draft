@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.96 2005/12/03 03:59:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.97 2005/12/06 01:54:38 anarchy Exp $
+
+  06 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-thunderbird-1.5_rc1-r1.ebuild:
+  edited for mozconfig-2 split
 
 *mozilla-thunderbird-1.0.7-r3 (03 Dec 2005)
 
