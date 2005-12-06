@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 923cf3f39fc75794e9eb0d12451ddaea ChangeLog 466
+MD5 5b08b299d197ddfb86301aaf58e2eada emacs-jabber-0.6.1.ebuild 911
+MD5 98c463c9a7e3a9a4aed6d263734fb00a files/70emacs-jabber-gentoo.el 98
+MD5 20d83983c6972daa5849d384d7444016 files/digest-emacs-jabber-0.6.1 70
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDldw4yiNZaEAZA+ARAg4tAJ98vdOqGLMNbLM6yoreEXOnbCWYoACfaznX
+vEKGErV7XeFDubyz9SznMPs=
+=7I18
+-----END PGP SIGNATURE-----
