@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5507ec2d376be0c6cc35e224220a624c ChangeLog 540
+MD5 60475f86c05c30d2a09cfb2b215f2d51 emms-1.0.20051204.ebuild 997
+MD5 34171080a9948f732b10dd7fa79fe955 files/50emms-gentoo.el 97
+MD5 9d172cc2b77e763333794eb8a0cc1580 files/digest-emms-1.0.20051204 69
+MD5 cf758a93ae3acde4c9187fd43f18ce34 metadata.xml 680
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlfbCyiNZaEAZA+ARArAYAJwN6xMnY2kQvsh+uCfcFJELMnCCjwCeNqR5
+Mdn1p1yFfWHolQzSCFWxNus=
+=iGWw
+-----END PGP SIGNATURE-----
