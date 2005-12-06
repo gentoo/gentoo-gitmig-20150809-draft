@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.129 2005/12/06 01:53:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.130 2005/12/06 01:57:35 carlo Exp $
+
+  06 Dec 2005; Carsten Lohrke <carlo@gentoo.org> koffice-1.4.2-r3.ebuild:
+  whitespace fix
 
 *koffice-1.4.2-r3 (06 Dec 2005)
 *koffice-1.4.2-r2 (06 Dec 2005)
