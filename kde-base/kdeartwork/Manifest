@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56874c433e65f91bd4d8e03a74b882dd ChangeLog 17631
+MD5 159325d78be8b4f81352c594a24c0b62 ChangeLog 17742
 MD5 976327b55d73654f03a7c4545f59d516 files/digest-kdeartwork-3.3.2 71
 MD5 48916b43a9686c5c004bb311c8acc1c6 files/digest-kdeartwork-3.4.1 71
 MD5 b63dbb6cdbc61bdd0f73baace77284a1 files/digest-kdeartwork-3.4.2 71
@@ -15,13 +12,6 @@ MD5 789091c90eea0d565e886b92589f1119 files/kdeartwork-3.4.3-kfiresaver.patch 765
 MD5 00e5d82dd484b4ad1bd36338cc5b9ad3 kdeartwork-3.3.2.ebuild 833
 MD5 e35b31c29a9467d7afd6564eeae51dd0 kdeartwork-3.4.1.ebuild 773
 MD5 5c8f4293876c1b162c00e153f2131dca kdeartwork-3.4.2.ebuild 1110
-MD5 ea0ea10836a769e6093ca962480bef58 kdeartwork-3.4.3.ebuild 934
+MD5 1b6e7a2ff94e62afe69e86c17baf0529 kdeartwork-3.4.3.ebuild 933
 MD5 38503fdfb59d959428014e98093ba2ee kdeartwork-3.5.0.ebuild 628
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDk33egIKl8Uu19MoRAtzXAJ9VT46k7AbGSVYtbNCeTlgRPsy0jwCfUEv+
-auVB1gJIfj25YuMRpiQN51o=
-=tgVe
------END PGP SIGNATURE-----
