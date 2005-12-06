@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.17.0.ebuild,v 1.2 2005/12/06 05:56:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.17.0.ebuild,v 1.3 2005/12/06 21:47:16 spyderous Exp $
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://roo.no-ip.org/fish/"
@@ -10,6 +10,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 RDEPEND="sys-libs/ncurses
+	sys-devel/bc
 	|| ( (
 			x11-libs/libSM
 			x11-libs/libXext
