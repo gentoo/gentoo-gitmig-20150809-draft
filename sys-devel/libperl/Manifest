@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf3e6c39519827ce0d0389a88ca43a68 ChangeLog 13477
+MD5 78e1d8732f3c0486e032b754f0e0ac82 ChangeLog 13574
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6 64
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6-r1 64
 MD5 c10e44e47d7f702efe7d4009064a97ca files/digest-libperl-5.8.7 64
@@ -12,12 +9,5 @@ MD5 f7324a62f22aabde3387b7e8a8b2106e files/libperl-reorder-INC.patch 1141
 MD5 ce442db939c59218a16be167f793b817 files/libperl-uclibc.patch 573
 MD5 2851a1ba23d4be16ff6c9735aa289c16 libperl-5.8.6-r1.ebuild 10536
 MD5 238d6f9ba63a47e6de31b510cc542337 libperl-5.8.6.ebuild 10540
-MD5 4b7aefaac8c3dbfad06fde3ef31d980f libperl-5.8.7.ebuild 11081
+MD5 d18738239b855636663cafb19580c410 libperl-5.8.7.ebuild 11076
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlGYatG5z4I8BtQoRApNZAJ9bQL8JEyh8Q+ITbdHvdwa5b3SsBQCfZGqg
-e/tUX75X1JnEpet1f/vAkzw=
-=bnnB
------END PGP SIGNATURE-----
