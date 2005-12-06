@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdftohtml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.26 2005/12/06 20:47:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.27 2005/12/06 21:46:08 hansmi Exp $
+
+  06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  pdftohtml-0.36-r4.ebuild:
+  Stable on ppc.
 
 *pdftohtml-0.36-r4 (06 Dec 2005)
 
