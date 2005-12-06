@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.76 2005/11/27 21:36:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.77 2005/12/06 03:54:18 morfic Exp $
+
+*boost-1.33.1 (06 Dec 2005)
+
+  06 Dec 2005; Daniel Goller <morfic@gentoo.org> +boost-1.33.1.ebuild:
+  bumping to new version
 
   27 Nov 2005; Guy Martin <gmsoft@gentoo.org> boost-1.33.0-r1.ebuild:
   Stable on hppa.
