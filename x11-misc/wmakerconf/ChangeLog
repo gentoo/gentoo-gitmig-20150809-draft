@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.26 2005/12/03 17:35:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.27 2005/12/06 17:58:30 gustavoz Exp $
+
+  06 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  wmakerconf-2.11.ebuild:
+  Stable on sparc
 
   03 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org> wmakerconf-2.11.ebuild:
   Stable on x86 (bug 114363).
