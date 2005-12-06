@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.228 2005/12/06 01:19:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.229 2005/12/06 06:14:25 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -2046,7 +2046,7 @@ do_gcc_config() {
 		current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v '^ ')
 		if [[ -n ${current_gcc_config} ]] ; then
 			# figure out which specs-specific config is active
-			current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}') \
+			current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
 			[[ -n ${current_specs} ]] && use_specs=-${current_specs}
 		fi
 
