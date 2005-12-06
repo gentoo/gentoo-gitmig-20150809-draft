@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.27.ebuild,v 1.1 2005/11/22 19:31:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.28.ebuild,v 1.1 2005/12/06 20:45:10 wolf31o2 Exp $
 
 IUSE="opengl X"
 
@@ -12,18 +12,23 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND=">=sys-apps/sed-4
-	x86? ( opengl? ( virtual/opengl
+RDEPEND="x86? ( opengl? ( virtual/opengl
 			>=x11-base/opengl-update-2.2.1 )
 		X? ( virtual/x11
 			sys-apps/pciutils
 			x11-misc/mkxf86config
+			sys-apps/gawk ) )
+	amd64? ( opengl? ( virtual/opengl
+			>=x11-base/opengl-update-2.2.1 )
+		X? ( virtual/x11
+			sys-apps/pciutils
+			>=x11-misc/mkxf86config-0.9.2
 			sys-apps/gawk ) )"
 
 src_install() {
 	doinitd autoconfig
 	newinitd spind.init spind
-	if use x86
+	if use x86 || use amd64
 	then
 		use X && dosbin x-setup && newinitd x-setup.init x-setup
 		use opengl && dosbin openglify
