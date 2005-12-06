@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac671d3c8b6b0bc609d77a203560ac1e ChangeLog 28134
 MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
 MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
@@ -26,3 +29,10 @@ MD5 f31268d787d150bd1810a8df5fc46735 kdegraphics-3.4.3.ebuild 1731
 MD5 18c9f2812e590e167ff1d5b35333e664 kdegraphics-3.5.0-r1.ebuild 1967
 MD5 71a6e1d836d6cce0d6a9ce6a71863200 kdegraphics-3.5.0.ebuild 1870
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlS1OcsIHjyDViGQRAuWJAKCLzUeSfXdSuTS6qllt/D5x+uIi1gCfYjBW
+4uRWIUQQ1vl2cUW9XCgG7eQ=
+=/ikZ
+-----END PGP SIGNATURE-----
