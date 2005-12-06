@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.15 2005/11/30 22:23:24 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.16 2005/12/06 15:12:41 chrb Exp $
+
+*xen-3.0.0 (06 Dec 2005)
+
+  06 Dec 2005; <chrb@gentoo.org> -xen-3.0.0_pre20051027.ebuild,
+  -xen-3.0.0_pre20051122.ebuild, -xen-3.0.0_pre20051128.ebuild,
+  -xen-3.0.0_pre20051128-r1.ebuild, +xen-3.0.0.ebuild:
+  New 3.0.0 release.
 
 *xen-3.0.0_pre20051128-r1 (30 Nov 2005)
 
