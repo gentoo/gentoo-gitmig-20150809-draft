@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.3.0-r1.ebuild,v 1.1 2005/12/06 14:55:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.3.0-r1.ebuild,v 1.2 2005/12/06 18:30:35 dang Exp $
+
+inherit eutils
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
@@ -19,6 +21,12 @@ DEPEND=">=media-libs/freetype-2.0.5
 	virtual/ghostscript
 	dev-util/pkgconfig
 	gtk? ( =x11-libs/gtk+-2* )"
+
+src_unpack(){
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.4.2-CAN-2005-3193.patch
+}
 
 src_compile() {
 	econf --disable-poppler-qt --disable-cairo-output || die
