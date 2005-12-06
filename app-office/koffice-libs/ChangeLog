@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.24 2005/11/30 06:38:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.25 2005/12/06 21:55:52 hansmi Exp $
+
+  06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  koffice-libs-1.4.2.ebuild:
+  Stable on ppc.
 
   30 Nov 2005; Mark Loeser <halcy0n@gentoo.org> koffice-libs-1.4.2.ebuild:
   Stable on x86; bug #112840

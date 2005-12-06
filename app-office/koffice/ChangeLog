@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.131 2005/12/06 19:00:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.132 2005/12/06 21:52:13 hansmi Exp $
+
+  06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  koffice-1.4.2-r2.ebuild:
+  Stable on ppc.
 
   06 Dec 2005; Markus Rothe <corsair@gentoo.org> koffice-1.4.2-r2.ebuild:
   Stable on ppc64; bug #114429

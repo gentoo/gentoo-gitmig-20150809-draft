@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kchart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.22 2005/11/30 06:36:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.23 2005/12/06 21:54:15 hansmi Exp $
+
+  06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> kchart-1.4.2.ebuild:
+  Stable on ppc.
 
   30 Nov 2005; Mark Loeser <halcy0n@gentoo.org> kchart-1.4.2.ebuild:
   Stable on x86; bug #112840
