@@ -1,10 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.140 2005/12/06 21:36:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.141 2005/12/06 21:38:06 hansmi Exp $
 
   06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   db-4.2.52_p2-r1.ebuild:
-  Stable on ppc.
+  Stable on hppa, ppc.
 
   06 Dec 2005; Markus Rothe <corsair@gentoo.org> db-4.2.52_p2-r1.ebuild:
   Stable on ppc64; bug #105380
