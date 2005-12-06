@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.1 2005/12/05 22:48:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.2 2005/12/06 05:56:43 spyderous Exp $
+
+  06 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.17.0.ebuild:
+  Force the install on, because portage apparently stopped doing it by default
+  at some point.
 
 *fish-1.17.0 (05 Dec 2005)
 
