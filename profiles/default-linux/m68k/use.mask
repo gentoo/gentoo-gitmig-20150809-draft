@@ -47,3 +47,4 @@ ldap
 slang
 X
 diet
+gtk
