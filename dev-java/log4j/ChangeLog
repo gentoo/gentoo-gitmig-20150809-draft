@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.36 2005/11/18 06:46:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.37 2005/12/06 00:07:44 betelgeuse Exp $
+
+  06 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> log4j-1.2.12.ebuild:
+  Adjusted ant-core dependency because this version does not compile using
+  ant-core-1.6.2* at the moment.
 
   18 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> log4j-1.2.9.ebuild:
   Fixing compile without JMX
