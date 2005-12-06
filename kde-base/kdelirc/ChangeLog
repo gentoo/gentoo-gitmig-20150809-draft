@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.26 2005/12/04 12:31:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.27 2005/12/06 17:54:48 gustavoz Exp $
+
+  06 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> kdelirc-3.5.0.ebuild:
+  Removed ~sparc keyword, lirc is masked for us and makes mr_bones unhappy
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kdelirc-3.5.0.ebuild:
   ~alpha keyword.
