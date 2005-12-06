@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.12 2005/12/03 14:19:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.13 2005/12/06 12:52:18 mcummings Exp $
+
+  06 Dec 2005; <mcumming@gentoo.org> Test-Class-0.11.ebuild:
+  Bug 114468 - or clause was backwards
 
   03 Dec 2005; Michael Cummings <mcummings@gentoo.org>
   Test-Class-0.11.ebuild:

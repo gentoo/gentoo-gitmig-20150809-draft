@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Memory-Cycle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.3 2005/12/03 13:33:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.4 2005/12/06 12:55:11 mcummings Exp $
+
+  06 Dec 2005; <mcumming@gentoo.org> -Test-Memory-Cycle-0.02.ebuild,
+  Test-Memory-Cycle-1.02.ebuild:
+  Bug 114468 - or clause was backwards
 
 *Test-Memory-Cycle-1.02 (03 Dec 2005)
 

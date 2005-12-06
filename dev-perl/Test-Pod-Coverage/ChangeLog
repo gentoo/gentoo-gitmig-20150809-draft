@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Pod-Coverage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.13 2005/12/03 14:08:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.14 2005/12/06 12:57:18 mcummings Exp $
+
+  06 Dec 2005; <mcumming@gentoo.org> Test-Pod-Coverage-1.06.ebuild:
+  Bug 114468 - or clause was backwards
 
   03 Dec 2005; Michael Cummings <mcummings@gentoo.org>
   Test-Pod-Coverage-1.06.ebuild:
