@@ -2,8 +2,8 @@ MD5 c2f9837fa0e285c242254804a8980bc4 control-center-1.4.0.5-r2.ebuild 1411
 MD5 fb5ca50373f5813456ab01b99119916c control-center-2.12.1.ebuild 2523
 MD5 d4f0febb27460c43fb258412acde17b8 control-center-1.4.0.5-r1.ebuild 1333
 MD5 b981de1d3e97acba3ffd733321930257 control-center-2.12.2-r1.ebuild 2643
-MD5 411bb0502e1a779a850ab4bb0d582e5c control-center-2.10.2.ebuild 2015
-MD5 30570e7523d158de018596f90f114ebb ChangeLog 18834
+MD5 f591b4d2e1987a08027ebfa25c396f36 control-center-2.10.2.ebuild 2013
+MD5 6ece9344f152d9ddb1f3b7ca3b30dfe1 ChangeLog 18950
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 cd6f25b991e95ef9f518b4c499f2e2f7 files/digest-control-center-2.10.2 75
 MD5 ce951b06688a38662ed2c0e5e8d0d1bc files/digest-control-center-2.12.1 75
