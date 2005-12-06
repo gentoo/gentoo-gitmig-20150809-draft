@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c91f75ebb64a81c717df1478d7d138c8 ChangeLog 11052
+MD5 dd55283b4a3bb3a97ef2672b5a5742a8 ChangeLog 11199
 MD5 4dcf07748f65bc0682e4d739ec14535d files/2.0.1/75_mod_perl.conf 1527
 MD5 39bbf08146125b9be7559d5c2d16b400 files/2.0.1/apache2-mod_perl-startup.pl 478
 MD5 2415e6be73ba155382b34b5e2fad4951 files/75_mod_perl.conf 247
@@ -25,11 +22,4 @@ MD5 9b399f01876b16face507372264119fc mod_perl-1.29.ebuild 2078
 MD5 9a730baf314e21839db208fb4699f062 mod_perl-1.99.11.ebuild 3793
 MD5 c43bcc2819d2e1fc34da0bab9dd058e1 mod_perl-1.99.16.ebuild 3808
 MD5 4c8f5bacaad760d6859fe946e038eb41 mod_perl-2.0.1-r1.ebuild 4830
-MD5 64e76dea8113c619c2b1a0ddf52ae65e mod_perl-2.0.1-r2.ebuild 5266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdheNtG5z4I8BtQoRArW4AJ4s1s1wtki+PDqXIkjfjQ4HoPk6XACfUfW0
-idTXWTxYb3nvJ+/xqtGVBHo=
-=iP+j
------END PGP SIGNATURE-----
+MD5 a42ecdf16a0ed67fd327ad19096a520b mod_perl-2.0.1-r2.ebuild 5294

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r2.ebuild,v 1.3 2005/08/25 09:12:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r2.ebuild,v 1.4 2005/12/06 17:34:38 superlag Exp $
 
-inherit apache-module perl-module eutils
+inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 SRC_URI="mirror://cpan/authors/id/G/GO/GOZER/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
@@ -119,9 +119,9 @@ src_test() {
 }
 
 src_install() {
-	dodir /usr/lib/apache2/modules
+	dodir /usr/$(get_libdir)/apache2/modules
 	make install \
-		MODPERL_AP_LIBEXECDIR=${D}/usr/lib/apache2/modules \
+		MODPERL_AP_LIBEXECDIR=${D}/usr/$(get_libdir)/apache2/modules \
 		MODPERL_AP_INCLUDEDIR=${D}/usr/include/apache2 \
 		MP_INST_APACHE2=1 \
 		INSTALLDIRS=vendor || die
