@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.87 2005/12/05 22:17:36 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.88 2005/12/06 06:23:43 josejx Exp $
+
+  06 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  kdeaccessibility-3.4.3-r1.ebuild:
+  Marked ppc stable for bug #112842.
 
   05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   kdeaccessibility-3.4.1.ebuild, kdeaccessibility-3.4.2.ebuild,
