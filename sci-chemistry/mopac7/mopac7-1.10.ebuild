@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.00.ebuild,v 1.3 2005/07/10 06:01:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10.ebuild,v 1.1 2005/12/06 09:09:25 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/mopac7/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="mopac7"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 DEPEND="dev-libs/libf2c
 	sys-devel/autoconf
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	sed -i "s:./src/mopac7:./mopac7:g" run_mopac7
+	sed -i "s:./src/mopac7:mopac7:g" run_mopac7
 	dobin run_mopac7 src/.libs/mopac7
 	dodoc AUTHORS README ChangeLog
 }
