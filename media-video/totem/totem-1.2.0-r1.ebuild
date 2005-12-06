@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r1.ebuild,v 1.5 2005/11/24 06:59:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r1.ebuild,v 1.6 2005/12/06 07:38:51 zaheerm Exp $
 
 inherit eutils multilib gnome2
 
@@ -27,30 +27,31 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		>=media-libs/xine-lib-1.0.1
 		>=gnome-base/gconf-2 )
 	!xine? (
-		>=media-libs/gstreamer-0.8.10
-		>=media-libs/gst-plugins-0.8.10
-		>=media-plugins/gst-plugins-gnomevfs-0.8.10
-		>=media-plugins/gst-plugins-pango-0.8.10
-		>=media-plugins/gst-plugins-ffmpeg-0.8.6
-		mad? ( >=media-plugins/gst-plugins-mad-0.8.10 )
-		mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.8.10 )
-		ogg? ( >=media-plugins/gst-plugins-ogg-0.8.10 )
-		xv? ( >=media-plugins/gst-plugins-xvideo-0.8.10 )
+		|| ( =media-libs/gstreamer-0.8.10 =media-libs/gstreamer-0.8.11 )
+		=media-libs/gst-plugins-0.8*
+		=media-plugins/gst-plugins-gnomevfs-0.8*
+		=media-plugins/gst-plugins-pango-0.8*
+		|| ( =media-plugins/gst-plugins-ffmpeg-0.8.6
+			=media-plugins/gst-plugins-ffmpeg-0.8.7 )
+		mad? ( =media-plugins/gst-plugins-mad-0.8* )
+		mpeg? ( =media-plugins/gst-plugins-mpeg2dec-0.8* )
+		ogg? ( =media-plugins/gst-plugins-ogg-0.8* )
+		xv? ( =media-plugins/gst-plugins-xvideo-0.8* )
 		vorbis? (
-			>=media-plugins/gst-plugins-ogg-0.8.10
-			>=media-plugins/gst-plugins-vorbis-0.8.10 )
-		a52? ( >=media-plugins/gst-plugins-a52dec-0.8.10 )
-		flac? ( >=media-plugins/gst-plugins-flac-0.8.10 )
+			=media-plugins/gst-plugins-ogg-0.8*
+			=media-plugins/gst-plugins-vorbis-0.8* )
+		a52? ( =media-plugins/gst-plugins-a52dec-0.8* )
+		flac? ( =media-plugins/gst-plugins-flac-0.8* )
 		theora? (
-			>=media-plugins/gst-plugins-ogg-0.8.10
-			>=media-plugins/gst-plugins-theora-0.8.10 )
-		mad? ( >=media-plugins/gst-plugins-mad-0.8.10 )
+			=media-plugins/gst-plugins-ogg-0.8*
+			=media-plugins/gst-plugins-theora-0.8* )
+		mad? ( =media-plugins/gst-plugins-mad-0.8* )
 		!sparc? ( dvd? (
-			>=media-plugins/gst-plugins-a52dec-0.8.10
-			>=media-plugins/gst-plugins-dvdread-0.8.10
-			>=media-plugins/gst-plugins-mpeg2dec-0.8.10
-			>=media-plugins/gst-plugins-dvdnav-0.8.11 ) )
-		win32codecs? ( >=media-plugins/gst-plugins-pitfdll-0.8.1 ) )
+			=media-plugins/gst-plugins-a52dec-0.8*
+			=media-plugins/gst-plugins-dvdread-0.8*
+			=media-plugins/gst-plugins-mpeg2dec-0.8*
+			=media-plugins/gst-plugins-dvdnav-0.8.11 ) )
+		win32codecs? ( =media-plugins/gst-plugins-pitfdll-0.8* ) )
 	nsplugin? (
 		>=net-libs/gecko-sdk-1.7
 		>=sys-apps/dbus-0.35 )"

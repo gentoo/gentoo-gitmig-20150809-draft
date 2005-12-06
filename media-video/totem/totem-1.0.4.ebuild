@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.4.ebuild,v 1.11 2005/10/02 15:00:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.4.ebuild,v 1.12 2005/12/06 07:38:51 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -23,26 +23,27 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	lirc? ( app-misc/lirc )
 	xine? ( >=media-libs/xine-lib-1
 		>=gnome-base/gconf-2 )
-	!xine? ( >=media-libs/gstreamer-0.8.9-r3
-		>=media-libs/gst-plugins-0.8.8
-		>=media-plugins/gst-plugins-gnomevfs-0.8.8
-		xv? ( >=media-plugins/gst-plugins-xvideo-0.8.8 )
-		>=media-plugins/gst-plugins-pango-0.8.8
-		>=media-plugins/gst-plugins-ffmpeg-0.8.3
-		mad? ( >=media-plugins/gst-plugins-mad-0.8.8 )
-		mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.8.8 )
-		ogg? ( >=media-plugins/gst-plugins-ogg-0.8.8 )
-		vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.8
-			>=media-plugins/gst-plugins-vorbis-0.8.8 )
-		a52? ( >=media-plugins/gst-plugins-a52dec-0.8.8 )
-		flac? ( >=media-plugins/gst-plugins-flac-0.8.8 )
-		theora? ( >=media-plugins/gst-plugins-ogg-0.8.8
-		        >=media-plugins/gst-plugins-theora-0.8.8 )
-		mad? ( >=media-plugins/gst-plugins-mad-0.8.8 )
-		dvd? ( >=media-plugins/gst-plugins-a52dec-0.8.8
-			>=media-plugins/gst-plugins-dvdread-0.8.8
-			>=media-plugins/gst-plugins-mpeg2dec-0.8.8 )
-		win32codecs? ( >=media-plugins/gst-plugins-pitfdll-0.8.1 )
+	!xine? ( || ( =media-libs/gstreamer-0.8.9-r3 =media-libs/gstreamer-0.8.10
+		=media-libs/gstreamer-0.8.11 )
+		=media-libs/gst-plugins-0.8*
+		=media-plugins/gst-plugins-gnomevfs-0.8*
+		xv? ( =media-plugins/gst-plugins-xvideo-0.8* )
+		=media-plugins/gst-plugins-pango-0.8*
+		=media-plugins/gst-plugins-ffmpeg-0.8*
+		mad? ( =media-plugins/gst-plugins-mad-0.8* )
+		mpeg? ( =media-plugins/gst-plugins-mpeg2dec-0.8* )
+		ogg? ( =media-plugins/gst-plugins-ogg-0.8* )
+		vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+			=media-plugins/gst-plugins-vorbis-0.8* )
+		a52? ( =media-plugins/gst-plugins-a52dec-0.8* )
+		flac? ( =media-plugins/gst-plugins-flac-0.8* )
+		theora? ( =media-plugins/gst-plugins-ogg-0.8*
+		        =media-plugins/gst-plugins-theora-0.8* )
+		mad? ( =media-plugins/gst-plugins-mad-0.8* )
+		dvd? ( =media-plugins/gst-plugins-a52dec-0.8*
+			=media-plugins/gst-plugins-dvdread-0.8*
+			=media-plugins/gst-plugins-mpeg2dec-0.8* )
+		win32codecs? ( =media-plugins/gst-plugins-pitfdll-0.8* )
 		)
 	!gnome-extra/nautilus-media"
 
