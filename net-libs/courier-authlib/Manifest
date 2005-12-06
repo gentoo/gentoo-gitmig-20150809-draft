@@ -1,14 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b5203ab91cfe80f2a5a0c0a4c25b04c ChangeLog 7393
+MD5 632a4b8099517d916328e053a302a655 ChangeLog 7652
 MD5 ead53e30977f8d368de26fae5a67ad32 courier-authlib-0.53.ebuild 5903
 MD5 616ebeb89647092c49a7c841274a5c6a courier-authlib-0.54.20050224.ebuild 6027
 MD5 f8e2293e9807a0b229675d9a92f9cffa courier-authlib-0.55.20050320.ebuild 6099
 MD5 d59c188617d2aed926a0d49c1fb91f96 courier-authlib-0.55.ebuild 6057
 MD5 57ce08c86fc4d6f703643907b7b11d2d courier-authlib-0.56.ebuild 6093
 MD5 8bbd72f9613e3a82351e915aabbac7c8 courier-authlib-0.57-r1.ebuild 5970
+MD5 d0d8527656af2f96f526b5163a484e93 courier-authlib-0.57-r2.ebuild 6011
+MD5 2f26f5dd7b2847b4d13a0e7dd5917062 courier-authlib-0.57.20051116.ebuild 6142
 MD5 c02fd230688d2f9a2d0f4e8b45a3898e courier-authlib-0.57.ebuild 6089
+MD5 452ec8a16d520bb91316b7dc1390b325 files/CVE-2005-3532.patch 456
 MD5 6930587c358320ecb1043761d7ff97f1 files/configure-db4.patch 2544
 MD5 380c06d7560d80b3fcc49f611ec57391 files/courier-authlib-initd 1049
 MD5 73d603079009e02b50f27fcaaf0ee3c0 files/digest-courier-authlib-0.53 74
@@ -18,11 +18,6 @@ MD5 752436d0238327674728feeee973d102 files/digest-courier-authlib-0.55.20050320 
 MD5 6fa78b5922594232cd149eb6d6e02b5a files/digest-courier-authlib-0.56 74
 MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57 74
 MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r1 74
+MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r2 74
+MD5 80be0b258e21f2d833bde29d4c478edb files/digest-courier-authlib-0.57.20051116 83
 MD5 1639b87658242c2406f7f7f8deda7388 metadata.xml 334
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkObmgIKl8Uu19MoRAvn9AJ4tzhvozrCvd62kY1s957wCkyAFogCfax7C
-40Geny2QNShuSYRKplUuQXY=
-=y6s5
------END PGP SIGNATURE-----
