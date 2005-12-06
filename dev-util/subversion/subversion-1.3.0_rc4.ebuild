@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.0_rc4.ebuild,v 1.1 2005/12/01 08:43:56 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.0_rc4.ebuild,v 1.2 2005/12/06 21:35:13 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -30,7 +30,8 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 	java? ( virtual/jdk )
-	>=sys-devel/autoconf-2.59"
+	>=sys-devel/autoconf-2.59
+        perl-core/ExtUtils-MakeMaker"
 # Does not work because jikes is broken
 #	jikes? (dev-java/jikes)"
 
