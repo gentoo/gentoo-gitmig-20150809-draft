@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.3-r1.ebuild,v 1.4 2005/11/27 14:59:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.3-r1.ebuild,v 1.5 2005/12/06 05:51:11 josejx Exp $
 
 inherit kde-dist eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror...
 
 SRC_URI="${SRC_URI} mirror://gentoo/kdebase-3.4.3-kubuntu-hal.patch.gz"
 
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc sparc ~x86"
 IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl pam samba ssl"
 # hal: enables hal backend for 'media:' ioslave
 
