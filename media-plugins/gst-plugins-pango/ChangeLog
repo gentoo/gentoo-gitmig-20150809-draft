@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pango
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.28 2005/12/05 21:11:25 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.29 2005/12/06 09:15:44 zaheerm Exp $
+
+  06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  -gst-plugins-pango-0.9.7.ebuild:
+  remove 0.9.7 now 0.10.0 released
 
 *gst-plugins-pango-0.10.0 (05 Dec 2005)
 
