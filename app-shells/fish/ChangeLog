@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.3 2005/12/06 21:47:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.4 2005/12/07 19:25:48 spyderous Exp $
+
+*fish-1.18.0 (07 Dec 2005)
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.17.0.ebuild,
+  +fish-1.18.0.ebuild:
+  Bump. Better error messages for sh-style syntax that doesn't work in fish.
+  Also, don't execute command if wildcard expands to nothing.
 
   06 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.17.0.ebuild:
   Add dep on sys-devel/bc, reported by user via upstream.
