@@ -1,5 +1,5 @@
-MD5 623ea9617ed484219f354ffd471c1d55 pcmcia-cs-3.2.8-r2.ebuild 4051
-MD5 37f035c748956940e24570403bde6fc6 ChangeLog 21434
+MD5 57609dea93440c55076878b11f01d343 pcmcia-cs-3.2.8-r2.ebuild 4069
+MD5 31934fd2ee98be4292077233a0df6dbc ChangeLog 21542
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-3.2.8-r2 68
 MD5 8df7f8fac6931504e84e1c13acfe92e6 files/pcmcia-cs-3.2.8-x11.patch 874
