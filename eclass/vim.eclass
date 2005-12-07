@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.129 2005/12/07 02:01:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.130 2005/12/07 17:56:12 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -350,7 +350,7 @@ vim_src_compile() {
 	# autoconf-2.13 needed for this package -- bug 35319
 	# except it seems we actually need 2.5 now -- bug 53777
 	WANT_AUTOCONF=2.5 \
-		make -C src $confrule || die "make $confrule failed"
+		make -j1 -C src $confrule || die "make $confrule failed"
 	eend $?
 
 	# This should fix a sandbox violation (see bug 24447). The hvc
