@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dae51758848bfc30342daa048d6d5ba5 ChangeLog 1224
+MD5 a82e84ba55150dbcaaca843cbd40b6c0 ChangeLog 1404
 MD5 6ebeec959ec532b61c2d89f3bedad42d files/digest-font-bh-lucidatypewriter-100dpi-0.99.0 91
 MD5 850f1979268d1d111d1ba0263633e82f files/digest-font-bh-lucidatypewriter-100dpi-0.99.1 91
+MD5 49c6bba40048b032419f8c4a84309b62 files/digest-font-bh-lucidatypewriter-100dpi-0.99.2 91
 MD5 6f410bf4571b244247e1b0016d810394 font-bh-lucidatypewriter-100dpi-0.99.0.ebuild 798
 MD5 d223e686d6b50780758238b2c5f9ddc3 font-bh-lucidatypewriter-100dpi-0.99.1.ebuild 804
+MD5 a97df744f0662d158493cfb3d93e1483 font-bh-lucidatypewriter-100dpi-0.99.2.ebuild 631
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfHbT2G5bA0cA/ScRAnbQAJ9sQpBiK9LfiyZEKDxTH5ap8UidpACfQCj8
-bq3iNG1nq2mpM2t+IbPLg+c=
-=H5pZ
------END PGP SIGNATURE-----

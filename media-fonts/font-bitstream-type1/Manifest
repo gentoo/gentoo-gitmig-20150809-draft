@@ -1,4 +1,6 @@
-MD5 f03bbdd700b5cbf9093b483849e4a9dd ChangeLog 1163
+MD5 9124c7836b86cad7ed80d8633cdf837a ChangeLog 1324
 MD5 5a1d3cf316566a332f765fb71b21b02f files/digest-font-bitstream-type1-0.99.0 80
+MD5 7118d85310dba2bf982c74f47d904a98 files/digest-font-bitstream-type1-0.99.1 80
 MD5 d148640a8242b05d7bae0af2215885b1 font-bitstream-type1-0.99.0.ebuild 708
+MD5 ba7125f6b62b8f9cff0881780bebe169 font-bitstream-type1-0.99.1.ebuild 525
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

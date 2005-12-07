@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8494b3b615751b703660626b0181b2d ChangeLog 917
+MD5 8cb28611f416bf1cd9cd3ab3abae7985 ChangeLog 1061
 MD5 0bc5a6d8a4ef94d1b63d8c94bdfa4d51 files/digest-font-jis-misc-0.99.0 73
+MD5 80f13da9504d1855daec47b29835bc22 files/digest-font-jis-misc-0.99.1 73
 MD5 7f50a4c6c711861b7ade013af1aeb434 font-jis-misc-0.99.0.ebuild 683
+MD5 610795b637c5f12a9a34d7756a518509 font-jis-misc-0.99.1.ebuild 501
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfHbT2G5bA0cA/ScRAq2PAJ90FLxlu/5rmrKviZZ8+8xgmkgqQwCeOH7N
-Uyl7tGFRjgh8LnLe/G2uDhQ=
-=ellS
------END PGP SIGNATURE-----

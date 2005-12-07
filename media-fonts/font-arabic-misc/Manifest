@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53e808178b22857f72e8d85ff36059fd ChangeLog 938
+MD5 00c4334c43a716ffacbabf0001b9b5f1 ChangeLog 1088
 MD5 55e5ca88e27de4ba4e54c404cb7d0399 files/digest-font-arabic-misc-0.99.0 75
+MD5 edd44d0562f6a2ad80cce2d59be863c6 files/digest-font-arabic-misc-0.99.1 75
 MD5 7b309b8fe450f03233be5c019d52a0aa font-arabic-misc-0.99.0.ebuild 689
+MD5 07e9775ffb312d42c189848b711426fc font-arabic-misc-0.99.1.ebuild 693
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfHbS2G5bA0cA/ScRAmEmAJ4/34IHu2LkhQqTpd1qHaNekLffkwCeImIN
-bsExhUVlWUox0R+7AaTFCyg=
-=YlKe
------END PGP SIGNATURE-----

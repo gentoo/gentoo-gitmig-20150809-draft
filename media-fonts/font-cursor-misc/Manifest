@@ -1,4 +1,6 @@
-MD5 ad227a5a31b2b7e53379df52b167925e ChangeLog 1244
+MD5 fc5f07bdbef054e9c6b0b1949bb621f9 ChangeLog 1397
 MD5 e4feea011e492b02f239f626b7353c1c files/digest-font-cursor-misc-0.99.0 75
+MD5 4404f31f4407da0f6d7cc92f7a8bdf5d files/digest-font-cursor-misc-0.99.1 75
 MD5 09a26463c672197cc4ff92a39eac424f font-cursor-misc-0.99.0.ebuild 701
+MD5 71a2e75d2c755ae542bb2dea6b420b07 font-cursor-misc-0.99.1.ebuild 518
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

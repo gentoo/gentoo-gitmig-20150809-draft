@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3c2e4643e36a789be75b6aa13656d62 ChangeLog 924
+MD5 6e71a530b23b8532eff6b75dcd87727f ChangeLog 1070
 MD5 65d64cc8b1402ead85bed549ea4cfdb2 files/digest-font-mutt-misc-0.99.0 74
+MD5 03b2ed7726f9876728a14b8073739155 files/digest-font-mutt-misc-0.99.1 74
 MD5 bc45e026118ba48931369c2ae90e3c45 font-mutt-misc-0.99.0.ebuild 685
+MD5 a8b46eb2dc447267feedad61e7e87231 font-mutt-misc-0.99.1.ebuild 503
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfHbU2G5bA0cA/ScRArJZAJ40CBw5BSQJtQ/fikVEJZRrmku/fgCg0ljt
-ntUYBwepNv6v064z5YC8zJQ=
-=f5Hk
------END PGP SIGNATURE-----
