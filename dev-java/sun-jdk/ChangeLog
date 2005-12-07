@@ -1,13 +1,14 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.129 2005/12/07 22:59:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.130 2005/12/07 23:06:48 betelgeuse Exp $
 
 *sun-jdk-1.5.0.06 (07 Dec 2005)
 
   07 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
   +files/sun-jdk-1.5.0.06, +sun-jdk-1.5.0.06.ebuild:
-  Version bump to resolve bug #114334. Added alsa and X use flags to get
+  Version bump (fixes bug #114334). Added alsa and X use flags to get
   proper dependencies and removed the installation of the LICENSE file.
+  This version also fixes the upstream bug #69979.
 
   29 Nov 2005; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.4.2.10.ebuild:
   Keyword x86
