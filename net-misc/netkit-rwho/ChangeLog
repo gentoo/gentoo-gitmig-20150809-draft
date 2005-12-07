@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.9 2005/02/05 06:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.10 2005/12/07 20:47:26 strerror Exp $
+
+*netkit-rwho-0.17-r2 (07 Dec 2005)
+
+  07 Dec 2005; Benjamin Smee <strerror@gentoo.org>
+  +files/netkit-rwho-0.17-confd, +files/netkit-rwho-0.17-cron,
+  +files/netkit-rwho-0.17-debian.patch, files/netkit-rwho-0.17-rc,
+  +metadata.xml, +netkit-rwho-0.17-r2.ebuild:
+  added new conf, initd and patch as per bug #114694 - Thanks to Philippe Troin
 
 *netkit-rwho-0.17-r1 (05 Feb 2005)
 
