@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4745 2005/12/07 11:36:10 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4746 2005/12/07 14:50:21 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Markus Dittrich <markusle@gentoo.org> (07 Dec 2005)
+# This revision has the TDHF code enabled; need to
+# wait for g77 fix to propagate into new gcc patch set
+# before unmasking this version (see bug #114367)
+=sci-chemistry/gamess-05272005.3-r2
 
 # Francesco Riosa <vivo@gentoo.org> (07 Dec 2005)
 >=dev-db/mysql-5.1
