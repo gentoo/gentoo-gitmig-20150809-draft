@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.4.ebuild,v 1.3 2005/12/05 17:32:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.4.ebuild,v 1.4 2005/12/07 01:05:02 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/pax-utils-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="caps"
 
 DEPEND="caps? ( sys-libs/libcap )"
