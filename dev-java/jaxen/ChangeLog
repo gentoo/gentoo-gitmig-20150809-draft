@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.18 2005/08/16 16:34:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.19 2005/12/07 03:52:19 nichoj Exp $
+
+*jaxen-1.1_beta7 (07 Dec 2005)
+
+  07 Dec 2005; Joshua Nichols <nichoj@gentoo.org> +jaxen-1.1_beta7.ebuild:
+  Version bump (bug #105629).
 
   16 Aug 2005; Petteri Räty <betelgeuse@gentoo.org> jaxen-1.0.ebuild:
   Marked stable on x86.
