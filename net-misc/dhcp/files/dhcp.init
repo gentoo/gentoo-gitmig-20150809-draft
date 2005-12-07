@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.1 2005/12/07 13:59:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.2 2005/12/07 14:51:08 uberlord Exp $
 
 depend() {
 	need net
@@ -32,10 +32,11 @@ start() {
 	[[ -n ${LD_PRELOAD} ]] && export LD_PRELOAD="${LD_PRELOAD}"
 
 	local pidfile=$(get_var pid-file-name)
-	pidfile="${pidfile:-/var/run/dhcp.pid}"
+	pidfile="${pidfile:-/var/run/dhcp/dhcp.pid}"
 
 	ebegin "Starting ${CHROOT:+chrooted }dhcpd"
 	eval start-stop-daemon --start --exec /usr/sbin/dhcpd \
+		--pidfile "${CHROOT}${pidfile}" \
 		-- -q -pf "${pidfile}" \
 		-user dhcp -group dhcp "${DHCPD_OPTS}" \
 		${CHROOT:+-chroot "${CHROOT}"} "${IFACE}"
@@ -44,6 +45,7 @@ start() {
 
 stop() {
 	ebegin "Stopping dhcpd"
-	start-stop-daemon --stop --pidfile "$(get_options pidfile)"
+	start-stop-daemon --stop --exec /usr/sbin/dhcpd \
+	    --pidfile "$(get_options pidfile)"
 	eend $?
 }
