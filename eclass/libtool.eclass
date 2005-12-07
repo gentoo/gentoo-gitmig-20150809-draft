@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.61 2005/10/09 13:01:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.62 2005/12/07 22:50:05 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -47,9 +47,10 @@ ELT_try_and_apply_patch() {
 	local patch=$2
 
 	# We only support patchlevel of 0 - why worry if its static patches?
-	if patch -p0 --dry-run "${file}" < "${patch}" &> "${T}/elibtool.log" ; then
+	if patch -p0 --dry-run "${file}" "${patch}" &> "${T}/elibtool.log" ; then
 		einfo "  Applying $(basename "$(dirname "${patch}")")-${patch##*/}.patch ..."
-		patch -p0 "${file}" < "${patch}" &> "${T}/elibtool.log"
+		patch -p0 -g0 --no-backup-if-mismatch "${file}" "${patch}" \
+			&> "${T}/elibtool.log"
 		ret=$?
 		export ELT_APPLIED_PATCHES="${ELT_APPLIED_PATCHES} ${patch##*/}"
 	else
@@ -104,7 +105,7 @@ ELT_walk_patches() {
 		fi
 
 		# Go through the patches in reverse order (large to small)
-		for x in $(ls -d "${patch_dir}"/* 2> /dev/null | sort -r) ; do
+		for x in $(ls -d "${patch_dir}"/* 2> /dev/null | grep -v 'CVS' | sort -r) ; do
 			if [[ -n ${x} && -f ${x} ]] ; then
 				local ltver=$(VER_to_int "${version}")
 				local ptver=$(VER_to_int "${x##*/}")
