@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.16 2005/11/24 20:47:18 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.17 2005/12/07 17:48:54 marienz Exp $
+
+*matplotlib-0.85 (07 Dec 2005)
+
+  07 Dec 2005; Marien Zwart <marienz@gentoo.org>
+  +files/matplotlib-0.85-no-autodetect.patch, matplotlib-0.73.1.ebuild,
+  matplotlib-0.80-r1.ebuild, matplotlib-0.81.ebuild, matplotlib-0.82.ebuild,
+  +matplotlib-0.85.ebuild:
+  Fix insinfo / insinto typo in all versions. Version bump (bug #105443),
+  dropping ~ppc and ~amd64 keywords because new deps have not been keyworded
+  yet (bug #114776)
 
   24 Nov 2005; Marien Zwart <marienz@gentoo.org> matplotlib-0.73.1.ebuild,
   matplotlib-0.80-r1.ebuild, matplotlib-0.81.ebuild, matplotlib-0.82.ebuild:

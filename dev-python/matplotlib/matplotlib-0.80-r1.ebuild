@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.80-r1.ebuild,v 1.4 2005/11/24 20:47:18 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.80-r1.ebuild,v 1.5 2005/12/07 17:48:54 marienz Exp $
 
 inherit distutils
 
@@ -25,7 +25,7 @@ src_install() {
 	if use doc ; then
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*.py examples/README
-		insinfo /usr/share/doc/${PF}/examples/data
+		insinto /usr/share/doc/${PF}/examples/data
 		doins examples/data/*.dat
 	fi
 }
