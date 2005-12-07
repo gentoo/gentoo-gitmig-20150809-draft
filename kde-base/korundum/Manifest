@@ -1,13 +1,24 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 3d3324748c4a3ed4495e9ad9d765a81a korundum-3.4.1.ebuild 1101
-MD5 c34e416c6b3950d65c678e9d2ffdd8c1 ChangeLog 3645
-MD5 8d4896027e14644e52a9743af9a123e4 korundum-3.4.2.ebuild 1107
-MD5 0f80055560009e66e82e814c52a84a6d korundum-3.5.0.ebuild 1094
-MD5 eb15c0d4539fdbe6a7c7b6bd10820f7a korundum-3.3.2-r1.ebuild 1086
-MD5 e67edef7145a54fbf514de48407904ec korundum-3.4.3.ebuild 1103
-MD5 8b94700e5ddd1504207b279995e101c7 files/digest-korundum-3.4.2 300
-MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 f6bd746271de83bcbcacc04a445d590f files/digest-korundum-3.4.3 71
-MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-korundum-3.5.0 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26dfb401d21daed9a758520b974a7111 ChangeLog 3942
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-korundum-3.3.2-r1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-korundum-3.4.1 221
+MD5 8b94700e5ddd1504207b279995e101c7 files/digest-korundum-3.4.2 300
+MD5 f6bd746271de83bcbcacc04a445d590f files/digest-korundum-3.4.3 71
+MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-korundum-3.5.0-r1 71
+MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
+MD5 85134961f6a1013180317979668dcf06 files/qtruby-3-makeitwork.patch 392
+MD5 eb15c0d4539fdbe6a7c7b6bd10820f7a korundum-3.3.2-r1.ebuild 1086
+MD5 3d3324748c4a3ed4495e9ad9d765a81a korundum-3.4.1.ebuild 1101
+MD5 8d4896027e14644e52a9743af9a123e4 korundum-3.4.2.ebuild 1107
+MD5 e67edef7145a54fbf514de48407904ec korundum-3.4.3.ebuild 1103
+MD5 020b60ab3bf732748c2f621a6a320e81 korundum-3.5.0-r1.ebuild 1137
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlzHyAiZjviIA2XgRAuz1AJ0fka5tyVlMw9ypuj6x7ZXgMiEWpACg8bgP
+kS/w3hMlr4/gccqL3SH77b0=
+=joYd
+-----END PGP SIGNATURE-----
