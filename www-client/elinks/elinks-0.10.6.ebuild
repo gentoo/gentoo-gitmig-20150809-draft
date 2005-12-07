@@ -1,24 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.6.ebuild,v 1.6 2005/12/03 16:47:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.6.ebuild,v 1.7 2005/12/07 01:02:43 vapier Exp $
 
 inherit eutils
 
-IUSE="gpm zlib bzip2 ssl X lua guile perl ruby gnutls idn javascript ipv6 \
-samba ftp gopher nntp finger javascript debug nls"
-
 MY_P=${P/_/}
 DESCRIPTION="Advanced and well-established text-mode web browser"
-HOMEPAGE="http://elinks.or.cz"
+HOMEPAGE="http://elinks.or.cz/"
 SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 	http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ppc64 sparc x86"
+IUSE="bzip2 debug finger ftp gnutls gopher gpm guile idn ipv6 javascript javascript lua nls nntp perl ruby samba ssl X zlib"
+RESTRICT="test"
 
-DEPEND="virtual/libc
-	>=dev-libs/expat-1.95.4
+DEPEND=">=dev-libs/expat-1.95.4
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	X? ( virtual/x11 )
@@ -31,14 +29,12 @@ DEPEND="virtual/libc
 	ruby? ( dev-lang/ruby )
 	!mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) )
 	samba? ( net-fs/samba )"
-
 PROVIDE="virtual/textbrowser"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
 	mv "${PN}-0.10.4.conf" "${PN}.conf"
 	if ! use ftp ; then
 		sed -i -e 's/\(.*protocol.ftp.*\)/# \1/' ${PN}.conf
@@ -57,39 +53,39 @@ src_compile() {
 		myconf="--enable-fastmem"
 	fi
 
-	econf --sysconfdir=/etc/elinks \
+	econf \
+		--sysconfdir=/etc/elinks \
 		--enable-leds \
 		--enable-256-colors \
 		--enable-html-highlight \
-		`use_with gpm` \
-		`use_with zlib` \
-		`use_with bzip2 bzlib` \
-		`use_with ssl openssl` \
-		`use_with X x` \
-		`use_with lua` \
-		`use_with guile` \
-		`use_with perl` \
-		`use_with ruby` \
-		`use_with idn` \
-		`use_with javascript spidermonkey` \
-		`use_enable nls` \
-		`use_enable ipv6` \
-		`use_enable samba smb` \
-		`use_enable ftp` \
-		`use_enable gopher` \
-		`use_enable nntp` \
-		`use_enable finger` \
-		"${myconf}" || die
+		$(use_with gpm) \
+		$(use_with zlib) \
+		$(use_with bzip2 bzlib) \
+		$(use_with ssl openssl) \
+		$(use_with X x) \
+		$(use_with lua) \
+		$(use_with guile) \
+		$(use_with perl) \
+		$(use_with ruby) \
+		$(use_with idn) \
+		$(use_with javascript spidermonkey) \
+		$(use_enable nls) \
+		$(use_enable ipv6) \
+		$(use_enable samba smb) \
+		$(use_enable ftp) \
+		$(use_enable gopher) \
+		$(use_enable nntp) \
+		$(use_enable finger) \
+		${myconf} || die
 
 	emake || die "compile problem"
 }
 
 src_install() {
-
 	make DESTDIR="${D}" install || die
 
 	insopts -m 644 ; insinto /etc/elinks
-	doins ${WORKDIR}/elinks.conf
+	doins "${WORKDIR}"/elinks.conf
 	newins contrib/keybind-full.conf keybind-full.sample
 	newins contrib/keybind.conf keybind.conf.sample
 
@@ -101,16 +97,7 @@ src_install() {
 
 	# Remove some conflicting files on OSX.  The files provided by OSX 10.4
 	# are more or less the same.  -- Fabian Groffen (2005-06-30)
-	if use ppc-macos; then
-		rm -f ${D}/usr/lib/charset.alias
-	fi
-
-	rm -f ${D}/usr/share/locale/locale.alias
-}
-
-# Disable it as the only test available is interactive..
-src_test() {
-	return 0
+	rm -f "${D}"/usr/share/locale/locale.alias "${D}"/usr/lib/charset.alias
 }
 
 pkg_postinst() {
