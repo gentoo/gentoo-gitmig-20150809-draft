@@ -1,6 +1,4 @@
-MD5 722b028472968ff95092a0b5b9e69325 ChangeLog 1087
-MD5 1bc697313d1dd14c26bb68bbe479ad33 encodings-0.99.0.ebuild 769
+MD5 2f52d675eca72b8adb4598c03f45cefd ChangeLog 1188
 MD5 b6f8528f5f2078389d8e6429f562c369 encodings-0.99.1.ebuild 776
-MD5 272f095a298a2924b56f2a0b220b739c files/digest-encodings-0.99.0 69
 MD5 ce225de469ea8408f700ea9a9d3f09f7 files/digest-encodings-0.99.1 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

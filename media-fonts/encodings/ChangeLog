@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/encodings
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.8 2005/11/11 20:03:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.9 2005/12/07 21:32:35 spyderous Exp $
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -encodings-0.99.0.ebuild:
+  Pull old versions.
 
 *encodings-0.99.1 (11 Nov 2005)
 
