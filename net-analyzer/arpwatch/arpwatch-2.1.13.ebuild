@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13.ebuild,v 1.2 2005/11/26 18:43:47 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13.ebuild,v 1.3 2005/12/07 11:26:17 strerror Exp $
 
 inherit eutils
 
@@ -73,6 +73,6 @@ src_install () {
 
 }
 pkg_postinst() {
-	einfo "If you want arpwatch to at boot then type:"
+	einfo "If you want arpwatch to start at boot then type:"
 	ewarn "      rc-update add arpwatch default"
 }

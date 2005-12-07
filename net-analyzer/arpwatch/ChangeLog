@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.15 2005/11/26 18:43:47 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.16 2005/12/07 11:26:17 strerror Exp $
+
+  07 Dec 2005; Benjamin Smee <strerror@gentoo.org> arpwatch-2.1.13.ebuild:
+  small typo fix
 
   26 Nov 2005; Benjamin Smee <strerror@gentoo.org> arpwatch-2.1.13.ebuild:
   small change for cosmetics
