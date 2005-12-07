@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.9 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.10 2005/12/07 17:53:25 ciaranm Exp $
 #
 # This eclass is used by vim.eclass and vim-plugin.eclass to update
 # the documentation tags.  This is necessary since vim doesn't look in
@@ -30,6 +30,13 @@ update_vim_helptags() {
 		if [[ -z "$vim" ]]; then
 			ewarn "No suitable vim binary to rebuild documentation tags"
 		fi
+	fi
+
+	# Make vim not try to connect to X. See :help gui-x11-start
+	# in vim for how this evil trickery works.
+	if ! [[ -z "${vim}" ]] ; then
+		ln -s "${vim}" "${T}/tagvim"
+		vim="${T}/tagvim"
 	fi
 
 	# Install the documentation symlinks into the versioned vim
@@ -62,6 +69,7 @@ update_vim_helptags() {
 				'+set nobackup nomore' \
 				"+helptags $d/doc" \
 				'+qa!' </dev/null &>/dev/null
+			rm "${vim}"
 		fi
 	done
 }
