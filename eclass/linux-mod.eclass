@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.55 2005/10/23 15:25:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.56 2005/12/07 23:10:22 vapier Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -532,9 +532,9 @@ linux-mod_src_install() {
 		objdir=${objdir:-${srcdir}}
 
 		einfo "Installing ${modulename} module"
-		cd ${objdir}
+		cd ${objdir} || die "${objdir} does not exist"
 		insinto ${ROOT}lib/modules/${KV_FULL}/${libdir}
-		doins ${modulename}.${KV_OBJ}
+		doins ${modulename}.${KV_OBJ} || die "doins ${modulename}.${KV_OBJ} failed"
 		cd ${OLDPWD}
 
 		generate_modulesd ${objdir}/${modulename}
