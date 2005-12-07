@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.36 2005/11/29 09:41:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.37 2005/12/07 22:55:04 betelgeuse Exp $
+
+*sun-jre-bin-1.5.0.06 (07 Dec 2005)
+
+  07 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +files/sun-jre-bin-1.5.0.06, +sun-jre-bin-1.5.0.06.ebuild:
+  Version bump to resolve bug #114334. Added alsa and X use flags to get
+  proper dependencies and removed the installation of the LICENSE file.
 
   29 Nov 2005; Thomas Matthijs <axxo@gentoo.org>
   sun-jre-bin-1.4.2.10.ebuild:

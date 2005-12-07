@@ -2,11 +2,14 @@ MD5 a61e1131f5a764d21ffc765ee26b3903 ChangeLog 6903
 MD5 74299380ad85352daa11ed361d0ae7c4 files/digest-sun-jre-bin-1.4.2.09 75
 MD5 e62fb7994ee4fc5c246eb5f053746d8b files/digest-sun-jre-bin-1.4.2.10 75
 MD5 ebf375761c2ad0048952e100b454dd8e files/digest-sun-jre-bin-1.5.0.05 149
+MD5 d6ba359d678ea416f72caca9d8d35913 files/digest-sun-jre-bin-1.5.0.06 149
 MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
 MD5 d18163e6fa7ea0858c360d08eed4f0ab files/sun-jre-bin-1.4.2.09 571
 MD5 8bca9ee7188cd9e4104e950ee936039e files/sun-jre-bin-1.4.2.10 571
 MD5 6007d953795be8bd8064d7809acd957e files/sun-jre-bin-1.5.0.05 575
+MD5 6007d953795be8bd8064d7809acd957e files/sun-jre-bin-1.5.0.06 575
 MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
 MD5 c432010b040e6430f1a38f559332fe42 sun-jre-bin-1.4.2.09.ebuild 5334
 MD5 1b36bf9667c51137d951018090841575 sun-jre-bin-1.4.2.10.ebuild 5334
 MD5 583700cb2022c82823ab0ac0be890e97 sun-jre-bin-1.5.0.05.ebuild 5540
+MD5 9b11e694a23725a2cad2e6c8dd558729 sun-jre-bin-1.5.0.06.ebuild 5532
