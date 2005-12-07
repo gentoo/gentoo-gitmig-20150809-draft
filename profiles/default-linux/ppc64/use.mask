@@ -53,7 +53,6 @@ solid
 sybase
 sybase-ct
 glitz
-cairo
 
 # dietlibc
 diet
