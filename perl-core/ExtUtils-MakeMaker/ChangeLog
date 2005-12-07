@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/ExtUtils-MakeMaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ChangeLog,v 1.5 2005/11/10 18:45:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ChangeLog,v 1.6 2005/12/07 00:50:49 azarah Exp $
+
+*ExtUtils-MakeMaker-6.30-r1 (07 Dec 2005)
+*ExtUtils-MakeMaker-6.21-r1 (07 Dec 2005)
+
+  07 Dec 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/ExtUtils-MakeMaker-6.30-RUNPATH.patch,
+  +ExtUtils-MakeMaker-6.21-r1.ebuild, +ExtUtils-MakeMaker-6.30-r1.ebuild:
+  Security bump, bug #105054.
 
   10 Nov 2005; Luis Medinas <metalgod@gentoo.org>
   ExtUtils-MakeMaker-6.21.ebuild:
