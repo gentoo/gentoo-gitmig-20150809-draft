@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.156 2005/11/12 05:52:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.157 2005/12/07 19:14:58 gregkh Exp $
+
+*udev-077 (07 Dec 2005)
+
+  07 Dec 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +files/udev.rules-077,
+  +files/udev-start-077.sh, +udev-077.ebuild:
+  Rudimentary 077 udev support added.  Should fix lots of odd bugs
+  people have been having with 073.
 
   12 Nov 2005; Chris White <chriswhite@gentoo.org> Manifest:
   Fixed silly bug #112235. Feel free to chew my head off, it's breaking user's
