@@ -1,0 +1,505 @@
+diff -Nru v110-dist/src/kernel/Makefile v110/src/kernel/Makefile
+--- v110-dist/src/kernel/Makefile	2003-09-24 15:55:39.000000000 +0100
++++ v110/src/kernel/Makefile	2004-03-01 16:24:59.000000000 +0000
+@@ -1,187 +1,27 @@
+-CC  = gcc
+-CPP = g++
+-INSTALL = install
+-DEPEND = mkdep
+-MV = mv
+-LD = ld
++# Makefile to work with 2.6.x kernels
+ 
+-MTXVXD = mtxvxd
++KDIR	:= /lib/modules/$(shell uname -r)/build
+ 
+-WARNINGS    =   -Wall -Wwrite-strings -Wpointer-arith -Wcast-align \
+-				-Wstrict-prototypes -Wnested-externs \
+-				-Wpointer-arith
++ifneq ($(KERNELRELEASE),)
+ 
+-CFLAGS      =  $(WARNINGS) -D__KERNEL__  
+-CPPFLAGS    =  $(CFLAGS) -fno-rtti -fno-exceptions -fno-use-cxa-atexit
++PWD	:= $(shell pwd)
+ 
+-MODCFLAGS   =  $(CFLAGS) -DMODULE
++CFLAGS := -fno-common -I$(MTXDIR) -I$(MTXDIR)/../include -I$(MTXDIR)/../include/mtxvxd -I$(MTXDIR)/mtxvxd -I$(MTXDIR)/parhelia -I$(KDIR)/include/asm/mach-default
+ 
+-SUBDIRS = $(MTXVXD)
++EXTRA_LDFLAGS := $(MTXDIR)/parhelia/mtx_parhelia.o
+ 
+-# **** Parse config file
++obj-m := mtx.o
++mtx-objs := mtx_drv.o mtx_dev.o mtx_ctx.o mtx_mem.o mtx_fops.o mtx_ioctl.o mtx_vm.o mtx_agp.o mtx_irq.o mtx_reg_access.o \
++			mtxvxd/MtxCpu.o mtxvxd/MtxCs.o mtxvxd/MtxIo.o mtxvxd/MtxMem.o mtxvxd/MtxMsr.o mtxvxd/MtxPci.o mtxvxd/MtxTimer.o mtxvxd/MtxMap.o mtxvxd/MtxDte.o mtxvxd/MtxLdt.o mtxvxd/MtxLdtr.o mtxvxd/MtxGdt.o mtxvxd/MtxGdtr.o mtxvxd/MtxDbg.o \
++			parhelia/MtxParhlParms.o parhelia/MtxParhlOS.o
+ 
+-ifeq ($(PARHELIUX)/config.mk,$(wildcard $(PARHELIUX)/config.mk))
+-include $(PARHELIUX)/config.mk
+-endif
+-
+-ifeq ($(CFG_MTX_DEBUG), YES)
+-CFLAGS += -DDEBUG=1 -g -O -fno-inline-functions
+-CPPFLAGS += -fno-inline
+-else
+-CFLAGS += -O2 -fomit-frame-pointer -finline-functions
+-endif
+-
+-ifeq ($(CFG_MTX_MEMORY_STATS), YES)
+-CFLAGS += -DMEMORY_STATS=1
+-endif
+-
+-# **** Get right version of kernel headers
+-
+-VERSION := $(shell uname -r)
+-A       := /lib/modules/$(VERSION)/build/include
+-B       := /usr/src/linux-$(VERSION)/include
+-C       := /usr/src/linux/include
+-D       := /usr/include
+-
+-V := $(shell gcc -E -nostdinc -I$A knl-conf.c 2>/dev/null | grep -s 'RELEASE = ' | cut -d' ' -f3)
+-ifeq ($(V),"$(VERSION)")
+-LNXTREE := $A
+-else
+-V := $(shell gcc -E -nostdinc -I$B knl-conf.c 2>/dev/null | grep -s 'RELEASE = ' | cut -d' ' -f3)
+-ifeq ($(V),"$(VERSION)")
+-LNXTREE := $B
+-else
+-V := $(shell gcc -E -nostdinc -I$C knl-conf.c 2>/dev/null | grep -s 'RELEASE = ' | cut -d' ' -f3)
+-ifeq ($(V),"$(VERSION)")
+-LNXTREE := $C
+-else
+-V := $(shell gcc -E -nostdinc -I$D knl-conf.c 2>/dev/null | grep -s 'RELEASE = ' | cut -d' ' -f3)
+-ifeq ($(V),"$(VERSION)")
+-LNXTREE := $D
+-else
+-LNXTREE := 0
+-endif
+-endif
+-endif
+-endif
+-
+-ifeq ($(LNXTREE),0)
+-$(error ERROR: Could not locate kernel tree in $A $B $C $D)
+-endif
+-
+-KNLMODDIR = /lib/modules/$(VERSION)
+-ifeq ($(shell if test -d $(KNLMODDIR)/kernel; then echo yes; fi),yes)
+- INSTALLDIR=$(KNLMODDIR)/kernel/drivers/video
+ else
+-INSTALLDIR=$(KNLMODDIR)/video
+-endif
++PWD		:= $(shell pwd)
+ 
+-# **** Check kernel configuration and set compilation accordingly
++default:
++	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) MTXDIR=$(PWD) modules
+ 
+-    # configuration check
+-INCLUDES = -I$(LNXTREE) -I. -I$(PARHELIUX)/include
+-
+-SMP := $(shell gcc -E -nostdinc -I$(LNXTREE) knl-conf.c 2>/dev/null \
+-| grep -s 'SMP = ' | cut -d' ' -f3)
+-
+-MODULES := $(shell gcc -E -nostdinc -I$(LNXTREE) knl-conf.c 2>/dev/null \
+-| grep -s 'MODULES = ' | cut -d' ' -f3)
+-MODVERSIONS := $(shell gcc -E -nostdinc -I$(LNXTREE) knl-conf.c 2>/dev/null \
+-| grep -s 'MODVERSIONS = ' | cut -d' ' -f3)
+-
+-AGP := $(shell gcc -E -nostdinc -I$(LNXTREE) knl-conf.c 2>/dev/null \
+-| grep -s 'AGP = ' | cut -d' ' -f3)
+-ifeq ($(AGP),0)
+-AGP := $(shell gcc -E -nostdinc -I$(LNXTREE) knl-conf.c 2>/dev/null \
+-| grep -s 'AGP_MODULE = ' | cut -d' ' -f3)
+-endif
+-
+-REDHAT_KERNEL := $(shell gcc -E -nostdinc -I$(LNXTREE) knl-conf.c 2>/dev/null \
+-| grep -s 'REDHAT_KERNEL = ' | cut -d' ' -f3)
+-
+-    # fix compilation settings
+-ifeq ($(AGP),0)
+-$(error ERROR: This version of kernel do not support AGP devices)
+-endif
+-
+-ifeq ($(MODULES),0)
+-$(error ERROR: This version of kernel do not support loadable modules)
+-endif
+-
+-ifeq ($(SMP),1)
+-MODCFLAGS += -D__SMP__
+-endif
+-
+-ifeq ($(MODVERSIONS),1)
+-MODCFLAGS += -DMODVERSIONS -include $(LNXTREE)/linux/modversions.h
+-endif
+-
+-ifeq ($(REDHAT_KERNEL),1)
+-MODCFLAGS += -DREDHAT_KERNEL
+-endif
+-
+-export LNXTREE MODCFLAGS CFLAGS CPPFLAGS
+-
+-# **** Sources and rules
+-
+-INCLUDES   =  -I. -I$(LNXTREE) -I$(PARHELIUX)/include -I$(PARHELIUX)/include/mtxvxd
+-
+-CORE_DRIVERS   =  parhelia
+-CORE_OSOBJS    =  parhelia/MtxParhlParms.o parhelia/MtxParhlOS.o
+-CORE_MAINOBJS  =  parhelia/mtx_parhelia.o
+-
+-MTXOSDRV       =  mtx_os.o
+-MTXDRV         =  mtx.o
+-
+-SUBDIRS    +=  $(CORE_DRIVERS)
+-
+-OBJS       =  mtx_drv.o mtx_dev.o mtx_ctx.o mtx_mem.o mtx_fops.o mtx_ioctl.o mtx_vm.o mtx_agp.o mtx_irq.o mtx_reg_access.o
+-HEADERS    =  mtx.h mtx_drv.h mtx_reg_access.h
+-
+-all::; @echo Using kernel headers in $(LNXTREE)
+-
+-all:: $(OBJS) build $(MTXOSDRV) $(MTXDRV) $(POST_RULES)
+-
+-.PHONY : build
+-build:
+-	@for i in $(SUBDIRS) ; \
+-	do \
+-		echo "making" all "in $(CURRENT_DIR)/$$i..."; \
+-		set -e; $(MAKE) -C $$i $(MFLAGS) all; \
+-	done;
+-
+-$(MTXOSDRV): $(OBJS) $(CORE_OSOBJS) $(MTXVXD)/mtxvxd.o
+-	$(RM) $@
+-	$(LD) -r -o $@ $(OBJS) $(CORE_OSOBJS) $(MTXVXD)/mtxvxd.o
+-
+-
+-$(MTXDRV): $(MTXOSDRV) $(CORE_MAINOBJS)
+-	$(RM) $@
+-	@#link global_beg/end at the begin/end of the list
+-	$(LD) -r -o $@ $(MTXOSDRV) $(CORE_MAINOBJS)
+-
+-reset:
+-	$(CC) -o reset reset.c $(INCLUDES)
+-
+-%.o: %.c
+-	$(CC) $(MODCFLAGS) $(INCLUDES) -c $< -o $@
+-
+-$(OBJS): $(HEADERS)
+-    
+ clean:
+-	@for i in $(SUBDIRS) ; \
+-	do \
+-		echo "making" clean "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) -C $$i $(MFLAGS) clean; \
+-    done;
+-	$(RM) -f *.o *.a *~ core
+-
+-depend:
+-	@for i in $(SUBDIRS) ; \
+-	do \
+-		$(MAKE) -C $$i $(MFLAGS) depend; \
+-	done;
+-	$(DEPEND) $(INCLUDES) $(MODCFLAGS) $(wildcard *.c)
++	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) MTXDIR=$(PWD) clean
+ 
+-install:
+-	$(INSTALL) -m 0644 -o root -g root mtx.o $(INSTALLDIR)/mtx.o
++endif
+diff -Nru v110-dist/src/kernel/mtx.mod.c v110/src/kernel/mtx.mod.c
+--- v110-dist/src/kernel/mtx.mod.c	1970-01-01 01:00:00.000000000 +0100
++++ v110/src/kernel/mtx.mod.c	2004-03-05 13:28:25.000000000 +0000
+@@ -0,0 +1,11 @@
++#include <linux/module.h>
++#include <linux/vermagic.h>
++#include <linux/compiler.h>
++
++MODULE_INFO(vermagic, VERMAGIC_STRING);
++
++static const char __module_depends[]
++__attribute_used__
++__attribute__((section(".modinfo"))) =
++"depends=";
++
+diff -Nru v110-dist/src/kernel/mtx_agp.c v110/src/kernel/mtx_agp.c
+--- v110-dist/src/kernel/mtx_agp.c	2003-04-08 14:54:34.000000000 +0100
++++ v110/src/kernel/mtx_agp.c	2004-03-01 16:25:09.000000000 +0000
+@@ -19,7 +19,7 @@
+ mtx_agp_driver_t *agp_drv = NULL;
+ 
+ /* AGP backend support */
+-static const drm_agp_t *agp_backend = NULL;
++const drm_agp_t *agp_backend = NULL;
+ 
+ 
+ /***************************************************************************************
+@@ -59,6 +59,7 @@
+     agp_drv->aperture_base = agp_drv->kern_info.aper_base;
+     agp_drv->aperture_size = agp_drv->kern_info.aper_size * 1024L * 1024L;
+ 
++#if 0
+     switch(agp_drv->kern_info.chipset) {
+ 
+         case NOT_SUPPORTED:
+@@ -132,6 +133,12 @@
+ #endif                          
+         default:		        chipset_name = "Unknown";           break;
+     }
++#else
++    if (agp_drv->kern_info.chipset == SUPPORTED)
++        chipset_name = "Supported";
++    else
++        chipset_name = "Unsupported";
++#endif
+ 
+     MTX_INFO("AGP driver v%u.%u on %s\n", 
+              agp_drv->kern_info.version.major, 
+diff -Nru v110-dist/src/kernel/mtx_drv.c v110/src/kernel/mtx_drv.c
+--- v110-dist/src/kernel/mtx_drv.c	2003-04-08 21:02:23.000000000 +0100
++++ v110/src/kernel/mtx_drv.c	2004-03-01 16:24:59.000000000 +0000
+@@ -203,7 +203,7 @@
+ 
+                     switch (pci_host_dev->device) {
+ 
+-                        case PCI_DEVICE_ID_VIA_82C691: /* 694X */
++                        case PCI_DEVICE_ID_VIA_82C691_0: /* 694X */
+                         case PCI_DEVICE_ID_VIA_8363_0: /* KT133 */
+                         case PCI_DEVICE_ID_VIA_8371_0: /* KX133 */
+                         case PCI_DEVICE_ID_VIA_8605_0: /* S3 */
+@@ -341,7 +341,7 @@
+ void* mtx_find_symbol(const char* symbol)
+ {
+     struct module* pmod = THIS_MODULE;
+-    struct module_symbol* psym;
++    struct kernel_symbol* psym;
+ 
+     if (!symbol)
+         return NULL;
+@@ -350,7 +350,7 @@
+     {
+         int i;
+         
+-        for (i = 0, psym = pmod->syms; i < pmod->nsyms; i++, psym++)
++        for (i = 0, psym = pmod->syms; i < pmod->num_syms; i++, psym++)
+         {
+             if (!strcmp(psym->name, symbol))
+             {
+diff -Nru v110-dist/src/kernel/mtx_drv.h v110/src/kernel/mtx_drv.h
+--- v110-dist/src/kernel/mtx_drv.h	2003-09-24 15:55:39.000000000 +0100
++++ v110/src/kernel/mtx_drv.h	2004-03-05 13:28:03.000000000 +0000
+@@ -52,6 +52,14 @@
+ 
+ #ifndef __cplusplus
+ 
++// Some kernel stuff from 2.6.x
++#define VMALLOC_VMADDR(x) ((unsigned long)(x))
++#define VALID_PAGE(page)     ((page - mem_map) < max_mapnr)
++// #define MOD_CAN_QUERY(mod) (((mod)->flags & (MOD_RUNNING | MOD_INITIALIZING)) && !((mod)->flags & MOD_DELETED))
++#define MOD_CAN_QUERY(mod) 1
++#define mem_map_reserve(p)      set_bit(PG_reserved, &((p)->flags))
++#define mem_map_unreserve(p)    clear_bit(PG_reserved, &((p)->flags))
++
+ /******************************************
+  *
+  * Constants and types
+@@ -159,10 +167,10 @@
+  * Holds information about AGP driver backend
+  */
+ typedef struct mtx_agp_driver {
+-    
++
+     struct mtx_device  *dev;            /* MTX device that control AGP driver */
+-    
+-    agp_kern_info       kern_info;      /* AGP information retrieve from kernel driver */
++
++    struct agp_kern_info       kern_info;      /* AGP information retrieve from kernel driver */
+     off_t               aperture_base;  /* Shortcut to kern_info->aper_base */
+     size_t              aperture_size;  /* Size in bytes of AGP aperture */
+     
+@@ -293,10 +301,12 @@
+  * Helping macros
+  *
+  *****************************************/
++#if 0
+ #ifndef module_init
+ #define module_init(x) int init_module(void) { return x(); }
+ #define module_exit(x) void cleanup_module(void) { x(); }
+ #endif
++#endif
+ 
+ /*** print statements ***/
+ #define MTX_PRINT(fmt, arg...)   printk(KERN_CRIT "[mtx] "fmt, ##arg)
+@@ -496,12 +506,12 @@
+ int     mtx_mmap(struct file *filp, struct vm_area_struct *vma);
+ 
+ /* vm */
+-struct page* mtx_vm_nopage_stub(struct vm_area_struct*, unsigned long, int);
++struct page* mtx_vm_nopage_stub(struct vm_area_struct*, unsigned long, int*);
+ void    mtx_vm_open_stub(struct vm_area_struct*);
+ void    mtx_vm_close_stub(struct vm_area_struct*);
+-struct page* mtx_vm_nopage_agp(struct vm_area_struct*, unsigned long, int);
+-struct page* mtx_vm_nopage_pci(struct vm_area_struct*, unsigned long, int);
+-struct page* mtx_vm_nopage_sys(struct vm_area_struct*, unsigned long, int);
++struct page* mtx_vm_nopage_agp(struct vm_area_struct*, unsigned long, int*);
++struct page* mtx_vm_nopage_pci(struct vm_area_struct*, unsigned long, int*);
++struct page* mtx_vm_nopage_sys(struct vm_area_struct*, unsigned long, int*);
+ int     mtx_vm_map_io(mtx_device_t*, mtx_region_t*, struct vm_area_struct*);
+ int     mtx_vm_map_agp(mtx_device_t*, mtx_region_t*, struct vm_area_struct*);
+ int     mtx_vm_map_pci(mtx_device_t*, mtx_region_t*, struct vm_area_struct*);
+@@ -550,7 +560,7 @@
+ #endif
+ 
+ /* irq */
+-void    mtx_irq_interrupt(int irq, void *dev_id, struct pt_regs *regs);
++irqreturn_t mtx_irq_interrupt(int irq, void *dev_id, struct pt_regs *regs);
+ int     mtx_irq_init(mtx_device_t* dev);
+ void    mtx_irq_cleanup(mtx_device_t* dev);
+ 
+diff -Nru v110-dist/src/kernel/mtx_irq.c v110/src/kernel/mtx_irq.c
+--- v110-dist/src/kernel/mtx_irq.c	2003-11-26 21:54:12.000000000 +0000
++++ v110/src/kernel/mtx_irq.c	2004-03-05 14:06:09.000000000 +0000
+@@ -31,7 +31,7 @@
+  *
+  * Comments:       None.
+  */
+-void
++irqreturn_t
+ mtx_irq_interrupt(int irq, void *dev_id, struct pt_regs *regs)
+ {
+     mtx_device_t *dev = (mtx_device_t*)dev_id;
+@@ -42,13 +42,15 @@
+ 
+     if (ret < 0) {
+         /* We don't own the interrupt or an error occured, return immediately */
+-        return;
++        return IRQ_NONE;
+     }
+ 
+     if (ret > 0) {
+         /* We want the bottom-half routine to be schedule */
+         tasklet_schedule(&dev->irq_bh);
+     }
++
++    return IRQ_HANDLED;
+ }
+ 
+ /***************************************************************************************
+@@ -63,6 +65,7 @@
+  *
+  * Comments:       None.
+  */
++
+ int
+ mtx_irq_init(mtx_device_t *dev)
+ {
+@@ -70,7 +73,7 @@
+ 
+     /* Request IRQ line */
+     /* TODO fix the sharing problem*/
+-    ret = request_irq(dev->pci_dev->irq, mtx_irq_interrupt, SA_SHIRQ, dev->pci_dev->name, dev);
++    ret = request_irq(dev->pci_dev->irq, mtx_irq_interrupt, SA_SHIRQ, "parhelia", dev);
+     if (ret < 0)
+     {
+         MTX_WARNING("Failed to request IRQ %u for device 0x%04x, some feature will"
+diff -Nru v110-dist/src/kernel/mtx_mem.c v110/src/kernel/mtx_mem.c
+--- v110-dist/src/kernel/mtx_mem.c	2003-04-17 19:30:48.000000000 +0100
++++ v110/src/kernel/mtx_mem.c	2004-03-01 16:24:59.000000000 +0000
+@@ -17,13 +17,13 @@
+ #include "mtx_drv.h"
+ 
+ #include <linux/slab.h>
+-#include <linux/wrapper.h>
++// #include <linux/wrapper.h>
+ 
+ /* import agp backend interface */
+ extern drm_agp_t *agp_backend;
+ 
+ /* list of agp memory blocks (first item use as sentinel) */
+-static agp_memory agp_blocks = { 0, NULL, NULL, 0, 0, NULL, 0, 0, 0, 0, 0 };
++static struct agp_memory agp_blocks = { 0, NULL, NULL, 0, 0, NULL, 0, 0, 0, 0, 0 };
+ 
+ /* this holds real size of last allocation */
+ static size_t last_alloc_size = 0;
+@@ -434,7 +434,7 @@
+ static unsigned long
+ mtx_mem_alloc_agp(size_t size)
+ {
+-    agp_memory *info_block, *ptr_block;
++    struct agp_memory *info_block, *ptr_block;
+     unsigned long pg_offset = 0, pg_count = 0;
+     int ret;
+     
+@@ -520,7 +520,7 @@
+ static void 
+ mtx_mem_free_agp(unsigned long ptr, size_t size)
+ {
+-    agp_memory *ptr_block = NULL;
++    struct agp_memory *ptr_block = NULL;
+     unsigned int pg_start, pg_count;
+     int ret;
+     
+diff -Nru v110-dist/src/kernel/mtx_vm.c v110/src/kernel/mtx_vm.c
+--- v110-dist/src/kernel/mtx_vm.c	2003-11-11 15:55:24.000000000 +0000
++++ v110/src/kernel/mtx_vm.c	2004-03-01 16:25:09.000000000 +0000
+@@ -16,11 +16,15 @@
+ #define __NO_VERSION__
+ #include "mtx_drv.h"
+   
+-#if defined(REDHAT_KERNEL) && (LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,20)) && (LINUX_VERSION_CODE != KERNEL_VERSION(2,4,22))
+-  #define REMAP_PAGE_RANGE remap_page_range
++#if 0
++  #if defined(REDHAT_KERNEL) && (LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,20)) && (LINUX_VERSION_CODE != KERNEL_VERSION(2,4,22))
++    #define REMAP_PAGE_RANGE remap_page_range
++  #else
++    #define REMAP_PAGE_RANGE(vma, start, base, size, prot) \
++      remap_page_range(start, base, size, prot)
++  #endif
+ #else
+-  #define REMAP_PAGE_RANGE(vma, start, base, size, prot) \
+-    remap_page_range(start, base, size, prot)
++  #define REMAP_PAGE_RANGE remap_page_range
+ #endif
+ 
+ /* Stub vm operations (noop) */
+@@ -52,8 +56,11 @@
+  * Comments:       
+  */
+ struct page*
+-mtx_vm_nopage_stub(struct vm_area_struct *vma, unsigned long address, int write_access)
++mtx_vm_nopage_stub(struct vm_area_struct *vma, unsigned long address, int *type)
+ {
++    if (type != NULL)
++	    *type = VM_FAULT_MINOR;
++
+     return NOPAGE_SIGBUS;   /* mremap is not allowed */
+ }
+ 
+@@ -106,7 +113,7 @@
+  * Comments:       
+  */
+ struct page*
+-mtx_vm_nopage_sys(struct vm_area_struct *vma, unsigned long address, int write_access)
++mtx_vm_nopage_sys(struct vm_area_struct *vma, unsigned long address, int *type)
+ {
+     struct page *page;
+     mtx_region_t *region;
+@@ -116,6 +123,9 @@
+     pmd_t *pmd; 
+     pte_t *pte;
+ 
++    if (type != NULL)
++	    *type = VM_FAULT_MINOR;
++
+     /* retrieve the region for this vma */
+     region = (mtx_region_t*)vma->vm_private_data;
+     if (!region) return NOPAGE_SIGBUS;
+diff -Nru v110-dist/src/kernel/parhelia/MtxParhlOS.c v110/src/kernel/parhelia/MtxParhlOS.c
+--- v110-dist/src/kernel/parhelia/MtxParhlOS.c	2003-09-24 15:55:39.000000000 +0100
++++ v110/src/kernel/parhelia/MtxParhlOS.c	2004-03-01 16:24:59.000000000 +0000
+@@ -158,7 +158,7 @@
+     oInSharedLockedDataInit.ulFrameBufferPhys       = dev->framebuffer.base;
+     oInSharedLockedDataInit.ulFrameBufferSize       = dev->framebuffer.size;
+     oInSharedLockedDataInit.ulAgpFlags              = dev->bm_flags;
+-    oInSharedLockedDataInit.bMultiCPU               = (smp_num_cpus > 1) ? TRUE : FALSE;
++    oInSharedLockedDataInit.bMultiCPU               = (num_booting_cpus() > 1) ? TRUE : FALSE;
+ 
+     ISharedLockedData_Init( &oInSharedLockedDataInit );
+     

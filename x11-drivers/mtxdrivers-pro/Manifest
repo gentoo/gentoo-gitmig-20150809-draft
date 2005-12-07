@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3f26e0f830c72818ecbe40d04c1b5f9 ChangeLog 3411
+MD5 1a99c92c9a037a25087f3b1d1d1a8fd0 metadata.xml 260
+MD5 50608a856eb09174fea50fcfde933b9a mtxdrivers-pro-1.1.0_beta-r2.ebuild 2260
+MD5 235f01ebbdd260c6e5b8a844e7c1bfef mtxdrivers-pro-1.1.0_beta-r3.ebuild 2304
+MD5 d4d9b7ac51ee44b940c5432cf290b565 files/digest-mtxdrivers-pro-1.1.0_beta-r2 82
+MD5 8117b3258097c083df35b2a39e267bd2 files/mtxdrivers-pro-1.1.0_beta-r2-kernel-2.6-will1-20041013.patch 16754
+MD5 d4d9b7ac51ee44b940c5432cf290b565 files/digest-mtxdrivers-pro-1.1.0_beta-r3 82
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGib9ArHZZzCEUG0RAqzqAJsFxsUgtBxBuJM91cpL0BHLs6jaiwCgiKT5
+6MnVQpsVt1gNkaJG1BsFDT8=
+=p5SK
+-----END PGP SIGNATURE-----
