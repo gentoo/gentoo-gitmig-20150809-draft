@@ -1,4 +1,14 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 47e2a16a8a83f23bcc79a19a190d57e6 kkbswitch-1.4.3.ebuild 551
-MD5 c7b90455316201472b22af5d1f7eaccf ChangeLog 768
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1f3c5433d99c4b50cf1d509fdb08989 ChangeLog 864
 MD5 384be3f0b9f59f847a7ffaf35c5e0253 files/digest-kkbswitch-1.4.3 67
+MD5 be211043e3f9b8bdd5f6aed3de39cb0a kkbswitch-1.4.3.ebuild 549
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDl3b1ntT9W3vfTuoRAiJ0AKCv4X2S89WtPW5HZC/d2V0mWZm8OACfWJRd
+cdess1S+qoGYQlHRo3R4xVc=
+=QdBe
+-----END PGP SIGNATURE-----
