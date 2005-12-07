@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.66.ebuild,v 1.1 2005/11/28 23:27:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.66.ebuild,v 1.2 2005/12/07 22:21:54 wolf31o2 Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ SRC_URI="http://content.bioware.com/neverwinternights/patch/NWNDedicatedServer${
 
 LICENSE="NWN-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="nomirror"
 
@@ -49,8 +49,7 @@ src_install() {
 	dodir ${dir}
 
 	mv "${S}"/* "${D}/${dir}"/ || die "installing server"
-	dogamesbin "${FILESDIR}"/nwserver
-	dosed "s:GENTOO_DIR:${dir}:" "${GAMES_BINDIR}"/nwserver
+	games_make_wrapper nwserver ./nwserver "${dir}" "${dir}"
 
 	prepgamesdirs
 	chmod -R g+w "${D}/${dir}"
