@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.15 2005/11/15 18:52:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.16 2005/12/07 13:12:41 lisa Exp $
+
+*memcached-1.1.12-r1 (07 Dec 2005)
+
+  07 Dec 2005; Lisa Seelye <lisa@gentoo.org> files/1.1.12/conf,
+  files/1.1.12/init, +memcached-1.1.12-r1.ebuild:
+  Evidently I forgot the memcached MANPAGE! While I am here I may as well let
+  the user install the protocol and memory_management txt files under doc USE
+  flag
 
   15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   memcached-1.1.12.ebuild:

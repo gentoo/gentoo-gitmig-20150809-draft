@@ -1,5 +1,5 @@
 # Copyright 2003 Gentoo Technologies, Inc
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/conf,v 1.1 2005/01/15 02:39:45 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/conf,v 1.2 2005/12/07 13:12:41 lisa Exp $
 # memcached config file
 
 MEMCACHED_BINARY="/usr/bin/memcached"
@@ -23,3 +23,6 @@ PORT="11211"
 
 #PID file location
 PIDFILE="/var/run/memcached/memcached-${PORT}.pid"
+
+#Other Options
+MISC_OPTS=""

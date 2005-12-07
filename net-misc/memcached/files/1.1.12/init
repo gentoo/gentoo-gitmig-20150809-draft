@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/init,v 1.1 2005/01/15 02:39:45 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/init,v 1.2 2005/12/07 13:12:41 lisa Exp $
 
 depend() {
 	need net
@@ -30,7 +30,7 @@ start() {
 	/sbin/start-stop-daemon --start \
 	        --exec ${MEMCACHED_BINARY} --startas ${MEMCACHED_BINARY} -- \
 	        -d -p ${PORT} -l ${LISTENON} -m ${MEMUSAGE} \
-		-c ${MAXCONN} -u ${MEMCACHED_RUNAS} -P ${PIDFILE}
+		-c ${MAXCONN} -u ${MEMCACHED_RUNAS} -P ${PIDFILE} ${MISC_OPTS}
 	eend $?
 }
 
