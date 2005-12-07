@@ -1,4 +1,14 @@
-MD5 3aa902d3e402b4e1c1aa520ac6397a8c pariguide-0.43a.ebuild 886
-MD5 c8b6c3e90f50100896aa64ea6aa1cbf5 ChangeLog 1387
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0a7af28be359558d558a6318d5f3c67 ChangeLog 1476
 MD5 634bbf3664aaa81da8769398869b914f files/digest-pariguide-0.43a 67
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 bacc3a6e3aa9e2e79c69ecdce07c59ec pariguide-0.43a.ebuild 1080
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlsRR2G5bA0cA/ScRAhnFAKCYhaq2Y6N7GDJGqDyPQRvd5lukGACgqjf0
+dn4SI/lzcKyOVYBr4TdEziI=
+=DQ2z
+-----END PGP SIGNATURE-----

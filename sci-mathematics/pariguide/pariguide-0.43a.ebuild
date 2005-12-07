@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/pariguide-0.43a.ebuild,v 1.3 2005/07/07 13:27:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/pariguide-0.43a.ebuild,v 1.4 2005/12/07 11:15:14 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 
@@ -16,6 +18,14 @@ DEPEND="<x11-libs/qt-4
 	virtual/x11"
 
 RDEPEND=">=sci-mathematics/pari-2.1.0"
+
+src_compile() {
+	econf \
+		--with-qt-dir="/usr/qt/3" \
+		--with-qt-libraries="/usr/qt/3/$(get_libdir)" \
+		|| die "Error: econf failed!"
+	emake || die "Error: emake failed!"
+}
 
 src_install() {
 	make DESTDIR=${D} install || die
