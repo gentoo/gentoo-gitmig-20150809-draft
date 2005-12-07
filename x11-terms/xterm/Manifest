@@ -6,4 +6,4 @@ MD5 a5048a1a15d86d400d3e2dbaaa0ac1c8 files/xterm-LANG.patch 1698
 MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
 MD5 c42b2497dfa255b8bde0c64ad6c8b7a1 xterm-204.ebuild 2527
 MD5 1e0d3b0e7a7017a9faecf4a8c3072ebb xterm-205.ebuild 2542
-MD5 82229cd3c61e1bb2bafabe0a64f00a0d xterm-207.ebuild 2951
+MD5 abaaa0639f05aff24ab8c32a125379a9 xterm-207.ebuild 2947

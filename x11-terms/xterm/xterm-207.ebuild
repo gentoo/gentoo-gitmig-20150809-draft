@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.1 2005/12/07 15:14:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.2 2005/12/07 15:14:47 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -53,9 +53,8 @@ src_compile() {
 	else
 		myconf="--disable-narrowproto"
 	fi
-	
+
 	myconf="${myconf} --with-app-defaults=${DEFAULTS_DIR}"
-		
 
 	econf \
 		--libdir=/etc \
