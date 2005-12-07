@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r1.ebuild,v 1.1 2005/12/02 13:01:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r1.ebuild,v 1.2 2005/12/07 12:30:16 azarah Exp $
 
 inherit gnome2 autotools eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python >=dev-python/pygtk-2.8 )
 	irssi? ( >=net-irc/irssi-0.8.9 )
-	xchat? ( >=net-irc/xchat-2.4.1 )
+	xchat? ( || ( >=net-irc/xchat-2.4.1 >=net-irc/xchat-gnome-0.6 ) )
 	virtual/fam
 	net-misc/curl
 	>=media-libs/xine-lib-1.0.1"

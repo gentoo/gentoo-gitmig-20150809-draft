@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.22 2005/12/02 13:01:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.23 2005/12/07 12:30:16 azarah Exp $
+
+  07 Dec 2005; Martin Schlemmer <azarah@gentoo.org> bmpx-0.12.9-r1.ebuild:
+  Add xchat-gnome as xchat provider, bug #112191.
 
 *bmpx-0.12.9-r1 (02 Dec 2005)
 
