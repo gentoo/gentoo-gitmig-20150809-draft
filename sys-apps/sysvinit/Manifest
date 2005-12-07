@@ -17,12 +17,12 @@ MD5 180a4654bbd070b1264a440c753e6cc0 files/sysvinit-2.86-shutdown-usage.patch 23
 MD5 eff3665594ef25bf70220d6cf0c84dcb files/sysvinit-2.86-utmp-64bit.patch 1112
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
-MD5 c149ca4aec518d6a6f9b97b4bfe0c078 sysvinit-2.86-r3.ebuild 2729
-MD5 cb1165247fe26db95505195995ecac1b sysvinit-2.86.ebuild 2501
+MD5 cfd1541e1aa51df5cc17e1bec2b5746c sysvinit-2.86-r3.ebuild 2732
+MD5 6eec1ad98ec6dd5dad32785f73f469c0 sysvinit-2.86.ebuild 2503
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDlOgNgIKl8Uu19MoRAk2CAJ9k+2BT52fBorbRVGGW+BGkcjMS9QCcDz9Z
-RJWI93kx6Rm1RCNaEHqLjFU=
-=9Hbm
+iD8DBQFDlmx+gIKl8Uu19MoRArbRAJ48M45oc7VjX5WOW0q25qBirNFiHACfb0a2
+LyOelyJs+NbEPJBKeMqjS+E=
+=mQD0
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.12 2005/07/10 18:16:48 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.13 2005/12/07 04:57:48 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -73,6 +73,6 @@ pkg_postinst() {
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
 		# Do not return an error if this fails
-		/sbin/init U &>/dev/null
+		/sbin/telinit U &>/dev/null
 	fi
 }
