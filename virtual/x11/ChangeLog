@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.1 2005/12/07 07:56:24 spyderous Exp $
+
+*x11-6.8 (07 Dec 2005)
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +x11-6.8.ebuild:
+  (#112896) New 'real' virtual, first adopter of GLEP 37.
+
