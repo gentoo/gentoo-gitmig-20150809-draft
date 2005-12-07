@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.68 2005/12/07 20:09:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.69 2005/12/07 20:10:36 phreak Exp $
+
+  07 Dec 2005; Christian Heim <phreak@gentoo.org>
+  -vserver-sources-2.1.0_rc8-r1.ebuild:
+  Removing old version
 
 *vserver-sources-2.1.0_rc10 (07 Dec 2005)
 
