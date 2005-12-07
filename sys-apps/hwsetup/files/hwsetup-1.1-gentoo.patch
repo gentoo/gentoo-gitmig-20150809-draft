@@ -1,7 +1,7 @@
-diff -urN hwsetup-1.1.fastprobe/hwsetup.c hwsetup-1.1/hwsetup.c
---- hwsetup-1.1.fastprobe/hwsetup.c	2005-11-17 14:27:27.000000000 -0500
-+++ hwsetup-1.1/hwsetup.c	2005-11-17 14:35:02.000000000 -0500
-@@ -23,11 +23,12 @@
+diff -urN hwsetup-1.1.orig/hwsetup.c hwsetup-1.1/hwsetup.c
+--- hwsetup-1.1.orig/hwsetup.c	2005-12-06 08:42:39.000000000 -0500
++++ hwsetup-1.1/hwsetup.c	2005-12-06 08:42:18.000000000 -0500
+@@ -23,14 +23,15 @@
  #endif
  
  #define VERSION "HWSETUP 1.1, an automatic hardware configuration tool\n" \
@@ -13,10 +13,14 @@ diff -urN hwsetup-1.1.fastprobe/hwsetup.c hwsetup-1.1/hwsetup.c
 -#define XPATH "/usr/X11R6/bin/"
 -#define XMODPATH "/usr/X11R6/lib/modules/drivers/"
 +#define XPATH "/usr/bin/"
-+#define XMODPATH "/usr/lib/modules/drivers/"
++#define XMODPATH "/usr/lib/xorg/modules/drivers/"
  
  #define VERBOSE_PRINT 1
- #define VERBOSE_PROMPT 2
+-#define VERBOSE_PROMPT 2
++#define VERBOSE_PROMPT 0
+ 
+ #define SKIP_AUDIO 1
+ #define SKIP_SCSI 2
 @@ -193,7 +194,7 @@
  
  struct xinfo *getxinfo(struct device *d)
@@ -39,6 +43,15 @@ diff -urN hwsetup-1.1.fastprobe/hwsetup.c hwsetup-1.1/hwsetup.c
     if(!strncasecmp(d->driver,"Card:",5)) /* RedHat Cards-DB */
      { /* Kudzu "Cards" format */
       FILE *cardsdb;
+@@ -255,7 +256,7 @@
+              char xmodule[32];
+              char fullpath[128];
+              sscanf(&buffer[7],"%31s",xmodule);
+-             sprintf(fullpath,XMODPATH"%.31s_drv.o",xmodule);
++             sprintf(fullpath,XMODPATH"%.31s_drv.so",xmodule);
+              if(exists(fullpath))
+               {
+                strncpy(xi.xmodule,xmodule,sizeof(xi.xmodule));
 @@ -279,9 +280,9 @@
           if(*xfree3server&&!*xi.xmodule)
             strncpy(xi.xserver,xfree3server,sizeof(xi.xserver));
