@@ -31,12 +31,12 @@ MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 4baf6cdd9480cd938afaede8334c7a72 xpdf-3.00-r10.ebuild 3909
 MD5 0e303cf49620828eff323b0251d0141c xpdf-3.00-r8.ebuild 3622
 MD5 3045b88b069de08b88a1c5c25b8caea6 xpdf-3.01-r1.ebuild 3562
-MD5 dad2aaf754de6020665cbcf01e232110 xpdf-3.01-r2.ebuild 3552
+MD5 2a75f121425eaa439d462bb17c29793c xpdf-3.01-r2.ebuild 3596
 MD5 763deff18a7e6e7125aca1f3d6be3229 xpdf-3.01.ebuild 3529
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDllXXomPajV0RnrERAiRKAJ9psHE8GTdo7NmGK35LzrsUpMot+QCeNc4n
-QIITklb6II7tBpMVh6JOiS4=
-=xwVt
+iD8DBQFDlx5UwUpWvClEHQoRAg8KAKCIFYrqentFd652MfXZ+yS+g8doVgCfafoH
+vMf7i7dAMuCwrz6ANyMH+Lo=
+=Q+fJ
 -----END PGP SIGNATURE-----

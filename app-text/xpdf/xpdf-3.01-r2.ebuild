@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r2.ebuild,v 1.6 2005/12/07 03:24:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r2.ebuild,v 1.7 2005/12/07 17:41:06 metalgod Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="motif X"
 
 DEPEND="motif? ( !s390? ( virtual/x11
@@ -56,6 +56,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-crash.patch
 	epatch ${FILESDIR}/${P}-pdftoppm.patch
 	epatch ${FILESDIR}/${P}-resize.patch
+	epatch ${FILESDIR}/${P}pl1.patch
 	autoconf
 }
 
