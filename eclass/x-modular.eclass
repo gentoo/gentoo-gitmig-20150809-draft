@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.24 2005/12/06 02:22:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.25 2005/12/07 11:19:47 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -10,7 +10,7 @@
 # If the ebuild installs fonts, set FONT="yes" at the top and set FONT_DIRS to
 # the subdirectories within /usr/share/fonts to which it installs fonts.
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
 inherit eutils libtool
 
@@ -37,7 +37,9 @@ if [ -n "${SNAPSHOT}" ]; then
 fi
 
 # If we're a font package, but not the font.alias one
-if [[ "${PN/#font-}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
+if [[ "${PN/#font-}" != "${PN}" ]] \
+	&& [[ "${PN}" != "font-alias" ]] \
+	&& [[ "${PN}" != "font-util" ]]; then
 	# Activate font code in the rest of the eclass
 	FONT="yes"
 
@@ -45,6 +47,30 @@ if [[ "${PN/#font-}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
 		media-fonts/encodings"
 	PDEPEND="${PDEPEND}
 		media-fonts/font-alias"
+
+	# Starting with 7.0RC3, we can specify the font directory
+	# But oddly, we can't do the same for encodings or font-alias
+
+	# Wrap in `if` so ebuilds can set it too
+	if [[ -z ${FONT_DIR} ]]; then
+		FONT_DIR=${PN##*-}
+
+	fi
+
+	# Fix case of font directories
+	FONT_DIR=${FONT_DIR/ttf/TTF}
+	FONT_DIR=${FONT_DIR/otf/OTF}
+	FONT_DIR=${FONT_DIR/type1/Type1}
+	FONT_DIR=${FONT_DIR/speedo/Speedo}
+
+	# Set up configure option
+	FONT_OPTIONS="--with-fontdir=\"/usr/share/fonts/${FONT_DIR}\""
+
+	if [[ -n "${FONT}" ]]; then
+		if [[ ${PN##*-} = misc ]] || [[ ${PN##*-} = 75dpi ]] || [[ ${PN##*-} = 100dpi ]]; then
+			IUSE="${IUSE} nls"
+		fi
+	fi
 fi
 
 # If we're a driver package
@@ -71,6 +97,10 @@ x-modular_unpack_source() {
 	# Joshua Baergen - October 23, 2005
 	# Fix shared lib issues on MIPS, FBSD, etc etc
 	elibtoolize
+
+	if [[ -n ${FONT_OPTIONS} ]]; then
+		einfo "Detected font directory: ${FONT_DIR}"
+	fi
 }
 
 x-modular_patch_source() {
@@ -116,11 +146,41 @@ x-modular_src_unpack() {
 	x-modular_reconf_source
 }
 
+x-modular_font_configure() {
+	if [[ -n "${FONT}" ]]; then
+		# Might be worth adding an option to configure your desired font
+		# and exclude all others. Also, should this USE be nls or minimal?
+		if ! use nls; then
+			FONT_OPTIONS="${FONT_OPTIONS}
+				--disable-iso8859-2
+				--disable-iso8859-3
+				--disable-iso8859-4
+				--disable-iso8859-5
+				--disable-iso8859-6
+				--disable-iso8859-7
+				--disable-iso8859-8
+				--disable-iso8859-9
+				--disable-iso8859-10
+				--disable-iso8859-11
+				--disable-iso8859-12
+				--disable-iso8859-13
+				--disable-iso8859-14
+				--disable-iso8859-15
+				--disable-iso8859-16
+				--disable-jisx0201
+				--disable-koi8-r"
+		fi
+	fi
+}
+
 x-modular_src_configure() {
+	x-modular_font_configure
+
 	# If prefix isn't set here, .pc files cause problems
 	if [ -x ./configure ]; then
 		econf --prefix=${XDIR} \
 			--datadir=${XDIR}/share \
+			${FONT_OPTIONS} \
 			${DRIVER_OPTIONS} \
 			${CONFIGURE_OPTIONS}
 	fi
@@ -164,11 +224,52 @@ x-modular_pkg_postinst() {
 	fi
 }
 
+x-modular_pkg_postrm() {
+	if [[ -n "${FONT}" ]]; then
+		cleanup_fonts
+	fi
+}
+
+cleanup_fonts() {
+	local ALLOWED_FILES="encodings.dir fonts.cache-1 fonts.dir fonts.scale"
+	for DIR in ${FONT_DIR}; do
+		unset KEEP_FONTDIR
+		REAL_DIR=${ROOT}usr/share/fonts/${DIR}
+
+		ebegin "Checking ${REAL_DIR} for useless files"
+		pushd ${REAL_DIR} &> /dev/null
+		for FILE in *; do
+			unset MATCH
+			for ALLOWED_FILE in ${ALLOWED_FILES}; do
+				if [[ ${FILE} = ${ALLOWED_FILE} ]]; then
+					# If it's allowed, then move on to the next file
+					MATCH="yes"
+					break
+				fi
+			done
+			# If we found a match in allowed files, move on to the next file
+			if [[ -n ${MATCH} ]]; then
+				continue
+			fi
+			# If we get this far, there wasn't a match in the allowed files
+			KEEP_FONTDIR="yes"
+			# We don't need to check more files if we're already keeping it
+			break
+		done
+		popd &> /dev/null
+		# If there are no files worth keeping, then get rid of the dir
+		if [[ -z "${KEEP_FONTDIR}" ]]; then
+			rm -rf ${REAL_DIR}
+		fi
+		eend 0
+	done
+}
+
 setup_fonts() {
 	if [[ ! -n "${FONT_DIRS}" ]]; then
-		msg="FONT_DIRS empty. Set it to at least one subdir of /usr/share/fonts."
-		eerror ${msg}
-		die ${msg}
+		msg="FONT_DIRS is empty. The ebuild should set it to at least one subdir of /usr/share/fonts."
+		eerror "${msg}"
+		die "${msg}"
 	fi
 
 	create_fonts_scale
