@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.108 2005/11/02 06:40:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.109 2005/12/07 23:11:45 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -191,6 +191,9 @@ games_pkg_postinst() {
 		GNU)    einfo "Just run 'gpasswd -a <USER> ${GAMES_GROUP}'";;
 		DARWIN) einfo "Just run 'niutil -appendprop / /groups/games users <USER>'";;
 	esac
+	echo
+	einfo "For more info about Gentoo gaming in general, see our website:"
+	einfo "   http://games.gentoo.org/"
 	echo
 }
 
