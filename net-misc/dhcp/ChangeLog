@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.60 2005/12/04 21:19:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.61 2005/12/07 13:59:32 uberlord Exp $
+
+*dhcp-3.0.3-r1 (07 Dec 2005)
+
+  07 Dec 2005; Roy Marples <uberlord@gentoo.org>
+  +files/dhcp-3.0.3-libdst.patch, +files/dhcp-3.0-fix-perms.patch,
+  +files/dhcp-3.0-paranoia.patch, files/dhcp.conf, +files/dhcp.init,
+  files/dhcrelay.conf, +files/dhcrelay.init, metadata.xml,
+  -dhcp-3.0.2.ebuild, -dhcp-3.0.3.ebuild, +dhcp-3.0.3-r1.ebuild:
+  Split patches out into FILESDIR.
+  Stop installing dhclient-script.sample as baselayout has its own.
+  chroot creation no longer assumes a default directory.
+  We copy resolv.conf and localtime as a real files into the chroot now.
+  document resolv.conf in conf.d/dhcp for chroots, #113869.
+  init script now parses dhcpd.conf for pidfile and leasefile locations, #89428.
+  libdst.a gets installed now, #75544.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> dhcp-3.0.1-r1.ebuild:
   stable on ppc64

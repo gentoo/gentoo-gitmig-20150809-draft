@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3.ebuild,v 1.1 2005/10/12 16:53:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r1.ebuild,v 1.1 2005/12/07 13:59:32 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,9 +8,7 @@ PATCHVER=1
 
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
-SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz
-	mirror://gentoo/${PN}-3-gentoo-${PATCHVER}.tar.bz2"
-
+SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 
 LICENSE="isc-dhcp"
 SLOT="0"
@@ -19,39 +17,36 @@ IUSE="static selinux"
 
 RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-dhcp )"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 PROVIDE="virtual/dhcpc"
 
-PATCHDIR=${WORKDIR}/patch
-
 src_unpack() {
-	unpack ${A} && cd "${S}"
+	unpack "${A}"
+	cd "${S}"
 
-	export EPATCH_SUFFIX="patch"
-	# 3.0.3 already has this patch
-	rm -f "${PATCHDIR}/003_all_dhcp-3.0.1-fix-invalid-attribute.patch"
-	epatch ${PATCHDIR}
-
-	has noman ${FEATURES} && sed -i 's:nroff:echo:' */Makefile.dist
+	# Enable chroot
+	epatch "${FILESDIR}/${PN}-3.0-paranoia.patch"
+	# Fix some permission issues
+	epatch "${FILESDIR}/${PN}-3.0-fix-perms.patch"
+	# Fix token ring compiling, #102473 
+	epatch "${FILESDIR}/${P}-tr.patch"
+	# Install libdst, #75544
+	epatch "${FILESDIR}/${P}-libdst.patch"
+	# Fix building on Gentoo/FreeBSD
+	epatch "${FILESDIR}/${PN}-3.0.2-gmake.patch"
 
 	# Enable dhclient to equery NTP servers, fixed #63868
 	epatch "${FILESDIR}/dhclient-ntp.patch"
 
-	# Fix token ring compiling
-	epatch "${FILESDIR}/${P}-tr.patch"
-
 	# FreeBSD doesn't like -Werror that is forced on
 	sed -i -e 's:-Werror::' Makefile.conf
-
-	epatch ${FILESDIR}/${PN}-3.0.2-gmake.patch
 }
 
 src_compile() {
 	# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
-	[ "${ARCH}" == "sparc" ] && filter-flags -O3 -O2 -O
+	[[ ${ARCH} == "sparc" ]] && filter-flags -O3 -O2 -O
 
 	use static && append-ldflags -static
 
@@ -77,8 +72,7 @@ src_compile() {
 	USRMANDIR = /usr/share/man/man1
 	END
 
-	./configure \
-		--copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" \
+	./configure --copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" \
 		|| die "configure failed"
 
 	emake || die "compile problem"
@@ -90,23 +84,20 @@ src_install() {
 	insinto /etc/dhcp
 	newins server/dhcpd.conf dhcpd.conf.sample
 	newins client/dhclient.conf dhclient.conf.sample
-	dosed "s:/etc/dhclient-script:/etc/dhcp/dhclient-script:" \
-		/etc/dhcp/dhclient.conf.sample
-	mv "${D}/sbin/dhclient-script" "${D}/etc/dhcp/dhclient-script.sample"
 
-	dodoc ANONCVS CHANGES README RELNOTES doc/*
+	dodoc README RELNOTES doc/*
 	newdoc client/dhclient.conf dhclient.conf.sample
 	newdoc client/scripts/linux dhclient-script.sample
 	newdoc server/dhcpd.conf dhcpd.conf.sample
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/dhcp.rc6" dhcp
-	newexe "${FILESDIR}/dhcrelay.rc6" dhcrelay
+	newinitd "${FILESDIR}/dhcp.init" dhcp
+	newinitd "${FILESDIR}/dhcrelay.init" dhcrelay
 	insinto /etc/conf.d
 	newins "${FILESDIR}/dhcp.conf" dhcp
 	newins "${FILESDIR}/dhcrelay.conf" dhcrelay
 
 	keepdir /var/{lib,run}/dhcp
+	chown dhcp:dhcp "${ROOT}"/var/{lib,run}/dhcp
 }
 
 pkg_preinst() {
@@ -115,40 +106,41 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	chown dhcp:dhcp "${ROOT}/var/lib/dhcp" "${ROOT}/var/run/dhcp"
 
 	einfo "You can edit /etc/conf.d/dhcp to customize dhcp settings"
 	einfo
 	einfo "The DHCP ebuild now includes chroot support."
-	einfo "If you like to run dhcpd in chroot AND this is a new install OR"
-	einfo "your dhcpd doesn't already run in chroot, simply run:"
+	einfo "If you would like to run dhcpd in a chroot, simply configure the"
+	einfo "CHROOT directory in /etc/conf.d/dhcp and then run:"
 	einfo "  ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-	einfo "Before running the above command you might want to change the chroot"
-	einfo "dir in /etc/conf.d/dhcp, otherwise /chroot/dhcp will be used."
 	echo
 }
 
 pkg_config() {
-	CHROOT=`sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/dhcp 2>/dev/null`
+	CHROOT="$(
+		sed -n 's/^[[:blank:]]\?CHROOT="*\([^#"]\+\)"*/\1/p' \
+		/etc/conf.d/dhcp
+	)"
 
-	if [ ! -d "${CHROOT:=/chroot/dhcp}" ] ; then
-		ebegin "Setting up the chroot directory"
-		mkdir -m 0755 -p "${CHROOT}/"{dev,etc,var/lib,var/run/dhcp}
-		cp -R /etc/{localtime,dhcp} "${CHROOT}/etc/"
-		cp -R /var/lib/dhcp "${CHROOT}/var/lib"
-		chown -R dhcp:dhcp "${CHROOT}/var/lib" "${CHROOT}/var/run/dhcp"
-		eend
-
-		if [ "`grep '^#[[:blank:]]\?CHROOT' /etc/conf.d/dhcp`" ] ; then
-			sed -e '/^#[[:blank:]]\?CHROOT/s/^#[[:blank:]]\?//' \
-				-i /etc/conf.d/dhcp
-		fi
-
-		einfo "To enable logging from the DHCP server, configure your"
-		einfo "logger (`best_version virtual/logger`) to listen on ${CHROOT}/dev/log"
-	else
-		eerror
-		eerror "${CHROOT} already exists. Quitting."
-		eerror
+	if [[ -z ${CHROOT} ]]; then
+		eerror "CHROOT not defined in /etc/conf.d/dhcp"
+		return 1
 	fi
+
+	if [[ -d ${CHROOT} ]] ; then
+		ewarn "${CHROOT} already exists - aborting"
+		return 0
+	fi
+
+	ebegin "Setting up the chroot directory"
+	mkdir -m 0755 -p "${CHROOT}/"{dev,etc,var/lib,var/run/dhcp}
+	cp /etc/{localtime,resolv.conf} "${CHROOT}/etc"
+	cp -R /etc/dhcp "${CHROOT}/etc/"
+	cp -R /var/lib/dhcp "${CHROOT}/var/lib"
+	chown -R dhcp:dhcp "${CHROOT}"/var/{lib,run}/dhcp
+	eend
+
+	local logger="$(best_version virtual/logger)"
+	einfo "To enable logging from the DHCP server, configure your"
+	einfo "logger (${logger}) to listen on ${CHROOT}/dev/log"
 }

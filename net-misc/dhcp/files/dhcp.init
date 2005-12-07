@@ -1,0 +1,49 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.1 2005/12/07 13:59:32 uberlord Exp $
+
+depend() {
+	need net
+	use logger dns
+}
+
+get_var() {
+	sed -n 's/^[[:blank:]]\?'"$1"' "*\([^#"]\+\)"*/\1/p' \
+		"${CHROOT}/etc/dhcp/dhcpd.conf"
+}
+
+start() {
+	if [[ ! -f "${CHROOT}/etc/dhcp/dhcpd.conf" ]] ; then
+		eerror "${CHROOT}/etc/dhcp/dhcpd.conf does not exist"
+		return 1
+	fi
+
+	local leasefile=$(get_var lease-file-name)
+	leasefile="${leasefile:-${CHROOT}/var/lib/dhcp/dhcpd.leases}"
+	if [[ ! -f ${leasefile} ]] ; then
+		ebegin "Creating ${leasefile}"
+		touch "${leasefile}"
+		chown dcp:dhcp "${leasefile}"
+		eend $? || return 1
+	fi
+
+	# Ensure that LD_PRELOAD is really exported
+	[[ -n ${LD_PRELOAD} ]] && export LD_PRELOAD="${LD_PRELOAD}"
+
+	local pidfile=$(get_var pid-file-name)
+	pidfile="${pidfile:-/var/run/dhcp.pid}"
+
+	ebegin "Starting ${CHROOT:+chrooted }dhcpd"
+	eval start-stop-daemon --start --exec /usr/sbin/dhcpd \
+		-- -q -pf "${pidfile}" \
+		-user dhcp -group dhcp "${DHCPD_OPTS}" \
+		${CHROOT:+-chroot "${CHROOT}"} "${IFACE}"
+	eend $? && save_options pidfile "${CHROOT}${pidfile}"
+}
+
+stop() {
+	ebegin "Stopping dhcpd"
+	start-stop-daemon --stop --pidfile "$(get_options pidfile)"
+	eend $?
+}
