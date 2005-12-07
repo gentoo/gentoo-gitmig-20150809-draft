@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r6.ebuild,v 1.3 2005/12/06 21:39:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r6.ebuild,v 1.4 2005/12/07 03:22:20 mr_bones_ Exp $
 
 inherit eutils
 
@@ -73,7 +73,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.1.30-db40.patch
 	epatch ${FILESDIR}/${PN}-2.1.30-tls-activedirectory-hang-fix.patch
 
-	# Security bug #96767 
+	# Security bug #96767
 	# http://bugzilla.padl.com/show_bug.cgi?id=210
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.26-tls-fix-connection-test.patch
 
@@ -95,7 +95,7 @@ src_unpack() {
 	export WANT_AUTOCONF="2.5"
 	#make files ready for new autoconf
 	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
-	
+
 	# reconf compat and current for RPATH solve
 	cd ${WORKDIR}/${S}
 	einfo "Running libtoolize on ${S}"

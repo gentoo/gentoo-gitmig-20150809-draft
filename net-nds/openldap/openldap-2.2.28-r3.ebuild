@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r3.ebuild,v 1.3 2005/12/06 21:39:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r3.ebuild,v 1.4 2005/12/07 03:22:20 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -143,7 +143,7 @@ src_unpack() {
 	# supersedes old fix for bug #31202
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.14-perlthreadsfix.patch
 
-	# Security bug #96767 
+	# Security bug #96767
 	# http://bugzilla.padl.com/show_bug.cgi?id=210
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.26-tls-fix-connection-test.patch
 
@@ -164,31 +164,31 @@ src_unpack() {
 	ln -s shtool install
 	ln -s shtool install.sh
 
-        export WANT_AUTOMAKE="1.9"
-        export WANT_AUTOCONF="2.5"
+	export WANT_AUTOMAKE="1.9"
+	export WANT_AUTOCONF="2.5"
 
 	# make files ready for new autoconf
-        EPATCH_OPTS="-p0 -d ${WORKDIR}/${OLD_P}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
-        EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
+	EPATCH_OPTS="-p0 -d ${WORKDIR}/${OLD_P}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
 
-        # reconf compat and current for RPATH solve
-        cd ${WORKDIR}/${OLD_P}
-        einfo "Running libtoolize on ${OLD_P}"
-        libtoolize --copy --force
-        einfo "Running aclocal on ${OLD_P}"
-        aclocal || die "aclocal failed"
-        EPATCH_OPTS="-p0 -d ${WORKDIR}/${OLD_P}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
-        einfo "Running autoconf on ${OLD_P}"
-        autoconf || die "autoconf failed"
+	# reconf compat and current for RPATH solve
+	cd ${WORKDIR}/${OLD_P}
+	einfo "Running libtoolize on ${OLD_P}"
+	libtoolize --copy --force
+	einfo "Running aclocal on ${OLD_P}"
+	aclocal || die "aclocal failed"
+	EPATCH_OPTS="-p0 -d ${WORKDIR}/${OLD_P}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
+	einfo "Running autoconf on ${OLD_P}"
+	autoconf || die "autoconf failed"
 
-        cd ${S}
-        einfo "Running libtoolize on ${P}"
-        libtoolize --copy --force
-        einfo "Running aclocal on ${P}"
-        aclocal || die "aclocal failed"
-        EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
-        einfo "Running autoconf on ${P}"
-        autoconf || die "autoconf failed"
+	cd ${S}
+	einfo "Running libtoolize on ${P}"
+	libtoolize --copy --force
+	einfo "Running aclocal on ${P}"
+	aclocal || die "aclocal failed"
+	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
+	einfo "Running autoconf on ${P}"
+	autoconf || die "autoconf failed"
 }
 
 src_compile() {
