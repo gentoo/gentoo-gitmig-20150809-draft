@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.25 2005/12/07 11:19:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.26 2005/12/07 22:10:45 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -12,7 +12,7 @@
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
-inherit eutils libtool
+inherit eutils libtool toolchain-funcs
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -141,6 +141,14 @@ x-modular_reconf_source() {
 }
 
 x-modular_src_unpack() {
+	for x in xorg-server xf86-video- xf86-input- ; do
+		if [[ ${PN:0:11} = $x ]] && gcc-specs-now; then
+			msg="Do not emerge ${PN} without vanilla gcc!"
+			eerror "$msg"
+			die "$msg"
+		fi
+	done
+
 	x-modular_unpack_source
 	x-modular_patch_source
 	x-modular_reconf_source
