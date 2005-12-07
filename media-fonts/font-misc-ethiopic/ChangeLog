@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/font-misc-ethiopic
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.2 2005/11/03 07:40:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.3 2005/12/07 11:31:18 spyderous Exp $
+
+*font-misc-ethiopic-0.99.2 (07 Dec 2005)
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/correct-otffontdir-and-ttffontdir.patch,
+  +font-misc-ethiopic-0.99.2.ebuild:
+  Bump for 7.0RC3.
 
 *font-misc-ethiopic-0.99.1 (20 Oct 2005)
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/font-cursor-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cursor-misc/ChangeLog,v 1.8 2005/10/19 04:41:35 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cursor-misc/ChangeLog,v 1.9 2005/12/07 11:28:16 spyderous Exp $
+
+*font-cursor-misc-0.99.1 (07 Dec 2005)
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +font-cursor-misc-0.99.1.ebuild:
+  Bump for 7.0RC3.
 
   19 Oct 2005; Stephen P. Becker <geoman@gentoo.org>
   font-cursor-misc-0.99.0.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/font-daewoo-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-daewoo-misc/ChangeLog,v 1.5 2005/09/09 06:51:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-daewoo-misc/ChangeLog,v 1.6 2005/12/07 11:28:41 spyderous Exp $
+
+*font-daewoo-misc-0.99.1 (07 Dec 2005)
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +font-daewoo-misc-0.99.1.ebuild:
+  Bump for 7.0RC3.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
