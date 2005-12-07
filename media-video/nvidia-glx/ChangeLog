@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.105 2005/12/05 18:10:39 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.106 2005/12/07 21:33:03 augustus Exp $
+
+*nvidia-glx-1.0.8174-r1 (07 Dec 2005)
+
+  07 Dec 2005; <augustus@gentoo.org> +nvidia-glx-1.0.8174-r1.ebuild:
+  Added docs as requested in bug #114659.
 
 *nvidia-glx-1.0.8174 (05 Dec 2005)
 
