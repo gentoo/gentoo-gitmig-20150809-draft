@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.16 2005/12/07 00:30:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.17 2005/12/07 12:07:11 azarah Exp $
+
+*nvidia-settings-1.0.20051122-r2 (07 Dec 2005)
+
+  07 Dec 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/icon/nvidia-settings.desktop, +files/icon/nvidia-settings.png,
+  +nvidia-settings-1.0.20051122-r2.ebuild:
+  Do not install manpage into datadir.  Add desktop entry and icon.
+  Resolves bug #114720, thanks to Peter Hyman <pete4abw@comcast.net>.
 
 *nvidia-settings-1.0.20051122-r1 (07 Dec 2005)
 
