@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/font-misc-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.12 2005/11/11 20:06:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.13 2005/12/07 11:38:55 spyderous Exp $
+
+*font-misc-misc-0.99.2 (07 Dec 2005)
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +font-misc-misc-0.99.2.ebuild:
+  Bump for 7.0 RC3.
 
 *font-misc-misc-0.99.1 (11 Nov 2005)
 
@@ -11,6 +17,12 @@
   19 Oct 2005; Stephen P. Becker <geoman@gentoo.org>
   font-misc-misc-0.99.0.ebuild:
   added ~mips keyword
+
+*font-misc-misc-0.99.1 (20 Oct 2005)
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +font-misc-misc-0.99.1.ebuild:
+  Bump for 7.0 RC1.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
