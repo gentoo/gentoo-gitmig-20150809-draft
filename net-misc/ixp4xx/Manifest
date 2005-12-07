@@ -1,0 +1,30 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23b963a130bdcda35378204d039ac0f5 ChangeLog 342
+MD5 675368a824117e921676cd8bc6cf132d files/2.1/10-oe-ixethdb-header.patch 652
+MD5 5e919605e629a4f9c38ac1eb578743d9 files/2.1/11-oe-bit-macro.patch 230
+MD5 bc72d8bea3660ec29f1a86b59a66de2e files/2.1/12-oe-ixnpemhconfigisr-is-private.patch 835
+MD5 9e00919e37f3d9af80c6b60e4234820d files/2.1/13-oe-le.patch 361
+MD5 96d6b012ec1d3fd6ed1544f86fdd7492 files/2.1/30-oe-Makefile.patch 979
+MD5 d936b46632d3311c52d45d7e5517ba6a files/2.1/31-oe-2.6.patch 3253
+MD5 325eed2556b2556dbbddecdcdde43028 files/2.1/32-oe-invalidate-cache.patch 3649
+MD5 d1448e3efb890d26a57a78c6a3158106 files/2.1/33-oe-ixp4xx-header.patch 4002
+MD5 110274dde808d0727e515f5ea67cce0e files/2.1/34-oe-le.patch 2314
+MD5 3644986ce5ab9e008d513cbf6c16291b files/2.1/35-oe-assert.patch 1444
+MD5 42ec4f6eebe589dfdb0a571798e95646 files/2.1/40-yvasilev-oslinux.patch 689
+MD5 3d1cb1c13db5d1747a3ea9e054ed2d74 files/2.1/41-oemod-Makefile.patch 2144
+MD5 2adf7d4406fd072dc15d518ed0ad9344 files/2.1/42-yvasilev-Makefile-ixp400.patch 271
+MD5 55eb00eaf207c8ed04b41671f5dd1196 files/2.1/43-yvasilev-Makefile-ixp400_eth.patch 1320
+MD5 5976fd3d796c3e10247ee43e4e84d9ee files/2.1/50-oemod-ixp400_eth.patch 5052
+MD5 b5d51953e27b05d766183c207e60ed25 files/2.1/README 52
+MD5 a714fc17ff2a0f235d5a4464d2d848d9 files/digest-ixp4xx-2.1 236
+MD5 e7b5f473f2ea1b816c1415e6ba4d1844 ixp4xx-2.1.ebuild 1572
+MD5 a32931a71aafd6c9f2550b5560cbe22a metadata.xml 178
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDl2zKgIKl8Uu19MoRApTIAKCDIJoFOfNctU8/3D3I/D7OtQm4dACbB7s/
+Ism0z7Khurq/55UGPTMWCdw=
+=lGbd
+-----END PGP SIGNATURE-----
