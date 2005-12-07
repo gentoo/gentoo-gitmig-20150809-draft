@@ -1,7 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.9.ebuild,v 1.1 2005/10/26 00:11:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.9.ebuild,v 1.2 2005/12/07 02:02:32 vapier Exp $
 
+#ECVS_SERVER="savannah.gnu.org:/cvsroot/nano"
+#ECVS_USER="anoncvs"
+#ECVS_MODULE="nano"
+#inherit cvs
 inherit eutils
 
 MY_P=${PN}-${PV/_}
@@ -20,6 +24,10 @@ DEPEND=">=sys-libs/ncurses-5.2
 PROVIDE="virtual/editor"
 
 src_compile() {
+	if [[ ! -e configure ]] ; then
+		./autogen.sh || die "autogen failed"
+	fi
+
 	local myconf=""
 	use ncurses \
 		&& myconf="--without-slang" \
