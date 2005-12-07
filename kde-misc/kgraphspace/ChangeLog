@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kgraphspace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/ChangeLog,v 1.4 2004/11/23 15:46:33 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/ChangeLog,v 1.5 2005/12/07 23:43:36 cryos Exp $
+
+  07 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kgraphspace-0.3.0_pre1.ebuild:
+  Stable on amd64.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org>
   kgraphspace-0.3.0_pre1.ebuild:
