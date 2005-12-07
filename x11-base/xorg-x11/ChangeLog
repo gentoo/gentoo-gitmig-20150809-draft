@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.484 2005/12/05 00:45:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.485 2005/12/07 22:07:37 joshuabaergen Exp $
+
+  07 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-7.0.0_rc3.ebuild:
+  Update font deps for RC3.
 
 *xorg-x11-7.0.0_rc3 (05 Dec 2005)
 
