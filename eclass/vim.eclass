@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.128 2005/11/27 03:27:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.129 2005/12/07 02:01:23 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -16,8 +16,7 @@
 # aqua                          CARBON (not tested, 7+)
 # -aqua gtk gnome               GNOME2 (6.3-r1+, earlier uses GTK2)
 # -aqua gtk -gnome              GTK2
-# -aqua -gtk qt                 QT (7+)
-# -aqua -gtk -qt motif          MOTIF
+# -aqua -gtk  motif             MOTIF
 # -aqua -gtk -motif nextaw      NEXTAW (7+)
 # -aqua -gtk -motif -nextaw     ATHENA
 
@@ -99,22 +98,20 @@ else
 	fi
 fi
 
-# vim7 has some extra options. tcltk is working again, and mzscheme support
-# has been added. netbeans now has its own USE flag, but it's only available
-# under gvim. We have a few new GUI toolkits, and we can also install a
-# vimpager (this is in vim6 as well, but the ebuilds don't handle it).
+# vim7 has some extra options. mzscheme support has been added. netbeans now has
+# its own USE flag, but it's only available under gvim. We have a few new GUI
+# toolkits, and we can also install a vimpager (this is in vim6 as well, but the
+# ebuilds don't handle it).
 if [[ $(get_major_version ) -ge 7 ]] ; then
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
-		IUSE="${IUSE} tcltk mzscheme"
+		IUSE="${IUSE} mzscheme"
 		DEPEND="${DEPEND}
-			tcltk?    ( dev-lang/tcl )
 			mzscheme? ( dev-lisp/mzscheme )"
 		RDEPEND="${RDEPEND}
-			tcltk?    ( dev-lang/tcl )
 			mzscheme? ( dev-lisp/mzscheme )"
 	fi
 	if [[ "${MY_PN}" == "gvim" ]] ; then
-		IUSE="${IUSE} netbeans aqua nextaw qt"
+		IUSE="${IUSE} netbeans aqua nextaw"
 		DEPEND="${DEPEND}   netbeans? ( dev-util/netbeans )"
 		RDEPEND="${RDEPEND} netbeans? ( dev-util/netbeans )"
 	fi
@@ -228,6 +225,10 @@ vim_pkg_setup() {
 	# people with broken alphabets run into trouble. bug 82186.
 	unset LANG LC_ALL
 	export LC_COLLATE="C"
+
+	# Gnome sandbox silliness. bug #114475.
+	mkdir -p "${T}/home"
+	export HOME="${T}/home"
 }
 
 vim_src_unpack() {
@@ -383,9 +384,7 @@ vim_src_compile() {
 		# tclinterp is broken; when you --enable-tclinterp flag, then
 		# the following command never returns:
 		#   VIMINIT='let OS=system("uname -s")' vim
-		# vim7 seems to be ok though. (24 Sep 2004 ciaranm)
 		if [[ $(get_major_version ) -ge 7 ]] ; then
-			myconf="${myconf} `use_enable tcltk tclinterp`"
 			myconf="${myconf} `use_enable mzscheme mzschemeinterp`"
 			if [[ "${MY_PN}" == "gvim" ]] ; then
 				myconf="${myconf} `use_enable netbeans`"
@@ -441,9 +440,6 @@ vim_src_compile() {
 						fi
 					fi
 				fi
-			elif [[ $(get_major_version ) -ge 7 ]] && use qt ; then
-				einfo "Building gvim with the Qt GUI"
-				myconf="${myconf} --enable-gui=kde --enable-kde-toolbar"
 			elif use motif ; then
 				einfo "Building gvim with the MOTIF GUI"
 				myconf="${myconf} --enable-gui=motif"
@@ -491,7 +487,7 @@ vim_src_compile() {
 	econf ${myconf} || die "vim configure failed"
 
 	# The following allows emake to be used
-	make -C src auto/osdef.h objects || die "make failed"
+	make -j1 -C src auto/osdef.h objects || die "make failed"
 
 	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		emake tools || die "emake tools failed"
