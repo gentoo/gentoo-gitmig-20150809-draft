@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 b981e6db1c7289ac9136ce88eb4d78f9 ChangeLog 835
 MD5 2b17b7785adc3a84de23b61f5e9b411c apel-1.25.ebuild 438
-MD5 f63b34c9edb44808c83d6dbc63421fcb apel-1.26.ebuild 458
+MD5 9bddab91b7105f46dea8164320e6984a apel-1.26.ebuild 452
 MD5 a0d827083e338d46e32f69c7a6149805 files/digest-apel-1.25 64
 MD5 7a46d047e8e6907c55af9268a1b1d031 files/digest-apel-1.26 64
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDkf3RgIKl8Uu19MoRAhdVAJoCSsJhzGAMvHzzkjKeB/J/lXFzDQCZAcsI
-DlUOIqjOVPYSmutcvS3h1OA=
-=G/js
+iD8DBQFDllbMgIKl8Uu19MoRAoOxAJ9lZ+mFZN/pGrF+niZCx8mExhOMwQCfVc+M
+3w0AlkwEmfg0aX9Lk2S7tAQ=
+=V6Un
 -----END PGP SIGNATURE-----
