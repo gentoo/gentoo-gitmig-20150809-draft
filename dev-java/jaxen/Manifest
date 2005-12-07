@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8cbe93c55fbad9d1e92a16f600e81cfe ChangeLog 2783
 MD5 18b53511f075c771c0b69c5bc0b65dba files/MANIFEST.MF 307
 MD5 316a481f610ecae9085418b487d1fe1b files/build.xml.patch 1018
@@ -12,12 +9,5 @@ MD5 917b383454a8f38fb290d4a69ddb47ca files/jaxen-1.1_beta2-gentoo.diff 1254
 MD5 9a071b0e08942ac6d1ef8de29b2b9269 jaxen-1.0.ebuild 1402
 MD5 fe00f31aee65341c5c85d26aaf6d03fa jaxen-1.1_beta2-r1.ebuild 1377
 MD5 1075345d96ff713f8adbe26938987b3e jaxen-1.1_beta6.ebuild 1386
-MD5 01432c31d07e877184b832ea6612a31a jaxen-1.1_beta7.ebuild 1665
+MD5 8f3d48695738b1f4b19c984e949ba231 jaxen-1.1_beta7.ebuild 1662
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDllzDndWRXhKOboURAkAgAKDCrEs+MucE/+K/V2mdkG3F/ut10wCfU/jo
-AiNYKnU8/h13opyhJXKptMI=
-=wJCo
------END PGP SIGNATURE-----

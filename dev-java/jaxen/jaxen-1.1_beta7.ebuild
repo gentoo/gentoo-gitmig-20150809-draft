@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta7.ebuild,v 1.1 2005/12/07 03:52:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta7.ebuild,v 1.2 2005/12/07 06:31:26 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/jre-1.3
 	=dev-java/xerces-2.6*
 	dev-java/xom"
 
-DEPEND=">=virtual/jdk-1.3*
+DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )
 	test? ( dev-java/ant-tasks )
