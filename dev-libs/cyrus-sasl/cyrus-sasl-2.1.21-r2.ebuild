@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r2.ebuild,v 1.1 2005/11/30 00:39:42 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r2.ebuild,v 1.2 2005/12/07 17:05:50 strerror Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -171,21 +171,9 @@ src_compile() {
 	# Upstream doesn't even honor their own configure options... grumble
 	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' ${S}/plugins/Makefile
 
-	# Fix PEBCAK in make.conf. Bug #75538.
-	CFLAGS="$(echo ${CFLAGS} | xargs)"
-	CXXFLAGS="$(echo ${CXXFLAGS} | xargs)"
-	LDFLAGS="$(echo ${LDFLAGS} | xargs)"
-
-	# Parallel build doesn't work.
-	# Parallel build doesn't like distcc/ccache? Bug #78643.
-	if has distcc $FEATURES || has ccache $FEATURES; then
-		einfo "You have \"distcc\" or \"ccache\" enabled"
-		einfo "build with MAKEOPTS=-j1"
-		emake -j1 || die "compile problem"
-	else
-		einfo "build with MAKEOPTS=$MAKEOPTS"
-		emake || die "compile problem"
-	fi
+	einfo "build with MAKEOPTS=$MAKEOPTS"
+	# we force -j1 for bug #110066
+	emake -j1 || die "compile problem"
 
 	# Bug #60769. Default location for java classes breaks OpenOffice.
 	# Thanks to axxo@gentoo.org for the solution.
