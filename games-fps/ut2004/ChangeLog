@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.33 2005/12/04 15:30:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.34 2005/12/07 22:26:42 wolf31o2 Exp $
+
+  07 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-3355-r2.ebuild:
+  Removing experimental version as 3369 includes the functionality.
 
 *ut2004-3369 (04 Dec 2005)
 
