@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/matrix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/matrix/ChangeLog,v 1.7 2005/11/21 13:13:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/matrix/ChangeLog,v 1.8 2005/12/07 21:43:09 cryos Exp $
+
+  07 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> matrix-1.08.ebuild:
+  Stable on amd64.
 
   21 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> matrix-1.08.ebuild:
   Stable on sparc

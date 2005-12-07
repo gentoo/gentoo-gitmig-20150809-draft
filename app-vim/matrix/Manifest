@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b964e144113cad5da5e8106176c4911 matrix-1.04.ebuild 529
-MD5 d553c5603b69c772f3fbb7a0babbb48c matrix-1.08.ebuild 531
-MD5 46ee53425292928b4726e0345ab29409 ChangeLog 939
-MD5 8996b0f13d84dba6e52e31937d52a13c metadata.xml 406
+MD5 cf3cf5af567d6d2387fde172127d268b ChangeLog 1028
 MD5 7b3a4ce0ae870550e8272ac2825f3774 files/digest-matrix-1.04 62
 MD5 c9dacef50cd1678c53eeecd8a8a0cb75 files/digest-matrix-1.08 62
+MD5 7b964e144113cad5da5e8106176c4911 matrix-1.04.ebuild 529
+MD5 56cbd38110bd0d17511a45b4012e8d15 matrix-1.08.ebuild 527
+MD5 8996b0f13d84dba6e52e31937d52a13c metadata.xml 406
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgcgBKRy60XGEcJIRAjEIAJ0WXqeKzPM/DOJuq5sSsfhbyO2BdACfY4iX
-rVjTOX14HXXdMjZC+38m1gg=
-=ZqUJ
+iD8DBQFDl1d5ntT9W3vfTuoRAs2DAJsGFLGEkUpJqQefv6PVXjJqqUngRQCgp5Z4
+2EJG7ojNAVkDxjVmPKMRy7k=
+=yGHl
 -----END PGP SIGNATURE-----
