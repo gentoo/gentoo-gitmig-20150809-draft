@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.169 2005/12/04 03:04:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.170 2005/12/07 11:25:34 flameeyes Exp $
+
+  07 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4_pre2.ebuild:
+  Make it multilib-strict capable. It might not be 100% complete for
+  non-symlinked profiles, yet, as it installs arch-independent extensions in
+  lib64, but currently there's no other way to improve this (sharing the
+  site-independent directory would trigger collision-protect when two
+  different ABI are installed for the same package, for the independent files,
+  like headers). Closes bug #89985. No-change for non-multilib users.
 
   04 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.3.ebuild,
   ruby-1.8.4_pre2.ebuild:
