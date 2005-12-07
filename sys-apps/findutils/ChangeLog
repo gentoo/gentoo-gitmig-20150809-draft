@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.53 2005/11/05 20:16:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.54 2005/12/07 02:52:13 ciaranm Exp $
+
+*findutils-4.2.27 (07 Dec 2005)
+
+  07 Dec 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +findutils-4.2.27.ebuild:
+  New version.
 
   05 Nov 2005; Fabian Groffen <grobian@gentoo.org> findutils-4.2.25.ebuild:
   Marked ~ppc-macos (bug #58089)
