@@ -1,4 +1,4 @@
-MD5 f4ce2876636297c1df8d44ad8064ba95 ChangeLog 12207
+MD5 f74171ccd6b60d14a6a71e6f4f1c781f ChangeLog 12204
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r10 767
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r8 767
 MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01 767
@@ -28,5 +28,5 @@ MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 4baf6cdd9480cd938afaede8334c7a72 xpdf-3.00-r10.ebuild 3909
 MD5 0e303cf49620828eff323b0251d0141c xpdf-3.00-r8.ebuild 3622
 MD5 3045b88b069de08b88a1c5c25b8caea6 xpdf-3.01-r1.ebuild 3562
-MD5 4108b794e404abfe0f9a5035732757a6 xpdf-3.01-r2.ebuild 3555
+MD5 dad2aaf754de6020665cbcf01e232110 xpdf-3.01-r2.ebuild 3552
 MD5 763deff18a7e6e7125aca1f3d6be3229 xpdf-3.01.ebuild 3529
