@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r1.ebuild,v 1.1 2005/12/07 13:59:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r1.ebuild,v 1.2 2005/12/07 20:00:32 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
-
-PATCHVER=1
 
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
@@ -97,7 +95,6 @@ src_install() {
 	newins "${FILESDIR}/dhcrelay.conf" dhcrelay
 
 	keepdir /var/{lib,run}/dhcp
-	chown dhcp:dhcp "${ROOT}"/var/{lib,run}/dhcp
 }
 
 pkg_preinst() {
@@ -106,6 +103,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	chown dhcp:dhcp "${ROOT}"/var/{lib,run}/dhcp
 
 	einfo "You can edit /etc/conf.d/dhcp to customize dhcp settings"
 	einfo
