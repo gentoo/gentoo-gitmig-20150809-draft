@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-75dpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-75dpi/ChangeLog,v 1.7 2005/12/07 11:21:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-75dpi/ChangeLog,v 1.8 2005/12/07 21:38:50 spyderous Exp $
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -font-adobe-75dpi-0.99.0.ebuild, -font-adobe-75dpi-0.99.1.ebuild:
+  Pull old versions.
 
 *font-adobe-75dpi-0.99.2 (07 Dec 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-schumacher-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.7 2005/12/07 11:32:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.8 2005/12/07 21:50:06 spyderous Exp $
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -font-schumacher-misc-0.99.0.ebuild, -font-schumacher-misc-0.99.1.ebuild:
+  Pull old versions.
 
 *font-schumacher-misc-0.99.2 (07 Dec 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-type1
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/ChangeLog,v 1.8 2005/12/07 11:27:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/ChangeLog,v 1.9 2005/12/07 21:44:30 spyderous Exp $
+
+  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -font-bitstream-type1-0.99.0.ebuild:
+  Pull old versions.
 
 *font-bitstream-type1-0.99.1 (07 Dec 2005)
 
