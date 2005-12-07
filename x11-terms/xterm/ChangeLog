@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.112 2005/12/07 15:14:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.113 2005/12/07 15:25:29 seemant Exp $
+
+  07 Dec 2005; Seemant Kulleen <seemant@gentoo.org> xterm-205.ebuild:
+  taking to stable on amd64
 
 *xterm-207 (07 Dec 2005)
 
