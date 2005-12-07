@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-011.ebuild,v 1.1 2005/12/06 20:13:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-011.ebuild,v 1.2 2005/12/07 14:48:19 brix Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~x86"
 
 IUSE="cis debug staticsocket udev"
-RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
+RDEPEND="!virtual/pcmcia
+		>=sys-fs/sysfsutils-1.2.0-r1
 		>=sys-apps/module-init-tools-3.2_pre4
 		udev? ( >=sys-fs/udev-068 )
 		!udev? ( >=sys-apps/hotplug-20040920 )

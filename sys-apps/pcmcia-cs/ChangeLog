@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.105 2005/12/03 20:54:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.106 2005/12/07 14:50:46 brix Exp $
+
+  07 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  pcmcia-cs-3.2.8-r2.ebuild:
+  Block virtual/pcmcia.
 
   03 Dec 2005; Henrik Brix Andersen <brix@gentoo.org> -files/network,
   -files/pcmcia.conf, -files/pcmcia.rc, -files/ppc.config.opts,
