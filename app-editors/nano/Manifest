@@ -22,11 +22,11 @@ MD5 27bac9f5ff88d92d3386c6854eb29ae4 nano-1.3.4.ebuild 1587
 MD5 6f760844d541acb2dd4c92e22edc5759 nano-1.3.6.ebuild 1755
 MD5 042d14bbc6965489bd62af12f5943519 nano-1.3.7.ebuild 1742
 MD5 45fcb350931e56594b7bfcc19838f5c9 nano-1.3.8.ebuild 1880
-MD5 90ec8a0f8e7045596eaeace7ab5b7f6b nano-1.3.9.ebuild 1811
+MD5 abe0b3ecdd387f4659c16e4fad3804d5 nano-1.3.9.ebuild 1850
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDlkNzgIKl8Uu19MoRAlHIAJ4oQY5mL3kamyjqlgLjNKu1oJaYLQCdHLtY
-JCBE0rpeiVdBIWATd6RrEN0=
-=6nny
+iD8DBQFDlmvZgIKl8Uu19MoRArPrAJ0Q3jzHOBXKOcjqKjnP8AXRExZeqgCbBimX
+JJPveUfimIRoljoPx+7JtGI=
+=nXYi
 -----END PGP SIGNATURE-----
