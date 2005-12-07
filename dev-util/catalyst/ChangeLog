@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.101 2005/12/07 16:26:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.102 2005/12/07 21:40:26 wolf31o2 Exp $
+
+*catalyst-2.0_rc7 (07 Dec 2005)
+
+  07 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_rc6-slot.patch, +files/catalyst-2.0_rc7-slot.patch,
+  -catalyst-2.0_rc6.ebuild, +catalyst-2.0_rc7.ebuild:
+  Version bumped to 2.0_rc7 to fix a snapshot issue and to turn off emerge
+  pauses for unmerges on all stage targets.
 
 *catalyst-2.0_rc6 (07 Dec 2005)
 
