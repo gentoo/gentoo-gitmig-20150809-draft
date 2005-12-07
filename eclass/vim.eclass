@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.130 2005/12/07 17:56:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.131 2005/12/07 18:08:41 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -320,6 +320,11 @@ tr '\\267' '.' | col -b | \\
 			-c 'let g:showmarks_enable=0' \\
 			-c 'runtime! macros/less.vim' -
 END
+	fi
+
+	# Try to avoid sandbox problems. Bug #114475.
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		sed -i -e '/-S check.vim/s, -u, -X&,' "${S}/src/po/Makefile"
 	fi
 
 }
