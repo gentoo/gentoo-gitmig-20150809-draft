@@ -69,3 +69,5 @@ mono
 pike
 
 timidity
+
+pcmcia
