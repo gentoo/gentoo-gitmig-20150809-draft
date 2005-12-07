@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.131 2005/12/07 18:08:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.132 2005/12/07 18:46:08 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -324,7 +324,9 @@ END
 
 	# Try to avoid sandbox problems. Bug #114475.
 	if [[ $(get_major_version ) -ge 7 ]] ; then
-		sed -i -e '/-S check.vim/s, -u, -X&,' "${S}/src/po/Makefile"
+		sed -i -e \
+			'/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \&\& ./testvim -X' \
+			"${S}/src/po/Makefile"
 	fi
 
 }
@@ -498,26 +500,22 @@ vim_src_compile() {
 		emake tools || die "emake tools failed"
 		rm -f src/vim
 	else
-		if version_is_at_least "6.3.075" ; then
-			if ! emake ; then
-				eerror "If the above messages seem to be talking about perl"
-				eerror "and undefined references, please try re-emerging both"
-				eerror "perl and libperl with the same USE flags. For more"
-				eerror "information, see:"
-				eerror "    https://bugs.gentoo.org/show_bug.cgi?id=18129"
-				die "emake failed"
-			fi
+		if [[ $(get_major_version ) -ge 7 ]] ; then
+			# parallel make temporarily b0rked -- ciaranm, 20051127
+			our_makeopts="-j1"
 		else
-			if [[ $(get_major_version ) -ge 7 ]] ; then
-				# parallel make temporarily b0rked -- ciaranm, 20051127
-				emake -j1 || die "emake failed"
-			else
-				emake || die "emake failed"
-			fi
+			our_makeopts=""
+		fi
+
+		if ! emake "${our_makeopts}" ; then
+			eerror "If the above messages seem to be talking about perl"
+			eerror "and undefined references, please try re-emerging both"
+			eerror "perl and libperl with the same USE flags. For more"
+			eerror "information, see:"
+			eerror "    https://bugs.gentoo.org/show_bug.cgi?id=18129"
+			die "emake failed"
 		fi
 	fi
-
-	[[ $(get_major_version ) -ge 7 ]] && [[ -f src/kvim ]] && mv src/{k,g}vim
 }
 
 vim_src_install() {
