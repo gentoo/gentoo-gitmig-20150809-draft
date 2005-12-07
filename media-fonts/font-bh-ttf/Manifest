@@ -1,6 +1,4 @@
-MD5 a8e77f9b95cbd132adc73f15015b6e93 ChangeLog 1342
-MD5 9a2cac10e73f4b049d34e22295566947 files/digest-font-bh-ttf-0.99.0 71
+MD5 a9a95494b6ef3a765fba3ebb9f0b78fa ChangeLog 1450
 MD5 1fa12a826df9f652f8d182a1d377ba26 files/digest-font-bh-ttf-0.99.1 71
-MD5 0f10c426dd88c733c4be99dac9e98463 font-bh-ttf-0.99.0.ebuild 709
 MD5 f863807de4dd2e48286c349883c343e2 font-bh-ttf-0.99.1.ebuild 526
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

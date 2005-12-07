@@ -1,6 +1,4 @@
-MD5 9f35351f9456572ddf879584ca7836f6 ChangeLog 1124
-MD5 7eeea8289c8bf7e6d3fa1d4732dad763 files/digest-font-bitstream-75dpi-0.99.0 80
+MD5 7c76562744d86a513f80d2f33ac80f09 ChangeLog 1240
 MD5 d72f5aa0fd9f5f545224c03020b79bc7 files/digest-font-bitstream-75dpi-0.99.1 80
-MD5 a88785f5b31db43d478ad1820065af04 font-bitstream-75dpi-0.99.0.ebuild 697
 MD5 d3cd7483b79b6bb5cb2171bc127de841 font-bitstream-75dpi-0.99.1.ebuild 515
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

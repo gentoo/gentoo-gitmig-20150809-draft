@@ -1,6 +1,4 @@
-MD5 b7c5e57cafba5d6e62ada917aee86ba9 ChangeLog 1276
-MD5 720c13ec6dac62fee500da1982f5edbd files/digest-font-bitstream-speedo-0.99.1 81
+MD5 dbdb5002bab105809e406372f1b807e8 ChangeLog 1393
 MD5 d2d3da627eadbfb843ba8dc03cbac031 files/digest-font-bitstream-speedo-0.99.2 81
-MD5 14ed421af420889e33551907c137e26d font-bitstream-speedo-0.99.1.ebuild 700
 MD5 585a74325e3511e396ae54d5ac3bbe74 font-bitstream-speedo-0.99.2.ebuild 518
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

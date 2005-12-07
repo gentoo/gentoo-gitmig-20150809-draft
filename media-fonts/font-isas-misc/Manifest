@@ -1,6 +1,4 @@
-MD5 13c72d457fe30baf9899d1c3754c87c2 ChangeLog 1070
-MD5 a5f8c96d94cd35c0cc0304a69b0d9176 files/digest-font-isas-misc-0.99.0 74
+MD5 d1bc05ad0a69ff9560e16dd516c47651 ChangeLog 1180
 MD5 4bc06a951f038720e6b4788366fb75d2 files/digest-font-isas-misc-0.99.1 74
-MD5 a3c6ce144eb754b3c23d5d87107580b0 font-isas-misc-0.99.0.ebuild 685
 MD5 0aee4e4244ec73ff774b5fd00fb86275 font-isas-misc-0.99.1.ebuild 503
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

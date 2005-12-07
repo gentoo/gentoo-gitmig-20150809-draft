@@ -1,6 +1,4 @@
-MD5 9fdf6825a3cd4b6b7d8e10d702f97ecf ChangeLog 1124
-MD5 4778220f398698fa4532fbbbbb2da3a9 files/digest-font-cronyx-cyrillic-0.99.0 80
+MD5 ffc7cb94e34baa6e4b3532c1a9ac0766 ChangeLog 1240
 MD5 24e19b5c84eaa6f5754b67afbce822b4 files/digest-font-cronyx-cyrillic-0.99.1 80
-MD5 41160d464fab575fc5e9e84e2b06f54b font-cronyx-cyrillic-0.99.0.ebuild 697
 MD5 11b39fa7c64c1f505bd799a2226bcf26 font-cronyx-cyrillic-0.99.1.ebuild 515
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

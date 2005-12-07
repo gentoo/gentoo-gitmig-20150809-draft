@@ -1,6 +1,4 @@
-MD5 4fe130d2717f78960a87050d57426081 ChangeLog 1695
-MD5 d633a89cd81242ebb982ae8e9c3b55fb files/digest-font-misc-meltho-0.99.1 77
+MD5 b8993573603c5b279748b06acb8ada55 ChangeLog 1807
 MD5 0a35ff5684ed3b6589150cb053fe0257 files/digest-font-misc-meltho-0.99.2 77
-MD5 8f2494cf514f23d1aa28971c72995ed5 font-misc-meltho-0.99.1.ebuild 787
 MD5 91dd5438956a844587d018e226da663c font-misc-meltho-0.99.2.ebuild 625
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

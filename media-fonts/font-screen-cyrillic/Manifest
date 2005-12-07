@@ -1,6 +1,4 @@
-MD5 1d3c2e043bb2561dae7942c2e3ba45b6 ChangeLog 1124
-MD5 2e314c6705f84fbae12d545822a87629 files/digest-font-screen-cyrillic-0.99.0 79
+MD5 519875f6dea62bd5f1ad93eaa394c2b1 ChangeLog 1240
 MD5 3ec49bf5699a5178057213770858aa94 files/digest-font-screen-cyrillic-0.99.1 79
-MD5 83ea97d4f6d7d88be2836b9b56cba992 font-screen-cyrillic-0.99.0.ebuild 697
 MD5 e28a7b4ac684358de61ecacdfab109f4 font-screen-cyrillic-0.99.1.ebuild 515
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

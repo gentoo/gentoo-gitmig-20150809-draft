@@ -1,6 +1,4 @@
-MD5 83c575648fe0179b8506fcfb109a0790 ChangeLog 1061
-MD5 828a2841b5c65e7c3f1668f0c6432a01 files/digest-font-dec-misc-0.99.0 72
+MD5 80082c66927811fe640af8975d889c27 ChangeLog 1170
 MD5 28447fe577913f1b8741222a73e5ae3d files/digest-font-dec-misc-0.99.1 72
-MD5 89b12504fb3cc87692aaaf9d2e4cc287 font-dec-misc-0.99.0.ebuild 683
 MD5 92b394df50902162212276b5f9f8b0f3 font-dec-misc-0.99.1.ebuild 501
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

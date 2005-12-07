@@ -1,6 +1,4 @@
-MD5 65d8dceaf3f0c337205e5ff011c9e820 ChangeLog 1142
-MD5 504dbcd03fb71cf1c2ac05787080f1d8 files/digest-font-winitzki-cyrillic-0.99.0 81
+MD5 73fe25bc2ae0881e8295e992944d1be1 ChangeLog 1260
 MD5 34e568df25201e8adfe5b15317782822 files/digest-font-winitzki-cyrillic-0.99.1 81
-MD5 eb6fb82173790d81806df08d4b510292 font-winitzki-cyrillic-0.99.0.ebuild 701
 MD5 ff66a676764467a3e1a2e24d14dafda9 font-winitzki-cyrillic-0.99.1.ebuild 519
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

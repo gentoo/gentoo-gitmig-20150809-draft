@@ -1,6 +1,4 @@
-MD5 f642a42e43f03f04692da198606d7f43 ChangeLog 1106
-MD5 e11505f50d1c16984e3826b705cf888c files/digest-font-xfree86-type1-0.99.0 77
+MD5 1d8759b05984f1022cda04f5f35c1aeb ChangeLog 1220
 MD5 34ca5a014bf108a401e49bd89aa499e0 files/digest-font-xfree86-type1-0.99.1 77
-MD5 354b6ee0184357fbfe3c11705ecf25c1 font-xfree86-type1-0.99.0.ebuild 697
 MD5 f774a55942e7fd5e637a656be6e8ad83 font-xfree86-type1-0.99.1.ebuild 515
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
