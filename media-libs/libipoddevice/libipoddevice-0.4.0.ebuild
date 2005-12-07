@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.4.0.ebuild,v 1.2 2005/11/29 18:52:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.4.0.ebuild,v 1.3 2005/12/07 12:16:39 herbs Exp $
 
-inherit eutils
+inherit multilib eutils
 
 DESCRIPTION="libipoddevice is a device-specific layer for the Apple iPod"
 HOMEPAGE="http://banshee-project.org/Libipoddevice"
@@ -10,7 +10,7 @@ SRC_URI="http://banshee-project.org/files/libipoddevice/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/dbus-0.30
@@ -21,6 +21,14 @@ DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.0
 	>=gnome-base/libgtop-2.12"
 
+src_unpack() {
+	unpack ${A}
+	# use correct libdir in pkgconfig file
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e 's:^libdir=.*:libdir=@libdir@:' \
+			${S}/ipoddevice.pc.in || die "sed failed"
+	fi
+}
 pkg_setup() {
 	if ! built_with_use sys-apps/dbus gtk; then
 		die "need sys-libs/dbus built with gtk USE flag"
