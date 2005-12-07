@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.19.ebuild,v 1.1 2005/06/04 07:29:44 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.19.ebuild,v 1.2 2005/12/07 07:33:43 redhatter Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.colonel-panic.org/cobalt-mips/"
 SRC_URI="http://www.colonel-panic.org/cobalt-mips/colo/colo-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE=""
 DEPEND=""
 RESTRICT="nostrip"
@@ -29,12 +29,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	# cp the bootscripts to WORKDIR
-	cp ${FILESDIR}/menu-linux.colo ${WORKDIR}
-
-	# sed the primary boot script and stick the current colo version in there
-	sed "s:@COLOVER@:${PV}:g" ${FILESDIR}/default.colo > ${WORKDIR}/default.colo
 }
 
 src_compile() {
@@ -78,7 +72,7 @@ src_install() {
 
 	# bootscripts
 	dodir /usr/lib/colo/scripts
-	cp ${WORKDIR}/default.colo ${WORKDIR}/menu-linux.colo ${D}/usr/lib/colo/scripts
+	cp ${FILESDIR}/*.colo ${D}/usr/lib/colo/scripts
 }
 
 pkg_postinst() {
