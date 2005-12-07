@@ -17,3 +17,5 @@ move net-www/webapp-config app-admin/webapp-config
 move app-admin/watchdog sys-apps/watchdog
 move net-wireless/orinoco-cvs net-wireless/orinoco
 move sci-chemistry/libghemical sci-libs/libghemical
+move media-video/mtxdrivers-pro x11-drivers/mtxdrivers-pro
+move media-video/kyro-drivers x11-drivers/kyro-drivers
