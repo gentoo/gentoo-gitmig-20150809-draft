@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.4 2005/12/04 17:00:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.5 2005/12/07 15:01:23 markusle Exp $
+
+*gamess-05272005.3-r2 (07 Dec 2005)
+
+  07 Dec 2005; Markus Dittrich <markusle@gentoo.org>
+  +files/comp-gentoo.1.patch, +gamess-05272005.3-r2.ebuild:
+  This revision has the TDHF code enabled, which should now work properly with
+  the patched g77 (see bug #114367).
 
 *gamess-05272005.3-r1 (04 Dec 2005)
 
