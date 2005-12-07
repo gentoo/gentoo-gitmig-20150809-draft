@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.133 2005/12/07 18:50:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.134 2005/12/07 22:15:01 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -507,7 +507,7 @@ vim_src_compile() {
 			our_makeopts=""
 		fi
 
-		if ! emake "${our_makeopts}" ; then
+		if ! emake ${our_makeopts} ; then
 			eerror "If the above messages seem to be talking about perl"
 			eerror "and undefined references, please try re-emerging both"
 			eerror "perl and libperl with the same USE flags. For more"
