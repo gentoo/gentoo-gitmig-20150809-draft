@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab6a1bd271db95ec819cd42ba10e3a8c ChangeLog 11727
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r2 64
@@ -24,3 +27,10 @@ MD5 87c5a4b5771c292e1dbcc39fee7d4a55 gpdf-2.10.0.ebuild 1264
 MD5 3ec94b0d7a37f7330404f3197c6bfbcd gpdf-2.8.2.ebuild 1130
 MD5 b492633bcb5170b71ce72fb7d24545c5 gpdf-2.8.3.ebuild 1153
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDlks6CRZPokWLroQRAmXbAKCTZiUfgH+sX5jnpDEr5iPCcKQBSACeLC6U
+f2ONkphD4IOYElDxxtaEBUU=
+=NSCn
+-----END PGP SIGNATURE-----
