@@ -4,6 +4,6 @@
 #IFACES="eth0 eth1"
 IFACES="eth0"
 
-USER="arpwatch"
+#ARPUSER="arpwatch"
 
 OPTIONS=""
