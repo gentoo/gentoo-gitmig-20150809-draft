@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36-r4.ebuild,v 1.2 2005/12/06 21:46:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36-r4.ebuild,v 1.3 2005/12/07 02:36:08 halcy0n Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pdftohtml.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc-macos ~ppc64 ~sparc x86"
 IUSE=""
 DEPEND="virtual/libc sys-devel/gcc"
 RDEPEND="virtual/libc"

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.106 2005/12/05 18:34:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.107 2005/12/07 02:38:38 halcy0n Exp $
+
+  07 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gpdf-2.10.0-r2.ebuild:
+  Stable on x86; bug #114428
 
   05 Dec 2005; <dang@gentoo.org> gpdf-2.10.0-r2.ebuild:
   Marked stable on amd64

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdftohtml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.27 2005/12/06 21:46:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.28 2005/12/07 02:36:08 halcy0n Exp $
+
+  07 Dec 2005; Mark Loeser <halcy0n@gentoo.org> pdftohtml-0.36-r4.ebuild:
+  Stable on x86; bug #114428
 
   06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   pdftohtml-0.36-r4.ebuild:
