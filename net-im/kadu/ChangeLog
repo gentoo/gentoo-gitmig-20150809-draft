@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.42 2005/12/02 09:13:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.43 2005/12/07 14:02:58 mkay Exp $
+
+*kadu-0.5.0_pre20051207 (07 Dec 2005)
+
+  07 Dec 2005; Marcin Kryczek <mkay@gentoo.org>
+  +kadu-0.5.0_pre20051207.ebuild:
+  New snapshot
 
   02 Dec 2005; Joseph Jezak <josejx@gentoo.org> kadu-0.4.3.ebuild:
   Marked ppc stable for bug #114070.
