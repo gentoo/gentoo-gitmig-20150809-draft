@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.152 2005/12/07 09:01:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.153 2005/12/07 14:30:24 rl03 Exp $
+
+*phpmyadmin-2.7.0_p1 (07 Dec 2005)
+
+  07 Dec 2005; Renat Lumpau <rl03@gentoo.org> +phpmyadmin-2.7.0_p1.ebuild:
+  Version bump wrt security bug #114662.
 
   07 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   phpmyadmin-2.7.0.ebuild:
