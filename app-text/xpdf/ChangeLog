@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.100 2005/12/07 02:37:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.101 2005/12/07 03:24:21 dang Exp $
+
+  07 Dec 2005; <dang@gentoo.org> xpdf-3.01-r2.ebuild:
+  Marked stable on amd64
 
   07 Dec 2005; Mark Loeser <halcy0n@gentoo.org> xpdf-3.01-r2.ebuild:
   Stable on x86; bug #114428
