@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ceff6d441109a676525531f26513e530 ChangeLog 1152
+MD5 01760c68dd4b60dc78bae3adc11bff95 ChangeLog 1316
 MD5 e1a5b4cd15e5bcab1272aa622e686377 files/digest-font-adobe-utopia-75dpi-0.99.0 83
 MD5 a340b2f8e6b12141b774933a7be7d21d files/digest-font-adobe-utopia-75dpi-0.99.1 83
+MD5 52a785ae7efacfba144b39c2a34ef916 files/digest-font-adobe-utopia-75dpi-0.99.2 83
 MD5 40c39ca68ff641cea71fabd57bc91085 font-adobe-utopia-75dpi-0.99.0.ebuild 782
 MD5 1c07b50a49089fc2b643c61d6a7aafea font-adobe-utopia-75dpi-0.99.1.ebuild 788
+MD5 3f9ba37ecd719194cf22076bca0c3013 font-adobe-utopia-75dpi-0.99.2.ebuild 606
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfHbT2G5bA0cA/ScRAgDaAJ9KNcTebWo8/BpQFOrD3pW4IQ9ZLQCdEE0H
-6VCjkTIjfb+LoIasxOJA8dc=
-=Ss5r
------END PGP SIGNATURE-----
