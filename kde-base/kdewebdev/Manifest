@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6833cf2d5f7805ca4489901fffe0e058 ChangeLog 10096
+MD5 3eda05b339413d34723c8c9c1f74740b ChangeLog 10206
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2-r2 69
 MD5 94ceb356a311fd77a423e29df704051e files/digest-kdewebdev-3.4.1 69
 MD5 d8037944499434322bc1a939ec5ecf39 files/digest-kdewebdev-3.4.2 69
@@ -13,14 +10,7 @@ MD5 64933746cbdc378bd6d40e0b56eac91f files/post-3.4-kdewebdev-2.diff 2703
 MD5 c44af4e971a0c10fd3adf8e95e093215 kdewebdev-3.3.2-r2.ebuild 509
 MD5 7f457d67d0123ce8072096bdbc90c5d0 kdewebdev-3.4.1.ebuild 574
 MD5 46bda3cba97f5cd548b43d37647331b0 kdewebdev-3.4.2.ebuild 500
-MD5 19e31db42e17ee9123f6335c78adc2b3 kdewebdev-3.4.3-r1.ebuild 540
+MD5 dbd7d9fa0cefd6e35966cd3cd45c2e53 kdewebdev-3.4.3-r1.ebuild 536
 MD5 366365f1fa766760382d40b596323f4b kdewebdev-3.4.3.ebuild 484
 MD5 1f5b44feb22774ca90f2a1fb10bd0ac1 kdewebdev-3.5.0.ebuild 483
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDluJmKRy60XGEcJIRAp6HAJ4/0xgQ+N+HilkxaMrFs67pf787vQCffns3
-9wiTlRVlLfhTXjtM8UpUlg0=
-=3STq
------END PGP SIGNATURE-----
