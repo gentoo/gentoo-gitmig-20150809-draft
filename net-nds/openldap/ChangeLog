@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.152 2005/12/07 03:31:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.153 2005/12/08 04:38:35 halcy0n Exp $
+
+  08 Dec 2005; Mark Loeser <halcy0n@gentoo.org> openldap-2.1.30-r6.ebuild,
+  openldap-2.2.28-r3.ebuild:
+  Stable on x86; bug #105380
 
   07 Dec 2005; <dang@gentoo.org> openldap-2.2.28-r3.ebuild:
   Marked stable on amd64

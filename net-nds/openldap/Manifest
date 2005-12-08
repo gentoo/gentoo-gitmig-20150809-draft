@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 105627fc3c3a468cf5396104618f26f6 ChangeLog 27791
+MD5 5eea11a4e1edb2639896fd9ea3b65f56 ChangeLog 27928
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
 MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
@@ -53,7 +53,7 @@ MD5 943899d61dff15e7eb2ff62409814b49 openldap-2.1.30-r2.ebuild 7483
 MD5 992888650b5b09f265a46469585bcba8 openldap-2.1.30-r3.ebuild 7208
 MD5 2d4e17747e16fdd75a17a66c5537184c openldap-2.1.30-r4.ebuild 7308
 MD5 2950a8442733483861d191c433359f59 openldap-2.1.30-r5.ebuild 7628
-MD5 2989a75e6ab30c2dc2017489de46b9d8 openldap-2.1.30-r6.ebuild 8145
+MD5 1ab0d6e21826d71b62f636809bac7377 openldap-2.1.30-r6.ebuild 8142
 MD5 aebb509ea0634689f1e3a4549d4d343d openldap-2.1.30.ebuild 7361
 MD5 917840881094150cd91192866ec4e1c6 openldap-2.2.14.ebuild 7247
 MD5 7ddeb08466499dbe3c49b850b336744f openldap-2.2.19.ebuild 7955
@@ -67,12 +67,12 @@ MD5 b33aca9604940f55ec0992f486d64605 openldap-2.2.27-r1.ebuild 12774
 MD5 44d54b94ad9be3c6a595e530ffde8e24 openldap-2.2.27.ebuild 12424
 MD5 d0b2e396543e06107bd1b2f492c246f2 openldap-2.2.28-r1.ebuild 13109
 MD5 a6c77f6fc6a7c7af923cc334d2bab94a openldap-2.2.28-r2.ebuild 13214
-MD5 1438057a579ed7b21273acd04de7cbbf openldap-2.2.28-r3.ebuild 13717
+MD5 d61c69e67e4537a1f7e0918cecd5e30f openldap-2.2.28-r3.ebuild 13719
 MD5 72bade434d8afe3c9c9f665518a6d786 openldap-2.2.28.ebuild 12908
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDlleLomPajV0RnrERApRyAJ9TJ2iyJMOs822/57MbX4Zo+/ickACeIqoh
-MFFqonnreBbLefwF4GeL57s=
-=uv06
+iD8DBQFDl7jYCRZPokWLroQRAmFlAKCsiJjcCL/MtoIERKZ2UrujCnw0UgCg2M5f
+AQwz50h2nM0f7Mvo5z/wDQk=
+=ymis
 -----END PGP SIGNATURE-----
