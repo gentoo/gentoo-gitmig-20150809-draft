@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.5 2005/05/16 22:30:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.6 2005/12/08 02:56:52 vapier Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -21,6 +21,18 @@ PROVIDE="virtual/mta
 
 S=${WORKDIR}/netqmail-${PV}/netqmail-${PV}
 
+pkg_setup() {
+	# keep in sync with qmail pkg
+	enewgroup qmail 201
+	enewuser alias 200 -1 /var/qmail/alias 200
+	enewuser qmaild 201 -1 /var/qmail 200
+	enewuser qmaill 202 -1 /var/qmail 200
+	enewuser qmailp 203 -1 /var/qmail 200
+	enewuser qmailq 204 -1 /var/qmail 201
+	enewuser qmailr 205 -1 /var/qmail 201
+	enewuser qmails 206 -1 /var/qmail 201
+}
+
 src_unpack() {
 	unpack netqmail-${PV}.tar.gz
 	unpack mini-qmail-kit-0.52.tar.gz
@@ -34,7 +46,7 @@ src_unpack() {
 	echo -n "$(tc-getCC) ${LDFLAGS}" > "${S}"/conf-ld
 	ht_fix_file "${S}"/Makefile
 
-	epatch ${FILESDIR}/${PV}-config-mini-help.patch
+	epatch "${FILESDIR}"/${PV}-config-mini-help.patch
 }
 
 src_compile() {
