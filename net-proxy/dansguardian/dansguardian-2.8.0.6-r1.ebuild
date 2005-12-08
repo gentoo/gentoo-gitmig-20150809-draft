@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.8.0.6-r1.ebuild,v 1.1 2005/12/08 22:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.8.0.6-r1.ebuild,v 1.2 2005/12/08 22:44:00 mrness Exp $
 
 inherit eutils
 
@@ -39,8 +39,12 @@ src_install() {
 	newinitd ${FILESDIR}/dansguardian.init dansguardian
 
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/${PN}.logrotate ${PN}
+	newins ${FILESDIR}/dansguardian.logrotate dansguardian
 
 	doman dansguardian.8
 	dodoc README
+
+	#Create log directory
+	diropts -m0700
+	keepdir /var/log/dansguardian
 }
