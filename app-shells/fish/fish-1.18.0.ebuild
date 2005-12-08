@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.18.0.ebuild,v 1.1 2005/12/07 19:25:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.18.0.ebuild,v 1.2 2005/12/08 00:41:35 cryos Exp $
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://roo.no-ip.org/fish/"
 SRC_URI="http://roo.no-ip.org/fish/files/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND="sys-libs/ncurses
 	sys-devel/bc

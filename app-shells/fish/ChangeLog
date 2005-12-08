@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.4 2005/12/07 19:25:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.5 2005/12/08 00:41:35 cryos Exp $
+
+  08 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> fish-1.18.0.ebuild:
+  Marked ~amd64.
 
 *fish-1.18.0 (07 Dec 2005)
 
