@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0-r1.ebuild,v 1.1 2005/12/08 12:46:11 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0-r1.ebuild,v 1.2 2005/12/08 12:55:33 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc debug screen cflags"
+IUSE="doc debug screen custom-cflags"
 
 DEPEND="sys-apps/iproute2
 	net-misc/bridge-utils
@@ -34,11 +34,11 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	# if the user *really* wants to use their own cflags, let them
-	if use cflags; then
+	# if the user *really* wants to use their own custom-cflags, let them
+	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
 		for f in Makefile Rules.mk Config.mk; do
-			# try and remove all the default cflags
+			# try and remove all the default custom-cflags
 			find ${S} -name ${f} -exec sed \
 				-e 's/CFLAGS\(.*\)=\(.*\)-O3\(.*\)/CFLAGS\1=\2\3/' \
 				-e 's/CFLAGS\(.*\)=\(.*\)-march=i686\(.*\)/CFLAGS\1=\2\3/' \
@@ -58,7 +58,7 @@ src_compile() {
 		myopt="${myopt} debug=y"
 	fi
 
-	if ! use cflags; then
+	if ! use custom-cflags; then
 		unset CFLAGS
 	fi
 	filter-flags -fPIE -fstack-protector
