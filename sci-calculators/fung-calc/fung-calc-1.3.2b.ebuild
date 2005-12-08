@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/fung-calc/fung-calc-1.3.2b.ebuild,v 1.6 2005/08/20 16:38:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/fung-calc/fung-calc-1.3.2b.ebuild,v 1.7 2005/12/08 01:04:25 cryos Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fung-calc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND=">=sys-libs/zlib-1
 	>=media-libs/libpng-1.2
