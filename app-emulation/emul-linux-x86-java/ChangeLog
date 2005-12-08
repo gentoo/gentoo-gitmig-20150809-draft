@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/emul-linux-x86-java
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.1 2005/12/08 17:19:36 herbs Exp $
+
+*emul-linux-x86-java-1.4.2.02 (08 Dec 2005)
+
+  08 Dec 2005; Herbie Hopkins <herbs@gentoo.org>
+  +files/javasettings_Linux_x86.xml, +metadata.xml,
+  +emul-linux-x86-java-1.4.2.02.ebuild:
+  Initial release, largely based on blackdown-jre ebuild.
+
