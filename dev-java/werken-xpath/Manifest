@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ff28fd89e152cf9b67d227a8cf6ccd59 ChangeLog 595
+MD5 78da4f7f73f91c6bd92eedf1fbefaab6 files/digest-werken-xpath-0.9.4_beta 80
+MD5 4185b96fdb3a49d1eb6cdb93057e440b files/werken-xpath-0.9.4_beta-gentoo.patch 1313
+MD5 28584ccbd78d4037e8b242d825e03f33 files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
+MD5 e2a3cd20c9fb62710b171d6b9e179061 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
+MD5 72e762a216369d14fcf180a0229e03a5 files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 1fa29b3223ba1d5090af8c11e5fe024a werken-xpath-0.9.4_beta.ebuild 1568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDl8NfndWRXhKOboURAgScAKCvh2kuuBxeMpno2BqRs2hcNjab+gCfe1lL
+7IQoleReBIlQzRlFpwJLbjw=
+=nCjI
+-----END PGP SIGNATURE-----

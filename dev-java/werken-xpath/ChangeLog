@@ -1,0 +1,14 @@
+# ChangeLog for dev-java/werken-xpath
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.1 2005/12/08 05:19:47 nichoj Exp $
+
+*werken-xpath-0.9.4_beta (08 Dec 2005)
+
+  08 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  +files/werken-xpath-0.9.4_beta-gentoo.patch,
+  +files/werken-xpath-0.9.4_beta-jpp-compile.patch,
+  +files/werken-xpath-0.9.4_beta-jpp-jdom.patch,
+  +files/werken-xpath-0.9.4_beta-jpp-tests.patch, +metadata.xml,
+  +werken-xpath-0.9.4_beta.ebuild:
+  Initial commit. Needed for bug #63275.
+
