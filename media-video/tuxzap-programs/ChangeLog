@@ -1,6 +1,12 @@
 # ChangeLog for media-video/tuxzap-programs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.9 2005/09/25 11:24:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.10 2005/12/08 07:48:44 zzam Exp $
+
+  08 Dec 2005; Matthias Schwarzott <zzam@gentoo.org>
+  tuxzap-programs-0.2.3.ebuild, tuxzap-programs-0.2.5.ebuild,
+  tuxzap-programs-0.5.4.ebuild:
+  replaced the or-construct in depend for dvb-headers with depend for
+  linuxtv-dvb-headers
 
 *tuxzap-programs-0.5.4 (25 Sep 2005)
 
