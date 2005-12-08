@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.02.ebuild,v 1.1 2005/12/08 17:19:36 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.02.ebuild,v 1.2 2005/12/08 20:40:40 herbs Exp $
 
 inherit multilib java versionator
 
@@ -20,7 +20,6 @@ KEYWORDS="-* ~amd64"
 IUSE="nsplugin"
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-PROVIDE="virtual/jre"
 
 S="${WORKDIR}/j2re${JV}"
 
