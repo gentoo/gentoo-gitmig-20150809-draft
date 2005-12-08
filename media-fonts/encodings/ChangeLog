@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/encodings
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.9 2005/12/07 21:32:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.10 2005/12/08 20:11:56 spyderous Exp $
+
+*encodings-0.99.1-r1 (08 Dec 2005)
+
+  08 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/configurable-encodingsdir.patch, -encodings-0.99.1.ebuild,
+  +encodings-0.99.1-r1.ebuild:
+  (fd.o #5292) Make encodingsdir configurable in the source instead of a
+  hackish sed in the ebuild.
 
   07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -encodings-0.99.0.ebuild:
