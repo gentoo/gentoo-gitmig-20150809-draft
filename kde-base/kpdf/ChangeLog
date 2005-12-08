@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.43 2005/12/07 19:46:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.44 2005/12/08 02:24:09 carlo Exp $
+
+*kpdf-3.4.1-r2 (08 Dec 2005)
+
+  08 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +kpdf-3.4.1-r2.ebuild:
+  Patch v.3.4.1 too.
 
   07 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> kpdf-3.4.3-r1.ebuild:
   Stable on amd64, bug 114429.
