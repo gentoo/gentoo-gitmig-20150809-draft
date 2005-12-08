@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.44 2005/12/07 15:10:00 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.45 2005/12/08 00:00:32 greg_g Exp $
+
+*kmail-3.5.0-r3 (07 Dec 2005)
+
+  07 Dec 2005; Gregorio Guidi <greg_g@gentoo.org>
+  -files/kdepim-3.5.0-filter-crash.patch,
+  +files/kdepim-3.5.0-kmail-branch.patch, -kmail-3.5.0-r2.ebuild,
+  +kmail-3.5.0-r3.ebuild:
+  New updates for kmail.
 
 *kmail-3.5.0-r2 (07 Dec 2005)
 

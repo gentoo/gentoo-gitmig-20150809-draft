@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.0-r2.ebuild,v 1.1 2005/12/07 15:10:00 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.0-r3.ebuild,v 1.1 2005/12/08 00:00:32 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -54,4 +54,4 @@ KMEXTRA="
 	kontact/plugins/kmail/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
 
 # Fix crash when applying filters (kde bug 113730). applied for 3.5.1.
-PATCHES="${FILESDIR}/kdepim-3.5.0-filter-crash.patch"
+PATCHES="${FILESDIR}/kdepim-3.5.0-kmail-branch.patch"
