@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r3.ebuild,v 1.6 2005/12/07 09:34:15 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r3.ebuild,v 1.7 2005/12/08 14:02:15 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="apache2 berkdb python emacs perl java nls nowebdav zlib ruby"
 RESTRICT="test"
 
@@ -21,8 +21,8 @@ COMMONDEPEND="apache2? ( ${APACHE2_DEPEND} )
 	perl? ( <=dev-lang/swig-1.3.25
 		>=dev-lang/perl-5.8.6-r6
 		!=dev-lang/perl-5.8.7 )
-	ruby? ( <=dev-lang/swig-1.3.25
-		dev-lang/ruby )
+	ruby? ( =dev-lang/swig-1.3.25
+		>=dev-lang/ruby-1.8.2 )
 	!nowebdav? ( ~net-misc/neon-0.24.7 )
 	berkdb? ( =sys-libs/db-4* )
 	zlib? ( sys-libs/zlib )
