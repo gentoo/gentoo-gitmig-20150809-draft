@@ -1,11 +1,22 @@
-MD5 c90f05f166f78646da5cda62db8f7c45 xfig-3.2.4-r2.ebuild 1382
-MD5 06dd79b318ab2b565d7844f664c4b9bd xfig-3.2.5_alpha5.ebuild 1202
-MD5 05da0d580f50e46c60ddb6c915310a51 xfig-3.2.4-r1.ebuild 1063
-MD5 02f7d3ed86b200e1383fa5aedb21c2f0 ChangeLog 3229
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 1d27cd35de86081aa824a8f837f14745 files/xfig-3.2.4-xaw3d.diff 465
-MD5 b30d1a2b0c6ce802248a2605e13356df files/digest-xfig-3.2.5_alpha5 75
-MD5 beb83fd8cd3423aeffdc3858a633852d files/xfig-3.2.5_alpha5-gentoo.diff 2110
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8b153641544ec3f5eb5295db344859b2 ChangeLog 3408
 MD5 410ddf8ebcca6c2714f820d737f136c0 files/digest-xfig-3.2.4-r1 137
 MD5 4b1ad5e5e2087452ce25723ececb2708 files/digest-xfig-3.2.4-r2 215
+MD5 b30d1a2b0c6ce802248a2605e13356df files/digest-xfig-3.2.5_alpha5 75
+MD5 545bf10fe67a90dcb8736b281d6fdf3f files/xfig-3.2.4-gcc4.patch 930
+MD5 1d27cd35de86081aa824a8f837f14745 files/xfig-3.2.4-xaw3d.diff 465
+MD5 beb83fd8cd3423aeffdc3858a633852d files/xfig-3.2.5_alpha5-gentoo.diff 2110
 MD5 65da21fda4fd5353fa3d7f421982af99 files/xfig-3.2.5_alpha5-xaw3d.diff 456
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 05da0d580f50e46c60ddb6c915310a51 xfig-3.2.4-r1.ebuild 1063
+MD5 a1589a1471b7f7ccf79a818e35f6f6ee xfig-3.2.4-r2.ebuild 1415
+MD5 06dd79b318ab2b565d7844f664c4b9bd xfig-3.2.5_alpha5.ebuild 1202
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmJpantT9W3vfTuoRAhqOAKCKhKyqF7kbW7FPw14kA0+mROugjwCgkuzt
+q5rsYx566+8J6msG7kDvxuI=
+=S/uE
+-----END PGP SIGNATURE-----

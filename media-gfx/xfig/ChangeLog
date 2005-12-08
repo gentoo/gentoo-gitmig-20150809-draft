@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.19 2005/09/24 21:31:55 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.20 2005/12/08 20:40:46 cryos Exp $
+
+  08 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/xfig-3.2.4-gcc4.patch, xfig-3.2.4-r2.ebuild:
+  Added GCC 4 patch, thanks to Thomas Weidner <3.14159@gmx.net>, bug 114349.
 
 *xfig-3.2.5_alpha5 (24 Sep 2005)
 
