@@ -1,6 +1,11 @@
 # ChangeLog for media-video/camserv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.16 2005/09/02 21:37:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.17 2005/12/08 15:55:24 flameeyes Exp $
+
+  08 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  camserv-0.5.1-r2.ebuild:
+  Recreate all the autotools support, use eautoreconf that takes care of
+  running the tools on libltdl, too. Should fix bug #106013.
 
   02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   camserv-0.5.1-r2.ebuild:

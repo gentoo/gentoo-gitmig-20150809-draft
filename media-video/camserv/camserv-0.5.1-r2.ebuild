@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.8 2005/09/02 21:37:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.9 2005/12/08 15:55:24 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -17,14 +17,20 @@ RDEPEND=">=media-libs/jpeg-6b-r2
 	>=media-libs/imlib-1.9.13-r2"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.58
+	=sys-devel/automake-1.6*
+	sys-devel/libtool"
 
 src_unpack() {
+	# make sure it uses autoconf 2.5 as there seems to be problems.
+	# See bug #106013
+	export WANT_AUTOCONF="2.5"
+	export WANT_AUTOMAKE="1.6"
+
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.5-errno.patch
-	cd libltdl
-	eautoconf
+	AT_M4DIR="${S}/macros" eautoreconf
 }
 
 src_install() {

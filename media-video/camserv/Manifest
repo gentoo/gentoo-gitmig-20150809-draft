@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3806929133884075b17bc6950d523b06 camserv-0.5.1-r2.ebuild 815
-MD5 f7c5e50e04e0c2d8697ae85d2f19b721 ChangeLog 2464
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 bf0782107eda233c33ce533acf362e48 files/camserv.init 553
+MD5 3afb1abcef9fd7101a8e0ee217315afc ChangeLog 2679
+MD5 a16b22bbfc2fe7d1e0931ae580f619ec camserv-0.5.1-r2.ebuild 1014
 MD5 fb27a1787753b6c9ee46b573c6b8fc5e files/camserv-0.5-errno.patch 3105
+MD5 bf0782107eda233c33ce533acf362e48 files/camserv.init 553
 MD5 0cc8188d6f8abfc2eb25e9b9352283ac files/digest-camserv-0.5.1-r2 65
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGMY3j5H05b2HAEkRAg6BAJ45sI0G4PAhCDa2zQGMKY0CrGUP+ACeMKPG
-Pq7xcV7wGMqirluN6A0QwQw=
-=ONrK
+iD8DBQFDmFd/AiZjviIA2XgRAn71AKC8/R6mkBbEVvn3wgcnfPyU4/DIKACeJVYR
+eRBZ+7qKs5kWVsfLkFGfCjw=
+=seeq
 -----END PGP SIGNATURE-----
