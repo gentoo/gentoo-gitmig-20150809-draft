@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/dansguardian-dgav
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.5 2005/10/04 21:01:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.6 2005/12/08 22:39:09 mrness Exp $
+
+*dansguardian-dgav-6.4.3-r1 (08 Dec 2005)
+
+  08 Dec 2005; Alin Nastac <mrness@gentoo.org>
+  +files/dansguardian-dgav-6.4.3-gentoo.patch, files/dansguardian.init,
+  +files/dansguardian.logrotate, -dansguardian-dgav-6.4.2a.ebuild,
+  +dansguardian-dgav-6.4.3-r1.ebuild:
+  Fix init script dependencies (#114511). Improve logrotate file.
 
 *dansguardian-dgav-6.4.3 (04 Oct 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/dansguardian-dgav-6.4.2a.ebuild,v 1.2 2005/10/04 21:01:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/dansguardian-dgav-6.4.3-r1.ebuild,v 1.1 2005/12/08 22:39:09 mrness Exp $
 
 inherit eutils
 
@@ -11,9 +11,7 @@ DG_PV=2.8.0.6
 DESCRIPTION="DansGuardian with Anti-Virus plugin"
 HOMEPAGE="http://sourceforge.net/projects/dgav/"
 SRC_URI="http://mirror.dansguardian.org/downloads/2/Stable/${DG_PN}-${DG_PV}.source.tar.gz
-	mirror://gentoo/${DG_PN}-${DG_PV}-antivirus-${PV}-gentoo.patch.bz2"
-#Replace SRC_URI with the following when upstream manage to generate a proper patch
-#	mirror://sourceforge/${AV_PN}/${DG_PN}-${DG_PV}-antivirus-${PV}.patch.bz2
+	mirror://sourceforge/${AV_PN}/${DG_PN}-${DG_PV}-antivirus-${PV}.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,10 +29,8 @@ src_unpack() {
 
 	cd ${S} || die "source dir not found"
 	epatch ${FILESDIR}/dansguardian-xnaughty-2.7.6-1.diff
-	epatch ../${DG_PN}-${DG_PV}-antivirus-${PV}-gentoo.patch
-
-	#fix path to gentoo clamd socket
-	sed -i -e "s:clamdsocket *= *'/tmp/clamd':clamdsocket = '/var/run/clamav/clamd.sock':" configure
+	epatch ../${DG_PN}-${DG_PV}-antivirus-${PV}.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
@@ -43,22 +39,21 @@ src_compile() {
 		--installprefix=${D} \
 		--mandir=/usr/share/man/ \
 		--cgidir=/var/www/localhost/cgi-bin/ \
+		--logrotatedir="${D}/etc/logrotate.d" \
 		--with-av-engine=clamdscan \
 		--runas_usr=clamav --runas_grp=clamav || die "./configure failed"
 	emake OPTIMISE="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	if [ -d "/etc/logrotate.d" ]; then
-		dodir /etc/logrotate.d
-	fi
 	make install || die "make install failed"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/dansguardian.init dansguardian
-	rm -rf ${D}/etc/rc.d
-	sed -i -e 's/rc.d\///' ${D}/etc/dansguardian/logrotation #Fixing location of initscript
+	newinitd ${FILESDIR}/dansguardian.init dansguardian
 
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/dansguardian.logrotate dansguardian
+
+	doman dansguardian.8
 	dodoc README*
 
 	#Create log directory
