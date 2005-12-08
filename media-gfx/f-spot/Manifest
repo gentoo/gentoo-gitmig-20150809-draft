@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2b6481f7a6717a0cd1c60c681ec27a1 ChangeLog 534
+MD5 c10bf99de2b0609903cea7bd1846ae79 ChangeLog 678
 MD5 dd02ac316a44c1f0056d424d23631e13 f-spot-0.1.3.ebuild 1965
+MD5 98bf5169bbf84de79c68c1659a382c4c f-spot-0.1.4.ebuild 1883
 MD5 c3b0376f4a53f207fb7db5273217a7ab files/digest-f-spot-0.1.3 65
+MD5 8d2a0dc84f659c65bbf0536a4fc7ed38 files/digest-f-spot-0.1.4 65
 MD5 bfd52f4c8afee309b5daac526ebd0d1f files/f-spot-0.1.3-mono-1.1.10.patch 1955
 MD5 e48cb5f8090572cbfd7288a0aa429618 metadata.xml 337
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiQQM2G5bA0cA/ScRAk5sAKC620PPAXZ+2MSo1zEPa2J0fDBK3QCZAaUM
-iK1KUN1ANL+DwStowzdMTGk=
-=agmz
------END PGP SIGNATURE-----
