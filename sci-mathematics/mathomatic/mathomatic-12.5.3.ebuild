@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.4.11.ebuild,v 1.1 2005/09/23 00:43:20 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.5.3.ebuild,v 1.1 2005/12/08 01:35:00 cryos Exp $
 
 inherit eutils
 
 DESCRIPTION="Automatic algebraic manipulator"
 HOMEPAGE="http://www.mathomatic.com/"
-SRC_URI="http://www.panix.com/~gesslein/${P}.tgz"
+SRC_URI="http://www.panix.com/~gesslein/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -19,9 +19,9 @@ DEPEND="sys-libs/readline
 
 src_compile() {
 	if use icc; then
-		CC="icc" CFLAGS="-O3 -axKWNBP -ipo" LDFLAGS="-O3 -axKWNBP -ipo -limf" emake || die "emake failed"
+		CC="icc" CFLAGS="-O3 -axKWNBP -ipo" LDFLAGS="-O3 -axKWNBP -ipo -limf" emake READLINE=1 || die "emake failed"
 	else
-		emake || die "emake failed"
+		emake READLINE=1 || die "emake failed"
 	fi
 }
 
