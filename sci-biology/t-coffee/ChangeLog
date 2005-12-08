@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.11 2005/12/08 19:48:52 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.12 2005/12/08 19:52:39 ribosome Exp $
+
+  08 Dec 2005; Olivier Fisette <ribosome@gentoo.org> -t-coffee-3.18.ebuild:
+  Pruning old version.
 
   08 Dec 2005; Olivier Fisette <ribosome@gentoo.org> t-coffee-3.27.ebuild:
   Added a warning regarding an internal compiler error (see bug #114745).
