@@ -3,14 +3,13 @@ https://bugs.freedesktop.org/show_bug.cgi?id=5175#c4
 
 Donnie Berkholz <spyderous@gentoo.org>
 
-? configurable-mapdir.patch
 Index: Makefile.am
 ===================================================================
 RCS file: /cvs/xorg/font/util/Makefile.am,v
 retrieving revision 1.9
 diff -u -b -B -r1.9 Makefile.am
 --- Makefile.am	6 Dec 2005 22:48:41 -0000	1.9
-+++ Makefile.am	8 Dec 2005 19:48:34 -0000
++++ Makefile.am	8 Dec 2005 22:54:49 -0000
 @@ -31,7 +31,7 @@
  aclocaldir = $(datadir)/aclocal
  aclocal_DATA = fontutil.m4
@@ -26,7 +25,7 @@ RCS file: /cvs/xorg/font/util/configure.ac,v
 retrieving revision 1.7
 diff -u -b -B -r1.7 configure.ac
 --- configure.ac	3 Dec 2005 05:49:41 -0000	1.7
-+++ configure.ac	8 Dec 2005 19:48:34 -0000
++++ configure.ac	8 Dec 2005 22:54:49 -0000
 @@ -31,8 +31,12 @@
  AC_PROG_CC
  AC_PROG_INSTALL
@@ -42,3 +41,19 @@ diff -u -b -B -r1.7 configure.ac
  
  XORG_MANPAGE_SECTIONS
  XORG_RELEASE_VERSION
+Index: fontutil.pc.in
+===================================================================
+RCS file: /cvs/xorg/font/util/fontutil.pc.in,v
+retrieving revision 1.1
+diff -u -b -B -r1.1 fontutil.pc.in
+--- fontutil.pc.in	22 Jul 2005 04:13:44 -0000	1.1
++++ fontutil.pc.in	8 Dec 2005 22:54:49 -0000
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+-mapdir=@mapdir@
++mapdir=@MAPDIR@
+  
+ Name: FontUtil
+ Description: Font utilities dirs
