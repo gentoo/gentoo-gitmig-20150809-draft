@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.7.ebuild,v 1.2 2005/11/25 13:26:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.7.ebuild,v 1.3 2005/12/08 11:56:27 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gsm qt readline ssl"
 
 DEPEND="gsm? ( sys-apps/pcsc-lite )
-		qt? ( =x11-libs/qt-3* )
+		qt? ( || ( =x11-libs/qt-3* =x11-libs/qt-4* ) )
 		readline? ( sys-libs/ncurses
 					sys-libs/readline )
 		ssl? ( dev-libs/openssl )"
@@ -79,8 +79,14 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use qt; then
-		[[ -d ${QTDIR}/etc/settings ]] && addwrite ${QTDIR}/etc/settings
-		emake wpa_gui || die "emake wpa_gui failed"
+		if has_version '=x11-libs/qt-4*'; then
+			qmake -o "${S}"/wpa_gui-qt4/Makefile "${S}"/wpa_gui-qt4/wpa_gui.pro
+			cd "${S}"/wpa_gui-qt4
+			emake || die "emake wpa_gui-qt4 failed"
+		else
+			[[ -d ${QTDIR}/etc/settings ]] && addwrite ${QTDIR}/etc/settings
+			emake wpa_gui || die "emake wpa_gui failed"
+		fi
 	fi
 }
 
@@ -94,7 +100,12 @@ src_install() {
 
 	if use qt; then
 		into /usr
-		dobin wpa_gui/wpa_gui
+
+		if has_version '=x11-libs/qt-4*'; then
+			dobin wpa_gui-qt4/wpa_gui
+		else
+			dobin wpa_gui/wpa_gui
+		fi
 	fi
 
 	dodoc ChangeLog COPYING eap_testing.txt README todo.txt

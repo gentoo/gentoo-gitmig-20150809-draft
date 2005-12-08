@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.40 2005/11/25 13:26:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.41 2005/12/08 11:56:27 brix Exp $
+
+  08 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  wpa_supplicant-0.4.7.ebuild:
+  Add Qt4 support, bug #113581.
 
   25 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
   wpa_supplicant-0.4.5.ebuild, wpa_supplicant-0.4.6.ebuild,
