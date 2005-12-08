@@ -1,4 +1,4 @@
-MD5 b08c1453c2eb4162282477898cdb01c8 ChangeLog 5825
+MD5 924850afb60fee17ab930be4d29febfa ChangeLog 5825
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
 MD5 912bf2607fc0c67f023f6084731eba21 files/digest-kpdf-3.4.1-r2 221
@@ -16,7 +16,7 @@ MD5 fb8e3783bd62a0ef7979c10fb6046201 files/kpdf-3.5.0-CAN-2005-3193.patch 3384
 MD5 d18efc8eb0bf3e3b54a33cf04cdba3fd files/kpdf-3.5.0-splitter-io.patch 1415
 MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
 MD5 493fdf9a2dc94e56301161f38122b422 kpdf-3.4.1-r1.ebuild 627
-MD5 c0991663516a0f715e8647a83f45a589 kpdf-3.4.1-r2.ebuild 578
+MD5 2c14821b49252784a3be3dcf2f6e29fc kpdf-3.4.1-r2.ebuild 673
 MD5 710200655b097652c4ea66ea6e5931db kpdf-3.4.1.ebuild 569
 MD5 da8c7b95896e393c3af5901801f76253 kpdf-3.4.2-r1.ebuild 698
 MD5 26ec262357d5acdd4fbe2e83d488e692 kpdf-3.4.2-r2.ebuild 816
