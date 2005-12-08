@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.5 2005/12/08 21:55:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.6 2005/12/08 23:56:22 herbs Exp $
+
+  08 Dec 2005; Herbie Hopkins <herbs@gentoo.org> banshee-0.10-r1.ebuild:
+  Multilib fix.
 
 *banshee-0.10-r1 (08 Dec 2005)
 

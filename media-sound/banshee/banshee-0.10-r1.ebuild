@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10-r1.ebuild,v 1.1 2005/12/08 21:55:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10-r1.ebuild,v 1.2 2005/12/08 23:56:22 herbs Exp $
 
 inherit eutils gnome2 mono
 
@@ -63,6 +63,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-AudioCdCore.cs.diff
+
+	# Multilib issue: Use pkgconfig --variable=libdir over --variable=prefix
+	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
+		${S}/configure{.ac,} || die "sed failed"
 }
 src_compile() {
 	addpredict "/root/.gconf/"
