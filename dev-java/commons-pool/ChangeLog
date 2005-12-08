@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.29 2005/11/05 11:07:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.30 2005/12/08 05:31:32 nichoj Exp $
+
+*commons-pool-1.2-r1 (08 Dec 2005)
+
+  08 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  +files/commons-pool-1.2-java5.patch, +commons-pool-1.2-r1.ebuild:
+  Added Java 1.5 patch. Also fixed the build so that javadocs aren't always
+  generated.
 
   05 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   commons-pool-1.1.ebuild, commons-pool-1.2.ebuild:

@@ -1,0 +1,37 @@
+Only in commons-pool-1.2-patched: build
+Only in commons-pool-1.2-patched/src/java/org/apache/commons/pool/impl: .StackKeyedObjectPool.java.swp
+Only in commons-pool-1.2-patched/src/java/org/apache/commons/pool/impl: .StackObjectPool.java.swp
+diff -ur commons-pool-1.2/src/java/org/apache/commons/pool/impl/StackKeyedObjectPool.java commons-pool-1.2-patched/src/java/org/apache/commons/pool/impl/StackKeyedObjectPool.java
+--- commons-pool-1.2/src/java/org/apache/commons/pool/impl/StackKeyedObjectPool.java	2004-06-07 13:40:52.000000000 -0400
++++ commons-pool-1.2-patched/src/java/org/apache/commons/pool/impl/StackKeyedObjectPool.java	2005-12-08 00:13:44.000000000 -0500
+@@ -235,10 +235,10 @@
+             return;
+         } else {
+             if(null != _factory) {
+-                Enumeration enum = stack.elements();
+-                while(enum.hasMoreElements()) {
++                Enumeration my_enum = stack.elements();
++                while(my_enum.hasMoreElements()) {
+                     try {
+-                        _factory.destroyObject(key,enum.nextElement());
++                        _factory.destroyObject(key,my_enum.nextElement());
+                     } catch(Exception e) {
+                         // ignore error, keep destroying the rest
+                     }
+diff -ur commons-pool-1.2/src/java/org/apache/commons/pool/impl/StackObjectPool.java commons-pool-1.2-patched/src/java/org/apache/commons/pool/impl/StackObjectPool.java
+--- commons-pool-1.2/src/java/org/apache/commons/pool/impl/StackObjectPool.java	2004-06-07 13:40:52.000000000 -0400
++++ commons-pool-1.2-patched/src/java/org/apache/commons/pool/impl/StackObjectPool.java	2005-12-08 00:14:08.000000000 -0500
+@@ -196,10 +196,10 @@
+     public synchronized void clear() {
+         assertOpen();
+         if(null != _factory) {
+-            Enumeration enum = _pool.elements();
+-            while(enum.hasMoreElements()) {
++            Enumeration my_enum = _pool.elements();
++            while(my_enum.hasMoreElements()) {
+                 try {
+-                    _factory.destroyObject(enum.nextElement());
++                    _factory.destroyObject(my_enum.nextElement());
+                 } catch(Exception e) {
+                     // ignore error, keep destroying the rest
+                 }
