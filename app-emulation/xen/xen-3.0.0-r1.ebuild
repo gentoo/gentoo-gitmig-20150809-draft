@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0.ebuild,v 1.2 2005/12/07 15:35:47 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0-r1.ebuild,v 1.1 2005/12/08 12:46:11 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -100,6 +100,10 @@ src_install() {
 	if use screen; then
 		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' ${D}/etc/init.d/xendomains
 	fi
+
+	# xend expects these to exist
+	dodir /var/run/xenstored
+	dodir /var/lib/xenstored
 }
 
 pkg_postinst() {
