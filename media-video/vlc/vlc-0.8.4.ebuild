@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.1 2005/11/27 15:00:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.2 2005/12/08 12:29:51 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdda ogg matroska
+IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
 mp3 xv bidi sdl png xml2 samba daap corba screen mod speex nsplugin shout real
@@ -99,11 +99,7 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	if use wxwindows; then
 		WX_GTK_VER="2.6"
-		if use unicode; then
-			need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
-		else
-			need-wxwidgets gtk2 || die "You need to install wxGTK with gtk2 support."
-		fi
+		need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
 	fi
 }
 
@@ -148,7 +144,6 @@ src_compile () {
 
 	econf \
 		$(use_enable altivec) \
-		$(use_enable unicode utf8) \
 		$(use_enable stream sout) \
 		$(use_enable httpd) \
 		$(use_enable vlm) \
@@ -208,6 +203,7 @@ src_compile () {
 		--disable-hal \
 		--disable-x264 \
 		--disable-bonjour \
+		--enable-utf8 \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
