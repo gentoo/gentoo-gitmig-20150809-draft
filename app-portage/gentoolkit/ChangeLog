@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.60 2005/11/23 19:05:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.61 2005/12/08 00:29:35 fuzzyray Exp $
+
+*gentoolkit-0.2.1_rc3 (08 Dec 2005)
+
+  08 Dec 2005; Paul Varner <fuzzyray@gentoo.org>
+  -gentoolkit-0.2.1_rc1.ebuild, +gentoolkit-0.2.1_rc3.ebuild:
+  Fix revdep-rebuild to work with findutils-4.2.27, remove python-config call.
+  Bugs #111203, 113386
 
 *gentoolkit-0.2.1_rc2 (23 Nov 2005)
 
