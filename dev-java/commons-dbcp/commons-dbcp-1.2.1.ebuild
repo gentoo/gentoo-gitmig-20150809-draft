@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1.ebuild,v 1.9 2005/07/10 13:48:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1.ebuild,v 1.10 2005/12/08 14:02:41 nichoj Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ RDEPEND=">=virtual/jre-1.3
 		>=dev-java/commons-collections-2.0
 		>=dev-java/commons-pool-1.1"
 DEPEND=">=virtual/jdk-1.3
-		>=dev-java/ant-1.4
+		>=dev-java/ant-core-1.4
 		${RDEPEND}
 		source? ( app-arch/zip )
 		jikes? ( dev-java/jikes )"
