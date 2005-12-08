@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.ebuild,v 1.2 2005/12/04 20:50:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.ebuild,v 1.3 2005/12/08 20:08:16 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -74,6 +74,13 @@ pkg_postinst() {
 		ewarn "emerge --config =${CATEGORY}/${PF}"
 		ewarn "That way you can [re]enter your cdkey."
 	fi
+	einfo "Starting with 3369, the game supports render-to-texture.  To enable"
+	einfo "it, you will need the Nvidia drivers of at least version 7676 and"
+	einfo "you should edit the following:"
+	einfo 'Set "UseRenderTargets=True" in the "[OpenGLDrv.OpenGLRenderDevice]"'
+	einfo 'section of your UT2004.ini/Default.ini and set "bPlayerShadows=True"'
+	einfo 'and "bBlobShadow=False" in the "[UnrealGame.UnrealPawn]" section of'
+	einfo 'your	User.ini/DefUser.ini'
 	echo
 	einfo "To play the game run:"
 	einfo " ut2004"

@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.34 2005/12/07 22:26:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.35 2005/12/08 20:08:16 wolf31o2 Exp $
+
+  08 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369.ebuild:
+  Added einfo about render-to-texture.
 
   07 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -ut2004-3355-r2.ebuild:
