@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.35 2005/12/05 17:32:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.36 2005/12/08 00:19:21 vapier Exp $
+
+*pax-utils-0.1.5 (08 Dec 2005)
+
+  08 Dec 2005; Mike Frysinger <vapier@gentoo.org> +pax-utils-0.1.5.ebuild:
+  Have dumpelf show .comment/.interp sections, properly set shdr/phdr to NULL
+  when an ELF lacks them, fix #e usage, and add support for parsing
+  .note.GNU-stack in object files.
 
   05 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   pax-utils-0.1.4.ebuild:
