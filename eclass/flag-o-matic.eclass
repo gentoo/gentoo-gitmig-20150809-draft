@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.95 2005/10/13 05:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.96 2005/12/08 12:16:12 azarah Exp $
 
 
 # need access to emktemp()
@@ -295,12 +295,41 @@ strip-flags() {
 	return 0
 }
 
+test-flag-PROG() {
+	local comp=$1
+	local flags="$2"
+
+	[[ -z ${comp} || -z ${flags} ]] && \
+		return 1
+
+	local PROG=$(tc-get${comp})
+	${PROG} ${flags} -S -o /dev/null -xc /dev/null \
+		> /dev/null 2>&1
+}
+
+# Returns true if C compiler support given flag
+test-flag-CC() { test-flag-PROG "CC" "$1"; }
+
+# Returns true if C++ compiler support given flag
+test-flag-CXX() { test-flag-PROG "CXX" "$1"; }
+
+test-flags() {
+	local x
+	
+	for x in "$@" ; do
+		test-flag-CC "${x}" || return 1
+	done
+
+	echo "$@"
+
+	return 0
+}
+
+# Depriciated, use test-flags()
 test_flag() {
-	if $(tc-getCC) -S -xc "$@" -o "$(emktemp)" /dev/null &>/dev/null; then
-		printf "%s\n" "$*"
-		return 0
-	fi
-	return 1
+	ewarn "test_flag: deprecated, please use test-flags()!" >/dev/stderr
+
+	test-flags "$@"
 }
 
 test_version_info() {
@@ -315,10 +344,10 @@ strip-unsupported-flags() {
 	local x NEW_CFLAGS NEW_CXXFLAGS
 
 	for x in ${CFLAGS} ; do
-		NEW_CFLAGS="${NEW_CFLAGS} $(test_flag ${x})"
+		NEW_CFLAGS="${NEW_CFLAGS} $(test-flags ${x})"
 	done
 	for x in ${CXXFLAGS} ; do
-		NEW_CXXFLAGS="${NEW_CXXFLAGS} $(test_flag ${x})"
+		NEW_CXXFLAGS="${NEW_CXXFLAGS} $(test-flags ${x})"
 	done
 
 	export CFLAGS=${NEW_CFLAGS}
@@ -344,51 +373,56 @@ get-flag() {
 
 # DEPRECATED - use gcc-specs-relro or gcc-specs-now from toolchain-funcs
 has_hardened() {
+	ewarn "has_hardened: deprecated, please use gcc-specs-{relro,now}()!" \
+		>/dev/stderr
+	
 	test_version_info Hardened && return 0
-	# the specs file wont exist unless gcc has GCC_SPECS support
-	[ -f "${GCC_SPECS}" -a "${GCC_SPECS}" != "${GCC_SPECS/hardened/}" ] && \
-		return 0
-	return 1
+	# The specs file wont exist unless gcc has GCC_SPECS support
+	[[ -f ${GCC_SPECS} && ${GCC_SPECS} != ${GCC_SPECS/hardened/} ]]
 }
 
 # DEPRECATED - use gcc-specs-pie from toolchain-funcs
 # indicate whether PIC is set
 has_pic() {
-	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
-	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
-	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
-	return 1
+	ewarn "has_pic: deprecated, please use gcc-specs-pie()!" >/dev/stderr
+	
+	[[ ${CFLAGS/-fPIC} != ${CFLAGS} || \
+	   ${CFLAGS/-fpic} != ${CFLAGS} || \
+	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__) ]]
 }
 
 # DEPRECATED - use gcc-specs-pie from toolchain-funcs
 # indicate whether PIE is set
 has_pie() {
-	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
-	[ "${CFLAGS/-fpie}" != "${CFLAGS}" ] && return 0
-	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__)" ] && return 0
+	ewarn "has_pie: deprecated, please use gcc-specs-pie()!" >/dev/stderr
+	
+	[[ ${CFLAGS/-fPIE} != ${CFLAGS} || \
+	   ${CFLAGS/-fpie} != ${CFLAGS} || \
+	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__) || \
+	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__) ]]
 	# test PIC while waiting for specs to be updated to generate __PIE__
-	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
-	return 1
 }
 
 # DEPRECATED - use gcc-specs-ssp from toolchain-funcs
 # indicate whether code for SSP is being generated for all functions
 has_ssp_all() {
+	ewarn "has_ssp_all: deprecated, please use gcc-specs-ssp()!" >/dev/stderr
+	
 	# note; this matches only -fstack-protector-all
-	[ "${CFLAGS/-fstack-protector-all}" != "${CFLAGS}" ] && return 0
-	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__)" ] && return 0
-	gcc-specs-ssp && return 0
-	return 1
+	[[ ${CFLAGS/-fstack-protector-all} != ${CFLAGS} || \
+	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__) ]] || \
+	gcc-specs-ssp
 }
 
 # DEPRECATED - use gcc-specs-ssp from toolchain-funcs
 # indicate whether code for SSP is being generated
 has_ssp() {
+	ewarn "has_ssp: deprecated, please use gcc-specs-ssp()!" >/dev/stderr
+	
 	# note; this matches both -fstack-protector and -fstack-protector-all
-	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
-	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP__)" ] && return 0
-	gcc-specs-ssp && return 0
-	return 1
+	[[ ${CFLAGS/-fstack-protector} != ${CFLAGS} || \
+	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP__) ]] || \
+	gcc-specs-ssp
 }
 
 has_m64() {
@@ -396,13 +430,14 @@ has_m64() {
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
 	# clean-up!
+	
 	local temp="$(emktemp)"
-	echo "int main() { return(0); }" > ${temp}.c
+	echo "int main() { return(0); }" > "${temp}".c
 	MY_CC=$(tc-getCC)
-	${MY_CC/ .*/} -m64 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
+	${MY_CC/ .*/} -m64 -o "$(emktemp)" "${temp}".c > /dev/null 2>&1
 	local ret=$?
-	rm -f ${temp}.c
-	[ "$ret" != "1" ] && return 0
+	rm -f "${temp}".c
+	[[ ${ret} != 1 ]] && return 0
 	return 1
 }
 
@@ -420,7 +455,7 @@ has_m32() {
 	${MY_CC/ .*/} -m32 -o "$(emktemp)" "${temp}".c > /dev/null 2>&1
 	local ret=$?
 	rm -f "${temp}".c
-	[ "$ret" != "1" ] && return 0
+	[[ ${ret} != 1 ]] && return 0
 	return 1
 }
 
