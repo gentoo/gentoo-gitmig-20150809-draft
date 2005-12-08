@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/hfsplusutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.5 2005/11/02 18:43:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.6 2005/12/08 22:29:56 hansmi Exp $
+
+  08 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  -hfsplusutils-1.0.4.ebuild, hfsplusutils-1.0.4-r1.ebuild:
+  Fixed URLs, removed old revision.
 
   02 Nov 2005; Joseph Jezak <josejx@gentoo.org>
   +files/hfsplusutils-1.0.4-gcc4.patch, hfsplusutils-1.0.4-r1.ebuild:

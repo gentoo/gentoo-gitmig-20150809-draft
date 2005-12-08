@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.9 2005/11/02 18:43:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.10 2005/12/08 22:29:56 hansmi Exp $
 
 inherit eutils libtool
 
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (a PPC filesystem)"
-HOMEPAGE="http://ftp.penguinppc.org/users/hasi/"
-SRC_URI="http://ftp.penguinppc.org/users/hasi/${MY_P}.src.tar.bz2"
+HOMEPAGE="http://penguinppc.org/historical/hfsplus/"
+SRC_URI="http://penguinppc.org/historical/hfsplus/${MY_P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

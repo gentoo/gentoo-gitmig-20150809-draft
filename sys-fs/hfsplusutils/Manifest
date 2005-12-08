@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59428bf8fe96bf6147e6ef6ded0c0cb3 ChangeLog 1708
-MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4 70
-MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4-r1 70
-MD5 55d48aa8e0ed10af513c1ccf3afeb25f files/hfsplusutils-1.0.4-errno.patch 445
-MD5 f45b66e6839b6543e0e50d725f4b63ee files/hfsplusutils-1.0.4-gcc4.patch 6221
-MD5 04d73b3a534085a657c52eee99c5e1d4 files/hfsplusutils-1.0.4-glob.patch 288
-MD5 4b1af0fc26c9a73fe18539952b50e818 hfsplusutils-1.0.4-r1.ebuild 1287
-MD5 95ca097cbec83084b6470a520c23f60e hfsplusutils-1.0.4.ebuild 1029
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDaQjGcsIHjyDViGQRAgPzAJ9p73okM4b/pzxSmAxMIuGPVe9BWQCfXeBn
-vbYiwJjXL1Ss9UWS+aguPO4=
-=1miG
------END PGP SIGNATURE-----
+MD5 664fcddb9c73407e2ee93f6305c9b404 ChangeLog 1859
+MD5 f457ca9a7768bcf14388f944e8a66c00 hfsplusutils-1.0.4-r1.ebuild 1296
+MD5 f45b66e6839b6543e0e50d725f4b63ee files/hfsplusutils-1.0.4-gcc4.patch 6221
+MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4-r1 70
+MD5 04d73b3a534085a657c52eee99c5e1d4 files/hfsplusutils-1.0.4-glob.patch 288
+MD5 55d48aa8e0ed10af513c1ccf3afeb25f files/hfsplusutils-1.0.4-errno.patch 445
