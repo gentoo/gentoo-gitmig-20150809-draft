@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.12.0.ebuild,v 1.1 2005/09/10 02:55:46 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.12.0.ebuild,v 1.2 2005/12/08 15:57:50 dang Exp $
 
 inherit eutils gnome2
 
@@ -18,13 +18,20 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/libgnomeui-2.2
 	>=sys-apps/tcp-wrappers-7.6
 	>=gnome-base/gconf-2
-	gnome-base/gnome-keyring"
+	gnome-base/gnome-keyring
+	|| ( (
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXau )
+	virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.10.40
 	>=dev-util/pkgconfig-0.17
 	dev-util/intltool
 	!gnome-base/gnome-core"
+
+
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
 
