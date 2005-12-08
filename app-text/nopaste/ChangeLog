@@ -1,0 +1,10 @@
+# ChangeLog for app-text/nopaste
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/ChangeLog,v 1.1 2005/12/08 17:29:13 agriffis Exp $
+
+*nopaste-1252 (08 Dec 2005)
+
+  08 Dec 2005; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +nopaste-1252.ebuild:
+  Add new ebuild for nopaste, a command-line interface to rafb.net/paste
+
