@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.7.ebuild,v 1.1 2005/12/02 01:06:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.7.ebuild,v 1.2 2005/12/08 06:05:55 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -8,7 +8,7 @@ BV_X86=0.8.1
 BV_PPC=0.8.15
 BV_SPARC=0.8.15
 BV_MIPS=0.7.10
-BV_AMD64=0.8.19
+BV_AMD64=0.9.7
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
 HOMEPAGE="http://sbcl.sourceforge.net/"

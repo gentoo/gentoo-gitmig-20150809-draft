@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.76 2005/12/02 02:51:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.77 2005/12/08 06:05:55 mkennedy Exp $
+
+  07 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.9.7.ebuild:
+  Upgrade bootstrap compiler for AMD64 to 0.9.7; Resolves Bug #114259.
 
   02 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/0.9.3/README.Gentoo,
