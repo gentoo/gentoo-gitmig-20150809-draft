@@ -1,0 +1,11 @@
+diff --exclude='*~' -Naur aircrack-2.41.orig/linux/sha1-mmx.S aircrack-2.41/linux/sha1-mmx.S
+--- aircrack-2.41.orig/linux/sha1-mmx.S	2005-11-12 09:00:00.000000000 -0200
++++ aircrack-2.41/linux/sha1-mmx.S	2005-12-08 00:17:05.000000000 -0200
+@@ -355,3 +355,7 @@
+         ret
+ 
+ #endif
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif

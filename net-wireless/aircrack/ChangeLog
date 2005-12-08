@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/aircrack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/ChangeLog,v 1.15 2005/11/23 19:28:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/ChangeLog,v 1.16 2005/12/08 22:45:27 vanquirius Exp $
+
+*aircrack-2.41-r1 (08 Dec 2005)
+
+  08 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/aircrack-2.41-stack.diff, +aircrack-2.41-r1.ebuild:
+  Patch to fix executable stack, see bug 114666. Thanks to Matt Whitlock
+  <mwhitlock at whitsoftdev dot com> for reporting.
 
 *aircrack-2.41 (23 Nov 2005)
 
