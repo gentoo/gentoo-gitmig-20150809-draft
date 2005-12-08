@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.43 2005/10/22 14:16:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.44 2005/12/08 00:22:08 pebenito Exp $
+
+*selinux-base-policy-20051022-r1 (08 Dec 2005)
+
+  08 Dec 2005; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-base-policy-20051022-r1.ebuild:
+  Change to use compatability genhomedircon. Newer policycoreutils (1.28)
+  breaks the backwards compatability this policy uses.
 
 *selinux-base-policy-20051022 (22 Oct 2005)
 
