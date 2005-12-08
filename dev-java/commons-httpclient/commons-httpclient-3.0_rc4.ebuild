@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0_rc4.ebuild,v 1.1 2005/11/02 14:24:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0_rc4.ebuild,v 1.2 2005/12/08 11:50:40 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.3
 
 DEPEND=">=virtual/jdk-1.3
 	sys-apps/sed
-	>=dev-java/ant-1.4
+	>=dev-java/ant-core-1.4
 	junit? ( dev-java/junit )
 	source? ( app-arch/zip )
 	${RDEPEND}"
@@ -34,7 +34,7 @@ src_unpack() {
 	mkdir lib && cd lib
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from commons-codec
-	java-pkg_jar-from junit
+	use junit && java-pkg_jar-from junit
 }
 
 src_compile() {

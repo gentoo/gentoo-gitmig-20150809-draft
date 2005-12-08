@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.24 2005/11/11 23:00:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.25 2005/12/08 11:50:40 betelgeuse Exp $
+
+  08 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  commons-httpclient-3.0_rc4.ebuild:
+  commons-httpclient only needs ant-core to compile instead of full ant. Part
+  of bug #110337.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   commons-httpclient-2.0.2.ebuild:
