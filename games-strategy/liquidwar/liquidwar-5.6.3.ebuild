@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.1 2005/12/01 04:32:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.2 2005/12/08 17:00:09 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -10,10 +10,10 @@ SRC_URI="http://savannah.nongnu.org/download/liquidwar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
-DEPEND=">media-libs/allegro-4.0"
+DEPEND=">=media-libs/allegro-4.2"
 
 src_unpack() {
 	unpack ${A}

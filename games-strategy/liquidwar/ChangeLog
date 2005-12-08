@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.12 2005/12/01 04:32:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.13 2005/12/08 17:00:09 mr_bones_ Exp $
+
+  08 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  liquidwar-5.6.3.ebuild:
+  fix the deps (bug #114196)
 
 *liquidwar-5.6.3 (01 Dec 2005)
 
