@@ -1,14 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 65d17ac13eef90dadb0dc0d9ecc7cac0 ChangeLog 3290
-MD5 10302f1464f3d8c0dc5fcddb26536441 cmucl-19b.ebuild 4848
+MD5 1f353266e9ad1b0651217d1e48455ac5 ChangeLog 3623
 MD5 93ccb861f2d7f46f773ced90f3ed61ca cmucl-18e-r4.ebuild 2963
 MD5 06e069d6d55039826fdd58ce9222ffa2 cmucl-19a-r1.ebuild 4683
-MD5 929688a2167434e2a4f0169de47e7428 metadata.xml 1107
-MD5 a7972648eda13df8cec3a330f29a45b9 files/digest-cmucl-19b 239
-MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r4 137
-MD5 6d03d3afa9c49f60a0aaa0e71597cfba files/digest-cmucl-19a-r1 240
+MD5 10302f1464f3d8c0dc5fcddb26536441 cmucl-19b.ebuild 4848
+MD5 6f9452314110a9d40614e6e89e16e663 cmucl-19c.ebuild 5114
 MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/18e/README.Gentoo 848
 MD5 306ba9e5615290fb688a46f7c0efdc07 files/18e/herald-save.lisp-gentoo.patch 751
 MD5 379cf3aca883a7097c0410f96be55378 files/18e/install-clc.lisp-gentoo.patch 1294
@@ -23,10 +20,20 @@ MD5 14ccb382eaa0a2c94834328a413cc906 files/19b/cmucl.sh 2701
 MD5 4db43f75da9d79658837b4ce0e7be3bb files/19b/herald-save.lisp-gentoo.patch 831
 MD5 b23a0a0d355d92b1a2123de8acd61418 files/19b/install-clc.lisp 1749
 MD5 190f38f6f6f33f3e1ceee848d2583573 files/19b/site-init.lisp.in 1935
+MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/19c/README.Gentoo 848
+MD5 14ccb382eaa0a2c94834328a413cc906 files/19c/cmucl.sh 2701
+MD5 c210b06bf993a0933938064db9c6f8ee files/19c/herald-save.lisp-gentoo.patch 830
+MD5 b23a0a0d355d92b1a2123de8acd61418 files/19c/install-clc.lisp 1749
+MD5 190f38f6f6f33f3e1ceee848d2583573 files/19c/site-init.lisp.in 1935
+MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r4 137
+MD5 6d03d3afa9c49f60a0aaa0e71597cfba files/digest-cmucl-19a-r1 240
+MD5 a7972648eda13df8cec3a330f29a45b9 files/digest-cmucl-19b 239
+MD5 764f277b179f1114309842862b1d79b0 files/digest-cmucl-19c 239
+MD5 929688a2167434e2a4f0169de47e7428 metadata.xml 1107
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDA/WYyiNZaEAZA+ARAvcyAJ4zBBMQcMgPFp+DGmQaa/C0sTNxJACeMGbg
-aX40rtZBVmc4p72WIOrQPPM=
-=zehu
+iD8DBQFDl+DUyiNZaEAZA+ARAvzpAJ40x7UlMdxgf5zBtqQfSuLmd2dLYwCbB5B6
+4f0PPh+Ax2nAMRfeBPCSkto=
+=D3V0
 -----END PGP SIGNATURE-----
