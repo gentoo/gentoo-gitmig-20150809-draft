@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.39 2005/12/02 10:45:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.40 2005/12/08 18:31:59 killerfox Exp $
+
+  08 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> pyrex-0.9.3-r2.ebuild:
+  Stable on hppa.
 
   02 Dec 2005; Alastair Tse <liquidx@gentoo.org> pyrex-0.9.3-r2.ebuild:
   stable for x86
