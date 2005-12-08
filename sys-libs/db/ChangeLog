@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.142 2005/12/07 03:30:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.143 2005/12/08 04:36:10 halcy0n Exp $
+
+  08 Dec 2005; Mark Loeser <halcy0n@gentoo.org> db-4.2.52_p2-r1.ebuild:
+  Stable on x86; bug #105380
 
   07 Dec 2005; <dang@gentoo.org> db-4.2.52_p2-r1.ebuild:
   Marked stable on amd64
