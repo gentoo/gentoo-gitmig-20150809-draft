@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r3.ebuild,v 1.4 2005/11/25 17:19:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r3.ebuild,v 1.5 2005/12/08 14:54:31 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -12,7 +12,6 @@ stripdots() {
 
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
 MYSQL_VERSION_ID=$(stripdots "5.00.16.00")
-PROTOCOL_VERSION=10
 NDB_VERSION_ID=50016
 #major, minor only in the slot
 SLOT=0
@@ -238,21 +237,29 @@ src_unpack() {
 	find . -name 'Makefile.am' \
 		-exec sed --in-place -e 's!$(pkgdatadir)!'${MY_SHAREDSTATEDIR}'!g' {} \;
 
+	# Manage mysqlmanager
+	mysql_version_is_at_least "5.00.15.00" \
+	&& sed -i -e "s!@GENTOO_EXT@!${MY_SUFFIX}!g" \
+		-e "s!@GENTOO_SOCK_PATH@!var/run/mysqld!g" \
+		"${S}/server-tools/instance-manager/Makefile.am"
+
 	# remove what need to be recreated, so we are sure it's actually done
-	find . -name Makefile -o -name Makefile.in -o -name configure -exec rm {} \;
+	find . -name Makefile -o -name Makefile.in -o -name configure -exec rm -f {} \;
 	rm ltmain.sh
 
-	local rebuilddirlist dl buildstep
+	local rebuilddirlist d buildstep bdbdir
 
 	if mysql_version_is_at_least "5.01.00.00" ; then
-		rebuilddirlist=( '.' 'storage/innobase' )
+		rebuilddirlist=". storage/innobase"
+		bdbdir='storage/bdb/dist'
 	else
-		rebuilddirlist=( '.' 'innobase' )
+		rebuilddirlist=". innobase"
+		bdbdir='bdb/dist'
 	fi
 
-	for dl in ${!rebuilddirlist[@]}; do
-		einfo "reconfiguring phase $(( ${dl} + 1 )) of ${#rebuilddirlist[@]}"
-		pushd "${rebuilddirlist[${dl}]}"
+	for d in ${rebuilddirlist}; do
+		einfo "reconfiguring dir \"${d}\""
+		pushd "${d}"
 		for buildstep in \
 			'libtoolize --copy --force' \
 			'aclocal --force' \
@@ -262,14 +269,16 @@ src_unpack() {
 			'gnuconfig_update'
 		do
 			einfo "performing ${buildstep}"
-			${buildstep} || die "failed ${buildstep/ */} ${rebuilddirlist[${dl}]}"
+			${buildstep} || die "failed ${buildstep/ */} dir \"${d}\""
 		done
 		popd
 	done
 
-	[[ -w bdb/dist/ltmain.sh ]] && cp ltmain.sh bdb/dist/ltmain.sh
-	pushd bdb/dist && sh s_all || die "failed bdb reconfigure"
-	popd
+	if ! mysql_check_version_range "5.01.00.00 to 5.01.06.99" ; then
+		[[ -w "${bdbdir}/ltmain.sh" ]] && cp ltmain.sh "${bdbdir}/ltmain.sh"
+		pushd "${bdbdir}" && sh s_all || die "failed bdb reconfigure"
+		popd
+	fi
 
 	# Temporary workaround for bug in test suite, a correct solution
 	# should work inside the include files to enable/disable the tests
@@ -372,8 +381,10 @@ src_compile() {
 		#The following fix is due to a bug with bdb on sparc's. See:
 		#http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 		# it comes down to non-64-bit safety problems
-		if useq sparc || useq alpha || useq hppa || useq mips || useq amd64
+		if useq sparc || useq alpha || useq hppa || useq mips || useq amd64 \
+		|| mysql_check_version_range "5.01.00.00 to 5.01.06.99"
 		then
+			ewarn "bdb berkeley-db disabled due to arch or version"
 			myconf="${myconf} --without-berkeley-db"
 		else
 			useq berkdb \
@@ -400,17 +411,25 @@ src_compile() {
 		# http://dev.mysql.com/doc/mysql/en/archive-storage-engine.html
 		myconf="${myconf} --with-archive-storage-engine"
 		# http://dev.mysql.com/doc/mysql/en/csv-storage-engine.html
+
 		mysql_version_is_at_least "4.01.04.00" \
 		&& myconf="${myconf} --with-csv-storage-engine"
+
+		mysql_version_is_at_least "4.01.11.00" \
+		&&  myconf="${myconf} --with-blackhole-storage-engine"
+
 		# http://dev.mysql.com/doc/mysql/en/federated-description.html
 		# http://dev.mysql.com/doc/mysql/en/federated-limitations.html
 		if mysql_version_is_at_least "5.00.03.00" ; then
 			einfo "before to use federated engine be sure to read"
-			einfo "http://dev.mysql.com/doc/mysql/en/federated-limitations.html"
+			einfo "http://dev.mysql.com/doc/refman/5.0/en/federated-limitations.html"
 			myconf="${myconf} --with-federated-storage-engine"
+
+			# http://dev.mysql.com/doc/refman/5.1/en/partitioning-overview.html
+			if mysql_version_is_at_least "5.01.00.00" ; then
+				myconf="${myconf} --with-partition"
+			fi
 		fi
-		mysql_version_is_at_least "4.01.11.00" \
-		&&  myconf="${myconf} --with-blackhole-storage-engine"
 	fi
 
 	#glibc-2.3.2_pre fix; bug #16496
@@ -551,7 +570,9 @@ src_install() {
 	doins scripts/mysqlaccess.conf
 	newins "${FILESDIR}/my.cnf-4.1" my.cnf
 	insinto "/etc/conf.d"
-	newins "${FILESDIR}/mysql-slot.conf.d" "mysql"
+	newins "${FILESDIR}/mysql-slot.conf.d-r1" "mysql"
+	mysql_version_is_at_least "5.00.11.00" \
+	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
 
 	local charset='utf8'
 	! useq utf8 && local charset='latin1'
@@ -563,7 +584,9 @@ src_install() {
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-slot.rc6" "mysql"
+		newexe "${FILESDIR}/mysql-slot.rc6-r1" "mysql"
+		mysql_version_is_at_least "5.00.11.00" \
+		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
 		insinto /etc/logrotate.d
 		# TODO
 		newins "${FILESDIR}/logrotate.mysql" "mysql${MY_SUFFIX}"

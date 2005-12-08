@@ -1,6 +1,33 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.274 2005/11/25 17:25:42 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.275 2005/12/08 14:54:31 vivo Exp $
+
+*mysql-5.1.3_alpha-r30 (09 Dec 2005)
+
+  09 Dec 2005; Francesco Riosa <vivo@gentoo.org>
+  mysql-4.1.15-r30.ebuild, mysql-5.0.16-r30.ebuild,
+  +mysql-5.1.3_alpha-r30.ebuild:
+  Time for the new 5.1 version of MySQL, only bug with patches plz.
+  Various changes to the masked slot ebuilds
+
+  09 Dec 2005; Francesco Riosa <vivo@gentoo.org>
+  +files/mysqlmanager-slot.conf.d, +files/mysqlmanager-slot.rc6:
+  feature request Bug #114667 Allow use of mysqlmanager
+  Added two start script for the new mysqlmanager utility included in MySQL-5.0
+  Used only from masked ebuilds at the moment
+
+  09 Dec 2005; Francesco Riosa <vivo@gentoo.org>
+  mysql-4.1.15-r1.ebuild, mysql-5.0.16-r3.ebuild:
+  Compatibility with bash version 2.05, fix bug #114609, thanks Simon
+  Detheridge
+
+  09 Dec 2005; Francesco Riosa <vivo@gentoo.org>
+  +files/mysql-slot.conf.d-r1, +files/mysql-slot.rc6-r1:
+  Modified rc script, left the parsing of my.cnf script again to the server.
+  - Feature request Bug #114621, added "startup_timeout" option
+  - Bug 114742 ignore multiple "replicate-wild-ignore-table" entries in my.cnf
+  - workaround Bug 111809 MySQL 5.0.15 ignores collation-server in my.cnf
+  Thanks to every bug reporter
 
   25 Nov 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15-r1.ebuild:
   ... and btw readding some keywords to 4.1.16-r1 too
