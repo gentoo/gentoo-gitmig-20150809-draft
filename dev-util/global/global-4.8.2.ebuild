@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.8.2.ebuild,v 1.3 2005/04/30 11:19:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.8.2.ebuild,v 1.4 2005/12/08 21:48:19 mkennedy Exp $
 
-inherit elisp
+inherit elisp-common
 
 DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in C, C++, Yacc, Java and assembler sources."
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
@@ -27,6 +27,10 @@ src_compile() {
 		texi2html -o doc/global.html doc/global.txi
 	fi
 
+	if use emacs; then
+		elisp-comp *.el || die
+	fi
+
 	emake || die "emake failed"
 }
 
@@ -49,19 +53,15 @@ src_install() {
 	fi
 
 	if use emacs; then
-	    cp gtags.el ${SITEFILE}
-	    elisp-site-file-install ${SITEFILE}
+		elisp-install gtags *.{el,elc}
+		elisp-site-file-install ${FILESDIR}/${SITEFILE}
 	fi
 }
 
 pkg_postinst() {
-	if use emacs; then
-		elisp-site-regen
-	fi
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
-	if use emacs; then
-		elisp-site-regen
-	fi
+	use emacs && elisp-site-regen
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.15 2005/04/30 11:19:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.16 2005/12/08 21:48:19 mkennedy Exp $
+
+  08 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50gtags-gentoo.el, global-4.8.2.ebuild:
+  Corrected support for Emacs (inherit "elisp-common", not "emacs"); Add Emacs
+  Lisp site-file including autoload; Resolves Bug #110979.
 
   30 Apr 2005; David Holm <dholm@gentoo.org> global-4.8.2.ebuild:
   Readded to ~ppc
