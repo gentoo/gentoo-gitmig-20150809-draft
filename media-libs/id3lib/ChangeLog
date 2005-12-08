@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.35 2005/09/17 22:38:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.36 2005/12/08 22:45:45 flameeyes Exp $
+
+  08 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> id3lib-3.8.3-r4.ebuild:
+  Change the AT_M4DIR to use the full path to fix it when it builds inside
+  zlib sbudir. Closes bug #114913.
 
 *id3lib-3.8.3-r4 (17 Sep 2005)
 

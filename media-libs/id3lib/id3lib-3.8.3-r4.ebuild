@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r4.ebuild,v 1.1 2005/09/17 22:38:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r4.ebuild,v 1.2 2005/12/08 22:45:45 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-autoconf259.patch"
 	epatch "${FILESDIR}/${P}-doxyinput.patch"
 
-	AT_M4DIR="m4" eautoreconf
+	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_compile() {
