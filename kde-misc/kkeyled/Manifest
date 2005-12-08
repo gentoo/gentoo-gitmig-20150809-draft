@@ -1,4 +1,14 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 61444f4fb3dbcc21f33d889cb2ae2842 kkeyled-0.8.11.ebuild 562
-MD5 3753ed9eb5ea592cf4cd373e855e6d06 ChangeLog 1523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2ed4fa1c32152f01695786c19092446 ChangeLog 1615
 MD5 af314199a900893c0eae603cfa37101f files/digest-kkeyled-0.8.11 67
+MD5 ce9d15969c120d0ce22c35fd817332b5 kkeyled-0.8.11.ebuild 568
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDl3h6ntT9W3vfTuoRAtL/AKCc3q1ZczCUdaQ9e7FDxFaAa8+nDACfSNO7
+QdQ/trfHnTXXJorqKt0SM2c=
+=dFQa
+-----END PGP SIGNATURE-----

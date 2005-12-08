@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kkeyled
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.8 2005/09/02 19:50:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.9 2005/12/08 00:03:59 cryos Exp $
+
+  08 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> kkeyled-0.8.11.ebuild:
+  Marked ~amd64.
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> kkeyled-0.8.11.ebuild:
   Stable on ppc.
