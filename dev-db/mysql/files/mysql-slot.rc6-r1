@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r1,v 1.1 2005/12/08 14:54:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r1,v 1.2 2005/12/08 17:44:12 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -225,9 +225,9 @@ start() {
 			[[ ${DEBUG} -ge 2 ]] && echo "starting mysqld with: "${basedir}/sbin/mysqld${MY_SUFFIX} ${unmanagedparams} --basedir=${basedir} --datadir=${datadir} --pid-file=${pidfile} --socket=${socket}
 
 			start-stop-daemon --quiet --start --background \
-				${NICE:+"--nicelevel="}${NICE} \
-				--pidfile="${pidfile}" \
-				--startas ${basedir}/sbin/mysqld${MY_SUFFIX} \
+				${NICE:+"--nicelevel "}${NICE} \
+				--pidfile "${pidfile}" \
+				--exec ${basedir}/sbin/mysqld${MY_SUFFIX} \
 				-- \
 					${MY_CNF:+"--defaults-file="}${MY_CNF} \
 					${unmanagedparams} \

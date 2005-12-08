@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.275 2005/12/08 14:54:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.276 2005/12/08 17:44:11 vivo Exp $
+
+  08 Dec 2005; Francesco Riosa <vivo@gentoo.org> files/mysql-slot.rc6-r1,
+  files/mysqlmanager-slot.rc6:
+  start-stop-script enhancements after a talk with UberLord in irc
 
 *mysql-5.1.3_alpha-r30 (09 Dec 2005)
 
