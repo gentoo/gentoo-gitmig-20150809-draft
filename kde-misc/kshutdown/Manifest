@@ -1,7 +1,17 @@
-MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
-MD5 f1f1dd07d709ef837a7363dabc722cce kshutdown-0.8.ebuild 539
-MD5 c604ebbbe46908aecdac2ade60e342e1 ChangeLog 1065
-MD5 7e7062106494e118a03cdc51a8a18c3d kshutdown-0.6.0.ebuild 601
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4a058b42c450ab63e9a4810bae06b85 ChangeLog 1156
 MD5 84ede688edce48bdffbd9ae801575289 files/digest-kshutdown-0.6.0 68
-MD5 97e80e69f35ea1528ac7f174bc01a6f8 files/kshutdown-0.6.0-makefile-fix.patch 660
 MD5 1ec921407b2cd8aa427ad8614999329e files/digest-kshutdown-0.8 66
+MD5 97e80e69f35ea1528ac7f174bc01a6f8 files/kshutdown-0.6.0-makefile-fix.patch 660
+MD5 7e7062106494e118a03cdc51a8a18c3d kshutdown-0.6.0.ebuild 601
+MD5 4183df9fd797d147abb058dc59b3d642 kshutdown-0.8.ebuild 545
+MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDl321ntT9W3vfTuoRAjGPAKCK8e4cQ9OqAqwvB2dsMqG24rB+NACaAxay
+qD0230N6/GP7l3qW4iv/b14=
+=bjVd
+-----END PGP SIGNATURE-----
