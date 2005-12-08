@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.6.15.ebuild,v 1.2 2005/09/26 16:06:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.6.15.ebuild,v 1.3 2005/12/08 19:26:39 liquidx Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ipython.scipy.org/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~s390 ~x86"
+KEYWORDS="~amd64 ~ppc ~s390 x86"
 IUSE="gnuplot"
 
 DEPEND="virtual/python"
