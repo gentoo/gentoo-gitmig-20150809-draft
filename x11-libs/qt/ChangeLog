@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.266 2005/12/04 03:56:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.267 2005/12/08 19:46:16 caleb Exp $
+
+  08 Dec 2005; Caleb Tennis <caleb@gentoo.org> qt-4.1.0_rc1.ebuild:
+  Add a sed statement to make Qt use /usr/XXX instead of /usr/X11R6/XXX
 
   04 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.5.ebuild:
   Updated immodule patch. This closes bug #106386.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0_rc1.ebuild,v 1.2 2005/11/28 15:25:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0_rc1.ebuild,v 1.3 2005/12/08 19:46:16 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -86,8 +86,11 @@ src_unpack() {
 	# Do not link with -rpath. See bug #75181.
 	sed -i -e "s:QMAKE_RPATH.*=.*:QMAKE_RPATH=:" \
 		qmake.conf
-	cd ${S}
 
+	# Replace X11R6/ directories, so /usr/X11R6/lib -> /usr/lib
+	sed -i -e "s:X11R6/::" qmake.conf
+
+	cd ${S}
 	epatch ${FILESDIR}/qt4-nomkdir.patch
 	epatch ${FILESDIR}/qt-4.1.0-configure-no-mysql.diff
 
