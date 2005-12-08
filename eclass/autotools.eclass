@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.25 2005/12/08 15:49:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.26 2005/12/08 22:51:52 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -62,6 +62,7 @@ eautoreconf() {
 		fi
 	done
 
+	einfo "Running eautoreconf in '$(pwd)' ..."
 	eaclocal
 	_elibtoolize --copy --force
 	eautoconf
