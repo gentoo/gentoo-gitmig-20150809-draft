@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.24 2005/10/09 12:00:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.25 2005/12/08 15:49:29 azarah Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -195,10 +195,8 @@ autotools_get_subdirs() {
 
 	echo "${subdirs_scan_out}" | gawk \
 	'($0 !~ /^[[:space:]]*(#|dnl)/) {
-		if (match($0, "AC_CONFIG_SUBDIRS\\(\\[?([^\\])]*)", res)) {
-			split(res[1], DIRS, /[\])]/)
-			print DIRS[1]
-		}
+		if (match($0, /AC_CONFIG_SUBDIRS:(.*)$/, res))
+			print res[1]
 	}' | uniq
 
 	return 0
