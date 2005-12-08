@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.1 2005/07/28 22:10:14 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.2 2005/12/08 12:36:38 ticho Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND=""
 RDEPEND="virtual/libc"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 S="${WORKDIR}/${MY_P%%.*}"
 
 src_unpack() {
