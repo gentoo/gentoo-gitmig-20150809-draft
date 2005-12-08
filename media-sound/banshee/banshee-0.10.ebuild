@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.ebuild,v 1.1 2005/12/07 18:41:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.ebuild,v 1.2 2005/12/08 16:26:28 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="aac doc ipod flac mad real vorbis"
 
-RDEPEND=">=dev-lang/mono-1.1.9.2
+RDEPEND=">=dev-lang/mono-1.1.10
 	>=dev-dotnet/gtk-sharp-2.3.90
 	>=dev-dotnet/gnomevfs-sharp-1.9
 	>=dev-dotnet/gconf-sharp-2.3.90

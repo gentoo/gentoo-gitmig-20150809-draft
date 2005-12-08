@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 8e77bc8585616c4d67ae99c611032b50 ChangeLog 694
-MD5 8c895106517241f3867ab77e0d8f35d3 banshee-0.10.ebuild 2223
+MD5 81d725f5964dbb62b737840b591c4671 banshee-0.10.ebuild 2222
 MD5 2ce464fafc8bffde14c9b0f3effb7d8a banshee-0.9.12.ebuild 2282
 MD5 d2f2f2a8d85cb8505768e3b54519219f files/digest-banshee-0.10 65
 MD5 81d990077b77688af3d905db25b40e55 files/digest-banshee-0.9.12 67
@@ -10,7 +10,7 @@ MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDlyyHwUpWvClEHQoRAtCTAJ9pPXhj+jE3acDxzeAGIzg1mBuajgCfRkJA
-Q1aqGIV+Wy0w3ToTxxYSQx0=
-=xqxx
+iD4DBQFDmF5IwUpWvClEHQoRAuJ8AJ9pTXsRPLJNwUVXMJm+oiv8y9zxKACY8tMu
+iBgkW/gzxfHOTsLwsPyWNA==
+=cdWt
 -----END PGP SIGNATURE-----
