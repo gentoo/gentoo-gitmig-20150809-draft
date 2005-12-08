@@ -1,4 +1,4 @@
-MD5 81c37b4b92ab33300132c68baadb6805 ChangeLog 1627
+MD5 33465894e14d0fc593770e7847224677 ChangeLog 1725
 MD5 dde7a1d6783de856b2070cfa418b0702 files/digest-util-macros-0.99.0 70
 MD5 884fac0897bb4ecc73f3f73633c6d382 files/digest-util-macros-0.99.0_p20051007 80
 MD5 1fb4d5f49ebd2eae4f1a4682a4f2e8a9 files/digest-util-macros-0.99.1 70
@@ -7,4 +7,4 @@ MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f6615566e412f2201fae656b3091afee util-macros-0.99.0.ebuild 438
 MD5 770b7d14461c9d73d51239a0da5d8694 util-macros-0.99.0_p20051007.ebuild 728
 MD5 41001c4d9593ccb40d49c1a9a777d340 util-macros-0.99.1.ebuild 445
-MD5 08ed5f443e68387d50cac475527b3dd6 util-macros-0.99.2.ebuild 445
+MD5 5dbdc6899b153a015d89a6805b677267 util-macros-0.99.2.ebuild 444
