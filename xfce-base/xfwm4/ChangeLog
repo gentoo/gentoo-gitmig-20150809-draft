@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.58 2005/11/06 00:48:14 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.59 2005/12/09 21:16:01 dostrow Exp $
+
+*xfwm4-4.2.3.2 (09 Dec 2005)
+
+  09 Dec 2005; Daniel Ostrow <dostrow@gentoo.org> +xfwm4-4.2.3.2.ebuild:
+  Version bump for xfce-4.2.3.2.
 
   06 Nov 2005; Daniel Ostrow <dostrow@gentoo.org>
   +files/x-modular-composite-version.patch, xfwm4-4.2.2-r1.ebuild:
