@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 538f27f1dbe8581129ca5aa133ef197d ChangeLog 440
+MD5 c44c09a8ea496376fe6244e9c0a1386a cl-cxml-20050625.ebuild 1366
+MD5 a4a6a4f1c40baf47be5eef85466112b3 files/cxml-contrib.asd 243
+MD5 40e649c78f1424e8c231a8d8c5257eb5 files/digest-cl-cxml-20050625 64
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmeVayiNZaEAZA+ARAhGwAJ9v6Nnxdq2MIbEIkPH7SNO0kdyDFgCcDCE7
+rhq9ZNbzyyG/GWv3y/KeQ0g=
+=07hI
+-----END PGP SIGNATURE-----
