@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.5 2005/09/17 00:45:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.6 2005/12/09 22:46:44 tgall Exp $
+
+  09 Dec 2005; Tom Gall <tgall@gentoo.org> powermgmt-base-1.21.ebuild:
+  added ~ppc64
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
@@ -22,5 +25,5 @@
 
   29 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +powermgmt-base-1.21.ebuild:
-  New ebuild thanks to Dennis Nienhüser <fragfred@gmx.de> in bug 76516
+  New ebuild thanks to Dennis NienhÃ¼ser <fragfred@gmx.de> in bug 76516
 

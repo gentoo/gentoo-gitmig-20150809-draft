@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce293c01c84290eb2cabd414c18f09c9 ChangeLog 939
-MD5 5bcbe2d3ffc7443a4d992e09732a7a70 files/digest-powermgmt-base-1.21 70
+MD5 d40898cf2417a8b25f88462d13c1196f ChangeLog 1026
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
-MD5 aee3670916733de98dc6e7f471eb4a09 powermgmt-base-1.21.ebuild 732
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmPKUgIKl8Uu19MoRAg/gAJ9CfEKh3pjufQwnKwBPywLAGgePowCeL4Hn
-pv9c/wDS7vvRIbjQUGQbRqE=
-=5u+z
------END PGP SIGNATURE-----
+MD5 ce8ae9412e6efc45e31876c8ecb54e52 powermgmt-base-1.21.ebuild 738
+MD5 5bcbe2d3ffc7443a4d992e09732a7a70 files/digest-powermgmt-base-1.21 70
