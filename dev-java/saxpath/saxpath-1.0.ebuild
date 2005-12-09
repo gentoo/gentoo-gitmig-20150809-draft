@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.8 2005/07/15 12:46:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.9 2005/12/09 01:03:36 nichoj Exp $
 
 inherit java-pkg
 
@@ -16,8 +16,8 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/xalan
 	>=dev-java/xerces-2.6.2-r1"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
-	junit? ( dev-java/junit )
+	dev-java/ant-core
+	junit? ( dev-java/ant-tasks )
 	${RDEPEND}"
 
 S=${WORKDIR}/${P}-FCS
