@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs-cis
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.4 2005/11/10 13:26:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.5 2005/12/09 15:41:12 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  pcmcia-cs-cis-3.2.8-r1.ebuild:
+  Marked ~ppc for bug #114383.
 
   10 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
   pcmcia-cs-cis-3.2.8-r1.ebuild:
