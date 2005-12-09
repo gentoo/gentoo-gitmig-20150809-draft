@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfontenc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.12 2005/12/09 07:19:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.13 2005/12/09 14:51:05 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -libfontenc-0.99.3.ebuild:
+  Pull old versions.
 
 *libfontenc-0.99.3-r1 (09 Dec 2005)
 
