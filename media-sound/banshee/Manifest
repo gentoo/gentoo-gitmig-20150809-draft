@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 faef9ab5971e47ab56be151feef44278 ChangeLog 1266
-MD5 def89fa05fa19caac1cc53699c4cb36b banshee-0.10-r1.ebuild 2601
+MD5 111fb9fad59acce6def3ad13231bc4aa ChangeLog 1403
+MD5 b937e024b7bc2cff8924389c1d966689 banshee-0.10-r1.ebuild 2647
 MD5 ed84491e71027673bbd291af73919938 banshee-0.10.ebuild 2238
 MD5 2ce464fafc8bffde14c9b0f3effb7d8a banshee-0.9.12.ebuild 2282
 MD5 1c431dc8f1cb2ffc23e88861c3cb8a73 files/banshee-0.10-AudioCdCore.cs.diff 568
@@ -13,7 +13,7 @@ MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmNNBwUpWvClEHQoRAtONAJ9kQ25t3GB5VWxBCq9CE6nwlzgfvQCfSNk1
-I22Equx7McxUW1iFvBeLF8U=
-=AX1D
+iD8DBQFDmbxfwUpWvClEHQoRAkMRAKCDpbsFYiXIlegjbwX5rAVTijvmrACffL5e
+t3P2TD71WaAfljZOmF2RsOg=
+=UnAE
 -----END PGP SIGNATURE-----

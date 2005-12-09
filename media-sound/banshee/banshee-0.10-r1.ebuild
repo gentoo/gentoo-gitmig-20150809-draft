@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10-r1.ebuild,v 1.3 2005/12/09 00:46:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10-r1.ebuild,v 1.4 2005/12/09 17:20:34 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -28,6 +28,7 @@ RDEPEND=">=dev-lang/mono-1.1.10
 	flac? ( =media-plugins/gst-plugins-flac-0.8.11 )
 	aac? ( =media-plugins/gst-plugins-faad-0.8.11
 		>=media-libs/faad2-2.0-r4 )
+	=media-plugins/gst-plugins-cdparanoia-0.8.11
 	>=media-libs/musicbrainz-2.1.1
 	real? ( media-video/realplayer )
 	>=dev-libs/glib-2.0
