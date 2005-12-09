@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.98 2005/12/09 18:40:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.99 2005/12/09 20:43:41 azarah Exp $
 
 
 # need access to emktemp()
@@ -313,24 +313,42 @@ test-flag-CC() { test-flag-PROG "CC" "$1"; }
 # Returns true if C++ compiler support given flag
 test-flag-CXX() { test-flag-PROG "CXX" "$1"; }
 
-test-flags() {
+test-flags-PROG() {
+	local comp=$1
+	local flags
 	local x
+
+	shift
+
+	[[ -z ${comp} ]] && \
+		return 1
 	
 	for x in "$@" ; do
-		test-flag-CC "${x}" || return 1
+		test-flag-${comp} "${x}" && flags="${flags} ${x}"
 	done
 
-	echo "$@"
+	echo "${flags}"
 
-	return 0
+	# Just bail if we dont have any flags
+	[[ -n ${flags} ]]
 }
+
+# Returns (echo's) the given flags supported by the C compiler
+test-flags-CC() { test-flags-PROG "CC" "$@"; }
+
+# Returns (echo's) the given flags supported by the C++ compiler
+test-flags-CXX() { test-flags-PROG "CXX" "$@"; }
+
+# Short-hand that should hopefully work for both C and C++ compiler, but
+# its really only present due to the append-flags() abortion.
+test-flags() { test-flags-CC "$@"; }
 
 # Depriciated, use test-flags()
 test_flag() {
 	addwrite "/dev/stderr"
 	ewarn "test_flag: deprecated, please use test-flags()!" >/dev/stderr
 
-	test-flags "$@"
+	test-flags-CC "$@"
 }
 
 test_version_info() {
