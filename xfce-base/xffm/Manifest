@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 661aae3eeb3863f860150b18736b704b ChangeLog 6340
+MD5 0e0828c88ac433b27d283d7bc0e88613 ChangeLog 6471
 MD5 17d63062c07dc2d9b26b9e0fbcc4c5db files/digest-xffm-4.2.1 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2-r1 63
+MD5 1004eecb6f5fc37bc033b4f87e6ea45d files/digest-xffm-4.2.3 63
 MD5 db40ffdfcb4c71dd7883c97dbea254d4 files/xffm-4.2.1-gcc4.patch 855
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 8c0e95fbe0e57dd74da3f7119ee40019 xffm-4.2.1.ebuild 529
 MD5 f3963081b0ddd901205355c2d0b3efea xffm-4.2.2-r1.ebuild 615
 MD5 46b214d13ba23141abd861a5f020bbf2 xffm-4.2.2.ebuild 525
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDcuIHgIKl8Uu19MoRAqMmAJ9xgWr+isRf8iWGTWRzHXVOBtXGAwCeLoVM
-w8u3xsykpOppfpabtvCmUFw=
-=Dgve
------END PGP SIGNATURE-----
+MD5 f3963081b0ddd901205355c2d0b3efea xffm-4.2.3.ebuild 615
