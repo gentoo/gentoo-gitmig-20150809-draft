@@ -1,6 +1,21 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.277 2005/12/08 17:46:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.278 2005/12/09 18:32:30 vivo Exp $
+
+*mysql-5.0.16-r4 (09 Dec 2005)
+*mysql-4.1.15-r2 (09 Dec 2005)
+
+  09 Dec 2005; Francesco Riosa <vivo@gentoo.org> -mysql-4.1.15-r1.ebuild,
+  +mysql-4.1.15-r2.ebuild, mysql-4.1.15-r30.ebuild, -mysql-5.0.16-r3.ebuild,
+  +mysql-5.0.16-r4.ebuild, mysql-5.0.16-r30.ebuild,
+  mysql-5.1.3_alpha-r30.ebuild:
+  Updated rc script also for 4.1.15 .
+  Stripping C*FLAGS -O[n] with n < 2, those flag has been created problems
+  repeatedly (also on my test boxes).
+  The upstream default is "-O3", all testing here is done with "-O2" so it's
+  possible to consider these ones safe.
+  The same change may be backported also to the other ebuilds (stable 4.0 and
+  4.1)
 
   08 Dec 2005; Francesco Riosa <vivo@gentoo.org> files/mysql-slot.rc6-r1,
   files/mysqlmanager-slot.rc6:

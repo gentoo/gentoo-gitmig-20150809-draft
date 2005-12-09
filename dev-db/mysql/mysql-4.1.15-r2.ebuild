@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r1.ebuild,v 1.4 2005/12/08 14:54:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r2.ebuild,v 1.1 2005/12/09 18:32:30 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -238,6 +238,12 @@ src_unpack() {
 	find . -name 'Makefile.am' \
 		-exec sed --in-place -e 's!$(pkgdatadir)!'${MY_SHAREDSTATEDIR}'!g' {} \;
 
+	# Manage mysqlmanager
+	mysql_version_is_at_least "5.00.15.00" \
+	&& sed -i -e "s!@GENTOO_EXT@!${MY_SUFFIX}!g" \
+		-e "s!@GENTOO_SOCK_PATH@!var/run/mysqld!g" \
+		"${S}/server-tools/instance-manager/Makefile.am"
+
 	# remove what need to be recreated, so we are sure it's actually done
 	find . -name Makefile -o -name Makefile.in -o -name configure -exec rm -f {} \;
 	rm ltmain.sh
@@ -427,6 +433,8 @@ src_compile() {
 		fi
 	fi
 
+	#Bug #114895,Bug #110149
+	filter-flags "-O" "-O[s01]"
 	#glibc-2.3.2_pre fix; bug #16496
 	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
 
@@ -565,7 +573,9 @@ src_install() {
 	doins scripts/mysqlaccess.conf
 	newins "${FILESDIR}/my.cnf-4.1" my.cnf
 	insinto "/etc/conf.d"
-	newins "${FILESDIR}/mysql-slot.conf.d" "mysql"
+	newins "${FILESDIR}/mysql-slot.conf.d-r1" "mysql"
+	mysql_version_is_at_least "5.00.11.00" \
+	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
 
 	local charset='utf8'
 	! useq utf8 && local charset='latin1'
@@ -577,7 +587,9 @@ src_install() {
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-slot.rc6" "mysql"
+		newexe "${FILESDIR}/mysql-slot.rc6-r1" "mysql"
+		mysql_version_is_at_least "5.00.11.00" \
+		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
 		insinto /etc/logrotate.d
 		# TODO
 		newins "${FILESDIR}/logrotate.mysql" "mysql${MY_SUFFIX}"

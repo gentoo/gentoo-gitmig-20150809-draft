@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.3_alpha-r30.ebuild,v 1.1 2005/12/08 14:54:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.3_alpha-r30.ebuild,v 1.2 2005/12/09 18:32:31 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -433,6 +433,8 @@ src_compile() {
 		fi
 	fi
 
+	#Bug #114895,Bug #110149
+	filter-flags "-O" "-O[s01]"
 	#glibc-2.3.2_pre fix; bug #16496
 	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
 
