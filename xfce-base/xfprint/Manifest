@@ -1,4 +1,4 @@
-MD5 9575752ce8046776c55c101878640f64 ChangeLog 6787
+MD5 6522186f7b11c22982bd371c2d1cf63d ChangeLog 6788
 MD5 e14e67d33b928cfcc3be483f8e2547c8 files/digest-xfprint-4.2.1 65
 MD5 1f1fb819d071d1344ba00d62d36dcf1d files/digest-xfprint-4.2.2 65
 MD5 1f1fb819d071d1344ba00d62d36dcf1d files/digest-xfprint-4.2.2-r1 65
@@ -7,4 +7,4 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 6af0235a577815460d6bdaea94110ad2 xfprint-4.2.1.ebuild 446
 MD5 c8052bd66e412ca0e47f282b1f54219f xfprint-4.2.2-r1.ebuild 534
 MD5 d70503e91eab97c90d511af02285e579 xfprint-4.2.2.ebuild 433
-MD5 c8052bd66e412ca0e47f282b1f54219f xfprint-4.2.3.ebuild 534
+MD5 84d2b1a87e16e48a207de01931d469ac xfprint-4.2.3.ebuild 532

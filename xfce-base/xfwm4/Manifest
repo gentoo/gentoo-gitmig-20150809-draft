@@ -1,4 +1,4 @@
-MD5 246cbcfda1fcb2e6976fb47ef078b1aa ChangeLog 6787
+MD5 be583abdf3bfdc157455f2bfde7dfa5e ChangeLog 6787
 MD5 f433bed794a0723e01fefebc6f76c00b files/digest-xfwm4-4.2.1 64
 MD5 f726c307cf362f000682fb4954c9b52d files/digest-xfwm4-4.2.2 64
 MD5 f726c307cf362f000682fb4954c9b52d files/digest-xfwm4-4.2.2-r1 64
@@ -8,4 +8,4 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 eb0a3773150331bf96f0f3568a034136 xfwm4-4.2.1.ebuild 433
 MD5 59b6ad95e49a6dbf83bc48ab779f9ede xfwm4-4.2.2-r1.ebuild 1024
 MD5 25a63b62d347f1267e9db113d8edafcb xfwm4-4.2.2.ebuild 424
-MD5 30861937b7e4a9a7ac8654c642833e29 xfwm4-4.2.3.2.ebuild 875
+MD5 25b86a4fc02872f6dcbc2643d10cff2e xfwm4-4.2.3.2.ebuild 874
