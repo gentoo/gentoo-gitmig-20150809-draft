@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.486 2005/12/08 14:11:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.487 2005/12/09 16:22:50 seemant Exp $
+
+  09 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
+  xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r6.ebuild,
+  xorg-x11-6.8.99.15-r4.ebuild:
+  moved synaptics from x11-misc to x11-drivers
 
   08 Dec 2005; Tom Gall <tgall@gentoo.org> xorg-x11-6.8.2-r6.ebuild:
   stable on ppc64
