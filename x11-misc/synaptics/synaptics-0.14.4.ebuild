@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.4.ebuild,v 1.1 2005/12/09 15:23:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.4.ebuild,v 1.2 2005/12/09 16:02:21 seemant Exp $
 
 inherit toolchain-funcs eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	# Yes, they got the DESTDIR stuff going. And there was much rejoicing.
 	make DESTDIR=${D} install || die
-	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15"
+	if ! has_version "<=x11-base/xorg-x11-6.99"
 	then
 		exeinto /usr/$(get_libdir)/xorg/modules/input
 		doexe synaptics_drv.so
