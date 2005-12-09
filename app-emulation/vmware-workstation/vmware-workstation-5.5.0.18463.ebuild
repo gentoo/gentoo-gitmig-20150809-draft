@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18463.ebuild,v 1.1 2005/11/28 14:33:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18463.ebuild,v 1.2 2005/12/09 21:00:50 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -56,6 +56,8 @@ src_unpack() {
 	cd ${S}
 	# patch the config to not install desktop/icon files
 	epatch ${FILESDIR}/${P}-config.patch
+	# patch the config to make /etc/vmware/config writable
+	epatch ${FILESDIR}/${P}-config2.patch
 #	unpack ${ANY_ANY}.tar.gz
 #	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 #	cd ${S}/${ANY_ANY}
@@ -134,8 +136,10 @@ src_install() {
 	chown -R root:0 ${D} || die
 
 	# this makes the vmware-vmx executable only executable by vmware group
-	fowners root:vmware ${dir}/lib/bin{,-debug}/vmware-vmx || die
+	fowners root:vmware ${dir}/lib/bin{,-debug}/vmware-vmx /etc/vmware/config \
+		|| die "Changing permissions"
 	fperms 4750 ${dir}/lib/bin{,-debug}/vmware-vmx || die
+	fperms 770 /etc/vmware /etc/vmware/config || die
 
 	# this adds udev rules for vmmon*
 	dodir /etc/udev/rules.d
