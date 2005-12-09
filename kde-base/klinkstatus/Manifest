@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d0a05c232439c2c81127188dc237d9b6 ChangeLog 4057
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-klinkstatus-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-klinkstatus-3.4.2 292
@@ -8,3 +11,10 @@ MD5 cb5bf1648cdd6cdc875843165469ba2e klinkstatus-3.4.2.ebuild 426
 MD5 c20300ee761bb0838b8857f7c429cad2 klinkstatus-3.4.3.ebuild 422
 MD5 9871a0566323d1674696f093fc98f547 klinkstatus-3.5.0.ebuild 414
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmR47csIHjyDViGQRAkyrAKCTUefk9xnf1Slmq9bwhkVK2UtUOgCgr0tL
+23PwgWQg/eWhk7mMl3KxqNo=
+=8Edl
+-----END PGP SIGNATURE-----

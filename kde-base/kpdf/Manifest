@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25a01604091fcad7730da341d3dd0921 ChangeLog 5931
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
@@ -26,3 +29,10 @@ MD5 ebc89abef66e42d20df7b64f6e0dc72a kpdf-3.4.3.ebuild 578
 MD5 cc6d38e42e8fbfe20e07805598e357b2 kpdf-3.5.0-r1.ebuild 933
 MD5 8d8d7ccc0f707b75e14d22df3c13f6b6 kpdf-3.5.0.ebuild 836
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmRKKcsIHjyDViGQRAr7jAJ9seP8A9ItP04jr0gQvn9Kl5ls1pQCg0VIh
+TeDSaFzcqxdoBC1HVB3PWIw=
+=Lvfl
+-----END PGP SIGNATURE-----

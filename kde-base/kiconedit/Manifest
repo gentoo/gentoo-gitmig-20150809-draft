@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3130a1603555c4935cc0e0b5367f71e3 ChangeLog 3776
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kiconedit-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kiconedit-3.4.2 300
@@ -8,3 +11,10 @@ MD5 ab55457ffdad53f8593c7826a7dec4af kiconedit-3.4.2.ebuild 397
 MD5 ce8a84ff86b999a186b5c3326996ef47 kiconedit-3.4.3.ebuild 394
 MD5 506f16ecfe12a35b0d9460d8b2cd1d97 kiconedit-3.5.0.ebuild 385
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmROLcsIHjyDViGQRAitXAJ9/3cqm3oJ72JE4eX3KIjXR/+H/0QCfXA2L
+VE/NbSQ543fJTksTEiqQ/yQ=
+=oG1N
+-----END PGP SIGNATURE-----

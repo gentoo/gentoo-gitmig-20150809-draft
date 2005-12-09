@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40118535f00819318d94d7089eea8f6b ChangeLog 4160
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-khexedit-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-khexedit-3.4.2 288
@@ -9,3 +12,10 @@ MD5 4212821034a16dfed2c2f683f6f51ba5 khexedit-3.4.2.ebuild 442
 MD5 8dc9413fc1faf04ddb649cf569cc4331 khexedit-3.4.3.ebuild 439
 MD5 640246e43ae00cf44900de2f19918e52 khexedit-3.5.0.ebuild 381
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmR3dcsIHjyDViGQRAnbMAKDIaG/WIySNPPuhXYvlzfTzz89DZACfQdEW
+Yr9hlJV8yRDfMUmmJztP4OQ=
+=wWaH
+-----END PGP SIGNATURE-----

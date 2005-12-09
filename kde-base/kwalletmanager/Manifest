@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d4cfef7aab7fde3e942aeca8d34e0204 ChangeLog 4027
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kwalletmanager-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kwalletmanager-3.4.2 288
@@ -8,3 +11,10 @@ MD5 9239e1a3c3a8e8be42dd2570fa95daa3 kwalletmanager-3.4.2.ebuild 432
 MD5 0036f8e37aa3aa1e39210d1b8fdc000c kwalletmanager-3.4.3.ebuild 429
 MD5 02e5478f3ce2f69fba687d4b99e2902d kwalletmanager-3.5.0.ebuild 420
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmRzocsIHjyDViGQRAi0+AKCOi8fjmb+Wcejb5DQuvH8/OLuE7wCgyuzb
+3OSQj0QUbWgHsI3vqx0HxqU=
+=7yZb
+-----END PGP SIGNATURE-----

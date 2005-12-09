@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bd550b571d2e514dceaba38f26bf45de ChangeLog 4708
 MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.patch 704
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdegraphics-kfile-plugins-3.4.1 221
@@ -9,3 +12,10 @@ MD5 cd8f32acce0e2541d0481b1b69e7d6fa kdegraphics-kfile-plugins-3.4.2.ebuild 812
 MD5 c55d2978897ea267ec837153a9786424 kdegraphics-kfile-plugins-3.4.3.ebuild 808
 MD5 8a76733fcbe86c040c63a4c081c937ee kdegraphics-kfile-plugins-3.5.0.ebuild 740
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmRIMcsIHjyDViGQRAqAzAJ9oNuCfH6jkDmh7MEXCCmjfGav7HwCfeOC7
+EsC4A+XExZWNT00K7/j7Osk=
+=km8C
+-----END PGP SIGNATURE-----
