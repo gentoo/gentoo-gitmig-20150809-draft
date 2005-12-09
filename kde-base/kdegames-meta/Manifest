@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e7c9485a84f33014dcf778a0450c103d ChangeLog 4382
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.2 0
@@ -8,3 +11,10 @@ MD5 91d7168af2caffd9f91e900cc4d8111f kdegames-meta-3.4.2.ebuild 1877
 MD5 6769aaa6c813592af5af1f332375381e kdegames-meta-3.4.3.ebuild 1873
 MD5 3d0659a4d62b84d453b7c4b031113017 kdegames-meta-3.5.0.ebuild 1865
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmU1+csIHjyDViGQRAtu3AKCfEEmVa03rwbys8IHOyqQhnhr6HgCeKJas
+CRCacNT23ThYZPWHXqMNs1I=
+=p12j
+-----END PGP SIGNATURE-----
