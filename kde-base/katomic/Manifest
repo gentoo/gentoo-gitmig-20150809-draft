@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b199022e370bd3363555edadf09f3d98 ChangeLog 3754
+MD5 c516db8a6da306a25271add46aad9376 ChangeLog 3862
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-katomic-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-katomic-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-katomic-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-katomic-3.5.0 69
 MD5 c33625786e9af17a8fb4a75fa4f0053e katomic-3.4.1.ebuild 542
 MD5 b53bd421e8f19c681dc48b9f56bf99d9 katomic-3.4.2.ebuild 555
-MD5 069c9986d4d9d7e7fd9a1e56b5c0bcf3 katomic-3.4.3.ebuild 551
+MD5 04810b62866448c2c11014e06421518d katomic-3.4.3.ebuild 551
 MD5 a76a1228682483d0afde21eb59aa9b77 katomic-3.5.0.ebuild 506
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDksoCugEuf3OQ0akRAl1qAJ4uVSMr1u4Lh2zCNpVU9dpZj3rIYgCcDmss
-iD4nM973oqN1+hj/SxDUNqs=
-=AMJh
------END PGP SIGNATURE-----

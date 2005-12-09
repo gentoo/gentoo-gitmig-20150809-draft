@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37dd0e83912ed645b27b782a3b9b3247 ChangeLog 4315
+MD5 7b6d6a8877625ff1c319abe4e8ddbda5 ChangeLog 4428
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-konq-plugins-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-konq-plugins-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-konq-plugins-3.4.3 69
 MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-konq-plugins-3.5.0 69
 MD5 c92307aa366e79b8743fd96262ae8f01 konq-plugins-3.4.1.ebuild 657
 MD5 0216edfe2fd1617b1dac5b8bd42668ff konq-plugins-3.4.2.ebuild 672
-MD5 34dc271f1e844a5f232a06efb76dcad8 konq-plugins-3.4.3.ebuild 668
+MD5 43844c028e33c7f87e2b2f174f1daea6 konq-plugins-3.4.3.ebuild 668
 MD5 dc127408c86f567c10b2fd072a9a4606 konq-plugins-3.5.0.ebuild 658
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkuPDugEuf3OQ0akRAkbMAKCh7TAT1Ny+CcfQAOJJeDmgYjMzVgCeI0k/
-XKTcsMke0Kd4fsQpGn/f7c4=
-=HC9G
------END PGP SIGNATURE-----

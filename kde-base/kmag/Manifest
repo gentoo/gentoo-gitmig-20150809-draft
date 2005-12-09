@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 704f24beb604264278380cbef6fedf45 ChangeLog 3607
+MD5 1b234fab0b6a7f2c6f1a8b64f07757ed ChangeLog 3712
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmag-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmag-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmag-3.4.3 76
 MD5 307469289d5167258f2faa3684e12eb2 files/digest-kmag-3.5.0 76
 MD5 19c05d6c1ac39ca43f4b1485ea23586d kmag-3.4.1.ebuild 388
 MD5 c7c8dbe64461ad978a6481c99be2b5f0 kmag-3.4.2.ebuild 401
-MD5 584f6bdd49919d981650615bf32a639d kmag-3.4.3.ebuild 399
+MD5 efed1d90d5e5193e4d5799195325a1fe kmag-3.4.3.ebuild 397
 MD5 06d317984ac3582e32d9834b21061fef kmag-3.5.0.ebuild 389
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkjcbugEuf3OQ0akRAhy7AJ0V1u9piGV8tqmnvm6arqezG6TjewCfUPN/
-6hauc1TROwHrZ8d0r5TKrjk=
-=Idno
------END PGP SIGNATURE-----

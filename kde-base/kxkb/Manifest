@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44cac031c864fb13dad7c0dc7b603d96 ChangeLog 3811
+MD5 116fadbf2ae59837f043667ff931f868 ChangeLog 3916
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kxkb-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kxkb-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kxkb-3.4.3 68
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kxkb-3.5.0 68
 MD5 421bfb1b3a38ff0fa7428dca89981ff3 kxkb-3.4.1.ebuild 399
 MD5 fba2ac6062d3c7e87e6c3762ee19c245 kxkb-3.4.2.ebuild 412
-MD5 fc776c6d9728edb3aa786f29f6571d3b kxkb-3.4.3.ebuild 408
+MD5 38480d1d0f066022e313bbb18ce7fbb8 kxkb-3.4.3.ebuild 408
 MD5 0cd9690b35e6707b663591b1507049e2 kxkb-3.5.0.ebuild 399
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDksStugEuf3OQ0akRAu9fAJ983su35agBVkCni9RLjCe4FTpeMQCfRFsO
-n99gB7iKP+SAJ4LbEA+aW4Y=
-=jnW3
------END PGP SIGNATURE-----

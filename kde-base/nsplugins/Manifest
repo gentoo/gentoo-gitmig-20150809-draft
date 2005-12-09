@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5782ce37047c0f2918722d57948394a ChangeLog 3884
+MD5 ee4f4af11c6608442c979a69fed99743 ChangeLog 3994
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-nsplugins-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-nsplugins-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-nsplugins-3.4.3 68
@@ -9,12 +6,5 @@ MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-nsplugins-3.5.0 68
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2a206743c776af0e8bcf71fba6799322 nsplugins-3.4.1.ebuild 406
 MD5 c5317935094033c492f2bb667d7546ac nsplugins-3.4.2.ebuild 419
-MD5 965740c46615d22c49f308d5a71805d2 nsplugins-3.4.3.ebuild 415
+MD5 fbcf9f4352acda74ba21d6f79287ee6a nsplugins-3.4.3.ebuild 415
 MD5 d4587688042525bd4a88291a42e324c5 nsplugins-3.5.0.ebuild 412
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDksKOugEuf3OQ0akRAu11AJ9BHBU7csVQBA9/YiPvgHLIbe+emwCgk3oo
-ZUQ+3J4cXyWZo1pnDevGHKk=
-=HQ0d
------END PGP SIGNATURE-----

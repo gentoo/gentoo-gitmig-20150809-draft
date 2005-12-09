@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d66969f59a4ba0972d64c0319f8f5022 ChangeLog 3769
+MD5 151c024c720ecaac46b4134d633ebe28 ChangeLog 3878
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-konquest-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-konquest-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-konquest-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-konquest-3.5.0 69
 MD5 8a1f33094b2d436757e9b3f61f27c6b2 konquest-3.4.1.ebuild 541
 MD5 a70d650c93c978fe7aca90c2294b3e25 konquest-3.4.2.ebuild 554
-MD5 262bd7e4132a104f476b066bf4dc5721 konquest-3.4.3.ebuild 550
+MD5 4ba30a50e12d3f41c60f20e45a9181e0 konquest-3.4.3.ebuild 550
 MD5 1c81f2b2b7b228cedf2dcb2a9e8b7fb2 konquest-3.5.0.ebuild 505
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDks2IugEuf3OQ0akRAuKdAJ0SijwaFeAxvcDgCpp2RC+sw5QN7QCffMCs
-hMuJPRBH8Q3v7hjbmiwxezM=
-=fuBs
------END PGP SIGNATURE-----

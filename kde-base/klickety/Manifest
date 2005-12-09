@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2a6e9d3eb938b77acdccf04a579747e ChangeLog 3769
+MD5 8bd1e929e7adde19eeb26f40b6b36efd ChangeLog 3878
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klickety-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klickety-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-klickety-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-klickety-3.5.0 69
 MD5 d52a11b8dd15b07e71dcc44f59d01f8a klickety-3.4.1.ebuild 668
 MD5 5a279a42c6b8fa3cd751fc7d5601137e klickety-3.4.2.ebuild 681
-MD5 69e6e037eff5f3b7329894069d7f2124 klickety-3.4.3.ebuild 677
+MD5 1a1137ab1c240a7f304422b6765693da klickety-3.4.3.ebuild 677
 MD5 3de2a31ddd5a5cebd606368fad94c645 klickety-3.5.0.ebuild 607
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkstyugEuf3OQ0akRAl+cAJ4jxFSMJ2QRsDqk6wMnBNeEW5+XWgCfW/lf
-T+Jpk6/h869YPpQZVTNKpMw=
-=ariq
------END PGP SIGNATURE-----

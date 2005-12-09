@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d167c5c16d36912b704526cfa1035d5d ChangeLog 4125
+MD5 034f9ffc0b31ceac86c679cd0a7172e1 ChangeLog 4235
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkdepim-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkdepim-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkdepim-3.4.3 67
 MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkdepim-3.5.0 67
 MD5 3d81dacf5ddb8f4838c35595882d4376 libkdepim-3.4.1.ebuild 551
 MD5 19370076a7e24292cd8a17415d568838 libkdepim-3.4.2.ebuild 555
-MD5 cd5f1c49689de7400ef04ec93397169d libkdepim-3.4.3.ebuild 551
+MD5 d697664ddf183148c2210398f6acdbba libkdepim-3.4.3.ebuild 551
 MD5 3f74690c6abbd9b2ad37a6a414097e0b libkdepim-3.5.0.ebuild 515
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkA8YugEuf3OQ0akRAvDtAJ9dKhHaeW6gu4DOZOAGKdbZt12/lwCfYcze
-7lkU7wkJ/PBavJvDC7u7zhw=
-=uAxk
------END PGP SIGNATURE-----

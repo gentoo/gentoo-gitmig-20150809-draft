@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a940aecc57b410040116cb4e9dfa635 ChangeLog 3842
+MD5 f1197773bf5cebdf7388c39049863404 ChangeLog 3952
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kfouleggs-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kfouleggs-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kfouleggs-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kfouleggs-3.5.0 69
 MD5 76655851bc58e2362c923a77891742ea kfouleggs-3.4.1.ebuild 703
 MD5 284d5146795cda90a5326e29452d914d kfouleggs-3.4.2.ebuild 716
-MD5 2740bda1956aebe3c5b543d0ea90fd4c kfouleggs-3.4.3.ebuild 712
+MD5 83877d6a568849a57b5b6b046c65f059 kfouleggs-3.4.3.ebuild 712
 MD5 c0336e35dbb0024dd914b30e9ce2e661 kfouleggs-3.5.0.ebuild 642
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDktCmugEuf3OQ0akRAt/6AJ4gbndWlJk/zFq9BGpxjB0iUxIAewCfVgb0
-6Pv+lwbquo1U3qVLMiG0APQ=
-=nq0O
------END PGP SIGNATURE-----

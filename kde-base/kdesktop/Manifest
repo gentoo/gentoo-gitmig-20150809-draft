@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 434fba778b48d3f5bfe6767f2f8334cb ChangeLog 4189
+MD5 021945e295cbc51df1a8bef280819699 ChangeLog 4298
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdesktop-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdesktop-3.4.3 68
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdesktop-3.5.0 68
 MD5 ffb8567a9ab217b33273996584a848f5 kdesktop-3.4.1.ebuild 1355
 MD5 72704bb9b1063c9447f0101cb11d95b5 kdesktop-3.4.2.ebuild 1370
-MD5 52fa26378f17bcfadfeea857f14b9bde kdesktop-3.4.3.ebuild 1366
+MD5 af122c0d2f1bf06e6c3827ef7ec7edc7 kdesktop-3.4.3.ebuild 1366
 MD5 ecca02911b7a94e41d894bf2e28904fb kdesktop-3.5.0.ebuild 1242
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkkjOugEuf3OQ0akRAp8TAJwN2WYh6sXN62Gd7mcGbbv3ufM0PgCfU2jr
-mi4nQ6iCylJggr+euF3LTU0=
-=oYS1
------END PGP SIGNATURE-----

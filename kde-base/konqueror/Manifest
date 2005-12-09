@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e00ee80d967fa90203ba2d082f355b5f ChangeLog 4576
+MD5 7b449c6c5579123dc2199193fb1f20e6 ChangeLog 4687
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2 287
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2-r1 287
@@ -13,14 +10,7 @@ MD5 f557526f4d82f563d8d69f986303d30d files/konqueror-3.5.0-location-bar-focus.pa
 MD5 56e97c5040d28b656c9e7c9c6e05a95f konqueror-3.4.1.ebuild 774
 MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
 MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
-MD5 30830bf9c15b28ab628c221309366e5e konqueror-3.4.3.ebuild 782
+MD5 afac12d7757d635aad0db85062603ca2 konqueror-3.4.3.ebuild 782
 MD5 5830e3a2e09032322c1851f8b95fda07 konqueror-3.5.0-r1.ebuild 799
 MD5 0b22513d45005afeb6d684591062b784 konqueror-3.5.0.ebuild 745
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDks12ntT9W3vfTuoRAgQxAKCN/ICAb5rWstorx6JBVl+Uq7Qy3gCeKBcH
-auLq/BiKMQLk+JouJ6LNWp8=
-=Iz3f
------END PGP SIGNATURE-----

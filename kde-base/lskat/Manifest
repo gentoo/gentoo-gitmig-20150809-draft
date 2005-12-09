@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 223dd5da80f92254fd985d7925bb1f1c ChangeLog 3649
+MD5 9364ba86a71771dd024e369086f55733 ChangeLog 3755
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-lskat-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-lskat-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-lskat-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-lskat-3.5.0 69
 MD5 6ea8165c40aba6b4855bbf80074b49f0 lskat-3.4.1.ebuild 522
 MD5 7f8aff6a39412ead1516c8725486c435 lskat-3.4.2.ebuild 535
-MD5 bd4c9740609c6067d42917a4caa59ad8 lskat-3.4.3.ebuild 531
+MD5 cef2f421602bcf078d1e03603d602bc2 lskat-3.4.3.ebuild 531
 MD5 c26e0c08ee315addda565c3e606cf5b3 lskat-3.5.0.ebuild 486
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDksznugEuf3OQ0akRAnRaAKCReusDfpNfkC4JtzXIItbRaXdBzwCgmavW
-Y5ePQYiAQpcEcmDahWRMFYM=
-=O/Oy
------END PGP SIGNATURE-----

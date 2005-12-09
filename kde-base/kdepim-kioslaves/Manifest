@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5736be701a810a370580b9bb3e70b569 ChangeLog 4936
+MD5 ea754af478335069c0d592e0aabbe4e1 ChangeLog 5055
 MD5 4781ed6b323012399cdd6a4c4f5070f0 files/configure-fix-kdepim-sasl.patch 1750
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kioslaves-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kioslaves-3.4.2 282
@@ -9,13 +6,6 @@ MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-kioslaves-3.4.3 67
 MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-kdepim-kioslaves-3.5.0 67
 MD5 58e12ae1cb38bb037aca5d8f4f5f6dcc kdepim-kioslaves-3.4.1.ebuild 600
 MD5 129500cb7462d0899369a77aacc3f993 kdepim-kioslaves-3.4.2.ebuild 716
-MD5 9c751551643bd304d52082f0bfd0d82d kdepim-kioslaves-3.4.3.ebuild 712
+MD5 288235269cffb3607c31652fe3f0ebf7 kdepim-kioslaves-3.4.3.ebuild 712
 MD5 2be8616714ff03f9515dfd5e0327c629 kdepim-kioslaves-3.5.0.ebuild 655
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDktdMugEuf3OQ0akRAvp2AJ91BhRhzst7z59yBuMYyijnSvR4nwCfdGV4
-LUm+slIg466t/4F9pMiqTGU=
-=OL0a
------END PGP SIGNATURE-----

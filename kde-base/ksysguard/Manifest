@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f787408ef7c303e9d2e1179d4c5a841e ChangeLog 4788
+MD5 750f37ab45079791692950f34d24d211 ChangeLog 4898
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1-r1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ksysguard-3.4.2 287
@@ -11,13 +8,6 @@ MD5 430a0cdfc39b2da16bcf5cd41b65b1d6 files/kdebase-3.4.1-configure.patch 1248
 MD5 4d73618fea5e571d8486e8d253f6915e ksysguard-3.4.1-r1.ebuild 582
 MD5 9fe1b72a5365ccbc9e7b788ddbc4f6b7 ksysguard-3.4.1.ebuild 446
 MD5 ae2847a5d3a13f0813b8aefef185e54a ksysguard-3.4.2.ebuild 592
-MD5 7935330ea22835120e64b277a892b4eb ksysguard-3.4.3.ebuild 588
+MD5 24d457d0085af48dec0e4a4deb2ade5e ksysguard-3.4.3.ebuild 588
 MD5 90f4da3219289ec13aa490689a0425f3 ksysguard-3.5.0.ebuild 618
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDksLzugEuf3OQ0akRAtM7AKCcS9TbzTFkb4zoYBZNhQ5F8PMW7gCgiXFq
-hOz6j3zbpq1J1eN0f6agNn0=
-=wbsS
------END PGP SIGNATURE-----
