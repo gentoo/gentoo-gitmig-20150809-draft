@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f8e0079a2ae5d2b2c558711b832775c ChangeLog 1171
-MD5 cb360df74d23a076c15987ba18d3bd14 files/digest-fish-1.18.0 64
-MD5 1e15f381669596ce8b99fb2c81f95971 fish-1.18.0.ebuild 722
+MD5 5c1dbcac8430350efb4371474fb12430 ChangeLog 1440
+MD5 84b281c62e307f0134b2fdea50828284 files/digest-fish-1.18.1 64
+MD5 3859d1abb9cf8b80b8d8db3bf9513710 fish-1.18.1.ebuild 726
 MD5 60f93915838cb266eef644d5f73c9d19 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDl4FPntT9W3vfTuoRAjbSAJkByvXBtqy3Jn+sF15BCJO5Pgw4kACgjyEK
-c3hm/zbKeFe/b7+9kv+s79Y=
-=Vrfh
------END PGP SIGNATURE-----

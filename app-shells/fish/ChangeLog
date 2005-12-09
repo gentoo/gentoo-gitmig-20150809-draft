@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.5 2005/12/08 00:41:35 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.6 2005/12/09 05:56:08 spyderous Exp $
+
+*fish-1.18.1 (09 Dec 2005)
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.18.0.ebuild,
+  +fish-1.18.1.ebuild:
+  This version contains fixes for multiple bugs in 1.18.0. One of these bugs
+  caused several types of programmable completions to fail.
 
   08 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> fish-1.18.0.ebuild:
   Marked ~amd64.
