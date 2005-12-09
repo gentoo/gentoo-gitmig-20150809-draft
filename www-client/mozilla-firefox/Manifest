@@ -1,4 +1,4 @@
-MD5 e3a2a0a32a0caf83f6f5317f6c5dd724 ChangeLog 37843
+MD5 a7b8ea735ffd4ad711a1b3f6bb7518a6 ChangeLog 38009
 MD5 cc5756b8c7af5c88b248b86c73fc5c8d files/1.5/firefox-1.1-visibility.patch 930
 MD5 7847d262e628dcac303586fe02f2e8c4 files/1.5/firefox-cairo-canvas.patch 446
 MD5 91661761f2f232b08b74f5adc4f1eff0 files/1.5/firefox-nopangoxft.patch 839
@@ -11,6 +11,7 @@ MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/1.5/mozilla-hppa.patch 7863
 MD5 1652483bf7e1d08241cd5e0436bea2ae files/10MozillaFirefox 32
 MD5 1d1a1fe09e04d58a8d9faa9f14ffd0c6 files/digest-mozilla-firefox-1.0.7-r2 231
 MD5 1d1a1fe09e04d58a8d9faa9f14ffd0c6 files/digest-mozilla-firefox-1.0.7-r3 231
+MD5 1d1a1fe09e04d58a8d9faa9f14ffd0c6 files/digest-mozilla-firefox-1.0.7-r4 231
 MD5 6cb9f61cd0ea68e525a6f3537a5c5563 files/digest-mozilla-firefox-1.5 291
 MD5 6cb9f61cd0ea68e525a6f3537a5c5563 files/digest-mozilla-firefox-1.5-r1 291
 MD5 8e7d6f3220336cd4467d20bbe402e09a files/embedprompter-modal.patch 1548
@@ -45,5 +46,6 @@ MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 7ec6e77c0014718ffae4a55c76acd1db mozilla-firefox-1.0.7-r2.ebuild 8564
 MD5 b686423c9050edfcfd7ff72ea4081f09 mozilla-firefox-1.0.7-r3.ebuild 9734
+MD5 c62ab7d5ab422e3522bf59452a34a54f mozilla-firefox-1.0.7-r4.ebuild 9807
 MD5 a3626a3b65708e8afdd44d21c1125b2a mozilla-firefox-1.5-r1.ebuild 8931
 MD5 af83c78f670aa82820729e6065fec316 mozilla-firefox-1.5.ebuild 8847

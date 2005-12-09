@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.113 2005/12/08 22:52:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.114 2005/12/09 02:12:36 anarchy Exp $
+
+*mozilla-firefox-1.0.7-r4 (09 Dec 2005)
+
+  09 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-firefox-1.0.7-r4.ebuild:
+  history patch for DoS vulnerability
 
 *mozilla-firefox-1.5-r1 (08 Dec 2005)
 
