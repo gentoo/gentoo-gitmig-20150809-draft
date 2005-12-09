@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.31 2005/12/09 05:39:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.32 2005/12/09 09:52:07 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> krdc-3.4.1.ebuild,
+  krdc-3.4.2.ebuild, krdc-3.4.3.ebuild, krdc-3.5.0.ebuild:
+  Fix spelling of $DESCRIPTION. Thanks to phreak.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> krdc-3.4.3.ebuild:
   Marked ppc stable for bug #112842.
