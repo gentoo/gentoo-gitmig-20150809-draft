@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.3.ebuild,v 1.7 2005/09/15 19:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.3.ebuild,v 1.8 2005/12/09 22:04:25 chainsaw Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/tdb
 	>=media-libs/libsndfile-1.0
 	media-libs/speex
 	>=media-sound/madplay-0.14.2b
-	>=x11-libs/gtk+-1.2
+	=x11-libs/gtk+-1.2*
 	alsa? ( media-libs/alsa-lib )
 	nls? ( sys-devel/gettext )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )"

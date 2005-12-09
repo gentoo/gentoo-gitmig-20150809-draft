@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sweep
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.19 2005/09/15 19:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.20 2005/12/09 22:04:25 chainsaw Exp $
+
+  09 Dec 2005; <chainsaw@gentoo.org> sweep-0.8.2-r1.ebuild,
+  sweep-0.8.3.ebuild:
+  Depend explicitly on GTK+ version 1.2 as version 2 does not work; closes bug #114403.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> sweep-0.8.3.ebuild:
   Mark 0.8.3 stable on alpha
