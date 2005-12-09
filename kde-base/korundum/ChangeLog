@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.24 2005/12/07 19:02:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.25 2005/12/09 19:06:21 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org> korundum-3.4.3.ebuild:
+  Marked ppc stable for bug #112842.
 
 *korundum-3.5.0-r1 (07 Dec 2005)
 
