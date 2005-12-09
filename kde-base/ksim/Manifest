@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f24bc3e48dd5e3dbec36a2c0e6109bdb ChangeLog 3933
+MD5 6a867b4596d25078a8679aad537bec85 ChangeLog 4038
 MD5 8716488f71c42fb9ee3fbd1b310fc91e files/configure-fix-kdeutils-snmp.patch 1445
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-ksim-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-ksim-3.4.2 288
@@ -9,13 +6,6 @@ MD5 7693585dde083d1c2cc205db10692163 files/digest-ksim-3.4.3 68
 MD5 61427700c31d5d6a145005b5945e00e5 files/digest-ksim-3.5.0 68
 MD5 5b77b9bf0a913ec870c7b924b788f4c8 ksim-3.4.1.ebuild 430
 MD5 e1b7bc8b8f596aa3b2da3dc9e2045627 ksim-3.4.2.ebuild 530
-MD5 81d8bcda761b2a267194e11ccd8ad714 ksim-3.4.3.ebuild 526
+MD5 eec1fcef95d0f602b7e824f2f82dc1a4 ksim-3.4.3.ebuild 526
 MD5 57a41a354a3d2ba85011a9481ff1f947 ksim-3.5.0.ebuild 464
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkuBjugEuf3OQ0akRAkJgAJ4+TiBmJkGTCpCuIINSjS5pSylvugCdGB+7
-Gv/uKRpZ6GT/r5JS6tKx82s=
-=OKhJ
------END PGP SIGNATURE-----

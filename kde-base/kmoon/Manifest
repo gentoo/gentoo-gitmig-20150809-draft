@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 301efa2d1ee1c06d2829f797eb49debd ChangeLog 3649
+MD5 dfb26b84d8af92fbda1a2d76a9a4fcdc ChangeLog 3755
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kmoon-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kmoon-3.4.2 282
 MD5 4792409083f3033f880840748c1ec31a files/digest-kmoon-3.4.3 67
 MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kmoon-3.5.0 67
 MD5 d28639bb2adf6ef1962a01badc8ddf97 kmoon-3.4.1.ebuild 382
 MD5 ba862c567ee76fcf8c0cf25e23731df5 kmoon-3.4.2.ebuild 395
-MD5 095e428c8d06510bab2697283530f5b4 kmoon-3.4.3.ebuild 392
+MD5 19f2b9ff8db3d230eb0218a22b302f74 kmoon-3.4.3.ebuild 392
 MD5 0b035e11f4d86b3725d3e1a10a0affef kmoon-3.5.0.ebuild 383
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkjP1ugEuf3OQ0akRAkv9AJ0RBGBgksPY67FYvn8KQKfFOl5FVgCeLg+y
-tZZ1bXeTWRgC82213a9Yo3g=
-=n4ey
------END PGP SIGNATURE-----

@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b038f5f7dd31135bcfd7c79f595b2ec5 ChangeLog 4544
+MD5 6dc368f29a5ff5857e3ba12f573668d1 ChangeLog 4654
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kommander-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kommander-3.4.2 292
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kommander-3.4.3 69
@@ -9,13 +6,6 @@ MD5 eefd34bb06d5f84a5f77adf4a6e69fdf files/digest-kommander-3.5.0 69
 MD5 64933746cbdc378bd6d40e0b56eac91f files/post-3.4-kdewebdev-2.diff 2703
 MD5 d7ed5766cdc1be112c8f526f7876745f kommander-3.4.1.ebuild 402
 MD5 d10c382abf550bc82b53bf6b9821ecf4 kommander-3.4.2.ebuild 415
-MD5 d1ebb289aa2ac39ebe3cd723577bc8e1 kommander-3.4.3.ebuild 411
+MD5 25aba672bee09c5c2aceabc114b4510e kommander-3.4.3.ebuild 411
 MD5 4876c09bcf93f1282dd91fd78ea55a00 kommander-3.5.0.ebuild 403
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkkCKugEuf3OQ0akRAnVzAJwJn56wa8blNgOxcepB/8kY7iCxzwCgnm5n
-dcTyjtYpjRVrCCjUpZbLNTI=
-=EXTI
------END PGP SIGNATURE-----

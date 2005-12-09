@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68d646026083b96fb1732b9fadbe9d3a ChangeLog 3710
+MD5 b029c4270b296850014434b093f686fb ChangeLog 3815
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-ksvg-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-ksvg-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksvg-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-ksvg-3.5.0 71
 MD5 787a122b056c3c913abd0e620d623251 ksvg-3.4.1.ebuild 467
 MD5 e1c2cb0d2cccb98b0776cc2e421972bd ksvg-3.4.2.ebuild 528
-MD5 5c5717d1576319e3437b2f3e466eac82 ksvg-3.4.3.ebuild 524
+MD5 195a35574ac5f2b9afeab5bfc6ae9b66 ksvg-3.4.3.ebuild 524
 MD5 97bbc248bed4b00a5db59a5031cf7970 ksvg-3.5.0.ebuild 516
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkkXjugEuf3OQ0akRAlA+AJ4iaClD2AFLMogLf8O12A4uLdiHPACeOjzw
-ss8WY9k4Qwnwci2vd3ex27w=
-=z880
------END PGP SIGNATURE-----

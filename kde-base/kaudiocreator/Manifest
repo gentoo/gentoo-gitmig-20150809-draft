@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4015bf2280b7eb7764ae191270ff35b ChangeLog 4623
+MD5 a91cb8172d853d759b678eae2fb1b3d8 ChangeLog 4737
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kaudiocreator-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kaudiocreator-3.4.2 308
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kaudiocreator-3.4.3 73
 MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-kaudiocreator-3.5.0 73
 MD5 c2549fb388f6f9cb0e8c4e7f1934697f kaudiocreator-3.4.1.ebuild 1092
 MD5 aaac11e8f69c89ec27ff0826251fed89 kaudiocreator-3.4.2.ebuild 1105
-MD5 75d3ec6d20d6deb255318c1e11d5fd95 kaudiocreator-3.4.3.ebuild 1101
+MD5 41df8591467e80a9f46b55faaf466508 kaudiocreator-3.4.3.ebuild 1101
 MD5 78367a06f60487a3f658c3744f6e822c kaudiocreator-3.5.0.ebuild 1313
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkj5HugEuf3OQ0akRAg/fAJ9W0KUKYfEk1TJGURf36ckP8B4PDgCfQuLg
-akcsQDiIhfTPDfVfiMquBy4=
-=Nwpx
------END PGP SIGNATURE-----

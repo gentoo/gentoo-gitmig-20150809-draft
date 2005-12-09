@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3225bf1592d7b9e61ac6fe523094ca89 ChangeLog 3542
+MD5 aa6690f7ebc32eb5ac573c264c234b5e ChangeLog 3653
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kcoloredit-3.4.1 221
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kcoloredit-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kcoloredit-3.5.0 71
 MD5 1a3978987e5c672248c431b902190cd3 kcoloredit-3.4.1.ebuild 407
-MD5 60052c0ac40abc50798deecd67dd6bd6 kcoloredit-3.4.3.ebuild 406
+MD5 f5bebba7477b2cad822280e0e03614e7 kcoloredit-3.4.3.ebuild 406
 MD5 c8f231f265491d1875d4fb92e966370c kcoloredit-3.5.0.ebuild 397
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkkRwugEuf3OQ0akRAsRQAKCawNB8XUbM1CRaL1DTKcfegZJt2gCgm35B
-t0R2Baf2C0IUiCii+lHbwBI=
-=pgqX
------END PGP SIGNATURE-----

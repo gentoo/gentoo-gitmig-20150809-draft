@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89a3cc1edfdd7bf52674a1520ff345ff ChangeLog 3612
+MD5 adc30c1e5329386f369a79783281dfdb ChangeLog 3717
 MD5 c57f7f0ff2462b21a8a24bb032d5a1dc amor-3.4.1.ebuild 418
 MD5 0cebbee54eae2aa68b5e47ece192019f amor-3.4.2.ebuild 431
-MD5 73a741f1103feed08722b81d25e29199 amor-3.4.3.ebuild 428
+MD5 71c75995d64daa4a9bc8df00252fedb1 amor-3.4.3.ebuild 428
 MD5 ebec60dfa8d9557991aca14a138b91ce amor-3.5.0.ebuild 419
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-amor-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-amor-3.4.2 282
 MD5 4792409083f3033f880840748c1ec31a files/digest-amor-3.4.3 67
 MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-amor-3.5.0 67
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkjWsugEuf3OQ0akRAr/JAJwJZb+gTaI4EwZqm7DYfDS+Y+SXIACfYHVl
-6p/zChPPBOjg/kpYkUhz6GQ=
-=o2cx
------END PGP SIGNATURE-----

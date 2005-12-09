@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cad7ebee58557cb7d2a896d2182519bd ChangeLog 3901
+MD5 482c91f13c0b82b45cdb290d76a68aee ChangeLog 4013
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpovmodeler-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpovmodeler-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kpovmodeler-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kpovmodeler-3.5.0 71
 MD5 7cd6730f4fdc82cf4871455ad1022de4 kpovmodeler-3.4.1.ebuild 467
 MD5 9e25d8e20b4c35fa155c6a3b885859fe kpovmodeler-3.4.2.ebuild 505
-MD5 f36ceb8d046da093245b91c2feadb9a4 kpovmodeler-3.4.3.ebuild 501
+MD5 674ee2cbd4df4cf79e5ef273799200fe kpovmodeler-3.4.3.ebuild 501
 MD5 431d65c60068c77bf0e331ec13765ee3 kpovmodeler-3.5.0.ebuild 493
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkkarugEuf3OQ0akRAut8AJ4hdu+5tQPiudkrUVq3ORU+hdNZJgCeLvco
-rPXe2nXhpnuGDEyP1RkOXy0=
-=qRlo
------END PGP SIGNATURE-----

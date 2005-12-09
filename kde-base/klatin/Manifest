@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d5468b9ab5960fa58e77c6525e0a8ba ChangeLog 3689
+MD5 0ea20ec0f0a449ce36e541f9304ecf46 ChangeLog 3796
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-klatin-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klatin-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-klatin-3.4.3 67
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-klatin-3.5.0 67
 MD5 bba0c9dc6d023d114f7e220ba034bc14 klatin-3.4.1.ebuild 576
 MD5 83781ec0d64b7cb0d91207ecdbd6261b klatin-3.4.2.ebuild 589
-MD5 6f6a150bfba829da1a6bb7c0e028c42c klatin-3.4.3.ebuild 587
+MD5 2b1d8887edfd010fa151deabc101385e klatin-3.4.3.ebuild 587
 MD5 5d0eb3690ec3f38303d7a5914b0708c9 klatin-3.5.0.ebuild 540
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDktq5ugEuf3OQ0akRAs4xAKCd1co8GmUl02gMhXD81/kXepqjNQCdH1XG
-QEax4ucbnO6MdJjApAPb5Bo=
-=WbiU
------END PGP SIGNATURE-----
