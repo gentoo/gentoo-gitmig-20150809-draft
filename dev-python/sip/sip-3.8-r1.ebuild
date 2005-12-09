@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8-r1.ebuild,v 1.11 2005/02/08 05:06:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8-r1.ebuild,v 1.12 2005/12/09 22:00:47 carlo Exp $
 
 inherit eutils distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/sip/"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="sip"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 

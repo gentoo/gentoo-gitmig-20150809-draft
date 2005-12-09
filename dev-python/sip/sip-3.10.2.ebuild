@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.10.2.ebuild,v 1.9 2005/02/08 05:06:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.10.2.ebuild,v 1.10 2005/12/09 22:00:47 carlo Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/sip/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="sip"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
@@ -20,9 +20,9 @@ DEPEND="virtual/libc
 src_compile(){
 	distutils_python_version
 	python configure.py -l qt-mt \
-		-b /usr/bin \
-		-d /usr/lib/python${PYVER}/site-packages \
-		-e /usr/include/python${PYVER} \
+		-b ${ROOT}/usr/bin \
+		-d ${ROOT}/usr/lib/python${PYVER}/site-packages \
+		-e ${ROOT}/usr/include/python${PYVER} \
 		"CXXFLAGS+=${CXXFLAGS}"
 	emake || die
 }

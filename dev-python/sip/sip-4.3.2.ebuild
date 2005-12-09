@@ -1,19 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.1.1.ebuild,v 1.11 2005/12/09 22:00:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.3.2.ebuild,v 1.1 2005/12/09 22:00:47 carlo Exp $
 
 inherit distutils
 
-MY_P=${P/_/}
+MY_P=${P/"?.?.?_pre"/"snapshot-"}
+MY_P=${MY_P/_/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="SIP is a tool for generating bindings for C++ classes so that they can be used by Python."
 HOMEPAGE="http://www.riverbankcomputing.co.uk/sip/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+#SRC_URI="http://www.river-bank.demon.co.uk/download/sip/${MY_P}.tar.gz"
+#SRC_URI="http://www.river-bank.demon.co.uk/download/snapshots/sip/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="sip"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64"
 IUSE="debug doc"
 
 DEPEND="virtual/libc
@@ -31,7 +34,7 @@ src_compile(){
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	make DESTDIR=${D} install || die "install failed"
 	dodoc ChangeLog LICENSE NEWS README THANKS TODO
 	if use doc ; then dohtml doc/* ; fi
 }
