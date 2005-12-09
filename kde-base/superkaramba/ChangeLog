@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.14 2005/12/04 12:33:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.15 2005/12/09 13:58:03 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/superkaramba-3.5.0-fbsd.patch, superkaramba-3.5.0.ebuild:
+  Add patch to make superkaramba calculate memory correctly on FreeBSD.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
   superkaramba-3.5.0.ebuild:
