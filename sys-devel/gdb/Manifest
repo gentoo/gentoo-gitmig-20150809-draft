@@ -1,12 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb995d75f2b79c87c8f405ee6470e48f ChangeLog 11817
+MD5 818a63a042ed9604c80ce3331c44e668 ChangeLog 11985
 MD5 d3ab2683d88b3cbecb8a9faa439703a1 files/bfd-malloc-wrap.patch 782
 MD5 460629563df21e6a68b8941c07d4f30b files/digest-gdb-6.1 131
 MD5 b3790be989db97b22c599572afbce109 files/digest-gdb-6.2.1 133
 MD5 1bf79e32094a4c2c7cde754dd12e4d90 files/digest-gdb-6.3-r4 183
 MD5 944b2661cbb8d3308ce71d31e66533ac files/digest-gdb-6.4 121
+MD5 944b2661cbb8d3308ce71d31e66533ac files/digest-gdb-6.4-r1 121
 MD5 1de0e1b91ac150426719e904f0e1a5cd files/gdb-5.3-sparc-nat-asm.patch 521
 MD5 e497ab2f05d847bde74f4e3441e2c7a2 files/gdb-6.0-coreutils.patch 1964
 MD5 c6dfff1373e52fef5872c1bdca4cb706 files/gdb-6.0-info.patch 1108
@@ -24,18 +25,22 @@ MD5 2657b597618d0c35b48f47e3f808d171 files/gdb-6.3-relative-paths.patch 3286
 MD5 a4610ec65e88f73e0b00b525467a5372 files/gdb-6.3-scanmem.patch 6652
 MD5 8b7f5c46b8dabbc9239c37f52278b971 files/gdb-6.3-uclibc.patch 8221
 MD5 8323dafe6749f0da44b8e11ebbbc96c4 files/gdb-6.4-relative-paths.patch 3147
+MD5 c8fced1c2241b098eae50b1f8c8ef463 files/gdb-6.4-scanmem.patch 6692
 MD5 20a129e5e58c07f1ad5fc0d09a1a3c75 files/gdb-6.4-sse2-register-display.patch 1470
 MD5 78d8fa43c0e2e339346b3bc7aa10c2d9 files/gdb-6.4-uclibc.patch 2435
 MD5 7ea8f83bb7b0d70e7e6d6c8cf42292d3 files/gdb-6.x-crash.patch 678
 MD5 2a52c4cd9bf5e2667c6bc7312e179fa0 gdb-6.1.ebuild 1807
 MD5 fb4ab4aaccb90b523c650a5f30d02281 gdb-6.2.1.ebuild 1784
 MD5 20334b11833489b3bcc13c0fea645a1d gdb-6.3-r4.ebuild 2983
-MD5 529136a28596f98817377a9dba9cb584 gdb-6.4.ebuild 2998
+MD5 abe5b46c3552ca8670ffb68c048d4ffd gdb-6.4-r1.ebuild 3009
+MD5 f5428a658b66b60aeaa511d39cc450b3 gdb-6.4.ebuild 2996
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDmMo2gIKl8Uu19MoRAgpnAJ99MA5Y+L85stnRYwbsNycefw/sFgCdHgL7
-mbuEJCy37p2dLz4cAVBMqlo=
-=+1nc
+iQCVAwUBQ5kMsp4WFLgrx1GWAQICcwP/X6BNIopTEeo53WgXSjtJdglsMaT5mDqp
+YV6CPhBppTytyhGlpBcdUzMLtK9Pc/LOXaHoGsIrasOtjrC4l5Xw743SC/XzyT8u
+rMBtzmTCew0hOAovv4TwhqT98wo+qlWwOwo2sFW7StdNzjFoye/n8q7vMqQ5M4am
+ISuSoiuZ79w=
+=S8ZF
 -----END PGP SIGNATURE-----
