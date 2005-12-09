@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.17 2005/12/09 07:39:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.18 2005/12/09 14:48:09 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  files/configurable-encodingsdir.patch:
+  Remove CVS tag from patch so it doesn't change upon commit and break.
 
 *libXfont-0.99.3-r2 (09 Dec 2005)
 

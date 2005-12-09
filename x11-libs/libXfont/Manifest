@@ -1,5 +1,5 @@
-MD5 740f70c61c1355db02c67f8262c3e12b ChangeLog 2987
-MD5 3fe51e69f72dff3ac44e272d44166671 files/configurable-encodingsdir.patch 1189
+MD5 723cf83f24d5c37c61be192a242b9fe3 ChangeLog 3152
+MD5 e7d72a29344766881bc45e380953bd28 files/configurable-encodingsdir.patch 939
 MD5 2412e009d3985b7728e170a33164f6b5 files/digest-libXfont-0.99.3-r1 68
 MD5 2412e009d3985b7728e170a33164f6b5 files/digest-libXfont-0.99.3-r2 68
 MD5 bd7a9230850f829ea7c9d2d4c1624112 libXfont-0.99.3-r1.ebuild 642
