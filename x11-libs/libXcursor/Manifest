@@ -1,6 +1,5 @@
-MD5 4bf1cf4be0720e874191b18071436ce0 ChangeLog 2059
+MD5 243e7bca429c36dd0dcefa6ffb0ff569 ChangeLog 2172
 MD5 6a879a75a3ca54c2941a66c767e66f0e files/digest-libXcursor-1.1.5.1 71
 MD5 72633a8b7976ec2e86e89b59c1183b1e files/make-icondir-configurable-1.1.5.1.patch 2190
-MD5 c52c14e65991d908a0869502dd0b8a02 files/make-icondir-configurable.patch 2180
 MD5 d79dde9114aa340833e0f73daed04d23 libXcursor-1.1.5.1.ebuild 772
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
