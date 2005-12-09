@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.114 2005/12/09 02:12:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.115 2005/12/09 15:28:58 anarchy Exp $
+
+*mozilla-firefox-1.5-r2 (09 Dec 2005)
+
+  09 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +files/1.5/mozilla-firefox-1.5-mork.patch,
+  mozilla-firefox-1.0.7-r4.ebuild, +mozilla-firefox-1.5-r2.ebuild:
+  mork patch added for completeness
 
 *mozilla-firefox-1.0.7-r4 (09 Dec 2005)
 

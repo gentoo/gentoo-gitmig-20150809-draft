@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7-r4.ebuild,v 1.1 2005/12/09 02:12:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7-r4.ebuild,v 1.2 2005/12/09 15:28:58 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -86,6 +86,7 @@ src_unpack() {
 
 	#History security fix
 	epatch ${FILESDIR}/1.5/${PN}-1.5-history.patch
+	epatch ${FILESDIR}/1.5/${PN}-1.5-mork.patch
 
 	# Needed by some of the patches
 	WANT_AUTOCONF=2.1 autoconf || die "WANT_AUTOCONF failed"
