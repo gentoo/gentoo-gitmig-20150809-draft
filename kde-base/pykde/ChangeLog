@@ -1,0 +1,14 @@
+# ChangeLog for kde-base/pykde
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.1 2005/12/09 22:25:07 carlo Exp $
+
+*pykde-3.5.0 (09 Dec 2005)
+*pykde-3.4.3 (09 Dec 2005)
+
+  09 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +files/configure.py.diff,
+  +pykde-3.4.3.ebuild, +pykde-3.5.0.ebuild:
+  "Initial" commit. This package is the sibling of dev-python/pykde with the
+  difference that the ebuilds of this package will be marked stable in future,
+  while dev-python/pykde follows the development more closely and will remain
+  unstable in future.
+
