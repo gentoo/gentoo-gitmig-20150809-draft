@@ -1,0 +1,155 @@
+Index: kpdf/xpdf/xpdf/Stream.cc
+===================================================================
+--- kpdf/xpdf/xpdf/Stream.cc	(revision 473213)
++++ kpdf/xpdf/xpdf/Stream.cc	(revision 487206)
+@@ -15,6 +15,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stddef.h>
++#include <limits.h>
+ #ifndef WIN32
+ #include <unistd.h>
+ #endif
+@@ -408,13 +409,27 @@ StreamPredictor::StreamPredictor(Stream 
+   width = widthA;
+   nComps = nCompsA;
+   nBits = nBitsA;
++  predLine = NULL;
++  ok = gFalse;
++
++  if (width <= 0 || nComps <= 0 || nBits <= 0 ||
++      nComps >= INT_MAX / nBits ||
++      width >= INT_MAX / nComps / nBits)
++    return;
+ 
+   nVals = width * nComps;
++  if (nVals + 7 <= 0)
++    return;
+   pixBytes = (nComps * nBits + 7) >> 3;
+   rowBytes = ((nVals * nBits + 7) >> 3) + pixBytes;
++  if (rowBytes < 0)
++    return;
++
+   predLine = (Guchar *)gmalloc(rowBytes);
+   memset(predLine, 0, rowBytes);
+   predIdx = rowBytes;
++
++  ok = gTrue;
+ }
+ 
+ StreamPredictor::~StreamPredictor() {
+@@ -1006,6 +1021,10 @@ LZWStream::LZWStream(Stream *strA, int p
+     FilterStream(strA) {
+   if (predictor != 1) {
+     pred = new StreamPredictor(this, predictor, columns, colors, bits);
++    if (!pred->isOk()) {
++      delete pred;
++      pred = NULL;
++    }
+   } else {
+     pred = NULL;
+   }
+@@ -2903,7 +2922,11 @@ GBool DCTStream::readBaselineSOF() {
+   height = read16();
+   width = read16();
+   numComps = str->getChar();
+-  if (prec != 8) {
++  if (numComps <= 0 || numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream", prec);
++    return gFalse;
++  }
++ if (prec != 8) {
+     error(getPos(), "Bad DCT precision %d", prec);
+     return gFalse;
+   }
+@@ -2929,6 +2952,10 @@ GBool DCTStream::readProgressiveSOF() {
+   height = read16();
+   width = read16();
+   numComps = str->getChar();
++  if (numComps <= 0 || numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream");
++    return gFalse;
++  }
+   if (prec != 8) {
+     error(getPos(), "Bad DCT precision %d", prec);
+     return gFalse;
+@@ -2951,6 +2978,10 @@ GBool DCTStream::readScanInfo() {
+ 
+   length = read16() - 2;
+   scanInfo.numComps = str->getChar();
++  if (scanInfo.numComps <= 0 || scanInfo.numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream");
++    return gFalse;
++  }
+   --length;
+   if (length != 2 * scanInfo.numComps + 3) {
+     error(getPos(), "Bad DCT scan info block");
+@@ -3833,6 +3864,10 @@ FlateStream::FlateStream(Stream *strA, i
+     FilterStream(strA) {
+   if (predictor != 1) {
+     pred = new StreamPredictor(this, predictor, columns, colors, bits);
++    if (!pred->isOk()) {
++      delete pred;
++      pred = NULL;
++    }
+   } else {
+     pred = NULL;
+   }
+Index: kpdf/xpdf/xpdf/Stream.h
+===================================================================
+--- kpdf/xpdf/xpdf/Stream.h	(revision 473213)
++++ kpdf/xpdf/xpdf/Stream.h	(revision 487206)
+@@ -232,6 +232,8 @@ public:
+ 
+   ~StreamPredictor();
+ 
++  GBool isOk() { return ok; }
++
+   int lookChar();
+   int getChar();
+ 
+@@ -249,6 +251,7 @@ private:
+   int rowBytes;			// bytes per line
+   Guchar *predLine;		// line buffer
+   int predIdx;			// current index in predLine
++  GBool ok;
+ };
+ 
+ //------------------------------------------------------------------------
+Index: kpdf/xpdf/xpdf/JPXStream.cc
+===================================================================
+--- kpdf/xpdf/xpdf/JPXStream.cc	(revision 473213)
++++ kpdf/xpdf/xpdf/JPXStream.cc	(revision 487206)
+@@ -7,6 +7,7 @@
+ //========================================================================
+ 
+ #include <aconf.h>
++#include <limits.h>
+ 
+ #ifdef USE_GCC_PRAGMAS
+ #pragma implementation
+@@ -783,7 +784,7 @@ GBool JPXStream::readCodestream(Guint /*
+   int segType;
+   GBool haveSIZ, haveCOD, haveQCD, haveSOT;
+   Guint precinctSize, style;
+-  Guint segLen, capabilities, comp, i, j, r;
++  Guint segLen, capabilities, nTiles, comp, i, j, r;
+ 
+   //----- main header
+   haveSIZ = haveCOD = haveQCD = haveSOT = gFalse;
+@@ -818,8 +819,13 @@ GBool JPXStream::readCodestream(Guint /*
+ 	            / img.xTileSize;
+       img.nYTiles = (img.ySize - img.yTileOffset + img.yTileSize - 1)
+ 	            / img.yTileSize;
+-      img.tiles = (JPXTile *)gmallocn(img.nXTiles * img.nYTiles,
+-				     sizeof(JPXTile));
++      nTiles = img.nXTiles * img.nYTiles;
++      // check for overflow before allocating memory
++      if (img.nXTiles <= 0 || img.nYTiles <= 0 || img.nXTiles >= INT_MAX / img.nYTiles) {
++	error(getPos(), "Bad tile count in JPX SIZ marker segment");
++	return gFalse;
++      }
++      img.tiles = (JPXTile *)gmallocn(nTiles, sizeof(JPXTile));
+       for (i = 0; i < img.nXTiles * img.nYTiles; ++i) {
+ 	img.tiles[i].tileComps = (JPXTileComp *)gmallocn(img.nComps,
+ 							sizeof(JPXTileComp));
