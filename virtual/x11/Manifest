@@ -1,4 +1,14 @@
-MD5 d323dfc19c40a4721f19267d11c4b3a5 ChangeLog 377
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89c0ffcd551cdb6d0b672dcb62acd871 ChangeLog 560
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-x11-6.8 0
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 2525bb9689560406d440dad0038b6e2f x11-6.8.ebuild 483
+MD5 aaa9d5bce0454b01d5cbd91fcc5149b9 x11-6.8.ebuild 473
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmfQ7AiZjviIA2XgRAvpLAKDkMzJrcN6Ws9EjKdsP8J1vOCG/OwCfdFOT
+WYwtdd2yRawOZTyb0xg/298=
+=HPor
+-----END PGP SIGNATURE-----

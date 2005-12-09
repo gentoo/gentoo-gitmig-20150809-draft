@@ -1,6 +1,10 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.1 2005/12/07 07:56:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.2 2005/12/09 21:16:15 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> x11-6.8.ebuild:
+  Make stable on all arches, to fix the big troubles to the stable trees due
+  to virtual/x11 migration in tree.
 
 *x11-6.8 (07 Dec 2005)
 
