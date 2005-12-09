@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.3.0-r1.ebuild,v 1.5 2005/12/07 02:36:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.3.0-r1.ebuild,v 1.6 2005/12/09 04:20:27 dang Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND=">=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
 	virtual/ghostscript
 	dev-util/pkgconfig
+	media-libs/fontconfig
 	gtk? ( =x11-libs/gtk+-2* )"
 
 src_unpack(){

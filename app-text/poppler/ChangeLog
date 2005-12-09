@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.24 2005/12/07 02:36:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.25 2005/12/09 04:20:27 dang Exp $
+
+  09 Dec 2005; <dang@gentoo.org> poppler-0.3.0-r1.ebuild:
+  Add dep for fontconfig. Bug #114727
 
   07 Dec 2005; Mark Loeser <halcy0n@gentoo.org> poppler-0.3.0-r1.ebuild:
   Stable on x86; bug #114428
