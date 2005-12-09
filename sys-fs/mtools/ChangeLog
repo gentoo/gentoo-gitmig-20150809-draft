@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.15 2005/12/07 06:48:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.16 2005/12/09 00:07:01 kloeri Exp $
+
+  09 Dec 2005; Bryan Østergaard <kloeri@gentoo.org mtools-3.9.10.ebuild:
+  Stable on alpha.
 
   07 Dec 2005; Mark Loeser <halcy0n@gentoo.org> mtools-3.9.10.ebuild:
   Stable on x86; bug #114055
