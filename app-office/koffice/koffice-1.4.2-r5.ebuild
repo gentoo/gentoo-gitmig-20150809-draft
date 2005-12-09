@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2-r3.ebuild,v 1.2 2005/12/06 01:57:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2-r5.ebuild,v 1.1 2005/12/09 20:49:43 carlo Exp $
 
 inherit kde
 
@@ -46,7 +46,7 @@ need-kde 3.3
 
 PATCHES="${FILESDIR}/kspread-1.4.2-gcc41.patch
 	${FILESDIR}/kexi-1.4.2-gcc41.patch
-	${FILESDIR}/kword-1.4.2-CAN-2005-3193.patch"
+	${FILESDIR}/post-1.3-koffice-CAN-2005-3193.diff"
 
 src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql)"

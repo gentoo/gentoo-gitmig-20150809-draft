@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2-r2.ebuild,v 1.4 2005/12/07 19:37:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2-r4.ebuild,v 1.1 2005/12/09 20:49:43 carlo Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kde/stable/koffice-${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc javascript mysql postgres"
 
 RDEPEND=">=media-gfx/imagemagick-5.5.2
@@ -44,7 +44,7 @@ need-kde 3.3
 # the dependency on python is needed for scripting support in kexi
 # and for kivio/kiviopart/kiviosdk.
 
-PATCHES="${FILESDIR}/kword-1.4.2-CAN-2005-3193.patch"
+PATCHES="${FILESDIR}/post-1.3-koffice-CAN-2005-3193.diff"
 
 src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql)"
