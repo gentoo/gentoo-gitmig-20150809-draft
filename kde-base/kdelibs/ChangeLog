@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.293 2005/12/06 05:31:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.294 2005/12/09 09:10:28 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdelibs-3.5.0-bindnow.patch, kdelibs-3.5.0.ebuild:
+  Add support for non-lazy-bindings non setuid executables. See bug #113937.
 
   06 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdelibs-3.4.3.ebuild:
   Marked ppc stable for bug #112842.

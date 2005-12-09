@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0.ebuild,v 1.3 2005/12/01 15:20:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0.ebuild,v 1.4 2005/12/09 09:10:28 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -46,6 +46,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
+PATCHES="${FILESDIR}/${P}-bindnow.patch"
+
 src_compile() {
 	myconf="--with-distribution=Gentoo
 	        --enable-libfam $(use_enable kernel_linux dnotify)
@@ -68,6 +70,8 @@ src_compile() {
 	# kdelibs-3.4.0 needed -fno-gcse; 3.4.1 needs -mminimal-toc; this needs a
 	# closer look... - corsair
 	use ppc64 && append-flags "-mminimal-toc"
+
+	export BINDNOW_FLAGS="$(bindnow-flags)"
 
 	kde_src_compile
 
