@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.06.ebuild,v 1.1 2005/12/07 22:59:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.06.ebuild,v 1.2 2005/12/09 20:22:50 betelgeuse Exp $
 
 inherit java eutils
 
@@ -35,7 +35,7 @@ DEPEND=">=dev-java/java-config-1.2
 	jce? ( app-arch/unzip )
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
 
-RDEPEND="x86? ( sys-libs/lib-compat )
+RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )
 	X? ( || ( ( x11-libs/libICE

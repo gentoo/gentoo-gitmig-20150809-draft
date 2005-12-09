@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.2 2005/11/29 09:40:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.3 2005/12/09 20:22:50 betelgeuse Exp $
 
 inherit java eutils
 
@@ -26,10 +26,25 @@ IUSE="doc browserplugin nsplugin jce mozilla examples"
 DEPEND=">=dev-java/java-config-1.1.5
 	>=sys-libs/glibc-2.3.5
 	sys-apps/sed
-	app-arch/unzip
-	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+	app-arch/unzip"
 
-RDEPEND="sys-libs/lib-compat"
+RDEPEND=">=sys-libs/glibc-2.3.5
+	alsa? ( media-libs/alsa-lib )
+	doc? ( =dev-java/java-sdk-docs-1.4.2* )
+	X? ( || ( ( x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp
+				x11-libs/libXext
+				x11-libs/libXi
+				x11-libs/libXp
+				x11-libs/libXt
+				x11-libs/libXtst
+			  )
+				virtual/x11
+			)
+		)"
 
 PROVIDE="virtual/jre virtual/jdk"
 
@@ -125,9 +140,9 @@ src_install() {
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
 	fi
 
-	if use nsplugin ||       # global useflag for netscape-compat plugins
+	if use nsplugin ||		 # global useflag for netscape-compat plugins
 	   use browserplugin ||  # deprecated but honor for now
-	   use mozilla; then     # wrong but used to honor it
+	   use mozilla; then	 # wrong but used to honor it
 		local plugin_dir="ns610"
 		if has_version '>=sys-devel/gcc-3.2' ; then
 			plugin_dir="ns610-gcc32"
@@ -199,7 +214,7 @@ pkg_postinst() {
 	if ! use nsplugin && ( use browserplugin || use mozilla ); then
 		echo
 		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
-		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "future jdk/jre ebuilds for plugin installation.	Please"
 		ewarn "update your USE to include 'nsplugin'."
 	fi
 }
