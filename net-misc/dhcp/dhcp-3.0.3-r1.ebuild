@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r1.ebuild,v 1.2 2005/12/07 20:00:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r1.ebuild,v 1.3 2005/12/09 13:58:09 uberlord Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
@@ -59,7 +59,7 @@ src_compile() {
 	cat <<-END > site.conf
 	CC = $(tc-getCC)
 	LFLAGS = ${LDFLAGS}
-	LIBDIR = /usr/lib
+	LIBDIR = /usr/$(get_libdir)
 	INCDIR = /usr/include
 	ETC = /etc/dhcp
 	VARDB = /var/lib/dhcp

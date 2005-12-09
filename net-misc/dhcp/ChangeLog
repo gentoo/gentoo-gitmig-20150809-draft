@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.63 2005/12/07 20:00:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.64 2005/12/09 13:58:09 uberlord Exp $
+
+  09 Dec 2005; Roy Marples <uberlord@gentoo.org> dhcp-3.0.3-r1.ebuild:
+  multilib fixed.
 
   07 Dec 2005; Roy Marples <uberlord@gentoo.org> dhcp-3.0.3-r1.ebuild:
   Fixed sandbox violation, #114753.
