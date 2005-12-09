@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.55 2005/12/02 06:26:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.56 2005/12/09 15:08:35 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -mesa-6.4-r1.ebuild:
+  Pull old versions.
 
   02 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   files/6.4.1-amd64-include-assyntax.patch:
