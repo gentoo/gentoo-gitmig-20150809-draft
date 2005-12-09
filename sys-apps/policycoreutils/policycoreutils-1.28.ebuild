@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.24-r1.ebuild,v 1.1 2005/09/09 03:01:51 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.28.ebuild,v 1.1 2005/12/09 01:02:26 pebenito Exp $
 
 IUSE="build nls pam"
 
 inherit eutils
 
-EXTRAS_VER="1.13"
-SEPOL_VER="1.4"
+EXTRAS_VER="1.14"
+SEMNG_VER="1.4"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -15,11 +15,11 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
-#KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+#KEYWORDS="x86 ppc sparc amd64 mips"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
 
 RDEPEND=">=sys-libs/libselinux-${PV}
-	!build? ( pam? ( sys-libs/pam ) >=sys-libs/libsepol-${SEPOL_VER} )
+	!build? ( pam? ( sys-libs/pam ) >=sys-libs/libsemanage-${SEMNG_VER} )
 	build? ( sys-apps/baselayout )"
 
 DEPEND="${RDEPEND}
@@ -49,7 +49,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/policycoreutils-1.24-genhomedircon-quiet.diff
+	epatch ${FILESDIR}/policycoreutils-1.28-quietlp.diff
 
 	# This warning makes no sense, in this context
 	sed -i -e '/FILE/ s/;/=NULL;/' ${S}/audit2why/audit2why.c \
