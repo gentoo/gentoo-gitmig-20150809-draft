@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.4 2005/12/09 02:55:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.5 2005/12/09 14:05:36 nichoj Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.3
-	>=dev-java/xerces-2.6*
+	>=dev-java/xerces-2.6
 	dev-java/xalan
 	dev-java/junit
 	dev-java/icu4j
