@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.4.2-r3.ebuild,v 1.1 2005/12/06 02:01:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.4.2-r4.ebuild,v 1.1 2005/12/09 20:41:28 carlo Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -17,8 +17,7 @@ IUSE=""
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	$(deprange $PV $MAXKOFFICEVER app-office/kspread)
 	>=app-text/wv2-0.1.8
-	>=media-gfx/imagemagick-5.5.2
-	>=app-text/libwpd-0.8.2"
+	>=media-gfx/imagemagick-5.5.2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -45,7 +44,7 @@ KMEXTRA="filters/kword"
 
 need-kde 3.3
 
-PATCHES="${FILESDIR}/kspread-1.4.2-gcc41.patch ${FILESDIR}/kword-1.4.2-CAN-2005-3193.patch"
+PATCHES="${FILESDIR}/post-1.3-koffice-CAN-2005-3193.diff"
 
 src_unpack() {
 	kde-meta_src_unpack unpack
