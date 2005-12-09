@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.97 2005/12/08 21:08:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.98 2005/12/09 18:40:11 fmccor Exp $
 
 
 # need access to emktemp()
@@ -466,7 +466,7 @@ has_m32() {
 }
 
 replace-sparc64-flags() {
-	local SPARC64_CPUS="ultrasparc v9"
+	local SPARC64_CPUS="ultrasparc3 ultrasparc v9"
 
 	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]; then
 		for x in ${SPARC64_CPUS}; do
