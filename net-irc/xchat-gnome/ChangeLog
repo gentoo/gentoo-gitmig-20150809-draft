@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.7 2005/11/03 07:33:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.8 2005/12/09 20:09:32 chainsaw Exp $
+
+*xchat-gnome-0.7 (09 Dec 2005)
+
+  09 Dec 2005; <chainsaw@gentoo.org> +files/xchat-gnome-0.7-dbus.patch,
+  +files/xchat-gnome-0.7-scrollkeeper.patch, +xchat-gnome-0.7.ebuild:
+  Version bump, closes bug #113268. Added patch to avoid running
+  scrollkeeper_update and an upstream patch to fix the dbus breakage.
 
 *xchat-gnome-0.6 (03 Nov 2005)
 
