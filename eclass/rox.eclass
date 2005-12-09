@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.10 2005/12/09 21:08:12 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.11 2005/12/09 21:16:46 svyatogor Exp $
 
 # ROX eclass Version 2
 
@@ -26,19 +26,19 @@
 # need python to byte compile modules, if any
 inherit python
 
-if [ -z ${ROX_VER} ]; then
+if [ -z "${ROX_VER}" ]; then
 	ROX_VER="2.1.0"
 fi
 
 DEPEND="${DEPEND}
 		>=rox-base/rox-${ROX_VER}"
 
-if [ -n ${ROX_LIB_VER} ]; then
+if [ -n "${ROX_LIB_VER}" ]; then
 	DEPEND="${DEPEND}
 			  >=rox-base/rox-lib-${ROX_LIB_VER}"
 fi
 
-if [ -n ${ROX_CLIB_VER} ]; then
+if [ -n "${ROX_CLIB_VER}" ]; then
 	DEPEND="${DEPEND}
 			  >=rox-base/rox-clib-${ROX_CLIB_VER}"
 fi
@@ -70,7 +70,7 @@ rox_src_install() {
 	fi
 	insinto /usr/lib/rox
 	doins -r ${APPNAME}
-	
+
 	#set correct permissions on files, in case they are wrong
 	#include all subdirectories in search, just in case
 	find ${D}/usr/lib/rox/${APPNAME} -name 'AppRun' | xargs chmod 755 >/dev/null 2>&1
@@ -92,7 +92,7 @@ rox_src_install() {
 	fi
 
 	# set permissions on all binares files for compiled programs per arch
-	if [ -n ${SET_PERM} ]; then
+	if [ -n "${SET_PERM}" ]; then
 	    ARCH="`uname -m`"
 	    case ${ARCH} in
 		i?86) ARCH=ix86 ;;
