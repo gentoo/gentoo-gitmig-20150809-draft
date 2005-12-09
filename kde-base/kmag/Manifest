@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1b234fab0b6a7f2c6f1a8b64f07757ed ChangeLog 3712
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmag-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmag-3.4.2 320
@@ -8,3 +11,10 @@ MD5 c7c8dbe64461ad978a6481c99be2b5f0 kmag-3.4.2.ebuild 401
 MD5 efed1d90d5e5193e4d5799195325a1fe kmag-3.4.3.ebuild 397
 MD5 06d317984ac3582e32d9834b21061fef kmag-3.5.0.ebuild 389
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmP/RcsIHjyDViGQRAm39AJ964VkvKz94x2XZb8Ca4eeJx5djUwCfRU+i
+z57RZ6aDqPhxWy90FvHQx2Y=
+=oiYg
+-----END PGP SIGNATURE-----

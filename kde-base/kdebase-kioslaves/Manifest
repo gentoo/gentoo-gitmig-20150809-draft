@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fd10125f2e24ee47538b43e1be1ec567 ChangeLog 6105
 MD5 00c42877b616c0d2c5df33a6eaecbfdd files/configure-fix-kdebase-openexr.patch 703
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1 212
@@ -14,3 +17,10 @@ MD5 baa5d6bb5f0bda49ce3e96283732ca46 kdebase-kioslaves-3.4.2.ebuild 1096
 MD5 b1831967ba94b02598e12db9267e5f20 kdebase-kioslaves-3.4.3.ebuild 1296
 MD5 f3bb0cdd31ef73513ce5cf901ae7547e kdebase-kioslaves-3.5.0.ebuild 954
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmP2DcsIHjyDViGQRAp3wAJ4sFMRMMcTbrNdtp1EtuLikZ7/dWwCePTm1
+F4V4UEJfxq0D3AJ43E87Rmc=
+=RFzu
+-----END PGP SIGNATURE-----

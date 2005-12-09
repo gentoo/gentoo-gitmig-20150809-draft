@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1cc36286424dfad835e8f38c3bb7b76 ChangeLog 4226
 MD5 d4f721aede14b18d9aa83c9d9f18900d files/configure-fix-kdeartwork-libart.patch 2503
 MD5 205c13a78065c2decb403b1984abab5f files/configure-fix-kdeartwork-xscreensaver.patch 1577
@@ -10,3 +13,10 @@ MD5 0af9b25b83b198577161f5dadfd4526e kscreensaver-3.4.2.ebuild 532
 MD5 8c0b5ad614edf812b9e93d2fd72c7e35 kscreensaver-3.4.3.ebuild 528
 MD5 2cf560e488b766c6d6d3ce7466cd6e17 kscreensaver-3.5.0.ebuild 525
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmPjqcsIHjyDViGQRAr4qAJ9EXDb9dvfuMgx8925xabxU1qeFSgCg3XDW
+A4AeblUP0QfFgN+seS2qoKI=
+=ljAy
+-----END PGP SIGNATURE-----

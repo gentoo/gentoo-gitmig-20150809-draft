@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 423e9b65d62b9b68689fd1742ca3cd58 ChangeLog 3755
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kwin4-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kwin4-3.4.2 288
@@ -8,3 +11,10 @@ MD5 d62704bfb32bf64c814d811d415d70ea kwin4-3.4.2.ebuild 544
 MD5 c22d09fd71dc323d1585a267254d9426 kwin4-3.4.3.ebuild 540
 MD5 106faa28461e6ef4495d7f17127ac73b kwin4-3.5.0.ebuild 495
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmQTrcsIHjyDViGQRAlF2AKC1f1Z/PCFD9meFyEJDtXad0dRUMQCg32J4
+mNPVZWlzuuiNqnHpxE3OizI=
+=QkEw
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03addb8659638d1f7b51f65696a281e7 ChangeLog 3778
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kfind-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kfind-3.4.2 287
@@ -8,3 +11,10 @@ MD5 77c2d7ad47599ddee089326a3ac58a4a kfind-3.4.2.ebuild 509
 MD5 691abe70a94bb147fb5d29c1d3882884 kfind-3.4.3.ebuild 505
 MD5 e4c62446e353adb8c6280a4fbcfe4726 kfind-3.5.0.ebuild 464
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmPsocsIHjyDViGQRAuQlAJ9Bdl8GF+8YR4Nraxd66ty1U+kw8wCgoZQH
+9lx8UW4clHzR5PhkWrGhVc8=
+=dFbY
+-----END PGP SIGNATURE-----
