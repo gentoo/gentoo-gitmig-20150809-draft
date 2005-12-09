@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.49 2005/11/06 07:56:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.50 2005/12/09 03:10:04 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -63,7 +63,7 @@ else
 	SLOT="0"
 fi
 
-RDEPEND=">=sys-devel/binutils-config-1.8"
+RDEPEND=">=sys-devel/binutils-config-1.8-r6"
 DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
@@ -285,7 +285,7 @@ toolchain-binutils_pkg_postrm() {
 		choice=${choice//$'\n'/ }
 		choice=${choice/* }
 		if [[ -z ${choice} ]] ; then
-			binutils-config -u ${CTARGET}
+			env -i binutils-config -u ${CTARGET}
 		else
 			binutils-config ${choice}
 		fi
