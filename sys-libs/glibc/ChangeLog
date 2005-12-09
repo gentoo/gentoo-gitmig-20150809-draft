@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.412 2005/11/30 23:19:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.413 2005/12/09 13:45:15 uberlord Exp $
+
+  09 Dec 2005; Roy Marples <uberlord@gentoo.org> files/nscd:
+  Tweak nscd initscript depend to use dns ldap net slapd.
 
   30 Nov 2005; Bryan Østergaard <kloeri@gentoo.org> glibc-2.3.5-r3.ebuild:
   Stable on alpha. Fixes some longstanding threading issues.
