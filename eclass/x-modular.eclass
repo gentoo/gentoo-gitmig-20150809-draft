@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.27 2005/12/09 16:13:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.28 2005/12/09 19:21:28 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -27,7 +27,7 @@ LICENSE="X11"
 SLOT="0"
 
 # Set up shared dependencies
-if [ -n "${SNAPSHOT}" ]; then
+if [[ -n "${SNAPSHOT}" ]]; then
 # FIXME: What's the minimal libtool version supporting arbitrary versioning?
 	DEPEND="${DEPEND}
 		>=sys-devel/autoconf-2.57
@@ -103,28 +103,28 @@ x-modular_patch_source() {
 	# Use standardized names and locations with bulk patching
 	# Patch directory is ${WORKDIR}/patch
 	# See epatch() in eutils.eclass for more documentation
-	if [ -z "${EPATCH_SUFFIX}" ] ; then
+	if [[ -z "${EPATCH_SUFFIX}" ]] ; then
 		EPATCH_SUFFIX="patch"
 	fi
 
 	# For specific list of patches
-	if [ -n "${PATCHES}" ] ; then
+	if [[ -n "${PATCHES}" ]] ; then
 		for PATCH in ${PATCHES}
 		do
 			epatch ${PATCH}
 		done
 	# For non-default directory bulk patching
-	elif [ -n "${PATCH_LOC}" ] ; then
+	elif [[ -n "${PATCH_LOC}" ]] ; then
 		epatch ${PATCH_LOC}
 	# For standard bulk patching
-	elif [ -d "${EPATCH_SOURCE}" ] ; then
+	elif [[ -d "${EPATCH_SOURCE}" ]] ; then
 		epatch
 	fi
 }
 
 x-modular_reconf_source() {
 	# Run autoreconf for CVS snapshots only
-	if [ "${SNAPSHOT}" = "yes" ]
+	if [[ "${SNAPSHOT}" = "yes" ]]
 	then
 		# If possible, generate configure if it doesn't exist
 		if [ -f "${S}/configure.ac" ]
@@ -185,7 +185,7 @@ x-modular_src_configure() {
 	x-modular_font_configure
 
 	# If prefix isn't set here, .pc files cause problems
-	if [ -x ./configure ]; then
+	if [[ -x ./configure ]]; then
 		econf --prefix=${XDIR} \
 			--datadir=${XDIR}/share \
 			${FONT_OPTIONS} \
@@ -298,8 +298,8 @@ create_fonts_scale() {
 		local x
 		for FONT_DIR in ${FONT_DIRS}; do
 			x=${ROOT}/usr/share/fonts/${FONT_DIR}
-			[ -z "$(ls ${x}/)" ] && continue
-			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
+			[[ -z "$(ls ${x}/)" ]] && continue
+			[[ "$(ls ${x}/)" = "fonts.cache-1" ]] && continue
 
 			# Only generate .scale files if truetype, opentype or type1
 			# fonts are present ...
@@ -308,9 +308,9 @@ create_fonts_scale() {
 			# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
 			# Also, there is no way to regenerate Speedo/CID fonts.scale
 			# <spyderous@gentoo.org> 2 August 2004
-			if [ "${x/encodings}" = "${x}" -a \
-				-n "$(find ${x} -iname '*.tt[cf]' -print)" ]; then
-				if [ -x ${ROOT}/usr/bin/ttmkfdir ]; then
+			if [[ "${x/encodings}" = "${x}" ]] \
+				&& [[ -n "$(find ${x} -iname '*.tt[cf]' -print)" ]]; then
+				if [[ -x ${ROOT}/usr/bin/ttmkfdir ]]; then
 					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 					${ROOT}/usr/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
@@ -321,15 +321,15 @@ create_fonts_scale() {
 					# We didn't use ttmkfdir at all
 					local ttmkfdir_return=2
 				fi
-				if [ ${ttmkfdir_return} -ne 0 ]; then
+				if [[ ${ttmkfdir_return} -ne 0 ]]; then
 					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 					${ROOT}/usr/bin/mkfontscale \
 						-a /usr/share/fonts/encodings/encodings.dir \
 						-- ${x}
 				fi
 			# Next type1 and opentype (pfa,pfb,otf,otc)
-			elif [ "${x/encodings}" = "${x}" -a \
-				-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]; then
+			elif [[ "${x/encodings}" = "${x}" ]] \
+				&& [[ -n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]]; then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 				${ROOT}/usr/bin/mkfontscale \
 					-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
@@ -343,10 +343,10 @@ create_fonts_dir() {
 	ebegin "Generating fonts.dir files"
 		for FONT_DIR in ${FONT_DIRS}; do
 			x=${ROOT}/usr/share/fonts/${FONT_DIR}
-			[ -z "$(ls ${x}/)" ] && continue
-			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
+			[[ -z "$(ls ${x}/)" ]] && continue
+			[[ "$(ls ${x}/)" = "fonts.cache-1" ]] && continue
 
-			if [ "${x/encodings}" = "${x}" ]; then
+			if [[ "${x/encodings}" = "${x}" ]]; then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 				${ROOT}/usr/bin/mkfontdir \
 					-e ${ROOT}/usr/share/fonts/encodings \
@@ -370,7 +370,7 @@ create_font_cache() {
 	# danarmak found out that fc-cache should be run AFTER all the above
 	# stuff, as otherwise the cache is invalid, and has to be run again
 	# as root anyway
-	if [ -x ${ROOT}/usr/bin/fc-cache ]; then
+	if [[ -x ${ROOT}/usr/bin/fc-cache ]]; then
 		ebegin "Creating FC font cache"
 			HOME="/root" ${ROOT}/usr/bin/fc-cache
 		eend 0
