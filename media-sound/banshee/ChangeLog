@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.6 2005/12/08 23:56:22 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.7 2005/12/09 00:46:03 metalgod Exp $
+
+  09 Dec 2005; Luis Medinas <metalgod@gentoo.org> banshee-0.10-r1.ebuild:
+  Fix crash without ipod use flag enabled. Closes bug #114930.
 
   08 Dec 2005; Herbie Hopkins <herbs@gentoo.org> banshee-0.10-r1.ebuild:
   Multilib fix.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10-r1.ebuild,v 1.2 2005/12/08 23:56:22 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10-r1.ebuild,v 1.3 2005/12/09 00:46:03 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -73,6 +73,12 @@ src_compile() {
 	addpredict "/root/.gconfd"
 	gnome2_src_configure
 	emake -j1 || "make failed"
+}
+src_install() {
+	gnome2_src_install
+	if ! use ipod; then
+		dodir /usr/$(get_libdir)/banshee/Banshee.Dap
+	fi
 }
 pkg_postinst() {
 	einfo "If you have an ipod please rebuild this package with USE=ipod"
