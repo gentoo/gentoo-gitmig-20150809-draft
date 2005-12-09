@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/net6
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/ChangeLog,v 1.7 2005/11/25 18:45:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/ChangeLog,v 1.8 2005/12/09 18:27:21 humpback Exp $
+
+*net6-1.2.2 (09 Dec 2005)
+
+  09 Dec 2005; Gustavo Felisberto <humpback@gentoo.org>; -net6-1.2.1.ebuild,
+  +net6-1.2.2.ebuild:
+  Version bump and removed the rc version. This marks the release of gobby 0.3.0.
 
 *net6-1.2.1 (25 Nov 2005)
 
