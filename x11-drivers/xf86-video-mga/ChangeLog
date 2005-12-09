@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-mga
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.8 2005/12/04 23:09:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.9 2005/12/09 07:26:16 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xf86-video-mga-1.1.2.ebuild, -xf86-video-mga-1.1.2-r1.ebuild,
+  -xf86-video-mga-1.2.0.1.ebuild, -xf86-video-mga-1.2.1.ebuild:
+  Pull old versions.
 
 *xf86-video-mga-1.2.1.1 (04 Dec 2005)
 

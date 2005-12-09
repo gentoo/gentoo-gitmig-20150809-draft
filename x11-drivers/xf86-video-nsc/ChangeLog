@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-nsc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nsc/ChangeLog,v 1.5 2005/12/04 23:10:32 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nsc/ChangeLog,v 1.6 2005/12/09 07:27:31 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xf86-video-nsc-2.7.6.ebuild, -xf86-video-nsc-2.7.6.1.ebuild,
+  -xf86-video-nsc-2.7.6.2.ebuild:
+  Pull old versions.
 
 *xf86-video-nsc-2.7.6.3 (04 Dec 2005)
 
