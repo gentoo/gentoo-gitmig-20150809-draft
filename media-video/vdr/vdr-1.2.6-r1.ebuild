@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6-r1.ebuild,v 1.4 2005/12/09 23:26:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6-r1.ebuild,v 1.5 2005/12/09 23:29:42 zzam Exp $
 
 inherit eutils check-kernel
 
@@ -17,14 +17,6 @@ DEPEND="sys-libs/ncurses
 	lirc? ( app-misc/lirc )
 	media-libs/jpeg
 	media-tv/linuxtv-dvb-headers"
-
-pkg_setup() {
-	if is_kernel_2_4; then
-		if ! has_version media-tv/linuxtv-dvb; then
-			eerror "For 2.4 kernels, media-tv/linuxtv-dvb is required"
-		fi
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
