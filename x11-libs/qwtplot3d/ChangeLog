@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.2 2005/10/21 16:47:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.3 2005/12/09 14:42:56 cryos Exp $
+
+  09 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  qwtplot3d-0.2.6-r1.ebuild:
+  Few fixes to use Qt3 properly.
 
 *qwtplot3d-0.2.6-r1 (21 Oct 2005)
 

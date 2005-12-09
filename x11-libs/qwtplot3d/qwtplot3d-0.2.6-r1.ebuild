@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r1.ebuild,v 1.1 2005/10/21 16:47:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r1.ebuild,v 1.2 2005/12/09 14:42:56 cryos Exp $
 
-inherit multilib
+inherit multilib qt3
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${PN}
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="examples"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="=x11-libs/qt-3*
+DEPEND="$(qt_min_version 3.3)
 	>=sys-apps/sed-4"
 
 src_unpack () {
@@ -34,14 +34,14 @@ src_unpack () {
 
 src_compile () {
 	addwrite ${QTDIR}/etc/settings
-	qmake qwtplot3d.pro
-	emake || die
+	${QTDIR}/bin/qmake qwtplot3d.pro || die "qmake failed."
+	emake || die "emake failed."
 }
 
 src_install () {
-	dolib lib/libqwtplot3d.so.${PV}
-	dosym libqwtplot3d.so.${PV} /usr/$(get_libdir)/libqwtplot3d.so
-	dosym libqwtplot3d.so.${PV} /usr/$(get_libdir)/libqwtplot3d.so.${PV/.*/}
+	dolib lib/libqwtplot3d.so.${PV} || die "dolib failed."
+#	dosym libqwtplot3d.so.${PV} /usr/$(get_libdir)/libqwtplot3d.so
+#	dosym libqwtplot3d.so.${PV} /usr/$(get_libdir)/libqwtplot3d.so.${PV/.*/}
 	chmod -R 644 examples
 	chmod 755 examples examples/simpleplot/ examples/mesh2/ \
 		examples/enrichments/ examples/axes/ examples/autoswitch/ \
