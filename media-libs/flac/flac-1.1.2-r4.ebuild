@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r4.ebuild,v 1.1 2005/11/28 12:21:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r4.ebuild,v 1.2 2005/12/09 16:06:34 flameeyes Exp $
 
 inherit libtool eutils flag-o-matic autotools
 
-PATCHLEVEL="2"
+PATCHLEVEL="3"
 DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 HOMEPAGE="http://flac.sourceforge.net/"
 SRC_URI="mirror://sourceforge/flac/${P}.tar.gz
@@ -27,10 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Have to force this or the m4 file is not applied correctly
 	EPATCH_SUFFIX="patch" \
-	EPATCH_OPTS="-p1 ${EPATCH_OPTS}" \
-		epatch "${WORKDIR}/patches"
+	epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }

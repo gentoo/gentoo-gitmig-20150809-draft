@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.78 2005/11/28 12:21:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.79 2005/12/09 16:06:34 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> flac-1.1.2-r4.ebuild:
+  Added patch to fix executable stack on x86 as per bug #114984, provided by
+  Kevin F. Quinn. Remove the -p1 trick, as now the m4 file uses -p0 that works
+  as a charm.
 
 *flac-1.1.2-r4 (28 Nov 2005)
 
