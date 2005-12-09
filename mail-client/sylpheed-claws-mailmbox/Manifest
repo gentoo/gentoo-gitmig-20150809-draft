@@ -7,12 +7,12 @@ MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-mailmbox-1.2 82
 MD5 306d22889cf1447ec6182916ecd22260 files/digest-sylpheed-claws-mailmbox-1.4 92
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 MD5 994ef73567b2a64b5eea6db2a339499a sylpheed-claws-mailmbox-0.9.ebuild 777
-MD5 c8ed353368a227e8a24ecace9fd1f710 sylpheed-claws-mailmbox-1.2.ebuild 841
-MD5 0e8be38f4ce41b2fa56a2c8f6df5308a sylpheed-claws-mailmbox-1.4.ebuild 882
+MD5 2b865fb4f5566c20943252abe958270f sylpheed-claws-mailmbox-1.2.ebuild 838
+MD5 5396ea8db0e46cf1534320b9ee82e545 sylpheed-claws-mailmbox-1.4.ebuild 879
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDdyeh6J2i8a8J4okRAiw+AJsGXSeDfyIvpBTNLBkiN6Ut2zyxIACg1Jzn
-ZTg9AsUnq9kysZdDUNOQ9sI=
-=Ezk1
+iD8DBQFDmcp56J2i8a8J4okRAqI7AJ9D8PpKnwqG6mRDEuQzhUyyvIT3ywCgg/wG
+WC8GRP2O18LWI8psIxAykMY=
+=pGK2
 -----END PGP SIGNATURE-----
