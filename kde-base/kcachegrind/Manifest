@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d0c39b6ab2dcd75ca43bd43520c6091f ChangeLog 3762
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kcachegrind-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kcachegrind-3.4.2 280
@@ -8,3 +11,10 @@ MD5 b1f8b1b85874b9e323387dc5520ce5ce kcachegrind-3.4.2.ebuild 482
 MD5 88a3af3d74c93d108c384e04f0a0c192 kcachegrind-3.4.3.ebuild 477
 MD5 4dd668d979d084e94b6142fc2333a382 kcachegrind-3.5.0.ebuild 464
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmVdYcsIHjyDViGQRAhOsAJ4pvAPM9m++uOsEzmp06WjoYMioVgCfXXLA
+SxxDRa0JrFgv43zrwEog7fA=
+=G9HF
+-----END PGP SIGNATURE-----
