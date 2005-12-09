@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5a3f2fb72b2d9e485817bb1fbeae03f1 velocity-1.4-r2.ebuild 1408
-MD5 63f4771f7a97fe6d62557744cc622c66 velocity-1.4-r1.ebuild 1371
-MD5 ce29cb44c25a7dafa441a5f3bf79bb3a ChangeLog 2450
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 89a6a37c9ec56d01f8bbd126ece11c36 ChangeLog 2647
 MD5 ebc2b845ee1e201a404b4eceb168952a files/digest-velocity-1.4-r1 65
 MD5 ebc2b845ee1e201a404b4eceb168952a files/digest-velocity-1.4-r2 65
+MD5 ebc2b845ee1e201a404b4eceb168952a files/digest-velocity-1.4-r3 65
+MD5 1b739fb0994afdb5b18dc46f157211f7 files/velocity-1.4-versioned_jar.patch 2237
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 63f4771f7a97fe6d62557744cc622c66 velocity-1.4-r1.ebuild 1371
+MD5 5a3f2fb72b2d9e485817bb1fbeae03f1 velocity-1.4-r2.ebuild 1408
+MD5 e9a950e4b43fd2a3a135975a640da9c9 velocity-1.4-r3.ebuild 1687
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC16Fg/rLF9B432nYRAkd6AKC2k5aJ3+Ognxu78Gm2mygg99ta0ACfVEPp
-7mkOD1mDaxs7Cwh5VEmEqJ0=
-=lfuM
+iD8DBQFDmOLsndWRXhKOboURAvRnAJoDUS+JbfvwEsHudOhYJP3tUI4JqgCg73Aq
+NqnXtUQR8UBQ7QrvcJ2iqUs=
+=TmJ4
 -----END PGP SIGNATURE-----
