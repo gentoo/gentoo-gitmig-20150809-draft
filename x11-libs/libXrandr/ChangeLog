@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXrandr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.10 2005/12/04 20:14:32 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.11 2005/12/09 06:16:51 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -libXrandr-0.99.1.ebuild, -libXrandr-0.99.2.ebuild:
+  Pull old versions.
 
 *libXrandr-1.1.0.1 (04 Dec 2005)
 

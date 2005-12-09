@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXevie
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.8 2005/12/04 20:04:53 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.9 2005/12/09 06:11:20 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -libXevie-0.99.2.ebuild:
+  Pull old versions.
 
 *libXevie-0.99.3 (04 Dec 2005)
 
