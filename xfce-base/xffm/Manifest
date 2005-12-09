@@ -1,4 +1,4 @@
-MD5 0e0828c88ac433b27d283d7bc0e88613 ChangeLog 6471
+MD5 8802fbb7800e8b3adbf38827a312336b ChangeLog 6472
 MD5 17d63062c07dc2d9b26b9e0fbcc4c5db files/digest-xffm-4.2.1 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2-r1 63
@@ -8,4 +8,4 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 8c0e95fbe0e57dd74da3f7119ee40019 xffm-4.2.1.ebuild 529
 MD5 f3963081b0ddd901205355c2d0b3efea xffm-4.2.2-r1.ebuild 615
 MD5 46b214d13ba23141abd861a5f020bbf2 xffm-4.2.2.ebuild 525
-MD5 f3963081b0ddd901205355c2d0b3efea xffm-4.2.3.ebuild 615
+MD5 50965f91c73d69c729ba9ca3c911680c xffm-4.2.3.ebuild 613
