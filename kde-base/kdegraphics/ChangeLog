@@ -1,6 +1,20 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.202 2005/12/08 02:26:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.203 2005/12/09 21:05:05 carlo Exp $
+
+*kdegraphics-3.5.0-r2 (09 Dec 2005)
+*kdegraphics-3.4.3-r2 (09 Dec 2005)
+*kdegraphics-3.4.1-r3 (09 Dec 2005)
+
+  09 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  -files/kpdf-3.4.3-CAN-2005-3193.patch,
+  +files/post-3.4.3-kdegraphics-CAN-2005-3193.diff,
+  -files/kpdf-3.5.0-CAN-2005-3193.patch,
+  +files/post-3.5.0-kdegraphics-CAN-2005-3193.diff,
+  -kdegraphics-3.4.1-r2.ebuild, +kdegraphics-3.4.1-r3.ebuild,
+  -kdegraphics-3.4.3-r1.ebuild, +kdegraphics-3.4.3-r2.ebuild,
+  -kdegraphics-3.5.0-r1.ebuild, +kdegraphics-3.5.0-r2.ebuild:
+  fixed patch
 
 *kdegraphics-3.4.1-r2 (08 Dec 2005)
 

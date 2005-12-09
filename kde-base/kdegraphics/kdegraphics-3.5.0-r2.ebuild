@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r1.ebuild,v 1.1 2005/12/06 01:49:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r2.ebuild,v 1.1 2005/12/09 21:05:06 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kpdf-3.5.0-CAN-2005-3193.patch ${FILESDIR}/kpdf-3.5.0-splitter-io.patch"
+PATCHES="${FILESDIR}/post-3.5.0-kdegraphics-CAN-2005-3193.diff ${FILESDIR}/kpdf-3.5.0-splitter-io.patch"
 
 pkg_setup() {
 	if ! built_with_use virtual/ghostscript X; then

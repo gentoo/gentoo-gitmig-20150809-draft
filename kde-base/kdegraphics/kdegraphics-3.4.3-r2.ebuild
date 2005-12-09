@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r1.ebuild,v 1.3 2005/12/07 19:48:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r2.ebuild,v 1.1 2005/12/09 21:05:06 carlo Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="gphoto2 imlib nodrm openexr opengl povray scanner tetex"
 
 DEPEND="~kde-base/kdebase-${PV}
@@ -44,7 +44,7 @@ src_unpack() {
 	# Configure patch. Applied for 3.5.
 	epatch "${FILESDIR}/kdegraphics-3.4-configure.patch"
 
-	epatch "${FILESDIR}/kpdf-3.4.3-CAN-2005-3193.patch"
+	epatch "${FILESDIR}/post-3.4.3-kdegraphics-CAN-2005-3193.diff"
 
 	# For the configure patch.
 	make -f admin/Makefile.common || die
