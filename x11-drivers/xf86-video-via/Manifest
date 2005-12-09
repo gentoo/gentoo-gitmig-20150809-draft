@@ -1,6 +1,4 @@
-MD5 6161b4e3c5fa9988264a70b109c106b3 ChangeLog 2031
-MD5 a9b5405956ad3bcd0b82c54087a2caee files/VIAVidAdjustFrame_fix.patch 483
+MD5 e2beeab0410e3f5d1bfc3e13146fb687 ChangeLog 2165
 MD5 8192c4a5e6cf5df90fa88ebbc566ecda files/digest-xf86-video-via-0.1.33 74
-MD5 d41d8cd98f00b204e9800998ecf8427e files/xf86xvpriv.patch 0
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 5052164ccfc1ac029a174a8fce3dc590 xf86-video-via-0.1.33.ebuild 722

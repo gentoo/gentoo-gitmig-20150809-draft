@@ -1,6 +1,4 @@
-MD5 e86c32f347916a44c70380ace3d2e689 ChangeLog 1649
+MD5 486cd7845745e296fb88aec506c6ffdb ChangeLog 1824
 MD5 d58a8bf5580f5a32a9617817dc0b5979 files/digest-xf86-video-mga-1.2.1.1 75
-MD5 f0b2820fdb16ef965b82494bd8aee602 files/xf86-video-mga-1.1.2-add-mga-bios.patch 16864
-MD5 93e74a7f52c6907bd6f645b4cad4f434 files/xf86-video-mga-1.1.2-fix-xmd-include.patch 423
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 33528131bd93c7432520b51086944b83 xf86-video-mga-1.2.1.1.ebuild 701
