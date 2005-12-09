@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0149c59ccc0c1acd2aecc6decbefb317 ChangeLog 906
 MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-cis-3.2.8-r1 68
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 fd63b0f519ec2605131f6cd7b5dc1117 pcmcia-cs-cis-3.2.8-r1.ebuild 885
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmaWicsIHjyDViGQRAl37AJsFZbQ2j6YI9U+luGJBmF+X48G52gCgg65b
+QQE4avxKIiFt0itWDwBFECs=
+=EdF7
+-----END PGP SIGNATURE-----
