@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/qtiplot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.3 2005/11/29 21:10:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.4 2005/12/09 14:44:39 cryos Exp $
+
+  09 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> qtiplot-0.7.3.ebuild:
+  Small cleanup for the Qt path.
 
 *qtiplot-0.7.3 (29 Nov 2005)
 
