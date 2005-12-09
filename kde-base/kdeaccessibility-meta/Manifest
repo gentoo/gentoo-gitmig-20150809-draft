@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 edd04cbd96b24a1862efd6e3209d5a92 ChangeLog 5036
+MD5 41bc63d949346934ef5337f5c231b8d6 ChangeLog 5160
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.0 0
 MD5 d3bdd888a8e1b0ffed94c20d97505763 kdeaccessibility-meta-3.4.1.ebuild 836
 MD5 7af52742df7cab35a7660867e9984a89 kdeaccessibility-meta-3.4.2.ebuild 849
-MD5 222e3d2414afc754923c5aedc90883c6 kdeaccessibility-meta-3.4.3.ebuild 847
+MD5 edbb7b75bb75561bec56c364dc5b4114 kdeaccessibility-meta-3.4.3.ebuild 845
 MD5 d72cb322cc80217ffa40df9afabcd3bc kdeaccessibility-meta-3.5.0.ebuild 837
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkjrwugEuf3OQ0akRAkHdAJ45RqtE04BmW465+ZK2fCMFj++k2wCeILVq
-Zn72MySKkiiXcUW911dp2J0=
-=GS9w
------END PGP SIGNATURE-----

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 254e06132fe7812ccdf36c7ce25b9749 ChangeLog 4838
+MD5 2e672c20592fc99ac7ee44f352810a2b ChangeLog 4947
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.5.0 0
 MD5 ccdb1a4f9d0f8d715b4ceedffd1bad5d kde-meta-3.4.1.ebuild 1203
 MD5 0eaedc14a77dae85a3c9062f6d03bb91 kde-meta-3.4.2.ebuild 1216
-MD5 b36973439bf68a9984e232ed2328ca6a kde-meta-3.4.3.ebuild 1212
+MD5 103c273cdb8b79903048a88c02053a2d kde-meta-3.4.3.ebuild 1212
 MD5 c8d26ff866a3ca1dc8dadaa49c6601e8 kde-meta-3.5.0.ebuild 1204
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkuX0ugEuf3OQ0akRAv7GAJ9fOTFHTRzikWzev4zuB2+Rhz5GOwCfXOLW
-F2o3VjR5ht6m4O+Dv9Uk2lg=
-=UwWb
------END PGP SIGNATURE-----
