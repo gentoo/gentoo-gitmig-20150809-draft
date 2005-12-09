@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.16 2005/11/26 14:35:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.17 2005/12/09 10:08:57 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org> kapptemplate-3.4.1.ebuild:
+  Marked ppc stable for bug #112842.
 
 *kapptemplate-3.5.0 (22 Nov 2005)
 
