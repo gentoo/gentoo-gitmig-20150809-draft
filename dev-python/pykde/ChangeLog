@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pykde
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.25 2004/12/30 23:31:39 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.26 2005/12/09 22:16:45 carlo Exp $
+
+*pykde-3.12_pre20051013 (09 Dec 2005)
+
+  09 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/pykde-3.12_pre20051013-kde35.diff, +pykde-3.12_pre20051013.ebuild:
+  version bump
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
