@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9995655103284a618c28d1f1234b131b ChangeLog 13091
+MD5 ea9a20b95837cd12b6284ee5c4acb999 ChangeLog 13193
 MD5 001de4d11bfaea065cf6ca5c4d3f5a34 files/digest-netpbm-10.26.20 139
 MD5 c6c3222383568021fbbdc34114b6f279 files/digest-netpbm-10.28 62
 MD5 8c4a20ca06c83687436b8cb75917d5f1 files/digest-netpbm-10.29 62
@@ -22,11 +22,11 @@ MD5 6da743132b9702be3b38b2a292bd7bfd netpbm-10.26.20.ebuild 2799
 MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
 MD5 4b1a6bc24bd0b85afb5756e7c1e218e8 netpbm-10.29-r1.ebuild 2937
 MD5 44a56191027bdda13f3bd51f336a971a netpbm-10.29.ebuild 2423
-MD5 17d1abea7340503ba3717ad558ebcce6 netpbm-10.30-r1.ebuild 3045
+MD5 2092aa189ce80d29430ab289932fbd53 netpbm-10.30-r1.ebuild 3047
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDmLatQlM6RnzZP+IRAt4eAJ9KMcgBzdLAlEmBRs1d+Lo491MshQCgj6sp
-6WUB9iOLwAFEFdkzvQY/T8M=
-=g/QH
+iD8DBQFDmZk4KRy60XGEcJIRAm2sAJ9+xVE6UyGwHsh1orvNaNFKMscEWQCgqN0t
+2GEOer0K1juT81XRUhlefQE=
+=chui
 -----END PGP SIGNATURE-----
