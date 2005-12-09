@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.4 2005/12/07 23:30:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.5 2005/12/09 20:36:39 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
-DESCRIPTION="Sid Meier's Alpha Centauri"
+
+DESCRIPTION="Linux port of the popular strategy game from Firaxis"
 HOMEPAGE="http://www.lokigames.com/products/smac/"
 SRC_URI="mirror://lokigames/${PN}/${P}-x86.run"
 
@@ -17,7 +18,16 @@ RESTRICT="nostrip"
 DEPEND="games-util/loki_patch"
 RDEPEND="virtual/x11
 	sys-libs/glibc
-	sys-libs/lib-compat-loki"
+	sys-libs/lib-compat-loki
+	media-libs/libsdl
+	media-libs/sdl-ttf
+	media-libs/sdl-mixer
+	media-libs/smpeg
+	media-libs/freetype
+	sys-libs/zlib"
+
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	cdrom_get_cds Alien_Crossfire_Manual.pdf
@@ -25,13 +35,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	mkdir -p ${S}/a ${S}/b
+	mkdir -p ${S}/a
 	cd ${S}/a
 	unpack_makeself ${P}-x86.run
 }
-
-dir=${GAMES_PREFIX_OPT}/${PN}
-Ddir=${D}/${dir}
 
 src_install() {
 	dodir ${dir}
@@ -65,11 +72,13 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	insinto /usr/share/pixmaps
-	newins ${CDROM_ROOT}/icon.xpm smac.xpm
+	newicon ${CDROM_ROOT}/icon.xpm smac.xpm
 
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	games_make_wrapper ${PN}x ./${PN}x "${dir}" "${dir}"
+	make_desktop_entry smac "Sid Meier's Alpha Centauri" smac.xpm
+	make_desktop_entry smacx "Sid Meier's Alpha Centauri - Alien Crossfire" \
+		smac.xpm
 	prepgamesdirs
 
 	einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."

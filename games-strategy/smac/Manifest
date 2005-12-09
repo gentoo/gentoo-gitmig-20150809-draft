@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eeabd61cfb513d8028e269395cbde48 ChangeLog 708
+MD5 a7edba2c342886d24a1b841d593577c6 ChangeLog 848
 MD5 3b8cb21212b3ca49eb93ea8bc2b3ab8b files/digest-smac-6.0a 63
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 53a330226569b4d5c6821770090be5e9 smac-6.0a.ebuild 2567
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDl3E2gIKl8Uu19MoRAlPgAJ42y+hByWe5LHd64cZInkuUAuo1GgCfSIRP
-JvQgzIYyh1gdS7KWupJAvcM=
-=OPQz
------END PGP SIGNATURE-----
+MD5 3ba66b19413a890b3f07962b7c713e96 smac-6.0a.ebuild 2826
