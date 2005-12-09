@@ -1,4 +1,4 @@
-MD5 232314be899dc863b6a1281cca63d77b ChangeLog 7197
+MD5 8b7e7fb0c4ff438ef745ae2030e45d85 ChangeLog 7198
 MD5 853ce8fb1c4e5be3a458a582f8b6f4fa files/digest-xfce4-panel-4.2.1.1 71
 MD5 a527ebb4eb261ae3006d7804f3e9254d files/digest-xfce4-panel-4.2.2 70
 MD5 a527ebb4eb261ae3006d7804f3e9254d files/digest-xfce4-panel-4.2.2-r1 70
@@ -7,4 +7,4 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 fe929cfeaa54ea6244cf3815beb234ae xfce4-panel-4.2.1.1.ebuild 415
 MD5 d2f8c426808e57b6cf67cdedf4a4aa03 xfce4-panel-4.2.2-r1.ebuild 589
 MD5 e55e6f7af14b76922a5f29b9d862e2e5 xfce4-panel-4.2.2.ebuild 378
-MD5 d2f8c426808e57b6cf67cdedf4a4aa03 xfce4-panel-4.2.3.ebuild 589
+MD5 f4d82a3ce98c89a0c0a6134396b9eb90 xfce4-panel-4.2.3.ebuild 587

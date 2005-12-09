@@ -1,4 +1,4 @@
-MD5 dd3d053fd9a4a6b1dce9faf1f8837c6e ChangeLog 7313
+MD5 d78952520381908faccc15aa061a7d11 ChangeLog 7314
 MD5 9cf685c1a7049e32d13f8e38a4825c0c files/digest-xfce-mcs-manager-4.2.1 74
 MD5 4592f602a0965dfb63ab6616aafe0df6 files/digest-xfce-mcs-manager-4.2.2 74
 MD5 4592f602a0965dfb63ab6616aafe0df6 files/digest-xfce-mcs-manager-4.2.2-r1 74
@@ -7,4 +7,4 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 f76927a257537559bdfeefc304cd979f xfce-mcs-manager-4.2.1.ebuild 416
 MD5 9868e6ea5466866d955aaa0968bf6f50 xfce-mcs-manager-4.2.2-r1.ebuild 507
 MD5 3e940ebfaaee1dab650813e07a2c9e28 xfce-mcs-manager-4.2.2.ebuild 406
-MD5 9868e6ea5466866d955aaa0968bf6f50 xfce-mcs-manager-4.2.3.ebuild 507
+MD5 f178217f64bdb0d479460e74483ed797 xfce-mcs-manager-4.2.3.ebuild 505
