@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.472 2005/12/06 06:14:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.473 2005/12/09 20:40:15 kumba Exp $
+
+  09 Dec 2005; Joshua Kinard <kumba@gentoo.org> gcc-3.4.4-r1.ebuild,
+  gcc-3.4.5.ebuild:
+  Marked 3.4.4-r1 stable; 3.4.5 unstable on mips.
 
 *gcc-3.4.5 (06 Dec 2005)
 
