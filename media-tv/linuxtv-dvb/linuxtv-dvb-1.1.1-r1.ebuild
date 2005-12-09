@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.9 2005/12/03 17:01:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.10 2005/12/09 22:13:05 zzam Exp $
 
 inherit eutils kernel-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuxtv.org"
 SRC_URI="http://www.linuxtv.org/download/dvb/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ppc x86"
 IUSE=""
 DEPEND="virtual/linux-sources"
 #RDEPEND=""
@@ -31,7 +31,7 @@ src_compile() {
 	if kernel-mod_is_2_4_kernel; then
 		# don't interfere with the kernel arch variables
 		unset ARCH
-		emake || die "emake failed"
+		emake BUILD_DIR=${S}/build-2.4 KDIR=/usr/src/linux || die "emake failed"
 	else
 		einfo "Nothing to compile."
 	fi
