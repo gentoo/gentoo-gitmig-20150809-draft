@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.0.ebuild,v 1.1 2005/11/22 22:14:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.0.ebuild,v 1.2 2005/12/09 14:03:41 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -25,6 +25,9 @@ src_unpack() {
 
 	# Fix output of klaptopdaemon (kde bug 103437).
 	epatch "${FILESDIR}/kdeutils-3.4.3-klaptopdaemon.patch"
+
+	# Fix memory calculations for FreeBSD systems
+	epatch "${FILESDIR}/superkaramba-3.5.0-fbsd.patch"
 }
 
 src_compile() {

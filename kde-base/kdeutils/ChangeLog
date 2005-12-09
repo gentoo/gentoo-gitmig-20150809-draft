@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.142 2005/12/06 05:58:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.143 2005/12/09 14:03:41 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/superkaramba-3.5.0-fbsd.patch, kdeutils-3.5.0.ebuild:
+  Add patch to make superkaramba calculate memory correctly on FreeBSD.
 
   06 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdeutils-3.4.3-r1.ebuild:
   Marked ppc stable for bug #112842.
