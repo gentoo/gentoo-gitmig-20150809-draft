@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksayit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.34 2005/12/04 11:09:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.35 2005/12/09 03:55:07 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org> ksayit-3.4.3-r1.ebuild:
+  Marked ppc stable for bug #112842.
 
   04 Dec 2005; Markus Rothe <corsair@gentoo.org> ksayit-3.4.3-r1.ebuild:
   Stable on ppc64; bug #112842

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.35 2005/12/04 11:42:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.36 2005/12/09 04:31:05 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  kdepim-kresources-3.4.3.ebuild:
+  Marked ppc stable for bug #112842.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdepim-kresources-3.5.0.ebuild:
