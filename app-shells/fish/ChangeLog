@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.7 2005/12/09 15:29:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.8 2005/12/09 16:09:15 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.18.1.ebuild:
+  Add postinst note about setting it as login shell.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> fish-1.18.1.ebuild:
   Marked ~ppc for bug #114830.

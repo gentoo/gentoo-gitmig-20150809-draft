@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.18.1.ebuild,v 1.2 2005/12/09 15:29:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.18.1.ebuild,v 1.3 2005/12/09 16:09:15 spyderous Exp $
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://roo.no-ip.org/fish/"
@@ -27,4 +27,12 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install
+}
+
+pkg_postinst() {
+	einfo
+	einfo "If you want to use fish as your default shell, you need to add it"
+	einfo "to /etc/shells. This is not recommended because fish doesn't install"
+	einfo "to /bin."
+	einfo
 }
