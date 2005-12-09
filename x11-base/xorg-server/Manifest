@@ -1,5 +1,4 @@
-MD5 4cead47b7dfc523a91c72e4c8bc902e2 ChangeLog 14830
+MD5 67c33b3731cb040be1dc52a3337730eb ChangeLog 14940
 MD5 aaa8745412b5d8adcbf3d1aaec21e35d files/digest-xorg-server-0.99.4-r2 139
-MD5 a659ef5f3be42a4e35146f7026f65864 files/fix-xkb-compile-path-2.patch 710
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 34f9d8c2090795f280770eab01a99475 xorg-server-0.99.4-r2.ebuild 4088

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.73 2005/12/09 15:11:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.74 2005/12/09 15:12:35 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/fix-xkb-compile-path-2.patch:
+  Unused file.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-server-0.99.2-r2.ebuild, -xorg-server-0.99.3.ebuild,
