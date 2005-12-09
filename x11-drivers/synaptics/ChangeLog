@@ -1,0 +1,248 @@
+# ChangeLog for x11-drivers/synaptics
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.1 2005/12/09 16:11:18 seemant Exp $
+
+  09 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/synaptics-0.14.4-makefile.patch,
+  +files/synaptics-0.14.x-gcc4-the-sentinels-have-attacked.patch,
+  +files/rc.conf, +files/rc.init, +metadata.xml, +synaptics-0.14.2.ebuild,
+  +synaptics-0.14.3.ebuild, +synaptics-0.14.4.ebuild:
+  move to x11-drivers from x11-misc
+
+  09 Dec 2005; Seemant Kulleen <seemant@gentoo.org> synaptics-0.14.4.ebuild:
+  took out the dlloader check for install location (unnecessary) and better
+  check for version numbers on install location. Thanks to Donnie Berkholz for
+  both.
+
+  09 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
+  -synaptics-0.14.1.ebuild, synaptics-0.14.2.ebuild,
+  synaptics-0.14.3.ebuild:
+  removed any amd64 keywords from versions prior to 0.14.4 which all do not
+  work properly on amd64
+
+*synaptics-0.14.4 (09 Dec 2005)
+
+  09 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/synaptics-0.14.4-makefile.patch, +synaptics-0.14.4.ebuild:
+  version bump, and this one should finally work with amd64 and other 64bit
+  arches. This closes bug #111974 by Daniel Webert and bug #102156 by disperato
+
+  08 Oct 2005; Sven Wegener <swegener@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Added missing X dependency to DEPEND.
+
+  20 Aug 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild:
+  Plucked man1 from older ebuilds by accident. Putting it back in.
+
+  20 Aug 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Fix manpage location now that the Makefile adds man1. Also move to
+  /usr/share/man. Fixes bug #103110.
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> synaptics-0.14.3.ebuild:
+  Added to ~ppc.
+
+  25 Jul 2005; Bryan Stine <battousai@gentoo.org>
+  +files/synaptics-0.14.x-gcc4-the-sentinels-have-attacked.patch,
+  synaptics-0.14.1.ebuild, synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Add patch to backport X sentinel code into included headers. Thanks to
+  Christoph Brill for posting the patch. Closes bug #100134.
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Multilib: /usr/lib -> /usr/$(get_libdir).
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Way to quote, Bryan. Moron.
+
+*synaptics-0.14.3 (22 Jul 2005)
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org>
+  -files/synaptics-0.13.4-amd64.patch, -synaptics-0.13.6.ebuild,
+  -synaptics-0.14.0.ebuild, synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, +synaptics-0.14.3.ebuild:
+  Purge old versions, bump to 0.14.3. Add dlloader USE flag, which installs a
+  DSO xorg module (.so); closes bug #81213. Furthermore, conform to Gentoo
+  xorg migration, /usr/X11R6 -> /usr.
+
+  19 May 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild:
+  Mark 0.14.1 x86 stable.
+
+*synaptics-0.14.2 (19 May 2005)
+
+  19 May 2005; Bryan Stine <battousai@gentoo.org> +synaptics-0.14.2.ebuild:
+  Bump to 0.14.2. Thanks to Benjamin Smee for reporting. Closes bug #93092.
+
+  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update herd to x11-drivers.
+
+*synaptics-0.14.1 (14 Mar 2005)
+
+  14 Mar 2005; Bryan Stine <battousai@gentoo.org> -synaptics-0.13.5.ebuild,
+  +synaptics-0.14.1.ebuild:
+  Bump to 0.14.1. Upstream ChangeLog claims a build failure on AMD64 Gentoo
+  systems was fixed, though I've not encountered any bug reports of this
+  behavior. Both 0.14.0 and 0.14.1 build fine on my AMD64 system. Also
+  expunged old 0.13.5 version.
+
+*synaptics-0.14.0 (08 Feb 2005)
+
+  08 Feb 2005; Bryan Stine <battousai@gentoo.org> -synaptics-0.13.4.ebuild,
+  +synaptics-0.14.0.ebuild:
+  Bump to 0.14.0
+
+  05 Nov 2004; Bryan Stine <battousai@gentoo.org> synaptics-0.13.4.ebuild,
+  synaptics-0.13.5.ebuild, synaptics-0.13.6.ebuild:
+  Switched from $(gcc-getCC) from gcc.eclass to $(tc-getCC) from
+  toolchain-funcs.eclass.
+
+*synaptics-0.13.6 (24 Oct 2004)
+
+  24 Oct 2004; Bryan Stine <battousai@gentoo.org> synaptics-0.13.4.ebuild,
+  synaptics-0.13.5.ebuild, +synaptics-0.13.6.ebuild:
+  Bump to 0.13.6. Changed the ebuilds to use new gcc-config logic for the
+  Makefile substitution. The new logic fixes bug #67687. The version bump
+  should fix bug #56850 (broken ALPS patch). Thanks to Ben Taitelbaum
+  <btaitelb@cs.oberlin.edu> for feedback on the ALPS patch. Thanks to Donnie
+  Berkholz <spyderous@gentoo.org> for the new gcc-config stuff.
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.13.4.ebuild, synaptics-0.13.5.ebuild:
+  Update dep from temporary hack to virtual/x11.
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/synaptics-0.13.3-amd64.patch:
+  Remove stale file.
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  -synaptics-0.13.2.ebuild, -synaptics-0.13.3.ebuild:
+  Drop old versions.
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.13.5.ebuild:
+  x86.
+
+*synaptics-0.13.5 (02 Sep 2004)
+
+  02 Sep 2004; Bryan Stine <battousai@gentoo.org>; +synaptics-0.13.5.ebuild:
+  Bump to version 0.13.5. Closes bug #62501, thanks to eGore <egore@gmx.de> for
+  reporting.
+
+  08 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/synaptics-0.13.4-amd64.patch:
+  Added correct patch on amd64.
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> files/rc.init:
+  Added full path to syndaemon in initscript, closing #56827.
+
+*synaptics-0.13.4 (04 Aug 2004)
+
+  04 Aug 2004; Bryan Stine <battousai@gentoo.org>; -synaptics-0.12.4.ebuild,
+  -synaptics-0.12.5.ebuild, +synaptics-0.13.4.ebuild:
+  Version bump to 0.13.4. Cleaned out pre 0.13 ebuilds.
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> files/rc.init:
+  Added full path to syndaemon in initscript, closing #56827.
+
+  07 Jul 2004; Bryan Stine <battousai@gentoo.org>;
+  +files/synaptics-0.13.3-amd64.patch, synaptics-0.13.3.ebuild:
+  Added a new patch to fix runtime problems with amd64 in 64-bit mode. Added
+  ~amd64 keyword. Thanks to David Barton <davebarton@cityinthesky.co.uk>, bug
+  50384.
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> synaptics-0.12.4.ebuild,
+  synaptics-0.12.5.ebuild, synaptics-0.13.2.ebuild, synaptics-0.13.3.ebuild:
+  add sed-4 dep
+  
+*synaptics-0.13.3 (14 Jun 2004)
+
+  14 Jun 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.13.3.ebuild:
+  Bumped version to 0.13.3.
+
+  13 Jun 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.12.4.ebuild,
+  synaptics-0.12.5.ebuild, synaptics-0.13.2.ebuild:
+  Reverting DEPEND change back to xfree -r6 as xfree -r7 is still masked.
+
+  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.12.4.ebuild, synaptics-0.12.5.ebuild, synaptics-0.13.2.ebuild:
+  xfree -r6 became -r7.
+
+  31 May 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.13.2.ebuild:
+  Add back the xorg-x11 RDEPEND. Fixes 52627, thanks to Ta^3 on FreeNode.
+
+  31 May 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.13.2.ebuild:
+  Added a little sed magic to change the MANDIR to /usr/man/man1 instead of
+  /usr/local... Thanks to Simon Cooper <thecoop@runbox.com> for reporting the
+  bug.
+
+*synaptics-0.13.2 (10 May 2004)
+
+  10 May 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.13.2.ebuild:
+  Version bump. Upstream made quite a few cleanups, some bug fixes and a few new
+  features.
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.12.5.ebuild:
+  Missing space in DEPEND.
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.12.5.ebuild:
+  Add xorg-x11 to possible.
+
+*synaptics-0.12.5 (31 Mar 2004)
+
+  31 Mar 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.12.5.ebuild:
+  Version bumpity.
+
+  23 Feb 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.12.4.ebuild:
+  Oops. Fixed my stupid RDEPEND mistake.
+
+*synaptics-0.12.4 (19 Feb 2004)
+
+  19 Feb 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.12.4.ebuild:
+  Version bump. This version has some good upstream Makefile fixes, including
+  DESTDIR compliance and ability to detect and build against XFree86 SDK
+  headers.
+
+  15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Removing myself as primary maintainer, this is now a herd thing.
+
+  15 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; files/rc.init:
+  Fix typo.
+
+  15 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; files/rc.conf,
+  files/rc.init:
+  Somehow I forgot to add the init.d and conf.d scripts for syndaemon, and
+  nobody even noticed.
+
+  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.0.ebuild:
+  Re-marking as testing, it's not allowed to depend on something unstable.
+
+  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.0.ebuild:
+  Stable on x86.
+
+*synaptics-0.12.1 (23 Nov 2003)
+
+  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.1.ebuild:
+  Bump. New daemon, seems a little broken though.
+
+  09 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.11.8.ebuild,
+  synaptics-0.12.0.ebuild:
+  Pulling 0.11.8. Force >=xfree-4.3.0-r4, so it doesn't overwrite files xfree
+  provides.
+
+*synaptics-0.12.0 (27 Oct 2003)
+
+  27 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.12.0.ebuild:
+  Version bump.
+
+*synaptics-0.11.8 (13 Oct 2003)
+
+  13 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  synaptics-0.11.8.ebuild, files/synaptics-0.11.8-makefile-fixup.patch:
+  Initial commit of standalone Synaptics touchpad driver, to be used in future
+  XFree revisions.
+

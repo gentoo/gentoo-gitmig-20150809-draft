@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/files/rc.init,v 1.1 2005/12/09 16:11:18 seemant Exp $
+
+depend() {
+	use localmount
+}
+
+start() {
+	ebegin "Starting syndaemon"
+	/usr/X11R6/bin/syndaemon ${SYNDAEMON_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping syndaemon"
+	kill `cat /var/run/syndaemon.pid`
+	eend $?
+}
