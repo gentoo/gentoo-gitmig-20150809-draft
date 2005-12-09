@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.6 2005/12/04 23:13:40 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.7 2005/12/09 15:12:02 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -imake-0.99.1.ebuild,
+  -imake-0.99.2.ebuild:
+  Pull old versions.
 
 *imake-0.99.3 (04 Dec 2005)
 
