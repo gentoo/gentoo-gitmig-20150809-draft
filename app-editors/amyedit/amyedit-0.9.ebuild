@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-0.9.ebuild,v 1.4 2005/10/16 22:43:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-0.9.ebuild,v 1.5 2005/12/09 02:30:26 pclouds Exp $
 
 inherit eutils
 
@@ -17,5 +17,5 @@ DEPEND=">=dev-cpp/gtkmm-2.4.8
 
 src_install() {
 	einstall
-	dodoc COPYING Changelog INSTALL README TODO || die
+	dodoc Changelog README TODO || die
 }
