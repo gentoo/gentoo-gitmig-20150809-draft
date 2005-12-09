@@ -1,0 +1,24 @@
+--- PyQt-x11-gpl-3.14.1/examples3/SQL/form1.ui	2005-03-06 11:30:50.000000000 +0100
++++ /var/tmp/portage/pykde-3.5.0/work/pykde-3.5.0/python/pyqt/examples3/SQL/form1.ui	2005-11-30 15:59:01.000000000 +0100
+@@ -12,9 +12,6 @@
+             <height>370</height>
+         </rect>
+     </property>
+-    <property name="caption">
+-        <string>Form1</string>
+-    </property>
+     <widget class="QDataTable">
+         <column>
+             <property name="text">
+--- PyQt-x11-gpl-3.14.1/examples3/SQL/form2.ui	2005-03-06 11:30:50.000000000 +0100
++++ /var/tmp/portage/pykde-3.5.0/work/pykde-3.5.0/python/pyqt/examples3/SQL/form2.ui	2005-11-30 15:59:01.000000000 +0100
+@@ -12,9 +12,6 @@
+             <height>152</height>
+         </rect>
+     </property>
+-    <property name="caption">
+-        <string>Form2</string>
+-    </property>
+     <widget class="QDataBrowser">
+         <property name="name">
+             <cstring>DataBrowser1</cstring>
