@@ -1,4 +1,4 @@
-MD5 73a78d4268bc947f430c4b622521b13b pcmcia-cs-cis-3.2.8-r1.ebuild 878
-MD5 dba25df63e532f4ab3191b0145d3d3c6 ChangeLog 791
-MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 0149c59ccc0c1acd2aecc6decbefb317 ChangeLog 906
 MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-cis-3.2.8-r1 68
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 fd63b0f519ec2605131f6cd7b5dc1117 pcmcia-cs-cis-3.2.8-r1.ebuild 885
