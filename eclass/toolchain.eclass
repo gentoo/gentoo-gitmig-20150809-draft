@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.229 2005/12/06 06:14:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.230 2005/12/09 22:16:03 kevquinn Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1857,8 +1857,8 @@ do_gcc_SSP_patches() {
 		epatch "${GCC_FILESDIR}"/pro-police-docs.patch
 	fi
 
-	# we apply only the needed parts of protectonly.dif
-	sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |'\
+	# Don't build crtbegin/end with ssp
+	sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector |'\
 		-i gcc/Makefile.in || die "Failed to update crtstuff!"
 
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
@@ -1876,6 +1876,10 @@ do_gcc_SSP_patches() {
 	else
 		update_gcc_for_libc_ssp
 	fi
+
+	# Don't build libgcc with ssp
+	sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector|' \
+		-i gcc/Makefile.in || die "Failed to update gcc!"
 }
 
 # If glibc or uclibc has been patched to provide the necessary symbols itself,
