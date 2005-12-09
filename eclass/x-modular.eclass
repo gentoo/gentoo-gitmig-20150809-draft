@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.28 2005/12/09 19:21:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.29 2005/12/09 23:32:27 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -16,6 +16,12 @@ inherit eutils libtool toolchain-funcs
 
 # Directory prefix to use for everything
 XDIR="/usr"
+
+# Set up default patchset version(s) if necessary
+# x11-driver-patches
+if [[ -z "${XDPVER}" ]]; then
+	XDPVER="1"
+fi
 
 IUSE=""
 HOMEPAGE="http://xorg.freedesktop.org/"
@@ -77,6 +83,13 @@ fi
 if [[ "${PN/#xf86-video}" != "${PN}" ]] || [[ "${PN/#xf86-input}" != "${PN}" ]]; then
 	# Don't build static driver modules
 	DRIVER_OPTIONS="--disable-static"
+
+	# Enable driver code in the rest of the eclass
+	DRIVER="yes"
+
+	# Add driver patchset to SRC_URI
+	SRC_URI="${SRC_URI} 
+		http://dev.gentoo.org/~joshuabaergen/distfiles/x11-driver-patches-${XDPVER}.tar.bz2"
 fi
 
 DEPEND="${DEPEND}
@@ -105,6 +118,13 @@ x-modular_patch_source() {
 	# See epatch() in eutils.eclass for more documentation
 	if [[ -z "${EPATCH_SUFFIX}" ]] ; then
 		EPATCH_SUFFIX="patch"
+	fi
+
+	# If this is a driver package we need to fix man page install location.
+	# Running autoreconf will use the patched util-macros to make the
+	# change for us, so we only need to patch if it is not going to run.
+	if [[ -n "${DRIVER}" ]] && [[ "${SNAPSHOT}" != "yes" ]]; then
+		PATCHES="${PATCHES} ${DISTDIR}/x11-driver-patches-${XDPVER}.tar.bz2"
 	fi
 
 	# For specific list of patches
@@ -137,13 +157,13 @@ x-modular_reconf_source() {
 }
 
 x-modular_src_unpack() {
-	for x in xorg-server xf86-video- xf86-input- ; do
-		if [[ ${PN:0:11} = $x ]] && gcc-specs-now; then
+	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
+		if gcc-specs-now; then
 			msg="Do not emerge ${PN} without vanilla gcc!"
 			eerror "$msg"
 			die "$msg"
 		fi
-	done
+	fi
 
 	x-modular_unpack_source
 	x-modular_patch_source
