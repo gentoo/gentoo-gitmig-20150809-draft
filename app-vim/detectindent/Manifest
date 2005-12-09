@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 05557efb3199144bf78d95cbfd7415a3 detectindent-1.0.ebuild 481
-MD5 0e6b5de5471bf247843acbdd463a18a3 metadata.xml 401
-MD5 33f3325fd7056134a9f670c2b2301c20 ChangeLog 559
+MD5 d1e245039465da193b814717479eb6d1 ChangeLog 631
+MD5 4a5a7829ad13f883cd0aee1e6f167c2d detectindent-1.0.ebuild 485
 MD5 369eb775d86d8c99a5840e2cc0a61a4a files/digest-detectindent-1.0 67
+MD5 0e6b5de5471bf247843acbdd463a18a3 metadata.xml 401
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDHksYLLFUmVNQ7rkRAgAWAJ0eS0U33KTJN5hJWeLxAxh6DnBDNQCfSbMz
-oZVAjIGgQXn6sjxQiQVDIx8=
-=/oWx
+iD8DBQFDmbhuomPajV0RnrERAmnsAJ42WIQNZJSiXAvZdRRrDGCIfRvjuQCfQ/N4
+zX9bqTQT4dtsB1rMnaMDf1U=
+=N+jT
 -----END PGP SIGNATURE-----
