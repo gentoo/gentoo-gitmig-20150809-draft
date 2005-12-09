@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/font-alias-0.99.0-r1.ebuild,v 1.1 2005/12/08 20:23:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/font-alias-0.99.0-r1.ebuild,v 1.2 2005/12/09 20:14:19 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -13,6 +13,6 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	x11-apps/mkfontscale"
 
-CONFIGURE_OPTIONS="--with-aliasdir=/usr/share/fonts"
+CONFIGURE_OPTIONS="--with-top-fontdir=/usr/share/fonts"
 
 PATCHES="${FILESDIR}/configurable-aliasdir.patch"
