@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/damageproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.7 2005/10/20 03:26:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.8 2005/12/09 07:39:14 spyderous Exp $
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -damageproto-1.0.ebuild:
+  Pull old versions.
 
 *damageproto-1.0.1 (20 Oct 2005)
 
