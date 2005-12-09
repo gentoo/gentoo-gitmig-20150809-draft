@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.80 2005/12/02 22:35:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.81 2005/12/09 00:02:07 vapier Exp $
+
+  09 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gdb-6.4-sse2-register-display.patch, gdb-6.4.ebuild:
+  Disable building with -Werror #114902.
 
 *gdb-6.4 (02 Dec 2005)
 

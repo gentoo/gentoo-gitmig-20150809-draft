@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.4.ebuild,v 1.1 2005/12/02 22:35:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.4.ebuild,v 1.2 2005/12/09 00:02:07 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -61,7 +61,10 @@ src_unpack() {
 
 src_compile() {
 	replace-flags -O? -O2
-	econf $(use_enable nls) || die
+	econf \
+		--disable-werror \
+		$(use_enable nls) \
+		|| die
 	emake -j1 || die
 }
 
