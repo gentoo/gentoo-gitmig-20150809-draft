@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.64 2005/12/09 13:58:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.65 2005/12/09 14:13:30 uberlord Exp $
+
+*dhcp-3.0.4_beta2 (09 Dec 2005)
+
+  09 Dec 2005; Roy Marples <uberlord@gentoo.org>
+  +files/dhcp-3.0.3-no_isc_blurb.patch, +dhcp-3.0.4_beta2.ebuild:
+  New upstream beta release, fixes #101891.
+  Dropped token ring patch as a better fix has been made upstream.
+  Added patch to quiet the isc blurb if the -q option is given.
+  (patch nobbled from RedHat and adapted by me for dhclient and dhcrelay)
+  Install Japanese documentation if ja is in LINGUAS and en isn't.
+  Tart up the installed dhclient-script to add a comment saying
+  that they aren't used when using Gentoo baselayout net scripts.
+  Branded the binaries with Gentoo revision.
 
   09 Dec 2005; Roy Marples <uberlord@gentoo.org> dhcp-3.0.3-r1.ebuild:
   multilib fixed.
