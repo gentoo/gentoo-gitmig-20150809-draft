@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.7 2005/11/10 20:40:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.8 2005/12/09 22:31:47 chainsaw Exp $
+
+  09 Dec 2005; <chainsaw@gentoo.org> mpdscribble-0.2.6.ebuild,
+  mpdscribble-0.2.7.ebuild:
+  Depend on libsoup-2.2 as older versions will not work; closes bug #111287.
 
 *mpdscribble-0.2.7 (10 Nov 2005)
 

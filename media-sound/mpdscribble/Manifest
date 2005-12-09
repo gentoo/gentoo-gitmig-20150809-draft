@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1a1771f130766116e695b628294f023 ChangeLog 1345
 MD5 bb3bc554122fe799b840d3af19e2a511 files/digest-mpdscribble-0.2.6 69
 MD5 6abc4c9fdc278789d117ab53d6747338 files/digest-mpdscribble-0.2.7 69
@@ -5,3 +8,10 @@ MD5 71c7208eb53a7506d94cb45fe106edd2 files/mpdscribble.rc 464
 MD5 ac8292cf54418efa89fa3e29c0c1cacb metadata.xml 686
 MD5 cddf7d84cb5f5b49f4f2c2253b69f760 mpdscribble-0.2.6.ebuild 1116
 MD5 33e5a1c308636e524e43c012cfc4684b mpdscribble-0.2.7.ebuild 1116
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDmgWfp5vW4rUFj5oRAvfUAJ0ccWkhXiC/jY+jo9BH9ZrRvUPaOQCfbWSy
+TPXr6zTbbTtqXaB5/G70wJA=
+=6nJt
+-----END PGP SIGNATURE-----
