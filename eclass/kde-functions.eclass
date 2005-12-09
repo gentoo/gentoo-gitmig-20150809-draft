@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.125 2005/10/14 17:22:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.126 2005/12/09 21:11:22 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -137,6 +137,7 @@ kde-base/kdebindings kde-base/kalyptus
 kde-base/kdebindings kde-base/kdejava
 kde-base/kdebindings kde-base/kjsembed
 kde-base/kdebindings kde-base/korundum
+kde-base/kdebindings kde-base/pykde
 kde-base/kdebindings kde-base/qtjava
 kde-base/kdebindings kde-base/qtruby
 kde-base/kdebindings kde-base/qtsharp
