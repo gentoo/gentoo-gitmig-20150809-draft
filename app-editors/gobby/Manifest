@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e53b3b7d3c40445ec9fd114ec77bc90 ChangeLog 1615
+MD5 6e98a9e0e4948cb21b85b49267fde6fe ChangeLog 1831
 MD5 19d6bb1c6dde54bc3c8cc32de695bb78 files/digest-gobby-0.2.2 63
-MD5 544bfa7bd055e5abf6f437bd2c19f8bd files/digest-gobby-0.3.0_rc3 66
+MD5 fe543a507e0e8da2e1fda13c28966576 files/digest-gobby-0.3.0 63
 MD5 d4df29d4d1de91d4adccda4b540e256f files/gobby.desktop-r1 336
 MD5 1448d76e4ea01b937b6bb4dc9e12087d gobby-0.2.2.ebuild 1381
-MD5 1255278b7f3be23252a61f2d8cbf9f2c gobby-0.3.0_rc3.ebuild 1431
+MD5 77e79d9301c62b28f72555dfb238d117 gobby-0.3.0.ebuild 1422
 MD5 08b59cdb7488971fc1ab89cfc860eee9 metadata.xml 287
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDh17p8zY1VwezZiERAm+FAJ9Rok6D41C6+wjtdwYuBXyu2RMKqgCgjvKZ
-PUOKmmw+uCYdvOhtQHNbFMc=
-=jSqX
+iD8DBQFDmc6+8zY1VwezZiERAojOAJ0SxpCD9qP0vmtPMPExMEma+wHgIwCfc6Bc
+91l7GiMRSkQ7h1GvRd2klLk=
+=21mF
 -----END PGP SIGNATURE-----
