@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25c7b39f8bdc8db697929b6a2382f15f ChangeLog 3625
 MD5 1b1e06629e9705a8d173c2b853bbf5ce dcopperl-3.3.1-r2.ebuild 779
 MD5 628619b09d8e770c9d757b80a747294c dcopperl-3.4.1.ebuild 948
@@ -8,3 +11,10 @@ MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-dcopperl-3.5.0 71
 MD5 d793eee91b4c53d85e826da7e98ed495 files/installdirs-vendor.diff 574
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmVm+csIHjyDViGQRAjmbAJ9Soi5YsjqrfNlaLei+8YUNiAZO6ACfc3+F
+52HQGOvXoD4TUCVa3CjEnH8=
+=FpO5
+-----END PGP SIGNATURE-----
