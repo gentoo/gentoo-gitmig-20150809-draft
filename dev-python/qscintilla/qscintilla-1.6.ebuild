@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.6.ebuild,v 1.1 2005/12/09 21:33:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.6.ebuild,v 1.2 2005/12/09 21:35:23 carlo Exp $
 
 inherit eutils
 
@@ -30,12 +30,12 @@ src_unpack() {
 	sed -i -e "s:DESTDIR = \$(QTDIR)/lib:DESTDIR = \${destdir}:" qscintilla.pro
 	echo -e "\nQMAKE_CFLAGS_RELEASE=${CFLAGS} -w\nQMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} -w\nQMAKE_LFLAGS_RELEASE=${LDFLAGS}" >> qscintilla.pro
 	${QTDIR}/bin/qmake -o Makefile qscintilla.pro
-	
+
 	cd ${S}/designer
 	sed -i -e "s:LIBS += :LIBS += -L../qt :" designer.pro
 	echo -e "\nQMAKE_CFLAGS_RELEASE=${CFLAGS} -w\nQMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} -w\nQMAKE_LFLAGS_RELEASE=${LDFLAGS}" >> designer.pro
 	${QTDIR}/bin/qmake -o Makefile designer.pro
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-sandbox.patch
 }

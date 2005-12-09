@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.51 2005/12/09 21:33:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.52 2005/12/09 21:35:23 carlo Exp $
+
+  09 Dec 2005; Carsten Lohrke <carlo@gentoo.org> qscintilla-1.6.ebuild:
+  fix whitespace
 
 *qscintilla-1.6 (09 Dec 2005)
 
