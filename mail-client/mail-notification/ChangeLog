@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.23 2005/11/28 18:30:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.24 2005/12/09 14:46:30 gustavoz Exp $
+
+  09 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  mail-notification-2.0.ebuild:
+  Back to ~sparc
 
 *mail-notification-2.0 (28 Nov 2005)
 

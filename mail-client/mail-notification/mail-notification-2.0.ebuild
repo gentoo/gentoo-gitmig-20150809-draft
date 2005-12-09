@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.1 2005/11/28 18:30:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.2 2005/12/09 14:46:30 gustavoz Exp $
 
 inherit eutils gnome2 multilib
 
@@ -10,7 +10,7 @@ apop, ssl, sasl."
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
 SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.gz"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 

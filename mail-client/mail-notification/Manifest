@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a14079a1afda1329f475cc40f22c6a77 ChangeLog 4461
+MD5 69f3ea9f8446731a71eaaadb03e48089 ChangeLog 4567
 MD5 4f3f62c7c6d7b58791bba1c52b9dcc52 files/digest-mail-notification-0.8.1 75
 MD5 a1ac4da13eaa2be84f10c4c769682253 files/digest-mail-notification-1.0 73
 MD5 a5717a3f9a4857a66a2884232fd6f42c files/digest-mail-notification-1.1 73
@@ -12,12 +12,12 @@ MD5 7e2243b625802214a46bce8d633b94dc files/mail-notification-2.0-gmail-propertie
 MD5 e77332c825d2c72566117f6f3117182e mail-notification-0.8.1.ebuild 1548
 MD5 22f5243044ad07ca9879dcb34c461492 mail-notification-1.0.ebuild 1554
 MD5 4ec34f3718248e51520bb199155a10aa mail-notification-1.1.ebuild 1814
-MD5 d698d96c28b884f0dff9aa4577913435 mail-notification-2.0.ebuild 2216
+MD5 3738fae5665cf03663aeec89e48c3c8a mail-notification-2.0.ebuild 2225
 MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDi0y2CHk4+ZoBpvsRAj8BAKCjqGWH5bcchM+d/yNrq6ioyV/4rQCeM0yD
-AIgwIQTsRqFmh/FAJQilRFo=
-=fBtx
+iD8DBQFDmZj0KRy60XGEcJIRAkrmAJ9uqqACu+uQwq3mJx/3+6+wdqUjOACfd+AW
+RQXiZOXuhYr28Kls76EiWRg=
+=g6GK
 -----END PGP SIGNATURE-----
