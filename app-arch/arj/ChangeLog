@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.21 2005/12/06 02:26:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.22 2005/12/09 15:31:28 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org> arj-3.10.22-r1.ebuild:
+  Marked ppc stable for bug #84142.
 
   06 Dec 2005; Carsten Lohrke <carlo@gentoo.org> -arj-3.10g.ebuild:
   delete buggy version, #84142

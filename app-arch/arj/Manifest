@@ -1,8 +1,11 @@
-MD5 3f8579ffce276c29c0e047e76b0fe87b ChangeLog 2835
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cbf584544182b73e5791285868ab4c3c ChangeLog 2944
 MD5 4871ee30ae0243d8e3883677b20f09b2 arj-3.10.18.ebuild 889
 MD5 c56ba07e37dec37c343269e23b35f156 arj-3.10.20.ebuild 757
 MD5 671f5a92021e0a863dc1f272985e5eaa arj-3.10.21.ebuild 1660
-MD5 deea4feb81fb3bf1ff62ae917b54bdd6 arj-3.10.22-r1.ebuild 1837
+MD5 ae481de02a021f54660f24d05421bf0b arj-3.10.22-r1.ebuild 1835
 MD5 f51ea80dc6000f222b32cad90a102413 arj-3.10.22.ebuild 1789
 MD5 550bc972d825036f17f202a2b11b35c2 files/001_arches_align.patch 1424
 MD5 395dfa8cc500ffae648777f8f241be88 files/002_no_remove_static_const.patch 530
@@ -15,3 +18,10 @@ MD5 f51bf31b56b6e0f9191beb570b38502c files/digest-arj-3.10.21 63
 MD5 678545b31fd18e384761e80ed0f5bc50 files/digest-arj-3.10.22 63
 MD5 678545b31fd18e384761e80ed0f5bc50 files/digest-arj-3.10.22-r1 63
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmaNacsIHjyDViGQRAvlZAJ9v/iICmSYg5Zs5UMVCNH2TZiUrpACg3SA2
+0w/5htUXB2YmiBylqDOEPwg=
+=jXut
+-----END PGP SIGNATURE-----
