@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.3.ebuild,v 1.5 2005/12/06 07:28:57 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.3.ebuild,v 1.6 2005/12/09 16:25:25 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-libs/glib-2.6.0
 	>=gnome-base/libglade-2.4.0
 	|| ( =media-libs/gstreamer-0.8.9
 	=media-libs/gstreamer-0.8.10
-	=media-libs.gstreamer-0.8.11 )
+	=media-libs/gstreamer-0.8.11 )
 	=media-libs/gst-plugins-0.8*
 	=media-plugins/gst-plugins-mpeg2dec-0.8*
 	=media-plugins/gst-plugins-a52dec-0.8*
