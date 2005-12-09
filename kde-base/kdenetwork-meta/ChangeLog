@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.31 2005/12/04 11:33:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.32 2005/12/09 09:30:44 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  kdenetwork-meta-3.4.3.ebuild:
+  Marked ppc stable for bug #112842.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdenetwork-meta-3.5.0.ebuild:
