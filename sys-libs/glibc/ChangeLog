@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.413 2005/12/09 13:45:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.414 2005/12/09 20:32:38 kumba Exp $
+
+  09 Dec 2005; Joshua Kinard <kumba@gentoo.org> glibc-2.3.6-r1.ebuild:
+  Added ~mips to KEYWORDS, excluded patch 6640_*
 
   09 Dec 2005; Roy Marples <uberlord@gentoo.org> files/nscd:
   Tweak nscd initscript depend to use dns ldap net slapd.

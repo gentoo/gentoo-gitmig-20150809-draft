@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.5 2005/12/03 00:55:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.6 2005/12/09 20:32:39 kumba Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -17,7 +17,7 @@
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
 #KEYWORDS="~amd64 ~arm -hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="-*"
+KEYWORDS="-* ~mips"
 
 BRANCH_UPDATE=""
 
@@ -1151,7 +1151,7 @@ src_unpack() {
 			use hardened || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6490_hppa_hardened-disable__init_arrays.patch"
 		;;
 		mips)
-			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 3000-all-2.3.4-dl_execstack-PaX-support.patch"
+			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 3000-all-2.3.4-dl_execstack-PaX-support.patch 6640_mips_unistd_h-fixes.patch"
 			use_multilib \
 				&& GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6680_mips_nolib3264.patch" \
 				|| GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5005_all_enable-multilib-with-cross-compile.patch"
