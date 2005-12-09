@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.99 2005/12/09 20:43:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.100 2005/12/09 22:25:24 azarah Exp $
 
 
 # need access to emktemp()
@@ -340,7 +340,7 @@ test-flags-CC() { test-flags-PROG "CC" "$@"; }
 test-flags-CXX() { test-flags-PROG "CXX" "$@"; }
 
 # Short-hand that should hopefully work for both C and C++ compiler, but
-# its really only present due to the append-flags() abortion.
+# its really only present due to the append-flags() abomination.
 test-flags() { test-flags-CC "$@"; }
 
 # Depriciated, use test-flags()
