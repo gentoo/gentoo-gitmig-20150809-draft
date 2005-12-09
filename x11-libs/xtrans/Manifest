@@ -1,6 +1,4 @@
-MD5 e9868b819c89e1690eb2d7b326f860fa ChangeLog 1377
-MD5 293402e5dc0cc2f3fe729e0174308658 files/digest-xtrans-0.99.1 65
+MD5 7d9270d88f5326e98033b07ba9b72290 ChangeLog 1479
 MD5 357c846adcec21e1fb2a0a09d39c4993 files/digest-xtrans-0.99.2 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 a6efd0e73806d87dfeb56c404324f578 xtrans-0.99.1.ebuild 431
 MD5 36aca62a31ad57b005104db9d29e62ad xtrans-0.99.2.ebuild 427

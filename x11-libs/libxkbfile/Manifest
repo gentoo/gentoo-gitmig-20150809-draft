@@ -1,6 +1,4 @@
-MD5 7e4305b1e3c310ed72561815f65ae231 ChangeLog 1296
-MD5 76a60872c00f8be477b8fcd9bce28681 files/digest-libxkbfile-0.99.1 70
+MD5 8a463207b012b7c8de067b4fd376decb ChangeLog 1399
 MD5 6f54f55d15ce487c2a01809679a0c032 files/digest-libxkbfile-0.99.2 70
-MD5 1a346ca1a3f2132e0caf3964033f354d libxkbfile-0.99.1.ebuild 586
 MD5 28c3db12766f1b0b02727b7008429b12 libxkbfile-0.99.2.ebuild 586
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

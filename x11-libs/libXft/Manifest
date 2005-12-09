@@ -1,6 +1,4 @@
-MD5 43605254abefc0dfc93a40c1ebd880d3 ChangeLog 1236
-MD5 cabfee80e23947f625c7447d6902d9c4 files/digest-libXft-2.1.8 65
+MD5 7d14afb824cec545de7474ff9bb6a753 ChangeLog 1332
 MD5 2c9cc4fa13842e9436ec4959585e63f9 files/digest-libXft-2.1.8.1 67
 MD5 5107bd0d5dec389aacb8bc2cffc411dd libXft-2.1.8.1.ebuild 570
-MD5 3954406f190dbbb29da9c9dabb9c18ae libXft-2.1.8.ebuild 568
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

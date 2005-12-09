@@ -1,6 +1,4 @@
-MD5 27200f76981edab056fa76aeeaecf91e ChangeLog 1487
-MD5 c841756d4924050f1b137d22ab7b8685 files/digest-libXinerama-0.99.1 71
+MD5 4bfa2b8e857c02f66761519fa665306e ChangeLog 1590
 MD5 df9581685917c71c99cebd6bd6c89689 files/digest-libXinerama-0.99.2 71
-MD5 66e503f2241713bed92bdb12f562353a libXinerama-0.99.1.ebuild 514
 MD5 38029aba0cfdba4f57a949243abe98e7 libXinerama-0.99.2.ebuild 518
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

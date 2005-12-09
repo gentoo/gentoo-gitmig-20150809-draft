@@ -1,6 +1,4 @@
-MD5 5a6c19121128a0eec66f8ce5e1295557 ChangeLog 1269
-MD5 4249fdfa24b9e0ec1ace54f474c75865 files/digest-libXvMC-0.99.1 67
+MD5 2a7af74dea47878e5f2efccf4ce814ae ChangeLog 1368
 MD5 e85311103aed2a272c18c0535e1dd111 files/digest-libXvMC-0.99.2 67
-MD5 0e066b875de0e64675180fe281de7ba5 libXvMC-0.99.1.ebuild 644
 MD5 005ce0cce93719a782b2c0a2537a1801 libXvMC-0.99.2.ebuild 644
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

@@ -1,6 +1,4 @@
-MD5 9b77990d8bce07bfdb6d1977b228f7df ChangeLog 1160
-MD5 bdf1ec21a4c9913577030e81b27360b2 files/digest-libXv-0.99.1 65
+MD5 355062f5c5becdcd8b1990b70bb367f4 ChangeLog 1255
 MD5 e43d56619c67cb4c4d808bf5f93ef9cc files/digest-libXv-0.99.2 65
-MD5 af6b9b0a7c8b00e63a0003b9dec4f10d libXv-0.99.1.ebuild 627
 MD5 09dba89e54e35ea1a986dcb23cfdfde2 libXv-0.99.2.ebuild 627
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
