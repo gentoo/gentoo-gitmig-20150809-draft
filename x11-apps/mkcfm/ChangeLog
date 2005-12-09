@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/mkcfm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkcfm/ChangeLog,v 1.3 2005/12/04 21:46:15 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkcfm/ChangeLog,v 1.4 2005/12/09 05:58:19 spyderous Exp $
+
+*mkcfm-0.99.3-r1 (09 Dec 2005)
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -mkcfm-0.99.1.ebuild,
+  -mkcfm-0.99.2.ebuild, -mkcfm-0.99.3.ebuild, +mkcfm-0.99.3-r1.ebuild:
+  No longer need to check for USE=cid in libXfont, because it builds
+  unconditionally.
 
 *mkcfm-0.99.3 (04 Dec 2005)
 
