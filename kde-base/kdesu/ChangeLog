@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.24 2005/12/04 00:30:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.25 2005/12/09 09:22:14 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdesu-3.5.0-bindnow.patch, kdesu-3.5.0.ebuild:
+  Added support for non-lazy-bindings as per bug #114049.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kdesu-3.5.0.ebuild:
   ~alpha keyword.
