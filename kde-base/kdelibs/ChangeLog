@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.294 2005/12/09 09:10:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.295 2005/12/09 10:03:04 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> kdelibs-3.5.0.ebuild:
+  Disabled hspell as the required version is not in portage right now. See bug
+  #114161. Re-add hspell support after bug #77751 is closed.
 
   09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kdelibs-3.5.0-bindnow.patch, kdelibs-3.5.0.ebuild:

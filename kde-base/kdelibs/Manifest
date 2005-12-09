@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 42700bc24d61c0025ebfe1003d9cdb92 ChangeLog 46936
+MD5 4c1cba294627d1a6d3796ff963637cc9 ChangeLog 47152
 MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
 MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
 MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r2 68
@@ -27,12 +27,12 @@ MD5 b75b773aa95374e55799e86e678173d6 kdelibs-3.4.1-r2.ebuild 3364
 MD5 12b3f3cc444cc940ed50e352054ccb7f kdelibs-3.4.2-r1.ebuild 3341
 MD5 2fd53a7c014e4527505ec32ec5425575 kdelibs-3.4.2.ebuild 3346
 MD5 3a91361b67450f615d3231102c812016 kdelibs-3.4.3.ebuild 3384
-MD5 2e6153a989a7907a5b971a363789809b kdelibs-3.5.0.ebuild 3496
+MD5 f0e4dcbb7b8e88eeecf66511befbc047 kdelibs-3.5.0.ebuild 3718
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmUoYAiZjviIA2XgRAvWFAJ0YXhL5pKtSiwCYpxKiKfHP14V6wwCghbhw
-5sElbMuWT4yw5zPYGput7B8=
-=V8yG
+iD8DBQFDmVZkAiZjviIA2XgRAhOPAJ0dn1DFnYbSUMnkLtv3JDfoTk7+8wCeLPr3
+ydd9QYQqgpmH9UCAwqo1MqE=
+=sdJE
 -----END PGP SIGNATURE-----

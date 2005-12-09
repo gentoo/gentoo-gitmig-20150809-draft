@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0.ebuild,v 1.4 2005/12/09 09:10:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0.ebuild,v 1.5 2005/12/09 10:03:04 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -49,6 +49,10 @@ DEPEND="${RDEPEND}
 PATCHES="${FILESDIR}/${P}-bindnow.patch"
 
 src_compile() {
+	# hspell is disabled because it requires version 0.9 of hspell that
+	# is not in portage yet; leaving it to autodetection tries to use it
+	# and then fails because of missing required functions
+
 	myconf="--with-distribution=Gentoo
 	        --enable-libfam $(use_enable kernel_linux dnotify)
 	        --with-libart --with-libidn --with-utempter
@@ -56,7 +60,8 @@ src_compile() {
 	        $(use_with alsa) $(use_with arts)
 	        $(use_with kerberos gssapi) $(use_with tiff)
 	        $(use_with jpeg2k jasper) $(use_with openexr)
-	        $(use_enable cups) $(use_enable zeroconf dnssd)"
+	        $(use_enable cups) $(use_enable zeroconf dnssd)
+	        --without-hspell"
 
 	if use spell && has_version app-text/aspell; then
 		myconf="${myconf} --with-aspell"
