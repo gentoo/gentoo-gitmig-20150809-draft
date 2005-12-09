@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.1 2005/12/05 11:01:31 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.2 2005/12/09 09:42:54 flameeyes Exp $
 
-inherit kde-dist eutils
+inherit kde-dist eutils flag-o-matic
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
@@ -47,6 +47,10 @@ src_unpack() {
 	# Fix the location bar focus, bug 114329.
 	epatch "${FILESDIR}/konqueror-3.5.0-location-bar-focus.patch"
 
+	# add support for non-lazy-bindings, see bug #114049
+	epatch "${FILESDIR}/kdesu-3.5.0-bindnow.patch"
+	epatch "${FILESDIR}/kcheckpass-3.5.0-bindnow.patch"
+
 	# For the noimake patch.
 	make -f admin/Makefile.common || die
 }
@@ -70,6 +74,8 @@ src_compile() {
 	# useless. All that's needed for java applets to work is
 	# to have the 'java' executable in PATH.
 	myconf="${myconf} --without-java"
+
+	export BINDNOW_FLAGS="$(bindnow-flags)"
 
 	kde_src_compile
 }

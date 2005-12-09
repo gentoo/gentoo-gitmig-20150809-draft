@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.238 2005/12/06 05:51:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.239 2005/12/09 09:42:54 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kcheckpass-3.5.0-bindnow.patch, +files/kdesu-3.5.0-bindnow.patch,
+  kdebase-3.5.0-r1.ebuild:
+  Added support for non-lazy-bindings as per bug #114049.
 
   06 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdebase-3.4.3-r1.ebuild:
   Marked ppc stable for bug #112842.
