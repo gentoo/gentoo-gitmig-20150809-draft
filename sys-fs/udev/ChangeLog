@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.159 2005/12/08 18:38:02 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.160 2005/12/09 17:48:16 gregkh Exp $
+
+*udev-077-r3 (09 Dec 2005)
+
+  09 Dec 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-077-r3.ebuild:
+  077-r3 release - fix dependancy on newer version of baselayout (for those who
+  are running stable for other packages, and don't seem to want to upgrade) as
+  we need it to start udev properly at boot time.
 
 *udev-077-r2 (08 Dec 2005)
 
