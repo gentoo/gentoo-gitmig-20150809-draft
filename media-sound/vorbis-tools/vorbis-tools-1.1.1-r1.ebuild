@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r1.ebuild,v 1.2 2005/12/02 12:38:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r1.ebuild,v 1.3 2005/12/09 21:53:02 chainsaw Exp $
 
 IUSE="nls flac speex"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 
-RDEPEND=">=media-libs/libvorbis-1.0.1
+RDEPEND=">=media-libs/libvorbis-1.1.0
 	>=media-libs/libao-0.8.2
 	>=net-misc/curl-7.9
 	speex? ( media-libs/speex )
