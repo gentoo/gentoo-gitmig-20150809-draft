@@ -1,10 +1,10 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.125 2005/12/07 21:32:17 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.126 2005/12/09 04:19:35 augustus Exp $
 
 *nvidia-kernel-1.0.8174-r1 (07 Dec 2005)
 
-  07 Dec 2005; <augustus@gentoo.org>
+  07 Dec 2005; Kristopher Kersey <augustus@gentoo.org>
   +files/1.0.8174/NVIDIA_kernel-1.0-8174-1423627.diff,
   +nvidia-kernel-1.0.8174-r1.ebuild:
   Added Zander's power management patch as requested in bug #114640.
@@ -12,7 +12,8 @@
 
 *nvidia-kernel-1.0.8174 (05 Dec 2005)
 
-  05 Dec 2005; <augustus@gentoo.org> +nvidia-kernel-1.0.8174.ebuild:
+  05 Dec 2005; Kristopher Kersey <augustus@gentoo.org>
+  +nvidia-kernel-1.0.8174.ebuild:
   Added version 1.0-8174 of the NVIDIA drivers.
 
   28 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
