@@ -1,6 +1,12 @@
 # ChangeLog for games-util/loki_patch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.5 2005/04/11 12:34:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.6 2005/12/09 20:18:38 wolf31o2 Exp $
+
+*loki_patch-20051209 (09 Dec 2005)
+
+  09 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +loki_patch-20051209.ebuild:
+  Version bumped for gcc 4.0 compatibility and closing bug #114920.
 
   11 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -loki_patch-20040916.ebuild:
