@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.25 2005/11/26 14:35:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.26 2005/12/09 05:47:33 josejx Exp $
+
+  09 Dec 2005; Joseph Jezak <josejx@gentoo.org> kwifimanager-3.4.3.ebuild:
+  Marked ppc stable for bug #112842.
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kwifimanager-3.4.3.ebuild:
