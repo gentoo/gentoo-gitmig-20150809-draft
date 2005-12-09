@@ -1,8 +1,6 @@
-MD5 18195e19c52787b6afae28600a92e88a ChangeLog 4362
+MD5 82b311c9403b52ecf285f0cd91ea5dfa ChangeLog 4484
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/Xsession 2187
 MD5 2b07bc84cc3afab6b4de90b9e9c597c3 files/chooser.sh 1566
-MD5 25ca8e4cacf6c712886ea0e8a69a05fe files/digest-xinit-0.99.2-r1 64
-MD5 30803bb817492ff1c760da0c48d4b144 files/digest-xinit-0.99.3 64
 MD5 9864468a351b741fb7af08adf9fcf3bf files/digest-xinit-0.99.4 64
 MD5 8eeb098734b1dde61e349ed74f7e8b28 files/gentoo-startx-customization-0.99.3.patch 3987
 MD5 de00e8a136985faa77ce4bfa4e724ff8 files/gentoo-startx-customization-0.99.4.patch 3965
@@ -13,6 +11,4 @@ MD5 2d8c9c76bd932f311ad86f490680d349 files/xdm.start 3418
 MD5 49f1bd860cfa5fc4adb6023d8a1bb4f8 files/xinitrc 900
 MD5 708a3daf8950bbfe3aa231efb7533cb0 files/xserver.pamd 125
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 ffc35e70872b2bcf32d0338bfefd2fd3 xinit-0.99.2-r1.ebuild 1144
-MD5 bc5712924900c54f22f63aca90231cc9 xinit-0.99.3.ebuild 1152
 MD5 f40379ac8833f0e3be51c37a5dd51b5a xinit-0.99.4.ebuild 1152
