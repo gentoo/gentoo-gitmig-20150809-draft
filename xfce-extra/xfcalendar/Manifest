@@ -1,4 +1,4 @@
-MD5 29a3f8fb8bf9dfc063e51ef14dce7d08 ChangeLog 5226
+MD5 e222da4577584dd10faef0b97d1d3ffa ChangeLog 5227
 MD5 0047196ef8e2fe442f00cdff0c61907f files/digest-xfcalendar-4.2.1 68
 MD5 4571c4e24da4f2fb380ae0bc37fe5435 files/digest-xfcalendar-4.2.2 68
 MD5 4571c4e24da4f2fb380ae0bc37fe5435 files/digest-xfcalendar-4.2.2-r1 68
@@ -7,4 +7,4 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 48d442e83461de6354f1854c9f115f6c xfcalendar-4.2.1.ebuild 386
 MD5 25a6f870d9aa82b1017fbe9ef31c72fa xfcalendar-4.2.2-r1.ebuild 475
 MD5 a9b73361d532a91a9eff64cb7cf8a613 xfcalendar-4.2.2.ebuild 373
-MD5 25a6f870d9aa82b1017fbe9ef31c72fa xfcalendar-4.2.3.ebuild 475
+MD5 a870a3a2828d4520a425fc1bd4dd9ef6 xfcalendar-4.2.3.ebuild 473
