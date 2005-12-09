@@ -1,6 +1,4 @@
-MD5 ad31d24db660e896ec2fde24afea5429 ChangeLog 1053
-MD5 e9be3c0c30a933338db00dec65772246 files/digest-xf86bigfontproto-1.1 72
+MD5 59623824061924311a96fc7c9aa7cf12 ChangeLog 1162
 MD5 adb78cc7915dcce598e1c8cf29b09e14 files/digest-xf86bigfontproto-1.1.1 74
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2405bcf2773247f4e25437ddaef4eb98 xf86bigfontproto-1.1.1.ebuild 462
-MD5 a8829fa19a0b99db058703c15dad19e8 xf86bigfontproto-1.1.ebuild 560
