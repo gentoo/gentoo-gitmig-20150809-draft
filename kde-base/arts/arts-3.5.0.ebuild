@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0.ebuild,v 1.3 2005/11/30 00:44:19 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0.ebuild,v 1.4 2005/12/09 01:40:28 flameeyes Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -32,7 +32,8 @@ RDEPEND="$(qt_min_version 3.3)
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/arts-1.3.2-alsa-bigendian.patch"
+PATCHES="${FILESDIR}/arts-1.3.2-alsa-bigendian.patch
+	${FILESDIR}/arts-1.5.0-bindnow.patch"
 
 src_unpack() {
 	kde_src_unpack
@@ -41,11 +42,7 @@ src_unpack() {
 	# before trying to use them, for non-GCC, vanilla GCC or GCC 4.1 compilers
 	local nosspflags
 
-	[[ -n $(test_flag -fno-stack-protector) ]] && \
-		nosspflags="${nosspflags} -fno-stack-protector"
-	[[ -n $(test_flag -fno-stack-protector-all) ]] && \
-		nosspflags="${nosspflags} -fno-stack-protector-all"
-
+	nosspflags="$(test-flags -fno-stack-protector -fno-stack-protector-all)"
 	sed -i -e "s:KDE_CXXFLAGS =\(.*\):KDE_CXXFLAGS = \1 ${nosspflags}:" \
 		${S}/mcopidl/Makefile.am
 }
@@ -61,6 +58,8 @@ src_compile() {
 
 	#fix bug 41980
 	use sparc && filter-flags -fomit-frame-pointer
+
+	export BINDNOW_FLAGS="$(bindnow-flags)"
 
 	kde_src_compile
 }

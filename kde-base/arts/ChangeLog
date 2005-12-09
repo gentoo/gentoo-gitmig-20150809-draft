@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.195 2005/12/06 05:29:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.196 2005/12/09 01:40:28 flameeyes Exp $
+
+  09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/arts-1.5.0-bindnow.patch, arts-3.5.0.ebuild:
+  Add patch (and export) to make use of non-lazy bindings on artswrapper as
+  that can be marked setuid, see bug #113934. Also use test-flags instead of
+  test_flag as this one is deprecated.
 
   06 Dec 2005; Joseph Jezak <josejx@gentoo.org> arts-3.4.3.ebuild:
   Marked ppc stable for bug #112842.
