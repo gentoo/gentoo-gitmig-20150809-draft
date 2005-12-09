@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.6.ebuild,v 1.10 2005/10/31 23:10:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.6.ebuild,v 1.11 2005/12/09 01:51:49 flameeyes Exp $
 
 IUSE=""
 
@@ -32,7 +32,7 @@ src_compile() {
 	append-flags -fPIC
 
 	#fixes locale for gcc3.4.0 to close bug 52385
-	append-flags $(test_flag -finput-charset=ISO8859-15)
+	append-flags $(test-flags -finput-charset=ISO8859-15)
 
 	emake PREFIX=/usr \
 		LIBEBML_INCLUDE_DIR=/usr/include/ebml \
