@@ -1,7 +1,17 @@
-MD5 5db72c19ff001355de16de2cf9dde80e ChangeLog 4053
-MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
-MD5 f8071a78f23e4489f8d857382943c466 checkpolicy-1.22.ebuild 1039
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 70972cb4f8b2039c8cb34f8498b8a997 ChangeLog 4217
 MD5 5c1a1a2c33b689d87e54ec1f42860caa checkpolicy-1.24.ebuild 1086
+MD5 4c96c11955b01991e87f4c13e8212ad9 checkpolicy-1.28.ebuild 1072
 MD5 d607f647a52bbb00a5bf754fe4f1dc90 files/checkpolicy-1.16-no-netlink-warn.diff 1022
-MD5 4d0b80c6cd8e1b17acbb212cbd7ca68b files/digest-checkpolicy-1.22 64
 MD5 92e9ef3f1778a43902e0813adfdfec11 files/digest-checkpolicy-1.24 64
+MD5 10192f382d6d8c985c86357cbfe36960 files/digest-checkpolicy-1.28 64
+MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmNYsJ+ChZlpDtAoRAmApAJ9zz3Str9maO8ku6VeDhuxpP24fjQCbBG2x
+xrgDJUPWb+fpLeIos4DKcF0=
+=VVTV
+-----END PGP SIGNATURE-----
