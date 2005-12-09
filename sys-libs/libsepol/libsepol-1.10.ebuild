@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.4.ebuild,v 1.4 2005/05/10 18:24:59 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.10.ebuild,v 1.1 2005/12/09 00:41:20 pebenito Exp $
 
 IUSE=""
 
 inherit multilib
 
-DESCRIPTION="SELinux binary policy management library"
+DESCRIPTION="SELinux binary policy manipulation library"
 HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 mips"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
 
 DEPEND="virtual/libc"
 

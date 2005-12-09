@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.35 2005/09/09 02:56:27 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.36 2005/12/09 00:45:14 pebenito Exp $
+
+*libselinux-1.28 (09 Dec 2005)
+
+  09 Dec 2005; Chris PeBenito <pebenito@gentoo.org>
+  -files/libselinux-1.22.diff, -libselinux-1.22-r1.ebuild,
+  +libselinux-1.28.ebuild:
+  New upstream release.
 
   09 Sep 2005; Chris PeBenito <pebenito@gentoo.org> libselinux-1.24.ebuild:
   Mark stable.
