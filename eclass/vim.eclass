@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.134 2005/12/07 22:15:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.135 2005/12/10 17:20:05 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -325,7 +325,7 @@ END
 	# Try to avoid sandbox problems. Bug #114475.
 	if [[ $(get_major_version ) -ge 7 ]] ; then
 		sed -i -e \
-			'/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \&\& ./testvim -X,' \
+			'/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \; ./testvim -X,' \
 			"${S}/src/po/Makefile"
 	fi
 
