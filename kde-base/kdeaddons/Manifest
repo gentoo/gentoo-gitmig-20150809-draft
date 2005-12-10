@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 374d4f9d14ae20a20caa9c22fa618704 ChangeLog 19136
-MD5 f510fb4a423935c458f3e01d994b5bd2 files/digest-kdeaddons-3.3.2 69
-MD5 b222a3f919d71f11915038fe18b0a7d7 files/digest-kdeaddons-3.4.1 69
-MD5 bed9e2e46d8e7de37c5996e1ad3025bd files/digest-kdeaddons-3.4.2 69
-MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kdeaddons-3.4.3 69
-MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-kdeaddons-3.5.0 69
-MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
-MD5 76a1c9bb2b631b0233e79ed5ab7eb20e files/kdeaddons-3.4-configure.patch 3422
-MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0.diff 625
-MD5 3a692b7c76a442ddec552bbb5786d366 kdeaddons-3.3.2.ebuild 994
-MD5 5cb3102b5887be89c0079df0a6028d51 kdeaddons-3.4.1.ebuild 1350
 MD5 4b184080c3a26edabff3c4d61409516d kdeaddons-3.4.2.ebuild 1549
-MD5 7145d84c7547b130964ad49c6d02e454 kdeaddons-3.4.3.ebuild 1544
-MD5 572c34c7a41bd59d3c2b27e6ee19780c kdeaddons-3.5.0.ebuild 1138
+MD5 5cb3102b5887be89c0079df0a6028d51 kdeaddons-3.4.1.ebuild 1350
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlS/BcsIHjyDViGQRAgZSAJ49w896ZjJt6powQ++c8pGsnCT6FgCg5FVU
-Kp6Zwc1x5DD1887ELJo60N0=
-=sCTZ
------END PGP SIGNATURE-----
+MD5 fd00841f0b0bc918ad43281e501848f0 ChangeLog 19366
+MD5 3a692b7c76a442ddec552bbb5786d366 kdeaddons-3.3.2.ebuild 994
+MD5 88b1af5609e96a9da80d53254b2323ae kdeaddons-3.4.3.ebuild 1547
+MD5 572c34c7a41bd59d3c2b27e6ee19780c kdeaddons-3.5.0.ebuild 1138
+MD5 b222a3f919d71f11915038fe18b0a7d7 files/digest-kdeaddons-3.4.1 69
+MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
+MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-kdeaddons-3.5.0 69
+MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kdeaddons-3.4.3 69
+MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0.diff 625
+MD5 bed9e2e46d8e7de37c5996e1ad3025bd files/digest-kdeaddons-3.4.2 69
+MD5 f510fb4a423935c458f3e01d994b5bd2 files/digest-kdeaddons-3.3.2 69
+MD5 76a1c9bb2b631b0233e79ed5ab7eb20e files/kdeaddons-3.4-configure.patch 3422
