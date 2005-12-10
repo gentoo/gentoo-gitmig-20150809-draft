@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.105 2005/11/29 21:23:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.106 2005/12/10 17:47:52 spock Exp $
+
+*nmap-3.95 (10 Dec 2005)
+
+  10 Dec 2005; Michał Januszewski <spock@gentoo.org>
+  +files/nmap-logo-64.png, +nmap-3.95.ebuild:
+  Version bump (bugs #114597 and #114880). Thanks to Meethune Bhowmick for the
+  icon and desktop file fixes.
 
   29 Nov 2005; Hanno Boeck <hanno@gentoo.org> +files/nmap-3.93-gcc41.patch,
   nmap-3.93.ebuild:

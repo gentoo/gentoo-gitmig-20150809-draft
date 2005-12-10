@@ -1,21 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57574043542872d66c07452727597019 ChangeLog 12764
+MD5 ae22c8a69642208015c7702d373e7d27 ChangeLog 13001
 MD5 a9321c7613a34f902b2bcf53af008bc3 files/digest-nmap-3.81 63
 MD5 90ee137382c6272e7524f0c4648c45f4 files/digest-nmap-3.83 68
 MD5 5dcee02c4729204bc26ce3c1652b977f files/digest-nmap-3.90 63
 MD5 5a7f498a284c3404568251a4e4d6ecfa files/digest-nmap-3.93 63
+MD5 24d0c651d789d0a0bd2e08f95797165a files/digest-nmap-3.95 63
 MD5 b092d5d6fe8f6bb48da3996626ec4a7f files/nmap-3.93-gcc41.patch 509
+MD5 4ff03e23202e625a51391b37b3724964 files/nmap-logo-64.png 3289
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 02b22b2857aba87133e2c756f634d8d2 nmap-3.81.ebuild 943
 MD5 1d04a4500eed78d744d670e7fa310820 nmap-3.83.ebuild 1028
 MD5 b0916d4858fdc6819d8b4fd3733f986a nmap-3.90.ebuild 959
 MD5 36fc36ab4709c15a30c28c83c7214cbc nmap-3.93.ebuild 1031
+MD5 49cfd53b2ba9f79a12068328381fe57c nmap-3.95.ebuild 1208
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjMbLr2QksT29OyARAnPfAJ9Q0yDE0UwRz38NgqucI5gPbjkWgQCgoaoH
-GZhfDbMBJaedqkUqOWmYdiY=
-=UiqK
+iD8DBQFDmxTtchej4aZK9/cRAnrHAJ0Z0ok2BzkWSlm+Nx3qMrDsSxNndQCfTnOb
+Nc6k8rMD+lI0Dq4NbtVgN94=
+=zhuZ
 -----END PGP SIGNATURE-----
