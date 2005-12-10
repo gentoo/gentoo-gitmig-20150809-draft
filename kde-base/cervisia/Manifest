@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 99aa15246b1fb1211e3ced5c2249cdfd cervisia-3.4.1.ebuild 425
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 caf88b1c5cce5ccbe24abd0852bc97ce cervisia-3.4.2.ebuild 433
@@ -8,3 +11,10 @@ MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-cervisia-3.4.3 66
 MD5 0a38813829924b012d8b632f47abb45d files/digest-cervisia-3.4.2 280
 MD5 9b4e9e38740207531ab771519519d01e files/digest-cervisia-3.4.1 206
 MD5 1e423fe06c976614875c91024253a35c files/digest-cervisia-3.5.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmoRVFdQwWVoAgN4RAsa1AKD5Tn6aj5j1ypAh17o+lozqLXLLWQCg7uWs
+w8gPM6oytB5JMYUnGE+LibU=
+=CO8e
+-----END PGP SIGNATURE-----

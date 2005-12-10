@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2a31c70b0af5837c2bc83c30171b87f8 ChangeLog 4415
 MD5 f7bc22b6085ca5d2020f9e5a8169920c kmilo-3.4.1.ebuild 491
@@ -9,3 +12,10 @@ MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kmilo-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kmilo-3.4.3 68
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kmilo-3.4.1 212
 MD5 61427700c31d5d6a145005b5945e00e5 files/digest-kmilo-3.5.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmoHaFdQwWVoAgN4RAoLNAJ92xp6RcEeOLGwmqpXT6N72GYU6mACfb5wQ
+8tS8X2ZZoHQ4I/kcFdxgLUM=
+=Z6zq
+-----END PGP SIGNATURE-----

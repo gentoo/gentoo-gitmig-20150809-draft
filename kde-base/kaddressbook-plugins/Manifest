@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 924676c3bd37e5c4023d182924c5dcf7 kaddressbook-plugins-3.4.3.ebuild 552
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 0817da9ade7cd5483c5ac0c683138642 ChangeLog 4179
@@ -6,3 +9,10 @@ MD5 e81e3d20b60c3a2038e91bb16e8bc8a4 kaddressbook-plugins-3.4.1.ebuild 546
 MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-kaddressbook-plugins-3.5.0 69
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kaddressbook-plugins-3.4.3 69
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kaddressbook-plugins-3.4.1 215
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmnrIFdQwWVoAgN4RAqbSAKDS3Q5Upmx5ITE4+Nx7X22NB/6y7wCfQQH0
+VyQZVPq5L8Sb1jPV8G/OKDA=
+=mLWc
+-----END PGP SIGNATURE-----

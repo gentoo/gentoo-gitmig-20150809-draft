@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 98264bcb1da52efab6b16819fea39b5b ChangeLog 3824
 MD5 b6912c0ddcb5eef073f4187e85ff1e9c krfb-3.4.3.ebuild 528
@@ -8,3 +11,10 @@ MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-krfb-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-krfb-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-krfb-3.4.3 70
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-krfb-3.5.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmnyJFdQwWVoAgN4RAqZMAJ9efnzktreEbYZIAT1oKVnEeEhQIwCdEb71
+7yp1NtcCFSnxWgr14AfA+Vg=
+=nrZq
+-----END PGP SIGNATURE-----

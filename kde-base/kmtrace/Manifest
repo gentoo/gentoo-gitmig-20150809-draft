@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f0b0f7a463f88133c41fd22c5762a41f ChangeLog 2794
 MD5 12b1904e10a9d1fe82ccd65d3d22f7be kmtrace-3.4.1.ebuild 523
 MD5 14e0a75e0fe2a7e60e5d91ad87902609 kmtrace-3.5.0.ebuild 509
 MD5 1e423fe06c976614875c91024253a35c files/digest-kmtrace-3.5.0 66
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kmtrace-3.4.1 206
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmoYhFdQwWVoAgN4RAuSJAKCwij+ztC4Z2ZZCFaRFahfvxoyImQCgq/tQ
+pCFveettwy4dbwpNP0ADH38=
+=bA9/
+-----END PGP SIGNATURE-----
