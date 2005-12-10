@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.33 2005/12/10 05:57:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.34 2005/12/10 19:40:26 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kstars-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> kstars-3.4.3.ebuild:
   Marked x86 stable for bug #112842.
