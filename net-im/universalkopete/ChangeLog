@@ -1,6 +1,10 @@
 # ChangeLog for net-im/universalkopete
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/universalkopete/ChangeLog,v 1.6 2005/09/16 23:24:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/universalkopete/ChangeLog,v 1.7 2005/12/10 13:41:53 flameeyes Exp $
+
+  10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  universalkopete-0.1.ebuild:
+  Remove ctonet from SRC_URI as the site is long dead.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
