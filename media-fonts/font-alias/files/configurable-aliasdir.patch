@@ -11,7 +11,7 @@ diff -u -b -B -r1.2 configure.ac
  AC_PROG_INSTALL
  
 +DEFAULT_ALIASDIR=${libdir}/X11/fonts
-+AC_ARG_WITH(aliasdir,
++AC_ARG_WITH(top-fontdir,
 +	AS_HELP_STRING([--with-top-fontdir=ALIASDIR], [Path to install font encodings]),
 +	[ALIASDIR="$withval"],
 +	[ALIASDIR="$DEFAULT_ALIASDIR"])

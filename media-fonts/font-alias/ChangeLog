@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/font-alias
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.9 2005/12/09 20:14:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.10 2005/12/10 22:05:13 spyderous Exp $
+
+*font-alias-0.99.0-r2 (10 Dec 2005)
+
+  10 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  files/configurable-aliasdir.patch, -font-alias-0.99.0-r1.ebuild,
+  +font-alias-0.99.0-r2.ebuild:
+  (#112159) Really fix aliasdir. Reported by Jeff Davidson
+  <supermonkey@gmail.com>.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   files/configurable-aliasdir.patch, font-alias-0.99.0-r1.ebuild:
