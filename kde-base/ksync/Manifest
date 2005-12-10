@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0be2a579d9bb0752fad9cb1135e73c10 ChangeLog 3860
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ksync-3.4.1 208
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-ksync-3.4.3 67
-MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-ksync-3.5.0 67
-MD5 521ed1d679fa08dbd31159c2e4a9a029 ksync-3.4.1.ebuild 528
-MD5 0c4fd9a722e17e06cd59c744fb2cc514 ksync-3.4.3.ebuild 531
 MD5 0049edbf5b6e87d8bf5ccc6caedf928c ksync-3.5.0.ebuild 490
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQotcsIHjyDViGQRAqt5AJ9XlUPAt/dMuSUZWKjGEgGGM0Uj4ACgv0ys
-z7YQ4tL40RtNsrMdR+Elj/M=
-=X/xS
------END PGP SIGNATURE-----
+MD5 e245bdb4109790eb7f34bbf359a57425 ChangeLog 3973
+MD5 f16c09be124c11d6b846ccf1e3f94fc9 ksync-3.4.3.ebuild 534
+MD5 521ed1d679fa08dbd31159c2e4a9a029 ksync-3.4.1.ebuild 528
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-ksync-3.4.3 67
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ksync-3.4.1 208
+MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-ksync-3.5.0 67

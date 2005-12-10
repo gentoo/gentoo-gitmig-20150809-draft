@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1332d7a7c1ed3cd3bf4164513a11b0d6 ChangeLog 4229
+MD5 b271de29aa1af888a552164019995d4c kalzium-3.4.2.ebuild 582
+MD5 93e62c60c653603960cd526468cb7d4d kalzium-3.4.3.ebuild 620
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 7eb7ea19abb2c9deabd859de550270b7 ChangeLog 4344
+MD5 c5c9e86d44a238fa6a0aa362cff465ce kalzium-3.5.0.ebuild 700
+MD5 af3397486a2e6c6c376f64311a06fc6e kalzium-3.4.1.ebuild 569
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kalzium-3.5.0 67
+MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kalzium-3.4.3 67
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kalzium-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kalzium-3.4.2 282
-MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kalzium-3.4.3 67
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kalzium-3.5.0 67
-MD5 af3397486a2e6c6c376f64311a06fc6e kalzium-3.4.1.ebuild 569
-MD5 b271de29aa1af888a552164019995d4c kalzium-3.4.2.ebuild 582
-MD5 fd8ebbdf0a6ffddd1ba9d2d0f167b613 kalzium-3.4.3.ebuild 617
-MD5 c5c9e86d44a238fa6a0aa362cff465ce kalzium-3.5.0.ebuild 700
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmRDFcsIHjyDViGQRArqbAJ0ZKjpYvnA02jpykNGkhO8YG8aFxQCeKUXJ
-xZFxhYlZGxXlkZdW5EWQ+gU=
-=XOZN
------END PGP SIGNATURE-----

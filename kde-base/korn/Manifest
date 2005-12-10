@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 611f91f3a75769c7c49f235ef0dab9f9 ChangeLog 4054
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-korn-3.4.1 208
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-korn-3.4.2 282
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-korn-3.4.3 67
-MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-korn-3.5.0 67
-MD5 f9e5153175532e5ce88e049f61939cc4 korn-3.4.1.ebuild 773
-MD5 b2717f375d62dc3a62ec65b8276c4d77 korn-3.4.2.ebuild 788
-MD5 ee72e6af2a65985f7290b0993418068c korn-3.4.3.ebuild 786
-MD5 527c302fcb4a670a64f4690080544a9c korn-3.5.0.ebuild 718
+MD5 49697a65eb3d6f4abf474f3f9678303a korn-3.4.3.ebuild 789
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQshcsIHjyDViGQRAhcsAKC9laKgGkd87jTmOuWLaK1nQChzyACeJHE5
-HkIuyQiWUbczjy7USeWZ1YA=
-=BgzQ
------END PGP SIGNATURE-----
+MD5 2381a121b04d9ca087f816b28ebbf391 ChangeLog 4166
+MD5 b2717f375d62dc3a62ec65b8276c4d77 korn-3.4.2.ebuild 788
+MD5 f9e5153175532e5ce88e049f61939cc4 korn-3.4.1.ebuild 773
+MD5 527c302fcb4a670a64f4690080544a9c korn-3.5.0.ebuild 718
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-korn-3.4.1 208
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-korn-3.4.3 67
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-korn-3.4.2 282
+MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-korn-3.5.0 67

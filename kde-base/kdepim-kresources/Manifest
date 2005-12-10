@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 97ce8aeae641ade76b06b8fdf66710a5 ChangeLog 5032
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kresources-3.4.1 208
+MD5 348d89c5b40e9176de2401086d81f427 kdepim-kresources-3.4.3.ebuild 1244
+MD5 bb8a0e7d168c030bd754074717c85ef4 kdepim-kresources-3.5.0.ebuild 1312
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 9af2f50a305b1329ff48f467ff187af3 ChangeLog 5159
+MD5 0a2cbfdefb831eac9e2513108f3d5e0b kdepim-kresources-3.4.1.ebuild 1232
+MD5 fe6bf70826d578fd3c7c156c2100329f kdepim-kresources-3.4.2.ebuild 1248
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kresources-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-kresources-3.4.3 67
 MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-kdepim-kresources-3.5.0 67
 MD5 54ceeeba45d6d32a321821536b100e40 files/use-installed-kode.diff 687
-MD5 0a2cbfdefb831eac9e2513108f3d5e0b kdepim-kresources-3.4.1.ebuild 1232
-MD5 fe6bf70826d578fd3c7c156c2100329f kdepim-kresources-3.4.2.ebuild 1248
-MD5 ada6148ee8d41e18a4799ae4db815875 kdepim-kresources-3.4.3.ebuild 1241
-MD5 bb8a0e7d168c030bd754074717c85ef4 kdepim-kresources-3.5.0.ebuild 1312
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQiTcsIHjyDViGQRAgmqAKCstYinCn7K+rNv8WvfcfJFfDD1ggCdGk2C
-zaQahz+rCNIwevr3F70quWE=
-=6jwo
------END PGP SIGNATURE-----
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kresources-3.4.1 208
