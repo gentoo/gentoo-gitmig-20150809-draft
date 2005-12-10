@@ -1,38 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4c1cba294627d1a6d3796ff963637cc9 ChangeLog 47152
-MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
-MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
-MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r2 68
-MD5 ac733469cad0b673ee2a6fc35edc0e91 files/digest-kdelibs-3.4.2 68
-MD5 ac733469cad0b673ee2a6fc35edc0e91 files/digest-kdelibs-3.4.2-r1 68
-MD5 e7fe23c3618de82d63dfdc90fb483a86 files/digest-kdelibs-3.4.3 68
-MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0 68
-MD5 a5d3cb18c9572d8ca3dd06cbe5d226f1 files/kde3-dcopidlng.patch 681
-MD5 25ab050b323a8efb2049fd770f50058b files/kdelibs-3.3.2-anchor-fix.patch 5947
-MD5 d3df6d042148fd884422822aaf4ffbab files/kdelibs-3.3.2-aspell-dir.patch 467
-MD5 40783b984dcb127c8852246f7eb0a1e8 files/kdelibs-3.3.2-ppc64.patch 957
-MD5 581be8df4ecfd3cf649bb36b6f57e35a files/kdelibs-3.4.1-configure.patch 4558
-MD5 b291a4a134cac9072ad1140a78eee9ce files/kdelibs-3.4.1-kntlm.patch 1323
-MD5 4d3faaf48564cde79aac52957f7e6278 files/kdelibs-3.4.1-ktoolbar-crash.patch 2215
-MD5 4f827df22c4b05fdb50535c985ff5cb1 files/kdelibs-3.4.2-gmail-fix.patch 724
-MD5 b0a18256a9bb33e81f45573f07a341e1 files/kdelibs-3.4.3-inttypes.patch 365
-MD5 15d3d3042e0bb2c9b640e8993aa234b1 files/kdelibs-3.5.0-bindnow.patch 1363
-MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
-MD5 138c3252883171d55ec24ed0318950fd files/post-3.3.2-kdelibs-kate.diff 2212
-MD5 a0a423eb46bcca9f140b0a97645a0177 kdelibs-3.3.2-r10.ebuild 4318
-MD5 176460cf9160b02b1a157612af59e346 kdelibs-3.4.1-r1.ebuild 3363
+MD5 2fd53a7c014e4527505ec32ec5425575 kdelibs-3.4.2.ebuild 3346
 MD5 b75b773aa95374e55799e86e678173d6 kdelibs-3.4.1-r2.ebuild 3364
 MD5 12b3f3cc444cc940ed50e352054ccb7f kdelibs-3.4.2-r1.ebuild 3341
-MD5 2fd53a7c014e4527505ec32ec5425575 kdelibs-3.4.2.ebuild 3346
-MD5 3a91361b67450f615d3231102c812016 kdelibs-3.4.3.ebuild 3384
-MD5 f0e4dcbb7b8e88eeecf66511befbc047 kdelibs-3.5.0.ebuild 3718
+MD5 a0a423eb46bcca9f140b0a97645a0177 kdelibs-3.3.2-r10.ebuild 4318
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmVZkAiZjviIA2XgRAhOPAJ0dn1DFnYbSUMnkLtv3JDfoTk7+8wCeLPr3
-ydd9QYQqgpmH9UCAwqo1MqE=
-=sdJE
------END PGP SIGNATURE-----
+MD5 485275c8ddfa071d3644c4be5337614d ChangeLog 47264
+MD5 f0e4dcbb7b8e88eeecf66511befbc047 kdelibs-3.5.0.ebuild 3718
+MD5 40b65f3e604ff54f34b248240dade987 kdelibs-3.4.3.ebuild 3387
+MD5 176460cf9160b02b1a157612af59e346 kdelibs-3.4.1-r1.ebuild 3363
+MD5 ac733469cad0b673ee2a6fc35edc0e91 files/digest-kdelibs-3.4.2 68
+MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0 68
+MD5 25ab050b323a8efb2049fd770f50058b files/kdelibs-3.3.2-anchor-fix.patch 5947
+MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r2 68
+MD5 ac733469cad0b673ee2a6fc35edc0e91 files/digest-kdelibs-3.4.2-r1 68
+MD5 e7fe23c3618de82d63dfdc90fb483a86 files/digest-kdelibs-3.4.3 68
+MD5 4f827df22c4b05fdb50535c985ff5cb1 files/kdelibs-3.4.2-gmail-fix.patch 724
+MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
+MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
+MD5 b291a4a134cac9072ad1140a78eee9ce files/kdelibs-3.4.1-kntlm.patch 1323
+MD5 d3df6d042148fd884422822aaf4ffbab files/kdelibs-3.3.2-aspell-dir.patch 467
+MD5 b0a18256a9bb33e81f45573f07a341e1 files/kdelibs-3.4.3-inttypes.patch 365
+MD5 40783b984dcb127c8852246f7eb0a1e8 files/kdelibs-3.3.2-ppc64.patch 957
+MD5 15d3d3042e0bb2c9b640e8993aa234b1 files/kdelibs-3.5.0-bindnow.patch 1363
+MD5 4d3faaf48564cde79aac52957f7e6278 files/kdelibs-3.4.1-ktoolbar-crash.patch 2215
+MD5 a5d3cb18c9572d8ca3dd06cbe5d226f1 files/kde3-dcopidlng.patch 681
+MD5 138c3252883171d55ec24ed0318950fd files/post-3.3.2-kdelibs-kate.diff 2212
+MD5 581be8df4ecfd3cf649bb36b6f57e35a files/kdelibs-3.4.1-configure.patch 4558
+MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
