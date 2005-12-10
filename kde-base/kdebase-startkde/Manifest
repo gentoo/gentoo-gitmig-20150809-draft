@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d4ee294234edbd7ad4c75af203b2e098 kdebase-startkde-3.4.3.ebuild 2195
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
@@ -13,3 +16,10 @@ MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdebase-startkde-3.5.0 68
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-startkde-3.4.2 287
 MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmlBlFdQwWVoAgN4RAub9AKD0oyvXurpbEAKh3UHhdbvkp39LYQCg4TSh
+Vs8oCdRXxpuxToEWdN1e2y0=
+=1ANc
+-----END PGP SIGNATURE-----
