@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.205 2005/12/10 03:12:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.206 2005/12/10 18:22:06 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  kdegraphics-3.4.3-r2.ebuild:
+  Stable on alpha, bug 112842.
 
   10 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdegraphics-3.4.3-r2.ebuild:
   Marked ppc stable.

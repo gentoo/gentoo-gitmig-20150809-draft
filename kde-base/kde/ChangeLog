@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.129 2005/12/10 03:16:14 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.130 2005/12/10 18:35:32 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kde-3.4.3.ebuild:
+  Stable on alpha, bug 112842.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> kde-3.4.3.ebuild:
   Marked x86 stable for bug #112842.
