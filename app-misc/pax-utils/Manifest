@@ -8,11 +8,11 @@ MD5 a600ef77f69ccf3b549a95e326603592 files/digest-pax-utils-0.1.5 67
 MD5 90f775b6c4fdbeb494f7d8e1d94ad30d metadata.xml 604
 MD5 f8bd2ca48f4d45db57753b12c0d56560 pax-utils-0.1.3.ebuild 1022
 MD5 16be1632892be8a4398d2284ec734854 pax-utils-0.1.4.ebuild 930
-MD5 d6a8cbeaea7ee9f8ea87797abd3f9ce2 pax-utils-0.1.5.ebuild 1003
+MD5 8b51b7c8db335a2bf83e439832c23a89 pax-utils-0.1.5.ebuild 1028
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl3y8gIKl8Uu19MoRAh9ZAJ9XTDWAjVkuMMe6kHMO83CVgmTr1QCeLPLT
-KT2yTD1jiPFCM5G5wDIxhiU=
-=WoF0
+iD8DBQFDmklngIKl8Uu19MoRAmhXAJkBNqRelPmpua/Ytd5LuNhF2H9eYwCfQRGc
+tLf4+4IdF337li7V3Qm0S0c=
+=IeuE
 -----END PGP SIGNATURE-----

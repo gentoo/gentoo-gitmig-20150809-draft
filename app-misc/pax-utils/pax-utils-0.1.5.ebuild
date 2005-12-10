@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.5.ebuild,v 1.1 2005/12/08 00:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.5.ebuild,v 1.2 2005/12/10 03:16:59 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -18,6 +18,7 @@ IUSE="caps"
 DEPEND="caps? ( sys-libs/libcap )"
 
 src_compile() {
+	rm test.o || die "oops"
 	if use caps ; then
 		append-flags -DWANT_SYSCAP
 		append-ldflags -lcap
