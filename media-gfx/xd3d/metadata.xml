@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
-<maintainer>
-  <email>xtv@gentoo.org</email>
-</maintainer>
 <longdescription>
 xd3d is a simple scientific visualization tool designed to be easy to learn. 
 It can plot 2d and 3d meshes, with shadowing, contour plots, vector fields, 
