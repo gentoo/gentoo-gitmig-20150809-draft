@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.16 2005/08/02 02:16:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.17 2005/12/10 21:49:17 vanquirius Exp $
+
+  10 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> gsview-4.6.ebuild,
+  gsview-4.6-r1.ebuild, gsview-4.7.ebuild:
+  Add virtual/pdfview and virtual/psviewer to PROVIDE. Fixes bug 114295.
+  Thanks to Sascha Geschwandtner <s dot geschwandtner at gmx dot de>. I also
+  made =gsview-4.6 block epstool, since this ebuild provides its own epstool
+  binary.
 
 *gsview-4.7 (02 Aug 2005)
 
