@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/kvdr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.7 2005/08/21 20:47:59 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.8 2005/12/10 13:14:40 zzam Exp $
+
+  10 Dec 2005; Matthias Schwarzott <zzam@gentoo.org> kvdr-0.63.ebuild:
+  replaced dvb depend by linuxtv-dvb-headers
 
 *kvdr-0.63 (21 Aug 2005)
 
