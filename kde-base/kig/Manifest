@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dfe79135e2e5a11856bd38de1b00639b kig-3.4.1-r10.ebuild 555
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 9c7be46c69e5bcb19aced09d8b875f0a kig-3.4.3.ebuild 647
-MD5 40d9028b9dc7c67049f5ae847936833b ChangeLog 4980
+MD5 f1b9ec812741f69d7dd174a0ccdb78ae ChangeLog 5070
 MD5 5c2e5b16ddb3b0c5e90082fd934ccb10 kig-3.5.0.ebuild 544
-MD5 e0826ebd59b33c6ff0cfd99aba436bf6 kig-3.4.3-r10.ebuild 560
+MD5 9c7be46c69e5bcb19aced09d8b875f0a kig-3.4.3.ebuild 647
 MD5 e4ad8498983c1d267a8a9f93d3f22a94 kig-3.4.2.ebuild 556
 MD5 1f153cd8ce4a7266ce239f61c6dcca8b kig-3.4.1.ebuild 435
+MD5 5f7cc0b78746a4901f1f2ad2f507fbec kig-3.4.3-r10.ebuild 555
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 dfe79135e2e5a11856bd38de1b00639b kig-3.4.1-r10.ebuild 555
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1-r10 208
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kig-3.5.0 67
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kig-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kig-3.4.3 67
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1 208
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kig-3.4.3-r10 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmm0EFdQwWVoAgN4RAi8dAJ0YDRLsTjNiun3f1bzD5K/TjxlQCwCeKvN3
-0wXIa9U6eYL1vamvJ+2eT68=
-=0Hm1
------END PGP SIGNATURE-----
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kig-3.5.0 67
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1 208

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b8fa7ca6022fc08d7944fc8ec15527a kdenetwork-filesharing-3.4.2.ebuild 481
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 27cb63c7f45140f5682ad0950c1183af ChangeLog 4518
-MD5 70a9c4b619c3f8b6e8ae9660f3f2d547 kdenetwork-filesharing-3.5.0.ebuild 468
+MD5 0c1821d598ca5444aff9e8582c559b35 ChangeLog 4625
+MD5 89f52b2582c1b43b847326d50140fc37 kdenetwork-filesharing-3.4.2.ebuild 476
 MD5 49580aea427534893bb110fe6a9765c1 kdenetwork-filesharing-3.4.1.ebuild 467
-MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-filesharing-3.4.1 218
-MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-filesharing-3.4.2 296
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 70a9c4b619c3f8b6e8ae9660f3f2d547 kdenetwork-filesharing-3.5.0.ebuild 468
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-filesharing-3.5.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmn0FFdQwWVoAgN4RAjZaAKDoAi9P+dOkNwEKTLc2CcCgJasMxQCeNudY
-pskeNDAolbO/sl+sIt4cw2w=
-=6ATi
------END PGP SIGNATURE-----
+MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-filesharing-3.4.2 296
+MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-filesharing-3.4.1 218
