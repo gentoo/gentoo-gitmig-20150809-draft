@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 3df833317c97424aa4a99a95bfce3bdd ChangeLog 1231
 MD5 ccf9ea2ff9f57801ca037faea678a353 metadata.xml 165
-MD5 b0cfd062ad85bcf4b4866e9fc30c6ad6 ChangeLog 1147
-MD5 79db861e69c5588d34ec3f79f00dc2d7 pdfjam-1.20.ebuild 882
 MD5 fda4b775f387a002c2795a695aa85847 pdfjam-1.10.ebuild 824
+MD5 298ab34db5e1dbfaa868621583c90cc9 pdfjam-1.20.ebuild 876
 MD5 d84422e37203b5db8f34d67021f04d0a files/digest-pdfjam-1.10 59
 MD5 2526f2c4a21ee7e0b997ed7a0ce4ea18 files/digest-pdfjam-1.20 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFDkVqQFdQwWVoAgN4RAsCSAJdfVOd1lOynRscQSH2fKM4fYiYXAJwLH7cV
-79r9TvHv20Zl2ElCCUXORQ==
-=1e55
------END PGP SIGNATURE-----
