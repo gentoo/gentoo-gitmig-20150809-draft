@@ -1,4 +1,4 @@
-MD5 9f081f4480083b65741b876f3c3412f8 ChangeLog 2436
+MD5 9b45ea7eb7d62a95138a368aedad4d45 ChangeLog 2543
 MD5 4a14ed9ab3e6203cbb6637a867dab1e3 files/1.3_beta1-build.xml 1659
 MD5 b294e944a783341b528e6580cdb3a221 files/build-1.3.1.xml 3041
 MD5 10c08262dba39b892e8d7f62c668e206 files/build-1.3.2.xml 3063
@@ -11,5 +11,5 @@ MD5 043365a0dae7ff26fed565a6fdfe7738 files/plastic-1.3.2.txt 309
 MD5 f237f515cdae3f2d57a487ea09a68880 files/plastic.txt 308
 MD5 b76b542e82379f48d000ef017f5f1b93 jgoodies-looks-1.2.2.ebuild 1085
 MD5 a7357227e2f17c8d553ad82f97121c02 jgoodies-looks-1.3.1-r1.ebuild 1358
-MD5 716eafaab555df398cc5d9d7445b2ad0 jgoodies-looks-1.3.2.ebuild 1359
+MD5 7e30f7ee053a1afc558e6eb221fd45e6 jgoodies-looks-1.3.2.ebuild 1362
 MD5 0a7e021f886fb1b2e57c3ceb9eb8f9e7 metadata.xml 308
