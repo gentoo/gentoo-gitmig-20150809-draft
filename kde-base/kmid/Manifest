@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8d285daa1abfd09d6653c4ac56e9f5e ChangeLog 3643
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kmid-3.4.1 227
-MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kmid-3.4.3 73
-MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-kmid-3.5.0 73
-MD5 8bc3e2056d87c5e50fed9c3798ef720b kmid-3.4.1.ebuild 387
-MD5 0afc47bc41ddc011dc30718da756d486 kmid-3.4.3.ebuild 386
-MD5 d03195986cf45c9b1c50378fd42cabba kmid-3.5.0.ebuild 377
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmRX/csIHjyDViGQRAuWqAJ9iIMFh74D9lseMjD4O0Dt1RtZ38wCgrUwL
-GXQsOIiMbGstWlH1i9oFFqY=
-=qC7A
------END PGP SIGNATURE-----
+MD5 d03195986cf45c9b1c50378fd42cabba kmid-3.5.0.ebuild 377
+MD5 417519d51c4a9b4836e1aac6e65caa9a ChangeLog 3755
+MD5 8bc3e2056d87c5e50fed9c3798ef720b kmid-3.4.1.ebuild 387
+MD5 d0462362d07b9ee5e74251dca8875bfb kmid-3.4.3.ebuild 389
+MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kmid-3.4.3 73
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kmid-3.4.1 227
+MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-kmid-3.5.0 73
