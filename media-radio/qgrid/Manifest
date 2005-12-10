@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b0ea485c863d0910cea50c4f779943a ChangeLog 510
-MD5 28d0c3bb6c80425620241cff231da8d3 metadata.xml 224
-MD5 9e66eb792c7a76bf2bcd453c4fd8a0ca qgrid-2.5.ebuild 458
 MD5 941e9a8f065adc1dbc697848a5a83962 files/digest-qgrid-2.5 61
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 9e66eb792c7a76bf2bcd453c4fd8a0ca qgrid-2.5.ebuild 458
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmtwYV3J2n04EauwRAkKZAJ0SflkafCGZI2JeyspUk3cuF+pnlACgzprw
+4/d6bt7RQ7x/K+WXX3TgH3g=
+=DToH
+-----END PGP SIGNATURE-----
