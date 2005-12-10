@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f01a7eb66338a4264475bdd11347ac4b kdenetwork-3.4.2.ebuild 1794
@@ -19,3 +22,10 @@ MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-3.5.0 70
 MD5 e9d8998d39d625a80749a027a9a8e303 files/kdenetwork-3.4-configure.patch 5768
 MD5 7e1dab8dea5082d73c25c6ae6b4251b1 files/digest-kdenetwork-3.4.1-r1 149
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmj31FdQwWVoAgN4RAlKBAJ9gL5qixOj2ilh9yGnNFp6GyS+mNgCdGiQR
+2/lgejG/qzAStZWWVDXuvF4=
+=Cc56
+-----END PGP SIGNATURE-----
