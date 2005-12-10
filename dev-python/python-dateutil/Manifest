@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7980e4ae9475c8ff3ff04c39b39c8479 ChangeLog 562
 MD5 1a360b87fb46889cf9715fc21dc8656c files/digest-python-dateutil-1.0 72
 MD5 3791fecca293eab9b0953b7dd6dcccd2 metadata.xml 371
 MD5 b73c4200c8607082c51fc84f9eefebfe python-dateutil-1.0.ebuild 658
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmxb1wUpWvClEHQoRApBzAJ9c/akH/pR+Uw2KTxwNGdSDv/z1wQCeJIyh
+E4Q8LxKRStWw9kt1Cr9WVyY=
+=8HJg
+-----END PGP SIGNATURE-----
