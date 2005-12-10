@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.35 2005/12/10 07:43:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.36 2005/12/10 19:19:17 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  kdebase-meta-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   kdebase-meta-3.4.3.ebuild:
