@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.1 2005/11/24 21:28:05 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.2 2005/12/10 17:58:24 metalgod Exp $
+
+  10 Dec 2005; Luis Medinas <metalgod@gentoo.org> pytz-2005m.ebuild:
+  Added ~amd64 keyword. Bug #114776.
 
 *pytz-2005m (24 Nov 2005)
 

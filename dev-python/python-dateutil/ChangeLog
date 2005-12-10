@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.1 2005/11/24 21:16:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.2 2005/12/10 17:59:26 metalgod Exp $
+
+  10 Dec 2005; Luis Medinas <metalgod@gentoo.org>
+  python-dateutil-1.0.ebuild:
+  Added ~amd64 keyword. Bug #114776.
 
 *python-dateutil-1.0 (24 Nov 2005)
 

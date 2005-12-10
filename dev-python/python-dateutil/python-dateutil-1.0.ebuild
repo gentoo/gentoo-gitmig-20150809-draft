@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.0.ebuild,v 1.1 2005/11/24 21:16:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.0.ebuild,v 1.2 2005/12/10 17:59:26 metalgod Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://labix.org/download/python-dateutil/${P}.tar.bz2"
 
 LICENSE="PSF-2.3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
