@@ -6,11 +6,11 @@ MD5 e50ed8d4a1b9184df765b72f6fcab6f1 files/digest-showeq-5.0.0.18 68
 MD5 9ac4988f43ff998c0009d351a0d64274 files/digest-showeq-5.2.4.0 67
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 9f6375dee4abcef38295589fce003dda showeq-5.0.0.18.ebuild 798
-MD5 b744a3e8bce1c4778974c3feea5df65f showeq-5.2.4.0.ebuild 799
+MD5 b67d5eafbaeec2b2bd7c2d575f1e1c5d showeq-5.2.4.0.ebuild 806
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmvOogIKl8Uu19MoRApfRAJ0ekx1XW1wJb8H5fp/kwLqtjHizngCdGxQV
-Qm0hId5+RqiHvbttJlrcTAc=
-=aVKd
+iD8DBQFDmvPcgIKl8Uu19MoRAoKwAJ0ZbOhiSIacORAB7mFBjTN+Hzbk2gCaArPG
+LFwMbuCp4D6U62/6vTEdTAM=
+=Wpfm
 -----END PGP SIGNATURE-----
