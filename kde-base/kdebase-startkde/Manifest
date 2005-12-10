@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b6a84764bd53d29d2b5dad338651fff ChangeLog 5504
-MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
-MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-startkde-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-startkde-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdebase-startkde-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdebase-startkde-3.5.0 68
-MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283
-MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1284
-MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1284
-MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
-MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
-MD5 89faa088b52f016d871b935405839a31 kdebase-startkde-3.4.3.ebuild 2192
-MD5 e37464011b5a878360d622b050f68653 kdebase-startkde-3.5.0.ebuild 2192
+MD5 d4ee294234edbd7ad4c75af203b2e098 kdebase-startkde-3.4.3.ebuild 2195
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmP0rcsIHjyDViGQRAjmSAJ9KhUIc90wzgGUoDOipvgQQ3kZGTwCgw7Jr
-Wifu2avQUVBhNjikhFdHdWo=
-=Jzcz
------END PGP SIGNATURE-----
+MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
+MD5 0f667a34f0b1f93abe4c0bf883464959 ChangeLog 5630
+MD5 e37464011b5a878360d622b050f68653 kdebase-startkde-3.5.0.ebuild 2192
+MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
+MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1284
+MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdebase-startkde-3.4.3 68
+MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1284
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-startkde-3.4.1 212
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdebase-startkde-3.5.0 68
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-startkde-3.4.2 287
+MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
+MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283

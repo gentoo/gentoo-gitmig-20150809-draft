@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b32e889a5233cc13451e92a2356b0c0d ChangeLog 3837
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-klipper-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-klipper-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-klipper-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-klipper-3.5.0 68
 MD5 00a48ff403c655bd021fe3740f04ce9c klipper-3.4.1.ebuild 412
-MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.2.ebuild 425
-MD5 463bf5c805dad0ded3ed48c1515229b1 klipper-3.4.3.ebuild 421
-MD5 4cd1d4e9212e57b649f96595bdc4f9db klipper-3.5.0.ebuild 413
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmPumcsIHjyDViGQRArGzAJwOAw0qUvTpExJlODGE0fdShRRGrQCgiB0o
-Ejq1hpezcVjurFybovF3q6M=
-=8x/J
------END PGP SIGNATURE-----
+MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.2.ebuild 425
+MD5 7c6a3f3f42d3c675a316acd8ede46b1e ChangeLog 3952
+MD5 4cd1d4e9212e57b649f96595bdc4f9db klipper-3.5.0.ebuild 413
+MD5 254d13c4eab2d1c47b1463329f0072d4 klipper-3.4.3.ebuild 424
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-klipper-3.4.3 68
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-klipper-3.4.2 287
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-klipper-3.5.0 68
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-klipper-3.4.1 212

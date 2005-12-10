@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7cec827850fdd78dde47ba68a02b2cc8 ChangeLog 4649
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcheckpass-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcheckpass-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcheckpass-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kcheckpass-3.5.0 68
-MD5 d57023f742587584d5493144970b07c6 files/kcheckpass-3.5.0-bindnow.patch 574
-MD5 b401a538cf13f910f1d1feaf4c6af086 kcheckpass-3.4.1.ebuild 517
+MD5 4f6a83fa717bb922cb3e587359f525f8 kcheckpass-3.4.3.ebuild 528
 MD5 c6405bea7c47189c312b88797fac75c6 kcheckpass-3.4.2.ebuild 529
-MD5 723c454cc18a92a144b46174bea48f9a kcheckpass-3.4.3.ebuild 525
 MD5 fe4fc928a9b7b3825e7967cfe2cae6e9 kcheckpass-3.5.0.ebuild 688
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmU4FAiZjviIA2XgRAlZYAJ4gLw90bo8P8f/X7Mjqd8vGBBX4rgCeNYRO
-+lf9qPDZZWHSMNYR4sv+VrY=
-=3xJB
------END PGP SIGNATURE-----
+MD5 e786e50b472f815f7460c2a1264c5e04 ChangeLog 4764
+MD5 b401a538cf13f910f1d1feaf4c6af086 kcheckpass-3.4.1.ebuild 517
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcheckpass-3.4.2 287
+MD5 d57023f742587584d5493144970b07c6 files/kcheckpass-3.5.0-bindnow.patch 574
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcheckpass-3.4.3 68
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kcheckpass-3.5.0 68
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcheckpass-3.4.1 212
