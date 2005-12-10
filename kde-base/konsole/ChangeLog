@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.32 2005/12/10 03:52:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.33 2005/12/10 18:43:20 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org konsole-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> konsole-3.4.3.ebuild:
   Marked x86 stable for bug #112842.
