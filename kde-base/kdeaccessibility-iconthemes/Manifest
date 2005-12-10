@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59adc06df0a03776d43f171ef765b3a7 ChangeLog 4415
-MD5 a2ff872942277aa4226570c6c728c417 files/digest-kdeaccessibility-iconthemes-3.4.1 236
-MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kdeaccessibility-iconthemes-3.4.2 320
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-iconthemes-3.4.3 76
-MD5 307469289d5167258f2faa3684e12eb2 files/digest-kdeaccessibility-iconthemes-3.5.0 76
-MD5 711fa18fa936b375e5d1f7be92a09f72 kdeaccessibility-iconthemes-3.4.1.ebuild 486
-MD5 e1672d47e6f0b710288757784135c351 kdeaccessibility-iconthemes-3.4.2.ebuild 499
-MD5 9071c766928d6fe1b59ead0965e3cf37 kdeaccessibility-iconthemes-3.4.3.ebuild 495
-MD5 44018334812b5548e53bbccc8ebe9cfb kdeaccessibility-iconthemes-3.5.0.ebuild 487
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmP+CcsIHjyDViGQRAuEDAKCTcb0JBt5b9WI0L1aJarPU/UxWxACg6MI1
-/RL6LRtDvwCjZojfMZAzNVI=
-=eNL1
------END PGP SIGNATURE-----
+MD5 557e40c41498911c8da93008056c0206 ChangeLog 4552
+MD5 e1672d47e6f0b710288757784135c351 kdeaccessibility-iconthemes-3.4.2.ebuild 499
+MD5 44018334812b5548e53bbccc8ebe9cfb kdeaccessibility-iconthemes-3.5.0.ebuild 487
+MD5 a2704661c63c9b56c61e435100ca89cc kdeaccessibility-iconthemes-3.4.3.ebuild 498
+MD5 711fa18fa936b375e5d1f7be92a09f72 kdeaccessibility-iconthemes-3.4.1.ebuild 486
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-iconthemes-3.4.3 76
+MD5 a2ff872942277aa4226570c6c728c417 files/digest-kdeaccessibility-iconthemes-3.4.1 236
+MD5 307469289d5167258f2faa3684e12eb2 files/digest-kdeaccessibility-iconthemes-3.5.0 76
+MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kdeaccessibility-iconthemes-3.4.2 320

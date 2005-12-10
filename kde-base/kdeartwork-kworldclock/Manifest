@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 19fbd0334e9a4d689cc4aaf354599b19 ChangeLog 4369
-MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kworldclock-3.4.1 220
-MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kworldclock-3.4.2 298
-MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kworldclock-3.4.3 71
-MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-kworldclock-3.5.0 71
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 3b203801fafac25cf88482700422a694 ChangeLog 4501
+MD5 bdd1ce1e331bce126fe0c7e6e2a25c7d kdeartwork-kworldclock-3.4.3.ebuild 512
 MD5 cf3349896ee1e58a53a73cf4cb4821b1 kdeartwork-kworldclock-3.4.1.ebuild 500
 MD5 cb5b9a8d02e0062330eeb83fc1dcaa57 kdeartwork-kworldclock-3.4.2.ebuild 513
-MD5 3ed0f2b098099012c82de49e7fb64a67 kdeartwork-kworldclock-3.4.3.ebuild 509
 MD5 2f903180eb0c6f1b1dc148652dda9e72 kdeartwork-kworldclock-3.5.0.ebuild 501
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmP7XcsIHjyDViGQRArC4AJ0ba7DgBuju/mUtOK6O5TxzDdkClQCeJlkU
-9n59xtpDrekg8SIlDheQsTk=
-=8eI4
------END PGP SIGNATURE-----
+MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-kworldclock-3.5.0 71
+MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kworldclock-3.4.3 71
+MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kworldclock-3.4.2 298
+MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kworldclock-3.4.1 220

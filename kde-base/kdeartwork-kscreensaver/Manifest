@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f138a424f24ab8721382ced32fe0ecc ChangeLog 5743
-MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kscreensaver-3.4.1 220
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 2fe0472a2ca64ac229f658b1414755ac kdeartwork-kscreensaver-3.4.1.ebuild 850
+MD5 9ece4f122bffc18a37faa62d115211e9 ChangeLog 5876
+MD5 c63624b52624e2ed23a1a06aa27452e4 kdeartwork-kscreensaver-3.4.2.ebuild 1062
+MD5 281d7c69fa2f1c3cf03567b5abc6ba82 kdeartwork-kscreensaver-3.5.0.ebuild 768
+MD5 8fe4547c8c8e7cbcb4ae7818e0f74315 kdeartwork-kscreensaver-3.4.3.ebuild 938
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kscreensaver-3.4.2 298
-MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kscreensaver-3.4.3 71
 MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-kscreensaver-3.5.0 71
+MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kscreensaver-3.4.1 220
+MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kscreensaver-3.4.3 71
+MD5 789091c90eea0d565e886b92589f1119 files/kdeartwork-3.4.3-kfiresaver.patch 765
 MD5 a51b6bfc735f8cec40cd4481a289309d files/kdeartwork-3.4-configure.patch 7591
 MD5 fe55c64ff5050b92d175b2114c2d1667 files/kdeartwork-3.4.1-configure.patch 815
 MD5 45fe881cc7f39f2d70b8b4ccc61cf707 files/kdeartwork-3.4.3-configure.patch 5729
-MD5 789091c90eea0d565e886b92589f1119 files/kdeartwork-3.4.3-kfiresaver.patch 765
-MD5 2fe0472a2ca64ac229f658b1414755ac kdeartwork-kscreensaver-3.4.1.ebuild 850
-MD5 c63624b52624e2ed23a1a06aa27452e4 kdeartwork-kscreensaver-3.4.2.ebuild 1062
-MD5 a963433b866c7ea3be68e1ef1422591e kdeartwork-kscreensaver-3.4.3.ebuild 935
-MD5 281d7c69fa2f1c3cf03567b5abc6ba82 kdeartwork-kscreensaver-3.5.0.ebuild 768
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmP8EcsIHjyDViGQRAhPWAJ0fvnIwmq2C1XEC/w7IQWiDWM+ptwCeOnT9
-2mv98pUvqTrbf7eYeM6rh7M=
-=N25b
------END PGP SIGNATURE-----
