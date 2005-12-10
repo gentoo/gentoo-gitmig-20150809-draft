@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4239735a3d6264d076566a419908395e ChangeLog 4209
 MD5 15a727a402747625f159dddfb514d9d1 kspaceduel-3.4.2.ebuild 546
 MD5 a856e95160b514563624fcac0e20c03a kspaceduel-3.4.3.ebuild 540
@@ -8,3 +11,10 @@ MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kspaceduel-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kspaceduel-3.5.0 69
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kspaceduel-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kspaceduel-3.4.2 288
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm1aVugEuf3OQ0akRAv6OAJ0RDWxQHyJtwfx6VUqBcM01KF2PMwCgljox
+pK2TqZRKsZ8ti1+3joYeuj8=
+=NZeE
+-----END PGP SIGNATURE-----

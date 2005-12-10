@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 590e6a06c7226a2cfeb2b5882bafa555 ChangeLog 3783
 MD5 2820532f23e42c235e0005b185700960 kpercentage-3.4.1.ebuild 453
 MD5 d04389588d69ad6cd58cdb20fea8436e kpercentage-3.5.0.ebuild 454
@@ -6,3 +9,10 @@ MD5 90187fa6ac65b8ba6c2da8da49948c11 kpercentage-3.4.2.ebuild 462
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kpercentage-3.4.1 208
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kpercentage-3.5.0 67
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kpercentage-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm0DmugEuf3OQ0akRAlDoAJ0UJzl/MS4WpEWmWlfHb0XLQt4J3gCeMVpw
+hnO+lommWBlP9GvIRYSj6Qo=
+=xI+N
+-----END PGP SIGNATURE-----

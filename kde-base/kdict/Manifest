@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0efd67fddc6784d8c26fff4d307913bc ChangeLog 3726
 MD5 833f6a25344114a9b578f50295ae01ea kdict-3.4.2.ebuild 413
 MD5 67da4a4f39d1419c3dacc9e8b75b13af kdict-3.4.1.ebuild 403
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdict-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-kdict-3.4.2 296
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdict-3.5.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm0dgugEuf3OQ0akRAottAJ0al+l9Qf04HH1GWigWBH92PONHCgCZAcwu
+Lf07Ey0sEq+noVFqNyOwDtM=
+=4qqY
+-----END PGP SIGNATURE-----

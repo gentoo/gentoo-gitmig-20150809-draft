@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e06936fcdb250b41ec2e45cec474add2 ChangeLog 3956
 MD5 902f9e74f11020707a27ba1a286919e1 ksirc-3.4.1.ebuild 437
 MD5 7c6159b184176542269ef7c7d39a1215 ksirc-3.4.3.ebuild 444
@@ -8,3 +11,10 @@ MD5 1277f401bade54acfa086cf013950252 files/digest-ksirc-3.4.2 296
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-ksirc-3.5.0 70
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-ksirc-3.4.3 70
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-ksirc-3.4.1 218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm0WrugEuf3OQ0akRAsuiAJ9jnLS5pbaz+xK0QxiEzfmJRiiOowCgnRFk
+Soesea00Cy/mAzMrFRasd+8=
+=uFQQ
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 87cede881a90b6d1b57889d6d545fcd6 ChangeLog 4134
 MD5 764f923b9e7360da4f7459546711a493 kwordquiz-3.5.0.ebuild 427
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
@@ -8,3 +11,10 @@ MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kwordquiz-3.4.2 282
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kwordquiz-3.5.0 67
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kwordquiz-3.4.3 67
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kwordquiz-3.4.1 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmz6mugEuf3OQ0akRAucwAJ4n1i1NsvQWiAUd12ZkWMKGXiVaVQCeNlgP
+SZkqlBiZD7XC2PgNQK4E6NY=
+=CQ58
+-----END PGP SIGNATURE-----

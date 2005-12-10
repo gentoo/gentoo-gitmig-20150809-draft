@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 01fe8657bf7b94711f24e6ef815f8148 ChangeLog 3923
 MD5 c880fc5ac6a88e2f1fe2666873815952 kdelirc-3.4.2.ebuild 433
 MD5 011bbe2747aebc8accd670a824f52ad3 kdelirc-3.5.0.ebuild 423
@@ -8,3 +11,10 @@ MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kdelirc-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdelirc-3.4.3 68
 MD5 61427700c31d5d6a145005b5945e00e5 files/digest-kdelirc-3.5.0 68
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kdelirc-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm0MUugEuf3OQ0akRAk1wAJ9KynJHEL7pSUPRSjXIx07Hkyfv8gCeMLHl
+6c8bzqbDvv5X8KDC29cO0gE=
+=EYb+
+-----END PGP SIGNATURE-----

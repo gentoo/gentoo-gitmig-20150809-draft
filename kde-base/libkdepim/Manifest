@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a969f21977351e52985928324d01deef ChangeLog 4444
 MD5 3d81dacf5ddb8f4838c35595882d4376 libkdepim-3.4.1.ebuild 551
 MD5 19370076a7e24292cd8a17415d568838 libkdepim-3.4.2.ebuild 555
@@ -8,3 +11,10 @@ MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkdepim-3.5.0 67
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkdepim-3.4.1 208
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkdepim-3.4.3 67
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkdepim-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm0p4ugEuf3OQ0akRAi+nAJ9CDGGgeIDbYDRZCbIEQY8LDn2C8wCghs3L
+Orrqs7+ouzxomB9+HAwYDAk=
+=u9mP
+-----END PGP SIGNATURE-----

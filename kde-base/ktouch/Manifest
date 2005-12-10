@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 025e17c996a951791597ccaf22a6209d ChangeLog 4220
 MD5 efaf8d02d7a1a0d04de75b0f13d880da ktouch-3.4.1.ebuild 426
 MD5 9f3389b6630b19a0baec474df3a0090d ktouch-3.5.0.ebuild 557
@@ -8,3 +11,10 @@ MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-ktouch-3.5.0 67
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-ktouch-3.4.2 282
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-ktouch-3.4.1 208
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-ktouch-3.4.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmz89ugEuf3OQ0akRAhKBAJ47f4J1jEM0r5WXtVRxyve6NvfUWACfeKnW
+Qz+mS/t+X9/5jyOI7A8Acf4=
+=k3Jz
+-----END PGP SIGNATURE-----

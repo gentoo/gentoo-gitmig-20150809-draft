@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a33f188d085055affdb8939507f18e7e ChangeLog 4151
 MD5 0aae2caf5303045f1a5d5f09298c9cbf kalarm-3.5.0.ebuild 1219
 MD5 8d0e906ef8c9e840c798bb699007499f kalarm-3.4.1.ebuild 1306
@@ -8,3 +11,10 @@ MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-kalarm-3.5.0 67
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kalarm-3.4.3 67
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kalarm-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kalarm-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm02sugEuf3OQ0akRAhR4AKCLAeB7lhla7Pc5t/Jl68ZuHjbVOQCgjnQ5
+TmRT3St9EhdmWyPrZcqgoq4=
+=ufeR
+-----END PGP SIGNATURE-----
