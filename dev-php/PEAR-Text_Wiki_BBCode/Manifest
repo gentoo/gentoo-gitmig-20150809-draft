@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef8c7e8a9affb6add2e545800a535cc1 ChangeLog 427
+MD5 b0d9dbe9863ab2d6fc8496340174db45 PEAR-Text_Wiki_BBCode-0.0.2.ebuild 415
+MD5 ccf9dea3b14b1efb515ee0a60bcabe8f files/digest-PEAR-Text_Wiki_BBCode-0.0.2 70
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmt13aGfFFLhbXWkRArdPAJ4kRwEROkfLcq34riO2DzhpAAdtNQCfaQjn
+wgD/i5q/lnasyRHwTVudG+A=
+=jXhH
+-----END PGP SIGNATURE-----
