@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.87 2005/12/10 02:32:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.88 2005/12/10 17:50:50 yoswink Exp $
+
+  10 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  kdewebdev-3.4.1-r1.ebuild:
+  Marked alpha stable wrt security bug #112842
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   kdewebdev-3.4.3-r1.ebuild:
