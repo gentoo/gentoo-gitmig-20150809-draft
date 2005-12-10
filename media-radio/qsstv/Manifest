@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a7eae9101e3e4e7b9dc1c87775ddf910 ChangeLog 361
 MD5 0c9790cc50ac78da2d3dc2f081d50ff3 files/digest-qsstv-5.3a 63
 MD5 cd5b720de35413f7386db82a6a3e7d63 files/digest-qsstv-5.3c 63
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 cf91a676bc8780ed8596a2b6bd985084 qsstv-5.3a.ebuild 450
 MD5 152afcf3a9cc78b18acefc1ab1c2089e qsstv-5.3c.ebuild 450
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmtxrV3J2n04EauwRAv2wAJ9krXMTsblONaU8vauEKUoibpNbogCfShgB
+QxX0NwMD8Fl2GCJKJlgYqlM=
+=HZX2
+-----END PGP SIGNATURE-----

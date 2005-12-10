@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7b1933e249ca8a450954346963e97457 ChangeLog 754
 MD5 9273c1385020eae8feeb230ff95bf30f files/digest-xconvers-0.8.2 66
 MD5 e425ded88c45bb4e2d971e811abf7023 files/digest-xconvers-0.8.3 66
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 fad99015543c31611f555bae2d607d10 xconvers-0.8.2.ebuild 707
 MD5 ff26d58ca448020776ffaea924ac444d xconvers-0.8.3.ebuild 700
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmtxrV3J2n04EauwRAgPAAKCE6IxwaNRZaf+HpfIMC+00sloJTQCbBgZb
+XJmiHCjlzxi/eEMBPZtawwg=
+=JbEl
+-----END PGP SIGNATURE-----
