@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.15 2005/10/28 20:21:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.16 2005/12/10 20:35:33 tgall Exp $
 
-  28 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> libsvg-0.1.4.ebuild:
+  10 Dec 2005; Tom Gall <tgall@gentoo.org> libsvg-0.1.2.ebuild:
+  stable on ppc64
+
+  28 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org> libsvg-0.1.4.ebuild:
   Add ~alpha and ~ia64 keywords + clean up KEYWORDS mess.
 
   26 Oct 2005; Fabian Groffen <grobian@gentoo.org> libsvg-0.1.4.ebuild:
