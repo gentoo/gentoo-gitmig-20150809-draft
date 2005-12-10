@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Gnome Splashscreen Manager
+Comment=Manage your GNOME Splashscreen
+Exec=gnome-splashscreen-manager
+Icon=gnome-graphics
+Terminal=true
+Type=Application
+StartupNotify=true
+Categories=GNOME;Settings;Appearance;
+OnlyShowIn=GNOME;
