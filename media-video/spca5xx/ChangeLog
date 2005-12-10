@@ -1,13 +1,18 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.14 2005/12/04 17:30:15 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.15 2005/12/10 16:19:03 kingtaco Exp $
+
+*spca5xx-20051105 (10 Dec 2005)
+
+  10 Dec 2005; Mike Doty <kingtaco@gentoo.org> +spca5xx-20051105.ebuild:
+  version bump to 20051105, should support 2.6.14 kernels
 
 *spca5xx-20051001 (04 Dec 2005)
 
-  04 Dec 2005; Mike Doty <mike@gentoo.org> +spca5xx-20051001.ebuild:
+  04 Dec 2005; Mike Doty <kingtaco@gentoo.org> +spca5xx-20051001.ebuild:
   version bump to 20051001
 
-  02 Oct 2005; Mike Doty <mike@gentoo.org> spca5xx-20050903.ebuild:
+  02 Oct 2005; Mike Doty <kingtaco@gentoo.org> spca5xx-20050903.ebuild:
   fixed $HOMEPAGE, bug 106643
 
   05 Sep 2005; Mike Doty <kingtaco@gentoo.org> spca5xx-20050701.ebuild:
