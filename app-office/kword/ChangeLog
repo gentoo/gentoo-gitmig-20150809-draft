@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.32 2005/12/09 20:41:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.33 2005/12/10 05:36:13 halcy0n Exp $
+
+  10 Dec 2005; Mark Loeser <halcy0n@gentoo.org> kword-1.4.2-r4.ebuild:
+  Stable on x86; bug #114429
 
 *kword-1.4.2-r5 (09 Dec 2005)
 *kword-1.4.2-r4 (09 Dec 2005)

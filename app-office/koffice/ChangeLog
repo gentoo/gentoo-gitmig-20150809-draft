@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.134 2005/12/09 20:49:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.135 2005/12/10 05:35:02 halcy0n Exp $
+
+  10 Dec 2005; Mark Loeser <halcy0n@gentoo.org> koffice-1.4.2-r4.ebuild:
+  Stable on x86; bug #114429
 
 *koffice-1.4.2-r5 (09 Dec 2005)
 *koffice-1.4.2-r4 (09 Dec 2005)
