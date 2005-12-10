@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.3 2005/06/17 16:33:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.4 2005/12/10 16:40:49 flameeyes Exp $
 
 inherit eutils
 
@@ -14,13 +14,22 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="debug esd gtk jack opengl"
 
 RDEPEND=">=media-libs/libvisual-0.2.0
-	virtual/x11
-	opengl? ( virtual/opengl )
+	opengl? ( || ( media-libs/mesa virtual/opengl ) )
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
-	gtk? ( >=x11-libs/gtk+-2 )"
+	gtk? ( >=x11-libs/gtk+-2 )
+	|| ( (
+			media-libs/fontconfig
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXrender
+		) virtual/x11 )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+			x11-base/xorg-server
+			x11-libs/libXt
+		) virtual/x11 )
 	>=dev-util/pkgconfig-0.14"
 
 src_compile() {
