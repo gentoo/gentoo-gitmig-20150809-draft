@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2fe5bba87c798eef96deeacc50fa57e ltris-1.0.11.ebuild 1294
+MD5 6ff202ab7c721cd8f40c28c92a5e5d36 ChangeLog 2352
 MD5 0390cd6b4fbf51a48d883bb7b9cf8707 ltris-1.0.10.ebuild 888
-MD5 9f56d8eb7da872f886bb443a2f9fe9a2 ChangeLog 2266
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9490a45796971fb8060fa908326745f6 ltris-1.0.11.ebuild 1290
 MD5 ae9576b6d29ec02e6ead9abc12db9161 files/digest-ltris-1.0.10 64
 MD5 ff855904add7b0b4955deef9b8173914 files/digest-ltris-1.0.11 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDeKj7KRy60XGEcJIRAnlVAJ9i7zxqVBnps95NfPS8f1lSY7yKMACfZ6o+
-1tXSNW6ZHo7xTALEEddn48o=
-=XqJu
------END PGP SIGNATURE-----
