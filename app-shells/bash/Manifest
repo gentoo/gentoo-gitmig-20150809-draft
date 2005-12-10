@@ -49,7 +49,7 @@ MD5 c16b3704ff34112b6f152205c2565f5b files/bash-3.0-utf8.patch 1392
 MD5 7b9f39ddd140c23e0a3ad4010ab008a8 files/bash-3.0-volatile-command.patch 512
 MD5 9897114c737c0277d973b33b519f6df4 files/bash-3.1-bash-logger.patch 2209
 MD5 0ea8241cac27acdecd7bddfc5d89e806 files/bash-3.1-gentoo.patch 2005
-MD5 f8cf2e5159a4811159eb7fd1aaa0e208 files/bash-3.1-ulimit.patch 3711
+MD5 f6e2f0d9e5a4dcb898dc2b04c13ac67d files/bash-3.1-ulimit.patch 4094
 MD5 229ccc2980a94877f2e87f957e9da7bf files/bash_logout 205
 MD5 1f2890881a3a8c96772d60974d06fd42 files/bashrc 1709
 MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r11 461
@@ -65,7 +65,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDm1AVgIKl8Uu19MoRAorVAJ9azHx+E0xc3YrDko/7JeGoKqM8AgCeIJk6
-EK8YuZaDLAwkdwsjP9+1wPM=
-=ZBEZ
+iD8DBQFDm1gWgIKl8Uu19MoRArpVAJ9ONCnmIntX0uk7/EOL9yy3AHH0vgCeIuI0
+DC/xUelOvLK4soE/TWtNvU4=
+=kVFh
 -----END PGP SIGNATURE-----

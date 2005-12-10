@@ -5,22 +5,30 @@ for many other options
 
 --- builtins/ulimit.def
 +++ builtins/ulimit.def
-@@ -34,6 +34,7 @@
+@@ -34,18 +34,20 @@
      -a	all current limits are reported
      -c	the maximum size of core files created
      -d	the maximum size of a process's data segment
 +    -e	the maximum scheduling priority (`nice')
      -f	the maximum size of files created by the shell
-     -i  the maximum number of pending signals
+-    -i  the maximum number of pending signals
++    -i	the maximum number of pending signals
      -l	the maximum size a process may lock into memory
-@@ -41,6 +42,7 @@
+     -m	the maximum resident set size
      -n	the maximum number of open file descriptors
      -p	the pipe buffer size
-     -q  the maximum number of bytes in POSIX message queues
+-    -q  the maximum number of bytes in POSIX message queues
++    -q	the maximum number of bytes in POSIX message queues
 +    -r	the maximum rt priority
      -s	the maximum stack size
      -t	the maximum amount of cpu time in seconds
      -u	the maximum number of user processes
+     -v	the size of virtual memory
+-    -x  the maximum number of file locks
++    -x	the maximum number of file locks
+ 
+ If LIMIT is given, it is the new value of the specified resource;
+ the special LIMIT values `soft', `hard', and `unlimited' stand for
 @@ -202,6 +204,9 @@
  #ifdef RLIMIT_DATA
    { 'd',	RLIMIT_DATA,  1024,	"data seg size",	"kbytes" },
