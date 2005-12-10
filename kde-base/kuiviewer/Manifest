@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 55e5ec3c6efc72abc7150b92ded0aefd ChangeLog 3281
-MD5 9b4e9e38740207531ab771519519d01e files/digest-kuiviewer-3.4.1 206
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 2e53ca88a63eca2bd4ef5c5e82499f55 kuiviewer-3.4.1.ebuild 405
+MD5 4a36fc812c343c80fa4822e864376c80 kuiviewer-3.5.0.ebuild 393
+MD5 f88da7c8b7f59f436a1e20d45c86be1f ChangeLog 3398
+MD5 07d8c458d01125a9db44bb1082952584 kuiviewer-3.4.3.ebuild 410
+MD5 b4ce96aa13413692645be3adf3f06279 kuiviewer-3.4.2.ebuild 413
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kuiviewer-3.4.2 280
+MD5 9b4e9e38740207531ab771519519d01e files/digest-kuiviewer-3.4.1 206
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kuiviewer-3.4.3 66
 MD5 1e423fe06c976614875c91024253a35c files/digest-kuiviewer-3.5.0 66
-MD5 2e53ca88a63eca2bd4ef5c5e82499f55 kuiviewer-3.4.1.ebuild 405
-MD5 b4ce96aa13413692645be3adf3f06279 kuiviewer-3.4.2.ebuild 413
-MD5 5c4db1097a9bf33db873ceabe7b69fb6 kuiviewer-3.4.3.ebuild 407
-MD5 4a36fc812c343c80fa4822e864376c80 kuiviewer-3.5.0.ebuild 393
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmVaAcsIHjyDViGQRArbLAJ468H+0eze50oqzy9nyKHD1vsN6wgCfYVKp
-OTvEUQHpW5MoLtfZzt7CRcg=
-=vZsb
------END PGP SIGNATURE-----

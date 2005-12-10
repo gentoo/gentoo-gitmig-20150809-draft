@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 051a8e08c0a921d0946c7a1ca854c8ae ChangeLog 4255
 MD5 c85f14ce2dda1942f774b5c12700f4b2 atlantikdesigner-3.4.1.ebuild 492
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 0711432d05d4e508931d125e087f386a ChangeLog 4381
 MD5 5aea3cb64a24ec01389c2667aff99a89 atlantikdesigner-3.4.2.ebuild 505
-MD5 f9f1d56fd3547f375a4ad988b890acf0 atlantikdesigner-3.4.3.ebuild 501
 MD5 1fefa5949dc5da2a52f6c3b1e8705a43 atlantikdesigner-3.5.0.ebuild 459
+MD5 40358c8446935719973b0119509b92b0 atlantikdesigner-3.4.3.ebuild 504
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-atlantikdesigner-3.4.1 215
-MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-atlantikdesigner-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-atlantikdesigner-3.4.3 69
 MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-atlantikdesigner-3.5.0 69
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQwicsIHjyDViGQRAiJxAKDRNI8e0+SELZombUapS18uDvjQyACgti8v
-v65Mc30SFxowJYn1QV+KHnA=
-=vZtq
------END PGP SIGNATURE-----
+MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-atlantikdesigner-3.4.2 291
