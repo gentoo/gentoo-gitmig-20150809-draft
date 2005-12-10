@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-proxy</herd>
-<maintainer>
-	<email>cyfred@gentoo.org</email>
-	<name>Andrew Bevitt</name>
-</maintainer>
 <longdescription>Redirector for squid that intercepts advertising, page counters and some web bugs</longdescription>
 </pkgmetadata>
