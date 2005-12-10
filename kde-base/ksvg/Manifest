@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 70ea71fac7a8dde5e7f71c631c06246b ChangeLog 3927
-MD5 e1c2cb0d2cccb98b0776cc2e421972bd ksvg-3.4.2.ebuild 528
-MD5 97bbc248bed4b00a5db59a5031cf7970 ksvg-3.5.0.ebuild 516
-MD5 00293e9d07047ffe50f42d6b38dab2e5 ksvg-3.4.3.ebuild 527
+MD5 8b1a821bf04e3e78a0520d89f780ab8a ChangeLog 4014
 MD5 787a122b056c3c913abd0e620d623251 ksvg-3.4.1.ebuild 467
-MD5 0459ac16349d79da6246392e2454796b files/digest-ksvg-3.5.0 71
-MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-ksvg-3.4.2 300
+MD5 62882d3213ec3cab1a7a49d392acf367 ksvg-3.4.3.ebuild 522
+MD5 97bbc248bed4b00a5db59a5031cf7970 ksvg-3.5.0.ebuild 516
+MD5 e1c2cb0d2cccb98b0776cc2e421972bd ksvg-3.4.2.ebuild 528
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksvg-3.4.3 71
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-ksvg-3.4.1 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmnMHFdQwWVoAgN4RAtVwAKDG6pGJYzZ9Cakeb47RRYJrjocRgQCggMeD
-AeIo3BlVg1liIMmGHcoWeZo=
-=ICGJ
------END PGP SIGNATURE-----
+MD5 0459ac16349d79da6246392e2454796b files/digest-ksvg-3.5.0 71
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-ksvg-3.4.2 300

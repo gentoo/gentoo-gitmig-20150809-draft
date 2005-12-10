@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e278d4eba59f45dba22bbc80ba9cd7a kdeartwork-kwin-styles-3.4.3.ebuild 530
-MD5 e4c91222642dd3882a36083789cfad4c kdeartwork-kwin-styles-3.5.0.ebuild 489
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 363468bbc252a55ec245e6c0095d64c2 ChangeLog 4664
+MD5 2f20409e02f5e800c60f1dc2ffc42ce4 ChangeLog 4771
 MD5 e42a767a0366a3edd96790b9c72d6f52 kdeartwork-kwin-styles-3.4.1.ebuild 518
+MD5 b942bb893206864fd09a50b0740f7430 kdeartwork-kwin-styles-3.4.3.ebuild 525
 MD5 bbb08f7d1ad937a126d320b1aa65767a kdeartwork-kwin-styles-3.4.2.ebuild 531
-MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-kwin-styles-3.5.0 71
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 e4c91222642dd3882a36083789cfad4c kdeartwork-kwin-styles-3.5.0.ebuild 489
+MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kwin-styles-3.4.3 71
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kwin-styles-3.4.2 298
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kwin-styles-3.4.1 220
-MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kwin-styles-3.4.3 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmlSpFdQwWVoAgN4RAmFYAJ4qIwjaeEn+ef+wNyTYutVB+L7OFACffSq+
-meDrVUh5ei518+qrYyW5Xew=
-=Qm5a
------END PGP SIGNATURE-----
+MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-kwin-styles-3.5.0 71

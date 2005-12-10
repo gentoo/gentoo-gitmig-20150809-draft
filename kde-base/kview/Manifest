@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac6678af014cece07fc8d1b3945a907f kview-3.4.1.ebuild 376
-MD5 6f0da4d2fc8afa45f10e1e92d3954bf8 kview-3.4.3.ebuild 389
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 4b74d961194abec4c494702f6f268cad ChangeLog 3868
+MD5 f2ef68272bda273f1256c2bb1a538aa7 ChangeLog 3956
 MD5 ecd242e68ddcf6d213b5a0e399afba03 kview-3.4.2.ebuild 389
+MD5 ac6678af014cece07fc8d1b3945a907f kview-3.4.1.ebuild 376
 MD5 61643d615a2455f9ec6f00d74e81b9a9 kview-3.5.0.ebuild 377
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kview-3.4.1 221
-MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kview-3.4.2 300
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 d8feca1fa3a02becbc13f39f60f0d6d9 kview-3.4.3.ebuild 384
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kview-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kview-3.5.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmnJbFdQwWVoAgN4RAm2lAKDa/yrnEaR4RTOGHNuuFORYh5FQpgCgrSbI
-qIJBADffcwj5TpJiFdt95rk=
-=Yisi
------END PGP SIGNATURE-----
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kview-3.4.2 300
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kview-3.4.1 221

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 90822de73778316b9c7203037533a86f ChangeLog 4129
+MD5 624200620e20f65a93c14a2902d6c660 ksnapshot-3.4.3.ebuild 399
 MD5 0aa08a65a12a76768433cefa5248ce5c ksnapshot-3.4.1.ebuild 450
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 a6176f710ddc1c6c7a77bc9dc2265c82 ksnapshot-3.4.3.ebuild 404
-MD5 8d4d4e4ccaef2e976a4576a5f5d3acb6 ChangeLog 4037
 MD5 6cc8ed16a53246328e0d7cc614c4a100 ksnapshot-3.5.0.ebuild 394
 MD5 0459ac16349d79da6246392e2454796b files/digest-ksnapshot-3.5.0 71
+MD5 b8b19abbbc49524d1043eeed31098905 files/ksnapshot-qt-3.3.5.patch 621
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-ksnapshot-3.4.1 221
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksnapshot-3.4.3 71
-MD5 b8b19abbbc49524d1043eeed31098905 files/ksnapshot-qt-3.3.5.patch 621
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmnFEFdQwWVoAgN4RAt1eAJ9c2GkhYRAZyYC/N8fB91tZ3x7acACgzSD/
-t42pfTIi5dZwK6GPYpbtvWg=
-=BK/M
------END PGP SIGNATURE-----

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 39013a3fa2f840a27216fc20555aa27d ChangeLog 4396
 MD5 41903595f1fe844227e9177091e4375e kbstateapplet-3.4.1.ebuild 481
 MD5 7f3d31cbd53bfebfe98853e31806f137 kbstateapplet-3.5.0.ebuild 481
+MD5 828f4a9acde936ca627112d5ee220987 kbstateapplet-3.4.3.ebuild 487
 MD5 42cb59ec0517877178253f754357d94b kbstateapplet-3.4.2.ebuild 493
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 177299f28bfdc5bb5a0aee70acc7c68c ChangeLog 4298
-MD5 34a94bdb37d5668da0acd117a4336f5b kbstateapplet-3.4.3.ebuild 492
-MD5 307469289d5167258f2faa3684e12eb2 files/digest-kbstateapplet-3.5.0 76
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kbstateapplet-3.4.2 320
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kbstateapplet-3.4.1 236
+MD5 307469289d5167258f2faa3684e12eb2 files/digest-kbstateapplet-3.5.0 76
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kbstateapplet-3.4.3 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmlauFdQwWVoAgN4RAp2OAJ4k+mDuDienM8sR9BnDNs6WPQpY4ACePsVg
-Tigo1rReFygxUCDv92Rvo5Q=
-=SZG8
------END PGP SIGNATURE-----

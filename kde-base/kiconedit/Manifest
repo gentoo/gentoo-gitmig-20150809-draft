@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 2c289e77f045035914eb736b615cc8f4 ChangeLog 3893
+MD5 6d38987e3931ebeabedce04d26c86c72 ChangeLog 3985
+MD5 30dd286d0912adfbe3340078a062e943 kiconedit-3.4.3.ebuild 392
 MD5 506f16ecfe12a35b0d9460d8b2cd1d97 kiconedit-3.5.0.ebuild 385
-MD5 4dfaa7e6d996d9b43fd7023d6c9e71fe kiconedit-3.4.3.ebuild 397
 MD5 ca6f2bb6b975f12082a94d769b885ba6 kiconedit-3.4.1.ebuild 384
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ab55457ffdad53f8593c7826a7dec4af kiconedit-3.4.2.ebuild 397
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kiconedit-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kiconedit-3.4.2 300
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kiconedit-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kiconedit-3.5.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmnG+FdQwWVoAgN4RAvj+AJ4t0txyB7PiATXCnGFqqyKh6fZWVgCgiX+t
-QNkXcByIGVpwZVCiCz/1ro0=
-=Wr4E
------END PGP SIGNATURE-----
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kiconedit-3.4.1 221
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kiconedit-3.4.3 71
