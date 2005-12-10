@@ -1,6 +1,16 @@
-MD5 c7edac808cb4d258de36956bb1a1b494 ChangeLog 990
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee04ddc99c22bdc31b7c3054322bcede ChangeLog 1171
 MD5 7ce0d0fd82c4214e8d2a2f1b10f8f314 PEAR-Cache_Lite-1.5.2.ebuild 403
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 d47b594556523a7ed8b96526b982bbd8 PEAR-Cache_Lite-1.5.2-r1.ebuild 382
+MD5 cf306c25b6dbc2e3e70e2f4354590378 PEAR-Cache_Lite-1.6.0.ebuild 381
 MD5 80749ee371cc1408bee17094ece6981c files/digest-PEAR-Cache_Lite-1.5.2 64
-MD5 80749ee371cc1408bee17094ece6981c files/digest-PEAR-Cache_Lite-1.5.2-r1 64
+MD5 fb96b23a5f77356d9d0c6e434db33164 files/digest-PEAR-Cache_Lite-1.6.0 64
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmts0aGfFFLhbXWkRAso7AJ9rnEtTgC7v/5wvoLzZhFckTQafsgCeOaKM
+zbpzUub5FxNdQKw1RGoKWY0=
+=KuuI
+-----END PGP SIGNATURE-----
