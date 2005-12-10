@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.92 2005/12/09 14:47:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.93 2005/12/10 20:43:16 tgall Exp $
+
+  10 Dec 2005; Tom Gall <tgall@gentoo.org> netpbm-10.30-r1.ebuild:
+  stable on ppc64
 
   09 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   netpbm-10.30-r1.ebuild:
@@ -61,7 +64,7 @@
   19 Oct 2005; Luis Medinas <metalgod@gentoo.org> netpbm-10.29.ebuild:
   Marked Stable on amd64. Bug #109705.
 
-  18 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> netpbm-10.29.ebuild,
+  18 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org> netpbm-10.29.ebuild,
   netpbm-10.29-r1.ebuild, netpbm-10.30.ebuild:
   Added back ~alpha keyword, stable 10.29 wrt bug 109705.
 
@@ -81,7 +84,7 @@
   netpbm-10.29-r1.ebuild:
   10.29-r1: Stable on hppa, added to ~ppc. 10.29: Stable on ppc.
 
-  10 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  10 Oct 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   +files/netpbm-10.29-infinity.patch, netpbm-10.29-r1.ebuild:
   Added patch to rename the INFINITY variable to infinity to avoid problems
   where the first is a system define.
@@ -113,7 +116,7 @@
   05 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> netpbm-10.28.ebuild:
   Stable on mips for bug 100398.
 
-  04 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> netpbm-10.28.ebuild:
+  04 Aug 2005; Bryan Ãstergaard <kloeri@gentoo.org> netpbm-10.28.ebuild:
   Stable on ia64, bug 100398.
 
   02 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> netpbm-10.28.ebuild:
@@ -160,7 +163,7 @@
   netpbm-10.18.7.ebuild, netpbm-10.20.ebuild:
   Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
-  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> netpbm-10.20.ebuild:
+  01 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> netpbm-10.20.ebuild:
   Stable on alpha.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
