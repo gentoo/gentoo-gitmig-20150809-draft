@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.32 2005/12/09 03:24:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.33 2005/12/10 03:29:38 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org>
+  kdebase-data-3.4.3.ebuild:
+  Marked x86 stable for bug #112842.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdebase-data-3.4.3.ebuild:
   Marked ppc stable for bug #112842.

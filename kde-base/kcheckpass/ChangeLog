@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.34 2005/12/09 09:27:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.35 2005/12/10 03:39:27 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org> kcheckpass-3.4.3.ebuild:
+  Marked x86 stable for bug #112842.
 
   09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kcheckpass-3.5.0-bindnow.patch, kcheckpass-3.5.0.ebuild:
