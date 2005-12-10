@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-styles
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.30 2005/12/09 03:47:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.31 2005/12/10 04:07:05 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org>
+  kdeartwork-styles-3.4.3.ebuild:
+  Marked x86 stable for bug #112842.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org>
   kdeartwork-styles-3.4.3.ebuild:
