@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2db4bb8c13481831d39556283f00aafe ktux-3.4.2.ebuild 420
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 8244f2d3736b74977cd08498f7abdce7 ChangeLog 3426
-MD5 774e93586bf6c1bf70939025191581ef ktux-3.4.1.ebuild 405
+MD5 fdf266f1464968b2125afcd7332748a5 ChangeLog 3513
 MD5 62e91f1d01418962b3a8e969fe59cdd3 ktux-3.5.0.ebuild 406
-MD5 51760bf43f61d4083bb13b322559c21f files/digest-ktux-3.4.2 282
-MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-ktux-3.5.0 67
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 96c3bf181a3a639689a6d02b3dd277cf ktux-3.4.2.ebuild 415
+MD5 774e93586bf6c1bf70939025191581ef ktux-3.4.1.ebuild 405
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-ktux-3.4.1 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmn+JFdQwWVoAgN4RAgn2AKDNh5eZVQzS6VHXdU2bZv3AFcIsXQCeK4Ub
-xctozfQDxzfWBx9AWeOuqbc=
-=doCs
------END PGP SIGNATURE-----
+MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-ktux-3.5.0 67
+MD5 51760bf43f61d4083bb13b322559c21f files/digest-ktux-3.4.2 282

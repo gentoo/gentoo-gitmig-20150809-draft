@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d72368b1818377bbd54241eaf2dcf00e quanta-3.5.0.ebuild 1063
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b030541d2eae8f21432f74fe5bb1d8c2 ChangeLog 4383
-MD5 c8fbdbc623c44b3608078da0e6a805c9 quanta-3.4.3.ebuild 1074
+MD5 9a36108715a9f0811026874c3630c485 ChangeLog 4472
+MD5 69a046fe3af8336cd6cc88753cf92cab quanta-3.4.3.ebuild 1069
 MD5 2de271d5cb0564396ad3901ab2879b63 quanta-3.4.1.ebuild 1046
 MD5 5cd5d5288de88797c173db09bd12073c quanta-3.4.2.ebuild 1077
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 d72368b1818377bbd54241eaf2dcf00e quanta-3.5.0.ebuild 1063
 MD5 eefd34bb06d5f84a5f77adf4a6e69fdf files/digest-quanta-3.5.0 69
-MD5 e951879abebc3cb3931132db3f1c508a files/digest-quanta-3.4.1 215
-MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-quanta-3.4.3 69
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-quanta-3.4.2 292
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmoPJFdQwWVoAgN4RAmOgAKCXzlt0Y51gkGiz6vgLWUEDZSs+oQCdFGqJ
-MnJO/xuqYbFcRYB4LPm5kVo=
-=f68l
------END PGP SIGNATURE-----
+MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-quanta-3.4.3 69
+MD5 e951879abebc3cb3931132db3f1c508a files/digest-quanta-3.4.1 215

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 ce1f15c41a4b11e43a331d24b8ff0150 kdetoys-meta-3.4.1.ebuild 857
-MD5 142cf7d2794e367caadbf802243cba9b ChangeLog 4449
-MD5 ca231c20af0ae5484670b1782bb3ccd7 kdetoys-meta-3.4.2.ebuild 874
+MD5 455baf64dab6f6660b82eae5c04f5faf ChangeLog 4546
 MD5 befa0b76d7bc1133dfc0da7cac7038d4 kdetoys-meta-3.5.0.ebuild 858
-MD5 85582034fd520db49077f509aba1f0b0 kdetoys-meta-3.4.3.ebuild 873
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.3 0
+MD5 ce1f15c41a4b11e43a331d24b8ff0150 kdetoys-meta-3.4.1.ebuild 857
+MD5 0e10b98213ffb475d7890dfe81064591 kdetoys-meta-3.4.3.ebuild 868
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 ca231c20af0ae5484670b1782bb3ccd7 kdetoys-meta-3.4.2.ebuild 874
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmomwFdQwWVoAgN4RAg8GAJ9vz3MOJIrN5Gdtv1oTNNsYogSKgACgiUdW
-WGj24MpvoJHkblMcZWDN6bI=
-=7hN3
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.3 0
