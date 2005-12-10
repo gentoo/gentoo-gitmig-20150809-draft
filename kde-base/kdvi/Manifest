@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 0a3f067dd1b66b620c60400b05c86006 kdvi-3.4.1.ebuild 637
 MD5 e13c628d41c1ea9a895cc9fe898b618e ChangeLog 3946
@@ -9,3 +12,10 @@ MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdvi-3.4.1 221
 MD5 0459ac16349d79da6246392e2454796b files/digest-kdvi-3.5.0 71
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kdvi-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdvi-3.4.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmnK3FdQwWVoAgN4RAudIAKDJBozwACV0kJQtv6dba5H4BnldHgCfe5fD
+ubGG+efqPKBVafd5gW0s9gY=
+=6k7y
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d56cb387033c0df17ac33ec15866d0d2 kooka-3.4.3.ebuild 1043
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 4ebce00695fe5912a0254fe700f46b17 ChangeLog 4162
@@ -10,3 +13,10 @@ MD5 51a35089fe1f6247f9cf221c77a57177 files/configure-fix-kdegraphics-kadmos.patc
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kooka-3.4.3 71
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kooka-3.4.2 300
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kooka-3.4.1 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmnMxFdQwWVoAgN4RAvraAKCZYoN7VWHiIsNdQKxshN65hmRy5QCZAY5/
+anevyt+tNkVxSIKfPBktZ9g=
+=oovv
+-----END PGP SIGNATURE-----
