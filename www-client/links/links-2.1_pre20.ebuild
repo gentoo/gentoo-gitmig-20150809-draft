@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre19.ebuild,v 1.2 2005/12/10 02:48:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.1 2005/12/10 02:48:53 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,11 +10,12 @@ HOMEPAGE="http://links.twibright.com/"
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 SRC_URI="http://links.twibright.com/download/${MY_P}.tar.bz2
-	mirror://gentoo/${PN}-2.1pre18-utf8.diff.bz2"
+	mirror://gentoo/${PN}-2.1pre20-utf8.diff.bz2
+	http://dev.gentoo.org/~vanquirius/files/${PN}-2.1pre20-utf8.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode livecd"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
@@ -65,7 +66,7 @@ src_unpack (){
 	unpack ${A}; cd "${S}"
 
 	if use unicode ; then
-		epatch "${WORKDIR}/${PN}-2.1pre18-utf8.diff"
+		epatch "${WORKDIR}/${PN}-2.1pre20-utf8.diff"
 		export LANG=C
 		cd "${S}/intl" && ./gen-intl && cd .. || die "gen-intl filed"
 	fi
