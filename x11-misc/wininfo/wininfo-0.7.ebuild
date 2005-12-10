@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/wininfo-0.7.ebuild,v 1.6 2005/11/02 21:30:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/wininfo-0.7.ebuild,v 1.7 2005/12/10 15:48:46 metalgod Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freedesktop.org/Software/wininfo"
 SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 DEPEND="virtual/x11
 		>=x11-libs/gtk+-2"
 

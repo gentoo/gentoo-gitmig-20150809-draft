@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wininfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.5 2005/11/02 21:30:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.6 2005/12/10 15:48:46 metalgod Exp $
+
+  10 Dec 2005; Luis Medinas <metalgod@gentoo.org> wininfo-0.7.ebuild:
+  Added ~amd64 keyword.
 
   02 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> wininfo-0.7.ebuild:
   Fixed dodoc not to install COPYING and/or INSTALL.
