@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a842d9d0775a262d4ae668dd74ddd6d ChangeLog 3796
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpoker-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpoker-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpoker-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kpoker-3.5.0 69
-MD5 9049dbbf96296bf83c76c2df1b7824fe kpoker-3.4.1.ebuild 528
-MD5 d84b74f740fcfd74b8b9ffaf21d57ba1 kpoker-3.4.2.ebuild 541
-MD5 ef63ffd977c470faa51df5a48bbf48b0 kpoker-3.4.3.ebuild 537
-MD5 82303c7c76fe871fe31a2180f18948f3 kpoker-3.5.0.ebuild 490
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQDycsIHjyDViGQRAoKNAKDRjQqFIEKucO69JLxgaFPC1OMO5wCePhdh
-G9CJ564bDolIP4mbITN5yIE=
-=wMkE
------END PGP SIGNATURE-----
+MD5 d8d6dff3ec16056f4140e8586d759dc6 ChangeLog 3910
+MD5 d84b74f740fcfd74b8b9ffaf21d57ba1 kpoker-3.4.2.ebuild 541
+MD5 2a0a8524b90365adce2c763753a6096e kpoker-3.4.3.ebuild 540
+MD5 9049dbbf96296bf83c76c2df1b7824fe kpoker-3.4.1.ebuild 528
+MD5 82303c7c76fe871fe31a2180f18948f3 kpoker-3.5.0.ebuild 490
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpoker-3.4.3 68
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpoker-3.4.1 212
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kpoker-3.5.0 69
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpoker-3.4.2 288

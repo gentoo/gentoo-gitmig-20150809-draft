@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db0592e2ba5608a187bb7a2302c8e6f1 ChangeLog 3833
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 b7cfd116901fd4326e7abde63cc103e8 kpat-3.4.3.ebuild 615
+MD5 d6dbf8e7ab60c3567b77b539f7747877 ChangeLog 3945
+MD5 03ad99fddd67c9bc3850c3d6ae741b03 kpat-3.4.1.ebuild 604
+MD5 0ee98a85c25ed2c844137eeb9563f221 kpat-3.5.0.ebuild 565
+MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.2.ebuild 616
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpat-3.4.3 68
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpat-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpat-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpat-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-kpat-3.5.0 69
-MD5 03ad99fddd67c9bc3850c3d6ae741b03 kpat-3.4.1.ebuild 604
-MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.2.ebuild 616
-MD5 29b314b191a3fe99ea37ee57ac66c177 kpat-3.4.3.ebuild 612
-MD5 0ee98a85c25ed2c844137eeb9563f221 kpat-3.5.0.ebuild 565
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQFucsIHjyDViGQRAt8kAKCLsE5iSyYHoBbXIapjtfa6bURkpwCg3v2l
-gNsf3DXU7vPTemv7xtDpXE0=
-=TDNG
------END PGP SIGNATURE-----

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9ae05a5842d09e51b6d73fee0c6daac ChangeLog 3998
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 11d0b674082f3d81df93d6f11162c5e5 ksmiletris-3.4.1.ebuild 532
+MD5 bc945000a7c32b1a16a4aec81f09ff17 ChangeLog 4116
+MD5 5315c0b44961bb44618d1a789d8b1773 ksmiletris-3.4.2.ebuild 545
+MD5 936d28cd05c62cb3912f4f43e7514aa3 ksmiletris-3.4.3.ebuild 544
+MD5 dcc2d5d11bf3f6163adac57366f21503 ksmiletris-3.5.0.ebuild 496
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksmiletris-3.4.3 68
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksmiletris-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksmiletris-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksmiletris-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-ksmiletris-3.5.0 69
-MD5 11d0b674082f3d81df93d6f11162c5e5 ksmiletris-3.4.1.ebuild 532
-MD5 5315c0b44961bb44618d1a789d8b1773 ksmiletris-3.4.2.ebuild 545
-MD5 eb9ac38cd98102fb61a62eaafcca3200 ksmiletris-3.4.3.ebuild 541
-MD5 dcc2d5d11bf3f6163adac57366f21503 ksmiletris-3.5.0.ebuild 496
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQQfcsIHjyDViGQRAp45AJ9cTmygMkt/ViTKyWJm1PrypxlAXQCg3Ny8
-dWHWdZurXwh5LMhd/YBGtcU=
-=iPmZ
------END PGP SIGNATURE-----

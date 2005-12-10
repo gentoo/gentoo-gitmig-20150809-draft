@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba018d9098892f993d8e9ef3dc45b532 ChangeLog 3970
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ktuberling-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ktuberling-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ktuberling-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-ktuberling-3.5.0 69
+MD5 1c237a657a9b53323fa8331e52fa6963 ktuberling-3.5.0.ebuild 508
+MD5 7786d5fab805973c8e44ad9f00ea4c7a ktuberling-3.4.3.ebuild 556
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 8f1a30ce58c902792fcde888a094b8fe ChangeLog 4088
 MD5 47f3638d71a0d8fd8364dec6f2a54440 ktuberling-3.4.1.ebuild 544
 MD5 037fad6ac34aaaa59e760dd8d6772cd5 ktuberling-3.4.2.ebuild 557
-MD5 63f278fbd720c93258e868cb54824c4e ktuberling-3.4.3.ebuild 553
-MD5 1c237a657a9b53323fa8331e52fa6963 ktuberling-3.5.0.ebuild 508
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQRHcsIHjyDViGQRAqHwAJ99b/aK7mljeEtmlCXkI750tfG/+gCgwnqc
-7qWUaOMGspJsvGxGfpsqqzQ=
-=+U4D
------END PGP SIGNATURE-----
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ktuberling-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ktuberling-3.4.2 288
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-ktuberling-3.5.0 69
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ktuberling-3.4.3 68

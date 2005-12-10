@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 872a7929601aa962351db76b211b1ec6 ChangeLog 3887
-MD5 df82b50ea4c41d84ded31c451780e808 atlantik-3.4.1.ebuild 541
 MD5 96da51483e0560e695ee447811cca8d9 atlantik-3.4.2.ebuild 554
-MD5 4069c24e074b8e30759e5b5630078266 atlantik-3.4.3.ebuild 550
-MD5 6efc3cbebce3d557b231658fb3abc65d atlantik-3.5.0.ebuild 503
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-atlantik-3.4.1 212
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-atlantik-3.4.2 288
-MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-atlantik-3.4.3 68
-MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-atlantik-3.5.0 69
+MD5 df82b50ea4c41d84ded31c451780e808 atlantik-3.4.1.ebuild 541
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmQDKcsIHjyDViGQRAv4gAJ9tRTYed2dhPNNK37Ux0/OZZ4ifdACeNhMp
-eyIbhk/A51Duc8H0Eo4ZYvI=
-=lNdL
------END PGP SIGNATURE-----
+MD5 042c96d6730c4e602589ad25910a8da2 ChangeLog 4003
+MD5 3bacea6d50ae6190a5e2b54f11c8d8af atlantik-3.4.3.ebuild 553
+MD5 6efc3cbebce3d557b231658fb3abc65d atlantik-3.5.0.ebuild 503
+MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-atlantik-3.5.0 69
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-atlantik-3.4.3 68
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-atlantik-3.4.2 288
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-atlantik-3.4.1 212
