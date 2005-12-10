@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a1557f7e941999048fc23ebc1306fb21 ChangeLog 17965
+MD5 00e5d82dd484b4ad1bd36338cc5b9ad3 kdeartwork-3.3.2.ebuild 833
+MD5 609810e344b61c992362844a99e0fc3e kdeartwork-3.4.3.ebuild 931
+MD5 5c8f4293876c1b162c00e153f2131dca kdeartwork-3.4.2.ebuild 1110
+MD5 e35b31c29a9467d7afd6564eeae51dd0 kdeartwork-3.4.1.ebuild 773
 MD5 38503fdfb59d959428014e98093ba2ee kdeartwork-3.5.0.ebuild 628
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 5c8f4293876c1b162c00e153f2131dca kdeartwork-3.4.2.ebuild 1110
-MD5 5d0dfdc0cfaf099390922596ca880de9 ChangeLog 17860
-MD5 e35b31c29a9467d7afd6564eeae51dd0 kdeartwork-3.4.1.ebuild 773
-MD5 a60e0f7260155afad8967935824fed6f kdeartwork-3.4.3.ebuild 936
-MD5 00e5d82dd484b4ad1bd36338cc5b9ad3 kdeartwork-3.3.2.ebuild 833
 MD5 789091c90eea0d565e886b92589f1119 files/kdeartwork-3.4.3-kfiresaver.patch 765
+MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-3.4.3 71
+MD5 a78e3dcfd0504ff7a053ec4c918c845f files/kdeartwork-3.3.2-gl-kdesavers.patch 711
 MD5 48916b43a9686c5c004bb311c8acc1c6 files/digest-kdeartwork-3.4.1 71
+MD5 fe55c64ff5050b92d175b2114c2d1667 files/kdeartwork-3.4.1-configure.patch 815
+MD5 45fe881cc7f39f2d70b8b4ccc61cf707 files/kdeartwork-3.4.3-configure.patch 5729
 MD5 b63dbb6cdbc61bdd0f73baace77284a1 files/digest-kdeartwork-3.4.2 71
+MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-3.5.0 71
 MD5 a51b6bfc735f8cec40cd4481a289309d files/kdeartwork-3.4-configure.patch 7591
 MD5 976327b55d73654f03a7c4545f59d516 files/digest-kdeartwork-3.3.2 71
-MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-3.4.3 71
-MD5 fe55c64ff5050b92d175b2114c2d1667 files/kdeartwork-3.4.1-configure.patch 815
-MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-3.5.0 71
-MD5 a78e3dcfd0504ff7a053ec4c918c845f files/kdeartwork-3.3.2-gl-kdesavers.patch 711
-MD5 45fe881cc7f39f2d70b8b4ccc61cf707 files/kdeartwork-3.4.3-configure.patch 5729
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmj1yFdQwWVoAgN4RAlioAJ9lsabGCaRzI5yAa4A7IFI6LTuJoQCgrpQ5
-Ixb7qopscKHJEiRYClv4Bvs=
-=DXBl
------END PGP SIGNATURE-----
