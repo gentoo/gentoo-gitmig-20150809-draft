@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f3df79f3b7c1aa3b026ef15e4e645b09 ChangeLog 4209
 MD5 564783821baa838a6cf1ae36f0567cbb kappfinder-3.5.0.ebuild 527
 MD5 8b8391d7802c75421cebc42ff814a926 kappfinder-3.4.1.ebuild 526
@@ -8,3 +11,10 @@ MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kappfinder-3.4.3 68
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kappfinder-3.4.2 287
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kappfinder-3.4.1 212
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kappfinder-3.5.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmzbjugEuf3OQ0akRAqGfAJ9hzH4l+k4wS+QkZzAVy/3Td8lU+gCeLWC/
+GcJy+eUKS8jOvp0H4KWcQPs=
+=P/zM
+-----END PGP SIGNATURE-----

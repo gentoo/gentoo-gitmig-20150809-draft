@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a53f70d45ae119ab9965de8a13f1b51d ChangeLog 4181
 MD5 1b2c24e119b3cc70ecbef9e83891fd0e knetattach-3.4.2.ebuild 400
 MD5 d2fcb084c936e477780334dec393133d knetattach-3.4.3.ebuild 394
@@ -8,3 +11,10 @@ MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-knetattach-3.4.2 287
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-knetattach-3.4.1 212
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-knetattach-3.4.3 68
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-knetattach-3.5.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmzfcugEuf3OQ0akRArnwAJ42B3WnPFy7MS+X0By2IoX8zckciACggX/6
+L0gvVvmzFNxlISgqhFqxEts=
+=mAB1
+-----END PGP SIGNATURE-----
