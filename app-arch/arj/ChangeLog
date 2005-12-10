@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.22 2005/12/09 15:31:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.23 2005/12/10 00:20:20 herbs Exp $
+
+  10 Dec 2005; Herbie Hopkins <herbs@gentoo.org> arj-3.10.22-r1.ebuild:
+  Stable on amd64 wrt bug #84142.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> arj-3.10.22-r1.ebuild:
   Marked ppc stable for bug #84142.
