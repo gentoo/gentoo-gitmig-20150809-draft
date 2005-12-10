@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-ethiopic
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.4 2005/12/07 21:48:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.5 2005/12/10 21:59:10 spyderous Exp $
+
+  10 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  font-misc-ethiopic-0.99.2.ebuild:
+  Remove mkfontscale and mkfontdir deps; moved to x-modular.eclass.
 
   07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -font-misc-ethiopic-0.99.1.ebuild:

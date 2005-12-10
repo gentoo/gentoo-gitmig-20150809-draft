@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.15 2005/12/07 21:49:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.16 2005/12/10 21:59:57 spyderous Exp $
+
+  10 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  font-misc-misc-0.99.2.ebuild:
+  Remove mkfontscale and mkfontdir deps; moved to x-modular.eclass.
 
   07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -font-misc-misc-0.99.0.ebuild, -font-misc-misc-0.99.1.ebuild:
