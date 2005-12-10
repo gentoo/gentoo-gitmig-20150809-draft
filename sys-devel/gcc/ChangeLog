@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.473 2005/12/09 20:40:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.474 2005/12/10 05:21:56 halcy0n Exp $
+
+*gcc-4.1.0_beta20051209 (10 Dec 2005)
+
+  10 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.1.0_beta20051202.ebuild, +gcc-4.1.0_beta20051209.ebuild:
+  Bump gcc-4.1 snapshot
 
   09 Dec 2005; Joshua Kinard <kumba@gentoo.org> gcc-3.4.4-r1.ebuild,
   gcc-3.4.5.ebuild:
