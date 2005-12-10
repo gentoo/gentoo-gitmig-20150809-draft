@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.4 2005/10/31 11:10:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.5 2005/12/10 13:08:06 zzam Exp $
 
 inherit font multilib
 
@@ -88,10 +88,7 @@ RDEPEND="virtual/x11
 	alsa? ( >=media-libs/alsa-lib-0.9 )"
 
 DEPEND="${RDEPEND}
-	dvb? ( ||(
-		>=sys-kernel/linux-headers-2.6.11-r2
-		media-tv/linuxtv-dvb
-	) )"
+	dvb? ( media-tv/linuxtv-dvb-headers )"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"
