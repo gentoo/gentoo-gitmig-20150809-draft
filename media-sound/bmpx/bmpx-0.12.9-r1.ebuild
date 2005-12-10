@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r1.ebuild,v 1.2 2005/12/07 12:30:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r1.ebuild,v 1.3 2005/12/10 20:37:37 azarah Exp $
 
 inherit gnome2 autotools eutils
 
@@ -71,6 +71,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-libtoolize-static-libs.patch
 	epatch ${FILESDIR}/${P}-old-config-crash.patch
 	epatch ${FILESDIR}/${P}-no-config.patch
+
+	AT_M4DIR="-I m4" \
 	eautoreconf
 }
 
