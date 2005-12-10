@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.37 2005/12/10 07:47:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.38 2005/12/10 20:58:06 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  kdepim-meta-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> kdepim-meta-3.4.3.ebuild:
   Marked x86 stable for bug #112842.

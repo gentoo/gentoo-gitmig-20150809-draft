@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.34 2005/12/10 05:27:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.35 2005/12/10 20:45:54 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org knode-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> knode-3.4.3.ebuild:
   Marked x86 stable for bug #112842.

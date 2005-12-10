@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-filesharing
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.30 2005/12/10 06:59:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.31 2005/12/10 20:20:57 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  kdenetwork-filesharing-3.4.2.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   kdenetwork-filesharing-3.4.2.ebuild:

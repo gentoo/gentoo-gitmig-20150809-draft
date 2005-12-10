@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 01b4434c3b10b1e269687de86057f866 ksim-3.4.3.ebuild 529
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 80f23f16d725ca25353c8cb07522679f ChangeLog 4150
-MD5 5b77b9bf0a913ec870c7b924b788f4c8 ksim-3.4.1.ebuild 430
-MD5 57a41a354a3d2ba85011a9481ff1f947 ksim-3.5.0.ebuild 464
+MD5 24efe9d1fbd058c314b707a1a877df23 ChangeLog 4237
 MD5 e1b7bc8b8f596aa3b2da3dc9e2045627 ksim-3.4.2.ebuild 530
-MD5 8716488f71c42fb9ee3fbd1b310fc91e files/configure-fix-kdeutils-snmp.patch 1445
-MD5 062bb93297f13fe72d1e78a55a449788 files/digest-ksim-3.4.2 288
+MD5 5b77b9bf0a913ec870c7b924b788f4c8 ksim-3.4.1.ebuild 430
+MD5 d8e479d90ccbea0bcee43db02bb5c408 ksim-3.4.3.ebuild 524
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 57a41a354a3d2ba85011a9481ff1f947 ksim-3.5.0.ebuild 464
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-ksim-3.4.1 212
-MD5 61427700c31d5d6a145005b5945e00e5 files/digest-ksim-3.5.0 68
+MD5 8716488f71c42fb9ee3fbd1b310fc91e files/configure-fix-kdeutils-snmp.patch 1445
 MD5 7693585dde083d1c2cc205db10692163 files/digest-ksim-3.4.3 68
+MD5 062bb93297f13fe72d1e78a55a449788 files/digest-ksim-3.4.2 288
+MD5 61427700c31d5d6a145005b5945e00e5 files/digest-ksim-3.5.0 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmoE5FdQwWVoAgN4RAr7hAJ9sFhO62sKncLz17hNbLQRy0+IxPwCgybMI
-vEofv+thbSpwGeCIQFseQhw=
-=9S1b
+iD8DBQFDm0LkugEuf3OQ0akRAt3PAJ9C6tnuRLA4M3SBKmWq2pWOMjdlNACgo17z
+09avFH8T1JA04buLZ4Nv0Ck=
+=nVrG
 -----END PGP SIGNATURE-----

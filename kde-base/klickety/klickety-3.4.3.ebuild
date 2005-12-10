@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/klickety-3.4.3.ebuild,v 1.6 2005/12/10 04:57:23 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/klickety-3.4.3.ebuild,v 1.7 2005/12/10 21:28:58 kloeri Exp $
 KMNAME=kdegames
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE: Klickety is an adaptation of the "clickomania" game"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdegames)
 $(deprange $PV $MAXKDEVER kde-base/libksirtet)"
