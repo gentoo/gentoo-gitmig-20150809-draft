@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.1 2005/11/12 13:11:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.2 2005/12/10 05:04:24 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,7 +24,8 @@ src_unpack() {
 
 src_compile() {
 	use static && appened-ldflags -static
-	emake CC="$(tc-getCC)" CCFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake purge
+	emake CC="$(tc-getCC)" CCFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" vconfig || die
 }
 
 src_install() {

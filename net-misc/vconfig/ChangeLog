@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.15 2005/11/12 13:11:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.16 2005/12/10 05:04:24 solar Exp $
+
+  10 Dec 2005; <solar@gentoo.org> vconfig-1.9.ebuild:
+  - force a purge of vconfig first so we dont end up with pre compiled binary
 
 *vconfig-1.9 (12 Nov 2005)
 
