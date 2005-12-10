@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.141 2005/10/22 13:22:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.142 2005/12/10 02:41:08 vapier Exp $
+
+  10 Dec 2005; Mike Frysinger <vapier@gentoo.org> files/sshd.rc6:
+  Update init.d script to allow for multiple instances by Marius Mauch #114996.
 
   22 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> openssh-4.2_p1.ebuild:
   Stable on sh for #109678.

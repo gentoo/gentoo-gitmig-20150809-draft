@@ -1,20 +1,22 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.16 2005/08/21 19:09:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.17 2005/12/10 02:41:08 vapier Exp $
 
 depend() {
 	use logger dns
 	need net
 }
 
+[[ -z ${SSH_CONFDIR} ]] && SSH_CONFDIR="/etc/ssh"
+
 checkconfig() {
-	if [ ! -d /var/empty ] ; then
+	if [[ ! -d /var/empty ]] ; then
 		mkdir -p /var/empty || return 1
 	fi
 
-	if [ ! -e /etc/ssh/sshd_config ] ; then
-		eerror "You need an /etc/ssh/sshd_config file to run sshd"
+	if [[ ! -e ${SSH_CONFDIR}/sshd_config ]] ; then
+		eerror "You need an ${SSH_CONFDIR}/sshd_config file to run sshd"
 		eerror "There is a sample file in  /usr/share/doc/openssh"
 		return 1
 	fi
@@ -25,30 +27,30 @@ checkconfig() {
 }
 
 gen_keys() {
-	if [ ! -e /etc/ssh/ssh_host_key ] ; then
+	if [[ ! -e ${SSH_CONFDIR}/ssh_host_key ]] ; then
 		einfo "Generating Hostkey..."
-		/usr/bin/ssh-keygen -t rsa1 -b 1024 -f /etc/ssh/ssh_host_key -N '' || return 1
+		/usr/bin/ssh-keygen -t rsa1 -b 1024 -f ${SSH_CONFDIR}/ssh_host_key -N '' || return 1
 	fi
-	if [ ! -e /etc/ssh/ssh_host_dsa_key ] ; then
+	if [[ ! -e ${SSH_CONFDIR}/ssh_host_dsa_key ]] ; then
 		einfo "Generating DSA-Hostkey..."
-		/usr/bin/ssh-keygen -d -f /etc/ssh/ssh_host_dsa_key -N '' || return 1
+		/usr/bin/ssh-keygen -d -f ${SSH_CONFDIR}/ssh_host_dsa_key -N '' || return 1
 	fi
-	if [ ! -e /etc/ssh/ssh_host_rsa_key ] ; then
+	if [[ ! -e ${SSH_CONFDIR}/ssh_host_rsa_key ]] ; then
 		einfo "Generating RSA-Hostkey..."
-		/usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N '' || return 1
+		/usr/bin/ssh-keygen -t rsa -f ${SSH_CONFDIR}/ssh_host_rsa_key -N '' || return 1
 	fi
 	return 0
 }
 
 start() {
 	checkconfig || return 1
-	ebegin "Starting sshd"
-	/usr/sbin/sshd
+	ebegin "Starting ${SVCNAME}"
+	/usr/sbin/sshd -o PidFile=/var/run/${SVCNAME}.pid ${SSHD_OPTS}
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping sshd"
-	start-stop-daemon --stop --quiet --pidfile /var/run/sshd.pid
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon --stop --quiet --pidfile /var/run/${SVCNAME}.pid
 	eend $?
 }
