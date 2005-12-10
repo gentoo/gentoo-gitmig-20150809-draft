@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8c10440d756e822e30f0fbf6af4f1c79 ChangeLog 1117
 MD5 09f57f010bc9572e95566ab97181d8fc files/digest-squirm-1.23 59
 MD5 72e4905c488cbc93ddc5cedf48876077 metadata.xml 220
 MD5 a7f4687d97907ac6c1eb3773374b0a1e squirm-1.23.ebuild 996
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmt37V3J2n04EauwRAjENAJ0acBsMU12jQ03zZ1PPjH1Lh0W8JACfeZtC
+BcRivhxFQgt2JaXrqrkxfaI=
+=jYt/
+-----END PGP SIGNATURE-----
