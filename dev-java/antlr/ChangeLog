@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.29 2005/12/10 18:18:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.30 2005/12/10 18:22:15 compnerd Exp $
+
+  10 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org> -antlr-2.7.5.ebuild:
+  Pruning old 2.7.5 ebuild
 
 *antlr-2.7.5-r1 (10 Dec 2005)
 
