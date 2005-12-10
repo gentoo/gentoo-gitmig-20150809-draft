@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.164 2005/12/06 06:34:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.165 2005/12/10 02:56:03 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org> kdeedu-3.4.3-r10.ebuild:
+  Marked x86 stable for bug #112842.
 
   06 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdeedu-3.4.3-r10.ebuild:
   Marked ppc stable for bug #112842.
