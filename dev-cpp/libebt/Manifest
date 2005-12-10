@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 24ef1b3f539235fd0b1840472d238ba3 ChangeLog 815
-MD5 4d2a12dae8034b77b03aeadb458749fb files/digest-libebt-0.8.2 65
-MD5 33ade160899e118891f9bf551561985b files/digest-libebt-1.0.0 65
+MD5 1305acdef027c19681be86939e891231 ChangeLog 925
 MD5 786cc3956463cc0e30923e345f715881 files/digest-libebt-1.1.0 65
 MD5 2ab7b111ff831610b3bbf2573349439b files/digest-libebt-1.2.0 65
-MD5 183cd478ae666881e85b9db4f8192d8a libebt-0.8.2.ebuild 804
-MD5 828320126b0e5e2ea54e59c8dd745e53 libebt-1.0.0.ebuild 828
 MD5 1266ac70f6598fbb24bf2a26b7007a7b libebt-1.1.0.ebuild 828
 MD5 9b4e9a3a3e272824ea87e24c09dd4506 libebt-1.2.0.ebuild 828
 MD5 49b5ca6a324b8f95eba6721c1e5e7793 metadata.xml 582
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmjVhLLFUmVNQ7rkRAssIAJ4w8/UTdB4AAYzg/Vnah5RAx/EFXwCfdvoN
-dlu+TGIpoMkGs6KGVjLwOl8=
-=px0M
+iD8DBQFDmjbZLLFUmVNQ7rkRAubVAJ4uNuhs3rww2aRZVpOZVflW+nbsewCdGUrF
+IIko/TwRSwHkeLx0GeUzRSc=
+=YHCA
 -----END PGP SIGNATURE-----
