@@ -1,4 +1,4 @@
-MD5 632a4b8099517d916328e053a302a655 ChangeLog 7652
+MD5 b70be44d049fc2c43d1cfff9260b143d ChangeLog 7871
 MD5 ead53e30977f8d368de26fae5a67ad32 courier-authlib-0.53.ebuild 5903
 MD5 616ebeb89647092c49a7c841274a5c6a courier-authlib-0.54.20050224.ebuild 6027
 MD5 f8e2293e9807a0b229675d9a92f9cffa courier-authlib-0.55.20050320.ebuild 6099
@@ -8,9 +8,10 @@ MD5 8bbd72f9613e3a82351e915aabbac7c8 courier-authlib-0.57-r1.ebuild 5970
 MD5 d0d8527656af2f96f526b5163a484e93 courier-authlib-0.57-r2.ebuild 6011
 MD5 2f26f5dd7b2847b4d13a0e7dd5917062 courier-authlib-0.57.20051116.ebuild 6142
 MD5 c02fd230688d2f9a2d0f4e8b45a3898e courier-authlib-0.57.ebuild 6089
+MD5 12f1f202d7477040459834dd644ddb97 courier-authlib-0.58.ebuild 6093
 MD5 452ec8a16d520bb91316b7dc1390b325 files/CVE-2005-3532.patch 456
 MD5 6930587c358320ecb1043761d7ff97f1 files/configure-db4.patch 2544
-MD5 380c06d7560d80b3fcc49f611ec57391 files/courier-authlib-initd 1049
+MD5 ac879be5878ebe9b1eb18655b3538bf8 files/courier-authlib-initd 1095
 MD5 73d603079009e02b50f27fcaaf0ee3c0 files/digest-courier-authlib-0.53 74
 MD5 7742690b928fbdc37bd9011257f78abd files/digest-courier-authlib-0.54.20050224 83
 MD5 ed30e0c7061ff7899634145ce73d7b92 files/digest-courier-authlib-0.55 74
@@ -20,4 +21,5 @@ MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57 74
 MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r1 74
 MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r2 74
 MD5 80be0b258e21f2d833bde29d4c478edb files/digest-courier-authlib-0.57.20051116 83
+MD5 d1a65b1f6d854f606301377ffeba68c1 files/digest-courier-authlib-0.58 74
 MD5 1639b87658242c2406f7f7f8deda7388 metadata.xml 334

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/files/courier-authlib-initd,v 1.5 2005/08/24 08:37:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/files/courier-authlib-initd,v 1.6 2005/12/10 04:48:16 swtaylor Exp $
 depend() {
 	need net
 	provide authdaemond
@@ -20,6 +20,7 @@ setauth() {
 	AUTHDAEMOND="authdaemond"
 	pidfile="/var/run/authdaemon.pid"
 	logger="/usr/sbin/courierlogger"
+	export DEBUG_LOGIN DEFAULTOPTIONS LOGGEROPTS
 }
 
 start() {
