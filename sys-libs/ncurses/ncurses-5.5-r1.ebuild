@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r1.ebuild,v 1.2 2005/11/10 21:28:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r1.ebuild,v 1.3 2005/12/10 02:02:59 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -30,6 +30,9 @@ src_unpack() {
 
 src_compile() {
 	tc-export BUILD_CC
+
+	# Protect the user from themselves #115036
+	unset TERMINFO
 
 	# From version 5.3, ncurses also build c++ bindings, and as
 	# we do not have a c++ compiler during bootstrap, disable

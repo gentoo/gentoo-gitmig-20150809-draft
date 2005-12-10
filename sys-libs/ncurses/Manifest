@@ -14,14 +14,14 @@ MD5 44e644063b6a69d58662e363af118df8 files/ncurses-5.5-gfbsd.patch 3049
 MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a885c047e0ef76d733b76f158c480f2a ncurses-5.4-r5.ebuild 6147
-MD5 d303a209fc62dfcb17c00343f1fc6dcb ncurses-5.4-r6.ebuild 5385
+MD5 b5d6d9fcc28b4190bbb3b53f3ee1ba97 ncurses-5.4-r6.ebuild 5446
 MD5 45af8f6f6c26f746944e5e170f4ce537 ncurses-5.4.20050319.ebuild 5741
-MD5 c3076137c2592607280360168b438d9c ncurses-5.5-r1.ebuild 5294
+MD5 22137c4a0a5105f1c7a3c80d123e6fa0 ncurses-5.5-r1.ebuild 5352
 MD5 05ffcf86aeb3d3f5c9a5bfd5a72fb2d2 ncurses-5.5.ebuild 5253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDc7uSAiZjviIA2XgRArTTAJ4kW/AC8JZd8ipPd7vmDPGt7/TzZACfffCx
-hC7q9GaBNetODmp05B0CgWw=
-=dbPR
+iD8DBQFDmjgQgIKl8Uu19MoRAjetAJ9XVghaPHMDD52PF94einaW8vZciwCfefOT
+yDfGJnRPOQZ5ZPzsQ2KfmLY=
+=fwcf
 -----END PGP SIGNATURE-----
