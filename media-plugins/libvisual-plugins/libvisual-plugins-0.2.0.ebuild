@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.4 2005/12/10 16:40:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.5 2005/12/10 16:50:57 flameeyes Exp $
 
 inherit eutils
 
@@ -34,7 +34,8 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# stupid configure assumes $x_libaries cannot be empty
-	epatch ${FILESDIR}/${P}-configure.patch
+	epatch "${FILESDIR}/${P}-configure.patch"
+	epatch "${FILESDIR}/${P}-mkdirhier.patch"
 
 	econf $(use_enable debug) || die
 	emake || die
