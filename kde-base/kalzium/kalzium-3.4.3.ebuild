@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.4.3.ebuild,v 1.6 2005/12/09 05:06:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.4.3.ebuild,v 1.7 2005/12/10 05:53:02 chriswhite Exp $
 KMNAME=kdeedu
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE: periodic table of the elements"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdeedu-3.3.1"
 DEPEND="
