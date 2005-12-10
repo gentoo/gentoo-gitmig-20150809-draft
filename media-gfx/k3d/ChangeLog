@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.18 2005/11/03 10:45:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.19 2005/12/10 19:41:35 vanquirius Exp $
+
+*k3d-0.5.0.34 (10 Dec 2005)
+
+  10 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> +k3d-0.5.0.34.ebuild:
+  0.5.0.34 version bump for bug 114152. Thanks to Moritz Kaufmann <physaro at
+  gmail dot com>.
 
   03 Nov 2005; Luca Barbato <lu_zero@gentoo.org> k3d-0.5.0.33.ebuild:
   Made ngui the default, fixed the js subsystem, thanks to Patrizio Bassi
