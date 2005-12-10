@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 5c168483dbacdedd598660b8fdfbf27a ChangeLog 22353
 MD5 15e26e1303761aa1b814d1d46f930d74 db-1.85-r1.ebuild 1435
 MD5 a0435de0fd1dacc747f315502eda91bc db-1.85-r2.ebuild 1467
-MD5 07cb0fa276e96486ae19d33af10fe82f db-1.85-r3.ebuild 1269
+MD5 f63d1e3bb30c46a75c47bd3460a1703a db-1.85-r3.ebuild 1221
 MD5 73ccb0c04661223f8a54651fa23d1a5c db-3.2.9-r10.ebuild 4299
 MD5 3095611cc9de038f5dab190381574a17 db-3.2.9-r7.ebuild 4416
 MD5 6f9b8f054235426e239efa7ad5269ab3 db-4.0.14-r2.ebuild 2227
@@ -33,7 +33,7 @@ MD5 72688c24d0217c7e214b816417d8ef97 files/db-4.3.27-fix-dep-link.patch 1179
 MD5 ecd81fa9868ec49c61306444144d44a9 files/db.1.85.patch 55584
 MD5 3057fcc117c33a02bd4c092586a58e49 files/digest-db-1.85-r1 59
 MD5 69bde9765bf0a2d6c55a253eb0e53190 files/digest-db-1.85-r2 120
-MD5 964290ad12dc08fdbaa640a38faff81e files/digest-db-1.85-r3 123
+MD5 8e6bb983290a04b011ca888f80a3a0e2 files/digest-db-1.85-r3 125
 MD5 44c6041ae9527bfa8a4ff4cec7cf4a9a files/digest-db-3.2.9-r10 61
 MD5 44c6041ae9527bfa8a4ff4cec7cf4a9a files/digest-db-3.2.9-r7 61
 MD5 068fc523df1ee6f36b5de8516ab7739f files/digest-db-4.0.14-r2 62
@@ -50,7 +50,7 @@ MD5 e1753ef0eb3e9614fadff321ecd1b082 metadata.xml 1460
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl7hKCRZPokWLroQRAqpzAKDF1Ix86lo2dSSUOHarVl30eZLUUACg1sSW
-3o9tvXNTqSSZTV7cTQMaeHg=
-=x+Oe
+iD8DBQFDmu1ogIKl8Uu19MoRAjokAJ9SwZzdVSxMBTh8QjbqeYMc6cibEACfQ7bc
+w7deaEkgn9sMaS+hBbbUGK0=
+=Evyo
 -----END PGP SIGNATURE-----

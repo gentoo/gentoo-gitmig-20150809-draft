@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r3.ebuild,v 1.2 2005/12/02 07:22:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r3.ebuild,v 1.3 2005/12/10 14:56:41 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="old berk db kept around for really old packages"
 HOMEPAGE="http://www.sleepycat.com/"
 SRC_URI="ftp://ftp.sleepycat.com/releases/db.${PV}.tar.gz
-	mirror://gentoo/${PF}.patch.bz2"
+	mirror://gentoo/${PF}.1.patch.bz2"
 
 LICENSE="DB"
 SLOT="1"
@@ -21,11 +21,10 @@ S=${WORKDIR}/db.${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/${PF}.patch
+	epatch "${WORKDIR}"/${PF}.1.patch
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
 	sed -i \
 		-e "s:@GENTOO_LIBDIR@:$(get_libdir):" \
-		-e '/$(INSTALL)/s: -m 0644 -d : -m 0755 -d :g' \
 		PORT/linux/Makefile || die
 }
 
