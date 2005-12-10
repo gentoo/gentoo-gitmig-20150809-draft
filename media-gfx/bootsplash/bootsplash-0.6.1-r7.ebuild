@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.6 2005/06/05 12:04:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.7 2005/12/10 16:58:19 spock Exp $
 
 inherit eutils
 
@@ -20,7 +20,13 @@ DEPEND=">=media-libs/freetype-2
 	media-libs/lcms
 	!media-gfx/splashutils"
 
-PATCHS="${FILESDIR}/0.6.1-r7-default_theme.patch"
+PATCHES="${FILESDIR}/0.6.1-r7-default_theme.patch"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/bootsplash-gcc4-fix.patch
+}
 
 src_compile() {
 	# compile utils
@@ -37,7 +43,7 @@ src_compile() {
 
 src_install() {
 	# applying patchs
-	epatch ${PATCHS} || die "error applying patch(s) [${PATCHS}]"
+	epatch ${PATCHES} || die "error applying patch(es) [${PATCHES}]"
 	# Splash utilities
 	exeinto /sbin
 	doexe utils/fbmngplay/fbmngplay{,.static}
