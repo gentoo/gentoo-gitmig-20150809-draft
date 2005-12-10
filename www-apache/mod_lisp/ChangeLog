@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_lisp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/ChangeLog,v 1.11 2005/11/01 19:25:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/ChangeLog,v 1.12 2005/12/10 13:05:12 blubb Exp $
+
+  10 Dec 2005; Simon Stelling <blubb@gentoo.org> mod_lisp-2.42.ebuild:
+  stable on amd64
 
   01 Nov 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   mod_lisp-2.42.ebuild:

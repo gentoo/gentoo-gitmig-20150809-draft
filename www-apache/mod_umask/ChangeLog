@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_umask
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_umask/ChangeLog,v 1.3 2005/09/18 19:41:33 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_umask/ChangeLog,v 1.4 2005/12/10 13:06:46 blubb Exp $
+
+  10 Dec 2005; Simon Stelling <blubb@gentoo.org> mod_umask-0.1.0.ebuild:
+  stable on amd64
 
   18 Sep 2005; Michael Stewart <vericgar@gentoo.org> mod_umask-0.1.0.ebuild:
   Stable on x86
