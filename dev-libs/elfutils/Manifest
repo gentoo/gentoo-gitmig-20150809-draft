@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84d9799adb9db7e84c75e444c2cb4936 ChangeLog 9205
-MD5 6b57f561053bdfef0498984807f91f0d elfutils-0.108-r1.ebuild 1781
-MD5 a1909bab204ddcd666977c80a5827893 elfutils-0.108.ebuild 1764
-MD5 652be49e597b2cbe67c89e1a628a7851 elfutils-0.118.ebuild 1689
-MD5 12294cbe7395c8366308d2a424d1d7ae files/digest-elfutils-0.108 143
-MD5 551147fb82ad5c4c804d8a88f6f997c0 files/digest-elfutils-0.108-r1 145
+MD5 f75478cf06f0c1c6bdb384be0a8524a8 ChangeLog 9369
+MD5 0ffad2235361cffdfff3684c03ac028a elfutils-0.108-r1.ebuild 1778
+MD5 b2fd70caba6530bf2fe7b375e0023073 elfutils-0.108.ebuild 1761
+MD5 f827088ae834ebb20d11efe5bea91c10 elfutils-0.118.ebuild 1686
+MD5 648c7e7b8f19b21266e556cc6979c0a6 files/digest-elfutils-0.108 143
+MD5 e9fcbbccbeaf0d6f3fdfb27f9563e824 files/digest-elfutils-0.108-r1 145
 MD5 d27a5faa3886979a3b6592519692fe22 files/digest-elfutils-0.118 145
 MD5 1e6460efdb609828aa57b5874813972a files/elfutils-0.101-bswap.patch 849
 MD5 41c5834ecf3d28e43b7fbe3b927e582a files/elfutils-0.108-portability.patch 18453
 MD5 a5bda0a1599fd2232fb0d2cf5f3269a7 files/elfutils-0.108-robustify2.patch 12832
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDmsDs1ZcsMnZjRyIRAsQvAJ9yrSdmYd/VtJIA9OW1flvK8rJJBQCfW2Uo
-fFjPQMSF5jcEBQxvv824kr4=
-=oEbg
+iQCVAwUBQ5rdaJ4WFLgrx1GWAQIZqwQAlYywNqDFSYCDmuk7RioDqMaB8bbJnAif
+ctZ0KZTFjS7nJzTLIB0wr3s4hTRztIxLBUHx6CiH2Xq2ZoMXWKHp07FuXuXZo3ZH
+pH0PLwPtOAlLQC/PVfNrc0/CCGPGYXLAs1m/kP+zjiYymP3UjSe2VKR5jS1n8CNQ
+NgBcrERCJJQ=
+=NohZ
 -----END PGP SIGNATURE-----
