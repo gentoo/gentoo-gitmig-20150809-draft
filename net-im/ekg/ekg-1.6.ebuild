@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc1-r1.ebuild,v 1.3 2005/07/14 20:07:27 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6.ebuild,v 1.1 2005/12/10 16:01:51 spock Exp $
 
 inherit eutils
 
@@ -12,11 +12,12 @@ SRC_URI="http://dev.null.pl/ekg/${P/_/}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 S="${WORKDIR}/${P/_/}"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
+DEPEND="net-libs/libgadu
+	ssl? ( >=dev-libs/openssl-0.9.6 )
 	ncurses? ( sys-libs/ncurses )
 	readline? ( sys-libs/readline )
 	zlib? ( sys-libs/zlib )
@@ -26,11 +27,12 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/ekg-1.6_rc1-fpic.patch
+	epatch ${FILESDIR}/${PN}-1.6_rc3-libgadu.patch
+	autoreconf
 }
 
 src_compile() {
-	local myconf="--enable-ioctld --enable-shared --enable-dynamic"
+	local myconf="--enable-ioctld --disable-static --enable-dynamic"
 	if use ncurses; then
 		myconf="$myconf --enable-force-ncurses"
 	else
@@ -48,6 +50,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die
 	dodoc docs/* docs/api/*
 }
