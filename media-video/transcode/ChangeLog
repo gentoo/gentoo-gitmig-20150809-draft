@@ -1,6 +1,17 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.121 2005/11/11 00:33:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.122 2005/12/10 16:06:44 flameeyes Exp $
+
+*transcode-1.0.2-r1 (10 Dec 2005)
+
+  10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/transcode-1.0.2-bigdir.patch, +files/transcode-1.0.2-lzo2.patch,
+  -transcode-1.0.1.ebuild, -transcode-1.0.2.ebuild,
+  +transcode-1.0.2-r1.ebuild:
+  Revision bump and removed previous 1.x versions. Close bug #110997 (modular
+  x support, it's modular friendly saved ffmpeg that is still unfriendly), bug
+  #111290 (missing libxml2 dependency), bug #112995 (long path crashes), bug
+  #112382 (lzo-2 support).
 
 *transcode-1.0.2 (11 Nov 2005)
 

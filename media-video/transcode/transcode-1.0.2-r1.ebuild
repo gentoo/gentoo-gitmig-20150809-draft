@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.1.ebuild,v 1.4 2005/11/03 12:08:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.1 2005/12/10 16:06:44 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -13,21 +13,20 @@ SRC_URI="mirror://transcode/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="X 3dnow a52 altivec dv dvdread mp3 fame truetype \
-	gtk imagemagick jpeg lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime \
-	sdl sse sse2 theora v4l xvid xml2 ffmpeg"
+IUSE="X 3dnow a52 altivec dv dvdread mp3 fame truetype gtk imagemagick jpeg
+lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime sdl sse sse2 theora v4l
+xvid xml2 ffmpeg"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
 	dvdread? ( >=media-libs/libdvdread-0.9.0 )
 	xvid? ( >=media-libs/xvid-1.0.2 )
 	mjpeg? ( >=media-video/mjpegtools-1.6.2-r3 )
-	lzo? ( >=dev-libs/lzo-1.08 )
+	lzo? ( >=dev-libs/lzo-2 )
 	fame? ( >=media-libs/libfame-0.9.1 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6.0 )
 	media-libs/netpbm
 	media-libs/libexif
-	X? ( virtual/x11 )
 	mpeg? ( media-libs/libmpeg3 )
 	mp3? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
@@ -41,7 +40,33 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	pvm? ( >=sys-cluster/pvm-3.4 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r3 )
 	|| ( sys-libs/glibc dev-libs/libiconv )
-	>=media-libs/libmpeg2-0.4.0b"
+	>=media-libs/libmpeg2-0.4.0b
+	xml2? ( dev-libs/libxml2 )
+	X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXpm
+			x11-libs/libXt
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXaw
+			x11-libs/libXv )
+		virtual/x11 ) )
+"
+
+DEPEND="${RDEPEND}
+	v4l? ( >=sys-kernel/linux-headers-2.6.11 )
+	X? ( || ( ( x11-base/xorg-server
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-libs/libXaw
+			x11-libs/libXv
+			x11-proto/xproto
+			x11-proto/xextproto )
+		virtual/x11 ) )
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool"
 
 pkg_setup() {
 	if has_version x11-base/xorg-x11 && ! built_with_use x11-base/xorg-x11 xv; then
@@ -56,8 +81,11 @@ src_unpack() {
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		${S}/docs/Makefile.am ${S}/docs/html/Makefile.am
 
+	epatch "${FILESDIR}/${P}-bigdir.patch"
+	epatch "${FILESDIR}/${P}-lzo2.patch"
+
 	eautoreconf
-	elibtoolize	# fix invalid paths in .la files of plugins
+	elibtoolize
 }
 
 src_compile() {
@@ -117,6 +145,7 @@ src_compile() {
 		$(use_with X x) \
 		$(use_with ffmpeg libpostproc-builddir "${ROOT}/usr/$(get_libdir)") \
 		${myconf} \
+		--with-lzo-includes=/usr/include/lzo \
 		--disable-avifile \
 		|| die
 
