@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jgoodies-binding
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/ChangeLog,v 1.1 2005/12/10 07:28:18 compnerd Exp $
+
+*jgoodies-binding-1.0.3 (10 Dec 2005)
+
+  10 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/build-1.0.3.xml, +metadata.xml, +jgoodies-binding-1.0.3.ebuild:
+  Initial import.
+
