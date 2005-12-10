@@ -22,11 +22,11 @@ MD5 6da743132b9702be3b38b2a292bd7bfd netpbm-10.26.20.ebuild 2799
 MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
 MD5 4b1a6bc24bd0b85afb5756e7c1e218e8 netpbm-10.29-r1.ebuild 2937
 MD5 44a56191027bdda13f3bd51f336a971a netpbm-10.29.ebuild 2423
-MD5 2092aa189ce80d29430ab289932fbd53 netpbm-10.30-r1.ebuild 3047
+MD5 871fe32c6de3fe452760a1c90b2b0f4c netpbm-10.30-r1.ebuild 3047
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmZk4KRy60XGEcJIRAm2sAJ9+xVE6UyGwHsh1orvNaNFKMscEWQCgqN0t
-2GEOer0K1juT81XRUhlefQE=
-=chui
+iD8DBQFDmuxkgIKl8Uu19MoRAsiTAJ4rajAnsR2q8jurI90WuQrx+A11QACfZto7
+mhrC5+hRcxY42KVlTphdADg=
+=1Xks
 -----END PGP SIGNATURE-----
