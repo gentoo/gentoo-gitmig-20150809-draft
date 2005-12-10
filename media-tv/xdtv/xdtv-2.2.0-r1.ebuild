@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.5 2005/12/10 13:08:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.6 2005/12/10 15:07:05 flameeyes Exp $
 
 inherit font multilib
 
@@ -76,8 +76,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 
-RDEPEND="virtual/x11
-	zvbi? ( >=media-libs/zvbi-0.2.4 )
+RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
 	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
@@ -85,10 +84,28 @@ RDEPEND="virtual/x11
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
 	lirc? ( app-misc/lirc )
-	alsa? ( >=media-libs/alsa-lib-0.9 )"
+	alsa? ( >=media-libs/alsa-lib-0.9 )
+	|| ( ( x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXt
+		x11-libs/libICE
+		x11-libs/libXmu
+		x11-libs/libXxf86vm
+		x11-libs/libXxf86dga
+		x11-libs/libSM
+		x11-libs/libXaw
+		x11-libs/libXv )
+		virtual/x11 )
+	"
 
 DEPEND="${RDEPEND}
-	dvb? ( media-tv/linuxtv-dvb-headers )"
+	dvb? ( media-tv/linuxtv-dvb-headers )
+	|| ( ( x11-base/xorg-server
+		x11-proto/videoproto
+		x11-proto/xproto
+		x11-proto/xextproto )
+		virtual/x11 )"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"
