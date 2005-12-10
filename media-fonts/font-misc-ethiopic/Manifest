@@ -1,5 +1,5 @@
-MD5 f5af608043b26a854e6683abe2a99a03 ChangeLog 1871
+MD5 7ff0456017bd670645e85bf8d06d0d92 ChangeLog 2031
 MD5 a521918a042bcf0526224bff1fc4a978 files/correct-otffontdir-and-ttffontdir.patch 858
 MD5 fc869dce7ae6b03f06c97b4125450f1f files/digest-font-misc-ethiopic-0.99.2 78
-MD5 a9356738dcbf77758620e99456a79ea7 font-misc-ethiopic-0.99.2.ebuild 781
+MD5 975b69a17d6a3f7d142d6948e173c708 font-misc-ethiopic-0.99.2.ebuild 739
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
