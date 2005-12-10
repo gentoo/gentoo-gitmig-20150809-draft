@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/linuxtv-dvb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.18 2005/12/09 22:13:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.19 2005/12/10 03:22:29 metalgod Exp $
+
+  10 Dec 2005; Luis Medinas <metalgod@gentoo.org>
+  linuxtv-dvb-1.1.1-r1.ebuild:
+  Stable on amd64. See bug #31721.
 
   09 Dec 2005; Matthias Schwarzott <zzam@gentoo.org>
   linuxtv-dvb-1.1.1-r1.ebuild:
