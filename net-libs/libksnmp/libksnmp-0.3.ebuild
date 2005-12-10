@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/libksnmp-0.3.ebuild,v 1.2 2005/05/08 09:43:39 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/libksnmp-0.3.ebuild,v 1.3 2005/12/10 13:27:47 flameeyes Exp $
 
 inherit kde
 
 DESCRIPTION="KDE library to access SNMP statistics"
-HOMEPAGE="http://dev.gentoo.org/~flameeyes/kdeapps.xhtml#libksnmp"
+HOMEPAGE="http://dev.gentoo.org/~flameeyes/kdeapps#libksnmp"
 SRC_URI="http://digilander.libero.it/dgp85/files/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 

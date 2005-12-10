@@ -1,4 +1,14 @@
-MD5 b0ffbf580d1e24034c2f2cfbd21a0692 metadata.xml 350
-MD5 a7e719e4cf5f70743b26abc7a873da1e libksnmp-0.3.ebuild 696
-MD5 b5e158e5515cbe9b2c95b899a4984c90 ChangeLog 613
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d1e605f79b8037dd9ed3d0d457b6c02a ChangeLog 764
 MD5 d47188a90249e0d000d5495a123582e1 files/digest-libksnmp-0.3 66
+MD5 8fd5a102175056956d4d0ada78e480b3 libksnmp-0.3.ebuild 693
+MD5 b0ffbf580d1e24034c2f2cfbd21a0692 metadata.xml 350
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmtflAiZjviIA2XgRAkDRAJ4quwRFoWLthehQTYBui3OphZ116wCgqpFH
+V1C4y17lUdPLeiFYwncRORs=
+=64DI
+-----END PGP SIGNATURE-----
