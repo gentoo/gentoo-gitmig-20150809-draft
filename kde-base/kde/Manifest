@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ffb60a6277f5271a3ed3893bc7f1b086 kde-3.5.0.ebuild 916
 MD5 7a4227b8020c4b9e67023781105928ab metadata.xml 318
 MD5 710e18a04e20879a9b034ad7eb4625d9 ChangeLog 13970
@@ -10,3 +13,10 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.3.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.4.3 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmkiXFdQwWVoAgN4RAp5dAKC4lfnbbMWsZW6CM9Qrwp7+G+LnGwCff3Ss
+V382iOB9Tk8I3l5AvNtJa4k=
+=k9Zr
+-----END PGP SIGNATURE-----
