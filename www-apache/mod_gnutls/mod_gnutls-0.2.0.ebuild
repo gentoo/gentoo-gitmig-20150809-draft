@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.2.0.ebuild,v 1.1 2005/04/27 11:31:29 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.2.0.ebuild,v 1.2 2005/12/10 13:22:56 blubb Exp $
 
 inherit apache-module ssl-cert
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_gnutls/"
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/gnutls-1.2.0"
