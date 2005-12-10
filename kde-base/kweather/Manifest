@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6d4574cc94c59c002cd2d5155ad8cf3 ChangeLog 4281
 MD5 69d43f35ade795c989300b2641b3e7bb kweather-3.5.0.ebuild 394
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
@@ -11,3 +14,10 @@ MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-kweather-3.5.0 67
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kweather-3.4.2 282
 MD5 dc4e14a043c6a61fbfa9e149a285fef8 files/kweather-3.4.1-fix-icon-size.diff 534
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm176ugEuf3OQ0akRAnGIAJ4tjxVI8/r1MRldGRwOJgOZS+4yhgCgnyru
+2IYTF4BOl0Dhf75mUXNd5b0=
+=j0Ia
+-----END PGP SIGNATURE-----
