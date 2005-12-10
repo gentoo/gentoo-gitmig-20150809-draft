@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-0.5.4-r1.ebuild,v 1.2 2005/05/25 14:07:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-0.5.4-r1.ebuild,v 1.3 2005/12/10 23:27:43 vanquirius Exp $
 
 DESCRIPTION="Simple Perl/Tk GUI to manage a small certification authority"
 HOMEPAGE="http://tinyca.sm-zone.net/"
@@ -18,6 +18,12 @@ DEPEND=">=dev-libs/openssl-0.9.6i
 	>=dev-perl/perl-tk-800.024"
 
 S=${WORKDIR}/TinyCA
+
+pkg_setup() {
+	if [ ! -r /usr/lib/perl?/vendor_perl/*/*/Gnome.pm ]; then
+		die "dev-perl/gtk-perl needs to be emerged with the gnome USE flag"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
