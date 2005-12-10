@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4-r1.ebuild,v 1.4 2005/12/08 12:29:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4-r1.ebuild,v 1.5 2005/12/10 14:54:56 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -47,8 +47,6 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
 		vorbis? ( media-libs/libvorbis )
 		theora? ( media-libs/libtheora )
-		X? ( virtual/x11 )
-		xv? ( virtual/x11 )
 		freetype? ( media-libs/freetype
 			media-fonts/ttf-bitstream-vera )
 		svga? ( media-libs/svgalib )
@@ -64,7 +62,6 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		3dfx? ( media-libs/glide-v3 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		gnutls? ( >=net-libs/gnutls-1.0.17 )
-		opengl? ( virtual/opengl )
 		sys-libs/zlib
 		png? ( media-libs/libpng )
 		media-libs/libdvbpsi
@@ -87,9 +84,21 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		shout? ( media-libs/libshout )
 		win32codecs? ( media-libs/win32codecs )
 		hal? ( sys-apps/hal )
-		avahi? ( >=net-dns/avahi-0.3 )"
+		avahi? ( >=net-dns/avahi-0.3 )
+		X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXinerama
+			xv? ( x11-libs/libXv )
+			) virtual/x11 )
+			opengl? ( || ( media-libs/mesa virtual/opengl ) )
+			)"
 
 DEPEND="${RDEPEND}
+	X? ( || ( ( x11-proto/xproto
+		x11-proto/xextproto
+		x11-base/xorg-server
+		) virtual/x11 ) )
 	=sys-devel/automake-1.6*
 	sys-devel/autoconf
 	sys-devel/libtool

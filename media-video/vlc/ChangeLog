@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.126 2005/12/08 12:29:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.127 2005/12/10 14:54:56 flameeyes Exp $
+
+  10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4-r1.ebuild:
+  Made modular-friendly.
 
   08 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4.ebuild,
   vlc-0.8.4-r1.ebuild:
