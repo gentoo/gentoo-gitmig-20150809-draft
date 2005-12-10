@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/tinyca
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.8 2005/06/16 13:23:43 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.9 2005/12/10 18:11:53 vanquirius Exp $
+
+*tinyca-2.0.7.1 (10 Dec 2005)
+
+  10 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> -tinyca-0.5.4.ebuild,
+  -tinyca-0.6.6.ebuild, +tinyca-2.0.7.1.ebuild:
+  2.0.7.1 version bump for bug 114973. Thanks to Gour <gour at mail dot inet
+  dot hr>.
 
 *tinyca-2.0.7.0 (16 Jun 2005)
 
