@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 74744b5ae68bc1469c99c5e17cf1fffa ChangeLog 4505
 MD5 72704bb9b1063c9447f0101cb11d95b5 kdesktop-3.4.2.ebuild 1370
-MD5 ecca02911b7a94e41d894bf2e28904fb kdesktop-3.5.0.ebuild 1242
-MD5 228f43480a50a23449fa2deb6dcea5d4 ChangeLog 4414
 MD5 ffb8567a9ab217b33273996584a848f5 kdesktop-3.4.1.ebuild 1355
-MD5 6536d0e331a4bb5925ee1b940dbb194a kdesktop-3.4.3.ebuild 1369
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdesktop-3.5.0 68
+MD5 de979b633e1249d35a977c4e3b3000c5 kdesktop-3.4.3.ebuild 1364
+MD5 ecca02911b7a94e41d894bf2e28904fb kdesktop-3.5.0.ebuild 1242
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdesktop-3.4.2 287
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdesktop-3.5.0 68
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdesktop-3.4.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmk65FdQwWVoAgN4RAkwgAJwN36A+5m2P4Lnc5Spq4Sd3ZliAdwCeP6WP
-QrglmTVE25nVqBH2mVXlYnw=
-=CR2F
------END PGP SIGNATURE-----
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212

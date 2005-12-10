@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7dfcca3ced457d1affabd59a720629cd ChangeLog 4161
+MD5 4d95f6a6ccd43b34eb1c9bf937f4dd5d kdepasswd-3.5.0.ebuild 484
+MD5 8f7061d86245536cbc28073ad9f43d45 kdepasswd-3.4.3.ebuild 525
 MD5 44e32e90f31926671d2c21f593504750 kdepasswd-3.4.2.ebuild 531
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 839297ac265c5869497b91b2e3adf026 ChangeLog 4069
-MD5 78fb0088ccf1636dd0d7891af73c62fa kdepasswd-3.4.3.ebuild 530
-MD5 4d95f6a6ccd43b34eb1c9bf937f4dd5d kdepasswd-3.5.0.ebuild 484
 MD5 81dd768912a60b59cde4322ff2f02db9 kdepasswd-3.4.1.ebuild 518
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdepasswd-3.4.2 287
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdepasswd-3.4.1 212
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdepasswd-3.5.0 68
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdepasswd-3.4.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmk1WFdQwWVoAgN4RAs1nAJwK/w/bEG8P27ZuFkai/DWne0rmIwCgvu16
-IJR0NNJJnLRN54rXyRWn3sU=
-=aDe6
------END PGP SIGNATURE-----
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdepasswd-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdepasswd-3.4.2 287
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdepasswd-3.5.0 68
