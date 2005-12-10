@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.5.1.ebuild,v 1.5 2005/08/18 18:51:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.5.1.ebuild,v 1.6 2005/12/10 00:53:41 carlo Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 SCINTILLA_VER="1.62"
 MY_P="${PN}-${SCINTILLA_VER}-gpl-${PV}"
@@ -25,7 +25,7 @@ DEPEND="virtual/libc
 	sys-apps/sed
 	=x11-libs/qt-3*"
 
-LIBDIR="/usr/$(get_libdir)"
+LIBDIR="${ROOT}/usr/$(get_libdir)"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/qt
@@ -38,7 +38,8 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/qt
-	make destdir=${LIBDIR} all staticlib
+	# It uses g++'s syntax while linking (-Wl,) so it can't use tc-getLD.
+	make destdir=${LIBDIR} all staticlib CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" || die "make failed"
 }
 
 src_install() {

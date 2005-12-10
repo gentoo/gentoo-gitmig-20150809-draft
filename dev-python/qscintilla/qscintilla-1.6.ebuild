@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.6.ebuild,v 1.2 2005/12/09 21:35:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.6.ebuild,v 1.3 2005/12/10 00:53:41 carlo Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 SCINTILLA_VER="1.65"
 MY_P="${PN}-${SCINTILLA_VER}-gpl-${PV}"
@@ -42,7 +42,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/qt
-	make destdir="${ROOT}/usr/$(get_libdir)" all staticlib
+	make destdir="${ROOT}/usr/$(get_libdir)" all staticlib CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" || die "make failed"
 	cd ${S}/designer
 	dodir ${QTDIR}/plugins/designer
 	make
