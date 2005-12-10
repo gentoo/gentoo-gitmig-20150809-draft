@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.19 2005/09/24 11:05:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.20 2005/12/10 21:00:12 swegener Exp $
+
+*alltray-0.65 (10 Dec 2005)
+
+  10 Dec 2005; Sven Wegener <swegener@gentoo.org> -alltray-0.61.ebuild,
+  -alltray-0.62.ebuild, +alltray-0.65.ebuild:
+  Version bump.
 
   24 Sep 2005; Sven Wegener <swegener@gentoo.org> alltray-0.62.ebuild:
   Remove LIBDIR workaround, it has been fixed upstream.
