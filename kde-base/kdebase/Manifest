@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e0b87e772d8e8d4402206949b2b24fa ChangeLog 41423
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
 MD5 b5f104ad19819159cf7d8165ca284d63 kdebase-3.4.3-r1.ebuild 4485
@@ -49,3 +52,10 @@ MD5 93b6c3484bb947b8ec75289fcbe47a85 files/3.3.2-r2/startkde-3.3.2-r2-gentoo.dif
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r3/backgroundrc 342
 MD5 0e829761448ff4a074404d08399fcab3 files/3.3.2-r3/kdmrc 19864
 MD5 93b6c3484bb947b8ec75289fcbe47a85 files/3.3.2-r3/startkde-3.3.2-r3-gentoo.diff 1420
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmyhIugEuf3OQ0akRAng/AKCT/sLn+IUV2H7eF7aOgncTw6olsACeLebj
+EHl9juEipGjhdW62jyJyaSo=
+=Nxyz
+-----END PGP SIGNATURE-----

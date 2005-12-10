@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a85143de0c384a3b620d4a521d2bc36 ChangeLog 24117
 MD5 403cf4b40608c3fd05e41860aa074a60 kdepim-3.3.2-r1.ebuild 739
 MD5 8cd935fe9371d89682261cf0b47096f1 kdepim-3.4.1-r2.ebuild 1091
@@ -29,3 +32,10 @@ MD5 cddcafb2d3285402856bb0bdc19ee72d files/kdepim-3.5.0-kmail-branch.patch 12044
 MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2 66
 MD5 dbcc0fbc697ad83e081e07c4f7a3c58f files/kdepim-3.4.2-gcc32.patch 5997
 MD5 cdef4c59d15d12f305392988443237bd files/kdepim-3.4-configure.patch 4618
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmyjtugEuf3OQ0akRAutVAJ4uKDt8PqLF4vwfdtol1ghmETPKEgCdFKOq
+eZ/AwO8Xdi6dbQal5+vEa5g=
+=Aolq
+-----END PGP SIGNATURE-----
