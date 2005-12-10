@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4753 2005/12/10 00:34:56 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4754 2005/12/10 18:27:31 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1141,10 +1141,6 @@ www-client/netscape
 # Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
 # Doesn't build anymore. Asked maintainer to fix or remove it.
 dev-lang/gpc
-
-# <axxo@gentoo.org> (03 Apr 2005)
-# broken
-=dev-java/antlr-2.7.5
 
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
