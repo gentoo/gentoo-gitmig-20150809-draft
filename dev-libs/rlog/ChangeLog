@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/rlog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.7 2005/09/19 22:33:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.8 2005/12/10 01:25:33 vanquirius Exp $
+
+*rlog-1.3.7 (10 Dec 2005)
+
+  10 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> +rlog-1.3.7.ebuild:
+  1.3.7 version bump.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
