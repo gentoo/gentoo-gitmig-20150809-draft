@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.12 2005/10/08 21:46:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.13 2005/12/10 03:22:46 dostrow Exp $
+
+  10 Dec 2005; Daniel Ostrow <dostrow@gentoo.org> exo-0.3.0.ebuild:
+  Stable on ppc64.
 
   08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> exo-0.3.0.ebuild:
   Stable on ppc.

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-datetime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.12 2005/10/18 15:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.13 2005/12/10 03:26:37 dostrow Exp $
+
+  10 Dec 2005; Daniel Ostrow <dostrow@gentoo.org>
+  xfce4-datetime-0.3.1-r1.ebuild:
+  Stable on ppc64.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   xfce4-datetime-0.3.1-r1.ebuild:
