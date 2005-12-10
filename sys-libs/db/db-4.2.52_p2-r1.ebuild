@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p2-r1.ebuild,v 1.7 2005/12/10 14:58:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p2-r1.ebuild,v 1.8 2005/12/10 22:01:36 weeve Exp $
 
 inherit eutils gnuconfig db
 
@@ -26,7 +26,7 @@ done
 
 LICENSE="DB"
 SLOT="4.2"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="tcltk java doc nocxx bootstrap"
 
 DEPEND="tcltk? ( >=dev-lang/tcl-8.4 )

@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c168483dbacdedd598660b8fdfbf27a ChangeLog 22353
+MD5 034d22b81ca4def107f48d938fdc277b ChangeLog 22457
 MD5 15e26e1303761aa1b814d1d46f930d74 db-1.85-r1.ebuild 1435
 MD5 a0435de0fd1dacc747f315502eda91bc db-1.85-r2.ebuild 1467
 MD5 f63d1e3bb30c46a75c47bd3460a1703a db-1.85-r3.ebuild 1221
@@ -12,7 +9,7 @@ MD5 b3cb97191214b2260603ee79ee1cc8e0 db-4.0.14-r3.ebuild 2480
 MD5 08193a44b9ff7ab8193fd7874bca288e db-4.1.25_p1-r3.ebuild 2550
 MD5 2b53b92447c5f06991103d07b2443168 db-4.1.25_p1-r4.ebuild 2706
 MD5 3316d306f09820f7daaeed2a6b179eef db-4.2.52_p1.ebuild 2836
-MD5 b1242fdb85e85a0b346d38926cf904cc db-4.2.52_p2-r1.ebuild 2994
+MD5 6689e27f1d09c4317ceaa3f98df9ac6e db-4.2.52_p2-r1.ebuild 2992
 MD5 fa0e2188b8f14d47bc85775d74115c76 db-4.2.52_p2.ebuild 2958
 MD5 74f280853789512d578b7cb488c28733 db-4.3.27.ebuild 2917
 MD5 86aca9a49a082dc56e4103ec8112f344 files/db-1.85-gentoo-paths.patch 684
@@ -47,10 +44,3 @@ MD5 e54996f4a19633179add94a051ebf900 files/digest-db-4.3.27 62
 MD5 9cf113248f29b1e319ae73b266df4986 files/patch.3.2.9.1 2139
 MD5 f8edd1cf6535cd62f9b8ff81e0474273 files/patch.3.2.9.2 495
 MD5 e1753ef0eb3e9614fadff321ecd1b082 metadata.xml 1460
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmu3igIKl8Uu19MoRAugkAJ47MiQONtY2kfFiKYO3FzPRL9pYpgCcCgzs
-WOh5/MQXBxZk7EgKIT/elmE=
-=zZ8J
------END PGP SIGNATURE-----
