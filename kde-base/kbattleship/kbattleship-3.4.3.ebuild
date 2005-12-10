@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/kbattleship-3.4.3.ebuild,v 1.5 2005/12/09 04:08:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/kbattleship-3.4.3.ebuild,v 1.6 2005/12/10 04:47:09 chriswhite Exp $
 KMNAME=kdegames
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="The KDE Battleship clone"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"

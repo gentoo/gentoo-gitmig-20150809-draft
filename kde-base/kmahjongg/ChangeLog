@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmahjongg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.30 2005/12/09 04:10:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.31 2005/12/10 04:49:20 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org> kmahjongg-3.4.3.ebuild:
+  Marked x86 stable for bug #112842.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> kmahjongg-3.4.3.ebuild:
   Marked ppc stable for bug #112842.
