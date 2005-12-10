@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.239 2005/12/09 09:42:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.240 2005/12/10 08:54:57 halcy0n Exp $
+
+  10 Dec 2005; Mark Loeser <halcy0n@gentoo.org> kdebase-3.4.3-r1.ebuild:
+  Stable on x86
 
   09 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kcheckpass-3.5.0-bindnow.patch, +files/kdesu-3.5.0-bindnow.patch,
