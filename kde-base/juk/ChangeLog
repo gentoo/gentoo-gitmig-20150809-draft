@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.38 2005/12/10 06:36:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.39 2005/12/10 22:45:31 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org juk-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> juk-3.4.3.ebuild:
   Marked x86 stable for bug #112842.

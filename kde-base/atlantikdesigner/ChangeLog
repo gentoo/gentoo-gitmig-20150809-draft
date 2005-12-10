@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/atlantikdesigner
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantikdesigner/ChangeLog,v 1.31 2005/12/10 06:48:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantikdesigner/ChangeLog,v 1.32 2005/12/10 23:06:58 kloeri Exp $
+
+  11 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  atlantikdesigner-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   atlantikdesigner-3.4.3.ebuild:

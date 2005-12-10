@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbstateapplet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbstateapplet/ChangeLog,v 1.32 2005/12/10 04:16:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbstateapplet/ChangeLog,v 1.33 2005/12/10 22:56:58 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  kbstateapplet-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   kbstateapplet-3.4.3.ebuild:

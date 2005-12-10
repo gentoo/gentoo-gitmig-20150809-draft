@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/vimpart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/vimpart/ChangeLog,v 1.21 2005/12/10 06:45:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/vimpart/ChangeLog,v 1.22 2005/12/10 23:02:21 kloeri Exp $
+
+  11 Dec 2005; Bryan Østergaard <kloeri@gentoo.org vimpart-3.4.2.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> vimpart-3.4.2.ebuild:
   Marked x86 stable for bug #112842.
