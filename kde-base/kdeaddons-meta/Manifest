@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71fd9e83d6524fb63c8ec40f67a5ae62 ChangeLog 6859
 MD5 65c94c02e54972b85d644794af6d815e kdeaddons-meta-3.4.3.ebuild 1235
 MD5 c8bcb90d2f904bacbf363f6bc221b737 kdeaddons-meta-3.4.1.ebuild 1216
@@ -8,3 +11,10 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.5.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaddons-meta-3.4.2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm25pugEuf3OQ0akRAvEeAJ4oO7OPblhvCzDK6J0OsU2smRX4sACgl/OM
+Y72HxwjpsUhtHFj3h5E0j24=
+=V6zJ
+-----END PGP SIGNATURE-----

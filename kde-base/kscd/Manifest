@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 78cc2597849d41f598ef4b9dae061bfc ChangeLog 4002
 MD5 72c275ff2754709d9f0e881e9b56be4b kscd-3.4.1.ebuild 788
 MD5 73270a662cb8bf6e60e10683817772c3 kscd-3.4.3.ebuild 795
@@ -8,3 +11,10 @@ MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kscd-3.4.3 73
 MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-kscd-3.5.0 73
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kscd-3.4.2 308
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kscd-3.4.1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm2iEugEuf3OQ0akRAqyHAJ0QMSVK++kbzi2LMkRuDef7OcnGuACfVVOD
+qvqlblrGmrSeLASHa0hsOv4=
+=G0xP
+-----END PGP SIGNATURE-----
