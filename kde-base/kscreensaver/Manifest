@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0af9b25b83b198577161f5dadfd4526e kscreensaver-3.4.2.ebuild 532
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 a8367ce7bbd9d8670a2d7e70e1a477cd ChangeLog 4348
+MD5 d33b25c4e50c478e1991e0ed70e9573a ChangeLog 4445
 MD5 2cf560e488b766c6d6d3ce7466cd6e17 kscreensaver-3.5.0.ebuild 525
-MD5 1ca31019f2778f4e5b59e2bdb474b94c kscreensaver-3.4.3.ebuild 531
+MD5 cb576bb0e9594bf8e74e95827922e166 kscreensaver-3.4.3.ebuild 526
 MD5 39002f99dacfa6fcdc7ec202e3fe3790 kscreensaver-3.4.1.ebuild 520
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 0af9b25b83b198577161f5dadfd4526e kscreensaver-3.4.2.ebuild 532
+MD5 205c13a78065c2decb403b1984abab5f files/configure-fix-kdeartwork-xscreensaver.patch 1577
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kscreensaver-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kscreensaver-3.4.3 68
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kscreensaver-3.5.0 68
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kscreensaver-3.4.1 212
-MD5 205c13a78065c2decb403b1984abab5f files/configure-fix-kdeartwork-xscreensaver.patch 1577
 MD5 d4f721aede14b18d9aa83c9d9f18900d files/configure-fix-kdeartwork-libart.patch 2503
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmkuMFdQwWVoAgN4RAnhqAKC2f/rJ9nf+SBhSpfeFUOwrf5ZNbQCZAdUx
-PWMI4KPGbQaRitGmoM9JMQU=
-=VDrE
------END PGP SIGNATURE-----
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kscreensaver-3.4.3 68
