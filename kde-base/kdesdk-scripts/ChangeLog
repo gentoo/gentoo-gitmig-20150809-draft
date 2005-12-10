@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.21 2005/12/09 10:06:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.22 2005/12/10 07:36:42 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
+  Marked x86 stable for bug #112842.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdesdk-scripts-3.4.1.ebuild:
   Marked ppc stable for bug #112842.
@@ -24,19 +27,19 @@
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kdesdk-scripts-3.5.0_beta2.ebuild:
   New version.
 
-  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  24 Sep 2005; Diego Petten嘆 <flameeyes@gentoo.org>
   -kdesdk-scripts-3.5_alpha1.ebuild:
   Removed 3.5_alpha1.
 
 *kdesdk-scripts-3.5_beta1 (22 Sep 2005)
 
-  22 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  22 Sep 2005; Diego Petten嘆 <flameeyes@gentoo.org>
   +kdesdk-scripts-3.5_beta1.ebuild:
   Bump to 3.5 beta1.
 
 *kdesdk-scripts-3.5_alpha1 (07 Sep 2005)
 
-  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  07 Sep 2005; Diego Petten嘆 <flameeyes@gentoo.org>
   +kdesdk-scripts-3.5_alpha1.ebuild:
   Added 3.5_alpha1 split ebuild.
 

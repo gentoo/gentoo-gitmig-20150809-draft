@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.36 2005/12/09 09:29:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.37 2005/12/10 07:51:08 chriswhite Exp $
+
+  10 Dec 2005; Chris White <chriswhite@gentoo.org>
+  kdegraphics-meta-3.4.3.ebuild:
+  Marked x86 stable for bug #112842.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org>
   kdegraphics-meta-3.4.3.ebuild:
