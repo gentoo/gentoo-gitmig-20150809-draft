@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/sdl-flic-1.2.ebuild,v 1.3 2005/09/13 20:28:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/sdl-flic-1.2.ebuild,v 1.4 2005/12/10 20:48:51 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.geocities.com/andre_leiradella/SDL_flic-12.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ~mips ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib
