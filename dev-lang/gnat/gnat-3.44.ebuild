@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44.ebuild,v 1.2 2005/11/15 21:33:38 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44.ebuild,v 1.3 2005/12/10 16:50:23 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -40,8 +40,6 @@ case ${ARCH} in
 		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc"
 esac
 
-#needed for shared libs
-append-flags "-fPIC"
 
 src_unpack() {
 	unpack ${A}
