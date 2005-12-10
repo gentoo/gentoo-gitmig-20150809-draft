@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/xmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.15 2005/08/23 13:21:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.16 2005/12/10 12:02:38 lcars Exp $
+
+*xmail-1.22 (10 Dec 2005)
+
+  10 Dec 2005; Andrea Barisani <lcars@gentoo.org> +xmail-1.22.ebuild:
+  New version, fixes security issue CAN-2005-2943. Bug #109381.
 
   23 Aug 2005; Andrej Kacian <ticho@gentoo.org> xmail-1.16-r1.ebuild,
   xmail-1.20.ebuild, xmail-1.21.ebuild:
@@ -10,7 +15,7 @@
   Stable on x86. Closes bug #97405, reported by Brian Dilks <bdilks at
   speakeasy.net>.
 
-  29 Jun 2005; Tuấn Văn <langthang@gentoo.org> xmail-1.21.ebuild:
+  29 Jun 2005; Tuáº¥n VÄn <langthang@gentoo.org> xmail-1.21.ebuild:
   Fix issues in bug #96632. Thanks to Jakub Moc <jakub@gentoo.org> for 
   the patch.
 
