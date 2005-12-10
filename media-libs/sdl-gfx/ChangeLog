@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sdl-gfx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.28 2005/04/21 19:09:31 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.29 2005/12/10 19:49:45 vapier Exp $
+
+*sdl-gfx-2.0.13-r1 (10 Dec 2005)
+
+  10 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/sdl-gfx-2.0.13-gcc34.patch, +sdl-gfx-2.0.13-r1.ebuild:
+  Fix build error with newer versions of gcc #115087 by charly.
 
   21 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-gfx-2.0.13.ebuild:

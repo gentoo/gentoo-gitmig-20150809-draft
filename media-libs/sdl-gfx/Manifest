@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d48e18d277960775fdc2fd3587c5a7d sdl-gfx-2.0.13.ebuild 920
+MD5 0e7e6ac87f3068ab1aaa9216dab1bd26 ChangeLog 3343
+MD5 754377119b8dd712ea3bf57460c33257 files/digest-sdl-gfx-2.0.13-r1 66
+MD5 76a22a2a5a9fbd772b6501ba0463c7bb files/sdl-gfx-2.0.13-gcc34.patch 447
 MD5 583673dbf2a4a07468a6146e77f87862 metadata.xml 814
-MD5 e6e15f7a4cae3d8f1ec622739052ab65 ChangeLog 3133
-MD5 754377119b8dd712ea3bf57460c33257 files/digest-sdl-gfx-2.0.13 66
+MD5 ded2d0fc681538d36795b674694bbc4f sdl-gfx-2.0.13-r1.ebuild 1008
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOc/1gIKl8Uu19MoRAjGsAJ4l1yI7x4sttBgYIYgelQVgiYgeNwCfdy3c
-z58/u2a+Vjtn0GG2IuFYimw=
-=CjiS
+iD8DBQFDmzIZgIKl8Uu19MoRAoCIAJ9oqi1pYgYCoXWMkDyRtHlFrADz6ACeOzUg
+XmTu+OoBkfuqyNL5Z4fOWNM=
+=jCkp
 -----END PGP SIGNATURE-----
