@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>jmaynard@gentoo.org</email>
-  <name>Jay Maynard</name>
-  <description>The maintainer is the Hercules project manager.</description>
-</maintainer>
 <longdescription>
   Hercules is an emulator for the IBM System/360, System/370, ESA/390, and
   z/Architecture series of mainframe computer systems. It will run any
