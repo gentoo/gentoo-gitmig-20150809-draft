@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.27 2005/12/10 07:10:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.28 2005/12/10 22:04:21 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org ktux-3.4.2.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> ktux-3.4.2.ebuild:
   Marked x86 stable for bug #112842.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.33 2005/12/10 07:55:42 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.34 2005/12/10 21:56:17 kloeri Exp $
+
+  10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  kdewebdev-meta-3.4.3.ebuild:
+  Stable on alpha.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   kdewebdev-meta-3.4.3.ebuild:
