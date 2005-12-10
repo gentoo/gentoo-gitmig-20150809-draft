@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a0860be96b203571250012576fc31e1 libkpimexchange-3.4.3.ebuild 967
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 a1dc8d29d3ed3f665104c382537d42c9 ChangeLog 4498
@@ -6,3 +9,10 @@ MD5 26596c7dc6ebbbcb8f61ef8078b79563 libkpimexchange-3.4.1.ebuild 960
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimexchange-3.4.1 208
 MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkpimexchange-3.5.0 67
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkpimexchange-3.4.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDmmVdFdQwWVoAgN4RAnlIAKCF/J2ctR8vNMkdJTaKqE3wcbRWvQCgsprj
+ubgs76Izu2kiFek2ELotsNY=
+=YwTd
+-----END PGP SIGNATURE-----
