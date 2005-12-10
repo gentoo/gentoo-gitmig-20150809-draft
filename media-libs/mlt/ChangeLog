@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/mlt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.1 2005/12/10 02:15:23 lu_zero Exp $
+
+*mlt-20051209 (10 Dec 2005)
+
+  10 Dec 2005; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +mlt-20051209.ebuild:
+  First commit
+
