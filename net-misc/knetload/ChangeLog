@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.26 2005/09/17 19:35:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.27 2005/12/10 13:30:42 flameeyes Exp $
+
+  10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  knetload-3.0_alpha2.ebuild:
+  Update $HOMEPAGE value, as the .xhtml version does not exists anymore.
 
   27 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   knetload-3.0_alpha2.ebuild:
