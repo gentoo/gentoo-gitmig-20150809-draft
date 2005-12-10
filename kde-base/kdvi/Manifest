@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ded0a819669422efd42af0af345a5725 ChangeLog 3834
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 0a3f067dd1b66b620c60400b05c86006 kdvi-3.4.1.ebuild 637
+MD5 e13c628d41c1ea9a895cc9fe898b618e ChangeLog 3946
+MD5 6e5fdcba7f99d0ab4d661e2d0649816f kdvi-3.4.2.ebuild 703
+MD5 a94c8f3c16557591ae1eb36fc6d5b33e kdvi-3.4.3.ebuild 649
+MD5 9bc99b11c88b0a1ca3fe6b96083ebb0a kdvi-3.5.0.ebuild 602
+MD5 339eca37408cf1043fc3ec09e4e66db5 files/kviewshell-qt-3.3.5.patch 469
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdvi-3.4.1 221
+MD5 0459ac16349d79da6246392e2454796b files/digest-kdvi-3.5.0 71
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kdvi-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdvi-3.4.3 71
-MD5 0459ac16349d79da6246392e2454796b files/digest-kdvi-3.5.0 71
-MD5 339eca37408cf1043fc3ec09e4e66db5 files/kviewshell-qt-3.3.5.patch 469
-MD5 0a3f067dd1b66b620c60400b05c86006 kdvi-3.4.1.ebuild 637
-MD5 6e5fdcba7f99d0ab4d661e2d0649816f kdvi-3.4.2.ebuild 703
-MD5 f5355462feb52b5d0224478cced5ab27 kdvi-3.4.3.ebuild 646
-MD5 9bc99b11c88b0a1ca3fe6b96083ebb0a kdvi-3.5.0.ebuild 602
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmRS/csIHjyDViGQRAqrLAJwJxaworC9kXulTvW9UXROU6RjVOACfZwfs
-OETWBEaIrcLOatKViVr5EzU=
-=tvTi
------END PGP SIGNATURE-----
