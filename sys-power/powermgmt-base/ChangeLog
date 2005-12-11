@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.7 2005/12/11 05:27:20 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.8 2005/12/11 19:01:08 steev Exp $
+
+  11 Dec 2005; Steev Klimaszewski <steev@gentoo.org>
+  powermgmt-base-1.22.ebuild:
+  Not stable on x86. Sorry
 
 *powermgmt-base-1.22 (11 Dec 2005)
 
