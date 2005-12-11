@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.38 2005/08/26 12:36:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.39 2005/12/11 19:37:13 betelgeuse Exp $
+
+*java-sdk-docs-1.5.0-r1 (11 Dec 2005)
+
+  11 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +java-sdk-docs-1.5.0-r1.ebuild:
+  New revision because upstream zip file has changed. Resolves bug #67266
+  (again).
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   java-sdk-docs-1.4.2.ebuild:

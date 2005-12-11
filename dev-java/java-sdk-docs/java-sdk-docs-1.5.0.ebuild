@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0.ebuild,v 1.7 2004/10/02 17:32:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0.ebuild,v 1.8 2005/12/11 19:37:13 betelgeuse Exp $
 
 SRC_URI="jdk-1_5_0-doc.zip"
 DESCRIPTION="Javadoc for Java SDK version 1.5.0 Beta 2"
