@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6.ebuild,v 1.2 2005/09/10 16:24:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6.ebuild,v 1.3 2005/12/11 19:02:14 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,7 @@ IUSE="doc jikes"
 
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/rhino-1.5*
-	=dev-java/xerces-2.6*
+	>=dev-java/xerces-2.6
 	dev-java/xml-commons"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
@@ -40,7 +40,9 @@ src_compile() {
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
-	ant ${antflags} || die "compile problem"
+	# Fails to build on amd64 without this
+	ANT_OPTS="${ANT_OPTS} -Xmx1g" \
+		ant ${antflags} || die "compile problem"
 }
 
 src_install() {
