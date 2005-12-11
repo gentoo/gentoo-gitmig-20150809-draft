@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.11 2005/11/29 02:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.12 2005/12/11 19:02:41 halcy0n Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	gzip -dc ${DISTDIR}/${A} | /bin/sh || die
-	epatch ${FILESDIR}/${PV}-gentoo.patch || die
+	epatch "${FILESDIR}"/${PV}-gentoo.patch || die
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	cd ${PN}
 
