@@ -1,9 +1,6 @@
 # ChangeLog for net-libs/obby
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.9 2005/12/11 07:10:56 tsunam Exp $
-
-  11 Dec 2005; Joshua Jackson <tsunam@gentoo.org> obby-0.3.0.ebuild:
-  Stable on x86 for gobby; bug #115113
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.10 2005/12/11 07:22:56 tsunam Exp $
 
 *obby-0.3.0 (09 Dec 2005)
 
