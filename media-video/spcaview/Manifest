@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 17c161d3169ce20b4a0c11cb7442adf2 ChangeLog 445
 MD5 b5cb51b68d2db2eca60dcac2e05d9970 files/digest-spcaview-20050701 68
 MD5 334e4f71306cef3c0456b8ba59bbbfe8 metadata.xml 224
-MD5 8f02bbc8bc62ea5ad4f2ac414af0a894 spcaview-20050701.ebuild 606
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHKrKI1lqEGTUzyQRAnZeAJ9E/zUAkq13YK1gXEFKs7Qap4GGJwCdGTQX
-J+e+fbzf1AMChMjcmVdPqjY=
-=AFZF
------END PGP SIGNATURE-----
+MD5 57b1225b02a9a84929731da02189643f spcaview-20050701.ebuild 611
