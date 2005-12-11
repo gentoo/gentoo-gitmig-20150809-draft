@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r2.ebuild,v 1.2 2005/08/17 21:05:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r2.ebuild,v 1.3 2005/12/11 19:08:33 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -53,7 +53,7 @@ RDEPEND=">=virtual/jre-1.4.2
 		  =dev-java/servletapi-2.2*
 		  =dev-java/servletapi-2.3*
 		  =dev-java/servletapi-2.4*
-		  =dev-java/xerces-2.6.2*
+		 >=dev-java/xerces-2.6.2
 		   dev-java/sac
 		   dev-java/flute
 		 >=dev-java/jmi-interface-1.0-r1
