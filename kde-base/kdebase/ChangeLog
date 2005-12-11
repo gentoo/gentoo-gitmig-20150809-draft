@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.241 2005/12/10 18:09:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.242 2005/12/11 01:41:58 flameeyes Exp $
+
+  11 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kxkb-3.5.0-modularxkb.patch, kdebase-3.5.0-r1.ebuild:
+  Add extra patch to make modular X happy.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kdebase-3.4.3-r1.ebuild:
   Stable on alpha, bug 112842.

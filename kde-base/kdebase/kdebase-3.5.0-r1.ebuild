@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.2 2005/12/09 09:42:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.3 2005/12/11 01:41:58 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -50,6 +50,9 @@ src_unpack() {
 	# add support for non-lazy-bindings, see bug #114049
 	epatch "${FILESDIR}/kdesu-3.5.0-bindnow.patch"
 	epatch "${FILESDIR}/kcheckpass-3.5.0-bindnow.patch"
+
+	# Fix (again) modular support, when /usr/X11R6 is present this time
+	epatch "${FILESDIR}/kxkb-3.5.0-modularxkb.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die
