@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ce4edd31e6f8be6133582ed93fdbbb7 ChangeLog 1668
 MD5 443d1785fe21d3269259206558d11a59 classworlds-1.0-r2.ebuild 1189
 MD5 c8530f78dd3e23e4967723a10415c7b8 files/build-1.0.xml 5852
 MD5 65ee55fedb5b26dee5df9c665d297a12 files/digest-classworlds-1.0-r2 70
 MD5 dc6ad4755e0695dd9a2a898624e16b7c metadata.xml 1546
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnICsndWRXhKOboURAk/EAJ4imWbyFXHSTrU01Pmmis0szrVMTACgwLFq
+jl0FWfQeXurJyWEvED4WlVc=
+=p0E3
+-----END PGP SIGNATURE-----

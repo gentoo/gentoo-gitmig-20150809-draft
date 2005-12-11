@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.11 2005/07/16 12:29:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.12 2005/12/11 19:37:49 nichoj Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SLOT="1"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.4
-	=dev-java/xerces-2.6*"
+	>=dev-java/xerces-2.6"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	jikes? ( >=dev-java/jikes-1.21 )
