@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.35 2005/12/10 19:59:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.36 2005/12/11 11:04:00 chriswhite Exp $
+
+  11 Dec 2005; Chris White <chriswhite@gentoo.org>
+  klaptopdaemon-3.4.3-r1.ebuild:
+  x86 stable for bug #112842.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   klaptopdaemon-3.4.3-r1.ebuild:
