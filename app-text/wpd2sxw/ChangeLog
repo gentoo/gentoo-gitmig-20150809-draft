@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wpd2sxw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/ChangeLog,v 1.8 2005/10/27 20:51:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/ChangeLog,v 1.9 2005/12/11 10:48:06 suka Exp $
+
+  11 Dec 2005; Andreas Proschofsky <suka@gentoo.org>
+  wpd2sxw-0.6.0-r1.ebuild:
+  Fix the SRC_URI for the perl script
 
 *wpd2sxw-0.7.1 (27 Oct 2005)
 
