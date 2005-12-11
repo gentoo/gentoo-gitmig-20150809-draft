@@ -1,4 +1,14 @@
-MD5 b040bfdcafc73d3c040385d975ffa244 ChangeLog 719
-MD5 d5622032643082c3f4814ed84f9e89a8 gtk-server-2.0.2.ebuild 1211
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 395070b4e705fb320570ddea5f758d0b ChangeLog 858
+MD5 0dce715b9905b70c4e937df112208d20 files/digest-gtk-server-2.0.5 68
+MD5 2723cfdbfed089a2bab5460fd1f1a38a gtk-server-2.0.5.ebuild 1211
 MD5 9a82c53a19ab32a3774ff2bb7568a7c0 metadata.xml 435
-MD5 569771b9a12dd8ea2eeb8c2d15598949 files/digest-gtk-server-2.0.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDm3KOyiNZaEAZA+ARAr+NAJ9dQAEuRS+gBcJIk/DF1/GMKDCv3ACfVBEw
+2QfdVgDcFk/7IbMFoXfwEgM=
+=AL5f
+-----END PGP SIGNATURE-----
