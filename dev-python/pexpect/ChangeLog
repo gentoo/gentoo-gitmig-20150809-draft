@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.23 2005/10/02 14:13:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.24 2005/12/11 10:41:51 lucass Exp $
+
+*pexpect-2.0 (11 Dec 2005)
+
+  11 Dec 2005; Lukasz Strzygowski <lucass@gentoo.org> +pexpect-2.0.ebuild:
+  Version bump.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> pexpect-0.999.ebuild:
   Mark 0.999 stable on ia64
