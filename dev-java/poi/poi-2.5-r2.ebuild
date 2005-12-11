@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5-r2.ebuild,v 1.3 2005/10/01 08:18:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5-r2.ebuild,v 1.4 2005/12/11 17:35:19 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=virtual/jre-1.2
 	=dev-java/commons-beanutils-1.6*
 	>=dev-java/commons-collections-2.1
 	=dev-java/commons-lang-2.0*
-	=dev-java/xerces-2.6*"
+	>=dev-java/xerces-2.6"
 DEPEND=">=virtual/jdk-1.2
 	${RDEPEND}
 	>=dev-java/ant-1.4
@@ -41,7 +41,6 @@ src_unpack() {
 	java-pkg_jar-from commons-beanutils-1.6 commons-beanutils.jar commons-beanutils-1.6.jar
 	java-pkg_jar-from commons-collections commons-collections.jar commons-collections-2.1.jar
 	java-pkg_jar-from commons-lang commons-lang.jar commons-lang-1.0-b1.jar
-	java-pkg_jar-from xerces-2 xmlParserAPIs.jar xmlParserAPIs-2.2.1.jar
 	java-pkg_jar-from xerces-2 xercesImpl.jar xercesImpl-2.4.0.jar
 }
 
