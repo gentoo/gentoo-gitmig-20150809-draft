@@ -1,40 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4604911091599eeba18acc64c4d37e4e ChangeLog 29268
-MD5 0e1a74ea3a94e170371e7d5dbe12106e kdegraphics-3.5.0-r2.ebuild 1978
-MD5 8752f936f226c4117006b64736b21b05 kdegraphics-3.3.2-r3.ebuild 1612
-MD5 f8b2b24be0e28925e87267accd66968a kdegraphics-3.4.2-r2.ebuild 2089
-MD5 f31268d787d150bd1810a8df5fc46735 kdegraphics-3.4.3.ebuild 1731
-MD5 71a6e1d836d6cce0d6a9ce6a71863200 kdegraphics-3.5.0.ebuild 1870
-MD5 bebc2827eb16817ae4e7180d27b530f3 kdegraphics-3.4.3-r2.ebuild 1799
-MD5 ea77c224d553595991b0545b9c9eb29d kdegraphics-3.4.1-r3.ebuild 1525
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 bebc2827eb16817ae4e7180d27b530f3 kdegraphics-3.4.3-r2.ebuild 1799
+MD5 d22de9d525bf43a32519173c90f49264 kdegraphics-3.5.0-r3.ebuild 2114
+MD5 f8b2b24be0e28925e87267accd66968a kdegraphics-3.4.2-r2.ebuild 2089
+MD5 8752f936f226c4117006b64736b21b05 kdegraphics-3.3.2-r3.ebuild 1612
+MD5 5389ecfc244c97ebe497e10e154113b7 ChangeLog 29474
+MD5 ea77c224d553595991b0545b9c9eb29d kdegraphics-3.4.1-r3.ebuild 1525
 MD5 511facb4e5557ab04a88092e393860db kdegraphics-3.4.1-r1.ebuild 1456
-MD5 d18efc8eb0bf3e3b54a33cf04cdba3fd files/kpdf-3.5.0-splitter-io.patch 1415
-MD5 0abb98c262645006a4b116c0635edb49 files/kdegraphics-3.4.1-gocr.patch 454
-MD5 0459ac16349d79da6246392e2454796b files/digest-kdegraphics-3.5.0 71
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kdegraphics-3.4.2-r2 71
-MD5 0459ac16349d79da6246392e2454796b files/digest-kdegraphics-3.5.0-r2 71
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-3.4.3 71
-MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
-MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
-MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
-MD5 72b0e0cd29559b5ac4a20829a3da892c files/kdegraphics-3.4-configure.patch 847
+MD5 f31268d787d150bd1810a8df5fc46735 kdegraphics-3.4.3.ebuild 1731
+MD5 0e1a74ea3a94e170371e7d5dbe12106e kdegraphics-3.5.0-r2.ebuild 1978
+MD5 71a6e1d836d6cce0d6a9ce6a71863200 kdegraphics-3.5.0.ebuild 1870
 MD5 4a4bcdcb2456ab92b7846b6646da1bcb files/post-3.3.1-kdegraphics-4.diff 1797
+MD5 72b0e0cd29559b5ac4a20829a3da892c files/kdegraphics-3.4-configure.patch 847
 MD5 45bc3c00d76feb234aa5db42da0137e5 files/post-3.5.0-kdegraphics-CAN-2005-3193.diff 4768
 MD5 1a6dde4414b4ad894e4ed7ed3fa919ff files/digest-kdegraphics-3.4.1-r3 71
-MD5 1a6dde4414b4ad894e4ed7ed3fa919ff files/digest-kdegraphics-3.4.1-r1 71
-MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
-MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
-MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
-MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
+MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
+MD5 0abb98c262645006a4b116c0635edb49 files/kdegraphics-3.4.1-gocr.patch 454
 MD5 a2e4c4878c6637efbbbb4ffd20ae6cc2 files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 6383
+MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-3.4.3 71
+MD5 0459ac16349d79da6246392e2454796b files/digest-kdegraphics-3.5.0-r2 71
+MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
+MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
+MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
+MD5 a603b1f40c870db682665f57f908df0e files/digest-kdegraphics-3.4.2-r2 71
+MD5 0459ac16349d79da6246392e2454796b files/digest-kdegraphics-3.5.0-r3 71
+MD5 1a6dde4414b4ad894e4ed7ed3fa919ff files/digest-kdegraphics-3.4.1-r1 71
+MD5 0459ac16349d79da6246392e2454796b files/digest-kdegraphics-3.5.0 71
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-3.4.3-r2 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmyswugEuf3OQ0akRAl7mAJ0Xx/RFiF6oHmGlggC2wmhrg3efJgCgkJZF
-wBDm+KgZV/7hs7aUExVkg4U=
-=qwJY
------END PGP SIGNATURE-----
+MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
+MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
+MD5 8db8a9b442f66e9567ad591c8f03530e files/kdegraphics-3.5.0-kpovmodeler.patch 446
+MD5 d18efc8eb0bf3e3b54a33cf04cdba3fd files/kpdf-3.5.0-splitter-io.patch 1415

@@ -1,20 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 708596cd670a2a5bfa1ba64cbd067e9c ChangeLog 4228
-MD5 9e25d8e20b4c35fa155c6a3b885859fe kpovmodeler-3.4.2.ebuild 505
-MD5 ddca9cb1863cfdd0ff88a87911ffa0d2 kpovmodeler-3.4.3.ebuild 499
-MD5 431d65c60068c77bf0e331ec13765ee3 kpovmodeler-3.5.0.ebuild 493
-MD5 7cd6730f4fdc82cf4871455ad1022de4 kpovmodeler-3.4.1.ebuild 467
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kpovmodeler-3.4.3 71
-MD5 0459ac16349d79da6246392e2454796b files/digest-kpovmodeler-3.5.0 71
+MD5 7cd6730f4fdc82cf4871455ad1022de4 kpovmodeler-3.4.1.ebuild 467
+MD5 9e25d8e20b4c35fa155c6a3b885859fe kpovmodeler-3.4.2.ebuild 505
+MD5 31042df49037499bbd0a14fc4c9cc93f ChangeLog 4434
+MD5 6b3ea8e43c38b0ae26ef4a0b452d7752 kpovmodeler-3.5.0-r1.ebuild 620
+MD5 431d65c60068c77bf0e331ec13765ee3 kpovmodeler-3.5.0.ebuild 493
+MD5 ddca9cb1863cfdd0ff88a87911ffa0d2 kpovmodeler-3.4.3.ebuild 499
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpovmodeler-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpovmodeler-3.4.2 300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm2RrugEuf3OQ0akRAtbcAJ0Zixn9fGAfzg/vZf611v9ZQ33ErACgmVqK
-E1hyTeirQka75glPLK6AwzQ=
-=TI3+
------END PGP SIGNATURE-----
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kpovmodeler-3.4.3 71
+MD5 0459ac16349d79da6246392e2454796b files/digest-kpovmodeler-3.5.0-r1 71
+MD5 8db8a9b442f66e9567ad591c8f03530e files/kdegraphics-3.5.0-kpovmodeler.patch 446
+MD5 0459ac16349d79da6246392e2454796b files/digest-kpovmodeler-3.5.0 71
