@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.3.ebuild,v 1.2 2005/12/11 16:53:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.3.ebuild,v 1.3 2005/12/11 18:34:10 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -16,6 +16,7 @@ IUSE="doc jikes source"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/jaxen-1.0*
 	dev-java/saxpath
+	dev-java/xml-commons
 	>=dev-java/xerces-2.6"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
@@ -35,6 +36,7 @@ src_unpack() {
 	java-pkg_jar-from saxpath
 	java-pkg_jar-from jaxen
 	java-pkg_jar-from xerces-2 xercesImpl.jar
+	java-pkg_jar-from xml-commons
 }
 
 src_compile() {

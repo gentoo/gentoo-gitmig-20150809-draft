@@ -32,7 +32,7 @@ diff -ru pmd-3.3/bin/designer.sh pmd-3.3-patched/bin/designer.sh
  
 -SCRIPT_DIR=`dirname $0`
 -CWD="$PWD"
-+cp=$(java-config -p xerces-2,saxpath,jaxen,pmd)
++cp=$(java-config -p xerces-2,saxpath,jaxen,pmd,xml-commons)
  
 -cd "$SCRIPT_DIR/../lib"
 -LIB_DIR=`pwd -P`
@@ -85,7 +85,7 @@ diff -ru pmd-3.3/bin/pmd.sh pmd-3.3-patched/bin/pmd.sh
  
 -SCRIPT_DIR=`dirname $0`
 -CWD="$PWD"
-+cp=$(java-config -p xerces-2,saxpath,jaxen,pmd)
++cp=$(java-config -p xerces-2,saxpath,jaxen,pmd,xml-commons)
  
 -cd "$SCRIPT_DIR/../lib"
 -LIB_DIR=`pwd -P`

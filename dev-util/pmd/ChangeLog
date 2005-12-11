@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.11 2005/12/11 16:53:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.12 2005/12/11 18:34:09 betelgeuse Exp $
+
+  11 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  files/pmd-3.3-gentoo.patch, pmd-3.3.ebuild:
+  Fixed to use xml-apis.jar from xml-commons instead of xerces.
+  Part of fixing bug #82561.
 
   11 Dec 2005; Joshua Nichols <nichoj@gentoo.org> pmd-3.1.ebuild,
   pmd-3.3.ebuild:

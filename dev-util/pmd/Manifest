@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 92720f70d5a17e9915e8d2352053dee6 ChangeLog 1680
+MD5 dc024b6c6048f3fea1d72684ce14988d ChangeLog 1877
 MD5 f4fd6e2650f6d50125b3e546a7c0a54b files/digest-pmd-1.5 61
 MD5 f4fd6e2650f6d50125b3e546a7c0a54b files/digest-pmd-1.5-r1 61
 MD5 9cd4c2c64ebddf354fb7475e86887505 files/digest-pmd-3.1 61
 MD5 e810cb5e40dfcc3ba21c05d7ba29d54b files/digest-pmd-3.3 61
 MD5 a4e38ad08909deab5987c12fe5e59d8d files/pmd-3.1-gentoo.patch 3808
-MD5 becc4704fc6c51da372aff190ab06b78 files/pmd-3.3-gentoo.patch 3140
+MD5 8933adb7f1d0bf9b912e3dd236dd0005 files/pmd-3.3-gentoo.patch 3164
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b131da5bb636d0aa455f681cad502d75 pmd-1.5-r1.ebuild 1092
 MD5 de5629bb3e4f74880b7481c1db6d1d2f pmd-1.5.ebuild 790
 MD5 c350d228faedf2333f206d7199e88222 pmd-3.1.ebuild 1448
-MD5 c7bb6545cf7611cb55ea13b406f20f9e pmd-3.3.ebuild 1627
+MD5 82d721c9d2e2aa35c109aa97f9eb2fcb pmd-3.3.ebuild 1684
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDnFnindWRXhKOboURAiOGAJsHHAUcvJvlAo1YyPKrJe9jygNyLwCg52L/
-rTyri+Q+D1IXk3N0ThINbDQ=
-=BrFy
+iD8DBQFDnHEvQiJ/wx066S4RAle7AKCKAaVDL1PGdq0UTl4ie0vWppDquACfcm/d
+cf5eJ7kkfK5jWVUP2PzCG1U=
+=hQ3X
 -----END PGP SIGNATURE-----
