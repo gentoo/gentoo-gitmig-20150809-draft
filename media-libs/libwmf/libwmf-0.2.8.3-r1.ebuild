@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.4 2005/12/11 23:25:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.5 2005/12/11 23:28:25 spyderous Exp $
 
 inherit libtool
 
@@ -34,7 +34,14 @@ RDEPEND="virtual/ghostscript
 	)
 	gtk? ( >=x11-libs/gtk+-2.1.2 ) "
 DEPEND="$RDEPEND
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	X? ( || ( (
+				x11-libs/libXt
+				x11-libs/libXpm
+			)
+			virtual/x11
+		)
+	)"
 # plotutils are not really supported yet, so looks like that's it
 
 src_unpack() {
