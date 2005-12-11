@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a23bd38084a6958927afa6cf659a0cb ChangeLog 2818
+MD5 a0e1bd4f35aab53b7a1250496c8c2f72 ChangeLog 2946
 MD5 8491c5fb01637c29d04c5a7d351c4b20 files/digest-netwib-5.28.0 66
 MD5 a8db8170d7a582992272cecea5df396a files/digest-netwib-5.31.0 137
+MD5 fb6029ac823c3b1e0ffdd54bb3dca646 files/digest-netwib-5.32.0 137
 MD5 44374bbb178a0c804d74bb54af07cdc2 metadata.xml 258
 MD5 a42aa11e7b51e62f12d5dd24c5b4044e netwib-5.28.0.ebuild 1020
 MD5 e33d7ed7c075bab0fa9c669231181245 netwib-5.31.0.ebuild 1487
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDUIjAmdTrptrqvGERAukwAJsHw3fO/+zDQY46KdaHJ06vn0EXQQCfUo38
-bw9uo0nBaqH8o1g/NF5Bbzw=
-=ijdC
------END PGP SIGNATURE-----
+MD5 bb0e82b65790e4f9d83d378f9daddc7c netwib-5.32.0.ebuild 1496

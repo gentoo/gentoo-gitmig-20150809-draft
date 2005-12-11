@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.21 2005/10/15 04:25:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.22 2005/12/11 20:02:00 vanquirius Exp $
+
+*netwib-5.32.0 (11 Dec 2005)
+
+  11 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> +netwib-5.32.0.ebuild:
+  5.32.0 version bump.
 
 *netwib-5.31.0 (15 Oct 2005)
 
