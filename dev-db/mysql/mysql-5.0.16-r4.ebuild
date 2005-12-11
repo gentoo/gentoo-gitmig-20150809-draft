@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r4.ebuild,v 1.1 2005/12/09 18:32:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r4.ebuild,v 1.2 2005/12/11 18:22:23 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -53,9 +53,11 @@ mysql_version_is_at_least() {
 	[[ ${want_s} -le ${have_s} ]] && return 0 || return 1
 }
 
-if mysql_version_is_at_least "4.01.03.00" ; then
-	IUSE="${IUSE} cluster utf8 extraengine"
-fi
+mysql_version_is_at_least "4.01.03.00" \
+&& IUSE="${IUSE} cluster utf8 extraengine"
+
+mysql_version_is_at_least "5.01.00.00" \
+&& IUSE="${IUSE} innodb"
 
 # bool mysql_check_version_range(char * range, int ver=MYSQL_VERSION_ID, int die_on_err=MYSQL_DIE_ON_RANGE_ERROR)
 #
@@ -375,6 +377,13 @@ src_compile() {
 			fi
 		fi
 
+		# optional again from 2005-12-05
+		if mysql_version_is_at_least "5.01.00.00" ; then
+			myconf="${myconf} $(use_with innodb)"
+		else
+			myconf="${myconf} --with-innodb"
+		fi
+
 		# lots of chars
 		myconf="${myconf} --with-extra-charsets=all"
 
@@ -433,7 +442,7 @@ src_compile() {
 	fi
 
 	#Bug #114895,Bug #110149
-	filter-flags "-O" "-O[s01]"
+	filter-flags "-O" "-O[01]"
 	#glibc-2.3.2_pre fix; bug #16496
 	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
 
