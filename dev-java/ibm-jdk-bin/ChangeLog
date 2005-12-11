@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.38 2005/12/10 22:03:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.39 2005/12/11 01:26:53 josejx Exp $
+
+  11 Dec 2005; Joseph Jezak <josejx@gentoo.org> ibm-jdk-bin-1.4.2.03.ebuild:
+  Marked ppc stable for bug #114828.
 
   10 Dec 2005; Tom Gall <tgall@gentoo.org>
   ibm-jdk-bin-1.4.2.03.ebuild:
