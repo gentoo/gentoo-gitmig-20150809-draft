@@ -1,9 +1,10 @@
-MD5 becee3d9f09aeb938eac9728abebb618 ChangeLog 4477
+MD5 c1e57ecc2895446080e03b1efe5e2e49 ChangeLog 4662
 MD5 984048712e487cfd26ccdc19f1247e63 files/aclocal_voodoo.patch 733
 MD5 c9b06cd33dfa81082635f38a375da14d files/digest-libgtk-java-2.4.8.1 72
 MD5 f4c28fbb216236ce592ffe72a3d4e9ed files/digest-libgtk-java-2.4.9 70
 MD5 5447d20adb67dacfc4ecd80c88386343 files/digest-libgtk-java-2.6.2-r1 70
 MD5 766fa2461a679dad768a21ea8b014bff files/digest-libgtk-java-2.8.1 70
+MD5 d3c7611133a8c982fa6a17cc3d3c317c files/digest-libgtk-java-2.8.2 70
 MD5 21907163f2b6597c520b7c1a4da20784 files/libgtk-java-2.4.6_find_jni.patch 369
 MD5 40956547f4eb0b797359f67f6c6910bb files/libgtk-java-2.4.6_gcj-autoconf-macro-fix.patch 689
 MD5 1f2599c8fd250432f6e6b43d598e75db files/libgtk-java-2.4.6_gentoo-PN-SLOT.patch 2013
@@ -16,4 +17,5 @@ MD5 894895a802ebec44935045bc8f800c2f libgtk-java-2.4.8.1.ebuild 3350
 MD5 b022186c8e04efb63e91009731c12120 libgtk-java-2.4.9.ebuild 2892
 MD5 856b0e851f16dddc9002d7e1ee2c603e libgtk-java-2.6.2-r1.ebuild 2820
 MD5 ff4ecec720f483314e6e8b688e902425 libgtk-java-2.8.1.ebuild 2111
+MD5 2da893dd7ba87d2d7e5fe5b8519e3223 libgtk-java-2.8.2.ebuild 2207
 MD5 8d139287f93dc4241b670299688f0ae0 metadata.xml 1075
