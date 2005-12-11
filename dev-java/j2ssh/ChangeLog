@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/j2ssh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.10 2005/06/12 18:58:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.11 2005/12/11 19:21:26 nichoj Exp $
+
+  11 Dec 2005; Joshua Nichols <nichoj@gentoo.org> j2ssh-0.2.7-r1.ebuild:
+  Loosened xerces dependency (bug #115158).
 
   12 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> -j2ssh-0.2.7.ebuild,
   j2ssh-0.2.7-r1.ebuild:

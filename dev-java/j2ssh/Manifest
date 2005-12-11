@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2b9e97f8d9234e4df682313e1755fa64 j2ssh-0.2.7-r1.ebuild 1367
-MD5 e58a59975a6b3627f1a6da975f554acc ChangeLog 1391
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9db8702d436973ace47b7d48445772e7 ChangeLog 1506
 MD5 c0c163f1e4dcccc73192bfc69ba092a3 files/digest-j2ssh-0.2.7-r1 68
+MD5 fa08eac1979fca8c7b447f51a96cbc09 j2ssh-0.2.7-r1.ebuild 1369
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2PYa/rLF9B432nYRAmeyAKCoclyeytqLK+2DjH16Q731GKkcLQCgkpfx
-sGUca+BkqM2YPUKctB5885M=
-=fnr4
+iD8DBQFDnHySndWRXhKOboURAgNjAJoDc5SoNZkzOsa2qq/tuhwjdLaqFwCg6HwQ
+1d64oVpV2KHI4aKnfOxfJh8=
+=XYw+
 -----END PGP SIGNATURE-----
