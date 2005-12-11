@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/daemontools-0.76-r4.ebuild,v 1.2 2005/10/30 08:42:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/daemontools-0.76-r5.ebuild,v 1.1 2005/12/11 09:49:54 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -50,7 +50,7 @@ src_install() {
 
 	dodoc CHANGES ../package/README TODO
 
-	newinitd ${FILESDIR}/svscan-0.76-r4 svscan
+	newinitd ${FILESDIR}/svscan.init svscan
 }
 
 pkg_postinst() {

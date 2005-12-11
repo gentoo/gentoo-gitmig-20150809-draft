@@ -1,18 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61c3e4ea45555bbfb799a8eda3c7c563 ChangeLog 4031
-MD5 27722bd887e3c5e54a17540c1b1236c6 daemontools-0.76-r4.ebuild 1589
-MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
-MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
-MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r4 67
-MD5 ebe8e01b96d328e46020d8a9a8542640 files/svscan 860
-MD5 318908f89618070823b5ae23d06e91ac files/svscan-0.76-r4 894
+MD5 ea7d4d257ee7a69a1b9c3f93071e54b7 ChangeLog 4280
+MD5 0b9029ee963d21b86b60b55a615dab50 daemontools-0.76-r5.ebuild 1588
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZIeSgIKl8Uu19MoRAoyLAJ46AjvkyDq0B7RCYVdQ3IO9UER0ZQCdGCwW
-gwWhuqufGEwPtP9ZpRDeCBU=
-=bM+l
------END PGP SIGNATURE-----
+MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
+MD5 bbfe31d704c11d12b2c48b510ad06b77 files/svscan.init 796
+MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
+MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r5 67
