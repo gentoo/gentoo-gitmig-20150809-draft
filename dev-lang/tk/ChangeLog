@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.61 2005/12/11 07:29:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.62 2005/12/11 07:44:04 spyderous Exp $
+
+  11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; tk-8.4.11.ebuild:
+  Fix them.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; tk-8.4.11.ebuild:
   Add modular X dependencies.

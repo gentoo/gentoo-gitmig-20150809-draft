@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.2 2005/12/11 07:29:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.3 2005/12/11 07:44:04 spyderous Exp $
 
 inherit eutils
 
@@ -18,7 +18,12 @@ RDEPEND="|| ( x11-libs/libX11
 		)
 	=dev-lang/tcl-${PV}*"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.47-r10"
+	>=sys-apps/portage-2.0.47-r10
+	|| ( ( x11-libs/libXt
+			x11-proto/xproto
+		)
+		virtual/x11
+	)"
 
 S=${WORKDIR}/${PN}${PV}
 
