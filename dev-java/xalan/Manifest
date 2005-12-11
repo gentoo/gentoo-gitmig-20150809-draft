@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8f42738609f8d26400feee048ed2119 ChangeLog 6748
+MD5 9f9a7f3aebdb2b899ee17c8df087eb12 ChangeLog 6909
 MD5 4e5176945458e93da34c78fbce55c507 files/digest-xalan-2.6.0-r2 140
 MD5 fe2501dcc09df3df298fd3c54453529b files/digest-xalan-2.6.0-r3 140
+MD5 0c01ce6a67fc0165549d1be755c8b18a files/digest-xalan-2.7.0 70
 MD5 9191b4a78191c1b0485ebf92aae74e9d files/xalan.script 135
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 6e5020e4d14bf0bd02fa4e3a90efcf68 xalan-2.6.0-r2.ebuild 1505
 MD5 5a0c35d7d3071da31cf32f80a6c8fda1 xalan-2.6.0-r3.ebuild 1554
+MD5 8b8a4c3eb3617a1c49454a6b11c01113 xalan-2.7.0.ebuild 1599
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDh2PhQiJ/wx066S4RAnfEAKCgDshs4tW0/+qV17ZlyNLolZyZRQCcCmtk
-hUDn+8lHhdy9PcEC7Wh+de8=
-=WsVW
+iD8DBQFDm8NyndWRXhKOboURAhpOAKD0Jfzo4JGB6RreaOb02FohP+1/HACfSiKb
+3/opNr05KC7vv3V11Hda+zE=
+=3pbS
 -----END PGP SIGNATURE-----
