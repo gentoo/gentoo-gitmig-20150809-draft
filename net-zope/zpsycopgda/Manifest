@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8e962c0a0739d52999b987beaf7d6c35 ChangeLog 895
+MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-zpsycopgda-1.1.15 66
+MD5 380e74d272fbd4c4f0d1abd20c23f460 files/digest-zpsycopgda-1.1.2 65
+MD5 9d8d5b9e83c27d9aaa657531bc0fd326 files/digest-zpsycopgda-1.1.21 66
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 3cc93cd324fac11f270761b6f3206db0 zpsycopgda-1.1.15.ebuild 635
 MD5 d911ba7d7a40b923f399e1cce507373c zpsycopgda-1.1.2.ebuild 634
-MD5 40cb0748120d3288c7b2a80a421a3259 ChangeLog 738
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 380e74d272fbd4c4f0d1abd20c23f460 files/digest-zpsycopgda-1.1.2 65
-MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-zpsycopgda-1.1.15 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBo4tBI1lqEGTUzyQRAvGWAKCCRcxtobtWsfMhOtxV3qlmNxs19gCgx9gy
-vjcc5ozUbL2WvjpQywad/VA=
-=P2bK
------END PGP SIGNATURE-----
+MD5 46013f1724b84d8ab801fcc5c1e064e9 zpsycopgda-1.1.21.ebuild 635
