@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.3 2005/11/05 19:25:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.4 2005/12/11 19:18:51 spyderous Exp $
 
 inherit eutils
 
@@ -28,7 +28,12 @@ DEPEND="virtual/libc
 	>=media-libs/libpng-1.2.8
 	>=sys-libs/zlib-1.2.1
 	>=media-fonts/gnu-gs-fonts-std-8.11
-	X? ( virtual/x11 )
+	X? (  || ( ( x11-libs/libXt
+				x11-libs/libXpm
+			)
+			virtual/x11
+		)
+	)
 	gtk? ( =x11-libs/gtk+-1.2* )
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
