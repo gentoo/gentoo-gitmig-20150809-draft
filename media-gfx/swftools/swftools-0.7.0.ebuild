@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.7.0.ebuild,v 1.1 2005/12/10 03:15:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.7.0.ebuild,v 1.2 2005/12/11 19:23:51 vanquirius Exp $
 
 inherit eutils
 
@@ -18,12 +18,7 @@ DEPEND=">=media-libs/t1lib-1.3.1
 		avi? ( media-video/avifile )"
 RDEPEND=""
 
-src_compile() {
-	econf || die "Configure failed."
-	emake || die "Make failed."
-}
-
 src_install() {
 	einstall || die "Install died."
-	dodoc AUTHORS COPYING ChangeLog FAQ INSTALL TODO
+	dodoc AUTHORS ChangeLog FAQ TODO
 }
