@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.8 2005/11/27 21:56:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.9 2005/12/11 21:26:45 chainsaw Exp $
+
+*audacious-0.1.2 (11 Dec 2005)
+
+  11 Dec 2005; <chainsaw@gentoo.org> +audacious-0.1.2.ebuild:
+  Version bump. Lost ~sparc keyword over libmodplug.
 
 *audacious-0.1.1 (27 Nov 2005)
 
