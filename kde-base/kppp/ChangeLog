@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.32 2005/12/10 20:24:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.33 2005/12/11 13:26:24 flameeyes Exp $
+
+  11 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kppp-3.5.0-bindnow.patch, kppp-3.5.0.ebuild:
+  Add patch to build the suid binary with non-lazy bindings.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kppp-3.4.3.ebuild:
   Stable on alpha.
