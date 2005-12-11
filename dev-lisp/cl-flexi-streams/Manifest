@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b73263086934d9d79a4b7e08e769eb8 ChangeLog 445
+MD5 ef0a0f4dc05e22f3158b1e17478573df cl-flexi-streams-0.5.0.ebuild 850
+MD5 ae62d0ebd52c1ed7f4bf0d140ba3e576 files/digest-cl-flexi-streams-0.5.0 75
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnIiCyiNZaEAZA+ARAtNRAJ0aCyxZvPO9J8iGBO960J8NBckjkwCeK2cp
+YCHkR31bPpkgoEcZ6p2fNf4=
+=yjmU
+-----END PGP SIGNATURE-----
