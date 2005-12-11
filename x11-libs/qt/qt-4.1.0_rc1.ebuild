@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0_rc1.ebuild,v 1.3 2005/12/08 19:46:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0_rc1.ebuild,v 1.4 2005/12/11 08:06:57 spyderous Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -17,7 +17,20 @@ SLOT="4"
 KEYWORDS="-*"
 IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
 
-DEPEND="virtual/x11 virtual/xft >=media-libs/freetype-2
+DEPEND="|| ( ( x11-libs/libXrandr
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXcursor
+			x11-libs/libXi
+			x11-libs/libXfont
+			x11-proto/xextproto
+			x11-proto/xineramaproto
+			x11-proto/inputproto
+		)
+		virtual/x11
+	)
+	virtual/xft
+	>=media-libs/freetype-2
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	mng? ( media-libs/libmng )
