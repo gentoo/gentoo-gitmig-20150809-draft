@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.1 2005/12/10 02:48:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.2 2005/12/11 18:05:15 cardoe Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="http://links.twibright.com/download/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode livecd"
+IUSE="directfb fbcon gpm javascript jpeg livecd png sdl ssl svga tiff unicode X"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
 # mode. libpng is required to compile links in graphic mode
@@ -30,22 +30,18 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	svga? ( >=media-libs/svgalib-1.4.3
-		>=media-libs/libpng-1.2.1 )
-	X? ( virtual/x11
-		>=media-libs/libpng-1.2.1 )
+	svga? ( >=media-libs/svgalib-1.4.3 )
+	X? ( || ( (	x11-libs/libX11
+			x11-libs/libXext )
+		virtual/x11 ) )
 	directfb? ( dev-libs/DirectFB )
-	fbcon? ( >=media-libs/libpng-1.2.1
-		sys-libs/gpm )
-	!ppc-macos? ( livecd?
-		( >=media-libs/jpeg-6b
-		>=media-libs/libpng-1.2.1
-		sys-libs/gpm ) )
+	sdl? ( >=media-libs/libsdl-1.2.0 )
 	sys-libs/zlib
 	virtual/libc
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xproto virtual/x11 ) )
 	sys-devel/automake
 	sys-devel/autoconf
 	sys-devel/gcc
@@ -54,11 +50,20 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/textbrowser"
 
 pkg_setup (){
-	if ! use gpm && use fbcon ; then
-		einfo
-		einfo "gpm has been installed since you have included fbcon in your USE flags."
-		einfo "The links framebuffer driver requires gpm in order to compile."
-		einfo
+	if use fbcon && ( ! use png || ! use gpm ); then
+		eerror "You have set the fbcon USE flag. You must also set the png & gpm USE flags"
+		eerror "to be able to use fbcon."
+		die "fbcon set without png & gpm set"
+	fi
+
+	if use X && ! use png; then
+		eerror "You have set the X USE flag, you must also set the png USE flag"
+		die "X set without png"
+	fi
+
+	if use svga && ! use png; then
+		eerror "You have set the svga USE flag, you must also set the png USE flag"
+		die "svga set without png"
 	fi
 }
 
@@ -109,6 +114,7 @@ src_compile (){
 		$(use_with svga svgalib) \
 		$(use_with directfb) \
 		$(use_with ssl) \
+		$(use_with sdl) \
 		$(use_enable javascript) \
 		${myconf} || die "configure failed"
 	emake || die "make failed"
