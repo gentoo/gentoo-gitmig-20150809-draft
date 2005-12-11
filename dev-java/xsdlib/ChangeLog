@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.4 2005/09/26 10:55:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.5 2005/12/11 20:28:17 nichoj Exp $
+
+  11 Dec 2005; Joshua Nichols <nichoj@gentoo.org> xsdlib-20050627.ebuild:
+  Loosened xerces dependency (bug #115158).
 
   26 Sep 2005; Thomas Matthijs <axxo@gentoo.org> xsdlib-20050627.ebuild:
   keyword x86

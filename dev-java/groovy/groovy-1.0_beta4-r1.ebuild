@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.9 2005/10/18 08:28:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.10 2005/12/11 20:31:53 nichoj Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ LICENSE="codehaus-groovy"
 SLOT="1"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc jikes"
-DEPEND="=dev-java/xerces-2.6* \
+DEPEND=">=dev-java/xerces-2.6
 	>=dev-java/commons-cli-1.0-r3
 	>=dev-java/ant-1.5
 	=dev-java/junit-3.8*

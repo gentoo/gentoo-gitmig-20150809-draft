@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627.ebuild,v 1.4 2005/09/26 10:55:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627.ebuild,v 1.5 2005/12/11 20:28:17 nichoj Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.3
-	=dev-java/xerces-2*
+	>=dev-java/xerces-2.6
 	dev-java/relaxng-datatype"
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip

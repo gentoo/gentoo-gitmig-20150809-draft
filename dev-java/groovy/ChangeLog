@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/groovy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.12 2005/10/18 08:28:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.13 2005/12/11 20:31:53 nichoj Exp $
+
+  11 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  groovy-1.0_beta4-r1.ebuild:
+  Loosened xerces dependency (bug #115158).
 
   18 Oct 2005; Thomas Matthijs <axxo@gentoo.org> files/basescript-1.0_beta4,
   groovy-1.0_beta4-r1.ebuild:
