@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kpovmodeler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.32 2005/12/10 22:26:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.33 2005/12/11 09:56:53 greg_g Exp $
+
+*kpovmodeler-3.5.0-r1 (11 Dec 2005)
+
+  11 Dec 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdegraphics-3.5.0-kpovmodeler.patch, +kpovmodeler-3.5.0-r1.ebuild:
+  Add patch to fix saving in kpovmodeler.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   kpovmodeler-3.4.3.ebuild:
