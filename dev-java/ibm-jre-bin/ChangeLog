@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.23 2005/11/05 22:56:10 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.24 2005/12/11 02:47:17 josejx Exp $
+
+  11 Dec 2005; Joseph Jezak <josejx@gentoo.org> ibm-jre-bin-1.4.2.03.ebuild:
+  Marked ppc stable.
 
 *ibm-jre-bin-1.4.2.03 (06 Nov 2005)
 
