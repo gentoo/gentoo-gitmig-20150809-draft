@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef9a9462e6e9d47cd3c49c206918fe19 ChangeLog 726
 MD5 7c1ba1a434a7c4fd986fce50482744bc emul-linux-x86-java-1.4.2.02.ebuild 3116
 MD5 e2f091d8120733e38f13e98d7b2c9152 files/digest-emul-linux-x86-java-1.4.2.02 75
 MD5 40fcbcc585ad443b5bf473228c8ef18d files/javasettings_Linux_x86.xml 1601
 MD5 ef1a1d0bbdb241725417e87002ec4d16 metadata.xml 223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnGSZ2G5bA0cA/ScRAsepAJ9qFnwK/LiP49wKURPCQgNOG32QkgCfURxK
+Bb62cAuqMTkvY/L5DYsff1I=
+=jx0s
+-----END PGP SIGNATURE-----
