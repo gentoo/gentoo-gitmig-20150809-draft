@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/ldapvi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.3 2005/11/19 19:40:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.4 2005/12/11 13:59:10 lcars Exp $
+
+*ldapvi-1.4-r1 (11 Dec 2005)
+
+  11 Dec 2005; Andrea Barisani <lcars@gentoo.org> +files/ldapvi-filter.diff,
+  +ldapvi-1.4-r1.ebuild:
+  New revision, applies patch from the author that fixes a ldap filter bug.
 
 *ldapvi-1.4 (19 Nov 2005)
 
