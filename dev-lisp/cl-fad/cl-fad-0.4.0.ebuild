@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fad/cl-fad-0.3.3.ebuild,v 1.1 2005/11/15 02:36:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fad/cl-fad-0.4.0.ebuild,v 1.1 2005/12/11 19:54:57 mkennedy Exp $
 
 inherit common-lisp
 
@@ -17,7 +17,7 @@ DEPEND="dev-lisp/common-lisp-controller
 CLPACKAGE=cl-fad
 
 src_install() {
-	common-lisp-install *.asd *.lisp
+	common-lisp-install *.{asd,lisp}
 	common-lisp-system-symlink
 	dodoc CHANGELOG README
 	dohtml doc/index.html
