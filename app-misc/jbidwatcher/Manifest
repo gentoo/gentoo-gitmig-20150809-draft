@@ -11,12 +11,12 @@ MD5 9e35f6ed9dd9312fafd1fd5d2161a3cf files/jbidwatcher-0.9.8-javadoc.patch 1232
 MD5 1ad956dceb43c8e3683600af056217c1 jbidwatcher-0.9.7.1.ebuild 1169
 MD5 87ab883daca9c7942dec30618af87190 jbidwatcher-0.9.7.ebuild 1167
 MD5 bfecafc0a7b1fe53dcafb30caa41b75b jbidwatcher-0.9.8.ebuild 1456
-MD5 75de9ae8f00ef8773cc867cc83cac08d jbidwatcher-0.9.9.ebuild 1476
+MD5 658e67b76a26c5d162a8ec38e9ce05cc jbidwatcher-0.9.9.ebuild 1568
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDnK8FndWRXhKOboURAhpGAJ9N+HscJW13O8SnrAFGY82PgJRingCg5kb7
-ARYLlqWzQ1gyrpeAHVdNS/g=
-=3J/b
+iD8DBQFDnLBMndWRXhKOboURAlExAKDE/NvoKV9C9w1v5w+BF1caS77AkQCeNN+i
+Gwd7dNO/bNHgDa+V94B/eHA=
+=d2p6
 -----END PGP SIGNATURE-----

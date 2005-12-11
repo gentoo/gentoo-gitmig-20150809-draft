@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-0.9.9.ebuild,v 1.1 2005/12/11 22:56:51 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-0.9.9.ebuild,v 1.2 2005/12/11 23:02:52 nichoj Exp $
 
 inherit java-pkg eutils
 
 MY_PN=JBidWatcher
 MY_P=${MY_PN}-${PV}
-DESCRIPTION="Ebay Bidder Tools for Sniping"
-HOMEPAGE="http://jbidwatcher.sf.net/"
+DESCRIPTION="Java-based eBay bidding, sniping and tracking tool"
+HOMEPAGE="http://www.jbidwatcher.com/"
 SRC_URI="mirror://sourceforge/jbidwatcher/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,7 +23,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# TODO submit this patches upstream
+	# filed upstream at:
+	# http://sf.net/tracker/index.php?func=detail&aid=1334554&group_id=3914&atid=103914
 	use doc && epatch "${FILESDIR}/${PN}-0.9.8-javadoc.patch"
 
 	# Fix bad build.xml (used to be the sed magic below)
