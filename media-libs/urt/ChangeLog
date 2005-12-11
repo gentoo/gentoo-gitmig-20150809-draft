@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.22 2005/11/20 10:12:50 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.23 2005/12/11 23:12:33 spyderous Exp $
+
+  11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; urt-3.1b-r1.ebuild:
+  Add modular X dependencies.
 
   20 Nov 2005; Hardave Riar <hardave@gentoo.org> urt-3.1b-r1.ebuild:
   Stable on mips, dep for bug #109997.
