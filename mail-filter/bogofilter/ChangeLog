@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.45 2005/12/04 20:22:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.46 2005/12/11 14:15:34 tove Exp $
+
+  11 Dec 2005; Torsten Veller <tove@gentoo.org> bogofilter-0.92.8.ebuild:
+  uses always included gsl lib (bug #112638).
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> bogofilter-0.92.8.ebuild:
   stable on ppc64
