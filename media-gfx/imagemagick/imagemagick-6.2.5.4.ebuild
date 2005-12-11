@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.5.4.ebuild,v 1.3 2005/11/28 12:54:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.5.4.ebuild,v 1.4 2005/12/11 23:22:26 spyderous Exp $
 
 inherit eutils perl-app multilib
 
@@ -19,7 +19,14 @@ IUSE="bzip2 doc fpx graphviz gs jbig jpeg lcms mpeg nocxx perl png tiff truetype
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXext
+				x11-libs/libXt
+				x11-libs/libICE
+				x11-libs/libSM
+			)
+			virtual/x11
+		)
+	)
 	gs? ( virtual/ghostscript )
 	lcms? ( >=media-libs/lcms-1.06 )
 	mpeg? ( >=media-video/mpeg2vidcodec-12 )
@@ -36,7 +43,10 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	fpx? ( media-libs/libfpx )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	>=sys-devel/libtool-1.5.2-r6"
+	>=sys-devel/libtool-1.5.2-r6
+	X? ( || ( x11-proto/xextproto
+			virtual/x11 )
+	)"
 
 S=${WORKDIR}/${MY_P}
 
