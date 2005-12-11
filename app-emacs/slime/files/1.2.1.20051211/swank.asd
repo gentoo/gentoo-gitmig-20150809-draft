@@ -73,7 +73,7 @@
                        :defaults *load-truename*)
         :if-does-not-exist nil))
 
-(funcall (intern (string :warn-unimplemented-interfaces) :swank-backend))
+;; (funcall (intern (string :warn-unimplemented-interfaces) :swank-backend))
 
 (load-site-init-file)
 (load-user-init-file)

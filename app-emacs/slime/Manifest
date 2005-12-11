@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ff899c08193c4c52c7f4c79e2c6b0ed2 ChangeLog 6240
+MD5 a96f23e112c116e07b092e62888f08ba ChangeLog 6397
 MD5 ee1f66aba753cb513ec91d33210dc246 files/1.2.1.20050804/70slime-gentoo.el 569
 MD5 a6f665debad6ee005b99b5ae3d3aeedb files/1.2.1.20050804/README.Gentoo 349
 MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.2.1.20050804/swank-loader.lisp 68
@@ -9,7 +9,7 @@ MD5 80cd96bdd0caca9767147a2cf1f08769 files/1.2.1.20050804/swank.asd 2191
 MD5 ee1f66aba753cb513ec91d33210dc246 files/1.2.1.20051211/70slime-gentoo.el 569
 MD5 1ab5127efd37110d1dc0711ec5626a92 files/1.2.1.20051211/README.Gentoo 347
 MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.2.1.20051211/swank-loader.lisp 68
-MD5 3db8ecc0c00fcdc30651f1a5fb9cb8bf files/1.2.1.20051211/swank.asd 2158
+MD5 2fb7f0df5e95786860d421a83618720a files/1.2.1.20051211/swank.asd 2161
 MD5 5dc9040c865b8807c7a2ccb040587b2a files/digest-slime-1.2.1.20050804 150
 MD5 f5335ea0a6e7f6aab6972933dd924284 files/digest-slime-1.2.1.20051211 151
 MD5 185b50ff504c7da6807fffb4e73fc017 metadata.xml 1267
@@ -18,7 +18,7 @@ MD5 2ac38cb2bf7f7c9fa59f01b94fa3cbb5 slime-1.2.1.20051211.ebuild 1950
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDnHmqyiNZaEAZA+ARAq4YAJ41UOjBk36pStMnxj9+HzdhhBC8kwCeKxle
-lUQpRynuIZ4UzJkN9im1ZLc=
-=jAa7
+iD8DBQFDnH6HyiNZaEAZA+ARAgDrAJ91VmOECVBB8wRB3eK4kKtwNxIV7QCggdjr
+ZWnWz3UYJGBsAWGYIK/6DSo=
+=MZFs
 -----END PGP SIGNATURE-----
