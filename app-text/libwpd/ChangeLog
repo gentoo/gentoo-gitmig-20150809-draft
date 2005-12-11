@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.20 2005/12/04 19:45:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.21 2005/12/11 21:51:32 halcy0n Exp $
+
+  11 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/libwpd-0.8.2-gcc41.patch, libwpd-0.8.2.ebuild:
+  Add patch to fix compilation with gcc-4.1; Thanks to Stefan Vunckx
+  <stefan.vunckx AT skynet DOT be>; bug #113896
 
   04 Doc 2005; Tom Gall <tgall@gentoo.org> libwpd-0.8.2.ebuild:
   stable on ppc64

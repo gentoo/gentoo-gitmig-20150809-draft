@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.8.2.ebuild,v 1.6 2005/12/04 19:45:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.8.2.ebuild,v 1.7 2005/12/11 21:51:32 halcy0n Exp $
 
 inherit eutils
 
@@ -19,6 +19,12 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_compile() {
 	econf $(use_with doc docs) || die
