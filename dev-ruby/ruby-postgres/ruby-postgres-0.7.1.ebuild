@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.1.ebuild,v 1.6 2005/10/03 13:25:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.1.ebuild,v 1.7 2005/12/11 17:59:31 caleb Exp $
 
 DESCRIPTION="An extension library to access a PostgreSQL database from Ruby"
 HOMEPAGE="http://www.postgresql.jp/interfaces/ruby/"
@@ -18,5 +18,5 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 }
