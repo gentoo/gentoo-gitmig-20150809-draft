@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta6.ebuild,v 1.3 2005/07/09 16:04:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta6.ebuild,v 1.4 2005/12/11 06:27:22 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -16,7 +16,7 @@ IUSE="doc jikes source"
 RDEPEND="|| ( =virtual/jre-1.3* =virtual/jre-1.4* )
 	~dev-java/jdom-1.0_beta9
 	=dev-java/dom4j-1*
-	=dev-java/xerces-2.6*
+	>=dev-java/xerces-2.6
 	dev-java/xom"
 
 DEPEND="|| ( =virtual/jdk-1.3* =virtual/jdk-1.4* )
