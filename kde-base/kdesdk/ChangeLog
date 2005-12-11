@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.108 2005/12/10 02:58:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.109 2005/12/11 20:38:47 josejx Exp $
+
+  11 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdesdk-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> kdesdk-3.4.3.ebuild:
   Marked x86 stable for bug #112842.
