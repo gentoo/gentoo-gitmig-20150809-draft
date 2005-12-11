@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.8 2005/10/30 19:40:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.9 2005/12/11 18:06:54 nichoj Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/jakarta-regexp-1.3*
-	=dev-java/xerces-2.6*"
+	>=dev-java/xerces-2.6"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	dev-java/ant-core
