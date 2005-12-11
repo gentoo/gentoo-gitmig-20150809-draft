@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.26 2005/11/15 15:05:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.27 2005/12/11 09:37:04 blubb Exp $
+
+  11 Dec 2005; Simon Stelling <blubb@gentoo.org>
+  java-access-bridge-1.4.5-r1.ebuild:
+  stable on amd64
 
 *java-access-bridge-1.4.6 (15 Nov 2005)
 
