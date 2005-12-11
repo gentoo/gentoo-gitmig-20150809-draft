@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.10 2005/12/06 03:50:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.11 2005/12/11 16:53:06 nichoj Exp $
+
+  11 Dec 2005; Joshua Nichols <nichoj@gentoo.org> pmd-3.1.ebuild,
+  pmd-3.3.ebuild:
+  Relaxed xerces dependency.
 
 *pmd-3.3 (06 Dec 2005)
 
