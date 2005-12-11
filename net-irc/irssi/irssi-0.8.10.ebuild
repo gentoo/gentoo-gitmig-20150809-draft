@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc7.ebuild,v 1.2 2005/11/28 13:02:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10.ebuild,v 1.1 2005/12/11 12:44:22 swegener Exp $
 
 inherit perl-app eutils flag-o-matic
 
-MY_P="${P//_/-}"
-
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
-SRC_URI="http://irssi.org/files/${MY_P}.tar.gz"
+SRC_URI="http://irssi.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,8 +23,6 @@ RDEPEND="!net-irc/irssi-cvs
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	>=sys-apps/sed-4"
-
-S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -55,6 +51,7 @@ src_compile() {
 	econf \
 		--with-proxy \
 		--with-ncurses \
+		--with-perl-lib=vendor \
 		$(use_with perl) \
 		$(use_enable ipv6) \
 		$(use_with socks5 socks) \
