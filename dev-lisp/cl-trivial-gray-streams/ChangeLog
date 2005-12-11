@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-trivial-gray-streams
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-gray-streams/ChangeLog,v 1.1 2005/12/11 19:57:35 mkennedy Exp $
+
+*cl-trivial-gray-streams-20051204 (11 Dec 2005)
+
+  11 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-trivial-gray-streams-20051204.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+

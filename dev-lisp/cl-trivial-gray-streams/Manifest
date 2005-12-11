@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dcb62ed2f4764e537a0882ad943f483d ChangeLog 479
 MD5 70ea4254da6b869baa6f02db7e5df05c cl-trivial-gray-streams-20051204.ebuild 879
 MD5 78a2b4c5e7c61d55a8e372095ebb6c7c files/digest-cl-trivial-gray-streams-20051204 81
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnIS7yiNZaEAZA+ARAkRaAJ9rLbVeLoxCZ1WB3U++gFx7xYnFWQCeNVAE
+b4rhWQqv/p7wyOQQqGBwCXE=
+=dp03
+-----END PGP SIGNATURE-----
