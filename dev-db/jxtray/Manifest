@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4cd645107524554dbc8b864bcb242612 jxtray-0.5.ebuild 2360
-MD5 46914670b7c0631788ce983a7828b51b ChangeLog 1052
-MD5 f5ddd2d4a1069f3b3c4876d2be95eaff metadata.xml 581
-MD5 63dce73e99d8ec22a695238f0928b003 files/default.properties 109
+MD5 c3104c9a4e837e5abe6ef770a83f34c3 ChangeLog 1149
 MD5 97bb388f459c454b06a8276c62609259 files/build.xml 1599
+MD5 63dce73e99d8ec22a695238f0928b003 files/default.properties 109
 MD5 f84f96f0c025c480d3404ee1ad22e3fc files/digest-jxtray-0.5 64
+MD5 7651df9790e799ab4e92c8c9622f8393 jxtray-0.5.ebuild 2362
+MD5 f5ddd2d4a1069f3b3c4876d2be95eaff metadata.xml 581
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2Tb7/rLF9B432nYRAlg6AKCGeoyMgrh+qd+aCKOQyOFNwWsubgCgwCSa
-OGQ8KnxjCaDkJL49vvdJKnE=
-=t5kR
+iD8DBQFDnGb3ndWRXhKOboURAoaxAJ0TkkFoIN+sNoucGau+vD9UjG7LDgCgiXSQ
+P55aZkFErmC1EHgn94o0Zfo=
+=/3Ro
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.8 2005/07/16 16:33:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.9 2005/12/11 17:46:20 nichoj Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/kunststoff-2.0.2
 	dev-java/poi
 	dev-java/sax
-	=dev-java/xerces-2.6*
+	>=dev-java/xerces-2.6
 	dev-java/xml-commons
 	firebird? ( dev-java/jdbc3-firebird )
 	mssql? ( =dev-java/jtds-0.9* )
