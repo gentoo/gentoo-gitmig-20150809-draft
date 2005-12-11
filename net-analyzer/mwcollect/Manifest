@@ -1,21 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2f914ba64220a4bd1b5850649c50924b ChangeLog 1191
+MD5 507f32e267ea406e65dffe7359b55fd9 ChangeLog 1474
 MD5 dd4aab16ffc56b3eecd0fa6e3ea536b3 files/confd 560
 MD5 ee61af624456e7fc0ea870d40435fd70 files/digest-mwcollect-2.1.1 66
 MD5 e25a6bca07df41cad22a6901a200651a files/digest-mwcollect-2.1.2 66
 MD5 e5858653fce66aec74497f826c24257b files/digest-mwcollect-3.0.0 67
+MD5 f2249b3f742943a9e4f421794c2e4a23 files/digest-mwcollect-3.0.1 67
 MD5 1db05efae9034e8595129e4bf2dd285c files/initd 782
 MD5 5d6b56a56d282b0e9919fd25dd1bc421 files/mwcollect-3.0.0-capacity.patch 676
+MD5 5d6b56a56d282b0e9919fd25dd1bc421 files/mwcollect-3.0.1-capacity.patch 676
+MD5 a726dc4579be24a9807e0ff2f1d8aeab files/mwcollect-3.0.1-modules.patch 1690
+MD5 8bb6090bb13375663448daa4eadcc207 files/mwcollect-3.0.1-pic.patch 382
 MD5 d6686b70beeb04333a23a1bcf7cedffd metadata.xml 434
 MD5 ff8c0112b4a425afa749446d3af74091 mwcollect-2.1.1.ebuild 1254
 MD5 4057526152e96a533f54cdd4b2d8fc11 mwcollect-2.1.2.ebuild 1254
 MD5 2ce40151fe7d2baaf67a5a8172553ae4 mwcollect-3.0.0.ebuild 1570
+MD5 56f9832b42d0fcbbd29fe9ac3a428d1c mwcollect-3.0.1.ebuild 1813
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmbASI1lqEGTUzyQRApUGAJ9DX812jgopRkX6XMEvFD+doURb4ACg0BIQ
-//mV89yq3doHhrPzGcB9eoc=
-=FNh9
+iD8DBQFDm5cMFdQwWVoAgN4RAqIwAJ4zjIfsnYjY9vAhD20XgxZAQlsyqACfSSeg
+klzJqfqZJ38tCDsYT/3mmLo=
+=0THh
 -----END PGP SIGNATURE-----

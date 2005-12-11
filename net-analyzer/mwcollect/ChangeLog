@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/mwcollect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.5 2005/09/23 03:35:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.6 2005/12/11 03:03:22 chriswhite Exp $
+
+*mwcollect-3.0.1 (11 Dec 2005)
+
+  11 Dec 2005; Chris White <chriswhite@gentoo.org>
+  +files/mwcollect-3.0.1-capacity.patch,
+  +files/mwcollect-3.0.1-modules.patch, +files/mwcollect-3.0.1-pic.patch,
+  +mwcollect-3.0.1.ebuild:
+  Version bump.  Thanks to upstream for letting me know.
 
 *mwcollect-2.1.2 (23 Sep 2005)
 
