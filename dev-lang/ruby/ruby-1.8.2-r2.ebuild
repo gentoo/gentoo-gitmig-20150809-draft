@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2-r2.ebuild,v 1.3 2005/09/23 01:09:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2-r2.ebuild,v 1.4 2005/12/11 18:16:51 caleb Exp $
 
 ONIGURUMA="onigd2_4_0"
 
@@ -98,6 +98,11 @@ src_install() {
 	export LD_LIBRARY_PATH RUBYLIB
 
 	make DESTDIR=${D} install || die "make install failed"
+
+	if use doc; then
+		make DESTDIR=${D} install-doc || die "make install-doc failed"
+	fi
+
 
 	if use ppc-macos ; then
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib

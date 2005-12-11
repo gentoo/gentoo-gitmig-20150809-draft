@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.170 2005/12/07 11:25:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.171 2005/12/11 18:16:51 caleb Exp $
+
+  11 Dec 2005; Caleb Tennis <caleb@gentoo.org> ruby-1.8.2-r2.ebuild,
+  ruby-1.8.3.ebuild, ruby-1.8.4_pre2.ebuild:
+  Patch ebuilds to install ri docs if doc use flag is installed
 
   07 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4_pre2.ebuild:
   Make it multilib-strict capable. It might not be 100% complete for
