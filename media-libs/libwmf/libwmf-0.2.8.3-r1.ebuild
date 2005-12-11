@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.3 2005/08/21 14:40:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.4 2005/12/11 23:25:02 spyderous Exp $
 
 inherit libtool
 
@@ -24,7 +24,14 @@ RDEPEND="virtual/ghostscript
 	sys-libs/zlib
 	media-libs/libpng
 	jpeg? ( media-libs/jpeg )
-	X? ( virtual/x11 )
+	X? ( || ( (
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libX11
+			)
+			virtual/x11
+		)
+	)
 	gtk? ( >=x11-libs/gtk+-2.1.2 ) "
 DEPEND="$RDEPEND
 	dev-util/pkgconfig"

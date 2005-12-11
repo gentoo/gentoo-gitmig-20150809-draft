@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.28 2005/08/21 14:40:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.29 2005/12/11 23:25:02 spyderous Exp $
+
+  11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  libwmf-0.2.8.3-r1.ebuild:
+  Add modular X dependencies.
 
   21 Aug 2005; Fabian Groffen <grobian@gentoo.org> libwmf-0.2.8.3-r1.ebuild:
   Marking ~ppc-macos
