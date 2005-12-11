@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.104 2005/12/09 19:28:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.105 2005/12/11 08:14:29 spyderous Exp $
+
+  11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; xpdf-3.01-r3.ebuild:
+  Add modular X dependencies.
 
   09 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> xpdf-3.01-r3.ebuild:
   Stable on hppa, ppc. See bug #114428.
