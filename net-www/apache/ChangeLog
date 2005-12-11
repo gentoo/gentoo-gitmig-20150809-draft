@@ -1,6 +1,12 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.431 2005/12/04 08:19:11 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.432 2005/12/11 03:01:15 vericgar Exp $
+
+  11 Dec 2005; Michael Stewart <vericgar@gentoo.org>
+  apache-2.0.54-r31.ebuild, apache-2.0.55.ebuild:
+  Remove generated/unused mime.types to fix bug 108200. Fix enewgroup/enewuser
+  call location so that we work when installed from a binary package - fixes
+  bug 110636.
 
 *apache-1.3.33-r13 (04 Dec 2005)
 

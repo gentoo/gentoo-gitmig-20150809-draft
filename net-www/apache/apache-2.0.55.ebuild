@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.55.ebuild,v 1.2 2005/10/23 23:23:45 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.55.ebuild,v 1.3 2005/12/11 03:01:15 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -264,6 +264,7 @@ src_install () {
 	mv usr/sbin/envvars* usr/$(get_libdir)/apache2/build
 	dodoc etc/apache2/*-std.conf
 	rm -f etc/apache2/*.conf
+	rm -f etc/apache2/mime.types
 	rm -rf var/run var/log
 
 	# we DEPEND on net-www/gentoo-webroot-default for sharing this by now
@@ -306,8 +307,12 @@ src_install () {
 }
 
 pkg_postinst() {
+	# setup apache user and group
+	# we do this twice for binary packages
+	enewgroup apache 81
+	enewuser apache 81 -1 /var/www apache
 
-	# Automatically generate test ceritificates if ssl USE flag is beeing set
+	# Automatically generate test ceritificates if ssl USE flag is being set
 	if useq ssl -a !-e ${ROOT}/etc/apache2/ssl/server.crt; then
 		cd ${ROOT}/etc/apache2/ssl
 		einfo
