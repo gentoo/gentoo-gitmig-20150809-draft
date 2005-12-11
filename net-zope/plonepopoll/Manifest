@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8c3e1673c6fbabc22c12c42a59a2ebf plonepopoll-2.3.ebuild 556
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 d17c41e6aa33098f91569e2fafeee8e6 ChangeLog 535
+MD5 d79bf26fb9df8a9491be2c8901d9aaee ChangeLog 644
 MD5 91d89c89beed872376f70a486c4b4875 files/digest-plonepopoll-2.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK2JKLLFUmVNQ7rkRAg9vAKCHR9qZKrMbeBzGoM+dLmdyURvGTwCfVIoy
-f0eWMfEYfe4fgsCwOfI6cP0=
-=u0Ny
------END PGP SIGNATURE-----
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 23bdc832a17f773c650f6a15fc09f471 plonepopoll-2.3.ebuild 562
