@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/cooledit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.10 2005/10/04 13:45:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.11 2005/12/11 20:15:34 josejx Exp $
+
+  11 Dec 2005; Joseph Jezak <josejx@gentoo.org> cooledit-3.17.7.ebuild:
+  Marked ppc stable for bug #112419.
 
   04 Oct 2005; Luis Medinas <metalgod@gentoo.org> cooledit-3.17.12.ebuild:
   Added ~amd64 keyword.
