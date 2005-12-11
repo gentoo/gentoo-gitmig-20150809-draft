@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4754 2005/12/10 18:27:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4755 2005/12/11 14:34:24 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matthias Schwarzott <zzam@gentoo.org> (11 Dec 2005)
+# Buggy version does not compile with newer 2.4-Kernels, will be removed.
+=media-tv/linuxtv-dvb-1.0.1
 
 # Roy Marples <uberlord@gentoo.org> (09 Dec 2005)
 # Masked for testing
