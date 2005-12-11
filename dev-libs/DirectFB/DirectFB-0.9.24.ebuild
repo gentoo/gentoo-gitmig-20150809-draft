@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.24.ebuild,v 1.1 2005/10/28 00:21:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.24.ebuild,v 1.2 2005/12/11 17:11:30 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -95,12 +95,8 @@ src_compile() {
 }
 
 src_install() {
-	insinto /etc
-	doins fb.modes
-
 	make DESTDIR="${D}" install || die "make install failed"
-
-	dodoc AUTHORS ChangeLog NEWS README* TODO
+	dodoc fb.modes AUTHORS ChangeLog NEWS README* TODO
 	dohtml -r docs/html/*
 }
 
