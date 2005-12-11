@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 4113af5bfc20d2738c9ddb6b955418e9 pauker-1.5.ebuild 780
-MD5 3d08d7aaff1ecab96509e1a461eff00f ChangeLog 854
+MD5 33f2f211e2336c138d4e13610b615deb ChangeLog 972
+MD5 323cf9d9856363c58731f1fab89a0d23 pauker-1.6.ebuild 780
+MD5 6d7cb8b0bb59307be37c8120fd0c6d95 files/digest-pauker-1.6 60
 MD5 44ba85973bc9d49e182994687532ccbb files/digest-pauker-1.5 60
