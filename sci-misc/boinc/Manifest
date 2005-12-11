@@ -1,9 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3fa51d083f27f623ef8ff3ff7257da0c ChangeLog 3784
+MD5 c8aef4af75c0ec92d841819c55edfe0f ChangeLog 3969
 MD5 2e4104084577e624961e3622335525e5 boinc-4.72.20050813-r3.ebuild 2323
-MD5 42f12ca0814942fcc1d29b9971ca4285 boinc-5.2.14.ebuild 2331
+MD5 3356cfae15b028ba11bb777339309196 boinc-5.2.14.ebuild 2373
+MD5 52c02ebc56426be6995963efa6cdd075 files/08_all_Makefile.patch 792
 MD5 603e1bde6bb2873a014b6b8984e21564 files/boinc-4.72.20050813-gcc4-fix.patch 315
 MD5 5418cddcce4923a19fdf0c6bafea11bf files/boinc.conf 440
 MD5 2e064f401619e4905a21342edec0f4e7 files/boinc.init 1732
@@ -13,7 +14,7 @@ MD5 4b2e94b92c84896e0204d9e7710f9c6a metadata.xml 420
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDlIgxntT9W3vfTuoRApaqAKCimc7BbE5w7iabPIDIytkJprRJXACfWjb6
-m53XKFc5tN4B4c6nWvHVxAU=
-=VVvi
+iD8DBQFDnJjqntT9W3vfTuoRAh21AKCmCTug1XnbSKqg6P6Be30ZeefGdQCcDLLg
+pA0zDVGz7FGf8YQFYJf8eEM=
+=axEd
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.16 2005/12/05 18:34:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.17 2005/12/11 21:23:28 cryos Exp $
+
+  11 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/08_all_Makefile.patch, boinc-5.2.14.ebuild:
+  Added patch to allow linking on systems with older boinc versions installed.
 
 *boinc-5.2.14 (05 Dec 2005)
 
