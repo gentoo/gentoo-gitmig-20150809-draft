@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-9999.ebuild,v 1.3 2005/12/03 13:42:43 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-9999.ebuild,v 1.4 2005/12/12 16:31:19 brix Exp $
 
 inherit linux-mod cvs
 
-ECVS_SERVER="savannah.nongnu.org:/cvsroot/orinoco"
+ECVS_SERVER="cvs.savannah.nongnu.org:/sources/orinoco"
 ECVS_MODULE="orinoco"
-ECVS_AUTH="ext"
-ECVS_USER="anoncvs"
-ECVS_SSH_HOST_KEY="savannah.nongnu.org,199.232.41.4 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAzFQovi+67xa+wymRz9u3plx0ntQnELBoNU4SCl3RkwSFZkrZsRTC0fTpOKatQNs1r/BLFoVt21oVFwIXVevGQwB+Lf0Z+5w9qwVAQNu/YUAFHBPTqBze4wYK/gSWqQOLoj7rOhZk0xtAS6USqcfKdzMdRWgeuZ550P6gSzEHfv0="
+ECVS_AUTH="pserver"
+ECVS_USER="anonymous"
 
 S=${WORKDIR}/${ECVS_MODULE}
 
