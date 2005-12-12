@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.26 2005/11/02 01:36:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.27 2005/12/12 00:14:27 spyderous Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -15,7 +15,16 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="sdl X"
 
 DEPEND="sdl? ( media-libs/libsdl )
-	X? ( virtual/x11 )"
+	X? ( || ( (
+				x11-libs/libXv
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXt
+				x11-proto/xextproto
+			)
+			virtual/x11
+		)
+	)"
 
 S="${WORKDIR}/${MY_P/b/}"
 
