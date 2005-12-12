@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.32 2005/12/12 01:56:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.33 2005/12/12 01:59:27 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -20,6 +20,8 @@
 # If you're creating a font package and the suffix of PN is not equal to the
 # subdirectory of /usr/share/fonts/ it should install into, set FONT_DIR to that
 # directory or directories.
+#
+# IMPORTANT: Both SNAPSHOT and FONT_DIR must be set _before_ the inherit.
 #
 # Pretty much everything else should be automatic.
 
