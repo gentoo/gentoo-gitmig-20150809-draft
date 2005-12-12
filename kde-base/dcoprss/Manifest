@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 54010a989a88c644ca86225479e19b01 ChangeLog 4136
 MD5 f74830c2332cb73eaf3d752315fcecbd dcoprss-3.4.1.ebuild 535
 MD5 aab32ce961f67617b84a367ea2595564 dcoprss-3.4.2.ebuild 550
@@ -8,3 +11,10 @@ MD5 1277f401bade54acfa086cf013950252 files/digest-dcoprss-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-dcoprss-3.4.3 70
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-dcoprss-3.5.0 70
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnbOdcsIHjyDViGQRAo+iAKDaVoC1kZezOCvKsuR1BP6VYtnIdACfVT8p
+guwTG8H/wV60mslv0kLaK1w=
+=dJUe
+-----END PGP SIGNATURE-----

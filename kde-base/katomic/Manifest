@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66b17ca28f08e5f89eaa45883b7e27b4 ChangeLog 4153
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-katomic-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-katomic-3.4.2 288
@@ -8,3 +11,10 @@ MD5 b53bd421e8f19c681dc48b9f56bf99d9 katomic-3.4.2.ebuild 555
 MD5 c697c380dee04fb4334d8c930ee91972 katomic-3.4.3.ebuild 549
 MD5 f38de4e2b8f9ff9fc12d73785bb94aa8 katomic-3.5.0.ebuild 511
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnaKJcsIHjyDViGQRAs/tAKDUpGcbnYXrg1hmpkg9+APi4MLKtACg4hmf
+CRPl0AwIXQIsN9zpUCdKgMs=
+=syJY
+-----END PGP SIGNATURE-----

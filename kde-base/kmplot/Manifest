@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9816855a2abaf4b4926f05789fc69078 ChangeLog 4084
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kmplot-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kmplot-3.4.2 282
@@ -8,3 +11,10 @@ MD5 fda73ec9cd11ff1b3a8c94c2f57ab4c2 kmplot-3.4.2.ebuild 412
 MD5 44df7fbdcc3a2031d8ec24b91db16b4c kmplot-3.4.3.ebuild 406
 MD5 c0e6d84725515421fc8d27368005d5d9 kmplot-3.5.0.ebuild 405
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnayDcsIHjyDViGQRAsvxAKDaIZuHt0qWPhxmfu/+vJSoZAud8ACfXoG0
+EkcvHB1AdOHIkNsZb1MgUDk=
+=680r
+-----END PGP SIGNATURE-----

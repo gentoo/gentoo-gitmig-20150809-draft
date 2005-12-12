@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2ebd211d42490e074d2a4ae611707b3a ChangeLog 4448
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kviewshell-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kviewshell-3.4.2 300
@@ -9,3 +12,10 @@ MD5 bf8cd2a605ca59751c3572a7c340f611 kviewshell-3.4.2.ebuild 479
 MD5 e6377268df0295a4efee03ef330fe7c3 kviewshell-3.4.3.ebuild 425
 MD5 3159ed553ccd79bda5a307830f5ba8a6 kviewshell-3.5.0.ebuild 425
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnbDBcsIHjyDViGQRAuubAKCuto7jksW1OQx22p00qhltVAG1hwCbB9Ss
+Qi3yw2QYfX+8mlqiAxAiZfA=
+=9RPn
+-----END PGP SIGNATURE-----

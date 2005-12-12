@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0480a7694588176a80fc0881afd9a67c ChangeLog 1233
 MD5 1390d494cfb292f8215c6031d522cca8 blinken-3.5.0.ebuild 404
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-blinken-3.5.0 67
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDna7jcsIHjyDViGQRAqJFAJ9efcRqRkTYxhMyq0N4zqtAJWLs8QCgo0gj
+7DvyNs6W5yurctqHbhk6+6U=
+=HlLg
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 91b8b4d5373ba4253f3c055a4a53c322 ChangeLog 4436
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-libkcddb-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-libkcddb-3.4.2 308
@@ -8,3 +11,10 @@ MD5 fc11b71c2ca8dc699727bcfe4139ad30 libkcddb-3.4.2.ebuild 402
 MD5 04c58d89b476043fc9b1407efabcbe79 libkcddb-3.4.3.ebuild 397
 MD5 1c96188fff043f855c6bee6a4f149d43 libkcddb-3.5.0.ebuild 395
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnaXbcsIHjyDViGQRAuThAKCEoCeMs90IdIrywTWOE49Au1w8ugCfbqYw
+5seexIu1HlsFSr1QutkxJ8s=
+=KGs7
+-----END PGP SIGNATURE-----

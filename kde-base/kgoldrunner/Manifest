@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a06b6469b7c123a69b35c24cb981d23 ChangeLog 4349
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kgoldrunner-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kgoldrunner-3.4.2 288
@@ -8,3 +11,10 @@ MD5 12918bb501998be21add2060085e314b kgoldrunner-3.4.2.ebuild 593
 MD5 8b60152724aa285f8daa1213c0f5f9e1 kgoldrunner-3.4.3.ebuild 587
 MD5 ab076c365a40fb037fdb52c78d79803f kgoldrunner-3.5.0.ebuild 547
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnaB/csIHjyDViGQRAjCDAJwI16tndSRTPjJ7bgGwlrQqtQEKfgCeMwVC
+kaRNgeT6I758KVAxrwv/ROo=
+=h9BW
+-----END PGP SIGNATURE-----

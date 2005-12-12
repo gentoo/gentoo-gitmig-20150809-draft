@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a2138fc2a1229503435c5644d068a14 ChangeLog 6088
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kscreensaver-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kscreensaver-3.4.2 298
@@ -12,3 +15,10 @@ MD5 c63624b52624e2ed23a1a06aa27452e4 kdeartwork-kscreensaver-3.4.2.ebuild 1062
 MD5 35e02264092fd3402c78887096abd562 kdeartwork-kscreensaver-3.4.3.ebuild 933
 MD5 0f0e987713a0a58a9a22666e795cfbef kdeartwork-kscreensaver-3.5.0.ebuild 773
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnZxrcsIHjyDViGQRAso8AJ9DX32h+PIGc2EdFKEgJ4uV6ujeyACeNnmT
+wPmpjmwhMWwDgH8RcJTGkgo=
+=2NkF
+-----END PGP SIGNATURE-----

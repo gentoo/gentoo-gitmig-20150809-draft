@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e469e06d597c8b89569e2943e93734b0 ChangeLog 4115
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpat-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpat-3.4.2 288
@@ -8,3 +11,10 @@ MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.2.ebuild 616
 MD5 72e2d4bb6c9719c2fa8f4f85639e942d kpat-3.4.3.ebuild 610
 MD5 55ea9c6de161d700f5db877adb6a3c80 kpat-3.5.0.ebuild 570
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnZ9kcsIHjyDViGQRAuq/AKDp9uj3yMvlIeaHV83JoymIu7FnZwCg548h
+kcfODbxbr906DXj0RFQEC6I=
+=9mGc
+-----END PGP SIGNATURE-----

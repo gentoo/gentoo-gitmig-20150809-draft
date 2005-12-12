@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 407b1a760bf44c8c903443fc85aaa042 ChangeLog 4286
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-krdc-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-krdc-3.4.2 296
@@ -8,3 +11,10 @@ MD5 791727c7f81ac5267426f868db432175 krdc-3.4.2.ebuild 636
 MD5 82353cd7c16a964c04be09b2cc3d0b59 krdc-3.4.3.ebuild 627
 MD5 b330ee5ee3376e5416154379f63db09d krdc-3.5.0.ebuild 626
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnbL9csIHjyDViGQRAiLuAJ0eknntOTF2xLH9AIh3o9gvee6d1QCfaEuM
+mw5cZ9xPspEzOpU11b/a2Wk=
+=h0yU
+-----END PGP SIGNATURE-----

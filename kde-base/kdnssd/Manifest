@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7bd97f26e509985a0a345d77d64b01df ChangeLog 3994
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdnssd-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-kdnssd-3.4.2 296
@@ -6,3 +9,10 @@ MD5 b347b6571ea46568938d0742ca46e5c8 kdnssd-3.4.1.ebuild 439
 MD5 f06e177c80db5cb8af4877966827bae4 kdnssd-3.4.2.ebuild 448
 MD5 deceb7a060ec3d2c694c5a8cea3a73c6 kdnssd-3.5.0.ebuild 445
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnbQ8csIHjyDViGQRAiVAAJ9WcZK3sxRjkdRSnhmgw5dE3KnJlQCgm3SA
+KbLIPZFw0cMb2pL8H/sDUIM=
+=hjQK
+-----END PGP SIGNATURE-----

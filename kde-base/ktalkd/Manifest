@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 457ec33246dd8bfa5df5f1c3541ea99e ChangeLog 3827
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-ktalkd-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-ktalkd-3.4.2 296
@@ -6,3 +9,10 @@ MD5 31bbc0147664aff938ed4bce7ef0044d ktalkd-3.4.1.ebuild 410
 MD5 6952bebee2f3ae8c5e0cb4cc40fc0be7 ktalkd-3.4.2.ebuild 420
 MD5 bc09e7c775624f4c6c11bc726a255b1f ktalkd-3.5.0.ebuild 416
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnbPFcsIHjyDViGQRAidsAJ0TMoqXFNqqaY90Qibi27JWuqs6ewCeOU5p
+1g7pKH2a/4o5Akv2Qq+hLbY=
+=4nK2
+-----END PGP SIGNATURE-----

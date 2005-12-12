@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d5b80a3c70fde742074d2e4d66fe3f93 ChangeLog 4403
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kaboodle-3.4.1 227
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kaboodle-3.4.3 73
@@ -6,3 +9,10 @@ MD5 7f47254e7da51f10ee99acdf0f9f6a62 kaboodle-3.4.1.ebuild 1094
 MD5 26c2479e672f24bbdd502b836887786b kaboodle-3.4.3.ebuild 1124
 MD5 4683aab3b903614d96ce1ac11a953988 kaboodle-3.5.0.ebuild 693
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnahOcsIHjyDViGQRAgwwAJ0bvxuyurYSHjoZaXvsIhYszHG1IACcCQV+
+A/dLjDL4QJ/hr+aLW36PSic=
+=2wZg
+-----END PGP SIGNATURE-----

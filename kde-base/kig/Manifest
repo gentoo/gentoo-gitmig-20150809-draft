@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4ce646a584c46a2ca49eba30322edfd2 ChangeLog 5152
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1 208
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1-r10 208
@@ -12,3 +15,10 @@ MD5 5f7cc0b78746a4901f1f2ad2f507fbec kig-3.4.3-r10.ebuild 555
 MD5 9c7be46c69e5bcb19aced09d8b875f0a kig-3.4.3.ebuild 647
 MD5 5550e4e971d2e67756f5a78264b1c9a7 kig-3.5.0.ebuild 549
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDna0JcsIHjyDViGQRAidkAJ9JcuofUSYM2QjR4Mi+zychEDabZQCfW6Aj
+Uy6rGHgrrMw1o92W4tj26y4=
+=CNPU
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aa7a5c5a07b0dca144a29cf5b4250bf9 ChangeLog 3851
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-keduca-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-keduca-3.4.2 282
@@ -6,3 +9,10 @@ MD5 113baec7e490835c4b0240eae6d7ce44 keduca-3.4.1.ebuild 405
 MD5 4a51668360205ebac3fdcf0b68f34ef8 keduca-3.4.2.ebuild 414
 MD5 90303d8b59f30d24c293429a8bd52927 keduca-3.5.0.ebuild 411
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnayrcsIHjyDViGQRAi49AKCft6nFw5VISF2bFxG3MWGXupQihgCgncuj
+VeJa4I8Rg8FtMl5W3m6FtWg=
+=6emh
+-----END PGP SIGNATURE-----

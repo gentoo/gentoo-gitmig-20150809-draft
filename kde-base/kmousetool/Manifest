@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9640bb77cbc555e7acab08e3c8cc5c51 ChangeLog 4270
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmousetool-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmousetool-3.4.2 320
@@ -8,3 +11,10 @@ MD5 8ec595992afa616499f9582a9684c792 kmousetool-3.4.2.ebuild 443
 MD5 f5e24ce7addd428ad4f69afe471390b0 kmousetool-3.4.3.ebuild 437
 MD5 9b0d985a498f4a8540c67940985416dc kmousetool-3.5.0.ebuild 436
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnZ0ycsIHjyDViGQRAjvqAKCIpO3yC4JKAHkJR/rYCMRcu3EwZQCfTlIT
+0pzfhUuBeHK5xHAm45GkVmA=
+=urB7
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8a9a8abb429a9ffd9f910f42dc216b1 ChangeLog 4084
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kmines-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kmines-3.4.2 288
@@ -8,3 +11,10 @@ MD5 937699e6622a4e1f1f41a2c308825a81 kmines-3.4.2.ebuild 564
 MD5 e0f7b42f39635d4e083378dd7960e433 kmines-3.4.3.ebuild 558
 MD5 053be5267471b3a5dfc28ee24b78e341 kmines-3.5.0.ebuild 518
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnaDOcsIHjyDViGQRAoIJAKCwWul3bfW/EABSmmw3Fy+5oY7nYQCdHUdK
+J+ryJCrOsAhul0U8dmcFupY=
+=VR3w
+-----END PGP SIGNATURE-----

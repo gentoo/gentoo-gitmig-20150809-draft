@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d5392033c37324379d7fc899d53379b1 ChangeLog 4529
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kasteroids-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kasteroids-3.4.2 288
@@ -8,3 +11,10 @@ MD5 c4beacc55130d4dcb9ad3413cc7722c5 kasteroids-3.4.2.ebuild 703
 MD5 f79b590785cfc5e86906c9f527e2ea8f kasteroids-3.4.3.ebuild 697
 MD5 b8fc97586ba3e353e2b570c5b9a9b09b kasteroids-3.5.0.ebuild 659
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnaD3csIHjyDViGQRAmf+AJ4jxkJcHGAal5qgwbA0P1Fo2ggTWACbB1DC
+B6xynilz/o0huxRhnJp4FD0=
+=dpBI
+-----END PGP SIGNATURE-----
