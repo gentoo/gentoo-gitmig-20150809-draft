@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.9 2005/12/11 18:22:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.10 2005/12/12 10:15:56 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -230,7 +230,8 @@ src_unpack() {
 	rm -f scripts/mysqlbug
 
 	# Multilib issue with zlib detection
-	sed -i -e "s:zlib_dir/lib:zlib_dir/$(get_libdir):g" \
+	mysql_version_is_at_least "5.00.15.00" \
+	&& sed -i -e "s:zlib_dir/lib:zlib_dir/$(get_libdir):g" \
 		"${S}/config/ac-macros/zlib.m4"
 
 	# Make charsets install in the right place
@@ -707,117 +708,102 @@ pkg_config() {
 		die "Minimal builds do NOT include the MySQL server"
 	fi
 
-	local menusel
+	local pwd1="a"
+	local pwd2="b"
+	local maxtry=5
 
-	cat <<-EOF
-	 ========
-	||
-	|| 1) Create system database
-	|| 2) [TODO] Copy needed file to chroot
-	|| 3) [TODO] Make the default server (symlink)
+	if [[ -d "${ROOT}/${DATADIR}/mysql" ]] ; then
+		ewarn "You have already a MySQL database in place."
+		ewarn "(${ROOT}/${DATADIR}/*)"
+		ewarn "Please rename or delete it if you wish to replace it."
+		die "MySQL database already exists!"
+	fi
 
-	EOF
+	einfo "Creating the mysql database and setting proper"
+	einfo "permissions on it..."
 
-	read menusel
-	echo
-	[[ -z "${menusel}" ]] || [[ "${menusel}" == 0 ]] && return 0
-	if [[ "${menusel}" == '1' ]]
-	then
-		local pwd1="a"
-		local pwd2="b"
-		local maxtry=5
+	einfo "Insert a password for the mysql 'root' user"
+	ewarn "Avoid [\"'\\_%] characters in the password"
 
-		if [[ -d "${ROOT}/${DATADIR}/mysql" ]] ; then
-			ewarn "You have already a MySQL database in place."
-			ewarn "(${ROOT}/${DATADIR}/*)"
-			ewarn "Please rename or delete it if you wish to replace it."
-			die "MySQL database already exists!"
+	read -rsp "    >" pwd1 ; echo
+	einfo "Check the password"
+	read -rsp "    >" pwd2 ; echo
+
+	if [[ "x$pwd1" != "x$pwd2" ]] ; then
+		die "Passwords are not the same"
+	fi
+
+	local options=""
+	local sqltmp="$(emktemp)"
+
+	local help_tables="${ROOT}/usr/share/doc/mysql-${PVR}/scripts/fill_help_tables.sql.gz"
+	[[ -r "${help_tables}" ]] \
+	&& zcat "${help_tables}" > "${TMPDIR}/fill_help_tables.sql" \
+	|| touch "${TMPDIR}/fill_help_tables.sql"
+	help_tables="${TMPDIR}/fill_help_tables.sql"
+
+	pushd "${TMPDIR}"
+	${ROOT}/usr/bin/mysql_install_db${MY_SUFFIX} | grep -B5 -A999 -i "ERROR"
+	popd
+	[[ -f ${ROOT}/${DATADIR}/mysql/user.frm ]] 	|| die "MySQL databases not installed"
+	chown -R mysql:mysql ${ROOT}/${DATADIR} 2> /dev/null
+	chmod 0750 ${ROOT}/${DATADIR} 2> /dev/null
+
+	if mysql_version_is_at_least "4.01.03.00" ; then
+		options="--skip-ndbcluster"
+
+		# Filling timezones, see
+		# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
+		${ROOT}/usr/bin/mysql_tzinfo_to_sql${MY_SUFFIX} ${ROOT}/usr/share/zoneinfo \
+		> "${sqltmp}" 2>&1 | grep -v "Skipping it."
+
+		if [[ -r "${help_tables}" ]] ; then
+			cat "${help_tables}" >> "${sqltmp}"
 		fi
+	fi
 
-		einfo "Creating the mysql database and setting proper"
-		einfo "permissions on it..."
+	local socket=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
+	local pidfile=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
+	local mysqld="${ROOT}/usr/sbin/mysqld${MY_SUFFIX} \
+		${options} \
+		--user=mysql \
+		--skip-grant-tables \
+		--basedir=${ROOT}/usr \
+		--datadir=${ROOT}/${DATADIR} \
+		--skip-innodb \
+		--skip-bdb \
+		--skip-networking \
+		--max_allowed_packet=8M \
+		--net_buffer_length=16K \
+		--socket=${socket} \
+		--pid-file=${pidfile}"
+	$mysqld &
+	while ! [[ -S "${socket}" || "${maxtry}" -lt 1 ]] ; do
+		maxtry=$(($maxtry-1))
+		echo -n "."
+		sleep 1
+	done
 
-		einfo "Insert a password for the mysql 'root' user"
-		ewarn "Avoid [\"'\\_%] characters in the password"
+	# do this from memory we don't want clear text password in temp files
+	local sql="UPDATE mysql.user SET Password = PASSWORD('${pwd1}') WHERE USER='root'"
+	${ROOT}/usr/bin/mysql${MY_SUFFIX} \
+		--socket=${socket} \
+		-hlocalhost \
+		-e "${sql}"
 
-		read -rsp "    >" pwd1 ; echo
-		einfo "Check the password"
-		read -rsp "    >" pwd2 ; echo
+	einfo "Loading \"zoneinfo\" this step may require few seconds"
 
-		if [[ "x$pwd1" != "x$pwd2" ]] ; then
-			die "Passwords are not the same"
-		fi
+	${ROOT}/usr/bin/mysql${MY_SUFFIX} \
+		--socket=${socket} \
+		-hlocalhost \
+		-uroot \
+		-p"${pwd1}" \
+		mysql < "${sqltmp}"
 
-		chown -R mysql:mysql ${ROOT}/${DATADIR}
-		chmod 0750 ${ROOT}/${DATADIR}
-
-		local options=""
-		local sqltmp="$(emktemp)"
-
-		local help_tables="${ROOT}/usr/share/doc/mysql-${PVR}/scripts/fill_help_tables.sql.gz"
-		[[ -r "${help_tables}" ]] \
-		&& zcat "${help_tables}" > "${TMPDIR}/fill_help_tables.sql" \
-		|| touch "${TMPDIR}/fill_help_tables.sql"
-		help_tables="${TMPDIR}/fill_help_tables.sql"
-
-		pushd "${TMPDIR}"
-		${ROOT}/usr/bin/mysql_install_db${MY_SUFFIX} || die "MySQL databases not installed"
-		popd
-
-		if mysql_version_is_at_least "4.01.03.00" ; then
-			options="--skip-ndbcluster"
-
-			# Filling timezones, see
-			# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
-			${ROOT}/usr/bin/mysql_tzinfo_to_sql${MY_SUFFIX} ${ROOT}/usr/share/zoneinfo \
-			> "${sqltmp}"
-
-			if [[ -r "${help_tables}" ]] ; then
-				cat "${help_tables}" >> "${sqltmp}"
-			fi
-		fi
-
-		local socket=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
-		local pidfile=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
-		local mysqld="${ROOT}/usr/sbin/mysqld${MY_SUFFIX} \
-			${options} \
-			--skip-grant-tables \
-			--basedir=${ROOT}/usr \
-			--datadir=${ROOT}/${DATADIR} \
-			--skip-innodb \
-			--skip-bdb \
-			--max_allowed_packet=8M \
-			--net_buffer_length=16K \
-			--socket=${socket} \
-			--pid-file=${pidfile}"
-
-		$mysqld &
-		while ! [[ -S "${socket}" || "${maxtry}" -lt 1 ]]
-		do
-			maxtry=$(($maxtry-1))
-			echo -n "."
-			sleep 1
-		done
-
-		# do this from memory we don't want clear text password in temp files
-		local sql="UPDATE mysql.user SET Password = PASSWORD('${pwd1}') WHERE USER='root'"
-		${ROOT}/usr/bin/mysql${MY_SUFFIX} \
-			--socket=${socket} \
-			-hlocalhost \
-			-e "${sql}"
-
-		einfo "Loading \"zoneinfo\" this step may require few seconds"
-
-		${ROOT}/usr/bin/mysql${MY_SUFFIX} \
-			--socket=${socket} \
-			-hlocalhost \
-			-uroot \
-			-p"${pwd1}" \
-			mysql < "${sqltmp}"
-
-		kill $(< "${pidfile}" )
-		rm  "${sqltmp}"
-		einfo "done"
-	fi # menusel
+	# server stop and cleanup
+	kill $(< "${pidfile}" )
+	rm  "${sqltmp}"
+	einfo "stopping the server,"
+	wait %1
+	einfo "done"
 }
-
