@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2032003829990f52093d892da84c1ab2 ChangeLog 745
+MD5 563c58d5fb87a5cababb70a37cbd54d0 ChangeLog 835
 MD5 fa3dde6186f2073a90965c77030f7e1e files/digest-pylibacl-0.2.1 65
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c3201146adcffae8b52966b9822ec4c9 metadata.xml 222
 MD5 966665d4d59134f9538c48644cc41d94 pylibacl-0.2.1.ebuild 510
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDlHp/KRy60XGEcJIRAtZAAJ90diUrdh/x5cS1AlUPd8hnApj73gCggW94
-HVQ/PEtFRMTzk8igoSog2IU=
-=1QI+
------END PGP SIGNATURE-----
