@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.41 2005/12/10 21:50:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.42 2005/12/12 19:17:53 corsair Exp $
+
+  12 Dec 2005; Markus Rothe <corsair@gentoo.org> kxsldbg-3.4.1-r1.ebuild:
+  Stable on ppc64; bug #114583
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kxsldbg-3.4.3-r1.ebuild:
   Stable on alpha.
