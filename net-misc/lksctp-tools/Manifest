@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05f3d80963afe322f0373ebcc4c7a88e ChangeLog 970
+MD5 ef33f06b0ab7e6c2d629392b1fd13ffc ChangeLog 1104
 MD5 bfc154edf9f162d5dbb3bfff4034c354 files/digest-lksctp-tools-1.0.1 70
 MD5 038fd0a35e5638ef6683dbfb6c94da8b files/digest-lksctp-tools-1.0.2 70
+MD5 15eddd237060152e81aebd750e5c226f files/digest-lksctp-tools-1.0.4 70
 MD5 ef3d3560e790034a0a22e645bfa77528 lksctp-tools-1.0.1.ebuild 768
 MD5 228e2d8e7b4f65145fce40b9f3f24605 lksctp-tools-1.0.2.ebuild 769
+MD5 168924a6c62f4a0e4eb5db8618d27428 lksctp-tools-1.0.4.ebuild 852
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvWmwI1lqEGTUzyQRAhlLAJ9ut4SvKtb++M6ljm+wLMsoSflOVACglryH
-ynHpcehCdu9p2djlMmoEwu8=
-=Ssqu
------END PGP SIGNATURE-----
