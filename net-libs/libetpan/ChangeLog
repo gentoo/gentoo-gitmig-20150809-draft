@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.14 2005/12/02 17:13:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.15 2005/12/12 10:34:39 ticho Exp $
+
+  12 Dec 2005; Andrej Kacian <ticho@gentoo.org> -libetpan-0.38.ebuild,
+  -libetpan-0.39.ebuild, libetpan-0.40.ebuild:
+  0.40 stable on x86. Removed deprecated 0.38 and 0.39.
 
 *libetpan-0.41 (02 Dec 2005)
 
