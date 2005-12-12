@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwmf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.30 2005/12/11 23:28:25 spyderous Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.31 2005/12/12 02:50:16 vapier Exp $
+
+  12 Dec 2005; Mike Frysinger <vapier@gentoo.org> libwmf-0.2.8.3-r1.ebuild:
+  Remove USE=pic cruft.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   libwmf-0.2.8.3-r1.ebuild:
