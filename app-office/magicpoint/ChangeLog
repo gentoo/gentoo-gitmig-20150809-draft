@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.19 2005/09/29 08:30:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.20 2005/12/12 02:57:31 spyderous Exp $
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  magicpoint-1.11b.ebuild:
+  Add modular X dependencies.
 
   29 Sep 2005; Mamoru KOMACHI <usata@gentoo.org>
   -files/magicpoint-1.10a-r1-gentoo.diff, -magicpoint-1.10a-r1.ebuild,
