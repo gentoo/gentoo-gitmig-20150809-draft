@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.31 2005/09/01 14:51:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.32 2005/12/12 14:45:44 dcoutts Exp $
+
+*ghc-bin-6.4.1 (12 Dec 2005)
+
+  12 Dec 2005; <duncan@gentoo.org> +ghc-bin-6.4.1.ebuild:
+  Added a first x86 and sparc binary for ghc-6.4.1. Hopefully amd64, ppc and
+  ppc64 will follow.
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   ghc-bin-6.2.2-r1.ebuild:
