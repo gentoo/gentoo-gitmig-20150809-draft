@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.15.ebuild,v 1.3 2005/07/09 18:27:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.15.ebuild,v 1.4 2005/12/12 02:56:32 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE="pic nls"
+IUSE="nls"
 
 RDEPEND="virtual/x11
 	>=media-libs/freetype-2
@@ -37,8 +37,7 @@ src_unpack() {
 
 src_compile() {
 
-	econf `use_enable nls` \
-		  `use_with pic` || die "econf failed"
+	econf `use_enable nls` || die "econf failed"
 
 	emake || die "compile problem"
 

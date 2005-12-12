@@ -12,14 +12,14 @@ MD5 c782789825dfa664e1f6fcc96ac7246c files/tvtime-1.0.2-gcc41.patch 2114
 MD5 ee506c523f1880bb929e7e5f25d4fe6b files/tvtime-pic.patch 248
 MD5 d19bb57e494a860d7ed0aaa7961d8406 metadata.xml 247
 MD5 013a7785e90003c22261a994e06146ca tvtime-0.9.12.ebuild 1284
-MD5 584e0127bcc058f665ecd1c5833c5929 tvtime-0.9.15.ebuild 1473
+MD5 deb5eb0bc013371074ff4be5c6a2cd56 tvtime-0.9.15.ebuild 1449
 MD5 1f96f671cfee328c5d95949ef1bea237 tvtime-0.99.ebuild 1393
 MD5 8476949ca4ef9c07c35153ea05418869 tvtime-1.0.1.ebuild 1392
 MD5 fdf3c824b7c0fc73b6d72b93848b6d19 tvtime-1.0.2.ebuild 1440
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi4axr2QksT29OyARAlxXAJ4hzXZ6hSyVcBpNo7rc3R310yJxPgCggAqO
-/80HnyXZVQYZJfmL5FdzsLY=
-=KjFN
+iD8DBQFDnObrgIKl8Uu19MoRAhYjAJsEDO/aGIPmaJQ9PXhvOu79jy5AUwCfSpM7
+H/IvRnHwhH0dLv1lUzsohag=
+=g3iq
 -----END PGP SIGNATURE-----
