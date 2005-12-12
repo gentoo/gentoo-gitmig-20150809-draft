@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.8 2005/09/26 04:28:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.9 2005/12/12 03:42:09 robbat2 Exp $
+
+*ndu-0.4-r3 (12 Dec 2005)
+
+  12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +ndu-0.4-r3.ebuild:
+  Bug #107384, dnstouch binary into sbin not bin.
 
   26 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> ndu-0.4-r2.ebuild:
   Stable on x86, 226 days in ~x86.
