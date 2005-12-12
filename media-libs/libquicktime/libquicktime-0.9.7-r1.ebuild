@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.5 2005/12/02 21:39:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.6 2005/12/12 05:02:10 spyderous Exp $
 
 inherit libtool eutils autotools
 
@@ -24,7 +24,13 @@ DEPEND=">=sys-apps/sed-4.0.5
 		sys-libs/libavc1394
 		sys-libs/libraw1394
 	)
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXaw
+				x11-libs/libXv
+				x11-proto/xextproto
+			)
+			virtual/x11
+		)
+	)
 	!virtual/quicktime"
 PROVIDE="virtual/quicktime"
 
