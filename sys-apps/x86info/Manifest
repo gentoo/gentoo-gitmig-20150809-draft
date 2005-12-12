@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8e5a72c55161ad43ffb79744aa82293b x86info-1.14.ebuild 1174
-MD5 8d44b44ef122e1c4f86b4b672e6790e8 x86info-1.15.ebuild 1174
-MD5 28879059969f8547055db13367423471 x86info-1.12b.ebuild 1222
-MD5 8b111ccd0ea1a8306caffb742b2ca4c7 x86info-1.13.ebuild 1221
-MD5 55d7b8ee8e77db8561a0c05118c494dd ChangeLog 1439
-MD5 e622e47087f8556df73aae8e3c4dd896 files/x86info-modules.conf-rc 330
+MD5 1c99fef60070438b3a0511a1435ce3b3 ChangeLog 1528
+MD5 3190b800901b8f28e375fd20b89100f6 files/1.12b-pic.patch 517
 MD5 1759a81bcf65ea2266520c18b934df09 files/digest-x86info-1.12b 61
 MD5 2314117f5dd2e812f0e8276bd04b0364 files/digest-x86info-1.13 60
-MD5 3190b800901b8f28e375fd20b89100f6 files/1.12b-pic.patch 517
-MD5 af728070175dcb308ae6d5aa7db7f102 files/digest-x86info-1.15 60
 MD5 d802a4048f32812d16b2fb081991db26 files/digest-x86info-1.14 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGNGUgIKl8Uu19MoRAjnDAJ0UdKKDUaYjSoVfxqW0MmBqxMvaDwCbBkYj
-FbfNOc64VTvpELOZ4KX3KSM=
-=Pwox
------END PGP SIGNATURE-----
+MD5 af728070175dcb308ae6d5aa7db7f102 files/digest-x86info-1.15 60
+MD5 e622e47087f8556df73aae8e3c4dd896 files/x86info-modules.conf-rc 330
+MD5 e25e70948beb656da0b6fa0b48124f16 metadata.xml 227
+MD5 28879059969f8547055db13367423471 x86info-1.12b.ebuild 1222
+MD5 8b111ccd0ea1a8306caffb742b2ca4c7 x86info-1.13.ebuild 1221
+MD5 8e5a72c55161ad43ffb79744aa82293b x86info-1.14.ebuild 1174
+MD5 8d44b44ef122e1c4f86b4b672e6790e8 x86info-1.15.ebuild 1174
