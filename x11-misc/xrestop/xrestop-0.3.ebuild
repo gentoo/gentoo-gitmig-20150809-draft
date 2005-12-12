@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.3.ebuild,v 1.10 2005/11/10 18:40:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.3.ebuild,v 1.11 2005/12/12 05:10:05 spyderous Exp $
 
 IUSE=""
 
@@ -12,7 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 
-DEPEND="virtual/x11"
+DEPEND="|| ( ( x11-libs/libXres
+			x11-libs/libXt
+		)
+		virtual/x11
+	)"
 
 src_install () {
 	make DESTDIR="${D}" install || die
