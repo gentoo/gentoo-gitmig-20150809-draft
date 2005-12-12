@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d187db31a00d874990a376d62ff42fec ChangeLog 401
 MD5 6bfe000ce065f1aabfa464b678e1dfda Gtk2-Ex-PrintDialog-0.02.ebuild 645
 MD5 06af28220b6b41bd85d0f3b8ed3fc283 files/digest-Gtk2-Ex-PrintDialog-0.02 75
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnXdLtG5z4I8BtQoRAtSbAJ9btR2JoBlG7D3tmRMaf7Ib6AGoqQCgg3h3
+dp1V+DERHI2ezOwXl0exXFI=
+=KGQo
+-----END PGP SIGNATURE-----

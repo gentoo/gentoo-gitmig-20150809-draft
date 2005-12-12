@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Gtk2-Ex-PrintDialog
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.1 2005/12/12 13:12:34 mcummings Exp $
+
+*Gtk2-Ex-PrintDialog-0.02 (12 Dec 2005)
+
+  12 Dec 2005; <mcumming@gentoo.org> +metadata.xml,
+  +Gtk2-Ex-PrintDialog-0.02.ebuild:
+  Dep for podbrowser for print support
+
