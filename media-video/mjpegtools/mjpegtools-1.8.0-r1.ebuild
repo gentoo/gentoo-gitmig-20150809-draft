@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.3 2005/11/13 21:06:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.4 2005/12/12 05:06:17 spyderous Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -24,7 +24,12 @@ RDEPEND="media-libs/jpeg
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )
 	sdl? ( >=media-libs/libsdl-1.2.7-r3 )
-	X? ( virtual/x11 )"
+	X? ( || ( ( x11-libs/libX11
+				x11-libs/libXt
+			)
+			virtual/x11
+		)
+	)"
 
 DEPEND="${RDEPEND}
 	x86? ( mmx? ( dev-lang/nasm )
