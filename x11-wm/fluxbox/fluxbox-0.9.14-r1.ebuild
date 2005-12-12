@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.7 2005/11/05 14:50:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.8 2005/12/12 08:41:35 spyderous Exp $
 
 inherit eutils
 
@@ -15,12 +15,19 @@ HOMEPAGE="http://www.fluxbox.org"
 # make the binary a fair bit bigger, so we don't want to turn them on unless
 # the user actually wants them.
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXpm
+			x11-libs/libXrandr
+		)
+		virtual/x11
+	)
+	virtual/xft
 	truetype? ( media-libs/freetype )
 	nls? ( sys-devel/gettext )
 	imlib? ( >=media-libs/imlib2-1.2.0 )
 	!<x11-themes/fluxbox-styles-fluxmod-20040809-r1"
 DEPEND=">=sys-devel/autoconf-2.52
+		|| ( x11-proto/xextproto virtual/x11 )
+		xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 		${RDEPEND}"
 PROVIDE="virtual/blackbox"
 

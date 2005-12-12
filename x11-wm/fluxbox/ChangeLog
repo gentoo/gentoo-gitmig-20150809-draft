@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.173 2005/11/05 14:50:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.174 2005/12/12 08:41:35 spyderous Exp $
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  fluxbox-0.9.14-r1.ebuild:
+  Add modular X dependencies.
 
   05 Nov 2005; Luis Medinas <metalgod@gentoo.org> fluxbox-0.9.14-r1.ebuild:
   Marked Stable on amd64.
