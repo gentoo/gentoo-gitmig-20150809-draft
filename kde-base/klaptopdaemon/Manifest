@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 183d91c46c187246ce48c0c4e08198d5 ChangeLog 4949
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-klaptopdaemon-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-klaptopdaemon-3.4.2 288
@@ -11,3 +14,10 @@ MD5 92477dad497b5b3376a0ca40e687dd43 klaptopdaemon-3.4.3-r1.ebuild 561
 MD5 9feddbacae796c4cdcf24de62ba31573 klaptopdaemon-3.4.3.ebuild 456
 MD5 c9adfc485f77eb5e5848c7f4353d15f2 klaptopdaemon-3.5.0.ebuild 552
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDncvBcsIHjyDViGQRAvPzAKCmjzI34NIHv8iYzhLnnaOeDDf4gACgmbmt
+QmQu5OKfGEMzJT7goWVCMrU=
+=A89c
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5971b6179977e6eadc8c932320ba9b51 ChangeLog 4138
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-korundum-3.3.2-r1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-korundum-3.4.1 221
@@ -12,3 +15,10 @@ MD5 8d4896027e14644e52a9743af9a123e4 korundum-3.4.2.ebuild 1107
 MD5 f6aa5c95e7c887b65db250da749f0297 korundum-3.4.3.ebuild 1103
 MD5 9e83b55d60cd382ce93aaa76b19f1515 korundum-3.5.0-r1.ebuild 1139
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnc/5csIHjyDViGQRAkxXAKCBZqTaUNcFfFLOiyrE1KMe2zY/EgCgpmyc
+NSRUWiX3tfFA/h7xnckEKlo=
+=Oa0N
+-----END PGP SIGNATURE-----

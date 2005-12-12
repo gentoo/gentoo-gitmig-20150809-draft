@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 772be7b0dd73ed3119a53b13a8815289 ChangeLog 4382
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kimagemapeditor-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kimagemapeditor-3.4.2 292
@@ -8,3 +11,10 @@ MD5 7b060ffc2d95147cb3a0c4a863a8ce1e kimagemapeditor-3.4.2.ebuild 413
 MD5 41fa2ed8a92ab7e6e8af53efae232291 kimagemapeditor-3.4.3.ebuild 407
 MD5 675c3bd9cf11309ace812f752b8bb7b6 kimagemapeditor-3.5.0.ebuild 406
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDncyZcsIHjyDViGQRAgiyAJ0SzxU/wlA/2FubvE3ZsESkL12k3ACeKXS9
+zD/JXdHFMicMUm139tqKloE=
+=bUHL
+-----END PGP SIGNATURE-----

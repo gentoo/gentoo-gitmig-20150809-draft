@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 601bfe1981c011f10e5ca79992f992ad ChangeLog 3397
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kfloppy-3.4.1 212
 MD5 61427700c31d5d6a145005b5945e00e5 files/digest-kfloppy-3.5.0 68
 MD5 6775decbb959fdc4db484d80772230e3 kfloppy-3.4.1.ebuild 442
 MD5 af7b251079a14198f3b81d2eba5a902b kfloppy-3.5.0.ebuild 436
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDncwdcsIHjyDViGQRAkc2AJ9nCPAi0eWCil1MmGeOt+8yvNQfvgCdF8ub
+ccl8+8QvWXgmQ6L2B+1vp8g=
+=YcYP
+-----END PGP SIGNATURE-----

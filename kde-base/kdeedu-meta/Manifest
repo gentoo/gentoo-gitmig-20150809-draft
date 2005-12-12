@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 796c30cdc8abb410d5c4fe3d2cade1e2 ChangeLog 5179
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.2 0
@@ -8,3 +11,10 @@ MD5 346fa4b05c432e9c340240fa656a4629 kdeedu-meta-3.4.2.ebuild 1313
 MD5 39b66726a5e6ed15bab8858399c1118f kdeedu-meta-3.4.3.ebuild 1355
 MD5 3aa172ed91f1269fcf267db656d4ba7d kdeedu-meta-3.5.0.ebuild 1347
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDndMXcsIHjyDViGQRAv1rAJwLqlKTPR1xSoE9qxCuPNiOKILBlQCdHux7
+bdF3lXBXgsjLJ35Az9Luc/c=
+=akJ9
+-----END PGP SIGNATURE-----
