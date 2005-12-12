@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-3.0002_p4.ebuild,v 1.1 2005/12/08 21:18:11 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-3.0002_p4.ebuild,v 1.2 2005/12/12 10:49:59 vivo Exp $
 
-inherit perl-module
+inherit eutils perl-module
 
 MY_P="${P/_p/_}"
 S=${WORKDIR}/${MY_P}
@@ -21,3 +21,9 @@ DEPEND="dev-perl/DBI
 	dev-db/mysql"
 
 mydoc="ToDo"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/mysql-5.0-new_bit_type.patch"
+}
