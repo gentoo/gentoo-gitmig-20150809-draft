@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d126b36a7a178651e109c80d5d3aa22 ChangeLog 3227
+MD5 ac8dba2a2705ba9fb6f80adca187ba25 ChangeLog 3339
 MD5 a04e6bf35b1c142eb7bbccfdc6c5280b files/digest-xanim-2.80.1-r4 878
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 f3dbc806f6470bbd81937cbf9fa4df05 xanim-2.80.1-r4.ebuild 3168
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZVBij5H05b2HAEkRAhuCAJ9I3UFu55IFwUhKWm5J4s3HmYWNgACeKPLB
-bf7ZzMo+Ud5/Px+Jx4QGKm0=
-=p3d4
------END PGP SIGNATURE-----
+MD5 dc9aaf043aa77656186eae6055e8bb85 xanim-2.80.1-r4.ebuild 3259

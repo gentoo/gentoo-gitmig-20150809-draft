@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.29 2005/10/30 22:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.30 2005/12/12 04:58:19 spyderous Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -12,10 +12,15 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64 ppc64"
 IUSE=""
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXext
+			x11-libs/libXt
+		)
+		virtual/x11
+	)
 	>=sys-libs/zlib-1.1.3"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4.0.5"
+	>=sys-apps/sed-4.0.5
+	|| ( x11-proto/xextproto virtual/x11 )"
 
 MY_P=${PN}${PV//.}
 S=${WORKDIR}/${MY_P}

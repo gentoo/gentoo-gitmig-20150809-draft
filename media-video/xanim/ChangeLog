@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xanim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.23 2005/10/30 22:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.24 2005/12/12 04:58:19 spyderous Exp $
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xanim-2.80.1-r4.ebuild:
+  Add modular X dependencies.
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> xanim-2.80.1-r4.ebuild:
   Updated homepage as per bug #100878.
