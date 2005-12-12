@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.113 2005/12/08 17:47:10 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.114 2005/12/12 09:08:17 spyderous Exp $
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  openoffice-bin-2.0.0.ebuild:
+  Add modular X dependencies. For any interest in reproducing the command used
+  to find them: find /usr/lib/openoffice/program/ -maxdepth 1 | grep -v -e
+  '\.so$' -e '\.so\.' | xargs file | grep 'LSB exe' | cut -d: -f1 | xargs ldd
+  | cut -d'(' -f1 | sort | uniq | grep lib[SIX].
 
   08 Dec 2005; Herbie Hopkins <herbs@gentoo.org>
   openoffice-bin-2.0.0.ebuild:
