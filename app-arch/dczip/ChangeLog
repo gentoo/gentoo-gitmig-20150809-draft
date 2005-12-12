@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dczip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.6 2005/09/14 15:48:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.7 2005/12/12 19:53:32 metalgod Exp $
+
+  12 Dec 2005; Luis Medinas <metalgod@gentoo.org> dczip-2.05.ebuild:
+  Added ~amd64 keyword.
 
   14 Sep 2005; Fabian Groffen <grobian@gentoo.org> dczip-2.05.ebuild:
   Marking ~ppc-macos (bug #105843)

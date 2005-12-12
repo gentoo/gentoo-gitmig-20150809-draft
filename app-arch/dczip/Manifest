@@ -1,4 +1,14 @@
-MD5 ebcaec1233341a96a6e419e41f198635 ChangeLog 728
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 3f2992f8dea2d072c73d9a0ecc918576 dczip-2.05.ebuild 829
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5881a53c3a14c57b107fa6641dfbbf4a ChangeLog 823
+MD5 669418f6cf3144e66e5f714aff00f527 dczip-2.05.ebuild 837
 MD5 2cd5bb55ff5cb56ad9c20e64b77e9c4b files/digest-dczip-2.05 54
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDndVNwUpWvClEHQoRApoSAJ9tYaShjFw7OPk//hhIV2UXz4aXxACfbsIC
+Ib2R8cueK8qTRX6ZQqN6ECE=
+=tooO
+-----END PGP SIGNATURE-----
