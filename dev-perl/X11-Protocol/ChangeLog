@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.17 2005/05/01 18:23:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.18 2005/12/12 08:49:36 spyderous Exp $
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  X11-Protocol-0.53.ebuild:
+  Add modular X dependencies.
 
   01 May 2005; Tom Martin <slarti@gentoo.org> X11-Protocol-0.53.ebuild:
   Stable on amd64.
