@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kxkb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.34 2005/12/11 01:39:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.35 2005/12/12 15:42:53 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kxkb-3.5.0.ebuild:
+  Marked ~ppc.
 
   11 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kxkb-3.5.0-modularxkb.patch, kxkb-3.5.0.ebuild:

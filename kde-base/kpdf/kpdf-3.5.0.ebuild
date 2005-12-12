@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.0.ebuild,v 1.4 2005/12/04 01:14:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.0.ebuild,v 1.5 2005/12/12 17:12:29 josejx Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kpdf, a kde pdf viewer based on xpdf"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 KMEXTRA="kfile-plugins/pdf"
 

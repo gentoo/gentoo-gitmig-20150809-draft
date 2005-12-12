@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.22 2005/12/04 10:21:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.23 2005/12/12 15:46:13 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kstart-3.5.0.ebuild:
+  Marked ~ppc.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kstart-3.5.0.ebuild:
   ~alpha keyword.

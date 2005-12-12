@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kblackbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.32 2005/12/10 21:16:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.33 2005/12/12 16:07:36 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kblackbox-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kblackbox-3.4.3.ebuild:
   Stable on alpha.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kooka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.33 2005/12/10 22:10:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.34 2005/12/12 17:22:34 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kooka-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kooka-3.4.3.ebuild:
   Stable on alpha.

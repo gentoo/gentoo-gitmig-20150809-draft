@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.5.0.ebuild,v 1.4 2005/12/05 22:32:33 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.5.0.ebuild,v 1.5 2005/12/12 15:54:56 josejx Exp $
 KMNAME=kdeaccessibility
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE text-to-speech subsystem"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="alsa gstreamer"
 DEPEND="media-libs/akode
 	alsa? ( media-libs/alsa-lib )

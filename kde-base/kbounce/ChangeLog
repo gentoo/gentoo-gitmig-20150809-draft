@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.31 2005/12/10 21:01:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.32 2005/12/12 16:00:20 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kbounce-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kbounce-3.4.3.ebuild:
   Stable on alpha.

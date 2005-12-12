@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-docs-konq-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-docs-konq-plugins/ChangeLog,v 1.21 2005/12/04 12:40:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-docs-konq-plugins/ChangeLog,v 1.22 2005/12/12 16:48:11 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  kdeaddons-docs-konq-plugins-3.5.0.ebuild:
+  Marked ~ppc.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdeaddons-docs-konq-plugins-3.5.0.ebuild:

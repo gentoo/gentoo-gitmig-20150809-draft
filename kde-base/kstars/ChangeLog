@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.34 2005/12/10 19:40:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.35 2005/12/12 17:07:53 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kstars-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kstars-3.4.3.ebuild:
   Stable on alpha.

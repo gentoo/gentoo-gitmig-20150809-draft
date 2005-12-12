@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin4
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/ChangeLog,v 1.32 2005/12/10 21:27:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/ChangeLog,v 1.33 2005/12/12 16:18:24 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kwin4-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kwin4-3.4.3.ebuild:
   Stable on alpha.

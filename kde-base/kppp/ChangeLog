@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.33 2005/12/11 13:26:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.34 2005/12/12 17:31:54 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kppp-3.5.0.ebuild:
+  Marked ~ppc.
 
   11 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kppp-3.5.0-bindnow.patch, kppp-3.5.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.52 2005/12/12 03:29:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.53 2005/12/12 17:12:29 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kpdf-3.5.0.ebuild:
+  Marked ~ppc.
 
   12 Dec 2005; Jason Wever <weeve@gentoo.org> kpdf-3.4.3-r2.ebuild:
   Stable on SPARC wrt bug #114429.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.27 2005/12/10 07:06:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.28 2005/12/12 17:34:30 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kwifimanager-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org>
   kwifimanager-3.4.3.ebuild:

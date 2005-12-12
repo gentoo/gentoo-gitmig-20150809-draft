@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mpeglib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.25 2005/11/26 14:35:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.26 2005/12/12 16:34:34 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> mpeglib-3.5.0.ebuild:
+  Marked ~ppc.
 
   26 Nov 2005; Dan Armak <danarmak@gentoo.org> mpeglib-3.5.0.ebuild:
   Upstream (unreleased) tarball updated, updating digests.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-styles
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.32 2005/12/10 22:49:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.33 2005/12/12 15:48:11 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  kdeartwork-styles-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   kdeartwork-styles-3.4.3.ebuild:

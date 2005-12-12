@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/librss
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/librss/ChangeLog,v 1.21 2005/12/04 11:23:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/librss/ChangeLog,v 1.22 2005/12/12 17:25:50 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> librss-3.5.0.ebuild:
+  Marked ~ppc.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> librss-3.5.0.ebuild:
   ~alpha keyword.
