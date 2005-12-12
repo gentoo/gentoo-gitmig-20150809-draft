@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.14 2005/10/04 15:12:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.15 2005/12/12 22:25:07 araujo Exp $
+
+  12 Dec 2005; Luis f. Araujo <araujo@gentoo.org> happy-1.15.ebuild:
+  Removing java use flag, bug #107019
 
   04 Oct 2005; <duncan@gentoo.org> happy-1.15.ebuild:
   Added ~sparc to KEYWORDS.

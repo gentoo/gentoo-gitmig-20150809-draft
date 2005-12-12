@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.7 2005/10/04 15:12:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.8 2005/12/12 22:25:07 araujo Exp $
 
 inherit base eutils ghc-package
 
@@ -10,12 +10,13 @@ SRC_URI="http://haskell.cs.yale.edu/happy/dist/${PV}/${P}-src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc ~sparc"
-IUSE="doc java"
+IUSE="doc"
+#java use flag disabled, bug #107019
 
 DEPEND=">=virtual/ghc-5.04
 	doc? (  ~app-text/docbook-xml-dtd-4.2
-		app-text/docbook-xsl-stylesheets
-		java? ( >=dev-java/fop-0.20.5 ) )"
+		app-text/docbook-xsl-stylesheets )"
+#		java? ( >=dev-java/fop-0.20.5 ) )"
 RDEPEND=""
 
 src_unpack() {
@@ -30,9 +31,9 @@ src_compile() {
 	emake -j1 || die "make failed"
 	if use doc; then
 		emake -j1 html || die "make html failed"
-		if use java; then
-			emake -j1 ps || die "make ps failed"
-		fi
+		#if use java; then
+		#	emake -j1 ps || die "make ps failed"
+		#fi
 	fi
 }
 
@@ -40,7 +41,7 @@ src_install() {
 	local docways
 	if use doc; then
 		docways="html"
-		use java && docways="${docways} ps"
+		#use java && docways="${docways} ps"
 	else
 		docways=""
 	fi

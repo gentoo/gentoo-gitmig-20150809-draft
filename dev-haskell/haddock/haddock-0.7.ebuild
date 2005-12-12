@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.3 2005/09/19 06:54:56 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.4 2005/12/12 22:29:10 araujo Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -9,7 +9,8 @@
 
 
 inherit ghc-package multilib
-IUSE="doc java"
+IUSE="doc"
+#java use flag disable, bug #107019
 
 DESCRIPTION="A documentation tool for Haskell"
 SRC_URI="http://www.haskell.org/haddock/${P}-src.tar.gz"
@@ -23,8 +24,8 @@ DEPEND="virtual/ghc
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2
-		>=dev-haskell/haddock-0.6-r2
-		java? ( >=dev-java/fop-0.20.5 ) )"
+		>=dev-haskell/haddock-0.6-r2 )"
+#		java? ( >=dev-java/fop-0.20.5 ) )"
 RDEPEND=""
 
 pkg_setup() {
@@ -56,9 +57,9 @@ src_compile() {
 	# determine what to do with documentation
 	if use doc; then
 		mydoc="html"
-		if use java; then
-			mydoc="${mydoc} ps"
-		fi
+		#if use java; then
+		#	mydoc="${mydoc} ps"
+		#fi
 	else
 		mydoc=""
 		# needed to prevent haddock from being called
