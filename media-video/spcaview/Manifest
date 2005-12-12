@@ -1,4 +1,16 @@
-MD5 563ddd2522a53d508db7fb660a72148f ChangeLog 548
-MD5 b5cb51b68d2db2eca60dcac2e05d9970 files/digest-spcaview-20050701 68
-MD5 334e4f71306cef3c0456b8ba59bbbfe8 metadata.xml 224
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 007e63f24bfdb989ef79bbca21b75a7f spcaview-20050701.ebuild 613
+MD5 42f634094945686994be019b7bdee711 ChangeLog 670
+MD5 334e4f71306cef3c0456b8ba59bbbfe8 metadata.xml 224
+MD5 6c80ed045b2d80068ae537af1e4b9b1c spcaview-20051212.ebuild 606
+MD5 b5cb51b68d2db2eca60dcac2e05d9970 files/digest-spcaview-20050701 68
+MD5 0cb7f5768af22ace34d06fb4a26bdbbf files/digest-spcaview-20051212 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDneJG0K3RJaeXx6cRAvIiAKCWUTVUEi1z1imGFjTc9PYoKEG9YgCgnpuY
+YPP1VzWBss5FkfH3myeC0M0=
+=ConB
+-----END PGP SIGNATURE-----
