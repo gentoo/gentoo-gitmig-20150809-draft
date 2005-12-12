@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.0.ebuild,v 1.2 2005/08/28 04:23:57 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.0.ebuild,v 1.3 2005/12/12 02:53:48 vapier Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="-alpha -amd64 -hppa -ia64 -mips ~ppc ~ppc-macos -ppc64 -sparc -x86"
-IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss pic portaudio sndfile sse"
+IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss portaudio sndfile sse"
 
 RDEPEND="dev-util/pkgconfig
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
@@ -84,7 +84,7 @@ src_compile() {
 		$(use_enable oss) \
 		$(use_enable portaudio) \
 		$(use_enable sse) \
-		$(use_with pic) \
+		--with-pic \
 		${myconf} || die "configure failed"
 	emake || die "compilation failed"
 }
