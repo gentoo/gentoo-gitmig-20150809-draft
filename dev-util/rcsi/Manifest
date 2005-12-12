@@ -1,3 +1,4 @@
-MD5 e15cf96ca5ea80dc967dfa6cbb787c09 ChangeLog 448
-MD5 34ff19831fa4c03e4ac7d6c63bff2278 rcsi-0.5.ebuild 879
+MD5 7589d226e7d3b0a850589c293716ccbd ChangeLog 538
 MD5 1fde70c65deabeb01c56a58f3b563fc6 files/digest-rcsi-0.5 59
+MD5 3ce1d5c70dfd99f4dcb59bb081e09114 metadata.xml 225
+MD5 34ff19831fa4c03e4ac7d6c63bff2278 rcsi-0.5.ebuild 879
