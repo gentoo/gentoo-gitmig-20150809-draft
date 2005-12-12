@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c8532e9fff10dd851fb682c74d1138a0 metadata.xml 222
-MD5 3631d5cbc636f179b15dac7c091c0f1a horde-gollem-1.0.ebuild 409
-MD5 dcd588749154e1b197caa73d04e89907 ChangeLog 348
+MD5 1a405936464449099e652fa31d7f5408 ChangeLog 488
 MD5 40f7c605a2ca03bac11f3dbeaa96b63d files/digest-horde-gollem-1.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMjJzgIKl8Uu19MoRAg2NAJ95M+pxr/UCBr4gVr74zgbvQQudbgCeJjTn
-78KGQOw7k+5CFJfXzOM7N2k=
-=5bN+
------END PGP SIGNATURE-----
+MD5 f9b56cc2de90b7eb63eb98beb48591e4 files/digest-horde-gollem-1.0.1 67
+MD5 3071d7d52e58ec972174f6413c9f36c4 horde-gollem-1.0.1.ebuild 411
+MD5 3631d5cbc636f179b15dac7c091c0f1a horde-gollem-1.0.ebuild 409
+MD5 c8532e9fff10dd851fb682c74d1138a0 metadata.xml 222
