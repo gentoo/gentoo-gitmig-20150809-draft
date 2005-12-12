@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.109 2005/12/08 15:45:24 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.110 2005/12/12 20:29:18 hansmi Exp $
+
+  12 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> gpdf-2.10.0-r2.ebuild:
+  Stable on ppc. See bug #114428.
 
   08 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> gpdf-2.10.0-r2.ebuild:
   Stable on hppa. See bug #114428.
