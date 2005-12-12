@@ -1,11 +1,27 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.31 2005/12/12 01:43:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.32 2005/12/12 01:56:08 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
 # This eclass is designed to reduce code duplication in the modularized X11
 # ebuilds.
+#
+# Using this eclass:
+#
+# Inherit it. If you need to run autoreconf for any reason (e.g., your patches
+# apply to the autotools files rather than configure), set SNAPSHOT="yes". Set
+# CONFIGURE_OPTIONS to everything you want to pass to the configure script.
+#
+# If you have any patches to apply, set PATCHES to their locations and epatch
+# will apply them. It also handles epatch-style bulk patches, if you know how to
+# use them and set the correct variables. If you don't, read eutils.eclass.
+#
+# If you're creating a font package and the suffix of PN is not equal to the
+# subdirectory of /usr/share/fonts/ it should install into, set FONT_DIR to that
+# directory or directories.
+#
+# Pretty much everything else should be automatic.
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
