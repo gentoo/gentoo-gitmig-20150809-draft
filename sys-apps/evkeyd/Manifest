@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31fc5dddb02744d02d136e69881d330d ChangeLog 1148
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a6359ecf514a3e82b3c0a23fefbb0bb4 evkeyd-0.1_pre7.ebuild 720
 MD5 c27007872204d890c558963ce1d0b716 files/digest-evkeyd-0.1_pre7 65
 MD5 6c71378ccb8985cdd61762c3f447c74e files/evkeyd.rc 482
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnNWsgIKl8Uu19MoRAoJIAJ0YTjgtmG/YgTI1kKRXtCUW7P4eYgCeOZ6J
+lSTCtksxxRiaMUj3/+ZQXyg=
+=XeQj
+-----END PGP SIGNATURE-----
