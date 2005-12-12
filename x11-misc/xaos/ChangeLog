@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.16 2005/06/28 02:08:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.17 2005/12/12 12:53:45 phosphan Exp $
+
+*xaos-3.1.3 (12 Dec 2005)
+
+  12 Dec 2005; Patrick Kursawe <phosphan@gentoo.org> +xaos-3.1.3.ebuild:
+  Version bump (bug #114344)
 
   28 Jun 2005; Jason Wever <weeve@gentoo.org> xaos-3.1.1.ebuild:
   Stable on SPARC.
