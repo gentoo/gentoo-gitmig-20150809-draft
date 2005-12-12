@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20051209.ebuild,v 1.1 2005/12/10 02:25:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20051209.ebuild,v 1.2 2005/12/12 20:56:58 zypher Exp $
 
 DESCRIPTION="Various bindings for mlt"
 HOMEPAGE="mlt.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 #IUSE="perl python ruby tcl"
 
 #DEPEND="perl?	( dev-lang/swig
