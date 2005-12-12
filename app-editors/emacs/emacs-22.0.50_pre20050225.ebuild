@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.4 2005/12/12 03:23:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.5 2005/12/12 03:52:00 spyderous Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
@@ -31,6 +31,8 @@ DEPEND=">=sys-apps/portage-2.0.51
 				x11-libs/libXmu
 				x11-libs/libXpm
 				x11-misc/xbitmaps
+				|| ( media-fonts/font-adobe-100dpi
+					media-fonts/font-adobe-75dpi )
 			)
 			virtual/x11
 		)

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.16 2005/12/12 03:23:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.17 2005/12/12 03:52:00 spyderous Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -21,6 +21,8 @@ RDEPEND="sys-libs/ncurses
 				x11-libs/libSM
 				x11-libs/libXmu
 				x11-libs/libXpm
+				|| ( media-fonts/font-adobe-100dpi
+					media-fonts/font-adobe-75dpi )
 			)
 			virtual/x11
 		)
