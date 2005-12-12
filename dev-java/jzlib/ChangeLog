@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.17 2005/11/10 21:32:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.18 2005/12/12 12:42:36 betelgeuse Exp $
+
+*jzlib-1.0.7 (12 Dec 2005)
+
+  12 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> +jzlib-1.0.7.ebuild:
+  Version bump.
 
   10 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> jzlib-1.0.5.ebuild:
   Changed the license back to jcraft after of a request from axxo.
