@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.6-r2.ebuild,v 1.1 2005/12/12 05:14:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.6-r2.ebuild,v 1.2 2005/12/12 15:21:51 swegener Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	sys-process/time"
 
 PATCHLIST="001NoQuietTime 002SpecFile 003Recommit 004ExtractFix 005Pchanges
-007Stuff" 
+007Stuff"
 # excluded: 006NoDebug 008NewMerge2
 
 src_unpack() {
