@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.1 2005/12/12 04:52:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.2 2005/12/12 15:20:50 swegener Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/bglibs-1.027
 		mysql? ( dev-db/mysql )
 		postgres? ( dev-db/postgresql )"
-		
+
 src_compile() {
 	echo "/usr/include/bglibs" > conf-bgincs
 	echo "/usr/lib/bglibs" > conf-bglibs
