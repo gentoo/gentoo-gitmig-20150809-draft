@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epstool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.18 2005/09/18 14:28:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.19 2005/12/12 08:39:52 phosphan Exp $
+
+  12 Dec 2005; Patrick Kursawe <phosphan@gentoo.org> epstool-3.06.ebuild,
+  epstool-3.08.ebuild:
+  Blocking GSView versions which have their own epstool (bug #115129)
 
   18 Sep 2005; Fabian Groffen <grobian@gentoo.org> epstool-3.08.ebuild:
   Marking ~ppc-macos (bug #105884)
