@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.23 2005/09/15 23:13:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.24 2005/12/12 18:24:25 vanquirius Exp $
+
+*kmyfirewall-1.0 (12 Dec 2005)
+
+  12 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/kmyfirewall-1.0-configure-arts.patch, metadata.xml,
+  -kmyfirewall-0.9.6.2.ebuild, +kmyfirewall-1.0.ebuild:
+  1.0 version bump for bug 115149. Thanks to Erinn Looney-Triggs <erinn dot
+  looneytriggs at gmail dot com>. Also, adding netmon as a herd in
+  metadata.xml.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   kmyfirewall-0.9.6.2-r1.ebuild:
