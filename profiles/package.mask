@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4757 2005/12/12 13:13:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4758 2005/12/12 23:21:06 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -301,11 +301,6 @@ games-emulation/gnomame
 >=net-misc/nxproxy-1.5
 >=net-misc/nxserver-freenx-1.5
 >=net-misc/nxssh-1.5
-
-# Olivier Fisette <ribosome@gentoo.org> (19 Oct 2005)
-# Masking until proper testing is done.
-dev-libs/maloc
-sci-chemistry/apbs
 
 # Chris White <chriswhite@gentoo.org> (19 Oct 2005)
 # masking swig 1.3.27 until it gets proper testing
