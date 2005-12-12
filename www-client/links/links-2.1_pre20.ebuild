@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.2 2005/12/11 18:05:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.3 2005/12/12 00:08:18 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,8 +31,7 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svga? ( >=media-libs/svgalib-1.4.3 )
-	X? ( || ( (	x11-libs/libX11
-			x11-libs/libXext )
+	X? ( || ( x11-libs/libXext
 		virtual/x11 ) )
 	directfb? ( dev-libs/DirectFB )
 	sdl? ( >=media-libs/libsdl-1.2.0 )
@@ -41,7 +40,6 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xproto virtual/x11 ) )
 	sys-devel/automake
 	sys-devel/autoconf
 	sys-devel/gcc
