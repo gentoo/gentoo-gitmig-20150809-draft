@@ -1,8 +1,18 @@
-MD5 2a9e5447b6ffacded61678ffd95b26e6 ChangeLog 1301
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16a504e5ffac9d58da4f08b9410a6be7 ChangeLog 1399
 MD5 bff61c09329e07af5de607983a29674f files/digest-wmctrl-1.04 62
 MD5 378bdbcbd23828d676cf6cd9e45d2fd9 files/digest-wmctrl-1.05 62
 MD5 238434c9b15a050105117f3c5e96aaad files/digest-wmctrl-1.07 62
 MD5 6e41bf6685ee66aee2245bc81df883be metadata.xml 737
 MD5 de21d4af36312b45de6fd76e20ade476 wmctrl-1.04.ebuild 606
 MD5 f2cb693e3bdc8b659c9e46f2b0b85e78 wmctrl-1.05.ebuild 605
-MD5 03a687fb7c5646a172c0012da1ca8e88 wmctrl-1.07.ebuild 625
+MD5 5c29c1139c2c58ecc7ec7c7226a61d24 wmctrl-1.07.ebuild 634
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDndPpwUpWvClEHQoRAlYLAJ9GDHixELk7Pg2uTu1vFVyJnYVP+wCbBOqn
+eQd0K65HN+WhgkCBo11c380=
+=coSy
+-----END PGP SIGNATURE-----
