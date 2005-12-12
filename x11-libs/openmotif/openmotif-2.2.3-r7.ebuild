@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.2 2005/12/12 05:59:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.3 2005/12/12 06:01:31 spyderous Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 	=sys-devel/autoconf-2.5*
 	|| ( ( x11-proto/printproto
 			x11-proto/xextproto
+			x11-misc/xbitmaps
 		)
 		virtual/x11
 	)"
