@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.3 2005/04/12 21:28:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.4 2005/12/12 03:23:51 spyderous Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
@@ -25,7 +25,15 @@ DEPEND=">=sys-apps/portage-2.0.51
 	>=sys-libs/ncurses-5.3
 	sys-libs/gdbm
 	spell? ( || ( app-text/ispell app-text/aspell ) )
-	X? ( virtual/x11
+	X? ( || ( ( x11-libs/libXext
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXmu
+				x11-libs/libXpm
+				x11-misc/xbitmaps
+			)
+			virtual/x11
+		)
 		gif? ( >=media-libs/giflib-4.1.0.1b )
 		jpeg? ( >=media-libs/jpeg-6b )
 		tiff? ( >=media-libs/tiff-3.5.7 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.15 2005/08/23 03:12:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.16 2005/12/12 03:23:51 spyderous Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -16,13 +16,21 @@ IUSE="X Xaw3d gnome leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/gdbm
-	X? ( virtual/x11
+	X? ( || ( ( x11-libs/libXext
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXmu
+				x11-libs/libXpm
+			)
+			virtual/x11
+		)
 		>=media-libs/giflib-4.1.0.1b
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/tiff-3.5.5-r3
 		>=media-libs/libpng-1.2.1
 		!arm? (
 		Xaw3d? ( x11-libs/Xaw3d )
+		!Xaw3d? ( || ( x11-libs/libXaw virtual/x11 ) )
 		motif? (
 			lesstif? ( x11-libs/lesstif )
 			!lesstif? ( >=x11-libs/openmotif-2.1.30 ) )
@@ -32,7 +40,8 @@ RDEPEND="sys-libs/ncurses
 	nls? ( sys-devel/gettext )
 	!nosendmail? ( virtual/mta )"
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.58
+	X? ( || ( x11-misc/xbitmaps virtual/x11 ) )"
 
 PROVIDE="virtual/emacs virtual/editor"
 SANDBOX_DISABLED="1"
