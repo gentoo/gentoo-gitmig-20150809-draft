@@ -1,6 +1,8 @@
 Make sure that the asm files don't incorrectly trigger an executable
 stack marking in the final shared library.  That's bad, mmmkay.
 
+Upstream has already fixed this in their cvs.
+
 --- libdv/dct_block_mmx.S
 +++ libdv/dct_block_mmx.S
 @@ -1207,3 +1207,7 @@ _dv_dct_block_mmx_postscale_248:
