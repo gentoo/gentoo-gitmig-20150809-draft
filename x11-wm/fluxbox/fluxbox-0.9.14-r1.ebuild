@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.8 2005/12/12 08:41:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.9 2005/12/12 17:15:29 spyderous Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ RDEPEND="|| ( ( x11-libs/libXpm
 		)
 		virtual/x11
 	)
+	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
 	virtual/xft
 	truetype? ( media-libs/freetype )
 	nls? ( sys-devel/gettext )
