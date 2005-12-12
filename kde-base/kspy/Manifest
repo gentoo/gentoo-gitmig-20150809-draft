@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efc1f916194200ffff7548d3f5b7e6a8 kspy-3.4.1.ebuild 453
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 60aa05c6feed608ed48a0e600b6b37b6 ChangeLog 2534
-MD5 22bfc2c6d2a2fa728f989304aca75bb8 kspy-3.5.0.ebuild 439
+MD5 1384f10bb1eb904abcb7eb1907269d83 ChangeLog 2613
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kspy-3.4.1 206
 MD5 1e423fe06c976614875c91024253a35c files/digest-kspy-3.5.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmoaOFdQwWVoAgN4RAhoOAJ90Ri1BWLr3i/lohUKLJg4+cbjxwwCgmqL9
-nqM8jOsHEdq6nlR6zmx/uAA=
-=pu2s
------END PGP SIGNATURE-----
+MD5 efc1f916194200ffff7548d3f5b7e6a8 kspy-3.4.1.ebuild 453
+MD5 00e03d57322247aad725848595a99926 kspy-3.5.0.ebuild 442
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

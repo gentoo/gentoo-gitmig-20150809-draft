@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef9f01a9c8a6ad38258b8478fd262669 ChangeLog 5032
+MD5 3a4d843a1afafe31a2c7ed032cc68257 ChangeLog 5119
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-kjsembed-3.3.1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kjsembed-3.4.1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-kjsembed-3.4.2 300
@@ -12,12 +9,5 @@ MD5 2ab598379ff4129787909fdbc4339d43 kjsembed-3.3.1.ebuild 680
 MD5 d7596490e67b0da2db1d138218dab8ba kjsembed-3.4.1.ebuild 629
 MD5 90104d9c951529e4ec9b23197274f3d5 kjsembed-3.4.2.ebuild 643
 MD5 8e8aca746cab7e3efc75a492141663b7 kjsembed-3.4.3.ebuild 637
-MD5 3b419a548d087754231a8e0f24f5a29a kjsembed-3.5.0.ebuild 611
+MD5 722151f5f64b1b779048819d66d21b09 kjsembed-3.5.0.ebuild 614
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmVoWcsIHjyDViGQRAjj8AJ9BvrWgdkxogCVI0X449prSUG2CcACfbVrw
-ABuXZowmjCwKEY49opBTN6s=
-=5mVe
------END PGP SIGNATURE-----

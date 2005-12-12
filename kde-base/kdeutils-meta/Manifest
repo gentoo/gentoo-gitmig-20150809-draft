@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cf040ab958e65920701349c23ec3623 ChangeLog 4594
-MD5 3efb4209d0c86950d6de72357dd6d471 kdeutils-meta-3.5.0.ebuild 1263
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 fe6afb4316caa27b96c4573484e9b23f kdeutils-meta-3.4.1.ebuild 1212
-MD5 81d8e95cb777c35dd492852b1a61d736 kdeutils-meta-3.4.3.ebuild 1227
-MD5 c8c516fb64409e74c2eb12f2386dd79c kdeutils-meta-3.4.2.ebuild 1235
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.2 0
+MD5 54f5816a63767bdf35cacb0a8af1430f ChangeLog 4686
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.0 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0U1ugEuf3OQ0akRAqTbAKCfyxL03b4M6YBILkCAIatP7+OTngCfRxGf
-12/2+KDmBLHGgucLpEfF7gI=
-=6iGB
------END PGP SIGNATURE-----
+MD5 fe6afb4316caa27b96c4573484e9b23f kdeutils-meta-3.4.1.ebuild 1212
+MD5 c8c516fb64409e74c2eb12f2386dd79c kdeutils-meta-3.4.2.ebuild 1235
+MD5 81d8e95cb777c35dd492852b1a61d736 kdeutils-meta-3.4.3.ebuild 1227
+MD5 7d3b947c73d53c8fe1fbd61c0a04cbce kdeutils-meta-3.5.0.ebuild 1268
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
