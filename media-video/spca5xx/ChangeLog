@@ -1,6 +1,11 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.16 2005/12/11 01:07:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.17 2005/12/12 20:42:56 kingtaco Exp $
+
+*spca5xx-20051212 (12 Dec 2005)
+
+  12 Dec 2005; Mike Doty <kingtaco@gentoo.org> +spca5xx-20051212.ebuild:
+  version bump
 
   11 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> spca5xx-20051105.ebuild:
   Add ~x86 keyword.
