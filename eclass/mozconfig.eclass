@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.24 2005/10/02 13:41:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.25 2005/12/12 02:50:54 spyderous Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -8,7 +8,14 @@ inherit multilib flag-o-matic
 
 IUSE="debug gnome ipv6 moznoxft truetype xinerama xprint"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXrender
+			x11-libs/libXt
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXmu
+		)
+		virtual/x11
+	)
 	!moznoxft? ( virtual/xft )
 	>=media-libs/fontconfig-2.1
 	>=sys-libs/zlib-1.1.4
@@ -27,7 +34,10 @@ RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	|| ( x11-proto/xextproto virtual/x11 )
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	xprint? ( || ( x11-proto/printproto virtual/x11 ) )"
 
 # Set by configure (plus USE_AUTOCONF=1), but useful for NSPR
 export MOZILLA_CLIENT=1
