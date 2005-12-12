@@ -1,7 +1,17 @@
-MD5 9e4457f5085cc76aca3dd563e82ded0e ChangeLog 823
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 218da42f0071b909ce0bf13d18bf80d4 ChangeLog 928
 MD5 b3bf46cfc6e40fe45c749f0763a92945 files/27_mod_proxy_html.conf 278
 MD5 118f52447a3a4a4c177622f197bbd33c files/digest-mod_proxy_html-2.4.3 66
 MD5 6f53194d99929642bf12a7225212082a files/digest-mod_proxy_html-2.5.1 69
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 7b8c6f46ea7a3360e90f9341b19df808 mod_proxy_html-2.4.3.ebuild 704
+MD5 5f2de1e837f271c7f729e7324d17ef19 mod_proxy_html-2.4.3.ebuild 702
 MD5 73a87eb633ab6b19b35b8b3e12e2fd57 mod_proxy_html-2.5.1.ebuild 766
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnUt7QlM6RnzZP+IRAvfBAJ9TQ3/T6iLyvCi82R8DskH7Lc4LfgCfX3DI
+LCPpPoMLHViJrPE39n2m8Pg=
+=eLO6
+-----END PGP SIGNATURE-----

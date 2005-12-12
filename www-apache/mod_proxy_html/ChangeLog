@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_proxy_html
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.4 2005/10/26 00:35:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.5 2005/12/12 10:05:30 ticho Exp $
+
+  12 Dec 2005; Andrej Kacian <ticho@gentoo.org> mod_proxy_html-2.4.3.ebuild:
+  Stable on x86, bug #106465.
 
 *mod_proxy_html-2.5.1 (26 Oct 2005)
 
