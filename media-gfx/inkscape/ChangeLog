@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.43 2005/11/28 19:13:39 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.44 2005/12/12 03:46:40 lu_zero Exp $
+
+*inkscape-0.43-r1 (12 Dec 2005)
+
+  12 Dec 2005; Luca Barbato <lu_zero@gentoo.org> inkscape-0.43.ebuild,
+  +inkscape-0.43-r1.ebuild:
+  Added jabber support
 
   28 Nov 2005; Hanno Boeck <hanno@gentoo.org>
   +files/inkscape-0.43-gcc41.patch, inkscape-0.43.ebuild:

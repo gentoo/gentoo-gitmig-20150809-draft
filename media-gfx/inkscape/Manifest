@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4c62a612783c63d2f2711e4af4c71da ChangeLog 4851
+MD5 33382c80c5aa1fd23b17fa77d18bee26 ChangeLog 5009
 MD5 5a2e7c990f27ecf4a864bc72a8324695 files/0.40-radial.patch 487
 MD5 43383d33f039e916a8092b3703f3ede2 files/digest-inkscape-0.37 66
 MD5 2351ba855aa9cbb514d6b9d61c29158b files/digest-inkscape-0.38 66
@@ -14,6 +11,7 @@ MD5 8d23195ea09e60622c134e6d6af1b0a7 files/digest-inkscape-0.41-r1 67
 MD5 89c95424c23f934760231c805597a979 files/digest-inkscape-0.42 67
 MD5 2d24a0a0111fe735750b605a505f2813 files/digest-inkscape-0.42.2 69
 MD5 f26304c2cdbb3d60e92ec483a23d6bf4 files/digest-inkscape-0.43 67
+MD5 f26304c2cdbb3d60e92ec483a23d6bf4 files/digest-inkscape-0.43-r1 67
 MD5 6d1db27dd1b71567662b3e58b3bfed8b files/inkscape-0.41-configure.ac.patch 514
 MD5 2a6db3de949e36fe3ec3ecbca9c26f3e files/inkscape-0.41_gnome-print.patch 404
 MD5 376b7c16ca8dce7cbc7335c995f8ee0a files/inkscape-0.43-gcc41.patch 3283
@@ -28,12 +26,6 @@ MD5 4c583041c079432faa856dc42cf0c117 inkscape-0.41-r1.ebuild 2294
 MD5 240974d91790d179edb2b847e002b2d6 inkscape-0.41.ebuild 2120
 MD5 dc737b2039d3e51cf505eea83e106b33 inkscape-0.42.2.ebuild 1819
 MD5 b7eec73faa910b3210eabe052f56dcb1 inkscape-0.42.ebuild 1823
+MD5 c92c0921d883a7eccba5aa8eff2eee3e inkscape-0.43-r1.ebuild 1911
 MD5 8b57cdf5f502befd90ec457b68676580 inkscape-0.43.ebuild 1862
 MD5 45828204906035f66f3428b9f2f53eca metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi1hcr2QksT29OyARAt1wAJ49+EXfavqEEhV4cBk4q+jWU5dNIQCfRKR0
-rphRWQsOA0liw+TrTpf+YTs=
-=tKpi
------END PGP SIGNATURE-----
