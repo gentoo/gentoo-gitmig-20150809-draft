@@ -24,5 +24,9 @@
 	<longdescription lang="it">
 		La categoria net-firewall contiene software per firewall.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria net-firewall contém programas de firewall para
+		redes.
+	</longdescription>
 </catmetadata>
 
