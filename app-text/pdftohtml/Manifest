@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ccecea35ecbf6f1da488e262c404b300 ChangeLog 3862
+MD5 588157a532f2b31bac611222ef107397 ChangeLog 3952
 MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r3 66
 MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r4 66
 MD5 92812f06661bb78ab112d9f8ff6c7b73 files/pdftohtml-0.36-CAN-2005-3193.patch 2644
@@ -10,13 +7,6 @@ MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-keylength.patch 346
 MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 970c0d92252dd03d92e70f4d0185533f metadata.xml 224
 MD5 c3ea476e8346bf07ac0a594403a13f63 pdftohtml-0.36-r3.ebuild 1198
 MD5 bf3c64b1c953230f94b7526fe2711b0b pdftohtml-0.36-r4.ebuild 1267
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDluE6KRy60XGEcJIRAkslAJ9HR/exJcmCIGn7Ok3b88t3zgmsZACgjjHF
-GFLoCuK1LOo6iuGpWG/t8MU=
-=A3Si
------END PGP SIGNATURE-----
