@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Gtk2-Ex-Simple-List
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/ChangeLog,v 1.1 2005/12/12 12:55:54 mcummings Exp $
+
+*Gtk2-Ex-Simple-List-0.50 (12 Dec 2005)
+
+  12 Dec 2005; <mcumming@gentoo.org> +metadata.xml,
+  +Gtk2-Ex-Simple-List-0.50.ebuild:
+  Dep for app-text/podbrowser
+
