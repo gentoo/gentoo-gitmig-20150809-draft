@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.37 2005/12/10 22:59:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.38 2005/12/12 19:37:23 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org>
+  kdeaccessibility-meta-3.5.0.ebuild:
+  Marked ~ppc.
 
   11 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   kdeaccessibility-meta-3.4.3.ebuild:

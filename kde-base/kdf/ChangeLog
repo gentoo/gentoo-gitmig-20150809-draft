@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.31 2005/12/10 20:11:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.32 2005/12/12 19:10:58 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kdf-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kdf-3.4.3.ebuild:
   Stable on alpha.

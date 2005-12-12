@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.29 2005/12/10 07:33:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.30 2005/12/12 19:23:12 josejx Exp $
+
+  12 Dec 2005; Joseph Jezak <josejx@gentoo.org> umbrello-3.5.0.ebuild:
+  Marked ~ppc.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> umbrello-3.4.3.ebuild:
   Marked x86 stable for bug #112842.
