@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e0985bf6552181ca794e12ef8b78a110 ChangeLog 923
-MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
-MD5 09bea035b9829065e0b4f1567f50e964 tinylogin-1.4.ebuild 928
 MD5 f205e4d830aea7ebd7633fc6ba5816ce files/digest-tinylogin-1.4 65
+MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+MD5 e07d57419f9a20782175c062c4fe5e85 tinylogin-1.4.ebuild 886
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnNdHgIKl8Uu19MoRAvOPAJ9QI7dLA7bBB9sI5AAlbWxewNfILgCeKA+3
+30NBqsD1zk48v2J3qIC6DCM=
+=ySaH
+-----END PGP SIGNATURE-----
