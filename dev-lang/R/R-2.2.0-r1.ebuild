@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.0.ebuild,v 1.1 2005/11/22 15:11:55 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.0-r1.ebuild,v 1.1 2005/12/12 19:56:13 cryos Exp $
 
 inherit fortran toolchain-funcs
 
@@ -74,7 +74,15 @@ src_install() {
 	sed \
 		-e "/^R_HOME_DIR=.*/s::R_HOME_DIR=/usr/$(get_libdir)/R:" \
 		-i ${D}/usr/$(get_libdir)/R/bin/R \
-		|| die "sed failed"
+		|| die "sed failed."
+
+	# The same kinds of seds are needed for these variables too, see bug 115140
+	sed \
+		-e "/^R_SHARE_DIR=.*/s::R_SHARE_DIR=/usr/$(get_libdir)/R/share:" \
+		-e "/^R_INCLUDE_DIR=.*/s::R_INCLUDE_DIR=/usr/$(get_libdir)/R/include:" \
+		-e "/^R_DOC_DIR=.*/s::R_DOC_DIR=/usr/$(get_libdir)/R/doc:" \
+		-i ${D}/usr/$(get_libdir)/R/bin/R \
+		|| die "sed failed."
 
 	# R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
 	# the 2nd one is corrected by above sed, the first is replaced by a symlink
