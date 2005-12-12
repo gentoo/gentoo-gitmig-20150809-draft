@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1.ebuild,v 1.2 2005/12/02 06:25:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.1 2005/12/12 06:25:44 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -152,7 +152,7 @@ src_install() {
 
 	# Create the two-number versioned libs (.so.#.#), since only .so.# and
 	# .so.#.#.# were made
-	dosym libGLU.so.1.3.060400 /usr/$(get_libdir)/libGLU.so.1.3
+	dosym libGLU.so.1.3.060401 /usr/$(get_libdir)/libGLU.so.1.3
 	dosym libGLw.so.1.0.0 /usr/$(get_libdir)/libGLw.so.1.0
 
 	# libGLU doesn't get the plain .so symlink either
