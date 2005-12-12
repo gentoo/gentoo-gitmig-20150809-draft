@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.6 2005/11/19 10:46:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.7 2005/12/12 21:27:05 marienz Exp $
+
+*paramiko-1.5.2 (12 Dec 2005)
+
+  12 Dec 2005; Marien Zwart <marienz@gentoo.org> +paramiko-1.5.2.ebuild:
+  Version bump, add src_test.
 
   19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Added japanese metadata.xml translation thanks to Yoshino-san.
