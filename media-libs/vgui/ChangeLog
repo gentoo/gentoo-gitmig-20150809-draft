@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vgui
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.4 2004/07/01 08:04:57 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.5 2005/12/12 09:02:54 robbat2 Exp $
+
+  12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
+  Add metadata.xml
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> vgui-1.90a.ebuild:
   virtual/glibc -> virtual/libc
