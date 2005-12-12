@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r1.ebuild,v 1.7 2005/10/21 17:56:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r1.ebuild,v 1.8 2005/12/12 14:09:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,7 +21,8 @@ RDEPEND="games-fps/ut2004-data
 	games-fps/ut2004-bonuspack-ece
 	opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )
-	amd64? ( sys-libs/libstdc++-v3 )"
+	|| ( sys-libs/libstdc++-v3
+		=sys-devel/gcc-3.3* )"
 
 S=${WORKDIR}/UT2004-Patch
 
