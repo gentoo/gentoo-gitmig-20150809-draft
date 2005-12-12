@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.8 2005/12/09 16:09:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.9 2005/12/12 06:30:14 spyderous Exp $
+
+*fish-1.18.2 (12 Dec 2005)
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.18.1.ebuild,
+  +fish-1.18.2.ebuild:
+  Fix a crash on token history search.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.18.1.ebuild:
   Add postinst note about setting it as login shell.
