@@ -1,4 +1,4 @@
-MD5 0bc1de58b2e416f7df60b6742934ad29 ChangeLog 7044
+MD5 de926c3d510c82a2490515b8ea8d5b04 ChangeLog 7128
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
 MD5 912bf2607fc0c67f023f6084731eba21 files/digest-kpdf-3.4.1-r3 221
@@ -24,5 +24,5 @@ MD5 9d42c07d0672b69a347a437c76b5e024 kpdf-3.4.2.ebuild 578
 MD5 6f3983621da293908d519130653bb4df kpdf-3.4.3-r2.ebuild 645
 MD5 71273e2bb8b2c3a5e1407a5a32a4b68a kpdf-3.4.3.ebuild 576
 MD5 40f17845d708e88188559376e7cc6cdf kpdf-3.5.0-r2.ebuild 944
-MD5 8d8d7ccc0f707b75e14d22df3c13f6b6 kpdf-3.5.0.ebuild 836
+MD5 83802275c8156d6e4aff171ef643d683 kpdf-3.5.0.ebuild 841
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

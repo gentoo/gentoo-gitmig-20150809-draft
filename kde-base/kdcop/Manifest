@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb7e74f03db30b3a035074d839689987 ChangeLog 2821
+MD5 f0bb8033da2d85f485386e68cc601151 ChangeLog 2905
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdcop-3.4.1 212
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdcop-3.5.0 68
 MD5 04b4b7bae66ce589cad00a6bd002416b kdcop-3.4.1.ebuild 421
-MD5 405cc65368c8ea9fd5eba25771aaf2aa kdcop-3.5.0.ebuild 410
+MD5 f5aa0dc50aabb94e628e53f65d9dbde1 kdcop-3.5.0.ebuild 415
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDksSuugEuf3OQ0akRAq8/AJ0ZIhVGLLVWdcNwT8fZ1Tk2E1FkVgCfQd6Z
-QR7gnzGeNWGhhik8ivw7mHY=
-=o9tf
------END PGP SIGNATURE-----

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 96e1820accab647bd0f68f1d49cdce69 ChangeLog 4085
-MD5 a59600ee30d2135ef84c5eca92cd3b3e khangman-3.5.0.ebuild 527
-MD5 d03361dc64a54dfab669f541cc84646b khangman-3.4.3.ebuild 570
-MD5 55e6e6832fe5e34f563546ecd3bb5ff1 khangman-3.4.2.ebuild 574
-MD5 4dedcc4fed51647a43272d0049888a63 khangman-3.4.1.ebuild 561
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 a5be2480b17e9ca3131d1015358a0eed ChangeLog 4172
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-khangman-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-khangman-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-khangman-3.4.3 67
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-khangman-3.4.1 208
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-khangman-3.5.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0DtugEuf3OQ0akRAqcdAJ49cFZuKlpzZHRXxMvNrXVG8G+FQwCeIMIh
-3E/+3BIOzxqyoHS4TTDsdbY=
-=4Z56
------END PGP SIGNATURE-----
+MD5 4dedcc4fed51647a43272d0049888a63 khangman-3.4.1.ebuild 561
+MD5 55e6e6832fe5e34f563546ecd3bb5ff1 khangman-3.4.2.ebuild 574
+MD5 d03361dc64a54dfab669f541cc84646b khangman-3.4.3.ebuild 570
+MD5 d68c3883baed1ef1b9ab41353c1bb843 khangman-3.5.0.ebuild 532
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

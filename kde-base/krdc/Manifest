@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c145746e1c0a3faddbd639b3d63e96b7 ChangeLog 4203
-MD5 82353cd7c16a964c04be09b2cc3d0b59 krdc-3.4.3.ebuild 627
-MD5 791727c7f81ac5267426f868db432175 krdc-3.4.2.ebuild 636
-MD5 b2f4d0c359428c94c7c7304fafae0214 krdc-3.5.0.ebuild 624
-MD5 76bf0cd95f7581ec08ef84ef271a7e10 krdc-3.4.1.ebuild 624
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 c259b2aa6bede478d4afff87117e9685 files/digest-krdc-3.4.3 70
+MD5 407b1a760bf44c8c903443fc85aaa042 ChangeLog 4286
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-krdc-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-krdc-3.4.2 296
+MD5 c259b2aa6bede478d4afff87117e9685 files/digest-krdc-3.4.3 70
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-krdc-3.5.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0aNugEuf3OQ0akRAunTAJ0aLNm7g3ooAW1Hpu3DqLqzP4dqVACdFGg7
-MYOoWOs9ePuV/lczvx8cGlA=
-=G6tr
------END PGP SIGNATURE-----
+MD5 76bf0cd95f7581ec08ef84ef271a7e10 krdc-3.4.1.ebuild 624
+MD5 791727c7f81ac5267426f868db432175 krdc-3.4.2.ebuild 636
+MD5 82353cd7c16a964c04be09b2cc3d0b59 krdc-3.4.3.ebuild 627
+MD5 b330ee5ee3376e5416154379f63db09d krdc-3.5.0.ebuild 626
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

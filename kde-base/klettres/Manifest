@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ac433865b348f1cff96259aa92ab722 ChangeLog 3967
-MD5 6ae7382de0bfd08cf116c1d182bb0faf klettres-3.4.2.ebuild 435
-MD5 457be3ca5640abdac2a630a78b571b30 klettres-3.5.0.ebuild 427
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 2baa58afc1e4497ec77d3ca593a03ee0 klettres-3.4.1.ebuild 426
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-klettres-3.5.0 67
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klettres-3.4.2 282
+MD5 b94196052aeb5d279df590f21faa7cb1 ChangeLog 4054
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-klettres-3.4.1 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDmz6jugEuf3OQ0akRAmCYAJjnVCLZBdMI8XXo99BV/TwPV3/OAJwOJbCM
-QWPpScXmtMa0wV537/DeHg==
-=L0wr
------END PGP SIGNATURE-----
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klettres-3.4.2 282
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-klettres-3.5.0 67
+MD5 2baa58afc1e4497ec77d3ca593a03ee0 klettres-3.4.1.ebuild 426
+MD5 6ae7382de0bfd08cf116c1d182bb0faf klettres-3.4.2.ebuild 435
+MD5 54bd0638897a6c6ec10dea294a994d57 klettres-3.5.0.ebuild 432
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

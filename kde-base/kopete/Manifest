@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d0199ad1b333589943341a1606d5e7ee ChangeLog 6102
+MD5 6b5e324f27b03ba60f8476c6f551c820 ChangeLog 6177
+MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
+MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183
+MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kopete-3.4.1 218
+MD5 284887f9ed6a0a0b0efc3a0d88f11868 files/digest-kopete-3.4.1-r1 297
+MD5 1277f401bade54acfa086cf013950252 files/digest-kopete-3.4.2 296
+MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kopete-3.4.3 70
+MD5 c1796dff01cbd770e451d9686766c581 files/digest-kopete-3.5.0 70
+MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
 MD5 04a2f0cd98df7d21f30ef36d4c4f20d4 kopete-3.4.1-r1.ebuild 757
-MD5 6732e530498095107980c6d02db7d50e kopete-3.4.3.ebuild 1038
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 092bbf1bd71b9f860c3fd2aa3f77c584 kopete-3.5.0.ebuild 973
 MD5 ec7b8d63a646262499635474f93ffd3b kopete-3.4.1.ebuild 551
 MD5 3d71eb4f7bb9c12d729d0a4792976142 kopete-3.4.2.ebuild 1044
-MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
-MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183
-MD5 284887f9ed6a0a0b0efc3a0d88f11868 files/digest-kopete-3.4.1-r1 297
-MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kopete-3.4.3 70
-MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
-MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kopete-3.4.1 218
-MD5 c1796dff01cbd770e451d9686766c581 files/digest-kopete-3.5.0 70
-MD5 1277f401bade54acfa086cf013950252 files/digest-kopete-3.4.2 296
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0WpugEuf3OQ0akRAi/xAJ0WnYp0gnkRSmCao60Q/6XFznnhjQCdG+jq
-D13YAlk92m137Zt21efVzN4=
-=jOD2
------END PGP SIGNATURE-----
+MD5 6732e530498095107980c6d02db7d50e kopete-3.4.3.ebuild 1038
+MD5 092bbf1bd71b9f860c3fd2aa3f77c584 kopete-3.5.0.ebuild 973
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

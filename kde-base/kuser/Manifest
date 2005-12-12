@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd0be3bde8d05603316036152412c33d ChangeLog 4042
-MD5 bfdbe7c61511333baad3806dfc27ac49 kuser-3.4.2.ebuild 449
-MD5 60b9d7b329b6a74c179dc54597bbc34e kuser-3.5.0.ebuild 441
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 ca122bd190bbbaf818d187d5aaf78759 kuser-3.4.1.ebuild 440
-MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-kuser-3.4.2 286
+MD5 dbd4009249b22a2e37ceed6fc7a7683e ChangeLog 4126
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kuser-3.4.1 211
+MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-kuser-3.4.2 286
 MD5 5e640d90c8921056fae9b3ca328a8093 files/digest-kuser-3.5.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm14jugEuf3OQ0akRAu3CAJ4py52e2S5MHLHI0BBiiZgWsafiagCfcwyz
-ydDGXACaHkXAhIvC1XMCVcE=
-=FToZ
------END PGP SIGNATURE-----
+MD5 ca122bd190bbbaf818d187d5aaf78759 kuser-3.4.1.ebuild 440
+MD5 bfdbe7c61511333baad3806dfc27ac49 kuser-3.4.2.ebuild 449
+MD5 e5590fe7186b395514b3b22812e048a6 kuser-3.5.0.ebuild 446
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

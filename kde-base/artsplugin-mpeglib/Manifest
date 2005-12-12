@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f655cfec9a7dd1653bcbcac4462ea9c2 ChangeLog 4607
-MD5 48aa593505bc019647b521cdfd48d01e artsplugin-mpeglib-3.5.0.ebuild 697
-MD5 73a0a798ce570afd26077bc9da0b56fd artsplugin-mpeglib-3.4.3.ebuild 750
+MD5 de495d6ce877f2881e1cbba1112fe0d7 ChangeLog 4706
 MD5 c9d4d9c2c2f4446a1e62871a2d56e7be artsplugin-mpeglib-3.4.1.ebuild 747
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 73a0a798ce570afd26077bc9da0b56fd artsplugin-mpeglib-3.4.3.ebuild 750
+MD5 9a32402fffa599f286199a19b2f57767 artsplugin-mpeglib-3.5.0.ebuild 700
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-mpeglib-3.4.1 227
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-artsplugin-mpeglib-3.4.3 73
 MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-artsplugin-mpeglib-3.5.0 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm2gxugEuf3OQ0akRAn6TAJ9wF4vv0h6WAfXQ51gdUn7zGlzjPQCfTe0c
-sXxSmm7BkkKF/6DHpe+LqVE=
-=QfiW
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

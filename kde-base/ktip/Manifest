@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 223c132c081bcfdbda5ee8135970f275 ChangeLog 3859
-MD5 468f278740485ce56095ec882c912a26 ktip-3.5.0.ebuild 387
-MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.2.ebuild 399
-MD5 714cdec14532c8effa7385165a847ad5 ktip-3.4.1.ebuild 386
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 183e7ff70363385ffd4cc88921a5cab0 ktip-3.4.3.ebuild 393
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ktip-3.4.3 68
+MD5 504c88e5d59ef5e4642130caa90bbc48 ChangeLog 3942
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ktip-3.4.1 212
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-ktip-3.5.0 68
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ktip-3.4.2 287
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmzgpugEuf3OQ0akRAsb8AJ9r+5zZL5dS9NfiHZ0ZEayOHG5wWwCdGJkW
-uUuLZ/e6qdVEpxl0b2/2fZ4=
-=luu2
------END PGP SIGNATURE-----
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ktip-3.4.3 68
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-ktip-3.5.0 68
+MD5 714cdec14532c8effa7385165a847ad5 ktip-3.4.1.ebuild 386
+MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.2.ebuild 399
+MD5 183e7ff70363385ffd4cc88921a5cab0 ktip-3.4.3.ebuild 393
+MD5 3f50a05d4c996b9812538c42e4b83b56 ktip-3.5.0.ebuild 392
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

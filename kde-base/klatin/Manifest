@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9647fa769ab47b95f9e8841ea8814c86 ChangeLog 3999
-MD5 ec8b6e6293ed946028add6e5b65914d7 klatin-3.4.3.ebuild 585
+MD5 61a779267459831515579a9d6274cd89 ChangeLog 4084
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-klatin-3.4.1 208
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klatin-3.4.2 282
+MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-klatin-3.4.3 67
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-klatin-3.5.0 67
 MD5 bba0c9dc6d023d114f7e220ba034bc14 klatin-3.4.1.ebuild 576
 MD5 83781ec0d64b7cb0d91207ecdbd6261b klatin-3.4.2.ebuild 589
+MD5 ec8b6e6293ed946028add6e5b65914d7 klatin-3.4.3.ebuild 585
+MD5 57531626997d5a62050492866a7da057 klatin-3.5.0.ebuild 545
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 5d0eb3690ec3f38303d7a5914b0708c9 klatin-3.5.0.ebuild 540
-MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-klatin-3.4.3 67
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-klatin-3.4.1 208
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-klatin-3.5.0 67
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-klatin-3.4.2 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmz+EugEuf3OQ0akRArvWAJ9gTPjb5OmcLrQSlZ3CDX6663ifLwCggoNB
-/WlVLcYLekE7VgWltVWlJyw=
-=iHia
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 498e3fb0f733bfcc6ec43870a8ee7351 libkdeedu-3.4.2.ebuild 416
-MD5 111219c497b3e527666a431a747f3987 ChangeLog 3906
-MD5 88c1fe37364224be6c3f064c4952ae3f libkdeedu-3.5.0.ebuild 408
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 ce9f4b7c582fb22c4e0004c371cb37aa libkdeedu-3.4.1.ebuild 407
-MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-libkdeedu-3.5.0 67
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-libkdeedu-3.4.2 282
+MD5 f72e897a32534052b0b25603fd31ca11 ChangeLog 3994
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-libkdeedu-3.4.1 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmz4YugEuf3OQ0akRAiIkAKCbhxu/8sLKLCFOJdkSaXeuDwZnwQCfYaV2
-hw74VrWDLF1nYhGpWuN7Cng=
-=Gojg
------END PGP SIGNATURE-----
+MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-libkdeedu-3.4.2 282
+MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-libkdeedu-3.5.0 67
+MD5 ce9f4b7c582fb22c4e0004c371cb37aa libkdeedu-3.4.1.ebuild 407
+MD5 498e3fb0f733bfcc6ec43870a8ee7351 libkdeedu-3.4.2.ebuild 416
+MD5 39d779d531c5e13416cff013bd398860 libkdeedu-3.5.0.ebuild 413
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
