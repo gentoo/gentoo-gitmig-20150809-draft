@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clibpdf
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clibpdf/ChangeLog,v 1.3 2004/11/01 19:31:09 pylon Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clibpdf/ChangeLog,v 1.4 2005/12/12 09:02:06 robbat2 Exp $
+
+  12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
+  Add metadata.
 
   01 Nov 2004; Lars Weiler <pylon@gentoo.org> clibpdf-202_p1.ebuild:
   Stable on ppc for PHP5, Bug #60442.
