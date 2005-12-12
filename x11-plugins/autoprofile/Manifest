@@ -1,4 +1,15 @@
-MD5 786175ea2cf0504e823130f8a5ea1d7c ChangeLog 2380
-MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
-MD5 de5a11ebca6897a0689cbd6a0ca04e1d autoprofile-2.10.ebuild 706
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 003409082bed0466ea65b3f8e59dd4be ChangeLog 2548
+MD5 875ed65003f782006c1c12331b8cc5cd autoprofile-2.10.ebuild 802
+MD5 b8d50badedaf287c6641087f9d026999 files/autoprofile-2.10-gcc4.patch 579
 MD5 9f9da3e76cfe1523d4a7af98bf241abd files/digest-autoprofile-2.10 67
+MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDneHlCRZPokWLroQRAliqAJ4hqLcapgv7MYmOVJy6j9DEsAifegCdHiOB
+l93xc+vY57a4XpM0Np6PfpE=
+=iFZi
+-----END PGP SIGNATURE-----

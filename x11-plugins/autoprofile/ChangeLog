@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/autoprofile
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.16 2004/10/21 15:41:33 rizzo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.17 2005/12/12 20:47:20 halcy0n Exp $
+
+  12 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/autoprofile-2.10-gcc4.patch, autoprofile-2.10.ebuild:
+  Add patch to fix compilation with gcc-4; bug #99063
 
   21 Oct 2004; Don Seiler <rizzo@gentoo.org> -autoprofile-2.07.ebuild,
   -autoprofile-2.08.ebuild, -autoprofile-2.09.ebuild,
