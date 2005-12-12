@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-tomcat-jasper
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/ChangeLog,v 1.2 2005/05/25 15:10:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/ChangeLog,v 1.3 2005/12/12 03:53:08 nichoj Exp $
+
+  12 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  jakarta-tomcat-jasper-2.ebuild:
+  Loosened xerces dependency (bug #115158).
 
   25 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jakarta-tomcat-jasper-2.ebuild:
