@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85047bd6089f1381717dd43952c09399 ChangeLog 2365
 MD5 fed316e3dcde9340318bb0c96f6eb30c ext2resize-1.1.17-r2.ebuild 1284
 MD5 46108350b4428085f56c46c8f0f80759 ext2resize-1.1.19.ebuild 1075
@@ -7,3 +10,10 @@ MD5 fc7c47e46247f9329e3b79edbb76d986 files/ext2resize-1.1.17-gcc3.3.patch 1621
 MD5 21f465f86737e5dd17ad314e6655e85e files/ext2resize-1.1.17-linux26.patch 302
 MD5 0063af1becfb3a32d371d9e5f0c16d51 files/ext2resize-1.1.19-linux26.patch 275
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDndv5wUpWvClEHQoRAqZzAJ4o0rIQnJS6RLpBd/KY53ZwaRvX/wCfY0mS
+bWC0Kmr2SIt8j5hM9HrQJWc=
+=6gZO
+-----END PGP SIGNATURE-----
