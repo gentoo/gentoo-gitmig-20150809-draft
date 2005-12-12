@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgstats/gpgstats-0.5.ebuild,v 1.2 2005/12/12 03:09:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgstats/gpgstats-0.5-r1.ebuild,v 1.1 2005/12/12 03:09:42 robbat2 Exp $
 
 DESCRIPTION="GPGstats calculates statistics on the keys in your key-ring"
 HOMEPAGE="http://www.vanheusden.com/gpgstats/"
@@ -11,11 +11,6 @@ KEYWORDS="~x86"
 IUSE=""
 RDEPEND="app-crypt/gpgme"
 DEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack ${A}
-	#sed -i.orig -e 's,^LDFLAGS=,LDFLAGS=-shared ,g' ${S}/Makefile || die "sed failed"
-}
 
 src_compile() {
 	emake DEBUG=''
