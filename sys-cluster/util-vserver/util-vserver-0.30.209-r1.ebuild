@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.209-r1.ebuild,v 1.2 2005/12/01 14:25:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.209-r1.ebuild,v 1.3 2005/12/12 10:08:58 phreak Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -74,7 +74,7 @@ src_install() {
 	doinitd "${WORKDIR}"/init.d/vservers
 	doconfd "${WORKDIR}"/conf.d/vservers
 
-	dodoc README ChangeLog NEWS AUTHORS INSTALL THANKS util-vserver.spec
+	dodoc README ChangeLog NEWS AUTHORS THANKS util-vserver.spec
 }
 
 pkg_postinst() {
