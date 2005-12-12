@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.15 2005/12/07 11:40:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.16 2005/12/12 04:41:08 spyderous Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,7 +39,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	arts? ( kde-base/arts )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
-	dga? ( virtual/x11 )
+	dga? ( || ( x11-libs/libXxf86dga virtual/x11 ) )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdts )
 	dvd? ( dvdread? ( media-libs/libdvdread ) )
@@ -52,7 +52,12 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	ggi? ( media-libs/libggi )
 	gtk? (
 		media-libs/libpng
-		virtual/x11
+		|| ( ( x11-libs/libXxf86vm
+				x11-libs/libXext
+				x11-libs/libXi
+			)
+			virtual/x11
+		)
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2*
 		)
@@ -72,14 +77,54 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2004.07.20 )
 	truetype? ( >=media-libs/freetype-2.1 )
-	xinerama? ( virtual/x11 )
+	xinerama? ( || ( ( x11-libs/libXinerama
+				x11-libs/libXxf86vm
+				x11-libs/libXext
+			)
+			virtual/x11
+		)
+	)
 	jack? ( >=media-libs/bio2jack-0.4 )
 	xmms? ( media-sound/xmms )
 	xanim? ( >=media-video/xanim-2.80.1-r4 )
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	xv? ( || ( ( x11-libs/libXv
+				x11-libs/libXxf86vm
+				x11-libs/libXext
+			)
+			virtual/x11
+		)
+	)
+	xvmc? ( || ( x11-libs/libXvMC virtual/x11 ) )
+	X? ( || ( ( x11-libs/libXxf86vm
+				x11-libs/libXext
+			)
+			virtual/x11
+		)
+	)"
 
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	dga? ( || ( x11-proto/xf86dgaproto virtual/x11 ) )
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	xv? ( || ( ( x11-proto/videoproto
+				x11-proto/xf86vidmodeproto
+			)
+			virtual/x11
+		)
+	)
+	gtk? ( || ( ( x11-proto/xextproto
+				x11-proto/xf86vidmodeproto
+			)
+			virtual/x11
+		)
+	)
+	X? ( || ( ( x11-proto/xextproto
+				x11-proto/xf86vidmodeproto
+			)
+			virtual/x11
+		)
+	)"
 
 SLOT="0"
 LICENSE="GPL-2"
