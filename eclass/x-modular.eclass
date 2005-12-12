@@ -1,14 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.30 2005/12/10 21:49:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.31 2005/12/12 01:43:28 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
 # This eclass is designed to reduce code duplication in the modularized X11
 # ebuilds.
-#
-# If the ebuild installs fonts, set FONT="yes" at the top and set FONT_DIRS to
-# the subdirectories within /usr/share/fonts to which it installs fonts.
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
