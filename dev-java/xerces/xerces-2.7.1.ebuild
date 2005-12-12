@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.7.1.ebuild,v 1.1 2005/12/09 05:09:55 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.7.1.ebuild,v 1.2 2005/12/12 03:50:36 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="jars sampjar"
+	local antflags="jars"
 	use doc && antflags="${antflags} javadocs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "Compile failed."
