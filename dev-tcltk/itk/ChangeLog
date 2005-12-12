@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.1 2005/07/03 02:49:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.2 2005/12/12 21:21:35 fmccor Exp $
+
+  12 Dec 2005; Ferris McCormick <fmccor@gentoo.org> itk-3.3.ebuild:
+  Add ~sparc keyword at developer's request --- Bug #115177 --- package builds
+  without any problems, and appears to run.  Notice, however, that the
+  interp.test fails (all other tests are fine).  This requires resolution or
+  explanation before sparc can go stable.
 
 *itk-3.3 (03 Jul 2005)
 
