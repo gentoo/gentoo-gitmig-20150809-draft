@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.108 2005/12/12 13:09:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.109 2005/12/12 17:04:45 wolf31o2 Exp $
+
+  12 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-5.5.0.18463.ebuild:
+  Partially revert previous commit due to bug #115141.
 
   12 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-5.5.0.18463.ebuild:
