@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.152 2005/12/11 22:16:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.153 2005/12/12 01:57:42 tsunam Exp $
+
+  12 Dec 2005; Joshua Jackson <tsunam@gentoo.org>
+  ethereal-0.10.13-r2.ebuild:
+  Stable on x86 for bug #115030
 
   11 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
   files/ethereal-0.10.13-packet-ospf.diff:
