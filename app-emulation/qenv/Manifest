@@ -1,0 +1,5 @@
+MD5 7f71dea705627bd9b642458b3328f628 ChangeLog 425
+MD5 2e7e1f3b4075e8120623613a3252b2f0 files/digest-qenv-0.1 61
+MD5 30d982ab57e5492bcbf7dd1cbe86bee1 files/qenv-0.1-qemu-0.7.2.patch 3729
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 ee53a8a2d24be28705e34551cfbc2910 qenv-0.1.ebuild 1038

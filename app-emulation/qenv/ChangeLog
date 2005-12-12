@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/qenv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qenv/ChangeLog,v 1.1 2005/12/12 20:00:22 robbat2 Exp $
+
+*qenv-0.1 (12 Dec 2005)
+
+  12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/qenv-0.1-qemu-0.7.2.patch, +metadata.xml, +qenv-0.1.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
