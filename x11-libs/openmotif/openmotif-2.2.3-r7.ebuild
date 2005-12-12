@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.1 2005/04/26 13:56:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.2 2005/12/12 05:59:21 spyderous Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -14,15 +14,23 @@ LICENSE="MOTIF"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11
+RDEPEND="virtual/libc
+	|| ( ( x11-libs/libXmu
+			x11-libs/libXaw
+			x11-libs/libXp
+		)
+		virtual/x11
+	)
+	>=x11-libs/motif-config-0.9"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	!ppc-macos? ( =sys-devel/automake-1.4* )
 	=sys-devel/autoconf-2.5*
-	>=x11-libs/motif-config-0.9"
-RDEPEND="virtual/libc
-	virtual/x11
-	>=x11-libs/motif-config-0.9"
+	|| ( ( x11-proto/printproto
+			x11-proto/xextproto
+		)
+		virtual/x11
+	)"
 
 PROVIDE="virtual/motif"
 SLOT="2.2"
