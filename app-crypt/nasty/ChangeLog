@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/nasty
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.1 2005/09/19 04:56:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.2 2005/12/12 03:25:47 robbat2 Exp $
+
+*nasty-0.6-r1 (12 Dec 2005)
+
+  12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +nasty-0.6-r1.ebuild:
+  Bug #106492, fix segfault.
 
 *nasty-0.6 (19 Sep 2005)
 
