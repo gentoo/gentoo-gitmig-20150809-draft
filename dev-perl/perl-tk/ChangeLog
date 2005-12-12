@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.35 2005/07/22 18:56:32 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.36 2005/12/12 08:55:44 spyderous Exp $
+
+  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  perl-tk-804.027.ebuild:
+  Add modular X dependencies.
 
   22 Jul 2005; Herbie Hopkins <herbs@gentoo.org> perl-tk-804.027.ebuild:
   Multilib fix.

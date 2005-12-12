@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.16 2005/07/22 18:56:32 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.17 2005/12/12 08:55:44 spyderous Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 ppc64 mips"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libX11 virtual/x11 )"
 
 myconf="X11LIB=/usr/$(get_libdir)"
 
