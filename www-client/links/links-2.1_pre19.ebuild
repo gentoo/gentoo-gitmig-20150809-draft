@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre19.ebuild,v 1.3 2005/12/10 14:59:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre19.ebuild,v 1.4 2005/12/12 13:41:23 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://links.twibright.com/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh sparc x86"
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode livecd"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
