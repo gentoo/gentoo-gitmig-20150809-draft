@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9d2668e0c8e15f2bf6c5f2cf3fde82a8 ChangeLog 353
+MD5 f8a957a6512c3c6f09c92d6dcae5a73b files/digest-podbrowser-0.09 66
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 dddb6487c87da45900d5c235fc381f29 podbrowser-0.09.ebuild 836
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnXhotG5z4I8BtQoRAlT3AJ4g/wztJCf72y5VR0s40yeUStx3VwCfSUbg
+DWyomnuyhZQE+FhZ/vapj/s=
+=qrTl
+-----END PGP SIGNATURE-----

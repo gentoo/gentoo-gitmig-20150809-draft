@@ -1,0 +1,9 @@
+# ChangeLog for app-doc/podbrowser
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.1 2005/12/12 13:17:20 mcummings Exp $
+
+*podbrowser-0.09 (12 Dec 2005)
+
+  12 Dec 2005; <mcumming@gentoo.org> +metadata.xml, +podbrowser-0.09.ebuild:
+  GTK2 pod browsing package :)
+
