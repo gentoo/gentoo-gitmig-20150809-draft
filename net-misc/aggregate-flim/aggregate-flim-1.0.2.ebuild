@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate-flim/aggregate-flim-1.0.2.ebuild,v 1.8 2005/07/30 17:53:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate-flim/aggregate-flim-1.0.2.ebuild,v 1.9 2005/12/12 08:24:44 robbat2 Exp $
 
 MY_PN="${PN/-flim}"
 MY_P="${MY_PN}-${PV}"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.vergenet.net/linux/${MY_PN}/"
 SRC_URI="${HOMEPAGE}/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ia64"
+KEYWORDS="x86 alpha ia64 ~amd64"
 IUSE=""
 DEPEND="dev-libs/vanessa-logger"
 #RDEPEND=""
