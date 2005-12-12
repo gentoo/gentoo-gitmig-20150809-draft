@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.3 2005/04/21 13:55:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.4 2005/12/12 19:35:56 gmsoft Exp $
+
+  12 Dec 2005; Guy Martin <gmsoft@gentoo.org> metadata.xml:
+  Update metadata.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> aiccu-2005.01.31.ebuild:
   added ~amd64

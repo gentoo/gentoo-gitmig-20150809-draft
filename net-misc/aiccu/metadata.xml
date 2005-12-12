@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<catmetadata>
-	<longdescription lang="en">
-		AICCU Client to configure an IPv6 tunnel to SixXS.
-	</longdescription>
-</catmetadata>
-
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>ipv6</herd>
+<maintainer>
+  <email>gmsoft@gentoo.org</email>
+  <name>Guy Martin</name>
+</maintainer>
+</pkgmetadata>
