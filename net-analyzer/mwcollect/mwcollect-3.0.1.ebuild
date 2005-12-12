@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.1.ebuild,v 1.1 2005/12/11 03:03:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.1.ebuild,v 1.2 2005/12/12 10:54:27 chriswhite Exp $
 
 inherit eutils
 
@@ -44,6 +44,9 @@ src_unpack() {
 
 	# fPIC patching
 	epatch "${FILESDIR}"/${P}-pic.patch
+
+	# pid file writing issues
+	epatch "${FILESDIR}"/${P}-pid.patch
 }
 
 src_compile() {

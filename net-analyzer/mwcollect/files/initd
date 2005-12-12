@@ -30,7 +30,7 @@ stop() {
 	ebegin "Stopping mwcollectd"
 	start-stop-daemon --stop --quiet \
 		--pidfile /var/run/mwcollect.pid \
-		--exec /usr/sbin/mwcollectd && rm /var/run/mwcollect.pid
+		--exec /usr/sbin/mwcollectd
 	eend $?
 }
 

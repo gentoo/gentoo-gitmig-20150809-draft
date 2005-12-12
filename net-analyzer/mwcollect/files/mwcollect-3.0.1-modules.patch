@@ -1,7 +1,5 @@
-Index: mwcollect3/trunk/src/core/mwcollect.cpp
-===================================================================
---- mwcollect3/trunk/src/core/mwcollect.cpp (revision 250)
-+++ mwcollect3/trunk/src/core/mwcollect.cpp (revision 251)
+--- src/core/mwcollect.cpp (revision 250)
++++ src/core/mwcollect.cpp (revision 251)
 @@ -246,4 +246,14 @@
  			}
  			
@@ -23,7 +21,8 @@ Index: mwcollect3/trunk/src/core/mwcollect.cpp
 +				DEBUG("Changing UID to %s (%i) %s setting capabilties.", szChuid, (int) uid, bCaps ? "with" : "without");
  			
  				#ifdef LINUX_FLAVOURED
-@@ -313,14 +324,4 @@
+@@ -303,16 +303,6 @@
+ 				}	
  			}
  			
 -			if(!pCollector->start())
@@ -38,10 +37,9 @@ Index: mwcollect3/trunk/src/core/mwcollect.cpp
 -			
  			if(bDaemon && (pid = fork()))
  			{
-Index: mwcollect3/trunk/src/log-file/log-file.cpp
-===================================================================
---- mwcollect3/trunk/src/log-file/log-file.cpp (revision 134)
-+++ mwcollect3/trunk/src/log-file/log-file.cpp (revision 251)
+ 				FILE * pPidFile = fopen(szPidFile, "wt");
+--- src/log-file/log-file.cpp (revision 134)
++++ src/log-file/log-file.cpp (revision 251)
 @@ -7,4 +7,7 @@
  
  #include "log-file.h"
@@ -50,10 +48,11 @@ Index: mwcollect3/trunk/src/log-file/log-file.cpp
 +#include <string.h>
  
  
-@@ -41,5 +44,5 @@
+@@ -40,7 +40,7 @@
+ 	
  	if(!(pFile = fopen(szFileName, "at")))
  	{
 -		LOG(LT_LEVEL_CRITICAL | LT_STATUS, "Could not open logfile \"%s\" for writing!", szFileName);
-+		LOG(LT_LEVEL_CRITICAL | LT_STATUS, "Could not open logfile \"%s\" for writing: %s!", szFileName, strerror(errno));
++		LOG(LT_LEVEL_CRITICAL | LT_STATUS, "Could not open logfile \"%s\" for writing!", szFileName, strerror(errno));
  		return false;
  	}
