@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.5.1.ebuild,v 1.2 2005/07/15 22:57:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.5.1.ebuild,v 1.3 2005/12/13 04:30:00 anarchy Exp $
 
-inherit common-lisp
+inherit common-lisp multilib
 
 DESCRIPTION="Portable FFI library for Common Lisp."
 HOMEPAGE="http://uffi.med-info.com/"
@@ -29,7 +29,7 @@ src_install() {
 	dosym /usr/share/common-lisp/source/uffi/uffi.asd \
 		/usr/share/common-lisp/systems/uffi.asd
 
-	insinto /usr/lib/uffi
+	insinto /usr/$(get_libdir)/uffi
 	doins tests/*.so
 
 	dodoc AUTHORS ChangeLog INSTALL LICENSE NEWS README TODO doc/uffi.pdf doc/COPYING.GFDL

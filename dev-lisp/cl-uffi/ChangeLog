@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-uffi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.23 2005/07/15 21:48:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.24 2005/12/13 04:30:00 anarchy Exp $
+
+  13 Dec 2005; Jory A. Pratt <anarchy@gentoo.org> cl-uffi-1.5.1.ebuild:
+  multilib fix wrt bug #115375
 
 *cl-uffi-1.5.1 (15 Jul 2005)
 
