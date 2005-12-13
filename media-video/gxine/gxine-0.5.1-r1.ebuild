@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.1-r1.ebuild,v 1.2 2005/12/10 15:24:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.1-r1.ebuild,v 1.3 2005/12/13 01:11:08 spyderous Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -16,6 +16,7 @@ DEPEND="media-libs/libpng
 	lirc? ( app-misc/lirc )
 	X? ( || ( ( x11-libs/libX11
 		x11-libs/libXext
+		x11-libs/libXinerama
 		x11-libs/libXrender )
 		virtual/x11 ) )"
 RDEPEND="nls? ( sys-devel/gettext )

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.55 2005/12/10 15:24:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.56 2005/12/13 01:11:08 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  gxine-0.5.1-r1.ebuild:
+  Add libXinerama to modular deps.
 
   10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> gxine-0.5.1-r1.ebuild:
   Made modular xorg friendly.
