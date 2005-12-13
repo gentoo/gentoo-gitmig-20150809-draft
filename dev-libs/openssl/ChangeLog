@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.141 2005/11/09 17:08:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.142 2005/12/13 19:34:15 corsair Exp $
+
+  13 Dec 2005; Markus Rothe <corsair@gentoo.org> openssl-0.9.7i.ebuild:
+  Added ~ppc64 keyword; bug #114592
 
   09 Nov 2005; <dang@gentoo.org> openssl-0.9.7i.ebuild:
   Add back in ~amd64.  It is ABI compat as far as I can tell
