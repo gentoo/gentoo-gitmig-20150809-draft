@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.03.ebuild,v 1.5 2005/12/11 07:26:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.03.ebuild,v 1.6 2005/12/13 21:36:39 compnerd Exp $
 
 inherit java eutils
 
@@ -46,7 +46,23 @@ IUSE="X doc javacomm nsplugin"
 
 DEPEND="virtual/libc
 		>=dev-java/java-config-0.2.5
-		X? ( virtual/x11 )"
+		X? ( || (
+					(
+						x11-libs/libXt
+						x11-libs/libX11
+						x11-libs/libXtst
+						x11-libs/libXp
+						x11-libs/libXext
+						x11-libs/libSM
+						x11-libs/libICE
+						x11-libs/libXau
+						x11-libs/libXdmcp
+						x11-libs/libXi
+						x11-libs/libXmu
+					)
+					virtual/x11
+				)
+			)"
 RDEPEND="${DEPEND}
 		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
 PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
