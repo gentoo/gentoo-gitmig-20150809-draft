@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ca51ac41d1fdb30434dd0402b30c6e1d ChangeLog 1127
 MD5 6d54f3707bb48b7fd5e472827e243b66 files/digest-xmodmap-0.99.2 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 be741668bea184349e9f603ea5e1250e xmodmap-0.99.2.ebuild 439
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnxYXBtvusYtCZMsRAqzhAJwPu/j1ctIS3TMmuAOPSyM4uFo6hgCff4Gw
++Y8LjtZl7v13NzEP81g4H0o=
+=KOB1
+-----END PGP SIGNATURE-----
