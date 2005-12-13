@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.6 2005/09/27 12:37:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.7 2005/12/13 20:30:10 genstef Exp $
+
+  13 Dec 2005; Stefan Schweizer <genstef@gentoo.org>
+  files/foo2zjs-udevfwld-20050925.diff:
+  Decapitalize udevrule for hplj1020, thanks to swierke on forums.gentoo.org
 
 *foo2zjs-20050925 (27 Sep 2005)
 

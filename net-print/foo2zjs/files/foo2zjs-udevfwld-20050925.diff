@@ -4,7 +4,7 @@ diff -Nuarp foo2zjs.orig/58-foo2zjs.rules foo2zjs/58-foo2zjs.rules
 @@ -0,0 +1,3 @@
 +BUS=="usb", KERNEL=="lp[0-9]*", SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="0517", RUN+="/sbin/foo2zjs-loadfw 1000"
 +BUS=="usb", KERNEL=="lp[0-9]*", SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1317", RUN+="/sbin/foo2zjs-loadfw 1005"
-+BUS=="usb", KERNEL=="lp[0-9]*", SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2B17", RUN+="/sbin/foo2zjs-loadfw 1020"
++BUS=="usb", KERNEL=="lp[0-9]*", SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2b17", RUN+="/sbin/foo2zjs-loadfw 1020"
 diff -Nuarp foo2zjs.orig/INSTALL foo2zjs/INSTALL
 --- foo2zjs.orig/INSTALL	2005-09-25 12:16:59.000000000 +0200
 +++ foo2zjs/INSTALL	2005-09-25 12:53:05.000000000 +0200
