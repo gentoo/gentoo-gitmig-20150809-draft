@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>video</herd>
-<maintainer>
-  <email>dragonheart@gentoo.org</email>
-  <name>Daniel Black</name>
-</maintainer>
+	<herd>video</herd>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<longdescription lang="en">
+		'Q' DVD-Author is a GUI frontend for dvdauthor written in Qt.
+	</longdescription>
 </pkgmetadata>

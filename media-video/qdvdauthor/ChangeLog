@@ -1,6 +1,12 @@
 # ChangeLog for media-video/qdvdauthor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.6 2005/09/04 12:55:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.7 2005/12/13 01:52:14 sbriesen Exp $
+
+*qdvdauthor-0.0.10 (13 Dec 2005)
+
+  13 Dec 2005; Stefan Briesenick <sbriesen@gentoo.org> metadata.xml,
+  +qdvdauthor-0.0.10.ebuild:
+  version bump + ebuild cleanup, solving bug #99046.
 
   04 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   +files/qdvdauthor-0.0.9-nointeractive.patch, qdvdauthor-0.0.9.ebuild:
