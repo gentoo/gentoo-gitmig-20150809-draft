@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 51b799eccf0a2ff636f4afbbb9632404 ChangeLog 2577
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kpresenter-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kpresenter-1.4.1 68
@@ -6,3 +9,10 @@ MD5 9ffc1503ed714d7c7ceeec7d185cdd92 kpresenter-1.3.5.ebuild 1198
 MD5 aadfc215eb5f814265e416547593c004 kpresenter-1.4.1.ebuild 1084
 MD5 dee12b2c1c3e2c62763c2d41f557f4de kpresenter-1.4.2.ebuild 1087
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnkY8csIHjyDViGQRAqLZAJoCgtyEme01HPC83pVE0/6qnl4umwCgovNp
+1Po5kiQEmuJCi6oxkaTasRs=
+=NjJg
+-----END PGP SIGNATURE-----
