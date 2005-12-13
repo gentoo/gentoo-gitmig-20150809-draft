@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.57 2005/11/20 00:45:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.58 2005/12/13 12:48:56 dragonheart Exp $
+
+*curl-7.15.1 (13 Dec 2005)
+
+  13 Dec 2005; Daniel Black <dragonheart@gentoo.org> -curl-7.13.1.ebuild,
+  -curl-7.13.2.ebuild, +curl-7.15.1.ebuild:
+  version bump due to sec bug #114710. old versions removed
 
   20 Nov 2005; Daniel Black <dragonheart@gentoo.org>
   +files/curl-7.15.0-versionnumber.patch, curl-7.15.0.ebuild:
