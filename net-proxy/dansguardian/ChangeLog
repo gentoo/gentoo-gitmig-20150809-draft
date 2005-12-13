@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.9 2005/12/08 22:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.10 2005/12/13 21:54:55 mrness Exp $
+
+*dansguardian-2.9.3.0_alpha (13 Dec 2005)
+
+  13 Dec 2005; Alin Nastac <mrness@gentoo.org>
+  +files/dansguardian-2.9.3.0_alpha-gentoo.patch,
+  dansguardian-2.8.0.6-r1.ebuild, +dansguardian-2.9.3.0_alpha.ebuild:
+  Mark stable on x86. Bump to the latest alpha version, which now supports
+  ClamAV and Perl compatible regular expressions (#114250).
 
 *dansguardian-2.8.0.6-r1 (08 Dec 2005)
 
