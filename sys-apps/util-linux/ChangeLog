@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.129 2005/12/11 20:37:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.130 2005/12/13 03:03:32 vapier Exp $
+
+*util-linux-2.12r-r2 (13 Dec 2005)
+
+  13 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12r-cal-dumb-terminal.patch,
+  +util-linux-2.12r-r2.ebuild:
+  Fix cal display with dumb terminals #112406 by Chris Smith.
 
   11 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   util-linux-2.12r-r1.ebuild:
