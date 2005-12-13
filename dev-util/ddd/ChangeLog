@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.31 2005/07/12 18:55:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.32 2005/12/13 15:57:38 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; ddd-3.3.11.ebuild:
+  Add modular X dependencies.
 
 *ddd-3.3.11 (12 Jul 2005)
 
