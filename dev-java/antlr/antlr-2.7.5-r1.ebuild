@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r1.ebuild,v 1.1 2005/12/10 18:18:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r1.ebuild,v 1.2 2005/12/13 19:03:06 compnerd Exp $
 
 inherit gnuconfig java-pkg mono distutils multilib
 
@@ -67,8 +67,10 @@ src_install() {
 		einstall || die "failed to install C++ files"
 	fi
 
+	# The jar is needed at all times
+	java-pkg_dojar ${S}/antlr/antlr.jar
+
 	if use java ; then
-		java-pkg_dojar ${S}/antlr/antlr.jar
 		use source && java-pkg_dosrc ${S}/antlr
 		use doc && java-pkg_dohtml -r doc/*
 	fi
