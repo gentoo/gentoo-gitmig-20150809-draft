@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.24 2005/12/12 18:24:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.25 2005/12/13 02:16:09 carlo Exp $
+
+*kmyfirewall-1.0-r1 (13 Dec 2005)
+
+  13 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  -files/kmyfirewall-1.0-configure-arts.patch,
+  +files/kmyfirewall-1.0_gentoo_multiport.diff, -kmyfirewall-1.0.ebuild,
+  +kmyfirewall-1.0-r1.ebuild:
+  multiport rule fix, thanks to Matteo Azzali #115355
 
 *kmyfirewall-1.0 (12 Dec 2005)
 
