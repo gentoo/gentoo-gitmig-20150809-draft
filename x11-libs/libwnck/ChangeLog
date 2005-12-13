@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.106 2005/11/29 07:35:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.107 2005/12/13 22:08:12 dang Exp $
+
+  13 Dec 2005; <dang@gentoo.org> libwnck-2.12.2.ebuild:
+  Modular X deps. bug #115159
 
 *libwnck-2.12.2 (29 Nov 2005)
 
