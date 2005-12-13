@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.17 2005/12/03 20:09:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.18 2005/12/13 05:24:49 spyderous Exp $
 
 inherit eutils elisp-common
 
@@ -23,7 +23,7 @@ DEPEND="
 	png? ( media-libs/libpng )
 	gd? ( >=media-libs/gd-2 )
 	doc? ( virtual/tetex )
-	X? ( virtual/x11 )
+	X? ( || ( x11-libs/libXaw virtual/x11 ) )
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
 	plotutils? ( media-libs/plotutils )"

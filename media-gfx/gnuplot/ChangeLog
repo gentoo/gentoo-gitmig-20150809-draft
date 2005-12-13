@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.44 2005/09/17 15:02:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.45 2005/12/13 05:24:49 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  gnuplot-4.0-r1.ebuild:
+  Add modular X dependencies.
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/pdflib-6-compat.patch, gnuplot-4.0-r1.ebuild:
