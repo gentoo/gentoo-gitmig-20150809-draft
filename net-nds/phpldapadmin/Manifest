@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41db040a58cf7a6109c24bfb034ccc79 phpldapadmin-0.9.7.2.ebuild 865
-MD5 d55331f61ac1b9170e9c0e84e618a052 phpldapadmin-0.9.7_rc1.ebuild 926
-MD5 f1bb785a034c4427b247374b8f0bcca5 phpldapadmin-0.9.7.ebuild 924
-MD5 6cccc5d24079054bc1adee53a30c8a3e phpldapadmin-0.9.7_rc3.ebuild 931
-MD5 a386e1f47ca9469f8a277a97c98a0216 phpldapadmin-0.9.7.1.ebuild 886
-MD5 c5200090167e9f1607361765e78b0216 phpldapadmin-0.9.7_alpha6.ebuild 937
-MD5 6713585ed5ec961c6a97cd498b787347 ChangeLog 3670
+MD5 30b1d4f8daae54e42d748d994d0aabc1 phpldapadmin-0.9.7.2.ebuild 857
+MD5 b8d5d85b0d2ef66c851335110f2d950d phpldapadmin-0.9.7_rc1.ebuild 919
+MD5 79890e899d5dd3ee979f75ec8de4bf1c phpldapadmin-0.9.7.ebuild 914
+MD5 d2b375f1462ee53b80b6af2b9fa6f65a phpldapadmin-0.9.7_rc3.ebuild 919
+MD5 2a84ba210f938d99badd4f399c07d65b phpldapadmin-0.9.7.1.ebuild 857
+MD5 1a4f894a7e5810533a194c09b47757d7 phpldapadmin-0.9.7_alpha6.ebuild 925
+MD5 9dba0b445d03c67ee9909d1a5bad80d3 ChangeLog 3935
 MD5 2b9f3758019e1a5695a4e4d3e3152383 metadata.xml 275
 MD5 1d6220f156b7733fc0579d4a35719837 files/digest-phpldapadmin-0.9.7 70
 MD5 e85a808069c28b9286faae1a04dc2389 files/digest-phpldapadmin-0.9.7_alpha6 77
@@ -21,7 +21,7 @@ MD5 2c175e57faef32f4b2b038631f048d59 files/digest-phpldapadmin-0.9.7_rc3 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDnDQJEzitwsaoONoRAkl2AJsF7nmj4j+vU0SD1wcZkiT2sNhFFQCgnUlH
-uiV0VzccTF7Q2OpNvg5/aGY=
-=8QEU
+iD8DBQFDng8aEzitwsaoONoRAootAKCs14PDDPt4ZpFhkkE1sWIPqqHSBwCeJ8iw
+itaph3qwwofeb5w/dewLyzo=
+=A3+x
 -----END PGP SIGNATURE-----
