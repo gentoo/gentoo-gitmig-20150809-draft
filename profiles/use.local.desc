@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1607 2005/12/13 14:26:39 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1608 2005/12/13 19:29:37 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1009,6 +1009,7 @@ net-p2p/mldonkey:batch - enable internaly ocaml build
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:oldgtk - enable old gtk user interface
 net-print/omni:epson - include the epson drivers
+net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
 net-proxy/squid:customlog - Adds support for custom log file formats
 net-proxy/squid:follow-xff - Adds follow X-Forwarded-For patch (http://squid.sourceforge.net/follow_xff/)
 net-proxy/squid:logrotate - Use logrotate for rotating logs
