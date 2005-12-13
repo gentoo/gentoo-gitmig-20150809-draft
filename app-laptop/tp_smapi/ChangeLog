@@ -1,0 +1,10 @@
+# ChangeLog for app-laptop/tp_smapi
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.1 2005/12/13 20:40:18 brix Exp $
+
+*tp_smapi-0.09 (13 Dec 2005)
+
+  13 Dec 2005; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +tp_smapi-0.09.ebuild:
+  Initial import.
+
