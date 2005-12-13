@@ -9,5 +9,5 @@ MD5 63c83abc1ab956c65af57fb546f4d4eb files/libggi-2.1.1-gcc4.patch 1944
 MD5 7c001ca257478a9dcd94d3a1823a8e17 libggi-2.0.1-r1.ebuild 1642
 MD5 8565bb352e3e1f7a37e3df631f551a28 libggi-2.0.1.ebuild 1401
 MD5 6713806d3d89cc7416ce73c2e877bb1c libggi-2.1.0.ebuild 1784
-MD5 1acbd3e96908ed5aec09467cb07f1f67 libggi-2.1.1.ebuild 1931
+MD5 b2c13c072dd513888d05fa204de1057a libggi-2.1.1.ebuild 1930
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158

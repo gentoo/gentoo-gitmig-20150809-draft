@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.4 2005/12/13 21:15:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.5 2005/12/13 21:15:38 seemant Exp $
 
 inherit eutils libtool
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="X aalib svga fbcon directfb dga 3dfx debug mmx vis"
 
 DEPEND=">=media-libs/libgii-0.9.0
-	X? ( || ( ( x11-libs/libXt 
+	X? ( || ( ( x11-libs/libXt
 		x11-proto/xextproto )
 		( virtual/x11 ) ) )
 	svga? ( >=media-libs/svgalib-1.4.2 )
