@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.175 2005/12/12 17:15:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.176 2005/12/13 01:28:31 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  fluxbox-0.9.14-r1.ebuild:
+  De-uglify xinerama dep, in attempt to appease Ciaran.
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   fluxbox-0.9.14-r1.ebuild:
