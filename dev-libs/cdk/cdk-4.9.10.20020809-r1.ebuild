@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020809-r1.ebuild,v 1.2 2005/08/25 04:00:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020809-r1.ebuild,v 1.3 2005/12/13 20:37:10 tove Exp $
 
 inherit flag-o-matic
 
@@ -13,14 +13,14 @@ HOMEPAGE="http://dickey.his.com/cdk/cdk.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="ia64"
+KEYWORDS="ia64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
 src_compile()
 {
-	use ia64 && append-flags -fPIC
+	append-flags -fPIC
 
 	econf \
 		--with-ncurses \

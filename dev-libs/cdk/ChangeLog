@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.23 2005/11/12 12:06:09 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.24 2005/12/13 20:37:10 tove Exp $
+
+  13 Dec 2005; Torsten Veller <tove@gentoo.org>
+  cdk-4.9.10.20020809-r1.ebuild:
+  Stable on x86.
+  Added -fPIC to fix licq TEXTRELs (see also entry 25 Aug 2005).
 
   12 Nov 2005; Konstantin Arkhipov <voxus@gentoo.org cdk-5.0.20050424.ebuild:
   Stable on amd64.
