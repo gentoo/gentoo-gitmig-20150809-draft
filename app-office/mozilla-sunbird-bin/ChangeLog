@@ -1,6 +1,12 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.10 2005/08/11 20:27:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.11 2005/12/13 06:27:35 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  mozilla-sunbird-bin-0.2.20050724.ebuild:
+  Add modular X dependencies. Found with: find /opt/sunbird/ -perm /g+x |
+  xargs file | egrep 'LSB (exe|sha)' | cut -d: -f1 | xargs ldd | cut -d'(' -f1
+  | sort | uniq | grep lib[SIX].
 
   11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   mozilla-sunbird-bin-0.2.ebuild, mozilla-sunbird-bin-0.2.20050724.ebuild:

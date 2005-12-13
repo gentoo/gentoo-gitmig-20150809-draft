@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20050724.ebuild,v 1.2 2005/08/11 20:27:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20050724.ebuild,v 1.3 2005/12/13 06:27:35 spyderous Exp $
 
 inherit mozilla-launcher multilib
 
@@ -15,7 +15,15 @@ LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXcursor
+			x11-libs/libXrandr
+			x11-libs/libXi
+			x11-libs/libXinerama
+			x11-libs/libXt
+		)
+		virtual/x11
+	)
+	virtual/xft
 	x86? (
 		>=sys-libs/lib-compat-1.0-r2
 		>=x11-libs/gtk+-2.2
