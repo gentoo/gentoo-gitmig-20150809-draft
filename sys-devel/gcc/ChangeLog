@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.474 2005/12/10 05:21:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.475 2005/12/13 01:52:42 halcy0n Exp $
+
+*gcc-4.0.2-r2 (13 Dec 2005)
+
+  13 Dec 2005; Mark Loeser <halcy0n@gentoo.org> -gcc-4.0.2-r1.ebuild,
+  +gcc-4.0.2-r2.ebuild:
+  Bump to use the newest patchset, which removes a patch that introduced ICEs
+  and adds 2 patches to resolve bug #108231
 
 *gcc-4.1.0_beta20051209 (10 Dec 2005)
 

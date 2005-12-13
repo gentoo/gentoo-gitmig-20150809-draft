@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a6e3d699328fef690ed4de07fcdce4ed ChangeLog 97225
+MD5 25a30f6fb53a17a1a06d60e7eb61ae04 ChangeLog 97471
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
@@ -69,7 +69,7 @@ MD5 ba7469d4f191ff1baa00b9dd45e3dc6b files/digest-gcc-3.4.3.20050110-r2 616
 MD5 fa32cd40c637c54b4e3b89dd4ed4c573 files/digest-gcc-3.4.4-r1 450
 MD5 009ef464ff3b7e1a3f6aa78e20736969 files/digest-gcc-3.4.5 364
 MD5 f0c74f849066ffaefe7d364d69a71961 files/digest-gcc-4.0.1 380
-MD5 935eea1ace4e13688f89c88d75b38dbc files/digest-gcc-4.0.2-r1 381
+MD5 ec2e40ca8729562141a95fcb54f5861d files/digest-gcc-4.0.2-r2 381
 MD5 f8d6d22922d89b010759562821299dff files/digest-gcc-4.1.0_beta20051209 71
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
@@ -99,13 +99,13 @@ MD5 769273e24a52732ce892d08ebeb4bbeb gcc-3.4.3.20050110-r2.ebuild 5240
 MD5 c44289f25b99d3c631f97a8043826901 gcc-3.4.4-r1.ebuild 5203
 MD5 1690970fd7d4a41d5f8eabf6a4fd807a gcc-3.4.5.ebuild 5035
 MD5 c2611e7e7fdf69e451da52b22ef78815 gcc-4.0.1.ebuild 1889
-MD5 f383e6cf5c7f764a5e3083d1143e0117 gcc-4.0.2-r1.ebuild 2350
+MD5 6d1d3d9964764e83c5b2b966eb4abb49 gcc-4.0.2-r2.ebuild 2204
 MD5 c3af3c42471ea62b8d75576ed048fc63 gcc-4.1.0_beta20051209.ebuild 2170
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmmaKCRZPokWLroQRAqZcAJ4jX3bT82XUqY53FH7FdSAJvHq3XQCfcxJw
-E7T0dYLVAwS8Cq9x8mwkYss=
-=Og9J
+iD8DBQFDnimUCRZPokWLroQRAicGAKDEI1GhOOsqLUST7kcgLALa3+KiuwCg32Gm
+OPtsqMDYDEp+YJhFlbiQt1E=
+=T88g
 -----END PGP SIGNATURE-----
