@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.280 2005/12/12 10:15:56 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.281 2005/12/13 15:26:14 vivo Exp $
+
+*mysql-4.1.16-r30 (13 Dec 2005)
+*mysql-4.1.16 (13 Dec 2005)
+
+  13 Dec 2005; Francesco Riosa <vivo@gentoo.org> -mysql-4.1.15-r30.ebuild,
+  +mysql-4.1.16.ebuild, +mysql-4.1.16-r30.ebuild:
+  version bump, switch again to "make test" in src_test() instead of "make
+  test-pl"
 
   12 Dec 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15-r2.ebuild,
   mysql-4.1.15-r30.ebuild, mysql-5.0.16-r4.ebuild, mysql-5.0.16-r30.ebuild,

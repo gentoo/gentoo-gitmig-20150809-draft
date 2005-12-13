@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r30.ebuild,v 1.10 2005/12/12 10:15:56 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16.ebuild,v 1.1 2005/12/13 15:26:14 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -11,10 +11,11 @@ stripdots() {
 }
 
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
-MYSQL_VERSION_ID=$(stripdots "4.01.15.30")
-NDB_VERSION_ID=40115
+MYSQL_VERSION_ID=$(stripdots "4.01.16.00")
+NDB_VERSION_ID=40116
 #major, minor only in the slot
-SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
+SLOT=0
+#NOSLOT SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -26,10 +27,10 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 NEWP="${PN}-${PV/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20051205.tar.bz2"
+	mirror://gentoo/mysql-extras-20051122.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="big-tables berkdb debug minimal perl selinux ssl static"
 RESTRICT="primaryuri"
 
@@ -139,7 +140,8 @@ mysql_mv_patches() {
 # 2005-11-19 <vivo at gentoo.org>
 mysql_init_vars() {
 
-	MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
+	MY_SUFFIX=""
+	#NOSLOT MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
 	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR:-"/usr/share/mysql${MY_SUFFIX}"}
 	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql${MY_SUFFIX}"}
 	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql${MY_SUFFIX}"}
@@ -396,7 +398,7 @@ src_compile() {
 			myconf="${myconf} --without-berkeley-db"
 		else
 			useq berkdb \
-				&& myconf="${myconf} --with-berkeley-db" \
+				&& myconf="${myconf} --with-berkeley-db=./bdb" \
 				|| myconf="${myconf} --without-berkeley-db"
 		fi
 
@@ -494,7 +496,7 @@ src_test() {
 
 		mysql_version_is_at_least "5.00.15.00" \
 		&& make test-force-pl \
-		|| make test-pl
+		|| make test
 		retstatus=$?
 
 		# to be sure ;)
@@ -706,6 +708,10 @@ pkg_config() {
 
 	if built_with_use dev-db/mysql minimal; then
 		die "Minimal builds do NOT include the MySQL server"
+	fi
+
+	if [[ "$(pgrep mysqld)" != "" ]] ; then
+		die "Oops you already have a mysql daemon running!"
 	fi
 
 	local pwd1="a"
