@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.9.ebuild,v 1.1 2005/12/13 02:28:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.9.ebuild,v 1.2 2005/12/13 09:36:41 flameeyes Exp $
 
 inherit kde eutils
 
@@ -76,6 +76,10 @@ src_unpack() {
 		cd "${WORKDIR}/${I18N}"
 		sed -i -e "s,^SUBDIRS = .*,SUBDIRS = ${MAKE_LANGS}," Makefile.in
 	fi
+
+	cd ${S}
+	epatch "${FILESDIR}/${P}-conditional.patch"
+	rm configure # Force rebuilding of autotools
 }
 
 src_compile() {
