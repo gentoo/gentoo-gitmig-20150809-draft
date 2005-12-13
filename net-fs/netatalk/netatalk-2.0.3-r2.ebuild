@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r1.ebuild,v 1.1 2005/10/25 05:55:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.1 2005/12/13 00:20:27 flameeyes Exp $
 
 inherit eutils pam flag-o-matic autotools
 IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib"
@@ -83,4 +83,11 @@ src_install() {
 	# The pamd file isn't what we need, use pamd_mimic_system
 	rm -rf ${D}/etc/pam.d
 	pamd_mimic_system netatalk auth account password session
+
+	# Move /usr/include/netatalk to /usr/include/netatalk2 to avoid collisions
+	# with /usr/include/netatalk/at.h provided by glibc (strange, uh?)
+	# Packages that wants to link to netatalk should then probably change the
+	# includepath then, but right now, nothing users netatalk.
+	# On a side note, it also solves collisions with freebsd-lib and other libcs
+	mv ${D}/usr/include/netatalk{,2}
 }
