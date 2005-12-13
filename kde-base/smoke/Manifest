@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b47117ed1e7e7fdfd385a47bdd3c0a15 ChangeLog 3458
-MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-smoke-3.3.1 71
-MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-smoke-3.4.1 221
-MD5 8b94700e5ddd1504207b279995e101c7 files/digest-smoke-3.4.2 300
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 7cfcd3cab9fe4892cc7c93321ab4d0e8 ChangeLog 3571
+MD5 701f61e8efb8d7e88e99b0512a0098e1 smoke-3.3.1.ebuild 1058
+MD5 ec8e62ffa9603386594a89fee53a7190 smoke-3.4.2.ebuild 1373
+MD5 30f38427392755550d1dd41ae1aeced7 smoke-3.5.0.ebuild 1438
+MD5 d19f393c142dce968ca099403d048e1a smoke-3.4.1.ebuild 1071
 MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-smoke-3.5.0 71
+MD5 8b94700e5ddd1504207b279995e101c7 files/digest-smoke-3.4.2 300
+MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-smoke-3.4.1 221
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 92a2bf7b4c3eebd09d53b684b22513af files/parallel-make.diff 1696
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 701f61e8efb8d7e88e99b0512a0098e1 smoke-3.3.1.ebuild 1058
-MD5 d19f393c142dce968ca099403d048e1a smoke-3.4.1.ebuild 1071
-MD5 4318c2146fdb81a5b9a1250aa817108f smoke-3.4.2.ebuild 1370
-MD5 30f38427392755550d1dd41ae1aeced7 smoke-3.5.0.ebuild 1438
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnc+ncsIHjyDViGQRAhDkAKC62C/3YBmcptraHBpbmhVdPLvLcgCeOLPQ
-gMJYI3D0oDWkVD6U1Aez1gs=
-=dnxp
------END PGP SIGNATURE-----
+MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-smoke-3.3.1 71
