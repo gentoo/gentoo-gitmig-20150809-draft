@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.103 2005/12/09 19:13:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.104 2005/12/13 23:03:40 wolf31o2 Exp $
+
+*catalyst-2.0_rc9 (13 Dec 2005)
+
+  13 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_rc8-slot.patch, +files/catalyst-2.0_rc9-slot.patch,
+  -catalyst-2.0_rc8.ebuild, +catalyst-2.0_rc9.ebuild:
+  Version bumped to rc9, which should fix all reported bugs.
 
 *catalyst-2.0_rc8 (09 Dec 2005)
 
