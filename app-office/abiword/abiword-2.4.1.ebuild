@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.1.ebuild,v 1.2 2005/10/30 12:58:49 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.1.ebuild,v 1.3 2005/12/13 22:01:07 seemant Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -17,8 +17,7 @@ IUSE="debug gnome spell xml2"
 LICENSE="GPL-2"
 SLOT="2"
 
-RDEPEND="virtual/x11
-	virtual/xft
+RDEPEND="virtual/xft
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
