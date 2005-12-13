@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalyptus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.21 2005/12/12 19:32:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.22 2005/12/13 03:36:20 chriswhite Exp $
+
+  13 Dec 2005; Chris White <chriswhite@gentoo.org> kalyptus-3.4.2.ebuild:
+  Marked x86 stable for bug #112842.
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kalyptus-3.5.0.ebuild:
   Marked ~ppc.

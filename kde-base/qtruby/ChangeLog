@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.26 2005/12/12 19:30:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.27 2005/12/13 03:33:32 chriswhite Exp $
+
+  13 Dec 2005; Chris White <chriswhite@gentoo.org> qtruby-3.4.3-r1.ebuild:
+  Marked x86 stable for bug #112842.
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> qtruby-3.5.0.ebuild:
   Marked ~ppc.
