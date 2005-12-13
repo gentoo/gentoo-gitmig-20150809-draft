@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/korn-3.4.3.ebuild,v 1.7 2005/12/10 20:47:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/korn-3.4.3.ebuild,v 1.8 2005/12/13 02:50:04 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -14,6 +14,7 @@ DEPEND="$(deprange 3.4.2 $MAXKDEVER kde-base/mimelib)
 $(deprange 3.4.1 $MAXKDEVER kde-base/libkmime)"
 OLDDEPEND="~kde-base/mimelib-$PV ~kde-base/libkmime-$PV"
 RDEPEND="${DEPEND}
+	kde-base/kdebase-kioslaves
 	kde-base/kdepim-kioslaves"
 KMCOPYLIB="libmimelib mimelib
 	libkmime libkmime"

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.36 2005/12/12 16:29:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.37 2005/12/13 02:50:04 carlo Exp $
+
+  13 Dec 2005; Carsten Lohrke <carlo@gentoo.org> korn-3.4.3.ebuild,
+  korn-3.5.0.ebuild:
+  Added missing dependency, #114752
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> korn-3.5.0.ebuild:
   Marked ~ppc.
