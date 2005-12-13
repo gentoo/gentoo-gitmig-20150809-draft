@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.161 2005/12/11 07:10:27 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.162 2005/12/13 19:35:22 gregkh Exp $
+
+*udev-077-r5 (13 Dec 2005)
+
+  13 Dec 2005; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/udev.rules-077-r5, +udev-077-r5.ebuild:
+  Fix DVB naming issue (#115123) and fix the serial port names to be real with
+  symlinks for people who can't live without the dumb devfs names...
 
 *udev-077-r4 (11 Dec 2005)
 
