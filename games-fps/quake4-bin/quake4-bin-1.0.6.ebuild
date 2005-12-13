@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.5.ebuild,v 1.3 2005/11/22 19:27:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.6.ebuild,v 1.1 2005/12/13 18:58:37 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://3dgamers/quake4/quake4-linux-${PV}.x86.run
 
 LICENSE="QUAKE4"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="cdinstall alsa opengl dedicated"
 RESTRICT="nostrip"
 
