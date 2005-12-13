@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.58 2005/11/22 23:23:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.59 2005/12/13 05:48:21 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fltk-1.1.6.ebuild:
+  Add modular X dependencies.
 
   22 Nov 2005; Luis Medinas <metalgod@gentoo.org> fltk-1.1.6.ebuild:
   Stable on amd64. Bug #111007.
