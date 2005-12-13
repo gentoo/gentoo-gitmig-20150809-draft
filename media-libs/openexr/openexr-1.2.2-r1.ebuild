@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r1.ebuild,v 1.4 2005/10/22 22:57:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r1.ebuild,v 1.5 2005/12/13 05:44:11 spyderous Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ LICENSE="as-is"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~hppa"
 IUSE="doc examples fltk"
 
-RDEPEND="virtual/x11
-	virtual/opengl
+RDEPEND="virtual/opengl
 	fltk? ( x11-libs/fltk )"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"

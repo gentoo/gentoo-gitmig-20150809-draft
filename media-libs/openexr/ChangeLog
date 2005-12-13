@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.28 2005/10/22 22:57:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.29 2005/12/13 05:44:11 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  openexr-1.2.2-r1.ebuild:
+  Fix modular X dependencies.
 
   22 Oct 2005; Hanno Boeck <hanno@gentoo.org>
   +files/openexr-1.2.2-gcc4.patch, openexr-1.2.2-r1.ebuild:
