@@ -1,4 +1,14 @@
-MD5 f2ecf571bd1ae14cd7588d421ae1985c ChangeLog 1603
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4cbe5b415147139662a8251b802847b ChangeLog 1692
 MD5 1fa12a826df9f652f8d182a1d377ba26 files/digest-font-bh-ttf-0.99.1 71
-MD5 24750bf1710f27c0c92a0ead0c2298d8 font-bh-ttf-0.99.1.ebuild 484
+MD5 dc5f79b00a9fc3b6b5e48c5edfe7040e font-bh-ttf-0.99.1.ebuild 486
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnxPXBtvusYtCZMsRApjxAJsGNLX1AujvJ0NgadTy5MHyxPlGEgCfQ5xM
+R1HjhzoIdbdLm5wQ8vXkAxs=
+=tUIs
+-----END PGP SIGNATURE-----
