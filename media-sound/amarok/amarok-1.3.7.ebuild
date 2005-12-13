@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.7.ebuild,v 1.1 2005/12/07 12:04:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.7.ebuild,v 1.2 2005/12/13 14:35:53 flameeyes Exp $
 
-inherit kde eutils
+inherit kde eutils flag-o-matic
 
 MY_P="${P/_rc/-rc}"
 S="${WORKDIR}/${P/_rc*//}"
@@ -60,6 +60,8 @@ pkg_setup() {
 
 	# check whether kdelibs was compiled with arts support
 	kde_pkg_setup
+
+	append-flags -fno-inline
 }
 
 src_compile() {
