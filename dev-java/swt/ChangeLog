@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.31 2005/11/29 22:46:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.32 2005/12/13 21:00:20 compnerd Exp $
+
+  13 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.1-r1.ebuild,
+  swt-3.2_pre1.ebuild:
+  Fixing X11 lib dir reference as noticed by Betelgeuse
 
   29 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.1-r1.ebuild:
   Fixing multilib issues.  Minor cleanup

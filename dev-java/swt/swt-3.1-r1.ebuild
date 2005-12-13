@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1-r1.ebuild,v 1.4 2005/11/29 22:46:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1-r1.ebuild,v 1.5 2005/12/13 21:00:20 compnerd Exp $
 
 inherit eutils java-pkg multilib
 
@@ -88,7 +88,7 @@ src_compile() {
 	fi
 
 	# Identity the XTEST library location
-	export XTEST_LIB_PATH=/usr/X11R6/$(get_libdir)
+	export XTEST_LIB_PATH=/usr/$(get_libdir)/X11
 
 	# Fix the pointer size for AMD64
 	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
