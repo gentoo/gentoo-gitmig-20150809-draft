@@ -1,4 +1,4 @@
-MD5 3b5768a021f90efb57325bc6a7e04d0a ChangeLog 11488
+MD5 292b8a3cccc14f22fa0f93562768d35b ChangeLog 11718
 MD5 515630b3e53faa458b8ec7a0e73bef55 files/10_mod_ssl.conf 2859
 MD5 959a0125c23ead91b0071f4ffc54e9bc files/default-ssl.conf 7653
 MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
@@ -10,7 +10,6 @@ MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22 73
 MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22-r1 73
 MD5 a68a0b56a629886ec3ebd08bfb0f638c files/digest-mod_ssl-2.8.24 73
 MD5 a68a0b56a629886ec3ebd08bfb0f638c files/digest-mod_ssl-2.8.24-r1 73
-MD5 df803a8e5ad1a29ae5a6996fbfdde70c files/digest-mod_ssl-2.8.25 73
 MD5 df803a8e5ad1a29ae5a6996fbfdde70c files/digest-mod_ssl-2.8.25-r10 73
 MD5 dd92adba34e6b36ef6fd2750869e1a18 files/gentestcrt.sh 8801
 MD5 71ac46d211c8aa42c7a5e51c6165862a files/mod_ssl.conf 2460
@@ -25,4 +24,4 @@ MD5 aa8f74dc6a49b8646a307d4844fd0dfb mod_ssl-2.8.22-r1.ebuild 1782
 MD5 d20c6eee687d0fca4397f828e34092dc mod_ssl-2.8.22.ebuild 2316
 MD5 e3e145c5f8c0c0b2d3e63a0528100b4d mod_ssl-2.8.24-r1.ebuild 1779
 MD5 a4d234acd0fdfc01177ded213518dced mod_ssl-2.8.24.ebuild 2315
-MD5 3c505ae97482a8f0cfbe5ce9d3e29b22 mod_ssl-2.8.25-r10.ebuild 1785
+MD5 afd59899fac965c3a98a7253a11d6b72 mod_ssl-2.8.25-r10.ebuild 1791
