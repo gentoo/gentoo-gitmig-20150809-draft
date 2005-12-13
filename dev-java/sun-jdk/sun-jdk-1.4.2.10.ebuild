@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.3 2005/12/09 20:22:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.4 2005/12/13 21:08:57 betelgeuse Exp $
 
 inherit java eutils
 
@@ -20,7 +20,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* x86"
 RESTRICT="fetch"
-IUSE="doc browserplugin nsplugin jce mozilla examples"
+IUSE="X alsa doc browserplugin nsplugin jce mozilla examples"
 
 #glibc dep: #102423
 DEPEND=">=dev-java/java-config-1.1.5
