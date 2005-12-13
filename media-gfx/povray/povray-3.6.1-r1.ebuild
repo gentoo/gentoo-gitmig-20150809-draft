@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.14 2005/08/24 17:00:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.15 2005/12/13 05:55:40 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ DEPEND="media-libs/libpng
 	>=media-libs/tiff-3.6.1
 	media-libs/jpeg
 	sys-libs/zlib
-	X? ( virtual/x11 )
+	X? ( || ( x11-libs/libXaw virtual/x11 ) )
 	svga? ( media-libs/svgalib )"
 
 

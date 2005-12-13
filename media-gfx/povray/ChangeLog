@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.48 2005/08/24 17:00:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.49 2005/12/13 05:55:40 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  povray-3.6.1-r1.ebuild:
+  Add modular X dependencies.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> povray-3.6.1-r1.ebuild:
   stable on ia64
