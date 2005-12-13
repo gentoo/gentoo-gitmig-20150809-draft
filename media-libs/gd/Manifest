@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
-MD5 0ce76a500e6f6c4c651fb3ea3ec6a581 gd-2.0.32.ebuild 989
-MD5 a2daafe76864c6dd2ba671004ca0e739 ChangeLog 8799
+MD5 7b1780798cd1cdee6c834602edb567bf ChangeLog 8906
 MD5 38fb558a8071c00ce93e35aede13aaf6 files/2.0.31-png-check.patch 369
 MD5 ef1f623ab65a05b7e14e9bd61bb02c65 files/digest-gd-2.0.32 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBqjQgIKl8Uu19MoRAv8eAJ9KxC86jXImuZ8qEPoEK3B+uu4cUQCdELrJ
-Roddfs0ctknfPtSgzAuQt/g=
-=kdKu
------END PGP SIGNATURE-----
+MD5 dd997b3de3bba1b67bb918160d090224 gd-2.0.32.ebuild 1015
+MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
