@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc3-firebird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/ChangeLog,v 1.4 2005/05/14 21:53:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/ChangeLog,v 1.5 2005/12/13 02:10:21 nichoj Exp $
+
+  13 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  jdbc3-firebird-1.5.3.ebuild:
+  Updated HOMEPAGE.
 
   14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jdbc3-firebird-1.5.3.ebuild:
