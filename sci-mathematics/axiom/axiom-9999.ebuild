@@ -1,15 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.3 2005/12/04 21:41:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.4 2005/12/13 23:26:13 plasmaroo Exp $
 
-ECVS_AUTH="ext"
-export CVS_RSH="ssh"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/axiom"
+ECVS_SERVER="cvs.savannah.nongnu.org:/sources/axiom"
 ECVS_MODULE="axiom"
-ECVS_USER="anoncvs"
-ECVS_PASS=""
-ECVS_CVS_OPTIONS="-dP"
-ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAzFQovi+67xa+wymRz9u3plx0ntQnELBoNU4SCl3RkwSFZkrZsRTC0fTpOKatQNs1r/BLFoVt21oVFwIXVevGQwB+Lf0Z+5w9qwVAQNu/YUAFHBPTqBze4wYK/gSWqQOLoj7rOhZk0xtAS6USqcfKdzMdRWgeuZ550P6gSzEHfv0="
+ECVS_AUTH="pserver"
+ECVS_USER="anonymous"
 
 inherit cvs eutils
 

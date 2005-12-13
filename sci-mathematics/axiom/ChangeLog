@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.2 2005/12/04 21:41:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.3 2005/12/13 23:26:13 plasmaroo Exp $
+
+  13 Dec 2005; <plasmaroo@gentoo.org> axiom-9999.ebuild:
+  Update Savannah CVS info; #115327.
 
   04 Dec 2005; <plasmaroo@gentoo.org> axiom-9999.ebuild,
   +files/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch,
