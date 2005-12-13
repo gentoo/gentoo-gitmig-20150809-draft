@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r2.ebuild,v 1.6 2005/10/24 09:22:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r2.ebuild,v 1.7 2005/12/13 16:40:19 spyderous Exp $
 
 inherit eutils flag-o-matic qt3
 
@@ -32,14 +32,33 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	qt? ( $(qt_min_version 3.1) )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	truetype? ( >=media-libs/freetype-2.1 )
-	xv? ( virtual/x11 )
+	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
+	xv? ( || ( x11-libs/libXv virtual/x11 ) )
 	xvid? ( =media-libs/xvid-1* )
-	X? ( virtual/x11 virtual/xft )
+	X? ( || ( ( x11-libs/libXi
+				x11-libs/libXxf86dga
+				x11-libs/libXxf86vm
+				x11-libs/libXrender
+			)
+			virtual/x11
+		)
+		virtual/xft
+	)
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	>=media-video/ffmpeg-0.4.9_p20050226-r2
 	>=media-libs/jpeg-6b"
 
 DEPEND="${RDEPEND}
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	xv? ( || ( x11-proto/videoproto virtual/x11 ) )
+	X? ( || ( ( x11-proto/inputproto
+				x11-proto/xextproto
+				x11-proto/xf86dgaproto
+				x11-proto/xf86vidmodeproto
+			)
+			virtual/x11
+		)
+	)
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.4_p6
 	sys-devel/libtool"
@@ -137,6 +156,7 @@ src_compile() {
 		$(use_enable vidix) \
 		$(use_with X x) $(use_enable X xft) \
 		$(use_enable xv) \
+		$(use_enable xinerama) \
 		$(use_enable xvid xvid4) --disable-xvid \
 		$(use_enable zlib libz) \
 		${myconf} \
