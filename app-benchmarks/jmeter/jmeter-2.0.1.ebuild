@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1.ebuild,v 1.7 2005/08/26 12:31:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1.ebuild,v 1.8 2005/12/13 05:49:23 nichoj Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc" # jikes"
 
 S=${WORKDIR}/jakarta-${P}

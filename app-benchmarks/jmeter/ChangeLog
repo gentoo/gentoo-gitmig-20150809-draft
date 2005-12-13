@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.22 2005/11/19 23:59:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.23 2005/12/13 05:49:23 nichoj Exp $
+
+  13 Dec 2005; Joshua Nichols <nichoj@gentoo.org> jmeter-1.9.1.ebuild,
+  jmeter-2.0.1.ebuild:
+  Added ~amd64 keyword (bug #112469).
 
   19 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> jmeter-1.9.1.ebuild:
   Fixing typo in ebuild; Resolves bug #110302
