@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.35 2005/10/11 14:18:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.36 2005/12/13 06:34:26 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; ogle-0.9.2-r1.ebuild:
+  Add modular X dependencies.
 
   11 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> ogle-0.9.2.ebuild:
   Stable on sparc
