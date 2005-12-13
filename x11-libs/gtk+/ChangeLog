@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.202 2005/12/01 18:55:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.203 2005/12/13 20:41:18 seemant Exp $
+
+  13 Dec 2005; Seemant Kulleen <seemant@gentoo.org> gtk+-1.2.10-r11.ebuild:
+  modular X deps, committing Donnie's fixes in bug #115232
 
 *gtk+-2.8.8 (01 Dec 2005)
 
