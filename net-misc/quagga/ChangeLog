@@ -2,7 +2,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.25 2005/11/15 13:14:03 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.26 2005/12/13 14:37:07 amir Exp $
+
+*quagga-0.98.5-r2 (13 Dec 2005)
+
+  13 Dec 2005; Amir Guindehi <amir@gentoo.org> +quagga-0.98.5-r2.ebuild:
+  Added two new local use flags named 'multipath' and 'tcp-zebra'. If
+  'multipath' is set, Quagga get's compiled with --enable-multipath=0 which
+  enables multipath routes support for any number of routes. If 'tcp-zebra' is
+  not set, the Zebra/protocol-daemon communication (zserv) will be done over unix
+  domain sockets instad of a tcp socket bound to 127.0.0.1 on port 2600. This
+  is slightly more secure, since otherwise local non-root users are able to
+  inject routes by connecting to the local port 2600.
 
 *quagga-0.98.5-r1 (15 Nov 2005)
 
