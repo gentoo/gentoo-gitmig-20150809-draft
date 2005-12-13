@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 30c0af23a5a1ba79cb67bcecff7438cd ChangeLog 44998
+MD5 ae62ce8fdfb87d9121528f09eb1a57ab ChangeLog 45127
 MD5 0be73573833fd6a1132c609c4696c058 files/digest-mm-sources-2.6.14-r1 127
 MD5 7561fd9febd6edbdd3e5156bc2d3a4f0 files/digest-mm-sources-2.6.14-r2 127
 MD5 ce58f64359e4e9b6482ee660eb2877fd files/digest-mm-sources-2.6.15_rc1-r2 197
 MD5 80df3c13d130562348e7538f1cffb244 files/digest-mm-sources-2.6.15_rc5-r1 197
+MD5 a1bc853c3546b86ed9a80361cfdfc087 files/digest-mm-sources-2.6.15_rc5-r2 197
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 MD5 edd016d37466fa62105411e3a4a495e6 mm-sources-2.6.14-r1.ebuild 1009
 MD5 228390ef436fa7e9adf63097aa342929 mm-sources-2.6.14-r2.ebuild 1009
 MD5 5b3eaafc855eb56dc559a0267d8ad18f mm-sources-2.6.15_rc1-r2.ebuild 1013
 MD5 db11fc552126a6cda6679bb7469b6911 mm-sources-2.6.15_rc5-r1.ebuild 1013
+MD5 4fd41fb94f04f4c5a309f2212ad692b4 mm-sources-2.6.15_rc5-r2.ebuild 1013
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDlMqhp5vW4rUFj5oRAjRwAKC2nsPC/0K+bweiOQYpyeBiOX/1YgCgprQq
-ZFnBi+qHFlff5A4NTba7St8=
-=cAYf
+iD8DBQFDnyLap5vW4rUFj5oRAsqIAKC6wq1eUTkMJ7maBJ2HSaSYzPJFsgCaA2dP
+yDLCOqA57R21ZzrJNp0wAF8=
+=R6nD
 -----END PGP SIGNATURE-----
