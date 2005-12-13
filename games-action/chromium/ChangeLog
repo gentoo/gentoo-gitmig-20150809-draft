@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.14 2005/07/28 20:53:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.15 2005/12/13 16:26:07 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  chromium-0.9.12-r5.ebuild:
+  Add modular X dependencies.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> chromium-0.9.12-r5.ebuild:
   Made qt dep qt3 explicit per bug #100235
