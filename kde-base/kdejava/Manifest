@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7c462b754eedd8375d47446b92733e51 kdejava-3.5.0.ebuild 1464
 MD5 7c88b2b69866d5b2fc9bc92d1a062981 kdejava-3.4.3.ebuild 1468
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
@@ -13,3 +16,10 @@ MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 98aaced38286ff2403d813b121aa1380 files/kdejava-3.4.0_rc1-classpath.diff 471
 MD5 9598e813037e1a6ea89142a23ac4018a files/kdejava-3.3.1-classpath.diff 460
 MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-kdejava-3.5.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnj/PFdQwWVoAgN4RAsWwAKCEssMo1/JxLQslXkZpbuOfs5mpXQCcCD9x
+PNaiUO1pBmhBo9MSCLF4PK0=
+=lRmg
+-----END PGP SIGNATURE-----
