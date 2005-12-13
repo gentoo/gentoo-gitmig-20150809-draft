@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/ati-drivers-extra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ChangeLog,v 1.4 2005/12/11 04:07:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ChangeLog,v 1.5 2005/12/13 06:50:43 lu_zero Exp $
+
+  13 Dec 2005; Luca Barbato <lu_zero@gentoo.org> +files/fglrx_pp_proto.h,
+  ati-drivers-extra-8.20.8.ebuild:
+  Workaround
 
 *ati-drivers-extra-8.20.8 (11 Dec 2005)
 

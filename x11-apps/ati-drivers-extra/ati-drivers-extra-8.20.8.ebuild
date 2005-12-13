@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.20.8.ebuild,v 1.1 2005/12/11 04:07:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.20.8.ebuild,v 1.2 2005/12/13 06:50:43 lu_zero Exp $
 
 IUSE="qt"
 
@@ -47,7 +47,8 @@ src_unpack() {
 	epatch ${FILESDIR}/ati-drivers-extra-8.19.10-improvements.patch.bz2
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 		-i ${WORKDIR}/extra/fglrx_panel/Makefile
-
+	#workaround
+	cp ${FILESDIR}/fglrx_pp_proto.h ${WORKDIR}/extra/fglrx_panel
 	}
 
 src_compile() {
