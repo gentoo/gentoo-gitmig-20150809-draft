@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.9 2005/12/09 06:20:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.10 2005/12/13 18:41:14 cardoe Exp $
+
+  13 Dec 2005; Doug Goldstein <cardoe@gentoo.org> libXxf86dga-0.99.3.ebuild:
+  Adding ~ppc
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -libXxf86dga-0.99.1.ebuild, -libXxf86dga-0.99.2.ebuild:
