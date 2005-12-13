@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r3.ebuild,v 1.13 2005/11/29 03:47:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r3.ebuild,v 1.14 2005/12/13 05:34:09 spyderous Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -21,7 +21,12 @@ KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc-macos ppc64 s390 sparc x86"
 IUSE="X"
 
 DEPEND="media-libs/libpng
-	X? ( virtual/x11 )"
+	X? ( || ( ( x11-libs/libXaw
+				x11-proto/xextproto
+			)
+			virtual/x11
+		)
+	)"
 
 src_unpack() {
 	unpack ${A}

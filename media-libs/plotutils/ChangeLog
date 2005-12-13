@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.25 2005/06/17 20:02:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.26 2005/12/13 05:34:09 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  plotutils-2.4.1-r3.ebuild:
+  Add modular X dependencies.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   plotutils-2.4.1-r3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.21 2005/08/20 03:51:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.22 2005/12/13 05:31:26 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; gd-2.0.32.ebuild:
+  Add modular X dependencies.
 
   20 Aug 2005; Mike Frysinger <vapier@gentoo.org> gd-2.0.32.ebuild:
   Add support for USE=fontconfig #79375 by Jung Tae-young.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.32.ebuild,v 1.5 2005/08/20 03:51:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.32.ebuild,v 1.6 2005/12/13 05:31:26 spyderous Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="fontconfig? ( media-libs/fontconfig )
 	jpeg? ( >=media-libs/jpeg-6b )
 	png? ( >=media-libs/libpng-1.2.5 sys-libs/zlib )
 	truetype? ( >=media-libs/freetype-2.1.5 )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libXpm virtual/x11 ) )"
 
 src_compile() {
 	econf \
