@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.268 2005/12/11 08:06:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.269 2005/12/13 01:15:31 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; qt-4.0.1.ebuild,
+  qt-4.1.0_rc1.ebuild:
+  Fix modular X xinerama.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; qt-4.0.1.ebuild,
   qt-4.1.0_rc1.ebuild:
