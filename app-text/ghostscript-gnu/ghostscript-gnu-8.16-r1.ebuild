@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.1 2005/10/07 02:56:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.2 2005/12/13 20:25:53 seemant Exp $
 
 inherit eutils
 
@@ -27,7 +27,10 @@ DEPEND="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.2.0
-	X? ( virtual/x11 )
+	X? ( || ( ( virtual/x11 )
+		( x11-proto/xproto
+		x11-libs/libX11
+		x11-libs/libXt ) ) )
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
@@ -35,6 +38,14 @@ DEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-1.2* )
 	!virtual/ghostscript
 	media-fonts/gnu-gs-fonts-std"
+
+RDEPEND="X? ( || ( ( virtual/x11 )
+	( x11-libs/libXt
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXi ) ) )"
 
 S=${WORKDIR}/${MY_P}
 
