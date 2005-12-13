@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.9 2005/11/14 19:44:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.10 2005/12/13 17:01:19 dang Exp $
+
+  13 Dec 2005; <dang@gentoo.org> geda-20050820.ebuild:
+  Marked ~amd64
 
 *geda-20050820 (14 Nov 2005)
 

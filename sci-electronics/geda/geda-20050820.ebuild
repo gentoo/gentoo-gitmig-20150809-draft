@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20050820.ebuild,v 1.1 2005/11/14 19:44:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20050820.ebuild,v 1.2 2005/12/13 17:01:19 dang Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.geda.seul.org/devel/${PV}/geda-${PV}.tar.gz
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 
 DEPEND=">=dev-libs/glib-1.2.10
