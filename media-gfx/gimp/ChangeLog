@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.135 2005/11/11 13:07:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.136 2005/12/13 16:13:08 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; gimp-2.2.9.ebuild:
+  Add modular X dependencies. No need for virtual/x11 because gtk+ pulls in
+  the proper libraries.
 
   11 Nov 2005; John N. Laliberte <allanonjl@gentoo.org> gimp-2.2.9.ebuild:
   remove -march=k6 filtering, #105036
