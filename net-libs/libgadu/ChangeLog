@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.11 2005/09/16 01:07:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.12 2005/12/13 00:26:13 metalgod Exp $
+
+  13 Dec 2005; Luis Medinas <metalgod@gentoo.org> libgadu-20050719.ebuild:
+  Stable on amd64.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> libgadu-20050719.ebuild:
   Mark 20050719 stable on alpha
