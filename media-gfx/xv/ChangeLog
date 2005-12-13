@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.74 2005/12/09 22:43:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.75 2005/12/13 15:52:49 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; xv-3.10a-r12.ebuild:
+  Add modular X dependencies.
 
   09 Dec 2005; Tom Gall <tgall@gentoo.org> xv-3.10a-r12.ebuild:
   stable on ppc64
