@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/colt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.9 2005/02/04 23:31:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.10 2005/12/13 07:58:44 compnerd Exp $
+
+*colt-1.2.0 (13 Dec 2005)
+
+  13 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/colt-1.2.0-benchmark-no-deprecation.patch, +colt-1.2.0.ebuild:
+  Version bump with a minor patch and clean up on dependencies.  Resolves bug
+  #99107.
 
   05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> colt-1.1.0.ebuild:
   stable on amd64
