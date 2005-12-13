@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.219 2005/11/29 03:37:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.220 2005/12/13 14:08:29 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -410,7 +410,7 @@ egetent() {
 			;;
 		esac
 		;;
-	*-freebsd*)
+	*-freebsd*|*-dragonfly*)
 		local opts action="user"
 		[[ $1 == "passwd" ]] || action="group"
 
@@ -569,7 +569,7 @@ enewuser() {
 			die "Required function missing"
 		fi
 		;;
-	*-freebsd*)
+	*-freebsd*|*-dragonfly*)
 		if [[ -z $@ ]] ; then
 			pw useradd ${euser} ${opts} \
 				-c "added by portage for ${PN}" \
@@ -707,7 +707,7 @@ enewgroup() {
 		dscl . create /groups/${egroup} passwd '*'
 		;;
 
-	*-freebsd*)
+	*-freebsd*|*-dragonfly*)
 		case ${egid} in
 			*[!0-9]*) # Non numeric
 				for egid in $(seq 101 999); do
