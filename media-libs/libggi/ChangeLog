@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.27 2005/11/04 01:11:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.28 2005/12/13 21:15:09 seemant Exp $
+
+  13 Dec 2005; Seemant Kulleen <seemant@gentoo.org> libggi-2.1.1.ebuild:
+  modular X deps
 
   04 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/libggi-2.1.1-gcc4.patch, libggi-2.1.1.ebuild:

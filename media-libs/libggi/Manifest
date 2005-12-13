@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b626b5174bb1bf6d91adc69bcaf12f1 ChangeLog 3600
+MD5 e6aafde06b3c464b0557dc5c6e7f107c ChangeLog 3689
 MD5 dccabae951c60ae1cffb9318b96e5e8b files/digest-libggi-2.0.1 65
 MD5 dccabae951c60ae1cffb9318b96e5e8b files/digest-libggi-2.0.1-r1 65
 MD5 b93988b2735e152af47806e54abbef57 files/digest-libggi-2.1.0 69
@@ -12,12 +9,5 @@ MD5 63c83abc1ab956c65af57fb546f4d4eb files/libggi-2.1.1-gcc4.patch 1944
 MD5 7c001ca257478a9dcd94d3a1823a8e17 libggi-2.0.1-r1.ebuild 1642
 MD5 8565bb352e3e1f7a37e3df631f551a28 libggi-2.0.1.ebuild 1401
 MD5 6713806d3d89cc7416ce73c2e877bb1c libggi-2.1.0.ebuild 1784
-MD5 e1ea425ddb5b9dff511e9373ab39aa03 libggi-2.1.1.ebuild 1719
+MD5 1acbd3e96908ed5aec09467cb07f1f67 libggi-2.1.1.ebuild 1931
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDarU8j5H05b2HAEkRAtazAJ9Ano8eBxA+2Kd2aFQWBEtpaa/QXQCglMvo
-E5Ge1mVHhkoeXkHBZHpEr64=
-=vaym
------END PGP SIGNATURE-----
