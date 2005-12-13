@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrandr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/ChangeLog,v 1.7 2005/12/09 07:01:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/ChangeLog,v 1.8 2005/12/13 18:43:10 cardoe Exp $
+
+  13 Dec 2005; Doug Goldstein <cardoe@gentoo.org> xrandr-0.99.2.ebuild:
+  Adding ~ppc
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xrandr-0.99.0.ebuild, -xrandr-0.99.1.ebuild:
