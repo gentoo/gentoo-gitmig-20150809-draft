@@ -1,4 +1,14 @@
-MD5 cad9570a8b2e557f02c807e03b1f5caa cl-ansi-tests-cvs-0.ebuild 1121
-MD5 81120043449d254f55de0d53a3d30986 ChangeLog 566
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 49eca826f7e3c27b426cb82ff4c0903a ChangeLog 696
+MD5 89aeddf67d761f81abb1e308401f52f4 cl-ansi-tests-cvs-0.ebuild 820
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cl-ansi-tests-cvs-0 0
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnvOqyiNZaEAZA+ARAqrFAJ9reeov/2W3ms+D3m/80/yatxlo7wCggSSR
+FJLRK9uu2PiHMk23cTMIrW0=
+=oOtN
+-----END PGP SIGNATURE-----

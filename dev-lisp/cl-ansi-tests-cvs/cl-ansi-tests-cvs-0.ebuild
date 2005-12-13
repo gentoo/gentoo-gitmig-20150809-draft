@@ -1,16 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ansi-tests-cvs/cl-ansi-tests-cvs-0.ebuild,v 1.2 2005/06/17 16:49:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ansi-tests-cvs/cl-ansi-tests-cvs-0.ebuild,v 1.3 2005/12/13 16:15:26 mkennedy Exp $
 
-ECVS_AUTH="ext"
-export CVS_RSH="ssh"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/gcl"
+ECVS_AUTH="pserver"
+ECVS_SERVER="cvs.savannah.gnu.org:/sources/gcl"
 ECVS_MODULE="gcl/ansi-tests"
-ECVS_BRANCH="HEAD"
-ECVS_USER="anoncvs"
-#ECVS_PASS=""
-ECVS_CVS_OPTIONS="-dP"
-ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAzFQovi+67xa+wymRz9u3plx0ntQnELBoNU4SCl3RkwSFZkrZsRTC0fTpOKatQNs1r/BLFoVt21oVFwIXVevGQwB+Lf0Z+5w9qwVAQNu/YUAFHBPTqBze4wYK/gSWqQOLoj7rOhZk0xtAS6USqcfKdzMdRWgeuZ550P6gSzEHfv0="
+ECVS_USER="anonymous"
+# ECVS_CVS_OPTIONS="-dP"
 
 inherit common-lisp-common-2 cvs
 
