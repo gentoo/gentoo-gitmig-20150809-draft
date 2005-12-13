@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.118 2005/11/19 11:33:46 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.119 2005/12/13 06:06:15 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xscreensaver-4.23.ebuild:
+  Add modular X dependencies.
 
   19 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org>
   xscreensaver-4.22-r4.ebuild:
