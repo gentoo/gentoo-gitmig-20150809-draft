@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e34ec903023c3a8c014d08d9f1c1bb9 ChangeLog 2319
+MD5 d00e034965c0fd453c402db9f9547660 ChangeLog 2424
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kugar-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kugar-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kugar-1.4.2 68
 MD5 d6e43c2a1976864f65664538821c3260 kugar-1.3.5.ebuild 917
 MD5 892b86999bc34d871328cbd358e7cb2c kugar-1.4.1.ebuild 854
-MD5 1698c0fcd770af4f69ef9f39dffb24f7 kugar-1.4.2.ebuild 859
+MD5 6575adb7435d63faba9270205188ea1e kugar-1.4.2.ebuild 857
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjUl2CRZPokWLroQRAqoyAJ9iNYXxk44x2/eMMKmmHUFifUQTGACguKja
-vOjC49oXs7+QwJD1l/zFf0o=
-=Z6vD
------END PGP SIGNATURE-----
