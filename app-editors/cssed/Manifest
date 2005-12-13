@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b737406b93b7a034cbf54ab8e0f66cfc ChangeLog 1763
 MD5 10a5cc4c140b2b0d2d51e05607c048c8 cssed-0.2.0.ebuild 770
-MD5 e09e83232b04be0dbd0f7f106758a5f1 cssed-0.3.0.ebuild 741
-MD5 5bd08ffaadf971d749f0815274927b10 cssed-0.4.0.ebuild 737
 MD5 069364923162139fbde133f773315ee9 cssed-0.2.1.ebuild 717
-MD5 9c56bf86812268be1632dc7c2a17b0d2 ChangeLog 1652
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 e09e83232b04be0dbd0f7f106758a5f1 cssed-0.3.0.ebuild 741
+MD5 124bf81af8525fd3bc33adb4585ae9eb cssed-0.4.0.ebuild 728
 MD5 08593a08dd2fe764eb2d928ef2c94e12 files/digest-cssed-0.2.0 63
 MD5 97773db217705424bcf7ef6615a5449e files/digest-cssed-0.2.1 63
 MD5 7110e9cfdd108bfe6e3da574fc55a55a files/digest-cssed-0.3.0 63
 MD5 c023b95726fa6ca5bb655f465f1f48a7 files/digest-cssed-0.4.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFDiRBkEzitwsaoONoRAtUjAKCORD5g99KABnhCkiCgC4QSxgXaJQCXdMci
-Ai8r4fsHtT9tlJpkPHyVGQ==
-=zTxo
------END PGP SIGNATURE-----
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
