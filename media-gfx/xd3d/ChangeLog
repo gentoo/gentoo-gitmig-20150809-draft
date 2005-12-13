@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xd3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/ChangeLog,v 1.4 2005/07/25 11:06:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/ChangeLog,v 1.5 2005/12/13 16:23:38 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; xd3d-8.2.1.ebuild:
+  Add modular X dependencies.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> xd3d-8.2.1.ebuild:
   Added to ~ppc.

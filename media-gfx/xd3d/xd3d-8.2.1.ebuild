@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/xd3d-8.2.1.ebuild,v 1.3 2005/07/25 11:06:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/xd3d-8.2.1.ebuild,v 1.4 2005/12/13 16:23:38 spyderous Exp $
 
 DESCRIPTION="scientific visualization tool"
 
@@ -15,7 +15,7 @@ KEYWORDS="~ppc ~x86"
 
 IUSE="icc"
 
-RDEPEND="virtual/x11 \
+RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
 	icc? ( dev-lang/icc dev-lang/ifc )"
 
 DEPEND="${RDEPEND}
