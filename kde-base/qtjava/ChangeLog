@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtjava
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.23 2005/12/12 19:33:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.24 2005/12/13 03:25:49 chriswhite Exp $
+
+*qtjava-3.4.3-r1 (13 Dec 2005)
+
+  13 Dec 2005; Chris White <chriswhite@gentoo.org> +qtjava-3.4.3-r1.ebuild:
+  Adding updated java herd pretty version for bug #114327. x86 stabled.
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> qtjava-3.5.0.ebuild:
   Marked ~ppc.
