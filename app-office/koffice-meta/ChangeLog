@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.23 2005/11/30 06:41:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.24 2005/12/13 03:58:29 josejx Exp $
+
+  13 Dec 2005; Joseph Jezak <josejx@gentoo.org> koffice-meta-1.4.2.ebuild:
+  Marked ppc stable for bug #112840.
 
   30 Nov 2005; Mark Loeser <halcy0n@gentoo.org> koffice-meta-1.4.2.ebuild:
   Stable on x86; bug #112840

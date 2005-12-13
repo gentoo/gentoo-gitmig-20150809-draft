@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.21 2005/11/30 06:39:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.22 2005/12/13 03:57:14 josejx Exp $
+
+  13 Dec 2005; Joseph Jezak <josejx@gentoo.org> krita-1.4.2.ebuild:
+  Marked ppc stable for bug #112840.
 
   30 Nov 2005; Mark Loeser <halcy0n@gentoo.org> krita-1.4.2.ebuild:
   Stable on x86; bug #112840
