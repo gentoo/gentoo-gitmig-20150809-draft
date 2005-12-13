@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r3.ebuild,v 1.8 2005/12/10 22:04:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r3.ebuild,v 1.9 2005/12/13 23:16:15 ferdy Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc perl readline samba sasl slp ssl tcpd selinux"
 
 RDEPEND=">=sys-libs/ncurses-5.1
