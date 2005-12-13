@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34.ebuild,v 1.3 2005/12/12 20:32:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r10.ebuild,v 1.1 2005/12/13 23:29:50 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20051210"
+GENTOO_PATCHSTAMP="20051213"
 GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
@@ -24,7 +24,7 @@ SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc ssl pam lingerd no-suexec static-modules selinux"
 
 DEPEND="dev-lang/perl
@@ -38,7 +38,7 @@ DEPEND="dev-lang/perl
 		lingerd? ( =net-www/lingerd-${lingerd_ver} )"
 
 # so leave it out until it's available
-PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_ver} )"
+PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_ver}-r10 )"
 
 S=${WORKDIR}/${PN}_${PV}
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.97 2005/12/12 20:31:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.98 2005/12/13 23:28:33 vericgar Exp $
+
+*mod_ssl-2.8.25-r10 (13 Dec 2005)
+
+  13 Dec 2005; Michael Stewart <vericgar@gentoo.org> -mod_ssl-2.8.25.ebuild,
+  +mod_ssl-2.8.25-r10.ebuild:
+  Bump new-style 2.8.25 to -r10 to make room for supporting old-style security
+  bug
 
   12 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> mod_ssl-2.8.25.ebuild:
   Stable on hppa, ppc. See bug #109895.
