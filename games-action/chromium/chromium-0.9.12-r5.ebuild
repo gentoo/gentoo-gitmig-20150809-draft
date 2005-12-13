@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.13 2005/12/13 16:26:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.14 2005/12/13 21:49:50 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -24,15 +24,18 @@ DEPEND="|| ( x11-libs/libXext virtual/x11 )
 	qt? ( =x11-libs/qt-3* )
 	media-libs/openal"
 
-S="${WORKDIR}/Chromium-0.9"
+S=${WORKDIR}/Chromium-0.9
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	cp data/png/hero.png "${T}/chromium.png" || die "cp failed"
-	epatch "${FILESDIR}/${PV}-gcc3-gentoo.patch"
-	epatch "${FILESDIR}/${PV}-proper-options.patch"
-	has_version '=x11-libs/qt-3*' && epatch "${FILESDIR}/${PV}-qt3.patch"
+	epatch \
+		"${FILESDIR}"/${PV}-gcc3-gentoo.patch \
+		"${FILESDIR}"/${PV}-proper-options.patch
+	if use qt ; then
+		epatch "${FILESDIR}/${PV}-qt3.patch"
+	fi
 	append-flags -DPKGDATADIR="'\"${GAMES_DATADIR}/${PN}\"'"
 	append-flags -DPKGBINDIR="'\"${GAMES_BINDIR}\"'"
 	sed -i \
@@ -60,9 +63,7 @@ src_compile() {
 		|| export ENABLE_VORBIS="no"
 	if use qt ; then
 		export ENABLE_SETUP="yes"
-		has_version '=x11-libs/qt-3*' \
-			&& export QTDIR=/usr/qt/3 \
-			|| export QTDIR=/usr/qt/2
+		export QTDIR=/usr/qt/3
 	else
 		export ENABLE_SETUP="no"
 	fi
@@ -72,9 +73,9 @@ src_compile() {
 
 src_install() {
 	dogamesbin bin/chromium* || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r data "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
-	doicon "${T}/chromium.png"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r data || die "doins failed"
+	doicon "${T}"/chromium.png
 	make_desktop_entry chromium "Chromium B.S.U"
 	prepgamesdirs
 }
