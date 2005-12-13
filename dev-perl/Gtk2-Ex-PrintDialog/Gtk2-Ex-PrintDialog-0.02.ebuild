@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/Gtk2-Ex-PrintDialog-0.02.ebuild,v 1.1 2005/12/12 13:12:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/Gtk2-Ex-PrintDialog-0.02.ebuild,v 1.2 2005/12/13 10:14:13 mcummings Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/G/GB/GBROWN/${P}.tar.gz"
 LICENSE="|| (Artistic GPL-2)"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="cups"
 SRC_TEST="do"
 
 DEPEND=""
