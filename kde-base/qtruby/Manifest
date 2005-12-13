@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c9f3774f137c05e852ef8d961ac3deaf ChangeLog 4169
 MD5 ef77385ae6fe6889038523a0288355a2 qtruby-3.4.2.ebuild 932
@@ -19,3 +22,10 @@ MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtruby-3.4.1 221
 MD5 f6bd746271de83bcbcacc04a445d590f files/digest-qtruby-3.4.3 71
 MD5 d859fab9468c7c54cc414ab700d5a16c files/qtruby-3.4.1-handlers.diff 379
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnkEbFdQwWVoAgN4RAss7AKDBpATERUCOHCxhpjBtv2kQ+eE9mQCfeWC1
+Ol3/W96cY/EEXld/dvnEyQw=
+=pvlB
+-----END PGP SIGNATURE-----
