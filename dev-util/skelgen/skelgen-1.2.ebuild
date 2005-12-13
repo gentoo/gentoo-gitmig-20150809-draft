@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/skelgen/skelgen-1.2.ebuild,v 1.3 2005/11/26 10:41:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/skelgen/skelgen-1.2.ebuild,v 1.4 2005/12/13 17:23:37 taviso Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.fluidstudios.com/"
 SRC_URI="http://www.fluidstudios.com/pub/FluidStudios/Tools/Fluid_Studios_Skeleton_Source_File_Generator-${PV}.zip"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
