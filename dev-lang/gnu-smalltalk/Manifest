@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 316815e07c78fed5846c4e8af781f5c5 ChangeLog 2900
-MD5 21a8210b48bb02fc7aad1a7d58bd7c1d files/2.1.11-gst-image-temp.patch 2123
-MD5 1b43b00217fd402ab0f309202f633e46 files/50gnu-smalltalk-gentoo.el 268
-MD5 96390d8b21fc85acdf2e84a2d91c6a66 files/digest-gnu-smalltalk-2.1.11 69
-MD5 4335632b4c5c11b3d8d38f821befc042 files/digest-gnu-smalltalk-2.1.12 69
+MD5 1b2596e5e750e3307d6772fccee56217 ChangeLog 3035
 MD5 4e2c598e8cb4ff972704246ffa0af579 gnu-smalltalk-2.1.11.ebuild 2193
-MD5 8838f154d2c96b317aa09d9d8fb8ec06 gnu-smalltalk-2.1.12.ebuild 2208
 MD5 54532d9cd3833e3c65d9136f3a1b6458 metadata.xml 630
+MD5 8838f154d2c96b317aa09d9d8fb8ec06 gnu-smalltalk-2.1.12.ebuild 2208
+MD5 4f9b7cbbb530b5e3f448df4d7e4245b6 gnu-smalltalk-2.2.ebuild 2181
+MD5 4335632b4c5c11b3d8d38f821befc042 files/digest-gnu-smalltalk-2.1.12 69
+MD5 4666311513f3ed204d1c1c0d7e71eb22 files/digest-gnu-smalltalk-2.2 66
+MD5 1b43b00217fd402ab0f309202f633e46 files/50gnu-smalltalk-gentoo.el 268
+MD5 21a8210b48bb02fc7aad1a7d58bd7c1d files/2.1.11-gst-image-temp.patch 2123
+MD5 96390d8b21fc85acdf2e84a2d91c6a66 files/digest-gnu-smalltalk-2.1.11 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRpLcyiNZaEAZA+ARAna4AJ41koE0q/WVzrPQo2ASkCk2HDFFYQCbBBBn
-3MsE70KOPIx+cDv/GP93k+A=
-=+YkH
+iD8DBQFDnkUndZ42PGEF17URAgKnAJ41X5qqhtM67g9oMQ3zW9ZFHDQSHgCfcBcX
+URKJPYMbgKE3ofx3W9Ew+eM=
+=Rtdg
 -----END PGP SIGNATURE-----

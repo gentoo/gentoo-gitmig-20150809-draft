@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.14 2005/10/07 15:22:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.15 2005/12/13 03:50:49 araujo Exp $
+
+*gnu-smalltalk-2.2 (13 Dec 2005)
+
+  13 Dec 2005; Luis f. Araujo <araujo@gentoo.org> +gnu-smalltalk-2.2.ebuild:
+  Added new GST version.
 
   07 Oct 2005; Matthew Kennedy <mkennedy@gentoo.org>
   gnu-smalltalk-2.1.12.ebuild:
