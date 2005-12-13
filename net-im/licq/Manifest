@@ -1,4 +1,7 @@
-MD5 d91e7f5c82182d60951d34240ea1044c ChangeLog 11383
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 223ef6a7d3c14aa943970e415acd526b ChangeLog 11490
 MD5 c18e90be9c36c7efb06211733ad765ff files/1.2.7-debugflag.patch 396
 MD5 5f64e4b71c311ff7b6489953fc8bf1f9 files/1.2.7-nptl.patch 1178
 MD5 5dbb2a47d1d863a55f564e874c871d30 files/1.3.0-gpgme3_hack.patch 878
@@ -10,7 +13,14 @@ MD5 b0a924ef22c21dd596d7918631f18559 files/digest-licq-1.3.0 64
 MD5 b7d176e7d3091d82fed1f4931604b327 files/digest-licq-1.3.2 64
 MD5 b7d176e7d3091d82fed1f4931604b327 files/digest-licq-1.3.2-r1 64
 MD5 f30c97a120a37f90edd8abdf612cd52a licq-1.2.7.ebuild 3368
-MD5 f8691d71dd37438ad228897e6e32b908 licq-1.3.0.ebuild 3800
+MD5 00343dc564154429662da5945b412f36 licq-1.3.0.ebuild 3795
 MD5 b6602d07b65d88645dac04ab170a8f51 licq-1.3.2-r1.ebuild 4987
 MD5 153de58b78fe36946f7d7ac33ecda9f4 licq-1.3.2.ebuild 4857
 MD5 7adc6310a4dbd42bad26caa80683d4ec metadata.xml 249
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDnzEtV3J2n04EauwRAkQmAKCgu3SkF1VR/alO3bOtkVO1tLR0qACgs+3p
+BLot1kDFDrU3UorH6ycE+S0=
+=d27E
+-----END PGP SIGNATURE-----
