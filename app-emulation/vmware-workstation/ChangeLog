@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.109 2005/12/12 17:04:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.110 2005/12/13 16:02:31 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  vmware-workstation-5.5.0.18463.ebuild:
+  Add modular X dependencies. See mozilla-sunbird-bin ChangeLog for info on
+  how they were found (find + ldd).
 
   12 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-5.5.0.18463.ebuild:
