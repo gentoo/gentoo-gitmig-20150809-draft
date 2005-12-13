@@ -1,4 +1,4 @@
-MD5 502639dc4f7d03b7a89dd1c6d85e4e5d ChangeLog 721
-MD5 f9de9b5b790d67dfdebf6048d12297ec files/digest-quake4-bin-1.0.5 73
+MD5 38a75985a9bc187d3fbce6a3b8d51320 ChangeLog 940
+MD5 ad34f8ffdd4f64dea0130b33ac443011 files/digest-quake4-bin-1.0.6 73
 MD5 67bc63233267502c576573939ca95ae9 metadata.xml 1046
-MD5 e0cbb95782acfa43138c31e7859b0e36 quake4-bin-1.0.5.ebuild 2692
+MD5 ce46952b150d546d73d9e26b63a366bb quake4-bin-1.0.6.ebuild 2692
