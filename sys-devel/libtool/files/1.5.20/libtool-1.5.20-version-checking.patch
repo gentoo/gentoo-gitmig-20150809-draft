@@ -38,7 +38,7 @@ http://bugs.gentoo.org/73140
 +])
 +fi
 +gentoo_lt_version="@_LT_VERSION@"
-+gentoo_ltmain_version=`grep '^@<:@ 	@:>@*VERSION=' $ltmain | sed -e 's|^@<:@ 	@:>@*VERSION=||'`
++gentoo_ltmain_version=`sed -n '/^[[ 	]]*VERSION=/{s/^[[ 	]]*VERSION=//;p;q;}' "$ltmain"`
 +if test "x$gentoo_lt_version" != "x$gentoo_ltmain_version" ; then
 +  AC_MSG_RESULT(no)
 +  AC_MSG_ERROR([
