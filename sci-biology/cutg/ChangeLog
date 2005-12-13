@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.32 2005/12/13 20:00:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.33 2005/12/13 20:50:17 corsair Exp $
+
+  13 Dec 2005; Markus Rothe <corsair@gentoo.org> cutg-149.ebuild:
+  Stable on ppc64; bug #115446
 
 *cutg-150 (13 Dec 2005)
 
