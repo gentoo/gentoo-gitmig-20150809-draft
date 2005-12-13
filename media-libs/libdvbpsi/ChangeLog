@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.19 2005/09/13 19:51:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.20 2005/12/13 11:58:53 zzam Exp $
+
+*libdvbpsi-0.1.5 (13 Dec 2005)
+
+  13 Dec 2005; Matthias Schwarzott <zzam@gentoo.org> metadata.xml,
+  +libdvbpsi-0.1.5.ebuild:
+  Version bumped, see Bug #105449, thanks to Jesse Adelman
+  <jesse@boldandbusted.com>, added herd media-tv
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> libdvbpsi-0.1.4-r1.ebuild:
   Mark 0.1.4-r1 stable on alpha
