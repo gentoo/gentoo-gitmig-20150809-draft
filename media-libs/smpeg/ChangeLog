@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.24 2005/10/04 23:22:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.25 2005/12/13 15:49:22 spyderous Exp $
+
+  13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  smpeg-0.4.4-r7.ebuild:
+  Add modular X dependencies.
 
 *smpeg-0.4.4-r7 (04 Oct 2005)
 

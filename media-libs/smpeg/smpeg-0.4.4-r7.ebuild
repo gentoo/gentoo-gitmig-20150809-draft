@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r7.ebuild,v 1.1 2005/10/04 23:22:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r7.ebuild,v 1.2 2005/12/13 15:49:22 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="X debug gtk mmx opengl"
 DEPEND=">=media-libs/libsdl-1.2.0
 	opengl? ( virtual/opengl virtual/glu )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libXt virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
