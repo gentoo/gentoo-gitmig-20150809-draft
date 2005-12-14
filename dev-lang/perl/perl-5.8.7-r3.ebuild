@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r3.ebuild,v 1.5 2005/12/07 04:23:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r3.ebuild,v 1.6 2005/12/14 11:18:04 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -126,7 +126,8 @@ src_unpack() {
 	# with ssp enabled. This become fatal during compile time so we 
 	# temporally disable ssp on two regexp files till upstream has a 
 	# chance to work it out. Bug #97452
-	use userland_Darwin || epatch "${FILESDIR}"/${P}-regexp-nossp.patch
+	[[ -n $(test-flags -fno-stack-protector) ]] && \
+		epatch "${FILESDIR}"/${P}-regexp-nossp.patch
 
 	# Bug 114113
 	cd ${S}; epatch ${FILESDIR}/perl-exp_intwrap.patch
