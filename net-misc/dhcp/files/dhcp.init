@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.2 2005/12/07 14:51:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.3 2005/12/14 20:30:19 uberlord Exp $
 
 depend() {
 	need net
@@ -24,7 +24,7 @@ start() {
 	if [[ ! -f ${leasefile} ]] ; then
 		ebegin "Creating ${leasefile}"
 		touch "${leasefile}"
-		chown dcp:dhcp "${leasefile}"
+		chown dhcp:dhcp "${leasefile}"
 		eend $? || return 1
 	fi
 

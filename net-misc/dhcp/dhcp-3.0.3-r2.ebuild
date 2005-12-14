@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r1.ebuild,v 1.3 2005/12/09 13:58:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r2.ebuild,v 1.1 2005/12/14 20:30:19 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
