@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.1 2005/12/13 18:56:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.2 2005/12/14 21:07:30 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,8 +13,9 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-RESTRICT="nostrip nomirror"
+KEYWORDS="amd64 x86"
+# The executable pages are required.
+RESTRICT="nostrip nomirror stricter"
 IUSE="opengl dedicated"
 
 RDEPEND="games-fps/ut2004-data
@@ -76,6 +77,7 @@ pkg_postinst() {
 		ewarn "emerge --config =${CATEGORY}/${PF}"
 		ewarn "That way you can [re]enter your cdkey."
 	fi
+	echo
 	einfo "Starting with 3369, the game supports render-to-texture.  To enable"
 	einfo "it, you will need the Nvidia drivers of at least version 7676 and"
 	einfo "you should edit the following:"
@@ -83,6 +85,15 @@ pkg_postinst() {
 	einfo 'section of your UT2004.ini/Default.ini and set "bPlayerShadows=True"'
 	einfo 'and "bBlobShadow=False" in the "[UnrealGame.UnrealPawn]" section of'
 	einfo 'your	User.ini/DefUser.ini'
+	echo
+	if use x86
+	then
+		einfo "The 32-bit version of UT2004 uses Pixomatic, which means it"
+		einfo "really does need an executable stack.  It is safe to ignore any"
+		einfo "warnings from portage about this.  See:"
+		einfo "http://bugs.gentoo.org/show_bug.cgi?id=114733"
+		einfo "for more information."
+	fi
 	echo
 	einfo "To play the game run:"
 	einfo " ut2004"
