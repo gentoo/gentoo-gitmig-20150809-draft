@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.171 2005/12/11 18:16:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.172 2005/12/14 16:56:28 caleb Exp $
+
+*ruby-1.8.4_pre2-r1 (14 Dec 2005)
+
+  14 Dec 2005; Caleb Tennis <caleb@gentoo.org> +files/ruby-1.8.4-yaml.diff,
+  +ruby-1.8.4_pre2-r1.ebuild:
+  Revbump and add YAML patch from bug #115388
 
   11 Dec 2005; Caleb Tennis <caleb@gentoo.org> ruby-1.8.2-r2.ebuild,
   ruby-1.8.3.ebuild, ruby-1.8.4_pre2.ebuild:
