@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/frown
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/frown/ChangeLog,v 1.1 2005/12/14 14:29:02 kosmikus Exp $
+
+*frown-0.6 (14 Dec 2005)
+
+  14 Dec 2005; Andres Loeh <kosmikus@gentoo.org> +metadata.xml,
+  +frown-0.6.ebuild:
+  Initial import.
+
