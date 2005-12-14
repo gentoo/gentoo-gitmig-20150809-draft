@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.3 2005/11/12 10:51:11 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.4 2005/12/14 15:40:42 dcoutts Exp $
 
 inherit base ghc-package multilib
 
@@ -24,7 +24,8 @@ RDEPEND=">=virtual/ghc-5.04.3
 				 >=gnome-base/gconf-2 )
 		mozilla? ( >=www-client/mozilla-1.4 )
 		firefox? ( >=www-client/mozilla-firefox-1.0.4 )"
-DEPEND="doc? ( >=dev-haskell/haddock-0.7 )"
+DEPEND="${RDEPEND}
+		doc? ( >=dev-haskell/haddock-0.7 )"
 
 src_compile() {
 	econf \
