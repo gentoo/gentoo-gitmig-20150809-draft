@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.93 2005/12/11 23:35:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.94 2005/12/14 05:57:39 spyderous Exp $
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  libsdl-1.2.9-r1.ebuild:
+  Fix modular X with USE=nas.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   libsdl-1.2.9-r1.ebuild:

@@ -1,4 +1,4 @@
-MD5 8bc04bfdbb6b3c1c5ca587852adf9711 ChangeLog 14794
+MD5 317310f4b53b0cc11a5b458eed25801a ChangeLog 14906
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
 MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
@@ -37,6 +37,6 @@ MD5 7335dd719002ab81477446278b2f786f files/libsdl-1.2.9-sdl-blit-mmx-check.patch
 MD5 33a794f49d333129e866fc0f51ea6ddb libsdl-1.2.6-r3.ebuild 3023
 MD5 3ce9b61a50a330133454637dccdbb9e9 libsdl-1.2.7-r3.ebuild 3968
 MD5 458d9903cf678ea5065444a33f93e574 libsdl-1.2.8-r1.ebuild 5073
-MD5 3a57f7fe4dbc2ec4628d439782f960b3 libsdl-1.2.9-r1.ebuild 4701
+MD5 d7556cdea305459a2e01b23ee9386eb7 libsdl-1.2.9-r1.ebuild 4726
 MD5 950a76c3f9f7cf9503758f5432319e2b libsdl-1.2.9.ebuild 4279
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
