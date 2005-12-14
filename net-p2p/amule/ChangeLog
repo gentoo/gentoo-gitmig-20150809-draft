@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.57 2005/11/20 07:13:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.58 2005/12/14 17:01:11 r3pek Exp $
+
+  14 Dec 2005; Carlos Silva <r3pek@gentoo.org> amule-2.0.3-r4.ebuild:
+  Add a check to see if media-libs/gd was compiled with jpeg use flag
 
   20 Nov 2005; Mark Loeser <halcy0n@gentoo.org> amule-2.0.3-r4.ebuild:
   Stable on x86; bug #106380

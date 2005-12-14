@@ -1,37 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a96a2160459b4b42792df64165420bf ChangeLog 8130
-MD5 b3c15e104e1b64f5499fad3b01f9b27d amule-1.2.8-r1.ebuild 829
-MD5 52781eab799d0ab31cdcd3847805789e amule-1.2.8-r2.ebuild 826
-MD5 8089773038f60bec63f9fc87c15aa26e amule-1.2.8.ebuild 922
 MD5 bcdd2b75d6b9bc9030bad15ae7748780 amule-2.0.1-r1.ebuild 2167
-MD5 4b1e5b8f876490da282983c0fe3af6e6 amule-2.0.1-r2.ebuild 2183
-MD5 5ff5515bcbef5c070e0356ce1f01aef4 amule-2.0.1.ebuild 2229
 MD5 9842bde0d727d0714cf5ae1f01c14f19 amule-2.0.3-r2.ebuild 2167
-MD5 28a843108dc2a81ececee701965cb3da amule-2.0.3-r3.ebuild 2183
-MD5 e4ba570fffb5a4531148594d7a1d45c3 amule-2.0.3-r4.ebuild 2601
+MD5 52781eab799d0ab31cdcd3847805789e amule-1.2.8-r2.ebuild 826
+MD5 b4b066079362c4246244a57bda7dd90d amule-2.0.3-r4.ebuild 2773
+MD5 5ff5515bcbef5c070e0356ce1f01aef4 amule-2.0.1.ebuild 2229
+MD5 b3c15e104e1b64f5499fad3b01f9b27d amule-1.2.8-r1.ebuild 829
 MD5 1abaced287e5f9e1594893fb667a96df amule-2.0.3.ebuild 2258
-MD5 8cde6982e4b5300f4521da90ab8733d6 files/amule-2.0.0_rc7-wxgtk.patch 1293
+MD5 4b1e5b8f876490da282983c0fe3af6e6 amule-2.0.1-r2.ebuild 2183
+MD5 28a843108dc2a81ececee701965cb3da amule-2.0.3-r3.ebuild 2183
+MD5 d5e45051cb5bd1fd129ee10a063dba4c ChangeLog 8269
+MD5 8089773038f60bec63f9fc87c15aa26e amule-1.2.8.ebuild 922
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8-r1 65
+MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8-r2 65
 MD5 6cfdc1b9b4a65d47e9047a8fed427889 files/amuled.confd 409
 MD5 37c7ee8278a02051a68d062beba82fbc files/amuled.initd 1138
 MD5 9b94153fb9594079c1df009460ece8fd files/amuleweb.confd 697
 MD5 75c780e3a94f217a14a99371aa7e9a56 files/amuleweb.initd 1176
-MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8 65
-MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8-r1 65
-MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8-r2 65
-MD5 e875c8bb7caccbc783bbd7238b520a04 files/digest-amule-2.0.1 65
 MD5 e875c8bb7caccbc783bbd7238b520a04 files/digest-amule-2.0.1-r1 65
 MD5 e875c8bb7caccbc783bbd7238b520a04 files/digest-amule-2.0.1-r2 65
-MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3 65
 MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3-r2 65
 MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3-r3 65
 MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3-r4 65
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgCIzCRZPokWLroQRAuI+AKC+itYkg0+ss7w+PTtIKCFFSwA2XACgn1hm
-6Ffkqa9NX9z038fs1QjK+nQ=
-=xA25
------END PGP SIGNATURE-----
+MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8 65
+MD5 e875c8bb7caccbc783bbd7238b520a04 files/digest-amule-2.0.1 65
+MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3 65
+MD5 8cde6982e4b5300f4521da90ab8733d6 files/amule-2.0.0_rc7-wxgtk.patch 1293
