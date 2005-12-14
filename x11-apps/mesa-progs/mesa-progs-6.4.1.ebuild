@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.3 2005/12/14 17:59:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.4 2005/12/14 21:31:57 spyderous Exp $
 
 inherit toolchain-funcs
 
@@ -55,8 +55,6 @@ src_unpack() {
 	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
 	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
 	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
-	# bug #110840 - Build with PIC, since it hasn't been shown to slow it down
-	echo "PIC_FLAGS = -fPIC" >> ${HOSTCONF}
 }
 
 src_compile() {
