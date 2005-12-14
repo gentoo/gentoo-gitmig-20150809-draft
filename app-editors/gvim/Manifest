@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c2b44aa647adaa521c65b811096bd36 ChangeLog 23672
+MD5 1b643d6cf03fe7f8c03fae58218520e3 ChangeLog 23810
 MD5 f06702e38dc279aee7ca16c7283d67cb files/digest-gvim-6.4 200
 MD5 82c6d6400445f99a8d7d6382e22752a2 files/digest-gvim-7.0_alpha20051207 162
 MD5 99367dbfe85f20e78e648bdcf0760d86 files/gvim-completion 1200
@@ -9,13 +6,6 @@ MD5 bbd46fbd80747c453693e4f2e258f106 files/gvim.desktop 845
 MD5 5fedc57d438147906375b2ef60daa4b9 files/gvim.xpm 1371
 MD5 823c8bb76c4568a8ddb7a17accd057e7 files/gvimrc 780
 MD5 a3137e1d3f7ae220a1db3dde70cafb9c files/gvimrc-r1 1050
-MD5 3fdf0bfecfbbf28f4007e6b905ccf108 gvim-6.4.ebuild 1074
-MD5 6b631182b4dc2fca7a4980a975be384c gvim-7.0_alpha20051207.ebuild 985
+MD5 1c4a6862618692b1b919d649cfaddfc3 gvim-6.4.ebuild 1151
+MD5 2a3bf25b736a2ee581dec7240c9dfa1f gvim-7.0_alpha20051207.ebuild 1071
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmvw5LLFUmVNQ7rkRAsJdAJ4oHWgFC8IxLej1wPGoZzWGM0lp8wCeKM3k
-sM/4C/2Ry/U+lc1CjUJtTLM=
-=uPeH
------END PGP SIGNATURE-----
