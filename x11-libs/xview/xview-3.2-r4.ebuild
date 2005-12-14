@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r4.ebuild,v 1.1 2005/08/14 00:55:23 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r4.ebuild,v 1.2 2005/12/14 07:16:27 tsunam Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="http://physionet.caregroup.harvard.edu/physiotools/xview/${MY_PN}.tar.g
 S=${WORKDIR}/${MY_PN}
 LICENSE="sun-openlook"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="-alpha ~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11"
