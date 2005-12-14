@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.3.ebuild,v 1.1 2005/07/16 12:37:18 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.3.ebuild,v 1.2 2005/12/14 14:42:43 griffon26 Exp $
 
-inherit eutils
+inherit eutils versionator
 
-My_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 $2 $3}'`"
+MY_PV=$(delete_all_version_separators)
 DESCRIPTION="SR (Synchronizing Resources) is a language for writing concurrent programs"
 HOMEPAGE="http://www.cs.arizona.edu/sr"
-SRC_URI="ftp://ftp.cs.arizona.edu/sr/${PN}${My_PV}.tar.Z"
+SRC_URI="ftp://ftp.cs.arizona.edu/sr/${PN}${MY_PV}.tar.Z"
 
 LICENSE="GPL-2"
 SLOT="0"
