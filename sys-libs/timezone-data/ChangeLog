@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.10 2005/12/09 15:59:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.11 2005/12/14 00:10:29 vapier Exp $
+
+*timezone-data-2005q (14 Dec 2005)
+
+  14 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +timezone-data-2005q.ebuild:
+  Version bump #115429 by Rodrigo Severo.
 
   09 Dec 2005; Joshua Kinard <kumba@gentoo.org> timezone-data-2005p.ebuild:
   Added ~mips to KEYWORDS.
