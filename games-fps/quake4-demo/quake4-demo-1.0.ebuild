@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.3 2005/12/02 17:34:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.4 2005/12/14 06:12:30 vapier Exp $
 
 inherit eutils games
 
 MY_P="quake4-linux-${PV}-demo"
 DESCRIPTION="Sequel to Quake 2, an Id 3D first-person shooter"
 HOMEPAGE="http://www.quake4game.com/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake4/linux/${MY_P}.x86.run
+SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake4/demo/${MY_P}.x86.run
 	http://www.3ddownloads.com/Action/Quake%204/Demos/${MY_P}.x86.run
 	mirror://3dgamers/quake4/${MY_P}.x86.run
 	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/quake4/linux/${MY_P}.x86.run
