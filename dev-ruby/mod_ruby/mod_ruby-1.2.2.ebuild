@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.2.ebuild,v 1.6 2005/10/20 18:31:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.2.ebuild,v 1.7 2005/12/14 17:00:00 caleb Exp $
 
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
 HOMEPAGE="http://modruby.net/"
@@ -66,7 +66,7 @@ pkg_postinst() {
 		einfo "You may also wish to edit /etc/apache2/conf/modules.d/20_mod_ruby.conf"
 	else	# apache1
 		einfo "To enable mod_ruby:"
-		einfo "1. Run \"emerge --config =${PV}\""
+		einfo "1. Run \"emerge --config =${PF}\""
 		einfo "2. Edit /etc/conf.d/apache and add \"-D RUBY\""
 	fi
 	einfo "You must restart apache for changes to take effect"
