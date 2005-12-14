@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.39 2005/11/10 20:20:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.40 2005/12/14 21:11:44 dang Exp $
+
+  14 Dec 2005; <dang@gentoo.org> vino-2.12.0.ebuild:
+  Fix modular X deps to not dup gtk+ ones
 
   10 Nov 2005; <dang@gentoo.org> vino-2.12.0.ebuild:
   Modular X deps
