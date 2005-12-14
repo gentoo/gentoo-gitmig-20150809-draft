@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.15 2005/01/15 00:07:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.16 2005/12/14 14:20:44 seemant Exp $
 
 inherit eutils
+
+IUSE="ssl kde"
 
 if use kde; then
 	inherit kde-base eutils
@@ -19,7 +21,6 @@ RESTRICT="nomirror"
 HOMEPAGE="http://sim-icq.sourceforge.net"
 KEYWORDS="x86 ~ppc amd64"
 SLOT="0"
-IUSE="ssl kde"
 
 newdepend "ssl? ( dev-libs/openssl )"
 DEPEND="$DEPEND sys-devel/flex"
