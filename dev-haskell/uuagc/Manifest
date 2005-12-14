@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d814f5e63a9d198c58306a18566d9450 uuagc-0.9.1.ebuild 616
 MD5 deb6c1cef143a679d0b271ef98165ffa ChangeLog 326
 MD5 5cf11c08544b065d0144e11273f0000d metadata.xml 223
 MD5 2a9312698ccb7979802288a09ed5705d files/digest-uuagc-0.9.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDoCs4/B0cxt+cq+wRAvgeAKCjrIjziv7oUkGT8C/aVvK75lujKwCeIUfq
+ULNE7zAsGlfy94/u7ZElcPE=
+=69GG
+-----END PGP SIGNATURE-----
