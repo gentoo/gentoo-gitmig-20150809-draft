@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 479b6c4373d1c4ce3c193fc8eed16503 ChangeLog 4784
+MD5 a8c956cf09df6d227dfec486e18bf4ac ChangeLog 4904
+MD5 341c99dd9cc268c12424631348073787 libconf-0.40.00.ebuild 751
+MD5 e4b0d427f197e67a53277fd53ead0180 libconf-0.42.00.ebuild 1521
+MD5 5f1c3b9a62f513d6a4802b57677c23bf metadata.xml 284
+MD5 3ee593b728e83945abe66be4511bb15a libconf-0.42.00-r1.ebuild 1282
+MD5 45c06f48682950d7319fc24a73a22fed libconf-0.42.10.ebuild 1499
 MD5 03c43e055ddc9c37a48a9ee955231f3b files/digest-libconf-0.40.00 73
 MD5 727d65ef0babfa4732ec75cd4d5f2ead files/digest-libconf-0.42.00 73
 MD5 727d65ef0babfa4732ec75cd4d5f2ead files/digest-libconf-0.42.00-r1 73
 MD5 e6fd9a02a8d8d1cba6f06c9a6a3cdd07 files/digest-libconf-0.42.10 73
-MD5 341c99dd9cc268c12424631348073787 libconf-0.40.00.ebuild 751
-MD5 3ee593b728e83945abe66be4511bb15a libconf-0.42.00-r1.ebuild 1282
-MD5 e4b0d427f197e67a53277fd53ead0180 libconf-0.42.00.ebuild 1521
-MD5 b9a4d2fe4f5ce6d9955232177fe96268 libconf-0.42.10.ebuild 1488
-MD5 5f1c3b9a62f513d6a4802b57677c23bf metadata.xml 284
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiJ3OCHk4+ZoBpvsRAlq0AJ0abZHvZrpBRbHWR7mJlNgrgOhOpACgghUe
-hEd/fHT0GWcNqgOe0jX5rfU=
-=39bK
------END PGP SIGNATURE-----

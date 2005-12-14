@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10.ebuild,v 1.2 2005/11/26 17:39:13 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10.ebuild,v 1.3 2005/12/14 14:56:40 dams Exp $
 
 inherit multilib
 
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall "BINDINGS=${mybindings}" PREFIX=${D}/usr ROOT=${D}
+	einstall "BINDINGS=${mybindings}" PREFIX=${D}/usr DESTDIR=${D} ROOT=${D}
 	dodoc AUTHORS COPYING ChangeLog \
 		bindings/ruby/src/AUTHORS \
 		bindings/ruby/src/README \
