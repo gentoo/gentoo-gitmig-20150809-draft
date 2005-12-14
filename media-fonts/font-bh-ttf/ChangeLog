@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.12 2005/12/13 18:32:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.13 2005/12/14 17:48:05 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  font-bh-ttf-0.99.1.ebuild:
+  ttmkfdir was moved from x11-misc to x11-apps.
 
   13 Dec 2005; Doug Goldstein <cardoe@gentoo.org> font-bh-ttf-0.99.1.ebuild:
   Adding ~ppc

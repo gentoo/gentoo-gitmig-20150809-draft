@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.10 2004/07/14 17:04:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.11 2005/12/14 17:46:42 joshuabaergen Exp $
 
 S=${WORKDIR}/xfonts-artwiz-2.3/upstream
 DESCRIPTION="Artwiz Fonts"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 DEPEND="virtual/x11
-	x11-misc/ttmkfdir"
+	x11-apps/ttmkfdir"
 
 src_compile() {
 	cd ${S}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.17 2004/11/04 05:26:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.18 2005/12/14 17:44:27 joshuabaergen Exp $
 
 DESCRIPTION="Chinese TrueType Arphic Fonts"
 HOMEPAGE="http://www.arphic.com.tw/"
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
-	x11-misc/ttmkfdir"
+	x11-apps/ttmkfdir"
 
 S=${WORKDIR}
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.20 2005/06/08 15:25:08 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.21 2005/12/14 17:44:27 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  arphicfonts-0.1-r1.ebuild:
+  ttmkfdir was moved from x11-misc to x11-apps.
 
   08 Jun 2005; Stephen P. Becker <geoman@gentoo.org>
   arphicfonts-0.1-r2.ebuild:
