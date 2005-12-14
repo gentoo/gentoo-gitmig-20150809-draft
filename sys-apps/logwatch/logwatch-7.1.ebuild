@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.1.ebuild,v 1.1 2005/12/10 02:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.1.ebuild,v 1.2 2005/12/14 04:09:04 weeve Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org/"
@@ -25,8 +25,8 @@ src_install() {
 	dodir /usr/share/logwatch/scripts/shared
 	dodir /usr/share/logwatch/default.conf/logfiles
 	dodir /usr/share/logwatch/default.conf/services
-	dodir /var/cache/logwatch
 	dodir /etc/logwatch
+	keepdir /var/cache/logwatch
 
 	newsbin scripts/logwatch.pl logwatch.pl || die "dosbin logwatch failed"
 
