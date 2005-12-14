@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.112 2005/12/11 17:36:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.113 2005/12/14 05:40:23 spyderous Exp $
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; wine-9999.ebuild,
+  wine-20050930.ebuild:
+  (#115225) Add modular X dependencies.
 
 *wine-0.9.3 (11 Dec 2005)
 
