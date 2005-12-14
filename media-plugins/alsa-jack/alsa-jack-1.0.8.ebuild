@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.8.ebuild,v 1.4 2005/03/29 18:49:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.8.ebuild,v 1.5 2005/12/14 15:35:24 fvdpol Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit libtool
 MY_PV=${PV/_rc/rc}
 S=${WORKDIR}/alsa-lib-${MY_PV}
 
-DESCRIPTION="JACK pcm plugin"
+DESCRIPTION="JACK pcm plugin. Allows native ALSA applications to connect to the jackd. Works transparantly for both capture and playback."
 HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/lib/alsa-lib-${MY_PV}.tar.bz2"
 
