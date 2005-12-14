@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.146 2005/12/11 11:02:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.147 2005/12/14 02:15:07 ranger Exp $
+
+  14 Dec 2005; Brent Baude <ranger@gentoo.org> kdeutils-3.4.3.ebuild:
+  Marking kdeutils-3.4.3 ~ppc64 for kde-3.4.3
 
   11 Dec 2005; Chris White <chriswhite@gentoo.org> kdeutils-3.4.3-r1.ebuild:
   x86 stable for bug #112842.
