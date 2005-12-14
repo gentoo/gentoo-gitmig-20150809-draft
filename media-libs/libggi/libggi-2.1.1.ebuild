@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.6 2005/12/14 06:20:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.7 2005/12/14 15:08:24 seemant Exp $
 
 inherit eutils libtool
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/libgii-0.9.0
 
 DEPEND="${RDEPEND}
 	X? ( || ( (	x11-proto/xf86dgaproto
-			x11-proto/xg86vidmodeproto
+			x11-proto/xf86vidmodeproto
 			x11-proto/xextproto )
 		virtual/x11 ) )"
 
