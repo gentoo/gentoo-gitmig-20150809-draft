@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.11 2005/12/14 04:20:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.12 2005/12/14 06:58:24 cardoe Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -21,12 +21,9 @@ RDEPEND="X? ( || ( x11-libs/libXrender virtual/x11 ) )
 #	X? ( xcb-util )
 
 DEPEND="${RDEPEND}
-	X? ( ||( ( x11-proto/xextproto
-				x11-proto/xproto
-			)
-			virtual/x11
-		)
-	)"
+	X? ( || ( (	x11-proto/xextproto
+			x11-proto/xproto )
+			virtual/x11 ) )"
 
 src_compile() {
 #		$(use_enable X software-xcb)
