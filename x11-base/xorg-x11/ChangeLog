@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.489 2005/12/14 06:29:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.490 2005/12/14 16:09:10 spyderous Exp $
+
+*xorg-x11-7.0.0_rc3-r1 (14 Dec 2005)
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-7.0.0_rc3-r1.ebuild:
+  Added mesa-progs to deps, which provides glxinfo and glxgears. Drop all
+  non-x86 keywords because of this.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-7.0.0_rc3.ebuild:
