@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.24 2005/12/12 19:54:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.25 2005/12/14 18:07:56 chriswhite Exp $
+
+  14 Dec 2005; Chris White <chriswhite@gentoo.org>
+  kdebindings-meta-3.4.3.ebuild:
+  Fix bug #112842.
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org>
   kdebindings-meta-3.5.0.ebuild:
