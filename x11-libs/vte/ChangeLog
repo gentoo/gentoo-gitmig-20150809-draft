@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.94 2005/11/11 23:22:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.95 2005/12/14 21:18:33 dang Exp $
+
+  14 Dec 2005; <dang@gentoo.org> vte-0.11.15-r1.ebuild:
+  Don't need explicit X deps, only uses what gtk+ requires
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> vte-0.11.15.ebuild:
   Stable on ppc.
