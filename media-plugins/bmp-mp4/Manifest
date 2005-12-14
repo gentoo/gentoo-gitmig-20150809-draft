@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 149a42eb70331a30cec071866055e08d ChangeLog 935
 MD5 02c47841938c2182a9f02a7eb1ef7ad2 bmp-mp4-20041215.ebuild 1098
 MD5 384435c37317eac8b11dc49cd7812111 files/digest-bmp-mp4-20041215 69
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDoDflKRy60XGEcJIRAppyAKCTUzMNn1vABFlsNsQHREJmZg/HowCgtJ8S
+Fkcp0WvrpMSd6vAzNeIo1FM=
+=occj
+-----END PGP SIGNATURE-----
