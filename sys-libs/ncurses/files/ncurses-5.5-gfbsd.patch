@@ -7,7 +7,7 @@ Index: ncurses-5.5/aclocal.m4
  		cf_cv_rm_so_locs=yes
  		;;
 -	linux*|gnu*|k*bsd*-gnu)
-+	linux*|gnu*|k*bsd*-gnu|freebsd*)
++	linux*|gnu*|k*bsd*-gnu|freebsd*|dragonfly*)
  		if test "$DFT_LWR_MODEL" = "shared" ; then
  			LOCAL_LDFLAGS="-Wl,-rpath,`pwd`/lib"
  			LOCAL_LDFLAGS2="$LOCAL_LDFLAGS"

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.104 2005/11/10 21:28:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.105 2005/12/14 12:04:54 flameeyes Exp $
+
+  14 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/ncurses-5.5-gfbsd.patch:
+  Make sure that also dragonfly is tested when linking, or ncurses will fail
+  ./configure there. Thanks to arachnist for testing.
 
   10 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/ncurses-5.5-gfbsd.patch, ncurses-5.5-r1.ebuild:
