@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1.ebuild,v 1.2 2005/11/27 06:10:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1.ebuild,v 1.3 2005/12/14 07:04:06 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -14,18 +14,19 @@ KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64 ~sparc"
 IUSE="acpi debug doc pam_console pcmcia"
 
 RDEPEND=">=dev-libs/glib-2.6
-		 >=sys-apps/dbus-0.50
-		 >=sys-fs/udev-071
-		 >=sys-apps/util-linux-2.12i
-		 ||( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
-		   dev-libs/expat
-		   dev-libs/libusb
-		   sys-apps/hotplug
-		 pam_console? ( sys-libs/pam )"
+	>=sys-apps/dbus-0.50
+	>=sys-fs/udev-071
+	>=sys-apps/util-linux-2.12i
+	|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
+	dev-libs/expat
+	dev-libs/libusb
+	sys-apps/hotplug
+	pam_console? ( sys-libs/pam )"
+
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
-		>=dev-util/intltool-0.29
-		doc? ( app-doc/doxygen app-text/docbook-sgml-utils )"
+	dev-util/pkgconfig
+	>=dev-util/intltool-0.29
+	doc? ( app-doc/doxygen app-text/docbook-sgml-utils )"
 
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS="haldaemon,disk,cdrom,cdrw,floppy,usb"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.56 2005/11/29 17:20:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.57 2005/12/14 07:04:06 cardoe Exp $
+
+  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> hal-0.4.8.ebuild,
+  hal-0.5.4.ebuild, hal-0.5.5.1.ebuild:
+  Fixed old typo in ||()
 
   29 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org> hal-0.5.4.ebuild:
   Adding a revdep-rebuild warning as per comment on bug #113818

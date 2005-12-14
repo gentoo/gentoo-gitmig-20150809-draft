@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.7 2005/11/29 17:20:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.8 2005/12/14 07:04:06 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=sys-fs/udev-063
 	sys-apps/hotplug
 	>=sys-apps/util-linux-2.12i
-	||( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
+	|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
 	dev-libs/libusb
 	pam_console? ( sys-libs/pam )"
 
