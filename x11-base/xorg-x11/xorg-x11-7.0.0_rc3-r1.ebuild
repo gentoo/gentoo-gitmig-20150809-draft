@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc3-r1.ebuild,v 1.1 2005/12/14 16:09:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc3-r1.ebuild,v 1.2 2005/12/14 17:40:35 fmccor Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xorg.freedesktop.org"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="xprint"
 
 # Collision protect will scream bloody murder if we install over old versions
