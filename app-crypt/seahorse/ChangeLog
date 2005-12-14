@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.50 2005/12/14 06:29:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.51 2005/12/14 20:06:18 dang Exp $
+
+  14 Dec 2005; <dang@gentoo.org> seahorse-0.7.9.ebuild:
+  Don't need explicit X deps, only uses what gtk+ requires
 
   14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> seahorse-0.7.9.ebuild:
   Clean up modular X depends more
