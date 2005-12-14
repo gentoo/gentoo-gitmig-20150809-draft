@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r11.ebuild,v 1.1 2005/12/06 21:43:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r12.ebuild,v 1.1 2005/12/14 00:29:21 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 SLOT="${PV/.*}"
 SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
+KEYWORDS="~x86 ~amd64 -ppc64"
 LICENSE="Apache-2.0"
 #only one accepted revision of struts to force upgrading because of slot changes
 RDEPEND=">=virtual/jdk-1.4
@@ -35,7 +35,7 @@ RDEPEND=">=virtual/jdk-1.4
 	=dev-java/struts-1.1-r4
 	dev-java/sun-jaf-bin
 	>=dev-java/xerces-2.6.2-r1
-	dev-java/xml-commons
+	=dev-java/xml-commons-external-1.3*
 	jikes? ( dev-java/jikes )"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
@@ -77,7 +77,7 @@ src_unpack() {
 	java-pkg_jar-from commons-daemon
 
 	mkdir ../common/endorsed && cd ../common/endorsed
-	java-pkg_jar-from xml-commons xml-apis.jar
+	java-pkg_jar-from xml-commons-external-1.3 xml-apis.jar
 	java-pkg_jar-from xerces-2 xercesImpl.jar
 
 	mkdir ../lib && cd ../lib
@@ -123,7 +123,7 @@ src_compile(){
 	antflags="${antflags} -Djmx-tools.jar=$(java-pkg_getjar sun-jmx jmxtools.jar)"
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
-	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons xml-apis.jar)"
+	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)"
 	antflags="${antflags} -Dstruts.home=/usr/share/struts-1.1/"
 
 	ant ${antflags} || die "compile failed"
