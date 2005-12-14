@@ -1,23 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0dd9a42d169b4daf7bbc5f3abdd13109 ChangeLog 2712
-MD5 48df423b3b993bec69b27f5bc4026415 files/digest-radvd-0.7.2-r1 63
-MD5 eef180eac1ac95e349d5e3131927f629 files/digest-radvd-0.8-r1 61
+MD5 470204956864fca6eeffe99ee621067c radvd-0.9.ebuild 1484
+MD5 7337cb83f7362b0e285ed10558084e79 radvd-0.8-r1.ebuild 1544
+MD5 034f315178595f455fc5a1262033486c ChangeLog 2815
+MD5 e41411344bcec2e0a59605acf1d821e9 metadata.xml 316
 MD5 707572a18aaddef9ed366e5f950f4460 files/digest-radvd-0.9 61
+MD5 6d745a03aa165ab8b22ddb683793c467 files/radvd-0.9-conf.d 447
+MD5 deb9430f74948534b343c3199157d78d files/radvd-0.9-init.d 1094
 MD5 fa53a0e062f5ca3ff6f7ceee7dcd0e61 files/radvd 606
 MD5 e280f79bd51397d60a2f877e8335cf86 files/radvd-0.8-conf.d 447
 MD5 843b3bdf29860a7c94f33da1220979ed files/radvd-0.8-init.d 1068
-MD5 6d745a03aa165ab8b22ddb683793c467 files/radvd-0.9-conf.d 447
-MD5 deb9430f74948534b343c3199157d78d files/radvd-0.9-init.d 1094
-MD5 e41411344bcec2e0a59605acf1d821e9 metadata.xml 316
-MD5 1e22defa565212aed96500fa799333ad radvd-0.7.2-r1.ebuild 1380
-MD5 7337cb83f7362b0e285ed10558084e79 radvd-0.8-r1.ebuild 1544
-MD5 470204956864fca6eeffe99ee621067c radvd-0.9.ebuild 1484
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiC8BgIKl8Uu19MoRAtBVAJ4xPmxByJEaLg6JlOkAM8eMvkeT9gCZAdch
-2ZgmVtvw/T/vDHTi6KLQiFw=
-=Ee4U
------END PGP SIGNATURE-----
+MD5 eef180eac1ac95e349d5e3131927f629 files/digest-radvd-0.8-r1 61
