@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.14 2005/12/13 01:17:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.15 2005/12/14 05:54:01 spyderous Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -17,8 +17,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
 
 DEPEND="|| ( ( x11-libs/libXrandr
-			x11-libs/libICE
-			x11-libs/libSM
 			x11-libs/libXcursor
 			x11-libs/libXi
 			x11-libs/libXfont
