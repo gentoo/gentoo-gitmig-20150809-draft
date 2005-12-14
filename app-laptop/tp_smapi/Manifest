@@ -1,4 +1,6 @@
 MD5 666f60fc9240a3097a5c69f242dfab90 tp_smapi-0.09.ebuild 758
-MD5 6ce08e5fc5e78352e949119b98505fee ChangeLog 352
+MD5 a321749b92e57b4bc3059af495bae535 tp_smapi-0.10.ebuild 758
+MD5 fb0850290ed7f9227dd4b48607b72d97 ChangeLog 476
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 4d7f53e3ed49793eab511c3f2b3bddb4 files/digest-tp_smapi-0.09 61
+MD5 f18aaa92ad22a269103dbf2c2e1b456b files/digest-tp_smapi-0.10 61
