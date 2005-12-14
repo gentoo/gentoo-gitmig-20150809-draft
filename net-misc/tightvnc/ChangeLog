@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.59 2005/11/05 18:10:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.60 2005/12/14 03:59:43 spyderous Exp $
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  tightvnc-1.3_alpha7.ebuild:
+  (#114254) Add modular X dependencies.
 
   05 Nov 2005; Fabian Groffen <grobian@gentoo.org>
   +files/tightvnc-1.3_alpha7-darwin.patch, tightvnc-1.3_alpha7.ebuild:

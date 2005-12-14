@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.4 2005/11/05 18:10:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.5 2005/12/14 03:59:43 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,20 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libXaw
+			x11-proto/xextproto
+			x11-misc/xmkmf
+			x11-misc/gccmakedep
+			app-text/rman
+			server? ( x11-libs/libXp
+				x11-proto/inputproto
+				x11-proto/kbproto
+				x11-proto/printproto
+				x11-proto/scrnsaverproto
+			)
+		)
+		virtual/x11
+	)
 	~media-libs/jpeg-6b
 	sys-libs/zlib
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )
