@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r3.ebuild,v 1.2 2005/11/03 12:08:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r3.ebuild,v 1.3 2005/12/14 05:15:53 spyderous Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -33,7 +33,13 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6.0 )
 	media-libs/netpbm
 	media-libs/libexif
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXaw
+				x11-libs/libXi
+				x11-libs/libXv
+			)
+			virtual/x11
+		)
+	)
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
@@ -47,6 +53,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
 
 DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xextproto virtual/x11 ) )
 	x86? ( >=dev-lang/nasm-0.98.36 )
 	=sys-devel/gcc-3*"
 

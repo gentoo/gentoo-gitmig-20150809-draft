@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.1 2005/12/10 16:06:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.2 2005/12/14 05:15:53 spyderous Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -43,12 +43,6 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	>=media-libs/libmpeg2-0.4.0b
 	xml2? ( dev-libs/libxml2 )
 	X? ( || ( (
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXpm
-			x11-libs/libXt
-			x11-libs/libICE
-			x11-libs/libSM
 			x11-libs/libXaw
 			x11-libs/libXv )
 		virtual/x11 ) )
@@ -57,11 +51,8 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 DEPEND="${RDEPEND}
 	v4l? ( >=sys-kernel/linux-headers-2.6.11 )
 	X? ( || ( ( x11-base/xorg-server
-			x11-libs/libX11
-			x11-libs/libXt
 			x11-libs/libXaw
 			x11-libs/libXv
-			x11-proto/xproto
 			x11-proto/xextproto )
 		virtual/x11 ) )
 	sys-devel/autoconf
