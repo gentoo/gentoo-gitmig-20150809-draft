@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 232caeb20101bac0d7206ef41df56e48 ChangeLog 2160
+MD5 52cf2e5259866949aa453dc53df097a0 cln-1.1.10.ebuild 1398
 MD5 e199db30cd19acf044f9e90945352dc7 cln-1.1.6.ebuild 1281
-MD5 5d9b75b2ebab1b3ac9dcbecfb02a0e3d cln-1.1.10.ebuild 1323
-MD5 8e27db8cf8ca4b50ef054a7a48eae7e3 ChangeLog 2048
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 37fa7c5a44cfcec3e8a84c7ac34b2de9 cln-1.1.9.ebuild 1318
+MD5 45314c142627ed8443c32e407607f861 files/digest-cln-1.1.10 64
 MD5 e6723419337999b42ae07ddbe7e91aa6 files/digest-cln-1.1.6 63
 MD5 fab69d45ab20bd75057ccbb09d01cf29 files/digest-cln-1.1.9 63
-MD5 45314c142627ed8443c32e407607f861 files/digest-cln-1.1.10 64
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoKrxntT9W3vfTuoRAqdwAJ9cWs34ubEvS9FyEEjQW1zkGmyd0ACeIK+9
+XjLhyVQvv1aA2iFZu9Ndeww=
+=lywK
+-----END PGP SIGNATURE-----
