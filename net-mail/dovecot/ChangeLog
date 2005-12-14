@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.32 2005/11/10 13:05:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.33 2005/12/14 23:32:08 uberlord Exp $
+
+*dovecot-1.0_alpha5 (14 Dec 2005)
+
+  14 Dec 2005; Roy Marples <uberlord@gentoo.org> files/dovecot.init,
+  +dovecot-1.0_alpha5.ebuild:
+  nopop3d USE flag changed to pop3d - I hate double negatives
+  sasl USE flag dropped as dovecot has its own internal version - no need to
+  depend on cyrus-sasl
+  maildir USE flag dropped as -mbox implies maildir
+  kerberos USE flag added
+  init script is now more robust and should start after all authenticators
+  Oh yeah - new upstream version too ;)
 
   10 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
   dovecot-0.99.14-r1.ebuild:
