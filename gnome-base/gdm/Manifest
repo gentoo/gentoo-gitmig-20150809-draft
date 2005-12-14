@@ -1,4 +1,4 @@
-MD5 82767a63a08becd926ba433a6e9faa4f ChangeLog 17020
+MD5 d5c9f77bd06ef8c8256ba3e3fdf96ecb ChangeLog 17111
 MD5 2a4dc345919a4094ead16d7a122e40bf files/2.2.5/gnomerc 235
 MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
@@ -13,5 +13,5 @@ MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
 MD5 65e67c78973b4878d1e6b700bb912ef8 gdm-2.8.0.1-r1.ebuild 3713
 MD5 8f6a78446d13bd82aacfb29a9d4eaa24 gdm-2.8.0.3.ebuild 3649
 MD5 2a0f6f949a468e1c53e4b5a5c4ea2d5d gdm-2.8.0.5.ebuild 3854
-MD5 b8935249641ee585c43f382f75db4a83 gdm-2.8.0.7.ebuild 3857
+MD5 e8084bba57a6b7a09968075bc592feab gdm-2.8.0.7.ebuild 3766
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
