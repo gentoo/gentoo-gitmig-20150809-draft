@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.65-r1.ebuild,v 1.1 2005/12/14 16:28:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.65-r1.ebuild,v 1.2 2005/12/14 20:05:07 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~ppc ~ppc-macos ~x86"
 
-DEPEND="virtual/libc
-	virtual/x11"
+DEPEND="virtual/x11"
 
 S="${WORKDIR}/${PN}${PV}/src"
 

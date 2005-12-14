@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.15 2005/12/14 16:28:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.16 2005/12/14 20:05:07 ribosome Exp $
+
+  14 Dec 2005; Olivier Fisette <ribosome@gentoo.org> phylip-3.65-r1.ebuild:
+  Removed dependency on "virtual/libc".
 
 *phylip-3.65-r1 (14 Dec 2005)
 
