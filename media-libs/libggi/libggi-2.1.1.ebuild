@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.5 2005/12/13 21:15:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.6 2005/12/14 06:20:19 cardoe Exp $
 
 inherit eutils libtool
 
@@ -11,21 +11,22 @@ SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.1/${P}.src.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="X aalib svga fbcon directfb dga 3dfx debug mmx vis"
+IUSE="X aalib svga fbcon directfb 3dfx debug mmx vis"
 
-DEPEND=">=media-libs/libgii-0.9.0
-	X? ( || ( ( x11-libs/libXt
-		x11-proto/xextproto )
-		( virtual/x11 ) ) )
+RDEPEND=">=media-libs/libgii-0.9.0
+	X? ( || ( ( 	x11-libs/libXt
+			x11-libs/libXxf86dga
+			x11-libs/libXxf86vm
+			x11-libs/libXt )
+		virtual/x11 ) )
 	svga? ( >=media-libs/svgalib-1.4.2 )
-	aalib? ( >=media-libs/aalib-1.2-r1 )
-	dga? ( || ( ( x11-proto/xf86dgaproto
-		x11-proto/xf86vidmodeproto )
-		( virtual/x11 ) ) )"
+	aalib? ( >=media-libs/aalib-1.2-r1 )"
 
-RDEPEND="X? ( || ( ( x11-libs/libXxf86dga
-		x11-libs/libXxf86vm )
-		( virtual/x11 ) ) )"
+DEPEND="${RDEPEND}
+	X? ( || ( (	x11-proto/xf86dgaproto
+			x11-proto/xg86vidmodeproto
+			x11-proto/xextproto )
+		virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
