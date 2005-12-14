@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.72 2005/12/04 05:41:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.73 2005/12/14 18:16:26 cardoe Exp $
+
+  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> lirc-0.7.2.ebuild:
+  Adding modular X depends
 
   04 Dec 2005; Jeroen Roovers <jer@gentoo.org> lirc-0.7.0-r1.ebuild:
   Fixed sed script number two.

@@ -1,4 +1,7 @@
-MD5 218d1c02b85f5144f354ac24cd815b50 ChangeLog 10418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 80f0063ad86f11f332770bca14adb1ce ChangeLog 10518
 MD5 8b5ccb169d823795a11450a1c052da55 files/digest-lirc-0.7.0-r1 63
 MD5 07a6b9497abcb0ebf09b83699dd56b2c files/digest-lirc-0.7.1 63
 MD5 be588343f18b4d80100ecee0efd3870c files/digest-lirc-0.7.2 63
@@ -15,5 +18,12 @@ MD5 54581835f791fe37a1285926c6d21b12 files/lircmd 466
 MD5 ee2b49c33fb3b2a65122cfc698d9e100 files/xbox-lircd.conf 784
 MD5 e97f779f2875d98323b939c401321a8c lirc-0.7.0-r1.ebuild 4492
 MD5 eb7c38a7e1620656ffd7c9e2eb9ae951 lirc-0.7.1.ebuild 4422
-MD5 96ca0ec1569d376d62648478e648abc1 lirc-0.7.2.ebuild 4422
+MD5 4dc3ffe35034c780c5a522b54e0a25cc lirc-0.7.2.ebuild 4468
 MD5 40a6e0a06901a627d29f4c528e40c9ad metadata.xml 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoGGGBtvusYtCZMsRAohGAJ9fPGLAFNa9hTU/kYEQg8ZiXwtccQCePufZ
+/hAhqFtBZ91ZI1BWSQWZbL4=
+=2XEC
+-----END PGP SIGNATURE-----
