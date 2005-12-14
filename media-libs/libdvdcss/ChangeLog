@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.50 2005/11/11 23:22:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.51 2005/12/14 19:38:30 killerfox Exp $
+
+  14 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  libdvdcss-1.2.9.ebuild:
+  Stable on hppa.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   libdvdcss-1.2.9.ebuild:
