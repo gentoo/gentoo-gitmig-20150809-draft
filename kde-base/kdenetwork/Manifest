@@ -1,33 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77451ea279bba8a43a8a0ccb28f5883e ChangeLog 23856
+MD5 5e8d7b2819c8362a11428c76127e6625 ChangeLog 23974
+MD5 c7193df16ddf0b66963e907f864b3f56 kdenetwork-3.3.2-r2.ebuild 1642
+MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
+MD5 f01a7eb66338a4264475bdd11347ac4b kdenetwork-3.4.2.ebuild 1794
+MD5 09e77c56733108a2f5527fb813a4a73e kdenetwork-3.4.3.ebuild 1764
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 c8ceada2be2794a6ffaf2d6b50ada504 kdenetwork-3.5.0.ebuild 1797
 MD5 c6db44a9df98a9927235b28065adb065 files/digest-kdenetwork-3.3.2-r2 149
 MD5 7e1dab8dea5082d73c25c6ae6b4251b1 files/digest-kdenetwork-3.4.1-r1 149
 MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kdenetwork-3.4.2 70
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kdenetwork-3.4.3 70
-MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-3.5.0 70
+MD5 89d2cd31a99e9845da106b83137c3722 files/kppp-3.5.0-bindnow.patch 514
+MD5 c37a088365b0b16c49df76f3e5848e33 files/lisa-3.5.0-bindnow.patch 483
 MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
 MD5 cb87d2a81f7430f823e9173c3f478523 files/kdenetwork-3.3.2-kopete-msn.patch 34696
 MD5 e07566eb35cec7afdfa2e38edf7cdcd1 files/kdenetwork-3.3.2-kwifimanager-configlocation.patch 720
 MD5 e9d8998d39d625a80749a027a9a8e303 files/kdenetwork-3.4-configure.patch 5768
-MD5 89d2cd31a99e9845da106b83137c3722 files/kppp-3.5.0-bindnow.patch 514
 MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
-MD5 c37a088365b0b16c49df76f3e5848e33 files/lisa-3.5.0-bindnow.patch 483
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
 MD5 28c3ba792f8a0ce436216062cefa7908 files/reslisa 549
 MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
 MD5 426360bf289efe11a499f1fa89bb2f4b files/wireless-extensions-api.diff 528
-MD5 c7193df16ddf0b66963e907f864b3f56 kdenetwork-3.3.2-r2.ebuild 1642
-MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
-MD5 f01a7eb66338a4264475bdd11347ac4b kdenetwork-3.4.2.ebuild 1794
-MD5 fb9c4c9a5faf214fdde2f64e0fb9d0ab kdenetwork-3.4.3.ebuild 1757
-MD5 c8ceada2be2794a6ffaf2d6b50ada504 kdenetwork-3.5.0.ebuild 1797
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnClzAiZjviIA2XgRAkX4AKDx6auR27rh7VdltxKZDVGB5jDSYQCeKipz
-GGEfb7LfnH1H77W8K52nluo=
-=MbS+
------END PGP SIGNATURE-----
+MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-3.5.0 70
