@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3297e3019930d9c4c1383eb9cf93651 bmp-musepack-1.2_rc1.ebuild 869
+MD5 1c9d4e39bac3dfd287e9c69d03e235b5 ChangeLog 1809
 MD5 fde019252a4696d1633a854d46e24c6e bmp-musepack-1.1.2.ebuild 859
-MD5 dcb2362455b4bfec36d8d1c91a164984 ChangeLog 1705
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 29bf546b3a911d55e7adc0cd7fb7c43d bmp-musepack-1.2_rc1.ebuild 868
 MD5 ee544dc7fb42e61589396bd9eff9c6f3 files/1.1-includes.patch 506
 MD5 47d91ece85e52004670eaaaa84baf23e files/digest-bmp-musepack-1.1.2 71
 MD5 0b31479d81a4a536d49ee464dc59baf9 files/digest-bmp-musepack-1.2_rc1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdO6fKRy60XGEcJIRAmZHAJ4hWw6hRSrnzKnM+c/45MPviVtMDQCeIYI2
-pEHSrA1dNTHCq6i8KQyio+4=
-=iRm8
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
