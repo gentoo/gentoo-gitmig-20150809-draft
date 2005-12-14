@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.6 2005/12/13 20:57:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.7 2005/12/14 06:14:09 cardoe Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="X"
 
-DEPEND="X? ( || ( ( x11-libs/libX11 )
-		( virtual/x11 ) ) )
+RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
 	ia64? ( >=sys-kernel/linux-headers-2.6.11 )"
+
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}

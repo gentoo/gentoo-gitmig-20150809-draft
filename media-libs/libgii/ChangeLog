@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.18 2005/12/13 20:57:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.19 2005/12/14 06:14:09 cardoe Exp $
+
+  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> libgii-0.9.0.ebuild:
+  Correct depends. Clean up modular X depends
 
   13 Dec 2005; Seemant Kulleen <seemant@gentoo.org> libgii-0.9.0.ebuild:
   modular X deps
