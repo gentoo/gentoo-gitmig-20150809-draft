@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.14 2005/10/18 01:03:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.15 2005/12/14 16:28:55 ribosome Exp $
+
+*phylip-3.65-r1 (14 Dec 2005)
+
+  14 Dec 2005; Olivier Fisette <ribosome@gentoo.org> +files/README.Gentoo,
+  -phylip-3.65.ebuild, +phylip-3.65-r1.ebuild:
+  Fixed file collision with "sys-apps/coreutils" (bug #115482). Keep only
+  fixed ebuild.
 
 *phylip-3.65 (18 Oct 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.65.ebuild,v 1.1 2005/10/18 01:03:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.65-r1.ebuild,v 1.1 2005/12/14 16:28:55 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -26,12 +26,15 @@ src_compile() {
 	mkdir ../fonts
 	emake -j1 all put || die "Compilation failed."
 	mv ../exe/font* ../fonts || die "Font move failed."
+	mv ../exe/factor ../exe/factor-${PN} || die "Renaming factor failed."
 }
 
 src_install() {
 	cd "${WORKDIR}/${PN}${PV}"
 
 	dobin exe/* || "Failed to install programs."
+
+	dodoc "${FILESDIR}"/README.Gentoo || die "Failed to install Gentoo notes."
 
 	dohtml phylip.html || "Failed to install HTML documentation index."
 	insinto /usr/share/doc/${PF}/html/doc
