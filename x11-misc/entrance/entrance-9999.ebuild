@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.5 2005/10/12 04:44:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.6 2005/12/14 04:24:02 joshuabaergen Exp $
 
 inherit enlightenment eutils
 
@@ -13,13 +13,16 @@ SRC_URI="${SRC_URI}
 
 IUSE="pam"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXau virtual/x11 )
 	pam? ( sys-libs/pam )
 	>=dev-db/edb-1.0.5
 	>=x11-libs/evas-0.9.9
 	>=x11-libs/ecore-0.9.9
 	>=media-libs/edje-0.5.0
 	>=x11-libs/esmart-0.9.0"
+
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11	)"
 
 src_unpack() {
 	enlightenment_src_unpack

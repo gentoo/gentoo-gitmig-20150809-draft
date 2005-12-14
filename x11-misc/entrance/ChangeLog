@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/entrance
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/ChangeLog,v 1.12 2004/11/24 22:17:59 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/ChangeLog,v 1.13 2005/12/14 04:24:02 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  entrance-9999.ebuild:
+  Added modular X dependencies.
 
   24 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
