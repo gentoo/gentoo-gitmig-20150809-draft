@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.15 2005/11/24 18:20:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.16 2005/12/14 18:31:24 brix Exp $
+
+  14 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -files/avrdude-html-doc-build-fix.patch, -avrdude-4.4.0-r1.ebuild:
+  Pruned old ebuilds.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> avrdude-5.0.ebuild:
   Stable on ppc64
