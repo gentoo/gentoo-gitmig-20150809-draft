@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.8 2005/06/05 12:22:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.9 2005/12/14 00:59:32 griffon26 Exp $
+
+  14 Dec 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/nqc-2.5.1-gcc34-fix.patch, nqc-2.5.1.ebuild:
+  Fixed compilation with gcc 3.4.4, closing bug #115474. What this package 
+  really needs is an up-to-date ebuild (see bug #89257).
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> nqc-2.5.1.ebuild:
   Stable on ppc.

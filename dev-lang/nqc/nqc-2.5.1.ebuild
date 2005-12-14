@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.9 2005/06/05 12:22:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.10 2005/12/14 00:59:32 griffon26 Exp $
+
+inherit eutils
 
 My_PV="`echo $PV|cut -d. -f1,2`.r`echo $PV|cut -d. -f3`"
 My_P="${PN}-${My_PV}"
@@ -15,6 +17,12 @@ KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc34-fix.patch"
+}
 
 src_compile() {
 	${#NQC_SERIAL} && NQC_SERIAL="/dev/ttyS0"

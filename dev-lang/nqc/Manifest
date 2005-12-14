@@ -1,3 +1,14 @@
-MD5 1c5fe050f9988c8e7a0088f4937fe618 nqc-2.5.1.ebuild 1114
-MD5 b3ab5cc4f137e90d75a91799ac702496 ChangeLog 844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d232760d5fa8982a46068029078cce78 ChangeLog 1093
 MD5 ec2eb2fa60d922ccddc0e768135303c4 files/digest-nqc-2.5.1 59
+MD5 397f6d97f513b13c40f92743258e64ff files/nqc-2.5.1-gcc34-fix.patch 425
+MD5 6b733ffb2ab2f5acc7d5f33531fa6d7e nqc-2.5.1.ebuild 1219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDn26CMGnpIbeahxwRAm9AAKDAQ3U9sAwpboqPbKz1+ZesNT1MewCdGAbn
+wAtHmNLTZACi+TaA2boPP84=
+=ThlR
+-----END PGP SIGNATURE-----
