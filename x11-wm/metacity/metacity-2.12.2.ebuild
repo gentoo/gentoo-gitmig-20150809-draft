@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.12.2.ebuild,v 1.2 2005/12/13 22:45:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.12.2.ebuild,v 1.3 2005/12/14 21:21:53 dang Exp $
 
 inherit eutils gnome2
 
@@ -15,12 +15,7 @@ IUSE="xinerama"
 # not parallel-safe; see bug #14405
 MAKEOPTS="${MAKEOPTS} -j1"
 
-RDEPEND="|| ( (
-			x11-libs/libICE
-			x11-libs/libSM
-			xinerama? ( x11-libs/libXinerama ) )
-		virtual/x11 )
-	>=x11-libs/gtk+-2.6
+RDEPEND=" >=x11-libs/gtk+-2.6
 	>=x11-libs/pango-1.2
 	>=gnome-base/gconf-2
 	>=dev-libs/glib-2.6
@@ -31,7 +26,6 @@ RDEPEND="|| ( (
 #			x11-libs/libXdamage
 #			x11-libs/libXcomposite
 DEPEND="${RDEPEND}
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28"
