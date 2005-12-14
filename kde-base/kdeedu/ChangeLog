@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.166 2005/12/10 18:28:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.167 2005/12/14 02:22:39 ranger Exp $
+
+  14 Dec 2005; Brent Baude <ranger@gentoo.org> kdeedu-3.4.3.ebuild:
+  Marking kdeedu-3.4.3 ~ppc64 for kde-3.4.3
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kdeedu-3.4.3-r10.ebuild:
   Stable on alpha, bug 112842.
