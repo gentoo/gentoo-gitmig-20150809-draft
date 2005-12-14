@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.7 2005/08/08 20:23:13 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.8 2005/12/14 15:56:30 citizen428 Exp $
+
+*snmplib-0.6.0 (14 Dec 2005)
+
+  14 Dec 2005; Michael Kohl <citizen428@gentoo.org> +snmplib-0.6.0.ebuild:
+  Version bump. Using the gem from now on.
 
   08 Aug 2005; Michael Kohl <citizen428@gentoo.org> -snmplib-0.3.0.ebuild,
   -snmplib-0.4.0.ebuild:
