@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.4 2005/09/26 23:33:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.5 2005/12/14 18:43:34 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -67,13 +67,14 @@ dlopen_lib() {
 egethome() {
 	ent=$(egetent passwd $1)
 
-	if [[ "${USERLAND}" == "Darwin" || "${ELIBC}" == "FreeBSD" ]]; then
-		# Darwin/OSX and FreeBSD uses position 9 to store the home dir
+	case ${CHOST} in
+	*-darwin*|*-freebsd*|*-dragonfly*)
+		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
 		cut -d: -f9 <<<${ent}
-	else
-		# Linux and NetBSD uses position 6 instead
+	*)
+		# Linux, NetBSD and OpenBSD use position 6 instead
 		cut -d: -f6 <<<${ent}
-	fi
+	esac
 }
 
 # Gets the name of the BSD-ish make command (pmake from NetBSD)
