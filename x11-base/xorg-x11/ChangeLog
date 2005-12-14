@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.488 2005/12/10 21:34:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.489 2005/12/14 06:29:05 spyderous Exp $
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-7.0.0_rc3.ebuild:
+  ~ppc at cardoe's request.
 
   10 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r6.ebuild,
