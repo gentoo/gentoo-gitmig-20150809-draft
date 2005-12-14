@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.2 2005/12/14 17:24:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.3 2005/12/14 17:59:15 cardoe Exp $
+
+  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> mesa-progs-6.4.1.ebuild:
+  Adding ~ppc. Added RDEPEND as well.
 
   14 Dec 2005; Ferris McCormick <fmccor@gentoo.org> mesa-progs-6.4.1.ebuild:
   Add ~sparc keyword --- Bug 115539.
