@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.242 2005/12/11 01:41:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.243 2005/12/14 02:03:38 ranger Exp $
+
+  14 Dec 2005; Brent Baude <ranger@gentoo.org> kdebase-3.4.3.ebuild:
+  Marking kdebase-3.4.3 ~ppc64 for kde-3.4.3
 
   11 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kxkb-3.5.0-modularxkb.patch, kdebase-3.5.0-r1.ebuild:
