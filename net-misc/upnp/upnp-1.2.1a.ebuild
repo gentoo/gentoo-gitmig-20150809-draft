@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.2.1a.ebuild,v 1.4 2005/11/02 20:23:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.2.1a.ebuild,v 1.5 2005/12/14 09:07:15 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
+
+MY_P="lib${P}"
 
 DESCRIPTION="Intel's UPnP SDK"
 HOMEPAGE="http://upnp.sourceforge.net"
-SRC_URI="mirror://sourceforge/upnp/lib${P}.tar.gz"
+SRC_URI="mirror://sourceforge/upnp/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="BSD"
 SLOT="0"
@@ -18,7 +20,15 @@ DEPEND="sys-fs/e2fsprogs
 	       app-text/tetex
 	       virtual/ghostscript )"
 
-S="${WORKDIR}"/lib${P}/upnp
+S="${WORKDIR}/${MY_P}/upnp"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/..
+
+	epatch "${FILESDIR}/${MY_P}-gcc4.patch"
+	epatch "${FILESDIR}/${MY_P}-fbsd.patch"
+}
 
 src_compile() {
 	myconf=""
@@ -27,8 +37,13 @@ src_compile() {
 		myconf="DEBUG=1"
 	fi
 
-	cd ${S} &&
-	emake ${myconf} || die "Compile failed!"
+	# Fix for distcc/crosscompile, and make sure it doesn't strip
+	emake ${myconf} \
+		CC=$(tc-getCC) \
+		AR=$(tc-getAR) \
+		LD=$(tc-getLD) \
+		STRIP=true \
+		|| die "Compile failed!"
 
 	if use doc; then
 		emake doc || die "Documentation generation failed!"
