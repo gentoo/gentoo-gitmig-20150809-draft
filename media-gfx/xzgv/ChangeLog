@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.21 2005/09/13 17:51:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.22 2005/12/14 04:05:16 spyderous Exp $
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; xzgv-0.8-r1.ebuild:
+  Fix modular X dependencies. GTK+-1 pulls in libX11.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> xzgv-0.8-r1.ebuild:
   Mark 0.8-r1 stable on alpha

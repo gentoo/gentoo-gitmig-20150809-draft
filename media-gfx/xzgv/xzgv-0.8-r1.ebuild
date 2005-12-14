@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.12 2005/09/13 17:51:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.13 2005/12/14 04:05:16 spyderous Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	media-libs/libpng
+DEPEND="media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
 	sys-libs/zlib
