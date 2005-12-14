@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-253.ebuild,v 1.1 2005/11/25 12:24:11 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-261.ebuild,v 1.1 2005/12/14 17:22:13 ferdy Exp $
 
 inherit webapp
 
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-lang/perl
->=dev-util/git-0.99.8f"
+>=dev-util/git-0.99.9"
 
 src_install() {
 	webapp_src_preinst
