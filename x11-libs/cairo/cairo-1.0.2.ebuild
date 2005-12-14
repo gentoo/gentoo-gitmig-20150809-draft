@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.2.ebuild,v 1.2 2005/10/26 19:36:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.2.ebuild,v 1.3 2005/12/14 06:55:30 cardoe Exp $
 
 inherit eutils
 
@@ -16,10 +16,7 @@ IUSE="doc glitz png X"
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2.1
 	sys-libs/zlib
-	X? (
-		||(	(
-			x11-libs/libXrender
-			x11-libs/libX11
+	X? ( || ( (	x11-libs/libXrender
 			x11-libs/libXt )
 			virtual/x11 )
 		virtual/xft )
@@ -29,8 +26,7 @@ RDEPEND="media-libs/fontconfig
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	doc? (
-		>=dev-util/gtk-doc-1.3
+	doc? (	>=dev-util/gtk-doc-1.3
 		~app-text/docbook-xml-dtd-4.2 )"
 
 

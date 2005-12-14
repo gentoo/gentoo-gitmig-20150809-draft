@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.48 2005/10/26 19:36:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.49 2005/12/14 06:55:30 cardoe Exp $
+
+  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> cairo-1.0.2.ebuild:
+  Fix typo in modular X depends.
 
   26 Oct 2005; Fabian Groffen <grobian@gentoo.org> cairo-1.0.2.ebuild:
   Marked ~ppc-macos (bug #109963)
