@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.22 2005/10/29 03:18:25 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.23 2005/12/14 15:59:54 spyderous Exp $
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  x11-drm-20051028.ebuild:
+  Port to modular X. Doesn't actually require virtual/x11 to build.
 
 *x11-drm-20051028 (29 Oct 2005)
 

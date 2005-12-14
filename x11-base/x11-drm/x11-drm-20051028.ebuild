@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051028.ebuild,v 1.1 2005/10/29 03:18:25 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051028.ebuild,v 1.2 2005/12/14 15:59:54 spyderous Exp $
 
 inherit eutils x11 linux-mod
 
@@ -25,8 +25,7 @@ SLOT="0"
 LICENSE="X11"
 KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
 
-DEPEND="virtual/x11
-	>=sys-devel/automake-1.7
+DEPEND=">=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/libtool-1.5.14
 	>=sys-devel/m4-1.4
