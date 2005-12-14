@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.14-r7.ebuild,v 1.1 2005/12/06 21:31:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.14-r7.ebuild,v 1.2 2005/12/14 22:51:39 brix Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -30,7 +30,7 @@ ${WORKDIR}/patches/${SUSPEND2_SRC}/ToDo"
 
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${SUSPEND2_URI}"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="ultra1"
 RDEPEND="${RDEPEND}
