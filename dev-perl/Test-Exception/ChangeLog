@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.14 2005/12/06 12:54:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.15 2005/12/14 07:21:14 cardoe Exp $
+
+  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
+  Test-Exception-0.20.ebuild:
+  Fixing ||( ) depend issue.
 
   06 Dec 2005; <mcumming@gentoo.org> -Test-Exception-0.15.ebuild,
   Test-Exception-0.20.ebuild:
