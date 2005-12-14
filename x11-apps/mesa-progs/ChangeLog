@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.1 2005/12/14 15:57:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.2 2005/12/14 17:24:22 fmccor Exp $
+
+  14 Dec 2005; Ferris McCormick <fmccor@gentoo.org> mesa-progs-6.4.1.ebuild:
+  Add ~sparc keyword --- Bug 115539.
 
 *mesa-progs-6.4.1 (14 Dec 2005)
 
