@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.10 2005/10/10 14:45:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.11 2005/12/14 04:20:54 joshuabaergen Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="hardware-accelerated canvas API"
 
 IUSE="X directfb fbcon jpeg mmx opengl png sse cairo altivec"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( || ( x11-libs/libXrender virtual/x11 ) )
 	opengl? ( virtual/opengl )
 	>=media-libs/imlib2-1.2.0
 	>=dev-libs/eet-0.9.9
@@ -19,6 +19,14 @@ DEPEND="X? ( virtual/x11 )
 	cairo? ( >=x11-libs/cairo-0.2.0 )
 	dev-util/pkgconfig"
 #	X? ( xcb-util )
+
+DEPEND="${RDEPEND}
+	X? ( ||( ( x11-proto/xextproto
+				x11-proto/xproto
+			)
+			virtual/x11
+		)
+	)"
 
 src_compile() {
 #		$(use_enable X software-xcb)
