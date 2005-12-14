@@ -1,10 +1,10 @@
 # Config file for the eagle-adsl ebuild
 
 # Set the options path
-OPTIONS="/etc/eagle-usb/dsp/eagle-usb.conf"
+OPTIONS="/etc/eagle-usb/eagle-usb.conf"
 
 # Set DSP code path
-DSP="/etc/eagle-usb/dsp"
+DSP="/usr/share/eagle-usb/dsp"
 
 # Set default synchro timeout in seconds
 SYNCHRO_TIMEOUT=120

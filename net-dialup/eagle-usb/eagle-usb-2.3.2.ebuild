@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.1.1.ebuild,v 1.2 2005/03/02 22:37:12 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.2.ebuild,v 1.1 2005/12/14 18:31:06 mrness Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 DESCRIPTION="GPL Driver for Eagle Chipset powered ADSL modem"
-SRC_URI="http://download.gna.org/eagleusb/eagle-usb-2.1.0/${P}.tar.bz2"
+SRC_URI="http://baud123.free.fr/eagle-usb/${PN}-${PV%.*}/${P}.tar.bz2"
 HOMEPAGE="http://www.eagle-usb.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-dialup/ppp"
@@ -19,6 +19,12 @@ MODULE_NAMES="${PN}(net:${S}/driver)"
 CONFIG_CHECK="!IPV6 USB"
 BUILD_TARGETS=" "
 BUILD_PARAMS="KERNELSRC=${KV_DIR}"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-kernel-2.6.14.patch
+}
 
 src_compile() {
 	./autogen.sh || die "autogen.sh failed"

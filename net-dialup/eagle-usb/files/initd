@@ -64,12 +64,17 @@ check_ppp () {
     # Check for PPP
     [ ! -z ${PPP} ] ; eend $? "failed to find ppp" || return 1
 
+    # Check for /dev/ppp
+    modprobe pppoe-generic &> /dev/null
+    [ -c /dev/ppp ] || mknod /dev/ppp c 108 0 || eend $?  "Failed to create device /dev/ppp" || return 1
+
     # Check for PEER file
     [ "${PEER:-set}" != set ] ; eend $? "Please define \$PEER in /etc/conf.d/eagle-usb" || return 1
     [ -f /etc/ppp/peers/${PEER} ]  ; eend $? "Failed to find peer ${PEER} configuration" || return 1
 
     # Check for IFCONFIG
     [ -x ${IFCONFIG} ]; eend $? "Failed to find 'ifconfig'" || return 1
+	 
 }
 
 check_dhcpcd () {

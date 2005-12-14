@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/eagle-usb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.5 2005/11/04 05:36:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.6 2005/12/14 18:31:06 mrness Exp $
+
+*eagle-usb-2.3.2 (14 Dec 2005)
+
+  14 Dec 2005; Alin Nastac <mrness@gentoo.org>
+  +files/eagle-usb-2.3.2-kernel-2.6.14.patch, files/confd, files/initd,
+  -eagle-usb-2.1.1.ebuild, -eagle-usb-2.3.1.ebuild, +eagle-usb-2.3.2.ebuild:
+  Remove obsolete versions. Correct DSP variable in /etc/conf.d/eagle-usb and
+  create /dev/ppp device in /etc/init.d/eagle-usb (#97248). Version bump
+  (#115179).
 
 *eagle-usb-2.3.1-r1 (04 Nov 2005)
 
