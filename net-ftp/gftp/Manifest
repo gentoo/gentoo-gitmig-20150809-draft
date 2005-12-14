@@ -1,4 +1,4 @@
-MD5 3dc5b204d92c6517b6de1856b330b040 ChangeLog 6383
+MD5 72bb36e2afa61c78eae01736a1e3915e ChangeLog 6597
 MD5 429ea419b557eb768b0be6daa3c8b7e7 files/digest-gftp-2.0.18-r1 65
 MD5 429ea419b557eb768b0be6daa3c8b7e7 files/digest-gftp-2.0.18-r2 65
 MD5 429ea419b557eb768b0be6daa3c8b7e7 files/digest-gftp-2.0.18-r3 65
@@ -6,7 +6,7 @@ MD5 ce3187f3e4f80bfb35cf8bef798eb40d files/gftp-2.0.15-64bit_fixes.patch 16360
 MD5 23e7696a3f6f2c368d11ca9aaadb7797 files/gftp-2.0.16-ipv6_fix.patch 3279
 MD5 81d77310a3638462af932e435590ab5d files/gftp-2.0.18-fix_gtk1.patch 1095
 MD5 327a4df792013f011340fe5f90dbb6c1 files/gftp-2.0.18-ssh2-read.patch 326
-MD5 3a75b54355e3e9dab04a8612c5044c27 gftp-2.0.18-r1.ebuild 1468
-MD5 54961e8083c43a825eeb545ad2b43d4c gftp-2.0.18-r2.ebuild 1137
-MD5 324a95e081b2b7b1cd591fde3cf6b11c gftp-2.0.18-r3.ebuild 1272
+MD5 710d64cc8961e1dcbdf86e6311032d41 gftp-2.0.18-r1.ebuild 1460
+MD5 1ef87d022c5ff737b9836ab7b69e38d3 gftp-2.0.18-r2.ebuild 1128
+MD5 4a2142ad845485e1bc269c71da71ab40 gftp-2.0.18-r3.ebuild 1269
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158

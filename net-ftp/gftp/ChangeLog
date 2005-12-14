@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.47 2005/11/06 05:57:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.48 2005/12/14 19:36:33 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  gftp-2.0.18-r1.ebuild, gftp-2.0.18-r2.ebuild, gftp-2.0.18-r3.ebuild:
+  Dropped the virtual/x11 dependency as no x11 packages are used directly.
 
 *gftp-2.0.18-r3 (06 Nov 2005)
 

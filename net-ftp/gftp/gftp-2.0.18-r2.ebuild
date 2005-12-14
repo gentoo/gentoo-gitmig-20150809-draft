@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r2.ebuild,v 1.1 2005/10/14 23:05:57 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r2.ebuild,v 1.2 2005/12/14 19:36:33 joshuabaergen Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls gtk ssl"
 
-DEPEND="virtual/x11
-	ssl? ( dev-libs/openssl )
+DEPEND="ssl? ( dev-libs/openssl )
 	gtk? ( >=x11-libs/gtk+-2 )
 	!gtk? ( sys-libs/readline
 		sys-libs/ncurses
