@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/twmoefonts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.10 2005/08/23 21:54:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.11 2005/12/14 18:17:46 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  twmoefonts-0.1.ebuild:
+  ttmkfdir was moved from x11-misc to x11-apps.
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  twmoefonts-0.1.ebuild:
+  ttmkfdir was moved from x11-misc to x11-apps.
 
   23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   twmoefonts-0.1-r1.ebuild:
