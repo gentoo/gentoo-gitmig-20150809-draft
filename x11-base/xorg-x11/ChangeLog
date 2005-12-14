@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.493 2005/12/14 18:01:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.494 2005/12/14 18:24:30 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r6.ebuild,
+  xorg-x11-6.8.99.15-r4.ebuild:
+  ttmkfdir was moved from x11-misc to x11-apps.
 
   14 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
   xorg-x11-7.0.0_rc3-r1.ebuild:

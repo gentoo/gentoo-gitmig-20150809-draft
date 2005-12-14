@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r4.ebuild,v 1.5 2005/12/10 21:34:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r4.ebuild,v 1.6 2005/12/14 18:24:30 joshuabaergen Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -87,7 +87,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/freetype-2.1.8
 	>=media-libs/fontconfig-2.1-r1
 	opengl? ( >=x11-base/opengl-update-2.2.0 )
-	!nocxx? ( >=x11-misc/ttmkfdir-3.0.9-r2 )
+	!nocxx? ( >=x11-apps/ttmkfdir-3.0.9-r2 )
 	>=sys-apps/sed-4
 	userland_GNU? ( sys-apps/util-linux )
 	dev-lang/perl
@@ -104,7 +104,7 @@ RDEPEND="
 		>=media-libs/freetype-2.1.8
 		>=media-libs/fontconfig-2.1-r1
 		opengl? ( >=x11-base/opengl-update-2.2.0 )
-		!nocxx? ( >=x11-misc/ttmkfdir-3.0.9-r2 )
+		!nocxx? ( >=x11-apps/ttmkfdir-3.0.9-r2 )
 		media-libs/libpng
 		>=sys-libs/ncurses-5.1
 		!<=app-emulation/emul-linux-x86-xlibs-1.2-r3
