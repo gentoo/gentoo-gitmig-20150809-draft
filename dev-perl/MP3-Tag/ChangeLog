@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MP3-Tag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.8 2005/11/27 22:23:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.9 2005/12/14 23:52:20 chriswhite Exp $
+
+  14 Dec 2005; Chris White <chriswhite@gentoo.org>
+  +files/MP3-Tag-0.94-makefile.patch, +files/MP3-Tag-0.9702-makefile.patch,
+  MP3-Tag-0.94.ebuild, MP3-Tag-0.9702.ebuild:
+  Fix bug #115579. Ebuilds weren't compiling becaues they were trying to work
+  with manpages which we no longer install.
 
   27 Nov 2005; Tom Gall <tgall@gentoo.org> MP3-Tag-0.94.ebuild:
   stable on ppc64
