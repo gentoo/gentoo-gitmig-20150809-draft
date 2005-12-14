@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.7.ebuild,v 1.1 2005/12/09 20:09:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.7-r1.ebuild,v 1.1 2005/12/14 20:20:07 chainsaw Exp $
 
 inherit gnome2 eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-dbus.patch
 	epatch ${FILESDIR}/${P}-scrollkeeper.patch
+	epatch ${FILESDIR}/${P}-segfault.patch
 }
 
 src_compile() {
