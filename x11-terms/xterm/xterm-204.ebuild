@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-204.ebuild,v 1.12 2005/09/24 04:33:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-204.ebuild,v 1.13 2005/12/14 06:49:42 cardoe Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="truetype Xaw3d unicode toolbar"
 
-RDEPEND="||( (
-		x11-libs/libX11
+RDEPEND="|| ( (	x11-libs/libX11
 		x11-libs/libXrender
 		x11-libs/libXt
 		x11-libs/libXmu
@@ -26,7 +25,7 @@ RDEPEND="||( (
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 DEPEND="${RDEPEND}
-	||( x11-proto/xproto virtual/x11 )"
+	|| ( x11-proto/xproto virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
