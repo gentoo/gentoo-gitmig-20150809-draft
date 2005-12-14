@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.2-r1.ebuild,v 1.1 2005/12/06 04:15:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.2-r1.ebuild,v 1.2 2005/12/14 20:29:03 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -15,13 +15,7 @@ IUSE="alsa eds gstreamer"
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=media-libs/fontconfig-1
 	virtual/xft
-	|| ( (
-		x11-libs/libXdmcp
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libXxf86misc
-		x11-libs/libXau )
-	virtual/x11 )
+	|| ( x11-libs/libXxf86misc virtual/x11 )
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libgnomeui-2.2
@@ -45,7 +39,6 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 DEPEND="${RDEPEND}
 	|| ( (
 		x11-libs/libxkbfile
-		x11-proto/kbproto
 		x11-proto/xf86miscproto
 		x11-proto/scrnsaverproto )
 	virtual/x11 )
