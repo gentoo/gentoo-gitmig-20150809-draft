@@ -2,16 +2,19 @@
 Hash: SHA1
 
 MD5 a5b16eeb3540517d08b73d0f52a6389e hcfpcimodem-1.06.ebuild 1778
-MD5 ec2ba46ee258d3cf69ab093034baa705 hcfpcimodem-1.06-r1.ebuild 1905
-MD5 447fbc0590fb83b73a4f82da4e83fc58 ChangeLog 3358
+MD5 78b35559c72b662ac59d18d5c59ab93f hcfpcimodem-1.06-r1.ebuild 1904
+MD5 354be70a75922d54fe7d0e9d018c6422 ChangeLog 3587
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 d34c9f2d1b9ab09713a2638bb26130bd hcfpcimodem-1.08.ebuild 1860
 MD5 25fc41dea981da0f005db63a43768868 files/digest-hcfpcimodem-1.06-r1 144
 MD5 25fc41dea981da0f005db63a43768868 files/digest-hcfpcimodem-1.06 144
+MD5 395bd74ffc3553d4ef151865b7601bb1 files/digest-hcfpcimodem-1.08 144
+MD5 9ec542df181d86f49f4d66377de83a59 files/hcfpcimodem-1.08-upstream-20051215.patch 2777
 MD5 790c0fbf3202d068fbb35b11296985c2 files/hcfpcimodem-1.06-simple_class.patch 5124
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK93GNSP4Vda7IdsRAlxlAJ42CPrRXyTpeovMe4Ja942MKZJgsACgh46a
-us/tLCRwoDGxj1Rgd3hcZqE=
-=yrgz
+iD8DBQFDoKsONSP4Vda7IdsRAoZhAJ9WOcpa9dVWhij/womHzoL3yV0GWACeOn8h
+TaBSLovIpNxkFM6AWpfGg8w=
+=Ik/K
 -----END PGP SIGNATURE-----
