@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.1 2005/12/09 16:11:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.2 2005/12/14 19:50:25 joshuabaergen Exp $
+
+  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild, synaptics-0.14.4.ebuild:
+  Add modular X dependencies.
 
   09 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
   +files/synaptics-0.14.4-makefile.patch,
