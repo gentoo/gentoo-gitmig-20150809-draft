@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.6 2005/12/14 18:46:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.7 2005/12/14 19:52:22 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -76,6 +76,39 @@ egethome() {
 		# Linux, NetBSD and OpenBSD use position 6 instead
 		cut -d: -f6 <<<${ent}
 		;;
+	esac
+}
+
+# Gets the shell for the specified user
+# it's a wrap around egetent as the position of the home directory in the line
+# varies depending on the os used.
+#
+# To use that, inherit eutils, not portability!
+egetshell() {
+	ent=$(egetent passwd "$1")
+
+	case ${CHOST} in
+	*-darwin*|*-freebsd*|*-dragonfly*)
+		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
+		cut -d: -f10 <<<${ent}
+		;;
+	*)
+		# Linux, NetBSD and OpenBSD use position 6 instead
+		cut -d: -f7 <<<${ent}
+		;;
+	esac
+}
+
+# Returns true if specified user has a shell that precludes logins
+# on whichever operating system.
+is-login-disabled() {
+	shell=$(egetshell "$1")
+
+	case ${shell} in
+		/bin/false|/usr/bin/false|/sbin/nologin|/usr/sbin/nologin)
+			return 0 ;;
+		*)
+			return 1 ;;
 	esac
 }
 
