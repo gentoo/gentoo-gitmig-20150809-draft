@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.35 2005/11/16 16:52:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.36 2005/12/14 20:24:03 ribosome Exp $
+
+*ncbi-tools-20050605-r2 (14 Dec 2005)
+
+  14 Dec 2005; Olivier Fisette <ribosome@gentoo.org>
+  +ncbi-tools-20050605-r2.ebuild:
+  Fixed file collisions with "dev-libs/libpcre" (bug #115463).
 
   16 Nov 2005; Olivier Fisette <ribosome@gentoo.org>
   ncbi-tools-20050605-r1.ebuild:
