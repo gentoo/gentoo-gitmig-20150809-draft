@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.9 2005/12/13 20:47:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.10 2005/12/14 06:07:14 cardoe Exp $
 
 inherit eutils autotools
 
@@ -16,16 +16,15 @@ IUSE="ncurses slang doc imlib X"
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	slang? ( >=sys-libs/slang-1.4.2 )
 	imlib? ( media-libs/imlib2 )
-	X? ( || ( ( x11-libs/libX11 )
-	( virtual/x11 ) ) )"
+	X? ( || ( ( x11-libs/libX11
+		x11-libs/libXt )
+	virtual/x11 ) )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	sys-devel/automake
 	sys-devel/autoconf
-	sys-devel/libtool
-	X? ( || ( ( x11-libs/libXt )
-		( virtual/x11 ) ) )"
+	sys-devel/libtool"
 
 src_unpack() {
 	unpack ${A}
