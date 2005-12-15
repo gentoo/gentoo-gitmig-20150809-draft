@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.65-r1.ebuild,v 1.2 2005/12/14 20:05:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.65-r1.ebuild,v 1.3 2005/12/15 03:13:52 tsunam Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://evolution.genetics.washington.edu/pub/${PN}/${P}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~ppc ~ppc-macos ~x86"
+KEYWORDS="~ppc ~ppc-macos x86"
 
 DEPEND="virtual/x11"
 
