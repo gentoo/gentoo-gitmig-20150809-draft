@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/viaideinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.1 2005/12/08 21:06:53 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.2 2005/12/15 15:21:19 dsd Exp $
+
+*viaideinfo-0.3 (15 Dec 2005)
+
+  15 Dec 2005; Daniel Drake <dsd@gentoo.org> -viaideinfo-0.2.ebuild,
+  +viaideinfo-0.3.ebuild:
+  Version bump. Adds VT8251 support.
 
 *viaideinfo-0.2 (08 Dec 2005)
 

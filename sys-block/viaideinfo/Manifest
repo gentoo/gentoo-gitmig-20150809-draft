@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 74388e64cbb6249a84765ad940586300 ChangeLog 345
-MD5 28e6d4c055dea2b2a4148b4dcfbb0f16 files/digest-viaideinfo-0.2 66
+MD5 6ec6a12e6a2763428ab2638398d972af ChangeLog 509
+MD5 e76098c6b6f7b648439115f7e866f25a files/digest-viaideinfo-0.3 66
 MD5 43c872252a620e391c449e150e344a3a metadata.xml 224
-MD5 73878da186e3603216f04597b5e77a7d viaideinfo-0.2.ebuild 582
+MD5 b4734135f1d8becfb72df8a504d49026 viaideinfo-0.3.ebuild 582
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmKRVTOXg++0VvJQRAjyOAKC9Yetssb/aLB16LKig+f0uCa2EPQCgvKXl
-ugSR3Lm/Vo6T6cJmJlW9Ivc=
-=hMLg
+iD8DBQFDoYoBTOXg++0VvJQRAqQYAJ9lvKo1HE+jdpDOnSPBkM9dRMZydQCeJ/ZY
+gbMqT0WlZ5roCS+lSIGbxoE=
+=nZqW
 -----END PGP SIGNATURE-----

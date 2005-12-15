@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/viaideinfo-0.2.ebuild,v 1.1 2005/12/08 21:06:53 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/viaideinfo-0.3.ebuild,v 1.1 2005/12/15 15:21:19 dsd Exp $
 
 DESCRIPTION="Query VIA IDE controllers for various information"
 HOMEPAGE="http://www.reactivated.net/software/viaideinfo"
