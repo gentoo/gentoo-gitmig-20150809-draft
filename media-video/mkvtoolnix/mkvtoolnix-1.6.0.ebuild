@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.0.ebuild,v 1.1 2005/10/30 23:37:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.0.ebuild,v 1.2 2005/12/15 21:59:03 flameeyes Exp $
 
 inherit eutils wxwidgets
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gtk2 wxwindows flac bzip2 lzo"
+IUSE="wxwindows flac bzip2 lzo"
 
 DEPEND=">=dev-libs/libebml-0.7.3
 	>=media-libs/libmatroska-0.7.5
@@ -27,14 +27,15 @@ DEPEND=">=dev-libs/libebml-0.7.3
 pkg_setup() {
 	WX_GTK_VER="2.6"
 	if use wxwindows; then
-		if ! use gtk2 ; then
-			need-wxwidgets gtk || die "You must compile wxGTK without wx_nogtk useflag."
-		else
-			need-wxwidgets gtk2 || die "You must compile wxGTK with gtk2 useflag."
-		fi
-	elif use gtk2; then
-		einfo "You won't have gtk2 support as you requested not to use wxwindows."
+		need-wxwidgets gtk2 || die "You must compile wxGTK with X useflag."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-lzo2.patch"
 }
 
 src_compile() {

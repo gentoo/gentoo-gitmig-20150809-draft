@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 02a436708c965bd6bbb88c1e8896f7b9 ChangeLog 7223
+MD5 218ee72d1e844647391d5c3b79baf764 ChangeLog 7501
 MD5 dc82e2c687345769c53a013331f2abb3 files/digest-mkvtoolnix-1.5.5 69
 MD5 91ac5c9285fd2276b87d33e01746488a files/digest-mkvtoolnix-1.6.0 69
+MD5 10475628f738cb79f2cd3def68ab1091 files/mkvtoolnix-1.6.0-lzo2.patch 3662
 MD5 29655c309de058bf3e45772adc64c83e metadata.xml 253
-MD5 b6108f77ecc6287e1e86786261f0d40f mkvtoolnix-1.5.5.ebuild 1475
-MD5 63619e91f73daaecfcdf1412cff70352 mkvtoolnix-1.6.0.ebuild 1481
+MD5 39f624a94586d7e44abc46b352f70f95 mkvtoolnix-1.5.5.ebuild 1256
+MD5 c508956bf688bc8b877040053fbf0f13 mkvtoolnix-1.6.0.ebuild 1338
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDf7c2csIHjyDViGQRAovTAJ9ejisiek1RNP033nThdy9vJm0kywCfb5nR
-FAY5cXOmiSKAV9wPr3RRW7c=
-=gxvc
+iD8DBQFDoeczAiZjviIA2XgRAvO8AJ4xqPghnznAvDy9L5BVXknY0DJ5RwCfU3dN
+LyTCMu7p1QlyIz7fRPIKdaU=
+=hfTN
 -----END PGP SIGNATURE-----

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.44 2005/11/19 23:37:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.45 2005/12/15 21:59:03 flameeyes Exp $
+
+  15 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mkvtoolnix-1.6.0-lzo2.patch, mkvtoolnix-1.5.5.ebuild,
+  mkvtoolnix-1.6.0.ebuild:
+  Added patch to link against lzo2 (bug #112372). Also dropped gtk2 useflag as
+  wxGTK 2.6 defaults to building only gtk2 version.
 
   19 Nov 2005; Joseph Jezak <josejx@gentoo.org> mkvtoolnix-1.5.5.ebuild:
   Marked ppc stable for bug #111049.
