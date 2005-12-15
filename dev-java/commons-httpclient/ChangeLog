@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.25 2005/12/08 11:50:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.26 2005/12/15 05:24:21 nichoj Exp $
+
+  15 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  commons-httpclient-3.0_rc4.ebuild:
+  Removed log4j dependency, as per bug #100275.
 
   08 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
   commons-httpclient-3.0_rc4.ebuild:
