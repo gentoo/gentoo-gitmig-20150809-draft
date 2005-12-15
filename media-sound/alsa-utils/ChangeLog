@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.121 2005/11/23 19:14:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.122 2005/12/15 22:42:46 flameeyes Exp $
+
+  15 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/alsasound-1.0.10_rc2:
+  Added restore function to restore the mixer levels without restarting ALSA
+  entirely. Thanks to Robin Johnson in bug #115500.
 
   23 Nov 2005; Luis Medinas <metalgod@gentoo.org> alsa-utils-1.0.10.ebuild:
   Stable on amd64. See bug #111968.

@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound-1.0.10_rc2,v 1.1 2005/10/31 18:39:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound-1.0.10_rc2,v 1.2 2005/12/15 22:42:46 flameeyes Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -50,7 +50,7 @@ asoundcfg=/etc/asound.state
 aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
 
-opts="${opts} save"
+opts="${opts} save restore"
 
 depend() {
 	need bootmisc localmount
@@ -166,7 +166,11 @@ restore_mixer() {
 	if [[ ${RESTORE_ON_START} == "no" ]] ; then
 		return 0
 	fi
+	
+	restore
+}
 
+restore() {
 	ebegin "Restoring Mixer Levels"
 
 	local val=0
