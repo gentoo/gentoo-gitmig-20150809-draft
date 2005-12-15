@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.13 2005/12/11 17:35:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.14 2005/12/15 05:32:50 nichoj Exp $
+
+  15 Dec 2005; Joshua Nichols <nichoj@gentoo.org> poi-2.5-r2.ebuild,
+  poi-2.5.1.ebuild:
+  Removed log4j dependency, as per bug #100275.
 
   11 Dec 2005; Joshua Nichols <nichoj@gentoo.org> poi-2.5-r2.ebuild,
   poi-2.5.1.ebuild:

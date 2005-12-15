@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5-r2.ebuild,v 1.4 2005/12/11 17:35:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5-r2.ebuild,v 1.5 2005/12/15 05:32:50 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,6 @@ IUSE="jikes"
 
 RDEPEND=">=virtual/jre-1.2
 	>=dev-java/commons-logging-1.0
-	>=dev-java/log4j-1.2.8
 	=dev-java/commons-beanutils-1.6*
 	>=dev-java/commons-collections-2.1
 	=dev-java/commons-lang-2.0*
@@ -35,7 +34,6 @@ src_unpack() {
 	sed -e 's:<target name="init" depends="check-jars,fetch-jars">:<target name="init" depends="check-jars">:' -i build.xml
 
 	cd ${S}/lib
-	java-pkg_jar-from log4j log4j.jar log4j-1.2.8.jar
 	java-pkg_jar-from commons-logging commons-logging.jar commons-logging-1.0.1.jar
 	cd ${S}/src/contrib/lib
 	java-pkg_jar-from commons-beanutils-1.6 commons-beanutils.jar commons-beanutils-1.6.jar
