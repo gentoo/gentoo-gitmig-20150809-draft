@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.221 2005/12/07 19:11:01 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.222 2005/12/15 20:20:35 dsd Exp $
+
+*gentoo-sources-2.6.14-r5 (15 Dec 2005)
+
+  15 Dec 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.14-r5.ebuild:
+  Update to Linux 2.6.14.4. Really fix the hyperthreading slowdown. Fix NUMA
+  boot problem.
 
   07 Dec 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.14-r4.ebuild:
