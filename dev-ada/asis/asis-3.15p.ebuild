@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.13 2005/05/01 18:21:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.14 2005/12/15 12:23:29 george Exp $
 
 inherit gnat eutils
 
@@ -37,7 +37,6 @@ src_compile() {
 	${ADAMAKE} gnatelim-driver -o gnatelim ${MAKEFLAGS}
 	cd "${S}/tools/gnatstub"
 	${ADAMAKE} gnatstub-driver -o gnatstub ${MAKEFLAGS}
-	cd "${S}"
 }
 
 src_install () {
