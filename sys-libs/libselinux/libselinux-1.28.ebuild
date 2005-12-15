@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.28.ebuild,v 1.1 2005/12/09 00:45:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.28.ebuild,v 1.2 2005/12/15 22:03:26 pebenito Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
 
-DEPEND=">=sys-libs/libsepol-${SEPOL_VER}"
+DEPEND="=sys-libs/libsepol-${SEPOL_VER}*"
 
 src_unpack() {
 	unpack ${A}
