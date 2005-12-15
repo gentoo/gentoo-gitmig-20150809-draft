@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r1.ebuild,v 1.1 2005/09/08 18:49:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r1.ebuild,v 1.2 2005/12/15 19:48:04 vanquirius Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,14 +11,14 @@ SRC_URI="http://violating.us/projects/bigeye/download/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${P}-gcc34.diff
+	epatch "${WORKDIR}"/${P}-gcc34.diff
 }
 
 src_compile() {
@@ -32,7 +32,7 @@ src_install() {
 
 	insinto /usr/share/bigeye
 	doins sig.file
-	cp -r messages ${D}/usr/share/bigeye/
+	cp -r messages "${D}"/usr/share/bigeye/
 	dodoc README
 }
 
