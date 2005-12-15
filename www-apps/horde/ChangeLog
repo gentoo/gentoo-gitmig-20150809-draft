@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.21 2005/12/12 01:26:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.22 2005/12/15 04:21:23 vapier Exp $
+
+*horde-3.0.9 (15 Dec 2005)
+
+  15 Dec 2005; Mike Frysinger <vapier@gentoo.org> +horde-3.0.9.ebuild:
+  Version bump #115215.
 
 *horde-3.0.8 (12 Dec 2005)
 
