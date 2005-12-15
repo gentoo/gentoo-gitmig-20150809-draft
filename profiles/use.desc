@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.273 2005/11/12 14:31:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.274 2005/12/15 16:51:10 ciaranm Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -226,7 +226,7 @@ nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nis - Support for NIS/YP services
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocd - Tells emerge to install all files required to run the application without a CD mounted
-nocxx - Disable support for C++ (DONT USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
+nocxx - Disable support for C++ (DON'T USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
 nsplugin - Builds plugins for Netscape compatible browsers
 ocaml - Adds support/bindings for the Ocaml language
