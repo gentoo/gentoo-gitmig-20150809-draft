@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.10 2005/08/03 08:40:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.11 2005/12/15 12:06:30 george Exp $
 #
 # Author: David Holm <dholm@gentoo.org>
 #
@@ -42,8 +42,10 @@ gnat_pkg_setup() {
 	export ADACFLAGS=${ADACFLAGS//athlon-tbird/i686}
 	export ADACFLAGS=${ADACFLAGS//athlon-4/i686}
 	export ADACFLAGS=${ADACFLAGS//athlon-[xm]p/i686}
-	export ADACFLAGS=${ADACFLAGS//athlon64/i686}
-	export ADACFLAGS=${ADACFLAGS//athlon/i686}
+	#the following two break the oncoming amd64 support
+	#will completely remove when gnat-3.44 is unmasked
+#	export ADACFLAGS=${ADACFLAGS//athlon64/i686}
+#	export ADACFLAGS=${ADACFLAGS//athlon/i686}
 	export ADACFLAGS=${ADACFLAGS//-Os/-O2}
 
 	export ADAMAKEFLAGS=${ADAMAKEFLAGS:-"-cargs ${ADACFLAGS} -margs"}
