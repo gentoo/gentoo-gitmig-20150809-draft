@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.21 2005/08/16 13:19:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.22 2005/12/15 20:04:07 ciaranm Exp $
+
+*vile-9.5 (15 Dec 2005)
+
+  15 Dec 2005; Ciaran McCreesh <ciaranm@gentoo.org> +vile-9.5.ebuild:
+  New version, thanks to Thomas Dickey.
 
   16 Aug 2005; Luis Medinas <metalgod@gentoo.org> vile-9.4d.ebuild:
   Added ~amd64 keywords.
