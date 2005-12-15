@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.2 2005/12/15 20:35:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.3 2005/12/15 21:06:31 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
 MY_PN="${PN}_unix"
-MY_PV="${PV:6:2}nov${PV:0:2}"
+MY_PV="${PV:6:2}nov${PV:2:2}"
 MY_P="${MY_PN}_${MY_PV}"
 DESCRIPTION="Automates the fitting of protein X-ray crystallographic electron density maps"
 HOMEPAGE="http://www.msi.umn.edu/~levitt/"
-SRC_URI="http://www.msi.umn.edu/~levitt/maid_unix_12nov01.tar.gz"
+SRC_URI="http://www.msi.umn.edu/~levitt/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
