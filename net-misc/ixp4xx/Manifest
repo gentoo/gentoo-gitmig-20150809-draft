@@ -19,12 +19,12 @@ MD5 55eb00eaf207c8ed04b41671f5dd1196 files/2.1/43-yvasilev-Makefile-ixp400_eth.p
 MD5 5976fd3d796c3e10247ee43e4e84d9ee files/2.1/50-oemod-ixp400_eth.patch 5052
 MD5 b5d51953e27b05d766183c207e60ed25 files/2.1/README 52
 MD5 a714fc17ff2a0f235d5a4464d2d848d9 files/digest-ixp4xx-2.1 236
-MD5 e7b5f473f2ea1b816c1415e6ba4d1844 ixp4xx-2.1.ebuild 1572
+MD5 7a22658be5b140cf3d9a003b921307b2 ixp4xx-2.1.ebuild 1595
 MD5 a32931a71aafd6c9f2550b5560cbe22a metadata.xml 178
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl2zKgIKl8Uu19MoRApTIAKCDIJoFOfNctU8/3D3I/D7OtQm4dACbB7s/
-Ism0z7Khurq/55UGPTMWCdw=
-=lGbd
+iD8DBQFDoLTXgIKl8Uu19MoRAibWAJ97RjKv/XAB74CGTxC66io6mZP6NgCfbPDR
+Fn5YjppZ5B+YvaCiFy28ac8=
+=2T/0
 -----END PGP SIGNATURE-----

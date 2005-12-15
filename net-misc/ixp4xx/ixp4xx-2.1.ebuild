@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ixp4xx/ixp4xx-2.1.ebuild,v 1.1 2005/12/07 23:10:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ixp4xx/ixp4xx-2.1.ebuild,v 1.2 2005/12/15 00:11:47 vapier Exp $
 
 inherit eutils toolchain-funcs linux-mod
 
@@ -16,7 +16,8 @@ KEYWORDS="-* arm"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND=""
+DEPEND="app-arch/zip"
+RDEPEND=""
 
 S=${WORKDIR}/ixp400_xscale_sw
 
