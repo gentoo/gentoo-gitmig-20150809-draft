@@ -1,4 +1,14 @@
-MD5 7c73a815e56a513af4b70eca3856d98d gorg-0.5.ebuild 844
-MD5 f20185bc321ac8354cc5188d04ca0380 ChangeLog 561
-MD5 53aeeb4f7cd0baa78bcb917e2c9655e8 metadata.xml 736
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9dae463370e6840cdb683fadc2eca807 ChangeLog 674
 MD5 45858510ab046ed4e25c7bac2034dd29 files/digest-gorg-0.5 56
+MD5 be937088817d9c22e163e9bb08c382e3 gorg-0.5.ebuild 850
+MD5 53aeeb4f7cd0baa78bcb917e2c9655e8 metadata.xml 736
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoeK7AiZjviIA2XgRAs3vAKCVWzrCuuKVYYCVMn2OyTmsrwRDiACg1zpr
+88NWWvZRZGjgj5TyOW22wjQ=
+=t9Ri
+-----END PGP SIGNATURE-----
