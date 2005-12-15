@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.6 2005/12/15 15:12:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.7 2005/12/15 15:48:34 spyderous Exp $
+
+*rasmol-2.7.2.1.1-r1 (15 Dec 2005)
+
+  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  files/rasmol.sh.debian, +rasmol-2.7.2.1.1-r1.ebuild:
+  Update rasmol script to fall back to xdpyinfo if xwininfo isn't available.
+  Depend on one of the two.
 
   15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   rasmol-2.7.2.1.1.ebuild:

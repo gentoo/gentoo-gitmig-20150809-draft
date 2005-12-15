@@ -15,8 +15,10 @@ export RASMOLPATH
 
 RASMOL_VISUAL=8
 
-if [ -e /usr/bin/X11/xwininfo ]; then
+if [ -e /usr/bin/xwininfo ]; then
  RASMOL_VISUAL=`xwininfo -root | perl -ne 'chomp;print if s|\s+Depth:\s+||'` ;
+elif [ -e /usr/bin/xdpyinfo ]; then
+ RASMOL_VISUAL=` xdpyinfo | perl -ne 'chomp;print if s|\s+depth of root window:\s+(.*)\splanes|\1|'` ;
 fi
 
 if [ -e "/etc/rasmol/.rasmol.conf" ]; then
