@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxcomp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.20 2005/10/21 01:33:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.21 2005/12/15 17:29:33 agriffis Exp $
+
+*nxcomp-1.5.0-r1 (15 Dec 2005)
+
+  15 Dec 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/nxcomp-1.5.0-r1-pic.patch, nxcomp-1.5.0.ebuild,
+  +nxcomp-1.5.0-r1.ebuild:
+  Bump upstream sources from 1.5.0-65 to 1.5.0-80
 
   21 Oct 2005; Aron Griffis <agriffis@gentoo.org> nxcomp-1.5.0.ebuild:
   Install libXcomp.so* instead of libXcomp.so.${PV} so that nxssh and others

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0.ebuild,v 1.4 2005/12/15 17:29:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r1.ebuild,v 1.1 2005/12/15 17:29:33 agriffis Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-SRC_URI="http://web04.nomachine.com/download/1.5.0/sources/$P-65.tar.gz"
+SRC_URI="http://web04.nomachine.com/download/1.5.0/sources/$P-80.tar.gz"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -24,7 +24,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/nxcomp-1.5.0-pic.patch
+	epatch ${FILESDIR}/nxcomp-1.5.0-r1-pic.patch
 }
 
 src_compile() {
