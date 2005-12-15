@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.14 2005/12/15 17:46:05 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.15 2005/12/15 19:44:14 weeve Exp $
+
+  15 Dec 2005; Jason Wever <weeve@gentoo.org> ldaptor-0.0.42.ebuild:
+  Added ~sparc keyword in again.
 
   15 Dec 2005; Marien Zwart <marienz@gentoo.org> ldaptor-0.0.42.ebuild:
   Use pregenerated images instead of running dia from the ebuild (bug #104910).
