@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3bb0944c382be3c3117933e1657ff209 ChangeLog 347
+MD5 ef58acb7ef5f5edc71fa6e49d8a08a8d audtty-0.1.1.ebuild 571
+MD5 ea1efc64de83580e436e5e5cf46c609b files/digest-audtty-0.1.1 64
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDofZ3p5vW4rUFj5oRAtY4AJ0Y43uE1OFWh2P2TwHyDJDZS8mqOACeNFIC
+zTmOixtXOw03Zoya1dATmsA=
+=XjGR
+-----END PGP SIGNATURE-----
