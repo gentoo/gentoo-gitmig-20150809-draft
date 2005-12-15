@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.4.ebuild,v 1.2 2005/09/05 21:10:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.4.ebuild,v 1.3 2005/12/15 04:31:14 spyderous Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ RDEPEND="app-cdr/dvd+rw-tools
 	=x11-libs/wxGTK-2.4*
 	virtual/cdrtools
 	virtual/libc
-	virtual/x11
 	gnome? ( >=gnome-base/libgnomeui-2.0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
