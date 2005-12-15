@@ -1,9 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae5b031ae02b5e8d725b130e2c24f4ba ChangeLog 19647
+MD5 227ecfbce7bb9fd2f67b8ba2e40b9b1c ChangeLog 19767
 MD5 9e2e1b58a310e4236f757e683b71c879 files/digest-mono-1.0.5-r5 127
 MD5 2a5c0159da180abfb3dcac3e38641a79 files/digest-mono-1.1.10 65
+MD5 cee2ab54b372ee55eff64d4c080e5247 files/digest-mono-1.1.10.1 67
 MD5 e57f70fb8569f040ed1b4669c3e07652 files/digest-mono-1.1.8.3 66
 MD5 c15043c4c7276f0e4f9edac5d2da1a27 files/digest-mono-1.1.9.1 66
 MD5 2fd6267a26c5f5a6432f93b7a1105d8e files/digest-mono-1.1.9.2 66
@@ -21,14 +19,8 @@ MD5 f82809daef4d783797094233672feb3f files/mono-1.1.8.3-icall.diff 433
 MD5 25426f960f7fc04c8932375f20885eda files/mono-1.1.9.1-io-layer-fix.diff 5552
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 10c58186e6ce0ab643d16c883f2071ff mono-1.0.5-r5.ebuild 3718
+MD5 fc8581024e1e8b43d322ee4f0c8c9460 mono-1.1.10.1.ebuild 2360
 MD5 7c228ddae84f1b83e790aeba4587f970 mono-1.1.10.ebuild 2355
 MD5 5415fa75de6e201ae1a0e12c17498709 mono-1.1.8.3.ebuild 2501
 MD5 9e335202b997822eafad0c2f80137f66 mono-1.1.9.1.ebuild 2285
 MD5 8a27590ee5780db41e7f4124b7de58d0 mono-1.1.9.2.ebuild 2000
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeK8G2G5bA0cA/ScRAix5AKCn0iSOqWRNNYucDg8k+xMZKqWR4QCghZRY
-uivaqxx998MtcyCbJUVs7X0=
-=rsLl
------END PGP SIGNATURE-----
