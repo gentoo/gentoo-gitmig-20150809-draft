@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.5 2005/12/15 15:10:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.6 2005/12/15 15:12:50 spyderous Exp $
+
+  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  rasmol-2.7.2.1.1.ebuild:
+  (#115649) Add rman to modular X deps.
 
   15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   rasmol-2.7.2.1.1.ebuild:

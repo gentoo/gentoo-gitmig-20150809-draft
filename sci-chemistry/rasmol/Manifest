@@ -1,5 +1,5 @@
-MD5 1701062ea50ddacbbd6cef1de1a94f16 ChangeLog 2399
+MD5 f0f96507fcfb5445d20237711d487101 ChangeLog 2522
 MD5 5bfaa68da594b02ca585dcfa3fd29426 files/digest-rasmol-2.7.2.1.1 69
 MD5 d141a35d345c54bb3694ed83ba91b40a files/rasmol.sh.debian 830
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 a0eff88440966d5987c1f67efbe205c5 rasmol-2.7.2.1.1.ebuild 1553
+MD5 941ae50b21f2abfc5070fa3f621da55a rasmol-2.7.2.1.1.ebuild 1570
