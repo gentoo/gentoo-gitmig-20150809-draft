@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.62 2005/12/04 20:40:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.63 2005/12/15 22:28:24 vanquirius Exp $
+
+  15 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
+  nessus-plugins-2.2.6.ebuild:
+  Marking nessus suite 2.2.6 x86 stable.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> 
   nessus-plugins-2.2.5.ebuild:

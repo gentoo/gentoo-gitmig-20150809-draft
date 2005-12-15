@@ -11,5 +11,5 @@ MD5 02fce1d620b03f7d03f3ae84fdeea4d6 files/patch_1.nessus-core.2.0.7 787
 MD5 883d45d6092c114bdf3d35a3ce45161a metadata.xml 244
 MD5 94146206e4f6489e2287682b8dc54158 nessus-core-2.2.4-r1.ebuild 1387
 MD5 45a3f6a02b0129e86a1626d757724d31 nessus-core-2.2.5.ebuild 1424
-MD5 711b6d0a58cfde1f01110bca0248fdda nessus-core-2.2.6.ebuild 1434
+MD5 d6f6107a8008a5e2cbb7573e53aa44d6 nessus-core-2.2.6.ebuild 1433
 MD5 90ba2e21d6c6d1e30ae3e2ad1cbcb2bd nessus-core-2.3.1.ebuild 1379
