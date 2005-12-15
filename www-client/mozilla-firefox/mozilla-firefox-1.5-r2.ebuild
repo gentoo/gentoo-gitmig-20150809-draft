@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5-r2.ebuild,v 1.1 2005/12/09 15:28:58 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5-r2.ebuild,v 1.2 2005/12/15 19:21:33 hansmi Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -107,6 +107,16 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/${P}-history.patch
 	epatch ${FILESDIR}/${PV}/${P}-mork.patch
+
+	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
+	# PowerPC, because with that configuration, it detects a ppc64 system.
+	# -- hansmi, 2005-11-13
+	if use ppc && [[ "${PROFILE_ARCH}" == ppc64 ]]; then
+		sed -i -e "s#OS_TEST=\`uname -m\`\$#OS_TEST=${ARCH}#" \
+			${S}/configure
+		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
+			${S}/security/coreconf/arch.mk
+	fi
 }
 
 src_compile() {

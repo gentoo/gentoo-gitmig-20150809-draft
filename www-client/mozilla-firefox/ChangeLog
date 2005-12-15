@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.120 2005/12/15 18:53:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.121 2005/12/15 19:21:33 hansmi Exp $
+
+  15 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mozilla-firefox-1.5-r2.ebuild:
+  Fix a compilation issue using the 32-bit userland with 64-bit kernel on
+  PowerPC.
 
   15 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   mozilla-firefox-1.0.7-r4.ebuild:
