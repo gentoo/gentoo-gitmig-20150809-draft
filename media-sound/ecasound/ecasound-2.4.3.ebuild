@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.1 2005/12/09 22:28:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.2 2005/12/15 23:26:05 flameeyes Exp $
 
-IUSE="alsa arts audiofile debug jack libsamplerate mikmod ncurses oggvorbis oss pic python ruby sndfile"
+IUSE="alsa arts audiofile debug jack libsamplerate mikmod ncurses oggvorbis oss python ruby sndfile"
 
 DESCRIPTION="A package for multitrack audio processing"
 SRC_URI="http://ecasound.seul.org/download/${P}.tar.gz"
@@ -40,8 +40,6 @@ src_compile () {
 
 	myconf="${myconf} --enable-shared --with-largefile"
 
-	use amd64 && myconf="${myconf} --with-pic"
-
 	if use python; then
 		#
 		# ecasound is braindead about finding python includes/libdirs and
@@ -77,7 +75,6 @@ src_compile () {
 	$(use_enable oss) \
 	$(use_enable ruby rubyecasound) \
 	$(use_enable sndfile) \
-	$(use_with pic) \
 	${myconf} \
 	|| die "configure failed"
 	make || die "build failed"
