@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.63 2005/11/16 23:49:28 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.64 2005/12/15 05:15:55 anarchy Exp $
+
+  15 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +files/vpopmail-lazy.patch, vpopmail-5.4.13.ebuild:
+  lazy binding patch for quality assurance
 
   16 Nov 2005; <anarchy@gentoo.org> vpopmail-5.4.6-r1.ebuild,
   vpopmail-5.4.9-r2.ebuild, vpopmail-5.4.10.ebuild, vpopmail-5.4.13.ebuild:

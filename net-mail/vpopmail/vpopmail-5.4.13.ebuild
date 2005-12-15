@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.13.ebuild,v 1.3 2005/11/16 23:49:28 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.13.ebuild,v 1.4 2005/12/15 05:15:55 anarchy Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -58,6 +58,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-5.4.9-access.violation.patch || die "failed to patch."
+	epatch ${FILESDIR}/${PN}-lazy.patch || die "failed to patch."
 
 	sed -i \
 		's|Maildir|.maildir|g' \
@@ -71,6 +72,8 @@ src_unpack() {
 		|| die "failed to remove vpopmail advertisement"
 
 	gnuconfig_update
+	aclocal || die "aclocal failed"
+	WANT_AUTOMAKE="1.6" automake --add-missing || die "automake failed."
 	autoconf || die "reconfigure failed."
 	ht_fix_file ${S}/cdb/Makefile || die "failed to fix file"
 }
@@ -122,9 +125,6 @@ src_compile() {
 	#--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
 	#--enable-roaming-users=y --enable-relay-clear-minutes=60 \
 	#--disable-rebuild-tcpserver-file \
-
-	# Copy compile from automake-1.6 
-	cp /usr/share/automake-1.6/compile ./ || die "failed to copy file"
 
 	emake || die "Make failed."
 }
