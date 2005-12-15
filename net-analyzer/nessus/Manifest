@@ -1,4 +1,4 @@
-MD5 5193e2b3c1d0920a663886d99901c7e2 ChangeLog 9827
+MD5 4a768711386b88b99ebf4a9cde1a66fe ChangeLog 9947
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.2.4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.2.5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.2.6 0
@@ -6,5 +6,5 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.3.1 0
 MD5 34584a1d914e5d8b669b988fbf594ece metadata.xml 230
 MD5 2f99cfd33c24d46be39df50dc0179db6 nessus-2.2.4.ebuild 803
 MD5 ef361d33cc39c0b7f451f6ba8fa6a35d nessus-2.2.5.ebuild 914
-MD5 8fb5a8e6030c652d9e3972f156b9cb8d nessus-2.2.6.ebuild 923
+MD5 594334ce742ab6aac6308e421a6a51d5 nessus-2.2.6.ebuild 923
 MD5 18c47452056d6a82fc1ad5a3d8c598fc nessus-2.3.1.ebuild 792
