@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3-r1.ebuild,v 1.1 2005/11/13 05:38:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3-r1.ebuild,v 1.2 2005/12/15 03:57:49 tsunam Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV//./-}.tar.gz
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="app-shells/ksh
 	dev-lang/tcl
@@ -89,7 +89,7 @@ src_unpack() {
 	done
 
 	# The "convert" tool from Imagemagick is searched for in "/usr/X11R6".
-	sed -i -e 's%/usr/X11R6/bin/convert%/usr/bin/convert%' make_ps | die
+	sed -i -e 's%/usr/X11R6/bin/convert%/usr/bin/convert%' make_ps || die
 
 	# Solves issues with images in the exercise* texi files.
 	cd "${S}"/course/texi

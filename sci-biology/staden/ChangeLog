@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/staden
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.15 2005/11/13 05:38:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.16 2005/12/15 03:57:49 tsunam Exp $
+
+  15 Dec 2005; Joshua Jackson <tsunam@gentoo.org> staden-1.5.3-r1.ebuild:
+  Stable on x86; bug #115438
 
 *staden-1.5.3-r1 (13 Nov 2005)
 
