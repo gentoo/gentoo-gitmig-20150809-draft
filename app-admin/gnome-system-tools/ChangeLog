@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.48 2005/09/10 03:12:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.49 2005/12/15 19:40:54 dang Exp $
+
+*gnome-system-tools-1.4.1 (15 Dec 2005)
+
+  15 Dec 2005; <dang@gentoo.org> +gnome-system-tools-1.4.1.ebuild:
+  New upstream version
 
 *gnome-system-tools-1.4.0 (10 Sep 2005)
 
