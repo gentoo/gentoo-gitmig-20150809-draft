@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0cd7568b4a8b9f3f957d7cf9e9690e78 ChangeLog 12048
 MD5 165b6fc422fa8cfe8274e7d327106ee6 mod_ssl-2.8.18.ebuild 2188
 MD5 1ebfd5d9cabe6ac82c1fd63e59591271 mod_ssl-2.8.25-r10.ebuild 1786
@@ -27,3 +30,10 @@ MD5 71ac46d211c8aa42c7a5e51c6165862a files/mod_ssl.conf 2460
 MD5 dd87f058ab62ac5c5da4b03713e9184a files/digest-mod_ssl-2.8.20 73
 MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
 MD5 a68a0b56a629886ec3ebd08bfb0f638c files/digest-mod_ssl-2.8.24 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoMTkugEuf3OQ0akRAk0hAKChRXRtVGqlk1VRL65nlZs2rc4YIQCeODLK
+WvaXNkwj48v8/CvP92FjJL8=
+=wiIN
+-----END PGP SIGNATURE-----
