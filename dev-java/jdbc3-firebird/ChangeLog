@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc3-firebird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/ChangeLog,v 1.6 2005/12/13 05:38:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/ChangeLog,v 1.7 2005/12/15 22:19:35 betelgeuse Exp $
+
+*jdbc3-firebird-1.5.6 (15 Dec 2005)
+
+  15 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +jdbc3-firebird-1.5.6.ebuild:
+  Version bump. This version is built from sources so we have new 
+  jikes, sources and examples use flags. Resolves bug #115367.
 
 *jdbc3-firebird-1.5.3-r1 (13 Dec 2005)
 
