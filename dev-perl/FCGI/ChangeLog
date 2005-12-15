@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FCGI
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.4 2005/04/25 15:11:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.5 2005/12/15 20:40:07 dang Exp $
+
+  15 Dec 2005; <dang@gentoo.org> FCGI-0.67.ebuild:
+  Marked ~amd64 per bug #115684
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> FCGI-0.67.ebuild:
   cleaning
