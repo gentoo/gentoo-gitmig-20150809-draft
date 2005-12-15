@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0-r1.ebuild,v 1.1 2005/12/13 02:16:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0-r2.ebuild,v 1.1 2005/12/15 19:33:39 vanquirius Exp $
 
 inherit kde eutils
 
-MY_P=${P/_/}
-S=${WORKDIR}/${MY_P}
+MY_P="${P/_/}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Graphical KDE iptables configuration tool"
 HOMEPAGE="http://kmyfirewall.sourceforge.net/"
@@ -25,4 +25,5 @@ src_unpack() {
 	echo -e "[PATHS]\nDistribution=gentoo\nIPTPath=${ROOT}sbin/iptables\nModprobePath=${ROOT}sbin/modprobe\nrcDefaultPath=${ROOT}etc/runlevels/default/" >> ${S}/kmyfirewall/kmyfirewallrc
 
 	epatch "${FILESDIR}/kmyfirewall-1.0_gentoo_multiport.diff"
+	epatch "${FILESDIR}/${PN}-1.0-logprefix.diff"
 }
