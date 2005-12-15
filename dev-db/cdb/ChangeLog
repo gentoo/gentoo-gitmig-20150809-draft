@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.18 2005/11/19 19:18:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.19 2005/12/15 16:37:51 seemant Exp $
+
+*cdb-0.75-r1 (15 Dec 2005)
+
+  15 Dec 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +cdb-0.75-r1.ebuild:
+  add more .a and .h files for langthang
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> cdb-0.75.ebuild:
   Added ~ppc64; bug #102649
