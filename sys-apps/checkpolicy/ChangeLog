@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.32 2005/12/09 00:55:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.33 2005/12/15 21:59:04 pebenito Exp $
+
+  15 Dec 2005; Chris PeBenito <pebenito@gentoo.org> checkpolicy-1.24.ebuild,
+  checkpolicy-1.28.ebuild:
+  Tighten up versioning to try to prevent mismatch problems as seen in #112348.
 
 *checkpolicy-1.28 (09 Dec 2005)
 

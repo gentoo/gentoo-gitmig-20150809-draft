@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.28.ebuild,v 1.1 2005/12/09 00:55:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.28.ebuild,v 1.2 2005/12/15 21:59:04 pebenito Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SLOT="0"
 #KEYWORDS="x86 ppc sparc amd64 mips"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
 
-DEPEND=">=sys-libs/libsemanage-${SEMNG_VER}
+DEPEND="=sys-libs/libsemanage-${SEMNG_VER}*
 	sys-devel/flex
 	sys-devel/bison"
 
