@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.97 2005/11/19 11:02:14 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.98 2005/12/15 21:41:11 kloeri Exp $
+
+  15 Dec 2005; Bryan Østergaard <kloeri@gentoo.org pygtk-2.8.0-r1.ebuild,
+  pygtk-2.8.0-r2.ebuild, pygtk-2.8.2.ebuild:
+  Adjust python dependency to 2.3.5.
 
   19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Added japanese metadata.xml translation thanks to Yoshino-san.
