@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.5.ebuild,v 1.2 2005/08/19 23:33:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.5.ebuild,v 1.3 2005/12/15 22:09:59 vanquirius Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.giram.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
@@ -22,10 +22,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-fbsd.patch
-	cd ${S}/povfront
+	epatch "${FILESDIR}"/${P}-fbsd.patch
+	cd "${S}"/povfront
 	sed -i -e "s:strlen (g_config_file_to_parse) == 0:g_config_file_to_parse == NULL:" povfront.c
-	cd ${S}; elibtoolize
+	cd "${S}"; elibtoolize
 }
 
 src_compile() {
@@ -42,6 +42,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ANNOUNCE CONTRIBUTORS ChangeLog HACKING IDEAS NEWS README TODO
 }
