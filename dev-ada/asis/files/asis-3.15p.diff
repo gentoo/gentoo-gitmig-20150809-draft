@@ -1,6 +1,18 @@
-diff -ru asis-3.15p-src.orig/Makefile.stub asis-3.15p-src/Makefile.stub
+diff -Naur asis-3.15p-src.orig/asis/a4g-gnat_int.ads asis-3.15p-src/asis/a4g-gnat_int.ads
+--- asis-3.15p-src.orig/asis/a4g-gnat_int.ads	2002-10-24 10:13:16.000000000 +0200
++++ asis-3.15p-src/asis/a4g-gnat_int.ads	2003-06-09 22:34:06.000000000 +0200
+@@ -69,7 +69,7 @@
+    -- Compiler Variables & Routines --
+    -----------------------------------
+ 
+-   Gcc      : constant String := "gcc";
++   Gcc      : constant String := "gnatgcc";
+ 
+    Nul_Argument_List : constant Argument_List (1 .. 0) := (others => null);
+ 
+diff -Naur asis-3.15p-src.orig/Makefile.stub asis-3.15p-src/Makefile.stub
 --- asis-3.15p-src.orig/Makefile.stub	2002-10-24 10:13:16.000000000 +0200
-+++ asis-3.15p-src/Makefile.stub	2005-12-15 12:11:19.785794750 +0100
++++ asis-3.15p-src/Makefile.stub	2003-06-09 22:34:06.000000000 +0200
 @@ -1,8 +1,8 @@
  #host system
 -host := $(shell gcc -dumpmachine)
@@ -12,35 +24,15 @@ diff -ru asis-3.15p-src.orig/Makefile.stub asis-3.15p-src/Makefile.stub
  
  # Asis specific directories
  GNAT_DIR=../gnat
-@@ -48,11 +48,11 @@
- 
- #  GNAT specific flags
- ADA_FLAGS_FOR_TOOLS= -gnaty -gnatwu -gnatwe
--ADA_FLAGS_FOR_ASISLIB= -gnatg -gnatwu -gnatwe
-+ADA_FLAGS_FOR_ASISLIB= -gnatwu
- 
- # GNATMAKE specific flags
- GMFLAGS=
+@@ -55,4 +55,4 @@
  
  # GCC backend specific flags
  CFLAGS= -O2 -g
 -CC=gcc
 +CC=gnatgcc
-diff -ru asis-3.15p-src.orig/asis/a4g-gnat_int.ads asis-3.15p-src/asis/a4g-gnat_int.ads
---- asis-3.15p-src.orig/asis/a4g-gnat_int.ads	2002-10-24 10:13:16.000000000 +0200
-+++ asis-3.15p-src/asis/a4g-gnat_int.ads	2005-12-15 12:11:02.952742750 +0100
-@@ -69,7 +69,7 @@
-    -- Compiler Variables & Routines --
-    -----------------------------------
- 
--   Gcc      : constant String := "gcc";
-+   Gcc      : constant String := "gnatgcc";
- 
-    Nul_Argument_List : constant Argument_List (1 .. 0) := (others => null);
- 
-diff -ru asis-3.15p-src.orig/obj/Makefile asis-3.15p-src/obj/Makefile
+diff -Naur asis-3.15p-src.orig/obj/Makefile asis-3.15p-src/obj/Makefile
 --- asis-3.15p-src.orig/obj/Makefile	2002-10-24 10:13:17.000000000 +0200
-+++ asis-3.15p-src/obj/Makefile	2005-12-15 12:11:02.956743000 +0100
++++ asis-3.15p-src/obj/Makefile	2003-06-09 22:36:00.000000000 +0200
 @@ -1,8 +1,7 @@
  include ../Makefile.stub
 -IDIR=$(INSTALL_DIR)/asis

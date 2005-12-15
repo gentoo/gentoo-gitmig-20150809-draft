@@ -1,30 +1,37 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.15 2005/12/15 14:42:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.1 2005/12/15 14:42:18 george Exp $
 
-inherit gnat eutils
+inherit eutils gnat
 
-S="${WORKDIR}/${P}-src"
+My_PV="3_4_4-20041123"
+S="${WORKDIR}/${PN}-${My_PV}.src"
 DESCRIPTION="The Ada Semantic Interface Specification queries and services provide a consistent interface to information within the Ada Program Library created at compile time."
-SRC_URI="http://gd.tuwien.ac.at/languages/ada/gnat/3.15p/asis/${P}-src.tgz"
-HOMEPAGE="http://www.gnat.com/"
+SRC_URI="mirror://sourceforge/gnat-${PN}/${PN}-${My_PV}.src.tar.gz"
+RESTRICT="nomirror"
+
+HOMEPAGE="http://gnat-asis.sourceforge.net/"
 
 LICENSE="GMGPL"
-DEPEND="=dev-lang/gnat-3.15p*"
+DEPEND="=dev-lang/gnat-3.44*
+	app-text/texi2html"
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/${P}.diff
+	sed -i -e "s:gcc:gnatgcc:" Makefile.stub
+	sed -i -e "s:gcc:gnatgcc:" asis/a4g-gnat_int.ads
+	cp ${S}/gnat/gnat-3.4.4/* ${S}/gnat/
 }
 
 src_compile() {
 	emake -C obj libasis.a CFLAGS="${ADACFLAGS} -fPIC" \
-		CC=gnatgcc RM="rm -f" || die "Failed while compiling ASIS"
+		CC=gnatgcc RM="rm -f" GNATSRC=${S}/gnat/gnat-3.4.4 \
+		|| die "Failed while compiling ASIS"
 	emake -C documentation || die "Failed while compiling documentation"
 
 	# Build the shared library
@@ -38,6 +45,10 @@ src_compile() {
 	${ADAMAKE} gnatelim-driver -o gnatelim ${MAKEFLAGS}
 	cd "${S}/tools/gnatstub"
 	${ADAMAKE} gnatstub-driver -o gnatstub ${MAKEFLAGS}
+	cd "${S}/tools/semtools"
+	${ADAMAKE} adadep -o adadep ${MAKEFLAGS}
+	${ADAMAKE} adasubst -o adasubst ${MAKEFLAGS}
+#	cd "${S}"
 }
 
 src_install () {
@@ -78,6 +89,8 @@ src_install () {
 	dobin tools/asistant/asistant
 	dobin tools/gnatelim/gnatelim
 	dobin tools/gnatstub/gnatstub
+	dobin tools/semtools/adadep
+	dobin tools/semtools/adasubst
 
 	#set up environment
 	dodir /etc/env.d
