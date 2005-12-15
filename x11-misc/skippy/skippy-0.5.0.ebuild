@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.8 2005/07/25 23:31:49 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.9 2005/12/15 13:28:19 herbs Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://thegraveyard.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="virtual/x11
 	virtual/xft"
