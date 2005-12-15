@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.6.ebuild,v 1.1 2005/12/10 03:20:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.6.ebuild,v 1.2 2005/12/15 18:27:50 mr_bones_ Exp $
 
 inherit eutils
 
 MY_PV=${PV//./-}
-MY_PV=${MY_PV/_}
+MY_PV=${MY_PV/_/}
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
 SRC_URI="mirror://sourceforge/ogre/${PN}-linux_osx-v${MY_PV}.tar.bz2"
