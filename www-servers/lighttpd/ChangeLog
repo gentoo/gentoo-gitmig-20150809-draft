@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.54 2005/12/15 13:03:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.55 2005/12/15 18:39:19 ka0ttic Exp $
+
+  15 Dec 2005; Aaron Walker <ka0ttic@gentoo.org> -lighttpd-1.4.6.ebuild:
+  Err forgot to actually rm 1.4.6.
 
 *lighttpd-1.4.8 (15 Dec 2005)
 
