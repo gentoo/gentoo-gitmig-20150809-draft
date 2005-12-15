@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.1 2005/11/21 17:24:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.2 2005/12/15 21:48:48 flameeyes Exp $
 
 inherit wxwidgets flag-o-matic eutils
 
@@ -17,7 +17,7 @@ ECVS_MODULE="gpac"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="amr debug jpeg mad ffmpeg javascript aac ogg vorbis oss png sdl theora truetype wxwindows xml2 xvid pic"
+IUSE="amr debug jpeg mad ffmpeg javascript aac ogg vorbis oss png sdl theora truetype wxwindows xml2 xvid"
 S=${WORKDIR}/${PN}
 
 RDEPEND="jpeg? ( media-libs/jpeg )
@@ -89,8 +89,6 @@ src_compile() {
 		$(use_enable xml2 svg) \
 		$(use_enable xvid) ||
 		die "configure failed"
-
-	use pic && make OPTFLAGS="${CFLAGS} -fPIC" -C M4Systems
 
 	make OPTFLAGS="${CFLAGS}" || die "emake failed."
 }

@@ -1,7 +1,17 @@
-MD5 54165dfdb61bf5616a82ce5b88ce21e7 ChangeLog 810
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55683cbd49252bcde023d6e04913aaff ChangeLog 956
 MD5 9ad278193077b6ebdc824745ba8600c2 files/digest-gpac-0.2.1 143
 MD5 0ad24b83fa693541f7e11f96479712c7 files/digest-gpac-0.4.0 179
 MD5 1c649e710e682d92d42ffa69d945c8f1 files/gpac-0.4.0-downloader.patch 508
 MD5 b1903ea2936f4dfef488f1d3e877e2fe gpac-0.2.1.ebuild 2367
-MD5 898f111f7783896f2476b300c000ba53 gpac-0.4.0.ebuild 3053
+MD5 94cefdf320ee9c041141dcd9dc972fd2 gpac-0.4.0.ebuild 2993
 MD5 cb378e7131783653c967c6365ca31a16 metadata.xml 347
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoeTMAiZjviIA2XgRAgoqAKCZyjOHRnns6foZ+So4C3PCNOQL6QCgouXJ
+YnkW4whN8UFDGvxKyaThCM8=
+=gEmp
+-----END PGP SIGNATURE-----
