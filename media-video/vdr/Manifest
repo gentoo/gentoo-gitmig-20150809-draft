@@ -1,4 +1,4 @@
-MD5 c1a6a25181fa136eb66dc6a899d6cf23 ChangeLog 4621
+MD5 a3755d53188c57d830bce5349e6875fb ChangeLog 4716
 MD5 0d386d3861b6fc42122c42da4bef26f8 files/1.3.27/vdr-1.3.27-SourceCaps-lnb-sharing.diff 7138
 MD5 f45571c5192376c05c3acc204fbdfef8 files/1.3.27/vdr-1.3.27-SourceCaps.diff 7152
 MD5 05d546888439560f03f1857d32af2062 files/1.3.34/SourceCaps-1.3.33-lnb-sharing.patch 7959
@@ -21,4 +21,4 @@ MD5 87020b2df159d1d7923e84efe0eaabdd vdr-1.3.27.ebuild 4195
 MD5 26f3570eb89de4680ee6cd1c88c63570 vdr-1.3.34-r1.ebuild 4450
 MD5 e7a975689d83d7caea4aaae9920da05e vdr-1.3.34-r2.ebuild 4496
 MD5 af87ded338a303219caaa063a181c4e8 vdr-1.3.34.ebuild 4184
-MD5 aa59bf1dfb7726245fd4794c40fb9c40 vdr-1.3.36.ebuild 4758
+MD5 f88307e724311bd4365aed80941aeab1 vdr-1.3.36.ebuild 4755
