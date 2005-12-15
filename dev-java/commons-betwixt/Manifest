@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 5bc6b5f9cb9975bd3e1f667280e051ac ChangeLog 1154
 MD5 42497afa88c2cf81d6402ee3451bf7fc commons-betwixt-0.6-r1.ebuild 1462
-MD5 8cb658f6607db38744a63b8b626f96dd ChangeLog 981
-MD5 1eb638c237e8835b9fe6b49a60e42d9d metadata.xml 739
-MD5 c4db26920b75dccce46c479139741605 files/digest-commons-betwixt-0.6-r1 75
+MD5 99bc76040f49977d74d5afc8786d4bdf commons-betwixt-0.7.ebuild 1815
 MD5 3b892742ca91101232da276492fa254c files/commons-betwixt-0.6-noget.patch 980
+MD5 09366969e8959783230e9edd31dba372 files/commons-betwixt-0.7-notests.patch 1171
+MD5 c4db26920b75dccce46c479139741605 files/digest-commons-betwixt-0.6-r1 75
+MD5 0f3f6cf2fc69aa991b4f06a5c63bc0c4 files/digest-commons-betwixt-0.7 75
+MD5 1eb638c237e8835b9fe6b49a60e42d9d metadata.xml 739
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC05L8/rLF9B432nYRAnfqAJ9ZIBTg+RE5B+SfQNz0cUW55948kQCePj1y
-SuAQ9jTDFi7Dp63gR/pVhHw=
-=vneM
+iD8DBQFDoP0ondWRXhKOboURAk+dAJ9fzWeoqRwadV2/NlzLDzEDw7PEwACg6ZjA
+cOL9DRwkWOq4FYH25GKsULM=
+=EgBX
 -----END PGP SIGNATURE-----
