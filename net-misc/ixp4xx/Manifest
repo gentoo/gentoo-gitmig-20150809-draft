@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 23b963a130bdcda35378204d039ac0f5 ChangeLog 342
 MD5 675368a824117e921676cd8bc6cf132d files/2.1/10-oe-ixethdb-header.patch 652
 MD5 5e919605e629a4f9c38ac1eb578743d9 files/2.1/11-oe-bit-macro.patch 230
@@ -19,12 +16,5 @@ MD5 55eb00eaf207c8ed04b41671f5dd1196 files/2.1/43-yvasilev-Makefile-ixp400_eth.p
 MD5 5976fd3d796c3e10247ee43e4e84d9ee files/2.1/50-oemod-ixp400_eth.patch 5052
 MD5 b5d51953e27b05d766183c207e60ed25 files/2.1/README 52
 MD5 a714fc17ff2a0f235d5a4464d2d848d9 files/digest-ixp4xx-2.1 236
-MD5 7a22658be5b140cf3d9a003b921307b2 ixp4xx-2.1.ebuild 1595
+MD5 82c5e4b654a1a824b337fc717d0c4b36 ixp4xx-2.1.ebuild 1597
 MD5 a32931a71aafd6c9f2550b5560cbe22a metadata.xml 178
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoLTXgIKl8Uu19MoRAibWAJ97RjKv/XAB74CGTxC66io6mZP6NgCfbPDR
-Fn5YjppZ5B+YvaCiFy28ac8=
-=2T/0
------END PGP SIGNATURE-----
