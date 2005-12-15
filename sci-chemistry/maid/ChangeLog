@@ -1,0 +1,13 @@
+# ChangeLog for sci-chemistry/maid
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/ChangeLog,v 1.1 2005/12/15 20:33:37 spyderous Exp $
+
+*maid-20011112 (15 Dec 2005)
+
+  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/fix-compilation.patch, +files/fix-warnings.patch, +metadata.xml,
+  +maid-20011112.ebuild:
+  MAID does automatic fitting of protein X-ray crystallography electron
+  density maps. It can correctly build about 60% of alpha carbons on
+  medium-resolution maps and about 80% on high-resolution maps.
+
