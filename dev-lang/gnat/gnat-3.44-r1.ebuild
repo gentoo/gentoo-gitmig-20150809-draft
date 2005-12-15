@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r1.ebuild,v 1.1 2005/12/15 09:44:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r1.ebuild,v 1.2 2005/12/15 10:48:17 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -121,17 +121,14 @@ src_compile() {
 
 	cd "${GNATBUILD}"
 	emake bootstrap || die "bootstrap failed"
-	echo "bootstrap done" >> ${WORKDIR}/status
 
 	einfo "building gnatlib_and_tools"
 	# make rts honor user defined CFLAGS
 	MAKEOPTS=-j1 emake -C gcc gnatlib_and_tools || die "gnatlib_and_tools failed"
-	echo "gnatlib_and_tools done" >> ${WORKDIR}/status
 
 	einfo "building shared lib"
 	rm -f gcc/ada/rts/*.{o,ali} || die
 	MAKEOPTS=-j1 emake -C gcc gnatlib-shared LIBRARY_VERSION=3.4 || die "gnatlib-shared failed"
-	echo "gnatlib-shared done" >> ${WORKDIR}/status
 }
 
 src_install() {
