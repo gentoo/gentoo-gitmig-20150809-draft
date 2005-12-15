@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.4 2005/07/08 05:21:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.5 2005/12/15 15:10:29 spyderous Exp $
+
+  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  rasmol-2.7.2.1.1.ebuild:
+  Add modular X dependencies.
 
   02 Jan 2005; Olivier Fisette <ribosome@gentoo.org> -rasmol-2.7.1.1.ebuild,
   rasmol-2.7.2.1.1.ebuild:
