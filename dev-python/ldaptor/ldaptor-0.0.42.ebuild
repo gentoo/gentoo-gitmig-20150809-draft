@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.1 2005/11/28 12:36:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.42.ebuild,v 1.2 2005/12/15 17:46:05 marienz Exp $
 
 inherit distutils eutils
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://www.inoi.fi/open/trac/ldaptor"
-SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.tar.gz
+	doc? ( mirror://gentoo/${P}-dia-pictures.tar.gz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,7 +24,6 @@ DEPEND=">=dev-python/twisted-2
 	)
 	doc? (
 		dev-python/epydoc
-		app-office/dia
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
 	)
@@ -35,6 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-trial-2.1-compat.patch"
+	cp "${WORKDIR}/ldaptor-pictures/"*.dia.png doc/
 }
 
 src_compile() {

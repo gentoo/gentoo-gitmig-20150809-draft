@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.13 2005/11/28 12:45:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.14 2005/12/15 17:46:05 marienz Exp $
+
+  15 Dec 2005; Marien Zwart <marienz@gentoo.org> ldaptor-0.0.42.ebuild:
+  Use pregenerated images instead of running dia from the ebuild (bug #104910).
 
   28 Nov 2005; Marien Zwart <marienz@gentoo.org> ldaptor-0.0.6.ebuild:
   Fix DEPEND: this version does not work with twisted-2.
