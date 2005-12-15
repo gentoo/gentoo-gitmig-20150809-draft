@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9m.ebuild,v 1.1 2005/12/12 21:40:43 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9n.ebuild,v 1.1 2005/12/15 09:47:35 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
