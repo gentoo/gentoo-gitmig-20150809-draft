@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.52 2005/09/13 19:27:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.53 2005/12/16 10:58:09 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> faad2-2.0-r7.ebuild:
+  Move elibtoolize after autoretooling so that it's called with the final
+  autotools support. See bug #106176.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> faad2-2.0-r7.ebuild:
   Mark 2.0-r7 stable on alpha

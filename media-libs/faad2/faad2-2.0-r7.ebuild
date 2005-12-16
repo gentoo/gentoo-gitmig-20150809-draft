@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r7.ebuild,v 1.6 2005/09/13 19:27:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r7.ebuild,v 1.7 2005/12/16 10:58:09 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -43,11 +43,6 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-amd64.patch
-
-	# Get the xmms plugin to behave
-	cd ${S}
-	elibtoolize
-
 }
 
 src_compile() {
@@ -61,6 +56,7 @@ src_compile() {
 		libtoolize --automake --copy	&& \
 		automake --add-missing --copy	&& \
 		autoconf || die "Couldn't build configuration file"
+	elibtoolize
 
 	# mp4v2 needed for rhythmbox
 	# drm needed for nothing but doesn't hurt
