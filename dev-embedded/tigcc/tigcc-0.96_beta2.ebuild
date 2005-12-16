@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.3 2005/08/25 18:22:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.4 2005/12/16 11:58:42 flameeyes Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ src_compile() {
 	cd ${WORKDIR}/build/gcc
 
 	CFLAGS="$CFLAGS" ${WORKDIR}/gcc-${BASE_GCC}/configure --target=m68k-coff \
-		--with-gnu-as --with-as=${WORKDIR}/build/binutils/gas/as-new --with-gnu-ld \
+		--with-gnu-as --with-as=${WORKDIR}/build/binutils/gas/as-new \
 		--disable-nls --disable-multilib --disable-shared --enable-static \
 		--disable-threads \
 		|| die "gcc - configure"
