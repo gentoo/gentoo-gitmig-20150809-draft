@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/iceicons
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.7 2005/09/29 10:15:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.8 2005/12/16 13:18:33 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> iceicons-0.10.0.ebuild:
+  Replace root:root in root:0. Bug #103563.
 
   29 Sep 2005; Mamoru KOMACHI <usata@gentoo.org> iceicons-0.10.0.ebuild:
   Changed cp options to -pPR for non-GNU userlands; bug #103487.
