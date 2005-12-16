@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/xpde-0.5.1.ebuild,v 1.3 2005/12/04 04:37:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/xpde-0.5.1.ebuild,v 1.4 2005/12/16 11:51:59 flameeyes Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 	dodir /opt/xpde/bin/applets
 
 	dodir /opt/xpde/share
-	cp -a defaultdesktop ${D}/opt/xpde/share
+	cp -pPR defaultdesktop ${D}/opt/xpde/share
 
 	exeinto /opt/xpde/bin
 	doexe *.so* startxpde xpde

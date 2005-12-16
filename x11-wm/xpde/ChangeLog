@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xpde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.11 2005/12/04 04:37:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.12 2005/12/16 11:51:59 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> xpde-0.5.1.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   04 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> xpde-0.3.5.ebuild,
   xpde-0.4.0.ebuild, xpde-0.5.1.ebuild:

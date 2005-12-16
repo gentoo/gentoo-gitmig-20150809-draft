@@ -1,11 +1,21 @@
-MD5 e65fdbb0075fc6d3f2b69d41285173c8 ChangeLog 1887
-MD5 3d3d2fca2d64d77ba0b529ab632668b0 xpde-0.3.5.ebuild 1671
-MD5 0c6d8255f51983b92e29d74e752ac42c xpde-0.4.0.ebuild 1671
-MD5 128e026fcc0f80c7efb01190d6e455a0 xpde-0.5.1.ebuild 979
-MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f910781b15513b8741669bbf591eb52b ChangeLog 2005
 MD5 97e6c2dc937af7b7d66566cc25a8d558 files/digest-xpde-0.3.5 72
 MD5 7d9936062181818ce6a8d0f2bccee241 files/digest-xpde-0.4.0 73
+MD5 f564d18dae82d810d1b58ec1a2ef7050 files/digest-xpde-0.5.1 63
 MD5 db1a32cc23b76d0feb1ff8c3790bb543 files/install-config.sh 220
 MD5 974815ed8d41ed47a88ecc145c156d87 files/xpde 149
-MD5 f564d18dae82d810d1b58ec1a2ef7050 files/digest-xpde-0.5.1 63
 MD5 bff5a4d143be6617f29157b266614bc9 files/xpde-0.5.1-gentoo.diff 394
+MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
+MD5 3d3d2fca2d64d77ba0b529ab632668b0 xpde-0.3.5.ebuild 1671
+MD5 0c6d8255f51983b92e29d74e752ac42c xpde-0.4.0.ebuild 1671
+MD5 d9057c73f147e923884826ede59cbd36 xpde-0.5.1.ebuild 985
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoqprAiZjviIA2XgRAgK+AKCBKnTm+Pc3Iq+qgl/RGn+tjIhxiwCeJ/LV
+05Ga0FT63uPqe/3vjFMZ9ks=
+=zyr/
+-----END PGP SIGNATURE-----
