@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/jdbc3-firebird-1.5.6.ebuild,v 1.1 2005/12/15 22:19:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/jdbc3-firebird-1.5.6.ebuild,v 1.2 2005/12/16 18:22:06 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -18,6 +18,7 @@ RDEPEND=">=virtual/jre-1.4
 		dev-java/log4j"
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
+		dev-java/ant-core
 		${RDEPEND}
 		jikes? ( dev-java/jikes )
 		source? ( app-arch/zip )"
