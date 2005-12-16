@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.1 2005/12/12 22:05:49 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.2 2005/12/16 10:59:32 araujo Exp $
 
 inherit ghc-package
 
@@ -20,8 +20,6 @@ DEPEND="virtual/ghc
 
 src_unpack() {
 	unpack ${A}
-	# Don't create a $(ghc-libdir)/hs-plugins/ subdirectory.
-	sed -i "s:\$(PREFIX)\/lib/hs-\$(PACKAGE):$(ghc-libdir):" ${S}/config.mk.in
 	# for package management
 	sed -i 's:\$(GHC_PKG) -u:\${GHC_PKGF} -u:' ${S}/Makefile
 
@@ -44,11 +42,9 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX=${D}/$(ghc-libdir) \
-		  LIBDIR=${D}/$(ghc-libdir) install
+	emake PREFIX="${D}/usr" install
 	ghc-setup-pkg
-	#emake PREFIX=${D}/$(ghc-libdir) register # then we don't need --force in ghc-pkg
-	emake register
+	emake PREFIX="${D}/usr" register # then we don't need --force in ghc-pkg
 	ghc-install-pkg
 
 	dodoc AUTHORS README TODO VERSION
@@ -57,4 +53,3 @@ src_install() {
 		dohtml ${WORKDIR}/${PN}/*
 	fi
 }
-
