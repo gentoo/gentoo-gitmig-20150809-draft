@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.0.023.ebuild,v 1.2 2005/07/04 21:55:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.0.023.ebuild,v 1.3 2005/12/16 11:08:55 flameeyes Exp $
 
 inherit rpm
 
@@ -84,8 +84,8 @@ src_install () {
 	dodoc ${S}/lgpltext
 	dodoc ${S}/clicense
 	dodir ${instdir}
-	cp -a opt/intel/cc*/9.0/* ${D}/${instdir}
-	cp -a opt/intel/idb*/9.0/* ${D}/${instdir}
+	cp -pPR opt/intel/cc*/9.0/* ${D}/${instdir}
+	cp -pPR opt/intel/idb*/9.0/* ${D}/${instdir}
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/05icc-ifc || die
 	exeinto ${instdir}/bin
