@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.6a.ebuild,v 1.3 2005/11/03 06:47:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.6a.ebuild,v 1.4 2005/12/16 12:04:55 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 
 src_compile() {
 	elibtoolize
-	econf --with-gnu-ld --enable-glib --enable-exiv2 \
+	econf --enable-glib --enable-exiv2 \
 		`use_enable static` `use_enable nls` || die "econf failed"
 	make || die "compile failed"
 }
