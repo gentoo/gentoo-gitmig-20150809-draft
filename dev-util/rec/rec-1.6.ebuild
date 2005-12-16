@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/rec-1.6.ebuild,v 1.2 2005/12/15 15:34:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/rec-1.6.ebuild,v 1.3 2005/12/16 03:22:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ S=${WORKDIR}
 src_unpack() {
 	unzip -L -d ${S} -q ${DISTDIR}/${A} || die
 }
-	
+
 src_compile() {
 	sed -i 's#\(^.*$\)#/opt/rec/\1#g' proto.lst
 }
