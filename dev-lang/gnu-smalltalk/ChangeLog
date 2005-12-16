@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.15 2005/12/13 03:50:49 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.16 2005/12/16 08:12:48 halcy0n Exp $
+
+  16 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gnu-smalltalk-2.1.12.ebuild:
+  Stable on x86; bug #115378
 
 *gnu-smalltalk-2.2 (13 Dec 2005)
 
