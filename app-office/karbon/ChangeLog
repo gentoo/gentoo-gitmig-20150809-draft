@@ -1,6 +1,9 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.22 2005/12/13 03:48:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.23 2005/12/16 01:27:03 yoswink Exp $
+
+  16 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org> karbon-1.4.2.ebuild:
+  Stable on alpha wrt bug #112840
 
   13 Dec 2005; Joseph Jezak <josejx@gentoo.org> karbon-1.4.2.ebuild:
   Marked ppc stable for bug #112840.
