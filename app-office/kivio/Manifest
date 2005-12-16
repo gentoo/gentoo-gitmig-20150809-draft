@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08b784e9487998807d23b21dfd13999a ChangeLog 2439
+MD5 68617e10df0630e6b144b82bf4a313cb kivio-1.4.2.ebuild 848
+MD5 c32f282e2aaedf170b5d1139752dcef9 kivio-1.4.1.ebuild 845
+MD5 d1244d1d7526b8f9c008f1c5cfb91b39 kivio-1.3.5.ebuild 1002
+MD5 15aae52acce1d13c4dff921097246331 ChangeLog 2548
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kivio-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kivio-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kivio-1.4.2 68
-MD5 d1244d1d7526b8f9c008f1c5cfb91b39 kivio-1.3.5.ebuild 1002
-MD5 c32f282e2aaedf170b5d1139752dcef9 kivio-1.4.1.ebuild 845
-MD5 17bd9e6c67b8614ce1bb8c715b6e29f6 kivio-1.4.2.ebuild 848
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnkV4csIHjyDViGQRAhXIAJwOj+xhr9KbDFsX/smm5lpdFeLFCgCg2Scu
-LNi6KUfuAI85uqsaWdfUi2A=
-=pjf6
------END PGP SIGNATURE-----
