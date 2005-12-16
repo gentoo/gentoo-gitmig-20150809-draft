@@ -1,0 +1,5 @@
+MD5 e1ce3f9dfa3b5fe4b24f12986b16a188 ChangeLog 445
+MD5 d98808dd58ce813fdabb0f09d0d39cf7 eden-5.3.ebuild 1721
+MD5 99f04eda8e71dce7c182ce9cde317874 files/digest-eden-5.3 62
+MD5 82372e25898d568e7439b62f685b94fb files/makefile-fixes.patch 837
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
