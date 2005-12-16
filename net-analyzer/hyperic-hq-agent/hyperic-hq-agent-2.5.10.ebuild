@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.5.10.ebuild,v 1.1 2005/11/22 04:29:13 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.5.10.ebuild,v 1.2 2005/12/16 11:41:56 flameeyes Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_install() {
 	newins ${FILESDIR}/hyperic-hq-agent.init-${PV} hyperic-hq-agent
 
 	dodir ${AGENT_HOME}
-	cp -a ${S}/* ${D}${AGENT_HOME}
+	cp -pPR ${S}/* ${D}${AGENT_HOME}
 }
 
 pkg_preinst() {

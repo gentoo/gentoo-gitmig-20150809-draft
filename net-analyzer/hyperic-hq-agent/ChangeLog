@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hyperic-hq-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.10 2005/11/22 04:29:13 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.11 2005/12/16 11:41:56 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  hyperic-hq-agent-2.5.10.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
 *hyperic-hq-agent-2.5.10 (22 Nov 2005)
 
