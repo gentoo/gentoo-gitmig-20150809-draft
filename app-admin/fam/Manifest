@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a45305c42161ca05365e530617b469d ChangeLog 8095
+MD5 35d1cc0b597214c076eb74d1470e8abb ChangeLog 8335
 MD5 a23feab85a6a00218b5804e3b2827f33 fam-2.7.0-r1.ebuild 2086
-MD5 ba6e331eb9a046eb98e025ad6101721b fam-2.7.0-r2.ebuild 2105
-MD5 fdaf497e731cae45f2901c0cd1795b61 fam-2.7.0-r3.ebuild 2187
-MD5 6693a3c03d5692489c12c27a49fdeaa6 fam-2.7.0-r4.ebuild 2321
+MD5 4afdfca5a280bbf47fd9c78161ee2ea8 fam-2.7.0-r2.ebuild 2108
+MD5 f9cee5e3d759df412507b01928327dd8 fam-2.7.0-r3.ebuild 2190
+MD5 5069baf901b5f5cd222c30626bd16d95 fam-2.7.0-r4.ebuild 2316
 MD5 067a8c7dc9a851716d40256fe989928c fam-2.7.0.ebuild 1924
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0 61
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r1 61
@@ -21,7 +21,7 @@ MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi04Jr2QksT29OyARAtynAKCjvP78emQ8nFydg49sSyoZTRAx2gCfUaJR
-UQZBJED0Qd6gDuS/VVkV7nI=
-=yOIZ
+iD8DBQFDoprfAiZjviIA2XgRAstLAKCBd4516Ge/bn2yaIjmD7TR+ISJkACfRk6X
+f8z83aqoMkThXFF/DyjK7pg=
+=MDDO
 -----END PGP SIGNATURE-----

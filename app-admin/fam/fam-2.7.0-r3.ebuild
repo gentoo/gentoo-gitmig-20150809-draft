@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r3.ebuild,v 1.2 2005/10/02 11:34:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r3.ebuild,v 1.3 2005/12/16 10:45:39 flameeyes Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -31,12 +31,12 @@ src_unpack() {
 	# Fix permission problems with user* in FEATURES (#35307)
 	chmod u+w ${S}/configure
 
+	gnuconfig_update
+	libtoolize --copy --force
+
 	# Please do not remove this again - fixes $S and $D in libtool linker
 	# scripts (.la files)
 	cd ${S}; elibtoolize
-
-	gnuconfig_update
-	libtoolize --copy --force
 }
 
 src_install() {
