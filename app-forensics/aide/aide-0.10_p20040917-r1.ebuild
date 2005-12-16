@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917-r1.ebuild,v 1.1 2005/09/30 15:19:38 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917-r1.ebuild,v 1.2 2005/12/16 13:06:00 flameeyes Exp $
 
 inherit eutils
 
@@ -87,7 +87,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown root:root /var/lib/aide
+	chown root:0 /var/lib/aide
 	chmod 0755 /var/lib/aide
 
 	echo
