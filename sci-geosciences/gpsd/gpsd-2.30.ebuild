@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30.ebuild,v 1.1 2005/10/01 05:51:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30.ebuild,v 1.2 2005/12/16 12:10:52 flameeyes Exp $
 
 inherit eutils libtool distutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	distutils_python_version
-	export MY_ECONF="--with-gnu-ld --with-pic $(use_with X x) $(use_enable dbus)"
+	export MY_ECONF="--with-pic $(use_with X x) $(use_enable dbus)"
 	econf ${MY_ECONF} || die "econf failed"
 	emake LDFLAGS="${LDFLAGS} -lm" || die "emake failed"
 }
