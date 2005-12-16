@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/ortep3
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ChangeLog,v 1.1 2005/12/16 05:36:57 spyderous Exp $
+
+*ortep3-1.0.3 (16 Dec 2005)
+
+  16 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +ortep3-1.0.3.ebuild:
+  Thermal ellipsoid plot program for crystal structure illustrations.
+
