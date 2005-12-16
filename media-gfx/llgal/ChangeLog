@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/llgal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.2 2005/11/28 00:13:20 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.3 2005/12/16 14:26:07 nattfodd Exp $
+
+*llgal-0.12 (16 Dec 2005)
+
+  16 Dec 2005; Alexandre Buisse <nattfodd@gentoo.org> +llgal-0.12.ebuild:
+  Bump to 0.12, added a dependency to dev-perl/Locale-gettext.
 
 *llgal-0.11.4 (27 Nov 2005)
 
