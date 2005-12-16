@@ -26,7 +26,7 @@ MD5 a4610ec65e88f73e0b00b525467a5372 files/gdb-6.3-scanmem.patch 6652
 MD5 8b7f5c46b8dabbc9239c37f52278b971 files/gdb-6.3-uclibc.patch 8221
 MD5 8323dafe6749f0da44b8e11ebbbc96c4 files/gdb-6.4-relative-paths.patch 3147
 MD5 c8fced1c2241b098eae50b1f8c8ef463 files/gdb-6.4-scanmem.patch 6692
-MD5 20a129e5e58c07f1ad5fc0d09a1a3c75 files/gdb-6.4-sse2-register-display.patch 1470
+MD5 ec7f411b90047b1ea848513ee5676072 files/gdb-6.4-sse2-register-display.patch 1533
 MD5 78d8fa43c0e2e339346b3bc7aa10c2d9 files/gdb-6.4-uclibc.patch 2435
 MD5 7ea8f83bb7b0d70e7e6d6c8cf42292d3 files/gdb-6.x-crash.patch 678
 MD5 2a52c4cd9bf5e2667c6bc7312e179fa0 gdb-6.1.ebuild 1807
@@ -36,11 +36,9 @@ MD5 abe5b46c3552ca8670ffb68c048d4ffd gdb-6.4-r1.ebuild 3009
 MD5 f5428a658b66b60aeaa511d39cc450b3 gdb-6.4.ebuild 2996
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iQCVAwUBQ5kMsp4WFLgrx1GWAQICcwP/X6BNIopTEeo53WgXSjtJdglsMaT5mDqp
-YV6CPhBppTytyhGlpBcdUzMLtK9Pc/LOXaHoGsIrasOtjrC4l5Xw743SC/XzyT8u
-rMBtzmTCew0hOAovv4TwhqT98wo+qlWwOwo2sFW7StdNzjFoye/n8q7vMqQ5M4am
-ISuSoiuZ79w=
-=S8ZF
+iD8DBQFDoi+12+ySkm8kpY0RAjxNAKCX5q+1FY9gNL5Pff3qLfSCWPm/JACeNeDA
+DQD0r+lZ2ZhNUBGB40y5Tg4=
+=ALbN
 -----END PGP SIGNATURE-----

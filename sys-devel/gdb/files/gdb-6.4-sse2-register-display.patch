@@ -2,6 +2,7 @@ Tweak how the sse2 registers are displayed to make them
 easier to understand
 
 http://bugs.gentoo.org/92559
+http://sources.redhat.com/ml/gdb-patches/2005-06/msg00368.html
 
 --- gdb/amd64-tdep.c
 +++ gdb/amd64-tdep.c
