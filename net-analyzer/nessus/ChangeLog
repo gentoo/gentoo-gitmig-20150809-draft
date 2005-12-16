@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.71 2005/12/15 22:28:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.72 2005/12/16 17:55:16 gustavoz Exp $
+
+  16 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> nessus-2.2.6.ebuild:
+  Stable on sparc
 
   15 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> nessus-2.2.6.ebuild:
   Marking nessus suite 2.2.6 x86 stable.
