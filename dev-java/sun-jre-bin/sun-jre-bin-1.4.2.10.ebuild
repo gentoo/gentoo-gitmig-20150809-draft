@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.2 2005/11/29 09:41:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.3 2005/12/16 15:33:39 axxo Exp $
 
 inherit java eutils
 
@@ -20,7 +20,7 @@ IUSE="browserplugin nsplugin mozilla"
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
 
-RDEPEND="sys-libs/lib-compat"
+RDEPEND=""
 
 PROVIDE="virtual/jre"
 
@@ -65,14 +65,7 @@ src_unpack() {
 			fi
 		done
 	fi
-	cd ${S}
-	sed -i "s,^exec,export LD_PRELOAD=/opt/${P}/javaws/javaws-waitid.so\nexec," javaws/javaws || die "javaws sed failed"
 }
-
-src_compile() {
-	gcc -O2 -fPIC -g0 -shared -o ${S}/javaws/javaws-waitid.so ${FILESDIR}/javaws-waitid.c || die "failed to compile javaws hack"
-}
-
 
 src_install() {
 	local dirs="bin lib man javaws plugin"

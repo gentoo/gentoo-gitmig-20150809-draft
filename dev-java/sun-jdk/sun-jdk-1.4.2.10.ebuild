@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.4 2005/12/13 21:08:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.5 2005/12/16 15:30:30 axxo Exp $
 
 inherit java eutils
 
@@ -24,7 +24,6 @@ IUSE="X alsa doc browserplugin nsplugin jce mozilla examples"
 
 #glibc dep: #102423
 DEPEND=">=dev-java/java-config-1.1.5
-	>=sys-libs/glibc-2.3.5
 	sys-apps/sed
 	app-arch/unzip"
 
@@ -101,13 +100,6 @@ src_unpack() {
 			fi
 		done
 	fi
-	#javaws hack
-	cd ${S}
-	sed -i "s,^exec,export LD_PRELOAD=/opt/${P}/jre/javaws/javaws-waitid.so\nexec," jre/javaws/javaws || die "javaws sed failed"
-}
-
-src_compile() {
-	gcc -O2 -fPIC -g0 -shared -o ${S}/jre/javaws/javaws-waitid.so ${FILESDIR}/javaws-waitid.c || die "failed to compile javaws hack"
 }
 
 src_install() {

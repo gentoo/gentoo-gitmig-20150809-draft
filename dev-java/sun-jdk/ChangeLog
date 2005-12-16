@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.131 2005/12/09 20:22:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.132 2005/12/16 15:30:30 axxo Exp $
+
+  16 Dec 2005; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.4.2.10.ebuild:
+  No longer needs the javaws hack, was fixed upstream #115772
 
   09 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
   sun-jdk-1.4.2.10.ebuild, sun-jdk-1.5.0.06.ebuild:

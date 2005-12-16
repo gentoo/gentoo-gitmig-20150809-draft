@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.37 2005/12/07 22:55:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.38 2005/12/16 15:33:39 axxo Exp $
+
+  16 Dec 2005; Thomas Matthijs <axxo@gentoo.org>
+  sun-jre-bin-1.4.2.10.ebuild:
+  No longer needs the javaws hack, was fixed upstream #115772
 
 *sun-jre-bin-1.5.0.06 (07 Dec 2005)
 
