@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/selfhtml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.10 2005/08/23 20:07:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.11 2005/12/16 11:04:24 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> selfhtml-8.1.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   23 Aug 2005; Lars Weiler <pylon@gentoo.org> -selfhtml-8.0-r1.ebuild:
   Removing old versions.  Changing the cp as suggested in bug #103487.

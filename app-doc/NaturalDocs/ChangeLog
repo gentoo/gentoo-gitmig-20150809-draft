@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/NaturalDocs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.8 2005/04/24 10:55:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.9 2005/12/16 11:03:00 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  NaturalDocs-1.22-r1.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   NaturalDocs-1.22-r1.ebuild:
