@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4765 2005/12/15 23:58:59 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4766 2005/12/16 00:45:35 langthang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tuan Van <langthang@gentoo.org> (15 Dec 2005)
+# waiting on cdb keyword.
+=mail-mta/postfix-2.2.7
 
 # Ryan Phillips <rphillips@gentoo.org> (12 Dec 2005)
 # Luabind doesn't compile with the latest stable boost, and no updates
