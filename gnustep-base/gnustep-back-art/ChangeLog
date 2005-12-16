@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.30 2005/08/14 10:09:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.31 2005/12/16 11:18:07 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gnustep-back-art-0.9.6-r1.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   gnustep-back-art-0.9.5.ebuild:

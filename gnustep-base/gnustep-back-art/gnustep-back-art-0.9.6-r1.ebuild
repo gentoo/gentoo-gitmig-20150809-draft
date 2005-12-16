@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.6-r1.ebuild,v 1.2 2005/07/16 19:23:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.6-r1.ebuild,v 1.3 2005/12/16 11:18:07 flameeyes Exp $
 
 inherit gnustep
 
@@ -56,6 +56,6 @@ src_install() {
 	cd ${S}
 	egnustep_env
 	mkdir -p ${D}/$(egnustep_system_root)/Library/Fonts
-	cp -a Fonts/Helvetica.nfont ${D}/$(egnustep_system_root)/Library/Fonts
+	cp -pPR Fonts/Helvetica.nfont ${D}/$(egnustep_system_root)/Library/Fonts
 }
 
