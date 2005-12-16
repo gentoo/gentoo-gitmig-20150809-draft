@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-1.11.ebuild,v 1.1 2005/01/22 10:24:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-1.11.ebuild,v 1.2 2005/12/16 11:43:37 flameeyes Exp $
 
 DESCRIPTION="A program that creates emergency boot disks/CDs using your kernel, tools and modules."
 HOMEPAGE="http://www.mondorescue.org/"
@@ -45,7 +45,7 @@ src_install() {
 	doins deplist.txt dev.tgz isolinux-H.cfg isolinux.cfg \
 	msg-txt sys-disk.raw.gz syslinux-H.cfg syslinux.cfg
 
-	cp -a Mindi/ aux-tools/ rootfs/ ${D}/usr/share/mindi/
+	cp -pPR Mindi/ aux-tools/ rootfs/ ${D}/usr/share/mindi/
 
 	dodoc CHANGES INSTALL README TODO
 }
