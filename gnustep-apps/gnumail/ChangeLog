@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.18 2005/06/10 21:06:24 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.19 2005/12/16 11:16:08 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gnumail-1.2.0.20050606.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
 *gnumail-1.2.0.20050606 (10 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20050606.ebuild,v 1.2 2005/07/16 15:43:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20050606.ebuild,v 1.3 2005/12/16 11:16:08 flameeyes Exp $
 
 inherit gnustep
 
@@ -56,9 +56,9 @@ src_install() {
 		egnustep_doc || die
 	fi
 
-	use xface && cp -a ${S}/Bundles/Face/Face.bundle ${D}$(egnustep_install_domain)/Library/GNUMail/
-	use crypt && cp -a ${S}/Bundles/PGP/PGP.bundle ${D}$(egnustep_install_domain)/Library/GNUMail/
-	use emoticon && cp -a ${S}/Bundles/Emoticon/Emoticon.bundle ${D}$(egnustep_install_domain)/Library/GNUMail/
+	use xface && cp -pPR ${S}/Bundles/Face/Face.bundle ${D}$(egnustep_install_domain)/Library/GNUMail/
+	use crypt && cp -pPR ${S}/Bundles/PGP/PGP.bundle ${D}$(egnustep_install_domain)/Library/GNUMail/
+	use emoticon && cp -pPR ${S}/Bundles/Emoticon/Emoticon.bundle ${D}$(egnustep_install_domain)/Library/GNUMail/
 
 	egnustep_package_config
 }
