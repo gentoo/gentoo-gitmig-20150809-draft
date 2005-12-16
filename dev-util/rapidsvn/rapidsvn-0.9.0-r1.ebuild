@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.1 2005/11/27 20:23:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.2 2005/12/16 10:50:33 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -54,9 +54,9 @@ src_compile() {
 	else
 		ewarn "wxgtk-2.4-config not found. Compiling with default wxGTK."
 	fi
-	elibtoolize --portage
 
 	libtoolize --copy --force
+	elibtoolize --portage
 	econf	--with-svn-lib=/usr/$(get_libdir) \
 		--with-svn-include=/usr/include \
 		--with-neon-config=/usr/bin/neon-config \

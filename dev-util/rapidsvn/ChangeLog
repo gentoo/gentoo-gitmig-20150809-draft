@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.22 2005/11/27 20:23:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.23 2005/12/16 10:50:33 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  rapidsvn-0.9.0-r1.ebuild:
+  Move elibtoolize after libtoolize, see bug #106176.
 
 *rapidsvn-0.9.0-r1 (27 Nov 2005)
 
