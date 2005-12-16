@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.ebuild,v 1.1 2005/07/03 02:46:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.ebuild,v 1.2 2005/12/16 06:38:49 halcy0n Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/incrtcl/${MY_P}.tar.gz"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 
 DEPEND="dev-lang/tcl"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.23 2005/07/03 02:46:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.24 2005/12/16 06:38:49 halcy0n Exp $
+
+  16 Dec 2005; Mark Loeser <halcy0n@gentoo.org> itcl-3.3.ebuild:
+  Stable on x86; bug #115177
 
 *itcl-3.3 (03 Jul 2005)
 
