@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.10 2005/09/03 23:19:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.11 2005/12/16 12:05:56 flameeyes Exp $
 
 DESCRIPTION="A modular player and encoder/transcoder for music and video."
 HOMEPAGE="http://tcvp.sourceforge.net/"
@@ -31,7 +31,6 @@ DEPEND=">=dev-libs/libtc-1.1.0
 
 src_compile() {
 	local myconf
-	myconf="--with-gnu-ld"
 	use alsa || myconf="${myconf} --disable-alsa"
 	use dvd || myconf="${myconf} --disable-dvd"
 	use encode || myconf="${myconf} --disable-lame --disable-aac_enc"

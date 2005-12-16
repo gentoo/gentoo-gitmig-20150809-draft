@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tcvp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/ChangeLog,v 1.8 2005/09/03 23:19:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/ChangeLog,v 1.9 2005/12/16 12:05:56 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> tcvp-0.2.0.ebuild:
+  Remove --with-gnu-ld option, bug #108386.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> tcvp-0.2.0.ebuild:
   Don't install COPYING file.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.6 2005/11/19 19:09:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.7 2005/12/16 12:07:08 flameeyes Exp $
 
 DESCRIPTION="GePhex is a modular video effect framework."
 HOMEPAGE="http://www.gephex.org"
@@ -31,7 +31,6 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	local myconf
-	myconf="--with-gnu-ld"
 	econf \
 	`use_enable mmx` \
 	`use_enable static` \
