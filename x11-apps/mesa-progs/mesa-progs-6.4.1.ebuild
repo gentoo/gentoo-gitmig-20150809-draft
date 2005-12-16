@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.6 2005/12/15 23:48:47 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.7 2005/12/16 10:09:08 herbs Exp $
 
 inherit toolchain-funcs
 
@@ -31,8 +31,6 @@ pkg_setup() {
 		CONFIG="freebsd"
 	elif use x86; then
 		CONFIG="linux-dri-x86"
-	# amd64 people need to look at this file to deal with lib64 issues, unless
-	# they're fine with hardcoded lib64.
 	elif use amd64; then
 		CONFIG="linux-dri-x86-64"
 	elif use ppc; then
@@ -55,6 +53,9 @@ src_unpack() {
 	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
 	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
 	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
+
+	# Just executables here, no need to compile with -fPIC
+	echo "PIC_FLAGS =" >> ${HOSTCONF}
 }
 
 src_compile() {
