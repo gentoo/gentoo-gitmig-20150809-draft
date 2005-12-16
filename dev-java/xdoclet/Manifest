@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 681850b0140883586d9081c0462305da xdoclet-1.2.2.ebuild 1504
-MD5 23eedf023b42c74cebfac4887dbc1231 xdoclet-1.2.1.ebuild 1476
-MD5 fcdbc4334683064f6fd297c9db0751c2 ChangeLog 1878
-MD5 2f0b8cbc0e0adf36b678725712a3e3b7 metadata.xml 511
-MD5 36b04e593588b126ef0e905e4ead4fcf files/xdoclet-1.2.2-buildfile.patch 2518
-MD5 0c3cfa2caf87830c10fb14bc83840c98 files/xdoclet-1.2.2-interface.patch 10893
+MD5 50caca02c1a5f533f96bbb5a9472caf0 ChangeLog 2020
 MD5 6d6f9189f4ecffc98c1b539a0b647cc3 files/digest-xdoclet-1.2.1 139
 MD5 5a7e75c3d62a58edfa3c2416acfbb69a files/digest-xdoclet-1.2.2 67
+MD5 36b04e593588b126ef0e905e4ead4fcf files/xdoclet-1.2.2-buildfile.patch 2518
+MD5 0c3cfa2caf87830c10fb14bc83840c98 files/xdoclet-1.2.2-interface.patch 10893
+MD5 2f0b8cbc0e0adf36b678725712a3e3b7 metadata.xml 511
+MD5 23eedf023b42c74cebfac4887dbc1231 xdoclet-1.2.1.ebuild 1476
+MD5 e25a78c51378484801913287a2a308ad xdoclet-1.2.2.ebuild 1539
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2/G0/rLF9B432nYRAggJAKCixM/OMpVqmSMPlczNbe5ajLMjYACgyOgC
-3ZM98fhtLOy9DSCc+yQ/TzI=
-=j+ax
+iD8DBQFDohzvndWRXhKOboURAgqNAKDx0HkEUK8ixSf12fsjxBhg8moRBgCguVcm
+rl39O78nkN7iEXlYyjWWK3c=
+=Z+gM
 -----END PGP SIGNATURE-----
