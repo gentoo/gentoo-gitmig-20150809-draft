@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.10 2004/09/06 07:25:16 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.11 2005/12/16 11:45:24 flameeyes Exp $
 
 IUSE=""
 DESCRIPTION="Clock applet for AfterStep"
@@ -47,6 +47,6 @@ src_compile() {
 src_install () {
 	dobin asclock
 	dodir usr/share/asclock
-	cp -a themes/* ${D}/usr/share/asclock
+	cp -pPR themes/* ${D}/usr/share/asclock
 	dodoc COPYING INSTALL README README.THEMES TODO
 }

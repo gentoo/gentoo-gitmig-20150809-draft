@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asclock
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.10 2005/06/17 11:54:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.11 2005/12/16 11:45:24 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> asclock-2.0.12.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   17 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Added metadata.xml (afterstep herd).
