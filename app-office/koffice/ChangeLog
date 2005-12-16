@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.139 2005/12/12 20:26:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.140 2005/12/16 01:24:43 yoswink Exp $
+
+  16 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  koffice-1.4.2-r4.ebuild:
+  Stable on Alpha wrt security bug #114429
 
   12 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   koffice-1.4.2-r4.ebuild:
@@ -91,6 +95,10 @@
   11 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
   koffice-1.4.1-r1.ebuild:
   Stable on alpha, bug 108411.
+
+  11 Oct 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  koffice-1.4.1-r1.ebuild:
+  Stable on alpha due to security bug #108411
 
   11 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> koffice-1.4.1-r1.ebuild:
   Stable on amd64, bug 108411.
