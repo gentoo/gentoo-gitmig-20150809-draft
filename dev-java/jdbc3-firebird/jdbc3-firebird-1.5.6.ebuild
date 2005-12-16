@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/jdbc3-firebird-1.5.6.ebuild,v 1.2 2005/12/16 18:22:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/jdbc3-firebird-1.5.6.ebuild,v 1.3 2005/12/16 22:27:49 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	antflags="jars"
+	local antflags="jars"
 	use doc && antflags="${antflags} javadocs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "Building failed."
