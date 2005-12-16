@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.17.ebuild,v 1.1 2005/11/20 03:05:15 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.17.ebuild,v 1.2 2005/12/16 13:12:06 flameeyes Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_install() {
 	keepdir /var/cfengine/inputs
 	dodir /var/cfengine/modules
 	tar jxf ${FILESDIR}/module-cfportage.tbz2 -C ${D}/var/cfengine/modules
-	fowners root:root /var/cfengine/modules/module\:cfportage
+	fowners root:0 /var/cfengine/modules/module\:cfportage
 }
 
 pkg_postinst() {
