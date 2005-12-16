@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7006c9fcd56e89b59540111e16fd124 kspread-1.4.2.ebuild 1164
 MD5 3d2a2ae8f85c854c5d0968e926d78f89 kspread-1.4.2-r1.ebuild 1220
 MD5 b321e3aa2a3ef585f20372811611557e kspread-1.4.1.ebuild 1158
@@ -9,3 +12,10 @@ MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kspread-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kspread-1.4.2 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kspread-1.4.2-r1 68
 MD5 f1f58cce115f40fcba31a4976b61d260 files/kspread-1.4.2-gcc41.patch 451
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDohYI3og80iZgVQgRAl0xAJ4kt689wc7Jm1ZvOBdSOzNtvoHQSgCcCZvF
+2LoTUNJCdvDltXQKKKryi/M=
+=j82I
+-----END PGP SIGNATURE-----
