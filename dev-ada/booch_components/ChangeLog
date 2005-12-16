@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/booch_components
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.3 2005/01/01 17:23:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.4 2005/12/16 11:05:40 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  booch_components-20030815.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
 *booch_components-20030815 (14 Oct 2003)
 

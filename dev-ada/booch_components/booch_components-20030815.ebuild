@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.4 2005/01/01 17:23:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.5 2005/12/16 11:05:40 flameeyes Exp $
 
 IUSE=""
 
@@ -31,7 +31,7 @@ src_install () {
 	#makefile does not do much, so we need to install stuff manually
 	dodir /usr/lib/ada/adalib/${PN} /usr/lib/ada/adainclude/${PN}
 	cd ${S}/test
-	cp -a *.{o,ali} ${D}/usr/lib/ada/adalib/${PN}
+	cp -pPR *.{o,ali} ${D}/usr/lib/ada/adalib/${PN}
 	cd ${S}
 	cp *.ad? ${D}/usr/lib/ada/adainclude/${PN}
 
