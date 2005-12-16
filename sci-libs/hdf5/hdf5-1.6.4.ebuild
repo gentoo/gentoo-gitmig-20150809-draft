@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.1 2005/04/17 20:55:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.2 2005/12/16 12:12:09 flameeyes Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 
 	use mpi && \
 	export CC="/usr/bin/mpicc"
-	./configure ${myconf} --enable-linux-lfs --with-gnu-ld \
+	./configure ${myconf} --enable-linux-lfs \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--infodir=/usr/share/info \
