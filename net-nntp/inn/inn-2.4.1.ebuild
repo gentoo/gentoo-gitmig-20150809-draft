@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.2 2005/01/23 22:18:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.3 2005/12/16 12:09:31 flameeyes Exp $
 
 inherit fixheadtails ssl-cert eutils libtool flag-o-matic
 
@@ -66,7 +66,6 @@ src_compile() {
 		--enable-libtool \
 		--enable-setgid-inews \
 		--enable-uucp-rnews \
-		--with-gnu-ld \
 		--without-tcl \
 		$(use_with perl) \
 		$(use_with python) \
