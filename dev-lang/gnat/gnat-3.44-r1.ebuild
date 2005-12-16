@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r1.ebuild,v 1.2 2005/12/15 10:48:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r1.ebuild,v 1.3 2005/12/16 12:00:08 flameeyes Exp $
 
 inherit gnat flag-o-matic
 
@@ -92,8 +92,6 @@ src_compile() {
 		--enable-languages="c,ada" \
 		--enable-libada \
 		--with-gcc \
-		--with-gnu-ld \
-		--with-gnu-as \
 		--enable-threads=posix \
 		--enable-shared \
 		--with-system-zlib \
