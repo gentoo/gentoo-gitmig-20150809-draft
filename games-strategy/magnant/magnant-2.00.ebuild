@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/magnant/magnant-2.00.ebuild,v 1.3 2005/10/26 01:15:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/magnant/magnant-2.00.ebuild,v 1.4 2005/12/16 13:10:58 flameeyes Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ src_unpack() {
 	tar zxf magnant.dev_${PV}.tar.gz || die "unpacking tar"
 	rm -r data/doc
 	chmod -R go-w doc data
-	chown -R root:root doc data
+	chown -R root:0 doc data
 }
 
 src_install() {
