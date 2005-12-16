@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.1 2005/12/15 14:42:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.2 2005/12/16 08:49:23 george Exp $
 
 inherit eutils gnat
 
@@ -18,7 +18,7 @@ DEPEND="=dev-lang/gnat-3.44*
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 src_unpack() {
