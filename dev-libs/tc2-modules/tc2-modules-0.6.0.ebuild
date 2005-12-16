@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2-modules/tc2-modules-0.6.0.ebuild,v 1.4 2004/10/03 21:18:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2-modules/tc2-modules-0.6.0.ebuild,v 1.5 2005/12/16 12:03:28 flameeyes Exp $
 
 IUSE="static"
 
@@ -18,7 +18,6 @@ RDEPEND=">=dev-libs/tc2-0.6.0"
 
 src_compile() {
 	local myconf
-	myconf="--with-gnu-ld"
 	use static && myconf="${myconf} --enable-static"
 	econf ${myconf} || die "configure failed"
 	make || die

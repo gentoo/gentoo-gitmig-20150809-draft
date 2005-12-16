@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tc2-modules
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2-modules/ChangeLog,v 1.8 2005/05/08 22:19:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2-modules/ChangeLog,v 1.9 2005/12/16 12:03:28 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  tc2-modules-0.6.0.ebuild:
+  Remove --with-gnu-ld option, bug #108386.
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org> tc2-modules-0.5.2.ebuild:
   stable on ia64

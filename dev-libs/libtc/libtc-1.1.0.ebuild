@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/libtc-1.1.0.ebuild,v 1.6 2005/04/01 04:37:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/libtc-1.1.0.ebuild,v 1.7 2005/12/16 12:01:27 flameeyes Exp $
 
 IUSE="static"
 
@@ -17,7 +17,6 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	local myconf
-	myconf="--with-gnu-ld"
 	use static && myconf="${myconf} --enable-static"
 	econf ${myconf} || die "configure failed"
 	make || die

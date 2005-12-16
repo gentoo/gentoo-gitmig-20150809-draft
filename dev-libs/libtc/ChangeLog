@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.9 2005/04/22 09:35:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.10 2005/12/16 12:01:27 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> libtc-1.1.0.ebuild:
+  Remove --with-gnu-ld option, bug #108386.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> libtc-1.0.3.ebuild:
   stable on amd64
