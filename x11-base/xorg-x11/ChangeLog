@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.495 2005/12/14 23:17:21 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.496 2005/12/16 22:47:11 geoman Exp $
+
+  16 Dec 2005; Stephen P. Becker <geoman@gentoo.org>
+  xorg-x11-7.0.0_rc3-r1.ebuild:
+  added ~mips keyword
 
   14 Dec 2005; Herbie Hopkins <herbs@gentoo.org>
   xorg-x11-7.0.0_rc3-r1.ebuild:
