@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.130 2005/12/15 16:17:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.131 2005/12/16 19:39:51 gustavoz Exp $
+
+  16 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  vanilla-sources-2.4.32.ebuild:
+  Stable on sparc
 
 *vanilla-sources-2.6.14.4 (15 Dec 2005)
 
