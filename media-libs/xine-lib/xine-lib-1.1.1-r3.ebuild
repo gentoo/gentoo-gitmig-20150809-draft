@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1.ebuild,v 1.2 2005/11/22 10:34:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.1 2005/12/16 18:05:41 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,20 +8,20 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="17"
+PATCHLEVEL="19"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts"
-RESTRICT="nostrip"
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts asf
+ffmpeg debug"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
 	X? ( || ( (
@@ -56,6 +56,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
+	ffmpeg? ( ~media-video/ffmpeg-0.4.9_p20051120 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -82,10 +83,15 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	# This is still experimental patch
+	EPATCH_EXCLUDE="050_all_novell--alsa-resume-fix.patch" \
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
 
-	# AT_M4DIR="m4" eautoreconf
+	AT_M4DIR="m4" eautoreconf
 	elibtoolize
+
+	cd "${S}/src/libffmpeg"
+	epatch "${FILESDIR}/CVE-2005-4048.patch"
 }
 
 # check for the X11 path for a given library
@@ -118,12 +124,11 @@ src_compile() {
 		ewarn ""
 	fi
 
-	local myconf
+	# debug useflag used to emulate debug make targets. See bug #112980 and the
+	# xine maintainers guide.
+	use debug && append-flags -DDEBUG
 
-	# the win32 codec path should ignore $(get_libdir) and always use lib
-	use win32codecs \
-		&& myconf="${myconf} --with-w32-path=/usr/$(get_libdir)/win32" \
-		|| myconf="${myconf} --disable-asf"
+	local myconf
 
 	# enable/disable appropiate optimizations on sparc
 	[[ "${PROFILE_ARCH}" == "sparc64" ]] && myconf="${myconf} --enable-vis"
@@ -207,12 +212,16 @@ src_compile() {
 		$(use_enable arts) \
 		$(use_enable esd) \
 		$(use_enable vcd) --without-internal-vcdlibs \
+		\
+		$(use_enable asf) \
+		$(use_enable win32codecs w32dll) \
+		$(use_with ffmpeg external-ffmpeg) \
 		--disable-polypaudio \
 		--disable-optimizations \
 		${myconf} \
+		--with-w32-path=/usr/lib/win32 \
 		--disable-dependency-tracking || die "econf failed"
 
-		#$(use_with ffmpeg external-ffmpeg) \
 		#$(use_with dvdnav external-dvdnav) \
 		#$(use_enable macos macosx-video) $(use_enable macos coreaudio) \
 		# This will be added when polypaudio will be added to portage.
@@ -228,4 +237,14 @@ src_install() {
 	dohtml doc/faq/faq.html doc/hackersguide/*.html doc/hackersguide/*.png
 
 	rm -rf ${D}/usr/share/doc/xine
+}
+
+pkg_postinst() {
+	if use win32codecs && ! use asf; then
+		einfo "You choose to build win32codecs support but disabled ASF"
+		einfo "demuxer. This way you'll have support for win32codecs in"
+		einfo "formats like AVI or Matroska, but not in WMV/WMA files."
+		einfo
+		einfo "To be able to play WMV/WMA files, please add asf useflag."
+	fi
 }

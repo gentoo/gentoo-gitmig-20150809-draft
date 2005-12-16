@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.280 2005/11/29 00:05:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.281 2005/12/16 18:05:41 flameeyes Exp $
+
+*xine-lib-1.1.1-r3 (16 Dec 2005)
+*xine-lib-1.1.1-r2 (16 Dec 2005)
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/CVE-2005-4048.patch, -xine-lib-1.1.0-r7.ebuild,
+  -xine-lib-1.1.1.ebuild, -xine-lib-1.1.1-r1.ebuild,
+  +xine-lib-1.1.1-r2.ebuild, +xine-lib-1.1.1-r3.ebuild:
+  Added patch to fix ffmpeg problems, -r2 will always use internal ffmpeg, -r3
+  will use the external if +ffmpeg is used. Don't force to not strip, as it
+  seems to work fine anyway.
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> xine-lib-1.1.1-r1.ebuild:
   Added ~sparc keyword wrt bug #113107.

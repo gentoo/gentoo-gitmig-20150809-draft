@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r7.ebuild,v 1.3 2005/11/22 10:34:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r2.ebuild,v 1.1 2005/12/16 18:05:41 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="16"
+PATCHLEVEL="17"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -20,7 +20,7 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts ffmpeg"
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts"
 RESTRICT="nostrip"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -56,7 +56,6 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050906 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -72,9 +71,10 @@ DEPEND="${RDEPEND}
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 	v4l? ( virtual/os-headers )
 	dev-util/pkgconfig
-	>=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.59
 	nls? ( sys-devel/gettext )"
+
+#	>=sys-devel/automake-1.7
+#	>=sys-devel/autoconf-2.59
 
 S=${WORKDIR}/${MY_P}
 
@@ -83,10 +83,12 @@ src_unpack() {
 	cd ${S}
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
-	epatch ${FILESDIR}/xine-lib-formatstring.patch
 
-	AT_M4DIR="m4" eautoreconf
+	# AT_M4DIR="m4" eautoreconf
 	elibtoolize
+
+	cd "${S}/src/libffmpeg"
+	epatch "${FILESDIR}/CVE-2005-4048.patch"
 }
 
 # check for the X11 path for a given library
@@ -118,8 +120,6 @@ src_compile() {
 		ewarn "difficult to fix. Please have that in mind."
 		ewarn ""
 	fi
-
-	append-lfs-flags
 
 	local myconf
 
@@ -212,10 +212,10 @@ src_compile() {
 		$(use_enable vcd) --without-internal-vcdlibs \
 		--disable-polypaudio \
 		--disable-optimizations \
-		$(use_with ffmpeg external-ffmpeg) \
 		${myconf} \
 		--disable-dependency-tracking || die "econf failed"
 
+		#$(use_with ffmpeg external-ffmpeg) \
 		#$(use_with dvdnav external-dvdnav) \
 		#$(use_enable macos macosx-video) $(use_enable macos coreaudio) \
 		# This will be added when polypaudio will be added to portage.
