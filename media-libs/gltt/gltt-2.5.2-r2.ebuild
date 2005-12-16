@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r2.ebuild,v 1.1 2005/11/04 16:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r2.ebuild,v 1.2 2005/12/16 10:59:23 flameeyes Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -31,8 +31,8 @@ src_unpack() {
 src_compile() {
 
 	gnuconfig_update
-	elibtoolize
 	libtoolize --copy --force
+	elibtoolize
 
 	econf \
 		--with-x \

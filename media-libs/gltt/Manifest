@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cde34d178da445987fe572a0bfb5c1f2 ChangeLog 1828
 MD5 c4d1b2834ffc880f6f754d7d69122d9f files/digest-gltt-2.5.2-r1 62
 MD5 263af9813051b67e00fa2aca9ce6f72d files/digest-gltt-2.5.2-r2 134
 MD5 7534bfb8a0b88efec38f382dd8343d96 gltt-2.5.2-r1.ebuild 873
 MD5 930dff5e493b64dfa681f7e2dfd3a319 gltt-2.5.2-r2.ebuild 1005
 MD5 91e1faf27b0409588dba2100ff878aa8 metadata.xml 353
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDop4XAiZjviIA2XgRAqvaAJ942s0CB+r55C/XD+FUB9Vs2vbJFwCg6+wC
+yoG6j+srSJDaPWeVjPCtJ0g=
+=2a6/
+-----END PGP SIGNATURE-----
