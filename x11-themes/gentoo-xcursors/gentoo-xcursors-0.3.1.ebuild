@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/gentoo-xcursors-0.3.1.ebuild,v 1.3 2005/11/26 09:38:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/gentoo-xcursors-0.3.1.ebuild,v 1.4 2005/12/16 11:46:39 flameeyes Exp $
 
 DESCRIPTION="A high quality set of animated mouse cursors"
 HOMEPAGE="http://www.gentoo.org/"
@@ -18,7 +18,7 @@ S="${WORKDIR}/cursors"
 
 src_install() {
 	dodir /usr/share/cursors/xorg-x11
-	cp -ar ${S}/* ${D}/usr/share/cursors/xorg-x11/ || die
+	cp -pPR ${S}/* ${D}/usr/share/cursors/xorg-x11/ || die
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-xcursors
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.4 2005/11/26 09:38:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.5 2005/12/16 11:46:39 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gentoo-xcursors-0.3.1.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   26 Nov 2005; Simon Stelling <blubb@gentoo.org>
   gentoo-xcursors-0.3.1.ebuild:
