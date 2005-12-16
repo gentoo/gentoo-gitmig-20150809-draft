@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.5 2005/12/16 19:15:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.6 2005/12/16 21:51:34 seemant Exp $
+
+*synaptics-0.14.4-r2 (16 Dec 2005)
+
+  16 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/synaptics-0.14.4-r2-makefile.patch,
+  +files/synaptics-0.14.4-r2-makefile-fpic.patch,
+  +synaptics-0.14.4-r2.ebuild:
+  ok, this should finally fix those bugs -- thanks to: Pierre Poissinger for
+  the split patch and for testing. Thanks to Donnie and Bryan for hanging in
+  there with me. Thanks to everyone on those bugs for their patience. Also,
+  I'd like to thank the academy...
 
   16 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
   synaptics-0.14.4-r1.ebuild:
