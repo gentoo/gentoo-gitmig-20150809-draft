@@ -1,11 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1e6d6a451139244c7d57286b6a0715d ChangeLog 7016
+MD5 bf5d5469b806db134f2801455d23bde9 ChangeLog 7132
 MD5 6b4c83400b7b7a44afb53e1a7ac388af metadata.xml 300
-MD5 b4484246bf67568d435f04d966de0349 partimage-0.6.4-r3.ebuild 4214
+MD5 440756d73c2bc47a569d9b318cc00992 partimage-0.6.4-r3.ebuild 4219
 MD5 81cdf27a53ac482a9fc511d02ee7e94a partimage-0.6.4-r4.ebuild 4800
+MD5 12ba93fccf3cc6ddb16d47744ebae6a9 files/partimage-0.6.4-datadir-path.patch 1669
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r3 68
+MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r4 68
 MD5 60b6a720fc1d32cb9325428d7aeb49c2 files/partimage-0.6.4-LP64-fixes.patch 1773
 MD5 8fea14f38734fb0bbf6239671f5fff4b files/partimage-0.6.4-chown.patch 1660
 MD5 d4ac3ff2ae9e3225c14bbb1fc1373df9 files/partimage-0.6.4-fflush-before-re-read-partition-table.patch 401
@@ -18,12 +17,3 @@ MD5 724ac3895dc01f277b34dab251ec47bb files/partimaged.conf 424
 MD5 86ccd8a7d116f22182ae60e01da1bfff files/partimaged.init 756
 MD5 938ecb802f7e26ff8df88404f0648c7c files/partimagedusers.5 1263
 MD5 b854c74900be1967b69b5997a434897c files/servercert.cnf 1096
-MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r4 68
-MD5 12ba93fccf3cc6ddb16d47744ebae6a9 files/partimage-0.6.4-datadir-path.patch 1669
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDd3ingMUyd/cdjWsRAs70AJoDV2n8OnPjZ5J0fHptUypHm6IEfgCgiqv0
-j1JlkJCgi+BQKK7yHy24+Iw=
-=SJ2L
------END PGP SIGNATURE-----
