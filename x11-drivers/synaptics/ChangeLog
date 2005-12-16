@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.4 2005/12/15 21:32:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.5 2005/12/16 19:15:26 seemant Exp $
+
+  16 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
+  synaptics-0.14.4-r1.ebuild:
+  the best_version call was a bad move -- switched it to has_version. Thanks to
+  Kevin Quinn
 
   15 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/synaptics-0.14.4-makefile.patch, -synaptics-0.14.4.ebuild:

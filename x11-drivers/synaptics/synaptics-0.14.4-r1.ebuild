@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.4-r1.ebuild,v 1.1 2005/12/15 21:31:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.4-r1.ebuild,v 1.2 2005/12/16 19:15:26 seemant Exp $
 
 inherit toolchain-funcs eutils
 
@@ -39,7 +39,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15"
 	then
-		if has_version ">=x11-base/xorg-x11-7.0" || best_version "x11-base/xorg-server"
+		if has_version ">=x11-base/xorg-x11-7.0" || has_version ">=x11-base/xorg-server-0.99"
 		then
 			exeinto /usr/$(get_libdir)/xorg/modules/input
 			doexe synaptics_drv.so
