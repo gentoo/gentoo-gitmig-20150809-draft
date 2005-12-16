@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.57 2005/12/14 07:04:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.58 2005/12/16 15:57:32 spider Exp $
+
+*hal-0.5.5.1-r1 (16 Dec 2005)
+
+  16 Dec 2005; Spider <spider@gentoo.org>  hal-0.5.5.1-r1.ebuild,
+  files/hal-0.5.5.1-RBC.patch:
+  Adding the patch from 
+  http://thread.gmane.org/gmane.comp.freedesktop.hal/3915 which unbreaks old 
+  iPods (gen3 and below) on firewire.
 
   14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> hal-0.4.8.ebuild,
   hal-0.5.4.ebuild, hal-0.5.5.1.ebuild:
