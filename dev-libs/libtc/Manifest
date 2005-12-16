@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 974a7a6eb8d87ac1101ddb6d25fd5985 ChangeLog 1097
 MD5 63f9814782b3f808164a3a725c07f9f1 files/digest-libtc-0.6.4 63
 MD5 723d3717e87022654089503e0591bd1c files/digest-libtc-1.0.3 63
@@ -6,3 +9,10 @@ MD5 dd0349cbec88ff6c5bd4e104b9ac8bb9 libtc-0.6.4.ebuild 779
 MD5 87c87a0dc8925687fc8bfb47a604d3fe libtc-1.0.3.ebuild 792
 MD5 6adaaf9c38165c010d4b1f382ee4a882 libtc-1.1.0.ebuild 807
 MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoqyjAiZjviIA2XgRAjs7AKCX9jaAlsEvxkyi8JDdm7zwz3Un1QCfTGK8
+S4hlEsEUyfW30iH+gZOoYEI=
+=9NXa
+-----END PGP SIGNATURE-----
