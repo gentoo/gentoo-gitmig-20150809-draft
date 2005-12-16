@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetmon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/ChangeLog,v 1.5 2004/11/24 23:38:27 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/ChangeLog,v 1.6 2005/12/16 13:17:14 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> wmnetmon-0.2.ebuild:
+  Replace root:root in root:0. Bug #103563.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmnetmon-0.2.ebuild:
   Added ~sparc keyword.

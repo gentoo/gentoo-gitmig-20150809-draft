@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/wmnetmon-0.2.ebuild,v 1.8 2004/11/24 23:38:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/wmnetmon-0.2.ebuild,v 1.9 2005/12/16 13:17:14 flameeyes Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}p5/
@@ -21,7 +21,7 @@ src_compile() {
 
 src_install() {
 	dobin wmnetmon
-	fowners root:root /usr/bin/wmnetmon
+	fowners root:0 /usr/bin/wmnetmon
 	fperms 4755 /usr/bin/wmnetmon
 	dodoc README Changes wmnetmonrc
 }

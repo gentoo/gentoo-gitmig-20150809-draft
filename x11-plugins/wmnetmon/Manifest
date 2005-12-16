@@ -1,4 +1,14 @@
-MD5 354842860f38939b21927c4bc397a79e ChangeLog 634
-MD5 98d39d507ac46f99d9a982d40ba0e57b metadata.xml 413
-MD5 41683e20ca45c39ba232b8c0202701cb wmnetmon-0.2.ebuild 1007
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b7ccb50de122fa4cbb7ce649a02202d ChangeLog 757
 MD5 67391716cf398fd1aa6130abe6f096be files/digest-wmnetmon-0.2 65
+MD5 98d39d507ac46f99d9a982d40ba0e57b metadata.xml 413
+MD5 8d861c88c1a5fb90efc6c34be870697c wmnetmon-0.2.ebuild 1008
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDor5zAiZjviIA2XgRAqQIAKCa9a2ZRuBK0qhzpRDoRDVROYChUACgoc9+
+bEDNQI9qyB5CRdXLZRVoj1M=
+=pDLF
+-----END PGP SIGNATURE-----
