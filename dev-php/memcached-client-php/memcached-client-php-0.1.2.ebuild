@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/memcached-client-php-0.1.2.ebuild,v 1.10 2005/04/22 14:49:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/memcached-client-php-0.1.2.ebuild,v 1.11 2005/12/16 11:11:34 flameeyes Exp $
 
 DESCRIPTION="Alternative high-speed PHP classes for interaction with MemCached"
 HOMEPAGE="http://phpca.cytherianage.net/memcached"
@@ -16,7 +16,7 @@ src_install() {
 	doins memcached-client.php
 	dodoc README LICENSE ChangeLog
 	dodir /usr/share/doc/${PF}
-	cp -ra doc ${D}/usr/share/doc/${PF}/html
+	cp -pPR doc ${D}/usr/share/doc/${PF}/html
 	prepalldocs
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/memcached-client-php
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/ChangeLog,v 1.10 2005/04/22 14:49:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/ChangeLog,v 1.11 2005/12/16 11:11:34 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  memcached-client-php-0.1.2.ebuild:
+  Remove GNUish cp -a call. Bug #103487.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   memcached-client-php-0.1.2.ebuild:
