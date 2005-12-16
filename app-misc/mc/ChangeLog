@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.83 2005/09/01 20:44:37 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.84 2005/12/16 11:55:49 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> mc-4.6.0-r14.ebuild:
+  Remove --with-gnu-ld option, bug #108386.
 
   01 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org> mc-4.6.0-r14.ebuild:
   removed obsolete unicode dependency (see bug 104490).
