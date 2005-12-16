@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.4 2005/10/24 03:50:17 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.5 2005/12/16 11:56:51 flameeyes Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -91,7 +91,6 @@ src_compile() {
 		--with-docdir=/usr/share/doc/${PF} \
 		--libdir=/usr/$(get_libdir) \
 		--enable-depend \
-		--with-gnu-ld \
 		--with-maxbackends=${MAX_CONNECTIONS} \
 		--sysconfdir=/etc \
 		$myconf || die
