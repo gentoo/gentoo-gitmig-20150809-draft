@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.1 2005/12/16 18:05:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.2 2005/12/16 23:21:59 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="19"
+PATCHLEVEL="20"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -56,7 +56,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
-	ffmpeg? ( ~media-video/ffmpeg-0.4.9_p20051120 )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051120 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -83,8 +83,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# This is still experimental patch
-	EPATCH_EXCLUDE="050_all_novell--alsa-resume-fix.patch" \
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
 
 	AT_M4DIR="m4" eautoreconf
