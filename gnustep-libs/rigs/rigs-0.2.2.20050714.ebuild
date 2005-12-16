@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/rigs/rigs-0.2.2.20050714.ebuild,v 1.2 2005/07/15 16:47:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/rigs/rigs-0.2.2.20050714.ebuild,v 1.3 2005/12/16 11:21:05 flameeyes Exp $
 
 inherit gnustep
 
@@ -70,7 +70,7 @@ src_install() {
 	if use doc; then
 		cd ${S}
 		dodir ${GNUSTEP_LOCAL_ROOT}/Library/Documentation/RIGS
-		cp -a Examples ${D}/${GNUSTEP_LOCAL_ROOT}/Library/Documentation/RIGS
+		cp -pPR Examples ${D}/${GNUSTEP_LOCAL_ROOT}/Library/Documentation/RIGS
 		rm -Rf \
 			${D}/${GNUSTEP_LOCAL_ROOT}/Library/Documentation/RIGS/Examples/CVS \
 			${D}/${GNUSTEP_LOCAL_ROOT}/Library/Documentation/RIGS/Examples/Base/CVS \
