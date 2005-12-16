@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.2 2005/10/08 00:48:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.3 2005/12/16 01:34:31 ka0ttic Exp $
+
+*kdesvn-0.7.1 (16 Dec 2005)
+
+  16 Dec 2005; Aaron Walker <ka0ttic@gentoo.org> +kdesvn-0.7.1.ebuild:
+  Version bump; updated subversion dep to >=1.2. Thanks once again to Thomas
+  Fischer in bug #111784.
 
   08 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> kdesvn-0.6.2.ebuild:
   Marked ~amd64.
