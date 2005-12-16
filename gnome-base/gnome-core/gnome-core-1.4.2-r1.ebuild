@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.13 2005/05/29 22:29:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.14 2005/12/16 10:56:13 flameeyes Exp $
 
 IUSE="kde nls cups"
 
@@ -48,10 +48,10 @@ src_unpack() {
 		> configure.in
 
 	# Libtoolize
-	elibtoolize
 	aclocal -I macros
 	automake --add-missing
 	autoconf
+	elibtoolize
 }
 
 src_compile() {
