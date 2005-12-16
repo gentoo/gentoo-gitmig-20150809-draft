@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/exolabcore
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.5 2005/05/30 19:16:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.6 2005/12/16 01:19:30 nichoj Exp $
+
+  16 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  exolabcore-0.3.7_p20050205.ebuild:
+  Removed log4j dependency (bug #100275). Some minor cleanup.
 
   30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   exolabcore-0.3.7_p20050205.ebuild:
