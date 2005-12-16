@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1611 2005/12/16 00:19:53 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1612 2005/12/16 16:46:49 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1051,6 +1051,7 @@ sci-biology/clustalw-mpi:static_pairalign - Use static (as opposed to dynamic) s
 sci-biology/hmmer:pvm - Add support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities
+sci-chemistry/eden:double-precision - more precise calculations at the expense of speed
 sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
 sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
