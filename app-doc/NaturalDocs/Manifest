@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 35b02aa53664d968c9851172f6d5dd6d ChangeLog 1018
 MD5 a47d2c492814102698b63e8b424125d4 NaturalDocs-1.22-r1.ebuild 1566
 MD5 ba8d02225abe2fef772ee5f7eff2cbf1 files/digest-NaturalDocs-1.22-r1 137
 MD5 0a1c85907143b1e0cb3a1cfbab12c5f2 metadata.xml 652
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDop7wAiZjviIA2XgRApGtAKDuCyBtWqVbXjTy+2GO6llx52DaMwCg5bhW
+ldQjHk6DQ2mFzRl+W5p+JTM=
+=3h5W
+-----END PGP SIGNATURE-----
