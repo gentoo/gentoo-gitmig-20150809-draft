@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.8.ebuild,v 1.2 2005/11/23 15:41:53 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.9.ebuild,v 1.1 2005/12/16 20:09:05 wolf31o2 Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc9'
 VERSION_E2FSPROGS='1.38'
 VERSION_LVM2='2.00.25'
-VERSION_PKG='3.3'
+VERSION_PKG='3.3.9'
 VERSION_UNIONFS='1.1.1'
-VERSION_UDEV="075"
+VERSION_UDEV="077"
 VERSION_KLIBC="1.1.1"
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="http://dev.gentoo.org/~rocket/genkernel/${P}.tar.bz2
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/genkernel-pkg-${VERSION_PKG}.tar.bz2
+SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/${P}.tar.bz2
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/genkernel-pkg-${VERSION_PKG}.tar.bz2
 	 http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
 	 ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
 	 ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
@@ -25,7 +25,7 @@ SRC_URI="http://dev.gentoo.org/~rocket/genkernel/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="bootsplash ibm"
 
 DEPEND="sys-fs/e2fsprogs
@@ -41,6 +41,15 @@ src_unpack() {
 src_install() {
 	dodir /etc
 	cp ${S}/genkernel.conf ${D}/etc
+	# This block updates genkernel.conf
+	sed -i -e "s:VERSION_DMAP:$VERSION_DMAP:" \
+		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
+		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
+		-e "s:VERSION_LVM2:$VERSION_LVM2:" \
+		-e "s:VERSION_UNIONFS:$VERSION_UNIONFS:" \
+		-e "s:VERSION_UDEV:$VERSION_UDEV:" \
+		-e "s:VERSION_KLIBC:$VERSION_KLIBC:" \
+		${D}/etc/genkernel.conf || die "Could not adjust versions"
 
 	dodir /usr/share/genkernel
 	use ibm && cp ${S}/ppc64/kernel-2.6-pSeries ${S}/ppc64/kernel-2.6 || cp ${S}/ppc64/kernel-2.6.g5 ${S}/ppc64/kernel-2.6
