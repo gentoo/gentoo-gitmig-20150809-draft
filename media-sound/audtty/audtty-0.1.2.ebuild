@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.1.ebuild,v 1.1 2005/12/15 23:04:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.2.ebuild,v 1.1 2005/12/16 00:11:46 chainsaw Exp $
 
 IUSE=""
 
@@ -17,6 +17,6 @@ DEPEND="sys-libs/ncurses
 	media-sound/audacious"
 
 src_install() {
-	dobin audtty
+	make DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 }
