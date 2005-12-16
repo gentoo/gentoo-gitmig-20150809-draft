@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/platon
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.1 2005/12/16 05:32:46 spyderous Exp $
+
+*platon-20051215 (16 Dec 2005)
+
+  16 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +platon-20051215.ebuild:
+  Another crystallography package. This one considers itself a versatile,
+  SHELX-97 compatible, multipurpose tool.
+
