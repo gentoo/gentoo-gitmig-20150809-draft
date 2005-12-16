@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 18688b6bba2d717fa1fd94ede5822b6e ChangeLog 6946
 MD5 b10d5f0e2cf2393977007cf31b6d413a files/6.0-r1/05icc-ifc 225
 MD5 b10d5f0e2cf2393977007cf31b6d413a files/6.0/05icc 225
@@ -54,3 +57,10 @@ MD5 385282dbe27e11caf860b2d6b317790e icc-8.1.028.ebuild 3821
 MD5 b0faf40e03c75af641e5a9962b03d87f icc-9.0.021.ebuild 3656
 MD5 a61a2cd347580835dce3d2c997f38fef icc-9.0.023.ebuild 3767
 MD5 e5f080f4789ca82a2ac425df46fc95b7 metadata.xml 304
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDoqBUAiZjviIA2XgRAtngAKC+m6riR6c+cDiOCCWIQfx0heO1kwCdGxZz
+jm7RDk8fZFoDwx6nBhur0rs=
+=lwC2
+-----END PGP SIGNATURE-----
