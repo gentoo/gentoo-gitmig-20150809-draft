@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90a8b21bfe0797419089980639fd6eb3 kexi-1.4.1.ebuild 1074
 MD5 01b797c688b5f719c1aa8172e7fefd1e kexi-1.4.2-r1.ebuild 1130
 MD5 3b9baebfc7db92be937ad6a4e37f4613 kexi-1.4.2.ebuild 1077
@@ -7,3 +10,10 @@ MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-kexi-1.4.1 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2 68
 MD5 5f3683b6817935e4f6269bd64398c479 files/kexi-1.4.2-gcc41.patch 1094
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDohfQ3og80iZgVQgRAjW6AJ9WSf18gdrFa8K4LcxlRrP8RFjR/wCfRXKs
+o9tDNmBJLU29h7sIz8wkE1M=
+=HKK7
+-----END PGP SIGNATURE-----
