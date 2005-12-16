@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.8 2005/10/30 19:39:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.9 2005/12/16 01:32:17 nichoj Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,6 @@ DEPEND=">=virtual/jdk-1.4
 	junit? (
 		dev-java/commons-logging
 		dev-java/junit
-		dev-java/log4j
 	)
 	jikes? ( dev-java/jikes )"
 IUSE="doc junit jikes"
@@ -37,7 +36,6 @@ src_unpack() {
 		ewarn "WARNING: Running unit tests can take a long time."
 		java-pkg_jar-from junit
 		java-pkg_jar-from commons-logging
-		java-pkg_jar-from log4j
 	fi
 }
 

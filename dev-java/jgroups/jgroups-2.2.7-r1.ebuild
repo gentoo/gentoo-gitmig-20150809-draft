@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r1.ebuild,v 1.2 2005/11/14 22:59:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r1.ebuild,v 1.3 2005/12/16 01:32:17 nichoj Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,6 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/bsh
 	dev-java/commons-logging
 	dev-java/concurrent-util
-	dev-java/log4j
 	dev-java/sun-jms"
 
 DEPEND=">=virtual/jdk-1.4
@@ -40,7 +39,6 @@ src_unpack() {
 	java-pkg_jar-from bsh
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from concurrent-util
-	java-pkg_jar-from log4j
 	java-pkg_jar-from sun-jms
 
 	use junit &&  java-pkg_jar-from junit

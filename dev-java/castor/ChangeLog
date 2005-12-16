@@ -1,9 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.16 2005/12/16 01:13:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.17 2005/12/16 01:29:14 nichoj Exp $
 
-  16 Dec 2005; Joshua Nichols <nichoj@gentoo.org> castor-0.9.7.ebuild,
-  castor-0.9.9.ebuild:
+  16 Dec 2005; Joshua Nichols <nichoj@gentoo.org> castor-0.9.5.3-r1.ebuild,
+  castor-0.9.7.ebuild, castor-0.9.9.ebuild:
   Removed log4j dependency (bug #100275).
 
   21 Nov 2005; Joshua Nichols <nichoj@gentoo.org> +castor-0.9.9.ebuild:
