@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.1 2005/12/15 15:12:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.2 2005/12/16 15:35:28 taviso Exp $
+
+  16 Dec 2005; Tavis Ormandy <taviso@gentoo.org> rec-1.6.ebuild:
+  missing unzip dep
 
 *rec-1.6 (15 Dec 2005)
 
