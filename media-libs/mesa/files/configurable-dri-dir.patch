@@ -1,0 +1,10 @@
+--- Mesa-6.4/src/glx/x11/Makefile.modular	2005-08-19 16:20:03.000000000 -0400
++++ Mesa-6.4/src/glx/x11/Makefile	2005-11-20 15:32:47.000000000 -0500
+@@ -2,6 +2,7 @@
+ include $(TOP)/configs/current
+ 
+ DEFINES += -DXF86VIDMODE -D_REENTRANT -UIN_DRI_DRIVER
++DEFINES += -DDEFAULT_DRIVER_DIR='"$(DRI_DRIVER_DIR)"'
+ 
+ C_SOURCES = \
+ 	  $(TOP)/src/mesa/glapi/glapi.c \

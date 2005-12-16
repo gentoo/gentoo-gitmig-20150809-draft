@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.1 2005/12/12 06:25:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.2 2005/12/16 02:10:04 herbs Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -50,8 +50,6 @@ pkg_setup() {
 		CONFIG="freebsd"
 	elif use x86; then
 		CONFIG="linux-dri-x86"
-	# amd64 people need to look at this file to deal with lib64 issues, unless
-	# they're fine with hardcoded lib64.
 	elif use amd64; then
 		CONFIG="linux-dri-x86-64"
 	elif use ppc; then
@@ -69,8 +67,14 @@ src_unpack() {
 
 	epatch ${FILESDIR}/makedepend-location.patch
 	epatch ${FILESDIR}/6.4-dont-install-gles-headers.patch
-	epatch ${FILESDIR}/change-default-dri-driver-dir.patch
+	# Don't change it but make it configurable and set it below - Herbs
+	#epatch ${FILESDIR}/change-default-dri-driver-dir.patch
+	epatch ${FILESDIR}/configurable-dri-dir.patch
+	epatch ${FILESDIR}/6.4-multilib-fix.patch
 	epatch ${FILESDIR}/${PV}-amd64-include-assyntax.patch
+
+	# Set default dri drivers directory
+	echo "DRI_DRIVER_DIR = /usr/$(get_libdir)/xorg/modules/dri" >> ${HOSTCONF}
 
 	# Set up linux-dri configs
 	if use sparc; then
@@ -112,10 +116,6 @@ src_unpack() {
 		# Add GLwMDrawA.c
 		echo "GLW_SOURCES += GLwMDrawA.c" >> ${HOSTCONF}
 	fi
-
-	# Fix install libdir
-	sed -i -e "s:LIB_DIR=\$1/lib:LIB_DIR=\$1/$(get_libdir):" \
-			${S}/bin/installmesa || die "sed failed"
 }
 
 src_compile() {
@@ -124,7 +124,11 @@ src_compile() {
 
 src_install() {
 	dodir /usr
-	make DESTDIR=${D}/usr install || die "Installation failed"
+	make \
+		DESTDIR=${D}/usr \
+		INCLUDE_DIR=${D}/usr/include \
+		LIB_DIR=${D}/usr/$(get_libdir) \
+		install || die "Installation failed"
 
 	##
 	# Install the actual drivers --- 'make install' doesn't install them
