@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.271 2005/12/14 05:54:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.272 2005/12/16 09:57:05 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.5.ebuild:
+  Use ${CHOST} selection instead of checking for kernel/elibc pairs. Added
+  support for DragonFly, OpenBSD and NetBSD.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; qt-3.3.4-r8.ebuild,
   qt-3.3.5.ebuild, qt-4.0.1.ebuild, qt-4.1.0_rc1.ebuild:
