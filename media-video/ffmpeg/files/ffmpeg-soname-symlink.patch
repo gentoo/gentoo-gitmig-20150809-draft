@@ -5,6 +5,30 @@ retrieving revision 1.219
 diff -u -r1.219 configure
 --- configure	11 Dec 2005 00:45:33 -0000	1.219
 +++ configure	13 Dec 2005 16:16:02 -0000
+@@ -215,12 +215,12 @@
+ dlfcn="no"
+ dlopen="no"
+ mpegaudio_hp="yes"
+-SHFLAGS='-shared -Wl,-soname,$@.$(LIBVERSION)'
++SHFLAGS='-shared -Wl,-soname,$@.$(LIBMAJOR)'
+ netserver="no"
+ need_inet_aton="no"
+ ffserver="yes"
+ ffplay="yes"
+-LIBOBJFLAGS=""
++LIBOBJFLAGS='$(PIC)'
+ LDFLAGS=-Wl,--warn-common
+ FFSLDFLAGS=-Wl,-E
+ LDCONFIG="ldconfig"
+@@ -228,6 +228,8 @@
+ LIBSUF=".a"
+ SLIBPREF="lib"
+ SLIBSUF=".so"
++SLIBNAME_WITH_VERSION='$(SLIBPREF)$(NAME)$(SLIBSUF).$(LIBVERSION)'
++SLIBNAME_WITH_MAJOR='$(SLIBPREF)$(NAME)$(SLIBSUF).$(LIBMAJOR)'
+ EXESUF=""
+ BUILDSUF=""
+ amr_nb="no"
 @@ -228,6 +228,8 @@
  LIBSUF=".a"
  SLIBPREF="lib"
