@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.88 2005/11/14 13:09:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.89 2005/12/16 00:53:01 langthang Exp $
+
+*postfix-2.2.7-r1 (16 Dec 2005)
+*postfix-2.2.7 (16 Dec 2005)
+
+  16 Dec 2005; Tuấn Văn <langthang@gentoo.org> +postfix-2.2.7.ebuild,
+  +postfix-2.2.7-r1.ebuild:
+  Patchlevel 7.
+  Add cdb support, bug #112293. Thanks to Paul Gabriel.
+  Add missing performance tuning tools. bug #115505. Thanks to Andrea Carpani.
 
   14 Nov 2005; Seemant Kulleen <seemant@gentoo.org> postfix-2.2.5.ebuild:
   Stable on amd64 wrt bug #112203
