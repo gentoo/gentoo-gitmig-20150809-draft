@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e9342b6457bde8d62a1568eceb6907d4 ChangeLog 3962
-MD5 85a7cd05a7569930a02041ec5cda33ee commons-httpclient-2.0.1.ebuild 1692
-MD5 f4ff23536c978a54310fd4476af75770 commons-httpclient-2.0.2.ebuild 1703
+MD5 bd21c39b8d572daa98f77d32d7ad8182 commons-httpclient-2.0.1.ebuild 1668
+MD5 43b9bce8bd09e8e5abaf40939bbb477b commons-httpclient-2.0.2.ebuild 1679
 MD5 e89e5f7c086f9dc41c0292f549ea2590 commons-httpclient-3.0_rc4.ebuild 1414
 MD5 22c430c6bf50bc578f8095df5fd64cc4 files/digest-commons-httpclient-2.0.1 81
 MD5 63acee983ed2a9669cd20bc47743b8d3 files/digest-commons-httpclient-2.0.2 81
@@ -11,10 +8,3 @@ MD5 d2322c9e0f16e39e0c351e74433faf6f files/digest-commons-httpclient-3.0_rc4 83
 MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
 MD5 20316ee59dc3bf35dd5c04778ae6882f files/jikes.diff 955
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoP4endWRXhKOboURAvQxAKCQrir3gHvpUUIPIm/EcPimOMkUIwCg5tIM
-8SUrudLJcizXlk9m9FYsZsw=
-=NMoP
------END PGP SIGNATURE-----

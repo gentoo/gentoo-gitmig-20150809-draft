@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a7e8619723317bf276d8eca81f4140ef ChangeLog 852
 MD5 16c385c3352e0ef59ed72e8942600d95 files/digest-mx4j-2.1.0 66
 MD5 16c385c3352e0ef59ed72e8942600d95 files/digest-mx4j-2.1.0-r1 66
 MD5 be55fe365b4d3539f734ecfb88cf1738 files/mx4j-2.1.0-gentoo.patch 4583
 MD5 7973f86372fa9120f93c1c7f5caeb4bf metadata.xml 756
-MD5 804ff345796d23a8aceb2a0b7a2af19d mx4j-2.1.0-r1.ebuild 2699
+MD5 64930db98c9c7fc81cb72ee67a50f594 mx4j-2.1.0-r1.ebuild 2658
 MD5 577e162070ac052548f55d3370d5106c mx4j-2.1.0.ebuild 1984
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjR0NndWRXhKOboURAnMEAKDzJ+J7AjHjs31nTb3J0nbrUva0xACdERbD
-FqexXtmsfw7bIZR7xVz/tRs=
-=0tIb
------END PGP SIGNATURE-----

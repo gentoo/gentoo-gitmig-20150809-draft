@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0-r1.ebuild,v 1.3 2005/11/30 03:30:08 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0-r1.ebuild,v 1.4 2005/12/16 01:05:50 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -24,7 +24,6 @@ RDEPEND=">=virtual/jre-1.4
 	~dev-java/burlap-3.0.8
 	>=dev-java/commons-logging-1.0.4
 	~dev-java/hessian-3.0.8
-	dev-java/log4j
 	=dev-java/servletapi-2.3*
 	>=dev-java/sun-jaf-bin-1.0.2
 	>=dev-java/sun-javamail-bin-1.3.1
@@ -55,7 +54,6 @@ src_unpack(){
 	# for jmx
 	java-pkg_jar-from bcel
 	java-pkg_jar-from commons-logging
-	java-pkg_jar-from log4j
 
 	# for tools
 	java-pkg_jar-from axis-1
