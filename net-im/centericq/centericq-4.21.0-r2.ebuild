@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0-r2.ebuild,v 1.1 2005/12/16 08:55:43 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0-r2.ebuild,v 1.2 2005/12/16 12:08:19 flameeyes Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myopts="--with-gnu-ld --disable-konst"
+	local myopts="--disable-konst"
 	use nls >&/dev/null && myopts="${myopts} --enable-locales-fix" || myopts="${myopts} --disable-nls"
 	use bidi >&/dev/null && myopts="${myopts} --with-fribidi"
 	use ssl >&/dev/null && myopts="${myopts} --with-ssl"
