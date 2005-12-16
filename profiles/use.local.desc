@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1610 2005/12/15 23:56:25 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1611 2005/12/16 00:19:53 langthang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -534,7 +534,6 @@ mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
 mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
-mail-mta/postfix:cdb - Adds support for Constant DataBase (CDB)
 mail-mta/qmail:gencertdaily - Generate SSL certificates daily instead of hourly
 mail-mta/qmail:logmail - Enable logging all E-Mails via ~alias/.qmail-log
 mail-mta/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
