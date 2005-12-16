@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.06.ebuild,v 1.6 2005/05/25 14:25:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.06.ebuild,v 1.7 2005/12/16 11:23:46 flameeyes Exp $
 
 inherit nsplugins eutils
 
@@ -49,8 +49,8 @@ src_install() {
 	dobin CFrontEnd/fw2init.pl
 	local dest="/opt/netscape/plugins"
 	dodir $dest
-	cp -a `find Plugin -name npfreewrl.so` ${D}/$dest/
-	cp -a `find java -name vrml.jar` ${D}/$dest/
+	cp -pPR `find Plugin -name npfreewrl.so` ${D}/$dest/
+	cp -pPR `find java -name vrml.jar` ${D}/$dest/
 	inst_plugin ${D}/$dest/npfreewrl.so
 	inst_plugin ${D}/$dest/vrml.jar
 	dohtml README.html
