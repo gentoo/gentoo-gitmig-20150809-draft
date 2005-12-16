@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.13 2005/08/15 16:36:45 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.14 2005/12/16 11:49:44 flameeyes Exp $
 
 DESCRIPTION="A pack of ~200 themes for GKrellM"
 HOMEPAGE="http://www.muhri.net/gkrellm"
@@ -231,5 +231,5 @@ src_install() {
 	chmod -R g-sw+rx *
 	chmod -R o-sw+rx *
 	chmod -R u-s+rwx *
-	cp -dpR * ${D}/usr/share/gkrellm2/themes/
+	cp -pR * ${D}/usr/share/gkrellm2/themes/
 }

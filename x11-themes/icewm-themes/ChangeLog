@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/icewm-themes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.9 2005/09/19 13:41:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.10 2005/12/16 11:50:55 flameeyes Exp $
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  icewm-themes-0.0.1-r1.ebuild:
+  Remove GNUish cp -d call. Bug #103487.
 
   19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   icewm-themes-0.0.1-r1.ebuild:

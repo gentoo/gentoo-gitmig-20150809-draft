@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.4 2005/09/19 13:41:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.5 2005/12/16 11:50:55 flameeyes Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -42,8 +42,8 @@ src_unpack() {
 src_install() {
 	local ICEWM_THEMES=/usr/share/icewm/themes
 	dodir ${ICEWM_THEMES}
-	cp -dpR * ${D}/${ICEWM_THEMES}
-	chown -R root:root ${D}/${ICEWM_THEMES}
+	cp -pR * ${D}/${ICEWM_THEMES}
+	chown -R root:0 ${D}/${ICEWM_THEMES}
 	#chmod -R o-w ${D}/${ICEWM_THEMES}
 	rm -f ${D}/${ICEWM_THEMES}/Crus-IceWM/cpframes.sh || die
 	find ${D}/${ICEWM_THEMES} -type d | xargs chmod 755 || die
