@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6dc9a0c113c116def89caea246a7c8df ChangeLog 2559
-MD5 f23602b35558e4a8f1e1bf390e932e0a files/digest-qstat-2.10 62
-MD5 dac50c59f937c5744939c8d374e74e86 files/digest-qstat-2.8 61
+MD5 bcb568905260b995bf6350e0b2b90ac1 ChangeLog 2644
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d49d01d84fdf562baf6da8bab42fec25 qstat-2.10.ebuild 701
 MD5 e2ec844a658e8b4de76d21bfaed15e2c qstat-2.8.ebuild 712
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhGG8gIKl8Uu19MoRArVnAJ9kw2C4pX2AMP8JnDYpBY5nPKM3/wCeMMzr
-4qCNgDMgMzqzwfmuN3TewfE=
-=PYeZ
------END PGP SIGNATURE-----
+MD5 94e7f04f36b3e45adfea63acd4791205 qstat-2.10.ebuild 709
+MD5 dac50c59f937c5744939c8d374e74e86 files/digest-qstat-2.8 61
+MD5 f23602b35558e4a8f1e1bf390e932e0a files/digest-qstat-2.10 62
