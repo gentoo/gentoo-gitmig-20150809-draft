@@ -1,6 +1,14 @@
 # ChangeLog for media-video/dfbsee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.6 2005/10/31 11:16:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.7 2005/12/17 13:53:52 flameeyes Exp $
+
+*dfbsee-0.7.4-r1 (17 Dec 2005)
+
+  17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/dfbsee-0.7.4-direcfb-0.9.24.patch, +files/dfbsee-0.7.4-gcc4.patch,
+  +dfbsee-0.7.4-r1.ebuild:
+  Added patches to build with recent directfb versions and with GCC4. Thanks
+  to Richard Juckes in bugs #114842 and #114843.
 
   31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> dfbsee-0.7.4.ebuild:
   Don't append -Wl,-z,now; use $(bindnow-flags) instead.

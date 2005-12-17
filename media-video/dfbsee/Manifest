@@ -1,14 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fb9d667456b6e732e86070b7380684b3 ChangeLog 1919
+MD5 ddaaf740d7b6a2fec033e1c7dcd1e7d2 ChangeLog 2234
+MD5 d7e2ccc28d2bd514bc9ef6ffe8e0443b dfbsee-0.7.4-r1.ebuild 924
 MD5 e10c0e6461a0109b5655701842238f1c dfbsee-0.7.4.ebuild 783
+MD5 8423cbb1ac402ba1ac3e227bc603e056 files/dfbsee-0.7.4-direcfb-0.9.24.patch 732
+MD5 bee0daacade74e22f21b35b4ba4ac927 files/dfbsee-0.7.4-gcc4.patch 1748
 MD5 3f38d255bd61645e0aba8a013bb4a35a files/digest-dfbsee-0.7.4 64
+MD5 3f38d255bd61645e0aba8a013bb4a35a files/digest-dfbsee-0.7.4-r1 64
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDZf0Cj5H05b2HAEkRAqE8AJ4hscDYlVqI3vKlg0LZIe5u+irseACePshD
-J02n/RAPCrzq8o/y8KGjX9w=
-=h+sM
+iD8DBQFDpBiDAiZjviIA2XgRAs7kAKDp78urm2Mcvns5FCdL7qQ2JA28PACgscjq
+Ih/reh1E/txmnOcT7kSa+gI=
+=mJRN
 -----END PGP SIGNATURE-----
