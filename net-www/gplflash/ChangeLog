@@ -1,6 +1,12 @@
 # ChangeLog for net-www/gplflash
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.19 2005/09/17 00:21:57 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.20 2005/12/17 00:13:25 vapier Exp $
+
+*gplflash-0.4.13-r1 (17 Dec 2005)
+
+  17 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gplflash-0.4.13-build.patch, +gplflash-0.4.13-r1.ebuild:
+  Fix RUNPATH bugs by cleaning up the autotools #114418.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
