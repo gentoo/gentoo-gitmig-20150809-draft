@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.1 2005/07/02 06:42:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.2 2005/12/17 15:52:18 usata Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -25,8 +25,12 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-line-scroll.patch
 	use motif && epatch ${FILESDIR}/${P}-azz4.diff
-	use cjk && epatch ${DISTDIR}/${P}-xim-fix.patch.gz
-	use linguas_ja && epatch ${FILESDIR}/${P}-rk.patch
+	if use cjk ; then
+		epatch ${DISTDIR}/${P}-xim-fix.patch.gz
+		if use linguas_ja ; then
+			epatch ${FILESDIR}/${P}-rk.patch
+		fi
+	fi
 
 	uclibctoolize
 }
@@ -58,7 +62,7 @@ src_compile() {
 		--enable-smart-resize \
 		--enable-256-color \
 		--enable-menubar \
-		--enable-languages \
+		$(use_enable cjk langauges) \
 		--enable-xim \
 		--enable-shared \
 		--enable-keepscrolling \

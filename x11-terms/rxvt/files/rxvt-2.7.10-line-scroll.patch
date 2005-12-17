@@ -6,8 +6,8 @@
   */
 -/* #define SCROLL_ON_UPDOWN_KEYS */
 -/* #define SCROLL_ON_HOMEEND_KEYS */
-+#define SCROLL_ON_UPDOWN_KEYS */
-+#define SCROLL_ON_HOMEEND_KEYS */
++#define SCROLL_ON_UPDOWN_KEYS
++#define SCROLL_ON_HOMEEND_KEYS
 
  /*
   * Allow unshifted Next/Prior keys to scroll forward/back
