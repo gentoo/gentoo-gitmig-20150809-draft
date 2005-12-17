@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.2 2005/12/16 00:11:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.3 2005/12/17 01:39:55 chainsaw Exp $
+
+*audtty-0.1.3 (17 Dec 2005)
+
+  17 Dec 2005; <chainsaw@gentoo.org> +audtty-0.1.3.ebuild:
+  Version bump. Add ~x86 keyword.
 
 *audtty-0.1.2 (16 Dec 2005)
 
