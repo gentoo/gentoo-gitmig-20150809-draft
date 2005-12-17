@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cdec3236fc6f883393faaf13e9eec881 ChangeLog 4170
+MD5 b8f4f625791bbeba80d5a3b707f5d4a9 ChangeLog 4259
+MD5 b08f99582e1ffcb136938310a6575a98 libkscan-3.4.1.ebuild 421
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 1e3c65e6a3875a7f1a222e41869fb87d libkscan-3.4.2.ebuild 433
+MD5 271a359d9ee294625aa4134f1bfd4f55 libkscan-3.4.3.ebuild 427
+MD5 8cc88df3608b7bf83f06fb6185bfc10b libkscan-3.5.0.ebuild 433
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-libkscan-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-libkscan-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-libkscan-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-libkscan-3.5.0 71
-MD5 b08f99582e1ffcb136938310a6575a98 libkscan-3.4.1.ebuild 421
-MD5 1e3c65e6a3875a7f1a222e41869fb87d libkscan-3.4.2.ebuild 433
-MD5 271a359d9ee294625aa4134f1bfd4f55 libkscan-3.4.3.ebuild 427
-MD5 2e5338e7616623cc911799eec3b8b962 libkscan-3.5.0.ebuild 425
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnbGRcsIHjyDViGQRAqdmAJ4mUok2qIslr6waYHwByhX78dd8iACgtS68
-V7Ehnbcafx5PmXgjO5stW/s=
-=8mJw
------END PGP SIGNATURE-----

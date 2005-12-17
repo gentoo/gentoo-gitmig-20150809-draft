@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ee6e767f2f56409e1b6a06e55a42d93 ChangeLog 3687
+MD5 e3cc28315b2c1fec28894a72b6c2f152 ChangeLog 3774
+MD5 27dd56fbac105520d3687e4360c20449 kamera-3.4.1.ebuild 425
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 e3054bea9da3193a4c4e98e80011ebb2 kamera-3.4.3.ebuild 426
+MD5 4f3505689ecd9f29a15388e33c5fc8eb kamera-3.5.0.ebuild 427
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kamera-3.4.1 221
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kamera-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kamera-3.5.0 71
-MD5 27dd56fbac105520d3687e4360c20449 kamera-3.4.1.ebuild 425
-MD5 e3054bea9da3193a4c4e98e80011ebb2 kamera-3.4.3.ebuild 426
-MD5 1fa25060ea3c49cbf8d5aa659a91985f kamera-3.5.0.ebuild 419
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnbCacsIHjyDViGQRAqwlAKCt1Pa+E1XHctR8BI826eUwDZS8iwCgsgXb
-JVgeTFDje0NAv2sXYh3CV+s=
-=p1wg
------END PGP SIGNATURE-----
