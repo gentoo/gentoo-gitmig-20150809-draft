@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.21 2005/10/08 12:50:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.22 2005/12/17 03:43:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,17 +13,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux"
 
-DEPEND="virtual/libc
-	selinux? ( sys-libs/libselinux )"
+DEPEND="selinux? ( sys-libs/libselinux )"
 
 src_unpack () {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
 	# Uses gcc as linker needed for hppa, but good idea in general.
-	epatch ${FILESDIR}/${P}-use-gcc-as-linker.patch
+	epatch "${FILESDIR}"/${P}-use-gcc-as-linker.patch
 
-	use selinux && epatch ${FILESDIR}/${P}-selinux.patch
+	use selinux && epatch "${FILESDIR}"/${P}-selinux.patch
 
 	sed -i \
 		-e "s/^DIRS = .*/DIRS = libpwdb/" \
@@ -46,15 +46,12 @@ src_compile() {
 src_install() {
 	dodir /$(get_libdir) /usr/$(get_libdir) /usr/include/pwdb
 	make \
-		INCLUDED=${D}/usr/include/pwdb \
-		LIBDIR=${D}/$(get_libdir) \
+		INCLUDED="${D}"/usr/include/pwdb \
+		LIBDIR="${D}"/$(get_libdir) \
 		LDCONFIG="echo" \
 		install || die
 
-	preplib /
-	mv ${D}/$(get_libdir)/*.a ${D}/usr/$(get_libdir)
-
-	# See bug #4411 for more info
+	mv "${D}"/$(get_libdir)/*.a "${D}"/usr/$(get_libdir)/ || die
 	gen_usr_ldscript libpwdb.so
 
 	insinto /etc

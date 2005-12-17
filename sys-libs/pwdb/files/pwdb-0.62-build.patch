@@ -1,0 +1,11 @@
+--- libpwdb/Makefile
++++ libpwdb/Makefile
+@@ -69,7 +69,7 @@
+ 	$(INSTALL) -m 644 radius.h $(INCLUDED)/radius.h
+ 	$(INSTALL) -m 644 _pwdb_macros.h $(INCLUDED)/_pwdb_macros.h
+ 	$(INSTALL) -m 755 $(LIBFILENAME) $(LIBDIR)
+-	$(LDCONFIG)
++	ln -sf $(LIBFILENAME) $(LIBDIR)/$(LIBSONAME)
+ 	ln -sf $(LIBFILENAME) $(LIBDIR)/$(LIBDYNAME)
+ 	$(INSTALL) -m 644 $(LIBSTATIC) $(LIBDIR)
+ 
