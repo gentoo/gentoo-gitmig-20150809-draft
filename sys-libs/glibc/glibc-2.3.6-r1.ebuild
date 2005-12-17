@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.6 2005/12/09 20:32:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.7 2005/12/17 00:46:54 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -257,6 +257,9 @@ toolchain-glibc_headers_compile() {
 	mkdir -p "${GBUILDDIR}"
 	cd "${GBUILDDIR}"
 
+	# Pick out the correct location for build headers
+	local headersloc=$(alt_headers)
+	tc-is-cross-compiler && headersloc=${ROOT}${headersloc}
 	local myconf="--disable-sanity-checks --enable-hacker-mode"
 	myconf="${myconf}
 		--enable-add-ons=linuxthreads
@@ -264,7 +267,7 @@ toolchain-glibc_headers_compile() {
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}
-		--with-headers=${ROOT}$(alt_headers)
+		--with-headers=${headersloc}
 		--prefix=$(alt_prefix)
 		--mandir=$(alt_prefix)/share/man
 		--infodir=$(alt_prefix)/share/info
@@ -958,6 +961,9 @@ glibc_do_configure() {
 		myconf="${myconf} --without-selinux"
 	fi
 
+	# Pick out the correct location for build headers
+	local headersloc=$(alt_headers)
+	tc-is-cross-compiler && headersloc=${ROOT}${headersloc}
 	myconf="${myconf}
 		--without-cvs
 		--enable-bind-now
@@ -965,7 +971,7 @@ glibc_do_configure() {
 		--host=${CTARGET_OPT:-${CTARGET}}
 		$(use_enable profile)
 		--without-gd
-		--with-headers=${ROOT}$(alt_headers)
+		--with-headers=${headersloc}
 		--prefix=$(alt_prefix)
 		--mandir=$(alt_prefix)/share/man
 		--infodir=$(alt_prefix)/share/info
