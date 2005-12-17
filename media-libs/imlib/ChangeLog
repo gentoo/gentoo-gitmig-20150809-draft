@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.36 2005/05/31 06:48:43 leonardop Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.37 2005/12/17 03:22:35 vapier Exp $
+
+  17 Dec 2005; Mike Frysinger <vapier@gentoo.org> imlib-1.9.14-r3.ebuild,
+  imlib-1.9.15.ebuild:
+  Remove pointless call to preplib.
 
 *imlib-1.9.15 (30 May 2005)
 

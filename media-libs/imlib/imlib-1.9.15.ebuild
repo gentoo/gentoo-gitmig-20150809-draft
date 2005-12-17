@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15.ebuild,v 1.1 2005/05/31 06:48:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15.ebuild,v 1.2 2005/12/17 03:22:35 vapier Exp $
 
 inherit eutils gnome.org libtool
 
@@ -57,7 +57,6 @@ src_install() {
 		includedir="${D}"/usr/include \
 		sysconfdir="${D}"/etc/imlib \
 		|| die
-	preplib /usr
 
 	dodoc AUTHORS ChangeLog README NEWS
 	dohtml -r doc
