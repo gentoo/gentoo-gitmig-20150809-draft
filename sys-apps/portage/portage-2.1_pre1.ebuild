@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre1.ebuild,v 1.4 2005/12/17 12:39:53 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre1.ebuild,v 1.5 2005/12/17 15:22:09 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -139,4 +139,8 @@ pkg_postinst() {
 	ewarn "If you are using any cache modules (such as the CDB cache"
 	ewarn "module) portage will not work until they have been disabled."
 	ewarn "For reference, they are configured at /etc/portage/modules."
+	echo
+	einfo "The default cache format has changed beginning with this"
+	einfo "version. Before using emerge, run `emerge metadata` to"
+	einfo "restore portage's local cache."
 }

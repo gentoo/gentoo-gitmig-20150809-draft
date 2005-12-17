@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.49 2005/12/17 12:39:53 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.50 2005/12/17 15:22:09 jstubbs Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  18 Dec 2005; Jason Stubbs <jstubbs@gentoo.org>
+  portage-2.1_pre1.ebuild:
+  Add a notice informing of the cache format change and to `emerge
+  metadata` before using emerge.
 
   17 Dec 2005; Jason Stubbs <jstubbs@gentoo.org>
   portage-2.1_pre1.ebuild:
