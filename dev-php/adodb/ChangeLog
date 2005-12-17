@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.44 2005/11/24 11:58:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.45 2005/12/17 21:42:56 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> adodb-4.65-r1.ebuild:
+  Added ~ppc64
 
   24 Nov 2005; Luca Longinotti <chtekk@gentoo.org> adodb-4.65-r1.ebuild:
   New-style PHP should use dodoc-php, see
