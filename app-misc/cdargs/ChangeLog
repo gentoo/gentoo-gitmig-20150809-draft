@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/cdargs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.5 2005/10/15 23:52:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.6 2005/12/17 03:17:55 ciaranm Exp $
+
+*cdargs-1.33 (17 Dec 2005)
+
+  17 Dec 2005; Ciaran McCreesh <ciaranm@gentoo.org> +cdargs-1.33.ebuild:
+  New version, bug #111779
 
 *cdargs-1.32 (15 Oct 2005)
 
