@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.7 2005/10/17 20:49:20 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.8 2005/12/17 13:29:52 flameeyes Exp $
+
+  17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg2theora-0.15.ebuild:
+  Bump ffmpeg version request to 0.4.9_pre20051120 that should have a working
+  pkg-config setup and fixes bug #110595.
 
 *ffmpeg2theora-0.15 (17 Oct 2005)
 
