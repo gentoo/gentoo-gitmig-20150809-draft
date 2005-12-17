@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.104 2005/12/16 23:10:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.105 2005/12/17 01:01:20 lu_zero Exp $
+
+  17 Dec 2005; Luca Barbato <lu_zero@gentoo.org>
+  files/ffmpeg-soname-symlink.patch:
+  yet another fix
 
   16 Dec 2005; Luca Barbato <lu_zero@gentoo.org>
   files/ffmpeg-soname-symlink.patch:

@@ -1,4 +1,4 @@
-MD5 903f1d3f00f968de4399a69aa0b68377 ChangeLog 16104
+MD5 ca3c9821a1cd31e6c353ff46dd7ef39f ChangeLog 16209
 MD5 c57ec7ef531e1088a91de5d6d9ba1dfa ffmpeg-0.4.8.ebuild 2430
 MD5 bb5094085c4fff51dc773d7735117475 ffmpeg-0.4.9_p20050226-r3.ebuild 4393
 MD5 ff615b7d4ca2c8355c1d0a358271e2d8 ffmpeg-0.4.9_p20050226-r5.ebuild 4543
@@ -21,7 +21,7 @@ MD5 96c7f1f67e0299ad71b9c0fad55c3960 files/ffmpeg-configure.patch 585
 MD5 b1cd277309faaaa03e3dafb3b89b2a09 files/ffmpeg-libdir-pic.patch 6027
 MD5 1a8c0be3a5a5ba1d929b7773265943b7 files/ffmpeg-missing_links.patch 1199
 MD5 b4ecc62e882107f766cf621bfc6c7e20 files/ffmpeg-osx.patch 5940
-MD5 87d74a163bdacf54915c362c86fa5fd4 files/ffmpeg-soname-symlink.patch 5164
+MD5 4e16801d15ac3fe082a8be4452e0eb83 files/ffmpeg-soname-symlink.patch 5174
 MD5 02a1298f3a982efa3dc25f1746e3dccc files/ffmpeg-unknown-options.patch 414
 MD5 f0c54c934c78216a2bd0b157028a6f84 files/gentoo-ffmpeg001.patch 752
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158

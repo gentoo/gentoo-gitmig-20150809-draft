@@ -79,7 +79,7 @@ diff -u -r1.215 Makefile
 -	install $(INSTALLSTRIP) -m 755 $(SLIBNAME) $(libdir)/libavcodec-$(VERSION)$(SLIBSUF)
 -	ln -sf libavcodec-$(VERSION)$(SLIBSUF) $(libdir)/libavcodec$(SLIBSUF)
 +	install $(INSTALLSTRIP) -m 755 $(SLIBNAME) \
-+		$(SLIBNAME_WITH_VERSION)
++		$(libdir)/$(SLIBNAME_WITH_VERSION)
 +	ln -sf $(libdir)/$(SLIBNAME_WITH_VERSION) \
 +		$(SLIBNAME_WITH_MAJOR)
 +	ln -sf $(libdir)/$(SLIBNAME_WITH_VERSION) \
