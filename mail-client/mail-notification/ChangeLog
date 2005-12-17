@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.24 2005/12/09 14:46:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.25 2005/12/17 11:58:57 slarti Exp $
+
+  16 Dec 2005; Tom Martin <slarti@gentoo.org> mail-notification-2.0.ebuild:
+  Fix silly little error in evolution installation destination. Thanks to
+  Brendon Ryan <lordpov@lordpov.com> for the fix in bug #115499. Also,
+  append --export-dynamic to LDFLAGS in order to resolve a bug with
+  --display-properties some were experiencing. Thanks to Magnus O.
+  <magnus@grand1982.com> in bug #115302.
 
   09 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mail-notification-2.0.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.2 2005/12/09 14:46:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.3 2005/12/17 11:58:57 slarti Exp $
 
-inherit eutils gnome2 multilib
+inherit eutils gnome2 multilib flag-o-matic
 
 DESCRIPTION="A GNOME trayicon which checks for mail. Supports mbox, MH,
 Maildir, IMAP, Sylpheed, POP3, Gmail and Evolution.  Authenticates via
@@ -53,15 +53,20 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gmail-properties-fix.diff
 }
 
+src_compile() {
+	append-ldflags -Wl,-export-dynamic
+	gnome2_src_compile
+}
+
 src_install() {
-	gnome2_src_install evolution_plugindir="${D}/usr/$(get_libdir)/evolution/2.2/plugins"
+	gnome2_src_install evolution_plugindir="${D}/usr/$(get_libdir)/evolution/2.4/plugins"
 }
 
 pkg_postinst() {
-	echo
+	ewarn ""
 	ewarn "Due to a bug in bonobo-activation, your GNOME/X11 session must"
 	ewarn "be restarted for mail-notification to work. If you don't do"
 	ewarn "this, this program will crash during the setup phase."
 	ewarn "See http://bugzilla.gnome.org/show_bug.cgi?id=151082"
-	echo
+	ewarn ""
 }
