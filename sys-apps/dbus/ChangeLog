@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.65 2005/12/03 18:46:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.66 2005/12/17 13:07:29 gmsoft Exp $
+
+  17 Dec 2005; Guy Martin <gmsoft@gentoo.org> dbus-0.50-r1.ebuild:
+  Stable on hppa.
 
   03 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org> dbus-0.60.ebuild:
   Fixing use flag hell.
