@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4767 2005/12/16 17:56:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4768 2005/12/17 01:48:30 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org (17 Dec 2005)
+# completely broken and unmaintained, see #110241
+net-im/sim
 
 # Diego Pettenò <flameeyes@gentoo.org> (16 Dec 2005)
 # Breaks API and ABI
