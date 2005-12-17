@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/trapproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/trapproto/ChangeLog,v 1.9 2005/12/09 07:45:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/trapproto/ChangeLog,v 1.10 2005/12/17 21:10:11 joshuabaergen Exp $
+
+*trapproto-3.4.3 (17 Dec 2005)
+
+  17 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +trapproto-3.4.3.ebuild:
+  Bump for 7.0RC4.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -trapproto-3.4.ebuild, -trapproto-3.4.1.ebuild:

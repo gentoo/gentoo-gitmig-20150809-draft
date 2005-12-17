@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.11 2005/12/09 07:50:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.12 2005/12/17 21:16:30 joshuabaergen Exp $
+
+*xproto-7.0.4 (17 Dec 2005)
+
+  17 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xproto-7.0.4.ebuild:
+  Bump for 7.0RC4.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -xproto-7.0.ebuild,
   -xproto-7.0_p20050917.ebuild, -xproto-7.0.1.ebuild, -xproto-7.0.2.ebuild:
