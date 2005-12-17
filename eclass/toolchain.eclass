@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.232 2005/12/12 17:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.233 2005/12/17 02:08:46 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -973,7 +973,7 @@ gcc_src_unpack() {
 			EPATCH_MULTI_MSG="Applying uClibc patches ..." \
 			epatch "${WORKDIR}"/uclibc
 		fi
-		do_gcc_HTB_boundschecking_patches
+		do_gcc_HTB_patches
 		do_gcc_SSP_patches
 		do_gcc_PIE_patches
 	fi
@@ -1802,7 +1802,7 @@ do_gcc_stub() {
 	done
 }
 
-do_gcc_HTB_boundschecking_patches() {
+do_gcc_HTB_patches() {
 	if ! want_boundschecking || \
 	   (want_ssp && [[ ${HTB_EXCLUSIVE} == "true" ]])
 	then
