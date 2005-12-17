@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.0.ebuild,v 1.2 2005/12/15 21:59:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.0.ebuild,v 1.3 2005/12/17 12:34:33 flameeyes Exp $
 
 inherit eutils wxwidgets
 
@@ -53,4 +53,6 @@ src_install() {
 	einstall || die "make install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	dohtml doc/mkvmerge-gui.html doc/images/*
+	docinto examples
+	dodoc examples/*
 }
