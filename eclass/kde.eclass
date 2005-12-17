@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.139 2005/11/16 12:50:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.140 2005/12/17 01:51:01 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -233,7 +233,7 @@ slot_rebuild() {
 				continue
 			fi
 
-			k="$(grep -o /.*/lib.*\.la ${j}/CONTENTS)"
+			k="$(grep -o "/.*/lib.*\.la" ${j}/CONTENTS)"
 			m=""
 			for l in ${k} ; do [[ -e ${l} ]] && m="${m} ${l}"; done
 			l="$(echo ${k} ${m} | fmt -w 1 | sort | uniq -u)"
@@ -251,7 +251,7 @@ slot_rebuild() {
 	echo
 	if [[ -n "${BROKEN_PKGS}" ]] ; then
 		eerror "Anomalies were found. Please do \"emerge ${BROKEN_PKGS}\"."
-		return 1
+		return 0
 	fi
 
 
