@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r7.ebuild,v 1.2 2005/12/13 15:49:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r7.ebuild,v 1.3 2005/12/17 01:11:31 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gnu-stack.patch
 	epatch "${FILESDIR}"/${P}-config.patch
 	epatch "${FILESDIR}"/${P}-PIC.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 	# Bundled libtool doesnt properly add C++ libs even
 	# though the shared library includes C++ objects
 	sed -i \

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.25 2005/12/13 15:49:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.26 2005/12/17 01:11:31 vapier Exp $
+
+  17 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/smpeg-0.4.4-gcc41.patch, smpeg-0.4.4-r7.ebuild:
+  Fix building with gcc-4.1.x #113558 by Robert Marmorstein.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   smpeg-0.4.4-r7.ebuild:
