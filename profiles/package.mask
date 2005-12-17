@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4772 2005/12/17 13:02:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4773 2005/12/17 17:22:37 stkn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Stefan Knoblich <stkn@gentoo.org> (17 Dec 2005)
+# Bug #115798
+>=net-misc/asterisk-1.2.0
+>=net-libs/libpri-1.2.0
+>=net-misc/zaptel-1.2.0
 
 # Carsten Lohrke <carlo@gentoo.org (17 Dec 2005)
 # completely broken and unmaintained, see #110241
@@ -199,13 +205,6 @@ dev-libs/luabind
 # Stuart Herbert <stuart@gentoo.org> (20 Nov 2005)
 # Masked pending removal from Portage
 www-apps/phpgroupware
-
-# Stefan Knoblich <stkn@gentoo.org> (18 Nov 2005)
-# That was a little too fast, still a few things
-# that need to be resolved.
-=net-misc/asterisk-1.2.0
-=net-libs/libpri-1.2.0
-=net-misc/zaptel-1.2.0
 
 # Stefan Knoblich <stkn@gentoo.org> (18 Nov 2005)
 # Asterisk-1.2.0 is up-to-date, mask packages that need testing
