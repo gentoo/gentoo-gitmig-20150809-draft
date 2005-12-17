@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.33 2005/12/12 17:23:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.34 2005/12/17 14:33:52 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> ksirc-3.5.0.ebuild:
+  Added ~ppc64
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> ksirc-3.5.0.ebuild:
   Marked ~ppc.

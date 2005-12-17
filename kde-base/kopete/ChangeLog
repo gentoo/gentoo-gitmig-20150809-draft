@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.46 2005/12/12 17:24:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.47 2005/12/17 14:27:37 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> kopete-3.5.0.ebuild:
+  Added ~ppc64
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> ChangeLog:
   Marked ~ppc.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.37 2005/12/12 19:46:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.38 2005/12/17 14:22:45 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org>
+  kdemultimedia-meta-3.5.0.ebuild:
+  Added ~ppc64
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org>
   kdemultimedia-meta-3.5.0.ebuild:
