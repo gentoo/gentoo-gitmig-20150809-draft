@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.14 2005/10/22 10:59:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.15 2005/12/17 15:05:59 brix Exp $
+
+  17 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  files/acpid-1.0.4-logrotate:
+  Quit down acpid reload from logrotate, thanks to Jan Spitalnik in bug #115564.
 
   22 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   -acpid-1.0.4-r1.ebuild:
