@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.12 2005/09/03 19:51:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.13 2005/12/17 02:42:59 vapier Exp $
 
 inherit multilib
 
@@ -71,7 +71,6 @@ src_install() {
 #	newins ${MY_FILESDIR}/modlogan.conf httpd.modlogan
 ###
 	keepdir /var/www/localhost/htdocs/modlogan
-	preplib /usr
 	dodoc AUTHORS ChangeLog README NEWS TODO
 	dodoc doc/*.txt doc/*.conf doc/*-dist doc/glosar doc/stats
 	dohtml -r html
