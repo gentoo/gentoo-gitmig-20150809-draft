@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d6f18940be87b343f837f949927ca54 ChangeLog 1228
+MD5 014fb4b10ddaa4acf182d9489ce1a605 ChangeLog 1380
+MD5 18b761437ec9eae073e7fa508f742fe1 aboot-1.0_pre20040408.ebuild 1930
 MD5 0ed40e134501a252bb21c5c5808d8028 metadata.xml 158
-MD5 1835efe83027d5d274ef01db37faa1a0 aboot-1.0_pre20040408.ebuild 1872
 MD5 9cf70ec6a8a046d2fd23021c21de3dd8 aboot-0.9-r1.ebuild 1900
 MD5 254f0c6b0c0862df2ecd486daab0bbf9 files/aboot.conf 295
-MD5 963ee6f184a7fecbcbec48b5b8af534d files/digest-aboot-0.9-r1 66
 MD5 746d744469877288661af19f5f0f5d12 files/digest-aboot-1.0_pre20040408 74
+MD5 963ee6f184a7fecbcbec48b5b8af534d files/digest-aboot-0.9-r1 66
+MD5 fdda13c08b553b8296ab0f41c3bbee46 files/aboot-gcc-3.4.patch 830
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCJPWHugEuf3OQ0akRAoabAKCHfLEyqT64TgZOGrOKb8sxqpuiNwCeL5zB
-7hum5xW8LHocG7MU8h3lq+I=
-=qaF3
+iD8DBQFDpIGPugEuf3OQ0akRArIbAJ0WXwZ398EtUNrvE+tFl35UnekH0wCeObYb
+pPu0eVttCQeac3VOaQPgQ2g=
+=X7o7
 -----END PGP SIGNATURE-----

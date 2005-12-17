@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408.ebuild,v 1.5 2005/03/01 23:06:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408.ebuild,v 1.6 2005/12/17 20:20:29 kloeri Exp $
+
+inherit eutils
 
 DESCRIPTION="Alpha Linux boot loader for SRM"
 HOMEPAGE="http://aboot.sourceforge.net/"
@@ -18,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i "s:/usr/man:/usr/share/man:" Makefile || die
+	epatch "${FILESDIR}/aboot-gcc-3.4.patch"
 }
 
 src_compile() {
