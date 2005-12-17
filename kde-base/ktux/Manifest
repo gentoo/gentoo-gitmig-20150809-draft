@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a2f3f99c4ecf2ac7674c67373500593 ChangeLog 3596
+MD5 95d12216ba7b21f27959cee45473adc1 ChangeLog 3681
+MD5 774e93586bf6c1bf70939025191581ef ktux-3.4.1.ebuild 405
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 96c3bf181a3a639689a6d02b3dd277cf ktux-3.4.2.ebuild 415
+MD5 01afbc8456bc066e606c654ebb1651ef ktux-3.5.0.ebuild 419
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-ktux-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-ktux-3.4.2 282
 MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-ktux-3.5.0 67
-MD5 774e93586bf6c1bf70939025191581ef ktux-3.4.1.ebuild 405
-MD5 96c3bf181a3a639689a6d02b3dd277cf ktux-3.4.2.ebuild 415
-MD5 7eea0d60f39278e3c8df6865d349cc26 ktux-3.5.0.ebuild 411
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDncjIcsIHjyDViGQRAsNVAJ9XVm+BrjG1HKXG/RyavuBaRaErqwCePq5Q
-GzW+TexfU+nEI95YFVPyUxw=
-=MZ08
------END PGP SIGNATURE-----
