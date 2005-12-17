@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20050505.ebuild,v 1.2 2005/06/04 15:03:37 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20050505.ebuild,v 1.3 2005/12/17 16:16:42 usata Exp $
 
 inherit flag-o-matic kde-functions multilib subversion
 
@@ -29,8 +29,8 @@ RDEPEND="!app-i18n/uim
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
 	gtk? ( >=x11-libs/gtk+-2 )
-	immqt? ( >=x11-libs/qt-3.3.3-r1 )
-	qt? ( >=x11-libs/qt-3.3.3-r1 )
+	immqt? ( $(qt_min_version 3.3.4) )
+	qt? ( $(qt_min_version 3.3.4) )
 	m17n-lib? ( dev-libs/m17n-lib )"
 
 pkg_setup() {
@@ -132,4 +132,4 @@ pkg_postrm() {
 
 }
 
-# $Id: uim-svn-20050505.ebuild,v 1.2 2005/06/04 15:03:37 hattya Exp $
+# $Id: uim-svn-20050505.ebuild,v 1.3 2005/12/17 16:16:42 usata Exp $
