@@ -4,7 +4,8 @@ MD5 68d5fb7fa17a8adb2fde235305eeb444 asterisk-1.0.5-r3.ebuild 12292
 MD5 2bb329f2fddb62b6cc55b6ec95990528 asterisk-1.0.9-r2.ebuild 13817
 MD5 60c09319bc8263b96943e15c6af270b7 asterisk-1.0.6-r2.ebuild 14064
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 299f11511be01e9db401af0cbb7ffc4a ChangeLog 19480
+MD5 539c309c1870046ecfc1d008453f99de asterisk-1.2.1.ebuild 9832
+MD5 20f07e2c27aaa422a98c6c0a14714224 ChangeLog 19647
 MD5 9322226b2f812f260dd052ee9a8ed6a9 asterisk-1.0.10.ebuild 14631
 MD5 74a407d1898d32d28f950b74acdb1925 asterisk-1.2.0.ebuild 8455
 MD5 58b3329253168e6dfb4c8ecbb98aeecd files/digest-asterisk-1.0.9-r2 210
@@ -12,6 +13,7 @@ MD5 48a3518349e2abfe20fa918a9db5eea2 files/digest-asterisk-1.0.7-r2 210
 MD5 770c431ec679210d12c9e486a2fc2e92 files/digest-asterisk-1.2.0 217
 MD5 97ed00bdccf7c70d5fcbf37580da91c4 files/digest-asterisk-1.0.5-r3 139
 MD5 b3bbedde09faea609a0357b21eafa596 files/digest-asterisk-1.0.8-r1 210
+MD5 a129c7144790bae1af36d42252618118 files/digest-asterisk-1.2.1 306
 MD5 df9171e8435eddc50bfc453940e88053 files/digest-asterisk-1.0.10 211
 MD5 f399592939cd5b43b7851e20744a108e files/digest-asterisk-1.0.6-r2 210
 MD5 3932983fb155e026eb10533425174f59 files/1.2.0/asterisk-1.2.0_beta-ukcid.patch 5787
