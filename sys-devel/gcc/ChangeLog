@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.476 2005/12/15 13:51:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.477 2005/12/17 01:44:31 halcy0n Exp $
+
+*gcc-4.1.0_beta20051216 (17 Dec 2005)
+
+  17 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.1.0_beta20051209.ebuild, +gcc-4.1.0_beta20051216.ebuild:
+  GCC-4.1 snapshot bump
 
   15 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> gcc-3.4.5.ebuild:
   Gimme ~sparc keywords here
