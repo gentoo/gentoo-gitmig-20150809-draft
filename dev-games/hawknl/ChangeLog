@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/hawknl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.8 2005/05/17 17:21:16 wolf31o2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.9 2005/12/17 03:09:42 vapier Exp $
+
+  17 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/hawknl-1.68-build.patch, hawknl-1.68-r1.ebuild:
+  Cleanup build system to get rid of need for preplib.
 
   17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> -hawknl-1.68.ebuild:
   Cleanup for bug #92745.
