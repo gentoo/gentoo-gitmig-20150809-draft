@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.27 2005/11/20 17:23:55 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.28 2005/12/17 21:19:21 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> nagios-2.0b_p5.ebuild:
+  Added ~ppc64
 
   20 Nov 2005; Lance Albertson <ramereth@gentoo.org>
   -files/digest-nagios-2.0b_p1, -files/digest-nagios-2.0b_p2:
