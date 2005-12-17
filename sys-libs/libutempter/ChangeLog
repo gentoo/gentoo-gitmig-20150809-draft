@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libutempter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.4 2005/12/17 20:53:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.5 2005/12/17 21:38:57 fmccor Exp $
+
+  17 Dec 2005; Ferris McCormick <fmccor@gentoo.org>
+  libutempter-1.1.2.1.ebuild:
+  Stable on sparc; it does update utmp entries, as desired (Bug #115663).
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> libutempter-1.1.2.1.ebuild:
   Stable on ppc64
