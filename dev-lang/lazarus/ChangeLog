@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.4 2005/11/17 10:15:17 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.5 2005/12/17 16:33:19 carlo Exp $
+
+  17 Dec 2005; Carsten Lohrke <carlo@gentoo.org> lazarus-0.9.10.ebuild:
+  clean up a bit
 
   17 Nov 2005; Herbie Hopkins <herbs@gentoo.org> lazarus-0.9.10.ebuild:
   Marked ~amd64.

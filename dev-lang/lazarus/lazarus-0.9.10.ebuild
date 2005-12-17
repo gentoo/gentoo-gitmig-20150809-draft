@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.10.ebuild,v 1.2 2005/11/17 10:15:17 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.10.ebuild,v 1.3 2005/12/17 16:33:19 carlo Exp $
 
 inherit eutils
 
@@ -17,18 +17,11 @@ DEPEND="=dev-lang/fpc-2.0.0-r1
 	=dev-lang/fpc-source-2.0.0
 	>=media-libs/gdk-pixbuf-0.22.0-r3
 	net-misc/rsync"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/lazarus
 
-src_unpack () {
-	unpack ${A} || die "Unpacking ${A} failed!"
-}
-
 src_compile () {
-	emake -j1 \
-	all \
-	|| die "make all failed!"
+	make -j1 all || die "make all failed!"
 }
 
 src_install () {
