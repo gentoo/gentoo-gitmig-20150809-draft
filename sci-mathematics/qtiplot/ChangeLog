@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/qtiplot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.4 2005/12/09 14:44:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.5 2005/12/17 15:40:25 cryos Exp $
+
+*qtiplot-0.7.4 (17 Dec 2005)
+
+  17 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/qtiplot-0.7.4-qmake.patch, +qtiplot-0.7.4.ebuild:
+  Version bump, bug 115497.
 
   09 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> qtiplot-0.7.3.ebuild:
   Small cleanup for the Qt path.
