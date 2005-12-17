@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.13 2005/10/29 06:25:15 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.14 2005/12/17 01:23:58 liquidx Exp $
+
+  17 Dec 2005; Alastair Tse <liquidx@gentoo.org> elementtree-1.2.ebuild,
+  elementtree-1.2.6.ebuild:
+  corrected license to be ElementTree Source License
 
   29 Oct 2005; Mark Loeser <halcy0n@gentoo.org> elementtree-1.2.6.ebuild:
   Stable on x86

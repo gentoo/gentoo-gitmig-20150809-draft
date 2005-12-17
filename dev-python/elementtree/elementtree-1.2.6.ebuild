@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/elementtree-1.2.6.ebuild,v 1.5 2005/10/29 06:25:15 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/elementtree-1.2.6.ebuild,v 1.6 2005/12/17 01:23:58 liquidx Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="A light-weight XML object model for Python"
 HOMEPAGE="http://effbot.org/zone/element-index.htm"
 SRC_URI="http://effbot.org/downloads/${MY_P}.tar.gz"
 KEYWORDS="amd64 ~ia64 ~mips ppc x86"
-LICENSE="as-is"
+LICENSE="ElementTree"
 SLOT="0"
 IUSE=""
 S=${WORKDIR}/${MY_P}
