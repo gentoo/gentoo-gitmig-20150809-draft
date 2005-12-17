@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.7 2005/10/02 02:27:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.8 2005/12/17 21:16:13 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> radiusclient-0.3.2.ebuild:
+  Added ~ppc64
 
   02 Oct 2005; Jason Wever <weeve@gentoo.org> radiusclient-0.3.2.ebuild:
   Added ~sparc keyword wrt bug #105512.

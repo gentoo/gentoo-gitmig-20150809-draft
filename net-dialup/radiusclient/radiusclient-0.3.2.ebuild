@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.6 2005/10/02 02:27:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.7 2005/12/17 21:16:13 corsair Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/radiusclient/"
 SRC_URI="ftp://ftp.cityline.net/pub/radiusclient/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
