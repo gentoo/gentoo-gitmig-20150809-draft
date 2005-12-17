@@ -1,4 +1,6 @@
-MD5 25351330a170aa6af3502b6e215de958 ChangeLog 1387
+MD5 235b9540e6f8779ed2689169af832b53 ChangeLog 1531
 MD5 09df98abb8731efc4af048fe27edccbe files/digest-xorg-cf-files-0.99.3 73
+MD5 a8fe29ec18f98ac3411bf0b3b9e9a12d files/digest-xorg-cf-files-1.0.0 72
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 20e09750429f4af791b889e2c22fb18b xorg-cf-files-0.99.3.ebuild 704
+MD5 08348d954f0b377e55d2228c2c67334c xorg-cf-files-1.0.0.ebuild 435
