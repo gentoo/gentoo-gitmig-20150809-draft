@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4769 2005/12/17 09:52:17 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4770 2005/12/17 11:07:33 jstubbs Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,8 @@
 ##
 ##   End example
 ##
+
+=sys-apps/portage-2.1_pre1
 
 # Carsten Lohrke <carlo@gentoo.org (17 Dec 2005)
 # completely broken and unmaintained, see #110241
