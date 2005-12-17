@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.48 2005/09/18 00:31:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.49 2005/12/17 12:59:42 flameeyes Exp $
+
+  17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xvid-1.1.0_beta2-r1.ebuild:
+  Added patch to get non-executable stack, from bug #90287. yasm still
+  generate executable stack and that's bad, need a newer version. In the mean
+  time removed userland_Darwin ebuild and changed with a $CHOST check.
 
   18 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> xvid-1.0.3.ebuild:
   Add ~alpha keyword.

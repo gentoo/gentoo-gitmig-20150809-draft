@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0_beta2-r1.ebuild,v 1.7 2005/10/06 03:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0_beta2-r1.ebuild,v 1.8 2005/12/17 12:59:42 flameeyes Exp $
 
 inherit eutils fixheadtails
 
 MY_P=${PN}core-${PV/_beta/-beta}
 DESCRIPTION="XviD, a high performance/quality MPEG-4 video de-/encoding solution"
 HOMEPAGE="http://www.xvid.org/"
-SRC_URI="http://downloads.xvid.org/downloads/${MY_P}.tar.bz2"
+SRC_URI="http://downloads.xvid.org/downloads/${MY_P}.tar.bz2
+	mirror://gentoo/${PN}-1.1.0-noexec-stack.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -28,6 +29,7 @@ src_unpack() {
 	cd "${WORKDIR}"/${MY_P}
 	epatch "${FILESDIR}"/${P}-altivec.patch
 	epatch "${FILESDIR}"/${P}-amd64-gcc4.patch
+	epatch "${WORKDIR}/${PN}-1.1.0-noexec-stack.patch"
 
 	cd "${S}"
 	ht_fix_file bootstrap.sh
@@ -45,7 +47,7 @@ src_install() {
 	cd "${S}"/../../
 	dodoc AUTHORS ChangeLog README TODO doc/*
 
-	if use userland_Darwin; then
+	if [[ ${CHOST} == *-darwin* ]]; then
 		local mylib=$(basename $(ls "${D}"/usr/$(get_libdir)/libxvidcore.*.dylib))
 		dosym ${mylib} /usr/$(get_libdir)/libxvidcore.dylib
 	else
