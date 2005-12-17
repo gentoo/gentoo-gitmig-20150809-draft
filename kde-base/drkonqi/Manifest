@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8362ef39ba4939ecaa395bdc66cc0d7 ChangeLog 4136
+MD5 6999327ad42c62539b14a5dbba57e5b5 ChangeLog 4224
 MD5 a9cb3e7a732e6a24bf550867143e6e81 drkonqi-3.4.1.ebuild 426
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 57aea957248a3568b5398dae0afec235 drkonqi-3.4.2.ebuild 439
 MD5 371924583d21c0428a811d7fe0b2058d drkonqi-3.4.3.ebuild 433
-MD5 952dcd4e7b3499f893b2bff2623e4b75 drkonqi-3.5.0.ebuild 432
+MD5 9196d77d1ec5c60947a14f07d64e905c drkonqi-3.5.0.ebuild 440
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-drkonqi-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-drkonqi-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-drkonqi-3.4.3 68
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-drkonqi-3.5.0 68
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnZsCcsIHjyDViGQRAv4nAJ9rfxWiSDBCZ82kpYqQuq1AEl7BKQCeIWZd
-9VLoGV1H1ebEwcFc2oOOPaY=
-=CLFM
------END PGP SIGNATURE-----

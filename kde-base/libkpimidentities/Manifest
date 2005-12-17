@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8464a608cda654444e8ee15c5960c9d7 ChangeLog 4694
+MD5 a0b8c450a63e91ad1bf85a68fd130e42 ChangeLog 4794
 MD5 1c3ab0d2b7a13abc55cfa16d232efff9 libkpimidentities-3.4.1.ebuild 720
-MD5 b7b327bc7841f7423c9adca32131e88f libkpimidentities-3.5.0.ebuild 664
-MD5 6d96a66eba5773927dd70249121963dc libkpimidentities-3.4.3.ebuild 726
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkpimidentities-3.5.0 67
+MD5 6d96a66eba5773927dd70249121963dc libkpimidentities-3.4.3.ebuild 726
+MD5 5e102a3dd45bf67722244d30fbbf03bf libkpimidentities-3.5.0.ebuild 672
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimidentities-3.4.1 208
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkpimidentities-3.4.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0qhugEuf3OQ0akRAjRmAJ4zWhDZIPs22WhLpnLd2SQalkuCPwCfXuCv
-5Aq5P6kZ2gIsCMcOBKYprTY=
-=Duj2
------END PGP SIGNATURE-----
+MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkpimidentities-3.5.0 67

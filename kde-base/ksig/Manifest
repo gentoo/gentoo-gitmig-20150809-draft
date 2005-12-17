@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 876b7b7a8dd14dedcb6f56020820bd4c ChangeLog 2874
+MD5 18af9f161c4b9b3a4f0d077f7ff0f30e ChangeLog 2959
+MD5 9ee06d0c23b0dddaf1f5e9829c7d138c ksig-3.4.1.ebuild 400
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 523faf4cc6d2fa00fda11aa7ee123884 ksig-3.5.0.ebuild 402
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-ksig-3.4.1 215
 MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-ksig-3.5.0 69
-MD5 9ee06d0c23b0dddaf1f5e9829c7d138c ksig-3.4.1.ebuild 400
-MD5 cc192bea06255f6c2d427e9ee93157e7 ksig-3.5.0.ebuild 394
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnapUcsIHjyDViGQRAgM9AJ9ItUcikLanp+pHRBZBHickAEoNrQCbBq2b
-L4joE4Z00UZVOnDMn1HwZn4=
-=LxO+
------END PGP SIGNATURE-----

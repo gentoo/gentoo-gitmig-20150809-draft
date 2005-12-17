@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d63cc5c9640ede9d999df144fb910291 ChangeLog 3039
+MD5 7546ea07866dd4f71d756041a0112b12 ChangeLog 3126
+MD5 224c754027a438d08120e4a708a25eb7 kstart-3.4.1.ebuild 440
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 a1a7995715394390ecbc71a843885f9f kstart-3.5.0.ebuild 442
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kstart-3.4.1 212
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kstart-3.5.0 68
-MD5 224c754027a438d08120e4a708a25eb7 kstart-3.4.1.ebuild 440
-MD5 6d54ced97e1d11e7133a87cc65b9126b kstart-3.5.0.ebuild 434
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnZtQcsIHjyDViGQRArZSAJ9g8h0OAVsGtfBY1cmRNBgONiaP9wCdHEvv
-MIQs7o8d+eKYs2Uk3C21d0E=
-=0fkm
------END PGP SIGNATURE-----

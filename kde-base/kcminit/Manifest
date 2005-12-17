@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 871605d249f38a44cd3857db33632527 ChangeLog 3106
+MD5 0423196044c6d977ab2a3ab3e763958b ChangeLog 3194
+MD5 b47ead437403c3a76f69654b02afe1e7 kcminit-3.4.1.ebuild 435
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 b7997a514ad5817add03eb082b74f440 kcminit-3.5.0.ebuild 437
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcminit-3.4.1 212
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kcminit-3.5.0 68
-MD5 b47ead437403c3a76f69654b02afe1e7 kcminit-3.4.1.ebuild 435
-MD5 59b0f84466c7a6c836b6a4d60c7033fb kcminit-3.5.0.ebuild 429
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkjhFugEuf3OQ0akRAk0zAKCJJmP64zLG+BLAwLYoxFpCCbFMygCfZ1pU
-NRzqVFhj4On2xrC7KWZ9iWw=
-=r7BH
------END PGP SIGNATURE-----

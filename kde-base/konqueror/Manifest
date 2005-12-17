@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 990a08829d98e67a7b1ddb7be5d4998d ChangeLog 4896
-MD5 5830e3a2e09032322c1851f8b95fda07 konqueror-3.5.0-r1.ebuild 799
-MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
-MD5 0b22513d45005afeb6d684591062b784 konqueror-3.5.0.ebuild 745
-MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 cd85cd458abebe64de2b4aff9b503bcb konqueror-3.4.3.ebuild 780
+MD5 701c50278b3639f9a410209d636225fd ChangeLog 4989
 MD5 56e97c5040d28b656c9e7c9c6e05a95f konqueror-3.4.1.ebuild 774
-MD5 f557526f4d82f563d8d69f986303d30d files/konqueror-3.5.0-location-bar-focus.patch 433
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2-r1 287
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-konqueror-3.5.0 68
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
+MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
+MD5 2980995757ae7f56c49c02cd964c2bbf konqueror-3.5.0-r1.ebuild 808
+MD5 cd85cd458abebe64de2b4aff9b503bcb konqueror-3.4.3.ebuild 780
+MD5 0b22513d45005afeb6d684591062b784 konqueror-3.5.0.ebuild 745
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2 287
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2-r1 287
+MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-konqueror-3.5.0-r1 68
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-konqueror-3.4.3 68
-MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmzIbugEuf3OQ0akRAsr8AKCRBCDuAnb7uWliTQwh7bgdH3UbZQCggUGS
-GWeJ3QgMiNqEC2YIvV/rIGo=
-=JMW9
------END PGP SIGNATURE-----
+MD5 f557526f4d82f563d8d69f986303d30d files/konqueror-3.5.0-location-bar-focus.patch 433
+MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-konqueror-3.5.0 68

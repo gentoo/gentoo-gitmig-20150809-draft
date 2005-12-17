@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bc96606d6c8b66d74412118139048111 ChangeLog 4305
+MD5 360201d1903cbaa184fed8f161515537 ChangeLog 4392
+MD5 efaf8d02d7a1a0d04de75b0f13d880da ktouch-3.4.1.ebuild 426
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 5e1e319fb7514047f6ca35538b3b5724 ktouch-3.4.2.ebuild 439
+MD5 ecf7d895f6a2fa9c143f24b6f06ed4ce ktouch-3.4.3.ebuild 433
+MD5 4e6acf7a9fa05b34f169a6997dcbdbde ktouch-3.5.0.ebuild 570
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-ktouch-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-ktouch-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-ktouch-3.4.3 67
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-ktouch-3.5.0 67
-MD5 efaf8d02d7a1a0d04de75b0f13d880da ktouch-3.4.1.ebuild 426
-MD5 5e1e319fb7514047f6ca35538b3b5724 ktouch-3.4.2.ebuild 439
-MD5 ecf7d895f6a2fa9c143f24b6f06ed4ce ktouch-3.4.3.ebuild 433
-MD5 02973eb06fd551c1404fafd69bc96cd3 ktouch-3.5.0.ebuild 562
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDna2qcsIHjyDViGQRAp0NAJ9PSJM1+xjcNkeB7EKEslcsLQHsCQCg4/RC
-/wXoqqQKpfMZDmkTCUITMAo=
-=yEeS
------END PGP SIGNATURE-----
