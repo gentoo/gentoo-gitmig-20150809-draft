@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fadd17811cc20f24c877cc9ce56c5e4c ChangeLog 11546
-MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
-MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
-MD5 8340ca34cb0bed2c4acfd82f444a2624 files/digest-kdeaccessibility-3.4.2 76
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3 76
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3-r1 76
-MD5 307469289d5167258f2faa3684e12eb2 files/digest-kdeaccessibility-3.5.0 76
-MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
-MD5 f5bf9356477cd9c9feb666e6e94915b0 files/kdeaccessibility-3.4.3-pointer.patch 536
+MD5 8e9af3b28824c0d86967795f2607879d ChangeLog 11645
+MD5 92fb385bf6414b9756f55bf9d7d71992 kdeaccessibility-3.4.3.ebuild 1202
 MD5 d8d24de351d4616955249a64e3071e88 kdeaccessibility-3.3.2.ebuild 364
 MD5 d0a1d06ed0fcf05d425606f15b87923a kdeaccessibility-3.4.1.ebuild 996
 MD5 c3e9d3070a019305dab7a3440b9c4a73 kdeaccessibility-3.4.2.ebuild 1136
-MD5 cdba0e32c990cd9afeb144f980be1dd8 kdeaccessibility-3.4.3-r1.ebuild 1240
-MD5 92fb385bf6414b9756f55bf9d7d71992 kdeaccessibility-3.4.3.ebuild 1202
-MD5 704c08dfc3ad0ff34e45eeba384ee7db kdeaccessibility-3.5.0.ebuild 822
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDoCOPKRy60XGEcJIRAhlaAJ0Vjo9WjDnk3dyNJidQwLrmHzuhXQCdFrj6
-CYz665jwqVWMmj7Y4NLlSsM=
-=d540
------END PGP SIGNATURE-----
+MD5 704c08dfc3ad0ff34e45eeba384ee7db kdeaccessibility-3.5.0.ebuild 822
+MD5 f07341f90a64395d114bc205339e91ca kdeaccessibility-3.4.3-r1.ebuild 1237
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3 76
+MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
+MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
+MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
+MD5 8340ca34cb0bed2c4acfd82f444a2624 files/digest-kdeaccessibility-3.4.2 76
+MD5 f5bf9356477cd9c9feb666e6e94915b0 files/kdeaccessibility-3.4.3-pointer.patch 536
+MD5 307469289d5167258f2faa3684e12eb2 files/digest-kdeaccessibility-3.5.0 76
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3-r1 76
