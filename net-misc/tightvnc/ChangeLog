@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.60 2005/12/14 03:59:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.61 2005/12/17 23:16:29 joshuabaergen Exp $
+
+  17 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  tightvnc-1.3_alpha7.ebuild:
+  xmkmf is now part of x11-misc/imake.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   tightvnc-1.3_alpha7.ebuild:

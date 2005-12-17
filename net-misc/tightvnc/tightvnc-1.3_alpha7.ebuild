@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.5 2005/12/14 03:59:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.6 2005/12/17 23:16:29 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ SLOT="0"
 
 DEPEND="|| ( ( x11-libs/libXaw
 			x11-proto/xextproto
-			x11-misc/xmkmf
+			>=x11-misc/imake-1
 			x11-misc/gccmakedep
 			app-text/rman
 			server? ( x11-libs/libXp
