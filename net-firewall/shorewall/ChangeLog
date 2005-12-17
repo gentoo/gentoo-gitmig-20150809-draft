@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.90 2005/12/07 18:09:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.91 2005/12/17 21:41:43 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> shorewall-3.0.2.ebuild:
+  Added ~ppc64
 
 *shorewall-3.0.2 (07 Dec 2005)
 
