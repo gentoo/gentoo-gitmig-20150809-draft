@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyvorbis
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.21 2005/11/28 11:43:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.22 2005/12/17 15:04:46 port001 Exp $
+
+  17 Dec 2005; Ian Leitch <port001@gentoo.org> pyvorbis-1.4-r1.ebuild:
+  Stable on x86
 
   28 Nov 2005; Marien Zwart <marienz@gentoo.org> pyvorbis-1.4-r1.ebuild:
   Add missing eutils inherit.
