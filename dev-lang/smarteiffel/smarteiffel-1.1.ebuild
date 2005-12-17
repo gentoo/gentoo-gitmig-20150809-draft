@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.1.ebuild,v 1.6 2004/07/02 04:31:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.1.ebuild,v 1.7 2005/12/17 01:21:09 carlo Exp $
 
 #IUSE="doc"
 IUSE="doc tcc"
@@ -58,7 +58,7 @@ src_compile() {
 
 src_install () {
 	dodir ${SE_DIR}
-	cp -a ${S}/{lib,tools,sys,bin} ${D}/${SE_DIR} || die
+	cp -pPR ${S}/{lib,tools,sys,bin} ${D}/${SE_DIR} || die
 	cp SmartEiffel.conf ${D}/${SE_DIR}
 
 	# Create symlinks to the appropriate executable binaries.
@@ -74,7 +74,7 @@ src_install () {
 	if use doc; then
 		einfo "Installing documentation"
 		dodir /usr/share/doc/${PF}
-		cp -a ${S}/{man,misc,tutorial,READ_ME} ${D}/usr/share/doc/${PF} || die
+		cp -pPR ${S}/{man,misc,tutorial,READ_ME} ${D}/usr/share/doc/${PF} || die
 	fi
 
 	# Setup 'SmartEiffel' environment variable.

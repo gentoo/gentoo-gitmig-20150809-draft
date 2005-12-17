@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-2.2_rc3.ebuild,v 1.1 2005/12/17 01:15:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-2.2_rc3.ebuild,v 1.2 2005/12/17 01:21:09 carlo Exp $
 
 inherit toolchain-funcs multilib
 
@@ -66,7 +66,6 @@ src_compile() {
 		echo 5; #save conf file
 		echo 6; echo
 		echo 0; echo #leave the menu
-		
 	) | ./install.bin || die
 	einfo "finished running install"
 
@@ -76,7 +75,7 @@ src_compile() {
 
 src_install () {
 	dodir ${SE_DIR}
-	cp -a ${S}/{lib,tools,sys,bin} ${D}/${SE_DIR} || die
+	cp -pPR ${S}/{lib,tools,sys,bin} ${D}/${SE_DIR} || die
 
 	# Create symlinks to the appropriate executable binaries.
 	dodir /usr/bin
@@ -91,7 +90,7 @@ src_install () {
 	if use doc; then
 		einfo "Installing documentation"
 		dodir /usr/share/doc/${PF}
-		cp -a ${S}/{man,misc,tutorial,READ_ME.txt} ${D}/usr/share/doc/${PF} || die
+		cp -pPR ${S}/{man,misc,tutorial,READ_ME.txt} ${D}/usr/share/doc/${PF} || die
 	fi
 
 	# Setup 'SmartEiffel' environment variable.
