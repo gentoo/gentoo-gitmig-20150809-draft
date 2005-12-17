@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.57 2005/12/01 08:07:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.58 2005/12/17 02:07:17 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -87,6 +87,10 @@ enlightenment_warning_msg() {
 		eerror "If it fails to build, FIX THE CODE YOURSELF"
 		eerror "before reporting any issues."
 	fi
+	echo
+	einfo "If you have trouble connecting to the sourceforge cvs"
+	einfo "server, try exporting using the unofficial mirror:"
+	einfo "export E17_ECVS_SERVER=thinktux.net:/root"
 }
 
 enlightenment_die() {
