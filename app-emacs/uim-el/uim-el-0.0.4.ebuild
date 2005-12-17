@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uim-el/uim-el-0.0.4.ebuild,v 1.1 2005/10/30 03:52:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uim-el/uim-el-0.0.4.ebuild,v 1.2 2005/12/17 16:57:22 usata Exp $
 
 inherit elisp eutils
 
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 SLOT="0"
 
-DEPEND="|| ( >=app-i18n/uim-0.4.6 app-i18n/uim-svn )"
+DEPEND="|| ( >=app-i18n/uim-0.4.6 app-i18n/uim-svn )
+	!>=app-i18n/uim-1.0.0_beta"
 
 src_compile() {
 	econf || die
