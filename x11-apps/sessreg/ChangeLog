@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.4 2005/12/09 06:37:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.5 2005/12/17 21:29:37 fmccor Exp $
+
+  17 Dec 2005; Ferris McCormick <fmccor@gentoo.org> sessreg-0.99.2.ebuild:
+  Add ~sparc keyword as part of X-modular testing.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -sessreg-0.99.1.ebuild:
