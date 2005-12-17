@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lilo-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lilo-config/ChangeLog,v 1.15 2005/11/26 14:35:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lilo-config/ChangeLog,v 1.16 2005/12/17 13:11:43 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> lilo-config-3.5.0.ebuild:
+  Added ~ppc64
 
 *lilo-config-3.5.0 (22 Nov 2005)
 

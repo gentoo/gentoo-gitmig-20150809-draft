@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/korn-3.5.0.ebuild,v 1.5 2005/12/13 02:50:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/korn-3.5.0.ebuild,v 1.6 2005/12/17 12:27:28 corsair Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE mailbox checker"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/mimelib)
 $(deprange $PV $MAXKDEVER kde-base/libkmime)"

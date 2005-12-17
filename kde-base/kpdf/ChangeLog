@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.55 2005/12/17 02:44:15 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.56 2005/12/17 13:26:50 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> kpdf-3.5.0-r2.ebuild:
+  Added ~ppc64
 
   17 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org> kpdf-3.4.3-r2.ebuild:
   Stable on Alpha wrt security bug #114429
