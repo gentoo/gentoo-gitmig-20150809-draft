@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/Test-Simple-0.54.ebuild,v 1.6 2005/06/17 21:01:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/Test-Simple-0.54.ebuild,v 1.7 2005/12/17 02:32:06 chriswhite Exp $
 
 inherit perl-module
 
@@ -14,7 +14,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 
 mydoc="rfc*.txt"
 myconf="INSTALLDIRS=vendor"
-DEPEND=">=dev-lang/perl-5.8.0-r12
-		>=perl-core/Test-Harness-2.03"
+DEPEND=">=dev-lang/perl-5.8.0-r12"
 
 SRC_TEST="do"
