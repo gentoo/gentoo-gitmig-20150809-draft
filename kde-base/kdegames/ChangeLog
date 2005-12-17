@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.143 2005/12/14 02:07:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.144 2005/12/17 20:40:17 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> kdegames-3.5.0.ebuild:
+  Added ~ppc64
 
   14 Dec 2005; Brent Baude <ranger@gentoo.org> kdegames-3.4.3.ebuild:
   Marking kdegames-3.4.3 ~ppc64 for kde-3.4.3

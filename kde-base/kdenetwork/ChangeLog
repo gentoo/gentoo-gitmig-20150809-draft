@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.183 2005/12/14 02:11:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.184 2005/12/17 20:44:24 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> kdenetwork-3.5.0.ebuild:
+  Added ~ppc64
 
   14 Dec 2005; Brent Baude <ranger@gentoo.org> kdenetwork-3.4.3.ebuild:
   Marking kdenetwork-3.4.3 ~ppc64 for kde-3.4.3
