@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.7.ebuild,v 1.4 2005/10/22 16:27:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.9.ebuild,v 1.1 2005/12/17 21:56:59 ciaranm Exp $
 
 inherit flag-o-matic
 
@@ -53,12 +53,14 @@ src_compile() {
 		--enable-smart-resize \
 		--enable-ttygid \
 		--enable-256-color \
+		--enable-24bit \
 		--enable-xim \
 		--enable-shared \
 		--enable-keepscrolling \
 		--enable-xft \
 		`use_enable xgetdefault` \
 		--disable-text-blink \
+		--disable-iso14755 \
 		--disable-menubar || die
 
 	emake || die
