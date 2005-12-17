@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.2.2.ebuild,v 1.4 2005/04/24 08:15:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.2.2.ebuild,v 1.5 2005/12/17 02:23:52 vapier Exp $
 
 inherit versionator
 
@@ -37,7 +37,6 @@ src_unpack() {
 }
 
 src_install() {
-	preplib
 	dosbin tmpwatch || die "dosbin failed"
 	doman tmpwatch.8 || die "doman failed"
 

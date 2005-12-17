@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.4.1.ebuild,v 1.9 2005/11/12 16:00:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.4.1.ebuild,v 1.10 2005/12/17 02:23:52 vapier Exp $
 
 inherit rpm versionator
 
 RPM_P="${PN}-$(replace_version_separator 3 '-')"
 MY_P="${RPM_P%-*}"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Utility recursively searches through specified directories and removes files which have not been accessed in a specified period of time."
 HOMEPAGE="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/"
@@ -16,6 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	rpm_src_unpack
@@ -30,7 +31,6 @@ src_unpack() {
 }
 
 src_install() {
-	preplib
 	dosbin tmpwatch || die "dosbin failed"
 	doman tmpwatch.8 || die "doman failed"
 

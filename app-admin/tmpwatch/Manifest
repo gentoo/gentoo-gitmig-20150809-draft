@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 62640e5fa103a11cf2e64529ec8771a2 ChangeLog 5670
 MD5 704d114213dba07ca8bbb2a1fe8baca7 files/digest-tmpwatch-2.9.2.2 68
 MD5 ed9c3f3744c20d2c5946a551ac3bd2ce files/digest-tmpwatch-2.9.4.1 68
 MD5 c2b96ff8dc2c589482deaa38b4a03016 files/tmpwatch.cron 1365
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 7d34ccd9bfe45b0510662b13aca93b79 tmpwatch-2.9.2.2.ebuild 1427
-MD5 60f9320ea0c0f81988037c91985ca362 tmpwatch-2.9.4.1.ebuild 1245
+MD5 80ecd707bde231d292df4cb5f04d89da tmpwatch-2.9.2.2.ebuild 1417
+MD5 18e87fcb2879f781b4f770d140113430 tmpwatch-2.9.4.1.ebuild 1237
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDo3bV2+ySkm8kpY0RAnVpAKCj0CHSCtgBsXADzdLnVTHt2TJpowCdF4yx
+1bVgIJiTqgwxnHHKg3bNtM8=
+=W4ti
+-----END PGP SIGNATURE-----
