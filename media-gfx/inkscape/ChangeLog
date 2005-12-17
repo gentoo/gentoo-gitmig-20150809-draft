@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.44 2005/12/12 03:46:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.45 2005/12/17 22:00:34 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> inkscape-0.43-r1.ebuild:
+  Added ~ppc64
 
 *inkscape-0.43-r1 (12 Dec 2005)
 
