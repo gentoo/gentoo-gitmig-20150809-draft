@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2.ebuild,v 1.1 2005/11/13 18:22:49 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2.ebuild,v 1.2 2005/12/17 18:40:47 xmerlin Exp $
 
 inherit flag-o-matic
 
@@ -11,10 +11,7 @@ SRC_URI="http://www.linux-ha.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 -mips -ppc -amd64"
-IUSE="ldirectord stonith pils doc"
-
-
-#dev-libs/popt
+IUSE="ldirectord doc"
 
 DEPEND="
 	=dev-libs/glib-2*
@@ -33,9 +30,7 @@ DEPEND="
 			dev-perl/perl-ldap
 			dev-perl/Mail-IMAPClient
 	)
-	stonith? (
-			net-misc/telnet-bsd
-	)
+	net-misc/telnet-bsd
 "
 
 
@@ -54,7 +49,11 @@ src_compile() {
 		--with-group-name=cluster \
 		--with-group-id=65 \
 		--with-ccmuser-name=cluster \
-		--with-ccmuser-id=65 || die
+		--with-ccmuser-id=65 \
+		--enable-checkpointd \
+		--enable-crm \
+		--enable-lrm \
+		|| die
 	emake -j 1 || die "compile problem"
 }
 
@@ -92,20 +91,6 @@ src_install() {
 		rm ${D}/usr/man/man8/ldirectord.8
 		rm ${D}/usr/sbin/ldirectord
 		rm ${D}/usr/sbin/supervise-ldirectord-config
-	fi
-
-	if ! use stonith ; then
-		rm ${D}/usr/include/stonith
-		rm -r ${D}/usr/lib/*stonith*
-		rm ${D}/usr/sbin/stonith
-		rm ${D}/usr/sbin/meatclient
-		rm ${D}/usr/man/man8/stonith.8*
-		rm ${D}/usr/man/man8/meatclient.8*
-	fi
-
-	if ! use pils ; then
-		rm ${D}/usr/include/pils
-		rm -r ${D}/usr/lib/*pils*
 	fi
 
 	exeinto /etc/init.d

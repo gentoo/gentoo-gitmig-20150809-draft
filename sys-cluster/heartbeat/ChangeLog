@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.37 2005/11/13 18:22:49 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.38 2005/12/17 18:40:47 xmerlin Exp $
+
+  17 Dec 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-2.0.2.ebuild:
+  removed pils and stonith use flags, fixed bug #115662.
 
 *heartbeat-2.0.2 (13 Nov 2005)
 
