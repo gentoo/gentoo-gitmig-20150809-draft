@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 174cc422131d46e247043e40b996b708 ChangeLog 2475
-MD5 4522407c3158529f4f2c56dce0c498b5 files/digest-vconfig-1.8 60
-MD5 4dd77294f21b543a02d809ac585aa12b files/digest-vconfig-1.9 60
+MD5 a5e5175054f7f753979560de6068fabc ChangeLog 2562
 MD5 5a9b16815d29150da06fa36dba3535f2 metadata.xml 500
 MD5 cdadfe60a8f4b0dfd4a7f55002ff3bdb vconfig-1.8.ebuild 1515
-MD5 591136011a4c3d12d2b261aec87975ab vconfig-1.9.ebuild 1436
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iQCVAwUBQ5ph5Z4WFLgrx1GWAQKYvgQAmW9kmFTzvaZiTyafU2tf5pFxFMxgSCML
-hFrHW+zsecP4khbOiBgwynI+hZb9frQxPpCdE767XKTj6c8gVgOrbWWvLDXagv1o
-GeezcBFe8SY35xPtYsEzPn1kkaLG+qNzStmcl/mItBl3TB+psZ0Bd1P360JxGLks
-O2feyFN4tJM=
-=DzOd
------END PGP SIGNATURE-----
+MD5 abf3e39fdec8e7faca57b0c19cbdb341 vconfig-1.9.ebuild 1445
+MD5 4522407c3158529f4f2c56dce0c498b5 files/digest-vconfig-1.8 60
+MD5 4dd77294f21b543a02d809ac585aa12b files/digest-vconfig-1.9 60

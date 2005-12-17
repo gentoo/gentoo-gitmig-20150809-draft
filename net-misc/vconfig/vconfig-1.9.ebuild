@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.2 2005/12/10 05:04:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.3 2005/12/17 21:19:55 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.candelatech.com/~greear/vlan/${MY_PN}.${PV}.tar.gz"
 # mirror://gentoo/vconfig-1.7-gcc33-multiline.patch"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static"
 DEPEND="virtual/libc virtual/os-headers"
 RDEPEND="!static? ( virtual/libc )"
