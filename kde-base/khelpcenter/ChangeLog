@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.35 2005/12/10 18:50:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.36 2005/12/17 09:34:21 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> khelpcenter-3.5.0.ebuild:
+  Added ~ppc64
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   khelpcenter-3.4.3.ebuild:

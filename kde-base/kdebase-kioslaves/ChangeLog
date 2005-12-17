@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.43 2005/12/10 18:42:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.44 2005/12/17 09:30:16 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org>
+  kdebase-kioslaves-3.5.0.ebuild:
+  Added ~ppc64
 
   10 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   kdebase-kioslaves-3.4.3.ebuild:

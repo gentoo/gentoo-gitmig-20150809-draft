@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-3.5.0.ebuild,v 1.3 2005/12/04 00:26:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-3.5.0.ebuild,v 1.4 2005/12/17 09:31:52 corsair Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Icons, localization data and various .desktop files from kdebase. Includes the l10n, pics and applnk subdirs."
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="

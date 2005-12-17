@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.27 2005/12/04 01:38:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.28 2005/12/17 09:28:54 corsair Exp $
+
+  17 Dec 2005; Markus Rothe <corsair@gentoo.org> kdialog-3.5.0.ebuild:
+  Added ~ppc64
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> kdialog-3.5.0.ebuild:
   ~alpha keyword.

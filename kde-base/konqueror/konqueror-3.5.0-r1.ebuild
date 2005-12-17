@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.0-r1.ebuild,v 1.1 2005/12/04 11:05:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.0-r1.ebuild,v 1.2 2005/12/17 09:37:20 corsair Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="java"
 
 
