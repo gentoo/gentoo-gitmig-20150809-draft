@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/xdebug
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/ChangeLog,v 1.4 2005/11/25 16:19:41 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/ChangeLog,v 1.5 2005/12/17 15:47:11 chtekk Exp $
+
+  17 Dec 2005; Luca Longinotti <chtekk@gentoo.org>
+  xdebug-2.0.0_beta4.ebuild:
+  Fix wrongly dropped keywords.
 
 *xdebug-2.0.0_beta4 (25 Nov 2005)
 
