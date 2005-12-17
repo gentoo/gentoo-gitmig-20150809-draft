@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r2.ebuild,v 1.2 2005/10/31 11:11:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r2.ebuild,v 1.3 2005/12/17 15:18:54 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -17,12 +17,13 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec pic"
+IUSE="arts esd nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora
+ipv6 altivec pic win32codecs"
 RESTRICT="nostrip"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
-	avi? ( x86? ( >=media-libs/win32codecs-0.50 ) )
+	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
 	arts? ( kde-base/arts )
@@ -102,7 +103,7 @@ src_compile() {
 	local myconf="--with-included-dvdnav"
 
 	# the win32 codec path should ignore $(get_libdir) and always use lib
-	use avi	&& use x86 \
+	use win32codecs \
 		&& myconf="${myconf} --with-w32-path=/usr/$(get_libdir)/win32" \
 		|| myconf="${myconf} --disable-asf"
 
