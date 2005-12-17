@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.22.ebuild,v 1.1 2005/11/03 14:44:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.22.ebuild,v 1.2 2005/12/17 13:08:39 gmsoft Exp $
 
 DESCRIPTION="Bluetooth Tools and System Daemons for using Bluetooth under Linux"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~sparc ~x86"
 
 IUSE="alsa cups dbus gtk pcmcia"
 
