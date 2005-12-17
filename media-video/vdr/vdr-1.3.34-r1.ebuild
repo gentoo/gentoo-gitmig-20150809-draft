@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.34-r1.ebuild,v 1.4 2005/12/08 08:11:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.34-r1.ebuild,v 1.5 2005/12/17 16:14:52 zzam Exp $
 
 inherit eutils
 
@@ -153,19 +153,15 @@ src_install() {
 	insinto ${VDR_INCLUDE_DIR}/libsi
 	doins libsi/*.h
 
-	diropts -m755 -ovdr -gvdr
 	keepdir ${CONF_DIR}
 	keepdir ${CONF_DIR}/plugins
 	keepdir ${VDR_HOME}
 	keepdir ${VDR_HOME}/video
 
 	insinto ${CONF_DIR}
-	insopts -m0644 -ovdr -gvdr
 	doins *.conf channels.conf.*
-	insopts -m0644
-	diropts -m755
 
-
+	chown -R vdr:vdr ${D}/${CONF_DIR} ${D}/${VDR_HOME}
 	keepdir "${PLUGIN_DIR}"
 
 	doman vdr.1 vdr.5
