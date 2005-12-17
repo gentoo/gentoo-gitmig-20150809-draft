@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.89 2005/12/16 00:53:01 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.90 2005/12/17 04:49:20 langthang Exp $
+
+  17 Dec 2005; Tuấn Văn <langthang@gentoo.org> postfix-2.2.7.ebuild,
+  postfix-2.2.7-r1.ebuild:
+  fix DEPEND syntax.
 
 *postfix-2.2.7-r1 (16 Dec 2005)
 *postfix-2.2.7 (16 Dec 2005)
