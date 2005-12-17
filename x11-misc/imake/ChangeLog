@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.7 2005/12/09 15:12:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.8 2005/12/17 23:14:34 joshuabaergen Exp $
+
+*imake-1.0.0 (17 Dec 2005)
+
+  17 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +imake-1.0.0.ebuild:
+  Bump for 7.0RC4. Note that this now includes the "xmkmf" utility.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -imake-0.99.1.ebuild,
   -imake-0.99.2.ebuild:
