@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.24 2005/12/01 23:58:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.25 2005/12/17 16:31:08 flameeyes Exp $
 
 inherit libtool toolchain-funcs eutils wxwidgets
 
@@ -42,7 +42,7 @@ DEPEND="cdio? ( >=dev-libs/libcdio-0.70 )
 		aalib? ( media-libs/aalib )
 		libcaca? ( media-libs/libcaca )
 		arts? ( kde-base/arts )
-		alsa? ( virtual/alsa )
+		alsa? ( media-libs/alsa-lib )
 		wxwindows? ( =x11-libs/wxGTK-2.4* )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )

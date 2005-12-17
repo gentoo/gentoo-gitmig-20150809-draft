@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.128 2005/12/13 12:19:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.129 2005/12/17 16:31:08 flameeyes Exp $
+
+  17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild,
+  vlc-0.8.2-r1.ebuild, vlc-0.8.2-r2.ebuild, vlc-0.8.4.ebuild,
+  vlc-0.8.4-r1.ebuild, vlc-0.8.4a.ebuild:
+  Fix the dependency, for alsa is over alsa-lib, not virtual/alsa that points
+  to the drivers. Close bug #115857.
 
 *vlc-0.8.4a (13 Dec 2005)
 
