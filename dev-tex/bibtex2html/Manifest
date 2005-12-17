@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 010bd8fec06b1c2a42a6726abc69dd61 ChangeLog 523
-MD5 e491e21b7aab5cded244e4d9af61cf5d bibtex2html-1.70.ebuild 741
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 3091de81835d7913f821d67a3585f0bb ChangeLog 637
+MD5 fb1b8af798ecefce7412878d4ae93fcf bibtex2html-1.70.ebuild 745
 MD5 6e302860bc8a7d7d04c4383c8b4338e7 files/digest-bibtex2html-1.70 67
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBYG8JI1lqEGTUzyQRAmGjAKCVfvR79LSLkyVk47/N4fSH+3reAgCg1ksn
-SVTcMo7Gum2xRQdfKl2toms=
-=WKkt
+iD8DBQFDpDK7ntT9W3vfTuoRAnKRAKCMrKWeSOSvpEemAQLuTvhtkAApAgCfR3mX
+NLEeGW9qqNbT93Q8PWC0xZA=
+=yDwP
 -----END PGP SIGNATURE-----
