@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.4 2005/11/03 12:44:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.5 2005/12/17 11:50:53 flameeyes Exp $
 
 inherit eutils autotools
 
 DESCRIPTION=" An \"7x7\" type midi drum sequencer for Linux"
 HOMEPAGE="http://www-lmc.imag.fr/lmc-edp/Pierre.Saramito/tk707"
-SRC_URI="${P}.tar.gz ${P}-updated_tcl2c.patch.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	mirror://gentoo/${P}-updated_tcl2c.patch.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
