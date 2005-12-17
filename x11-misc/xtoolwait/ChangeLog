@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xtoolwait
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/ChangeLog,v 1.18 2005/12/13 19:11:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/ChangeLog,v 1.19 2005/12/17 23:15:04 joshuabaergen Exp $
+
+  17 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xtoolwait-1.3-r1.ebuild:
+  xmkmf is now part of x11-misc/imake.
 
   13 Dec 2005; Doug Goldstein <cardoe@gentoo.org> xtoolwait-1.3-r1.ebuild:
   fixed typo in deps
