@@ -1,4 +1,6 @@
-MD5 bcb6618b14f1f401c8b335314bfa4e80 ChangeLog 2428
+MD5 9cef11dfbb00a77e56ae41bb94af8eca ChangeLog 2576
 MD5 1dfdadd21d98e26b9b271563a9169840 files/digest-libXScrnSaver-0.99.3 73
+MD5 eb7c09c1d0f30c39c25347ac4c5aade8 files/digest-libXScrnSaver-1.0.0 72
 MD5 7ab05620e328b3cb8b6db3f85038611f libXScrnSaver-0.99.3.ebuild 525
+MD5 27163fbda3d32f1f86f3f082c9440af5 libXScrnSaver-1.0.0.ebuild 524
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

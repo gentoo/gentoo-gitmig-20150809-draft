@@ -1,4 +1,6 @@
-MD5 09096489cfa03b13ba3a6c74fa9ccf9e ChangeLog 2019
+MD5 2cb63f3b56e84e43c555a1510a3d83e2 ChangeLog 2151
 MD5 b7a87b63c79cda259d9949abdc8d70d8 files/digest-libSM-0.99.3 65
+MD5 40f480353e1061f93cfa1e248b139ff1 files/digest-libSM-1.0.0 64
 MD5 1b372b31e0c790d3d38aa3d6ad0aacc1 libSM-0.99.3.ebuild 639
+MD5 e0ad59492b762d124d98cf4eb64bfe60 libSM-1.0.0.ebuild 638
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

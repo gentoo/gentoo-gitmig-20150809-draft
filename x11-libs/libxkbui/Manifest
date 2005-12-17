@@ -1,4 +1,6 @@
-MD5 98de9e85699584a78043274d0b572fa5 ChangeLog 1406
+MD5 c5c041b60476f21fba47869ed39a6b73 ChangeLog 1544
 MD5 cbd504ee013d658285894d3a3c7f569e files/digest-libxkbui-0.99.2 68
+MD5 9b39d870c4ba0c9c425557e3e661e10a files/digest-libxkbui-1.0.0 67
 MD5 909725e2ea6c8a378488d6a4c46aed87 libxkbui-0.99.2.ebuild 600
+MD5 868058b26b5bfa4dcd6f67a253ed3843 libxkbui-1.0.0.ebuild 599
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

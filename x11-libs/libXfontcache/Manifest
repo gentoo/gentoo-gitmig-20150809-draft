@@ -1,4 +1,6 @@
-MD5 f59ba2260daddc102aefbd2883d55a7a ChangeLog 1300
+MD5 e40e53d4f53caafd6049384533308409 ChangeLog 1449
 MD5 35ee304042aab69857a65e597a3b7f5c files/digest-libXfontcache-0.99.2 73
+MD5 b22615e6058a8dcd26ac13eaaae828e7 files/digest-libXfontcache-1.0.0 72
 MD5 0783c6aa4f4a7551ed00c8ebb6e94e7b libXfontcache-0.99.2.ebuild 637
+MD5 6bb1105021f6b3b53f80e180ff6289d2 libXfontcache-1.0.0.ebuild 636
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

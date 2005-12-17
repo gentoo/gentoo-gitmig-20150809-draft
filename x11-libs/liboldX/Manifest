@@ -1,4 +1,6 @@
-MD5 6ad5f732a15fbd6f078e765f9fef8f01 ChangeLog 1032
+MD5 0ffda0c8d42f5311058f869b8d4c024f ChangeLog 1168
 MD5 1dfaebd1074164460bf517796269ab2a files/digest-liboldX-0.99.2 67
+MD5 7add4d4d856b7c8b40b850e8d821f713 files/digest-liboldX-1.0.0 66
 MD5 15edabf4abea029c26a410f2f5d11e56 liboldX-0.99.2.ebuild 542
+MD5 09fe031969111bc9e0e802165ffb67da liboldX-1.0.0.ebuild 541
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

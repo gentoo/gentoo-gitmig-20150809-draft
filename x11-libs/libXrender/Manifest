@@ -1,4 +1,6 @@
-MD5 f7c7961b7d21922b5edf9bf46c739106 ChangeLog 1502
+MD5 01ffc2900a7820aecb593a448099a3de ChangeLog 1648
 MD5 d55b0f5e8336a5beb99167534d492f82 files/digest-libXrender-0.9.0.1 71
+MD5 de36080ebb3ab21334c686c768b486b8 files/digest-libXrender-0.9.0.2 71
 MD5 808f207458ace47e99d7faa95d845510 libXrender-0.9.0.1.ebuild 611
+MD5 eb1bdf61ab892cfbc219d96c3677bc80 libXrender-0.9.0.2.ebuild 611
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
