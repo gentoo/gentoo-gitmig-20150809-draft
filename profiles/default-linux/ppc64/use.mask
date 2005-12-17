@@ -73,3 +73,6 @@ aio
 ocaml
 # needs some research as to why it segfaults on build
 pike
+
+# we don't have hardware to test. also see bug #113398
+dvb
