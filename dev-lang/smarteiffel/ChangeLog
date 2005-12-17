@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/smarteiffel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.18 2005/12/16 11:07:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.19 2005/12/17 01:15:29 carlo Exp $
+
+*smarteiffel-2.2_rc3 (17 Dec 2005)
+
+  17 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  -smarteiffel-1.0_beta5.ebuild, -smarteiffel-2.0_rc2.ebuild,
+  -smarteiffel-2.2_rc1.ebuild, +smarteiffel-2.2_rc3.ebuild:
+  version bump
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   smarteiffel-2.2_rc1.ebuild:
