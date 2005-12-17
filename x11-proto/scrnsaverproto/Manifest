@@ -1,4 +1,6 @@
-MD5 eb2aa335ce861188e8535643c7d0bb19 ChangeLog 1122
+MD5 f190fab72953d41c9d8e2659cc7a877a ChangeLog 1272
 MD5 a4342d475754792ab0325a630c63781d files/digest-scrnsaverproto-1.0.1 72
+MD5 532d2c54eb8406412b56096ee8b33d7a files/digest-scrnsaverproto-1.0.2 72
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a47c3454582e4ab592220fd22c425ebd scrnsaverproto-1.0.1.ebuild 455
+MD5 7cab24ae82444840f117eb7142c37148 scrnsaverproto-1.0.2.ebuild 459

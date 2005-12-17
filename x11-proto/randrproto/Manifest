@@ -1,4 +1,6 @@
-MD5 319bf5fa9e9fae4e6002d9c580b9feef ChangeLog 1076
+MD5 c90dbfe46d67b12a5ab9b3f9e6c04c2f ChangeLog 1218
 MD5 00192441835e67bc9509f6d8618e1158 files/digest-randrproto-1.1.1 68
+MD5 6433de7d42844d47b2f39caaeb41f1bf files/digest-randrproto-1.1.2 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f6a88ceff752df783c8594a55bb600e0 randrproto-1.1.1.ebuild 443
+MD5 22768430d8496f130b53855121ed530b randrproto-1.1.2.ebuild 447

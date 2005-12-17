@@ -1,4 +1,6 @@
-MD5 880c2cf7bd48dc74072b6ce0a0cf45b1 ChangeLog 2363
+MD5 03a5f00a37a7cdafc6940ff4d6d4d5ad ChangeLog 2499
 MD5 1cca803d80138ddfcf469958321fed53 files/digest-glproto-1.4.1 65
+MD5 531b9ae98e8df34f7a702c4f9cbb0d29 files/digest-glproto-1.4.2 65
 MD5 484da52f7372c8d5aa57a4cc024bb6da glproto-1.4.1.ebuild 1213
+MD5 03329d5d7b6e6411b39d18d15ba651a9 glproto-1.4.2.ebuild 1217
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
