@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.23 2005/10/29 02:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.24 2005/12/17 03:31:16 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -145,7 +145,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	preplib
 	# Bug 34804; $(get_libdir) fixed BUG #65495
 	sed -i \
 		-e "s:-pthread::g" "${D}/usr/$(get_libdir)/libSDL.la" \
