@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4775 2005/12/17 21:59:25 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4776 2005/12/17 23:52:15 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -841,7 +841,6 @@ x11-misc/makedepend
 x11-misc/util-macros
 x11-misc/xbitmaps
 x11-misc/xkbdata
-x11-misc/xmkmf
 x11-misc/xorg-cf-files
 x11-proto/bigreqsproto
 x11-proto/compositeproto
