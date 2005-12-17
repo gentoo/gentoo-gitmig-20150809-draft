@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-pdflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdflib/ChangeLog,v 1.4 2005/11/19 21:03:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdflib/ChangeLog,v 1.5 2005/12/17 21:24:01 chtekk Exp $
+
+  17 Dec 2005; Luca Longinotti <chtekk@gentoo.org>
+  pecl-pdflib-2.0.4-r1.ebuild:
+  Fix var ordering, sync with overlay.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org>
   pecl-pdflib-2.0.4-r1.ebuild:
