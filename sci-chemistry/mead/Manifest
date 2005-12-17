@@ -1,0 +1,5 @@
+MD5 603b1c171ed4757532d75df1acba26b4 ChangeLog 449
+MD5 e173bb7f2e9b945f1c06358dd244a23b files/digest-mead-2.2.5 62
+MD5 b9546545930ca744210e8fcb0607cca9 files/respect-cflags.patch 2202
+MD5 38927d0368ca53efd535d5406dd9a593 mead-2.2.5.ebuild 1085
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248

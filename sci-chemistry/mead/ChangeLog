@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/mead
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.1 2005/12/17 21:02:40 spyderous Exp $
+
+*mead-2.2.5 (17 Dec 2005)
+
+  17 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/respect-cflags.patch, +metadata.xml, +mead-2.2.5.ebuild:
+  New electrostatic potential package: Macroscopic Electrostatics with Atomic
+  Detail.
+
