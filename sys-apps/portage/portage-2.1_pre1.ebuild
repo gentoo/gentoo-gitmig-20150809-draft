@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre1.ebuild,v 1.1 2005/12/17 10:00:51 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre1.ebuild,v 1.2 2005/12/17 11:15:18 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -77,6 +77,16 @@ src_install() {
 	dodir /usr/lib/portage/pym
 	insinto /usr/lib/portage/pym
 	cd "${S}"/pym
+	doins *
+
+	dodir /usr/lib/portage/pym/cache
+	insinto /usr/lib/portage/cache
+	cd "${S}"/pym/cache
+	doins *
+
+	dodir /usr/lib/portage/pym/elog_modules
+	insinto /usr/lib/portage/pym/elog_modules
+	cd "${S}"/pym/elog_modules
 	doins *
 
 	doman "${S}"/man/*.[0-9]
