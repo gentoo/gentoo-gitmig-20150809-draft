@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.5 2005/03/17 02:36:00 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.6 2005/12/17 13:00:20 trapni Exp $
 
 DESCRIPTION="template based math library, written in C++, for symbolic and numeric calculus applications"
-HOMEPAGE="http://upstream.trapni-akane.org/libmath%2B%2B/"
-SRC_URI="http://upstream.trapni-akane.org/libmath%2B%2B/${P}.tar.gz"
+HOMEPAGE="http://rm-rf.in/libmath%2B%2B/"
+SRC_URI="http://upstream.rm-rf.in/libmath%2B%2B/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
