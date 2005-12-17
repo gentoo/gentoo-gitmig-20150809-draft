@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre1.ebuild,v 1.3 2005/12/17 11:24:39 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre1.ebuild,v 1.4 2005/12/17 12:39:53 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -134,4 +134,9 @@ pkg_postinst() {
 		# Overwrite the globals file automatically.
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
+
+	ewarn "This series contains a completely rewritten caching framework."
+	ewarn "If you are using any cache modules (such as the CDB cache"
+	ewarn "module) portage will not work until they have been disabled."
+	ewarn "For reference, they are configured at /etc/portage/modules."
 }
