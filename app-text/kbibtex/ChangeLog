@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.5 2005/12/05 20:29:42 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.6 2005/12/17 15:49:07 cryos Exp $
+
+  17 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> kbibtex-0.1.3.ebuild:
+  Fixed the dependencies up a little.
 
   05 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
   files/digest-kbibtex-0.1.3, Manifest:
