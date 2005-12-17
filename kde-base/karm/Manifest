@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c8eee2d182d79e2d137888224a40791 ChangeLog 4142
+MD5 393971205791a49f9ca54a117f55c191 ChangeLog 4227
+MD5 2c57dcfef40f6801e365cd219bbe3889 karm-3.4.1.ebuild 740
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 2dcd6979729830efb5ef1c19c9d0783d karm-3.4.2.ebuild 753
+MD5 3680744581f0ec6324b7aa17dcbf4775 karm-3.4.3.ebuild 747
+MD5 68fccb37fa3eb7502c3019785e8cdde4 karm-3.5.0.ebuild 695
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-karm-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-karm-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-karm-3.4.3 67
 MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-karm-3.5.0 67
-MD5 2c57dcfef40f6801e365cd219bbe3889 karm-3.4.1.ebuild 740
-MD5 2dcd6979729830efb5ef1c19c9d0783d karm-3.4.2.ebuild 753
-MD5 3680744581f0ec6324b7aa17dcbf4775 karm-3.4.3.ebuild 747
-MD5 fe90219fe8900f38ac6af73c109834fa karm-3.5.0.ebuild 687
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnaUMcsIHjyDViGQRAqlCAJ4o6YFQleM82EyYCqfIk34VaJZ+mQCg2pWX
-QdBOf3ldKF35pSA4I3AIqAw=
-=4w96
------END PGP SIGNATURE-----

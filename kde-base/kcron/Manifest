@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c112f3f5b960abc3f5fb16c0d5256f0 ChangeLog 3872
+MD5 683029bbf4933ee0d2cfc6a18ed4219e ChangeLog 3958
+MD5 7d070e7472fea8fbc31dc4bc4a7db226 kcron-3.4.1.ebuild 391
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 581bf36569de23530f0d98d1e19c65c9 kcron-3.4.3.ebuild 410
+MD5 7f2f79aa1c808432d32e7b8e009b123c kcron-3.5.0.ebuild 417
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kcron-3.4.1 211
 MD5 80b3c1753e84c4d6d9caf0502325b7b4 files/digest-kcron-3.4.3 68
 MD5 5e640d90c8921056fae9b3ca328a8093 files/digest-kcron-3.5.0 68
-MD5 7d070e7472fea8fbc31dc4bc4a7db226 kcron-3.4.1.ebuild 391
-MD5 581bf36569de23530f0d98d1e19c65c9 kcron-3.4.3.ebuild 410
-MD5 1555575908a06a6585987b435b129eb7 kcron-3.5.0.ebuild 409
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnatBcsIHjyDViGQRAoMgAJ4++7jLYeTp81gVv12S7AEYN3eVGACfV8ru
-3Ce7vm+a6qsfAP63N66DXbE=
-=6bqF
------END PGP SIGNATURE-----

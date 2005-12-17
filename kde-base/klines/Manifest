@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6fc352010c7a24e31484f4b888bbffb2 ChangeLog 4084
+MD5 ac40841ef5211d6b47d52092fbf96ea1 ChangeLog 4171
+MD5 f8a30ff2b23475765116f02d38ad5894 klines-3.4.1.ebuild 582
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 ecae7980e5ea1cca3bd591d610727de2 klines-3.4.2.ebuild 595
+MD5 2a8f5ba6f9c5321ff3ad9b351e0f757c klines-3.4.3.ebuild 589
+MD5 9c3635a05586a2c7f9975e919d8d45ff klines-3.5.0.ebuild 559
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klines-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klines-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-klines-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-klines-3.5.0 69
-MD5 f8a30ff2b23475765116f02d38ad5894 klines-3.4.1.ebuild 582
-MD5 ecae7980e5ea1cca3bd591d610727de2 klines-3.4.2.ebuild 595
-MD5 2a8f5ba6f9c5321ff3ad9b351e0f757c klines-3.4.3.ebuild 589
-MD5 855b10c68c3275632502f63c1efa769e klines-3.5.0.ebuild 551
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnZ+NcsIHjyDViGQRAj4wAJsHfFW0jQL7bCo76j6i4IP24DZ+3ACfdcht
-Dn1pm5DsxuyYkai+Qc60NSU=
-=xRn1
------END PGP SIGNATURE-----

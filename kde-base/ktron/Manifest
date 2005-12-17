@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88505ce9ef999cd9d3cdb266ac9c1687 ChangeLog 4040
+MD5 069f57b1075ae176f3304daee4c29f01 ChangeLog 4126
+MD5 f25caa3b0e2ebd1ba1288c208e2f2b66 ktron-3.4.1.ebuild 522
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 15b0d896b87e3847259f088450c01151 ktron-3.4.2.ebuild 535
+MD5 adb113e42c38a34562444a9bed309880 ktron-3.4.3.ebuild 529
+MD5 7ac236af95c9be6c0fad0ead93f88801 ktron-3.5.0.ebuild 499
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ktron-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ktron-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ktron-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-ktron-3.5.0 69
-MD5 f25caa3b0e2ebd1ba1288c208e2f2b66 ktron-3.4.1.ebuild 522
-MD5 15b0d896b87e3847259f088450c01151 ktron-3.4.2.ebuild 535
-MD5 adb113e42c38a34562444a9bed309880 ktron-3.4.3.ebuild 529
-MD5 357b4547cd36da254a6f59eac052d181 ktron-3.5.0.ebuild 491
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnaEfcsIHjyDViGQRArYrAKCqMjFHEGYxb/bHTots9xAEjAs9RQCgnd9b
-qq531hOaf6VEuDB6uCkM2FA=
-=tljP
------END PGP SIGNATURE-----

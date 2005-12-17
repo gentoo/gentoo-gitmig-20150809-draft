@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e399728b493879d982ed4fc2f83e1baf ChangeLog 4063
+MD5 1b21bf29a56eaf330d2ab34430e9e2fe ChangeLog 4149
+MD5 4982caa8d215131333ab264686458f37 ksame-3.4.1.ebuild 578
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 71e76be79360b017968532622926d874 ksame-3.4.2.ebuild 591
+MD5 c304d98cd2d3aac981ed7c643f6632b8 ksame-3.4.3.ebuild 585
+MD5 db636a64214cfa42baaf38c475b7e070 ksame-3.5.0.ebuild 555
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksame-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksame-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksame-3.4.3 68
 MD5 80f840bfb21ccf27fc7b0da926a5bcbd files/digest-ksame-3.5.0 69
-MD5 4982caa8d215131333ab264686458f37 ksame-3.4.1.ebuild 578
-MD5 71e76be79360b017968532622926d874 ksame-3.4.2.ebuild 591
-MD5 c304d98cd2d3aac981ed7c643f6632b8 ksame-3.4.3.ebuild 585
-MD5 5075b46b431c1533fd135b79c2f86d0b ksame-3.5.0.ebuild 547
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnaAscsIHjyDViGQRAnloAKCO0qmkV6LK4MkFSDq//QNQEk8m3gCfWvzl
-PtR1c67pDNBYwaFiNcaH+Ls=
-=zfAk
------END PGP SIGNATURE-----

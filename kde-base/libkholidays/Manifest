@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3755b734cdc2df5f2f49c87678d9434 ChangeLog 4329
-MD5 63784eece14c420a835016247ab735e4 libkholidays-3.4.3.ebuild 413
-MD5 aa5779b5d3455320c05eaa103c789182 libkholidays-3.5.0.ebuild 412
+MD5 423fc3ac65faf7ade5bf5d37fde4b331 ChangeLog 4422
+MD5 6eda33cb46a34f650baa8541c779c97a libkholidays-3.4.1.ebuild 406
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 cef438030188c387a397414826bb8736 libkholidays-3.4.2.ebuild 419
-MD5 6eda33cb46a34f650baa8541c779c97a libkholidays-3.4.1.ebuild 406
-MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkholidays-3.5.0 67
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkholidays-3.4.3 67
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkholidays-3.4.2 282
+MD5 63784eece14c420a835016247ab735e4 libkholidays-3.4.3.ebuild 413
+MD5 2e4c0f400d7964e441c421087ed53825 libkholidays-3.5.0.ebuild 420
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkholidays-3.4.1 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0mFugEuf3OQ0akRAtEOAJ4pKv8+aXxScQTjXXSsLesIqSbXNwCfQEHw
-sjiqvoQH9cJREZjFfxIHALQ=
-=oaGb
------END PGP SIGNATURE-----
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkholidays-3.4.2 282
+MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkholidays-3.4.3 67
+MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkholidays-3.5.0 67

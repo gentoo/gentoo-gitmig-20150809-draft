@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f1e9c30c538c2ec1b0649931e5140462 ChangeLog 3142
+MD5 6ff45b2f554c207d230715479b9ce9ef ChangeLog 3231
+MD5 66eee958280e92fae21fcb2505a726b4 libkmime-3.4.1.ebuild 416
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 bc09bf2ea67b60b2b8184cd9cd4f86a1 libkmime-3.5.0.ebuild 418
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkmime-3.4.1 208
 MD5 0b5d543dd13db98ba9001990b2e77964 files/digest-libkmime-3.5.0 67
-MD5 66eee958280e92fae21fcb2505a726b4 libkmime-3.4.1.ebuild 416
-MD5 009bb0854eed5e4c99e5c8c70616e3e6 libkmime-3.5.0.ebuild 410
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDktVKugEuf3OQ0akRAqevAJ9KtCqsgiuYrT9WFXVe1neoNFhhbwCeK3Or
-HUDTEFvPBv8mNe5UfgRBO7c=
-=wRz2
------END PGP SIGNATURE-----
