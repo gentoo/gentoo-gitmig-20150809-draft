@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.25 2005/12/17 01:39:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.26 2005/12/17 16:17:58 carlo Exp $
+
+  17 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +fpc-2.0.0-r1.ebuild:
+  restore ebuild for dev-lang/lazarus
 
 *fpc-2.0.2 (17 Dec 2005)
 
