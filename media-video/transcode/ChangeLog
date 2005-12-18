@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.126 2005/12/18 18:03:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.127 2005/12/18 18:45:27 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-1.0.2-r1.ebuild:
+  Replace v4l useflag with v4l2 to allow use.masking on sparc profiles using
+  2.4 kernels.
 
   18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.14-r3.ebuild, transcode-1.0.2-r1.ebuild:

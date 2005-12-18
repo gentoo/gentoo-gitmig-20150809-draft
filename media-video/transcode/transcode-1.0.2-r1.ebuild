@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.4 2005/12/18 18:03:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.5 2005/12/18 18:45:27 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X 3dnow a52 altivec dv dvdread mp3 fame truetype gtk imagemagick jpeg
-lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l
+lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l2
 xvid xml2 ffmpeg"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
@@ -47,7 +47,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 "
 
 DEPEND="${RDEPEND}
-	v4l? ( >=sys-kernel/linux-headers-2.6.11 )
+	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )
 	X? ( || ( ( x11-base/xorg-server
 			x11-libs/libXaw
 			x11-libs/libXv
@@ -100,7 +100,7 @@ src_compile() {
 		$(use_enable altivec) \
 		$(use_enable network netstream) \
 		$(use_enable truetype freetype2) \
-		$(use_enable v4l) \
+		$(use_enable v4l2 v4l) \
 		$(use_enable mp3 lame) \
 		$(use_enable ogg) \
 		$(use_enable vorbis) \
