@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.11 2005/12/18 02:03:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.12 2005/12/18 18:09:58 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -122,7 +122,7 @@ src_compile() {
 		$(use_enable v4l) \
 		$(use_enable xml2 libxml2) \
 		${myconf} \
-		--disable-avifile 
+		--disable-avifile
 
 	emake -j1 all || die "emake failed"
 
