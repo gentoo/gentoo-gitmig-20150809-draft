@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e459a5f80e8517de7ad9481976d208f ChangeLog 885
-MD5 44e9b1a355d11f5ed7db3c92a450a01a pylize-1.1b.ebuild 1033
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 5c8dc25aa266f38756a6665491bace4a ChangeLog 1064
 MD5 b4818a6ff5813a7b9a6a369a3ac921a0 files/digest-pylize-1.1b 63
+MD5 0bacb527331d894b9310897c272a6915 files/digest-pylize-1.3b 63
+MD5 612efec756bbaa58549d64e37fbc68e6 metadata.xml 536
+MD5 44e9b1a355d11f5ed7db3c92a450a01a pylize-1.1b.ebuild 1033
+MD5 e7ee4bde4a8139de8657b89dc3998420 pylize-1.3b.ebuild 892
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2TRVcsIHjyDViGQRAvTNAJ4yc2R7IEcgo+8HfzDB/ljY4tX4HQCfStMz
-cFwYXXRra6jCZAS607V0Gug=
-=pkng
+iD8DBQFDpfIr2jLqHNfbg2URApWOAJ9MDJny/MkbKxOun9xntbvazWvexgCfWcJf
+V63juZSAYz6+gvGndHyXhEQ=
+=qeEV
 -----END PGP SIGNATURE-----
