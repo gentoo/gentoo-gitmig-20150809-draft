@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 468f87cf83ced41db2cb969bf2593841 ChangeLog 495
 MD5 273f509d34c58e68146238c08fd8ce86 blinkenthemes-0.10.ebuild 626
 MD5 7feb07ca06792fe6fb2c27da1c08245b files/digest-blinkenthemes-0.10 71
 MD5 6560a8fd2fd2a6d3336aa62d046b822e metadata.xml 693
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDpe8/p5vW4rUFj5oRAvQzAKCKo0Ajo5Paw3TLNjkk49cEgzVzqQCePOdr
+NwLuio2gulSYLP75/y/tYZM=
+=P6DQ
+-----END PGP SIGNATURE-----
