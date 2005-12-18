@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfishtank
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.8 2005/12/18 12:32:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.9 2005/12/18 15:29:38 nelchael Exp $
+
+  18 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xfishtank-2.1tp-Makefile.patch, xfishtank-2.1.ebuild:
+  Fix Makefile to use CFLAGS (bug #115938).
 
   18 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org> xfishtank-2.1.ebuild:
   Fix dodoc - bug #115860.
