@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.17 2005/12/12 10:05:42 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.18 2005/12/18 18:07:24 corsair Exp $
+
+  18 Dec 2005; Markus Rothe <corsair@gentoo.org> mtools-3.9.10.ebuild:
+  Stable on ppc64
 
   12 Dec 2005; Christian Birchinger <joker@gentoo.org> mtools-3.9.10.ebuild:
   Added sparc stable keyword
