@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/linux-wlan-ng-firmware-0.2.2.ebuild,v 1.5 2005/12/03 11:52:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/linux-wlan-ng-firmware-0.2.2.ebuild,v 1.6 2005/12/18 22:47:46 betelgeuse Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Firmware for Prism2/2.5/3 based 802.11b wireless LAN products"
 HOMEPAGE="http://linux-wlan.org"
 SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.bz2"
 
-LICENSE="MPL-1.1"
+LICENSE="MPL-1.1 Conexant-firmware"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
