@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.285 2005/12/17 22:42:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.286 2005/12/18 11:13:52 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.1-r3.ebuild:
+  Don't use digilander, use Gentoo's mirror instead.
 
   17 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   xine-lib-1.1.1-r2.ebuild:
