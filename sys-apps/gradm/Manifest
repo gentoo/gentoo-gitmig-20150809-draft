@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3cec5d090d6dc344fa4ef85699af0a87 ChangeLog 10057
-MD5 0433ac1be1a1e05d61281b7a1ebe377b files/2.1.6.200506131347-non-lazy-bindings.patch 546
-MD5 0433ac1be1a1e05d61281b7a1ebe377b files/2.1.7.200511041858-non-lazy-bindings.patch 546
-MD5 4f610b1a69bb13a22080460f47de34a1 files/digest-gradm-2.1.5.200504081812 75
-MD5 071dc45d1922b65c304d4d8635470c0e files/digest-gradm-2.1.6.200506131347 75
-MD5 85c6a6df28491978d2a0c0c078b0b76b files/digest-gradm-2.1.7.200511041858 75
-MD5 36344ecbd7f54bdd4979c2fe6322c9c7 files/grsecurity 2325
-MD5 f2401396b01c577f727c2da3b694c779 files/grsecurity.rc 1810
+MD5 086af32fa349f7ec2a60a48a03dc1903 ChangeLog 10162
 MD5 b98247eb3f77f4eda11cd38125fa734e gradm-2.1.5.200504081812.ebuild 1317
 MD5 f713e0269c8451f633f5b779eb5d0401 gradm-2.1.6.200506131347.ebuild 1492
-MD5 e96f3e486ac7fb16edc7cea52de8dbf4 gradm-2.1.7.200511041858.ebuild 1495
 MD5 695a3bd3cfb34ea27e7dd493ce9ef398 metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlYHVz7mlh8wQzGMRAvu5AJ91LQKmGLwyz0SjrOywljSeSjxeqgCePfy5
-PYkQ7VSo3IQt+x+IgsgM9JA=
-=5kos
------END PGP SIGNATURE-----
+MD5 113b841cdcd0070a572d6d7debaa975e gradm-2.1.7.200511041858.ebuild 1496
+MD5 4f610b1a69bb13a22080460f47de34a1 files/digest-gradm-2.1.5.200504081812 75
+MD5 071dc45d1922b65c304d4d8635470c0e files/digest-gradm-2.1.6.200506131347 75
+MD5 36344ecbd7f54bdd4979c2fe6322c9c7 files/grsecurity 2325
+MD5 f2401396b01c577f727c2da3b694c779 files/grsecurity.rc 1810
+MD5 0433ac1be1a1e05d61281b7a1ebe377b files/2.1.6.200506131347-non-lazy-bindings.patch 546
+MD5 0433ac1be1a1e05d61281b7a1ebe377b files/2.1.7.200511041858-non-lazy-bindings.patch 546
+MD5 85c6a6df28491978d2a0c0c078b0b76b files/digest-gradm-2.1.7.200511041858 75
