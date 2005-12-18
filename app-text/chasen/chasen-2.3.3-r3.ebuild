@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.7 2005/11/28 12:11:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.8 2005/12/18 16:00:43 usata Exp $
 
-inherit perl-app
+inherit perl-app eutils
 
 DESCRIPTION="Japanese Morphological Analysis System, ChaSen"
 HOMEPAGE="http://chasen.aist-nara.ac.jp/"
@@ -25,6 +25,8 @@ src_unpack() {
 		cd ${S}/perl
 		sed -i -e '5a"LD" => "g++",' Makefile.PL || die
 	fi
+	cd ${S}
+	epatch ${FILESDIR}/chasen-2.4.0_pre1-gcc34.patch
 }
 
 src_compile() {
