@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.7 2005/12/14 17:01:11 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.8 2005/12/18 18:57:18 mkay Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -43,7 +43,7 @@ pkg_setup() {
 		die "Invalid USE flag set"
 	fi
 
-	if use stats && ! built_with_use >=media-libs/gd-2.0.32 jpeg; then
+	if use stats && ! built_with_use media-libs/gd jpeg; then
 		die "media-libs/gd should be compiled with the jpeg use flag when you have the stats use flag set"
 	fi
 }
