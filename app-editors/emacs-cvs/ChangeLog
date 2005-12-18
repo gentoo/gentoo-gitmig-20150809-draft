@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.36 2005/12/17 15:42:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.37 2005/12/18 01:21:45 ranger Exp $
+
+  18 Dec 2005; Brent Baude <ranger@gentoo.org> emacs-cvs-23.0.0.ebuild:
+  Marked ~ppc64 per bug 115361
 
   17 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> emacs-cvs-22.0.50.ebuild,
   emacs-cvs-23.0.0.ebuild:
