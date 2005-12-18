@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.18 2005/12/09 01:50:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.19 2005/12/18 13:27:33 betelgeuse Exp $
+
+  18 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> velocity-1.4-r3.ebuild:
+  Added a check for log4j being built with javamail support because velocity
+  uses javamail specific classes from log4j.
 
 *velocity-1.4-r3 (09 Dec 2005)
 
