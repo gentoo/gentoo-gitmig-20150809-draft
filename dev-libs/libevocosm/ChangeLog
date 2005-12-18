@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libevocosm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.5 2005/09/19 22:29:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.6 2005/12/18 23:42:48 halcy0n Exp $
+
+*libevocosm-3.1.0 (18 Dec 2005)
+
+  18 Dec 2005; Mark Loeser <halcy0n@gentoo.org> libevocosm-2.5.2.ebuild,
+  +libevocosm-3.1.0.ebuild:
+  Fixed SRC_URI and HOMEPAGE, bump to 3.1.0; bug #91401
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
