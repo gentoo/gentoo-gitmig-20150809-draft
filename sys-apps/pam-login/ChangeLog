@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.59 2005/10/09 22:42:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.60 2005/12/18 20:45:17 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam-login-3.17-nonls.patch, pam-login-3.17.ebuild:
+  Added patch to actually disable nls support, to allow building on non-GLIBC
+  systems.
 
   09 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   pam-login-4.0.12.ebuild:

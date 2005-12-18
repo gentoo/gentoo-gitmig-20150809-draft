@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.13 2005/09/12 03:02:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.14 2005/12/18 20:45:17 flameeyes Exp $
 
 inherit gnuconfig eutils pam
 
@@ -34,6 +34,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-3.11-gcc33.patch
 	epatch ${FILESDIR}/${PN}-3.11-lastlog-fix.patch
 
+	# Make sure NLS is actually disable, fix building on non-GLIBC systems
+	# see bug #115953, and Gentoo/Alt technotes.
+	epatch "${FILESDIR}/${P}-nonls.patch"
+
 	# Disable query_user_context selinux code (only affects selinux)
 	# if on the selinux livecd, since it can cause the login to timeout
 	# if the user isnt ready
@@ -48,10 +52,10 @@ src_unpack() {
 src_compile() {
 	local myconf=
 
-	use nls || myconf="${myconf} --disable-nls"
 	use selinux && myconf="${myconf} --enable-selinux"
 
-	econf ${myconf} || die
+	econf \
+		$(use_enable nls)
 	emake || die "emake failed"
 }
 

@@ -1,0 +1,82 @@
+Index: pam_login-3.17/src/faillog.c
+===================================================================
+--- pam_login-3.17.orig/src/faillog.c
++++ pam_login-3.17/src/faillog.c
+@@ -41,7 +41,10 @@
+ #include <unistd.h>
+ #include <getopt.h>
+ #include <locale.h>
++
++#ifdef ENABLE_NLS
+ #include <libintl.h>
++#endif
+ 
+ #include "faillog.h"
+ 
+@@ -92,9 +95,11 @@ int main (int argc, char **argv)
+ 	int c, anyflag = 0;
+ 	struct passwd *pwent;
+ 
++#ifdef ENABLE_NLS
+ 	setlocale (LC_ALL, "");
+ 	bindtextdomain (PACKAGE, LOCALEDIR);
+ 	textdomain (PACKAGE);
++#endif
+ 
+ 	/* try to open for read/write, if that fails - read only */
+ 
+Index: pam_login-3.17/src/lastlog.c
+===================================================================
+--- pam_login-3.17.orig/src/lastlog.c
++++ pam_login-3.17/src/lastlog.c
+@@ -41,7 +41,10 @@
+ #include <stdlib.h>
+ #include <getopt.h>
+ #include <locale.h>
++
++#ifdef ENABLE_NLS
+ #include <libintl.h>
++#endif
+ 
+ #ifndef _
+ #define _(s) gettext(s)
+@@ -77,9 +80,11 @@ int main (int argc, char **argv)
+ {
+ 	int c;
+ 
++#ifdef ENABLE_NLS
+ 	setlocale (LC_ALL, "");
+ 	bindtextdomain (PACKAGE, LOCALEDIR);
+ 	textdomain (PACKAGE);
++#endif
+ 
+ 	if ((lastlogfile = fopen (_PATH_LASTLOG, "r")) == (FILE *) 0) {
+ 		perror (_PATH_LASTLOG);
+Index: pam_login-3.17/src/login.c
+===================================================================
+--- pam_login-3.17.orig/src/login.c
++++ pam_login-3.17/src/login.c
+@@ -63,7 +63,11 @@
+ #include <sys/sysmacros.h>
+ #include <netdb.h>
+ #include <locale.h>
++
++#ifdef ENABLE_NLS
+ #include <libintl.h>
++#endif
++
+ #include <sys/sysmacros.h>
+ #include <linux/major.h>
+ #include <security/pam_appl.h>
+@@ -534,9 +538,11 @@ main (int argc, char **argv)
+ 
+   init_sighandler ();
+ 
++#ifdef ENABLE_NLS
+   setlocale (LC_ALL, "");
+   bindtextdomain ("pam_login", LOCALEDIR);
+   textdomain ("pam_login");
++#endif
+ 
+   setpriority (PRIO_PROCESS, 0, 0);
+ #ifdef HAVE_QUOTA
