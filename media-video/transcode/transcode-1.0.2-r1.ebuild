@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.2 2005/12/14 05:15:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.3 2005/12/18 01:59:58 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -25,7 +25,6 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	lzo? ( >=dev-libs/lzo-2 )
 	fame? ( >=media-libs/libfame-0.9.1 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6.0 )
-	media-libs/netpbm
 	media-libs/libexif
 	mpeg? ( media-libs/libmpeg3 )
 	mp3? ( >=media-sound/lame-3.93 )

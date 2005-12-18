@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.123 2005/12/14 05:15:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.124 2005/12/18 01:59:58 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-1.0.2-r1.ebuild:
+  Drop netpbm dependency as per bug #106283.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   transcode-0.6.14-r3.ebuild, transcode-1.0.2-r1.ebuild:
