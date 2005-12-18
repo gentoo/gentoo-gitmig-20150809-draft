@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e725d320c739971ff4da0d198bda146 ChangeLog 1701
-MD5 94c1f499230b56165301b64ed41c4ba7 files/digest-font-adobe-75dpi-0.99.2 76
-MD5 1bce644d2afa059774843862455b55e9 font-adobe-75dpi-0.99.2.ebuild 550
+MD5 1b0c35bc5805ce7305c3707bb3366d6d ChangeLog 1882
+MD5 724104bc9f903919626bea6580795f61 files/digest-font-adobe-75dpi-1.0.0 75
+MD5 8b65fa5fbe8fe7bb5840c8678cdd17ef font-adobe-75dpi-1.0.0.ebuild 550
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnZPnI1lqEGTUzyQRAm5mAJsF9pIq7ZeamlHHFBCOeqfncYgJ3QCguJVd
-PTG7yFN+KTlDSxhIevKuTkA=
-=6A1Z
------END PGP SIGNATURE-----
