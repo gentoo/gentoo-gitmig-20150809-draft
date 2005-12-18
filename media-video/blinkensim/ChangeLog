@@ -1,0 +1,10 @@
+# ChangeLog for media-video/blinkensim
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.1 2005/12/18 01:19:03 pylon Exp $
+
+*blinkensim-2.7 (18 Dec 2005)
+
+  18 Dec 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +blinkensim-2.7.ebuild:
+  Initial import of the frontend for blinkentools.
+
