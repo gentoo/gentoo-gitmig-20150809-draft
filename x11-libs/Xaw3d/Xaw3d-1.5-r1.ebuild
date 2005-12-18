@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.28 2005/12/11 07:53:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.29 2005/12/18 17:33:01 spyderous Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -41,6 +41,7 @@ RDEPEND="|| ( ( x11-libs/libXt
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	|| ( ( x11-proto/xextproto
+			x11-misc/gccmakedep
 		)
 		virtual/x11
 	)"
