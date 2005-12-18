@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r3.ebuild,v 1.3 2005/08/26 13:07:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r3.ebuild,v 1.4 2005/12/18 17:43:46 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/avalon-framework-4.1*
 	~dev-java/batik-1.5
 	dev-java/xalan
-	~dev-java/xerces-2.6.2"
+	>=dev-java/xerces-2.6.2"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-1.5.4

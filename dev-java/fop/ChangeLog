@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.19 2005/08/26 13:07:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.20 2005/12/18 17:43:46 nichoj Exp $
+
+  18 Dec 2005; Joshua Nichols <nichoj@gentoo.org> fop-0.20.5-r3.ebuild:
+  Loosened xerces dependency.
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> fop-0.20.5-r3.ebuild:
   Fix cp -a usage for Gentoo/FreeBSD.
