@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gai
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.10 2004/10/08 16:37:54 lordvan Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.11 2005/12/18 04:18:40 lordvan Exp $
+
+*gai-0.5.10 (18 Dec 2005)
+
+  18 Dec 2005; Thomas Raschbacher <lordvan@gentoo.org> +gai-0.5.10.ebuild:
+  updated version to 0.5.10; bug #88527 (thanks to Marcelo Goes
+  <vanquirius@gentoo.org>)
 
 *gai-0.5.6 (08 Oct 2004)
 
