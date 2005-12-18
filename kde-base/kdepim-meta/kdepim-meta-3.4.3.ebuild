@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.4.3.ebuild,v 1.8 2005/12/10 20:58:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.4.3.ebuild,v 1.9 2005/12/18 22:45:16 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -48,5 +48,3 @@ RDEPEND="
 	$(deprange 3.4.2 $MAXKDEVER kde-base/mimelib)
 	$(deprange 3.4.2 $MAXKDEVER kde-base/networkstatus)"
 
-# not compiled by default
-#	$(deprange $PV $MAXKDEVER kde-base/kmobile)
