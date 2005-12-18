@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-0.9.0-r2.ebuild,v 1.1 2005/12/16 12:40:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-0.9.0-r2.ebuild,v 1.2 2005/12/18 22:18:16 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -18,7 +18,7 @@ DEPEND=">=media-video/vdr-1.2.0"
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	has_version ">=media-video/vdr-1.3.7" && has_version "<=media-video/vdr-1.3.22" \
+	has_version ">=media-video/vdr-1.3.7" && has_version "<=media-video/vdr-1.3.22" && \
 	epatch ${FILESDIR}/vdr-1.3.18-${P}.diff
 
 	has_version ">=media-video/vdr-1.3.23" && \
