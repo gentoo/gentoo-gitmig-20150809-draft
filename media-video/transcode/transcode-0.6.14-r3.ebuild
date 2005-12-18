@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r3.ebuild,v 1.3 2005/12/14 05:15:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r3.ebuild,v 1.4 2005/12/18 18:03:13 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X 3dnow a52 altivec dv dvdread encode fame truetype gtk imagemagick jpeg
-lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime sdl sse sse2 theora v4l
+lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l
 xvid xml2"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
@@ -49,8 +49,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	truetype? ( >=media-libs/freetype-2 )
-	pvm? ( >=sys-cluster/pvm-3.4 )"
+	truetype? ( >=media-libs/freetype-2 )"
 
 DEPEND="${RDEPEND}
 	X? ( || ( x11-proto/xextproto virtual/x11 ) )
@@ -76,18 +75,6 @@ src_unpack() {
 src_compile() {
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
 	use ppc && append-flags -U__ALTIVEC__
-
-	if use pvm; then
-		if use sparc; then
-			myconf="${myconf} --enable-pvm3 \
-				--with-pvm3-lib=${PVM_ROOT}/lib/LINUXSPARC \
-				--with-pvm3-include=${PVM_ROOT}/include"
-		else
-			myconf="${myconf} --enable-pvm3 \
-				--with-pvm3-lib=${PVM_ROOT}/lib/LINUX \
-				--with-pvm3-include=${PVM_ROOT}/include"
-		fi
-	fi
 
 	use xvid \
 		&& myconf="${myconf} --with-default-xvid=xvid4"
@@ -131,11 +118,6 @@ src_compile() {
 		|| die "econf failed"
 
 	emake -j1 all || die "emake failed"
-
-	if use pvm; then
-		sed -i -e "s:\${exec_prefix}/bin/pvmgs:\$(DESTDIR)/\${exec_prefix}/bin/pvmgs:" \
-			${S}/pvm3/Makefile || die "sed failed"
-	fi
 }
 
 src_install () {
