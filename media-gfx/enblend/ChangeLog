@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.8 2005/11/06 03:23:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.9 2005/12/18 07:09:19 halcy0n Exp $
+
+*enblend-2.5 (18 Dec 2005)
+
+  18 Dec 2005; Mark Loeser <halcy0n@gentoo.org> -enblend-2.1.ebuild,
+  -enblend-2.2.ebuild, +enblend-2.5.ebuild:
+  Bump to 2.5 and clean out some old versions
 
   06 Nov 2005; Luis Medinas <metalgod@gentoo.org> enblend-2.3.ebuild:
   Marked Stable on amd64.
