@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.29 2005/12/13 05:44:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.30 2005/12/18 17:57:16 flameeyes Exp $
+
+*openexr-1.2.2-r2 (18 Dec 2005)
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -openexr-1.2.2-r1.ebuild, +openexr-1.2.2-r2.ebuild:
+  Revbump to remove the fltk support as it's badly broken. See bug #100242.
+  Also closes bug #105967.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   openexr-1.2.2-r1.ebuild:

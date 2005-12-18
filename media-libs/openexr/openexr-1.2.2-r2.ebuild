@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r1.ebuild,v 1.5 2005/12/13 05:44:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.1 2005/12/18 17:57:16 flameeyes Exp $
 
 inherit eutils
 
@@ -14,21 +14,11 @@ HOMEPAGE="http://www.openexr.com"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~hppa"
-IUSE="doc examples fltk"
+IUSE="doc examples"
 
-RDEPEND="virtual/opengl
-	fltk? ( x11-libs/fltk )"
+RDEPEND="virtual/opengl"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
-
-pkg_setup() {
-	if use fltk  && ( ! built_with_use x11-libs/fltk opengl ) ; then
-		echo
-		eerror "You need either to rebuild x11-libs/fltk with opengl use flag enabled, or to build"
-		eerror "OpenEXR without fltk support (exrdisplay, an OpenEXR image viewer won't be built)."
-		die
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -39,8 +29,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--disable-fltktest $(use_with fltk fltk-config) $(use_enable examples imfexamples)"
-	econf ${myconf} || die "configure failed"
+	econf \
+		$(use_enable examples imfexamples) \
+		--without-fltk-config
+	
 	emake || die "make failed"
 }
 
