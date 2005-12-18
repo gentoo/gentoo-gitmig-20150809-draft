@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.3 2005/09/17 19:45:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.4 2005/12/18 21:33:41 flameeyes Exp $
 
 inherit wxwidgets eutils
 
@@ -72,4 +72,7 @@ src_install() {
 	newins images/AudacityLogo48x48.xpm audacity.xpm
 
 	make_desktop_entry audacity Audacity audacity
+
+	# remove the eventual desktop file in applnk.
+	rm -rf ${D}/usr/share/applnk
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.35 2005/09/17 19:45:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.36 2005/12/18 21:33:41 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  audacity-1.2.3-r1.ebuild:
+  Remove eventual stray applnk desktop file, see bug #111204.
 
   17 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/audacity-1.2.3-x86.patch, audacity-1.2.3-r1.ebuild:
