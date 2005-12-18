@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.50 2005/12/06 00:17:10 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.51 2005/12/18 18:14:25 corsair Exp $
+
+  18 Dec 2005; Markus Rothe <corsair@gentoo.org> gtk-engines-2.6.5.ebuild:
+  Stable on ppc64
 
   06 Dec 2005; Herbie Hopkins <herbs@gentoo.org> gtk-engines-2.6.5.ebuild:
   Stable on amd64.
