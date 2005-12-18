@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.61 2005/11/23 19:15:42 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.62 2005/12/18 21:31:27 flameeyes Exp $
+
+*alsa-oss-1.0.10-r1 (18 Dec 2005)
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +alsa-oss-1.0.10-r1.ebuild:
+  Make sure that LD_PRELOAD is not specifying a path for the libaoss.so
+  library, to make it work on multilib setups.
 
   23 Nov 2005; Luis Medinas <metalgod@gentoo.org> alsa-oss-1.0.10.ebuild:
   Stable on amd64. See bug #111968.
