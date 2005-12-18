@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.20 2005/07/13 14:34:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r3.ebuild,v 1.1 2005/12/18 12:42:25 nelchael Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,19 +12,38 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~sparc"
-IUSE="kde sse 3dnow openal"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="kde sse 3dnow openal xscreensaver"
 
-DEPEND="virtual/x11
+DEPEND="|| ( virtual/x11 x11-libs/libXt )
 	virtual/opengl
 	>=media-gfx/imagemagick-5.5.7
-	kde? ( || ( kde-base/kdeartwork-meta kde-base/kdeartwork ) )
-	!kde? ( x11-misc/xscreensaver )
+	kde? ( || ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork ) )
+	!kde? ( >=x11-misc/xscreensaver-4.22-r2 )
+	xscreensaver? ( >=x11-misc/xscreensaver-4.22-r2 )
 	openal? ( media-libs/openal )"
+
+pkg_setup() {
+	if use kde && use xscreensaver ; then
+		if ! built_with_use kde-base/kdeartwork-kscreensaver xscreensaver && \
+		   ! built_with_use kde-base/kdeartwork xscreensaver ; then
+			eerror "rss-glx wont work nicely with kde unless you emerge"
+			eerror "kde-base/kdeartwork or kde-base/kdeartwork-kscreensaver"
+			eerror "with USE=xscreensaver."
+			eerror "See http://bugs.gentoo.org/show_bug.cgi?id=88212"
+			die "Please re-emerge your KDE with USE=xscreensaver"
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.7.4-kdedesktop.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.8.0-r2-kdedesktop.patch
+	epatch ${FILESDIR}/${PN}-0.8.0-assert.patch
+	epatch ${FILESDIR}/${PN}-0.8.0-configure.in.patch
+	epatch ${FILESDIR}/${PN}-0.8.0-hyperspace-install-fix.patch
+	cp ${FILESDIR}/jwz-vroot.h ${S}/include/vroot.h
 }
 
 src_compile() {
@@ -32,8 +51,8 @@ src_compile() {
 
 	local myconf
 
-	myconf="${myconf} --bindir=/usr/lib/xscreensaver" \
-	myconf="${myconf} --with-configdir=/usr/share/control-center/screensavers/" \
+	myconf="${myconf} --bindir=/usr/lib/misc/xscreensaver" \
+	myconf="${myconf} --with-configdir=/usr/share/xscreensaver/config/" \
 
 	if use kde; then
 		find . -name '*.desktop' -exec \
@@ -46,26 +65,31 @@ src_compile() {
 		myconf="${myconf} --with-kdessconfigdir=/usr/share/applnk/System/ScreenSavers"
 	fi
 
+	# Hardenable SIMD extensions on amd64
+	if use amd64 ; then
+		myconf="${myconf} --enable-sse --enable-3dnow"
+	elif use x86 ; then
+		myconf="${myconf} $(use_enable sse) $(use_enable 3dnow)"
+	fi
+
 	econf \
-		`use_enable sse` \
-		`use_enable 3dnow` \
-		`use_enable openal sound` \
-		${myconf} || die
-	emake || die
+		$(use_enable openal sound) \
+		${myconf} || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-	dodoc COPYING INSTALL README README.xscreensaver
+	dodoc README README.xscreensaver
 
 	# symlink to satisfy kde's kxs*
 	use kde && dosym /usr/share/control-center/screensavers /usr/lib/xscreensaver/config
 }
 
 pkg_postinst() {
-	local XSCREENSAVER_CONF="${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver"
+	local XSCREENSAVER_CONF="${ROOT}/etc/X11/app-defaults/XScreenSaver"
 
-	if [ -f ${XSCREENSAVER_CONF} -a -z "`grep 'Euphoria' ${XSCREENSAVER_CONF}`" ]; then
+	if [ -f ${XSCREENSAVER_CONF} ]; then
 		einfo "Adding Really Slick Screensavers to XScreenSaver"
 		sed -e '/*programs:/a\
 	GL:       \"Cyclone\"  cyclone --root     \\n\\\
@@ -74,6 +98,7 @@ pkg_postinst() {
 	GL:        \"Flocks\"  flocks --root      \\n\\\
 	GL:          \"Flux\"  flux --root        \\n\\\
 	GL:        \"Helios\"  helios --root      \\n\\\
+	GL:    \"Hyperspace\"  hyperspace --root  \\n\\\
 	GL:       \"Lattice\"  lattice --root     \\n\\\
 	GL:        \"Plasma\"  plasma --root      \\n\\\
 	GL:     \"Skyrocket\"  skyrocket --root   \\n\\\
@@ -90,13 +115,12 @@ pkg_postinst() {
 
 	else
 		einfo "Unable to add these to XScreenSaver configuration"
-		einfo "Read /usr/share/doc/${PF}/README.xscreensaver.gz for"
-		einfo "entries to add to your ~/.xscreensaver file to enable these hacks"
+		einfo "This should not happen. Please file a bug"
 	fi
 }
 
 pkg_postrm() {
-	local XSCREENSAVER_CONF="${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver"
+	local XSCREENSAVER_CONF="${ROOT}/etc/X11/app-defaults/XScreenSaver"
 
 	has_version x11-misc/rss-glx && return 0
 	if [ -f ${XSCREENSAVER_CONF} ]; then
@@ -108,6 +132,7 @@ pkg_postrm() {
 			-e '/\"Flocks\"  flocks/d' \
 			-e '/\"Flux\"  flux/d' \
 			-e '/\"Helios\"  helios/d' \
+			-e '/\"Hyperspace\"  hyperspace/d' \
 			-e '/\"Lattice\"  lattice/d' \
 			-e '/\"Plasma\"  plasma/d' \
 			-e '/\"Skyrocket\"  skyrocket/d' \
