@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.121 2005/12/15 19:21:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.122 2005/12/18 02:10:52 anarchy Exp $
+
+*mozilla-firefox-1.5-r3 (18 Dec 2005)
+
+  18 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-1.5.ebuild, -mozilla-firefox-1.5-r1.ebuild,
+  -mozilla-firefox-1.5-r2.ebuild, +mozilla-firefox-1.5-r3.ebuild:
+  corrected text relocation
 
   15 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   mozilla-firefox-1.5-r2.ebuild:
