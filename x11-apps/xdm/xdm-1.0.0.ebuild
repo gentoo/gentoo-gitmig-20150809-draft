@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.0.0.ebuild,v 1.1 2005/12/18 19:29:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.0.0.ebuild,v 1.2 2005/12/18 19:35:57 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -35,4 +35,14 @@ src_install() {
 	exeinto /usr/$(get_libdir)/X11/xdm
 	doexe ${FILESDIR}/Xsession
 	newpamd ${FILESDIR}/xdm.pamd xdm
+}
+
+pkg_preinst() {
+	x-modular_pkg_preinst
+
+	# Check for leftover /usr/lib/X11/xdm symlink
+	if [[ -L "/usr/lib/X11/xdm" ]]; then
+		ewarn "/usr/lib/X11/xdm is a symlink; deleting."
+		rm /usr/lib/X11/xdm
+	fi
 }
