@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha5.ebuild,v 1.1 2005/08/21 16:31:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha5.ebuild,v 1.2 2005/12/18 02:08:44 flameeyes Exp $
 inherit flag-o-matic
 
 DESCRIPTION="The Theora Video Compression Codec"
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x8
 IUSE="encode doc"
 
 RDEPEND=">=media-libs/libogg-1.1.0
-	>=media-libs/libvorbis-1.0.1"
+	encode? ( >=media-libs/libvorbis-1.0.1 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 

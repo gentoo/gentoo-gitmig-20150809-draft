@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.35 2005/08/21 16:31:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.36 2005/12/18 02:08:44 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libtheora-1.0_alpha5.ebuild:
+  Fix dependency over libvorbis only if encode is requrested. Bug #111739.
 
 *libtheora-1.0_alpha5 (21 Aug 2005)
 
