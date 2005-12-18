@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1617 2005/12/18 13:28:39 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1618 2005/12/18 18:44:03 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -727,6 +727,7 @@ media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
 media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:sse2 - Enables sse2 support
+media-video/transcode:v4l2 - Enable video4linux2 support
 media-video/vdr:aio - use "all in one" patch with much additional features
 media-video/vdr:bigpatch - enable almost all additional features flying around on the net (including aio)
 media-video/vdr:jumpplay - enables automatic jumping over cut marks while watching a recording
