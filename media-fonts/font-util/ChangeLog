@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.14 2005/12/08 22:58:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.15 2005/12/18 19:59:19 spyderous Exp $
+
+*font-util-1.0.0 (18 Dec 2005)
+
+  18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/configurable-mapdir.patch, -font-util-0.99.2-r2.ebuild,
+  +font-util-1.0.0.ebuild:
+  Bump for 7.0RC4.
 
 *font-util-0.99.2-r2 (08 Dec 2005)
 

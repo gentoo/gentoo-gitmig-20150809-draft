@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/font-jis-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-jis-misc/ChangeLog,v 1.8 2005/12/10 21:58:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-jis-misc/ChangeLog,v 1.9 2005/12/18 19:55:38 spyderous Exp $
+
+*font-jis-misc-1.0.0 (18 Dec 2005)
+
+  18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -font-jis-misc-0.99.1.ebuild, +font-jis-misc-1.0.0.ebuild:
+  Bump for 7.0RC4.
 
   10 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   font-jis-misc-0.99.1.ebuild:
