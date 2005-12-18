@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc2.ebuild,v 1.2 2005/11/19 05:10:01 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5.ebuild,v 1.1 2005/12/18 07:27:21 halcy0n Exp $
 
 inherit wxwidgets eutils
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
-MY_P=${P/_rc/-rc}
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 SIFT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -21,13 +20,8 @@ DEPEND=">=media-libs/libpano12-2.7.0.8
 		media-libs/jpeg
 		media-libs/tiff"
 
-S=${WORKDIR}/${MY_P}
-
 src_unpack() {
 	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	sed -i -e 's/autopanog\.exe/autopanog/' "${S}"/src/include/hugin/config_defaults.h
 }
@@ -49,8 +43,8 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
-	dodoc AUTHORS BUGS INSTALL LICENCE LICENCE_SIFT README TODO
+	make install DESTDIR="${D}" || die
+	dodoc AUTHORS BUGS README TODO
 }
 
 pkg_postinst() {
