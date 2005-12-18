@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.70 2005/12/18 19:25:47 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.71 2005/12/18 20:08:06 mkay Exp $
+
+  18 Dec 2005; Marcin Kryczek <mkay@gentoo.org> -files/bttrack.rc-4.1,
+  +files/bittorrent-tracker.confd, +files/bittorrent-tracker.initd,
+  bittorrent-4.1.8.ebuild, bittorrent-4.2.0.ebuild, bittorrent-4.2.2.ebuild:
+  Changing name of startup script and configuration file to fit upstream changes
 
 *bittorrent-4.2.2 (18 Dec 2005)
 

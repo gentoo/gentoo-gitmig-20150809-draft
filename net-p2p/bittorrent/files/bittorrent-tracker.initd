@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/files/bttrack.rc-4.1,v 1.1 2005/09/10 16:09:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/files/bittorrent-tracker.initd,v 1.1 2005/12/18 20:08:06 mkay Exp $
 
 depend() {
 	need net
