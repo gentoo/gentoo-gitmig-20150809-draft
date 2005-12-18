@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.28 2005/11/29 20:05:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.29 2005/12/18 20:14:21 anarchy Exp $
+
+*mozilla-firefox-bin-1.5-r1 (18 Dec 2005)
+
+  18 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-firefox-bin-1.5-r1.ebuild:
+  fixed manifest wrt bug#114448, modular X compatible
 
 *mozilla-firefox-bin-1.5 (29 Nov 2005)
 
