@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.64 2005/11/13 08:13:18 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.65 2005/12/18 13:18:59 hattya Exp $
+
+*anthy-7100b-r1 (18 Dec 2005)
+
+  18 Dec 2005; Akinori Hattori <hattya@gentoo.org> -anthy-7100b.ebuild,
+  +anthy-7100b-r1.ebuild:
+  fixes a problem of anthy.dic generation.
 
 *anthy-7100b (13 Nov 2005)
 
