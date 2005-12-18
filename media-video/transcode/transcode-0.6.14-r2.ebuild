@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.10 2005/11/03 12:08:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.11 2005/12/18 02:03:38 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://transcode/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
-IUSE="X 3dnow a52 avi altivec dv dvdread encode fame truetype \
+IUSE="X 3dnow a52 altivec dv dvdread encode fame truetype \
 	gtk imagemagick jpeg lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime \
 	sdl sse sse2 theora v4l xvid xml2"
 
@@ -34,7 +34,6 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	media-libs/netpbm
 	media-libs/libexif
 	X? ( virtual/x11 )
-	avi? ( >=media-video/avifile-0.7.41.20041001 )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
@@ -100,7 +99,6 @@ src_compile() {
 		$(use_enable 3dnow) \
 		$(use_enable a52) \
 		$(use_enable altivec) \
-		$(use_enable avi avifile) \
 		$(use_enable dv libdv) \
 		$(use_enable dvdread libdvdread) \
 		$(use_enable encode lame) \
@@ -124,7 +122,7 @@ src_compile() {
 		$(use_enable v4l) \
 		$(use_enable xml2 libxml2) \
 		${myconf} \
-		|| die "econf failed"
+		--disable-avifile 
 
 	emake -j1 all || die "emake failed"
 
