@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r4.ebuild,v 1.3 2005/07/16 16:46:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r4.ebuild,v 1.4 2005/12/18 17:33:04 nichoj Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jasperreports.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jasperreports/${P}-project.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="jikes doc"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/gnu-jaxp
@@ -48,7 +48,7 @@ src_unpack() {
 	java-pkg_jar-from servletapi-2.3
 	java-pkg_jar-from xalan
 	java-pkg_jar-from xerces-2 xercesImpl.jar
-	java-pkg_jar-from xerces-2 xmlParserAPIs.jar
+#	java-pkg_jar-from xerces-2 xmlParserAPIs.jar
 }
 
 src_compile() {
