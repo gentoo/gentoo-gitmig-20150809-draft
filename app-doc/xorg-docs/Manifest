@@ -1,0 +1,5 @@
+MD5 428aed1e3145337bc09465de82901e63 ChangeLog 458
+MD5 e23f60478eaccabb80b3f703f198c6f1 files/allow_manpages_only.patch 742
+MD5 405499e7406e5cdb8fce4d2065875a0c files/digest-xorg-docs-1.0.0 69
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 6bd1a23beaf1973aabd23399cdd33b89 xorg-docs-1.0.0.ebuild 497

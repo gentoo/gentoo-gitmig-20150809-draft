@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/xorg-docs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.1 2005/12/18 10:21:19 joshuabaergen Exp $
+
+*xorg-docs-1.0.0 (18 Dec 2005)
+
+  18 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/allow_manpages_only.patch, +metadata.xml, +xorg-docs-1.0.0.ebuild:
+  New modular X package containing main X manpages and library documentation.
+
