@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.6 2005/10/08 17:29:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.7 2005/12/18 18:09:03 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -71,12 +71,31 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_MPI:BOOL=ON"
 		use !threads && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PARALLEL:BOOL=ON"
 	fi
-	use python && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_PYTHON:BOOL=ON"
+
+	if use python; then
+
+		#determine installed python version
+		local tmp="$(/usr/bin/python -V 2>&1 )"
+		local PY_VERSION="${tmp#Python }"
+		local PY_MAJOR="$(echo ${PY_VERSION} | cut -d. -f1)"
+		local PY_MINOR="$(echo ${PY_VERSION} | cut -d. -f2)"
+		local PY_VERSION="${PY_MAJOR}.${PY_MINOR}"
+
+		# set variables
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_PYTHON:BOOL=ON"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_INCLUDE_PATH:PATH=/usr/include/python${PY_VERSION}"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/lib/libpython${PY_VERSION}.so"
+	fi
+
 	use tcltk && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
 	use threads && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PARALLEL:BOOL=ON"
 	use patented && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PATENTED:BOOL=ON"
 
-	cmake ${CMAKE_VARIABLES} . || die "cmake configuration failed"
+	# run cmake twice to achieve proper
+	# configuration with cmake 2.2.x
+	cmake ${CMAKE_VARIABLES} . && cmake ${CMAKE_VARIABLES} . \
+		|| die "cmake configuration failed"
+
 	emake || die "emake failed"
 }
 
@@ -132,7 +151,7 @@ src_install() {
 	echo "LDPATH=${LDPATH}" > ${T}/40${PN}
 	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> ${T}/40${PN}
 	if use java; then
-		echo "CLASSPATH=/usr/share/${PN}/${PN}.jar" >> ${T}/40${PN}
+		echo "CLASSPATH=/usr/share/${PN}/lib/${PN}.jar" >> ${T}/40${PN}
 		echo "LD_LIBRARY_PATH=/usr/lib/${PN}" >> ${T}/40${PN}
 	fi
 	use tcltk && echo "TCLLIBPATH=/usr/lib/${PN}/tcl" >> ${T}/40${PN}
