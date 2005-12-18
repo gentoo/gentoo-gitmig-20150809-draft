@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.3.ebuild,v 1.10 2005/10/06 03:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.3.ebuild,v 1.11 2005/12/18 17:58:50 flameeyes Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/${MY_P}/build/generic
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-DESTDIR.patch
+	epatch "${FILESDIR}/1.0.2-DESTDIR.patch"
 	cd "${S}"/../..
 	epatch "${FILESDIR}"/${PN}-1.0-ia64.patch
 }

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.49 2005/12/17 12:59:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.50 2005/12/18 17:58:50 flameeyes Exp $
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/1.0.0_rc4-DESTDIR.patch, -files/1.0.1-DESTDIR.patch,
+  -files/1.0.3-DESTDIR.patch, -xvid-0.9.1.ebuild, -xvid-0.9.2-r1.ebuild,
+  -xvid-1.0.0_rc4.ebuild, -xvid-1.0.1.ebuild, xvid-1.0.3.ebuild,
+  -xvid-1.1.0_beta2.ebuild:
+  Remove old versions of xvid, leave only latest stable and ~arch. Solves the
+  collision problem of bug #41157.
 
   17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   xvid-1.1.0_beta2-r1.ebuild:
