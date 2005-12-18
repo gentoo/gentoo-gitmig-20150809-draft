@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.47 2005/12/05 17:34:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.48 2005/12/18 18:05:50 corsair Exp $
+
+  18 Dec 2005; Markus Rothe <corsair@gentoo.org> less-385_p4-r2.ebuild:
+  Stable on ppc64
 
   05 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> less-385_p4-r2.ebuild:
   Stable on sparc
