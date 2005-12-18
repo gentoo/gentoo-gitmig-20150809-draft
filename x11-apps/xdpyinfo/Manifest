@@ -1,4 +1,6 @@
-MD5 b6d61bb1afd20848e6a9a9a6d74b89bc ChangeLog 1449
+MD5 b1f36f6b9471802ab71d2b201b57fe28 ChangeLog 1587
 MD5 617e18d94c64621da06c82a542155583 files/digest-xdpyinfo-0.99.2 67
+MD5 c07968277874acf976ca48028b3bd836 files/digest-xdpyinfo-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 490eff06ca147f9af589c6f7b307a935 xdpyinfo-0.99.2.ebuild 870
+MD5 4fe127ad15b46a501215670596341ca3 xdpyinfo-1.0.0.ebuild 869

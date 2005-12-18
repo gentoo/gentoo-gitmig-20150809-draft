@@ -1,4 +1,6 @@
-MD5 147bc3c6f266eefb1ab177767be55f71 ChangeLog 1151
+MD5 697ccf9d59edb541b38f63a5a55be39d ChangeLog 1279
 MD5 89277876cd4e336127965a5ed4992750 files/digest-xman-0.99.3 64
+MD5 a4aa10ff60d7d3e28af70f6263dbe31d files/digest-xman-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 791a29dfba0c6de0f133d1658e3be973 xman-0.99.3.ebuild 559
+MD5 55b3b65b409a7681d88f9a94171de192 xman-1.0.0.ebuild 558

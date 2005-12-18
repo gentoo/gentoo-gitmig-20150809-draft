@@ -1,4 +1,6 @@
-MD5 2979997bbee93d282e35091749ee97c7 ChangeLog 1096
+MD5 7afbe23ce014fc43db7db35dc21d238d ChangeLog 1230
 MD5 1f162c5e846a03042b76bd8271b5219e files/digest-xkbevd-0.99.3 66
+MD5 881f420b826ec9b99586f251a598c907 files/digest-xkbevd-1.0.0 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 8b5bf1052964aed2bb7e6183cdaf24e3 xkbevd-0.99.3.ebuild 438
+MD5 681705aeda2f9a3f35cde3de43e4691c xkbevd-1.0.0.ebuild 437

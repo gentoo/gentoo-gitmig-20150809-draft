@@ -1,4 +1,6 @@
-MD5 ec8918c08706e83051004d9aae344c13 ChangeLog 1054
+MD5 b2d6383bd5967c4e43d83fadcde4710f ChangeLog 1192
 MD5 7531cee7e5bbf72377e69096b3b4002e files/digest-xkbprint-0.99.2 68
+MD5 352baad64149a66e364b230a0e3ef38c files/digest-xkbprint-1.0.0 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 18cfce88026548ff88d8ba3442d541b2 xkbprint-0.99.2.ebuild 451
+MD5 2477fe1bc1964d3a78791b0abe36c25f xkbprint-1.0.0.ebuild 450

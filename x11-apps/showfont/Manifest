@@ -1,4 +1,6 @@
-MD5 e9b44f9670bf9dd9c4e2268a47de9068 ChangeLog 963
+MD5 e153ee53641f1ec43fd3c349f8aa5db4 ChangeLog 1101
 MD5 0f81b6559aa6e9b5c1c3c3efe566c9c7 files/digest-showfont-0.99.2 67
+MD5 a921e26def0b64b2657d4cf245f67f7b files/digest-showfont-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 fd86eefe0d7f6b7bdd0a7019b39c8274 showfont-0.99.2.ebuild 439
+MD5 6fb3ddd39823ee09f57e90eb7f271601 showfont-1.0.0.ebuild 438

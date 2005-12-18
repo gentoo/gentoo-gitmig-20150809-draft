@@ -1,4 +1,6 @@
-MD5 445e46d5d2299fc88052699eaefb4ad9 ChangeLog 952
+MD5 10da4fc081b761b521359196f9323cc2 ChangeLog 1088
 MD5 4a8102ca26336340f05f8d3becfb9820 files/digest-scripts-0.99.2 66
+MD5 bea3c86eb7882c35cd8307679e2c2f1a files/digest-scripts-1.0.0 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f4b78260e2fc874e1f21cc39d070e00d scripts-0.99.2.ebuild 437
+MD5 885e663e376bdc901c15c51990ad7fee scripts-1.0.0.ebuild 436

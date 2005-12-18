@@ -1,4 +1,6 @@
-MD5 122ce4de6d0866d082b7d35cc3ba18ab ChangeLog 902
+MD5 8764ea02475d3a3569d3ac6e2777ca40 ChangeLog 1028
 MD5 0cc462c99e29620eb95f0b8ab35f77dc files/digest-xgc-0.99.2 63
+MD5 01df9c9ead3eaed6294a65952890deb4 files/digest-xgc-1.0.0 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 e7810b9e6441c495423353162ed4b3f7 xgc-0.99.2.ebuild 613
+MD5 48d7c63be08f624bf1358aa41f607bc9 xgc-1.0.0.ebuild 612

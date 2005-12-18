@@ -1,4 +1,6 @@
-MD5 8cd38e018bdff39e241e94fafb83dc6b ChangeLog 952
+MD5 987e882af25f775b22b30805341dbcea ChangeLog 1088
 MD5 48297d0dfb8588968a5f631b032a1eca files/digest-viewres-0.99.2 66
+MD5 7dbe0a100856e888d27318e635ca09bf files/digest-viewres-1.0.0 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2e983c95bf2a9c62f861eb8add507edd viewres-0.99.2.ebuild 625
+MD5 d069fc463f2f75989be05bf6abd02db0 viewres-1.0.0.ebuild 624

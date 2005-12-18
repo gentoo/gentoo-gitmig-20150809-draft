@@ -1,4 +1,6 @@
-MD5 48b07f37284ab9ab8ac839a5c32ecb9c ChangeLog 1082
+MD5 4f283696231c213acea55dffff752222 ChangeLog 1214
 MD5 b5c27783b96de528a6d87582a1d59895 files/digest-xtrap-0.99.2 64
+MD5 aaa6f3985f6d437ba98e4c90948e4c7e files/digest-xtrap-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 cd2e015eec862426f82a31d8f18c1925 xtrap-0.99.2.ebuild 462
+MD5 c9175603f483934121fd2f735141ddcd xtrap-1.0.0.ebuild 461

@@ -1,4 +1,6 @@
-MD5 71cee9842c2646e1f1f4c072bb70006c ChangeLog 1404
+MD5 ad1b9f5ea17463623abb8241770d3581 ChangeLog 1536
 MD5 d7313020221e0f26e6fc450d52c3c1bb files/digest-xedit-0.99.3 65
+MD5 7e21d7b7d063bdfceeb6c48b252439a6 files/digest-xedit-1.0.0 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c0733e736eb491736c2992200220549a xedit-0.99.3.ebuild 756
+MD5 efc7f538dd900ee1cd0e5f0b15a910b2 xedit-1.0.0.ebuild 755

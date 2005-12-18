@@ -1,4 +1,6 @@
-MD5 45d008c3d62bf3e54cc31b27aa103ffa ChangeLog 1411
+MD5 60dc810883f5b52182c45bc3098d227e ChangeLog 1550
 MD5 82e3297bf3388297223c5a0c1a9594e6 files/digest-lbxproxy-0.99.3 68
+MD5 96113e5430b69d3d7d4425e62b679bfb files/digest-lbxproxy-1.0.0 67
 MD5 ef0083e277146318683d3dfe8ff9521b lbxproxy-0.99.3.ebuild 601
+MD5 440cd47a3faa96071d8bc5039ca87a99 lbxproxy-1.0.0.ebuild 600
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

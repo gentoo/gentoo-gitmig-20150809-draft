@@ -1,4 +1,6 @@
-MD5 92c40fefe06afe7b278d8aa3f15d6984 ChangeLog 988
+MD5 801018bacd8c744c433f79c14e258a76 ChangeLog 1114
 MD5 e871367fb7dea008bbbd3d334e909a13 files/digest-xev-0.99.2 62
+MD5 e1d467c231a08375c7b4a1cfb8549d3f files/digest-xev-1.0.0 61
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a194bcb5f0cacc063c6c40f3e8be1b71 xev-0.99.2.ebuild 432
+MD5 d26c9e6b5b3eb518f6407a44b067d38e xev-1.0.0.ebuild 431

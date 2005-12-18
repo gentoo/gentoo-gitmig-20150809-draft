@@ -1,4 +1,6 @@
-MD5 16acebca102f456dfd67257e110867ea ChangeLog 915
+MD5 edfaf85fe805aa84d58bd20188f61c16 ChangeLog 1043
 MD5 d52a24c0603358b256fccba976d6421a files/digest-xfwp-0.99.2 64
+MD5 1b0cdf95373d022f0f6ccbb27eebb6f6 files/digest-xfwp-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 651a0e851d55675088993740d0bdda8e xfwp-0.99.2.ebuild 481
+MD5 780c65bb68b32be9e5c40b35dda1d230 xfwp-1.0.0.ebuild 480

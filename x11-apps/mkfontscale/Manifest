@@ -1,4 +1,6 @@
-MD5 d704022d5cad71288b65d65b3bdf3efe ChangeLog 1378
+MD5 780b37e9ab6d31ebe04bd15e7edc3140 ChangeLog 1522
 MD5 f1d4b22ed6528aa27dd5ca70154ffc60 files/digest-mkfontscale-0.99.2 70
+MD5 b7278eb01b68805a57a169a625ca4b4e files/digest-mkfontscale-1.0.0 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 907f191ec1f0469713bdc4f7b7661565 mkfontscale-0.99.2.ebuild 494
+MD5 951c9a567f7e9c435f36347290538328 mkfontscale-1.0.0.ebuild 493

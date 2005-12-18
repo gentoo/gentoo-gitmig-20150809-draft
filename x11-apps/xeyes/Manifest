@@ -1,4 +1,6 @@
-MD5 65e23f40ed2e12c9526a4413f064af24 ChangeLog 1014
+MD5 1a1ce166bee4a12b52c50c42889ef330 ChangeLog 1146
 MD5 13340ff003869949235daaa9d59cc40a files/digest-xeyes-0.99.2 64
+MD5 49a5b6fcfa8dee432dfff82f171072d9 files/digest-xeyes-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 18a8b7fd263fc0e4f8845d7fcd7593d4 xeyes-0.99.2.ebuild 489
+MD5 4d6c2e34e24f2a8cafbabd129c99f268 xeyes-1.0.0.ebuild 488

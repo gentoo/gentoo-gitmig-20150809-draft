@@ -1,4 +1,6 @@
-MD5 e2882e02735c856806b10a5cafd07739 ChangeLog 941
+MD5 f22968be0b6ff414061ce085831cdc2f ChangeLog 1075
 MD5 543560b558701ad94b3803603b09c781 files/digest-xcmsdb-0.99.2 65
+MD5 cda0142f80bbd0dd7a7bbc81fbddd98c files/digest-xcmsdb-1.0.0 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 ae98bcbdb08a329e9ca029aeaab67cc3 xcmsdb-0.99.2.ebuild 434
+MD5 c593713bb451dd43829b17b6ba679bd2 xcmsdb-1.0.0.ebuild 433

@@ -1,4 +1,6 @@
-MD5 71d06a5dbf2ac84353d802a723190c9d ChangeLog 952
+MD5 471ff97d2ae05e0caa2db7f7c2bd4409 ChangeLog 1088
 MD5 e0a2992df03a375e710fd9f989bcf433 editres-0.99.2.ebuild 675
+MD5 d015355b34a6cf1169f92eef736c8727 editres-1.0.0.ebuild 674
 MD5 ed354a7fcbde27ba4ab684d982289c6b files/digest-editres-0.99.2 67
+MD5 0b6f58ece98f5e9170ae576a7c4c54e4 files/digest-editres-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

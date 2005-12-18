@@ -1,4 +1,6 @@
-MD5 16d76f6b45d2872f2fbae313f03ba8ad ChangeLog 1705
+MD5 3cb23746767c301e635ae5adf7555c33 ChangeLog 1837
 MD5 a9dd1e921294ab916a6640b0473b6cd8 files/digest-xauth-0.99.3 64
+MD5 a6deb95bc184359b952ac82d84998659 files/digest-xauth-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 9682a26d0a517e188d7ce80414edc100 xauth-0.99.3.ebuild 551
+MD5 7dd3471c3a7cca1b55da09e5eaa83c26 xauth-1.0.0.ebuild 550

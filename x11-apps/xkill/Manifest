@@ -1,4 +1,6 @@
-MD5 7d46a38a64aeb8e26aad6a722669e5d2 ChangeLog 1014
+MD5 a5ad5af2d3e7dfc641f798e8df6ed460 ChangeLog 1146
 MD5 49049579266c502fae22a7dff5d652f1 files/digest-xkill-0.99.2 64
+MD5 ea7045a68a1d01c66d3e28e98ec8b392 files/digest-xkill-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c18a84a4f6f0b8c6fb3fd1eb0bc7c849 xkill-0.99.2.ebuild 455
+MD5 87d04e29d6451578496b0c7c9fa98f6a xkill-1.0.0.ebuild 454

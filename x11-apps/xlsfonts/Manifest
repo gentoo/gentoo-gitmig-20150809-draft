@@ -1,4 +1,6 @@
-MD5 0e5882fde3701b7dd7d7a9a46c918ac0 ChangeLog 1037
+MD5 fe29b59bb4c90c9320eafbd470103088 ChangeLog 1175
 MD5 6bc246775006bc4869cc19c6930f60b3 files/digest-xlsfonts-0.99.2 67
+MD5 9106578987277abfa2b0ef8e1e94b8e1 files/digest-xlsfonts-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 b925330a5eb3876c0777122b49e41bad xlsfonts-0.99.2.ebuild 447
+MD5 40246b9aeac6128e56e306fe38d32acc xlsfonts-1.0.0.ebuild 446

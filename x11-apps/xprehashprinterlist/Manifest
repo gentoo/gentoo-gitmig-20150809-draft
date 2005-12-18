@@ -1,4 +1,6 @@
-MD5 0909bd9cb34be82024110b4f11e2ecd1 ChangeLog 1086
+MD5 48e094c6d75a25b8d33830b472eedbc9 ChangeLog 1246
 MD5 faaa23f98e196aa549df53f9a78d3c23 files/digest-xprehashprinterlist-0.99.2 78
+MD5 48fdbde6d06168de67919b199ab75062 files/digest-xprehashprinterlist-1.0.0 77
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 b336f7381686d8655cf23783f1a4c23a xprehashprinterlist-0.99.2.ebuild 489
+MD5 555ea0e9e5c90e0be91dd303c0fd80d5 xprehashprinterlist-1.0.0.ebuild 488

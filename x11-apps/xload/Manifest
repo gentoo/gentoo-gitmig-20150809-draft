@@ -1,4 +1,6 @@
-MD5 97de06654cde38978217bdf5d41f1703 ChangeLog 1014
+MD5 97eb3cff583cda374ca571ea5e03782a ChangeLog 1146
 MD5 7760f1304bf638e9edb90b3088e3c639 files/digest-xload-0.99.2 64
+MD5 6feb86a1174ea55b37e7a56e4c3784ee files/digest-xload-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 faaa7797c0d6e902e997929abfcabecf xload-0.99.2.ebuild 626
+MD5 8c0c511d61af1a5d6868a711562948f0 xload-1.0.0.ebuild 625

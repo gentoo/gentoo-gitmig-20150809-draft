@@ -1,4 +1,6 @@
-MD5 d976ea1ba4d72ac7944cffe4ebe7c84d ChangeLog 1002
+MD5 116af30d8bfdc039f9c7a19b002ed65b ChangeLog 1130
 MD5 498845ad5f203ea85ae4976caed7cae8 files/digest-xwud-0.99.2 63
+MD5 fbba8306e640706a57eea0efc39a3579 files/digest-xwud-1.0.0 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 22994106d4aa3e6e851214c8fb93bff7 xwud-0.99.2.ebuild 435
+MD5 872d8aa35d5e7909128ca0998039d9c0 xwud-1.0.0.ebuild 434

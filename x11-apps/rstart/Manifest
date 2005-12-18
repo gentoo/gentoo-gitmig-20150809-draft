@@ -1,4 +1,6 @@
-MD5 deaa9148ba1eae39bb20cd1fd5e599cd ChangeLog 1072
+MD5 895e1ec969a28b41af31703cae693f86 ChangeLog 1206
 MD5 cd97c3658cad5aa8b6f4fc00ecfcc5c7 files/digest-rstart-0.99.2 65
+MD5 1e4afcd9194e60dde5edd0844eb66eb7 files/digest-rstart-1.0.0 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 d67035568818613dc966ff9908982ada rstart-0.99.2.ebuild 523
+MD5 cafa0101857d5ec1244ac56472bec69e rstart-1.0.0.ebuild 522

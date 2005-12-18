@@ -1,4 +1,6 @@
-MD5 22028b743974339af1ef6e6161f0ca92 ChangeLog 1055
+MD5 69fbb12952c3905aa2df0ccf19ba6668 ChangeLog 1193
 MD5 760ded50e570be52db26c0dab4aa97a6 files/digest-xkbutils-0.99.2 67
+MD5 2ec499b34304faa0acd3d9f5c6280c61 files/digest-xkbutils-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c6456122ac4c26de2d8fa93ecd971906 xkbutils-0.99.2.ebuild 656
+MD5 43eb6dca5d056868917ddb2131614436 xkbutils-1.0.0.ebuild 655

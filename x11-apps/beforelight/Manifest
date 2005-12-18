@@ -1,4 +1,6 @@
-MD5 717d349717f145e0c9af649fdaab9918 ChangeLog 1336
+MD5 9b4627c2c210192dea89c2173a35eb48 ChangeLog 1480
 MD5 cf3ff40557038655752ed90a51150870 beforelight-0.99.3.ebuild 506
+MD5 c5d055f54dac8f20eee0d3bfbd0d8811 beforelight-1.0.0.ebuild 505
 MD5 124ca3e7fc3ba8d0907fd09709508615 files/digest-beforelight-0.99.3 70
+MD5 5d964f2c6eacd3d4aa060af4651b09e5 files/digest-beforelight-1.0.0 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

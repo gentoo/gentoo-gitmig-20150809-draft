@@ -1,4 +1,6 @@
-MD5 faa7a1fac38da64a14eadae53b3a2194 ChangeLog 1054
+MD5 234368d23f9c0d9cccf802cab2edfb95 ChangeLog 1192
 MD5 a2818e351c4b9a7f8e3ae613a4302cbe files/digest-xwininfo-0.99.2 67
+MD5 4b26b7fcf3e7c35e1add7bb753673b8d files/digest-xwininfo-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 4c849d2abfef9ac25cf671fc02e272f1 xwininfo-0.99.2.ebuild 464
+MD5 832c1f2e483b2d78a26ab07d40287119 xwininfo-1.0.0.ebuild 463

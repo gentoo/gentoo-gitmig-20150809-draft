@@ -1,4 +1,6 @@
-MD5 1bda9c3244eccfdcb70bbd4396cb8570 ChangeLog 1054
+MD5 98dc7802e187ae4c1ff0aa6ee1898410 ChangeLog 1192
 MD5 6c5453710e79bcba76662abe5b1cc93d files/digest-xmessage-0.99.2 67
+MD5 79b510b7f936d7f1db89670fd8ad70b3 files/digest-xmessage-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 7cbbc5ce8175c9a54b477f40924a8278 xmessage-0.99.2.ebuild 635
+MD5 b0aa8f0ba1c62d079dffd5f8e0372d0a xmessage-1.0.0.ebuild 634

@@ -1,4 +1,6 @@
-MD5 47eab67a4911e7eda36822dd24c686fb ChangeLog 963
+MD5 bf556cd60b2b47df9e3e2ce81023620a ChangeLog 1101
 MD5 beff91e001f748acd78eb08f794935ce files/digest-xvidtune-0.99.2 67
+MD5 0e198cb19c0e73e2c1c5277c405d52de files/digest-xvidtune-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a8a6a1038d4576e01b403c15480d7992 xvidtune-0.99.2.ebuild 649
+MD5 5312ba3082cff3a7b986d02c56ec606f xvidtune-1.0.0.ebuild 648
