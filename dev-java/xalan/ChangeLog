@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.42 2005/12/11 06:10:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.43 2005/12/18 06:48:18 nichoj Exp $
+
+  18 Dec 2005; Joshua Nichols <nichoj@gentoo.org> xalan-2.7.0.ebuild:
+  Installs all built jars now (bug #115901).
 
 *xalan-2.7.0 (11 Dec 2005)
 
