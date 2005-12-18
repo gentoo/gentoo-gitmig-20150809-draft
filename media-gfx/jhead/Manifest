@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fff69d04b1f23a9e0e5ffcb064a1c05e ChangeLog 3622
-MD5 d2ee1c3e7a9ca19f96c0f78ee48cbc9a files/digest-jhead-2.0 60
-MD5 914162d5ed1fd8cf9f24104fff013410 files/digest-jhead-2.2 60
-MD5 89f78d6efa8594f34ceb1a4a20b61803 files/digest-jhead-2.4 60
-MD5 7b4626f3d33f81e78651e4e78cd6032c files/jhead-2.4-gcc4.diff 5559
+MD5 d6cd9034e16eda89c876d5e37c6dc55a ChangeLog 3707
 MD5 4609656bb2447d6d858e23376fe1cb83 jhead-2.0.ebuild 647
 MD5 088f32d3a102d96ca5231db2c396e0d7 jhead-2.2.ebuild 791
-MD5 d75960ea73195f3853f40867c616955a jhead-2.4.ebuild 861
+MD5 64ee4060b0f9691effb182d78d04dd66 jhead-2.4.ebuild 859
 MD5 daf676490886bcebc03a96609cd21923 metadata.xml 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDoxRNKRy60XGEcJIRAkIRAJwNkHjQP+FDSy/Z/DvzRXTEFWxc1gCdEEk0
-5V+DBwDQycSuTZjC61cB24c=
-=jVfj
------END PGP SIGNATURE-----
+MD5 d2ee1c3e7a9ca19f96c0f78ee48cbc9a files/digest-jhead-2.0 60
+MD5 89f78d6efa8594f34ceb1a4a20b61803 files/digest-jhead-2.4 60
+MD5 914162d5ed1fd8cf9f24104fff013410 files/digest-jhead-2.2 60
+MD5 7b4626f3d33f81e78651e4e78cd6032c files/jhead-2.4-gcc4.diff 5559
