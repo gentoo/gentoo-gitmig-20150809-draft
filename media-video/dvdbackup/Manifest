@@ -1,5 +1,18 @@
-MD5 e63f31c42cec248678bfdd2ef65d4408 ChangeLog 1168
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5920d73d17d74bde6f808e05a753b2f0 ChangeLog 1402
 MD5 4fe2696804b58b12ca5d0f1b03f3ac77 dvdbackup-0.1.1-r1.ebuild 826
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 244e204f47a5dd2fe55e0c747082bff1 dvdbackup-0.1.1-r2.ebuild 874
 MD5 ed788d5aef0628a2098684adad1ec7b8 files/0.1.1-debian-FPE.patch 546
 MD5 a407bd72496e53b75fed9eb61a40e6d1 files/digest-dvdbackup-0.1.1-r1 66
+MD5 a407bd72496e53b75fed9eb61a40e6d1 files/digest-dvdbackup-0.1.1-r2 66
+MD5 e366405dbcfadf794d833c2a638504e2 files/dvdbackup-0.1.1-mkdir.patch 1073
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDpMBAAiZjviIA2XgRAhzRAJ9MQFv2hMieXJ42oBYkC9Mr9I3ASgCgu+sb
+Cs4c4zjTVCvcDOossb1MUWs=
+=kMpZ
+-----END PGP SIGNATURE-----
