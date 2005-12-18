@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 289fe46176b1468bee781c9f8e163f0f ChangeLog 17508
-MD5 f2c353a99f6cbaaa4af971adf5c95c0d files/digest-links-2.1_pre17-r1 139
-MD5 4ecf3369d346051658758f76dbd89eb5 files/digest-links-2.1_pre18 139
-MD5 6fd45df1f15b1f0ba4d72ec4d6011611 files/digest-links-2.1_pre19 139
-MD5 2e769a55cec4cc09246d5130bb8ec02a files/digest-links-2.1_pre20 139
-MD5 5b8b5b21da5582f7c332b2a2d6afafcd files/links-2.1pre18-no-javascript-fix.patch 575
+MD5 8dbd010412cfeab1a95a19198aa4bf07 ChangeLog 17599
 MD5 3d928fe8443461d83773ee90297c9e71 links-2.1_pre17-r1.ebuild 3515
 MD5 92204280c7e09b03c3e124e7facae2c4 links-2.1_pre18.ebuild 3707
-MD5 5de6540f8c67d88c9fdefe4508303347 links-2.1_pre19.ebuild 3629
-MD5 cc9d7bf2257cdb6592d5159a1a87b69a links-2.1_pre20.ebuild 3875
 MD5 82cf55f144e0f9e258fd08a572852147 metadata.xml 498
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDnX5IKRy60XGEcJIRAi7LAKCFOzjLSQaXtLW4RLGrGDYRAkrDqQCfYuyM
-JPMksF/KriDtRtL3YAc5Plw=
-=AJjQ
------END PGP SIGNATURE-----
+MD5 6501f0b03ec395b6b3752578c7d7ed35 links-2.1_pre19.ebuild 3627
+MD5 cc9d7bf2257cdb6592d5159a1a87b69a links-2.1_pre20.ebuild 3875
+MD5 4ecf3369d346051658758f76dbd89eb5 files/digest-links-2.1_pre18 139
+MD5 f2c353a99f6cbaaa4af971adf5c95c0d files/digest-links-2.1_pre17-r1 139
+MD5 5b8b5b21da5582f7c332b2a2d6afafcd files/links-2.1pre18-no-javascript-fix.patch 575
+MD5 6fd45df1f15b1f0ba4d72ec4d6011611 files/digest-links-2.1_pre19 139
+MD5 2e769a55cec4cc09246d5130bb8ec02a files/digest-links-2.1_pre20 139
