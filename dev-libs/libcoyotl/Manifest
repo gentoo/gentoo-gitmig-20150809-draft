@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e677e2d07fc94671fe97b8d190a705d6 ChangeLog 606
-MD5 60b49b6f08c12aac4b9c14efc9b55293 libcoyotl-3.0.1.ebuild 547
-MD5 5dea0891aac493884dcf72d394d42924 metadata.xml 216
+MD5 f24b9073ba17c4a6a419878907c09cfc ChangeLog 803
 MD5 40d28b8a29eca880b4e5fad7926007b0 files/digest-libcoyotl-3.0.1 67
+MD5 18012d248d091116758c6be2083a5fa2 files/digest-libcoyotl-3.1.0 67
+MD5 7cc7f423369a7d882ad94990bb900f2b libcoyotl-3.0.1.ebuild 557
+MD5 f0aa032f7f02be8b1bd28d0d84f579bf libcoyotl-3.1.0.ebuild 559
+MD5 5dea0891aac493884dcf72d394d42924 metadata.xml 216
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLzuiCRZPokWLroQRAiWeAJ4sw225XzDmcGHbC4ZArjrMiSdccQCfSCn2
-PEarULrMT8CHpkekYcKhTOc=
-=ISqI
+iD8DBQFDpe66CRZPokWLroQRAil+AKCgvP1ravonpGCeD6RTHz2RF1gC/wCggbBz
+foMQ+PRsJIdmKe4kpStg9jM=
+=MSU1
 -----END PGP SIGNATURE-----
