@@ -31,6 +31,10 @@ start() {
 	if [ ! -f ${LOGFILE} ]; then
 		touch ${LOGFILE}
 		chown ${USER}:${GROUP} ${LOGFILE}
+	else
+		mv ${LOGFILE} ${LOGFILE}.old
+		touch ${LOGFILE}
+		chown ${USER}:${GROUP} ${LOGFILE}
 	fi
 
 	if [ ${ALLOW_REMOTE_RPC} = "yes" ]; then
@@ -39,7 +43,7 @@ start() {
 
 	setsid start-stop-daemon --quiet --start  --chdir ${RUNTIMEDIR} \
 		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
-		--nicelevel ${NICELEVEL} -- ${ARGS} >> ${LOGFILE} 2>&1 &
+		--nicelevel ${NICELEVEL} -- ${ARGS} > ${LOGFILE} 2>&1 &
 
 	eend $?
 }

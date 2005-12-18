@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.2 2005/12/11 21:23:28 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.3 2005/12/18 13:29:00 cryos Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="server X"
 RDEPEND="sys-libs/zlib
 	>=net-misc/curl-7.15.0
 	>=dev-libs/openssl-0.9.7
-	X? ( >=x11-libs/wxGTK-2.6.1 )
+	X? ( >=x11-libs/wxGTK-2.6.2 )
 	server? ( net-www/apache
 		>=dev-db/mysql-4.0.24
 		virtual/php
