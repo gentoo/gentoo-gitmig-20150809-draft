@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-contrib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.8 2005/05/18 11:49:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.9 2005/12/18 00:13:36 betelgeuse Exp $
+
+  18 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  ant-contrib-1.0_beta2.ebuild:
+  Added a java-pkg_jar-from call for xerces-2 so that ant-contrib builds with
+  LOCALCLASSPATH disabled in /usr/bin/ant.
 
 *ant-contrib-1.0_beta2 (18 May 2005)
 

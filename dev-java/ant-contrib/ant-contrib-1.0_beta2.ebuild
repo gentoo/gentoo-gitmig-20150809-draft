@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2.ebuild,v 1.3 2005/10/07 21:25:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2.ebuild,v 1.4 2005/12/18 00:13:36 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -11,20 +11,23 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="jikes doc"
+
+RDEPEND=">=virtual/jre-1.4
+	>=dev-java/bcel-5.1
+	>=dev-java/xerces-2.6.2"
+
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.6.2
 	jikes? ( dev-java/jikes )"
-RDEPEND=">=virtual/jre-1.4
-	>=dev-java/bcel-5.1
-	dev-java/xerces"
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
-	java-pkg_jarfrom bcel bcel.jar bcel-5.1.jar
+	java-pkg_jar-from bcel bcel.jar bcel-5.1.jar
+	java-pkg_jar-from xerces-2
 }
 
 src_compile() {
