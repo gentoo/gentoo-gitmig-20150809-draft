@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.51 2005/12/17 02:45:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.52 2005/12/18 18:37:10 weeve Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -114,3 +114,6 @@ pike
 # Alsa is b0rked for now
 alsa
 ladcca
+
+# Mask v4l2 as it depends on 2.6 headers and hasn't been confirmed to work yet
+v4l2
