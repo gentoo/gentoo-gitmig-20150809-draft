@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.111.ebuild,v 1.2 2005/12/18 20:41:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.111.ebuild,v 1.3 2005/12/18 20:42:32 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib python
 
@@ -13,7 +13,7 @@ SLOT="0"
 # including parts of the patch.
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="nomirror"
+RESTRICT="mirror"
 RDEPEND="=dev-lang/python-2.3*
 	=dev-lang/tk-8.4*
 	|| ( app-shells/tcsh app-shells/csh )"
