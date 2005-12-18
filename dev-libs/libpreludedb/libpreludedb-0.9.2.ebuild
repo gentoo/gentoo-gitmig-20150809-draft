@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0-r2.ebuild,v 1.1 2005/10/02 23:52:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.2.ebuild,v 1.1 2005/12/18 17:53:38 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -18,11 +18,6 @@ DEPEND="virtual/libc
 	doc? ( dev-util/gtk-doc )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${P}-perlpathfix.patch
-}
 
 src_compile() {
 	local myconf
