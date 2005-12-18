@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/tkdvd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.7 2005/11/07 23:25:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.8 2005/12/18 17:19:40 metalgod Exp $
+
+*tkdvd-3.9.0 (18 Dec 2005)
+
+  18 Dec 2005; Luis Medinas <metalgod@gentoo.org> +tkdvd-3.9.0.ebuild:
+  Version Bump
 
 *tkdvd-3.8.4 (07 Nov 2005)
 
