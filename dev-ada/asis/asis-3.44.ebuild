@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.2 2005/12/16 08:49:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.3 2005/12/18 20:15:27 george Exp $
 
 inherit eutils gnat
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://gnat-asis.sourceforge.net/"
 
 LICENSE="GMGPL"
 DEPEND="=dev-lang/gnat-3.44*
+	app-text/tetex
 	app-text/texi2html"
 RDEPEND=""
 
