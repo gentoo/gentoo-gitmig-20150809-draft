@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/blinkensim-2.7.ebuild,v 1.1 2005/12/18 01:19:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/blinkensim-2.7.ebuild,v 1.2 2005/12/18 02:08:32 pylon Exp $
 
 DESCRIPTION="Graphical Blinkenlights simulator with networking support"
 
@@ -18,6 +18,7 @@ DEPEND=">=media-libs/blib-1.1.4
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
 	gtk2? ( >=x11-libs/gtk+-2.4.4 )
 	directfb? ( >=dev-libs/DirectFB-0.9.20-r1 )"
+RDEPEND="media-video/blinkenthemes"
 
 src_compile() {
 	econf || die "econf failed"

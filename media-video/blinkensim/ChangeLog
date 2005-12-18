@@ -1,6 +1,10 @@
 # ChangeLog for media-video/blinkensim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.1 2005/12/18 01:19:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.2 2005/12/18 02:08:32 pylon Exp $
+
+  18 Dec 2005; Lars Weiler <pylon@gentoo.org> blinkensim-2.7.ebuild:
+  Added blinkenthemes as a runtime-dependency. This actually makes blinkensim
+  usable.
 
 *blinkensim-2.7 (18 Dec 2005)
 
