@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.10 2005/12/09 06:46:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.11 2005/12/18 19:32:03 joshuabaergen Exp $
+
+*xedit-1.0.0 (18 Dec 2005)
+
+  18 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xedit-1.0.0.ebuild:
+  Bump for 7.0RC4.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -xedit-0.99.0.ebuild,
   -xedit-0.99.1.ebuild, -xedit-0.99.2.ebuild:

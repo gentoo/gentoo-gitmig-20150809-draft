@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/rstart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.7 2005/12/09 15:23:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.8 2005/12/18 19:20:09 joshuabaergen Exp $
+
+*rstart-1.0.0 (18 Dec 2005)
+
+  18 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +rstart-1.0.0.ebuild:
+  Bump for 7.0RC4.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -files/rstart-destdir.patch:

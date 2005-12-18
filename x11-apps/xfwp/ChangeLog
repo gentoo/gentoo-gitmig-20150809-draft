@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xfwp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfwp/ChangeLog,v 1.6 2005/12/09 06:50:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfwp/ChangeLog,v 1.7 2005/12/18 19:36:47 joshuabaergen Exp $
+
+*xfwp-1.0.0 (18 Dec 2005)
+
+  18 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> +xfwp-1.0.0.ebuild:
+  Bump for 7.0RC4.
 
   09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -xfwp-0.99.0.ebuild,
   -xfwp-0.99.1.ebuild:
