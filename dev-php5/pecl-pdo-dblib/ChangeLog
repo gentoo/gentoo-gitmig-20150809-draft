@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-pdo-dblib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-dblib/ChangeLog,v 1.4 2005/11/19 19:25:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-dblib/ChangeLog,v 1.5 2005/12/18 01:39:43 chtekk Exp $
+
+*pecl-pdo-dblib-1.0 (17 Dec 2005)
+
+  17 Dec 2005; Luca Longinotti <chtekk@gentoo.org>
+  -pecl-pdo-dblib-0.9.ebuild, +pecl-pdo-dblib-1.0.ebuild:
+  Sync with overlay, update to release 1.0.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> pecl-pdo-dblib-0.9.ebuild:
   Added ~ppc64 keyword; bug #102649

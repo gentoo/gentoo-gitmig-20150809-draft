@@ -1,22 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-0.9.ebuild,v 1.7 2005/11/19 19:27:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/pecl-pdo-sqlite-1.0.ebuild,v 1.1 2005/12/18 01:44:50 chtekk Exp $
 
-PHP_EXT_ZENDEXT="no"
-PHP_EXT_PECL_PKG="PDO_PGSQL"
-PHP_EXT_NAME="pdo_pgsql"
+PHP_EXT_NAME="pdo_sqlite"
+PHP_EXT_PECL_PKG="PDO_SQLITE"
 PHP_EXT_INI="yes"
+PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-IUSE=""
-DESCRIPTION="PHP Data Objects (PDO) Driver For PostgreSQL Server"
-SLOT="0"
-LICENSE="PHP"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+DESCRIPTION="PHP Data Objects (PDO) Driver For SQLite Server."
+LICENSE="PHP"
+SLOT="0"
+IUSE=""
+
 DEPEND="${DEPEND}
-		dev-php5/pecl-pdo
-		dev-db/postgresql"
+		dev-php5/pecl-pdo"
 
 need_php_by_category
 
@@ -32,10 +32,4 @@ pkg_setup() {
 		eerror
 		die "PHP built to use bundled PDO support"
 	fi
-}
-
-src_compile() {
-	has_php
-	my_conf="--with-pdo-pgsql"
-	php-ext-pecl-r1_src_compile
 }

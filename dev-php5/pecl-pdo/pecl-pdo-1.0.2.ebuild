@@ -1,24 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-0.9.ebuild,v 1.8 2005/11/19 19:31:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-1.0.2.ebuild,v 1.1 2005/12/18 01:36:50 chtekk Exp $
 
-PHP_EXT_ZENDEXT="no"
-PHP_EXT_PECL_PKG="PDO"
 PHP_EXT_NAME="pdo"
+PHP_EXT_PECL_PKG="PDO"
 PHP_EXT_INI="yes"
+PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-IUSE="firebird mssql mysql oci8 odbc postgres sqlite"
-DESCRIPTION="Core PHP Data Objects (PDO)"
-SLOT="0"
-LICENSE="PHP"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+DESCRIPTION="Core PHP Data Objects (PDO)."
+LICENSE="PHP"
+SLOT="0"
+IUSE="firebird mssql mysql oci8 oci8-instant-client odbc postgres sqlite"
+
 PDEPEND="${PDEPEND}
 		firebird? ( dev-php5/pecl-pdo-firebird )
 		mssql? ( dev-php5/pecl-pdo-dblib )
 		mysql? ( dev-php5/pecl-pdo-mysql )
 		oci8? ( dev-php5/pecl-pdo-oci )
+		oci8-instant-client? ( dev-php5/pecl-pdo-oci )
 		odbc? ( dev-php5/pecl-pdo-odbc )
 		postgres? ( dev-php5/pecl-pdo-pgsql )
 		sqlite? ( dev-php5/pecl-pdo-sqlite )"
@@ -39,23 +41,14 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-
-	# Patches the file to the newest CVS sources
-	epatch ${FILESDIR}/pdo_stmt.c.diff
-}
-
 src_install() {
 	php-ext-pecl-r1_src_install
 
 	# install missing header files
+	# usually done by "make install"
 	destdir=/usr/$(get_libdir)/php5
-	dodir ${destdir}/include/php/ext/pdo
-	insinto ${destdir}/include/php/ext/pdo
+	dodir "${destdir}/include/php/ext/pdo"
+	insinto "${destdir}/include/php/ext/pdo"
 	doins php_pdo_driver.h
 	doins php_pdo.h
-	doins php_pdo_int.h
 }

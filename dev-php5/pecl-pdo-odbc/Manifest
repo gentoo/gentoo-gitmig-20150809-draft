@@ -1,4 +1,4 @@
-MD5 860351a1be150046d49e4dc19c2c32f8 ChangeLog 695
+MD5 56887cadb3755aae6dd057af5f318d31 ChangeLog 881
+MD5 a9304b3986373f53961ba7cc254c6f2a files/digest-pecl-pdo-odbc-1.0 60
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 2b4d1a21f5c75724f934a7e8574a168f pecl-pdo-odbc-0.9.ebuild 1084
-MD5 313194f0176da1889b4938a3bfd2489d files/digest-pecl-pdo-odbc-0.9 60
+MD5 7407f94c4fa9533e0bf45921ac339942 pecl-pdo-odbc-1.0.ebuild 976

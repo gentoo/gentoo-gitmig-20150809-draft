@@ -1,4 +1,4 @@
-MD5 8445a43b92194a26913d4b3be551f3b0 ChangeLog 700
+MD5 3a4177e8ea9be7100221df2acb614982 ChangeLog 895
+MD5 e5a2977f694281ca74ceaf9979c390ae files/digest-pecl-pdo-pgsql-1.0.1 63
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 892d14ced558f4d080edca282b2f7e2f pecl-pdo-pgsql-0.9.ebuild 1080
-MD5 aaac3c00f864fff5c076a0b64d9ff739 files/digest-pecl-pdo-pgsql-0.9 61
+MD5 65acc414039d74cb297b351e6437b6e1 pecl-pdo-pgsql-1.0.1.ebuild 970
