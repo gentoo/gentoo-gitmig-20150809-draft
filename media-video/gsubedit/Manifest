@@ -1,5 +1,16 @@
-MD5 fbe13c718112548189124c718d7aa29b ChangeLog 814
-MD5 f37c47625439710da23eed6d6a6f3640 gsubedit-0.4_pre1-r1.ebuild 776
-MD5 5ef11878179d451985ee7157a416c27e metadata.xml 222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d73b9dc44054372b1adead999d82b091 ChangeLog 1091
 MD5 a08b3a299e0b28b84e9e96c34f3504f7 files/crashes.patch 861
-MD5 8b179a14b86d986d420f5e622fb1859e files/digest-gsubedit-0.4_pre1-r1 68
+MD5 8b179a14b86d986d420f5e622fb1859e files/digest-gsubedit-0.4_pre1-r2 68
+MD5 7b1f45e72251dc1c98ca42742bf0cd45 files/gsubedit-0.4_pre1-oveflow.patch 520
+MD5 faabbb94449438f154170af177f11c7f gsubedit-0.4_pre1-r2.ebuild 817
+MD5 5ef11878179d451985ee7157a416c27e metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDpL3UAiZjviIA2XgRAoMdAJ9QFmVZ+6wBv3qA7nZSdhLdXm5H/gCgzXTh
+WI04si9u3Rd3vzuTXgxvFko=
+=WXJ3
+-----END PGP SIGNATURE-----

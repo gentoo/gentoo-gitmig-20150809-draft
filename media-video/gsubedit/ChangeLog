@@ -1,6 +1,13 @@
 # ChangeLog for media-video/gsubedit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gsubedit/ChangeLog,v 1.5 2004/11/12 16:30:11 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gsubedit/ChangeLog,v 1.6 2005/12/18 01:39:10 flameeyes Exp $
+
+*gsubedit-0.4_pre1-r2 (18 Dec 2005)
+
+  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gsubedit-0.4_pre1-oveflow.patch, -gsubedit-0.4_pre1-r1.ebuild,
+  +gsubedit-0.4_pre1-r2.ebuild:
+  Added patch to prevent overflow from Lluís Batlle i Rossell in bug #79312.
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org>
   gsubedit-0.4_pre1-r1.ebuild:
