@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.3 2005/11/21 08:19:09 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.4 2005/12/18 11:25:50 lcars Exp $
+
+*scapy-1.0.2-r1 (18 Dec 2005)
+
+  18 Dec 2005; Andrea Barisani <lcars@gentoo.org> +scapy-1.0.2-r1.ebuild:
+  New revision, fixes bug #113004. Credit goes to <kloeri@gentoo.org>.
 
   21 Nov 2005; Andrea Barisani <lcars@gentoo.org> scapy-1.0.2.ebuild:
   Fixed IUSE.
