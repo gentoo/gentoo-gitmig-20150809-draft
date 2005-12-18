@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/sparky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.1 2005/12/18 18:59:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.2 2005/12/18 20:41:44 spyderous Exp $
+
+  18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; sparky-3.111.ebuild:
+  We can't mirror this.
 
 *sparky-3.111 (18 Dec 2005)
 

@@ -1,5 +1,5 @@
-MD5 c0e81a8ef74e47d17e01c710615a2b02 ChangeLog 594
+MD5 c7e01115cd532a84ccf5065c5295c792 ChangeLog 695
 MD5 58d459eacbeaa84c039bad48bb30baf5 files/digest-sparky-3.111 72
 MD5 edd4cafd319052b6792fe4918f0bfaa4 files/fix-install.patch 10206
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
-MD5 605b142143eceefa350e9cb947c4f55a sparky-3.111.ebuild 2905
+MD5 828000c3fa609160d568d50e1cf50ff0 sparky-3.111.ebuild 2925
