@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>pylon@gentoo.org</email>
+		<name>Lars Weiler</name>
+	</maintainer>
+	<longdescription lang="en">
+		The blinkentools bring you scripts for handling and playing the beloved
+		videos from Blinkenlights and Arcade, recorded in blm-format, on your
+		local computer, an attached mini-Blinkenlights, or whatever you intend
+		to use them for.
+	</longdescription>
+</pkgmetadata>
+

@@ -1,0 +1,11 @@
+# ChangeLog for media-video/blinkentools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.1 2005/12/18 00:50:02 pylon Exp $
+
+*blinkentools-2.9 (18 Dec 2005)
+
+  18 Dec 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +blinkentools-2.9.ebuild:
+  Thanks to Niels 'NachtKind' Will in Bug #61819 for this ebuild, dedicated to
+  all Blinkenlight-lovers.
+
