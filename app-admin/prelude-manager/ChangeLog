@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.31 2005/12/02 16:19:24 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.32 2005/12/18 17:55:38 vanquirius Exp $
+
+  18 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -prelude-manager-0.9.0.ebuild, -prelude-manager-0.9.1.ebuild:
+  Remove old ebuilds.
 
 *prelude-manager-0.9.1-r1 (02 Dec 2005)
 
