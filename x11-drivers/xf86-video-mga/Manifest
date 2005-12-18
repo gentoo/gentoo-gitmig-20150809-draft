@@ -1,4 +1,6 @@
-MD5 8e8245b490e824308b2de1bf428fe56c ChangeLog 2006
+MD5 f8523dd9573f0caf4fece1e5422ab5c5 ChangeLog 2156
 MD5 199131155bf73969cc1ece11b242ee84 files/digest-xf86-video-mga-1.2.1.1 145
+MD5 286a71e3cbf01dea083a424c1ab2da2e files/digest-xf86-video-mga-1.2.1.2 145
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 33528131bd93c7432520b51086944b83 xf86-video-mga-1.2.1.1.ebuild 701
+MD5 09ba31d6562f37644450981bb9633f72 xf86-video-mga-1.2.1.2.ebuild 701

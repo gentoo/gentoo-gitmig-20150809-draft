@@ -1,4 +1,6 @@
-MD5 b827430b6e5c5471a58b0ff5a3fd6155 ChangeLog 1322
+MD5 cc42783758bc736096275981383639ab ChangeLog 1478
 MD5 02f94524175c7c0b96cff661c6e886a7 files/digest-xf86-input-palmax-1.0.0.3 148
+MD5 c84beb9ee2b0a3ad7eecde047bdf3952 files/digest-xf86-input-palmax-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 721ee43a078eebed0b6fe140fd8292c8 xf86-input-palmax-1.0.0.3.ebuild 472
+MD5 180e42b0e3f2c24ab8b148eb7c7487f4 xf86-input-palmax-1.0.0.4.ebuild 472

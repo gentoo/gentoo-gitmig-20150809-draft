@@ -1,4 +1,6 @@
-MD5 1241a3375889d8198998ace83cee3e43 ChangeLog 1462
+MD5 0924cf7d5b660705f4a92e3945a53fed ChangeLog 1616
 MD5 2270898e5f44bd40fa1456ddb23faba8 files/digest-xf86-video-newport-0.1.3.2 149
+MD5 ed5951261c5d894113b77f606008c66b files/digest-xf86-video-newport-0.1.4 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 026096a94f00ce90bd53ecb6c7559617 xf86-video-newport-0.1.3.2.ebuild 472
+MD5 586df85acffa1eb1daabdbc9e06f2165 xf86-video-newport-0.1.4.ebuild 470

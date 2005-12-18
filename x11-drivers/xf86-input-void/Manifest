@@ -1,4 +1,6 @@
-MD5 e343f35c786ba9dbcfc23caa58515217 ChangeLog 1294
+MD5 5692e3ecc60b824b0d63787bc63933e5 ChangeLog 1446
 MD5 7099ae483be02fead476f0b878bb9a0f files/digest-xf86-input-void-1.0.0.3 146
+MD5 fdb82cb1b2aab0e40bbf16f71cced7bf files/digest-xf86-input-void-1.0.0.4 146
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 6cf7491e46df13c738e406a16e2fa9fc xf86-input-void-1.0.0.3.ebuild 466
+MD5 0d02cf545d6e4a7d6521f7cc4a4b8364 xf86-input-void-1.0.0.4.ebuild 466

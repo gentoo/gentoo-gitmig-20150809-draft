@@ -1,4 +1,6 @@
-MD5 549b2220138b0349b9c1f9328d066a1f ChangeLog 1451
+MD5 7b75fc1fbd1ba30442b2af33ad928b90 ChangeLog 1607
 MD5 4c6155a0708686c2c5cc5c8c036122e5 files/digest-xf86-video-sunbw2-1.0.0.3 148
+MD5 bccff86dbb28b99cedb78d821d8905db files/digest-xf86-video-sunbw2-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 de357b85d4b2781b16038c626a15baf0 xf86-video-sunbw2-1.0.0.3.ebuild 471
+MD5 d1581534d54aec0efb8505f62e89e34e xf86-video-sunbw2-1.0.0.4.ebuild 471

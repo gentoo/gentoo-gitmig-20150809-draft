@@ -1,4 +1,6 @@
-MD5 499fb9bf02cb9494bce7bfa8e788cb70 ChangeLog 1350
+MD5 e2a2fd94c862926597aa71ac3c44a1aa ChangeLog 1510
 MD5 280c8186ffd4e4eff0c82f750929ce80 files/digest-xf86-video-neomagic-1.0.0.3 150
+MD5 6b2e4b964ad796708cc5be092704eb0a files/digest-xf86-video-neomagic-1.0.0.4 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 cd0b86e935009f6ed69abac982ca7953 xf86-video-neomagic-1.0.0.3.ebuild 470
+MD5 884c36f2d54525890f9ff364df1bbd65 xf86-video-neomagic-1.0.0.4.ebuild 470

@@ -1,4 +1,6 @@
-MD5 8b95d93185676b3e046ef6b836f11366 ChangeLog 1336
+MD5 d87de76f5d553abafcec493030f10c53 ChangeLog 1494
 MD5 7ec2c997e20eca8fd363aef213d7201c files/digest-xf86-input-mutouch-1.0.0.3 149
+MD5 7fab18e26e8c00a0d67ff1c79699d281 files/digest-xf86-input-mutouch-1.0.0.4 149
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 9cbcc01b077feaf98a40f6c190af9bdb xf86-input-mutouch-1.0.0.3.ebuild 475
+MD5 18e99bcdb8b4ce4d4800dbbb5c8342f5 xf86-input-mutouch-1.0.0.4.ebuild 475

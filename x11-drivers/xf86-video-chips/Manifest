@@ -1,4 +1,6 @@
-MD5 52a989ffdcf6ec8f78051fce1e79e707 ChangeLog 1302
+MD5 2226d330b675742bdbe917b2c45134e4 ChangeLog 1456
 MD5 6d57eae989c5ce759108debb86d2767f files/digest-xf86-video-chips-1.0.1.1 147
+MD5 f8174f63e696d520aba999bf9c5cb768 files/digest-xf86-video-chips-1.0.1.2 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 0eedcc1511525d1a67f859ac58cfc390 xf86-video-chips-1.0.1.1.ebuild 461
+MD5 8b0173ef9898a6b93bb25521ec030efb xf86-video-chips-1.0.1.2.ebuild 461

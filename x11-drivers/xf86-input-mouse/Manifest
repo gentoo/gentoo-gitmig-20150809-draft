@@ -1,4 +1,6 @@
-MD5 b133baa576cf23b6a3c4fbbc3f65ecfc ChangeLog 1717
+MD5 8aa55a62f92d0d333c2751a8b9efa934 ChangeLog 1867
 MD5 7ffb34e42f9b9f7bff5f84bc589505ea files/digest-xf86-input-mouse-1.0.2 145
+MD5 a64d656262b4242c2b2b88a682cde0bc files/digest-xf86-input-mouse-1.0.3 145
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 bde87c16e2151df93f5ba90ed73f11f8 xf86-input-mouse-1.0.2.ebuild 505
+MD5 ccc1c99108a0f02cc243ccb83ce035e9 xf86-input-mouse-1.0.3.ebuild 505

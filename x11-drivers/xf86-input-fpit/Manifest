@@ -1,4 +1,6 @@
-MD5 436155c0ca71dc92a93681a440470457 ChangeLog 1294
+MD5 97911775ca700ec5bbdb5ccbc302697f ChangeLog 1406
 MD5 4f2d1c01c3a292fec2bbc823a3e92324 files/digest-xf86-input-fpit-1.0.0.3 146
+MD5 22b14a4f8409b267d890c9360bb9e5e2 files/digest-xf86-input-fpit-1.0.0.4 146
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 b6b922877500d758e812876236de6620 xf86-input-fpit-1.0.0.3.ebuild 466
+MD5 a61ad480abc2548ea009a5d43d965c83 xf86-input-fpit-1.0.0.4.ebuild 466

@@ -1,4 +1,6 @@
-MD5 d5666e28610d1cd49f93b443ad7a5854 ChangeLog 1266
+MD5 2f6e015a06251939c1a8c6b645d1db2d ChangeLog 1414
 MD5 e2060892c7d970b9d840fd8e0db4df6e files/digest-xf86-video-s3-0.3.5.3 144
+MD5 1c61816dd779feec2025b6db43ff01b3 files/digest-xf86-video-s3-0.3.5.4 144
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 69c4c205470bfbcc0732e5904249566c xf86-video-s3-0.3.5.3.ebuild 452
+MD5 5018e2682be26bec621d58a5a344172a xf86-video-s3-0.3.5.4.ebuild 452

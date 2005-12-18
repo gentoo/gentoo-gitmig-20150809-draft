@@ -1,4 +1,6 @@
-MD5 2eca7f69489774fd6d96a68633e25a23 ChangeLog 1364
+MD5 88f55f40e26be0dd2e09d96f11437873 ChangeLog 1526
 MD5 7faf9a915612039a7c6401225a4738fc files/digest-xf86-input-jamstudio-1.0.0.3 151
+MD5 cf3a76fe5e834d69b20a880568a7ef94 files/digest-xf86-input-jamstudio-1.0.0.4 151
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 0e1581c33278270a83e51ea1845a7137 xf86-input-jamstudio-1.0.0.3.ebuild 481
+MD5 8a35325137aba861f794e114754b95cf xf86-input-jamstudio-1.0.0.4.ebuild 481

@@ -1,4 +1,6 @@
-MD5 be16254f533ca5fa35c6d33b4c96f813 ChangeLog 1656
+MD5 a9631cc30991a187466321a7d35e1c9c ChangeLog 1808
 MD5 cb847e067c065f76669418789884065c files/digest-xf86-video-tdfx-1.1.1.1 146
+MD5 affc5cd3a5f4a59eada1b581fcb9e987 files/digest-xf86-video-tdfx-1.1.1.2 146
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 baee41a3f02a89672d8113b4ea926949 xf86-video-tdfx-1.1.1.1.ebuild 704
+MD5 09ef7656aa6b521a9ec9ec4f88ad6968 xf86-video-tdfx-1.1.1.2.ebuild 704

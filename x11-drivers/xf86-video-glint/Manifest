@@ -1,4 +1,6 @@
-MD5 1653267d75d2549855fbc782832b609f ChangeLog 1430
+MD5 0db760f98fd93ff7e192c61fa614f057 ChangeLog 1584
 MD5 ac68bf3e3453667a0d456bb42510bdea files/digest-xf86-video-glint-1.0.1.1 147
+MD5 e28c8e822632e314e6a4a86ef02ace47 files/digest-xf86-video-glint-1.0.1.2 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 cb5998e0bdf12fdaff7657ed594e1708 xf86-video-glint-1.0.1.1.ebuild 707
+MD5 395e2afb464d904ddbf808b78201ba48 xf86-video-glint-1.0.1.2.ebuild 707

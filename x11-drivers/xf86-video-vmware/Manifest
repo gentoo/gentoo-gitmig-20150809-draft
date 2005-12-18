@@ -1,4 +1,6 @@
-MD5 0f724547dd1abcfaccfb427f1dc9785c ChangeLog 1340
+MD5 94e09b53af5d023d8e286c0ed51c8367 ChangeLog 1500
 MD5 c8d3711aa54715be65e20d6190677005 files/digest-xf86-video-vmware-10.11.1.1 150
+MD5 ec385de4467432c8db8a118a055ab6c5 files/digest-xf86-video-vmware-10.11.1.2 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 958cd9970d0c8dc98e81014d09c4e26b xf86-video-vmware-10.11.1.1.ebuild 466
+MD5 fc5793c22258ecd23b707125184f6fbb xf86-video-vmware-10.11.1.2.ebuild 466

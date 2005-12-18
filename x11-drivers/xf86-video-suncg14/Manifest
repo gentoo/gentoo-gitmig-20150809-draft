@@ -1,4 +1,6 @@
-MD5 7b0c39f8ecc659224adbb790d5aff32a ChangeLog 1466
+MD5 71bf91077b4ebcc325d64f3908c3f826 ChangeLog 1624
 MD5 90c02c09852371ed84f1c91640dc1b88 files/digest-xf86-video-suncg14-1.0.0.3 149
+MD5 bece91a93381c0fcab9c2e13aa6b4f96 files/digest-xf86-video-suncg14-1.0.0.4 149
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2898170ee045bd706c40c065d6bc2177 xf86-video-suncg14-1.0.0.3.ebuild 474
+MD5 098baa4e658c6d99bd1ebc6455fa020c xf86-video-suncg14-1.0.0.4.ebuild 474

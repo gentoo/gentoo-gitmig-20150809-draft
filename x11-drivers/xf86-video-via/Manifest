@@ -1,4 +1,6 @@
-MD5 c181332856a203712096c4e9c16d1898 ChangeLog 2346
+MD5 3f408ac2d1e0bb5ca1510f585cdbf9a4 ChangeLog 2498
 MD5 39899a7f45b1a1822ae70810af5f5c3a files/digest-xf86-video-via-0.1.33 144
+MD5 b5f01b68cfb64f577844ee240408aaed files/digest-xf86-video-via-0.1.33.1 146
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 789d5b4281dc047183d88360dd60be59 xf86-video-via-0.1.33.1.ebuild 724
 MD5 5052164ccfc1ac029a174a8fce3dc590 xf86-video-via-0.1.33.ebuild 722

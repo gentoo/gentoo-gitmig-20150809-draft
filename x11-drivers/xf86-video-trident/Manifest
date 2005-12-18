@@ -1,4 +1,6 @@
-MD5 76970e5b432d90c5966b8ac8e88cd2d6 ChangeLog 1330
+MD5 e76d70045b8a76167e8b19b8a685e535 ChangeLog 1488
 MD5 da9168949b83f13c3358bdde77f3398e files/digest-xf86-video-trident-1.0.1 147
+MD5 551a01afa39b044582c6d7fb70259f45 files/digest-xf86-video-trident-1.0.1.1 149
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 c1dad6532be3d1c1700939dfaf78fbe8 xf86-video-trident-1.0.1.1.ebuild 467
 MD5 2803321cba6572252b22d631ee715a03 xf86-video-trident-1.0.1.ebuild 465

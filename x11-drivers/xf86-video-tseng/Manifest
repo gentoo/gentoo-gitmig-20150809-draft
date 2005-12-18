@@ -1,4 +1,6 @@
-MD5 3cd6476183c35695fa62eb0e9e019d99 ChangeLog 1308
+MD5 2d7962936e85a30ca00725396d1e0eeb ChangeLog 1462
 MD5 13ee179f7256f77d6c85faa7dd5b005f files/digest-xf86-video-tseng-1.0.0.3 147
+MD5 3ee0ccaa0281a825527781e254d5f662 files/digest-xf86-video-tseng-1.0.0.4 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 5bec4da6108ab1eb999f88e12579aa22 xf86-video-tseng-1.0.0.3.ebuild 461
+MD5 c18e69e03fa5b44137e8886bd4a22c84 xf86-video-tseng-1.0.0.4.ebuild 461

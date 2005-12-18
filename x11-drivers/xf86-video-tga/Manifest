@@ -1,4 +1,6 @@
-MD5 d5f63630bad90d11fca6ba84dfad0716 ChangeLog 1280
+MD5 a5852d7762b866211ad2888ef7331512 ChangeLog 1430
 MD5 94385e9ea2185b500abe8ae2780cb530 files/digest-xf86-video-tga-1.0.0.3 145
+MD5 470f1b41ae3015a9fbe07503d84f85c1 files/digest-xf86-video-tga-1.0.0.4 145
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 54820586a50b103ec2b22830e20e67e1 xf86-video-tga-1.0.0.3.ebuild 455
+MD5 7df8dc00f94ce7cafb64c15e719c02b0 xf86-video-tga-1.0.0.4.ebuild 455

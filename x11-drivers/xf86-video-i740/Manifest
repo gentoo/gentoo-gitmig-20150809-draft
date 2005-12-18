@@ -1,4 +1,6 @@
-MD5 8ff288599ed8feb1fe10bb93e5bd6e32 ChangeLog 1294
+MD5 3c546f49cc662d32c9971cd5bc844d8d ChangeLog 1446
 MD5 2b2060a764e62cf7e84406ce3ac80fb3 files/digest-xf86-video-i740-1.0.0.3 146
+MD5 3919a0620e9e32d7dd15cfac6674c62c files/digest-xf86-video-i740-1.0.0.4 146
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 5401979e01bea87413ae408ec0c7660c xf86-video-i740-1.0.0.3.ebuild 458
+MD5 3676f23e4525320bec5e56393cb63101 xf86-video-i740-1.0.0.4.ebuild 458

@@ -1,4 +1,6 @@
-MD5 a2a07111033a3f35e6f451f4f872a228 ChangeLog 1558
+MD5 e05f41cbb40c4f707eebbe581346cd78 ChangeLog 1715
 MD5 ebb1f67df185dcabb47a4a5f509ce32d files/digest-xf86-video-sunffb-1.0.1.1 148
+MD5 2c2fc35b2f4e694afda78c436e0f2e5d files/digest-xf86-video-sunffb-1.0.1.2 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 292806eb54b64ec421c7d9d149137036 xf86-video-sunffb-1.0.1.1.ebuild 710
+MD5 38320e9f0199a155695d9652d0d28a41 xf86-video-sunffb-1.0.1.2.ebuild 710

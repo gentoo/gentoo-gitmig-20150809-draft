@@ -1,4 +1,6 @@
-MD5 737746446a03812e0a9faefe365646b5 ChangeLog 1451
+MD5 1bc01211334bdee38cbe17d54cbe04bf ChangeLog 1607
 MD5 68d36b1b5006ccd9fe79ebebdfec28de files/digest-xf86-video-suntcx-1.0.0.3 148
+MD5 16b7644ea29a2c0d47ab8f146c28e1b3 files/digest-xf86-video-suntcx-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 ea704f1762ed45e0eb41ce0aa065668d xf86-video-suntcx-1.0.0.3.ebuild 471
+MD5 2aef72b2820e5614bc1d876c54bdf089 xf86-video-suntcx-1.0.0.4.ebuild 471

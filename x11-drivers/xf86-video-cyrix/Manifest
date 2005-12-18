@@ -1,4 +1,6 @@
-MD5 cfe6db4be6601a4feec6970f538cedae ChangeLog 1308
+MD5 0131683133ac69614c4291e1fc2f08b9 ChangeLog 1462
 MD5 fb2633c65f1888069f9c58dfdad192eb files/digest-xf86-video-cyrix-1.0.0.3 147
+MD5 8245c0613854ef867b97285e1c161e22 files/digest-xf86-video-cyrix-1.0.0.4 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c6c051846594177896236a092039466c xf86-video-cyrix-1.0.0.3.ebuild 461
+MD5 3ddb927362ba8d7d27fadeb3a93e287b xf86-video-cyrix-1.0.0.4.ebuild 461

@@ -1,4 +1,6 @@
-MD5 6731d0d453113ac5095374424c919e78 ChangeLog 1322
+MD5 087bbed0af6af6d4b5bce4215b2e4e11 ChangeLog 1478
 MD5 0dddca93fd26451801a5dde25c37aa13 files/digest-xf86-input-acecad-1.0.0.3 148
+MD5 70b3747f1611212417b85e953e4127b3 files/digest-xf86-input-acecad-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c3d95f3955427dfc0f81d7152e725929 xf86-input-acecad-1.0.0.3.ebuild 472
+MD5 5d1dc8194b84cfcba16f3a697dfc59f4 xf86-input-acecad-1.0.0.4.ebuild 472

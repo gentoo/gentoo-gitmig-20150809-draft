@@ -1,4 +1,6 @@
-MD5 bf3316b748a7bc6996d00c2983f678a0 ChangeLog 1541
+MD5 fb47d673d9eb58894354f9a963908b79 ChangeLog 1698
 MD5 e0aa481dc181c8530235713b2ec734dc files/digest-xf86-video-sisusb-0.7.1.1 148
+MD5 164ba11e973c998dfcab8c4c5b1c4023 files/digest-xf86-video-sisusb-0.7.1.2 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 4d2acfbea783dc51351986909fcef1ab xf86-video-sisusb-0.7.1.1.ebuild 475
+MD5 a96134c5af09607f17f2b7da701052ba xf86-video-sisusb-0.7.1.2.ebuild 475

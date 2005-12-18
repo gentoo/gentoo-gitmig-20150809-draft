@@ -1,4 +1,6 @@
-MD5 62534e10fabd2a6dd8e64d57f5721a3c ChangeLog 1350
+MD5 621ea06a00b6823de1c0712c19d82af5 ChangeLog 1510
 MD5 68ca6056a6e32d7f5023e06922609a05 files/digest-xf86-input-hyperpen-1.0.0.3 150
+MD5 a9f1d9671737269dda4bc871c1f62b10 files/digest-xf86-input-hyperpen-1.0.0.4 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 14d8a2c2658add51ebde8fb272d05a7c xf86-input-hyperpen-1.0.0.3.ebuild 478
+MD5 3a1f48957134a7e2cbab22f06a95d4db xf86-input-hyperpen-1.0.0.4.ebuild 478

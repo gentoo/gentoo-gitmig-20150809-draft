@@ -1,4 +1,6 @@
-MD5 52951b926dbdab5f41313f6200808454 ChangeLog 1350
+MD5 923179dfd021a1507abc2d597eb2ed6b ChangeLog 1510
 MD5 a25e196a2eab0201e90c7bdbeaaeb785 files/digest-xf86-input-penmount-1.0.0.3 150
+MD5 d6a4d5497a1ac8d2c51a3942d8e0e1b2 files/digest-xf86-input-penmount-1.0.0.4 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 cd56e39a9c9bbf810939cf7c5b8416f0 xf86-input-penmount-1.0.0.3.ebuild 478
+MD5 3a17b7e73df1d04f634d4f2108de6b48 xf86-input-penmount-1.0.0.4.ebuild 478

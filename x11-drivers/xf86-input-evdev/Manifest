@@ -1,4 +1,6 @@
-MD5 9d0f01af217593f5b787f5438950b69b ChangeLog 1636
+MD5 fa64bfda9e4afd45ea4f36bb789776b5 ChangeLog 1790
 MD5 e06ec82b5712eacf1de7d1e499d9cf1e files/digest-xf86-input-evdev-1.0.0.3 147
+MD5 b38b9a542593d3be46055a7fa5373687 files/digest-xf86-input-evdev-1.0.0.4 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 84c078b49d0bb7248f754ea3aa5af786 xf86-input-evdev-1.0.0.3.ebuild 488
+MD5 c6d290ecc65fc9f91b431a98884ddc1d xf86-input-evdev-1.0.0.4.ebuild 488

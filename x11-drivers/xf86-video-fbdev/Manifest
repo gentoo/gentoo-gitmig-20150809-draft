@@ -1,4 +1,6 @@
-MD5 0d96526f458d5417d8274f7c6abf64d4 ChangeLog 1533
+MD5 e9fc18316b176b24e90243a294f0ed78 ChangeLog 1688
 MD5 e4b1f1d3c1c59034d10c298933abcb06 files/digest-xf86-video-fbdev-0.1.0.3 147
+MD5 72157b338159c5012578f07b14cd41fd files/digest-xf86-video-fbdev-0.1.0.4 147
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2916db02e59a35395bbf8c346d9d1f55 xf86-video-fbdev-0.1.0.3.ebuild 479
+MD5 f247a38c97e3a9074be4859041d1b81e xf86-video-fbdev-0.1.0.4.ebuild 479

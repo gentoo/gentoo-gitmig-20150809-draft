@@ -1,4 +1,6 @@
-MD5 71252d1dde6a10f28185be618df6ffe5 ChangeLog 1350
+MD5 1be56c0d38f16ae9ad40e8a20a8ae558 ChangeLog 1510
 MD5 801c39dc27026da7b33958ded62073d5 files/digest-xf86-input-joystick-1.0.0.3 150
+MD5 5a7e9e5e3ae4a0480d007ac038c4a17d files/digest-xf86-input-joystick-1.0.0.4 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 d83aee1eb6596690b64d6d81797d5eec xf86-input-joystick-1.0.0.3.ebuild 478
+MD5 20991ad29ae072c8b5e573d2b41f1841 xf86-input-joystick-1.0.0.4.ebuild 478

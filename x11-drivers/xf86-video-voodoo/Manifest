@@ -1,4 +1,6 @@
-MD5 ab338511eb7624d0346e00f94cac87d4 ChangeLog 1322
+MD5 bbd601e8092f885a9c311868c12098d2 ChangeLog 1478
 MD5 4c5bc52e4caf14039a45322cc81aa580 files/digest-xf86-video-voodoo-1.0.0.3 148
+MD5 5dad6bd2a0853c7fa9a6449483d1b1df files/digest-xf86-video-voodoo-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 ee253b3effb1e22efe6f9244a4f25358 xf86-video-voodoo-1.0.0.3.ebuild 464
+MD5 2404b4525d2c9246142f2fa9a594c87d xf86-video-voodoo-1.0.0.4.ebuild 464

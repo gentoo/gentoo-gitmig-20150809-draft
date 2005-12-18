@@ -1,4 +1,6 @@
-MD5 b378e4149edfb5f2afa47b9e37353cdd ChangeLog 1688
+MD5 fb79ffc89cdb6a700db33db730ae5498 ChangeLog 1844
 MD5 2a42976ea7274212887446474693ba81 files/digest-xf86-video-savage-2.0.2.1 148
+MD5 48dbc78a2b6f8c35f967a1246f1dfb27 files/digest-xf86-video-savage-2.0.2.2 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2213f7dddb487c2e6085d535cb2098b4 xf86-video-savage-2.0.2.1.ebuild 710
+MD5 90b6b17984a7c449a757bef927941f0d xf86-video-savage-2.0.2.2.ebuild 710

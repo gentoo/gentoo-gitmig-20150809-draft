@@ -1,4 +1,6 @@
-MD5 933f89a87c9525b3c2490154d74dbfb7 ChangeLog 1451
+MD5 d582eb4c9d9b2e69478efc120fa29487 ChangeLog 1607
 MD5 9d1686f31455001d3d4bed8c2c17fc30 files/digest-xf86-video-sunleo-1.0.0.3 148
+MD5 6014a146dd868ea7f2e8bba833163af6 files/digest-xf86-video-sunleo-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 84e6c83a4f6fd4d26f7b6a9ed51e57aa xf86-video-sunleo-1.0.0.3.ebuild 471
+MD5 79dc0898663ccd2bf3b7b7978a7e3d90 xf86-video-sunleo-1.0.0.4.ebuild 471

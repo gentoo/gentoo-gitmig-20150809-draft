@@ -1,4 +1,6 @@
-MD5 2a29bce3a5fe6b32ddc60c65a93ce4a1 ChangeLog 1322
+MD5 285b4367d98958f6661f6b373a82d49d ChangeLog 1478
 MD5 c575181ecabf93807e958502bb0d3c11 files/digest-xf86-input-aiptek-1.0.0.3 148
+MD5 03ee1093dea4eeea7fb862ef252a621e files/digest-xf86-input-aiptek-1.0.0.4 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 8ff5bb16f93bd04c4160b76df9622d00 xf86-input-aiptek-1.0.0.3.ebuild 472
+MD5 b7ff491cb8cfbb7e772c0089e26b3e02 xf86-input-aiptek-1.0.0.4.ebuild 472

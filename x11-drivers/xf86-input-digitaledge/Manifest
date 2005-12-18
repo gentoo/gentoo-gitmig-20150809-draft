@@ -1,4 +1,6 @@
-MD5 08ce44c11674c39e971b7159c5c7fad6 ChangeLog 1388
+MD5 037b9aadefad15e0849a35061b480a97 ChangeLog 1554
 MD5 da3f0865eee8391eaca773183b9f3a65 files/digest-xf86-input-digitaledge-1.0.1.1 153
+MD5 9096762846a6670ddaf6c4518238e546 files/digest-xf86-input-digitaledge-1.0.1.2 153
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 ce256047fe567f4ec43df0ff615e6fa0 xf86-input-digitaledge-1.0.1.1.ebuild 487
+MD5 ab931bc350a1fe12417c53f53ed3141f xf86-input-digitaledge-1.0.1.2.ebuild 487

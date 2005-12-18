@@ -1,4 +1,6 @@
-MD5 499aa3cacf66515766fb4239db3e1491 ChangeLog 1361
+MD5 50cc7ff7af07836de0ab9340be2f6188 ChangeLog 1509
 MD5 47fe891064d8f550099b7eb6da8c4f85 files/digest-xf86-video-nv-1.0.1.3 144
+MD5 f2aaa2f2020e7508d49935c33a9e33ac files/digest-xf86-video-nv-1.0.1.4 144
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 37eb60f7caeaf4ea2f082b439dddc63f xf86-video-nv-1.0.1.3.ebuild 459
+MD5 b016238a9a9c8daadbe1830ffedadedb xf86-video-nv-1.0.1.4.ebuild 459
