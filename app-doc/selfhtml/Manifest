@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 95ae0afd0902e9133a512423e8ac9d99 ChangeLog 1127
+MD5 8886f45624bc334b9a16a8068a0681ee ChangeLog 1291
 MD5 b0d2429e030ffd996bd09d0c2dea8c61 files/digest-selfhtml-8.1 60
+MD5 eb5d814e7abc2484f95ed626d2579fac files/digest-selfhtml-8.1.1 61
 MD5 035613e4ea415232c9b9fea9783994ce metadata.xml 221
+MD5 6ccb125583f4efb43e3d911ce7ef460d selfhtml-8.1.1.ebuild 651
 MD5 d4f92364a684606be7ac8b51bfd273d8 selfhtml-8.1.ebuild 645
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDop9EAiZjviIA2XgRAgtfAKC0RacexlXFvHOX8dmXiBTqJLLcOACfeja5
-g6zzeycrSYKoKx0CI8rbGJQ=
-=StO6
------END PGP SIGNATURE-----
