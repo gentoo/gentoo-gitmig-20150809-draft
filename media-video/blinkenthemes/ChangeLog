@@ -1,0 +1,10 @@
+# ChangeLog for media-video/blinkenthemes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/ChangeLog,v 1.1 2005/12/18 02:01:08 pylon Exp $
+
+*blinkenthemes-0.10 (18 Dec 2005)
+
+  18 Dec 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +blinkenthemes-0.10.ebuild:
+  Themes for blinkensim.  Now everybody has a sample-usage.
+
