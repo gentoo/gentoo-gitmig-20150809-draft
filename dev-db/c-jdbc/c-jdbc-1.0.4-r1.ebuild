@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.7 2005/09/03 21:48:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.8 2005/12/18 18:06:40 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -15,9 +15,9 @@ RDEPEND=">=virtual/jre-1.3
 	dev-java/ant
 	=dev-java/commons-cli-1*
 	=dev-java/crimson-1*
-	=dev-java/dom4j-1.5*
+	=dev-java/dom4j-1*
 	=dev-java/dtdparser-1.21*
-	~dev-java/jaxen-1.1_beta2
+	=dev-java/jaxen-1.1*
 	=dev-java/jcommon-0.9*
 	>=dev-java/jdepend-2.6
 	>=dev-java/jdbc2-stdext-2.0
