@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta.ebuild,v 1.1 2005/12/08 05:19:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta.ebuild,v 1.2 2005/12/18 12:01:14 betelgeuse Exp $
 
 inherit java-pkg eutils versionator
 
@@ -39,13 +39,24 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	cd ${S}/lib
+	# In here we have ant starter scripts
+	rm -fr bin
 	rm -f *.jar
+
+	# compile target needs these
 	java-pkg_jar-from jdom-1.0_beta9
 	java-pkg_jar-from antlr
 }
 
 src_compile() {
 	local antflags="package"
+
+	# java.class.path is used by the prepare.grammars target that
+	# runs antlr
+	local jdomjars="$(java-pkg_getjars jdom-1.0_beta9)"
+	local antlrjars="$(java-pkg_getjars antlr)"
+	local antflags="${antflags} -Djava.class.path=${jdomjars}:${antlrjars}"
+
 	use doc && antflags="${antflags} javadoc -Dbuild.javadocs=build/api"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 

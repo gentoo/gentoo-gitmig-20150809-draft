@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/werken-xpath
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.1 2005/12/08 05:19:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/ChangeLog,v 1.2 2005/12/18 12:01:14 betelgeuse Exp $
+
+  18 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  werken-xpath-0.9.4_beta.ebuild:
+  Adjusted not to rely on LOCALCLASSPATH in /usr/bin/ant for bug #115888.
 
 *werken-xpath-0.9.4_beta (08 Dec 2005)
 
