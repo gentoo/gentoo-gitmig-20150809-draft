@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.2 2005/09/04 18:40:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.3 2005/12/18 17:27:18 nichoj Exp $
+
+  18 Dec 2005; Joshua Nichols <nichoj@gentoo.org> eclipse-ecj-3.1-r2.ebuild:
+  Added ~amd64 keyword.
 
 *eclipse-ecj-3.1-r2 (04 Sep 2005)
 
