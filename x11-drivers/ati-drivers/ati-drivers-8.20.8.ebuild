@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.1 2005/12/11 03:55:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.2 2005/12/19 01:14:41 anarchy Exp $
 
 IUSE="opengl"
 
@@ -14,7 +14,7 @@ SRC_URI="x86? ( mirror://gentoo/ati-driver-installer-${PV}-i386.run )
 LICENSE="ATI"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=x11-base/xorg-x11-6.8.0
+RDEPEND="|| ( x11-base/xorg-server virtual/x11 )
 	 app-admin/eselect-opengl
 	 || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* )"
 
@@ -31,9 +31,7 @@ MODULE_NAMES="fglrx(video:${WORKDIR}/common/lib/modules/fglrx/build_mod)"
 
 choose_driver_folder() {
 	#new modular X paths, 0 is a workaround.
-	if [ "$(get_version_component_range 1 ${X11_IMPLEM_V})" = 7 ] \
-		|| [ "$(get_version_component_range 1 ${X11_IMPLEM_V})" = 0 ]
-	then
+	if has_version "x11-base/xorg-server"; then
 		BASE_NAME="${WORKDIR}/x690"
 		xlibdir="xorg"
 	else
@@ -93,7 +91,11 @@ pkg_setup(){
 	fi
 
 	# Set up X11 implementation
-	X11_IMPLEM_P="$(best_version virtual/x11)"
+	if has_version "x11-base/xorg-server"; then
+		X11_IMPLEM_P="$(best_version xorg-x11)"
+	else
+		X11_IMPLEM_P="$(best_version virtual/x11)"
+	fi
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 	X11_IMPLEM_V="${X11_IMPLEM_P/${X11_IMPLEM}-/}"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.13 2005/12/11 03:55:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.14 2005/12/19 01:14:41 anarchy Exp $
+
+  19 Dec 2005; Jory A. Pratt <anarchy@gentoo.org> ati-drivers-8.20.8.ebuild:
+  fixed for modular X
 
 *ati-drivers-8.20.8 (11 Dec 2005)
 
