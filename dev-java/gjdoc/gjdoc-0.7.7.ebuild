@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.5.ebuild,v 1.6 2005/11/21 19:12:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.7.ebuild,v 1.1 2005/12/19 22:30:22 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,17 +14,17 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 # Possible USE flags.
 #
-# xml:    to --enable-xmldoclet (disabled by default)
-# native: to --enable-native 
+# native: to --enable-native
 # doc:    to generate javadoc
 # debug:  There is a debug doclet installed by default but maybe could
 #         have a wrapper that uses it.
 #
-IUSE=""
+IUSE="xmldoclet source"
 
 # Refused to emerge with sun-jdk-1.3* complaining about wanting a bigger stack size
 DEPEND=">=dev-java/antlr-2.7.1
-		>=virtual/jdk-1.4"
+		>=virtual/jdk-1.4
+		source? ( app-arch/zip )"
 
 RDEPEND=">=virtual/jre-1.4
 		>=dev-java/antlr-2.7.1"
@@ -34,7 +34,10 @@ src_compile() {
 	# so we'll disable it explicitly
 	local myc="--with-antlr-jar=$(java-pkg_getjar antlr antlr.jar) --disable-native"
 	myc="${myc} --disable-dependency-tracking"
-	econf ${myc} || die "econf failed"
+
+	econf ${myc} \
+		$(use_enable xml xmldoclet) || die "econf failed"
+
 	emake || die "emake failed"
 }
 
@@ -43,7 +46,12 @@ src_install() {
 	for jar in ${jars}; do
 		java-pkg_newjar ${jar}-${PV}.jar ${jar}.jar
 	done
+
 	dobin ${FILESDIR}/gjdoc
+	dodoc AUTHORS ChangeLog NEWS README
+
 	cd ${S}/docs
 	make DESTDIR=${D} install || die "Failed to install documentation"
+
+	use source && java-pkg_dosrc "${S}/src"/{com,gnu}
 }

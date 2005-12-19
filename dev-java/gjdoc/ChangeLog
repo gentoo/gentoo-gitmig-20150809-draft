@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.5 2005/11/21 19:12:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.6 2005/12/19 22:30:22 betelgeuse Exp $
+
+*gjdoc-0.7.7 (19 Dec 2005)
+
+  19 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> -gjdoc-0.7.5.ebuild,
+  +gjdoc-0.7.7.ebuild:
+  Version bump. Added xmldoclet and source use flags. Removed the oldest 
+  version.
 
   21 Nov 2005; Joseph Jezak <josejx@gentoo.org> gjdoc-0.7.5.ebuild,
   gjdoc-0.7.6.ebuild:
