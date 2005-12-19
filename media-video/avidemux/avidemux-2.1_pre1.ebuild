@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.1_pre1.ebuild,v 1.2 2005/11/04 10:39:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.1_pre1.ebuild,v 1.3 2005/12/19 14:45:42 flameeyes Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -21,7 +21,6 @@ RDEPEND="
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2.6.7
 	>=dev-lang/spidermonkey-1.5_rc6-r1
-	xv? ( virtual/x11 )
 	a52? ( >=media-libs/a52dec-0.7.4 )
 	encode? ( >=media-sound/lame-3.93 )
 	aac? ( >=media-libs/faac-1.23.5
@@ -33,10 +32,21 @@ RDEPEND="
 	arts? ( >=kde-base/arts-1.2.3 )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	alsa? ( >=media-libs/alsa-lib-1.0.3b-r2 )
-	sdl? ( media-libs/libsdl )"
+	sdl? ( media-libs/libsdl )
+	|| ( (
+			xv? ( x11-libs/libXv )
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXrender
+		) virtual/x11 )"
 # media-sound/toolame is supported as well
 
 DEPEND="$RDEPEND
+	|| ( (
+			x11-base/xorg-server
+			x11-libs/libXt
+			x11-proto/xextproto
+		) virtual/x11 )
 	dev-util/pkgconfig
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8.3"
