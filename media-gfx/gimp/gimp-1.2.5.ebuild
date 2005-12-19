@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.22 2005/07/16 02:18:13 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.23 2005/12/19 06:01:54 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -118,8 +118,6 @@ src_install() {
 		doins ${FILESDIR}/gimp.desktop
 	)
 
-	preplib /usr
-
-	dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
+	dodoc AUTHORS ChangeLog* *MAINTAINERS README* TODO
 	dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
 }
