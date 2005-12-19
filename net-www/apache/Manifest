@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2031df9ccd5ab5c8930448a2868ee111 ChangeLog 73891
+MD5 b1f7ab775d129da2a239341f3db973d1 ChangeLog 74037
 MD5 b56779cb8460b101ad6912c8f45ff583 apache-1.3.29-r2.ebuild 7237
 MD5 3e32afd7bbab740bdce0fc0cf45d5be3 apache-1.3.31-r1.ebuild 6816
 MD5 a448a0e7566f85098cf55c54e4c6621f apache-1.3.31-r2.ebuild 6941
@@ -20,8 +17,8 @@ MD5 2c34b40a3fe461014b19ca5e4763203e apache-1.3.33-r4.ebuild 8673
 MD5 eb173dd548089cf594c543d29b48948c apache-1.3.33-r5.ebuild 7105
 MD5 17e12318b6dd1cd8bb25cb987490c7fd apache-1.3.33-r6.ebuild 7108
 MD5 ca6b47f0c2a0006b71fc1153937824e5 apache-1.3.33.ebuild 6927
-MD5 91bce0ddf00d58d2c12c6fc3bfd22a60 apache-1.3.34-r1.ebuild 7118
-MD5 b47abc33e2796fcdac5a4f7111b41476 apache-1.3.34-r10.ebuild 8670
+MD5 2fe4549ecb6edda2c7f7979025530d40 apache-1.3.34-r1.ebuild 7116
+MD5 f4333722d650ecaa68cbae0965f10f3e apache-1.3.34-r10.ebuild 8668
 MD5 8dfa3f0fbdc01264e754bd3ebf7b8a5a apache-2.0.54-r15.ebuild 12594
 MD5 be59fbc220730a0212fbf6f34a1a6652 apache-2.0.54-r30.ebuild 12930
 MD5 263979050e43b813bc0e092380262bb8 apache-2.0.54-r31.ebuild 13378
@@ -113,10 +110,3 @@ MD5 59a6ba7dcde461f5350af41e6aff92b1 files/robots.txt 342
 MD5 d3626a1e31a675c60d066c111d552adf files/suexec.pam 59
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
 MD5 27c9cb37c510e08bb69df277229a03ea metadata.xml 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDpxip5mJXAu5GbtIRAk9FAJ4mdNexQZyM+52PYx35SxBi4HxqYQCfRw64
-Sau2uYqts537k+rEJAlz0Zg=
-=lmu3
------END PGP SIGNATURE-----
