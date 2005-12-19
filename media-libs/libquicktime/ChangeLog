@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.48 2005/12/12 05:02:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.49 2005/12/19 12:03:29 flameeyes Exp $
+
+  19 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libquicktime-0.9.7-r1.ebuild:
+  Add a check to make sure that /usr/include/quicktime is not a real directory
+  in pkg_preinst.
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   libquicktime-0.9.7-r1.ebuild:

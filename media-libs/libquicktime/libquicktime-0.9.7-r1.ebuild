@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.6 2005/12/12 05:02:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.7 2005/12/19 12:03:29 flameeyes Exp $
 
 inherit libtool eutils autotools
 
@@ -70,5 +70,16 @@ src_install() {
 	# don't do that when building for Darwin/MacOS
 	[[ ${CHOST} != *-darwin* ]] && \
 		dosym /usr/include/lqt /usr/include/quicktime
+}
+
+pkg_preinst() {
+	if [[ -d /usr/include/quicktime && ! -L /usr/include/quicktime ]]; then
+		einfo "For compatibility with other quicktime libraries, ${PN} was"
+		einfo "going to create a /usr/lib/quicktime symlink, but for some,"
+		einfo "on your system, that is a directory."
+		einfo "Please check that is empty, and remove it, or submit a bug"
+		einfo "telling us which package owns the directory."
+		die "/usr/include/quicktime is a directory."
+	fi
 }
 
