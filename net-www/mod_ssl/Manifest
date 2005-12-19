@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 09712a8e8904e51ce79805eb10fa62ef ChangeLog 12508
 MD5 515630b3e53faa458b8ec7a0e73bef55 files/10_mod_ssl.conf 2859
 MD5 959a0125c23ead91b0071f4ffc54e9bc files/default-ssl.conf 7653
@@ -27,3 +30,10 @@ MD5 e3e145c5f8c0c0b2d3e63a0528100b4d mod_ssl-2.8.24-r1.ebuild 1779
 MD5 a4d234acd0fdfc01177ded213518dced mod_ssl-2.8.24.ebuild 2315
 MD5 dc85771d279c4a326a242b52c362590c mod_ssl-2.8.25-r1.ebuild 2323
 MD5 7296ceecc3da715af31e76c1ff890d5b mod_ssl-2.8.25-r10.ebuild 1782
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDpxstKRy60XGEcJIRAkZxAJsFjgzgHPzuOgEAajl/oa1YqL4OVwCff2kE
+j3y6nJXa59cpi2vOtxsr71A=
+=gbyf
+-----END PGP SIGNATURE-----
