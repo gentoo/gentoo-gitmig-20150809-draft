@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.11-r2.ebuild,v 1.3 2005/12/04 20:17:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.11-r2.ebuild,v 1.4 2005/12/19 22:54:37 vanquirius Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils multilib
 
@@ -29,7 +29,7 @@ TCLVER=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's:<rrd_\(.*\)>:"../../src/rrd_\1":g' \
 		bindings/tcl/tclrrd.c || die "sed failed"
 	sed -i -e 's:-lrrd_private:-ltcl -lrrd:' \
@@ -72,8 +72,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	rm -fr ${D}/usr/examples
-	rm -fr ${D}/usr/shared
+	rm -fr "${D}"/usr/examples
+	rm -fr "${D}"/usr/shared
 
 	if use doc ; then
 		dohtml doc/*.html
@@ -91,18 +91,18 @@ src_install() {
 		perl-module_src_install || die
 
 		# remove duplicate installation into /usr/lib/perl
-		rm -Rf ${D}/usr/lib/perl
+		rm -Rf "${D}"/usr/lib/perl
 	fi
 
 	if use tcltk ; then
-		mv ${S}/bindings/tcl/tclrrd.so ${S}/bindings/tcl/tclrrd${PV}.so
+		mv "${S}"/bindings/tcl/tclrrd.so "${S}"/bindings/tcl/tclrrd${PV}.so
 		insinto /usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}
-		doins ${S}/bindings/tcl/tclrrd${PV}.so
+		doins "${S}"/bindings/tcl/tclrrd${PV}.so
 		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
-			>> ${D}/usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
+			>> "${D}"/usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	fi
 
-	dodoc COPY* CONTR* README TODO
+	dodoc CONTRIBUTORS README TODO
 }
 
 pkg_preinst() {
