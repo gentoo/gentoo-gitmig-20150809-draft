@@ -1,6 +1,6 @@
-MD5 888d98c5aacd23215b8606f68e73da69 ChangeLog 26294
+MD5 2d4f110430a147472fe687e6145aa67d ChangeLog 26453
 MD5 48c1667773503fee21a1068da07440b9 files/3.2.1.2242/90vmware-workstation 70
-MD5 cd2c7dfb0ea80293b3647713f5e35969 files/3.2.1.2242/vmware 1419
+MD5 7db46e16b4b2823e094cbfc18766181c files/3.2.1.2242/vmware 1431
 MD5 3bfb39f5e96f60db67c7246f74c21501 files/3.2.1.2242/vmware-config.pl-gcc-generalized.patch 2948
 MD5 b95a250f31a6d2005176b27b8d48c182 files/3.2.1.2242/vmware-glibc-2.3.2-compat.c 1039
 MD5 aff74afc68b848e408f93e60bdf847c9 files/90vmware-workstation 106
@@ -12,7 +12,7 @@ MD5 87e9f24e29aaec45c84f7e57a50f96f2 files/vmware-workstation-4.5.2.8848-library
 MD5 55441829b237e3efd78d06a1b1a73035 files/vmware-workstation-5.0.0.13124-config.patch 443
 MD5 23d97e5e436a0d827b48db3ed9948aa7 files/vmware-workstation-5.5.0.18463-config.patch 1131
 MD5 ca833db6cc74ba5649bf0d6ca1bb78cf files/vmware-workstation-5.5.0.18463-config2.patch 522
-MD5 c2dc0111fb5bf45ff99578b57d349cb3 files/vmware.rc 1417
+MD5 e516aab6d83b21fc44a44fc1394999cf files/vmware.rc 1424
 MD5 aa1b576735134579f04b29763901dc4f files/vmware.xml 1592
 MD5 a4e5ebe5e931d6196fd49550e067b078 metadata.xml 339
 MD5 ff542a49592f85ae22a5d8d4885bb67f vmware-workstation-3.2.1.2242-r6.ebuild 8014

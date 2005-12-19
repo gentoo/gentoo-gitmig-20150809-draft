@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.110 2005/12/13 16:02:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.111 2005/12/19 16:16:08 wolf31o2 Exp $
+
+  19 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/3.2.1.2242/vmware, files/vmware.rc:
+  Adjusted init script dependencies and closing bug #103069.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   vmware-workstation-5.5.0.18463.ebuild:
