@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.4 2005/12/12 05:06:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.5 2005/12/19 10:19:51 flameeyes Exp $
 
-inherit flag-o-matic toolchain-funcs eutils
-
-M4V="1"
+inherit flag-o-matic toolchain-funcs eutils autotools
 
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
@@ -43,9 +41,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	libtoolize --copy --force
-#	ACLOCAL="aclocal -I ${WORKDIR}/m4" autoreconf || die
-
+	eautoreconf
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {
