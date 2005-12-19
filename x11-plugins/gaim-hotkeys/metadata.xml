@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-im</herd>
+<longdescription>
+Gaim-hotkeys llows you to define global hotkeys for various actions such as toggling buddy list, fetching queued messages, opening preferences or account dialog..
+</longdescription>
+</pkgmetadata>

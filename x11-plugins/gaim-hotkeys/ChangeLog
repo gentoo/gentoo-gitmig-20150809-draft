@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/gaim-hotkeys
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-hotkeys/ChangeLog,v 1.1 2005/12/19 00:59:46 gothgirl Exp $
+
+*gaim-hotkeys-0.1.2 (19 Dec 2005)
+
+  19 Dec 2005; <gothgirl@gentoo.org> +metadata.xml,
+  +gaim-hotkeys-0.1.2.ebuild:
+  initial import to tree, wrt bug #115976
+
