@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/grepmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.21 2005/11/28 13:05:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.22 2005/12/19 18:32:13 ticho Exp $
+
+  19 Dec 2005; Andrej Kacian <ticho@gentoo.org> -grepmail-4.91.ebuild,
+  grepmail-5.30.32.ebuild:
+  Removed 4.91. 5.30.32 stable on x86.
 
   28 Nov 2005; <mcumming@gentoo.org> grepmail-4.91.ebuild,
   grepmail-5.30.32.ebuild, grepmail-5.30.ebuild:
