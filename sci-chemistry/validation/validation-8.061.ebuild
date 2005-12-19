@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-8.061.ebuild,v 1.1 2005/12/19 01:27:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-8.061.ebuild,v 1.2 2005/12/19 01:28:25 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,17 +24,6 @@ src_unpack() {
 	sed -i \
 		-e "s:^\(CCC=\).*:\1$(tc-getCXX):g" \
 		${S}/etc/make.*
-
-#		-e "s:^\(CC=\).*:\1$(tc-getCC):g" \
-#		-e "s:^\(F77=\).*:\1${FORTRANC}:g" \
-#		-e "s:^\(F77_LINKER=\).*:\1${FORTRANC}:g" \
-
-# Do this with a patch
-#	# Respect flags
-#	sed -i \
-#		-e "s:\(\"OPT=-O\"\):\"C_OPT=\"${CFLAGS}\" CCC_OPT=\"${CXXFLAGS}\" F_OPT=\"${FFLAGS:- -O2}\"\":g" \
-#		${S}/Makefile
-
 }
 
 src_compile() {

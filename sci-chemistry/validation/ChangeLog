@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/validation
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/ChangeLog,v 1.1 2005/12/19 01:27:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/ChangeLog,v 1.2 2005/12/19 01:28:25 spyderous Exp $
+
+  19 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  validation-8.061.ebuild:
+  Remove commented-out sections.
 
 *validation-8.061 (19 Dec 2005)
 

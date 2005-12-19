@@ -1,5 +1,5 @@
-MD5 2eb903ccb2fb2e8310272683a4285797 ChangeLog 480
+MD5 e27659b8d34d447da5ce7d0ed069d423 ChangeLog 596
 MD5 2945df7eb475ba3da5fba282404ba5ec files/digest-validation-8.061 79
 MD5 421aafb0b5804b42f03607840f617113 files/respect-flags-and-add-gcc4.patch 10342
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
-MD5 ad76c0c0c8bcd9dd6e3350c3290af124 validation-8.061.ebuild 1617
+MD5 c87ae8d157f4d70aad87955e12b80f2f validation-8.061.ebuild 1316
