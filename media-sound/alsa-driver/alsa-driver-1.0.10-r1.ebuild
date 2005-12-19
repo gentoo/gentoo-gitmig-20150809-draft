@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10-r1.ebuild,v 1.1 2005/12/15 22:19:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10-r1.ebuild,v 1.2 2005/12/19 09:33:13 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
-IUSE="oss doc"
+IUSE="oss doc debug"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
@@ -60,8 +60,8 @@ pkg_setup() {
 	linux-mod_pkg_setup
 
 	if [[ ${PROFILE_ARCH} == "sparc64" ]] ; then
-		CBUILD=${CBUILD-${CHOST}}
-		CHOST="sparc64-unknown-linux-gnu"
+		export CBUILD=${CBUILD-${CHOST}}
+		export CHOST="sparc64-unknown-linux-gnu"
 	fi
 }
 
@@ -83,6 +83,7 @@ src_compile() {
 	append-flags "-I${KV_DIR}/arch/$(tc-arch-kernel)/include"
 
 	econf $(use_with oss) \
+		$(use_with debug debug full) \
 		--with-kernel="${KV_DIR}" \
 		--with-build="${KV_OUT_DIR}" \
 		--with-isapnp=yes \
