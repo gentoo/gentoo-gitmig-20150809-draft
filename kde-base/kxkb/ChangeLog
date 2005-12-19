@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kxkb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.36 2005/12/17 10:26:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.37 2005/12/19 19:07:01 flameeyes Exp $
+
+  19 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> kxkb-3.5.0.ebuild:
+  Add runtime dependencies on xkbdata and setxkb for modularx.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kxkb-3.5.0.ebuild:
   Added ~ppc64
