@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de1123836d2bb1d560387cf3fa934262 ChangeLog 12183
+MD5 122dd88fba695e3e16d55f08aff84b5d ChangeLog 12330
 MD5 515630b3e53faa458b8ec7a0e73bef55 files/10_mod_ssl.conf 2859
 MD5 959a0125c23ead91b0071f4ffc54e9bc files/default-ssl.conf 7653
 MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
@@ -28,12 +25,5 @@ MD5 aa8f74dc6a49b8646a307d4844fd0dfb mod_ssl-2.8.22-r1.ebuild 1782
 MD5 d20c6eee687d0fca4397f828e34092dc mod_ssl-2.8.22.ebuild 2316
 MD5 e3e145c5f8c0c0b2d3e63a0528100b4d mod_ssl-2.8.24-r1.ebuild 1779
 MD5 a4d234acd0fdfc01177ded213518dced mod_ssl-2.8.24.ebuild 2315
-MD5 578a4411c700403661ae216a940d3926 mod_ssl-2.8.25-r1.ebuild 2327
-MD5 59acf41bb9a3331e045f7c0444fad922 mod_ssl-2.8.25-r10.ebuild 1783
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDpwyh5mJXAu5GbtIRAlu8AJ4hNdEVxH0lnUiiJb4P3wH8riNDBgCfcre6
-apJ2RiXU5Xxvy96S5JG/Qrs=
-=3r3X
------END PGP SIGNATURE-----
+MD5 932dfda2fc12a6a494bb042e2733e0ea mod_ssl-2.8.25-r1.ebuild 2322
+MD5 02048093210373b1949aadc2a7f6451a mod_ssl-2.8.25-r10.ebuild 1782
