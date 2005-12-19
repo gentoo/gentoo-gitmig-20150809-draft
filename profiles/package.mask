@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4784 2005/12/19 19:41:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4785 2005/12/19 21:59:31 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
+# This is the Gentoo Linux Installer.  This is currently masked because it can
+# lead to some serious breakages on a machine.  If you are not developing on
+# this package, I would strongly recommend against using it.  If you break your
+# system with this, you'r eon your own.  You have been warned.
+sys-apps/gli
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
 # This version is looking for something that is not existing in older patch
