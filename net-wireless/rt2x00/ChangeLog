@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.4 2005/11/26 16:04:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.5 2005/12/19 15:54:58 uberlord Exp $
+
+*rt2x00-2.0.0_beta3 (19 Dec 2005)
+
+  19 Dec 2005; Roy Marples <uberlord@gentoo.org>
+  -files/rt2x00-2.0.0-beta2.patch, -rt2x00-2.0.0_beta2-r1.ebuild,
+  +rt2x00-2.0.0_beta3.ebuild:
+  Version bump.
 
   26 Nov 2005; Roy Marples <uberlord@gentoo.org> -rt2x00-2.0.0_beta2.ebuild,
   rt2x00-2.0.0_beta2-r1.ebuild, rt2x00-9999.ebuild:

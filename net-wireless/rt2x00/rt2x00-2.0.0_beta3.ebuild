@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta2-r1.ebuild,v 1.2 2005/11/26 16:04:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.1 2005/12/19 15:54:58 uberlord Exp $
 
 inherit linux-mod eutils
 
@@ -59,15 +59,6 @@ pkg_setup() {
 src_install() {
 	linux-mod_src_install
 	dodoc CHANGELOG COPYING README THANKS
-}
-
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-	# Fix Makefile so the debug flag works and enable compliation
-	# against the ieee80211 stack in portage
-	epatch "${FILESDIR}/rt2x00-2.0.0-beta2.patch"
-	sed -i 's,^\(CFLAGS\|CPPFLAGS\) := .*,\1 := -include ieee80211_compat.h $(\1) -I/usr/include,g' Makefile
 }
 
 src_compile() {
