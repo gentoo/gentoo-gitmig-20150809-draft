@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.111 2005/12/19 16:16:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.112 2005/12/19 17:14:20 wolf31o2 Exp $
+
+*vmware-workstation-5.0.0.13124-r5 (19 Dec 2005)
+*vmware-workstation-4.5.2.8848-r10 (19 Dec 2005)
+*vmware-workstation-3.2.1.2242-r7 (19 Dec 2005)
+
+  19 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-3.2.1.2242-r6.ebuild,
+  +vmware-workstation-3.2.1.2242-r7.ebuild,
+  -vmware-workstation-4.5.2.8848-r9.ebuild,
+  +vmware-workstation-4.5.2.8848-r10.ebuild,
+  -vmware-workstation-5.0.0.13124-r4.ebuild,
+  +vmware-workstation-5.0.0.13124-r5.ebuild:
+  Forced a version bump to get proper permissions on /etc/vmware so upgrades
+  are smooth. Closing bug #115746.
 
   19 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   files/3.2.1.2242/vmware, files/vmware.rc:
