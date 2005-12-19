@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 ac32b83c13e88b9782828d7312879a6a litestream-1.3_rc3.ebuild 1084
 MD5 63a393dca1395b7dd3fed7999c95d7b2 ChangeLog 1210
+MD5 225c616601758f1965284c5d9922de26 litestream-1.2.ebuild 1048
+MD5 75c1a84a3546138fc57472a7c9882e14 files/litestream-1.2-Makefile.patch 331
 MD5 7b22396a0ce85c0f2f7260047052237c files/digest-litestream-1.2 65
 MD5 03ec7f82b19f7b2d8e23b250c3e89d94 files/digest-litestream-1.3_rc3 68
-MD5 75c1a84a3546138fc57472a7c9882e14 files/litestream-1.2-Makefile.patch 331
 MD5 ed48bbd28f65e23350257f8daabf6102 files/vargs.h 4939
-MD5 225c616601758f1965284c5d9922de26 litestream-1.2.ebuild 1048
-MD5 ee54b91f96a8ca75c985befc774d066a litestream-1.3_rc3.ebuild 1085
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDo/elAiZjviIA2XgRAkxkAJ9AglQsAkew2/97xDoz35zuj7hCYACcCjkG
-aIdhcT7qItE16wFLghuBwyY=
-=o2TR
------END PGP SIGNATURE-----
