@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tcmplex-panteltje
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.4 2005/12/14 10:30:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.5 2005/12/19 17:13:47 hd_brummy Exp $
+
+  19 Dec 2005; Joerg Bornkessel <hd_brummy@gentoo.org>
+  tcmplex-panteltje-0.4.7.ebuild:
+  clean up code, for better workin Makefile
 
 *tcmplex-panteltje-0.4.7 (14 Dec 2005)
 
