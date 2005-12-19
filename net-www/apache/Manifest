@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b1f7ab775d129da2a239341f3db973d1 ChangeLog 74037
 MD5 b56779cb8460b101ad6912c8f45ff583 apache-1.3.29-r2.ebuild 7237
 MD5 3e32afd7bbab740bdce0fc0cf45d5be3 apache-1.3.31-r1.ebuild 6816
@@ -110,3 +113,10 @@ MD5 59a6ba7dcde461f5350af41e6aff92b1 files/robots.txt 342
 MD5 d3626a1e31a675c60d066c111d552adf files/suexec.pam 59
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
 MD5 27c9cb37c510e08bb69df277229a03ea metadata.xml 566
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDpznz2+ySkm8kpY0RAmTNAJsGs/VBMmbhsJL+8ftc3YHAu5yYawCfTF3n
+xxRFeSNyTa9HMVP94extsBU=
+=js1+
+-----END PGP SIGNATURE-----
