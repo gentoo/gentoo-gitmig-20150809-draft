@@ -6,3 +6,4 @@ MD5 41de6d6bf6ddfb3932b45320c9dc38dd files/installer 3013
 MD5 f533352d962fe012f5afc114e23fc3b0 files/installer-dialog 121
 MD5 7463cd31bbfffb0bcb5144f153e425e2 files/installer-gtk 114
 MD5 99dfcd8090d37dcfd7d2d872f2b234e0 gli-0.2.ebuild 1496
+MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
