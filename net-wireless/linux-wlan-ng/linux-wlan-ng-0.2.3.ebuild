@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.2.ebuild,v 1.3 2005/12/19 11:01:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.3.ebuild,v 1.1 2005/12/19 11:01:40 betelgeuse Exp $
 
 #The configure script needs prepared sources.
 inherit linux-mod
@@ -17,8 +17,8 @@ KEYWORDS="~ppc ~x86"
 IUSE="debug doc pcmcia"
 
 DEPEND="~net-wireless/linux-wlan-ng-modules-${PV}
-		~net-wireless/linux-wlan-ng-utils-${PV}
-		~net-wireless/linux-wlan-ng-firmware-${PV}"
+		~net-wireless/linux-wlan-ng-utils-0.2.2
+		~net-wireless/linux-wlan-ng-firmware-0.2.2"
 
 RDEPEND=${DEPEND}
 
@@ -28,6 +28,22 @@ INSTALL_DIRS="${COMPILE_DIRS} ../etc"
 
 CONFIG_FILE="${S}/default.config"
 CONFIG_DIR="/etc/conf.d"
+
+show_deprecated_message() {
+	if use pci || use plx || use pcmcia; then
+		einfo ""
+		einfo "You really should try other alternatives for prism support."
+		einfo "For example the hostap-driver or orinoco drivers should work"
+		einfo "with your wireless card. Support for pci, plx and pcmcia drivers"
+		einfo "will most likely be removed in the near future. If the alternatives"
+		einfo "don't work for you, please report this to betelgeuse@gentoo.org."
+		einfo ""
+	fi
+}
+
+pkg_setup() {
+	show_deprecated_message
+}
 
 config_by_usevar() {
 	local config=${3}
@@ -68,9 +84,9 @@ src_unpack() {
 
 	set_option TARGET_ROOT_ON_HOST	${D}
 	set_option LINUX_SRC			${KERNEL_DIR}
-	set_option PRISM2_USB 	 		n
-	set_option PRISM2_PCI 	 		n
-	set_option PRISM2_PLX 	 		n
+	set_option PRISM2_USB			n
+	set_option PRISM2_PCI			n
+	set_option PRISM2_PLX			n
 	set_option PRISM2_PCMCIA		n
 
 	if kernel_is gt 2 4; then
@@ -87,8 +103,8 @@ src_compile() {
 
 	CONFIG_FILE="config.mk"
 
-	set_option       FIRMWARE_DIR  "/lib/firmware"
-	config_by_usevar PRISM2_PCMCIA  pcmcia
+	set_option		 FIRMWARE_DIR  "/lib/firmware"
+	config_by_usevar PRISM2_PCMCIA	pcmcia
 
 	#For the scripts that go to /etc
 	set_option TARGET_PCMCIA_DIR	${D}/etc/pcmcia
@@ -151,5 +167,6 @@ pkg_postinst() {
 		ewarn "Do 'cardctl info' to see the manufacturer ID and remove the corresponding"
 		ewarn "line from that file."
 	fi
+	show_deprecated_message
 }
 

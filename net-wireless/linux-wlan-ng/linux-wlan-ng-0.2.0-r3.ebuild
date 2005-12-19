@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.11 2005/10/31 17:08:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.12 2005/12/19 11:01:40 betelgeuse Exp $
 
 inherit pcmcia
 
@@ -18,16 +18,11 @@ RDEPEND="dev-libs/openssl
 		>=sys-apps/sed-4.0"
 
 SLOT="0"
-LICENSE="MPL-1.1"
+# includes dual licensed files but also stuff only under MPL-1.1
+LICENSE="|| ( GPL-2 MPL-1.1 ) MPL-1.1"
 KEYWORDS="x86"
 
-# Note: To use this ebuild, you should have the usr/src/linux symlink to
-# the kernel directory that linux-wlan-ng should use for configuration.
-#
-# linux-wlan-ng requires a configured pcmcia-cs source tree.
-# unpack/configure it in WORKDIR.  No need to compile it though.
-
-src_unpack() {
+pkg_setup() {
 	check_KV
 
 	okvminor="${KV#*.}" ; okvminor="${okvminor%%.*}"
@@ -38,7 +33,15 @@ src_unpack() {
 		eerror "See bug #32737 for info on work being done to fix this."
 		die "This version of linux-wlan-ng does not support 2.6 kernels"
 	fi
+}
 
+# Note: To use this ebuild, you should have the usr/src/linux symlink to
+# the kernel directory that linux-wlan-ng should use for configuration.
+#
+# linux-wlan-ng requires a configured pcmcia-cs source tree.
+# unpack/configure it in WORKDIR.  No need to compile it though.
+
+src_unpack() {
 	unpack ${P}.tar.gz
 	unpack ${PN}-gentoo-init.gz
 
