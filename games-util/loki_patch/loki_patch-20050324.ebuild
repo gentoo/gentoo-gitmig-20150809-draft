@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20050324.ebuild,v 1.2 2005/04/11 12:32:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20050324.ebuild,v 1.3 2005/12/19 21:52:43 wolf31o2 Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ RDEPEND="games-util/loki_setupdb"
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
