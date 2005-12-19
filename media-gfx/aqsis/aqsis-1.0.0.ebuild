@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.0.0.ebuild,v 1.1 2005/01/20 22:41:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.0.0.ebuild,v 1.2 2005/12/19 20:10:52 vanquirius Exp $
 
 DESCRIPTION="Aqsis - a high-quality RenderMan compliant REYES render engine"
 HOMEPAGE="http://www.aqsis.com"
@@ -12,18 +12,11 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
-		x11-libs/fltk
-		media-libs/tiff"
+	x11-libs/fltk
+	media-libs/tiff"
 
-src_compile()
-{
-	econf || die
-	emake || die
-}
-
-src_install()
-{
-	einstall || die
-	dodoc AUTHORS COPYING INSTALL NEWS README
+src_install() {
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS NEWS README
 }
 
