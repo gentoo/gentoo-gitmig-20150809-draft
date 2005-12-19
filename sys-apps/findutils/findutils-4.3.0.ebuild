@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.2 2005/12/15 20:58:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.3 2005/12/19 19:09:38 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -32,7 +32,7 @@ src_unpack() {
 	use selinux && epatch "${FILESDIR}/${SELINUX_PATCH}"
 
 	# Use the system-provided regex.h, bug #114747
-	cp /usr/include/regex.h gnulib/lib/regex.h
+	echo "#include_next <regex.h>" > gnulib/lib/regex.h
 }
 
 src_compile() {
