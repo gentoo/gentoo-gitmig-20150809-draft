@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-    <email>gaim-bugs@gentoo.org</email>
+    <email>net-im@gentoo.org</email>
 </maintainer>
 <longdescription>
 Gaim OSD is an implementation of the XOSD library, allowing Gaim to display several notification messages.
