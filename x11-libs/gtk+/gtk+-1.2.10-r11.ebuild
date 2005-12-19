@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.20 2005/12/13 20:41:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.21 2005/12/19 06:06:29 vapier Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool toolchain-funcs
@@ -36,7 +36,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.2-locale_fix.patch
 
-	uclibctoolize
+	elibtoolize
 }
 
 src_compile() {
@@ -60,8 +60,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die
-
-	preplib /usr
 
 	dodoc AUTHORS ChangeLog* HACKING
 	dodoc NEWS* README* TODO

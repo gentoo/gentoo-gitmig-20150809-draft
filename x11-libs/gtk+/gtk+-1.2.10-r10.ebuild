@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.19 2005/01/12 22:10:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.20 2005/12/19 06:06:29 vapier Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool
@@ -57,8 +57,6 @@ src_compile() {
 src_install() {
 
 	make install DESTDIR=${D} || die
-
-	preplib /usr
 
 	dodoc AUTHORS COPYING ChangeLog* HACKING
 	dodoc NEWS* README* TODO
