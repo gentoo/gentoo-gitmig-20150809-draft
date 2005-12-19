@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d28411ac6abf47ed3f490f6e0feaef90 ChangeLog 7512
+MD5 de167eabd5939467a00d2f36a51ea917 ChangeLog 7705
 MD5 9167396e4beb71ea1c2f38c0933e2241 faad2-2.0-r3.ebuild 2091
 MD5 f17e09277ed7b2502a798579f4517d72 faad2-2.0-r6.ebuild 2127
 MD5 9744749cd5b5b9f8315709147174f04e faad2-2.0-r7.ebuild 2141
+MD5 d3c028077cc2c8db9123e1fa07957133 faad2-2.0-r8.ebuild 1541
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r3 61
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r6 61
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r7 61
+MD5 e91b90137cc00d581de4a6502ba3ac2d files/digest-faad2-2.0-r8 127
 MD5 edab653b8b9960b0ea4a04a745786c5f files/faad2-2.0-amd64.patch 9564
 MD5 042669e1c5f4755340520e417eafad15 files/faad2-2.0-configure-mpeg4ip.patch 416
 MD5 c7b0b0563f7c682ecd92ef4c32ceef60 files/faad2-2.0-gcc34.patch 296
@@ -19,7 +21,7 @@ MD5 fa11072383948db52dccac007cc2c73d metadata.xml 387
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpoMbAiZjviIA2XgRAgWOAJ95Lpia0bIqiGhqq0zXWabMPm8mDQCghKLa
-82aK5Sc2BaddT70oet4PtlY=
-=10J2
+iD8DBQFDppawAiZjviIA2XgRAm3nAKDeiOoC2pGPwLsv6rdYqMJd5WSz8gCg6eml
+3cdy4GQDYqG599bc0EFWlII=
+=3TiG
 -----END PGP SIGNATURE-----
