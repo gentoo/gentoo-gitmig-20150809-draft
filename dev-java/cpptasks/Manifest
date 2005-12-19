@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64f9bda521f63e5dfdf1c9f672eafa94 ChangeLog 424
+MD5 000ed2256e41132f8ba21ef4b77d5dd4 cpptasks-1.0_beta3.ebuild 1278
+MD5 069b839f95896e35038a12b51ad98246 files/digest-cpptasks-1.0_beta3 66
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDpkMandWRXhKOboURAr5rAJ9kAKkmXVo/g4LffKz6uc8uvU6ojwCbBOCE
+uggCVgMMtnkwJyuj06LcNSI=
+=GxNb
+-----END PGP SIGNATURE-----

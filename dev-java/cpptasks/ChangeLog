@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/cpptasks
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/ChangeLog,v 1.1 2005/12/19 04:21:05 nichoj Exp $
+
+*cpptasks-1.0_beta3 (19 Dec 2005)
+
+  19 Dec 2005; Joshua Nichols <nichoj@gentoo.org> +metadata.xml,
+  +cpptasks-1.0_beta3.ebuild:
+  Initial commit. Ebuild contributed by support@obsidian-studios.com (bug
+  #115894).
+
