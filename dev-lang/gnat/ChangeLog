@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.36 2005/12/18 18:42:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.37 2005/12/19 19:36:28 george Exp $
+
+  19 Dec 2005; George Shapovalov <george@gentoo.org> gnat-3.44-r2.ebuild:
+  all of amd64 stuff for gnat-3.44 is set, redady for unmasking. Removed ~x86
+  and ~ppc from KEYWORDS, need more test reports on those arches..
 
   18 Dec 2005; George Shapovalov <george@gentoo.org> files/digest-gnat-3.44-r2:
   repackaged bootstrap compiler for amd64, included libgcc_s.so.1 
