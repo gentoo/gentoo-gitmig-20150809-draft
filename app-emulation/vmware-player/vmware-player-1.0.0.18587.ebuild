@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.0.18007.ebuild,v 1.2 2005/11/29 15:18:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.0.18587.ebuild,v 1.1 2005/12/19 21:28:53 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -10,7 +10,7 @@ inherit eutils
 
 S=${WORKDIR}/vmware-player-distrib
 #ANY_ANY="vmware-any-any-update94"
-NP="VMware-player-1.0.0-18007"
+NP="VMware-player-1.0.0-18587"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/player/"
 SRC_URI="http://download3.vmware.com/software/vmplayer/${NP}.tar.gz"
@@ -112,9 +112,12 @@ src_install() {
 	# this removes the user/group warnings
 	chown -R root:0 ${D} || die
 
+	dodir /etc/vmware
 	# this makes the vmware-vmx executable only executable by vmware group
-	fowners root:vmware ${dir}/lib/bin{,-debug}/vmware-vmx || die
+	fowners root:vmware ${dir}/lib/bin{,-debug}/vmware-vmx /etc/vmware \
+		|| die "Changing permissions"
 	fperms 4750 ${dir}/lib/bin{,-debug}/vmware-vmx || die
+	fperms 770 /etc/vmware || die
 
 	# this adds udev rules for vmmon*
 	dodir /etc/udev/rules.d
