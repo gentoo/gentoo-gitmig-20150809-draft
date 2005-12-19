@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.2 2005/11/19 17:12:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.3 2005/12/19 11:17:53 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -38,7 +38,7 @@ RDEPEND=" media-libs/libsdl
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
-	!media-libs/faad2 "
+	!<media-libs/faad2-2.0-r7 "
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool
