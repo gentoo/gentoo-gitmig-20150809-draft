@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.11 2005/05/03 16:35:38 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.12 2005/12/19 08:36:15 corsair Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 
 IUSE="ssl"
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
