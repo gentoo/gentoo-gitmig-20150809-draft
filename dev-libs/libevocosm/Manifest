@@ -5,12 +5,12 @@ MD5 eef3e4cef65741848ef6132d185c0959 ChangeLog 803
 MD5 656fa42cfb283daaa76a91100b645244 files/digest-libevocosm-2.5.2 68
 MD5 60f4fcaa9eff9004be09d26f99793d9f files/digest-libevocosm-3.1.0 68
 MD5 adc082fc46d5a78654c4dd628ce935f6 libevocosm-2.5.2.ebuild 566
-MD5 dda1cfa5a28438192cf000641e0717b8 libevocosm-3.1.0.ebuild 566
+MD5 f662eadc68e5b02cc1c9c00f4a182fbf libevocosm-3.1.0.ebuild 568
 MD5 5dea0891aac493884dcf72d394d42924 metadata.xml 216
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpfQjCRZPokWLroQRApEVAJsFgNsL/gOulTdpOP8C9dap/RbutwCgsMaW
-tAqcqv88/MFJmrmOVaAjzPk=
-=9z1L
+iD8DBQFDprXeCRZPokWLroQRAt3AAJ9TKj8T+U1Y9fcRvuA4wmH1cIKS3gCfcfhb
+Tx+BhYoqMJX6ddxJwOqWfIM=
+=8kwd
 -----END PGP SIGNATURE-----
