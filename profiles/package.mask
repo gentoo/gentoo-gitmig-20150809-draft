@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4786 2005/12/19 22:00:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4787 2005/12/19 22:31:42 gothgirl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Kathryn Kulick <gothgirl@gentoo.org> (19 Dec 2005)
+# Gaim 2.0.0 beta1 added to tree for testing.
+>=net-im/gaim-2.0.0_beta1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
 # This is the Gentoo Linux Installer.  This is currently masked because it can
