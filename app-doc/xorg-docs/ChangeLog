@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.1 2005/12/18 10:21:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.2 2005/12/19 19:34:47 herbs Exp $
+
+  19 Dec 2005; Herbie Hopkins <herbs@gentoo.org> xorg-docs-1.0.0.ebuild:
+  Marked ~amd64.
 
 *xorg-docs-1.0.0 (18 Dec 2005)
 
