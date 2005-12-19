@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.2 2005/12/19 01:14:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.3 2005/12/19 01:43:36 anarchy Exp $
 
 IUSE="opengl"
 
@@ -92,14 +92,14 @@ pkg_setup(){
 
 	# Set up X11 implementation
 	if has_version "x11-base/xorg-server"; then
-		X11_IMPLEM_P="$(best_version xorg-x11)"
+		X11_IMPLEM=xorg-x11
 	else
 		X11_IMPLEM_P="$(best_version virtual/x11)"
+		X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+		X11_IMPLEM="${X11_IMPLEM##*\/}"
+		X11_IMPLEM_V="${X11_IMPLEM_P/${X11_IMPLEM}-/}"
+		X11_IMPLEM_V="${X11_IMPLEM_V##*\/}"
 	fi
-	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-	X11_IMPLEM="${X11_IMPLEM##*\/}"
-	X11_IMPLEM_V="${X11_IMPLEM_P/${X11_IMPLEM}-/}"
-	X11_IMPLEM_V="${X11_IMPLEM_V##*\/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."
 	choose_driver_folder
 }
