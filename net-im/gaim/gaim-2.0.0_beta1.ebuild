@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1.ebuild,v 1.1 2005/12/19 17:32:17 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1.ebuild,v 1.2 2005/12/19 20:31:54 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="nls perl spell nas cjk gnutls silc eds krb4 tcltk debug dbus vv mono"
 
 RDEPEND=">=x11-libs/gtk+-2.0
@@ -32,11 +32,13 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	eds? ( gnome-extra/evolution-data-server )
 	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
 	tcltk? ( dev-lang/tcl
-			dev-lang/tk )
-	vv? ( media-libs/speex
-		net-libs/ortp
-		dev-libs/ilbc-rfc3951 )
-		x11-libs/startup-notification"
+			dev-lang/tk )"
+
+#Voice video support for when it is added from upstream
+#	vv? ( media-libs/speex
+#		net-libs/ortp
+#		dev-libs/ilbc-rfc3951 )
+#		x11-libs/startup-notifi3cation"
 
 DEPEND="$RDEPEND
 	dev-util/pkgconfig
