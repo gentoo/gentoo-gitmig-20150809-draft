@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.15-r2.ebuild,v 1.3 2005/05/30 07:11:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.1 2005/12/19 14:32:40 phosphan Exp $
 
 inherit eutils
 
@@ -9,34 +9,45 @@ IUSE="usb gphoto2 ipv6 v4l"
 DESCRIPTION="Scanner Access Now Easy - Backends"
 HOMEPAGE="http://www.sane-project.org/"
 
-DEPEND=">=media-libs/jpeg-6b
+RDEPEND=">=media-libs/jpeg-6b
 	amd64? ( sys-libs/libieee1284 )
 	x86? ( sys-libs/libieee1284 )
 	usb? ( dev-libs/libusb )
 	gphoto2? ( media-libs/libgphoto2 )
 	v4l? ( sys-kernel/linux-headers )"
 
-BROTHERMFCDRIVER="sane-backends-1.0.15-brothermfc.patch"
+DEPEND="${DEPEND}
+	>=sys-apps/sed-4"
 
-SRC_URI="ftp://ftp.mostang.com/pub/sane/${P}/${P}.tar.gz
-	ftp://ftp.mostang.com/pub/sane/old-versions/${P}/${P}.tar.gz
-	usb? ( mirror://gentoo/${BROTHERMFCDRIVER}.bz2 )"
+BROTHERMFCPATCHVER="1.0.16"
+BROTHERMFCDRIVER="sane-${BROTHERMFCPATCHVER}-brother-driver.diff"
+
+SRC_URI="ftp://ftp.sane-project.org/pub/sane/${P}/${P}.tar.gz
+	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz
+	usb? ( mirror://gentoo/${BROTHERMFCDRIVER}.bz2
+		http://dev.gentoo.org/~phosphan/${BROTHERMFCDRIVER}.bz2 )"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
 KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64 ~alpha ~ia64"
 
 # To enable specific backends, define SANE_BACKENDS with the backends you want
 # in those:
-#   abaton agfafocus apple artec as6e avision bh canon canon630u coolscan
-#   coolscan2 dc25 dmc epson fujitsu gt68xx hp leo matsushita microtek
-#   microtek2 mustek mustek_usb nec pie plustek plustek_pp ricoh s9036
-#   sceptre sharp sp15c st400 tamarack test teco1 teco2 teco3 umax umax_pp
-#   umax1220u artec_eplus48u ma1509 ibm hp5400 u12 snapscan niash dc210 dc240
-#   pint net
+# 
+#         abaton agfafocus apple artec as6e avision bh canon
+#         canon630u coolscan coolscan2 dc25 dmc
+#         epson fujitsu genesys gt68xx hp leo lexmark matsushita microtek
+#         microtek2 mustek mustek_usb nec pie plustek
+#         plustek_pp ricoh s9036 sceptre sharp
+#         sp15c st400 tamarack test teco1 teco2 teco3 umax umax_pp umax1220u
+#         artec_eplus48u ma1509 ibm hp5400 u12 snapscan niash sm3840 hp4200
+#         sm3600
 #
 # Note that some backends has specific dependencies which make the compilation
 # fail because not supported on your current platform.
+
 pkg_setup() {
+	enewgroup scanner
+
 	IEEE1284_BACKENDS="canon_pp hpsj5s mustek_pp"
 
 	if [[ "${SANE_BACKENDS}" != "" ]]; then
@@ -64,23 +75,22 @@ src_unpack() {
 	if use usb; then
 		unpack ${BROTHERMFCDRIVER}.bz2
 	fi
-	cp ${FILESDIR}/linux_sg3_err.h ${S}/sanei
 
 	cd ${S}
-
-	epatch ${FILESDIR}/canoscan-focus.patch
-	epatch ${FILESDIR}/sane-backend-1.0.15-gt68xx-update67.patch
 
 	#only generate the .ps and not the fonts
 	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
 		doc/Makefile.in
 	#compile errors when using NDEBUG otherwise
-	sed -i -e 's:function_name:__FUNCTION__:g' backend/artec_eplus48u.c
+	sed -i -e 's:function_name:__FUNCTION__:g' backend/artec_eplus48u.c \
+		|| die "function_name fix failed"
 
 	if use usb; then
 		epatch ${WORKDIR}/${BROTHERMFCDRIVER}
-		epatch ${FILESDIR}/libusbscanner-device-r1.patch
+		sed -e 's/bh canon/bh brother canon/' -i configure || \
+			die "could not add 'brother' to backend list"
 	fi
+
 }
 
 src_compile() {
@@ -103,7 +113,9 @@ src_compile() {
 
 src_install () {
 	einstall docdir=${D}/usr/share/doc/${PF}
-
+	keepdir /var/lib/lock/sane
+	fowners root:scanner /var/lib/lock/sane
+	fperms g+w /var/lib/lock/sane
 	if use usb; then
 		cd tools/hotplug
 		insinto /etc/hotplug/usb
@@ -122,18 +134,4 @@ src_install () {
 	insinto /etc/env.d
 	doins 30sane
 
-}
-
-pkg_preinst() {
-	enewgroup scanner
-}
-
-pkg_postinst() {
-	if use usb; then
-		einfo "There are some problems with the hotplug script when"
-		einfo "restarting hotplug with some kernel versions."
-		einfo "If you have trouble, please edit"
-		einfo "/etc/hotplug/usb/libusbscanner"
-		einfo "and see bug #50934 for details."
-	fi
 }
