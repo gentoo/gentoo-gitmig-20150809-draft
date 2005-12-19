@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.2-r1.ebuild,v 1.3 2005/12/03 11:52:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.2-r1.ebuild,v 1.4 2005/12/19 10:52:35 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ DESCRIPTION="Kernel modules for Prism2/2.5/3 based 802.11b wireless LAN products
 HOMEPAGE="http://linux-wlan.org"
 SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.bz2"
 
-LICENSE="MPL-1.1"
+LICENSE="|| ( GPL-2 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 

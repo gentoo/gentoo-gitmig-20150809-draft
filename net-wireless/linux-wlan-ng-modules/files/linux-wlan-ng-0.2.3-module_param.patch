@@ -1,0 +1,12 @@
+diff -ur linux-wlan-ng-0.2.3.old/src/prism2/driver/prism2_cs.c linux-wlan-ng-0.2.3/src/prism2/driver/prism2_cs.c
+--- linux-wlan-ng-0.2.3.old/src/prism2/driver/prism2_cs.c	2005-12-19 00:10:31.529760168 +0200
++++ linux-wlan-ng-0.2.3/src/prism2/driver/prism2_cs.c	2005-12-19 00:12:59.458271616 +0200
+@@ -21,7 +21,7 @@
+ 						 * is set to and what the CIS
+ 						 * says.
+ 						 */
+-#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,11) )
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,11)) && (LINUX_VERSION_CODE > KERNEL_VERSION(2,5,0))
+ #if (LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,8))
+ static int numlist = 4;
+ module_param_array(irq_list, int, numlist, 0444);

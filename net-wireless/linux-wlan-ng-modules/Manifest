@@ -1,8 +1,21 @@
-MD5 c0731d062c3f98dc9a8d34e5657bf256 ChangeLog 1008
-MD5 0ae3ed8165e7a96b178c4e6051a1c1c3 linux-wlan-ng-modules-0.2.2.ebuild 2389
-MD5 bd46277fb8c768aa34612bb9cb43fe75 metadata.xml 571
-MD5 11604202eb883e9b2a358c423364a35b linux-wlan-ng-modules-0.2.2-r1.ebuild 2444
-MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-modules-0.2.2 72
-MD5 581c6aa56e352d9edfa2a935a23bcd0f files/linux-wlan-ng-0.2.2-module_param.patch 717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a57d78086cbf50216f12bc07cdb09ca6 ChangeLog 1454
 MD5 9e66078bd27004847709f071774bd51d files/0.2.2-kernel-2.6.14.patch 6067
+MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-modules-0.2.2 72
 MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-modules-0.2.2-r1 72
+MD5 3414fdda8cf331136d23c69378f70a97 files/digest-linux-wlan-ng-modules-0.2.3 72
+MD5 581c6aa56e352d9edfa2a935a23bcd0f files/linux-wlan-ng-0.2.2-module_param.patch 717
+MD5 a4b2153476d6759ee96ab8b4ac7df4aa files/linux-wlan-ng-0.2.3-module_param.patch 657
+MD5 1deb7f8d9d24a664b06079a9d3eafb2c linux-wlan-ng-modules-0.2.2-r1.ebuild 2462
+MD5 aeeed0b2305debc92233ae39f2229d79 linux-wlan-ng-modules-0.2.2.ebuild 2406
+MD5 e7a955634c7ebdec581be8fcc5651dad linux-wlan-ng-modules-0.2.3.ebuild 2974
+MD5 bd46277fb8c768aa34612bb9cb43fe75 metadata.xml 571
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDppEBQiJ/wx066S4RAlGzAJ9ZiyvUXJ/5doqj7APeQJB5uS97cACfeI6m
+WTTY38qcMSi/mDwr/ZNl6cc=
+=1lCE
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/linux-wlan-ng-modules
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.4 2005/12/03 11:52:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.5 2005/12/19 10:52:35 betelgeuse Exp $
+
+*linux-wlan-ng-modules-0.2.3 (19 Dec 2005)
+
+  19 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +files/linux-wlan-ng-0.2.3-module_param.patch,
+  linux-wlan-ng-modules-0.2.2.ebuild, linux-wlan-ng-modules-0.2.2-r1.ebuild,
+  +linux-wlan-ng-modules-0.2.3.ebuild:
+  Version bump. Corrected LICENSE to be an or between GPL-2 and MPL-1.1. Also
+  added a note that pci, plx and pcmcia use flags will most likely be removed
+  in the near future.
 
   03 Dec 2005; Simon Stelling <blubb@gentoo.org>
   linux-wlan-ng-modules-0.2.2-r1.ebuild:
