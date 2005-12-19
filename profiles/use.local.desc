@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1618 2005/12/18 18:44:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1619 2005/12/19 22:27:53 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -225,6 +225,7 @@ dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon - Add optional support for the avalon-framework
 dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
+dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
 dev-java/gnu-classpath:cairo - Compile classpath gtk-peer with support for cairo
 dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/hibernate:c3p0 - Enable c3p0 support
