@@ -1,3 +1,13 @@
-MD5 7d904a38d0da6db38acdd7c17cedc740 ChangeLog 357
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 844b2f9bff1e84f9012c90075545c035 ChangeLog 458
 MD5 102695f5b48ed86385c6eaa7c380a0df files/digest-gccmakedep-0.99.0 68
-MD5 a7109b569b67f28cf07acc31d6674378 gccmakedep-0.99.0.ebuild 535
+MD5 7ef662a122225089cff140213297b9a8 gccmakedep-0.99.0.ebuild 534
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDpg3B2G5bA0cA/ScRAuDgAJ9FK+VrHpElfxbvml12pcTXSl7pDACfSVUq
+Q4PEUI4AksM6YKoxNTKPrAY=
+=s5Wg
+-----END PGP SIGNATURE-----
