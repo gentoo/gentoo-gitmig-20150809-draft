@@ -1,6 +1,0 @@
-#%PAM-1.0
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/files/uw-imap.pam-system-auth,v 1.1 2002/06/07 02:01:38 woodchip Exp $
-auth       required     pam_nologin.so
-auth       required     pam_stack.so service=system-auth
-account    required     pam_stack.so service=system-auth
-session    required     pam_stack.so service=system-auth
