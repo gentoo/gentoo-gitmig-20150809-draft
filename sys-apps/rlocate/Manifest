@@ -1,10 +1,24 @@
-MD5 d800a90030e4162d90d79eba0b0abe3c ChangeLog 1004
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f329c7f731c4b1d4d34194b27e7f8076 ChangeLog 1214
 MD5 3df7d026a132a54c32b590868c901eee files/digest-rlocate-0.3.0 65
 MD5 de57aa1ae3c55df794f8a28eaea3a826 files/digest-rlocate-0.3.1 65
 MD5 de57aa1ae3c55df794f8a28eaea3a826 files/digest-rlocate-0.3.1-r1 65
 MD5 6bc94ee4d9a01c7bb0f8d5f7fd22ef40 files/digest-rlocate-0.3.2 65
+MD5 f2481f47e9d60d7e52234ffecd679931 files/digest-rlocate-0.3.3 65
+MD5 43fee28c090b20de0b2c57b15e97caba files/rlocate-0.3.3-build.patch 2655
+MD5 56da5f78d234dc0928277d6d34b85de9 files/rlocated.rc 534
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 7864056c1293832c38d25cce49a1ed33 rlocate-0.3.0.ebuild 1094
 MD5 bdf37b226b9c579b537fc9e8675a431b rlocate-0.3.1-r1.ebuild 1383
 MD5 982f66ba9fc3ee72519efd2e9d81803b rlocate-0.3.1.ebuild 1094
 MD5 96bc3068a386e5303d172f2e82b3669c rlocate-0.3.2.ebuild 1393
+MD5 4edb9416ce557be2699b20bdc9215b8f rlocate-0.3.3.ebuild 1137
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDp0SN2+ySkm8kpY0RAhOMAJ4j5JzW3PLD/lyyEO6qIX3di5XZgACXYDeQ
+MfinpW5uE/oHF+a5VFGNvw==
+=riWt
+-----END PGP SIGNATURE-----
