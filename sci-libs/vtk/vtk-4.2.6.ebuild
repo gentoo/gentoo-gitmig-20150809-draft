@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.7 2005/12/18 18:09:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.8 2005/12/19 16:09:31 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg
+inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg python
 
 MY_PV="$(get_version_component_range 1-2)"
 
@@ -73,18 +73,10 @@ src_compile() {
 	fi
 
 	if use python; then
-
-		#determine installed python version
-		local tmp="$(/usr/bin/python -V 2>&1 )"
-		local PY_VERSION="${tmp#Python }"
-		local PY_MAJOR="$(echo ${PY_VERSION} | cut -d. -f1)"
-		local PY_MINOR="$(echo ${PY_VERSION} | cut -d. -f2)"
-		local PY_VERSION="${PY_MAJOR}.${PY_MINOR}"
-
-		# set variables
+		python_version
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_PYTHON:BOOL=ON"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_INCLUDE_PATH:PATH=/usr/include/python${PY_VERSION}"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/lib/libpython${PY_VERSION}.so"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_INCLUDE_PATH:PATH=/usr/include/python${PYVER}"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/lib/libpython${PYVER}.so"
 	fi
 
 	use tcltk && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"

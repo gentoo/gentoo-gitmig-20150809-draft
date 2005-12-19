@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.6 2005/12/18 18:09:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.7 2005/12/19 16:09:31 markusle Exp $
+
+  19 Dec 2005; Markus Dittrich <markusle@gentoo.org> vtk-4.2.6.ebuild:
+  Use python eclass functions to determine installed python version.
 
   18 Dec 2005; Markus Dittrich <markusle@gentoo.org> vtk-4.2.6.ebuild:
   Fixed compilation problems when using cmake-2.2.x and when compiling against
