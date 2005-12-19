@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/quake3-truecombat-1.2.ebuild,v 1.3 2004/10/07 17:07:17 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/quake3-truecombat-1.2.ebuild,v 1.4 2005/12/19 21:16:07 wolf31o2 Exp $
 
 MOD_DESC="total transformation realism based MOD"
 MOD_NAME=truecombat
@@ -9,9 +9,9 @@ inherit games games-q3mod
 
 HOMEPAGE="http://www.truecombat.com/"
 SRC_URI="http://mirror.inode.at/data/truecombat/TrueCombat1.0.zip
-	ftp://ftp4.extreme-players.de/truecombat/truecombat-1.0to1.0a.zip
+	http://ftp.wireplay.com/pub/quake3arena/mods/truecombat/patches/win32/truecombat-1.0to1.0a.zip
 	http://www.playtrix.net/download/truecombat/TrueCombat-1.0aTo1.1.zip
-	http://anton.aci.on.ca/tc/tc12.zip"
+	http://ftp.wireplay.co.uk/pub/quake3arena/mods/truecombat/patches/win32/tc12.zip"
 
 LICENSE="freedist"
 RESTRICT="nomirror"

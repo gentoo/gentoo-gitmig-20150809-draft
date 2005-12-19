@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-truecombat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.10 2004/10/07 17:07:17 humpback Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.11 2005/12/19 21:16:07 wolf31o2 Exp $
+
+  19 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-truecombat-1.2.ebuild:
+  Fixed up mirrors. Thanks to Sascha Geschwandtner <s.geschwandtner@gmx.de>.
+  Closing bug #115690.
 
   07 Oct 2004; Gustavo Felisberto <humpback@gentoo.org>;
   quake3-truecombat-1.2.ebuild:
