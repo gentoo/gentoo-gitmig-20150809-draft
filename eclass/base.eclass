@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.29 2005/09/08 09:33:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.30 2005/12/19 14:02:12 george Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -40,7 +40,7 @@ base_src_unpack() {
 				epatch ${x}
 			done
 			;;
-	        all)
+		all)
 			debug-print-section all
 			base_src_unpack unpack autopatch
 			;;
@@ -62,17 +62,17 @@ base_src_compile() {
 
 	case $1 in
 		configure)
-		debug-print-section configure
-		econf || die "died running econf, $FUNCNAME:configure"
-		;;
+			debug-print-section configure
+			econf || die "died running econf, $FUNCNAME:configure"
+			;;
 		make)
-		debug-print-section make
-		emake || die "died running emake, $FUNCNAME:make"
-		;;
+			debug-print-section make
+			emake || die "died running emake, $FUNCNAME:make"
+			;;
 		all)
-		debug-print-section all
-		base_src_compile configure make
-		;;
+			debug-print-section all
+			base_src_compile configure make
+			;;
 	esac
 
 	shift
