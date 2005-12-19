@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.31 2005/11/28 23:10:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.32 2005/12/19 16:12:57 wolf31o2 Exp $
+
+  19 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org> files/fixinstall,
+  nwn-1.66-r1.ebuild:
+  Fixing fixinstall file and made it install properly.
 
   28 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.65-r1.ebuild,
   nwn-1.66.ebuild, nwn-1.66-r1.ebuild:
