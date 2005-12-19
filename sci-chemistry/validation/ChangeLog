@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/validation
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/ChangeLog,v 1.1 2005/12/19 01:27:20 spyderous Exp $
+
+*validation-8.061 (19 Dec 2005)
+
+  19 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/respect-flags-and-add-gcc4.patch, +metadata.xml,
+  +validation-8.061.ebuild:
+  Add a set of tools used by the PDB for processing and checking structure data.
+
