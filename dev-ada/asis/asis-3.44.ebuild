@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.3 2005/12/18 20:15:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.4 2005/12/19 19:31:25 george Exp $
 
-inherit eutils gnat
+inherit eutils flag-o-matic gnat
 
 My_PV="3_4_4-20041123"
 S="${WORKDIR}/${PN}-${My_PV}.src"
@@ -21,6 +21,9 @@ RDEPEND=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
+
+#may be it is even better to force plain -O2 -pipe -ftracer here
+replace-flags -O3 -O2
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
