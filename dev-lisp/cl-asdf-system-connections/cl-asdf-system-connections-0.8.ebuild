@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf-system-connections/cl-asdf-system-connections-0.1.ebuild,v 1.1 2005/11/27 19:41:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf-system-connections/cl-asdf-system-connections-0.8.ebuild,v 1.1 2005/12/19 22:05:54 mkennedy Exp $
 
 inherit common-lisp
 

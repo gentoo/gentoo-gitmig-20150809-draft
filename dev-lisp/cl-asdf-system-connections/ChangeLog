@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-asdf-system-connections
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf-system-connections/ChangeLog,v 1.1 2005/11/27 19:41:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf-system-connections/ChangeLog,v 1.2 2005/12/19 22:05:54 mkennedy Exp $
+
+*cl-asdf-system-connections-0.8 (19 Dec 2005)
+
+  19 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -cl-asdf-system-connections-0.1.ebuild,
+  +cl-asdf-system-connections-0.8.ebuild:
+  New upstream version; Removed old ebuilds.
 
 *cl-asdf-system-connections-0.1 (27 Nov 2005)
 
