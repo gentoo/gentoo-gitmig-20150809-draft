@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyosd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.9 2005/04/24 13:09:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.10 2005/12/19 00:38:06 lucass Exp $
+
+*pyosd-0.2.14 (19 Dec 2005)
+
+  19 Dec 2005; Lukasz Strzygowski <lucass@gentoo.org> -pyosd-0.2.7.ebuild,
+  -pyosd-0.2.9.ebuild, -pyosd-0.2.11.ebuild, +pyosd-0.2.14.ebuild:
+  Version bump. Added message about optional dependencies (bug #87987).
+  Removed older versions.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pyosd-0.2.12.ebuild:
   Stable on ppc.
