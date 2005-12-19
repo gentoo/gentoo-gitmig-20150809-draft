@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.14 2005/12/05 16:08:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.15 2005/12/19 05:47:56 vapier Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -242,7 +242,7 @@ src_install() {
 	if [ "${PN}" = "libperl" ]
 	then
 		dolib.so ${WORKDIR}/${LIBPERL}
-		preplib
+		dosym ${LIBPERL} /usr/$(get_libdir)/libperl.so.${PERLSLOT}
 	else
 		# Need to do this, else apps do not link to dynamic version of
 		# the library ...

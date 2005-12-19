@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.91 2005/12/06 21:42:04 hansmi Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.92 2005/12/19 05:47:56 vapier Exp $
+
+  19 Dec 2005; Mike Frysinger <vapier@gentoo.org> libperl-5.8.6.ebuild,
+  libperl-5.8.6-r1.ebuild, libperl-5.8.7.ebuild:
+  Remove usage of preplib.
 
   06 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> libperl-5.8.7.ebuild:
   Stable on hppa, ppc.

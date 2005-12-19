@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.21 2005/12/17 03:49:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.22 2005/12/19 05:47:56 vapier Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -249,11 +249,7 @@ src_install() {
 	if [ "${PN}" = "libperl" ]
 	then
 		dolib.so ${WORKDIR}/${LIBPERL}
-		if [[ ${USERLAND} == "Darwin" ]]; then
-			install_name_tool -id /usr/$(get_libdir)/${LIBPERL} ${D}/usr/$(get_libdir)/${LIBPERL}
-		else
-			preplib
-		fi
+		dosym ${LIBPERL} /usr/$(get_libdir)/libperl$(get_libname ${PERLSLOT})
 	else
 		# Need to do this, else apps do not link to dynamic version of
 		# the library ...
