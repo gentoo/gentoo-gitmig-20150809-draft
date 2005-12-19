@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.71 2005/12/17 00:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.72 2005/12/19 22:57:25 vapier Exp $
+
+  19 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/elfutils-0.118-libelf-link.patch, elfutils-0.118.ebuild:
+  Fix linking of utilities with libelf #115385.
 
   17 Dec 2005; Mike Frysinger <vapier@gentoo.org>
   +files/elfutils-0.118-PaX-support.patch, elfutils-0.118.ebuild:

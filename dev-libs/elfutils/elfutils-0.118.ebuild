@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.3 2005/12/17 00:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.4 2005/12/19 22:57:25 vapier Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd "${S}"
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}"/patch/
+	epatch "${FILESDIR}"/${P}-libelf-link.patch
 	epatch "${FILESDIR}"/${P}-PaX-support.patch
 
 	# Needed by ${P}-portability.patch
