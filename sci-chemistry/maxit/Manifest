@@ -1,0 +1,7 @@
+MD5 baeafaf433c4f93a1c8fee652272a69c ChangeLog 495
+MD5 68b7fbe58ac131c5de804dfa490cd2ce files/README 1298
+MD5 7acf1939208e2c5ef1541e4c58f5c800 files/README-source 3409
+MD5 f0539a87f3decb3c2a841511143cabb9 files/digest-maxit-8.2 80
+MD5 992d798766fb7d4bed4e02b638fcefe5 files/respect-cflags-and-fix-install.patch 7536
+MD5 cb100e2e9e0108d55b189845498ed1b8 maxit-8.2.ebuild 1518
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248

@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/maxit
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.1 2005/12/20 04:19:43 spyderous Exp $
+
+*maxit-8.2 (20 Dec 2005)
+
+  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/README,
+  +files/README-source, +files/respect-cflags-and-fix-install.patch,
+  +metadata.xml, +maxit-8.2.ebuild:
+  An application for processing and curation of macromolecular structure data.
+
