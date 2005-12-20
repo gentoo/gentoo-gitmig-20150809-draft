@@ -2,7 +2,7 @@ Add support for declaring elf visibility attributes.  Used to
 help cleanup TEXTRELs in misc libraries (like libsdl).
 
 Syntax to declare function foo hidden:
-GLOBAL foo:function:hidden
+GLOBAL foo:function hidden
 
 Patch by Mike Frysinger <vapier@gentoo.org>
 
@@ -42,18 +42,14 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
      sym->size = 0;
      if (segment == NO_SEG)
          sym->section = SHN_ABS;
-@@ -571,16 +579,40 @@ static void elf_deflabel(char *name, lon
+@@ -570,18 +578,41 @@ static void elf_deflabel(char *name, lon
+             sym->next = sects[sym->section - 1]->gsyms;
              sects[sym->section - 1]->gsyms = sym;
  
++            /* ELF syntax: GLOBAL name[:type [visibility]] */
              if (special) {
 -                int n = strcspn(special, " ");
-+                char *visibility = NULL;
-+                int n;
-+                n = strcspn(special, ":");
-+                if (special[n]) {
-+                    visibility = special + n + 1;
-+                } else
-+                    n = strcspn(special, " ");
++                int n = strcspn(special, " \t");
  
                  if (!nasm_strnicmp(special, "function", n))
                      sym->type |= SYM_FUNCTION;
@@ -65,26 +61,32 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
                  else
                      error(ERR_NONFATAL, "unrecognised symbol type `%.*s'",
                            n, special);
-+                if (visibility) {
-+                    n = strcspn(visibility, " ");
-+                    if (!nasm_strnicmp(visibility, "default", n))
++                special += n;
++
++                while (isspace(*special))
++                    ++special;
++                if (*special) {
++                    n = strcspn(special, " \t");
++                    if (!nasm_strnicmp(special, "default", n))
 +                        sym->other = STV_DEFAULT;
-+                    else if (!nasm_strnicmp(visibility, "internal", n))
++                    else if (!nasm_strnicmp(special, "internal", n))
 +                        sym->other = STV_INTERNAL;
-+                    else if (!nasm_strnicmp(visibility, "hidden", n))
++                    else if (!nasm_strnicmp(special, "hidden", n))
 +                        sym->other = STV_HIDDEN;
-+                    else if (!nasm_strnicmp(visibility, "protected", n))
++                    else if (!nasm_strnicmp(special, "protected", n))
 +                        sym->other = STV_PROTECTED;
 +                    else
 +                        error(ERR_NONFATAL, "unrecognised symbol type `%.*s'",
-+                              n, visibility);
-+                    n = strcspn(special, " ");
++                              n, special);
++                    special += n;
 +                }
 +
-                 if (special[n]) {
+-                if (special[n]) {
++                if (*special) {
                      struct tokenval tokval;
                      expr *e;
-@@ -1120,7 +1152,8 @@ static struct SAA *elf_build_symtab(long
+                     int fwd = FALSE;
+@@ -1120,7 +1150,8 @@ static struct SAA *elf_build_symtab(long
          WRITELONG(p, sym->strpos);
          WRITELONG(p, sym->value);
          WRITELONG(p, sym->size);
@@ -94,7 +96,7 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
          WRITESHORT(p, sym->section);
          saa_wbytes(s, entry, 16L);
          *len += 16;
-@@ -1138,7 +1171,8 @@ static struct SAA *elf_build_symtab(long
+@@ -1138,7 +1169,8 @@ static struct SAA *elf_build_symtab(long
          WRITELONG(p, sym->strpos);
          WRITELONG(p, sym->value);
          WRITELONG(p, sym->size);
