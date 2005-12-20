@@ -1,0 +1,11 @@
+# ChangeLog for games-misc/fortune-mod-powerpuff
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-powerpuff/ChangeLog,v 1.1 2005/12/20 21:45:37 wolf31o2 Exp $
+
+*fortune-mod-powerpuff-0.3 (20 Dec 2005)
+
+  20 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +fortune-mod-powerpuff-0.3.ebuild:
+  Initial import. Ebuild by Peter Hyman <pete4abw@comcast.net>. Closing bug
+  #108377.
+
