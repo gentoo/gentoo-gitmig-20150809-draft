@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/rcsb-data
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.1 2005/12/20 04:08:40 spyderous Exp $
+
+*rcsb-data-1.700 (20 Dec 2005)
+
+  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/respect-bindir.patch, +metadata.xml, +rcsb-data-1.700.ebuild:
+  Part of the RCSB Protein Data Bank tools. Provides the data necessary to run
+  the other applications.
+

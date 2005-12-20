@@ -1,0 +1,5 @@
+MD5 9c1f36b1c5398d2273e7c8a53f03b102 ChangeLog 465
+MD5 84aa38c82119d76c654d332683489b11 cifparse-obj-6.302.ebuild 908
+MD5 88ff9a7be10296fc91b2f04eec9eaab3 files/digest-cifparse-obj-6.302 80
+MD5 445290482fdc500ef2e98a2035590a13 files/respect-flags-and-add-gcc4.patch 10289
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248

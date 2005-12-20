@@ -1,0 +1,5 @@
+MD5 f16762bb01625286be6cdb4e8e51d3d9 ChangeLog 476
+MD5 f0539a87f3decb3c2a841511143cabb9 files/digest-rcsb-data-1.700 80
+MD5 008f15f3e5c0253396f3c44e4193cb5b files/respect-bindir.patch 798
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
+MD5 fa69d1dd891b772277729d73203af702 rcsb-data-1.700.ebuild 1029
