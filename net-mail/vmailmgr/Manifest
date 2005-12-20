@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6ed28aa5df6e426592479c8d93509df7 vmailmgr-0.96.9-r3.ebuild 1657
-MD5 6d5a27ca8305cdbddb4e9bd5aa974472 ChangeLog 3020
+MD5 1313c2b9e4172cb1d6cb149bc7b31aaf vmailmgr-0.96.9-r3.ebuild 1656
+MD5 c753ca9586c38f1e4002b98eeefc0a37 ChangeLog 3112
 MD5 11b51793c29cb4cafdc40bb13ba3cb00 vmailmgr-0.96.9-r2.ebuild 1654
 MD5 911634f611838bc9b119dfb48b047c35 metadata.xml 250
 MD5 fcb3e0b872a5f1719f7b9aa76eac8eba files/vmailmgr-0.96.9-gcc3.3.patch 3494
@@ -14,9 +14,9 @@ MD5 dada9de263c4a08a0d043350821a42b4 files/digest-vmailmgr-0.96.9-r2 67
 MD5 dada9de263c4a08a0d043350821a42b4 files/digest-vmailmgr-0.96.9-r3 67
 MD5 bf55605617fc5acfdca3a28a796e82a4 files/socket-file 35
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCkrpSjiC39V7gKu0RAq7kAJ9WMITfKbmzBdOXz4MUoLbJA1qR1ACfZgXc
-aWp5SBqjMlTy9lm8I5dVrH0=
-=wHrI
+iD8DBQFDqIJONSP4Vda7IdsRAjIBAJwLINjG4NY7n2SWRq6+0WauLEIWagCfXA1R
+8pw5pNSf8a478DHC1+9xHkE=
+=iBRN
 -----END PGP SIGNATURE-----
