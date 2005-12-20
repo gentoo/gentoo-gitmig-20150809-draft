@@ -8,11 +8,11 @@ MD5 43fee28c090b20de0b2c57b15e97caba files/rlocate-0.3.3-build.patch 2655
 MD5 56da5f78d234dc0928277d6d34b85de9 files/rlocated.rc 534
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 96bc3068a386e5303d172f2e82b3669c rlocate-0.3.2.ebuild 1393
-MD5 4edb9416ce557be2699b20bdc9215b8f rlocate-0.3.3.ebuild 1137
+MD5 9fca742a0d37f16a76e5959adf6e521e rlocate-0.3.3.ebuild 1133
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDp0U02+ySkm8kpY0RAh8gAKCAdfsDqO6DJ8b3VF0O3/V+cicm7wCfaM/F
-58QF7GR6k5bLlJ+O0U33QFI=
-=vcLA
+iD8DBQFDqJe72+ySkm8kpY0RAn79AJ9P7dxINPNaL2rpk9V94jo7ypaxTgCgmi54
+fjgloWa+F2nnW5bCtcyRV6Y=
+=HQuk
 -----END PGP SIGNATURE-----
