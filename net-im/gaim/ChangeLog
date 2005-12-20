@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.373 2005/12/19 21:07:11 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.374 2005/12/20 03:05:48 gothgirl Exp $
+
+  20 Dec 2005; <gothgirl@gentoo.org> gaim-2.0.0_beta1.ebuild:
+  fixed inherit mono eclass
+
+  19 Dec 2005; <gothgirl@gentoo.org> gaim-2.0.0_beta1.ebuild:
+  added inherit mono to fix sandbox violation
 
   19 Dec 2005; <gothgirl@gentoo.org> gaim-2.0.0_beta1.ebuild:
   removing ~amd64 keyword due to mono use being masked
