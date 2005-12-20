@@ -1,7 +1,87 @@
+Index: kpdf/xpdf/xpdf/JBIG2Stream.cc
+===================================================================
+--- kpdf/xpdf/xpdf/JBIG2Stream.cc	(revision 466932)
++++ kpdf/xpdf/xpdf/JBIG2Stream.cc	(revision 488714)
+@@ -7,6 +7,7 @@
+ //========================================================================
+ 
+ #include <aconf.h>
++#include <limits.h>
+ 
+ #ifdef USE_GCC_PRAGMAS
+ #pragma implementation
+@@ -681,6 +682,13 @@ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, 
+   w = wA;
+   h = hA;
+   line = (wA + 7) >> 3;
++
++  if (h < 0 || line <= 0 || h >= INT_MAX / line) {
++    error(-1, "invalid width/height");
++    data = NULL;
++    return;
++  }
++
+   data = (Guchar *)gmalloc(h * line);
+ }
+ 
+@@ -690,6 +698,13 @@ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, 
+   w = bitmap->w;
+   h = bitmap->h;
+   line = bitmap->line;
++
++  if (h < 0 || line <= 0 || h >= INT_MAX / line) {
++    error(-1, "invalid width/height");
++    data = NULL;
++    return;
++  }
++
+   data = (Guchar *)gmalloc(h * line);
+   memcpy(data, bitmap->data, h * line);
+ }
+@@ -716,7 +731,10 @@ JBIG2Bitmap *JBIG2Bitmap::getSlice(Guint
+ }
+ 
+ void JBIG2Bitmap::expand(int newH, Guint pixel) {
+-  if (newH <= h) {
++  if (newH <= h || line <= 0 || newH >= INT_MAX / line) {
++    error(-1, "invalid width/height");
++    gfree(data);
++    data = NULL;
+     return;
+   }
+   data = (Guchar *)grealloc(data, newH * line);
+@@ -2256,6 +2274,15 @@ void JBIG2Stream::readHalftoneRegionSeg(
+     error(getPos(), "Bad symbol dictionary reference in JBIG2 halftone segment");
+     return;
+   }
++  if (gridH == 0 || gridW >= INT_MAX / gridH) {
++    error(getPos(), "Bad size in JBIG2 halftone segment");
++    return;
++  }
++  if (w == 0 || h >= INT_MAX / w) {
++     error(getPos(), "Bad size in JBIG2 bitmap segment");
++    return;
++  }
++
+   patternDict = (JBIG2PatternDict *)seg;
+   bpp = 0;
+   i = 1;
+@@ -2887,6 +2914,11 @@ JBIG2Bitmap *JBIG2Stream::readGenericRef
+   JBIG2BitmapPtr tpgrCXPtr0, tpgrCXPtr1, tpgrCXPtr2;
+   int x, y, pix;
+ 
++  if (w < 0 || h <= 0 || w >= INT_MAX / h) {
++    error(-1, "invalid width/height");
++    return NULL;
++  }
++
+   bitmap = new JBIG2Bitmap(0, w, h);
+   bitmap->clearToZero();
+ 
 Index: kpdf/xpdf/xpdf/Stream.cc
 ===================================================================
---- kpdf/xpdf/xpdf/Stream.cc	(revision 486337)
-+++ kpdf/xpdf/xpdf/Stream.cc	(revision 487206)
+--- kpdf/xpdf/xpdf/Stream.cc	(revision 466932)
++++ kpdf/xpdf/xpdf/Stream.cc	(revision 488714)
 @@ -15,6 +15,7 @@
  #include <stdio.h>
  #include <stdlib.h>
@@ -23,7 +103,7 @@ Index: kpdf/xpdf/xpdf/Stream.cc
 +    return;
  
    nVals = width * nComps;
-+  if (nVals + 7 <= 0)
++  if (nVals * nBits + 7 <= 0)
 +    return;
    pixBytes = (nComps * nBits + 7) >> 3;
    rowBytes = ((nVals * nBits + 7) >> 3) + pixBytes;
@@ -49,40 +129,81 @@ Index: kpdf/xpdf/xpdf/Stream.cc
    } else {
      pred = NULL;
    }
-@@ -2899,6 +2918,10 @@ GBool DCTStream::readBaselineSOF() {
+@@ -1261,6 +1280,10 @@ CCITTFaxStream::CCITTFaxStream(Stream *s
+   endOfLine = endOfLineA;
+   byteAlign = byteAlignA;
+   columns = columnsA;
++  if (columns < 1 || columns >= INT_MAX / sizeof(short)) {
++    error(-1, "invalid number of columns");
++    exit(1);
++  }
+   rows = rowsA;
+   endOfBlock = endOfBlockA;
+   black = blackA;
+@@ -2899,6 +2922,11 @@ GBool DCTStream::readBaselineSOF() {
    height = read16();
    width = read16();
    numComps = str->getChar();
 +  if (numComps <= 0 || numComps > 4) {
++    numComps = 0;
 +    error(getPos(), "Bad number of components in DCT stream");
 +    return gFalse;
 +  }
    if (prec != 8) {
      error(getPos(), "Bad DCT precision %d", prec);
      return gFalse;
-@@ -2925,6 +2948,10 @@ GBool DCTStream::readProgressiveSOF() {
+@@ -2925,6 +2953,11 @@ GBool DCTStream::readProgressiveSOF() {
    height = read16();
    width = read16();
    numComps = str->getChar();
 +  if (numComps <= 0 || numComps > 4) {
++    numComps = 0;
 +    error(getPos(), "Bad number of components in DCT stream");
 +    return gFalse;
 +  }
    if (prec != 8) {
      error(getPos(), "Bad DCT precision %d", prec);
      return gFalse;
-@@ -2947,6 +2974,10 @@ GBool DCTStream::readScanInfo() {
+@@ -2947,6 +2980,11 @@ GBool DCTStream::readScanInfo() {
  
    length = read16() - 2;
    scanInfo.numComps = str->getChar();
 +  if (scanInfo.numComps <= 0 || scanInfo.numComps > 4) {
++    scanInfo.numComps = 0;
 +    error(getPos(), "Bad number of components in DCT stream");
 +    return gFalse;
 +  }
    --length;
    if (length != 2 * scanInfo.numComps + 3) {
      error(getPos(), "Bad DCT scan info block");
-@@ -3258,6 +3289,10 @@ FlateStream::FlateStream(Stream *strA, i
+@@ -3021,12 +3059,12 @@ GBool DCTStream::readHuffmanTables() {
+   while (length > 0) {
+     index = str->getChar();
+     --length;
+-    if ((index & 0x0f) >= 4) {
++    if ((index & ~0x10) >= 4 || (index & ~0x10) < 0) {
+       error(getPos(), "Bad DCT Huffman table");
+       return gFalse;
+     }
+     if (index & 0x10) {
+-      index &= 0x0f;
++      index &= 0x03;
+       if (index >= numACHuffTables)
+ 	numACHuffTables = index+1;
+       tbl = &acHuffTables[index];
+@@ -3144,9 +3182,11 @@ int DCTStream::readMarker() {
+   do {
+     do {
+       c = str->getChar();
++      if(c == EOF) return EOF;
+     } while (c != 0xff);
+     do {
+       c = str->getChar();
++      if(c == EOF) return EOF;
+     } while (c == 0xff);
+   } while (c == 0x00);
+   return c;
+@@ -3258,6 +3298,10 @@ FlateStream::FlateStream(Stream *strA, i
      FilterStream(strA) {
    if (predictor != 1) {
      pred = new StreamPredictor(this, predictor, columns, colors, bits);
@@ -95,8 +216,8 @@ Index: kpdf/xpdf/xpdf/Stream.cc
    }
 Index: kpdf/xpdf/xpdf/Stream.h
 ===================================================================
---- kpdf/xpdf/xpdf/Stream.h	(revision 486337)
-+++ kpdf/xpdf/xpdf/Stream.h	(revision 487206)
+--- kpdf/xpdf/xpdf/Stream.h	(revision 466932)
++++ kpdf/xpdf/xpdf/Stream.h	(revision 488714)
 @@ -233,6 +233,8 @@ public:
  
    ~StreamPredictor();
@@ -116,8 +237,8 @@ Index: kpdf/xpdf/xpdf/Stream.h
  //------------------------------------------------------------------------
 Index: kpdf/xpdf/xpdf/JPXStream.cc
 ===================================================================
---- kpdf/xpdf/xpdf/JPXStream.cc	(revision 486337)
-+++ kpdf/xpdf/xpdf/JPXStream.cc	(revision 487206)
+--- kpdf/xpdf/xpdf/JPXStream.cc	(revision 466932)
++++ kpdf/xpdf/xpdf/JPXStream.cc	(revision 488714)
 @@ -7,6 +7,7 @@
  //========================================================================
  
@@ -152,8 +273,8 @@ Index: kpdf/xpdf/xpdf/JPXStream.cc
  							sizeof(JPXTileComp));
 Index: kpdf/xpdf/goo/gmem.c
 ===================================================================
---- kpdf/xpdf/goo/gmem.c	(revision 486337)
-+++ kpdf/xpdf/goo/gmem.c	(revision 487206)
+--- kpdf/xpdf/goo/gmem.c	(revision 466932)
++++ kpdf/xpdf/goo/gmem.c	(revision 488714)
 @@ -11,6 +11,7 @@
  #include <stdlib.h>
  #include <stddef.h>
@@ -193,8 +314,8 @@ Index: kpdf/xpdf/goo/gmem.c
    GMemHdr *p;
 Index: kpdf/xpdf/goo/gmem.h
 ===================================================================
---- kpdf/xpdf/goo/gmem.h	(revision 486337)
-+++ kpdf/xpdf/goo/gmem.h	(revision 487206)
+--- kpdf/xpdf/goo/gmem.h	(revision 466932)
++++ kpdf/xpdf/goo/gmem.h	(revision 488714)
 @@ -28,6 +28,15 @@ extern void *gmalloc(size_t size);
  extern void *grealloc(void *p, size_t size);
  
