@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/gigaset-isdn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.6 2005/06/15 21:07:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.7 2005/12/20 19:35:47 mrness Exp $
+
+*gigaset-isdn-0.5.0 (20 Dec 2005)
+
+  20 Dec 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  -gigaset-isdn-0.4.1.ebuild, +gigaset-isdn-0.5.0.ebuild:
+  Version bump to 0.5.0 (#115391). This version adds 2 new user-space
+  utilities: gigaconf and gigacontr.
 
   15 Jun 2005; Alin Nastac <mrness@gentoo.org> -gigaset-isdn-0.4.0.ebuild,
   gigaset-isdn-0.4.2.ebuild:
