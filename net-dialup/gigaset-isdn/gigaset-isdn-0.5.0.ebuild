@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.5.0.ebuild,v 1.1 2005/12/20 19:35:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.5.0.ebuild,v 1.2 2005/12/20 19:58:07 mrness Exp $
 
 inherit linux-mod
 
@@ -13,13 +13,16 @@ SRC_URI="mirror://sourceforge/gigaset307x/gigaset-driver-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="debug"
+IUSE=""
 
 DEPEND="virtual/linux-sources"
 
-S="${WORKDIR}"
+MY_DRIVER_S="${WORKDIR}/gigaset-driver-${PV}"
+MY_FRONTEND_S="${WORKDIR}/gigaset-frontend-${PV}"
+S="${MY_FRONTEND_S}"
 
-MODULE_NAMES="gigaset(drivers/isdn:) bas_gigaset(drivers/isdn:) ser_gigaset(drivers/isdn:) usb_gigaset(drivers/isdn:)"
+MODULE_NAMES="gigaset(drivers/isdn:${MY_DRIVER_S}/gigaset) bas_gigaset(drivers/isdn:${MY_DRIVER_S}/gigaset)
+	ser_gigaset(drivers/isdn:${MY_DRIVER_S}/gigaset) usb_gigaset(drivers/isdn:${MY_DRIVER_S}/gigaset)"
 BUILD_TARGETS="all"
 CONFIG_CHECK="ISDN_I4L"
 ISDN_I4L_ERROR="This driver requires that your kernel is compiled with support for ISDN4Linux (I4L)"
@@ -32,31 +35,25 @@ src_unpack() {
 
 	# Fix includes
 	sed -i -e "s:^INCLUDEDIRS +=:INCLUDEDIRS += \"-I${WORKDIR}/gigaset-driver-${PV}/include\":" \
-		${WORKDIR}/gigaset-frontend-${PV}/lib/Makefile
+		"${WORKDIR}/gigaset-frontend-${PV}/lib/Makefile"
 }
 
 
 src_compile() {
-	S="${WORKDIR}/gigaset-driver-${PV}"
-	cd "${S}"
-	./configure --kernel=${KV_FULL} --kerneldir=${KV_DIR} --root=${D} --prefix=/usr \
-		--with-ring $(use_with debug)
+	cd "${MY_DRIVER_S}"
+	./configure
 	linux-mod_src_compile
 
-	S="${WORKDIR}/gigaset-frontend-${PV}"
-	cd "${S}"
+	cd "${MY_FRONTEND_S}"
 	./configure --prefix=/usr || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install () {
-	S="${WORKDIR}/gigaset-driver-${PV}/gigaset"
 	linux-mod_src_install
-	S=${WORKDIR}/gigaset-driver-${PV}
-	#einstall ROOT=${D} || die "Failed to install frontend"
+	cd "${MY_DRIVER_S}"
 	dodoc README Release.notes TODO known_bugs.txt
 
-	S="${WORKDIR}/gigaset-frontend-${PV}"
-	cd "${S}"
+	cd "${MY_FRONTEND_S}"
 	einstall "DESTDIR=${D}" || die "install failed"
 }
