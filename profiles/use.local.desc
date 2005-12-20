@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1621 2005/12/20 08:45:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1622 2005/12/20 18:09:08 gothgirl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -866,6 +866,8 @@ net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:silc - Enable SILC protocol support
+net-im/gaim:ao - Use libao for sound playback
+net-im/gaim:startup-notification - Enable application startup notification
 net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:amarok - Enables amarok support in kadu
