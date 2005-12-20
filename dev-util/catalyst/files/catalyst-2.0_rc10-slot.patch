@@ -1,7 +1,7 @@
-diff -urN catalyst-2.0_rc9.orig/catalyst catalyst-2.0_rc9/catalyst
---- catalyst-2.0_rc9.orig/catalyst	2005-10-17 16:07:14.000000000 -0400
-+++ catalyst-2.0_rc9/catalyst	2005-10-17 16:06:23.000000000 -0400
-@@ -50,10 +50,10 @@
+diff -urN catalyst-2.0_rc10.orig/catalyst catalyst-2.0_rc10/catalyst
+--- catalyst-2.0_rc10.orig/catalyst	2005-12-20 07:07:45.000000000 -0500
++++ catalyst-2.0_rc10/catalyst	2005-12-20 07:09:19.000000000 -0500
+@@ -51,10 +51,10 @@
  	myconf={}
  	config_file=""
  
@@ -10,12 +10,12 @@ diff -urN catalyst-2.0_rc9.orig/catalyst catalyst-2.0_rc9/catalyst
 +	confdefaults={ "storedir":"/var/tmp/catalyst2",\
 +		"sharedir":"/usr/share/catalyst2","distdir":"/usr/portage/distfiles",\
  		"portdir":"/usr/portage","options":"",\
--		"snapshot_cache":"/var/tmp/catalyst/snapshot_cache" }
-+		"snapshot_cache":"/var/tmp/catalyst2/snapshot_cache" }
+-		"snapshot_cache":"/var/tmp/catalyst/snapshot_cache",\
++		"snapshot_cache":"/var/tmp/catalyst2/snapshot_cache",\
+ 		"hash_function":"crc32"}
  		
  	# first, try the one passed (presumably from the cmdline)
- 	if myconfig:
-@@ -67,9 +67,9 @@
+@@ -69,9 +69,9 @@
  			sys.exit(1)
  	
  	# next, try the default location

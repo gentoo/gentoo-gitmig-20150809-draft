@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9cecbdfe79bafbe7768a82af2e6a6f0e ChangeLog 20174
-MD5 6b3ac73054ed1deb0754ef1b45d50570 catalyst-1.1.10.10.ebuild 2251
-MD5 5af81e276710f751f9bdeb26311d8640 catalyst-2.0_rc9.ebuild 2878
-MD5 581608aa8f2b5d469231661b508b1178 files/catalyst-2.0_rc9-slot.patch 1250
+MD5 7b7d6e615c5c243bb7e40d7ae6e4fe53 ChangeLog 20423
+MD5 0b8c46e78330bff6ba7a248924ac4341 catalyst-1.1.10.10.ebuild 2281
+MD5 d8a20092ed379a0a1ca3f3b61848b04e catalyst-2.0_rc10.ebuild 3342
+MD5 b8b1764df11a169006bb0293f65a7ff9 files/catalyst-2.0_rc10-slot.patch 1267
 MD5 1579d7c79eaa1035a84a4247cd4a5fb6 files/digest-catalyst-1.1.10.10 71
-MD5 537a143a71b6f03e12016e1a092efb9f files/digest-catalyst-2.0_rc9 69
+MD5 bbd2786fa50613fcb21c6284461d9f12 files/digest-catalyst-2.0_rc10 70
 MD5 8c971ca7e043237b69754a9d88238bd4 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoi5H2+ySkm8kpY0RAj+nAJ9SNKU+8SPoqG8WAYpy5PlSfuV/HwCeIR1R
-aFmtq0svBukwWWepUtu//Ys=
-=LKU4
------END PGP SIGNATURE-----

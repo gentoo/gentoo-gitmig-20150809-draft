@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc9.ebuild,v 1.2 2005/12/16 03:01:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc10.ebuild,v 1.1 2005/12/20 17:01:08 wolf31o2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,15 @@ IUSE="ccache cdr"
 
 DEPEND=""
 RDEPEND="dev-lang/python
+	!arm? (
+		!hppa? (
+			!s390? (
+				!sh? (
+					dev-perl/Archive-Zip ) ) ) )
+	x86? (
+		app-crypt/shash )
 	amd64? (
+		app-crypt/shash
 		sys-apps/linux32 )
 	ppc64? (
 		sys-devel/ppc32 )
@@ -23,8 +31,11 @@ RDEPEND="dev-lang/python
 		dev-util/ccache )
 	cdr? (
 		virtual/cdrtools
-		app-misc/zisofs-tools
-		!mips? ( >=sys-fs/squashfs-tools-2.1 ) )
+		!sh? (
+			app-misc/zisofs-tools )
+		!mips? (
+			!sh? (
+				>=sys-fs/squashfs-tools-2.1 ) ) )
 	examples? (
 		dev-util/livecd-kconfigs
 		dev-util/livecd-specs )"
@@ -40,8 +51,9 @@ pkg_setup() {
 	fi
 	echo
 	einfo "The template spec files are now installed by default.  You can find"
-	einfo "them under /usr/share/doc/${PF}/examples and they are considered to"
-	einfo "be the authorative source of information on catalyst."
+	einfo "them under /usr/share/doc/${PF}/examples"
+	einfo "and they are considered to be the authorative source of information"
+	einfo "on catalyst."
 }
 
 src_unpack() {
@@ -77,8 +89,16 @@ src_install() {
 	dodoc README ChangeLog ChangeLog.old AUTHORS
 	newman files/catalyst.1 catalyst2.1
 	# This will go away in the future
-	dosed "s:/usr/lib/catalyst:/usr/lib/catalyst2:" /etc/catalyst2/catalyst2.conf
-	dosed "s:/var/tmp/catalyst:/var/tmp/catalyst2:" /etc/catalyst2/catalyst2.conf
+	dosed "s:/usr/lib/catalyst:/usr/lib/catalyst2:" \
+		/etc/catalyst2/catalyst2.conf
+	dosed "s:/var/tmp/catalyst:/var/tmp/catalyst2:" \
+		/etc/catalyst2/catalyst2.conf
+	# This is the dirty hack for missing dev-perl/Archive-Zip
+	dosed 's:hash_function="crc32":hash_function="md5":' \
+		/etc/catalyst2/catalyst2.conf
+	# Here is where we actually enable ccache
+	dosed 's:options="autoresume kern:options="autoresume ccache kern:' \
+		/etc/catalyst2/catalyst2.conf
 }
 
 pkg_postinst() {
