@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.14 2005/11/10 06:15:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.15 2005/12/20 05:43:45 tester Exp $
 
 inherit eutils
 
@@ -27,7 +27,9 @@ RDEPEND=">=media-libs/faac-1.20.1
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
-	!media-libs/faad2"
+	!media-libs/faad2
+	!media-libs/libmp4v2"
+
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool
@@ -67,7 +69,7 @@ src_compile() {
 			$(use_enable arts)"
 	use v4l2 || myconf="${myconf} --disable-v4l2"
 
-	econf ${myconf} || die "configure failed"
+	econf ${myconf} --with-pic || die "configure failed"
 
 	cd ${S}
 	emake || die "make failed"

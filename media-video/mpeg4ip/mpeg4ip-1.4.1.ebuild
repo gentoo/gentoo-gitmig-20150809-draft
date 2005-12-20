@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.3 2005/12/19 11:17:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.4 2005/12/20 05:43:45 tester Exp $
 
 inherit eutils multilib
 
@@ -34,10 +34,11 @@ RDEPEND=" media-libs/libsdl
 		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
 		x264? ( media-libs/x264-svn )
 	)
-	nas? ( media-libs/nas virtual/x11 )
+	nas? ( media-libs/nas || ( x11-libs/libXt virtual/x11 ) )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
+	=media-libs/libmp4v2-${PV}
 	!<media-libs/faad2-2.0-r7 "
 
 DEPEND="${RDEPEND}
@@ -46,15 +47,11 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	player? ( x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) ) )"
 
+src_unpack() {
+	unpack ${A}
 
-pkg_setup() {
-	if use aac && [ -r /usr/lib/libfaac.la ] &&
-		grep -q /usr/lib/libmp4v2.la /usr/lib/libfaac.la; then
-		eerror "libfaac is compiled against libmp4v2"
-		eerror "Please unmerge faad2 and mpeg4ip then recompile faac"
-		die
-	fi
-
+	cd ${S}
+	epatch ${FILESDIR}/mpeg4ip-1.4.1-gcc41.patch
 }
 
 src_compile() {
@@ -128,6 +125,9 @@ src_compile() {
 src_install () {
 	cd ${S}
 	make install DESTDIR="${D}" || die "make install failed"
+
+	rm -f ${D}/usr/include/mp4.h
+	rm -f ${D}/usr/lib/libmp4v2*
 
 	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS TODO
 
