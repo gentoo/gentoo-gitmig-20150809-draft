@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmwifi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.7 2005/11/07 13:05:46 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.8 2005/12/20 10:59:47 s4t4n Exp $
+
+  20 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> wmwifi-0.5.ebuild:
+  Stable for x86.
 
   07 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmwifi-0.5.ebuild,
   wmwifi-0.3.ebuild:
