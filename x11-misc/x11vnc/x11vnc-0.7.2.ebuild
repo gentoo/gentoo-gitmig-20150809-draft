@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.7.2.ebuild,v 1.1 2005/07/13 21:21:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.7.2.ebuild,v 1.2 2005/12/20 13:27:24 flameeyes Exp $
 
 DESCRIPTION="A VNC server for real X displays"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/"
@@ -11,16 +11,34 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~sparc"
 IUSE="jpeg zlib"
 
-DEPEND="virtual/x11
-	zlib? ( sys-libs/zlib )
+RDEPEND="zlib? ( sys-libs/zlib )
 	jpeg? (
 		media-libs/jpeg
 		sys-libs/zlib
-	)"
+	)
+	|| ( (
+			x11-libs/libXinerama
+			x11-libs/libXfixes
+			x11-libs/libXrandr
+			x11-libs/libX11
+			x11-libs/libXtst
+			x11-libs/libXdamage
+			x11-libs/libXext
+		) virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	|| ( (
+			x11-libs/libXt
+			x11-proto/xineramaproto
+			x11-proto/trapproto
+			x11-proto/recordproto
+			x11-proto/xproto
+			x11-proto/xextproto
+		) virtual/x11 )"
 
 src_compile() {
 	local myconf=""
-	use jpeg && myconf="${myconf} --enable-zlib"
+	use jpeg && myconf="${myconf} --with-zlib"
 
 	econf \
 		$(use_with jpeg) \

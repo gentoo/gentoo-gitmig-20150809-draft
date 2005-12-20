@@ -1,4 +1,7 @@
-MD5 b25ce03d15ddc551971457ba70b86274 ChangeLog 2196
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c849865aaad3e3e0265cb95b302894b4 ChangeLog 2325
 MD5 dfe826f2cf4eaaa2763eabac97151555 files/0.7-autotools.patch 802
 MD5 0a51724347b7a0fd71c2f0935671b2c8 files/digest-x11vnc-0.7-r1 62
 MD5 ca72243aabb89ee84f091361b114afa5 files/digest-x11vnc-0.7.1-r1 64
@@ -6,4 +9,11 @@ MD5 f10ba0717c2d20a8066b0ccd8fc2536c files/digest-x11vnc-0.7.2 64
 MD5 8845b35c56be21370ef600f1b3eca775 metadata.xml 470
 MD5 91ca32729faded56a6be07e91db710b6 x11vnc-0.7-r1.ebuild 1085
 MD5 23401d40a71f04a2f78a39382a3060f1 x11vnc-0.7.1-r1.ebuild 868
-MD5 44057e79068f082bf0b4bf7b7d758aa3 x11vnc-0.7.2.ebuild 853
+MD5 df7204974a5975bf9f79af9505ca9169 x11vnc-0.7.2.ebuild 1199
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDqAbgAiZjviIA2XgRAg9XAKCgNk9Q4llFUPGLyVoWydkXkvwTpgCfao1N
+/GbrFvw7lgltCBFp5I/HFfA=
+=+BmM
+-----END PGP SIGNATURE-----
