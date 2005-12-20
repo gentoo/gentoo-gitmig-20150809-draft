@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.7 2005/11/11 00:50:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.8 2005/12/20 04:46:26 hanno Exp $
 
 inherit games
 
@@ -14,6 +14,11 @@ SLOT="0"
 IUSE="readline"
 
 DEPEND="readline? ( sys-libs/readline )"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/gnuchess-gcc4.patch
+}
 
 src_compile() {
 	egamesconf \
