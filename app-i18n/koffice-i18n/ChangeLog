@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.60 2005/12/13 03:45:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.61 2005/12/20 19:26:46 carlo Exp $
+
+  20 Dec 2005; Carsten Lohrke <carlo@gentoo.org> -koffice-i18n-1.3.5.ebuild,
+  -koffice-i18n-1.4.1.ebuild:
+  clean up
 
   13 Dec 2005; Joseph Jezak <josejx@gentoo.org> koffice-i18n-1.4.2.ebuild:
   Marked ppc stable for bug #112840.
