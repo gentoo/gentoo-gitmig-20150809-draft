@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.9.37.ebuild,v 1.1 2005/10/29 15:58:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.9.37.ebuild,v 1.2 2005/12/20 18:40:03 sekretarz Exp $
 
 inherit eutils
 
@@ -14,6 +14,10 @@ KEYWORDS="~x86 ~ppc amd64"
 DEPEND="app-arch/unzip
 	virtual/x11
 	gtk? ( >=x11-libs/gtk+-2.4 )"
+
+RDEPEND="virtual/jre
+		virtual/jdk"
+
 S=${WORKDIR}/LimeWire
 PREFIX="/opt/limewire"
 

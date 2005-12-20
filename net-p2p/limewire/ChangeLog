@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.18 2005/10/29 15:58:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.19 2005/12/20 18:40:03 sekretarz Exp $
+
+  20 Dec 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  limewire-4.9.37.ebuild:
+  Added missig java rdepend, bug #111743
 
 *limewire-4.9.37 (29 Oct 2005)
 
