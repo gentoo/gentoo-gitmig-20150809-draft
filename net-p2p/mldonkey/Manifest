@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c0ee937d6be8fcae1695c98f4d40ab5c ChangeLog 18011
+MD5 dc19c6e2f196fe6fc7aa6c54282b30a0 ChangeLog 18173
 MD5 b1c7f6fe232921bb9516c1007f34efd4 files/digest-mldonkey-2.5.16-r9 128
 MD5 f145ba120c09f53b0032ea8b3f930128 files/digest-mldonkey-2.5.21-r2 126
 MD5 2db375201ae817eaa7075507d9700eed files/digest-mldonkey-2.6.0 68
@@ -11,6 +11,7 @@ MD5 9613def727af8826277e993290216c36 files/digest-mldonkey-2.6.4-r2 144
 MD5 eed52b2efc88d5b19ac43a6f4eeb5af7 files/digest-mldonkey-2.6.5 144
 MD5 0efadb757ab70fc302be8d3e139d8438 files/digest-mldonkey-2.6.7 144
 MD5 e220eeb54d3dad58a0c3cfb5960bc353 files/digest-mldonkey-2.7.0 144
+MD5 7402d9c8f1b22a006d2966e7702bbdc6 files/digest-mldonkey-2.7.1 144
 MD5 ac93ed074d62909b2a496045f0740127 files/mldonkey 336
 MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.16-configure.patch 540
 MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.21-configure.patch 540
@@ -18,7 +19,7 @@ MD5 05622542c4f7a93553ab90d66f871b2d files/mldonkey-2.6.0-gtk2-gentoo.patch 497
 MD5 124edc0a5446cc84e6c7cb65b3810449 files/mldonkey-2.7.0-endianess.patch.bz2 13816
 MD5 93e16748ad44af182177978057266aa7 files/mldonkey-gui.desktop 263
 MD5 0308db20eac32dd62c1519106c6809a7 files/mldonkey.confd 770
-MD5 49ad037d9b03c4bd6ace86263027c4c3 files/mldonkey.initd 3047
+MD5 e8e05a9ec82931625cc16efcf85c084b files/mldonkey.initd 3062
 MD5 855aedd7fba1ffe74d7f6c0bce98f45f files/mldonkey.png 6835
 MD5 ee159929f3e247f937fe88bb1919d8bd metadata.xml 242
 MD5 a92ec1a9e1c381c49b544c81221a8bd0 mldonkey-2.5.16-r9.ebuild 2660
@@ -30,10 +31,11 @@ MD5 29d81297440c40ae6285c6139469d40d mldonkey-2.6.4-r2.ebuild 4982
 MD5 1c9c6bded549ef569052d0f75fafb019 mldonkey-2.6.5.ebuild 4979
 MD5 f42930815313489969c08481c08603f2 mldonkey-2.6.7.ebuild 5029
 MD5 d2169c384589a0ad57cf0c53847c3ef6 mldonkey-2.7.0.ebuild 5070
+MD5 df713d2d96f28dc3a77f8af3d1581704 mldonkey-2.7.1.ebuild 4984
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDjId+Z/iYVBmujdURAsqDAJ9VdpjoB46JEMRwFwdEpZm0EzTQswCgo9fS
-15QbXIOuKQVW7MQSXgttN5c=
-=ki6j
+iD8DBQFDqH97Z/iYVBmujdURAoqTAJ0bP7VEHETvUck0XAextn198xq1bgCgvwfo
+VnnxxcER+joPI/iV0F5s4O4=
+=UkMK
 -----END PGP SIGNATURE-----
