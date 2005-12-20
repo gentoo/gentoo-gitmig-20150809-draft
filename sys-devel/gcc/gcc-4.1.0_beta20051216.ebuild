@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051216.ebuild,v 1.1 2005/12/17 01:44:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051216.ebuild,v 1.2 2005/12/20 21:08:16 halcy0n Exp $
 
 ETYPE="gcc-compiler"
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	>=${CATEGORY}/binutils-2.16.1"
 
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
-	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) ) ) ) )"
+	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
 
 pkg_setup() {
 	if [ -z $I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS ] ; then
