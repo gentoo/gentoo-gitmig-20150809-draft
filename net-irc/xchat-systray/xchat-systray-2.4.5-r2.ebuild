@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r2.ebuild,v 1.7 2005/10/25 13:00:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r2.ebuild,v 1.8 2005/12/20 13:35:05 jer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -48,5 +48,5 @@ src_install() {
 	insinto /usr/share/xchat-systray
 	doins -r src/images/{GTKTray,Menu} || die "doins failed"
 
-	dodoc Docs/{ChangeLog,README,TODO} || die "dodoc failed"
+	dodoc Docs/{Changelog,README,TODO} || die "dodoc failed"
 }
