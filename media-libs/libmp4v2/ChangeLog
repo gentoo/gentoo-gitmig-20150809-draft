@@ -1,0 +1,7 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.1 2005/12/20 05:11:35 tester Exp $
+
+  20 Dec 2005; Olivier Crête <tester@gentoo.org> ChangeLog:
+  Separated libmp4v2 from mpeg4ip
+

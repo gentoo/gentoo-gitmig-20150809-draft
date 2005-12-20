@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e22c883db32384466af4a4db61aca02 metadata.xml 222
+MD5 b8c9b1aace7ac586aa05d8911313df7e libmp4v2-1.4.1.ebuild 1859
+MD5 8cd06a1eabf816f5b65509466617ab2c ChangeLog 313
+MD5 f66eabf6e140aef8962a75cf06d15df0 files/digest-libmp4v2-1.4.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDp5KWmOfEJZHYOKcRApHzAJ0efUuuqr7NnFHaf7KuRwMirW3oXACfQr4S
+UsMblIV7G8VfChBmQnkDLcQ=
+=KLcQ
+-----END PGP SIGNATURE-----
