@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.06.ebuild,v 1.7 2005/12/16 11:23:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.06.ebuild,v 1.8 2005/12/20 04:04:13 hanno Exp $
 
 inherit nsplugins eutils
 
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND="virtual/x11
 	virtual/jdk
-	>=dev-java/saxon-bin-7.5
+	>=dev-java/saxon-7.5
 	>=dev-lang/perl-5.8.2
 	>=perl-core/Digest-MD5-2.09
 	>=dev-perl/HTML-Parser-2.25
