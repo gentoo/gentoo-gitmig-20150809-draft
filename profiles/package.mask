@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4787 2005/12/19 22:31:42 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4788 2005/12/20 04:13:38 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -37,11 +37,6 @@ sys-apps/gli
 # files, causing patching to fail.  I am currently masking this version and
 # most likely will be removing it in the near future.
 =games-util/loki_patch-20051209
-
-# Donnie Berkholz <spyderous@gentoo.org> (18 Dec 2005)
-# Serious build issues in concert with other parts of the PDB suite,
-# which aren't in portage yet. Will need to be modularized
-sci-chemistry/validation
 
 # Diego Pettenò <flameeyes@gentoo.org> (18 Dec 2005)
 # Masked pending removal, broken upstream
