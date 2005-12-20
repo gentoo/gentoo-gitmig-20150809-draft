@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rlwrap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.9 2005/06/05 11:56:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.10 2005/12/20 20:43:56 agriffis Exp $
+
+*rlwrap-0.24 (20 Dec 2005)
+
+  20 Dec 2005; Aron Griffis <agriffis@gentoo.org> +rlwrap-0.24.ebuild:
+  Bump to 0.24 (from 0.21).  Add support for USE=debug #113490
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> rlwrap-0.21.ebuild:
   Stable on ppc.

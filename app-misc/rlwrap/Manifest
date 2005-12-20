@@ -1,8 +1,20 @@
-MD5 c6f2502bd65fbd159c044c17d0ed29f7 rlwrap-0.21.ebuild 644
-MD5 bb391b3e569c3fed1c7e8a0d4e4c3b09 metadata.xml 542
-MD5 f19f7e61bde5f4465cbe547620f39538 rlwrap-0.18.ebuild 637
-MD5 592aaebba121d2fdda9822665e0ff33e ChangeLog 902
-MD5 1a9865bb08e5d681c8238570bf2c068c rlwrap-0.16.ebuild 638
-MD5 e54b3b571f78bafefabb1154a687ea67 files/digest-rlwrap-0.21 63
-MD5 8158105bb56a333b1a2b928d6dc13a45 files/digest-rlwrap-0.18 63
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10acea4a523d4e7b19f1574c270990a9 ChangeLog 1068
 MD5 04395c7e842bf7ff90bd2710e02b430f files/digest-rlwrap-0.16 63
+MD5 8158105bb56a333b1a2b928d6dc13a45 files/digest-rlwrap-0.18 63
+MD5 e54b3b571f78bafefabb1154a687ea67 files/digest-rlwrap-0.21 63
+MD5 b9acbda214c72a9dfd265a9bf15f0179 files/digest-rlwrap-0.24 63
+MD5 bb391b3e569c3fed1c7e8a0d4e4c3b09 metadata.xml 542
+MD5 1a9865bb08e5d681c8238570bf2c068c rlwrap-0.16.ebuild 638
+MD5 f19f7e61bde5f4465cbe547620f39538 rlwrap-0.18.ebuild 637
+MD5 c6f2502bd65fbd159c044c17d0ed29f7 rlwrap-0.21.ebuild 644
+MD5 f060abf76423698975a55fe4db135901 rlwrap-0.24.ebuild 723
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDqG0VJrHF4yAQTrARAp7tAJ9T4N6YFm0ARqe4qLVwdRDMUE18WQCgu4rk
+zce9Ar6AoSHsPtZ+NKinzac=
+=v4Hg
+-----END PGP SIGNATURE-----
