@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc11.ebuild,v 1.1 2005/12/20 17:13:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc11.ebuild,v 1.2 2005/12/20 17:39:45 wolf31o2 Exp $
 
 inherit eutils
 
@@ -20,10 +20,13 @@ RDEPEND="dev-lang/python
 			!s390? (
 				!sh? (
 					dev-perl/Archive-Zip ) ) ) )
-	x86? (
-		app-crypt/shash )
+	!alpha? (
+		!hppa? (
+			!ia64? (
+				!ppc64? (
+					!sparc? (
+						app-crypt/shash ) ) ) ) )
 	amd64? (
-		app-crypt/shash
 		sys-apps/linux32 )
 	ppc64? (
 		sys-devel/ppc32 )
