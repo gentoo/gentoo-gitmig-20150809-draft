@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.13 2005/12/16 16:52:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.14 2005/12/20 14:26:23 ranger Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.partimage.org/"
 SRC_URI="mirror://sourceforge/partimage/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ppc64 ~sparc x86"
+KEYWORDS="ppc -ppc64 ~sparc x86"
 IUSE="ssl nologin nls"
 
 DEPEND="${RDEPEND} sys-devel/autoconf"
