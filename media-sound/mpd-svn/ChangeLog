@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.21 2005/10/24 13:42:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.22 2005/12/20 19:11:35 ticho Exp $
+
+*mpd-svn-20051220 (20 Dec 2005)
+
+  20 Dec 2005; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20051220.ebuild:
+  Snapshot update.
 
   24 Oct 2005; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6:
   Use nfsmount in initscript depend(). Closes bug #110065, reported by Daniel
