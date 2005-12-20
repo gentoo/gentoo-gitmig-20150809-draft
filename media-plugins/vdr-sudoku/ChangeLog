@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/vdr-sudoku
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.1 2005/12/20 17:08:58 hd_brummy Exp $
+
+*vdr-sudoku-0.1.1 (20 Dec 2005)
+
+  20 Dec 2005; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr-sudoku-0.1.1.ebuild:
+  import ebuild, taken from gentoo.de overlay CVS
+  Thx to A.Katzur for this ebuild, http://bugs.gentoo.de/view.php?id=328
+  Thx to M.Guenther for test on ~amd64
+
