@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.2 2005/12/20 09:17:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.3 2005/12/20 13:57:00 tester Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND=""
 RDEPEND="!<media-video/mpeg4ip-1.4.1
-	!<media-libs/faad2-2.0-r8"
+	!<media-libs/faad2-2.0-r9"
 
 S=${WORKDIR}/mpeg4ip-${PV}
 
