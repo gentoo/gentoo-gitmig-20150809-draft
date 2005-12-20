@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.23 2005/09/03 21:07:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.24 2005/12/20 04:13:38 nichoj Exp $
+
+*jdbc-mysql-3.1.12 (20 Dec 2005)
+
+  20 Dec 2005; Joshua Nichols <nichoj@gentoo.org> +jdbc-mysql-3.1.12.ebuild:
+  Version bump (bug #109927) and some cleanup.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   jdbc-mysql-3.0.17.ebuild:
