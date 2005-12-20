@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.83 2005/12/19 18:30:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.84 2005/12/20 13:12:14 gustavoz Exp $
+
+  20 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  uw-imap-2004g-r2.ebuild:
+  Stable on sparc
 
   19 Dec 2005; Andrej Kacian <ticho@gentoo.org> -files/uw-imap.pam,
   -files/uw-imap.pam-system-auth, -uw-imap-2004a.ebuild,
