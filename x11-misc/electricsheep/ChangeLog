@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.29 2005/09/10 22:40:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.30 2005/12/20 22:24:27 spyderous Exp $
+
+  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  electricsheep-2.6.3-r1.ebuild:
+  Add modular X dependencies. Also fix up (R)DEPEND so DEPEND inherits from
+  RDEPEND to remove lots of duplicated deps.
 
   10 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   +files/electricsheep-2.6.3-cflagsfix.patch, electricsheep-2.6.3-r1.ebuild:

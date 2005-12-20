@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.3-r1.ebuild,v 1.2 2005/09/10 22:40:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.3-r1.ebuild,v 1.3 2005/12/20 22:24:27 spyderous Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -12,22 +12,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"
 
-DEPEND="virtual/x11
-	dev-libs/expat
-	sys-apps/groff
-	dev-lang/perl
-	>=sys-apps/sed-4
-	media-libs/libmpeg2
-	sys-apps/gawk
-	sys-apps/grep
-	sys-devel/libtool
-	media-libs/jpeg
-	media-libs/libpng
-	media-libs/libsdl
-	virtual/libc
-	sys-libs/zlib"
-
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXv
+			x11-libs/libICE
+			x11-libs/libSM
+		)
+		virtual/x11
+	)
 	dev-libs/expat
 	net-misc/curl
 	media-gfx/xloadimage
@@ -36,6 +26,20 @@ RDEPEND="virtual/x11
 	media-libs/libsdl
 	virtual/libc
 	sys-libs/zlib"
+
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xextproto
+			x11-libs/libXt
+		)
+		virtual/x11
+	)
+	sys-apps/groff
+	dev-lang/perl
+	>=sys-apps/sed-4
+	media-libs/libmpeg2
+	sys-apps/gawk
+	sys-apps/grep
+	sys-devel/libtool"
 
 src_unpack() {
 	unpack ${A}

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b806ee7746d15f0675d36cc1e592b702 ChangeLog 4454
-MD5 ff208fd77969755ebfe343c32ab034d9 electricsheep-2.6.3-r1.ebuild 2097
-MD5 f84d0865990260d30b1b5180364dd6a8 metadata.xml 319
+MD5 f1d1fd0f49ffb7cbb347d3f083b2dade ChangeLog 4662
+MD5 3ae7aab21c41e69a06b3d46e40509b02 electricsheep-2.6.3-r1.ebuild 2129
+MD5 d74dadadc142bec28238e9e3994fc179 files/digest-electricsheep-2.6.3-r1 72
 MD5 8573de509811af15cb08905c91a05864 files/electricsheep-2.6.3-cflagsfix.patch 16890
 MD5 cf3d6d65b467f83063fea471d22e2f37 files/electricsheep.desktop 3973
-MD5 d74dadadc142bec28238e9e3994fc179 files/digest-electricsheep-2.6.3-r1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDI2DwmdTrptrqvGERAjMSAJwOkMnUO9N9dCyuLbkjy2tryxK2IQCeMRQM
-H2eyV02+vGAa7303icuaeBM=
-=Bgc+
------END PGP SIGNATURE-----
+MD5 f84d0865990260d30b1b5180364dd6a8 metadata.xml 319
