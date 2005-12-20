@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.97 2005/12/17 17:45:00 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.98 2005/12/20 21:11:53 stkn Exp $
+
+  20 Dec 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.2.0/asterisk-1.2.1-uclibc-getloadavg.diff,
+  files/1.0.0/asterisk.rc6.sec, asterisk-1.2.1.ebuild:
+  Fixed to compile on uclibc where getloadavg is not available,
+  added capi to use dependencies of the initscript.
 
 *asterisk-1.2.1 (17 Dec 2005)
 

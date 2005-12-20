@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.1.ebuild,v 1.1 2005/12/17 17:45:00 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.1.ebuild,v 1.2 2005/12/20 21:11:53 stkn Exp $
 
 inherit eutils
 
@@ -139,6 +139,7 @@ src_unpack() {
 	if use elibc_uclibc; then
 		einfo "Patching asterisk for uclibc..."
 		epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-uclibc-dns.diff
+		epatch ${FILESDIR}/1.2.0/${PN}-1.2.1-uclibc-getloadavg.diff
 	fi
 
 	#

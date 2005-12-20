@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.rc6.sec,v 1.4 2005/08/24 21:13:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.rc6.sec,v 1.5 2005/12/20 21:11:53 stkn Exp $
 
 depend() {
 	need net
-	use zaptel mysql postgresql
+	use zaptel mysql postgresql capi
 }
 
 start() {
