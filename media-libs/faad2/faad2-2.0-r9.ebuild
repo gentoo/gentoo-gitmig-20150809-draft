@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r8.ebuild,v 1.1 2005/12/19 11:16:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r9.ebuild,v 1.1 2005/12/20 09:57:06 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic autotools
 
-PATCHLEVEL="1"
+PATCHLEVEL="2"
 
 DESCRIPTION="AAC audio decoding library"
 HOMEPAGE="http://www.audiocoding.com/"
@@ -18,7 +18,7 @@ IUSE="xmms"
 
 RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
 		media-libs/id3lib )
-	media-video/mpeg4ip"
+	media-libs/libmp4v2"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool
