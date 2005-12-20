@@ -40,7 +40,7 @@ diff -ur dropbear-0.45.orig/random.c dropbear-0.45/random.c
 +			if (readlen < 0 && errno == EAGAIN) {
 +				++readtries;
 +				if (readtries < 5) {
-+					sleep(1);
++					sleep(0);
 +					continue;
 +				} else if (readtries == 5) {
 +					close (readfd);
