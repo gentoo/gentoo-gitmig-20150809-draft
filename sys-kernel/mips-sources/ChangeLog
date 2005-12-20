@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.80 2005/12/20 18:10:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.81 2005/12/20 19:38:30 kumba Exp $
+
+  20 Dec 2005; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.14.4.ebuild:
+  Minor tweaks to change CVSDATE to GITDATE, and use newer rev of mips-sources
+  patchball due to a bug in one patch that resulted in patch failure.
 
 *mips-sources-2.6.14.4 (20 Dec 2005)
 *mips-sources-2.6.13.5 (20 Dec 2005)

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.14.4.ebuild,v 1.1 2005/12/20 18:10:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.14.4.ebuild,v 1.2 2005/12/20 19:38:30 kumba Exp $
 
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 14 Sep 2005
+# 2) linux-mips.org GIT snapshot diff from 14 Sep 2005
 # 3) Generic Fixes
 # 4) Security fixes
 # 5) Patch for IP30 Octane Support		(http://www.linux-mips.org/~skylark/)
@@ -20,10 +20,10 @@
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20051030"			# Date of diff between kernel.org and lmo CVS
+GITDATE="20051030"			# Date of diff between kernel.org and lmo GIT
 SECPATCHVER="1.15"			# Tarball version for security patches
-GENPATCHVER="1.15"			# Tarball version for generic patches
-EXTRAVERSION="-mipsgit-${CVSDATE}"
+GENPATCHVER="1.16"			# Tarball version for generic patches
+EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
 STABLEVER="${F_KV}"			# Stable Version (2.6.x)
@@ -32,7 +32,7 @@ USERC="no"				# If set to "yes", then attempt to use an RC kernel
 USEPNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
 
 # Directories
-S="${WORKDIR}/linux-${OKV}-${CVSDATE}"
+S="${WORKDIR}/linux-${OKV}-${GITDATE}"
 MIPS_PATCHES="${WORKDIR}/mips-patches"
 MIPS_SECURITY="${WORKDIR}/security"
 
@@ -57,7 +57,7 @@ if [ "${USERC}" = "yes" ]; then
 	F_KV="$(get_version_component_range 1-3)-${KVRC}"
 	STABLEVER="${KVXY}.$((${KVZ} - 1))"				# Last stable version (Rev - 1)
 	PATCHVER="mirror://kernel/linux/kernel/v2.6/testing/patch-${OKV}.bz2"
-	EXTRAVERSION="-${KVRC}-mipsgit-${CVSDATE}"
+	EXTRAVERSION="-${KVRC}-mipsgit-${GITDATE}"
 	KV="${OKV}-${EXTRAVERSION}"
 fi
 
@@ -67,14 +67,14 @@ if [ "${USEPNT}" = "yes" ]; then
 	F_KV="$(get_version_component_range 1-3)"			# Get Maj/Min/Rev (x.y.z)
 	STABLEVER="${F_KV}"						# Last Revision release
 	PATCHVER="mirror://kernel/linux/kernel/v2.6/patch-${OKV}.bz2"	# Patch for new point release
-	EXTRAVERSION=".$(get_version_component_range 4)-mipsgit-${CVSDATE}"
+	EXTRAVERSION=".$(get_version_component_range 4)-mipsgit-${GITDATE}"
 	KV="${OKV}${EXTRAVERSION}"
 fi
 
 
-DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
+DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${STABLEVER}.tar.bz2
-		mirror://gentoo/mipsgit-${F_KV}-${CVSDATE}.diff.bz2
+		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.bz2
 		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		${PATCHVER}"
@@ -338,7 +338,7 @@ rename_source_tree() {
 
 src_unpack() {
 	unpack ${A}
-	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${CVSDATE}
+	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${GITDATE}
 	cd ${S}
 
 
@@ -352,10 +352,10 @@ src_unpack() {
 	fi
 
 
-	# Update the vanilla sources with linux-mips CVS changes
+	# Update the vanilla sources with linux-mips GIT changes
 	echo -e ""
-	einfo ">>> linux-${OKV} --> linux-${OKV}-${CVSDATE} patch ..."
-	epatch ${WORKDIR}/mipsgit-${F_KV}-${CVSDATE}.diff
+	einfo ">>> linux-${OKV} --> linux-${OKV}-${GITDATE} patch ..."
+	epatch ${WORKDIR}/mipsgit-${F_KV}-${GITDATE}.diff
 
 	# Generic patches we always include
 	do_generic_patches
