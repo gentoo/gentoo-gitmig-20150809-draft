@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.31 2005/12/13 21:50:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.32 2005/12/20 17:34:31 dang Exp $
+
+  20 Dec 2005; <dang@gentoo.org> rails-1.0.0.ebuild:
+  Marked ~amd64 Per bug#115774
 
 *rails-1.0.0 (13 Dec 2005)
 
