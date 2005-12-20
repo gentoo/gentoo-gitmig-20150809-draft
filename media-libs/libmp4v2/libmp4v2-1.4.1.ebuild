@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.3 2005/12/20 13:57:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.4 2005/12/20 14:29:22 tester Exp $
 
 inherit multilib
 
@@ -18,6 +18,13 @@ RDEPEND="!<media-video/mpeg4ip-1.4.1
 	!<media-libs/faad2-2.0-r9"
 
 S=${WORKDIR}/mpeg4ip-${PV}
+
+src_unpack() {
+	unpack ${A}
+	
+	cd ${S}
+	epatch ${FILESDIR}/mpeg4ip-${PV}-disable-faac-test.patch
+}
 
 src_compile() {
 

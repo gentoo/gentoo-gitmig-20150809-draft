@@ -1,6 +1,10 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.2 2005/12/20 09:17:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.3 2005/12/20 14:29:22 tester Exp $
+
+  20 Dec 2005; Olivier Crête <tester@gentoo.org>
+  +files/mpeg4ip-1.4.1-disable-faac-test.patch, libmp4v2-1.4.1.ebuild:
+  Remove check for faac
 
   20 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> libmp4v2-1.4.1.ebuild:
   Add missing multilib inherit for $(get_libdir).
