@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.10 2005/12/20 01:31:53 vapier Exp $
 #
 # Author John Mylchreest <johnm@gentoo.org>
 
@@ -35,7 +35,7 @@ ht_fix_file() {
 
 ht_fix_all() {
 	local MATCHES
-	MATCHES="$(grep -l -i -R -e "head -[ 0-9]" -e "tail [+-][ 0-9]" * | sort -u)"
+	MATCHES=$(grep -l -s -i -R -e "head -[ 0-9]" -e "tail [+-][ 0-9]" * | sort -u)
 	[[ -n ${MATCHES} ]] \
 		&& ht_fix_file ${MATCHES} \
 		|| einfo "No need for ht_fix_all anymore !"
