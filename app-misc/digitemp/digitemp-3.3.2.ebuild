@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.2.ebuild,v 1.3 2005/12/20 23:28:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.2.ebuild,v 1.4 2005/12/20 23:49:10 vanquirius Exp $
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com http://www.ibutton.com"
@@ -14,9 +14,9 @@ KEYWORDS="~x86"
 DEPEND="virtual/libc"
 
 exampledir="/usr/share/doc/${PF}"
-target="ds9097u"
 
 src_compile() {
+	target="ds9097u"
 	# default is to compile to the ds9097u. local use flag takes care of
 	# passive ds9097. the ds9097u setting is what i have, so probably a safe
 	# default - nothing special here.
@@ -33,8 +33,8 @@ src_compile() {
 }
 
 src_install() {
-	target="DS9097U"
-	mv digitemp_${target} digitemp
+	target_upper="$(echo $target | tr '[:lower:]' '[:upper:]')"
+	mv digitemp_${target_upper} digitemp
 	dobin digitemp || die
 	dodoc README FAQ TODO
 
