@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1622 2005/12/20 18:09:08 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1623 2005/12/20 19:46:21 kumba Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1179,6 +1179,8 @@ sys-kernel/genkernel:ibm - Install IBM pSeries config as default instead of G5 c
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/hardened-sources:rsbac - Enables support for RSBAC (2.4 kernels)
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
+sys-kernel/mips-headers:ip27 - Enables support for SGI Origin (IP27)
+sys-kernel/mips-headers:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP28)
 sys-kernel/mips-headers:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:ip27 - Enables support for SGI Origin (IP27)
