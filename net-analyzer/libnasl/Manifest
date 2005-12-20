@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b77b666191b05da4585557ca4afdf1dc ChangeLog 9758
 MD5 a4b70aabd34a72659434bebbfff9c1b3 libnasl-2.2.5.ebuild 810
 MD5 0993cc6c074cc4f775d1fa382a9411e6 libnasl-2.3.1.ebuild 841
@@ -8,3 +11,10 @@ MD5 fdd93c01e425153f03232fd573c77604 files/digest-libnasl-2.3.1 65
 MD5 cd59b89e1b227dfb0c4513ef884c3dc0 files/digest-libnasl-2.2.4 65
 MD5 b7af1b93dd20ded0134dacd7f9163c74 files/digest-libnasl-2.2.6 65
 MD5 c5d63434e19f4b35536ea9c8012d5eaf files/digest-libnasl-2.2.5 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDp+8TugEuf3OQ0akRAmJvAJ4r1ILk3coyOUhIkrVgM34YfQbf7wCWK0ss
+2yRFAXSf0gjU6rgbOCyhog==
+=ISSe
+-----END PGP SIGNATURE-----
