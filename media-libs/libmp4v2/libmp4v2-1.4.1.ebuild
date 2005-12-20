@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.1 2005/12/20 05:11:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.2 2005/12/20 09:17:05 flameeyes Exp $
+
+inherit multilib
 
 DESCRIPTION="libmp4v2 extracted from mpeg4ip"
 HOMEPAGE="http://www.mpeg4ip.net/"
