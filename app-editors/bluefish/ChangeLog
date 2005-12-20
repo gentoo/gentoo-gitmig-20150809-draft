@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.51 2005/09/22 18:21:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.52 2005/12/20 22:34:51 hanno Exp $
+
+*bluefish-1.0.4-r1 (20 Dec 2005)
+
+  20 Dec 2005; Hanno Boeck <hanno@gentoo.org> +bluefish-1.0.4-r1.ebuild:
+  Add gnome USE-flag.
 
 *bluefish-1.0.4 (22 Sep 2005)
 

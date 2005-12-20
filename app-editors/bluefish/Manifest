@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 248ee88f13a0b15906b81c0e5258857e ChangeLog 6201
-MD5 1b7fcc5c167d3fd3b689b7784866d6a0 bluefish-1.0.ebuild 888
-MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+MD5 285e94990d44c5edfe923e25ad0bbbcb ChangeLog 6331
 MD5 387355913ede91692759147273543555 bluefish-1.0.2.ebuild 897
+MD5 10ceb3c1ebbf34eadf7dee32362c01ef bluefish-1.0.4-r1.ebuild 966
 MD5 3b33bd2a0b115ccaff09247d69d72991 bluefish-1.0.4.ebuild 897
+MD5 1b7fcc5c167d3fd3b689b7784866d6a0 bluefish-1.0.ebuild 888
 MD5 4f4082139d50854cf37bf254207ad1b1 files/digest-bluefish-1.0 66
 MD5 52bca1b5248301ce7359f135e824a98f files/digest-bluefish-1.0.2 68
 MD5 c150fdac29f2c1bcf452e3102c045dd5 files/digest-bluefish-1.0.4 68
+MD5 c150fdac29f2c1bcf452e3102c045dd5 files/digest-bluefish-1.0.4-r1 68
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMvaQr2QksT29OyARAszHAJ0WQYRL9/1y0bi0PHXfApOWxs46qACfTo6V
-Q35H+CeXCP3DFztPgkY+994=
-=Lci2
+iD8DBQFDqIeJr2QksT29OyARAsxDAJ9F9kkE5mZFcRG8JHNATXJJAGay0ACfRdZ9
+y5+CBmwE8sP7fWR1cO2ZTxk=
+=4cMm
 -----END PGP SIGNATURE-----
