@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/cifparse-obj
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.1 2005/12/20 04:10:15 spyderous Exp $
+
+*cifparse-obj-6.302 (20 Dec 2005)
+
+  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/respect-flags-and-add-gcc4.patch, +metadata.xml,
+  +cifparse-obj-6.302.ebuild:
+  Libraries needed to build the other RCSB Protein Data Bank tools.
+
