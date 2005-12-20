@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.23 2005/12/19 19:53:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.24 2005/12/20 17:51:55 rl03 Exp $
+
+  20 Dec 2005; Renat Lumpau <rl03@gentoo.org> -files/0.19.3-debian.patch,
+  -mantisbt-0.19.3.ebuild:
+  Removed old version
 
   19 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   mantisbt-0.19.4.ebuild:
