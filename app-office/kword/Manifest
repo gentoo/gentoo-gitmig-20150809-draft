@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ad71b6f534b5b3105ee50500a97462a7 ChangeLog 5756
 MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kword-1.4.2-r4 68
@@ -9,3 +12,10 @@ MD5 dd4e1252d9492a184a8a0066f734da34 kword-1.4.2-r4.ebuild 1265
 MD5 b78bdab7d333d0f1c25292cad7b57d3a kword-1.4.2-r6.ebuild 1265
 MD5 512a4cdd6055ce64c814620316c52c80 kword-1.4.2-r7.ebuild 1332
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDqGtAntT9W3vfTuoRAg2hAJ9CnQX0Ce2/c74b4mhhFwqdVq4K+wCgoXnn
+EywJsByyMUTIjUf4C2nuNJc=
+=4k2j
+-----END PGP SIGNATURE-----
