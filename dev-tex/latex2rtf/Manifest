@@ -1,17 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 72509bb5de730d14324dd068bb311b91 ChangeLog 1821
+MD5 40488655708281b9eff07184748ec05f latex2rtf-1.9.16.ebuild 1024
 MD5 7a489ca36b62cb481deaeb76a7800344 latex2rtf-1.9.15-r2.ebuild 1068
+MD5 f38d7020c93d6efc4da7cee6f5669e29 ChangeLog 2093
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 5c38ae853a717a1ba595c9b1c29b570b files/latex2rtf-Makefile-gentoo.diff 2211
+MD5 cff451b31973423dd2f342c569b660d5 files/latex2rtf-1.9.16-direntry.patch 745
 MD5 8bfc1664436da66fbf401f933c853ff6 files/latex2rtf-1.9.15-direntry.patch 1179
-MD5 ef5b6998b580eb0f55b60c794ab72215 files/latex2rtf-1.9.15-definitions.c.diff 1349
 MD5 0cd549e56f3f8b6d885f04ee983d8661 files/digest-latex2rtf-1.9.15-r2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjIWjVWNWqTUmv+0RAsIpAJ9OYXo6Z1rjClH97rDynqA7bsG31gCeOv/Y
-7GO7b5NgHbDBafrPDDtD/K8=
-=VAii
------END PGP SIGNATURE-----
+MD5 5c38ae853a717a1ba595c9b1c29b570b files/latex2rtf-Makefile-gentoo.diff 2211
+MD5 e18ff7f49e9c58ebef71522c7d631e0e files/digest-latex2rtf-1.9.16 68
+MD5 ef5b6998b580eb0f55b60c794ab72215 files/latex2rtf-1.9.15-definitions.c.diff 1349

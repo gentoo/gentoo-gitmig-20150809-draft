@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/latex2rtf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.11 2004/11/06 08:11:08 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.12 2005/12/20 19:28:52 nattfodd Exp $
+
+*latex2rtf-1.9.16 (20 Dec 2005)
+
+  20 Dec 2005; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/latex2rtf-1.9.16-direntry.patch, +latex2rtf-1.9.16.ebuild:
+  Bump to 1.9.16 which, among other things, corrects security flaw and removes
+  need for patching definitions.c
 
   06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
   -latex2rtf-1.9.15-r1.ebuild, latex2rtf-1.9.15-r2.ebuild:
