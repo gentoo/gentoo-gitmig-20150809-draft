@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libebt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.9 2005/12/18 12:39:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.10 2005/12/20 07:03:06 wormo Exp $
+
+  20 Dec 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  libebt-1.2.0.ebuild, libebt-1.2.1.ebuild:
+  mark ~ppc (bug #115410)
 
 *libebt-1.2.1 (18 Dec 2005)
 

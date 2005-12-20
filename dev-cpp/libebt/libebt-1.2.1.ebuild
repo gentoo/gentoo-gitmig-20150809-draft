@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/libebt-1.2.1.ebuild,v 1.1 2005/12/18 12:39:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/libebt-1.2.1.ebuild,v 1.2 2005/12/20 07:03:06 wormo Exp $
 
 DESCRIPTION="A pure C++ template library that provides a clean way of getting human-readable backtrace messages."
 HOMEPAGE="http://libebt.berlios.de/"
@@ -9,7 +9,7 @@ RESTRICT="primaryuri"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
