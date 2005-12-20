@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.5 2005/12/20 13:58:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.6 2005/12/20 15:00:33 tester Exp $
 
 inherit eutils multilib
 
@@ -30,7 +30,7 @@ RDEPEND=" media-libs/libsdl
 	mp4live? (
 		>=x11-libs/gtk+-2
 		lame? ( >=media-sound/lame-3.92 )
-		aac? ( >=media-libs/faac-1.20.1 )
+		aac? ( >=media-libs/faac-1.24-r1 )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
 		x264? ( media-libs/x264-svn )
 	)
@@ -51,6 +51,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/mpeg4ip-1.4.1-disable-faac-test.patch
 	epatch ${FILESDIR}/mpeg4ip-1.4.1-gcc41.patch
 }
 
