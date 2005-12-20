@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.3-r2.ebuild,v 1.1 2005/11/28 10:16:18 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.5.ebuild,v 1.1 2005/12/20 19:16:25 kaiowas Exp $
 
 inherit eutils
 
 DESCRIPTION="Nepenthes is a low interaction honeypot that captures worms by emulating known vulnerabilities"
 HOMEPAGE="http://nepenthes.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,9 +34,6 @@ src_compile() {
 #	use postgres && myconf="$myconf --with-postgre \
 #		--with-postgre-lib=/usr/$(get_libdir) --with-postgre-include=/usr/include" \
 #		|| myconf="$myconf --without-postgre"
-
-	epatch ${FILESDIR}/nepenthes-0.1.3_logger_path.diff || die
-	epatch ${FILESDIR}/nepenthes-0.1.3_xor_and_additional_bindshell_patch.diff.bz2 || die
 
 	econf ${myconf} || die
 	emake || die "make failed"

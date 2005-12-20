@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.6 2005/12/02 20:39:59 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.7 2005/12/20 19:16:25 kaiowas Exp $
+
+*nepenthes-0.1.5 (20 Dec 2005)
+
+  20 Dec 2005; petre rodan <kaiowas@gentoo.org>
+  -files/nepenthes-0.1.3_logger_path.diff,
+  -files/nepenthes-0.1.3_xor_and_additional_bindshell_patch.diff.bz2,
+  -nepenthes-0.1.3-r1.ebuild, -nepenthes-0.1.3-r2.ebuild,
+  +nepenthes-0.1.5.ebuild:
+  version bump
 
 *nepenthes-0.1.4 (02 Dec 2005)
 
