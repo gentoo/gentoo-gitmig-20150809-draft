@@ -1,8 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 427fca7ef312ee7ed03f6a261c8b3ccf ChangeLog 2597
+MD5 2ea05533c709cbd5828da5af9798d49c files/digest-skencil-0.6.16 67
+MD5 9c9922b39806ca56eed7ebdaaf3cea1c files/digest-skencil-0.6.17 67
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 63e5df2d36bfe591a246939dc7e08a78 skencil-0.6.16.ebuild 1077
-MD5 c0d19d1776bb0445dd87a74dfc963da8 skencil-0.6.16_pre3.ebuild 1088
 MD5 ad6d6df835f617d823b543228c462dbb skencil-0.6.17.ebuild 1446
-MD5 2ea05533c709cbd5828da5af9798d49c files/digest-skencil-0.6.16 67
-MD5 9d7047c414b537db65e3518f5b39677a files/digest-skencil-0.6.16_pre3 70
-MD5 9c9922b39806ca56eed7ebdaaf3cea1c files/digest-skencil-0.6.17 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDp4YAr2QksT29OyARAt9OAJ0Xw/yIcjBz7WVH7zpU/dUhGAdMHwCeOEN1
+3q9bEHf+4RVSLwlo6Zh51lY=
+=PrlO
+-----END PGP SIGNATURE-----
