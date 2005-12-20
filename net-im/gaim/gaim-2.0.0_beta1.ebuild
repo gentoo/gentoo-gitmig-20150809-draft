@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1.ebuild,v 1.4 2005/12/20 03:05:48 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1.ebuild,v 1.5 2005/12/20 14:05:54 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono
 
@@ -122,7 +122,7 @@ src_compile() {
 	use krb4 && myconf="${myconf} --with-krb4"
 	use mono && myconf="${myconf} --enable-mono"
 	use dbus && myconf="${myconf} --enable-dbus"
-	use vv && myconf="${myconf} --enable-vv"
+	#use vv && myconf="${myconf} --enable-vv"
 	use tcltk || myconf="${myconf} --disable-tcl --disable-tk"
 
 	if use gnutls ; then

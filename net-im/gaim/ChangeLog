@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.374 2005/12/20 03:05:48 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.375 2005/12/20 14:05:53 tester Exp $
+
+  20 Dec 2005; Olivier Crête <tester@gentoo.org> gaim-2.0.0_beta1.ebuild:
+  Completely removed vv USE flag
 
   20 Dec 2005; <gothgirl@gentoo.org> gaim-2.0.0_beta1.ebuild:
   fixed inherit mono eclass
