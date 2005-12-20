@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.6 2005/12/16 11:23:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.7 2005/12/20 03:59:51 hanno Exp $
+
+*freewrl-1.16.1 (20 Dec 2005)
+
+  20 Dec 2005; Hanno Boeck <hanno@gentoo.org>
+  +files/freewrl-1.16.1-disable-rpm.patch,
+  +files/freewrl-1.16.1-plugin-install.patch,
+  +files/freewrl-1.16.1-use-java-home.patch, +freewrl-1.16.1.ebuild:
+  Version bump, thanks to basic in bug #74706.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> freewrl-1.06.ebuild:
   Remove GNUish cp -a call. Bug #103487.
