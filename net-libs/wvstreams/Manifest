@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 20360f0edf336b70ec705f897c27e29b wvstreams-4.0.2-r2.ebuild 2601
+MD5 92f4c2da5b0d6c020ff183050437c4c1 wvstreams-4.0.2-r2.ebuild 2600
 MD5 e594922148c5a6f7087f083cf392e55c wvstreams-4.0.2-r1.ebuild 2558
-MD5 a7e543129a78dc4ef37da644ba538951 ChangeLog 10798
+MD5 ede0114199abe6312b30c38e16bf2ac9 ChangeLog 10895
 MD5 227de7f678ad662524292836709de75f metadata.xml 313
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.2-MOC-fix.patch 479
 MD5 dbec7770662be21658b4ba9740cf2793 files/wvstreams-4.0.2-wireless-user.patch 466
@@ -15,9 +15,9 @@ MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
 MD5 6448ad9ded98b10b600e0b3386d2c4bf files/wvstreams-4.0.2-gcc41.patch 698
 MD5 189d6997246f2943d43b5c18d0a78163 files/wvstreams-4.0.2-external-xplc.patch 1659
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDiDn3NSP4Vda7IdsRAhbSAJ4jmk6tAFTBx8mFeB6zteLRT9MjSgCfbIKN
-EPxZ516jEh8XsR8S5XQsEvQ=
-=75Qn
+iD8DBQFDqH9lNSP4Vda7IdsRAgHiAKCEk7gdjSmoX9lHqw+pHNqO7kvnuACeIIXb
+qJCRMBZNuLzg9h8Z4TmiUOg=
+=XeQT
 -----END PGP SIGNATURE-----
