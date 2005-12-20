@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.1-r2.ebuild,v 1.2 2005/11/02 10:52:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.1-r2.ebuild,v 1.3 2005/12/20 03:55:59 hanno Exp $
+
+inherit eutils
 
 DESCRIPTION="Set of plugins for abiword"
 HOMEPAGE="http://www.abisource.com/"
@@ -39,6 +41,10 @@ RDEPEND="=app-office/abiword-${PV}
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/abiword-plugins-2.4.2-gcc41.patch
+}
 
 src_compile() {
 	local myconf="--enable-all \

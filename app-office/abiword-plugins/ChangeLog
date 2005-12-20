@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.7 2005/11/02 10:52:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.8 2005/12/20 03:55:59 hanno Exp $
+
+  20 Dec 2005; Hanno Boeck <hanno@gentoo.org>
+  +files/abiword-plugins-2.4.2-gcc41.patch, abiword-plugins-2.4.1-r2.ebuild:
+  Fix for gcc 4.1.
 
   02 Nov 2005; Herbie Hopkins <herbs@gentoo.org>
   abiword-plugins-2.4.1-r2.ebuild:
