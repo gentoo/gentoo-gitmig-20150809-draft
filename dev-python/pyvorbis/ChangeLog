@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyvorbis
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.23 2005/12/18 17:10:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.24 2005/12/20 13:01:03 gustavoz Exp $
+
+  20 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  pyvorbis-1.4-r1.ebuild:
+  Stable on sparc
 
   18 Dec 2005; Markus Rothe <corsair@gentoo.org> pyvorbis-1.4-r1.ebuild:
   Stable on ppc64
