@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e22c883db32384466af4a4db61aca02 metadata.xml 222
-MD5 22524500597a286af4ecb5878b859c40 libmp4v2-1.4.1.ebuild 1977
-MD5 cf7218fcc0b29a0d943025144d78cf98 ChangeLog 586
-MD5 22a76c68f55b131dfc602a61ededb699 files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
+MD5 91aad2c3aaef285a9ae8b6230ac0ec2e ChangeLog 686
 MD5 f66eabf6e140aef8962a75cf06d15df0 files/digest-libmp4v2-1.4.1 66
+MD5 22a76c68f55b131dfc602a61ededb699 files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
+MD5 1e4dfaa3bc150ee1032c2893dfd12509 libmp4v2-1.4.1.ebuild 1984
+MD5 3e22c883db32384466af4a4db61aca02 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqBVOmOfEJZHYOKcRApIEAKC2pd451xnFNelTovpxkxBtTHjK/gCeKTUa
-y2ZwjtJQ+wz5xpMj1BgrR+g=
-=8TGc
+iD8DBQFDqD35CRZPokWLroQRAptVAJ9tVh/xJZ8Hm8VSmgT5mwO/f6INPACgxZ4L
+Oj43bgvAsLnUJLrp4hQGIl0=
+=ll7X
 -----END PGP SIGNATURE-----

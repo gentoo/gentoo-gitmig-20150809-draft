@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.4 2005/12/20 14:29:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.5 2005/12/20 17:22:25 halcy0n Exp $
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="libmp4v2 extracted from mpeg4ip"
 HOMEPAGE="http://www.mpeg4ip.net/"
@@ -21,7 +21,7 @@ S=${WORKDIR}/mpeg4ip-${PV}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/mpeg4ip-${PV}-disable-faac-test.patch
 }
