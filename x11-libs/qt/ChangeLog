@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.273 2005/12/20 13:48:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.274 2005/12/20 17:23:01 caleb Exp $
+
+  20 Dec 2005; Caleb Tennis <caleb@gentoo.org> qt-4.1.0.ebuild:
+  Remove QtAssistant manual installation (it looks to me like it's handled
+  now), and move the pkg-config files into /usr/_libdir_/pkgconfig
 
 *qt-4.1.0 (20 Dec 2005)
 

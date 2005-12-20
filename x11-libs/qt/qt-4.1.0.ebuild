@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0.ebuild,v 1.1 2005/12/20 13:48:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0.ebuild,v 1.2 2005/12/20 17:23:01 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -45,6 +45,7 @@ pkg_setup() {
 	QTPREFIXDIR=/usr/$(get_libdir)/qt4
 	QTBINDIR=/usr/bin
 	QTLIBDIR=/usr/$(get_libdir)/qt4
+	QTPCDIR=/usr/$(get_libdir)/pkgconfig
 	QTDATADIR=/usr/share/doc/${PF}
 	QTDOCDIR=${QTDATADIR}/doc
 	QTHEADERDIR=/usr/include/qt4
@@ -168,13 +169,17 @@ src_install() {
 	fi
 
 	# The QtAssistant header files aren't installed..not sure why
-	cp -pPR ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
+	#cp -pPR ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
 
 	keepdir "${QTSYSCONFDIR}"
 
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.pc
+
+	# Move .pc files into the pkgconfig directory
+	dodir ${QTPCDIR}
+	mv ${D}/${QTLIBDIR}/*.pc ${D}/${QTPCDIR}
 
 	# List all the multilib libdirs
 	local libdirs
