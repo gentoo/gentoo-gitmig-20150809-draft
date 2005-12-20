@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gifsicle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.7 2005/11/03 09:42:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.8 2005/12/20 23:17:18 vanquirius Exp $
+
+*gifsicle-1.44 (20 Dec 2005)
+
+  20 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +gifsicle-1.44.ebuild:
+  1.44 version bump for bug 115967. Thanks to Ed Cates <ed at cates dot net>.
+  Also, adding to graphics herd in metadata.xml.
 
   03 Nov 2005; Fabian Groffen <grobian@gentoo.org> gifsicle-1.40.ebuild:
   Marked ~ppc-macos (bug #110937)
