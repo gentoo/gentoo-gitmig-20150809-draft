@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1.ebuild,v 1.6 2004/12/15 21:59:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1.ebuild,v 1.7 2005/12/20 04:36:23 hanno Exp $
 
 inherit libtool eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/libsidplay2-gcc34.patch
+	epatch ${FILESDIR}/libsidplay2-gcc41.patch
 
 	elibtoolize
 }
