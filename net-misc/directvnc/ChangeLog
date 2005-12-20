@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.14 2005/01/16 02:00:48 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.15 2005/12/20 12:10:23 s4t4n Exp $
+
+  20 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
+  Added some magic sed to fix bug #116148. Also, creaded missing metadata.xml
+  and assigned package to myself as maintainer.
 
   16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> directvnc-0.7.5.ebuild:
   aded ~amd64 to KEYWORDS. fixes #77599.
