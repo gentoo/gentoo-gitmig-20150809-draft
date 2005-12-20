@@ -2,16 +2,14 @@
 Hash: SHA1
 
 MD5 3919d42da5ddfbb77ea9909138029499 ChangeLog 1488
-MD5 046903394c2d5c7bdb1c48133432a5ac files/digest-wtf-20050505-r1 62
 MD5 e0ff2e6be2173da31779f065d0c0462b files/digest-wtf-20051104 62
-MD5 7bbcfaac1abe5da90a9b41a0147ba3b0 files/wtf-20050505-updates.patch 589
+MD5 9501415ad2fea1d563e99cf58944bb25 files/wtf-20050505-updates.patch 676
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0d0530fc8bbefb5ca55bc5d962fed876 wtf-20050505-r1.ebuild 745
 MD5 315788db173a6b146e34b6c83d207fc5 wtf-20051104.ebuild 784
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDg561gIKl8Uu19MoRAiQRAJ9VqkGf5iFu99gi/dh7NKMJp++u+QCfTMM/
-Exp8bQVq1Hu7Mpu//RrjmGU=
-=J8tn
+iD8DBQFDp11s2+ySkm8kpY0RAjCtAKCCGtvpdc6y6I4m8WI6DIP9E+4aqgCgvQyj
+ceKprTnV5CBPsZA59URr1zA=
+=uzyF
 -----END PGP SIGNATURE-----

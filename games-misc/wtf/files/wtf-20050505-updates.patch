@@ -4,20 +4,24 @@
  FCFS	first come first served
 +FFS	for fuck's sake
  FIGJAM	fuck I'm good, just ask me
-@@ -151,2 +152,3 @@
+@@ -153,2 +154,3 @@
  OMG	oh, my god
 +OOB	out of bounds
  OT	off topic
-@@ -163,3 +165,3 @@
+@@ -165,3 +167,3 @@
  PNP	plug and pray
 -POC	point of contact
 +POC	point of contact / proof of concept
  POLA	principle of least astonishment
-@@ -231,2 +233,3 @@
+@@ -190,2 +192,3 @@
+ SFA	sweet fuck all
++SFW	safe for work
+ SHID	slaps head in disgust
+@@ -233,2 +236,3 @@
  U/L	upload
 +UNF	universal noise of fucking
  UTSL	use the source, Luke
-@@ -243,3 +246,3 @@
+@@ -245,3 +249,3 @@
  WRT	with respect to
 -WTF	{what,where,who,why} the fuck
 +WTF	{what,when,where,who,why} the fuck
