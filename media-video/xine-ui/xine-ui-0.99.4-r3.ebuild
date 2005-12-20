@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r3.ebuild,v 1.2 2005/11/22 10:21:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r3.ebuild,v 1.3 2005/12/20 15:44:56 gustavoz Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
 IUSE="X nls lirc aalib libcaca readline curl ncurses xinerama"
 
 RDEPEND="media-libs/libpng
