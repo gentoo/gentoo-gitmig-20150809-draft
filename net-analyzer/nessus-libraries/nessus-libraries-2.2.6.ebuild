@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.6.ebuild,v 1.4 2005/12/18 17:53:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.6.ebuild,v 1.5 2005/12/20 10:44:45 kloeri Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 # Hard dep on SSL since libnasl won't compile when this package is emerged -ssl.
