@@ -1,12 +1,12 @@
 diff -Naur hwsetup-1.0/hwsetup.c hwsetup-1.0-patched/hwsetup.c
 --- hwsetup-1.0/hwsetup.c	2003-06-02 22:01:28.000000000 +0300
 +++ hwsetup-1.0-patched/hwsetup.c	2005-05-28 17:07:09.000000000 +0300
-@@ -42,8 +42,35 @@
+@@ -42,8 +42,36 @@
  /* Do not, under any circumstances, load these modules automatically, */
  /* even if in pcitable. (libkudzu may ignore this, and the KNOPPIX    */
  /* autoconfig scripts may probe them, too)  */
 -const char *blacklist[] = { "apm","agpgart","yenta_socket","i82092","i82365","tcic",
-+char blacklist[200][1024] = { "apm","agpgart","yenta_socket","i82092","i82365","tcic",
++char blacklist[200][200] = { "apm","agpgart","yenta_socket","i82092","i82365","tcic",
                              "pcmcia_core","ds","ohci1394" };
 +int blacklistsize = 9;
 +
@@ -29,6 +29,7 @@ diff -Naur hwsetup-1.0/hwsetup.c hwsetup-1.0-patched/hwsetup.c
 +		strcat (module , " \0");
 +		strcpy(blacklist[n] , module);
 +		n++;
++		if ( n == 200 ) break;
 +		//printf(module);
 +	}
 +      blacklistsize = n;
