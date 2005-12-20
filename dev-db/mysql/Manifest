@@ -1,4 +1,4 @@
-MD5 c540c6dcf11a21b1343625c5122ca3ab ChangeLog 55387
+MD5 cbd257d39c5cf8a6b4fe18999fc5c176 ChangeLog 55589
 MD5 c6fcd70c34bed04e59808ec71c5bedfb files/digest-mysql-3.23.58-r1 140
 MD5 0feb3b501c47708ea13707c8e4cdde9c files/digest-mysql-4.0.25-r2 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26 139
@@ -8,8 +8,9 @@ MD5 081bfa8975526ff1098cc4e067cf7545 files/digest-mysql-4.1.15-r2 139
 MD5 4fbd3dfaf869bcd40254f8c83993248f files/digest-mysql-4.1.16 139
 MD5 de7e2ca6c5cededa81194f4d0d440cd5 files/digest-mysql-4.1.16-r30 139
 MD5 b9b44f65c775f650064022427ae52425 files/digest-mysql-5.0.15 139
-MD5 f2f69d4a3f98030fc7248cac3c2d981d files/digest-mysql-5.0.16-r30 139
 MD5 aa38cbef56ecdf34fd61c71bac1120e2 files/digest-mysql-5.0.16-r4 139
+MD5 bbb9e8ef722b301fe22323fbf373c3d1 files/digest-mysql-5.0.17 139
+MD5 a398083d322b82276624a46e789d2c4d files/digest-mysql-5.0.17-r30 139
 MD5 192d36fe25573b9974310cbd7977bd89 files/digest-mysql-5.1.3_alpha-r30 144
 MD5 d200345efa421d012cf858134d2c8884 files/logrotate.mysql 440
 MD5 f1fc8bfe540d6f1268b53b7cad275080 files/my.cnf 1231
@@ -36,6 +37,7 @@ MD5 68d8a9e80d038e354f3fba7c4c9394da mysql-4.1.15.ebuild 18880
 MD5 7759a757abff06fb5edaf2ad0f9ee712 mysql-4.1.16-r30.ebuild 24464
 MD5 8617eb0687f98e46ea0f077fe4e72e6e mysql-4.1.16.ebuild 24655
 MD5 38667d0ef4311ebb4e9ef25473b4d6af mysql-5.0.15.ebuild 19010
-MD5 24dccf3b2cc684ee458720174211b27e mysql-5.0.16-r30.ebuild 24468
 MD5 f644768048eb13e9cef742a2f8525e57 mysql-5.0.16-r4.ebuild 24641
+MD5 ee1d0242c50d4aa2d8067d1c554fcdfa mysql-5.0.17-r30.ebuild 24467
+MD5 a626acaa4b7a1008bfff5a30afedcd4c mysql-5.0.17.ebuild 24638
 MD5 bcf1d7902fe622ddae086f92069d1316 mysql-5.1.3_alpha-r30.ebuild 24472

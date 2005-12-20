@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.16-r30.ebuild,v 1.10 2005/12/12 10:15:56 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.17-r30.ebuild,v 1.1 2005/12/20 14:14:15 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -11,8 +11,8 @@ stripdots() {
 }
 
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
-MYSQL_VERSION_ID=$(stripdots "5.00.16.00")
-NDB_VERSION_ID=50016
+MYSQL_VERSION_ID=$(stripdots "5.00.17.00")
+NDB_VERSION_ID=50017
 #major, minor only in the slot
 SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
 
@@ -546,7 +546,7 @@ src_install() {
 	done
 
 	# oops
-	mysql_check_version_range "5.00.16.00 to 5.00.16.99" \
+	mysql_check_version_range "5.00.16.00 to 5.00.17.99" \
 	&& cp "${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" "${D}/usr/share/mysql/"
 
 	# TODO change at Makefile-am level
