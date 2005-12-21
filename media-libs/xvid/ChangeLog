@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.50 2005/12/18 17:58:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.51 2005/12/21 19:53:38 metalgod Exp $
+
+  21 Dec 2005; Luis Medinas <metalgod@gentoo.org> xvid-1.0.3.ebuild:
+  Stable on amd64 for bug #116181.
 
   18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/1.0.0_rc4-DESTDIR.patch, -files/1.0.1-DESTDIR.patch,
