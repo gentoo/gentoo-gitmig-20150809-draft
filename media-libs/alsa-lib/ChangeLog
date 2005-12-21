@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.141 2005/12/21 15:48:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.142 2005/12/21 20:11:53 flameeyes Exp $
+
+  21 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-lib-1.0.11_rc1.ebuild:
+  Fix dependency on alsa-jack to 1.0.10_rc3 or later, as there's no further
+  release than that. See bug #116316.
 
 *alsa-lib-1.0.11_rc1 (21 Dec 2005)
 
