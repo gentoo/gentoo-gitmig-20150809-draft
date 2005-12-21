@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.53 2005/12/21 09:48:47 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.54 2005/12/21 23:05:03 ferdy Exp $
+
+*git-1.0.0-r1 (21 Dec 2005)
+
+  21 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/git-1.0.0-http-fix.patch, -git-1.0.0.ebuild, +git-1.0.0-r1.ebuild:
+  This is what upstream calls 1.0.0a. Remove 1.0.0 since it is a bit broken
 
 *git-1.0.0 (21 Dec 2005)
 
