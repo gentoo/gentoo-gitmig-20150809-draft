@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.114 2005/12/12 09:08:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.115 2005/12/21 16:26:37 suka Exp $
+
+*openoffice-bin-2.0.1 (21 Dec 2005)
+
+  21 Dec 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.0.1/ooo-wrapper2, +openoffice-bin-2.0.1.ebuild:
+  New upstream release, no big new features but lots of bugfixes, also this
+  adds a few more translations
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   openoffice-bin-2.0.0.ebuild:
