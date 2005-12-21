@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.12 2005/10/20 06:34:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.13 2005/12/21 03:30:53 nerdboy Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sparc x86"
-IUSE="doc qt tetex"
+IUSE="doc qt tetex unicode"
 
 DEPEND="media-gfx/graphviz
 	qt? ( =x11-libs/qt-3* )
@@ -26,10 +26,19 @@ src_unpack() {
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/linux-g++/tmake.conf
+
 	if use userland_Darwin; then
 		epatch ${FILESDIR}/bsd-configure.patch
 		[[ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]] &&  sed -i -e 's:-D__FreeBSD__:-D__FreeBSD__=5:' \
 		tmake/lib/macosx-c++/tmake.conf
+	fi
+
+	if use unicode; then
+		epatch ${FILESDIR}/${PN}-utf8-ru.patch.gz || die "utf8-ru patch failed"
+	fi
+
+	if [ $(gcc-major-version) -eq 4 ] ; then
+		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
 	fi
 }
 

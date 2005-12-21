@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.5.ebuild,v 1.1 2005/10/20 06:34:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.5.ebuild,v 1.2 2005/12/21 03:30:53 nerdboy Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
-IUSE="doc qt tetex"
+IUSE="doc qt tetex unicode"
 
 RDEPEND="media-gfx/graphviz
 	qt? ( =x11-libs/qt-3* )
@@ -27,8 +27,17 @@ src_unpack() {
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/{linux-g++,macosx-c++}/tmake.conf
+
 	epatch ${FILESDIR}/doxygen-1.4.3-cp1251.patch
 	epatch ${FILESDIR}/doxygen-1.4.4-darwin.patch
+
+	if use unicode; then
+		epatch ${FILESDIR}/${PN}-utf8-ru.patch.gz || die "utf8-ru patch failed"
+	fi
+
+	if [ $(gcc-major-version) -eq 4 ] ; then
+		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+	fi
 }
 
 src_compile() {
