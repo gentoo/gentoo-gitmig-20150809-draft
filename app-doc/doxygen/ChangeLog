@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.89 2005/12/21 03:30:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.90 2005/12/21 14:28:33 cryos Exp $
+
+  21 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> doxygen-1.4.4.ebuild:
+  Stable on amd64.
 
   21 Dec 2005; Steve Arnold <nerdboy@gentoo.org> +files/doxygen-gcc4.patch,
   +files/doxygen-utf8-ru.patch.gz, doxygen-1.4.2.ebuild,
