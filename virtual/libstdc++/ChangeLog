@@ -1,6 +1,9 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.2 2005/12/20 21:03:08 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.3 2005/12/21 10:53:48 betelgeuse Exp $
+
+  21 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> libstdc++-3.3.ebuild:
+  Marked stable on x86 for bug #116253.
 
   20 Dec 2005; Mark Loeser <halcy0n@gentoo.org> libstdc++-3.3.ebuild:
   Fix slot, add ~amd64
