@@ -5,12 +5,12 @@ MD5 fd4f7d84ac977c454a709f5dd750774a ChangeLog 1872
 MD5 3a869d5bbfb2e872aa492fef9678a67d files/digest-gnuconfig-20050602 70
 MD5 00f890354f799f43e70536ee5f57f18c files/digest-gnuconfig-20051113 70
 MD5 be399c4a071211c5da46720c2699f612 gnuconfig-20050602.ebuild 826
-MD5 e8c71b4b12584f5270283f2d27e44c29 gnuconfig-20051113.ebuild 826
+MD5 b1cbe9cf5099b5650b557f8a23707f47 gnuconfig-20051113.ebuild 754
 MD5 d63a72170e518490dcdf40f5ea8fcd62 metadata.xml 293
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl24kgIKl8Uu19MoRAoXmAJ4z/vEZ5/8iQRFdbfvn7X6Wt7246ACfSgQk
-bWanuBKzvG+jR4NKtIf3Kkw=
-=e4yQ
+iD8DBQFDqd8a2+ySkm8kpY0RAt7VAJ4/GjI4sfD6HtUDDzrTtAJEvvlO+ACfbN0q
+RiuSx/SCF0DaIFtMbivCQbs=
+=pfCo
 -----END PGP SIGNATURE-----

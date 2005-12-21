@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20051113.ebuild,v 1.1 2005/12/07 23:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20051113.ebuild,v 1.2 2005/12/21 23:01:58 vapier Exp $
 
 inherit eutils
 
@@ -21,10 +21,6 @@ src_unpack() {
 }
 
 src_compile() { :;}
-
-src_test() {
-	make SHELL=/bin/sh check || die "make check failed :("
-}
 
 src_install() {
 	insinto /usr/share/${PN}
