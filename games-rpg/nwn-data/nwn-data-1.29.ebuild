@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.7 2005/11/02 22:53:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.8 2005/12/21 22:26:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -60,6 +60,25 @@ pkg_setup() {
 src_unpack() {
 	mkdir "${S}"
 	cd "${S}"
+	# We create this .metadata directory so we can keep track of what we have
+	# installed without needing to keep all of these multiple USE flags in all
+	# of the ebuilds.
+	mkdir -p "${S}"/.metadata || die "Creating .metadata"
+	if use linguas_de
+	then
+		touch .metadata/linguas_de || die "touching de"
+	elif use linguas_es
+	then
+		touch .metadata/linguas_es || die "touching es"
+	elif use linguas_fr
+	then
+		touch .metadata/linguas_fr || die "touching fr"
+	elif use linguas_it
+	then
+		touch .metadata/linguas_it || die "touching it"
+	else
+		touch .metadata/linguas_en || die "touching en"
+	fi
 	unpack nwclient129.tar.gz
 	cd "${WORKDIR}"
 	use nowin && unpack nwresources129.tar.gz
@@ -78,6 +97,7 @@ src_unpack() {
 		unzip -o ${CDROM_ROOT}/Language_update.zip
 		unzip -o ${CDROM_ROOT}/Data_Linux.zip
 		rm -f data/patch.bif patch.key
+		touch .metadata/sou || die "touching sou"
 	fi
 	if use hou
 	then
@@ -91,6 +111,7 @@ src_unpack() {
 		unzip -o ${CDROM_ROOT}/Language_data.zip
 		unzip -o ${CDROM_ROOT}/Language_update.zip
 	fi
+	touch .metadata/hou || die "touching hou"
 	sed -i -e '\:^./nwmain .*:i \
 if [[ -f ./nwmouse.so ]]; then \
 	export XCURSOR_PATH="$(pwd)" \
@@ -108,6 +129,7 @@ src_install() {
 	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dmclient "${S}"/nwmain \
 		"${S}"/nwserver  "${S}"/nwm/* "${S}"/SDL-1.2.5 "${S}"/fixinstall
 	mv "${S}"/* "${Ddir}"
+	mv "${S}"/.metadata "${Ddir}"
 	keepdir ${dir}/servervault
 	keepdir ${dir}/scripttemplates
 	keepdir ${dir}/saves
