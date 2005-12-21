@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/files/0.5-hald.rc,v 1.1 2005/08/18 07:19:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/files/0.5-hald.rc,v 1.2 2005/12/21 09:41:20 cardoe Exp $
 
 depend() {
-	need dbus hotplug
+	need dbus
 }
 
 start() {
