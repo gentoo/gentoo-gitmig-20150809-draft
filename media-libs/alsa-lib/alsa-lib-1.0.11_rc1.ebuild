@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.11_rc1.ebuild,v 1.2 2005/12/21 20:11:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.11_rc1.ebuild,v 1.3 2005/12/21 20:12:58 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/alsa
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
-PDEPEND="jack? ( >=media-plugins/alsa-jack-1.0.10_rc3 )"
+PDEPEND="jack? ( >=media-plugins/alsa-jack-1.0.10_rc1 )"
 
 src_unpack() {
 	unpack ${A}
