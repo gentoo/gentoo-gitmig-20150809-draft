@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.93.ebuild,v 1.1 2005/12/21 11:30:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.93.ebuild,v 1.2 2005/12/21 11:40:34 betelgeuse Exp $
 
 inherit base eutils
 
@@ -11,9 +11,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-java/gnu-classpath-0.19
-		dev-java/jikes"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-java/gnu-classpath-0.19"
+DEPEND="dev-java/jikes
+		${REPEND}"
 
 PATCHES="${FILESDIR}/${PV}-no-exec-stack.patch"
 
