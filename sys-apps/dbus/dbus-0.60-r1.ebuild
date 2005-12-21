@@ -1,91 +1,79 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50.ebuild,v 1.3 2005/11/07 09:57:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r1.ebuild,v 1.1 2005/12/21 09:11:00 cardoe Exp $
 
-inherit eutils mono python multilib autotools debug
+inherit eutils mono python multilib debug qt3
 
-IUSE="X gtk qt python mono doc xml2"
-
-DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
+DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
 SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="X doc gcj gtk mono python qt xml2"
 
 RDEPEND=">=dev-libs/glib-2.6
-	xml2? ( dev-libs/libxml2 )
-	!xml2? ( dev-libs/expat )
-	X? ( || (
-		(
-		x11-libs/libXt
-		x11-libs/libX11
-		)
-	virtual/x11 ) )
-	gtk? ( >=x11-libs/gtk+-2 )
-	python? ( >=dev-lang/python-2.4
-		>=dev-python/pyrex-0.9.3-r2 )
-	qt? ( =x11-libs/qt-3* )
-	mono? ( >=dev-lang/mono-0.95 )"
-
+	X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
+	gtk? ( >=x11-libs/gtk+-2.4 )
+	mono? ( >=dev-lang/mono-0.95 )
+	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
+	qt? ( $(qt_min_version 3.3) )
+	xml2? ( >=dev-libs/libxml2-2.6.21 )
+	!xml2? ( dev-libs/expat )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( app-doc/doxygen
-		app-text/xmlto )
-	doc? ( mono? ( >=dev-util/monodoc-0.16 ) )"
+	doc? (	app-doc/doxygen
+		app-text/xmlto
+		mono? ( >=dev-util/monodoc-0.16
+		>=dev-util/mono-tools-1.1.9 ) )"
 
-# needs gcj, we have no neat way of knowing if it was enabled
-# Can we just depend on the java virtual and use javac?
-#	java? ( sys-devel/gcc )
+pkg_setup() {
+	if use gcj && ! built_with_use sys-devel/gcc gcj; then
+		eerror "To build the Java bindings for dbus, you must re-build gcc"
+		eerror "with the 'gcj' USE flag. Add 'gcj' to USE and re-emerge gcc."
+		die "gcc needs gcj support to use the java bindings"
+	fi
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	#add missing include (#78617)
-	epatch ${FILESDIR}/${PN}-0.23-fd_set.patch
-	# Fix dnotify support
-	epatch ${FILESDIR}/${PN}-dnotify_configure-01.diff
-	epatch ${FILESDIR}/${PN}-dnotify_watchdirs-01.diff
-	eautoreconf
+	PKG_CONFIG_PATH="${QTDIR}/lib/pkgconfig"
 }
 
 src_compile() {
-	local myconf
+	local myconf=""
 
 	# Choose which xml library to use
 	if use xml2; then
-		myconf="--with-xml=libxml"
+		myconf="${myconf} --with-xml=libxml"
 	else
-		myconf="--with-xml=expat"
+		myconf="${myconf} --with-xml=expat"
 	fi
 
 	# Only enable mono-docs if both mono and doc is defined
-	if use mono; then
-		myconf="${myconf} `use_enable doc mono-docs`"
+	use mono && myconf="${myconf} $(use_enable doc mono-docs)"
+
+	if use qt; then
+		myconf="${myconf} --enable-qt=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
 	else
-		myconf="${myconf} --disable-mono-docs"
+		myconf="${myconf} --disable-qt"
 	fi
 
-	# NOTE: I have disabled the xml docs because they are rather pointless
 	econf \
-		`use_with X x` \
-		`use_enable gtk` \
-		`use_enable qt` \
-		`use_enable python` \
-		`use_enable mono` \
-		`use_enable kernel_linux dnotify` \
+		$(use_with X x) \
+		$(use_enable gtk) \
+		$(use_enable python) \
+		$(use_enable mono) \
+		$(use_enable kernel_linux dnotify) \
+		$(use_enable gcj) \
+		$(use_enable debug verbose-mode) \
+		$(use_enable debug checks) \
+		$(use_enable debug asserts) \
 		--enable-glib \
-		--enable-verbose-mode \
-		--enable-checks \
-		--enable-asserts \
 		--with-system-pid-file=/var/run/dbus.pid \
 		--with-system-socket=/var/run/dbus/system_bus_socket \
 		--with-session-socket-dir=/tmp \
 		--with-dbus-user=messagebus \
-		`use_enable doc doxygen-docs` \
+		$(use_enable doc doxygen-docs) \
 		--disable-xml-docs \
 		${myconf} \
 		|| die "econf failed"
@@ -100,11 +88,11 @@ src_compile() {
 	addpredict /usr/lib64/python2.2/
 	addpredict /usr/lib64/python2.1/
 
-	emake
+	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# Backwards compatibility for old stuff
 	# we can remove this when dbi (plural of dbus)
@@ -112,8 +100,7 @@ src_install() {
 	dosym /usr/bin/dbus-daemon /usr/bin/dbus-daemon-1
 
 	# initscript
-	exeinto /etc/init.d/
-	doexe ${FILESDIR}/dbus
+	doinitd ${FILESDIR}/dbus
 
 	# dbus X session script (#77504)
 	# FIXME : turns out to only work for GDM, better solution needed
@@ -137,8 +124,21 @@ pkg_preinst() {
 	enewuser messagebus -1 "-1" /dev/null messagebus || die "Problem adding messagebus user"
 }
 
+pkg_postrm() {
+	python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/dbus
+}
+
 pkg_postinst() {
+	python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/dbus
+
 	einfo "To start the DBUS system-wide messagebus by default"
 	einfo "you should add it to the default runlevel :"
 	einfo "\`rc-update add dbus default\`"
+
+	ewarn
+	ewarn "There have been major ABI/API changes.  This version will not"
+	ewarn "work with other packages.  We are not responsible for a broken"
+	ewarn "system. The sonames have changed, so you must run a revdep-rebuild"
+	ewarn "afterwards to ensure that the packages dont die."
+	ewarn
 }

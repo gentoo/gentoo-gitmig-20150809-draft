@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.66 2005/12/17 13:07:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.67 2005/12/21 09:11:00 cardoe Exp $
+
+*dbus-0.60-r1 (21 Dec 2005)
+*dbus-0.50-r2 (21 Dec 2005)
+
+  21 Dec 2005; Doug Goldstein <cardoe@gentoo.org> -dbus-0.23.2.ebuild,
+  -dbus-0.23.2-r1.ebuild, -dbus-0.23.4.ebuild, -dbus-0.50.ebuild,
+  +dbus-0.50-r2.ebuild, -dbus-0.60.ebuild, +dbus-0.60-r1.ebuild:
+  change libxml2 depend to 2.6.21 because of bugs in that package made dbus
+  mem usage insane when using it. copied QT fixes to dbus 0.60. Changed the
+  verbose and checks to only be run when compiled with debug USE flag. Added
+  support for Java bindings. Fixed up depends in general. Cleaned up ebuilds
+  in general.
 
   17 Dec 2005; Guy Martin <gmsoft@gentoo.org> dbus-0.50-r1.ebuild:
   Stable on hppa.
