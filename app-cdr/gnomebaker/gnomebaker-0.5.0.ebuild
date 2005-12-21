@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.0.ebuild,v 1.4 2005/12/04 14:38:00 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.0.ebuild,v 1.5 2005/12/21 13:06:13 metalgod Exp $
 
 inherit gnome2
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.10
 	>=media-libs/libogg-1.1.2
-	=media-libs/gstreamer-0.8*"
+	=media-libs/gstreamer-0.8*
+	app-text/scrollkeeper"
 
 RDEPEND="${DEPEND}
 	dvdr? ( app-cdr/dvd+rw-tools )

@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.13 2005/12/04 14:38:00 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.14 2005/12/21 13:06:13 metalgod Exp $
+
+  21 Dec 2005; Luis Medinas <metalgod@gentoo.org> -gnomebaker-0.4.ebuild,
+  -gnomebaker-0.4.1.ebuild, gnomebaker-0.4.2.ebuild,
+  gnomebaker-0.5.0.ebuild, gnomebaker-0.5.0-r1.ebuild:
+  Add scrollkeeper dependency see bug #115928. Removed older versions.
 
   04 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   gnomebaker-0.4.2.ebuild, gnomebaker-0.5.0.ebuild,
