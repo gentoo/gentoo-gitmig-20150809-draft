@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.2 2005/12/19 21:28:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.3 2005/12/21 13:14:39 wolf31o2 Exp $
+
+  21 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/vmware-player-1.0.0.18007-config.patch,
+  +files/vmware-player-1.0.0.18587-config.patch:
+  Renamed patch and fixing bug #115465 (again).
 
 *vmware-player-1.0.0.18587 (19 Dec 2005)
 
