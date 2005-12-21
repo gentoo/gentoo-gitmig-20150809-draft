@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ilbc-rfc3951
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.1 2005/11/26 07:35:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.2 2005/12/21 19:39:44 metalgod Exp $
+
+  21 Dec 2005; Luis Medinas <metalgod@gentoo.org> ilbc-rfc3951-0.ebuild:
+  Added ~amd64 keyword for bug #116001.
 
 *ilbc-rfc3951-0 (26 Nov 2005)
 

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 282b692a56e88ffd3d71f505d8616403 ChangeLog 402
+MD5 493afd34634dae9cc3e6a535871152e0 ChangeLog 513
 MD5 b2325878ba7e46058b0e1d9deead53d6 files/digest-ilbc-rfc3951-0 64
-MD5 625d95305f1c558badaebb0b5f1a65d1 ilbc-rfc3951-0.ebuild 680
+MD5 e01e6f55e7393589546014cc6419d8bc ilbc-rfc3951-0.ebuild 684
 MD5 270deeec3a988c14356bc7a771c86fc8 metadata.xml 319
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDiBA5mdTrptrqvGERAtlfAJ0WV0DY34cKJgsKoWQlPggz4fhkIgCcC9XY
-IGNqPM5NCv/fWaJ1e62XJ4s=
-=OVRS
+iD8DBQFDqa93wUpWvClEHQoRAlpxAJ9k5/fE0TXuAKszghPGk/WUnrQwKACfdGwl
+mhRF8JgsxBwNVPsrnlGj9P4=
+=ZoDS
 -----END PGP SIGNATURE-----
