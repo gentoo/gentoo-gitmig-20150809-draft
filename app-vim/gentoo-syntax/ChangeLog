@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.55 2005/09/05 04:19:49 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.56 2005/12/21 21:58:36 ciaranm Exp $
+
+*gentoo-syntax-20051221 (21 Dec 2005)
+
+  21 Dec 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20051221.ebuild:
+  New release. Fix INSTALL_MASK highlighting in make.conf, fix USE flag
+  highlighting for flags that start with a number (bug #107959).
 
   05 Sep 2005; Lina Pezzella <j4rg0n@gentoo.org>
   gentoo-syntax-20050618.ebuild:
