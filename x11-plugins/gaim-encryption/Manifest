@@ -6,6 +6,7 @@ MD5 7921f3ce22b477f7a69db7f51ef56669 files/digest-gaim-encryption-2.36 72
 MD5 185f9fc2aa864a611189ad3b74bcfbab files/digest-gaim-encryption-2.37 72
 MD5 4f47ba1a5d57da23681402f4f6241581 files/digest-gaim-encryption-2.38 72
 MD5 b1fb5bb2c2c89945051c4ba41c73e3a2 files/digest-gaim-encryption-3.0_beta1 76
+MD5 b1fb5bb2c2c89945051c4ba41c73e3a2 files/digest-gaim-encryption-3.0_beta1-r1 76
 MD5 c33a7ee554fd61adb3272fabea5a0487 files/encryption_icon_fix.diff 528
 MD5 fd1990d36ce5bb9894308ba2e72ac71b gaim-encryption-2.32-r1.ebuild 973
 MD5 180b65fd7ff3e459281b883a9a3c46bb gaim-encryption-2.34.ebuild 979
@@ -13,5 +14,6 @@ MD5 57d582591db88b3ff11256053a27eef5 gaim-encryption-2.35.ebuild 979
 MD5 1d87e2e19db2674121a0ac6fd1729946 gaim-encryption-2.36.ebuild 973
 MD5 89dc5f0c668b2281d7914d72cc4d2931 gaim-encryption-2.37.ebuild 978
 MD5 b45fff756dd5498a00552868cd96765e gaim-encryption-2.38.ebuild 999
+MD5 097da6f2a273d4fdb2619539215b973a gaim-encryption-3.0_beta1-r1.ebuild 1119
 MD5 757b58073867ea176efb65fd8c867363 gaim-encryption-3.0_beta1.ebuild 1122
 MD5 f9adb0cad926cb239205a2b354cbda8b metadata.xml 286
