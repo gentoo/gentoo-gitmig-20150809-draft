@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.14 2005/12/20 04:37:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.15 2005/12/21 22:24:52 flameeyes Exp $
+
+  21 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> zvbi-0.2.17.ebuild:
+  Add modular x dependencies, general ebuild cleanup.
 
 *zvbi-0.2.17 (20 Dec 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.17.ebuild,v 1.1 2005/12/20 04:37:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.17.ebuild,v 1.2 2005/12/21 22:24:52 flameeyes Exp $
 
 IUSE="X nls v4l dvb doc"
 
@@ -12,28 +12,32 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~alpha ~ia64"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
+	media-libs/libpng
+	sys-libs/zlib"
+
+DEPEND="${RDEPEND}
+	X? ( || ( (
+			x11-libs/libXt
+			x11-proto/xproto
+		) virtual/x11 ) )
+	virtual/os-headers
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
 src_compile() {
-	local myconf="`use_enable nls` \
-		`use_enable v4l` \
-		`use_enable dvb` "
+	econf \
+		$(use_enable nls) \
+		$(use_enable v4l) \
+		$(use_enable dvb) \
+		$(use_with X x) \
+		|| die "econf failed"
 
-	use X && myconf="${myconf} --with-x"
-	use X || myconf="${myconf} --without-x"
-
-	econf ${myconf} || die
-
-	cp doc/zdoc-scan doc/zdoc-scan.orig
-	sed -e 's:usr/local/share/gtk-doc:usr/share/gtk-doc:' \
-		doc/zdoc-scan.orig > doc/zdoc-scan
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install () {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	use doc && dohtml -a png,gif,html,css doc/html/*
 }
