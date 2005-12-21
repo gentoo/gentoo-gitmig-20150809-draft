@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88ad413edd4d9b99a7d33ee5793fab50 ChangeLog 1979
+MD5 12453ab0856e07c2c1164f8ce0b0a26f ChangeLog 1998
 MD5 d8fa2dd92bb4b41f8b46fc264520b13d files/digest-jamvm-1.3.0 63
 MD5 20671d3856aee61c12d02b0d26bab13a files/digest-jamvm-1.3.1 63
 MD5 401c6a274e9315215b7ce2e3689966bd files/digest-jamvm-1.3.3 63
@@ -14,7 +14,7 @@ MD5 0637a933ecb6e8cedfc4ddfcf3491728 metadata.xml 310
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqZH2QiJ/wx066S4RAsN1AJsF451yIiIwcRBjBYRZTrZzotO0AgCfaubm
-owSqXPbMV6xBdY2ep3dmH8o=
-=+hec
+iD8DBQFDqZLRQiJ/wx066S4RAjjZAKCk08R6XYkHUR9eOJ1z2JEuXr9V/QCeKxMs
+U+/lrdcE9N9uP40UtIkHRP8=
+=dFHu
 -----END PGP SIGNATURE-----
