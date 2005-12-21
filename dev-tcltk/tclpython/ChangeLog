@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclpython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.5 2005/09/02 03:37:58 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.6 2005/12/21 20:48:10 marienz Exp $
+
+  21 Dec 2005; Marien Zwart <marienz@gentoo.org> tclpython-3.1.ebuild:
+  Correct homepage.
 
   02 Sep 2005; Luis Medinas <metalgod@gentoo.org> ChangeLog:
   Marked Stable on AMD64.

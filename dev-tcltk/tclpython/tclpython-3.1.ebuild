@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1.ebuild,v 1.5 2004/11/06 15:40:04 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1.ebuild,v 1.6 2005/12/21 20:48:10 marienz Exp $
 
 inherit distutils toolchain-funcs
 
 DESCRIPTION="a Python package for Tcl"
-HOMEPAGE="http://jfontain.free.fr/tclperl.htm"
+HOMEPAGE="http://jfontain.free.fr/tclpython.htm"
 SRC_URI="http://jfontain.free.fr/${P}.tar.gz"
 
 LICENSE="GPL-2"
