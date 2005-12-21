@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.233 2005/12/17 02:08:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.234 2005/12/21 00:19:34 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -973,10 +973,10 @@ gcc_src_unpack() {
 			EPATCH_MULTI_MSG="Applying uClibc patches ..." \
 			epatch "${WORKDIR}"/uclibc
 		fi
-		do_gcc_HTB_patches
-		do_gcc_SSP_patches
-		do_gcc_PIE_patches
 	fi
+	do_gcc_HTB_patches
+	do_gcc_SSP_patches
+	do_gcc_PIE_patches
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
@@ -991,7 +991,7 @@ gcc_src_unpack() {
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
 
-	local version_string="${GCC_CONFIG_VER}"
+	local version_string=${GCC_CONFIG_VER}
 
 	# Backwards support... add the BRANCH_UPDATE for 3.3.5-r1 and 3.4.3-r1
 	# which set it directly rather than using ${PV}
@@ -1259,7 +1259,7 @@ gcc_do_make() {
 	S=${WORKDIR}/build
 
 	# Set make target to $1 if passed
-	[[ -n $1 ]] && GCC_MAKE_TARGET="$1"
+	[[ -n $1 ]] && GCC_MAKE_TARGET=$1
 	# default target
 	if is_crosscompile || tc-is-cross-compiler ; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
