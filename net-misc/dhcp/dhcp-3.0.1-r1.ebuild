@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1-r1.ebuild,v 1.12 2005/12/04 21:19:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1-r1.ebuild,v 1.13 2005/12/21 14:18:30 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -106,7 +106,7 @@ pkg_postinst() {
 	einfo "The DHCP ebuild now includes chroot support."
 	einfo "If you like to run dhcpd in chroot AND this is a new install OR"
 	einfo "your dhcpd doesn't already run in chroot, simply run:"
-	einfo "  ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "  emerge --config =${PF}"
 	einfo "Before running the above command you might want to change the chroot"
 	einfo "dir in /etc/conf.d/dhcp, otherwise /chroot/dhcp will be used."
 	echo
