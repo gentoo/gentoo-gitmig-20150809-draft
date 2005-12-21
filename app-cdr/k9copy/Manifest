@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 695b1510473edd4bda0d33e9573ee462 ChangeLog 367
+MD5 412c49d5db8ff4392ec6cc70bf54c2d1 ChangeLog 505
 MD5 8d91a1317c69a55813fb907b7055ff24 files/digest-k9copy-1.0.1b 65
+MD5 5a5d88aa77c8af2303e4ddecd903ac2e files/digest-k9copy-1.0.2 65
 MD5 d95ce28d99c8a2eb6d8dcb812f5a0a6d k9copy-1.0.1b.ebuild 619
+MD5 48e5b18a141fafed84435c29e9bba274 k9copy-1.0.2.ebuild 665
 MD5 4ce63071510202110ebc72dd9ee3924e metadata.xml 214
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDniguwUpWvClEHQoRAkKHAJ9hKeZGAKW7qUqKMLaB4x7LMgoeSACdHFtt
-fMhb6ecL+yaYvDNOKl+FC1I=
-=QPp3
+iD8DBQFDqVUCwUpWvClEHQoRAnUmAJ9foNJbvCbp1+TrAaHllKWdysReLACfZnFR
+Xai19nBcqaIXBnTGNLQaL7I=
+=2gHL
 -----END PGP SIGNATURE-----
