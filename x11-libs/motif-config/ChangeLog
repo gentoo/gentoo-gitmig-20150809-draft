@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/motif-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.15 2005/12/21 16:32:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.16 2005/12/21 18:44:17 gustavoz Exp $
+
+  21 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  motif-config-0.9.ebuild:
+  Stable on sparc wrt #114234
 
   21 Dec 2005; Markus Rothe <corsair@gentoo.org> motif-config-0.9.ebuild:
   Stable on ppc64; bug #114234
