@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-chan_capi-cm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/ChangeLog,v 1.12 2005/12/21 21:09:00 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/ChangeLog,v 1.13 2005/12/21 22:21:41 stkn Exp $
+
+  22 Dec 2005; Stefan Knoblich <stkn@gentoo.org>
+  files/chan_capi-cm-0.6.1-asterisk-1.2.diff,
+  +files/chan_capi-0.6.1-gentoo.diff, asterisk-chan_capi-cm-0.6.1.ebuild:
+  Hmm... 0.6.1 should really use the right tarball... (thanks jaervosz :)
 
   21 Dec 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/chan_capi-cm-0.6.1-asterisk-1.2.diff,

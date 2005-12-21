@@ -35,12 +35,3 @@
  #include <asterisk/dsp.h>
  #include "xlaw.h"
  #include "chan_capi20.h"
-@@ -4011,7 +4012,7 @@
- 		}
- 		memset(tmp, 0, sizeof(struct ast_capi_pvt));
- 		
--		ast_pthread_mutex_init(&(tmp->lock),NULL);
-+		ast_mutex_init(&(tmp->lock));
- 		
- 		strncpy(tmp->name, conf->name, sizeof(tmp->name) - 1);
- 		strncpy(tmp->context, conf->context, sizeof(tmp->context) - 1);
