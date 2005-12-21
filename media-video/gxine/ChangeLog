@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.56 2005/12/13 01:11:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.57 2005/12/21 00:06:25 flameeyes Exp $
+
+*gxine-0.5.2 (21 Dec 2005)
+
+  21 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> +gxine-0.5.2.ebuild:
+  Bump to latest upstream version.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   gxine-0.5.1-r1.ebuild:
