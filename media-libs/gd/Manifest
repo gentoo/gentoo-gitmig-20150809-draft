@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d85fadd597eba8c4cdba0ab0de3583a gd-2.0.33.ebuild 1088
-MD5 dd997b3de3bba1b67bb918160d090224 gd-2.0.32.ebuild 1015
-MD5 1f071a8d9cce1e655a2ebfb3aca871f7 ChangeLog 9399
-MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
+MD5 7f9bb732b99104fc405454304acac783 ChangeLog 9514
 MD5 ef1f623ab65a05b7e14e9bd61bb02c65 files/digest-gd-2.0.32 61
 MD5 ba0985339b94b8c354d8e3246b8972e0 files/digest-gd-2.0.33 61
 MD5 e87c929b6ea7468d13cc8f2e176f6aaa files/gd-2.0.33-overflow-checks.patch 1382
+MD5 dd997b3de3bba1b67bb918160d090224 gd-2.0.32.ebuild 1015
+MD5 725fb25cee5757981dd4d4183de7d79d gd-2.0.33.ebuild 1090
+MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDqSpZViELBEf1JB0RAqneAJ9ZmfnHkAZ3vSuSthwLofVpAXVhhwCfeuM6
-Em+NGA7pvhDdmiZ/W4IwqZ0=
-=tMO9
+iD8DBQFDqVLRKRy60XGEcJIRAnJaAJ9wZn9UfKvx79CrLbTEw308bLqlyACfe745
+DnQzzUAY30n2JZIIrTY2F3I=
+=wGPX
 -----END PGP SIGNATURE-----
