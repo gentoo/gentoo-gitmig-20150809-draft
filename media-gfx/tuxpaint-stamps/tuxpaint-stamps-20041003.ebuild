@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/tuxpaint-stamps-20041003.ebuild,v 1.3 2005/09/27 12:48:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/tuxpaint-stamps-20041003.ebuild,v 1.4 2005/12/21 19:16:31 metalgod Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${MY_P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 src_unpack() {
 	unpack ${A}
