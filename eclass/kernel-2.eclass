@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.153 2005/11/18 03:58:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.154 2005/12/21 00:17:54 plasmaroo Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -937,6 +937,7 @@ headers___fix() {
 		-e 's/ \(u\|s\)\(8\|16\|32\|64\)$/ __\1\2/g' \
 		-e 's/\([(, ]\)\(u\|s\)64\([, )]\)/\1__\264\3/g' \
 		-e "s/^\(u\|s\)\(8\|16\|32\|64\)\([ "$'\t'"]\)/__\1\2\3/g;" \
+		-e "s/ inline / __inline__ /g" \
 		"$@"
 }
 
