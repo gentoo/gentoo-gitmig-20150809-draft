@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.4 2005/12/20 02:12:57 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.5 2005/12/21 09:43:51 cardoe Exp $
+
+  21 Dec 2005; Doug Goldstein <cardoe@gentoo.org> xorg-docs-1.0.0.ebuild:
+  Adding ~ppc
 
   20 Dec 2005; Stephen P. Becker <geoman@gentoo.org> xorg-docs-1.0.0.ebuild:
   added ~mips keyword
