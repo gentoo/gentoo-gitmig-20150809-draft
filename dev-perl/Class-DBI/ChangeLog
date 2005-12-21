@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.17 2005/12/21 15:33:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.18 2005/12/21 18:33:11 corsair Exp $
+
+  21 Dec 2005; Markus Rothe <corsair@gentoo.org> Class-DBI-3.0.13.ebuild:
+  Added ~ppc64; bug #116301
 
 *Class-DBI-3.0.13 (21 Dec 2005)
 
