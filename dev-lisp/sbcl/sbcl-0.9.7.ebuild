@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.7.ebuild,v 1.2 2005/12/08 06:05:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.7.ebuild,v 1.3 2005/12/21 12:37:46 agriffis Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -13,12 +13,12 @@ BV_AMD64=0.9.7
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
 HOMEPAGE="http://sbcl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
-	mirror://sourceforge/sbcl/${P}-html.tar.bz2
 	x86? ( mirror://sourceforge/sbcl/${PN}-${BV_X86}-x86-linux-binary.tar.bz2 )
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )
 	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )"
+#	mirror://sourceforge/sbcl/${P}-html.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
@@ -32,7 +32,7 @@ DEPEND="=dev-lisp/common-lisp-controller-4*
 
 PROVIDE="virtual/commonlisp"
 
-MY_WORK=${S}/my_work
+MY_WORK=${WORKDIR}/files
 
 pkg_setup() {
 	if use hardened && gcc-config -c |grep -qv vanilla; then
@@ -51,25 +51,15 @@ EOF
 }
 
 src_unpack() {
-	mkdir -p ${MY_WORK} && cp ${FILESDIR}/${PV}/* ${MY_WORK}
+	local a
+
+	mkdir -p ${MY_WORK}
+	cp ${FILESDIR}/${PV}/* ${MY_WORK}
 	sed -i "s,/usr/lib,/usr/$(get_libdir),g" ${MY_WORK}/*
 
-	if use x86; then
-		unpack ${PN}-${BV_X86}-x86-linux-binary.tar.bz2
-		mv ${PN}-${BV_X86} x86-binary
-	elif use ppc; then
-		unpack ${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2
-		mv ${PN}-${BV_PPC}-powerpc-linux ppc-binary
-	elif use sparc; then
-		unpack ${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2
-		mv ${PN}-${BV_SPARC}-sparc-linux sparc-binary || die
-	elif use mips; then
-		unpack ${PN}-${BV_MIPS}-mips-linux-binary.tar.gz
-		mv ${PN}-${BV_MIPS}-mips-linux mips-binary
-	elif use amd64; then
-		unpack ${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2
-		mv ${PN}-${BV_AMD64}-x86-64-linux x86-64-binary
-	fi
+	for a in ${A}; do [[ $a == *binary* ]] && break; done
+	unpack $a
+	mv ${PN}* sbcl-binary || die
 
 	unpack ${P}-source.tar.bz2
 	epatch ${MY_WORK}/sbcl-gentoo.patch || die
@@ -93,25 +83,14 @@ src_unpack() {
 		>>${S}/customize-target-features.lisp
 	cat ${MY_WORK}/customize-target-features.lisp-suffix \
 		>>${S}/customize-target-features.lisp
-	find ${S} -type f -name .cvsignore -exec rm -f '{}' \;
-	find ${S} -depth -type d -name CVS	-exec rm -rf '{}' \;
-	find ${S} -type f -name \*.c -exec chmod 644 '{}' \;
+
+	find ${S} -type f -name .cvsignore -print0 | xargs -0 rm -f
+	find ${S} -depth -type d -name CVS -print0 | xargs -0 rm -rf
+	find ${S} -type f -name \*.c -print0 | xargs -0 chmod 644
 }
 
 src_compile() {
-	local bindir=""
-
-	if use x86; then
-		bindir=../x86-binary
-	elif use ppc; then
-		bindir=../ppc-binary
-	elif use sparc; then
-		bindir=../sparc-binary
-	elif use mips; then
-		bindir=../mips-binary
-	elif use amd64; then
-		bindir=../x86-64-binary
-	fi
+	local bindir="${WORKDIR}/sbcl-binary"
 
 	LANG=C PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
 		./make.sh 'sbcl
@@ -128,10 +107,10 @@ src_install() {
 	unset SBCL_HOME
 
 	insinto /etc/
-	doins ${MY_WORK}/sbclrc	# Gentoo specific (from Debian)
+	doins ${MY_WORK}/sbclrc || die	# Gentoo specific (from Debian)
 
 	exeinto /usr/$(get_libdir)/common-lisp/bin
-	doexe ${MY_WORK}/sbcl.sh	# Gentoo specific (from Debian)
+	doexe ${MY_WORK}/sbcl.sh || die	# Gentoo specific (from Debian)
 
 	dodir /usr/share/man
 	dodir /usr/share/doc/${PF}
@@ -153,8 +132,8 @@ src_install() {
 
 	if ! use nosource; then
 		# install the SBCL source
-		find ${S}/src -type f -name \*.fasl |xargs rm -f
-		mv ${S}/src ${D}/usr/$(get_libdir)/sbcl/
+		cp -pPR ${S}/src ${D}/usr/$(get_libdir)/sbcl
+		find ${D}/$(get_libdir)/sbcl/src -type f -name \*.fasl -print0 | xargs -0 rm -f
 	fi
 
 	impl-save-timestamp-hack sbcl || die

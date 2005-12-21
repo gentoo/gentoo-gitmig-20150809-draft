@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 04d313566bff6461eae90feee320a63f ChangeLog 23715
+MD5 978a0b0a2aef49ccc1a8490e95b83989 ChangeLog 24051
 MD5 45c4c194bdc01c92730e2f8ea5bbb2e5 files/0.9.3/README.Gentoo 1060
 MD5 683427165f7d0717333bbb9762972b8d files/0.9.3/customize-target-features.lisp-prefix 95
 MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.3/customize-target-features.lisp-suffix 8
@@ -28,11 +28,11 @@ MD5 ff0b33e0c23970beea9db1cd99ef9f81 files/digest-sbcl-0.9.7 556
 MD5 276b2c3efa0ff299306d94ad4704a9e2 metadata.xml 1004
 MD5 e6a8dc74061cced7fd5fab222e795d5f sbcl-0.9.3.ebuild 5046
 MD5 845ba0e216f2adf5eb504a5eb06b9037 sbcl-0.9.4.ebuild 5046
-MD5 63e4169adc2bf48142b3b19d30daec1f sbcl-0.9.7.ebuild 5048
+MD5 6e7d5e90cc0ce831ea0dd037bae88850 sbcl-0.9.7.ebuild 4416
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl81vyiNZaEAZA+ARAnglAJ9/lEgu6RXdiRIYz+546aD6HvUFbgCfWV75
-M7+JeydgeYgNblnmQPfZO80=
-=ypaZ
+iD8DBQFDqU2MJrHF4yAQTrARApiSAJ9oiMHfwJY32SjoL1xIlU+bTaTpsACfc+AK
+e4FXz+3tXDgXEjggkVFs46A=
+=xAzA
 -----END PGP SIGNATURE-----
