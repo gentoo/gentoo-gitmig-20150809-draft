@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4793 2005/12/21 19:25:26 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4794 2005/12/21 20:31:32 ciaranm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ciaran McCreesh <ciaranm@gentoo.org> (21 Dec 2005)
+# Pending death, bug #115707.
+dev-libs/commonc++
 
 # Luca Longinotti <chtekk@gentoo.org> (21 Dec 2005)
 # Doesn't work reliably with new PDO 1.0.X and is
