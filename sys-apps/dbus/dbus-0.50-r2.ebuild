@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.1 2005/12/21 09:11:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.2 2005/12/21 16:59:01 cardoe Exp $
 
 inherit eutils mono python multilib autotools debug qt3
 
@@ -38,11 +38,11 @@ DEPEND="${RDEPEND}
 				   >=dev-util/mono-tools-1.1.9 ) )"
 
 pkg_setup() {
-	if use gcj && ! built_with_use sys-devel/gcc gcj; then
-		eerror "To build the Java bindings for dbus, you must re-build gcc"
-		eerror "with the 'gcj' USE flag. Add 'gcj' to USE and re-emerge gcc."
-		die "gcc needs gcj support to use the java bindings"
-	fi
+#	if use gcj && ! built_with_use sys-devel/gcc gcj; then
+#		eerror "To build the Java bindings for dbus, you must re-build gcc"
+#		eerror "with the 'gcj' USE flag. Add 'gcj' to USE and re-emerge gcc."
+#		die "gcc needs gcj support to use the java bindings"
+#	fi
 
 	PKG_CONFIG_PATH="${QTDIR}/lib/pkgconfig"
 }
@@ -88,7 +88,6 @@ src_compile() {
 		$(use_enable debug verbose-mode) \
 		$(use_enable debug checks) \
 		$(use_enable debug asserts) \
-		$(use_enable gcj) \
 		--enable-glib \
 		--with-system-pid-file=/var/run/dbus.pid \
 		--with-system-socket=/var/run/dbus/system_bus_socket \
@@ -98,6 +97,7 @@ src_compile() {
 		--disable-xml-docs \
 		${myconf} \
 		|| die "econf failed"
+## $(use_enable gcj) 
 
 	# Don't build the mono examples, they require gtk-sharp
 	touch ${S}/mono/example/{bus-listener,echo-{server,client}}.exe
