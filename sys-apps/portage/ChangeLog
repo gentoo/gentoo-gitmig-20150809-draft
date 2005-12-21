@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.50 2005/12/17 15:22:09 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.51 2005/12/21 17:18:47 betelgeuse Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  21 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> portage-2.0.53.ebuild:
+  Marked stable on x86 for bug #108082.
 
   18 Dec 2005; Jason Stubbs <jstubbs@gentoo.org>
   portage-2.1_pre1.ebuild:
