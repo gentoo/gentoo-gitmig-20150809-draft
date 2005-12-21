@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.12.6.ebuild,v 1.1 2005/12/06 15:14:56 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.12.6.ebuild,v 1.2 2005/12/21 08:44:32 astinus Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
@@ -16,7 +16,7 @@ DATE="20051206"
 MY_P="xen-3.0-testing-${DATE}"
 SRC_URI="${KERNEL_URI} mirror://gentoo/${MY_P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 DEPEND=">=app-emulation/xen-3.0.0"
 S="${WORKDIR}"
 RESTRICT="nostrip"
