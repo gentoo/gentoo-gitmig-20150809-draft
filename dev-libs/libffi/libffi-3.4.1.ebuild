@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.9 2005/07/14 21:49:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.10 2005/12/21 13:35:47 seemant Exp $
 
 IUSE="nls nptl"
 SLOT="0"
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic libtool versionator
 
 # This ebuild mod'd from libstdc++ compatbility package ebuild to create
 #   a similar structure for libffi, which is also included in gcc sources.
@@ -60,8 +60,8 @@ S=${WORKDIR}/gcc-${PV}
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
 LOC="/usr"
-MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
-MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
+MY_PV="$(get_version_component_range 1-2)"
+MY_PV_FULL="$(get_version_component_range 1-3)"
 
 LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
