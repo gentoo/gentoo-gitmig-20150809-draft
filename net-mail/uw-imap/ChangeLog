@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.84 2005/12/20 13:12:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.85 2005/12/21 16:25:02 corsair Exp $
+
+  21 Dec 2005; Markus Rothe <corsair@gentoo.org> uw-imap-2004g-r2.ebuild:
+  Added ~ppc64; bug #101051
 
   20 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   uw-imap-2004g-r2.ebuild:
