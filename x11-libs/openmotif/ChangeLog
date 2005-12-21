@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.113 2005/12/21 18:47:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.114 2005/12/21 19:36:02 metalgod Exp $
+
+  21 Dec 2005; Luis Medinas <metalgod@gentoo.org>
+  openmotif-2.1.30-r13.ebuild, openmotif-2.2.3-r8.ebuild:
+  Stable on amd64 for bug #114234.
 
   21 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   openmotif-2.1.30-r13.ebuild, openmotif-2.2.3-r8.ebuild:
