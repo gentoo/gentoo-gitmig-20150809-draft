@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.24 2005/12/21 06:29:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.25 2005/12/21 07:03:51 halcy0n Exp $
+
+  21 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gd-2.0.33.ebuild:
+  Stable on x86; bug #112937
 
   21 Dec 2005; Markus Rothe <corsair@gentoo.org> gd-2.0.33.ebuild:
   Stable on ppc64; bug #112937
