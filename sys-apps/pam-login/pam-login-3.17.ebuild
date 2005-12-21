@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.14 2005/12/18 20:45:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.15 2005/12/21 10:00:33 flameeyes Exp $
 
 inherit gnuconfig eutils pam
 
@@ -44,6 +44,10 @@ src_unpack() {
 	use livecd && epatch ${FILESDIR}/${PN}-3.17-query_user_context.patch
 
 	use ppc64 && epatch ${FILESDIR}/${PN/-/_}-Werror-off-ppc64.patch
+
+	# Get rid of -Werror flag
+	sed -i -e 's:-Werror::' configure{,.in}
+
 	# Fix configure scripts to recognize linux-mips
 	# (imports updated config.sub and config.guess)
 	gnuconfig_update
