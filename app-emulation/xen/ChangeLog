@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.19 2005/12/08 12:55:33 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.20 2005/12/21 08:34:02 astinus Exp $
+
+  21 Dec 2005; Alex Howells <astinus@gentoo.org> xen-3.0.0-r1.ebuild:
+  Keyword ~amd64 added, works fine for me!
 
   08 Dec 2005; <chrb@gentoo.org> xen-3.0.0-r1.ebuild:
   rename cflags -> custom-cflags (like mplayer, grub..)
