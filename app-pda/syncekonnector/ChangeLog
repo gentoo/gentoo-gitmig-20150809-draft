@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/syncekonnector
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.1 2005/12/01 04:25:23 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.2 2005/12/21 19:03:09 chriswhite Exp $
+
+*syncekonnector-0.2.1-r1 (21 Dec 2005)
+
+  21 Dec 2005; Chris White <chriswhite@gentoo.org>
+  +files/syncekonnector-0.2.1-kde3.5.patch, +files/kpimprefs.h,
+  +syncekonnector-0.2.1-r1.ebuild:
+  Fixes some api compile errors in bug #114311.
 
   01 Dec 2005; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Initial commit.  Added for an upcomming change to my pda guide.
