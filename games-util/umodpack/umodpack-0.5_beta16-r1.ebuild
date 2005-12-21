@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.1 2005/05/09 04:55:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.2 2005/12/21 23:07:04 vapier Exp $
 
 inherit perl-module toolchain-funcs
 
@@ -17,7 +17,7 @@ IUSE="X"
 DEPEND="dev-lang/perl
 	dev-perl/Archive-Zip
 	dev-perl/Tie-IxHash
-	X? ( virtual/x11 dev-perl/perl-tk )"
+	tcltk? ( dev-perl/perl-tk )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -39,7 +39,7 @@ src_install() {
 	mydoc="Changes"
 	perl-module_src_install
 	dobin umod umr-0.3/umr || die "umod/umr failed"
-	if use X ; then
+	if use tcltk ; then
 		dobin xumod || die "xumod failed"
 	fi
 }
