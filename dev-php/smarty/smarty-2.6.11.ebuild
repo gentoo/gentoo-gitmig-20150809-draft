@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.10-r1.ebuild,v 1.1 2005/11/24 12:26:46 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.11.ebuild,v 1.1 2005/12/21 06:18:21 sebastian Exp $
 
 PHP_LIB_NAME="Smarty"
 
