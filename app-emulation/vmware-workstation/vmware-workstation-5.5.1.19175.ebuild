@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.18463.ebuild,v 1.5 2005/12/13 16:02:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175.ebuild,v 1.1 2005/12/21 19:50:40 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -10,7 +10,7 @@ inherit eutils
 
 S=${WORKDIR}/vmware-distrib
 #ANY_ANY="vmware-any-any-update94"
-NP="VMware-workstation-5.5.0-18463"
+NP="VMware-workstation-5.5.1-19175"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
@@ -65,8 +65,7 @@ src_unpack() {
 	# patch the config to not install desktop/icon files
 	epatch ${FILESDIR}/${P}-config.patch
 	# patch the config to make /etc/vmware/config writable
-# I am commenting this until I can get a proper patch.  Blame the whiners.
-#	epatch ${FILESDIR}/${P}-config2.patch
+	epatch ${FILESDIR}/${P}-config2.patch
 #	unpack ${ANY_ANY}.tar.gz
 #	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 #	cd ${S}/${ANY_ANY}
@@ -208,6 +207,7 @@ pkg_config() {
 
 pkg_postinst() {
 	update-mime-database /usr/share/mime
+	[ -d /etc/vmware ] && chown -R root:vmware /etc/vmware
 
 	# This is to fix the problem where the not_configured file doesn't get
 	# removed when the configuration is run. This doesn't remove the file
