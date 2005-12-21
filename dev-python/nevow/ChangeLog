@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.8 2005/12/05 17:16:11 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.9 2005/12/21 13:14:45 marienz Exp $
+
+*nevow-0.7.0 (21 Dec 2005)
+
+  21 Dec 2005; Marien Zwart <marienz@gentoo.org> +nevow-0.7.0.ebuild:
+  Version bump.
 
 *nevow-0.6.0 (05 Dec 2005)
 
