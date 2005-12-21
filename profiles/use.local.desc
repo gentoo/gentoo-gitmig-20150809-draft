@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1624 2005/12/21 07:17:32 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1625 2005/12/21 15:16:31 markusle Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -258,6 +258,8 @@ dev-java/sun-jre-bin:browserplugin - Install netscape-compatible plugin (DEPRECA
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
 dev-java/velocity:j2ee - Add j2ee support
+dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
+dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
 dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
