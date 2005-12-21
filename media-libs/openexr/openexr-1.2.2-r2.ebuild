@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.1 2005/12/18 17:57:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.2 2005/12/21 21:33:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	econf \
 		$(use_enable examples imfexamples) \
 		--without-fltk-config
-	
+
 	emake || die "make failed"
 }
 
