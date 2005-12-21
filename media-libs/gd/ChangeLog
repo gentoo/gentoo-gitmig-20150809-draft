@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.22 2005/12/13 05:31:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.23 2005/12/21 01:55:23 vapier Exp $
+
+*gd-2.0.33 (21 Dec 2005)
+
+  21 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gd-2.0.33-overflow-checks.patch, +gd-2.0.33.ebuild:
+  Add some sanity checks to prevent overflows #112937.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; gd-2.0.32.ebuild:
   Add modular X dependencies.
