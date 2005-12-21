@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.32 2005/07/29 21:43:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.33 2005/12/21 00:14:28 vanquirius Exp $
+
+  21 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> analog-5.32.ebuild,
+  analog-6.0.ebuild:
+  Add check if libgd is built with png support for bug 115706. Thanks to Simon
+  Matthews <simon+bugzilla at matthews-family dot org dot uk>.
 
   29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> analog-6.0.ebuild:
   New license is GPL-2, as stated in Licence.txt. Fixes bug 99807. Thanks to

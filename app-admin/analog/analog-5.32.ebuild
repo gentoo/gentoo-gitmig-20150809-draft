@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.18 2005/02/24 02:14:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.19 2005/12/21 00:14:28 vanquirius Exp $
 
 inherit eutils
 
@@ -22,8 +22,13 @@ DEPEND=">=dev-libs/libpcre-3.4
 pkg_setup() {
 	if ! built_with_use media-libs/gd jpeg ; then
 		eerror "libgd is missing jpeg support. Please add"
-		eerror "'jpeg' to your USE flags, and re-emerge libgd."
+		eerror "'jpeg' to your USE flags, and re-emerge media-libs/gd."
 		die "libgd needs jpeg support"
+	fi
+	if ! built_with_use media-libs/gd png ; then
+		eerror "libgd is missing jpeg support. Please add"
+		eerror "'png' to your USE flags, and re-emerge media-libs/gd."
+		die "libgd needs png support"
 	fi
 }
 
