@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.5-ant,v 1.4 2005/09/11 11:26:42 axxo Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.5-ant,v 1.5 2005/12/21 20:45:29 betelgeuse Exp $
 
 # Extract launch and ant arguments, (see details below).
 ant_exec_args=
@@ -79,7 +79,7 @@ if [ -z $JAVA_HOME ] ; then
 fi
 
 if [ -z $JAVA_HOME ] ; then
-  echo "Error: No JDK found!"
+  echo 'Error: No JDK found!'
   echo "Try using java-config script to set your JDK"
   echo "Remember that you need a JDK not a JRE"
   exit 1
