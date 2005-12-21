@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.0.ebuild,v 1.7 2005/12/19 19:07:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.0.ebuild,v 1.8 2005/12/21 21:02:08 mr_bones_ Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -13,9 +13,8 @@ IUSE=""
 
 RDEPEND="${RDEPEND}
 	|| ( (
-			x11-misc/xkbdata 
+			x11-misc/xkbdata
 			x11-apps/setxkbmap
 		) virtual/x11 )"
 
 PATCHES="${FILESDIR}/${P}-modularxkb.patch"
-
