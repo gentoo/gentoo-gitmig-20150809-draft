@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0d031983ceb19d8f45f3be18b316cfa7 ChangeLog 3739
 MD5 5f94105e0b503a39fda5fb65d885e16c files/2.86-gentoo.patch 641
 MD5 3ba9251f1f4f0ae0dd30d682b28183dd files/2.86-selinux.patch 6525
 MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
 MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86 132
 MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86-r3 132
-MD5 0e94e6657416b0d48d13abf86297f2e4 files/inittab 1667
+MD5 1a4d6956c283308cfefa26c0f7c44c4c files/inittab 1645
 MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
 MD5 a20a459c789828c7b994e6ec93ed223a files/sysvinit-2.86-POSIX-1003.1e.patch 1358
 MD5 b956965acd5408afa0a3937001b2d55e files/sysvinit-2.86-docs.patch 1899
@@ -17,12 +14,5 @@ MD5 180a4654bbd070b1264a440c753e6cc0 files/sysvinit-2.86-shutdown-usage.patch 23
 MD5 eff3665594ef25bf70220d6cf0c84dcb files/sysvinit-2.86-utmp-64bit.patch 1112
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
-MD5 cfd1541e1aa51df5cc17e1bec2b5746c sysvinit-2.86-r3.ebuild 2732
+MD5 0606c59b8ae0db772a9f3968a3c94be4 sysvinit-2.86-r3.ebuild 3072
 MD5 6eec1ad98ec6dd5dad32785f73f469c0 sysvinit-2.86.ebuild 2503
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlmx+gIKl8Uu19MoRArbRAJ48M45oc7VjX5WOW0q25qBirNFiHACfb0a2
-LyOelyJs+NbEPJBKeMqjS+E=
-=mQD0
------END PGP SIGNATURE-----

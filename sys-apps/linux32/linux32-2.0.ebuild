@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux32/linux32-2.0.ebuild,v 1.2 2005/07/08 04:20:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux32/linux32-2.0.ebuild,v 1.3 2005/12/22 01:58:42 vapier Exp $
 
 DESCRIPTION="A simple utility that tricks uname into returning a 32bit environment identifier"
 HOMEPAGE="http://www.gentoo.org/"
@@ -12,7 +12,7 @@ KEYWORDS="-* ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 src_compile() {
-	emake linux32
+	emake linux32 || die
 }
 
 src_install() {
