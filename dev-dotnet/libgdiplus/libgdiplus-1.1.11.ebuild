@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.10.ebuild,v 1.2 2005/12/22 09:07:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.11.ebuild,v 1.1 2005/12/22 09:07:32 latexer Exp $
 
 inherit libtool eutils flag-o-matic toolchain-funcs
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-libungif-configure-fix.diff
+	epatch ${FILESDIR}/${PN}-1.1.10-libungif-configure-fix.diff
 	libtoolize --copy --force || die "libtoolize failed"
 	autoheader || die "autoheader failed"
 	aclocal || die "aclocal failed"

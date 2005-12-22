@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.45 2005/11/14 05:05:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.46 2005/12/22 09:07:32 latexer Exp $
+
+*libgdiplus-1.1.11 (22 Dec 2005)
+
+  22 Dec 2005; Peter Johanson <latexer@gentoo.org>
+  +files/libgdiplus-1.1.10-libungif-configure-fix.diff,
+  libgdiplus-1.1.10.ebuild, +libgdiplus-1.1.11.ebuild:
+  Fix for bug #115710 and bump for new release.
 
 *libgdiplus-1.1.10 (14 Nov 2005)
 
