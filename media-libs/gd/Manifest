@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0abff33b207d0b1b3dfd88dcb3b933c0 ChangeLog 9613
+MD5 2e7b05b34f17826aac47305013a11bc7 ChangeLog 9704
 MD5 ef1f623ab65a05b7e14e9bd61bb02c65 files/digest-gd-2.0.32 61
 MD5 ba0985339b94b8c354d8e3246b8972e0 files/digest-gd-2.0.33 61
 MD5 e87c929b6ea7468d13cc8f2e176f6aaa files/gd-2.0.33-overflow-checks.patch 1382
 MD5 04bffaeba0819fd7d5ee67f95084fe44 gd-2.0.32.ebuild 1033
-MD5 705932b8cad7f391f95c0b519bfc3aa0 gd-2.0.33.ebuild 1127
+MD5 a02969069397c0694b372a5394ce8555 gd-2.0.33.ebuild 1126
 MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqep62+ySkm8kpY0RAtXHAJ9igjvhUaEgYGruj9DN0aPW5bXILACgxGCh
-KI2RUfO9ryXGDvPvO1De+bI=
-=bZMP
------END PGP SIGNATURE-----
