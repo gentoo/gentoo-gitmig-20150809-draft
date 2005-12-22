@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-2.2.0040.ebuild,v 1.4 2005/07/18 15:27:06 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-2.2.0040.ebuild,v 1.5 2005/12/22 00:16:22 nichoj Exp $
 
 inherit java-pkg
 
@@ -26,7 +26,7 @@ src_install() {
 	dodoc read.me EULA.txt MSfixes.txt
 	use doc && java-pkg_dohtml -r Help/*
 	use doc && dodoc \
-			books/books.pdf
+			books/books.pdf \
 			books/Msjdbcig/msjdbcig.pdf \
 			books/Msjdbcref/msjdbcref.pdf
 	java-pkg_dojar lib/*.jar

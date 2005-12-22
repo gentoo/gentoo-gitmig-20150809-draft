@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-mssqlserver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.8 2005/05/27 13:12:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.9 2005/12/22 00:16:22 nichoj Exp $
+
+  22 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  jdbc-mssqlserver-2.2.0040.ebuild:
+  Fixed dodoc call (bug #116317).
 
   27 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   jdbc-mssqlserver-2.2.0029.ebuild, jdbc-mssqlserver-2.2.0040.ebuild:
