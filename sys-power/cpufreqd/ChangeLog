@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.22 2005/11/27 09:46:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.23 2005/12/22 11:02:28 brix Exp $
+
+  22 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/nvclock0.8b-fpic.patch, cpufreqd-2.0.0.ebuild:
+  Compile nvclock with -fPIC, bug #111675.
 
 *cpufreqd-2.0.0 (27 Nov 2005)
 
