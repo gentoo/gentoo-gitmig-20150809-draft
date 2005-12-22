@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.0.11.ebuild,v 1.7 2005/01/01 14:50:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.0.11.ebuild,v 1.8 2005/12/22 18:58:31 vanquirius Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="a morse tutor"
 HOMEPAGE="http://aldo.sourceforge.net/"
@@ -13,7 +15,16 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
+src_unpack() {
+	unpack ${A}
+	# compile with gcc 3.4, bug 116223
+	epatch "${FILESDIR}"/${P}-iostream.diff
+}
+
 src_compile() {
+	# use our compiler
+	export CXX="$(tc-getCXX)"
+
 	make libs || die
 	make aldo || die
 }
