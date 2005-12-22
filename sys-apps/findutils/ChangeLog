@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.57 2005/12/19 19:09:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.58 2005/12/22 22:10:14 stefaan Exp $
+
+*findutils-4.1.20-r2 (22 Dec 2005)
+
+  22 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org>
+  +findutils-4.1.20-r2.ebuild:
+  Remove afs support, as it doesn't do anything useful, and just leaves people
+  who want to use newer openafs ebuilds with broken library dependencies (bug
+  #116222)
 
   19 Dec 2005; Ciaran McCreesh <ciaranm@gentoo.org> findutils-4.3.0.ebuild:
   Switch to #include_next rather than copying for regex.h
