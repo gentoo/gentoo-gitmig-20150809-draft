@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/mupad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/ChangeLog,v 1.4 2005/06/26 01:48:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/ChangeLog,v 1.5 2005/12/22 00:18:52 markusle Exp $
+
+  22 Dec 2005; Markus Dittrich <markusle@gentoo.org> ChangeLog:
+  package.mask'ed since binaries contain insecure runpaths. See bug #81745 and
+  #115892.
 
   26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -mupad-2.5.2-r1.ebuild:
   Removed obsolete version.
