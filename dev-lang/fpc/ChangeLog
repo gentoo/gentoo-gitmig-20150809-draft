@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.26 2005/12/17 16:17:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.27 2005/12/22 13:09:38 herbs Exp $
+
+  22 Dec 2005; Herbie Hopkins <herbs@gentoo.org> files/digest-fpc-2.0.2:
+  fix digest on fpc-2.0.0.x86_64-linux.tar, bug 116370.
 
   17 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +fpc-2.0.0-r1.ebuild:
   restore ebuild for dev-lang/lazarus
