@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.1.2.ebuild,v 1.3 2005/10/28 14:34:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.1.2.ebuild,v 1.4 2005/12/22 15:30:49 mr_bones_ Exp $
 
 inherit games
 
 MY_PV=${PV%_p*}
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
-SRC_URI="http://el.tfm.ro/el_${MY_PV//.}_linux.zip
-	ftp://ftp.berlios.de/pub/elc/elc_${MY_PV//.}.tgz
-	mapeditor? ( ftp://ftp.berlios.de/pub/elc/mapedit_${MY_PV//.}.tgz )
+SRC_URI="http://el.tfm.ro/el_${MY_PV//./}_linux.zip
+	ftp://ftp.berlios.de/pub/elc/elc_${MY_PV//./}.tgz
+	mapeditor? ( ftp://ftp.berlios.de/pub/elc/mapedit_${MY_PV//./}.tgz )
 	!nomusic? ( http://el.tfm.ro/el_music_101.zip )"
 
 LICENSE="eternal_lands"
