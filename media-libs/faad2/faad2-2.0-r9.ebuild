@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r9.ebuild,v 1.2 2005/12/22 18:33:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r9.ebuild,v 1.3 2005/12/22 19:31:25 corsair Exp $
 
 inherit eutils libtool flag-o-matic autotools
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE="xmms"
 
 RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
