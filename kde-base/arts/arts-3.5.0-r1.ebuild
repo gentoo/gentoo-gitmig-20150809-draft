@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0-r1.ebuild,v 1.1 2005/12/21 18:24:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0-r1.ebuild,v 1.2 2005/12/22 18:07:19 mr_bones_ Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -45,7 +45,7 @@ src_unpack() {
 	nosspflags="$(test-flags -fno-stack-protector -fno-stack-protector-all)"
 	sed -i -e "s:KDE_CXXFLAGS =\(.*\):KDE_CXXFLAGS = \1 ${nosspflags}:" \
 		${S}/mcopidl/Makefile.am
-	
+
 	# Fix libao/gaim problems with aRTs. See bug #116290.
 	epatch "${FILESDIR}/${PN}-${MY_PV}-check_tmp_dir.patch"
 }
