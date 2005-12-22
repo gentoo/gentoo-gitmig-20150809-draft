@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.24 2005/11/26 11:42:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.25 2005/12/22 23:21:18 vanquirius Exp $
+
+  22 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/libofx-0.8.0-tree.diff, libofx-0.8.0-r1.ebuild:
+  Add fix from Debian to allow this to compile. Should fix bug 116208. Thanks
+  to Daniel Gerstner <d dot gerstner at gmx dot de>.
 
   26 Nov 2005; Simon Stelling <blubb@gentoo.org> libofx-0.8.0-r1.ebuild:
   mark stable on amd64
