@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/pearpc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.8 2005/02/24 18:17:29 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.9 2005/12/22 21:27:03 vanquirius Exp $
+
+*pearpc-0.4 (22 Dec 2005)
+
+  22 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> +pearpc-0.4.ebuild:
+  0.4 version bump for bug 116212. Thanks to Jose daLuz <jdaluz at gmail dot
+  com>.
 
   24 Feb 2005; <port001@gentoo.org> pearpc-0.3.1.ebuild:
   append -Wl,-z,now to ldflags, #75660. Cleaned out old versions.
