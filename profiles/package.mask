@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4798 2005/12/22 11:25:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4799 2005/12/22 15:40:26 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -491,14 +491,6 @@ dev-python/setuptools
 =xfce-extra/xfce4-websearch-0.1.0-r1
 =xfce-extra/xfce4-windowlist-0.1.0-r2
 =xfce-extra/xfce4-xmms-controller-1.4.3-r2
-
-# Olivier Fisette <ribosome@gentoo.org> (04 Oct 2005)
-# New package; requires testing.
-sci-chemistry/namd
-
-# Olivier Fisette <ribosome@gentoo.org> (04 Oct 2005)
-# New package; requires testing.
-sys-cluster/charm
 
 # Marcelo Goes <vanquirius@gentoo.org> (01 Oct 2005)
 # Masking because of bug 107240 (exporting PDF/Latex)
