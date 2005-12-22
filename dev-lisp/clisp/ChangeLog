@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.42 2005/12/12 04:11:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.43 2005/12/22 22:01:55 mkennedy Exp $
+
+  22 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> clisp-2.36.ebuild:
+  Depend on >=dev-db/postgresql-8.0*; Install implementation notes and PDF
+  documentation; Resolves Bug #105703 and #107515 respectively.
 
   12 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog:
   Adjust dev-lisp/common-lisp-controller version dependency; Resolves Bug
