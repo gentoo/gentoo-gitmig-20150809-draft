@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4797 2005/12/22 05:10:54 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4798 2005/12/22 11:25:52 uberlord Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Roy Marples <uberlord@gentoo.org> (22 Dec 2005)
+# bash-3.1-r1 doesn't work with foo() { local -a bar=( "$@" ) }
+# which means baselayout networking won't work correctly
+=app-shells/bash-3.1-r1
 
 # Paul Varner <fuzzyray@gentoo.org> (21 Dec 2005)
 # porthole-0.5.0 being added to the tree for testing. 
