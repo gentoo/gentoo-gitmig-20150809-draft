@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.6 2005/12/12 02:50:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.7 2005/12/22 04:20:32 vapier Exp $
 
 inherit libtool
 
@@ -15,11 +15,11 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-IUSE="jpeg X xml xml2 debug doc gtk"
+IUSE="jpeg X expat xml2 debug doc gtk"
 
 RDEPEND="virtual/ghostscript
-	xml2? ( !xml? ( dev-libs/libxml2 ) )
-	xml? ( dev-libs/expat )
+	xml2? ( !expat? ( dev-libs/libxml2 ) )
+	expat? ( dev-libs/expat )
 	>=media-libs/freetype-2.0.1
 	sys-libs/zlib
 	media-libs/libpng
@@ -63,12 +63,12 @@ src_compile() {
 	#still needed !? <vapier@gentoo.org>
 	#elibtoolize --reverse-deps
 
-	if use xml && use xml2; then
-		einfo "You can specify only one flag of xml and xml2."
+	if use expat && use xml2; then
+		einfo "You can specify only one flag of expat and xml2."
 		einfo "It will be defaulted to expat (like autocheck does)."
 		myconf="${myconf} --with-expat --without-libxml2"
 	else
-		myconf="${myconf} $(use_with xml expat) $(use_with xml2 libxml2)"
+		myconf="${myconf} $(use_with expat) $(use_with xml2 libxml2)"
 	fi
 
 	econf \
@@ -84,12 +84,12 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make install \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		fontdir=/usr/share/libwmf/fonts \
 		wmfonedocdir=/usr/share/doc/${PF}/caolan \
 		wmfdocdir=/usr/share/doc/${PF} \
 		|| die
-	dodoc README AUTHORS COPYING CREDITS ChangeLog NEWS TODO
+	dodoc README AUTHORS CREDITS ChangeLog NEWS TODO
 }
