@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1625 2005/12/21 15:16:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1626 2005/12/22 16:02:16 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -573,6 +573,7 @@ media-gfx/k3d:ngui - build NGUI user-interface plug-in
 media-gfx/k3d:openexr - build OpenEXR plug-ins
 media-gfx/k3d:plib - build plib-based import/export library
 media-gfx/labplot:cdf - Adds cdf data exchange format support
+media-gfx/labplot:kexi - Import and export data from/to MySQL, PostgreSQL etc. via Kexi (app-office/kexi).
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/maya:maya-shaderlibrary - Install the maya shader library
 media-gfx/opendx:cdf - Adds cdf data exchange format support
