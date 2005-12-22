@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.22 2005/12/04 11:31:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.23 2005/12/22 18:32:58 vanquirius Exp $
+
+*meanwhile-1.0.1 (22 Dec 2005)
+
+  22 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> +meanwhile-1.0.1.ebuild:
+  1.0.1 version bump for bug 116265. Thanks to Anthony Giorgio <agiorgio at us
+  dot ibm dot com>.
 
   04 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> meanwhile-0.4.2.ebuild,
   meanwhile-0.5.0.ebuild:
