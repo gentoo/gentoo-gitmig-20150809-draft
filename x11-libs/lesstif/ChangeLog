@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.67 2005/12/21 19:32:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.68 2005/12/22 13:52:39 weeve Exp $
+
+  22 Dec 2005; Jason Wever <weeve@gentoo.org> ChangeLog:
+  Just rebuilding the digest so this works again.
 
   21 Dec 2005; Luis Medinas <metalgod@gentoo.org> lesstif-0.94.4.ebuild:
   Stable on amd64 for bug #114234.
