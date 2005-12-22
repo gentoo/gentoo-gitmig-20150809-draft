@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.93.ebuild,v 1.2 2005/12/21 11:40:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.93.ebuild,v 1.3 2005/12/22 14:18:10 nichoj Exp $
 
 inherit base eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cacaojvm.org/"
 SRC_URI="http://www.complang.tuwien.ac.at/cacaojvm/download/${P}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=">=dev-java/gnu-classpath-0.19"
 DEPEND="dev-java/jikes
