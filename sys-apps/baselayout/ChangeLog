@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.288 2005/12/20 18:05:14 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.289 2005/12/22 04:07:40 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  22 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  baselayout-1.11.13-r1.ebuild, baselayout-1.11.13-r2.ebuild,
+  baselayout-1.11.14.ebuild, baselayout-1.12.0_pre11-r3.ebuild,
+  baselayout-1.12.0_pre12.ebuild:
+  Dont run install -d if the directory already exists since it will reset
+  permissions #116293 by Joel.
 
 *baselayout-1.12.0_pre12 (20 Dec 2005)
 

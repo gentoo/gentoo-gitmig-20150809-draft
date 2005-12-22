@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre11-r3.ebuild,v 1.2 2005/12/16 13:14:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre11-r3.ebuild,v 1.3 2005/12/22 04:07:40 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -111,10 +111,12 @@ kdir() {
 		if [[ $d == /* ]]; then
 			install -d "${args[@]}" "${D}/${d}"
 			cat >> "${D}/usr/share/baselayout/mkdirs.sh" <<EOF
-install -d ${args[@]} "\${ROOT}/${d}" 2>/dev/null \\
-	|| ewarn "  can't create ${d}"
-touch "\${ROOT}/${d}/.keep" 2>/dev/null \\
-	|| ewarn "  can't create ${d}/.keep"
+if [ ! -d "\${ROOT}/${d}" ] ; then \\
+	install -d ${args[@]} "\${ROOT}/${d}" 2>/dev/null \\
+		|| ewarn "  can't create ${d}"
+	touch "\${ROOT}/${d}/.keep" 2>/dev/null \\
+		|| ewarn "  can't create ${d}/.keep"
+fi
 EOF
 		else
 			args=("${args[@]}" "${d}")
