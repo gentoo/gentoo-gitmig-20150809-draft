@@ -1,4 +1,7 @@
-MD5 bc4b65400436c3dac3ccb6bd9be6c32e ChangeLog 3880
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 285fbd86ad2ef7e3631e47c5f4e6b7d6 ChangeLog 3996
 MD5 cc6d3e76dc6a18f3a3bca84b79a0b8f5 files/digest-html-xml-utils-2.8-r1 70
 MD5 cc6d3e76dc6a18f3a3bca84b79a0b8f5 files/digest-html-xml-utils-2.8-r2 70
 MD5 1911d1290459bc65c1319f67fef70e77 files/digest-html-xml-utils-3.4 70
@@ -10,5 +13,12 @@ MD5 b24da29c38a038b66a6aadc9b068a326 html-xml-utils-2.8-r1.ebuild 961
 MD5 d9aa77d5cc20e71d586101c61f86e844 html-xml-utils-2.8-r2.ebuild 1270
 MD5 93b8902f99148c9f16131b8989406c43 html-xml-utils-3.4.ebuild 1273
 MD5 13a843e6442f6f35b1da8ee8bbd6d24e html-xml-utils-3.6.ebuild 1185
-MD5 1e6f083debc035f2d67cbe3c20e51192 html-xml-utils-3.7.ebuild 1162
+MD5 ee4f4c33ac840c3bbe9e2ad0072f3652 html-xml-utils-3.7.ebuild 1170
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDqva+KRy60XGEcJIRAsD/AJ4vhM44Y2wgaD79clOSW6Fykvg/bQCaA40T
+pfKBLm76iDYCsGUyoDWgWgI=
+=VBQo
+-----END PGP SIGNATURE-----
