@@ -1,6 +1,9 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.4 2005/12/20 17:22:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.5 2005/12/22 18:31:23 gustavoz Exp $
+
+  22 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> libmp4v2-1.4.1.ebuild:
+  Keyworded ~sparc wrt #116022
 
   20 Dec 2005; Mark Loeser <halcy0n@gentoo.org> libmp4v2-1.4.1.ebuild:
   Adding eutils to inherit
