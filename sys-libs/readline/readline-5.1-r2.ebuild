@@ -1,16 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.1 2005/12/21 11:21:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.2 2005/12/22 00:09:56 vapier Exp $
 
 inherit eutils multilib
 
 # Official patches
-PLEVEL=""
+# See ftp://ftp.cwru.edu/pub/bash/readline-5.1-patches/
+PLEVEL=1
 
 DESCRIPTION="Another cute console display library"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 SRC_URI="mirror://gnu/readline/${P}.tar.gz
-	${PLEVEL//x/mirror://gnu/${PN}/${PN}-${PV}-patches/${PN}${PV/\.}-}"
+	$(for ((i=1; i<=PLEVEL; i++)); do
+		printf 'ftp://ftp.cwru.edu/pub/bash/readline-%s-patches/readline%s-%03d\n' \
+			${PV} ${PV/\.} ${i}
+		printf 'mirror://gnu/bash/readline-%s-patches/readline%s-%03d\n' \
+			${PV} ${PV/\.} ${i}
+	done)"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,13 +33,14 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd "${S}"
-	for x in ${PLEVEL//x} ; do
-		epatch "${DISTDIR}"/${PN}${PV/\.}-${x}
+	# Official patches
+	local i
+	for ((i=1; i<=PLEVEL; i++)); do
+		epatch "${DISTDIR}"/${PN}${PV/\.}-$(printf '%03d' ${i})
 	done
 	epatch "${FILESDIR}"/bash-3.0-etc-inputrc.patch
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${P}-cleanups.patch
-	epatch "${FILESDIR}"/${P}-callback-segv.patch #115326
 
 	# force ncurses linking #71420
 	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"

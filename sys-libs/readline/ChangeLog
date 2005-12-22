@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.53 2005/12/21 11:21:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.54 2005/12/22 00:09:56 vapier Exp $
+
+  22 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  -files/readline-5.1-callback-segv.patch, readline-5.1-r2.ebuild:
+  Update to use the official readline patch.
 
 *readline-5.1-r2 (21 Dec 2005)
 
