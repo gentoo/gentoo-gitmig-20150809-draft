@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-dvd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.1 2005/12/22 20:39:11 hd_brummy Exp $
+
+*vdr-dvd-0.3.7_pre20051121 (22 Dec 2005)
+
+  22 Dec 2005; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd,
+  +files/rc-addon.sh, +metadata.xml, +vdr-dvd-0.3.7_pre20051121.ebuild:
+  initial import, ebuild taken from gentoo.de overlay, written by myself
+
