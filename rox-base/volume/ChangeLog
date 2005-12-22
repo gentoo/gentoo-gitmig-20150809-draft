@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/volume
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.2 2005/10/17 09:41:46 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.3 2005/12/22 21:35:10 svyatogor Exp $
+
+*volume-007 (22 Dec 2005)
+
+  22 Dec 2005; Sergey Kuleshov <svyatogor@gentoo.org> +volume-007.ebuild:
+  Use authors numbering scheme. Remove old ebuild.
 
 *volume-0.0.7 (17 Oct 2005)
 
