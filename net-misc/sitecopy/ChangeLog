@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.29 2005/09/10 07:01:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.30 2005/12/22 05:32:51 chriswhite Exp $
+
+  22 Dec 2005; Chris White <chriswhite@gentoo.org> metadata.xml,
+  sitecopy-0.16.0.ebuild:
+  x86 stable for bug #116347. Removed broken sftp support. built_with_use to
+  pkg_setup. Readded self as maintianer.
 
 *sitecopy-0.16.0 (10 Sep 2005)
 

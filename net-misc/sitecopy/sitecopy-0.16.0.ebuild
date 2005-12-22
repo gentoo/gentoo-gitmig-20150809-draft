@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.0.ebuild,v 1.1 2005/09/10 07:01:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.0.ebuild,v 1.2 2005/12/22 05:32:51 chriswhite Exp $
 
 inherit eutils toolchain-funcs
 
-IUSE="expat gssapi nls rsh sftp ssl webdav xml2 zlib"
+IUSE="expat gssapi nls rsh ssl webdav xml2 zlib"
 
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.lyra.org/sitecopy/"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 # gnome support is disabled at this point
@@ -27,21 +27,6 @@ pkg_setup() {
 	ewarn "gnome support has been disabled"
 	ewarn "until some major bugs can"
 	ewarn "be fixed regarding it!"
-}
-
-src_unpack() {
-	unpack ${A}
-	sed -i -e \
-		"s:docdir \= .*:docdir \= \$\(prefix\)\/share/doc\/${PF}:" \
-		${S}/Makefile.in || die "Documentation directory patching failed"
-}
-
-src_compile() {
-
-	einfo "Sitecopy uses neon unconditionally for a security bug."
-	einfo "The sitecopy system also checks for zlib, ssl, and xml"
-	einfo "support through neon instead of the actual system libraries"
-	einfo "therefore support must be built into neon."
 
 	if use zlib ; then
 		built_with_use net-misc/neon zlib || die "neon needs zlib support"
@@ -60,6 +45,21 @@ src_compile() {
 		built_with_use net-misc/neon expat && die "neon needs expat support disabled for
 		xml2 support to be enabled"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e \
+		"s:docdir \= .*:docdir \= \$\(prefix\)\/share/doc\/${PF}:" \
+		${S}/Makefile.in || die "Documentation directory patching failed"
+}
+
+src_compile() {
+
+	einfo "Sitecopy uses neon unconditionally for a security bug."
+	einfo "The sitecopy system also checks for zlib, ssl, and xml"
+	einfo "support through neon instead of the actual system libraries"
+	einfo "therefore support must be built into neon."
 
 	# Bug 51585, GLSA 200406-03
 	einfo "Forcing the use of the system-wide neon library (BR #51585)."
@@ -70,7 +70,6 @@ src_compile() {
 			$(use_with gssapi) \
 			$(use_enable nls) \
 			$(use_enable rsh) \
-			$(use_enable sftp) \
 			$(use_with expat) \
 			$(use_with xml2 libxml2 ) \
 			|| die "configuration failed"
@@ -90,13 +89,4 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-}
-
-pkg_postinst() {
-	if use sftp
-	then
-		einfo "Please note that in order to use sftp"
-		einfo "You must have 'protocol sftp instead of ftp"
-		einfo "This is not documented in the man page"
-	fi
 }
