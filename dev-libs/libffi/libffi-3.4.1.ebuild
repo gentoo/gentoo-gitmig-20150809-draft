@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.10 2005/12/21 13:35:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.11 2005/12/22 01:24:46 nichoj Exp $
 
 IUSE="nls nptl"
 SLOT="0"
-inherit eutils flag-o-matic libtool versionator
+inherit eutils flag-o-matic libtool versionator multilib
 
 # This ebuild mod'd from libstdc++ compatbility package ebuild to create
 #   a similar structure for libffi, which is also included in gcc sources.
@@ -63,7 +63,7 @@ LOC="/usr"
 MY_PV="$(get_version_component_range 1-2)"
 MY_PV_FULL="$(get_version_component_range 1-3)"
 
-LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
+LIBPATH="${LOC}/$(get_libdir)/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
@@ -228,11 +228,11 @@ src_install() {
 	rm -Rf ${D}/${LOC}/lib/gcc-lib/
 	rm -Rf ${D}/${LOC}/lib/gcc
 
-	mkdir -p ${D}/${LOC}/lib/${PN}/
-	mv ${D}/${LOC}/{lib,lib64}/* ${D}/${LOC}/lib/${PN}/
+	mkdir -p ${D}/${LOC}/$(get_libdir)/${PN}/
+	mv ${D}/${LOC}/{lib,lib64}/* ${D}/${LOC}/$(get_libdir)/${PN}/
 
 	mkdir -p ${D}/etc/env.d/
-	echo "LDPATH=\"${LOC}/lib/${PN}\"" >> ${D}/etc/env.d/99libffi
+	echo "LDPATH=\"${LOC}/$(get_libdir)/${PN}\"" >> ${D}/etc/env.d/99libffi
 	echo "CPATH=\"${LOC}/include/${PN}\"" >> ${D}/etc/env.d/99libffi
 }
 

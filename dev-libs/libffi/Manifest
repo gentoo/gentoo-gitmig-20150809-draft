@@ -1,4 +1,7 @@
-MD5 ca2b960cc5e735695abf9b540b1b63a8 ChangeLog 5276
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf79b08585fa0936651a87c3089ce5fa ChangeLog 5395
 MD5 ed8f1e978198c34ad3dc3b81c4804199 files/digest-libffi-1.20 63
 MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-libffi-3.3.5 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1 64
@@ -9,6 +12,13 @@ MD5 1ca677e646f4d209e68601c9ba83c629 files/libffi-without-libgcj.dpatch 2255
 MD5 ea5e2ecd7602d6f2fb898c3f25f6e353 libffi-1.20.ebuild 604
 MD5 80bb0fc8fbb6690e139e43c20573c5a4 libffi-3.3.5.ebuild 6593
 MD5 0bfe33cbee49cf9068c44632e0fe1133 libffi-3.4.1-r1.ebuild 5756
-MD5 1a22fbfb7f17a593f82b50f1d2d99349 libffi-3.4.1.ebuild 7000
+MD5 36d35f15dd25c3aa812340fb02ba0b8b libffi-3.4.1.ebuild 7048
 MD5 1b9d42065b42f423dc07cd24afa99385 libffi-3.4.3.ebuild 5705
 MD5 ef1d6e99f954cc3412a9e513a2d80c64 metadata.xml 1836
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDqgB4ndWRXhKOboURAjaQAKCpLslAM4eXHC9Hz6DahD0UsBClswCgzZC3
+H69zTMz75KAlrEiFCnItaNQ=
+=1COX
+-----END PGP SIGNATURE-----
