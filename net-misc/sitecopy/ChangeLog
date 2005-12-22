@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.30 2005/12/22 05:32:51 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.31 2005/12/22 15:08:50 gustavoz Exp $
+
+  22 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  sitecopy-0.16.0.ebuild:
+  Stable on sparc wrt #116347
 
   22 Dec 2005; Chris White <chriswhite@gentoo.org> metadata.xml,
   sitecopy-0.16.0.ebuild:
