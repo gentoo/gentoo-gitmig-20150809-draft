@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/namd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.2 2005/11/10 15:21:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.3 2005/12/22 16:32:19 markusle Exp $
+
+  22 Dec 2005; Markus Dittrich <markusle@gentoo.org> namd-2.6_beta1.ebuild:
+  removed from package.mask and marked ~x86. Added app-shells/tcsh as
+  alternative to app-shells/csh in DEPEND.
 
   10 Nov 2005; Markus Dittrich <markusle@gentoo.org> metadata.xml,
   namd-2.6_beta1.ebuild:
