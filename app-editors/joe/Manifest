@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b646667a2b755dc8aada8161b6e43d1 ChangeLog 4526
+MD5 7e9e23e352b35284c7a0d5ed84e31f3d ChangeLog 4621
 MD5 8115b4ae2f2702a436c3008f32ae6ca4 files/digest-joe-3.0-r2 59
 MD5 ac08ada3dfe348bc96ff85aff854e31a files/digest-joe-3.1-r1 59
 MD5 595cf72f2a5230f8afdeb1391da39f71 files/digest-joe-3.2 59
@@ -9,12 +6,5 @@ MD5 1b4c305f8a53a6eec3f5ff94851985a4 files/joe-3.0-overflow.patch 354
 MD5 94eae235e8e8f4c5152ebda30d79cd9d files/joe-3.1-overflow.patch 386
 MD5 4bdcc86c730cc779e0c97aca82949a6e joe-3.0-r2.ebuild 1474
 MD5 131038935558d5f95a5bab2d8b359b1f joe-3.1-r1.ebuild 1463
-MD5 5ada2f73dc80bdb74ee0a169e707b066 joe-3.2.ebuild 1331
+MD5 e7cc9dcca8cb8c80854b88c190187b67 joe-3.2.ebuild 1330
 MD5 97f8bc36dd9eff41628e5e77067fea6f metadata.xml 667
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDqbWAKRy60XGEcJIRApRvAJ9GHLGx7dNXPXU3j1OtD8HjmSqvtwCgp+aC
-eOiUQ/ZsuT+IW4Iw6dxXdGM=
-=pz0S
------END PGP SIGNATURE-----
