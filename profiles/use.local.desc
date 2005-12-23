@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1627 2005/12/23 03:49:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1628 2005/12/23 16:23:06 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -160,7 +160,6 @@ app-text/evince:djvu - Enable djvu viewer support for Evince
 app-text/evince:dvi - Enable the built-in DVI viewer for Evince
 app-text/evince:nautilus - Enable the nautilus plugin
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
-app-text/ghostscript-afpl:jasper - Enable support for jpeg2k (jasper)
 app-text/htmldoc:fltk - Install the gui version of htmldoc.
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
@@ -460,11 +459,9 @@ kde-base/kdebase:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
-kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
 kde-base/kdegraphics:nodrm - Disable DRM support in kpdf
 kde-base/kdegraphics:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
-kde-base/kdelibs:jpeg2k - Enable support for jpeg2k (jasper)
 kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdelibs:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdemultimedia:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
@@ -1029,7 +1026,6 @@ net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
-net-proxy/ziproxy:jpeg2k - Enable support for jpeg2k (jasper)
 net-wireless/hostapd:logwatch - Install support files for logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi-driver (Atheros chipset)
 net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
@@ -1083,7 +1079,6 @@ sci-libs/gdal:gml - Enables support for xerces-c API
 sci-libs/gdal:grass - Adds support for the grasslib GIS library
 sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:hdf5 - Adds support for the Hierarchical Data Format v 5
-sci-libs/gdal:jasper - Adds support for JPEG 2000
 sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
 sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/plplot:itcl - Support for itcl bindings.
