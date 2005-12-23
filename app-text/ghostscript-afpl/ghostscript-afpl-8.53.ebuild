@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.4 2005/12/11 19:18:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.5 2005/12/23 16:17:32 carlo Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/ghostscript/${MY_P}.tar.gz
 LICENSE="Aladdin"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="X cups cjk gtk jasper"
+IUSE="X cups cjk gtk jpeg2k"
 
 PROVIDE="virtual/ghostscript"
 
@@ -39,7 +39,7 @@ DEPEND="virtual/libc
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
 	cups? ( net-print/cups )
-	jasper? ( media-libs/jasper )
+	jpeg2k? ( media-libs/jasper )
 	!virtual/ghostscript"
 
 S=${WORKDIR}/${MY_P}
@@ -77,7 +77,7 @@ src_compile() {
 
 	econf \
 		$(use_with X x) \
-		$(use_with jasper) \
+		$(use_with jpeg2k jasper) \
 		|| die "econf failed"
 #		$(use_with ijs) \
 #		$(use_with jbig2dec) \

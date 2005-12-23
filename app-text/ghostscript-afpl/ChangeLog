@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.32 2005/12/11 19:18:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.33 2005/12/23 16:17:32 carlo Exp $
+
+  23 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  ghostscript-afpl-8.53.ebuild:
+  Use global jpeg2k use flag.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   ghostscript-afpl-8.53.ebuild:
