@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r4.ebuild,v 1.2 2005/05/01 18:25:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r4.ebuild,v 1.3 2005/12/23 23:08:27 halcy0n Exp $
 
 inherit eutils
 
@@ -41,7 +41,9 @@ src_unpack() {
 	unpack ${SRC_NXESD}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PV}.xprint.patch
+	epatch "${FILESDIR}"/${P}.xprint.patch
+	cd ${WORKDIR}
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
