@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/b2evolution
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.12 2005/12/06 19:05:10 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.13 2005/12/23 21:25:22 blubb Exp $
+
+  23 Dec 2005; Simon Stelling <blubb@gentoo.org> b2evolution-0.9.1.ebuild:
+  stable on amd64
 
   06 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org>
   b2evolution-0.9.1.ebuild:
