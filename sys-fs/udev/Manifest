@@ -1,5 +1,6 @@
-MD5 e25b68dda48bc3df9974c8db40f1d4ac ChangeLog 30513
+MD5 7d1086e823037bee3722e4d8e45b9e19 ChangeLog 30723
 MD5 17c291f5c6e624792d02dd304fb8177e files/05-udev-early.rules-078 288
+MD5 020ffc8fbfef4d3098ec8ec485d055f6 files/05-udev-early.rules-079 346
 MD5 d03e92ce93131fd7d29fcae1b3f2627b files/digest-udev-068-r1 61
 MD5 05abfc4c9a5cad86f814161806c97148 files/digest-udev-069 61
 MD5 760a25fb7cc243e76c1889076b6ec829 files/digest-udev-070-r1 61
@@ -13,6 +14,7 @@ MD5 918aa5f6b5b4a478bcda926d0a41f28a files/digest-udev-077-r3 61
 MD5 918aa5f6b5b4a478bcda926d0a41f28a files/digest-udev-077-r4 61
 MD5 918aa5f6b5b4a478bcda926d0a41f28a files/digest-udev-077-r5 61
 MD5 d5c1c1f29cded72916aba0649dc09c51 files/digest-udev-078 61
+MD5 611612c918f66c84b496ab8c3f69ae7d files/digest-udev-079 61
 MD5 f00e3e0d3382e93cbd0c64fcef99f826 files/udev-021-udev_add_c-gcc295-compat.patch 493
 MD5 7b0a35c905183730e4dfdcf29f5a1816 files/udev-050-udev_volume_id.patch 388
 MD5 3bcc6c8d9c7a3cf7ff0d3b5a36bde3d6 files/udev-parisc-path_id.patch 706
@@ -50,3 +52,4 @@ MD5 d8ea78d0dc873e13ffb1e3a974874609 udev-077-r4.ebuild 7522
 MD5 175bad4a39b6dbbb4225ce007a785c7e udev-077-r5.ebuild 7522
 MD5 4cf7b677380f3571eec3dc7326e984b2 udev-077.ebuild 6845
 MD5 274048dfd1e17033711670208b357d1f udev-078.ebuild 7534
+MD5 a47e5f1c85eaefd6cb3aa7a77579e94b udev-079.ebuild 7534

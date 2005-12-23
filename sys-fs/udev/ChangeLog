@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.164 2005/12/19 21:18:10 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.165 2005/12/23 01:13:05 gregkh Exp $
+
+*udev-079 (23 Dec 2005)
+
+  23 Dec 2005; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/05-udev-early.rules-079, +udev-079.ebuild:
+  079 release, fixes some /dev/disk names and naming of network devices bugs.
 
 *udev-078 (19 Dec 2005)
 
