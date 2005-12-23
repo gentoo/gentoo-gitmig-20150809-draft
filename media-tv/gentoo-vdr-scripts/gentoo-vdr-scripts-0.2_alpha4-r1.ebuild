@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha4-r1.ebuild,v 1.1 2005/12/23 16:50:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha4-r1.ebuild,v 1.2 2005/12/23 17:18:06 zzam Exp $
 
 inherit eutils
 
@@ -46,6 +46,7 @@ src_install() {
 			ewarn "nvram-wakeup is not available on this architecture."
 		fi
 	fi
+	chown -R vdr:vdr ${D}/etc/vdr
 }
 
 pkg_preinst() {
