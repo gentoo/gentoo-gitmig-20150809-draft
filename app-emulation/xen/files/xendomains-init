@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xendomains-init,v 1.4 2005/10/27 16:40:23 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xendomains-init,v 1.5 2005/12/23 14:22:55 chrb Exp $
 
 opts="start stop status restart"
 
 depend() {
 	need xend
+	after dhcp
 }
 
 get_domname() {

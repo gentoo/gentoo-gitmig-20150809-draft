@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0-r1.ebuild,v 1.3 2005/12/21 08:34:02 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0-r2.ebuild,v 1.1 2005/12/23 14:22:55 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -28,7 +28,8 @@ DEPEND="sys-apps/iproute2
 		app-misc/screen
 		app-admin/logrotate
 	)
-	sys-devel/dev86"
+	sys-devel/dev86
+	|| ( sys-fs/udev sys-apps/hotplug )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -104,6 +105,7 @@ src_install() {
 	# xend expects these to exist
 	dodir /var/run/xenstored
 	dodir /var/lib/xenstored
+	dodir /var/xen/dump
 }
 
 pkg_postinst() {

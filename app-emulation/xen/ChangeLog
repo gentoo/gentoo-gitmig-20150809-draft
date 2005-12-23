@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.20 2005/12/21 08:34:02 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.21 2005/12/23 14:22:55 chrb Exp $
+
+*xen-3.0.0-r2 (23 Dec 2005)
+
+  23 Dec 2005; <chrb@gentoo.org> files/xend-init, files/xendomains-init,
+  -xen-2.0.7.ebuild, -xen-3.0.0-r1.ebuild, +xen-3.0.0-r2.ebuild:
+  Bugs #115970 (/var/xen/dump), #115969 (dhcp), #116332 (hotplug). Removed
+  xen-2 as bugs are not being fixed upstream since the xen-3.0.0 release.
 
   21 Dec 2005; Alex Howells <astinus@gentoo.org> xen-3.0.0-r1.ebuild:
   Keyword ~amd64 added, works fine for me!
