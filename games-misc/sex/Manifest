@@ -1,4 +1,14 @@
-MD5 6fcef9b8420f8eea211b5c4548135cd3 ChangeLog 1151
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a30c30c79edae9ed47768e33d64c7282 sex-1.0.ebuild 681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 774d768c86cb2ad814da67cf33df81fb ChangeLog 1229
 MD5 4b71409d939173dbcfeced4eeecc69e8 files/digest-sex-1.0 57
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 c13157210a0e9a831470e68b8c066be3 sex-1.0.ebuild 688
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDrBs+60LfUIagIAkRAgu+AKDtJrkZjejP/+qHZjMFnON5kxtwwACdFPh+
+onWFSoabeq0ynCunUCspAto=
+=bdYr
+-----END PGP SIGNATURE-----

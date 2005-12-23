@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/sex-1.0.ebuild,v 1.10 2004/12/28 18:08:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/sex-1.0.ebuild,v 1.11 2005/12/23 15:43:30 nigoro Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://spatula.net/software/sex/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc-macos ppc"
+KEYWORDS="amd64 ppc ~ppc-macos ~ppc64 x86"
 IUSE=""
 
 DEPEND="virtual/libc"
