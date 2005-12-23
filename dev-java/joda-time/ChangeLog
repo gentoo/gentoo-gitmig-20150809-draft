@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/joda-time
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.10 2005/07/15 22:37:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.11 2005/12/23 04:16:27 nichoj Exp $
+
+*joda-time-1.2 (23 Dec 2005)
+
+  23 Dec 2005; Joshua Nichols <nichoj@gentoo.org> +joda-time-1.2.ebuild:
+  Version bump (bug #116446).
 
 *joda-time-1.0 (15 Jul 2005)
 
