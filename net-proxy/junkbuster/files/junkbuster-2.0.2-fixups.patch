@@ -1,6 +1,5 @@
-diff -Nru ijb20.orig/filters.c ijb20/filters.c
---- ijb20.orig/filters.c	2000-03-29 16:05:42.000000000 +0300
-+++ ijb20/filters.c	2005-04-12 22:54:06.295702048 +0300
+--- ijb20/filters.c
++++ ijb20/filters.c
 @@ -652,7 +652,7 @@
  ij_untrusted_url(struct http_request *http, struct client_state *csp)
  {
@@ -32,9 +31,8 @@ diff -Nru ijb20.orig/filters.c ijb20/filters.c
  				urls_read, urls_rejected+1, perc_rej);
  
  			s = strsav(s,out_str);
-diff -Nru ijb20.orig/socks4.c ijb20/socks4.c
---- ijb20.orig/socks4.c	1998-10-30 23:58:48.000000000 +0200
-+++ ijb20/socks4.c	2005-04-12 22:44:47.367672024 +0300
+--- ijb20/socks4.c
++++ ijb20/socks4.c
 @@ -9,6 +9,7 @@
  #include <stdio.h>
  #include <sys/types.h>
@@ -52,9 +50,8 @@ diff -Nru ijb20.orig/socks4.c ijb20/socks4.c
  	int n, csiz, sfd, target_port;
  	int err = 0;
  	char *errstr, *target_host;
-diff -Nru ijb20.orig/ssplit.c ijb20/ssplit.c
---- ijb20.orig/ssplit.c	1998-10-30 23:58:48.000000000 +0200
-+++ ijb20/ssplit.c	2005-04-12 22:44:47.368671872 +0300
+--- ijb20/ssplit.c
++++ ijb20/ssplit.c
 @@ -19,6 +19,9 @@
   */
  
@@ -65,3 +62,25 @@ diff -Nru ijb20.orig/ssplit.c ijb20/ssplit.c
  
  int ssplit(char *s, char *c, char *v[], int n, int m, int l)
  {
+--- ijb20/Makefile
++++ ijb20/Makefile
+@@ -8,8 +8,8 @@
+ PROG   = junkbuster
+ O      = o
+ RM     = rm -f
+-CC     = gcc
+-MORE_CFLAGS = -O3 -D_DISTNAME="$(DISTNAME)" -D_DISTURL="$(DISTURL)"
++CC     ?= gcc
++MORE_CFLAGS = -D_DISTNAME="$(DISTNAME)" -D_DISTURL="$(DISTURL)"
+ 
+ # use this for Solaris 2.x
+ #LDFLAGS = -lnsl -lsocket 
+@@ -67,7 +67,7 @@
+ #MORE_CFLAGS = -relax_pointers
+ #LDFLAGS = -map junkbuster.xMAP
+ 
+-CFLAGS  = $(DEFAULT_CFLAGS) $(MORE_CFLAGS)
++CFLAGS  += $(DEFAULT_CFLAGS) $(MORE_CFLAGS)
+ 
+ OBJS =	jcc.$(O) parsers.$(O) filters.$(O) loaders.$(O) bind.$(O) conn.$(O) \
+ 	encode.$(O) ssplit.$(O) socks4.$(O) acl.$(O) gnu_regex.$(O) win32.$(O)
