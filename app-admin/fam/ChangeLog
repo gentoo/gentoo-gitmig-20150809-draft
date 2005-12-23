@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.36 2005/12/16 10:45:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.37 2005/12/23 20:15:05 blubb Exp $
+
+  23 Dec 2005; Simon Stelling <blubb@gentoo.org> ChangeLog:
+  mark stable on amd64 to fix bug 89478 for stable users
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> fam-2.7.0-r2.ebuild,
   fam-2.7.0-r3.ebuild, fam-2.7.0-r4.ebuild:
