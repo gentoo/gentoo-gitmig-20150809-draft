@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.ebuild,v 1.3 2005/12/08 21:26:19 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.2.ebuild,v 1.1 2005/12/23 22:19:03 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -13,7 +13,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="aac doc ipod flac mad real vorbis"
+IUSE="aac doc ipod flac mad njb real vorbis"
 
 RDEPEND=">=dev-lang/mono-1.1.10
 	>=dev-dotnet/gtk-sharp-2.3.90
@@ -28,8 +28,10 @@ RDEPEND=">=dev-lang/mono-1.1.10
 	flac? ( =media-plugins/gst-plugins-flac-0.8.11 )
 	aac? ( =media-plugins/gst-plugins-faad-0.8.11
 		>=media-libs/faad2-2.0-r4 )
+	=media-plugins/gst-plugins-cdparanoia-0.8.11
 	>=media-libs/musicbrainz-2.1.1
 	real? ( media-video/realplayer )
+	njb? ( >=dev-dotnet/njb-sharp-0.2.2 )
 	>=dev-libs/glib-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/libbonobo-2.0
@@ -55,9 +57,17 @@ pkg_setup() {
 		G2CONF="${G2CONF} --enable-helix --with-helix-libs=/opt/RealPlayer/"
 	fi
 	G2CONF="${G2CONF} --disable-xing \
-			--disable-njb \
 			$( use_enable ipod) \
+			$( use_enable njb) \
 			$( use_enable doc docs)"
+}
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Multilib issue: Use pkgconfig --variable=libdir over --variable=prefix
+	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
+		${S}/configure{.ac,} || die "sed failed"
 }
 src_compile() {
 	addpredict "/root/.gconf/"
@@ -65,6 +75,14 @@ src_compile() {
 	gnome2_src_configure
 	emake -j1 || "make failed"
 }
+src_install() {
+	gnome2_src_install
+	if ! use ipod; then
+		dodir /usr/$(get_libdir)/banshee/Banshee.Dap
+	fi
+}
 pkg_postinst() {
-	einfo "If you have an ipod please rebuild this package with USE=ipod"
+	einfo "In case you have an ipod please rebuild this package with USE=ipod"
+	einfo "If you have a audio player supported by libnjb please"
+	einfo "rebuild this package with USE=njb"
 }
