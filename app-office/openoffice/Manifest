@@ -1,4 +1,4 @@
-MD5 5d25006cadf0816bc605ebe231f5ca0b ChangeLog 35622
+MD5 32480f86e5187e80c0194dc8c2b41fce ChangeLog 35776
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 9784ab4484e09b8230284b27d20d4264 files/1.1.4/build-new-xslt.diff 650
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
