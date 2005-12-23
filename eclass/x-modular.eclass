@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.35 2005/12/23 08:28:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.36 2005/12/23 16:41:52 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -67,8 +67,7 @@ if [[ "${PN/#font-}" != "${PN}" ]] \
 	FONT="yes"
 
 	RDEPEND="${RDEPEND}
-		media-fonts/encodings"
-	DEPEND="${DEPEND}
+		media-fonts/encodings
 		x11-apps/mkfontscale
 		x11-apps/mkfontdir"
 	PDEPEND="${PDEPEND}
