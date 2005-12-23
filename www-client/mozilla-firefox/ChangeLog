@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.122 2005/12/18 02:10:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.123 2005/12/23 03:48:38 anarchy Exp $
+
+*mozilla-firefox-1.5-r4 (23 Dec 2005)
+
+  23 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-firefox-1.5-r4.ebuild:
+  canvas and svg now default
 
 *mozilla-firefox-1.5-r3 (18 Dec 2005)
 
