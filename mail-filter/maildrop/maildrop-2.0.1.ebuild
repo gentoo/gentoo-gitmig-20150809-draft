@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.7 2005/11/24 19:11:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.8 2005/12/23 20:18:56 blubb Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${P%%_pre}"
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="alpha ~amd64 ~ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc sparc x86"
 IUSE="berkdb debug fam gdbm ldap mysql postgres"
 
 PROVIDE="virtual/mda"
@@ -110,7 +110,7 @@ src_compile() {
 		--enable-sendmail=/usr/sbin/sendmail \
 		--cache-file=${S}/configuring.cache \
 		${myconf} || die
-
+		
 	emake || die "compile problem"
 }
 
