@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.2 2005/12/15 03:27:44 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.3 2005/12/23 21:23:18 blubb Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp-igbmc.u-strasbg.fr/pub/ClustalX/clustalx1.83.sun.tar.gz"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sci-biology/clustalw
