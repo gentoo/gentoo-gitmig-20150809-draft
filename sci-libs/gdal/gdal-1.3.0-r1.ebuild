@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.7 2005/12/05 17:09:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.8 2005/12/23 16:21:05 carlo Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
-IUSE="jpeg png geos gif jasper netcdf hdf hdf5 python postgres mysql \
+IUSE="jpeg png geos gif jpeg2k netcdf hdf hdf5 python postgres mysql \
 	odbc sqlite ogdi fits gml doc debug"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
@@ -36,7 +36,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	    netcdf? ( sci-libs/netcdf )
 	    hdf? ( sci-libs/hdf )
 	)
-	jasper? ( media-libs/jasper )
+	jpeg2k? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( sci-libs/geos )
 	sqlite? ( >=dev-db/sqlite-3 )
@@ -71,7 +71,7 @@ src_compile() {
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 	    $(use_with postgres pg) $(use_with fits cfitsio) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
-	    $(use_with sqlite) $(use_with jasper) $(use_with odbc) \
+	    $(use_with sqlite) $(use_with jpeg2k) $(use_with odbc) \
 	    $(use_with gml xerces) $(use_with hdf5)"
 
 	# It can't find this
@@ -119,7 +119,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "GDAL is most useful with full graphics support enabled via various"
-	einfo "USE flags: png, jpeg, gif, jasper, etc. Also python, fits, ogdi,"
+	einfo "USE flags: png, jpeg, gif, jpeg2k, etc. Also python, fits, ogdi,"
 	einfo "geos, and support for either netcdf or HDF4 is available, as well as"
 	einfo "grass, and mysql, sqlite, or postgres (grass support requires newer"
 	einfo "gdal and gdal-grass)."
