@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.30 2005/11/08 18:10:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.31 2005/12/23 20:25:02 hansmi Exp $
+
+  23 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  hddtemp-0.3_beta14.ebuild:
+  Stable on sparc because -r13 is broken on it.
 
   08 Nov 2005; Michał Januszewski <spock@gentoo.org>
   hddtemp-0.3_beta14.ebuild:
