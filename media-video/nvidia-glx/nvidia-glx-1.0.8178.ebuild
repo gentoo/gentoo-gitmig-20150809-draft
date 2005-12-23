@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178.ebuild,v 1.1 2005/12/23 15:34:07 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178.ebuild,v 1.2 2005/12/23 20:51:11 augustus Exp $
 
 inherit eutils multilib versionator
 
@@ -149,7 +149,7 @@ src_install-libs() {
 	fi
 
 	local usrpkglibdir=usr/${pkglibdir}
-	local libdir=usr/${pkglibdir}
+	local libdir=usr/X11R6/${pkglibdir}
 	local drvdir=${libdir}/modules/drivers
 	local extdir=${libdir}/modules/extensions
 	local incdir=usr/include/GL
