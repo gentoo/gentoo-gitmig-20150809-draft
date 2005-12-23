@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77028569d4b8f91f280c5d78690291e4 ChangeLog 4647
-MD5 a2245fb5959a678c53a78647758df109 files/digest-knoda-0.7.1 64
-MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4 65
-MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4-r1 65
-MD5 5010947f33fe747c6d35a4aad7e01122 files/knoda-0.7.1-configure.patch 3567
-MD5 2bafad05024cb02600c6e2eb3de8c350 files/knoda-0.7.4-makefile.patch 3045
+MD5 6bcd27eb32ed0cd1783556d928ae7855 ChangeLog 4736
 MD5 6ccc05f7120be903fa688fd4b56ca7de knoda-0.7.1.ebuild 593
-MD5 0b4290b5e592803e84f75dd34199f36a knoda-0.7.4-r1.ebuild 685
-MD5 b1b6e6e28352e481af45ba03f3803cf3 knoda-0.7.4.ebuild 554
+MD5 e0aa053cf984ca54d9966cf7a63b5e3f knoda-0.7.4-r1.ebuild 682
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgC2yCRZPokWLroQRAsgLAKDE2pY7AGrpuGi7lRyf41sbNN4WwgCcDMj8
-CN6AhhTZkqPeHJyr1p3R3m8=
-=Nljj
------END PGP SIGNATURE-----
+MD5 b1b6e6e28352e481af45ba03f3803cf3 knoda-0.7.4.ebuild 554
+MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4-r1 65
+MD5 a2245fb5959a678c53a78647758df109 files/digest-knoda-0.7.1 64
+MD5 2bafad05024cb02600c6e2eb3de8c350 files/knoda-0.7.4-makefile.patch 3045
+MD5 5010947f33fe747c6d35a4aad7e01122 files/knoda-0.7.1-configure.patch 3567
+MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4 65
