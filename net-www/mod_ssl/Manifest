@@ -1,4 +1,4 @@
-MD5 700df4393ad212663871050b77cc0d61 ChangeLog 12614
+MD5 b13422d5795241d5522a57e106f1fa7f ChangeLog 12709
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 689454ca8d62950ecf564edecbd53bce mod_ssl-2.8.17.ebuild 2188
 MD5 165b6fc422fa8cfe8274e7d327106ee6 mod_ssl-2.8.18.ebuild 2188
@@ -10,7 +10,7 @@ MD5 d20c6eee687d0fca4397f828e34092dc mod_ssl-2.8.22.ebuild 2316
 MD5 e3e145c5f8c0c0b2d3e63a0528100b4d mod_ssl-2.8.24-r1.ebuild 1779
 MD5 a4d234acd0fdfc01177ded213518dced mod_ssl-2.8.24.ebuild 2315
 MD5 e2f3345eb076d372ca960dda31fcd297 mod_ssl-2.8.25-r1.ebuild 2321
-MD5 7296ceecc3da715af31e76c1ff890d5b mod_ssl-2.8.25-r10.ebuild 1782
+MD5 f84c53a5abc0de9cc33538a56d01917d mod_ssl-2.8.25-r10.ebuild 1780
 MD5 515630b3e53faa458b8ec7a0e73bef55 files/10_mod_ssl.conf 2859
 MD5 959a0125c23ead91b0071f4ffc54e9bc files/default-ssl.conf 7653
 MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
