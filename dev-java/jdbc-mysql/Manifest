@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0ccdc53e864293e61c58ae9e61640998 ChangeLog 6422
 MD5 9275519a591f40e7ab6b3746d884f67f files/compile-without-log4j.patch 682
 MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11 86
@@ -11,3 +14,10 @@ MD5 50e2a09a23465da017d967d0dccac6bd jdbc-mysql-3.0.17.ebuild 967
 MD5 cacf118add74d627b79227db50ce1aba jdbc-mysql-3.1.10.ebuild 1205
 MD5 9e4af1d419c38e21e2bd90b9c4e78e49 jdbc-mysql-3.1.12.ebuild 1155
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDq2kandWRXhKOboURAijjAJ4jSnOAzqW7S/9Ec44KPObL2nDfWgCfYBv7
+9XpDBK2kr7jRLE55NYCtrJY=
+=9env
+-----END PGP SIGNATURE-----
