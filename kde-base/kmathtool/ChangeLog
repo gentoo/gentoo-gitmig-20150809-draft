@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmathtool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmathtool/ChangeLog,v 1.20 2005/12/15 22:11:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmathtool/ChangeLog,v 1.21 2005/12/23 07:28:19 corsair Exp $
+
+  23 Dec 2005; Markus Rothe <corsair@gentoo.org> kmathtool-3.4.2.ebuild:
+  Stable on ppc64
 
   15 Dec 2005; Joseph Jezak <josejx@gentoo.org> kmathtool-3.4.2.ebuild:
   Reverted ppc marking, I can make it segfault as reported by bug #109318.
