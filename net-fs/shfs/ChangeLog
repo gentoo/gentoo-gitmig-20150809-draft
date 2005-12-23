@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.21 2005/10/06 12:29:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.22 2005/12/23 19:21:31 compnerd Exp $
+
+  23 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
+  Marking myself as the maintainer.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> shfs-0.35-r1.ebuild:
   Mark 0.35-r1 ~alpha

@@ -4,6 +4,7 @@
 <herd>net-fs</herd>
 	<longdescription>Secure Shell File System</longdescription>
 <maintainer>
-	<email>stuart@gentoo.org</email>
+	<email>compnerd@gentoo.org</email>
+	<name>Saleem Abdulrasool</name>
 </maintainer>
 </pkgmetadata>
