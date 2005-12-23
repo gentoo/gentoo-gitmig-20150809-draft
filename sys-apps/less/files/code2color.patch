@@ -8,3 +8,12 @@
        return \$code;
    };
  
+@@ -3192,7 +3192,7 @@
+ #
+ 
+ $LANGUAGE{'shellscript'} = {
+-	'filename' => '\\.(sh|shell)$',
++	'filename' => '\\.(ebuild|eclass|sh|shell)$',
+ 	'regex' => '^\\s*#\\s*![^\\s]*(sh|bash|ash|zsh|ksh)',
+ 	'patterns' => [ {
+ 		'name' => 'comment',

@@ -130,7 +130,7 @@ lesspipe() {
 	*.awk|*.groff|*.java|*.js|*.m4|*.php|*.pl|*.pm|*.pod|*.sh|\
 	*.ad[asb]|*.asm|*.inc|*.[ch]|*.[ch]pp|*.[ch]xx|*.cc|*.hh|\
 	*.lsp|*.l|*.pas|*.p|*.xml|*.xps|*.xsl|*.axp|*.ppd|*.pov|\
-	*.diff|*.patch|*.py|*.rb|*.sql)
+	*.diff|*.patch|*.py|*.rb|*.sql|*.ebuild|*.eclass)
 
 		# Allow people to flip color off if they dont want it
 		case ${LESSCOLOR} in
@@ -185,7 +185,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.13 2005/11/26 00:32:53 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.14 2005/12/23 00:35:38 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2005 Gentoo Foundation
