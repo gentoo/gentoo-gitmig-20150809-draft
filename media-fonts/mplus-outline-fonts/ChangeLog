@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/mplus-outline-fonts
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/ChangeLog,v 1.1 2005/12/23 15:06:23 usata Exp $
+
+*mplus-outline-fonts-0_pre010 (23 Dec 2005)
+
+  23 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +mplus-outline-fonts-0_pre010.ebuild:
+  Initial import. Thanks to kuratomi, a5hr and bashi (GentooJP users).
+
