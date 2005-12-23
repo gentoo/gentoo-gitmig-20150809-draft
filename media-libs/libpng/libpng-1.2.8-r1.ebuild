@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8-r1.ebuild,v 1.1 2005/10/11 00:43:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8-r1.ebuild,v 1.2 2005/12/23 23:14:07 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -22,6 +22,7 @@ src_unpack() {
 	use doc && cp "${DISTDIR}"/libpng-manual.txt .
 
 	epatch "${FILESDIR}"/1.2.7-gentoo.diff
+	cp scripts/makefile.linux{,.orig}
 	epatch "${FILESDIR}"/${PN}-1.2.8-strnlen.patch
 	epatch "${FILESDIR}"/${PN}-1.2.8-build.patch
 

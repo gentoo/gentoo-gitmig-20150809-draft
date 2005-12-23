@@ -32,8 +32,8 @@ Clean up build system to make cross-compiling easy
 +LDFLAGS += -L$(ZLIBLIB) -Wl,-rpath,$(ZLIBLIB)
 +endif
 +LDFLAGS    += -lz -lm
-+LDFLAGS_A   = $(LDFLAGS) libpng.a
-+LDFLAGS_SO  = $(LDFLAGS) -L. -Wl,-rpath,. -lpng12
++LDFLAGS_A   = libpng.a $(LDFLAGS)
++LDFLAGS_SO  = -L. -Wl,-rpath,. -lpng12 $(LDFLAGS)
  
 -LDFLAGS=-L. -Wl,-rpath,. -L$(ZLIBLIB) -Wl,-rpath,$(ZLIBLIB) -lpng12 -lz -lm
 -LDFLAGS_A=-L$(ZLIBLIB) -Wl,-rpath,$(ZLIBLIB) libpng.a -lz -lm
@@ -59,7 +59,13 @@ Clean up build system to make cross-compiling easy
  	$(RANLIB) $@
  
  libpng.pc:
-@@ -104,10 +111,10 @@
+@@ -99,15 +106,15 @@
+ $(LIBNAME).so.$(PNGVER): $(OBJSDLL)
+ 	$(CC) -shared -Wl,-soname,$(LIBNAME).so.$(PNGMAJ) \
+ 	-o $(LIBNAME).so.$(PNGVER) \
+-	$(OBJSDLL)
++	$(OBJSDLL) $(LDFLAGS)
+ 
  libpng.so.3.$(PNGMIN): $(OBJSDLL)
  	$(CC) -shared -Wl,-soname,libpng.so.3 \
  	-o libpng.so.3.$(PNGMIN) \
@@ -72,8 +78,8 @@ Clean up build system to make cross-compiling easy
  
  pngtest-static: pngtest.o libpng.a
  	$(CC) -o pngtest-static $(CFLAGS) pngtest.o $(LDFLAGS_A)
---- scripts/makefile.darwin	2005-10-30 09:55:21.000000000 +0100
-+++ scripts/makefile.darwin	2005-10-30 10:08:38.000000000 +0100
+--- scripts/makefile.darwin
++++ scripts/makefile.darwin
 @@ -7,20 +7,30 @@
  # For conditions of distribution and use, see copyright notice in png.h
  
@@ -84,10 +90,8 @@ Clean up build system to make cross-compiling easy
  # Where the zlib library and include files are located
  #ZLIBLIB=/usr/local/lib
  #ZLIBINC=/usr/local/include
--ZLIBLIB=../zlib
--ZLIBINC=../zlib
-+ZLIBLIB=./zlib
-+ZLIBINC=./zlib
+ ZLIBLIB=../zlib
+ ZLIBINC=../zlib
  
 -CC=cc
 -CFLAGS=-I$(ZLIBINC) -Wall -O3 -funroll-loops
