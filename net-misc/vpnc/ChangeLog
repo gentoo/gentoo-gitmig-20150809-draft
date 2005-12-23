@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.12 2005/12/20 12:42:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.13 2005/12/23 11:00:43 corsair Exp $
+
+  23 Dec 2005; Markus Rothe <corsair@gentoo.org> vpnc-0.3.3-r1.ebuild:
+  Added ~ppc64
 
   20 Dec 2005; Hanno Boeck <hanno@gentoo.org> files/vpnc-iproute-fix-2.diff:
   Fix Patch failure.
