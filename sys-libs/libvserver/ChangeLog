@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libvserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvserver/ChangeLog,v 1.6 2005/11/26 10:28:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvserver/ChangeLog,v 1.7 2005/12/23 06:32:23 hollow Exp $
+
+*libvserver-1.0 (23 Dec 2005)
+
+  23 Dec 2005; Benedikt Boehm <hollow@gentoo.org> -libvserver-0.4.ebuild,
+  +libvserver-1.0.ebuild:
+  Version bump
 
   26 Nov 2005; Benedikt Boehm <hollow@gentoo.org> libvserver-0.4.ebuild:
   fix SRC_URI
