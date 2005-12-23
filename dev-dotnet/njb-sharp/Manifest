@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 11c7ac6b59a67ac0932d656f391641d4 ChangeLog 402
+MD5 3abbda3f5241e0c6fffd9456041a1e9a files/digest-njb-sharp-0.2.2 67
+MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
+MD5 1bda9a95be5f0bbbbd7a7a856af14de4 njb-sharp-0.2.2.ebuild 892
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrHHYwUpWvClEHQoRAju0AJ46GtJQ8m12LHmNizIcBBQQ9Lai1wCffSEp
+agOOSS+H0mH4GjUrU/XdKX8=
+=+0ku
+-----END PGP SIGNATURE-----

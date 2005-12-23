@@ -1,0 +1,9 @@
+# ChangeLog for dev-dotnet/njb-sharp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/ChangeLog,v 1.1 2005/12/23 21:52:27 metalgod Exp $
+
+*njb-sharp-0.2.2 (23 Dec 2005)
+
+  23 Dec 2005; Luis Medinas <metalgod@gentoo.org> +njb-sharp-0.2.2.ebuild:
+  New Package. This is a new dependency for Banshee to be able to support njb.
+
