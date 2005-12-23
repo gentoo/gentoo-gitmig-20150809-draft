@@ -1,0 +1,10 @@
+# ChangeLog for app-text/crf++
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.1 2005/12/23 17:22:02 usata Exp $
+
+*crf++-0.3 (23 Dec 2005)
+
+  23 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +crf++-0.3.ebuild:
+  Initial import.
+
