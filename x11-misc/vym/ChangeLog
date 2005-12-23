@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.5 2005/09/17 00:51:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.6 2005/12/23 19:50:22 stuart Exp $
+
+*vym-1.7.0 (23 Dec 2005)
+
+  23 Dec 2005; Stuart Herbert <stuart@gentoo.org>
+  +files/01_all_linkablemapobj-math.patch, +files/02_all_misc-math.patch,
+  +vym-1.7.0.ebuild:
+  Version bump; thanks to Boris Gruschke <boris@gruschke.de> for the updates;
+  see bug #94174
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
