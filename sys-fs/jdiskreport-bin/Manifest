@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17160894707853d78fa96c390ab36897 ChangeLog 509
+MD5 c0df3047b51bd197a315ec8d353e7bd7 ChangeLog 690
 MD5 90cce3b53680518cf16b6cddc5fdb657 files/digest-jdiskreport-bin-1.2.2 66
+MD5 6505c2f073e5581b49d6f0dba1d47e8a files/digest-jdiskreport-bin-1.2.3 66
 MD5 78b3d042f586ea5deeef602bb37bb91b jdiskreport-bin-1.2.2.ebuild 1050
+MD5 598ae6bbf421e47d1afa9a7c6d0b8efc jdiskreport-bin-1.2.3.ebuild 1050
 MD5 90300d8d04018ab3210c0b816eae4b04 metadata.xml 475
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDcP7UwUpWvClEHQoRAjDYAJ0aRkj2ORo1kW7F6gigRAiTXt95vQCcDugJ
-I2ePIHPDgnGT54tUeQ/PdoM=
-=oEtd
------END PGP SIGNATURE-----
