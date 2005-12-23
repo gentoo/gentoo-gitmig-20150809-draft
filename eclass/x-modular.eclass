@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.34 2005/12/17 20:46:57 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.35 2005/12/23 08:28:00 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -40,7 +40,8 @@ fi
 
 IUSE=""
 HOMEPAGE="http://xorg.freedesktop.org/"
-SRC_URI="http://xorg.freedesktop.org/releases/X11R7.0-RC4/everything/${P}.tar.bz2
+SRC_URI="http://xorg.freedesktop.org/releases/X11R7.0/src/everything/${P}.tar.bz2
+	http://xorg.freedesktop.org/releases/X11R7.0-RC4/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC3/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC2/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC1/everything/${P}.tar.bz2
