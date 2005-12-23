@@ -1,8 +1,9 @@
-MD5 58d7196f7c6f4c0bf0177073a95eb039 ChangeLog 4782
+MD5 be875c9109f5d1d0f2f6791ac681e8d6 ChangeLog 4899
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/Xsession 2187
 MD5 2b07bc84cc3afab6b4de90b9e9c597c3 files/chooser.sh 1566
 MD5 9864468a351b741fb7af08adf9fcf3bf files/digest-xinit-0.99.4 64
 MD5 1435720b1afef36e0705d57181f01298 files/digest-xinit-1.0.0 63
+MD5 07738d053b5bd4dfe64b5043a71ae730 files/digest-xinit-1.0.1 63
 MD5 de00e8a136985faa77ce4bfa4e724ff8 files/gentoo-startx-customization-0.99.4.patch 3965
 MD5 8d14d094be7182b9870a0727a5d8e87b files/nolisten-tcp-and-black-background.patch 381
 MD5 965333ca03efda8a7302620a63c429f6 files/startDM.sh 922
@@ -12,3 +13,4 @@ MD5 708a3daf8950bbfe3aa231efb7533cb0 files/xserver.pamd 125
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f40379ac8833f0e3be51c37a5dd51b5a xinit-0.99.4.ebuild 1152
 MD5 fb886f5737b48ea564b5512e82152eb6 xinit-1.0.0.ebuild 1151
+MD5 9926f27b182325d282b17b1acf443d37 xinit-1.0.1.ebuild 1147
