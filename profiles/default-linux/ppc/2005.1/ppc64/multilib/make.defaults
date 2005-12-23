@@ -1,19 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc64/multilib/make.defaults,v 1.3 2005/09/29 09:34:39 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc64/multilib/make.defaults,v 1.4 2005/12/23 11:38:21 nigoro Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
 
 CHOST="powerpc64-unknown-linux-gnu"
 
-CFLAGS="-O2"
+CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 ACCEPT_KEYWORDS="ppc64"
 
 STAGE1_USE="unicode"
-USE="${STAGE1_USE} berkdb bitmap-fonts gif gpm ipv6 jpeg nls ncurses pam perl png python readline ssl tcpd truetype truetype-fonts type1-fonts zlib"
+USE="${STAGE1_USE} berkdb bitmap-fonts gif gpm ipv6 jpeg nls ncurses pam perl png python readline ssl tcpd truetype truetype-fonts type1-fonts zlib nptl"
 
 # This profile doesn't fully support multilib portage yet.  We still rely
 # on the emul-* packages.  As such, we have -multilib-pkg here to emphasise
