@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.9 2005/12/20 16:19:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.10 2005/12/23 09:06:29 spyderous Exp $
+
+*imake-1.0.1 (23 Dec 2005)
+
+  23 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +imake-1.0.1.ebuild:
+  Bump for 7.0.
 
   20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; imake-1.0.0.ebuild:
   Add blocker on xmkmf; this version includes it.
