@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.8 2005/12/23 16:21:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.9 2005/12/23 16:26:50 carlo Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
@@ -71,7 +71,7 @@ src_compile() {
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 	    $(use_with postgres pg) $(use_with fits cfitsio) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
-	    $(use_with sqlite) $(use_with jpeg2k) $(use_with odbc) \
+	    $(use_with sqlite) $(use_with jpeg2k jasper) $(use_with odbc) \
 	    $(use_with gml xerces) $(use_with hdf5)"
 
 	# It can't find this
