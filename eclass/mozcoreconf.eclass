@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.2 2005/12/14 07:45:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.3 2005/12/23 03:46:49 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -164,7 +164,10 @@ mozconfig_init() {
 		--disable-profilesharing \
 		--disable-profilelocking \
 		--enable-default-toolkit=gtk2 \
-		--enable-pango
+		--enable-pango \
+		--enable-svg \
+		--enable-svg-renderer=cairo \
+		--enable-system-cairo
 
 	# Here is a strange one...
 	if is-flag '-mcpu=ultrasparc*' || is-flag '-mtune=ultrasparc*'; then

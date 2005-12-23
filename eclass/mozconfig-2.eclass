@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.9 2005/12/14 07:36:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.10 2005/12/23 03:46:49 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
 inherit multilib flag-o-matic mozcoreconf
 
-IUSE="debug gnome ipv6 xinerama xprint mozsvg"
+IUSE="debug gnome ipv6 xinerama xprint"
 
 RDEPEND="|| ( ( x11-libs/libXrender
 		x11-libs/libXt
@@ -27,8 +27,8 @@ RDEPEND="|| ( ( x11-libs/libXrender
 	>=dev-libs/libIDL-0.8.0
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 
 		 >=gnome-base/libgnomeui-2.2.0 )
-	mozsvg? ( !<x11-base/xorg-x11-6.7.0-r2
-		    >=x11-libs/cairo-1.0.0)"
+	 !<x11-base/xorg-x11-6.7.0-r2
+	>=x11-libs/cairo-1.0.0"
 
 DEPEND="${RDEPEND}
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
@@ -70,9 +70,4 @@ mozconfig_config() {
 		mozconfig_annotate -gnome --disable-gnomevfs
 		mozconfig_annotate -gnome --disable-gnomeui
  	fi
-
-	if use mozsvg; then
-		mozconfig_annotate mozsvg --enable-svg
-		mozconfig_annotate mozsvg --enable-svg-renderer=cairo
-	fi
 }
