@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.25.3.ebuild,v 1.1 2005/09/10 08:08:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.25.3.ebuild,v 1.2 2005/12/23 15:55:23 pauldv Exp $
 
 DESCRIPTION="HTTP and WebDAV client library"
 HOMEPAGE="http://www.webdav.org/neon/"
@@ -44,6 +44,7 @@ src_compile() {
 
 	econf \
 		--enable-shared \
+		--without-gssapi \
 		$(use_with zlib) \
 		$(use_with ssl) \
 		${myc} \

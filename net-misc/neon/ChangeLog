@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.52 2005/09/14 23:46:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.53 2005/12/23 15:55:23 pauldv Exp $
+
+  23 Dec 2005; Paul de Vrieze <pauldv@gentoo.org> neon-0.25.3.ebuild:
+  Explicitly disable linking with gssapi. Autodetecting gives a broken
+  dependency. Using a useflag dependency doesn't work as apparently the
+  libtool archive created does not have proper dependencies.
 
   14 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> neon-0.24.7.ebuild:
   0.24.7 stable on mips.

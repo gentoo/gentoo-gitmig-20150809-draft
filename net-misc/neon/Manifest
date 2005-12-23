@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 797b5fc3f40d9c99f837a18ec3bb46ab ChangeLog 6969
-MD5 2ae7200538068877dd6268e6a69a3c67 metadata.xml 635
-MD5 9a28876fe08f3e1b1832667a058f5fa5 neon-0.25.3.ebuild 1408
-MD5 189bd504f32f8d2e283701567c61c37d neon-0.24.7.ebuild 1042
-MD5 f4c20c929f124bfab9c6c66cddd7c210 files/digest-neon-0.25.3 63
+MD5 1e43459be9d0f5498b97e2415ca688ae ChangeLog 7243
 MD5 839f25b6c4eb84ed2157cd2904daf5b0 files/digest-neon-0.24.7 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKLZSEZCkKN40op4RAjMuAKCcga0iK/tPQ965csEnwAJ/H9358wCeMP5q
-DJIswkw2ggV3gFVBS41k7FI=
-=qbtg
------END PGP SIGNATURE-----
+MD5 f4c20c929f124bfab9c6c66cddd7c210 files/digest-neon-0.25.3 63
+MD5 2ae7200538068877dd6268e6a69a3c67 metadata.xml 635
+MD5 189bd504f32f8d2e283701567c61c37d neon-0.24.7.ebuild 1042
+MD5 6ee5ea42c52e04379130c5fbc25b50fd neon-0.25.3.ebuild 1424
