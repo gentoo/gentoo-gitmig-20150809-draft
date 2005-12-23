@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.60 2005/12/21 16:06:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.61 2005/12/23 19:44:09 dertobi123 Exp $
+
+  23 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  prosite-19.14.ebuild:
+  Marked ppc stable, #115435
 
 *prosite-19.17 (21 Dec 2005)
 
