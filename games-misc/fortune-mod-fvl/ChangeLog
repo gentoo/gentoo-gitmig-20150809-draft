@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-fvl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-fvl/ChangeLog,v 1.8 2005/09/16 22:15:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-fvl/ChangeLog,v 1.9 2005/12/23 20:26:37 hansmi Exp $
+
+  23 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  fortune-mod-fvl-20030120.ebuild:
+  Stable on sparc.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
