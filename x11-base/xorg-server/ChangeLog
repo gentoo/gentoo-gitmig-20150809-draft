@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.75 2005/12/17 21:56:46 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.76 2005/12/23 09:39:16 spyderous Exp $
+
+*xorg-server-1.0.1 (23 Dec 2005)
+
+  23 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-1.0.1-Sbus.patch, -xorg-server-0.99.4-r2.ebuild,
+  -xorg-server-1.0.0.ebuild, +xorg-server-1.0.1.ebuild:
+  Bump for 7.0. (#111361) Add patch to fix sparc build.
 
 *xorg-server-1.0.0 (17 Dec 2005)
 
