@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.39 2005/11/24 18:39:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.40 2005/12/23 19:43:18 grobian Exp $
+
+  23 Dec 2005; Fabian Groffen <grobian@gentoo.org> mime-types-4.ebuild:
+  Stabling ppc-macos per Ticho's request
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> mime-types-4.ebuild:
   Stable on ppc64
