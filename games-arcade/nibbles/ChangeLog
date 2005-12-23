@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/nibbles
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/ChangeLog,v 1.5 2005/10/02 18:33:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/ChangeLog,v 1.6 2005/12/23 16:06:48 nigoro Exp $
+
+  23 Dec 2005; Yuta SATOH <nigoro@gentoo.org> nibbles-0.0.4.ebuild:
+  Stable on ppc64
 
   02 Oct 2005; Fabian Groffen <grobian@gentoo.org> nibbles-0.0.4.ebuild:
   Marking ~ppc-macos (bug #107876)
