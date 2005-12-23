@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.276 2005/12/18 16:14:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.277 2005/12/23 15:58:44 carlo Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -160,6 +160,7 @@ javascript - enable javascript support
 jikes - Compile Java source code with jikes (faster)
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
+jpeg2k - Support for JPEG 2000, a wavelet-based image compression format.
 junit - Adds junit awareness -- useful for developers.
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kdeenablefinal - Makes kde ebuilds use the enable-final flag, yielding big compilation speedups at the cost of very heavy mem usage
