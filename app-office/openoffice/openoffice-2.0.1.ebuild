@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.3 2005/12/23 17:44:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.4 2005/12/23 21:12:29 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -119,7 +119,7 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
-	epatch ${FILESDIR}/2.0.1/noquickstarter.diff
+	use kde && use !gnome && use !gtk && epatch ${FILESDIR}/2.0.1/noquickstarter.diff
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
