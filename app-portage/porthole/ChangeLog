@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.20 2005/06/24 17:38:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.21 2005/12/23 04:40:34 fuzzyray Exp $
+
+*porthole-0.5.0 (23 Dec 2005)
+
+  23 Dec 2005; Paul Varner <fuzzyray@gentoo.org> +porthole-0.5.0.ebuild:
+  Version bump to 0.5.0
 
   24 Jun 2005; Aron Griffis <agriffis@gentoo.org> porthole-0.4.1.ebuild:
   fowners root:portage in src_install doesn't work, and you can't use functions
