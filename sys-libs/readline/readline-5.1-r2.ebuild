@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.2 2005/12/22 00:09:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.3 2005/12/23 17:02:11 kanaka Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 # Official patches
 # See ftp://ftp.cwru.edu/pub/bash/readline-5.1-patches/
@@ -53,9 +53,11 @@ src_compile() {
 	econf --with-curses --libdir=/usr/$(get_libdir) || die
 	emake || die
 
-	cd examples/rlfe
-	econf
-	emake || die
+	if ! tc-is-cross-compiler; then
+		cd examples/rlfe
+		econf
+		emake || die
+	fi
 }
 
 src_install() {
@@ -71,7 +73,9 @@ src_install() {
 		gen_usr_ldscript libhistory.so
 	fi
 
-	dobin examples/rlfe/rlfe || die
+	if ! tc-is-cross-compiler; then
+		dobin examples/rlfe/rlfe || die
+	fi
 
 	dodoc CHANGELOG CHANGES README USAGE NEWS
 	docinto ps

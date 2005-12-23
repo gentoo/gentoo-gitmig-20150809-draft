@@ -1,12 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 859a4914369f517eda6c25cbd2889119 ChangeLog 8122
+MD5 5ee00221878f6619696d6a59dbcf4660 ChangeLog 8261
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 82ac0eae5f66926062b260f7d09de7c0 readline-4.3-r5.ebuild 2764
+MD5 e16aefe27f29117c7a4e7be342e920b4 readline-4.3-r6.ebuild 3090
+MD5 d33ebebef248a79c288c6b1dce06b0ee readline-5.0-r2.ebuild 2778
+MD5 505fa4954536f8a9ff27c56bfb31b4d8 readline-5.1-r2.ebuild 2854
 MD5 d687545889dacb43e121f4932d99a534 files/bash-3.0-etc-inputrc.patch 1443
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r5 348
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r6 348
 MD5 e3ee94eed45baf4ca76736da56d72bad files/digest-readline-5.0-r2 350
-MD5 1d930552cdea6057066fcf79714f9253 files/digest-readline-5.1-r2 122
 MD5 9905e333ead392447a670e0f2374651a files/macos.patch 504
 MD5 b908c05444b4c9edbeefa1977345182e files/readline-5.0-darwin.patch 461
 MD5 6fea6318a26be7b6186ba83c42fb0d75 files/readline-5.0-del-backspace-policy.patch 1074
@@ -14,16 +15,5 @@ MD5 d5f28667389d9681136307274ebc1f28 files/readline-5.0-no_rpath.patch 363
 MD5 cd1beb3627cb585cac6adcb530a01823 files/readline-5.0-parallel.patch 849
 MD5 a0bad5c8ba91f5c50ea6c2c97a76f2d1 files/readline-5.0-self-insert.patch 2463
 MD5 fe45d673627dab53fb3fcffcb4f55e4e files/readline-5.0-solaris.patch 756
+MD5 1d930552cdea6057066fcf79714f9253 files/digest-readline-5.1-r2 122
 MD5 e4ac33c0a2293b72378e00e8729c71af files/readline-5.1-cleanups.patch 3817
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 82ac0eae5f66926062b260f7d09de7c0 readline-4.3-r5.ebuild 2764
-MD5 e16aefe27f29117c7a4e7be342e920b4 readline-4.3-r6.ebuild 3090
-MD5 d33ebebef248a79c288c6b1dce06b0ee readline-5.0-r2.ebuild 2778
-MD5 b781d2f9cd41248dd4dc7c8c90344457 readline-5.1-r2.ebuild 2760
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqe8I2+ySkm8kpY0RAvZTAKCEFieCvxiPddxD3ZOKw7PYDIVr5wCgvaOd
-/35kiDedqOAFZUvuFI3Rn/Y=
-=isbW
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.54 2005/12/22 00:09:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.55 2005/12/23 17:02:10 kanaka Exp $
+
+  23 Dec 2005; Joel Martin <kanaka@gentoo.org> readline-5.1-r2.ebuild:
+  rlfe does not cross-compile, don't build it when cross-compiling
 
   22 Dec 2005; Mike Frysinger <vapier@gentoo.org>
   -files/readline-5.1-callback-segv.patch, readline-5.1-r2.ebuild:
