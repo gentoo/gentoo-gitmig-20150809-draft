@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.10 2005/11/28 12:18:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.11 2005/12/23 06:34:00 halcy0n Exp $
+
+  23 Dec 2005; Mark Loeser <halcy0n@gentoo.org> mytop-1.4.ebuild:
+  Stable on x86; bug #116453
 
   28 Nov 2005; <mcumming@gentoo.org> mytop-1.4.ebuild:
   Switched from perl-module to perl-app eclass
