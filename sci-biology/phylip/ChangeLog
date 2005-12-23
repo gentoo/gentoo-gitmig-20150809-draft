@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.17 2005/12/15 03:13:52 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.18 2005/12/23 19:37:35 dertobi123 Exp $
+
+  23 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  phylip-3.65-r1.ebuild:
+  Marked ppc stable, #115468
 
   15 Dec 2005; Joshua Jackson <tsunam@gentoo.org> phylip-3.65-r1.ebuild:
   Stable on x86 for bug #115468
