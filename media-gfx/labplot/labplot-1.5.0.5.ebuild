@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/labplot/labplot-1.5.0.5.ebuild,v 1.1 2005/12/23 16:39:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/labplot/labplot-1.5.0.5.ebuild,v 1.2 2005/12/23 19:44:41 carlo Exp $
 
 inherit eutils gnuconfig kde
 
@@ -20,7 +20,7 @@ DEPEND=">=media-gfx/pstoedit-3.33
 	>=sci-libs/gsl-1.4
 	sci-libs/netcdf
 	virtual/ghostscript
-	x11-libs/qwtplot3d
+	>=x11-libs/qwtplot3d-0.2.6-r2
 	audiofile? ( media-libs/audiofile )
 	fftw? ( >=sci-libs/fftw-3 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )
