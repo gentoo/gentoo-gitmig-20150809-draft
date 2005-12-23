@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.33 2005/12/06 21:52:04 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.34 2005/12/23 21:57:42 blubb Exp $
+
+*emul-linux-x86-xlibs-2.2.1-r1 (23 Dec 2005)
+*emul-linux-x86-xlibs-2.2.1 (23 Dec 2005)
+
+  23 Dec 2005; Simon Stelling <blubb@gentoo.org>
+  +emul-linux-x86-xlibs-2.2.1.ebuild, +emul-linux-x86-xlibs-2.2.1-r1.ebuild:
+  version bump to fix security bug 116481
 
 *emul-linux-x86-xlibs-2.2-r1 (06 Dec 2005)
 *emul-linux-x86-xlibs-2.2 (06 Dec 2005)
