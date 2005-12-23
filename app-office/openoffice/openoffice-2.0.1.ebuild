@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.1 2005/12/22 15:01:43 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.2 2005/12/23 07:13:01 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
 	http://go-ooo.org/packages/libwpd/libwpd-0.8.3.tar.gz
-	kde? ( http://go-oo.org/packages/SRC680/ooo_crystal_images-6.tar.bz2 )
+	http://go-oo.org/packages/SRC680/ooo_crystal_images-6.tar.bz2
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2"
 
 HOMEPAGE="http://go-oo.org"

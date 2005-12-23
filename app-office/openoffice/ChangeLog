@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.161 2005/12/22 15:01:43 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.162 2005/12/23 07:13:01 suka Exp $
+
+  23 Dec 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.1.ebuild:
+  We need to pull in crystal icons for everyone, closes bug #116432
 
 *openoffice-2.0.1 (22 Dec 2005)
 
