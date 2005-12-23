@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.10.ebuild,v 1.5 2005/10/30 19:41:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.10.ebuild,v 1.6 2005/12/23 02:19:16 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="log4j c3p0"
 RDEPEND=">=virtual/jre-1.2
-	dev-java/jta
 	log4j? ( dev-java/log4j )
 	c3p0? ( dev-java/c3p0 )
 	dev-java/jdbc2-stdext"
@@ -36,7 +35,6 @@ src_unpack() {
 	mkdir src/lib-nodist
 	cd src/lib
 	rm -f *.jar
-	java-pkg_jar-from jta
 	java-pkg_jar-from jdbc2-stdext
 	use log4j && java-pkg_jar-from log4j
 	use c3p0 && java-pkg_jar-from c3p0
