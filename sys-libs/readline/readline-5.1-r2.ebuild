@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.3 2005/12/23 17:02:11 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.4 2005/12/24 04:54:11 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -41,6 +41,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/bash-3.0-etc-inputrc.patch
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${P}-cleanups.patch
+	epatch "${FILESDIR}"/${P}-rlfe-build.patch #116483
+	ln -s ../.. examples/rlfe/readline
 
 	# force ncurses linking #71420
 	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"
@@ -53,11 +55,9 @@ src_compile() {
 	econf --with-curses --libdir=/usr/$(get_libdir) || die
 	emake || die
 
-	if ! tc-is-cross-compiler; then
-		cd examples/rlfe
-		econf
-		emake || die
-	fi
+	cd examples/rlfe
+	econf || die
+	emake || die "make rlfe failed"
 }
 
 src_install() {
