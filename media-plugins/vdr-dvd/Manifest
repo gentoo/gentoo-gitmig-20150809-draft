@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 63cd1b4dcb12d0bbd83d1e4e1abb8edb ChangeLog 475
 MD5 e80ab8654d363246c18c9d351174e3ca files/confd 581
 MD5 a510b74dc6acfe4ef5f8dd31e2b37a03 files/digest-vdr-dvd-0.3.7_pre20051121 76
 MD5 f5ccc39b144c453db40242c559ac1989 files/rc-addon.sh 425
 MD5 4a58e9c1cdf400257ef34b4413887e57 metadata.xml 472
 MD5 dfd745269ccc11edffa07eef4542fea5 vdr-dvd-0.3.7_pre20051121.ebuild 923
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrS8hI1lqEGTUzyQRAnxSAKCSWBEs5DV2llwl1S3PPcqUKCx1xACgqhlQ
+KRgDYbGpkimZevgfPfb4vtA=
+=/46y
+-----END PGP SIGNATURE-----
