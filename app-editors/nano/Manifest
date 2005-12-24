@@ -1,10 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5db4f611865d986b37a2d95404054e72 ChangeLog 8917
+MD5 4285ba95f541dd235531f03deb365d58 ChangeLog 9033
 MD5 c3684059e73752ce1f114e768ecbaa2b files/1.3.4-nanobrack.patch 557
 MD5 4cf6c77ed7c28d94c8de44d8318176c3 files/1.3.4-nomac.patch 511
 MD5 b075a7a5fe393380c5f00e4efd3146fb files/digest-nano-1.2.5 62
+MD5 12a38b1eed4e09bc09aa3e26f3d4886e files/digest-nano-1.3.10 64
 MD5 95e2a2065a0c2ff580dcf645fba2de1e files/digest-nano-1.3.4 62
 MD5 b6b8e30beb4e577ac5d8d58bced6b326 files/digest-nano-1.3.6 62
 MD5 959e0d50769b5362d326d0d26809ff02 files/digest-nano-1.3.7 63
@@ -18,15 +19,16 @@ MD5 e96987d3e608193dd5a2c0c0122571b5 files/nanorc-gentoo 1864
 MD5 9ecacdb9e41a6ddb3200113238ca4b2b files/nanorc-sh 646
 MD5 b297797b490f7c6ca8d5f40f2d6347cc metadata.xml 1015
 MD5 32ad8dd2260ac44dbbeb2d50e2ed0df6 nano-1.2.5.ebuild 1429
+MD5 ca0f82444982c6b9b3a9e65e0e52e78a nano-1.3.10.ebuild 1874
 MD5 27bac9f5ff88d92d3386c6854eb29ae4 nano-1.3.4.ebuild 1587
 MD5 6f760844d541acb2dd4c92e22edc5759 nano-1.3.6.ebuild 1755
 MD5 042d14bbc6965489bd62af12f5943519 nano-1.3.7.ebuild 1742
 MD5 45fcb350931e56594b7bfcc19838f5c9 nano-1.3.8.ebuild 1880
-MD5 c2f250d8a2040d80b70cd001c70f21f9 nano-1.3.9.ebuild 1873
+MD5 192f547ebac299104fef888dafe798dc nano-1.3.9.ebuild 1867
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDnjQXgIKl8Uu19MoRAkFCAJ4khOl4EqnHEawiEgs2UKScr1g9EwCfa+cL
-QssAXv9S5wgsuDyq5N27GjE=
-=aq+Q
+iD8DBQFDrO9q2+ySkm8kpY0RAoWGAJ0f2/b22vDhUntWKPWWhwnFgKP1MQCeLWWt
++WC++bB8DXZvfreib181ZZ8=
+=Mypb
 -----END PGP SIGNATURE-----
