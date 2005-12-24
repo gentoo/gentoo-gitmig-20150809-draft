@@ -25,5 +25,8 @@
 	<longdescription lang="it">
 		La categoria x11-wm contiene dei gestori di finestre per X11.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria x11-wm contém gerenciadores de janelas para X11.
+	</longdescription>
 </catmetadata>
 
