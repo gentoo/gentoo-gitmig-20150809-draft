@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.136 2005/12/24 20:48:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.137 2005/12/24 21:20:14 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -135,11 +135,9 @@ HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
-# Portage dependancy is for use_with/use_enable.
 # ctags dependancy allows help tags to be rebuilt properly, along
 # with detection of exuberant-ctags by configure.
 DEPEND="${DEPEND}
-	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	dev-util/ctags"
