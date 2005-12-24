@@ -29,5 +29,9 @@
 		La categoria app-office contiene pacchetti per ufficio
 		(videoscrittura, fogli elettronici, presentazioni).
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-office contém pacotes de software para
+		escritório (processadores de textos, planilhas, apresentações).
+	</longdescription>
 </catmetadata>
 

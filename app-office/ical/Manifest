@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d0d1a2856e55b23ed9c73c5233be280 ChangeLog 1736
-MD5 d2bc892a42d09ce669a9fc5419279a6b files/digest-ical-2.2.1 136
-MD5 e6a77487b51ba1a26a2949eaf74c9ee2 ical-2.2.1.ebuild 1229
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0Y4LI1lqEGTUzyQRAogCAKCL0lnog5SDem61eIHpEXf+6t99ogCfY2WW
-2hrIdK++V6VTnV5mb9Ll3Sw=
-=7kJv
------END PGP SIGNATURE-----
+MD5 b10b2fab706b86b7edb3727fc82e88dd ChangeLog 1926
+MD5 22defb84f0cfb7470f6688ef74a10dbd files/digest-ical-2.2.1 136
+MD5 07e6a3c365c0ba51f020deb5793d1899 ical-2.2.1.ebuild 1273
