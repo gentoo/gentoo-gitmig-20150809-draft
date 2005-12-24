@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 51def49ebf63886e372c514f4507763d ChangeLog 1020
+MD5 251480bcad0049955c33a15fb20a2152 ChangeLog 1102
 MD5 dc0bbd9782c504abc0d3dc53f0af264b eclipse-ecj-3.1-r2.ebuild 978
-MD5 4c9a2107412441cf7a64141c9b4a9b19 eclipse-ecj-3.1.ebuild 706
-MD5 8ee9e012d802d00bfc325052848db7f8 files/digest-eclipse-ecj-3.1 75
 MD5 161703424f42912915dc4eb9f4c4428b files/digest-eclipse-ecj-3.1-r2 78
 MD5 d8e6062d33f3f505c0ed609104623567 metadata.xml 475
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpZwdndWRXhKOboURAljDAJ91cG0l26d+XqFwVrT3XUPxcKGCFgCgwNNM
-DonnPSetf7Wn3W1sKKJSFe8=
-=i5Zw
------END PGP SIGNATURE-----
