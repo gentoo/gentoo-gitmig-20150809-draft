@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8021fefe7556af254f868e95de653136 ChangeLog 4554
-MD5 9519afbfe66e8a88784254e1bd3486f2 files/digest-initng-0.4.7 65
+MD5 d3157170dc1a6a950fbc608330bbae00 ChangeLog 4699
 MD5 52888c1ddea3503d1f16812d80652239 files/digest-initng-0.4.8 65
+MD5 b37889d0f566463fc626894e03ea2100 files/digest-initng-0.5.0 65
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-initng-9999 0
-MD5 34582f01ef68476ca647e5df4b53aa63 initng-0.4.7.ebuild 1045
 MD5 36e7ed98384bbce1cd77ad70483e8512 initng-0.4.8.ebuild 1045
+MD5 a47c6104b1ae9919b61ea6015ba666f9 initng-0.5.0.ebuild 1045
 MD5 9f58d80fecdef9a298916a25b32e06a6 initng-9999.ebuild 1129
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDq0F62+ySkm8kpY0RAgOcAKCIAhs885HRszHoaZ+BD/i5/HdZNgCggZJP
-2R9B892gdzMjUeA0ho48lrI=
-=76Hy
+iD8DBQFDrZ8Z2+ySkm8kpY0RAhr2AJ9XSNuvtSswqfUzxQBsEIbr6ZymzACfXOrM
+Ig2YKrQwc4UgTrJgYhv0f28=
+=4d14
 -----END PGP SIGNATURE-----
