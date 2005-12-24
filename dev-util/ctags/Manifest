@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4625594b540ddc6659e2b11bf67ad61 ChangeLog 5688
+MD5 7b613cf3a9797d6d0831b96dcede666a ChangeLog 5781
 MD5 abc0a9a9eec6b55c3467bc4a391f24d7 ctags-5.2.3.ebuild 1106
 MD5 521c6ff92d93d2b9ff74b9777920c650 ctags-5.5-r1.ebuild 1154
 MD5 6442e7bc008779607d66b6f812537c0d ctags-5.5.4-r1.ebuild 1270
-MD5 6f5dcdb5ae4372e6a5c1154071c1d9a2 ctags-5.5.4-r2.ebuild 1163
+MD5 a0bebef211c313fa692036acb8807d19 ctags-5.5.4-r2.ebuild 1160
 MD5 f269a84079f91e3e9760bcf5f5046ce1 ctags-5.5.4-r3.ebuild 1282
 MD5 4ea350a12ae5d06505858810e044e5d9 ctags-5.5.4.ebuild 1173
 MD5 c8619d4bc60a735c9ad54ee3a9aeae7d ctags-5.5.ebuild 1160
@@ -22,10 +19,3 @@ MD5 ac053acfd4f28f9c48e9d3c139f85e90 files/digest-ctags-5.5.4-r1 63
 MD5 ac053acfd4f28f9c48e9d3c139f85e90 files/digest-ctags-5.5.4-r2 63
 MD5 ac053acfd4f28f9c48e9d3c139f85e90 files/digest-ctags-5.5.4-r3 63
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDiwWWKRy60XGEcJIRAgIAAJ9GZzz9SMOBTwxnYZDdjGf+UvoDAQCfVonA
-Apkf6UMXiJ+OVGzAzWrT5+k=
-=aKzP
------END PGP SIGNATURE-----

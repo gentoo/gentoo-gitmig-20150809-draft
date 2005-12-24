@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 50d7a95281f156c528dea3142ed33fef darcs-1.0.5_rc2.ebuild 1490
-MD5 7adb240e5d31fceeabdec7633e99c138 darcs-1.0.3.ebuild 1373
+MD5 29c79aada31e0f191a634a810b3bc23a ChangeLog 6500
+MD5 90f87bece03065a1f9cea89962b34258 darcs-1.0.2.ebuild 1391
+MD5 0b3a84cb5b7d77858fda8034a24e9408 darcs-1.0.3.ebuild 1371
+MD5 dfdf6d8f6fc2fb544124444a213fa933 darcs-1.0.4.ebuild 1412
 MD5 b6bb7aafdff2fc50c0b2dcba26140650 darcs-1.0.5.ebuild 1486
 MD5 a99133416c07a0dceff95ba244fb27a6 darcs-1.0.5_rc1.ebuild 1490
-MD5 90f87bece03065a1f9cea89962b34258 darcs-1.0.2.ebuild 1391
-MD5 abde0be377c1b112443fc878613b10c6 ChangeLog 6410
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 dfdf6d8f6fc2fb544124444a213fa933 darcs-1.0.4.ebuild 1412
+MD5 50d7a95281f156c528dea3142ed33fef darcs-1.0.5_rc2.ebuild 1490
 MD5 f575d4994edef2bafd09e0c520feb65f files/digest-darcs-1.0.2 63
 MD5 7a71d24a646e5a87396a3ae6e47d67c4 files/digest-darcs-1.0.3 63
 MD5 da9a5baba3176cbc6ba4df0190fc4b00 files/digest-darcs-1.0.4 63
 MD5 2bae2d256674251392dd30e47f52478f files/digest-darcs-1.0.5 63
 MD5 615b66d40e2aa76f0e54fc1e1d87d556 files/digest-darcs-1.0.5_rc1 66
 MD5 163b845dba1cc63e808d5e51f41b175d files/digest-darcs-1.0.5_rc2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDlv36OKSBj1ObwosRAlfQAJ4zv16C0KDNhQfJyp+/J3Z1w7U+DACgkr4U
-KtcllCWFs+I5b8eBrN5Mfcs=
-=O521
------END PGP SIGNATURE-----
+MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
