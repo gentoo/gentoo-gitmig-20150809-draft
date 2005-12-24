@@ -1,4 +1,14 @@
-MD5 fb4a86ad29d3b24b395ff0a663b6c719 clara-20031214.ebuild 981
-MD5 56090ffcc7286a0de1f7ed942d554a3c ChangeLog 913
-MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6705d7bb48d123ef7185bb371c693986 ChangeLog 1043
+MD5 1b393f2b0b2c9a519b71605a7b96c37e clara-20031214.ebuild 1001
 MD5 d09227b4090e8779eefd066ceafb8728 files/digest-clara-20031214 66
+MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrdXzchej4aZK9/cRApctAJ9KUL/92PinqC8rXdLE2di0nhhpAACfbIGW
+d4ZYEOVrCAigiy58qZmo8HQ=
+=LYsB
+-----END PGP SIGNATURE-----
