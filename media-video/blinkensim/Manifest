@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8916f5a5e0370af9ab3f94bb7de138ec ChangeLog 626
 MD5 0dd06d46c57c6f6fff0e76a874266900 blinkensim-2.7.ebuild 918
 MD5 55dd765ea319260bc19fb6cdf7987d78 files/digest-blinkensim-2.7 65
 MD5 0ae387d887d8c0dacced99fa8612c67f metadata.xml 389
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrS+BI1lqEGTUzyQRAgRAAKCAnTKY2V60CUj9KgkdtuW4Zbbk9wCgw5U2
+yRqOv1OmPW5q7rL22Pm9l30=
+=VxZS
+-----END PGP SIGNATURE-----
