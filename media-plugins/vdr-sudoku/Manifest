@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b999ea84aa08cc8ea7a96d0d7d99f513 ChangeLog 518
 MD5 a49b19cd98ae8fa76823f470537e4252 files/digest-vdr-sudoku-0.1.1 64
-MD5 69bb04f3b73e11ceb6eacacf37ef169c metadata.xml 458
+MD5 f88f792468dc12fca97f89b7655e9831 metadata.xml 452
 MD5 fb38d5cc64130532fa8f8b5d897fafb7 vdr-sudoku-0.1.1.ebuild 543
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrS3YI1lqEGTUzyQRAvJfAKDNw5oZI9IWupytP6wx7UlQonXjkQCffnMY
-iFDexBJQwLlE2O97lx1ONnU=
-=DAtn
------END PGP SIGNATURE-----
