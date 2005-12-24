@@ -1,6 +1,10 @@
 # ChangeLog for app-office/ical
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.13 2005/07/10 21:07:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.14 2005/12/24 19:25:34 vanquirius Exp $
+
+  24 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> ical-2.2.1.ebuild:
+  Remove autoconf line for bug 101658. Thanks to Sascha Lucas <sascha dot
+  lucas at rus dot uni-stuttgart dot de>.
 
   10 Jul 2005; Sven Wegener <swegener@gentoo.org> ical-2.2.1.ebuild:
   QA: Removed 'emake || make || die' and variants. Either a package is
