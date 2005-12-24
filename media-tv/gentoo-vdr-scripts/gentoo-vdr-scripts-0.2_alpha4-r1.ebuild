@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha4-r1.ebuild,v 1.2 2005/12/23 17:18:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha4-r1.ebuild,v 1.3 2005/12/24 11:18:10 swegener Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ pkg_setup() {
 		done
 	else
 		enewuser vdr -1 /bin/bash ${VDR_HOME} vdr,video,audio,cdrom
-	fi	
+	fi
 }
 
 src_install() {
