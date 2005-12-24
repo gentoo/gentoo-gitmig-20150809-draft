@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.43 2005/12/12 04:49:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.44 2005/12/24 16:54:19 killerfox Exp $
+
+  24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> libdv-0.102.ebuild:
+  Stable on hppa.
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   libdv-0.104-r1.ebuild:
