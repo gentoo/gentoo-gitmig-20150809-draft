@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.40 2005/12/23 19:35:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.41 2005/12/24 15:48:35 yoswink Exp $
+
+  24 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org> joe-3.2.ebuild:
+  Stable on alpha wrt bug #110660
 
   23 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org> joe-3.2.ebuild:
   Marked ppc stable, #116311
