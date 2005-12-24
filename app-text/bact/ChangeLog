@@ -1,0 +1,10 @@
+# ChangeLog for app-text/bact
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bact/ChangeLog,v 1.1 2005/12/24 18:58:09 usata Exp $
+
+*bact-0.13 (24 Dec 2005)
+
+  24 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +bact-0.13.ebuild:
+  Initial import.
+
