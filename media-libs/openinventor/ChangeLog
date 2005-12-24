@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.6 2005/12/20 16:19:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.7 2005/12/24 21:36:09 blubb Exp $
+
+  24 Dec 2005; Simon Stelling <blubb@gentoo.org>
+  openinventor-2.1.5.10-r1.ebuild:
+  stable on amd64
 
   20 Dec 2005; Chris White <chriswhite@gentoo.org>
   openinventor-2.1.5.10-r1.ebuild:
