@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.43.ebuild,v 1.7 2005/11/28 19:13:39 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.43.ebuild,v 1.8 2005/12/24 23:37:10 vanquirius Exp $
 
 inherit gnome2 eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="gnome mmx perl python bonobo inkjar doc plugin effects spell"
 
 RDEPEND=">=x11-libs/gtk+-2.4.1
+	>=dev-libs/glib-2.6.5
 	>=media-libs/libart_lgpl-2.3.16
 	>=dev-libs/libxml2-2.6.20
 	>=x11-libs/pango-1.4.0
