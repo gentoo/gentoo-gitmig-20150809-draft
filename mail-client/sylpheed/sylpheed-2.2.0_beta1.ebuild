@@ -1,18 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.1.9.ebuild,v 1.1 2005/12/16 10:16:59 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.0_beta1.ebuild,v 1.1 2005/12/24 13:06:11 hattya Exp $
 
 inherit eutils
 
 IUSE="crypt gnome ipv6 ldap nls pda ssl xface"
 
+MY_P=${P/_/}
+
 DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.good-day.net/"
-SRC_URI="http://sylpheed.good-day.net/${PN}/v${PV%.*}/${P}.tar.bz2"
+SRC_URI="http://sylpheed.good-day.net/${PN}/v${PV%.*}beta/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
+S="${WORKDIR}/${MY_P}"
 
 PROVIDE="virtual/sylpheed"
 
@@ -32,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PV%.*}-shared-mime-info.diff
+	epatch ${FILESDIR}/${PN}-2.1-shared-mime-info.diff
 	automake
 
 }
