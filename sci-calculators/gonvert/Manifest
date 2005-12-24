@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eeb1bb16155151bf914596afaa1945bc ChangeLog 592
+MD5 8c26a0de675ffa2d6a6b00422e937636 ChangeLog 677
 MD5 7a256b70c07c8427561f42bb27b312e4 files/0.2.12-about.patch 540
 MD5 76f8a1799e14eda8add1a5f2d99ab94c files/digest-gonvert-0.2.12 66
-MD5 97ed652c1ca531e9992bebc20166327a gonvert-0.2.12.ebuild 768
+MD5 096ffd5533e3b2a7e397e02a117bb033 gonvert-0.2.12.ebuild 767
 MD5 21fbda69ea690869a8d2812f140bb3c7 metadata.xml 246
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDraAYp5vW4rUFj5oRArmFAJ96vtdZTngA4wIv824lcfHR2o3xNACfQDWt
-pj8Aj/1uiovLw7cTF9Xn7c8=
-=W26W
+iD8DBQFDraE5CRZPokWLroQRAnE/AKDGkXaOObuhSdv0S4ZCCcyP58h9tACeOWHL
+/8KafDuxJJA6XTkUepZ5N88=
+=sEWg
 -----END PGP SIGNATURE-----
