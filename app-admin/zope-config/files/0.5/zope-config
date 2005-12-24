@@ -9,14 +9,14 @@
 #
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.5/zope-config,v 1.1 2005/01/02 14:05:24 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.5/zope-config,v 1.2 2005/12/24 13:12:42 radek Exp $
 #
 #
 # Notes:
 #  $ZI_DIR/.default holds name of default zope instance
 #  $NEWZOPE is set to 1 if the zope server is 2.7.0 or newer
 #
-VERSION="0.4"
+VERSION="0.5"
 
 CONFIGFILE=/etc/zope-config.conf
 if [ -e ${CONFIGFILE} ]; then
