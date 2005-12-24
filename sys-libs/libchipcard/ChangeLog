@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.30 2005/11/28 23:48:55 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.31 2005/12/24 15:52:45 hansmi Exp $
+
+  24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libchipcard-1.9.15_beta.ebuild:
+  Stable on ppc.
 
 *libchipcard-1.9.17_beta (28 Nov 2005)
 
