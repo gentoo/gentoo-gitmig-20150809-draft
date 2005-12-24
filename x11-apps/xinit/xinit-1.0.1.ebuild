@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.1.ebuild,v 1.1 2005/12/23 10:40:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.1.ebuild,v 1.2 2005/12/24 17:13:11 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -9,10 +9,11 @@ SNAPSHOT="yes"
 inherit x-modular pam
 
 DESCRIPTION="X.Org xinit application"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~s390 ~sparc ~x86"
 RDEPEND="x11-libs/libX11
 		x11-wm/twm
 		x11-apps/xclock
+		x11-apps/xrdb
 		x11-terms/xterm"
 DEPEND="${RDEPEND}"
 
