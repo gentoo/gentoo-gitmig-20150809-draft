@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/zthread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.19 2005/11/25 12:33:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.20 2005/12/24 00:48:27 ka0ttic Exp $
+
+*zthread-2.3.1-r1 (24 Dec 2005)
+
+  24 Dec 2005; Aaron Walker <ka0ttic@gentoo.org> -files/zthread-gcc34.patch,
+  +files/zthread-2.3.1-fix-ac-arg-enable-debug.diff,
+  +files/zthread-2.3.1-fix-underquoted-m4-defs.diff,
+  +files/zthread-2.3.1-respect-DESTDIR.diff, +zthread-2.3.1-r1.ebuild:
+  Revision bump; added some patches to fix the --enable-debug configure
+  option, the underquoted m4 definition, and lack of DESTDIR support in
+  Makefile.am's. Also removed unused gcc34 patch.
 
   25 Nov 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Added to cpp herd.
