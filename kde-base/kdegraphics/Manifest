@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5627d28e9933d004259103c8feec5609 kdegraphics-3.4.3.ebuild 1738
 MD5 369fd4cc33c8ccd385bac35da7fdfe14 kdegraphics-3.4.3-r3.ebuild 1797
 MD5 8752f936f226c4117006b64736b21b05 kdegraphics-3.3.2-r3.ebuild 1612
@@ -36,3 +39,10 @@ MD5 cba50683fe0c9704ddfcd91fde5129c8 files/kpdf-3.5.0-cropbox-fix.patch 631
 MD5 8db8a9b442f66e9567ad591c8f03530e files/kdegraphics-3.5.0-kpovmodeler.patch 446
 MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
 MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDrMWQ3og80iZgVQgRArCAAJwOQwIQTWs/jjEuW5F/mhv+JVsl2wCfQYFb
+atuCpmuUogK/3jCj0EYpQ78=
+=LBXN
+-----END PGP SIGNATURE-----
