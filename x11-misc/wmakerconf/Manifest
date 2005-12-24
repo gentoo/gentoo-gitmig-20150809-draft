@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef2be4463d11dbc9de8ffae2efec6893 ChangeLog 3455
+MD5 c3371744ab1de9b005e842d6f5e6e40b ChangeLog 3551
 MD5 08460ad64726481d73b93e68c86d20f3 files/digest-wmakerconf-2.11 67
 MD5 1e9fc0f7bee345603a1202c29ea3f14e files/digest-wmakerconf-2.8.1-r2 68
 MD5 9836fda7307d1de81541a6ce1f894070 files/digest-wmakerconf-2.9.2 68
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 874efcdc1b5d24827acf9e978955aab6 wmakerconf-2.11.ebuild 1182
+MD5 698b122faa88c65f5a549bff439ab704 wmakerconf-2.11.ebuild 1179
 MD5 62f2137c705ffc70b14be88b6cd06bb4 wmakerconf-2.8.1-r2.ebuild 1247
 MD5 11a880b251a264c517ab53f576bcceee wmakerconf-2.9.2.ebuild 1228
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlf8DwUpWvClEHQoRAlHUAJ0YJi4AY1PgFbUbAv5GLi/NCCdwGgCdFYdf
-NW9hCTx1w0VEuBYDrCP8zPk=
-=iiAu
------END PGP SIGNATURE-----
