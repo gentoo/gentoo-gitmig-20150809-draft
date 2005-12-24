@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.44 2005/12/24 15:10:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.45 2005/12/24 16:13:52 killerfox Exp $
+
+  24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> smarty-2.6.10.ebuild:
+  Stable on hppa.
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> smarty-2.6.10.ebuild:
   Stable on ppc.
