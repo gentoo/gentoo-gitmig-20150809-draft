@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a747a9297a3e7f812a53d5c729d230a ChangeLog 9494
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r2 68
@@ -18,3 +21,10 @@ MD5 03ce983ed4a749d09b6264da58d82b05 findutils-4.2.25.ebuild 1705
 MD5 b8fa5580ba6c39175ee7bc1f2078435b findutils-4.2.27.ebuild 1693
 MD5 83e4e673d3cfa579a82d471f53a61a50 findutils-4.3.0.ebuild 1805
 MD5 1f7197b778d47c773d19430261c84f49 metadata.xml 261
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrNR/J+ChZlpDtAoRAmHAAKCUcwxHvhhMdLR0S1TYEJZXMmKoTwCgk6x0
+8SbFi/EC0t9BhwOrZV2GAuU=
+=pgXi
+-----END PGP SIGNATURE-----
