@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/pdfjam-1.20.ebuild,v 1.3 2005/12/10 12:35:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/pdfjam-1.20.ebuild,v 1.4 2005/12/24 14:21:23 hansmi Exp $
 
 DESCRIPTION="pdfnup, pdfjoin and pdf90"
 HOMEPAGE="http://www.warwick.ac.uk/go/pdfjam"
@@ -8,7 +8,7 @@ SRC_URI="http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic/firth/softw
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 S=${WORKDIR}/${PN}
 
