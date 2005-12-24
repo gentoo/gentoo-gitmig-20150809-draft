@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/files/dante-sockd-init,v 1.2 2005/06/04 12:30:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/files/dante-sockd-init,v 1.3 2005/12/24 16:51:23 mrness Exp $
 
 SOCKD_OPT="-D"
 [ "${SOCKD_FORKDEPTH}" -gt 1 ] && SOCKD_OPT="${SOCKD_OPT} -N ${SOCKD_FORKDEPTH}"
@@ -51,8 +51,5 @@ start() {
 stop() {
 	ebegin "Stopping dante sockd"
 	start-stop-daemon --stop --quiet --pidfile $PIDFILE
-	eend $? "Failed to stop sockd" || return 1
-	
-	# clean stale pidfile
-	[ -f "$PIDFILE" ] && rm -f $PIDFILE
+	eend $? "Failed to stop sockd"
 }

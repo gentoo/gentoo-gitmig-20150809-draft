@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.22 2005/12/18 18:03:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.23 2005/12/24 16:51:23 mrness Exp $
+
+  24 Dec 2005; Alin Nastac <mrness@gentoo.org> files/dante-sockd-init:
+  Remove uneeded pid cleanup from init script, which made stop() to
+  return error code even though it did succeded.
 
   18 Dec 2005; Markus Rothe <corsair@gentoo.org> dante-1.1.18.ebuild:
   Stable on ppc64
