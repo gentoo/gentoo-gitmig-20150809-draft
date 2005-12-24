@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.23 2005/12/14 15:59:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.24 2005/12/24 00:43:04 battousai Exp $
+
+*x11-drm-20051223 (24 Dec 2005)
+
+  24 Dec 2005; Bryan Stine <battousai@gentoo.org> +x11-drm-20051223.ebuild:
+  Snapshot bump to 20051223. Happy holidays.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   x11-drm-20051028.ebuild:
