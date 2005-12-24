@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/multilib/2005.1/make.defaults,v 1.1 2005/04/27 05:13:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/multilib/2005.1/make.defaults,v 1.2 2005/12/24 16:10:09 kumba Exp $
 
 STAGE1_USE=""
 GRP_STAGE23_USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java"
@@ -9,7 +9,7 @@ USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts oss alsa crypt f
 # This profile doesn't fully support multilib portage yet.  We still rely
 # on the emul-* packages.  As such, we have -multilib-pkg here to emphasise
 # that point.
-FEATURES="sandbox autoconfig multilib-strict"
+FEATURES="-sandbox autoconfig multilib-strict"
 
 MULTILIB_ABIS="n64 n32 o32"
 DEFAULT_ABI="o32"
