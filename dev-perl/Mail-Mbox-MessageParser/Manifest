@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5068b82532034f526ba9713de2dd9074 ChangeLog 1916
+MD5 aec4716855ef4a84d145fd694e030981 ChangeLog 2027
 MD5 312a8c8c74babe0695f8aaa21ec118c9 Mail-Mbox-MessageParser-1.20.ebuild 607
 MD5 8252201af953d9a5dcd411b5a3f0e313 Mail-Mbox-MessageParser-1.30.00.ebuild 703
-MD5 20022c286a3433e867f16dc84271f097 Mail-Mbox-MessageParser-1.40.01.ebuild 708
+MD5 144500a3ff62ff643ec4a69fb9fcf31b Mail-Mbox-MessageParser-1.40.01.ebuild 704
 MD5 e22d2b3faabc49cc46e3b0c88a660d29 files/digest-Mail-Mbox-MessageParser-1.20 80
 MD5 89c715b9e33611f917e4d891643cab23 files/digest-Mail-Mbox-MessageParser-1.30.00 82
 MD5 6b2b49f38fb7dba81ff74ead6e18b4de files/digest-Mail-Mbox-MessageParser-1.40.01 82
 MD5 7e01e8b63c248a80a3254c5169f6150b metadata.xml 268
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpvw0tG5z4I8BtQoRAu2SAJ466ARp86FeZ+K4GM83sHxTz+q/LwCeKHyV
-cWfByULPbQ5VcF28hBvO0rM=
-=ldQl
------END PGP SIGNATURE-----
