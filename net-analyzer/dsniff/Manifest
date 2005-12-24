@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c84620de36665ea658a052e5a9eac3c ChangeLog 2979
+MD5 d5cbdf8fd1f23e35bea4b31785d4171c ChangeLog 3073
 MD5 a800c8f521b81572f53a3527f1a91d4d dsniff-2.3-r4.ebuild 2228
-MD5 f09550b3122b537bfa7dbc0478e2b57f dsniff-2.3-r7.ebuild 1574
-MD5 bb880c49bdffe94226562c9f6b06e0e7 metadata.xml 719
+MD5 8a6e4a5dbcf33713f14f38d0292f486b dsniff-2.3-r7.ebuild 1573
 MD5 9206faea6a9be25f7d1aa0ac0a2ff6e3 files/2.3-libnet-1.0.patch 6110
-MD5 0e5d8e4adda8f4876e972a02bed13cc3 files/digest-dsniff-2.3-r7 62
-MD5 5c5bea8cc4846925ba48ba5c9ea83341 files/digest-dsniff-2.3-r4 123
 MD5 f41ad0aeacc05042ec27551b257845d3 files/2.3-makefile.patch 1531
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmNgqugEuf3OQ0akRAo9PAJ4ntQROEX2L7BKv7m8LwJ0W5075/QCdHOgz
-Ux0/mvb/FpTKH8JI6ugSeJo=
-=J7Rp
------END PGP SIGNATURE-----
+MD5 5c5bea8cc4846925ba48ba5c9ea83341 files/digest-dsniff-2.3-r4 123
+MD5 0e5d8e4adda8f4876e972a02bed13cc3 files/digest-dsniff-2.3-r7 62
+MD5 bb880c49bdffe94226562c9f6b06e0e7 metadata.xml 719
