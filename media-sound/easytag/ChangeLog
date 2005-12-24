@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.73 2005/12/19 11:04:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.74 2005/12/24 16:23:32 killerfox Exp $
+
+  24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> easytag-1.1.ebuild:
+  Stable on hppa.
 
   19 Dec 2005; Markus Rothe <corsair@gentoo.org> easytag-1.99.10.ebuild:
   Added ~ppc64; bug #111427
