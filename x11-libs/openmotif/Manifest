@@ -32,8 +32,8 @@ MD5 214cd8f46dc88caf500e6307658abfbf files/openmotif-2.2.3-utf8.patch 2979
 MD5 7284e10e14cac30429821b824dd2f722 files/site.def 2062
 MD5 7284e10e14cac30429821b824dd2f722 files/site.def.1 2062
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 7cec27d45e4e18a5eae6dfbf1747d0a1 openmotif-2.1.30-r13.ebuild 5160
+MD5 ee8ee30345fe4000b10cfa89d1ec37d4 openmotif-2.1.30-r13.ebuild 5159
 MD5 cbb60554d94564b84d4960afdbcc2500 openmotif-2.1.30-r9.ebuild 3939
 MD5 820298e14c2fe7aa9d83621eb59a75ad openmotif-2.2.3-r3.ebuild 3239
 MD5 0b8526ea0e8fb64a6dafc6108efae24d openmotif-2.2.3-r7.ebuild 3919
-MD5 8940c1a6a729bc3b7ae9d128db12f392 openmotif-2.2.3-r8.ebuild 3956
+MD5 897d814cf871178907190e733de11cac openmotif-2.2.3-r8.ebuild 3955
