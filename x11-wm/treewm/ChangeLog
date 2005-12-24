@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/treewm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.14 2004/07/01 21:52:18 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.15 2005/12/24 19:07:08 vanquirius Exp $
+
+  24 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> treewm-0.4.5.ebuild:
+  Add compilation fix from bug 86453. Thanks to Francisco Jose Canizares
+  Santofimia <telefrancisco at lycos dot es>.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> treewm-0.4.4.ebuild,
   treewm-0.4.5.ebuild:
