@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.6.ebuild,v 1.5 2005/12/20 10:47:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.6.ebuild,v 1.6 2005/12/24 16:00:41 hansmi Exp $
 
 inherit toolchain-funcs eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
 IUSE="X tcpd debug prelude"
 DEPEND="=net-analyzer/nessus-libraries-${PV}
 	=net-analyzer/libnasl-${PV}
