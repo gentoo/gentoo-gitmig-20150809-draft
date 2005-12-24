@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.4 2005/12/24 04:54:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.5 2005/12/24 17:31:32 solar Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -42,6 +42,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${P}-cleanups.patch
 	epatch "${FILESDIR}"/${P}-rlfe-build.patch #116483
+	epatch "${FILESDIR}"/${P}-rlfe-uclibc.patch
+
 	ln -s ../.. examples/rlfe/readline
 
 	# force ncurses linking #71420
