@@ -1,0 +1,12 @@
+diff -Nru wvstreams-4.2.1.orig/include/wvhttppool.h wvstreams-4.2.1/include/wvhttppool.h
+--- wvstreams-4.2.1.orig/include/wvhttppool.h	2005-11-17 22:45:04.000000000 +0200
++++ wvstreams-4.2.1/include/wvhttppool.h	2005-12-24 09:52:24.069752500 +0200
+@@ -57,7 +57,7 @@
+     WvString linkname;
+     WvUrl url;
+ 
+-    WvUrlLink::WvUrlLink(WvStringParm _linkname, WvStringParm _url)
++    WvUrlLink(WvStringParm _linkname, WvStringParm _url)
+ 	: linkname(_linkname), url(_url)
+     {}
+ };
