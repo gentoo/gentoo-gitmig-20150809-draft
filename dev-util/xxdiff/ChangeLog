@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.31 2005/09/11 02:21:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.32 2005/12/24 22:01:16 vanquirius Exp $
+
+*xxdiff-3.1 (24 Dec 2005)
+
+  24 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  +xxdiff-3.1.ebuild:
+  3.1 version bump, which should fix bug 111255. Reported by Clock <clock at
+  twibright dot com>.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> xxdiff-3.0.2-r1.ebuild:
   Mark 3.0.2-r1 stable on alpha
