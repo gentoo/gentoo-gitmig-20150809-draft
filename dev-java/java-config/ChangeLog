@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.83 2005/12/24 15:55:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.84 2005/12/24 16:16:25 killerfox Exp $
+
+  24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  java-config-1.2.11-r1.ebuild:
+  Stable on hppa.
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   java-config-1.2.11-r1.ebuild:
