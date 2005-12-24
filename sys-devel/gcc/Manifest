@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9012c349df9a5bb7d4f50ce12acc345c ChangeLog 98036
+MD5 57ca2c2e92938418d4ca8dff4e1629e8 ChangeLog 98315
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
@@ -51,7 +51,6 @@ MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
 MD5 520c8e6799b5c4bff0fdcb81e81fbe88 files/3.4.4/gcc-3.4.4-cross-compile.patch 1912
 MD5 2c355d808b490994c6566b10f3c0ba27 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
 MD5 0acb1229f47bbb9e254a9824db17c25b files/4.0.2/gcc-4.0.2-cross-compile.patch 505
-MD5 6c3e9176aff0f29e30a356970e8fa307 files/4.1.0/gcc-4.1.0-pr22313.patch 2292
 MD5 fed3620378df7a876d6709ddf3f7bbec files/awk/fixlafiles.awk 7865
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 MD5 4ecf0f5cb735c81ca4b61a9c6db74269 files/digest-gcc-2.95.3-r9 139
@@ -70,7 +69,7 @@ MD5 fa32cd40c637c54b4e3b89dd4ed4c573 files/digest-gcc-3.4.4-r1 450
 MD5 009ef464ff3b7e1a3f6aa78e20736969 files/digest-gcc-3.4.5 364
 MD5 f0c74f849066ffaefe7d364d69a71961 files/digest-gcc-4.0.1 380
 MD5 ec2e40ca8729562141a95fcb54f5861d files/digest-gcc-4.0.2-r2 381
-MD5 931dc072360e8ad2d0a9d96da71884da files/digest-gcc-4.1.0_beta20051216 71
+MD5 307c5b6e8d2820e48c211c1b2475260e files/digest-gcc-4.1.0_beta20051223 71
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
 MD5 f80fd6ebeeea00d3e1649dfccdd85062 files/gcc-spec-env.patch 893
@@ -100,12 +99,12 @@ MD5 c44289f25b99d3c631f97a8043826901 gcc-3.4.4-r1.ebuild 5203
 MD5 14188c45d8fee496cb16ba55363fd2c2 gcc-3.4.5.ebuild 5046
 MD5 103f90b35ea4fb36f174d4e29a2f00c1 gcc-4.0.1.ebuild 1864
 MD5 174f2d562e09f4eab132d7b8e3b42818 gcc-4.0.2-r2.ebuild 2178
-MD5 9df672a0201da740dd73de713c67d22a gcc-4.1.0_beta20051216.ebuild 2144
+MD5 eff344349de4e1c0200e452fb919334f gcc-4.1.0_beta20051223.ebuild 2092
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqHLLCRZPokWLroQRAkG6AJ4mazxOV7pNNRPclMOeV839l7rxFwCfcAhw
-Kflk2pPtjxsFkOxauzQQvAE=
-=2EYv
+iD8DBQFDrJ1yCRZPokWLroQRAlVDAJ9SjeHQUAI8RowWKS7eTO986KEttQCfQt1L
+dIg5Amuml1mIuZGxPBvRp9E=
+=JTvK
 -----END PGP SIGNATURE-----

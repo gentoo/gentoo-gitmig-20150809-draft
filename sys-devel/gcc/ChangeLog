@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.478 2005/12/20 21:08:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.479 2005/12/24 00:59:19 halcy0n Exp $
+
+*gcc-4.1.0_beta20051223 (24 Dec 2005)
+
+  24 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  -files/4.1.0/gcc-4.1.0-pr22313.patch, -gcc-4.1.0_beta20051216.ebuild,
+  +gcc-4.1.0_beta20051223.ebuild:
+  Bump to a new gcc-4.1 snapshot. The patch from pr22313 is now included
+  upstream.
 
   20 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.1.ebuild,
   gcc-4.0.2-r2.ebuild, gcc-4.1.0_beta20051216.ebuild:

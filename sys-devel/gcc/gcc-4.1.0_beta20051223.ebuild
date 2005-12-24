@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051216.ebuild,v 1.2 2005/12/20 21:08:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20051223.ebuild,v 1.1 2005/12/24 00:59:19 halcy0n Exp $
 
 ETYPE="gcc-compiler"
 
@@ -50,7 +50,6 @@ pkg_setup() {
 
 src_unpack() {
 	toolchain_src_unpack
-	epatch "${FILESDIR}"/4.1.0/gcc-4.1.0-pr22313.patch
 
 	echo ${PV/_/-} > "${S}"/gcc/BASE-VER
 	echo "" > "${S}"/gcc/DATESTAMP
