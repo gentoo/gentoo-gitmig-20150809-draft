@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.234 2005/12/21 00:19:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.235 2005/12/24 05:00:37 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -126,10 +126,12 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	IUSE="nls build"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="altivec bootstrap build fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc objc-gc vanilla mudflap"
-	[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
-	[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
-	[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
+	if [[ ${PN} != "kgcc64" ]] ; then
+		IUSE="altivec bootstrap build fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc objc-gc vanilla mudflap"
+		[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
+		[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
+		[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
+	fi
 	# Support upgrade paths here or people get pissed
 	if use multislot ; then
 		SLOT="${CTARGET}-${GCC_CONFIG_VER}"
