@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a2c2c5c217324deffcac5a359bc23661 ChangeLog 13504
-MD5 001de4d11bfaea065cf6ca5c4d3f5a34 files/digest-netpbm-10.26.20 139
+MD5 6f120fb1b33d0b589fe3c49f2e9f4522 ChangeLog 13658
 MD5 cced4bdf3ef27f117d94b1c108b9a97b files/digest-netpbm-10.26.21 139
 MD5 c6c3222383568021fbbdc34114b6f279 files/digest-netpbm-10.28 62
 MD5 8c4a20ca06c83687436b8cb75917d5f1 files/digest-netpbm-10.29 62
 MD5 e03ba0a74da10891ecaa41fb86191275 files/digest-netpbm-10.29-r1 136
 MD5 af57721491b0a7cd11ccba542d8e20c6 files/digest-netpbm-10.30-r1 136
+MD5 ac1e123fe227bbcf7b3721a298efb0a9 files/digest-netpbm-10.31 136
 MD5 3e364cbe32c6c5bd2f329b8dbcf604d5 files/netpbm-10.29-anytopnm.patch 1562
 MD5 e3ef1ff99bf9335b47ea62db7416b625 files/netpbm-10.29-build.patch 2283
 MD5 103e8f6f6474dcc4b17ee049111bc3f6 files/netpbm-10.29-infinity.patch 5840
@@ -17,18 +17,19 @@ MD5 c63d12c2c7deaafa4fcddb6035b34169 files/netpbm-10.30-build.patch 2276
 MD5 f877055480e9ba8f7c11ff8386782621 files/netpbm-10.30-jpeg-prototypes.patch 2077
 MD5 2dd6e3d7a2601a35259474344f7feb20 files/netpbm-10.30-pngtopnm.patch 417
 MD5 87a9972b59b90f26620b09ad990a8546 files/netpbm-10.30-tifftopnm.patch 373
+MD5 dc7c33e66fdb4bc51604243af2ea9b76 files/netpbm-10.31-build.patch 1629
 MD5 ef9c07e7cbf6b830f8dd61e59fb0a34b files/netpbm-dSAFER.patch 818
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
-MD5 6da743132b9702be3b38b2a292bd7bfd netpbm-10.26.20.ebuild 2799
 MD5 4569c7796d2f5cd2fcbd5e34022d0ed6 netpbm-10.26.21.ebuild 2799
 MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
 MD5 4b1a6bc24bd0b85afb5756e7c1e218e8 netpbm-10.29-r1.ebuild 2937
 MD5 44a56191027bdda13f3bd51f336a971a netpbm-10.29.ebuild 2423
 MD5 b4aa03af3e2cfefb1b8eafa07ba3e6b3 netpbm-10.30-r1.ebuild 3044
+MD5 735ba0b4509f3dd9fe932b2f2be92839 netpbm-10.31.ebuild 2884
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqWvtntT9W3vfTuoRAsebAKCG8t0MLH16aflZB4N1okI8uGLn2wCfXNsK
-wV6kAKNsGQzyJvuKjZV2pR8=
-=Y3Fj
+iD8DBQFDrM0D2+ySkm8kpY0RAi4jAJsGtE+KBlduGmTJ5OtWg8yQOkqsjACfdX7n
+YDGE/kkBHiya15bAeTnEGEU=
+=A/zZ
 -----END PGP SIGNATURE-----

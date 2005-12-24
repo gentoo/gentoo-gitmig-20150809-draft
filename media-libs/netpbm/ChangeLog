@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.95 2005/12/21 14:51:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.96 2005/12/24 04:22:17 vapier Exp $
+
+*netpbm-10.31 (24 Dec 2005)
+
+  24 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.31-build.patch, +netpbm-10.31.ebuild:
+  Version bump.
 
   21 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org> netpbm-10.30-r1.ebuild:
   Stable on amd64.

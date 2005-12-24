@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.26.20.ebuild,v 1.1 2005/12/07 23:31:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.31.ebuild,v 1.1 2005/12/24 04:22:17 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="svga jpeg tiff png zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
@@ -48,7 +48,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/netpbm-10.30-build.patch
+	epatch "${FILESDIR}"/netpbm-10.31-build.patch
+	epatch "${FILESDIR}"/netpbm-10.30-tifftopnm.patch
 
 	rm -f configure
 	cp Makefile.config.in Makefile.config
@@ -80,6 +81,7 @@ src_unpack() {
 	URTLIB = -lrle
 	URTHDR_DIR =
 	EOF
+	append-flags -Wall
 
 	# Sparc support ...
 	replace-flags -mcpu=ultrasparc "-mcpu=v8 -mtune=ultrasparc"
