@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aae67c2e43c3a22d3d63059df724a327 joe-3.2.ebuild 1326
+MD5 3541868bab4e0b0e53d95029509c9c91 ChangeLog 5005
 MD5 4bdcc86c730cc779e0c97aca82949a6e joe-3.0-r2.ebuild 1474
-MD5 f10b8a47c2905b209c66888298cc8526 ChangeLog 4923
-MD5 97f8bc36dd9eff41628e5e77067fea6f metadata.xml 667
 MD5 131038935558d5f95a5bab2d8b359b1f joe-3.1-r1.ebuild 1463
-MD5 595cf72f2a5230f8afdeb1391da39f71 files/digest-joe-3.2 59
-MD5 94eae235e8e8f4c5152ebda30d79cd9d files/joe-3.1-overflow.patch 386
-MD5 1b4c305f8a53a6eec3f5ff94851985a4 files/joe-3.0-overflow.patch 354
+MD5 5fcfc8f6e37356d787cb145a1fbd9962 joe-3.2.ebuild 1323
+MD5 97f8bc36dd9eff41628e5e77067fea6f metadata.xml 667
 MD5 8115b4ae2f2702a436c3008f32ae6ca4 files/digest-joe-3.0-r2 59
 MD5 ac08ada3dfe348bc96ff85aff854e31a files/digest-joe-3.1-r1 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDrW3h3og80iZgVQgRAjckAJ9mpLQa+0rUPNrpSiLLQTS26N7C4gCfWQbq
-QYUsvRONE8Ek4WmNdfJ+7Y4=
-=kPNG
------END PGP SIGNATURE-----
+MD5 595cf72f2a5230f8afdeb1391da39f71 files/digest-joe-3.2 59
+MD5 1b4c305f8a53a6eec3f5ff94851985a4 files/joe-3.0-overflow.patch 354
+MD5 94eae235e8e8f4c5152ebda30d79cd9d files/joe-3.1-overflow.patch 386
