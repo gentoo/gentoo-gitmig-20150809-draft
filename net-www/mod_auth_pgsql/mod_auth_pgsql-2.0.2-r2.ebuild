@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-2.0.2-r2.ebuild,v 1.5 2005/12/03 23:58:00 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-2.0.2-r2.ebuild,v 1.6 2005/12/24 16:03:02 blubb Exp $
 
 inherit apache-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="This module allows user authentication (and can log authentication 
 HOMEPAGE="http://www.giuseppetanzilli.it/mod_auth_pgsql2/"
 SRC_URI="http://www.giuseppetanzilli.it/mod_auth_pgsql2/dist/${P}b1.tar.gz"
 
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 LICENSE="freedist"
 SLOT="2"
 DEPEND="dev-db/postgresql"
