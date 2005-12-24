@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.28 2005/11/28 23:45:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.29 2005/12/24 15:52:21 hansmi Exp $
+
+  24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ktoblzcheck-1.7.ebuild:
+  Stable on ppc.
 
 *ktoblzcheck-1.8 (28 Nov 2005)
 

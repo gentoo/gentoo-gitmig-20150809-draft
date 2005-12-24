@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b5243539a69ef420dd449a5c51040a6 ChangeLog 3209
+MD5 40a6ba2815eb075f52209cf29ef09a10 ChangeLog 3308
 MD5 7cbeecef2ba27e6185335d102bd5297a files/digest-ktoblzcheck-1.7 67
 MD5 351942a81102d286df9d9ec37d3238f1 files/digest-ktoblzcheck-1.8 67
 MD5 6b6ea9d7b2f67f64ddf9027077b1f3ed files/ktoblzcheck-1.8-gcc41.patch 649
-MD5 50e4dee4af00a027bce4da762d6590cc ktoblzcheck-1.7.ebuild 674
+MD5 dc1ce8d9bf3eff77a46b0d52507603af ktoblzcheck-1.7.ebuild 671
 MD5 9fd12ecd84ed727a5faa486496f1e705 ktoblzcheck-1.8.ebuild 825
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi5iKr2QksT29OyARAsI3AJ9NAo2tuYO32ANSFugqxCV2XC8eqgCcC2DN
-LS363NXuDZ5tqyLPSklTIlA=
-=li7/
------END PGP SIGNATURE-----
