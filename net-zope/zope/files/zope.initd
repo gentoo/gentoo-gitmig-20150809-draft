@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/zope.initd,v 1.1 2005/01/14 21:16:20 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/zope.initd,v 1.2 2005/12/24 16:35:35 radek Exp $
 
-opts="start stop reload kill quit status help"
+opts="start stop reload restart kill quit status help"
 
 depend() {
         need net
@@ -21,10 +21,10 @@ stop() {
         eend $?
 }
 
-reload() {
-        # note: reload calls zope restart, runscript restart stops and starts
+restart() {
         ebegin "Restarting Zope in INSTANCE_HOME"
-        INSTANCE_HOME/bin/zopectl restart
+        svc_stop
+	    svc_start
         eend $?
 }
 
@@ -37,6 +37,13 @@ kill() {
 quit() {
         ebegin "Quitting Zope Daemon Manager INSTANCE_HOME"
         INSTANCE_HOME/bin/zopectl quit
+        eend $?
+}
+
+reload() {
+        # throws an error, dunno why
+        ebegin "Reloading Zope config in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl reload
         eend $?
 }
 

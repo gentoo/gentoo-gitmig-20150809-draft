@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.87 2005/12/11 20:54:54 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.88 2005/12/24 16:35:35 radek Exp $
+
+*zope-3.1.0 (24 Dec 2005)
+
+  24 Dec 2005; Radoslaw Stachowiak <radek@gentoo.org> files/zope.initd,
+  +zope-3.1.0.ebuild:
+  new version, net-zope/zopex3 will be no longer maintained
 
 *zope-2.8.4 (11 Dec 2005)
 
