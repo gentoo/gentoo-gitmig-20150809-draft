@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.23 2005/10/02 14:54:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.24 2005/12/24 02:51:30 seemant Exp $
+
+  24 Dec 2005; Seemant Kulleen <seemant@gentoo.org> sdl-ttf-2.0.7.ebuild:
+  changed dep to be friendly with modular X
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> sdl-ttf-2.0.7.ebuild:
   Mark 2.0.7 stable on ia64
