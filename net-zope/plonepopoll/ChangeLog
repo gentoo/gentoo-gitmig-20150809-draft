@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/plonepopoll
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonepopoll/ChangeLog,v 1.3 2005/12/11 19:25:36 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonepopoll/ChangeLog,v 1.4 2005/12/24 13:14:17 radek Exp $
+
+  24 Dec 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  plonepopoll-2.3.ebuild:
+  changed dependency to plone-2.0* only to close bug #115483
 
   11 Dec 2005; Radoslaw Stachowiak <radek@gentoo.org>
   plonepopoll-2.3.ebuild:
