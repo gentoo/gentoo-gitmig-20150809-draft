@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.36.ebuild,v 1.3 2005/12/22 22:01:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.36.ebuild,v 1.4 2005/12/24 11:14:21 swegener Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/libsigsegv
 	sys-devel/gettext
 	virtual/tetex
 	fastcgi? ( dev-libs/fcgi )
-	postgres? ( >=dev-db/postgresql-8.0* )
+	postgres? ( >=dev-db/postgresql-8.0 )
 	X? ( virtual/x11 )
 	readline? ( sys-libs/readline )
 	pcre? ( dev-libs/libpcre )
