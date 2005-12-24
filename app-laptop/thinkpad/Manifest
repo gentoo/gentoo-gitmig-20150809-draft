@@ -1,4 +1,7 @@
-MD5 9af7c8b44f6d5ba1604d1d4f4ee560ed ChangeLog 3059
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a054ba6002708cdb2f0ba39d513ff17d ChangeLog 3179
 MD5 67a420196c59076408625a82b1b0f3eb files/digest-thinkpad-3.2 63
 MD5 f6711c6d29ed136c770235acf6bebf4a files/digest-thinkpad-4.1 63
 MD5 c4bd4b11c836429cb452ababe9575efd files/digest-thinkpad-4.3 63
@@ -15,4 +18,11 @@ MD5 7f1ac0323cb5c09a14105276c400f5f3 thinkpad-4.3-r1.ebuild 2017
 MD5 9aa1f77e2dc49c4cefe1b61bffe2d506 thinkpad-4.3.ebuild 1914
 MD5 5a5d9bcd8a38e81c820fca56d6e9f7c2 thinkpad-4.8.ebuild 2014
 MD5 90b9583a2802625b94b2673fba2856af thinkpad-5.7.ebuild 1866
-MD5 7a3da1fbd9213468ffb4533ed10535b3 thinkpad-5.8.ebuild 1235
+MD5 bed148d23e0d3c49ca3ff29ed6aa81f2 thinkpad-5.8.ebuild 1240
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrTAOQiJ/wx066S4RAsxbAJ99kdBjRiAlTHuvELYQS15urVGWCwCgkwOX
+f/A2iLc5oXSmgDoblljADkY=
+=boCd
+-----END PGP SIGNATURE-----
