@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.28 2005/07/13 18:48:21 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.29 2005/12/24 08:04:17 cardoe Exp $
+
+  24 Dec 2005; Doug Goldstein <cardoe@gentoo.org> evilwm-0.99.18.ebuild:
+  adding modular X depends
 
   13 Jul 2005; Kito <kito@gentoo.org> evilwm-0.99.18.ebuild:
   ~ppc-macos keywords, fix motif includes closes 58845
