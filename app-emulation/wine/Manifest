@@ -1,8 +1,12 @@
-MD5 628777438febff60bc624d523a6a0899 ChangeLog 20362
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b74d26b892e617082432605f66869ede ChangeLog 20497
 MD5 fb8724a36ec3bef0ad3a3c36376b786a files/digest-wine-0.9 63
 MD5 d46df5add2535f22ad43db8247d7a45b files/digest-wine-0.9.1 65
 MD5 cc82e89428aa4f49f2f2ab3544488c02 files/digest-wine-0.9.2 65
 MD5 340057ffb161d29c017c2620914b16ad files/digest-wine-0.9.3 65
+MD5 fd5477c9b75a6a568186c56eaedfa709 files/digest-wine-0.9.4 65
 MD5 23ff2a3980929ae4a6f02161bd875b55 files/digest-wine-20041019-r3 67
 MD5 8028af5342611d0521183f95342f787a files/digest-wine-20050111-r2 67
 MD5 fe364ce26a93f838a04f30b274df034c files/digest-wine-20050211 67
@@ -32,6 +36,7 @@ MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 1f6c08c0e931824e39b81f4e7de7ca1f wine-0.9.1.ebuild 3788
 MD5 726f5461c2fdc0913aedf12d87db4c01 wine-0.9.2.ebuild 3788
 MD5 21baa64e359529e3d0f2600c69b488d5 wine-0.9.3.ebuild 4061
+MD5 df05bedf5aaa981c464bafa5fd72b548 wine-0.9.4.ebuild 4058
 MD5 f14f3d6f8c763e8ce5eb6f3dfd4406b9 wine-0.9.ebuild 3786
 MD5 453b83f95eea62a9bdb68627e5fc9e43 wine-20041019-r3.ebuild 3145
 MD5 f072fd71780a287c524c0fb0eae1a13e wine-20050111-r2.ebuild 3287
@@ -44,3 +49,10 @@ MD5 9a41fead49d0b0dc56c7514149b7ec50 wine-20050725-r1.ebuild 3950
 MD5 b73ae6c5fefdd0c51498e89fcc6acef8 wine-20050830.ebuild 3936
 MD5 324e53638aaa679eab0bcc3e56ca0ccb wine-20050930.ebuild 4178
 MD5 14a9ca2ff5b90cea4d1c96de0cdc13e4 wine-9999.ebuild 4117
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrNGT2+ySkm8kpY0RAj7TAJ9L3hCSTusOr4SHAiWnGzIafpsVMQCfXntd
+9wEUGiL/i4u+IIe1vZlnYGw=
+=qLqG
+-----END PGP SIGNATURE-----
