@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.38 2005/12/17 10:43:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.39 2005/12/24 15:28:18 hansmi Exp $
+
+  24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  klaptopdaemon-3.4.3-r1.ebuild:
+  Stable on ppc.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> klaptopdaemon-3.5.0.ebuild:
   Added ~ppc64
