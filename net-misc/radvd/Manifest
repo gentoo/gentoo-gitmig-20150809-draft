@@ -1,4 +1,4 @@
-MD5 24df0726ca62d38e30553160c4647c80 ChangeLog 2907
+MD5 5815ca06f3e4d3c92150ce7c1ad6e173 ChangeLog 3001
 MD5 eef180eac1ac95e349d5e3131927f629 files/digest-radvd-0.8-r1 61
 MD5 707572a18aaddef9ed366e5f950f4460 files/digest-radvd-0.9 61
 MD5 fa53a0e062f5ca3ff6f7ceee7dcd0e61 files/radvd 606
@@ -8,4 +8,4 @@ MD5 6d745a03aa165ab8b22ddb683793c467 files/radvd-0.9-conf.d 447
 MD5 deb9430f74948534b343c3199157d78d files/radvd-0.9-init.d 1094
 MD5 e41411344bcec2e0a59605acf1d821e9 metadata.xml 316
 MD5 7337cb83f7362b0e285ed10558084e79 radvd-0.8-r1.ebuild 1544
-MD5 10d8aa3ca3159d1d155c700df133e58b radvd-0.9.ebuild 1483
+MD5 fcfa14bf2bf353b672dead1b14385526 radvd-0.9.ebuild 1485
