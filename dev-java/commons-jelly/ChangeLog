@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-jelly
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.1 2005/12/24 02:24:06 nichoj Exp $
+
+*commons-jelly-1.0 (24 Dec 2005)
+
+  24 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  +files/commons-jelly-1.0-gentoo.patch, +metadata.xml,
+  +commons-jelly-1.0.ebuild:
+  Initial commit (bug #70847).
+
