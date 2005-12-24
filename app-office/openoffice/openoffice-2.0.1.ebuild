@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.6 2005/12/23 22:54:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.7 2005/12/24 11:12:33 swegener Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -48,7 +48,7 @@ RDEPEND="!app-office/openoffice-bin
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	java? ( >=virtual/jre-1.4* )
+	java? ( >=virtual/jre-1.4 )
 	>=sys-devel/gcc-3.2.1
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
@@ -66,7 +66,7 @@ DEPEND="${RDEPEND}
 	sys-libs/pam
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
-	java? ( >=virtual/jdk-1.4*
+	java? ( >=virtual/jdk-1.4
 		dev-java/ant-core
 		>=dev-java/java-config-1.2.11-r1 )
 	!java? ( dev-libs/libxslt
