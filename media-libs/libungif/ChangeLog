@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libungif
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.31 2005/09/06 22:46:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.32 2005/12/24 01:45:37 carlo Exp $
+
+*libungif-9999 (24 Dec 2005)
+
+  24 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +libungif-9999.ebuild:
+  ebuild with deprecation message
 
   06 Sep 2005; Mike Frysinger <vapier@gentoo.org> libungif-4.1.3.ebuild,
   libungif-4.1.3-r1.ebuild:
