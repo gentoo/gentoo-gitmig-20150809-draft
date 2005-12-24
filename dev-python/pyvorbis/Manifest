@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23ecc0fa64217f7d219aa7921957ff83 ChangeLog 3043
+MD5 1335aef61476af2ecfa05605a33917b5 ChangeLog 3139
 MD5 28ec3622a17a96ac8cc3ef8427ac3e45 files/digest-pyvorbis-1.1 63
 MD5 9cbd7d4ece2e640dc19e9110b51b5128 files/digest-pyvorbis-1.3 63
 MD5 0f3ffbc95f303e2b3aee01b3be77d513 files/digest-pyvorbis-1.4 63
@@ -10,12 +7,5 @@ MD5 dd05077a480799edc7a1912053b6cc6a files/pyvorbisfile.c-1.4.patch 564
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 68e27b8fffc1489df6b58a652aac3881 pyvorbis-1.1.ebuild 691
 MD5 4d25842e6ad9295991cdb2703aff023e pyvorbis-1.3.ebuild 759
-MD5 e6921873609dc09787925e5eefa65bff pyvorbis-1.4-r1.ebuild 824
+MD5 f6de40d3bc0db256bd6c8655e0d94d06 pyvorbis-1.4-r1.ebuild 821
 MD5 4069e08113b65ee5705e07e63e3a1b5f pyvorbis-1.4.ebuild 732
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDqACfKRy60XGEcJIRArg9AKChySXIjzpId5v8zemidZWp/d7KNgCgnXZh
-4rPVWbfqbqbzaKDs6dMcbE8=
-=BNg6
------END PGP SIGNATURE-----

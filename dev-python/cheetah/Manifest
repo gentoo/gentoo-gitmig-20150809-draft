@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8b49f3e0dab270003fcfaac88d3dae5 ChangeLog 4000
+MD5 7c6894ec8e4e10732c3cc3ccc11f4ead ChangeLog 4093
 MD5 476df8108995ab80c9a7f211f285b6b2 cheetah-0.9.17.ebuild 625
-MD5 dbbb560c15f079262fadf597ad74566a cheetah-0.9.18.ebuild 629
+MD5 54d06ce1a470606da81dc8772bf679d2 cheetah-0.9.18.ebuild 626
 MD5 1077a5b1770ff63c7a30f9e7b0e8e8e8 cheetah-1.0.ebuild 773
 MD5 4085c86d760d85b5948aa799ec6928fa files/digest-cheetah-0.9.17 66
 MD5 8c06f8d0e3b94288407944199e356794 files/digest-cheetah-0.9.18 66
 MD5 08fe598c18e1f668917a3e4a0eb773e2 files/digest-cheetah-1.0 63
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDmZnTKRy60XGEcJIRAvBiAJ0bYzbtGDV1AfhNbF32bUJLJpSwVgCgg3FS
-iApZIJKcFLtWUwIcE3yVDjM=
-=bse7
------END PGP SIGNATURE-----
