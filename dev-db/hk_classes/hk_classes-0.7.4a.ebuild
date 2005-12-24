@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.4a.ebuild,v 1.4 2005/12/23 21:21:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.4a.ebuild,v 1.5 2005/12/24 14:22:08 hansmi Exp $
 
 inherit eutils python
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/hk-classes/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc firebird mysql odbc postgres sqlite sqlite3"
 
 # pxlib is not in portage yet, but there's no reason not add paradox
