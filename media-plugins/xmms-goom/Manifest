@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d961bc66086c4a48f2806aadc8d78ebd ChangeLog 2330
+MD5 d81b89f4d2e532cf4dd90e6c83b8b0d9 ChangeLog 2427
 MD5 66d92f45c524e9c5e737723ab0a430fe files/digest-xmms-goom-1.99.4 135
 MD5 23112301f0d0c959766d6edb50e64b0b files/digest-xmms-goom-2004.0 66
 MD5 c799d0f5d602fcc614edff965046b897 files/xmms-goom-gcc-3.3.patch 5611
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 a421cc53f8ced5f3c40b0ba69fd9d1e1 xmms-goom-1.99.4.ebuild 991
-MD5 f211bc2be279ba0d25c0c6cfade8eac8 xmms-goom-2004.0.ebuild 932
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDqXgTKRy60XGEcJIRAn0YAJ4i2RzaCLMTwF6IuuDxhNu2t51NwACfZW+u
-dSzRkUGCc56uYBNeFt9MyMQ=
-=Jpw3
------END PGP SIGNATURE-----
+MD5 fabbf7e89dc4a84d4d1c9512ba3ada06 xmms-goom-2004.0.ebuild 929
