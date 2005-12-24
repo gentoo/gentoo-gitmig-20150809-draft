@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.8 2005/12/23 20:18:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.9 2005/12/24 11:17:05 swegener Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -110,7 +110,7 @@ src_compile() {
 		--enable-sendmail=/usr/sbin/sendmail \
 		--cache-file=${S}/configuring.cache \
 		${myconf} || die
-		
+
 	emake || die "compile problem"
 }
 
