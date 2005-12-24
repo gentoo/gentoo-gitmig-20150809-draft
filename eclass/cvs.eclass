@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.61 2005/09/21 23:22:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.62 2005/12/24 04:57:32 vapier Exp $
 
 inherit eutils
 
@@ -488,7 +488,8 @@ cvs_src_unpack() {
 	    ECVS_LOCALNAME="$ECVS_MODULE"
 	fi
 
-	if [ "$ECVS_SERVER" == "offline" ]; then
+	local offline_pkg_var="ECVS_OFFLINE_${PN}"
+	if [ "${!offline_pkg_var}" == "1" -o "$ECVS_OFFLINE" == "1" -o "$ECVS_SERVER" == "offline" ]; then
 		# We're not required to fetch anything; the module already
 		# exists and shouldn't be updated.
 	 	if [ -d "${ECVS_TOP_DIR}/${ECVS_LOCALNAME}" ]; then
