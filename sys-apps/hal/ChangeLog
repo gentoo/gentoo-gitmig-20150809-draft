@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.59 2005/12/21 09:41:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.60 2005/12/24 22:15:27 genstef Exp $
+
+  24 Dec 2005; Stefan Schweizer <genstef@gentoo.org> hal-0.5.5.1-r1.ebuild:
+  Fix if-statement thanks to Michail A.Baikov <rusxakep@mail.ru> in bug 116376
 
   21 Dec 2005; Doug Goldstein <cardoe@gentoo.org> files/0.5-hald.rc,
   -hal-0.4.5-r2.ebuild, -hal-0.5.4.ebuild, -hal-0.5.5.1.ebuild,
