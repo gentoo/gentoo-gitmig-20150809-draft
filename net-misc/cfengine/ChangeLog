@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.64 2005/12/16 13:12:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.65 2005/12/24 15:36:59 hansmi Exp $
+
+  24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
+  cfengine-2.1.16.ebuild:
+  Stable on ppc.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> cfengine-2.1.17.ebuild:
   Replace root:root in root:0. Bug #103563.
