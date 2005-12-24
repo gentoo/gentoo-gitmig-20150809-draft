@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f52c68656a26a1464990cd007ec22e2 ChangeLog 2088
+MD5 9137249c839c186f8269afe114e4ba9c ChangeLog 2181
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
 MD5 bb9cb80f927bcc2b9e0f512d8a200e18 files/2.0.51.22-fixes.patch 10579
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
@@ -10,12 +7,5 @@ MD5 ca24230fc57489944e69c7dd6aaa88b3 files/digest-portage-2.0.53 67
 MD5 96a70ab1b320e827d75475cdd73e5a1a files/digest-portage-2.1_pre1 69
 MD5 e57748276505fab96a2ab4e64de45366 metadata.xml 220
 MD5 9ee139d992535438d3e51a4842e7dc13 portage-2.0.51.22-r3.ebuild 5745
-MD5 2eb33a5e13c65c08c20c7fa8dd743c5c portage-2.0.53.ebuild 3656
+MD5 a4ec56a3b686cbb3e97aaa296041029e portage-2.0.53.ebuild 3653
 MD5 561330183b7e6f051c5449206ac98985 portage-2.1_pre1.ebuild 4350
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDqrZQKRy60XGEcJIRAsMfAJ9DuFaKwFu9UkqhetCEeuO1dHvMCACfUcwU
-I2/dFwKE5NSOW/qGiWr4zZY=
-=XcW/
------END PGP SIGNATURE-----
