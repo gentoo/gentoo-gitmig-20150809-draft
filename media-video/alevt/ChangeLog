@@ -1,6 +1,9 @@
 # ChangeLog for media-video/alevt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.19 2005/12/20 14:09:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.20 2005/12/24 13:02:11 flameeyes Exp $
+
+  24 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Move to media-tv that's more suited, I'll take care of it anyway.
 
   20 Dec 2005; Patrick Kursawe <phosphan@gentoo.org> metadata.xml:
   Can't maintain it properly. Video herd must do it.
