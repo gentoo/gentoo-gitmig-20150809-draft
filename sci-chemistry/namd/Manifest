@@ -1,4 +1,6 @@
-MD5 c92b20c0910fd9769b366e462bd73a09 .ChangeLog.swp 12288
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac9a8b3e0a83eb2fb778e7cdc602d2bf ChangeLog 973
 MD5 657770d1760ff431fb8f8972c1c11ccc files/digest-namd-2.6_beta1 70
 MD5 c1bfcdb371a5b74c577aa14d32f88d4b files/namd-barrier-fix-gentoo.patch 2362
@@ -7,3 +9,10 @@ MD5 099224935074d14aa720ab88f4e36b0b files/namd-makefile-gentoo.patch 2804
 MD5 11475a5133058462e1e7a1fd33052974 files/namd-tcl-lib-gentoo.patch 576
 MD5 df166a2ae1cb64196abc394d4fa522ed metadata.xml 272
 MD5 8b3e7b8076242855669122ddd67d053f namd-2.6_beta1.ebuild 2727
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrS6KI1lqEGTUzyQRAiJPAKCj9Zc3l/+XnF0Qzp54G90D7kGHbwCfR15G
+dOc+dol/EPDrYKDashmIzAE=
+=3BWD
+-----END PGP SIGNATURE-----
