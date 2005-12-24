@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.0.ebuild,v 1.6 2004/11/04 20:30:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.1 2005/12/24 23:29:40 tester Exp $
 
 inherit eutils
 
@@ -15,22 +15,15 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha"
-SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
+SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${P}.tar.bz2"
 
 INSIGHTDIR="/opt/insight"
-
-disabled_src_unpack() {
-
-	unpack ${A}
-	cd ${S}/gdb
-	epatch ${FILESDIR}/gdb-6.x-crash.patch
-}
 
 src_compile() {
 
 	local myconf
-	use nls || myconf="--disable-nls"
+	myconf="$(use_enable nls)"
 
 	./configure --prefix="${INSIGHTDIR}" \
 		--mandir="${D}${INSIGHTDIR}/share/man"	\
