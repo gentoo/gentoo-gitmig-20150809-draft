@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.57 2005/09/17 00:33:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.58 2005/12/25 15:35:22 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> slocate-2.7-r8.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

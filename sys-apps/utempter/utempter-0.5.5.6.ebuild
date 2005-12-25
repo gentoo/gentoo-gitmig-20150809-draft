@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.8 2005/09/16 08:07:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.9 2005/12/25 15:35:48 flameeyes Exp $
 
 inherit rpm eutils flag-o-matic
 
@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	make RPM_OPT_FLAGS="${CFLAGS}" || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r8.ebuild,v 1.4 2005/09/13 23:43:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r8.ebuild,v 1.5 2005/12/25 15:35:22 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 
 	filter-lfs-flags
 	# this is safe since slocate only has 1 binary
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	sed -i \
 		-e "/groupadd/s/^/#/" \

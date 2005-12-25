@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.13.ebuild,v 1.3 2005/11/13 00:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.13.ebuild,v 1.4 2005/12/25 15:32:55 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -75,7 +75,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	tc-is-cross-compiler && export ac_cv_func_setpgrp_void=yes
 	econf \
 		--disable-desrpc \

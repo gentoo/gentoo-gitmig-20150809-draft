@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.122 2005/10/10 22:42:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.123 2005/12/25 15:32:55 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> shadow-4.0.13.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
 *shadow-4.0.13 (10 Oct 2005)
 
