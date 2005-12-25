@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.06.ebuild,v 1.10 2005/08/10 11:24:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.06.ebuild,v 1.11 2005/12/25 15:11:56 flameeyes Exp $
 
-inherit eutils multilib
+inherit eutils multilib flag-o-matic
 
 DESCRIPTION="Implements functions designed to lock the standard mailboxes."
 SRC_URI="mirror://debian/pool/main/libl/${PN}/${PN}_${PV}.tar.gz"
@@ -17,7 +17,7 @@ IUSE=""
 
 src_compile() {
 	# Do not use lazy bindings on setXid files
-	sed -i -e 's~-o dotlockfile~-Wl,-z,now &~g' Makefile.in
+	sed -i -e 's~-o dotlockfile~'$(bindnow-flags)' &~g' Makefile.in
 	econf --with-mailgroup=mail --enable-shared || die
 	emake || die
 }

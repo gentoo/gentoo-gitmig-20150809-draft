@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.27 2005/08/10 11:24:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.28 2005/12/25 15:11:56 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  liblockfile-1.06.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   10 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> liblockfile-1.06.ebuild:
   Stable on mips.

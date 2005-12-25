@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54ba812290d981dff554188bdbfa4910 liblockfile-1.06.ebuild 848
-MD5 8dbf56108a3d1becd7621e560807e32f ChangeLog 3636
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 bbad709d149220edbc91cf34f2c8dcb0 ChangeLog 3771
 MD5 5237ea115f3e61f8b3eed57a52002c05 files/digest-liblockfile-1.06 67
+MD5 8e511b5ef0108f12000cb0524940e5a0 liblockfile-1.06.ebuild 871
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+eQaEZCkKN40op4RAjZsAKCevDkBo+eEwkELPFGegr/LawXiJACdH+g+
-KL0MUdX62Z4z8geVfmy+GQc=
-=KASG
+iD8DBQFDrrbDAiZjviIA2XgRAlojAJ9GcynGLPZQ4j0A5Kq/jdeIgKaxVgCfek+j
+vdlR8Ay7VHGluFsfQ4RPlng=
+=fVuT
 -----END PGP SIGNATURE-----
