@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1630 2005/12/25 02:44:28 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1631 2005/12/25 14:33:50 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -90,6 +90,12 @@ app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-emulation/xen:screen - Enable support for running domain U consoles in a screen session
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS 
+app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events
+app-forensics/samhain:mounts-check - Compile in the module to check for correct mount options
+app-forensics/samhain:netclient - Compile a client, rather than a standalone version
+app-forensics/samhain:netserver - Compile a server, rather than a standalone version
+app-forensics/samhain:suidcheck - Compile in the module to check file system for SUID/SGID binaries
+app-forensics/samhain:userfiles - Compile in the module to check for files in user home directories
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/atokx2:ext-iiimf - Link with the system IIIMF, rather than the bundled version
