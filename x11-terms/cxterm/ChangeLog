@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/cxterm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/ChangeLog,v 1.8 2004/06/28 21:48:13 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/ChangeLog,v 1.9 2005/12/25 19:59:35 usata Exp $
+
+  25 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> cxterm-5.2.3.ebuild:
+  Cosmetic change and regenerate distfiles checksum. Fix no available
+  pty's problem. (source site tarball changed)
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> cxterm-5.2.2.ebuild,
   cxterm-5.2.3.ebuild:
