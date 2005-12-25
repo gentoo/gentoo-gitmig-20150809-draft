@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.3 2005/08/21 07:25:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.4 2005/12/25 15:40:16 flameeyes Exp $
 
 SNAPSHOT="yes"
 
@@ -51,7 +51,7 @@ pkg_setup() {
 	# Probably need to --enable-egl in glitz for this
 	#	--enable-xeglserver
 
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 }
 
 src_compile() {
