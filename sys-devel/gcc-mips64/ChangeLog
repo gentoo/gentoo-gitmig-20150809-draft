@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc-mips64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.14 2005/12/25 06:19:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.15 2005/12/25 06:26:22 kumba Exp $
+
+*gcc-mips64-3.4.5 (25 Dec 2005)
+
+  25 Dec 2005; Joshua Kinard <kumba@gentoo.org> -gcc-mips64-3.4.3-r1.ebuild,
+  gcc-mips64-3.4.4.ebuild, +gcc-mips64-3.4.5.ebuild:
+  Import 3.4.5 for gcc-mips64; remove 3.4.3-r1 and mark 3.4.4 as stable. This
+  will probably be the last release of gcc-mips64. sys-devel/kgcc64 will
+  deprecate this and other arch-specific kernel compilers.
 
   25 Dec 2005; Joshua Kinard <kumba@gentoo.org> gcc-mips64-3.4.4.ebuild:
   Allow gcc-mips64 to detect whether it's in a glibc or uclibc userland, and
