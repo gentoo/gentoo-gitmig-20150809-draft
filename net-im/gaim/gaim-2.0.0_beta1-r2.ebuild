@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1-r1.ebuild,v 1.2 2005/12/21 20:06:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1-r2.ebuild,v 1.1 2005/12/25 02:58:23 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono
 
@@ -14,10 +14,11 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="ao audiofile dbus nls perl spell nas cjk gnutls silc eds krb4 startup-notification tcltk debug mono"
+IUSE="bonjour dbus nls perl spell nas cjk gnutls silc eds krb4 tcltk debug mono"
 
-RDEPEND="ao? ( media-libs/libao )
-	audiofile? ( >=media-libs/audiofile-0.2.0 )
+RDEPEND="media-libs/libao
+	media-libs/audiofile
+	bonjour? (net-misc/howl)
 	dbus? ( >=sys-apps/dbus-0.35
 		>=dev-lang/python-2.4 )
 	>=x11-libs/gtk+-2.0
@@ -38,7 +39,7 @@ RDEPEND="ao? ( media-libs/libao )
 
 DEPEND="$RDEPEND
 	dev-util/pkgconfig
-	startup-notification? ( x11-libs/startup-notification )
+	x11-libs/startup-notification
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_P}"
