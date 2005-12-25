@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dee5b345681e427079a764929aaf4d91 ChangeLog 7425
+MD5 f6a7b370af1a60d0aa3eba72f8c89aab ChangeLog 7556
 MD5 4109d0757229d079e30f8ea33b676f00 files/digest-slocate-2.7-r7 211
 MD5 4109d0757229d079e30f8ea33b676f00 files/digest-slocate-2.7-r8 211
 MD5 6cd691d75d501eb87ed12cf31c1e1ff6 files/slocate-2.7-bounds.patch 305
@@ -9,11 +6,4 @@ MD5 798bd427c87de3cfdb9ecd6854f2e56b files/slocate-2.7-really-long-paths.patch 5
 MD5 708503ec255083a2b20b230070147a62 files/updatedb.conf 567
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1711c302c7546e0a7210bce15849fa43 slocate-2.7-r7.ebuild 2323
-MD5 bdaca2b2b98155458643f4c5d1fdc58e slocate-2.7-r8.ebuild 2772
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDcrL6gIKl8Uu19MoRAoxhAJ91pHXofG6d+xIyE80pDBZxrRfggQCfdn+G
-WMZxLWXc2KCtSK+BL1rt64g=
-=VkzH
------END PGP SIGNATURE-----
+MD5 c61b775a459cd4628501f28ada3349b6 slocate-2.7-r8.ebuild 2781
