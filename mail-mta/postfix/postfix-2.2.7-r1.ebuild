@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.7-r1.ebuild,v 1.3 2005/12/20 15:52:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.7-r1.ebuild,v 1.4 2005/12/25 15:00:24 flameeyes Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened cdb"
@@ -147,7 +147,8 @@ src_compile() {
 	cd ${S}
 	# added -Wl,-z,now wrt 62674.
 	# remove -ldl as it is not necessary, resolve bug #106446.
-	local mycc="-DHAS_PCRE" mylibs="-Wl,-z,now -L/usr/lib -lpcre -lcrypt -lpthread"
+	# -Wl,-z,now replaced by $(bindnow-flags)
+	local mycc="-DHAS_PCRE" mylibs="$(bindnow-flags) -L/usr/lib -lpcre -lcrypt -lpthread"
 
 	use pam && mylibs="${mylibs} -lpam"
 

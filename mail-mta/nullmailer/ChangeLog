@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.16 2005/11/29 20:30:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.17 2005/12/25 14:57:39 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  nullmailer-1.00_rc7-r5.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   29 Nov 2005; Robin H. Johnson <robbat2@gentoo.org> nullmailer-1.00.ebuild:
   Move 1.00 to stable x86.

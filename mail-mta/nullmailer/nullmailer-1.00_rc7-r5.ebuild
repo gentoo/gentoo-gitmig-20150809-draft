@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r5.ebuild,v 1.4 2005/07/09 03:01:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r5.ebuild,v 1.5 2005/12/25 14:57:39 flameeyes Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
@@ -58,7 +58,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	# Note that we pass a different directory below due to bugs in the makefile!
 	econf --localstatedir=/var || die "econf failed"
 	emake || die "emake failed"

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.91 2005/12/20 15:52:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.92 2005/12/25 15:00:24 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  postfix-2.2.7-r1.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   20 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
   postfix-2.2.7-r1.ebuild:

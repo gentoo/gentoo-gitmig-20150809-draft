@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.45 2005/12/08 02:57:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.46 2005/12/25 15:00:29 flameeyes Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -304,7 +304,7 @@ src_unpack() {
 	fi
 
 	# Bug 92742
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
