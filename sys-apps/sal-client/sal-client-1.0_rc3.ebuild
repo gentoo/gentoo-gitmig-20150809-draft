@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.10 2004/08/24 03:33:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.11 2005/12/25 16:49:44 flameeyes Exp $
 
 MY_P=${P/_/-}
 DESCRIPTION="Client side programs for SAL, the Secure Auditing for Linux project."
@@ -58,9 +58,9 @@ pkg_postinst() {
 
 pkg_config() {
 	einfo "Creating default temporary log directory in ${ROOT}/var/lib/auditd"
-	/bin/mkdir ${ROOT}/var/lib/auditd
-	/bin/chown root:root ${ROOT}/var/lib/auditd
-	/bin/chmod 0600 ${ROOT}/var/lib/auditd
+	mkdir ${ROOT}/var/lib/auditd
+	chown root:0 ${ROOT}/var/lib/auditd
+	chmod 0600 ${ROOT}/var/lib/auditd
 }
 
 
