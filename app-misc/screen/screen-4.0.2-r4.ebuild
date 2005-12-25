@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.16 2005/09/18 23:12:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.17 2005/12/25 14:53:06 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam
 
@@ -72,7 +72,7 @@ src_compile() {
 	# check config.h for other settings such as the
 	# max-number of windows allowed by screen.
 	append-flags "-DPTYMODE=0620 -DPTYGROUP=5"
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	use pam && append-flags "-DUSE_PAM"
 	use nethack || append-flags "-DNONETHACK"
