@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.9 2005/11/29 02:48:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.10 2005/12/25 00:59:56 kumba Exp $
+
+  25 Dec 2005; Joshua Kinard <kumba@gentoo.org> lsscsi-0.15.ebuild:
+  Mark unstable on mips.
 
 *lsscsi-0.15 (29 Nov 2005)
 
