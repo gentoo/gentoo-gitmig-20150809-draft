@@ -1,4 +1,14 @@
-MD5 8acc3962e3e82e4eb5df8e53e93b208e e_modules-9999.ebuild 410
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9c65c9e29e722089ea50fcfc05d53e85 ChangeLog 338
-MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 aec150c6cee93fb794c88a59489fa189 e_modules-9999.ebuild 434
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-e_modules-9999 0
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrtBN2+ySkm8kpY0RAh6jAJ9X0+lUqxqM8d+o+MTpC5aBpTfw2ACfSnDC
+U/c4hTZ8le36XPSEow7SaTE=
+=LqEr
+-----END PGP SIGNATURE-----
