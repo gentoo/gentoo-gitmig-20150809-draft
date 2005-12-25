@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9d4bc94c4a0c82afb2e8ba98bc4a3e20 arpd-0.2.ebuild 1116
-MD5 231833163c584486bb973d1f08ca536d ChangeLog 1055
-MD5 24084c279daf0f876446c530a64ff287 files/digest-arpd-0.2 59
+MD5 3bde472400c53a1cf65e08091f0a2c6c ChangeLog 1136
+MD5 b23fbcc013b4cbc6c703a5607947f37e arpd-0.2.ebuild 1112
 MD5 cef41ba111aec61fe276ef665e51e03b files/arpd.c.patch 1477
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCi6FrI1lqEGTUzyQRAvWZAJ9aC+VjNrYWNkBBXOx33Lq5MlFkYQCgkaFP
-nvPzioU5c2wzRldPsFswAm4=
-=ROcR
------END PGP SIGNATURE-----
+MD5 24084c279daf0f876446c530a64ff287 files/digest-arpd-0.2 59

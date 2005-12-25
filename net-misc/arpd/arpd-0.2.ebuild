@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2.ebuild,v 1.12 2005/05/18 20:10:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2.ebuild,v 1.13 2005/12/25 18:40:54 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.citi.umich.edu/u/provos/honeyd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc hppa ~amd64"
+KEYWORDS="~amd64 hppa ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libdnet-1.4
