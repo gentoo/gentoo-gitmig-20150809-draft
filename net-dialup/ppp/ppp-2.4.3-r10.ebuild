@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r10.ebuild,v 1.1 2005/11/29 17:27:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r10.ebuild,v 1.2 2005/12/25 15:08:40 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -150,7 +150,7 @@ src_unpack() {
 src_compile() {
 	export CC="$(tc-getCC)"
 	export AR="$(tc-getAR)"
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	econf || die "configuration failed"
 	emake COPTS="${CFLAGS}" || die "compile failed"
 

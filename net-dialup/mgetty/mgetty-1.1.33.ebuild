@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.4 2005/07/20 05:49:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.5 2005/12/25 15:11:55 flameeyes Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -40,9 +40,9 @@ src_unpack() {
 	epatch ${FILESDIR}/Lucent.c.patch
 
 	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices 
-	append-ldflags "-Wl,-z,now"
+	append-ldflags $(bindnow-flags)
 
-	sed -i 's: \$(CFLAGS) -o faxq-helper faxq-helper.o: $(LDLAGS) -Wl,-z,now -o faxq-helper faxq-helper.o:' ${S}/fax/Makefile
+	sed -i 's: \$(CFLAGS) -o faxq-helper faxq-helper.o: $(LDLAGS) '$(bindnow-flags)' -o faxq-helper faxq-helper.o:' ${S}/fax/Makefile
 
 	sed -e 's:var/log/mgetty:var/log/mgetty/mgetty:' \
 		-e 's:var/log/sendfax:var/log/mgetty/sendfax:' \

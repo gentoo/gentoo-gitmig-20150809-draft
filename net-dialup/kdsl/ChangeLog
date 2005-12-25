@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/kdsl
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/ChangeLog,v 1.1 2004/11/15 19:39:40 mrness Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/ChangeLog,v 1.2 2005/12/25 15:10:04 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> kdsl-0.5.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
 *kdsl-0.5 (15 Nov 2004)
 

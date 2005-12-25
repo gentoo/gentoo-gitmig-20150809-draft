@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.48 2005/06/17 20:16:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.49 2005/12/25 15:11:55 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> mgetty-1.1.33.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   mgetty-1.1.30-r2.ebuild:

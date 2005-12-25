@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/kdsl-0.5.ebuild,v 1.2 2004/11/21 08:58:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/kdsl-0.5.ebuild,v 1.3 2005/12/25 15:10:04 flameeyes Exp $
 
 inherit flag-o-matic kde
 
@@ -19,6 +19,6 @@ RDEPEND="net-dialup/ppp"
 need-kde 3
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	kde_src_compile
 }

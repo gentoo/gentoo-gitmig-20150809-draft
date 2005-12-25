@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.6.ebuild,v 1.1 2005/10/12 17:57:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.6.ebuild,v 1.2 2005/12/25 15:08:08 flameeyes Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 HOMEPAGE="http://www.roaringpenguin.com/"
@@ -33,7 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-plugin-options.patch #remove invalid plugin option
 
 	#Avoid "setXid, dynamically linked and using lazy bindings" QA notice
-	sed -i -e 's:\(@CC@\) \(-o pppoe-wrapper wrapper.o\):\1 -Wl,-z,now \2:' ${S}/gui/Makefile.in
+	sed -i -e 's:\(@CC@\) \(-o pppoe-wrapper wrapper.o\):\1 '$(bindnow-flags)' \2:' ${S}/gui/Makefile.in
 
 	# sanbdox violation workaround
 	sed -i -e 's/modprobe/echo modprobe/' ${S}/src/configure || die "sed failed"

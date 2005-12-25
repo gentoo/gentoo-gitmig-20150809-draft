@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.2 2005/07/18 11:51:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.3 2005/12/25 15:09:02 flameeyes Exp $
 
 inherit webapp flag-o-matic
 
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -Wl,-z,now #don't use lazy bindings
+	append-ldflags $(bindnow-flags) #don't use lazy bindings
 
 	local myconf=""
 	# sfuchs: configure script of linesrv 2 is quite bad...
