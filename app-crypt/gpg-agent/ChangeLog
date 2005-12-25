@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.13 2005/09/19 19:19:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.14 2005/12/25 14:22:59 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gpg-agent-1.9.19.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now. Drop ppc-macos special case.
 
 *gpg-agent-1.9.19 (19 Sep 2005)
 
