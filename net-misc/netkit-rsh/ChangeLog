@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.26 2005/07/02 20:58:49 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.27 2005/12/25 15:18:13 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/netkit-rsh-0.16-rlogin-rsh.patch,
+  -files/netkit-rsh-0.16-rlogin=rsh.patch, files/redhat.spec,
+  netkit-rsh-0.17-r7.ebuild:
+  Rename netkit-rsh-0.16-rlogin=rsh.patch to fix repoman failure.
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  netkit-rsh-0.17-r7.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> netkit-rsh-0.17-r6.ebuild:
   Stable on mips, bug #93215.

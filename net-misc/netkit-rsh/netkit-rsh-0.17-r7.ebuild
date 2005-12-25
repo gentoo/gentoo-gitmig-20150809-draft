@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r7.ebuild,v 1.2 2005/08/22 22:15:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r7.ebuild,v 1.3 2005/12/25 15:18:13 flameeyes Exp $
 
-inherit eutils pam
+inherit eutils pam flag-o-matic
 
 DESCRIPTION="Netkit's Remote Shell Suite: rexec{,d} rlogin{,d} rsh{,d}"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
@@ -26,7 +26,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${p}
 	done
 	sed -i \
-		-e '/LDFLAGS/s:$: -Wl,-z,now:' \
+		-e '/LDFLAGS/s:$: '$(bindnow-flags)':' \
 		r{cp,login,sh}/Makefile
 }
 

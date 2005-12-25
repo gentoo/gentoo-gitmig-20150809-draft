@@ -9,7 +9,7 @@ netkit-rsh-0.16-jbj.patch
 #R netkit-rsh-0.16-jbj3.patch
 netkit-rsh-0.16-jbj4.patch
 netkit-rsh-0.16-prompt.patch
-netkit-rsh-0.16-rlogin=rsh.patch
+netkit-rsh-0.16-rlogin-rsh.patch
 netkit-rsh-0.16-nokrb.patch
 netkit-rsh-0.17-pre20000412-jbj5.patch
 netkit-rsh-0.17-userandhost.patch
