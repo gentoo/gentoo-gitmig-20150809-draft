@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef3fcbf0e93cceb66a6eaffa945174ff gspoof-3.2.ebuild 710
-MD5 a78080087a45e819e50bc24304385cc7 ChangeLog 735
-MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 97df553b06e2ac64d3ccbea8724709d9 ChangeLog 855
 MD5 aade8603f952110013d657323d4aca4e files/digest-gspoof-3.2 61
+MD5 4309142911da6b07d88ec75ee6ecac07 gspoof-3.2.ebuild 725
+MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDE2ttomPajV0RnrERAqD/AJ9w+ZWg22KThMgG0VnPUflSrLVgUACdFs8F
-vaTkxl6Jw1ROleide6C6sPk=
-=CAo2
+iD8DBQFDrelNchej4aZK9/cRAjVlAJ0fCQWCdwvdNQqrHCecXeMprzckNwCfQL8t
+i5ME5jpuqFxCr5iIIZdZqx8=
+=OpUJ
 -----END PGP SIGNATURE-----
