@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a34dccc6a25fbe2378231ee377e9d54 ChangeLog 5164
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/Xsession 2187
 MD5 2b07bc84cc3afab6b4de90b9e9c597c3 files/chooser.sh 1566
@@ -14,3 +17,10 @@ MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f40379ac8833f0e3be51c37a5dd51b5a xinit-0.99.4.ebuild 1152
 MD5 fb886f5737b48ea564b5512e82152eb6 xinit-1.0.0.ebuild 1151
 MD5 4833453048be7afb513bd6c63f05f732 xinit-1.0.1.ebuild 1156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrxkWBtvusYtCZMsRAvpkAJ911PK2/C03sxUEjkf7hi5r/hsshgCeJZc8
+3rncVs+A8i5f2B7HS5O1Vfw=
+=S+8T
+-----END PGP SIGNATURE-----
