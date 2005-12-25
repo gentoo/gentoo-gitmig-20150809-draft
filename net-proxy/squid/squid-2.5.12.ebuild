@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.12.ebuild,v 1.1 2005/11/23 14:10:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.12.ebuild,v 1.2 2005/12/25 15:25:42 flameeyes Exp $
 
-inherit eutils pam toolchain-funcs
+inherit eutils pam toolchain-funcs flag-o-matic
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
@@ -52,7 +52,7 @@ src_unpack() {
 		helpers/external_acl/ldap_group/Makefile.in
 
 	#disable lazy bindings on (some at least) suided basic auth programs
-	sed -i -e 's:_LDFLAGS[ ]*=:_LDFLAGS = -Wl,-z,now:' \
+	sed -i -e 's:_LDFLAGS[ ]*=:_LDFLAGS = '$(bindnow-flags)':' \
 		helpers/basic_auth/*/Makefile.in
 
 	if ! use debug ; then
