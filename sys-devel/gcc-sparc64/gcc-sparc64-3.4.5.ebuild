@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.4.5.ebuild,v 1.1 2005/12/13 14:01:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.4.5.ebuild,v 1.2 2005/12/25 06:19:19 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,6 +40,15 @@ gcc_version_patch() {
 	sed -i -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update bugzilla URL"
 }
 
+pkg_setup() {
+	# glibc or uclibc?
+	if use elibc_glibc; then
+		MYUSERLAND="gnu"
+	elif use elibc_uclibc; then
+		MYUSERLAND="uclibc"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
@@ -67,14 +76,14 @@ src_compile() {
 
 	einfo "Configuring GCC..."
 	if [ "`uname -m | grep 64`" ]; then
-		myconf="${myconf} --host=${MYARCH/64/}-unknown-linux-gnu"
+		myconf="${myconf} --host=${MYARCH/64/}-unknown-linux-${MYUSERLAND}"
 	fi
 
 	addwrite "/dev/zero"
 	${S}/configure --prefix=${I} \
 		--disable-shared \
 		--disable-multilib \
-		--target=${MYARCH}-unknown-linux-gnu \
+		--target=${MYARCH}-unknown-linux-${MYUSERLAND} \
 		--enable-languages=c \
 		--enable-threads=single \
 		${myconf} || die
@@ -104,15 +113,15 @@ src_install() {
 		install || die
 
 	cd ${D}${I}/bin
-	ln -s ${MYARCH}-unknown-linux-gnu-gcc gcc64
-	ln -s ${MYARCH}-unknown-linux-gnu-gcc ${MYARCH}-linux-gcc
+	ln -s ${MYARCH}-unknown-linux-${MYUSERLAND}-gcc gcc64
+	ln -s ${MYARCH}-unknown-linux-${MYUSERLAND}-gcc ${MYARCH}-linux-gcc
 }
 
 pkg_postinst() {
 	einfo
 	einfo "To facilitate an easier kernel build, you may wish to add the following line to your profile:"
 	einfo
-	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH} CROSS_COMPILE=${MYARCH}-unknown-linux-gnu-\""
+	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH} CROSS_COMPILE=${MYARCH}-unknown-linux-${MYUSERLAND}-\""
 	einfo
 	einfo "Then to compile a kernel, simply goto the kernel source directory, and issue:"
 	einfo "${MYARCH}make <target>"
