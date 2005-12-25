@@ -1,5 +1,15 @@
-MD5 69df0005ebfd7c03a58f1a5dea0e4be9 ChangeLog 563
-MD5 0abba741cd49ba4fc56eba6fe3d90682 fbiterm-0.5.ebuild 1661
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78c6453e5deadd56f62d29d4530e14c8 ChangeLog 693
+MD5 fc6e448de15b5435b0c1489d0a5ccbda fbiterm-0.5.ebuild 1671
 MD5 ed7268ee020bd1601e31e83745bd578a files/digest-fbiterm-0.5 61
 MD5 0813681326745569ec2c29c8d7d3398f files/fbiterm-0.5-gentoo.diff 1218
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrDNAiZjviIA2XgRAqMwAJ9EPocZVovoYsRcQl9trWRd3ey8vQCgvymk
+Y9UbBtOqHxkYUmSINi7NicQ=
+=J6Ma
+-----END PGP SIGNATURE-----

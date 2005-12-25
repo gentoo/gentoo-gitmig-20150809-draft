@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.7 2005/05/29 03:45:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.8 2005/12/25 14:46:24 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	append-ldflags -lfreetype
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	econf --x-includes=/usr/include \
 		--x-libraries=/usr/lib || die
 	emake || die
