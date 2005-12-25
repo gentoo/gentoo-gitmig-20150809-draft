@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9978324e8f6e042e8dec5a2acd11258 ChangeLog 7435
 MD5 503ed4bbf18bb0b46850cb173873e16a files/Lucent.c.patch 814
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30 70
@@ -21,3 +24,10 @@ MD5 df48eb7ed3353dd7b5b4ced2afb906dc mgetty-1.1.30.ebuild 3342
 MD5 292c3f40fe41b373489b01659b894ce4 mgetty-1.1.31-r1.ebuild 3843
 MD5 3acbacac36d264f5445b81884ebb7a7d mgetty-1.1.31.ebuild 3770
 MD5 ce3d01a1846a5185c2b19a33ac956986 mgetty-1.1.33.ebuild 4315
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrbHAiZjviIA2XgRAt8zAJ9VN9jStaGcw0UGTaC3K3ESQq8itQCfU2BB
+pPf9y52/E/8KJ3MokrE/bcY=
+=5+0a
+-----END PGP SIGNATURE-----

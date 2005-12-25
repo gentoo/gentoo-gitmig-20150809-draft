@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cead8eb0eb2c3e053a6a997f1f1aea80 ChangeLog 3190
 MD5 2151cc793fd154ea019536d367c41d62 files/digest-linesrv-2.1.21 71
 MD5 2151cc793fd154ea019536d367c41d62 files/digest-linesrv-2.1.21-r1 71
@@ -8,3 +11,10 @@ MD5 18a9115779175629a384615141cc2bc4 files/linesrv.rc6 746
 MD5 06e4909d22ec7ea3af52e3cbe8b2f0ec linesrv-2.1.21-r1.ebuild 3305
 MD5 d7548cc74497bbd825da169fcc81fc46 linesrv-2.1.21.ebuild 2349
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrYaAiZjviIA2XgRAqGUAKC3oXVIUuryQwZosAwOZNmZjOlKlgCfbcAO
+27HSPEZH+rlLb14L5ZbsffI=
+=irJP
+-----END PGP SIGNATURE-----
