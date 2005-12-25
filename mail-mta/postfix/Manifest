@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d9224a7b404e4a63f9dcdf87f89ac2b ChangeLog 37096
 MD5 c2fd2c8cd7f31c4c876db365a98b972e files/digest-postfix-2.1.5-r2 363
 MD5 ff949f18a6d77e67fba4ed20907d0592 files/digest-postfix-2.2.4 135
@@ -20,3 +23,10 @@ MD5 0df1abf51f640086bad33992b95ac00e postfix-2.2.5-r1.ebuild 9238
 MD5 bd72bd1f193554fe30ac3d02ee89c25e postfix-2.2.5.ebuild 9527
 MD5 40c7b14240a80e8b3acf3d4888b2b508 postfix-2.2.7-r1.ebuild 10121
 MD5 71c17ba46aee4d4f6056c40deefe4f3f postfix-2.2.7.ebuild 10324
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrQUAiZjviIA2XgRAjT1AJ9KQL6nrKPyPCQlcuV3auH+6DE7jgCglkuZ
+pNy/GjUX1/6UQaNOe8ILCGc=
+=fDDz
+-----END PGP SIGNATURE-----
