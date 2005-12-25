@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.1 2005/12/22 21:27:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.2 2005/12/25 14:45:19 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,7 @@ DEFAULT_TO_X11=0
 
 pkg_setup() {
 
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 #	if (use qt && use sdl) || (use qt && use gtk) || (use gtk && sdl) || (use gtk && use qt && use sdl); then
 #		ewarn

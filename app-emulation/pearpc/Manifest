@@ -1,6 +1,16 @@
-MD5 f33899da3a80c997b5d2177fcb03835c ChangeLog 1234
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b0215b3bd46ebb4263b1a8c2d93a0eb7 ChangeLog 1359
 MD5 283c8159917af1fd5adb16a8f6f8a84e files/digest-pearpc-0.3.1 120
 MD5 bf98a3f122c0ff10b3edc55851bbf7e5 files/digest-pearpc-0.4 118
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 af5c878b290f2039b97b2f126bbbf3f2 pearpc-0.3.1.ebuild 2673
-MD5 b996795e554a7bb65ffff5961e18501d pearpc-0.4.ebuild 2676
+MD5 372163419551f7ed8b198fadfc22a047 pearpc-0.4.ebuild 2681
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrCMAiZjviIA2XgRApK8AJoCvEbauzHH2lqyYW2muJ9WDdaPxACcDIlG
+QDXON3oWCCrWATiusSnxISU=
+=V/O2
+-----END PGP SIGNATURE-----
