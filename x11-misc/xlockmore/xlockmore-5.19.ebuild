@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.19.ebuild,v 1.1 2005/08/11 02:41:07 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.19.ebuild,v 1.2 2005/12/25 15:41:06 flameeyes Exp $
 
 inherit gnuconfig eutils pam flag-o-matic
 
@@ -44,7 +44,7 @@ src_compile() {
 		|| die "econf failed"
 
 	# fixes suid-with-lazy-bindings problem
-	append-flags '-Wl,-z,now'
+	append-flags $(bindnow-flags)
 
 	emake || die "Make failed"
 
