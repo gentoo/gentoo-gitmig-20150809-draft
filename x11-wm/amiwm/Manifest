@@ -1,4 +1,15 @@
-MD5 31aecbd736b335ec3aa401969f79e5c9 ChangeLog 639
-MD5 f172622d352fc6ae045af14628db239c amiwm-0.20_p48.ebuild 939
-MD5 db4c42351dc265cd9668e40667cfe9e9 metadata.xml 420
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f5da915c32e4a5fdc9c3db4076d8054 ChangeLog 791
+MD5 acaf4d94c9475f0e1a4db1233e043938 amiwm-0.20_p48.ebuild 928
+MD5 987bc0b78d8a94197698a912753d7451 files/amiwm-0.20_p48-flex.patch 250
 MD5 3fb87d8b6cf877ea7926258b01f708dd files/digest-amiwm-0.20_p48 65
+MD5 db4c42351dc265cd9668e40667cfe9e9 metadata.xml 420
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDriML2+ySkm8kpY0RAkiPAKC6uQhFg/7QiBj7tOXSm2+wOsI23ACeL0Si
+77+jh4keaA5txIax8jO1Bj0=
+=l5ht
+-----END PGP SIGNATURE-----
