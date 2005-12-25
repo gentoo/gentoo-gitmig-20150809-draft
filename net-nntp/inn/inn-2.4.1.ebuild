@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.3 2005/12/16 12:09:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.4 2005/12/25 15:22:59 flameeyes Exp $
 
 inherit fixheadtails ssl-cert eutils libtool flag-o-matic
 
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	>=sys-apps/sed-4"
 
-append-ldflags -Wl,-z,now
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -50,6 +48,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-ldflags $(bindnow-flags)
+	
 	econf \
 		--prefix=/usr/lib/news \
 		--mandir=/usr/share/man \
@@ -84,7 +84,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} P="" install || die "make install failed"
 
-	chown -R root.root ${D}/usr/{lib/news/{lib,include},share/{doc,man}}
+	chown -R root:0 ${D}/usr/{lib/news/{lib,include},share/{doc,man}}
 	chmod 644 ${D}/etc/news/*
 	for file in control.ctl expire.ctl incoming.conf nntpsend.ctl passwd.nntp readers.conf
 	do
