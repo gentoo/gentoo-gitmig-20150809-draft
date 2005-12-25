@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.10 2005/10/27 23:53:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.11 2005/12/25 15:38:02 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> fcron-3.0.0.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   27 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> files/fcron.rc6,
   fcron-3.0.0.ebuild:

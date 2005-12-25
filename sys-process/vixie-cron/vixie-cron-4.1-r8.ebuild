@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r8.ebuild,v 1.9 2005/09/16 11:57:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r8.ebuild,v 1.10 2005/12/25 15:39:50 flameeyes Exp $
 
 inherit cron toolchain-funcs debug pam
 
@@ -44,7 +44,7 @@ src_compile() {
 	# for details. Note that we do the sed fixes here rather than in unpack so
 	# that our changes to LDFLAGS are picked up.
 
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	use debug && append-flags -DDEBUGGING
 
 	sed -i -e "s:gcc \(-Wall.*\):$(tc-getCC) \1 ${CFLAGS}:" \
