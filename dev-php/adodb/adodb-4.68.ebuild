@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.65-r1.ebuild,v 1.5 2005/12/17 21:42:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.68.ebuild,v 1.1 2005/12/25 20:14:20 chtekk Exp $
 
 inherit php-lib-r1
 
-DESCRIPTION="Active Data Objects Data Base library for PHP"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+DESCRIPTION="Active Data Objects Data Base library for PHP."
 HOMEPAGE="http://adodb.sourceforge.net/"
+SRC_URI="mirror://sourceforge/adodb/${PN}${PV//./}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-MY_P=${PN}${PV//./}
-SRC_URI="mirror://sourceforge/adodb/${MY_P}.tgz"
 S="${WORKDIR}/${PN}"
 
 need_php_by_category
@@ -30,5 +29,5 @@ src_install() {
 
 	# install documentation
 	dohtml docs/*.htm
-	dodoc-php *.txt xmlschema.dtd session/adodb-sess.txt pear/readme.Auth.txt
+	dodoc *.txt xmlschema.dtd session/adodb-sess.txt pear/readme.Auth.txt
 }

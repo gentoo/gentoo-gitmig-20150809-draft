@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.45 2005/12/17 21:42:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.46 2005/12/25 20:14:19 chtekk Exp $
+
+*adodb-4.68 (25 Dec 2005)
+
+  25 Dec 2005; Luca Longinotti <chtekk@gentoo.org> -adodb-4.65-r1.ebuild,
+  +adodb-4.68.ebuild:
+  Fix bug #116722. Newer versions of AdoDB only for new-style PHP
+  (dev-lang/php). Readd previously dropped keywords, they now also have
+  dev-lang/php keyworded so we can readd them.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> adodb-4.65-r1.ebuild:
   Added ~ppc64
