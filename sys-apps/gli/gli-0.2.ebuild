@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.2.ebuild,v 1.1 2005/12/19 22:13:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.2.ebuild,v 1.2 2005/12/25 16:50:11 flameeyes Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_install() {
 	cp -a ${S}/* ${Ddir}
 	doexe ${FILESDIR}/installer-dialog ${FILESDIR}/installer \
 		|| die "copying dialog/installer scripts"
-	chown -R root:root ${Ddir}
+	chown -R root:0 ${Ddir}
 	dodir /usr/sbin
 	dodir /usr/bin
 	if use gtk; then

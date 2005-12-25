@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9d0e39353c001f92174e07b4bc20608e ChangeLog 686
 MD5 fe2f8a4c16bd7e40988ca58393222444 files/digest-gli-0.2 66
 MD5 c71b1e70bafdc3eda6ed2947211a0c30 files/gli-dialog.png 3784
@@ -7,3 +10,10 @@ MD5 f533352d962fe012f5afc114e23fc3b0 files/installer-dialog 121
 MD5 7463cd31bbfffb0bcb5144f153e425e2 files/installer-gtk 114
 MD5 c9e7c6c19dc0a3fb134dfaab208b4b11 gli-0.2.ebuild 1494
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrs3RAiZjviIA2XgRAlW/AKCPzHP9uQD8fHJ5rGeEbWMN9gHjEwCfYP21
+Hj0rUubkqfMKtPl40owNRHI=
+=voDy
+-----END PGP SIGNATURE-----
