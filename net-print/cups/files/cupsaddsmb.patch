@@ -1,13 +1,6 @@
 diff -Naur cups-1.1.23.orig/systemv/cupsaddsmb.c cups-1.1.23/systemv/cupsaddsmb.c
 --- cups-1.1.23.orig/systemv/cupsaddsmb.c	2005-01-03 14:29:59.000000000 -0500
 +++ cups-1.1.23/systemv/cupsaddsmb.c	2005-11-02 12:50:27.000000000 -0500
-@@ -1,5 +1,5 @@
- /*
-- * "$Id: cupsaddsmb.patch,v 1.1 2005/12/25 19:23:47 genstef Exp $"
-+ * "$Id: cupsaddsmb.patch,v 1.1 2005/12/25 19:23:47 genstef Exp $"
-  *
-  *   "cupsaddsmb" command for the Common UNIX Printing System (CUPS).
-  *
 @@ -625,7 +625,7 @@
      * See if we also have the CUPS driver files; if so, use them!
      */
@@ -53,10 +46,3 @@ diff -Naur cups-1.1.23.orig/systemv/cupsaddsmb.c cups-1.1.23/systemv/cupsaddsmb.
      }
  
      snprintf(command, sizeof(command), "rpcclient %s", SAMBAServer);
-@@ -947,5 +949,5 @@
- 
- 
- /*
-- * End of "$Id: cupsaddsmb.patch,v 1.1 2005/12/25 19:23:47 genstef Exp $".
-+ * End of "$Id: cupsaddsmb.patch,v 1.1 2005/12/25 19:23:47 genstef Exp $".
-  */

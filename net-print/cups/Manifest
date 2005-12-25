@@ -1,4 +1,4 @@
-MD5 e90bbb9b1f783ae642776dc53696405a ChangeLog 19219
+MD5 1636908a80749459b1e47ee2b33caf70 ChangeLog 19334
 MD5 b92beaae46fa3940593e9915f4feb8f0 cups-1.1.23-r1.ebuild 4130
 MD5 8d5e79b93c34f48926709d33a54eed0f cups-1.1.23-r2.ebuild 4239
 MD5 e6a4dd8cb2896885c0de6bb7129368ec cups-1.1.23-r3.ebuild 4537
@@ -12,7 +12,7 @@ MD5 5f90c7ea48cd8de22145e264ef4ea192 files/cups-gentooalt.patch 966
 MD5 974925d56d58ecc44c6370754d519dcb files/cups-lppasswd-setXid.patch 417
 MD5 7242b8a2000fe4c5a2b398e6602f7f1c files/cups.pam 234
 MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
-MD5 d60cb41da71d2ce15491611377be83d0 files/cupsaddsmb.patch 2210
+MD5 cdcb941ffd27a1f5ce7fb758cbd40968 files/cupsaddsmb.patch 1790
 MD5 0720c522b5c2bcef05d42cd4977f8702 files/cupsd.rc6 515
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r1 72
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r2 72
