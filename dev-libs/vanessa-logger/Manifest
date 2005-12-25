@@ -1,8 +1,18 @@
-MD5 20ee8848dd48684274ffe669982c5e2a ChangeLog 2626
-MD5 af56181885cd6a9d0afb1243414c2ca3 files/digest-vanessa-logger-0.0.4_beta2 77
-MD5 f65a14286eb1226e0ea40b4741e34f0e files/digest-vanessa-logger-0.0.6 72
-MD5 e682981535e2ca12e8b8b407986f1f97 files/digest-vanessa-logger-0.0.7 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 00cce02d00c03f4fc1990f5620fff4ba ChangeLog 2729
+MD5 a61095781c1dbd15ef2b5a0c4c1907a8 vanessa-logger-0.0.6.ebuild 775
+MD5 f42584c58d47daf8506a031a633ccfe8 vanessa-logger-0.0.7.ebuild 783
 MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
 MD5 1284f997ea70828e3fadab63e38e60a9 vanessa-logger-0.0.4_beta2.ebuild 718
-MD5 a61095781c1dbd15ef2b5a0c4c1907a8 vanessa-logger-0.0.6.ebuild 775
-MD5 bff30835858b803b49bd0d049b10f610 vanessa-logger-0.0.7.ebuild 784
+MD5 f65a14286eb1226e0ea40b4741e34f0e files/digest-vanessa-logger-0.0.6 72
+MD5 af56181885cd6a9d0afb1243414c2ca3 files/digest-vanessa-logger-0.0.4_beta2 77
+MD5 e682981535e2ca12e8b8b407986f1f97 files/digest-vanessa-logger-0.0.7 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDrsxXgMUyd/cdjWsRAm6AAKCH7kz+a6QViUaNtO1/w5zu9KMiiQCgiOGR
+0ysyNuuOM4UoylqzvdBtCMs=
+=1+co
+-----END PGP SIGNATURE-----
