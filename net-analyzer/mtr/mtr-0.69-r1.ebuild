@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69-r1.ebuild,v 1.3 2005/10/09 10:10:57 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69-r1.ebuild,v 1.4 2005/12/25 15:06:42 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,12 +31,8 @@ src_compile() {
 	local myconf
 	use gtk || myconf="${myconf} --without-gtk"
 
-	if use ppc-macos;
-	then
-		append-flags "-DBIND_8_COMPAT"
-	else
-		append-ldflags -Wl,-z,now
-	fi
+	use ppc-macos && append-flags "-DBIND_8_COMPAT"
+	append-ldflags $(bindnow-flags)
 
 	econf ${myconf} \
 		$(use_enable gtk gtk2) \

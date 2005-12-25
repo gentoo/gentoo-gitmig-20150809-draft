@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.51 2005/10/09 10:10:57 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.52 2005/12/25 15:06:42 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> mtr-0.69-r1.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now. Drop ppc-macos special case.
 
   09 Oct 2005; <mkay@gentoo.org> mtr-0.69.ebuild, mtr-0.69-r1.ebuild:
   Fixing dependencies (bug #108100)

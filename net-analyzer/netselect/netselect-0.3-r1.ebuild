@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r1.ebuild,v 1.14 2005/09/03 19:31:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r1.ebuild,v 1.15 2005/12/25 15:04:43 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE=""
 S="${WORKDIR}/${PN}"
 
 src_compile() {
-	use ppc-macos || append-ldflags "-Wl,-z,now"
+	append-ldflags $(bindnow-flags)
 
 	sed -i \
 		-e "s:PREFIX =.*:PREFIX = ${D}usr:" \
