@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.38 2005/12/17 18:40:47 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.39 2005/12/25 15:37:35 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> heartbeat-2.0.2.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   17 Dec 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-2.0.2.ebuild:
   removed pils and stonith use flags, fixed bug #115662.

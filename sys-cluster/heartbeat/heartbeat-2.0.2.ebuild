@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2.ebuild,v 1.2 2005/12/17 18:40:47 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2.ebuild,v 1.3 2005/12/25 15:37:35 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -41,7 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
