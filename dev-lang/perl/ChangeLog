@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.181 2005/12/14 11:18:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.182 2005/12/25 01:32:03 kumba Exp $
+
+  25 Dec 2005; Joshua Kinard <kumba@gentoo.org> perl-5.8.6-r8.ebuild,
+  perl-5.8.7-r3.ebuild:
+  Mark 5.8.6-r8 && 5.8.7-r3 stable on mips.
 
   14 Dec 2005; <mcumming@gentoo.org> perl-5.8.7-r3.ebuild:
   Bug 115503, better if-clause for nossp patch
