@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.126 2005/12/09 21:11:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.127 2005/12/25 12:38:49 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -270,7 +270,6 @@ kde-base/kdepim kde-base/kdepim-wizards
 kde-base/kdepim kde-base/kitchensync
 kde-base/kdepim kde-base/kmail
 kde-base/kdepim kde-base/kmailcvt
-kde-base/kdepim kde-base/kmobile
 kde-base/kdepim kde-base/knode
 kde-base/kdepim kde-base/knotes
 kde-base/kdepim kde-base/kode
