@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/leafnode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.19 2005/11/23 16:59:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.20 2005/12/25 15:22:29 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  leafnode-2.0.0_alpha20050914.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
 *leafnode-1.11.4 (23 Nov 2005)
 
