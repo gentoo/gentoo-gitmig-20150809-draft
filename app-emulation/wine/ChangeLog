@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.115 2005/12/24 04:41:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.116 2005/12/25 16:54:02 vapier Exp $
+
+  25 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-0.9.4-null-thread-check.patch, wine-0.9.4.ebuild:
+  Grab patch from upstream to fix random crashes #116679.
 
 *wine-0.9.4 (24 Dec 2005)
 
