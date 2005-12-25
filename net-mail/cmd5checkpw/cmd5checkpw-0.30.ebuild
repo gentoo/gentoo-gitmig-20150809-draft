@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30.ebuild,v 1.9 2005/10/30 08:40:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30.ebuild,v 1.10 2005/12/25 15:12:58 flameeyes Exp $
 
-inherit eutils toolchain-funcs fixheadtails
+inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
 MY_VER="030"
 
@@ -50,7 +50,7 @@ src_compile() {
 		-e "s:-c -g -Wall -O3:${CFLAGS}:" \
 		-e "s:cp cmd5checkpw /bin/:cp cmd5checkpw \${D}/bin/:" \
 		-e "s:cp cmd5checkpw.8 /usr/man/man8/:cp cmd5checkpw.8 \${D}/usr/share/man/man8/:" \
-		-e "/^LDFLAGS/ a LDFLAGS+='-Wl,-z,now'" \
+		-e "/^LDFLAGS/ a LDFLAGS+='$(bindnow-flags)'" \
 		< Makefile.orig > Makefile
 	cd ${S}
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
