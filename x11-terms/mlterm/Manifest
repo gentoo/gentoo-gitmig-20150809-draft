@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 01d2edaa2e65d9dfebbd7d255c1d9971 ChangeLog 6087
 MD5 28cc03d6622442b7df9321c410403fbf files/digest-mlterm-2.9.2 65
 MD5 35f136547978c18aed013cdfd088d098 files/mlterm-2.9.1-gentoo.diff 346
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 fad4191a1f1226928dc41bf6f1ff638e mlterm-2.9.2.ebuild 1568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrr3jAiZjviIA2XgRAlKMAJ9/KBCFCI8pdtg1e8WJSQso7xZX9wCfTfpx
+nmIFamLq2TapBYXA6zRUESA=
+=Nd+f
+-----END PGP SIGNATURE-----
