@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.16 2005/07/16 10:48:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.17 2005/12/25 14:47:43 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> fdutils-5.5.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   16 Jul 2005; Daniel Black <dragonheart@gentoo.org>
   +files/fdutils-5.5-destdirfix.patch, fdutils-5.4.20020222-r1.ebuild,
