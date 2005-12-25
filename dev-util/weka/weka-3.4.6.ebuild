@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.6.ebuild,v 1.1 2005/12/06 02:11:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.6.ebuild,v 1.2 2005/12/25 02:44:16 nichoj Exp $
 
 inherit eutils java-pkg versionator
 
@@ -31,13 +31,13 @@ src_unpack() {
 
 src_compile() {
 	mkdir build dist
-	einfo "Compiling sources"
+	echo "Compiling sources"
 	# We need to set the maximum heap size to 128m to avoid
 	#	OutOfMemoryErrors
 	find src/ -name "*.java" | xargs javac -J-Xmx128m -d build \
 		-sourcepath src/ -nowarn || die "Failed to compile ${i}"
 
-	einfo "Copying resources"
+	echo "Copying resources"
 	cd src
 	find . -type f -not -name '*.java' -and -not -name "*.MF" -print | \
 	while read file; do
@@ -46,12 +46,12 @@ src_compile() {
 	done
 	cd ..
 
-	einfo "Creating JAR"
+	echo "Creating JAR"
 	jar cf dist/${PN}.jar -C build . || die "Failed to create JAR archive"
 
 	if use doc ; then
 		mkdir -p dist/doc
-		einfo "Generating javadocs"
+		echo "Generating javadocs"
 		find src/ -name "*.java" | xargs javadoc -d dist/doc/ \
 		-quiet || die "Failed to generate javadoc"
 	fi

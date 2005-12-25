@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca73e153828dd8240b6f9bad872e9ab5 ChangeLog 1684
+MD5 54781bd9d16a302311519b414bf2725b ChangeLog 1785
 MD5 e6cdfc65e52842dc2d8910061cdbb9e7 files/digest-weka-3.4.3_p20041113 143
 MD5 9727935f12238d4296b8f3fbecae24c3 files/digest-weka-3.4.6 60
 MD5 60179e67fd9dadf4d3fc08c2b89317a6 files/weka-build_xml.patch 2035
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f3c42bc97f73602a7acce5fe05ab5d5e weka-3.4.3_p20041113.ebuild 1458
-MD5 f60df2cd2bb569dcdcf657462d8ff6c1 weka-3.4.6.ebuild 1911
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlPWvndWRXhKOboURAjkJAJ9VVF/OGO0QbvZl+ieGFnuuWXNLTACg0Vid
-ejJGypWi/1y7Xm1ccydwjK0=
-=D5NS
------END PGP SIGNATURE-----
+MD5 65f792e0421b0fd6c5c9664e17692d3e weka-3.4.6.ebuild 1907
