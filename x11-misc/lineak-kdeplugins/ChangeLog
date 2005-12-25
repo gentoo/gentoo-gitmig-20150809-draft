@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/lineak-kdeplugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.11 2005/11/24 20:07:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.12 2005/12/25 00:26:12 genstef Exp $
+
+*lineak-kdeplugins-0.8.4 (25 Dec 2005)
+
+  25 Dec 2005; Stefan Schweizer <genstef@gentoo.org>
+  +lineak-kdeplugins-0.8.4.ebuild:
+  version bump
 
   24 Nov 2005; Simon Stelling <blubb@gentoo.org>
   lineak-kdeplugins-0.8.3.ebuild:
