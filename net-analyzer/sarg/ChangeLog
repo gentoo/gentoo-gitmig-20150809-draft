@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.19 2005/11/06 22:16:06 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.20 2005/12/25 13:32:29 pva Exp $
+
+  25 Dec 2005; Peter Volkov <pva@gentoo.org> sarg-2.0.8.ebuild:
+  Fix for bug #99951.
 
   06 Nov 2005; <soulse@gentoo.org> metadata.xml:
   Added to netmon herd.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.0.8.ebuild,v 1.5 2005/11/06 22:14:57 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.0.8.ebuild,v 1.6 2005/12/25 13:32:29 pva Exp $
 
 inherit eutils
 
@@ -70,6 +70,7 @@ src_install() {
 		BINDIR=${D}/usr/sbin \
 		MANDIR=${D}/usr/share/man/man1 \
 		SYSCONFDIR=${D}/etc/sarg \
+		HTMLDIR=${D}/var/www/html \
 		install || die "sarg installation failed"
 
 	dodoc BETA-TESTERS CONTRIBUTORS DONATIONS README ChangeLog htaccess
