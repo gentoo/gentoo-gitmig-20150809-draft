@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d0b689be6dff4b248a9b8ce6c1abc119 ChangeLog 12004
+MD5 89886a71db6155e9fb3ecaf47aefe388 ChangeLog 12130
 MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
 MD5 90c01e3cfecc4bc92266780a9be71429 files/digest-man-1.6-r1 59
 MD5 1c3d9a443043b133adbe277b50105123 files/digest-man-1.6a 60
@@ -24,12 +21,5 @@ MD5 cc5bb9ed7778c068c9154f0f8c6a5e07 files/man-1.6b-more-sections.patch 291
 MD5 816a0222228cedf51e8bc39acb32fa89 man-1.5p.ebuild 2648
 MD5 5c0c422d050f5191b66a7c4ed928835a man-1.6-r1.ebuild 2983
 MD5 9206115cdc98fb8e0d7cbd518ad9476b man-1.6a.ebuild 2897
-MD5 052f93aaebddf24baf5386618b62bc5b man-1.6b-r2.ebuild 3079
+MD5 855b2f2f7c8c1fccf2b2260e42858db9 man-1.6b-r2.ebuild 3085
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDor4YAiZjviIA2XgRAmQIAJ47CXyBDaupe2l3hNVEl32D1G/7kQCghxFN
-B+2z96+uFc8CgMuc0LaiROA=
-=zer3
------END PGP SIGNATURE-----
