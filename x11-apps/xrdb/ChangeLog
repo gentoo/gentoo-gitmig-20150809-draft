@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.10 2005/12/23 10:47:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.11 2005/12/25 22:09:15 cardoe Exp $
+
+  25 Dec 2005; Doug Goldstein <cardoe@gentoo.org> xrdb-1.0.1.ebuild:
+  adding ~ppc
 
 *xrdb-1.0.1 (23 Dec 2005)
 
