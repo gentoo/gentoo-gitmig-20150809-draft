@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.10 2005/12/23 20:29:43 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.11 2005/12/25 05:57:00 cardoe Exp $
+
+  25 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
+  xf86-video-nv-1.0.1.4.ebuild, xf86-video-nv-1.0.1.5.ebuild:
+  adding ~ppc
 
 *xf86-video-nv-1.0.1.5 (23 Dec 2005)
 
