@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4a519c8440c3016ab875b1e47ad33e2 metadata.xml 227
-MD5 22d39b73d1eb81e4e9d2092b639368e0 netselect-0.3-r1.ebuild 1169
-MD5 b54367da063056de6caffbe71b10926c ChangeLog 2706
-MD5 ed9af38651ff81fcae36bbdd710f83de netselect-0.3.ebuild 772
+MD5 aac2db4afe3a96784044cefa516c3821 ChangeLog 2870
 MD5 7396c62cc3e5735019287ae62229dd48 files/digest-netselect-0.3 64
 MD5 7396c62cc3e5735019287ae62229dd48 files/digest-netselect-0.3-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGfpTgIKl8Uu19MoRAqlNAJ9j60t1FHZEdiYHyysJEelaUG/PHwCbB0mb
-CIgiOWVGkZ7oJ+XU6mo9qWw=
-=4xzW
------END PGP SIGNATURE-----
+MD5 b4a519c8440c3016ab875b1e47ad33e2 metadata.xml 227
+MD5 68a55810b0fd65ee45b2ce00089080fe netselect-0.3-r1.ebuild 1159
+MD5 ed9af38651ff81fcae36bbdd710f83de netselect-0.3.ebuild 772
