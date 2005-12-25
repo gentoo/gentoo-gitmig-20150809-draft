@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 41447050965ff017b2f3625a64681a47 ChangeLog 2135
-MD5 2d167648537163c673984e9ed47a4753 larswm-7.2.10.ebuild 727
-MD5 43c6efb28a54cb0368ea2f25c99d0539 larswm-7.5.2.ebuild 873
-MD5 c9450f1120cda813944727400bd2a7cb larswm-7.5.3.ebuild 896
-MD5 4b470e3e833fafd59c0a36e3290ea44d metadata.xml 604
+MD5 5f2b6d5c60043742ae2c0ad3bb2453cc ChangeLog 2219
 MD5 149f89980efd02462740c16d93dfb871 files/digest-larswm-7.2.10 64
 MD5 4b53a7489368e57db5a58ac1a4961212 files/digest-larswm-7.5.2 63
 MD5 6f120345b5bf7816c3efcf73fe74266d files/digest-larswm-7.5.3 63
 MD5 503a5e0afa8702fb702b3a67648576e0 files/larswm.desktop 128
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHmuAwUpWvClEHQoRAkZCAJ9+wJydKCHZY/8UbMNh00+Sdpy9MACfTdp6
-yWmvrQYydZwZbd9ihN+gMcY=
-=VYp1
------END PGP SIGNATURE-----
+MD5 2d167648537163c673984e9ed47a4753 larswm-7.2.10.ebuild 727
+MD5 43c6efb28a54cb0368ea2f25c99d0539 larswm-7.5.2.ebuild 873
+MD5 46f17b94426031d8c5cd50ef650477aa larswm-7.5.3.ebuild 892
+MD5 4b470e3e833fafd59c0a36e3290ea44d metadata.xml 604
