@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.2.ebuild,v 1.6 2005/04/12 01:03:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.2.ebuild,v 1.7 2005/12/25 15:42:15 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,7 +42,7 @@ src_compile() {
 	# m17n-lib and iiimf aren't stable enough
 	#myconf="${myconf} $(use_enable iiimf) $(use_enable m17n-lib m17nlib)"
 
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	econf --enable-utmp \
 		$(use_enable truetype anti-alias) \

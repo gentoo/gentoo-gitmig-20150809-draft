@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.77 2005/11/22 17:59:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.78 2005/12/25 15:41:31 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> aterm-1.0.0.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   22 Nov 2005; Simon Stelling <blubb@gentoo.org> aterm-1.0.0.ebuild:
   added ~amd64 keyword

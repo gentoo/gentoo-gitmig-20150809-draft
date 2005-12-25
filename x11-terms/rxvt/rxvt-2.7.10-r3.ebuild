@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.2 2005/12/17 15:52:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.3 2005/12/25 15:43:04 flameeyes Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -46,7 +46,7 @@ src_compile() {
 
 	# bug #22325
 	use linuxkeys && append-flags -DLINUX_KEYS
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	econf \
 		--enable-everything \
