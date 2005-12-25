@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.17 2005/12/25 14:57:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.18 2005/12/25 16:18:35 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> nullmailer-1.00.ebuild:
+  Actually change last version, not the one before.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   nullmailer-1.00_rc7-r5.ebuild:
