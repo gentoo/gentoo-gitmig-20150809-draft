@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.6.6.ebuild,v 1.2 2005/10/07 16:42:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.6.6.ebuild,v 1.3 2005/12/25 15:01:39 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,7 @@ DEPEND="dev-util/pkgconfig
 
 src_compile() {
 	# avoid suid related security issues.
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	econf ${myconf} \
 		$(use_enable debug) \
