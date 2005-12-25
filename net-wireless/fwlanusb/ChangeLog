@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/fwlanusb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.1 2005/12/25 23:06:49 sbriesen Exp $
+
+*fwlanusb-0.09.00_beta (25 Dec 2005)
+
+  25 Dec 2005; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +fwlanusb-0.09.00_beta.ebuild:
+  initial commit.
+
