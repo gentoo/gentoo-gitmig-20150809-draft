@@ -1,12 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d0b9921ec432b6d95d21cf8b9e8f08f9 ChangeLog 18986
+MD5 e90bbb9b1f783ae642776dc53696405a ChangeLog 19219
 MD5 b92beaae46fa3940593e9915f4feb8f0 cups-1.1.23-r1.ebuild 4130
 MD5 8d5e79b93c34f48926709d33a54eed0f cups-1.1.23-r2.ebuild 4239
 MD5 e6a4dd8cb2896885c0de6bb7129368ec cups-1.1.23-r3.ebuild 4537
 MD5 377407a66d89ce94f1c7cd57322c4100 cups-1.1.23-r4.ebuild 4652
 MD5 c91aced69b6a77c69445b5f500ea78c1 cups-1.1.23-r5.ebuild 4670
+MD5 1bbc34f4f33232d4e0b4c9785597bf64 cups-1.1.23-r6.ebuild 4710
 MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
 MD5 b22c12cb42113ddc40988cfbe93e3519 files/cups-1.1.23-bindnow.patch 2087
 MD5 7888ddf6a0c4cfb38b8882651e22d66c files/cups-gcc4-amd64.patch 566
@@ -14,21 +12,16 @@ MD5 5f90c7ea48cd8de22145e264ef4ea192 files/cups-gentooalt.patch 966
 MD5 974925d56d58ecc44c6370754d519dcb files/cups-lppasswd-setXid.patch 417
 MD5 7242b8a2000fe4c5a2b398e6602f7f1c files/cups.pam 234
 MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
+MD5 d60cb41da71d2ce15491611377be83d0 files/cupsaddsmb.patch 2210
 MD5 0720c522b5c2bcef05d42cd4977f8702 files/cupsd.rc6 515
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r1 72
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r2 72
 MD5 22c70e955df5567e6ed03f3992bd0128 files/digest-cups-1.1.23-r3 125
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r4 72
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r5 72
+MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r6 72
 MD5 7bce495a238ee9dbebb61496f3b3ae51 files/disable-strip.patch 422
 MD5 f6149424fd2880c5017da501e876de59 files/pdftops.pl 5630
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 a097b6a9c53c9ef50a6f3662d802cdfa files/xpdf-pl3.patch 348
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpEZN2+ySkm8kpY0RAsmwAKCTRSfyl5D3swauZWLhtsdoDawyXwCeNy9+
-dTM+pnXkfiqjJPf8Mrh0vQA=
-=XVE5
------END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.145 2005/12/15 04:35:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.146 2005/12/25 19:23:47 genstef Exp $
+
+*cups-1.1.23-r6 (25 Dec 2005)
+
+  25 Dec 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/cupsaddsmb.patch, +cups-1.1.23-r6.ebuild:
+  Make Windows V6 drivers work thanks to Chris Smith
+  <chris@realcomputerguy.com> in bug 111272
 
   15 Dec 2005; Mark Loeser <halcy0n@gentoo.org> cups-1.1.23-r4.ebuild:
   Stable on x86; bug #115286
