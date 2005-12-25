@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.2.2.ebuild,v 1.1 2005/12/23 21:52:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.2.2.ebuild,v 1.2 2005/12/25 22:32:16 chainsaw Exp $
 
 inherit mono
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/mono-1.1.10
 	doc? ( dev-util/monodoc )
 	>=dev-dotnet/gtk-sharp-2.0"
 DEPEND="${RDEPEND}
-	media-libs/libnjb"
+	>=media-libs/libnjb-2.2.4"
 
 src_compile() {
 	econf $(use_enable doc docs) || die "configure failed"

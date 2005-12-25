@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/njb-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/ChangeLog,v 1.1 2005/12/23 21:52:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/ChangeLog,v 1.2 2005/12/25 22:32:16 chainsaw Exp $
+
+  25 Dec 2005; <chainsaw@gentoo.org> njb-sharp-0.2.2.ebuild:
+  Depend on libnjb 2.2.4 or newer, older versions will not work. Closes bug
+  #116726.
 
 *njb-sharp-0.2.2 (23 Dec 2005)
 
