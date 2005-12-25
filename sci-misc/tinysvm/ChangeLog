@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/tinysvm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/ChangeLog,v 1.1 2005/05/22 16:28:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/ChangeLog,v 1.2 2005/12/25 17:15:25 usata Exp $
+
+*tinysvm-0.09-r1 (25 Dec 2005)
+
+  25 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> +tinysvm-0.09-r1.ebuild:
+  Added perl USE flag.
 
 *tinysvm-0.09 (22 May 2005)
 

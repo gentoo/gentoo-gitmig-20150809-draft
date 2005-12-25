@@ -1,4 +1,6 @@
 MD5 72c6c50b50af5b1299dc2e8232a41697 tinysvm-0.09.ebuild 730
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 38b41353d387c0c05233e0d336a63493 ChangeLog 340
+MD5 2a286d6465a6602cec43d3414db827f7 ChangeLog 470
+MD5 db1f660e9bc1c0af7d2ad5c4337be91e tinysvm-0.09-r1.ebuild 1569
+MD5 3680ed9be508eeea6d4c6779ac6ad828 files/digest-tinysvm-0.09-r1 64
 MD5 3680ed9be508eeea6d4c6779ac6ad828 files/digest-tinysvm-0.09 64
