@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r4.ebuild,v 1.3 2005/11/29 04:11:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r4.ebuild,v 1.4 2005/12/25 15:38:44 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 src_compile() {
 	## TODO: what to do with IPv6?
 
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	use static && append-ldflags -static
 
 	econf || die "econf failed"
