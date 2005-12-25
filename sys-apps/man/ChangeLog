@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.80 2005/12/16 13:15:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.81 2005/12/25 15:27:10 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> man-1.6b-r2.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> man-1.6b-r2.ebuild:
   Replace root:root in root:0. Bug #103563.

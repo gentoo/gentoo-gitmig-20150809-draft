@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.106 2005/12/07 14:50:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.107 2005/12/25 15:27:50 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  pcmcia-cs-3.2.8-r2.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   07 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
   pcmcia-cs-3.2.8-r2.ebuild:

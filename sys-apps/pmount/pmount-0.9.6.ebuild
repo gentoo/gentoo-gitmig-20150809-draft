@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.3 2005/12/03 00:03:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.4 2005/12/25 15:26:53 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,7 @@ src_unpack() {
 	cd ${S}
 	sed -e 's:/sbin/cryptsetup:/bin/cryptsetup:' -i src/policy.h
 
-	append-ldflags "-Wl,-z,now"
+	append-ldflags $(bindnow-flags)
 }
 
 src_install () {

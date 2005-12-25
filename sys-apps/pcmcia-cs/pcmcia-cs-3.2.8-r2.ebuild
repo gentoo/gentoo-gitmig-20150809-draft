@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.9 2005/12/07 14:50:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.10 2005/12/25 15:27:50 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -94,7 +94,7 @@ src_compile() {
 	fi
 
 	# cardctl, cardinfo and xcardinfo are setUID
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	pcmcia_cs_configure \
 		--noprompt \

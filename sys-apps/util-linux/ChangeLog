@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.133 2005/12/25 02:33:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.134 2005/12/25 15:26:10 flameeyes Exp $
+
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  util-linux-2.12r-r2.ebuild:
+  Use bindnow-flags function instead of -Wl,-z,now.
 
   25 Dec 2005; Joshua Kinard <kumba@gentoo.org> util-linux-2.12r-r1.ebuild:
   Marked stable on mips.

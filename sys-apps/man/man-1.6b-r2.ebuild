@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6b-r2.ebuild,v 1.2 2005/12/16 13:15:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6b-r2.ebuild,v 1.3 2005/12/25 15:27:10 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -54,7 +54,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/man-1.5p-mandirlist.patch
 
 	# use non-lazy binds for man
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	strip-linguas $(eval $(grep ^LANGUAGES= configure) ; echo ${LANGUAGES//,/ })
 }
