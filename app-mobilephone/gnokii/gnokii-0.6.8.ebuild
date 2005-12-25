@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.8.ebuild,v 1.5 2005/11/24 18:40:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.8.ebuild,v 1.6 2005/12/25 14:54:56 flameeyes Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags "-Wl,-z,now" #avoid QA notices
+	append-ldflags $(bindnow-flags) #avoid QA notices
 
 	autoconf && econf \
 		$(use_enable nls) \
