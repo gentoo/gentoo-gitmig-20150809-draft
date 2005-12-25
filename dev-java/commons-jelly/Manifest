@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2efbc5efe22c0c646235d26d5102b5d8 ChangeLog 418
-MD5 bab81401803b22e3c66cd1cc5c25afdd commons-jelly-1.0.ebuild 1947
-MD5 02f70aa727e825f409b2893f3f165bc4 files/commons-jelly-1.0-gentoo.patch 2371
+MD5 cdf1bf611c80525d276bfe06d465e7d7 commons-jelly-1.0.ebuild 1913
+MD5 54a1c7c1840da66a583e5ec54ddb94c1 files/commons-jelly-1.0-gentoo.patch 2224
 MD5 b8e360e5058c49cde7c1a2b1e7d09542 files/digest-commons-jelly-1.0 73
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrL94ndWRXhKOboURAlcLAJ9H5Y0sKrSfjDxd82a/QH8MBA2wmwCdFvly
-CakdcucDgFv2Ng2qgBMxK9Q=
-=RCVw
------END PGP SIGNATURE-----

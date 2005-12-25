@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0.ebuild,v 1.1 2005/12/24 02:24:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0.ebuild,v 1.2 2005/12/25 19:22:45 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -14,7 +14,8 @@ SLOT="1"
 KEYWORDS="~x86"
 IUSE="doc jikes junit source"
 
-COMMON_DEPS="~dev-java/servletapi-2.3
+RDEPEND=">=virtual/jre-1.4
+	~dev-java/servletapi-2.3
 	=dev-java/commons-cli-1*
 	dev-java/commons-lang
 	dev-java/commons-discovery
@@ -26,6 +27,7 @@ COMMON_DEPS="~dev-java/servletapi-2.3
 	=dev-java/dom4j-1*
 	=dev-java/jaxen-1.1*
 	=dev-java/xerces-2*"
+
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )
@@ -34,9 +36,7 @@ DEPEND=">=virtual/jdk-1.4
 		dev-java/ant-tasks
 		dev-java/commons-logging
 	)
-	${COMMON_DEPS}"
-RDEPEND=">=virtual/jre-1.4
-	${COMMON_DEPS}"
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
