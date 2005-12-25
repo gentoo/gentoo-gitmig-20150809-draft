@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.9.ebuild,v 1.8 2005/12/24 21:26:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.9.ebuild,v 1.9 2005/12/25 01:42:03 ferdy Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
 DEPEND="!<x11-libs/openmotif-2.1.30-r13
