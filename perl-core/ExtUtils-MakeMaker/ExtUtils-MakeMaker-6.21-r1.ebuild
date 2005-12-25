@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.21-r1.ebuild,v 1.1 2005/12/07 00:50:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.21-r1.ebuild,v 1.2 2005/12/25 02:10:00 kumba Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~mschwern/${P}/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0-r12
