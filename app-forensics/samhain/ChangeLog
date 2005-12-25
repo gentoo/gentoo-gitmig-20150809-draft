@@ -1,0 +1,11 @@
+# ChangeLog for app-forensics/samhain
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/ChangeLog,v 1.1 2005/12/25 14:35:37 chtekk Exp $
+
+*samhain-2.1.1a (25 Dec 2005)
+
+  25 Dec 2005; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +samhain-2.1.1a.ebuild:
+  Samhain ebuild, fix bug #34243. Thanks to Andrea Barisani and Jared Breland
+  for the initial ebuild in Bugzilla.
+
