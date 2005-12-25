@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.24.ebuild,v 1.2 2005/12/12 05:41:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.24.ebuild,v 1.3 2005/12/25 14:57:35 flameeyes Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Distributed Checksum Clearinghouse"
 HOMEPAGE="http://www.rhyolite.com/anti-spam/dcc/"
@@ -40,7 +42,7 @@ src_compile() {
 		cgi-bin/Makefile.in
 
 	local myconf
-	export LDFLAGS='-Wl,-z,now'
+	export LDFLAGS="$(bindnow-flags)"
 	myconf="${myconf} --homedir=${dcc_homedir}"
 	myconf="${myconf} --libexecdir=${dcc_libexec}"
 	myconf="${myconf} --bindir=/usr/bin"
