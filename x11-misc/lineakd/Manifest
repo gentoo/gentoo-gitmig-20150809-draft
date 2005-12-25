@@ -1,4 +1,4 @@
-MD5 ab5ee8805295a7f677cbed7fc5a343d0 ChangeLog 3883
+MD5 0f70c8accfcbecdf322cea3721f62413 ChangeLog 3884
 MD5 7d34394cb4d85fa0c1aeca17e614ab85 files/digest-lineakd-0.8.2 65
 MD5 c3a210f82bfa5f48a2de86956bccec43 files/digest-lineakd-0.8.3 65
 MD5 c3a210f82bfa5f48a2de86956bccec43 files/digest-lineakd-0.8.3-r1 65
@@ -9,5 +9,5 @@ MD5 c5669d240c36c2f263c6ace7678e382c files/lkey-cast.patch 519
 MD5 f453744ffac61ecc1c9736351cf190af lineakd-0.8.2.ebuild 841
 MD5 99264bf83bb9b5cefbc43230a769f7a6 lineakd-0.8.3-r1.ebuild 926
 MD5 159f5c76c3a78856bb20affbb6c210f1 lineakd-0.8.3.ebuild 833
-MD5 ee8df65869466a667225920f308efff8 lineakd-0.8.4.ebuild 1178
+MD5 d02c0edc3a2f2ba00d8c28a7eb15184f lineakd-0.8.4.ebuild 1176
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
