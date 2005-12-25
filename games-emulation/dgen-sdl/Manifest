@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60c877c78ffed147139b2cd7bee081d1 dgen-sdl-1.23.ebuild 893
-MD5 bbdcb25011df4d3892882d3b91551b8a ChangeLog 1184
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a2ce173f392d4bf8906053ecee58d5f8 ChangeLog 1333
+MD5 6298fb408578e9af2f96aa8eeaffb2d0 dgen-sdl-1.23.ebuild 1005
+MD5 e7822b762b24b5fb0c98c2332817cde6 files/dgen-sdl-1.23-gcc34.patch 225
 MD5 b62a7d15563b05b01fa3b382d6eb26d5 files/digest-dgen-sdl-1.23 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB4QxsI1lqEGTUzyQRAtglAJ9RQa/Y866+geHnd2r6b18JW1V+qwCgyHtS
-w5epnebgXGjhEjj/aKEWVM8=
-=lIjO
------END PGP SIGNATURE-----
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
