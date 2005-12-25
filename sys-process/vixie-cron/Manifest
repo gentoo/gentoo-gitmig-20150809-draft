@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 89baed66d98a1b113ee0d5430bdcf98f ChangeLog 15806
 MD5 5eab102dfecfc35810ab8cf50f95d0d3 files/cron.pam.d 123
 MD5 7747bde52c8a9ba3e71df61198339a60 files/crontab 603
@@ -22,3 +25,10 @@ MD5 da21751a527096452e591d8defac6026 vixie-cron-3.0.1-r4.ebuild 2024
 MD5 af45391149f90c6a9a7fca422e349727 vixie-cron-3.0.1-r5.ebuild 2208
 MD5 c90c415fa2ab9ea6ed34a2f6a55b534c vixie-cron-4.1-r7.ebuild 2666
 MD5 b2d4a3a3ca78ca2235ac05faa24a4953 vixie-cron-4.1-r8.ebuild 2679
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrr1RAiZjviIA2XgRAnzEAKDfgFiVT2YjFEakE4UcRkYX2twNngCgwA9n
+W5b2ifPhEg5hH+4crXqpq9k=
+=sn4l
+-----END PGP SIGNATURE-----
