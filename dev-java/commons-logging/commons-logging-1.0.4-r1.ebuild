@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4-r1.ebuild,v 1.9 2005/08/11 17:09:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4-r1.ebuild,v 1.10 2005/12/25 13:10:07 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -45,7 +45,7 @@ src_install() {
 	java-pkg_dojar target/${PN}-api.jar target/${PN}.jar
 
 	dodoc RELEASE-NOTES.txt
-	dohtml PROPOSAL.html STATUS.html usersguide.html
+	dohtml PROPOSAL.html STATUS.html
 	use doc && java-pkg_dohtml -r dist/docs/
 	use source && java-pkg_dosrc src/java/org
 }
