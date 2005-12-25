@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c0528f99e1905f58ed32004fe6e5e86a ChangeLog 1811
 MD5 ceb29e8400bccbb7770137909245459d files/digest-lft-2.31 60
 MD5 ad9ef8974fea56e649458d5addeb4818 files/digest-lft-2.5 59
@@ -5,3 +8,10 @@ MD5 45204b9b9a76818b582828b910b9831f files/lft-2.5-installpath.patch 1262
 MD5 8c26ff0b5b556c11fed663bd4f41c056 lft-2.31.ebuild 691
 MD5 d84c5882864fa4e6f61ed6963033cb0a lft-2.5.ebuild 794
 MD5 bb22173a418c973dd61905d5cbf16cf6 metadata.xml 255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrSYAiZjviIA2XgRAlOZAJ9O7sVvjr+QNBPqTQT3XZeT5eSVfACg1OAw
+46FpJRZb9ZD6MIWB1wdy64Q=
+=Mw+q
+-----END PGP SIGNATURE-----

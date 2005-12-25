@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9bb88565ff4939deeac1ca3ed8110be1 ChangeLog 4171
 MD5 fcda909e9a6d3cfd61a2ec945f439ef7 files/digest-traceroute-1.4_p12-r2 68
 MD5 fcda909e9a6d3cfd61a2ec945f439ef7 files/digest-traceroute-1.4_p12-r3 68
@@ -14,3 +17,10 @@ MD5 2cbc4c5f84cfb5e98982fdc14951faa0 files/traceroute-1.4a5-unaligned.patch 769
 MD5 7ed4ef8e3d3fd7d4c7e9682b2519d739 metadata.xml 235
 MD5 1731d7d9c4e9cf77dcbe935e512350bd traceroute-1.4_p12-r2.ebuild 1253
 MD5 12b993c6c631cf8f3d0e3e18afd8228f traceroute-1.4_p12-r3.ebuild 1555
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrrSyAiZjviIA2XgRAvAUAJ9dgE95CMTH/Toumcyyj1oZAlLh9ACfbGWw
+W1FvbzzDRjrHz+wht+oMiPA=
+=NlJW
+-----END PGP SIGNATURE-----
