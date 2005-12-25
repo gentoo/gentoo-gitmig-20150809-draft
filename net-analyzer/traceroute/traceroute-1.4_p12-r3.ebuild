@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r3.ebuild,v 1.3 2005/06/16 13:25:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r3.ebuild,v 1.4 2005/12/25 15:03:02 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,7 +39,7 @@ src_unpack() {
 	sed -i '/^t=/s:generic:linux:' configure
 
 	use static && append-ldflags -static
-	append-ldflags -Wl,-z,now -Wl,-z,relro
+	append-ldflags $(bindnow-flags) -Wl,-z,relro
 }
 
 src_install() {
