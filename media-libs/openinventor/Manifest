@@ -1,7 +1,4 @@
-MD5 cf96bb65f7d1d72830822356bcd5d2a5 ChangeLog 1432
-MD5 0f7895c10f859b7a86f1df293a1e602b metadata.xml 515
-MD5 f46a3c8b425c658c7e9d8860b2064688 openinventor-2.1.5.10-r1.ebuild 2655
-MD5 39738f9ae7ef1748109ec7ed2cbbe5ae openinventor-2.1.5.10.ebuild 2404
+MD5 d966224681fc25f113155d7c1a679ad1 ChangeLog 1562
 MD5 8ce8331fdab79fb938507af45228210f files/digest-openinventor-2.1.5.10 74
 MD5 8ce8331fdab79fb938507af45228210f files/digest-openinventor-2.1.5.10-r1 74
 MD5 481f4b44d5f9f6b9af804116c4d2bcc0 files/freetype2-activate.patch 261
@@ -12,3 +9,6 @@ MD5 43d9fc3b8d7b147ca5378116eb24d558 files/gentoo-paths.patch 10582
 MD5 e44139ff4ff396e391630ccff2cab27b files/no-csh.patch 1053
 MD5 3514d32986d95c1a1edd9c8503913121 files/support-archs.patch 1116
 MD5 3b720d5d1e432dec6ec597f5391caef1 files/use-byacc.patch 1444
+MD5 0f7895c10f859b7a86f1df293a1e602b metadata.xml 515
+MD5 551d61e193abd8390f25ec74e3139fa6 openinventor-2.1.5.10-r1.ebuild 2656
+MD5 39738f9ae7ef1748109ec7ed2cbbe5ae openinventor-2.1.5.10.ebuild 2404
