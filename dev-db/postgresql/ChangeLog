@@ -1,6 +1,27 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.252 2005/11/23 04:12:06 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.253 2005/12/25 11:32:46 nakano Exp $
+
+*postgresql-8.1.1 (25 Dec 2005)
+*postgresql-8.0.5 (25 Dec 2005)
+*postgresql-7.4.10 (25 Dec 2005)
+*postgresql-7.3.12 (25 Dec 2005)
+
+  25 Dec 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/postgresql.init-7.3.12, +files/postgresql-7.3.12-gentoo.patch,
+  +files/pg_autovacuum.conf-7.4.10, +files/pg_autovacuum.init-7.4.10,
+  +files/postgresql.conf-7.4.10, +files/postgresql.init-7.4.10,
+  +files/postgresql-7.4.10-gentoo.patch,
+  +files/postgresql-7.4.10-hppa-testandset.patch,
+  +files/postgresql-7.4.10-vacuum-delay.patch,
+  +files/pg_autovacuum.conf-8.0.5, +files/pg_autovacuum.init-8.0.5,
+  +files/postgresql.conf-8.0.5, +files/postgresql.init-8.0.5,
+  +files/postgresql-8.0.5-gentoo.patch, +files/postgresql-8.0.5-sh.patch,
+  +files/postgresql.conf-8.1.1, +files/postgresql.init-8.1.1,
+  +files/postgresql-8.1.1-gentoo.patch, +files/postgresql-8.1.1-sh.patch,
+  +postgresql-7.3.12.ebuild, +postgresql-7.4.10.ebuild,
+  +postgresql-8.0.5.ebuild, +postgresql-8.1.1.ebuild:
+  Version bump.
 
   23 Nov 2005; Masatomo Nakano <nakano@gentoo.org> postgresql-8.1.0.ebuild:
   Fixed version check logic for 8.1. (#72814)
