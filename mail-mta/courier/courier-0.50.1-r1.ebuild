@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.50.1-r1.ebuild,v 1.1 2005/07/29 15:56:06 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.50.1-r1.ebuild,v 1.2 2005/12/25 16:48:47 flameeyes Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -173,7 +173,7 @@ src_install() {
 	fi
 
 	for f in *.dist ; do cp ${f} ${f%%.dist} ; done
-	[ -e ldapaliasrc ] &&  ( chown root:root ldapaliasrc ; chmod 400 ldapaliasrc )
+	[ -e ldapaliasrc ] &&  ( chown root:0 ldapaliasrc ; chmod 400 ldapaliasrc )
 	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
 
 	( [ -e /etc/courier/sizelimit ] && cat /etc/courier/sizelimit || echo 0 ) \
