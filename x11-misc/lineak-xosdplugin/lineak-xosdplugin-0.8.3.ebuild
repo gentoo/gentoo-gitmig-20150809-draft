@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.3.ebuild,v 1.8 2005/11/24 20:05:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.3.ebuild,v 1.9 2005/12/25 12:40:20 blubb Exp $
 
 inherit multilib
 
@@ -27,6 +27,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} PLUGINDIR=${D}/usr/$(get_libdir)/lineakd/plugins lineakddocdir=/usr/share/doc/${P} install || die
+	make DESTDIR=${D} PLUGINDIR=/usr/$(get_libdir)/lineakd/plugins lineakddocdir=/usr/share/doc/${P} install || die
 	dodoc AUTHORS README TODO
 }
