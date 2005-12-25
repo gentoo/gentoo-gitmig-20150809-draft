@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.19.ebuild,v 1.2 2005/09/29 01:59:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.19.ebuild,v 1.3 2005/12/25 14:44:07 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -60,7 +60,7 @@ src_compile() {
 		myconf="${myconf} --disable-photo-viewers"
 	fi
 
-	use ppc-macos || append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	econf \
 		--disable-agent \

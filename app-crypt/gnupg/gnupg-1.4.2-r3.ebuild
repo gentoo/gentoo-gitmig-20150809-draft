@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r3.ebuild,v 1.12 2005/12/11 20:25:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r3.ebuild,v 1.13 2005/12/25 14:44:07 flameeyes Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -100,7 +100,7 @@ src_compile() {
 	# Bug #6387, --enable-m-guard causes bus error on sparcs
 	use sparc || myconf="${myconf} --enable-m-guard"
 
-	use ppc-macos || append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	# configure doesn't trean --disable-asm correctly
 	use x86 && myconf="${myconf} --enable-asm"
