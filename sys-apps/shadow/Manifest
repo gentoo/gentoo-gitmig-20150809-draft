@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4db257ff273b32d97eaaf60455889d2 ChangeLog 23103
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 MD5 9375147f78a25196b654616c969af9a5 files/digest-shadow-4.0.11.1-r1 69
@@ -83,3 +86,10 @@ MD5 41c23ed0904ed9071c85d13aa76d0a42 shadow-4.0.7-r1.ebuild 6582
 MD5 588bb10a6f777e71c67c552906d186a7 shadow-4.0.7-r3.ebuild 7053
 MD5 02b151abd6ca7f518c23e6890f201e43 shadow-4.0.7-r4.ebuild 7174
 MD5 314bf4f7ce691287c74208fe9719f146 shadow-4.0.7.ebuild 5582
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDrruzAiZjviIA2XgRAgatAKDBCT4Gxv0/qypTMgjAR0aX5EhusgCfRm6e
+4kpA+Uy43DxUyep+un3WY5U=
+=mvxT
+-----END PGP SIGNATURE-----
