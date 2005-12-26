@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.42.ebuild,v 1.7 2005/09/29 05:35:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.42.ebuild,v 1.8 2005/12/26 17:21:38 lu_zero Exp $
 
 inherit toolchain-funcs elisp
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 DESCRIPTION="Emacs front-end to mpg123 audio player and OggVorbis audio player"
 HOMEPAGE="http://www.gentei.org/~yuuji/software/mpg123el/"
@@ -15,7 +15,7 @@ DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
 	virtual/mpg123
 	media-sound/aumix
-	oggvorbis? ( media-sound/vorbis-tools )"
+	vorbis? ( media-sound/vorbis-tools )"
 
 SLOT="0"
 LICENSE="freedist"
