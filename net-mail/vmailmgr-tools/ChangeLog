@@ -1,0 +1,12 @@
+# ChangeLog for net-mail/vmailmgr-tools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr-tools/ChangeLog,v 1.1 2005/12/26 11:39:28 mrness Exp $
+
+*vmailmgr-tools-0.2 (26 Dec 2005)
+
+  26 Dec 2005; Alin Nastac <mrness@gentoo.org>
+  +files/vmailmgr-tools-0.2-gcc34.patch, +metadata.xml,
+  +vmailmgr-tools-0.2.ebuild:
+  Initial import from bug #105110, thanks to Thilo Bangert
+  <thilo.bangert@gmx.net>.
+
