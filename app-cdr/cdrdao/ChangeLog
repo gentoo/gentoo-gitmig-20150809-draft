@@ -1,10 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.79 2005/12/26 18:18:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.80 2005/12/26 18:29:37 metalgod Exp $
 
 *cdrdao-1.2.1-r1 (26 Dec 2005)
 
-  26 Dec 2005; <metalgod@gentoo.org> +files/cdrdao-1.2.1-gcc41.patch,
+  26 Dec 2005; Luis Medinas <metalgod@gentoo.org> +files/cdrdao-1.2.1-gcc41.patch,
   +cdrdao-1.2.1-r1.ebuild:
   Added a patch to fix build with gcc-4.1 by Mark Loeser <halcy0n@gentoo.org>.
   Closes bug #115702.
