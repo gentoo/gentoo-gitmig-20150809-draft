@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b020a7a767b547e4de684cc60071af74 ChangeLog 16020
+MD5 833771ff8a817dbd3068c01aebe46e03 ChangeLog 16126
 MD5 2301a09a3e02fd7e40f6ee5a7e79e95c files/digest-gnome-games-1.4.0.3-r3 72
 MD5 d12063544c92d2ed0dff801d3d593707 files/digest-gnome-games-2.10.0 72
 MD5 c33cfe151eccd5d14201388ceb3f4adc files/digest-gnome-games-2.10.1 72
@@ -15,15 +15,15 @@ MD5 1b0d6fcbf8e59a0343dc7cb3ccfd4b45 files/gnome-games-2.12.0-no_lazy_bindings.p
 MD5 05ba368f9e9d4b208ecf3e839ffba4a0 files/gnome-games-2.9.6-nohowl.patch 953
 MD5 f02a05514168bad80a360c1c3211900f gnome-games-1.4.0.3-r3.ebuild 1272
 MD5 eb63eab37adca3710bf147a7c501b319 gnome-games-2.10.0.ebuild 2055
-MD5 253987bf30ade85b858d0d296bfef7b0 gnome-games-2.10.1-r1.ebuild 2175
+MD5 a1228cabb3ea0db5a9a861a8baf38c7d gnome-games-2.10.1-r1.ebuild 2174
 MD5 912aa8f2b8e5f66a9ec63d7101ab51f3 gnome-games-2.10.1.ebuild 2056
 MD5 fb12b312d93ffae751c6c41490a5cad3 gnome-games-2.12.1.ebuild 2042
 MD5 60bcec048237307022ff67e01a27f035 gnome-games-2.12.2.ebuild 2037
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDk8MJomPajV0RnrERAqtPAJoCmxQto4owGrTb7VvL1PEupUPlFgCcCRGl
-bXm3vOrF7dqE1w9QEE8BY58=
-=XaZl
+iD8DBQFDsB7PugEuf3OQ0akRAoFUAJ9vaiwWKvhXyQPhPvNdBSOHAsHdZQCfXTfn
+u+s3QSl8CTNhs1XN36gm4oQ=
+=zicc
 -----END PGP SIGNATURE-----
