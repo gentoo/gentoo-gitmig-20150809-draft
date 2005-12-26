@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.145 2005/12/13 22:21:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.146 2005/12/26 06:58:17 robbat2 Exp $
+
+*db-4.3.29 (26 Dec 2005)
+*db-4.2.52_p4 (26 Dec 2005)
+*db-4.1.25_p2 (26 Dec 2005)
+
+  26 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +db-4.1.25_p2.ebuild,
+  +db-4.2.52_p4.ebuild, +db-4.3.29.ebuild:
+  Version bumps in preperation for db-4.4. src_test support added, warning it
+  can take 6 hours!
 
   13 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> db-4.2.52_p2-r1.ebuild:
   stable on alpha
