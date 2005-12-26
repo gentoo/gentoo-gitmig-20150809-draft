@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.12 2004/10/30 10:53:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.13 2005/12/26 15:24:51 lu_zero Exp $
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 inherit gnuconfig toolchain-funcs
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="sys-libs/ncurses
-	oggvorbis? ( media-libs/libvorbis
+	vorbis? ( media-libs/libvorbis
 	             media-libs/libao )"
 
 src_unpack() {

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 19dbf4d12414132f75ddf5d533fb9929 ChangeLog 1067
-MD5 4ee8fedaa26cd27c15b4476c10082277 imp3sh-0.2.3.ebuild 946
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 5be9a0a25566d14fb132f53d7e48145a ChangeLog 1155
 MD5 4d1434c3d39acf852b9df3514a1640fe files/digest-imp3sh-0.2.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBg3KoArHZZzCEUG0RAgraAJ4rA20rTh3e+/IHDsOxcy1nAvslugCaAno+
-o97oETDojuVtl/EiFo6AIRI=
-=7KKC
------END PGP SIGNATURE-----
+MD5 9c403c3057c24b67e7f455d655cfeb13 imp3sh-0.2.3.ebuild 937
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
