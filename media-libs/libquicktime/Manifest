@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6da528d1f2d76563bb22dff755464186 ChangeLog 7579
+MD5 752f648d0569cb5eede4653f4d85c751 ChangeLog 7703
 MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
 MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
 MD5 665eeaef01d9cd6ccc580202630897be files/digest-libquicktime-0.9.7-r1 70
 MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
 MD5 a1721b9ba48b6453245fce4f3fe04e0b files/libquicktime-0.9.4-cflags.patch 1455
 MD5 71fde588b024e1d8c472afa0081010b9 files/libquicktime-0.9.7-dv.patch 651
-MD5 04c6e7d4ccb20b4bd86e3f5052a2a115 libquicktime-0.9.2.ebuild 1575
-MD5 def6c68178313a0e1dedc14f0e12cb93 libquicktime-0.9.4.ebuild 1469
+MD5 9a1d33daffe2ec7e701e22c08d8f0820 libquicktime-0.9.2.ebuild 1566
+MD5 f35316f6e378b27978b55e1908918b31 libquicktime-0.9.4.ebuild 1463
 MD5 01e9616db76871782f19c4e4d8dba251 libquicktime-0.9.7-r1.ebuild 2198
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpqGtAiZjviIA2XgRAlGLAJ9yN2693KF8YX0lg2Ei4dhx+dqLlwCglUtK
-8Za1cUG61/SGfEJ8+jiWs5A=
-=fEni
------END PGP SIGNATURE-----
