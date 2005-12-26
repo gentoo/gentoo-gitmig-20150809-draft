@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e99d78cf142f04da185c6af0913b8703 ChangeLog 1420
+MD5 003f8daf1b54d10e59b5df3f01a237d1 ChangeLog 1516
 MD5 8aea757fe2bda9943ef7cfd6d6c51fe6 files/digest-vzctl-2.7.0.24 66
 MD5 a2de79b189da1c2d3fd01fa2116bcea9 files/vz.initd 5465
 MD5 687eaa4427600a7a5edfc0b8b7f69480 files/vzctl-2.7.0-gentoo_conf_d.patch 3899
 MD5 48002ae17f4c768412ac70a33023d09d files/vzctl-2.7.0.23-gentoo_etc_vz.patch 7115
 MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
-MD5 f41b5498f975b8c0dd9f8510161a7cf9 vzctl-2.7.0.24.ebuild 1590
+MD5 7b754de87e8fbf054cc37f7e5f1a3e15 vzctl-2.7.0.24.ebuild 1589
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjyUHmPFBzbX68WERAoQJAJ95aPhsbPyCK4EEO8BDmmHfFZdfhwCeP/tj
-WqIIJgBHSW4kGV3LL1r+Qdw=
-=NP1h
+iD8DBQFDr5yUmPFBzbX68WERAjCZAJ0f3wzcjtzYeC+TBwJQj/EZac04EwCdGbJC
+9Qepvfh2IJ5c04hkQwhInpw=
+=L36U
 -----END PGP SIGNATURE-----
