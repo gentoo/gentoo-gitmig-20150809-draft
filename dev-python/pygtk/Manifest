@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5aced89523cc9782be9441ccb7590099 ChangeLog 12388
 MD5 f7476a916a6add9b10800b1f5bf31e98 files/digest-pygtk-0.6.11 64
 MD5 f7476a916a6add9b10800b1f5bf31e98 files/digest-pygtk-0.6.11-r1 64
@@ -26,3 +29,10 @@ MD5 6ca640c60a9234eb828592edfa896b2e pygtk-2.6.2.ebuild 2558
 MD5 dc7dad590f8da6c2e59ba360b0fc004c pygtk-2.8.0-r1.ebuild 2659
 MD5 53a02640da8654207b6d8b4aa1d03fa2 pygtk-2.8.0-r2.ebuild 2656
 MD5 c4d9d68fff44149abab458cb76f4e684 pygtk-2.8.2.ebuild 2660
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDsBlwugEuf3OQ0akRAseJAJ4wlJ9E9cvw1C9pQhrfGiFMlewQawCgh2DP
+avvh4cMY8zc1JqexdZImjRY=
+=Elh9
+-----END PGP SIGNATURE-----
