@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.1.ebuild,v 1.1 2005/12/24 19:14:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.1.ebuild,v 1.2 2005/12/26 12:50:25 mrness Exp $
 
 inherit eutils autotools
 
@@ -33,6 +33,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-gcc41.patch
+	epatch ${FILESDIR}/${P}-ptr2int-cast.patch #fix compilation error on non-32-bit arches
 	epatch ${FILESDIR}/${P}-linux-serial.patch
 	epatch ${FILESDIR}/${P}-wireless-user.patch
 
