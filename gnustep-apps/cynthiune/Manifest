@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 725361463d5152bfa40d4220a9f94c57 ChangeLog 504
-MD5 179da066eaab38cd29e9001770072759 cynthiune-0.9.4.ebuild 1117
+MD5 cd3db8a1660d93e93d9338094be4c3d1 ChangeLog 598
+MD5 d30b22e6e315f14804595d7e07f05450 cynthiune-0.9.4.ebuild 1108
 MD5 0cfdd58309dd61a8175fb1441aeeb44c files/digest-cynthiune-0.9.4 67
 MD5 fd9a263464d6de3ba094ea9dbaca3fdd metadata.xml 2278
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbGtsCRZPokWLroQRAv/5AJ9Ec15p7/F2Z7RBca7u9CFT48gQTACggFg6
-sfq9Dwg2B/FcgXs+U4JETxs=
-=+oZX
------END PGP SIGNATURE-----
