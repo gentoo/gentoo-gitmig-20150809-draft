@@ -1,4 +1,4 @@
-MD5 88e4fada8302113c42e071ebafe6903e ChangeLog 2508
+MD5 a3da90763dd507ee3b951ccebcbb87ae ChangeLog 2604
 MD5 768666eaafbbd6d59e837f2fe4730e5d files/digest-util-macros-0.99.2-r1 70
 MD5 039200220fe9ad97f9fa8b32d5a239d4 files/digest-util-macros-1.0.0 69
 MD5 d75ad8ab46beca3b6807db3a14aee1cd files/digest-util-macros-1.0.1 69
@@ -6,4 +6,4 @@ MD5 0be393dfee3dbf05d1f4ff125c2ccc14 files/driver-man-suffix.patch 411
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 9acd9fd3dc8b9b8a4a75dd28c4de34e5 util-macros-0.99.2-r1.ebuild 501
 MD5 0bfb8302a7cf93ea6b31467bf6e452f7 util-macros-1.0.0.ebuild 497
-MD5 7b8ffee0afa7e314d3a2c86fd862de45 util-macros-1.0.1.ebuild 500
+MD5 f746183f93ea341b90590659235bb351 util-macros-1.0.1.ebuild 498
