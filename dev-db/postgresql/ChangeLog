@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.253 2005/12/25 11:32:46 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.254 2005/12/26 13:30:07 blubb Exp $
+
+  26 Dec 2005; Simon Stelling <blubb@gentoo.org> postgresql-7.3.12.ebuild,
+  postgresql-7.4.9.ebuild, postgresql-8.0.4.ebuild:
+  - 7.3.12: fix multilib-strict wise
+  - 7.4.9 & 8.0.4: mark stable on amd64
 
 *postgresql-8.1.1 (25 Dec 2005)
 *postgresql-8.0.5 (25 Dec 2005)

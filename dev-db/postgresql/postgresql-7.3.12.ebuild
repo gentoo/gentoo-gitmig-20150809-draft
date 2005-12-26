@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.12.ebuild,v 1.1 2005/12/25 11:32:46 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.12.ebuild,v 1.2 2005/12/26 13:30:07 blubb Exp $
 
-inherit eutils gnuconfig flag-o-matic java-pkg
+inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
@@ -108,7 +108,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
 		--docdir=/usr/share/doc/${PF} \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
 		--with-maxbackends=1024 \
@@ -122,17 +122,21 @@ src_compile() {
 src_install() {
 	if use perl; then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
-		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
+		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/$(get_libdir):" \
 			${S}/src/pl/plperl/Makefile_orig > ${S}/src/pl/plperl/Makefile
 		mv ${S}/src/pl/plperl/GNUmakefile ${S}/src/pl/plperl/GNUmakefile_orig
 		sed -e "s:\$(DESTDIR)\$(plperl_installdir):\$(plperl_installdir):" \
 			${S}/src/pl/plperl/GNUmakefile_orig > ${S}/src/pl/plperl/GNUmakefile
 	fi
 
-	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal LIBDIR=${D}/usr/lib install || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server \
+		includedir_internal=/usr/include/postgresql/internal \
+		LIBDIR=${D}/usr/$(get_libdir) \
+		python_moduleexecdir="${python_execprefix}/$(get_libdir)/python${python_version}/site-packages" \
+		install || die
 	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal install-all-headers || die
 	cd ${S}/contrib
-	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
+	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
 	cd ${S}
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
 	dodoc contrib/adddepend/*
