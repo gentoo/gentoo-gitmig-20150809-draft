@@ -1,6 +1,16 @@
-MD5 193a43eb19f5804ace4846213abe9eb7 ChangeLog 2202
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e82b174c5344e18fcd4d250bc6e47b3e ChangeLog 2305
 MD5 8a3cad474092e73d80bd3426ad3e8a31 files/digest-gnome-nettool-1.0.0 72
 MD5 75ddd43ba908edfb4002c00d5fd5ed89 files/digest-gnome-nettool-1.4.1 72
 MD5 47b976e3c40b3a9ee995a580592712c5 gnome-nettool-1.0.0.ebuild 1105
-MD5 24f1358089ec416c73124cd1ba885fda gnome-nettool-1.4.1.ebuild 850
+MD5 71e244f34e6f7346dc1f600e5eadcbf8 gnome-nettool-1.4.1.ebuild 859
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDsBNRugEuf3OQ0akRArI2AJ40gks1P6OWL+Rnceq9mOt1X8n4oQCfUKrK
+pZzCQigbwh5Wc0Hdoo1oVcE=
+=hpy9
+-----END PGP SIGNATURE-----
