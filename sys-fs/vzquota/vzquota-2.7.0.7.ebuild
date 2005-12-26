@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/vzquota-2.7.0.7.ebuild,v 1.2 2005/12/01 16:28:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/vzquota-2.7.0.7.ebuild,v 1.3 2005/12/26 07:31:59 hollow Exp $
 
 inherit eutils toolchain-funcs versionator linux-info
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${MY_PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 S="${WORKDIR}/${MY_P}"
 
