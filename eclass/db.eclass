@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.20 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.21 2005/12/26 06:46:58 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 IUSE="doc"
+
+EXPORT_FUNCTIONS src_test
 
 db_fix_so () {
 	cd ${ROOT}/usr/lib
@@ -91,4 +93,22 @@ db_src_install_usrlibcleanup() {
 	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
 
 	rm -f ${D}/usr/include/db.h ${D}/usr/include/db_185.h
+}
+
+db_src_test() {
+	if has test $FEATURES; then
+		if useq tcltk; then
+			einfo "Running sys-libs/db testsuite"
+			ewarn "This can take 6+ hours on modern machines"
+			cd ${S}
+			echo 'source ../test/test.tcl' >testrunner.tcl
+			echo 'run_std' >>testrunner.tcl
+			tclsh testrunner.tcl
+			egrep -sv '^FAIL' ALL.OUT
+			ret=$?
+			[ $ret -gt 0 ] && die "Some tests failed, please see ${S}/ALL.OUT"
+		else
+			eerror "You must have USE=tcltk to run the sys-libs/db testsuite."
+		fi
+	fi	
 }
