@@ -1,6 +1,4 @@
-MD5 0d236956635d57614e903eb20b18f775 ChangeLog 1101
-MD5 c91427ea0a5d82e0ec41f22776849390 files/digest-xdriinfo-0.99.2 67
+MD5 069cb3c0b86bb1efd421602b50751f5c ChangeLog 1207
 MD5 4967c270ba007e48c43e172d8c5c9052 files/digest-xdriinfo-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 a6af58349423970bdf9f8ffb14a80fcb xdriinfo-0.99.2.ebuild 435
 MD5 bb4b16e6bd672acaffe77abfdb7b3d63 xdriinfo-1.0.0.ebuild 434

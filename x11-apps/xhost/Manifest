@@ -1,6 +1,4 @@
-MD5 9ed1f0a6cc22de080fcdb0523b85dd78 ChangeLog 1837
-MD5 4b18074935aebc4f718b2b971b9b289c files/digest-xhost-0.99.3 64
+MD5 92a5248c87d110ad0777a08bb57167ea ChangeLog 1940
 MD5 49b2f9dee41ca342c8d0e0328438fb18 files/digest-xhost-1.0.0 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 620c8615385b64a4cb6ce6326233c8d4 xhost-0.99.3.ebuild 516
 MD5 18800a6730d90c187e19d320ce981b02 xhost-1.0.0.ebuild 515

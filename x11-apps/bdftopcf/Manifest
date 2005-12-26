@@ -1,6 +1,4 @@
-MD5 91011fb262dafb2603928ad7b70ce7da ChangeLog 1715
-MD5 23944e6fdb00c3668041d217c28bf180 bdftopcf-0.99.3.ebuild 458
+MD5 d8aac163b3e7dc46a271a3e99ccc9c21 ChangeLog 1827
 MD5 e8e48ff1a9d93bcc9ba9110b8c2872d2 bdftopcf-1.0.0.ebuild 458
-MD5 27c7fef9410f0387821b549751e6d7f9 files/digest-bdftopcf-0.99.3 67
 MD5 042fef81c163085ae540713b3427e96d files/digest-bdftopcf-1.0.0 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

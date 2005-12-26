@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5e8b6dc5d8f3b6e5a9fb3194f46acb4 ChangeLog 2170
-MD5 0e6a3163c1a145d731000d4048b4137a files/digest-xset-0.99.4 63
-MD5 515bc8490aa4950aea28c90de82e3814 files/digest-xset-1.0.0 62
+MD5 ec2d87fbcef7d067c42503f73211532f ChangeLog 2299
 MD5 88ff4d42f038b6919b7963cd6effc478 files/digest-xset-1.0.1 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 3bfc2d6df3c67959357bf095b8dbd68f xset-0.99.4.ebuild 435
-MD5 c9c9399c2167372f80978e0c1de00d0d xset-1.0.0.ebuild 434
 MD5 af43c1233bd09c7841993051d39c5830 xset-1.0.1.ebuild 432
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrQatBtvusYtCZMsRAgf0AJ4v5uJuoAYx6bMriga70IINQwr0fACfdmc+
-sUwK6YyHUoJlzxwbe4co/NY=
-=CMNf
------END PGP SIGNATURE-----

@@ -1,6 +1,4 @@
-MD5 6af1365f3b3f34952e02ae0af3d6e657 ChangeLog 962
-MD5 87f93c367c6df7fc16cbc5764655e351 files/digest-sessreg-0.99.2 66
+MD5 806a68278c3c73947fe92daa242a4159 ChangeLog 1067
 MD5 d124bb9f6d6292d94ae31914c672eb0b files/digest-sessreg-1.0.0 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 58971c8a6ac0ba4c6d2147fae72ee3d7 sessreg-0.99.2.ebuild 422
 MD5 f6a1577694ef93b0312f86178e1db7ff sessreg-1.0.0.ebuild 428

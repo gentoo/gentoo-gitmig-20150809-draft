@@ -1,6 +1,4 @@
-MD5 1ca89cfdc5ae5f4963fe3e87c7935d1c ChangeLog 1075
-MD5 e58b8099e123dfcecb5b1ec5cca15801 appres-0.99.2.ebuild 450
+MD5 22c435c4f80f28fd44963e32ff3da6bc ChangeLog 1179
 MD5 9f62d551aa8256c112d1c0e18aae39ef appres-1.0.0.ebuild 449
-MD5 8fa86197a342e654b689c18c4e208243 files/digest-appres-0.99.2 65
 MD5 62f172b661a9f7ee48345ed7ea092049 files/digest-appres-1.0.0 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

@@ -1,6 +1,4 @@
-MD5 fead3ae9630f1904d96c9b9e9e86bcdd ChangeLog 1266
-MD5 6d54f3707bb48b7fd5e472827e243b66 files/digest-xmodmap-0.99.2 66
+MD5 54f8679f9650330b08cf4b96f18d58a1 ChangeLog 1372
 MD5 cd3e28f8cedebf9fa358a8790d10b875 files/digest-xmodmap-1.0.0 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 be741668bea184349e9f603ea5e1250e xmodmap-0.99.2.ebuild 439
 MD5 2face84c8b55042380cd5d443fc46a9e xmodmap-1.0.0.ebuild 445
