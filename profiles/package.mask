@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4802 2005/12/26 21:41:39 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4803 2005/12/26 21:50:10 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -301,17 +301,6 @@ www-apps/phpgroupware
 # Masking this quake4-bin version because 1.0.5 is actually newer.  I am sure
 # that this will cause some people some confusion, which is why this is here.
 >=games-fps/quake4-bin-1.0.2147.12
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (11 Nov 2005)
-# Importing new Java bindings for GNOME.  Major changes to the ebuild,
-# so masking for a while
->=dev-java/cairo-java-1.0.1
->=dev-java/glib-java-0.2.1
->=dev-java/libgconf-java-2.12.1
->=dev-java/libglade-java-2.12.1
->=dev-java/libgnome-java-2.12.1
->=dev-java/libgtk-java-2.8.1
->=dev-java/java-gnome-2.12.1
 
 # George Shapovalov <george@gentoo.org> (11 Nov 2005)
 # new port of gnat and asis to amd64 already unmasked
