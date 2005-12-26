@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.12 2005/12/23 19:28:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.13 2005/12/26 04:15:10 weeve Exp $
+
+  26 Dec 2005; Jason Wever <weeve@gentoo.org> mytop-1.4.ebuild:
+  Stable on SPARC wrt bug #116453.
 
   23 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org> mytop-1.4.ebuild:
   Marked ppc stable, #116453

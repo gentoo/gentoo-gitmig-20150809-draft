@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.13 2005/12/23 19:28:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.14 2005/12/26 04:15:10 weeve Exp $
 
 inherit perl-app
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jeremy.zawodny.com/mysql/mytop/"
 SRC_URI="http://jeremy.zawodny.com/mysql/mytop/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 SLOT="0"
 IUSE=""
 
