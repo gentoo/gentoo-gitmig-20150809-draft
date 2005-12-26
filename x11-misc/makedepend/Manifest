@@ -1,6 +1,4 @@
-MD5 2bb78b8684b082302a7c7e5dbf687992 ChangeLog 1780
-MD5 a91540bf8945d9a03c614642797f5002 files/digest-makedepend-0.99.3 70
+MD5 0f9e409109aa1154014e652e6898e2ac ChangeLog 1894
 MD5 02e1e432e3d9c3724e7d35f57c4717a2 files/digest-makedepend-1.0.0 69
-MD5 a6c1890e455aad23670432ff9e699d3f makedepend-0.99.3.ebuild 461
 MD5 41ca605141285f67bf1461e37f4ca899 makedepend-1.0.0.ebuild 461
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
