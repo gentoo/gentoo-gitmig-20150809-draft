@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.187 2005/12/22 00:51:36 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.188 2005/12/26 06:41:59 josejx Exp $
+
+  26 Dec 2005; Joseph Jezak <josejx@gentoo.org> xchat-2.4.5-r1.ebuild:
+  Marked ppc stable for bug #109744.
 
   22 Dec 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml:
   remove gnome from metadata

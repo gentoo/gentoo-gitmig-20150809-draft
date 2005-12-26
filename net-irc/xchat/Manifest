@@ -1,18 +1,28 @@
-MD5 f70fee92ab2e258ea7be208d0ddfa4b6 xchat-2.4.3.ebuild 2266
-MD5 7d4cd824eee5215e98a083a09abecd45 xchat-2.4.5-r1.ebuild 2362
-MD5 b07304c2f6e1aa08bf112928e9558223 xchat-2.4.5.ebuild 2301
-MD5 4634f562e01b219d3bcfb0ae6acb8397 xchat-1.8.11-r1.ebuild 2264
-MD5 da406953738c69c779352b7342800835 ChangeLog 27757
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 95d53db19acfbc8d85a8ac0c8d695133 xchat-2.6.0.ebuild 2261
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 323f6dc3ea728d521b85e283c293f534 ChangeLog 27863
+MD5 6354e2efb6f0d1323ad8849be7303575 files/44_fix_alignment_endianess.dpatch 8676
+MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
 MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
 MD5 c5d53c24b3ebfec1f168930213f55fea files/digest-xchat-2.4.5 65
+MD5 c5d53c24b3ebfec1f168930213f55fea files/digest-xchat-2.4.5-r1 65
 MD5 02c31b272038e119a3ce2d4a79897f72 files/digest-xchat-2.6.0 64
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
+MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
 MD5 17073299c8c2c65062ad2e77cd03b841 files/xc245-fix-te-notify.diff 403
 MD5 6bfc06df4986a7fb482525e1dfd8fa21 files/xc260-fix-fetext.diff 1123
-MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
-MD5 6354e2efb6f0d1323ad8849be7303575 files/44_fix_alignment_endianess.dpatch 8676
 MD5 ee98eba7f1061680d8d0582a10d72cb7 files/xchat-dccserver-0.5.patch 11776
-MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
-MD5 c5d53c24b3ebfec1f168930213f55fea files/digest-xchat-2.4.5-r1 65
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 4634f562e01b219d3bcfb0ae6acb8397 xchat-1.8.11-r1.ebuild 2264
+MD5 f70fee92ab2e258ea7be208d0ddfa4b6 xchat-2.4.3.ebuild 2266
+MD5 1d96b6a159995e2ba2d2a95ca9b17df1 xchat-2.4.5-r1.ebuild 2362
+MD5 b07304c2f6e1aa08bf112928e9558223 xchat-2.4.5.ebuild 2301
+MD5 95d53db19acfbc8d85a8ac0c8d695133 xchat-2.6.0.ebuild 2261
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDr5DJcsIHjyDViGQRAigCAKCyIq1IDbKg+MY5Tbod0OYS3AAMDQCeJ/Ba
+rRV0Qve5Wg8KKXqcok+59Bc=
+=Js/F
+-----END PGP SIGNATURE-----
