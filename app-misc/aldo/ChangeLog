@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/aldo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.8 2005/12/22 18:58:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.9 2005/12/26 17:16:40 vanquirius Exp $
+
+  26 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> aldo-0.7.0.ebuild:
+  Correct dependencies for aldo-0.7.0. Thanks to Drake Wyrm <wyrm at haell dot
+  com> for letting me know about this issue.
 
 *aldo-0.7.0 (22 Dec 2005)
 
