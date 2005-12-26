@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r3.ebuild,v 1.13 2005/01/01 12:10:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r3.ebuild,v 1.14 2005/12/26 15:41:44 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
-IUSE="gnome oggvorbis perl"
+IUSE="gnome vorbis perl"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-cpp/gnomemm-1.2.2 )
-	x86? ( perl? ( oggvorbis? ( dev-perl/libvorbis-perl ) ) )
+	x86? ( perl? ( vorbis? ( dev-perl/libvorbis-perl ) ) )
 	dev-perl/MP3-Info
 	dev-perl/Audio-Wav
 	dev-perl/Audio-Tools
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch ${FILESDIR}/1.1.8-gcc34.patch
 	epatch ${FILESDIR}/${P}-r2-mp32dao-gentoo.diff
 
-	if ! use oggvorbis ; then
+	if ! use vorbis ; then
 		cd ${S}/contrib/mp32dao
 		sed -i '22s/^/#/' MediaHandler.pm
 	fi
@@ -81,7 +81,7 @@ src_install() {
 	insinto /usr/share/cdrdao/mp32dao
 	doins contrib/mp32dao/MediaHandler.pm contrib/mp32dao/mp3handler.pm \
 		contrib/mp32dao/BaseInfo.pm
-	use oggvorbis && doins contrib/mp32dao/ogghandler.pm
+	use vorbis && doins contrib/mp32dao/ogghandler.pm
 
 	# cdrdao gets definitely installed
 	# binary

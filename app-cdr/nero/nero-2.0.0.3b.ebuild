@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.3b.ebuild,v 1.2 2005/09/22 21:17:50 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.3b.ebuild,v 1.3 2005/12/26 15:39:53 lu_zero Exp $
 
 inherit eutils rpm
 
@@ -14,13 +14,13 @@ SRC_URI="ftp://ftp2.us.nero.com/${NERO_RPM}
 LICENSE="Nero"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="mp3 oggvorbis shorten"
+IUSE="mp3 vorbis shorten"
 DEPEND=""
 RDEPEND="virtual/libc
 	virtual/x11
 	=x11-libs/gtk+-1.2*
 	mp3? ( media-sound/mpg123 )
-	oggvorbis? ( media-sound/vorbis-tools )
+	vorbis? ( media-sound/vorbis-tools )
 	shorten? ( media-sound/shorten )
 	amd64? ( >=app-emulation/emul-linux-x86-gtklibs-2.0 )"
 

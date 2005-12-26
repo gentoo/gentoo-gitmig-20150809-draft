@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.7.3.ebuild,v 1.1 2005/11/12 18:30:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.7.3.ebuild,v 1.2 2005/12/26 15:38:47 lu_zero Exp $
 
 inherit eutils java-pkg
 
@@ -12,14 +12,14 @@ SRC_URI="http://joerghaeger.de/webCDwriter/download/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="java pam mp3 sox oggvorbis"
+IUSE="java pam mp3 sox vorbis"
 
 RDEPEND="
 	app-cdr/cdrdao
 	app-cdr/cdrtools
 	mp3? ( media-sound/mpg123 )
 	sox? ( media-sound/sox )
-	oggvorbis? ( media-sound/vorbis-tools )
+	vorbis? ( media-sound/vorbis-tools )
 	java? ( >=virtual/jre-1.4 )"
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}"
@@ -60,7 +60,7 @@ src_install() {
 	else
 		MP3="off"
 	fi
-	if use oggvorbis
+	if use vorbis
 	then
 		OGG="on"
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.3.ebuild,v 1.3 2005/07/08 16:00:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.3.ebuild,v 1.4 2005/12/26 15:44:43 lu_zero Exp $
 
 inherit eutils
 
@@ -13,14 +13,14 @@ SRC_URI="mirror://sourceforge/cdw/${PN}-${PV/_/-}.tar.gz
 KEYWORDS="~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="encode gtk mysql nls oggvorbis sqlite"
+IUSE="encode gtk mysql nls vorbis sqlite"
 
 RDEPEND="virtual/cdrtools
 	gtk? ( >=x11-libs/gtk+-2
 			>=dev-libs/glib-2 )
 	sys-libs/ncurses
 	sys-libs/zlib
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	sqlite? ( dev-db/sqlite )
 	mysql? ( dev-db/mysql )
 	encode? ( media-sound/lame )"
@@ -40,9 +40,9 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use oggvorbis \
+	use vorbis \
 		&& myconf="${myconf} --with-oggenc=/usr/bin/oggenc" \
-		|| myconf="${myconf} $(use_with oggvorbis oggenc)"
+		|| myconf="${myconf} $(use_with vorbis oggenc)"
 
 	use encode \
 		&& myconf="${myconf} --with-lame=/usr/bin/lame" \
