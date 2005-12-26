@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.38 2005/12/13 03:34:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.39 2005/12/26 14:51:49 kloeri Exp $
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kjsembed-3.4.3.ebuild,
+  kjsembed-3.5.0.ebuild:
+  Fix alpha keywords.
 
   13 Dec 2005; Chris White <chriswhite@gentoo.org> kjsembed-3.4.3.ebuild:
   Marked x86 stable for bug #112842.
