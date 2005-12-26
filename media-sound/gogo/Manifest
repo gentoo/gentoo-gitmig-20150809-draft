@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a15a6b77f5b518c5e7e42152e3a7f01 ChangeLog 1286
-MD5 7780c8edafd71c5b2246ff11ff6ed17a gogo-3.10-r1.ebuild 1576
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 cf55bfce32839991805785e8c3e2b88d ChangeLog 1375
 MD5 0430e73f78121a38a515d3ce790499f9 files/digest-gogo-3.10-r1 60
 MD5 a67a51f56c8df1bb12c29dcab4ef1242 files/make-work-3.10pl3.patch 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtS8j5H05b2HAEkRApfWAJ49Wd2+FvnbFYqDEDWmjEckY1QATACePchC
-mwtw7s6/vSco27MbXiKcw9U=
-=rC4l
------END PGP SIGNATURE-----
+MD5 120138693a9df4dc742d96d2534c6c93 gogo-3.10-r1.ebuild 1565
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
