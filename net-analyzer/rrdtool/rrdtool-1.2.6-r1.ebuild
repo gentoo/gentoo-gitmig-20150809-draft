@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.6-r1.ebuild,v 1.12 2005/12/21 15:41:07 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.6-r1.ebuild,v 1.13 2005/12/26 15:26:44 blubb Exp $
 
-inherit perl-module flag-o-matic gnuconfig eutils
+inherit perl-module flag-o-matic gnuconfig eutils multilib
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
@@ -48,7 +48,7 @@ src_compile() {
 	myconf="--datadir=/usr/share --enable-shared"
 
 	use tcltk \
-		&& myconf="${myconf} --with-tcllib=/usr/lib" \
+		&& myconf="${myconf} --with-tcllib=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --without-tcllib"
 
 	if use perl ; then
@@ -91,10 +91,10 @@ src_install() {
 
 	if use tcltk ; then
 		mv ${S}/bindings/tcl/tclrrd.so ${S}/bindings/tcl/tclrrd${PV}.so
-		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
+		insinto /usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}
 		doins ${S}/bindings/tcl/tclrrd${PV}.so
 		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
-			>> ${D}/usr/lib/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
+			>> ${D}/usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	fi
 
 	dodoc COPY* CONTR* README TODO

@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ee979bf442439095a3d5d9c951925ad ChangeLog 13461
-MD5 5027f79618fbf229b145b204b1e595ce files/digest-rrdtool-1.0.49 67
-MD5 0f97ed6174056bc1f72fbd7eb964f3f6 files/digest-rrdtool-1.0.50 67
-MD5 1b866549cddb9e5a73a64be509395166 files/digest-rrdtool-1.2.11-r2 67
-MD5 a645d34412b1cb9db79c5c23840f720d files/digest-rrdtool-1.2.12 67
-MD5 7ee6d2e6d1bc0c21aaea586600840694 files/digest-rrdtool-1.2.6-r1 65
+MD5 8ed506adfaa9ba29a6f6f4e6549aef84 ChangeLog 13563
 MD5 1a739170238a1fae241a8a0df21462e9 metadata.xml 241
 MD5 7245abe6326ff3cc840e5092c1b60890 rrdtool-1.0.49.ebuild 2729
 MD5 177f6939c1ba72adbbd42b99ea93121f rrdtool-1.0.50.ebuild 2753
 MD5 d3efb11170c152101c8411b0d3c6a7e3 rrdtool-1.2.11-r2.ebuild 3010
 MD5 ffc157e2afe0484205fc754ec73d9170 rrdtool-1.2.12.ebuild 2985
-MD5 1e7dfe9a212643187d8adcdda3468a41 rrdtool-1.2.6-r1.ebuild 2753
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqXeentT9W3vfTuoRApBlAJ9sE6wCB5eHt9uqGYjENTtaHOcQnwCghz4a
-fSujaZnAiV2K70eiPO/Z524=
-=0UZr
------END PGP SIGNATURE-----
+MD5 916a2ac749bc18f0d3515931bcc3c592 rrdtool-1.2.6-r1.ebuild 2792
+MD5 5027f79618fbf229b145b204b1e595ce files/digest-rrdtool-1.0.49 67
+MD5 0f97ed6174056bc1f72fbd7eb964f3f6 files/digest-rrdtool-1.0.50 67
+MD5 1b866549cddb9e5a73a64be509395166 files/digest-rrdtool-1.2.11-r2 67
+MD5 a645d34412b1cb9db79c5c23840f720d files/digest-rrdtool-1.2.12 67
+MD5 7ee6d2e6d1bc0c21aaea586600840694 files/digest-rrdtool-1.2.6-r1 65
