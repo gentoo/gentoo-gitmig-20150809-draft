@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.10 2005/04/08 17:27:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.11 2005/12/26 15:09:42 lu_zero Exp $
 
 inherit toolchain-funcs
 
@@ -11,12 +11,12 @@ SRC_URI="http://www.stack.nl/~brama/mp3blaster/src/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc amd64 ~ppc64"
 LICENSE="GPL-2"
-IUSE="oggvorbis mysql lirc"
+IUSE="vorbis mysql lirc"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	lirc? ( app-misc/lirc )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
+	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
 #	nas? ( >=media-libs/nas-1.4.1 )
 
 src_unpack() {
@@ -38,7 +38,7 @@ src_compile() {
 	myconf="${myconf} --without-nas \
 	        `use_with lirc` \
 	        `use_with mysql` \
-	        `use_with oggvorbis`"
+	        `use_with vorbis`"
 
 	econf ${myconf} || die
 	make CC="$(tc-getCC) ${CFLAGS}" CXX="$(tc-getCXX) ${CXXFLAGS}" || die

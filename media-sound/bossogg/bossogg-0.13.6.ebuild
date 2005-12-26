@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.12 2005/11/07 10:42:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.13 2005/12/26 14:55:15 lu_zero Exp $
 
 inherit eutils
 
-IUSE="oggvorbis mad flac"
+IUSE="vorbis mad flac"
 
 DESCRIPTION="Bossogg Music Server"
 HOMEPAGE="http://bossogg.wishy.org"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 DEPEND=">=media-libs/libao-0.8.3
 	media-libs/libshout
 	flac? ( media-libs/flac )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	mad? ( media-sound/madplay media-libs/id3lib )"
 
 RDEPEND="${DEPEND}
@@ -43,7 +43,7 @@ src_unpack() {
 
 src_compile() {
 	econf --enable-shout \
-	      `use_enable oggvorbis vorbis` \
+	      `use_enable vorbis` \
 	      `use_enable flac` \
 	      `use_enable mad mp3` \
 	      `use_enable mad id3` || die "could not configure"

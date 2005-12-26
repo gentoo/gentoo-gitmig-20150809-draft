@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.14 2005/09/10 15:54:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.15 2005/12/26 15:03:52 lu_zero Exp $
 
-IUSE="nls gnome oggvorbis debug alsa"
+IUSE="nls gnome vorbis debug alsa"
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	=sci-libs/fftw-2*
 	media-sound/madplay
 	media-libs/ladspa-sdk
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )
 	alsa? ( media-libs/alsa-lib )"
 

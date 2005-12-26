@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.11 2005/09/04 11:02:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.12 2005/12/26 15:02:45 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> mp3c-0.29.ebuild:
+  oggvorbis Cleanup
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> mp3c-0.27.ebuild,
   mp3c-0.29.ebuild:

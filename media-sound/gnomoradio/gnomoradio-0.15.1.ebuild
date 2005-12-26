@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.4 2004/12/23 21:42:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.5 2005/12/26 14:51:59 lu_zero Exp $
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 DESCRIPTION="Finds, fetches, shares, and plays freely licensed music."
 HOMEPAGE="http://gnomoradio.org/"
@@ -21,7 +21,7 @@ DEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/libxmlpp-2.6
 	>=dev-libs/libsigc++-2.0
 	media-libs/libao
-	oggvorbis? ( media-libs/libvorbis )"
+	vorbis? ( media-libs/libvorbis )"
 
 src_install() {
 	make DESTDIR="${D}" install || die

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.9 2005/11/07 10:33:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.10 2005/12/26 15:05:10 lu_zero Exp $
 
 inherit gnuconfig flag-o-matic eutils toolchain-funcs
 
-IUSE="nls oggvorbis"
+IUSE="nls vorbis"
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
 HOMEPAGE="http://www.nostatic.org/grip"
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/orbit-2
 	gnome-base/libghttp
 	net-misc/curl
-	oggvorbis? ( media-sound/vorbis-tools )"
+	vorbis? ( media-sound/vorbis-tools )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.5.ebuild,v 1.7 2005/11/07 10:42:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.5.ebuild,v 1.8 2005/12/26 14:55:15 lu_zero Exp $
 
 inherit eutils
 
-IUSE="oggvorbis mad"
+IUSE="vorbis mad"
 
 DESCRIPTION="Bossogg Music Server"
 HOMEPAGE="http://bossogg.wishy.org"
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/libao-0.8.3
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	mad? ( media-sound/madplay media-libs/id3lib )"
 
 RDEPEND="${DEPEND}
@@ -26,7 +26,7 @@ src_compile() {
 	local myconf
 	myconf=""
 
-	use oggvorbis \
+	use vorbis \
 		|| myconf="${myconf} --disable-ogg  --disable-oggtest \
 		   --disable-vorbistest"
 	use mad || myconf="${myconf} --disable-mp3"

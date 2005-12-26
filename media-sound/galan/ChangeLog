@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/galan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.17 2005/06/12 12:14:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.18 2005/12/26 14:58:11 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> galan-0.2.14.ebuild,
+  galan-0.3.0_beta6.ebuild:
+  oggvorbis Cleanup
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> galan-0.2.14.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

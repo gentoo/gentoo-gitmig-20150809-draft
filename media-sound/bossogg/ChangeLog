@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bossogg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.16 2005/11/07 10:42:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.17 2005/12/26 14:55:15 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> bossogg-0.13.5.ebuild,
+  bossogg-0.13.6.ebuild, bossogg-0.13.6-r2.ebuild:
+  oggvorbis Cleanup
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> bossogg-0.13.5.ebuild,
   bossogg-0.13.6.ebuild, bossogg-0.13.6-r2.ebuild, bossogg-0.13.6-r3.ebuild:
