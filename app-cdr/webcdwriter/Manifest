@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d8625f5ade80eeb37f4983256ff83fe ChangeLog 1366
+MD5 8a2cc56efddfcd4ec0b692cc554d4abb ChangeLog 1546
 MD5 de11fda53f812cf8a6bccc2f4df4cff5 files/config-root.patch 260
 MD5 8f8f44c42ee38330ea3a7b9e559aaab3 files/configure.patch 397
 MD5 5be299cc59fc9d258fe669c9f3ab8dc6 files/digest-webcdwriter-2.6.8-r1 70
@@ -10,14 +7,7 @@ MD5 57e8f1d60148f132d2480439dbbcabf8 files/digest-webcdwriter-2.7.2 70
 MD5 199d09fade121e66b76b1d9e781d643b files/digest-webcdwriter-2.7.3 70
 MD5 825a17dfddef56176d77713efd969aec files/webcdwriter.rc 803
 MD5 cfe975200ea41b14081dcb465baaf0c4 metadata.xml 656
-MD5 f63b3e7423cf61aab078f7a6b08f26ca webcdwriter-2.6.8-r1.ebuild 3007
-MD5 d36eba7272b87d7d83e37a37c737d477 webcdwriter-2.7.1.ebuild 3864
-MD5 ebaca58627aa10b96e1f278bf248d147 webcdwriter-2.7.2.ebuild 3874
-MD5 e7d708923880cf350d7363364cf07bb6 webcdwriter-2.7.3.ebuild 3874
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdjVfwUpWvClEHQoRAjmwAJ942RIFGKHO3/WlSmGo2xL9Al16LgCfZ9Yt
-Af2gZjmIX/+o77kLSfnCgYQ=
-=7bVD
------END PGP SIGNATURE-----
+MD5 5c7c1d83f1caf9d751b1f3c7b927eddb webcdwriter-2.6.8-r1.ebuild 3003
+MD5 8778a976ecff6b4c1764a87a41d861ee webcdwriter-2.7.1.ebuild 3857
+MD5 50e48ac7fea922863b7c642a217d8144 webcdwriter-2.7.2.ebuild 3864
+MD5 5e60ff23afb6d4a2a6e5256607ce0a60 webcdwriter-2.7.3.ebuild 3864
