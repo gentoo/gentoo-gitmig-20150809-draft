@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.126 2005/11/26 14:42:27 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.127 2005/12/26 21:58:10 vanquirius Exp $
+
+*net-snmp-5.3_rc2 (26 Dec 2005)
+*net-snmp-5.2.2 (26 Dec 2005)
+
+  26 Dec 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/net-snmp-5.2.2-conf-elf-rpm-bz2.patch, +net-snmp-5.2.2.ebuild,
+  -net-snmp-5.3_pre4.ebuild, +net-snmp-5.3_rc2.ebuild,
+  -net-snmp-5.3.20050624.ebuild, -net-snmp-5.3.20050624-r1.ebuild:
+  5.2.2 and 5.3_rc2 version bumps for bug 116392. fix-insecure-fixproc was
+  fixed upstream, so this patch can be dropped. Thanks to Frederic Mangeant
+  <frederic dot mangeant at gmail dot com>.
 
 *net-snmp-5.3_pre4 (26 Nov 2005)
 
