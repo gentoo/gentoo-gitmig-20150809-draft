@@ -1,6 +1,4 @@
-MD5 b11fc72abff8084b2b4b808b6aa199aa ChangeLog 1572
-MD5 7e8488c3a620870661de9e6f1e42001d files/digest-libXxf86vm-0.99.2 70
+MD5 c323683eb90f9f97b50178a85474180d ChangeLog 1686
 MD5 7a39103c9d60d5d350406b8a1182066a files/digest-libXxf86vm-1.0.0 69
-MD5 0f2740a4e05288a81db7bb9a0e65be3f libXxf86vm-0.99.2.ebuild 652
 MD5 87bdab41ebdca051063415aab76d28ad libXxf86vm-1.0.0.ebuild 652
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

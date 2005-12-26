@@ -1,6 +1,4 @@
-MD5 250ca41961d001cea83e6b960028f2ed ChangeLog 1782
-MD5 ce8e15fd48a9a70f9d3d3917fe073a17 files/digest-libFS-0.99.3 65
+MD5 7e53496cc0c6a99a033861d201056cd9 ChangeLog 1885
 MD5 b8f90e3843a93013dbc67e6f06e31b21 files/digest-libFS-1.0.0 64
-MD5 bbcf72845ead3ec8fe5bc0f577c069fd libFS-0.99.3.ebuild 635
 MD5 d2df92c41fe07c83e4cfb08f1f88eef4 libFS-1.0.0.ebuild 634
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

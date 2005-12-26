@@ -1,6 +1,4 @@
-MD5 73b80a5b10da590016fb47ede68637f2 ChangeLog 2235
-MD5 b7a87b63c79cda259d9949abdc8d70d8 files/digest-libSM-0.99.3 65
+MD5 c96fa93b0b825dff677b3ecd3cd68191 ChangeLog 2344
 MD5 40f480353e1061f93cfa1e248b139ff1 files/digest-libSM-1.0.0 64
-MD5 1b372b31e0c790d3d38aa3d6ad0aacc1 libSM-0.99.3.ebuild 639
 MD5 dd71c53a7883b6857e7eb0e6337f9bba libSM-1.0.0.ebuild 639
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

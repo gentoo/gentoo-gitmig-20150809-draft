@@ -1,6 +1,4 @@
-MD5 6baa5dccb337b4e9aeeae761791db9ae ChangeLog 1577
-MD5 6efc6b2e893e312a7566368a768f493d files/digest-libXxf86dga-0.99.3 71
+MD5 d9d4dcfc6a33db48221c56bd1ff80af2 ChangeLog 1686
 MD5 f157020157e81dfe6208b0708ed9fdc2 files/digest-libXxf86dga-1.0.0 70
-MD5 4a6874cca9edc662de523a592aff0aa7 libXxf86dga-0.99.3.ebuild 640
 MD5 3696a064a0527b08a2021d73a66bdb43 libXxf86dga-1.0.0.ebuild 646
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

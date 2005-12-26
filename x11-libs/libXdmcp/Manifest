@@ -1,6 +1,4 @@
-MD5 c58d4d06e05e93672873e395159fbbac ChangeLog 1674
-MD5 ee662ce12039967ced3a064394ae9b39 files/digest-libXdmcp-0.99.2 68
+MD5 5af4ad2b02c9605f5bc1aac983dc0d62 ChangeLog 1786
 MD5 d802017e758ce80cec90b3312718cf4f files/digest-libXdmcp-1.0.0 67
-MD5 0201836540a0c64c285805d6e868bdb4 libXdmcp-0.99.2.ebuild 562
 MD5 c10985562b5ba464e8137cc8bdf47bb1 libXdmcp-1.0.0.ebuild 562
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

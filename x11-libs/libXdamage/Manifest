@@ -1,6 +1,4 @@
-MD5 4d68b6af3dbd827c39e5f8c4301dd96c ChangeLog 1577
-MD5 bb88aaaea8f6c2bebbacdbaffc730758 files/digest-libXdamage-1.0.2.1 71
+MD5 45254e8d4bf3cb203e7410778b7b5610 ChangeLog 1692
 MD5 ef041c59e2140550fea1c55edde02e12 files/digest-libXdamage-1.0.2.2 71
-MD5 8f23b02ff10f3895fcdb59770a6b58a8 libXdamage-1.0.2.1.ebuild 625
 MD5 4d2ab2e3805df3d09e4b5d5a16a0ec3c libXdamage-1.0.2.2.ebuild 626
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
