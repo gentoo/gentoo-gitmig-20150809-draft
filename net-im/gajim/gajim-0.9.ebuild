@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.9.ebuild,v 1.1 2005/12/25 18:10:11 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.9.ebuild,v 1.2 2005/12/26 10:03:26 svyatogor Exp $
 
 inherit virtualx multilib eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 		die "Python Glade modules missing."
 	fi
 	unpack ${A}
+	make -C "${P}" clean
 	epatch "${FILESDIR}/gajim_0.9_muc_disconnect.patch"
 }
 
