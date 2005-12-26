@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.68 2005/12/21 16:59:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.69 2005/12/26 15:02:36 kloeri Exp $
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org dbus-0.60-r1.ebuild:
+  ~alpha keyword.
 
   21 Dec 2005; Doug Goldstein <cardoe@gentoo.org> dbus-0.50-r2.ebuild:
   Comment out gcj support since it really didn't work.
