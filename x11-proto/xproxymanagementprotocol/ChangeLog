@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xproxymanagementprotocol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproxymanagementprotocol/ChangeLog,v 1.7 2005/12/17 21:17:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproxymanagementprotocol/ChangeLog,v 1.8 2005/12/26 23:37:27 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xproxymanagementprotocol-1.0.1.ebuild:
+  Pull old versions.
 
 *xproxymanagementprotocol-1.0.2 (17 Dec 2005)
 
