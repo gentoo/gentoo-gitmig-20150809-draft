@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.3 2005/12/26 16:35:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.4 2005/12/26 19:29:35 mr_bones_ Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
@@ -29,6 +29,7 @@ S=${WORKDIR}/${P}-src
 
 pkg_setup() {
 	use amd64 && [[ -z ${NATIVE_AMD64_BUILD_PLZ} ]] && has_multilib_profile && ABI=x86
+	games_pkg_setup
 }
 
 src_unpack() {
