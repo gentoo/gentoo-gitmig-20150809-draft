@@ -1,6 +1,10 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.8 2005/11/22 20:37:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.9 2005/12/26 15:01:19 kloeri Exp $
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  iso-codes-0.47-r1.ebuild:
+  ~alpha keyword.
 
   22 Nov 2005; Markus Rothe <corsair@gentoo.org> iso-codes-0.47-r1.ebuild:
   Added ~ppc64 keyword; bug #108790
