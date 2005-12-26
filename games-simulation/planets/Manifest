@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3903083a0d808175064c6d682a6eb272 planets-0.1.10.ebuild 754
-MD5 3c22fffd6a477b80719a955d14aeae85 ChangeLog 778
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 e2e42c3ae130891fc793fb3df4ac9cfb ChangeLog 863
 MD5 e28ee38a2764aa911ddf4404633d5da9 files/digest-planets-0.1.10 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCePXF06ebR+OMO78RAuFOAJiV+L2H/g6Um+vefJZ/rX+G50ihAKCQStBK
-gglZPrG5niGmvP8DVKVV8g==
-=Fhme
------END PGP SIGNATURE-----
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 63dc05929e4a0e3a9e23358a49335897 planets-0.1.10.ebuild 750
