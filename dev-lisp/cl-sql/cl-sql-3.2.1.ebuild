@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.2.1.ebuild,v 1.2 2005/08/23 18:19:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.2.1.ebuild,v 1.3 2005/12/26 19:00:36 blubb Exp $
 
-inherit common-lisp eutils
+inherit common-lisp eutils multilib
 
 DESCRIPTION="A multi-platform SQL interface for Common Lisp"
 HOMEPAGE="http://clsql.b9.com/
@@ -45,7 +45,7 @@ src_install() {
 	insinto $CLSOURCEROOT/clsql-uffi/uffi; doins uffi/*.lisp
 	insinto $CLSOURCEROOT/clsql-uffi; doins clsql-uffi.asd
 	dosym $CLSOURCEROOT/clsql-uffi/clsql-uffi.asd $CLSYSTEMROOT/clsql-uffi.asd
-	exeinto /usr/lib/clsql/; doexe uffi/clsql_uffi.so
+	exeinto /usr/$(get_libdir)/clsql/; doexe uffi/clsql_uffi.so
 
 	if use postgres; then
 		insinto $CLSOURCEROOT/clsql-postgresql/db-postgresql; doins db-postgresql/*.lisp
@@ -64,7 +64,7 @@ src_install() {
 		insinto $CLSOURCEROOT/clsql-mysql/db-mysql; doins db-mysql/*.lisp db-mysql/*.c
 		insinto $CLSOURCEROOT/clsql-mysql; doins clsql-mysql.asd
 		dosym $CLSOURCEROOT/clsql-mysql/clsql-mysql.asd $CLSYSTEMROOT/clsql-mysql.asd
-		exeinto /usr/lib/clsql/; doexe db-mysql/mysql.so
+		exeinto /usr/$(get_libdir)/clsql/; doexe db-mysql/mysql.so
 	fi
 
 	if use odbc; then
