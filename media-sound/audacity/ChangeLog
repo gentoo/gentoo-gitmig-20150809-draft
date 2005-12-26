@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.36 2005/12/18 21:33:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.37 2005/12/26 14:38:49 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> audacity-1.2.1.ebuild,
+  audacity-1.2.2.ebuild, audacity-1.2.3.ebuild, audacity-1.2.3-r1.ebuild:
+  oggvorbis Cleanup
 
   18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   audacity-1.2.3-r1.ebuild:

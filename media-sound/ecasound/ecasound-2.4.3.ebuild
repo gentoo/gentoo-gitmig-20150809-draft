@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.2 2005/12/15 23:26:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.3 2005/12/26 14:42:15 lu_zero Exp $
 
-IUSE="alsa arts audiofile debug jack libsamplerate mikmod ncurses oggvorbis oss python ruby sndfile"
+IUSE="alsa arts audiofile debug jack libsamplerate mikmod ncurses vorbis oss python ruby sndfile"
 
 DESCRIPTION="A package for multitrack audio processing"
 SRC_URI="http://ecasound.seul.org/download/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk
 	audiofile? ( media-libs/audiofile )
 	alsa? ( media-libs/alsa-lib )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )
 	libsamplerate? ( media-libs/libsamplerate )
 	mikmod? ( media-libs/libmikmod )

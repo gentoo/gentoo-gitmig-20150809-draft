@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.10 2005/09/04 10:45:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.11 2005/12/26 14:45:22 lu_zero Exp $
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 DESCRIPTION="Easy to use tool for tagging and renaming MP3 and OGG/Vorbis files"
 HOMEPAGE="http://www.debain.org/?session=&site=project&project=3"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 
-DEPEND="oggvorbis? ( media-libs/libvorbis media-libs/libogg )
+DEPEND="vorbis? ( media-libs/libvorbis media-libs/libogg )
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2.0.1"
 

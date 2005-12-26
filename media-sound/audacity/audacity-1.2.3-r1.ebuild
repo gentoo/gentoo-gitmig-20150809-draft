@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.4 2005/12/18 21:33:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.5 2005/12/26 14:38:49 lu_zero Exp $
 
 inherit wxwidgets eutils
 
-IUSE="gtk2 encode flac mad oggvorbis libsamplerate"
+IUSE="gtk2 encode flac mad vorbis libsamplerate"
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-src-${MY_PV}"
@@ -28,7 +28,7 @@ DEPEND="=x11-libs/wxGTK-2.4*
 	libsamplerate? ( >=media-libs/libsamplerate-0.0.14 )
 	>=media-libs/ladspa-sdk-1.12
 	flac? ( media-libs/flac )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	mad? ( media-libs/libmad )
 	encode? ( >=media-sound/lame-3.92 )"
 
@@ -48,7 +48,7 @@ src_compile() {
 
 	econf \
 		$(use_with mad libmad system) \
-		$(use_with oggvorbis vorbis system) \
+		$(use_with vorbis vorbis system) \
 		$(use_with flac libflac system) \
 		$(use_with libsamplerate system) \
 		--with-id3tag=system \

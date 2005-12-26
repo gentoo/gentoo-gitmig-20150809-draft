@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.2.ebuild,v 1.4 2005/05/15 20:03:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.2.ebuild,v 1.5 2005/12/26 14:38:49 lu_zero Exp $
 
-IUSE="encode flac mad oggvorbis"
+IUSE="encode flac mad vorbis"
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-src-${MY_PV}"
@@ -26,7 +26,7 @@ DEPEND="=x11-libs/wxGTK-2.4*
 	>=media-libs/libsamplerate-0.0.14
 	>=media-libs/ladspa-sdk-1.12
 	flac? ( media-libs/flac )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	mad? ( >=media-sound/madplay-0.14 )
 	encode? ( >=media-sound/lame-3.92 )"
 
@@ -62,7 +62,7 @@ src_compile() {
 	fi
 
 	# Ogg Vorbis support
-	if use oggvorbis; then
+	if use vorbis; then
 		myconf="${myconf} --with-vorbis=system"
 	else
 		myconf="${myconf} --with-vorbis=none"
