@@ -1,6 +1,20 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.77 2005/09/06 15:02:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.78 2005/12/26 09:15:30 cardoe Exp $
+
+*mythtv-0.18.2_pre7882 (26 Dec 2005)
+
+  26 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
+  +files/mythbackend-0.18.2.conf, +files/mythbackend-0.18.2.rc,
+  +mythtv-0.18.2_pre7882.ebuild:
+  latest available snapshot of 0-18-fixes branch. mythtv is Rev 7882.
+  Includes additional patches to fix: 
+  bug #101009
+  bug #101308
+  bug #105521
+  bug #110100
+  bug #113419
+  bug #115760
 
   06 Sep 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r1.ebuild,
   mythtv-0.18.1-r2.ebuild:
