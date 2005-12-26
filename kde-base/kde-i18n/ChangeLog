@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.87 2005/12/10 02:59:45 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.88 2005/12/26 14:48:45 kloeri Exp $
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org kde-i18n-3.4.3.ebuild,
+  kde-i18n-3.5.0.ebuild:
+  Add ~alpha keyword.
 
   10 Dec 2005; Chris White <chriswhite@gentoo.org> kde-i18n-3.4.3.ebuild:
   Marked x86 stable for bug #112842.

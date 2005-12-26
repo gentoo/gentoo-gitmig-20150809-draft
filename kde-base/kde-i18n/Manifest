@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bf69f0ab57d4ff623ce112957c5055d kde-i18n-3.4.3.ebuild 1496
-MD5 dbb4d3c37fe377a7375625e74a3ca7d5 kde-i18n-3.5.0.ebuild 1644
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 2169f06350d02b3415cddd4e84ad3b82 ChangeLog 9895
-MD5 2906e8c990e0ff3679848c7477a4a5fc kde-i18n-3.3.2.ebuild 1797
-MD5 0e7f0dd7b167205b5ba69e9a72f52744 kde-i18n-3.4.2.ebuild 1686
-MD5 700e3025b1cd5c09135833d248c3a98e kde-i18n-3.4.1.ebuild 1678
+MD5 d59182ebef4f40d4f6c468c4a06a0def ChangeLog 10014
+MD5 be2b24a376f130383c134228731eea5b files/digest-kde-i18n-3.3.2 3714
+MD5 19f50dd0a35e4946b903767ee0781d05 files/digest-kde-i18n-3.4.1 3567
+MD5 868980d85a65572dbd8fccdbc95a9e52 files/digest-kde-i18n-3.4.2 3638
 MD5 2310151e5185ce18d4f49ffa6506b813 files/digest-kde-i18n-3.4.3 3638
 MD5 98f830cbb7204b2814676d58641bf689 files/digest-kde-i18n-3.5.0 4489
-MD5 19f50dd0a35e4946b903767ee0781d05 files/digest-kde-i18n-3.4.1 3567
 MD5 fe416091cd30cb387c87c28e2d0a793d files/kde-i18n-ru-3.3.2-kmplot.diff 9744
-MD5 be2b24a376f130383c134228731eea5b files/digest-kde-i18n-3.3.2 3714
-MD5 868980d85a65572dbd8fccdbc95a9e52 files/digest-kde-i18n-3.4.2 3638
+MD5 2906e8c990e0ff3679848c7477a4a5fc kde-i18n-3.3.2.ebuild 1797
+MD5 700e3025b1cd5c09135833d248c3a98e kde-i18n-3.4.1.ebuild 1678
+MD5 0e7f0dd7b167205b5ba69e9a72f52744 kde-i18n-3.4.2.ebuild 1686
+MD5 b3e722caab7b20755e33891de7d8921a kde-i18n-3.4.3.ebuild 1499
+MD5 2e85eb61b6ec3fa497f5e91189065d44 kde-i18n-3.5.0.ebuild 1651
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmkS7FdQwWVoAgN4RAjiNAJ93WLSaFRub/TZb0cneceP4X4KEvwCdFDMG
-VBOoAQvaeCPq7lfmrAZX/xs=
-=T45K
+iD8DBQFDsBEzugEuf3OQ0akRAkdhAJ9JRB3aIHA136Fo5sIaJVp3rP2P7wCgkkB6
+LjpbVI1xQW/+QwxPitVK93s=
+=ljp8
 -----END PGP SIGNATURE-----
