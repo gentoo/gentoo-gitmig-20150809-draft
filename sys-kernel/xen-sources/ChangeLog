@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.14 2005/12/21 08:44:32 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.15 2005/12/26 22:42:21 chrb Exp $
+
+  26 Dec 2005; <chrb@gentoo.org> -xen-sources-2.6.11.12.ebuild:
+  Remove xen-2 as bugs are no longer being fixed upstream.
 
   21 Dec 2005; Alex Howells <astinus@gentoo.org>
   xen-sources-2.6.12.6.ebuild:
