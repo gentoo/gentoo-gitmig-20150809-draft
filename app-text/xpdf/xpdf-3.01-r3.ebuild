@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r3.ebuild,v 1.9 2005/12/17 17:06:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r3.ebuild,v 1.10 2005/12/26 10:14:25 genstef Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/"
@@ -81,6 +81,7 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-flags "-Os" "-O2"
 
 	local myconf
 	if use X; then
