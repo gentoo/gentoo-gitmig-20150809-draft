@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_ftpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.6 2005/09/18 20:13:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.7 2005/12/26 06:29:34 josejx Exp $
+
+  26 Dec 2005; Joseph Jezak <josejx@gentoo.org> mod_ftpd-0.13.0.ebuild:
+  Marked ~ppc for bug #116721.
 
   18 Sep 2005; Michael Stewart <vericgar@gentoo.org> mod_ftpd-0.13.0.ebuild:
   Stable on x86

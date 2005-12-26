@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/mod_ftpd-0.13.0.ebuild,v 1.3 2005/09/18 20:13:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/mod_ftpd-0.13.0.ebuild,v 1.4 2005/12/26 06:29:34 josejx Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE="dbi gdbm"
 
 DEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0-r5 )"
