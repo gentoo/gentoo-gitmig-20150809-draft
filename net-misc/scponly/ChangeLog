@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.14 2005/09/19 23:11:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.15 2005/12/26 21:37:23 kloeri Exp $
+
+*scponly-4.2 (26 Dec 2005)
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  +files/scponly-4.2-getopt.patch, +scponly-4.2.ebuild:
+  Bump scponly to fix bug 116526.
 
 *scponly-4.1 (19 Sep 2005)
 

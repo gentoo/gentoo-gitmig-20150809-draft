@@ -1,7 +1,20 @@
-MD5 48f3604e22751295c07e471844ade2bb scponly-4.0.ebuild 3067
-MD5 dadf22d4d802d59445e6a28a7f7fc934 scponly-4.1.ebuild 1124
-MD5 7810621f18a870c71aa97d3a543f9710 ChangeLog 2239
-MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 08acb012a5dcc53362bc8e02d0d28093 ChangeLog 2410
 MD5 a1f6bee0be7b749e155d9ec945ce31a4 files/digest-scponly-4.0 59
 MD5 43e0a1f99fd0eb893cf3608c3f1a236d files/digest-scponly-4.1 59
+MD5 1df92190f6908168fb1da4911403352f files/digest-scponly-4.2 59
 MD5 686ea1fd09ee5c0522217845d6bc33cb files/scponly-4.1-gentoo.patch 4634
+MD5 526bdf8f58a4beba8593c2897b315eb0 files/scponly-4.2-getopt.patch 699
+MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
+MD5 48f3604e22751295c07e471844ade2bb scponly-4.0.ebuild 3067
+MD5 dadf22d4d802d59445e6a28a7f7fc934 scponly-4.1.ebuild 1124
+MD5 230d78d96118c3fd2cdf530b822c2813 scponly-4.2.ebuild 1148
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDsHD3ugEuf3OQ0akRAnJzAJ9Vdr4AQTW0UMkYDcYIkWSWOg/tgACdGS4b
+pIPD7GX+z4MQi5TMTcuPOs4=
+=J6qu
+-----END PGP SIGNATURE-----
