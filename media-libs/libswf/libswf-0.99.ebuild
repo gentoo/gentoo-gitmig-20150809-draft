@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.20 2005/08/11 20:30:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.21 2005/12/26 20:33:08 blubb Exp $
 
 inherit multilib
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 KEYWORDS="x86 -sparc -ppc -hppa -mips amd64"
 IUSE=""
 
-pkg_config() {
+pkg_setup() {
 	has_multilib_profile && ABI="x86"
 }
 
