@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.15 2005/12/18 19:59:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.16 2005/12/26 13:46:43 stefaan Exp $
+
+  26 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org> font-util-1.0.0.ebuild:
+  Marked ~alpha
 
 *font-util-1.0.0 (18 Dec 2005)
 
