@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6fabc97a0c01a49194bbd2e54eb7170e ChangeLog 2634
+MD5 403beb33197be4a8449d92498db394de ChangeLog 2748
 MD5 fa303e73e349b9c125d053c768fccf74 files/digest-sweep-0.8.2-r1 63
 MD5 3eebc576fe853140f8aaf1ca03443223 files/digest-sweep-0.8.3 64
 MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.2-alsa.patch 383
 MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.3-alsa.patch 383
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 8a527085a70ea0860d5aea2fc1ecef97 sweep-0.8.2-r1.ebuild 1314
-MD5 58e34df452eddccbed53bef845230e09 sweep-0.8.3.ebuild 1183
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDmf82p5vW4rUFj5oRAr5RAJwKeZkDJm8dp1YdTAZQo/wAuoueSgCeMKPq
-M+WxCXbolFUawyNbyIUX/mA=
-=Hv3G
------END PGP SIGNATURE-----
+MD5 4e896227d7fc4bca3194b28262005ba9 sweep-0.8.2-r1.ebuild 1310
+MD5 2f34b74c77c6f853c9dd3050ce663438 sweep-0.8.3.ebuild 1172

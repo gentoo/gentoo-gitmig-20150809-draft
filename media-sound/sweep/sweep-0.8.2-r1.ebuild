@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.16 2005/12/09 22:04:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.17 2005/12/26 14:16:50 lu_zero Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 
 	# --enable-experimental       Add to myconf if you want this stuff 
 
-	use vorbis || myconf="${myconf} --disable-oggvorbis"
+	use vorbis || myconf="${myconf} --disable-vorbis"
 	use alsa && myconf="${myconf} --enable-alsa"
 	use nls  || myconf="${myconf} --disable-nls"
 
