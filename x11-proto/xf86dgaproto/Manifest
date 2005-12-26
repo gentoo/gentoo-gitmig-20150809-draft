@@ -1,6 +1,4 @@
-MD5 da1e75be664fc66c870b0c64a2f35216 ChangeLog 1338
-MD5 77b22a5fda68e8b7146cfb86eb3a8eab files/digest-xf86dgaproto-2.0.1 70
+MD5 048cad3b99b36f4bb279dd772703b001 ChangeLog 1453
 MD5 c880d79c40a4c0bece75b653437e1ed1 files/digest-xf86dgaproto-2.0.2 70
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 4b11d4f5a34552b379290638900364b9 xf86dgaproto-2.0.1.ebuild 449
 MD5 7b9480e51e68391f40c1e65ebf4f3656 xf86dgaproto-2.0.2.ebuild 454

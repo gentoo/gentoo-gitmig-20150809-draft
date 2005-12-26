@@ -1,6 +1,4 @@
-MD5 e7ce719a5e18dac7300c6d8e4afeec8f ChangeLog 1324
-MD5 d0955599b67503158e5168e7fcec6f0d files/digest-renderproto-0.9.1 69
+MD5 3af0f621a1d1c8ac7e482d2d851bd2ea ChangeLog 1438
 MD5 c209a86581894edd960fb2339f4e1678 files/digest-renderproto-0.9.2 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 31087bbd6c1f04532031d2dc5c264f46 renderproto-0.9.1.ebuild 446
 MD5 07469dc50bca571059aa89e6916420c9 renderproto-0.9.2.ebuild 451

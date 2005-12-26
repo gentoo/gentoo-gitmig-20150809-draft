@@ -1,6 +1,4 @@
-MD5 bd081dc8f51fd1852dc21135898271cc ChangeLog 1310
-MD5 8493e71523946252a6666bac323bd9cf files/digest-fontsproto-2.0.1 68
+MD5 ff81d2cf1b8be124daffce2922a15de8 ChangeLog 1423
 MD5 2c75c01159b94778d0ad7cc99c0fe6b7 files/digest-fontsproto-2.0.2 68
-MD5 8c86c706a3143f51a87eb7fd564c8437 fontsproto-2.0.1.ebuild 443
 MD5 97b0409601def63be6f0a2788077ec40 fontsproto-2.0.2.ebuild 448
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

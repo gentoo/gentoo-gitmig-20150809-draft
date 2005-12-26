@@ -1,6 +1,4 @@
-MD5 c8b69e655a3c60771033b06b271ec24d ChangeLog 1310
-MD5 701705ca39d3f31400ad3a363ad6e883 files/digest-inputproto-1.3.1 68
+MD5 5a45ea54058e043e1042798ac5423921 ChangeLog 1423
 MD5 cfcba9507721c73d7cb5fba6e84a7435 files/digest-inputproto-1.3.2 68
-MD5 1702ae2e7c31e9849ebd3718d779a106 inputproto-1.3.1.ebuild 443
 MD5 6d3aadeeb0b03e6730dd2c07e345d1f1 inputproto-1.3.2.ebuild 448
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

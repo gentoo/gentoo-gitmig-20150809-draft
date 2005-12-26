@@ -1,6 +1,4 @@
-MD5 921bd4ec5b1e9ff3f210e1f2598fb608 ChangeLog 1956
-MD5 be8da8f3af0d4efb141b7b43ac410f00 files/digest-xineramaproto-1.1.1 71
+MD5 c510e731426c1e357f1bb3824566d852 ChangeLog 2072
 MD5 b054785268b6334121e8ed021950f1e8 files/digest-xineramaproto-1.1.2 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 04a9e8c9f0f50844a324ccd2a2577b86 xineramaproto-1.1.1.ebuild 452
 MD5 f08808abbcbd866965b6df29f10d4cce xineramaproto-1.1.2.ebuild 457

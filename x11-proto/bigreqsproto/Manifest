@@ -1,6 +1,4 @@
-MD5 2639cf1a2b00875c3dfa17c4ff8d82f9 ChangeLog 1338
-MD5 a026736169f6e1ccdffe9afb209773a7 bigreqsproto-1.0.1.ebuild 449
+MD5 ed89738ef17a6bbd6c867a9834b04bfc ChangeLog 1453
 MD5 f039b7a97e14b15d0e795da2be79d7de bigreqsproto-1.0.2.ebuild 454
-MD5 7594e0ebcc6dc462000f8954ae824757 files/digest-bigreqsproto-1.0.1 70
 MD5 1209132b6e2977ab431f29bedb922143 files/digest-bigreqsproto-1.0.2 70
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

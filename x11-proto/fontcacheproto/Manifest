@@ -1,6 +1,4 @@
-MD5 e827d2b20be5b5325a30aa19871f0b9c ChangeLog 1368
-MD5 0424e50b26908ac6bb582c6ac7661175 files/digest-fontcacheproto-0.1.1 72
+MD5 2b33b1759cdca09bb93ebbd3b8a95576 ChangeLog 1485
 MD5 39a41339c78847d986da1c4d435917f8 files/digest-fontcacheproto-0.1.2 72
-MD5 90dec3012ad7b9b639b27c6faab7f58b fontcacheproto-0.1.1.ebuild 455
 MD5 bfe37a0f8b97bc7c3238acb6a807e1b2 fontcacheproto-0.1.2.ebuild 460
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
