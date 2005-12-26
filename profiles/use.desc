@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.277 2005/12/23 15:58:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.278 2005/12/26 17:52:05 lu_zero Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -235,7 +235,7 @@ odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
-oggvorbis - Adds support for the OggVorbis audio encoding - DEPRECATED useflag 
+#oggvorbis - Adds support for the OggVorbis audio encoding - DEPRECATED useflag 
 openal - Adds support for the Open Audio Library
 opengl - Adds support for OpenGL
 oracle7 - Adds support for Oracle 7
