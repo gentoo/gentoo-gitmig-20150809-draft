@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.97 2005/12/05 22:01:55 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.98 2005/12/26 18:31:31 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> gnome-media-2.8.0.ebuild:
+  oggvorbis Cleanup
 
   05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   gnome-media-2.8.0.ebuild, gnome-media-2.10.2.ebuild,
