@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.1a.ebuild,v 1.1 2005/12/25 14:35:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.1a.ebuild,v 1.2 2005/12/26 00:42:11 chtekk Exp $
 
 KEYWORDS="~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -58,6 +58,13 @@ pkg_setup() {
 			ewarn "the maintainer directly, thanks!)"
 			die "Please turn the 'postgres' and/or 'prelude' USE flags off when building with 'static'"
 		fi
+	fi
+
+	if use mysql && use postgres ; then
+		ewarn "You cannot compile both database backends into Samhain at once,"
+		ewarn "you need to choose between MySQL or PostgreSQL and disable the"
+		ewarn "one you don't want to use."
+		die "Please choose between 'mysql' or 'postgres' USE flags"
 	fi
 }
 
