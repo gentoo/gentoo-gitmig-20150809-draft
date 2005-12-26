@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.17 2005/11/28 22:01:21 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.18 2005/12/26 22:13:38 halcy0n Exp $
+
+  26 Dec 2005; Mark Loeser <halcy0n@gentoo.org> pgf-0.64-r1.ebuild:
+  Stable on x86; bug #116811
 
   28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org> pgf-0.64-r1.ebuild:
   Back to ~arch.

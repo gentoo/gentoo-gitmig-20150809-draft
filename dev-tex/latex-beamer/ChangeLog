@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.20 2005/11/28 21:59:48 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.21 2005/12/26 22:14:43 halcy0n Exp $
+
+  26 Dec 2005; Mark Loeser <halcy0n@gentoo.org> latex-beamer-3.00-r1.ebuild:
+  Stable on x86; bug #116811
 
   28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org>
   latex-beamer-3.00-r1.ebuild:
