@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2.ebuild,v 1.17 2005/04/05 20:43:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2.ebuild,v 1.18 2005/12/26 12:34:58 lu_zero Exp $
 
 inherit libtool eutils
 
@@ -12,14 +12,14 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 alpha ppc amd64 sparc ia64"
 
-IUSE="gtk jpeg mmx oggvorbis png"
+IUSE="gtk jpeg mmx vorbis png"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	media-libs/libdv
 	gtk? ( =x11-libs/gtk+-1.2* )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	!virtual/quicktime"
 PROVIDE="virtual/quicktime"
 

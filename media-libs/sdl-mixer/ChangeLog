@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.31 2005/11/11 00:46:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.32 2005/12/26 12:43:18 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> sdl-mixer-1.2.5-r1.ebuild:
+  oggvorbis Cleanup
 
   11 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-mixer-1.2.6-r1.ebuild:
