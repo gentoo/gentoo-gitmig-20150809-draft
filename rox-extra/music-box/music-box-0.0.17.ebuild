@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/music-box/music-box-0.0.17.ebuild,v 1.2 2005/03/05 23:31:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/music-box/music-box-0.0.17.ebuild,v 1.3 2005/12/26 17:35:42 lu_zero Exp $
 
 DESCRIPTION="MusicBox - an MP3/OGG Player for the ROX Desktop"
 
@@ -14,11 +14,11 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc"
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 DEPEND=">=dev-python/pymad-0.4.1
 	 >=dev-python/pyao-0.8.1
-	 oggvorbis? (
+	 vorbis? (
 		 >=dev-python/pyvorbis-1.1
 		 >=dev-python/pyogg-1.1
 		 >=media-libs/libogg-1.0

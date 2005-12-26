@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/music-box
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/music-box/ChangeLog,v 1.2 2005/03/05 23:31:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/music-box/ChangeLog,v 1.3 2005/12/26 17:35:42 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> music-box-0.0.17.ebuild:
+  oggvorbis Cleanup
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org> music-box-0.0.17.ebuild:
   Marked ~ppc for bug #83706.
