@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c83493259049c266f52c6a328a7bb053 ChangeLog 11673
+MD5 914a36772e108d65c5a9d9c9fb57643b ChangeLog 11767
 MD5 ae36bba4e878c77dc2e823ce00e98869 files/6.4-dont-install-gles-headers.patch 421
 MD5 d6254b7a775480084efcd30d9fb4cbad files/6.4-multilib-fix.patch 535
 MD5 0551e02c2a091750ec95a2efed8220bb files/6.4.1-amd64-include-assyntax.patch 1289
@@ -11,12 +8,5 @@ MD5 063dc3bc1f6634ab506e9c8ca8bb05c0 files/digest-mesa-6.4.1-r1 67
 MD5 f0ebdc72043e76ad7eddc4ad91349927 files/lib/libGL.la 763
 MD5 9abdd26694e6f1d7bd93193f900acc6c files/lib/libGLU.la 752
 MD5 ceae0782c8844ebdc68ede6b4d8969d9 files/makedepend-location.patch 375
-MD5 d5a0051931ba6eb2df8147ac0cee83c7 mesa-6.4.1-r1.ebuild 6008
+MD5 71d5e4493c134590df7772d978e6cf81 mesa-6.4.1-r1.ebuild 6017
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoiIL2G5bA0cA/ScRAlm2AKC6qliI8ucsP8v+i8BlvUgPD+aylACfRevE
-0w3Vcv+0bGgFPytUeW7DRsE=
-=4Z6R
------END PGP SIGNATURE-----
