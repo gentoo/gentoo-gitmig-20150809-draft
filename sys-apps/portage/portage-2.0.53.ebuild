@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53.ebuild,v 1.7 2005/12/24 15:41:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53.ebuild,v 1.8 2005/12/26 12:53:21 yoswink Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 
 SLOT="0"
 IUSE="build selinux"
