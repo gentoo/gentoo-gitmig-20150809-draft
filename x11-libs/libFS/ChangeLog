@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libFS
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.13 2005/12/17 21:38:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.14 2005/12/26 21:47:33 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libFS-0.99.3.ebuild:
+  Pull old versions.
 
 *libFS-1.0.0 (17 Dec 2005)
 

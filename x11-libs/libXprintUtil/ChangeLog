@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXprintUtil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXprintUtil/ChangeLog,v 1.11 2005/12/23 08:45:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXprintUtil/ChangeLog,v 1.12 2005/12/26 22:00:36 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libXprintUtil-0.99.3.ebuild, -libXprintUtil-1.0.0.ebuild:
+  Pull old versions.
 
 *libXprintUtil-1.0.1 (23 Dec 2005)
 

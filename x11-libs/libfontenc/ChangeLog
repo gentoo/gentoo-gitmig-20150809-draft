@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libfontenc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.16 2005/12/26 10:22:38 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.17 2005/12/26 21:47:00 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/configurable-encodingsdir.patch, -libfontenc-0.99.3-r1.ebuild,
+  -libfontenc-1.0.0.ebuild:
+  Pull old versions.
 
   26 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org>
   libfontenc-1.0.1.ebuild:
