@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/acx100
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/ChangeLog,v 1.17 2005/12/26 22:09:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/ChangeLog,v 1.18 2005/12/26 22:16:26 genstef Exp $
+
+  26 Dec 2005; Stefan Schweizer <genstef@gentoo.org> metadata.xml:
+  spb maintains this now
 
   26 Dec 2005; Stefan Schweizer <genstef@gentoo.org>
   -acx100-0.2.0_pre8-r6.ebuild, -acx100-0.2.4.ebuild, acx100-0.3.20.ebuild:
