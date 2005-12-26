@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd143d0c48ee63d34f5a1c4eec1ae319 ChangeLog 7067
-MD5 55dad7669fd5f768ae53eb6fff270ca9 audacity-1.2.1.ebuild 2274
-MD5 fc75ba4d5a33758eecdfc678c7f32a0a audacity-1.2.2.ebuild 2183
-MD5 c5b0142102ace7cbd265f6889380b2b4 audacity-1.2.3-r1.ebuild 1937
-MD5 abf6e05d1c798fc33e0b91578c037837 audacity-1.2.3.ebuild 2186
+MD5 5936cc91c3e410182ab1dc97f9716f46 ChangeLog 7232
+MD5 93c9059ec89a928748fbc4c6ff7ce950 audacity-1.2.1.ebuild 2263
+MD5 2fa288b95d1713417e3342b869c83967 audacity-1.2.2.ebuild 2172
+MD5 2d7b8330e198f9fc6f5727f293b13d49 audacity-1.2.3-r1.ebuild 1926
+MD5 466b743fd1ead3cc85a21538f707d2aa audacity-1.2.3.ebuild 2175
 MD5 502eabf8993eb2af91e1265425024091 files/audacity-1.2.3-x86.patch 995
 MD5 8332a9c72a43ed19ab1904a935a25e03 files/audacity.desktop 155
 MD5 8f1e5073472cee2da1987db62e7db3a9 files/digest-audacity-1.2.1 72
@@ -13,10 +10,3 @@ MD5 a150eb16468631b07901c6ca01451679 files/digest-audacity-1.2.2 71
 MD5 bf35b35e84d0c0be6fa8e87acf085294 files/digest-audacity-1.2.3 71
 MD5 bf35b35e84d0c0be6fa8e87acf085294 files/digest-audacity-1.2.3-r1 71
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpdXBAiZjviIA2XgRAgyLAKC5qqbkriD5KO5i/MOyKvhPU4juNQCg3Xfe
-H8D3VC4U8JREKGCIYanbA5Y=
-=JJ//
------END PGP SIGNATURE-----
