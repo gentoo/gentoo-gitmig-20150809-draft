@@ -1,6 +1,4 @@
-MD5 fa7417285b51f390be9bca98adbb3c7b ChangeLog 2153
-MD5 65076242381ec5f0802b508172252fd5 files/digest-font-alias-1.0.0 68
+MD5 bb0b43be0c8a83975246201ac6ee80fa ChangeLog 2266
 MD5 c1a0a7072a884f91ca74964b2d698a51 files/digest-font-alias-1.0.1 68
-MD5 9ff00870142feb90dd30e2779e3941ca font-alias-1.0.0.ebuild 527
 MD5 2b58262b6334453f93607c9977845de5 font-alias-1.0.1.ebuild 532
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
