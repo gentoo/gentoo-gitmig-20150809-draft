@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.3.ebuild,v 1.2 2005/12/23 20:42:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.3.ebuild,v 1.3 2005/12/26 15:17:12 sbriesen Exp $
 
 inherit eutils versionator
 
@@ -21,7 +21,7 @@ IUSE="unicode"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="net-dialup/capi4k-utils
 	media-libs/tiff
