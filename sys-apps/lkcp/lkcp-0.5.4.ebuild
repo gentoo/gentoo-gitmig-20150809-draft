@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/lkcp-0.5.3-r3.ebuild,v 1.2 2005/11/22 05:48:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/lkcp-0.5.4.ebuild,v 1.1 2005/12/26 14:31:44 r3pek Exp $
 
 DESCRIPTION="Live Kernel Configuration Panel is an ncurses interface to the run-time Linux kernel configuration data (/proc)"
 HOMEPAGE="http://freshmeat.net/projects/lkcp"

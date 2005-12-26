@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2cf9075f659de74bc25c9699e7eca2e3 ChangeLog 1865
-MD5 5dfa0227661465583918e88e7de6d688 files/digest-lkcp-0.5.3-r3 63
-MD5 9ed98a33b0940ebfa2a76ba93dc3c511 lkcp-0.5.3-r3.ebuild 1220
+MD5 783b76cdfd0a378129f0c6595f7dd0fb ChangeLog 2020
+MD5 ed73f04bd1b57ef9922b9b74fdb07729 files/digest-lkcp-0.5.4 63
+MD5 0dbaf61bd1a5e14c6e4e26cb5292fa81 lkcp-0.5.4.ebuild 1216
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgrIdcsIHjyDViGQRAtu1AKCSIAhq2ULImNt7AqMESd9PbFASuwCg2KDW
-tWAGOwrK63s3Tg+uJi1zImw=
-=+F8g
------END PGP SIGNATURE-----
