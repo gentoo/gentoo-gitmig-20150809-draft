@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.49 2005/12/25 15:11:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.50 2005/12/26 12:24:19 mrness Exp $
+
+  26 Dec 2005; Alin Nastac <mrness@gentoo.org> -mgetty-1.1.30.ebuild,
+  -mgetty-1.1.31.ebuild:
+  Remove obsolete versions.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> mgetty-1.1.33.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
