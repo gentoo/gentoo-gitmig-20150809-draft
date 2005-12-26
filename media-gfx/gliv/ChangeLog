@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.20 2005/11/22 20:16:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.21 2005/12/26 18:20:37 vanquirius Exp $
+
+  26 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> -gliv-1.8.1.ebuild,
+  -gliv-1.8.2.ebuild, -gliv-1.9.2.ebuild, -gliv-1.9.3.ebuild,
+  gliv-1.9.4.ebuild:
+  Remove old ebuilds, mark 1.9.4 x86 stable. This fixes bug 91897. Thanks to
+  Tero Grundstrom <tero at vuosaari dot hai dot fi> and Keri Harris
+  <harriskeri at mcs dot vuw dot ac dot nz>.
 
 *gliv-1.9.4 (22 Nov 2005)
 
