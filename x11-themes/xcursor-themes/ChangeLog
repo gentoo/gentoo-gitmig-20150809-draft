@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xcursor-themes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.12 2005/12/26 21:38:35 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.13 2005/12/26 21:43:13 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/make-cursordir-configurable.patch:
+  Drop old patch.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xcursor-themes-0.99.1.ebuild, -xcursor-themes-1.0.0.ebuild:

@@ -1,5 +1,4 @@
-MD5 6bef4ce8dd933f3415aed82f3eba9e9a ChangeLog 2187
+MD5 6697407b7f3fabadcf9e7fcb79d51035 ChangeLog 2307
 MD5 61cc70e87a24dbc503299ca21827804a files/digest-xcursor-themes-1.0.1 74
-MD5 c6018649c97cb078e02a77ca12345864 files/make-cursordir-configurable.patch 496
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c8dd1a558b9b8c9e8abc4942be9a12e4 xcursor-themes-1.0.1.ebuild 514
