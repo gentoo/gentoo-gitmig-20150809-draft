@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/confcache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.3 2005/11/23 16:17:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.4 2005/12/26 07:29:15 ferringb Exp $
+
+  25 Dec 2005; Brian Harring <ferringb@gentoo.org> confcache-0.3.3.ebuild:
+  Fixed bug #113680, minor enough not revbumping it (just was installing extra
+  license files).
 
   23 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> confcache-0.3.3.ebuild:
   Added ~amd64 keyword.
