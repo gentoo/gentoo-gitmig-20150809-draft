@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtkterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.10 2005/11/26 08:29:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.11 2005/12/26 13:06:28 mrness Exp $
+
+  26 Dec 2005; Alin Nastac <mrness@gentoo.org> gtkterm-0.99.5.ebuild:
+  Stable on x86.
 
 *gtkterm-0.99.5 (26 Nov 2005)
 
