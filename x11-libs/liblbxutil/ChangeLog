@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/liblbxutil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liblbxutil/ChangeLog,v 1.12 2005/12/17 21:40:25 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liblbxutil/ChangeLog,v 1.13 2005/12/26 10:22:58 stefaan Exp $
+
+  26 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org>
+  liblbxutil-1.0.0.ebuild:
+  Marked ~alpha
 
 *liblbxutil-1.0.0 (17 Dec 2005)
 
