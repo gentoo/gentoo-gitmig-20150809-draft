@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.2 2005/08/28 21:17:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.3 2005/12/26 16:35:53 blubb Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
 # http://bugs.gentoo.org/show_bug.cgi?id=93097
 
-inherit eutils games flag-o-matic
+inherit eutils games flag-o-matic multilib
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}-src
 
+pkg_setup() {
+	use amd64 && [[ -z ${NATIVE_AMD64_BUILD_PLZ} ]] && has_multilib_profile && ABI=x86
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"/snes9x
@@ -44,12 +48,6 @@ src_unpack() {
 }
 
 src_compile() {
-	if use amd64 && [[ -z ${NATIVE_AMD64_BUILD_PLZ} ]] ; then
-		export ABI=x86
-		append-flags -m32
-		append-ldflags -m32
-	fi
-
 	local vidconf=
 	local target=
 	local vid=
