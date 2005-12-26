@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xclock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.11 2005/12/23 10:33:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.12 2005/12/26 10:36:24 stefaan Exp $
+
+  26 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org> xclock-1.0.1.ebuild:
+  Marked ~alpha
 
 *xclock-1.0.1 (23 Dec 2005)
 

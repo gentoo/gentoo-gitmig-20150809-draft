@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2fc1cfd3cae5ffb055f762fdd03ce85 ChangeLog 1423
+MD5 93845e3a2c9f604de2bd50d863d59c6e ChangeLog 1512
 MD5 24cef7be13abd33cb31d7b5bc6349b90 files/digest-xrdb-0.99.2 63
 MD5 8e42b6bc5afd99e68784e22dd701a422 files/digest-xrdb-1.0.0 62
 MD5 79a6a551f61f1c670dfd17a2c343c127 files/digest-xrdb-1.0.1 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 dde3b037631fe81641d92d16fa96e970 xrdb-0.99.2.ebuild 452
 MD5 b9043242e8cb5a42309e8eeec0d44706 xrdb-1.0.0.ebuild 451
-MD5 f33d056923f178cb5715cbde1a6e89da xrdb-1.0.1.ebuild 449
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrxieBtvusYtCZMsRAvfcAJ9dTiKpkHJsdJ2DdlXz5YVcc6/+WgCfb+MR
-uo/V+OyTuR7SI3FIiH5qvS0=
-=XQgA
------END PGP SIGNATURE-----
+MD5 f195232235b65481a5ac12048a625818 xrdb-1.0.1.ebuild 456

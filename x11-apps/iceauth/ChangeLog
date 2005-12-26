@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/iceauth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.12 2005/12/23 10:26:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.13 2005/12/26 10:34:44 stefaan Exp $
+
+  26 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org> iceauth-1.0.1.ebuild:
+  Marked ~alpha
 
 *iceauth-1.0.1 (23 Dec 2005)
 
