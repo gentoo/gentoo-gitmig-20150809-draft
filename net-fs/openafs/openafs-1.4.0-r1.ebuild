@@ -1,26 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0_rc3.ebuild,v 1.2 2005/09/23 16:12:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r1.ebuild,v 1.1 2005/12/26 21:03:52 stefaan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
-PATCHVER=0.2b
-MY_PV=${PV/_/-}
-MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+PATCHVER=0.5
 DESCRIPTION="The OpenAFS distributed file system"
 HOMEPAGE="http://www.openafs.org/"
-SRC_URI="http://openafs.org/dl/${PN}/candidate/${MY_PV}/${MY_P}-src.tar.bz2
-	doc? ( http://openafs.org/dl/${PN}/candidate/${MY_PV}/${MY_P}-doc.tar.bz2 )
-	mirror://gentoo/${PN}-gentoo-${PATCHVER}.tar.bz2
-	http://dev.gentoo.org/~stefaan/distfiles/${PN}-gentoo-${PATCHVER}.tar.bz2"
+SRC_URI="http://openafs.org/dl/${PN}/${PV}/${P}-src.tar.bz2
+	doc? ( http://openafs.org/dl/${PN}/${PV}/${P}-doc.tar.bz2 )
+	mirror://gentoo/${PN}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug kerberos pam doc"
 
-RDEPEND="=net-fs/openafs-kernel-${PV}*
+RDEPEND="=net-fs/openafs-kernel-${PV}
 	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )"
 
@@ -46,7 +42,7 @@ src_compile() {
 	econf \
 		$(use_enable pam) \
 		$(use_enable debug) \
-		--enable-largefile \
+		--enable-largefile-fileserver \
 		${myconf} || die econf
 
 	emake -j1 all_nolibafs || die "Build failed"
@@ -75,18 +71,18 @@ src_install() {
 	use pam && doman src/pam/pam_afs.5
 
 	# minimal documentation
-	dodoc ${CONFDIR}/README ${CONFDIR}/ChangeLog*
+	dodoc ${CONFDIR}/README ${CONFDIR}/CellServDB
 
 	# documentation package
 	if use doc; then
-		cp -pPR doc/* ${D}/usr/share/doc/${P}
+		cp -pPR doc/* ${D}/usr/share/doc/${PF}
 	fi
 
 	# Gentoo related scripts
-	newconfd ${CONFDIR}/afs-client afs-client
-	newconfd ${CONFDIR}/afs-server afs-server
-	newinitd ${SCRIPTDIR}/afs-client afs-client
-	newinitd ${SCRIPTDIR}/afs-server afs-server
+	newconfd ${CONFDIR}/openafs-client openafs-client
+	newconfd ${CONFDIR}/openafs-server openafs-server
+	newinitd ${SCRIPTDIR}/openafs-client openafs-client
+	newinitd ${SCRIPTDIR}/openafs-server openafs-server
 
 	# used directories: client
 	keepdir /etc/openafs
@@ -97,6 +93,7 @@ src_install() {
 	diropts -m0700
 	keepdir /var/lib/openafs
 	keepdir /var/lib/openafs/db
+	diropts -m0755
 	keepdir /var/lib/openafs/logs
 }
 
@@ -189,8 +186,9 @@ migrate_to_fhs() {
 	ewarn "that, given a previously working configuration, both server"
 	ewarn "and client should restart without problems.  Files will be copied"
 	ewarn "only, and not removed from the old locations.  For assistance"
-	ewarn "in removing the old files, consult the documentation in"
-	ewarn "/usr/share/openafs/gentoo"
+	ewarn "in removing the old files, consult the section on Upgrading in"
+	ewarn "the Gentoo OpenAFS documentation"
+	ewarn "(see http://www.gentoo.org/doc/en/openafs.xml)"
 	ewarn "Will continue in 30 seconds, press Ctrl-C to abort"
 	ewarn
 	ebeep 10
@@ -249,8 +247,17 @@ migrate_to_fhs() {
 
 migrate_configfile() {
 	local oldconfigfile=${ROOT}etc/conf.d/afs
-	local newconfigfile=${ROOT}etc/conf.d/afs-client
+	local oldconfigfile2=${ROOT}etc/conf.d/afs-client
+	local newconfigfile=${ROOT}etc/conf.d/openafs-client
 
+	if [ -f ${oldconfigfile} -a ! -e ${newconfigfile} ]; then
+		cp ${oldconfigfile} ${newconfigfile}
+	elif [ -f ${oldconfigfile2} -a ! -e ${newconfigfile} ]; then
+		cp ${oldconfigfile2} ${newconfigfile}
+	fi
+
+	oldconfigfile=${ROOT}etc/conf.d/afs-server
+	newconfigfile=${ROOT}etc/conf.d/openafs-server
 	if [ -f ${oldconfigfile} -a ! -e ${newconfigfile} ]; then
 		cp ${oldconfigfile} ${newconfigfile}
 	fi
@@ -268,11 +275,11 @@ pkg_preinst() {
 	then
 		cp ${CONFDIR}/CellServDB ${IMAGE}etc/openafs
 	fi
-	# cacheinfo: use a default location cache, 50 megabyte in size
+	# cacheinfo: use a default location cache, 200 megabyte in size
 	# (should be safe for about any root partition, the user can increase
 	# the size as required)
 	if [ ! -e ${ROOT}etc/openafs/cacheinfo ]; then
-		echo "/afs:/var/cache/openafs:50000" > ${IMAGE}etc/openafs/cacheinfo
+		echo "/afs:/var/cache/openafs:200000" > ${IMAGE}etc/openafs/cacheinfo
 	fi
 	# ThisCell: default to "openafs.org"
 	if [ ! -e ${ROOT}etc/openafs/ThisCell ]; then
@@ -285,35 +292,26 @@ pkg_postinst() {
 	# Create afs mountpoint
 	mkdir /afs 2>/dev/null
 
-	einfo
-	einfo "For browsing global Cells, please get CellServDB from"
-	einfo "/usr/share/doc/${PF} and put in /etc/openafs.  Then start"
-	einfo "using /etc/init.d/afs right away."
-	einfo "For more functionality, look at the limited README in the"
-	einfo "same directory, or turn to the more elaborate procedures"
-	einfo "described on http://www.openafs.org (quick beginnings)"
-	einfo "After initial server setup, you can edit /etc/conf.d/afs"
-	einfo "to enable the BOS Server."
 	einfo ""
-	einfo "To use AFS fully, you need either to start:"
-	einfo "1. kaserver, which is included with openafs but as it is"
-	einfo "based on kerberos4, it is not recommended."
-	einfo "2. app-crypt/kth-krb, but as it is also based on kerberos4 protocol,"
-	einfo "   you can keep passwords replicated in contrast to kaserver, but still"
-	einfo "   don't waste your time here."
-	einfo "3. app-crypt/heimdal, which is kerberos5 distribution written in Europe,"
-	einfo "   so no US export restrictions apply (*recommended*, compatible with"
-	einfo "   MIT krb5, see below)."
-	einfo "   BTW: if you need kerberos4 backwards compatibility,"
-	einfo "   heimdal can be compiled with --with-krb4 switch to provide it, but"
-	einfo "   app-crypt/kth-krb must be installed so that heimdal's configure"
-	einfo "   can find it. Beware that krb4 approach is not considered"
-	einfo "   safe anymore, so do not install kth-krb unless you really need it."
-	einfo "4. app-crypt/mit-krb5, if export restrictions allow you to do so."
-	einfo
+	einfo "If you are upgrading from a < 1.4.0_rc8 version of the ebuild,"
+	einfo "we urge you to look at the upgrade-section of the"
+	einfo "Gentoo OpenAFS documentation.  (If you're upgrading from"
+	einfo "< 1.3.85, then you really really should)"
 
-	epause 20
 	ebeep 5
+
+	einfo ""
+	einfo "This installation should work out of the box (at least the"
+	einfo "client part doing global afs-cell browsing, unless you had"
+	einfo "a previous and different configuration).  If you want to"
+	einfo "set up your own cell or modify the standard config,"
+	einfo "please have a look at the Gentoo OpenAFS documentation"
+	einfo "(warning: it is not yet up to date wrt the new file locations)"
+	einfo ""
+	einfo "The documentation can be found at:"
+	einfo "  http://www.gentoo.org/doc/en/openafs.xml"
+
+	epause 5
 }
 
 pkg_prerm() {
