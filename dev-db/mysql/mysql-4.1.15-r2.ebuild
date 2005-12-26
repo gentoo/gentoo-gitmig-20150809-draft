@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r2.ebuild,v 1.3 2005/12/12 10:15:56 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15-r2.ebuild,v 1.4 2005/12/26 23:10:57 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -548,7 +548,7 @@ src_install() {
 	done
 
 	# oops
-	mysql_check_version_range "5.00.16.00 to 5.00.16.99" \
+	mysql_check_version_range "5.00.16.00 to 5.00.17.99" \
 	&& cp "${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" "${D}/usr/share/mysql/"
 
 	# TODO change at Makefile-am level
@@ -761,7 +761,7 @@ pkg_config() {
 		# Filling timezones, see
 		# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
 		${ROOT}/usr/bin/mysql_tzinfo_to_sql${MY_SUFFIX} ${ROOT}/usr/share/zoneinfo \
-		> "${sqltmp}" 2>&1 | grep -v "Skipping it."
+		> "${sqltmp}" 2>/dev/null
 
 		if [[ -r "${help_tables}" ]] ; then
 			cat "${help_tables}" >> "${sqltmp}"
