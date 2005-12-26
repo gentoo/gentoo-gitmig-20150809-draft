@@ -3,4 +3,4 @@ MD5 adb78cc7915dcce598e1c8cf29b09e14 files/digest-xf86bigfontproto-1.1.1 74
 MD5 b6d58207e204c895faea37ad2b8d3f43 files/digest-xf86bigfontproto-1.1.2 74
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2405bcf2773247f4e25437ddaef4eb98 xf86bigfontproto-1.1.1.ebuild 462
-MD5 9dd343bab6b904f56940338d209a1084 xf86bigfontproto-1.1.2.ebuild 466
+MD5 13487c6919ccc749288fb21f1fd23bea xf86bigfontproto-1.1.2.ebuild 473

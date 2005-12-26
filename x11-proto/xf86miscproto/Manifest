@@ -3,4 +3,4 @@ MD5 3ab44a31eb29d329e784a77ac1fbb3fa files/digest-xf86miscproto-0.9.1 71
 MD5 32e78e681965afe09d92742c02b6e3df files/digest-xf86miscproto-0.9.2 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 1f0cbc41156cab6965c5f102981cff69 xf86miscproto-0.9.1.ebuild 453
-MD5 4fefff29c2e56f6dfe7004e7febcb133 xf86miscproto-0.9.2.ebuild 457
+MD5 98908988d6d40908e1237cb60ef56eb2 xf86miscproto-0.9.2.ebuild 464

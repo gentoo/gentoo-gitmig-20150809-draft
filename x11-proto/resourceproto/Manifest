@@ -3,4 +3,4 @@ MD5 903537cbf6453f193f57a78181d2ec2d files/digest-resourceproto-1.0.1 71
 MD5 a97cdf150af97874f6ef56efe3255a59 files/digest-resourceproto-1.0.2 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 8edf3c2e155b7f521457817e047b4b35 resourceproto-1.0.1.ebuild 452
-MD5 1c7587626ecb54a4a42fc83778de407a resourceproto-1.0.2.ebuild 456
+MD5 1ac1f50ae01664a8940c54775245f3c2 resourceproto-1.0.2.ebuild 463

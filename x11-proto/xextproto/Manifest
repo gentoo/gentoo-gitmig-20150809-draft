@@ -3,4 +3,4 @@ MD5 62fa365cd3753812e38a8d3849d2bb2a files/digest-xextproto-7.0.1 67
 MD5 b09b4d0a060677052f8ddd5decf2231b files/digest-xextproto-7.0.2 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 e93d759b223637d78c088b07d0cac9f7 xextproto-7.0.1.ebuild 544
-MD5 68ee3da0c570127a29a8a7cccfc79a38 xextproto-7.0.2.ebuild 548
+MD5 ac09939a7d4cd5952de92857aa4e045e xextproto-7.0.2.ebuild 555

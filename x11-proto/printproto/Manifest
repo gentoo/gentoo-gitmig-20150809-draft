@@ -3,4 +3,4 @@ MD5 20a111b1708b318fced156aa4d74116e files/digest-printproto-1.0.2 68
 MD5 e2da3bf748f85ca30624723050ef7cd5 files/digest-printproto-1.0.3 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 15b32c1f0155d3f4282740f6d27a9fe7 printproto-1.0.2.ebuild 447
-MD5 00046e250405f0590a16f5b4ed2788fd printproto-1.0.3.ebuild 447
+MD5 fe7f1278f22cac0ed16799e06a9cd071 printproto-1.0.3.ebuild 454

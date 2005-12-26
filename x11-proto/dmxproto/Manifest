@@ -1,6 +1,6 @@
 MD5 9e7f624115fb7492095af777105ee681 ChangeLog 1188
 MD5 653eb444b3a2973b5487a8140b5244ff dmxproto-2.2.1.ebuild 437
-MD5 f608b7b7ad6ebdbd0eaae6885e56b319 dmxproto-2.2.2.ebuild 441
+MD5 832fe5f2b93727ad31bcace0f3dc238c dmxproto-2.2.2.ebuild 448
 MD5 1f8ce4ca2fb74188e88b17696daa1dc0 files/digest-dmxproto-2.2.1 66
 MD5 fc6ae48b9cc37a200939f637c29906b4 files/digest-dmxproto-2.2.2 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

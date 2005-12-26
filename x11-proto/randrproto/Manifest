@@ -3,4 +3,4 @@ MD5 00192441835e67bc9509f6d8618e1158 files/digest-randrproto-1.1.1 68
 MD5 6433de7d42844d47b2f39caaeb41f1bf files/digest-randrproto-1.1.2 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f6a88ceff752df783c8594a55bb600e0 randrproto-1.1.1.ebuild 443
-MD5 22768430d8496f130b53855121ed530b randrproto-1.1.2.ebuild 447
+MD5 c5e946d5f6f23042c18db5b5f3b0d23d randrproto-1.1.2.ebuild 454

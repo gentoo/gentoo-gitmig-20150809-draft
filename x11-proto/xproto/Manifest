@@ -3,4 +3,4 @@ MD5 73afef717750924fa39c9f88fbd9e919 files/digest-xproto-7.0.3 65
 MD5 e1cb8e9c81620c2fda77f8e8e8094b80 files/digest-xproto-7.0.4 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 1766150d9a4268d25674d43221d4a0f9 xproto-7.0.3.ebuild 509
-MD5 02732551edafdde2a7722d9bca2c5794 xproto-7.0.4.ebuild 509
+MD5 0b143780c008f8c04369627ecab06a07 xproto-7.0.4.ebuild 516

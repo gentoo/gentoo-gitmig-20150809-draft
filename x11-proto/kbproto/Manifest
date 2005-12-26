@@ -2,5 +2,5 @@ MD5 9577c3ee0e9a0c507ac4532a53c4dff7 ChangeLog 1542
 MD5 23db3eed8a10b24f2547a267da38b7d6 files/digest-kbproto-1.0.1 65
 MD5 8501c01b30c2651c45de20f43b6b91ac files/digest-kbproto-1.0.2 65
 MD5 dc1ba8fe7ee62cc0bd4a4a913168e08d kbproto-1.0.1.ebuild 434
-MD5 f7d99bca7af9368539fc567841b812c7 kbproto-1.0.2.ebuild 438
+MD5 ff8ad3da4eafcd0f914a32815b89ff5b kbproto-1.0.2.ebuild 445
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

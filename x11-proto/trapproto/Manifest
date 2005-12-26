@@ -3,4 +3,4 @@ MD5 67a3aa6f7002873c0634da168b1e92b3 files/digest-trapproto-3.4.2 67
 MD5 d0d6da2da3c803c7a0bc928b24aee8da files/digest-trapproto-3.4.3 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 64f95f382da879807381fb53060c772f trapproto-3.4.2.ebuild 444
-MD5 e3b0b5a9f8f5156d6b62b050531858f2 trapproto-3.4.3.ebuild 444
+MD5 d72227a28a173d8bf1288c59b2a955de trapproto-3.4.3.ebuild 451
