@@ -1,0 +1,120 @@
+diff -Nru vmailmgr-0.97.orig/authenticate/Makefile.am vmailmgr-0.97/authenticate/Makefile.am
+--- vmailmgr-0.97.orig/authenticate/Makefile.am	2005-12-26 11:33:33.000000000 +0200
++++ vmailmgr-0.97/authenticate/Makefile.am	2005-12-26 11:37:00.914606250 +0200
+@@ -1,6 +1,4 @@
+ bin_PROGRAMS = checkvpw vauthenticate
+-authlib_PROGRAMS = authvmailmgr
+-authlibdir = ${libdir}/courier-imap/authlib/
+ 
+ noinst_PODS = checkvpw.pod vauthenticate.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
+@@ -25,8 +23,5 @@
+ checkvpw_SOURCES = checkvpw.cc authvlib.cc authvlib.h
+ checkvpw_LDADD = ../lib/libvmailmgr.a
+ 
+-authvmailmgr_SOURCES = authvmailmgr.cc authvlib.cc authvlib.h
+-authvmailmgr_LDADD = ../lib/libvmailmgr.a -L../lib/courier-authlib -lauthmod
+-
+ vauthenticate_SOURCES = vauthenticate.cc authvlib.cc authvlib.h
+ vauthenticate_LDADD = ../lib/libvmailmgr.a
+diff -Nru vmailmgr-0.97.orig/authenticate/Makefile.in vmailmgr-0.97/authenticate/Makefile.in
+--- vmailmgr-0.97.orig/authenticate/Makefile.in	2005-12-26 11:33:33.000000000 +0200
++++ vmailmgr-0.97/authenticate/Makefile.in	2005-12-26 11:38:28.700092500 +0200
+@@ -84,8 +84,6 @@
+ pythonlibdir = @pythonlibdir@
+ 
+ bin_PROGRAMS = checkvpw vauthenticate
+-authlib_PROGRAMS = authvmailmgr
+-authlibdir = ${libdir}/courier-imap/authlib/
+ 
+ noinst_PODS = checkvpw.pod vauthenticate.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
+@@ -100,9 +98,6 @@
+ checkvpw_SOURCES = checkvpw.cc authvlib.cc authvlib.h
+ checkvpw_LDADD = ../lib/libvmailmgr.a
+ 
+-authvmailmgr_SOURCES = authvmailmgr.cc authvlib.cc authvlib.h
+-authvmailmgr_LDADD = ../lib/libvmailmgr.a -L../lib/courier-authlib -lauthmod
+-
+ vauthenticate_SOURCES = vauthenticate.cc authvlib.cc authvlib.h
+ vauthenticate_LDADD = ../lib/libvmailmgr.a
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -115,9 +110,6 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-authvmailmgr_OBJECTS =  authvmailmgr.o authvlib.o
+-authvmailmgr_DEPENDENCIES =  ../lib/libvmailmgr.a
+-authvmailmgr_LDFLAGS = 
+ checkvpw_OBJECTS =  checkvpw.o authvlib.o
+ checkvpw_DEPENDENCIES =  ../lib/libvmailmgr.a
+ checkvpw_LDFLAGS = 
+@@ -143,8 +135,8 @@
+ 
+ TAR = tar
+ GZIP_ENV = --best
+-SOURCES = $(authvmailmgr_SOURCES) $(checkvpw_SOURCES) $(vauthenticate_SOURCES)
+-OBJECTS = $(authvmailmgr_OBJECTS) $(checkvpw_OBJECTS) $(vauthenticate_OBJECTS)
++SOURCES = $(checkvpw_SOURCES) $(vauthenticate_SOURCES)
++OBJECTS = $(checkvpw_OBJECTS) $(vauthenticate_OBJECTS)
+ 
+ all: all-redirect
+ .SUFFIXES:
+@@ -226,10 +218,6 @@
+ 
+ maintainer-clean-compile:
+ 
+-authvmailmgr: $(authvmailmgr_OBJECTS) $(authvmailmgr_DEPENDENCIES)
+-	@rm -f authvmailmgr
+-	$(CXXLINK) $(authvmailmgr_LDFLAGS) $(authvmailmgr_OBJECTS) $(authvmailmgr_LDADD) $(LIBS)
+-
+ checkvpw: $(checkvpw_OBJECTS) $(checkvpw_DEPENDENCIES)
+ 	@rm -f checkvpw
+ 	$(CXXLINK) $(checkvpw_LDFLAGS) $(checkvpw_OBJECTS) $(checkvpw_LDADD) $(LIBS)
+@@ -332,12 +320,6 @@
+ 	../lib/vpwentry/vpwentry.h ../lib/misc/lookup.h \
+ 	../lib/vdomain/vdomain.h ../lib/vpwtable/vpwtable.h \
+ 	../lib/misc/response.h
+-authvmailmgr.o: authvmailmgr.cc ../config.h ../lib/misc/exec.h \
+-	../lib/vpwentry/vpwentry.h ../lib/mystring/mystring.h \
+-	../lib/mystring/rep.h ../lib/mystring/iter.h \
+-	../lib/mystring/join.h ../lib/misc/strlist.h authvlib.h \
+-	../lib/misc/pwentry.h ../lib/config/configrc.h \
+-	../lib/courier-authlib/auth.h ../lib/courier-authlib/authmod.h
+ checkvpw.o: checkvpw.cc ../config.h ../lib/config/configrc.h \
+ 	../lib/mystring/mystring.h ../lib/mystring/rep.h \
+ 	../lib/mystring/iter.h ../lib/mystring/join.h \
+diff -Nru vmailmgr-0.97.orig/configure vmailmgr-0.97/configure
+--- vmailmgr-0.97.orig/configure	2005-12-26 11:33:33.000000000 +0200
++++ vmailmgr-0.97/configure	2005-12-26 11:40:22.367196250 +0200
+@@ -5573,7 +5573,7 @@
+ cgidir='/var/www/localhost/cgi-bin'
+ 
+ 
+-                                                                                                                                                                                                                  ac_config_files="$ac_config_files Makefile cgi/Makefile authenticate/Makefile commands/Makefile daemon/Makefile doc/Makefile lib/Makefile lib/cdb++/Makefile lib/cgi/Makefile lib/cli++/Makefile lib/config/Makefile lib/courier-authlib/Makefile lib/fdbuf/Makefile lib/misc/Makefile lib/mystring/Makefile lib/vdomain/Makefile lib/vpwentry/Makefile lib/vpwtable/Makefile scripts/Makefile php/Makefile python/Makefile"
++                                                                                                                                                                                                                  ac_config_files="$ac_config_files Makefile cgi/Makefile authenticate/Makefile commands/Makefile daemon/Makefile doc/Makefile lib/Makefile lib/cdb++/Makefile lib/cgi/Makefile lib/cli++/Makefile lib/config/Makefile lib/fdbuf/Makefile lib/misc/Makefile lib/mystring/Makefile lib/vdomain/Makefile lib/vpwentry/Makefile lib/vpwtable/Makefile scripts/Makefile php/Makefile python/Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+diff -Nru vmailmgr-0.97.orig/lib/Makefile.am vmailmgr-0.97/lib/Makefile.am
+--- vmailmgr-0.97.orig/lib/Makefile.am	2002-11-20 17:54:45.000000000 +0200
++++ vmailmgr-0.97/lib/Makefile.am	2005-12-26 12:29:10.010162500 +0200
+@@ -1,5 +1,4 @@
+-SUBDIRS = misc vdomain vpwentry vpwtable cdb++ cgi cli++ fdbuf mystring config \
+-	courier-authlib
++SUBDIRS = misc vdomain vpwentry vpwtable cdb++ cgi cli++ fdbuf mystring config
+ noinst_LIBRARIES = libvmailmgr.a libcgi.a libcli.a
+ EXTRA_DIST = mergelib.sh
+ 
+diff -Nru vmailmgr-0.97.orig/lib/Makefile.in vmailmgr-0.97/lib/Makefile.in
+--- vmailmgr-0.97.orig/lib/Makefile.in	2005-09-04 08:01:53.000000000 +0300
++++ vmailmgr-0.97/lib/Makefile.in	2005-12-26 12:29:15.062478250 +0200
+@@ -83,7 +83,7 @@
+ phpdir = @phpdir@
+ pythonlibdir = @pythonlibdir@
+ 
+-SUBDIRS = misc vdomain vpwentry vpwtable cdb++ cgi cli++ fdbuf mystring config 	courier-authlib
++SUBDIRS = misc vdomain vpwentry vpwtable cdb++ cgi cli++ fdbuf mystring config
+ 
+ noinst_LIBRARIES = libvmailmgr.a libcgi.a libcli.a
+ EXTRA_DIST = mergelib.sh

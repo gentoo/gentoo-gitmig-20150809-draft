@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.21 2005/12/20 22:14:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.22 2005/12/26 11:03:08 mrness Exp $
+
+*vmailmgr-0.97 (26 Dec 2005)
+
+  26 Dec 2005; Alin Nastac <mrness@gentoo.org>
+  +files/vmailmgr-0.97-gentoo.patch,
+  +files/vmailmgr-0.97-no-authvmailmgr.patch, +vmailmgr-0.97.ebuild:
+  Version bump (#105112) with authvmailmgr removed (is incompatible with 
+  courier-authlib daemon).
 
   20 Dec 2005; Alin Nastac <mrness@gentoo.org> vmailmgr-0.96.9-r3.ebuild:
   Stable on x86.

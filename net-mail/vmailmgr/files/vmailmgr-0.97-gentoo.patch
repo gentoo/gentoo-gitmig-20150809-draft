@@ -1,0 +1,44 @@
+diff -Nru vmailmgr-0.97.orig/authenticate/Makefile.am vmailmgr-0.97/authenticate/Makefile.am
+--- vmailmgr-0.97.orig/authenticate/Makefile.am	2003-12-02 05:46:43.000000000 +0200
++++ vmailmgr-0.97/authenticate/Makefile.am	2005-12-25 10:41:07.000000000 +0200
+@@ -1,6 +1,6 @@
+ bin_PROGRAMS = checkvpw vauthenticate
+ authlib_PROGRAMS = authvmailmgr
+-authlibdir = ${prefix}/lib/courier-imap/libexec/authlib/
++authlibdir = ${libdir}/courier-imap/authlib/
+ 
+ noinst_PODS = checkvpw.pod vauthenticate.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
+diff -Nru vmailmgr-0.97.orig/authenticate/Makefile.in vmailmgr-0.97/authenticate/Makefile.in
+--- vmailmgr-0.97.orig/authenticate/Makefile.in	2005-09-04 08:01:56.000000000 +0300
++++ vmailmgr-0.97/authenticate/Makefile.in	2005-12-25 10:41:07.000000000 +0200
+@@ -85,7 +85,7 @@
+ 
+ bin_PROGRAMS = checkvpw vauthenticate
+ authlib_PROGRAMS = authvmailmgr
+-authlibdir = ${prefix}/lib/courier-imap/libexec/authlib/
++authlibdir = ${libdir}/courier-imap/authlib/
+ 
+ noinst_PODS = checkvpw.pod vauthenticate.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
+diff -Nru vmailmgr-0.97.orig/configure vmailmgr-0.97/configure
+--- vmailmgr-0.97.orig/configure	2005-09-04 07:26:50.000000000 +0300
++++ vmailmgr-0.97/configure	2005-12-25 10:41:07.000000000 +0200
+@@ -3431,7 +3431,7 @@
+   WANTPYTHON_FALSE=
+ fi
+ 
+-phpdir="/home/httpd/php"
++phpdir="${libdir}/php"
+ 
+ 
+ # Extract the first word of "w3m", so it can be a program name with args.
+@@ -5570,7 +5570,7 @@
+ done
+ 
+ 
+-cgidir='${prefix}/cgi-bin'
++cgidir='/var/www/localhost/cgi-bin'
+ 
+ 
+                                                                                                                                                                                                                   ac_config_files="$ac_config_files Makefile cgi/Makefile authenticate/Makefile commands/Makefile daemon/Makefile doc/Makefile lib/Makefile lib/cdb++/Makefile lib/cgi/Makefile lib/cli++/Makefile lib/config/Makefile lib/courier-authlib/Makefile lib/fdbuf/Makefile lib/misc/Makefile lib/mystring/Makefile lib/vdomain/Makefile lib/vpwentry/Makefile lib/vpwtable/Makefile scripts/Makefile php/Makefile python/Makefile"
