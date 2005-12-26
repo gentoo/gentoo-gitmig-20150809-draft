@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p2.ebuild,v 1.1 2005/12/26 06:58:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p2.ebuild,v 1.2 2005/12/26 22:06:53 mr_bones_ Exp $
 
 inherit eutils gnuconfig db
 
@@ -72,7 +72,7 @@ src_compile() {
 	fi
 
 	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
-	
+
 	# the entire testsuite needs the TCL functionality
 	if use tcltk && has test $FEATURES; then
 		myconf="${myconf} --enable-test"
