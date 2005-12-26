@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xtrap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.10 2005/12/23 10:49:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.11 2005/12/26 21:28:35 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xtrap-0.99.2.ebuild, -xtrap-1.0.0.ebuild:
+  Pull old versions.
 
 *xtrap-1.0.1 (23 Dec 2005)
 
