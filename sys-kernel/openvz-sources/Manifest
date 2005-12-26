@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dbca289bb898ce8409cb759bcfd151fc ChangeLog 2358
+MD5 ccd4a74148bb288c545977f8cef84280 ChangeLog 2475
 MD5 6ac5cd5d3e68664565f7fd08b9acc803 files/digest-openvz-sources-022.044 143
 MD5 61e96501433e05eda1dbef86f9e2a6b8 files/digest-openvz-sources-022.050 142
 MD5 e84cd9c1152cbebe35d0934724222507 files/digest-openvz-sources-022.056 142
 MD5 647244b44cdc8ef50e6dd53b4b8e88af metadata.xml 564
 MD5 0daf5a5213239296ab2571dfe0d97daf openvz-sources-022.044.ebuild 947
-MD5 cd39d221568edbcaf9ca5c4db0fd77f5 openvz-sources-022.050.ebuild 718
+MD5 11be691991c045ff27b336f6a4775113 openvz-sources-022.050.ebuild 716
 MD5 315bdad1f73e14acd76deb2840d98896 openvz-sources-022.056.ebuild 718
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDp/NPmPFBzbX68WERAkIoAJ9IRH54NSnlJrbIsCkvJIAqqM4b6QCfYQEF
-eBaMVVlhxJXze0VoBHcugRg=
-=Vbss
+iD8DBQFDr7M4mPFBzbX68WERAkrjAJ4pr77NyfIe5yTHEVT1ecbRfEDjOgCgmn4x
+gRn3SADJ6STNK7rDTIwW+dg=
+=lBFh
 -----END PGP SIGNATURE-----
