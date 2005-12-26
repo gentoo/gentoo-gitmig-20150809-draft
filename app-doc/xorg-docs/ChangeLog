@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.6 2005/12/23 20:13:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.7 2005/12/26 21:33:20 joshuabaergen Exp $
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xorg-docs-1.0.0.ebuild:
+  Pull old versions.
 
 *xorg-docs-1.0.1 (23 Dec 2005)
 
