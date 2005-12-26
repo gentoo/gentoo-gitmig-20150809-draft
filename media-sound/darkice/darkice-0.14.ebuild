@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.12 2005/11/07 10:36:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.13 2005/12/26 15:19:19 lu_zero Exp $
 
-IUSE="encode oggvorbis alsa"
+IUSE="encode vorbis alsa"
 
 DESCRIPTION="IceCast live streamer delivering Ogg and mp3 streams simultaneously to multiple hosts."
 HOMEPAGE="http://darkice.sourceforge.net/"
@@ -14,25 +14,25 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~hppa ~ppc sparc x86"
 
 DEPEND="encode?	( >=media-sound/lame-1.89 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )"
 
 src_compile() {
-	if ! use encode && ! use oggvorbis
+	if ! use encode && ! use vorbis
 	then
 
 		eerror "You need support for mp3 or Ogg Vorbis enconding for this"
 		eerror "package. Please merge again with at least one of the "
-		eerror "\`encode' and \`oggvorbis' USE flags enabled:"
+		eerror "\`encode' and \`vorbis' USE flags enabled:"
 		eerror
 		eerror "  # USE=\"encode\" emerge darkice"
-		eerror "  # USE=\"oggvorbis\" emerge darkice"
+		eerror "  # USE=\"vorbis\" emerge darkice"
 		die "Won't build without support for lame nor vorbis"
 	fi
 
 	econf `use_with alsa` \
 	      `use_with encode lame` \
-	      `use_with oggvorbis vorbis` || die
+	      `use_with vorbis vorbis` || die
 
 	emake || die "Compilation failed"
 }
