@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.70 2005/12/26 15:11:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.71 2005/12/26 19:09:41 compnerd Exp $
+
+  26 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org> dbus-0.50-r2.ebuild:
+  Dropping the gcj USE flag as it is currently not functional.
 
   26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org dbus-0.50-r2.ebuild:
   ~alpha keyword.

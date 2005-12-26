@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.3 2005/12/26 15:11:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.4 2005/12/26 19:09:41 compnerd Exp $
 
 inherit eutils mono python multilib autotools debug qt3
 
-IUSE="X gcj gtk qt python mono doc xml2"
+IUSE="X gtk qt python mono doc xml2"
+# gcj - this still doesnt work properly
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
 HOMEPAGE="http://dbus.freedesktop.org/"
