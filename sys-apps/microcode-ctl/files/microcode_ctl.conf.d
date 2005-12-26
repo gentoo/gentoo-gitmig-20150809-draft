@@ -1,5 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/files/microcode_ctl.conf.d,v 1.3 2005/01/08 01:17:49 vapier Exp $
+# /etc/conf.d/microcode_ctl
+
+# Device to pass to microcode_ctl
 
 MICROCODE_DEV="/dev/cpu/microcode"
+
+
+# Should we try to unload the microcode module after we
+# update the cpu microcode ?
+
+MICROCODE_UNLOAD="yes"

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/microcode-ctl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.13 2005/09/15 00:45:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.14 2005/12/26 21:01:37 vapier Exp $
+
+  26 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  files/microcode_ctl.conf.d, files/microcode_ctl.rc:
+  Add an option to unload the microcode kernel module after we are done using
+  it #116790 by ilGino.
 
 *microcode-ctl-1.12 (15 Sep 2005)
 

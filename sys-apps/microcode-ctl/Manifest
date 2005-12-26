@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7a07fdb4e83ab7205be0bf0d180d3467 microcode-ctl-1.12.ebuild 1169
-MD5 46861b4fb632e925e1fee37c41c02ee7 microcode-ctl-1.11.ebuild 1186
-MD5 cac2e308eb60e19c1f18e7652af548b5 ChangeLog 2691
-MD5 e8b0bb1b0be1aef5fcb99663b9457b35 files/microcode_ctl.rc 618
-MD5 23438cd1b63d7190967405e42ad1a0f6 files/microcode_ctl.conf.d 267
+MD5 603c35133c422da6a183a6f3b5e3caad ChangeLog 2898
 MD5 95e076b988c73349d2606d4ecd052a56 files/digest-microcode-ctl-1.11 70
 MD5 717fe335882b48bdae85f62c28883120 files/digest-microcode-ctl-1.12 70
+MD5 6458858fff894d2d77aae536c697ebf5 files/microcode_ctl.conf.d 210
+MD5 44cffc4c0ce1036aa22076db246dbd14 files/microcode_ctl.rc 761
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 46861b4fb632e925e1fee37c41c02ee7 microcode-ctl-1.11.ebuild 1186
+MD5 7a07fdb4e83ab7205be0bf0d180d3467 microcode-ctl-1.12.ebuild 1169
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKMQjgIKl8Uu19MoRAicZAJ0Q0lrftzn0DTnuD80qLxG0I6wxEgCfeQnJ
-uo3qKlPOn1omyHLFKqDDjms=
-=mQjb
+iD8DBQFDsFpE2+ySkm8kpY0RAsTSAKDCbCmiSR+CBmkHpFqvI5KSnJoXFACfYMje
+TnOT7GkWpejbnapemmN9WxY=
+=s4LQ
 -----END PGP SIGNATURE-----
