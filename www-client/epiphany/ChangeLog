@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.46 2005/11/28 06:39:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.47 2005/12/26 15:27:05 kloeri Exp $
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org epiphany-1.8.2.ebuild,
+  epiphany-1.8.3.ebuild:
+  ~alpha keyword.
 
 *epiphany-1.8.3 (28 Nov 2005)
 
