@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.20 2005/12/26 16:35:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.21 2005/12/26 19:27:54 mr_bones_ Exp $
+
+  26 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/snes9x-139-r1-BE-sound-fix.diff, -files/1.41.1-system-zlib.patch,
+  -files/snes9x-gcc3.diff, -files/snes9x-139-r1-Makefile-ppc.diff,
+  -files/1.42-system-zlib.patch, -snes9x-1.42-r1.ebuild,
+  -snes9x-1.43.ebuild:
+  clean out old files
 
   26 Dec 2005; Simon Stelling <blubb@gentoo.org> snes9x-1.43-r1.ebuild:
   fix bug 103775
