@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r5.ebuild,v 1.3 2005/09/09 22:06:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r5.ebuild,v 1.4 2005/12/26 14:27:48 lu_zero Exp $
 
 inherit eutils
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 DESCRIPTION="Greg Stein's python streaming audio server for desktop or LAN use"
 HOMEPAGE="http://edna.sourceforge.net/"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="dev-lang/python
-	oggvorbis? ( dev-python/pyogg
+	vorbis? ( dev-python/pyogg
 		dev-python/pyvorbis )"
 
 src_unpack() {
@@ -54,7 +54,7 @@ pkg_postinst() {
 	einfo "directories are allowed).  Test edna from a shell prompt"
 	einfo "until you have it configured properly, then add edna to"
 	einfo "the default runlevel when you're ready.  Add the USE flag"
-	einfo "oggvorbis if you want edna to serve ogg files."
+	einfo "vorbis if you want edna to serve ogg files."
 	einfo
 	einfo "See edna.conf and the html docs for more info, and set"
 	einfo "PYTHONPATH=/usr/lib/edna to run from a shell prompt."

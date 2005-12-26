@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.7 2005/07/28 21:06:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.8 2005/12/26 14:31:02 lu_zero Exp $
 
-IUSE="mp3 oggvorbis"
+IUSE="mp3 vorbis"
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/qt-3*"
 
 RDEPEND="${DEPEND}
 	 mp3? ( dev-perl/MP3-Tag )
-	 oggvorbis? ( media-sound/vorbis-tools )
+	 vorbis? ( media-sound/vorbis-tools )
 	 media-sound/alsamixergui
 	 virtual/mpg123"
 
@@ -44,7 +44,7 @@ src_install () {
 	exeinto /usr/bin
 	doexe alsamixerguis bpmdj-raw bpmdj-record bpmdj-replay copydirstruct fetchdirstruct fetchfiles kbpm-batch kbpm-dj kbpm-merge kbpm-mix kbpm-play rbpm-play record_mixer xmms-play || die "doexe failed"
 	use mp3 && doexe bpmdj-import-mp3.pl
-	use oggvorbis && doexe bpmdj-import-ogg.pl
+	use vorbis && doexe bpmdj-import-ogg.pl
 	dodoc authors changelog copyright readme todo || die "dodoc failed"
 	mkdir -p ${D}/usr/share/bpmdj
 	cp -a sequences ${D}/usr/share/bpmdj/ || die "cp failed"

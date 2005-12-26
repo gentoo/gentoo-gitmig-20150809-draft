@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.16 2005/09/04 11:04:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.17 2005/12/26 14:26:23 lu_zero Exp $
 
 inherit eutils gnuconfig
 IUSE="debug"
@@ -17,12 +17,12 @@ KEYWORDS="x86 -ppc -sparc"
 DEPEND="dev-lang/nasm"
 #	>=sys-libs/ncurses-5.H2
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
-#	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
+#	vorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 # Oggvorbis support breaks with -rc3
 #RDEPEND="virtual/libc"
 #	>=sys-libs/ncurses-5.2
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
-#	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
+#	vorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 
 S=${WORKDIR}/petit${MY_PV}
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-#	if use oggvorbis ; then
+#	if use vorbis ; then
 #		myconf="--with-vorbis"
 		myconf="--without-vorbis"
 #	else

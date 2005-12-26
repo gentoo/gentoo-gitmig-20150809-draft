@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gogo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.14 2005/09/04 11:04:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.15 2005/12/26 14:26:23 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> gogo-3.10-r1.ebuild:
+  oggvorbis Cleanup
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> gogo-3.10-r1.ebuild:
   Don't install COPYING and INSTALL files.

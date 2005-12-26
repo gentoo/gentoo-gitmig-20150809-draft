@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.24 2005/09/14 07:21:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.25 2005/12/26 14:27:48 lu_zero Exp $
+
+  26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> edna-0.5-r4.ebuild,
+  edna-0.5-r5.ebuild:
+  oggvorbis Cleanup
 
   14 Sep 2005; Aron Griffis <agriffis@gentoo.org> edna-0.5-r4.ebuild:
   Mark 0.5-r4 stable on alpha
