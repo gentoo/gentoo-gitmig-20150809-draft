@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.10 2005/04/15 14:45:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.11 2005/12/26 12:10:47 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc ~amd64"
-IUSE="alsa arts debug nls oggvorbis truetype xvid"
+IUSE="alsa arts debug nls vorbis truetype xvid"
 
 RDEPEND="virtual/x11
 	media-sound/madplay
@@ -24,8 +24,7 @@ RDEPEND="virtual/x11
 	xvid? ( >=media-libs/xvid-0.9.1 )
 	x86? ( dev-lang/nasm )
 	nls? ( >=sys-devel/gettext-0.12.1 )
-	oggvorbis? ( >=media-libs/libogg-1.0
-		>=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	arts? ( >=kde-base/arts-1.2.1 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )"
