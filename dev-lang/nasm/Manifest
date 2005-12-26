@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9a65245dbc1043b4515ce4509d393a21 ChangeLog 5552
 MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r1 65
 MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r2 65
 MD5 db4edfe802f41cb10b89e8e6a2cfd714 files/nasm-0.98.39-elf-visibility.patch 4311
 MD5 8524fffd916a234a0fa40149506746ee metadata.xml 738
-MD5 3300e0a51446776ab370d1c2f855d883 nasm-0.98.39-r1.ebuild 1472
-MD5 a7049de2fd13f498b77cbdd25e3973f3 nasm-0.98.39-r2.ebuild 1529
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDp1Rn2+ySkm8kpY0RAt/jAKCkRXwGNgz3ugvt0D7tpSJ4xcjlggCdG6I9
-yIftDthDnBPjIH59PvpaCMU=
-=0Pq2
------END PGP SIGNATURE-----
+MD5 9743f23f6f6ab1ccbd29c000b04f165c nasm-0.98.39-r1.ebuild 1467
+MD5 915da44c48802c38668ef59d48b224b5 nasm-0.98.39-r2.ebuild 1524

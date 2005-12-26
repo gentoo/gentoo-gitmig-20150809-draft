@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39-r2.ebuild,v 1.1 2005/12/17 01:08:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39-r2.ebuild,v 1.2 2005/12/26 08:02:31 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -56,7 +56,7 @@ src_install() {
 			|| die "dobin failed"
 		dosym /usr/bin/rdf2bin /usr/bin/rdf2com
 		doman nasm.1 ndisasm.1
-		dodoc AUTHORS CHANGES ChangeLog INSTALL README TODO
+		dodoc AUTHORS CHANGES ChangeLog README TODO
 		if use doc; then
 			doinfo doc/info/*
 			dohtml doc/html/*
