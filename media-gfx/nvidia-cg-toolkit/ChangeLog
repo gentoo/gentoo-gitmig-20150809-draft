@@ -1,6 +1,19 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.11 2005/04/07 15:45:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.12 2005/12/26 17:57:11 vanquirius Exp $
+
+*nvidia-cg-toolkit-1.4.0.4 (26 Dec 2005)
+
+  26 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  -nvidia-cg-toolkit-1.1.0303.0400.ebuild,
+  nvidia-cg-toolkit-1.2.0402.1900.ebuild,
+  -nvidia-cg-toolkit-1.3.0408.0400.ebuild,
+  nvidia-cg-toolkit-1.3.0501.0700.ebuild, +nvidia-cg-toolkit-1.4.0.4.ebuild:
+  1.4.0.4 version bump for bug 108385. Thanks to Henrik Dohlmann <henrikd at
+  diku dot dk>, Keri Harris <harriskeri at mcs dot vuw dot ac dot nz> and
+  others. Removing old ebuilds, adding graphics as a herd, taking out blauwers
+  from metadata.xml as he seems to be retired. Also, updated HOMEPAGE for
+  existing ebuilds.
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org>
   nvidia-cg-toolkit-1.2.0402.1900.ebuild:

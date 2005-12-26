@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-1.3.0501.0700.ebuild,v 1.1 2005/03/08 16:45:46 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-1.3.0501.0700.ebuild,v 1.2 2005/12/26 17:57:11 vanquirius Exp $
 
 DESCRIPTION="nvidia's c graphics compiler toolkit"
-HOMEPAGE="http://developer.nvidia.com/view.asp?IO=cg_toolkit"
+HOMEPAGE="http://developer.nvidia.com/object/cg_toolkit.html"
 SRC_URI="x86? ( ftp://download.nvidia.com/developer/cg/Cg_1.3/Linux/Cg-1.3.0501-0700.i386.tar.gz )
 		amd64? ( ftp://download.nvidia.com/developer/cg/Cg_1.3/Linux64/Cg-1.3.0501-0700.x86_64.tar.gz )"
 
