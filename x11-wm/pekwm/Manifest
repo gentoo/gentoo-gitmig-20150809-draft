@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d64510f23c940f374f3494fab2633a3d ChangeLog 2638
-MD5 2a4c0e75ae56991a9c6b53b27c16ccf3 metadata.xml 666
-MD5 a2e45e5f38ce959b3e309193b7abc4b6 pekwm-0.1.3-r2.ebuild 1006
-MD5 0d196ab888bf1ddce88bdcc00c623807 pekwm-0.1.4_pre2.ebuild 1260
+MD5 36aee5f0c9e617135fa998b101bec8e0 ChangeLog 2727
 MD5 feb34a062104c0c28685fa05192dc7be files/digest-pekwm-0.1.3-r2 64
-MD5 4eb560893fc98dbaba9b461b71a9df98 files/pekwm-manpath-gentoo.diff 455
 MD5 ecda2eccfb00e25051892b04e9b73efe files/digest-pekwm-0.1.4_pre2 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCj9W2xtZcznfol0URAnegAJ0YSHTMGsIipv1ZsunAodEg730eegCg/cVm
-C4T1I15plzMRK6+wNLepU8c=
-=3rCY
------END PGP SIGNATURE-----
+MD5 4eb560893fc98dbaba9b461b71a9df98 files/pekwm-manpath-gentoo.diff 455
+MD5 2a4c0e75ae56991a9c6b53b27c16ccf3 metadata.xml 666
+MD5 7b15a331bd2750895dd7101c4bcd8dea pekwm-0.1.3-r2.ebuild 1005
+MD5 0d196ab888bf1ddce88bdcc00c623807 pekwm-0.1.4_pre2.ebuild 1260
