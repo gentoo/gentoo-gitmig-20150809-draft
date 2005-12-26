@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.28 2005/08/14 10:07:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.29 2005/12/26 19:35:45 blubb Exp $
+
+  26 Dec 2005; Simon Stelling <blubb@gentoo.org> gnustep-base-1.10.3.ebuild:
+  stable on amd64
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   gnustep-base-1.10.3.ebuild:
