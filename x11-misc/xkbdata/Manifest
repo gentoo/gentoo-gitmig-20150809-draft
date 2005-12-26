@@ -5,4 +5,4 @@ MD5 1206c10b4d50fcf26e3b26e48d8d3dad files/digest-xkbdata-1.0.1 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 68510dee580cd07740ef9b5a317f2249 xkbdata-0.99.1-r1.ebuild 664
 MD5 baa17851211d67c8f4bdffc395ee8cd0 xkbdata-1.0.0.ebuild 664
-MD5 7465f1eaa12ef09fef3bd6a4391b916f xkbdata-1.0.1.ebuild 660
+MD5 e6d79e97dc3e63d36f79b201123cf011 xkbdata-1.0.1.ebuild 667

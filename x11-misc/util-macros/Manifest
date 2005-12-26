@@ -6,4 +6,4 @@ MD5 0be393dfee3dbf05d1f4ff125c2ccc14 files/driver-man-suffix.patch 411
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 9acd9fd3dc8b9b8a4a75dd28c4de34e5 util-macros-0.99.2-r1.ebuild 501
 MD5 0bfb8302a7cf93ea6b31467bf6e452f7 util-macros-1.0.0.ebuild 497
-MD5 cdbe1c55f7b1965c317aa9a1aaab0283 util-macros-1.0.1.ebuild 493
+MD5 7b8ffee0afa7e314d3a2c86fd862de45 util-macros-1.0.1.ebuild 500
