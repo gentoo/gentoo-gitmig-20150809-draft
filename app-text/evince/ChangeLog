@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.18 2005/12/14 20:14:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.19 2005/12/26 15:16:21 kloeri Exp $
+
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org evince-0.4.0-r2.ebuild:
+  ~alpha keyword.
 
   14 Dec 2005; <dang@gentoo.org> evince-0.4.0-r2.ebuild:
   Don't need explicit X deps, only uses what gtk+ requires
