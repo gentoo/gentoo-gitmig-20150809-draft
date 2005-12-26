@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1.ebuild,v 1.9 2005/09/30 18:48:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1.ebuild,v 1.10 2005/12/26 12:50:53 lu_zero Exp $
 
 inherit eutils
 
@@ -12,13 +12,13 @@ SRC_URI="http://icculus.org/SDL_sound/downloads/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="flac mikmod oggvorbis speex physfs"
+IUSE="flac mikmod vorbis speex physfs"
 
 DEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/smpeg-0.4.4-r1
 	flac? ( media-libs/flac )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
+	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	speex? ( media-libs/speex
 		media-libs/libogg )
 	physfs? ( dev-games/physfs )"
@@ -44,7 +44,7 @@ src_compile() {
 	econf \
 		$(use_enable flac) \
 		$(use_enable mikmod) \
-		$(use_enable oggvorbis ogg) \
+		$(use_enable vorbis ogg) \
 		$(use_enable physfs) \
 		$(use_enable speex) \
 		--enable-midi \

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.3 2005/09/30 18:48:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.4 2005/12/26 12:50:53 lu_zero Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="A library that handles the decoding of sound file formats"
@@ -10,12 +10,12 @@ SRC_URI="http://icculus.org/SDL_sound/downloads/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="flac mikmod oggvorbis speex physfs"
+IUSE="flac mikmod vorbis speex physfs"
 
 DEPEND=">=media-libs/libsdl-1.2
 	flac? ( media-libs/flac )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
+	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	speex? ( media-libs/speex
 		media-libs/libogg )
 	physfs? ( dev-games/physfs )"
@@ -31,7 +31,7 @@ src_compile() {
 		$(use_enable speex) \
 		$(use_enable mikmod) \
 		$(use_enable physfs) \
-		$(use_enable oggvorbis ogg) \
+		$(use_enable vorbis ogg) \
 		|| die
 	emake || die "emake failed"
 }
