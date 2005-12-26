@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/fwlanusb-0.09.00_beta.ebuild,v 1.1 2005/12/25 23:06:49 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/fwlanusb-0.09.00_beta.ebuild,v 1.2 2005/12/26 15:49:13 sbriesen Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ DESCRIPTION="driver for the AVM FRITZ!WLAN USB stick"
 HOMEPAGE="http://www.avm.de"
 SRC_URI="ftp://ftp.avm.de/cardware/fritzwlanusb.stick/linux/suse.${SUSEVER}/${PN}-suse${SUSEVER}-${MY_PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 -*"
 IUSE=""
