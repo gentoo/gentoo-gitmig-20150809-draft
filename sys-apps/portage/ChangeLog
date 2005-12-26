@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.57 2005/12/26 12:53:21 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.58 2005/12/26 15:53:21 jstubbs Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  27 Dec 2005; Jason Stubbs <jstubbs@gentoo.org> 
+  portage-2.1_pre2.ebuild:
+  Updated python dependency to 2.3 as python 2.2 can no longer cut it.
 
   26 Dec 2005; Jose Luis Rivero <yoswink@gentoo.org> portage-2.0.53.ebuild:
   Stable on alpha wrt #108082
