@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/captive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.7 2005/08/23 13:10:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.8 2005/12/26 19:07:24 genstef Exp $
+
+*captive-1.1.6 (26 Dec 2005)
+
+  26 Dec 2005; Stefan Schweizer <genstef@gentoo.org> +captive-1.1.6.ebuild:
+  version bump, closes #98137
 
   23 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
   captive-1.1.5-r2.ebuild:
