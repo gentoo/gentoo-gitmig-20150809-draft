@@ -5,4 +5,4 @@ MD5 3c7f3eecac089063f960f627df4ac7e5 files/snes9x-1.43-build.patch 1104
 MD5 7785101201919ebc94bcd95e2cab6017 files/snes9x-1.43-key-bindings-fix.patch 2526
 MD5 48de604e869ca1513f6265f5739d97b1 files/snes9x-1.43-porting.patch 1903
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6d29d215d6df24607d66cc11188288cc snes9x-1.43-r1.ebuild 2541
+MD5 680d94bab8a9806430fc0302406d2b8b snes9x-1.43-r1.ebuild 2571

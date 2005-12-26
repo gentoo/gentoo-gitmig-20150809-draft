@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.4 2005/12/26 19:29:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.5 2005/12/26 20:22:09 mr_bones_ Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
@@ -35,15 +35,20 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"/snes9x
-	epatch "${FILESDIR}"/nojoy.patch
-	epatch "${FILESDIR}"/${P}-porting.patch
-	epatch "${FILESDIR}"/${P}-key-bindings-fix.patch #81980
-	sed -i 's:png_jmpbuf:png_write_info:g' configure
-
 	rm offsets # stupid prebuilt file
-	sed -i -e 's:-lXext -lX11::' Makefile.in
-	sed -i -e '/X_LDFLAGS=/d' configure
-	epatch "${FILESDIR}"/${P}-build.patch
+	sed -i \
+		-e 's:-lXext -lX11::' Makefile.in \
+		|| die "sed failed"
+	epatch \
+		"${FILESDIR}"/nojoy.patch \
+		"${FILESDIR}"/${P}-porting.patch \
+		"${FILESDIR}"/${P}-key-bindings-fix.patch \
+		"${FILESDIR}"/${P}-build.patch
+
+	sed -i \
+		-e 's:png_jmpbuf:png_write_info:g' \
+		-e '/X_LDFLAGS=/d' \
+		configure || die "sed failed"
 
 	autoconf || die
 }
