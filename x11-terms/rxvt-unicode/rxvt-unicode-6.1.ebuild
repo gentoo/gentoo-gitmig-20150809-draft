@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-6.0.ebuild,v 1.1 2005/12/24 21:02:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-6.1.ebuild,v 1.1 2005/12/27 23:23:18 ciaranm Exp $
 
 inherit flag-o-matic
 

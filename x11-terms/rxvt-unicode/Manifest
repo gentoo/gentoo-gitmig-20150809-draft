@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19959eed1c871f206941be223f7d8e4a ChangeLog 9823
+MD5 301780e04520a94a4653b7a41d5149f3 ChangeLog 9999
 MD5 ff186f769724f65b45dcedf2b9e7c9a3 files/digest-rxvt-unicode-3.0 69
 MD5 0454b0e411ee7798e273a94fcabdc823 files/digest-rxvt-unicode-4.0 69
 MD5 749b453f3a41c4bcc2e8706cad32f568 files/digest-rxvt-unicode-5.1 69
 MD5 b7923e2725d925a7ae5210a144a3eeaa files/digest-rxvt-unicode-5.3 69
 MD5 c494bb5f1ed7426e67a3661e93145df2 files/digest-rxvt-unicode-5.9 69
-MD5 7c5b73faa549da6b71e5f4dfdfd4fffe files/digest-rxvt-unicode-6.0 69
+MD5 ba98ed310154234b15ccbd0cfa55833a files/digest-rxvt-unicode-6.1 69
 MD5 27f475fce3946d48a23f36e0279a978c files/rxvt-unicode-2.3-font-fix.diff 431
 MD5 8d13934dc747f15f11334bd642c342cd files/rxvt-unicode-3.9-64bit.patch 632
 MD5 63548e76ee03f6dc4fee9e2239453ca1 files/rxvt-unicode-4.0-64bit.patch 728
@@ -17,11 +17,11 @@ MD5 2e49f34769297a5cdf516e44c8aa40c2 rxvt-unicode-4.0.ebuild 1587
 MD5 4a59732c305c41e1347aa674334213a1 rxvt-unicode-5.1.ebuild 1571
 MD5 a85edd99140d01a457111d8d28f52bf9 rxvt-unicode-5.3.ebuild 1919
 MD5 1a8601605d766c3a35c45b70bf4b64d0 rxvt-unicode-5.9.ebuild 1982
-MD5 4569e06caa051b9e4cd82ce488eb404a rxvt-unicode-6.0.ebuild 1982
+MD5 83f2dc0a5b5e318e99e9a0d04de4ba0b rxvt-unicode-6.1.ebuild 1982
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrbd/LLFUmVNQ7rkRAg8EAKC1h4N2Yiko2OWT3sUZFasICmHKIgCgx+Am
-ecZ0mCbd+8N4NrjMY3270Ls=
-=xVdP
+iD8DBQFDsczyLLFUmVNQ7rkRAsVfAKDRh3yVG0UZ1K05npAqyfbOW4LY0QCffg6B
+QatTUmG+YIrCrgE3CqrIdKs=
+=Ze5g
 -----END PGP SIGNATURE-----
