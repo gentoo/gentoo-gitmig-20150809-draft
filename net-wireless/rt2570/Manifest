@@ -1,4 +1,5 @@
-MD5 ca9294ccb55924569441edc1f278a1b7 ChangeLog 390
+MD5 99765899aeab606b408cf461904fbcca ChangeLog 568
 MD5 b152f152c01f31ed075485060a35f7e6 files/digest-rt2570-1.1.0_beta1 67
+MD5 d895d6ec161e169ad6414b42550ea90b files/verify-write-api-change.patch 669
 MD5 fefa3bcc4b2e74ffa5b06f8278086f2c metadata.xml 222
-MD5 db14da98e5c1ee3ce057b80d2fb9e17a rt2570-1.1.0_beta1.ebuild 1223
+MD5 dd2ab1fa5695c4b80a400dcdb8f6608c rt2570-1.1.0_beta1.ebuild 1309

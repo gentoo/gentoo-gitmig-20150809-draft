@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.1 2005/11/04 21:47:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.2 2005/12/27 00:13:45 steev Exp $
 
 inherit eutils linux-mod
 
@@ -30,6 +30,9 @@ pkg_setup() {
 }
 
 src_compile() {
+	if kernel_is ge 2 6 14 ; then
+		epatch "${FILESDIR}"/verify-write-api-change.patch
+	fi
 	linux-mod_src_compile
 }
 

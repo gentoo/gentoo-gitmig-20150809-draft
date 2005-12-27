@@ -1,0 +1,12 @@
+diff -Nru rt2570-1.1.0+cvs20050930.orig/Module/rtusb_info.c rt2570-1.1.0+cvs20050930.patched/Module/rtusb_info.c
+--- rt2570-1.1.0+cvs20050930.orig/Module/rtusb_info.c	2005-10-17 23:11:47.000000000 +1000
++++ rt2570-1.1.0+cvs20050930.patched/Module/rtusb_info.c	2005-10-18 00:52:54.000000000 +1000
+@@ -4150,7 +4150,7 @@
+ 
+ 		case SIOCGIWPRIV:
+ 			if (wrq->u.data.pointer) {
+-				if ( verify_area(VERIFY_WRITE, wrq->u.data.pointer, sizeof(privtab)) )
++				if ( access_ok(VERIFY_WRITE, wrq->u.data.pointer, sizeof(privtab)) )
+ 					break;
+ 				wrq->u.data.length = sizeof(privtab) / sizeof(privtab[0]);
+ 				if (copy_to_user(wrq->u.data.pointer, privtab, sizeof(privtab)))
