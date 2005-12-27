@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/dtrace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.1 2005/11/04 03:14:14 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.2 2005/12/27 18:27:00 sbriesen Exp $
+
+  27 Dec 2005; Stefan Briesenick <sbriesen@gentoo.org> dtrace-2.01.ebuild:
+  stable on x86.
 
 *dtrace-2.01 (04 Nov 2005)
 
