@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.5 2005/11/24 15:49:01 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.6 2005/12/27 19:08:55 robbat2 Exp $
+
+*iasl-20051216 (27 Dec 2005)
+
+  27 Dec 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/acpica-unix-20051216-buildfixup.patch, +iasl-20051216.ebuild:
+  Bug #116780, version bump. Also authored a patch to allow everything to
+  build properly so that we have all utilities, need to send upstream.
 
   24 Nov 2005; Jory A. Pratt <anarchy@gentoo.org> iasl-20050513.ebuild:
   added to ~amd64
