@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.7g,v 1.10 2005/08/13 14:20:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.7g,v 1.11 2005/12/27 04:43:40 vapier Exp $
 #
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -39,6 +39,7 @@ if [[ $1 == "test" ]] ; then
 	done
 	exit 0
 fi
+[[ -z ${CHOST} && -n $1 ]] && CHOST=$1
 
 
 # Detect the operating system
