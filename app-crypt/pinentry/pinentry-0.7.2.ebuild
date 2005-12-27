@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.9 2005/09/19 13:58:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.10 2005/12/27 13:02:32 swegener Exp $
 
 inherit flag-o-matic
 
@@ -57,7 +57,7 @@ src_install() {
 	# gtk versions of pinentry refuse to start when suid root
 	for x in curses qt
 	do
-		[ -f ${D}/usr/bin/pinentry-${x} ] && fperms +s /usr/bin/pinentry-${x}
+		[ -f ${D}/usr/bin/pinentry-${x} ] && fperms u+s /usr/bin/pinentry-${x}
 	done
 }
 

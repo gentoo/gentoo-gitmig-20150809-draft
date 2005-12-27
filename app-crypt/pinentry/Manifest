@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ae5433f5c15b70ac95cb521050e8718a ChangeLog 4477
+MD5 fd978f3b4b3ebfda37e9e1115eaba32b ChangeLog 4685
 MD5 02dafe3ffd79fb8be8ffce90a4ccf86f files/digest-pinentry-0.7.2 66
-MD5 02dafe3ffd79fb8be8ffce90a4ccf86f files/digest-pinentry-0.7.2-r1 66
+MD5 02dafe3ffd79fb8be8ffce90a4ccf86f files/digest-pinentry-0.7.2-r2 66
 MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
-MD5 bc5473f70aff0a8f08ef421dbbf533d6 pinentry-0.7.2-r1.ebuild 1779
-MD5 c1f8c7066844725d14e491ef3497d5fb pinentry-0.7.2.ebuild 2021
+MD5 354bf1ac2730620b854a436a251f46f2 pinentry-0.7.2-r2.ebuild 1779
+MD5 0807a36278225cc9824f5466b1a0e0e6 pinentry-0.7.2.ebuild 2023
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrqqhAiZjviIA2XgRAhKsAKCuoc7rZomZ6Zl0MM3qq1TM0PbQdACgt8ed
-37yxxJG47xOLKvze6dqvJvk=
-=qxdL
+iD8DBQFDsTt0I1lqEGTUzyQRArpoAJ9IwFsjJft+1V+wv1i6yqazwY65cQCdG6Xk
+dGpld4oKnxr2t1CK145qWnA=
+=flxs
 -----END PGP SIGNATURE-----
