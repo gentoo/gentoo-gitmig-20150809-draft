@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r1.ebuild,v 1.3 2005/12/24 22:15:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r2.ebuild,v 1.1 2005/12/27 19:41:44 cardoe Exp $
 
 inherit eutils linux-info debug
 
@@ -84,6 +84,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
+		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-os-type=gentoo \
 		--with-pid-file=/var/run/hald.pid \
 		$(use_enable debug verbose-mode) \
