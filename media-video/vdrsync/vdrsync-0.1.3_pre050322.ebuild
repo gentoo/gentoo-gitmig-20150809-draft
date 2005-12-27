@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/vdrsync-0.1.3_pre050322.ebuild,v 1.1 2005/12/27 17:05:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/vdrsync-0.1.3_pre050322.ebuild,v 1.2 2005/12/27 17:14:00 zzam Exp $
 
 MY_P="${PN}-${PV#*_pre}"
 
@@ -40,7 +40,8 @@ src_unpack() {
 #sed -e 's:"/tmp/":"/temp/":g' /usr/bin/vdrsync.pl
 
 src_install() {
-	dobin check-vdrsync.pl vdrsync.pl vdrsync_buffer.pl dvd-menu.pl
+	dobin check-vdrsync.pl vdrsync.pl vdrsync_buffer.pl
+	use dvdr && dobin dvd-menu.pl
 	dodoc CHANGES
 }
 
