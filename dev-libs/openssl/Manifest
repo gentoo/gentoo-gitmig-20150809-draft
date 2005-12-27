@@ -9,8 +9,8 @@ MD5 1a7aabb860415c7be612863579d67b4d files/digest-openssl-0.9.7g-r1 67
 MD5 0b87439b95b8ecda7b7cd59c336625cd files/digest-openssl-0.9.7h 67
 MD5 275256f0f0c2a035cbc2b9ede7a1e21a files/digest-openssl-0.9.7i 67
 MD5 b8f72a6ed636d44f938a026b12abc7e2 files/digest-openssl-0.9.8a 67
-MD5 95d7724fae3879b4afcedb3a1d0c04b1 files/gentoo.config-0.9.7g 3355
-MD5 f544e74bbc32ce6e5803542bcbdaa245 files/gentoo.config-0.9.8 3365
+MD5 5479124566140e079c2493abe59a1c90 files/gentoo.config-0.9.7g 3356
+MD5 0e1b88c681e8ebe109fda3a91fe025c3 files/gentoo.config-0.9.8 3366
 MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
 MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 MD5 24c7fa75a1a2ecbc73d0964525d22299 files/openssl-0.9.7-CAN-2005-2969.patch 2173
@@ -49,7 +49,7 @@ MD5 f82f8ac87f99859031f6c7d34ec9a26d openssl-0.9.8a.ebuild 4562
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDsMaU2+ySkm8kpY0RAprbAJ4zRa8ZALwJR+xtx+RrAKhj/WdwdQCgi80n
-LOb6YCaAPNeI5LZkISPMtvw=
-=Caw1
+iD8DBQFDsN0i2+ySkm8kpY0RAhOHAJ9xXtgTVgct+myzAewYb/sLftyHSQCeLPU7
+Y0HfL+WXk5dMukaWs3xlPeI=
+=8VyS
 -----END PGP SIGNATURE-----
