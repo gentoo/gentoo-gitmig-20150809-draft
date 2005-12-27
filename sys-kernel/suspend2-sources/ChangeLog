@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.28 2005/12/14 22:51:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.29 2005/12/27 22:02:27 brix Exp $
+
+*suspend2-sources-2.6.14-r8 (27 Dec 2005)
+
+  27 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/suspend2-2.2-rc15-get-next-bit-on.patch,
+  +files/suspend2-2.2-rc15-listen-to-abort-request.patch,
+  +files/suspend2-2.2-rc15-mce-config.patch,
+  +files/suspend2-2.2-rc15-no-pageflags.patch,
+  +files/suspend2-2.2-rc15-pageflags.h.patch,
+  +suspend2-sources-2.6.14-r8.ebuild:
+  Revision bump to use genpatches-2.6.14-6 and Software Suspend 2.2-rc15 +
+  patches.
 
   14 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
   suspend2-sources-2.6.14-r7.ebuild:
