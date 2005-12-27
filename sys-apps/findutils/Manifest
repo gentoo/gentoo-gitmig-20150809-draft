@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bebfc6382244b05979a5cfb6203b9bf7 ChangeLog 9697
+MD5 5024d497e5df679cb370ba582a899bf8 ChangeLog 9799
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r2 68
 MD5 2b5e0b42a11ea009340805d461a6ecc5 files/digest-findutils-4.2.24 69
@@ -15,7 +15,7 @@ MD5 0b8c5e1bc2e54e46c292ad6a90729f75 files/findutils-4.2.24-selinux.diff 14356
 MD5 564a526b2ac65b70eebdb60a97f7e1ed files/findutils-4.3.0-selinux.diff 15741
 MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
 MD5 054571cd32e981304231461745b82e07 findutils-4.1.20-r1.ebuild 2070
-MD5 92288732d0feeb68564b5be0624bdfb5 findutils-4.1.20-r2.ebuild 1902
+MD5 01c33bbadda917b89a304a2d7806e0fa findutils-4.1.20-r2.ebuild 1901
 MD5 7ad72dd1133e9c5896ee04cdb7a85d38 findutils-4.2.24.ebuild 1706
 MD5 03ce983ed4a749d09b6264da58d82b05 findutils-4.2.25.ebuild 1705
 MD5 b8fa5580ba6c39175ee7bc1f2078435b findutils-4.2.27.ebuild 1693
@@ -24,7 +24,7 @@ MD5 1f7197b778d47c773d19430261c84f49 metadata.xml 261
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDraBI2+ySkm8kpY0RAuJQAJ4tOomjCacJ9O1pMw2HtDXO+6es4wCgrzX5
-VZCgoyzGc6ipnv7+NEJwoH8=
-=uTpx
+iD8DBQFDsUjjugEuf3OQ0akRAgwZAKCcbN0I2AWhdKf2/Hwfd2fTJOKWlgCeIZsg
+Cls1v2hNuubqaAKvLLM5Gxw=
+=rK5A
 -----END PGP SIGNATURE-----
