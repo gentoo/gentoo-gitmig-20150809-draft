@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b30b96c7dfa05397e86a691335fc163 trayimonc-0.8.ebuild 757
-MD5 57b5d6b6f4c7a4e67a11609236dc8351 trayimonc-0.7.1.ebuild 759
-MD5 28dcb85f7370a5a81359e206872e0bd2 ChangeLog 826
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 2b37b5814fd657a1079beff1de082928 files/digest-trayimonc-0.7.1 68
+MD5 b88a46c2322a2e3c6ff65860e342bf73 ChangeLog 926
 MD5 01ce7fad7cfe7877d956e8bb28331059 files/digest-trayimonc-0.8 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYaLhjiC39V7gKu0RAgEoAKC9jdWsycL0Xj9VjYtyr+or1oyp3wCgiYmg
-hEoTem3ABrdHwUmuxgz0dfA=
-=tYBW
------END PGP SIGNATURE-----
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 8b30b96c7dfa05397e86a691335fc163 trayimonc-0.8.ebuild 757
