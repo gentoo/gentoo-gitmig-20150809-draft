@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/raccess4vbox3
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/ChangeLog,v 1.6 2005/10/04 20:07:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/ChangeLog,v 1.7 2005/12/27 09:51:34 mrness Exp $
+
+  27 Dec 2005; Alin Nastac <mrness@gentoo.org> -raccess4vbox3-0.2.8.ebuild:
+  Remove obsolete version.
 
   04 Oct 2005; Alin Nastac <mrness@gentoo.org> raccess4vbox3-0.2.8.ebuild,
   raccess4vbox3-0.2.8-r1.ebuild:
