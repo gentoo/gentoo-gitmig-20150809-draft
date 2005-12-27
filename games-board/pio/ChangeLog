@@ -1,6 +1,11 @@
 # ChangeLog for games-board/pio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pio/ChangeLog,v 1.7 2005/11/22 17:14:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pio/ChangeLog,v 1.8 2005/12/27 18:26:30 mr_bones_ Exp $
+
+*pio-0.9.40 (27 Dec 2005)
+
+  27 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org> +pio-0.9.40.ebuild:
+  version bump
 
   22 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> pio-0.9.33.ebuild:
   Marked stable on amd64 and x86 wrt bug #109084.
