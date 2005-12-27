@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.134 2005/12/25 15:26:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.135 2005/12/27 12:51:45 kloeri Exp $
+
+  27 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
+  util-linux-2.12r-r1.ebuild:
+  Stable on alpha.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   util-linux-2.12r-r2.ebuild:
