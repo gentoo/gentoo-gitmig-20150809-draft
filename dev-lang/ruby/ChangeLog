@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.173 2005/12/22 12:50:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.174 2005/12/27 14:44:35 caleb Exp $
+
+*ruby-1.8.4 (27 Dec 2005)
+
+  27 Dec 2005; Caleb Tennis <caleb@gentoo.org> +ruby-1.8.4.ebuild:
+  Bump to 1.8.4 final
 
 *ruby-1.8.4_pre3 (22 Dec 2005)
 
