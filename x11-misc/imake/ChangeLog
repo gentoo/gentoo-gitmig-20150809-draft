@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.11 2005/12/26 21:34:52 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.12 2005/12/27 10:54:24 stefaan Exp $
+
+  27 Dec 2005; Stefaan De Roeck <stefaan@gentoo.org> imake-1.0.1.ebuild:
+  Marked ~alpha
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -imake-0.99.3.ebuild, -imake-1.0.0.ebuild:
