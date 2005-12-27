@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.3.ebuild,v 1.3 2005/10/22 17:48:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.3.ebuild,v 1.4 2005/12/27 07:55:15 vapier Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="debug doc hardened"
 
 RDEPEND="virtual/libc"
