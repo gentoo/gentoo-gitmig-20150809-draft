@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.0.4.ebuild,v 1.1 2005/12/24 12:52:55 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.0.5.ebuild,v 1.1 2005/12/27 18:16:25 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
-SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2"
+SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2
+		http://kernel.org/pub/software/scm/git/${PN}-man-${PV}.tar.bz2
+		doc? ( http://kernel.org/pub/software/scm/git/${PN}-html-${PV}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,8 +19,7 @@ DEPEND="dev-libs/openssl
 		sys-libs/zlib
 		!app-misc/git
 		curl? ( net-misc/curl )
-		webdav? ( dev-libs/expat )
-		doc? ( >=app-text/asciidoc-7.0.1 app-text/xmlto )"
+		webdav? ( dev-libs/expat )"
 RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
@@ -70,13 +71,6 @@ src_unpack() {
 
 src_compile() {
 	emake ${MY_MAKEOPTS} prefix=/usr || die "make failed"
-
-	if use doc ; then
-		sed -i \
-			-e "s:^\(WEBDOC_DEST = \).*$:\1${D}/usr/share/doc/${PF}/html/:g" \
-			${S}/Documentation/Makefile || die "sed failed (Documentation)"
-		emake -C Documentation/ || die "make documentation failed"
-	fi
 }
 
 src_install() {
@@ -84,11 +78,13 @@ src_install() {
 
 	use tcltk || rm ${D}/usr/bin/gitk
 
+	doman ${WORKDIR}/${PN}-man-${PV}/man?/*
+
 	dodoc README COPYING Documentation/SubmittingPatches
 	if use doc ; then
-		doman Documentation/*.1 Documentation/*.7
-		make install-webdoc -C Documentation/
 		dodoc Documentation/technical/*
+		dodir /usr/share/doc/${PF}/html
+		cp -r ${WORKDIR}/${PN}-html-${PV}/* ${D}/usr/share/doc/${PF}/html
 	fi
 
 	newinitd "${FILESDIR}/git-daemon.initd" git-daemon
