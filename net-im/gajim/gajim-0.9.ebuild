@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.9.ebuild,v 1.2 2005/12/26 10:03:26 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.9.ebuild,v 1.3 2005/12/27 13:38:30 swegener Exp $
 
 inherit virtualx multilib eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-python/pygtk-2.4.0
 	>=dev-python/pysqlite-2.0.4
 	dbus? ( >=sys-apps/dbus-0.23 )
 	spell? ( >=app-text/gtkspell-2.0.4 )
-	srv? ( >=dev-python/dnspython )"
+	srv? ( dev-python/dnspython )"
 
 src_unpack() {
 	if use dbus && ! built_with_use sys-apps/dbus python; then
