@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.12 2005/12/27 08:32:48 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.13 2005/12/27 09:51:18 bass Exp $
 
 *localepurge-0.4 (27 Dec 2005)
+
+  27 Dec 2005; josé Alberto Suárez López <bass@gentoo.org>
+  files/digest-localepurge-0.4, Manifest:
+  fixed bug #111276
 
   27 Dec 2005; josé Alberto Suárez López <bass@gentoo.org>
   +localepurge-0.4.ebuild:
