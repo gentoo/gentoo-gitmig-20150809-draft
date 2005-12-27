@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/intel-536ep
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.5 2005/11/27 09:19:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.6 2005/12/27 08:36:03 mrness Exp $
+
+  27 Dec 2005; Alin Nastac <mrness@gentoo.org> intel-536ep-4.71.ebuild:
+  Stable on x86.
 
 *intel-536ep-4.71 (27 Nov 2005)
 

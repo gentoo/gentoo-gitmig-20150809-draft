@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.71.ebuild,v 1.1 2005/11/27 09:19:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.71.ebuild,v 1.2 2005/12/27 08:36:03 mrness Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://aiedownload.intel.com/df-support/9266/eng/${P}.tgz"
 
 LICENSE="Intel"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 
