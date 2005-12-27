@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-grant
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-grant/ChangeLog,v 1.1 2005/12/27 01:48:56 nichoj Exp $
+
+*commons-grant-1.0_beta5 (27 Dec 2005)
+
+  27 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
+  +files/commons-grant-1.0_beta5-gentoo.diff, +metadata.xml,
+  +commons-grant-1.0_beta5.ebuild:
+  Intial commit (bug #70893).
+
