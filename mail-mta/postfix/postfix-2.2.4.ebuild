@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.4.ebuild,v 1.4 2005/10/04 12:47:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.4.ebuild,v 1.5 2005/12/27 20:48:11 vapier Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened"
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${MY_SRC}.tar.
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 PROVIDE="${PROVIDE} virtual/mda"
 DEPEND=">=sys-libs/db-3.2

@@ -18,15 +18,15 @@ MD5 889559c8b5d02597e9e7eec89e328360 files/smtp.pass 141
 MD5 43e9368a07952c4aae9e370b59ce1450 files/smtp.sasl 131
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
 MD5 ac54433bbfb8588c01144dd4d61ecdd7 postfix-2.1.5-r2.ebuild 7525
-MD5 bd879e41d2b201d9d42f9fde7084e2cc postfix-2.2.4.ebuild 9229
-MD5 f22fe670b88f05ea6144d7e56b05e4b6 postfix-2.2.5-r1.ebuild 9240
-MD5 f75078446180abd177222223174ea452 postfix-2.2.5.ebuild 9531
-MD5 0c848e9e87c5cc9fcc52231ca5a1e43f postfix-2.2.7-r1.ebuild 10123
-MD5 7ca3798ce1d1b7ac4feb8b61b0415614 postfix-2.2.7.ebuild 10326
+MD5 6a23485292037b5bd4444da2b636fabe postfix-2.2.4.ebuild 9235
+MD5 f1052a274b0e52f23522e679c102d016 postfix-2.2.5-r1.ebuild 9246
+MD5 068174e90852a9a28a8184a510034634 postfix-2.2.5.ebuild 9537
+MD5 402958b40868c3887702f48885250798 postfix-2.2.7-r1.ebuild 10129
+MD5 ff679f52883e8b0239f0320afab9d5d6 postfix-2.2.7.ebuild 10332
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDsFji2+ySkm8kpY0RAl2bAKCxx0P9r0F8t2KKXSzMJMCVhWctlgCeIS/K
-x9f7AiXArE9HFhlH6HavyoM=
-=FIJ1
+iD8DBQFDsaij2+ySkm8kpY0RApFhAJsFQzDaqEjbmZbro4Li3bOWc2fLwgCfUAEI
+c0GnoVQWLq0M3lzOiSvhFpY=
+=mTyi
 -----END PGP SIGNATURE-----
