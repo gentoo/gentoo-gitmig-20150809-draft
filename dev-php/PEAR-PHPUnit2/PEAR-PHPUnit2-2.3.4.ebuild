@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHPUnit2/PEAR-PHPUnit2-2.3.3.ebuild,v 1.1 2005/11/10 10:26:36 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHPUnit2/PEAR-PHPUnit2-2.3.4.ebuild,v 1.1 2005/12/27 20:36:33 sebastian Exp $
 
 inherit php-pear-r1 depend.php
 
