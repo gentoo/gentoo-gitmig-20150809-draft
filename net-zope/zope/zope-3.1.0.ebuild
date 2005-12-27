@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.1.0.ebuild,v 1.1 2005/12/24 16:35:35 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.1.0.ebuild,v 1.2 2005/12/27 18:06:19 radek Exp $
 
 inherit eutils multilib
 
@@ -62,7 +62,7 @@ pkg_postinst() {
 	# create the zope user and group for backward compatibility
 	enewgroup ${ZGNAME} 261
 	usermod -g ${ZGNAME} -c "Zope Admin User" -d /var/lib/zope -s /bin/bash ${ZUNAME} 2>&1 >/dev/null || \
-	enewuser ${ZUNAME} 261 /bin/bash /var/lib/zope ${ZGNAME} "Zope Admin User"
+	enewuser ${ZUNAME} 261 /bin/bash /var/lib/zope ${ZGNAME} -c "Zope Admin User"
 
 	einfo "This release can create a default but *SIMPLIFIED** instance using the command: "
 	einfo "    emerge --config =${PF}"
