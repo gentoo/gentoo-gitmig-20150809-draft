@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.11 2005/11/01 15:20:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.12 2005/12/27 08:32:48 bass Exp $
+
+*localepurge-0.4 (27 Dec 2005)
+
+  27 Dec 2005; josé Alberto Suárez López <bass@gentoo.org>
+  +localepurge-0.4.ebuild:
+  Added more locales and nice colors :)
+
+*localepurge-0.2-r2 (13 Jun 2005)
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
   localepurge-0.2-r2.ebuild:
@@ -9,8 +17,6 @@
   12 Sep 2005; Fabian Groffen <grobian@gentoo.org>
   localepurge-0.2-r2.ebuild:
   Marking ~ppc-macos (bug #105667)
-
-*localepurge-0.2-r2 (13 Jun 2005)
 
   13 Jun 2005; J. Alberto Suárez López <bass@gentoo.org> localepurge-0.2-r2.ebuild:
   More locales added. Thanks Mr Bones :)
