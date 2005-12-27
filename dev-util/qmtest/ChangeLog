@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/qmtest
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.1 2005/12/27 03:21:32 kanaka Exp $
+
+*qmtest-2.3 (27 Dec 2005)
+
+  27 Dec 2005; Joel Martin <kanaka@gentoo.org> +qmtest-2.3.ebuild:
+  New ebuild for qmtest 2.3
+
