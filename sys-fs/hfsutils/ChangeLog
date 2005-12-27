@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/hfsutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.10 2005/11/15 01:02:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.11 2005/12/27 02:02:51 halcy0n Exp $
+
+  27 Dec 2005; Mark Loeser <halcy0n@gentoo.org> hfsutils-3.2.6-r4.ebuild:
+  Stable on x86; bug #116760
 
   15 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   hfsutils-3.2.6-r4.ebuild:
