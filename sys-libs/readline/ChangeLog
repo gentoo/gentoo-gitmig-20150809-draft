@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.57 2005/12/24 17:31:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.58 2005/12/27 04:55:15 kanaka Exp $
+
+  27 Dec 2005; Joel Martin <kanaka@gentoo.org> readline-5.1-r2.ebuild:
+  Cross-compile fix was partially backed out, put it back in.
 
   24 Dec 2005; <solar@gentoo.org> +files/readline-5.1-rlfe-uclibc.patch,
   readline-5.1-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.5 2005/12/24 17:31:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1-r2.ebuild,v 1.6 2005/12/27 04:55:15 kanaka Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -57,9 +57,11 @@ src_compile() {
 	econf --with-curses --libdir=/usr/$(get_libdir) || die
 	emake || die
 
-	cd examples/rlfe
-	econf || die
-	emake || die "make rlfe failed"
+	if ! tc-is-cross-compiler; then
+		cd examples/rlfe
+		econf || die
+		emake || die "make rlfe failed"
+	fi
 }
 
 src_install() {
