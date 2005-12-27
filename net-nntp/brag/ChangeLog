@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/brag
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.2 2005/01/17 21:36:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.3 2005/12/27 14:55:34 weeve Exp $
+
+  27 Dec 2005; Jason Wever <weeve@gentoo.org> brag-1.4.1.ebuild:
+  Stable on SPARC.
 
 *brag-1.4.1 (17 Jan 2005)
 
