@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.7 2005/12/24 11:12:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.8 2005/12/27 07:23:36 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -29,7 +29,11 @@ KEYWORDS="~x86 ~ppc ~sparc"
 RDEPEND="!app-office/openoffice-bin
 	!app-office/openoffice-ximian-bin
 	!app-office/openoffice-ximian
-	virtual/x11
+	|| ( (
+			x11-libs/libXaw
+			x11-libs/libXinerama
+		)
+		virtual/x11 )
 	virtual/libc
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.4
@@ -55,6 +59,14 @@ RDEPEND="!app-office/openoffice-bin
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+			x11-libs/libXrender
+			x11-proto/printproto
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/xineramaproto
+		)
+		virtual/x11 )
 	net-print/cups
 	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
