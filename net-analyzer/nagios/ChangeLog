@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.28 2005/12/17 21:19:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.29 2005/12/27 22:23:26 ramereth Exp $
+
+*nagios-2.0_rc1 (27 Dec 2005)
+
+  27 Dec 2005; Lance Albertson <ramereth@gentoo.org> +nagios-2.0_rc1.ebuild,
+  -nagios-2.0b_p4.ebuild, -nagios-2.0b_p5.ebuild:
+  * Version bump 
+  * Special NOTE: Removing old beta ebuilds to force the
+  correct version naming scheme on users. 2.0b_p# should have been 2.0_beta#
+  from the beginning and was never fixed.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> nagios-2.0b_p5.ebuild:
   Added ~ppc64
