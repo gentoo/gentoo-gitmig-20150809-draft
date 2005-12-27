@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.1 2005/12/27 09:18:50 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.2 2005/12/27 20:43:37 battousai Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
@@ -101,7 +101,7 @@ src_compile() {
 		cd ${S}/src
 		sed -i -e "s:/include/extensions:/include:g" Makefile
 	else
-		myconf="${myconf} --disable-wacomdrv --enable-wacdump --enable-xsetwacom"
+		myconf="${myconf} --disable-wacomdrv --enable-wacdump --enable-xsetwacom --without-xf86-sdk"
 		econf ${myconf} || die "configure failed."
 	fi
 	cd ${S}
