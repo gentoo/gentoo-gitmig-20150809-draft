@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.9 2005/12/26 09:08:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.10 2005/12/27 02:03:28 halcy0n Exp $
+
+  27 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gparted-0.0.9.ebuild:
+  Stable on x86; bug #116760
 
   26 Dec 2005; Simon Stelling <blubb@gentoo.org> gparted-0.0.9.ebuild:
   stable on amd64

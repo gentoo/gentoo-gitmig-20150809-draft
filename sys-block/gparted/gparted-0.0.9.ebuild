@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.0.9.ebuild,v 1.3 2005/12/26 09:08:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.0.9.ebuild,v 1.4 2005/12/27 02:03:28 halcy0n Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gparted/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="fat hfs jfs ntfs reiserfs reiser4 xfs"
 
 RDEPEND=">=sys-apps/parted-1.6.13
