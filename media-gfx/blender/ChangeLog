@@ -1,17 +1,20 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.68 2005/12/24 14:41:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.69 2005/12/27 11:11:41 corsair Exp $
+
+  27 Dec 2005; Markus Rothe <corsair@gentoo.org> blender-2.40.ebuild:
+  Added ~ppc64
+
+*blender-2.40 (24 Dec 2005)
+
+  24 Dec 2005; Luca Barbato <lu_zero@gentoo.org> +blender-2.40.ebuild:
+  New version
 
   15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; blender-2.37a.ebuild:
   Add modular X dependencies.
 
   10 Dec 2005; Tom Gall <tgall@gentoo.org> blender-2.37.ebuild:
   added ~ppc64
-
-*blender-2.40 (24 Dec 2005)
-
-  24 Dec 2005; Luca Barbato <lu_zero@gentoo.org> +blender-2.40.ebuild:
-  New version
 
   02 Nov 2005; Jory A. Pratt <anarchy@gentoo.org>
   +files/blender-2.37a-x86_64.patch:
