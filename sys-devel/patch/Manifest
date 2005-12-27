@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1a238c554d76e5a610a234935f6745ff patch-2.5.9.ebuild 1438
 MD5 4f8622f6d61dc78dcc5069d9dcb573b5 ChangeLog 3745
-MD5 0e6d848f04afec9ccd77139044915be0 patch-2.5.9-r1.ebuild 1119
-MD5 1e629202590bd2a4586fb1e4231e50e2 files/patch-2.5.9-cr-stripping.patch 1355
 MD5 7113f2413944cb06cecdd0c57ab54078 files/digest-patch-2.5.9 63
 MD5 7113f2413944cb06cecdd0c57ab54078 files/digest-patch-2.5.9-r1 63
+MD5 1e629202590bd2a4586fb1e4231e50e2 files/patch-2.5.9-cr-stripping.patch 1355
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 0e6d848f04afec9ccd77139044915be0 patch-2.5.9-r1.ebuild 1119
+MD5 7a7cfa4c7f4efb4826229b1015653fb0 patch-2.5.9.ebuild 1002
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDFpeqgIKl8Uu19MoRAtzKAJ4oBn5YQ2R/UUTg2k3R7wN9LSQttwCfQPv0
-1Xx5X2OhL/I+JnB6HSmIc4M=
-=6HvZ
+iD8DBQFDsJA+2+ySkm8kpY0RArjiAKCjS2u/av6zaiAED+DuJYjV16HD4ACgu09c
+7FYWIYTWp6Ym/OVMfGNIF5Y=
+=Rqk9
 -----END PGP SIGNATURE-----

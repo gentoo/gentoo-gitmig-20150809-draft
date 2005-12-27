@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.23 2005/03/04 04:52:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.24 2005/12/27 00:51:55 vapier Exp $
 
 inherit flag-o-matic
 
@@ -19,30 +19,18 @@ DEPEND=""
 
 src_compile() {
 	strip-flags
-	CFLAGS="$CFLAGS -DLINUX -D_XOPEN_SOURCE=500"
-	# workaround for hardened on amd64, 1st part
-	if use amd64 && is-ldflags -pie; then
-		einfo Stripping "-pie" from LDFLAGS, adding it to Makefile manually
-		filter-ldflags -pie
-		append-flags -fPIC
-		LDFLAGS_PIE="1"
-	fi
-	ac_cv_sys_long_file_names=yes \
-		./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
-	# workaround for hardened on amd64, 2nd part
-	if [ "${LDFLAGS_PIE}" = "1" ]; then
-		einfo "Patching Makefile..."
-		sed -i -e 's/^LDFLAGS =/& -pie/' Makefile || die "Patching Makefile failed!"
-	fi
+	append-flags -DLINUX -D_XOPEN_SOURCE=500
 	use static && append-ldflags -static
-	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
+
+	local myconf=""
+	[[ ${USERLAND} != "GNU" ]] && myconf="--program-prefix=g"
+	ac_cv_sys_long_file_names=yes econf ${myconf} || die
+
+	emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die
-	if ! use build ; then
-		dodoc AUTHORS ChangeLog NEWS README
-	else
-		rm -rf ${D}/usr/share/man
-	fi
+	dodoc AUTHORS ChangeLog NEWS README
+	use build && rm -r "${D}"/usr/share
 }
