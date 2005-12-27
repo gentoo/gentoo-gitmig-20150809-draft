@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/kio_burn-0.7.ebuild,v 1.1 2005/07/08 11:12:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/kio_burn-0.7.ebuild,v 1.2 2005/12/27 19:09:22 carlo Exp $
 
-inherit kde eutils
+inherit kde
 
 DESCRIPTION="KDE ioslave to burn CD"
 HOMEPAGE="http://www-users.york.ac.uk/~jrht100/burn/"
@@ -13,16 +13,17 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="dvdr"
 
-DEPEND="|| ( kde-base/akode >=kde-base/kdemultimedia-3.3.0 )
+DEPEND="|| ( kde-base/akode <kde-base/kdemultimedia-3.5.0 )
 	media-libs/libvorbis
 	media-libs/audiofile
 	media-libs/taglib
+	!>=kde-base/kdelibs-3.5.0
 	app-cdr/k3b" # uses libk3b for burner detection; configure uses it if it's detected
 RDEPEND="$DEPEND
 	virtual/cdrtools
 	dvdr? ( app-cdr/dvd+rw-tools )"
 
-S=${WORKDIR}/burn-${PV}
+S="${WORKDIR}/burn-${PV}"
 
 need-kde 3.3
 
