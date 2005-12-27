@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/slirp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/ChangeLog,v 1.3 2005/09/02 19:06:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/ChangeLog,v 1.4 2005/12/27 10:15:41 mrness Exp $
+
+  27 Dec 2005; Alin Nastac <mrness@gentoo.org> -slirp-1.0.13.ebuild:
+  Remove obsolete version.
 
   02 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> slirp-1.0.13.ebuild,
   slirp-1.0.16.ebuild:
