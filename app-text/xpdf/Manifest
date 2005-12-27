@@ -1,9 +1,10 @@
-MD5 28bad8116d70ea4fac868ea0da1b3311 ChangeLog 13480
+MD5 dccf3aa37b8186c2283dfc3cdb0af2e0 ChangeLog 13660
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r10 767
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r8 767
 MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01 767
 MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01-r1 767
 MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01-r3 767
+MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01-r4 767
 MD5 24d9ec970f2b8178c64f7150be0d7ace files/xpdf-3.00-64bit.patch 1304
 MD5 41c050cd5c7ccdcf1676a6852c7a35ed files/xpdf-3.00-PathScanner.patch.bz2 1003
 MD5 3df9058a9971c09627e71dad6b056244 files/xpdf-3.00-core.patch.bz2 271
@@ -19,6 +20,7 @@ MD5 9a40ac2946ebb4599602f43e10f88786 files/xpdf-3.00-scroll-opts.patch.bz2 1869
 MD5 8aec20a56895c25a8c2c35c16211d731 files/xpdf-3.00-security-can-2005-2097.patch 1612
 MD5 37f0b42aad269cb5896773b47b1d83ac files/xpdf-3.00-truetype-new.diff.gz 1271
 MD5 8bcdee9af356073f2e0dd88071379148 files/xpdf-3.01-crash.patch 1057
+MD5 34c377b9f408fcfccb9b5513c98a6b1f files/xpdf-3.01-onlyx.patch 3099
 MD5 145b821ca07a9e6a110dfe0088a39dc0 files/xpdf-3.01-pdftoppm.patch 1911
 MD5 934ccc815f9aecaa94152266f8fb29d8 files/xpdf-3.01-resize.patch 1232
 MD5 4184783da2885ecde3c2256de5144555 files/xpdf-3.01pl1.patch 4936
@@ -29,4 +31,5 @@ MD5 4baf6cdd9480cd938afaede8334c7a72 xpdf-3.00-r10.ebuild 3909
 MD5 0e303cf49620828eff323b0251d0141c xpdf-3.00-r8.ebuild 3622
 MD5 3045b88b069de08b88a1c5c25b8caea6 xpdf-3.01-r1.ebuild 3562
 MD5 e07bfb1a11e6504e65eda110598c26a8 xpdf-3.01-r3.ebuild 3910
+MD5 b0f99b13b503e7020eacd4e5ae161017 xpdf-3.01-r4.ebuild 3780
 MD5 763deff18a7e6e7125aca1f3d6be3229 xpdf-3.01.ebuild 3529
