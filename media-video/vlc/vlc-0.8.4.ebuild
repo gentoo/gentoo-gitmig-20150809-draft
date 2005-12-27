@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.3 2005/12/17 16:31:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.4 2005/12/27 06:25:58 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -22,7 +22,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
-dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga
+dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
 mp3 xv bidi sdl png xml2 samba daap corba screen mod speex nsplugin shout real
 win32codecs"
@@ -49,7 +49,7 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		theora? ( media-libs/libtheora )
 		X? ( virtual/x11 )
 		xv? ( virtual/x11 )
-		freetype? ( media-libs/freetype
+		truetype? ( media-libs/freetype
 			media-fonts/ttf-bitstream-vera )
 		svga? ( media-libs/svgalib )
 		ggi? ( media-libs/libggi )
@@ -160,7 +160,7 @@ src_compile () {
 		$(use_enable X x11) \
 		$(use_enable xv xvideo) \
 		$(use_enable opengl glx) $(use_enable opengl) \
-		$(use_enable freetype) \
+		$(use_enable truetype freetype) \
 		$(use_enable bidi fribidi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdplay) $(use_enable dvd dvdnav) \
 		$(use_enable fbcon fb) \
