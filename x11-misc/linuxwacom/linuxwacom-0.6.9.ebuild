@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.9.ebuild,v 1.4 2005/08/22 16:29:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.9.ebuild,v 1.5 2005/12/27 09:18:50 battousai Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
@@ -51,8 +51,8 @@ src_unpack() {
 
 		# Simple fixes to configure to check the actual location of the XFree86 SDK
 		# No need to check if just building userland tools
-		sed -i -e "s:XF86SUBDIR=.*:XF86SUBDIR=include:" configure
-		sed -i -e "s:XF86V3SUBDIR=.*:XF86V3SUBDIR=include:" configure
+		sed -i -e "s:XF86SUBDIR=.*:XF86SUBDIR=include:
+			   s:XF86V3SUBDIR=.*:XF86V3SUBDIR=include:" configure
 	fi
 }
 

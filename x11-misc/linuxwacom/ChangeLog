@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.32 2005/08/10 19:20:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.33 2005/12/27 09:18:50 battousai Exp $
+
+*linuxwacom-0.7.2 (27 Dec 2005)
+
+  27 Dec 2005; Bryan Stine <battousai@gentoo.org>
+  -files/linuxwacom-0.6.6-nonx86.patch,
+  +files/linuxwacom-0.7.2-modular-x.patch, -linuxwacom-0.6.6.ebuild,
+  linuxwacom-0.6.9.ebuild, +linuxwacom-0.7.2.ebuild:
+  Version bump to 0.7.2, expunge 0.6.6. With 0.7.2 comes modular Xorg support.
 
   10 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/linuxwacom-0.6.9-dlloader.patch, linuxwacom-0.6.9.ebuild:
