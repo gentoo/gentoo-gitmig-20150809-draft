@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.12-r4.ebuild,v 1.1 2005/11/19 05:23:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.12-r4.ebuild,v 1.2 2005/12/27 02:45:48 vapier Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 # Version of .c wrapper to use
 W_VER="1.4.7"
@@ -27,9 +27,12 @@ src_compile() {
 
 src_install() {
 	newbin "${FILESDIR}"/${PN}-${PV} ${PN} || die "install gcc-config"
-	dosed "s:PORTAGE-VERSION:${PVR}:" /usr/bin/${PN}
+	sed -i \
+		-e "s:PORTAGE-VERSION:${PVR}:g" \
+		-e "s:GENTOO_LIBDIR:$(get_libdir):g" \
+		"${D}"/usr/bin/${PN}
 
-	exeinto /usr/lib/misc
+	exeinto /usr/$(get_libdir)/misc
 	newexe wrapper gcc-config || die "install wrapper"
 }
 
