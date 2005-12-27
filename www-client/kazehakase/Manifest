@@ -1,10 +1,20 @@
-MD5 358cc6631553b6db62a3cf21a0335111 kazehakase-0.3.2.ebuild 2275
-MD5 0c91382a4f92cc3f42330ed136dc76f1 kazehakase-0.3.1.ebuild 2187
-MD5 d041034535cf8c401ed64d62e9ae3559 kazehakase-0.3.3.ebuild 2275
-MD5 721e29b472107191ef117d64eb0c7871 ChangeLog 9472
-MD5 b6a70dc606d1eae980c96b5e81dd1e1b metadata.xml 249
-MD5 729a6767c82a6efba2452b7bba8e7ba4 kazehakase-0.2.7.ebuild 2068
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43557444594e94bee506d0a9fb3ea8c4 ChangeLog 9569
 MD5 c9c3e64766f1c379b0c924c33a8a210b files/digest-kazehakase-0.2.7 69
 MD5 0b9030f2c843c71d1f4dd086420b8554 files/digest-kazehakase-0.3.1 69
 MD5 6e7385139cded61089e3667309fd95b4 files/digest-kazehakase-0.3.2 69
 MD5 990fc499a6a41ef04b84a9039889ad92 files/digest-kazehakase-0.3.3 69
+MD5 729a6767c82a6efba2452b7bba8e7ba4 kazehakase-0.2.7.ebuild 2068
+MD5 9fe7b47b1d5ab1d86eabbdaf03a8c09b kazehakase-0.3.1.ebuild 2184
+MD5 358cc6631553b6db62a3cf21a0335111 kazehakase-0.3.2.ebuild 2275
+MD5 d041034535cf8c401ed64d62e9ae3559 kazehakase-0.3.3.ebuild 2275
+MD5 b6a70dc606d1eae980c96b5e81dd1e1b metadata.xml 249
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDsaVmomPajV0RnrERAiwCAJ0ZJwlLUBWARMEezzdKshl2hO2vbACfWeeA
+xJDT9iCEnyFIumLUKtrHULc=
+=kf51
+-----END PGP SIGNATURE-----

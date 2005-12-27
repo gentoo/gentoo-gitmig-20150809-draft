@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.23 2005/12/01 14:14:08 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.24 2005/12/27 20:33:47 dang Exp $
+
+  27 Dec 2005; <dang@gentoo.org> kazehakase-0.3.1.ebuild:
+  Marked stable on amd64 Per bug#116898
 
 *kazehakase-0.3.3 (01 Dec 2005)
 
