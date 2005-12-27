@@ -1,8 +1,16 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.18 2005/11/13 23:22:09 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.19 2005/12/27 09:19:48 bass Exp $
 
 *cherokee-0.4.29 (13 Nov 2005)
+
+  27 Dec 2005; josé Alberto Suárez López <bass@gentoo.org>
+  +files/cherokee-0.4.25-fix-static.diff, cherokee-0.4.23.ebuild,
+  cherokee-0.4.24.ebuild, cherokee-0.4.24-r1.ebuild, cherokee-0.4.25.ebuild,
+  cherokee-0.4.29.ebuild:
+  Improve ebuild to solve a few bugs (thanks ka0ttic).
+  Removed "PIC" abuse in some ebuilds.
+  Cleaned some old ebuilds.
 
   13 Nov 2005; josé Alberto Suárez López <bass@gentoo.org>
   +cherokee-0.4.29.ebuild:

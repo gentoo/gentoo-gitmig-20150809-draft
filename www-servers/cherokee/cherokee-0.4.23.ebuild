@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.23.ebuild,v 1.2 2005/05/25 02:54:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.23.ebuild,v 1.3 2005/12/27 09:19:48 bass Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-devel/automake-1.7.5
 
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 SLOT="0"
-IUSE="ipv6 ssl gnutls pic static"
+IUSE="ipv6 ssl gnutls static"
 
 src_unpack() {
 	unpack ${A}
@@ -37,9 +37,6 @@ src_compile() {
 		myconf="${myconf}  --enable-ssl=openssl"
 	else
 		myconf="${myconf} --disable-ssl"
-	fi
-	if use pic ; then
-		myconf="${myconf} --with-pic"
 	fi
 	if ! use ipv6 ; then
 		myconf="${myconf} --disable-ipv6"
