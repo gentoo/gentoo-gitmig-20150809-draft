@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.1 2005/12/27 18:09:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.2 2005/12/27 18:20:57 ferdy Exp $
 
 manpagesextra=${PN}-extra-0.8a
 S2=${WORKDIR}/${manpagesextra}
@@ -39,6 +39,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn
 	ewarn "If you want to read these man-pages properly you need to replace"
 	ewarn "the following line in /etc/man.conf:"
 	echo
@@ -47,4 +48,6 @@ pkg_postinst() {
 	ewarn "With:"
 	echo
 	echo  "NROFF           /usr/bin/groff -Tutf8 -mandoc"
+	echo
+	ewarn
 }
