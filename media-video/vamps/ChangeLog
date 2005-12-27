@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vamps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.7 2005/09/10 15:31:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.8 2005/12/27 22:05:12 lu_zero Exp $
+
+*vamps-0.98 (27 Dec 2005)
+
+  27 Dec 2005; Luca Barbato <lu_zero@gentoo.org> +vamps-0.98.ebuild:
+  New version
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> vamps-0.95.ebuild,
   vamps-0.97.ebuild:

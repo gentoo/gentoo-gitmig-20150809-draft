@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 509a9af461af46380725f8f645776c00 ChangeLog 1120
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 8e31ffe916e5385b9baa0544572c3489 vamps-0.97.ebuild 769
-MD5 221bfe4b9f168f9fd03d1c8c9cbcdaa2 vamps-0.95.ebuild 1020
+MD5 4c670498e0e8d5fd277d49dcd0aaf56c ChangeLog 1229
 MD5 631c0372bf5202d455e8a5a181722f30 files/digest-vamps-0.95 62
 MD5 b532e6287e57b9915b1e2b9a0bf74efb files/digest-vamps-0.97 61
+MD5 b5a61e52885e689db1fa8852c7a51319 files/digest-vamps-0.98 61
 MD5 49b7850d2043759367f52d8594d8d69b files/vamps-0.95-amd64.patch 398
 MD5 b08ef3771051017031df6fc8d4061db1 files/vamps-0.97-amd64.patch 340
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPmDTflZ8QqxhrsMRAjunAJ46T5NAHj8rZ3SiKPjnFVwLGwQLdQCgsOT7
-K7O0tbmb6QMDtNv70CzxZys=
-=Vb9j
------END PGP SIGNATURE-----
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 221bfe4b9f168f9fd03d1c8c9cbcdaa2 vamps-0.95.ebuild 1020
+MD5 8e31ffe916e5385b9baa0544572c3489 vamps-0.97.ebuild 769
+MD5 571b1e06589196d05a7cd1ae5acdd8fa vamps-0.98.ebuild 767
