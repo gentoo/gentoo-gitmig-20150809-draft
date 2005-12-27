@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7d4a76f98296290b62a01f6f40303db6 ChangeLog 14440
+MD5 d266dac01e8e0e6cd0abcf8e05f5c47c ChangeLog 14533
 MD5 a18ddd3f2cdcb815cf86f4b9c4bdd6fe files/2.6.4/zope.confd 950
 MD5 4d278d26bb7be7693f7213861a9d3805 files/2.6.4/zope.initd 3791
 MD5 adfe59eaafb05edb1c4a445563b04c08 files/2.7.7/i18n-1.0.0.patch 7634
@@ -19,12 +19,12 @@ MD5 5416407eff85546578bb4e7c61f45d5e zope-2.6.4-r1.ebuild 5629
 MD5 8664a857f90291f6bd82968b54b23e0d zope-2.7.7.ebuild 3332
 MD5 7d64d093b4a5953de46ae0c53f831649 zope-2.7.8.ebuild 3329
 MD5 0ce3afe5cd3f944a3fa984afa74a43af zope-2.8.3.ebuild 3512
-MD5 5e28a2274f521f3b3b17a0e761d44caf zope-2.8.4.ebuild 3513
+MD5 4a9e6444edea84659a6b51da49f94c69 zope-2.8.4.ebuild 3513
 MD5 162738f59837ebb6450a04f7a066c9ab zope-3.1.0.ebuild 3236
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDrc6PCRZPokWLroQRAgaEAJ9y0xiTAQwOy3IHCQuoOj7maPW10ACgj2ZU
-FVELeSBDx/kyRm6SihiqgVM=
-=gDCx
+iD8DBQFDsV5PKRy60XGEcJIRAoViAKCf04RRmrrB1n53RaxZi3OqBwKPgQCgo6p2
+J7u8TX3/kOHXtKgcVYottwA=
+=4rDP
 -----END PGP SIGNATURE-----
