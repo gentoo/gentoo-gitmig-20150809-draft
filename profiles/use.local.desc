@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1633 2005/12/28 10:15:02 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1634 2005/12/28 13:38:44 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -279,8 +279,12 @@ dev-lang/php:java-external - Use the external java extension rather than the bun
 dev-lang/php:java-internal - Use the bundled java extension in PHP4
 dev-lang/php:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-lang/php:overload - Enable the overload extension
+dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:pdo-external - Use the external pecl-pdo extension rather than the bundled one
 dev-lang/php:pear - Enable PEAR support
+dev-lang/php:vm-goto - Use the GOTO Zend-VM
+dev-lang/php:vm-switch - Use the SWITCH Zend-VM
+dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:zip - Enable ZIP file support
 dev-lang/python:ucs2 - Enable byte size 2 unicode
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
