@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.158 2005/12/13 20:19:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.159 2005/12/28 22:41:41 dragonheart Exp $
+
+*ethereal-0.10.14 (28 Dec 2005)
+
+  28 Dec 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/ethereal-0.10.12-fix-encrypted-conflict.diff,
+  -ethereal-0.10.12.ebuild, -ethereal-0.10.13.ebuild,
+  -ethereal-0.10.13-r1.ebuild, +ethereal-0.10.14.ebuild:
+  version added for security bug #116943 thanks ChazeFroy. removed older
+  vulnerable versions too
 
   13 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   ethereal-0.10.13-r2.ebuild:

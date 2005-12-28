@@ -1,17 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.13.ebuild,v 1.7 2005/12/03 20:06:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.14.ebuild,v 1.1 2005/12/28 22:41:41 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils
 
 DESCRIPTION="A commercial-quality network protocol analyzer"
 HOMEPAGE="http://www.ethereal.com/"
-#SRC_URI="http://www.ethereal.com/distribution/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://www.ethereal.com/distribution/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="adns gtk ipv6 snmp ssl kerberos"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
@@ -81,7 +80,7 @@ src_install() {
 	dodir /usr/lib/ethereal/plugins/${PV}
 	make DESTDIR="${D}" install || die
 
-	dodoc AUTHORS ChangeLog INSTALL.* NEWS README*
+	dodoc AUTHORS ChangeLog NEWS README*
 
 	insinto /usr/share/icons/hicolor/16x16/apps
 	newins "${S}"/image/hi16-app-ethereal.png ethereal.png
@@ -101,6 +100,6 @@ pkg_postinst() {
 	ewarn "use a hardened operating system;"
 	ewarn "do not listen to addition interfaces;"
 	ewarn "if possible, run behind a firewall;"
-	ewarn "take a capture with tcpdump and analyze the contents offline running ethereal as a the least privileged user;"
+	ewarn "take a capture with tcpdump and analyze running ethereal as a least privileged user;"
 	ewarn "and subscribe to ethereal's announce list to be notified of newly discovered vulnerabilities."
 }
