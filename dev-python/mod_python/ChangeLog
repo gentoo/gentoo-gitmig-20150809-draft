@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.39 2005/12/10 23:43:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.40 2005/12/28 16:21:07 blubb Exp $
+
+  28 Dec 2005; Simon Stelling <blubb@gentoo.org> mod_python-3.1.4-r1.ebuild:
+  stable on amd64
 
   11 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   mod_python-2.7.11.ebuild:
