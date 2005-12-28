@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineakconfig
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakconfig/ChangeLog,v 1.9 2005/09/25 22:02:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakconfig/ChangeLog,v 1.10 2005/12/28 18:46:08 nelchael Exp $
+
+  28 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  lineakconfig-0.4.1b-r1.ebuild:
+  Stable on x86.
 
 *lineakconfig-0.4.1b-r1 (25 Sep 2005)
 
