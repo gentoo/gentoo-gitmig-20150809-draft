@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.53 2005/12/28 09:21:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.54 2005/12/28 13:39:00 gustavoz Exp $
+
+  28 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> squid-2.5.12.ebuild:
+  Stable on sparc
 
   28 Dec 2005; Alin Nastac <mrness@gentoo.org> squid-2.5.12.ebuild:
   Keep log and cache directories between upgrades (#116890). Mark stable on x86.
