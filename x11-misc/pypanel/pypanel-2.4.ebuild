@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4.ebuild,v 1.1 2005/06/30 04:37:16 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4.ebuild,v 1.2 2005/12/28 17:52:02 nelchael Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
 IUSE=""
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libXft virtual/x11 )
 	>=dev-lang/python-2.2.3-r1
 	>=dev-python/python-xlib-0.12
 	>=sys-apps/sed-4

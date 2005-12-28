@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.27 2005/11/01 13:18:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.28 2005/12/28 17:52:02 nelchael Exp $
+
+  28 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org> pypanel-2.4.ebuild:
+  Fixed DEPEND for modular X. See bug #115991.
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -pypanel-2.0.ebuild:
   Fixed ChangeLog.
