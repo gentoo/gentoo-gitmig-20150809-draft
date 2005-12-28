@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r2.ebuild,v 1.2 2005/12/19 19:36:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r2.ebuild,v 1.3 2005/12/28 20:37:56 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -9,16 +9,15 @@ MY_PV="3.4.4"
 DESCRIPTION="GNAT Ada Compiler"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-core-${MY_PV}.tar.bz2
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-ada-${MY_PV}.tar.bz2
-	x86? ( http://dev.gentoo.org/~george/src/gcc-3.4-i386.tar.gz )
+	x86? ( http://dev.gentoo.org/~george/src/gcc-3.4-i386.tar.bz2 )
 	ppc? ( mirror://gentoo/gnat-3.15p-powerpc-unknown-linux-gnu.tar.bz2 )
 	amd64? ( http://dev.gentoo.org/~george/src/gcc-3.4-amd64.tar.gz )"
 HOMEPAGE="http://www.gnat.com/"
 
-DEPEND="=sys-devel/gcc-3.4*
-	x86? ( >=app-shells/tcsh-6.0 )"
+DEPEND="=sys-devel/gcc-3.4*"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GMGPL"
 IUSE=""
 
@@ -72,8 +71,15 @@ src_compile() {
 	   ADA_INCLUDE_PATH="${x}:${ADA_INCLUDE_PATH}"
 	done
 
-	local LDFLAGS="-L${GCC_EXEC_PREFIX} -L${GNATBOOTINST}"
-	local CC="${GNATBOOT}/bin/gcc"
+	case ${ARCH} in
+		ppc)
+			export LDFLAGS="-L${GCC_EXEC_PREFIX} -L${GNATBOOTINST}"
+			;;
+		amd64 | x86)
+			export LDFLAGS="-L${GCC_EXEC_PREFIX}"
+			;;
+	esac
+	export CC="${GNATBOOT}/bin/gcc"
 	export LD_LIBRARY_PATH="${GNATBOOT}/lib"
 
 	# Configure gcc
