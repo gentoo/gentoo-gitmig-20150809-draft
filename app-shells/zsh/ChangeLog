@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.91 2005/12/07 00:33:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.92 2005/12/28 22:56:35 grobian Exp $
+
+  28 Dec 2005; Fabian Groffen <grobian@gentoo.org> zsh-4.2.6.ebuild:
+  Removed unneccesary ppc-macos hack.  (Bug #115740)
 
 *zsh-4.2.6 (07 Dec 2005)
 
