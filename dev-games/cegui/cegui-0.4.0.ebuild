@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.4.0.ebuild,v 1.1 2005/09/25 08:43:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.4.0.ebuild,v 1.2 2005/12/28 19:16:34 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${PN}_mk2-${PV}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="opengl devil doc xerces-c"
 
 RDEPEND="=media-libs/freetype-2*
