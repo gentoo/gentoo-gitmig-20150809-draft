@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.6 2005/07/11 13:21:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.7 2005/12/28 20:58:00 betelgeuse Exp $
 
 inherit java
 
@@ -14,7 +14,7 @@ PROVIDE="virtual/jre
 LICENSE="sun-bcla-java-vm-1.2"
 SLOT="1.2"
 KEYWORDS="~x86 -*"
-RESTRICT="fetch"
+RESTRICT="fetch stricter"
 IUSE="doc X"
 # NOTE:  Sun's JDK also requires the XFree86 be installed to use the graphical
 # libraries.  Even some non-graphical libraries (such as JavaMail) have bizarre
