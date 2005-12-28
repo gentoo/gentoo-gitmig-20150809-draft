@@ -1,14 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.0.5.ebuild,v 1.1 2005/12/27 18:16:25 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.0.6.ebuild,v 1.1 2005/12/28 13:22:05 ferdy Exp $
 
 inherit python toolchain-funcs eutils
+
+DOC_VER="1.0.5"
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
 SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2
-		http://kernel.org/pub/software/scm/git/${PN}-man-${PV}.tar.bz2
-		doc? ( http://kernel.org/pub/software/scm/git/${PN}-html-${PV}.tar.bz2 )"
+		http://kernel.org/pub/software/scm/git/${PN}-man-${DOC_VER}.tar.bz2
+		doc? ( http://kernel.org/pub/software/scm/git/${PN}-html-${DOC_VER}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -78,13 +80,13 @@ src_install() {
 
 	use tcltk || rm ${D}/usr/bin/gitk
 
-	doman ${WORKDIR}/${PN}-man-${PV}/man?/*
+	doman ${WORKDIR}/${PN}-man-${DOC_VER}/man?/*
 
 	dodoc README COPYING Documentation/SubmittingPatches
 	if use doc ; then
 		dodoc Documentation/technical/*
 		dodir /usr/share/doc/${PF}/html
-		cp -r ${WORKDIR}/${PN}-html-${PV}/* ${D}/usr/share/doc/${PF}/html
+		cp -r ${WORKDIR}/${PN}-html-${DOC_VER}/* ${D}/usr/share/doc/${PF}/html
 	fi
 
 	newinitd "${FILESDIR}/git-daemon.initd" git-daemon
