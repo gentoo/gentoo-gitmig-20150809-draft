@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.9 2005/12/15 13:28:19 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.10 2005/12/28 18:06:36 nelchael Exp $
 
 inherit eutils
 
@@ -14,10 +14,21 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXext
+		x11-libs/libX11
+		x11-libs/libXinerama
+		x11-libs/libXmu
+		)
+		virtual/x11
+	)
 	virtual/xft"
 
 DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xproto
+		x11-proto/xineramaproto
+		)
+		virtual/x11
+	)
 	>=media-libs/imlib2-1.1.0"
 
 src_unpack() {
@@ -39,7 +50,6 @@ src_install() {
 	dodoc CHANGELOG
 }
 
-
 pkg_postinst() {
 	einfo
 	einfo "You should copy /usr/share/${P}/skippyrc-default to ~/.skippyrc"
@@ -48,4 +58,3 @@ pkg_postinst() {
 	einfo
 	echo
 }
-

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/skippy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.9 2005/12/15 13:28:19 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.10 2005/12/28 18:06:36 nelchael Exp $
+
+  28 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org> skippy-0.5.0.ebuild:
+  Fix *DEPEND for modular X. See bug #115650.
 
   15 Dec 2005; Herbie Hopkins <herbs@gentoo.org> skippy-0.5.0.ebuild:
   Stable on amd64.
