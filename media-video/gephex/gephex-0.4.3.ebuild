@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.7 2005/12/16 12:07:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.8 2005/12/28 20:53:58 lu_zero Exp $
 
 DESCRIPTION="GePhex is a modular video effect framework."
 HOMEPAGE="http://www.gephex.org"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 IUSE="aalib alsa ffmpeg joystick mmx mpeg opengl oss png sdl static v4l"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 
 DEPEND="virtual/x11
 	=x11-libs/qt-3*
