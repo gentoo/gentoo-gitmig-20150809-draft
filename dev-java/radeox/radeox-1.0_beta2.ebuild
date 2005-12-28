@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2.ebuild,v 1.10 2005/07/15 17:21:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2.ebuild,v 1.11 2005/12/28 03:13:52 nichoj Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/jakarta-oro-2.0*
 	=dev-java/junit-3.8*
-	=dev-java/picocontainer-1.0*
+	=dev-java/picocontainer-1*
 	=dev-java/commons-logging-1.0*"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
