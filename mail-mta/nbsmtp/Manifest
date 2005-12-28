@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 542c744aef06ef42eeb7a5aee6e34cdb nbsmtp-1.00.ebuild 867
-MD5 d1e1be0535754f99bbe9c2c7bf1da541 nbsmtp-1.00-r3.ebuild 1307
-MD5 9dacae6e5bf3e590e05233db2604255c ChangeLog 6006
-MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
-MD5 f5c43fd15371cd45d2429999463c3ffa nbsmtp-1.00-r2.ebuild 1102
+MD5 c247a8bac49c9fa964b441bc917dd276 ChangeLog 6105
+MD5 614757dbf694f3253b5ed3865f127ba1 files/digest-nbsmtp-1.00 64
 MD5 614757dbf694f3253b5ed3865f127ba1 files/digest-nbsmtp-1.00-r2 64
 MD5 614757dbf694f3253b5ed3865f127ba1 files/digest-nbsmtp-1.00-r3 64
 MD5 02906beafefaf79dd565570de5541a06 files/mailer.conf 348
-MD5 614757dbf694f3253b5ed3865f127ba1 files/digest-nbsmtp-1.00 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBmF1ViELBEf1JB0RAhVKAJ9R2dvnQDKJwVdtTYBUXK7xK/eBRwCfZMgc
-2vbSaKkUwNUQomq3YD/iR1U=
-=3BVm
------END PGP SIGNATURE-----
+MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
+MD5 f5c43fd15371cd45d2429999463c3ffa nbsmtp-1.00-r2.ebuild 1102
+MD5 6e03274a7640eadde6b193a6d169dafd nbsmtp-1.00-r3.ebuild 1323
+MD5 542c744aef06ef42eeb7a5aee6e34cdb nbsmtp-1.00.ebuild 867
