@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mdidentd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/ChangeLog,v 1.4 2005/08/23 13:20:13 flameeyes Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/ChangeLog,v 1.5 2005/12/28 20:57:55 vapier Exp $
+
+  28 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/mdidentd-1.04a-c++.patch, mdidentd-1.04a.ebuild:
+  Fix some broken C++ code #116999 by Markus Ullmann.
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> mdidentd-1.04a.ebuild:
   Use -1 instead of /bin/false on enewuser call.

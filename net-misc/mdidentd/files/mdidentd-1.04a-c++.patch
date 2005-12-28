@@ -1,0 +1,23 @@
+Fix some broken C++ code ... __list_iter doesn't implement get(), nor
+does __list_core implement insert() ...
+
+http://bugs.gentoo.org/116999
+
+--- ezbounce-1.04a/lib/linkedlist.h
++++ ezbounce-1.04a/lib/linkedlist.h
+@@ -89,7 +89,6 @@ public:
+     list_iterator(__list_core * x) : __list_iter(x) { }
+     T * next()          { return (T *) __list_iter::next(); }
+     T * remove()        { return (T *) __list_iter::remove(); }
+-    T * get(void)       { return (T *) __list_iter::get(); }
+     T * set(int x)      { return (T *) __list_iter::set(x); }
+ };
+     
+@@ -97,7 +96,6 @@ template <class T> class list : public _
+ {    
+ public:
+     int add(T *x)         { return __list_core::add((void *) x); }
+-    int add(int w, T * x) { return __list_core::insert(w, (void *) x); }
+     T * get(int idx)      { return (T *) __list_core::get(idx); }
+     T * remove(int idx)   { return (T *) __list_core::remove(idx); }
+     bool remove(T * d)    { return __list_core::remove(d); }

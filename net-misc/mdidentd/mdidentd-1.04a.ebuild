@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04a.ebuild,v 1.7 2005/08/23 13:20:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04a.ebuild,v 1.8 2005/12/28 20:57:55 vapier Exp $
 
 inherit eutils
 
@@ -10,11 +10,10 @@ SRC_URI="http://druglord.freelsd.org/ezbounce/ezbounce-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/ezbounce-${PV}
 
@@ -25,22 +24,21 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-security.patch
-	epatch ${FILESDIR}/${PV}-pidfile.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-security.patch
+	epatch "${FILESDIR}"/${PV}-pidfile.patch
+	epatch "${FILESDIR}"/${P}-c++.patch #116999
 }
 
 src_compile() {
-	econf `use_with ssl` || die
+	econf $(use_with ssl) || die
 	emake -C mdidentd CXX_OPTIMIZATIONS="${CXXFLAGS}" || die
 }
 
 src_install() {
-	dosbin mdidentd/mdidentd
+	dosbin mdidentd/mdidentd || die
 	dodoc mdidentd/README
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mdidentd.init.d mdidentd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/mdidentd.conf.d mdidentd
+	newinitd "${FILESDIR}"/mdidentd.init.d mdidentd
+	newconfd "${FILESDIR}"/mdidentd.conf.d mdidentd
 }
