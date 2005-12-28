@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.38 2005/12/16 15:33:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.39 2005/12/28 21:19:18 betelgeuse Exp $
+
+  28 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  sun-jre-bin-1.4.2.09.ebuild, sun-jre-bin-1.4.2.10.ebuild,
+  sun-jre-bin-1.5.0.05.ebuild, sun-jre-bin-1.5.0.06.ebuild:
+  Added stricter to RESTRICT because upstream binaries have text relocations.
 
   16 Dec 2005; Thomas Matthijs <axxo@gentoo.org>
   sun-jre-bin-1.4.2.10.ebuild:
