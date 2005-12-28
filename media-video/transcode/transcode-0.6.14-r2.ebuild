@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.12 2005/12/18 18:09:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.13 2005/12/28 20:33:45 lu_zero Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -43,6 +43,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( =x11-libs/gtk+-1.2* )
+	xml2? ( dev-libs/libxml2 )
 	truetype? ( >=media-libs/freetype-2 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
 
