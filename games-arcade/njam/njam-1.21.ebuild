@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.21.ebuild,v 1.2 2005/08/31 17:58:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.21.ebuild,v 1.3 2005/12/28 06:42:07 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
