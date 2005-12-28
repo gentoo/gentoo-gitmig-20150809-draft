@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.5 2005/12/19 19:38:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.6 2005/12/28 21:53:59 george Exp $
 
 inherit eutils flag-o-matic gnat
 
@@ -19,7 +19,7 @@ DEPEND="=dev-lang/gnat-3.44*
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 #may be it is even better to force plain -O2 -pipe -ftracer here
