@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.17 2005/12/12 05:05:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.18 2005/12/28 00:55:05 robbat2 Exp $
+
+*re2c-0.9.11 (28 Dec 2005)
+
+  28 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +re2c-0.9.11.ebuild:
+  Bug #116856, version bump.
 
 *re2c-0.9.11_rc1 (12 Dec 2005)
 

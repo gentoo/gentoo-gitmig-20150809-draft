@@ -1,7 +1,8 @@
-MD5 3b234650207d98f2ac5fbc3b1cbf2ca8 ChangeLog 2815
+MD5 f7a1ed752af07db7d5ca0639162ead97 ChangeLog 2947
 MD5 9ab079edcf8f22efe343fb3b1c4722b4 files/0.9.1-patch.gz 1466
 MD5 63995d480a554e62b5d950e649397cea files/digest-re2c-0.9.1 62
 MD5 58a87775d74672b92299560648d415c8 files/digest-re2c-0.9.10 63
+MD5 06f663969c2f360bf8e17affd2a550aa files/digest-re2c-0.9.11 63
 MD5 717c7b23dc252f87196e6719984e0f26 files/digest-re2c-0.9.11_rc1 67
 MD5 7a14f80c1e008a42c699a8899bd290cc files/digest-re2c-0.9.3 62
 MD5 3687da5d2f47594ae13ae7ead7001a81 files/digest-re2c-0.9.7 62
@@ -10,6 +11,7 @@ MD5 f510a8e3af0a41f30f0ed1c5e7764a5e files/digest-re2c-0.9.9 62
 MD5 342915f70ca37ac7f9b27c0dd26350c1 metadata.xml 283
 MD5 d79a5160c7498b6fb45dd46b4ce5b1a1 re2c-0.9.1.ebuild 774
 MD5 3baca67ce03b008b64620312fb42c4de re2c-0.9.10.ebuild 900
+MD5 4ec3396ad25d1ccb8b9823cb38e79f50 re2c-0.9.11.ebuild 968
 MD5 cf14be524de36311cfcbb77c86e2b8ec re2c-0.9.11_rc1.ebuild 972
 MD5 9209d95fc795931da6f2683ed5dd9e07 re2c-0.9.3.ebuild 706
 MD5 16ed46fa3b71e457a7503764e630f165 re2c-0.9.7.ebuild 707
