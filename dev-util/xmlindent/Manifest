@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4318e6be42c05d37dc6aa368fe966be3 ChangeLog 347
+MD5 b83e9715a430e905606f520f27954774 files/digest-xmlindent-0.2.17 67
+MD5 028287817f34065e557e3c944e4c6df0 metadata.xml 303
+MD5 22dd75e375d3d9183b319de830ee5843 xmlindent-0.2.17.ebuild 616
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDspSzCHk4+ZoBpvsRAi7DAJ9LKL23weC2h7unJrSXKSzyhDRvUgCeMwoj
+q/DAEiyz8p8eSFPGB8L82SA=
+=zNzz
+-----END PGP SIGNATURE-----

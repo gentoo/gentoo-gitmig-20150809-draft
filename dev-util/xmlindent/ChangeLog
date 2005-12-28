@@ -1,0 +1,7 @@
+# ChangeLog for dev-util/xmlindent
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.1 2005/12/28 13:35:30 slarti Exp $
+
+  17 Dec 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
+  Initial import, thanks to Sascha Herrmann <starfox899@web.de> in bug #113535.
+
