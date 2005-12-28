@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.37 2005/12/19 19:36:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.38 2005/12/28 16:45:43 george Exp $
+
+  28 Dec 2005; George Shapovalov <george@gentoo.org> gnat-3.44-r1.ebuild:
+  ready for unmasking on x86, amd64 supported in -r2 and ppc needs testing
 
   19 Dec 2005; George Shapovalov <george@gentoo.org> gnat-3.44-r2.ebuild:
   all of amd64 stuff for gnat-3.44 is set, redady for unmasking. Removed ~x86

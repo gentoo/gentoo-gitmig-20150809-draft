@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r1.ebuild,v 1.3 2005/12/16 12:00:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r1.ebuild,v 1.4 2005/12/28 16:45:43 george Exp $
 
-inherit gnat flag-o-matic
+inherit gnat
 
 MY_PV="3.4.4"
 
@@ -10,15 +10,14 @@ DESCRIPTION="GNAT Ada Compiler"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-core-${MY_PV}.tar.bz2
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-ada-${MY_PV}.tar.bz2
 	x86? ( http://gd.tuwien.ac.at/languages/ada/gnat/3.15p/gnat-3.15p-i686-pc-redhat71-gnu-bin.tar.gz )
-	ppc? ( mirror://gentoo/gnat-3.15p-powerpc-unknown-linux-gnu.tar.bz2 )
-	amd64? ( http://dev.gentoo.org/~george/src/gcc-3.4-amd64.tar.gz )"
+	ppc? ( mirror://gentoo/gnat-3.15p-powerpc-unknown-linux-gnu.tar.bz2 )"
 HOMEPAGE="http://www.gnat.com/"
 
 DEPEND="=sys-devel/gcc-3*
 	x86? ( >=app-shells/tcsh-6.0 )"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 -amd64"
 LICENSE="GMGPL"
 IUSE=""
 
@@ -35,10 +34,12 @@ case ${ARCH} in
 		GNATBOOTINST="${GNATBOOT}"
 		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc-lib"
 		;;
-	amd64)
-		GNATBOOT="${WORKDIR}/usr"
-		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc"
 esac
+
+# gnat is getting bootstrapped off an older backend, set minimal flags
+# use later versions for more modern gcc support
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
 
 src_unpack() {
 	unpack ${A}
@@ -47,11 +48,10 @@ src_unpack() {
 	if [ "${ARCH}" = "x86" ]; then
 		cd "${GNATBOOTINST}"
 		patch -p1 < ${FILESDIR}/gnat-3.15p-i686-pc-linux-gnu-bin.patch
+		# tcsh no longer installs symlink to csh
+		sed -i -e "s:/bin/csh:/bin/tcsh:" doconfig
 		echo $'\n'3$'\n'${GNATBOOT}$'\n' | ./doconfig > doconfig.log 2>&1
 		./doinstall
-	elif [ "${ARCH}" = "amd64" ]; then
-		cd ${S}/gcc/ada/
-		patch Make-lang.in < ${FILESDIR}/gnat-3.44-amd64-Make-lang.in.patch
 	fi
 
 	# Prepare the gcc source directory
@@ -60,10 +60,6 @@ src_unpack() {
 	touch gcc/ada/[es]info.h
 	touch gcc/ada/nmake.ad[bs]
 	mkdir -p "${GNATBUILD}"
-
-	#fixup some hardwired flags
-	sed -i -e "s:CFLAGS = -O2:CFLAGS = ${CFLAGS}:"	\
-		gcc/ada/Makefile.adalib || die "patching Makefile.adalib failed"
 }
 
 src_compile() {
@@ -156,12 +152,7 @@ src_install() {
 	# These are all provided by gcc
 	rm -rf ${D}/usr/share/info/{gcc*,cpp*}
 
-	#on amd64 installer misdetects arch string
-	if [ "${ARCH}" == "amd64" ]; then
-		local myCHOST="x86_64-unknown-linux-gnu"
-	else
-		local myCHOST="${CHOST}"
-	fi
+	local myCHOST="${CHOST}"
 	dodir "/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/rts-native"
 
 	# Move the native threads library
