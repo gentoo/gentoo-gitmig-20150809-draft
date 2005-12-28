@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.36 2005/10/31 15:11:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.37 2005/12/28 19:05:48 nelchael Exp $
+
+  28 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/d4x-2.5.6-libintl_fix.patch, d4x-2.5.6.ebuild:
+  Fix bug #111769. Thanks to Alexey Maximov.
 
   31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> -d4x-2.5.1.ebuild:
   Removed old 2.5.1.
