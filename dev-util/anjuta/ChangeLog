@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.51 2005/10/05 21:43:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.52 2005/12/28 14:27:21 malverian Exp $
+
+*anjuta-1.2.4-r1 (28 Dec 2005)
+
+  28 Dec 2005; <malverian@gentoo.org> +files/anjuta-1.2.4-gtk-fix.patch,
+  -anjuta-1.2.2.ebuild, -anjuta-1.2.2-r1.ebuild, anjuta-1.2.4.ebuild,
+  +anjuta-1.2.4-r1.ebuild:
+  Fix bug #108674 and #115680. anjuta-1.2.4-r1 has gtk+-2.8.9 fix.
+  Cleaned out old ebuilds.
 
   05 Oct 2005; Simon Stelling <blubb@gentoo.org> anjuta-1.2.4.ebuild:
   make it adhere multilib-strict; bug 97271
