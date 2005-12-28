@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.4.ebuild,v 1.3 2005/12/25 06:26:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.4.ebuild,v 1.4 2005/12/28 17:51:30 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,6 @@ MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
-IUSE=""
 BRANCH_UPDATE=""
 
 DESCRIPTION="Mips64 Kernel Compiler (Experimental)"
@@ -20,6 +19,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
+IUSE=""
 
 KEYWORDS="mips"
 
@@ -127,18 +127,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
+	einfo ""
 	einfo "To facilitate an easier kernel build, you may wish to add the following line to your profile:"
-	einfo
+	einfo ""
 	einfo "For 2.4.x kernel builds:"
 	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH} CROSS_COMPILE=${MYARCH}-unknown-linux-${MYUSERLAND}-\""
-	einfo
+	einfo ""
 	einfo "For 2.6.x kernel builds:"
 	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH/64/} CROSS_COMPILE=${MYARCH}-unknown-linux-${MYUSERLAND}-\""
-	einfo
+	einfo ""
 	einfo "Then to compile a kernel, simply goto the kernel source directory, and issue:"
 	einfo "${MYARCH}make <target>"
 	einfo "Where <target> is one of the usual kernel targets"
-	einfo
+	einfo ""
 	epause 10
 }

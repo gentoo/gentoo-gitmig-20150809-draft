@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-mips64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.15 2005/12/25 06:26:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.16 2005/12/28 17:51:30 kumba Exp $
+
+  28 Dec 2005; Joshua Kinard <kumba@gentoo.org> gcc-mips64-3.4.4.ebuild,
+  gcc-mips64-3.4.5.ebuild:
+  Minor ebuild cleanups
 
 *gcc-mips64-3.4.5 (25 Dec 2005)
 
