@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.111 2005/12/27 18:46:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.112 2005/12/28 17:03:33 dang Exp $
+
+  28 Dec 2005; <dang@gentoo.org> xpdf-3.01-r4.ebuild:
+  Remove message about needing motif for xpdf.
 
 *xpdf-3.01-r4 (27 Dec 2005)
 
