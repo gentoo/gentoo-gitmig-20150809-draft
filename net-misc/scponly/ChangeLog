@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.21 2005/12/28 15:50:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.22 2005/12/28 21:59:14 halcy0n Exp $
+
+  28 Dec 2005; Mark Loeser <halcy0n@gentoo.org> -scponly-4.2.ebuild,
+  scponly-4.3.ebuild:
+  Stable on x86; bug #116526
 
   28 Dec 2005; Simon Stelling <blubb@gentoo.org> scponly-4.3.ebuild:
   stable on amd64 wrt bug 116526
