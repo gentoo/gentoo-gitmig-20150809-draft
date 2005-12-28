@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r2.ebuild,v 1.2 2005/12/28 16:13:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r2.ebuild,v 1.3 2005/12/28 16:25:10 swegener Exp $
 
 inherit flag-o-matic qt3
 
@@ -32,7 +32,7 @@ src_compile() {
 		--disable-dependency-tracking \
 		--enable-maintainer-mode \
 		--disable-pinentry-gtk \
-		$(use_enable gtk gtk2) \
+		$(use_enable gtk pinentry-gtk2) \
 		$(use_enable qt pinentry-qt) \
 		$(use_enable ncurses pinentry-curses) \
 		$(use_enable ncurses fallback-curses) \
