@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.5.ebuild,v 1.2 2005/12/28 17:51:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.5.ebuild,v 1.3 2005/12/28 18:46:16 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,7 +73,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local userland
 	cd ${WORKDIR}
 	ln -s ${TMP_P} ${P}
 
