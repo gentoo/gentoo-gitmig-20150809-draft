@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.30 2005/12/03 20:23:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.31 2005/12/28 02:37:02 dragonheart Exp $
+
+  29 Dec 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/lzo-1.08-exec-stack.patch, +files/lzo-2.02-exec-stack.patch,
+  lzo-1.08-r1.ebuild, -lzo-2.02.ebuild, lzo-2.02-r1.ebuild:
+  removed executable stacks bug #116930] thanks to betelgeuse
 
 *lzo-2.02-r1 (03 Dec 2005)
 

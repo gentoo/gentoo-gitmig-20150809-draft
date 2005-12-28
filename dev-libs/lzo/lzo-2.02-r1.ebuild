@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.02-r1.ebuild,v 1.1 2005/12/03 20:23:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.02-r1.ebuild,v 1.2 2005/12/28 02:37:02 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="An extremely fast compression and decompression library"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzo/"
@@ -13,6 +15,12 @@ IUSE="examples"
 
 DEPEND="x86? ( dev-lang/nasm )"
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-exec-stack.patch
+}
 
 src_compile() {
 	econf --enable-shared || die

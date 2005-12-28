@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.18 2005/07/03 21:18:52 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.19 2005/12/28 02:37:02 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -18,6 +18,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-exec-stack.patch
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	sed -i -e s,-O2,,g ${S}/aclocal.m4
