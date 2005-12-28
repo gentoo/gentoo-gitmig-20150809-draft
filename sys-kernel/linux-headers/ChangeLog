@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.157 2005/12/27 23:49:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.158 2005/12/28 18:58:07 plasmaroo Exp $
+
+  28 Dec 2005; <plasmaroo@gentoo.org> linux-headers-2.6.11-r4.ebuild:
+  Fix joystick.h issue on SPARC.
 
   27 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   linux-headers-2.6.11-r4.ebuild:
