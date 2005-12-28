@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.4 2005/12/28 19:16:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.5 2005/12/28 21:34:29 mr_bones_ Exp $
+
+*cegui-0.4.1 (28 Dec 2005)
+
+  28 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org> +cegui-0.4.1.ebuild:
+  version bump
 
   28 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.4.0.ebuild:
   stable for x86
