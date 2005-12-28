@@ -6,12 +6,12 @@ MD5 40aac295afe989059e3e986ffa925c68 files/digest-gjdoc-0.7.6 63
 MD5 40b0dffd7b5e5a46ff066bf04a1fdb82 files/digest-gjdoc-0.7.7 63
 MD5 09c41d12fbdde13c5d1d4a64aa66bd0f files/gjdoc 137
 MD5 76cd0302fff68515662bf77e893fde95 gjdoc-0.7.6.ebuild 1517
-MD5 0a9029058f58439400c2467ac9d16578 gjdoc-0.7.7.ebuild 1634
+MD5 7be61f211919f5e3fb54a3278cb2625f gjdoc-0.7.7.ebuild 1630
 MD5 0d8df1cd88e392aa059af56ac1d368e9 metadata.xml 535
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpzSMQiJ/wx066S4RAt12AJoCFrRLS/rQhpkOBfB7WNe7qy0tiACeI4gX
-T9ZUrVIrF+Rb5bIx1qFrMtA=
-=khkf
+iD8DBQFDsvo6QiJ/wx066S4RAh09AJ0YEwlo0O9EJzkbJz/Zx8aJQUSuRgCggw1x
+tTqZLfG0wxyd0yUWuwLfE24=
+=Urc1
 -----END PGP SIGNATURE-----

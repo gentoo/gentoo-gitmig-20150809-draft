@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.7.ebuild,v 1.1 2005/12/19 22:30:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.7.ebuild,v 1.2 2005/12/28 20:48:44 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -36,7 +36,7 @@ src_compile() {
 	myc="${myc} --disable-dependency-tracking"
 
 	econf ${myc} \
-		$(use_enable xml xmldoclet) || die "econf failed"
+		$(use_enable xmldoclet) || die "econf failed"
 
 	emake || die "emake failed"
 }
