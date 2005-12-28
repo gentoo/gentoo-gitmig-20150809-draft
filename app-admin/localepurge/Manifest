@@ -3,10 +3,10 @@ MD5 3e908ea9bb1a364f34b0bd613def47f5 files/digest-localepurge-0.2 63
 MD5 d7fe0953341216f9199028ff2999683d files/digest-localepurge-0.2-r1 66
 MD5 d7fe0953341216f9199028ff2999683d files/digest-localepurge-0.2-r2 66
 MD5 d8bc8acfd4a18ebb716eb9f45bc7744c files/digest-localepurge-0.4 63
-MD5 926c9318ba0aaafa993638590acda7e6 files/digest-localepurge-0.5 63
+MD5 28715bbee1287aaa0b9862d721c662c1 files/digest-localepurge-0.5 63
 MD5 6d6a6367fb8e1de83399ef4a5ed16991 localepurge-0.2-r1.ebuild 780
 MD5 cb256ea84aaf9e56176ce0b3e7541ef9 localepurge-0.2-r2.ebuild 793
 MD5 4520e056aebc4138c2f1aa26a7be7743 localepurge-0.2.ebuild 812
-MD5 0a40ff75682f74e2b5b13b879c345a8d localepurge-0.4.ebuild 784
-MD5 b612e677702c5af12abb2c74f9a44c5c localepurge-0.5.ebuild 797
+MD5 81f3166d16b551ea01f01781da950839 localepurge-0.4.ebuild 793
+MD5 f3fd17dc688ac9910496b6d5625f36da localepurge-0.5.ebuild 805
 MD5 d248960caf4334af6c71bf9199df1606 metadata.xml 394

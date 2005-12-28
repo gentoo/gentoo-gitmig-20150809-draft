@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/localepurge-0.4.ebuild,v 1.1 2005/12/27 08:32:48 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/localepurge-0.4.ebuild,v 1.2 2005/12/28 11:18:02 bass Exp $
 
 DESCRIPTION="Script to recover diskspace wasted for unneeded locale files and localized man pages."
-HOMEPAGE="http://www.gentoo.org/~bass/"
+HOMEPAGE="http://www.josealberto.org/blog/?p=51"
 SRC_URI="mirror://gentoo/${P}.tbz2"
 
 LICENSE="GPL-2"
