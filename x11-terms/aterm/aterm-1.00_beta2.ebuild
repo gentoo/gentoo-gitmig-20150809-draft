@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.00_beta2.ebuild,v 1.9 2005/07/13 04:14:41 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.00_beta2.ebuild,v 1.10 2005/12/28 22:26:12 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	use cjk && myconf="$myconf
 		--enable-kanji

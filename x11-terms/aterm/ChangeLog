@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.78 2005/12/25 15:41:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.79 2005/12/28 22:26:12 grobian Exp $
+
+  28 Dec 2005; Fabian Groffen <grobian@gentoo.org> aterm-0.4.2-r7.ebuild,
+  aterm-0.4.2-r9.ebuild, aterm-0.4.2-r11.ebuild, aterm-0.4.2-r12.ebuild,
+  aterm-0.4.2-r13.ebuild, aterm-1.00_beta2.ebuild:
+  Removed ppc-macos bindnow conditional from all ebuilds, exploiting Flameeyes'
+  bindnow-flags function.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> aterm-1.0.0.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
