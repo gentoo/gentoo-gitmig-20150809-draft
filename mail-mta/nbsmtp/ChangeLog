@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.33 2005/08/19 22:46:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.34 2005/12/28 19:52:12 ferdy Exp $
+
+  28 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> nbsmtp-1.00-r3.ebuild:
+  add missing inherit
 
 *nbsmtp-1.00-r3 (19 Aug 2005)
 *nbsmtp-1.00-r2 (19 Aug 2005)
