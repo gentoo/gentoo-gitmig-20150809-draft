@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.52 2005/12/25 15:25:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.53 2005/12/28 09:21:02 mrness Exp $
+
+  28 Dec 2005; Alin Nastac <mrness@gentoo.org> squid-2.5.12.ebuild:
+  Keep log and cache directories between upgrades (#116890). Mark stable on x86.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> squid-2.5.12.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
