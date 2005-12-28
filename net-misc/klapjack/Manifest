@@ -1,13 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c2e2e55cda507b89d53accc7ab61a0b ChangeLog 441
-MD5 6f9056e41de2979c88a9eae961e68573 files/digest-klapjack-0.4.2 66
-MD5 e7c36f555060bd10244d35dad11673a3 klapjack-0.4.2.ebuild 543
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkNLzgIKl8Uu19MoRArWjAJwO2Gm2YWD+NDVycACMaParnDv/twCcDGKR
-rKzWr5V2l/lgQpFaHk2/PVQ=
-=PE0Q
------END PGP SIGNATURE-----
+MD5 2d895ad2d53d7209143763989fdd9c86 ChangeLog 655
+MD5 6e4e9e94a30fd5865d29083f08a1f47e files/digest-klapjack-0.5.1a 67
+MD5 6e178627c8ec197530879a5f9253293a klapjack-0.5.1a.ebuild 617
+MD5 824d707f5fdc91013bd97883250c661b metadata.xml 472
