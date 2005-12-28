@@ -1,0 +1,11 @@
+--- xfe-0.84/src/FilePanel.cc	2005-11-02 23:30:56.000000000 -0700
++++ xfe-0.84/src/FilePanel.cc	2005-11-02 23:29:37.000000000 -0700
+@@ -296,7 +296,7 @@
+ {
+     FXString buf, filename, filepath;
+ 
+-    int item= (int) ptr;
++    long item= (long) ptr;
+     if(item > -1)
+     {
+ 		// File name and path

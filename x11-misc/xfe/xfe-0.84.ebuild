@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.84.ebuild,v 1.1 2005/07/05 21:55:45 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.84.ebuild,v 1.2 2005/12/28 20:04:24 halcy0n Exp $
+
+inherit eutils
 
 DESCRIPTION="MS-Explorer-like minimalist file manager for X"
 HOMEPAGE="http://roland65.free.fr/xfe/"
@@ -14,6 +16,13 @@ IUSE="nls"
 # only fox-1.4.x is compatible with this version of xfe...
 DEPEND="virtual/x11
 	=x11-libs/fox-1.4*"
+
+src_unpack()
+{
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+}
 
 src_compile()
 {
