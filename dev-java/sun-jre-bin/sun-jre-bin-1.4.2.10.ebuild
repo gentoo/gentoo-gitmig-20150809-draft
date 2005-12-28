@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.4 2005/12/28 21:19:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.5 2005/12/28 22:27:47 betelgeuse Exp $
 
 inherit java eutils
 
@@ -15,12 +15,25 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm-1.4.2"
 KEYWORDS="-* x86"
 RESTRICT="fetch stricter"
-IUSE="browserplugin nsplugin mozilla"
+IUSE="X alsa browserplugin nsplugin mozilla"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
 
-RDEPEND=""
+RDEPEND="sys-libs/glibc
+	alsa? ( media-libs/alsa-lib )
+	X? ( || (	(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXi
+				x11-libs/libXp
+				x11-libs/libXt
+				x11-libs/libXtst
+			)
+
+			virtual/x11
+		)
+	)"
 
 PROVIDE="virtual/jre"
 

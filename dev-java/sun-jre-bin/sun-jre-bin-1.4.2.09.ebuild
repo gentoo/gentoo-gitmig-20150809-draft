@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.09.ebuild,v 1.6 2005/12/28 21:19:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.09.ebuild,v 1.7 2005/12/28 22:27:47 betelgeuse Exp $
 
 inherit java eutils
 
@@ -20,7 +20,7 @@ IUSE="browserplugin nsplugin mozilla"
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
 
-RDEPEND="sys-libs/lib-compat"
+RDEPEND="sys-libs/glibc"
 
 PROVIDE="virtual/jre"
 
