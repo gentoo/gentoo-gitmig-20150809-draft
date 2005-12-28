@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.3 2005/11/21 20:29:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.4 2005/12/28 23:02:15 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cube/${MY_P}_unix.tar.gz
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE="dedicated"
 
 RDEPEND="virtual/opengl
@@ -24,8 +24,7 @@ RDEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/libpng"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=sys-apps/sed-4"
+	app-arch/unzip"
 
 S=${WORKDIR}/cube_source
 S_BIN=${WORKDIR}/cube
@@ -72,7 +71,7 @@ src_install() {
 
 	cd "${S_BIN}"
 	insinto "${CUBE_DATADIR}"
-	doins -r *.cfg data packages || die "cp failed"
+	doins -r *.cfg data packages || die "doins failed"
 	dohtml -r docs readme.html
 
 	if [[ ${ARCH} == "x86" ]] ; then
