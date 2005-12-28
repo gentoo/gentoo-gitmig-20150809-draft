@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r1.ebuild,v 1.1 2005/07/06 23:07:18 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r1.ebuild,v 1.2 2005/12/28 22:31:26 halcy0n Exp $
 
 inherit eutils gnustep-funcs flag-o-matic multilib
 
@@ -34,10 +34,11 @@ src_unpack() {
 	is-flag -fstack-protector && filter-flags -fstack-protector \
 		&& ewarn "CFLAG -fstack-protector has been disabled, as it is known to cause bugs with WindowMaker (bug #78051)" && ebeep 2
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV/0.92/0.91}/singleclick-shadeormaxopts-0.9x.patch2 || die "single click and shade-or-maximize-options patch failed"
-	epatch ${FILESDIR}/${PV/0.92/0.91}/wlist-0.9x.patch || die "window list patch failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV/0.92/0.91}/singleclick-shadeormaxopts-0.9x.patch2 || die "single click and shade-or-maximize-options patch failed"
+	epatch "${FILESDIR}"/${PV/0.92/0.91}/wlist-0.9x.patch || die "window list patch failed"
 #	epatch ${FILESDIR}/${PV}/64bit+endian-fixes-0.9x.patch || die "64-bit + endian fix patch failed"
+	epatch "${FILESDIR}"/${PV}/${P}-gcc41.patch
 }
 
 src_compile() {

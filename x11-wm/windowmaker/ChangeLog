@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.59 2005/12/24 01:37:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.60 2005/12/28 22:31:26 halcy0n Exp $
+
+  28 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/0.92.0/windowmaker-0.92.0-gcc41.patch,
+  windowmaker-0.92.0-r1.ebuild:
+  Added patch to fix compilation with gcc-4.1. Thanks to Robert Marmorstein
+  <rmmarm AT wm DOT edu> for finding the patch; bug #113476
 
   24 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
   windowmaker-0.91.0-r1.ebuild:
