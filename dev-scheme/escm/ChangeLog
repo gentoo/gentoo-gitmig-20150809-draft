@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/escm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.1 2005/06/04 10:37:39 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.2 2005/12/28 09:17:56 hattya Exp $
+
+  28 Dec 2005; Akinori Hattori <hattya@gentoo.org> escm-1.1.ebuild:
+  stable on x86.
 
 *escm-1.1 (04 Jun 2005)
 

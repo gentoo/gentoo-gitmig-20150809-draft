@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.1 2005/06/04 10:37:39 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.2 2005/12/28 09:17:56 hattya Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.shiro.dreamhost.com/scheme/vault/escm.html"
 SRC_URI="http://www.shiro.dreamhost.com/scheme/vault/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 S="${WORKDIR}/${PN}"
 
