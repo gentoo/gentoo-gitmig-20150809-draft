@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.68 2005/12/22 12:54:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.69 2005/12/28 09:29:31 gmsoft Exp $
+
+  28 Dec 2005; Guy Martin <gmsoft@gentoo.org> dhcp-3.0.3-r2.ebuild:
+  No more unaligned access on hppa. Marking stable.
 
   22 Dec 2005; Roy Marples <uberlord@gentoo.org> dhcp-3.0.4_beta2-r1.ebuild:
   Remove script, host-name and domain-name options from the sample dhclient.conf
