@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.18.ebuild,v 1.1 2005/10/31 15:58:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.18.ebuild,v 1.2 2005/12/28 18:33:48 nelchael Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2"
 
 LICENSE="public-domain" # creative commons
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc svg png pdf wmf gzip"
 
 # we don't really need anything to run
