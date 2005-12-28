@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.40.ebuild,v 1.2 2005/12/27 11:11:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.40.ebuild,v 1.3 2005/12/28 02:26:45 lu_zero Exp $
 
 inherit flag-o-matic eutils python
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="media-libs/libsdl
 	media-libs/jpeg
 	media-libs/libpng
+	media-libs/tiff
 	>=media-libs/freetype-2.0
 	>=media-libs/openal-20020127
 	>=media-libs/libsdl-1.2
