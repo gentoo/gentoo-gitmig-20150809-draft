@@ -25,22 +25,17 @@ depend() {
 }
 
 do_hdparm() {
-	if [[ ${args:=$all_args} ]]
-	then
-		orgdevice=`readlink -f $device`
-		if [ -b $orgdevice ]; then
-			ebegin "Running hdparm on $device"
-			hdparm $args $device > /dev/null || ewarn "Failed to run hdparm on $device"
+	if [[ ${args:=$all_args} ]] ; then
+		local orgdevice=$(readlink -f ${device})
+		if [[ -b ${orgdevice} ]] ; then
+			ebegin "Running hdparm on ${device}"
+			hdparm ${args} ${device} > /dev/null
+			eend $?
 		fi
 	fi
 }
 
 start() {
-
-	ebegin 'Starting hdparm'
-
-	which hdparm &>/dev/null
-	eend $? 'hdparm executable not found'
 
 	if [ -d /dev/ide ]
 	then
@@ -121,7 +116,8 @@ start() {
 		do
 			# check that the block device really exists
 			# by opening it for reading
-			if [ -b $device ] && ( : <$device ) 2>/dev/null
+			local errmsg=$( : 2>/dev/null <$device )
+			if [[ -b $device ]] && [[ $? == 0 || $(errmsg) == "*: No medium found" ]]
 			then
 				eval args=\${`basename $device`_args}
 				do_hdparm
