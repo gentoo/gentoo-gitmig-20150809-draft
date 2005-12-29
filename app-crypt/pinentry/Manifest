@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2aeeb54a37f55e90e6a111c5e59698d ChangeLog 5019
+MD5 d8b18cf6ed54cf75ee9f6a76a442282c ChangeLog 5133
 MD5 02dafe3ffd79fb8be8ffce90a4ccf86f files/digest-pinentry-0.7.2 66
 MD5 02dafe3ffd79fb8be8ffce90a4ccf86f files/digest-pinentry-0.7.2-r2 66
 MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
-MD5 999cfb39385b9486e3d431c6345c357b pinentry-0.7.2-r2.ebuild 1784
+MD5 819503964f86268f97db4e2bc08f4724 pinentry-0.7.2-r2.ebuild 1786
 MD5 0807a36278225cc9824f5466b1a0e0e6 pinentry-0.7.2.ebuild 2023
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsw8cCRZPokWLroQRAiXVAJ95S+/ro+FNfhzdJftJNOsgGWfmugCeNgAZ
-J+tSSxeGauTT6IGB6zT+rDQ=
-=CJat
------END PGP SIGNATURE-----
