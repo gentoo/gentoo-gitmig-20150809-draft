@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libebt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.11 2005/12/29 02:32:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.12 2005/12/29 13:29:52 jer Exp $
+
+  29 Dec 2005; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Fixed libebt-1.2.1 digest
 
   29 Dec 2005; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Marked ~hppa (bug #115410).
