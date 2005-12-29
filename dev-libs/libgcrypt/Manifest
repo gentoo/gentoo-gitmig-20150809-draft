@@ -1,12 +1,7 @@
-MD5 ae75c377a3f16c025d04020a218afbd8 ChangeLog 9574
-MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
-MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
-MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
-MD5 12f2bb1634231d638334fbe3fcfe20ce libgcrypt-1.2.1-r1.ebuild 1215
-MD5 7dc93eccc7b1d3187503d3316fc5c449 libgcrypt-1.2.1.ebuild 1277
-MD5 9c6930570e9e78d47a815ed5300c6144 libgcrypt-1.2.2-r1.ebuild 1151
-MD5 27ec73eb30a43599906954d2fbf18b22 libgcrypt-1.2.2.ebuild 1121
-MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a9a78a7d3540cc2340adddaf8f76c98 ChangeLog 9681
 MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
 MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
@@ -17,3 +12,18 @@ MD5 72e64d81017126496070072ae2f3421b files/digest-libgcrypt-1.2.2-r1 67
 MD5 af5915592167ae4fd16bab42364d3c8a files/libgcrypt-1.2.1-GNU-stack-fix.patch 22394
 MD5 bd80e49e664820c114b28f832dd23e1c files/libgcrypt-1.2.1-info-entry-fix.patch 318
 MD5 66effa36b401f2dfc6de7dec7c612f8a files/libgcrypt-1.2.1-ppc64-fix.patch 401
+MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
+MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
+MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
+MD5 12f2bb1634231d638334fbe3fcfe20ce libgcrypt-1.2.1-r1.ebuild 1215
+MD5 7dc93eccc7b1d3187503d3316fc5c449 libgcrypt-1.2.1.ebuild 1277
+MD5 88e88eff0d6ae9ffc14cf48dbb0be075 libgcrypt-1.2.2-r1.ebuild 1146
+MD5 27ec73eb30a43599906954d2fbf18b22 libgcrypt-1.2.2.ebuild 1121
+MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDs3HKCRZPokWLroQRAkXTAJ9rHE8ZrsFywQ06U04+qx3nBFHAXACggOPL
+dIpMpX+qseWIT0AuiDSjyw0=
+=5BoR
+-----END PGP SIGNATURE-----
