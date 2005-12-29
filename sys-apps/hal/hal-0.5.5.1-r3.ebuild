@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r2.ebuild,v 1.2 2005/12/29 20:01:14 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r3.ebuild,v 1.1 2005/12/29 22:06:06 cardoe Exp $
 
 inherit eutils linux-info debug
 
@@ -93,6 +93,8 @@ src_compile() {
 		$(use_enable doc docbook-docs) \
 		$(use_enable doc doxygen-docs) \
 		|| die "configure failed"
+
+# --disable-acpi-acpid when HAL handles all that acpid handles
 
 	emake || die "make failed"
 }
