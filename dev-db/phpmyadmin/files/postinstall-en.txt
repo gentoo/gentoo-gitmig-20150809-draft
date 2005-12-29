@@ -1,7 +1,7 @@
 To complete installation, you must
 
 1. Update MySQL's grant tables and the pmadb database:
-     mysql -u root -p < /usr/share/webapps/phpmyadmin/VERSION/sqlscripts/mysql/VERSION_create.sql
+     mysql -u root -p < /usr/share/webapps/phpmyadmin/${PVR}/sqlscripts/mysql/${PVR}_create.sql
 
 If you are upgrading from an earlier version and are using phpMyAdmin's
 features for master/foreign tables be sure to read
