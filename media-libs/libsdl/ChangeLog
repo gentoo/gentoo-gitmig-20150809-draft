@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.94 2005/12/14 05:57:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.95 2005/12/29 08:10:53 vapier Exp $
+
+  29 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libsdl-1.2.9-endian-cvs-updates.patch, libsdl-1.2.8-r1.ebuild,
+  libsdl-1.2.9.ebuild, libsdl-1.2.9-r1.ebuild:
+  Grab some updates from upstream cvs to add support for SuperH.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   libsdl-1.2.9-r1.ebuild:

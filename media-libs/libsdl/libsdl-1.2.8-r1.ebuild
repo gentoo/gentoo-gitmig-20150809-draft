@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.24 2005/12/17 03:31:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.25 2005/12/29 08:10:53 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 sh sparc x86"
 # WARNING:
 # if you have the noaudio, novideo, nojoystick, or noflagstrip use flags
 # in USE and something breaks, you pick up the pieces.  Be prepared for
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sdl-config.patch
 	epatch "${FILESDIR}"/${P}-no-cxx.patch
 	epatch "${FILESDIR}"/libsdl-1.2.9-dlvsym-check.patch #105160
+	epatch "${FILESDIR}"/libsdl-1.2.9-endian-cvs-updates.patch
 
 	# This patch breaks compiling >-O0 on gcc4 ; bug #87809
 	[ "`gcc-major-version`" -lt "4" ] && epatch "${FILESDIR}"/${P}-gcc2.patch.bz2 #86481
