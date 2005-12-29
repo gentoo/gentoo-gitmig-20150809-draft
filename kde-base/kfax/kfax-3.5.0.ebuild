@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/kfax-3.5.0.ebuild,v 1.5 2005/12/17 13:20:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/kfax-3.5.0.ebuild,v 1.6 2005/12/29 10:20:40 greg_g Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -11,8 +11,7 @@ DESCRIPTION="KDE G3/G4 fax viewer"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-libs/tiff
-$(deprange $PV $MAXKDEVER kde-base/kviewshell)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/kviewshell)"
 
 KMEXTRA="kfaxview"
 KMCOPYLIB="libkmultipage kviewshell"
