@@ -7,13 +7,13 @@ MD5 b40c71f87f862f9f4491fd165379f23b files/digest-lzo-1.08-r1 60
 MD5 d4d056e8e36520c54c788a9f0b5171bb files/digest-lzo-2.02-r1 60
 MD5 2848853211ddc184327a901b10e6052d files/lzo-1.08-exec-stack.patch 367
 MD5 fd06ec9e867bb8726f80fe8066732ffa files/lzo-2.02-exec-stack.patch 734
-MD5 ed459a379be7304b41edc5ca0471c066 lzo-1.08-r1.ebuild 1054
-MD5 79799a425d7fb165cf116df41ce6d11a lzo-2.02-r1.ebuild 945
+MD5 c412673cb587ee547269df5dbd2c9d79 lzo-1.08-r1.ebuild 1052
+MD5 6677e6a99f71c1a2c8ec7f4a8e5d0089 lzo-2.02-r1.ebuild 950
 MD5 0807b5c32c038f5ded83ec567061ea2f metadata.xml 295
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDs9ePmdTrptrqvGERAjlwAKCR+Tsf5gW5gT0WsjeTZVG9Ib2pXQCglxa+
-xIuNY8GbFls1QaxmTQe0GM4=
-=xssd
+iD8DBQFDs8s62+ySkm8kpY0RAgYMAJ9SvYfDFbch7tAvr4Mhj2JG3rZcXACgp6KI
+GcyU/n7EsmZRUe1NGqgaN38=
+=Smts
 -----END PGP SIGNATURE-----
