@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.17 2005/12/17 21:38:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.18 2005/12/29 11:55:01 lisa Exp $
+
+*memcached-1.1.12-r2 (29 Dec 2005)
+
+  29 Dec 2005; Lisa Seelye <lisa@gentoo.org> files/1.1.12/conf,
+  files/1.1.12/init, +memcached-1.1.12-r2.ebuild:
+  taken some comments from stuart: uses its own uers (memcached), and will now
+  just warn the user when they start the daemon without a -l listen address
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> memcached-1.1.12-r1.ebuild:
   Added ~ppc64

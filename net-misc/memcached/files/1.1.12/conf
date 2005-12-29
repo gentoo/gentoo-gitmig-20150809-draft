@@ -1,5 +1,5 @@
 # Copyright 2003 Gentoo Technologies, Inc
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/conf,v 1.2 2005/12/07 13:12:41 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/conf,v 1.3 2005/12/29 11:55:01 lisa Exp $
 # memcached config file
 
 MEMCACHED_BINARY="/usr/bin/memcached"
@@ -9,7 +9,7 @@ MEMCACHED_BINARY="/usr/bin/memcached"
 MEMUSAGE="64"
 
 #User to run as
-MEMCACHED_RUNAS="nobody"
+MEMCACHED_RUNAS="memcached"
 
 #Specify maximum number of concurrent connections
 #1024 is default
