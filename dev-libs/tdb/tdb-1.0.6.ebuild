@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/tdb-1.0.6.ebuild,v 1.21 2005/12/29 10:52:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/tdb-1.0.6.ebuild,v 1.22 2005/12/29 12:04:24 vapier Exp $
 
 inherit libtool eutils
 
@@ -13,12 +13,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND="sys-libs/gdbm"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/tdb-1.0.6-gcc3.patch
+	epatch "${FILESDIR}"/${P}-gcc3.patch
+	epatch "${FILESDIR}"/${P}-no-gdbm.patch	#113824
 	elibtoolize #117051
 }
 

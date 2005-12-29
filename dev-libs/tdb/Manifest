@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1ca130df9ceb16298b5a84ea860feb26 ChangeLog 1516
+MD5 6a32ac44c071c46366cb7359c9476fcb ChangeLog 1706
 MD5 c44d9351a9daabd84de3ecc7876ef67c files/digest-tdb-1.0.6 61
 MD5 3dbbde1145303ad43730f2bc1bb3b82b files/tdb-1.0.6-gcc3.patch 1656
-MD5 308c49b4916dc51d5bf41e596206c3e7 tdb-1.0.6.ebuild 657
+MD5 8a4247a9e3c5af757cfa1d5c20733642 files/tdb-1.0.6-no-gdbm.patch 461
+MD5 01a2acea3affd9727bf67584115f9814 tdb-1.0.6.ebuild 688
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDs8Ae2+ySkm8kpY0RAhIxAJ9sG+dlObrJJZFax0puIFEKDaVjcACdE/NO
-ps9ZtP8qow6Xk2zskIilZI4=
-=zaBQ
+iD8DBQFDs9Dn2+ySkm8kpY0RAqf0AJ4mH+iibvFFjzKfmDcAJRRvVG9FWACfcPzT
+2uxtNJiFtm5Pz/Sg5cnFXBs=
+=O7Ph
 -----END PGP SIGNATURE-----
