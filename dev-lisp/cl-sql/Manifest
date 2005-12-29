@@ -1,6 +1,17 @@
-MD5 551c1104281591124cbc726c52646ff3 ChangeLog 4071
-MD5 ff064f760141928cbcc89e41f4d16e2d cl-sql-3.1.10-r1.ebuild 3387
-MD5 7d118e207728d2a6c292a723ad5126ef cl-sql-3.2.1.ebuild 3423
-MD5 25a7993f47b4e9b1261a9956a8d61d90 metadata.xml 431
-MD5 6f0cca850627210bc6677fc498ec5235 files/digest-cl-sql-3.1.10-r1 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7410b714d622ad890f0c6a40dc402a86 ChangeLog 4342
+MD5 7fd94c2ad4c4d306b0983a349aeadd3d cl-sql-3.2.1.ebuild 3432
+MD5 e3a1c06893a5c99d5eba302a883b288f cl-sql-3.5.2.ebuild 3623
+MD5 cb900f5b6b8b3eefc4051914f7b893e3 files/3.5.2-gentoo.patch 4948
 MD5 3cba61937a7bfeb858a4f8fcfede7989 files/digest-cl-sql-3.2.1 63
+MD5 6b9586a907723dd600daf91000ed6184 files/digest-cl-sql-3.5.2 63
+MD5 25a7993f47b4e9b1261a9956a8d61d90 metadata.xml 431
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtHJdyiNZaEAZA+ARAvPxAJ9foRlHPE3Tg5iyKk10hYQMLwI/CACdFT9M
+wKi+xQmJtmGSEMCm0Bm29VI=
+=zRyD
+-----END PGP SIGNATURE-----

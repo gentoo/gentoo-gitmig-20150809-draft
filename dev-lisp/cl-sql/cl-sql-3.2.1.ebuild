@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.2.1.ebuild,v 1.3 2005/12/26 19:00:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.2.1.ebuild,v 1.4 2005/12/29 23:33:36 mkennedy Exp $
 
 inherit common-lisp eutils multilib
 
@@ -64,7 +64,7 @@ src_install() {
 		insinto $CLSOURCEROOT/clsql-mysql/db-mysql; doins db-mysql/*.lisp db-mysql/*.c
 		insinto $CLSOURCEROOT/clsql-mysql; doins clsql-mysql.asd
 		dosym $CLSOURCEROOT/clsql-mysql/clsql-mysql.asd $CLSYSTEMROOT/clsql-mysql.asd
-		exeinto /usr/$(get_libdir)/clsql/; doexe db-mysql/mysql.so
+		exeinto /usr/$(get_libdir)/clsql/; doexe db-mysql/clsql_mysql.so
 	fi
 
 	if use odbc; then

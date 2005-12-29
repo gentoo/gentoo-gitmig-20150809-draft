@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.1.10-r1.ebuild,v 1.2 2005/05/24 18:48:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.5.2.ebuild,v 1.1 2005/12/29 23:33:36 mkennedy Exp $
 
-inherit common-lisp eutils
+inherit common-lisp eutils multilib
 
 DESCRIPTION="A multi-platform SQL interface for Common Lisp"
 HOMEPAGE="http://clsql.b9.com/
@@ -16,7 +16,7 @@ IUSE="postgres mysql sqlite sqlite3 odbc"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	dev-lisp/cl-md5
-	dev-lisp/cl-uffi
+	>=dev-lisp/cl-uffi-1.5.7
 	postgres? ( dev-db/postgresql )
 	mysql? ( dev-db/mysql )
 	sqlite? ( =dev-db/sqlite-2* )
@@ -25,13 +25,18 @@ DEPEND="dev-lisp/common-lisp-controller
 
 S=${WORKDIR}/clsql-${PV}
 
-# Have to do this in a static manner, it seems.
-
 CLPACKAGE='clsql clsql-uffi clsql-postgresql clsql-postgresql-socket clsql-mysql clsql-odbc clsql-sqlite clsql-sqlite3'
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-gentoo.patch
+}
 
 src_compile() {
 	make -C uffi || die
-	use mysql && make -C db-mysql
+	if use mysql; then
+		make -C db-mysql || die
+	fi
 }
 
 src_install() {
@@ -45,7 +50,7 @@ src_install() {
 	insinto $CLSOURCEROOT/clsql-uffi/uffi; doins uffi/*.lisp
 	insinto $CLSOURCEROOT/clsql-uffi; doins clsql-uffi.asd
 	dosym $CLSOURCEROOT/clsql-uffi/clsql-uffi.asd $CLSYSTEMROOT/clsql-uffi.asd
-	exeinto /usr/lib/clsql/; doexe uffi/uffi.so
+	exeinto /usr/$(get_libdir)/clsql/; doexe uffi/clsql_uffi.so
 
 	if use postgres; then
 		insinto $CLSOURCEROOT/clsql-postgresql/db-postgresql; doins db-postgresql/*.lisp
@@ -64,7 +69,7 @@ src_install() {
 		insinto $CLSOURCEROOT/clsql-mysql/db-mysql; doins db-mysql/*.lisp db-mysql/*.c
 		insinto $CLSOURCEROOT/clsql-mysql; doins clsql-mysql.asd
 		dosym $CLSOURCEROOT/clsql-mysql/clsql-mysql.asd $CLSYSTEMROOT/clsql-mysql.asd
-		exeinto /usr/lib/clsql/; doexe db-mysql/mysql.so
+		exeinto /usr/$(get_libdir)/clsql/; doexe db-mysql/clsql_mysql.so
 	fi
 
 	if use odbc; then
@@ -91,4 +96,8 @@ src_install() {
 	do-debian-credits
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*
+
+	dosed "s,@LIBDIR@,$(get_libdir),g" \
+		$CLSOURCEROOT/clsql-uffi/uffi/clsql-uffi-loader.lisp \
+		$CLSOURCEROOT/clsql-mysql/db-mysql/mysql-loader.lisp
 }
