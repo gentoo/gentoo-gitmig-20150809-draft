@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-2.9-r4.ebuild,v 1.3 2005/09/06 04:43:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-2.9-r4.ebuild,v 1.4 2005/12/29 13:22:32 vapier Exp $
 
 inherit cron toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://apollo.backplane.com/"
 SRC_URI="http://apollo.backplane.com/FreeSrc/${PN}${PV//.}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.51"
