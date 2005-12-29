@@ -1,0 +1,41 @@
+diff -Naur DVDStyler-1.4.org/src/ButtonPropDlg.cpp DVDStyler-1.4/src/ButtonPropDlg.cpp
+--- DVDStyler-1.4.org/src/ButtonPropDlg.cpp	2005-05-17 13:41:34.000000000 +0200
++++ DVDStyler-1.4/src/ButtonPropDlg.cpp	2005-06-06 18:25:29.000000000 +0200
+@@ -7,6 +7,8 @@
+ // Copyright:  (c) Alex Thuering
+ // Licence:     GPL
+ /////////////////////////////////////////////////////////////////////////////
++
++#include <stdint.h>
+  
+ #include "ButtonPropDlg.h"
+ #include <wx/statline.h>
+@@ -115,14 +117,14 @@
+ int ButtonPropDlg::GetTsi()
+ {
+   if (m_titlesetChoice->GetSelection() >= 0)
+-	return ((int) m_titlesetChoice->GetClientData(m_titlesetChoice->GetSelection()))-1;
++	return ((intptr_t) m_titlesetChoice->GetClientData(m_titlesetChoice->GetSelection()))-1;
+   return 0;
+ }
+ 
+ int ButtonPropDlg::GetPgci()
+ {
+   if (m_targetChoice->GetSelection() >= 0)
+-	return (int) m_targetChoice->GetClientData(m_targetChoice->GetSelection());
++	return (intptr_t) m_targetChoice->GetClientData(m_targetChoice->GetSelection());
+   return 0;
+ }
+ 
+@@ -296,9 +298,9 @@
+ 	return false;
+   }
+   int n = 1;
+-  int tsi = ((int)GetClientData(n++))-1;
++  int tsi = ((intptr_t)GetClientData(n++))-1;
+   m_object->SetActionTsi(tsi != m_tsi ? tsi : -2);
+-  m_object->SetActionPgci((int)GetClientData(n++));
++  m_object->SetActionPgci((intptr_t)GetClientData(n++));
+   m_object->SetActionChapter(GetInt(n++));
+   if (GetBool(n++))
+ 	m_object->SetCustomAction(GetString(n));

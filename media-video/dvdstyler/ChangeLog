@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.20 2005/12/15 04:31:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.21 2005/12/29 01:23:41 halcy0n Exp $
+
+  29 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/dvdstyler-1.4-gcc4.patch, dvdstyler-1.4.ebuild:
+  Fix compilation with gcc-4.0; bug #113927
 
   15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; dvdstyler-1.4.ebuild:
   Port to modular X. Remove virtual/x11, it comes in from gtk+.

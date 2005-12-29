@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.4.ebuild,v 1.3 2005/12/15 04:31:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.4.ebuild,v 1.4 2005/12/29 01:23:41 halcy0n Exp $
 
 inherit eutils
 
@@ -35,6 +35,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack()
+{
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die "failed to install"
