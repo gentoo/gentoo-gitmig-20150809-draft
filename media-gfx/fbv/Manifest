@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1608fb37a7c11c35e79b48424e3cf340 ChangeLog 1870
 MD5 56c570264fa3d43dfa201b55ee3431ba fbv-0.99.ebuild 1061
-MD5 9872355de4925e7ff4a64827371164b5 fbv-1.0b.ebuild 1185
-MD5 036b6a9a8adfb4f25c886ebdb6bb9f14 metadata.xml 456
+MD5 3419c5b534520da0ac1952a5c12f537b fbv-1.0b.ebuild 1221
 MD5 fddf15ff0ff3ee14782881f4425e8b36 files/digest-fbv-0.99 59
 MD5 d0fa687199799a3f1c51f0bbbb3a0be3 files/digest-fbv-1.0b 59
 MD5 c646a46a19f73a342c92c6f3cb003193 files/oob-segfault-fbv-1.0b.diff 559
+MD5 036b6a9a8adfb4f25c886ebdb6bb9f14 metadata.xml 456
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDs7qB2+ySkm8kpY0RAoWmAJ0cQqGTxPnSHFBh9VrFpYxaVrD5hgCgm3oh
+56fVQyv5YgdqRGX7wfOf+xo=
+=pyMy
+-----END PGP SIGNATURE-----
