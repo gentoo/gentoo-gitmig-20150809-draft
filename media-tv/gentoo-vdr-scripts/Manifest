@@ -1,13 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ce0c51d2c3039cbf327b4755cd35a97 ChangeLog 4728
+MD5 d1e40fedf32b86c5061ab6d4a6bc7d66 ChangeLog 4922
 MD5 d9485415ec9d1edf7e68020efec2c8e7 files/digest-gentoo-vdr-scripts-0.1 70
 MD5 c1da33589e98866a75625412f61f5e32 files/digest-gentoo-vdr-scripts-0.2_alpha1 77
 MD5 87543e99ee549abb36309f30152b50e1 files/digest-gentoo-vdr-scripts-0.2_alpha2 77
 MD5 2ecb98838292de6b7446a53a432753b7 files/digest-gentoo-vdr-scripts-0.2_alpha3 77
 MD5 81aaf3eb90adb616b0cc1f056e53f22f files/digest-gentoo-vdr-scripts-0.2_alpha4 77
 MD5 81aaf3eb90adb616b0cc1f056e53f22f files/digest-gentoo-vdr-scripts-0.2_alpha4-r1 77
+MD5 f6006989e359d86b2ea5024f78c21f0d files/digest-gentoo-vdr-scripts-0.2_alpha5 77
 MD5 cc3806f7a39109c105d0603dc651edb4 files/gentoo-vdr-scripts-0.1_alpha1-merge-commands.diff 1785
 MD5 87da33b96f1f2cd1a018545f67f8d0e6 files/gentoo-vdr-scripts-0.1_alpha4-video-parameter.diff 1275
 MD5 8161a3669aa97752b6b3d22cd80934ff gentoo-vdr-scripts-0.1.ebuild 1536
@@ -16,11 +14,5 @@ MD5 f2f6c43b296eb16399778ee7857b6d81 gentoo-vdr-scripts-0.2_alpha2.ebuild 1424
 MD5 8daf118a9439f993f781876b1ba712e7 gentoo-vdr-scripts-0.2_alpha3.ebuild 1428
 MD5 c44190a89edc49ee4e68eacb70f1097d gentoo-vdr-scripts-0.2_alpha4-r1.ebuild 2031
 MD5 7bb47cd8dc8366ccdf8c9a922b558e58 gentoo-vdr-scripts-0.2_alpha4.ebuild 1541
+MD5 b5afbfe80f8835814c7cddf827b25f79 gentoo-vdr-scripts-0.2_alpha5.ebuild 2095
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrS57I1lqEGTUzyQRApoKAKCbDxwZCbO9qdYN6NZ8tq0FSK+/egCeNsg5
-Qzo6V0kA4smuMVfpBd61hy0=
-=8mnP
------END PGP SIGNATURE-----
