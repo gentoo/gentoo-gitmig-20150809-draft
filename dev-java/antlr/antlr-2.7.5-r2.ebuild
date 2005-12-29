@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r2.ebuild,v 1.1 2005/12/29 23:22:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r2.ebuild,v 1.2 2005/12/29 23:44:38 compnerd Exp $
 
 inherit gnuconfig java-pkg mono distutils multilib
 
@@ -13,15 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc debug examples mono nocxx nojava python script source"
 
-RDEPEND="java? ( >=virtual/jdk-1.2 dev-java/java-config )
+RDEPEND=">=virtual/jdk-1.2
+		 dev-java/java-config
 		 mono? ( dev-lang/mono dev-util/pkgconfig )
-		 python? ( dev-lang/python )
-		 source? ( app-arch/zip )"
+		 python? ( dev-lang/python )"
 DEPEND="${RDEPEND}
 		script? ( !dev-util/pccts )
-		>=virtual/jdk-1.2
 		>=sys-apps/sed-4
-		  sys-apps/findutils"
+		  sys-apps/findutils
+		 source? ( app-arch/zip )"
 
 src_compile() {
 	gnuconfig_update
@@ -56,7 +56,7 @@ src_compile() {
 		-e "s|@VERSION@|${PV}|" \
 		${FILESDIR}/antlr.pc.in > ${S}/antlr.pc
 
-	if use script ; then
+	if ! use nojava && use script ; then
 		cat > antlr.sh <<-EOF
 		#!/bin/sh
 		ANTLR_JAR=\$(java-config -p antlr)
@@ -68,17 +68,18 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin
 	doexe ${S}/scripts/antlr-config
-	use script && newexe ${S}/antlr.sh antlr
 
 	if ! use nocxx ; then
 		cd ${S}/lib/cpp
 		einstall || die "failed to install C++ files"
 	fi
 
-	# The jar is needed at all times
-	java-pkg_dojar ${S}/antlr/antlr.jar
-
 	if ! use nojava ; then
+		exeinto /usr/bin
+		use script && newexe ${S}/antlr.sh antlr
+
+		java-pkg_dojar ${S}/antlr/antlr.jar
+
 		use source && java-pkg_dosrc ${S}/antlr
 		use doc && java-pkg_dohtml -r doc/*
 	fi

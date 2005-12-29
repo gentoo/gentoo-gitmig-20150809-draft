@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.32 2005/12/29 23:22:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.33 2005/12/29 23:44:38 compnerd Exp $
+
+  29 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  antlr-2.7.5-r2.ebuild:
+  Fixing java screwup, thanks to axxo for noticing it.
 
 *antlr-2.7.5-r2 (29 Dec 2005)
 
