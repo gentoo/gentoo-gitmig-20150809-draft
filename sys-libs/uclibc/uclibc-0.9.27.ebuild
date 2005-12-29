@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.25 2005/09/05 07:35:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.26 2005/12/29 12:30:27 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,9 +40,13 @@ KEYWORDS="arm m68k mips ppc sh sparc x86"
 IUSE="build debug hardened ipv6 wordexp" # nls is not supported yet
 RESTRICT="nostrip"
 
-DEPEND="virtual/os-headers"
 RDEPEND=""
-[[ ${CTARGET} == ${CHOST} ]] && PROVIDE="virtual/libc"
+if [[ ${CTARGET} == ${CHOST} ]] ; then
+	DEPEND="virtual/os-headers app-misc/pax-utils"
+	PROVIDE="virtual/libc"
+else
+	DEPEND=""
+fi
 
 S=${WORKDIR}/${MY_P}
 

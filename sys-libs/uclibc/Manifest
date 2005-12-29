@@ -7,13 +7,13 @@ MD5 9a39fb9a2446443aa355070e819107a0 files/digest-uclibc-0.9.27-r1 298
 MD5 5e3f364e7e96a163916680b986888c8f files/digest-uclibc-0.9.28 213
 MD5 684def72ebc0da73cb8b6d1c53e7e8fb files/getent 1112
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
-MD5 cdd40275a06b781916614837efc05a2e uclibc-0.9.27-r1.ebuild 12118
-MD5 81cee933f6981c689db448c06576ec3c uclibc-0.9.27.ebuild 10387
-MD5 e1e9f543bd1a559427a7a9e2ee30b2dc uclibc-0.9.28.ebuild 13267
+MD5 37da465734009b882e3be5eaf3cc51a8 uclibc-0.9.27-r1.ebuild 12165
+MD5 8f5c84f63767d16871a6e48dcaaf290e uclibc-0.9.27.ebuild 10434
+MD5 d1ffd7affe684fb1fb4a811e77136242 uclibc-0.9.28.ebuild 13295
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDsz472+ySkm8kpY0RAmMuAKCzzYhgbJDApVRzSkfOeU44HNDJsACgrucD
-hipgBe7WURGc2vfg+TLYJgs=
-=dh2x
+iD8DBQFDs9cC2+ySkm8kpY0RAs6TAJ9Rf1UicFLG3NFFsyJK99EQ5RNcPACeKG73
+ytZqpX2ca3ZiUR1xeVnuwrQ=
+=dyKh
 -----END PGP SIGNATURE-----
