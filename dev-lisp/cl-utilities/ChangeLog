@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-utilities
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-utilities/ChangeLog,v 1.3 2005/11/23 18:14:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-utilities/ChangeLog,v 1.4 2005/12/29 23:43:34 mkennedy Exp $
+
+*cl-utilities-1.2.3 (29 Dec 2005)
+
+  29 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -cl-utilities-1.1.2.ebuild, +cl-utilities-1.2.3.ebuild:
+  New upstream version; Resolves Bug #117035.
 
 *cl-utilities-1.1.2 (23 Nov 2005)
 
