@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.279 2005/12/27 04:52:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.280 2005/12/29 08:50:02 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -321,7 +321,7 @@ uclibc - Enable uclibc specific patches and build or link uclibc
 unicode - Adds support for Unicode
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
 v4l - Enables video4linux support
-vanilla - Do not add extra patches which change default behaviour
+vanilla - Do not add extra patches which change default behaviour; DO NOT USE THIS ON A GLOBAL SCALE as the severity of the meaning changes drastically
 vcd - Video CD support
 verbose - effects vary across packages; generally used to enable extra informational output during a build or at runtime
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
