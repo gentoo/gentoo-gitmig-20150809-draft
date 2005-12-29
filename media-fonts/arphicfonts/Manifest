@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fd5717181cf2dab9ce3180d73b366b48 ChangeLog 3399
 MD5 4947283654d41020eab4a9f93cb65c3e arphicfonts-0.1-r1.ebuild 2767
 MD5 816371efeea62f3d756f9a3c1bc8bfe0 arphicfonts-0.1-r2.ebuild 767
@@ -6,3 +9,10 @@ MD5 3bd7bba2b62aba255babce12594cbdd8 files/TW-fonts.scale 945
 MD5 2fe8346e604f4ae761d1a8cbb551f6c7 files/digest-arphicfonts-0.1-r1 244
 MD5 2fe8346e604f4ae761d1a8cbb551f6c7 files/digest-arphicfonts-0.1-r2 244
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDs1Qg2+ySkm8kpY0RAvKDAJ0ZFLpIQXrSYJsbR/HIc+qUEfjqsQCgq7g0
+OiFa98o8Ii/p48HOkg81l1k=
+=ld9C
+-----END PGP SIGNATURE-----
