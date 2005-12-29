@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.1.ebuild,v 1.1 2005/12/21 16:26:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.1.ebuild,v 1.2 2005/12/29 09:17:16 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -8,13 +8,14 @@ IUSE="gnome java"
 
 MY_PV="${PV}rc5"
 MY_PV2="${MY_PV}_051215"
+MY_PV3="${PV}-1"
 S="${WORKDIR}/OOA680_m1_native_packed-1_en-US.8990/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
 LANGPACK="OOo_${MY_PV2}_LinuxIntel_langpack"
 LANGPACKPATH="http://oootranslation.services.openoffice.org/pub/OpenOffice.org/${MY_PV}/${LANGPACK}"
 LANGLOC="http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/680/${PV}-RC5/OOo_${PV}_native_LinuxIntel_langpacks_rpm"
-LANGSUFFIX="${PV}-1.i586.tar.gz"
+LANGSUFFIX="${MY_PV3}.i586.tar.gz"
 
 SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz
 	linguas_af? ( ${LANGPACKPATH}_af.tar.gz )
@@ -105,14 +106,14 @@ src_unpack() {
 
 	unpack ${A}
 
-	for i in base calc core01 core02 core03 core03u core04 core04u core05 core05u core06 core07 core08 core09 core10 draw impress math writer graphicfilter pyuno spellcheck testtool xsltfilter ; do
-		rpm_unpack ${S}/openoffice.org-${i}-${PV}-1.i586.rpm
+	for i in base calc core01 core02 core03 core03u core04 core04u core05 core05u core06 core07 core08 core09 core10 draw emailmerge impress math writer graphicfilter pyuno spellcheck testtool xsltfilter ; do
+		rpm_unpack ${S}/openoffice.org-${i}-${MY_PV3}.i586.rpm
 	done
 
-	rpm_unpack ${S}/desktop-integration/openoffice.org-freedesktop-menus-${PV}-1.noarch.rpm
+	rpm_unpack ${S}/desktop-integration/openoffice.org-freedesktop-menus-${MY_PV3}.noarch.rpm
 
-	use gnome && rpm_unpack ${S}/openoffice.org-gnome-integration-${PV}-1.i586.rpm
-	use java && rpm_unpack ${S}/openoffice.org-javafilter-${PV}-1.i586.rpm && rpm_unpack ${S}/openoffice.org-emailmerge-${PV}-1.i586.rpm
+	use gnome && rpm_unpack ${S}/openoffice.org-gnome-integration-${MY_PV3}.i586.rpm
+	use java && rpm_unpack ${S}/openoffice.org-javafilter-${MY_PV3}.i586.rpm
 
 	strip-linguas en af ar be_BY bg bn br bs ca cs cy da de el en_GB en_ZA es et fa fi fr ga gu_IN hi_IN hr hu it ja km ko lo lt lv mk nb ne nl nn nr ns pa_IN pl pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tn tr vi xh zh_CN zh_TW zu
 
