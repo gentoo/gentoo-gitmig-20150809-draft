@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r2.ebuild,v 1.2 2005/12/25 15:26:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r2.ebuild,v 1.3 2005/12/29 11:40:32 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ OLD_CRYPT_VER=2.12i
 LOOP_AES_VER=3.1b
 DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
-SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
+SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	old-crypt? (
 		mirror://kernel/linux/utils/${PN}/${PN}-${OLD_CRYPT_VER}.tar.gz
 		mirror://gentoo/util-linux-${OLD_CRYPT_VER}-cryptoapi-losetup.patch.bz2
