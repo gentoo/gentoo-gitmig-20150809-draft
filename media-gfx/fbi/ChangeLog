@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.35 2005/12/03 14:42:54 spock Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.36 2005/12/29 10:49:13 vapier Exp $
+
+  29 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/fbi-1.31-strsignal.patch, fbi-1.31-r1.ebuild, fbi-1.31-r2.ebuild:
+  Cleanup ebuild and add uClibc/SuperH support.
 
   03 Dec 2005; Michał Januszewski <spock@gentoo.org> fbi-1.31-r2.ebuild:
   Added libFS dependency (bug #113713).
