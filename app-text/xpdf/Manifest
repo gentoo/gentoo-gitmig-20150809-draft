@@ -33,13 +33,13 @@ MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 4baf6cdd9480cd938afaede8334c7a72 xpdf-3.00-r10.ebuild 3909
 MD5 0e303cf49620828eff323b0251d0141c xpdf-3.00-r8.ebuild 3622
 MD5 3045b88b069de08b88a1c5c25b8caea6 xpdf-3.01-r1.ebuild 3562
-MD5 e07bfb1a11e6504e65eda110598c26a8 xpdf-3.01-r3.ebuild 3910
-MD5 d0a6cf5e914e071e6c5633d1ea9917a5 xpdf-3.01-r4.ebuild 3677
+MD5 a563cb37418209e3fac5f026184a916f xpdf-3.01-r3.ebuild 3912
+MD5 b8ab9f515f3b5126dcc64ff0a428f30c xpdf-3.01-r4.ebuild 3683
 MD5 763deff18a7e6e7125aca1f3d6be3229 xpdf-3.01.ebuild 3529
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDssWfomPajV0RnrERAhNwAJ9N0OUrrWcrTi1h8RO4Kvn94qdE7gCdEpja
-vvP7OjeP6p+CRuFK9FfjIbw=
-=GyX4
+iD8DBQFDs3nx2+ySkm8kpY0RAtOsAJwOXMHFI/pLpxs0mFsuKAt7jwbTQACgxTfn
+tlo0L4kIB8EIfauijjbTZCk=
+=HBzj
 -----END PGP SIGNATURE-----
