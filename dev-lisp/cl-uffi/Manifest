@@ -1,6 +1,16 @@
-MD5 8a01b6af29f5192c1fbf27b727b6e30d ChangeLog 3198
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23bd6c3d9cc45b69212b716a701215b9 ChangeLog 3483
 MD5 ba4b5d4633da6c8afafe14140af7261d cl-uffi-1.4.39.ebuild 1069
-MD5 e1d688e0cafcd649e71e273460c791a0 cl-uffi-1.5.1.ebuild 1087
+MD5 225292f3664184022c0655cbb262d145 cl-uffi-1.5.7.ebuild 1009
 MD5 a4f40327d744249cd2cde2bda589a054 files/digest-cl-uffi-1.4.39 63
-MD5 aff2ee22ab3ab6238b06e0108afe75a4 files/digest-cl-uffi-1.5.1 62
+MD5 e2c9680aaf703a78b46c24a068e346ed files/digest-cl-uffi-1.5.7 62
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtEsTyiNZaEAZA+ARAlXWAJ9GB7vwQW6eCXoTDF1a88aihxN57gCfXSyq
+Nsml31V+y03FxvU6M9oevSw=
+=yVeb
+-----END PGP SIGNATURE-----

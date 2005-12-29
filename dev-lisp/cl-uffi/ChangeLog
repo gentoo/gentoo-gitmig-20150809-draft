@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-uffi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.24 2005/12/13 04:30:00 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.25 2005/12/29 20:45:58 mkennedy Exp $
+
+*cl-uffi-1.5.7 (29 Dec 2005)
+
+  29 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-uffi-1.5.1.ebuild,
+  +cl-uffi-1.5.7.ebuild:
+  New upstream version; Remove old ebuilds; Completely remote uffi-test.asd
+  support; Removed compilation and installation of shared-object for tests.
 
   13 Dec 2005; Jory A. Pratt <anarchy@gentoo.org> cl-uffi-1.5.1.ebuild:
   multilib fix wrt bug #115375
