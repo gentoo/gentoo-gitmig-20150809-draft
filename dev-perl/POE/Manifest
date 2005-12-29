@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f80912a59bf0eec0fdcd449a6b1ba245 ChangeLog 4455
 MD5 88cfc4890e05d4beebd3d5093b939376 POE-0.23-r1.ebuild 831
 MD5 d5dc6cfc6d8a6617924139d298de591a POE-0.23.ebuild 828
@@ -12,3 +15,10 @@ MD5 75e2e36bb4c92766f3f699097aa938cf files/digest-POE-0.30.09 62
 MD5 f3947577cfc3b91b4d7a37e75d89b2ee files/digest-POE-0.31.01 62
 MD5 1b8786d177dd0485076b2906af3cadcc files/digest-POE-0.32.02 62
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtCiltG5z4I8BtQoRAtaJAJ49yAF3ANvlxVxXB1kW+TG+JiRd2QCfQmnV
+4bLKSzOXw6ZY3g6XZumVF/g=
+=vdvt
+-----END PGP SIGNATURE-----
