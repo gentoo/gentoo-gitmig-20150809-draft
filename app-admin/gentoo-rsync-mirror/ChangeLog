@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.27 2005/11/25 16:38:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.28 2005/12/29 00:11:49 tantive Exp $
+
+  29 Dec 2005; Michael Imhof <tantive@gentoo.org>
+  files/rsync-gentoo-portage.sh:
+  Removed a dos-style carriage return added by a patch. Closes #116096.
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org>
   gentoo-rsync-mirror-1.0-r4.ebuild:
