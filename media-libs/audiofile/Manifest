@@ -1,14 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7b711ca281da1cc501e2761fc55c9084 ChangeLog 4318
 MD5 42c777ae654196e02a69556045798633 audiofile-0.2.3-r1.ebuild 781
 MD5 faf526e53972f56a50f0e5180591b393 audiofile-0.2.4.ebuild 835
 MD5 26a14217f140b0ebac44409a290c13b1 audiofile-0.2.5.ebuild 835
-MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
+MD5 f904303373ae4bcafdab61c2e09f5913 audiofile-0.2.6-r1.ebuild 887
 MD5 efb6ddebe1e5eaf05f97ca9fc264c826 audiofile-0.2.6.ebuild 783
-MD5 8ad8e4534917cd82569fae21ba5205b8 audiofile-0.2.6-r1.ebuild 884
+MD5 9d76ce996f4c8a8efa8854b6836bcc93 files/audiofile-0.2.6-m4.patch 273
 MD5 970090dcbe2b745a5b3940fdae30e6be files/digest-audiofile-0.2.3-r1 67
 MD5 229f6edb9a272909dd6c3f847c52c89f files/digest-audiofile-0.2.4 67
 MD5 bd21c46ede9b8210a6706ceda2b44659 files/digest-audiofile-0.2.5 67
 MD5 614e3fa2ecce47cc2b638aee1d145dba files/digest-audiofile-0.2.6 67
 MD5 614e3fa2ecce47cc2b638aee1d145dba files/digest-audiofile-0.2.6-r1 67
 MD5 6be24f4f613faf959f406fcbe756324e files/sfconvert-eradicator.patch 4345
-MD5 9d76ce996f4c8a8efa8854b6836bcc93 files/audiofile-0.2.6-m4.patch 273
+MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDs44A2+ySkm8kpY0RAv4NAJ9qwziditIb5OuZVBGvlcJsHGSLgQCgkUm9
+9OeY+XthaX0AwuSsEVG6E5Q=
+=xJeO
+-----END PGP SIGNATURE-----
