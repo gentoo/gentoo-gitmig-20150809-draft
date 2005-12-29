@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kooka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.35 2005/12/17 13:37:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.36 2005/12/29 10:45:50 greg_g Exp $
+
+  29 Dec 2005; Gregorio Guidi <greg_g@gentoo.org> kooka-3.4.3.ebuild:
+  Remove useless kadmos flag.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kooka-3.5.0.ebuild:
   Added ~ppc64
