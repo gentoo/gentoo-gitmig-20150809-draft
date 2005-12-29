@@ -1,4 +1,4 @@
-MD5 901ab0650d46589cc7cd8eef4d69bef7 ChangeLog 3255
+MD5 79efdd0a9d032bb6dcf651cdab33b5e8 ChangeLog 3339
 MD5 d78d1b2bd36da73b8fb0ff8e5663ec26 files/digest-itcl-3.2-r2 60
 MD5 e3a3b717c90821cebb7c3e22fa8be626 files/digest-itcl-3.2.1-r1 62
 MD5 8773af5f010ac5f8cf7db2fe05c271b6 files/digest-itcl-3.3 59
@@ -6,5 +6,5 @@ MD5 d491331a9a5e13cc91ebb8070cc378da files/itcl-3.2-r2-gentoo.diff 1540
 MD5 67dc49dd69f1b7df89aa5f4198b18352 files/itcl-3.2.1-gentoo.diff 4282
 MD5 0c870d52f382b7ad6715c7e8e59f5a38 itcl-3.2-r2.ebuild 892
 MD5 05447b5d029c84b5762bae17460ab4d9 itcl-3.2.1-r1.ebuild 1059
-MD5 932c9d9c7194e2b9b44ba9df49c578bb itcl-3.3.ebuild 742
+MD5 dde2688da22a0e67fdaf9ce9042d7467 itcl-3.3.ebuild 740
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
