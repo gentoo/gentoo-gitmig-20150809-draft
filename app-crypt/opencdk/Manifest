@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e37a3144a8386fc07161a1d252db2e9 opencdk-0.5.5.ebuild 912
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 f0645b48edbd575d4fc2d44aa21e6447 opencdk-0.5.7.ebuild 949
 MD5 7ae555009f753a597bc0df67cf83c74d ChangeLog 4894
-MD5 2cc6a6e5c049cd7e5b385afb120934dc files/digest-opencdk-0.5.7 65
 MD5 e168dc293f2db4e96005227188d4d6e9 files/digest-opencdk-0.5.5 66
+MD5 2cc6a6e5c049cd7e5b385afb120934dc files/digest-opencdk-0.5.7 65
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 1c1ad48f988c40e7141a7c869d5f40a9 opencdk-0.5.5.ebuild 915
+MD5 82b3107547a3494cda77f87b8f5953db opencdk-0.5.7.ebuild 785
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDAXS0gIKl8Uu19MoRAuNsAJ9AVI4ZuCuVokIGRf9djfQ6QJslIQCggE9M
-3fP4LhfUwfreAmbh2cwK+vs=
-=zQg4
+iD8DBQFDs8GN2+ySkm8kpY0RAg8+AJ9KdEhzZYBp+ROENfJc4i45SFk1PwCglERW
+nzpIO9l+D3KnZBRNQe9g9/c=
+=YFdY
 -----END PGP SIGNATURE-----
