@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.36 2005/12/08 00:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.37 2005/12/29 16:15:48 solar Exp $
+
+*pax-utils-0.1.6 (29 Dec 2005)
+
+  29 Dec 2005; <solar@gentoo.org> -pax-utils-0.1.3.ebuild,
+  +pax-utils-0.1.6.ebuild:
+  - fixup for silly NetBSD stdout handling. updates for arches lacking proper
+  header defines. New -L option to resolve DT_NEEDED cache paths
 
 *pax-utils-0.1.5 (08 Dec 2005)
 
