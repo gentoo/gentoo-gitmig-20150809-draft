@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r3.ebuild,v 1.6 2005/12/24 03:50:05 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r3.ebuild,v 1.7 2005/12/29 12:43:51 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -25,12 +25,14 @@ DEPEND="~kde-base/kdebase-${PV}
 		  virtual/opengl )"
 
 RDEPEND="${DEPEND}
-	app-text/xpdf
+	|| ( >=app-text/poppler-0.4.3-r1
+	     <app-text/xpdf-3.01-r4 )
 	tetex? (
 	|| ( >=app-text/tetex-2
 	     app-text/ptex
 	     app-text/cstetex
 	     app-text/dvipdfm ) )"
+# kfile-plugins/pdf depends on "pdfinfo"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
