@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f8811582d97f0c9107d725dc7c7cae9 ChangeLog 24723
+MD5 81a09118d7451d54589e72d54adab191 ChangeLog 24867
 MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-vanilla-sources-2.2.26-r1 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-vanilla-sources-2.4.21 67
@@ -18,6 +15,7 @@ MD5 d77cb9d1120c5b2819c41340a912be27 files/digest-vanilla-sources-2.6.13.4 129
 MD5 99305439a867e07075f0f3152927990f files/digest-vanilla-sources-2.6.14.2 128
 MD5 86ba7351e107b9b0fe68b24a28dad8a1 files/digest-vanilla-sources-2.6.14.3 129
 MD5 d1190505a345f73a9e84996dc666752c files/digest-vanilla-sources-2.6.14.4 129
+MD5 f5cdb59a449f58dd28d1d94b1abb15bf files/digest-vanilla-sources-2.6.14.5 129
 MD5 34a221fb286330101bbaab2a9b5944ee files/digest-vanilla-sources-2.6.15_rc1 133
 MD5 e28a32320569918fd32324853850c86b files/digest-vanilla-sources-2.6.15_rc2 133
 MD5 2ef23f7cced935464ce33f2e9a4d3f4b files/digest-vanilla-sources-2.6.15_rc3 133
@@ -44,6 +42,7 @@ MD5 1e9d779e2f82b2a16b997ea284bb961d vanilla-sources-2.6.13.4.ebuild 491
 MD5 fa1e792ddae1f5e1142380230390d937 vanilla-sources-2.6.14.2.ebuild 487
 MD5 44bfb253ac7f0845ddf3c48baf34fd76 vanilla-sources-2.6.14.3.ebuild 491
 MD5 3a2c6193158ac8d69739bf4c684644d5 vanilla-sources-2.6.14.4.ebuild 491
+MD5 86a24e25c06fb3a270dbe61cc49b0bd6 vanilla-sources-2.6.14.5.ebuild 491
 MD5 5d440d3d0ce4742d769439cbfb3d1f7c vanilla-sources-2.6.15_rc1.ebuild 493
 MD5 3d342f0211e75990b787e03a87e512a4 vanilla-sources-2.6.15_rc2.ebuild 497
 MD5 694274c350108d418129a360bf35ce27 vanilla-sources-2.6.15_rc3.ebuild 497
@@ -53,10 +52,3 @@ MD5 54708331f4777918bf33fd8c22dfcaa0 vanilla-sources-2.6.15_rc6.ebuild 497
 MD5 89147ff33d9cec94783cbe34f2367f9d vanilla-sources-2.6.15_rc7.ebuild 497
 MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDruLOp5vW4rUFj5oRAm31AJ9YAq9bu5Qmo/vjc7nKh3j9jjPPDgCfeP6K
-IKS0ldo8/tSQY0sQtMc1cFA=
-=gjEu
------END PGP SIGNATURE-----
