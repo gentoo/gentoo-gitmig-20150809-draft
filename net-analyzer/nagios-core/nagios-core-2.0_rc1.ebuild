@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc1.ebuild,v 1.1 2005/12/27 22:23:03 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc1.ebuild,v 1.2 2005/12/29 19:26:00 ramereth Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -218,7 +218,7 @@ pkg_postinst() {
 	einfo
 
 	einfo
-	ewarn "Use /usr/nagios/contrib/convertcfg for configuration file conversion"
+	ewarn "Use /usr/nagios/bin/convertcfg for configuration file conversion"
 	einfo
 	einfo "Due to a mixup on how the ebuilds were versioned in portage, this"
 	einfo "upgrade might look like a downgrade. I needed to re-align the version"
