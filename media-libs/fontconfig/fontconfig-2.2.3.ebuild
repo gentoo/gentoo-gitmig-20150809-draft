@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.3.ebuild,v 1.12 2005/05/03 15:31:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.3.ebuild,v 1.13 2005/12/29 01:17:46 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://freedesktop.org/fontconfig/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ppc64 s390 ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/freetype-2.1.4
