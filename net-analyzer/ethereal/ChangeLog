@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.161 2005/12/29 08:51:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.162 2005/12/29 14:46:37 blubb Exp $
+
+  29 Dec 2005; Simon Stelling <blubb@gentoo.org> ethereal-0.10.14.ebuild:
+  stable on amd64 wrt bug 116943
 
   29 Dec 2005; Markus Rothe <corsair@gentoo.org> ethereal-0.10.14.ebuild:
   Stable on ppc64; bug #116943
