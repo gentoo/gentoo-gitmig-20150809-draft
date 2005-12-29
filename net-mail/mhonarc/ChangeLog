@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mhonarc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.7 2005/11/28 13:08:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.8 2005/12/29 18:37:49 stuart Exp $
+
+*mhonarc-2.6.15 (29 Dec 2005)
+
+  29 Dec 2005; Stuart Herbert <stuart@gentoo.org> +mhonarc-2.6.15.ebuild:
+  Version bump (fixes bug 105356) and fix for sandbox violation (fixes bug 52779)
 
   28 Nov 2005; <mcumming@gentoo.org> mhonarc-2.6.10.ebuild,
   mhonarc-2.6.11.ebuild:
