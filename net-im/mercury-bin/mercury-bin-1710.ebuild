@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/mercury-bin-1710.ebuild,v 1.1 2005/12/29 00:06:42 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/mercury-bin-1710.ebuild,v 1.2 2005/12/29 00:17:49 humpback Exp $
 
 inherit eutils java-pkg
 
@@ -34,29 +34,29 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${MY_PVR}.zip
 	cd ${S}
-	rm -f *.dll *.so
+	#rm -f *.dll *.so
 	#Clean the dllStuff.jar from things we dont need
-	cd lib
-	mkdir dllStuff
-	cd dllStuff
-	unzip ../dllStuff.jar
+	#cd lib
+	#mkdir dllStuff
+	#cd dllStuff
+	#unzip ../dllStuff.jar
 #	rm -rf ../dllStuff.jar org/jdesktop x10gimli com/jeans
-	rm -rf ../dllStuff.jar x10gimli com/jeans # Problems with jdictrayapi in amd64
+	#rm -rf ../dllStuff.jar x10gimli com/jeans # Problems with jdictrayapi in amd64
 	# it looks to me that one can use the .so file that comes with the package
 	# but not the one in portage
-	cd ${S}
+	#cd ${S}
 	rm lib/jdom1_0.jar # jdom
-	rm lib/JFlash.jar # seems to be trial from http://www.javaapis.com/jflashplayer/
+	#rm lib/JFlash.jar # seems to be trial from http://www.javaapis.com/jflashplayer/
 					#which says its windows only
 	rm lib/xmlpull.jar # xpp3
 }
 
 src_install() {
 	#rebuild the dllStuff.jar
-	cd ${S}/lib/dllStuff
-	jar cf ../dllStuff.jar *
-	cd ${S}
-	rm -rf lib/dllStuff
+	#cd ${S}/lib/dllStuff
+	#jar cf ../dllStuff.jar *
+	#cd ${S}
+	#rm -rf lib/dllStuff
 
 	#Start installing stuff
 	insinto /opt/${PN}/resources

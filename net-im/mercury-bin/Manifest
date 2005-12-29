@@ -5,12 +5,12 @@ MD5 c74cce8e0ab6198e49c5c9bfe767364a ChangeLog 1154
 MD5 7a3d1654ab6a142b9b6918fcbe8e3199 files/digest-mercury-bin-1710 54
 MD5 037a6938a09ec22db8941a747726772d files/icon32.gif 1262
 MD5 e9215e4a64bc97ce28458cda52e7975b files/mercury.sh 372
-MD5 9f5967fc9ea5e9306d2f9a209522ea4e mercury-bin-1710.ebuild 1945
+MD5 de925a9cb2d317bea5196c3f0520b143 mercury-bin-1710.ebuild 1957
 MD5 16021df92c2051cb101ec0833e9cc116 metadata.xml 634
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDsyjc8zY1VwezZiERAqgpAJ42BmGEHu6gDOcMFSJRx89QNlqvgQCgppsu
-aIbkOb1INiBdqCDQrnZV+N4=
-=QF+5
+iD8DBQFDsytq8zY1VwezZiERApDUAKCV7RgrGfndcdUxqnnx3687DeajtQCdGKLJ
+fJt5oZuyXBlgd54ye36kmx8=
+=wlQ6
 -----END PGP SIGNATURE-----
