@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1e210a97297ed63003764075de97bfbf ChangeLog 17588
+MD5 b35b480f3b142dc29968032c8f51022a ChangeLog 17701
 MD5 34f20e2837caff74cef9cca766e1e0c4 files/3.1-modprobe.d.5.bz2 2288
 MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
 MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1-r1 142
@@ -20,14 +20,14 @@ MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.pa
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3e2546d3dcec80540a104faf7767b449 module-init-tools-3.0-r2.ebuild 5628
 MD5 2876dc74934f041152f6010a0c724beb module-init-tools-3.1-r1.ebuild 5578
-MD5 0e340eb54a402f26cc813a8f1623b4fc module-init-tools-3.2.1.ebuild 5795
+MD5 1a592bacb3b075c6c42565a28416d4fb module-init-tools-3.2.1.ebuild 5795
 MD5 856ad108ed6e4aace005e5e33996d36f module-init-tools-3.2.2.ebuild 5795
 MD5 5f3650d3eb5b8c088397c6cb623c8127 module-init-tools-3.2_pre7-r1.ebuild 5871
 MD5 a1bd63bad6a702a8e1a6c19097318595 module-init-tools-3.2_pre7.ebuild 5472
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDsvfl2+ySkm8kpY0RAhfJAJ9WdFO9jFF7uYNZ5+ugDJdMsHb8pQCgnXXX
-01aWqQhmAjMW6Ex6uZvDoMI=
-=ygEo
+iD8DBQFDs3VrCRZPokWLroQRAgHTAJ9eNj2IEu+woIwyxJGG/7Cy/21dFACffBJe
+Jb6rHW4Qhtil7624AXalIjo=
+=DfsK
 -----END PGP SIGNATURE-----
