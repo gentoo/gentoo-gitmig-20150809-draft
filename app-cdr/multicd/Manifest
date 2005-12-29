@@ -1,4 +1,16 @@
-MD5 8c01ff617856b5b0e46212cd57ebd5cd ChangeLog 707
-MD5 9d512f5d439c6394c473e0a69af57843 multicd-1.7.2.ebuild 766
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f6e5373029617099bd3308b9d1126ec3 ChangeLog 909
 MD5 54363392c9f700ede6a5d844ace05e44 files/digest-multicd-1.7.2 64
+MD5 e69b3912a21411b12064bdec3d9950b6 files/digest-multicd-1.7.5 64
+MD5 d0eb51fbe8e05b6ee3ff2486ce2197a8 metadata.xml 166
+MD5 9d512f5d439c6394c473e0a69af57843 multicd-1.7.2.ebuild 766
+MD5 d1a464b1bd651b4355d11d28129e256a multicd-1.7.5.ebuild 774
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDs1rEwUpWvClEHQoRAkqGAJ4oiu6uC2+/wEseJNEzryvfPhlACgCfUrQU
+jF/t4iahtilZ2LWLJ3eAbFk=
+=5iDA
+-----END PGP SIGNATURE-----
