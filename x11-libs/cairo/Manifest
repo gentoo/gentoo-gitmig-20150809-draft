@@ -7,7 +7,7 @@ MD5 4db2c222787dd6470523acdfe996891e cairo-0.2.0-r1.ebuild 900
 MD5 61d14abb26a608160a87e8596bbb601a cairo-0.3.0-r2.ebuild 996
 MD5 627da87d1d67830749f3dafde81804ca cairo-0.3.0.ebuild 843
 MD5 1d2ad415e2e6db1a58640bb93b15a34f cairo-0.4.0.ebuild 994
-MD5 c6b6d048ce2b9e5b6c5220e0479e11d5 cairo-1.0.2.ebuild 1537
+MD5 9cb29f0ccba34e5599729cd16b945782 cairo-1.0.2.ebuild 1541
 MD5 4df3bcd9171f83ca24b03ab0f8eefb24 files/cairo-0.3.0-header-fix.diff 697
 MD5 1ecec7f667ad4b91d876db0efdf4a261 files/cairo-0.4.0-makefile.patch 1553
 MD5 6600a332745a27c0333f2c8193a805fa files/cairo-1.0.2-pkg_macro.patch 542
@@ -21,7 +21,7 @@ MD5 ea284a6e24864155e0176859cbddf1b3 metadata.xml 335
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDn8HuBtvusYtCZMsRAmEwAJ9neVjYeOLQnzUOBBjoemv3a8qlPgCdEDDU
-eiY20sj5aP+CRsjH9pRigms=
-=C0Xk
+iD8DBQFDs3OM2+ySkm8kpY0RAnIDAKCalhpELdFcmA4lKk6N/i5inuWx2gCgoyJp
+hcpj/Dr6SzJnJ5pYSdwfc3M=
+=HPFa
 -----END PGP SIGNATURE-----
