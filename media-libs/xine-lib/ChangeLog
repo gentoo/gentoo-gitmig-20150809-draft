@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.293 2005/12/26 12:25:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.294 2005/12/29 02:00:22 gmsoft Exp $
+
+  28 Dec 2005; Guy Martin <gmsoft@gentoo.org> xine-lib-1.1.1-r3.ebuild:
+  That one compiles on hppa.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> xine-lib-1_rc8-r2.ebuild:
   oggvorbis Cleanup
