@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/openpbs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog,v 1.20 2005/09/05 13:26:52 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog,v 1.21 2005/12/29 00:35:44 tantive Exp $
+
+*openpbs-2.3.16-r3 (29 Dec 2005)
+
+  29 Dec 2005; Michael Imhof <tantive@gentoo.org>
+  +files/openpbs-2.3.16-errno-fixup.patch,
+  -files/openpbs-2.3.16-r1-errno-fixup.patch, +files/openpbs-gcc32.patch,
+  -files/openpbs-2.3.16-r2-errno-fixup.patch, openpbs-2.3.16-r1.ebuild,
+  openpbs-2.3.16-r2.ebuild, +openpbs-2.3.16-r3.ebuild:
+  Version bumped. Reorganized patches, added new patch. Closes #113172.
 
   05 Sep 2005; Michael Imhof <tantive@gentoo.org>
   +files/openpbs-2.3.16-r2-errno-fixup.patch, openpbs-2.3.16-r1.ebuild,

@@ -14,7 +14,7 @@ diff -urN src-old/scheduler.basl/af_resmom.c src/scheduler.basl/af_resmom.c
 --- src-old/scheduler.basl/af_resmom.c	2003-07-30 17:04:56.000000000 -0500
 +++ src/scheduler.basl/af_resmom.c	2003-07-30 17:04:00.000000000 -0500
 @@ -103,7 +103,7 @@
- static char ident[] = "@(#) $RCSfile: openpbs-2.3.16-r2-errno-fixup.patch,v $ $Revision: 1.1 $";
+ static char ident[] = "@(#) $RCSfile: openpbs-2.3.16-errno-fixup.patch,v $ $Revision: 1.1 $";
  
  /* External Variables */
 -extern int errno;
