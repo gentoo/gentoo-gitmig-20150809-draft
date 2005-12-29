@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.4.2.ebuild,v 1.1 2005/12/05 01:19:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.4.2.ebuild,v 1.2 2005/12/29 23:16:03 dang Exp $
 
 inherit gnome2 eutils
 
@@ -34,7 +34,7 @@ USE_DESTDIR="1"
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_with debug e2k-debug) --with-krb5=/usr"
 
-	if ! built_with_use gnome-extra/evolution-data-server ldap && ! built_with_use gnome-extra/evolution-data-server kerberos; then
+	if ! built_with_use gnome-extra/evolution-data-server ldap || ! built_with_use gnome-extra/evolution-data-server kerberos; then
 		eerror "Please re-emerge gnome-extra/evolution-data-server with"
 		eerror "the use flags ldap and kerberos."
 		die
