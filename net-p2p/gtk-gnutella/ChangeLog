@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.52 2005/10/02 14:54:20 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.53 2005/12/29 11:26:56 eldad Exp $
+
+*gtk-gnutella-0.96b (29 Dec 2005)
+
+  29 Dec 2005; Eldad Zack <eldad@gentoo.org> +gtk-gnutella-0.96b.ebuild:
+  Version bump. added dbus useflag. Bug #113746.
 
   21 Sep 2005; <mkay@gentoo.org> -gtk-gnutella-0.93.3.ebuild,
   -gtk-gnutella-0.94.ebuild, -gtk-gnutella-0.95.3.ebuild:
