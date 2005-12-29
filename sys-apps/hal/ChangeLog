@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.60 2005/12/24 22:15:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.61 2005/12/29 20:01:14 compnerd Exp $
+
+  29 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  hal-0.5.5.1-r2.ebuild:
+  Fixing KOBJECT_UEVENT check for 2.6.15 kernels.
 
   24 Dec 2005; Stefan Schweizer <genstef@gentoo.org> hal-0.5.5.1-r1.ebuild:
   Fix if-statement thanks to Michail A.Baikov <rusxakep@mail.ru> in bug 116376
