@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.17 2005/12/28 23:17:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.18 2005/12/29 05:21:53 halcy0n Exp $
+
+  29 Dec 2005; Mark Loeser <halcy0n@gentoo.org> c-ares-1.3.0.ebuild:
+  Stable on x86; bug #117036
 
   28 Dec 2005; Daniel Black <dragonheart@gentoo.org> -c-ares-1.2.1.ebuild,
   c-ares-1.3.0.ebuild:
