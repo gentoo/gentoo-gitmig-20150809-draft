@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.3 2005/12/16 06:34:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.4 2005/12/29 19:16:30 blubb Exp $
+
+  29 Dec 2005; Simon Stelling <blubb@gentoo.org> itk-3.3.ebuild:
+  stable on amd64
 
   16 Dec 2005; Mark Loeser <halcy0n@gentoo.org> itk-3.3.ebuild:
   Stable on x86; bug #115177
