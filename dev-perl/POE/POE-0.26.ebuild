@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.12 2005/08/26 02:28:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.13 2005/12/29 18:19:09 mcummings Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -21,7 +21,7 @@ DEPEND="${DEPEND}
 	dev-perl/Compress-Zlib
 	perl-core/Storable
 	dev-perl/IO-Tty
-	dev-perl/Filter
+	perl-core/Filter
 	dev-perl/FreezeThaw
 	ipv6? ( dev-perl/Socket6 )
 	tcltk? ( dev-perl/perl-tk )
