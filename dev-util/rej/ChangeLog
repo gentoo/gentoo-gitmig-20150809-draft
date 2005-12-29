@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rej
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rej/ChangeLog,v 1.6 2005/11/21 13:59:56 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rej/ChangeLog,v 1.7 2005/12/29 20:55:10 dsd Exp $
+
+  29 Dec 2005; Daniel Drake <dsd@gentoo.org> rej-0.16.ebuild:
+  Testing on amd64
 
   21 Nov 2005; Daniel Drake <dsd@gentoo.org> -rej-0.15.ebuild:
   Remove old version
