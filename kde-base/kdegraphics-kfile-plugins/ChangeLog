@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.34 2005/12/17 13:16:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.35 2005/12/29 10:10:53 greg_g Exp $
+
+  29 Dec 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdegraphics-kfile-plugins-3.5.0.ebuild:
+  Make tiff dependency not optional.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org>
   kdegraphics-kfile-plugins-3.5.0.ebuild:
