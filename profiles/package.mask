@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4808 2005/12/29 11:08:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4809 2005/12/29 16:54:08 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (29 Dec 2005)
-# Masked due to security problem:
-# Security problem with relative RPATH
-=x11-misc/xnview-1.70
 
 # <robbat2@gentoo.org> (26 Dec 2005)
 # Fails HMAC test on Pentium-M systems
