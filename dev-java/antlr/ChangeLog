@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.31 2005/12/13 19:03:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.32 2005/12/29 23:22:01 compnerd Exp $
+
+*antlr-2.7.5-r2 (29 Dec 2005)
+
+  29 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +antlr-2.7.5-r2.ebuild:
+  Adding nojava useflag as per axxo's request.  Fixing script issue (bug #80862)
+  with script useflag.
 
   13 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   antlr-2.7.5-r1.ebuild:
