@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/darts-0.2.ebuild,v 1.12 2005/04/12 01:56:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/darts-0.2.ebuild,v 1.13 2005/12/29 20:55:46 halcy0n Exp $
 
 DESCRIPTION="A C++ template library that implements Double-Array"
-HOMEPAGE="http://cl.aist-nara.ac.jp/~taku-ku/software/darts/"
-SRC_URI="http://cl.aist-nara.ac.jp/~taku-ku/software/darts/src/${P}.tar.gz"
+HOMEPAGE="http://chasen.org/~taku/software/darts/"
+SRC_URI="http://chasen.org/~taku/software/darts/src/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -15,12 +15,13 @@ DEPEND="virtual/libc
 
 src_compile() {
 	econf `use_with zlib` || die
-	emake || die
+	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die
 }
 
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README || die
+	dodoc AUTHORS ChangeLog INSTALL NEWS README || die
 	dohtml doc/* || die
 }
+
