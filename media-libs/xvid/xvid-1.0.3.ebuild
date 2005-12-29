@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.3.ebuild,v 1.13 2005/12/22 18:28:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.3.ebuild,v 1.14 2005/12/29 00:14:02 gmsoft Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://files.xvid.org/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~ppc ppc64 sparc ~x86"
 IUSE="doc"
 
 DEPEND="x86? ( >=dev-lang/nasm-0.98.36 )"

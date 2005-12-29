@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b249ecf892ba2c0e58388072e2d7607f ChangeLog 6819
+MD5 6743e320d0336450ba797443c67216aa ChangeLog 6932
 MD5 8c100445a64d960693db8424931ff0eb files/1.0.2-DESTDIR.patch 1450
 MD5 3ed49831081a6eb29ccda7ec2956c592 files/digest-xvid-1.0.2 67
 MD5 a508fb244e68f01cbf06e590abbee04e files/digest-xvid-1.0.3 67
@@ -12,12 +9,5 @@ MD5 80a43f67032aa35894fcb976e575c252 files/xvid-1.1.0_beta2-altivec.patch 1070
 MD5 ecea104174b77d80f9bbf94f94a78aec files/xvid-1.1.0_beta2-amd64-gcc4.patch 2135
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 684af8a8c5e487d5e197b2b0f7793cec xvid-1.0.2.ebuild 1212
-MD5 670b9a7eb6818041425cbc37921a155d xvid-1.0.3.ebuild 1170
+MD5 1661e1a16051809c34024b39418b744b xvid-1.0.3.ebuild 1167
 MD5 ab895f2b7424587f4776f453644d51aa xvid-1.1.0_beta2-r1.ebuild 1750
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDqvBbKRy60XGEcJIRAnPvAKCS8OxcpjvSeVZ5kzBzfhR+QtMsQwCgrjXA
-1o6zZpp+OMrEafZ8Ju/bPAQ=
-=yPT7
------END PGP SIGNATURE-----
