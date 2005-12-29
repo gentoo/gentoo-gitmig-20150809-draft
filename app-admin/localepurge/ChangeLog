@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.14 2005/12/27 13:41:22 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.15 2005/12/29 17:25:29 gustavoz Exp $
+
+  29 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  localepurge-0.5.ebuild:
+  Stable on sparc
 
 *localepurge-0.5 (27 Dec 2005)
 

@@ -1,8 +1,18 @@
-MD5 84ebb282058cb50ed36a7d31b9d1c5f1 ChangeLog 1799
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c66e7d37fed9aab61cc89edadfd31bf4 ChangeLog 1902
 MD5 d7fe0953341216f9199028ff2999683d files/digest-localepurge-0.2-r2 66
 MD5 d8bc8acfd4a18ebb716eb9f45bc7744c files/digest-localepurge-0.4 63
 MD5 28715bbee1287aaa0b9862d721c662c1 files/digest-localepurge-0.5 63
 MD5 cb256ea84aaf9e56176ce0b3e7541ef9 localepurge-0.2-r2.ebuild 793
 MD5 81f3166d16b551ea01f01781da950839 localepurge-0.4.ebuild 793
-MD5 f3fd17dc688ac9910496b6d5625f36da localepurge-0.5.ebuild 805
+MD5 387c10c43392f4a76d5da28eee527a74 localepurge-0.5.ebuild 808
 MD5 d248960caf4334af6c71bf9199df1606 metadata.xml 394
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDtBwbKRy60XGEcJIRAvtmAJ9m+o9uISOHIZhuFWRDGgfqZKwKZACgq7iT
+4dN2XQFDX6H5CXY8kI3aZA0=
+=BY2v
+-----END PGP SIGNATURE-----
