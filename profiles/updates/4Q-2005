@@ -22,3 +22,4 @@ move media-video/kyro-drivers x11-drivers/kyro-drivers
 move x11-misc/synaptics x11-drivers/synaptics
 move x11-misc/ttmkfdir x11-apps/ttmkfdir
 move app-misc/plextor-tool app-cdr/plextor-tool
+move dev-perl/Filter perl-core/Filter
