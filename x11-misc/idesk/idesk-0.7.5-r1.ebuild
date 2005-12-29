@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5.ebuild,v 1.3 2005/12/29 15:48:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r1.ebuild,v 1.1 2005/12/29 20:17:43 nelchael Exp $
 
 DESCRIPTION="Utility to place icons on the root window"
 HOMEPAGE="http://idesk.sourceforge.net/"
@@ -22,6 +22,12 @@ DEPEND=">=media-libs/imlib2-1.1.2.20040912
 	=x11-libs/gtk+-2*
 	media-libs/libart_lgpl
 	x11-libs/startup-notification"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	sed -i -e 's,/usr/local/,/usr/,' examples/default.lnk
+}
 
 src_compile() {
 	econf --enable-libsn || die "configuration failed"
