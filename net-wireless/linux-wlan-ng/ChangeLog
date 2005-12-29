@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.52 2005/12/19 11:01:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.53 2005/12/29 18:51:15 blubb Exp $
+
+  29 Dec 2005; Simon Stelling <blubb@gentoo.org> linux-wlan-ng-0.2.3.ebuild:
+  added ~amd64 keyword
 
 *linux-wlan-ng-0.2.3 (19 Dec 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.3.ebuild,v 1.1 2005/12/19 11:01:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.3.ebuild,v 1.2 2005/12/29 18:51:15 blubb Exp $
 
 #The configure script needs prepared sources.
 inherit linux-mod
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${P}.tar.bz2"
 # includes dual licensed files but also stuff only under MPL-1.1
 LICENSE="|| ( GPL-2 MPL-1.1 ) MPL-1.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="debug doc pcmcia"
 
