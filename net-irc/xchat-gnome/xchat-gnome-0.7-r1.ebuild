@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.7-r1.ebuild,v 1.1 2005/12/14 20:20:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.7-r1.ebuild,v 1.2 2005/12/29 12:32:01 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -68,7 +68,7 @@ src_install() {
 	insinto /usr/include/xchat
 	doins src/common/xchat-plugin.h || die "doins failed"
 
-	dodoc src/fe-gnome/{BUGS,ChangeLog,TODO} || die "dodoc failed"
+	dodoc src/fe-gnome/ChangeLog || die "dodoc failed"
 }
 
 pkg_postinst() {
