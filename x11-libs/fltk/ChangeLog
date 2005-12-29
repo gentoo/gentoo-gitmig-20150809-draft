@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.59 2005/12/13 05:48:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.60 2005/12/29 20:27:26 nelchael Exp $
+
+  29 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org> fltk-1.1.6.ebuild:
+  Added back ~ia64 that got lost.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fltk-1.1.6.ebuild:
   Add modular X dependencies.
