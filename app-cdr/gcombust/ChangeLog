@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.23 2005/04/21 17:55:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.24 2005/12/29 03:32:28 metalgod Exp $
+
+  29 Dec 2005; Luis Medinas <metalgod@gentoo.org> +metadata.xml:
+  Add this package to media-optical herd.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> gcombust-0.1.55.ebuild:
   stable on amd64
