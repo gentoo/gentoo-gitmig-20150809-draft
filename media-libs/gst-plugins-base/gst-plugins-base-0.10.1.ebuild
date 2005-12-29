@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.1.ebuild,v 1.1 2005/12/29 21:58:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.1.ebuild,v 1.2 2005/12/29 22:03:07 compnerd Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-base gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-libs/glib-2.6
-	 >=media-libs/gstreamer-0.10.0
+	 >=media-libs/gstreamer-0.10.1
 	 >=dev-libs/liboil-0.3.2
 	 virtual/x11"
 
