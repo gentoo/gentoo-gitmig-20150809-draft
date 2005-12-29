@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.15 2005/12/28 19:32:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.16 2005/12/29 16:51:58 nelchael Exp $
+
+*xnview-1.70-r1 (29 Dec 2005)
+
+  29 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org> -xnview-1.70.ebuild,
+  +xnview-1.70-r1.ebuild:
+  Fix security bug #117063.
 
 *xnview-1.70 (28 Dec 2005)
 
