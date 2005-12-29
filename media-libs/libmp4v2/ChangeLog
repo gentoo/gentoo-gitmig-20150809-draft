@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.6 2005/12/22 19:30:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.7 2005/12/29 21:57:38 tester Exp $
 
   22 Dec 2005; Markus Rothe <corsair@gentoo.org> libmp4v2-1.4.1.ebuild:
   Added ~ppc64; bug #116022
@@ -17,6 +17,8 @@
 
   20 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> libmp4v2-1.4.1.ebuild:
   Add missing multilib inherit for $(get_libdir).
+
+*libmp4v2-1.4.1 (20 Dec 2005)
 
   20 Dec 2005; Olivier Crête <tester@gentoo.org> ChangeLog:
   Separated libmp4v2 from mpeg4ip
