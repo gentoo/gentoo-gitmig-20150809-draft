@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5900b3358f937766aa7b4f4b8a2cdf54 ChangeLog 17916
 MD5 db00eb9aaf23133f903513fea669954f files/digest-ghostscript-7.07.1-r10 212
 MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r7 212
@@ -28,7 +31,14 @@ MD5 acda8ddfde1efeaf451cb28a67dcc773 files/gs7.07.1-krgb.patch.gz 5569
 MD5 92fa24960f2c7802749ce6908aeaf60d files/gs7.07.1-nogtk2.patch 1419
 MD5 b2ca914ffcff3e5296d6b5acc7fac182 files/gs7.07.1-ps2ps.patch 244
 MD5 1d5618d793799f7247d624ced0dea493 files/gs7.07.1-tempfile.patch 3123
-MD5 caeeb5df88f433092d2dd0c93d4f51d5 ghostscript-7.07.1-r10.ebuild 6158
+MD5 d39f08cfb1ff44b9a2c49d17864aa245 ghostscript-7.07.1-r10.ebuild 6160
 MD5 e5c681abcdd4309829734a5f91ab007b ghostscript-7.07.1-r7.ebuild 4288
-MD5 0adb31bdf1827f38952f2f0dd249e926 ghostscript-7.07.1-r8.ebuild 5491
+MD5 9c3639930b7899c710b169806fc54ef1 ghostscript-7.07.1-r8.ebuild 5491
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDs1TH2+ySkm8kpY0RArRQAKCLCDF3GCV0JwOb6Z1kVRN0KGyFbACeIYBo
+VMwdspkM0RuNaLtghotgjuw=
+=c4kQ
+-----END PGP SIGNATURE-----
