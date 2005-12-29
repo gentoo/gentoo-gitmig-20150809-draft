@@ -9,11 +9,11 @@ MD5 684def72ebc0da73cb8b6d1c53e7e8fb files/getent 1112
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
 MD5 cdd40275a06b781916614837efc05a2e uclibc-0.9.27-r1.ebuild 12118
 MD5 81cee933f6981c689db448c06576ec3c uclibc-0.9.27.ebuild 10387
-MD5 6bf0209ddd273a6fe688be1d387bc1d3 uclibc-0.9.28.ebuild 13267
+MD5 e1e9f543bd1a559427a7a9e2ee30b2dc uclibc-0.9.28.ebuild 13267
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDoKfggIKl8Uu19MoRAms+AJ95pY4wOyhYtBPpo/14vyAqrjXGbgCfa7oy
-PYcX635BYjMs820EBFNlCr8=
-=E/EP
+iD8DBQFDsz472+ySkm8kpY0RAmMuAKCzzYhgbJDApVRzSkfOeU44HNDJsACgrucD
+hipgBe7WURGc2vfg+TLYJgs=
+=dh2x
 -----END PGP SIGNATURE-----
