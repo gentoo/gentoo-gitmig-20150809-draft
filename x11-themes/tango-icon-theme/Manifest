@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 48dfe4964e719470114eaa12c8a2fdd9 ChangeLog 455
+MD5 4c8640ea61ff16bb468e0876e2c1811f ChangeLog 588
 MD5 f6ad40c3e91258a909647a1e4bcf1ea2 files/digest-tango-icon-theme-0.6.3 74
 MD5 a3014aa05822105a2b16fe0bd52692af metadata.xml 289
-MD5 a668c7364d1c0418940069ba65f56a26 tango-icon-theme-0.6.3.ebuild 886
+MD5 5d1ef4a5c5c1bffcc5afb462bb531e8b tango-icon-theme-0.6.3.ebuild 900
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDs2XawUpWvClEHQoRAodQAJ0Ra7wdWQ8Hjpt6RRjHIQeCXQ0SWwCdGP3y
-/n36OkatbxcOdjXbnc25Kmc=
-=ZFIr
+iD8DBQFDtA9cwUpWvClEHQoRAox5AKCJRPZzo4v0+o5q09o6dE2ESEDQlwCcD8BX
+O1XWAF3ee1iubd4Z0fDMF9M=
+=ymee
 -----END PGP SIGNATURE-----
