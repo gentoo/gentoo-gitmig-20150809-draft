@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.29 2005/12/28 19:04:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.30 2005/12/29 04:57:02 vapier Exp $
+
+  29 Dec 2005; Mike Frysinger <vapier@gentoo.org> files/poppler-gcc41.patch:
+  Add another gcc-4.1.x fix #116977 by gim.
 
   28 Dec 2005; <dang@gentoo.org> -files/poppler-0.4.3-utils.patch,
   poppler-0.4.3-r1.ebuild:

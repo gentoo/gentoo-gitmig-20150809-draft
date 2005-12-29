@@ -38,3 +38,16 @@ Index: poppler-0.4.2/qt/poppler-qt.h
  };
  
  }
+
+http://bugs.gentoo.org/116977
+--- poppler/utils/HtmlLinks.h
++++ poppler/utils/HtmlLinks.h
+@@ -19,7 +19,7 @@
+   HtmlLink& operator=(const HtmlLink& x);
+   HtmlLink(double xmin,double ymin,double xmax,double ymax,GooString *_dest);
+   ~HtmlLink();
+-  GBool HtmlLink::isEqualDest(const HtmlLink& x) const;
++  GBool isEqualDest(const HtmlLink& x) const;
+   GooString *getDest(){return new GooString(dest);}
+   double getX1() const {return Xmin;}
+   double getX2() const {return Xmax;}
