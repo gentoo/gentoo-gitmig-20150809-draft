@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.29 2005/12/27 22:02:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.30 2005/12/29 23:18:01 brix Exp $
+
+*suspend2-sources-2.6.14-r9 (29 Dec 2005)
+
+  29 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/suspend2-2.2-rc15-mce-config-2.patch,
+  +files/suspend2-2.2-rc15-processor.h.patch,
+  +suspend2-sources-2.6.14-r9.ebuild:
+  Revision bump to genpatches-2.6.14-7 and updated mce-config.patch.
 
 *suspend2-sources-2.6.14-r8 (27 Dec 2005)
 

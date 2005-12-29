@@ -1,4 +1,4 @@
-MD5 dc0d28edfd44060d2a0884f697959a42 ChangeLog 7042
+MD5 b74eb559639307dfba3fd41e14925802 ChangeLog 7340
 MD5 8c885e50de95004ba759a137c3f93495 files/101-software-suspend-2.2-rc3-for-2.6.13-gcc4.patch 877
 MD5 a67db8b8f894652b4d1456406d307a37 files/digest-suspend2-sources-2.6.13 310
 MD5 5ff92c313009119044ed51956fb509f9 files/digest-suspend2-sources-2.6.13-r1 310
@@ -12,6 +12,7 @@ MD5 92ba5acc4df4d19ceaa8d998eb57738d files/digest-suspend2-sources-2.6.14-r5 303
 MD5 55fb5d3c6fea0515663795871515faf9 files/digest-suspend2-sources-2.6.14-r6 303
 MD5 55fb5d3c6fea0515663795871515faf9 files/digest-suspend2-sources-2.6.14-r7 303
 MD5 da3f42bad1e36436b75ebe041d853c0a files/digest-suspend2-sources-2.6.14-r8 303
+MD5 d7831b5753d35ae55b212e95a7bc955f files/digest-suspend2-sources-2.6.14-r9 303
 MD5 d1eff82a3bab3c5b67dec45a552888e4 files/linux-2.6.13-poweroff.patch 500
 MD5 4c9a2a6532217c3e54a52f6633e33c9f files/suspend2-2.2-rc13-filewriter.patch 5283
 MD5 3a1912556d15f96edb9a356555dadf67 files/suspend2-2.2-rc14-do-correct-init-routine.patch 744
@@ -21,9 +22,11 @@ MD5 55ffe19645dea1cc8df6866ff95737dd files/suspend2-2.2-rc14-select-hotplug-cpu-
 MD5 ae183cf8eb4f23506651725c3ba32f67 files/suspend2-2.2-rc14-test-filewriter.patch 6262
 MD5 f4d1a2c278cb3e823c8f7da71afed4ee files/suspend2-2.2-rc15-get-next-bit-on.patch 5368
 MD5 aa1349c52fa5f56680b2e612d415a6cb files/suspend2-2.2-rc15-listen-to-abort-request.patch 956
+MD5 dec43394d8b62fa7d06a6ad8ddf3c63b files/suspend2-2.2-rc15-mce-config-2.patch 876
 MD5 7761c9dd108bf9dca9d3427b721f44f1 files/suspend2-2.2-rc15-mce-config.patch 873
 MD5 d33577823e512a90a2b24754f74fdc07 files/suspend2-2.2-rc15-no-pageflags.patch 998
 MD5 6cd7d0c37cc50881f3d3b0feffedb4f1 files/suspend2-2.2-rc15-pageflags.h.patch 3990
+MD5 e85851586d845a8b1d841ae93444d28b files/suspend2-2.2-rc15-processor.h.patch 583
 MD5 e40cb3df546efa5003fe3778c5a50854 metadata.xml 275
 MD5 df999badafc06dd65c6f777b684ad9d6 suspend2-sources-2.6.13-r1.ebuild 2006
 MD5 5d404bb0571ae11e7702c33c9577af76 suspend2-sources-2.6.13-r2.ebuild 1967
@@ -36,4 +39,5 @@ MD5 5cfda97b5ce288a6978bc4cb747df913 suspend2-sources-2.6.14-r5.ebuild 1809
 MD5 ef0d8e7f3382db7f92650dca96517ac3 suspend2-sources-2.6.14-r6.ebuild 1762
 MD5 47b7971f89ffc40fd62aded939d754c3 suspend2-sources-2.6.14-r7.ebuild 2079
 MD5 d472627bfcb34566f5b3ef71e410737a suspend2-sources-2.6.14-r8.ebuild 2019
+MD5 e88e904ea7b2db03adb7e231ec6d95b4 suspend2-sources-2.6.14-r9.ebuild 2069
 MD5 a24f87b3199f5a851070c6ce817dc3ca suspend2-sources-2.6.14.ebuild 1758
