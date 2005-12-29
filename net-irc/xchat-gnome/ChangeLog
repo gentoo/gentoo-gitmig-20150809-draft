@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.10 2005/12/29 12:32:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.11 2005/12/29 12:54:38 swegener Exp $
+
+*xchat-gnome-0.8 (29 Dec 2005)
+
+  29 Dec 2005; Sven Wegener <swegener@gentoo.org> +xchat-gnome-0.8.ebuild:
+  Version bump, bug #116583.
 
   29 Dec 2005; Sven Wegener <swegener@gentoo.org> xchat-gnome-0.7-r1.ebuild:
   Remove nonexistent files from dodoc, bug #116639.
