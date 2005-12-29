@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r4.ebuild,v 1.1 2005/12/20 17:45:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r4.ebuild,v 1.2 2005/12/29 10:38:24 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -34,6 +34,11 @@ RDEPEND="${DEPEND}
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
+
+# tiff is mandatory for kfile-plugins/tiff and kooka, the check comes
+# from acinclude.m4.in and there's no switch. There is a --with-tiff
+# check coming from kviewshell/plugins/djvu/libdjvu/configure.in.in,
+# but it has no effect.
 
 PATCHES="${FILESDIR}/post-3.5.0-kdegraphics-CAN-2005-3193.diff
 	${FILESDIR}/kpdf-3.5.0-splitter-io.patch
