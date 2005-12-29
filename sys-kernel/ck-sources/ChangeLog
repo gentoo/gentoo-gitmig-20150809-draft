@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.126 2005/12/05 23:28:55 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.127 2005/12/29 21:12:23 marineam Exp $
+
+*ck-sources-2.6.14_p7 (29 Dec 2005)
+
+  29 Dec 2005; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.14_p6.ebuild, +ck-sources-2.6.14_p7.ebuild:
+  Bump to ck7 with the extra bonus of 2.6.14.5! Closes bug #116484
 
 *ck-sources-2.6.14_p6 (05 Dec 2005)
 
