@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.33.ebuild,v 1.8 2005/12/22 19:39:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.33.ebuild,v 1.9 2005/12/29 13:17:57 vapier Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://www.boutell.com/gd/"
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-overflow-checks.patch
+	elibtoolize #117078
 }
 
 src_compile() {
