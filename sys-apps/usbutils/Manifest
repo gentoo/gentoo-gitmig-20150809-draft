@@ -11,14 +11,14 @@ MD5 85ab89963a7fd11f8611547fb202cd72 files/digest-usbutils-0.71-r1 65
 MD5 d20a32b2ea8220b81490216ee51cba82 files/usbutils-0.11-fix-usb-ids-man-page-ref.patch 384
 MD5 e092e74597092401bebd1db3c9ce6122 files/usbutils-0.71-new-video-format.patch 2391
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 126fca63244365009de4c30b6b0c41d2 usbutils-0.11-r5.ebuild 1440
+MD5 b71d482eb7915edd69fe53b2b92e4959 usbutils-0.11-r5.ebuild 1444
 MD5 3bf5ce706718e4c6b91aa5399624c849 usbutils-0.11-r6.ebuild 1486
-MD5 6ec07a2b5eee7d9f54357fe11a7b2707 usbutils-0.71-r1.ebuild 1277
+MD5 ac5b312fb5c1cef65484127e32c30af4 usbutils-0.71-r1.ebuild 1281
 MD5 2f96f4804743b4736dc41cd054df0d12 usbutils-0.71.ebuild 1215
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjUndgIKl8Uu19MoRAuSDAJ4r/6jvyCV6wOKBEtyrgfFYZTS4sACfX4PJ
-famsFpO36v1l/CZ/WheJp4k=
-=0RZ2
+iD8DBQFDs6yI2+ySkm8kpY0RAt8uAKC+SdxFpQiXAoA6izhbGtAgS4pXJwCgoQOn
+vqj9YQIkGXMkh5h0v4Kj6T0=
+=15HW
 -----END PGP SIGNATURE-----
