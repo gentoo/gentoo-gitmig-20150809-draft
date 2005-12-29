@@ -1,0 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 570a4376bc00d48198525e7881c459ba ChangeLog 2398
+MD5 b03be877bbc09e95d56a5aa4d93a38d8 Filter-1.28-r1.ebuild 494
+MD5 5952f5e1f3aaaec69020d7b67fa6593e Filter-1.28.ebuild 491
+MD5 0a5303bd7484d4472735bf1003400531 Filter-1.29.ebuild 521
+MD5 90c3d4637245f427c3eadd0fdebc7a78 Filter-1.30.ebuild 532
+MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28 62
+MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28-r1 62
+MD5 0f3a524cdacf7133a3761870aeeb4de7 files/digest-Filter-1.29 62
+MD5 1d022314ef84dc63d05be090f7309520 files/digest-Filter-1.30 62
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtCeJtG5z4I8BtQoRAjvGAJ9kgaO4l3AGAUh+oaXpIlBKJrn2pgCfVlyt
+d6c/R+rTPL7ngvg6mEwFWXk=
+=X35q
+-----END PGP SIGNATURE-----
