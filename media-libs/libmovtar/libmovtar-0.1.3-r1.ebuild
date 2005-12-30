@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.16 2005/12/18 01:51:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.17 2005/12/30 01:16:18 flameeyes Exp $
 
 IUSE="mmx"
 
@@ -16,6 +16,7 @@ KEYWORDS="x86 sparc amd64"
 
 DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/libsdl-1.2.2
+	=dev-libs/glib-1.2*
 	x86? ( mmx? ( media-libs/jpeg-mmx ) )"
 
 src_unpack() {
