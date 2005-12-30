@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.25 2005/12/17 16:31:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.26 2005/12/30 20:12:48 flameeyes Exp $
 
 inherit libtool toolchain-funcs eutils wxwidgets
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ppc sparc x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick stream mad xv bidi gtk2 sdl ssl"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick stream mad xv bidi gtk2 sdl ssl"
 
 DEPEND="cdio? ( >=dev-libs/libcdio-0.70 )
 		cddb? ( >=media-libs/libcddb-0.9.4 )
@@ -35,7 +35,7 @@ DEPEND="cdio? ( >=dev-libs/libcdio-0.70 )
 		theora? ( media-libs/libtheora )
 		X? ( virtual/x11 )
 		xv? ( virtual/x11 )
-		freetype? ( media-libs/freetype
+		truetype? ( media-libs/freetype
 			media-fonts/ttf-bitstream-vera )
 		svga? ( media-libs/svgalib )
 		ggi? ( media-libs/libggi )
@@ -131,7 +131,7 @@ src_compile () {
 		$(use_enable X x11) \
 		$(use_enable xv xvideo) \
 		$(use_enable opengl glx) $(use_enable opengl) \
-		$(use_enable freetype) \
+		$(use_enable truetype freetype) \
 		$(use_enable bidi fribidi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdplay) $(use_enable dvd dvdnav) \
 		$(use_enable fbcon fb) \

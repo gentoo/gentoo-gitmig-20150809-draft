@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.130 2005/12/27 06:25:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.131 2005/12/30 20:12:48 flameeyes Exp $
+
+  30 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild:
+  Fix the last version still using freetype useflag instead of truetype.
 
   27 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.2-r1.ebuild,
   vlc-0.8.2-r2.ebuild, vlc-0.8.4.ebuild, vlc-0.8.4-r1.ebuild,
