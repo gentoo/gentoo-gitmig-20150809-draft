@@ -1,7 +1,9 @@
-MD5 ca3d280097a5bb5118e39e15a0f14601 ChangeLog 10720
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 08421fd03e5252e4bf581e0a6c4f3382 ChangeLog 10907
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
 MD5 875fc457ed53bbfb5dd49110d43ed6f3 dbus-0.23.4-r1.ebuild 3448
-MD5 f127ffa8cdc75cbd0befadcb16d08401 dbus-0.36.2.ebuild 3620
 MD5 eaaed2cd9d845468bff2f444d0a4f4c7 dbus-0.50-r1.ebuild 3900
 MD5 7fd4127291f0f0e5365d66e5a9a10122 dbus-0.50-r2.ebuild 4335
 MD5 952c30c976278088e842f0986027b1b8 dbus-0.60-r1.ebuild 4222
@@ -11,15 +13,20 @@ MD5 768e500cfda89809161576ea2080a7aa files/dbus-0.23-dbus_session_connect.patch 
 MD5 f3ab25d85c77b7f859d4d2cefc787aef files/dbus-0.23-fd_set.patch 293
 MD5 403b7724a698be1509916991e87224a4 files/dbus-0.23-pyexecdir.patch 1131
 MD5 db2189cd44431086b05de29565090861 files/dbus-0.23-qt.patch 816
-MD5 9308d3d8014ebf53a946c6219675ffc3 files/dbus-0.23.2-abi_api.patch 1893
 MD5 c66dfd4b07508de75f541b24035b74af files/dbus-0.23.2-python_api.patch 571
 MD5 038de28fe446b2303c072e96df531500 files/dbus-0.23.2-version_fix.patch 496
 MD5 4fd89997ba6101161202f761bb666167 files/dbus-dnotify_configure-01.diff 2197
 MD5 6f02f0df54613a9e34a452b1c8d92ecb files/dbus-dnotify_watchdirs-01.diff 1252
 MD5 b683f990bc7207366b4dac487a8d1416 files/digest-dbus-0.23-r3 62
-MD5 8b5d4ba2c8d4c1dd11c0ad0c85a39a08 files/digest-dbus-0.23.4-r1 63
-MD5 19d40bbc05e7cf89bf6d023540874468 files/digest-dbus-0.36.2 64
+MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
 MD5 ac15aecd52ac9b55048015edba699800 files/digest-dbus-0.50-r1 62
 MD5 ac15aecd52ac9b55048015edba699800 files/digest-dbus-0.50-r2 62
 MD5 d1d5323f6bb155eef5cf44b19078aa07 files/digest-dbus-0.60-r1 62
 MD5 41b60b877b1e6ea53476ff69c5ed77d3 metadata.xml 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtQhkBtvusYtCZMsRAlnbAKCHNQDRSQb+UKqsJqsaZVO5trTADACfaHkQ
+e2ZO2LeQG6jB/K6h75LEZz0=
+=om9+
+-----END PGP SIGNATURE-----

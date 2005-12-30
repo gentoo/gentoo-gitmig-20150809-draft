@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.73 2005/12/30 08:30:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.74 2005/12/30 10:12:47 cardoe Exp $
+
+  30 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
+  -files/dbus-0.23.2-abi_api.patch, -dbus-0.36.2.ebuild:
+  compnerd got nutsy and messed up the digest. Also deleted 1 unnecessary patch.
 
   30 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   dbus-0.23.4-r1.ebuild:
