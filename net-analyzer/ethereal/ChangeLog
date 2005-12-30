@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.164 2005/12/29 20:23:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.165 2005/12/30 04:59:08 dragonheart Exp $
+
+  30 Dec 2005; Daniel Black <dragonheart@gentoo.org> Manifest:
+  digest fix - bug #117123 - thanks je_fro
 
   29 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   ethereal-0.10.14.ebuild:
