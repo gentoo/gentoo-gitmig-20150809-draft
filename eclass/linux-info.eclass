@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.32 2005/09/25 12:30:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.33 2005/12/30 18:22:44 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -291,7 +291,7 @@ get_version() {
 	# and if we STILL haven't got it, then we better just set it to KV_DIR
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
 
-	KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_OUT_DIR})"
+	KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
 	KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)"
 	KV_LOCAL="${KV_LOCAL//\"/}"
 
