@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 96e95ba61cbbe2caaa6d16bbd13e03ac ChangeLog 902
 MD5 7919bd9302c09fbbf16e339138cacbf8 Net-SNPP-1.17.ebuild 491
 MD5 0f22d6a6cd8a9f0d3cb6ae57cf852567 files/digest-Net-SNPP-1.17 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtSAztG5z4I8BtQoRAqA1AJ4lOPmeUxNsGY6hdPI/kAGAinlGZACeMSZy
+3VLiKYTzClRB2tpYGn8DUp4=
+=9ieO
+-----END PGP SIGNATURE-----

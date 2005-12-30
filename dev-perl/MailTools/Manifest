@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a582da7ccbf55014fb22836f3727ca33 ChangeLog 3861
 MD5 e38cfacd78303b3ec8153be3ed05be41 MailTools-1.60.ebuild 569
 MD5 c8a9e86b4c17a917cc1759bbf480507e MailTools-1.65.ebuild 562
@@ -6,3 +9,10 @@ MD5 87e8b254040a98bed546cbbfeb5d8461 files/digest-MailTools-1.60 65
 MD5 3dbc7baf7b1624a73a0462ffc6ceadfd files/digest-MailTools-1.65 65
 MD5 c0efbd285f925ca0a4352562fcc10739 files/digest-MailTools-1.67 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtR+2tG5z4I8BtQoRAlnfAJ9bHWYinrDIpzSAO2Vw60I4/PsVkwCeKhVL
+FBfBvO13TQXxRDAPjHWjyZw=
+=0xj1
+-----END PGP SIGNATURE-----
