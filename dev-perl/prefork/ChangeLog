@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.4 2005/12/02 22:13:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.5 2005/12/30 11:15:40 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> prefork-1.00.ebuild:
+  Scalar-List-Utils migrated to perl-core.
 
   02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> prefork-1.00.ebuild:
   marked alpha wrt bug #113365
