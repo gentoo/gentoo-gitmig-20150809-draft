@@ -1,8 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1cf1d64708cb2bef6b7dcc1d6e69b9e8 ChangeLog 19772
+MD5 6d29cde0242a440e514218fa141f0844 ChangeLog 19908
 MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
+MD5 496749b5ce596b963241bf5195599719 files/digest-gimp-2.2.10 135
 MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6-r1 134
 MD5 aebd823dc72aefe0a0e4596da64c7277 files/digest-gimp-2.2.8-r1 134
 MD5 1fec061bf029a6b9159111d1b54df32c files/digest-gimp-2.2.9 134
@@ -11,14 +9,8 @@ MD5 9d903731e90f07c2492aab4bd55f0e62 files/gimp-2.2.8-restart-marker.patch 611
 MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
 MD5 70dcc2da6614b660f8c3149361b17c1a gimp-1.2.5.ebuild 3253
+MD5 60d59720b012fcb89e1a8225026b95e5 gimp-2.2.10.ebuild 4382
 MD5 39d4983eff8a926fd6bc0b8bc122ee3f gimp-2.2.6-r1.ebuild 4307
 MD5 326e632efd23ae195f7be64beaaa659d gimp-2.2.8-r1.ebuild 4424
 MD5 a82b22bf8a4f50398c8b50163045ff85 gimp-2.2.9.ebuild 4381
 MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpkz52+ySkm8kpY0RAvMSAJ40WzjKqJai5jcl+kZKxoMsUGbWGQCfYQky
-hEuum+T9rpUtSYsYI0W4VeM=
-=WxaC
------END PGP SIGNATURE-----
