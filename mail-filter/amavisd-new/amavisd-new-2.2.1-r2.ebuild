@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.10 2005/08/23 13:12:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.11 2005/12/30 11:59:37 mcummings Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}
 	>=dev-perl/MIME-tools-5.415
 	>=dev-perl/MailTools-1.58
 	dev-perl/net-server
-	>=dev-perl/libnet-1.16
+	>=perl-core/libnet-1.16
 	perl-core/Digest-MD5
 	dev-perl/IO-stringy
 	>=perl-core/Time-HiRes-1.49
