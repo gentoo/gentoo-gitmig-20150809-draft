@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d9d4dcfc6a33db48221c56bd1ff80af2 ChangeLog 1686
 MD5 f157020157e81dfe6208b0708ed9fdc2 files/digest-libXxf86dga-1.0.0 70
 MD5 a5b2d23b2de911d9cf5305ad8769dbb2 libXxf86dga-1.0.0.ebuild 643
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtJm72+ySkm8kpY0RAj2rAKCGa26AnGLS/hrQlm9n70/6DKDWJACfX8l3
+xMla4zxbuTdT+YxXssI7yLM=
+=faEn
+-----END PGP SIGNATURE-----
