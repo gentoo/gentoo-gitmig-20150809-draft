@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.286 2005/12/30 19:52:40 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.287 2005/12/30 19:59:42 vivo Exp $
+
+  30 Dec 2005; Francesco Riosa <vivo@gentoo.org> -mysql-4.1.15.ebuild,
+  -mysql-4.1.15-r2.ebuild:
+  Cleanup of 4.1.15*
 
 *mysql-5.0.18-r30 (30 Dec 2005)
 *mysql-5.0.18 (30 Dec 2005)
