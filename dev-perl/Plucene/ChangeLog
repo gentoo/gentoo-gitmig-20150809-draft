@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Plucene
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.9 2005/08/05 16:29:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.10 2005/12/30 11:11:15 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Plucene-1.19.ebuild, Plucene-1.24.ebuild:
+  Scalar-List-Utils migrated to perl-core. Marking 1.24 stable x86 and sparc.
 
   05 Aug 2005; David Holm <dholm@gentoo.org> Plucene-1.24.ebuild:
   Added to ~ppc.
