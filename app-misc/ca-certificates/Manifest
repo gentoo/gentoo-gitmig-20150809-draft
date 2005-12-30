@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 1739686a93854089f2ae53d63eac3e33 ChangeLog 519
 MD5 98f533708f605d83e0f1975193f97d04 ca-certificates-20050518.ebuild 950
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3f3dc7f85ff11270813689401a43686d ca-certificates-20050804.ebuild 968
+MD5 9a79f07579a8e04cf6a20a51866bf698 ca-certificates-20050804.ebuild 950
 MD5 5ab224de35ee8b2ca0944f8e23bcb229 files/digest-ca-certificates-20050518 76
 MD5 dfc8a161d725eb5f6af0c43e8e5e7df0 files/digest-ca-certificates-20050804 76
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGkXwmdTrptrqvGERAt8bAKCEOwOuI9aQK3YuCYWxF3A2+XjqvgCfajln
-oEZ9CkhBGlb8lnsGKGBHxUQ=
-=1ANk
+iD8DBQFDtQSK2+ySkm8kpY0RAgd4AKCycMT7Ai1DaoEdvNG5zaEWTMQEAgCgpGwl
+kMrqJ3A16vltPVgxt4WzSXc=
+=Thej
 -----END PGP SIGNATURE-----
