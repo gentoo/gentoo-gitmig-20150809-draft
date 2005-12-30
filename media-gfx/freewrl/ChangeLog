@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.8 2005/12/20 04:04:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.9 2005/12/30 12:01:54 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> freewrl-1.06.ebuild:
+  Migrating libnet to perl-core
 
   20 Dec 2005; Hanno Boeck <hanno@gentoo.org> freewrl-1.06.ebuild:
   Remove dep on saxon-bin (bug #109622).
