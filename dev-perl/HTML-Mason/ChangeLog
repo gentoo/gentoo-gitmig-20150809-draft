@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.43 2005/11/09 22:35:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.44 2005/12/30 11:09:02 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> HTML-Mason-1.26.ebuild,
+  HTML-Mason-1.3101.ebuild:
+  Scalar-List-Utils migrated to perl-core.
 
   09 Nov 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
   But then it gets better.. now I forgot to set the default GPG key.. one more
