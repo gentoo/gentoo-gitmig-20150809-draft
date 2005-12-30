@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40afd9d9a098b22b66c661ac6586c728 ChangeLog 7194
+MD5 796c42f4c03069813628ca48b6ca3068 ChangeLog 7288
 MD5 299cd79eb3cbc2a3caeac1c3a0309556 files/csh.cshrc_new 2810
 MD5 4869b9da87c79854e2cc97241f125853 files/csh.login_new 1482
 MD5 968abc8b96dbc3821d09bc3ee58c41a7 files/digest-tcsh-6.12-r3 121
@@ -9,7 +6,7 @@ MD5 36f0897401e2ff873f97e8eac302169d files/digest-tcsh-6.13 121
 MD5 36f0897401e2ff873f97e8eac302169d files/digest-tcsh-6.13-r1 121
 MD5 8adf2e3c68136062a1023af2832b3c7a files/digest-tcsh-6.14 121
 MD5 64585b7284837bece8d5ba281d3bda0c files/digest-tcsh-6.14-r1 135
-MD5 64585b7284837bece8d5ba281d3bda0c files/digest-tcsh-6.14-r2 135
+MD5 1bfdccdc07585790a1a9b1ac52fd71ef files/digest-tcsh-6.14-r2 135
 MD5 18a0fc2cb5f14ddf82a1947cdd43ca43 files/tcsh-6.11.00-termcap.patch 406
 MD5 0c7590ddc33afe8fa448f51871ad677c files/tcsh-6.12-tc.os.h-gentoo.diff 363
 MD5 c6384002cda1bc11c1e31ca9513b9ad6 files/tcsh-6.12.00-setpgrp.patch 545
@@ -35,12 +32,5 @@ MD5 89674d2fb5c06a3b4b5310a3212c81a2 tcsh-6.12-r3.ebuild 1382
 MD5 1b865e9c0349146f352678370c667127 tcsh-6.13-r1.ebuild 1889
 MD5 40885229543eeb01a6a91b426c29e29d tcsh-6.13.ebuild 1249
 MD5 2076c4be609061fe61b9e961b3abc6f1 tcsh-6.14-r1.ebuild 2542
-MD5 13f5c841e6adb7a547d276423ae4c1bf tcsh-6.14-r2.ebuild 2320
+MD5 26dd5409674e6f4c1f212263684c2f59 tcsh-6.14-r2.ebuild 2318
 MD5 c250d0af9e636acf93f75180f66ed639 tcsh-6.14.ebuild 1234
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDtKSc60LfUIagIAkRAgtBAJwLiOtVGbGsyMhQJMTaL9NNo0D8IACdH0A9
-WFOOwjamvOyXHaVS1JlJQtg=
-=gQ4R
------END PGP SIGNATURE-----

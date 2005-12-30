@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.48 2005/12/30 03:07:52 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.49 2005/12/30 19:16:45 kumba Exp $
+
+  30 Dec 2005; Joshua Kinard <kumba@gentoo.org> tcsh-6.14-r2.ebuild:
+  Marked stable on mips.
 
   30 Dec 2005; Yuta SATOH <nigoro@gentoo.org> tcsh-6.14-r2.ebuild:
   Stable on ppc64, bug #117118
