@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.62 2005/12/29 22:06:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.63 2005/12/30 01:29:24 gustavoz Exp $
+
+  30 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> files/0.5-hald.rc:
+  Fix hal initscript so it can really start
 
 *hal-0.5.5.1-r3 (29 Dec 2005)
 
