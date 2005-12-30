@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.34 2005/12/30 18:36:39 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.35 2005/12/30 18:47:14 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -425,8 +425,15 @@ check_extra_config() {
 			eend ${error}
 		else
 			if [[ ${error} > 0 ]]; then
-				local_error="${config}_ERROR"
+				local_error="ERROR_${config}"
 				local_error="${!local_error}"
+				
+				if [[ -z "${local_error}" ]]; then
+					# using old, deprecated format.
+					local_error="${config}_ERROR"
+					local_error="${!local_error}"
+				fi
+				
 				if [[ -z "${local_error}" ]]; then
 					[[ ${error} == 1 ]] \
 						&& local_error="is not set when it should be." \
