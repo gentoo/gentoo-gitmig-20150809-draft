@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 279eca5a43b6fe659ef5e661a5939c20 ChangeLog 732
+MD5 d95fa4f560c108e4f42a08c5fd8bd63f ChangeLog 821
 MD5 c6c3f43a75962f05aa2139baeb6a1da5 files/digest-mtop-0.6.6 61
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
-MD5 4ef1582cb1ff82fe68aa4e064a4d266c mtop-0.6.6.ebuild 839
+MD5 8fcd1c79b937ae1bd74650bb2a14fd8b mtop-0.6.6.ebuild 840
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDivVutG5z4I8BtQoRAqC6AJsGlvAWlC2I5XTjct60Zie5r0Ml0wCfY36D
-QoqDxWHnrtC3DCCyUzmxNWU=
-=+TC9
+iD8DBQFDtR79tG5z4I8BtQoRAiBKAKCBDYe52BpYnJaAzL4LoF85FezYywCfX+xS
+YfbyrWjNRVsdUf0+XcI+ZWs=
+=zIX4
 -----END PGP SIGNATURE-----
