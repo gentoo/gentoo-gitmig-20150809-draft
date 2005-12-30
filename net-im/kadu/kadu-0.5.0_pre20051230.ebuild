@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20051122.ebuild,v 1.2 2005/12/08 09:46:40 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20051230.ebuild,v 1.1 2005/12/30 15:24:04 mkay Exp $
 
 inherit flag-o-matic eutils
 
 MY_PV=${PV/_*}
 SNAPSHOT=${PV#*_pre}		#http://www.kadu.net/download/snapshots/
 
-TABS="rev45"				#http://gov.one.pl/svnsnap
+TABS="rev46"				#http://gov.one.pl/svnsnap
 AMAROK="1.16"				#http://scripts.one.pl/amarok
 WEATHER="2.07"				#http://www.kadu.net/~blysk/
-EXT_INFO="2.0beta6"			#http://kadu-ext-info.berlios.de
+EXT_INFO="2.0beta8"			#http://kadu-ext-info.berlios.de
 XMMS="1.30"					#http://scripts.one.pl/xmms
 XOSD_NOTIFY="051121"		#http://www.kadu.net/~joi/xosd_notify
 MAIL="0.2.0"				#http://michal.gov.one.pl/mail
