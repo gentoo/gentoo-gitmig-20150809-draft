@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.3 2005/12/14 18:43:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.4 2005/12/30 11:56:19 brix Exp $
+
+  30 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
+  watchdog-5.2.4_p5.ebuild:
+  Stable on x86.
 
   14 Dec 2005; Henrik Brix Andersen <brix@gentoo.org> -watchdog-5.2.ebuild:
   Pruned old ebuilds.
