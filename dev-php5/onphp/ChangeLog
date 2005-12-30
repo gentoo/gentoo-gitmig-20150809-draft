@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/onphp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.5 2005/11/26 20:51:29 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.6 2005/12/30 22:28:27 voxus Exp $
+
+*onphp-0.2.7 (31 Dec 2005)
+
+  31 Dec 2005; Konstantin Arkhipov <voxus@gentoo.org> +onphp-0.2.7.ebuild,
+  -onphp-0.2.6.ebuild:
+  Version bump.
 
   26 Nov 2005; Luca Longinotti <chtekk@gentoo.org> onphp-0.2.6.ebuild:
   Fix var ordering, encase var in "" to prevent breakage, add has_php call.
