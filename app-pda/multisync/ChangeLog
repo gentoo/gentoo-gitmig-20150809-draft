@@ -1,6 +1,15 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.26 2005/08/11 09:37:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.27 2005/12/30 14:27:14 s4t4n Exp $
+
+*multisync-0.83_pre20050414-r3 (30 Dec 2005)
+
+  30 Dec 2005; Michele Noberasco <s4t4n@gentoo.org>
+  multisync-0.83_pre20050414-r3.ebuild:
+  Revision bump, adding optional dependancy on dev-libs/libwbxml, triggered by new local
+  USE flag: nokia6600. This adds support for Nokia 6600 mobile phone. Added as a new revision
+  because libwbxml is still ~arch masked. Dropped non x86 keywords as that is the only one libwbxml
+  right now supports.
 
   11 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
   multisync-0.83_pre20050414-r2.ebuild:
