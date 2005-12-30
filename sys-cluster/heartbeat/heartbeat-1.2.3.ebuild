@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.7 2005/03/11 12:47:56 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.8 2005/12/30 12:05:50 mcummings Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="dev-libs/popt
 	ldirectord? (	sys-cluster/ipvsadm
 			dev-perl/libwww-perl
 			dev-perl/perl-ldap
-			dev-perl/libnet )"
+			perl-core/libnet )"
 
 # need to add dev-perl/Mail-IMAPClient inside ldirectord above
 
