@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 13af68da46024a64d72c16093a0455e1 ChangeLog 370
+MD5 e5a04e8545d735938fefa6e8633d1c88 cdcollect-0.5.1.ebuild 753
+MD5 8f6bfe843c43bdebf4c789d1592a5941 files/digest-cdcollect-0.5.1 67
+MD5 90a05cee8172fe10667114fdf8ddecda metadata.xml 345
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtJ/5wUpWvClEHQoRAqFIAJ4vzsRBTQfyp077o1JSkw3l3u2/PwCfb9Ap
+sS5Y8XizbySPbxK89QJJsqA=
+=Z4BT
+-----END PGP SIGNATURE-----
