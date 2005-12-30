@@ -1,4 +1,4 @@
-MD5 a0feda3a02aebacd943b08f9d462330c ChangeLog 5275
+MD5 aacb40b2ecc02af2d41b77d8ef9e10e9 ChangeLog 5486
 MD5 0d386d3861b6fc42122c42da4bef26f8 files/1.3.27/vdr-1.3.27-SourceCaps-lnb-sharing.diff 7138
 MD5 f45571c5192376c05c3acc204fbdfef8 files/1.3.27/vdr-1.3.27-SourceCaps.diff 7152
 MD5 05d546888439560f03f1857d32af2062 files/1.3.34/SourceCaps-1.3.33-lnb-sharing.patch 7959
@@ -11,12 +11,14 @@ MD5 3d3b8b271925155442f660f5a9da86da files/digest-vdr-1.3.34-r1 366
 MD5 3d3b8b271925155442f660f5a9da86da files/digest-vdr-1.3.34-r2 366
 MD5 1a4dd7d813eaaa0a1b118bc6a9ec806b files/digest-vdr-1.3.36 366
 MD5 1a4dd7d813eaaa0a1b118bc6a9ec806b files/digest-vdr-1.3.36-r1 366
+MD5 1a4dd7d813eaaa0a1b118bc6a9ec806b files/digest-vdr-1.3.36-r2 366
 MD5 aa8d0f66c8831be73c049584d6143c8b files/vdr-1.2.6-gentoo.diff 1995
 MD5 aa18122fb081cdc19d419d53ad1f63de files/vdr-1.2.6_CAN-2005-0071.patch 893
 MD5 472e23b8b78fd88b22e140386af74b3d files/vdr-1.3.32-daemon.patch 794
 MD5 4e70ea0094c7bccffbdd3ac93f3010af files/vdr-1.3.36-SourceCaps-for-lnb-sharing.patch 7957
 MD5 d43cfe3b33e25f0d6b9fe2e7a05ae082 files/vdr-1.3.36-SourceCaps.patch 7729
 MD5 be9e179051be6507f89c4bc37612c0f6 files/vdr-1.3.36-low-space-crash.diff 477
+MD5 3c4137f515ae8b47f18eabbbc2be0529 files/vdr-add-svdrp-down-0.1.diff 2588
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 MD5 454443921854ebacbe677c5c81e31022 vdr-1.2.6-r1.ebuild 1226
 MD5 ea832424e28ea15473a15de4aaf4f7f8 vdr-1.3.27.ebuild 4161
@@ -24,4 +26,5 @@ MD5 16d2aa27664f631787066edf0ed9a276 vdr-1.3.34-r1.ebuild 4415
 MD5 84538ae48b983c06e43d26f19f29b1ca vdr-1.3.34-r2.ebuild 4461
 MD5 c32310e782ca4a6b34f0ff48c3abb6d0 vdr-1.3.34.ebuild 4149
 MD5 514b263098bc3d78d509c7438f9e6c7d vdr-1.3.36-r1.ebuild 4761
+MD5 efe95fa06787c09ef9132a8d44b7a54f vdr-1.3.36-r2.ebuild 4747
 MD5 fc877f5af6daffeec70f1e60a4de19ae vdr-1.3.36.ebuild 4720
