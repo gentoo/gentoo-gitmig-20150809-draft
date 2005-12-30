@@ -1,0 +1,17 @@
+# ChangeLog for dev-perl/Term-Cap
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-Cap/ChangeLog,v 1.1 2005/12/30 11:19:08 mcummings Exp $
+
+*Term-Cap-1.09 (30 Dec 2005)
+
+  30 Dec 2005; <mcumming@gentoo.org> +metadata.xml, +Term-Cap-1.09.ebuild:
+  Migrated to perl-core
+
+  20 Nov 2005; Joseph Jezak <josejx@gentoo.org> Term-Cap-1.09.ebuild:
+  Marked ~ppc for bug #112988.
+
+*Term-Cap-1.09 (19 Nov 2005)
+
+  19 Nov 2005; <mcumming@gentoo.org> +metadata.xml, +Term-Cap-1.09.ebuild:
+  New dep for POE
+
