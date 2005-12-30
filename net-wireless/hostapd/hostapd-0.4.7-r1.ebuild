@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.7-r1.ebuild,v 1.2 2005/12/30 22:33:44 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.7-r1.ebuild,v 1.3 2005/12/30 22:37:18 brix Exp $
 
 inherit toolchain-funcs
 
@@ -101,7 +101,7 @@ pkg_postinst() {
 	einfo "essid_wlan0=\"test\""
 	einfo "mode_wlan0=\"master\""
 	einfo
-	einfo "Please notice that madwifi support was removed version of"
-	einfo "the ebuild. It will return once madwifi is stable again."
+	einfo "Please notice that madwifi support was removed in this version"
+	einfo "of the ebuild. It will return once madwifi is stable again."
 	einfo
 }

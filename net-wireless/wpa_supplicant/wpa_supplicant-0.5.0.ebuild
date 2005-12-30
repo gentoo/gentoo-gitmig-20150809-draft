@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.0.ebuild,v 1.1 2005/12/20 11:11:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.0.ebuild,v 1.2 2005/12/30 22:36:10 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -126,5 +126,8 @@ pkg_postinst() {
 	einfo
 	einfo "An example configuration file has been installed as"
 	einfo "/etc/wpa_supplicant.conf.example"
+	einfo
+	einfo "Please notice that madwifi support was removed in this version"
+	einfo "of the ebuild. It will return once madwifi is stable again."
 	einfo
 }
