@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c1ec8a01e1e4c84ea77cab18202b52b ChangeLog 4356
+MD5 90063f2e72ccc194b3f7ec4d344d004e ChangeLog 4448
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-orbit-0.5.17 66
 MD5 66a18f0f92e9cd0f658690bf1e5c862c files/digest-orbit-2.12.2 66
 MD5 855e570b505cfbb5e8748ba5baf471bc files/digest-orbit-2.12.3 66
@@ -10,12 +7,5 @@ MD5 7105f3bdc076c48f0458e20ea8eaba34 files/orbit-0.5.17-m4.patch 472
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 6f6fa3795d0324df35315d2215d55248 orbit-0.5.17.ebuild 1650
 MD5 e3a8dc018eb029f302884b2fc80adf56 orbit-2.12.2.ebuild 1017
-MD5 f95d93f83bea89e0152f62a2afba0f3d orbit-2.12.3.ebuild 1062
+MD5 de5762757b63214d7f117d5141114acf orbit-2.12.3.ebuild 1064
 MD5 fec6516c19ae8ef845a84da2f323d6d7 orbit-2.12.4.ebuild 1072
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDhKYuomPajV0RnrERAqpsAJ9IXVepdHiJ89kb2F9v0t44P4tlwACfVbYp
-dCz8XGZ6yGBTWORsu9J/UTk=
-=5OQ2
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 317cf6d437bb82e406b3c2de8454a79c ChangeLog 10412
+MD5 1b88a62987598a9f12a5d9322f077cb2 ChangeLog 10504
 MD5 275ee576e1bf6385f018024a23e18b87 files/digest-libbonobo-2.10.0 70
 MD5 3ad462f33613644f13f10e0cfebb321a files/digest-libbonobo-2.10.1 70
 MD5 7a23ad7bd11927f25af8ae42f705e470 files/digest-libbonobo-2.8.1 69
 MD5 4bf5c448708eef15ff6e898ac21d953b libbonobo-2.10.0.ebuild 810
-MD5 b180c9f850dff3c9204cfc24c26a3ff6 libbonobo-2.10.1.ebuild 829
+MD5 ba892edc1e08d828cf979c7c7b19e2a5 libbonobo-2.10.1.ebuild 828
 MD5 e339ed6c826b56d0194203cd6be6dda8 libbonobo-2.8.1.ebuild 727
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDg3E5wUpWvClEHQoRAtdxAJ9EdoCAaxUSQuIC2c1ESOvo61wmPACfd9P6
-R1kwKWYnPqViYG16MPydnPg=
-=tPJZ
------END PGP SIGNATURE-----
