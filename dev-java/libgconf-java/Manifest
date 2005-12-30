@@ -1,4 +1,4 @@
-MD5 4c0c556fbff770f3db26b3690f5c9967 ChangeLog 2203
+MD5 f254a0d9c681b983a83a5e1d72d42162 ChangeLog 2203
 MD5 00133abfc0fddd7799314a248ebeb6c9 files/digest-libgconf-java-2.10.1 73
 MD5 dc8b79819a91317abf572983bfa156d1 files/digest-libgconf-java-2.12.1 72
 MD5 fa4698389381ae96bb70cc672750fe57 files/digest-libgconf-java-2.8.3.1 74
@@ -6,6 +6,6 @@ MD5 4028a5325b5787c89a1eceddb66bc437 files/libgconf-java-2.10.0_fix-install-dir.
 MD5 03c4b5ccb943b51e5259e5046ff30719 files/libgconf-java-2.8.2_gentoo-PN-SLOT.patch 994
 MD5 073d974cdf39c3e94b0da21e0b2e9231 files/libgconf-java-2.8.3.1_gentoo-PN-SLOT.patch 508
 MD5 48b501573839b1a057b784392842ecc8 libgconf-java-2.10.1.ebuild 2277
-MD5 31dd582c2acfbc8ca4ecd5e22fc9f3bf libgconf-java-2.12.1.ebuild 1823
+MD5 e5afa6fd39aff6f6198875a86392558f libgconf-java-2.12.1.ebuild 1823
 MD5 d172708ae5e53ab4f75b1c3eabc95712 libgconf-java-2.8.3.1.ebuild 2912
 MD5 7fb48767f052a6a6dee17d585c1cbd32 metadata.xml 1142
