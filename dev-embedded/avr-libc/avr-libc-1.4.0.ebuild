@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.0.ebuild,v 1.2 2005/11/20 15:57:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.0.ebuild,v 1.3 2005/12/30 11:52:58 brix Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/avr-libc/${P}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 
 IUSE="doc nls"
 DEPEND=">=sys-devel/crossdev-0.9.1"
