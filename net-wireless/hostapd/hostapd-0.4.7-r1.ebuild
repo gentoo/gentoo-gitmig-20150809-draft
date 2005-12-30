@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.7-r1.ebuild,v 1.1 2005/12/30 11:47:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.7-r1.ebuild,v 1.2 2005/12/30 22:33:44 brix Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="ipv6 logwatch ssl"
 
@@ -100,5 +100,8 @@ pkg_postinst() {
 	einfo "channel_wlan0=\"6\""
 	einfo "essid_wlan0=\"test\""
 	einfo "mode_wlan0=\"master\""
+	einfo
+	einfo "Please notice that madwifi support was removed version of"
+	einfo "the ebuild. It will return once madwifi is stable again."
 	einfo
 }
