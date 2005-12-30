@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21e0c3781c36765c187c77019131e8d9 ChangeLog 2262
+MD5 8b884f2a129f420aed7553d866093463 ChangeLog 2363
 MD5 c21103a12b8a4ee45f6c82baff7cf431 devil-1.6.6-r2.ebuild 1259
-MD5 88074e836a1f0d209a333fab21221769 devil-1.6.7-r1.ebuild 1398
+MD5 22af8d5c8de5cafd8a5eca29d7670d53 devil-1.6.7-r1.ebuild 1400
 MD5 f1e0634fbbea8fa05f0fe8741f1b8a66 devil-1.6.7.ebuild 1171
 MD5 23e87e84b73b2c7994b446040df2738e files/1.6.6-configure.in.patch 8140
 MD5 00ece5df43475a333ec6812e0ba74af4 files/devil-1.6.7-png-types.patch 348
@@ -12,10 +9,3 @@ MD5 6d366044841f5d55e08b7791864b0d59 files/digest-devil-1.6.6-r2 63
 MD5 28d09fde772494441e9f5a30e2b20097 files/digest-devil-1.6.7 64
 MD5 28d09fde772494441e9f5a30e2b20097 files/digest-devil-1.6.7-r1 64
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDh2JegIKl8Uu19MoRAo9zAJ9HYxvMATqLWJPYxIttDQ7H7P7R+wCcDN+T
-r8TW2EmYF1nD2DzpqoeZDzQ=
-=NBH9
------END PGP SIGNATURE-----

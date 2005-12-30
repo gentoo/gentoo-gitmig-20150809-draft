@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.17 2005/11/25 19:11:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.18 2005/12/30 22:12:52 mr_bones_ Exp $
+
+  30 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  devil-1.6.7-r1.ebuild:
+  stable for x86
 
   25 Nov 2005; Mike Frysinger <vapier@gentoo.org>
   +files/devil-1.6.7-sdl-checks.patch, devil-1.6.7-r1.ebuild:
