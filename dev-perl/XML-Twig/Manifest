@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6220c4f5552fb36e08b6fcdabcaebb80 ChangeLog 3204
-MD5 54a6fc15bfd672f9f57c54a0fa81e54c XML-Twig-3.15-r1.ebuild 893
-MD5 75a22459f33f98b443a2bdffebc24d65 XML-Twig-3.17.ebuild 895
-MD5 a51fecc3440c8733c788ad04b1f32e62 XML-Twig-3.22.ebuild 911
+MD5 1cdc7005046affdc1d26ae4eab25cfaa ChangeLog 3355
+MD5 31b7f2b76ad7e9a08cc667b9a9bc3d03 XML-Twig-3.15-r1.ebuild 895
+MD5 31154d87762ebbe1bc42224f45e7e1aa XML-Twig-3.17.ebuild 897
+MD5 d2de9e4232a0687bb1b4bcfbfa2502bc XML-Twig-3.22.ebuild 911
 MD5 1fb0a4337cd1790f985254554e63c386 files/digest-XML-Twig-3.15-r1 65
 MD5 fb18504ea1cc505df6fe7238af257354 files/digest-XML-Twig-3.17 65
 MD5 dba3902bce11678531c89e591a368bb9 files/digest-XML-Twig-3.22 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeubWFdQwWVoAgN4RAqbLAKDG6WPDhahLEnT4eu700sDmXMT+nACePulZ
-X/ac9xlX6uWDBuM1D95Ro9g=
-=vl7i
------END PGP SIGNATURE-----
