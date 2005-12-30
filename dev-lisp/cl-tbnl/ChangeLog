@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-tbnl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.23 2005/12/17 05:52:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.24 2005/12/30 21:36:00 mkennedy Exp $
+
+*cl-tbnl-0.9.1 (30 Dec 2005)
+
+  30 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-tbnl-0.9.1.ebuild:
+  New upstream version; Support for apache2 USE flag and www-apache/mod_lisp2.
 
 *cl-tbnl-0.8.9 (17 Dec 2005)
 
