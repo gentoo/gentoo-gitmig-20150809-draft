@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r1.ebuild,v 1.3 2005/10/26 23:07:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r1.ebuild,v 1.4 2005/12/30 15:55:40 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://3dgamers/${PN}/${PN}-linux-${PV}.x86.run
 
 LICENSE="DOOM3"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="cdinstall alsa opengl dedicated"
 RESTRICT="nostrip"
 
@@ -23,7 +23,9 @@ RDEPEND="sys-libs/glibc
 	opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )
 	alsa? ( >=media-libs/alsa-lib-1.0.6 )
-	cdinstall? ( games-fps/doom3-data )"
+	cdinstall? ( games-fps/doom3-data )
+	amd64? ( app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-soundlibs )"
 
 S=${WORKDIR}
 
