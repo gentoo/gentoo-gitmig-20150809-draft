@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.113 2005/12/29 00:14:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.114 2005/12/30 15:27:59 gustavoz Exp $
+
+  30 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ffmpeg-0.4.9_p20051216.ebuild:
+  Stable on sparc wrt security #116181
 
   28 Dec 2005; Guy Martin <gmsoft@gentoo.org> ffmpeg-0.4.9_p20051216.ebuild:
   Fix compilation of xine-lib on hppa.
