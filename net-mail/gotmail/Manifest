@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37a30c05ca9b5407606befc9d658d7cd ChangeLog 5355
+MD5 3b784b28283161b04a7f0b5b8d889e0a ChangeLog 5477
 MD5 ff4bb8711dc1b675b9de386442c28c07 files/digest-gotmail-0.8.4 64
 MD5 e267860b4afa4c4e4e67e90e6aaf39ac files/digest-gotmail-0.8.7.1 66
-MD5 4099f3e4c9753ebdb4937a73f414cc6b gotmail-0.8.4.ebuild 666
-MD5 5c8a972093c1fe2f63227c1675971fcb gotmail-0.8.7.1.ebuild 695
+MD5 af1ba4719f17ec501bd4de627952fe80 gotmail-0.8.4.ebuild 669
+MD5 db3b573f7610b70c4b35950ec544440a gotmail-0.8.7.1.ebuild 700
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnBpAQlM6RnzZP+IRAmw6AJ9UWHH68vUbGDLCKYrzI/79/7Zj5QCgjpvi
-Chv4jcw2gBv3tFAQt6u3Fgw=
-=Cn+m
------END PGP SIGNATURE-----
