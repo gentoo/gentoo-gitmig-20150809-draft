@@ -1,0 +1,13 @@
+# ChangeLog for www-apache/mod_lisp2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/ChangeLog,v 1.1 2005/12/30 21:04:25 mkennedy Exp $
+
+*mod_lisp2-1.2 (30 Dec 2005)
+
+  30 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.2-content-length.patch, +files/10_mod_lisp2.conf,
+  +files/README.Gentoo, +files/apache.conf, +metadata.xml,
+  +mod_lisp2-1.2.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>;
+  Partially resolves Bug #116672.
+
