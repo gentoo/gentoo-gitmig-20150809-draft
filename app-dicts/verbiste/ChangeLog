@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.13 2005/09/16 21:10:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.14 2005/12/30 22:12:54 tester Exp $
+
+*verbiste-0.1.14 (30 Dec 2005)
+
+  30 Dec 2005; Olivier Crête <tester@gentoo.org>
+  -files/makefileam-libtool-0.1.10.patch, -verbiste-0.1.9.ebuild,
+  -verbiste-0.1.10.ebuild, +verbiste-0.1.14.ebuild:
+  Version bump
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
