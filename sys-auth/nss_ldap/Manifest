@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7f3135a48eb48a78e28b52109bdfa406 ChangeLog 8534
 MD5 a4302c4120b75a23e43cc824423169c8 files/db4_1.85.diff 1569
 MD5 a2d9a9c16028097d3f2ade6550440711 files/digest-nss_ldap-174-r2 64
@@ -38,10 +35,3 @@ MD5 e1bddbfa5c678467d44c7b523b3a04d1 nss_ldap-234.ebuild 1282
 MD5 7682813fbef665128d41d35fdaada068 nss_ldap-238.ebuild 1320
 MD5 681dd60add223bfd315e424fd2f14791 nss_ldap-239-r1.ebuild 1390
 MD5 5c58ca9482b42b82c7bfe7b4e009698b nss_ldap-239.ebuild 1273
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtYmpAiZjviIA2XgRAjxXAJ9yQv7UZGyZ22eYxKCG17bYg5YevQCgyrrV
-YkyZ1WkrQJ8C0j0AsiTQf1s=
-=U881
------END PGP SIGNATURE-----
