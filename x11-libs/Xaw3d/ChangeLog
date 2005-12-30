@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.21 2005/12/18 17:33:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.22 2005/12/30 10:22:02 cardoe Exp $
+
+  30 Dec 2005; Doug Goldstein <cardoe@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  Fixing modular X depends as per requested. Bug #117166
 
   18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; Xaw3d-1.5-r1.ebuild:
   (#115920) Add gccmakedep to DEPEND.

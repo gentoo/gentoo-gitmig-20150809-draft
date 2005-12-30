@@ -1,5 +1,15 @@
-MD5 616dbbb75f68b840cb240a4bbbc38f3e ChangeLog 2322
-MD5 3984be8c92a59d21ccbb9609a256389e Xaw3d-1.5-r1.ebuild 2192
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c74c57199a9b7dfdd09bb7b580beebfe ChangeLog 2448
+MD5 e9287ed3e265c63b28482b966d45418b Xaw3d-1.5-r1.ebuild 2191
 MD5 8103db23293fc4226cadb7df282f952b files/Xaw3d-out-of-tree.diff 232
 MD5 014f228d620c9680e30cdf1c068635c2 files/Xaw3d-xfree86.diff 420
 MD5 12f07352cba3c1cfefa93e5f9d10c4a0 files/digest-Xaw3d-1.5-r1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtQpYBtvusYtCZMsRAuwKAKCOE9BlzpSaTMRLJdZb47GnIC/YfgCfWFmc
+AV5yfPdj0ejayn7pKeOPbNk=
+=veH/
+-----END PGP SIGNATURE-----
