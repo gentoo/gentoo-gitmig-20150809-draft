@@ -1,0 +1,12 @@
+# ChangeLog for net-fs/fusesmb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/ChangeLog,v 1.1 2005/12/30 11:06:26 genstef Exp $
+
+*fusesmb-0.8.3 (30 Dec 2005)
+
+  30 Dec 2005; Stefan Schweizer <genstef@gentoo.org> +fusesmb-0.8.3.ebuild:
+  New ebuild thanks to Daniel Webert <rockoo@gmail.com>, Raul Metsma
+  <zomps@mail.astar.ee>, pille <pille@struction.de>, Ciaran McCreesh
+  <ciaranm@gentoo.org>, Hans Postma <jgmpostma@gmail.com> and Jonathan Huot
+  <doomsday@mailclub.net> in bug 94078
+
