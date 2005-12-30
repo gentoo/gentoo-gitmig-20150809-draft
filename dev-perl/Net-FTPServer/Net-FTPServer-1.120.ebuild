@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.10 2005/06/09 21:58:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.11 2005/12/30 11:54:06 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ DEPEND="dev-perl/Archive-Zip
 		perl-core/Digest-MD5
 		perl-core/File-Temp
 		perl-core/Getopt-Long
-		dev-perl/libnet
+		perl-core/libnet
 		dev-perl/File-Sync
 		dev-perl/IO-stringy
 		postgres? ( dev-perl/DBI )"

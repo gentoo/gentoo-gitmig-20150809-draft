@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.55 2005/06/04 06:22:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.56 2005/12/30 11:58:13 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> libwww-perl-5.69-r2.ebuild,
+  libwww-perl-5.79.ebuild, libwww-perl-5.800.ebuild,
+  libwww-perl-5.803-r1.ebuild, libwww-perl-5.803.ebuild:
+  Migrating libnet to perl-core
 
   04 Jun 2005; Michael Cummings <mcummings@gentoo.org>
   libwww-perl-5.800.ebuild, libwww-perl-5.803-r1.ebuild:

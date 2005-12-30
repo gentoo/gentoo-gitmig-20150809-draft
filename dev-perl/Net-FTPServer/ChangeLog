@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-FTPServer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/ChangeLog,v 1.10 2005/11/19 12:48:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/ChangeLog,v 1.11 2005/12/30 11:54:06 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Net-FTPServer-1.120.ebuild,
+  Net-FTPServer-1.122.ebuild:
+  Migrating libnet to perl-core
 
 *Net-FTPServer-1.122 (19 Nov 2005)
 

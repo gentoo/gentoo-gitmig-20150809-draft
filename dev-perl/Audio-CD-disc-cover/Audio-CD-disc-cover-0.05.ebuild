@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.15 2005/10/02 12:05:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.16 2005/12/30 11:50:50 mcummings Exp $
 
 inherit perl-module
 
@@ -19,6 +19,6 @@ DEPEND="${DEPEND}
 	>=dev-perl/URI-1.10
 	>=dev-perl/HTML-Parser-3.15
 	>=perl-core/Digest-MD5-2.12
-	>=dev-perl/libnet-1.0703-r1
+	>=perl-core/libnet-1.0703-r1
 	>=dev-perl/libwww-perl-5.50
 	>=media-libs/libcdaudio-0.99.6"

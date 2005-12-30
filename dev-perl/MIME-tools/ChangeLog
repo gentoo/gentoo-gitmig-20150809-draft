@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.31 2005/10/19 17:30:59 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.32 2005/12/30 11:51:36 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> MIME-tools-5.415.ebuild,
+  MIME-tools-5.416.ebuild, MIME-tools-5.417.ebuild:
+  Migrating libnet to perl-core
 
   19 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
   MIME-tools-5.417.ebuild:

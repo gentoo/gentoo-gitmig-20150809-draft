@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-CD-disc-cover
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.19 2005/10/02 12:05:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.20 2005/12/30 11:50:50 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Audio-CD-disc-cover-0.05.ebuild:
+  Migrating libnet to perl-core
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   Audio-CD-disc-cover-0.05.ebuild:

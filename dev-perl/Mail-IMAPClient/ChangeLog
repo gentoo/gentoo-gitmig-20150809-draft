@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-IMAPClient
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.5 2005/09/19 12:09:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.6 2005/12/30 11:51:59 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Mail-IMAPClient-2.2.9.ebuild:
+  Migrating libnet to perl-core
 
   19 Sep 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   Mail-IMAPClient-2.2.9.ebuild:
