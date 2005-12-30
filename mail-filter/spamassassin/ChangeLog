@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.80 2005/11/21 17:26:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.81 2005/12/30 10:46:13 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> spamassassin-3.0.4.ebuild,
+  spamassassin-3.1.0-r1.ebuild, spamassassin-3.1.0-r2.ebuild,
+  spamassassin-3.1.0.ebuild:
+  PodParser moved to perl-core
 
 *spamassassin-3.1.0-r2 (21 Nov 2005)
 
