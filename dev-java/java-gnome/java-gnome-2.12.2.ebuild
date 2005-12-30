@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.12.2.ebuild,v 1.1 2005/12/11 04:58:36 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.12.2.ebuild,v 1.2 2005/12/30 02:55:05 compnerd Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="2.12"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="~dev-java/glib-java-0.2.2

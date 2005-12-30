@@ -1,4 +1,4 @@
-MD5 2642fa4ce4553dd60f6e2bde8b2f7888 ChangeLog 3334
+MD5 05477e103c557ea6cdfa786724d24e1e ChangeLog 3451
 MD5 8d9af0864cfab76e448283a6e5782821 files/digest-libglade-java-2.10.1 73
 MD5 0bd010436e9913218d2c611576460c73 files/digest-libglade-java-2.12.1 72
 MD5 76a4839bd8baf7f40b90050f11d17277 files/digest-libglade-java-2.8.3.1 74
@@ -7,6 +7,6 @@ MD5 c068d53842b2d7d7efdca61acf5d72ca files/libglade-java-2.8.2_gentoo-PN-SLOT.pa
 MD5 7ac5fbc0483956edf0634e70b501ce1a files/libglade-java-2.8.2_signal-connection-fix.patch 630
 MD5 7ca0226e8641ea6429ce47f0d1cc1bde files/libglade-java-2.8.3.1_gentoo-PN-SLOT.patch 508
 MD5 30c5218eed8bad631361d05b99348f79 libglade-java-2.10.1.ebuild 2808
-MD5 a6cbc0f803f5841b7564efc1bfbcd437 libglade-java-2.12.1.ebuild 1898
+MD5 85b8d676b0f27909001624e1488f0665 libglade-java-2.12.1.ebuild 1903
 MD5 3d7aa8d97e0886161e0fb14447b73757 libglade-java-2.8.3.1.ebuild 3261
 MD5 84e24b210bedf1c21ac6137a4ed60f84 metadata.xml 1405

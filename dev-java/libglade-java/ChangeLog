@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libglade-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.12 2005/11/19 21:30:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.13 2005/12/30 02:49:51 compnerd Exp $
+
+  30 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  libglade-java-2.12.1.ebuild:
+  ~ppc love thanks to morfic
 
   19 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   libglade-java-2.12.1.ebuild:
