@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b2809bb2b5552f6916013d03089c834a ChangeLog 1488
-MD5 19c221e1cf6263efb4680e9846053d1c daemontools-scripts-1.0.2.ebuild 1858
+MD5 c1273d3368053d6da67951f878736684 ChangeLog 1609
+MD5 a3d478fd7d207573465dadefe9bc8c49 daemontools-scripts-1.0.2.ebuild 1795
 MD5 71c7a292909d199a29725e94e98ff148 files/digest-daemontools-scripts-1.0.2 77
 MD5 7b74ebc39d0a3ddfede1e6b4fe37dacc metadata.xml 358
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFDYYM1gIKl8Uu19MoRAoObAJ4+aoF+MSjwUHL63Ou0dsXQ9RJREgCcC0pV
-ICludxN32knZH/iljba93Dc=
-=vJyU
+iD8DBQFDtOSlGSBEIeh4AEYRAkvCAJ9cGjfvn1Vpt2Dk/hRfuEE1B44frQCfbwt/
+KkquboEovsum7NYxZa+H494=
+=QB/Z
 -----END PGP SIGNATURE-----

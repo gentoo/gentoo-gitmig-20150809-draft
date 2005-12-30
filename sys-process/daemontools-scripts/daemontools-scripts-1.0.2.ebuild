@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.2.ebuild,v 1.3 2005/10/28 01:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.2.ebuild,v 1.4 2005/12/30 07:39:49 kaiowas Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -51,9 +51,6 @@ src_install() {
 	# usage() script
 	exeinto /lib/rcscripts/sh
 	doexe lib/rcscripts/sh/* || die
-
-	# this directory is targeted by daemontools
-	keepdir /service
 
 	if use withsamplescripts ; then
 
