@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.294 2005/12/29 02:00:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.295 2005/12/30 15:30:33 gustavoz Exp $
+
+  30 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  xine-lib-1.1.1-r3.ebuild:
+  Stable on sparc wrt security #116181
 
   28 Dec 2005; Guy Martin <gmsoft@gentoo.org> xine-lib-1.1.1-r3.ebuild:
   That one compiles on hppa.
