@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r10.ebuild,v 1.1 2005/11/14 20:17:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r10.ebuild,v 1.2 2005/12/30 22:03:03 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 
 SLOT="${PV/.*}"
 SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.gz"
-HOMEPAGE="http://jakarta.apache.org/tomcat"
+HOMEPAGE="http://tomcat.apache.org/"
 KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
 LICENSE="Apache-2.0"
 #only one accepted revision of struts to force upgrading because of slot changes
