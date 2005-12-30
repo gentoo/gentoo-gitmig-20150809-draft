@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 73028f26ea8e8ab5c602fd50c3901724 ChangeLog 930
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 24bcff594d71a6963f9724f46649e547 ebayagent-0.9.11-r2.ebuild 1655
-MD5 000972706fe20a16eedd74ec08296c7a files/ebayagent.patch 3838
+MD5 844d26b35a6f094f7caf753c0ceb633e ChangeLog 1028
+MD5 f09c703ba87303df12a948d270bba4af ebayagent-0.9.11-r2.ebuild 1658
 MD5 d91da69fc3c98bcf2692e807f7a3f071 files/digest-ebayagent-0.9.11-r2 68
+MD5 000972706fe20a16eedd74ec08296c7a files/ebayagent.patch 3838
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCrJkMtG5z4I8BtQoRAifeAKCJkC6ciE6Epptqd30PztN3i6vRIgCggoPc
-hUQq2fxs/k0GFVyBqTC1vDY=
-=sD9b
+iD8DBQFDtSJZtG5z4I8BtQoRAhskAJ49mw+15B50lRo+rz4aKIFFMwp43ACcCtnW
+iixOzDuJZAyVBLwSEKNeewc=
+=MRWV
 -----END PGP SIGNATURE-----
