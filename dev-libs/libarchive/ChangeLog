@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.17 2005/11/08 12:59:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.18 2005/12/30 23:37:37 flameeyes Exp $
+
+  30 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libarchive-1.2.37.ebuild:
+  Replace userland_Darwin check with a CHOST check before moving in /lib.
 
   08 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   libarchive-1.2.37.ebuild:

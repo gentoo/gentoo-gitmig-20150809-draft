@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.2.37.ebuild,v 1.4 2005/11/29 03:07:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.2.37.ebuild,v 1.5 2005/12/30 23:37:37 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -28,7 +28,7 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install
 
-	if ! use userland_Darwin; then
+	if [[ ${CHOST} != *-darwin* ]]; then
 		dodir /$(get_libdir)
 		mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
 		gen_usr_ldscript libarchive.so
