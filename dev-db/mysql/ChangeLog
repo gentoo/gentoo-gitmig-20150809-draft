@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.284 2005/12/26 23:10:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.285 2005/12/30 16:54:46 ferdy Exp $
+
+  30 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> mysql-4.1.14.ebuild:
+  Stable on alpha wrt bug #109301. Credit and lots of thanks to Thomas Cort
+  <tcort@cs.ubishops.ca> for testing.
 
   26 Dec 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15-r2.ebuild,
   mysql-4.1.16.ebuild, mysql-4.1.16-r30.ebuild, mysql-5.0.17.ebuild,
