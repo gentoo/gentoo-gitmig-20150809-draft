@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.22 2005/12/07 23:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.23 2005/12/30 23:51:20 vapier Exp $
+
+*gnuconfig-20051223 (30 Dec 2005)
+
+  30 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +gnuconfig-20051223.ebuild:
+  Version bump to include nios2 support.
 
 *gnuconfig-20051113 (07 Dec 2005)
 
