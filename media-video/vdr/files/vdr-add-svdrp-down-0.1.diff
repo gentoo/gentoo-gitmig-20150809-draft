@@ -38,16 +38,15 @@ diff -ru --exclude='*.o' vdr-1.3.36-orig/svdrp.c vdr-1.3.36/svdrp.c
  }
 diff -ru --exclude='*.o' vdr-1.3.36-orig/svdrp.h vdr-1.3.36/svdrp.h
 --- vdr-1.3.36-orig/svdrp.h	2005-12-29 00:02:26.000000000 +0100
-+++ vdr-1.3.36/svdrp.h	2005-12-29 00:20:27.000000000 +0100
-@@ -81,6 +81,7 @@
-   void CmdSCAN(const char *Option);
-   void CmdSTAT(const char *Option);
-   void CmdUPDT(const char *Option);
++++ vdr-1.3.36/svdrp.h	2005-12-30 02:28:08.000000000 +0100
+@@ -59,6 +59,7 @@
+   void CmdDELC(const char *Option);
+   void CmdDELR(const char *Option);
+   void CmdDELT(const char *Option);
 +  void CmdDOWN(const char *Option);
-   void CmdVOLU(const char *Option);
-   void Execute(char *Cmd);
- public:
-Nur in vdr-1.3.36: vdr.
+   void CmdEDIT(const char *Option);
+   void CmdGRAB(const char *Option);
+   void CmdHELP(const char *Option);
 diff -ru --exclude='*.o' vdr-1.3.36-orig/vdr.c vdr-1.3.36/vdr.c
 --- vdr-1.3.36-orig/vdr.c	2005-12-29 00:02:26.000000000 +0100
 +++ vdr-1.3.36/vdr.c	2005-12-29 00:09:49.000000000 +0100
