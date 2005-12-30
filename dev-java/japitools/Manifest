@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6278d0c983436d1f5f7657ae8c7251a6 ChangeLog 378
+MD5 c6076c09425e343f38be8cf780bae644 files/digest-japitools-0.9.5 67
+MD5 a1c897d0b3ca80d4b32b608d8a9d1702 japitools-0.9.5.ebuild 999
+MD5 54e9bfa6ebcdf1413c3915998a7b59a3 metadata.xml 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtYOnQiJ/wx066S4RAgXbAKCc95tKGr8qimuCBH1+2hHKIHF5gACgoozP
+ivC1VopdgHrlB9oqN1Zutbk=
+=zGoO
+-----END PGP SIGNATURE-----

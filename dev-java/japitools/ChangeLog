@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/japitools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.1 2005/12/30 18:59:37 betelgeuse Exp $
+
+*japitools-0.9.5 (13 Oct 2005)
+
+  13 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +japitools-0.9.5.ebuild:
+  Initial import. Ebuild done by me.
+
