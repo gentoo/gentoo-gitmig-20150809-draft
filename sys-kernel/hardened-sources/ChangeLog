@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.71 2005/12/28 13:40:30 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.72 2005/12/30 18:03:36 johnm Exp $
+
+*hardened-sources-2.6.14-r3 (30 Dec 2005)
+
+  30 Dec 2005; John Mylchreest <johnm@gentoo.org>
+  -hardened-sources-2.6.14-r2.ebuild, +hardened-sources-2.6.14-r3.ebuild:
+  Marking stable, and bumping for sec vuln. Fixes bugs #117171, #117040
 
   28 Dec 2005; John Mylchreest <johnm@gentoo.org>
   hardened-sources-2.6.14-r2.ebuild:
