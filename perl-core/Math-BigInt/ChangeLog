@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigInt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.5 2005/11/11 02:13:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.6 2005/12/30 11:16:39 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Math-BigInt-1.73.ebuild,
+  Math-BigInt-1.77.ebuild:
+  Scalar-List-Utils migrated to perl-core
 
 *Math-BigInt-1.77 (11 Nov 2005)
 
