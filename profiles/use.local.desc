@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1638 2005/12/30 14:03:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1639 2005/12/30 14:11:01 s4t4n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -151,6 +151,7 @@ app-office/scribus:cairo - Enable cairo support.
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:kdepim - Adds support for KDEPIM sync.
+app-pda/multisync:nokia6600 - Adds support for Nokia 6600.
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
 app-shells/scsh-install-lib:scsh - Use a non-FHS directory layout.
