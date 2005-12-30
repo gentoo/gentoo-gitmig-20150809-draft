@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.33 2005/12/30 18:22:44 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.34 2005/12/30 18:36:39 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -109,15 +109,15 @@ local	ERROR workingdir basefname basedname myARCH="${ARCH}"
 		eerror "getfilevar requires 2 variables, with the second a valid file."
 		eerror "   getfilevar <VARIABLE> <CONFIGFILE>"
 	else
-		workingdir=${PWD}
-		basefname=$(basename ${2})
-		basedname=$(dirname ${2})
+		workingdir="${PWD}"
+		basefname="$(basename ${2})"
+		basedname="$(dirname ${2})"
 		unset ARCH
 
-		cd ${basedname}
+		cd "${basedname}"
 		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
 			make ${BUILD_FIXES} -s -f - e 2>/dev/null
-		cd ${workingdir}
+		cd "${workingdir}"
 
 		ARCH=${myARCH}
 	fi
