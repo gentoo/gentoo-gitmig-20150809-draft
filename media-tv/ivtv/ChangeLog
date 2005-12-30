@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.38 2005/10/14 18:47:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.39 2005/12/30 05:03:53 cardoe Exp $
+
+*ivtv-0.4.0-r3 (30 Dec 2005)
+
+  30 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
+  +files/ivtv-0.4.0-maxdev.patch, -ivtv-0.2.0_rc3-r5.ebuild,
+  -ivtv-0.4.0-r2.ebuild, +ivtv-0.4.0-r3.ebuild:
+  Add patch to handle possible MAXDEV issue. Mark version stable since 0.2.0
+  sources aren't available and no longer work with current kernels.
 
   14 Oct 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.4.0-r2.ebuild:
   Re-adding ~amd64
