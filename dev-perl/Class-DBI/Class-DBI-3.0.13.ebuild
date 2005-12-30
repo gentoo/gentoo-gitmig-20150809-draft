@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.13.ebuild,v 1.2 2005/12/21 18:33:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.13.ebuild,v 1.3 2005/12/30 11:02:25 mcummings Exp $
 
 inherit perl-module
 
@@ -28,6 +28,6 @@ DEPEND="dev-perl/Class-Data-Inheritable
 		perl-core/Test-Simple
 		dev-perl/Clone
 		dev-perl/Ima-DBI
-		dev-perl/Scalar-List-Utils
+		perl-core/Scalar-List-Utils
 		dev-perl/version
 		dev-perl/UNIVERSAL-moniker"

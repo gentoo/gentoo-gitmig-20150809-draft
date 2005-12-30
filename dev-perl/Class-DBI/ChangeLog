@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.18 2005/12/21 18:33:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.19 2005/12/30 11:02:25 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Class-DBI-0.96.ebuild,
+  Class-DBI-3.0.1.ebuild, Class-DBI-3.0.13.ebuild:
+  Scalar-List-Utils migrated to perl-core.
 
   21 Dec 2005; Markus Rothe <corsair@gentoo.org> Class-DBI-3.0.13.ebuild:
   Added ~ppc64; bug #116301
