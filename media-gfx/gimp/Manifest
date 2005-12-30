@@ -1,4 +1,4 @@
-MD5 6d29cde0242a440e514218fa141f0844 ChangeLog 19908
+MD5 e8c389a98114a40b83943d27520b8589 ChangeLog 20004
 MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
 MD5 496749b5ce596b963241bf5195599719 files/digest-gimp-2.2.10 135
 MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6-r1 134
@@ -13,4 +13,4 @@ MD5 60d59720b012fcb89e1a8225026b95e5 gimp-2.2.10.ebuild 4382
 MD5 39d4983eff8a926fd6bc0b8bc122ee3f gimp-2.2.6-r1.ebuild 4307
 MD5 326e632efd23ae195f7be64beaaa659d gimp-2.2.8-r1.ebuild 4424
 MD5 a82b22bf8a4f50398c8b50163045ff85 gimp-2.2.9.ebuild 4381
-MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
+MD5 37949a504e6fa9ffcdfc2b5b98f5cde9 metadata.xml 203
