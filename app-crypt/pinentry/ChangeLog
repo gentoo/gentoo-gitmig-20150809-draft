@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.36 2005/12/29 19:56:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.37 2005/12/30 15:42:43 ferdy Exp $
+
+  30 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  pinentry-0.7.2-r2.ebuild:
+  Stable on alpha wrt security bug #116822
 
   29 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   pinentry-0.7.2-r2.ebuild:
