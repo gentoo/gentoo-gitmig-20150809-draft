@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4811 2005/12/30 20:02:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4812 2005/12/30 23:36:21 brix Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Henrik Brix Andersen <brix@gentoo.org> (31 Dec 2005)
+# Compilation broken without CONFIG_X86_MCE
+=sys-kernel/suspend2-sources-2.6.14-r9
 
 # <plasmaroo@gentoo.org> (30 Dec 2005)
 # Lots of outstanding security bugs, no response from maintainer.
