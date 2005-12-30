@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.5 2005/08/24 09:04:30 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.6 2005/12/30 23:48:35 carlo Exp $
 
 inherit flag-o-matic eutils
 
@@ -109,7 +109,7 @@ pkg_postinst() {
 	einfo
 	einfo "1. If haven't done so already, please run:"
 	einfo
-	einfo "   \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "   \"emerge --config =${PV}\""
 	einfo
 	einfo "   to create lockfiles, set permissions and more"
 	einfo
