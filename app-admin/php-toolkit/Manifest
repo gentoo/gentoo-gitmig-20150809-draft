@@ -1,4 +1,7 @@
-MD5 4a7a31eba3f0eb2d92b9df37f6400dca ChangeLog 792
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37522d219506ce0d8753bddc1b999083 ChangeLog 907
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-php-toolkit-1.0 0
 MD5 4a45245e9b5d4fd45b744f093190a08b files/php-select 8283
 MD5 dfd0ee80895ad0838d0d14d7bfb3cd5d files/php-select-modules/apache1.sh 508
@@ -9,4 +12,11 @@ MD5 4ecf2a69badd7ba1b12fc497544726f3 files/php-select-modules/php-cgi.sh 452
 MD5 e4c69f3c38351cce893f12122cf3262c files/php-select-modules/php-devel.sh 532
 MD5 13c38bfdc416d740518637fe1425f467 files/php-select-modules/php.sh 436
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 1fdd3421707ec5d9f4736de560ff461d php-toolkit-1.0.ebuild 975
+MD5 5b0c996661446c9127fd0bb4039ce217 php-toolkit-1.0.ebuild 985
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDtVFkKRy60XGEcJIRAhjeAJ9M9JZiSBEAsHGB3QW4I1PeaogqPwCbBIgW
+5QpeHSc0CHb/W74Gn/FlkHI=
+=zvPM
+-----END PGP SIGNATURE-----

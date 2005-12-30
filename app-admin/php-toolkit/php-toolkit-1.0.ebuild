@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/php-toolkit/php-toolkit-1.0.ebuild,v 1.2 2005/12/29 19:02:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/php-toolkit/php-toolkit-1.0.ebuild,v 1.3 2005/12/30 15:25:08 gustavoz Exp $
 
 inherit eutils
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 DESCRIPTION="Utilities for managing installed copies of PHP ."
 HOMEPAGE="http://svn.gnqs.org/projects/gentoo-php-overlay/wiki/PhpToolkit"
 SRC_URI=""
