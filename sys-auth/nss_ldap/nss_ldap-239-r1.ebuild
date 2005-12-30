@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-239-r1.ebuild,v 1.9 2005/10/03 07:17:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-239-r1.ebuild,v 1.10 2005/12/30 19:25:12 flameeyes Exp $
 
-inherit fixheadtails eutils gnuconfig
+inherit fixheadtails eutils gnuconfig multilib
 
 IUSE="debug"
 
@@ -34,7 +34,7 @@ src_compile() {
 
 	econf \
 		--with-ldap-lib=openldap \
-		--libdir=/lib \
+		--libdir=/$(get_libdir) \
 		--enable-schema-mapping \
 		--enable-paged-results \
 		--enable-rfc2307bis \
@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /lib
+	dodir /$(get_libdir)
 
 	make DESTDIR=${D} install || die "make install failed"
 
