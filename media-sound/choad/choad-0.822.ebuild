@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/choad/choad-0.822.ebuild,v 1.8 2005/09/10 15:52:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/choad/choad-0.822.ebuild,v 1.9 2005/12/30 12:02:07 mcummings Exp $
 
 DESCRIPTION="a command-line, Perl-based CD-ripping-ID3-tagging-and-mp3-encoding utility"
 HOMEPAGE="http://ftso.org/choad/index1.html"
@@ -14,7 +14,7 @@ IUSE="offensive"
 
 DEPEND=">=dev-lang/perl-5
 	dev-perl/CDDB
-	dev-perl/libnet
+	perl-core/libnet
 	dev-perl/MailTools
 	media-sound/cdparanoia
 	media-sound/lame"

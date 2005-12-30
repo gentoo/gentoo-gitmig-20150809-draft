@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/choad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/choad/ChangeLog,v 1.7 2005/09/10 15:52:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/choad/ChangeLog,v 1.8 2005/12/30 12:02:07 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> choad-0.822.ebuild:
+  Migrating libnet to perl-core
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> choad-0.822.ebuild:
   Don't install INSTALL file.
