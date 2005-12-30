@@ -26,3 +26,4 @@ move dev-perl/Filter perl-core/Filter
 move dev-perl/PodParser perl-core/PodParser
 move dev-perl/Scalar-List-Utils perl-core/Scalar-List-Utils
 move dev-perl/libnet perl-core/libnet
+move net-misc/rfb x11-misc/x11vnc
