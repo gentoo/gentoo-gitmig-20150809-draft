@@ -1,6 +1,6 @@
-MD5 f13b03363e860b720c18ec79dc5b9525 ChangeLog 10619
+MD5 ca3d280097a5bb5118e39e15a0f14601 ChangeLog 10720
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
-MD5 2c3294e3f1f5f9a70a9422ce3d61b023 dbus-0.23.4-r1.ebuild 3446
+MD5 875fc457ed53bbfb5dd49110d43ed6f3 dbus-0.23.4-r1.ebuild 3448
 MD5 f127ffa8cdc75cbd0befadcb16d08401 dbus-0.36.2.ebuild 3620
 MD5 eaaed2cd9d845468bff2f444d0a4f4c7 dbus-0.50-r1.ebuild 3900
 MD5 7fd4127291f0f0e5365d66e5a9a10122 dbus-0.50-r2.ebuild 4335
@@ -17,7 +17,7 @@ MD5 038de28fe446b2303c072e96df531500 files/dbus-0.23.2-version_fix.patch 496
 MD5 4fd89997ba6101161202f761bb666167 files/dbus-dnotify_configure-01.diff 2197
 MD5 6f02f0df54613a9e34a452b1c8d92ecb files/dbus-dnotify_watchdirs-01.diff 1252
 MD5 b683f990bc7207366b4dac487a8d1416 files/digest-dbus-0.23-r3 62
-MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
+MD5 8b5d4ba2c8d4c1dd11c0ad0c85a39a08 files/digest-dbus-0.23.4-r1 63
 MD5 19d40bbc05e7cf89bf6d023540874468 files/digest-dbus-0.36.2 64
 MD5 ac15aecd52ac9b55048015edba699800 files/digest-dbus-0.50-r1 62
 MD5 ac15aecd52ac9b55048015edba699800 files/digest-dbus-0.50-r2 62
