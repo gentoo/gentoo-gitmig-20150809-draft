@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c0ef97fa814e9974550945f588a659a3 ChangeLog 2207
 MD5 8de80c07bd865b9001d4d0e0d02a5119 disspam-0.10.ebuild 645
 MD5 fbe4495804c7d923ab094e8edb774722 disspam-0.12-r1.ebuild 1105
@@ -9,3 +12,10 @@ MD5 548d657cf971ba884004c6d2a64380fa files/digest-disspam-0.12 63
 MD5 548d657cf971ba884004c6d2a64380fa files/digest-disspam-0.12-r1 63
 MD5 be17e97b664b6edd999e63392d4341ef files/digest-disspam-0.14 63
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtSF9tG5z4I8BtQoRAiEqAJ0SNCmgbiTWu2A+QSrwC6gA2aig+ACfdM6V
+a2O9C3OmrCfz6dhpRbssHsU=
+=atKW
+-----END PGP SIGNATURE-----
