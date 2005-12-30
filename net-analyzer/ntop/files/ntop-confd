@@ -2,3 +2,4 @@
 
 # Set preferred options here
 #NTOP_OPTS="--http-server 3000 --https-server 0 --interface eth0"
+NTOP_OPTS="-u ntop -P /var/lib/ntop"

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ntop
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.40 2005/09/15 11:47:42 r3pek Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.41 2005/12/30 03:56:48 vapier Exp $
+
+*ntop-3.2 (30 Dec 2005)
+
+  30 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/ntop-3.2-build.patch, files/ntop-confd, +ntop-3.2.ebuild:
+  Version bump #111389 by Eric Brown. Also fix up dependencies #111557 by
+  Carsten Lohrke, broken configure option passing #113819 by Henrik Sankala,
+  and uclibc support #117082 by Natanael Copa.
 
   15 Sep 2005; Carlos Silva <r3pek@gentoo.org> ntop-3.0.ebuild:
   Marking ntop-3.0 ~x86 since it have some memory leak problems
