@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/bff
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bff/ChangeLog,v 1.1 2005/12/30 17:58:56 blubb Exp $
+
+*bff-1.0.3.1 (30 Dec 2005)
+
+  30 Dec 2005; Simon Stelling <blubb@gentoo.org> +metadata.xml,
+  +bff-1.0.3.1.ebuild:
+  Initial import
+
