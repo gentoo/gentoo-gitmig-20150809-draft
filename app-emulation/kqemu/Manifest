@@ -1,4 +1,4 @@
-MD5 39ba63125679bbd2c89f1ffc770788fd ChangeLog 471
-MD5 a72b318ca4e06ddbd90a7d92b1de009f kqemu-0.7.2.ebuild 2566
-MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
+MD5 53f7645b6bb9b1e93a2c600e861cd4af ChangeLog 558
 MD5 22d8bd748c6ab7d096d531da636bf5da files/digest-kqemu-0.7.2 125
+MD5 d0c6e3a842a7d26aefd8c7a62ed668e6 kqemu-0.7.2.ebuild 2552
+MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
