@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.12 2005/12/12 05:33:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.13 2005/12/30 23:56:44 flameeyes Exp $
 
 inherit alternatives eutils flag-o-matic
 
@@ -39,8 +39,12 @@ src_unpack() {
 	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
 	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
 
+	# On FreeBSD systems malloc.h is a false header asking for fixes.
+	# On MacOSX it would require malloc/malloc.h
+	# On other systems it's simply unneeded
+	sed -i -e 's,<malloc.h>,<stdlib.h>,' vicar.c
+
 	if use userland_Darwin ; then
-		sed -i 's,<malloc.h>,<malloc/malloc.h>,' vicar.c
 		for f in $(grep zopen * | cut -d':' -f1 | uniq);do
 			sed -i "s:zopen:zloadimage_zopen:g" $f
 		done

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.32 2005/12/12 05:33:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.33 2005/12/30 23:56:44 flameeyes Exp $
+
+  30 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xloadimage-4.1-r4.ebuild:
+  Move the sedout of malloc.h to general scope.
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xloadimage-4.1-r4.ebuild:
