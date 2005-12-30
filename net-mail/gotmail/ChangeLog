@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.35 2005/12/11 12:22:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.36 2005/12/30 12:04:15 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> gotmail-0.8.4.ebuild,
+  gotmail-0.8.7.1.ebuild:
+  Migrating libnet to perl-core
 
 *gotmail-0.8.7.1 (11 Dec 2005)
 

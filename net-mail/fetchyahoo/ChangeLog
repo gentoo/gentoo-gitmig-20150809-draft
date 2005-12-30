@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.32 2005/12/24 15:35:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.33 2005/12/30 12:03:40 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> fetchyahoo-2.10.0.ebuild,
+  fetchyahoo-2.8.6.ebuild, fetchyahoo-2.8.8.ebuild, fetchyahoo-2.9.0.ebuild:
+  Migrating libnet to perl-core
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   fetchyahoo-2.10.0.ebuild:
