@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.40 2005/12/29 18:19:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.41 2005/12/30 11:32:11 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> POE-0.32.02.ebuild:
+  Updated dep on Term-Cap. Term-Cap appears to only be distributed with perl
+  installs now (not seperately).
 
   29 Dec 2005; <mcumming@gentoo.org> POE-0.23-r1.ebuild, POE-0.23.ebuild,
   POE-0.26.ebuild, POE-0.30.09.ebuild, POE-0.31.01.ebuild, POE-0.32.02.ebuild:
