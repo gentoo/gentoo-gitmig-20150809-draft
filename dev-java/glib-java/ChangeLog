@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glib-java
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.3 2005/12/11 03:44:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.4 2005/12/30 02:40:56 compnerd Exp $
+
+  30 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  glib-java-0.2.2.ebuild:
+  ~ppc thanks to morfic
 
 *glib-java-0.2.2 (11 Dec 2005)
 
