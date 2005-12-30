@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r14.ebuild,v 1.1 2005/11/29 04:16:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r14.ebuild,v 1.2 2005/12/30 10:09:53 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -68,7 +68,7 @@ src_unpack() {
 	# Fix parallel builds #87247
 	epatch "${FILESDIR}"/${P}-parallel.patch
 	# Fix generation of signals list when cross-compiling
-	epatch "${FILESDIR}"/${P}-cross-signals.patch
+	#epatch "${FILESDIR}"/${P}-cross-signals.patch
 	# Log bash commands to syslog #91327
 	if use bashlogger ; then
 		echo

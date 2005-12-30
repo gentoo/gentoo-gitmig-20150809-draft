@@ -6,7 +6,7 @@ MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
 MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
 MD5 30fb11f3c3ffeebf09fa3ae90dd0d351 bash-3.0-r12.ebuild 5407
 MD5 f999a51dcdf23cdb6597ea549b58c170 bash-3.0-r13.ebuild 4957
-MD5 c1322827e59e02c14249d76c62ec0177 bash-3.0-r14.ebuild 4837
+MD5 bd1598b6968b46dff8ca11cbc604beb0 bash-3.0-r14.ebuild 4838
 MD5 45c862614baf5f01b9309343f7805a03 bash-3.1-r1.ebuild 4380
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
@@ -65,7 +65,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqfDT2+ySkm8kpY0RAtaMAJ99ZTZ8jDqY0akEhOW2e22ugAMDSQCffp+G
-wUEwTu21WP1IdrPcehAenNM=
-=G0mu
+iD8DBQFDtQea2+ySkm8kpY0RAl2vAJ4h5VPh/gzni/CRhB65sBWL96VSrACdHqYE
+F+8wljL1uthoED3zpVSeCPU=
+=EK4l
 -----END PGP SIGNATURE-----
