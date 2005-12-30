@@ -1,13 +1,23 @@
-MD5 ad93ca28f8d512eb78e4a35d7c97ff99 openvpn-2.0.5.ebuild 3217
-MD5 57db3db67cafcb3a5bb7a07eb4a3b884 openvpn-1.5.0-r1.ebuild 1334
-MD5 79a13b7ae60dfbf2b7527ad98655c599 metadata.xml 543
-MD5 fd9bced7c81febb0e2dcec2ca67a9261 ChangeLog 10333
-MD5 c0bb9d10424cda8d9361368015b324ca openvpn-1.6.0.ebuild 1338
-MD5 37d96647595be6fb0fe996a77d0c5009 openvpn-2.0.5-r2.ebuild 3867
-MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
-MD5 e173c8d27fc623ce79d2c5e83854b28a files/openvpn 1318
-MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5 65
-MD5 e3c739fa378e74cf7a83a17f4a2e30cc files/openvpn.init 1449
-MD5 9f0fcb64287dc55bb770ca86415e5cdd files/openvpn-2.0.4-darwin.patch 717
-MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5-r2 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1f9083d44b1a1e2c0296d5959ce7a5e ChangeLog 10445
 MD5 51eea8a2c9a5189571de49ad32b88ac1 files/digest-openvpn-1.5.0-r1 65
+MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
+MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5 65
+MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5-r2 65
+MD5 e173c8d27fc623ce79d2c5e83854b28a files/openvpn 1318
+MD5 9f0fcb64287dc55bb770ca86415e5cdd files/openvpn-2.0.4-darwin.patch 717
+MD5 e3c739fa378e74cf7a83a17f4a2e30cc files/openvpn.init 1449
+MD5 79a13b7ae60dfbf2b7527ad98655c599 metadata.xml 543
+MD5 57db3db67cafcb3a5bb7a07eb4a3b884 openvpn-1.5.0-r1.ebuild 1334
+MD5 c0bb9d10424cda8d9361368015b324ca openvpn-1.6.0.ebuild 1338
+MD5 5eca13dc64efce5630602a0394100e0b openvpn-2.0.5-r2.ebuild 3866
+MD5 ad93ca28f8d512eb78e4a35d7c97ff99 openvpn-2.0.5.ebuild 3217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDtJHWKRy60XGEcJIRAhugAJ9JQbE4Q8y7PfCl7erf5lZUtRkZYgCfZ9qr
+m9Y/81LXATIbB4jLvRjq6fE=
+=4PA1
+-----END PGP SIGNATURE-----
