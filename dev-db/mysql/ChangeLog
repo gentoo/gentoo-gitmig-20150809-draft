@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.285 2005/12/30 16:54:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.286 2005/12/30 19:52:40 vivo Exp $
+
+*mysql-5.0.18-r30 (30 Dec 2005)
+*mysql-5.0.18 (30 Dec 2005)
+
+  30 Dec 2005; Francesco Riosa <vivo@gentoo.org> -mysql-5.0.15.ebuild,
+  -mysql-5.0.16-r4.ebuild, -mysql-5.0.17-r30.ebuild, +mysql-5.0.18.ebuild,
+  +mysql-5.0.18-r30.ebuild, mysql-5.1.4_alpha-r30.ebuild:
+  - Version bump to 5.0.18
+  - Added a new use flag "max-idx-128" to take advantage of the possibility to
+    use a maximum of 128 indexes per table (default is 64).
+    Valid for both mysql 5.0 and 5.1, but still minimally tested
+  - cleanup of older 5.0 version
 
   30 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> mysql-4.1.14.ebuild:
   Stable on alpha wrt bug #109301. Credit and lots of thanks to Thomas Cort

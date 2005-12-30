@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f8da40c42cd59d262c71389d6333141 ChangeLog 56222
+MD5 0883339a1b9f553aa4cf8b8160af8957 ChangeLog 56751
 MD5 c6fcd70c34bed04e59808ec71c5bedfb files/digest-mysql-3.23.58-r1 140
 MD5 0feb3b501c47708ea13707c8e4cdde9c files/digest-mysql-4.0.25-r2 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26 139
@@ -10,11 +7,10 @@ MD5 b8eda6b8ec67faff78e5d01023e6eefb files/digest-mysql-4.1.15 139
 MD5 081bfa8975526ff1098cc4e067cf7545 files/digest-mysql-4.1.15-r2 139
 MD5 4fbd3dfaf869bcd40254f8c83993248f files/digest-mysql-4.1.16 139
 MD5 de7e2ca6c5cededa81194f4d0d440cd5 files/digest-mysql-4.1.16-r30 139
-MD5 b9b44f65c775f650064022427ae52425 files/digest-mysql-5.0.15 139
-MD5 aa38cbef56ecdf34fd61c71bac1120e2 files/digest-mysql-5.0.16-r4 139
 MD5 bbb9e8ef722b301fe22323fbf373c3d1 files/digest-mysql-5.0.17 139
-MD5 a398083d322b82276624a46e789d2c4d files/digest-mysql-5.0.17-r30 139
-MD5 e8271698490d95ccd3a978cfd1a24504 files/digest-mysql-5.1.4_alpha-r30 144
+MD5 2217697573a3f8e3c8ad3f9c7a80ff70 files/digest-mysql-5.0.18 139
+MD5 2217697573a3f8e3c8ad3f9c7a80ff70 files/digest-mysql-5.0.18-r30 139
+MD5 792baa541cee19491f50cddc03954f55 files/digest-mysql-5.1.4_alpha-r30 144
 MD5 d200345efa421d012cf858134d2c8884 files/logrotate.mysql 440
 MD5 f1fc8bfe540d6f1268b53b7cad275080 files/my.cnf 1231
 MD5 a8f89d11a0913332c5f8c1da5a21cc3f files/my.cnf-4.0.14-r1 2816
@@ -39,15 +35,7 @@ MD5 27b3fc63dd690a3085b5fbc033da586a mysql-4.1.15-r2.ebuild 24649
 MD5 1fb8b45228615d6b72c489af30aaf05f mysql-4.1.15.ebuild 18886
 MD5 12f8d071d3dcb3b15ed4331908d152c6 mysql-4.1.16-r30.ebuild 24446
 MD5 671cbb1729fda6ef67eb7c8b81e0df69 mysql-4.1.16.ebuild 24643
-MD5 38667d0ef4311ebb4e9ef25473b4d6af mysql-5.0.15.ebuild 19010
-MD5 f644768048eb13e9cef742a2f8525e57 mysql-5.0.16-r4.ebuild 24641
-MD5 be4d753e626b560a4946c3d6e967e21a mysql-5.0.17-r30.ebuild 24449
 MD5 37d087a2a318ccf1e8bcad15498fbe52 mysql-5.0.17.ebuild 24626
-MD5 4eda8ef4092f4d4d7253b377b5abb27e mysql-5.1.4_alpha-r30.ebuild 24454
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtWZzViELBEf1JB0RAiHIAJsEYOcaKxAakIV0Ibs7b6RMbFg9KQCeLUXF
-P/Nw2JxFjxTOuD8e/XVYl24=
-=zlmO
------END PGP SIGNATURE-----
+MD5 0aaa2e69c220875370428d1c26c6fc90 mysql-5.0.18-r30.ebuild 24638
+MD5 6ef016a82a855de740f37cf53acb1fa0 mysql-5.0.18.ebuild 24809
+MD5 67c6b5ad0d447e65f145c7f675c25913 mysql-5.1.4_alpha-r30.ebuild 24643

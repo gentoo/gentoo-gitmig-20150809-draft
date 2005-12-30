@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.4_alpha-r30.ebuild,v 1.2 2005/12/26 23:10:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.4_alpha-r30.ebuild,v 1.3 2005/12/30 19:52:40 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -26,7 +26,7 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 NEWP="${PN}-${PV/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20051205.tar.bz2"
+	mirror://gentoo/mysql-extras-20051220.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="-*"
@@ -54,6 +54,9 @@ mysql_version_is_at_least() {
 
 mysql_version_is_at_least "4.01.03.00" \
 && IUSE="${IUSE} cluster utf8 extraengine"
+
+mysql_version_is_at_least "5.00.18.00" \
+&& IUSE="${IUSE} max-idx-128"
 
 mysql_version_is_at_least "5.01.00.00" \
 && IUSE="${IUSE} innodb"
@@ -438,6 +441,10 @@ src_compile() {
 				myconf="${myconf} --with-partition"
 			fi
 		fi
+
+		mysql_version_is_at_least "5.00.18.00" \
+		&& useq "max-idx-128" \
+		&& myconf="${myconf} --with-max-indexes=128"
 	fi
 
 	#Bug #114895,Bug #110149
@@ -546,7 +553,7 @@ src_install() {
 	done
 
 	# oops
-	mysql_check_version_range "5.00.16.00 to 5.00.17.99" \
+	mysql_check_version_range "5.00.16.00 to 5.00.18.99" \
 	&& cp "${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" "${D}/usr/share/mysql/"
 
 	# TODO change at Makefile-am level
