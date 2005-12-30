@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4d83d5a27bb4e7be84468395c45ccf6 sendpage-0.9.14.ebuild 783
-MD5 a65eb08d36ee18a3d841dc0ab73fbc0f ChangeLog 744
-MD5 b5e5bd080e7466a1a6172920bc97be53 metadata.xml 659
+MD5 fc8884bc989ed3f58334c195af51079a ChangeLog 841
 MD5 87bba6f0e4549dfb3582a33300e6ebe6 files/digest-sendpage-0.9.14 67
+MD5 b5e5bd080e7466a1a6172920bc97be53 metadata.xml 659
+MD5 c1a46b6d8540cdeaf4570b9e2718bcbf sendpage-0.9.14.ebuild 787
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCgZG0jiC39V7gKu0RAkhLAJ46X1LwixEqJwcS4TfuDFmZAva8BACgsPfJ
-R0RG2SX6kEZ1pMlnXP5gJeQ=
-=sWUM
+iD8DBQFDtSIBtG5z4I8BtQoRAm1HAJ0fUclSGmuLJCUmahKfg66tE97RsQCfV7rL
+VG1aY01SMNjDRpHD1D4hnZs=
+=71tU
 -----END PGP SIGNATURE-----
