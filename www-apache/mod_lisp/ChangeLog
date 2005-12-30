@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_lisp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/ChangeLog,v 1.12 2005/12/10 13:05:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/ChangeLog,v 1.13 2005/12/30 17:37:03 mkennedy Exp $
+
+*mod_lisp-2.43 (30 Dec 2005)
+
+  30 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> files/README.Gentoo,
+  -mod_lisp-1.1.ebuild, -mod_lisp-2.32.ebuild, -mod_lisp-2.33.ebuild,
+  -mod_lisp-2.33-r1.ebuild, +mod_lisp-2.43.ebuild:
+  Remove mod_lisp2 mod_lisp-1* ebuilds; Partially resolves Bug #116672; New
+  upstream version; Remove suggested tutorial URL from README.Gentoo -- it no
+  longer appears accessible.
 
   10 Dec 2005; Simon Stelling <blubb@gentoo.org> mod_lisp-2.42.ebuild:
   stable on amd64
