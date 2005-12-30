@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.105 2005/10/10 06:36:19 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.106 2005/12/30 16:42:55 corsair Exp $
+
+  30 Dec 2005; Markus Rothe <corsair@gentoo.org> libbonoboui-2.10.1.ebuild:
+  Stable on ppc64
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org> libbonoboui-2.10.1.ebuild:
   Stable on mips.
