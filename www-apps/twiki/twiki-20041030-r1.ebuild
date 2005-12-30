@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030-r1.ebuild,v 1.2 2005/11/10 14:05:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030-r1.ebuild,v 1.3 2005/12/30 12:06:50 mcummings Exp $
 
 inherit webapp eutils depend.apache
 
@@ -18,7 +18,7 @@ S=${WORKDIR}
 DEPEND="app-arch/unzip"
 RDEPEND=">=dev-lang/perl-5.8
 		perl-core/CGI
-		dev-perl/libnet
+		perl-core/libnet
 		>=app-text/rcs-5.7
 		sys-apps/diffutils
 		virtual/cron

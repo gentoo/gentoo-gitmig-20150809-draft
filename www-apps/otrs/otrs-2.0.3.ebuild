@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.0.3.ebuild,v 1.2 2005/11/20 16:48:45 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.0.3.ebuild,v 1.3 2005/12/30 12:06:35 mcummings Exp $
 
 inherit webapp eutils
 
@@ -26,7 +26,7 @@ DEPEND="
 	dev-perl/MIME-tools
 	dev-perl/MailTools
 	dev-perl/Net-DNS
-	dev-perl/libnet
+	perl-core/libnet
 	dev-perl/Authen-SASL
 	dev-perl/XML-Parser
 "

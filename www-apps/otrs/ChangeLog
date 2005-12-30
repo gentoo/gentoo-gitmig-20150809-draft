@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.17 2005/12/04 22:19:21 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.18 2005/12/30 12:06:35 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> otrs-1.3.2.ebuild, otrs-2.0.3.ebuild,
+  otrs-2.0.4.ebuild:
+  Migrating libnet to perl-core
 
   04 Dec 2005; Renat Lumpau <rl03@gentoo.org> files/reconfig:
   Housekeeping

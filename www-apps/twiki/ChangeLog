@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.19 2005/12/04 22:40:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.20 2005/12/30 12:06:50 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> twiki-20041030-r1.ebuild:
+  Migrating libnet to perl-core
 
   04 Dec 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
   files/reconfig:
