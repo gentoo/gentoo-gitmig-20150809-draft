@@ -1,0 +1,46 @@
+diff -u wbxml2-0.9.0/src/wbxml_encoder.c ../wbxml2-0.9.0/src/wbxml_encoder.c
+--- wbxml2-0.9.0/src/wbxml_encoder.c	2004-02-26 20:04:58.000000000 +0100
++++ ../wbxml2-0.9.0/src/wbxml_encoder.c	2004-09-09 17:04:24.000000000 +0200
+@@ -855,7 +855,20 @@
+                 /* Must never happen */
+                 return WBXML_ERROR_INTERNAL;
+             }
+-            
++
++#if defined( WBXML_SUPPORT_SYNCML )            
++            /* If this is a SyncML document ? */
++            if ((encoder->tree->lang->langID == WBXML_LANG_SYNCML_SYNCML10) ||
++                (encoder->tree->lang->langID == WBXML_LANG_SYNCML_SYNCML11))
++            {
++                if (node->content) {
++                    if (wbxml_buffer_get_cstr(node->content)[0] == 0x0a && wbxml_buffer_len(node->content) == 1) {
++                        wbxml_buffer_insert_cstr(node->content, "\r", 0);
++                    }            
++                }
++            }
++#endif /* WBXML_SUPPORT_SYNCML */
++
+             /* Add text into CDATA Buffer */
+             if (!wbxml_buffer_append(encoder->cdata, node->content))
+                 return WBXML_ERROR_ENCODER_APPEND_DATA;
+diff -u wbxml2-0.9.0/src/wbxml_parser.c ../wbxml2-0.9.0/src/wbxml_parser.c
+--- wbxml2-0.9.0/src/wbxml_parser.c	2004-02-26 19:58:54.000000000 +0100
++++ ../wbxml2-0.9.0/src/wbxml_parser.c	2004-09-09 17:31:19.000000000 +0200
+@@ -1251,6 +1251,17 @@
+     if (is_token(parser, WBXML_PI))
+         return parse_pi(parser);
+ 
++    /**
++     * @note Non standard behaviour because of a Nokia 6600 bug
++     *       that generate switch pages in wrong places.
++     *
++     * Thanks to Balaji Alasyam for finding this bug.
++     */
++
++    /* switchPage */
++    if ( is_token(parser, WBXML_SWITCH_PAGE) )
++        return parse_switch_page(parser, WBXML_TAG_TOKEN); 
++
+     /** @note We have recurrency here ! */
+     return parse_element(parser);
+ }

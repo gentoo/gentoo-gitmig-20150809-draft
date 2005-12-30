@@ -1,0 +1,5 @@
+MD5 88dd6dcd97173572eaa775a552429a81 ChangeLog 331
+MD5 c1d0ca9ee0021341515bfabae1bf6e0d files/digest-libwbxml-0.9.0 68
+MD5 11cfc652ee5ed35f75b0fbd6e3e8332f files/wbxml2-0.9.0.nokia-6600.patch 1884
+MD5 c0b4766394a5b3c05ac08784ebf9a9e8 libwbxml-0.9.0.ebuild 1261
+MD5 4d01239e46295f54006f3d3afd40ac08 metadata.xml 254
