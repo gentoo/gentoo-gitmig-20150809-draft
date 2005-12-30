@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-WikiFormat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.4 2005/08/31 17:53:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.5 2005/12/30 11:12:45 mcummings Exp $
+
+  30 Dec 2005; <mcumming@gentoo.org> Text-WikiFormat-0.76.ebuild:
+  Scalar-List-Utils migrated to perl-core. Marking stable x86. Marking ~sparc.
 
   31 Aug 2005; <dang@gentoo.org> Text-WikiFormat-0.76.ebuild:
   Marked ~amd64
