@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.4 2005/12/13 23:26:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.5 2005/12/30 18:43:55 plasmaroo Exp $
 
 ECVS_SERVER="cvs.savannah.nongnu.org:/sources/axiom"
 ECVS_MODULE="axiom"
@@ -10,7 +10,7 @@ ECVS_USER="anonymous"
 inherit cvs eutils
 
 DESCRIPTION="Axiom is a general purpose Computer Algebra system"
-HOMEPAGE="http://axiom.axiom-developer.org/index.html"
+HOMEPAGE="http://axiom.axiom-developer.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
