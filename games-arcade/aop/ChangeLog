@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/aop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/ChangeLog,v 1.5 2005/06/02 13:24:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/ChangeLog,v 1.6 2005/12/30 18:31:46 nigoro Exp $
+
+  30 Dec 2005; Yuta SATOH <nigoro@gentoo.org> aop-0.6.ebuild:
+  added ~ppc64
 
   02 Jun 2005; Joseph Jezak <josejx@gentoo.org> aop-0.6.ebuild:
   Marked ppc stable.
