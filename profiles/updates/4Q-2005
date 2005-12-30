@@ -24,3 +24,4 @@ move x11-misc/ttmkfdir x11-apps/ttmkfdir
 move app-misc/plextor-tool app-cdr/plextor-tool
 move dev-perl/Filter perl-core/Filter
 move dev-perl/PodParser perl-core/PodParser
+move dev-perl/Scalar-List-Utils perl-core/Scalar-List-Utils
