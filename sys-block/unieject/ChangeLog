@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.15 2005/12/10 13:48:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.16 2005/12/30 20:03:17 flameeyes Exp $
+
+*unieject-5.1 (30 Dec 2005)
+
+  30 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> +unieject-5.1.ebuild:
+  Update to latest release.
 
   10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> unieject-5.ebuild:
   Update $HOMEPAGE value, as the .xhtml version does not exists anymore.
