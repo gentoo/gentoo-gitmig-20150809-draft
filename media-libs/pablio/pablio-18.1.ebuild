@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/pablio-18.1.ebuild,v 1.3 2005/07/24 17:30:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/pablio-18.1.ebuild,v 1.4 2005/12/31 00:15:58 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -23,11 +23,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 
-	if use userland_Darwin ; then
-		 cp ${FILESDIR}/${P}-Makefile.macos ${S}/Makefile
-	else
-		 cp ${FILESDIR}/${P}-Makefile.linux ${S}/Makefile
-	fi
+	cp ${FILESDIR}/${P}-Makefile.linux ${S}/Makefile
 }
 
 src_compile() {
