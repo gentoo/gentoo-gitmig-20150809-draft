@@ -1,16 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
-MD5 47c7909cf9d623eaa77933d997bdb7c1 proftpd-1.2.10-r1.ebuild 4422
-MD5 49ff4274614a4ecc736e8674b47b9d2b proftpd-1.2.10-r2.ebuild 4505
-MD5 ccd3b0639bb673d4f542f42b1a9824b2 proftpd-1.2.10-r3.ebuild 4356
-MD5 9cd5b3f274033c4ed06ac8c36b143353 proftpd-1.2.10-r5.ebuild 4393
-MD5 a8c4e478e33928ef12d4786d72dbe3d0 proftpd-1.2.10-r6.ebuild 4444
-MD5 bba4a57fb848beed9e0bf5101efbbcce proftpd-1.2.10-r7.ebuild 4574
-MD5 0215c43fd279ba334fe05f9761ec8293 proftpd-1.2.10.ebuild 4166
-MD5 032f9750ce490f668ca047a660bd099b proftpd-1.2.9-r2.ebuild 3466
-MD5 34d075d4c65945b68ebf4fbde28690f7 ChangeLog 16420
+MD5 188bb31f357211dfbaf88869d378c836 ChangeLog 16549
 MD5 e558f099037d359da5f855285542246e files/1.2.9_rc3-reversedns.diff 1974
 MD5 fa041c7b343099eef454338152a04ea7 files/digest-proftpd-1.2.10 67
 MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r1 213
@@ -30,10 +21,19 @@ MD5 098337e85fc8b71a16e91114ff54ece1 files/proftpd-sqlshowinfo.patch 1191
 MD5 b338504ed873219e368abab7df6c276d files/proftpd.conf 1704
 MD5 55ca24c9ee61b9ed94968c664baaeace files/proftpd.rc6 731
 MD5 4d676b70c97bc6daabd8c2ba8d52d27a files/proftpd.xinetd 295
+MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
+MD5 47c7909cf9d623eaa77933d997bdb7c1 proftpd-1.2.10-r1.ebuild 4422
+MD5 49ff4274614a4ecc736e8674b47b9d2b proftpd-1.2.10-r2.ebuild 4505
+MD5 ccd3b0639bb673d4f542f42b1a9824b2 proftpd-1.2.10-r3.ebuild 4356
+MD5 f1a422c4567701c8af164a31a042a378 proftpd-1.2.10-r5.ebuild 4386
+MD5 a8c4e478e33928ef12d4786d72dbe3d0 proftpd-1.2.10-r6.ebuild 4444
+MD5 bba4a57fb848beed9e0bf5101efbbcce proftpd-1.2.10-r7.ebuild 4574
+MD5 0215c43fd279ba334fe05f9761ec8293 proftpd-1.2.10.ebuild 4166
+MD5 032f9750ce490f668ca047a660bd099b proftpd-1.2.9-r2.ebuild 3466
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLAdPKf2g/qXtneoRAv/lAKCLBjNUpxcIMfroi2RsJqSZs+muKQCfX0s1
-BvSXwaBRt4x4qAuctFkVD4c=
-=Wi6k
+iD8DBQFDto/DAiZjviIA2XgRAssxAJ484pHYzX+VbDlaqn/2lPpVHXDlEQCg0xtj
+UDbYp4DMiNrbaa4dGFJg1M8=
+=DSte
 -----END PGP SIGNATURE-----

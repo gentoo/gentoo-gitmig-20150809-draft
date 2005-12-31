@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r5.ebuild,v 1.2 2005/07/07 23:58:53 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r5.ebuild,v 1.3 2005/12/31 14:03:34 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -159,7 +159,7 @@ src_install() {
 
 pkg_postinst() {
 	enewgroup proftpd
-	enewuser proftpd -1 /bin/false /home/ftp proftpd
+	enewuser proftpd -1 -1 /home/ftp proftpd
 	einfo
 	einfo 'You can find the config files in /etc/proftpd'
 	einfo

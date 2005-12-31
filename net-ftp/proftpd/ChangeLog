@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.104 2005/09/17 12:08:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.105 2005/12/31 14:03:34 flameeyes Exp $
+
+  31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  proftpd-1.2.10-r5.ebuild:
+  Change /bin/false to -1 in enewuser call.
 
   31 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   proftpd-1.2.10-r7.ebuild:
