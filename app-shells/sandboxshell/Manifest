@@ -7,11 +7,11 @@ MD5 0267cb95e99d6f7e5e9287e25c87fa16 files/sandboxshell 1331
 MD5 89728cab133398dad145e13d92fff6b2 files/sandboxshell.1 3117
 MD5 2507315f5bac2f69f7da8ccb5378ef8c files/sandboxshell.conf 2147
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 491f447c5f9b6f79e34fabfd58688c19 sandboxshell-0.3.ebuild 663
+MD5 a51805b5e0a5129faa3a3a9ce948254a sandboxshell-0.3.ebuild 672
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmzqUgIKl8Uu19MoRAhD+AJ9DSNnMwY4XKIz7PlsxRThwvAy7jQCeJsaC
-fzIfOrxSU+h8ZSDSFrzd+44=
-=uhzs
+iD8DBQFDtnKr2+ySkm8kpY0RAjnRAJ9DfnrHg8rH89AbtU8zPooZlwkHxACfWJsY
+75h903+rMNptNrXuXeYIyvM=
+=lew5
 -----END PGP SIGNATURE-----
