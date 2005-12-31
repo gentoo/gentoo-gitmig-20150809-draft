@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78c1d64ac33633827f8198e4ce04bfd2 ChangeLog 7397
+MD5 15a85d0dd8bffb529bb7679c82ac85ed ChangeLog 7486
 MD5 299cd79eb3cbc2a3caeac1c3a0309556 files/csh.cshrc_new 2810
 MD5 4869b9da87c79854e2cc97241f125853 files/csh.login_new 1482
 MD5 968abc8b96dbc3821d09bc3ee58c41a7 files/digest-tcsh-6.12-r3 121
@@ -35,12 +32,5 @@ MD5 89674d2fb5c06a3b4b5310a3212c81a2 tcsh-6.12-r3.ebuild 1382
 MD5 1b865e9c0349146f352678370c667127 tcsh-6.13-r1.ebuild 1889
 MD5 40885229543eeb01a6a91b426c29e29d tcsh-6.13.ebuild 1249
 MD5 2076c4be609061fe61b9e961b3abc6f1 tcsh-6.14-r1.ebuild 2542
-MD5 1d2abf52a6160e211c0e1bf12cca6ae6 tcsh-6.14-r2.ebuild 2312
+MD5 97056ed1e43e82a3b0f7085dfc1a4f35 tcsh-6.14-r2.ebuild 2312
 MD5 c250d0af9e636acf93f75180f66ed639 tcsh-6.14.ebuild 1234
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtmycViELBEf1JB0RArN0AKCG0D05ZkGhsunLNg+MgIcT2lafPgCeM7VR
-JOpaZSvsU8K/jD5VGjoNFn4=
-=Hbtl
------END PGP SIGNATURE-----
