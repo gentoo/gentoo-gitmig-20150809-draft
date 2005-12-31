@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07a49c1791364804eb3a133c7bb47a96 ChangeLog 2890
 MD5 25424634bd29d9751d39cd4028e739fa aalib-1.4_rc4-r2.ebuild 1305
 MD5 2b1888dc37c8a373ec42ad39d3fd1a29 aalib-1.4_rc5.ebuild 1437
@@ -8,3 +11,10 @@ MD5 b59998ef8f5e2f1740b1e6ed0b22bb4b files/aalib-osx.patch 3399
 MD5 ffa1e1a7420535a1fe146ae5145ddbd6 files/digest-aalib-1.4_rc4-r2 64
 MD5 da57c040ac70e4ac57714131aaaeb6c6 files/digest-aalib-1.4_rc5 64
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtmxn2+ySkm8kpY0RAg1uAKCoUCWlaNrCWLJMJshm95wwpDbcUgCfXRb3
+xh0ORKCHk1Mu2mDLcTchc8I=
+=ezv4
+-----END PGP SIGNATURE-----
