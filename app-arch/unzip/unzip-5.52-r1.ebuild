@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.1 2005/10/04 23:01:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.2 2005/12/31 12:53:39 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -32,10 +32,13 @@ src_unpack() {
 
 src_compile() {
 	local TARGET
-	use x86 \
-		&& TARGET=linux_asm \
-		|| TARGET=linux_noasm
-	use userland_Darwin && TARGET=macosx
+	case ${CHOST} in
+		i?86*-linux*) TARGET=linux_asm ;;
+		*-linux*)     TARGET=linux_noasm ;;
+		*-freebsd*)   TARGET=freebsd ;;
+		*-darwin*)    TARGET=macosx ;;
+		*)            die "Unknown target, you suck" ;;
+	esac
 	emake -f unix/Makefile ${TARGET} || die "emake failed"
 }
 
