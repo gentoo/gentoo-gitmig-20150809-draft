@@ -1,6 +1,6 @@
 diff -ur clsql-3.5.2.orig/db-mysql/mysql-loader.lisp clsql-3.5.2/db-mysql/mysql-loader.lisp
 --- clsql-3.5.2.orig/db-mysql/mysql-loader.lisp	2005-07-05 19:51:52.000000000 -0500
-+++ clsql-3.5.2/db-mysql/mysql-loader.lisp	2005-12-29 16:34:32.000000000 -0600
++++ clsql-3.5.2/db-mysql/mysql-loader.lisp	2005-12-31 13:29:19.000000000 -0600
 @@ -18,17 +18,6 @@
  
  (in-package #:mysql)
@@ -19,7 +19,7 @@ diff -ur clsql-3.5.2.orig/db-mysql/mysql-loader.lisp clsql-3.5.2/db-mysql/mysql-
  (defvar *mysql-supporting-libraries* '("c")
    "Used only by CMU. List of library flags needed to be passed to ld to
  load the MySQL client library succesfully.  If this differs at your site,
-@@ -41,12 +30,16 @@
+@@ -41,14 +30,17 @@
    *mysql-library-loaded*)
  				      
  (defmethod clsql-sys:database-type-load-foreign ((database-type (eql :mysql)))
@@ -35,16 +35,18 @@ diff -ur clsql-3.5.2.orig/db-mysql/mysql-loader.lisp clsql-3.5.2/db-mysql/mysql-
 +			     :module "mysql"
 +			     :supporting-libraries *mysql-supporting-libraries*)
 +  (uffi:load-foreign-library (make-pathname :directory '(:absolute "usr" "@LIBDIR@" "clsql")
-+					    :name "clsql_mysql.so"
++					    :name "clsql_mysql"
 +					    :type "so")
 +			     :module "clsql-mysql"
 +			     :supporting-libraries *mysql-supporting-libraries*)
    (setq *mysql-library-loaded* t))
  
  
+ (clsql-sys:database-type-load-foreign :mysql)
+-
 diff -ur clsql-3.5.2.orig/uffi/clsql-uffi-loader.lisp clsql-3.5.2/uffi/clsql-uffi-loader.lisp
 --- clsql-3.5.2.orig/uffi/clsql-uffi-loader.lisp	2005-08-22 15:24:22.000000000 -0500
-+++ clsql-3.5.2/uffi/clsql-uffi-loader.lisp	2005-12-29 16:22:44.000000000 -0600
++++ clsql-3.5.2/uffi/clsql-uffi-loader.lisp	2005-12-31 13:28:56.000000000 -0600
 @@ -18,37 +18,6 @@
  
  (in-package #:clsql-uffi)
