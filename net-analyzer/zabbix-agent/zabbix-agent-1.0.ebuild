@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/zabbix-agent-1.0.ebuild,v 1.1 2005/04/26 21:46:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/zabbix-agent-1.0.ebuild,v 1.2 2005/12/31 13:43:32 flameeyes Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/${MY_P}-${PV}
 
 pkg_setup() {
 	enewgroup zabbix
-	enewuser zabbix -1 /bin/false /dev/null zabbix
+	enewuser zabbix -1 -1 /dev/null zabbix
 }
 
 

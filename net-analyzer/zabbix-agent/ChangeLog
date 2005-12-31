@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.4 2005/08/23 17:23:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.5 2005/12/31 13:43:32 flameeyes Exp $
+
+  31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  zabbix-agent-1.0.ebuild:
+  Change /bin/false to -1 in enewuser call.
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   zabbix-agent-1.1_alpha7.ebuild:
