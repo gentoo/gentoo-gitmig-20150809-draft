@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e84f2bdebd9c37d5bdb48c1d5156ca32 ChangeLog 1633
 MD5 ad0798e5fb5a4508fa9c22e17faf4ac3 files/digest-libXv-1.0.1 64
 MD5 236635ef03defc37039dede2b4db4b22 libXv-1.0.1.ebuild 623
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtlQm2+ySkm8kpY0RAgYbAJ9MCM6wPi5BHIwp/kfg3Po6AIe07gCgglGK
+XTNlTeBP4T/sWaVO7TwSJlk=
+=gXhk
+-----END PGP SIGNATURE-----
