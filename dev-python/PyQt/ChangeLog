@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.60 2005/12/09 22:07:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.61 2005/12/31 11:57:43 blubb Exp $
+
+  31 Dec 2005; Simon Stelling <blubb@gentoo.org> PyQt-3.14.1-r1.ebuild:
+  stable on amd64
 
 *PyQt-3.15.1 (09 Dec 2005)
 *PyQt-3.14.1-r1 (09 Dec 2005)
