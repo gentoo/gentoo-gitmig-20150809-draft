@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.40 2005/12/24 15:34:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.41 2005/12/31 19:43:51 blubb Exp $
+
+  31 Dec 2005; Simon Stelling <blubb@gentoo.org> netatalk-2.0.3-r2.ebuild:
+  stable on amd64
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   netatalk-2.0.3-r2.ebuild:
