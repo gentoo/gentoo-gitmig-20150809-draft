@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52.ebuild,v 1.3 2005/07/10 00:57:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52.ebuild,v 1.4 2005/12/31 13:58:54 flameeyes Exp $
 
 inherit eutils
 
@@ -38,8 +38,8 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup nofiles
-	enewuser ftp -1 /bin/false /home/public nofiles
-	enewuser ftplog -1 /bin/false /home/public nofiles
+	enewuser ftp -1 -1 /home/public nofiles
+	enewuser ftplog -1 -1 /home/public nofiles
 }
 
 pkg_postinst() {
