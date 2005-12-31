@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fca07358f7cb60704c8c06ad3ada580 ChangeLog 1247
 MD5 4078a0e3e9757cd821c51b6cf7495cbd files/digest-mesa-progs-6.4.1 135
 MD5 51fcfbbeef9546b7e4dbbffc2225ac68 mesa-progs-6.4.1.ebuild 1611
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtlN32+ySkm8kpY0RAtdkAJ9GD2dXGORNRPxhrDG93a89eDuoUgCeJjOn
+z3U3BG30nwqgmBjBqa6jvjU=
+=U4Qr
+-----END PGP SIGNATURE-----

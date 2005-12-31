@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 106da3c0b59f5e03948dc2c639dbab2e ChangeLog 7416
 MD5 8d09eeb49f560873b6b4b85755ce5502 files/digest-ttmkfdir-3.0.9-r2 66
 MD5 8d09eeb49f560873b6b4b85755ce5502 files/digest-ttmkfdir-3.0.9-r3 66
@@ -13,3 +16,10 @@ MD5 9b84e6d68d388eb67760658ba28d05c8 files/ttmkfdir2-ignore-FIRSTINDEX.patch 440
 MD5 36a69eed0e585f3dcf096cc82ac54575 metadata.xml 230
 MD5 cd3769034b51c921ed1c532a153cbe25 ttmkfdir-3.0.9-r2.ebuild 1273
 MD5 661c56f19544e3ea5bd015ac96f0f30d ttmkfdir-3.0.9-r3.ebuild 1365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtlO12+ySkm8kpY0RAn7MAJ9/swH4n3yJ1h/8Ak73UCVI8kDTPACglG4M
+AIYPxChvXG86nIfKWgRPJn0=
+=w4dd
+-----END PGP SIGNATURE-----

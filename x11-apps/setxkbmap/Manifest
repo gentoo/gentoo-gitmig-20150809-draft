@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c43ee9549078846a1366b86401b4b022 ChangeLog 2040
 MD5 325a23167acf7b8fad37d33b0d71cace files/digest-setxkbmap-1.0.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a54a4c000cec8c9026782548fd3cb715 setxkbmap-1.0.1.ebuild 485
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtlOR2+ySkm8kpY0RAoDgAJ9CIejCRDZRBO2HFz7gTtnbI9Mt1QCbBE+6
+eziX0cT/Rn1fEUgWTEoI8m0=
+=EOel
+-----END PGP SIGNATURE-----
