@@ -2,7 +2,6 @@
 Hash: SHA1
 
 MD5 6a291e141c5d19ba797d82805100fa71 ChangeLog 6771
-MD5 bd4410c61e921e87c00183817b6e29b9 files/atalknew-rc6 1703
 MD5 9ee0857567bda5d9ffabf5d04095e90b files/digest-netatalk-2.0.3-r2 68
 MD5 bb9fcf495bb4dfd88b684b4c0f934beb files/netatalk-2.0.3-setXid.patch 545
 MD5 43c6b606d88eab1f3467634846a77491 metadata.xml 347
@@ -10,7 +9,7 @@ MD5 0855cf34869e3ed2fc864574d91910d1 netatalk-2.0.3-r2.ebuild 2879
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtvzrAiZjviIA2XgRAqlxAKCxmZCvtaEEaxXcocl1vut7sNpUJgCeK1Cf
-0BmQQ/9QVo5xSpBC3j5lfh8=
-=h2dD
+iD8DBQFDtv02AiZjviIA2XgRApuHAKCfGVK8gS2rAyVVd7K0F95Ba6iXuACfU3az
+V/YbdGROjiKWSGf9/tkD+04=
+=jqo2
 -----END PGP SIGNATURE-----
