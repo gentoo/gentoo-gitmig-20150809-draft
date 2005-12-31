@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.2 2005/12/31 12:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.3 2005/12/31 13:11:26 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -36,6 +36,7 @@ src_compile() {
 		i?86*-linux*) TARGET=linux_asm ;;
 		*-linux*)     TARGET=linux_noasm ;;
 		*-freebsd*)   TARGET=freebsd ;;
+		*-openbsd*)   TARGET=openbsd ;;
 		*-darwin*)    TARGET=macosx ;;
 		*)            die "Unknown target, you suck" ;;
 	esac
