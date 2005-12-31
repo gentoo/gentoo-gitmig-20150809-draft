@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc19c6e2f196fe6fc7aa6c54282b30a0 ChangeLog 18173
+MD5 b6ac38733c8d44e7d4121a1ff84da114 ChangeLog 18263
 MD5 b1c7f6fe232921bb9516c1007f34efd4 files/digest-mldonkey-2.5.16-r9 128
 MD5 f145ba120c09f53b0032ea8b3f930128 files/digest-mldonkey-2.5.21-r2 126
 MD5 2db375201ae817eaa7075507d9700eed files/digest-mldonkey-2.6.0 68
@@ -27,15 +24,8 @@ MD5 e4d631474942d4a724d5be73a39df379 mldonkey-2.5.21-r2.ebuild 2692
 MD5 876a19eb631cabc1934807504f2fc435 mldonkey-2.6.0-r1.ebuild 3487
 MD5 9bde9d82355ab91b03131a969de06c2d mldonkey-2.6.0.ebuild 3557
 MD5 9601b13002e283d18f5d4bf1130ff10b mldonkey-2.6.4-r1.ebuild 5111
-MD5 29d81297440c40ae6285c6139469d40d mldonkey-2.6.4-r2.ebuild 4982
+MD5 5b1a581282886f15097bed04c197beb7 mldonkey-2.6.4-r2.ebuild 4980
 MD5 1c9c6bded549ef569052d0f75fafb019 mldonkey-2.6.5.ebuild 4979
 MD5 f42930815313489969c08481c08603f2 mldonkey-2.6.7.ebuild 5029
 MD5 d2169c384589a0ad57cf0c53847c3ef6 mldonkey-2.7.0.ebuild 5070
 MD5 df713d2d96f28dc3a77f8af3d1581704 mldonkey-2.7.1.ebuild 4984
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDqH97Z/iYVBmujdURAoqTAJ0bP7VEHETvUck0XAextn198xq1bgCgvwfo
-VnnxxcER+joPI/iV0F5s4O4=
-=UkMK
------END PGP SIGNATURE-----
