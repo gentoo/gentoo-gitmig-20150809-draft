@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae363483589090d84bf41949efe139b3 ChangeLog 2144
 MD5 c6ce7d541758b912a1c8fe354c3e40be files/digest-ldapdns-2.04 64
 MD5 ec37ba5cecd0875e155be6aaf955726e files/digest-ldapdns-2.05 64
@@ -7,3 +10,10 @@ MD5 80f8122e9b9d4289312277eebf2ef2f7 ldapdns-2.04.ebuild 1108
 MD5 e40640b8bfaaf802b1de3589cfc61689 ldapdns-2.05.ebuild 1029
 MD5 d30139195bb0128fc424e8b738132d41 ldapdns-2.06.ebuild 1081
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtoyrAiZjviIA2XgRAlDbAKCqKOMhq9L0TU/YxeKef1wjNz+NNACg2TFq
+zM2XuFzaQVY//2ML6lJVmIw=
+=XG0O
+-----END PGP SIGNATURE-----
