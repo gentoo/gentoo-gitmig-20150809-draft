@@ -1,4 +1,4 @@
-MD5 50b7a3844d9796e1e925be8b0c30636e ChangeLog 42023
+MD5 5ef16d0d0c4e191f6b9db9a7a7c613ef ChangeLog 42240
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r1/backgroundrc 342
 MD5 928f7208882e2a90d9cb633dcfa9abf9 files/3.3.2-r1/kdmrc 19878
@@ -22,6 +22,7 @@ MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3 145
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3-r1 145
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdebase-3.5.0-r1 68
 MD5 d57023f742587584d5493144970b07c6 files/kcheckpass-3.5.0-bindnow.patch 574
+MD5 8f494976be0b5e5286f26d5ef7ee8d7d files/kcontrol-3.5.0-global-usbids.patch 1790
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
@@ -48,5 +49,5 @@ MD5 bca1b08e31bfa89d6d04e9996a77c0bd kdebase-3.4.2-r2.ebuild 4527
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 f30c2b7e9f582458651ca7d3b2eac796 kdebase-3.4.3-r1.ebuild 4493
 MD5 b028b31c593bcc849bbde152f85b8dac kdebase-3.4.3.ebuild 4263
-MD5 9bc88f95f02c952d2ee03fecb86766fe kdebase-3.5.0-r1.ebuild 4638
+MD5 e27c2c77cbcf2c01fe998145ec1dccd2 kdebase-3.5.0-r1.ebuild 4883
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
