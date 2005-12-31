@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.220 2005/12/13 14:08:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.221 2005/12/31 14:11:39 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -486,9 +486,13 @@ enewuser() {
 	# handle shell
 	local eshell=$1; shift
 	if [[ ! -z ${eshell} ]] && [[ ${eshell} != "-1" ]] ; then
-		if [[ ! -e ${eshell} ]] ; then
+		if [[ ! -e ${ROOT}${eshell} ]] ; then
 			eerror "A shell was specified but it does not exist !"
-			die "${eshell} does not exist"
+			die "${eshell} does not exist in ${ROOT}"
+		fi
+		if [[ ${eshell} == */false || ${eshell} == */nologin ]] ; then
+			eerror "Do not specify ${eshell} yourself, use -1"
+			die "Pass '-1' as the shell parameter"
 		fi
 	else
 		for shell in /sbin/nologin /usr/sbin/nologin /bin/false /usr/bin/false /dev/null ; do
