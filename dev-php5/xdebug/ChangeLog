@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/xdebug
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.1 2005/12/31 11:59:55 sebastian Exp $
+
+*xdebug-2.0.0_beta5 (31 Dec 2005)
+
+  31 Dec 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +xdebug-2.0.0_beta5.ebuild:
+  Initial ebuild.
+
