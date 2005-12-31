@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-1.8.ebuild,v 1.3 2005/08/10 22:17:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-1.8.ebuild,v 1.4 2005/12/31 12:32:27 flameeyes Exp $
 
 DESCRIPTION="Expanded md5sum program that has recursive and comparison options."
 HOMEPAGE="http://md5deep.sourceforge.net"
@@ -13,7 +13,15 @@ DEPEND=""
 
 src_compile() {
 	sed -i -e "s:-Wall -O2:\$(CFLAGS):g" Makefile
-	use userland_Darwin && BUILDTARGET="mac" || BUILDTARGET="linux"
+
+	case ${CHOST} in
+		*-darwin*) BUILDTARGET="mac" ;;
+		*-linux*)  BUILDTARGET="linux" ;;
+
+		# Let it fallback to general "unix" when not using linux exactly
+		*)         BUILDTARGET="unix" ;;
+	esac
+
 	emake CFLAGS="${CFLAGS}" "${BUILDTARGET}" || die "make failed"
 }
 
