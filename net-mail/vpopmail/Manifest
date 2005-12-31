@@ -1,4 +1,4 @@
-MD5 3c6076f7366cd2c9876415ba3b6133ba ChangeLog 10605
+MD5 58d64eedadbf68a64c9d56de5590b42c ChangeLog 10695
 MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
 MD5 175cc82c17dfbb2ab785271ff71e8f5c files/digest-vpopmail-5.4.10 67
 MD5 932b241ee21fdbe7601622592f4ef78e files/digest-vpopmail-5.4.13 67
@@ -15,6 +15,6 @@ MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
 MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 dddfe003571e18a6ec4bf6a066a529a0 vpopmail-5.4.10.ebuild 7821
-MD5 70294085386436f3a6bd879118cbf5b5 vpopmail-5.4.13.ebuild 7703
+MD5 eec6124d8b7664e261eb1cb8d5ba75ec vpopmail-5.4.13.ebuild 7700
 MD5 8908c9b0ecaf8f8f23be07251f981cd0 vpopmail-5.4.6-r1.ebuild 7627
 MD5 2b1d36bf9b4e5b467609704541ee1402 vpopmail-5.4.9-r2.ebuild 7816
