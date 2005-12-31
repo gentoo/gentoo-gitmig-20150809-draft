@@ -5,7 +5,7 @@ MD5 ddb38e3816830fa4bb21336d793d1ec7 ChangeLog 12547
 MD5 4356d56f6576bb9f8ea0cf76ece3544c curl-7.13.1.ebuild 1144
 MD5 b27665f577b5129562e41d3a67287a0c curl-7.13.2.ebuild 2399
 MD5 89d2021f8afb5ff760a8ff36d99a8c39 curl-7.15.0.ebuild 2484
-MD5 5681511f9c71e164151b7a665d6e1725 curl-7.15.1.ebuild 2231
+MD5 4003c520b7b7c2fb0fbcff634b47e97b curl-7.15.1.ebuild 2234
 MD5 3f45a8aa13637f8147adfe79b8cd522b files/curl-7.15.0-versionnumber.patch 550
 MD5 159b437588320b2a3f726d3aa55890e5 files/digest-curl-7.13.1 65
 MD5 71c346cc704727e0bdaef7333521adeb files/digest-curl-7.13.2 130
@@ -15,7 +15,7 @@ MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpEXi2+ySkm8kpY0RAocvAKCRFMf5MyJJC9B7zI3cjs4MhBl3/QCbBb3K
-vR04FAsWg2NmaZcxpegfYJY=
-=WmZ4
+iD8DBQFDtl1n2+ySkm8kpY0RAu1iAJ0e/TLKs83FhB97IhZatNTq0hZoEACfQAH2
++4XArnl7lEWqaVwaaCo384E=
+=fnF8
 -----END PGP SIGNATURE-----
