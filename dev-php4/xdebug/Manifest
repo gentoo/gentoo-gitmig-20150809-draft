@@ -1,6 +1,16 @@
-MD5 ecd3be71dc238f31d4a018e3de2cf5f7 ChangeLog 810
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c52dc66388ec74fdfe2b2d80aa3d981f ChangeLog 980
 MD5 7b6a3080f772857458ef75181c4f3085 files/digest-xdebug-1.3.2 61
-MD5 d4271c5c7f4e62fa80e0e88f0adef1b1 files/digest-xdebug-2.0.0_beta4 66
+MD5 782153078b02d8ee2af4abae1b346eb5 files/digest-xdebug-2.0.0_beta5 66
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 abd79e131103bde892f88fd4ebd000ae xdebug-1.3.2.ebuild 718
-MD5 a4ddc852cac59c95653c67e754caf8b8 xdebug-2.0.0_beta4.ebuild 724
+MD5 f84c40f1f02d4e7faf33ce0b41a7b8d8 xdebug-2.0.0_beta5.ebuild 727
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtnIGaGfFFLhbXWkRArReAKCSXwMJ6sdrZnNr7jGC8chmR5uxOQCgnyqc
+SsyHqWDdmSnjeflFwgV5WBs=
+=AxK7
+-----END PGP SIGNATURE-----
