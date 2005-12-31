@@ -1,4 +1,4 @@
-MD5 ee338c0fa311762ca05a15b5aa3332fe ChangeLog 6555
+MD5 c3edac87dfe9cbd2e383964760482bf0 ChangeLog 6648
 MD5 b3387e20eba70b27a4290523e89753e4 files/digest-qscintilla-1.5.1 77
 MD5 367f1bef2c17aa8fbc890fa134776db0 files/digest-qscintilla-1.54 79
 MD5 4f3a81db5affa3915e5d35de77364e97 files/digest-qscintilla-1.6 75
@@ -12,7 +12,7 @@ MD5 dc22cd37e5a193d127ad169db2cf6753 files/qscintilla-1.60-sandbox.patch 710
 MD5 e2ef183d503f0d553f92c182d655be67 files/qscintilla-1.61-sandbox.patch 710
 MD5 f5f01b5ca1b6758b69a04a4897c0a370 files/qscintilla-1.65-sandbox.patch 710
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-MD5 2dc7e3cb795f08312a08f6275a198085 qscintilla-1.5.1.ebuild 2072
+MD5 97f91ab23cd7d1dd5aac3a662619c8e6 qscintilla-1.5.1.ebuild 2071
 MD5 b31d285bc2996e4f58bf417fb5364aa0 qscintilla-1.54.ebuild 1063
 MD5 ea80d9d7ff265ffd86d01a48a7c64ade qscintilla-1.6.ebuild 2380
 MD5 289dc572dec644ad8feb52b317834f8e qscintilla-1.60.ebuild 1259
