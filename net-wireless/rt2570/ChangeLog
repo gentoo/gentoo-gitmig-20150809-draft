@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2570
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.3 2005/12/27 00:16:49 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.4 2005/12/31 16:45:44 steev Exp $
+
+  31 Dec 2005; Steev Klimaszewski <steev@gentoo.org>
+  -files/verify-write-api-change.patch, rt2570-1.1.0_beta1.ebuild:
+  New patch, based on current cvs. Fixes bug #115176
 
   27 Dec 2005; Steev Klimaszewski <steev@gentoo.org> metadata.xml:
   And take over as maintainer

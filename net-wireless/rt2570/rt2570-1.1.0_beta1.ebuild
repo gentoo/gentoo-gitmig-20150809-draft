@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.2 2005/12/27 00:13:45 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.3 2005/12/31 16:45:44 steev Exp $
 
 inherit eutils linux-mod
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="Driver for the RaLink RT2570 USB wireless chipset"
 HOMEPAGE="http://rt2x00.serialmonkey.com"
-SRC_URI="http://rt2x00.serialmonkey.com/${MY_P}.tar.gz"
+SRC_URI="http://rt2x00.serialmonkey.com/${MY_P}.tar.gz
+	http://dev.gentoo.org/~steev/distfiles/rt2570-cvs-update.patch.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="~x86"
@@ -31,7 +32,7 @@ pkg_setup() {
 
 src_compile() {
 	if kernel_is ge 2 6 14 ; then
-		epatch "${FILESDIR}"/verify-write-api-change.patch
+		epatch "${WORKDIR}"/rt2570-cvs-update.patch
 	fi
 	linux-mod_src_compile
 }
