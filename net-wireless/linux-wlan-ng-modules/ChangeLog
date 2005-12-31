@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/linux-wlan-ng-modules
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.5 2005/12/19 10:52:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.6 2005/12/31 09:57:46 betelgeuse Exp $
+
+  31 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
+  linux-wlan-ng-modules-0.2.3.ebuild:
+  Added linux-mod_pkg_postinst call to pkg_postinst that got lost when the
+  deprecated message was added.
 
 *linux-wlan-ng-modules-0.2.3 (19 Dec 2005)
 

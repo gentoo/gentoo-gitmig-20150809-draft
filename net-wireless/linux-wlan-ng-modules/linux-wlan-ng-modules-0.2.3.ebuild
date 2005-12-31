@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.3.ebuild,v 1.1 2005/12/19 10:52:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.3.ebuild,v 1.2 2005/12/31 09:57:46 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -113,5 +113,6 @@ src_compile() {
 }
 
 pkg_postinst() {
+	linux-mod_pkg_postinst
 	show_deprecated_message
 }
