@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.5-r1.ebuild,v 1.4 2005/09/13 14:45:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.5-r1.ebuild,v 1.5 2005/12/31 19:03:41 blubb Exp $
 
 inherit eutils java flag-o-matic
 
@@ -33,7 +33,7 @@ DEPEND="
 RDEPEND=${DEPEND}
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 sparc ~amd64 -ppc"
+KEYWORDS="amd64 -ppc sparc ~x86"
 #X qt
 IUSE="alsa esd gmp gtk nls"
 
