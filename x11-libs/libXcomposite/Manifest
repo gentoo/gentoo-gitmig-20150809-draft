@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 8af877b211903c7e53638e3a23292d98 ChangeLog 2001
 MD5 50853daa20b767003fcdf6e02668ddd1 files/digest-libXcomposite-0.2.2.2 74
-MD5 62bf3624134bf5c175f57d2dab76dcc5 libXcomposite-0.2.2.2.ebuild 648
+MD5 f50d8c013482aad5f6dbce3f1646ece7 libXcomposite-0.2.2.2.ebuild 653
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtJkj2+ySkm8kpY0RAgCmAJ9kRoB4DRNdxJaPXblr7mC2h89sOACgkcru
-AD0RqQ6Ghd0YwtObo8yEzu4=
-=0lb0
+iD8DBQFDtlQU2+ySkm8kpY0RAl38AJ9Ox9YGUAmWescsMXhMoNzGSPZCnwCbBUDe
+JvHJ/D2AxjB0qHl0rW6GWLE=
+=XWAX
 -----END PGP SIGNATURE-----
