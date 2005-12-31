@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12-r2.ebuild,v 1.1 2005/12/29 11:55:01 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12-r2.ebuild,v 1.2 2005/12/31 13:30:42 flameeyes Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	enewuser memcached -1 /bin/false /dev/null daemon
+	enewuser memcached -1 -1 /dev/null daemon
 	if ! use php; then
 		ewarn "This package uses a special \"php\" USE flag to include the PHP"
 		ewarn "API. If you emerged this without setting that USE flag, you can"
