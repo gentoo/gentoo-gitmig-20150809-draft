@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 53390af81b1985bc6b84ef1c5a9b5a38 ChangeLog 3886
 MD5 eca949c2fcf358c97cbf8071bf15e3ae dropbear-0.43.ebuild 1685
 MD5 68c50009dd00b23b70f2c214457a75cf dropbear-0.45.ebuild 1946
@@ -7,8 +10,15 @@ MD5 c3634543250cd9f910161b351bb15ccc files/digest-dropbear-0.43 67
 MD5 c9381e8354263ae69eda6efabca753ad files/digest-dropbear-0.45 67
 MD5 8ae09936c352dfd5a8ddb95182b1afc6 files/digest-dropbear-0.46 67
 MD5 9d60e23c082173af1e4294b2c914c7d5 files/digest-dropbear-0.47 67
-MD5 19eeb080e4923141f1a714ba01ff9135 files/dropbear-0.45-urandom.patch 1887
+MD5 df7f6fb1df6f7a44da55ad2f09ba7d26 files/dropbear-0.45-urandom.patch 1889
 MD5 c7d976a23e72e6dce3c022e588def172 files/dropbear-0.46-dbscp.patch 500
 MD5 64abc6b82756a97391c12d730c8da084 files/dropbear.conf.d 352
 MD5 34fea1c967596ebcd6d10d38444f2b92 files/dropbear.init.d 913
 MD5 ef25f543b5438ee7595e2ae0f98a5093 metadata.xml 671
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtcsF2+ySkm8kpY0RAvs2AJwPZMdTzeoVx5dIlhVcxxi9X3L24ACgg18L
+3+VpJeZYx5wNp5nV4wyIl04=
+=Zrfr
+-----END PGP SIGNATURE-----

@@ -39,10 +39,10 @@ diff -ur dropbear-0.45.orig/random.c dropbear-0.45/random.c
 +			 * but then give up and try a constant random source. */
 +			if (readlen < 0 && errno == EAGAIN) {
 +				++readtries;
-+				if (readtries < 5) {
-+					sleep(0);
++				if (readtries < 3) {
++					//sleep(0);
 +					continue;
-+				} else if (readtries == 5) {
++				} else if (readtries == 3) {
 +					close (readfd);
 +					readfd = open(DROPBEAR_URANDOM_DEV, readmode);
 +					if (readfd < 0) {
