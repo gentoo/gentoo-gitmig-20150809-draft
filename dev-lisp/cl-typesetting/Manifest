@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 258c42dc2c024ed2f2e430bf608370de ChangeLog 458
+MD5 d31aad031c1707f1b2675b83e2515106 cl-typesetting-110.ebuild 1273
+MD5 e3f2e856c28a43bf2cc259465c218874 files/110-gentoo.patch 5066
+MD5 8ef53811dd3a0a22dd1f3338162f1957 files/digest-cl-typesetting-110 71
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtkAcyiNZaEAZA+ARAupsAJ0cT6yS5unM+Qgh5GY+kaCsaIBsTgCfbU8V
+tAbZnXzqTE/5aQZVxgb1g8A=
+=2x1d
+-----END PGP SIGNATURE-----

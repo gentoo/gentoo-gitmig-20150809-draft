@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-typesetting
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/ChangeLog,v 1.1 2005/12/31 08:23:44 mkennedy Exp $
+
+*cl-typesetting-110 (31 Dec 2005)
+
+  31 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/110-gentoo.patch, +metadata.xml, +cl-typesetting-110.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+
