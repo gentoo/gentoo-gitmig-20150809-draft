@@ -10,64 +10,12 @@ java-external
 icc
 icc-pgo
 svga
-uclibc
 
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-php
-adabas
-birdstep
-cpdflib
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-firebird
-frontbase
-hyperwave
-informix
-ingres
-oracle7
-oci8
-pfpro
-solid
-sybase
-sybase-ct
-fdftk
-djbfft
-qdbm
-mzscheme
-
-directfb
 qt
 arts
 kde
-alsa
-nas
-
-hal
-howl
-
-lirc
-jack
 afs
-
-emboss
-neXt
-lesstif
-
-mozilla
-
-dbus
 
 3dfx
 mono
 pike
-
-timidity
-
-pcmcia
