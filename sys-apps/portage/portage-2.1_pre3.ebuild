@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre2.ebuild,v 1.2 2005/12/26 15:53:21 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre3.ebuild,v 1.1 2005/12/31 07:25:17 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -22,8 +22,6 @@ S=${WORKDIR}/${PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/dep_zapdeps.patch
 }
 
 src_compile() {
