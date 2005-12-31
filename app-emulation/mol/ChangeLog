@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.55 2005/12/01 21:49:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.56 2005/12/31 22:41:12 josejx Exp $
+
+  31 Dec 2005; Joseph Jezak <josejx@gentoo.org> -mol-0.9.71_pre2.ebuild,
+  -mol-0.9.71_pre3.ebuild, -mol-0.9.71_pre5.ebuild, mol-0.9.71_pre6.ebuild:
+  Marked ppc stable and removed obsolete ebuilds.
 
 *mol-0.9.71_pre6 (01 Dec 2005)
 
