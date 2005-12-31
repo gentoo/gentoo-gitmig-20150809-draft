@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.5 2005/11/03 07:31:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.6 2005/12/31 13:57:49 flameeyes Exp $
 
 inherit eutils fixheadtails
 
@@ -46,7 +46,7 @@ RDEPEND=""
 
 pkg_setup() {
 	enewgroup hybrid
-	enewuser hybrid -1 /bin/false /dev/null hybrid
+	enewuser hybrid -1 -1 /dev/null hybrid
 }
 
 src_unpack() {
