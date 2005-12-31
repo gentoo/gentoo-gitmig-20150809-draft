@@ -1,0 +1,12 @@
+--- netpbm-10.19/converter/other/giftopnm.c.message	2003-10-30 02:46:12.000000000 +0100
++++ netpbm-10.19/converter/other/giftopnm.c	2004-02-09 17:02:56.964219996 +0100
+@@ -1255,7 +1255,8 @@
+                          requestedImageSeq+1,
+                          imageSeq, imageSeq>1?"s":"" );
+         } else {
+-            pm_message("Reading Image Sequence %d", imageSeq);
++            if (verbose)
++                pm_message("Reading Image Sequence %d", imageSeq+1);
+             convertImage(ifP, !allImages && (imageSeq != requestedImageSeq), 
+                          imageout_file, alphafile, gifScreen, gif89);
+         }
