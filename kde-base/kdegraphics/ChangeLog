@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.219 2005/12/29 12:43:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.220 2005/12/31 01:44:31 carlo Exp $
+
+  31 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
+  kdegraphics-3.5.0-r4.ebuild:
+  Compile with -O2 instead -Os, #114822
 
   29 Dec 2005; Gregorio Guidi <greg_g@gentoo.org>
   kdegraphics-3.4.3-r3.ebuild:

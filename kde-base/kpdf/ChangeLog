@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.64 2005/12/29 11:13:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.65 2005/12/31 01:46:11 carlo Exp $
+
+  31 Dec 2005; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.0-r3.ebuild:
+  Compile with -O2 instead -Os, #114822
 
   29 Dec 2005; Gregorio Guidi <greg_g@gentoo.org> kpdf-3.4.3-r3.ebuild:
   Add dependency on poppler or xpdf for pdfinfo (#117024).

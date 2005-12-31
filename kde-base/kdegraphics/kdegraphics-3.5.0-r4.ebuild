@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r4.ebuild,v 1.2 2005/12/29 10:38:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r4.ebuild,v 1.3 2005/12/31 01:44:32 carlo Exp $
 
-inherit kde-dist eutils
+inherit kde-dist eutils flag-o-matic
 
 DESCRIPTION="KDE graphics-related apps"
 
@@ -66,5 +66,6 @@ src_compile() {
 	use scanner || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kooka libkscan"
 	use povray || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kpovmodeler"
 
+	replace-flags "-Os" "-O2" # see bug 114822
 	kde_src_compile
 }
