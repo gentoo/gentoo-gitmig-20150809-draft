@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.2-r1.ebuild,v 1.5 2005/12/31 09:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.2-r1.ebuild,v 1.6 2005/12/31 15:22:44 corsair Exp $
 
 inherit eutils
 
@@ -20,11 +20,17 @@ RDEPEND="nls? ( sys-devel/gettext )
 src_unpack() {
 	unpack ${A}
 	epunt_cxx
+
+	# fix for miss detection of 32 bit ppc
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-1.2.1-ppc64-fix.patch
+
 #	cd ${S}
 #	epatch ${FILESDIR}/${PN}-1.2.1-GNU-stack-fix.patch
 }
 
 src_compile() {
+	econf $(use ppc64) --disable-asm  || die
 	econf $(use_enable nls) --disable-dependency-tracking --with-pic \
 		--enable-noexecstack || die
 	emake || die

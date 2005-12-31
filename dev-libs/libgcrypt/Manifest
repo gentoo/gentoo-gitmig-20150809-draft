@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c7b943868293c04fb938097a0174fdb2 ChangeLog 9878
+MD5 63d503823f5c3ffbbe0b1618e358eaa6 ChangeLog 10035
 MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
 MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
@@ -17,13 +14,6 @@ MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
 MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
 MD5 12f2bb1634231d638334fbe3fcfe20ce libgcrypt-1.2.1-r1.ebuild 1215
 MD5 7dc93eccc7b1d3187503d3316fc5c449 libgcrypt-1.2.1.ebuild 1277
-MD5 5af30f9825d44690790e5f794bc26bb2 libgcrypt-1.2.2-r1.ebuild 1138
-MD5 27ec73eb30a43599906954d2fbf18b22 libgcrypt-1.2.2.ebuild 1121
+MD5 aa9a93bd54dd389edc10a478f2aec8a6 libgcrypt-1.2.2-r1.ebuild 1280
+MD5 bd7ce68270a3f982bfb5e09510c48721 libgcrypt-1.2.2.ebuild 1258
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtk4M2+ySkm8kpY0RAiqdAJ0SA5i0XCt1MHBN/VsugHOq+JKDEgCeOrip
-7XzGWCODqU26RQjF+vfm1j0=
-=6HC1
------END PGP SIGNATURE-----
