@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/cl-pdf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pdf/ChangeLog,v 1.1 2005/12/31 08:14:27 mkennedy Exp $
+
+*cl-pdf-110 (31 Dec 2005)
+
+  31 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/110-gentoo.patch, +metadata.xml, +cl-pdf-110.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>;
+  Resolves Bug #36691.
+
