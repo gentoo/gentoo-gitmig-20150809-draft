@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.41 2005/12/31 19:43:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.42 2005/12/31 21:49:19 flameeyes Exp $
+
+  31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/netatalk-1.6.4-tempfile.patch, -netatalk-1.6.4-r1.ebuild,
+  -netatalk-2.0.3.ebuild, netatalk-2.0.3-r2.ebuild:
+  Remove old 1.6.4 and 2.0.3 versions, fix setXid handling, it's bindnow-flags
+  not bindnow_flags.
 
   31 Dec 2005; Simon Stelling <blubb@gentoo.org> netatalk-2.0.3-r2.ebuild:
   stable on amd64

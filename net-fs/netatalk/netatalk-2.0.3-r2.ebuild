@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.7 2005/12/31 19:43:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.8 2005/12/31 21:49:19 flameeyes Exp $
 
 inherit eutils pam flag-o-matic autotools
 IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib"
@@ -64,7 +64,7 @@ src_compile() {
 		--with-bdb=/usr \
 		${myconf} || die "netatalk configure failed"
 
-	sed -i -e "s:@BINDNOW_FLAGS@:$(bindnow_flags):" bin/afppasswd/Makefile
+	sed -i -e "s:@BINDNOW_FLAGS@:$(bindnow-flags):" bin/afppasswd/Makefile
 
 	emake || die "netatalk emake failed"
 
