@@ -9,5 +9,5 @@ MD5 80a43f67032aa35894fcb976e575c252 files/xvid-1.1.0_beta2-altivec.patch 1070
 MD5 ecea104174b77d80f9bbf94f94a78aec files/xvid-1.1.0_beta2-amd64-gcc4.patch 2135
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 684af8a8c5e487d5e197b2b0f7793cec xvid-1.0.2.ebuild 1212
-MD5 1661e1a16051809c34024b39418b744b xvid-1.0.3.ebuild 1167
+MD5 ef9f7a59126524ae3e53e285576b5fdd xvid-1.0.3.ebuild 1166
 MD5 ab895f2b7424587f4776f453644d51aa xvid-1.1.0_beta2-r1.ebuild 1750
