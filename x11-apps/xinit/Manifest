@@ -9,4 +9,4 @@ MD5 2d8c9c76bd932f311ad86f490680d349 files/xdm.start 3418
 MD5 49f1bd860cfa5fc4adb6023d8a1bb4f8 files/xinitrc 900
 MD5 708a3daf8950bbfe3aa231efb7533cb0 files/xserver.pamd 125
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 12f741e707320c5ee6c5c995bf66da3c xinit-1.0.1.ebuild 1164
+MD5 8364a6833073c55df3561b71a829f546 xinit-1.0.1.ebuild 1167

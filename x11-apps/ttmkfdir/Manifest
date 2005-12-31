@@ -12,4 +12,4 @@ MD5 537b2fa79d0feee2ffd2f994b227eb12 files/ttmkfdir-3.0.9-zlib.patch 1913
 MD5 9b84e6d68d388eb67760658ba28d05c8 files/ttmkfdir2-ignore-FIRSTINDEX.patch 440
 MD5 36a69eed0e585f3dcf096cc82ac54575 metadata.xml 230
 MD5 cd3769034b51c921ed1c532a153cbe25 ttmkfdir-3.0.9-r2.ebuild 1273
-MD5 a1f58b6f9d1f3219a57596262e38297e ttmkfdir-3.0.9-r3.ebuild 1369
+MD5 661c56f19544e3ea5bd015ac96f0f30d ttmkfdir-3.0.9-r3.ebuild 1365
