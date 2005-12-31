@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r1.ebuild,v 1.3 2005/12/10 02:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r1.ebuild,v 1.4 2005/12/31 13:19:35 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -58,7 +58,7 @@ do_compile() {
 	ECONF_SOURCE=${S}
 
 	local mylibprefix=""
-	[[ ${USERLAND} == "Darwin" ]] && mylibprefix="/usr"
+	[[ ${CHOST} == *-darwin* ]] && mylibprefix="/usr"
 
 	# We need the basic terminfo files in /etc, bug #37026.  We will
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
@@ -101,7 +101,7 @@ src_install() {
 	cd "${WORKDIR}"/narrowc
 	make DESTDIR="${D}" install || die "make narrowc install failed"
 
-	if [[ ${USERLAND} != "Darwin" ]] ; then
+	if [[ ${CHOST} != *-darwin* ]] ; then
 		# Move static and extraneous ncurses libraries out of /lib
 		dodir /usr/$(get_libdir)
 		cd "${D}"/$(get_libdir)
