@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.05.ebuild,v 1.7 2005/07/29 21:03:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.05.ebuild,v 1.8 2005/12/31 13:50:23 flameeyes Exp $
 
 inherit eutils
 
@@ -36,8 +36,8 @@ src_install() {
 
 pkg_postinst() {
 	enewgroup nofiles
-	enewuser ldapdns -1 /bin/false /nonexistent nofiles
-	enewuser dnslog -1 /bin/false /nonexistent nofiles
+	enewuser ldapdns -1 -1 /nonexistent nofiles
+	enewuser dnslog -1 -1 /nonexistent nofiles
 
 	einfo "Read the readme.configure and use ldapdns-conf to setup"
 }
