@@ -1,6 +1,15 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.52 2005/12/17 13:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.53 2005/12/31 15:59:44 morfic Exp $
+
+*dvdrip-0.97.5 (31 Dec 2005)
+
+  31 Dec 2005; Daniel Goller <morfic@gentoo.org>
+  +files/dvdrip-0.97.5-fix_nptl_workaround.patch, +dvdrip-0.97.5.ebuild:
+  Adding 0.97.5 with nptl patch
+  Thanks to everyone in the community who helps with dvdrip
+  Namely Chandler Carruth, Triffid Hunter, and everyone contributing testing 
+  and providing feedback on bug# 100586
 
   17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Moving maintainership of dvdrip to morfic.
