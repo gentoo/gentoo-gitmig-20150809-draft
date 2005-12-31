@@ -1,0 +1,8 @@
+# ChangeLog for sys-devel/binutils-bfin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-bfin/ChangeLog,v 1.1 2005/12/31 12:46:49 vapier Exp $
+
+*binutils-bfin-2005.3.1 (31 Dec 2005)
+
+  31 Dec 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

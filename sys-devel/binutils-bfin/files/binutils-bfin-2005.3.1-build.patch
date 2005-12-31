@@ -1,0 +1,24 @@
+Fix parallel building
+
+--- bfin/binutils/binutils-2.15/gas/Makefile.am
++++ bfin/binutils/binutils-2.15/gas/Makefile.am
+@@ -665,7 +665,7 @@
+ 
+ bfin-lex.c: $(srcdir)/config/bfin-lex.l
+ 	$(SHELL) $(YLWRAP) "$(LEX)" $(srcdir)/config/bfin-lex.l lex.yy.c bfin-lex.c
+-bfin-lex.o: bfin-lex.c $(srcdir)/config/bfin-defs.h
++bfin-lex.o: bfin-lex.c $(srcdir)/config/bfin-defs.h bfin-parse.c
+ 
+ # The instruction table specification lexical analyzer and parser.
+ 
+--- bfin/binutils/binutils-2.15/gas/Makefile.in
++++ bfin/binutils/binutils-2.15/gas/Makefile.in
+@@ -3095,7 +3095,7 @@
+ 
+ bfin-lex.c: $(srcdir)/config/bfin-lex.l
+ 	$(SHELL) $(YLWRAP) "$(LEX)" $(srcdir)/config/bfin-lex.l lex.yy.c bfin-lex.c
+-bfin-lex.o: bfin-lex.c $(srcdir)/config/bfin-defs.h
++bfin-lex.o: bfin-lex.c $(srcdir)/config/bfin-defs.h bfin-parse.c
+ 
+ # The instruction table specification lexical analyzer and parser.
+ 
