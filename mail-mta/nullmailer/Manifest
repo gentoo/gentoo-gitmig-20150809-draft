@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a4de5f3dafcc7f807757c16bd8b3efab ChangeLog 4614
+MD5 2b769c517f32f6f63ec898da1649b026 ChangeLog 4899
 MD5 c367e5657509b68e227ffa43f954a211 files/digest-nullmailer-1.00 67
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r1 70
@@ -14,16 +14,16 @@ MD5 a8919e8c159a7204d3d17f018d5415ce files/nullmailer-1.00-smtp-auth.patch 3990
 MD5 a01ca848067aabbcb80c249f08c764eb files/nullmailer-1.00-syslog.patch 10047
 MD5 6d7b320c8d40ac0e2b4daca84d975cba files/remotes.sample 444
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 72cec18fd6bb008cf8c3456458aeaaa2 nullmailer-1.00.ebuild 4071
-MD5 107dfa3e234efb28793e20c0577f5040 nullmailer-1.00_rc7-r1.ebuild 3109
-MD5 4a4fab3e4c0d1071f7b6ac74435e39a6 nullmailer-1.00_rc7-r2.ebuild 3460
-MD5 d6d59dec1d46bd3c4e2f6e4a95eb4411 nullmailer-1.00_rc7-r4.ebuild 3757
-MD5 97751802124c56eb84d8a51ffc5b00b0 nullmailer-1.00_rc7-r5.ebuild 4362
-MD5 642af279edee12aa1db84cea59fcc7a3 nullmailer-1.00_rc7.ebuild 3158
+MD5 d4e805efb1d3b2e50c998385b843eaf8 nullmailer-1.00.ebuild 4063
+MD5 0a3268172648b4e421507917392a5b4e nullmailer-1.00_rc7-r1.ebuild 3102
+MD5 52ec79f027ce456d57c887779c9012f3 nullmailer-1.00_rc7-r2.ebuild 3453
+MD5 0b62f146f078fb8ca6c3882cf7beacd8 nullmailer-1.00_rc7-r4.ebuild 3750
+MD5 8006d00f06f72fcfeb67b8a7c9fa8616 nullmailer-1.00_rc7-r5.ebuild 4354
+MD5 924e99d087a6b09c6dca72afeccf5eca nullmailer-1.00_rc7.ebuild 3151
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrsZoAiZjviIA2XgRAgueAJ95NSEi22I+UuD5fIC0XybcdEB5XACdFWE1
-2ksG58j5I/ZVKoUCDhQkCxg=
-=fBvL
+iD8DBQFDtpMnAiZjviIA2XgRAue5AJ0eR3SivGGkUyRtdgpAajdKtzq+AACg70EL
+UGgcCFz/Yh+N1OH7xqfKs20=
+=hkpF
 -----END PGP SIGNATURE-----

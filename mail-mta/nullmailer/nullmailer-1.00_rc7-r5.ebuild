@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r5.ebuild,v 1.5 2005/12/25 14:57:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r5.ebuild,v 1.6 2005/12/31 14:18:03 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,7 +30,7 @@ NULLMAILER_GROUP_NAME=nullmail
 NULLMAILER_GROUP_GID=88
 NULLMAILER_USER_NAME=nullmail
 NULLMAILER_USER_UID=88
-NULLMAILER_USER_SHELL=/bin/false
+NULLMAILER_USER_SHELL=-1
 NULLMAILER_USER_GROUPS=nullmail
 NULLMAILER_USER_HOME=/var/nullmailer
 
