@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.50 2005/12/09 03:10:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.51 2005/12/31 11:05:05 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -11,20 +11,29 @@
 # binutils-#              -> normal release
 
 extra_eclass=""
-if [[ ${PV} == "9999" ]] ; then
+if [[ -n ${BINUTILS_TYPE} ]] ; then
+	BTYPE=${BINUTILS_TYPE}
+else
+	case ${PV} in
+	9999)      BTYPE="cvs";;
+	9999_pre*) BTYPE="snap";;
+	*)         BTYPE="rel";;
+	esac
+fi
+
+if [[ ${BTYPE} == "cvs" ]] ; then
 	extra_eclass="cvs"
 	ECVS_SERVER="sourceware.org:/cvs/src"
 	ECVS_MODULE="binutils"
 	ECVS_USER="anoncvs"
 	ECVS_PASS="anoncvs"
-	BTYPE="cvs"
 	BVER="cvs"
-elif [[ ${PV} == 9999_pre* ]] ; then
-	BTYPE="snap"
+elif [[ ${BTYPE} == "snap" ]] ; then
 	BVER=${PV/9999_pre}
-else
-	BTYPE="rel"
+elif [[ ${BTYPE} == "rel" ]] ; then
 	BVER=${PV}
+else
+	BVER=${BINUTILS_VER}
 fi
 
 inherit eutils libtool flag-o-matic gnuconfig multilib ${extra_eclass}
