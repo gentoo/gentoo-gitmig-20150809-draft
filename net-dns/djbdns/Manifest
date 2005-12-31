@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 729c018f0886eded4bd9a33c2572fc4f ChangeLog 11929
-MD5 401ae54213b2c95ea9b542a21592aef6 djbdns-1.05-r14.ebuild 4699
+MD5 1e405fd65fb4cb58ea8b2ab5dde36843 ChangeLog 12051
+MD5 8cf029fb28d30f1899ca2b56ac5a0013 djbdns-1.05-r14.ebuild 4678
 MD5 f04b8acc339d82cdf4352c556707395d djbdns-1.05-r15.ebuild 4708
 MD5 83c6d79e4b650aa3b178405482957f86 djbdns-1.05-r16.ebuild 4708
 MD5 188096855028696985f1b9d839d1643f files/1.05-errno.patch 238
@@ -16,10 +13,3 @@ MD5 46e046747b9dd8a0a1300a52c142f423 files/fwdzone-fix.patch 438
 MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
 MD5 d1844f9853a9bb56738a6a0eb6e04de4 files/tinydns-setup 3206
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbMp/j5H05b2HAEkRAku5AJ0TROltufMU3npav17Pvde7GiPQNACeMdOm
-DcNauTHxDJBE9eLbSQD4X5w=
-=4wSd
------END PGP SIGNATURE-----
