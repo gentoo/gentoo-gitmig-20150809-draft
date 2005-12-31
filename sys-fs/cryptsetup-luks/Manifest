@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 619c52e03a27dd42370e57174dd28da7 ChangeLog 2419
+MD5 3ff603636635e7cca2255fbab4cd2095 ChangeLog 2521
 MD5 66c1f7dfa9c09e11c9e248dd7ec07a5e cryptsetup-luks-1.0-r1.ebuild 2126
-MD5 52f0eaba54711a555632ed91e15df820 cryptsetup-luks-1.0.1-r1.ebuild 1955
+MD5 39f4fb671435d87d833b45e59e0a7fba cryptsetup-luks-1.0.1-r1.ebuild 1955
 MD5 99b3cfb6a9eb43a772d29da0f88f849d cryptsetup-luks-1.0.1.ebuild 2148
 MD5 6d86b15e07cd0cdf96d8a363b1d778cd files/cryptfs.confd 1548
 MD5 f254479b9a12868d43ab10e4658fab51 files/digest-cryptsetup-luks-1.0-r1 72
@@ -12,10 +9,3 @@ MD5 6d83c52472ad8d3b12ec5dbc4e056ed7 files/digest-cryptsetup-luks-1.0.1-r1 74
 MD5 c653a0b4ace27569ccc659b7cb43b4a9 files/dm-crypt-start.sh 4306
 MD5 a3bb6598f67c8922ccb6576ff256ced0 files/dm-crypt-stop.sh 1297
 MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkNZ1gIKl8Uu19MoRAmShAJkB9ltuScNkiRf6fGu6WaK/JCDstgCfTHk8
-ZnWWlg1/jpsHGWoKhgnbZgk=
-=Dw0O
------END PGP SIGNATURE-----
