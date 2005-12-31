@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85e7e0ca8e2b1ee62726eb0d10432a4f ChangeLog 2340
+MD5 2f16513c163f6696c8f94bc5cb7c9a03 ChangeLog 2444
 MD5 605cbabd23712fbae6096e541871377c files/digest-xcolor-1.11-r1 58
 MD5 a432671ccabff764d310bd2a1d5da170 files/digest-xcolor-2.00-r1 58
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 4b490908466bffcea5a2d261155174eb xcolor-1.11-r1.ebuild 704
-MD5 d0993644104b2692660ea8d4eba3ce5e xcolor-2.00-r1.ebuild 713
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsGr7CRZPokWLroQRAnjTAKCZ5YKI9fepfiDkKwdnuVcZWd0vywCfYtbF
-GRdbRihUBMU7LFiMKni3H0Y=
-=LL71
------END PGP SIGNATURE-----
+MD5 6f01286d17171485bc9acd51b4456ba8 xcolor-2.00-r1.ebuild 710

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31e518b21e1e60276e3b657467ac9223 ChangeLog 3452
+MD5 c606c611e6f1b7a31ad0365bd659493a ChangeLog 3564
 MD5 520aa98920f74208cbcfb7c97e967060 files/digest-latex-beamer-3.00-r1 70
 MD5 16db71a0634da368bf9c627c22fd8311 files/digest-latex-beamer-3.01-r1 70
-MD5 7ce29148c7be9c0bdd1e86301dd18f24 latex-beamer-3.00-r1.ebuild 1148
+MD5 ae8767dd7eee98693d175ea0f679eb77 latex-beamer-3.00-r1.ebuild 1145
 MD5 841a2246cc5d95049cb72302f0f26caf latex-beamer-3.01-r1.ebuild 1161
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsUQrI1lqEGTUzyQRAuscAKCjw3Kzh2csPEsj093SP13t9DCloACgroLq
-HwUvtlMrLKuAqx6Q1FYOcrI=
-=4rPl
------END PGP SIGNATURE-----
