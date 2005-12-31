@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.7 2005/12/16 10:09:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.8 2005/12/31 09:45:52 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/mesa3d/${LIB_P}.tar.bz2
 	mirror://sourceforge/mesa3d/${PROG_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/glut

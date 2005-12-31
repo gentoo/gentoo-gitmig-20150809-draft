@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ttmkfdir-3.0.9-r3.ebuild,v 1.1 2005/12/14 17:41:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ttmkfdir-3.0.9-r3.ebuild,v 1.2 2005/12/31 09:46:53 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
