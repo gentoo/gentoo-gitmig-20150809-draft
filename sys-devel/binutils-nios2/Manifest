@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8aa58738f2a485534a6ee251977c24c3 ChangeLog 351
+MD5 b98a7b9699d2a7ef5dcdf37dae5735e1 binutils-nios2-5.1.ebuild 536
+MD5 ed47fd0f9c30cce962253d287689be92 files/digest-binutils-nios2-5.1 74
+MD5 c6712d4b439bc632a23799aa1793fc84 metadata.xml 184
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDtn/g2+ySkm8kpY0RAkDWAJ0erKZr+JRhU4Vnan/5BPf2zVFXtQCbB/Tk
+4aeqoIYyK0G3oQcPv/mHjIY=
+=WOcg
+-----END PGP SIGNATURE-----
