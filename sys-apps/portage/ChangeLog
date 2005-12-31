@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.60 2005/12/31 07:25:17 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.61 2005/12/31 14:01:21 vapier Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  31 Dec 2005; Mike Frysinger <vapier@gentoo.org>
+  portage-2.0.51.22-r3.ebuild, portage-2.0.53.ebuild, portage-2.0.54.ebuild,
+  portage-2.1_pre3.ebuild:
+  Pull in portage-manpages automagically via USE=doc.
 
 *portage-2.1_pre3 (31 Dec 2005)
 
