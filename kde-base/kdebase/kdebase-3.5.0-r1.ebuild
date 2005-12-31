@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.6 2005/12/21 20:00:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.7 2005/12/31 21:44:45 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -30,6 +30,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	zeroconf? ( net-misc/mDNSResponder )"
 
 RDEPEND="${DEPEND}
+	sys-apps/usbutils
 	java? ( >=virtual/jre-1.4 )
 	virtual/eject
 	|| ( (
@@ -58,6 +59,10 @@ src_unpack() {
 	# Fix (again) modular support, when /usr/X11R6 is present this time
 	epatch "${FILESDIR}/kxkb-3.5.0-modularxkb.patch"
 
+	# Add configure option to use /usr/share/misc/usb.ids instead of installing
+	# another copy for kcmusb. SVN Commit 492985.
+	epatch "${FILESDIR}/kcontrol-3.5.0-global-usbids.patch"
+
 	# For the noimake patch.
 	make -f admin/Makefile.common || die
 }
@@ -69,7 +74,8 @@ src_compile() {
 	              $(use_with samba) $(use_with openexr)
 	              $(use_with lm_sensors sensors) $(use_with logitech-mouse libusb)
 	              $(use_with ieee1394 libraw1394) $(use_with hal)
-	              $(use_enable zeroconf dnssd)"
+	              $(use_enable zeroconf dnssd)
+				  --with-usbids=/usr/share/misc/usb.ids"
 
 	if use pam; then
 		myconf="${myconf} --with-pam=yes"

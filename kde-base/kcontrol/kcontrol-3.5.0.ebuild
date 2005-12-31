@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.0.ebuild,v 1.4 2005/12/17 09:36:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.0.ebuild,v 1.5 2005/12/31 21:42:41 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -20,6 +20,7 @@ DEPEND=">=media-libs/freetype-2
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )"
 
 RDEPEND="${DEPEND}
+	sys-apps/usbutils	
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 $(deprange $PV $MAXKDEVER kde-base/kdesu)
@@ -44,8 +45,11 @@ KMCOPYLIB="libkonq libkonq
 	libtaskbar kicker/taskbar
 	libtaskmanager kicker/taskmanager"
 
+PATCHES="${FILESDIR}/${P}-global-usbids.patch"
+
 src_compile() {
 	myconf="$myconf `use_with ssl` `use_with arts` `use_with opengl gl`
-	        `use_with ieee1394 libraw1394` `use_with logitech-mouse libusb`"
+	        `use_with ieee1394 libraw1394` `use_with logitech-mouse libusb`
+			--with-usbids=/usr/share/misc/usb.ids"
 	kde-meta_src_compile
 }
