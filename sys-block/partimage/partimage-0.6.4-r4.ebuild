@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.7 2005/11/13 17:30:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.8 2005/12/31 14:11:38 flameeyes Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -36,7 +36,7 @@ PARTIMAG_GROUP_GID=91
 PARTIMAG_USER_UID=91
 PARTIMAG_GROUP_NAME=partimag
 PARTIMAG_USER_NAME=partimag
-PARTIMAG_USER_SH=/bin/false
+PARTIMAG_USER_SH=-1
 PARTIMAG_USER_HOMEDIR=/var/log/partimage
 PARTIMAG_USER_GROUPS=partimag
 

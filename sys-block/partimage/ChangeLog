@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.19 2005/12/20 14:26:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.20 2005/12/31 14:11:38 flameeyes Exp $
+
+  31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  partimage-0.6.4-r3.ebuild, partimage-0.6.4-r4.ebuild:
+  Use -1 instead of /bin/false as default shell.
 
   20 Dec 2005; Brent Baude <ranger@gentoo.org> partimage-0.6.4-r3.ebuild:
   partimage can never be 64bit without major code rewrites
