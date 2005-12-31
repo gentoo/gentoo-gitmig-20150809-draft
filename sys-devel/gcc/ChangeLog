@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.480 2005/12/24 16:13:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.481 2005/12/31 00:40:29 halcy0n Exp $
+
+*gcc-4.1.0_beta20051230 (31 Dec 2005)
+
+  31 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.1.0_beta20051223.ebuild, +gcc-4.1.0_beta20051230.ebuild:
+  Bump to newest 4.1 snapshot
 
   24 Dec 2005; Markus Rothe <corsair@gentoo.org> gcc-3.4.5.ebuild:
   Added ~ppc64
