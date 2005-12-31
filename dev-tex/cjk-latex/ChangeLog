@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.10 2005/10/22 00:06:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.11 2005/12/31 15:58:12 corsair Exp $
+
+  31 Dec 2005; Markus Rothe <corsair@gentoo.org> cjk-latex-4.5.2.ebuild:
+  Added ~ppc64
 
   22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> cjk-latex-4.5.2.ebuild:
   Stable on x86

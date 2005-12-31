@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-unicode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.12 2005/10/22 00:06:41 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.13 2005/12/31 15:59:11 corsair Exp $
+
+  31 Dec 2005; Markus Rothe <corsair@gentoo.org>
+  latex-unicode-20041017.ebuild:
+  Added ~ppc64
 
   21 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
   latex-unicode-20041017.ebuild:
