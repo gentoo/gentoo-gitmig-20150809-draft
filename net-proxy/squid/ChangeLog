@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.55 2005/12/31 10:20:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.56 2005/12/31 12:22:57 corsair Exp $
+
+  31 Dec 2005; Markus Rothe <corsair@gentoo.org> squid-2.5.12.ebuild:
+  Stable on ppc64
 
   31 Dec 2005; Alin Nastac <mrness@gentoo.org> files/squid.initd:
   Stop service correctly by calling squid -k shutdown instead using
