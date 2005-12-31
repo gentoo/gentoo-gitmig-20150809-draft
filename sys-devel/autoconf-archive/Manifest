@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e034793912907a6d05ca5c443ea75eb9 ChangeLog 1200
+MD5 03f7231ff2d74d03e46661a724c6a634 ChangeLog 1389
 MD5 38041a10de5d4b59c65e23e628872779 autoconf-archive-2005.08.12.ebuild 869
 MD5 bfdc422ca8c03d59596ea7912e574109 autoconf-archive-2005.10.14.ebuild 869
 MD5 09804aba8fb294c25d996354cb242048 autoconf-archive-2005.12.18.ebuild 892
+MD5 b3d42cb3e3b3ec9531e59fd66224c8cb autoconf-archive-2005.12.20.ebuild 748
 MD5 f5c27aca11d0164ba6e6dbffb9feb780 files/digest-autoconf-archive-2005.08.12 80
 MD5 835a47f5bc3acbc1a4df32d5ffb66c8f files/digest-autoconf-archive-2005.10.14 80
 MD5 2503246c46aa7a39ace43cf6d3366a81 files/digest-autoconf-archive-2005.12.18 80
+MD5 fb17182afbdbac331a7833f131c660d8 files/digest-autoconf-archive-2005.12.20 80
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqkSO2+ySkm8kpY0RAjlMAJ9EYrfhyDT486/AXCCb8YQ54+0nogCfTyMK
-KADSiMap1nVr8SGqq0hL3is=
-=oB30
+iD8DBQFDtkLY2+ySkm8kpY0RAk/KAJ9kowKFbiwZi/tfvsnRM6zeJV3BqQCeNNEw
+t/0TlfUUY69h0+gmuzgK5j4=
+=SiWv
 -----END PGP SIGNATURE-----
