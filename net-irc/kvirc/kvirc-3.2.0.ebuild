@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.7 2005/12/01 02:40:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.8 2005/12/31 05:34:48 kumba Exp $
 
 inherit eutils kde-functions
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.kvirc.net/pub/kvirc/${PV}/source/${P}.tar.bz2
 
 LICENSE="kvirc"
 SLOT="3"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ~mips ppc sparc x86"
 IUSE="debug esd ipv6 kde oss ssl"
 
 RDEPEND="esd? ( media-sound/esound )
