@@ -8,12 +8,12 @@ MD5 f5ee205af95a801f901ea6ce2764bf3d files/digest-xterm-207 58
 MD5 a5048a1a15d86d400d3e2dbaaa0ac1c8 files/xterm-LANG.patch 1698
 MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
 MD5 5028b38c05b1e70818bf56e5b178880f xterm-204.ebuild 2527
-MD5 fe59bc5c47a3e4f20f20eba8020cb5d0 xterm-205.ebuild 2540
-MD5 d352d0b94200ed482b5d23ca4339f075 xterm-207.ebuild 2946
+MD5 b81aba8c5f8681724f3df0367cbe2dcc xterm-205.ebuild 2544
+MD5 18722a09846e871acbda574d821f1359 xterm-207.ebuild 2950
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDn8CTBtvusYtCZMsRAsxTAKCJsj+CdhUsz0lJ6+1aAXvnVCcHUACdE+jx
-5xyNcgtln2jeDTPbhNHvEUY=
-=lB6C
+iD8DBQFDtlSr2+ySkm8kpY0RAtqoAJkBr3qC9Gggd3f83/aop2vF6/+0sACfRRMm
+7W+apfuEpvK8Rqu9SOWKVeI=
+=EEZk
 -----END PGP SIGNATURE-----
