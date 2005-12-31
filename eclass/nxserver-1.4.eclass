@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.9 2005/12/31 13:59:57 flameeyes Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -39,7 +39,7 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install pkg_postinst
 
 nxserver_pkg_setup() {
 	einfo "Adding user 'nx' for the NX server"
-	enewuser nx -1 /bin/false /usr/NX/home/nx
+	enewuser nx -1 -1 /usr/NX/home/nx
 }
 
 nxserver_src_compile() {
