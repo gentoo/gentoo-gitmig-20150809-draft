@@ -13,4 +13,4 @@ MD5 e3a3640b31e70f2956ed8ed4bb39f04a files/watchdog-5.2.4_p5-uclibc.patch 312
 MD5 4de4839057a43617fb483f691555ac09 files/watchdog.conf.d 270
 MD5 c58db060ae5f8ffd1d141930b0c7c02c metadata.xml 219
 MD5 a5b1a7192c34c50ca11ed6510c19d871 watchdog-5.2.4.ebuild 1311
-MD5 b7ee73284b2f0db5eb04d5d8645906b4 watchdog-5.2.4_p5.ebuild 1468
+MD5 20a77ec33ab9ad1322d4f79af8e90fea watchdog-5.2.4_p5.ebuild 1472
