@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.245 2005/12/19 19:10:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.246 2005/12/31 12:37:15 corsair Exp $
+
+  31 Dec 2005; Markus Rothe <corsair@gentoo.org> kdebase-3.4.3-r1.ebuild:
+  Added ~ppc64
 
   19 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   kdebase-3.5.0-r1.ebuild:
