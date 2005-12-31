@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.61 2005/11/24 16:50:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.62 2005/12/31 13:42:21 flameeyes Exp $
+
+  31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  jabberd-1.4.3-r4.ebuild:
+  Change /bin/false to -1 in enewuser call.
 
   24 Nov 2005; Simon Stelling <blubb@gentoo.org> jabberd-1.4.3-r5.ebuild:
   fix multilib issue; bug 113472

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.8 2005/04/02 18:07:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.9 2005/12/31 13:42:21 flameeyes Exp $
 
 inherit eutils
 
@@ -111,7 +111,7 @@ src_install() {
 	local test_user=`grep ^jabber: /etc/passwd | cut -d: -f1`
 	if [ -z $test_user ]
 	then
-		enewuser jabber -1 /bin/false /var/spool/jabber jabber
+		enewuser jabber -1 -1 /var/spool/jabber jabber
 	fi
 
 	dodoc README UPGRADE ${FILESDIR}/README.Gentoo
