@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/misdn
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.6 2005/10/17 21:09:53 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.7 2006/01/01 17:35:07 genstef Exp $
+
+*misdn-20051228 (01 Jan 2006)
+
+  01 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +files/README.hfcmulti,
+  +files/mqueue.modulesd, +misdn-20051228.ebuild:
+  version bump, hard masked because it is now from the experimental mqueue branch
 
 *misdn-20051017 (17 Oct 2005)
 
