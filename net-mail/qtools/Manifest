@@ -1,6 +1,16 @@
-MD5 b917b63d59a4d17e63ea3a971c0c6655 qtools-0.56.ebuild 1197
-MD5 e60e7e9ed6a2c7d3a2ebcee6a6af429e metadata.xml 277
-MD5 6da1f5b3034b949092371074f465eabc ChangeLog 1074
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3ce58e844296ce2db8359e5a7037ec17 ChangeLog 1171
+MD5 d397de4ad57b3e6d89294df49fa4f3b1 files/digest-qtools-0.56 62
 MD5 04a4c35d8c9cdf362be4a58d25a9aa4d files/qtools-0.56-errno.patch 291
 MD5 682bf64c6aac658ac3ea5c73d3b47063 files/qtools-0.56-head.patch 2129
-MD5 d397de4ad57b3e6d89294df49fa4f3b1 files/digest-qtools-0.56 62
+MD5 e60e7e9ed6a2c7d3a2ebcee6a6af429e metadata.xml 277
+MD5 785349a0839cfaf0b50f759d418795a2 qtools-0.56.ebuild 1207
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuER8wUpWvClEHQoRAs7kAJ4wF+frj91sBmTrFbglabzna1RAGQCfZI/J
+X3uW2DKFywpgEunFIirW3oE=
+=k9VI
+-----END PGP SIGNATURE-----
