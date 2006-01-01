@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/audacity
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.37 2005/12/26 14:38:49 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.38 2006/01/01 04:21:00 matsuu Exp $
+
+*audacity-1.2.4b (01 Jan 2006)
+
+  01 Jan 2006; MATSUU Takuto <matsuu@gentoo.org>
+  +files/audacity-1.2.3-gcc41.patch, +audacity-1.2.4b.ebuild:
+  Version Bumped, Bug 113948.
+  Restricted to wxGTK-2.4* with wxgtk1, Bug 100741.
+  Fixed gcc-4.1 compile issue, Bug 113754.
+  Fixed docs install issue, Bug 116615.
+  Removed gtk2 USE flag, Bug 106560.
+  Added ladspa, mp3 and soundtouch USE flag.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> audacity-1.2.1.ebuild,
   audacity-1.2.2.ebuild, audacity-1.2.3.ebuild, audacity-1.2.3-r1.ebuild:
