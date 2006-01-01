@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a95b45072975e2694253f22c87777d0b ChangeLog 3066
+MD5 61d06ab3b3190c4da02395258f5433a1 ChangeLog 3467
 MD5 5da4a9160b981e4d0f2e64e12a39de37 avahi-0.5.2-r1.ebuild 2085
+MD5 e02a44d127f87504f9e2c162c00e1d8f avahi-0.6.1-r1.ebuild 2765
 MD5 10acd5db4e98791ddd421b34c404c7f3 avahi-0.6.1.ebuild 2402
+MD5 f950c746ff7017804d0265baf8b2390b files/0.6.1-dbus-0.60-support.patch 1074
+MD5 2189d236532868b9ae0d0ae87195acda files/0.6.1-need-dbus-initscript.patch 322
 MD5 b06b1183ea48e210c1943f0913f63714 files/digest-avahi-0.5.2-r1 63
 MD5 82793ef545794b3d74b3094017ed5572 files/digest-avahi-0.6.1 63
+MD5 82793ef545794b3d74b3094017ed5572 files/digest-avahi-0.6.1-r1 63
 MD5 e522a390cede4510e8dbd0446e695912 metadata.xml 297
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDksfNI1lqEGTUzyQRAs5CAKCMVKfb8vcC2DNZ1KF1jVWwsirAJgCgyhVx
-sHqPGqy5f0acuKTHDNGmSII=
-=PBdw
+iD8DBQFDt8X5I1lqEGTUzyQRAlzSAJwIceqp250NcMuUtCjaTQcchl3UNACgsZre
+5Ss7uiQ2JZcIPh33SwazvB0=
+=Ghr3
 -----END PGP SIGNATURE-----
