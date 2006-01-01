@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ldvd-1.9.4.ebuild,v 1.2 2005/07/28 10:37:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ldvd-1.9.4.ebuild,v 1.3 2006/01/01 18:20:04 chriswhite Exp $
 
 DESCRIPTION="dvd ripping tool with GUI"
-HOMEPAGE="http://ldvd9to5.gff-clan.net/"
-SRC_URI="http://files.gff-clan.net/pub/ldvd/testing/${P}.tar.bz2"
+HOMEPAGE="http://ldvd.sourceforge.net/"
+SRC_URI="mirror://sourceforge/ldvd/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 IUSE=""

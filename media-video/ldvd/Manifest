@@ -1,4 +1,14 @@
-MD5 143c0037e374444d9a6e1edcc365e8f3 ChangeLog 517
-MD5 ece23893c40d8b8fe802da12926ba9f3 ldvd-1.9.4.ebuild 669
-MD5 3b48bbf9061ed96a98fce71b232f9213 metadata.xml 387
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67f8fdd16c75377c03651f0a84130fb4 ChangeLog 651
 MD5 b0beb8940effade8af0cc5c152d26fbf files/digest-ldvd-1.9.4 62
+MD5 d237434a004403cc28c704787416ffdf ldvd-1.9.4.ebuild 656
+MD5 3b48bbf9061ed96a98fce71b232f9213 metadata.xml 387
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuB1kFdQwWVoAgN4RAjxEAKDoCwWhEZDqht17iY1ZhcKDya+oiQCeJ5SV
+VGfRAmo8uBXygtUFTtKPTag=
+=/ZaS
+-----END PGP SIGNATURE-----
