@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.39 2005/12/14 15:32:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.40 2006/01/01 18:37:24 tester Exp $
+
+  20 Dec 2005; Olivier Crête <tester@gentoo.org> gtkpod-0.94.0.ebuild,
+  gtkpod-0.99.2.ebuild:
+  Use media-libs/libmp4v2 for libmp4v2
 
 *gtkpod-0.99.2 (14 Dec 2005)
 
