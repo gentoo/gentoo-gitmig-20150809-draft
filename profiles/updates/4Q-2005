@@ -27,3 +27,4 @@ move dev-perl/PodParser perl-core/PodParser
 move dev-perl/Scalar-List-Utils perl-core/Scalar-List-Utils
 move dev-perl/libnet perl-core/libnet
 move net-misc/rfb x11-misc/x11vnc
+move dev-php/propel-generator dev-php5/propel-generator
