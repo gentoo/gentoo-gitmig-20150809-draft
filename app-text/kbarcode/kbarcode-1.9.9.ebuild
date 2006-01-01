@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/kbarcode-1.9.7.ebuild,v 1.1 2005/11/10 15:32:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/kbarcode-1.9.9.ebuild,v 1.1 2006/01/01 16:11:21 carlo Exp $
 
 inherit kde
 
@@ -18,4 +18,4 @@ DEPEND=">=app-text/barcode-0.98"
 RDEPEND=">=app-text/barcode-0.98
 	virtual/ghostscript"
 
-need-kde 3.2
+need-kde 3.4
