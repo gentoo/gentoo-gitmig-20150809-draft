@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-1.0.1.ebuild,v 1.1 2005/12/18 01:44:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-1.0.1.ebuild,v 1.2 2006/01/01 08:08:45 sebastian Exp $
 
 PHP_EXT_NAME="pdo_pgsql"
 PHP_EXT_PECL_PKG="PDO_PGSQL"
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="${DEPEND}
 		dev-php5/pecl-pdo
-		dev-db/postgresql"
+		dev-db/libpq"
 
 need_php_by_category
 
