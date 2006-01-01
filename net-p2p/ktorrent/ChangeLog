@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ktorrent
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.8 2005/11/23 20:17:17 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.9 2006/01/01 16:04:02 carlo Exp $
+
+*ktorrent-1.2_rc1 (01 Jan 2006)
+
+  01 Jan 2006; Carsten Lohrke <carlo@gentoo.org> +ktorrent-1.2_rc1.ebuild:
+  version bump
 
   23 Nov 2005; Markus Rothe <corsair@gentoo.org> ktorrent-1.1.ebuild:
   Added ~ppc64 keyword
