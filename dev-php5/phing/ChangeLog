@@ -1,0 +1,29 @@
+# ChangeLog for dev-php/phing
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.1 2006/01/01 16:35:14 sebastian Exp $
+
+  01 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +phing-2.1.0.ebuild:
+  Moved from dev-php/phing to dev-php5/phing.
+
+  12 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>; phing-2.1.0.ebuild:
+  Added ~amd64 to KEYWORDS
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> phing-2.1.0.ebuild:
+  Use new PEAR eclass.
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> phing-2.1.0.ebuild:
+  Fix (R)DEPEND, KEYWORDS.
+
+*phing-2.1.0 (14 Jul 2005)
+
+  14 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -phing-2.0.0.ebuild, +phing-2.1.0.ebuild:
+  Version bump.
+
+*phing-2.0.0 (15 Mar 2005)
+
+  15 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +phing-2.0.0.ebuild:
+  New ebuild.
+
