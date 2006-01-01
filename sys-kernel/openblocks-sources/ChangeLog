@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/openblocks-sources
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openblocks-sources/ChangeLog,v 1.2 2005/09/22 14:43:52 matsuu Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openblocks-sources/ChangeLog,v 1.3 2006/01/01 03:20:52 matsuu Exp $
+
+  01 Jan 2006; MATSUU Takuto <matsuu@gentoo.org>
+  -openblocks-sources-2.4.28.ebuild:
+  Removed. old version.
 
 *openblocks-sources-2.6.11.12 (22 Sep 2005)
 
