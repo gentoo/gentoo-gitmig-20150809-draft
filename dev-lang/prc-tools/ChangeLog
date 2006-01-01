@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/prc-tools
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.9 2005/01/28 23:55:01 plasmaroo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.10 2006/01/01 22:01:59 plasmaroo Exp $
+
+  01 Jan 2006; <plasmaroo@gentoo.org> prc-tools-2.3-r1.ebuild:
+  Path fix; bug #100879.
 
   28 Jan 2005; <plasmaroo@gentoo.org> prc-tools-2.3-r1.ebuild:
   Add texinfo-4.8 $DEPEND; 4.7 fails when generating the documentation.

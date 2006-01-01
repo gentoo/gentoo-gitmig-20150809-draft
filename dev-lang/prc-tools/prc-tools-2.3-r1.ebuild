@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r1.ebuild,v 1.4 2005/01/28 23:55:01 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r1.ebuild,v 1.5 2006/01/01 22:01:59 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -86,6 +86,9 @@ src_config() {
 
 	# palmdev-prefix also has to be real; otherwise 'palmdev-prep'
 	# defaults to virtual ${D}/..
+
+	# Make sure the newly built compiler is found; #100879.
+	export PATH="$PATH:${D}/usr/bin"
 }
 
 src_compile() {
@@ -95,6 +98,7 @@ src_compile() {
 
 src_install() {
 	cd ../build
+	export PATH="$PATH:${D}/usr/bin"
 	einstall || die
 }
 
