@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.0_rc4.ebuild,v 1.5 2005/12/16 10:48:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.0_rc4.ebuild,v 1.6 2006/01/01 13:33:10 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -245,11 +245,12 @@ EOF
 		[[ -f ${f} ]] && dodoc ${f}
 	done
 
-	# Install the book in it's own dir
-	docinto book
-	cd ${S}
-	echo "installing html book"
-	dohtml -r doc/book/svn-book.html doc/book/styles.css doc/book/images || die "Installing book failed"
+	# The release candidate does not have the book
+	# # Install the book in it's own dir
+	# docinto book
+	# cd ${S}
+	# echo "installing html book"
+	# dohtml -r doc/book/svn-book.html doc/book/styles.css doc/book/images || die "Installing book failed"
 
 	# Install emacs lisps
 	if use emacs; then
