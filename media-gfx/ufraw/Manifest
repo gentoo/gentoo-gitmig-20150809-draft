@@ -1,6 +1,16 @@
-MD5 724cc45e1d88e4eb4b145fd84c1ccff9 ChangeLog 471
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8e9d37b9a7c095de0e002806e6117b03 ChangeLog 562
 MD5 bc7b31ad019bc30a55625da776b5b05b files/digest-ufraw-0.5 61
 MD5 82a09a02c6a535d43ec50aee42a297d4 files/digest-ufraw-0.6 61
 MD5 fe73035625dc6609b435f48162acae65 metadata.xml 165
 MD5 542b9dc44d903b76edbfe2d2c9dc65bb ufraw-0.5.ebuild 815
-MD5 16bf4a0dbfc0110aea64021f34ea63ff ufraw-0.6.ebuild 795
+MD5 25a2456773865c5d1421155434a4436a ufraw-0.6.ebuild 800
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuED1wUpWvClEHQoRAmmjAJ93jSBTM+HFpRIbMzfPh8wVk+2C9ACgikBu
+xukbxU3UenvZ7pFh4/tsFQw=
+=eCvQ
+-----END PGP SIGNATURE-----
