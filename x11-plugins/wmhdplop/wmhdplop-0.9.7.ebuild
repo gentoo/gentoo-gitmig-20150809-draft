@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.7.ebuild,v 1.4 2005/11/10 10:08:33 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.7.ebuild,v 1.5 2006/01/01 01:22:22 swegener Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack()
 	# Honour Gentoo CFLAGS, but retain some the package author chose himself
 	epatch ${FILESDIR}/${PN}-cflags.patch
 
-	if ! built_with_use imlib2 X; then
+	if ! built_with_use media-libs/imlib2 X; then
 		echo
 		eerror "This package depends on media-libs/imlib2, which needs"
 		eerror "to be compiled with 'X' USE flag enabled..."

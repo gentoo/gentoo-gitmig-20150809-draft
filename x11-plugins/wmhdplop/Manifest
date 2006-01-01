@@ -1,5 +1,15 @@
-MD5 d299a1e7e66dda11ba9de3a6b183ca40 wmhdplop-0.9.7.ebuild 1345
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30b525e83915e738c53133e56ded8e10 ChangeLog 1311
-MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 0a55dceead9ad7a2f7205718807cc4df files/digest-wmhdplop-0.9.7 66
 MD5 2745de508ae424a95df9b4ec8cbd8a1a files/wmhdplop-cflags.patch 313
+MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 ca86c2665439951f9df04e4ace9e813a wmhdplop-0.9.7.ebuild 1359
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDty7ZI1lqEGTUzyQRArM2AJ0UlXl390/dlq+w0l7MM5JROP/jRgCfaLiz
+yexhaXZZNIDdfAH1ux5nJxI=
+=QxP9
+-----END PGP SIGNATURE-----
