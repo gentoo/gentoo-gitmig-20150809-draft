@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b4bd39f8b47d42518e7d7ef6caa4d5a6 ChangeLog 2858
+MD5 e998d48796e10781aa5fa55df8c692a4 ChangeLog 2956
 MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b 64
 MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b-r1 64
 MD5 6f77a5ae06c1e805c8ba4f18ef210040 files/digest-thttpd-2.25b-r2 126
@@ -20,12 +20,12 @@ MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
 MD5 9638e3f16ce376f6259c3963fe78da43 thttpd-2.25b-r1.ebuild 1234
 MD5 3275e777a332a1525de88c1b458009c5 thttpd-2.25b-r2.ebuild 2088
 MD5 d8de2aefcaa09167a51a9b1451cfa21d thttpd-2.25b-r3.ebuild 2155
-MD5 23f01b0ccb9a3be3ca8059406fc84c6f thttpd-2.25b-r4.ebuild 1343
+MD5 ae4f93b21fbf24cf90efcebf19d191a5 thttpd-2.25b-r4.ebuild 1349
 MD5 9938eaae4deb104a092e8b4fc966a692 thttpd-2.25b.ebuild 1186
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrr0QAiZjviIA2XgRAvHnAJ4777jXSRy5AkNDCrUEcEJ08cHslwCgtr//
-R2NQ5A7uIsUyVXBdRcy9XaA=
-=fU/6
+iD8DBQFDuEGHwUpWvClEHQoRAjxKAJ4sUH8Pjc0MK4H5jPASzV9PTkHBqACdEfca
+6DkTtVdnap7uDEBQxi2qONE=
+=I8s4
 -----END PGP SIGNATURE-----
