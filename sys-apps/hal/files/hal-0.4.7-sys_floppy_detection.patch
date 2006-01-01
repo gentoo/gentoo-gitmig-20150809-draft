@@ -1,6 +1,5 @@
-diff -x '*~' -uNr hal-0.4.7/hald/linux/platform_bus_device.c hal-0.4.7.patched/hald/linux/platform_bus_device.c
 --- hal-0.4.7/hald/linux/platform_bus_device.c	2004-11-22 22:53:50.000000000 +0100
-+++ hal-0.4.7.patched/hald/linux/platform_bus_device.c	2005-04-17 19:20:37.000000000 +0200
++++ hal-0.4.7-patched/hald/linux/platform_bus_device.c	2005-10-11 13:53:46.000000000 +0200
 @@ -66,7 +66,7 @@
  	if (strncmp (device->bus_id, "floppy", 6) != 0)
  		return FALSE;
@@ -10,3 +9,12 @@ diff -x '*~' -uNr hal-0.4.7/hald/linux/platform_bus_device.c hal-0.4.7.patched/h
  
  	/* get device file */
  	snprintf (fd_sysfs_path, sizeof (fd_sysfs_path), "%s/block/fd%d", 
+@@ -147,7 +147,7 @@
+ 	char device_file[256];
+ 	char fd_sysfs_path[256];
+ 
+-	sscanf (device->bus_id, "floppy%d", &number);
++	sscanf (device->bus_id, "%*[flopy.]%d", &number);
+ 	hal_device_property_set_int (d, "storage.legacy_floppy.number", number);
+ 
+ 	hal_device_property_set_string (d, "info.product", "Legacy Floppy Drive");
