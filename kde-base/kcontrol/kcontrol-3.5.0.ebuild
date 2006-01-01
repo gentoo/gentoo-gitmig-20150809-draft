@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.0.ebuild,v 1.5 2005/12/31 21:42:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.0.ebuild,v 1.6 2006/01/01 06:53:46 mr_bones_ Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -20,7 +20,7 @@ DEPEND=">=media-libs/freetype-2
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )"
 
 RDEPEND="${DEPEND}
-	sys-apps/usbutils	
+	sys-apps/usbutils
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 $(deprange $PV $MAXKDEVER kde-base/kdesu)
