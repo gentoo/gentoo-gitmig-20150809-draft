@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.1 2005/11/27 20:57:36 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.2 2006/01/01 01:14:59 swegener Exp $
 #
 # Author: Marien Zwart <marienz@gentoo.org>
 #
@@ -47,11 +47,11 @@ twisted_src_test() {
 
 twisted_src_install() {
 	distutils_src_install
-	
+
 	if [[ -d doc/man ]]; then
 		doman doc/man/*
 	fi
-	
+
 	if [[ -d doc ]]; then
 		insinto /usr/share/doc/${PF}
 		doins -r $(find doc -mindepth 1 -maxdepth 1 -not -name man)

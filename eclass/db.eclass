@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.21 2005/12/26 06:46:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.22 2006/01/01 01:14:59 swegener Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 IUSE="doc"
@@ -110,5 +110,5 @@ db_src_test() {
 		else
 			eerror "You must have USE=tcltk to run the sys-libs/db testsuite."
 		fi
-	fi	
+	fi
 }

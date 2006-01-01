@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.49 2005/11/04 23:45:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.50 2006/01/01 01:14:59 swegener Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -149,7 +149,7 @@ erubydoc() {
 		dohtml -r *
 	fi
 
-	if ( use examples ); then	
+	if ( use examples ); then
 		for dir in sample example examples; do
 			if [ -d ${dir} ] ; then
 				dodir /usr/share/doc/${PF}

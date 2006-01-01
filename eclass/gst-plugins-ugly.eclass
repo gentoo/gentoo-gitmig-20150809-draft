@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.3 2005/12/05 17:07:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.4 2006/01/01 01:14:59 swegener Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -9,9 +9,9 @@
 # eclass to make external gst-plugins emergable on a per-plugin basis
 # to solve the problem with gst-plugins generating far too much unneeded deps
 #
-# 3rd party applications using gstreamer now should depend on a set of plugins as 
-# defined in the source, in case of spider usage obtain recommended plugins to use from 
-# Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer 
+# 3rd party applications using gstreamer now should depend on a set of plugins as
+# defined in the source, in case of spider usage obtain recommended plugins to use from
+# Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer
 # or the gstreamer team.
 
 inherit eutils gst-plugins10
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 ###
 
 gst-plugins-ugly_src_configure() {
-	
+
 	# disable any external plugin besides the plugin we want
 	local plugin gst_conf
 
@@ -83,7 +83,7 @@ gst-plugins-ugly_src_unpack() {
 		makefiles="Makefile sys/Makefile sys/${GST_PLUGINS_BUILD_DIR}/Makefile"
 	elif [ -d "${S}/ext/${GST_PLUGINS_BUILD_DIR}" ]; then
 		makefiles="Makefile ext/Makefile ext/${GST_PLUGINS_BUILD_DIR}/Makefile"
-	fi				
+	fi
 	sed -e "s:ac_config_files=.*:ac_config_files='${makefiles}':" \
 		-i ${S}/configure
 

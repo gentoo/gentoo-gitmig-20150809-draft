@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.100 2005/12/09 22:25:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.101 2006/01/01 01:14:59 swegener Exp $
 
 
 # need access to emktemp()
@@ -322,7 +322,7 @@ test-flags-PROG() {
 
 	[[ -z ${comp} ]] && \
 		return 1
-	
+
 	for x in "$@" ; do
 		test-flag-${comp} "${x}" && flags="${flags} ${x}"
 	done
@@ -395,7 +395,7 @@ has_hardened() {
 	addwrite "/dev/stderr"
 	ewarn "has_hardened: deprecated, please use gcc-specs-{relro,now}()!" \
 		>/dev/stderr
-	
+
 	test_version_info Hardened && return 0
 	# The specs file wont exist unless gcc has GCC_SPECS support
 	[[ -f ${GCC_SPECS} && ${GCC_SPECS} != ${GCC_SPECS/hardened/} ]]
@@ -406,7 +406,7 @@ has_hardened() {
 has_pic() {
 	addwrite "/dev/stderr"
 	ewarn "has_pic: deprecated, please use gcc-specs-pie()!" >/dev/stderr
-	
+
 	[[ ${CFLAGS/-fPIC} != ${CFLAGS} || \
 	   ${CFLAGS/-fpic} != ${CFLAGS} || \
 	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__) ]]
@@ -417,7 +417,7 @@ has_pic() {
 has_pie() {
 	addwrite "/dev/stderr"
 	ewarn "has_pie: deprecated, please use gcc-specs-pie()!" >/dev/stderr
-	
+
 	[[ ${CFLAGS/-fPIE} != ${CFLAGS} || \
 	   ${CFLAGS/-fpie} != ${CFLAGS} || \
 	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__) || \
@@ -430,7 +430,7 @@ has_pie() {
 has_ssp_all() {
 	addwrite "/dev/stderr"
 	ewarn "has_ssp_all: deprecated, please use gcc-specs-ssp()!" >/dev/stderr
-	
+
 	# note; this matches only -fstack-protector-all
 	[[ ${CFLAGS/-fstack-protector-all} != ${CFLAGS} || \
 	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__) ]] || \
@@ -442,7 +442,7 @@ has_ssp_all() {
 has_ssp() {
 	addwrite "/dev/stderr"
 	ewarn "has_ssp: deprecated, please use gcc-specs-ssp()!" >/dev/stderr
-	
+
 	# note; this matches both -fstack-protector and -fstack-protector-all
 	[[ ${CFLAGS/-fstack-protector} != ${CFLAGS} || \
 	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP__) ]] || \
@@ -454,7 +454,7 @@ has_m64() {
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
 	# clean-up!
-	
+
 	local temp="$(emktemp)"
 	echo "int main() { return(0); }" > "${temp}".c
 	MY_CC=$(tc-getCC)

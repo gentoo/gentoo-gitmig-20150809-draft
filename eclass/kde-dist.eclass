@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.73 2005/11/23 11:43:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.74 2006/01/01 01:14:59 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -13,7 +13,7 @@ inherit kde
 # on mirror://gentoo
 if [ "$PV" == "3.5.0_rc1" ]; then
 	SRC_URI="$SRC_URI mirror://gentoo/$P.tar.bz2"
-else 
+else
 
 	# kde 3.1 prereleases have tarball versions of 3.0.6 ff
 	unset SRC_URI

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.1 2005/12/02 15:30:15 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.2 2006/01/01 01:14:59 swegener Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -9,9 +9,9 @@
 # eclass to make external gst-plugins emergable on a per-plugin basis
 # to solve the problem with gst-plugins generating far too much unneeded deps
 #
-# 3rd party applications using gstreamer now should depend on a set of plugins as 
-# defined in the source, in case of spider usage obtain recommended plugins to use from 
-# Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer 
+# 3rd party applications using gstreamer now should depend on a set of plugins as
+# defined in the source, in case of spider usage obtain recommended plugins to use from
+# Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer
 # or the gstreamer team.
 
 inherit eutils
@@ -34,7 +34,7 @@ GST_PLUGINS_BUILD=${PN/gst-plugins-/}
 # Actual build dir, is the same as the configure switch name most of the time
 GST_PLUGINS_BUILD_DIR=${PN/gst-plugins-/}
 
-# general common gst-plugins ebuild entries 
+# general common gst-plugins ebuild entries
 DESCRIPTION="${BUILD_GST_PLUGINS} plugin for gstreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.10 2005/12/23 03:46:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.11 2006/01/01 01:14:59 swegener Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -25,7 +25,7 @@ RDEPEND="|| ( ( x11-libs/libXrender
 	>=dev-libs/glib-2.8.2
 	>=x11-libs/pango-1.10.1
 	>=dev-libs/libIDL-0.8.0
-	gnome? ( >=gnome-base/gnome-vfs-2.3.5 
+	gnome? ( >=gnome-base/gnome-vfs-2.3.5
 		 >=gnome-base/libgnomeui-2.2.0 )
 	 !<x11-base/xorg-x11-6.7.0-r2
 	>=x11-libs/cairo-1.0.0"
@@ -69,5 +69,5 @@ mozconfig_config() {
 	if ! use gnome; then
 		mozconfig_annotate -gnome --disable-gnomevfs
 		mozconfig_annotate -gnome --disable-gnomeui
- 	fi
+	fi
 }

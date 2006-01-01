@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.127 2005/12/25 12:38:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.128 2006/01/01 01:14:59 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -423,7 +423,7 @@ deprange-list() {
 	# Assign, parse params
 	local MINVER=$1; shift
 	local MAXVER=$1; shift
-	
+
 	# Workaround for 3.5.0_beta1 ebuilds being mistakenly versioned as 3.5_beta1
 	# Ugly kludge, but will disappear once 3.5 prerelease ebuilds are removed from portage
 	if [ "$MINVER" == "3.5_beta1" ]; then
@@ -434,7 +434,7 @@ deprange-list() {
 	if [ "$MAXVER" == "3.5_beta1" ]; then
 		MAXVER="3.5.0_beta1"
 	fi
-	
+
 	# Get base version - the major X.Y components
 	local BASEVER=${MINVER%.*}
 	if [ "${MAXVER%.*}" != "$BASEVER" ]; then
@@ -517,12 +517,12 @@ deprange-list() {
 						$(deprange-iterate-numbers $BASE ${MINREV#r} 99)"
 			fi
 		fi
-		
+
 		# second part of kludge
 		if [ -n "$FINALOPTIONVER" ]; then
 			NEWDEP="$NEWDEP ~$PACKAGE-$FINALOPTIONVER"
 		fi
-		
+
 		# Output
 		echo -n $NEWDEP
 	done
