@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gnutu
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnutu/ChangeLog,v 1.1 2005/10/03 03:53:24 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnutu/ChangeLog,v 1.2 2006/01/01 09:48:23 chriswhite Exp $
+
+  01 Jan 2006; Chris White <chriswhite@gentoo.org> gnutu-2.0.ebuild:
+  Fix bug #110163.
 
 *gnutu-2.0 (03 Oct 2005)
 
