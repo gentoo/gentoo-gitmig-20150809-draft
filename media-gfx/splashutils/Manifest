@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9bb520965d955a7a145093568fd90291 ChangeLog 10633
+MD5 5ec8c2cf825cc9d46c3af773c325539a ChangeLog 10838
 MD5 c518e5f1875064cb0c5784f53f9db7f5 files/digest-splashutils-1.1.9.10 484
 MD5 c55d25b2df1c791c0fa802c0de31af73 files/digest-splashutils-1.1.9.8 547
 MD5 227086af2d5e8360c3e2f23cdbfb97eb files/digest-splashutils-1.1.9.9 548
@@ -9,14 +9,14 @@ MD5 887e148191dfd124be52f9682e391c78 files/digest-splashutils-1.1.9.9-r1 483
 MD5 6b70ab6899c37465a35de0f0a89c6365 files/splashutils-1.1.9.10-ppc-2.6.14.patch 749
 MD5 c9591cbde5eca614a8e1694ee01c315f files/splashutils-1.1.9.9-external-klibc.patch 10294
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
-MD5 49dce03a53018b483790a604c1745a4d splashutils-1.1.9.10.ebuild 6327
-MD5 4180e756570d9f26db82b36b42c8cbc3 splashutils-1.1.9.8.ebuild 6287
-MD5 1b03f7bbbe2db156b7b1a54d51d76ea0 splashutils-1.1.9.9-r1.ebuild 6234
-MD5 98fd11c248eba6f1f945bc2d7e530664 splashutils-1.1.9.9.ebuild 6323
+MD5 64db639a2854eaa23b8a99b3b082bdb3 splashutils-1.1.9.10.ebuild 6327
+MD5 9785bee866b43127ceca9afb2f6a43c0 splashutils-1.1.9.8.ebuild 6286
+MD5 5f8319fd074ac5de37ec12c05c8f74f5 splashutils-1.1.9.9-r1.ebuild 6234
+MD5 73f3bf2ab8637a3e274bb7000397a652 splashutils-1.1.9.9.ebuild 6323
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgOUschej4aZK9/cRAjH4AJ9FG34BrxVesp4OwTrTMo76m97dSgCfSQpI
-XnPQ09IEJrA40Z0ASO2xheQ=
-=rRBG
+iD8DBQFDuF7gchej4aZK9/cRAkXwAJ45V2tcRWWCrD7sNeGdm0JiZDJ0gACgh8gu
+DVDL+3i3eQCtas9zKu8fJyg=
+=MpvZ
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9.ebuild,v 1.1 2005/08/21 19:52:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9.ebuild,v 1.2 2006/01/01 22:59:20 spock Exp $
 
 inherit multilib linux-mod
 
@@ -179,7 +179,7 @@ pkg_postinst() {
 	if has_version sys-fs/devfsd || ! has_version sys-fs/udev ; then
 		ewarn "This package has been designed with udev in mind. Other solutions, such as"
 		ewarn "devfs or a static /dev tree might work, but are generally discouraged and"
-		ewarn "not supported. If you decice to switch to udev, you might want to have a"
+		ewarn "not supported. If you decide to switch to udev, you might want to have a"
 		ewarn "look at 'The Gentoo udev Guide', which can be found at"
 		ewarn "  http://www.gentoo.org/doc/en/udev-guide.xml"
 		echo ""
