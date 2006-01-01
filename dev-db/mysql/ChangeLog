@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.289 2005/12/30 20:21:05 vivo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.290 2006/01/01 19:00:29 vivo Exp $
+
+  01 Jan 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.16-r30.ebuild,
+  mysql-5.0.18-r30.ebuild, mysql-5.1.4_alpha-r30.ebuild:
+  switching to eclass based ebuilds, initially only for masked *-r30.
+  the code has been mostly cutted and pasted, but there are few changes like:
+  - removal of tests deleted based on USE flags, this need to be addressed
+    differently
+  - fixed typos in code moving files from /usr/share/mysql
 
   30 Dec 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.16.ebuild,
   mysql-5.0.17.ebuild, mysql-5.0.18.ebuild:
