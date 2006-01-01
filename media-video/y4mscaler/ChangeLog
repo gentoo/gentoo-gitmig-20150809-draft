@@ -1,0 +1,11 @@
+# ChangeLog for media-video/y4mscaler
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.1 2006/01/01 19:01:26 chriswhite Exp $
+
+*y4mscaler-9.0 (01 Jan 2006)
+
+  01 Jan 2006; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +y4mscaler-9.0.ebuild:
+  Initial commit to the tree. Thanks to Sebastian for the ebuild. Closes bug
+  #113320.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 81a2983b2c2f96ef74ae0596593c6cd7 ChangeLog 429
+MD5 38f8b444e3774229c3381f8232786da8 files/digest-y4mscaler-9.0 65
+MD5 2279bae77cae407daabe6f46b82f6782 metadata.xml 295
+MD5 74ed5f9608822055e4076a33c9a0e202 y4mscaler-9.0.ebuild 805
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuCccFdQwWVoAgN4RAgB5AKCkbrGfn95U8MSe3xLnyTvTcuJ31gCg7bnZ
+Sxs1DXSfTUUuZtJc0FLv8lU=
+=qGSB
+-----END PGP SIGNATURE-----
