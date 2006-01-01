@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/argtable-2.4.ebuild,v 1.5 2005/07/03 00:57:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/argtable-2.4.ebuild,v 1.6 2006/01/01 20:36:34 metalgod Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc debug"
 
 RDEPEND="virtual/libc"
