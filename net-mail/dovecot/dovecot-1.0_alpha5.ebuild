@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_alpha5.ebuild,v 1.1 2005/12/14 23:32:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_alpha5.ebuild,v 1.2 2006/01/01 01:28:30 swegener Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_compile() {
 #	if [[ ${KERNEL} == "linux" ]] ; then
 #		# epoll is too unstable
 #		# myconf="${myconf} --with-ioloop=epoll"
-#		if has_version ">=linux-headers-2.6.13" ; then
+#		if has_version ">=sys-kernel/linux-headers-2.6.13" ; then
 #			myconf="${myconf} --with-notify=inotify"
 #		fi
 #	fi
