@@ -1,0 +1,50 @@
+# ChangeLog for dev-php/propel-runtime
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-runtime/ChangeLog,v 1.1 2006/01/01 16:31:45 sebastian Exp $
+
+  01 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +propel-runtime-1.1.1.ebuild:
+  Moved from dev-php/propel-runtime to dev-php5/propel-runtime.
+
+  12 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  propel-runtime-1.1.1.ebuild:
+  Added ~amd64 to KEYWORDS
+
+*propel-runtime-1.1.1 (18 Sep 2005)
+
+  18 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -propel-runtime-1.1.0.ebuild, +propel-runtime-1.1.1.ebuild:
+  Version bump.
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-runtime-1.1.0.ebuild:
+  Use new PEAR eclass.
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-runtime-1.1.0.ebuild:
+  Fix (R)DEPEND, KEYWORDS.
+
+  07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-runtime-1.1.0.ebuild:
+  Changed RDEPEND from dev-php/php-5 to dev-lang/php-5.
+
+  18 Apr 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -propel-runtime-1.0.0.ebuild:
+  Remove old version.
+
+  12 Apr 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-runtime-1.1.0.ebuild:
+  Correct RDEPEND.
+
+*propel-runtime-1.1.0 (12 Apr 2005)
+
+  12 Apr 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +propel-runtime-1.1.0.ebuild:
+  Version bump.
+
+*propel-runtime-1.0.0 (15 Mar 2005)
+
+  15 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +propel-runtime-1.0.0.ebuild:
+  New ebuild.
+
