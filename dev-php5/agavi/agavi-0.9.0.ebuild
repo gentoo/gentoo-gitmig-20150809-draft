@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-0.9.0.ebuild,v 1.1 2006/01/01 17:07:01 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-0.9.0.ebuild,v 1.2 2006/01/01 17:09:55 sebastian Exp $
 
-inherit php-pear-r1 depend.php
+inherit php-pear-lib-r1
 
 DESCRIPTION="PHP5 MVC Application Framework"
 HOMEPAGE="http://www.agavi.org/"
@@ -13,4 +13,4 @@ IUSE=""
 SRC_URI="http://agavi.org/packages/agavi-${PV}.tgz"
 RDEPEND="dev-php5/phing"
 
-need_php5
+need_php_by_category

@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 37fee9072097b637cae71d4cf8c897a1 ChangeLog 579
-MD5 cb19d31a8934c08943603c552ce21588 agavi-0.9.0.ebuild 476
+MD5 897e66eb31e78ab83bad99fe5b1aab96 agavi-0.9.0.ebuild 480
 MD5 afb69137f1428c46bedf82a75e81e9b2 files/digest-agavi-0.9.0 59
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuAzGaGfFFLhbXWkRAgEWAJ4rV993PT20tHM1Jh6ULvBpNumJtQCdHUf9
-WtM4LjPogqGoYp+vVWDAM0c=
-=sb9q
+iD8DBQFDuA16aGfFFLhbXWkRAiu3AJ4qxqbWrW2qifvcALAwX+dAvAqLYACfTI/e
+cInKEeE4NkdKWzHKLNHeYv8=
+=wKM/
 -----END PGP SIGNATURE-----
