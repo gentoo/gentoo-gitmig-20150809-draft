@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1cdc7005046affdc1d26ae4eab25cfaa ChangeLog 3355
+MD5 6f4ac7a5c125116c52bd2f70af0991f1 ChangeLog 3441
 MD5 31b7f2b76ad7e9a08cc667b9a9bc3d03 XML-Twig-3.15-r1.ebuild 895
-MD5 31154d87762ebbe1bc42224f45e7e1aa XML-Twig-3.17.ebuild 897
+MD5 7c1439582fa9c96b7d941ebb6abab010 XML-Twig-3.17.ebuild 893
 MD5 d2de9e4232a0687bb1b4bcfbfa2502bc XML-Twig-3.22.ebuild 911
 MD5 1fb0a4337cd1790f985254554e63c386 files/digest-XML-Twig-3.15-r1 65
 MD5 fb18504ea1cc505df6fe7238af257354 files/digest-XML-Twig-3.17 65
 MD5 dba3902bce11678531c89e591a368bb9 files/digest-XML-Twig-3.22 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtRamtG5z4I8BtQoRAsPRAJ9Vhxa8u7gp9ADuSRDt0hEtaj8mGACfR5i4
-qNPpOOFOggd9I+51rJriHds=
-=Kj1I
------END PGP SIGNATURE-----
