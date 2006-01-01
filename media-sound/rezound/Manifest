@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bdf9c2b6b2caa86db95c525b576af421 ChangeLog 4394
-MD5 44f0e2e19d5fba62154e7a685f8b8d8e rezound-0.12.0_beta.ebuild 2085
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 3bc1175bcfa6d88bbe86f84556db560c files/undefined-functions.patch 1084
+MD5 6a6188d20a16ffa3681fb402c0a8dc2a ChangeLog 4532
 MD5 eaabd57938c6ccc9beb2a34516dd6da6 files/digest-rezound-0.12.0_beta 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIYvkj5H05b2HAEkRAsmzAJ9CkFGdAJ3xr8AMU5Ju+KrvxOT9qwCfb0Yb
-ZQmHsu9AFQYlS7t5hCZ2pz8=
-=TgpK
------END PGP SIGNATURE-----
+MD5 d894b3a79a2e8a1d29d06f4560737e92 files/digest-rezound-0.12.2_beta 71
+MD5 3bc1175bcfa6d88bbe86f84556db560c files/undefined-functions.patch 1084
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+MD5 44f0e2e19d5fba62154e7a685f8b8d8e rezound-0.12.0_beta.ebuild 2085
+MD5 655ed33c913cfb574a10edae4b8e5856 rezound-0.12.2_beta.ebuild 2082
