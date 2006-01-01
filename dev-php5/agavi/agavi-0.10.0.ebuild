@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-0.9.0.ebuild,v 1.2 2006/01/01 17:09:55 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-0.10.0.ebuild,v 1.1 2006/01/01 17:40:06 sebastian Exp $
 
 inherit php-pear-lib-r1
 
