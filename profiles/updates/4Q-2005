@@ -31,3 +31,4 @@ move dev-php/propel dev-php5/propel
 move dev-php/propel-generator dev-php5/propel-generator
 move dev-php/propel-runtime dev-php5/propel-runtime
 move dev-php/phing dev-php5/phing
+move dev-php/PEAR-PHPUnit2 dev-php5/PEAR-PHPUnit2
