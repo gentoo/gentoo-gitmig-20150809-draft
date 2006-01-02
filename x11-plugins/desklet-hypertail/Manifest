@@ -1,4 +1,14 @@
-MD5 843f2cda7b000b2031f57402c31d59cb desklet-hypertail-2.01-r1.ebuild 725
-MD5 dd88e54b08bc27f7061c335ff6dae166 ChangeLog 886
-MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4dca094f9966b19c4e4fe5559aee0c07 ChangeLog 1016
+MD5 d2169d1868047d8e2726857ad17d8d7f desklet-hypertail-2.01-r1.ebuild 731
 MD5 b5c9a31f656c3ac5d4301d2faa0a2ba1 files/digest-desklet-hypertail-2.01-r1 66
+MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuXKEwUpWvClEHQoRAgwfAJ9u7UCccikexvDyLahqBLt74X4AugCeKKHe
+/O7c/P2Ac8QW6xLnW/EfOJg=
+=+fEU
+-----END PGP SIGNATURE-----
