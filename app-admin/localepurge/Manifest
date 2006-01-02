@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a52a7de206bbbfde29708258165b2b89 ChangeLog 1993
+MD5 618f7591d668e8b72bdc0a4b0d1bff1c ChangeLog 2090
 MD5 d7fe0953341216f9199028ff2999683d files/digest-localepurge-0.2-r2 66
 MD5 d8bc8acfd4a18ebb716eb9f45bc7744c files/digest-localepurge-0.4 63
 MD5 28715bbee1287aaa0b9862d721c662c1 files/digest-localepurge-0.5 63
 MD5 cb256ea84aaf9e56176ce0b3e7541ef9 localepurge-0.2-r2.ebuild 793
 MD5 81f3166d16b551ea01f01781da950839 localepurge-0.4.ebuild 793
-MD5 7256ba8231e7c3c97171f1c3e22708e4 localepurge-0.5.ebuild 799
+MD5 965760fe5520642353e49b3db8b99d00 localepurge-0.5.ebuild 798
 MD5 d248960caf4334af6c71bf9199df1606 metadata.xml 394
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtk2s2+ySkm8kpY0RAkR3AKCUs8lbUz4zcfSzyZDxnYq/zjbINACgvWFN
-079GG8Bs5YpTuTNWqX1skWM=
-=P9QM
------END PGP SIGNATURE-----
