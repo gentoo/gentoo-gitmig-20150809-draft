@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 266b9d9a9649ad5417f5550b5a583233 astime-2.8.ebuild 720
-MD5 9ac17155e1d2b7b2bc2338f3b02914bc ChangeLog 883
-MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163
+MD5 ddd8a5038ac2a33567e0f8bb0bbaefbd ChangeLog 995
+MD5 8a1761ecee0522d175c61e8a0b5ec4f3 astime-2.8.ebuild 704
 MD5 f0fa39b40fbb62aee75a31e80dfd93c0 files/digest-astime-2.8 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrYdDEZCkKN40op4RAgKrAKCDwbI2ldUo6dvi9SczCLvRhPRvKgCgwJwK
-lVVJWLPL3Pc8nLuMJYjHgNw=
-=MqQ6
------END PGP SIGNATURE-----
+MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163
