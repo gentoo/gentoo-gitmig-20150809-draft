@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dbus
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.76 2005/12/31 12:24:01 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.77 2006/01/02 08:34:43 cardoe Exp $
+
+*dbus-0.60-r2 (02 Jan 2006)
+
+  02 Jan 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/dbus-0.60-gcj.patch, +files/dbus-0.60-mono-docs.patch,
+  +files/dbus-0.60-qt.patch, +files/dbus-0.60-qt-pc.patch,
+  -dbus-0.60-r1.ebuild, +dbus-0.60-r2.ebuild:
+  Fixed gcj issues. Fixed QT issues (except QT4 support, only QT3 support).
+  Added dbus-qt-1.pc file. Fixed issues when USE="doc mono".
 
   31 Dec 2005; Markus Rothe <corsair@gentoo.org> dbus-0.23.4-r1.ebuild:
   Stable on ppc64

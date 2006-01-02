@@ -1,0 +1,16 @@
+diff -uNr dbus-0.60/configure.in dbus-0.60-qt4.patch/configure.in
+--- dbus-0.60/configure.in	2005-11-23 05:42:49.000000000 +0900
++++ dbus-0.60-qt4.patch/configure.in	2005-12-04 15:57:45.024369184 +0900
+@@ -932,7 +932,11 @@
+ 
+ 
+ dnl Qt3 detection
+-AC_PATH_PROG(QT3_MOC, moc, no)
++if test -n "$QTDIR" -a -f "$QTDIR/bin/moc"; then
++    QT3_MOC="$QTDIR/bin/moc"
++else
++    AC_PATH_PROG(QT3_MOC, moc, no)
++fi
+ 
+ have_qt3=no
+ AC_MSG_CHECKING([for qglobal.h])

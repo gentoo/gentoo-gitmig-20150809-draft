@@ -1,0 +1,9 @@
+--- gcj/Makefile.am	2003-06-23 17:39:48.000000000 +0000
++++ gcj/Makefile.am.new	2005-12-21 17:15:14.000000000 +0000
+@@ -1,5 +1,5 @@
+ SUBDIRS=org
+-JAR=jar
++JAR=gcj-jar
+ 
+ CLEANFILES=dbus-1.jar
+ 

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r1.ebuild,v 1.2 2005/12/26 15:02:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r2.ebuild,v 1.1 2006/01/02 08:34:43 cardoe Exp $
 
-inherit eutils mono python multilib debug qt3
+inherit eutils mono python multilib debug qt3 autotools
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X doc gcj gtk mono python qt xml2"
+IUSE="doc gcj gtk mono python qt X xml2"
 
 RDEPEND=">=dev-libs/glib-2.6
 	X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
@@ -39,6 +39,22 @@ pkg_setup() {
 	PKG_CONFIG_PATH="${QTDIR}/lib/pkgconfig"
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix gcj
+	epatch "${FILESDIR}"/${PN}-0.60-gcj.patch
+	# Fix QT
+	epatch "${FILESDIR}"/${PN}-0.60-qt.patch
+	# Fix .pc file for QT
+	epatch "${FILESDIR}"/${PN}-0.60-qt-pc.patch
+	# Fix Mono Docs
+	epatch "${FILESDIR}"/${PN}-0.60-mono-docs.patch
+
+	eautoreconf
+}
+
 src_compile() {
 	local myconf=""
 
@@ -53,9 +69,9 @@ src_compile() {
 	use mono && myconf="${myconf} $(use_enable doc mono-docs)"
 
 	if use qt; then
-		myconf="${myconf} --enable-qt=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
+		myconf="${myconf} --enable-qt3=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
 	else
-		myconf="${myconf} --disable-qt"
+		myconf="${myconf} --disable-qt --disable-qt3"
 	fi
 
 	econf \
@@ -81,31 +97,19 @@ src_compile() {
 	# Don't build the mono examples, they require gtk-sharp
 	touch ${S}/mono/example/{bus-listener,echo-{server,client}}.exe
 
-	# this gets around a lib64 sandbox bug. note that this addpredict is
-	# added automatically by sandbox.c for lib.
-	addpredict /usr/lib64/python2.4/
-	addpredict /usr/lib64/python2.3/
-	addpredict /usr/lib64/python2.2/
-	addpredict /usr/lib64/python2.1/
-
 	emake || die "make failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	# Backwards compatibility for old stuff
-	# we can remove this when dbi (plural of dbus)
-	# <0.30 aren't in the tree
-	dosym /usr/bin/dbus-daemon /usr/bin/dbus-daemon-1
-
 	# initscript
-	doinitd ${FILESDIR}/dbus
+	doinitd "${FILESDIR}"/dbus
 
 	# dbus X session script (#77504)
 	# FIXME : turns out to only work for GDM, better solution needed
 	exeinto /etc/X11/xinit/xinitrc.d/
-	doexe ${FILESDIR}/30-dbus
+	doexe "${FILESDIR}"/30-dbus
 
 	# needs to exist for the system socket
 	keepdir /var/run/dbus
@@ -121,7 +125,18 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup messagebus || die "Problem adding messagebus group"
-	enewuser messagebus -1 "-1" /dev/null messagebus || die "Problem adding messagebus user"
+	enewuser messagebus -1 "-1" -1 messagebus || die "Problem adding messagebus user"
+
+	ewarn
+	ewarn "Time to show everyone what Gentoo ~ARCH really means..."
+	ewarn "This package breaks API/ABI compat with several packages"
+	ewarn "Please follow the tracker bug at:"
+	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=114463"
+	ewarn "to make sure no apps you have are affected until they"
+	ewarn "are fixed by their maintainers."
+	ewarn
+	ebeep 3
+	sleep 5
 }
 
 pkg_postrm() {

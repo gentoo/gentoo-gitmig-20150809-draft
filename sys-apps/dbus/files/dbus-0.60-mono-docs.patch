@@ -1,0 +1,14 @@
+diff -Nur dbus-0.60/mono/doc/Makefile.am dbus-0.60-new/mono/doc/Makefile.am
+--- dbus-0.60/mono/doc/Makefile.am	2005-06-16 00:32:50.000000000 -0400
++++ dbus-0.60-new/mono/doc/Makefile.am	2006-01-02 03:05:40.000000000 -0500
+@@ -22,7 +22,9 @@
+ ASSEMBLER = $(MONODOC) --assemble
+ UPDATER = $(MONODOC) --update
+ 
+-dbus-sharp-docs.zip dbus-sharp-docs.tree: $(srcdir)/en/*/*.xml $(srcdir)/en/*.xml
++dbus-sharp-docs.zip: dbus-sharp-docs.tree
++
++dbus-sharp-docs.tree: $(srcdir)/en/*/*.xml $(srcdir)/en/*.xml
+ 	$(ASSEMBLER) --ecma $(srcdir)/en -o dbus-sharp-docs
+ 
+ update:
