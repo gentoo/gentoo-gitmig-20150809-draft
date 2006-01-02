@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4814 2006/01/02 11:26:17 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4815 2006/01/02 15:52:31 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -248,10 +248,6 @@ net-wireless/kwirelessmonitor
 # Diego Pettenò <flameeyes@gentoo.org> (02 Dec 2005)
 # API/ABI changes, breaks at least latest amaroK.
 >=media-libs/tunepimp-0.4.0
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (30 Nov 2005)
-# API/ABI changes, this may break stuff
->=sys-apps/dbus-0.60
 
 # Marcelo Goes <vanquirius@gentoo.org> (28 Nov 2005)
 # rpath security issue
