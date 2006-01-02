@@ -1,0 +1,31 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-bfin/gcc-bfin-2005.3.1.ebuild,v 1.1 2006/01/02 04:17:27 vapier Exp $
+
+[[ ${CTARGET} != bfin* ]] && export CTARGET="bfin-elf"
+GCC_A_FAKEIT=${A}
+export USE="nocxx -fortran -gcj -objc -multilib"
+
+ETYPE="gcc-compiler"
+
+SPLIT_SPECS=false
+TOOLCHAIN_GCC_PV=3.4.4
+inherit toolchain eutils
+
+STUPID_STAMP="596"
+MY_PV="3.4-2005R3.1"
+DESCRIPTION="Compiler for Blackfin targets"
+HOMEPAGE="http://blackfin.uclinux.org/"
+SRC_URI="http://blackfin.uclinux.org/frs/download.php/${STUPID_STAMP}/bfin-gcc-${MY_PV}.tar.gz"
+
+KEYWORDS="-* ~amd64 ~x86"
+
+DEPEND="${CATEGORY}/binutils-bfin"
+
+S=${WORKDIR}/bfin-gcc-${MY_PV}/gcc-3.4
+
+src_unpack() {
+	toolchain_src_unpack
+	# workaround for parallel build issue
+	rm "${S}"/gcc/gengtype-yacc.c
+}
