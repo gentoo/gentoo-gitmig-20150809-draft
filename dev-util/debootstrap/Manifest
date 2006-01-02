@@ -5,7 +5,7 @@ MD5 ea6ac032c46650653d48b17b65a8d832 ChangeLog 2770
 MD5 422abd3076e30f5df3d545e41fa39cbf debootstrap-0.2.41.ebuild 832
 MD5 6745dd1182b69492cbfaa09c2612364d debootstrap-0.2.45-r1.ebuild 808
 MD5 33075c04a2d1f0834913fd1b72c7b323 debootstrap-0.2.45.ebuild 827
-MD5 a35386c4d048efb72b7fcaa930bf572f debootstrap-0.3.2.2.ebuild 818
+MD5 17e2a46e747b2217e9af3555592e1d87 debootstrap-0.3.2.2.ebuild 828
 MD5 3645961adfa8ca0fedba837f677d623c files/digest-debootstrap-0.2.41 131
 MD5 a6ff3d4eafa9f103d12d1427399e6ba6 files/digest-debootstrap-0.2.45 127
 MD5 87e52d4186fe402689fd0ee696bcafd8 files/digest-debootstrap-0.2.45-r1 131
@@ -14,7 +14,7 @@ MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeVIRgIKl8Uu19MoRAqhOAJ4xMfhGU612BTIFo7S7JAYhl0noCgCfYmlS
-gwjsfPjggpQaBteQSSI9b9Q=
-=bJS8
+iD8DBQFDuKnj2+ySkm8kpY0RAn4cAJ4sSlALWrj2Bk0HTcqAUEVaBFRl7ACff/ou
+aNnBbKXLyyQnUiibdawRvhw=
+=QHT4
 -----END PGP SIGNATURE-----
