@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/libsvm
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.1 2006/01/02 20:20:41 usata Exp $
+
+*libsvm-2.81 (02 Jan 2006)
+
+  02 Jan 2006; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +libsvm-2.81.ebuild:
+  Initial import. This closes bug #111898.
+
