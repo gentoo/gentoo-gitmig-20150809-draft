@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r2.ebuild,v 1.2 2005/12/14 14:09:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r2.ebuild,v 1.3 2006/01/02 18:12:11 hansmi Exp $
 
 inherit flag-o-matic eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://icculus.org/d2x/src/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE="cdinstall debug opengl ggi svga"
 
 RDEPEND="media-libs/libsdl
