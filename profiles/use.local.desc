@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1642 2006/01/01 11:56:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1643 2006/01/02 01:09:55 josejx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -112,6 +112,7 @@ app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim-svn:immqt - Enable immodule for Qt support
 app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
+app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
