@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dca8ab7f7b6d7fcea6fd1bc29250986 ChangeLog 2297
+MD5 ef1e58d23085c93663f3c64288964d27 ChangeLog 2399
 MD5 96232179b747a1bcacf83442f9217ec4 files/5.2-alpha.patch 329
 MD5 a9e8cf348af5828fbdc72e8c1a3bb730 files/5.2-sundries.patch 874
 MD5 ba2c02768a2e772c14e6332dd6b2e65e files/5.2.4-sundries.patch 752
@@ -16,11 +13,4 @@ MD5 e3a3640b31e70f2956ed8ed4bb39f04a files/watchdog-5.2.4_p5-uclibc.patch 312
 MD5 4de4839057a43617fb483f691555ac09 files/watchdog.conf.d 270
 MD5 c58db060ae5f8ffd1d141930b0c7c02c metadata.xml 219
 MD5 a5b1a7192c34c50ca11ed6510c19d871 watchdog-5.2.4.ebuild 1311
-MD5 20a77ec33ab9ad1322d4f79af8e90fea watchdog-5.2.4_p5.ebuild 1472
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtk6q2+ySkm8kpY0RAjTQAKCPqQrqLywWJvT2F/BJsdSky1BqkgCff8ZX
-vvQ9PEudm/SGPf6+kFfmJJE=
-=fQb0
------END PGP SIGNATURE-----
+MD5 baa3db82e5f346d69be6bee08bc63ff0 watchdog-5.2.4_p5.ebuild 1471
