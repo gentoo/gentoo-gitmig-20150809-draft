@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/ipod-sharp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.3 2005/12/07 13:03:29 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.4 2006/01/02 15:54:01 metalgod Exp $
+
+  02 Jan 2006; Luis Medinas <metalgod@gentoo.org> ipod-sharp-0.5.12.ebuild:
+  This version needs >=mono-1.1.10. Thanks to Sanford Armstrong
+  <sanfordarmstrong@gmail.com> for the report on bug #117453.
 
   07 Dec 2005; Herbie Hopkins <herbs@gentoo.org> ipod-sharp-0.5.12.ebuild:
   Marked ~amd64.
