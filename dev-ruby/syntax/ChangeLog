@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.2 2005/10/22 13:30:22 twp Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.3 2006/01/02 21:29:38 caleb Exp $
+
+  02 Jan 2006; Caleb Tennis <caleb@gentoo.org> syntax-1.0.0.ebuild:
+  x86 stable
 
 *syntax-1.0.0 (22 Oct 2005)
 
