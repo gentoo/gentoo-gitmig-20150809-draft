@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.3 2005/12/25 15:43:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.4 2006/01/02 20:08:08 usata Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -15,9 +15,21 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~amd64 ~ppc64"
 IUSE="motif cjk xgetdefault linuxkeys"
 
-DEPEND="virtual/libc
-	virtual/x11
+RDEPEND="virtual/libc
+	|| ( (
+		x11-libs/libX11
+		x11-libs/libXpm
+		x11-libs/libXext
+		)
+		virtual/x11
+	)
 	motif? ( x11-libs/openmotif )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		)
+		virtual/x11
+	)"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -32,7 +44,7 @@ src_unpack() {
 		fi
 	fi
 
-	uclibctoolize
+	elibtoolize
 }
 
 src_compile() {
