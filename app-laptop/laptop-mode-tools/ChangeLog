@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/laptop-mode-tools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.21 2005/12/14 18:26:12 brix Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.22 2006/01/02 15:14:58 brix Exp $
+
+*laptop-mode-tools-1.11-r1 (02 Jan 2006)
+
+  02 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/laptop-mode-tools-1.11-cpu-governor.patch,
+  +laptop-mode-tools-1.11-r1.ebuild:
+  Fix setting CPU governor, bug #117385. Thanks to Alessandro Guido.
 
   14 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
   -files/laptop-mode-tools-1.10-init.d, -laptop-mode-tools-1.10.ebuild:
