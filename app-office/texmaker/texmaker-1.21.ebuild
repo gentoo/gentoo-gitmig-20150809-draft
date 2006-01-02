@@ -1,13 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.2.1.ebuild,v 1.1 2005/12/07 14:06:36 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.1 2006/01/02 18:02:05 nattfodd Exp $
 
-inherit qt4 eutils
+inherit qt4 eutils versionator
 
 DESCRIPTION="a nice LaTeX-IDE"
 
+# The upstream version numbering is bad, so we have to remove a dot in the
+# minor version number
+MAJOR="$(get_major_version)"
+MINOR_1="$(($(get_version_component_range 2)/10))"
+MINOR_2="$(($(get_version_component_range 2)%10))"
+MY_P="${PN}-${MAJOR}.${MINOR_1}.${MINOR_2}"
 HOMEPAGE="http://www.xm1math.net/texmaker/"
-SRC_URI="http://www.xm1math.net/texmaker/${P}.tar.bz2"
+SRC_URI="http://www.xm1math.net/texmaker/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 

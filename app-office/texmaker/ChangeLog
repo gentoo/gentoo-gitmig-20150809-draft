@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmaker
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.9 2005/12/07 14:06:36 nattfodd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.10 2006/01/02 18:02:05 nattfodd Exp $
+
+*texmaker-1.21 (02 Jan 2006)
+
+  02 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  -texmaker-1.2.1.ebuild, +texmaker-1.21.ebuild:
+  Changed numbering from 1.2.1 to 1.21 for portage to realize that this is the
+  latest version (closing bug #114037).
 
 *texmaker-1.2.1 (07 Dec 2005)
 
