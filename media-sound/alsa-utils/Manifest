@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 654338c84760cc39ace9701cb29c3837 ChangeLog 19358
-MD5 8a8746e7bd70831475fe561bcdbf2844 alsa-utils-1.0.10.ebuild 2418
+MD5 04efe861ba3d3cb11d46720e2d670efa ChangeLog 19541
+MD5 4a7c0e15e90b5283855fb969a220c85c alsa-utils-1.0.10.ebuild 2420
 MD5 8e9e89032a9705095a4f28b1034d05cd alsa-utils-1.0.10_rc2.ebuild 2588
 MD5 13f8ee3120f13e393a218955f2b3ac62 alsa-utils-1.0.10_rc3.ebuild 2582
-MD5 a91a16ccf031d3069f9f58a05d362b11 alsa-utils-1.0.11_rc1.ebuild 2512
-MD5 b5a2b59f5d60c677209b1e867a6da4ad alsa-utils-1.0.11_rc2.ebuild 2428
+MD5 42098df4cac5e904a14bf519e7cbfcb6 alsa-utils-1.0.11_rc1.ebuild 2511
+MD5 5d8368331e88ae9656d9a0cc1a518f94 alsa-utils-1.0.11_rc2.ebuild 2427
 MD5 a2a37bf9cb817343a6a58e20cfea9bb8 alsa-utils-1.0.7.ebuild 2272
 MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
 MD5 d9b19e1fc31acdd0b7091ce79400ce85 alsa-utils-1.0.9a-r1.ebuild 2525
@@ -30,9 +30,9 @@ MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
 MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a-r1 70
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDuTFaAiZjviIA2XgRAs4OAKCzVnTz7ZPVq0tvvF5KfPr75jxwLgCgkDTh
-ZjvNW4vku0NlckW5YYzJ/J0=
-=oOnC
+iD8DBQFDuZK8KRy60XGEcJIRArAhAJ0WbQJhgzbIlXuFHQcdvU4gO4gKTACgqHp/
+al98TRzOFmp4YpiKkb/TMEg=
+=4Hdl
 -----END PGP SIGNATURE-----
