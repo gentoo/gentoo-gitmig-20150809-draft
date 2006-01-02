@@ -1,7 +1,7 @@
-Index: kxkb/rules.cpp
+Index: kdebase-3.5.0/kxkb/rules.cpp
 ===================================================================
---- kxkb/rules.cpp	(revision 487566)
-+++ kxkb/rules.cpp	(working copy)
+--- kdebase-3.5.0.orig/kxkb/rules.cpp
++++ kdebase-3.5.0/kxkb/rules.cpp
 @@ -17,13 +17,13 @@
  
  #include "rules.h"
@@ -18,3 +18,14 @@ Index: kxkb/rules.cpp
      if( QDir(X11DirList[ii]).exists() ) {
  	X11_DIR = X11DirList[ii];
  	break;
+@@ -292,8 +292,8 @@ KeyRules::getVariants(const QString& lay
+ 
+ void KeyRules::parseVariants(const QStringList& vars, QDict<char>& variants, bool chkVars)
+ {
+-  static const char* LAYOUT_PATTERN = "[a-z0-9_]*";
+-  static const char* VARIANT_PATTERN = "\\([a-z0-9_]*\\)";
++  static const char* LAYOUT_PATTERN = "[a-z0-9_-]*";
++  static const char* VARIANT_PATTERN = "\\([a-z0-9_-]*\\)";
+   for (QStringList::ConstIterator it = vars.begin(); it != vars.end(); ++it)
+   {
+       QString varLine = (*it).stripWhiteSpace();
