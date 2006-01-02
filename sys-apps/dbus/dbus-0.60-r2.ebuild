@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r2.ebuild,v 1.2 2006/01/02 08:36:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r2.ebuild,v 1.3 2006/01/02 08:52:00 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools
 
@@ -104,7 +104,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	# initscript
-	doinitd "${FILESDIR}"/dbus
+	doinitd "${FILESDIR}"/dbus.init-0.60
 
 	# dbus X session script (#77504)
 	# FIXME : turns out to only work for GDM, better solution needed
