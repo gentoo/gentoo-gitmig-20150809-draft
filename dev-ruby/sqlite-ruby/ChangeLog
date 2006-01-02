@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sqlite-ruby
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.18 2005/12/20 17:29:52 dang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.19 2006/01/02 21:35:14 caleb Exp $
+
+*sqlite-ruby-2.2.3-r1 (02 Jan 2006)
+
+  02 Jan 2006; Caleb Tennis <caleb@gentoo.org> +sqlite-ruby-2.2.3-r1.ebuild:
+  x86 stable, and change to gem format
 
   20 Dec 2005; <dang@gentoo.org> sqlite-ruby-2.2.3.ebuild:
   Marked ~amd64
