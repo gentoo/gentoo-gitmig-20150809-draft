@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5-r1.ebuild,v 1.5 2005/05/17 11:27:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5-r1.ebuild,v 1.6 2006/01/02 16:00:16 slarti Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.devolution.com/~slouken/projects/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
@@ -37,6 +37,7 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	make install || die "make install failed"
+	fperms 755 /usr/bin/xsplitvt
 	dodoc ANNOUNCE BLURB CHANGES NOTES README TODO
 	doman splitvt.1
 }
