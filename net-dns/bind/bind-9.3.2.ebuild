@@ -1,14 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r8.ebuild,v 1.1 2005/11/12 00:11:09 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2.ebuild,v 1.1 2006/01/02 18:55:00 voxus Exp $
 
 inherit eutils libtool
+
+DLZ_VERSION="9.3.2b1"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
-	dlz? ( http://projects.navynet.it/DLZ/ctrix_dlz_9.3.1-1.patch.gz )"
+	dlz? ( http://dev.gentoo.org/~voxus/bind/ctrix_dlz_${DLZ_VERSION}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -32,15 +34,6 @@ pkg_setup() {
 		ewarn "disable threads support because of linux capabilities dependency"
 		echo
 	}
-
-	if use dlz && use idn;
-	then
-		echo
-		eerror "DLZ currently doesn't supports IDN"
-		eerror "You should disable 'idn' or 'dlz' use flag to continue"
-
-		die "dlz doesn't support idn currently"
-	fi
 }
 
 src_unpack() {
@@ -55,13 +48,13 @@ src_unpack() {
 	done
 
 	use dlz && {
-		epatch ${DISTDIR}/ctrix_dlz_${PV}-1.patch.gz || \
+		epatch ${DISTDIR}/ctrix_dlz_${DLZ_VERSION}.patch.bz2 || \
 			die "dlz patch failed"
 	}
 
 	use idn && {
-		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch || \
-			die "idn patch failed"
+		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch \
+			|| die "idn patch failed"
 	}
 
 	# it should be installed by bind-tools
@@ -169,9 +162,13 @@ src_install() {
 	keepdir /var/bind/sec
 
 	insinto /etc/bind ; newins ${FILESDIR}/named.conf-r3 named.conf
+
 	# ftp://ftp.rs.internic.net/domain/named.ca:
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
-	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}.zone
+
+	insinto /var/bind/pri
+	doins ${FILESDIR}/127.zone
+	newins ${FILESDIR}/localhost.zone-r1 localhost.zone
 
 	cp ${FILESDIR}/named.init-r3 ${T}/named && doinitd ${T}/named
 	cp ${FILESDIR}/named.confd-r1 ${T}/named && doconfd ${T}/named

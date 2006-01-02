@@ -1,13 +1,15 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r10.ebuild,v 1.1 2005/11/12 00:11:09 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6.ebuild,v 1.1 2006/01/02 18:55:00 voxus Exp $
 
 inherit eutils libtool
+
+DLZ_VERSION="9.2.5"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
-	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${PV}.patch.bz2 )"
+	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${DLZ_VERSION}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -43,8 +45,8 @@ src_unpack() {
 	done
 
 	if use dlz; then
-		epatch ${DISTDIR}/dlz-${PV}.patch.bz2
-		epatch ${FILESDIR}/${P}-berkdb_fix.patch
+		epatch ${DISTDIR}/dlz-${DLZ_VERSION}.patch.bz2
+		epatch ${FILESDIR}/bind-${DLZ_VERSION}-berkdb_fix.patch
 	fi
 
 	if use bind-mysql; then
