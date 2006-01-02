@@ -4,14 +4,20 @@ hardened
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
 java
+java-internal
+java-external
 
+# dont make sense on this arch
 icc
 icc-pgo
 svga
+fdftk
+3dfx
 
+# havent tested yet
 qt
+arts
 kde
 diet
 lirc
-arts
 afs

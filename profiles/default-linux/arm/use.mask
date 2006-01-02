@@ -7,15 +7,18 @@ java
 java-internal
 java-external
 
+# dont make sense on this arch
 icc
 icc-pgo
 svga
+fdftk
+3dfx
 
+# havent tested yet
 qt
 arts
 kde
 afs
 
-3dfx
 mono
 pike
