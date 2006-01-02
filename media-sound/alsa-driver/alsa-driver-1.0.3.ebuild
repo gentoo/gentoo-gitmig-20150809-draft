@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.3.ebuild,v 1.12 2005/11/07 10:29:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.3.ebuild,v 1.13 2006/01/02 22:34:34 eradicator Exp $
 
 inherit eutils kernel-mod flag-o-matic
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/alsa"
 
 SLOT="${KV}"
-KEYWORDS="x86 ~ppc -sparc ~amd64 alpha ia64 ~mips"
+KEYWORDS="ia64"
 
 MY_P=${P/_rc/rc}
 SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
