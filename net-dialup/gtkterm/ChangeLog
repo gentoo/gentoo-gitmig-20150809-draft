@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtkterm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.13 2005/12/26 19:45:20 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.14 2006/01/02 17:36:19 hansmi Exp $
+
+  02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> gtkterm-0.99.5.ebuild:
+  Stable on ppc.
 
   26 Dec 2005; Jason Wever <weeve@gentoo.org> gtkterm-0.99.5.ebuild:
   Stablize the right one on SPARC wrt bug #115640 :)
