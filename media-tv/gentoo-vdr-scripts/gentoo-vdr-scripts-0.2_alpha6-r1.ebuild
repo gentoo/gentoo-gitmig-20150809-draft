@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha6.ebuild,v 1.2 2006/01/02 21:25:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha6-r1.ebuild,v 1.1 2006/01/02 21:25:31 zzam Exp $
 
 inherit eutils
 
@@ -66,12 +66,15 @@ pkg_preinst() {
 	done
 }
 
+VDRSUDOENTRY="vdr ALL=NOPASSWD:/usr/lib/vdr/bin/vdrshutdown-really.sh"
+
 pkg_postinst() {
-	einfo "This release has included"
-	einfo "shutdown/wakeup-functions."
 	einfo
-	einfo "Please add this line to your /etc/sudoers-file"
-	einfo "     vdr ALL=NOPASSWD:/usr/lib/vdr/bin/vdrshutdown-really.sh"
+	einfo "To make shutdown work add this line to /etc/sudoers"
+	einfo "    $VDRSUDOENTRY"
+	einfo
+	einfo "or execute this command:"
+	einfo "    emerge --config gentoo-vdr-scripts"
 	einfo
 	ewarn "The default video directory was moved to /var/vdr/video"
 	ewarn "If you have your video directory anywhere else, then"
@@ -82,3 +85,25 @@ pkg_postinst() {
 		ewarn "To make use of it enable the use flag nvram."
 	fi
 }
+
+pkg_config() {
+	if grep -q /usr/lib/vdr/bin/vdrshutdown-really.sh ${ROOT}/etc/sudoers; then
+		einfo "sudoers-entry for vdr already in place."
+	else
+		einfo "Adding this line to /etc/sudoers:"
+		einfo "+  ${VDRSUDOENTRY}"
+
+		cd ${T}
+		cat >sudoedit-vdr.sh <<-SUDOEDITOR
+			#!/bin/bash
+			echo "" >> \${1}
+			echo "${VDRSUDOENTRY}" >> \${1}
+		SUDOEDITOR
+		chmod a+x sudoedit-vdr.sh
+
+		VISUAL=${T}/sudoedit-vdr.sh visudo -f ${ROOT}/etc/sudoers || die "visudo failed"
+
+		einfo "Edited /etc/sudoers"
+	fi
+}
+
