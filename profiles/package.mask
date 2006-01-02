@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4813 2006/01/01 17:31:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4814 2006/01/02 11:26:17 lisa Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+
+# Lisa Seelye <lisa@gentoo.org> (02 Jan 2006)
+# This really needs to be gotten rid of. It's buggy and the pecl version is
+# better. It'll be removed in early February unless people complain.
+# Comment to http://article.gmane.org/gmane.linux.gentoo.devel/34595/match= to
+# complain.
+sys-libs/memcached-api-php
 
 # Stefan Schweizer <genstef@gentoo.org> (01 Jan 2006)
 # misdn mqueue branch - experimental but with udev support
