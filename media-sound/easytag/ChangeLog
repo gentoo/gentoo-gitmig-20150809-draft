@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/easytag
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.75 2005/12/26 14:33:16 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.76 2006/01/02 15:40:47 dsd Exp $
+
+*easytag-1.99.11 (02 Jan 2006)
+
+  02 Jan 2006; Daniel Drake <dsd@gentoo.org> -easytag-1.0-r1.ebuild,
+  -easytag-1.99.9.ebuild, +easytag-1.99.11.ebuild:
+  Version bump thanks to Pietro Franchi <knefas@gmail.com> in bug #116291.
+  Apple/MP4 support is available once again through USE=aac, and beware that
+  you now need USE=mp3 to be able to tag MP3 files.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> easytag-1.0-r1.ebuild,
   easytag-1.1.ebuild, easytag-1.99.7.ebuild:
