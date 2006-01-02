@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-0.3-r1.ebuild,v 1.5 2005/11/21 23:31:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-0.3-r1.ebuild,v 1.6 2006/01/02 18:17:27 hansmi Exp $
 
 # The following works for both releases and pre-releases
 MY_P=${P/_/-}
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/cpufreq/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 IUSE="nls"
 DEPEND="sys-fs/sysfsutils"
