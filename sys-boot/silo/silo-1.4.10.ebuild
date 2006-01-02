@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.9.ebuild,v 1.5 2006/01/02 17:54:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.10.ebuild,v 1.1 2006/01/02 17:54:07 gustavoz Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.sparc-boot.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* sparc"
+KEYWORDS="-* ~sparc"
 IUSE="hardened"
 
 PROVIDE="virtual/bootloader"
@@ -23,10 +23,6 @@ ABI_ALLOW="sparc32"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	if has_version '>=sys-kernel/linux-headers-2.6' ; then
-		epatch ${FILESDIR}/${P}-sparc_cpu.patch
-	fi
 
 	epatch ${FILESDIR}/silo-1.4.x-noglibc_time.patch
 }
