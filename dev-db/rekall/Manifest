@@ -1,8 +1,18 @@
-MD5 3a76a4bc39ea2b39d2b24b10cc0f788c ChangeLog 2461
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8dcc61818123aa129151653a36b69b0c rekall-2.2.4.ebuild 1433
+MD5 f16a3e9f7b22e2c204ad2e919cfd71f5 metadata.xml 217
+MD5 6934ea107bef1b3c18964778d079e92c ChangeLog 2584
+MD5 4402b91b80bfccfc01bb6ab441086c56 rekall-2.2.6.ebuild 1435
+MD5 db3baa297123c5381dd83f7f0a41fdd3 rekall-2.2.3-r1.ebuild 1345
+MD5 122f6d9323c65180aced3587e11ad4c4 files/digest-rekall-2.2.6 65
 MD5 a65634bd4eee22dc6c63ad713231aa54 files/digest-rekall-2.2.3-r1 67
 MD5 9ae4f2f54ccf7da85ff8a9d3f0e2306a files/digest-rekall-2.2.4 67
-MD5 122f6d9323c65180aced3587e11ad4c4 files/digest-rekall-2.2.6 65
-MD5 f16a3e9f7b22e2c204ad2e919cfd71f5 metadata.xml 217
-MD5 db3baa297123c5381dd83f7f0a41fdd3 rekall-2.2.3-r1.ebuild 1345
-MD5 8dcc61818123aa129151653a36b69b0c rekall-2.2.4.ebuild 1433
-MD5 2442e5e005098a87b8c335a1fa1b37ca rekall-2.2.6.ebuild 1431
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuM3yFdQwWVoAgN4RAuXeAKCkI3HiaZ9qxeH7/NyUeGBNiWB+eQCggOS7
+iI+6K8hw0//vVZSN3gx8/2Y=
+=pF1+
+-----END PGP SIGNATURE-----
