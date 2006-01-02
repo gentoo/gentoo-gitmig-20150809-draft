@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubygems
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.20 2005/11/26 17:06:25 tgall Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.21 2006/01/02 22:37:11 caleb Exp $
+
+*rubygems-0.8.11-r2 (02 Jan 2006)
+
+  02 Jan 2006; Caleb Tennis <caleb@gentoo.org> rubygems-0.8.11-r1.ebuild,
+  +rubygems-0.8.11-r2.ebuild:
+  bump to not install RUBYOPT variable for now, as it breaks ruby-cvs 1.9
 
   26 Nov 2005; Tom Gall <tgall@gentoo.org> rubygems-0.8.11-r1:
   added ~ppc64

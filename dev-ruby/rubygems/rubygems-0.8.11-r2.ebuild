@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.11-r1.ebuild,v 1.3 2006/01/02 22:37:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.11-r2.ebuild,v 1.1 2006/01/02 22:37:11 caleb Exp $
 
 inherit ruby
 
@@ -27,5 +27,4 @@ src_install() {
 	ver=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["MAJOR"] + "." + Config::CONFIG["MINOR"]')
 	GEM_HOME=${D}/usr/lib/ruby/gems/$ver ruby_src_install
 	keepdir /usr/lib/ruby/gems/$ver/doc
-	doenvd ${FILESDIR}/10rubygems
 }
