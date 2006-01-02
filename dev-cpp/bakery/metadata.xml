@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>gnome-mm</herd>
 <maintainer>
-<email>metalgod@gentoo.org</email>
-<name>Luis Medinas</name>
+<email>compnerd@gentoo.org</email>
+<name>Saleem Abdulrasool</name>
 </maintainer>
 <longdescription lang="en">
 Bakery is a C++ Application Framework for use with gtkmm.This application
