@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/ascpu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ChangeLog,v 1.14 2005/06/13 13:20:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ChangeLog,v 1.15 2006/01/02 10:51:17 s4t4n Exp $
+
+  02 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> ascpu-1.10.ebuild, ascpu-1.9.ebuild:
+  removed LICENSE and INSTALL from dodoc.
 
   13 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Added metadata.xml (afterstep herd).
