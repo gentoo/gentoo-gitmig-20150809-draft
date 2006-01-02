@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.1 2006/01/01 18:27:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.2 2006/01/02 20:39:32 halcy0n Exp $
 
 PATCH_VER="1.4"
 PATCH_GCC_VER="4.0.2"
@@ -64,11 +64,3 @@ src_unpack() {
 	epatch "${FILESDIR}"/4.0.2/gcc-4.0.2-cross-compile.patch
 }
 
-pkg_postinst() {
-	toolchain_pkg_postinst
-
-	einfo "This gcc-4 ebuild is provided for your convenience, and the use"
-	einfo "of this compiler is not supported by the Gentoo Developers."
-	einfo "Please file bugs related to gcc-4 with upstream developers."
-	einfo "Compiler bugs should be filed at http://gcc.gnu.org/bugzilla/"
-}
