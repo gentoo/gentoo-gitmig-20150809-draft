@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/postgrey
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.16 2005/12/23 20:17:13 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.17 2006/01/02 00:27:07 ticho Exp $
+
+*postgrey-1.23 (02 Jan 2006)
+
+  02 Jan 2006; Andrej Kacian <ticho@gentoo.org> +postgrey-1.23.ebuild:
+  Version bump.
 
   23 Dec 2005; Simon Stelling <blubb@gentoo.org> postgrey-1.21-r1.ebuild:
   stable on amd64
