@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/getdvhoff-0.12-r1.ebuild,v 1.1 2005/09/18 07:53:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/getdvhoff-0.12-r1.ebuild,v 1.2 2006/01/02 08:05:26 kumba Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/"
 SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/sgibootcd-${PV}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE=""
 DEPEND="dev-libs/klibc"
 RESTRICT=""
