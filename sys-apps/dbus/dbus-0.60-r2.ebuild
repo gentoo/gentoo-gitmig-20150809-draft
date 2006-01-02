@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r2.ebuild,v 1.1 2006/01/02 08:34:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r2.ebuild,v 1.2 2006/01/02 08:36:26 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools
 
@@ -126,17 +126,6 @@ src_install() {
 pkg_preinst() {
 	enewgroup messagebus || die "Problem adding messagebus group"
 	enewuser messagebus -1 "-1" -1 messagebus || die "Problem adding messagebus user"
-
-	ewarn
-	ewarn "Time to show everyone what Gentoo ~ARCH really means..."
-	ewarn "This package breaks API/ABI compat with several packages"
-	ewarn "Please follow the tracker bug at:"
-	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=114463"
-	ewarn "to make sure no apps you have are affected until they"
-	ewarn "are fixed by their maintainers."
-	ewarn
-	ebeep 3
-	sleep 5
 }
 
 pkg_postrm() {
