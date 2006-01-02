@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.98 2005/11/12 00:11:09 voxus Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.99 2006/01/02 17:54:03 voxus Exp $
+
+  02 Jan 2006; Konstantin Arkhipov <voxus@gentoo.org> +files/named.conf-r2:
+  Restored wrongly deleted conf file. Closing bug #114770.
 
 *bind-9.3.2_beta2-r2 (12 Nov 2005)
 *bind-9.3.1-r8 (12 Nov 2005)

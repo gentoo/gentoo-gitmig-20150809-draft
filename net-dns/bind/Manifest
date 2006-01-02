@@ -1,4 +1,4 @@
-MD5 b37f96f0d04cf6af5ff4fe1e5e86370b ChangeLog 16595
+MD5 cf1acb41799f328f348ff2badbcb40d6 ChangeLog 16731
 MD5 64661f29315f63e8d14f3c5fe3efdb73 bind-9.2.5-r10.ebuild 8945
 MD5 2c50194cee9e7484dc5ac78935fdf0d5 bind-9.2.5-r4.ebuild 8347
 MD5 109211a7fac00f530ce0d255763f24b2 bind-9.2.5-r6.ebuild 8376
@@ -18,6 +18,7 @@ MD5 2bb12cfcd70284e72fbf9e70e5e2974d files/dyndns-samples.tbz2 22866
 MD5 ccfca63035b534556c3910270d40a4b9 files/localhost.zone 412
 MD5 2b6e7c10f43941cdd147d5de0c9c02d6 files/localhost.zone-r1 419
 MD5 e83e7a76e253debfdd120311fda73fb6 files/named.ca 2518
+MD5 e9bb1e01cf0b7597e739e889499ddd7a files/named.conf-r2 768
 MD5 be5fd752bdbd59385f2a559d603098d5 files/named.conf-r3 1314
 MD5 d9bda421173f2a6e536f9b4f33ceca9a files/named.confd 319
 MD5 668f9697d07bbf60b2040ed0c835d7f3 files/named.confd-r1 392
