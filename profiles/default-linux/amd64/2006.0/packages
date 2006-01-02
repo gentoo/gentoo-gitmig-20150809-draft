@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/packages,v 1.4 2005/10/07 21:58:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/packages,v 1.5 2006/01/02 07:02:10 eradicator Exp $
 
 *>=sys-devel/binutils-2.15.90.0.1.1-r4
 *>=sys-devel/gcc-3.4.3-r1
@@ -10,8 +10,5 @@
 
 # Sandbox broken out
 *>=sys-apps/portage-2.0.51.22
-
-# Make sure toolchain compiler is friendly to multilib based on ${CHOST}
-app-admin/eselect-compiler
 
 *>=sys-apps/baselayout-1.11.13-r1
