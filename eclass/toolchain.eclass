@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.237 2005/12/31 08:39:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.238 2006/01/02 00:56:32 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -55,26 +55,29 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 
-GCC_RELEASE_VER=$(get_version_component_range 1-3)
-GCC_BRANCH_VER=$(get_version_component_range 1-2)
-GCCMAJOR=$(get_version_component_range 1)
-GCCMINOR=$(get_version_component_range 2)
-GCCMICRO=$(get_version_component_range 3)
-[[ ${BRANCH_UPDATE-notset} == "notset" ]] && BRANCH_UPDATE=$(get_version_component_range 4)
+GCC_PV=${TOOLCHAIN_GCC_PV:-${PV}}
+GCC_PVR=${GCC_PV}
+[[ ${PR} != "r0" ]] && GCC_PVR=${GCC_PVR}-${PR}
+GCC_RELEASE_VER=$(get_version_component_range 1-3 ${GCC_PV})
+GCC_BRANCH_VER=$(get_version_component_range 1-2 ${GCC_PV})
+GCCMAJOR=$(get_version_component_range 1 ${GCC_PV})
+GCCMINOR=$(get_version_component_range 2 ${GCC_PV})
+GCCMICRO=$(get_version_component_range 3 ${GCC_PV})
+[[ ${BRANCH_UPDATE-notset} == "notset" ]] && BRANCH_UPDATE=$(get_version_component_range 4 ${GCC_PV})
 
 # According to gcc/c-cppbuiltin.c, GCC_CONFIG_VER MUST match this regex.
 # ([^0-9]*-)?[0-9]+[.][0-9]+([.][0-9]+)?([- ].*)?
-GCC_CONFIG_VER=${GCC_CONFIG_VER:-"$(replace_version_separator 3 '-')"}
+GCC_CONFIG_VER=${GCC_CONFIG_VER:-$(replace_version_separator 3 '-' ${GCC_PV})}
 
 # Pre-release support
-if [[ ${PV} != ${PV/_pre/-} ]] ; then
-	PRERELEASE=${PV/_pre/-}
+if [[ ${GCC_PV} != ${GCC_PV/_pre/-} ]] ; then
+	PRERELEASE=${GCC_PV/_pre/-}
 fi
 # make _alpha and _beta ebuilds automatically use a snapshot
-if [[ ${PV} != ${PV/_alpha/} ]] ; then
-	SNAPSHOT=${GCC_BRANCH_VER}-${PV##*_alpha}
-elif [[ ${PV} != ${PV/_beta/} ]] ; then
-	SNAPSHOT=${GCC_BRANCH_VER}-${PV##*_beta}
+if [[ ${GCC_PV} != ${GCC_PV/_alpha/} ]] ; then
+	SNAPSHOT=${GCC_BRANCH_VER}-${GCC_PV##*_alpha}
+elif [[ ${GCC_PV} != ${GCC_PV/_beta/} ]] ; then
+	SNAPSHOT=${GCC_BRANCH_VER}-${GCC_PV##*_beta}
 fi
 export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
 
@@ -264,7 +267,7 @@ get_gcc_src_uri() {
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
 	else
-		GCC_SRC_URI="mirror://gnu/gcc/gcc-${PV}/gcc-${GCC_RELEASE_VER}.tar.bz2"
+		GCC_SRC_URI="mirror://gnu/gcc/gcc-${GCC_PV}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
 		[[ -n ${BRANCH_UPDATE} ]] && \
 			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2)"
@@ -957,7 +960,7 @@ guess_patch_type_in_dir() {
 		|| EPATCH_SUFFIX="patch"
 }
 gcc_src_unpack() {
-	local release_version="Gentoo ${PVR}"
+	local release_version="Gentoo ${GCC_PVR}"
 
 	[[ -z ${UCLIBC_VER} ]] && is_uclibc && die "Sorry, this version does not support uClibc"
 
@@ -998,8 +1001,8 @@ gcc_src_unpack() {
 	local version_string=${GCC_CONFIG_VER}
 
 	# Backwards support... add the BRANCH_UPDATE for 3.3.5-r1 and 3.4.3-r1
-	# which set it directly rather than using ${PV}
-	if [[ ${PVR} == "3.3.5-r1" || ${PVR} = "3.4.3-r1" ]] ; then
+	# which set it directly rather than using ${GCC_PV}
+	if [[ ${GCC_PVR} == "3.3.5-r1" || ${GCC_PVR} = "3.4.3-r1" ]] ; then
 		 version_string="${version_string} ${BRANCH_UPDATE}"
 	fi
 
@@ -1078,7 +1081,7 @@ gcc-compiler-configure() {
 		;;
 		# Enable sjlj exceptions for backward compatibility on hppa
 		hppa)
-			[[ ${PV:0:1} == "3" ]] && \
+			[[ ${GCC_PV:0:1} == "3" ]] && \
 			confgcc="${confgcc} --enable-sjlj-exceptions"
 		;;
 	esac
@@ -1508,7 +1511,6 @@ gcc-compiler_src_install() {
 		grep -q 'It has been auto-edited by fixincludes from' "${x}" \
 			&& rm -f "${x}"
 	done
-
 	einfo "Installing GCC..."
 	# Do the 'make install' from the build directory
 	cd ${WORKDIR}/build
@@ -1688,8 +1690,8 @@ gcc_movelibs() {
 				local files=$(find "${FROMDIR}" -maxdepth 1 ! -type d 2>/dev/null)
 				if [[ -n ${files} ]] ; then
 					mv ${files} "${TODIR}"
-					rmdir "${FROMDIR}" 2>/dev/null
 				fi
+				rmdir "${FROMDIR}" 2>/dev/null
 			fi
 		done
 	done
@@ -1719,7 +1721,6 @@ gcc_quick_unpack() {
 
 	if [[ -n ${GCC_A_FAKEIT} ]] ; then
 		unpack ${GCC_A_FAKEIT}
-		mv ${GCC_A_FAKEIT} "${S}"
 	elif [[ -n ${PRERELEASE} ]] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
 	elif [[ -n ${SNAPSHOT} ]] ; then
