@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 46261f3bef26e94f963126115730efc0 ChangeLog 14804
+MD5 c1cedd9f867f5ed3fa5cb55cecef97d5 ChangeLog 14892
 MD5 a18ddd3f2cdcb815cf86f4b9c4bdd6fe files/2.6.4/zope.confd 950
 MD5 4d278d26bb7be7693f7213861a9d3805 files/2.6.4/zope.initd 3791
 MD5 adfe59eaafb05edb1c4a445563b04c08 files/2.7.7/i18n-1.0.0.patch 7634
@@ -19,12 +16,5 @@ MD5 5416407eff85546578bb4e7c61f45d5e zope-2.6.4-r1.ebuild 5629
 MD5 17d1dd2b8f9f76cad73f610b1a484137 zope-2.7.7.ebuild 3325
 MD5 14da5e25bd868d8693fc918e7ede07aa zope-2.7.8.ebuild 3325
 MD5 0ce3afe5cd3f944a3fa984afa74a43af zope-2.8.3.ebuild 3512
-MD5 4a9e6444edea84659a6b51da49f94c69 zope-2.8.4.ebuild 3513
+MD5 766f6734ba9201fceb214d0dd90ac286 zope-2.8.4.ebuild 3510
 MD5 294c0f19cff69103751c1a8eadb92019 zope-3.1.0.ebuild 3239
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDto87AiZjviIA2XgRAjR6AKClsZtE77lsWijn92fZX1GAA5njlwCfWODu
-F+2yFy6LSs892YXhMTDIA1E=
-=KU1o
------END PGP SIGNATURE-----
