@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gsasl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.21 2005/10/02 15:48:23 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.22 2006/01/02 15:57:07 slarti Exp $
+
+*gsasl-0.2.10 (02 Jan 2006)
+
+  02 Jan 2006; Tom Martin <slarti@gentoo.org> +gsasl-0.2.10.ebuild:
+  Version bump, resolves bug #117318.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> gsasl-0.2.4.ebuild:
   Mark 0.2.4 stable on ia64
