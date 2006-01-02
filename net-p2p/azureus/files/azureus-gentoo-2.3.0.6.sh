@@ -24,10 +24,8 @@ else
 	# Create the config file
 	cat > ${gentoocfg} <<END
 # User Interface options:
-# web     - web based
-# web2    - web based
-# console - console based
-# swt     - swt (GUI) based
+# console   - console based
+# swt       - swt (GUI) based
 #
 # When selecting just 1, use '--ui=<ui>'
 # When selecting multiple, use '--uis=<ui>,<ui>'
@@ -42,5 +40,5 @@ fi
 cd ${dotazudir}
 
 CLASSPATH=$(java-config -p junit,log4j,commons-cli-1,swt-3,azureus)
-exec $(java-config --java)  -cp $CLASSPATH -Djava.library.path=$(java-config -i swt-3) \
-	${JAVA_OPTIONS} org.gudy.azureus2.ui.swt.Main "${@}"
+exec $(java-config --java)  -cp ${CLASSPATH} -Djava.library.path=$(java-config -i swt-3) \
+	${JAVA_OPTIONS} org.gudy.azureus2.ui.common.Main ${UI_OPTIONS} "${@}"
