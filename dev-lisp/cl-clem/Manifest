@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c58da13bef62ce5a84dfff720565a6cb ChangeLog 1155
 MD5 b7142f37feaf4130c35b6d0dacf5db9d cl-clem-0.1.3.20050724.ebuild 1087
 MD5 4f5bcc82e8d88b7220d9d8da957e00f7 cl-clem-0.1.4.20051012.ebuild 1088
@@ -9,3 +12,10 @@ MD5 c9a51a631f29a82e0dd28062f12559bb files/digest-cl-clem-0.1.3.20050724 70
 MD5 96bbe1c056952f63149a08e200ac836a files/digest-cl-clem-0.1.4.20051012 70
 MD5 9a1d94f786e69c627719b9b351deea16 files/digest-cl-clem-0.1.5.20051204 70
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuV37yiNZaEAZA+ARAiRtAJ494Lodp+62kqpcF/HQk+8/pp0XhgCeJFmy
+kMjDOsZ/zPLFbiIsSuLZqIM=
+=QcIv
+-----END PGP SIGNATURE-----

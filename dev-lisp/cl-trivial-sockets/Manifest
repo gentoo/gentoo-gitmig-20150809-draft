@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90f117bd45e530b3394fc3d62886295f ChangeLog 1097
 MD5 d5ffd8fae8f0bf0ab4f86b952a62855f cl-trivial-sockets-0.2.ebuild 919
 MD5 477c8cde2e97d937fba1e082cbc9276a files/0.2-asdf-depends-gentoo.patch 468
 MD5 60cf13adb9e901bd8df2cf844fde2fd8 files/digest-cl-trivial-sockets-0.2 70
 MD5 30342eac64da7401df8b5eb3fff7bd7f metadata.xml 407
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuV7ByiNZaEAZA+ARAqsMAJ9OLyNgjhS0bzbmFQlZhJVcNh2Z5QCeIHRj
+kpH1Bcpby9VFA5fZjgIylkE=
+=cPhd
+-----END PGP SIGNATURE-----
