@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.4 2005/12/28 23:02:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20050829.ebuild,v 1.5 2006/01/02 17:02:27 hansmi Exp $
 
 inherit eutils flag-o-matic games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cube/${MY_P}_unix.tar.gz
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc x86"
+KEYWORDS="~amd64 ~hppa ppc x86"
 IUSE="dedicated"
 
 RDEPEND="virtual/opengl
