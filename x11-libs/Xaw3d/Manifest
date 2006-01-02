@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 c74c57199a9b7dfdd09bb7b580beebfe ChangeLog 2448
-MD5 e9287ed3e265c63b28482b966d45418b Xaw3d-1.5-r1.ebuild 2191
+MD5 022c4e3ee83b1b3648a8d0da4d8fe3ad Xaw3d-1.5-r1.ebuild 2194
 MD5 8103db23293fc4226cadb7df282f952b files/Xaw3d-out-of-tree.diff 232
 MD5 014f228d620c9680e30cdf1c068635c2 files/Xaw3d-xfree86.diff 420
 MD5 12f07352cba3c1cfefa93e5f9d10c4a0 files/digest-Xaw3d-1.5-r1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtQpYBtvusYtCZMsRAuwKAKCOE9BlzpSaTMRLJdZb47GnIC/YfgCfWFmc
-AV5yfPdj0ejayn7pKeOPbNk=
-=veH/
+iD8DBQFDuaOY2+ySkm8kpY0RAuv5AJ9bOuUln3CYCcI8n9aGUm4MicmONQCfe0zl
+iWwXJg/bvOAf+7wJzWx8zD8=
+=ck3R
 -----END PGP SIGNATURE-----
