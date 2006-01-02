@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-180.ebuild,v 1.10 2005/12/30 19:25:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-180.ebuild,v 1.11 2006/01/02 07:14:41 flameeyes Exp $
 
-inherit eutils
+inherit eutils pam
 
 DESCRIPTION="PAM LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/pam_ldap.html"
