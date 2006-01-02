@@ -1,10 +1,11 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/files/ngircd.init.d,v 1.2 2005/01/27 23:26:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/files/ngircd.init.d,v 1.3 2006/01/02 15:31:27 swegener Exp $
 
 depend() {
 	need net
+	provide ircd
 }
 
 start() {

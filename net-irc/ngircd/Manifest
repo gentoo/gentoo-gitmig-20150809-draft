@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 977fd34d014ddb23f7d71961ab0481c3 ChangeLog 2114
+MD5 01a99e0a0e1f84ab85945e39b3690e6c ChangeLog 2234
 MD5 fc2670f2b2116c79574e78c6b04bf721 files/digest-ngircd-0.8.3 64
 MD5 7d700a26d0f0cf189a5676b1111beb5d files/digest-ngircd-0.9.2 64
-MD5 8a38f32703577610207bcdfbe516a38d files/ngircd.init.d 521
+MD5 1a91f517ef865b51d67b77ceb28e4261 files/ngircd.init.d 535
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 02e523c1ceef14fa72b871fc3e2cb764 ngircd-0.8.3.ebuild 1311
 MD5 453272ee727396bd991a577ca86e5e05 ngircd-0.9.2.ebuild 1305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdyfjI1lqEGTUzyQRAhtbAKCMA/5tSz8DOz16TfRkgl90bpKedwCgscgk
-iFMrphGUO76RViaCjTb147s=
-=L5sW
------END PGP SIGNATURE-----

@@ -1,5 +1,5 @@
 MD5 b5a470bfa9441adec40484fefc6079ed ChangeLog 28025
-MD5 681dfd3fea0edc03e7896c59ce38d103 files/2.6.0-dbus-0.60-support.patch 699
+MD5 ee907319c2fd838bd17ff65fd6dc343a files/2.6.0-dbus-0.60-support.patch 684
 MD5 6354e2efb6f0d1323ad8849be7303575 files/44_fix_alignment_endianess.dpatch 8676
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
 MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
