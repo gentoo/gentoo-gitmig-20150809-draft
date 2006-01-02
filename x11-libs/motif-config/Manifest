@@ -18,11 +18,11 @@ MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 33bcba9885d6419bbb4e22eed35676ab motif-config-0.6.ebuild 1239
 MD5 b57f5a2346d07273acd7e675d3f5d8cc motif-config-0.7.ebuild 1239
 MD5 f18c8f14b63a3439113068b5a89e193b motif-config-0.8.ebuild 1239
-MD5 9b10547992431cc835945fe43f2420cb motif-config-0.9.ebuild 2586
+MD5 ba8dd94d5a9c6f332f15de25d809bc20 motif-config-0.9.ebuild 2589
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrfmAViELBEf1JB0RAm36AJ4oDPEntoybU47kB0M1Vwv/jwlaTACcCK8I
-Ids560O0LJL7WLweo4Kw+EA=
-=cPAp
+iD8DBQFDuaYA2+ySkm8kpY0RArh7AJ9HOSJuts05oHBTbfyhvSmGDEZSIACglbLq
+XH1rmKpg/jwwMz3BIXi2g5c=
+=99rQ
 -----END PGP SIGNATURE-----
