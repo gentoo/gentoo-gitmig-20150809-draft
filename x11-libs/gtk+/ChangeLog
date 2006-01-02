@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.204 2005/12/13 22:03:42 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.205 2006/01/02 23:20:56 allanonjl Exp $
+
+  02 Jan 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/gtk+-2.8.6-freebsd.patch, -gtk+-2.6.8.ebuild,
+  -gtk+-2.8.6-r1.ebuild, -gtk+-2.8.7.ebuild, gtk+-2.8.8.ebuild,
+  gtk+-2.8.9.ebuild:
+  cleanup old builds, add informational message about RenderAccel bug, bump
+  atk dep to fix #111741
 
 *gtk+-2.8.9 (13 Dec 2005)
 

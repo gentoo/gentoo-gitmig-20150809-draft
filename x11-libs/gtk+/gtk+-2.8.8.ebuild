@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.8.ebuild,v 1.1 2005/12/01 18:55:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.8.ebuild,v 1.2 2006/01/02 23:20:57 allanonjl Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -28,7 +28,7 @@ RDEPEND="|| ( (
 
 	>=dev-libs/glib-2.7.1
 	>=x11-libs/pango-1.9
-	>=dev-libs/atk-1.0.1
+	>=dev-libs/atk-1.10.1
 	>=x11-libs/cairo-0.9.2
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
@@ -139,4 +139,8 @@ pkg_postinst() {
 		ewarn "  gtk-query-immodules-2.0  > gtk.immodules"
 		ewarn "  gdk-pixbuf-query-loaders > gdk-pixbuf.loaders"
 	fi
+
+	einfo "If you experience text corruption issues, turn off RenderAccel"
+	einfo "in your xorg.conf.  NVIDIA is working on this issue. "
+	einfo "See http://bugs.gentoo.org/113123 for more information."
 }
