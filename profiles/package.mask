@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4815 2006/01/02 15:52:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4816 2006/01/02 23:02:07 plasmaroo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,7 +38,7 @@ sys-libs/memcached-api-php
 =sys-kernel/suspend2-sources-2.6.14-r9
 
 # <plasmaroo@gentoo.org> (30 Dec 2005)
-# Lots of outstanding security bugs, no response from maintainer.
+# Lots of outstanding security bugs, no updates from upstream yet.
 sys-kernel/openblocks-sources
 
 # <robbat2@gentoo.org> (26 Dec 2005)
