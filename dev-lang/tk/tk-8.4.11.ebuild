@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.3 2005/12/11 07:44:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.4 2006/01/02 21:27:48 vapier Exp $
 
 inherit eutils
 
@@ -10,18 +10,15 @@ SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="threads"
 
-RDEPEND="|| ( x11-libs/libX11
-			virtual/x11
-		)
+RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	=dev-lang/tcl-${PV}*"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.47-r10
-	|| ( ( x11-libs/libXt
-			x11-proto/xproto
-		)
+	|| (
+		( x11-libs/libXt x11-proto/xproto )
 		virtual/x11
 	)"
 
