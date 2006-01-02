@@ -1,0 +1,12 @@
+--- ext/syck/rubyext.c	27 Sep 2005 22:57:52 -0000	1.30.2.15
++++ ext/syck/rubyext.c	5 Oct 2005 10:24:16 -0000
+@@ -1142,6 +1142,9 @@
+             }
+             else if ( !NIL_P( target_class ) )
+             {
++                if (subclass == rb_cBignum)
++                    obj = rb_str2inum(val, 10);
++                else
+                 obj = rb_obj_alloc( subclass );
+                 if ( rb_respond_to( obj, s_yaml_initialize ) )
+                 {
