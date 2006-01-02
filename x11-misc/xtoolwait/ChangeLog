@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xtoolwait
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/ChangeLog,v 1.21 2005/12/29 15:46:27 gustavoz Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/ChangeLog,v 1.22 2006/01/02 17:30:49 hansmi Exp $
+
+  02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  xtoolwait-1.3-r1.ebuild:
+  Stable on ppc.
 
   29 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   xtoolwait-1.3-r1.ebuild:
