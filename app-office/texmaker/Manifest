@@ -1,8 +1,18 @@
-MD5 c74134ac3b6f3d5413f132f24db82326 ChangeLog 1608
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4c0cca5a54a1498b171cc0b6243f7d7 ChangeLog 1720
 MD5 6523b9d37f10392c4198cac68935cd93 files/digest-texmaker-1.11 66
 MD5 6523b9d37f10392c4198cac68935cd93 files/digest-texmaker-1.11-r1 66
 MD5 87c6b930962d1f18ddef65c23a1ccd79 files/digest-texmaker-1.21 67
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 b6d6970bed253b1b6426c1d64a01c91f texmaker-1.11-r1.ebuild 1499
+MD5 94483969f101bad448695177b0f170c7 texmaker-1.11-r1.ebuild 1501
 MD5 4795d01e61e250245aef7dfeabff2d9a texmaker-1.11.ebuild 1395
 MD5 c0cbda76339525d64d37d7d5415a2b54 texmaker-1.21.ebuild 1546
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDuZlwKRy60XGEcJIRAjLPAJ0aKXBZROmKjCH2ukGyB1YU+yFi/ACgqb9a
+xmBAZxtCoTmgeiheLYfDTMg=
+=Kfdg
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11-r1.ebuild,v 1.1 2005/07/02 08:58:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11-r1.ebuild,v 1.2 2006/01/02 21:21:10 gustavoz Exp $
 
 inherit kde-functions eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 sparc ~ppc ~amd64"
 
 IUSE=""
 
