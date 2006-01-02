@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.4-r1.ebuild,v 1.8 2005/12/31 12:24:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.4-r1.ebuild,v 1.9 2006/01/02 08:45:25 cardoe Exp $
 
 # because of the experimental nature debug by default
-inherit debug eutils mono python multilib
+inherit debug eutils mono python multilib qt3
 
 # FIXME : fix docs
 #IUSE="X gtk qt python mono doc xml2"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.2
 		>=dev-python/pyrex-0.9 )
-	qt? ( =x11-libs/qt-3* )
+	qt? ( $(qt_min_version 3.3) )
 	!ppc64? (
 		mono? ( >=dev-lang/mono-0.95 )
 	)"
@@ -69,6 +69,12 @@ src_compile() {
 		myconf="--with-xml=libxml";
 	else
 		myconf="--with-xml=expat";
+	fi
+
+	if use qt; then
+		myconf="${myconf} --enable-qt=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
+	else
+		myconf="${myconf} --disable-qt"
 	fi
 
 	econf \
