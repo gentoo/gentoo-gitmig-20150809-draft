@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12-r2.ebuild,v 1.2 2005/12/31 13:30:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12-r2.ebuild,v 1.3 2006/01/02 11:07:06 lisa Exp $
 
 inherit eutils
 
@@ -14,11 +14,10 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~mips ~ppc ~ppc64 sparc x86"
-IUSE="static perl php doc"
+IUSE="static perl doc"
 
 DEPEND=">=dev-libs/libevent-0.6
-	perl? ( dev-perl/Cache-Memcached )
-	php? ( dev-libs/memcached-api-php )"
+	perl? ( dev-perl/Cache-Memcached )"
 
 src_compile() {
 	local myconf=""
@@ -46,11 +45,4 @@ src_install() {
 
 pkg_postinst() {
 	enewuser memcached -1 -1 /dev/null daemon
-	if ! use php; then
-		ewarn "This package uses a special \"php\" USE flag to include the PHP"
-		ewarn "API. If you emerged this without setting that USE flag, you can"
-		ewarn "still get the API by doing:"
-		einfo "   emerge dev-libs/memcached-api-php"
-		echo
-	fi
 }

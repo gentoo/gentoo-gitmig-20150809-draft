@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f9443af2200a105ac67d4bf35c6cacc ChangeLog 4907
+MD5 59e42ac98f19f22c83bbe9a4de680455 ChangeLog 5182
 MD5 f838206eac3e3420d7ad751024f64eea files/1.1.12/conf 636
 MD5 48aa3c67b8c13598a3a4880bdced44ac files/1.1.12/init 1284
 MD5 7d313d0464bf2dcec9d83b20646b0a95 files/conf 537
@@ -10,15 +7,8 @@ MD5 dc66dcc94aa25e2392e3c6575324ee56 files/digest-memcached-1.1.12 68
 MD5 dc66dcc94aa25e2392e3c6575324ee56 files/digest-memcached-1.1.12-r1 68
 MD5 dc66dcc94aa25e2392e3c6575324ee56 files/digest-memcached-1.1.12-r2 68
 MD5 a513989dda7189a51c6d117b5c997223 files/init 532
-MD5 5727d73671db85103fad1163f2bb1070 memcached-1.1.11.ebuild 1355
-MD5 85bdd6bc525bd3cf2c1bdccfd2b32a20 memcached-1.1.12-r1.ebuild 1503
-MD5 fe61d87156c6fd4da8df595baa998431 memcached-1.1.12-r2.ebuild 1564
-MD5 1c617e0c159fc8f89cc69b80ec380acf memcached-1.1.12.ebuild 1381
+MD5 4476799e5b6454df4ff1c06fcc81f3c6 memcached-1.1.11.ebuild 1028
+MD5 475549d69ce25e2f12b8607da2741a9f memcached-1.1.12-r1.ebuild 1175
+MD5 96c78b539ddd3c21beb918be1ac82126 memcached-1.1.12-r2.ebuild 1254
+MD5 aaefa2ae771cffd672aa6c46f30e7d50 memcached-1.1.12.ebuild 1054
 MD5 0f18e4c1a9a4b09570cfc7719b927e83 metadata.xml 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtogPAiZjviIA2XgRAmatAKDL4fVlKD1MMUhm2/DDtlyCzEob3gCeM1ih
-n+hdoBU40ccx5zmj7IDWE2Y=
-=TBj0
------END PGP SIGNATURE-----
