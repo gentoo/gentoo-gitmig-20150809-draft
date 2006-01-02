@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8.ebuild,v 1.10 2004/09/01 02:27:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8.ebuild,v 1.11 2006/01/02 10:46:47 s4t4n Exp $
 
 DESCRIPTION="Analogue clock utility for X Windows."
 HOMEPAGE="http://www.tigr.net/"
@@ -28,5 +28,5 @@ src_install () {
 	doman astime.1
 
 	dobin astime
-	dodoc README INSTALL LICENSE
+	dodoc README
 }

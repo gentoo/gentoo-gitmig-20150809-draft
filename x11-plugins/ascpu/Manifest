@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d65da6b11a68e52735f61282de42725 ascpu-1.9.ebuild 689
-MD5 8e7389fd213d5d6314b269ca32099a29 ascpu-1.10.ebuild 708
-MD5 76ce20132aebe1a649e0c6dea7e34aeb ChangeLog 1425
-MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163
+MD5 7e69bb5130baaefe2fd0a6d748c601c4 ChangeLog 1555
+MD5 198a5989158898bec412804a458996e7 ascpu-1.10.ebuild 690
+MD5 1da1745e9de0cb6cf4b794d41cefd312 ascpu-1.9.ebuild 669
+MD5 6718d1f1daa4d22b0edb9ec4f4b14571 files/ascpu-1.10-gentoo.patch 947
 MD5 d8501577130cd99a4eb4543995c90c2f files/ascpu-1.9-gentoo.patch 763
 MD5 a566b5b5a9c4e940161813e32d9673a6 files/digest-ascpu-1.10 61
-MD5 6718d1f1daa4d22b0edb9ec4f4b14571 files/ascpu-1.10-gentoo.patch 947
 MD5 683348a20ecc2ea05fc85877e60846a0 files/digest-ascpu-1.9 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrYhoEZCkKN40op4RAhXnAJ9RifQmm8F6qkEMt1iG95GeBlKaJwCfREHp
-vSIL3OlbNmVv33sNSbARpCs=
-=iZug
------END PGP SIGNATURE-----
+MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163

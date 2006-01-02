@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/asmem-1.10.ebuild,v 1.4 2005/02/06 17:36:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/asmem-1.10.ebuild,v 1.5 2006/01/02 10:48:50 s4t4n Exp $
 
 inherit eutils
 
@@ -24,5 +24,5 @@ src_install () {
 	dodir /usr/share/man/man1
 
 	make DESTDIR=${D} install || die
-	dodoc CHANGES INSTALL LICENSE README
+	dodoc CHANGES README
 }
