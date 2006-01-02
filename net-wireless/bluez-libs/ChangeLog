@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-libs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.54 2005/12/17 13:04:33 gmsoft Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.55 2006/01/02 07:56:45 compnerd Exp $
+
+  02 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  -bluez-libs-2.10.ebuild, -bluez-libs-2.15.ebuild,
+  -bluez-libs-2.16-r1.ebuild, -bluez-libs-2.17.ebuild,
+  -bluez-libs-2.18.ebuild:
+  Ringing in the new year with a light pruning
 
   17 Dec 2005; Guy Martin <gmsoft@gentoo.org> bluez-libs-2.22.ebuild:
   Stable on hppa.
