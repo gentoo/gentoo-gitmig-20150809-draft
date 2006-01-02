@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c373eba2329362112eb26c95503c130 ChangeLog 4943
+MD5 80e048d8574c106a2735af8672e93e4a ChangeLog 5048
 MD5 565f1133c57a789f0cf51c02510a6f9c files/1.0/mozconfig-1.0 1367
 MD5 841f7a0a89c5d8be3841444ce2dd0b85 files/1.0/nvu-0.50-dir.patch 713
 MD5 952edf776beb47f9ddeeed1eb3a9407f files/1.0/nvu-0.50-freetype-compile.patch 13641
@@ -14,11 +11,4 @@ MD5 a05fdf2c14ab81e5c9e6827958cc4a2c files/digest-nvu-1.0-r2 70
 MD5 91bb5e61f505e2e53aa42345431c8fa7 files/mozconfig2 2160
 MD5 2f058933e09a68513c1ca3022b81a441 metadata.xml 433
 MD5 c3c4cbc233f87340d78fab34edbc469e nvu-0.90-r2.ebuild 2298
-MD5 7610a81d26637144949e3881091505d3 nvu-1.0-r2.ebuild 3081
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDff272G5bA0cA/ScRAtVTAJ41nOTLAHeN6sFNmM0NiTVU8tuAjwCg5N8X
-4VERerQB7y3cur6Pp3i6cXY=
-=kRgM
------END PGP SIGNATURE-----
+MD5 f71aac9cd14f142bff51d1f51c8ac89c nvu-1.0-r2.ebuild 3124
