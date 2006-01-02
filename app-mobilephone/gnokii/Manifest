@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2b5a5e151f16c429078e71faf6b93ab ChangeLog 7945
 MD5 1ae951a2b197095da2c0d74c0067181f files/digest-gnokii-0.6.10 67
 MD5 c4cdcbc35ff57082908ea21d7aa1f9a3 files/digest-gnokii-0.6.7-r1 66
@@ -12,3 +15,10 @@ MD5 cba9a4289ee030177175548bb071572d gnokii-0.6.7-r1.ebuild 2323
 MD5 438e4d861c9041a0b860bf4791a20693 gnokii-0.6.7-r2.ebuild 2329
 MD5 d8f6cfbab08d0644b83b55a2bea01c6e gnokii-0.6.8.ebuild 2328
 MD5 01ec5e34cbf064fdf9a0862d481b01d9 metadata.xml 467
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuS85jG8pv1lIUX4RAhhKAKDG1gd7ujTMvHxsoA7dARuJYIkcmwCg1QcE
+sncTBdT3Wf5kMmjK8BfxOJU=
+=eF4h
+-----END PGP SIGNATURE-----
