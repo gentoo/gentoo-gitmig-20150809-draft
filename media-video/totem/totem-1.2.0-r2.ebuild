@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.4 2005/12/26 15:11:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.5 2006/01/02 07:31:18 compnerd Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -54,7 +54,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		win32codecs? ( =media-plugins/gst-plugins-pitfdll-0.8* ) )
 	nsplugin? (
 		>=net-libs/gecko-sdk-1.7
-		>=sys-apps/dbus-0.35 )"
+		>=sys-apps/dbus-0.35
+		!>=sys-apps/dbus-0.60 )"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
