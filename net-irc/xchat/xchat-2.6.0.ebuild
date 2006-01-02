@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.0.ebuild,v 1.5 2005/11/05 15:10:51 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.0.ebuild,v 1.6 2006/01/02 07:11:23 swegener Exp $
 
 inherit eutils versionator
 
@@ -38,6 +38,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/xc260-fix-fetext.diff
+	epatch "${FILESDIR}"/${PV}-dbus-0.60-support.patch
 
 	# use libdir/xchat/plugins as the plugin directory
 	if [ $(get_libdir) != "lib" ] ; then
