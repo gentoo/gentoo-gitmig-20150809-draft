@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r1.ebuild,v 1.1 2006/01/02 21:09:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r1.ebuild,v 1.2 2006/01/02 21:26:27 caleb Exp $
 
 ONIGURUMA="onigd2_5_0"
 
@@ -25,7 +25,8 @@ RDEPEND="virtual/libc
 	tcltk? ( dev-lang/tk )
 	>=dev-ruby/ruby-config-0.3
 	!=dev-lang/ruby-cvs-1.8*
-	!dev-ruby/rdoc"
+	!dev-ruby/rdoc
+	!dev-ruby/rexml"
 
 DEPEND="sys-devel/autoconf
 	sys-apps/findutils
