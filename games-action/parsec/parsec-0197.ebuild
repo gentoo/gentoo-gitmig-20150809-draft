@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.7 2006/01/02 18:52:14 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.8 2006/01/02 20:07:27 mr_bones_ Exp $
 
-inherit eutils games
+inherit games
 
 DESCRIPTION="Parsec - there is no safe distance"
 HOMEPAGE="http://openparsec.sourceforge.net/"
@@ -29,9 +29,13 @@ S=${WORKDIR}/${PN}
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir}
-	cp -r * ${D}/${dir}/
-	dogamesbin ${FILESDIR}/parsec
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/parsec
+
+	dogamesbin "${FILESDIR}/parsec" || die "dogamesbin failed"
+	insinto "${dir}"
+	doins -r * || die "doins failed"
+	sed -i \
+		-e "s:GENTOO_DIR:${dir}:" \
+		"${D}${GAMES_BINDIR}/parsec" \
+		|| die "sed failed"
 	prepgamesdirs
 }
