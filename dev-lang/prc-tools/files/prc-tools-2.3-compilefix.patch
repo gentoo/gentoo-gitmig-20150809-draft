@@ -326,3 +326,19 @@
  	done
  
  .PHONY: all info man html install install-info install-man install-html clean
+--- prc-tools-2.3/configure	2003-09-18 01:30:15.000000000 +0100
++++ prc-tools-2.3/configure	2006-01-02 17:05:59.000000000 +0000
+@@ -1764,13 +1764,6 @@
+ fi
+ 
+   if test -n "$htmldocs_enabled"; then
+-    # Check that texi2html understands its new-style (e.g. -out_file) arguments
+-    if test $TEXI2HTML != false &&
+-       $TEXI2HTML -out_file /dev/null /dev/null >/dev/null 2>/dev/null
+-    then :
+-    else
+-      { echo "configure: error: modern texi2html needed to build HTML documentation" 1>&2; exit 1; }
+-    fi
+     # In a multi-target build, hmtldocs needs to ensure that this is configured
+     # before it tries to "make info" over there.
+     if test $first_enabled_target != .; then

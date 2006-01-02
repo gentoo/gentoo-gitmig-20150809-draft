@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/prc-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.10 2006/01/01 22:01:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.11 2006/01/02 17:16:15 plasmaroo Exp $
+
+  02 Jan 2006; <plasmaroo@gentoo.org> files/prc-tools-2.3-compilefix.patch:
+  Add configure fix for userpriv; #117307.
 
   01 Jan 2006; <plasmaroo@gentoo.org> prc-tools-2.3-r1.ebuild:
   Path fix; bug #100879.
