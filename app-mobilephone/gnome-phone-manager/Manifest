@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c0c23eb1108e350a24b041003f915e7 gnome-phone-manager-0.6.ebuild 1016
-MD5 c1a736ceddb52dbb731859e5a9d7b619 gnome-phone-manager-0.4.ebuild 1075
-MD5 c2c09ae7be17d094c321ae2ff261114a ChangeLog 1034
-MD5 8e68d11b191a36c6430cb32308a182c4 metadata.xml 735
-MD5 2f647a87b3c98a511f73c6e0408a2b9e files/gnome-phone-manager-0.4-gcc3.patch 1652
+MD5 3ebdf8b989e760c7713e513603e0340b ChangeLog 1138
 MD5 50541bea837f45b13e29485e70bb06a3 files/digest-gnome-phone-manager-0.4 75
 MD5 596786c32d3fc69b6689d77546e49a52 files/digest-gnome-phone-manager-0.6 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLx73NSP4Vda7IdsRAp/1AKCLCs6W8xfMVh4bamJMkRCe0RR+cACeKjsJ
-hEHIr6Lx/7AQo95+ZbntR2I=
-=FKdf
------END PGP SIGNATURE-----
+MD5 2f647a87b3c98a511f73c6e0408a2b9e files/gnome-phone-manager-0.4-gcc3.patch 1652
+MD5 c1a736ceddb52dbb731859e5a9d7b619 gnome-phone-manager-0.4.ebuild 1075
+MD5 fdaf673a63683d861ecce4cd68546d6c gnome-phone-manager-0.6.ebuild 1015
+MD5 8e68d11b191a36c6430cb32308a182c4 metadata.xml 735
