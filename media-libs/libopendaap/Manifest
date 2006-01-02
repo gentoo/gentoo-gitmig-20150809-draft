@@ -1,4 +1,7 @@
-MD5 5b4466307de418094a8f4097dce9078a ChangeLog 1749
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7ec6e82eab86bdbbdeec229a9a184daf ChangeLog 1855
 MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
 MD5 fb7b43fda414c12b64540db818f4c497 files/digest-libopendaap-0.3.0 70
 MD5 c16e2833e4aa6d3ab76e63fd9a36bd09 files/digest-libopendaap-0.4.0 70
@@ -6,5 +9,12 @@ MD5 fb066ffc6e3189f97e3b7b934d1604ed files/libopendaap-0.2.3-types.h 704
 MD5 5d449c7e532679f6cb0aca9271b5c4c0 files/libopendaap-0.3.0-types.h 610
 MD5 7656177575e00de56441444e837e339e libopendaap-0.2.3.ebuild 760
 MD5 d8673dd8359e3392af9e4958fceaca8f libopendaap-0.3.0.ebuild 769
-MD5 84d166f73312af3af7f1fee4f8edea6e libopendaap-0.4.0.ebuild 696
+MD5 06ba6c1fa15aca92d8c3e52e76cb44bc libopendaap-0.4.0.ebuild 697
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuLc2CRZPokWLroQRAiKkAKCBsnKaIqRnkV+fMhtsJdxaOYTUawCgwFCj
+/ThbIgY1gVXm7SbT5den6HU=
+=BTI6
+-----END PGP SIGNATURE-----
