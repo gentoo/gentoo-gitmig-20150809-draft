@@ -1,13 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 04efe861ba3d3cb11d46720e2d670efa ChangeLog 19541
+MD5 4b5d4c49bffb4e623e8a75d6a81208b3 ChangeLog 19722
 MD5 4a7c0e15e90b5283855fb969a220c85c alsa-utils-1.0.10.ebuild 2420
-MD5 8e9e89032a9705095a4f28b1034d05cd alsa-utils-1.0.10_rc2.ebuild 2588
-MD5 13f8ee3120f13e393a218955f2b3ac62 alsa-utils-1.0.10_rc3.ebuild 2582
 MD5 42098df4cac5e904a14bf519e7cbfcb6 alsa-utils-1.0.11_rc1.ebuild 2511
 MD5 5d8368331e88ae9656d9a0cc1a518f94 alsa-utils-1.0.11_rc2.ebuild 2427
-MD5 a2a37bf9cb817343a6a58e20cfea9bb8 alsa-utils-1.0.7.ebuild 2272
 MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
 MD5 d9b19e1fc31acdd0b7091ce79400ce85 alsa-utils-1.0.9a-r1.ebuild 2525
 MD5 8bf806386c8a966605549b7a91fd9131 alsa-utils-1.0.9a.ebuild 2343
@@ -20,19 +17,16 @@ MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
 MD5 6e3b02ef9e95e47eb339f6a3d0d91daa files/alsasound-1.0.10_rc2 7183
 MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
 MD5 a86ec4a87712d028c83f9066f4505551 files/digest-alsa-utils-1.0.10 70
-MD5 5583841a2a5a206ad2838524c2cc7528 files/digest-alsa-utils-1.0.10_rc2 73
-MD5 8c0d2ce137d1d9a639a0b9d23c8dffb1 files/digest-alsa-utils-1.0.10_rc3 73
 MD5 d2d3bb29084e36b9640b5cc937e16201 files/digest-alsa-utils-1.0.11_rc1 73
 MD5 d97909af462b2d708b5c64c15d4983d6 files/digest-alsa-utils-1.0.11_rc2 73
-MD5 ddaf1d5cc1a19dff65e19e6470bc711d files/digest-alsa-utils-1.0.7 69
 MD5 ec6210532acb9b397bacb3eb81f7593a files/digest-alsa-utils-1.0.8 69
 MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
 MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a-r1 70
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuZK8KRy60XGEcJIRArAhAJ0WbQJhgzbIlXuFHQcdvU4gO4gKTACgqHp/
-al98TRzOFmp4YpiKkb/TMEg=
-=4Hdl
+iD8DBQFDuai1OpjtAl+gMRURAt5ZAJ95wgrUkxLZMxhirnfJ7Kw55tLbaACgnn5t
+BohQUWmlZiXzkgrjNhO9L4k=
+=8phz
 -----END PGP SIGNATURE-----
