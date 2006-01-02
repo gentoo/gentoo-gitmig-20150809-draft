@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/arcload
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.3 2005/10/14 17:32:26 kumba Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.4 2006/01/02 07:37:07 kumba Exp $
+
+  02 Jan 2006; Joshua Kinard <kumba@gentoo.org> -arcload-0.41.ebuild,
+  arcload-0.43-r1.ebuild:
+  Bump to mips stable, remove 0.41
 
 *arcload-0.43-r1 (15 Oct 2005)
 
