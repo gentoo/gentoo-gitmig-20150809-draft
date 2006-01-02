@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.5.2.ebuild,v 1.1 2005/05/29 04:36:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.5.2.ebuild,v 1.2 2006/01/02 19:36:22 nattfodd Exp $
 
 # although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	dodoc COMPILE COPYING LICENSE
+	dodoc COMPILE
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/TeXmacs.desktop
