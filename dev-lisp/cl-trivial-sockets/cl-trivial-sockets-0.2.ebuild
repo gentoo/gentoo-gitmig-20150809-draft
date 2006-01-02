@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-sockets/cl-trivial-sockets-0.2.ebuild,v 1.5 2005/05/24 18:48:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-sockets/cl-trivial-sockets-0.2.ebuild,v 1.6 2006/01/02 17:11:17 mkennedy Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="A portable Common Lisp networking library for undemanding Internet clients"
 HOMEPAGE="http://www.cliki.net/trivial-sockets

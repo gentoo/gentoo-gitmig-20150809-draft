@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gcc-xml-ffi/cl-gcc-xml-ffi-0.1.3.20051115.ebuild,v 1.1 2005/11/23 17:31:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gcc-xml-ffi/cl-gcc-xml-ffi-0.1.3.20051115.ebuild,v 1.2 2006/01/02 17:09:59 mkennedy Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 MY_PN=${PN/cl-/}
 

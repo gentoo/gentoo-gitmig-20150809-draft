@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clem/cl-clem-0.1.4.20051012.ebuild,v 1.1 2005/11/23 17:24:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clem/cl-clem-0.1.4.20051012.ebuild,v 1.2 2006/01/02 17:08:00 mkennedy Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="Cyrus Harmon's Common Lisp matrix mathematics library."
 HOMEPAGE="http://www.cyrusharmon.org/cl/blog/"
