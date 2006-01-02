@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2211c52ccb350bf03908e2d58b907285 ChangeLog 112778
+MD5 afb91810ec52f53d56e612b61f84708f ChangeLog 112871
 MD5 84ed1084819731e2acef3610f0b6b30a files/digest-xorg-x11-6.8.2-r4 506
 MD5 a60034cf312e05f28a2da6b202d53e44 files/digest-xorg-x11-6.8.2-r6 504
 MD5 74c3f07657d69432f516175657c23ba0 files/digest-xorg-x11-6.8.99.15-r4 518
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xorg-x11-7.0 0
 MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
 MD5 2e954169d7027d6cdb742eea5ef2b1c7 xorg-x11-6.8.2-r4.ebuild 55086
-MD5 3d68301ad06af39bfd4ab92387e1518b xorg-x11-6.8.2-r6.ebuild 55191
+MD5 f457479a06977e29f3aeeec3e047a27a xorg-x11-6.8.2-r6.ebuild 55183
 MD5 e579682131797f70d4ab4f4c88147566 xorg-x11-6.8.99.15-r4.ebuild 54164
 MD5 64b17e9edeabdc1f6112c5de5300754a xorg-x11-7.0.ebuild 3691
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtlDT2+ySkm8kpY0RAqNjAJ9t3HhJccAOvGC2pBvbFkmStTrpcgCdGwpY
-KGwsd0/jEaHf/oNKQNBW5Oo=
-=LDwr
------END PGP SIGNATURE-----
