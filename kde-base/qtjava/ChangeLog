@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtjava
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.24 2005/12/13 03:25:49 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.25 2006/01/02 17:54:07 hansmi Exp $
+
+  02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qtjava-3.4.3-r1.ebuild:
+  Stable on ppc.
 
 *qtjava-3.4.3-r1 (13 Dec 2005)
 

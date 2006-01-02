@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be6ae9de13610751d4b751c0a6e438ba qtjava-3.3.2.ebuild 943
-MD5 38127ecd985ccba4d59543bea433a552 qtjava-3.4.1.ebuild 962
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e8cdd438fafd16720d8318394bc57978 ChangeLog 3650
-MD5 45570fdffde3eaf2ed010df652ba96b1 qtjava-3.4.3-r1.ebuild 966
-MD5 e8d07b5d639d3b12d60e43a972a09134 qtjava-3.4.3.ebuild 957
-MD5 fb5ef8d649748f39623fc5bb7307ed20 qtjava-3.5.0.ebuild 953
+MD5 b20aef0496e3373ce0f847b86e73f254 ChangeLog 3744
+MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-qtjava-3.3.2 71
+MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtjava-3.4.1 221
+MD5 f6bd746271de83bcbcacc04a445d590f files/digest-qtjava-3.4.3 71
 MD5 f6bd746271de83bcbcacc04a445d590f files/digest-qtjava-3.4.3-r1 71
 MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-qtjava-3.5.0 71
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-qtjava-3.3.2 71
-MD5 f6bd746271de83bcbcacc04a445d590f files/digest-qtjava-3.4.3 71
-MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtjava-3.4.1 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnj9OFdQwWVoAgN4RAtYmAJ0QvGXv/1TSZsmiQOVFnaXIuL3AnACeK1Jx
-Ji/iIt8ggFMBJO1J/jICxwo=
-=+HhF
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 be6ae9de13610751d4b751c0a6e438ba qtjava-3.3.2.ebuild 943
+MD5 38127ecd985ccba4d59543bea433a552 qtjava-3.4.1.ebuild 962
+MD5 f57f06181bcdf8e6225080a19ae155d0 qtjava-3.4.3-r1.ebuild 961
+MD5 e8d07b5d639d3b12d60e43a972a09134 qtjava-3.4.3.ebuild 957
+MD5 fb5ef8d649748f39623fc5bb7307ed20 qtjava-3.5.0.ebuild 953
