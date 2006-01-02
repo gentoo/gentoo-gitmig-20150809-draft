@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7fc62c429a1f9eb551f33161632d168 ChangeLog 902
-MD5 cae1fb574188dff3f8cf7acd28609534 cl-ch-util-0.1.4.20050724.ebuild 1056
-MD5 8d9f22e0a61cdf53b2d769edb57e242a cl-ch-util-0.1.5.20051012.ebuild 1057
+MD5 64b2aaf3d3760e4d3ad681d016558746 ChangeLog 1060
+MD5 ebdab24841b6fba6e89ee6b66291e070 cl-ch-util-0.1.4.20050724.ebuild 1063
+MD5 14ee02c55567f017f0d0346ece5ff63b cl-ch-util-0.1.5.20051012.ebuild 1064
 MD5 4fdf9429657479f345715d2514eb544a cl-ch-util-0.1.7.20051204.ebuild 1046
 MD5 1cd754672d755dfaabb81c59238b65a4 files/0.1.4.20050724-fasl-output-gentoo.patch 2323
 MD5 1cd754672d755dfaabb81c59238b65a4 files/0.1.5.20051012-fasl-output-gentoo.patch 2323
@@ -12,10 +9,3 @@ MD5 0ce6b51f0162512cfe9ae43b9f73db01 files/digest-cl-ch-util-0.1.4.20050724 72
 MD5 2d726d84839b49ec24ff09dd02096644 files/digest-cl-ch-util-0.1.5.20051012 72
 MD5 042f132351bd09baf76719b57776db42 files/digest-cl-ch-util-0.1.7.20051204 72
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDle6nyiNZaEAZA+ARAvkyAJ90GOVh/wKviVNswK5ySrXCJkIkygCeJsWN
-CJ1cx41IoZ5qgNtLFz76s1I=
-=jIQy
------END PGP SIGNATURE-----
