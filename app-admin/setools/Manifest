@@ -1,19 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7a3c664aedbdf5688a56da442d20bff1 ChangeLog 5536
-MD5 d5e3ea2528cfdcc54874e15ff5d5fbf2 files/digest-setools-2.1.2 67
-MD5 ac6b09b47a0b179e764fe646e1e6f9a9 files/digest-setools-2.1.3 67
+MD5 c082971acbbf7a375492bdd7f61a5059 ChangeLog 5672
 MD5 ed1b98717ae185328af09c8127668fdf files/digest-setools-2.2 65
 MD5 e7f3c1619fcbcf575ad7dee10f250108 files/setools-2.2-nogui.diff 3821
 MD5 f5d096116ff7743b040148ced68e4f7b metadata.xml 369
-MD5 3ba582cf255e6d409b94dd3611c71e42 setools-2.1.2.ebuild 2024
-MD5 8204348ac1ebe560da584cae6e8ca920 setools-2.1.3.ebuild 1880
-MD5 206669ada8dd7ebcf83d0fcd21598169 setools-2.2.ebuild 1938
+MD5 a268d0c9b61d5d4bdd08e243cbac52c9 setools-2.2.ebuild 1935
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDk6NUJ+ChZlpDtAoRAvG6AJ4xI8ayVDnUMXeJ1re2WRLOGQMruwCeNwg2
-87r0zPvaVO5NwVmbZ8tWSnQ=
-=LMv/
+iD8DBQFDuLzcJ+ChZlpDtAoRAtTsAJsHxSrWnE3piL06XzlvSbgUP78OdACgpbPf
+5hs/qLREj4pmYh43vILKKHI=
+=Q8rx
 -----END PGP SIGNATURE-----
