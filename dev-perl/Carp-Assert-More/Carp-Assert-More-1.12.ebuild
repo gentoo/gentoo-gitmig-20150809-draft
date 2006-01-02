@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert-More/Carp-Assert-More-1.12.ebuild,v 1.1 2005/12/03 14:31:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert-More/Carp-Assert-More-1.12.ebuild,v 1.2 2006/01/02 14:21:01 mcummings Exp $
 
 inherit perl-module
 
@@ -15,6 +15,6 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/Scalar-List-Utils
+DEPEND="perl-core/Scalar-List-Utils
 		dev-perl/Carp-Assert
 		dev-perl/Test-Exception"
