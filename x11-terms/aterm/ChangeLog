@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.79 2005/12/28 22:26:12 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.80 2006/01/03 21:21:40 sekretarz Exp $
+
+  03 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org> aterm-1.0.0.ebuild:
+  Add modular X dependencies, bug #115160 by Ben Skeggs
 
   28 Dec 2005; Fabian Groffen <grobian@gentoo.org> aterm-0.4.2-r7.ebuild,
   aterm-0.4.2-r9.ebuild, aterm-0.4.2-r11.ebuild, aterm-0.4.2-r12.ebuild,
