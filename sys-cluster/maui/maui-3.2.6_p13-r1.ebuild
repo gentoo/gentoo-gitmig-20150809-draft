@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p13-r1.ebuild,v 1.1 2005/07/05 20:20:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p13-r1.ebuild,v 1.2 2006/01/03 22:46:13 kanaka Exp $
 
 DESCRIPTION="Maui Cluster Scheduler"
 HOMEPAGE="http://www.clusterresources.com/products/maui/"
@@ -11,7 +11,7 @@ RDEPEND="${DEPEND}
 		 virtual/libc"
 SLOT="0"
 LICENSE="maui"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 RESTRICT="fetch nomirror"
 
 S="${WORKDIR}/${P/_/}"
