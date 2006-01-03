@@ -1,4 +1,15 @@
-MD5 cf23bdbb3397c2c0e023e40bfd3ec740 ChangeLog 718
-MD5 3a5c2df4dac10b45f6afcc16742c63ed flobopuyo-0.20.ebuild 1012
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d61dcc341cb0b7b1b03b247ec41b398a ChangeLog 931
 MD5 be0bda1e61a418231b438f1d8ac57d2a files/digest-flobopuyo-0.20 64
+MD5 bb8afd6e04bde08fd33e22c466674878 files/flobopuyo-0.20-gcc4.patch 967
+MD5 bdf1e2eaa2d3ee101caa03e734c129a2 flobopuyo-0.20.ebuild 1060
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDudJeCRZPokWLroQRAlW7AKDJKmdC79L9A5MqOK6nI/syz7kFRgCePJMi
+FojI275OONUEBovzAjPm4Oo=
+=4QzL
+-----END PGP SIGNATURE-----
