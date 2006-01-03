@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.41 2006/01/03 03:31:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.42 2006/01/03 09:28:37 flameeyes Exp $
+
+  03 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> speex-1.1.11.1.ebuild:
+  Fix issues with parallel make.
 
 *speex-1.1.11.1 (03 Jan 2006)
 
