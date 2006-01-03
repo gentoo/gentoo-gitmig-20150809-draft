@@ -1,0 +1,10 @@
+# ChangeLog for app-mobilephone/obexfs
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexfs/ChangeLog,v 1.1 2006/01/03 19:42:11 mrness Exp $
+
+*obexfs-0.6 (03 Jan 2006)
+
+  03 Jan 2006; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +obexfs-0.6.ebuild:
+  Initial import from bug #111997.
+
