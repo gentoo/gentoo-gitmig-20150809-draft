@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4823 2006/01/03 20:30:25 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4824 2006/01/03 21:57:28 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1590,3 +1590,4 @@ dev-db/mysqltool
 # Mask until deps get updated to point to poppler-bindings
 >=app-text/poppler-0.4.3-r2
 >=app-text/poppler-bindings-0.4.3-r2
+>=app-text/evince-0.4.0-r3
