@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.10.3.ebuild,v 1.2 2006/01/03 13:40:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.10.3.ebuild,v 1.3 2006/01/03 15:45:53 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 sparc ~x86"
 IUSE="doc static"
 
 RDEPEND=">=dev-libs/glib-2.5.7"
