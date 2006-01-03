@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.5.ebuild,v 1.1 2006/01/01 04:38:51 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.5.ebuild,v 1.2 2006/01/03 17:34:28 st_lim Exp $
 
 inherit webapp eutils
 
@@ -58,7 +58,7 @@ src_install() {
 
 	webapp_configfile ${MY_HTDOCSDIR}/sites/default/settings.php
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en-${PV}.txt
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en-4.6.3.txt
 
 	webapp_src_install
 }
