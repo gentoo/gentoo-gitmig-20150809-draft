@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0.ebuild,v 1.2 2005/12/20 17:23:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0.ebuild,v 1.3 2006/01/03 12:12:06 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -104,6 +104,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/qt4-nomkdir.patch
 	epatch ${FILESDIR}/qt-4.1.0-configure-no-mysql.diff
+	epatch ${FILESDIR}/qt-4.1.0-debug-and-release.diff
 
 	if [[ "$(gcc-major-version)" == "4" ]]; then
 		einfo "Visibility support: auto"
