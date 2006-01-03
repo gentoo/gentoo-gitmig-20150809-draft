@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1645 2006/01/03 16:19:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1646 2006/01/03 21:19:42 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -173,6 +173,7 @@ app-text/htmldoc:fltk - Install the gui version of htmldoc.
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/poppler:cairo - Enable the cairo backend for poppler
+app-text/poppler-bindings:cairo - Enable the cairo backend for poppler
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
 app-text/xpdf:nodrm - Disable the drm feature decoder.
