@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0_pre1.ebuild,v 1.1 2006/01/03 02:43:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0_pre1.ebuild,v 1.2 2006/01/03 09:25:37 flameeyes Exp $
 
-inherit eutils linux-mod flag-o-matic
+inherit eutils linux-mod flag-o-matic autotools
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
@@ -74,6 +74,7 @@ src_unpack() {
 
 	# fix bz878 compilation, bug #87505
 	sed -i -e "s:lircd.conf.pixelview_bt878:lircd.conf.playtv_bt878:" configure configure.in
+
 }
 
 src_compile() {
@@ -89,16 +90,16 @@ src_compile() {
 	fi
 
 	# Patch bad configure for /usr/src/linux
-	libtoolize --copy --force || die "libtoolize failed"
 	sed -si "s|/usr/src/kernel\-source\-\`uname \-r\` /usr/src/linux\-\`uname \-r\` ||" \
 		acinclude.m4 aclocal.m4 configure || die "/usr/src/linux sed failed"
 
 	get_version
 	sed -si "s|\`uname \-r\`|${KV_FULL}|" configure configure.in setup.sh || \
 		die "/lib/modules sed failed"
+	
+	eautoreconf
 
 	unset ARCH
-	export WANT_AUTOCONF=2.5
 
 	econf \
 		--disable-manage-devices \

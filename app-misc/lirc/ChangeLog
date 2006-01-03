@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.73 2005/12/14 18:16:26 cardoe Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.74 2006/01/03 09:25:37 flameeyes Exp $
+
+  03 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> lirc-0.8.0_pre1.ebuild:
+  Replace libtoolize with eautoreconf so that it does not break with
+  mis-versioning with portage sanity checks.
 
   14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> lirc-0.7.2.ebuild:
   Adding modular X depends
