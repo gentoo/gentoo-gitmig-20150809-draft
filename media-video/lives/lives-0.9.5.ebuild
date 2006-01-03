@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5.ebuild,v 1.1 2006/01/03 00:22:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5.ebuild,v 1.2 2006/01/03 13:51:20 lu_zero Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="xmms matroska ogg theora libvisual jack sox"
+IUSE="xmms matroska ogg theora libvisual sox"
 
 DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-gfx/imagemagick-5.5.6
@@ -39,7 +39,7 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		ogg? ( media-sound/ogmtools )
 		>=media-video/mjpegtools-1.6.2
 		libvisual? ( >=media-libs/libvisual-0.2.0 )
-		jack? ( media-sound/jack-audio-connection-kit )
+		media-sound/jack-audio-connection-kit
 		sox? ( media-sound/sox )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -55,7 +55,6 @@ src_unpack() {
 src_compile() {
 	econf \
 		$(use_enable libvisual) \
-		$(use_enable jack) \
 		|| die "configure failed"
 	emake || die "make failed"
 }
