@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.23-r1.ebuild,v 1.1 2005/10/17 19:36:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.25.ebuild,v 1.1 2006/01/03 00:18:21 leonardop Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -10,11 +10,12 @@ SRC_URI="http://www.venge.net/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
 IUSE="doc emacs ipv6 nls"
 
 RDEPEND=">=dev-libs/boost-1.32
+	sys-libs/zlib
 	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
@@ -69,17 +70,17 @@ pkg_postinst() {
 
 	einfo
 	einfo "If you are upgrading from:"
+	einfo "  - 0.23 or earlier: keys are now stored in ~/.monotone/keys. You"
+	einfo "    must run 'db migrate' against each of your databases; this "
+	einfo "    will automatically migrate the keys. Command line syntax for"
+	einfo "    'serve' has changed; please adjust startup scripts accordingly."
 	einfo "  - 0.21 or earlier: hooks governing netsync read permission have"
 	einfo "    changed again; see /usr/share/doc/${PF}/NEWS.gz"
 	einfo "  - 0.20 or earlier: you need to run 'db migrate' against each of"
 	einfo "    your databases."
-	einfo "  - 0.19 or earlier: there are some command line and server"
-	einfo "    configuration changes; see /usr/share/doc/${PF}/NEWS.gz"
-	einfo "  - 0.18 or earlier: if you have created a ~/.monotonerc, rename"
-	einfo "    it to ~/.monotone/monotonerc, so monotone will still find it."
 	einfo
-	einfo "For instructions to upgrade from previous versions, please read"
-	einfo "/usr/share/doc/${PF}/UPGRADE.gz"
+	einfo "For more details and instructions to upgrade from previous versions,"
+	einfo "please read /usr/share/doc/${PF}/UPGRADE.gz"
 	einfo
 }
 
