@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/gnome-art-0.2-r1.ebuild,v 1.1 2005/12/10 14:17:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/gnome-art-0.2-r1.ebuild,v 1.2 2006/01/03 02:02:49 caleb Exp $
 
 inherit ruby
 
@@ -17,7 +17,6 @@ IUSE=""
 S=${WORKDIR}/${PN}
 
 RDEPEND="virtual/ruby
-		dev-ruby/rexml
 		>=dev-ruby/ruby-gnome2-0.12.0
 		>=dev-ruby/ruby-gnomecanvas2-0.12.0
 		>=dev-ruby/ruby-gtk2-0.12.0

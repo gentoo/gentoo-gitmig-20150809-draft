@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-art
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.6 2005/12/10 14:17:47 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.7 2006/01/03 02:02:49 caleb Exp $
+
+  03 Jan 2006; Caleb Tennis <caleb@gentoo.org> gnome-art-0.2.ebuild,
+  gnome-art-0.2-r1.ebuild:
+  rexml has been removed, it's included in ruby now
 
 *gnome-art-0.2-r1 (10 Dec 2005)
 
