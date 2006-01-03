@@ -1,4 +1,4 @@
-MD5 13b7c15f9df2754fd82254e304dedff6 ChangeLog 31249
+MD5 e81915a466bdab932f90346d14d59c26 ChangeLog 31391
 MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
 MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
 MD5 1a6dde4414b4ad894e4ed7ed3fa919ff files/digest-kdegraphics-3.4.1-r1 71
@@ -33,6 +33,6 @@ MD5 6890cb29b3ed84dbf17aaf6f188efa43 kdegraphics-3.4.3-r3.ebuild 1887
 MD5 5627d28e9933d004259103c8feec5609 kdegraphics-3.4.3.ebuild 1738
 MD5 0e1a74ea3a94e170371e7d5dbe12106e kdegraphics-3.5.0-r2.ebuild 1978
 MD5 20b7a6b420063aaaba18a046cb798700 kdegraphics-3.5.0-r3.ebuild 2122
-MD5 a216ddc07e9116524d3842541321b780 kdegraphics-3.5.0-r4.ebuild 2367
+MD5 aa4699f21f7721403ef7d4008e6980e0 kdegraphics-3.5.0-r4.ebuild 2414
 MD5 71a6e1d836d6cce0d6a9ce6a71863200 kdegraphics-3.5.0.ebuild 1870
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
