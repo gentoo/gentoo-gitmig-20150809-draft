@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 385f6f1ee9f162424cc5f2f37f330ccc ChangeLog 7294
-MD5 0b5c9b9a92846b0a8ce4c49e249d33e0 alsa-headers-1.0.10.ebuild 1050
+MD5 714b2cc1737cc3ef8d74a4841bda9a36 ChangeLog 7398
+MD5 05f3fdcc8d906e5b3c05521ab84904ae alsa-headers-1.0.10.ebuild 1050
 MD5 a9e144dbe9c96be33f280e18ee2e369d alsa-headers-1.0.10_rc2.ebuild 1060
 MD5 68e0083b150cb84847cd0788fa19969c alsa-headers-1.0.10_rc3.ebuild 1054
 MD5 d6af3e5fac8b69c4fceaf1e231487b4f alsa-headers-1.0.11_rc1.ebuild 1060
@@ -18,10 +15,3 @@ MD5 855ac1fe064602102d683b3396a7c582 files/digest-alsa-headers-1.0.11_rc2 75
 MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-headers-1.0.8 71
 MD5 496627835733f8108e6b10dfc8ee9bf4 files/digest-alsa-headers-1.0.9b 72
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuTGKAiZjviIA2XgRAh3UAJ0UVJOccD37tb9oGVr+rNR3KPgz2ACeLMrw
-J0tucuQzhsSRFYBrjRFd7Zs=
-=aY3l
------END PGP SIGNATURE-----
