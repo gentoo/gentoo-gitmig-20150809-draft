@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a8f1ffc950e6ce94583fb88ddd1b92cb eboard-0.9.5.ebuild 1835
-MD5 7c4dd5de233fdbfc6ea51d256114c286 ChangeLog 2682
+MD5 03291ad612f9f4e4ce4ebe56600f734e ChangeLog 2901
+MD5 2fae6c948d078c0fb60e8e8a274efa29 eboard-0.9.5.ebuild 1875
 MD5 f37e8356d4b5cb9585c1bdae8dcd889c files/digest-eboard-0.9.5 201
+MD5 a1dc527f388a26579a14ec853e326124 files/eboard-0.9.5-gcc4.patch 1634
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDAf4nKRy60XGEcJIRAgfJAJsG1PpKJgKbXmas9sB+U0NrgKqNygCgpgXK
-+mSd3Bw2CXcBA5vXCLRL4Xw=
-=0xYw
+iD8DBQFDud9JCRZPokWLroQRAlSQAJsFxZ0BEJSaP/2wnAPP6ekbQeuc7gCg4qOW
+VsPp5qxHor1dYI2YgAEaksU=
+=lh36
 -----END PGP SIGNATURE-----

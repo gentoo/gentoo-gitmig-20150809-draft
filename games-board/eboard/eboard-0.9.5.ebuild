@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.9 2005/08/16 14:53:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.10 2006/01/03 02:19:43 halcy0n Exp $
 
 inherit eutils games
 
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+
 	sed -i \
 		-e "/DATADIR/ s:\$prefix/share:${GAMES_DATADIR}:" \
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" configure \
