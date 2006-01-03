@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.416 2005/12/25 00:57:06 kumba Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.417 2006/01/03 06:00:33 halcy0n Exp $
+
+*glibc-2.3.6-r2 (03 Jan 2006)
+
+  03 Jan 2006; Mark Loeser <halcy0n@gentoo.org> +glibc-2.3.6-r2.ebuild:
+  Bump to add a new patchset which fixes MIPs gcc-4 issues, bug #32429 and
+  #116086
 
   25 Dec 2005; Joshua Kinard <kumba@gentoo.org> glibc-2.3.6-r1.ebuild:
   New patchset to fix mips build issues when using gcc-4.x.
