@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r9.ebuild,v 1.3 2005/12/22 19:31:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r9.ebuild,v 1.4 2006/01/03 11:17:24 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic autotools
 
-PATCHLEVEL="2"
+PATCHLEVEL="3"
 
 DESCRIPTION="AAC audio decoding library"
 HOMEPAGE="http://www.audiocoding.com/"
