@@ -1,4 +1,4 @@
-MD5 077da83e55b974b048494002aeb6046d ChangeLog 1037
+MD5 27f77b094eed70f3386afacb4146adf8 ChangeLog 1127
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-php-toolkit-1.0 0
 MD5 4a45245e9b5d4fd45b744f093190a08b files/php-select 8283
 MD5 dfd0ee80895ad0838d0d14d7bfb3cd5d files/php-select-modules/apache1.sh 508
@@ -9,4 +9,4 @@ MD5 4ecf2a69badd7ba1b12fc497544726f3 files/php-select-modules/php-cgi.sh 452
 MD5 e4c69f3c38351cce893f12122cf3262c files/php-select-modules/php-devel.sh 532
 MD5 13c38bfdc416d740518637fe1425f467 files/php-select-modules/php.sh 436
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 4ab3d24b32d5d46c87fb3fc2c651e1b6 php-toolkit-1.0.ebuild 996
+MD5 d1d5a664550291e331a1cd6a2155c10b php-toolkit-1.0.ebuild 1004
