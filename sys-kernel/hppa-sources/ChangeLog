@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hppa-sources
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.61 2005/12/05 19:06:25 gmsoft Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.62 2006/01/03 20:40:24 gmsoft Exp $
+
+*hppa-sources-2.6.15_p1 (03 Jan 2006)
+
+  03 Jan 2006; Guy Martin <gmsoft@gentoo.org>
+  +hppa-sources-2.6.15_p1.ebuild:
+  Version bump. Fix the MUX console and also #103553, #116486 and #114227.
+  Marked directly stable.
 
 *hppa-sources-2.6.14.3_p0 (05 Dec 2005)
 
