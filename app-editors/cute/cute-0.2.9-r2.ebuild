@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9-r2.ebuild,v 1.2 2005/12/31 12:09:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9-r2.ebuild,v 1.3 2006/01/03 12:21:51 caleb Exp $
 
 inherit distutils
 
@@ -41,7 +41,7 @@ src_compile() {
 	cd ${S}/cute
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	addpredict "$QTDIR/etc/settings"
-	${ROOT}usr/qt/3/bin/qmake -o Makefile cute.pro
+	${ROOT}usr/qt/3/bin/qmake QMAKE=${ROOT}usr/qt/3/bin/qmake -o Makefile cute.pro
 	emake || die
 }
 

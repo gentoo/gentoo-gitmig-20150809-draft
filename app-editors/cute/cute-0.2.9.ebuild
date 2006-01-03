@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9.ebuild,v 1.9 2005/07/25 15:33:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9.ebuild,v 1.10 2006/01/03 12:21:51 caleb Exp $
 
 inherit distutils qt3
 
@@ -31,7 +31,7 @@ src_compile() {
 	cd ${S}/cute
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	addpredict "$QTDIR/etc/settings"
-	${QTDIR}/bin/qmake -o Makefile cute.pro
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o Makefile cute.pro
 	sed -i -e "s:CFLAGS   = -pipe -O2:CFLAGS   = ${CFLAGS}:" \
 		-e "s:CXXFLAGS = -pipe -O2:CXXFLAGS = ${CXXFLAGS}:" Makefile
 	emake || die
