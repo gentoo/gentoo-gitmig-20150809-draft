@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1644 2006/01/03 01:43:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1645 2006/01/03 16:19:27 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -88,8 +88,8 @@ app-emulation/qemu:kqemu - Enables the kernel module acceleration on the x86 cpu
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
-app-emulation/xen:screen - Enable support for running domain U consoles in a screen session
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS 
+app-emulation/xen:screen - Enable support for running domain U consoles in a screen session
 app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events
 app-forensics/samhain:mounts-check - Compile in the module to check for correct mount options
 app-forensics/samhain:netclient - Compile a client, rather than a standalone version
@@ -372,9 +372,9 @@ dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/twisted:serial - include serial port support
 dev-python/visual:numarray - enable support for numarray
 dev-python/visual:numeric - enable support for numeric
-dev-ruby/ruby-gtkmozembed:firefox - compile against Firefox instead of Mozilla
 dev-ruby/nitro:lighttpd - install lighttpd
 dev-ruby/nitro:xslt - enable xslt support
+dev-ruby/ruby-gtkmozembed:firefox - compile against Firefox instead of Mozilla
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
@@ -502,8 +502,8 @@ mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timesta
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
-mail-client/mozilla-thunderbird:mozsvg -  Enable SVG support in mozilla, firefox, and thunderbird
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+mail-client/mozilla-thunderbird:mozsvg -  Enable SVG support in mozilla, firefox, and thunderbird
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:gpgme - Enable support for gpgme
 mail-client/mutt:nntp - Adds support for nntp via patch
@@ -642,12 +642,12 @@ media-sound/amarok:visualization - Support visualization plugins through media-l
 media-sound/audacious:modplug - Build with modplug support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
-media-sound/audacity:libsamplerate - Build with libsamplerate support
 media-sound/audacity:ladspa - Enables the ability to support ladspa plugins
+media-sound/audacity:libsamplerate - Build with libsamplerate support
 media-sound/audacity:soundtouch - compile with support for soundtouch
-media-sound/banshee:real - Build with real/helix player support
 media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
+media-sound/banshee:real - Build with real/helix player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bmpx:irssi - Install irssi script (need dbus and perl)
 media-sound/bmpx:xchat - Install xchat script (need dbus and perl/python)
@@ -800,9 +800,9 @@ net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs afte
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
 net-analyzer/sancp:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/scapy:gnuplot - Enable gnuplot support
-net-analyzer/scapy:pyx - Enable pyx support for psdump/pdfdump commands
 net-analyzer/scapy:graphviz - Enable graphviz support
 net-analyzer/scapy:hostap - Enable hostap driver
+net-analyzer/scapy:pyx - Enable pyx support for psdump/pdfdump commands
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-analyzer/snort:inline - Enable snort-inline for accepting packets from iptables, via libipq, rather than libpcap.
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
@@ -831,9 +831,9 @@ net-dialup/ppp:atm - Enables support for PPP over ATM (PPPoA)
 net-dialup/ppp:dhcp - Enables the DHCP plugin
 net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol and Transport Level Security (EAP-TLS)
 net-dialup/ppp:mppe-mppc - Enables support for MPPE-MPPC
+net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-python/twisted)
 net-dns/avahi:howl-compat - Enable compat libraries for howl
 net-dns/avahi:mdnsresponder-compat - Enable compat libraries for mDNSResponder
-net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-python/twisted)
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
@@ -928,8 +928,8 @@ net-libs/openh323:novideo - Disable video codecs
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
 net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/cyrus-imapd:unsupported_8bit - Enable 8bit not supported patch
-net-mail/dovecot:pop3d - Build pop3d support
 net-mail/dovecot:nopop3d - Do not build pop3d support
+net-mail/dovecot:pop3d - Build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/fetchmail:hesiod - Enable support for hesiod
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
@@ -1083,9 +1083,6 @@ sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and 
 sci-chemistry/caver:pymol - Install the PyMol plugin
 sci-chemistry/eden:double-precision - more precise calculations at the expense of speed
 sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
-sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
-sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
-sci-libs/libghemical:openbabel - Use the OpenBabel package for file conversions
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
@@ -1101,6 +1098,9 @@ sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:hdf5 - Adds support for the Hierarchical Data Format v 5
 sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
 sci-libs/hdf5:hlapi - Enables support for high-level library
+sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
+sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
+sci-libs/libghemical:openbabel - Use the OpenBabel package for file conversions
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/vtk:patented - Builds patented classes.
@@ -1244,9 +1244,9 @@ www-apps/bugzilla:graphviz - enable graphviz support
 www-apps/dspam-web:cyrus - Build delivery options for cyrus-imapd
 www-apps/dspam-web:exim - Build with delivery options for exim
 www-apps/dspam-web:large-domain - Builds for large domain rather than for domain scale
+www-apps/dspam-web:logrotate - Build logrotate support for dspam
 www-apps/dspam-web:maildrop - Build with delivery options for maildrop
 www-apps/dspam-web:neural - Build neural support for dspam
-www-apps/dspam-web:logrotate - Build logrotate support for dspam
 www-apps/dspam-web:procmail - Build procmail filter support
 www-apps/dspam-web:sqlite3 - Build sqlite 3 support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
