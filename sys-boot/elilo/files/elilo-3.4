@@ -305,6 +305,8 @@ mnt()
     ## ever wanted too.
     if [ -f "$boot" ] ; then
 	local loop=",loop"
+    else
+	local loop=''
     fi
 
     if [ -e "$TMP/bootstrap.$$" ] ; then
