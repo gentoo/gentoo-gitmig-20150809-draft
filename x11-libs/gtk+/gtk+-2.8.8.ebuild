@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.8.ebuild,v 1.2 2006/01/02 23:20:57 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.8.ebuild,v 1.3 2006/01/03 13:41:47 gustavoz Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE="debug doc jpeg tiff"
 
 RDEPEND="|| ( (
