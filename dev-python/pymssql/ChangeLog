@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pymssql
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.3 2005/12/18 04:11:37 lordvan Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.4 2006/01/03 02:34:18 lordvan Exp $
+
+*pymssql-0.7.3 (03 Jan 2006)
+
+  03 Jan 2006; Thomas Raschbacher <lordvan@gentoo.org>
+  +pymssql-0.7.3.ebuild:
+  Version bump(requires python 2.4 now and also freetds compiled with
+  USE=mssql). Thanks to Andrzej Kuku³a <akukula@gmail.com>
 
 *pymssql-0.7.1 (18 Dec 2005)
 
