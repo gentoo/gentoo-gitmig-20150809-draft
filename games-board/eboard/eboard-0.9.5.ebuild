@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.10 2006/01/03 02:19:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.11 2006/01/03 02:32:45 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/eboard/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 sparc"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="nls"
 
 RDEPEND="=x11-libs/gtk+-1*
@@ -26,14 +26,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	sed -i \
 		-e "/DATADIR/ s:\$prefix/share:${GAMES_DATADIR}:" \
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" configure \
-			|| die "sed configure failed"
+		|| die "sed configure failed"
 }
 
 src_compile() {
