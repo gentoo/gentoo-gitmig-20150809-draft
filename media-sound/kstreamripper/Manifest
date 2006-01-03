@@ -2,5 +2,5 @@ MD5 8db678fe3b71d3522592482ecb0daa8c ChangeLog 1352
 MD5 e305dcc4ef30bf8f188f8122c3259736 files/digest-kstreamripper-0.2 69
 MD5 0af48d19613ef2fa87e16cec85dab394 files/digest-kstreamripper-0.3.4 72
 MD5 d7c3a382cb62bacef2d72cb0cb27c520 kstreamripper-0.2.ebuild 561
-MD5 810900fa43df68a58ef5c5241745c05f kstreamripper-0.3.4.ebuild 1024
+MD5 52532864405835f1c16ce582c29b5908 kstreamripper-0.3.4.ebuild 1023
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158

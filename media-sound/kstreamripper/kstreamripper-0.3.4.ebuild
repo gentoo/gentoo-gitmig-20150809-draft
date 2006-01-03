@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.1 2006/01/03 19:18:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.2 2006/01/03 19:19:24 carlo Exp $
 
 inherit kde
 
@@ -23,7 +23,7 @@ need-kde 3.2
 src_compile() {
 	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr"
 	use amd64 && myconf="${myconf} libsuffix=64"
-	
+
 	scons configure ${myconf} || die "configure failed"
 	scons ${MAKEOPTS} || die "scons failed"
 }
