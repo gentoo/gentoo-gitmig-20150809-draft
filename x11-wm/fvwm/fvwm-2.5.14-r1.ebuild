@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.14-r1.ebuild,v 1.1 2005/09/21 08:28:01 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.14-r1.ebuild,v 1.2 2006/01/03 23:39:49 sekretarz Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,11 +30,23 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		>=dev-lang/perl-5.6.1-r10
 		>=sys-libs/zlib-1.1.4-r1
 		sys-apps/debianutils
-		virtual/x11"
+		|| ( (
+			x11-libs/libXpm
+			x11-libs/libXft
+			xinerama? ( x11-libs/libXinerama ) )
+		virtual/x11 )"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
 # XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
-DEPEND="${RDEPEND} dev-util/pkgconfig !x11-wm/metisse"
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig
+		!x11-wm/metisse
+		|| ( (
+			x11-libs/libXrandr
+			x11-proto/xextproto
+			x11-proto/xproto
+			xinerama? ( x11-proto/xineramaproto ) )
+		virtual/x11 )"
 
 SFT=${WORKDIR}/FvwmTabs-v3-4
 

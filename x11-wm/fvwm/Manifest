@@ -1,18 +1,28 @@
-MD5 cfc37d7eb6be1a5a71178973ca1a2e3f fvwm-2.5.13-r1.ebuild 7864
-MD5 d4ad99d2edb49ee23de8acb401f8ba0c fvwm-2.5.12.ebuild 8960
-MD5 0dcc3be54b816d4ff673d76643c45034 fvwm-2.5.14-r1.ebuild 7555
-MD5 0419a9580abd2c13c81c889161d02fea ChangeLog 17683
-MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
-MD5 ba8d61baf42b7f21be2488b3581ff51d fvwm-2.4.18.ebuild 2956
-MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1a5aa390eedf6f2399171dce74118878 ChangeLog 17806
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
+MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
 MD5 7d84c8175928d331e6d7b253679f5654 files/digest-fvwm-2.4.18 65
 MD5 c8fa1c05cdae43bd53f68942d684f23a files/digest-fvwm-2.5.12 209
-MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
-MD5 38cb0131791d07053b5d90bf21d1993f files/fvwm-translucent-menus.diff.gz 3582
-MD5 0dc5ddac8cf6767f4a753feef77e6c65 files/fvwm-noxbell-grab-fail.diff 360
-MD5 20d3c9bb419ce71c80fd25fd85364a45 files/fvwm-64bit-fixes.diff.gz 12220
 MD5 326a3b450dd43ec75b78fd0058026a3b files/digest-fvwm-2.5.13-r1 209
 MD5 f3538419cf078abb6adb941ee864fbd2 files/digest-fvwm-2.5.14-r1 209
-MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
 MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
+MD5 20d3c9bb419ce71c80fd25fd85364a45 files/fvwm-64bit-fixes.diff.gz 12220
+MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
+MD5 0dc5ddac8cf6767f4a753feef77e6c65 files/fvwm-noxbell-grab-fail.diff 360
+MD5 38cb0131791d07053b5d90bf21d1993f files/fvwm-translucent-menus.diff.gz 3582
+MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
+MD5 ba8d61baf42b7f21be2488b3581ff51d fvwm-2.4.18.ebuild 2956
+MD5 d4ad99d2edb49ee23de8acb401f8ba0c fvwm-2.5.12.ebuild 8960
+MD5 cfc37d7eb6be1a5a71178973ca1a2e3f fvwm-2.5.13-r1.ebuild 7864
+MD5 64c4054742fdadf488d0c5fc7ebb0912 fvwm-2.5.14-r1.ebuild 7784
+MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDuxl/Z/iYVBmujdURAv8dAKCuVPTXArGDZ8TayNpr71vbTLeahwCdHX23
+lxhFnb3vnDZmdn8vLHKafZA=
+=oHPt
+-----END PGP SIGNATURE-----
