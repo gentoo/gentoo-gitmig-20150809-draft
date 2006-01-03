@@ -1,6 +1,16 @@
-MD5 3d5c3a6d0bf94ea041aeed3aebe77eef ChangeLog 5487
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4560ea15d6abb56046ca3a42062fb313 ChangeLog 5596
 MD5 6ed53be491fa83ebc59d0d7b285c5e4f files/altivec-fix-0.4.0b.diff 890
 MD5 c7958c7996a268d8cf161e4b32e70ac0 files/digest-libmpeg2-0.4.0b 67
 MD5 b76ada2d9c18a21260a268f4e3018e6a files/gcc34-inline-fix-0.4.0b.diff 513
-MD5 396bb519d6ed8c5119c1c323085d7d7c libmpeg2-0.4.0b.ebuild 1580
+MD5 f4ae613096dd0009e608d30b34d08a08 libmpeg2-0.4.0b.ebuild 1588
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDulbOAiZjviIA2XgRAnw7AKDnTFPPLDxBXU4OhAy80c2397hW+QCgjMmB
+meHVTQe2b0v64391Ijc4iUY=
+=grCw
+-----END PGP SIGNATURE-----

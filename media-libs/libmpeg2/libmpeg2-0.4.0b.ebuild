@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.27 2005/12/12 00:14:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.28 2006/01/03 10:49:25 flameeyes Exp $
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools libtool
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 DESCRIPTION="library for decoding mpeg-2 and mpeg-1 video"
