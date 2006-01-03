@@ -1,9 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cadd0e8ace8e00ed0cc360b17343a8b5 ChangeLog 4069
+MD5 70aad6afdca18cce32266ab4835e73b3 ChangeLog 4184
 MD5 6d9dfc76f788500ff3c85cbb42667487 files/digest-webmin-1.170-r3 209
-MD5 1b791b42466b4d6db599c2b8fed29871 files/digest-webmin-1.230 210
 MD5 960512668a4e3d56a9e2ad43881852fc files/digest-webmin-1.250 210
 MD5 54dc8937e05bd76ad86a6c5f5ae6a333 files/init.d.webmin 859
 MD5 bc8eb1c9de103599fc00b140b0ed1f9f files/uninstall.sh 260
@@ -21,12 +20,11 @@ MD5 6a55026b21c4da9284b31236deeceda7 files/webmin-gentoo-init 864
 MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
 MD5 c6d3309b62a5ba19e3aa3893e0cca346 webmin-1.170-r3.ebuild 3681
-MD5 c175a83cebd240b2c52e5890de97c0cf webmin-1.230.ebuild 4102
 MD5 feeac49d3448abf1d8e155f3a63d3b11 webmin-1.250.ebuild 4106
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDkfpAgIKl8Uu19MoRAuKWAJ9E3xpImyMbePRYNaZOYxoOXqEsEACfa9Xi
-J4BsvV2JyePKVW50/hh0FRE=
-=c2tB
+iD8DBQFDulIkOpjtAl+gMRURAi7ZAKCey4b0lWM25My5UH2oj5PxJnUY9wCdH+2b
+lUe5KxbjZCnjZ/Mhn2sEO+U=
+=N7qn
 -----END PGP SIGNATURE-----
