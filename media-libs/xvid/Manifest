@@ -1,4 +1,8 @@
-MD5 a6c96dee7f9b10eea23f115e82a7590b ChangeLog 7120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8891202b68b8e1049449d32b7c143b94 .ChangeLog.swp 16384
+MD5 b44b80d66b729f6147358d236e183e9a ChangeLog 7233
 MD5 8c100445a64d960693db8424931ff0eb files/1.0.2-DESTDIR.patch 1450
 MD5 3ed49831081a6eb29ccda7ec2956c592 files/digest-xvid-1.0.2 67
 MD5 a508fb244e68f01cbf06e590abbee04e files/digest-xvid-1.0.3 67
@@ -10,4 +14,11 @@ MD5 ecea104174b77d80f9bbf94f94a78aec files/xvid-1.1.0_beta2-amd64-gcc4.patch 213
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 684af8a8c5e487d5e197b2b0f7793cec xvid-1.0.2.ebuild 1212
 MD5 f32fa484c73eaf296e49fa3e6de4acc9 xvid-1.0.3.ebuild 1165
-MD5 ab895f2b7424587f4776f453644d51aa xvid-1.1.0_beta2-r1.ebuild 1750
+MD5 c1a7e7dcc3f66120502d2aa8f523f11a xvid-1.1.0_beta2-r1.ebuild 1754
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuwWhugEuf3OQ0akRAlK9AJ4oZwgmpcUEHoyjkTIIok92kZOsNgCdEcjU
+Fj6kSTZ+bLVRf5NY+neTAeA=
+=TRLo
+-----END PGP SIGNATURE-----
