@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkipi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.10 2005/10/18 01:39:39 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.11 2006/01/03 11:00:19 betelgeuse Exp $
+
+  03 Jan 2006; Petteri Räty <betelgeuse@gentoo.org> libkipi-0.1.2.ebuild:
+  Marked stable on x86 for bug #113723.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> libkipi-0.1.1.ebuild:
   Mark 0.1.1 stable on alpha
