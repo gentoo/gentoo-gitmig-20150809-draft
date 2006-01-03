@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.1 2006/01/02 18:02:05 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.2 2006/01/03 12:15:07 nattfodd Exp $
 
 inherit qt4 eutils versionator
 
@@ -12,6 +12,7 @@ MAJOR="$(get_major_version)"
 MINOR_1="$(($(get_version_component_range 2)/10))"
 MINOR_2="$(($(get_version_component_range 2)%10))"
 MY_P="${PN}-${MAJOR}.${MINOR_1}.${MINOR_2}"
+S="${WORKDIR}/${MY_P}"
 HOMEPAGE="http://www.xm1math.net/texmaker/"
 SRC_URI="http://www.xm1math.net/texmaker/${MY_P}.tar.bz2"
 
