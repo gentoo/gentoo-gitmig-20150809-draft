@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3-r1.ebuild,v 1.4 2005/12/29 12:26:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.9-r1.ebuild,v 1.1 2006/01/03 12:04:01 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -14,16 +14,16 @@ LICENSE="LGPL-2.1 GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 # Removed keywords awaiting >=dev-libs/libtasn1-0.2.10 keywords (bug #61944)
 #  ~ia64 ~hppa
 
-RDEPEND=">=dev-libs/libgcrypt-1.2.0
+RDEPEND=">=dev-libs/libgcrypt-1.2.2
 	>=app-crypt/opencdk-0.5.5
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc
-	>=dev-libs/lzo-1.0
+	>=dev-libs/lzo-2
 	>=dev-libs/libtasn1-0.2.11
 	dev-libs/libgpg-error"
 
@@ -41,14 +41,6 @@ DEPEND="${RDEPEND}
 #	libtasn1
 #	opencdk
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	# Fix building with gcc4.
-	epatch ${FILESDIR}/${P}-gcc4.patch
-}
-
 src_compile() {
 	# Needed for mips and probably others
 	gnuconfig_update
@@ -61,15 +53,21 @@ src_compile() {
 		--without-included-minilzo \
 		--without-included-libtasn1 \
 		--without-included-opencdk \
+		`use_enable doc gtk-doc` \
 		${myconf} || die
 	emake || die
-
-	# gtk-doc removed - bug #80906
-	# 		`use_enable doc gtk-doc`
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	# OSX make doesn't handle -jx with x > 1 correctly here.
+	# Forcing it to be just one process, solves installation
+	# problems that arise here.  Fabian Groffen (2005-07-09)
+	if use ppc-macos; then
+		emake -j1 DESTDIR=${D} install || die
+	else
+		emake DESTDIR=${D} install || die
+	fi
+
 
 	dodoc AUTHORS ChangeLog NEWS \
 		README THANKS doc/TODO
@@ -79,23 +77,4 @@ src_install() {
 		docinto examples
 		dodoc doc/examples/*.c
 	fi
-}
-
-pkg_postinst() {
-	ewarn "An API has changed in gnutls. This is why the library has gone from "
-	ewarn "libgnutls.so.11 (or 10) to libgnutls.so.12."
-	ewarn
-	ewarn "What is required is a revdep-rebuild."
-	ewarn "To show you what is needed to rebuild"
-	ewarn 'revdep-rebuild --soname-regexp libgnutls.so.1[0-1] -- -p'
-	ewarn ""
-	ewarn "Then do:"
-	ewarn 'revdep-rebuild --soname-regexp libgnutls.so.1[0-1]'
-	einfo ""
-	einfo "Afterward just try:"
-	einfo "revdep-rebuild -- -p"
-	einfo "to see if there are any other packages broken."
-	einfo "To rebuild these:"
-	einfo "revdep-rebuild"
-
 }

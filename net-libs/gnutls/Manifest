@@ -1,28 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec244239c8abfa5bb101fe8820a4aab0 ChangeLog 11924
-MD5 cfa78b7df28ec06ca09763bd8c908ebc files/digest-gnutls-1.0.17 67
-MD5 ee48c699bf5727fa6284864dc62d1c14 files/digest-gnutls-1.0.25 66
+MD5 e2290ad4cf378af5e7a2d737392ecaab ChangeLog 12449
 MD5 5deb0ddb33596df840a663273ddf9c2b files/digest-gnutls-1.2.3 66
-MD5 5deb0ddb33596df840a663273ddf9c2b files/digest-gnutls-1.2.3-r1 66
 MD5 0a6c7f63908a38a6e28d34a68accee2a files/digest-gnutls-1.2.4 66
-MD5 26cd0c7e5a105e72808024e198a3ce35 files/digest-gnutls-1.2.6 66
 MD5 077c38845fca7036f125850ae6bb0ab3 files/digest-gnutls-1.2.9 66
-MD5 29d3e8994448eb3fe1d15c6720621b40 files/gnutls-1.0.17-extra.h.patch 479
-MD5 29d8c263065fa5908f9b6d9e5ea265b7 files/gnutls-1.2.3-gcc4.patch 417
-MD5 bba2cac2f09f512d2ebe6f7d1dbb3966 gnutls-1.0.17.ebuild 2399
-MD5 32d3deb75aaf5cda01979493fe6871c9 gnutls-1.0.25.ebuild 2203
-MD5 8d2ff70baadcd4bf5fdb0d126cb14b9f gnutls-1.2.3-r1.ebuild 2412
-MD5 479068c2ae339ebc1b076f3e57958974 gnutls-1.2.3.ebuild 2306
-MD5 ed668eb3fc05284f48b594faefe2e2fb gnutls-1.2.4.ebuild 2569
-MD5 774f9e17045b92014fa11fea08b330d2 gnutls-1.2.6.ebuild 1960
-MD5 cafb0a85f1f8bf8a89ce260cc6102e6d gnutls-1.2.9.ebuild 1960
+MD5 077c38845fca7036f125850ae6bb0ab3 files/digest-gnutls-1.2.9-r1 66
+MD5 9b1a9451a2be1364834e2b072517545e gnutls-1.2.3.ebuild 2309
+MD5 653b73035f0d2fdd30ea88c50bc9b73c gnutls-1.2.4.ebuild 2572
+MD5 7c95efe71c40bf0f5477c93f540639f8 gnutls-1.2.9-r1.ebuild 1966
+MD5 da1eb4c3c60de8fffb533d78155692c8 gnutls-1.2.9.ebuild 1963
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDs9YY2+ySkm8kpY0RApoBAKC7dMJjcqvjhqtMS1crzK45WWZk1wCfeBef
-M6D2mdVUUJAwraioOzopH+4=
-=Vhy8
+iD8DBQFDumr/mdTrptrqvGERApp4AJ49aXkj3NoIkKxlqMN8PqXukcEv7QCfZSzK
+uMAi6VTX0MDafYQMa/PPnQk=
+=opFv
 -----END PGP SIGNATURE-----
