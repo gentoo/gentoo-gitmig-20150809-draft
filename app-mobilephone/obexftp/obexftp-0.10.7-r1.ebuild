@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.10.7-r1.ebuild,v 1.2 2005/12/17 15:40:28 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.10.7-r1.ebuild,v 1.3 2006/01/03 19:03:11 mrness Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="bluetooth"
 
-RDEPEND=">=dev-libs/openobex-1.0.0"
+RDEPEND=">=dev-libs/openobex-1.0.0
+	bluetooth? ( >=net-wireless/bluez-libs-2.6 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	bluetooth? ( >=net-wireless/bluez-utils-2.6 )"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
