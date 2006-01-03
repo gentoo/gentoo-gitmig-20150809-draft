@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4818 2006/01/03 12:02:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4819 2006/01/03 12:08:13 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1074,12 +1074,6 @@ net-im/kpopper
 # Thierry Carrez <koon@gentoo.org> (27 Jun 2005)
 # Package contains insecure tmpfile handling, bug #93792
 dev-db/xmysqladmin
-
-# Daniel Black <dragonheart@gentoo.org> (26 Jun 2005)
-# zlo ABI different - masked until packages that depend on this have been fixed.
->=dev-libs/lzo-2
->=app-arch/lzop-1.02_rc1-r1
->=net-misc/vtun-2.6-r1
 
 # John N. Laliberte <allanonjl@gentoo.org> (24 Jun 2005)
 # old, unmaintained ebuilds with dead upstream
