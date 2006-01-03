@@ -3,5 +3,5 @@ MD5 55b8f5976c906c92838fe49cfc29c76f files/digest-qdvdauthor-0.0.10 70
 MD5 6d09c05eb5f5caa3cd56c0a70a2fc21d files/digest-qdvdauthor-0.0.9 68
 MD5 cce352b8695bcf9ae6b0d8f5afcbfadd files/qdvdauthor-0.0.9-nointeractive.patch 632
 MD5 5fcdbe92257f80de63c774815ce48851 metadata.xml 371
-MD5 52bb737eb2f708b5fc21798dbbf29392 qdvdauthor-0.0.10.ebuild 1958
-MD5 c49cafa5baf1d161ec92186f6b7e6519 qdvdauthor-0.0.9.ebuild 2267
+MD5 3697024bba92557d8dd46f4abf63642a qdvdauthor-0.0.10.ebuild 1981
+MD5 381cbf11143b48a8905797ac74c04c5c qdvdauthor-0.0.9.ebuild 2311
