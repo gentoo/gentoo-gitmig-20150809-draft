@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.65 2005/12/31 01:46:11 carlo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.66 2006/01/03 22:26:39 genstef Exp $
+
+  03 Jan 2006; Stefan Schweizer <genstef@gentoo.org> kpdf-3.5.0-r3.ebuild:
+  Let it depend on poppler-bindings instead of poppler
 
   31 Dec 2005; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.0-r3.ebuild:
   Compile with -O2 instead -Os, #114822

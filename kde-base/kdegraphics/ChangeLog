@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.220 2005/12/31 01:44:31 carlo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.221 2006/01/03 22:26:40 genstef Exp $
+
+  03 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  kdegraphics-3.5.0-r4.ebuild:
+  Let it depend on poppler-bindings instead of poppler
 
   31 Dec 2005; Carsten Lohrke <carlo@gentoo.org>
   kdegraphics-3.5.0-r4.ebuild:

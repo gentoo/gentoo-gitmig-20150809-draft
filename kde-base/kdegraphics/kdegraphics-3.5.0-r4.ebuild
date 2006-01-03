@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r4.ebuild,v 1.3 2005/12/31 01:44:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r4.ebuild,v 1.4 2006/01/03 22:26:40 genstef Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	openexr? ( >=media-libs/openexr-1.2 )
 	povray? ( media-gfx/povray
 		  virtual/opengl )
-	pdflib? ( >=app-text/poppler-0.3.1 )"
+	pdflib? ( >=app-text/poppler-bindings-0.3.1 )"
 
 RDEPEND="${DEPEND}
 	tetex? (
@@ -51,10 +51,10 @@ pkg_setup() {
 		eerror "Please reemerge virtual/ghostscript with USE=\"X\"."
 		die "Please reemerge virtual/ghostscript with USE=\"X\"."
 	fi
-	if use pdflib && ! built_with_use app-text/poppler qt; then
-		eerror "This package requires app-text/poppler compiled with Qt support."
-		eerror "Please reemerge app-text/poppler with USE=\"qt\"."
-		die "Please reemerge app-text/poppler with USE=\"qt\"."
+	if use pdflib && ! built_with_use app-text/poppler-bindings qt; then
+		eerror "This package requires app-text/poppler-bindings compiled with Qt support."
+		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
+		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 	fi
 }
 
