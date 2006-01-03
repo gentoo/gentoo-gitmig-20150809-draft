@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-xsys
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.34 2005/11/14 17:08:47 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.35 2006/01/03 22:46:37 metalgod Exp $
+
+  03 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  xchat-xsys-2.0.8-r1.ebuild:
+  Marked Stable on amd64. Fixes bug #117628.
 
   14 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   xchat-xsys-2.0.9.ebuild:
