@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.1 2006/01/03 16:39:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.2 2006/01/03 21:08:55 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.gnat.com/"
 DEPEND="=sys-devel/gcc-3.4*"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GMGPL"
 IUSE=""
 
