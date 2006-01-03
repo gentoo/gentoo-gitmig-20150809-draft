@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c9cc5cb939fa8d3a204759e50ceba4be lives-0.8.1.ebuild 1179
+MD5 897de8b1fa0039d7b1c3a126b64b7fc1 ChangeLog 1581
+MD5 2a440292415e6970c054d5b0fd0a2398 files/digest-lives-0.7.1 68
+MD5 c91e14653dd56cec040e0c713525d5dc files/digest-lives-0.8.1 135
+MD5 14c653499dd72251adf4c09b5c57f6b3 files/digest-lives-0.8.5 68
+MD5 1b0651671174c9538041c40633dc0558 files/digest-lives-0.9.1 69
+MD5 e9fe76630a8d8deb5d36734cbd0b5597 files/digest-lives-0.9.5 65
+MD5 33ed8f5a5c0320b2ad572ef375640b99 files/digest-lives-0.9.5_pre3 70
 MD5 3224c25483955d6626a0cb70fb790dd3 lives-0.7.1.ebuild 1018
+MD5 c9cc5cb939fa8d3a204759e50ceba4be lives-0.8.1.ebuild 1179
+MD5 e1cd45e8a0008e22e1d605cf3bc31ccc lives-0.8.5.ebuild 1612
 MD5 7669379140f795c39192d8c92c513817 lives-0.9.1.ebuild 1357
+MD5 536704a464d4e5fdd710e5b925511c97 lives-0.9.5.ebuild 1675
 MD5 d575a57a58b4f19072dd93169381b778 lives-0.9.5_pre3.ebuild 1458
 MD5 7a869ae1cd18658a7486607289aac4ca metadata.xml 221
-MD5 e1cd45e8a0008e22e1d605cf3bc31ccc lives-0.8.5.ebuild 1612
-MD5 79dd587b783bd9d6a249fceab2f047eb ChangeLog 1467
-MD5 c91e14653dd56cec040e0c713525d5dc files/digest-lives-0.8.1 135
-MD5 1b0651671174c9538041c40633dc0558 files/digest-lives-0.9.1 69
-MD5 2a440292415e6970c054d5b0fd0a2398 files/digest-lives-0.7.1 68
-MD5 14c653499dd72251adf4c09b5c57f6b3 files/digest-lives-0.8.5 68
-MD5 33ed8f5a5c0320b2ad572ef375640b99 files/digest-lives-0.9.5_pre3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsqFxpNOQ4DjaQW0RAogAAKDOv0IlgWNKeBiyATzJY4/rDFh0kQCfRqzB
-0PWaNfNn3XymFGMbEmr3hgc=
-=l8YG
------END PGP SIGNATURE-----
