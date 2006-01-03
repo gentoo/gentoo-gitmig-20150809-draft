@@ -1,6 +1,9 @@
 # ChangeLog for games-util/xgame
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgame/ChangeLog,v 1.5 2005/06/05 11:36:57 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgame/ChangeLog,v 1.6 2006/01/03 23:11:59 metalgod Exp $
+
+  03 Jan 2006; Luis Medinas <metalgod@gentoo.org> xgame-1.7.1.ebuild:
+  Added ~amd64 keyword.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xgame-1.7.1.ebuild:
   Stable on ppc.
