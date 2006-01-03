@@ -1,0 +1,16 @@
+Make sure we use _() instead of gettext() so that the header
+file will define it away properly when USE=-nls.
+
+--- src/cryptsetup.c
++++ src/cryptsetup.c
+@@ -331,8 +331,8 @@ static void help(poptContext popt_contex
+ 			"<action> is one of:\n"));
+ 
+ 		for(action = action_types; action->type; action++)
+-			fprintf(stdout, "\t%s %s - %s\n", action->type, gettext(action->arg_desc),
+-			        gettext(action->desc));
++			fprintf(stdout, "\t%s %s - %s\n", action->type, _(action->arg_desc),
++			        _(action->desc));
+ 		
+ 		fprintf(stdout, _("\n"
+ 			"<name> is the device to create under %s\n"
