@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.230 2006/01/03 15:25:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.231 2006/01/03 20:27:12 dsd Exp $
+
+*gentoo-sources-2.6.15 (03 Jan 2006)
+
+  03 Jan 2006; Daniel Drake <dsd@gentoo.org> +gentoo-sources-2.6.15.ebuild:
+  Initial 2.6.15 release. Features the new sky2 (Marvell SysKonnect Yukon-II)
+  network driver. vesafb/vesafb-tng users: Your framebuffer will run SLOOOW
+  unless you explicitly enable mtrr:3 on the kernel command line. I use (for
+  vesafb): vga=0x318 video=vesafb:mtrr:3
 
 *gentoo-sources-2.4.32-r2 (03 Jan 2006)
 
