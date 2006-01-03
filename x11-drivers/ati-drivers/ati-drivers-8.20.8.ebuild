@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.3 2005/12/19 01:43:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.4 2006/01/03 19:56:32 anarchy Exp $
 
 IUSE="opengl"
 
@@ -115,6 +115,10 @@ src_unpack() {
 
 	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 
+	# fix kernel oops for acpi
+	if kernel_is 2 6 15; then
+		epatch ${FILESDIR}/${P}-linux-2.6.15.patch
+	fi
 }
 
 
