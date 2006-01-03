@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.89 2006/01/03 15:45:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.90 2006/01/03 16:48:16 metalgod Exp $
+
+  03 Jan 2006; Luis Medinas <metalgod@gentoo.org> atk-1.10.3.ebuild:
+  Stable on amd64. For bug #117505.
 
   03 Jan 2006; Markus Rothe <corsair@gentoo.org> atk-1.10.3.ebuild:
   Stable on ppc64
