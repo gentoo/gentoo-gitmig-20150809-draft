@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tcmplex-panteltje
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.5 2005/12/19 17:13:47 hd_brummy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.6 2006/01/03 23:32:47 metalgod Exp $
+
+  03 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  tcmplex-panteltje-0.4.7.ebuild:
+  Added ~amd64 keywords. Closes bug #116107.
 
   19 Dec 2005; Joerg Bornkessel <hd_brummy@gentoo.org>
   tcmplex-panteltje-0.4.7.ebuild:

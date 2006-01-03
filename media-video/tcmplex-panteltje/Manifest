@@ -1,7 +1,17 @@
-MD5 6d193cffa46a421b212fdcf208d355cd ChangeLog 919
-MD5 3ba625acf04e8d0d32263c38d31a715f metadata.xml 221
-MD5 82366dd2aca4cfed2095f40202473504 tcmplex-panteltje-0.3.ebuild 780
-MD5 5dbb0b47db26bb10a4d50ccb40b46ed0 tcmplex-panteltje-0.4.7.ebuild 657
-MD5 756b3fcdeaa3f83bd28532561dae5701 files/tcmplex-panteltje-0.3.patch 706
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98b687a4ce47c979a36a709b4426b246 ChangeLog 1048
 MD5 01743fd9d244f9d91416990e27f2fbd0 files/digest-tcmplex-panteltje-0.3 69
 MD5 a8d5f2717dfe700c8ecc3fde0a56f69b files/digest-tcmplex-panteltje-0.4.7 71
+MD5 756b3fcdeaa3f83bd28532561dae5701 files/tcmplex-panteltje-0.3.patch 706
+MD5 3ba625acf04e8d0d32263c38d31a715f metadata.xml 221
+MD5 82366dd2aca4cfed2095f40202473504 tcmplex-panteltje-0.3.ebuild 780
+MD5 e9c342b761c18e9f2c22699f400386b4 tcmplex-panteltje-0.4.7.ebuild 663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuwl2wUpWvClEHQoRAlyqAJwMMrRKXIT/L0NAydYB74sJOXsy6gCfdnNR
+9hXIE3apvAo3UxUlXXyHnJE=
+=LW5K
+-----END PGP SIGNATURE-----
