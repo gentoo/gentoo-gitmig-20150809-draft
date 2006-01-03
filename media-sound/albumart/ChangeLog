@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/albumart
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.13 2005/10/16 20:01:09 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.14 2006/01/03 19:24:42 carlo Exp $
+
+*albumart-1.6.0 (03 Jan 2006)
+
+  03 Jan 2006; Carsten Lohrke <carlo@gentoo.org>
+  -files/albumart-1.4.0-sizetype.patch, -albumart-1.4.0.ebuild,
+  -albumart-1.4.0-r1.ebuild, +albumart-1.6.0.ebuild:
+  version bump
 
   16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   albumart-1.5.0-r1.ebuild:
