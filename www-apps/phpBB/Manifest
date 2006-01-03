@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8cba4a2906ee52e5de6e654cac5ef9fd phpBB-2.0.18.ebuild 1193
-MD5 5e1f72f4a89a25bdf1dd13da4e1f20be ChangeLog 4989
+MD5 ccacd9be55bf0510ece879765ff66fa6 ChangeLog 5222
+MD5 b2b3574a68a5e3c1040b18094778856b files/2.0.19-postinstall-en.txt 197
+MD5 84863de93d226dae022f6c58b485a5ec files/digest-phpBB-2.0.19 65
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 dd68afc68ca33831cd3745ca3c4a6945 files/digest-phpBB-2.0.18 65
-MD5 4fe81911988e4ff8a93ff3011f026315 files/2.0.18-postinstall-en.txt 197
+MD5 24f022376eee249a8bab27bdab86bb10 phpBB-2.0.19.ebuild 1193
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDZmrPEzitwsaoONoRAl6QAJ9SuHnmD15KzIsXJLCtSzh8bDvg7gCeLCuS
-HZDA7awdV7ZKMzjJQm+OzEs=
-=cV2a
+iD8DBQFDuluoEzitwsaoONoRAipVAKCNOXxhXARsPknPcLDzUObKUkpvDACg2v4B
+YQ0Uk+1n5krzgpesbxffrFY=
+=hbn5
 -----END PGP SIGNATURE-----
