@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/mips-sources
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.81 2005/12/20 19:38:30 kumba Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.82 2006/01/03 02:20:40 kumba Exp $
+
+*mips-sources-2.6.14.5 (03 Jan 2006)
+
+  03 Jan 2006; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.14.4.ebuild, +mips-sources-2.6.14.5.ebuild:
+  Bump to 2.6.14.5 to plug a number of security holes, plug a compile error on
+  IP30 (Bug #116368), and roll in a new IP28 patchset that fixes some IMpactSR
+  DMA issues.
 
   20 Dec 2005; Joshua Kinard <kumba@gentoo.org>
   mips-sources-2.6.14.4.ebuild:

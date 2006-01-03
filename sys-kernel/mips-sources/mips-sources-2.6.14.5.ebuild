@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.14.4.ebuild,v 1.2 2005/12/20 19:38:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.14.5.ebuild,v 1.1 2006/01/03 02:20:40 kumba Exp $
 
 
 # INCLUDED:
@@ -22,7 +22,7 @@
 OKV=${PV/_/-}
 GITDATE="20051030"			# Date of diff between kernel.org and lmo GIT
 SECPATCHVER="1.15"			# Tarball version for security patches
-GENPATCHVER="1.16"			# Tarball version for generic patches
+GENPATCHVER="1.17"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -248,6 +248,7 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.14-add-4k_cache_defines.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.14-r1xk_use_r4k_cache.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.14-rem-UL-constants.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-rev-i18n.patch
 
 		# Ugly Hacks
 		if ! use ip28 && ! use ip30; then
@@ -302,7 +303,7 @@ do_ip27_support() {
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.14-ip28-i2_impact-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.14-ip28-i2_impact-support-r2.patch
 }
 
 
