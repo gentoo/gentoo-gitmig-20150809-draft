@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r1.ebuild,v 1.1 2005/11/03 00:07:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r1.ebuild,v 1.2 2006/01/03 09:57:25 genstef Exp $
 
 inherit eutils
 
@@ -14,11 +14,23 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64 ~mips ~ppc-macos ~ppc64"
 IUSE=""
 
-# There's probably more, but ghostscript also depends on it,
-# so I can't identify it
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+			x11-libs/libXmu
+			x11-libs/libXpm
+			x11-libs/libXp
+		) virtual/x11
+	)
 	x11-libs/Xaw3d
 	virtual/ghostscript"
+
+# There's probably more, but ghostscript also depends on it,
+# so I can't identify it
+DEPEND="${RDEPEND}
+	|| ( (
+			x11-misc/imake
+			x11-libs/libXt
+		) virtual/x11
+	)"
 PROVIDE="virtual/pdfviewer
 	virtual/psviewer"
 

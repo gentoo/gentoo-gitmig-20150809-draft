@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.36 2005/12/01 04:41:14 tgall Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.37 2006/01/03 09:57:25 genstef Exp $
+
+  03 Jan 2006; Stefan Schweizer <genstef@gentoo.org> gv-3.5.8-r4.ebuild,
+  gv-3.6.1.ebuild, gv-3.6.1-r1.ebuild:
+  modular X depends thanks to Rohan McGovern <rohan.pm@gmail.com> in bug 117524
 
   30 Nov 2005; Tom Gall <tgall@gentoo.org> gv-3.5.8-r4.ebuild:
   stable on ppc64
