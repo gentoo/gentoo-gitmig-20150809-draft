@@ -1,55 +1,47 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44.ebuild,v 1.3 2005/12/10 16:50:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.1 2006/01/03 16:39:45 george Exp $
 
 inherit gnat flag-o-matic
 
-MY_PV="3.4.4"
+MY_PV="3.4.5"
 
 DESCRIPTION="GNAT Ada Compiler"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-core-${MY_PV}.tar.bz2
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-ada-${MY_PV}.tar.bz2
-	x86? ( http://gd.tuwien.ac.at/languages/ada/gnat/3.15p/gnat-3.15p-i686-pc-redhat71-gnu-bin.tar.gz )
+	x86? ( http://dev.gentoo.org/~george/src/gcc-3.4-i386.tar.bz2 )
 	ppc? ( mirror://gentoo/gnat-3.15p-powerpc-unknown-linux-gnu.tar.bz2 )
 	amd64? ( http://dev.gentoo.org/~george/src/gcc-3.4-amd64.tar.gz )"
 HOMEPAGE="http://www.gnat.com/"
 
-DEPEND="=sys-devel/gcc-3*
-	x86? ( >=app-shells/tcsh-6.0 )"
+DEPEND="=sys-devel/gcc-3.4*"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64"
 LICENSE="GMGPL"
 IUSE=""
 
 S="${WORKDIR}/gcc-${MY_PV}"
 GNATBUILD="${WORKDIR}/build"
 case ${ARCH} in
-	x86)
-		GNATBOOT="${WORKDIR}/boot"
-		GNATBOOTINST="${WORKDIR}/gnat-3.15p-i686-pc-linux-gnu-bin"
-		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc-lib"
-		;;
 	ppc)
 		GNATBOOT="${WORKDIR}/gnat-3.15p-powerpc-unknown-linux-gnu"
 		GNATBOOTINST="${GNATBOOT}"
 		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc-lib"
 		;;
-	amd64)
+	amd64 | x86)
 		GNATBOOT="${WORKDIR}/usr"
 		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc"
+		;;
 esac
-
 
 src_unpack() {
 	unpack ${A}
 
 	# Install the bootstrap compiler
-	if [ "${ARCH}" = "x86" ]; then
-		cd "${GNATBOOTINST}"
-		patch -p1 < ${FILESDIR}/gnat-3.15p-i686-pc-linux-gnu-bin.patch
-		echo $'\n'3$'\n'${GNATBOOT}$'\n' | ./doconfig > doconfig.log 2>&1
-		./doinstall
+	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "x86" ]; then
+		cd ${S}/gcc/ada/
+		patch Make-lang.in < ${FILESDIR}/gnat-3.44-amd64-Make-lang.in.patch
 	fi
 
 	# Prepare the gcc source directory
@@ -59,12 +51,9 @@ src_unpack() {
 	touch gcc/ada/nmake.ad[bs]
 	mkdir -p "${GNATBUILD}"
 
-	#fixup some hardwired flags (cause problems for shared libs)
-#	sed -i -e 's:GNATLIBCFLAGS = -g -O2:GNATLIBCFLAGS = -g -O2 -fPIC:'	\
-#		gcc/ada/Makefile.in || die "patching Makefile.in failed"
-#	sed -i -e 's:CFLAGS = -O2:CFLAGS = -g -O2 -fPIC:'	\
-#		gcc/ada/Makefile.adalib || die "patching Makefile.adalib failed"
-
+	#fixup some hardwired flags
+	sed -i -e "s:CFLAGS = -O2:CFLAGS = ${CFLAGS}:"	\
+		gcc/ada/Makefile.adalib || die "patching Makefile.adalib failed"
 }
 
 src_compile() {
@@ -72,7 +61,7 @@ src_compile() {
 	local GCC_EXEC_PREFIX=$(echo ${GCC_EXEC_BASE}/*/*)
 	local PATH="${GNATBOOT}/bin:${PATH}"
 
-	# hopefully this will catch one that works
+	# this should catch one that works
 	local ADA_OBJECTS_PATH
 	local ADA_INCLUDE_PATH
 	for x in $(find "${GCC_EXEC_PREFIX}" -name adalib); do
@@ -82,8 +71,15 @@ src_compile() {
 	   ADA_INCLUDE_PATH="${x}:${ADA_INCLUDE_PATH}"
 	done
 
-	local LDFLAGS="-L${GCC_EXEC_PREFIX} -L${GNATBOOTINST}"
-	local CC="${GNATBOOT}/bin/gcc"
+	case ${ARCH} in
+		ppc)
+			export LDFLAGS="-L${GCC_EXEC_PREFIX} -L${GNATBOOTINST}"
+			;;
+		amd64 | x86)
+			export LDFLAGS="-L${GCC_EXEC_PREFIX}"
+			;;
+	esac
+	export CC="${GNATBOOT}/bin/gcc"
 	export LD_LIBRARY_PATH="${GNATBOOT}/lib"
 
 	# Configure gcc
@@ -93,8 +89,6 @@ src_compile() {
 		--enable-languages="c,ada" \
 		--enable-libada \
 		--with-gcc \
-		--with-gnu-ld \
-		--with-gnu-as \
 		--enable-threads=posix \
 		--enable-shared \
 		--with-system-zlib \
@@ -123,10 +117,14 @@ src_compile() {
 	cd "${GNATBUILD}"
 	emake bootstrap || die "bootstrap failed"
 
+	einfo "building gnatlib_and_tools"
+	# make rts honor user defined CFLAGS
 	MAKEOPTS=-j1 emake -C gcc gnatlib_and_tools || die "gnatlib_and_tools failed"
-	#the shared libs compile breaks complaining that it needs -fPIC and yet 
-	#it ignores the set flag. Commented out untill resolved
-#	MAKEOPTS=-j1 emake -C gcc gnatlib-shared LIBRARY_VERSION=3.4 || die "gnatlib-shared failed"
+
+	einfo "building shared lib"
+	rm -f gcc/ada/rts/*.{o,ali} || die
+		#otherwise make tries to reuse already compiled (without -fPIC) objs..
+	MAKEOPTS=-j1 emake -C gcc gnatlib-shared LIBRARY_VERSION=3.4 || die "gnatlib-shared failed"
 }
 
 src_install() {
@@ -151,18 +149,21 @@ src_install() {
 
 	#above make installs libgcc_s into weird location
 	#removing it, as it is provided by gcc anyway
-	rm -rf ${D}/usr/lib/lib*
+	#rm -rf ${D}/usr/lib/lib*
 
 	# These are all provided by gcc
-	# Not all, some go by different name as well. (GS)
-#	rm -rf ${D}/usr/share/man
 	rm -rf ${D}/usr/share/info/{gcc*,cpp*}
+	dosym /usr/share/info/gnat_ugn_unw.info /usr/share/info/gnat.info
 
 	#on amd64 installer misdetects arch string
+	# also we need to move appropriate libgcc_s to join the other libs
 	if [ "${ARCH}" == "amd64" ]; then
 		local myCHOST="x86_64-unknown-linux-gnu"
+		mv ${D}/usr/lib/lib64/* ${D}/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/
+		mv ${D}/usr/lib/lib/* ${D}/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/32/
 	else
 		local myCHOST="${CHOST}"
+		mv ${D}/usr/lib/lib/* ${D}/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/
 	fi
 	dodir "/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/rts-native"
 
@@ -173,10 +174,13 @@ src_install() {
 	# Make native threads the default
 	ln -s rts-native/adalib adalib
 	ln -s rts-native/adainclude adainclude
+
+	# remove uneeded stuff
+	rm -rf ${D}/usr/lib/li{b,b64} ${D}/usr/lib/ada/libiberty.a
 }
 
 pkg_postinst() {
-	# Notify the user what changed
+	# Notify the user of what changed
 	einfo ""
 	einfo "The compiler has been installed as gnatgcc, and the coverage testing"
 	einfo "tool as gnatgcov."

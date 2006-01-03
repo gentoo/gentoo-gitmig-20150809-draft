@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnat
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.39 2005/12/28 20:37:56 george Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.40 2006/01/03 16:39:45 george Exp $
+
+*gnat-3.45 (03 Jan 2006)
+
+  03 Jan 2006; George Shapovalov <george@gentoo.org> -gnat-3.44.ebuild,
+  +gnat-3.45.ebuild:
+  new gnat version, to follow gcc-3.4.5. Some adjustments to install libgcc_s
+  properly were necessary. Removed 3.44-r0.
 
   28 Dec 2005; George Shapovalov <george@gentoo.org> gnat-3.44-r1.ebuild, gnat-3.44-r2.ebuild:
   Ready for unmasking on x86, amd64 supported in -r2 and ppc needs testing.
