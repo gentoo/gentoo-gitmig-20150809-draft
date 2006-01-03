@@ -1,11 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.95-r1.ebuild,v 1.2 2005/12/29 13:32:45 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.95-r2.ebuild,v 1.1 2006/01/03 02:14:40 tester Exp $
 
 #S="${WORKDIR}/${P/./_}"
 DESCRIPTION="Alvaro's Messenger client for MSN"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://amsn.sourceforge.net"
+RESTRICT="test"
 
 IUSE="gnome kde imlib xmms"
 
@@ -14,8 +15,8 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 
-DEPEND=">=dev-lang/tcl-8.3
-	>=dev-lang/tk-8.3
+DEPEND=">=dev-lang/tcl-8.4
+	>=dev-lang/tk-8.4
 	"
 
 RDEPEND="${DEPEND}
@@ -80,3 +81,4 @@ pkg_postinst() {
 		einfo "For XMMS use in amsn, make sure the xmms-infopipe plugin is enabled."
 	fi
 }
+

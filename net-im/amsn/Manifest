@@ -1,9 +1,17 @@
-MD5 5726959b8e3aafa607111f93ce739bf4 ChangeLog 5636
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 34ddd0a437a6172909665da3b135e977 ChangeLog 5868
 MD5 68a37776cafc080b07475914c4a16b6b amsn-0.94.ebuild 2434
-MD5 12a390388323dbf35ebaf119f1bd329c amsn-0.95-r1.ebuild 1994
-MD5 3e1c6b880514020051bb77f3dc55c7f6 amsn-0.95.ebuild 2430
+MD5 5a2e0aa8b30e0093da800462229c423d amsn-0.95-r2.ebuild 2009
 MD5 70919744c42f27e436339d14c678f731 files/amsn.desktop 273
 MD5 34cdd985d3d7a0cf5f84a79cca1c728f files/digest-amsn-0.94 62
-MD5 fd297568509e761dbbb0b1d52fe25f0f files/digest-amsn-0.95 62
-MD5 fd297568509e761dbbb0b1d52fe25f0f files/digest-amsn-0.95-r1 62
+MD5 7cd354c4c5ebe22f3207b01ae371e5d9 files/digest-amsn-0.95-r2 62
 MD5 0e256a8d05feddb125d5bf560873bea8 metadata.xml 228
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDud4cmOfEJZHYOKcRAnEGAJ454VE6qzJl8XBu3VhmEXwcT98lAgCfcbaT
+IHOHarW/b3wv2pzF3FsRDko=
+=N1Fz
+-----END PGP SIGNATURE-----
