@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b297f8871293a9247dc3618d73c5730d ChangeLog 330
 MD5 ac2fec8acc95df135dcfd967d3e2a60e files/digest-gdb-armulator-5.0 148
 MD5 499e6f9081d3857bc304696c8d60b42d gdb-armulator-5.0.ebuild 1343
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuwqW2+ySkm8kpY0RApHIAJ9qFEw3ULONc5XzhdujmlORik7BagCePvFv
-fk0UQdFKWD0+4Dqdh5SJiNg=
-=raGe
------END PGP SIGNATURE-----
