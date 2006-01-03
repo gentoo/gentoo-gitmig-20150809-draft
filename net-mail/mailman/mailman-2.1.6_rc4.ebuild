@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.6_rc4.ebuild,v 1.2 2005/08/23 13:38:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.6_rc4.ebuild,v 1.3 2006/01/03 19:55:47 mholzer Exp $
 
 inherit eutils depend.apache
 IUSE="apache2 postfix sendmail qmail courier exim xmail"
@@ -23,7 +23,7 @@ INSTALLDIR="/usr/local/mailman"
 APACHEGID="81"
 
 if use postfix; then
-	MAILGID=nobody
+	MAILGID=mailman
 elif use sendmail; then
 	MAILGID=daemon
 elif use qmail; then
