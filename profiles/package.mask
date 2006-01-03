@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4822 2006/01/03 19:17:23 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4823 2006/01/03 20:30:25 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1585,3 +1585,8 @@ dev-db/mysqltool
 # <sejo@gentoo.org> (21 November 2005)
 # ibm-jdk-bin beta should be masked untill descent testing
 =dev-java/ibm-jdk-bin-1.5_beta1
+
+# <dang@gentoo.org> (03 January 2006)
+# Mask until deps get updated to point to poppler-bindings
+>=app-text/poppler-0.4.3-r2
+>=app-text/poppler-bindings-0.4.3-r2
