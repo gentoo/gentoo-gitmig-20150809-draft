@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b79cd5ae2f270d4db013cb982fb75140 ChangeLog 19591
+MD5 956f768324b0a0167752710a498e14b7 ChangeLog 19677
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
 MD5 db53dd4219e7b659886408c7174d7e67 files/digest-glib-2.8.3 64
@@ -14,12 +11,5 @@ MD5 02673367ae3d806f2df4dd6fbfff54f4 files/glib-2.8.3-macos.patch 307
 MD5 b75614f954c7353c9e75e011ee1adb59 glib-1.2.10-r5.ebuild 1536
 MD5 32bc1854429ae5772e66a83200cad69e glib-2.6.5.ebuild 1647
 MD5 38545a0a3894a1385ae80963b7af192a glib-2.8.3.ebuild 1688
-MD5 544e7d9ac1029d9b43ef5e41ada7c076 glib-2.8.4.ebuild 1700
+MD5 9a15ee4773483116e078194fa7572241 glib-2.8.4.ebuild 1698
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDun3pKRy60XGEcJIRArIbAJ9RNedOuhNqzZCBIsv527Hi/OALZgCcDpqQ
-+6qILCFgVrnGX0jmFj3LIAM=
-=NiZ1
------END PGP SIGNATURE-----
