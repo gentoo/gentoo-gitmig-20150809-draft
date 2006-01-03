@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 12fa31a84deb2c03b697cf169089f594 ChangeLog 777
 MD5 b96f687f81d5f2e53b52357bd20516ec files/digest-ucspi-ssl-0.50 65
-MD5 86d47989cb6d8267c551a7ba9d7e48fa files/digest-ucspi-ssl-0.70 142
+MD5 a442e5d9057809fe7cddac7e69f6f499 files/digest-ucspi-ssl-0.70 65
 MD5 6e8ff4bc92ca237cdbf7946baacdda84 files/ucspi-ssl-0.50-errno.patch 238
 MD5 f679a1992bdc8a7977f872548ab86c91 metadata.xml 380
 MD5 60daa93f671daae057fecdc70eb0ccb8 ucspi-ssl-0.50.ebuild 907
 MD5 6f5cc3a7b9cf85a4d3c35c2763967c81 ucspi-ssl-0.70.ebuild 1598
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDuQO+mdTrptrqvGERAv4IAJ9YP7C6a7H6G+HLOPmcmDEWUJo7IgCeIQLt
-uO9cmik0VO+6ytpsBUiZKyM=
-=ttA8
------END PGP SIGNATURE-----
