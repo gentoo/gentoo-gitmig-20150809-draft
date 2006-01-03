@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.38 2006/01/01 04:21:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.39 2006/01/03 03:11:48 matsuu Exp $
+
+*audacity-1.2.4b-r1 (03 Jan 2006)
+
+  03 Jan 2006; MATSUU Takuto <matsuu@gentoo.org> +audacity-1.2.4b-r1.ebuild:
+  Removed some use flag. Bug 113948.
+  Clean up ebuild.
 
 *audacity-1.2.4b (01 Jan 2006)
 
@@ -17,7 +23,7 @@
   audacity-1.2.2.ebuild, audacity-1.2.3.ebuild, audacity-1.2.3-r1.ebuild:
   oggvorbis Cleanup
 
-  18 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  18 Dec 2005; Diego Petten嘆 <flameeyes@gentoo.org>
   audacity-1.2.3-r1.ebuild:
   Remove eventual stray applnk desktop file, see bug #111204.
 
@@ -26,14 +32,14 @@
   Thanks to basic <basic AT mozdev DOT org> for the patch to fix compilation on
   x86.  Marking ~x86 for testing. bug #73248
 
-  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> audacity-1.2.1.ebuild,
+  15 May 2005; Diego Petten嘆 <flameeyes@gentoo.org> audacity-1.2.1.ebuild,
   audacity-1.2.2.ebuild, audacity-1.2.3.ebuild, audacity-1.2.3-r1.ebuild:
   Fixed dependency ok wxGTK 2.4 slot as per bug #92730.
 
 *audacity-1.2.3-r1 (15 Apr 2005)
 
   15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +audacity-1.2.3-r1.ebuild:
-  applied cleanup patch which was provided by Diego Pettenò
+  applied cleanup patch which was provided by Diego Petten嘆
   <dgp85@users.sourceforge.net>, fixes #74224 and #83301
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> audacity-1.2.3.ebuild:
