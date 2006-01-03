@@ -39,11 +39,11 @@ MD5 42396ea17f3c272cf7b98359ef1fb73d openmotif-2.1.30-r13.ebuild 5157
 MD5 cbb60554d94564b84d4960afdbcc2500 openmotif-2.1.30-r9.ebuild 3939
 MD5 820298e14c2fe7aa9d83621eb59a75ad openmotif-2.2.3-r3.ebuild 3239
 MD5 0b8526ea0e8fb64a6dafc6108efae24d openmotif-2.2.3-r7.ebuild 3919
-MD5 c3904b0670b581ace7de3972582c7edc openmotif-2.2.3-r8.ebuild 3953
+MD5 64b6d594cc5a33b7b616c5cd2b498c15 openmotif-2.2.3-r8.ebuild 3916
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrfnkViELBEf1JB0RAkqeAJ9DACXzCpaCpk9+yG4PNrJLDm1q2QCffanD
-Q7IxY+RTThgnBeHl53bMQGo=
-=G0fp
+iD8DBQFDudNk2+ySkm8kpY0RAkjcAKCVbeRJlUSxanzdaVRQWb6X09WinACfVqsq
+pUTiHA4bAzvIsVA439dl7i8=
+=vZ2E
 -----END PGP SIGNATURE-----
