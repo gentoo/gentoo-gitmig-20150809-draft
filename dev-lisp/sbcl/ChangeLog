@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/sbcl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.78 2005/12/21 12:37:46 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.79 2006/01/03 18:31:51 mkennedy Exp $
+
+*sbcl-0.9.8 (03 Jan 2006)
+
+  03 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9.8/README.Gentoo,
+  +files/0.9.8/customize-target-features.lisp-suffix, +files/0.9.8/sbcl.sh,
+  +files/0.9.8/customize-target-features.lisp-prefix,
+  +files/0.9.8/install-clc.lisp, +files/0.9.8/sbcl-gentoo.patch,
+  +files/0.9.8/sbclrc, sbcl-0.9.7.ebuild, +sbcl-0.9.8.ebuild:
+  New upstream version; Improved multilib support; Corrected typo for FASL
+  removal.
 
   21 Dec 2005; Aron Griffis <agriffis@gentoo.org> sbcl-0.9.7.ebuild:
   Minor changes:
