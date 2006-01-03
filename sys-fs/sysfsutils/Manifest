@@ -23,12 +23,12 @@ MD5 7e7075f23dac634652d9ba42796bba14 sysfsutils-1.2.0-r1.ebuild 801
 MD5 7894c65938bd31ea2a302ea6a58ddfac sysfsutils-1.2.0-r2.ebuild 1038
 MD5 909c224dc06c03330657f1495c856263 sysfsutils-1.2.0-r3.ebuild 1264
 MD5 5bad6609c165bea1fa4f294f84195d08 sysfsutils-1.2.0.ebuild 707
-MD5 6523a7326cfeafd4959d09ee4f43f1f0 sysfsutils-1.3.0-r1.ebuild 915
+MD5 1d7ce13b8e836230a8401a2072d9796a sysfsutils-1.3.0-r1.ebuild 923
 MD5 5245fd5439d2362549ca5c50de2e7fb8 sysfsutils-1.3.0.ebuild 1237
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi9G3gIKl8Uu19MoRAozUAJ9uu7LZdZL3BaJT7BGpLzXm6OpIfACcDRfo
-95T5xeOKDV3W/xhURiGClCo=
-=KWtD
+iD8DBQFDuweH2+ySkm8kpY0RAgUFAJ4s+G8CM82F698QhUE1DQG2oJdKgACghkJ/
+i5V8dCdfABogdA6VVVrItpY=
+=2Zfe
 -----END PGP SIGNATURE-----
