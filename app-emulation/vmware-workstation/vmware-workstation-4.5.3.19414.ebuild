@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r5.ebuild,v 1.1 2005/12/19 17:14:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414.ebuild,v 1.1 2006/01/03 15:27:12 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,8 +9,8 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-ANY_ANY="vmware-any-any-update96"
-NP="VMware-workstation-5.0.0-13124"
+#ANY_ANY="vmware-any-any-update96"
+NP="VMware-workstation-4.5.3-19414"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
@@ -22,10 +22,12 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
-	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
+	mirror://gentoo/vmware.png"
+#	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
+#	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+#	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+#	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+#	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
 IUSE=""
@@ -33,14 +35,14 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 RESTRICT="nostrip"
 
-DEPEND="${RDEPEND} virtual/os-headers"
-# vmware-workstation should not use virtual/libc as this is a 
-# precompiled binary package thats linked to glibc.
-RDEPEND="sys-libs/glibc
+DEPEND=">=dev-lang/perl-5
+	virtual/os-headers"
+
+RDEPEND=">=dev-lang/perl-5
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
+	sys-libs/glibc
 	virtual/x11
 	!app-emulation/vmware-player
-	>=dev-lang/perl-5
 	sys-apps/pciutils"
 
 dir=/opt/vmware/workstation
@@ -55,17 +57,18 @@ pkg_setup() {
 src_unpack() {
 	unpack ${NP}.tar.gz
 	cd ${S}
-	# patch the config to not install desktop/icon files
-	epatch ${FILESDIR}/${P}-config.patch
-	unpack ${ANY_ANY}.tar.gz
-	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
-	cd ${S}/${ANY_ANY}
-	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
+	# Patch to resolve problems with VMware finding its distributed libraries.
+	# Patch submitted to bug #59035 by Georgi Georgiev <chutz@gg3.net>
+	epatch ${FILESDIR}/${P}-librarypath.patch
+#	unpack ${ANY_ANY}.tar.gz
+#	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+#	cd ${S}/${ANY_ANY}
+#	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
 	# vmware any96 still doesn't patch the vmware binary
 	#./update vmware ../lib/bin/vmware || die
-	#./update bridge ../bin/vmnet-bridge || die
-	#./update vmx ../lib/bin/vmware-vmx || die
-	#./update vmxdebug ../lib/bin-debug/vmware-vmx || die
+#	./update bridge ../bin/vmnet-bridge || die
+#	./update vmx ../lib/bin/vmware-vmx || die
+#	./update vmxdebug ../lib/bin-debug/vmware-vmx || die
 }
 
 src_install() {
@@ -74,12 +77,13 @@ src_install() {
 
 	dodir ${dir}/lib
 	cp -dr lib/* ${Ddir}/lib
-
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
-	# We also don't need to keep the icons around
-	rm -rf ${Ddir}/lib/share/icons
+	# We also remove the rpath libgdk_pixbuf stuff, to resolve bug #81344.
+	perl -pi -e 's#/tmp/rrdharan/out#/opt/vmware/null/#sg' \
+		${Ddir}/lib/lib/libgdk_pixbuf.so.2/lib{gdk_pixbuf.so.2,pixbufloader-{xpm,png}.so.1.0.0} \
+		|| die "Removing rpath"
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
@@ -120,13 +124,12 @@ src_install() {
 	# package which would rmdir the /etc/vmware/init.d/rc?.d directories.
 	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
 
+	# A simple icon I made
 	insinto ${dir}/lib/icon
-	doins ${S}/lib/share/icons/48x48/apps/${PN}.png || die
-	doicon ${S}/lib/share/icons/48x48/apps/${PN}.png || die
-	insinto /usr/share/mime/packages
-	doins ${FILESDIR}/vmware.xml
+	doins ${DISTDIR}/vmware.png || die
+	doicon ${DISTDIR}/vmware.png || die
 
-	make_desktop_entry vmware "VMWare Workstation" ${PN}.png
+	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
 	dodir /usr/bin
 	dosym ${dir}/bin/vmware /usr/bin/vmware
@@ -164,7 +167,7 @@ pkg_preinst() {
 	# perl -e "@a = stat('bin/vmware'); print \$a[9]"
 	# The above perl line and the find line below output the same thing.
 	# I would think the find line is faster to execute.
-	# find /opt/vmware/bin/workstation/vmware -printf %T@
+	# find /opt/vmware/workstation/bin/vmware -printf %T@
 
 	#Note: it's a bit weird to use ${D} in a preinst script but it should work
 	#(drobbins, 1 Feb 2002)
@@ -197,8 +200,6 @@ pkg_config() {
 }
 
 pkg_postinst() {
-	update-mime-database /usr/share/mime
-
 	# This is to fix the problem where the not_configured file doesn't get
 	# removed when the configuration is run. This doesn't remove the file
 	# It just tells the vmware-config.pl script it can delete it.
@@ -211,8 +212,9 @@ pkg_postinst() {
 	done
 
 	einfo
-	einfo "You need to run ${dir}/bin/vmware-config.pl to complete the install."
-	einfo
+	einfo "You need to run ${dir}/bin/vmware-config.pl"
+	einfo "to complete the install."
+	echo
 	einfo "For VMware Add-Ons just visit"
 	einfo "http://www.vmware.com/download/downloadaddons.html"
 	einfo
@@ -229,7 +231,6 @@ pkg_postinst() {
 	echo
 	ewarn "VMWare allows for the potential of overwriting files as root.  Only"
 	ewarn "give VMWare access to trusted individuals."
-	#ewarn "For users of glibc-2.3.x, vmware-nat support is *still* broken on 2.6.x"
 }
 
 pkg_postrm() {

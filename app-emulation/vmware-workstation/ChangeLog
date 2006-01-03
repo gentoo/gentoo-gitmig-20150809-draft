@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/vmware-workstation
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.114 2005/12/21 22:15:28 wolf31o2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.115 2006/01/03 15:27:12 wolf31o2 Exp $
+
+*vmware-workstation-4.5.3.19414 (03 Jan 2006)
+
+  03 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/vmware-workstation-4.5.2.8848-librarypath.patch,
+  +files/vmware-workstation-4.5.3.19414-librarypath.patch,
+  -files/vmware-workstation-5.0.0.13124-config.patch,
+  -vmware-workstation-4.5.2.8848-r10.ebuild,
+  +vmware-workstation-4.5.3.19414.ebuild,
+  -vmware-workstation-5.0.0.13124-r5.ebuild,
+  vmware-workstation-5.5.1.19175.ebuild:
+  Version bumped 4.x series to 4.5.3, marking 4.5.3 and 5.5.1 stable on
+  x86/amd64 due to security bug #116238.
 
   21 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-5.5.1.19175.ebuild:
