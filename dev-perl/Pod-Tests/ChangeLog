@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Tests
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.4 2005/12/12 20:40:47 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.5 2006/01/03 21:11:42 plasmaroo Exp $
+
+  03 Jan 2006; <plasmaroo@gentoo.org> Pod-Tests-0.18.ebuild:
+  Mark ~ia64; bug #113367.
 
   12 Dec 2005; Luis Medinas <metalgod@gentoo.org> Pod-Tests-0.18.ebuild:
   Added ~amd64 keyword. See bug #113367.
