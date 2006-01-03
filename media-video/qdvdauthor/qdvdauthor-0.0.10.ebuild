@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.10.ebuild,v 1.1 2005/12/13 01:52:14 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.10.ebuild,v 1.2 2006/01/03 12:16:53 caleb Exp $
 
 inherit eutils qt3
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 	# full-qualify qmake in configure
 	sed -i -e "s:make;:make ${MAKEOPTS};:g" \
-		-e "s:qmake:\${QTDIR}/bin/qmake:g" configure
+		-e "s:qmake:\${QTDIR}/bin/qmake QMAKE=\${QTDIR}/bin/qmake:g" configure
 
 	# fixing defaults from /usr/local/bin to gentoo default /usr/bin
 	sed -i "s:/usr/local/bin:/usr/bin:g" qdvdauthor/qdvdauthor.cpp \

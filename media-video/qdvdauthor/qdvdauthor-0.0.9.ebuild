@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.9.ebuild,v 1.5 2005/09/04 12:55:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.9.ebuild,v 1.6 2006/01/03 12:16:53 caleb Exp $
 
 inherit qt3 eutils
 
@@ -41,14 +41,14 @@ src_compile() {
 	#export QT_LIB="$QTDIR"
 	sed -i "s|/usr/local/bin|/usr/bin|g" qdvdauthor/qdvdauthor.cpp qdvdauthor/dialogexecute.cpp doc/sound.txt
 	cd qdvdauthor
-	${QTDIR}/bin/qmake qdvdauthor.pro || die 'qmake failed'
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qdvdauthor.pro || die 'qmake failed'
 
 	# fixing Makefile, so that we can use our CFLAGS
 	sed -i -e "s|^CFLAGS.*-O2|CFLAGS = ${CFLAGS} |g" -e "s|^CXXFLAGS.*-O2|CXXFLAGS = ${CXXFLAGS} |g" Makefile
 	emake || die "emake qdvdauthor failed"
 
 	cd qslideshow
-	${QTDIR}/bin/qmake qslideshow.pro
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qslideshow.pro
 	# fixing Makefile, so that we can use our CFLAGS
 	sed -i -e "s|^CFLAGS.*-O2|CFLAGS   = ${CFLAGS} |g" -e "s|^CXXFLAGS.*-O2|CXXFLAGS = ${CXXFLAGS} |g" Makefile
 	emake || die "emake qslideshow failed"
