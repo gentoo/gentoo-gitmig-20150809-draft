@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 474f8ae12621136100e20f10b345465e xmms-volnorm-0.4.1-r1.ebuild 809
-MD5 dc73acdb66623e4bd9fac5ccc3b1af5f ChangeLog 2077
-MD5 c51d4a693c7684bbf76ebd98a75c93db xmms-volnorm-0.4.1.ebuild 841
-MD5 aab482a28ee366a87463e66539a704ca xmms-volnorm-0.8.1.ebuild 1026
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 721ea4acd1fb621787e0622715c37d14 ChangeLog 2192
+MD5 5df2fa8eb58ab939486364f33ed6bef8 files/0.8.1-gentoo.patch 917
+MD5 853995e0ef6ad781854d0f8973f8bbc9 files/digest-xmms-volnorm-0.4.1 65
 MD5 853995e0ef6ad781854d0f8973f8bbc9 files/digest-xmms-volnorm-0.4.1-r1 65
 MD5 4f9e795e1965d52f07d25575b1c3bdab files/digest-xmms-volnorm-0.8.1 65
-MD5 853995e0ef6ad781854d0f8973f8bbc9 files/digest-xmms-volnorm-0.4.1 65
-MD5 5df2fa8eb58ab939486364f33ed6bef8 files/0.8.1-gentoo.patch 917
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 474f8ae12621136100e20f10b345465e xmms-volnorm-0.4.1-r1.ebuild 809
+MD5 c51d4a693c7684bbf76ebd98a75c93db xmms-volnorm-0.4.1.ebuild 841
+MD5 ec916a31f99bd712cd9019a3f5aa489d xmms-volnorm-0.8.1.ebuild 1024
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGsRgj5H05b2HAEkRAscVAJ4yDdwL3TY5k+eERlPKPkhXbPNiugCdHHME
-XGAFPiE9a1cYvaSUjL9JOog=
-=5ewE
+iD8DBQFDuqFEwUpWvClEHQoRAnC+AJ9p+wtby7Mk3NdJ1uIrVzqLu6U7UwCeOA/l
+uUUEol6GO2baqmkoNmVqMnA=
+=yqBR
 -----END PGP SIGNATURE-----
