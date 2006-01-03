@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ba450624d915caa0f12002d3a99fd64 Algorithm-Dependency-1.101.ebuild 618
-MD5 37f9180897aa25a2468a64f4a2bfeb95 ChangeLog 780
+MD5 5249098a66986ef185be18bf514db0e6 Algorithm-Dependency-1.101.ebuild 625
+MD5 4f2bccea406dee514c348bab528ca5d3 ChangeLog 882
 MD5 6aa8de3d8e467189720157ca1f361904 files/digest-Algorithm-Dependency-1.101 77
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDneCjwUpWvClEHQoRAnEYAJ98eBNIvayiHmWNAV3cPINAZQn1eACfSvrB
-sATr2OSg3HIA6n+TArEGqGY=
-=COZ0
------END PGP SIGNATURE-----
