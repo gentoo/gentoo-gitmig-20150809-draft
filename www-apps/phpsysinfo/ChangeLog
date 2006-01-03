@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/phpsysinfo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.10 2005/12/21 13:43:01 rl03 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.11 2006/01/03 15:54:40 rl03 Exp $
+
+*phpsysinfo-2.5.1-r1 (03 Jan 2006)
+
+  03 Jan 2006; Renat Lumpau <rl03@gentoo.org> -phpsysinfo-2.5.1.ebuild,
+  +phpsysinfo-2.5.1-r1.ebuild:
+  Fixed bug #117516.
 
   21 Dec 2005; Renat Lumpau <rl03@gentoo.org>
   -files/phpsysinfo-2.3-sparc.patch,
