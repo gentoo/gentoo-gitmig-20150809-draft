@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.4 2006/01/03 08:07:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.5 2006/01/03 11:31:59 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -111,6 +111,8 @@ pkg_setup() {
 	if use wxwindows; then
 		WX_GTK_VER="2.6"
 		need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
+		# Does not play fine with --as-needed...
+		filter-ldflags -Wl,--as-needed --as-needed
 	fi
 
 	if use skins && ! use truetype; then
