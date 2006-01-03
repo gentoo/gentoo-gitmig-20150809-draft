@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2691e86da516b9256699db6f93440136 ChangeLog 1561
 MD5 8ff6b8eedd237b72c44c3ad212401858 files/digest-kipi-plugins-0.1.0_beta2 78
 MD5 3c0d7a082c392bc68c4ba3a7e5ff6ca5 files/digest-kipi-plugins-0.1.0_rc1 76
@@ -6,3 +9,10 @@ MD5 42c63a641daf2c7fa0c265a0f92bb6b9 kipi-plugins-0.1.0_beta2.ebuild 891
 MD5 4024b7e61ef5e7a21030788d602c58a1 kipi-plugins-0.1.0_rc1.ebuild 912
 MD5 b88c8d57da75ac197aeb4b26150fa66b kipi-plugins-0.1_beta1.ebuild 1141
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDull9QiJ/wx066S4RAqhdAJwKyMq/rVAoNhsZO5rIQ0/1QKTbnQCfQ6xz
+BW3ixK4jfa5joumafvCgFAs=
+=WeX2
+-----END PGP SIGNATURE-----
