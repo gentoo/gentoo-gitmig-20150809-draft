@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.24 2005/08/24 00:36:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.25 2006/01/03 06:34:20 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -88,7 +88,7 @@ src_install() {
 pkg_postinst() {
 	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
 		ewarn "Your old readline libraries have been copied over."
-		ewarn "You should run 'revdep-rebuild --soname libreadline.so.4.1' asap."
+		ewarn "You should run 'revdep-rebuild --library libreadline.so.4.1' asap."
 		ewarn "Once you have, you can safely delete /lib/libreadline.so.4.1"
 	fi
 }

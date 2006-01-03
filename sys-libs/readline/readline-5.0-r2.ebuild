@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.8 2005/09/10 17:07:07 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.9 2006/01/03 06:34:20 vapier Exp $
 
 inherit eutils multilib
 
@@ -84,7 +84,7 @@ pkg_preinst() {
 pkg_postinst() {
 	if [[ -e ${ROOT}/$(get_libdir)/libreadline.so.4 ]] ; then
 		ewarn "Your old readline libraries have been copied over."
-		ewarn "You should run 'revdep-rebuild --soname libreadline.so.4' asap."
+		ewarn "You should run 'revdep-rebuild --library libreadline.so.4' asap."
 		ewarn "Once you have, you can safely delete /$(get_libdir)/libreadline.so.4*"
 	fi
 }

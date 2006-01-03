@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 700594fb255dc5da5014fdaa385a5b6f ChangeLog 8748
 MD5 d687545889dacb43e121f4932d99a534 files/bash-3.0-etc-inputrc.patch 1443
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r5 348
@@ -15,7 +18,14 @@ MD5 e4ac33c0a2293b72378e00e8729c71af files/readline-5.1-cleanups.patch 3817
 MD5 73869a19bab0f37a7ee46e377d2bac15 files/readline-5.1-rlfe-build.patch 252
 MD5 acf485e32b4ff28ae6aec238c3a4581c files/readline-5.1-rlfe-uclibc.patch 308
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 82ac0eae5f66926062b260f7d09de7c0 readline-4.3-r5.ebuild 2764
-MD5 e16aefe27f29117c7a4e7be342e920b4 readline-4.3-r6.ebuild 3090
-MD5 d33ebebef248a79c288c6b1dce06b0ee readline-5.0-r2.ebuild 2778
-MD5 1f77ad40c33d93bcc4f27f09abb020dc readline-5.1-r2.ebuild 3014
+MD5 f57994b50a6ef31969945eef6dfa6a80 readline-4.3-r5.ebuild 2765
+MD5 6af52eb762dd5c0220974c9c853181c2 readline-4.3-r6.ebuild 3091
+MD5 5c962060bc5f3a5bb5935407f4fdf1a8 readline-5.0-r2.ebuild 2781
+MD5 328392b6dbdd45107aac5c12048f7d7f readline-5.1-r2.ebuild 3015
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuhsj2+ySkm8kpY0RAsczAJwLDplIE70IFIw8YZK6wVgEzEAMygCghxSK
+mCwRXa4kidvxkgHdDdlDzNc=
+=bc7L
+-----END PGP SIGNATURE-----
