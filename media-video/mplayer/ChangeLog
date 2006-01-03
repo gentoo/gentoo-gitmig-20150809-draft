@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.335 2006/01/03 00:34:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.336 2006/01/03 11:13:58 dragonheart Exp $
+
+  03 Jan 2006; Daniel Black <dragonheart@gentoo.org>
+  mplayer-1.0_pre7-r1.ebuild, mplayer-1.0.20060102.ebuild:
+  dependency changed to =dev-libs/lzo-1* so that unmasking lzo-2 will not
+  break this package as per bug #112374
 
 *mplayer-1.0.20060102 (03 Jan 2006)
 
