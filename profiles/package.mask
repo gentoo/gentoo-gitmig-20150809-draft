@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4816 2006/01/02 23:02:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4817 2006/01/03 00:53:15 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+
+# Luca Barbato <lu_zero@gentoo.org> (02 Jan 2006)
+# masked for testing
+=media-video/mplayer-1.0.20060102
 
 # Lisa Seelye <lisa@gentoo.org> (02 Jan 2006)
 # This really needs to be gotten rid of. It's buggy and the pecl version is
