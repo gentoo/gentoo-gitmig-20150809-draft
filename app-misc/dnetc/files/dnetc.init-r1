@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.init-r1,v 1.1 2006/01/03 22:53:48 voxus Exp $
+
+depend() {
+	use net
+}
+
+start() {
+	ebegin "Starting distributed.net client"
+
+	DNETPATH="/opt/distributed.net"
+
+	STARTOPTS="--start --chuid dnetc:dnetc --quiet \
+		--exec /opt/distributed.net/dnetc"
+	
+	if [ -e ${DNETPATH}/dnetc.ini ]; then
+		# use ini file
+		start-stop-daemon ${STARTOPTS} -- \
+			-quiet -ini ${DNETPATH}/dnetc.ini
+		
+	elif [ ! -e ${DNETPATH}/dnetc.ini ] && [ ! -z ${EMAIL} ]; then
+		# email adress from config
+		start-stop-daemon ${STARTOPTS} -- \
+			-quiet -e ${EMAIL}
+
+	else
+		exit 1
+	fi
+	eend ${?}
+}
+
+stop() {
+	# sends SIGTERM to all running clients.
+	ebegin "Stopping distributed.net client"
+	start-stop-daemon --stop --quiet \
+		--exec /opt/distributed.net/dnetc -- stop
+	eend ${?}
+}
