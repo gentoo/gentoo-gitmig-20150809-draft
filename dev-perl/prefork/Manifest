@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29fbd1bab0acaad4e211f12798e74615 ChangeLog 782
+MD5 601c085b52d9456bde436ac4ed25fae9 ChangeLog 876
 MD5 de6f209b35dd821d576bce5c004fea47 files/digest-prefork-1.00 63
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 72f42d8ab1bcbfbd962bc9372b76ec21 prefork-1.00.ebuild 599
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtRbltG5z4I8BtQoRArxFAKCFT1Fw599yal9tChtwTEa/fRy8jgCfdUHA
-F2wtu/tMqPWNyzgeWpTYNgU=
-=evIW
------END PGP SIGNATURE-----
+MD5 f89a1048fc7137c998d7bb8700da4ac7 prefork-1.00.ebuild 605
