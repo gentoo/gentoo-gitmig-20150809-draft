@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.20 2006/01/03 20:42:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.21 2006/01/03 21:14:28 nelchael Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -12,27 +12,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="|| ( x11-base/xorg-server virtual/x11 )"
+RDEPEND=""
+DEPEND="${RDEPEND}"
 
 src_install() {
-	# Set up X11 implementation
-	X11_IMPLEM_P="$(best_version virtual/x11)"
-	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-	X11_IMPLEM="${X11_IMPLEM##*\/}"
-	einfo "X11 implementation is ${X11_IMPLEM}."
-
-	dodir /usr/share/cursors/${X11_IMPLEM}/Gold/cursors/
-	cp -R ${WORKDIR}/${MY_P:5}/Gold/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/Gold/ || die
+	dodir /usr/share/cursors/xorg-x11/Gold/cursors/
+	cp -R ${WORKDIR}/${MY_P:5}/Gold/cursors ${D}/usr/share/cursors/xorg-x11/Gold/ || die
 	dodoc ${WORKDIR}/${MY_P:5}/README
 }
 
 pkg_postinst() {
-	# yes, i know; it is ugly
-	X11_IMPLEM_P="$(best_version virtual/x11)"
-	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-	X11_IMPLEM="${X11_IMPLEM##*\/}"
-
 	einfo "To use this set of cursors, edit or create the file ~/.Xdefaults"
 	einfo "and add the following line:"
 	einfo "Xcursor.theme: Gold"
@@ -41,7 +30,7 @@ pkg_postinst() {
 	einfo "Xcursor.size: 48"
 	einfo ""
 	einfo "Also, to globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/local/share/cursors/${X11_IMPLEM}/default/index.theme"
+	einfo "   /usr/share/cursors/xorg-x11/default/index.theme"
 	einfo "and change the line:"
 	einfo "    Inherits=[current setting]"
 	einfo "to"
