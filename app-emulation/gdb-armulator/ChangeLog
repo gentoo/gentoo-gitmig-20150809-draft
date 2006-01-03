@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/gdb-armulator
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/ChangeLog,v 1.1 2006/01/03 23:35:57 vapier Exp $
+
+*gdb-armulator-5.0 (03 Jan 2006)
+
+  03 Jan 2006; Mike Frysinger <vapier@gentoo.org>:
+  Initial import.
