@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2194f1ed259519b09abe5a5cefa29311 ChangeLog 730
 MD5 fac71a46004abf5f42c8410c35507dd4 files/digest-video-entropyd-0.7 65
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 757f1d22b57dc503a42734588ddcf4b6 video-entropyd-0.7.ebuild 865
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuwoPwUpWvClEHQoRAm5CAJ4xBud+gOXnMpCcAQ2erd390G9R4ACeM6uu
+pS+NXcL+9fc1Ihan50eKjeQ=
+=ASiM
+-----END PGP SIGNATURE-----
