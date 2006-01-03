@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.8.2.ebuild,v 1.6 2005/10/31 13:41:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.8.2.ebuild,v 1.7 2006/01/03 11:03:58 dragonheart Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 DEPEND="virtual/x11
-	>=dev-libs/lzo-1.0.8"
+	=dev-libs/lzo-1*"
 
 src_compile() {
 	econf || die "Configure failed"

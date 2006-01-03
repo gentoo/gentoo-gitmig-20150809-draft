@@ -1,4 +1,14 @@
-MD5 8c75a1d1a3679c05db6f5f93c605403e ChangeLog 668
-MD5 1a76e06831ae4c208b09631550b5c6fa dxpc-3.8.2.ebuild 742
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e19d263b3fbeb9a5ed5262725433e1cc ChangeLog 858
+MD5 3f77f2c6a091d8eb4a12a6473f45ae62 dxpc-3.8.2.ebuild 741
 MD5 39fce89640ab6117e66d09ab4f15ffd1 files/digest-dxpc-3.8.2 62
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDulzgmdTrptrqvGERAsU4AJwPpiqOx6/jK7nvRHHlUurqKrqAZwCcD4gS
+NE/eN69Jg28LzIpoH+MVbYQ=
+=CFfE
+-----END PGP SIGNATURE-----

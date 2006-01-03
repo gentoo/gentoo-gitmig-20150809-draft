@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/dxpc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.5 2005/10/31 13:41:38 nelchael Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.6 2006/01/03 11:03:58 dragonheart Exp $
+
+  03 Jan 2006; Daniel Black <dragonheart@gentoo.org> dxpc-3.8.2.ebuild:
+  dependency changed to =dev-libs/lzo-1* so that unmasking lzo-2 will not
+  break this package as per bug #112377
 
   31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> dxpc-3.8.2.ebuild:
   Fixed dodoc not to install INSTALL.
