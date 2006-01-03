@@ -1,21 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.3-r1.ebuild,v 1.1 2005/11/20 10:41:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.3h.ebuild,v 1.1 2006/01/03 15:47:01 rl03 Exp $
 
-inherit webapp eutils
+inherit webapp
 
-MY_P="${PN/M/m}V${PV}-Stable"
+MY_P="${PN/m/M}V${PV}"
 DESCRIPTION="Mambo is yet another CMS"
 HOMEPAGE="http://www.mamboserver.com/"
-SRC_URI="http://mamboforge.net/frs/download.php/4004/${MY_P}.tar.gz"
+SRC_URI="http://mamboforge.net/frs/download.php/7819/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 S=${WORKDIR}
 
-IUSE=""
+IUSE="mysql"
 
-RDEPEND="dev-db/mysql
+RDEPEND="mysql? ( dev-db/mysql )
 	virtual/httpd-php
 	net-www/apache"
 DEPEND="app-arch/unzip"
@@ -32,12 +32,9 @@ src_install () {
 	media language administrator/modules administrator/templates cache modules
 	templates"
 
-	dodoc CHANGELOG INSTALL
+	dodoc CHANGELOG.php INSTALL.php README
 
 	cp -R [^d]* ${D}/${MY_HTDOCSDIR}
-
-	cd "${D}/${MY_HTDOCSDIR}"
-	epatch "${FILESDIR}/${PN}-4.5.2.3-globals_overwrite.patch"
 
 	for file in ${files}; do
 		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
@@ -50,8 +47,9 @@ src_install () {
 
 pkg_postinst () {
 	einfo "Now run \"emerge --config =${PF}\""
-	einfo "to setup the database"
+	einfo "if you wish to setup a local database"
 	einfo "Note that db and dbuser need to be present prior to running db setup"
+	einfo "and your MySQL needs to be running"
 	webapp_pkg_postinst
 }
 
@@ -60,9 +58,6 @@ pkg_config() {
 	D_DB="mambo"
 	D_HOST="localhost"
 	D_USER="mambo"
-
-	# do we want to start mysqld?
-	/etc/init.d/mysql restart || die "mysql needs to be running"
 
 	echo -n "mysql db name [${D_DB}]: "; read MY_DB
 	[[ -z ${MY_DB} ]] && MY_DB=${D_DB}
