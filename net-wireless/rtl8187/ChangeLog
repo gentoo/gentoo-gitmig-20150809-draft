@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rtl8187
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/ChangeLog,v 1.1 2006/01/03 12:12:40 genstef Exp $
+
+*rtl8187-1.10 (03 Jan 2006)
+
+  03 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +rtl8187-1.10.ebuild:
+  New ebuild thanks to tuXXer <bs.net@gmx.de> in bug 117145
+
