@@ -1,7 +1,17 @@
-MD5 677ba877c579e6e9158fe0c46fd1dd91 tinc-1.0.3.ebuild 913
-MD5 c258796958401d97fea00d0b8e66a429 tinc-1.0.2.ebuild 911
-MD5 a65dd3f32b79bc0b8c88e16c1323acbd ChangeLog 1036
-MD5 26b2621b6066e021c4222dd149af002a metadata.xml 356
-MD5 9aa869612dc4114ba8b2c8761afccdd6 files/tincd 1340
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f4a58a7d6a9199edb6dcf3e73bbd173 ChangeLog 1243
 MD5 8f70364e159d1ba3c7ed7bd5e517b5fc files/digest-tinc-1.0.2 62
 MD5 fc51fa3730eaad946925216e0ed82f3f files/digest-tinc-1.0.3 62
+MD5 9aa869612dc4114ba8b2c8761afccdd6 files/tincd 1340
+MD5 26b2621b6066e021c4222dd149af002a metadata.xml 356
+MD5 70953a3372c62cf6d7c706a18a2e722c tinc-1.0.2.ebuild 913
+MD5 ff805f24b8485558ef776d48ed8a02be tinc-1.0.3.ebuild 913
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDuloPmdTrptrqvGERAvEIAJ9skAPHEjiG/7kjS3FKBLTTI9WFtQCfWKo4
+C6VZhAJ0ceQjLvxoyzUleg8=
+=qu82
+-----END PGP SIGNATURE-----

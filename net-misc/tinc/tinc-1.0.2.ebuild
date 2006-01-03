@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.2.ebuild,v 1.5 2005/03/26 13:22:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.2.ebuild,v 1.6 2006/01/03 10:52:00 dragonheart Exp $
 
 
 DESCRIPTION="tinc is an easy to configure VPN implementation"
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.7c
 	virtual/linux-sources
-	>=dev-libs/lzo-1.08
+	=dev-libs/lzo-1*
 	>=sys-libs/zlib-1.1.4-r2"
 
 src_compile() {

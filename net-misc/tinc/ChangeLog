@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tinc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.5 2005/04/29 18:39:06 warpzero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.6 2006/01/03 10:52:00 dragonheart Exp $
+
+  03 Jan 2006; Daniel Black <dragonheart@gentoo.org> tinc-1.0.2.ebuild,
+  tinc-1.0.3.ebuild:
+  dependency changed to =dev-libs/lzo-1* so that unmasking lzo-2 wont break this
+  package as per bug #112375
 
 *tinc-1.0.3 (29 Apr 2005)
 
