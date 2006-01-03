@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.96.5.ebuild,v 1.1 2005/11/08 21:17:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.0.1.ebuild,v 1.1 2006/01/03 14:23:01 tove Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -53,7 +53,7 @@ src_install() {
 		contrib/{trainbogo,scramble}.sh || die "doins failed"
 
 	dodoc AUTHORS NEWS README RELEASE.NOTES* TODO GETTING.STARTED \
-		doc/integrating-with-* doc/README.{db,sqlite}
+		doc/integrating-with-* doc/README.{db,sqlite} || die "dodoc failed"
 
 	dodir /usr/share/doc/${PF}/samples
 	mv "${D}"/etc/* "${D}"/usr/share/doc/${PF}/samples/
