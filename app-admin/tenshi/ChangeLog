@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tenshi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.12 2005/08/23 12:47:51 tigger Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.13 2006/01/04 15:28:41 lcars Exp $
+
+*tenshi-0.4 (04 Jan 2006)
+
+  04 Jan 2006; Andrea Barisani <lcars@gentoo.org> +tenshi-0.4.ebuild:
+  version bump.
 
   23 Aug 2005; Rob Holland <tigger@gentoo.org> tenshi-0.3.3.ebuild,
   tenshi-0.3.4.ebuild:
