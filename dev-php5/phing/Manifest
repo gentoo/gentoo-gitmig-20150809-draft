@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7460bf74e0e08f7f3598e54a2795d497 ChangeLog 940
-MD5 175e89a6181abb73d953605b0d93b4c1 files/digest-phing-2.1.0 65
+MD5 73fc50b1241a0eb7e3a87b0c92fe354e ChangeLog 1086
+MD5 15ba62334a6529731fc35445602dbde3 files/digest-phing-2.1.1 60
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 8d7333ebc61ea6117db904c407399ab7 phing-2.1.0.ebuild 473
+MD5 88f6ef0adca040ec1a45e7ebde131efa phing-2.1.1.ebuild 468
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuApHaGfFFLhbXWkRAi/1AJwJ9J3lT1x0yO5/Vhj0164DbSO6wgCeNzPQ
-ut1SAFYjCIr2XqJpAXD534Q=
-=KDzx
+iD8DBQFDu7IJaGfFFLhbXWkRAnsvAKCeBylfSxAW/b3Mwy2JY/kGCLyFvACeOq84
+0qTkhtwF+j/ovCxDjCX/A28=
+=WwZj
 -----END PGP SIGNATURE-----
