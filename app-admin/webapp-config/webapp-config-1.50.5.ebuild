@@ -1,16 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.3.ebuild,v 1.1 2005/12/16 15:38:40 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.5.ebuild,v 1.1 2006/01/04 21:14:28 wrobel Exp $
 
 inherit eutils distutils
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="http://dev.gentoo.org/~stuart/webapp-config/${PF}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~wrobel/webapp-config/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~x86"
 IUSE=""
 S=${WORKDIR}/${PF}
 
@@ -31,6 +31,15 @@ src_install() {
 	dodoc examples/phpmyadmin-2.5.4-r1.ebuild AUTHORS.txt TODO.txt CHANGES.txt examples/postinstall-en.txt
 	doman doc/webapp-config.5 doc/webapp-config.8 doc/webapp.eclass.5
 	dohtml doc/webapp-config.5.html doc/webapp-config.8.html doc/webapp.eclass.5.html
+}
+
+src_test() {
+	cd ${S}
+	einfo "Running webapp-config doctests..."
+	if ! PYTHONPATH="." ${python} WebappConfig/tests/dtest.py; then
+		eerror "DocTests failed - please submit a bug report"
+		die "DocTesting failed!"
+	fi
 }
 
 pkg_postinst() {
