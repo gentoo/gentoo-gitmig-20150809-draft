@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc1.ebuild,v 1.1 2005/11/02 23:52:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc1.ebuild,v 1.2 2006/01/04 09:28:18 flameeyes Exp $
 
-inherit flag-o-matic libtool
+inherit flag-o-matic libtool autotools
 
 IUSE="cups foomaticdb gtk nls readline ppds"
 
@@ -13,13 +13,18 @@ HOMEPAGE="http://gimp-print.sourceforge.net"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ppc64"
 SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2"
 
-DEPEND="cups? ( >=net-print/cups-1.1.14 )
+RDEPEND="cups? ( >=net-print/cups-1.1.14 )
 	media-gfx/imagemagick
 	virtual/ghostscript
 	sys-libs/readline
 	gtk? ( x11-libs/gtk+ )
 	dev-lang/perl
 	foomaticdb? ( net-print/foomatic-db-engine )"
+
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,26 +33,20 @@ S=${WORKDIR}/${MY_P}
 
 append-flags -fno-inline-functions
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	# get rid of the libtool.m4 file that's broken
+	rm -f ${S}/m4extra/libtool.m4
+
+	AT_M4DIR="m4 m4extra" eautoreconf
+}
+
 src_compile() {
 	elibtoolize --reverse-deps
-
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
-
-	use readline \
-		&& myconf="${myconf} --with-readline" \
-		|| myconf="${myconf} --without-readline"
-
-	use gtk \
-		&& myconf="${myconf} --enable-lexmarkutil" \
-		|| myconf="${myconf} --disable-lexmarkutil"
-
-	if use cups; then
-		myconf="${myconf} --with-cups"
-	else
-		myconf="${myconf} --without-cups"
-	fi
 
 	if use cups && use ppds; then
 		myconf="${myconf} --enable-cups-ppds --enable-cups-level3-ppds"
@@ -66,6 +65,10 @@ src_compile() {
 		--with-user-guide \
 		--with-samples \
 		--with-escputil \
+		$(use_enable nls) \
+		$(use_with readline) \
+		$(use_enable gtk lexmarkutil) \
+		$(use_with cups) \
 		$myconf || die
 
 	# IJS Patch
