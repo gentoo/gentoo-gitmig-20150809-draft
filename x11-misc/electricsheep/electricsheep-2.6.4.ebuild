@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.3-r1.ebuild,v 1.3 2005/12/20 22:24:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.4.ebuild,v 1.1 2006/01/04 22:29:39 dragonheart Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="http://electricsheep.org/${P}.tar.gz"
 IUSE="kde"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 RDEPEND="|| ( ( x11-libs/libXv
 			x11-libs/libICE
@@ -20,7 +20,6 @@ RDEPEND="|| ( ( x11-libs/libXv
 	)
 	dev-libs/expat
 	net-misc/curl
-	media-gfx/xloadimage
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/libsdl

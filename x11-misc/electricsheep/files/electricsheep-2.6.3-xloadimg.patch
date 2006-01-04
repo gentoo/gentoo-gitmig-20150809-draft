@@ -1,0 +1,29 @@
+--- electricsheep-2.6.3-orig/electricsheep.c	2005-07-24 17:18:38.000000000 -0600
++++ electricsheep-2.6.3/electricsheep.c	2005-12-23 13:35:48.000000000 -0700
+@@ -505,11 +505,13 @@
+     else
+       qbuf[0] = 0;
+ 
++    /* Commented out due to critical xloadimage bug
+     sprintf(pbuf, "xsetbg %s "
+ 	    "-border black -at 0,0 %s-splash-0.tif " 
+ 	    "-merge -center %s-splash-1.tif %s",
+ 	    qbuf, splash_prefix, splash_prefix, ob);
+     mysystem2(pbuf, "splash0");
++    */
+ }
+ 
+ #define max_plays 1000
+@@ -1539,10 +1541,12 @@
+   else
+     qbuf[0] = 0;
+   
++  /* Commented out due to critical xloadimage bug
+   sprintf(pbuf, "xsetbg %s -at 0,0 %s-splash-1.tif",
+ 	  qbuf, splash_prefix);
+   mysystem2(pbuf, "logo");
+   while (1) sleep(60);
++  */
+ }
+ 
+ /* set the number of threads by reading /proc/cpuinfo */

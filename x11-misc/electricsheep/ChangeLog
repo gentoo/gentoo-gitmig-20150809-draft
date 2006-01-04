@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/electricsheep
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.30 2005/12/20 22:24:27 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.31 2006/01/04 22:29:39 dragonheart Exp $
+
+*electricsheep-2.6.4 (04 Jan 2006)
+*electricsheep-2.6.3-r2 (04 Jan 2006)
+
+  04 Jan 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/electricsheep-2.6.3-xloadimg.patch,
+  +files/electricsheep-2.6.4-cflagsfix.patch,
+  -electricsheep-2.6.3-r1.ebuild, +electricsheep-2.6.3-r2.ebuild,
+  +electricsheep-2.6.4.ebuild:
+  removed xsetbg in electricsheep-2.6.3-r2 bug #116536 thanks to Chet McNeill.
+  Version bump to 2.6.4 - fixed bug #116557 thanks to Carsten Lohrke
 
   20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   electricsheep-2.6.3-r1.ebuild:
