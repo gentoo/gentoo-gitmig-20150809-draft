@@ -1,4 +1,4 @@
-MD5 9ce85e3d97e9225fa3d576fa0ac750dd ChangeLog 2055
+MD5 01427a0836304ae39028c0c70a084177 ChangeLog 2163
 MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
 MD5 fb7b43fda414c12b64540db818f4c497 files/digest-libopendaap-0.3.0 70
 MD5 c16e2833e4aa6d3ab76e63fd9a36bd09 files/digest-libopendaap-0.4.0 70
@@ -6,5 +6,5 @@ MD5 fb066ffc6e3189f97e3b7b934d1604ed files/libopendaap-0.2.3-types.h 704
 MD5 5d449c7e532679f6cb0aca9271b5c4c0 files/libopendaap-0.3.0-types.h 610
 MD5 7656177575e00de56441444e837e339e libopendaap-0.2.3.ebuild 760
 MD5 d8673dd8359e3392af9e4958fceaca8f libopendaap-0.3.0.ebuild 769
-MD5 f03c19e473bf550e91ddc844980b5822 libopendaap-0.4.0.ebuild 694
+MD5 426cb8bf69742117a47576b1acf793b7 libopendaap-0.4.0.ebuild 692
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
