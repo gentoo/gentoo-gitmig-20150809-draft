@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.128 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.129 2006/01/04 20:54:43 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -677,6 +677,11 @@ need-kde() {
 			;;
 	esac
 
+	if [ "${RDEPEND-unset}" != "unset" ] ; then
+		x_DEPEND="${RDEPEND}"
+	else
+		x_DEPEND="${DEPEND}"
+	fi
 	if [ -n "${KDEBASE}" ]; then
 		# If we're a kde-base package, we need at least our own version of kdelibs.
 		# Also, split kde-base ebuilds are not updated with every KDE release, and so
@@ -687,16 +692,16 @@ need-kde() {
 		# we break packages relying on portage copying RDEPEND from DEPEND.
 		if [ -n "${KM_DEPRANGE}" ]; then
 			DEPEND="${DEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
-			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
+			RDEPEND="${x_DEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
 		else
 			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
-			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} ~kde-base/kdelibs-${PV}"
+			RDEPEND="${x_DEPEND} ~kde-base/kdelibs-${PV}"			
 		fi
 	else
 		# Things outside kde-base only need a minimum version
 		min-kde-ver ${KDEVER}
 		DEPEND="${DEPEND} >=kde-base/kdelibs-${selected_version}"
-		[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
+		RDEPEND="${x_DEPEND} >=kde-base/kdelibs-${selected_version}"
 	fi
 
 	qtver-from-kdever ${KDEVER}
