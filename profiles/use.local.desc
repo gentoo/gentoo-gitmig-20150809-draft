@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1648 2006/01/04 08:57:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1649 2006/01/04 16:50:28 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -600,8 +600,9 @@ media-gfx/splashutils:kdgraphics - Use KD_GRAPHICS for silent mode. This will co
 media-gfx/ufraw:gimp - Build a plugin for the GIMP
 media-gfx/xsane:gimp - Build a plugin for the GIMP
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
+media-libs/coin:fontconfig - Support for mananging custom fonts via fontconfig.
 media-libs/devil:allegro - Add support for Allegro
-media-libs/gd:fontconfig - Enable support for managing custom fonts via fontconfig
+media-libs/gd:fontconfig - Support for managing custom fonts via fontconfig.
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
