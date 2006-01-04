@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.8 2005/05/08 17:10:14 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.9 2006/01/04 19:52:35 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://ipherswipsite.com/zsnes/"
-SRC_URI="mirror://sourceforge/zsnes/${PN}${PV//.}src.tar.gz"
+SRC_URI="mirror://sourceforge/zsnes/${PN}${PV//./}src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
