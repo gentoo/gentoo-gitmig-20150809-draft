@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6168faa9a191084a056e39782fe83f5 ChangeLog 6383
 MD5 eab6c819f36fbf2566019eee669caa90 files/digest-libmpeg3-1.5.2 140
 MD5 eab6c819f36fbf2566019eee669caa90 files/digest-libmpeg3-1.5.2-r1 140
@@ -6,3 +9,10 @@ MD5 320cab9fc3655e54f4f378f21d9909eb libmpeg3-1.5.2-r1.ebuild 2650
 MD5 26aa86223fdef0a3161667c60aa4d34d libmpeg3-1.5.2-r2.ebuild 2726
 MD5 c6c6825ba565aae9d3a5d7399745e98f libmpeg3-1.5.2.ebuild 2008
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuxHo2+ySkm8kpY0RAvrYAJ9aZ6xdZt6tvg7h6OITnQPBvrRaIgCgtgwR
+n8n7vqHMzHJwV8Pq2bvgs1o=
+=i1Qx
+-----END PGP SIGNATURE-----
