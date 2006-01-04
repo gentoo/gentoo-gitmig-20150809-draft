@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/coin
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.10 2005/11/05 14:28:13 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.11 2006/01/04 17:16:33 carlo Exp $
+
+*coin-2.4.4 (04 Jan 2006)
+
+  04 Jan 2006; Carsten Lohrke <carlo@gentoo.org> coin-2.1.0.ebuild,
+  coin-2.4.3.ebuild, +coin-2.4.4.ebuild:
+  Version bump, bunch of new use flags to reflect the real dependencies.
+
+  04 Jan 2006; Carsten Lohrke <carlo@gentoo.org> coin-2.1.0.ebuild,
+  coin-2.4.3.ebuild:
+  Correct tarball url and license information.
 
   05 Nov 2005; Luis Medinas <metalgod@gentoo.org> coin-2.4.3.ebuild:
   Added ~amd64 keyword.

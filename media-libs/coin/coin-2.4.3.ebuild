@@ -1,14 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.3.ebuild,v 1.3 2005/11/05 14:28:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.3.ebuild,v 1.4 2006/01/04 17:16:33 carlo Exp $
 
 MY_P=${P/c/C}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="An OpenSource implementation of SGI's OpenInventor"
 HOMEPAGE="http://www.coin3d.org/"
-SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="|| ( GPL-2 PEL )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X"
