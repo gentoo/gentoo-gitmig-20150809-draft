@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.2 2006/01/03 21:08:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.3 2006/01/04 19:49:45 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -9,7 +9,7 @@ MY_PV="3.4.5"
 DESCRIPTION="GNAT Ada Compiler"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-core-${MY_PV}.tar.bz2
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-ada-${MY_PV}.tar.bz2
-	x86? ( http://dev.gentoo.org/~george/src/gcc-3.4-i386.tar.bz2 )
+	x86? ( http://dev.gentoo.org/~george/src/gcc-3.4-i386-r1.tar.bz2 )
 	ppc? ( mirror://gentoo/gnat-3.15p-powerpc-unknown-linux-gnu.tar.bz2 )
 	amd64? ( http://dev.gentoo.org/~george/src/gcc-3.4-amd64.tar.gz )"
 HOMEPAGE="http://www.gnat.com/"
@@ -163,7 +163,7 @@ src_install() {
 		mv ${D}/usr/lib/lib/* ${D}/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/32/
 	else
 		local myCHOST="${CHOST}"
-		mv ${D}/usr/lib/lib/* ${D}/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/
+		mv ${D}/usr/lib/ada/libgcc_s* ${D}/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/
 	fi
 	dodir "/usr/lib/ada/gcc/${myCHOST}/${MY_PV}/rts-native"
 
@@ -176,7 +176,7 @@ src_install() {
 	ln -s rts-native/adainclude adainclude
 
 	# remove uneeded stuff
-	rm -rf ${D}/usr/lib/li{b,b64} ${D}/usr/lib/ada/libiberty.a
+	rm -rf ${D}/usr/lib/li{b,b64} ${D}/usr/lib/ada/libiberty.a ${D}/usr/include/
 }
 
 pkg_postinst() {
