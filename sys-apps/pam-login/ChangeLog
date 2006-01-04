@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pam-login
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.61 2005/12/21 10:00:33 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.62 2006/01/04 21:35:12 flameeyes Exp $
+
+*pam-login-4.0.14 (04 Jan 2006)
+
+  04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam-login-4.0.14-dots-in-usernames.patch,
+  +files/pam-login-4.0.14-long-groupnames.patch, +pam-login-4.0.14.ebuild:
+  Bump to version 4.0.14 to get in line with shadow. Dropped a patch, dropped
+  eautoconf, updated patches.
 
   21 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/pam-login-3.17-nonls.patch, pam-login-3.17.ebuild:
