@@ -1,12 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4db257ff273b32d97eaaf60455889d2 ChangeLog 23103
+MD5 4d9e0bb15e5b9822329578b623b4f944 ChangeLog 23312
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 MD5 9375147f78a25196b654616c969af9a5 files/digest-shadow-4.0.11.1-r1 69
 MD5 9375147f78a25196b654616c969af9a5 files/digest-shadow-4.0.11.1-r2 69
 MD5 cec3e64e953a7f3f96a1e89d73b62899 files/digest-shadow-4.0.12 67
 MD5 2832ae3af9a1f70243c65802597ae825 files/digest-shadow-4.0.13 67
+MD5 2b6cc6ba67673510780c1c4474587e62 files/digest-shadow-4.0.14 67
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
 MD5 d8b8542a7bc013011a293732ca504a50 files/digest-shadow-4.0.5-r2 66
 MD5 d8b8542a7bc013011a293732ca504a50 files/digest-shadow-4.0.5-r3 66
@@ -49,6 +50,8 @@ MD5 08f11e5b0c4a987e49367f245f475728 files/shadow-4.0.13-login.defs.patch 672
 MD5 acdc5a5ac62bfd3495bde25438b49734 files/shadow-4.0.13-long-groupnames.patch 398
 MD5 dfa169094cacf64d4980b0c8d76374d8 files/shadow-4.0.13-nonis.patch 1795
 MD5 223a6d64e1635462fcca48217644cfd0 files/shadow-4.0.13-su-fix-environment.patch 1070
+MD5 ab488dd7dc2c40e1311479470b28d140 files/shadow-4.0.14-nls-manpages.patch 373
+MD5 afc6edd720c3e704f48553ef9ca8631b files/shadow-4.0.14-su-fix-environment.patch 701
 MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
 MD5 a99f871c88548d503bad935d2aa6f412 files/shadow-4.0.4.1-nls-manpages.patch 355
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
@@ -78,6 +81,7 @@ MD5 30c0eb4f3ffb1e531659cf9b69cffa14 shadow-4.0.11.1-r1.ebuild 7084
 MD5 75f60cacddf580b22250ec244749116c shadow-4.0.11.1-r2.ebuild 7215
 MD5 0528fcbf64cb6383f23308d400e3d58a shadow-4.0.12.ebuild 7110
 MD5 4f8bc9907379d3293bae4bcd497b0b60 shadow-4.0.13.ebuild 7156
+MD5 22cd4f39fbd7d880a962d61ef7acab16 shadow-4.0.14.ebuild 7033
 MD5 dd33182f75e512eacdf6652e505359eb shadow-4.0.4.1-r4.ebuild 5963
 MD5 bbedc15fb467b91796456cd032199535 shadow-4.0.5-r2.ebuild 5443
 MD5 69b75fc8b3df89e5da434f35f6db5e31 shadow-4.0.5-r3.ebuild 5616
@@ -89,7 +93,7 @@ MD5 314bf4f7ce691287c74208fe9719f146 shadow-4.0.7.ebuild 5582
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrruzAiZjviIA2XgRAgatAKDBCT4Gxv0/qypTMgjAR0aX5EhusgCfRm6e
-4kpA+Uy43DxUyep+un3WY5U=
-=mvxT
+iD8DBQFDuzUb2+ySkm8kpY0RAiiwAKDERS8qk7Y7LQNsA5O8R+11DpT1LQCfeSl6
+Lrm+ooWNuEHXsPaG8TSZ6uc=
+=DNDQ
 -----END PGP SIGNATURE-----
