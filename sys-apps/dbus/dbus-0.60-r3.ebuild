@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r3.ebuild,v 1.2 2006/01/03 23:32:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r3.ebuild,v 1.3 2006/01/04 17:15:58 cardoe Exp $
 
-inherit eutils mono python multilib debug qt3 autotools
+inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/mono-tools-1.1.9 ) )"
 
 pkg_setup() {
-	if use gcj && ! built_with_use sys-devel/gcc gcj; then
+	if use gcj && ! built_with_use "=sys-devel/gcc-$(gcc-fullversion)*" gcj; then
 		eerror "To build the Java bindings for dbus, you must re-build gcc"
 		eerror "with the 'gcj' USE flag. Add 'gcj' to USE and re-emerge gcc."
 		die "gcc needs gcj support to use the java bindings"
@@ -69,7 +69,7 @@ src_compile() {
 	use mono && myconf="${myconf} $(use_enable doc mono-docs)"
 
 	if use qt; then
-		myconf="${myconf} --enable-qt3=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
+		myconf="${myconf} --enable-qt3=${QTDIR} QT_MOC=${QTDIR}/bin/moc QT3_MOC=${QTDIR}/bin/moc"
 	else
 		myconf="${myconf} --disable-qt --disable-qt3"
 	fi
