@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb0ccc111d0689f6aa3ae19297d01641 ChangeLog 6515
+MD5 6e2775bf1301373e35d60d8822e68d25 ChangeLog 6631
 MD5 77f6e444886a1c9d39719c96d87ed625 files/digest-wordpress-1.5.2 67
 MD5 f816ff62dcd7cadf0fae9384ab9618e5 files/dummy-templates.php 269
 MD5 bed9c007e8ee867414a21e2da8e92b3f metadata.xml 252
-MD5 95633063d16a3205ed6008be77ba19a4 wordpress-1.5.2.ebuild 2932
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi8o3gIKl8Uu19MoRAk7JAJ9p7rCSwd4fmgRpcDlbmELonWy9AACdH+lm
-NsJJd9Rr7uMoa8LYMUbFFNI=
-=dKW3
------END PGP SIGNATURE-----
+MD5 fce979895ae98c89bb1e56ec04cbcb6b wordpress-1.5.2.ebuild 2930

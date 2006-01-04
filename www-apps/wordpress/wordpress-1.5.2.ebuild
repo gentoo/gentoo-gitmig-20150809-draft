@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.2.ebuild,v 1.8 2005/11/29 03:23:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.2.ebuild,v 1.9 2006/01/04 21:52:14 superlag Exp $
 
 inherit webapp eutils
 
@@ -15,7 +15,7 @@ SRC_URI=mirror://gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE=""
-RDEPEND=">=dev-php/mod_php-4.1
+RDEPEND="virtual/httpd-php
 	 >=dev-db/mysql-3.23.23"
 
 DEPEND="${DEPEND} ${RDEPEND}"

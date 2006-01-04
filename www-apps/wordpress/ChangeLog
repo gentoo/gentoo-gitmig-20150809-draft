@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.31 2005/11/23 06:50:40 superlag Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.32 2006/01/04 21:52:14 superlag Exp $
+
+  04 Jan 2006; Aaron Kulbe <superlag@gentoo.org> wordpress-1.5.2.ebuild:
+  Fixed incorrect RDEPEND wrt Bug #105419
 
   23 Nov 2005; Aaron Kulbe <superlag@gentoo.org> -wordpress-1.5.1.3.ebuild,
   wordpress-1.5.2.ebuild:
