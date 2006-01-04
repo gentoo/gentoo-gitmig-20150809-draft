@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-kde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.9 2006/01/04 23:47:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.10 2006/01/04 23:52:00 ribosome Exp $
+
+  04 Jan 2006; Olivier Fisette <ribosome@gentoo.org>
+  +qalculate-kde-0.9.0.ebuild:
+  Readded 0.9.0 (removed by error).
 
   04 Jan 2006; Olivier Fisette <ribosome@gentoo.org>
   -qalculate-kde-0.8.1.1.ebuild, -qalculate-kde-0.8.2.ebuild,
