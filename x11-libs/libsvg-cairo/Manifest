@@ -8,12 +8,12 @@ MD5 640217d293a1bf7751648d818ace8d97 files/digest-libsvg-cairo-0.1.6 70
 MD5 50f230b9997ff42cc37394c4649262d9 files/libsvg-cairo-stdarg_h.patch 352
 MD5 0f8643b6988d365904140a0262145cbb libsvg-cairo-0.1.4.ebuild 632
 MD5 60365af1819c223e699c336eec829f94 libsvg-cairo-0.1.5.ebuild 545
-MD5 7d9793fee3cc8616daa9c1ceab52e5b3 libsvg-cairo-0.1.6.ebuild 589
+MD5 bb46f145c970ee8bdf3331339fd30c7f libsvg-cairo-0.1.6.ebuild 631
 MD5 65d1d5c2aa536148fb35cee02b3a8428 metadata.xml 337
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYok8Kf2g/qXtneoRAn4CAJ4zi1i4hZQCHYXFC5dUfueMUZH4agCguTYY
-ugAlsxu3pPlqXhXMwpbMqdg=
-=1hEV
+iD8DBQFDu0OG2+ySkm8kpY0RAvK3AKCqZ7qFPTP5y//ltRQUair5zISG0QCfYnzc
+xpVsBzf8DaiIJDWjwYdHAYM=
+=SAyV
 -----END PGP SIGNATURE-----

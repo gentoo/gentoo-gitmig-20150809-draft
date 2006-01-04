@@ -1,17 +1,20 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/libsvg-cairo-0.1.6.ebuild,v 1.7 2005/10/28 20:25:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/libsvg-cairo-0.1.6.ebuild,v 1.8 2006/01/04 03:38:52 vapier Exp $
 
 DESCRIPTION="Render SVG content using cairo"
 HOMEPAGE="http://xsvg.org/"
 SRC_URI="http://cairographics.org/snapshots/${P}.tar.gz"
+
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
+
 DEPEND=">=x11-libs/cairo-0.5.0
-		>=media-libs/libsvg-0.1.2"
+	>=media-libs/libsvg-0.1.2"
 
 src_install() {
 	make install DESTDIR="${D}" || die
+	dodoc AUTHORS ChangeLog NEWS README
 }
