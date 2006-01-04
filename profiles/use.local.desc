@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1646 2006/01/03 21:19:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1647 2006/01/04 00:39:57 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -652,7 +652,6 @@ media-sound/banshee:real - Build with real/helix player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bmpx:irssi - Install irssi script (need dbus and perl)
 media-sound/bmpx:xchat - Install xchat script (need dbus and perl/python)
-media-sound/daapd:mpeg4 - Enable AAC metadata support
 media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
