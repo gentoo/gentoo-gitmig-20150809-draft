@@ -1,0 +1,20 @@
+===================================================================
+RCS file: /cvs/gnome/totem/src/totem-mozilla-viewer.c,v
+retrieving revision 1.27
+retrieving revision 1.28
+diff -u -r1.27 -r1.28
+--- src/totem-mozilla-viewer.c	2005/08/10 16:44:10	1.27
++++ src/totem-mozilla-viewer.c	2005/11/28 18:36:44	1.28
+@@ -42,6 +42,11 @@
+ 
+ #define OPTION_IS(x) (strcmp(argv[i], x) == 0)
+ 
++/* For newer D-Bus version */
++#ifndef DBUS_NAME_FLAG_PROHIBIT_REPLACEMENT
++#define DBUS_NAME_FLAG_PROHIBIT_REPLACEMENT 0
++#endif
++
+ typedef enum {
+ 	STATE_PLAYING,
+ 	STATE_PAUSED,
+

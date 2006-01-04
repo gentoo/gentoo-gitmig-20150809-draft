@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.5 2006/01/02 07:31:18 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.6 2006/01/04 17:18:06 joem Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -54,8 +54,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		win32codecs? ( =media-plugins/gst-plugins-pitfdll-0.8* ) )
 	nsplugin? (
 		>=net-libs/gecko-sdk-1.7
-		>=sys-apps/dbus-0.35
-		!>=sys-apps/dbus-0.60 )"
+		>=sys-apps/dbus-0.35)"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
@@ -90,7 +89,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.2.0-lang_it_fix.patch
 	# Add gmodule depend
 	epatch ${FILESDIR}/${PN}-1.2.0-gmoduledep.patch
-
+	#patch to compile with dbus-0.60
+	epatch ${FILESDIR}/${PN}-dbus-0.60.patch
 	eautoreconf
 
 	gnome2_omf_fix help/*/Makefile.in
