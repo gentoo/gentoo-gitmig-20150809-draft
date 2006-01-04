@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bda5fd9f9dd8ade45bd9026d9968a917 ChangeLog 474
+MD5 99d1ef18f5ce91834a35f73f81b05554 ChangeLog 603
 MD5 b0e7375971360e922527eab25f43c575 files/digest-frown-0.6.1 64
+MD5 b0e7375971360e922527eab25f43c575 files/digest-frown-0.6.1-r1 64
+MD5 2488882d587bc6214017bbcf36807cc0 frown-0.6.1-r1.ebuild 771
 MD5 21d08db40343e899174b75b9002b2527 frown-0.6.1.ebuild 644
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDumMHOKSBj1ObwosRAr1lAJ9wdWVWSTiG1w3Kgmy5DT723dR8qwCfeBu0
-m51qZyGs+1ypQW+XathAc5U=
-=uVoO
+iD8DBQFDu8mhOKSBj1ObwosRAhU4AJ9pzvrms+tt4mz3ZOom/Xjyk8oVIgCdGhbz
+kaZclfcEr9kD724kGFQP6UA=
+=ypOI
 -----END PGP SIGNATURE-----
