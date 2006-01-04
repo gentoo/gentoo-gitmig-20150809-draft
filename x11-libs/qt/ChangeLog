@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.277 2006/01/04 14:05:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.278 2006/01/04 15:51:26 corsair Exp $
+
+  04 Jan 2006; Markus Rothe <corsair@gentoo.org> qt-4.1.0-r1.ebuild:
+  Added ~ppc64; bug #112811
 
   04 Jan 2006; Caleb Tennis <caleb@gentoo.org> qt-4.1.0-r1.ebuild:
   bump to ~x86
