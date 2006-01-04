@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.ebuild,v 1.1 2005/10/09 01:12:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.ebuild,v 1.2 2006/01/04 17:38:07 wormo Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=media-libs/alsa-lib-1.0
 	>=media-libs/liblo-0.12
