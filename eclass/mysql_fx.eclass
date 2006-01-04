@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.1 2006/01/01 18:45:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.2 2006/01/04 20:40:26 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -98,7 +98,7 @@ mysql_init_vars() {
 		MY_SUFFIX=""
 	else
 		MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
-	fi	
+	fi
 	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR:-"/usr/share/mysql${MY_SUFFIX}"}
 	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql${MY_SUFFIX}"}
 	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql${MY_SUFFIX}"}
