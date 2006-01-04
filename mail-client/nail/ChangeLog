@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.46 2005/10/03 12:13:01 ticho Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.47 2006/01/04 08:02:05 killerfox Exp $
+
+  04 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> nail-11.25-r3.ebuild:
+  Stable on hppa.
 
   03 Oct 2005; Andrej Kacian <ticho@gentoo.org> nail-11.25-r1.ebuild,
   nail-11.25-r3.ebuild:
