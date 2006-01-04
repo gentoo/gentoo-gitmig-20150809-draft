@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.2 2005/05/13 03:08:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.3 2006/01/04 23:40:03 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="x86"
 
-DEPEND="virtual/libc
-	>=sci-biology/ncbi-tools-20041020-r1"
+DEPEND=">=sci-biology/ncbi-tools-20041020-r1"
 
 S=${WORKDIR}/SRC-${PV}
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/gibbs-1995.9.ebuild,v 1.1 2004/12/23 18:39:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/gibbs-1995.9.ebuild,v 1.2 2006/01/04 23:35:08 ribosome Exp $
 
 DESCRIPTION="A Gibbs sampling algorithm for local alignment of subtle sequence signals in multiple protein sequences."
 
@@ -15,18 +15,16 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-
-S=${WORKDIR}/${SRC_NAME}/code
+S="${WORKDIR}"/${SRC_NAME}/code
 
 src_compile() {
 	LIBS="-lm" make -e || die
 }
 
 src_install() {
-	cd ${WORKDIR}/${SRC_NAME}
+	cd "${WORKDIR}"/${SRC_NAME}
 	dobin gibbs purge scan
-	dobin ${FILESDIR}/gibbs-demo
+	dobin "${FILESDIR}"/gibbs-demo
 
 	dodoc README
 

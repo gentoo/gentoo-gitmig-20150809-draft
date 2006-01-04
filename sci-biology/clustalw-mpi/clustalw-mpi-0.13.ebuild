@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw-mpi/clustalw-mpi-0.13.ebuild,v 1.1 2005/11/19 17:24:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw-mpi/clustalw-mpi-0.13.ebuild,v 1.2 2006/01/04 23:32:49 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 IUSE="mpi_njtree static_pairalign"
 KEYWORDS="~x86"
 
-DEPEND="virtual/libc
-	virtual/mpi"
+DEPEND="virtual/mpi"
 
 src_unpack() {
 	unpack ${A}

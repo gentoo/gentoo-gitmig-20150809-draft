@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.6 2005/02/08 01:39:30 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.7 2006/01/04 23:38:46 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc-macos"
 IUSE="mpi"
 
-DEPEND="virtual/libc
-	mpi? ( sys-cluster/lam-mpi )"
+DEPEND="mpi? ( sys-cluster/lam-mpi )"
 
 pkg_setup () {
 	use mpi && [ $(tc-getCC) = icc ] && die "The parallelized version of tree-puzzle cannot be compiled using icc.
