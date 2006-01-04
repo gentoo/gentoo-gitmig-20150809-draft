@@ -58,3 +58,46 @@
  
  # define pci_present() 1
  
+@@ -84,6 +84,21 @@
+ #  define SLH_SYSFS_REGISTER                                            \
+      svgalib_helper_class = class_create(THIS_MODULE, "svgalib_helper");
+ 
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,15)
++
++#  define SLH_SYSFS_ADD_CONTROL                                         \
++     class_device_create(svgalib_helper_class, NULL,                  	\
++                             MKDEV(SVGALIB_HELPER_MAJOR, 0),            \
++                             NULL, "svga");
++
++#  define SLH_SYSFS_ADD_DEVICE(_name, _minor)                           \
++     class_device_create(svgalib_helper_class, NULL,                  	\
++                             MKDEV(SVGALIB_HELPER_MAJOR, _minor),       \
++                             &sh_pci_devs[_minor]->dev->dev, _name);
++#else
++
++
+ #  define SLH_SYSFS_ADD_CONTROL                                         \
+      class_device_create(svgalib_helper_class,                      	\
+                              MKDEV(SVGALIB_HELPER_MAJOR, 0),            \
+@@ -93,6 +108,8 @@
+      class_device_create(svgalib_helper_class,                      	\
+                              MKDEV(SVGALIB_HELPER_MAJOR, _minor),       \
+                              &sh_pci_devs[_minor]->dev->dev, _name);
++#endif
++
+ 
+ #  define SLH_SYSFS_REMOVE_DEVICE(i)                                    \
+      class_destroy(svgalib_helper_class);
+@@ -148,6 +148,11 @@
+ #  define SLH_SYSFS_UNREGISTER
+ #endif
+ 
++/* gregkh was so kind as to remove a ton of PCI defines in linux-2.6.15 */
++#if !defined(PCI_VENDOR_ID_RENDITION)
++# define PCI_VENDOR_ID_RENDITION 0x1163
++#endif
++
+ #if (defined MINOR)
+ # define my_minor(x) MINOR(x)
+ #else
