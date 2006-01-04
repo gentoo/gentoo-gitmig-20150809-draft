@@ -2,15 +2,13 @@
 Hash: SHA1
 
 MD5 18f8ce2647c53e03dbdf726800e16031 ChangeLog 703
-MD5 a9f96b9243b7bbcd16b6198563acf1d7 files/digest-uclibc++-0.1.11 65
 MD5 1e50bd5dcb1bbf78f9487e6ef5cc99a9 files/digest-uclibc++-0.1.12 65
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
-MD5 e08bf263d99149128a40ae9b4abcce26 uclibc++-0.1.11.ebuild 1756
-MD5 8ec53a5788f7c33d275e2f4460b0459b uclibc++-0.1.12.ebuild 1756
+MD5 dc5ed1e39fb9456338fd55564468ae6b uclibc++-0.1.12.ebuild 1856
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDnFihgIKl8Uu19MoRAndOAJ9EiPk1S3Ih/F+Ywx+StbFb0kwr+QCZASA8
-Us2KKcLyxLPqjsaUlKQdvmc=
-=j0bk
+iD8DBQFDuxF82+ySkm8kpY0RAnu8AJ9CBZAa5vSPBim2ifvVTxm1boL9TQCfcJ0j
+e63SJjIgdbOdtrRFvb9tNF8=
+=/F/9
 -----END PGP SIGNATURE-----
