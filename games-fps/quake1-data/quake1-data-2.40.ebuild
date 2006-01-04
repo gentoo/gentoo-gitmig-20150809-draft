@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.5 2006/01/03 14:57:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.6 2006/01/04 13:58:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -28,9 +28,9 @@ src_unpack() {
 	echo ">>> Unpacking q101_int to ${PWD}"
 	if [[ ${CDROM_SET} == "1" ]] ; then
 		cat "${CDROM_ROOT}"/q101_int.1 "${CDROM_ROOT}"/q101_int.2 > \
-			"${S}"/q101_int
-		lha xqf "${S}"/q101_int || die "failure unpacking q101_int"
-		rm -f q101_int
+			"${S}"/q101_int.exe
+		lha xqf "${S}"/q101_int.exe || die "failure unpacking q101_int.exe"
+		rm -f q101_int.exe
 	fi
 }
 
