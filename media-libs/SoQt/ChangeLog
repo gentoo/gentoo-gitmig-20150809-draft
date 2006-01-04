@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.12 2006/01/04 17:20:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.13 2006/01/04 20:52:01 carlo Exp $
+
+  04 Jan 2006; Carsten Lohrke <carlo@gentoo.org> SoQt-1.3.0.ebuild:
+  RDEPEND missed an R...
 
 *SoQt-1.3.0 (04 Jan 2006)
 
