@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/pike
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.15 2005/11/26 15:20:39 kevquinn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.16 2006/01/04 00:25:06 vapier Exp $
+
+*pike-7.6.50 (04 Jan 2006)
+
+  04 Jan 2006; Mike Frysinger <vapier@gentoo.org> +pike-7.6.50.ebuild:
+  Version bump #110439 by Dmitry S. Kulyabov.
+
+  04 Jan 2006; Mike Frysinger <vapier@gentoo.org> pike-7.6.24.ebuild:
+  Disable ffmpeg since it doesnt build #110136 by Patrizio Bassi.
 
   26 Nov 2005; Kevin F. Quinn <kevquinn@gentoo.org> pike-7.6.24.ebuild:
   Disable run-time code generation on hardened; resolves bug 73875

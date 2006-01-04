@@ -1,8 +1,20 @@
-MD5 e14578a411eb60b4203ee5aa245f3b5c pike-7.6.6.ebuild 2980
-MD5 95fb94dc92150b25742577fea7739841 pike-7.4.44.ebuild 3106
-MD5 f37d2644e6a8947d3fe75a4284cb8e5f pike-7.6.24.ebuild 2327
-MD5 2a98c62f176e06d36325101bf2c8ad48 ChangeLog 2332
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 f481d65b2c48dd5213c96abb5d591923 files/digest-pike-7.6.6 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de2e78733a17952b0d1794ddb6cc843f ChangeLog 2613
 MD5 21491ad9114fad5fb2856b4c836ac000 files/digest-pike-7.4.44 65
 MD5 24797deb43287becc1e22d716d43921e files/digest-pike-7.6.24 66
+MD5 21d525b8df28fd6c105ba738fec74ace files/digest-pike-7.6.50 66
+MD5 f481d65b2c48dd5213c96abb5d591923 files/digest-pike-7.6.6 64
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 95fb94dc92150b25742577fea7739841 pike-7.4.44.ebuild 3106
+MD5 c9da9ff68227fc3c5551c3188015479e pike-7.6.24.ebuild 2392
+MD5 2950dddda7ca6cd97a097bf81489df68 pike-7.6.50.ebuild 2901
+MD5 e14578a411eb60b4203ee5aa245f3b5c pike-7.6.6.ebuild 2980
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuxYc2+ySkm8kpY0RAtKXAJ9rS11eyHwsYPyHqlrzV7Dpgut0zACgxfEk
+ZUAebT0qVXYlob3/6V5v/B0=
+=RMs3
+-----END PGP SIGNATURE-----
