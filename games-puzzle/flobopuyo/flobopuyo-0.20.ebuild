@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20.ebuild,v 1.5 2006/01/03 01:24:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20.ebuild,v 1.6 2006/01/04 16:45:23 mr_bones_ Exp $
 
-inherit toolchain-funcs games eutils
+inherit toolchain-funcs eutils games
 
 DESCRIPTION="Clone of the famous PuyoPuyo game"
 HOMEPAGE="http://www.ios-software.com/?page=projet&quoi=29"
