@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1-r1.ebuild,v 1.2 2005/08/25 13:03:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1-r1.ebuild,v 1.3 2006/01/04 07:55:01 flameeyes Exp $
 
-inherit flag-o-matic toolchain-funcs eutils
+inherit flag-o-matic toolchain-funcs eutils autotools
 
 DESCRIPTION="LAME Ain't an MP3 Encoder"
 HOMEPAGE="http://lame.sourceforge.net"
@@ -35,7 +35,11 @@ src_unpack() {
 	# largefiles, add a patch to fix that.
 	epatch ${FILESDIR}/${P}-largefile.patch
 
-	autoconf || die
+	# Make sure -lm is linked in the library to fix other programs linking to
+	# this while using --as-needed
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	AT_M4DIR="${S}" eautoreconf || die
 	epunt_cxx # embedded bug #74498
 }
 
@@ -60,7 +64,7 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	# Parallel make isn't happy
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

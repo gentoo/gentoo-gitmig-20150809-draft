@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lame
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.66 2005/09/17 12:00:43 kloeri Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.67 2006/01/04 07:55:01 flameeyes Exp $
+
+  04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/lame-3.96.1-asneeded.patch, lame-3.96.1-r1.ebuild:
+  Add patch to fix libm linking to allow using lame while building with
+  --as-needed.
 
 *lame-3.96.1-r1 (25 Aug 2005)
 
