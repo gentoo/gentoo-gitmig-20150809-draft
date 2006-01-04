@@ -7,12 +7,12 @@ MD5 a9760c67971a37403703a4eaaec19d21 files/digest-raptor-1.4.7 65
 MD5 7e3ea5b974926e8016d8e633f5ed2434 files/digest-raptor-1.4.8 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 d042e7a6e3f8e82c5841b1c38e7cf1d1 raptor-1.4.5.ebuild 2165
-MD5 13f8aa8d2d6a6f5aa3d8f2e98f66c850 raptor-1.4.7.ebuild 2171
+MD5 c78ed2f4c950b6033dfc5ea46c70fde1 raptor-1.4.7.ebuild 2171
 MD5 4fc14337128a9946232d6d5aff792898 raptor-1.4.8.ebuild 2172
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuxcI2+ySkm8kpY0RAmJYAJ9XOffV9vCf/TNQqtZlnpIyJrtihwCgtrvP
-QhwvGdsNUN9nQgagip7mruM=
-=7r61
+iD8DBQFDu3qE2+ySkm8kpY0RAgzUAJsHQgg1WA1xvrXwLKczjmXmKS+IEACgtoDD
+AHm/ITNCh2MSLKylXnxVIQk=
+=peo4
 -----END PGP SIGNATURE-----
