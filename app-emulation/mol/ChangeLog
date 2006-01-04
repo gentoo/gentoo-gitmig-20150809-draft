@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.56 2005/12/31 22:41:12 josejx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.57 2006/01/04 17:14:32 josejx Exp $
+
+  04 Jan 2006; Joseph Jezak <josejx@gentoo.org>
+  files/mol-pciproxy-dump.patch:
+  Fixed pciproxy debug patch.
 
   31 Dec 2005; Joseph Jezak <josejx@gentoo.org> -mol-0.9.71_pre2.ebuild,
   -mol-0.9.71_pre3.ebuild, -mol-0.9.71_pre5.ebuild, mol-0.9.71_pre6.ebuild:
