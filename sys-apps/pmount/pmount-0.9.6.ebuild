@@ -1,36 +1,33 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.4 2005/12/25 15:26:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.5 2006/01/04 01:56:37 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Policy based mounter that gives the ability to mount removable devices as a user"
-SRC_URI="http://www.piware.de/projects/${P}.tar.gz"
 HOMEPAGE="http://www.piware.de/projects.shtml"
-LICENSE="GPL-2"
+SRC_URI="http://www.piware.de/projects/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt"
 
-RDEPEND=">=sys-apps/dbus-0.33
+DEPEND=">=sys-apps/dbus-0.33
 	>=sys-apps/hal-0.5.1
 	>=sys-fs/sysfsutils-1.0
 	crypt? ( sys-fs/cryptsetup-luks )"
 
-DEPEND=${RDEPEND}
-
 DOCS="AUTHORS CHANGES"
 
 pkg_setup() {
-	enewgroup plugdev || die "Error creating plugdev group"
+	enewgroup plugdev
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e 's:/sbin/cryptsetup:/bin/cryptsetup:' -i src/policy.h
-
 	append-ldflags $(bindnow-flags)
 }
 
