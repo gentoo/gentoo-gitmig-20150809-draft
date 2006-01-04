@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/orsa
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.9 2005/07/25 17:46:22 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.10 2006/01/04 23:19:16 ribosome Exp $
+
+  04 Jan 2006; Olivier Fisette <ribosome@gentoo.org> orsa-0.6.1.ebuild:
+  Do not depend on "virtual/libc" (package not in system target).
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> orsa-0.6.1.ebuild:
   Change qt dep per bug #100235
