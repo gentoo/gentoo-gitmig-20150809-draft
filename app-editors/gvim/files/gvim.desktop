@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=gVim
 Comment=A highly configurable text editor
-Exec=gvim
+Exec=gvim -f
 Icon=gvim
 Terminal=false
 Type=Application
