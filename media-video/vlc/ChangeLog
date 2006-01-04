@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.136 2006/01/04 18:07:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.137 2006/01/04 18:12:07 flameeyes Exp $
+
+  04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a.ebuild:
+  Bump patchset to include the patch to fix textrels provided by PaX team.
 
   04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> -vlc-0.8.2-r1.ebuild,
   -vlc-0.8.4-r1.ebuild:
