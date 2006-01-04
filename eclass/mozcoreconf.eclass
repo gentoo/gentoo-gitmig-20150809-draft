@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.3 2005/12/23 03:46:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.4 2006/01/04 01:30:52 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -228,49 +228,6 @@ mozconfig_use_extension() {
 	mozconfig_annotate "${minus:-+}$1" --enable-extensions=${minus}${2}
 }
 
-# mozconfig_final: display a table describing all configuration options paired
-# with reasons, then clean up extensions list
-mozconfig_final() {
-	declare ac opt hash reason
-	echo
-	echo "=========================================================="
-	echo "Building ${PF} with the following configuration"
-	grep ^ac_add_options .mozconfig | while read ac opt hash reason; do
-		[[ -z ${hash} || ${hash} == \# ]] \
-			|| die "error reading mozconfig: ${ac} ${opt} ${hash} ${reason}"
-		printf "    %-30s  %s\n" "${opt}" "${reason:-mozilla.org default}"
-	done
-	echo "=========================================================="
-	echo
-
-	# Resolve multiple --enable-extensions down to one
-	declare exts=$(sed -n 's/^ac_add_options --enable-extensions=\([^ ]*\).*/\1/p' \
-		.mozconfig | xargs)
-	sed -i '/^ac_add_options --enable-extensions/d' .mozconfig
-	echo "ac_add_options --enable-extensions=${exts// /,}" >> .mozconfig
-}
-
-# mozconfig_final: display a table describing all configuration options paired
-# with reasons, then clean up extensions list
-mozconfig_final() {
-	declare ac opt hash reason
-	echo
-	echo "=========================================================="
-	echo "Building ${PF} with the following configuration"
-	grep ^ac_add_options .mozconfig | while read ac opt hash reason; do
-		[[ -z ${hash} || ${hash} == \# ]] \
-			|| die "error reading mozconfig: ${ac} ${opt} ${hash} ${reason}"
-		printf "    %-30s  %s\n" "${opt}" "${reason:-mozilla.org default}"
-	done
-	echo "=========================================================="
-	echo
-
-	# Resolve multiple --enable-extensions down to one
-	declare exts=$(sed -n 's/^ac_add_options --enable-extensions=\([^ ]*\).*/\1/p' \
-		.mozconfig | xargs)
-	sed -i '/^ac_add_options --enable-extensions/d' .mozconfig
-	echo "ac_add_options --enable-extensions=${exts// /,}" >> .mozconfig
-}
 # mozconfig_final: display a table describing all configuration options paired
 # with reasons, then clean up extensions list
 mozconfig_final() {
