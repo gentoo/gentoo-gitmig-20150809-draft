@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdts
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.24 2005/11/25 00:59:37 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.25 2006/01/04 17:58:28 flameeyes Exp $
+
+  04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/libdts-0.0.2-libtool.patch:
+  Improve patch to make sure it always builds with PIC version also on x86.
 
   25 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/libdts-0.0.2-libtool.patch, -files/libdts-0.0.2-libtool2.patch,

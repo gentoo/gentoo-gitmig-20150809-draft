@@ -2,7 +2,7 @@ Index: libdts-0.0.2/configure.ac
 ===================================================================
 --- libdts-0.0.2.orig/configure.ac
 +++ libdts-0.0.2/configure.ac
-@@ -77,22 +77,22 @@ else
+@@ -77,22 +77,8 @@ else
      esac
  fi
  
@@ -10,12 +10,8 @@ Index: libdts-0.0.2/configure.ac
 -#libtool# AC_DISABLE_SHARED
 -#libtool# AC_LIBTOOL_WIN32_DLL
 -#libtool# AC_PROG_LIBTOOL
-+dnl Checks for libtool - this must be done after we set cflags
-+#AC_DISABLE_SHARED
-+AC_LIBTOOL_WIN32_DLL
-+AC_PROG_LIBTOOL
- 
- dnl Build the PIC library? - to be removed once libtool is re-enabled
+-
+-dnl Build the PIC library? - to be removed once libtool is re-enabled
 -AC_PROG_RANLIB
 -case "${target_os}" in
 -  *mingw32* | *cygwin* | *djgpp*)
@@ -26,16 +22,8 @@ Index: libdts-0.0.2/configure.ac
 -    ;;
 -esac
 -AM_CONDITIONAL(NEED_PIC, ${NEED_PIC})
-+#AC_PROG_RANLIB
-+#case "${target_os}" in
-+#  *mingw32* | *cygwin* | *djgpp*)
-+#    NEED_PIC=false
-+#    ;;
-+#  *)
-+#    NEED_PIC=:
-+#    ;;
-+#esac
-+#AM_CONDITIONAL(NEED_PIC, ${NEED_PIC})
++AC_LIBTOOL_WIN32_DLL
++AC_PROG_LIBTOOL
  
  dnl Checks for libraries.
  LIBAO_LIBS="-lm"
@@ -43,7 +31,7 @@ Index: libdts-0.0.2/libdts/Makefile.am
 ===================================================================
 --- libdts-0.0.2.orig/libdts/Makefile.am
 +++ libdts-0.0.2/libdts/Makefile.am
-@@ -1,22 +1,22 @@
+@@ -1,22 +1,13 @@
  AM_CFLAGS = $(OPT_CFLAGS) $(LIBDTS_CFLAGS)
  
 -#libtool# lib_LTLIBRARIES = libdts.la
@@ -58,9 +46,6 @@ Index: libdts-0.0.2/libdts/Makefile.am
 +libdts_la_SOURCES = bitstream.c parse.c downmix.c
 +libdts_la_LIBADD = $(LIBDTS_LIBS)
 +libdts_la_LDFLAGS = -no-undefined
-+
-+#lib_LIBRARIES = libdts.a $(libdts_pic_a)
-+#libdts_a_SOURCES = bitstream.c parse.c downmix.c
  
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = libdts.pc
@@ -72,17 +57,12 @@ Index: libdts-0.0.2/libdts/Makefile.am
 -endif
 -libdts_pic_a_SOURCES = $(libdts_a_SOURCES)
 -libdts_pic_a_CPPFLAGS = -fPIC -DPIC
-+#if NEED_PIC
-+#libdts_pic_a = libdts_pic.a
-+#endif
-+#libdts_pic_a_SOURCES = $(libdts_a_SOURCES)
-+#libdts_pic_a_CPPFLAGS = -fPIC -DPIC
- 
+-
 Index: libdts-0.0.2/src/Makefile.am
 ===================================================================
 --- libdts-0.0.2.orig/src/Makefile.am
 +++ libdts-0.0.2/src/Makefile.am
-@@ -2,10 +2,10 @@ AM_CFLAGS = $(DTSDEC_CFLAGS)
+@@ -2,10 +2,8 @@ AM_CFLAGS = $(DTSDEC_CFLAGS)
  
  bin_PROGRAMS = dtsdec extract_dts
  dtsdec_SOURCES = dtsdec.c getopt.c gettimeofday.c
@@ -91,9 +71,7 @@ Index: libdts-0.0.2/src/Makefile.am
 -dtsdec_LDADD = $(top_builddir)/libdts/libdts.a \
 -	       $(top_builddir)/libao/libao.a $(LIBAO_LIBS)
 +dtsdec_LDADD = $(top_builddir)/libdts/libdts.la \
-+ 	       $(top_builddir)/libao/libao.a $(LIBAO_LIBS)
-+#dtsdec_LDADD = $(top_builddir)/libdts/libdts.a \
-+#	       $(top_builddir)/libao/libao.a $(LIBAO_LIBS)
++ 	       $(top_builddir)/libao/libao.la $(LIBAO_LIBS)
  extract_dts_SOURCES = extract_dts.c getopt.c
  
  man_MANS = dtsdec.1 extract_dts.1
@@ -111,3 +89,17 @@ Index: libdts-0.0.2/libdts/configure.incl
  AC_ARG_ENABLE([fixed],
      [  --enable-fixed          use fixed-point (integer-based) arithmetic])
  AC_ARG_ENABLE([double],
+Index: libdts-0.0.2/libao/Makefile.am
+===================================================================
+--- libdts-0.0.2.orig/libao/Makefile.am
++++ libdts-0.0.2/libao/Makefile.am
+@@ -1,7 +1,7 @@
+ AM_CFLAGS = $(OPT_CFLAGS)
+ 
+-noinst_LIBRARIES = libao.a
+-libao_a_SOURCES = audio_out.c audio_out_null.c audio_out_float.c \
++noinst_LTLIBRARIES = libao.la
++libao_la_SOURCES = audio_out.c audio_out_null.c audio_out_float.c \
+ 		  audio_out_oss.c audio_out_solaris.c audio_out_al.c \
+ 		  audio_out_win.c audio_out_wav.c audio_out_aif.c \
+ 		  audio_out_peak.c convert2s16.c
