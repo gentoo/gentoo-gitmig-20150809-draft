@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/evolution-sharp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.2 2005/11/26 21:05:52 dsd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.3 2006/01/04 01:23:06 metalgod Exp $
+
+  04 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  evolution-sharp-0.10.2.ebuild:
+  Added ~amd64 keyword.
 
   26 Nov 2005; Daniel Drake <dsd@gentoo.org> evolution-sharp-0.10.2.ebuild:
   Depend on evolution
