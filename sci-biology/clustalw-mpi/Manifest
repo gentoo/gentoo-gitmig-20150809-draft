@@ -1,4 +1,4 @@
-MD5 b2979bdb6fa42ce8476d8d79de24073a ChangeLog 455
-MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
-MD5 17457e727b32681ca5fb606196e17376 clustalw-mpi-0.13.ebuild 1225
+MD5 3ea9eaf8da5b83cd345fa860eb640205 ChangeLog 603
+MD5 2e33001f325f033172683f9aa5939b87 clustalw-mpi-0.13.ebuild 1211
 MD5 a3271acbd5ef3270f2823a55c22dc7cc files/digest-clustalw-mpi-0.13 69
+MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
