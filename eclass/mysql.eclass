@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.2 2006/01/04 20:25:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.3 2006/01/04 20:37:38 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -335,7 +335,9 @@ mysql_src_install() {
 
 	# oops
 	mysql_check_version_range "5.00.16.00 to 5.00.18.99" \
-	&& cp "${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" "${D}/usr/share/mysql${MY_SUFFIX}/"
+	&& cp \
+		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" \
+		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
 
 	# TODO change at Makefile-am level
 	for moveme in "mysql_fix_privilege_tables.sql" \
