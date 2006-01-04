@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3627f5a0c619f71a13bbf66dccc859a3 ChangeLog 1783
 MD5 ac10f570840222bc9e1815908fe02b4a files/digest-jmf-bin-2.1.1e-r1 68
 MD5 323c4e791ffe63129f18b06f6f14876b files/jmfcustomizer 819
@@ -6,3 +9,10 @@ MD5 dd61ae1de6ff6e0c1aae7d75ef4ecc67 files/jmfregistry 813
 MD5 8ce7e0b4d336a4fdb841fa9e8d6a142f files/jmstudio 843
 MD5 0a4e29383c05957eab22fc0458009e3a jmf-bin-2.1.1e-r1.ebuild 1291
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDu2H5ndWRXhKOboURAr+2AKDLSc65H5rRvsnC4ccILbV+yJ5XugCgvnPY
+05HlxZRHgbnYK+hlbEh119c=
+=Iqt5
+-----END PGP SIGNATURE-----
