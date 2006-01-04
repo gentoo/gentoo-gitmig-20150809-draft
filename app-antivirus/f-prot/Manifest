@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bfa4e182ba3f8d530b8585a524029cb7 ChangeLog 9732
+MD5 c3bbb729b2fce5d1300fe6baf207a334 ChangeLog 9768
 MD5 efbf917bdb0a7f2e082a62d58f758a30 f-prot-4.6.0-r2.ebuild 2018
 MD5 f413b43db5249d7e6cdbacd211c1a619 f-prot-4.6.1.ebuild 2016
-MD5 a66059c2947397f593da2ac80dbad526 f-prot-4.6.3.ebuild 1910
+MD5 55320fbd51bdb9129018334637bd92d2 f-prot-4.6.3.ebuild 1910
 MD5 98949d262752c6e02ac3e64f8c13aa59 files/check-updates.pl.diff 568
 MD5 c0075e0b3eeeaf1ebb478a49c4b9d7f9 files/digest-f-prot-4.6.0-r2 70
 MD5 eec871175f91e8ee9ed6bf9f541a2934 files/digest-f-prot-4.6.1 70
@@ -14,7 +14,7 @@ MD5 d7b2830c3a0f616e8598aafd9c6092db metadata.xml 262
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDn2dlQlM6RnzZP+IRAstVAKCHKJUeq3UfkqX96jU969btVDe/ygCfWzun
-RJb9radUm+RM06EsGvrL8mg=
-=RB9y
+iD8DBQFDu0IYQlM6RnzZP+IRAmfZAJ9AoANEPkcOZ6VhZ404KS8jmjUfkQCgmxPd
+kO414CtPydtE4TjMiOe23oc=
+=HwWr
 -----END PGP SIGNATURE-----
