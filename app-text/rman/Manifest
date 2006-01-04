@@ -1,4 +1,4 @@
-MD5 b29dfcc94d65bd61b15f1ad6a8504696 ChangeLog 1970
+MD5 dd83a3cf41b0b53bf672bef52324b486 ChangeLog 2078
 MD5 056057d8a5eaf7203c9f2316465ba33e files/digest-rman-3.0.9 55
 MD5 e6b97eb40694d5c78aaf96e3dcf20f87 files/digest-rman-3.1 59
 MD5 c97a82a9bf18e2630bb01b5f48f8bfc7 files/digest-rman-3.2 59
@@ -7,4 +7,4 @@ MD5 10919f9dcf76074e9dc8b597f0df83e8 files/rman-3.1-gentoo.diff 407
 MD5 7c24cf8147972b5fc9a74dcd11a345f3 files/rman-3.2-gentoo.diff 560
 MD5 fbbc1086058fd13785ae3f050787a9ec rman-3.0.9.ebuild 671
 MD5 d6a1189f73825b18a8d5b4dabe577d42 rman-3.1.ebuild 719
-MD5 fc157c9780956356434bd5ba0ec3c019 rman-3.2.ebuild 698
+MD5 c683cf04a02c91085e150d721b7bf1a4 rman-3.2.ebuild 706
