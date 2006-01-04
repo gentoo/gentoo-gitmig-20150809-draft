@@ -1,12 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1147b550501eb06bad2dd9c2bb3b6611 ChangeLog 66076
+MD5 91c387f9428bbe58c1c18b7e8cf08141 ChangeLog 66253
 MD5 3d38b01f86231bff6a3bd32e77c98459 baselayout-1.11.13-r1.ebuild 18925
 MD5 5891c2fd87689647af9b0f8c701ce53b baselayout-1.11.13-r2.ebuild 18995
 MD5 ed3196ad145dba520cb6b3de148d8cfb baselayout-1.11.14.ebuild 18957
 MD5 572cf854f2b57c589112f3fad9436b27 baselayout-1.12.0_pre11-r3.ebuild 19298
 MD5 7aadd4f166ca6146ac3a881ffe39be00 baselayout-1.12.0_pre12.ebuild 19155
+MD5 61aa58a7b0a17877d03485a48d087f58 baselayout-1.12.0_pre13.ebuild 19157
 MD5 8d10a229861f862fca52cd8e3bc655d9 files/baselayout-1.11.0-split-out-udev.patch 7413
 MD5 77dc2a72d57122a7640b01ace6f1698b files/baselayout-1.12.0_pre11-net.patch 2448
 MD5 64e4c5a9eb4e57025a4e58e53221bcbc files/baselayout-1.12.0_pre11-net2.patch 9464
@@ -17,11 +15,5 @@ MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r2 70
 MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14 70
 MD5 b00dcec856d229fc320f8a14dbc47936 files/digest-baselayout-1.12.0_pre11-r3 76
 MD5 6848b6fd4fa543af99e952bb2c15f88a files/digest-baselayout-1.12.0_pre12 76
+MD5 2c06dc3a42153a5b07bab75e0337f0be files/digest-baselayout-1.12.0_pre13 76
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqibA2+ySkm8kpY0RAncxAJ9nUUCCYGG8MuEQtgp7XUivZaZwbwCgtVaA
-RRibSFxSVaFoLmTLqfCRWa8=
-=Dv84
------END PGP SIGNATURE-----
