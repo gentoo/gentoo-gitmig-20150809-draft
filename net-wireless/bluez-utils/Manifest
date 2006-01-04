@@ -1,6 +1,7 @@
-MD5 406d858e694c2df20664d0a083cc9a61 ChangeLog 9676
+MD5 e43d16f345746e3488359c7638c94498 ChangeLog 9902
 MD5 909705b6dbfe23a99cd6353c2a1a0710 bluez-utils-2.19.ebuild 2897
 MD5 bc6b50744c64a764187e0f446a3233de bluez-utils-2.21.ebuild 2630
+MD5 d0e19891447a948a174e349b8c35304e bluez-utils-2.22-r1.ebuild 2741
 MD5 31ae77e0e67d31710053fec9ed8a9671 bluez-utils-2.22.ebuild 2635
 MD5 cba196ec0ce8e3622a29f93b030ed027 files/2.10-r1/bluetooth.rc 3340
 MD5 e7df7cd2ca07f4f1ab415d457a6e1c13 files/2.10-r1/pin 5
@@ -12,6 +13,7 @@ MD5 2fcf0c81d0479f85cb7244f2b1900c6d files/bluez-utils-2.10-handsfree.patch 540
 MD5 7a47fa7ef1dc74a77dfb13ed5f96b983 files/bluez-utils-2.21-init.d 3399
 MD5 e7df7cd2ca07f4f1ab415d457a6e1c13 files/bluez-utils-2.21-pin 5
 MD5 992426019dbbd772c9326512d2a0033d files/bluez-utils-2.21-pin-helper.sh 49
+MD5 b0d830f3f31316886a42497d632d0ac1 files/bluez-utils-2.22-dbus-0.60.patch 374
 MD5 2844834ee91bf2b0d0cf925c682eef28 files/bluez-utils-2.22-init.d 3399
 MD5 e7df7cd2ca07f4f1ab415d457a6e1c13 files/bluez-utils-2.22-pin 5
 MD5 992426019dbbd772c9326512d2a0033d files/bluez-utils-2.22-pin-helper.sh 49
@@ -21,5 +23,6 @@ MD5 ce3b08e1df53875d1060e9e246810907 files/bluez-utils-2.3-rfcomm_fflush.patch 9
 MD5 5b6549a4300097637d65ab565a6c9535 files/digest-bluez-utils-2.19 68
 MD5 f98d1052bca4dd960f4d92ad331ba348 files/digest-bluez-utils-2.21 68
 MD5 62268482cd2b786b23286eda333562d1 files/digest-bluez-utils-2.22 68
+MD5 62268482cd2b786b23286eda333562d1 files/digest-bluez-utils-2.22-r1 68
 MD5 7449a658ef08ac7e86b221b3c43961af files/pin.sample 26
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
