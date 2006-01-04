@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0-r1.ebuild,v 1.2 2005/12/22 18:07:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.0-r1.ebuild,v 1.3 2006/01/04 12:56:32 gustavoz Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -59,8 +59,8 @@ src_compile() {
 	#fix bug 13453
 	filter-flags -foptimize-sibling-calls
 
-	#fix bug 41980
-	use sparc && filter-flags -fomit-frame-pointer
+	# breaks otherwise <gustavoz>
+	use sparc && export CFLAGS="-O1" && export CXXFLAGS="-O1"
 
 	export BINDNOW_FLAGS="$(bindnow-flags)"
 
