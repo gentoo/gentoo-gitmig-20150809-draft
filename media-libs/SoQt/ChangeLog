@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/SoQt
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.11 2005/11/05 14:29:57 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.12 2006/01/04 17:20:47 carlo Exp $
+
+*SoQt-1.3.0 (04 Jan 2006)
+
+  04 Jan 2006; Carsten Lohrke <carlo@gentoo.org> SoQt-1.0.2.ebuild,
+  +SoQt-1.3.0.ebuild:
+  version bump
+
+  04 Jan 2006; Carsten Lohrke <carlo@gentoo.org> SoQt-1.0.2.ebuild:
+  Correct license information.
 
   05 Nov 2005; Luis Medinas <metalgod@gentoo.org> SoQt-1.0.2.ebuild:
   Added ~amd64 keyword.
