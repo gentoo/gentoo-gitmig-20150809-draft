@@ -12,11 +12,11 @@ MD5 4ecf2a69badd7ba1b12fc497544726f3 files/php-select-modules/php-cgi.sh 452
 MD5 e4c69f3c38351cce893f12122cf3262c files/php-select-modules/php-devel.sh 532
 MD5 13c38bfdc416d740518637fe1425f467 files/php-select-modules/php.sh 436
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 72ffaa71fda25966c7d8b221923c304c php-toolkit-1.0.ebuild 1009
+MD5 80b7013226648f5ba0ec61963b0b63c6 php-toolkit-1.0.ebuild 1019
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuwLYCRZPokWLroQRAm86AJ9Y2G8+mfZSUOIjev65I2FYvVgVPQCfV03g
-OKD2Mzp0Qko5YzMRaVAcGPg=
-=8+A0
+iD8DBQFDuxeS2+ySkm8kpY0RAnxrAJ9mPj6XnoZp1z1e4c0Bk4coTmTILACfWvss
+GDRtrHw59WMt+DAEHdyenAk=
+=cAxP
 -----END PGP SIGNATURE-----
