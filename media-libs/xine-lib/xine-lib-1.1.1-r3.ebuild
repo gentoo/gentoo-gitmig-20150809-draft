@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.11 2006/01/03 23:07:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.12 2006/01/04 11:59:56 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="21"
+PATCHLEVEL="22"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -83,13 +83,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches
 
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
-
-	cd "${S}/src/libffmpeg"
-	epatch "${FILESDIR}/CVE-2005-4048.patch"
 }
 
 # check for the X11 path for a given library
@@ -144,7 +141,7 @@ src_compile() {
 
 		if use i8x0; then
 			count="`expr ${count} + 1`"
-			xvmclib="I810XvmC"
+			xvmclib="I810XvMC"
 		fi
 
 		if use cle266; then

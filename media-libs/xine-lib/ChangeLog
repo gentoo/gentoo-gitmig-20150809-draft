@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.300 2006/01/03 23:07:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.301 2006/01/04 11:59:56 flameeyes Exp $
+
+  04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.1-r3.ebuild:
+  Bumped patchset to version 22, fixing bug #113255 (a part ffmpeg).
 
   03 Jan 2006; Bryan Østergaard <kloeri@gentoo.org
   xine-lib-1.1.1-r3.ebuild:
