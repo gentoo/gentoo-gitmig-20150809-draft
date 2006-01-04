@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r2.ebuild,v 1.1 2006/01/03 21:17:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r2.ebuild,v 1.2 2006/01/04 06:13:57 vapier Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
 SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz
-	mirror://${P}-utils.patch.gz"
+	mirror://gentoo/${P}-utils.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
