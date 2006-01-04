@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-ch-util
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ch-util/ChangeLog,v 1.4 2006/01/02 17:06:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ch-util/ChangeLog,v 1.5 2006/01/04 21:59:28 mkennedy Exp $
+
+*cl-ch-util-0.1.8.20060104 (04 Jan 2006)
+
+  04 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.1.8.20060104-fasl-output-gentoo.patch,
+  +cl-ch-util-0.1.8.20060104.ebuild:
+  New upstream version.
 
   02 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
   cl-ch-util-0.1.4.20050724.ebuild, cl-ch-util-0.1.5.20051012.ebuild:
