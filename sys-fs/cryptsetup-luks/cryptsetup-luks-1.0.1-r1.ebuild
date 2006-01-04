@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.1-r1.ebuild,v 1.6 2006/01/03 06:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.1-r1.ebuild,v 1.7 2006/01/04 01:56:32 vapier Exp $
 
 inherit linux-info eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://luks.endorphin.org/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~mips ppc ppc64 sh sparc x86"
+KEYWORDS="amd64 arm ~ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="dynamic nls"
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1

@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 05b588d85d48aa094d9e1b636486ce3e ChangeLog 2702
 MD5 66c1f7dfa9c09e11c9e248dd7ec07a5e cryptsetup-luks-1.0-r1.ebuild 2126
-MD5 d96a6400c3a93bd08cf9b62802e71aca cryptsetup-luks-1.0.1-r1.ebuild 2025
+MD5 67d0de76771d3797f20bdc5e3bc1ff47 cryptsetup-luks-1.0.1-r1.ebuild 2029
 MD5 99b3cfb6a9eb43a772d29da0f88f849d cryptsetup-luks-1.0.1.ebuild 2148
 MD5 6d86b15e07cd0cdf96d8a363b1d778cd files/cryptfs.confd 1548
 MD5 c66058fc1ba9f980485e2b9e3b66df52 files/cryptsetup-luks-1.0.1-no-nls.patch 597
@@ -16,7 +16,7 @@ MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuh9W2+ySkm8kpY0RAge+AJ9FEhcq3gVBASctnmZBBBaGr6pAlQCgmPED
-OnJvzR2vcLL9+WcaB/ZdN70=
-=uPfr
+iD8DBQFDuyuK2+ySkm8kpY0RAlB+AJ9RP8hOK82n0JlBfEjimoLzBCHxUQCglDOt
+yf3qCKxmhPu93pBM34dsdQA=
+=ryhR
 -----END PGP SIGNATURE-----
