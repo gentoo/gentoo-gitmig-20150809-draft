@@ -94,9 +94,11 @@ learnPhpVersions ()
 	local musthave
 	local x
 	local n
+	local breakit
 
 	# how many files are we looking for?
 	musthave=${#G_SYMLINK_SOURCE[@]}
+	breakit="no"
 
 	for (( i = 0 ; i < ${#G_LIBDIR[@]} ; i = i + 1 )) ; do
 		for x in `echo ${G_LIBDIR[$i]}/php*` ; do
@@ -110,8 +112,13 @@ learnPhpVersions ()
 
 			if (( dohave == musthave )) ; then
 				echo "$x"
+				breakit="yes"
 			fi
 		done
+
+		if [[ ${breakit} == "yes" ]] ; then
+			break
+		fi
 	done
 }
 
