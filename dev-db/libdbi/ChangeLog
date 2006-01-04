@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.10 2005/11/13 00:10:43 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.11 2006/01/04 05:15:21 jer Exp $
+
+  04 Jan 2006; Jeroen Roovers <jer@gentoo.org> libdbi-0.8.0.ebuild:
+  Marked ~hppa (bug #105447).
 
   13 Nov 2005; Jason Wever <weeve@gentoo.org> libdbi-0.8.0.ebuild:
   Added ~sparc keyword wrt bug #105447.
