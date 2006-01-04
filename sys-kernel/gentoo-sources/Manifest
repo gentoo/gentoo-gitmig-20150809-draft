@@ -1,4 +1,4 @@
-MD5 bb9c640775bd54cdae626f6a5944f8e5 ChangeLog 55600
+MD5 c13576dd890ab345297f467c713d9dbf ChangeLog 55810
 MD5 fb66bd5497f574c00a8ba4d5f798dc00 files/Changelog-2.4.bz2 6590
 MD5 0361b484cca5df06a9d3a66e1d18d733 files/digest-gentoo-sources-2.4.31-r1 144
 MD5 5e338bac52f744bf36cd43167fa3c8bb files/digest-gentoo-sources-2.4.32-r2 144
@@ -12,6 +12,7 @@ MD5 22a0aa2b48829293f3f6a573562da2cb files/digest-gentoo-sources-2.6.14-r3 222
 MD5 7f434f0ed71f20a9549516bc82119783 files/digest-gentoo-sources-2.6.14-r4 222
 MD5 c7c22b8fec3ab8b6daa5d9be94b033b5 files/digest-gentoo-sources-2.6.14-r5 222
 MD5 edc1df57f529cb8f1bc26065e58a0298 files/digest-gentoo-sources-2.6.14-r6 222
+MD5 d8cc0aadf2f4bba70395cba766d32ef3 files/digest-gentoo-sources-2.6.14-r7 222
 MD5 b5b9226485db0be4a1b46453447a4fd0 files/digest-gentoo-sources-2.6.15 221
 MD5 0f93b46ae17cbd0fc9b4d1cf5d704296 files/gentoo-sources-2.4.81106.patch 2243
 MD5 757ee1239c3f14645ccea3640d551e11 files/gentoo-sources-2.4.CAN-2004-1056.patch 11249
@@ -26,6 +27,7 @@ MD5 53116c739cde96793a142c6d53420ffc gentoo-sources-2.6.14-r3.ebuild 1226
 MD5 4e9dd97efc6ef7c6145c53b407401357 gentoo-sources-2.6.14-r4.ebuild 1222
 MD5 69745a2d5af657b853bdbf66808be7a5 gentoo-sources-2.6.14-r5.ebuild 1222
 MD5 2a13fc114c29f2721482fa1368092d3c gentoo-sources-2.6.14-r6.ebuild 1226
+MD5 773759900418ab743f7929702109496f gentoo-sources-2.6.14-r7.ebuild 1223
 MD5 ddedd86bf4e0c17341b2e58ba14dfc65 gentoo-sources-2.6.14.ebuild 1213
 MD5 24fbd3235808f349450844e72950c175 gentoo-sources-2.6.15.ebuild 1196
 MD5 410c3afeb274354a7ce68257edc18012 metadata.xml 283

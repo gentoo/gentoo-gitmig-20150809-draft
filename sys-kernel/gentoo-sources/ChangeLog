@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.231 2006/01/03 20:27:12 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.232 2006/01/04 20:54:42 dsd Exp $
+
+*gentoo-sources-2.6.14-r7 (04 Jan 2006)
+
+  04 Jan 2006; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.14-r7.ebuild:
+  Security fixes for infra-red and rose hardware. Hopefully the last 2.6.14
+  release.
 
 *gentoo-sources-2.6.15 (03 Jan 2006)
 
