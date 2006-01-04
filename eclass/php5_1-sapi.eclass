@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.9 2006/01/04 11:44:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.10 2006/01/04 18:00:27 chtekk Exp $
 #
 # ########################################################################
 #
@@ -91,11 +91,12 @@ DEPEND="${DEPEND}
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
 	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 )
+	wddx? ( >=dev-libs/libxml2-2.6.8 )
 	xml? ( >=dev-libs/libxml2-2.6.8 )
 	xmlreader? ( >=dev-libs/libxml2-2.6.8 )
 	xmlrpc? ( >=dev-libs/libxml2-2.6.8 )
 	xpm? ( || ( x11-libs/libXpm virtual/x11 ) )
-	xsl? ( dev-libs/libxslt )
+	xsl? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )
 	zlib? ( sys-libs/zlib )
 	virtual/mta"
 
@@ -170,6 +171,13 @@ php5_1-sapi_check_awkward_uses() {
 	confutils_use_depend_any "cjk"	"gd" "gd-external"
 	confutils_use_depend_all "xpm"	"gd"
 	confutils_use_depend_all "gd"	"zlib"
+
+	# XML related extensions
+	confutils_use_depend_all "soap"	"xml"
+	confutils_use_depend_all "simplexml"	"xml"
+	confutils_use_depend_all "xsl"	"xml"
+	confutils_use_depend_all "wddx"	"xml"
+	confutils_use_depend_all "xmlreader"	"xml"
 
 	# IMAP support
 	php_check_imap
