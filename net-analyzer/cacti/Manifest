@@ -1,21 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3edc5614e4a14034681fb24f0d00b6bd ChangeLog 8690
-MD5 9f7924c1cca1e3e091dc4bcdef67ac63 cacti-0.8.6f-r2.ebuild 1990
+MD5 8edcc5c69d8db0f8db1b4797a8d96913 ChangeLog 8943
 MD5 8e19108be4619e53fa7e51c02e1dd872 cacti-0.8.6g.ebuild 1710
-MD5 c8c05fffd3c21c0297b9ad7cc47144fd cacti-0.8.6f-r1.ebuild 1997
-MD5 191d624f14b534af99878690f9b5a083 metadata.xml 743
-MD5 61ad387dad6e606772e27f6c9404e0e4 cacti-0.8.6g_p20051023.ebuild 1859
-MD5 98acfee8c4fd81a85e6848e114b2e2eb files/digest-cacti-0.8.6f-r2 874
+MD5 e8e9790acabe6a42fda45cc8e72a93a3 cacti-0.8.6g_p20051023.ebuild 1859
+MD5 708b3c03d199db013b07cb8ee069b935 cacti-0.8.6h.ebuild 1696
 MD5 b9b37ff105d9d50fb2c9a7b0b2a60429 files/digest-cacti-0.8.6g 65
-MD5 cf35c7601be5a748b851ae64487871f2 files/postinstall-en.txt 2062
-MD5 98acfee8c4fd81a85e6848e114b2e2eb files/digest-cacti-0.8.6f-r1 874
 MD5 80642855127d3174cad394f11f138243 files/digest-cacti-0.8.6g_p20051023 346
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDppNBugEuf3OQ0akRAjZcAJ9hmXFKjJKuNc2pcztHTh2/q8yQ6ACfWB4H
-tlxXTy4dAWhnc7+0bqfj8W8=
-=P50z
------END PGP SIGNATURE-----
+MD5 ede2752b4bd41c56fbb8dd6085875f58 files/digest-cacti-0.8.6h 65
+MD5 cf35c7601be5a748b851ae64487871f2 files/postinstall-en.txt 2062
+MD5 191d624f14b534af99878690f9b5a083 metadata.xml 743

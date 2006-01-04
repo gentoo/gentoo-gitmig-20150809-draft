@@ -1,17 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6f-r2.ebuild,v 1.1 2005/09/09 21:32:35 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h.ebuild,v 1.1 2006/01/04 16:26:57 ramereth Exp $
 
 inherit eutils webapp
 
 DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
-# patches as of end of July
-UPSTREAM_PATCHES="html_mouseover_title.patch multi_field_output_script_server.patch old_net_snmp_command_options.patch poller_invalid_data_sources.patch script_server_buffer_size.patch unix_syslog_compatibility.patch graph_view_preview_mode_filter.patch poller_reindex_cache_orphans.patch safari_zoom.patch ldap_copy_user_problem.patch script_server_file_header.patch"
+# patches (none needed for new 0.8.6h)
+#UPSTREAM_PATCHES=""
 SRC_URI="http://www.cacti.net/downloads/${P}.tar.gz"
-for i in $UPSTREAM_PATCHES ; do
-	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV}/${i}"
-done
+#for i in $UPSTREAM_PATCHES ; do
+#	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV}/${i}"
+#done
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
@@ -31,9 +31,10 @@ RDEPEND="net-www/apache
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	for i in ${UPSTREAM_PATCHES} ; do
-		EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}
-	done ;
+	# patches (none needed for new 0.8.6h)
+	#for i in ${UPSTREAM_PATCHES} ; do
+	#	EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}
+	#done ;
 }
 
 pkg_setup() {
