@@ -1,6 +1,65 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.55 2005/11/19 20:30:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.56 2006/01/04 09:24:47 chtekk Exp $
+
+*php-5.1.1 (28 Dec 2005)
+*php-5.0.5-r5 (28 Dec 2005)
+*php-4.4.1-r3 (28 Dec 2005)
+*php-4.3.11-r5 (28 Dec 2005)
+
+  28 Dec 2005; Luca Longinotti <chtekk@gentoo.org>
+  files/4-any/php4-imap-symlink.diff, files/4-any/php4-iodbc-config.diff,
+  +files/4.3.11/php4.3.11-apache2sapi.patch,
+  +files/4.3.11/php4.3.11-apachesapi.patch,
+  +files/4.3.11/php4.3.11-curl-open_basedir.patch,
+  -files/4.3.11/php4.3.11-curl_safemode.patch,
+  +files/4.3.11/php4.3.11-gd-safe_mode.patch,
+  -files/4.3.11/php4.3.11-gd_safe_mode.patch,
+  +files/4.3.11/php4.3.11-mbstring-header_inj.patch,
+  +files/4.3.11/php4.3.11-multilib-search-path.patch,
+  -files/4.3.11/php4.3.11-session_save_path-segf.patch,
+  -files/4.4.0/php4.4.0-curl_safemode.patch,
+  -files/4.4.0/php4.4.0-fopen_wrappers.patch,
+  -files/4.4.0/php4.4.0-gd_safe_mode.patch,
+  -files/4.4.0/php4.4.0-globals_overwrite.patch,
+  -files/4.4.0/php4.4.0-pcre-security.patch,
+  -files/4.4.0/php4.4.0-phpinfo_xss.patch,
+  -files/4.4.0/php4.4.0-pspell-ext-segf.patch,
+  -files/4.4.0/php4.4.0-session_save_path-segf.patch,
+  +files/4.4.1/php4.4.1-apache2sapi.patch,
+  +files/4.4.1/php4.4.1-curl-open_basedir.patch,
+  +files/4.4.1/php4.4.1-gd-safe_mode.patch,
+  +files/4.4.1/php4.4.1-mbstring-header_inj.patch,
+  -files/4.4.1/php4.4.1-mod_rewrite-crash.patch,
+  +files/4.4.1/php4.4.1-multilib-search-path.patch,
+  files/5.0-any/php5-iodbc-config.diff,
+  -files/5.0.4/php5.0.4-curl_safemode.patch,
+  -files/5.0.4/php5.0.4-fopen_wrappers.patch,
+  -files/5.0.4/php5.0.4-gd_safe_mode.patch,
+  -files/5.0.4/php5.0.4-globals_overwrite.patch,
+  -files/5.0.4/php5.0.4-pcre-security.patch,
+  -files/5.0.4/php5.0.4-phpinfo_xss.patch,
+  -files/5.0.4/php5.0.4-pspell-ext-segf.patch,
+  -files/5.0.4/php5.0.4-session_save_path-segf.patch,
+  -files/5.0.4/php5.0.4-xmlrcp-ccode.diff,
+  +files/5.0.5/php5.0.5-apache2sapi.patch,
+  +files/5.0.5/php5.0.5-curl-open_basedir.patch,
+  -files/5.0.5/php5.0.5-curl_safemode.patch,
+  +files/5.0.5/php5.0.5-gd-safe_mode.patch,
+  -files/5.0.5/php5.0.5-gd_safe_mode.patch,
+  +files/5.0.5/php5.0.5-mbstring-header_inj.patch,
+  +files/5.0.5/php5.0.5-multilib-search-path.patch,
+  -files/5.0.5/php5.0.5-session_save_path-segf.patch,
+  +files/5.0.5/php5.0.5-tsrm-gcc4.patch,
+  files/5.1-any/php5-iodbc-config.diff,
+  +files/5.1.1/php5.1.1-ming-config.patch,
+  +files/5.1.1/php5.1.1-multilib-search-path.patch, -php-4.3.11-r4.ebuild,
+  +php-4.3.11-r5.ebuild, -php-4.4.0-r4.ebuild, -php-4.4.1-r2.ebuild,
+  +php-4.4.1-r3.ebuild, -php-5.0.4-r4.ebuild, -php-5.0.5-r4.ebuild,
+  +php-5.0.5-r5.ebuild, +php-5.1.1.ebuild:
+  Sync with PHP Overlay. Delete PHP 4.4.0 and PHP 5.0.4, add PHP 5.1.1. Update
+  a lot of patches, update Hardened-PHP patches, add lib64 patch for multilib
+  systems. Fixes many bugs.
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> php-4.4.1-r2.ebuild,
   php-5.0.5-r4.ebuild:
