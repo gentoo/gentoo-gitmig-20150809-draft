@@ -1,6 +1,9 @@
 # ChangeLog for media-video/usb-pwc-re
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.16 2005/10/31 11:26:46 phosphan Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.17 2006/01/04 08:21:54 gmsoft Exp $
+
+  04 Jan 2006; Guy Martin <gmsoft@gentoo.org> usb-pwc-re-10.0.9_rc1.ebuild:
+  Added ~sparc to keywords.
 
 *usb-pwc-re-10.0.9_rc1 (31 Oct 2005)
 
