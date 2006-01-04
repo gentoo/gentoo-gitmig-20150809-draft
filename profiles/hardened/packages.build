@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/packages.build,v 1.1 2005/07/04 16:43:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/packages.build,v 1.2 2006/01/04 21:15:56 solar Exp $
 
 app-arch/bzip2
 app-arch/gzip
 app-arch/tar
 app-editors/nano
 app-shells/bash
+dev-lang/perl
 dev-lang/python
 net-misc/rsync
 net-misc/wget
@@ -32,3 +33,6 @@ sys-devel/gettext
 sys-devel/make
 sys-devel/patch
 sys-libs/glibc
+virtual/editor
+virtual/gzip
+virtual/os-headers
