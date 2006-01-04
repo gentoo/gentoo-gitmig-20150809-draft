@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.24.ebuild,v 1.2 2005/12/11 17:11:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.24.ebuild,v 1.3 2006/01/04 00:07:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 -mips ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~sh -sparc ~x86"
 IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse static sysfs truetype zlib"
 
 DEPEND="sdl? ( media-libs/libsdl )
