@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.7 2006/01/04 09:22:48 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.8 2006/01/04 11:44:55 chtekk Exp $
 #
 # ########################################################################
 #
@@ -89,7 +89,7 @@ DEPEND="${DEPEND}
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff )
 	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 )
-	xpm? ( || ( virtual/x11 x11-libs/libXpm ) )
+	xpm? ( || ( x11-libs/libXpm virtual/x11 ) )
 	xml? ( dev-libs/libxml2 xsl? ( dev-libs/libxslt ) )
 	xmlrpc? ( dev-libs/expat )
 	xsl? ( app-text/sablotron dev-libs/expat )
