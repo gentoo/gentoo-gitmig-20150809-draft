@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.7 2005/11/26 15:20:39 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.8 2006/01/04 00:23:52 vapier Exp $
 
 IUSE="crypt debug doc fftw gdbm gif gtk hardened jpeg kerberos opengl pdflib scanner svg tiff truetype zlib"
 
@@ -31,11 +31,12 @@ DEPEND="crypt?	( dev-libs/nettle )
 	dev-libs/gmp"
 
 src_compile() {
-
+	local myconf=""
+	# ffmpeg is broken atm #110136
+	myconf="${myconf} --without-_Ffmpeg"
 	# on hardened, disable runtime-generated code
 	# otherwise let configure work it out for itself
-	use hardened && conf_machine_code="-without-machine-code" || \
-		conf_machine_code=""
+	use hardened && myconf="${myconf} --without-machine-code"
 	emake CONFIGUREARGS="--prefix=/usr --disable-make_conf \
 			`use_with debug` \
 			`use_with crypt nettle` \
@@ -54,7 +55,8 @@ src_compile() {
 			`use_with truetype ttflib` \
 			`use_with truetype freetype` \
 			`use_with zlib` \
-			${conf_machine_code} \
+			${myconf} \
+			${EXTRA_ECONF} \
 			" || die
 
 	if use doc; then
