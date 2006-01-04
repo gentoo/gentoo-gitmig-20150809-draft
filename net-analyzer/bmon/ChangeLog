@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bmon
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.26 2005/11/05 21:29:38 vanquirius Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.27 2006/01/04 15:17:10 jer Exp $
+
+  04 Jan 2006; Jeroen Roovers <jer@gentoo.org> bmon-2.1.0-r2.ebuild:
+  Marked ~hppa (bug #105527).
 
   05 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> bmon-2.1.0-r2.ebuild:
   2.1.0-r2 x86 stable.
