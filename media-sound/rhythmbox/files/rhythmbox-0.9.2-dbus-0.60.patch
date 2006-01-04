@@ -1,0 +1,12 @@
+--- shell/main.c	2005-12-04 12:56:47.000000000 -0600
++++ shell/main.c	2005-12-04 12:57:00.000000000 -0600
+@@ -266,7 +266,7 @@
+ 					G_TYPE_STRING,
+ 					"org.gnome.Rhythmbox",
+ 					G_TYPE_UINT,
+-					DBUS_NAME_FLAG_PROHIBIT_REPLACEMENT,
++					DBUS_NAME_FLAG_DO_NOT_QUEUE,
+ 					G_TYPE_INVALID,
+ 					G_TYPE_UINT,
+ 					&request_name_reply,
+
