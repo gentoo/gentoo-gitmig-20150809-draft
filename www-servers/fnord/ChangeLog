@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/fnord
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.12 2005/08/28 06:17:15 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.13 2006/01/04 10:27:57 hansmi Exp $
+
+*fnord-1.10 (04 Jan 2006)
+
+  04 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> fnord-1.9.ebuild,
+  +fnord-1.10.ebuild:
+  1.9 stable on hppa, sparc. Bump to 1.10.
 
   28 Aug 2005; Mike Frysinger <vapier@gentoo.org> fnord-1.8.ebuild,
   fnord-1.9.ebuild:
