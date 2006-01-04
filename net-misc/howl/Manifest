@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8700e1c18be88f2602af36bb7bbe11fd ChangeLog 5877
 MD5 907cfa8e12495034fd9279c63f14ddf2 files/0.9.2-ppc.patch 329
 MD5 ab360feeba18b277ee131077bf3c47b5 files/digest-howl-0.9.6-r2 62
@@ -9,6 +12,13 @@ MD5 9bbb473921bfd5f0f1baacbcf1fb1832 files/mDNSResponder.init.d 747
 MD5 61175700477c9d36a01c9d61e1c73e7e files/nifd.conf.d 578
 MD5 556b0de09b5f9106dc398344978b971f files/nifd.init.d 623
 MD5 e6cb78649592717aab8a16499eb29b5c howl-0.9.6-r2.ebuild 1736
-MD5 29595602c07793853e520b9918a8a5d3 howl-0.9.8.ebuild 2322
-MD5 c79317589a2914795aa100725c751344 howl-1.0.0.ebuild 2410
+MD5 ef698eb52dc8cb4917a597ad0649bad8 howl-0.9.8.ebuild 2255
+MD5 99d35435a55717b14dee2734a213d025 howl-1.0.0.ebuild 2410
 MD5 f1745b912ee998369590df5db2bdad97 metadata.xml 514
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuxJN2+ySkm8kpY0RAoDbAKCHxomFpQZii0PUp0c8+1XNTgjXGACfcVkB
++BhuvPnU4npMuLCINj4AG8Q=
+=KPT9
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.6 2005/09/24 04:40:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.7 2006/01/04 00:08:52 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,14 +10,14 @@ SRC_URI="http://www.porchdogsoft.com/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
 # sys-devel/automake - needed if we remove the html docs from /usr/share
 
 # sw_log is unprovided (Bug #87436)
-RESTRICT="maketest"
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
