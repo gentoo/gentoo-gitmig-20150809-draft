@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a367ee81d394807f747268390f2180f3 ChangeLog 2184
+MD5 463309070cbee1d5f5b7f18965711057 ChangeLog 2354
 MD5 a85f49d46070d6405ecab8d2a099524f files/0.20.5-buildxml.patch 547
 MD5 656bb7d30e63d5e57f79489637c243ce files/0.20.5-startscript.patch 2435
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r1 67
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r3 67
 MD5 6888a76ca900a9c5561ab964ba88868c fop-0.20.5-r1.ebuild 1283
-MD5 4b50cc8c1d59ab93aaf2758c0ae0e575 fop-0.20.5-r3.ebuild 1645
+MD5 10a80abfb3cf9bcfefe89b034e415dce fop-0.20.5-r3.ebuild 1646
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpZ/6ndWRXhKOboURAvYhAJ4w/TYYMsNokdTDyKk3F+lavRNC0wCgu23i
-7O32kbMTIxyqKEzpCJJKlmk=
-=B/9V
+iD8DBQFDuyACndWRXhKOboURAlssAJ9Sp/C3M2gVallYgRA1UVgpJBE3lgCglngU
+80kx/eFdXuFdeyaMYQj+O3Q=
+=rxi8
 -----END PGP SIGNATURE-----
