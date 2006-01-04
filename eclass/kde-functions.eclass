@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.129 2006/01/04 20:54:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.130 2006/01/04 20:58:02 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -815,14 +815,20 @@ need-qt() {
 
 	QT=qt
 
+	if [ "${RDEPEND-unset}" != "unset" ] ; then
+		x_DEPEND="${RDEPEND}"
+	else
+		x_DEPEND="${DEPEND}"
+	fi
+
 	case ${QTVER} in
 	    2*)
 			DEPEND="${DEPEND} =x11-libs/${QT}-2.3*"
-			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} =x11-libs/${QT}-2.3*"
+			RDEPEND="${x_DEPEND} =x11-libs/${QT}-2.3*"
 			;;
 	    3*)
 			DEPEND="${DEPEND} $(qt_min_version ${QTVER})"
-			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} $(qt_min_version ${QTVER})"
+			RDEPEND="${x_DEPEND} $(qt_min_version ${QTVER})"
 			;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
