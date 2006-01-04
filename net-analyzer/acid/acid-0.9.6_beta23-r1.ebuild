@@ -1,39 +1,38 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.14 2006/01/04 20:09:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23-r1.ebuild,v 1.1 2006/01/04 20:09:16 dragonheart Exp $
 
-inherit webapp versionator eutils depend.php
+inherit webapp versionator eutils depend.php depend.apache
 
-MY_P=${P/_beta/b}
-S=${WORKDIR}/${PN}
+MY_P="${P/_beta/b}"
+S="${WORKDIR}/${PN}"
 DESCRIPTION="Snort ACID - Analysis Console for Intrusion Databases"
 HOMEPAGE="http://acidlab.sourceforge.net"
 SRC_URI="http://acidlab.sourceforge.net/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="apache2"
 
-# TODO: check for php-5 support
-RDEPEND="apache2? ( >=net-www/apache-2 )
-	!apache2? ( =net-www/apache-1* )
-	>=dev-php/adodb-4.0.5
-	>=dev-php/jpgraph-1.12.2
-	media-libs/gd
-	=virtual/httpd-php-4*"
+# Note: jpgraph is an unstable package
+RDEPEND=">=dev-php/adodb-4.65-r1
+	dev-php4/jpgraph
+	media-libs/gd"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
+need_php4
+need_apache
+
 pkg_setup() {
 	webapp_pkg_setup
-
-	need_php4
-	require_php_with_use gd session
+	require_gd
+	require_php_with_use session
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i '12s:^$DBlib_path =.*:$DBlib_path = "/usr/lib/php/adodb";:' \
 		acid_conf.php || die "sed acid_conf.php failed"
 	sed -i '67s/($version\[0\] >= 4)/($version[0] >= 5) || &/' \
@@ -43,7 +42,7 @@ src_unpack() {
 src_install () {
 	webapp_src_preinst
 
-	insinto ${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
 	doins *
 
 	webapp_src_install
