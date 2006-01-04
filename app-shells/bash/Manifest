@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d435fe34a31464106e09acf0bebdab9d ChangeLog 16644
+MD5 3fc29fdd5c786a439c88cb06ceb48d0a ChangeLog 16846
 MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
 MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
 MD5 30fb11f3c3ffeebf09fa3ae90dd0d351 bash-3.0-r12.ebuild 5407
 MD5 f999a51dcdf23cdb6597ea549b58c170 bash-3.0-r13.ebuild 4957
 MD5 bd1598b6968b46dff8ca11cbc604beb0 bash-3.0-r14.ebuild 4838
-MD5 45c862614baf5f01b9309343f7805a03 bash-3.1-r1.ebuild 4380
+MD5 de403a0da8e0af5095df05361d23564a bash-3.1-r2.ebuild 4452
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
@@ -47,6 +47,7 @@ MD5 b86b65863c2ae21b59d8201c2a3a9e91 files/bash-3.0-trap-fg-signals.patch 641
 MD5 47fca8c27b11bcc6641a78a8cc9414e5 files/bash-3.0-ulimit.patch 5226
 MD5 c16b3704ff34112b6f152205c2565f5b files/bash-3.0-utf8.patch 1392
 MD5 7b9f39ddd140c23e0a3ad4010ab008a8 files/bash-3.0-volatile-command.patch 512
+MD5 c9d55fb9fb5d9dd279b460e513fd90c9 files/bash-3.1-arrays.patch 1463
 MD5 9897114c737c0277d973b33b519f6df4 files/bash-3.1-bash-logger.patch 2209
 MD5 0ea8241cac27acdecd7bddfc5d89e806 files/bash-3.1-gentoo.patch 2005
 MD5 f6e2f0d9e5a4dcb898dc2b04c13ac67d files/bash-3.1-ulimit.patch 4094
@@ -57,7 +58,7 @@ MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r11 976
 MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r12 976
 MD5 e1aef7c77cc56da08cb6e99e26dee2cc files/digest-bash-3.0-r13 909
 MD5 e1aef7c77cc56da08cb6e99e26dee2cc files/digest-bash-3.0-r14 909
-MD5 26df29e008da5ffd1ada97b325eed704 files/digest-bash-3.1-r1 171
+MD5 26df29e008da5ffd1ada97b325eed704 files/digest-bash-3.1-r2 171
 MD5 7d8a8ef90c1818a0cd66808ac2740638 files/dot-bash_logout 127
 MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
 MD5 6dcc418c7812b5f8ebf2f6562eb2e57c files/dot-bashrc 983
@@ -65,7 +66,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtQea2+ySkm8kpY0RAl2vAJ4h5VPh/gzni/CRhB65sBWL96VSrACdHqYE
-F+8wljL1uthoED3zpVSeCPU=
-=EK4l
+iD8DBQFDu2GR2+ySkm8kpY0RAsAXAKC2M9yyvFunFawCUBdqV8E6pj8zkwCfesII
+krN7MW/Bsk/zxIhSL+YSXG0=
+=LihB
 -----END PGP SIGNATURE-----

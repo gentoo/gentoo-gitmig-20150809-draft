@@ -1,0 +1,45 @@
+http://lists.gnu.org/archive/html/bug-bash/2005-12/msg00062.html
+
+Date: Sat, 24 Dec 2005 13:27:55 -0500
+From: Chet Ramey <chet.ramey@case.edu>
+To: Mike Frysinger <vapier@gentoo.org>
+CC: bug-bash@gnu.org,
+ chet@case.edu
+Subject: Re: bash-3.1.1 parses arrays slightly incorrectly
+
+Mike Frysinger wrote:
+> On Thu, Dec 22, 2005 at 09:24:06AM -0500, Chet Ramey wrote:
+>> Bash-Release: 3.1
+>> Patch-ID: bash31-001
+>>
+>> Bug-Description:
+>>
+>> There are parsing problems with compound assignments in several contexts,
+>> including as arguments to builtins like `local', `eval', and `let', and
+>> as multiple assignments in a single command.
+> 
+> still seems to be a slight regression here with arrays ...
+
+Try this:
+
+*** ../bash-3.1/subst.c Mon Oct 24 09:51:13 2005
+--- subst.c     Fri Dec 23 15:21:09 2005
+***************
+*** 2188,2192 ****
+      {
+        v = find_variable (name);
+!       if (v == 0 || array_p (v) == 0)
+          v = make_local_array_variable (name);
+        v = assign_array_var_from_string (v, value, flags);
+--- 2188,2192 ----
+      {
+        v = find_variable (name);
+!       if (v == 0 || array_p (v) == 0 || v->context != variable_context)
+          v = make_local_array_variable (name);
+        v = assign_array_var_from_string (v, value, flags);
+
+-- 
+``The lyf so short, the craft so long to lerne.'' - Chaucer
+( ``Discere est Dolere'' -- chet )
+						Live Strong.
+Chet Ramey, ITS, CWRU    chet@case.edu    http://cnswww.cns.cwru.edu/~chet/
