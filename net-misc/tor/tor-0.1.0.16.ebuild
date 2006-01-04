@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.16.ebuild,v 1.1 2006/01/04 03:38:09 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.16.ebuild,v 1.2 2006/01/04 03:45:36 humpback Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,6 +25,7 @@ RDEPEND="!static? (
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/torrc.sample-0.1.0.16.patch
 }
 

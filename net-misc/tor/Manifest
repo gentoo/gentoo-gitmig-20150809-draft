@@ -11,11 +11,11 @@ MD5 ef65448a33725bf0e7f4d02d5e0b8fb1 files/torrc.sample-0.1.0.14.patch 1120
 MD5 ab82c91feb4f7eceb4d1ed496a17f928 files/torrc.sample-0.1.0.16.patch 1134
 MD5 b79b08e0f979feb256c93295714b4fc9 metadata.xml 224
 MD5 68f8bf751a6bddbb1209e520d23c6337 tor-0.1.0.14-r1.ebuild 1271
-MD5 ca58735f71a579ce1e08c7152239511b tor-0.1.0.16.ebuild 4050
+MD5 5d87894b2eb81d47dc20b445408a499a tor-0.1.0.16.ebuild 4059
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDu0Nz8zY1VwezZiERAnlaAJ9JYc+2EB0rzy43o+L2ObSlqmouOwCfYXb+
-KAld4vY3n5XR/w7VqXf1yKM=
-=qqar
+iD8DBQFDu0Ue8zY1VwezZiERAlycAJ9ZzAq25ielRe2iRN2MPAJqrSp2sgCgr0wm
+bCUFEJotIu68F8YZRadlzMY=
+=Eo78
 -----END PGP SIGNATURE-----
