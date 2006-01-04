@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d84e62c6e242c417700c626edcfaeb5 ChangeLog 2010
+MD5 750d5497237967eeaa73332e5dea74b1 ChangeLog 2125
 MD5 804311ec22b1fba76a61411d0c752a15 files/digest-mt-daapd-0.2.1.1 68
 MD5 a83c2c2bb548a45b8b1294e009aff64d files/digest-mt-daapd-0.2.3 66
 MD5 a83c2c2bb548a45b8b1294e009aff64d files/digest-mt-daapd-0.2.3-r1 66
@@ -13,12 +13,12 @@ MD5 674db97976bcc4e34df95a17ffe8750c files/mt-daapd.init.2 1200
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 880127a188cf908b0ad84221e48eeebf mt-daapd-0.2.1.1.ebuild 1936
 MD5 a378c8396d1caf87b44e661053519830 mt-daapd-0.2.3-r1.ebuild 2509
-MD5 207257ce8015dfb7b5a400ae53982355 mt-daapd-0.2.3-r2.ebuild 3400
+MD5 b0bed5ab69a2c70fdc1842a46941c0aa mt-daapd-0.2.3-r2.ebuild 3477
 MD5 14f69e3681187656efa996600cdf20d9 mt-daapd-0.2.3.ebuild 1959
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDj2ClAiZjviIA2XgRAiTUAJ9tLj6Prt4iqDsaPbRFG1OK2ia/oACcCQFR
-3TIf6/6ZpuPnVFaB3k6ygzc=
-=zp+p
+iD8DBQFDu3gZAiZjviIA2XgRAkXvAKCxuEdPnhmUMX7bmGO+P+ozyxvB0QCgt/rQ
+izbRxHvn2hzH/7e3YKH3iC0=
+=d9Xh
 -----END PGP SIGNATURE-----
