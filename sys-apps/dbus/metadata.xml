@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>gentopia</herd>
 <maintainer>
-	<email>foser@gentoo.org</email>
-</maintainer>
-<maintainer>
 	<email>cardoe@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
