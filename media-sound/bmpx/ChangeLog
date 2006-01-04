@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/bmpx
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.24 2005/12/10 20:37:37 azarah Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.25 2006/01/04 18:08:13 cardoe Exp $
+
+*bmpx-0.12.9-r2 (04 Jan 2006)
+
+  04 Jan 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/bmpx-0.12.9-dbus-fix.patch, bmpx-0.12.9-r1.ebuild,
+  +bmpx-0.12.9-r2.ebuild:
+  Adding dbus-0.60 fixes to new -r2 and adding blocker against dbus-0.60 to
+  -r1 since Azarah is away. Notifying him so he can review when he returns.
 
   10 Dec 2005; Martin Schlemmer <azarah@gentoo.org> bmpx-0.12.9-r1.ebuild:
   Fix for bug #114336.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r1.ebuild,v 1.4 2006/01/04 18:08:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r2.ebuild,v 1.1 2006/01/04 18:08:13 cardoe Exp $
 
 inherit gnome2 autotools eutils
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	>=x11-libs/cairo-1.0.0
 	>=x11-libs/startup-notification-0.8
 	>=media-libs/taglib-1.4
-	dbus? ( >=sys-apps/dbus-0.35 !>=sys-apps/dbus-0.60 )
+	dbus? ( >=sys-apps/dbus-0.60 )
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python >=dev-python/pygtk-2.8 )
 	irssi? ( >=net-irc/irssi-0.8.9 )
@@ -71,6 +71,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-libtoolize-static-libs.patch
 	epatch ${FILESDIR}/${P}-old-config-crash.patch
 	epatch ${FILESDIR}/${P}-no-config.patch
+	epatch ${FILESDIR}/${P}-dbus-fix.patch
 
 	AT_M4DIR="-I m4" \
 	eautoreconf
