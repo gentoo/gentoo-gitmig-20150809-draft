@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.7 2005/10/31 14:08:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.8 2006/01/04 09:22:48 chtekk Exp $
 #
 # ########################################################################
 #
@@ -19,7 +19,7 @@
 #
 # ========================================================================
 
-CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix interbase msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
+CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix interbase msql oci8 sapdb solid sybase sybase-ct"
 EBUILD_SUPPORTS_SHAREDEXT=1
 
 inherit flag-o-matic eutils confutils libtool php-common-r1
@@ -39,7 +39,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo pdo-external pear pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype vm-goto vm-switch wddx xml2 xmlreader xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc pcntl pcre pdo pdo-external pear pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tokenizer truetype vm-goto vm-switch wddx xml xmlreader xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -68,7 +68,6 @@ DEPEND="${DEPEND}
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
-	mcve? ( net-libs/libmonetra )
 	mhash? ( app-crypt/mhash )
 	ming? ( media-libs/ming )
 	mssql? ( dev-db/freetds )
@@ -78,7 +77,7 @@ DEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
 	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
-	postgres? ( >=dev-db/postgresql-7.1 )
+	postgres? ( >=dev-db/libpq-7.1 )
 	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
@@ -91,13 +90,11 @@ DEPEND="${DEPEND}
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
-	tiff? ( media-libs/tiff )
 	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 )
-	wddx? ( dev-libs/expat )
-	xml2? ( >=dev-libs/libxml2-2.6.8 )
+	xml? ( >=dev-libs/libxml2-2.6.8 )
 	xmlreader? ( >=dev-libs/libxml2-2.6.8 )
 	xmlrpc? ( >=dev-libs/libxml2-2.6.8 )
-	xpm? ( virtual/x11 )
+	xpm? ( || ( virtual/x11 x11-libs/libXpm ) )
 	xsl? ( dev-libs/libxslt )
 	zlib? ( sys-libs/zlib )
 	virtual/mta"
@@ -115,6 +112,7 @@ RDEPEND="${RDEPEND} ${DEPEND}"
 PDEPEND="${PDEPEND}
 		doc? ( app-doc/php-docs )
 		java-external? ( dev-php5/php-java-bridge )
+		mcve? ( dev-php5/pecl-mcve )
 		pdo-external? ( dev-php5/pecl-pdo )
 		pear? ( >=dev-php/PEAR-PEAR-1.3.6 )
 		yaz? ( dev-php5/pecl-yaz )
@@ -129,15 +127,8 @@ PHP_INI_FILE="php.ini"
 # ========================================================================
 # Hardened-PHP Support
 # ========================================================================
-#
-# I've done it like this so that we can support different versions of
-# the patch for different versions of PHP
 
-#case "${PV}" in
-#	5.1.0)  ;;
-#esac
-
-#[ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/${HARDENEDPHP_PATCH} )"
+[ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://gentoo.longitekk.com/${HARDENEDPHP_PATCH} )"
 
 # ========================================================================
 
@@ -171,13 +162,12 @@ php5_1-sapi_check_awkward_uses() {
 	confutils_use_depend_all "qdbm"		"dba"
 
 	# EXIF only gets built if we support a file format that uses it
-	confutils_use_depend_any "exif" "gd" "tiff"
+	confutils_use_depend_any "exif" "gd" "gd-external"
 
 	# support for the GD graphics library
 	confutils_use_conflict "gd" "gd-external"
 	confutils_use_depend_any "truetype" "gd" "gd-external"
 	confutils_use_depend_any "cjk"	"gd" "gd-external"
-	confutils_use_depend_all "tiff"	"gd"
 	confutils_use_depend_all "xpm"	"gd"
 	confutils_use_depend_all "gd"	"zlib"
 
@@ -192,7 +182,7 @@ php5_1-sapi_check_awkward_uses() {
 
 	# Oracle support
 	confutils_use_conflict "oci8" "oci8-instant-client"
-	php_check_oracle
+	php_check_oracle_8
 
 	# LDAP-sasl support
 	confutils_use_depend_all "sasl" "ldap"
@@ -217,7 +207,7 @@ php5_1-sapi_check_awkward_uses() {
 	confutils_use_conflict "pdo" "pdo-external"
 
 	# PEAR support
-	confutils_use_depend_all "pear"			"cli" "pcre" "xml2" "zlib"
+	confutils_use_depend_all "pear"			"cli" "pcre" "xml" "zlib"
 
 	# QDBM doesn't play nicely with GDBM
 	confutils_use_conflict "qdbm" "gdbm"
@@ -255,11 +245,25 @@ php5_1-sapi_src_unpack() {
 
 	cd "${S}"
 
+	# lib64 support
+	if [ -n "${LIB64_PATCH}" ] ; then
+		epatch "${FILESDIR}/${LIB64_PATCH}"
+	else
+		ewarn "There is no lib64 patch available for this PHP release yet!"
+	fi
+
 	# Patch PHP to show Gentoo as the server platform
-	sed -e "s/PHP_UNAME=\`uname -a | xargs\`/PHP_UNAME=\`uname -s -n -r -v | xargs\`/g" -i configure.in
+	sed -e "s/PHP_UNAME=\`uname -a | xargs\`/PHP_UNAME=\`uname -s -n -r -v | xargs\`/g" -i configure.in || die "Failed to fix server platform name"
+
+	# Patch PHP to support heimdal instead of mit-krb5
+	if has_version "app-crypt/heimdal" ; then
+		sed -e "s|gssapi_krb5|gssapi|g" -i acinclude.m4 || die "Failed to fix heimdal libname"
+	fi
 
 	# Patch for PostgreSQL support
-	use postgres && sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4
+	if use postgres ; then
+		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
+	fi
 
 	# Patch for session persistence bug
 	epatch "${FILESDIR}/5.1-any/php5-soap_persistence_session.diff"
@@ -291,7 +295,7 @@ php5_1-sapi_src_unpack() {
 
 	# fix problems compiling with apache2
 	if useq apache2 && ! useq threads ; then
-		epatch "${FILESDIR}/5.1-any/php5-prefork.patch" || die "Unable to patch for prefork support"
+		epatch "${FILESDIR}/5.1-any/php5-prefork.patch"
 	fi
 
 	# fix configure scripts to correctly support HardenedPHP
@@ -302,13 +306,13 @@ php5_1-sapi_src_unpack() {
 
 	# rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
-	WANT_AUTOCONF=2.5 autoreconf --force -W no-cross || die "Unable to regenerate configure script"
+	WANT_AUTOCONF=2.5 autoreconf --force -W no-cross || die "Unable to regenerate configure script successfully"
 
 	# run elibtoolize
 	elibtoolize
 
 	# Just in case ;-)
-	chmod 755 configure
+	chmod 755 configure || die "Failed to chmod configure to 755"
 }
 
 set_php_ini_dir() {
@@ -334,7 +338,7 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"curl"			"curl"			1
 	enable_extension_with		"curlwrappers"	"curlwrappers"	1
 	enable_extension_enable		"dbase"			"dbase"			1
-	enable_extension_disable	"dom"			"xml2"			0
+	enable_extension_disable	"dom"			"xml"			0
 	enable_extension_enable		"exif"			"exif"			1
 	enable_extension_with		"fbsql"			"frontbase"		1
 	enable_extension_with		"fdftk"			"fdftk"			1 "/opt/fdftk-6.0"
@@ -343,15 +347,14 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"gettext"		"nls"			1
 	enable_extension_with		"gmp"			"gmp"			1
 	enable_extension_with		"hwapi"			"hyperwave-api"	1
-	enable_extension_with		"iconv"			"iconv"			1
+	enable_extension_without	"iconv"			"iconv"			1
 	enable_extension_with		"informix"		"informix"		1
 	enable_extension_disable	"ipv6"			"ipv6"			0
 	# ircg extension not supported on Gentoo at this time
 	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
-	enable_extension_disable	"libxml"		"xml2"			0
+	enable_extension_disable	"libxml"		"xml"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
-	enable_extension_with		"mcve"			"mcve"			1
 	enable_extension_enable		"memory-limit"	"memlimit"		0
 	enable_extension_with		"mhash"			"mhash"			1
 	enable_extension_with		"ming"			"ming"			1
@@ -360,14 +363,11 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"ncurses"		"ncurses"		1
 	enable_extension_with		"oci8"			"oci8"			1
 	enable_extension_with		"oci8-instant-client"	"oci8-instant-client"	1
-	enable_extension_with		"oracle"		"oracle7"		1
 	enable_extension_with		"openssl"		"ssl"			1
 	enable_extension_with		"openssl-dir"	"ssl"			0 "/usr"
-	enable_extension_with		"ovrimos"		"ovrimos"		1
 	enable_extension_enable		"pcntl" 		"pcntl" 		1
 	enable_extension_without	"pcre-regex"	"pcre"			0
 	enable_extension_disable	"pdo"			"pdo"			1
-	enable_extension_with		"pfpro"			"pfpro"			1
 	enable_extension_with		"pgsql"			"postgres"		1
 	enable_extension_disable	"posix"			"posix"			1
 	enable_extension_with		"pspell"		"spell"			1
@@ -386,7 +386,7 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"tidy"			"tidy"			1
 	enable_extension_disable	"tokenizer"		"tokenizer"		1
 	enable_extension_enable		"wddx"			"wddx"			1
-	enable_extension_disable	"xml"			"xml2"			0
+	enable_extension_disable	"xml"			"xml"			0
 	enable_extension_with		"xmlreader"		"xmlreader"		1
 	enable_extension_with		"xmlrpc"		"xmlrpc"		1
 	enable_extension_with		"xsl"			"xsl"			1
@@ -419,7 +419,6 @@ php5_1-sapi_src_compile() {
 		enable_extension_enable	"gd-native-ttf"	"truetype"		0
 		enable_extension_with	"jpeg-dir"		"gd"			0 "/usr"
 		enable_extension_with 	"png-dir" 		"gd" 			0 "/usr"
-		enable_extension_with 	"tiff-dir" 		"tiff" 			0 "/usr"
 		enable_extension_with 	"xpm-dir" 		"xpm" 			0 "/usr/X11R6"
 		# enable gd last, so configure can pick up the previous settings
 		enable_extension_with 	"gd" 			"gd" 			0
@@ -611,51 +610,83 @@ php5_1-sapi_install_ini() {
 }
 
 php5_1-sapi_pkg_postinst() {
+	# Update Apache1 to use mod_php
+	if useq apache ; then
+		"${ROOT}/usr/sbin/php-select" -t apache1 php5 > /dev/null 2>&1
+		exitStatus=$?
+		if [[ ${exitStatus} == 5 ]] ; then
+			php-select apache1 php5
+		elif [[ ${exitStatus} == 4 ]] ; then
+			ewarn
+			ewarn "Apache 1 is configured to load a different version of PHP."
+			ewarn "To make Apache 1 use PHP v5, use php-select:"
+			ewarn
+			ewarn "   php-select apache1 php5"
+			ewarn
+		fi
+	fi
+
+	# Update Apache2 to use mod_php
+	if useq apache2 ; then
+		"${ROOT}/usr/sbin/php-select" -t apache2 php5 > /dev/null 2>&1
+		exitStatus=$?
+		if [[ ${exitStatus} == 5 ]] ; then
+			php-select apache2 php5
+		elif [[ ${exitStatus} == 4 ]] ; then
+			ewarn
+			ewarn "Apache 2 is configured to load a different version of PHP."
+			ewarn "To make Apache 2 use PHP v5, use php-select:"
+			ewarn
+			ewarn "   php-select apache2 php5"
+			ewarn
+		fi
+	fi
+
 	# Create the symlinks for php-cli
 	if useq cli ; then
-		if test -h "/usr/bin/php"; then
-			ewarn "/usr/bin/php is a symlink."
-			ewarn "The PHP packages will not update that symlink,"
-			ewarn "please check it and do so yourself if you need"
-			ewarn "to, using eselect."
-			ewarn "For example with the command:"
-			ewarn "eselect php set php5"
-			ewarn "to symlink to /usr/lib/php5/bin/php."
+		"${ROOT}/usr/sbin/php-select" -t php php5 > /dev/null 2>&1
+		exitStatus=$?
+		if [[ ${exitStatus} == 5 ]] ; then
+			php-select php php5
+		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
-		else
-			eselect php set php5
+			ewarn "/usr/bin/php links to a different version of PHP."
+			ewarn "To make /usr/bin/php point to PHP v5, use php-select:"
+			ewarn
+			ewarn "   php-select php php5"
+			ewarn
 		fi
 	fi
 
 	# Create the symlinks for php-cgi
 	if useq cgi ; then
-		if test -h "/usr/bin/php-cgi"; then
-			ewarn "/usr/bin/php-cgi is a symlink."
-			ewarn "The PHP packages will not update that symlink,"
-			ewarn "please check it and do so yourself if you need"
-			ewarn "to, using eselect."
-			ewarn "For example with the command:"
-			ewarn "eselect php-cgi set php5"
-			ewarn "to symlink to /usr/lib/php5/bin/php-cgi."
+		"${ROOT}/usr/sbin/php-select" -t php-cgi php5 > /dev/null 2>&1
+		exitStatus=$?
+		if [[ ${exitStatus} == 5 ]] ; then
+			php-select php-cgi php5
+		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
-		else
-			eselect php-cgi set php5
+			ewarn "/usr/bin/php-cgi links to a different version of PHP."
+			ewarn "To make /usr/bin/php-cgi point to PHP v5, use php-select:"
+			ewarn
+			ewarn "   php-select php-cgi php5"
+			ewarn
 		fi
 	fi
 
 	# Create the symlinks for php-devel
-	if test -h "/usr/bin/phpize" || test -h "/usr/bin/php-config" ; then
-		ewarn "/usr/bin/phpize and/or /usr/bin/php-config are symlinks."
-		ewarn "The PHP packages will not update these symlinks,"
-		ewarn "please check them and do so yourself if you need"
-		ewarn "to, using eselect."
-		ewarn "For example with the command:"
-		ewarn "eselect php-devel set php5"
-		ewarn "to symlink to /usr/lib/php5/bin/phpize and"
-		ewarn "/usr/lib/php5/bin/php-config."
+	"${ROOT}/usr/sbin/php-select" -t php-devel php5 > /dev/null 2>&1
+	exitStatus=$?
+	if [[ $exitStatus == 5 ]] ; then
+		php-select php-devel php5
+	elif [[ $exitStatus == 4 ]] ; then
 		ewarn
-	else
-		eselect php-devel set php5
+		ewarn "/usr/bin/php-config and/or /usr/bin/phpize are linked to a"
+		ewarn "different version of PHP. To make them point to PHP v5, use"
+		ewarn "php-select:"
+		ewarn
+		ewarn "   php-select php-devel php5"
+		ewarn
 	fi
 
 	ewarn "If you have additional third party PHP extensions (such as"
@@ -664,6 +695,13 @@ php5_1-sapi_pkg_postinst() {
 	ewarn "with the newer PHP packages releases, so please reemerge any"
 	ewarn "PHP extensions you have installed to automatically adapt to"
 	ewarn "the new configuration layout."
+	if useq sharedext ; then
+		ewarn "The core PHP extensions are now loaded through external"
+		ewarn ".ini files, not anymore using a 'extension=name.so' line"
+		ewarn "in the php.ini file. Portage will take care of this by"
+		ewarn "creating new, updated config-files, please make sure to"
+		ewarn "install those using etc-update or dispatch-conf."
+	fi
 	ewarn
 
 	if useq curl; then
@@ -678,5 +716,20 @@ php5_1-sapi_pkg_postinst() {
 	ewarn "is enabled automatically). You may also need this on other"
 	ewarn "configurations where you disabled TEXTRELs, for example using"
 	ewarn "PaX in the kernel."
+	ewarn
+
+	ewarn "With PHP 5.1, some extensions were removed from PHP because"
+	ewarn "they were unmaintained or moved to PECL. Our ebuilds reflect"
+	ewarn "this: the Oracle extension was removed ('oracle7' USE flag),"
+	ewarn "please use the 'oci8' USE flag for Oracle support now and/or"
+	ewarn "the PDO OCI8 driver, enabled if you set both the 'oci8' and"
+	ewarn "'pdo' USE flags. Also, the MCVE extension was moved to PECL"
+	ewarn "and thus can now be found in dev-php5/pecl-mcve. The Ovrimos"
+	ewarn "and Pfpro extensions were removed altogether and have no"
+	ewarn "available sobstitute."
+
+	ewarn "The 'xml' and 'xml2' USE flags were unified in only the 'xml' USE"
+	ewarn "flag. To get the features that were once controlled by the 'xml2'"
+	ewarn "USE flag, turn the 'xml' USE flag on."
 	ewarn
 }

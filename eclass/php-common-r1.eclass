@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.4 2005/11/01 10:04:13 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.5 2006/01/04 09:22:48 chtekk Exp $
 
 # ########################################################################
 #
@@ -148,7 +148,7 @@ php_check_mta() {
 # ORACLE SUPPORT
 # ########################################################################
 
-php_check_oracle() {
+php_check_oracle_all() {
 	if useq oci8 && [ -z "${ORACLE_HOME}" ]; then
 		eerror
 		eerror "You must have the ORACLE_HOME variable in your environment!"
@@ -157,6 +157,22 @@ php_check_oracle() {
 	fi
 
 	if useq oci8 || useq oracle7 ; then
+		if has_version 'dev-db/oracle-instantclient-basic' ; then
+			ewarn "Please ensure you have a full install of the Oracle client."
+			ewarn "dev-db/oracle-instantclient* is NOT sufficient."
+		fi
+	fi
+}
+
+php_check_oracle_8() {
+	if useq oci8 && [ -z "${ORACLE_HOME}" ]; then
+		eerror
+		eerror "You must have the ORACLE_HOME variable in your environment!"
+		eerror
+		die "Oracle configuration incorrect; user error"
+	fi
+
+	if useq oci8 ; then
 		if has_version 'dev-db/oracle-instantclient-basic' ; then
 			ewarn "Please ensure you have a full install of the Oracle client."
 			ewarn "dev-db/oracle-instantclient* is NOT sufficient."
