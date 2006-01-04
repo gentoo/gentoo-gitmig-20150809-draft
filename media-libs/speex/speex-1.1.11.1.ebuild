@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.11.1.ebuild,v 1.2 2006/01/03 09:28:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.11.1.ebuild,v 1.3 2006/01/04 07:01:39 mr_bones_ Exp $
 
 inherit eutils autotools libtool
 
@@ -30,7 +30,7 @@ src_unpack() {
 		${S}/libspeex/Makefile.am
 
 	eautoreconf
-	
+
 	# Better being safe
 	elibtoolize
 }
