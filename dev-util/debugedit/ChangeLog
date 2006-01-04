@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/debugedit
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.1 2006/01/04 03:04:48 tester Exp $
+
+*debugedit-4.4.3 (04 Jan 2006)
+
+  04 Jan 2006; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +debugedit-4.4.3.ebuild:
+  New ebuild, debugedit is taken from the RPM distribution with the same
+  version number, it gets the list of sources files used to build a binary
+  that has debug information embedded and fixes the paths inside the stripping
+  the build directory
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0334078cfd3dd002105b61a6293ca7a4 ChangeLog 583
+MD5 9b51fe3c28b6a3268b8ed6030f477979 debugedit-4.4.3.ebuild 574
+MD5 2b6e52144bcfb1ad014594cfc593f430 files/digest-debugedit-4.4.3 67
+MD5 d31a65af02ea7e1b7db91c114435fbb2 metadata.xml 155
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuztcmOfEJZHYOKcRAppqAKDHD8XxjMKsRpCgEWLK5gBrrdm+RACgj8bI
+1HWbnT5dwySHiMMxdhZls3Q=
+=ePUW
+-----END PGP SIGNATURE-----
