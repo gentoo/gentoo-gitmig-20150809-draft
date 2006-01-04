@@ -13,7 +13,7 @@ start() {
 	if [ -z "${MLDONKEY_DIR}" ]; then
 		ewarn "mldonkey's start script has been changed. You should remove"
 		ewarn "BASEDIR and SUBDIR from /etc/conf.d/mldonkey and set MLDONKEY_DIR"
-		ewarn "to the corect value (you propably want"
+		ewarn "to the correct value (you probably want"
 		ewarn "MLDONKEY_DIR=${BASEDIR}/${SUBDIR})"
 		MLDONKEY_DIR=${BASEDIR}/${SUBDIR}
 		einfo "Using ${MLDONKEY_DIR} as working directory"
