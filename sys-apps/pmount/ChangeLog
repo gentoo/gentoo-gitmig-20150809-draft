@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.14 2005/12/25 15:26:53 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.15 2006/01/04 19:35:14 cardoe Exp $
+
+  04 Jan 2006; Doug Goldstein <cardoe@gentoo.org> pmount-0.9.6.ebuild:
+  Change sysfsutils dep to 1.3.0
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> pmount-0.9.6.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
