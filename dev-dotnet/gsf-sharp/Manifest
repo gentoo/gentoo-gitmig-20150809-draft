@@ -1,4 +1,14 @@
-MD5 92e42d5fcfac18c646571068e06d8740 ChangeLog 363
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b049d1d6b2c9d6971e4dea6cba129234 ChangeLog 465
 MD5 3906a28a3dc1436e1b6b5dbdb2edd130 files/digest-gsf-sharp-0.6 65
-MD5 607801f7bb86ce35edc868aefc8514f5 gsf-sharp-0.6.ebuild 581
+MD5 7a64f80fd2c5b046d622f8114ade3325 gsf-sharp-0.6.ebuild 593
 MD5 41c8c61dcf74c45eb359a4a41958abb3 metadata.xml 308
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDuySRwUpWvClEHQoRAjO1AJ9edCdis7hhbXcj3rR5JFPzvWUwrwCeNnoU
+ZDRA3nq9tEEI6gy1BNE+4Nk=
+=HaB6
+-----END PGP SIGNATURE-----
