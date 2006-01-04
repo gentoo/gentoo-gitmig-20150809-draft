@@ -1,0 +1,89 @@
+--- control-image.c	2005-10-29 21:36:43.000000000 +0200
++++ control-image-gentoo.c	2006-01-03 15:12:21.803187500 +0100
+@@ -622,7 +622,7 @@
+       return osContinue;
+       
+     // Load additional Commands
+-    pCmd->Load(AddDirectory(cPlugin::ConfigDirectory(g_szConfigDirectory), "imagecmds.conf"));
++    pCmd->Load(AddDirectory(cPlugin::ConfigDirectory(g_szConfigDirectory), "image/imagecmds.conf"));
+   
+     if(pCmd->Count() <= 0)  {
+       delete pCmd;
+--- image.c	2005-10-29 21:50:31.000000000 +0200
++++ image-gentoo.c	2006-01-03 15:34:01.632421750 +0100
+@@ -107,7 +107,7 @@
+     return false;
+   }
+ 
+-  ImageSources.Load(AddDirectory(ConfigDirectory(g_szConfigDirectory),  "imagesources.conf"));
++  ImageSources.Load(AddDirectory(ConfigDirectory(g_szConfigDirectory),  "image/imagesources.conf"));
+   if(ImageSources.Count()<1) {
+     esyslog("imageplugin: you must have defined at least one source in imagesources.conf");
+     return false;
+--- libimage/Makefile.orig	2005-09-11 17:51:12.000000000 +0200
++++ libimage/Makefile	2006-01-03 15:36:56.307338250 +0100
+@@ -3,19 +3,19 @@
+ #
+ # $Id: vdr-image-0.2.4-gentoo.diff,v 1.1 2006/01/04 17:03:52 hd_brummy Exp $
+ 
+-VDRDIR = ../../../..
++VDRDIR = /usr/include
+ 
+ ### The C++ compiler and options:
+ 
+ CXX      ?= g++
+-CXXFLAGS ?= -O0 -g -Wall -Woverloaded-virtual
++#CXXFLAGS ?= -O0 -g -Wall -Woverloaded-virtual
+ 
+--include $(VDRDIR)/Make.config
++-include $(VDRDIR)/vdr/Make.config
+ 
+ ### The directory environment:
+ 
+ 
+-INCLUDES += -I$(VDRDIR)/include 
++INCLUDES += -I$(VDRDIR) 
+ 
+ DEFINES  += -D_GNU_SOURCE
+ 
+--- liboutput/Makefile.orig	2005-10-22 11:49:03.000000000 +0200
++++ liboutput/Makefile	2006-01-03 15:36:56.299337750 +0100
+@@ -3,21 +3,21 @@
+ #
+ # $Id: vdr-image-0.2.4-gentoo.diff,v 1.1 2006/01/04 17:03:52 hd_brummy Exp $
+ 
+-VDRDIR = ../../../..
+-DVBDIR = ../../../../../DVB
++VDRDIR = /usr/include
++DVBDIR = /usr/include
+ #FFMDIR = ../../../../../ffmpeg
+ 
+ ### The C++ compiler and options:
+ 
+ CXX      ?= g++
+-CXXFLAGS ?= -O0 -g -Wall -Woverloaded-virtual
++#CXXFLAGS ?= -O0 -g -Wall -Woverloaded-virtual
+ 
+--include $(VDRDIR)/Make.config
++-include $(VDRDIR)/vdr/Make.config
+ 
+ ### The directory environment:
+ 
+ 
+-INCLUDES += -I$(VDRDIR)/include -I.
++INCLUDES += -I$(VDRDIR) -I.
+ ifdef FFMDIR
+ INCLUDES += -I$(FFMDIR)/libavcodec -I$(FFMDIR)/libavutil
+ endif
+
+--- examples/imagecmds.conf.DE	2005-09-11 17:51:12.000000000 +0200
++++ examples/imagecmds-gentoo.conf.DE	2006-01-04 13:39:57.836373750 +0100
+@@ -11,6 +11,6 @@
+ Informationen über das Bild                              : identify -verbose
+ Größe des Bildes                                         : du -chs %s
+ Exif Informationen des JPEG-Bildes ausgeben              : jpegtopnm -dumpexif %s >/dev/null 2> $CONVERT_TEMPDIR/exif.tmp && cat $CONVERT_TEMPDIR/exif.tmp && rm -f $CONVERT_TEMPDIR/exif.tmp
+-Rotatiere JPEG Bildes verlustlos um 90° nach Rechts      : jpegtran -rotate 90 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
+-Rotatiere JPEG Bildes verlustlos um 90° nach Links       : jpegtran -rotate 270 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
++Rotiere JPEG Bildes verlustlos um 90° nach Rechts      : jpegtran -rotate 90 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
++Rotiere JPEG Bildes verlustlos um 90° nach Links       : jpegtran -rotate 270 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
+ Lösche Bild                                             ?: rm -f %s
