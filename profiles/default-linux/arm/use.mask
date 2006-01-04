@@ -22,3 +22,7 @@ afs
 
 mono
 pike
+
+# Luca Longinotti <chtekk@gentoo.org>
+# fix dev-lang/php + arm + firebird
+firebird
