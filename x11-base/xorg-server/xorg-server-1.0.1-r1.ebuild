@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r1.ebuild,v 1.1 2006/01/03 06:56:25 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r1.ebuild,v 1.2 2006/01/04 18:55:15 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -117,9 +117,6 @@ src_install() {
 	x-modular_src_install
 
 	dynamic_libgl_install
-
-	# As of 20051028, should be taken care of by upstream
-	dosym Xorg /usr/bin/X
 }
 
 pkg_postinst() {

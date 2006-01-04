@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.78 2006/01/03 06:56:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.79 2006/01/04 18:55:15 spyderous Exp $
+
+  04 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-1.0.1-r1.ebuild:
+  No need to manually create Xorg -> X symlink anymore.
 
 *xorg-server-1.0.1-r1 (03 Jan 2006)
 
