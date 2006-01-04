@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 42aec3de577c0ecba3c04bf8edd9d020 ChangeLog 2020
 MD5 0460e313c5378e4ac58402a91e1b130e files/digest-pmount-0.9.6 64
 MD5 aac86bf5e50eb9cef83a6f6800c560af metadata.xml 253
 MD5 4e9dd41f53e8173e6b609fc63a9d93d9 pmount-0.9.6.ebuild 1424
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvDg0BtvusYtCZMsRAv0fAJ90Mupr4kLvwKLmBEh128tpkSSc2gCgi/6Y
+CrBYWcKHTeLFfaiAhpbH01w=
+=Mzea
+-----END PGP SIGNATURE-----
