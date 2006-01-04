@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4828 2006/01/04 22:40:34 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4829 2006/01/04 22:57:42 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -964,10 +964,6 @@ dev-util/pida
 # Luca Barbato <lu_zero@gentoo.org> (03 Aug 2005)
 # First experimental ebuild with dlloader support, should be fixed
 =media-video/ati-drivers-8.14.13-r3
-
-# Renat Lumpau <rl03@gentoo.org> (01 Aug 2005)
-# Installs into /usr/local, ebuild should not have been committed
-www-apps/interchange
 
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
