@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r1.ebuild,v 1.2 2006/01/04 18:55:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r1.ebuild,v 1.3 2006/01/04 19:02:17 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -94,6 +94,9 @@ pkg_setup() {
 	# localstatedir is used for the log location; we need to override the default
 	# from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
+
+	# --enable-xorg needed because darwin defaults off
+	# --enable-install-setuid needed because sparcs default off
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
 		$(use_enable !minimal dmx)
@@ -101,14 +104,10 @@ pkg_setup() {
 		$(use_enable !minimal xnest)
 		$(use_enable dri)
 		$(use_enable xprint)
-		--enable-xcsecurity
 		--with-mesa-source=${WORKDIR}/${MESA_P}
 		--enable-xorg
-		--enable-xtrap
-		--enable-xevie
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
-		--disable-static
 		--enable-install-setuid
 		--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1"
 }
