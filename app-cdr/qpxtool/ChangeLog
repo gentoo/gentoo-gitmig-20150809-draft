@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/qpxtool
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.1 2006/01/04 05:03:04 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.2 2006/01/04 14:44:02 caleb Exp $
+
+  04 Jan 2006; Caleb Tennis <caleb@gentoo.org> qpxtool-0.4.2.ebuild:
+  fix qmake calling
 
 *qpxtool-0.4.2 (04 Jan 2006)
 

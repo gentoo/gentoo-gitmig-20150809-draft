@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.4.2.ebuild,v 1.1 2006/01/04 05:03:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.4.2.ebuild,v 1.2 2006/01/04 14:44:02 caleb Exp $
 
-inherit kde-functions
+inherit kde-functions qt3
 
 DESCRIPTION="cd/dvd quality check for Plextor drives"
 HOMEPAGE="http://qpxtool.sourceforge.net/"
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-need-qt 3
+DEPEND="=x11-libs/qt-3*"
 
 src_compile() {
-	qmake -project || die "qmake -project failed"
-	qmake qpxtool-${PV}.pro || die "qmake qpxtool failed"
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -project || die "qmake -project failed"
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qpxtool-${PV}.pro || die "qmake qpxtool failed"
 	emake || die "emake failed"
 }
 
