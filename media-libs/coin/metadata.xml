@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<!-- THIS PACKAGE NEEDS A MAINTAINER or HERD! -->
+<maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
-
