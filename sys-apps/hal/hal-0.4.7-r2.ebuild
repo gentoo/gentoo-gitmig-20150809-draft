@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.10 2005/12/31 13:52:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.11 2006/01/04 01:02:24 vapier Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
