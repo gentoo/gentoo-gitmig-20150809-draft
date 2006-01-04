@@ -1,0 +1,7 @@
+MD5 f84530179f4d6eb52ae9ec8e15f7e4e2 ChangeLog 479
+MD5 46b03067cc8c9cd090efa8917a88a922 files/confd 1771
+MD5 a9eb9beb21097a63ccc0b0adccb47115 files/digest-vdr-mp3ng-0.9.13_pre3 154
+MD5 64850f83317e8aab4bfa1e9f88eddeeb files/mp3ngsources 251
+MD5 c2e80e832f8316d741e9a0f9fab97c4f files/vdr-mp3ng-0.9.13_pre3-gentoo.diff 1313
+MD5 6a8a6784a889090822eb1f33ae8552d0 metadata.xml 479
+MD5 46f0ac221aedb853b90d0dd39edb2fa9 vdr-mp3ng-0.9.13_pre3.ebuild 1516
