@@ -1,6 +1,9 @@
-MD5 049fe9dd86bd4015004ae1e3a5520c52 ChangeLog 19487
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d1492d407d8ee4b08c245e6cca89ab84 ChangeLog 19601
 MD5 d4f0febb27460c43fb258412acde17b8 control-center-1.4.0.5-r1.ebuild 1333
-MD5 2b8a0bd63f72202ee3e584c789f32e1e control-center-1.4.0.5-r2.ebuild 1407
+MD5 6d0a3161f308c456be53baf01e915e2e control-center-1.4.0.5-r2.ebuild 1406
 MD5 f591b4d2e1987a08027ebfa25c396f36 control-center-2.10.2.ebuild 2013
 MD5 fb5ca50373f5813456ab01b99119916c control-center-2.12.1.ebuild 2523
 MD5 a592afc78d83776f7fe57de3781893e6 control-center-2.12.2-r1.ebuild 2563
@@ -18,3 +21,10 @@ MD5 cd6f25b991e95ef9f518b4c499f2e2f7 files/digest-control-center-2.10.2 75
 MD5 ce951b06688a38662ed2c0e5e8d0d1bc files/digest-control-center-2.12.1 75
 MD5 ee57d7f95478cf42c392dd7c457d4fe7 files/digest-control-center-2.12.2-r1 75
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvFuPCRZPokWLroQRAiabAJ9VCBO4OzBLxkWvDySZQVs2j3ygSACg4eT/
+3pAf2ilRo1KmuG3PshfNWu0=
+=LzrG
+-----END PGP SIGNATURE-----
