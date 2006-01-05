@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.2 2005/12/14 21:07:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.3 2006/01/05 00:17:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,10 +20,20 @@ IUSE="opengl dedicated"
 
 RDEPEND="games-fps/ut2004-data
 	games-fps/ut2004-bonuspack-ece
-	opengl? ( virtual/opengl )
-	dedicated? ( app-misc/screen )
-	|| ( sys-libs/libstdc++-v3
-		=sys-devel/gcc-3.3* )"
+	opengl? (
+		virtual/opengl )
+	dedicated? (
+		app-misc/screen )
+	|| (
+		sys-libs/libstdc++-v3
+		=sys-devel/gcc-3.3* )
+	|| (
+		(
+			x11-libs/libXext
+			x11-libs/libX11
+			x11-libs/libXau
+			x11-libs/libXdmcp )
+		virtual/x11 )"
 
 S=${WORKDIR}/UT2004-Patch
 
