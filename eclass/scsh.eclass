@@ -1,17 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.5 2005/08/23 15:03:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.6 2006/01/05 17:51:33 mkennedy Exp $
 #
 
 inherit eutils
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~x86"
-
 IUSE="scsh"
+DEPEND="$DEPEND
+	app-shells/scsh"
 
-SCSH_SCSH_PATH=/usr/$(get_libdir)/scsh
+scsh_scsh_path() {
+	echo /usr/$(get_libdir)/scsh
+}
 
 set_layout() {
 	if use scsh; then
@@ -41,7 +43,7 @@ set_path_variables() {
 	esac
 	export SCSH_PREFIX SCSH_MODULES_PATH
 
-	SCSH_LIB_DIRS='"'${SCSH_MODULES_PATH}'"'" "'"'${SCSH_SCSH_PATH}'"'" "'"'.'"'
+	SCSH_LIB_DIRS='"'${SCSH_MODULES_PATH}'"'" "'"'$(scsh_scsh_path)'"'" "'"'.'"'
 	export SCSH_LIB_DIRS
 }
 
@@ -63,7 +65,7 @@ scsh_get_layout_conf() {
 }
 
 scsh_src_compile() {
-	get_layout_conf
+	scsh_get_layout_conf
 }
 
 scsh_src_install() {
@@ -71,4 +73,4 @@ scsh_src_install() {
 	scsh-install-pkg ${SCSH_LAYOUT_CONF} || die "./scsh-install-pkg failed"
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install get_layout_conf
+EXPORT_FUNCTIONS src_unpack src_compile src_install
