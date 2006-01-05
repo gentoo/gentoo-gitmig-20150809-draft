@@ -8,13 +8,13 @@ MD5 4fcfcb66c332083c66d4758cd414fc48 files/digest-opensc-0.9.4 65
 MD5 445cf2952a7b5ec61952c79beca84f7d files/digest-opensc-0.9.6 65
 MD5 c16f3cf2a3cb31195b173e54f4d2212d files/opensc-0.9.4-gcc4.patch 446
 MD5 286a92520aa59a11916aacd680088270 metadata.xml 663
-MD5 eca02b80899c180b1436f0e83b362a5a opensc-0.10.0.ebuild 1448
-MD5 ad0318cc3702c9cea2b7e4033a2362d6 opensc-0.9.4.ebuild 1535
+MD5 7ea30c97ac334c063d69e1bc12e982d4 opensc-0.10.0.ebuild 1452
+MD5 ec3f36ae5756bf9ec8704d4c3f0cbf53 opensc-0.9.4.ebuild 1537
 MD5 c5d0739c98f472f7f9b182400fd38f22 opensc-0.9.6.ebuild 1515
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDdv+qgIKl8Uu19MoRAvQxAJ9l1UTgRQuuTMYrZ4Vj1dK0XX9cMgCeORt6
-4p68RH+RL2lJK8fb1Mh+Pqs=
-=QHeo
+iD8DBQFDvJZv2+ySkm8kpY0RAhMXAJ4g+uMyX4L9wP6gATWHmbKGf8mqmACgpm9t
+OtvBTT3xYRYfeZMDd1LVXZA=
+=UXlk
 -----END PGP SIGNATURE-----
