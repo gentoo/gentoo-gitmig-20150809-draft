@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gnu
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.7 2005/12/13 20:45:12 seemant Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.8 2006/01/05 00:22:22 genstef Exp $
+
+  05 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-gnu-8.16-r1.ebuild:
+  Add media-libs/tiff depend thanks to chratnox@gmail.com in bug 114663
 
   13 Dec 2005; Seemant Kulleen <seemant@gentoo.org>
   ghostscript-gnu-8.16-r1.ebuild:

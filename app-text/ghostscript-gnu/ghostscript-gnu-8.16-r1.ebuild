@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.4 2005/12/14 06:01:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.5 2006/01/05 00:22:22 genstef Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ IUSE="X cups cjk gtk"
 PROVIDE="virtual/ghostscript"
 
 DEPEND="virtual/libc
+	media-libs/tiff
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.2.0
@@ -38,7 +39,13 @@ DEPEND="virtual/libc
 
 RDEPEND="X? ( || ( (	x11-libs/libXt
 			x11-libs/libXi )
-	virtual/x11 ) )"
+	virtual/x11 ) )
+	media-libs/tiff
+	>=media-libs/jpeg-6b
+	>=media-libs/libpng-1.2.5
+	>=sys-libs/zlib-1.2.0
+	cups? ( >=net-print/cups-1.1.20 )
+	"
 
 S=${WORKDIR}/${MY_P}
 
