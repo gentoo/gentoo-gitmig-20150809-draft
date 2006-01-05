@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/make.defaults,v 1.8 2006/01/05 15:38:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/make.defaults,v 1.9 2006/01/05 15:42:33 gustavoz Exp $
 
 # 64bit kernel, 32bit userland
 CHOST="sparc-unknown-linux-gnu"
@@ -24,6 +24,3 @@ LIBDIR_sparc32="lib"
 # Compiler flags
 CFLAGS="-O2 -mcpu=ultrasparc -pipe"
 CXXFLAGS=${CFLAGS}
-
-# Misc
-FEATURES="sandbox ccache"
