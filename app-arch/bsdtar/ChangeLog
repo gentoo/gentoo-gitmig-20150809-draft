@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bsdtar
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.18 2005/11/08 11:37:45 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.19 2006/01/05 10:08:06 flameeyes Exp $
+
+  05 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -bsdtar-1.02.036.ebuild:
+  Drop old version.
 
 *bsdtar-1.2.37 (08 Nov 2005)
 
