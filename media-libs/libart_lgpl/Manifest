@@ -5,12 +5,12 @@ MD5 875577a0cc2791fc6bfcd267e729ac11 ChangeLog 4007
 MD5 74b2647d24b94747a1baba0991bc11b7 files/digest-libart_lgpl-2.3.16 71
 MD5 0749f048bd1460c27e0e7a5e8bdaa581 files/digest-libart_lgpl-2.3.17 71
 MD5 976f78bd3fb6554e617c8e4311a28079 libart_lgpl-2.3.16.ebuild 599
-MD5 4339ad988943f6b8239194865aa7695a libart_lgpl-2.3.17.ebuild 533
+MD5 37cd5dbdb5422ff73f686aa8ec2cf34d libart_lgpl-2.3.17.ebuild 536
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDnGsUgIKl8Uu19MoRAv9lAJ94x2uah7k0R0V/M4ma8e+nYaBZpACeO101
-Qbr1a3+l2Khn4L8UWgKaayg=
-=RyQ1
+iD8DBQFDvK4v2+ySkm8kpY0RAvwEAJ9yzqwarwW8bCOqZRj2r+0QGFTEjwCeNzfS
+190Vyw122/laDn4lOaYCuDg=
+=79B/
 -----END PGP SIGNATURE-----
