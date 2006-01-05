@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.6.ebuild,v 1.5 2005/09/03 21:06:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.6.ebuild,v 1.6 2006/01/05 17:53:39 mkennedy Exp $
 
 inherit eutils scsh
 
@@ -30,7 +30,7 @@ src_compile() {
 	scsh_conf="--prefix=/usr
 		--libdir=/usr/$(get_libdir)
 		--includedir=/usr/include
-		--with-lib-dirs-list=${SCSH_SCSH_PATH} "
+		--with-lib-dirs-list=$(scsh_scsh_path)"
 	econf ${scsh_conf} || die
 	emake || die
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/scsh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.18 2005/09/03 21:06:46 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.19 2006/01/05 17:53:39 mkennedy Exp $
+
+  05 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org> scsh-0.6.6.ebuild:
+  Synchronize with recent scsh.eclass changes.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> scsh-0.6.6.ebuild:
   Stable on ppc.
