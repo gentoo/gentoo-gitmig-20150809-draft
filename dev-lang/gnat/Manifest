@@ -8,7 +8,7 @@ MD5 ffcd9ae5ebd258ffd9c88fc3cf225bd6 files/digest-gnat-3.41 315
 MD5 119e0c400e71cdafcfb3eeca106c7029 files/digest-gnat-3.43 315
 MD5 c1759c1573408778816003fb5c8c8cc0 files/digest-gnat-3.44-r1 315
 MD5 7cbb180e3b767f2d800242a04555b433 files/digest-gnat-3.44-r2 363
-MD5 e2fa31ceddff6bc6e628c5d7107cf0ec files/digest-gnat-3.45 362
+MD5 dc0801090b8327d1efb06f630bc7cd9c files/digest-gnat-3.45 363
 MD5 6055ef6f0b3cd0df65743bfedb9de925 files/gnat-3.15p-gentoo-nonx86.patch.bz2 2112
 MD5 f2825770e20893d32738f4106cd3d628 files/gnat-3.15p-gentoo.patch.bz2 3754
 MD5 6c454f942791a6212d8b5cf5c92aa2d0 files/gnat-3.15p-i686-pc-linux-gnu-bin.patch 605
