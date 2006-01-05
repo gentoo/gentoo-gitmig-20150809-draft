@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cabextract
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.29 2005/10/06 19:38:33 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.30 2006/01/05 11:41:34 flameeyes Exp $
+
+  05 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> cabextract-1.1.ebuild:
+  Don't apply the -configure patch conditional to userland, and as FreeBSD
+  does not really require it, just use it when the libc used is Darwin.
 
   06 Oct 2005; Fabian Groffen <grobian@gentoo.org> cabextract-1.1.ebuild:
   Reenabled patch on Darwin (OSX)
