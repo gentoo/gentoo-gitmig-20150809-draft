@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.2 2005/11/20 01:35:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.3 2006/01/05 09:11:39 sebastian Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 # Maintained by the PHP Herd <php-bugs@gentoo.org>
@@ -27,9 +27,21 @@ php-pear-lib-r1_src_install() {
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
 
+	case "${CATEGORY}" in
+		dev-php)
+			if has_version '=dev-lang/php-5*' ; then
+				PHP_BIN="/usr/lib/php5/bin/php"
+			else
+				PHP_BIN="/usr/lib/php4/bin/php"
+			fi ;;
+		dev-php4) PHP_BIN="/usr/lib/php4/bin/php" ;;
+		dev-php5) PHP_BIN="/usr/lib/php5/bin/php" ;;
+		*) die "I don't know which version of PHP packages in ${CATEGORY} require"
+	esac
+
 	cd "${S}"
 	mv "${WORKDIR}/package.xml" "${S}"
-	pear install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
+	pear -d php_bin="${PHP_BIN}" install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
 
 	rm -rf "${D}/usr/share/php/.filemap" \
 	"${D}/usr/share/php/.lock" \
