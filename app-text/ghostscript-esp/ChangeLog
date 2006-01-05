@@ -1,6 +1,21 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.2 2006/01/05 02:04:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.3 2006/01/05 11:12:14 genstef Exp $
+
+  05 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-7.05.6.man.patch,
+  -files/ghostscript-esp-7.05.6.man.patch,
+  +files/ghostscript-7.07-bigposttable.patch,
+  -files/ghostscript-esp-7.07-bigposttable.patch,
+  +files/ghostscript-7.07-coverage-glyphcount.patch,
+  -files/ghostscript-esp-7.07-coverage-glyphcount.patch,
+  +files/ghostscript-7.07-fix_cidfontname_Encoding_CIDToGIDMap_DW_W.patch,
+  -files/ghostscript-esp-7.07-fix_cidfontname_Encoding_CIDToGIDMap_DW_W.patc
+  h, +files/ghostscript-7.07-fix_rename_font_gs_cidfn.ps.patch,
+  -files/ghostscript-esp-7.07-fix_rename_font_gs_cidfn.ps.patch,
+  +files/ghostscript-7.07-gsublookuptable.patch,
+  -files/ghostscript-esp-7.07-gsublookuptable.patch:
+  Change patch names to fix compiling, bug 117841
 
 *ghostscript-esp-8.15.1 (05 Jan 2006)
 
