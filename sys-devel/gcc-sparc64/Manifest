@@ -1,4 +1,4 @@
-MD5 a040e2d306225791b39dd491e8936f01 ChangeLog 5291
+MD5 96c28152441a43fea855ec79697d6d3e ChangeLog 5395
 MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-gcc-sparc64-3.3.5 64
 MD5 79ef0db9c6e9750aa92334dded832283 files/digest-gcc-sparc64-3.3.6 64
 MD5 4b8b4306f268900392bbd0319bdfdf65 files/digest-gcc-sparc64-3.4.4 64
@@ -8,5 +8,5 @@ MD5 bffc563ab83f8025f3e477286ece2e65 files/gcc-3.3.6-gentoo-branding.patch 874
 MD5 2dccac0ceda82c6ede0802b5731ec060 gcc-sparc64-3.3.5.ebuild 3019
 MD5 0eeabe3a8456b75ffa16f0605b19a5a6 gcc-sparc64-3.3.6.ebuild 3020
 MD5 a7433e69749c87a401072b9389d77587 gcc-sparc64-3.4.4.ebuild 3356
-MD5 4597d07c0a1f9ffeb69c1f86392de0f2 gcc-sparc64-3.4.5.ebuild 3358
+MD5 3769214207e22eef2fde09c9462dfe18 gcc-sparc64-3.4.5.ebuild 3360
 MD5 f826fcca414fc0c05030db1f99e479d8 metadata.xml 360
