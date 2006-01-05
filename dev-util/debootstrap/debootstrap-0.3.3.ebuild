@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-0.3.3.ebuild,v 1.1 2006/01/02 04:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-0.3.3.ebuild,v 1.2 2006/01/05 04:03:48 vapier Exp $
 
 DESCRIPTION="Debian bootstrap scripts"
 HOMEPAGE="http://packages.qa.debian.org/d/debootstrap.html"
@@ -15,6 +15,8 @@ IUSE=""
 DEPEND="sys-devel/binutils
 	net-misc/wget
 	app-arch/dpkg"
+
+S=${WORKDIR}/${PV}
 
 src_unpack() {
 	unpack debootstrap_${PV}.tar.gz
