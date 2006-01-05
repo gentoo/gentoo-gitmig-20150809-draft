@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.8 2005/12/21 22:26:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.9 2006/01/05 19:24:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -28,10 +28,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nowin sou hou"
 RESTRICT="nostrip nomirror"
 
-RDEPEND="virtual/x11
+RDEPEND=">=games-rpg/nwn-1.66-r1
 	virtual/opengl
 	>=media-libs/libsdl-1.2.5
-	amd64? ( app-emulation/emul-linux-x86-baselibs )"
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs )"
 
 S=${WORKDIR}/nwn
 
