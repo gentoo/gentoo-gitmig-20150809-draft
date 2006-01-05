@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.1 2005/12/30 11:04:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.2 2006/01/05 03:05:42 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -101,6 +101,12 @@ cheap_portageq_envvar() {
 
 get_real_chost() {
 	[[ -n ${REAL_CHOST} ]] && return 0
+
+	# shortcut for switching compilers in a cross chroot
+	if [[ -n ${CHOST} && ${ROOT} != "/" ]] ; then
+		REAL_CHOST=${CHOST}
+		return 0
+	fi
 
 	# make sure portage isnt broken
 	if ${PYTHON} -V &>/dev/null ; then
@@ -272,7 +278,7 @@ switch_profile() {
 	# http://bugs.gentoo.org/60190
 	#
 	# The funky move magic is required for proper updating of in-use files.
-	if ! is_cross_compiler ; then
+	if ! is_cross_compiler && [[ ${ROOT} == "/" ]] ; then
 		# Need to cut out extra paths in multilib case and pray the first path
 		# is the "root" multilib path ... maybe some day change this to use
 		# `gcc -print-file-name` ...
