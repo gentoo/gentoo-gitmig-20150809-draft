@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r9.ebuild,v 1.3 2005/12/24 05:15:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r9.ebuild,v 1.4 2006/01/05 06:06:15 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,10 +12,11 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="build nls static"
+IUSE="build nls pcre static"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	pcre? ( dev-libs/libpcre )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -50,8 +51,17 @@ src_compile() {
 	econf \
 		--bindir=/bin \
 		$(use_enable nls) \
-		--disable-perl-regexp \
+		$(use_enable pcre perl-regexp) \
 		|| die "econf failed"
+
+	if ! use static ; then
+		# XXX: UGLY HACK
+		# force static linking so we dont have to move libpcre into /
+		sed -i \
+			-e 's:-lpcre:-Wl,-Bstatic -lpcre -Wl,-Bdynamic:g' \
+			src/Makefile || die "sed static pcre failed"
+	fi
+
 	emake || die "emake failed"
 }
 
