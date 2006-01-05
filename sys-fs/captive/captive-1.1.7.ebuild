@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7.ebuild,v 1.1 2006/01/05 02:12:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7.ebuild,v 1.2 2006/01/05 11:42:39 genstef Exp $
 
 inherit eutils
 
@@ -44,6 +44,7 @@ pkg_setup() {
 }
 
 src_compile() {
+	sed -i 's/#error "Unsupported: TICKSTO1970/\0"/' src/libcaptive/rtl/time.c || die 01
 	# disable some tests to save time ;)
 	econf $(use_enable debug bug-replay) \
 		$(use_with readline) \
