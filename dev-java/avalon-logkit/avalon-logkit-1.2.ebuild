@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.24 2005/10/15 13:17:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.25 2006/01/05 12:57:15 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -63,7 +63,7 @@ src_unpack() {
 src_compile() {
 	# not generating api docs because we would 
 	# need avalon-site otherwise
-	local antflags="jar"
+	local antflags="jar -Djunit.jar=$(java-pkg_getjar junit junit.jar)"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "Compilation failed"
 }

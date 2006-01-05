@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/avalon-logkit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.21 2005/10/15 13:17:52 axxo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.22 2006/01/05 12:57:15 betelgeuse Exp $
+
+  05 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
+  avalon-logkit-1.2.ebuild:
+  Added junit.jar property to antflags to not rely on ant making junit.jar
+  available.
 
   15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> avalon-logkit-1.2.ebuild,
   avalon-logkit-2.0.ebuild:
