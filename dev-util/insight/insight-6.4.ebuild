@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.3 2006/01/05 00:17:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.4 2006/01/05 07:34:25 tester Exp $
 
 inherit eutils
 
@@ -9,10 +9,12 @@ IUSE="nls"
 DESCRIPTION="A graphical interface to the GNU debugger"
 HOMEPAGE="http://sources.redhat.com/insight/index.html"
 LICENSE="GPL-2 LGPL-2"
-DEPEND="|| ( x11-libs/libXt virtual/x11 )
+DEPEND="|| ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 )
+	nls? ( sys-devel/gettext )
 	sys-libs/ncurses"
-RDEPEND="${DEPEND}
-	nls? ( sys-devel/gettext )"
+RDEPEND="sys-libs/ncurses
+	|| ( x11-libs/libX11 virtual/x11 )"
+
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"

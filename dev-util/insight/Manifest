@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 142d7beeb63c31e23f9d7fda1d8350a8 ChangeLog 2797
+MD5 0c4b07a8fd6ee64f6573470e2cf2295f ChangeLog 2918
 MD5 5a030894bc99706b3fd19213674c4043 files/99insight 70
 MD5 761285348baf9b36f19392b40d743ec9 files/digest-insight-6.1 66
 MD5 53a8802a6febebc518d5459fee2a74a2 files/digest-insight-6.4 66
-MD5 e0ea6ff17256311fade4a0951fd14524 insight-6.1.ebuild 1192
-MD5 57f11cb1426cda81d283f7fbeb76ed10 insight-6.4.ebuild 1074
+MD5 0393e4154d052e458fe7c21761b3b646 insight-6.1.ebuild 1254
+MD5 04213b19fb22aea13099d11ce61c4121 insight-6.4.ebuild 1138
 MD5 32f80b86a1f5194b0105357bc033324b metadata.xml 286
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvGXtmOfEJZHYOKcRAtzWAKCE2478jUKOD4Om2E2miUbuRKowVgCaAjh9
-QpKSxJczQ/fVQoPnFUS+jGM=
-=zKry
+iD8DBQFDvMwbmOfEJZHYOKcRApeBAKCH2ys2IyUmdm42mDK/t+2mNN+fmQCgunj2
+sXKicAHbX7kk7D7+6owfHT4=
+=RU9z
 -----END PGP SIGNATURE-----
