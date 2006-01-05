@@ -1,0 +1,22 @@
+--- espgs-8.15rc3/src/gdevps.c.badc	2005-02-16 21:21:49.000000000 +0000
++++ espgs-8.15rc3/src/gdevps.c	2005-06-03 10:56:31.000000000 +0100
+@@ -1164,7 +1164,7 @@
+     gs_rect bbox;
+ 
+     gx_device_bbox_bbox(vdev->bbox_device, &bbox);
+-    if (pdev->first_page & !vdev->in_page) {
++    if (pdev->first_page && !vdev->in_page) {
+ 	/* Nothing has been written.  Write the file header now. */
+ 	code = psw_begin_file(pdev, &bbox);
+         if (code < 0)
+--- espgs-8.15rc3/src/scfd.c.badc	2005-01-19 04:08:41.000000000 +0000
++++ espgs-8.15rc3/src/scfd.c	2005-06-03 10:56:31.000000000 +0100
+@@ -305,7 +305,7 @@
+ 	 * in the string of initial zeros in the EOL.  If EndOfLine
+ 	 * is false, we aren't sure what we should do....
+ 	 */
+-	if (ss->EncodedByteAlign & !ss->EndOfLine)
++	if (ss->EncodedByteAlign && !ss->EndOfLine)
+ 	    ss->bits_left &= ~7;
+     }
+     /* If we're between scan lines, scan for EOLs. */

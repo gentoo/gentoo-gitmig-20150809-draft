@@ -1,0 +1,37 @@
+--- espgs-8.15rc3/lib/pv.sh.scripts	2005-01-19 04:08:41.000000000 +0000
++++ espgs-8.15rc3/lib/pv.sh	2005-06-02 17:40:08.000000000 +0100
+@@ -26,12 +26,17 @@
+ # the -D switch from the call of dvips below.
+ #
+ TEMPDIR=.
+-PAGE=$1
++PAGE="$1"
+ shift
+-FILE=$1
++FILE="$1"
+ shift
+-trap "rm -rf $TEMPDIR/$FILE.$$.pv" 0 1 2 15
+-#dvips -D$RESOLUTION -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
+-dvips -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
+-gs $FILE.$$.pv
++TEMPFILE=`mktemp "$TEMPDIR/$FILE.XXXXXX"`
++if [ $? -ne 0 ]
++then
++  exit 1
++fi
++trap 'rm -f "$TEMPFILE"' 0 1 2 15
++#dvips -R -D$RESOLUTION -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
++dvips -R -p $PAGE -n 1 "$FILE" "$@" -o "$TEMPFILE"
++gs "$TEMPFILE"
+ exit 0
+--- espgs-8.15rc3/lib/ps2epsi.scripts	2005-06-02 17:41:32.000000000 +0100
++++ espgs-8.15rc3/lib/ps2epsi	2005-06-02 17:41:50.000000000 +0100
+@@ -5,7 +5,7 @@
+ 	gs=gs
+ fi
+ 
+-tmpfile=/tmp/ps2epsi$$
++tmpfile=`mktemp ${TMPDIR-/tmp}/ps2epsi.XXXXXX`
+ rm -f $tmpfile
+ if test -e $tmpfile; then
+ 	echo "$0: Our temporary file $tmpfile already exists." 1>&2

@@ -1,6 +1,18 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.1 2006/01/05 00:00:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.2 2006/01/05 02:04:55 metalgod Exp $
+
+*ghostscript-esp-8.15.1 (05 Jan 2006)
+
+  05 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/ghostscript-badc.patch, +files/ghostscript-build.patch,
+  +files/ghostscript-gtk2.patch, +files/ghostscript-noopt.patch,
+  +files/ghostscript-pagesize.patch, +files/ghostscript-ps2epsi.patch,
+  +files/gs-8.15.1destdir.patch, +files/ghostscript-scripts.patch,
+  +files/ghostscript-split-font-configuration.patch,
+  +files/ghostscript-use-external-freetype.patch,
+  +ghostscript-esp-8.15.1.ebuild:
+  Version Bump. Thanks to all people involved in bug #91119.
 
 *ghostscript-esp-7.07.1-r10 (04 Jan 2006)
 *ghostscript-esp-7.07.1-r8 (04 Jan 2006)

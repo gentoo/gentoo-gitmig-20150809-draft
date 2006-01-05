@@ -1,0 +1,12 @@
+--- ghostscript-7.07/src/gdevpsu.c.pagesize	2004-06-25 17:31:43.054995862 +0100
++++ ghostscript-7.07/src/gdevpsu.c	2004-06-25 17:33:07.500857781 +0100
+@@ -273,6 +273,9 @@
+ 	while (p->size_name[0] == '/' &&
+ 	       (p->width != width || p->height != height))
+ 	    ++p;
++	/* If no match then decrement pointer back to /letter */
++	if (p->width == 0 && p->height == 0)
++	    --p;
+ 	pprintd2(s, "%d %d ", width, height);
+ 	pprints1(s, "%s setpagesize\n", p->size_name);
+     }

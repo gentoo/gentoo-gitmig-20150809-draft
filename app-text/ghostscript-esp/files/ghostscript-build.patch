@@ -1,0 +1,40 @@
+--- espgs-8.15rc3/src/unix-dll.mak.build	2005-06-03 12:49:36.000000000 +0100
++++ espgs-8.15rc3/src/unix-dll.mak	2005-06-03 12:49:59.000000000 +0100
+@@ -87,7 +87,7 @@
+ 
+ # Normal shared object
+ so: SODIRS
+-	$(MAKE) $(SODEFS) CFLAGS='$(CFLAGS_STANDARD) $(CFLAGS_SO) $(GCFLAGS) $(XCFLAGS)' prefix=$(prefix) $(GSSOC) $(GSSOX)
++	$(MAKE) $(SODEFS) CFLAGS='$(CFLAGS_STANDARD) $(CFLAGS_SO) $(GCFLAGS) $(XCFLAGS) $(ACDEFS)' prefix=$(prefix) $(GSSOC) $(GSSOX)
+ 
+ # Debug shared object
+ # Note that this is in the same directory as the normal shared
+--- espgs-8.15rc3/src/devs.mak.build	2005-06-03 22:41:16.000000000 +0100
++++ espgs-8.15rc3/src/devs.mak	2005-06-03 22:42:54.000000000 +0100
+@@ -457,7 +457,7 @@
+ 	$(GLCCSHARED) $(XINCLUDE) $(GLO_)gdevx.$(OBJ) $(C_) $(GLSRC)gdevx.c
+ 
+ $(GLOBJ)gdevxcmp.$(OBJ) : $(GLSRC)gdevxcmp.c $(GDEVX) $(math__h)
+-	$(GLCC) $(XINCLUDE) $(GLO_)gdevxcmp.$(OBJ) $(C_) $(GLSRC)gdevxcmp.c
++	$(GLCCSHARED) $(XINCLUDE) $(GLO_)gdevxcmp.$(OBJ) $(C_) $(GLSRC)gdevxcmp.c
+ 
+ $(GLOBJ)gdevxini.$(OBJ) : $(GLSRC)gdevxini.c $(GDEVX) $(memory__h)\
+  $(gserrors_h) $(gsparamx_h) $(gxdevmem_h) $(gdevbbox_h)
+--- espgs-8.15rc3/src/lib.mak.build	2005-06-03 22:51:22.000000000 +0100
++++ espgs-8.15rc3/src/lib.mak	2005-06-03 22:52:11.000000000 +0100
+@@ -847,7 +847,7 @@
+ $(GLOBJ)gsparamx.$(OBJ) : $(GLSRC)gsparamx.c $(string__h)\
+  $(gserror_h) $(gserrors_h) $(gsmemory_h) $(gsparam_h) $(gsparamx_h)\
+  $(gstypes_h)
+-	$(GLCC) $(GLO_)gsparamx.$(OBJ) $(C_) $(GLSRC)gsparamx.c
++	$(GLCCSHARED) $(GLO_)gsparamx.$(OBJ) $(C_) $(GLSRC)gsparamx.c
+ 
+ # Future replacement for gsparams.c
+ $(GLOBJ)gsparam2.$(OBJ) : $(GLSRC)gsparam2.c $(GXERR) $(memory__h)\
+
+ # Provide a mapping between StandardEncoding and ISOLatin1Encoding.
+ $(GLOBJ)gdevemap.$(OBJ) : $(GLSRC)gdevemap.c $(AK) $(std_h)
+-	$(GLCC) $(GLO_)gdevemap.$(OBJ) $(C_) $(GLSRC)gdevemap.c
++	$(GLCCSHARED) $(GLO_)gdevemap.$(OBJ) $(C_) $(GLSRC)gdevemap.c
+ 
+ ###### Create a pseudo-"feature" for the entire graphics library.

@@ -1,10 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bdb830207be3a72c5ea14d5300f7e47 ChangeLog 19299
+MD5 8945267f60ca2b84d899631e9ce78d90 ChangeLog 19855
 MD5 db00eb9aaf23133f903513fea669954f files/digest-ghostscript-esp-7.07.1-r10 212
 MD5 db00eb9aaf23133f903513fea669954f files/digest-ghostscript-esp-7.07.1-r7 212
 MD5 db00eb9aaf23133f903513fea669954f files/digest-ghostscript-esp-7.07.1-r8 212
+MD5 d103f68902b401dd7844a93d16b174c1 files/digest-ghostscript-esp-8.15.1 212
+MD5 f3a75fcde50479b3f58871663272924c files/ghostscript-badc.patch 905
+MD5 1fa0a00ca3a3f906f0ac62dc961e78d8 files/ghostscript-build.patch 1968
 MD5 fd34b2b7a029f19eab4ba3f69afe295e files/ghostscript-esp-7.05.6.man.patch 1231
 MD5 f834d056ca972c457a2ff3b1e839e562 files/ghostscript-esp-7.07-bigposttable.patch 1257
 MD5 55146a1eafc4ad3a26d99121ae0777fe files/ghostscript-esp-7.07-coverage-glyphcount.patch 3100
@@ -12,6 +15,14 @@ MD5 c73ad916d49df447de59358ffdc495eb files/ghostscript-esp-7.07-fix_cidfontname_
 MD5 e0da7576378dc87fa53a16dfd1774789 files/ghostscript-esp-7.07-fix_rename_font_gs_cidfn.ps.patch 1611
 MD5 b37c0dc9f85205da6e8675d4a8bfd21a files/ghostscript-esp-7.07-gsublookuptable.patch 3808
 MD5 5b476654e84a9748e3d56d86f264b277 files/ghostscript-esp-7.07.1-64bit-cmyk.patch 1777
+MD5 e8974faf06541ccb8c271180d87175bd files/ghostscript-gtk2.patch 610
+MD5 01cfb541633de9580aa5151543a0075f files/ghostscript-noopt.patch 557
+MD5 83a8ae09246090685c93fcf85fda8301 files/ghostscript-pagesize.patch 475
+MD5 8cd1807897a48d3bfb9767309594969b files/ghostscript-ps2epsi.patch 354
+MD5 9d3484ccc9ea57948e8e54cc838938c4 files/ghostscript-scripts.patch 1038
+MD5 f4b3fd94487ade5bb11a91a4037b5e0c files/ghostscript-split-font-configuration.patch 2120
+MD5 2860ac190e2737c358b105c31152a1c8 files/ghostscript-use-external-freetype.patch 2778
+MD5 4232a57145c2eafd1d84eabd674190f9 files/gs-8.15.1destdir.patch 13364
 MD5 8c6a3d7e8897b4297ef853dbd89e408b files/gs-fix-gc.patch 5627
 MD5 186fc94fd3208e808026580e7436dbdc files/gs-osx-ijs.patch 1566
 MD5 212a5ece7d789ef9d04e15fd7d36eea3 files/gs-osx-unix-dll.patch 1930
@@ -34,11 +45,12 @@ MD5 0201da09644874147627750546511c36 files/gs7.07.1-tempfile.patch 3125
 MD5 32d445682c030ec35813551b5ddb8814 ghostscript-esp-7.07.1-r10.ebuild 6170
 MD5 faaaafdb2032600cbf5d316eb56ca40b ghostscript-esp-7.07.1-r7.ebuild 4295
 MD5 a233931f6f88faa6ea1dd0de7435687f ghostscript-esp-7.07.1-r8.ebuild 5500
+MD5 b938daaa852ab93c407eced8f4b01469 ghostscript-esp-8.15.1.ebuild 4195
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvGGUwUpWvClEHQoRAk5CAJ0YDru5uIoJdFADdvoSagTGeBvTFgCdFmVw
-v+xha67QM2HbjOmzK7jkDew=
-=gEZG
+iD8DBQFDvH6nwUpWvClEHQoRAmArAJ9biya2+1iGgkexmxL5Z51zARiRfQCeLNp5
+mIK6kYxgk8t24I96YUN9sTg=
+=RBHW
 -----END PGP SIGNATURE-----

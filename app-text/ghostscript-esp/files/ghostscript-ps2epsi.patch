@@ -1,0 +1,10 @@
+--- espgs-8.15rc3/lib/ps2epsi.ps2epsi	2005-06-02 18:13:37.000000000 +0100
++++ espgs-8.15rc3/lib/ps2epsi	2005-06-03 10:47:10.000000000 +0100
+@@ -73,6 +73,7 @@
+ BEGINEPS
+ 
+ cat "${infile}" |
++LC_ALL=C \
+ sed -e '/^%%BeginPreview:/,/^%%EndPreview[^!-\~]*$/d' -e '/^%!PS-Adobe/d' \
+     -e '/^%%[A-Za-z][A-Za-z]*[^!-\~]*$/d' -e '/^%%[A-Za-z][A-Za-z]*: /d'
+ 

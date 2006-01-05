@@ -1,0 +1,57 @@
+diff -ruN espgs-8.15rc3.orig/lib/gs_fonts.ps espgs-8.15rc3/lib/gs_fonts.ps
+--- espgs-8.15rc3.orig/lib/gs_fonts.ps	2005-02-17 06:21:49.000000000 +0900
++++ espgs-8.15rc3/lib/gs_fonts.ps	2005-07-13 20:14:12.000000000 +0900
+@@ -96,10 +96,17 @@
+                 % stack: dict file fontname filename|aliasname
+       1 index type /stringtype eq
+       1 index type /nametype eq and 1 index xcheck and
+-      1 index /run eq 2 index /.runlibfile eq or and {
++      1 index /run eq 2 index /.runlibfile eq 3 index /.runlibfileifexists eq or or and {
+                 % This is an inclusion entry.
+-        pop findlibfile { exch pop } { file } ifelse
+-        2 index exch .readFontmap pop
++        0 index /.runlibfileifexists eq {
++          pop findlibfile {
++            exch pop
++            2 index exch .readFontmap pop
++          } { pop } ifelse
++        } {
++          pop findlibfile { exch pop } { file } ifelse
++          2 index exch .readFontmap pop
++        } ifelse
+       } {
+                 % This is a real entry.
+                 % Read and pop tokens until a semicolon.
+diff -ruN espgs-8.15rc3.orig/lib/gs_init.ps espgs-8.15rc3/lib/gs_init.ps
+--- espgs-8.15rc3.orig/lib/gs_init.ps.in	2005-07-12 11:04:36.000000000 +0900
++++ espgs-8.15rc3/lib/gs_init.ps.in	2005-07-13 20:14:12.000000000 +0900
+@@ -655,6 +655,13 @@
+ 	   { /undefinedfilename signalerror }
+ 	  ifelse
+ 	} bind def
++/runlibfileifexists
++	{
++	  findlibfile
++	   { exch pop /run .systemvar exec }
++	   { pop }
++	  ifelse
++	} bind def
+ /selectdevice
+ 	{ finddevice setdevice .setdefaultscreen } bind def
+ /signalerror		% <object> <errorname> signalerror -
+@@ -816,6 +823,7 @@
+ 	} bind def
+ % Temporarily substitute it for the real runlibfile.
+ /.runlibfile /runlibfile load def
++/.runlibfileifexists /runlibfileifexists load def
+ /runlibfile /runlibfile0 load def
+ 
+ % Create the error handling machinery.
+@@ -1655,6 +1663,7 @@
+ 
+ % Restore the real definition of runlibfile.
+ /runlibfile /.runlibfile load def
++/runlibfileifexists /.runlibfileifexists load def
+ currentdict /.runlibfile .undef
+ 
+ % Bind all the operators defined as procedures.
