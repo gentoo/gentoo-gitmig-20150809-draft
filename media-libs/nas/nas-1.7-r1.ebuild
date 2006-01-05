@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.8 2005/08/24 16:54:19 flameeyes Exp $
-
-IUSE="static"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.9 2006/01/05 04:33:34 vapier Exp $
 
 inherit eutils
 
@@ -10,26 +8,43 @@ DESCRIPTION="Network Audio System"
 HOMEPAGE="http://radscan.com/nas.html"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
 
-SLOT="0"
 LICENSE="X11"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
+SLOT="0"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86"
+IUSE=""
 
-RDEPEND="virtual/x11"
-
+RDEPEND="|| (
+		(
+			x11-libs/libXt
+			x11-libs/libXau
+			x11-libs/libXaw
+			x11-libs/libX11
+			x11-libs/libXres
+			x11-libs/libXTrap
+		)
+		virtual/x11
+	)"
 DEPEND="${RDEPEND}
-	sys-apps/sed"
+	|| (
+		( x11-misc/gccmakedep x11-misc/imake app-text/rman x11-proto/xproto )
+		virtual/x11
+	)"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-header.patch
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-header.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	sed -i \
+		-e "/^[ 	]*CDEBUGFLAGS/s:=.*:=${CFLAGS}:" \
+		-e "/^[ 	]*CXXDEBUGFLAGS/s:=.*:=${CXXFLAGS}:" \
+		$(find -name Makefile) || die
 }
 
 src_compile() {
-	xmkmf
+	xmkmf || die
 	touch doc/man/lib/tmp.{_man,man}
-	CFLAGS="-O2 -ggdb" emake World || die
+	emake World || die
 }
 
 src_install () {
@@ -50,11 +65,8 @@ src_install () {
 	mv ${D}/etc/nas/nasd.conf.eg ${D}/etc/nas/nasd.conf
 	dosed 's,\(MixerInit.*\)"\(.*\)",\1"no",' /etc/nas/nasd.conf
 
-	# Remove the static lib
-	use static || rm ${D}/usr/X11R6/lib/libaudio.a
-
-	newconfd ${FILESDIR}/nas.conf.d nas
-	newinitd ${FILESDIR}/nas.init.d nas
+	newconfd "${FILESDIR}"/nas.conf.d nas
+	newinitd "${FILESDIR}"/nas.init.d nas
 }
 
 pkg_postinst() {
