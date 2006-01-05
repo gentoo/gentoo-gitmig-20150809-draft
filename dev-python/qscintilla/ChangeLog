@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.57 2006/01/05 20:32:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.58 2006/01/05 21:50:59 carlo Exp $
+
+  05 Jan 2006; Carsten Lohrke <carlo@gentoo.org> qscintilla-1.54.ebuild,
+  qscintilla-1.60.ebuild, qscintilla-1.61.ebuild:
+  Mark obsolete qscintilla versions ~amd64.
 
   05 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   qscintilla-1.5.1.ebuild, qscintilla-1.54.ebuild, qscintilla-1.60.ebuild,
