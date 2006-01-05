@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5c9f77bd06ef8c8256ba3e3fdf96ecb ChangeLog 17111
+MD5 11d79e45d687aff28bd4b0d736504067 ChangeLog 17225
 MD5 2a4dc345919a4094ead16d7a122e40bf files/2.2.5/gnomerc 235
 MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
@@ -16,12 +13,5 @@ MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
 MD5 65e67c78973b4878d1e6b700bb912ef8 gdm-2.8.0.1-r1.ebuild 3713
 MD5 8f6a78446d13bd82aacfb29a9d4eaa24 gdm-2.8.0.3.ebuild 3649
 MD5 2a0f6f949a468e1c53e4b5a5c4ea2d5d gdm-2.8.0.5.ebuild 3854
-MD5 e8084bba57a6b7a09968075bc592feab gdm-2.8.0.7.ebuild 3766
+MD5 d89fb3d8a721573411be51836716f03b gdm-2.8.0.7.ebuild 3791
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDoIiFomPajV0RnrERAnLbAJ9yOQghDyVTIb3zNXdsIJhpYlm+vQCeNMWM
-con5g8QCUSQtEhU04pkex7c=
-=rGqf
------END PGP SIGNATURE-----

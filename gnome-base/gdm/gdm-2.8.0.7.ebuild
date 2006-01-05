@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.7.ebuild,v 1.2 2005/12/14 21:03:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.7.ebuild,v 1.3 2006/01/05 23:17:27 joem Exp $
 
 inherit eutils pam gnome2
 
@@ -33,7 +33,9 @@ RDEPEND="pam? ( virtual/pam )
 	>=media-libs/libart_lgpl-2.3.11
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	|| ( x11-libs/libdmx virtual/x11 )"
+	|| ( ( x11-libs/libdmx
+		x11-apps/sessreg )
+		virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
