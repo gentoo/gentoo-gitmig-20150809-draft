@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5e019a2cc119b6ac3c4be3667c25186c ChangeLog 1231
 MD5 ffebc89596505e2ec9dc3c4f0851780f files/digest-libutempter-1.1.2.1 146
-MD5 90ccf3440306ff184fa38f1e40be18b0 libutempter-1.1.2.1.ebuild 1857
+MD5 0a372c26a97332a21a1bfa0ed4e41b85 libutempter-1.1.2.1.ebuild 1848
 MD5 1fe2f84f5f9d41bc80bb795ef8845ff2 metadata.xml 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvIkw2+ySkm8kpY0RAo8+AJwPoc36xNte3yJ+ZQTCnW3BBtUYVwCfVHOL
++/whlPUKH+cTOzgagX1J0Lg=
+=FOpy
+-----END PGP SIGNATURE-----

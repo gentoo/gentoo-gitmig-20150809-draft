@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.7 2005/12/23 19:52:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.8 2006/01/05 02:48:17 vapier Exp $
 
 inherit rpm eutils flag-o-matic versionator
 
@@ -12,10 +12,9 @@ HOMEPAGE="http://altlinux.org/index.php?module=sisyphus&package=libutempter"
 SRC_URI="ftp://ftp.altlinux.ru/pub/distributions/ALTLinux/Sisyphus/SRPMS.classic/${MY_P}.src.rpm
 	mirror://gentoo/${PN}-patches-${PATCHVER}.tar.bz2"
 
-
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND=""
@@ -31,13 +30,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	rpm_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	export EPATCH_SUFFIX="patch"
 	epatch ${PATCHDIR}
 
-	if ! use elibc_glibc &&  ! use elibc_uclibc
-	then
+	if [[ ${CHOST} == *-freebsd* ]] ; then
 		epatch ${PATCHDIR}/freebsd
 	fi
 }
@@ -51,7 +49,7 @@ src_compile() {
 
 src_install() {
 	make \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		libdir=/usr/$(get_libdir) \
 		libexecdir=/usr/$(get_libdir) \
 		install || die
