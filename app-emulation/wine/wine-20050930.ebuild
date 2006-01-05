@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050930.ebuild,v 1.6 2005/12/14 05:40:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050930.ebuild,v 1.7 2006/01/05 03:00:36 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -86,6 +86,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/wine-20041019-no-stack.patch #66002
 	epatch "${FILESDIR}"/wine-20050930-no-x.patch
 	epatch "${FILESDIR}"/wine-20050930-dont-warn-lib-path.patch #107971
+	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
 
 config_cache() {
