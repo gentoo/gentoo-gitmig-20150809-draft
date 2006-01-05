@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/ck-sources
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.127 2005/12/29 21:12:23 marineam Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.128 2006/01/05 08:42:12 marineam Exp $
+
+*ck-sources-2.6.15_p1 (05 Jan 2006)
+*ck-sources-2.6.14_p8 (05 Jan 2006)
+
+  05 Jan 2006; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.14_p7.ebuild, +ck-sources-2.6.14_p8.ebuild,
+  +ck-sources-2.6.15_p1.ebuild:
+  Bump to 2.6.14-ck8+genpatches-8 for security bug #103553. The security fix
+  is the only change as I had already included 2.6.14.5 with ck7.
+  Add 2.6.15-ck1+genpatches-1, Closes bug #116484.
 
 *ck-sources-2.6.14_p7 (29 Dec 2005)
 
