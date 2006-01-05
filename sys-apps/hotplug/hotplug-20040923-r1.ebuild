@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r1.ebuild,v 1.1 2005/07/19 18:34:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r1.ebuild,v 1.2 2006/01/05 03:33:31 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
@@ -23,10 +23,8 @@ DEPEND=">=sys-apps/pciutils-2.1.9
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	# patches go here if needed...
-	epatch ${FILESDIR}/${PN}-ifrename.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-ifrename.patch
 }
 
 src_install() {
@@ -34,27 +32,24 @@ src_install() {
 	doman *.8
 	dodoc README README.modules ChangeLog
 
-	cd ${S}/etc/hotplug
+	cd "${S}"/etc/hotplug
 	insinto /etc/hotplug
-	doins blacklist hotplug.functions *map
+	doins blacklist hotplug.functions *map || die
 
 	exeinto /etc/hotplug
-	doexe *.agent *.rc *.permissions
+	doexe *.agent *.rc *.permissions || die
 	# stupid isapnp.rc files...
-	newexe ${FILESDIR}/isapnp.rc.empty isapnp.rc
+	newexe "${FILESDIR}"/isapnp.rc.empty isapnp.rc
 
 	dodir /usr/lib/hotplug/firmware
 	dodir /etc/hotplug/usb
 	dodir /etc/hotplug/pci
-	cd ${S}/etc/hotplug.d/default
+	cd "${S}"/etc/hotplug.d/default
 	exeinto /etc/hotplug.d/default
-	doexe default.hotplug
+	doexe default.hotplug || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/hotplug.rc.empty hotplug
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/usb.confd usb
+	newinitd "${FILESDIR}"/hotplug.rc.empty hotplug
+	newconfd "${FILESDIR}"/usb.confd usb
 	dodir /var/run/usb
 }
 
