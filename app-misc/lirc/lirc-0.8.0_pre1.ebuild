@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0_pre1.ebuild,v 1.3 2006/01/04 06:51:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0_pre1.ebuild,v 1.4 2006/01/05 08:54:16 eradicator Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -55,14 +55,15 @@ IUSE="debug doc X"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
 
 RDEPEND="virtual/libc
-	X? ( virtual/x11 )"
+	 X? ( || ( ( x11-libs/libX11 x11-libs/libSM )
+	           virtual/x11 ) )"
 
 DEPEND="virtual/linux-sources
 	sys-devel/autoconf
 	${RDEPEND}"
 
 #SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
-SRC_URI="http://www.jehster.net/gentoo/packages/lirc/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 src_unpack() {
 	unpack ${A}
