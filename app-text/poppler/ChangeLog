@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.33 2006/01/05 04:01:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.34 2006/01/05 18:01:13 dang Exp $
+
+*poppler-0.4.3-r4 (05 Jan 2006)
+
+  05 Jan 2006; <dang@gentoo.org> +files/poppler-0.4.3-bug117481.patch,
+  +poppler-0.4.3-r4.ebuild:
+  Revbump for bug #117481
 
   05 Jan 2006; Mark Loeser <halcy0n@gentoo.org> files/poppler-gcc41.patch:
   Remove the chunk from bug #116977, not needed for 0.4.2
