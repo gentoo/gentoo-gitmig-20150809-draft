@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.17.ebuild,v 1.14 2005/07/08 22:12:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.17.ebuild,v 1.15 2006/01/05 13:51:08 nattfodd Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} prefix="/usr" install || die
-	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README
+	dodoc AUTHORS ChangeLog FAQ NEWS README
 	insinto /usr/share/doc/${P}/xml
 	doins doc/*.xml
 }
