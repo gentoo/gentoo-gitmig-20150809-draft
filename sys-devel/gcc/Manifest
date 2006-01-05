@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d002a646073a7e7661410ad14c54ac50 ChangeLog 98955
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
@@ -63,9 +66,9 @@ MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
 MD5 b756cafc55e6590c804a20976e6ebc6e files/digest-gcc-3.4.3-r1 607
 MD5 ba7469d4f191ff1baa00b9dd45e3dc6b files/digest-gcc-3.4.3.20050110-r2 616
 MD5 fa32cd40c637c54b4e3b89dd4ed4c573 files/digest-gcc-3.4.4-r1 450
-MD5 e00a5e50b3786525ae8949ea35d1dfce files/digest-gcc-3.4.5 449
+MD5 e8e479205bb449aec4bd7aa9324b1209 files/digest-gcc-3.4.5 449
 MD5 f0c74f849066ffaefe7d364d69a71961 files/digest-gcc-4.0.1 380
-MD5 ef40c7eb8f12999b136304794232a439 files/digest-gcc-4.0.2-r3 381
+MD5 deda4097201ccdf66e1f67618a67b6c9 files/digest-gcc-4.0.2-r3 381
 MD5 c1cab1657c6d5a561b2fe51e196760fd files/digest-gcc-4.1.0_beta20051230 71
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
@@ -93,8 +96,15 @@ MD5 307b46ee9b86bb1d182824303c4b01f3 gcc-3.4.1-r3.ebuild 31283
 MD5 71e25d702be3dd13ee277b7383345fad gcc-3.4.3-r1.ebuild 5477
 MD5 769273e24a52732ce892d08ebeb4bbeb gcc-3.4.3.20050110-r2.ebuild 5240
 MD5 c44289f25b99d3c631f97a8043826901 gcc-3.4.4-r1.ebuild 5203
-MD5 cb083c2d605cda32e566f9acc421c35b gcc-3.4.5.ebuild 5111
+MD5 2c1a8e5f830d6b40b4f61f293818a8d6 gcc-3.4.5.ebuild 5110
 MD5 103f90b35ea4fb36f174d4e29a2f00c1 gcc-4.0.1.ebuild 1864
-MD5 3c0974ce490626c021795ab770e5f6d3 gcc-4.0.2-r3.ebuild 1852
+MD5 9ff5b86dbfaab8bf516ff534dbd66a8b gcc-4.0.2-r3.ebuild 1851
 MD5 a5e58044739b747ff3e22a79dec92bca gcc-4.1.0_beta20051230.ebuild 2092
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvKk72+ySkm8kpY0RAliSAKCsn9L9HWLWMntroIj3hipYonG3DgCfTrzG
+Vhot5I1Zq2BeB57jXgCzW9Q=
+=+WBo
+-----END PGP SIGNATURE-----
