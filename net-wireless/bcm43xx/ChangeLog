@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/bcm43xx
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/ChangeLog,v 1.1 2006/01/05 22:44:38 kugelfang Exp $
+
+*bcm43xx-0.0.1-r20060105 (05 Jan 2006)
+
+  05 Jan 2006; Danny van Dyk <kugelfang@gentoo.org> +metadata.xml,
+  +bcm43xx-0.0.1-r20060105.ebuild:
+  Added initial ebuild. BCM43xx driver supports (currently) the chipsets
+  BCM4303/06/09/18/XG. Supported network types are 'open' and 'WEP'.
+
