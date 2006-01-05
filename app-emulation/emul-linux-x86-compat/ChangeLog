@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.6 2005/10/19 08:33:46 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.7 2006/01/05 21:52:04 herbs Exp $
+
+  05 Jan 2006; Herbie Hopkins <herbs@gentoo.org>
+  emul-linux-x86-compat-1.0-r1.ebuild:
+  Stable on amd64.
 
   19 Oct 2005; Herbie Hopkins <herbs@gentoo.org> metadata.xml:
   Remove lv as maintainer since he's retiring, bug 45408.
