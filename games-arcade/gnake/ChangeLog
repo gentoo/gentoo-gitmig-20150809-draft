@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/gnake
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.1 2006/01/05 16:12:13 wolf31o2 Exp $
+
+*gnake-0.94b (05 Jan 2006)
+
+  05 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +gnake-0.94b.ebuild:
+  Initial import. Ebuild by Adrian Fruehwirth <adrian.fruehwirth@gmx.at>.
+  Closing bug #107178.
+
