@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb9484a88bbfd195af98650499985431 ChangeLog 10466
+MD5 eca67fcd98e32475c1546ab0282278ec ChangeLog 10657
 MD5 151e0b369686c98b22c005054903d5cc files/digest-vserver-sources-2.0-r1 299
 MD5 6c261379d52c30fd775f0521e4e72e5b files/digest-vserver-sources-2.0.1 296
 MD5 db18a4acbe748d1cdb8677492846bb7e files/digest-vserver-sources-2.1.0 296
 MD5 f703b135c202d58849f005abf3c728b4 metadata.xml 526
-MD5 75895094f6c07a1620fb5c2035a42801 vserver-sources-2.0-r1.ebuild 828
-MD5 ab2c0fdcd54b0241badeddbd4f7f7981 vserver-sources-2.0.1.ebuild 821
-MD5 a82d4afc9c6c82c0f41d30f1bedbbb88 vserver-sources-2.1.0.ebuild 823
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrN4emPFBzbX68WERAs8FAJ4mlz/SjEc2B1Qg31tWOBpGFjd3jgCfQjrJ
-RjkNjczsItxLr/Jq6gFsrcc=
-=W58s
------END PGP SIGNATURE-----
+MD5 8b8a37e5dd83184fd77a0a8d788bbb86 vserver-sources-2.0-r1.ebuild 828
+MD5 1cadbb216d03b2d921aa0b6b9712118d vserver-sources-2.0.1.ebuild 821
+MD5 6319b06826a3104e0fa96ea9c1a90276 vserver-sources-2.1.0.ebuild 823
