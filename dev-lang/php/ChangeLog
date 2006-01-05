@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.56 2006/01/04 09:24:47 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.57 2006/01/05 17:23:22 chtekk Exp $
+
+  05 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
+  +files/5.1.1/php5.1.1-curl-gcry_threads.patch, php-5.1.1.ebuild:
+  Fix bug #117767.
 
 *php-5.1.1 (28 Dec 2005)
 *php-5.0.5-r5 (28 Dec 2005)

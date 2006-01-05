@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.1.ebuild,v 1.1 2006/01/04 09:24:47 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.1.ebuild,v 1.2 2006/01/05 17:23:22 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -82,6 +82,9 @@ src_unpack() {
 
 	# fix PHP branding
 	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-gentoo"|g' -i configure.in
+
+	# fix CURL compilation error, bug #117767
+	epatch "${FILESDIR}/${PV}/php${PV}-curl-gcry_threads.patch"
 
 	# fix ming error in configure
 	epatch "${FILESDIR}/${PV}/php${PV}-ming-config.patch"

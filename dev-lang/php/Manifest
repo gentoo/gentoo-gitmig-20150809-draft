@@ -1,4 +1,4 @@
-MD5 240d0434cf53fea5fa98fc3322e14171 ChangeLog 12720
+MD5 4b79b83cdad91df61751094c7667b579 ChangeLog 12858
 MD5 389638f1d46b6c41cd4d87b471572f4b files/4-any/apache-1.3/70_mod_php.conf 484
 MD5 ee36e31632adb08b7abf70f78b5b2125 files/4-any/apache-2.0/70_mod_php.conf 485
 MD5 f0acca9c6387b8ca139d2849665bd16f files/4-any/php4-fastbuild.patch 9012
@@ -50,6 +50,7 @@ MD5 2a1f695fb5ff9959ed634e5a361fc46f files/5.1-any/php5-iodbc-config.diff 527
 MD5 058042718bc876bf27ab902673919ca9 files/5.1-any/php5-prefork.patch 850
 MD5 273799e60d5a41a1e6f5ac53781a152f files/5.1-any/php5-soap_persistence_session.diff 1976
 MD5 f2ab14c7be0482a4f25fc438fa6f5399 files/5.1-any/php5-with-iodbc.diff 443
+MD5 442a1c67483c8692f08a4960690c7715 files/5.1.1/php5.1.1-curl-gcry_threads.patch 326
 MD5 b2efb209e465415427bce146acac51cf files/5.1.1/php5.1.1-ming-config.patch 672
 MD5 ad1808326ee0e0fdcb843d8c3cd5efa9 files/5.1.1/php5.1.1-multilib-search-path.patch 10285
 MD5 ed010745cb9455e21309eae5409242d1 files/digest-php-4.3.11-r5 229
@@ -60,4 +61,4 @@ MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 d7a463a0d91060881509adc142347561 php-4.3.11-r5.ebuild 9595
 MD5 e2e42f58f760c070c501612f987b4151 php-4.4.1-r3.ebuild 8588
 MD5 59d674522ef0955912a606869b0834af php-5.0.5-r5.ebuild 6036
-MD5 33de3bc04263b0adbf6db6a18161711c php-5.1.1.ebuild 8021
+MD5 bf6b1493d9a2e0ef3ab2d93043ed2631 php-5.1.1.ebuild 8126
