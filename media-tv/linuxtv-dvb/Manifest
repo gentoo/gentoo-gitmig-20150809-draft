@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a84925e81d4eed0def4fc4c1913405d ChangeLog 4291
-MD5 d2fe0d162036705e62a8498c876425e4 files/digest-linuxtv-dvb-1.0.1 69
+MD5 4614d4e7576ab972bb37a59552446b66 ChangeLog 4433
 MD5 716f0e92472d9b05854840321fab6fb1 files/digest-linuxtv-dvb-1.1.1-r1 70
 MD5 98b0cf29aa98f48fd9342649b93b6399 files/digest-linuxtv-dvb-1.1.1-r2 135
 MD5 e1f301cd0191586916bc7c3cd2b02288 files/dvb 179
-MD5 b0924260da64da807f88467373957c76 linuxtv-dvb-1.0.1.ebuild 3083
 MD5 4dbc0cdfee7918056705cbb6da6ba41a linuxtv-dvb-1.1.1-r1.ebuild 3371
 MD5 694627b330ae6dd6e2a9d960810571cb linuxtv-dvb-1.1.1-r2.ebuild 2528
 MD5 6e77f3196f8735be5ba01cafd0c6b1bc metadata.xml 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmknewUpWvClEHQoRAnHRAJ0bTAJ5p3Ua47UrswUZ23qz3FnaxQCbBmVF
-lqXcrZfsOIKA5qfT2f6lni4=
-=9zjN
------END PGP SIGNATURE-----
