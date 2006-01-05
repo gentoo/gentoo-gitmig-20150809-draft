@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/euses
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.6 2006/01/05 18:59:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.7 2006/01/05 22:02:21 jer Exp $
+
+  05 Jan 2006; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Corrected e-mail addy in metadata.xml
 
 *euses-2.4.3 (05 Jan 2006)
 

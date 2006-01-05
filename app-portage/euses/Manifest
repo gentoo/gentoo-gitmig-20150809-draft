@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 208aa89e1fb7e11d84b4a04d58a8b36d ChangeLog 1038
+MD5 7be4e702c355fa1dc2767e40bb56a346 ChangeLog 1135
 MD5 52f8c452a86033a2da8536d7e0e2f14c euses-2.3.ebuild 716
 MD5 33b94e03c05f1730425406d24c32a4f5 euses-2.4.2.ebuild 730
 MD5 bae52c47a472ccb356bc192be2a2324c euses-2.4.3.ebuild 735
 MD5 2a4d30ddc6c548b9e3631411d86080e5 files/digest-euses-2.3 60
 MD5 e46bc654822beb3291aaa40cf427528e files/digest-euses-2.4.2 63
 MD5 ae0fcde2fcc2c7b911d67599cff431f6 files/digest-euses-2.4.3 63
-MD5 11156da5828a058499b9346f1ec0c9fc metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvWzGp5vW4rUFj5oRAg/LAJ9Law7nk6TR7LpCX1GPqvCPLFAD8gCfV0CG
-+EmxkdcO7USTuBPqxsa7ZG8=
-=gwyH
------END PGP SIGNATURE-----
+MD5 5bbe46e03a43c3a2078fa0d2ebe784a9 metadata.xml 224
