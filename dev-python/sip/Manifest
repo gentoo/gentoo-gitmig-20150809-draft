@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c8f82ca832ec3fad5ef76f15bda84fc6 sip-4.0.1.ebuild 1051
-MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-MD5 58dbaca03bd03e06d105463b6e7265c1 sip-3.10.2.ebuild 1000
-MD5 128c5bf316b6d0029cb43fb0bddb249e sip-4.2.ebuild 1390
-MD5 1d4682ef7e7315b6e5687f8a4b3743b5 ChangeLog 8440
-MD5 7a91a993eda254d838e99269526ab9dc sip-4.2.1.ebuild 1419
-MD5 4cbd85c00f83fdd1a2afe0fb119fffe7 sip-3.8-r1.ebuild 1101
-MD5 12bbcf91e753c326fa7725be85b3bdb2 sip-4.3.1.ebuild 1397
-MD5 27e6d61c2fded90b8fa96b1078f86fc8 sip-4.1.1.ebuild 1214
-MD5 8b8fcef2fd959854c5429f10dc759a1a sip-4.3.2.ebuild 1410
-MD5 9d3daf7553357420608a0ae0826d8fae sip-3.11.1.ebuild 1003
-MD5 61c5e63138dec30ea3df7a4cfd53fe3a files/digest-sip-4.3.2 61
+MD5 a4368c17f2f2f28429449c7494998fb6 ChangeLog 8541
 MD5 e052f291e46bb8d1de4cfb1b45aeac88 files/digest-sip-3.10.2 62
-MD5 70ee7d5fd80e0bec5823095ca853d455 files/license-3.8.diff 1003
-MD5 86e845ce5203479dce2e4ea0bb6e8ad9 files/digest-sip-4.3.1 61
+MD5 18e143f22df1dd8636fc12aa07ac9f36 files/digest-sip-3.11.1 62
 MD5 821af86e779d5bc5b3457336a0426fa1 files/digest-sip-3.8-r1 67
-MD5 d83d1aa3500b9b65c79dbba9840a5d68 files/digest-sip-4.2 59
 MD5 6a011f04f4a2219a674a61dd82763301 files/digest-sip-4.0.1 61
 MD5 08ece4353d9fbbcda23f73d770999e49 files/digest-sip-4.1.1 61
-MD5 18e143f22df1dd8636fc12aa07ac9f36 files/digest-sip-3.11.1 62
+MD5 d83d1aa3500b9b65c79dbba9840a5d68 files/digest-sip-4.2 59
 MD5 1bd43eafb0d81d9f5b74ddc0a420cd93 files/digest-sip-4.2.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvNnsFdQwWVoAgN4RAr2ZAKDfnN8TNKRo9QzeYXwo9aFdlTkUoACgqDIS
-jJxv+kDdnrynLLHmpxU0fXo=
-=XUxD
------END PGP SIGNATURE-----
+MD5 86e845ce5203479dce2e4ea0bb6e8ad9 files/digest-sip-4.3.1 61
+MD5 61c5e63138dec30ea3df7a4cfd53fe3a files/digest-sip-4.3.2 61
+MD5 70ee7d5fd80e0bec5823095ca853d455 files/license-3.8.diff 1003
+MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
+MD5 58dbaca03bd03e06d105463b6e7265c1 sip-3.10.2.ebuild 1000
+MD5 9d3daf7553357420608a0ae0826d8fae sip-3.11.1.ebuild 1003
+MD5 4cbd85c00f83fdd1a2afe0fb119fffe7 sip-3.8-r1.ebuild 1101
+MD5 c8f82ca832ec3fad5ef76f15bda84fc6 sip-4.0.1.ebuild 1051
+MD5 27e6d61c2fded90b8fa96b1078f86fc8 sip-4.1.1.ebuild 1214
+MD5 1b558264cd55c97133d7ec5934454707 sip-4.2.1.ebuild 1416
+MD5 128c5bf316b6d0029cb43fb0bddb249e sip-4.2.ebuild 1390
+MD5 12bbcf91e753c326fa7725be85b3bdb2 sip-4.3.1.ebuild 1397
+MD5 8b8fcef2fd959854c5429f10dc759a1a sip-4.3.2.ebuild 1410
