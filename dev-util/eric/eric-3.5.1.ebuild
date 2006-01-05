@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.5.1.ebuild,v 1.4 2006/01/05 09:01:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.5.1.ebuild,v 1.5 2006/01/05 20:41:43 gustavoz Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/eric-ide/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc sparc ~amd64 ~ppc64"
+KEYWORDS="~ppc ~amd64 ~ppc64"
 IUSE="idl"
 
 python_version

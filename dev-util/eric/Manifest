@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 56ad59727dbcdbf30e7ed8282d3913e5 metadata.xml 175
-MD5 5e1a7ddd57ff5eba6d3082aadc78364a eric-3.7.2.ebuild 1661
-MD5 d60dca7cfdc1459a37d1264b8ffb0041 ChangeLog 3763
-MD5 72bfe0f161e0388d324a7c27159c38ff eric-3.5.1.ebuild 1412
-MD5 19fd562085f109171fcddb901466c007 eric-3.7.0.ebuild 2020
-MD5 1b90c87dca0a99f89089c851bb3222a2 eric-3.8.1.ebuild 1926
-MD5 e540736f47366c65a95d8a162f061fb9 eric-3.6.2.ebuild 2020
+MD5 94f5e4d8454eb3fc7e1d932340dd1ae4 ChangeLog 3931
+MD5 8ca587479ab2441078def41828a70e35 eric-3.5.1.ebuild 1404
 MD5 34640472389dc3c0573f8e74d6d5c06a eric-3.6.1.ebuild 1971
-MD5 21bb44cb3c91345b48d81e3a4e5fcb8d eric-3.7.2-r1.ebuild 1931
-MD5 956bcc4dc5687fa2d72d08e691bdcb33 files/digest-eric-3.6.1 273
-MD5 6706775a7d9b9ac225834ccb335696d8 files/digest-eric-3.7.2-r1 273
-MD5 6706775a7d9b9ac225834ccb335696d8 files/digest-eric-3.7.2 273
-MD5 e361d61b6b938c9a08d6001c79dfdac4 files/digest-eric-3.6.2 273
+MD5 e540736f47366c65a95d8a162f061fb9 eric-3.6.2.ebuild 2020
+MD5 19fd562085f109171fcddb901466c007 eric-3.7.0.ebuild 2020
+MD5 b7f297f86e3c2de24c40f9fff306ab02 eric-3.7.2-r1.ebuild 1928
+MD5 5e1a7ddd57ff5eba6d3082aadc78364a eric-3.7.2.ebuild 1661
+MD5 1b90c87dca0a99f89089c851bb3222a2 eric-3.8.1.ebuild 1926
 MD5 e14b132d7ca618c37915f9c0b24c32ed files/digest-eric-3.5.1 273
-MD5 8e4f2375280866f784042b84acb2e1c0 files/digest-eric-3.8.1 273
+MD5 956bcc4dc5687fa2d72d08e691bdcb33 files/digest-eric-3.6.1 273
+MD5 e361d61b6b938c9a08d6001c79dfdac4 files/digest-eric-3.6.2 273
 MD5 e01d7fa46cc5262747c66d6f073419fb files/digest-eric-3.7.0 273
+MD5 6706775a7d9b9ac225834ccb335696d8 files/digest-eric-3.7.2 273
+MD5 6706775a7d9b9ac225834ccb335696d8 files/digest-eric-3.7.2-r1 273
+MD5 8e4f2375280866f784042b84acb2e1c0 files/digest-eric-3.8.1 273
+MD5 56ad59727dbcdbf30e7ed8282d3913e5 metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvOByFdQwWVoAgN4RAkNdAKCtTmEm13CgNX1BFimmUV6SmKaaAACcCSoP
-FTCrsiN8cBXjYvTSxgaFzK4=
-=Bo3+
+iD8DBQFDvYSbKRy60XGEcJIRAtlmAJ4wDABa68gtRJjCOXwrUcMdRe6SYQCeP3uA
+QZtWUA+0jDAALWEbv18g188=
+=JWvR
 -----END PGP SIGNATURE-----

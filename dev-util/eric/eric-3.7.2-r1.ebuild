@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.7.2-r1.ebuild,v 1.3 2006/01/05 09:01:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.7.2-r1.ebuild,v 1.4 2006/01/05 20:41:43 gustavoz Exp $
 
 inherit python eutils
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/eric-ide/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 IUSE="idl"
 
 DEPEND=">=dev-python/PyQt-3.13
