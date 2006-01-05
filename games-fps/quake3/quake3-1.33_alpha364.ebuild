@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha364.ebuild,v 1.2 2005/11/18 14:50:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha364.ebuild,v 1.3 2006/01/05 02:16:29 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -37,15 +37,25 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dedicated opengl"
 
 RDEPEND="opengl? (
-		virtual/opengl
-		virtual/x11
-		media-libs/libsdl
-		media-libs/openal )
+	virtual/opengl
+	|| (
+		(
+			x11-libs/libXext
+			x11-libs/libX11
+			x11-libs/libXau
+			x11-libs/libXdmcp )
+		virtual/x11 )
+	media-libs/libsdl )
 	!dedicated? (
 		virtual/opengl
-		virtual/x11
-		media-libs/libsdl
-		media-libs/openal )
+		|| (
+			(
+				x11-libs/libXext
+				x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 )
+		media-libs/libsdl )
 	games-fps/quake3-data"
 
 src_unpack() {
