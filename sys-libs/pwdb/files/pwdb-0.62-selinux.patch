@@ -433,10 +433,9 @@
  
  CFLAGS+=# -DDEBUG
  
-@@ -50,7 +50,7 @@ all: $(LIBSTATIC) $(LIBDYNAME) 
+@@ -50,6 +50,6 @@ all: $(LIBSTATIC) $(LIBDYNAME) 
  
  $(LIBDYNAME): $(LIBOBJ)
- 	#$(LD) -soname $(LIBSONAME) -x -shared -o $(LIBFILENAME) $(LIBOBJ) -lcrypt -lnsl -lc
 -	$(CC) -shared -Wl,-soname -Wl,$(LIBSONAME) -Wl,-x -o $(LIBFILENAME) $(LIBOBJ)  -lcrypt -lnsl -lc
 +	$(CC) -shared -Wl,-soname -Wl,$(LIBSONAME) -Wl,-x -o $(LIBFILENAME) $(LIBOBJ)  -lcrypt -lnsl -lc -lselinux
  	@ln -sf $(LIBFILENAME) $@

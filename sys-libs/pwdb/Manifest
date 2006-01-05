@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 97c58cf064760b2aeb64c91f73e4b647 ChangeLog 3918
+MD5 e10d6fc973fa3ca743836ad404cba2ed ChangeLog 4052
 MD5 8cc9a65a57937cd962ff641cf94e40c3 files/digest-pwdb-0.62 61
 MD5 0d0c7a6216f5cf079472dfe36ea9d71c files/passwd 143
 MD5 3ad2336f28a4adf24f2f11c4a76c396f files/pwdb-0.62-build.patch 370
-MD5 bf4eb22a793eb0683d8c62b4677d66f8 files/pwdb-0.62-selinux.patch 10567
+MD5 abb34f8a3c5a8dc43aed5a7a4eb92488 files/pwdb-0.62-selinux.patch 10480
 MD5 4f771531dffd4c3a0e43a96e8c265f1e files/pwdb-0.62-use-gcc-as-linker.patch 421
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8dfab0867f2e426eb600b1d69fcf6fd4 pwdb-0.62.ebuild 1660
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDo4mJ2+ySkm8kpY0RAv0bAJ97kk8u1AGZSZzPlpGWTXw8mkkuwACfefTd
-LbaDGHCrmMvCLuSD4O17ji8=
-=ZnIP
+iD8DBQFDvLg7J+ChZlpDtAoRAi2FAKCf7NF3++ALl6qm4Wcs1tUz95QoUwCfUl+x
+0N69p/sgBx2kUALajBiWr9o=
+=hbcn
 -----END PGP SIGNATURE-----
