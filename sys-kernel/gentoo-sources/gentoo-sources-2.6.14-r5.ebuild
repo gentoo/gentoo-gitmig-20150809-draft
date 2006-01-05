@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.14-r5.ebuild,v 1.4 2005/12/24 15:43:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.14-r5.ebuild,v 1.5 2006/01/05 03:02:49 vapier Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -10,7 +10,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~alpha amd64 ppc ppc64 x86"
+KEYWORDS="~alpha amd64 arm ppc ppc64 x86"
 
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
