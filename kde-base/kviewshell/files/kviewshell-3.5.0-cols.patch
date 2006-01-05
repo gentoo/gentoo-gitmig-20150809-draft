@@ -1,0 +1,14 @@
+# kviewshell-3.5.0-cols.patch by Marcus D. Hanwell <cryos@gentoo.org>
+# Taken from KDE bugzilla, for inclusion in 3.5.1, see
+# http://bugs.kde.org/show_bug.cgi?id=117348 - fixes continuous view.
+--- kviewshell/pageView.cpp	2006-01-05 14:40:45.000000000 +0000
++++ kviewshell/pageView.cpp	2006-01-05 14:41:06.000000000 +0000
+@@ -49,7 +49,7 @@
+   setDragAutoScroll(false);
+ 
+   enableClipper(true);
+-  nrCols = 2;
++  nrCols = 1;
+   nrRows = 1;
+   continuousViewmode = true;
+   fullScreen = false;
