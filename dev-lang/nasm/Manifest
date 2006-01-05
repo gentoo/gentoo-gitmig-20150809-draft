@@ -1,7 +1,17 @@
-MD5 9a65245dbc1043b4515ce4509d393a21 ChangeLog 5552
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2e4333d3e29f596c5ec204d4f456bb6 ChangeLog 5788
 MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r1 65
-MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r2 65
-MD5 db4edfe802f41cb10b89e8e6a2cfd714 files/nasm-0.98.39-elf-visibility.patch 4311
+MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r3 65
+MD5 d7164046de6edb82be4a9e5f911568fd files/nasm-0.98.39-elf-visibility.patch 4219
 MD5 8524fffd916a234a0fa40149506746ee metadata.xml 738
 MD5 9743f23f6f6ab1ccbd29c000b04f165c nasm-0.98.39-r1.ebuild 1467
-MD5 915da44c48802c38668ef59d48b224b5 nasm-0.98.39-r2.ebuild 1524
+MD5 5fefd83a20187c49d641e83d7cee6a23 nasm-0.98.39-r3.ebuild 1521
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvLum2+ySkm8kpY0RAt6hAJ96+qbtF78mPX98vvJPYIs1+MgYiACfYzXU
+oY+oc4Jj16K7gIo7vzLiTNk=
+=u+Jg
+-----END PGP SIGNATURE-----

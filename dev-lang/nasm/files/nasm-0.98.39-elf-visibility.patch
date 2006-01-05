@@ -42,15 +42,15 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
      sym->size = 0;
      if (segment == NO_SEG)
          sym->section = SHN_ABS;
-@@ -570,18 +578,41 @@ static void elf_deflabel(char *name, lon
+@@ -570,18 +578,39 @@ static void elf_deflabel(char *name, lon
              sym->next = sects[sym->section - 1]->gsyms;
              sects[sym->section - 1]->gsyms = sym;
  
 +            /* ELF syntax: GLOBAL name[:type [visibility]] */
              if (special) {
 -                int n = strcspn(special, " ");
+-
 +                int n = strcspn(special, " \t");
- 
                  if (!nasm_strnicmp(special, "function", n))
                      sym->type |= SYM_FUNCTION;
                  else if (!nasm_strnicmp(special, "data", n) ||
@@ -76,8 +76,7 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
 +                    else if (!nasm_strnicmp(special, "protected", n))
 +                        sym->other = STV_PROTECTED;
 +                    else
-+                        error(ERR_NONFATAL, "unrecognised symbol type `%.*s'",
-+                              n, special);
++                        n = 0;
 +                    special += n;
 +                }
 +
@@ -86,7 +85,7 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
                      struct tokenval tokval;
                      expr *e;
                      int fwd = FALSE;
-@@ -1120,7 +1150,8 @@ static struct SAA *elf_build_symtab(long
+@@ -1120,7 +1149,8 @@ static struct SAA *elf_build_symtab(long
          WRITELONG(p, sym->strpos);
          WRITELONG(p, sym->value);
          WRITELONG(p, sym->size);
@@ -96,7 +95,7 @@ http://sourceforge.net/mailarchive/forum.php?thread_id=9230919&forum_id=4978
          WRITESHORT(p, sym->section);
          saa_wbytes(s, entry, 16L);
          *len += 16;
-@@ -1138,7 +1169,8 @@ static struct SAA *elf_build_symtab(long
+@@ -1138,7 +1168,8 @@ static struct SAA *elf_build_symtab(long
          WRITELONG(p, sym->strpos);
          WRITELONG(p, sym->value);
          WRITELONG(p, sym->size);

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39-r2.ebuild,v 1.2 2005/12/26 08:02:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39-r3.ebuild,v 1.1 2006/01/05 06:23:34 vapier Exp $
 
 inherit eutils toolchain-funcs
 

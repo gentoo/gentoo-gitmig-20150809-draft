@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/nasm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.38 2005/12/17 01:08:18 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.39 2006/01/05 06:23:34 vapier Exp $
+
+*nasm-0.98.39-r3 (05 Jan 2006)
+
+  05 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  files/nasm-0.98.39-elf-visibility.patch, -nasm-0.98.39-r2.ebuild,
+  +nasm-0.98.39-r3.ebuild:
+  Fix building of xvid with elf-visibility patch #116398.
 
 *nasm-0.98.39-r2 (17 Dec 2005)
 
