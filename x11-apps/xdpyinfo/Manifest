@@ -1,4 +1,14 @@
-MD5 0dbc5ca10de136b9bf622f0bb84ab67b ChangeLog 1846
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 49b9eac84f7bc2496555a516ea49ca18 ChangeLog 1927
 MD5 c042a9702ca5e61849a04f12bd0f4721 files/digest-xdpyinfo-1.0.1 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 3f89ce7f057e8a8d4a459dd7a47356e4 xdpyinfo-1.0.1.ebuild 865
+MD5 fcbd781244d618efb6a70f56f08d5009 xdpyinfo-1.0.1.ebuild 867
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvLkjBtvusYtCZMsRAnB3AJ0Ts9++ubdm5TG/remEBZTU+A7gVQCgjhlX
+5sSf9oNYuZVn1dEWx6lua00=
+=No3F
+-----END PGP SIGNATURE-----
