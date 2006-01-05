@@ -21,3 +21,4 @@ kde
 diet
 lirc
 afs
+lesstif

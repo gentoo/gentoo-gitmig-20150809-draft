@@ -19,7 +19,7 @@ qt
 arts
 kde
 afs
-
+lesstif
 mono
 pike
 
