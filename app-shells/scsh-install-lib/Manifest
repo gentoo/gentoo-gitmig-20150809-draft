@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c193b39a59856cb581311cfb9d6dcdd0 ChangeLog 471
+MD5 a86d94f1874e469433298b83bd05e4e3 files/digest-scsh-install-lib-1.3.0 74
+MD5 1357390974619a947e61c9c24bdf73bb metadata.xml 223
+MD5 c7f899ddc3d1f888946a179762ee3775 scsh-install-lib-1.3.0.ebuild 671
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDvWICyiNZaEAZA+ARAnlTAJjNGdgoPdv4W0jJlNmDMJe4Qu20AJ9ssDEV
+XiEnhdlfFLjdm1bC/T6+nw==
+=a6pn
+-----END PGP SIGNATURE-----
