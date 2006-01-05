@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.54.ebuild,v 1.13 2005/07/07 12:48:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.54.ebuild,v 1.14 2006/01/05 08:31:35 chriswhite Exp $
 
 
 inherit eutils
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/qscintilla/"
 SRC_URI="mirror://gentoo/${P}-x11-gpl-1.2.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64 amd64"
+KEYWORDS="alpha amd64 ia64 ppc sparc ~x86"
 IUSE=""
 DEPEND="virtual/libc
 	=x11-libs/qt-3*"
