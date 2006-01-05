@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.7.ebuild,v 1.1 2005/10/22 21:07:32 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.7.ebuild,v 1.2 2006/01/05 05:01:13 vericgar Exp $
 
 inherit eutils
 
@@ -16,37 +16,35 @@ RESTRICT="test"
 
 DEPEND="dev-libs/expat
 	~dev-libs/apr-0.9.7
-	berkdb? ( sys-libs/db )
+	berkdb? ( =sys-libs/db-4* )
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )"
 
-src_unpack() {
-	unpack ${A} || die "unpack"
-
-	cd ${S} || die
-}
-
 src_compile() {
+
+	elibtoolize || die "elibtoolize failed"
+
 	local myconf=""
-	if use ldap; then
-		myconf="${myconf} --with-ldap"
-	fi
+
+	use ldap && myconf="${myconf} --with-ldap"
+	myconf="${myconf} $(use_with gdbm)"
 
 	if use berkdb; then
-		if has_version '=sys-libs/db-4.2*'; then
+		if has_version '=sys-libs/db-4.3*'; then
+			myconf="${myconf} --with-dbm=db43
+			--with-berkeley-db=/usr/include/db4.3:/usr/$(get_libdir)"
+		elif has_version '=sys-libs/db-4.2*'; then
 			myconf="${myconf} --with-dbm=db42
 			--with-berkeley-db=/usr/include/db4.2:/usr/$(get_libdir)"
 		elif has_version '=sys-libs/db-4*'; then
 			myconf="${myconf} --with-dbm=db4
 			--with-berkeley-db=/usr/include/db4:/usr/$(get_libdir)"
-		elif has_version '=sys-libs/db-3*'; then
-			myconf="${myconf} --with-dbm=db3
-			--with-berkeley-db=/usr/include/db3:/usr/$(get_libdir)"
-		elif has_version '=sys-libs/db-2'; then
-			myconf="${myconf} --with-dbm=db2
-			--with-berkely-db=/usr/include/db2:/usr/$(get_libdir)"
 		fi
+	else
+		myconf="${myconf} --without-berkeley-db"
 	fi
+
+	echo "DEBUG: myconf: ${myconf}"
 
 	econf \
 		--datadir=/usr/share/apr-util-0 \
