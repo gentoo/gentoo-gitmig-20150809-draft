@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.3 2005/07/09 16:53:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.4 2006/01/05 03:07:16 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.berlios.de/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=app-shells/bash-2.05"
@@ -35,8 +35,8 @@ src_install() {
 
 # remove files that bashcomp-config provides for non-Gentoo platforms
 pkg_preinst() {
-	[[ -e ${ROOT}/etc/profile.d/bash-completion ]] && rm -fr ${D}/etc
-	rm -fr ${D}/usr/share/${PN}
+	[[ -e ${ROOT}/etc/profile.d/bash-completion ]] && rm -fr "${D}"/etc
+	rm -fr "${D}"/usr/share/${PN}
 }
 
 pkg_postinst() {
