@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/genromfs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.9 2005/01/01 11:00:41 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.10 2006/01/05 03:08:13 vapier Exp $
+
+  05 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/genromfs-0.5.1-build.patch, genromfs-0.5.1.ebuild:
+  Cleanup build system and add amd64 love.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> genromfs-0.5.1.ebuild:
   add sed-4 dep

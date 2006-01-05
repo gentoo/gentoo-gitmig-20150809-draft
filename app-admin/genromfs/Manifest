@@ -1,3 +1,14 @@
-MD5 f5096aef7f33ea88af83bac132f286fd ChangeLog 725
-MD5 cc21454eb37617682cc823277431f3c7 genromfs-0.5.1.ebuild 760
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2dc308cc3c47f716be20338850416ed ChangeLog 876
 MD5 95d299423cea7583af6bda19176114db files/digest-genromfs-0.5.1 65
+MD5 7c3e90348452a90bb8b970796de2e070 files/genromfs-0.5.1-build.patch 315
+MD5 2b2b26502f433fc7a265edbdcc4b0334 genromfs-0.5.1.ebuild 702
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvI3l2+ySkm8kpY0RAvvSAJ9aPJT1NHEONWkb14bods/on6+zOwCgoIa2
+um54R9xRzRPvJ+7rteOcjDI=
+=IfPf
+-----END PGP SIGNATURE-----
