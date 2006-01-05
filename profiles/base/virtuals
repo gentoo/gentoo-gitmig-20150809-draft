@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.82 2006/01/04 00:39:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.83 2006/01/05 00:03:13 genstef Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -27,7 +27,7 @@ virtual/fam					app-admin/fam
 virtual/flim				app-emacs/flim
 virtual/gsasl				net-libs/libgsasl
 virtual/ghc					dev-lang/ghc-bin
-virtual/ghostscript			app-text/ghostscript
+virtual/ghostscript			app-text/ghostscript-esp
 virtual/glu					x11-base/xorg-x11
 virtual/glut				media-libs/glut
 virtual/gnustep-back		gnustep-base/gnustep-back-art
