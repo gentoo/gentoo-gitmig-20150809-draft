@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4830 2006/01/05 02:01:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4831 2006/01/05 15:24:06 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (05 Jan 2006)
+# Masked due to problems with vmware-nat.  This package is still safe to use if
+# you do not use NAT, but rather use bridged networking.  This mask will be
+# removed if/when a patch is made available to this code.  See bug #116238 for
+# more information.
+<=app-emulation/vmware-workstation-3.2.1.2242-r7
 
 # Luis Medinas <metalgod@gentoo.org> (05 Jan 2006)
 # masked for testing
