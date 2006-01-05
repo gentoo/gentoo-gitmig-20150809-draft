@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 34a19bdf77a0a437bc92db78e2a3fe58 ChangeLog 13934
+MD5 51e48ace511fdb5e9e05e9bf03fd7061 ChangeLog 14059
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r10 767
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r8 767
 MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01 767
@@ -28,6 +28,7 @@ MD5 34c377b9f408fcfccb9b5513c98a6b1f files/xpdf-3.01-onlyx.patch 3099
 MD5 145b821ca07a9e6a110dfe0088a39dc0 files/xpdf-3.01-pdftoppm.patch 1911
 MD5 934ccc815f9aecaa94152266f8fb29d8 files/xpdf-3.01-resize.patch 1232
 MD5 362d1ebc96229b3ce0bf07fd0f2132d8 files/xpdf-3.01-sec-rollup.patch 7717
+MD5 4184783da2885ecde3c2256de5144555 files/xpdf-3.01pl1.patch 4936
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 a21a0caeb7356fb3e68e5db195a505e9 files/xpdfrc.1 1587
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
@@ -41,7 +42,7 @@ MD5 763deff18a7e6e7125aca1f3d6be3229 xpdf-3.01.ebuild 3529
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvXrqomPajV0RnrERAqqUAJ4rvwJxTfVfVAoGrv7wMMPsh3XITgCdGSC1
-+N4J2hJ2GPvQ3wkhN8YpxKQ=
-=6XVJ
+iD8DBQFDvXuLomPajV0RnrERAmNEAJ9k1d72t/Za0wdYAK9DOEZmxeQegACeMpL/
+SqgDZe5oeSXOzXTetAtyZHo=
+=ZutM
 -----END PGP SIGNATURE-----
