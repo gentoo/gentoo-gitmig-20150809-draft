@@ -1,0 +1,15 @@
+--- lib/rcscripts/net.modules.d/iproute2	(revision 1789)
++++ lib/rcscripts/net.modules.d/iproute2	(working copy)
+@@ -138,9 +138,9 @@
+ iproute2_del_addresses() {
+ 	local pre=""
+ 	${2:-false} && pre="-f inet"
+-	ip ${pre} addr flush label "$1" scope global permament &>/dev/null
+-	ip ${pre} addr flush label "$1" scope site permmant &>/dev/null
+-	ip ${pre} addr flush label "$1" scope host permament &>/dev/null
++	ip ${pre} addr flush label "$1" scope global &>/dev/null
++	ip ${pre} addr flush label "$1" scope site &>/dev/null
++	ip ${pre} addr flush label "$1" scope host &>/dev/null
+ 	return 0
+ }
+ 
