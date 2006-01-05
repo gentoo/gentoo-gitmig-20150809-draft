@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.9 2005/05/19 03:52:51 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.10 2006/01/05 18:38:37 spyderous Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -21,7 +21,19 @@ SLOT="0"
 KEYWORDS="x86 -sparc alpha"
 IUSE="voodoo3 3dnow"
 
-DEPEND=">=sys-devel/automake-1.4
+RDEPEND="|| ( ( x11-libs/libXxf86dga
+			x11-libs/libXxf86vm
+		)
+		virtual/x11
+	)"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xf86dgaproto
+			x11-proto/xf86vidmodeproto
+			x11-libs/libXt
+		)
+		virtual/x11
+	)
+	>=sys-devel/automake-1.4
 	>=sys-devel/autoconf-2.57
 	>=sys-devel/libtool-1.3.3
 	>=sys-devel/m4-1.4
