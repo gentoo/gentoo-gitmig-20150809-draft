@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.4 2005/11/20 18:31:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.5 2006/01/05 01:13:38 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -23,13 +23,25 @@ IUSE="opengl dedicated"
 
 DEPEND="sys-libs/glibc
 	app-arch/unzip"
+
 RDEPEND="sys-libs/glibc
-	opengl? ( virtual/opengl )
-	amd64? ( app-emulation/emul-linux-x86-xlibs
-		opengl? ( app-emulation/emul-linux-x86-compat
-			|| ( >=media-video/nvidia-glx-1.0.6629-r3
+	opengl? (
+		virtual/opengl )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		opengl? (
+			app-emulation/emul-linux-x86-compat
+			|| (
+				>=media-video/nvidia-glx-1.0.6629-r3
 				>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )
-	dedicated? ( app-misc/screen )"
+	dedicated? (
+		app-misc/screen )
+	x86? (
+		|| (
+			(
+				x11-libs/libXext
+				x11-libs/libX11 )
+			virtual/x11 ) )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
@@ -37,7 +49,8 @@ Ddir=${D}/${dir}
 
 pkg_setup() {
 	games_pkg_setup
-	ewarn "The installed game takes about 1.6GB of space when installed and 2.4GB of space in ${PORTAGE_TMPDIR} to build!"
+	ewarn "The installed game takes about 1.6GB of space when installed and"
+	ewarn "2.4GB of space in ${PORTAGE_TMPDIR} to build!"
 }
 
 src_unpack() {
