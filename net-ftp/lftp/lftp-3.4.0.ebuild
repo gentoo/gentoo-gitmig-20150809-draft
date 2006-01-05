@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.3.0.ebuild,v 1.1 2005/09/26 11:01:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.0.ebuild,v 1.1 2006/01/05 10:25:53 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program"
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
@@ -22,7 +24,6 @@ RDEPEND=">=sys-libs/ncurses-5.1
 			gnutls? ( >=net-libs/gnutls-1.2.3 )
 			!gnutls? ( >=dev-libs/openssl-0.9.6 )
 		)
-		sys-libs/readline
 		virtual/libc"
 
 DEPEND="${RDEPEND}
@@ -47,7 +48,8 @@ src_compile() {
 	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
 		|| myconf="${myconf} --without-socksdante"
 
-	use ppc-macos && myconf="${myconf} --with-included-readline"
+	# using this because of bug #95958 / bug #74815 - big faults with readline-5
+	myconf="${myconf} --with-included-readline"
 
 	econf \
 		--sysconfdir=/etc/lftp \
@@ -63,6 +65,6 @@ src_install() {
 	# hrmph, empty..
 	rm -rf ${D}/usr/lib
 
-	dodoc BUGS COPYING ChangeLog FAQ FEATURES MIRRORS \
+	dodoc BUGS ChangeLog FAQ FEATURES MIRRORS \
 		NEWS README* THANKS TODO
 }

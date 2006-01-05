@@ -1,6 +1,15 @@
 # ChangeLog for net-ftp/lftp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.91 2005/11/23 19:44:53 dragonheart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.92 2006/01/05 10:25:53 dragonheart Exp $
+
+*lftp-3.4.0 (05 Jan 2006)
+
+  05 Jan 2006; Daniel Black <dragonheart@gentoo.org> -lftp-3.3.0.ebuild,
+  +lftp-3.4.0.ebuild:
+  finally transistioned to --with-included-readline because 5.0 is just too
+  much - bug #95958 and bug #74815 thankyou to all those people on those bugs.
+  Version bump as per bug #117810 - thanks Tim Harder. May fix bug #112487 -
+  gnutls unexpected end.
 
 *lftp-3.3.4-r1 (23 Nov 2005)
 
