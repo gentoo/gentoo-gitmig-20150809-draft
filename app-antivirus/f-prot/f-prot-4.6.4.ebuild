@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.3.ebuild,v 1.3 2006/01/05 04:31:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.4.ebuild,v 1.1 2006/01/05 04:31:38 ticho Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="~amd64 -ppc -sparc x86"
+KEYWORDS="~amd64 -ppc -sparc ~x86"
 
 src_install() {
 	cd ${S}
@@ -63,8 +63,5 @@ pkg_postinst() {
 	echo "0 4 * * * /opt/f-prot/tools/check-updates.pl >/dev/null"
 	echo
 	einfo "For more examples, see /usr/share/doc/${PF}/html/auto_updt.html"
-	echo
-	ewarn "As of 4.5.4, the update script is installed correctly into directory designed"
-	ewarn "by upstream again. Check your crontab, so the path matches the one above."
 	echo
 }
