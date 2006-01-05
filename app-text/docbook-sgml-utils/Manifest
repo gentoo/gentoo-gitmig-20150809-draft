@@ -1,8 +1,7 @@
-MD5 628e207a7cd6c2cf05c5017d47d7179a ChangeLog 6854
+MD5 6d91fa861fc2e76d035d3c548af931af ChangeLog 6960
 MD5 bb34094658d8d760ad76b5500de723be docbook-sgml-utils-0.6.12-r2.ebuild 1661
 MD5 0eba1089ef7758176b6e2132d4c70451 docbook-sgml-utils-0.6.12.ebuild 1263
-MD5 21298e0d7c90b8a0e02577c8f625f528 docbook-sgml-utils-0.6.14.ebuild 1624
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 b3d734e789d769bd0b2e6bd26a80888f docbook-sgml-utils-0.6.14.ebuild 1621
 MD5 162814a2342da5479a18dc8e9f74182a files/digest-docbook-sgml-utils-0.6.12 72
 MD5 162814a2342da5479a18dc8e9f74182a files/digest-docbook-sgml-utils-0.6.12-r2 72
 MD5 16ad86aaffd129a7036d2e7475bae20a files/digest-docbook-sgml-utils-0.6.14 72
@@ -10,3 +9,4 @@ MD5 7d5c4302c83e4d132570f155cfe00020 files/docbook-sgml-utils-0.6.14-backend.pat
 MD5 2e82c6e8e331d7a3a8858d18c3711862 files/docbook-sgml-utils-backend.patch 515
 MD5 a52142a3e1462a0e62a1d4b0e4b9e685 files/docbook-sgml-utils-frontend.patch 455
 MD5 f38af9b0090827606a87754c15de3470 files/docbook-sgml-utils-head-jw.patch 379
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
