@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.46 2005/12/17 12:34:33 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.47 2006/01/05 16:34:38 flameeyes Exp $
+
+  05 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mkvtoolnix-1.6.0.ebuild:
+  Filter --as-needed flag as wxWidgets does not like it.
 
   17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   mkvtoolnix-1.6.0.ebuild:
