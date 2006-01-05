@@ -1,4 +1,14 @@
-MD5 483e675a56be88604e321409de8b42aa ChangeLog 366
-MD5 6424f43119dcab7545bd619c3001a936 metadata.xml 207
-MD5 7e3fe111425ffa95a5fd51ad251719c9 ruby-password-0.5.2.ebuild 538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a3ef0c876d8be8bd9feef0816491af5 ChangeLog 492
 MD5 8ecd5ef2c69d1dd501f9707f5bd1c872 files/digest-ruby-password-0.5.2 70
+MD5 6424f43119dcab7545bd619c3001a936 metadata.xml 207
+MD5 402009e4160576b2126af02fa306c2d0 ruby-password-0.5.2.ebuild 547
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvVeCQiJ/wx066S4RAiLTAKCIEM9969btA9eObMYX9ur7JVP4AgCggpgV
+t1OpBFM0EtVtAicot/o5qYI=
+=PbjX
+-----END PGP SIGNATURE-----
