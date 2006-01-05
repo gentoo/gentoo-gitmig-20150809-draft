@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.45 2005/10/10 07:21:58 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.46 2006/01/05 21:03:31 cryos Exp $
+
+  05 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  docbook-sgml-utils-0.6.14.ebuild:
+  Stable on amd64.
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org>
   docbook-sgml-utils-0.6.14.ebuild:
