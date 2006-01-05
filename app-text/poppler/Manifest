@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8535175adc50c631178eb62c255c09c6 ChangeLog 4435
+MD5 dd6347c9a21d6b0b04f20c162f05814b ChangeLog 4569
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0-r1 65
 MD5 be62fc9641cde65e89b62b2a629bb617 files/digest-poppler-0.4.2 65
@@ -13,7 +13,7 @@ MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r3 137
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 MD5 c6805b961ecb2a526246a39bbff57f23 files/poppler-0.4.2-CAN-2005-3193.patch 3940
 MD5 8b92823cdaec86c3cb5993440d95c306 files/poppler-0.4.3-gcc41.patch 479
-MD5 ce7b0785e0aca755f5840c802dd7fed8 files/poppler-gcc41.patch 1612
+MD5 f52250f6bc64f4201e663a46ed126f9b files/poppler-gcc41.patch 1131
 MD5 580dbf31fbeac60b3e29d38fdeabc4f1 files/poppler-no-libjpeg.patch 773
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 2638f0cdd789bc7e7ffd78e5b1555008 poppler-0.3.0-r1.ebuild 1019
@@ -27,7 +27,7 @@ MD5 73581022e21e0c1521e08454a71ca131 poppler-0.4.3.ebuild 1350
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDu2fg2+ySkm8kpY0RAk+kAKCZbNe5XbgPWxH/Pwmi971kvMLN0QCguzAH
-G6tLyC4RB7a6iDnMy+WYsmY=
-=J/ih
+iD8DBQFDvJpCCRZPokWLroQRAo+rAKDGkHnpqY4pJHjV8nseg3Wug98AuACgzPRN
+ApdjW4tmVQR8mg66m6/s/I8=
+=+gj0
 -----END PGP SIGNATURE-----
