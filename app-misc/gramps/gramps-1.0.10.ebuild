@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.10.ebuild,v 1.4 2006/01/05 22:28:41 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.10.ebuild,v 1.5 2006/01/05 23:49:39 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -30,7 +30,7 @@ DOCS="NEWS README TODO"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	if has_version '<dev-python/pygtk-2.8' ; then
+	if has_version '<dev-python/pygtk-2.8.0-r2' ; then
 		if ! built_with_use dev-python/pygtk gnome ; then
 			eerror "You need to install pygtk with libglade support. Try:"
 			eerror "USE='gnome' emerge pygtk"
