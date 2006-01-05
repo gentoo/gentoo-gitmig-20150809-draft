@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r4.ebuild,v 1.1 2005/11/12 20:12:02 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r4.ebuild,v 1.2 2006/01/05 19:05:36 wolf31o2 Exp $
 
 inherit eutils
 
@@ -13,9 +13,18 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc debug double-precision"
 
-DEPEND="virtual/x11
-	virtual/glu
-	virtual/opengl"
+RDEPEND="virtual/opengl
+	|| (
+		(
+			x11-libs/libX11
+			virtual/glut )
+		virtual/x11 )
+	virtual/glu"
+
+DEPEND="${RDEPEND}
+	|| (
+		x11-proto/xproto
+		virtual/x11 )"
 
 config_use() {
 	use $1 && echo $2 || echo $3
