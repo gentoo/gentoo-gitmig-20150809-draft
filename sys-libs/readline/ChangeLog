@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.58 2005/12/27 04:55:15 kanaka Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.59 2006/01/05 11:20:30 flameeyes Exp $
+
+  05 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/readline-5.1-rlfe-libutil.patch, readline-5.1-r2.ebuild:
+  Add patch to complete rlfe linking when openpty() is in libutil.
 
   27 Dec 2005; Joel Martin <kanaka@gentoo.org> readline-5.1-r2.ebuild:
   Cross-compile fix was partially backed out, put it back in.

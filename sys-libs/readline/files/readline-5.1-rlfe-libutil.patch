@@ -1,0 +1,66 @@
+On FreeBSD the openpty() function is provided by libutil. For this rason, it
+has to be linked in the final executable. The current test is broken because
+it sets LIBS but that variable never gets into the Makefile. To make simpler
+its handling, just set a LIBUTIL variable that would be empty where it's not
+needed and contains -lutil where needed.
+
+Index: readline-5.1/examples/rlfe/Makefile.in
+===================================================================
+--- readline-5.1.orig/examples/rlfe/Makefile.in
++++ readline-5.1/examples/rlfe/Makefile.in
+@@ -25,7 +25,7 @@ CFLAGS = @CFLAGS@
+ CPPFLAGS = @CPPFLAGS@
+ #LDFLAGS = -L$(READLINE_DIR)
+ LDFLAGS = @LDFLAGS@ -L../..
+-LIBS = -lreadline -lhistory -lncurses
++LIBS = -lreadline -lhistory -lncurses @LIBUTIL@
+ 
+ CPP=@CPP@
+ CPP_DEPEND=$(CC) -MM
+Index: readline-5.1/examples/rlfe/configure.in
+===================================================================
+--- readline-5.1.orig/examples/rlfe/configure.in
++++ readline-5.1/examples/rlfe/configure.in
+@@ -251,9 +251,11 @@ AC_CHECK_FUNCS(getpt)
+ dnl check for openpty()
+ if test -z "$sysvr4ptys"; then
+ AC_CHECK_FUNCS(openpty,,
+-[AC_CHECK_LIB(util,openpty, [AC_DEFINE(HAVE_OPENPTY)] [LIBS="$LIBS -lutil"])])
++[AC_CHECK_LIB(util,openpty, [AC_DEFINE(HAVE_OPENPTY)] [LIBUTIL="-lutil"])])
+ fi
+ 
++AC_SUBST(LIBUTIL)
++
+ AC_CHECKING(for ptyranges)
+ if test -d /dev/ptym ; then
+ pdir='/dev/ptym'
+Index: readline-5.1/examples/rlfe/configure
+===================================================================
+--- readline-5.1.orig/examples/rlfe/configure
++++ readline-5.1/examples/rlfe/configure
+@@ -272,7 +272,7 @@ PACKAGE_STRING=
+ PACKAGE_BUGREPORT=
+ 
+ ac_unique_file="rlfe.c"
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS VERSION CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP EGREP AWK WRITEPATH XTERMPATH LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS VERSION CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP EGREP AWK LIBUTIL WRITEPATH XTERMPATH LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -3805,7 +3805,7 @@ if test $ac_cv_lib_util_openpty = yes; t
+   cat >>confdefs.h <<\_ACEOF
+ #define HAVE_OPENPTY 1
+ _ACEOF
+- LIBS="$LIBS -lutil"
++ LIBUTIL="-lutil"
+ fi
+ 
+ fi
+@@ -4908,6 +4908,7 @@ s,@OBJEXT@,$OBJEXT,;t t
+ s,@CPP@,$CPP,;t t
+ s,@EGREP@,$EGREP,;t t
+ s,@AWK@,$AWK,;t t
++s,@LIBUTIL@,$LIBUTIL,;t t
+ s,@WRITEPATH@,$WRITEPATH,;t t
+ s,@XTERMPATH@,$XTERMPATH,;t t
+ s,@LIBOBJS@,$LIBOBJS,;t t
