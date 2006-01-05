@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcroco
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.22 2005/04/08 16:03:40 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.23 2006/01/05 23:26:57 joem Exp $
+
+  05 Jan 2006; Joe McCann <joem@gentoo.org>
+  +files/libcroco-as_needed_ldflags_fix.patch, libcroco-0.6.0.ebuild:
+  Adding patch to fix compile with --as-needed ldflag. Thanks much to Diego in
+  bug 117850.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> libcroco-0.6.0.ebuild:
   Stable on ppc64

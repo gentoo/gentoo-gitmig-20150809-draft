@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.0.ebuild,v 1.11 2005/04/08 16:03:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.0.ebuild,v 1.12 2006/01/05 23:26:57 joem Exp $
 
-inherit gnome2
+inherit autotools gnome2
 
 DESCRIPTION="Generic Cascading Style Sheet (CSS) parsing and manipulation toolkit"
 HOMEPAGE="http://www.freespiders.org/projects/libcroco/"
@@ -18,4 +18,11 @@ RDEPEND=">=dev-libs/glib-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-as_needed_ldflags_fix.patch
+	eautoconf
+}
 DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README TODO"

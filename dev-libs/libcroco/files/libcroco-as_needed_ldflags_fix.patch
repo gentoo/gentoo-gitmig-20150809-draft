@@ -1,0 +1,10 @@
+Index: libcroco-0.6.0/src/Makefile.am
+===================================================================
+--- libcroco-0.6.0.orig/src/Makefile.am
++++ libcroco-0.6.0/src/Makefile.am
+@@ -93,3 +93,5 @@ INCLUDES=-I$(top_srcdir) -I$(top_srcdir)
+ @GLIB2_CFLAGS@ @LIBXML2_CFLAGS@
+ libcroco_0_6_la_LDFLAGS=-version-info @LIBCROCO_VERSION_INFO@ \
+ @GLIB2_CFLAGS@
++libcroco_0_6_la_LIBADD=@LIBXML2_LIBS@
++
