@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/fnord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.13 2006/01/04 10:27:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.14 2006/01/05 21:40:36 hansmi Exp $
+
+  05 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> fnord-1.9.ebuild:
+  Back to ~hppa, ~sparc because of reproducible problems, 1.10 works.
 
 *fnord-1.10 (04 Jan 2006)
 
