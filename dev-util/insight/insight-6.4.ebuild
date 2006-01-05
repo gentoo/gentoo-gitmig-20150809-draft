@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.2 2006/01/03 05:49:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.3 2006/01/05 00:17:10 tester Exp $
 
 inherit eutils
 
@@ -12,8 +12,7 @@ LICENSE="GPL-2 LGPL-2"
 DEPEND="|| ( x11-libs/libXt virtual/x11 )
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}
-	nls? ( sys-devel/gettext )
-	|| ( x11-libs/libX11 virtual/x11 )"
+	nls? ( sys-devel/gettext )"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
