@@ -14,11 +14,11 @@ MD5 8938df25626d18aa4493d26dea7e00eb files/pcmcia-cs-3.2.8-ppc.config.opts 1657
 MD5 18e1f0bdc6612842839a2b2888ea16ad files/pcmcia-cs-3.2.8-tools-only.patch 1230
 MD5 8df7f8fac6931504e84e1c13acfe92e6 files/pcmcia-cs-3.2.8-x11.patch 874
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
-MD5 273e7e5e9d3c597ba3872b5db436c473 pcmcia-cs-3.2.8-r2.ebuild 4081
+MD5 08f5f808f752e9128aec84c1d48b9446 pcmcia-cs-3.2.8-r2.ebuild 4082
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFDrrqCAiZjviIA2XgRArXSAKDR1dLHCYUuKTV3Liu2ZBKxTFlqUQCYryiP
-4Vg7M4/IQeV3k/gyk2lSgg==
-=8+5I
+iD8DBQFDvMJh2+ySkm8kpY0RAuDgAJ9Sj3tcwqXwd9xXsGoU8Wo74AHDhgCgolWm
+Q00N0klJV0s93WSmdND+QBw=
+=I+Bf
 -----END PGP SIGNATURE-----
