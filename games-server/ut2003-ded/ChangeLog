@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2003-ded
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.8 2005/11/23 16:19:13 wolf31o2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.9 2006/01/05 22:11:47 wolf31o2 Exp $
+
+  05 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-ded-2225-r2.ebuild:
+  Marking stable on amd64.
 
   23 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-ded-2225-r2.ebuild:
