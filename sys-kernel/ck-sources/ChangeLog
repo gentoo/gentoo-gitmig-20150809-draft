@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.128 2006/01/05 08:42:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.129 2006/01/05 20:08:13 marineam Exp $
+
+  05 Jan 2006; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.13_p8.ebuild:
+  Remove 2.6.13, has a couple security issues by now.
 
 *ck-sources-2.6.15_p1 (05 Jan 2006)
 *ck-sources-2.6.14_p8 (05 Jan 2006)
