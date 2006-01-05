@@ -1,0 +1,34 @@
+diff -ruN ghostscript-7.07.orig/lib/gs_ttf.ps ghostscript-7.07/lib/gs_ttf.ps
+--- ghostscript-7.07.orig/lib/gs_ttf.ps	2003-04-12 23:02:38.000000000 +0900
++++ ghostscript-7.07/lib/gs_ttf.ps	2003-07-24 19:00:37.000000000 +0900
+@@ -575,7 +575,7 @@
+   (maxp) 1 index
+   (name) 1 index
+   (OS/2) 1 index
+-  (post) 1 index
++  (post) { .readbigtable }
+   (vhea) 1 index
+ 	% Big tables
+   (glyf) { .readbigtable }
+@@ -918,10 +918,17 @@
+   DEBUG { (fontname ) print fontname = } if
+ 		% Stack: ... /FontInfo mark key1 value1 ...
+   post null ne {
+-    /ItalicAngle post 4 gets32 65536.0 div
+-    /isFixedPitch post 12 getu32 0 ne
+-    /UnderlinePosition post 8 gets16 upem div
+-    /UnderlineThickness post 10 gets16 upem div
++    post type /arraytype eq {
++      % this post table is a big table. /post should be [(...) ...]
++      % data we actually need here should be first one in array.
++      /posttable post 1 get def
++    } {
++      /posttable post def
++    } ifelse
++    /ItalicAngle posttable 4 gets32 65536.0 div
++    /isFixedPitch posttable 12 getu32 0 ne
++    /UnderlinePosition posttable 8 gets16 upem div
++    /UnderlineThickness posttable 10 gets16 upem div
+   } if
+   counttomark 0 ne { .dicttomark } { pop pop } ifelse
+   /XUID [orgXUID 42 curxuid]

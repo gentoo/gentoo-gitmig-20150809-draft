@@ -1,0 +1,26 @@
+diff -Naur espgs-7.07.1.orig/ijs/Makefile.in espgs-7.07.1/ijs/Makefile.in
+--- espgs-7.07.1.orig/ijs/Makefile.in	2004-09-19 13:09:50.225860000 -0700
++++ espgs-7.07.1/ijs/Makefile.in	2004-09-19 13:20:08.118191874 -0700
+@@ -60,14 +60,14 @@
+ 	$(RM) *~ gmon.out core ijs_spec.log ijs_spec.tex ijs_spec.aux libijs.a libijs$(SHARED_OBJ) config.cache config.log config.status ijs-config
+ 
+ install:	all
+-	$(INSTALL) ijs_client_example$(EXE) -c $(bindir)/ijs_client_example$(EXE)
+-	$(INSTALL) ijs-config -c $(bindir)/ijs-config
+-	$(INSTALL) libijs.a $(libdir)/libijs.a
+-	$(INSTALL) libijs$(SHARED_OBJ) $(libdir)/libijs$(SHARED_OBJ)
+-	-mkdir $(pkgincludedir)
+-	$(INSTALL) ijs.h $(pkgincludedir)/ijs.h
+-	$(INSTALL) ijs_client.h $(pkgincludedir)/ijs_client.h
+-	$(INSTALL) ijs_server.h $(pkgincludedir)/ijs_server.h
++	$(INSTALL) ijs_client_example$(EXE) -c $(DESTDIR)$(bindir)/ijs_client_example$(EXE)
++	$(INSTALL) ijs-config -c $(DESTDIR)$(bindir)/ijs-config
++	$(INSTALL) libijs.a $(DESTDIR)$(libdir)/libijs.a
++	$(INSTALL) libijs$(SHARED_OBJ) $(DESTDIR)$(libdir)/libijs$(SHARED_OBJ)
++	-mkdir $(DESTDIR)$(pkgincludedir)
++	$(INSTALL) ijs.h $(DESTDIR)$(pkgincludedir)/ijs.h
++	$(INSTALL) ijs_client.h $(DESTDIR)$(pkgincludedir)/ijs_client.h
++	$(INSTALL) ijs_server.h $(DESTDIR)$(pkgincludedir)/ijs_server.h
+ 
+ uninstall:
+ 	$(RM) $(bindir)/ijs_client_example$(EXE) $(bindir)/ijs-config $(libdir)/libijs.a $(libdir)/libijs$(SHARED_OBJ)

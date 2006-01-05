@@ -1,0 +1,203 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r10.ebuild,v 1.1 2006/01/05 00:00:18 metalgod Exp $
+
+inherit flag-o-matic eutils toolchain-funcs libtool
+
+DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
+HOMEPAGE="http://www.cups.org/ghostscript.php"
+SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
+	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
+		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )"
+
+LICENSE="GPL-2 LGPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="X cups cjk emacs gtk"
+
+DEP="virtual/libc
+	>=media-libs/jpeg-6b
+	>=media-libs/libpng-1.2.1
+	>=sys-libs/zlib-1.1.4
+	X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libXt )
+		virtual/x11 ) )
+	gtk? ( >=x11-libs/gtk+-2.0 )
+	cups? ( net-print/cups )
+	!virtual/ghostscript"
+
+RDEPEND="${DEP}
+	cjk? ( media-fonts/arphicfonts
+		media-fonts/kochi-substitute
+		media-fonts/baekmuk-fonts )
+	X? ( || ( (
+			x11-libs/libXt
+			x11-libs/libSM
+			x11-libs/libICE
+			x11-libs/libXau
+			x11-libs/libXdmcp )
+		virtual/x11 ) )
+	media-fonts/gnu-gs-fonts-std"
+
+DEPEND="${DEP}
+	X? ( || ( (
+			x11-proto/xproto )
+		virtual/x11 ) )
+	gtk? ( dev-util/pkgconfig )"
+
+#	media-libs/fontconfig"
+
+S=${WORKDIR}/espgs-${PV}
+
+PROVIDE="virtual/ghostscript"
+
+src_unpack() {
+	unpack espgs-${PV}-source.tar.bz2
+
+	cd ${S}
+
+	if use ppc-macos; then
+		epatch ${FILESDIR}/gs-osx-unix-dll.patch
+		cp src/unix-gcc.mak Makefile.in
+		sed -i -e "s:SHARE_JPEG=0:SHARE_JPEG=1:" Makefile.in || die
+		sed -i -e "s:SHARE_ZLIB=0:SHARE_ZLIB=1:" Makefile.in || die
+		sed -i -e "s:SHARE_LIBPNG=0:SHARE_LIBPNG=1:" Makefile.in || die
+		sed -i -e "s:usr/local:usr:" Makefile.in || die
+	fi
+
+	if use cjk ; then
+		epatch ${FILESDIR}/gs7.07.1-cjk.diff
+		#this causes gs error; bug #90009
+		#sed -i -e '/;$/s/^%//g' ${S}/lib/CIDFnmap.CJK || die
+
+		epatch ${FILESDIR}/ghostscript-7.07-bigposttable.patch
+		epatch ${FILESDIR}/ghostscript-7.07-gsublookuptable.patch
+		epatch ${FILESDIR}/ghostscript-7.07-coverage-glyphcount.patch
+		epatch ${FILESDIR}/ghostscript-7.07-fix_rename_font_gs_cidfn.ps.patch
+		epatch ${FILESDIR}/ghostscript-7.07-fix_cidfontname_Encoding_CIDToGIDMap_DW_W.patch
+	fi
+
+	# add fontconfig support (this patch is broken)
+	# epatch ${FILESDIR}/gs7.07.1-fontconfig-rh.patch.2.bz2
+
+	#100808
+	epatch ${FILESDIR}/${P}-64bit-cmyk.patch
+
+	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
+	epatch ${FILESDIR}/ghostscript-7.05.6.man.patch
+
+	# ijs fPIC patch
+	epatch ${FILESDIR}/gs${PV}-ijs.patch
+
+	# pxl dash patch
+	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
+
+	# Makefile.in fixes for DESTDIR support in libijs because
+	# einstall borks on multilib systems -- eradicator
+	epatch ${FILESDIR}/gs${PV}-destdir.patch
+	epatch ${FILESDIR}/gs${PV}-ijsdestdir.patch
+
+	use ppc-macos && epatch ${FILESDIR}/gs-osx-ijs.patch
+
+	# search path fix
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):"\
+	Makefile.in || die "sed failed"
+	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
+	Makefile.in || die "sed failed"
+
+	# insecure tempfile handling
+	epatch ${FILESDIR}/gs${PV}-tempfile.patch
+
+	# krgb support (currently broken)
+	#( cd src; epatch ${FILESDIR}/gs7.07.1-krgb.patch.gz )
+
+	# Fix the garbage collector on ia64 and ppc
+	epatch ${FILESDIR}/gs-fix-gc.patch
+
+	# bug #63435
+	epatch ${FILESDIR}/gs${PV}-ps2ps.patch
+
+	# fix dynamic build
+	echo '#include "png.h"' >> src/png_.h
+
+	# fix for building with gtk2 instead of gtk1
+	if use gtk; then
+		sed -i -e "s:gmodule:gmodule-2.0:" configure.ac
+		sed -i -e "s:glib-config:pkgconfig:" configure.ac
+		sed -i -e "s:gtk-config:pkg-config gtk+-2.0:g" src/unix-dll.mak
+		sed -i -e "s:CFLAGS_SO=-fPIC:CFLAGS_SO=-fPIC -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include:" Makefile.in
+	else
+		epatch ${FILESDIR}/gs${PV}-nogtk2.patch
+	fi
+}
+
+src_compile() {
+	local myconf
+	myconf="--with-ijs --without-gimp-print"
+	use gtk && myconf="${myconf} --with-omni" || myconf="${myconf} --without-omni"
+
+	# bug #56998, only compiled-in fontpath is searched when running 
+	# gs -DPARANOIDSAFER out.ps
+	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
+
+	use X && myconf="${myconf} --with-x" \
+		|| myconf="${myconf} --without-x"
+
+	use cups && myconf="${myconf} --enable-cups" \
+		|| myconf="${myconf} --disable-cups"
+
+	# -O3 will make ghostscript fail when compiling with gcc 3.4
+	if [ "`gcc-major-version`" -eq "3" ] && [ "`gcc-minor-version`" -eq "4" ]
+	then
+		strip-flags
+		replace-flags -O? -O2
+	fi
+
+	autoconf
+	econf ${myconf} || die "econf failed"
+	emake -j1 || die "make failed"
+	emake so -j1 || die "make failed"
+
+	cd ijs
+	econf || die "econf failed"
+	emake -j1 || die "make failed"
+	cd ..
+}
+
+src_install() {
+	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" soinstall || die "make install failed"
+
+	rm -fr ${D}/usr/share/ghostscript/7.07/doc || die
+	dodoc doc/README doc/COPYING doc/COPYING.LGPL
+	dohtml doc/*.html doc/*.htm
+
+	if use emacs; then
+		insinto /usr/share/emacs/site-lisp
+		doins doc/gsdoc.el
+	fi
+
+	if use cjk ; then
+		dodir /usr/share/ghostscript/Resource
+		dodir /usr/share/ghostscript/Resource/Font
+		dodir /usr/share/ghostscript/Resource/CIDFont
+		cd ${D}/usr/share/ghostscript/Resource
+		unpack adobe-cmaps-200204.tar.gz
+		unpack acro5-cmaps-2001.tar.gz
+	fi
+
+	# Install ijs
+	cd ${S}/ijs
+	dodir /usr/bin /usr/include /usr/$(get_libdir)
+	# This is broken - there are not even a 'install_prefix'
+	# anywhere in ${S}/ijs ...
+	#einstall install_prefix=${D}
+	#einstall
+	#dosed "s:^prefix=.*:prefix=/usr:" /usr/bin/ijs-config
+	make DESTDIR="${D}" install || die
+
+	# bug #83876, collision with gcc
+	rm -f ${D}/usr/share/man/de/man1/ansi2knr.1
+	rm -f ${D}/usr/share/man/man1/ansi2knr.1
+}
