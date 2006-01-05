@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.9 2005/12/17 00:46:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.10 2006/01/05 03:04:27 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1047,12 +1047,9 @@ DEPEND=">=sys-devel/gcc-3.3.3
 	>=sys-devel/binutils-2.16.1
 	>=sys-devel/gcc-config-1.3.12
 	virtual/os-headers
-	sys-libs/timezone-data
 	nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
-
-RDEPEND="sys-libs/timezone-data
-	nls? ( sys-devel/gettext )
+RDEPEND="nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
@@ -1065,6 +1062,9 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 			DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
 		fi
 	fi
+else
+	DEPEND="${DEPEND} sys-libs/timezone-data"
+	RDEPEND="${RDEPEND} sys-libs/timezone-data"
 fi
 
 pkg_setup() {
