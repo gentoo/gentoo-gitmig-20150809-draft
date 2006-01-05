@@ -1,0 +1,29 @@
+diff -uNr ndiswrapper-1.2/driver/ndis.h ndiswrapper-1.2.mod/driver/ndis.h
+--- ndiswrapper-1.2/driver/ndis.h	2005-06-10 20:24:31.000000000 +0100
++++ ndiswrapper-1.2.mod/driver/ndis.h	2005-10-01 16:20:12.000000000 +0100
+@@ -238,7 +238,7 @@
+ 	void (*enable_interrupts)(void *ctx) STDCALL;
+ 
+ 	/* Stop miniport */
+-	void (*halt)(void *ctx) STDCALL;
++	void (*miniport_halt)(void *ctx) STDCALL;
+ 
+ 	/* Interrupt BH */
+ 	ndis_interrupt_handler handle_interrupt;
+diff -uNr ndiswrapper-1.2/driver/wrapper.c ndiswrapper-1.2.mod/driver/wrapper.c
+--- ndiswrapper-1.2/driver/wrapper.c	2005-06-10 20:24:31.000000000 +0100
++++ ndiswrapper-1.2.mod/driver/wrapper.c	2005-10-01 16:19:43.000000000 +0100
+@@ -280,11 +280,11 @@
+ void miniport_halt(struct wrapper_dev *wd)
+ {
+ 	struct miniport_char *miniport = &wd->driver->miniport;
+-	TRACEENTER1("driver halt is at %p", miniport->halt);
++	TRACEENTER1("driver halt is at %p", miniport->miniport_halt);
+ 
+ 	miniport_set_int(wd, OID_PNP_SET_POWER, NdisDeviceStateD3);
+ 
+-	LIN2WIN1(miniport->halt, wd->nmb->adapter_ctx);
++	LIN2WIN1(miniport->miniport_halt, wd->nmb->adapter_ctx);
+ 
+ 	ndis_exit_device(wd);
+ 	misc_funcs_exit_device(wd);

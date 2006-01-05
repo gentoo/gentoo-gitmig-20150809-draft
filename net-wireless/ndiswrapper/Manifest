@@ -1,19 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 470880bb2323cecbc68aede74373a898 ChangeLog 7072
+MD5 5ba529a14b3b213245c291115b30774c ChangeLog 7414
 MD5 fd2f66ff609bafcd303be1db969e9185 files/digest-ndiswrapper-1.2 67
+MD5 fd2f66ff609bafcd303be1db969e9185 files/digest-ndiswrapper-1.2-r1 67
 MD5 99150810adb8171b788cfed921ab62bd files/digest-ndiswrapper-1.5 67
 MD5 7c67b35a030ab2acbc09e54ee77a6205 files/digest-ndiswrapper-1.7 67
+MD5 69ca885f3c7039ffb61da23aa194653c files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
 MD5 9cf5a13dc78b9840d419f0656d1dd920 files/ndiswrapper-1.2-suspend2.patch 553
-MD5 2f7c7c41947c7558b2ffd955781cf676 metadata.xml 475
-MD5 cac3ca22dc7de36f7b39637624d8a8c8 ndiswrapper-1.2.ebuild 2532
+MD5 8d922dcf7a83d54f22e5831433f2ba65 metadata.xml 542
+MD5 46f76e50f834338793de3f27c3b29de8 ndiswrapper-1.2-r1.ebuild 2583
+MD5 e0270deffdd57fbe8d7d745964b17f00 ndiswrapper-1.2.ebuild 2871
 MD5 f4dd818bb7fa4b774cd0716c15f8149b ndiswrapper-1.5.ebuild 2536
 MD5 d7d611d0df86023d8db9a9c610a047b9 ndiswrapper-1.7.ebuild 2497
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDsqGOQiJ/wx066S4RAqbJAJ9rXaFAD1cYK7MgMdo/tSz2M7PQZwCfTn/O
-NIxPEhRdrTUuDnB7quJzO1U=
-=nGCh
+iD8DBQFDva5UQiJ/wx066S4RAnUpAJ9kYVxGT6btieSVeJo/YaGiEkzZIQCeMJe1
+gdlwMqEwQVVjxg5nCN4G2UE=
+=N00f
 -----END PGP SIGNATURE-----

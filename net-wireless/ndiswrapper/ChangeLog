@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ndiswrapper
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.34 2005/12/28 14:30:24 betelgeuse Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.35 2006/01/05 23:39:50 betelgeuse Exp $
+
+*ndiswrapper-1.2-r1 (05 Jan 2006)
+
+  05 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/ndiswrapper-1.2-kernel-2.6.14.patch, metadata.xml,
+  ndiswrapper-1.2.ebuild, +ndiswrapper-1.2-r1.ebuild:
+  Made 1.2 die when 2.6.14 or newer is used, added a new revision of 1.2 with
+  a patch from bug #117706 and added myself as a maintainer.
 
 *ndiswrapper-1.7 (28 Dec 2005)
 

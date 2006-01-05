@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.8 2006/01/05 23:39:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2-r1.ebuild,v 1.1 2006/01/05 23:39:50 betelgeuse Exp $
 
-inherit linux-mod eutils
+inherit eutils linux-mod
 
 DESCRIPTION="Wrapper for using Windows drivers for some wireless cards"
 HOMEPAGE="http://ndiswrapper.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="debug"
 DEPEND="sys-apps/pciutils"
@@ -24,25 +24,17 @@ BUILD_TARGETS="all"
 MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")
 
 pkg_setup() {
+	einfo "See http://www.gentoo.org/doc/en/gentoo-kernel.xml for a list of supported kernels."
+	echo  ""
 	linux-mod_pkg_setup
-
-	if [[ ${KV_MINOR} -eq 6 && ${KV_PATCH} -gt 13 ]]; then
-		eerror ""
-		eerror "This version does not work with kernel later than 2.6.13."
-		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=111029 for more"
-		eerror "information."
-		die "This version does not work with the selected kernel."
-	fi
 }
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	epatch ${FILESDIR}/${P}-suspend2.patch || die "suspend2 patch failed"
 
-	einfo "The only kernels that will work are gentoo-sources, vanilla-sources, and suspend2-sources."
-	einfo "No other kernels are supported. Kernels like the mm kernels will NOT work."
+	epatch "${FILESDIR}"/${PN}-1.2-suspend2.patch || die "suspend2 patch failed"
+	epatch "${FILESDIR}"/${PN}-1.2-kernel-2.6.14.patch || die "2.6.14 patch failed"
 
 	convert_to_m ${S}/driver/Makefile
 }
@@ -55,7 +47,6 @@ src_compile() {
 	emake || die "Compile of utils failed!"
 
 	linux-mod_src_compile
-
 }
 
 src_install() {

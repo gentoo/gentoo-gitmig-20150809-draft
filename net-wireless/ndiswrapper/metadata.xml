@@ -3,8 +3,11 @@
 <pkgmetadata>
 <herd>mobile</herd>
 <maintainer>
+  <email>betelgeuse@gentoo.org</email>
+  <description>Until brad gets back</description>
+</maintainer>
+<maintainer>
   <email>brad@gentoo.org</email>
-  <description>Actively maintained</description>
 </maintainer>
 <longdescription>ndiswrapper provides a kernel module and utility for
 implementing the Windows(tm) NDIS API. This serves to provide drivers 
