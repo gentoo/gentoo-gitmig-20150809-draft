@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4831 2006/01/05 15:24:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4832 2006/01/05 17:02:49 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -180,10 +180,6 @@ net-im/sim
 # Luabind doesn't compile with the latest stable boost, and no updates
 # for awhile.
 dev-libs/luabind
-
-# Matthias Schwarzott <zzam@gentoo.org> (11 Dec 2005)
-# Buggy version does not compile with newer 2.4-Kernels, will be removed.
-=media-tv/linuxtv-dvb-1.0.1
 
 # Roy Marples <uberlord@gentoo.org> (09 Dec 2005)
 # Masked for testing
