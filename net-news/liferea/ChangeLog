@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.28 2005/12/22 01:42:06 allanonjl Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.29 2006/01/05 23:11:16 citizen428 Exp $
+
+*liferea-1.0 (05 Jan 2006)
+
+  05 Jan 2006; Michael Kohl <citizen428@gentoo.org> +liferea-1.0.ebuild:
+  Version bump.
 
   22 Dec 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml:
   remove gnome from metadata
