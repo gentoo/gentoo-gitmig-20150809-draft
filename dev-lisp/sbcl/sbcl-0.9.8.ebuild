@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.8.ebuild,v 1.1 2006/01/03 18:31:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.8.ebuild,v 1.2 2006/01/05 04:03:18 anarchy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -64,7 +64,6 @@ src_unpack() {
 	unpack ${P}-source.tar.bz2
 	epatch ${MY_WORK}/sbcl-gentoo.patch || die
 	sed -i "s,/lib,/$(get_libdir),g" ${S}/install.sh
-	sed -i "s,\\(.*SBCL_HOME.*\\)/usr/lib,\\1/usr/$(get_libdir),g" ${S}/src/runtime/runtime.c
 
 	cp ${MY_WORK}/customize-target-features.lisp-prefix \
 		${S}/customize-target-features.lisp
