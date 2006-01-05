@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fed1ac11d82c11784e6a95d428e1c840 openct-0.6.2.ebuild 1691
-MD5 dda6f7cf8df1216911a1c05a082673d3 openct-0.5.0.ebuild 1739
-MD5 aef19db41c4cdaff9f65d474bce70da9 openct-0.6.6.ebuild 1955
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 e7df81f767edf57cd73b3da3cd1ae686 openct-0.6.5.ebuild 1955
 MD5 ffe30d78366c03092b57a355bfdba6ed ChangeLog 1416
-MD5 1c5deb2518b60e86d26532f43ca42885 files/usb.usermap 1062
-MD5 59c91f5e4bd9be3f0c6e28bbc9dae8b2 files/digest-openct-0.6.6 64
 MD5 2a696bc8aef7e7b84c42314e41cb3730 files/digest-openct-0.5.0 64
 MD5 f2097a725de8fa534add565065bd3e6c files/digest-openct-0.6.2 64
 MD5 f0c5c525f3b6cecf937082e6a43622ed files/digest-openct-0.6.5 64
+MD5 59c91f5e4bd9be3f0c6e28bbc9dae8b2 files/digest-openct-0.6.6 64
 MD5 f9bb624a2f171539f67614d14137476f files/openct.rc 591
+MD5 1c5deb2518b60e86d26532f43ca42885 files/usb.usermap 1062
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 cb3d119a7f634862e762a3d1dde0392f openct-0.5.0.ebuild 1742
+MD5 fed1ac11d82c11784e6a95d428e1c840 openct-0.6.2.ebuild 1691
+MD5 e7df81f767edf57cd73b3da3cd1ae686 openct-0.6.5.ebuild 1955
+MD5 35366d9725ede77cd11b4f726e461038 openct-0.6.6.ebuild 1959
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJ5N4gIKl8Uu19MoRAp1OAJ9fSlD+wKZ+VmQ6+bYO4nZq8WBnZgCfYg3V
-pzMISrICNKMudBIN8qtynt4=
-=36SI
+iD4DBQFDvJPG2+ySkm8kpY0RAlxSAJ4lphBOoXtC6WDMexsMRhmvAf07zACYuQqd
+1VzVyGrHQei2dOdobPtysw==
+=3g++
 -----END PGP SIGNATURE-----
