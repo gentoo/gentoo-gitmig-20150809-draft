@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/feedparser
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.1 2005/11/03 20:04:46 liquidx Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.2 2006/01/05 14:56:27 liquidx Exp $
+
+*feedparser-4.0.2 (05 Jan 2006)
+
+  05 Jan 2006; Alastair Tse <liquidx@gentoo.org> +feedparser-4.0.2.ebuild:
+  version bump. added html docs.
 
 *feedparser-3.3 (03 Nov 2005)
 
