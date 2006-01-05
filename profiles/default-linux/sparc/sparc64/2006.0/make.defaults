@@ -1,18 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/make.defaults,v 1.7 2006/01/05 15:32:07 gustavoz Exp $
-
-MULTILIB_ABIS="sparc32"
-DEFAULT_ABI="sparc32"
-ABI=${DEFAULT_ABI}
-
-CFLAGS_sparc32="-m32"
-LDFLAGS_sparc32="-m elf32_sparc"
-CHOST_sparc32="sparc-unknown-linux-gnu"
-CTARGET_sparc32="sparc-unknown-linux-gnu"
-CDEFINE_sparc32="!__arch64__"
-
-LIBDIR_sparc32="lib"
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/make.defaults,v 1.8 2006/01/05 15:38:20 gustavoz Exp $
 
 # USE settings
-USE="apache2 arts avi berkdb bitmap-fonts crypt cups dlloader eds encode esd fortran fbcon foomaticdb gdbm gcc64 gif gstreamer gtk gtk2 gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls ogg oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xv xml2 xmms zlib"
+USE="apache2 arts avi berkdb bitmap-fonts crypt cups dlloader eds encode esd fortran fbcon foomaticdb gdbm gcc64 gif gstreamer gtk gtk2 gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls nptl ogg oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xv xml2 xmms zlib"
