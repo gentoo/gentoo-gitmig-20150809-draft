@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.6.ebuild,v 1.1 2005/12/13 18:58:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.0.6.ebuild,v 1.2 2006/01/05 02:58:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -18,16 +18,28 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE="cdinstall alsa opengl dedicated"
 RESTRICT="nostrip"
 
-DEPEND="app-arch/bzip2
-	app-arch/tar"
 RDEPEND="sys-libs/glibc
-	!amd64? ( media-libs/libsdl )
-	amd64? ( app-emulation/emul-linux-x86-sdl
+	!amd64? (
+		media-libs/libsdl )
+	amd64? (
+		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-xlibs )
-	opengl? ( virtual/opengl )
-	dedicated? ( app-misc/screen )
-	alsa? ( >=media-libs/alsa-lib-1.0.6 )
-	cdinstall? ( games-fps/quake4-data )"
+	opengl? (
+		virtual/opengl
+		x86? (
+			|| (
+				(
+					x11-libs/libXext
+					x11-libs/libX11
+					x11-libs/libXau
+					x11-libs/libXdmcp )
+				virtual/x11 ) ) )
+	dedicated? (
+		app-misc/screen )
+	alsa? (
+		>=media-libs/alsa-lib-1.0.6 )
+	cdinstall? (
+		games-fps/quake4-data )"
 
 S=${WORKDIR}
 
