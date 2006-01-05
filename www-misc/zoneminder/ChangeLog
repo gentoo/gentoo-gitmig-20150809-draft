@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/zoneminder
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.8 2005/12/12 21:31:37 carlo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.9 2006/01/05 23:30:27 rl03 Exp $
+
+*zoneminder-1.21.4 (05 Jan 2006)
+
+  05 Jan 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall.txt,
+  +zoneminder-1.21.4.ebuild:
+  Version bump (bug #117944), fixes for bug #106913.
 
   12 Dec 2005; Carsten Lohrke <carlo@gentoo.org> +metadata.xml:
   now maintained by the webapp herd, as arranged with rl03

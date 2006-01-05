@@ -1,12 +1,17 @@
 If this is a new installation, you will need to create a database for ZM to
 use. Execute the following:
- 
- cd /usr/share/doc/zoneminder-VERSION
+
+ cd /usr/share/doc/${PN}-${PVR}
  gunzip zmschema.sql.gz && mysql mysql < zmschema.sql
  mysql mysql
   > grant select,insert,update,delete on <your database name>.* to '<username>'@localhost identified by '<password>';
   > quit
  mysqladmin reload
+
+Now run zmconfig.pl:
+ cd /usr/share/${PN}-${PVR}
+ edit zmconfig-gentoo.txt set your db settings
+ ./zmconfig.pl -f ./zmconfig-gentoo.txt -noi -nor
 
 Then edit /etc/zm.conf, and log in:
  http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/zm.php
