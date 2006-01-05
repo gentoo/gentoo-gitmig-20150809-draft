@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.41 2005/12/29 15:23:06 rl03 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.42 2006/01/05 13:18:00 gustavoz Exp $
+
+  05 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> gallery-1.5.1.ebuild,
+  gallery-2.0.2.ebuild:
+  Stable on sparc wrt #117737
 
 *gallery-1.5.2_rc1 (29 Dec 2005)
 
