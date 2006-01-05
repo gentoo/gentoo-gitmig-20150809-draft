@@ -1,0 +1,45 @@
+# This is a list of USE flags that should not be used on PPC
+
+3dfx
+acpi
+adabas
+afs
+avi
+birdstep
+cmucl
+fdftk
+hdf
+icc
+icc-pgo
+ifc
+ip28
+lm_sensors
+real
+svga
+tcc
+x86 
+fmod
+#keep and eye on firebird and interbase as pair
+firebird
+interbase
+
+i8x0
+xvmc
+
+# Unmask our instruction sets
+-altivec
+
+# Fixes bug #86787
+fusion
+
+# rar is binary-only
+rar
+
+# User Mode Linux isn't supported on ppc yet
+uml
+
+# Unmask pbbuttonsd
+-pbbuttonsd
+
+# GIT's ppc sha1 implementation
+-ppcsha1
