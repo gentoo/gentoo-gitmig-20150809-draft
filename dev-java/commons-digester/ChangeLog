@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.28 2005/11/05 11:14:53 betelgeuse Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.29 2006/01/05 14:04:52 betelgeuse Exp $
+
+  05 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
+  commons-digester-1.6-r1.ebuild:
+  Corrected license to Apache-2.0.
 
   05 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   commons-digester-1.6-r1.ebuild:
