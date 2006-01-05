@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8d3f59d75c9cb45e944b6b1b55eee4b4 ChangeLog 7770
 MD5 5839b01596e10f2cb747c3a15b56e5ae PyQt-3.11.ebuild 1472
 MD5 6d0db1c1bdefc35b47486d5e94c491a5 PyQt-3.12.ebuild 1175
@@ -26,3 +29,10 @@ MD5 4871357df2d75975ed54980e42c766f5 files/digest-PyQt-3.15.1 71
 MD5 3fa2049e4d6038c8e02e2069f072cd60 files/digest-PyQt-3.8.1 70
 MD5 7323b7d1c141a1f065cb1b8646bec695 files/license-3.8.1.diff 960
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDvYQDKRy60XGEcJIRAq1vAKCdyiUxp6214xCj49Jc/+GnPL0bLwCeIAU7
+zRSamXRhZe5N2ymmWPhAJ/A=
+=XygE
+-----END PGP SIGNATURE-----
