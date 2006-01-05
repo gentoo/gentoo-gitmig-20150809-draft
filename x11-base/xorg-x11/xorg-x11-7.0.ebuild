@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.ebuild,v 1.2 2005/12/31 09:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.ebuild,v 1.3 2006/01/05 18:39:24 spyderous Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://xorg.freedesktop.org"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sh ~sparc ~x86"
-IUSE="xprint"
+IUSE="3dfx xprint"
 
 # Collision protect will scream bloody murder if we install over old versions
 RDEPEND="!<=x11-base/xorg-x11-6.9"
@@ -41,7 +41,8 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/libXxf86dga-1
 	>=x11-libs/libXinerama-1.0.1
 	>=x11-libs/libXScrnSaver-1.0.1
-	xprint? ( >=x11-libs/libXp-1 )"
+	xprint? ( >=x11-libs/libXp-1 )
+	3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 # Some fonts
 RDEPEND="${RDEPEND}
