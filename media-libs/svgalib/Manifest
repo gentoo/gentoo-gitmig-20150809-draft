@@ -20,13 +20,13 @@ MD5 d137b721449f3fe88d6ec08a3cf6c51a files/svgalib.devfs 219
 MD5 80fafe8076ab52d6f02f90b7f9580ddd files/svgalib.udev.perms.d 22
 MD5 a4acf43a776fa24036c8bde9d951ee60 files/svgalib.udev.rules.d 54
 MD5 69845288d94413820ea3441dc9e60b24 metadata.xml 303
-MD5 c9619b54463a0330aa164eb8108eaa8e svgalib-1.9.19-r3.ebuild 5480
-MD5 fd002269c939e70a3fb8cf85e72d6568 svgalib-1.9.21-r1.ebuild 4470
-MD5 2d42280d70d9833840db725d273fb8bd svgalib-1.9.23.ebuild 4361
+MD5 cbd7300125a37d2d029b6ec00166fac8 svgalib-1.9.19-r3.ebuild 5629
+MD5 883ab8f536976b79259747f70b41046d svgalib-1.9.21-r1.ebuild 4619
+MD5 c26062ed56860238444ea04729203cf3 svgalib-1.9.23.ebuild 4510
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuyn02+ySkm8kpY0RApEzAJ41h1FQUwF0iQf8IwOFyqOaoTPQNQCeKH34
-oMseMhK9MAvU9y1e0RM42x4=
-=eQ7+
+iD8DBQFDvI1g2+ySkm8kpY0RAhRwAKC/jmB3JfqMxUVpGLZzuNYwVc7LjQCfS62s
+8ZVROQ0PT6lznxkSkfRPgLE=
+=o4L5
 -----END PGP SIGNATURE-----

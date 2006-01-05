@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.23.ebuild,v 1.1 2005/11/01 03:41:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.23.ebuild,v 1.2 2006/01/05 03:06:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -97,8 +97,11 @@ src_install() {
 	dolib.a gl/libvgagl.a || die "dolib.a libvgagl"
 	dolib.a threeDKit/lib3dkit.a
 	dolib.so gl/libvgagl.so.${PV} || die "dolib.so libvgagl.so"
-	dosym libvgagl.so.${PV} /usr/lib/libvgagl.so
-	preplib
+	local abiver=$(sed -n '/^MAJOR_VER.*=/{s:.*=[ ]*::;p}' Makefile.cfg)
+	for x in lib3dkit libvga libvgagl ; do
+		dosym ${x}.so.${PV} /usr/lib/${x}.so
+		dosym ${x}.so.${PV} /usr/lib/${x}.so.${abiver}
+	done
 
 	insinto /usr/include
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
