@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.1.ebuild,v 1.1 2005/12/30 20:03:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.1.ebuild,v 1.2 2006/01/05 12:19:51 flameeyes Exp $
 
 DESCRIPTION="Multiplatform command to eject and load CD-Rom drives"
 HOMEPAGE="http://dev.gentoo.org/~flameeyes/projects"
@@ -20,6 +20,16 @@ DEPEND="${RDEPEND}
 	sys-apps/sed"
 
 PROVIDE="virtual/eject"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# libcdio-0.75-r1 in Gentoo is fixed, so no need to ask 0.76 either on
+	# FreeBSD.
+	sed -i -e '/freebsd/s:libcdiomin="0\.76":libcdiomin="0.75":' \
+		${S}/configure
+}
 
 src_compile() {
 	econf \
