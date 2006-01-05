@@ -1,38 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6398473d6e2090b0371a4ead4870faaa PyQt-3.14.ebuild 1735
-MD5 ecf2976649eda4248c50cdeae5a1f7b1 PyQt-3.13-r2.ebuild 1482
-MD5 d89d6cd78f1d1049dacba9b1017bdd98 PyQt-3.13.ebuild 1519
-MD5 224f719a11fc08fca564aa89566bd76f PyQt-3.14.1-r1.ebuild 1479
-MD5 a02b919efb1b54d05c1ca87d5121b2d5 PyQt-3.14.1.ebuild 1737
-MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-MD5 05b242223d1a5afaae4a2f9c3dc9d375 PyQt-3.8.1.ebuild 1648
-MD5 533db7243fb0bf65143604056be86764 ChangeLog 7575
-MD5 780272ef9748281b9b87488aaf515dc5 PyQt-3.15.ebuild 1690
+MD5 8d3f59d75c9cb45e944b6b1b55eee4b4 ChangeLog 7770
+MD5 5839b01596e10f2cb747c3a15b56e5ae PyQt-3.11.ebuild 1472
 MD5 6d0db1c1bdefc35b47486d5e94c491a5 PyQt-3.12.ebuild 1175
 MD5 cb24fd8fac577b864a59b281a4088cb2 PyQt-3.13-r1.ebuild 1740
+MD5 ecf2976649eda4248c50cdeae5a1f7b1 PyQt-3.13-r2.ebuild 1482
+MD5 d89d6cd78f1d1049dacba9b1017bdd98 PyQt-3.13.ebuild 1519
+MD5 c2a7d289e55f51b0a08ecb02f074ef93 PyQt-3.14.1-r1.ebuild 1476
+MD5 a02b919efb1b54d05c1ca87d5121b2d5 PyQt-3.14.1.ebuild 1737
+MD5 6398473d6e2090b0371a4ead4870faaa PyQt-3.14.ebuild 1735
 MD5 ace08e995530c2372156e49f9d16b344 PyQt-3.15.1.ebuild 1580
-MD5 5839b01596e10f2cb747c3a15b56e5ae PyQt-3.11.ebuild 1472
-MD5 d4df85b93d275ee8302e7ee33998008a files/digest-PyQt-3.13-r2 69
+MD5 780272ef9748281b9b87488aaf515dc5 PyQt-3.15.ebuild 1690
+MD5 2af310beccb16fe56a2690b3b70b6834 PyQt-3.8.1.ebuild 1640
 MD5 50a0986bb92509e8b08c31ce73a4f8c1 files/PyQt-3.13-kde34.diff 8042
-MD5 1ce3d5a83afb717de48efb8050e66a1a files/digest-PyQt-3.12 69
-MD5 4871357df2d75975ed54980e42c766f5 files/digest-PyQt-3.15.1 71
 MD5 dcfd0955765670c05f403bef8aaf540e files/PyQt-3.14.1-examples.diff 939
-MD5 cd786c34663d5f5d09f27bb73551b6c9 files/digest-PyQt-3.14.1-r1 71
-MD5 cd786c34663d5f5d09f27bb73551b6c9 files/digest-PyQt-3.14.1 71
+MD5 c5e3a3d6c377558ef966905f47c9c947 files/PyQt-3.8.1-qt-3.3.patch 280
+MD5 e548a5df6315f902d96d5b2d5afc2901 files/digest-PyQt-3.11 69
+MD5 1ce3d5a83afb717de48efb8050e66a1a files/digest-PyQt-3.12 69
 MD5 d4df85b93d275ee8302e7ee33998008a files/digest-PyQt-3.13 69
 MD5 d4df85b93d275ee8302e7ee33998008a files/digest-PyQt-3.13-r1 69
+MD5 d4df85b93d275ee8302e7ee33998008a files/digest-PyQt-3.13-r2 69
+MD5 c24fadea19e9b29218b912e3ae2be0df files/digest-PyQt-3.14 69
+MD5 cd786c34663d5f5d09f27bb73551b6c9 files/digest-PyQt-3.14.1 71
+MD5 cd786c34663d5f5d09f27bb73551b6c9 files/digest-PyQt-3.14.1-r1 71
 MD5 b40db534b17bda39b6adaf85b0003404 files/digest-PyQt-3.15 69
+MD5 4871357df2d75975ed54980e42c766f5 files/digest-PyQt-3.15.1 71
 MD5 3fa2049e4d6038c8e02e2069f072cd60 files/digest-PyQt-3.8.1 70
 MD5 7323b7d1c141a1f065cb1b8646bec695 files/license-3.8.1.diff 960
-MD5 c24fadea19e9b29218b912e3ae2be0df files/digest-PyQt-3.14 69
-MD5 e548a5df6315f902d96d5b2d5afc2901 files/digest-PyQt-3.11 69
-MD5 c5e3a3d6c377558ef966905f47c9c947 files/PyQt-3.8.1-qt-3.3.patch 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvN6ZFdQwWVoAgN4RArSmAKDFrn1u9LshI8Octivl0VWlMY+keACfV9oW
-BgUGwny7SjTUmaUVk/DOS/U=
-=4WJX
------END PGP SIGNATURE-----
+MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a4368c17f2f2f28429449c7494998fb6 ChangeLog 8541
 MD5 e052f291e46bb8d1de4cfb1b45aeac88 files/digest-sip-3.10.2 62
 MD5 18e143f22df1dd8636fc12aa07ac9f36 files/digest-sip-3.11.1 62
@@ -19,3 +22,10 @@ MD5 1b558264cd55c97133d7ec5934454707 sip-4.2.1.ebuild 1416
 MD5 128c5bf316b6d0029cb43fb0bddb249e sip-4.2.ebuild 1390
 MD5 12bbcf91e753c326fa7725be85b3bdb2 sip-4.3.1.ebuild 1397
 MD5 8b8fcef2fd959854c5429f10dc759a1a sip-4.3.2.ebuild 1410
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDvYMRKRy60XGEcJIRAk08AKCNk+UR1ENDR0H6u9/Uz/R7XwuZxACfe2s8
+mE+53q9s8U71tHSsP+5/WgM=
+=I+p7
+-----END PGP SIGNATURE-----
