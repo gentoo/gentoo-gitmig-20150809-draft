@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.16.0.ebuild,v 1.2 2006/01/06 21:30:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.16.1.ebuild,v 1.1 2006/01/06 21:30:52 allanonjl Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="doc ssl zlib dbus spell"
 
-RDEPEND=">=dev-libs/glib-2.5.6
+RDEPEND=">=dev-libs/glib-2.6.0
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2.4.3
 	>=gnome-base/libglade-2.3
