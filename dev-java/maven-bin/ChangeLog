@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/maven-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.10 2005/12/16 04:50:48 nichoj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.11 2006/01/06 02:34:02 nichoj Exp $
+
+*maven-bin-2.0.1-r1 (06 Jan 2006)
+
+  06 Jan 2006; Joshua Nichols <nichoj@gentoo.org> -maven-bin-2.0.ebuild,
+  -maven-bin-2.0.1.ebuild, +maven-bin-2.0.1-r1.ebuild:
+  Version bump to fix bug #117902. Removed old ebuilds with same keywords.
 
 *maven-bin-2.0.1 (16 Dec 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-2.0.ebuild,v 1.1 2005/12/04 22:44:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-2.0.1-r1.ebuild,v 1.1 2006/01/06 02:34:02 nichoj Exp $
 
 inherit java-pkg
 
@@ -36,5 +36,6 @@ src_install() {
 
 	dodoc NOTICE.txt README.txt
 
+	dodir /usr/bin
 	dosym ${MAVEN_SHARE}/bin/mvn /usr/bin/mvn
 }
