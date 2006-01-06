@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2.ebuild,v 1.2 2006/01/04 00:13:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2.ebuild,v 1.3 2006/01/06 01:50:14 zzam Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_install() {
 
 	if use nvram; then
 		if use x86; then
-			make install DESTDIR="${D}" || die "make install-nvram failed"
+			make install-nvram DESTDIR="${D}" || die "make install-nvram failed"
 		else
 			ewarn "nvram-wakeup is not available on this architecture."
 		fi
