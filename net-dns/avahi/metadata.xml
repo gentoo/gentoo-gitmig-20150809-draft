@@ -4,7 +4,5 @@
 <herd>no-herd</herd>
 <maintainer>
 	<email>swegener@gentoo.org</email>
-	<name>Sven Wegener</name>
-	<description>Primary Maintainer</description>
 </maintainer>
 </pkgmetadata>
