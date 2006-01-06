@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.1 2006/01/04 17:03:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.2 2006/01/06 01:36:26 zzam Exp $
+
+  06 Jan 2006; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh,
+  vdr-image-0.2.4.ebuild:
+  added fix for non parallel makefile, moved some files and added merge-logic
+  for config
 
 *vdr-image-0.2.4 (04 Jan 2006)
 
