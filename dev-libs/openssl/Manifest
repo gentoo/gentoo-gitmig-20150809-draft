@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd3fee111562f2de82e103d5cd9f79a3 ChangeLog 23199
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
 MD5 2e6ed24d513a8f2b1b6f03709ab5ba18 files/digest-openssl-0.9.6m 67
@@ -43,3 +46,10 @@ MD5 276735d31e0c23f9c15119376f75e9c0 openssl-0.9.7g-r1.ebuild 5569
 MD5 faea64b7805a821af960768e36c472e1 openssl-0.9.7h.ebuild 5389
 MD5 f7c2c22a995669600a07f1eb53405875 openssl-0.9.7i.ebuild 5467
 MD5 c7a04f70dffc5396552d19215356ee92 openssl-0.9.8a.ebuild 4597
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvcLd2+ySkm8kpY0RArFlAKCsUKcnaV5iHAwhVZtYMacQ2qnY3QCgqA/y
+Q5e9s/Doq07oaakzbou/px0=
+=dh0C
+-----END PGP SIGNATURE-----

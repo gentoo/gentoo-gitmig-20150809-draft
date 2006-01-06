@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.142 2005/12/13 19:34:15 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.143 2006/01/06 01:06:34 vapier Exp $
+
+  06 Jan 2006; Mike Frysinger <vapier@gentoo.org> openssl-0.9.6m.ebuild,
+  openssl-0.9.7e-r2.ebuild, openssl-0.9.7g-r1.ebuild, openssl-0.9.7h.ebuild,
+  openssl-0.9.7i.ebuild, openssl-0.9.8a.ebuild:
+  Add ca-certificates for most systems.
 
   13 Dec 2005; Markus Rothe <corsair@gentoo.org> openssl-0.9.7i.ebuild:
   Added ~ppc64 keyword; bug #114592
