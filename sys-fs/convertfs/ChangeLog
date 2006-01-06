@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/convertfs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/ChangeLog,v 1.8 2005/08/17 10:12:35 sbriesen Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/ChangeLog,v 1.9 2006/01/06 22:55:29 halcy0n Exp $
+
+  06 Jan 2006; Mark Loeser <halcy0n@gentoo.org> convertfs-20050113.ebuild:
+  Back to ~x86, it really isn't that stable; bug #107635
 
   17 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org>
   convertfs-20050113.ebuild:
