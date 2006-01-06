@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.4.ebuild,v 1.6 2005/01/10 14:12:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.4.ebuild,v 1.7 2006/01/06 16:15:41 axxo Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/imlib2-1.0.3
-	virtual/x11
+	|| ( ( x11-libs/libX11 x11-libs/libXext ) virtual/x11 )
 	>=media-libs/freetype-2.0"
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giblib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.17 2005/09/16 22:57:14 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.18 2006/01/06 16:15:41 axxo Exp $
+
+  06 Jan 2006; Thomas Matthijs <axxo@gentoo.org> giblib-1.2.4.ebuild:
+  Modular x deps
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
