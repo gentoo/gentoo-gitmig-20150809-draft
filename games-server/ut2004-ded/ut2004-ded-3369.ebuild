@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.1 2006/01/03 22:29:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.2 2006/01/06 18:50:06 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,11 @@ HOMEPAGE="http://www.unrealtournament.com/"
 MY_P="dedicatedserver3339-bonuspack.zip"
 MY_P2="ut2004-lnxpatch${PV}-2.tar.bz2"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
-	mirror://3dgamers/unrealtourn2k4/${MY_P2}"
+	http://downloads.unrealadmin.org/UT2004/Patches/Linux/${MY_P}
+	http://sonic-lux.net/data/mirror/ut2004/${MY_P}
+	mirror://3dgamers/unrealtourn2k4/${MY_P2}
+	http://downloads.unrealadmin.org/UT2004/Server/${MY_P2}
+	http://sonic-lux.net/data/mirror/ut2004/${MY_P2}"
 
 LICENSE="ut2003"
 SLOT="0"
