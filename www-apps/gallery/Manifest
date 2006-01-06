@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 95d8a34dad9cb85d7fce90e8171c3aa4 ChangeLog 9848
+MD5 685d561b2037d51c77d8d1cbe9dbc268 ChangeLog 9960
 MD5 57ed8c8bd13cb72d366ece232dcc2fe9 files/digest-gallery-1.5.1 66
 MD5 9e64f054eb28e98d82b04443023befed files/digest-gallery-1.5.2_rc1 70
 MD5 60f82816cecf216b054f0e889324bcde files/digest-gallery-1.5_p1 68
 MD5 2766aeba32226962ae298487f56c37aa files/digest-gallery-2.0.2 71
 MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
 MD5 d8aa1a55fbfe46c99088bb0c360794f2 files/postinstall-en2.txt 770
-MD5 195729f2d8eac4625843fc3f723ed1ae gallery-1.5.1.ebuild 987
+MD5 506282253bfebd77cf1392f54b3e6e5d gallery-1.5.1.ebuild 984
 MD5 cc9c3d2625009ec17b02e5645fcd5556 gallery-1.5.2_rc1.ebuild 990
 MD5 7cae145d1aa9b7900fb4b1b00ebdc774 gallery-1.5_p1.ebuild 980
-MD5 2cc7b5dc30e7710f2a6645f87f085ac0 gallery-2.0.2.ebuild 998
+MD5 0d436b8c7053ab86427e53909ec8ca05 gallery-2.0.2.ebuild 995
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvcfwCRZPokWLroQRAurKAKDBKeLFc3rNHqXNYaC3DaLV7t8CPACbB6Oj
-v4TVng6QfBSXFmkvmPfN7Ko=
-=n8fv
------END PGP SIGNATURE-----

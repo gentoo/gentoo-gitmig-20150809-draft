@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.1.ebuild,v 1.4 2006/01/06 01:29:01 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.1.ebuild,v 1.5 2006/01/06 14:03:16 blubb Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gallery.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc sparc x86"
 IUSE="imagemagick"
 
 RDEPEND=">=net-www/apache-1.3.24-r1
