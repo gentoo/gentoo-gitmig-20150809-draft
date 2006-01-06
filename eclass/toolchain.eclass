@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.238 2006/01/02 00:56:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.239 2006/01/06 05:32:34 halcy0n Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -130,11 +130,27 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
 	if [[ ${PN} != "kgcc64" ]] ; then
-		IUSE="altivec bootstrap build fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc objc-gc vanilla mudflap"
+		IUSE="altivec bootstrap build fortran gcj gtk multilib multislot nls nocxx objc vanilla"
 		[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 		[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 		[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
 	fi
+
+	# gcc-{nios2,bfin} don't accept these
+	if [[ ${PN} == "gcc" ]] ; then
+		IUSE="${IUSE} ip28 n32 n64"
+	fi
+
+	# these are features introduced in 4.0
+	if version_is_at_least "4.0" ; then
+		IUSE="${IUSE} objc-gc mudflap"
+	fi
+
+	# >=4.0 doesn't support hardened yet
+	if ! version_is_at_least "4.0" ; then
+		IUSE="${IUSE} hardened"
+	fi
+
 	# Support upgrade paths here or people get pissed
 	if use multislot ; then
 		SLOT="${CTARGET}-${GCC_CONFIG_VER}"
