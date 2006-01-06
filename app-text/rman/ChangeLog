@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.19 2006/01/04 22:21:19 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.20 2006/01/06 02:20:41 tester Exp $
+
+  06 Jan 2006; Olivier Crête <tester@gentoo.org> rman-3.2.ebuild:
+  Marking stable on amd64 and added RESTRICT=test because the tests fail
 
   04 Jan 2006; Stefaan De Roeck <stefaan@gentoo.org> rman-3.2.ebuild:
   Marked ~alpha, fixing bug #116931
