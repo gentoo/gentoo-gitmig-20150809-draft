@@ -7,7 +7,7 @@ MD5 b59c388eacd676d40313043ecea7841e files/digest-pycrypto-1.9_alpha6 66
 MD5 d204e299027be7fac9649389cf925a46 files/digest-pycrypto-2.0 64
 MD5 d204e299027be7fac9649389cf925a46 files/digest-pycrypto-2.0-r1 64
 MD5 b9e6cee737dea02a879ca7f8927b769a files/digest-pycrypto-2.0.1 66
-MD5 5cba92387bdac6204da53f0c3862ef3e files/pycrypto-2.0.1-bindist.patch 1557
+MD5 1cef0f805deeb0a9632606f1f97cce29 files/pycrypto-2.0.1-bindist.patch 1561
 MD5 5b03cb0967f5fb96991f2463fa415797 metadata.xml 1774
 MD5 44877b6ed99242a7cab50a1941a19351 pycrypto-1.9_alpha4.ebuild 710
 MD5 3172f23539eb54a31ad3a7d8321d4557 pycrypto-1.9_alpha6.ebuild 622
@@ -17,7 +17,7 @@ MD5 1ff484937e9f3be035fe383ea160e8ad pycrypto-2.0.ebuild 573
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvvi02+ySkm8kpY0RAkVdAKCvaBa1xUI4uzlmhTwDRFyd4UMoAQCgqhFO
-UgfK6G9ao5bXR4HNd1mInFs=
-=iycB
+iD8DBQFDvvvL2+ySkm8kpY0RAkFcAJ9UV7sT56iyoorOBJMpM0w4B3juowCfUqg1
+hwytihDihkGqrDQhUVZQZlM=
+=w/wR
 -----END PGP SIGNATURE-----

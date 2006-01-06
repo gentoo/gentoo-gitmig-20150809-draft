@@ -18,7 +18,7 @@
                        sources=["src/XOR.c"]),
              ]
  
-+        if not os.environ.has_key("BINDIST") or os.environ["BINDIST"]!="1":
++        if 0: #not os.environ.has_key("BINDIST") or os.environ["BINDIST"]!="1":
 +            self.extensions += [
 +                Extension("Crypto.Cipher.IDEA",
 +                          include_dirs=['src/'],
