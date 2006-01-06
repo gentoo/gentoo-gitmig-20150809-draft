@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.7.ebuild,v 1.1 2005/09/28 07:26:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.11.ebuild,v 1.1 2006/01/06 08:12:24 dragonheart Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -11,11 +11,10 @@ SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 KEYWORDS="~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="BSD"
-IUSE="bzip2 gmp ssl zlib qt"
+IUSE="bzip2 gmp ssl zlib"
 
 S="${WORKDIR}/Botan-${PV}"
 
-# FIXME: libstdc++ here?
 RDEPEND="virtual/libc
 	bzip2? ( >=app-arch/bzip2-1.0.1 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
@@ -29,14 +28,14 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# Modules that should work under any semi-recent Unix
-	local modules="alloc_mmap,es_egd,es_ftw,es_unix,fd_unix,ml_unix,tm_unix,mux_pthr"
+	local modules="alloc_mmap,es_egd,es_ftw,es_unix,fd_unix,ml_unix,tm_unix,tm_posix,mux_pthr"
 
 	if useq bzip2; then modules="$modules,comp_bzip2"; fi
 	if useq zlib; then modules="$modules,comp_zlib"; fi
 	if useq gmp; then modules="$modules,eng_gmp"; fi
 	if useq ssl; then modules="$modules,eng_ossl"; fi
-	if useq qt; then modules="$modules,mux_qt"; fi
-
+	# removed?
+	#if useq qt; then modules="$modules,mux_qt"; fi
 
 	# This is also supported on i586+ - hope this is correct.
 	# documention says sparc though not enables because of
@@ -53,7 +52,7 @@ src_compile() {
 	fi
 
 	# Enable v9 instructions for sparc64
-	if [ ${PROFILE_ARCH} = 'sparc64' ]; then
+	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
 		CHOSTARCH='sparc32-v9'
 	else
 		CHOSTARCH=$(echo ${CHOST} | cut -d - -f 1)
@@ -63,7 +62,7 @@ src_compile() {
 	einfo "Enabling modules: " ${modules}
 
 	# FIXME: We might actually be on *BSD or OS X...
-	./configure.pl --noauto gcc-linux-$CHOSTARCH --modules=$modules ||
+	./configure.pl --noauto gcc-linux-${CHOSTARCH} --modules=$modules ||
 		die "configure.pl failed"
 	emake "LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }

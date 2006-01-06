@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.10 2005/11/08 10:22:50 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.11 2006/01/06 08:12:24 dragonheart Exp $
+
+*botan-1.4.11 (06 Jan 2006)
+
+  06 Jan 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/botan-1.4.9-gcc-4.patch, -botan-1.4.6.ebuild, -botan-1.4.7.ebuild,
+  -botan-1.4.8.ebuild, botan-1.4.9.ebuild, +botan-1.4.11.ebuild:
+  version bump as promised in bug #117548. Fixes compile problem with gcc-4 as
+  well. Thanks Lloyd and Dirk
 
 *botan-1.4.9 (08 Nov 2005)
 

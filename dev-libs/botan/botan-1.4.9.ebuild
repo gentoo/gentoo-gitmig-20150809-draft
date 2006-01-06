@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.9.ebuild,v 1.1 2005/11/08 10:22:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.9.ebuild,v 1.2 2006/01/06 08:12:24 dragonheart Exp $
 
+inherit eutils
 # Comments/fixes to lloyd@randombit.net (author)
 
 DESCRIPTION="A C++ crypto library"
@@ -25,6 +26,13 @@ RDEPEND="virtual/libc
 # all seem included in dev-lang/perl ATM.
 DEPEND="${RDEPEND}
 	dev-lang/perl"
+
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc-4.patch
+}
 
 src_compile() {
 	# Modules that should work under any semi-recent Unix
