@@ -1,0 +1,59 @@
+Using nested functions causes gcc to generate trampolines which
+requires an executable stack.
+
+http://bugs.gentoo.org/116968
+
+--- elfutils/src/nm.c
++++ elfutils/src/nm.c
+@@ -926,23 +926,22 @@
+ /* Maximum size of memory we allocate on the stack.  */
+ #define MAX_STACK_ALLOC	65536
+ 
+-static void
+-show_symbols (Ebl *ebl, GElf_Ehdr *ehdr, Elf_Scn *scn, Elf_Scn *xndxscn,
+-	      GElf_Shdr *shdr, const char *prefix, const char *fname,
+-	      const char *fullname)
+-{
++/* hack to avoid nested functions -> executable stack */
++static Ebl *_show_symbols_ebl;
++static GElf_Shdr *_show_symbols_shdr;
++static
+   int sort_by_name (const void *p1, const void *p2)
+     {
+       GElf_SymX *s1 = (GElf_SymX *) p1;
+       GElf_SymX *s2 = (GElf_SymX *) p2;
+       int result;
+ 
+-      result = strcmp (elf_strptr (ebl->elf, shdr->sh_link, s1->sym.st_name),
+-		       elf_strptr (ebl->elf, shdr->sh_link, s2->sym.st_name));
++      result = strcmp (elf_strptr (_show_symbols_ebl->elf, _show_symbols_shdr->sh_link, s1->sym.st_name),
++		       elf_strptr (_show_symbols_ebl->elf, _show_symbols_shdr->sh_link, s2->sym.st_name));
+ 
+       return reverse_sort ? -result : result;
+     }
+-
++static
+   int sort_by_address (const void *p1, const void *p2)
+     {
+       GElf_SymX *s1 = (GElf_SymX *) p1;
+@@ -954,6 +953,11 @@
+       return reverse_sort ? -result : result;
+     }
+ 
++static void
++show_symbols (Ebl *ebl, GElf_Ehdr *ehdr, Elf_Scn *scn, Elf_Scn *xndxscn,
++	      GElf_Shdr *shdr, const char *prefix, const char *fname,
++	      const char *fullname)
++{
+   /* Get the section header string table index.  */
+   size_t shstrndx;
+   if (elf_getshstrndx (ebl->elf, &shstrndx) < 0)
+@@ -1129,6 +1133,8 @@
+   nentries = nentries_used;
+ 
+   /* Sort the entries according to the users wishes.  */
++  _show_symbols_ebl = ebl;
++  _show_symbols_shdr = shdr;
+   if (sort == sort_name)
+     qsort (sym_mem, nentries, sizeof (GElf_SymX), sort_by_name);
+   else if (sort == sort_numeric)
