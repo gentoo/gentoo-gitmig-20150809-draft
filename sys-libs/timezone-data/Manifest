@@ -2,18 +2,14 @@
 Hash: SHA1
 
 MD5 d6a29c20eae8efba34020d6105387aea ChangeLog 1824
-MD5 9d01be0a9543eb403bebb17d059eac60 files/digest-timezone-data-2005p 126
-MD5 6f94131ba67487cbd70035d8b2220042 files/digest-timezone-data-2005q 126
 MD5 32f6d2093707f5c880674d15dbde1ead files/digest-timezone-data-2005r 126
 MD5 648febdd6feeaeb8c85323151917d163 files/timezone-data-2005n-makefile.patch 3128
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 f4e24e2cefdee05b746fc571ba9d7f4b timezone-data-2005p.ebuild 840
-MD5 f583e6fb5133cda332d4b1015b605d15 timezone-data-2005q.ebuild 840
-MD5 c59b7aef9f7c9432ac2670127c05aaf0 timezone-data-2005r.ebuild 840
+MD5 a65ec9ffd4195c3784457a45773dd0e3 timezone-data-2005r.ebuild 843
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvW0MKRy60XGEcJIRAtxVAKCXzhqsWj/kkhkkGYFf0Tf4ZygbBACdFTo3
-zHa2gd6Kx2KN0GOu8jwLQnk=
-=rztN
+iD8DBQFDvcOY2+ySkm8kpY0RAhLJAKCyEoEWPhHoHlaNwXnQqXZyX4AMrACfd7bl
+LrTGnFjurbj4yHjlUr8q8Go=
+=RcuT
 -----END PGP SIGNATURE-----
