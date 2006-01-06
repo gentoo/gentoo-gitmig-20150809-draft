@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1e7e9a0e5edf31aa4ffcab9cc7e260a5 zopeinterface-3.0.1.ebuild 811
 MD5 e1f0a6bd9f3b97c575138e475d59e930 ChangeLog 1589
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 207c6814bd1934b0c530c11ff5019b8e zopeinterface-3.0.0.ebuild 712
 MD5 f272ae0b346de2f2e7081d1e314329e2 files/digest-zopeinterface-3.0.0 68
 MD5 6b53a0ef10de6ad609d5c345b0ab424d files/digest-zopeinterface-3.0.1 68
 MD5 bf5b2fab1194b14762c644e97169a595 files/zopeinterface-3.0.1-gcc4.patch 752
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 207c6814bd1934b0c530c11ff5019b8e zopeinterface-3.0.0.ebuild 712
+MD5 02407ec7f4bebf8cb523f5cd1a6c91f9 zopeinterface-3.0.1.ebuild 815
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDbSdbViELBEf1JB0RAi+OAJ4yXPKDUAuSZ1MTqw/flLCIHZgsOACcCd/Z
-KQ4Mg+Yl/16VEvooxsNzizU=
-=DuG/
+iD8DBQFDvgH92+ySkm8kpY0RAngjAKCIXI41glGly6nDq7UHBeMhxVBVJwCcC54K
+188xN4IZZbcnthwNPIBbemw=
+=b5LI
 -----END PGP SIGNATURE-----
