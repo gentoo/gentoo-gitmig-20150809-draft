@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c48e912375de3bb765fc94a80d9f6798 ChangeLog 878
+MD5 ce591957f416ee44772ed8eebb729946 ChangeLog 986
 MD5 29ee9ab06a6645b9bfed724b2ea39346 files/digest-sensors-applet-1.5 70
 MD5 15bba24933d913789d7e7a920cf21e05 files/digest-sensors-applet-1.5.2 72
 MD5 bb1afc4d022696958a52bef95bb37487 files/digest-sensors-applet-1.6 70
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fd80d897b36bfe44f472a0e18d60cd3c sensors-applet-1.5.2.ebuild 734
-MD5 df54feac154c5453e8ca51d7fa9809d5 sensors-applet-1.5.ebuild 731
+MD5 c3064a3c7db10c4bce4ef59e78fa66aa sensors-applet-1.5.ebuild 733
 MD5 588659b3cb4adfcb4984f726453c3879 sensors-applet-1.6.ebuild 803
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvYLSomPajV0RnrERAtPkAJwLcx3XWHhupjkUY1j0lTHhVN7SLgCfTlS+
-FTcXljyTX6x2vmzB3xJ8dwk=
-=YF9r
+iD8DBQFDvgkCCRZPokWLroQRAiB3AKCeLBpk/DcTOzuCeC2HjNYTOaM3cwCeO1s+
+49drVbM5u0mONPW2fNUhLXU=
+=moUc
 -----END PGP SIGNATURE-----
