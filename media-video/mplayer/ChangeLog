@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.336 2006/01/03 11:13:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.337 2006/01/06 05:15:59 lu_zero Exp $
+
+  06 Jan 2006; Luca Barbato <lu_zero@gentoo.org>
+  mplayer-1.0.20060102.ebuild:
+  mythtv useflag removed since the patch got incorporated as stated in bug
+  #117725
 
   03 Jan 2006; Daniel Black <dragonheart@gentoo.org>
   mplayer-1.0_pre7-r1.ebuild, mplayer-1.0.20060102.ebuild:

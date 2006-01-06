@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060102.ebuild,v 1.2 2006/01/03 11:13:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060102.ebuild,v 1.3 2006/01/06 05:15:59 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
-lirc live livecd lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia
+lirc live livecd lzo mad matroska matrox mmx mmxext nas nls nvidia
 vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype
 v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
 
@@ -143,9 +143,6 @@ src_unpack() {
 	use gtk && unpack Blue-${BLUV}.tar.bz2
 
 	cd ${S}
-
-	#adds mythtv support to mplayer
-	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
 
 	# Fix hppa compilation
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/-O4/-O1/" "${S}/configure"
