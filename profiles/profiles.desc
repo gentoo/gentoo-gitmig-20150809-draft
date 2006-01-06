@@ -16,8 +16,8 @@ ppc			default-linux/ppc/2005.0			stable
 ppc64		default-linux/ppc64/2005.0			stable
 ppc-macos	default-darwin/macos/10.3			dev
 ppc-od		default-darwin/od/ppc				dev
-s390		default-linux/s390/2004.3			stable
+s390		default-linux/s390/2006.0			stable
 sh			default-linux/sh					dev
-sparc		default-linux/sparc/sparc64/2005.1		stable
+sparc		default-linux/sparc/sparc64/2005.1	stable
 x86			default-linux/x86/2005.1			stable
 x86-od		default-darwin/od/x86				dev
