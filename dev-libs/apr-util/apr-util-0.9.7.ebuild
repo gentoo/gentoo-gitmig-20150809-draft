@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.7.ebuild,v 1.2 2006/01/05 05:01:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.7.ebuild,v 1.3 2006/01/06 03:20:13 vericgar Exp $
 
 inherit eutils
 
@@ -22,8 +22,6 @@ DEPEND="dev-libs/expat
 
 src_compile() {
 
-	elibtoolize || die "elibtoolize failed"
-
 	local myconf=""
 
 	use ldap && myconf="${myconf} --with-ldap"
@@ -43,8 +41,6 @@ src_compile() {
 	else
 		myconf="${myconf} --without-berkeley-db"
 	fi
-
-	echo "DEBUG: myconf: ${myconf}"
 
 	econf \
 		--datadir=/usr/share/apr-util-0 \
