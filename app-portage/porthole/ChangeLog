@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porthole
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.21 2005/12/23 04:40:34 fuzzyray Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.22 2006/01/06 01:15:26 fuzzyray Exp $
+
+  06 Jan 2006; Paul Varner <fuzzyray@gentoo.org> porthole-0.4.1.ebuild:
+  Change pkg_setup() to use built_with_use. Patch from Alec Warner
+  (antarus). Bug #67537
 
 *porthole-0.5.0 (23 Dec 2005)
 

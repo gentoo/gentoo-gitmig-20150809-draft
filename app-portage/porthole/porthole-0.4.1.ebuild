@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.6 2005/06/24 17:38:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.7 2006/01/06 01:15:26 fuzzyray Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A GTK+-based frontend to Portage"
 HOMEPAGE="http://porthole.sourceforge.net"
@@ -19,17 +19,7 @@ DEPEND=">=dev-lang/python-2.3
 RDEPEND="${DEPEND} debug? ( >=dev-python/pycrash-0.4_pre3 )"
 
 pkg_setup() {
-	local gnome_flag=false
-
-	for pygtk_install in /var/db/pkg/dev-python/pygtk*; do
-		cd ${pygtk_install} || die
-		if [[ $(<SLOT) == 2 && " $(<USE) " == *" gnome "* ]]; then
-			gnome_flag=true
-			break
-		fi
-	done
-
-	if ! ${gnome_flag}; then
+	if ! built_with_use dev-python/pygtk gnome ; then
 		echo
 		eerror "pygtk was not merged with the gnome"
 		eerror "USE flag. Porthole requires pygtk be"
