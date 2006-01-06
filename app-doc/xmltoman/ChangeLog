@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xmltoman
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.1 2005/09/12 21:20:25 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.2 2006/01/06 11:56:53 weeve Exp $
+
+  06 Jan 2006; Jason Wever <weeve@gentoo.org> xmltoman-0.3.ebuild:
+  Added ~sparc keyword.
 
 *xmltoman-0.3 (12 Sep 2005)
 
