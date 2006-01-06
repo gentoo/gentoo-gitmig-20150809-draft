@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.0.ebuild,v 1.12 2006/01/05 23:26:57 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.0.ebuild,v 1.13 2006/01/06 11:20:25 flameeyes Exp $
 
 inherit autotools gnome2
 
@@ -23,6 +23,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-as_needed_ldflags_fix.patch
-	eautoconf
+	eautomake
 }
 DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README TODO"

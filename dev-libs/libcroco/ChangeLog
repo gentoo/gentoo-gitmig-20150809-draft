@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.23 2006/01/05 23:26:57 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.24 2006/01/06 11:20:25 flameeyes Exp $
+
+  06 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> libcroco-0.6.0.ebuild:
+  Call eautomake, not eautoconf.
 
   05 Jan 2006; Joe McCann <joem@gentoo.org>
   +files/libcroco-as_needed_ldflags_fix.patch, libcroco-0.6.0.ebuild:
