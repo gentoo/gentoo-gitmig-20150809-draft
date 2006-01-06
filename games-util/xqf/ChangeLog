@@ -1,6 +1,12 @@
 # ChangeLog for games-util/xqf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.20 2005/10/21 05:11:12 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.21 2006/01/06 20:04:50 wolf31o2 Exp $
+
+*xqf-1.0.4-r1 (06 Jan 2006)
+
+  06 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> +files/gtk2.patch,
+  +xqf-1.0.4-r1.ebuild:
+  Added gtk2 patch for bug #114149.
 
 *xqf-1.0.4 (21 Oct 2005)
 
@@ -111,7 +117,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.20 2005/10/21 05:11:12 vapier Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.21 2006/01/06 20:04:50 wolf31o2 Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 

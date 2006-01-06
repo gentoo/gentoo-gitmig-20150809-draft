@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2e0fc0333ee39ec502b34420ac6804c ChangeLog 3700
+MD5 2696e52d7139546c99eba078bcd98740 ChangeLog 3867
 MD5 6ad7926a39a5c0427ad0a26d66b244e8 files/digest-xqf-1.0.3 61
 MD5 c2bd8c62efd056bb8bd59f3bd83b6b0f files/digest-xqf-1.0.4 61
+MD5 c2bd8c62efd056bb8bd59f3bd83b6b0f files/digest-xqf-1.0.4-r1 61
+MD5 8938dd0a78bb2de104e843ab64024f67 files/gtk2.patch 648
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 47dcc956fd28db90de8cc1c9a388bacd xqf-1.0.3.ebuild 1231
+MD5 9f43979b736288cff97c6c8ddb548b00 xqf-1.0.4-r1.ebuild 1301
 MD5 13fbab31bd7770f1dc58afe82ce5ee53 xqf-1.0.4.ebuild 1231
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDWHiAgIKl8Uu19MoRAhDMAJ98LIjjHLPwPY2KEDr0XtgVlGDhgQCfe4Kz
-m9qH+XF2gUqaU+yquJpK5tg=
-=xHkX
------END PGP SIGNATURE-----
