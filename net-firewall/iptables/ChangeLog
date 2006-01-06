@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.92 2005/12/18 17:58:10 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.93 2006/01/06 10:52:41 dragonheart Exp $
+
+  06 Jan 2006; Daniel Black <dragonheart@gentoo.org> iptables-1.3.4.ebuild:
+  changing l7 filter from 2.0_beta to 2.0 - only change in the iptables patch
+  was an error emssage change
 
   18 Dec 2005; Markus Rothe <corsair@gentoo.org> iptables-1.3.4.ebuild:
   Stable on ppc64
