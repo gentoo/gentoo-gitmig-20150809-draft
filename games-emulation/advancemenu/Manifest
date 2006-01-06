@@ -1,7 +1,5 @@
 MD5 f331c0278b6211b8f45e71e77862b9ef ChangeLog 3311
 MD5 de21b1b449e127b3c8b856b8120d241d advancemenu-2.4.12.ebuild 2515
-MD5 fceeb76637a021f26b3d0ddefd9f12d3 files/advancemenu-2.4.10-alsa-pkg-config.patch 1041
-MD5 fceeb76637a021f26b3d0ddefd9f12d3 files/advancemenu-2.4.11-alsa-pkg-config.patch 1041
 MD5 fceeb76637a021f26b3d0ddefd9f12d3 files/advancemenu-2.4.12-alsa-pkg-config.patch 1041
 MD5 aa8ee1a6c28266f5a7dc179470734abc files/digest-advancemenu-2.4.12 71
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
