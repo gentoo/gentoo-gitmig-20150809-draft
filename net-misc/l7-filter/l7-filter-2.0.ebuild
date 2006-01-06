@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.0_beta.ebuild,v 1.2 2005/10/02 13:55:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.0.ebuild,v 1.1 2006/01/06 10:28:41 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -23,17 +23,13 @@ RDEPEND="net-misc/l7-protocols"
 which_patch() {
 	if kernel_is ge 2 6 13
 	then
-		PATCH=kernel-2.6.13-layer7-2.0.patch
+		PATCH=kernel-2.6.13-2.6.14-layer7-2.0.patch
 	elif kernel_is ge 2 6 11
 	then
 		PATCH=for_older_kernels/kernel-2.6.11-2.6.12-layer7-1.4.patch
 	elif kernel_is ge 2 6 9
 	then
 		PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-1.2.patch
-	elif kernel_is 2 6
-	then
-		# 2.6.0-2.6.8.1
-		PATCH=for_older_kernels/kernel-2.6.0-2.6.8.1-layer7-0.9.2.patch
 	elif kernel_is 2 4
 	then
 		PATCH=kernel-2.4-layer7-2.0.patch
@@ -52,7 +48,10 @@ src_unpack() {
 
 	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ]
 	then
-		ewarn "already installed ${PF} for kernel ${KV_FULL}"
+		ewarn "already installed ${PN} for kernel ${KV_FULL}"
+		ewarn "If this is an upgrade attempt, try unmerging first."
+		ewarn "If this failes remove your kernel source from /usr/src"
+		ewarn "and remerge your kernel sources"
 		return 0;
 	fi
 
@@ -119,7 +118,7 @@ pkg_postinst() {
 pkg_prerm() {
 	if [ -f ${ROOT}/usr/src/linux/include/linux/netfilter_ipv4/ipt_layer7.h ]
 	then
-		einfo 'attempting to unpatch l7-patch from kernel'
+		einfo 'attempting to unpatch l7-patch from kernel ${KV_FULL}'
 		which_patch
 		if kernel_is eq 2 6 12
 		then

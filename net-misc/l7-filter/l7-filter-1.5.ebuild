@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.5.ebuild,v 1.1 2005/09/17 09:17:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.5.ebuild,v 1.2 2006/01/06 10:28:41 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -51,7 +51,10 @@ src_unpack() {
 
 	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ]
 	then
-		ewarn "already installed ${PF} for kernel ${KV_FULL}"
+		ewarn "already installed ${PN} for kernel ${KV_FULL}"
+		ewarn "If this is an upgrade attempt, try unmerging first."
+		ewarn "If this failes remove your kernel source from /usr/src"
+		ewarn "and remerge your kernel sources"
 		return 0;
 	fi
 
