@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 399e87228cd4da275722e00995547958 ChangeLog 996
+MD5 c1714506803704c152614dfb848eed17 denyhosts-1.1.2-r1.ebuild 1644
 MD5 96c066a233acc935e6f08f8af6b6d425 denyhosts-1.1.2.ebuild 1531
-MD5 15c0a126d1dc99c4c5daced6d432fd2d denyhosts-1.1.2-r1.ebuild 1637
-MD5 1cbbe10aef9e107ca44e4b718fd0fd86 ChangeLog 881
-MD5 82c6f940fc1a08d481d8d46de563bce7 metadata.xml 203
-MD5 de49bade96ff5bfa9d27a281c17a3e3e files/digest-denyhosts-1.1.2-r1 66
-MD5 de49bade96ff5bfa9d27a281c17a3e3e files/digest-denyhosts-1.1.2 66
 MD5 90c425b8fbcfa5fc084063999c2e3b9a files/denyhosts-gentoo.patch 2395
 MD5 4e9d8193a9efd5714debeec451b6b777 files/denyhosts.init 345
+MD5 de49bade96ff5bfa9d27a281c17a3e3e files/digest-denyhosts-1.1.2 66
+MD5 de49bade96ff5bfa9d27a281c17a3e3e files/digest-denyhosts-1.1.2-r1 66
+MD5 82c6f940fc1a08d481d8d46de563bce7 metadata.xml 203
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDvoSVKRy60XGEcJIRAkvhAJ99jiytEHPW+HE6KjRoH6uq+KzrIQCaArG5
+rzoqkMrb49Run3GMcJi2NzM=
+=OWL3
+-----END PGP SIGNATURE-----
