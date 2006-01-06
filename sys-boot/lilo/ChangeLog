@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/lilo
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.35 2005/06/29 19:52:12 chainsaw Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.36 2006/01/06 01:09:52 tester Exp $
+
+  06 Jan 2006; Olivier Crête <tester@gentoo.org> lilo-22.7.ebuild:
+  Stable on amd64
 
   29 Jun 2005; Tony Vroon <chainsaw@gentoo.org>
   -files/lilo-22.6.1-correct-usage-info.patch,
