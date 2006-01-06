@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.127 2005/12/26 21:58:10 vanquirius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.128 2006/01/06 18:10:03 vanquirius Exp $
+
+  06 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/net-snmp-5.2.2-asneeded.patch, net-snmp-5.2.2.ebuild:
+  Add patch from bug 118016 to allow use of --as-needed. Thanks to Diego
+  Petteno <flameeyes at gentoo dot org>.
 
 *net-snmp-5.3_rc2 (26 Dec 2005)
 *net-snmp-5.2.2 (26 Dec 2005)

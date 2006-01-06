@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2.ebuild,v 1.1 2005/12/26 21:58:10 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2.ebuild,v 1.2 2006/01/06 18:10:03 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -54,6 +54,9 @@ src_unpack() {
 			die "lm_sensors patch error: unsupported arch."
 		fi
 	fi
+
+	# bug 118016
+	epatch "${FILESDIR}"/${PN}-5.2.2-asneeded.patch
 
 	# bugs 68467 and 68254
 	sed -i -e 's;embed_perl="yes",;embed_perl=$enableval,;' configure.in \

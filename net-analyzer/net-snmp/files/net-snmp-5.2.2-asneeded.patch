@@ -1,0 +1,38 @@
+Index: net-snmp-5.2.2/snmplib/Makefile.in
+===================================================================
+--- net-snmp-5.2.2.orig/snmplib/Makefile.in
++++ net-snmp-5.2.2/snmplib/Makefile.in
+@@ -185,11 +185,11 @@ all: standardall
+ 
+ # how to build the libraries.
+ libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION):    ${TOBJS}
+-	$(LIB_LD_CMD) libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION) ${TOBJS}
++	$(LIB_LD_CMD) libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION) ${TOBJS} @LIBCRYPTO@
+ 	$(RANLIB) libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION)
+ 
+ libsnmp.$(LIB_EXTENSION)$(LIB_VERSION):    ${TOBJS}
+-	$(LIB_LD_CMD) libsnmp.$(LIB_EXTENSION)$(LIB_VERSION) ${TOBJS}
++	$(LIB_LD_CMD) libsnmp.$(LIB_EXTENSION)$(LIB_VERSION) ${TOBJS} @LIBCRYPTO@
+ 	$(RANLIB) libsnmp.$(LIB_EXTENSION)$(LIB_VERSION)
+ 
+ #
+Index: net-snmp-5.2.2/configure.in
+===================================================================
+--- net-snmp-5.2.2.orig/configure.in
++++ net-snmp-5.2.2/configure.in
+@@ -2671,6 +2671,7 @@ if test "x$useopenssl" != "xno" ; then
+         encrmodes="[disabled]"
+     fi
+     AC_DEFINE(USE_OPENSSL)
++    LIBCRYPTO="-lcrypto"
+     AC_MSG_RESULT(OpenSSL Support)
+ elif test "x$usepkcs" != "xno" ; then
+     authmodes="MD5 SHA1"
+@@ -2690,6 +2691,7 @@ fi
+ if test "x$enable_md5" = "xno"; then
+     authmodes=`echo $authmodes | sed 's/MD5 *//;'`
+ fi
++AC_SUBST(LIBCRYPTO)
+ 
+ AC_MSG_CACHE_ADD(Authentication support:     $authmodes)
+ AC_MSG_CACHE_ADD(Encryption support:         $encrmodes)
