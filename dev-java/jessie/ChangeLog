@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/jessie
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.11 2004/12/21 19:02:16 karltk Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.12 2006/01/06 18:15:03 betelgeuse Exp $
+
+*jessie-1.0.0-r1 (06 Jan 2006)
+
+  06 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/jessie-1.0.0-javadoc.patch, +jessie-1.0.0-r1.ebuild:
+  Merged changes from experimental: Does not depend on gnu-classpath any more
+  because jessie can be used as an ssl provide under any vm, dropped jikes
+  support until axxo-overlay gets merged, fixed javadoc creation, CLASSPATH
+  handling and now installs documentation files like README and TODO. Fixes
+  bug #92656.
 
   18 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jessie-1.0.0.ebuild:
   Workaround for AWT strangeness in GNU classpath. Fixes #71888.
