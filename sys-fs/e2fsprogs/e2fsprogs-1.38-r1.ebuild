@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38-r1.ebuild,v 1.1 2005/12/19 03:15:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38-r1.ebuild,v 1.2 2006/01/06 23:46:45 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -78,7 +78,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable userland_GNU fsck) \
 		|| die
-	if [[ ${CTARGET:-${CHOST}} != *-uclibc ]] && grep -qs 'USE_INCLUDED_LIBINTL.*yes' config.{log,status} ; then
+	if [[ ${CHOST} != *-uclibc ]] && grep -qs 'USE_INCLUDED_LIBINTL.*yes' config.{log,status} ; then
 		eerror "INTL sanity check failed, aborting build."
 		eerror "Please post your ${S}/config.log file as an"
 		eerror "attachment to http://bugs.gentoo.org/show_bug.cgi?id=81096"
