@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/sharutils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.39 2005/10/08 23:14:52 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.40 2006/01/06 08:20:36 dragonheart Exp $
+
+*sharutils-4.6.1_pre4 (06 Jan 2006)
+
+  06 Jan 2006; Daniel Black <dragonheart@gentoo.org>
+  +sharutils-4.6.1_pre4.ebuild:
+  version bump to fix self test bug #116696 thanks Sandro
 
 *sharutils-4.6 (08 Oct 2005)
 
