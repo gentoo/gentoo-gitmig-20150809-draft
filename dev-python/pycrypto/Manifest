@@ -1,22 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a9f05fb111ad9ec8781460e75530756 ChangeLog 2483
+MD5 1f5791be578afe49ab0b64b3685b3912 ChangeLog 2666
 MD5 88124038f9bc0fb6771c9d12f9bcbac9 files/digest-pycrypto-1.9_alpha4 66
 MD5 b59c388eacd676d40313043ecea7841e files/digest-pycrypto-1.9_alpha6 66
 MD5 d204e299027be7fac9649389cf925a46 files/digest-pycrypto-2.0 64
 MD5 d204e299027be7fac9649389cf925a46 files/digest-pycrypto-2.0-r1 64
 MD5 b9e6cee737dea02a879ca7f8927b769a files/digest-pycrypto-2.0.1 66
+MD5 5cba92387bdac6204da53f0c3862ef3e files/pycrypto-2.0.1-bindist.patch 1557
 MD5 5b03cb0967f5fb96991f2463fa415797 metadata.xml 1774
 MD5 44877b6ed99242a7cab50a1941a19351 pycrypto-1.9_alpha4.ebuild 710
 MD5 3172f23539eb54a31ad3a7d8321d4557 pycrypto-1.9_alpha6.ebuild 622
-MD5 f9385559bb015b37c9e2ff2863e25eee pycrypto-2.0-r1.ebuild 594
-MD5 8de27bc518f75ebaba8b048aec87f02b pycrypto-2.0.1.ebuild 593
+MD5 d4fb605909249a6d153becb95ab0d3da pycrypto-2.0-r1.ebuild 599
+MD5 d9f822668d225711e529c75f075dac63 pycrypto-2.0.1.ebuild 750
 MD5 1ff484937e9f3be035fe383ea160e8ad pycrypto-2.0.ebuild 573
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDfwT/FdQwWVoAgN4RAuSQAKDC6qHGQXxvw6JT8X5lL0blZ0qDKgCg4Xmf
-tljIN0FnCWLdgfmWZ4UdlaI=
-=pS0i
+iD8DBQFDvvi02+ySkm8kpY0RAkVdAKCvaBa1xUI4uzlmhTwDRFyd4UMoAQCgqhFO
+UgfK6G9ao5bXR4HNd1mInFs=
+=iycB
 -----END PGP SIGNATURE-----

@@ -1,0 +1,45 @@
+--- pycrypto/setup.py
++++ pycrypto/setup.py
+@@ -94,13 +94,6 @@
+             Extension("Crypto.Cipher.DES3",
+                       include_dirs=['src/'],
+                       sources=["src/DES3.c"]),
+-            Extension("Crypto.Cipher.IDEA",
+-                      include_dirs=['src/'],
+-                      sources=["src/IDEA.c"],
+-                      libraries=HTONS_LIBS),
+-            Extension("Crypto.Cipher.RC5",
+-                      include_dirs=['src/'],
+-                      sources=["src/RC5.c"]),
+ 
+             # Stream ciphers
+             Extension("Crypto.Cipher.ARC4",
+@@ -111,6 +104,17 @@
+                       sources=["src/XOR.c"]),
+             ]
+ 
++        if not os.environ.has_key("BINDIST") or os.environ["BINDIST"]!="1":
++            self.extensions += [
++                Extension("Crypto.Cipher.IDEA",
++                          include_dirs=['src/'],
++                          sources=["src/IDEA.c"],
++                          libraries=HTONS_LIBS),
++                Extension("Crypto.Cipher.RC5",
++                          include_dirs=['src/'],
++                          sources=["src/RC5.c"]),
++                ]
++
+         # Detect which modules should be compiled
+         self.detect_modules()
+         build_ext.build_extensions(self)
+--- pycrypto/Cipher/__init__.py
++++ pycrypto/Cipher/__init__.py
+@@ -24,7 +24,7 @@
+ """
+ 
+ __all__ = ['AES', 'ARC2', 'ARC4',
+-           'Blowfish', 'CAST', 'DES', 'DES3', 'IDEA', 'RC5',
++           'Blowfish', 'CAST', 'DES', 'DES3',
+            'XOR'
+            ]
+ 

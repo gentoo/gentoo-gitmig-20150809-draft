@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycrypto
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.19 2005/11/19 10:56:44 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.20 2006/01/06 23:08:29 vapier Exp $
+
+  06 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/pycrypto-2.0.1-bindist.patch, pycrypto-2.0-r1.ebuild,
+  pycrypto-2.0.1.ebuild:
+  Add support for USE=bindist and some sh love.
 
   19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Added japanese metadata.xml translation thanks to Yoshino-san.
