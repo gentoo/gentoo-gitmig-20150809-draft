@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b17122125332d8333622a9f0e37f7f1b ChangeLog 2175
 MD5 85d105f04895e3af7c3ca6f17f0a54ca dnotify-0.16.0.ebuild 833
 MD5 7937cf7aa994fff87966b6f92b3efdb3 dnotify-0.17.1.ebuild 719
@@ -6,3 +9,10 @@ MD5 286c6f49267c740d89cc3b9315172301 files/digest-dnotify-0.16.0 66
 MD5 064c626efc734f07a2d6f5ce4de5e1f0 files/digest-dnotify-0.17.1 66
 MD5 1b56ee3ed03445117aa35b1efb48578a files/digest-dnotify-0.18.0 66
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvvg52+ySkm8kpY0RAgzmAJ9Ym2kLFtoJW9HKwGoKuRJ1aiZvMwCcCguO
+FV7EUIdXGa1FdIdfGG78sWI=
+=/ANd
+-----END PGP SIGNATURE-----
