@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.11.ebuild,v 1.2 2005/12/13 15:57:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.11.ebuild,v 1.3 2006/01/06 23:08:00 blubb Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ DEPEND="|| ( ( x11-libs/libXaw
 	>=sys-devel/gdb-4.16
 	x11-libs/openmotif"
 RDEPEND="media-gfx/gnuplot"
+
+RESTRICT="test"
 
 src_compile() {
 	CXXFLAGS="${CXXFLAGS}"

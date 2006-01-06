@@ -1,9 +1,9 @@
-MD5 d25fd4ddc0d222b736bf2c0afdea248e ChangeLog 4471
+MD5 b4fca7bff1b9669db56cbe429fc9360d ChangeLog 4639
 MD5 55d2e29f1ae90b8b2b4ec47402429a27 ddd-3.3.1-r1.ebuild 859
 MD5 87a2b74f6dbb1b8a8b23af267758e457 ddd-3.3.1-r2.ebuild 1001
 MD5 fc4bcd797606e1b0c052fcac51acc48f ddd-3.3.1-r3.ebuild 1687
-MD5 be00c67cd1f9ed076602c46b01420021 ddd-3.3.10.ebuild 1227
-MD5 03f99339a9d4258bc9b5fd4efc5bd008 ddd-3.3.11.ebuild 1286
+MD5 76f5d56e278f5008486dabed73346a0e ddd-3.3.10.ebuild 1242
+MD5 13acb46cca19d2b581732841d64d0e20 ddd-3.3.11.ebuild 1299
 MD5 fbf26cfc89b735b02e128ac7e47a5849 ddd-3.3.7.ebuild 1225
 MD5 1787bdc1e5624f5ee4c968f70adee204 ddd-3.3.8.ebuild 1279
 MD5 51e642d3c459aece489cef016bf2ad47 ddd-3.3.9.ebuild 1204
@@ -20,3 +20,4 @@ MD5 ca6dfd3a6c633c787192cac15d9796dc files/digest-ddd-3.3.11 63
 MD5 cce61fcc7e8624cc8f3519dc93be9d59 files/digest-ddd-3.3.7 63
 MD5 3f4ee432776983fdd43cb322ab8540e0 files/digest-ddd-3.3.8 62
 MD5 b611121e84b1fbdfdd025b98758ce836 files/digest-ddd-3.3.9 62
+MD5 c07f447e039ccf7a071633a6fa8682e5 metadata.xml 658

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ddd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.32 2005/12/13 15:57:38 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.33 2006/01/06 23:08:00 blubb Exp $
+
+  06 Jan 2006; Simon Stelling <blubb@gentoo.org> +metadata.xml,
+  ddd-3.3.10.ebuild, ddd-3.3.11.ebuild:
+  add RESTRICT=test to fix bug 118042; adding missing metadata.xml
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; ddd-3.3.11.ebuild:
   Add modular X dependencies.
