@@ -1,23 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd8c038e6a6a5f54a56238103c72a882 ChangeLog 6208
+MD5 951d461676b1879add96ec770e39b4d7 ChangeLog 6368
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.83.1-glx-fix.patch 386
 MD5 ecb76daf5fcb89c5a092da585055c27a files/digest-xmess-0.100 66
 MD5 036cf5547f8737d96baaff395c1bfbe9 files/digest-xmess-0.101 66
+MD5 6d9964778001334cbe1afbbb9c539c4d files/digest-xmess-0.102 66
 MD5 bd94e56aecab93b1d9e02b6fb3d8a0e9 files/digest-xmess-0.83.1 67
 MD5 7ce8d08fd7cafebd74de85322bf9c478 files/digest-xmess-0.99-r1 65
 MD5 5e43a2ac7510a32cf9a05ff45910eb2d files/xmess-0.101-keyboard.patch 417
 MD5 2dd9cfc7467cb3d1e313af9f7ce19aba files/xmess-0.99-mcr3.patch 324
 MD5 0234d9024c471faf92bb1219242614ef metadata.xml 1566
 MD5 111477ad0afbc5d4d40700f60e619ead xmess-0.100.ebuild 5741
-MD5 bdea64fc44a1de3df800446acf607ad2 xmess-0.101.ebuild 5837
+MD5 bf39f3d39b4a08f870082aa8d840a983 xmess-0.101.ebuild 5836
+MD5 06b917d9883973c8424e5b0aee5f1f2b xmess-0.102.ebuild 5788
 MD5 e239b0a87b24efd591009f37e09cfa63 xmess-0.83.1.ebuild 6588
 MD5 dd6ace276bcfbbcb022574afe3dbaa2c xmess-0.99-r1.ebuild 5789
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgBwEgIKl8Uu19MoRArQ6AJ4uy2le90wR7z1x1d1altCLp3rZgACeLduj
-jJbT7z/fVsAO3n7vTlL7XKQ=
-=US7P
------END PGP SIGNATURE-----
