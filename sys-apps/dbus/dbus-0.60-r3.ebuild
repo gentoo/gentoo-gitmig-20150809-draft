@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r3.ebuild,v 1.4 2006/01/04 18:25:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r3.ebuild,v 1.5 2006/01/06 08:31:24 pebenito Exp $
 
 inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc gcj gtk mono python qt X xml2"
+IUSE="doc gcj gtk mono python qt selinux X xml2"
 
 RDEPEND=">=dev-libs/glib-2.6
 	X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
@@ -19,6 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	mono? ( >=dev-lang/mono-0.95 )
 	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
 	qt? ( $(qt_min_version 3.3) )
+	selinux? ( sys-libs/libselinux )
 	xml2? ( >=dev-libs/libxml2-2.6.21 )
 	!xml2? ( dev-libs/expat )"
 
@@ -81,6 +82,7 @@ src_compile() {
 		$(use_enable mono) \
 		$(use_enable kernel_linux dnotify) \
 		$(use_enable gcj) \
+		$(use_enable selinux) \
 		$(use_enable debug verbose-mode) \
 		$(use_enable debug checks) \
 		$(use_enable debug asserts) \
@@ -96,6 +98,10 @@ src_compile() {
 
 	# Don't build the mono examples, they require gtk-sharp
 	touch ${S}/mono/example/{bus-listener,echo-{server,client}}.exe
+
+	# after the compile, it uses a selinuxfs interface to
+	# check if the SELinux policy has the right support
+	use selinux && addwrite /selinux/access
 
 	emake || die "make failed"
 }

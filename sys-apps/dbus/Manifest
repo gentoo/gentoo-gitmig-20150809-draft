@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ccc314d53c3dbb6b4b77600acd9bf75b ChangeLog 12494
+MD5 d61a52915ffc61a0c891eb5465173799 ChangeLog 12614
 MD5 04acc192ea19db0b05e4d894507ca059 dbus-0.23.4-r1.ebuild 3584
 MD5 eaaed2cd9d845468bff2f444d0a4f4c7 dbus-0.50-r1.ebuild 3900
 MD5 da1f078c3ef62452c0d8ec34581d3da3 dbus-0.50-r2.ebuild 4338
-MD5 bb85afc439eeb54511882eb128d1ed0a dbus-0.60-r3.ebuild 4199
+MD5 2ec0a1d55e68de4f60be79402871d776 dbus-0.60-r3.ebuild 4419
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
 MD5 2a21cd128b106bc728a0566c13e727e3 files/dbus 938
 MD5 768e500cfda89809161576ea2080a7aa files/dbus-0.23-dbus_session_connect.patch 1185
@@ -29,7 +29,7 @@ MD5 d854e952b3179d33b2ece377ce9980f3 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvBdJBtvusYtCZMsRAqv5AJ0VsSWe/lifJZcxmCGf/DXjpewuTQCff+lJ
-TEqjWjC8OAzx7qZSAWybIMc=
-=9FwX
+iD8DBQFDvirnJ+ChZlpDtAoRAv6JAKCEi/7rIDc1mJIYFZGhRLtn2VDGJQCfaTmd
+Zidr8JfD89sFtPnb+o9Azo0=
+=//X8
 -----END PGP SIGNATURE-----
