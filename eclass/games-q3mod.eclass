@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.31 2005/10/25 14:18:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.32 2006/01/06 16:28:27 wolf31o2 Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ EXPORT_FUNCTIONS src_install pkg_postinst
 DESCRIPTION="Quake III - ${MOD_DESC}"
 
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* amd64 ~ppc x86"
 IUSE="opengl X dedicated"
 
 DEPEND="app-arch/unzip"
