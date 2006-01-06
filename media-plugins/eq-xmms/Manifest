@@ -1,23 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7f8e4ca3fbf130488493fd77b521f07 ChangeLog 2440
+MD5 3476f158277f002e60e5704a5a803e12 ChangeLog 2574
 MD5 b690422be68807e2ef346762c1578aa7 eq-xmms-0.6-r1.ebuild 1054
-MD5 1b490d1372e2bf23ca834e77264f7c0e eq-xmms-0.6-r3.ebuild 1352
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 7d3e79e717f7ef2ae544e7c12713cb4f eq-xmms-0.6-r2.ebuild 1097
-MD5 e2cda8be9765888166aa11cb345e6a41 files/eq-xmms-0.6-nonx86.patch 410
-MD5 50aee22d22720e909368193718e41042 files/eq-xmms-0.6-sse_round_trickfilters.patch 508
+MD5 1b490d1372e2bf23ca834e77264f7c0e eq-xmms-0.6-r3.ebuild 1352
+MD5 08e0b1194573ce88820a2149b5803613 eq-xmms-0.6-r4.ebuild 1454
+MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r1 63
 MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r2 63
+MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r3 63
+MD5 473111a92d380f6be88fc3af3719d677 files/digest-eq-xmms-0.6-r4 141
+MD5 774f966c8056c9448a2cdd295cf76302 files/eq-xmms-0.6-mono_fix.patch 418
+MD5 e2cda8be9765888166aa11cb345e6a41 files/eq-xmms-0.6-nonx86.patch 410
 MD5 db956a0ebfff40720bb6487f96564a00 files/eq-xmms-0.6-shade_fix.patch 1116
 MD5 a1fa7eb14b3258f655292e42d44b2eb3 files/eq-xmms-0.6-sse_filters.patch.bz2 8889
-MD5 774f966c8056c9448a2cdd295cf76302 files/eq-xmms-0.6-mono_fix.patch 418
-MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r1 63
-MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGss2j5H05b2HAEkRArUSAJwKOzBz/FMOZhu1r6mBhJHvtOnNvACfWNob
-vpfssCPS1D5dirvEM9MDFB4=
-=2nX0
------END PGP SIGNATURE-----
+MD5 50aee22d22720e909368193718e41042 files/eq-xmms-0.6-sse_round_trickfilters.patch 508
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
