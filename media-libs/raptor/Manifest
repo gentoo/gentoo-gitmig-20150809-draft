@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c45abb62af62ac47e9ad684866f999a ChangeLog 3522
+MD5 c28e914b0df293a2a3f271de5bce15de ChangeLog 3608
 MD5 1bdb97a56fbd4ed14588121781fad850 files/digest-raptor-1.4.5 64
 MD5 a9760c67971a37403703a4eaaec19d21 files/digest-raptor-1.4.7 65
 MD5 7e3ea5b974926e8016d8e633f5ed2434 files/digest-raptor-1.4.8 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 d042e7a6e3f8e82c5841b1c38e7cf1d1 raptor-1.4.5.ebuild 2165
-MD5 7183f4e9d1528be1c1dd3466f07d14ae raptor-1.4.7.ebuild 2170
+MD5 e891d109dcab111f775e2319ea17b3fc raptor-1.4.7.ebuild 2166
 MD5 4fc14337128a9946232d6d5aff792898 raptor-1.4.8.ebuild 2172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvRoSKRy60XGEcJIRAr1YAJ9qQ9q4w5IPSThOkpwCo6CmQ/Gt+ACgng7e
-F5XhwMt62Bw09GYXfUbLlqw=
-=mgvB
------END PGP SIGNATURE-----
