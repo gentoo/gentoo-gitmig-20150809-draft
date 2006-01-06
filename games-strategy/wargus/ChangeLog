@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.1 2006/01/06 13:49:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.2 2006/01/06 20:26:18 genstef Exp $
+
+*wargus-2.1-r1 (06 Jan 2006)
+
+  06 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +wargus-2.1-r1.ebuild:
+  Add desktop link and icon derived from wargus.sourceforge.net/images/wargus.png
 
 *wargus-2.1 (06 Jan 2006)
 
