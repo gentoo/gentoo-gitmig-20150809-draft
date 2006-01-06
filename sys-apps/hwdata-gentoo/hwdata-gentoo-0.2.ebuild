@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.2.ebuild,v 1.2 2005/12/03 17:51:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.2.ebuild,v 1.3 2006/01/06 15:22:50 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 HOMEPAGE="http://www.gentoo.org"
 
 IUSE="opengl livecd"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
