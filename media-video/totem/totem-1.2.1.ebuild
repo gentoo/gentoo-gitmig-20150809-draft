@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.8 2006/01/06 21:07:16 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.1.ebuild,v 1.1 2006/01/06 21:07:16 joem Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -84,13 +84,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Recognize gecko-sdk as a valid toolkit to compile the plugin
-	epatch ${FILESDIR}/${PN}-1.2.0-gecko-sdk.patch
-	# fix for italian translation
-	epatch ${FILESDIR}/${PN}-1.2.0-lang_it_fix.patch
-	# Add gmodule depend
-	epatch ${FILESDIR}/${PN}-1.2.0-gmoduledep.patch
-	#patch to compile with dbus-0.60
-	epatch ${FILESDIR}/${PN}-dbus-0.60.patch
+	epatch ${FILESDIR}/${PN}-1.2.1-gecko-sdk.patch
 	eautoreconf
 
 	gnome2_omf_fix help/*/Makefile.in

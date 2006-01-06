@@ -1,23 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5403e97fb29a52fafa9096130ec143a4 ChangeLog 12933
+MD5 96c5d1f4e664118db262f6f9401c40e6 ChangeLog 13090
 MD5 ac8a4cf594e065c2ddc00dc70c8d2170 files/digest-totem-1.0.4 65
 MD5 e7c829d2432b645ddb68128a4bead344 files/digest-totem-1.2.0-r1 65
 MD5 e7c829d2432b645ddb68128a4bead344 files/digest-totem-1.2.0-r2 65
+MD5 9243ad12e8b83b84491d9ba44ddee684 files/digest-totem-1.2.1 65
 MD5 cccfa415897f1198d6cb702e258b85a9 files/totem-1.0.4-fbsd.patch 1190
 MD5 d8432eb528995986645e6e70fdccba48 files/totem-1.2.0-gecko-sdk.patch 1178
 MD5 faed9bfdf2ea1835a17c9e56e7738ac1 files/totem-1.2.0-gmoduledep.patch 1535
 MD5 d64b50de60d0223b68b67b7788086b5b files/totem-1.2.0-lang_it_fix.patch 834
+MD5 bb48541b00fafc98142cfbbea5490e8b files/totem-1.2.1-gecko-sdk.patch 1118
 MD5 06e5959e07633fd5260c6935f547d0d4 files/totem-dbus-0.60.patch 562
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
 MD5 6645b9eed7d922972cb815cadddf7d89 totem-1.0.4.ebuild 2709
 MD5 d7a1624ffff28b89921b884b1b2565cc totem-1.2.0-r1.ebuild 3200
-MD5 d7342e70db056f27148a90bd480d377c totem-1.2.0-r2.ebuild 3161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDva02csIHjyDViGQRAt8VAKDOE3wei+ocyjVI6I3B+Ze0y8brywCg4WUa
-23sp7EtyQN484tHhh/CZiKQ=
-=89Qe
------END PGP SIGNATURE-----
+MD5 a6c5cda926beb5b7a47c63e650d74ae5 totem-1.2.0-r2.ebuild 3160
+MD5 89753bfe90d44357bf594cd8dfeaa7eb totem-1.2.1.ebuild 2929
