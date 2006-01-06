@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a50924ed3390a3a5c1a1040c025ce04f ChangeLog 4068
+MD5 4f9dcd3df7ea0db5759247e76c877990 ChangeLog 4155
 MD5 94b783350318bde8ad524625dc572691 bmpx-0.12.6.1.ebuild 2451
 MD5 bf63d4fbadd09a22a31ba03a6b5c4a35 bmpx-0.12.9-r1.ebuild 2744
-MD5 bb89b8e0805750d148c97500fef18d42 bmpx-0.12.9-r2.ebuild 2762
+MD5 993bbfeba9fee9b48d5e644bfc582a5b bmpx-0.12.9-r2.ebuild 2768
 MD5 a6646d14356e8efbd338fc046c24aa94 bmpx-0.12.9.ebuild 2615
 MD5 7514f80714813b7e16f4d8c053b25080 files/bmpx-0.12.9-dbus-fix.patch 453
 MD5 00c0df8ecca35f227152aef1b0d7ccb5 files/bmpx-0.12.9-libtoolize-static-libs.patch 1753
@@ -15,10 +12,3 @@ MD5 585ea243a2962670181b03c827204cbb files/digest-bmpx-0.12.9 136
 MD5 585ea243a2962670181b03c827204cbb files/digest-bmpx-0.12.9-r1 136
 MD5 585ea243a2962670181b03c827204cbb files/digest-bmpx-0.12.9-r2 136
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvnsHKRy60XGEcJIRAmTpAJ9cbq4QAKZjosd7FGS77tlCfaWLRACffCiR
-O204CPDbN+l28eZ3RXJtWNw=
-=3gkQ
------END PGP SIGNATURE-----
