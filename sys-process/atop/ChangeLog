@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/atop
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.4 2005/06/14 23:01:10 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.5 2006/01/06 23:09:52 vapier Exp $
+
+*atop-1.15 (06 Jan 2006)
+
+  06 Jan 2006; Mike Frysinger <vapier@gentoo.org> +atop-1.15.ebuild:
+  Version bump #118013 by John Gerritse.
 
   14 Jun 2005; Mike Frysinger <vapier@gentoo.org> +files/atop.rc,
   atop-1.14.ebuild:
