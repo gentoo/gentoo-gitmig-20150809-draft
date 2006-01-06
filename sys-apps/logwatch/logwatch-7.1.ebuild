@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.1.ebuild,v 1.2 2005/12/14 04:09:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.1.ebuild,v 1.3 2006/01/06 23:32:41 vapier Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org/"
@@ -58,5 +58,5 @@ src_install() {
 	newexe "${FILESDIR}"/logwatch 00-logwatch
 
 	doman logwatch.8
-	dodoc project/CHANGES README HOWTO-Make-Filter
+	dodoc project/CHANGES README HOWTO-Customize-LogWatch
 }
