@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44e629b77e4b4fdded42a0a024bb10d3 ChangeLog 831
 MD5 7e7885ea2a517955e3510dc59addad40 files/digest-twisted-web-0.5.0-r1 69
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 7f97d4d9f7e3670fe59f72f3e5d536a1 twisted-web-0.5.0-r1.ebuild 396
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvgKh2+ySkm8kpY0RAtzMAKCYbjSd1cKQDtI1RKGNEFAdLT1/pwCgoT1Z
+fzUxPnUOj/0VJwfgnKzU86E=
+=+Fkc
+-----END PGP SIGNATURE-----

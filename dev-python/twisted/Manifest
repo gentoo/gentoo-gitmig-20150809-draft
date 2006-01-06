@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b96ef9a217dd249847f93ad83eb227ab ChangeLog 11172
 MD5 9e8836d4aec3a1a4f688add9c6c64877 files/digest-twisted-1.2.0 74
 MD5 387f6df81a68c591e6f30fe8878d964b files/digest-twisted-1.3.0 74
@@ -13,3 +16,10 @@ MD5 b334a51322c3da107d175c71db5c5b68 twisted-1.2.0.ebuild 996
 MD5 742e8cfdb91ef5a2685eb8734f209c41 twisted-1.3.0.ebuild 1061
 MD5 fbfc15c63ae380af8cc2ee3a1feab83a twisted-2.0.1.ebuild 2840
 MD5 a9363ee219bd7072265b2a627ff817e6 twisted-2.1.0.ebuild 3036
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvgKq2+ySkm8kpY0RAvu/AJ0VfK1rO8diS+5AAW0igUiOhWacIACfRynA
+o9tP4RQIf9AMCzZ02arrvh4=
+=D2jM
+-----END PGP SIGNATURE-----
