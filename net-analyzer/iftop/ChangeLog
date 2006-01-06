@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iftop
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.24 2005/09/15 21:52:15 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.25 2006/01/06 17:48:32 vanquirius Exp $
+
+*iftop-0.16-r1 (06 Jan 2006)
+
+  06 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/iftop-0.16-bar_in_bytes.patch, metadata.xml, +iftop-0.16-r1.ebuild:
+  Add bar in bytes patch from bug 101926, thanks to Ivan Todoroski <grnch at
+  gmx dot net>. Removed zul from metadata.xml.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> iftop-0.16.ebuild:
   Mark 0.16 stable on alpha
