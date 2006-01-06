@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.6.ebuild,v 1.2 2005/12/25 15:08:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.6.ebuild,v 1.3 2006/01/06 09:56:38 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,13 +12,10 @@ SRC_URI="http://www.roaringpenguin.com/penguin/pppoe/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X tcltk"
+IUSE="X"
 
 DEPEND="net-dialup/ppp
-	X? ( tcltk? (
-		virtual/x11
-		dev-lang/tcl
-		dev-lang/tk ) )"
+	X? ( dev-lang/tk )"
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack"
@@ -46,7 +43,7 @@ src_compile() {
 	econf --enable-plugin=../../ppp-2.4.3 || die "econf failed"
 	emake || die "emake failed"
 
-	if use X && use tcltk; then
+	if use X; then
 		make -C ${S}/gui || die "gui make failed"
 	fi
 }
@@ -67,7 +64,7 @@ src_install () {
 
 	prepalldocs
 
-	if use X && use tcltk; then
+	if use X; then
 		make -C ${S}/gui install RPM_INSTALL_ROOT=${D} \
 		datadir=/usr/share/doc/${PF}/ || die "gui install failed"
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe

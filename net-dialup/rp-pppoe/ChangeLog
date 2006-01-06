@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-pppoe
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.62 2005/12/25 15:08:08 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.63 2006/01/06 09:56:38 mrness Exp $
+
+  06 Jan 2006; Alin Nastac <mrness@gentoo.org> rp-pppoe-3.5-r11.ebuild,
+  rp-pppoe-3.6.ebuild:
+  Remove duplicate dependencies and unnecessary tcltk useflag (#117963).
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> rp-pppoe-3.6.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
