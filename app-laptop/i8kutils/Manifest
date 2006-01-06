@@ -1,10 +1,16 @@
-MD5 ccfb0e544f18449e1962b93b9576b4a0 ChangeLog 1422
-MD5 33873fd756059b2316474b8fdd764772 i8kutils-1.17-r1.ebuild 972
-MD5 699ef48a946b30c95a97652eea0c9126 i8kutils-1.17.ebuild 830
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 8a7922c79fe7400052801caed30468ff i8kutils-1.25.ebuild 972
-MD5 fd4b4c0776410a45903481f5694df4f7 files/digest-i8kutils-1.17 65
-MD5 fd4b4c0776410a45903481f5694df4f7 files/digest-i8kutils-1.17-r1 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4d34ff47e4edff2c885c9eec8f978f05 ChangeLog 1702
+MD5 3b93250488155c8ff80461d5f4f1d220 files/digest-i8kutils-1.25 64
 MD5 d4d358aea65a5d6fd19f4abb17c043d4 files/i8k.conf 891
 MD5 1dae8e3aae85f468d86aaddf072bb559 files/i8k.init 1165
-MD5 3b93250488155c8ff80461d5f4f1d220 files/digest-i8kutils-1.25 64
+MD5 e466cf220f470ca9804791ebe0eab936 i8kutils-1.25.ebuild 958
+MD5 8ad10de4d8833ae2a73147d6e65c199c metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvfVKmOfEJZHYOKcRAneTAKCVKd1GJXkscBsRzNmuFX22EAV4NACgv+PP
+4K64fYWMsFX5Q+czUF/Sma8=
+=E1mk
+-----END PGP SIGNATURE-----

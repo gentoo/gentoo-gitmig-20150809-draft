@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.5 2005/04/21 07:13:52 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.6 2006/01/06 04:42:26 tester Exp $
 
 
 
@@ -14,8 +14,7 @@ KEYWORDS="-* x86 amd64"
 IUSE="tcltk"
 
 DEPEND="virtual/libc
-	virtual/x11
-	>=dev-lang/tk-8.3.3"
+	tcltk? ( >=dev-lang/tk-8.3.3 )"
 
 src_compile() {
 	make all || die
@@ -26,7 +25,7 @@ src_install() {
 	use tcltk && dobin i8kmon
 	doman i8kbuttons.1 i8kctl.1
 	use tcltk && doman i8kmon.1
-	use tcltk && dosym /usr/bin/i8kctl /usr/bin/i8kfan
+	dosym /usr/bin/i8kctl /usr/bin/i8kfan
 	dodoc README.i8kutils
 	dodoc i8kmon.conf
 	dodoc Configure.help.i8k

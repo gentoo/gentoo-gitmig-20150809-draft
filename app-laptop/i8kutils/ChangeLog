@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/i8kutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.8 2005/04/21 07:13:52 wormo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.9 2006/01/06 04:42:26 tester Exp $
+
+  06 Jan 2006; Olivier Crête <tester@gentoo.org> metadata.xml,
+  -i8kutils-1.17.ebuild, -i8kutils-1.17-r1.ebuild, i8kutils-1.25.ebuild:
+  Taking over unmaintained package, removed older versions, removed
+  virtual/x11 dep since tk already has the deps, fixed use of tcltk flag
 
   21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   i8kutils-1.17-r1.ebuild, i8kutils-1.17.ebuild, i8kutils-1.25.ebuild:
