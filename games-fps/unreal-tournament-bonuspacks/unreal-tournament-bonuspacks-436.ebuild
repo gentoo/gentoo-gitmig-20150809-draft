@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-bonuspacks/unreal-tournament-bonuspacks-436.ebuild,v 1.7 2005/07/15 14:09:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-bonuspacks/unreal-tournament-bonuspacks-436.ebuild,v 1.8 2006/01/06 16:16:03 wolf31o2 Exp $
 
 inherit games
 
@@ -17,12 +17,16 @@ SRC_URI="http://fileserver.talkware.net/ut/bonuspacks/UTBonusPack4.zip
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="X"
+IUSE=""
 
 DEPEND="app-arch/unzip
-	|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty )
+	|| (
+		games-fps/unreal-tournament
+		games-fps/unreal-tournament-goty )
 	games-util/umodpack"
-RDEPEND="X? ( virtual/x11 )"
+RDEPEND="|| (
+	games-fps/unreal-tournament
+	games-fps/unreal-tournament-goty )"
 
 S=${WORKDIR}
 

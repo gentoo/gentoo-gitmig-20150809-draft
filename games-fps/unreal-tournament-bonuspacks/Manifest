@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb8e2de30bc30e9a8b83d84076db059a ChangeLog 729
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a81f28d6ceb5133f7c21de71be522376 unreal-tournament-bonuspacks-436.ebuild 1329
+MD5 5568f5a0c3a2d4e5c06a6b8db127f705 ChangeLog 899
 MD5 89f3f32fe53cf774fe23cc0221d0da18 files/digest-unreal-tournament-bonuspacks-436 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC18PQj5H05b2HAEkRAgb5AJ9EpGOBAZCwJvsA8TgKYhwcxoOK0ACggGs+
-/nfgOx9hued2ah9MwfBxEVU=
-=f9IL
------END PGP SIGNATURE-----
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 4ba9e42d8286f2ba86f6440ed31ac7d5 unreal-tournament-bonuspacks-436.ebuild 1382
