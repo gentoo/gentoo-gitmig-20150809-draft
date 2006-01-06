@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.59 2006/01/05 07:51:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.60 2006/01/06 03:02:36 nerdboy Exp $
+
+  06 Jan 2006; Steve Arnold <nerdboy@gentoo.org>
+  -files/configure-gcc-3.4.patch, -files/hylafax-4.2.0-fPIC.patch,
+  -files/hylafax-4.2.0-faxcron_uid.patch,
+  -files/hylafax-4.2.0-faxmail-charset.patch,
+  -files/hylafax-4.2.0-tiff_version.patch,
+  -files/hylafax-4.2.1-openpam.patch, -files/hylafax-4.2-tmpdir.patch,
+  -files/hylafax-hostvuln.patch, -hylafax-4.2.0-r3.ebuild,
+  -hylafax-4.2.1-r2.ebuild, -hylafax-4.2.2.ebuild, hylafax-4.2.3-r1.ebuild:
+  Updated keywords and cleaned up old versions; all the old ones were 4.2x,
+  so it seemed like a good opportunity to tidy up all the old patches.  If
+  anyone *really* needs an older version, file a bug and we'll see about
+  back-porting the security patches...
 
 *hylafax-4.2.4 (05 Jan 2006)
 *hylafax-4.2.3-r1 (05 Jan 2006)

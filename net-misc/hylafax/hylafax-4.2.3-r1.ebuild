@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.3-r1.ebuild,v 1.1 2006/01/05 07:51:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.3-r1.ebuild,v 1.2 2006/01/06 03:02:36 nerdboy Exp $
 
 inherit eutils multilib pam
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 sparc hppa alpha amd64 ppc"
 
 DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=sys-libs/zlib-1.1.4
