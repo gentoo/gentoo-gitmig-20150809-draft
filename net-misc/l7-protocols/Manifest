@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a562404ee22ce7290fd6f7a600f44af0 l7-protocols-2005.07.17.ebuild 1503
+MD5 eb87cd70974698d3d8616506a77699dd ChangeLog 4221
+MD5 d41f93d0fa74a54ab989fba3daf185ad files/digest-l7-protocols-2005.09.05 74
+MD5 eaa41d61e00224d03b96044e9c0037b7 files/digest-l7-protocols-2005.09.12 74
+MD5 bd49d2a203dc9464f5c6c20020d401b9 files/digest-l7-protocols-2005.12.16 74
 MD5 06f4a1da1428b37ac7629a80b44e63eb l7-protocols-2005.09.05.ebuild 1496
 MD5 d6e602e170f30478453f4d84b52b116d l7-protocols-2005.09.12.ebuild 1503
+MD5 4dda68869b921dba798586ad9048f8f1 l7-protocols-2005.12.16.ebuild 1503
 MD5 89edb769612add8464eb3c324f09e197 metadata.xml 374
-MD5 81339e25d2811843993b2ce034153258 ChangeLog 4018
-MD5 eaa41d61e00224d03b96044e9c0037b7 files/digest-l7-protocols-2005.09.12 74
-MD5 d41f93d0fa74a54ab989fba3daf185ad files/digest-l7-protocols-2005.09.05 74
-MD5 df9a9c3778a213e81067e0c0e88ad849 files/digest-l7-protocols-2005.07.17 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDK1WWLLFUmVNQ7rkRAt73AJ9uP1WOroxLSbQHfJ1InOBAE/EovQCfQxlX
-I4bNFv54dt6M5CdXiu7+k8w=
-=pV48
+iD8DBQFDvk/BmdTrptrqvGERAuNxAJ4hVfW+di4Qogps3PF/P/j7es6TqACeJYzH
+L1LUcfWHz6W6bDv6CNuYiUQ=
+=dmDu
 -----END PGP SIGNATURE-----
