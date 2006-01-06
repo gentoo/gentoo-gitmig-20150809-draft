@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.118 2005/12/18 15:37:32 plasmaroo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.119 2006/01/06 18:31:10 wolf31o2 Exp $
+
+  06 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.3.6.ebuild, genkernel-3.3.10.ebuild:
+  Marking 3.3.10 stable and removing older 3.3 versions.
 
 *genkernel-3.3.10 (18 Dec 2005)
 
