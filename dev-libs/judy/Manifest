@@ -1,4 +1,14 @@
-MD5 6065dbcd8b8aaf7e6b4d1daa17fd4094 ChangeLog 1140
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fc772def683c360284cf77ca8fb04d95 ChangeLog 1251
 MD5 e3f70edd8cba442253c9c364ae4113b7 files/digest-judy-1.0.1 63
-MD5 7eca754faddeec7e607dd53f0a2566f7 judy-1.0.1.ebuild 667
+MD5 6d617cc01494c3005f90cfd8b931b13e judy-1.0.1.ebuild 679
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDvqgOKRy60XGEcJIRArLkAJ4qh7CQZKXNibfa250aVY1jvnkYHACfT6Ud
+4agegK0LHZSPCi92UIiGQPE=
+=FP8y
+-----END PGP SIGNATURE-----
