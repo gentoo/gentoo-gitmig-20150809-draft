@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9f92d5a13a07b85056230af02088742 ChangeLog 977
+MD5 632b43e71141f53349e197b02fc62838 ChangeLog 1093
 MD5 abcf3e9f1887a57adeeaedd286b7dcce files/digest-hwdata-gentoo-0.2 70
 MD5 57bbd10ff7c831988da5912e4c9e3e14 files/fglrx.patch 318
 MD5 018005f2d16cc9b6b989578fca68019f files/nvidia.patch 385
-MD5 d793409cfed25e1d890e3e620d7c9002 hwdata-gentoo-0.2.ebuild 1047
+MD5 888f85b0101e8e5f1f53acaf1b1e643d hwdata-gentoo-0.2.ebuild 1043
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFDvoteKRy60XGEcJIRAtYCAKCGuY9+6Q0QYNiZIAmECMNlcN/TaACfd1ey
-NJao2swFxYksmcKKUlNqQ48=
-=ziHg
+iD8DBQFDvsfW/NoSW7FuNV8RAn71AKDT3LY8dc1saJqlYCt+6kJN2T/ljQCcCYKZ
+W1m3nAqvydmj2F8XWbakPLE=
+=gbPu
 -----END PGP SIGNATURE-----

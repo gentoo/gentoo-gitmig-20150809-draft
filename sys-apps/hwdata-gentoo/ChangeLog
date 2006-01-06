@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.5 2006/01/06 15:22:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.6 2006/01/06 19:39:27 wormo Exp $
+
+  06 Jan 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  hwdata-gentoo-0.2.ebuild:
+  stable on ppc (Bug #117913)
 
   06 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   hwdata-gentoo-0.2.ebuild:
