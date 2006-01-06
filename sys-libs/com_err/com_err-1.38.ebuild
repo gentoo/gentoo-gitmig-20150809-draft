@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.38.ebuild,v 1.16 2005/11/10 21:22:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.38.ebuild,v 1.17 2006/01/06 23:34:22 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,11 +29,14 @@ src_compile() {
 	export CC=$(tc-getCC)
 	export STRIP=/bin/true
 
+	# We want to use the "bsd" libraries while building on Darwin, but while
+	# building on other Gentoo/*BSD we prefer elf-naming scheme.
 	local libtype
-	case ${USERLAND} in
-		Darwin) libtype=bsd;;
-		*)      libtype=elf;;
+	case ${CHOST} in
+		*-darwin*) libtype=bsd;;
+		*)         libtype=elf;;
 	esac
+	
 	mkdir -p lib/{blkid,e2p,et,ext2fs,ss,uuid}/{checker,elfshared,pic,profiled} #102412
 	econf \
 		--enable-${libtype}-shlibs \
