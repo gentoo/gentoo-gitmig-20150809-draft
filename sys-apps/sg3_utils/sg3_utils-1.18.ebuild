@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.18.ebuild,v 1.3 2005/12/29 21:51:31 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.18.ebuild,v 1.4 2006/01/06 16:33:46 slarti Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 		-e '/^PREFIX=/s:/local::' \
 		-e 's:$(DESTDIR)/:$(DESTDIR):' \
 		-e 's:/man:/share/man:' \
-		-e "/^LIBDIR=/s:/lib:$(get_libdir):" \
+		-e "/^LIBDIR=/s:/lib:/$(get_libdir):" \
 		Makefile
 }
 

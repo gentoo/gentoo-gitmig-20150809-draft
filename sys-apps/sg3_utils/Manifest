@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cd8bebf726c6134230296f523d514128 ChangeLog 1985
+MD5 1ff94c6305ed760d789ce3133460fd30 ChangeLog 2096
 MD5 e309d737cc7ca64e5d5beb764d1ba316 files/digest-sg3_utils-1.08 124
 MD5 3fcc23751b641786325f54e9df3fca05 files/digest-sg3_utils-1.11 124
 MD5 8dcedd2980cb1b56ed8e0a60b13f8c48 files/digest-sg3_utils-1.15 124
@@ -11,11 +11,11 @@ MD5 37443e54165d5bcdaa8550d52edafa98 metadata.xml 228
 MD5 d5959d5cb2439b78b3c1d20fc555f047 sg3_utils-1.08.ebuild 938
 MD5 c961881764f66b8f51ee5049c2d246fc sg3_utils-1.11.ebuild 871
 MD5 eae70fd0e48273e4a0443cfa34919c44 sg3_utils-1.15.ebuild 954
-MD5 e48e0b6401dbcc082b064e5702cec976 sg3_utils-1.18.ebuild 995
+MD5 107afb7232b799cbb4f5f38facdcf432 sg3_utils-1.18.ebuild 996
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtFpwCHk4+ZoBpvsRAlBWAJ9pQYPlnPe0HoDDix+o9dZPbcfjjwCeIx44
-TAsieIE719va8YaLV7r9ch8=
-=8bsf
+iD8DBQFDvpv6CHk4+ZoBpvsRAsGuAJ4sEbk08Xu48n1Sh29i84lYCev9ggCgvl79
+51TwgOBD7v/Zt2Hz6gfk7xc=
+=+2LW
 -----END PGP SIGNATURE-----
