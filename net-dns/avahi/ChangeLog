@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.25 2006/01/06 01:56:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.26 2006/01/06 12:26:09 swegener Exp $
+
+  06 Jan 2006; Sven Wegener <swegener@gentoo.org>
+  -files/0.6.1-dbus-0.60-support.patch, -avahi-0.6.1.ebuild,
+  -avahi-0.6.1-r1.ebuild, avahi-0.6.2.ebuild:
+  Remove fixes that have been included by upstream. Move from -* to ~arch.
 
 *avahi-0.6.2 (06 Jan 2006)
 

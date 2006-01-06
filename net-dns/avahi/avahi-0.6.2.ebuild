@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.2.ebuild,v 1.1 2006/01/06 01:56:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.2.ebuild,v 1.2 2006/01/06 12:26:09 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -10,7 +10,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-*" #~amd64 ~ppc ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sh ~sparc ~x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt"
 
 RDEPEND=">=dev-libs/libdaemon-0.5
@@ -98,17 +98,14 @@ src_compile() {
 		$(use_enable gdbm) \
 		${myconf} \
 		|| die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
+	use bookmarks || rm -f "${D}"/usr/bin/avahi-bookmarks
 
 	dodoc docs/{AUTHORS,README,TODO}
-
-	# Let's do some cleanup
-	rmdir "${D}"/Disabled &>/dev/null
-	use bookmarks || rm -f "${D}"/usr/bin/avahi-bookmarks
 }
 
 pkg_postrm() {
