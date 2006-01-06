@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/album
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.16 2005/12/18 17:13:52 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.17 2006/01/06 04:45:37 agriffis Exp $
+
+  06 Jan 2006; Aron Griffis <agriffis@gentoo.org> album-3.10.ebuild:
+  Mark 3.10 ~alpha
 
   18 Dec 2005; Markus Rothe <corsair@gentoo.org> album-3.07.ebuild:
   Stable on ppc64
