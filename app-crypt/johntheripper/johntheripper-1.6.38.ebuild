@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.38.ebuild,v 1.3 2005/08/23 21:37:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.38.ebuild,v 1.4 2006/01/06 12:25:51 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.openwall.com/john/c/${MY_PBASE}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ppc64 ~mips ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="mmx"
 
 RDEPEND="virtual/libc"
@@ -38,8 +38,6 @@ src_compile() {
 		emake ${OPTIONS} linux-alpha || die "Make failed"
 	elif use sparc; then
 		emake ${OPTIONS} linux-sparc  || die "Make failed"
-	elif use ppc; then
-		emake ${OPTIONS} linux-ppc  || die "Make failed"
 	elif use amd64; then
 		if use mmx; then
 			emake ${OPTIONS} linux-x86-64-mmx  || die "Make failed"
@@ -47,8 +45,10 @@ src_compile() {
 			emake ${OPTIONS} linux-x86-64  || die "Make failed"
 		fi
 	elif use ppc-macos; then
-		emake ${OPTIONS} macosx-ppc-altivec-cc || die "Make failed"
-		#emake ${OPTIONS} macosx-ppc-cc || die "Make failed"
+		emake ${OPTIONS} macosx-ppc32-altivec-cc || die "Make failed"
+		# for Tiger this can be macosx-ppc64-cc
+	elif use ppc; then
+		emake ${OPTIONS} linux-ppc  || die "Make failed"
 	else
 		emake ${OPTIONS} generic || die "Make failed"
 	fi
