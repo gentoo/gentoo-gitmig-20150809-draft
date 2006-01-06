@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.419 2006/01/06 07:03:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.420 2006/01/06 13:50:51 metalgod Exp $
+
+  06 Jan 2006; Luis Medinas <metalgod@gentoo.org> glibc-2.3.6-r2.ebuild:
+  Added ~amd64 keyword.
 
   06 Jan 2006; Mark Loeser <halcy0n@gentoo.org> glibc-2.3.6-r2.ebuild:
   Marking ~x86
