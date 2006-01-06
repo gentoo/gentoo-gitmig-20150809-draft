@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.23 2006/01/01 12:07:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.24 2006/01/06 01:55:49 vapier Exp $
+
+  06 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/avahi-0.6.1-no-ipv6.patch, avahi-0.6.1-r1.ebuild:
+  Fix building on uClibc systems with USE=-ipv6.
 
 *avahi-0.6.1-r1 (01 Jan 2006)
 

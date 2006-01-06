@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.1-r1.ebuild,v 1.1 2006/01/01 12:07:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.1-r1.ebuild,v 1.2 2006/01/06 01:55:49 vapier Exp $
 
 inherit eutils qt3 mono python
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freedesktop.org/~lennart/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sh ~sparc ~x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt"
 
 RDEPEND=">=dev-libs/libdaemon-0.5
@@ -61,7 +61,7 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
+	epatch "${FILESDIR}"/${P}-no-ipv6.patch
 	epatch "${FILESDIR}"/${PV}-dbus-0.60-support.patch
 	use dbus && epatch "${FILESDIR}"/${PV}-need-dbus-initscript.patch
 }
