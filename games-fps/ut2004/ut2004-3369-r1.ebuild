@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.3 2006/01/05 00:17:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.4 2006/01/06 18:52:38 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -9,7 +9,8 @@ DESCRIPTION="Unreal Tournament 2004 - Editor's Choice Edition"
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
 	http://speculum.twistedgamer.com/pub/0day.icculus.org/${PN}/${MY_P}
-	http://treefort.icculus.org/${PN}/${MY_P}"
+	http://treefort.icculus.org/${PN}/${MY_P}
+	http://sonic-lux.net/data/mirror/ut2004/${MY_P}"
 
 LICENSE="ut2003"
 SLOT="0"

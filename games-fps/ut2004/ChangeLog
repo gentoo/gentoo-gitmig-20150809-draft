@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.40 2006/01/05 00:17:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.41 2006/01/06 18:52:38 wolf31o2 Exp $
+
+  06 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369-r1.ebuild,
+  ut2004-3369-r2.ebuild:
+  Added another mirror.  Thanks to SonicLux on #gentoo-games.
 
   04 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369-r1.ebuild,
   ut2004-3369-r2.ebuild:
