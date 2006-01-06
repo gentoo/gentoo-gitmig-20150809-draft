@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r3.ebuild,v 1.2 2006/01/04 01:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r3.ebuild,v 1.3 2006/01/06 08:46:28 pebenito Exp $
 
 inherit eutils linux-info debug
 
@@ -11,7 +11,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acpi debug doc pam_console pcmcia"
+IUSE="acpi debug doc pam_console pcmcia selinux"
 
 RDEPEND=">=dev-libs/glib-2.6
 	>=sys-apps/dbus-0.50
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/glib-2.6
 	dev-libs/expat
 	dev-libs/libusb
 	sys-apps/hotplug
-	pam_console? ( sys-libs/pam )"
+	pam_console? ( sys-libs/pam )
+	selinux? ( sys-libs/libselinux )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -92,6 +93,7 @@ src_compile() {
 		$(use_enable acpi acpi-proc) \
 		$(use_enable doc docbook-docs) \
 		$(use_enable doc doxygen-docs) \
+		$(use_enable selinux) \
 		|| die "configure failed"
 
 # --disable-acpi-acpid when HAL handles all that acpid handles

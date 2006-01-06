@@ -1,4 +1,7 @@
-MD5 a50594bb4122d1f55176d81def98e294 ChangeLog 9866
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2c09220accbbcf355b72854bcd8d70e ChangeLog 9988
 MD5 f8ec045cb9f929b5bc89e16ce3cbd637 files/0.5-hald.rc 646
 MD5 3031a9fe74f43859c313d5f3076e68cd files/digest-hal-0.4.7-r2 62
 MD5 2bbbb519c89110dfec96cf63cf541afc files/digest-hal-0.4.8 62
@@ -16,5 +19,12 @@ MD5 7ee3fd5b5ee117f14633350e5b335c2f files/hal-unmount.dev 397
 MD5 35750516d24e67c9f24f5f1e0da22ca0 files/hald 522
 MD5 6620fb9a1606d84523f610671945560e hal-0.4.7-r2.ebuild 3446
 MD5 b3418f98e4fc613f1ffe016d8a371612 hal-0.4.8.ebuild 3420
-MD5 0af097a0418d15077bc9733629b6247f hal-0.5.5.1-r3.ebuild 3706
+MD5 d6155161ec5700e1777d4ed6d4ca46aa hal-0.5.5.1-r3.ebuild 3776
 MD5 a60767d83157413d549c69b98fac962c metadata.xml 303
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvi5vJ+ChZlpDtAoRAoyxAJ99vke+LMEy4H678y2Xmd7Qv2ZrbwCgmLbG
+EoISZwGSwTft8Med1NDp3I0=
+=UabF
+-----END PGP SIGNATURE-----

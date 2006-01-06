@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.69 2006/01/02 16:54:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.70 2006/01/06 08:46:28 pebenito Exp $
+
+  06 Jan 2006; Chris PeBenito <pebenito@gentoo.org> hal-0.5.5.1-r3.ebuild:
+  Add explicit handling of SELinux support.
 
   02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> hal-0.4.8.ebuild:
   Stable on ppc.
