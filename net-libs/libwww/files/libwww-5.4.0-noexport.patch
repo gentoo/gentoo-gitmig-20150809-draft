@@ -1,0 +1,15 @@
+Index: w3c-libwww-5.4.0/Library/User/Makefile.am
+===================================================================
+--- w3c-libwww-5.4.0.orig/Library/User/Makefile.am
++++ w3c-libwww-5.4.0/Library/User/Makefile.am
+@@ -11,8 +11,8 @@ EXTRA_DIST = \
+ 
+ SUBDIRS = Patch Architecture Using Guide Style Platform
+ 
+-BUILT_SOURCES = \
+-	Extrnals.html
++#BUILT_SOURCES = \
++#	Extrnals.html
+ 
+ SUFFIXES = .html
+ 

@@ -1,0 +1,13 @@
+Index: w3c-libwww-5.4.0/Library/src/Makefile.am
+===================================================================
+--- w3c-libwww-5.4.0.orig/Library/src/Makefile.am
++++ w3c-libwww-5.4.0/Library/src/Makefile.am
+@@ -197,6 +197,8 @@ libwwwfile_la_SOURCES = \
+ 	HTFile.c \
+ 	HTMulti.h \
+ 	HTMulti.c
++libwwwfile_la_LIBADD = \
++	libwwwdir.la
+ 
+ libwwwftp_la_SOURCES = \
+ 	WWWFTP.h \
