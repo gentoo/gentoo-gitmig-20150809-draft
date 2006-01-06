@@ -1,18 +1,30 @@
-MD5 db9541cf1c0142945af2a4c72fd78508 webalizer-2.01.10-r10.ebuild 3856
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 35ed78fda1726b5124d346c0cbd4f8a8 ChangeLog 6025
+MD5 72cc13055db3923e3b42824671712ed1 files/2.01.10/apache.webalizer 274
+MD5 45d6e8c8bd9f76c0e22d80acc0603aff files/2.01.10/reconfig 394
+MD5 7a71200318400e9c4a33e23bfc65904d files/2.01.10/webalizer.conf 23927
+MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r10 157
+MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r11 157
+MD5 99b845afaf9f7417f82f508992e4a5ab files/digest-webalizer-2.01.10-r4 74
+MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r5 157
+MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r8 157
+MD5 05805530b2e87a3d55e0056a45e330f5 files/output.c.patch 8088
+MD5 006af7bcfeb1e8648c1787c63d28470c files/webalizer-db4-with-geoip.patch 574
+MD5 cc68675ea63960bbc80d15110e41bf74 files/webalizer-db4.patch 574
+MD5 94e47e69398034261ac6d26edab9eafb files/webalizer-language-list.txt 1520
+MD5 766a26ff1600e3ea5359278a9dcd1025 files/webalizer-readability.patch 8345
 MD5 f4ab9f9db4e50708404d47337257cd4e metadata.xml 223
+MD5 db9541cf1c0142945af2a4c72fd78508 webalizer-2.01.10-r10.ebuild 3856
+MD5 b71e077d377e71a2277e7d6ab0279498 webalizer-2.01.10-r11.ebuild 3939
+MD5 5833410c77eec8d9cff653e67949b5a6 webalizer-2.01.10-r4.ebuild 2056
 MD5 e7883822bb2a1bcd2b8409ba709a964e webalizer-2.01.10-r5.ebuild 2550
 MD5 e07be0b4516c1e9044aa0c668866b570 webalizer-2.01.10-r8.ebuild 2486
-MD5 db9a44f5ecf0d70528a96d303dc782a6 ChangeLog 5830
-MD5 5833410c77eec8d9cff653e67949b5a6 webalizer-2.01.10-r4.ebuild 2056
-MD5 05805530b2e87a3d55e0056a45e330f5 files/output.c.patch 8088
-MD5 cc68675ea63960bbc80d15110e41bf74 files/webalizer-db4.patch 574
-MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r10 157
-MD5 99b845afaf9f7417f82f508992e4a5ab files/digest-webalizer-2.01.10-r4 74
-MD5 94e47e69398034261ac6d26edab9eafb files/webalizer-language-list.txt 1520
-MD5 006af7bcfeb1e8648c1787c63d28470c files/webalizer-db4-with-geoip.patch 574
-MD5 766a26ff1600e3ea5359278a9dcd1025 files/webalizer-readability.patch 8345
-MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r5 157
-MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r8 157
-MD5 7f29ecf09808176c22585f5205c6eceb files/2.01.10/reconfig 410
-MD5 d121e2b8e931e69a97c720cf30251959 files/2.01.10/webalizer.conf 23895
-MD5 72cc13055db3923e3b42824671712ed1 files/2.01.10/apache.webalizer 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvtmoEzitwsaoONoRAkcwAKC+QrR4dSwvDsiwF+ipfzWE94PsygCgmv5z
+IcG0+Sy6XrESs0GTM+Z/wf8=
+=IdxJ
+-----END PGP SIGNATURE-----

@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.40 2005/09/10 14:10:14 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.41 2006/01/06 20:57:01 rl03 Exp $
+
+*webalizer-2.01.10-r11 (06 Jan 2006)
+
+  06 Jan 2006; Renat Lumpau <rl03@gentoo.org> files/2.01.10/reconfig,
+  files/2.01.10/webalizer.conf, +webalizer-2.01.10-r11.ebuild:
+  Revbump for bug #106621.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   webalizer-2.01.10-r5.ebuild:
