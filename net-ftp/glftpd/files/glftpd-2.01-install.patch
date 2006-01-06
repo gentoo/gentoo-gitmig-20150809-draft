@@ -1,0 +1,105 @@
+--- installgl.sh
++++ installgl.sh
+@@ -273 +272,0 @@
+-read randomkey
+@@ -299 +298 @@
+-    read usetcpd
++    usetcpd=${USETCPD}
+@@ -363 +362 @@
+-    read jail
++    jail=y
+@@ -376 +375 @@
+-                read jaildir
++                jaildir=${GLROOT}
+@@ -388 +387 @@
+-                            read reply
++                            echo "SHOULD NOT HAVE BEEN HERE 1" ; exit 1
+@@ -420 +419 @@
+-        read useprivgroup
++        useprivgroup=n
+@@ -441 +440 @@
+-                    read privgroup
++                    echo "SHOULD NOT HAVE BEEN HERE 2" ; exit 1
+@@ -450 +449 @@
+-                        read reply
++                        echo "SHOULD NOT HAVE BEEN HERE 3" ; exit 1
+@@ -468 +467 @@
+-                        read jailusers
++                        echo "SHOULD NOT HAVE BEEN HERE 4" ; exit 1
+@@ -532 +531 @@
+-    read glroot
++    break
+@@ -544 +543 @@
+-                read reply
++                echo "SHOULD NOT HAVE BEEN HERE 5" ; exit 1
+@@ -620 +619 @@
+-  read keystroke
++  echo "SHOULD NOT HAVE BEEN HERE A" ; exit 1
+@@ -657 +656 @@
+-    read servicename
++    servicename=glftpd
+@@ -672 +671 @@
+-            read keystroke
++            keystroke=y
+@@ -694 +693 @@
+-    read keystroke
++    echo "SHOULD NOT HAVE BEEN HERE 6.2" ; exit 1
+@@ -751 +750 @@
+-        $usegcc $gccflags "$jaildir$glroot/bin/$base" "$cfile" >/dev/null 2>&1 || \
++        $usegcc $gccflags "$jaildir$glroot/bin/$base" "$cfile" >& "$cfile".cc.log || \
+@@ -754 +753 @@
+-            echo "OK."
++            echo "OK." ; rm -f "$cfile".cc.log
+@@ -757 +756 @@
+-            echo "FAILED!"
++            echo "FAILED!" ; cat "$cfile".cc.log
+@@ -885 +884 @@
+-    read port
++    port=21
+@@ -901,4 +899,0 @@
+-{ grep -v ^${servicename} /etc/services;
+-  echo "$servicename   $port/tcp"
+-} > /etc/services.new
+-mv -f /etc/services.new /etc/services
+@@ -950 +945 @@
+-        read whichnetd
++        whichnetd=${WHICHNETD}
+@@ -962,4 +957 @@
+-    echo "ERROR: Can't determine if you are using inetd or xinetd!"
+-    echo "This is usually because neither is running at the moment -"
+-    echo "install/start one of them and re-run this installer."
+-    exit 1
++    whichnetd=${WHICHNETD}
+@@ -980 +972 @@
+-   read keystroke
++   keystroke=n
+@@ -998 +990 @@
+-    read keystroke
++    echo "SHOULD NOT HAVE BEEN HERE B" ; exit 1
+@@ -1020 +1011,0 @@
+-      cp /etc/localtime /usr/lib/
+@@ -1040 +1031 @@
+-    read tlsname
++    tlsname="ftp server"
+@@ -1101 +1092 @@
+-    mv -f $base.pem $tls/
++    mv -f $base.pem $D$tls/
+@@ -1134 +1125 @@
+-  read tls
++  echo "SHOULD NOT HAVE BEEN HERE 7" ; exit 1
+@@ -1162 +1153 @@
+-        read tls
++        tls=/etc/glftpd-dsa.pem ; break
+@@ -1287,3 +1278,2 @@
+-    [ ! -d "/etc/xinetd.d" ] && {
+-        mkdir /etc/xinetd.d
+-        echo "includedir /etc/xinetd.d" >> /etc/xinetd.conf
++    [ ! -d "$D/etc/xinetd.d" ] && {
++        mkdir $D/etc/xinetd.d
+@@ -1291 +1281 @@
+-    cat <<EOF > /etc/xinetd.d/$servicename
++    cat <<EOF > $D/etc/xinetd.d/$servicename
+@@ -1324,3 +1313,0 @@
+-{ crontab -l | grep -v "$jaildir$glroot/bin/reset"
+-  echo "0  0 * * *      $jaildir$glroot/bin/reset ${euroweek}${confpath}"
+-} | crontab - > /dev/null

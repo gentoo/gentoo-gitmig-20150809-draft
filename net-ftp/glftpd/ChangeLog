@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/glftpd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.12 2005/02/19 22:53:54 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.13 2006/01/06 02:41:18 vapier Exp $
+
+*glftpd-2.01 (06 Jan 2006)
+
+  06 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/glftpd-2.01-install.patch, +glftpd-2.01.ebuild:
+  Version bump #117958 for Jakub Moc.
 
 *glftpd-2.00 (19 Feb 2005)
 
