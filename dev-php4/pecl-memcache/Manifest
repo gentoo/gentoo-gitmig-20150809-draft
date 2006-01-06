@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e967f47e7c9722c2155c107a72ee466 ChangeLog 804
+MD5 01bd177769b49936525a60f0a7bdfe49 ChangeLog 936
+MD5 7a4ae6237c651bc458cc5dd85224b5e3 files/config-zlib-det-fix.patch 3403
 MD5 2b340edcc01d9e1afddcf52d7cc5cb32 files/digest-pecl-memcache-2.0.0 62
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 aa58895762aded9908a54cb3a6a07f1e pecl-memcache-2.0.0.ebuild 605
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvVLXaGfFFLhbXWkRAvjFAKCRvHUEN7MVLThvg2aJJuiTSwl+PgCfax+Y
-4cZcZbjqRilx4mkUGVSKpmw=
-=3l2X
------END PGP SIGNATURE-----
+MD5 13feb3694290df71485cb907799c1c04 pecl-memcache-2.0.0.ebuild 733
