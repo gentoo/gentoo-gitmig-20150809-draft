@@ -1,0 +1,16 @@
+# ChangeLog for games-strategy/wargus
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.1 2006/01/06 13:49:24 genstef Exp $
+
+*wargus-2.1 (06 Jan 2006)
+
+  06 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/wargus-2.1-ai.patch, +files/wargus-2.1-aitransporter.patch,
+  +files/wargus-2.1-humanbasespell.patch, +metadata.xml, +wargus-2.1.ebuild:
+  New ebuild thanks to Martti Rannanjärvi <mrannanj@iki.fi>, Russell Smith
+  <mr-russ@pws.com.au>, Giacomo Perale <ghepeu@virgilio.it>, Jacob Gemmell
+  <dante333@gci.net>, Mr. Bones. <mr_bones_@gentoo.org>, Hinrik Örn Sigurðsson
+  <flanders@simnet.is>, Chris Gianelloni <wolf31o2@gentoo.org>, Wescott
+  <wescott2003@hotmail.com> and Florian Manschwetus
+  <FlorianManschwetus@gmx.de>
+

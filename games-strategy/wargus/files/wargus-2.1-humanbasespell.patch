@@ -1,0 +1,23 @@
+diff -ur wargusbaseaipatched/wargus-2.1/scripts/human/buttons.lua wargusbasepatched/wargus-2.1/scripts/human/buttons.lua
+--- wargusbaseaipatched/wargus-2.1/scripts/human/buttons.lua	2004-02-11 11:39:08.000000000 +0100
++++ wargusbasepatched/wargus-2.1/scripts/human/buttons.lua	2005-11-25 15:39:39.055416352 +0100
+@@ -169,7 +169,8 @@
+ 
+ DefineButton( { Pos = 7, Level = 0, Icon = "icon-holy-vision",
+   Action = "cast-spell", Value = "spell-holy-vision",
+-  Allowed = "check-upgrade", AllowArg = {"upgrade-holy-vision"},
++--  Allowed = "check-upgrade", AllowArg = {"upgrade-holy-vision"},
++  Allowed = "check-upgrade", AllowArg = {"upgrade-paladin"},
+   Key = "v", Hint = "HOLY ~!VISION",
+   ForUnit = {"unit-paladin", "unit-knight-rider",
+     "unit-man-of-light"} } )
+@@ -197,7 +198,8 @@
+ 
+ DefineButton( { Pos = 4, Level = 0, Icon = "icon-fireball",
+   Action = "cast-spell", Value = "spell-fireball",
+-  Allowed = "check-upgrade", AllowArg = {"upgrade-fireball"},
++--  Allowed = "check-upgrade", AllowArg = {"upgrade-fireball"},
++  Allowed = "check-true",
+   Key = "f", Hint = "~!FIREBALL",
+   ForUnit = {"unit-mage", "unit-white-mage"} } )
+ 

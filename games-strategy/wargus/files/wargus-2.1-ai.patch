@@ -1,0 +1,105 @@
+diff -ur wargusbaseunpatched/wargus-2.1/scripts/ai/campaign.lua wargusbaseaipatched/wargus-2.1/scripts/ai/campaign.lua
+--- wargusbaseunpatched/wargus-2.1/scripts/ai/campaign.lua	2004-04-30 01:40:38.000000000 +0200
++++ wargusbaseaipatched/wargus-2.1/scripts/ai/campaign.lua	2005-09-23 16:25:05.000000000 +0200
+@@ -26,7 +26,7 @@
+ --      along with this program; if not, write to the Free Software
+ --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ --
+---      $Id: wargus-2.1-ai.patch,v 1.1 2006/01/06 13:49:24 genstef Exp $
++--      $Id: wargus-2.1-ai.patch,v 1.1 2006/01/06 13:49:24 genstef Exp $
+ 
+ --=============================================================================
+ --  This AI script builds only workers and tankers and oil platform.
+@@ -92,10 +92,12 @@
+     function() return AiSet(AiTanker(), 1) end,
+     function() return AiWait(AiWorker()) end,
+     function() return AiNeed(AiPlatform()) end,
+-    function() return AiForce(0, {AiDestroyer(), 2, AiSoldier(), 3, AiShooter(), 4, AiTransporter(), 4}) end,
+-    function() return AiForce(1, {AiDestroyer(), 2, AiSoldier(), 3, AiShooter(), 4, AiTransporter(), 4}) end,
++	function() return AiSet(AiTransport(), 4) end,
++    function() return AiForce(0, {AiDestroyer(), 2, AiSoldier(), 3, AiShooter(), 4}) end,
++    function() return AiForce(1, {AiDestroyer(), 2, AiSoldier(), 3, AiShooter(), 4}) end,
+     function() return AiSleep(27000) end,
+-    function() return AiForce(1, {AiDestroyer(), 4, AiSoldier(), 10, AiShooter(), 8, AiTransporter(), 6}) end,
++	function() return AiSet(AiTransport(), 6) end,
++    function() return AiForce(1, {AiDestroyer(), 4, AiSoldier(), 10, AiShooter(), 8}) end,
+     function() return AiSleep(22000) end,
+     function() return AiSleep(22000) end,
+     function() return AiSleep(18000) end,
+@@ -166,12 +168,14 @@
+     function() return AiSet(AiTransporter(), 1) end,
+     function() return AiWait(AiWorker()) end,
+     function() return AiNeed(AiPlatform()) end,
+-    function() return AiForce(0, {AiDestroyer(), 3, AiSoldier(), 4, AiShooter(), 3, AiTransporter(), 2}) end,
++    function() return AiForce(0, {AiDestroyer(), 3, AiSoldier(), 4, AiShooter(), 3}) end,
++	function() return AiSet(AiTransporter(), 3) end,
+     function() return AiSleep(3000) end,
+     function() return AiSleep(4000) end,
+     function() return AiSleep(4000) end,
+     function() return AiSleep(12000) end,
+-    function() return AiForce(0, {AiDestroyer(), 4, AiSoldier(), 12, AiShooter(), 4, AiTransporter(), 4}) end,
++    function() return AiForce(0, {AiDestroyer(), 4, AiSoldier(), 12, AiShooter(), 4}) end,
++	function() return AiSet(AiTransporter(), 7) end,
+     function() return AiSleep(14000) end,
+     function() return AiSleep(12000) end,
+     function() return AiLoop(hum_05_loop_funcs, hum_05_loop_pos) end,
+@@ -254,7 +258,7 @@
+ local hum_08_loop_funcs = {
+     function() print("Looping !") return false end,
+     function() return AiSleep(16000) end,
+-    function() return AiForce(0, {AiSoldier(), 1, AiShooter(), 4, AiCavalry(), 3, AiCatapult, 1}) end,
++    function() return AiForce(0, {AiSoldier(), 1, AiShooter(), 4, AiCavalry(), 3, AiCatapult(), 1}) end,
+     function() return AiSleep(14000) end,
+     function() return AiSleep(12000) end,
+     function() hum_08_loop_pos[player] = 0; return false end,
+@@ -270,12 +274,12 @@
+     function() return AiSleep(10000) end,
+     function() return AiSleep(15000) end,
+     function() return AiResearch(AiUpgradeCavalryMage()) end,
+-    function() return AiResearch(AiCavalryMageSpell1) end,
+-    function() return AiResearch(AiUpgradeMissile1) end,
++    function() return AiResearch(AiCavalryMageSpell1()) end,
++    function() return AiResearch(AiUpgradeMissile1()) end,
+     function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 5, AiCavalry(), 4, AiCatapult(), 1}) end,
+     function() return AiSleep(15000) end,
+-    function() return AiResearch(AiUpgradeWeapon1) end,
+-    function() return AiResearch(AiUpgradeArmor1) end,
++    function() return AiResearch(AiUpgradeWeapon1()) end,
++    function() return AiResearch(AiUpgradeArmor1()) end,
+     function() return AiSleep(21000) end,
+     function() return AiResearch(AiUpgradeEliteShooter()) end,
+     function() return AiSleep(12000) end,
+@@ -314,7 +318,8 @@
+     function() print("Looping !") return false end,
+     function() return AiSleep(5000) end,
+     function() return AiForce(0, {AiSoldier(), 4, AiShooter(), 4, AiCavalry(), 4,
+-	    AiCatapult(), 1, AiTransporter(), 1}) end,
++	    AiCatapult(), 1}) end,
++	function() return AiSet(AiTransporter(), 1) end,
+     function() return AiSleep(6000) end,
+     function() return AiForce(0, {AiDestroyer(), 3, AiBattleship(), 1}) end,
+     function() return AiSleep(5000) end,
+@@ -333,18 +338,19 @@
+     function() return AiWait(AiWorker()) end,
+ 
+     function() return AiSet(AiTransporter(), 1) end,
+-    function() return AiForce(0, {AiDestroyer(), 2, AiTransporter(), 1}) end,
++    function() return AiForce(0, {AiDestroyer(), 2}) end,
+     function() return AiSleep(6000) end,
+     function() return AiForce(0, {AiSoldier(), 4, AiShooter(), 4,
+-	    AiDestroyer(), 2, AiTransporter(), 1}) end,
++	    AiDestroyer(), 2}) end,
+ 
+     function() return AiResearch(AiUpgradeCavalryMage()) end,
+     function() return AiResearch(AiCavalryMageSpell1()) end,
+     function() return AiResearch(AiMageSpell1()) end,
+     function() return AiResearch(AiMageSpell2()) end,
+     function() return AiResearch(AiUpgradeMissile1()) end,
+-
+-    function() return AiForce(0, {AiSoldier(), 4, AiShooter(), 4, AiTransporter(), 1, AiDestroyer(), 2}) end,
++ 
++    function() return AiSet(AiTransporter(), 2) end,
++    function() return AiForce(0, {AiSoldier(), 4, AiShooter(), 4, AiDestroyer(), 2}) end,
+     function() return AiResearch(AiUpgradeWeapon1()) end,
+     function() return AiSleep(4000) end,
+     function() return AiResearch(AiUpgradeArmor1()) end,
