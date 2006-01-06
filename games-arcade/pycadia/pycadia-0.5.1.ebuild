@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/pycadia-0.5.1.ebuild,v 1.7 2005/08/05 19:18:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/pycadia-0.5.1.ebuild,v 1.8 2006/01/06 00:11:23 compnerd Exp $
 
 inherit games
 
@@ -20,9 +20,11 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	# bug #101464
-	if ! built_with_use dev-python/pygtk gnome ; then
-		einfo "${PN} needs gnome support in dev-python/pygtk"
-		die "Please emerge dev-python/pygtk with USE=gnome"
+	if has_version '<dev-python/pygtk-2.8.0-r2' ; then
+		if ! built_with_use dev-python/pygtk gnome ; then
+			einfo "${PN} needs gnome support in dev-python/pygtk"
+			die "Please emerge dev-python/pygtk with USE=gnome"
+		fi
 	fi
 	games_pkg_setup
 }
