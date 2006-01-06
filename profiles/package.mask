@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4833 2006/01/05 22:58:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4834 2006/01/06 06:17:34 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1483,14 +1483,15 @@ games-fps/aaut
 # multiple vulnerabilities discovered in zebra.
 net-misc/zebra
 
-# <axxo@gentoo.org>
-# Lotsa things in the tree don't compile with 1.5 yet
-# 1.5 defaults too -target 1.5 making downgrading to a 1.4(/1.3)
-# impossible, see bug #69970 and bug 65937 for more information/discussion
-# http://www.gentoo-wiki.com/Java_FAQ
+# <nichoj@gentoo.org>
+# Many things in the tree don't compile with 1.5 yet.
+# 1.5 defaults to -target 1.5, which makes downgrading to a 1.4/1.3
+# impossible. See bug #69970 and bug 65937 for more information.
+# http://www.gentoo.org/proj/en/java/tiger-faq.xml
 >=dev-java/sun-jdk-1.4.99
 =dev-java/jrockit-jdk-bin-1.5*
 >=dev-java/java-sdk-docs-1.4.99
+>=dev-java/ibm-jdk-bin-1.5
 
 # <taviso@gentoo.org> (06 Jan 2004)
 # alpha branch of gnupg.
@@ -1564,7 +1565,3 @@ app-text/sgml2x
 # Pre-removal masking
 # <vivo@gentoo.org> (18 Aug 2005)
 dev-db/mysqltool
-
-# <sejo@gentoo.org> (21 November 2005)
-# ibm-jdk-bin beta should be masked untill descent testing
-=dev-java/ibm-jdk-bin-1.5_beta1
