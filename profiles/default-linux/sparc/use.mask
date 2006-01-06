@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.52 2005/12/18 18:37:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.53 2006/01/06 13:06:22 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
 3dfx
 acpi
 afs
+amd
 apm
 cle266
 cmucl
@@ -54,6 +55,7 @@ ppc
 ppc64
 ppc-macos
 s390
+sh
 sparc
 x86
 x86-obsd
