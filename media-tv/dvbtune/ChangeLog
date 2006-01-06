@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/dvbtune
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbtune/ChangeLog,v 1.1 2006/01/06 12:14:26 zzam Exp $
+
+*dvbtune-0.5 (06 Jan 2006)
+
+  06 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvbtune-0.5-gentoo.diff, +metadata.xml, +dvbtune-0.5.ebuild:
+  Initial import of ebuild, thanks to Ben De luca <bedel@allmail.net>, Bug #48741
+
