@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.1a.ebuild,v 1.3 2006/01/05 22:08:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.1a.ebuild,v 1.4 2006/01/06 20:04:04 carlo Exp $
 
 inherit kde
 
@@ -30,6 +30,11 @@ pkg_setup() {
 		ewarn "Neither mplayer nor xine use flag is set. Either one is needed."
 		ewarn "You can install mplayer later, though.\n"
 	fi
+}
+
+src_install() {
+	kde_src_install
+	mv ${D}/usr/share/mimelnk/application/x-mplayer2.desktop ${D}/usr/share/mimelnk/application/x-mplayer3.desktop
 }
 
 src_compile(){
