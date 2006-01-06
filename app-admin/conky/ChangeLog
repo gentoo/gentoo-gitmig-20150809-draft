@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.17 2006/01/05 23:05:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.18 2006/01/06 20:31:59 corsair Exp $
+
+  06 Jan 2006; Markus Rothe <corsair@gentoo.org> conky-1.3.5.ebuild:
+  Added ~ppc64
 
 *conky-1.3.5 (05 Jan 2006)
 

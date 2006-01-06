@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ab9fe7873d3828a4390fde9dc22dfd3 ChangeLog 3203
+MD5 9b5dc52454c96bac31235b2b81c06a09 ChangeLog 3284
 MD5 7cf736bd0931fa89a032b455112ce1de conky-1.3.1.ebuild 1916
 MD5 fe8b738545f4869bfcbfac38df47ee52 conky-1.3.3.ebuild 1851
 MD5 910eeed20139a5579848512bc6b0530f conky-1.3.4-r1.ebuild 2374
 MD5 daec6353bf84e62c4edd4d82d00cd350 conky-1.3.4-r2.ebuild 2662
-MD5 c7426c1444f5ddbc53f7bd909566e9c0 conky-1.3.5.ebuild 2307
+MD5 1fb8ed3829e3a05007be9048e75b8922 conky-1.3.5.ebuild 2310
 MD5 d9296cc5c3fc007026e784f5825b153e files/conky-1.3.4-arraybounds.patch 1560
 MD5 3f930afeab86d38688b8c7fe8a610bc7 files/conky-1.3.4-miscbug.patch 2591
 MD5 31acfc146c31ba015fb9b8643deb2d57 files/digest-conky-1.3.1 64
@@ -15,10 +12,3 @@ MD5 c5c1fb804afb4bd1255b602c8894a317 files/digest-conky-1.3.4-r1 64
 MD5 c5c1fb804afb4bd1255b602c8894a317 files/digest-conky-1.3.4-r2 64
 MD5 2441f16c8370649ea372b69c895f0bd1 files/digest-conky-1.3.5 64
 MD5 32bd4230c3ee12a8d5502d4bd57a9a3d metadata.xml 588
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvavBmdTrptrqvGERAhyyAJ92B/o45g0M4hZMixYG24gFH+LWzgCfdZPy
-jPCJNrOLvDyJ3dAOl3MLazs=
-=v4V2
------END PGP SIGNATURE-----
