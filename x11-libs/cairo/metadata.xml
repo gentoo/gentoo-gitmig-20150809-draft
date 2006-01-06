@@ -10,4 +10,8 @@
   <email>twp@gentoo.org</email>
   <name>Tom Payne</name>
 </maintainer>
+<maintainer>
+  <email>cardoe@gentoo.org</email>
+  <name>Doug Goldstein</name>
+</maintainer>
 </pkgmetadata>
