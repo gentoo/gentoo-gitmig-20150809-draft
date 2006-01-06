@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.25 2006/01/04 18:08:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.26 2006/01/06 14:13:11 gustavoz Exp $
+
+  06 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> bmpx-0.12.9-r1.ebuild,
+  bmpx-0.12.9-r2.ebuild:
+  Given ~sparc keyword wrt #117873
 
 *bmpx-0.12.9-r2 (04 Jan 2006)
 

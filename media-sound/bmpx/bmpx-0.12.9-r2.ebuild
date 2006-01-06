@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r2.ebuild,v 1.1 2006/01/04 18:08:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.12.9-r2.ebuild,v 1.2 2006/01/06 14:13:11 gustavoz Exp $
 
 inherit gnome2 autotools eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.bz2
 	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="a52 dbus debug flac irssi mad ogg perl python theora vorbis xchat xine"
 
 RDEPEND=">=dev-libs/glib-2.8.0
