@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317.ebuild,v 1.1 2006/01/04 18:57:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317.ebuild,v 1.2 2006/01/06 18:45:43 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -26,9 +26,19 @@ DEPEND="${RDEPEND} virtual/os-headers
 # vmware-player should not use virtual/libc as this is a 
 # precompiled binary package thats linked to glibc.
 RDEPEND="sys-libs/glibc
-	amd64? ( app-emulation/emul-linux-x86-xlibs )
-	virtual/x11
+	amd64? (
+		app-emulation/emul-linux-x86-gtklibs )
+	x86? (
+		|| (
+			(
+				x11-libs/libXrandr
+				x11-libs/libXcursor
+				x11-libs/libXinerama
+				x11-libs/libXi )
+			virtual/x11 )
+		virtual/xft )
 	>=dev-lang/perl-5
+	!app-emulation/vmware-workstation
 	sys-apps/pciutils"
 
 dir=/opt/vmware/player

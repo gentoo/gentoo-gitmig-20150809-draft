@@ -1,4 +1,4 @@
-MD5 73f49068988c34f3ed947576a00767be ChangeLog 1731
+MD5 ee76e057eec1966cd18011f983567e52 ChangeLog 1878
 MD5 40cfaf639df38a7cb04073555992d31e files/90vmware-player 91
 MD5 ba3e0dad9be33beb665d01e171c6df82 files/digest-vmware-player-1.0.1.19317 79
 MD5 23d97e5e436a0d827b48db3ed9948aa7 files/vmware-player-1.0.1.19317-config.patch 1131
@@ -6,4 +6,4 @@ MD5 3df74f4dfaa783b6a2f9eba3f0030afa files/vmware-player-1.0.1.19317-config2.pat
 MD5 10665536157729f47cf5417aa951316a files/vmware.rc 1412
 MD5 aa1b576735134579f04b29763901dc4f files/vmware.xml 1592
 MD5 7cc95faad4185e8ed375248bc73a17fc metadata.xml 159
-MD5 cd0a2cf2e7654f16fd4850de60e495ab vmware-player-1.0.1.19317.ebuild 7351
+MD5 9b501b287c1e81aa3a0eca3d58119868 vmware-player-1.0.1.19317.ebuild 7523
