@@ -1,8 +1,7 @@
 app-arch/bzip2
-app-arch/gzip
 app-arch/tar
-app-editors/nano
 app-shells/bash
+dev-lang/perl
 dev-lang/python
 dev-python/python-selinux
 net-misc/rsync
@@ -27,7 +26,11 @@ sys-devel/bison
 sys-devel/flex
 sys-devel/gcc
 sys-devel/gettext
+sys-devel/gnuconfig
 sys-devel/make
 sys-devel/patch
 sys-libs/glibc
 sys-libs/libselinux
+virtual/editor
+virtual/gzip
+virtual/os-headers
