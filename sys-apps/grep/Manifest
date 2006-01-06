@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ac7d63e72d70421fb52eb15fab329812 ChangeLog 8776
+MD5 49a6f1fca06e8de6f80dc0194f6084fe ChangeLog 8657
 MD5 792f6cb13959979de2b10537067603bb files/2.5.1-manpage-line-buffering.patch 477
 MD5 41f77ef6693dc91a37b5ec51ce5a3e2d files/2.5.1-manpage.patch 283
 MD5 16d6cd54c93041d4f4bef59a9e327d04 files/2.5.1-tests.patch 1786
@@ -17,12 +17,12 @@ MD5 f108b43aae8b2abc6326efa8ab44e8dd files/grep-2.5.1-oi.patch 1695
 MD5 b6da5288895ddd97074deb10f48b4364 files/grep-2.5.1-perl-segv.patch 410
 MD5 1eee743f3bf8a7926c07f9a0307a6b64 files/grep-2.5.1-restrict_arr.patch 410
 MD5 c8c3f59f3fd000c41915a97ab0a5f2c5 grep-2.5.1-r8.ebuild 1884
-MD5 96bc58b5afec7673f1245ed4bf8f2ed1 grep-2.5.1-r9.ebuild 2223
+MD5 9f4506b314db51cebdd4eb95f02710ea grep-2.5.1-r9.ebuild 2146
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvLeW2+ySkm8kpY0RApT7AKCBoUiMBGWf92vMAAcNL3jRforFXQCgoA8A
-Odns8djNEPyxhMiURLJ0tJ4=
-=+oQs
+iD8DBQFDvcNc2+ySkm8kpY0RAjtFAJ9EYhucR4vOVr2rDWUvCDbqOuFSKQCfS8qf
+hI+MFfeHHGi6nv8zYtrtBNk=
+=OP+m
 -----END PGP SIGNATURE-----
