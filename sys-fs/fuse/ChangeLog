@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.35 2005/12/04 00:06:31 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.36 2006/01/07 21:11:10 genstef Exp $
+
+  07 Jan 2006; Stefan Schweizer <genstef@gentoo.org> -fuse-2.3.0.ebuild,
+  -fuse-2.4.0.ebuild, -fuse-2.4.1.ebuild, fuse-2.4.1-r1.ebuild,
+  fuse-2.4.2.ebuild:
+  remove old ebuilds, remove build-on-demand support, bug 117834
 
 *fuse-2.4.2 (04 Dec 2005)
 
