@@ -34,3 +34,5 @@ move dev-php/phing dev-php5/phing
 move dev-php/PEAR-PHPUnit2 dev-php5/PEAR-PHPUnit2
 move dev-php/agavi dev-php5/agavi
 move app-text/ghostscript app-text/ghostscript-esp
+move dev-php/PEAR-XML_CSSML dev-php4/PEAR-XML_CSSML
+move dev-php/PEAR-XML_XPath dev-php4/PEAR-XML_XPath
