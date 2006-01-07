@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/eq-xmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.13 2006/01/06 05:39:18 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.14 2006/01/07 03:14:54 voxus Exp $
+
+  07 Jan 2006; Konstantin Arkhipov <voxus@gentoo.org> eq-xmms-0.6-r3.ebuild,
+  eq-xmms-0.6-r4.ebuild:
+  Desired automake for -r3 is 1.7, amd64 keyword dropped from -r4 due to
+  strange sound corruptions.
 
 *eq-xmms-0.6-r4 (06 Jan 2006)
 

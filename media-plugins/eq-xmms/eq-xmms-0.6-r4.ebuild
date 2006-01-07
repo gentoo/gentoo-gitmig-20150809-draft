@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r4.ebuild,v 1.1 2006/01/06 05:39:18 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r4.ebuild,v 1.2 2006/01/07 03:14:54 voxus Exp $
 
 IUSE="sse-filters"
 
@@ -13,7 +13,7 @@ http://dev.gentoo.org/~voxus/equ/eq-xmms-0.6-cvs-20051113.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~x86 -amd64 ~sparc ~ppc"
 
 RDEPEND="media-sound/xmms"
 DEPEND="${RDEPEND}
@@ -49,5 +49,4 @@ src_install() {
 	make DESTDIR="${D}" libdir=`xmms-config --effect-plugin-dir` install || die
 
 	dodoc AUTHORS BUGS ChangeLog NEWS README README.BSD SKINS TODO
-
 }

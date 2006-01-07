@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r3.ebuild,v 1.2 2005/09/04 10:23:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r3.ebuild,v 1.3 2006/01/07 03:14:54 voxus Exp $
 
 IUSE="sse-filters"
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 		use x86 || epatch ${FILESDIR}/${P}-nonx86.patch
 
-		export WANT_AUTOMAKE="1.6"
+		export WANT_AUTOMAKE="1.7"
 		export WANT_AUTOCONF="2.5"
 		eautoreconf
 
