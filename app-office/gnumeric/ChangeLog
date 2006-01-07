@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnumeric
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.121 2005/11/01 16:20:57 yoswink Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.122 2006/01/07 07:27:32 joem Exp $
+
+*gnumeric-1.6.1 (07 Jan 2006)
+
+  07 Jan 2006; Joe McCann <joem@gentoo.org> +gnumeric-1.6.1.ebuild:
+  new version
 
   01 Nov 2005; Jose Luis Rivero <yoswink@gentoo.org> gnumeric-1.6.0.ebuild:
   Added ~alpha keyword wrt bug #110767
