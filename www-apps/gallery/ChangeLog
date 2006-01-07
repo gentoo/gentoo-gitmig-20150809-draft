@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.44 2006/01/06 14:03:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.45 2006/01/07 15:46:45 rl03 Exp $
+
+*gallery-2.0.2-r1 (07 Jan 2006)
+
+  07 Jan 2006; Renat Lumpau <rl03@gentoo.org>
+  +files/FfmpegToolkit.class.patch, +gallery-2.0.2-r1.ebuild:
+  Fixes for bug #118162.
 
   06 Jan 2006; Simon Stelling <blubb@gentoo.org> gallery-1.5.1.ebuild,
   gallery-2.0.2.ebuild:
