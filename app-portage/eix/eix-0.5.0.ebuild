@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.0.ebuild,v 1.1 2005/11/30 10:09:45 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.0.ebuild,v 1.2 2006/01/07 06:24:14 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -14,6 +14,13 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	
+	epatch ${FILESDIR}/eix-0.5.0-redir-fix.patch
+}
 
 src_compile() {
 	econf
