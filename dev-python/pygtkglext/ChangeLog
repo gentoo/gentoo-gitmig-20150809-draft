@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.13 2005/06/09 12:48:16 seemant Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.14 2006/01/07 07:14:10 spyderous Exp $
+
+  07 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  pygtkglext-1.0.1.ebuild:
+  Modular X fix: No need for hard dep on virtual/x11, comes in through others.
 
   09 Jun 2005; Seemant Kulleen <seemant@gentoo.org> pygtkglext-1.0.1.ebuild:
   mask for testing on amd64 -- using it here
