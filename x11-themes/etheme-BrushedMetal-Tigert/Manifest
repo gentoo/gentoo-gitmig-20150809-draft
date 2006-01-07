@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fd81e84af84a066dfeeddee2155f072 ChangeLog 1146
 MD5 fd63d46d5a9804182ddb94df5a2d7186 etheme-BrushedMetal-Tigert-0.16.7.1.ebuild 820
 MD5 31a8900984fba6c09b8ca27305643446 files/digest-etheme-BrushedMetal-Tigert-0.16.7.1 102
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDv1S/2+ySkm8kpY0RAnASAJ4kFiBIzEI/ddmeATdADADpmkCs+gCeIm29
+VPuKcv3h6K7D4B+o+OFWPmM=
+=5IRF
+-----END PGP SIGNATURE-----
