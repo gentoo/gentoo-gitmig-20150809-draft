@@ -1,0 +1,10 @@
+--- gtkam.desktop	2006-01-02 20:14:08.000000000 -0600
++++ gtkam.desktop	2006-01-02 20:14:21.000000000 -0600
+@@ -1,6 +1,7 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Name=gtkam
++Image=gtkam.png
+ Comment=Transfer pictures from your digital camera
+ Exec=gtkam
+ StartupNotify=true
