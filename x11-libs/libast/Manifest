@@ -9,14 +9,14 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libast-9999 0
 MD5 e050b956ec4efca8d3dab20f609ba5c1 files/libast-0.6.1-config-warning.patch 6797
 MD5 177b67afc64c8e52522833c7ce007ab5 files/libast-64bit.patch 295
 MD5 11b1f2e66569782863ba4ab5e8660df1 libast-0.5-r2.ebuild 865
-MD5 e5cbce1bf7c1ba6529f62bb87ee80c94 libast-0.6.1-r1.ebuild 1044
-MD5 f273f8360749863678a12164e2783887 libast-0.6.1.ebuild 846
+MD5 44c5a6b967f1259df4f297d7f1813368 libast-0.6.1-r1.ebuild 1048
+MD5 4817e8c873a7ae52fbc5794e708a6f7d libast-0.6.1.ebuild 849
 MD5 cdf153f9f63c593807adda0e8513e79c libast-9999.ebuild 1100
 MD5 ec45fec065a8eccc43870fc678126de7 metadata.xml 820
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDie9NgIKl8Uu19MoRAoDmAJ0Uyoqg8u6T28cOH3PP7HxfwmGAogCfQivJ
-yRdbMt/qX9i8UnPAcWGWJnc=
-=KuUC
+iD8DBQFDv3Zr2+ySkm8kpY0RAthiAKDCkrwgoYUGuAU48f6/+kSP2ZeJLgCfRelw
+KRw/6i9Xo9bQTM/iDZYnJF4=
+=Es2x
 -----END PGP SIGNATURE-----
