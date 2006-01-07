@@ -1,0 +1,12 @@
+--- lilo-22.7.ORIG/lilo.c	2005-05-02 01:52:16.000000000 +0100
++++ lilo-22.7/lilo.c	2005-05-02 01:53:50.000000000 +0100
+@@ -381,7 +381,8 @@
+     fprintf(errstd,"%7s%s -T help \t\t\tlist additional options\n", "", name);
+     fprintf(errstd,"%7s%s -X\t\t\t\tinternal compile-time options\n", "", name);
+ #endif /* !__MSDOS__ */
+-    fprintf(errstd,"%7s%s -V [ -v ]\t\t\tversion information\n\n","",name);
++    fprintf(errstd,"%7s%s -V\t\t\t\tversion information\n","",name);
++    fprintf(errstd,"%7s%s -v\t\t\t\tverbose mode\n\n","",name);
+     exit(1);
+ }
+ 

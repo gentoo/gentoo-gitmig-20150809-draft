@@ -1,0 +1,34 @@
+diff -u lilo-22.6.1/first.S lilo-22.6.1.novga/first.S
+--- lilo-22.6.1/first.S	2004-08-31 12:39:25.000000000 -0700
++++ lilo-22.6.1.novga/first.S	2004-12-06 14:47:22.000000000 -0800
+@@ -522,7 +522,8 @@
+ ; display - write byte in AL to console
+ ;	preserves all register contents
+ ; 
+-display: pusha		! make sure no register is changed
++display: ret
++	pusha		! make sure no register is changed
+ 	mov	bx,#7		!  BH=0, BL=07
+ 	mov	ah,#14
+ 	int	0x10
+diff -u lilo-22.6.1/second.S lilo-22.6.1.novga/second.S
+--- lilo-22.6.1/second.S	2004-11-15 18:59:35.000000000 -0800
++++ lilo-22.6.1.novga/second.S	2004-12-06 14:49:03.000000000 -0800
+@@ -2155,7 +2155,7 @@
+ 
+ ! Display one character on the console
+ 
+-display:
++display: 
+ 	push	bx		! save BX
+ 
+ #ifndef LCF_NOSERIAL
+@@ -2219,7 +2219,7 @@
+ ;;;	xor	bh,bh		! display on screen
+ 	mov	bx,#7		! set color for TEXT interface
+ 	mov	ah,#14
+-	int	0x10
++;;	int	0x10
+ dispret:
+ 	pop	bx		! restore BX
+ 	ret

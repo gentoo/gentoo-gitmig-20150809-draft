@@ -1,19 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a59aa0e77998ee48803e27ecfca52639 ChangeLog 4182
+MD5 c14c9bcf11f389b83a75a009e5761e74 ChangeLog 4622
 MD5 3caa133b51ca935f818fd53102b0b62a files/digest-lilo-22.7 126
+MD5 48aaff9d39ecccfc2f6df94bf33f0fb6 files/digest-lilo-22.7.1 128
 MD5 de6a5065fca97cf5df35c8bc9bebfafc files/lilo-22.7-correct-usage-info.patch 557
 MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.7-create-install-dirs.patch 970
 MD5 c3e5c4bfabecddb7a57c3cdce9e21c3a files/lilo-22.7-devmapper_gentoo.patch 12072
 MD5 78f9720430dac90363e7b5120a262a3a files/lilo-22.7-novga.patch 936
+MD5 de6a5065fca97cf5df35c8bc9bebfafc files/lilo-22.7.1-correct-usage-info.patch 557
+MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.7.1-create-install-dirs.patch 970
+MD5 c3e5c4bfabecddb7a57c3cdce9e21c3a files/lilo-22.7.1-devmapper_gentoo.patch 12072
+MD5 73796418d202ed39a04f9adbd5ccc12a files/lilo-22.7.1-manpath.patch 444
+MD5 78f9720430dac90363e7b5120a262a3a files/lilo-22.7.1-novga.patch 936
 MD5 5f2172291cc1252b30f5a60981a51ac4 files/lilo.conf 1722
-MD5 43cd08add6c1a0b1a892c76483e20c25 lilo-22.7.ebuild 5113
+MD5 5be5e8c421a4a0540b2deb0dd4fe0e01 lilo-22.7.1.ebuild 4884
+MD5 adfb9ae3ac599e8d6bc0ad95a0217b8e lilo-22.7.ebuild 5133
 MD5 eeee4743c4e463eeed3a7a4c15380e0d metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvcN8mOfEJZHYOKcRAp+tAJ4uL+fXvCyrzb2/TuFTd/aIb3xJWQCePtWV
-RjSq6Nm7DuNGf9D1wlyThEE=
-=zbOH
+iD8DBQFDv8Vpp5vW4rUFj5oRAnCVAKCzwuZhPkw+8yz3YVYzpLWA3JYzxgCfXf7N
+65ZDuxLtrq/Wn0Ey9LK16vQ=
+=JRgY
 -----END PGP SIGNATURE-----

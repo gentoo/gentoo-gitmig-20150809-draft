@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.ebuild,v 1.5 2006/01/07 13:42:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.1.ebuild,v 1.1 2006/01/07 13:42:35 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~x86 ~amd64"
 
 RDEPEND="devmap? ( >=sys-fs/device-mapper-1.00.08 )"
 DEPEND="${RDEPEND}
@@ -33,15 +33,9 @@ src_unpack() {
 
 	unpack ${MY_P}.tar.gz
 
-	# Do not try and build the dos crap.
+	# Do not build with DOS support
 	sed -i -e 's|^all:.*$|all: lilo|' ${S}/Makefile
-
-	# The bootlogo patch from SuSE linux, which was originally in
-	# here, has been dropped because it's no longer compatible
-	# with lilo since the 22.5.x series.
-	# Quequero has done a good attempt to port the patch in bug
-	# #19397, but unfortunately that breaks the timeout at boot.
-	# If you can overcome these problems, a patch is very welcome.
+	sed -i -e 's|DOS_DIR=/dosC/boot||' ${S}/Makefile
 
 	if use devmap; then
 		# devmapper-patch (boot on evms/lvm2)
@@ -54,14 +48,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-create-install-dirs.patch
 	# Correctly document commandline options -v and -V, bug #43554
 	epatch ${FILESDIR}/${P}-correct-usage-info.patch
+	# Install manpages to correct location, do not rely on incorrect manpath output, bug #117135
+	epatch ${FILESDIR}/${P}-manpath.patch
 
 	# this patch is needed when booting PXE and the device you're using 
 	# emulates vga console via serial console.
 	# IE..  B.B.o.o.o.o.t.t.i.i.n.n.g.g....l.l.i.i.n.n.u.u.x.x and stair stepping.
 	use pxeserial && epatch ${FILESDIR}/${P}-novga.patch
-
-	# Get the manpage path right
-	sed -i -e s,usr/man,usr/share/man,g ${S}/Makefile
 
 	unpack ${DOLILO_TAR}
 }
