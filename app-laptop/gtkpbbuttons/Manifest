@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e48909b151b3e64545b12aa7018ab777 ChangeLog 3352
+MD5 dfc0a3809cad88d757f001d36d121399 ChangeLog 3514
 MD5 d8b070f83a11778fd7411f805515f366 files/digest-gtkpbbuttons-0.6.8 67
 MD5 d8b070f83a11778fd7411f805515f366 files/digest-gtkpbbuttons-0.6.8-r1 67
-MD5 7496849ae68f3b814d2dcc3b1fe9f37b gtkpbbuttons-0.6.8-r1.ebuild 762
+MD5 ff7b4ac8fdecd8c27ccdbd0a5e03ff89 gtkpbbuttons-0.6.8-r1.ebuild 811
 MD5 0d414c0af85591f3ba26bcfe4c5733ec gtkpbbuttons-0.6.8.ebuild 688
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDu18qCRZPokWLroQRAqgfAJdzCKZdbwUfOThrgid5J8SNGKL6AJ41UHIU
-5GP1oQtZwsX/JBUMRPKwoA==
-=5qJd
------END PGP SIGNATURE-----

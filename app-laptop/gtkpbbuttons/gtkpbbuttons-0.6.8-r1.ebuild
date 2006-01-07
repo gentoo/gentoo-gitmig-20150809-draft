@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/gtkpbbuttons-0.6.8-r1.ebuild,v 1.2 2006/01/04 05:37:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/gtkpbbuttons-0.6.8-r1.ebuild,v 1.3 2006/01/07 05:23:49 lu_zero Exp $
 
 inherit eutils
 
@@ -20,7 +20,9 @@ DEPEND=">=x11-libs/gtk+-2.0
 	gnome? ( gnome-base/libgnomeui )"
 
 src_compile() {
-	econf $(use_with gnome) || die "Configuration failed"
+	myconf=""
+	use gnome && myconf="${myconf} --with-gnome"
+	econf ${myconf} || die "Configuration failed"
 	make || die "Compile failed"
 }
 

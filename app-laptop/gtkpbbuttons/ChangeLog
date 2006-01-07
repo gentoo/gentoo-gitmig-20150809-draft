@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/gtkpbbuttons
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/ChangeLog,v 1.15 2006/01/04 05:37:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/ChangeLog,v 1.16 2006/01/07 05:23:49 lu_zero Exp $
+
+  07 Jan 2006; Luca Barbato <lu_zero@gentoo.org>
+  gtkpbbuttons-0.6.8-r1.ebuild:
+  Fix gnome support as pointed in bug #117773 by Alberto Zennaro <morph@ngi.it>
 
   04 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   gtkpbbuttons-0.6.8-r1.ebuild:
