@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.4.ebuild,v 1.13 2005/12/27 12:19:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.4.ebuild,v 1.14 2006/01/07 03:29:35 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="doc qt tetex unicode"
 
 RDEPEND="media-gfx/graphviz
@@ -22,21 +22,21 @@ DEPEND=">=sys-apps/sed-4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# use CFLAGS and CXXFLAGS (on linux and ppc-macos)
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/{linux-g++,macosx-c++}/tmake.conf
 
-	epatch ${FILESDIR}/doxygen-1.4.3-cp1251.patch
-	epatch ${FILESDIR}/${P}-darwin.patch
+	epatch "${FILESDIR}"/doxygen-1.4.3-cp1251.patch
+	epatch "${FILESDIR}"/${P}-darwin.patch
 
 	if use unicode; then
-		epatch ${FILESDIR}/${PN}-utf8-ru.patch.gz || die "utf8-ru patch failed"
+		epatch "${FILESDIR}"/${PN}-utf8-ru.patch.gz || die "utf8-ru patch failed"
 	fi
 
 	if [ $(gcc-major-version) -eq 4 ] ; then
-		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+		epatch "${FILESDIR}"/${PN}-gcc4.patch || die "gcc4 patch failed"
 	fi
 }
 
@@ -72,10 +72,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} MAN1DIR=share/man/man1 \
+	make DESTDIR="${D}" MAN1DIR=share/man/man1 \
 		install || die '"make install" failed.'
 
-	dodoc INSTALL LANGUAGE.HOWTO LICENSE README VERSION
+	dodoc INSTALL LANGUAGE.HOWTO README VERSION
 
 	# pdf and html manuals
 	if use doc; then
