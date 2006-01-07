@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.2 2005/04/07 12:31:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.3 2006/01/07 17:58:26 iluxa Exp $
 
 DESCRIPTION="C++ Socket Library"
 HOMEPAGE="http://www.linuxhacker.at/socketxx/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.linuxhacker.at/linux/downloads/src/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug doc"
 
 DEPEND="sys-devel/automake
