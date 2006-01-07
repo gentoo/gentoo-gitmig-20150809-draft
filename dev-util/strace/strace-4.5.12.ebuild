@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.6 2006/01/06 01:05:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.7 2006/01/07 01:10:30 vapier Exp $
 
 inherit flag-o-matic
 
@@ -29,6 +29,7 @@ src_unpack() {
 
 	# Fix building on older ARM machines
 	epatch "${FILESDIR}"/strace-undef-syscall.patch
+	epatch "${FILESDIR}"/strace-fix-arm-bad-syscall.patch
 
 	# Fix libaio support #103427
 	epatch "${FILESDIR}"/${P}-libaio.patch
