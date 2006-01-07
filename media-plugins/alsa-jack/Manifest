@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d192700f652d0bb550d581b4ba781a20 ChangeLog 6136
 MD5 7587bfab8cbb49dd9256626c932af549 alsa-jack-1.0.10.ebuild 966
 MD5 60ea60dc07f323a86ef97283165b528d alsa-jack-1.0.10_rc1.ebuild 965
@@ -8,3 +11,10 @@ MD5 710222b2590a99aa3468158c0ec9f4b7 files/digest-alsa-jack-1.0.10_rc1 75
 MD5 46a389b403bc763310e942cc9fc6d7b1 files/digest-alsa-jack-1.0.8 67
 MD5 115de3eba9191ee02931872cba635edf files/digest-alsa-jack-1.0.9 71
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvxu72+ySkm8kpY0RAhWKAJ9mOSdh2E7kmqI3Rm6rIhANj+Dd2QCghkQn
+HKuw2UG/JFQrElPdm0TqB3w=
+=S6us
+-----END PGP SIGNATURE-----
