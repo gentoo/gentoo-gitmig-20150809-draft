@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 27ded6a87530cbd81347cf32d2d1e5ba ChangeLog 5574
 MD5 ac506d33fb676e68c2a77d95d3f6027e files/digest-nas-1.5-r1 63
 MD5 4a7327fe2c6fba8c4315133a522358a3 files/digest-nas-1.6 64
@@ -17,12 +14,5 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3b67c96b73c8cb790b25e8b1bf14df3c nas-1.5-r1.ebuild 1109
 MD5 9de655765f4ba715b60ffd73a62c74e1 nas-1.6.ebuild 1018
 MD5 b8146b42d6df26229f2cdffcf4d549d7 nas-1.6c-r2.ebuild 1820
-MD5 ab4759c7c3c6f9cde27b03c101e1e544 nas-1.7-r1.ebuild 1902
+MD5 fed44c3d2bfeda03e274c3002713942b nas-1.7-r1.ebuild 1921
 MD5 0626f895b20c5da1096b952a129cf277 nas-1.7.ebuild 1827
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvKHd2+ySkm8kpY0RAvGVAJ0SY2I3uvnLDjE078q3vO94oD2XZACeJ1EL
-dJz8x0lnIf+a7qhhx1ayhho=
-=JNNe
------END PGP SIGNATURE-----
