@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.137 2005/12/24 21:20:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.138 2006/01/07 23:46:57 ferringb Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -240,7 +240,7 @@ vim_src_unpack() {
 		else
 			ECVS_MODULE="vim"
 		fi
-		ECVS_TOP_DIR="${DISTDIR}/cvs-src/${ECVS_MODULE}"
+		ECVS_TOP_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/cvs-src/${ECVS_MODULE}"
 		cvs_src_unpack
 
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.25 2005/12/24 14:18:18 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.26 2006/01/07 23:46:57 ferringb Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -32,7 +32,7 @@ DEPEND="dev-util/subversion"
 
 ## -- ESVN_STORE_DIR:  subversion sources store directory
 #
-ESVN_STORE_DIR="${DISTDIR}/svn-src"
+ESVN_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/svn-src"
 
 
 ## -- ESVN_FETCH_CMD:  subversion fetch command

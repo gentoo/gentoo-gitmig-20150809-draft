@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.62 2005/12/24 04:57:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.63 2006/01/07 23:46:57 ferringb Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ inherit eutils
 # ECVS_TOP_DIR -- The directory under which CVS modules are checked
 # out.
 
-[ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="${DISTDIR}/cvs-src"
+[ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/cvs-src"
 
 # ECVS_SERVER -- CVS path
 #

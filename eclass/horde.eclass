@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.26 2005/12/13 03:17:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.27 2006/01/07 23:46:57 ferringb Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -40,7 +40,7 @@ if [[ ${PN} != ${PN/-cvs} ]] ; then
 
 	ECVS_SERVER="anoncvs.horde.org:/repository"
 	ECVS_MODULE="${HORDE_PN}"
-	ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
+	ECVS_TOP_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/cvs-src/${PN}"
 	ECVS_USER="cvsread"
 	ECVS_PASS="horde"
 
