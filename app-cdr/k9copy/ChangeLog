@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.4 2006/01/07 02:21:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.5 2006/01/07 19:27:37 carlo Exp $
+
+  07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> k9copy-1.0.1b.ebuild,
+  k9copy-1.0.2.ebuild, k9copy-1.0.2-r1.ebuild:
+  QA: aRts use flag provided by kde.eclass. need-kde() needs to be called
+  after R/DEPEND.
 
 *k9copy-1.0.2-r1 (07 Jan 2006)
 
