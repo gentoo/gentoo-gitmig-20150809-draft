@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mysql</herd>
+<maintainer>
+  <email>vivo@gentoo.org</email>
+  <name>Francesco Riosa</name>
+</maintainer>
+<longdescription>Utility to switch betwen slotted mysql installations.</longdescription>
+</pkgmetadata>
