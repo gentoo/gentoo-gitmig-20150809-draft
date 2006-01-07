@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57dc2a8c50b4b95457ecc5e4612da020 ChangeLog 5464
 MD5 24f01dc7e30eedc98613d041c4709ba7 eterm-0.9.2-r6.ebuild 1544
 MD5 7b4982ed12e7ca9e77e8675fabdedb41 eterm-0.9.3-r4.ebuild 1811
@@ -12,3 +15,10 @@ MD5 da95c4485e2244c440ece3da5a9dfca3 files/eterm-0.9.3-deadkeys.patch 4673
 MD5 9a9a163d99af109f688f84b04d1e83e8 files/eterm-0.9.3-gcc4.patch 570
 MD5 0cb62ade9b1d35746c7d8a55949137a1 files/eterm-0.9.3-pixmap-colmod.patch 1004
 MD5 c97cacef51ce9af2ed721636c4436fe1 metadata.xml 631
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDv3aK2+ySkm8kpY0RAmP4AJ99SOlSM1mRcT/7UGx5sMgbl0ijggCgrm/s
+6Zb56bX0zJnbGDXPl7vRyDM=
+=6q4k
+-----END PGP SIGNATURE-----
