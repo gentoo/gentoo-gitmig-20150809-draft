@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7.2.ebuild,v 1.8 2005/11/27 17:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7.2.ebuild,v 1.9 2006/01/07 07:28:45 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-${PV/_/-}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="doc esd nls nothemes xinerama xrandr"
 
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
@@ -36,6 +38,12 @@ PDEPEND="!nothemes? ( x11-themes/ethemes )
 
 S=${WORKDIR}/${PN}-${PV/_pre?}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-no-nls.patch
+}
+
 src_compile() {
 	econf \
 		$(use_enable nls) \
@@ -49,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake -j1 install DESTDIR="${D}" || die
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/enlightenment
 	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README*

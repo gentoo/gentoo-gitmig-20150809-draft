@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 01f03287317f38152e719341daf701bf ChangeLog 5629
+MD5 f7cf846af84245ed7108404227f488c7 ChangeLog 5877
 MD5 e58a523f218b83377e26940d3b59d4c7 enlightenment-0.16.5-r4.ebuild 1602
-MD5 242498d15c9802751483069071de9743 enlightenment-0.16.6.ebuild 1850
-MD5 7774718467ad2029d12b611ecb1860ee enlightenment-0.16.7.2.ebuild 1460
-MD5 bcbe682de1218f677021b43c86046049 enlightenment-0.16.9999.ebuild 1824
+MD5 58272e98cbbb3629a3a94780fe2671bd enlightenment-0.16.6.ebuild 1854
+MD5 aa422efda2e5a2af1eb66c9182d99bca enlightenment-0.16.7.2.ebuild 1565
+MD5 dcac0308f1ff9de17bdd88a4291ed791 enlightenment-0.16.9999.ebuild 1829
 MD5 fbe59612181a2fb8c213b815a2f45ebd files/0.16.6-edox.patch 2775
 MD5 c0e73afcafa0fbb90610eef266a75c82 files/0.16.6-kde-menu.patch 454
 MD5 de50be73f3493d4787a6533b08077d06 files/cursors.cfg 686
@@ -14,11 +14,12 @@ MD5 24c537c993ea9c463f993b24a872183c files/digest-enlightenment-0.16.6 74
 MD5 01290d54c8d28735c2fe344796bfa7ba files/digest-enlightenment-0.16.7.2 75
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enlightenment-0.16.9999 0
 MD5 943d1947d4bd7b7ee6387ba5827166a4 files/enlightenment 33
+MD5 3ad2dae193789dec0097cd6675a150ab files/enlightenment-0.16.7.2-no-nls.patch 469
 MD5 7ed1cbab645402fbf7666ed95588542d metadata.xml 1572
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDifQbgIKl8Uu19MoRAs8SAJ9AvwUo884MdRGvblig6Kbuz5qaHQCfYwOx
-qAvbMsK0dya23YoS+bb/LGQ=
-=wr0i
+iD8DBQFDv2322+ySkm8kpY0RAi1eAKCevlATuMDylArUJ5qVtPoMmGSB1QCgmWlM
+hhavqJ0sLxCKQIuVx5lrvic=
+=8NKv
 -----END PGP SIGNATURE-----

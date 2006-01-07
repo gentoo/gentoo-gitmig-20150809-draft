@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.14 2005/11/27 17:57:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.15 2006/01/07 07:28:45 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
@@ -60,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake -j1 install DESTDIR="${D}" || die
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/enlightenment
 

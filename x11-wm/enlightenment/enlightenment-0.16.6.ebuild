@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.14 2005/02/09 00:20:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.15 2006/01/07 07:28:45 vapier Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 
 src_install() {
 	export USER=root
-	emake install DESTDIR=${D} || die
+	emake -j1 install DESTDIR=${D} || die
 	mv ${D}/usr/bin/{,e}dox
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/enlightenment

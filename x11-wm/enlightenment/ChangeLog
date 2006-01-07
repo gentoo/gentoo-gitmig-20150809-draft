@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/enlightenment
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.39 2005/03/30 16:46:50 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.40 2006/01/07 07:28:45 vapier Exp $
+
+  07 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/enlightenment-0.16.7.2-no-nls.patch, enlightenment-0.16.6.ebuild,
+  enlightenment-0.16.7.2.ebuild, enlightenment-0.16.9999.ebuild:
+  Fix building with USE=-nls and add support for SuperH.
 
   30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   enlightenment-0.16.7.2.ebuild:
