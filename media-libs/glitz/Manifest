@@ -10,12 +10,12 @@ MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
 MD5 1bcad3b98a9f7ca2a88c5119df7c8bde glitz-0.2.3.ebuild 1045
 MD5 9ff0e7c53c651de73e73db4cc69c5d13 glitz-0.3.0.20050115.ebuild 626
 MD5 0024906341e1e45f6ebb88fed0c008a9 glitz-0.4.0.ebuild 602
-MD5 9aaadccb752a0af2a95342fea34bf197 glitz-0.4.4.ebuild 614
+MD5 4a7eea467f359090759315c00c882475 glitz-0.4.4.ebuild 609
 MD5 13d5049b8405e67dc76afb9670cb0d4b metadata.xml 429
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvFkLCRZPokWLroQRAjxWAJ9HWB5lhCbQQafEoUTZgvWMWesOuwCggKRJ
-uLIbuHGhLn/OPIGA7DU8OoQ=
-=m6Fu
+iD8DBQFDv4jw2+ySkm8kpY0RAtQEAKCnf3Tc2IMMCvhpIRUprXNNRs3ZVwCgnzXD
+tnXjWICtXkmiA185/AoWeBs=
+=J30I
 -----END PGP SIGNATURE-----
