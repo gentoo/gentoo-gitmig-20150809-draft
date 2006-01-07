@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.4.ebuild,v 1.2 2006/01/06 01:36:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.4.ebuild,v 1.3 2006/01/07 17:29:41 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -17,6 +17,8 @@ DEPEND=">=media-video/vdr-1.3.20
 	>=media-video/ffmpeg-0.4.8
 	>=media-libs/netpbm-10.0"
 
+RDEPEND=">=media-tv/gentoo-vdr-scripts-0.2.2"
+
 
 VDRPLUGIN_MAKE_TARGET="all -j1"
 
@@ -30,14 +32,14 @@ vdr-plugin_src_unpack
 src_install() {
 vdr-plugin_src_install
 
-	keepdir /etc/vdr/imagecmds
 	insinto /etc/vdr/imagecmds
 	newins examples/imagecmds.conf imagecmds.example.conf
+	newins examples/imagecmds.conf.DE imagecmds.example.conf.de
 
 	insinto /etc/vdr/plugins/image
 	doins examples/imagesources.conf
 
-	into /usr/share/vdr/image
+	insinto /usr/share/vdr/image
 	dobin scripts/imageplugin.sh
 	newbin scripts/mount.sh mount-image.sh
 }
@@ -47,5 +49,9 @@ vdr-plugin_pkg_postinst
 
 	echo
 	einfo "Also check /etc/vdr/plugins/image/imagesources.conf"
+	echo
+	einfo "Multilanguage will automaticly supported, just take a look in"
+	einfo "/etc/vdr/imagecmds/* how it works"
+	einfo "By the moment only EN + DE"
 	echo
 }

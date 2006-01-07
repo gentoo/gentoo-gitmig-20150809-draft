@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.2 2006/01/06 01:36:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.3 2006/01/07 17:29:41 hd_brummy Exp $
+
+  07 Jan 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-image-0.2.4.ebuild:
+  depend on gentoo-vdr-scripts added, support for EN and DE Lang conf works 
+  now automaticly, small typo fixed
 
   06 Jan 2006; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh,
   vdr-image-0.2.4.ebuild:
