@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/sessreg
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.7 2005/12/26 20:56:51 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.8 2006/01/07 05:22:08 morfic Exp $
+
+  07 Jan 2006; Daniel Goller <morfic@gentoo.org> sessreg-1.0.0.ebuild:
+  Adding to ~amd64
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -sessreg-0.99.2.ebuild:
