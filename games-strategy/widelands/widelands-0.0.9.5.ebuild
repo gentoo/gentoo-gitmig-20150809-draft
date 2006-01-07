@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.2 2006/01/07 23:27:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.3 2006/01/07 23:32:59 genstef Exp $
 
 inherit eutils games
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/widelands-0.0.9-amd64.patch"
-	sed -i -e "s:__ppc__:__PPC__:g" ${S}/src/machdep.h
+	sed -i -e "s:__ppc__:__PPC__:g" ${S}/src/machdep.h || die 01
 }
 
 src_compile() {
@@ -48,6 +48,7 @@ src_install() {
 	games_make_wrapper widelands ./widelands "${dir}"
 	dodoc AUTHORS ChangeLog README.developers
 
-	make_desktop_entry widelands Widelands "${dir}"/pics/wl-ico-48.png
+	newicon pics/wl-ico-48.png widelands.png
+	make_desktop_entry widelands Widelands widelands.png
 	prepgamesdirs
 }
