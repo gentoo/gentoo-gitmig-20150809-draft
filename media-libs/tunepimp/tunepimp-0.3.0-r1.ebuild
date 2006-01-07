@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.14 2005/11/28 13:04:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.15 2006/01/07 15:31:43 hanno Exp $
 
 inherit eutils distutils perl-app
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/${P}-gcc41.patch
 	epatch ${FILESDIR}/thread.patch
 
 	# do not try to link against obsolete libtermcap
