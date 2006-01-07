@@ -1,14 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.2 2005/05/28 17:08:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.3 2006/01/07 22:44:11 chainsaw Exp $
 
 inherit gnome2
 
 MY_P=${P/terminatorx/terminatorX}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION='realtime audio synthesizer that allows you to "scratch" on digitally sampled audio data'
-HOMEPAGE="http://www.terminatorx.cx/"
-SRC_URI="http://www.terminatorx.cx/dist/${MY_P}.tar.gz"
+HOMEPAGE="http://www.terminatorx.org/"
+SRC_URI="http://www.terminatorx.org/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

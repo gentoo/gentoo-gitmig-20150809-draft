@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/terminatorx
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.16 2005/05/28 17:08:23 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.17 2006/01/07 22:44:11 chainsaw Exp $
+
+  07 Jan 2006; <chainsaw@gentoo.org> terminatorx-3.81.ebuild,
+  terminatorx-3.82.ebuild:
+  Update homepage & SRC_URI, closes bug #118224.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -files/terminatorx-3.80.GNOMEpresent.patch,
