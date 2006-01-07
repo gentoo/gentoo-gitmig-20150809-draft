@@ -1,0 +1,27 @@
+--- k9copy-1.0.2-old/src/k9main.cpp	2005-12-18 08:11:19.000000000 +0000
++++ k9copy-1.0.2/src/k9main.cpp	2006-01-02 19:05:51.000000000 +0000
+@@ -752,6 +752,9 @@
+ 
+ 
+ void k9Main::fillLvLanguages() {
++    k9DVDSubtitle *l_sub;
++    k9DVDAudioStream *l_auds;
++
+     lvLanguages->clear();
+     langAudItems.clear();
+     langSubItems.clear();
+@@ -761,12 +764,12 @@
+             k9DVDListItem *litem=(k9DVDListItem*)items.at(i);
+             switch (litem->streamType) {
+             case SUB:
+-                k9DVDSubtitle *l_sub=litem->subtitle;
++                l_sub=litem->subtitle;
+                 if (slSubLang.contains(l_sub->getlanguage())==0)
+                     slSubLang.append(l_sub->getlanguage());
+                 break;
+             case AUD:
+-                k9DVDAudioStream *l_auds=litem->audioStream;
++                l_auds=litem->audioStream;
+                 if (slAudLang.contains(l_auds->getlanguage())==0)
+                     slAudLang.append(l_auds->getlanguage());
+                 break;

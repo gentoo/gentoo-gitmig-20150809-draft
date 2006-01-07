@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/k9copy
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.3 2005/12/28 18:29:12 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.4 2006/01/07 02:21:25 metalgod Exp $
+
+*k9copy-1.0.2-r1 (07 Jan 2006)
+
+  07 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/k9copy-1.0.2-switch.patch, +k9copy-1.0.2-r1.ebuild:
+  Added a patch to fix some code issues thanks to Geoffrey Clements
+  <geoff@electron.me.uk>. Closes bug #117386.
 
   28 Dec 2005; Luis Medinas <metalgod@gentoo.org> k9copy-1.0.2.ebuild:
   Changing vamps dependency to 0.98 version to avoid troubles.
