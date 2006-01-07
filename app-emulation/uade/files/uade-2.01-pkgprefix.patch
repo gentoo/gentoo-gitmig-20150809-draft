@@ -1,0 +1,23 @@
+diff -Naurp uade-2.01-orig/Makefile.in uade-2.01/Makefile.in
+--- uade-2.01-orig/Makefile.in	2006-01-07 16:57:41.000000000 +0100
++++ uade-2.01/Makefile.in	2006-01-07 17:00:22.000000000 +0100
+@@ -8,6 +8,8 @@ FINALDOCDIR = {DOCDIR}
+ FINALMANDIR = {MANDIR}
+ FINALLIBDIR = {LIBDIR}
+ 
++PACKAGEPREFIX = {PACKAGEPREFIX}
++
+ BINDIR = {PACKAGEPREFIX}{BINDIR}
+ DATADIR = {PACKAGEPREFIX}{DATADIR}
+ DOCDIR = {PACKAGEPREFIX}{DOCDIR}
+@@ -50,8 +52,8 @@ xmmsplugin:	
+ 	$(MAKE) -C src/frontends/xmms
+ 
+ xmmsplugininstall:	$(XMMSPLUGIN)
+-	mkdir -p "$(XMMSPLUGINDIR)" "$(BINDIR)"
+-	install src/frontends/xmms/libuade2.so "$(XMMSPLUGINDIR)"
++	mkdir -p "$(PACKAGEPREFIX)$(XMMSPLUGINDIR)" "$(BINDIR)"
++	install src/frontends/xmms/libuade2.so "$(PACKAGEPREFIX)$(XMMSPLUGINDIR)"
+ 	install contrib/uadexmmsadd "$(BINDIR)"/
+ 
+ src/include/uadeconfig.h:	
