@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c64dfddbf2ed47739b05cdbd4ca4e939 goffice-0.1.0.ebuild 1269
-MD5 b12e11e6e295913bacd6079380ecf730 ChangeLog 1186
-MD5 9223ce07181892826a7663eb673f91f3 metadata.xml 436
+MD5 96b4c933a4f061247f6f84637cd31777 ChangeLog 1295
 MD5 0d5535797dbf42513d9f390cdb6d31f0 files/digest-goffice-0.1.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDZ5S23og80iZgVQgRAo2MAKCdyUXAUbBPNbO8h5XaFki6xaziVQCeJudj
-UcsHNyhOh3YFquFnc2RSODk=
-=ky1X
------END PGP SIGNATURE-----
+MD5 c332ae77d8f80613f7580d1c359fb778 files/digest-goffice-0.1.2 67
+MD5 c64dfddbf2ed47739b05cdbd4ca4e939 goffice-0.1.0.ebuild 1269
+MD5 a221df33a32e0afeceaafe2c7f8c9957 goffice-0.1.2.ebuild 1266
+MD5 9223ce07181892826a7663eb673f91f3 metadata.xml 436
