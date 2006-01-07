@@ -1,12 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.10 2005/07/07 04:46:09 caleb Exp $
-
-IUSE="alsa jack ladspa"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.11 2006/01/07 17:20:45 carlo Exp $
 
 inherit eutils kde-functions
-
-need-qt 3
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://hydrogen.sourceforge.net/"
@@ -15,14 +11,15 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86 ppc64"
+IUSE="alsa jack ladspa"
 
 DEPEND=">=media-libs/libsndfile-1.0.0
 	alsa? ( media-libs/alsa-lib )
 	>=media-libs/audiofile-0.2.3
 	>=media-libs/flac-1
 	jack? ( media-sound/jack-audio-connection-kit )
-	ladspa? ( media-libs/liblrdf )
-	=x11-libs/qt-3*"
+	ladspa? ( media-libs/liblrdf )"
+need-qt 3
 
 src_compile() {
 	need-autoconf 2.5
