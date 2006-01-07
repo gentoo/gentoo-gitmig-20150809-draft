@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1-r3.ebuild,v 1.4 2005/09/09 19:34:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1-r3.ebuild,v 1.5 2006/01/07 01:28:27 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -11,10 +11,10 @@ SRC_URI="http://www.portaudio.com/archives/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="18"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}
@@ -23,9 +23,9 @@ src_unpack() {
 	unpack ${A}
 
 	if use userland_Darwin ; then
-		 cp ${FILESDIR}/${P}-Makefile.macos ${S}/Makefile
+		cp ${FILESDIR}/${P}-Makefile.macos ${S}/Makefile
 	else
-		 cp ${FILESDIR}/${P}-Makefile.linux ${S}/Makefile
+		cp ${FILESDIR}/${P}-Makefile.linux ${S}/Makefile
 	fi
 }
 
