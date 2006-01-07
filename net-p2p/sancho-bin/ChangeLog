@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/sancho-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.28 2005/11/29 15:50:25 sekretarz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.29 2006/01/07 23:36:15 sekretarz Exp $
+
+*sancho-bin-0.9.4.54 (08 Jan 2006)
+
+  08 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  +sancho-bin-0.9.4.54.ebuild:
+  Version bump, bug #117769
 
 *sancho-bin-0.9.4.52 (29 Nov 2005)
 
