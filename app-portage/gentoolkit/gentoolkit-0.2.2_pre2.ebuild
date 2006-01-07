@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.2_pre1.ebuild,v 1.1 2005/12/29 17:43:20 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.2_pre2.ebuild,v 1.1 2006/01/07 18:01:26 fuzzyray Exp $
 
-inherit eutils
+inherit eutils python
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -26,14 +26,12 @@ src_install() {
 }
 
 pkg_preinst() {
-	# FIXME: remove old python runtime files, should use python.eclass
+	# FIXME: Remove from future ebuilds after gentoolkit-0.2.2 is stable
 	rm -f ${ROOT}/usr/lib/gentoolkit/pym/gentoolkit.py[co] ${ROOT}/usr/lib/gentoolkit/pym/gentoolkit/*.py[co]
 }
 
 pkg_postinst() {
-	echo
-	einfo "The following older scripts have been removed in this release:"
-	einfo "    dep-clean, ewhich, mkebuild, pkg-clean, pkg-size"
+	python_mod_optimize ${ROOT}usr/lib/gentoolkit
 	echo
 	ewarn "The qpkg and etcat tools are deprecated in favor of equery and"
 	ewarn "are no longer installed in ${ROOT}usr/bin in this release."
@@ -43,4 +41,8 @@ pkg_postinst() {
 	einfo "Another alternative to qpkg and equery are the q applets in"
 	einfo "app-portage/portage-utils"
 	echo
+}
+
+pkg_postrm() {
+	python_mod_cleanup ${ROOT}usr/lib/gentoolkit
 }

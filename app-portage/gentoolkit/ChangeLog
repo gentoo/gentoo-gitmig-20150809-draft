@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/gentoolkit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.63 2005/12/29 17:43:20 fuzzyray Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.64 2006/01/07 18:01:26 fuzzyray Exp $
+
+*gentoolkit-0.2.2_pre2 (07 Jan 2006)
+
+  07 Jan 2006; Paul Varner <fuzzyray@gentoo.org>
+  -files/qpkg-security-fix-68846.diff, -files/glsa.py-revmatch.diff,
+  -gentoolkit-0.2.2_pre1.ebuild, +gentoolkit-0.2.2_pre2.ebuild:
+  Fix revdep-rebuild to work with portage-2.1 Bug #118124
+  Add support for python eclass to manage python modules
+  Clean up files directory
 
 *gentoolkit-0.2.2_pre1 (29 Dec 2005)
 *gentoolkit-0.2.1 (29 Dec 2005)
