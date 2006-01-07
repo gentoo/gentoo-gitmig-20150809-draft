@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.0.3-r2.ebuild,v 1.2 2005/12/05 02:13:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.0.3-r2.ebuild,v 1.3 2006/01/07 18:50:55 carlo Exp $
 
 inherit kde eutils
 
@@ -15,9 +15,8 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 SLOT="0"
 
-RDEPEND=">=virtual/ooo-2.0.0"
-
-DEPEND="${RDEPEND}"
+DEPEND=">=virtual/ooo-2.0.0"
+need-kde 3
 
 src_unpack() {
 	unpack ${A}

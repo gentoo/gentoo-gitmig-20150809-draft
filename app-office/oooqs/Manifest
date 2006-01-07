@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f29e9ef7f73d699d6330497fc2863d49 ChangeLog 2274
+MD5 786f6df4b0d6188869db49f0ed1d04cc ChangeLog 2397
 MD5 b96223d4f6f3f644e5a345c12982ab72 files/digest-oooqs-2.0.3 63
 MD5 b96223d4f6f3f644e5a345c12982ab72 files/digest-oooqs-2.0.3-r1 63
 MD5 b96223d4f6f3f644e5a345c12982ab72 files/digest-oooqs-2.0.3-r2 63
@@ -9,12 +6,5 @@ MD5 d5a62d4399d509af355598951028ec8f files/fixxooo.patch 3350
 MD5 700208645159ca465baafc9e22eacde7 files/oooqs-20.patch 2256
 MD5 d89f6d524fdd9cce162c5959fa9fed1b metadata.xml 269
 MD5 f3855b265eefcd0fa1f90489b077cf74 oooqs-2.0.3-r1.ebuild 971
-MD5 1ef8f4813f3b51b3792577c405677f6a oooqs-2.0.3-r2.ebuild 626
+MD5 4fc09fb0e5b07c53c31f25763d6722fd oooqs-2.0.3-r2.ebuild 613
 MD5 1b4a6eb83c4267e11b9089d34206029b oooqs-2.0.3.ebuild 664
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDk6JBCRZPokWLroQRArb1AKDmBINV9ILC2dCOPCB/J4F0nUDOoACgzmAC
-YLLkKcIJtPgqYKUMj8EQxH0=
-=UsvP
------END PGP SIGNATURE-----
