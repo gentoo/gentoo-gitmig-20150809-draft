@@ -1,0 +1,11 @@
+diff -Nru gammu-1.04.0.orig/common/device/devfunc.c gammu-1.04.0/common/device/devfunc.c
+--- gammu-1.04.0.orig/common/device/devfunc.c	2005-11-20 22:01:18.000000000 +0200
++++ gammu-1.04.0/common/device/devfunc.c	2006-01-07 14:53:03.056366000 +0200
+@@ -22,6 +22,7 @@
+ #else
+ #  include <errno.h>
+ #  include <signal.h>
++#  include <sys/socket.h>
+ #endif
+ 
+ #include "../gsmstate.h"
