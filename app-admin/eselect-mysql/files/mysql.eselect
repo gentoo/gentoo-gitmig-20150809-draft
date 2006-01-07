@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.2 2006/01/07 16:05:00 vivo Exp $
+# $Id: mysql.eselect,v 1.3 2006/01/07 22:40:38 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/01/07 16:05:00 $'
+SVN_DATE='$Date: 2006/01/07 22:40:38 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/sbin"
 ERR_NOT_FOUND="(not-found)"
@@ -13,12 +13,11 @@ ERR_UNSET="(unset)"
 # return a human oriented version
 #
 # $1 - version to transform
-
 function version4human() {
-	local x=${1}
-	local y=$(( x % 100 ))
-	x=$(( x / 100 ))
-	echo "MySQL-${x}.${y}.x"
+	local major=${1:0:1}
+	local minor=${1:1:2}
+	[[ ${minor:0:1} == "0" ]] && minor=${minor:1:1}
+	echo "${major}.${minor}.x"
 }
 
 # return a integer version
@@ -26,83 +25,73 @@ function version4human() {
 # $1 - version to transform
 
 function version4bash() {
-	local version="${1}"
-	version=${version##*MySQL-}
-	version=${version%%.x*}
-	version=${version//./"00+"}
-	version=$(( $version ))
-	echo "${version}"
+	local minor=${1#*.}
+	minor=${minor%%.x*}
+	[[ ${#minor} -eq 1 ]] && minor="0${minor}"
+	echo "${1%%.*}${minor}"
 }
 
 # Return the versions currently installed
-
 find_versions() {
+	local versions lis
 	# "eselect mysql set 1" will always set the best version
-	for servers in $(ls "${MYSQL_SYMLINK_CHECKDIR}/mysqld-"* | sort -r) ; do
-		echo "$(version4human "${servers##*-}")"
+	list=${MYSQL_SYMLINK_CHECKDIR}/mysqld-*
+	[[ ${list##/} == mysqld-* ]] && return
+	for x in ${MYSQL_SYMLINK_CHECKDIR}/mysqld-* ; do
+		versions=( $(version4human ${x##*-}) ${versions[@]} )
 	done
+	echo ${versions[@]}
 }
 
 # Check if a symlink could be created for a specific file
 #
 # $1 - original file name
 # $2 - MySQL version
-
 check_symlink() {
-	local fname="${1}"
-	local ver="${2}"
+	local filename=${1}
+	local version=${2}
+	local linkname=${filename/"-${version}"/}
 	local ret=0
 
-	[[ -z "${fname}" ]] || [[ -z "${ver}" ]] && return 1
-
-	local lname="${fname/"-${ver}"/}"
+	[[ -z ${filename} ]] || [[ -z ${version} ]] && return 1
 
 	# check link source
-	[[ -f ${fname} ]] || [[ -d ${fname} ]] || ret=$(( ret +1 ))
+	[[ -f ${filename} ]] || [[ -f "${filename}.gz" ]] \
+		|| [[ -d ${filename} ]] || ret=$(( ${ret} + 1 ))
 
-	# check link target
+	# check link targe
 	# not checking for directory (want to keep "/etc/mysql")
-	[[ ! -L "${lname}" ]] \
-	&& [[ -f "${lname}" ]] \
-	&& ret=$(( ret +2 ))
+	[[ -a ${linkname} ]] && [[ ! -L ${linkname} ]] && [[ ! -d ${linkname} ]] \
+		&& ret=$(( ${ret} +2 ))
 
-	return $ret
-
+	return ${ret}
 }
 
 # work out which MYSQL version the user has chosen from the list
 #
 # $1: the list id that the user has chosen
-
-get_mysqlversion_fromlist() {
-
-	local version=$1
-	# don't try to create the array in the declaration
-	# of versions, doesn't work
-	local versions
-	versions=( $(find_versions) )
-	local maxver=${#versions[@]}
-
-	if is_number "${version}" \
-	&& [[ ${version} -gt 0 ]] \
-	&& [[ ${version} -le ${maxver} ]]
-	then
-		version=${versions[(( ${version} - 1 ))]}
-		echo "${version}"
-		return
-	fi
-
-	for (( i = 0 ; i < ${maxver} ; i = i + 1 )) ; do
-		if [[ "${versions[$i]}" == "(${version})" ]] ; then
-			echo ${version}
+get_version_fromlist() {
+	local version=${1}
+	local -a versions=( $(find_versions) )
+	
+	if is_number ${version} ; then
+		if [[ ${version} -gt 0 ]] && [[ ${version} -le ${#versions[@]} ]] ; then
+			version=${versions[(( ${version} - 1 ))]}
+			echo "${version}"
 			return
 		fi
+	fi
+
+	for (( i = 0 ; i < ${#versions[@]} ; i = i + 1 )) ; do
+		[[ ${versions[$i]} == ${version} ]] || continue
+			echo ${version}
+			return
 	done
 
 	echo "${ERR_NOT_FOUND}"
 }
 
-get_current_mysqlversion() {
+get_current_version() {
 	link=$(readlink ${MYSQL_SYMLINK_CHECKDIR}/mysqld)
 	version=${link##*-}
 
@@ -114,44 +103,50 @@ get_current_mysqlversion() {
 	fi
 }
 
-set_current_mysqlversion() {
+set_current_version() {
 
-	local version="${1}"
-	is_number "${version}" || die -q "Not usable version"
+	local version=${1}
+	is_number "${version}" || die -q "No usable version: ${version}"
 	local CWD=$(pwd)
-	local lastdir dir lname
+	local lastdir dir linkname linkname2
+	local list=$(< $ROOT/var/lib/eselect/mysql/mysql-${version}.filelist )
 
-	# perform a check on the entire file list
-	while read fname ; do
-		dir="${ROOT}/$(dirname "${fname}")"
+	# perform a check on the entire file lis
+	for filename in $list ; do
+		dir="${ROOT}/$(dirname "${filename}")"
 		if [[ "${dir}" != "${lastdir}" ]] ; then
 			cd "${dir}"
 			lastdir="${dir}"
 		fi
-		check_symlink "$(basename "${fname}")" "${version}"
+		check_symlink "$(basename "${filename}")" "${version}"
 		ret=$?
 		if [[ $ret -ne 0 ]] ; then
 			cd "${CWD}"
 			die -q \
-			"File \"${ROOT}/${fname}\" is not suitable for symlink (${ret})"
+			"File \"${ROOT}/${filename}\" is not suitable for symlink (${ret})"
 		fi
-	done < "$ROOT/usr/share/mysql-${version}/.exe-list"
+	done
 
 	# it's ok to do the effective work now
-	while read fname ; do
-		dir="${ROOT}/$(dirname "${fname}")"
+	for filename in $list ; do
+		dir="${ROOT}/$(dirname "${filename}")"
 		if [[ "${dir}" != "${lastdir}" ]] ; then
 			cd "${dir}"
 			lastdir="${dir}"
 		fi
-		lname="$(basename "${fname}")"
-		ln -sf "${lname}" "${lname/"-${version}"/}"
-		[[ ! -L "${lname/"-${version}"/}" ]] \
-		&& write_warning_msg "FAILED: cd \"${dir}\" && ln -sf \"${lname}\" \"${lname/"-${version}"/}\""
-	done < "$ROOT/usr/share/mysql-${version}/.exe-list"
+		linkname="$(basename "${filename}")"
+		for linkname2 in "${linkname}" "${linkname}.gz" ; do
+			if [[ -a "${linkname2}" ]] ; then
+				# rm needed for directory
+				rm -f "${linkname/"-${version}"/}" &> /dev/null
+				ln -sf "${linkname2}" "${linkname2/"-${version}"/}"
+				[[ ! -L "${linkname2/"-${version}"/}" ]] \
+				&& write_warning_msg "FAILED: cd \"${dir}\" && ln -sf \"${linkname2}\" \"${linkname2/"-${version}"/}\""
+			fi
+		done
+	done
 
 	cd "${CWD}"
-
 }
 
 ### show action ###
@@ -161,29 +156,27 @@ describe_show() {
 }
 
 do_show() {
-	write_list_start "Current default MYSQL version:"
-	version=$(get_current_mysqlversion)
+	write_list_start "Current default MySQL version:"
+	version=$(get_current_version)
 	write_kv_list_entry "$version" ""
 }
 
 ### list action ###
 
 describe_list() {
-	echo "List available MYSQL versions to link to"
+	echo "List available MySQL versions to link to"
 }
 
 do_list() {
 	versions=( $(find_versions) )
-	current=$(get_current_mysqlversion)
+	current=$(get_current_version)
+	
+	write_list_start "Available MySQL versions:"
 
-	write_list_start "Available MYSQL versions:"
-
-	if [[ -n ${versions[@]} ]] ; then
+	if [[ -n "${versions[@]}" ]] ; then
 		local i
 		for (( i = 0 ; i < ${#versions[@]} ; i = i + 1 )) ; do
-			linkversion=${versions[${i}]}
-
-			[[ $linkversion == $current ]] && \
+			[[ ${versions[${i}]} == ${current} ]] && \
 				versions[${i}]="${versions[${i}]} $(highlight '*' )"
 		done
 		write_numbered_list "${versions[@]}"
@@ -199,22 +192,16 @@ describe_set() {
 }
 
 do_set() {
-
-	local version versions
-	versions=( $(find_versions) )
-
-	if [[ -z ${1} ]] ; then
-		# no parameter
-		die -q "You didn't tell me which version of MYSQL to use"
-	fi
-
-	version=$(get_mysqlversion_fromlist $1)
+	[[ ${#@} -lt 1 ]] &&
+		die -q "Wrong count of paramters."
+	local version
+	version=$(get_version_fromlist ${1})
 
 	if [[ ${version} == "${ERR_NOT_FOUND}" ]] ; then
 		die -q "I don't recognise that version of MYSQL"
 	fi
 
-	set_current_mysqlversion "$(version4bash "${version}")"
+	set_current_version "$(version4bash "${version}")"
 }
 
 # vim: set ft=eselect :
