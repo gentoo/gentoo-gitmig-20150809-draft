@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2-r2.ebuild,v 1.7 2005/04/03 18:19:14 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2-r2.ebuild,v 1.8 2006/01/07 01:56:43 arj Exp $
 
 inherit eutils
 
@@ -63,5 +63,5 @@ src_install () {
 	dohtml -r html/
 
 	chmod 755 "${WORKDIR}/${MY_P}/src/tla/=gpg-check.awk"
-	cp -a "${WORKDIR}/${MY_P}/src/tla/=gpg-check.awk" "${D}/usr/bin/tla-gpg-check.awk"
+	cp -pPR "${WORKDIR}/${MY_P}/src/tla/=gpg-check.awk" "${D}/usr/bin/tla-gpg-check.awk"
 }

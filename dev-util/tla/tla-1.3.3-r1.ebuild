@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.3-r1.ebuild,v 1.3 2005/12/16 11:13:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.3-r1.ebuild,v 1.4 2006/01/07 01:56:43 arj Exp $
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Revision control system ideal for widely distributed development"
