@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d5e4a66d0c1f501628ad7b222c26beab ChangeLog 680
-MD5 71b09a1721c4dd0557be0abe8dd46315 metadata.xml 219
-MD5 000985342a78928ecd478d352f15e7a3 xmms-adplug-1.1.ebuild 694
+MD5 b148e4f3314cb31e1af37e19ff83bfcb ChangeLog 860
 MD5 45ac5429d4fa55032b9925f5d0bbda65 files/digest-xmms-adplug-1.1 68
+MD5 45ac5429d4fa55032b9925f5d0bbda65 files/digest-xmms-adplug-1.1-r1 68
+MD5 71b09a1721c4dd0557be0abe8dd46315 metadata.xml 219
+MD5 5460ce6a865c44ece7eed2272f6522a0 xmms-adplug-1.1-r1.ebuild 862
+MD5 000985342a78928ecd478d352f15e7a3 xmms-adplug-1.1.ebuild 694
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBkzqfArHZZzCEUG0RAgJJAJ9/cIuutNuWTurPmrMTeCL/IzNdpgCfcmrY
-pkbg2mDzB2Y8gE6mPHR2ugs=
-=rr/b
+iD8DBQFDwAAJchej4aZK9/cRAn0aAJ0QgUqnGZIjOtVAr9nxnz+7YGCjzQCffSMn
+2u2p2ojO5DPfX2aXb+/44Oc=
+=gqEj
 -----END PGP SIGNATURE-----
