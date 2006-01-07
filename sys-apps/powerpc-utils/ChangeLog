@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/powerpc-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/ChangeLog,v 1.22 2006/01/03 22:32:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/ChangeLog,v 1.23 2006/01/07 23:13:55 josejx Exp $
+
+*powerpc-utils-1.1.3.18 (07 Jan 2006)
+
+  07 Jan 2006; Joseph Jezak <josejx@gentoo.org> -powerpc-utils-1.1.3.ebuild,
+  -powerpc-utils-1.1.3-r7.ebuild, -powerpc-utils-1.1.3-r10.ebuild,
+  +powerpc-utils-1.1.3.18.ebuild:
+  Added missing manual pages and apps. Removed old versions.
 
   03 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   powerpc-utils-1.1.3-r18.ebuild:
