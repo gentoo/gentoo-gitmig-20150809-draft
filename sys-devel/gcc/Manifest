@@ -97,14 +97,14 @@ MD5 71e25d702be3dd13ee277b7383345fad gcc-3.4.3-r1.ebuild 5477
 MD5 769273e24a52732ce892d08ebeb4bbeb gcc-3.4.3.20050110-r2.ebuild 5240
 MD5 c44289f25b99d3c631f97a8043826901 gcc-3.4.4-r1.ebuild 5203
 MD5 d771594bed0108dd38d143656cbb52c4 gcc-3.4.5.ebuild 5111
-MD5 103f90b35ea4fb36f174d4e29a2f00c1 gcc-4.0.1.ebuild 1864
-MD5 9ff5b86dbfaab8bf516ff534dbd66a8b gcc-4.0.2-r3.ebuild 1851
+MD5 ebc31b751952baf10fc124f0eeb3c4a3 gcc-4.0.1.ebuild 1864
+MD5 09ad17f87713308c00a3c2d3022e4abf gcc-4.0.2-r3.ebuild 1852
 MD5 977f3e1bfda43f0843b3cf693d69b74c gcc-4.1.0_beta20060106.ebuild 2092
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvxIqCRZPokWLroQRAozIAJ9Hb4e4ipkFMZ8v0PI3IiRhN/gfigCdGL0u
-bnqbtsibASxSgN+bU0E9buk=
-=sVrE
+iD8DBQFDvzZz2+ySkm8kpY0RAs6UAKCF1BZzbySifhuGEPN5Yn5S+VLdrACgnyve
+eRKjylVwjyVaMC5qLKfCCrA=
+=0IcH
 -----END PGP SIGNATURE-----
