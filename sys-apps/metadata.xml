@@ -32,5 +32,10 @@
 		La categoria sys-apps contiene vari pacchetti essenziali per il sistema, e alcuni pacchetti
 		non essenziali che non sono ancora stati spostati in altre categorie sys-.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-apps contém vários pacotes essenciais do sistema, e
+		algumas aplicações não-centrais que ainda não foram colocadas em
+		outras categorias sys-.
+	</longdescription>
 </catmetadata>
 
