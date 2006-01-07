@@ -1,12 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.15-r1.ebuild,v 1.2 2005/11/16 15:43:18 metalgod Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.15-r1.ebuild,v 1.3 2006/01/07 01:36:11 vapier Exp $
 
 inherit eutils libtool autotools
-
-S="${WORKDIR}/${PN}"
 
 DESCRIPTION="a jack audio output plugin for XMMS"
 HOMEPAGE="http://xmms-jack.sourceforge.net/"
@@ -14,7 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc64"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
+IUSE=""
 
 RDEPEND="media-sound/xmms
 	>=media-libs/bio2jack-0.4
@@ -24,6 +21,8 @@ RDEPEND="media-sound/xmms
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.8*
 	=sys-devel/autoconf-2.5*"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
