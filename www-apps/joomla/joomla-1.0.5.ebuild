@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.4.ebuild,v 1.1 2005/11/27 14:36:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.5.ebuild,v 1.1 2006/01/07 16:12:46 rl03 Exp $
 
-inherit webapp eutils
+inherit webapp depend.php
 
 DESCRIPTION="Joomla is one of the most powerful Open Source Content Management
 Systems on the planet."
@@ -13,15 +13,15 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 S=${WORKDIR}
 
-IUSE=""
+IUSE="mysql"
 
-RDEPEND="dev-db/mysql
+RDEPEND="mysql? ( dev-db/mysql )
 	virtual/php
 	net-www/apache"
 
 pkg_setup () {
 	webapp_pkg_setup
-	einfo "Please make sure that your PHP is compiled with XML and MySQL support"
+	require_php_with_use mysql zlib
 }
 
 src_install () {
@@ -47,8 +47,8 @@ src_install () {
 
 pkg_postinst () {
 	einfo "Now run \"emerge --config =${PF}\""
-	einfo "to setup the database"
-	einfo "Note that db and dbuser need to be present prior to running db setup"
+	einfo "if you wish to setup the database locally"
+	einfo "Note that db and dbuser need to be present and MySQL must be running"
 	webapp_pkg_postinst
 }
 
@@ -57,9 +57,6 @@ pkg_config() {
 	D_DB="joomla"
 	D_HOST="localhost"
 	D_USER="joomla"
-
-	# do we want to start mysqld?
-	/etc/init.d/mysql restart || die "mysql needs to be running"
 
 	echo -n "mysql db name [${D_DB}]: "; read MY_DB
 	[[ -z ${MY_DB} ]] && MY_DB=${D_DB}
