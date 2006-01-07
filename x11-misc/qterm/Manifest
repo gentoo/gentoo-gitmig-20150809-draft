@@ -1,4 +1,4 @@
-MD5 4d438ccda8de9faed2795044ec6e3763 ChangeLog 2168
+MD5 4f9bce38fae29fc323ea248455209407 ChangeLog 2294
 MD5 a745822f07baaf5f7d4a5b55eb659077 files/digest-qterm-0.3.8 63
 MD5 b3833df45734522f0f5464160201f4e6 files/digest-qterm-0.4.0_pre2 67
 MD5 9901b624d7da095c2330671e2bfa4968 files/digest-qterm-0.4.0_pre3 68
@@ -6,4 +6,4 @@ MD5 7066e1a7b5cfd1ac1093a53a7dfd177d files/qstring.patch 767
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 513f79a785fe13d7b774a51b202b3559 qterm-0.3.8.ebuild 853
 MD5 5cdd87a13f2cc772e50d0a7fc2fa648a qterm-0.4.0_pre2.ebuild 905
-MD5 28a46ebec2c2b165c8964b340d66cffb qterm-0.4.0_pre3.ebuild 1471
+MD5 654236eeaf527eda3327ff8ed16ce82b qterm-0.4.0_pre3.ebuild 1470
