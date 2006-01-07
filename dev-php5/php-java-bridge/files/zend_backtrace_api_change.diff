@@ -1,0 +1,11 @@
+--- java.c	2005-12-20 01:37:59.000000000 +0100
++++ java.c	2005-12-20 01:40:19.000000000 +0100
+@@ -1049,7 +1049,7 @@
+   ZVAL_NULL(trace);
+   trace->is_ref = 0;
+   trace->refcount = 0;
+-  zend_fetch_debug_backtrace(trace, 0 TSRMLS_CC);
++  zend_fetch_debug_backtrace(trace, 0, 0 TSRMLS_CC);
+   
+   zend_update_property_string(zend_exception_get_default(), &obj, "file", sizeof("file")-1, zend_get_executed_filename(TSRMLS_C) TSRMLS_CC);
+   zend_update_property_long(zend_exception_get_default(), &obj, "line", sizeof("line")-1, zend_get_executed_lineno(TSRMLS_C) TSRMLS_CC);

@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/php-java-bridge
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.7 2005/12/04 00:32:55 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.8 2006/01/07 16:41:34 chtekk Exp $
+
+  07 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
+  +files/zend_backtrace_api_change.diff, -php-java-bridge-2.0.7.ebuild,
+  php-java-bridge-2.0.8.ebuild:
+  Sync with overlay. Fix variables order. Add patch to support PHP 5.1.X.
 
   04 Dec 2005; Luca Longinotti <chtekk@gentoo.org>
   php-java-bridge-2.0.8.ebuild:
