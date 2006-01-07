@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6894fc25e8d4ddbaf742a4119ceafd7 ChangeLog 1227
-MD5 eecd77ee917af18a18a8e0cd9307dafd squelch-1.0.1.ebuild 646
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 2ac2f03eae18ff2c43d0910a86ca6e12 ChangeLog 1346
 MD5 ad11ab05091f114e366b916b64d69ffb files/digest-squelch-1.0.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGs36j5H05b2HAEkRAlWEAJsHxid+N5UBydtGfbm+FGZuK/89qACglKJ0
-SFwuN9eAAw1948UHxSJB2Ls=
-=qZsp
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 89c19c618037e602244148c8cfa4b770 squelch-1.0.1.ebuild 625
