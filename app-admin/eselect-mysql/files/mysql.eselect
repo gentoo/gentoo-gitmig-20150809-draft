@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.1 2006/01/07 14:22:20 vivo Exp $
+# $Id: mysql.eselect,v 1.2 2006/01/07 16:05:00 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/01/07 14:22:20 $'
+SVN_DATE='$Date: 2006/01/07 16:05:00 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/sbin"
 ERR_NOT_FOUND="(not-found)"
@@ -18,7 +18,7 @@ function version4human() {
 	local x=${1}
 	local y=$(( x % 100 ))
 	x=$(( x / 100 ))
-	echo "MySQL-${x}.${y}.x"	
+	echo "MySQL-${x}.${y}.x"
 }
 
 # return a integer version
@@ -37,29 +37,10 @@ function version4bash() {
 # Return the versions currently installed
 
 find_versions() {
-	for servers in "${MYSQL_SYMLINK_CHECKDIR}/mysqld-"* ; do
+	# "eselect mysql set 1" will always set the best version
+	for servers in $(ls "${MYSQL_SYMLINK_CHECKDIR}/mysqld-"* | sort -r) ; do
 		echo "$(version4human "${servers##*-}")"
 	done
-}
-
-# Create a symlink for a given file
-#
-# $1 - original file name
-# $2 - MySQL version
-
-add_symlink() {
-	local fname="${1}"
-	local ver="${2}"
-	local lname
-	
-	[[ -z "${fname}" ]] || [[ -z "${ver}" ]] && return 1
-	
-	if [[ -f "${fname}" ]] ; then
-		pushd $( dirname "${fname}" ) 1> /dev/null
-			lname="$( basename "${fname}" )"
-			ln -sf "${lname}" "${lname%"-${ver}"}"
-		popd 1> /dev/null
-	fi
 }
 
 # Check if a symlink could be created for a specific file
@@ -74,15 +55,16 @@ check_symlink() {
 
 	[[ -z "${fname}" ]] || [[ -z "${ver}" ]] && return 1
 
-	local lname="${fname%"-${ver}"}"
+	local lname="${fname/"-${ver}"/}"
 
 	# check link source
-	[[ -f ${fname} ]] || ret=$(( ret +1 ))
+	[[ -f ${fname} ]] || [[ -d ${fname} ]] || ret=$(( ret +1 ))
 
 	# check link target
-	[[ ! -L "${lname}" ]] && [[ -f "${lname}" ]] && ret=$(( ret +2 ))
-	[[ -d "${lname}" ]] && ret=$(( ret +4 ))
-	#[[ -L "${lname}" ]] && return 0
+	# not checking for directory (want to keep "/etc/mysql")
+	[[ ! -L "${lname}" ]] \
+	&& [[ -f "${lname}" ]] \
+	&& ret=$(( ret +2 ))
 
 	return $ret
 
@@ -123,13 +105,13 @@ get_mysqlversion_fromlist() {
 get_current_mysqlversion() {
 	link=$(readlink ${MYSQL_SYMLINK_CHECKDIR}/mysqld)
 	version=${link##*-}
-	
+
 	if ! is_number "${version}" || [[ "${version}" == "" ]] ; then
-		version="(unset)"
+		version="${ERR_UNSET}"
 		echo "${version}"
 	else
 		echo $(version4human "${version}")
-	fi	
+	fi
 }
 
 set_current_mysqlversion() {
@@ -142,7 +124,7 @@ set_current_mysqlversion() {
 	# perform a check on the entire file list
 	while read fname ; do
 		dir="${ROOT}/$(dirname "${fname}")"
-		if [[ "${dir}" != "${lastdir}" ]] ; then 
+		if [[ "${dir}" != "${lastdir}" ]] ; then
 			cd "${dir}"
 			lastdir="${dir}"
 		fi
@@ -154,20 +136,22 @@ set_current_mysqlversion() {
 			"File \"${ROOT}/${fname}\" is not suitable for symlink (${ret})"
 		fi
 	done < "$ROOT/usr/share/mysql-${version}/.exe-list"
-	
+
 	# it's ok to do the effective work now
 	while read fname ; do
 		dir="${ROOT}/$(dirname "${fname}")"
-		if [[ "${dir}" != "${lastdir}" ]] ; then 
+		if [[ "${dir}" != "${lastdir}" ]] ; then
 			cd "${dir}"
 			lastdir="${dir}"
 		fi
 		lname="$(basename "${fname}")"
-		ln -sf "${lname}" "${lname%"-${version}"}"
+		ln -sf "${lname}" "${lname/"-${version}"/}"
+		[[ ! -L "${lname/"-${version}"/}" ]] \
+		&& write_warning_msg "FAILED: cd \"${dir}\" && ln -sf \"${lname}\" \"${lname/"-${version}"/}\""
 	done < "$ROOT/usr/share/mysql-${version}/.exe-list"
-	
+
 	cd "${CWD}"
-	
+
 }
 
 ### show action ###
@@ -189,7 +173,7 @@ describe_list() {
 }
 
 do_list() {
-	versions=( $(find_versions ) )
+	versions=( $(find_versions) )
 	current=$(get_current_mysqlversion)
 
 	write_list_start "Available MYSQL versions:"
@@ -215,7 +199,7 @@ describe_set() {
 }
 
 do_set() {
-	
+
 	local version versions
 	versions=( $(find_versions) )
 
@@ -223,13 +207,13 @@ do_set() {
 		# no parameter
 		die -q "You didn't tell me which version of MYSQL to use"
 	fi
-	
+
 	version=$(get_mysqlversion_fromlist $1)
-	
+
 	if [[ ${version} == "${ERR_NOT_FOUND}" ]] ; then
 		die -q "I don't recognise that version of MYSQL"
 	fi
-	
+
 	set_current_mysqlversion "$(version4bash "${version}")"
 }
 
