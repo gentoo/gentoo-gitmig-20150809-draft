@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.9 2006/01/05 04:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.10 2006/01/07 03:30:31 vapier Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ RDEPEND="|| (
 			x11-libs/libX11
 			x11-libs/libXres
 			x11-libs/libXTrap
+			x11-libs/libXp
 		)
 		virtual/x11
 	)"
