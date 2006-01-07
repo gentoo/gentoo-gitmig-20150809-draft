@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/sisctrl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.10 2005/09/15 20:55:31 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.11 2006/01/07 06:51:08 vapier Exp $
+
+  07 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/sisctrl-0.0.20050618-no-xv.patch, sisctrl-0.0.20050618.ebuild:
+  Cleanup ebuild and fix building when xv is disabled.
 
   15 Sep 2005; Luis Medinas <metalgod@gentoo.org>
   sisctrl-0.0.20050618.ebuild:

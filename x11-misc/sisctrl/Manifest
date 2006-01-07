@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 787af6eafbaf395dba898b807624b6a8 ChangeLog 1489
-MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 1dd0ee468fe256d41a2ae863c7fe4a5d sisctrl-0.0.20031119.ebuild 705
-MD5 107312103c9e6e7edaafb4c73f5eb94a sisctrl-0.0.20050618.ebuild 713
+MD5 3ad334d560d42edec49fe33d5c7a5898 ChangeLog 1665
 MD5 3b41773ae6c73bbf29ae5a6dc79be26d files/digest-sisctrl-0.0.20031119 72
 MD5 98103d9ddac672af388b837862d5e12d files/digest-sisctrl-0.0.20050618 72
+MD5 4178bb9d7331690c67064fcc9af05590 files/sisctrl-0.0.20050618-no-xv.patch 374
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 1dd0ee468fe256d41a2ae863c7fe4a5d sisctrl-0.0.20031119.ebuild 705
+MD5 277be7ccc6593fb1c22bbbf34d3ad9b3 sisctrl-0.0.20050618.ebuild 770
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKe4pwUpWvClEHQoRAuvcAJwLdYD5IEQwJkU0BMLKKU5PdRnNrgCfSQDu
-xTp0FNqGe+TzkY/u96viBqc=
-=VZeB
+iD8DBQFDv2Uk2+ySkm8kpY0RAh7wAJ42rZsGWY25Vg0jTH4zh0pHuSQETwCfTkpM
+Us5dtX1UXnU5oZlyn8BqTa8=
+=ufMZ
 -----END PGP SIGNATURE-----
