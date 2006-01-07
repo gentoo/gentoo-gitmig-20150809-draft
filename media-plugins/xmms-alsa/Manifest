@@ -8,13 +8,13 @@ MD5 f2dc998822b48e3e5081229388d13c10 files/digest-xmms-alsa-1.2.10-r2 227
 MD5 f82a414fbe72f019642a194b76d36b02 files/digest-xmms-alsa-1.2.10-r3 227
 MD5 14d44eca27c187b5c079729fb018db9f metadata.xml 250
 MD5 fdd481a3303620185c6e862d5c64b4ea xmms-alsa-1.2.10-r1.ebuild 483
-MD5 10372fb021229a5c1c497a1317cb9300 xmms-alsa-1.2.10-r2.ebuild 472
-MD5 26d698e57a761e579c84298a33a23e4f xmms-alsa-1.2.10-r3.ebuild 482
+MD5 b56ff434560c35df9d053cd1769b3e1c xmms-alsa-1.2.10-r2.ebuild 474
+MD5 c797b0d532c21f257e027180e740172a xmms-alsa-1.2.10-r3.ebuild 483
 MD5 591631548e0d5de7cf295c198471bf39 xmms-alsa-1.2.10.ebuild 465
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVXr/wUpWvClEHQoRAt4+AJ4pzzU3y+GZiyCC26HHGHa6eyQHsQCfRhmm
-gvto2nQLinKtW+zlx07IkJs=
-=/NpZ
+iD8DBQFDvxXv2+ySkm8kpY0RAu7DAJsGsifGtD+Jn+wBY5xdVvJX4A0zPACcCjac
+o9HX4RxOpOLgBNBLsPMBHS0=
+=0DNl
 -----END PGP SIGNATURE-----
