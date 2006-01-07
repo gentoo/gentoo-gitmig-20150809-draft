@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/xf86-input-keyboard-1.0.1.3.ebuild,v 1.1 2005/12/23 20:13:39 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/xf86-input-keyboard-1.0.1.3.ebuild,v 1.2 2006/01/07 04:49:48 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org driver for keyboard input devices"
-KEYWORDS="~amd64 ~mips ~ppc ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~sh ~sparc ~x86"
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
 	x11-proto/inputproto
