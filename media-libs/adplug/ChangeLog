@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/adplug
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.8 2005/07/07 18:50:20 spock Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.9 2006/01/07 17:47:33 spock Exp $
+
+*adplug-1.5.1-r1 (07 Jan 2006)
+
+  07 Jan 2006; Michał Januszewski <spock@gentoo.org>
+  +adplug-1.5.1-r1.ebuild:
+  Added a simple hack to make adplug compile with libbinio 1.4+.
 
   07 Jul 2005; Michał Januszewski <spock@gentoo.org> adplug-1.5.1.ebuild:
   Marked stable on x86.
