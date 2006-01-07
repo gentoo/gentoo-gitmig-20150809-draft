@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/oracle-instantclient-jdbc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.6 2005/06/21 19:41:24 radek Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.7 2006/01/07 22:34:37 dertobi123 Exp $
+
+*oracle-instantclient-jdbc-10.2.0.1 (07 Jan 2006)
+
+  07 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> metadata.xml,
+  +oracle-instantclient-jdbc-10.2.0.1.ebuild:
+  Bump to new upstream version.
+  Took over maintainership, bug #102171
 
 *oracle-instantclient-jdbc-10.1.0.4 (21 Jun 2005)
 
