@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r1.ebuild,v 1.6 2005/06/13 03:29:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r1.ebuild,v 1.7 2006/01/07 01:30:42 vapier Exp $
 
 IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
@@ -12,14 +12,14 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ppc-macos ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc-macos ppc64 sparc x86"
 
 RDEPEND=">=media-libs/libsndfile-1.0.0
 	dev-libs/glib
 	dev-util/pkgconfig
 	sys-libs/ncurses
-	!ppc64? ( !alpha? ( !ia64? ( portaudio? ( media-libs/portaudio ) ) ) )
-	!sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) )
+	portaudio? ( media-libs/portaudio )
+	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	caps? ( sys-libs/libcap )
 	!media-sound/jack-cvs"
 

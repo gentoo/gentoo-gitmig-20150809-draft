@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.0.ebuild,v 1.3 2005/12/12 02:53:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.0.ebuild,v 1.4 2006/01/07 01:30:42 vapier Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -17,8 +17,8 @@ RDEPEND="dev-util/pkgconfig
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
 	sys-libs/ncurses
 	caps? ( sys-libs/libcap )
-	!ppc64? ( !alpha? ( !ia64? ( portaudio? ( =media-libs/portaudio-18* ) ) ) )
-	!sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) )
+	portaudio? ( =media-libs/portaudio-18* )
+	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	!media-sound/jack-cvs"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"

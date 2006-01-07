@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.7.ebuild,v 1.1 2005/12/10 10:11:01 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.7.ebuild,v 1.2 2006/01/07 01:30:42 vapier Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -10,15 +10,15 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 -hppa -ia64 -mips ~ppc ~ppc-macos -ppc64 -sparc ~x86"
+KEYWORDS="-alpha ~amd64 ~arm -hppa -ia64 -mips ~ppc ~ppc-macos -ppc64 -sparc ~x86"
 IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss portaudio sndfile sse"
 
 RDEPEND="dev-util/pkgconfig
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
 	sys-libs/ncurses
 	caps? ( sys-libs/libcap )
-	!ppc64? ( !alpha? ( !ia64? ( portaudio? ( =media-libs/portaudio-18* ) ) ) )
-	!sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) )
+	portaudio? ( =media-libs/portaudio-18* )
+	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	!media-sound/jack-cvs"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
@@ -132,4 +132,3 @@ src_install() {
 
 	rm -rf ${D}/usr/share/doc/${PF}/reference
 }
-
