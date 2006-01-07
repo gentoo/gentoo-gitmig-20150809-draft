@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/psemu-peopssoftgpu
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.8 2005/04/03 07:47:52 vapier Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.9 2006/01/07 04:56:52 halcy0n Exp $
+
+*psemu-peopssoftgpu-1.17 (07 Jan 2006)
+
+  07 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/psemu-peopssoftgpu-1.17-gcc41.patch,
+  +psemu-peopssoftgpu-1.17.ebuild:
+  Version bump to 1.17 and apply patch to fix compilation with gcc-4, patch by
+  Maercelo Goes <vanquirius AT gentoo DOT org>; bug #117536
 
   03 Apr 2005; Mike Frysinger <vapier@gentoo.org>
   +files/psemu-peopssoftgpu-1.16-fix-noxf86vm.patch,
