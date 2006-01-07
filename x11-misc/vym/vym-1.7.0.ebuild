@@ -1,9 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.7.0.ebuild,v 1.1 2005/12/23 19:50:22 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.7.0.ebuild,v 1.2 2006/01/07 18:41:36 carlo Exp $
 
 inherit eutils kde-functions
-need-qt 3
 
 DESCRIPTION="View Your Mind -- a mindmap tool"
 HOMEPAGE="http://www.insilmaril.de/vym/"
@@ -22,8 +21,8 @@ DEPEND="virtual/x11 \
 	>=sys-devel/gcc-3.3.4-r1 \
 	>=sys-libs/glibc-2.3.4.20040808-r1 \
 	>=sys-libs/zlib-1.2.1-r3 \
-	>=x11-libs/qt-3.3.3 \
 	dev-lang/perl"
+need-qt 3
 
 src_unpack() {
 	unpack ${A}

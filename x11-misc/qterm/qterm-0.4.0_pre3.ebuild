@@ -1,10 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0_pre3.ebuild,v 1.1 2006/01/02 20:36:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0_pre3.ebuild,v 1.2 2006/01/07 18:43:30 carlo Exp $
 
 inherit kde-functions eutils
-
-need-qt 3
 
 DESCRIPTION="QTerm is a BBS client in Linux."
 HOMEPAGE="http://qterm.sourceforge.net/"
@@ -16,6 +14,7 @@ IUSE="arts esd ssl"
 DEPEND=">=media-sound/esound-0.2.22
 	dev-lang/python
 	ssl? ( dev-libs/openssl )"
+need-qt 3
 
 S=${WORKDIR}/${P/_/}
 
