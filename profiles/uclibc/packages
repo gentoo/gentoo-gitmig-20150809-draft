@@ -1,17 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/packages,v 1.28 2005/12/01 23:17:56 vapier Exp $
-
 app-misc/pax-utils
 
-# core
-*>=sys-apps/portage-2.0.51
-*virtual/baselayout
-
-# minimal versions
-#-*>=net-misc/iputils-021109-r3
--*net-misc/iputils
-*>=sys-devel/bison-1.875
-
 # remove stuff not needed on uclibc
+-*net-misc/iputils
 # c++ stuff disabled
 -*sys-apps/groff
 # man pages disabled (noman)
@@ -21,16 +11,12 @@ app-misc/pax-utils
 -*sys-devel/gettext
 # added by readline
 -*sys-libs/readline
-# added by zlib
--*sys-libs/zlib
 
 #
 # busybox/uclibc w/o shadow support
 #-*sys-apps/shadow
 #-*sys-libs/cracklib
 # 
-
--*sys-devel/bc
 
 #no idea why this is in base system
 <dev-libs/glib-2.5
