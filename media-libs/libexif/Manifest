@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2350d20a2285c5e30244d17f7809d040 ChangeLog 6382
+MD5 11c9de8503ece46c512aa2c1d659b8ba ChangeLog 6486
 MD5 c6e7ee4006cd2b5bd7cb0367f816fc8a files/digest-libexif-0.5.12-r2 66
 MD5 c6e7ee4006cd2b5bd7cb0367f816fc8a files/digest-libexif-0.5.12-r3 66
 MD5 0847d4ce556a73514f3fbbf303707e07 files/digest-libexif-0.6.12-r4 66
@@ -13,12 +13,12 @@ MD5 1cf86cdf4e82ee2c2b92a57348d30ae1 files/libexif-0.6.12-gcc4.patch 391
 MD5 8bf2206b6b7c7c447b7bc296288fc815 files/libexif-0.6.12-recurse.patch 2333
 MD5 a75e1a14e52213457be999a46c9392ed libexif-0.5.12-r2.ebuild 1125
 MD5 a585b948d244fd0f6f1cd0ff986857f9 libexif-0.5.12-r3.ebuild 1175
-MD5 d356723baa357df085a68aff1c2bb374 libexif-0.6.12-r4.ebuild 1664
+MD5 f0eb21aa8544e2efee87bbc84fef946d libexif-0.6.12-r4.ebuild 1665
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuWC5KRy60XGEcJIRAp0gAKCFH8XK9hF4zhHVZO8c4sVQmzcqzgCfX9fr
-WGnOc5paAVCuR6wMhAotOrs=
-=rLJE
+iD8DBQFDv6nJOpjtAl+gMRURAkuhAKDG4KH5ulEzorncogOf2pEFECGsRACeKGde
+2rDujcumnXWvfInLXdMB+UE=
+=p6Wu
 -----END PGP SIGNATURE-----
