@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4836 2006/01/07 06:32:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4837 2006/01/07 10:10:49 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Daniel Black <dragonheart@gentoo.org> (07 Jan 2006)
+# masked for testing and seeking help with textrel
+=app-crypt/johntheripper-1.6.40
 
 # Daniel Black <dragonheart@gentoo.org> (06 Jan 2006)
 # masked for sparc testing of dependenies with bug #117873
