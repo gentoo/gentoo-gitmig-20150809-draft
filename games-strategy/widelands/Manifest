@@ -3,5 +3,5 @@ MD5 4de0ba8b5543e6d848c86838244852e6 files/digest-widelands-0.0.9 73
 MD5 47800deda03f6db9034d766478dd4cec files/digest-widelands-0.0.9.5 78
 MD5 839d74b86a5e329cbfb77e61c65d6921 files/widelands-0.0.9-amd64.patch 425
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6b79390ccfbd68c949cb0261b1b48bb0 widelands-0.0.9.5.ebuild 1378
+MD5 f72d97c96d0030b5bd0e0c4916dbbebd widelands-0.0.9.5.ebuild 1388
 MD5 5973bcdbf97557cad2aaa063f7ba32e0 widelands-0.0.9.ebuild 1169
