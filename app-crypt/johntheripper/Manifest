@@ -7,13 +7,13 @@ MD5 dd34c8d2b730b0a8ae9eec5582698fc2 files/digest-johntheripper-1.6-r3 126
 MD5 d9ceb6148f478e763e8e358aa324e71a files/digest-johntheripper-1.6.40 152
 MD5 647f92814e453cb358ef2d0df669f026 files/john-ntlm.skey.patch 1168
 MD5 807986a261aa0a569df62e70f6678370 johntheripper-1.6-r3.ebuild 3046
-MD5 ccf0f2fc3d0e4385b5a5ece728711503 johntheripper-1.6.40.ebuild 3332
+MD5 baa67b194a340db8dbd5139cac6b592a johntheripper-1.6.40.ebuild 3331
 MD5 dfb8cfe55b695afa3d3fd24deabc7279 johntheripper-1.6.ebuild 1329
 MD5 1da04b916dc5d18f323ec583c17a7208 metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDv6xBmdTrptrqvGERAm+8AJ9i4h8Q28dFTQ4FFjhVF3dlvlE47gCeKHlv
-44BO4h84hgQ57g0DPLNcx+A=
-=H38q
+iD8DBQFDv7ypmdTrptrqvGERAlcuAJ4mIc0UIiy1Y0ZO6NN5nncCyvcKZwCfecCl
+kWJkf+vXjs4uKULcHHCIeUo=
+=vBhJ
 -----END PGP SIGNATURE-----
