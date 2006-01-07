@@ -1,12 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.4-r1.ebuild,v 1.2 2006/01/06 20:09:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.4-r1.ebuild,v 1.3 2006/01/07 18:09:13 wolf31o2 Exp $
 
+inherit eutils
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
 SRC_URI="mirror://sourceforge/xqf/${P}.tar.gz"
-
-inherit eutils
 
 LICENSE="GPL-2"
 SLOT="0"

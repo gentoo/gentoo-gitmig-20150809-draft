@@ -1,5 +1,5 @@
-MD5 611c4f0c9943e384e98725a0de318307 ChangeLog 4053
+MD5 85c24f7e785ec7e0ae797cf6f8c99f75 ChangeLog 4189
 MD5 c2bd8c62efd056bb8bd59f3bd83b6b0f files/digest-xqf-1.0.4-r1 61
 MD5 8938dd0a78bb2de104e843ab64024f67 files/gtk2.patch 648
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9bad21c3dfe0d1e06f91e26c2dc0f6ae xqf-1.0.4-r1.ebuild 1209
+MD5 be77d5ed621b1796124c2e92c337c5d4 xqf-1.0.4-r1.ebuild 1208
