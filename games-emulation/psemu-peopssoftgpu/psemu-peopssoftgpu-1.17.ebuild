@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.1 2006/01/07 04:56:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.2 2006/01/07 05:03:12 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="P.E.Op.S Software GPU plugin"
 HOMEPAGE="http://sourceforge.net/projects/peops/"
-SRC_URI="mirror://sourceforge/peops/PeopsSoftGpu${PV//.}.tar.gz"
+SRC_URI="mirror://sourceforge/peops/PeopsSoftGpu${PV//./}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
