@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.24 2005/01/01 06:53:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.25 2006/01/07 23:19:34 dragonheart Exp $
 
 inherit eutils
 
@@ -23,6 +23,14 @@ DEPEND=">=sys-devel/binutils-2.8.1.0.15
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${DEBPATCH}
+	cd ${S}/src
+	for file in  alpha.S  sparc.S  x86.S; do
+		cat <<EOF >> ${file}
+#ifdef __ELF__
+.section .note.GNU-stack,"",@progbits
+#endif
+EOF
+	done
 }
 
 src_compile() {
