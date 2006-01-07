@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 766bf69d0aa3ef31d4051dea4fcdee0a ChangeLog 1096
+MD5 cb22dc85bbd740f20b155547bec0b671 ChangeLog 1231
 MD5 8104d29f4f544ed24fc54349b3c50968 files/2.2.0/patch01 1248
 MD5 34ae93cd0ed0b3adcb49cfdc68c18b75 files/2.2.0/patch02 2177
 MD5 a7af9750238fdf49c8dffcf151f57049 files/2.2.0/patch03 407
@@ -12,11 +12,11 @@ MD5 f6dac72eea74ed7475bfcb5461ebe3af files/digest-mpfr-2.2.0_p4 63
 MD5 868ae437254277cb5364323564dc124d files/digest-mpfr-2.2.0_p7 120
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 69440ff8d7609c44fc1569e999970150 mpfr-2.2.0_p4.ebuild 988
-MD5 7747bb38df271ad7663d39604c33dcb8 mpfr-2.2.0_p7.ebuild 1315
+MD5 b15a5383135e4e213d444120c011b321 mpfr-2.2.0_p7.ebuild 1316
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvxYymdTrptrqvGERAsgoAJ0QsJapA/rJSIjzJ2/+9/ZRVa+o7gCdGeo6
-apG9aQqVNBVctRfCqFcQxGM=
-=L/Uc
+iD8DBQFDvx/LmdTrptrqvGERAmGoAJwIEOtBk++39rUCKfASQUYs/PUN9wCeI+k8
+LhnA/JzLIink8jSXZYHSGEQ=
+=0tYJ
 -----END PGP SIGNATURE-----

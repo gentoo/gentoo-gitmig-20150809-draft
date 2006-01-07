@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.7 2006/01/07 00:46:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.8 2006/01/07 01:26:58 dragonheart Exp $
+
+  07 Jan 2006; Daniel Black <dragonheart@gentoo.org> mpfr-2.2.0_p7.ebuild:
+  opps did not mean to commit 390 to stable - marked ~s390
 
 *mpfr-2.2.0_p7 (07 Jan 2006)
 

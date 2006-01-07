@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b3f165b2d14a1a387b58d18e8b7360b ChangeLog 5699
-MD5 df82644c18f756a618ceb4e3e378a64c files/digest-xerces-c-2.6.0 71
+MD5 c4e9598e8fe485212b9a4f5e59818159 ChangeLog 5883
 MD5 df82644c18f756a618ceb4e3e378a64c files/digest-xerces-c-2.6.0-r1 71
 MD5 c9823d79de49cd66dc39de2525163280 files/digest-xerces-c-2.7.0 72
 MD5 1c36cac94e6f0dcfd2addbb34ac332e2 files/xerces-c-2.6.0-multilib.patch 3023
 MD5 dd35713fae90dbd73f534c31b98591e7 files/xerces-c-2.7.0-multilib.patch 3267
 MD5 751dbed21e1e078fa8f07ef9bf0991b2 metadata.xml 376
-MD5 91a0101a543246aced87b8b5cdc0ce27 xerces-c-2.6.0-r1.ebuild 1222
-MD5 2d7d991c4c4b919fb8536f4a95d96f6f xerces-c-2.6.0.ebuild 1054
-MD5 0764e9e9e938e267d57c2a6f0c2a65f0 xerces-c-2.7.0.ebuild 1213
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDi8fNgIKl8Uu19MoRAqWlAJYjazuWl8Qg2GRdoC2oFn5c+AaNAJ4xtnRs
-SpaBaEmJtxgF+BxT/Pq4nA==
-=P8qB
------END PGP SIGNATURE-----
+MD5 1733ed8f5b1ad4592d93366c40016a92 xerces-c-2.6.0-r1.ebuild 1212
+MD5 1d27d6c485a4b680006b519a0d729b48 xerces-c-2.7.0.ebuild 1199
