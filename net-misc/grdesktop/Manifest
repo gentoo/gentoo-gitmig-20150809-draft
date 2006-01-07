@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 06c5fc84e3eaf3c71c3b4a60c97be7c2 ChangeLog 2647
-MD5 85482cac75804786b334e81c1cb64a40 grdesktop-0.22-r1.ebuild 1339
-MD5 3028bfd8385ff166be48a323b5316d50 metadata.xml 220
-MD5 7ed7a766bb1335e0b6e72da4c86e9960 grdesktop-0.23.ebuild 861
-MD5 806d5e8650998f026e38540b9ba5b4d8 files/grdesktop-0.22-gcc2_fix.patch 681
-MD5 ce3778b120708f9ecf09d3ad4b4687e2 files/digest-grdesktop-0.23 66
-MD5 01661549d947b7edab52e75c03476c52 files/digest-grdesktop-0.22-r1 66
+MD5 3e039cb398dd1c27dfeedeca287268b3 ChangeLog 2751
 MD5 c2269043464e0708e27a660f20f2ce66 files/0010_all_0.22-remove-double-makefile-syntax.patch 850
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDJb0wKRy60XGEcJIRApBCAJ0R5f1wCY8MMV+qgbMyl1/dREzuOgCgphh9
-KN8PiZmb4mDFQ+nz5kx+pVg=
-=VnL4
------END PGP SIGNATURE-----
+MD5 01661549d947b7edab52e75c03476c52 files/digest-grdesktop-0.22-r1 66
+MD5 ce3778b120708f9ecf09d3ad4b4687e2 files/digest-grdesktop-0.23 66
+MD5 806d5e8650998f026e38540b9ba5b4d8 files/grdesktop-0.22-gcc2_fix.patch 681
+MD5 85482cac75804786b334e81c1cb64a40 grdesktop-0.22-r1.ebuild 1339
+MD5 13c0bab77c944e2cb76a89402e7d87a0 grdesktop-0.23.ebuild 862
+MD5 3028bfd8385ff166be48a323b5316d50 metadata.xml 220
