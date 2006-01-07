@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0.ebuild,v 1.4 2006/01/07 01:29:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0.ebuild,v 1.5 2006/01/07 11:46:14 blubb Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/xml/xerces-c/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
