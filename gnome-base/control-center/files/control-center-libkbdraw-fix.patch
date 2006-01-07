@@ -1,11 +1,32 @@
 --- control-center-2.10.2/libkbdraw/Makefile.am	2005-02-21 11:42:41.000000000 -0500
-+++ control-center-2.10.2.new/libkbdraw/Makefile.am	2006-01-06 10:15:03.000000000 -0500
-@@ -19,6 +19,8 @@
- 
++++ control-center-2.10.2.new/libkbdraw/Makefile.am	2006-01-07 08:51:29.000000000 -0500
+@@ -20,6 +20,7 @@
  AM_CFLAGS = $(GTK_CFLAGS) -Wall -Werror
  
-+INCLUDES = $(FONT_THUMBNAILER_CFLAGS)
-+
  noinst_LIBRARIES = libkbdraw.a
++libkbdraw_a_CFLAGS = $(PANGOXFT_CFLAGS) $(GTK_CFLAGS)
  libkbdraw_a_SOURCES = keyboard-marshal.c keyboard-marshal.h \
                         keyboard-drawing.c keyboard-drawing.h
+ 
+--- control-center-2.10.2/capplets/keyboard/Makefile.am	2005-02-21 11:42:39.000000000 -0500
++++ control-center-2.10.2.new/capplets/keyboard/Makefile.am	2006-01-07 08:52:14.000000000 -0500
+@@ -11,7 +11,8 @@
+ 	../accessibility/keyboard/libaccessibility-keyboard.a 	\
+ 	$(GNOMECC_CAPPLETS_LIBS) $(LIBXKLAVIER_LIBS) \
+ 	../../libgswitchit/libgswitchit.a \
+-	../../libkbdraw/libkbdraw.a
++	../../libkbdraw/libkbdraw.a \
++	$(PANGOXFT_LIBS)
+ 
+ @INTLTOOL_DESKTOP_RULE@
+ 
+--- control-center-2.10.2/configure.in	2005-07-04 16:31:46.000000000 -0400
++++ control-center-2.10.2.new/configure.in	2006-01-07 08:27:31.000000000 -0500
+@@ -104,6 +104,7 @@
+ PKG_CHECK_MODULES(GNOME_DESKTOP, gnome-desktop-2.0)
+ PKG_CHECK_MODULES(SOUND_CAPPLET, esound)
+ PKG_CHECK_MODULES(METACITY, libmetacity-private)
++PKG_CHECK_MODULES(PANGOXFT, pangoxft >= 1.10)
+ PKG_CHECK_MODULES(LIBXKLAVIER, libxklavier >= 1.14,,
+     AC_MSG_ERROR([gnome-control-center depends on libxklavier.
+ The latest release is available from http://prdownloads.sourceforge.net/gswitchit], 1))
