@@ -1,5 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.01.ebuild,v 1.2 2006/01/07 22:19:01 spock Exp $
 
 inherit eutils
 
