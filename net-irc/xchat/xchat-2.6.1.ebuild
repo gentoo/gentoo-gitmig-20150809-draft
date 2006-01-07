@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.1.ebuild,v 1.1 2006/01/07 12:06:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.1.ebuild,v 1.2 2006/01/07 12:12:50 swegener Exp $
 
-inherit eutils versionator
+inherit eutils versionator gnome2
 
 DESCRIPTION="Graphical IRC client"
 SRC_URI="http://www.xchat.org/files/source/$(get_version_component_range 1-2)/${P}.tar.bz2
@@ -74,7 +74,7 @@ src_install() {
 		-e "s:Name=XChat IRC:Name=XChat 2 IRC:" \
 		xchat.desktop
 
-	make DESTDIR="${D}" install || die "make install failed"
+	USE_DESTDIR=1 gnome2_src_install || die "make install failed"
 
 	# install plugin development header
 	insinto /usr/include/xchat
