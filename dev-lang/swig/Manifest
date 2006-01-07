@@ -1,10 +1,20 @@
-MD5 fd2a46417059fad6f95bcb0edba76791 ChangeLog 6704
-MD5 c642968e8d7284836603f2f63216bcb4 metadata.xml 768
-MD5 ee73f98bd5bd9c43b8ef87a8d380ed46 swig-1.3.21.ebuild 1922
-MD5 e27ffef811e03d0bffed935db35d13e9 swig-1.3.24.ebuild 1840
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 63e411a4d53497051ecf21b0d7e74cd3 swig-1.3.25.ebuild 1666
+MD5 a42ca630e03ab43729d1cebf4fef3342 swig-1.3.21.ebuild 1914
+MD5 c642968e8d7284836603f2f63216bcb4 metadata.xml 768
+MD5 caf366e8d34558a4dc54d5301ca2f716 ChangeLog 6847
+MD5 e27ffef811e03d0bffed935db35d13e9 swig-1.3.24.ebuild 1840
 MD5 0faf06b52d38eff619ce18eb81b26654 swig-1.3.27.ebuild 1684
 MD5 612242e40ef11cd73ec029e52f6a6e0d files/digest-swig-1.3.21 64
 MD5 23c0a3cf6bf490d36300b9ad06baf451 files/digest-swig-1.3.24 64
 MD5 a870c3f4793155f09d7633605321df30 files/digest-swig-1.3.25 64
 MD5 011d2439bc52a3cc1e8c61a29068f52e files/digest-swig-1.3.27 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwIcTFdQwWVoAgN4RAg0eAKDdNvMKWEzppfPSJnjqboEZ2EiMTACgsGkV
+dhOecGGUraQ0kh0dBgjkIPc=
+=UUTK
+-----END PGP SIGNATURE-----
