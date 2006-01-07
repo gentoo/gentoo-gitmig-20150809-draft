@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.3 2006/01/04 20:37:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.4 2006/01/07 16:43:39 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -19,11 +19,10 @@ HOMEPAGE="http://www.mysql.com/"
 NEWP="${PN}-${PV/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
 	mirror://gentoo/mysql-extras-20051220.tar.bz2"
-
 LICENSE="GPL-2"
-KEYWORDS="-*"
 IUSE="big-tables berkdb debug minimal perl selinux ssl static"
 RESTRICT="primaryuri"
+DEPEND="app-admin/eselect-mysql"
 
 mysql_version_is_at_least "4.01.03.00" \
 && IUSE="${IUSE} cluster utf8 extraengine"
@@ -62,7 +61,7 @@ mysql_src_unpack() {
 
 	unpack ${A} || die
 
-	mv "${WORKDIR}/${NEWP}" "${S}"
+	mv -f "${WORKDIR}/${NEWP}" "${S}"
 	cd "${S}"
 
 	EPATCH_SUFFIX="patch"
@@ -106,7 +105,7 @@ mysql_src_unpack() {
 
 	for d in ${rebuilddirlist}; do
 		einfo "reconfiguring dir \"${d}\""
-		pushd "${d}"
+		pushd "${d}" &>/dev/null
 		for buildstep in \
 			'libtoolize --copy --force' \
 			'aclocal --force' \
@@ -118,13 +117,13 @@ mysql_src_unpack() {
 			einfo "performing ${buildstep}"
 			${buildstep} || die "failed ${buildstep/ */} dir \"${d}\""
 		done
-		popd
+		popd &>/dev/null
 	done
 
 	if ! mysql_check_version_range "5.01.00.00 to 5.01.06.99" ; then
-		[[ -w "${bdbdir}/ltmain.sh" ]] && cp ltmain.sh "${bdbdir}/ltmain.sh"
-		pushd "${bdbdir}" && sh s_all || die "failed bdb reconfigure"
-		popd
+		[[ -w "${bdbdir}/ltmain.sh" ]] && cp -f ltmain.sh "${bdbdir}/ltmain.sh"
+		pushd "${bdbdir}" && sh s_all || die "failed bdb reconfigure" &>/dev/null
+		popd &>/dev/null
 	fi
 
 }
@@ -333,17 +332,11 @@ mysql_src_install() {
 		rm -f ${D}/usr/share/mysql/${removeme}
 	done
 
-	# oops
-	mysql_check_version_range "5.00.16.00 to 5.00.18.99" \
-	&& cp \
-		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" \
-		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
-
 	# TODO change at Makefile-am level
 	for moveme in "mysql_fix_privilege_tables.sql" \
 		"fill_help_tables.sql" "ndb-config-2-node.ini"
 	do
-		mv "${D}/usr/share/mysql/${moveme}" "${D}/usr/share/mysql${MY_SUFFIX}/" 2>/dev/null
+		mv -f "${D}/usr/share/mysql/${moveme}" "${D}/usr/share/mysql${MY_SUFFIX}/" 2>/dev/null
 	done
 
 	if [[ -n "${MY_SUFFIX}" ]] ; then
@@ -421,12 +414,30 @@ mysql_src_install() {
 		done
 
 		docinto "scripts"
-		for script in \
-			$(ls scripts/mysql* | grep -v '.sh$')
-		do
-			dodoc "${script}"
+		for script in scripts/mysql* ; do
+			[[ "${script%.sh}" == "${script}" ]] && dodoc "${script}"
 		done
 	fi
+
+	# oops, temporary fix
+	mysql_check_version_range "5.00.16.00 to 5.00.18.99" \
+	&& cp -f \
+		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" \
+		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
+
+	# create a list of executable files, to be used
+	# by external utilities
+	# uncompressed because of the small size
+	local exelist="usr/share/mysql${MY_SUFFIX}/.exe-list"
+	pushd "${D}/" &>/dev/null
+		env -i find usr/bin/ usr/sbin/ usr/share/man \
+			-type f -name "*${MY_SUFFIX}*" \
+			> "${exelist}"
+		echo "${MY_SYSCONFDIR##"/"}" >> "${exelist}"
+		echo "${MY_INCLUDEDIR##"/"}" >> "${exelist}"
+		echo "${MY_LIBDIR##"/"}" >> "${exelist}"
+		echo "${MY_SHAREDSTATEDIR##"/"}" >> "${exelist}"
+	popd &>/dev/null
 }
 
 mysql_pkg_preinst() {
@@ -460,6 +471,13 @@ mysql_pkg_postinst() {
 	fi
 
 	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
+	if [[ ${SLOT} -gt 0 ]] ; then
+		einfo "you may want to run \"eselect myqsl list\" followed by a "
+		einfo "\"eselect myqsl list\" to chose the default mysql server"
+		einfo "Prior to do this unmerge any unslotted MySQL versions with "
+		einfo "emerge -C -p dev-db/mysql <<< NOTICE the \"-p\""
+		einfo "emerge -C =dev-db/mysql-X.Y.Z"
+	fi
 }
 
 mysql_pkg_config() {
@@ -504,9 +522,9 @@ mysql_pkg_config() {
 	|| touch "${TMPDIR}/fill_help_tables.sql"
 	help_tables="${TMPDIR}/fill_help_tables.sql"
 
-	pushd "${TMPDIR}"
+	pushd "${TMPDIR}" &>/dev/null
 	${ROOT}/usr/bin/mysql_install_db${MY_SUFFIX} | grep -B5 -A999 -i "ERROR"
-	popd
+	popd &>/dev/null
 	[[ -f ${ROOT}/${DATADIR}/mysql/user.frm ]] 	|| die "MySQL databases not installed"
 	chown -R mysql:mysql ${ROOT}/${DATADIR} 2> /dev/null
 	chmod 0750 ${ROOT}/${DATADIR} 2> /dev/null
@@ -572,4 +590,8 @@ mysql_pkg_config() {
 
 mysql_pkg_postrm() {
 	mysql_lib_symlinks
+	if [[ ${SLOT} -gt 0 ]] ; then
+		einfo "you may want to run \"eselect myqsl list\" followed by a "
+		einfo "\"eselect myqsl list\" to chose the default mysql server"
+	fi
 }
