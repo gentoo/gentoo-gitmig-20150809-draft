@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/PEAR-XML_XPath/PEAR-XML_XPath-1.2.2.ebuild,v 1.1 2006/01/07 09:59:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/PEAR-XML_XPath/PEAR-XML_XPath-1.2.2.ebuild,v 1.2 2006/01/07 10:06:12 sebastian Exp $
 
 inherit php-pear-r1 depend.php
 
@@ -15,4 +15,4 @@ pkg_postinst () {
 	ewarn "PHP 4 built with the DOMXML extension (USE=xml2)."
 }
 
-need_php4
+need_php_by_category
