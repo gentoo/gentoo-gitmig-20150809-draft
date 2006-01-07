@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.6 2005/12/23 10:30:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.7 2006/01/07 22:51:09 chainsaw Exp $
 
 inherit eutils
 
@@ -36,6 +36,10 @@ src_compile() {
 	# stupid configure assumes $x_libaries cannot be empty
 	epatch "${FILESDIR}/${P}-configure.patch"
 	epatch "${FILESDIR}/${P}-mkdirhier.patch"
+
+	# GCC 4 compatability fix for 'display.c:115: error: memory input 1 is not directly addressable'
+	# Upstream fix as reported by Mark Loeser <halcy0n@gentoo.org> in bug #118050
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	econf $(use_enable debug) || die
 	emake || die

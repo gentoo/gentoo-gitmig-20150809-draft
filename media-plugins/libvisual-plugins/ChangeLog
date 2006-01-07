@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/libvisual-plugins
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.10 2005/12/23 10:30:19 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.11 2006/01/07 22:51:09 chainsaw Exp $
+
+  07 Jan 2006; <chainsaw@gentoo.org>
+  +files/libvisual-plugins-0.2.0-gcc4.patch, libvisual-plugins-0.2.0.ebuild:
+  GCC4 compatability patch from upstream, closes bug #118050. Thanks to Mark
+  Loeser <halcy0n@gentoo.org>.
 
   23 Dec 2005; Markus Rothe <corsair@gentoo.org>
   libvisual-plugins-0.2.0.ebuild:
