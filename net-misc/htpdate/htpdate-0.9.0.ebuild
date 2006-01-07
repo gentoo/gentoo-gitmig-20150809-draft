@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.9.0.ebuild,v 1.2 2006/01/02 15:50:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.9.0.ebuild,v 1.3 2006/01/07 09:38:35 dertobi123 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -28,5 +28,5 @@ src_compile() {
 src_install () {
 	dosbin htpdate || die
 	doman htpdate.8.gz || die
-	dodoc README || die
+	dodoc README Changelog || die
 }

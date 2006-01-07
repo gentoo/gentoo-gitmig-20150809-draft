@@ -1,4 +1,4 @@
-MD5 dec732edf07804d6ce1f98ac1b8c2d29 ChangeLog 2043
+MD5 cba46142e27bf3bb76fcc39d3983befa ChangeLog 2187
 MD5 86ea7c47156ba3ab7bd460ad939b1d57 files/digest-htpdate-0.8.2 64
 MD5 04f4c6fdd660e39f608b45bb648846db files/digest-htpdate-0.8.7 64
 MD5 74a2c3ca0bc4ee7f4e0ad78119c993bb files/digest-htpdate-0.8.8 64
@@ -7,5 +7,5 @@ MD5 ec81f587e402abf72a7e9e7f7f35e31b files/ppc.patch 474
 MD5 4e9e22bee0560930aec77a469440d7e9 htpdate-0.8.2.ebuild 767
 MD5 11f78d6f0b02d8063677fc547fb7b188 htpdate-0.8.7.ebuild 742
 MD5 cc6cc424526214bbc57e828f1052d018 htpdate-0.8.8.ebuild 743
-MD5 acb2709148991d468c7934d00c03c17c htpdate-0.9.0.ebuild 735
+MD5 0d7dacc4ec42c1aacaf3310ee5a62e58 htpdate-0.9.0.ebuild 745
 MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
