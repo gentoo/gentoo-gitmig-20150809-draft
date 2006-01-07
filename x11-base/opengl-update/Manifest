@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 13a3bac65541408e8c38bacc4cf59543 ChangeLog 20202
-MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
-MD5 f87231ba964818a1ad7eeea6dbd519b0 opengl-update-2.2.4.ebuild 2584
-MD5 47e72283d661e1735ac1b23e65bebf74 opengl-update-2.2.1.ebuild 2661
-MD5 d5d7a1913416618c1ce846c66c877445 opengl-update-3.0.0.ebuild 750
-MD5 d6b4a7de2926d22a6b52f4d129ce3e7f files/digest-opengl-update-2.2.4 116
-MD5 78f2778d5b41874016deb3135122b189 files/opengl-update-2.2.1 9849
 MD5 219a292f64caeaa46b333eecde2197f2 files/digest-opengl-update-2.2.1 116
+MD5 d6b4a7de2926d22a6b52f4d129ce3e7f files/digest-opengl-update-2.2.4 116
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-3.0.0 0
-MD5 763717ca92a7b90da3ad6726770d2b77 files/opengl-update-3.0.0 4204
-MD5 23b30f7c0b9e658f78d0068999e68a80 files/opengl-update-2.2.4 9865
 MD5 600714175bf22abf40ed067b3dcb600d files/glxext.h-inttypes.patch 671
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHKuMArHZZzCEUG0RApxwAJ9lXDMOT6HIOHcbW6Mr2D8KHReZZwCeNAi5
-4UQBFeAFoImG0BYJ7NlUGao=
-=VgNr
------END PGP SIGNATURE-----
+MD5 78f2778d5b41874016deb3135122b189 files/opengl-update-2.2.1 9849
+MD5 23b30f7c0b9e658f78d0068999e68a80 files/opengl-update-2.2.4 9865
+MD5 763717ca92a7b90da3ad6726770d2b77 files/opengl-update-3.0.0 4204
+MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
+MD5 cc6d5a9012e3845a786b9105aead75e9 opengl-update-2.2.1.ebuild 2660
+MD5 f87231ba964818a1ad7eeea6dbd519b0 opengl-update-2.2.4.ebuild 2584
+MD5 d5d7a1913416618c1ce846c66c877445 opengl-update-3.0.0.ebuild 750
