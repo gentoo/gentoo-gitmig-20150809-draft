@@ -1,10 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.2.ebuild,v 1.5 2005/10/04 20:04:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.2.ebuild,v 1.6 2006/01/07 19:22:30 carlo Exp $
 
 inherit kde-functions eutils
-
-need-qt 3
 
 S=${WORKDIR}/QtWvDialer-${PV}
 DESCRIPTION="QT Frontend for wvdial"
@@ -15,6 +13,7 @@ DEPEND=">=dev-util/tmake-1.6
 	sys-apps/which
 	virtual/modutils
 	>=sys-apps/sed-4"
+need-qt 3
 
 RDEPEND="net-dialup/wvdial"
 
