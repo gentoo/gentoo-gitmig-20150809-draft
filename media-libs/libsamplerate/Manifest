@@ -1,6 +1,16 @@
-MD5 75f188aacec508439e54abda70a35d74 libsamplerate-0.1.1-r1.ebuild 1002
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 1b38ff69a65bdd8e53c111f8893b7c8e libsamplerate-0.1.2.ebuild 1015
-MD5 93305eb01116cbfba8d46feb3de89121 ChangeLog 4391
-MD5 34c844c01ebaf20a0f9c5d65a71b9ff8 files/digest-libsamplerate-0.1.2 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e727f8185d8429f0911d70c5b7c6a71f ChangeLog 4524
 MD5 9232ca31b1c51c2982baf3044f618e91 files/digest-libsamplerate-0.1.1-r1 71
+MD5 34c844c01ebaf20a0f9c5d65a71b9ff8 files/digest-libsamplerate-0.1.2 71
+MD5 75f188aacec508439e54abda70a35d74 libsamplerate-0.1.1-r1.ebuild 1002
+MD5 7e676b8ac5be0307e7c03b10241cce02 libsamplerate-0.1.2.ebuild 814
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDvxtO2+ySkm8kpY0RAmj1AKCP8TNXoiM79gLkMCh2Hf/Dyhu49QCcCvcO
+LBGYhVTsizBzRuedUHWxHAc=
+=qn1F
+-----END PGP SIGNATURE-----

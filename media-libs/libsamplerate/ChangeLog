@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsamplerate
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.32 2005/09/13 20:17:49 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.33 2006/01/07 01:36:06 vapier Exp $
+
+  07 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  libsamplerate-0.1.2.ebuild:
+  Remove broken static/pic handling and add arm love.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   libsamplerate-0.1.2.ebuild:
