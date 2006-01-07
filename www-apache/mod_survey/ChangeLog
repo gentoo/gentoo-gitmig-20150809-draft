@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_survey
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/ChangeLog,v 1.6 2005/05/24 14:29:45 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/ChangeLog,v 1.7 2006/01/07 17:11:23 rl03 Exp $
+
+*mod_survey-3.2.3_pre2 (07 Jan 2006)
+
+  07 Jan 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
+  -files/reconfig, metadata.xml, -mod_survey-3.2.0.ebuild,
+  +mod_survey-3.2.3_pre2.ebuild:
+  Version bump and general cleanup per bug #75037.
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   mod_survey-3.2.0.ebuild:

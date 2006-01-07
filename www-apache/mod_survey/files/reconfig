@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ $1 = "start" -o $1 = "install" ]; then
-	sed -i "s|/usr/lib/mod_survey/webroot/|${VHOST_ROOT}/webroot/|g" /usr/lib/mod_survey/survey.conf
-	chown apache:apache /var/lib/mod_survey/data
-else
-	echo $1
-fi
