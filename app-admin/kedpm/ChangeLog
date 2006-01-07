@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kedpm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.12 2005/10/07 08:04:59 dragonheart Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.13 2006/01/07 19:33:11 dragonheart Exp $
+
+  07 Jan 2006; Daniel Black <dragonheart@gentoo.org> kedpm-0.4.0.ebuild:
+  condition around built_with_use as per compneds request
 
   07 Oct 2005; Daniel Black <dragonheart@gentoo.org> kedpm-0.4.0.ebuild:
   don't install INSTALL documentation

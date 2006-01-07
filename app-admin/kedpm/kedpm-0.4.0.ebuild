@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.13 2005/10/07 08:04:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.14 2006/01/07 19:33:11 dragonheart Exp $
 
 inherit distutils eutils
 
@@ -21,9 +21,11 @@ RDEPEND="dev-python/pycrypto
 pkg_setup() {
 	if use gtk
 	then
-		if ! built_with_use dev-python/pygtk gnome
-		then
-			die "You need to compile dev-python/pygtk with gnome USE flag!"
+		if has_version '<dev-python/pygtk-2.8.0-r2' ; then
+			if ! built_with_use dev-python/pygtk gnome
+			then
+				die "You need to compile dev-python/pygtk with gnome USE flag!"
+			fi
 		fi
 	fi
 }
