@@ -1,9 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-1.1.ebuild,v 1.1 2005/12/04 02:35:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-1.1.ebuild,v 1.2 2006/01/07 18:47:15 carlo Exp $
 
 inherit kde-functions
-need-qt 3
 
 IUSE="anthy"
 
@@ -18,6 +17,7 @@ KEYWORDS="~x86"
 
 DEPEND="anthy? ( app-i18n/anthy )
 	!anthy? ( app-i18n/canna )"
+need-qt 3
 
 S="${WORKDIR}/${P/_*}"
 
