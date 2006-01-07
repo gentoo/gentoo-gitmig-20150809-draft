@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/php-java-bridge-2.0.8.ebuild,v 1.5 2005/12/04 00:30:21 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/php-java-bridge-2.0.8.ebuild,v 1.6 2006/01/07 16:48:43 chtekk Exp $
 
 PHP_EXT_NAME="java"
 PHP_EXT_INI="yes"
@@ -26,10 +26,10 @@ need_php_by_category
 pkg_setup() {
 	has_php
 
-	# we need session support in PHP for this to compile
+	# We need session support in PHP for this to compile
 	require_php_with_use session
 
-	# if the user has compiled the internal Java extension, he can't use this package
+	# If the user has compiled the internal Java extension, he can't use this package
 	if built_with_use =${PHP_PKG} java-internal ; then
 		eerror
 		eerror "You have built ${PHP_PKG} to use the internal Java extension."
