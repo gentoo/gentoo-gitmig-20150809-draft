@@ -1,4 +1,4 @@
-MD5 1ca1eae30e97b130d3b931b1d5fa22ae netgo-0.5.ebuild 589
-MD5 dcbb1dd1b3680fed477b8916c58339fe ChangeLog 500
-MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+MD5 4a9990a72972e9df8552e5c93fb45850 ChangeLog 619
 MD5 743c78682164daa1bc0dde0fe1388890 files/digest-netgo-0.5 61
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+MD5 b7f949e4421f81808dee7cdf1009c549 netgo-0.5.ebuild 572
