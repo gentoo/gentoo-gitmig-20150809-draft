@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.52 2005/12/24 14:16:30 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.53 2006/01/07 08:23:28 phreak Exp $
+
+  07 Jan 2006; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Updating Copyright header, dev-libs/dietlibc is now managed by vserver-devs@g.o
 
   24 Dec 2005; Simon Stelling <blubb@gentoo.org> dietlibc-0.28.ebuild:
   stable on amd64

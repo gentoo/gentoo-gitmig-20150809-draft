@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.29.ebuild,v 1.1 2005/09/04 16:03:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.29.ebuild,v 1.2 2006/01/07 08:23:28 phreak Exp $
 
 inherit eutils flag-o-matic
 
