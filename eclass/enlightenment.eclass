@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.59 2005/12/31 11:45:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.60 2006/01/07 06:50:16 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -86,11 +86,11 @@ enlightenment_warning_msg() {
 		eerror "That means there are NO promises it will work."
 		eerror "If it fails to build, FIX THE CODE YOURSELF"
 		eerror "before reporting any issues."
+		echo
+		einfo "If you have trouble connecting to the sourceforge cvs"
+		einfo "server, try exporting using the unofficial mirror:"
+		einfo "export E17_ECVS_SERVER=thinktux.net:/root"
 	fi
-	echo
-	einfo "If you have trouble connecting to the sourceforge cvs"
-	einfo "server, try exporting using the unofficial mirror:"
-	einfo "export E17_ECVS_SERVER=thinktux.net:/root"
 }
 
 enlightenment_die() {
