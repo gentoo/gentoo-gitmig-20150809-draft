@@ -1,6 +1,16 @@
-MD5 907682a459df0462491ecdc90f2f3624 ChangeLog 1947
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 256288ec670a4178693cb6b8baae5e58 ChangeLog 2155
 MD5 2a2ba9a8f8e2c923f6060887529fc063 files/digest-physfs-1.0.1 64
 MD5 e5f2e926aa6d69e8d7b4c70a9ee71455 files/digest-physfs-1.1.0 64
 MD5 5a2f387fc02c8c50c4ab056616f6234d metadata.xml 1342
-MD5 12ce265a3127551e9f3980d104a3e86c physfs-1.0.1.ebuild 588
-MD5 683af33a869aa37dc1e80397506fc5d1 physfs-1.1.0.ebuild 558
+MD5 4c3292dd22e729eed8b33bb57f6edbdc physfs-1.0.1.ebuild 794
+MD5 97f8912ac0fd6b345eeaee91eea6ff9c physfs-1.1.0.ebuild 766
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDv4VG2+ySkm8kpY0RAjw3AJ9cybqwjFVsJB2hmVJA9/820Xt9qQCfWjHn
+F8Vt4yhVWu6imWL4y+5Vtv0=
+=zhiS
+-----END PGP SIGNATURE-----
