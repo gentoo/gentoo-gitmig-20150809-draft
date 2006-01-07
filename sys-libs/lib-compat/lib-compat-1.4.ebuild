@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.4 2005/05/10 21:55:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.5 2006/01/07 09:31:44 vapier Exp $
 
 DESCRIPTION="Compatibility C++ and libc5 and libc6 libraries for programs new and old"
 HOMEPAGE="http://www.gentoo.org/"
@@ -27,7 +27,7 @@ src_unpack() {
 	# No package installs this one, so no need for the .dummy
 	mv -f libstdc++.so.2.9.dummy libstdc++.so.2.9.0
 	# dont install if they dont want sdl
-	use sdl || rm -f libsmpeg-0.4.so.0.dummy
+	rm -f libsmpeg-0.4.so.0.dummy
 }
 
 src_install() {
