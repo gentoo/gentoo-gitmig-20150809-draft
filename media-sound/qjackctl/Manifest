@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07ce8ae0b55e49504e49a60d47313188 qjackctl-0.2.11.ebuild 1157
-MD5 7781109af7a0962cdb1d368b2c32b7f2 qjackctl-0.2.8.ebuild 1116
-MD5 977c6e47ab995531fe0311e56f2d1797 qjackctl-0.2.13.ebuild 1161
-MD5 bd55e26724d667e8a4e7e03262174e9b qjackctl-0.2.15.ebuild 722
-MD5 8f219c259c721ce95d34893e49538ce1 qjackctl-0.2.19a.ebuild 675
-MD5 05b40d0cb5d53b5dd4b25034b60e0ddd qjackctl-0.2.17.ebuild 673
-MD5 ed9db084578afd029b5f3fd2142e02e0 qjackctl-0.2.9.ebuild 1153
-MD5 ef737ebdaa0488a39fe1d99547b67e22 qjackctl-0.2.14.ebuild 1161
-MD5 1056ad68430e884e2d8a1fad20c6b503 ChangeLog 3799
-MD5 958cdff6e2710ee30529dd9af63497de metadata.xml 257
-MD5 cef52c6870bf2937b679d196ad533f06 files/digest-qjackctl-0.2.8 66
-MD5 658e31cb9891082996e505b4eb3f608b files/digest-qjackctl-0.2.9 66
-MD5 b6fa9d9ee2c0115cd2759d0a6d003417 files/digest-qjackctl-0.2.19a 68
+MD5 90bbcd7497f319de1a66503838df2cd4 ChangeLog 3924
 MD5 0f2e564161d8153fb35077ef7e531178 files/digest-qjackctl-0.2.11 67
 MD5 f1bdcaff4be30dcbde7c6e3f155ef655 files/digest-qjackctl-0.2.13 67
 MD5 a53f04b5b8747df625edd12914a92f05 files/digest-qjackctl-0.2.14 67
 MD5 fab3cc8702f72a83b63eca12c0985a6b files/digest-qjackctl-0.2.15 67
 MD5 636cdea4ba2b5fd942970726e3d9a6b2 files/digest-qjackctl-0.2.17 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDmq0iT+MN7JbqCpMRAskSAJ0Uot/AyfswhHmUEVfhuPUGB6h2bgCfQWOk
-epxZ28H4x310ZCSf4XBvvFA=
-=gv4x
------END PGP SIGNATURE-----
+MD5 b6fa9d9ee2c0115cd2759d0a6d003417 files/digest-qjackctl-0.2.19a 68
+MD5 cef52c6870bf2937b679d196ad533f06 files/digest-qjackctl-0.2.8 66
+MD5 658e31cb9891082996e505b4eb3f608b files/digest-qjackctl-0.2.9 66
+MD5 958cdff6e2710ee30529dd9af63497de metadata.xml 257
+MD5 07ce8ae0b55e49504e49a60d47313188 qjackctl-0.2.11.ebuild 1157
+MD5 977c6e47ab995531fe0311e56f2d1797 qjackctl-0.2.13.ebuild 1161
+MD5 ef737ebdaa0488a39fe1d99547b67e22 qjackctl-0.2.14.ebuild 1161
+MD5 58bae7347217b1f68baefb8a36b96111 qjackctl-0.2.15.ebuild 703
+MD5 05b40d0cb5d53b5dd4b25034b60e0ddd qjackctl-0.2.17.ebuild 673
+MD5 8f219c259c721ce95d34893e49538ce1 qjackctl-0.2.19a.ebuild 675
+MD5 7781109af7a0962cdb1d368b2c32b7f2 qjackctl-0.2.8.ebuild 1116
+MD5 ed9db084578afd029b5f3fd2142e02e0 qjackctl-0.2.9.ebuild 1153

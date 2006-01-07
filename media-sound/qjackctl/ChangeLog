@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qjackctl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.29 2005/12/10 10:25:21 eldad Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.30 2006/01/07 18:56:07 carlo Exp $
+
+  07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> qjackctl-0.2.15.ebuild:
+  QA: need-qt() needs to be called after R/DEPEND.
 
 *qjackctl-0.2.19a (10 Dec 2005)
 
