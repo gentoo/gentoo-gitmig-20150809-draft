@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jdk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.91 2005/12/28 23:13:48 betelgeuse Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.92 2006/01/07 00:05:59 betelgeuse Exp $
+
+  06 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
+  blackdown-jdk-1.4.2.03.ebuild:
+  Marked stable on x86 for security bug #118114. Also added proper
+  modular X dependencies and alsa use flag.
 
   28 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
   -files/blackdown-jdk-1.4.2.01, -blackdown-jdk-1.4.2.01-r2.ebuild:
