@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.32 2006/01/06 12:25:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.33 2006/01/07 11:24:14 dragonheart Exp $
+
+*johntheripper-1.6.40 (07 Jan 2006)
+
+  07 Jan 2006; Daniel Black <dragonheart@gentoo.org>
+  johntheripper-1.6-r3.ebuild, -johntheripper-1.6.37_p11.ebuild,
+  -johntheripper-1.6.38.ebuild, +johntheripper-1.6.40.ebuild:
+  johntheripper-1.6-r3 - fixed executable stack. Fixed bad k6 logic. Added
+  selftest. Removed nonuser CFLAG usage (-finline-functions -funroll-loops).
+  Added johntheripper-1.6.40 - bug #116706 thanks to Michael Gaber. 1.6.40 is
+  still masked due to unidentified TEXTREL. Removed other unstable versions as
+  insufficient files were installed - bug #114677 thanks to Matthias Bethke
 
   06 Jan 2006; Fabian Groffen <grobian@gentoo.org>
   johntheripper-1.6.38.ebuild:

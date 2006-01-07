@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.10 2005/09/20 15:01:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.11 2006/01/07 11:24:14 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,23 +39,38 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch "${DISTDIR}/${MY_P}-gentoo.patch"
+	cd ${S}/src
+	for file in  alpha.S  sparc.S  x86.S; do
+		cat <<EOF >> ${file}
+#ifdef __ELF__
+.section .note.GNU-stack,"",@progbits
+#endif
+EOF
+
+	done
 }
 
 src_compile() {
 	cd src
-	sed -i -e "s:-march=i486::" -e "s:-Wall -O2:${CFLAGS}:" \
+	sed -i -e "s:-march=i486::" -e "s:-O2:${CFLAGS}:" \
 		Makefile
-	local OPTIONS="EGG=true"
+	local OPTIONS="OPT_NORMAL= OPT_INLINE=  EGG=true"
+	#local OPTIONS="EGG=true"
 	use kerberos && OPTIONS="${OPTIONS} KERBEROS=true"
 	use ntlm && OPTIONS="${OPTIONS} NTLM=true"
 	use skey && OPTIONS="${OPTIONS} SKEY=true"
-	use mysql && OPTIONS="${OPTIONS} MYSQL=true"
+	if use mysql;
+	then
+		OPTIONS="${OPTIONS} MYSQL=true"
+		# bug #106652 thanks to Rutger
+		append-ldflags -lm
+	fi
 
 	if use x86 ; then
-		local K6=is-flag "-march=k6-3" || is-flag "-march=k6-2" || is-flag "-march=k6"
 		if use mmx ; then
 			emake ${OPTIONS} linux-x86-mmx-elf || die "Make failed"
-		elif ${K6} ; then
+		elif is-flag "-march=k6-3" || is-flag "-march=k6-2" \
+				|| is-flag "-march=k6"; then
 			emake ${OPTIONS} linux-x86-k6-elf || die "Make failed"
 		else
 			emake ${OPTIONS} generic || die "Make failed"
@@ -68,6 +83,15 @@ src_compile() {
 		emake ${OPTIONS} generic || die "Make failed"
 	fi
 
+}
+src_test() {
+	cd run
+	if  [[ -f /etc/john.ini  ]]
+	then
+		./john --test || die 'self test failed'
+	else
+		ewarn "selftest requires /etc/john.ini"
+	fi
 }
 
 src_install() {
