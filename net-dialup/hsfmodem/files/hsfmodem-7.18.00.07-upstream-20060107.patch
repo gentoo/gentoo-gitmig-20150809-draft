@@ -1,0 +1,48 @@
+diff -Nru hsfmodem-7.18.00.07full.orig/modules/GPL/oscompat.h hsfmodem-7.18.00.07full/modules/GPL/oscompat.h
+--- hsfmodem-7.18.00.07full.orig/modules/GPL/oscompat.h	2005-09-18 00:42:03.000000000 +0300
++++ hsfmodem-7.18.00.07full/modules/GPL/oscompat.h	2006-01-07 12:39:35.915023750 +0200
+@@ -550,7 +550,11 @@
+ #define CLASS_DEVICE_DESTROY(class, dev) class_simple_device_remove(dev)
+ #define CLASS_CREATE(owner, name) class_simple_create(owner, name)
+ #else
++#ifdef FOUND_CLASS_DEVICE_PARENT
++#define CLASS_DEVICE_CREATE(class, dev, device, fmt, rest) class_device_create(class, NULL, dev, device, fmt, rest)
++#else
+ #define CLASS_DEVICE_CREATE(class, dev, device, fmt, rest) class_device_create(class, dev, device, fmt, rest)
++#endif
+ #define CLASS_DESTROY(class) class_destroy(class)
+ #define CLASS_DEVICE_DESTROY(class, dev) class_device_destroy(class, dev)
+ #define CLASS_CREATE(owner, name) class_create(owner, name)
+diff -Nru hsfmodem-7.18.00.07full.orig/modules/Makefile hsfmodem-7.18.00.07full/modules/Makefile
+--- hsfmodem-7.18.00.07full.orig/modules/Makefile	2005-10-21 19:09:52.000000000 +0300
++++ hsfmodem-7.18.00.07full/modules/Makefile	2006-01-07 12:40:52.239793750 +0200
+@@ -80,8 +80,10 @@
+ FOUND_CLASS_SIMPLE := $(shell grep -q 'class_simple_device_add' ${REAL_KERNELSRC}/include/linux/device.h 2>/dev/null && echo -DFOUND_CLASS_SIMPLE)
+ FOUND_UART_REGISTER_PORT := $(shell grep -q 'uart_register_port' ${REAL_KERNELSRC}/include/linux/serial_core.h 2>/dev/null && echo -DFOUND_UART_REGISTER_PORT)
+ FOUND_TTY_START_STOP := $(shell grep -q 'stop_tx.*tty_stop' ${REAL_KERNELSRC}/include/linux/serial_core.h 2>/dev/null && echo -DFOUND_TTY_START_STOP)
++FOUND_CLASS_DEVICE_PARENT := $(shell grep -q 'struct[ \t]*class_device[ \t]*\*[ \t]*parent' ${REAL_KERNELSRC}/include/linux/device.h 2>/dev/null && echo -DFOUND_CLASS_DEVICE_PARENT)
++FOUND_REFRIGERATOR := $(shell grep -q 'refrigerator' ${REAL_KERNELSRC}/include/linux/suspend.h 2>/dev/null && echo -DFOUND_REFRIGERATOR)
+ 
+-CFLAGS+= $(FOUND_CLASS_SIMPLE) $(FOUND_UART_REGISTER_PORT) $(FOUND_TTY_START_STOP)
++CFLAGS+= $(FOUND_CLASS_SIMPLE) $(FOUND_UART_REGISTER_PORT) $(FOUND_TTY_START_STOP) $(FOUND_CLASS_DEVICE_PARENT) $(FOUND_REFRIGERATOR)
+ 
+ else
+ KO= o
+diff -Nru hsfmodem-7.18.00.07full.orig/modules/osservices.c hsfmodem-7.18.00.07full/modules/osservices.c
+--- hsfmodem-7.18.00.07full.orig/modules/osservices.c	2005-09-11 08:29:12.000000000 +0300
++++ hsfmodem-7.18.00.07full/modules/osservices.c	2006-01-07 12:39:42.607442000 +0200
+@@ -519,8 +519,13 @@
+ 
+ 			if(signal_pending(current)) {
+ 				handle_sigs();
+-			} else
++			} else {
++#ifdef FOUND_REFRIGERATOR
++				if (current->flags & PF_FREEZE)
++					refrigerator(PF_FREEZE);
++#endif
+ 				schedule();
++			}
+ 		}
+ 		current->state = TASK_RUNNING;
+ 		remove_wait_queue(&osthrd->wq, &wait);
