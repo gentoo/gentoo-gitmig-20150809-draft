@@ -1,9 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c63e8aa28596ad261f710894e1e1539 ChangeLog 8022
+MD5 1a5e414f2b85672ca3f7fb661a16b6dc ChangeLog 8159
 MD5 60b4e7758ce769df141b81b19c338f34 files/digest-tk-8.3.4-r1 60
 MD5 f340f38756a0efb0539b53d64511f6a9 files/digest-tk-8.4.11 65
+MD5 f340f38756a0efb0539b53d64511f6a9 files/digest-tk-8.4.11-r1 65
 MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6 64
 MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6-r1 64
 MD5 76d0b4599f29136b31e902d15566e8c8 files/digest-tk-8.4.9 64
@@ -15,14 +13,8 @@ MD5 f4d1359d10fdb4a572e9da8f9896c603 files/tk-8.4.9-man.patch 800
 MD5 c1c1e9dfac0e70f21ef1a73e6dc76b8f files/tk-wm-maxsize.patch 896
 MD5 37d9be6d753633a1cb6704052776ab1f metadata.xml 159
 MD5 670ac1b343b68583bd99f4adc39765eb tk-8.3.4-r1.ebuild 2413
+MD5 f58279bb26ebf5341ddc04fe422a6afc tk-8.4.11-r1.ebuild 3008
 MD5 1a62fd1c184b67dc38bc87398d5c962d tk-8.4.11.ebuild 2923
 MD5 ecb6bd0ebe1e4441cccf70144b2e6104 tk-8.4.6-r1.ebuild 2762
 MD5 bccf47b736485ce7e8a457e6ce9a1a81 tk-8.4.6.ebuild 2385
 MD5 adeea912923cfc4dee0d578fb4002720 tk-8.4.9.ebuild 2851
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuZsJ2+ySkm8kpY0RAjyEAKCq2jS0TiiyE88+UTFQSQoC+y3sfwCgvrik
-3pGH2he+B8bzFLk3P/FwPTw=
-=HKBM
------END PGP SIGNATURE-----
