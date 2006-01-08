@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-<email>rizzo@gentoo.org</email>
-</maintainer>
 <longdescription>
-Pio (Pioneers) is a clone of the board game The Settlers of Catan.
+	Pio (Pioneers) is a clone of the board game The Settlers of Catan.
 </longdescription>
 </pkgmetadata>
