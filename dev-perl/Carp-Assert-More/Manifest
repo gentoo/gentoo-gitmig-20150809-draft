@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 014a8ac41643701a0b5c1069350c850b Carp-Assert-More-1.12.ebuild 592
-MD5 6226a9a0f6fbd5f4c218a35ccd9aa9f4 ChangeLog 543
+MD5 0c7360c0d0cedc06339ea20ac08dc696 Carp-Assert-More-1.12.ebuild 594
+MD5 5098ce7898ff08cf17b40929cefd3093 ChangeLog 636
 MD5 1d80faa4997d41c6e69c1e1f4c0f3d1e files/digest-Carp-Assert-More-1.12 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFDuTbWtG5z4I8BtQoRAjC1AJYpXZyr7R+AcfdszwNOY4EdQ51JAJ9IWo5y
-ZbUJTCtby/cVO3Ag8XUEwg==
-=XyPA
------END PGP SIGNATURE-----
