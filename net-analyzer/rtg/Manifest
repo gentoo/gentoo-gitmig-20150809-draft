@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74e2823d5d9ee33441c3d6546c319e51 ChangeLog 874
+MD5 a2ca14854107db6ec17679a998bc8f4b ChangeLog 1007
 MD5 6692acdf355eb282398b0e09eee80d02 files/digest-rtg-0.7.4 61
 MD5 6692acdf355eb282398b0e09eee80d02 files/digest-rtg-0.7.4-r1 61
 MD5 95d2926c7d784e64b502842c3d3597b5 files/rtg-0.7.4-pathfix.patch 4074
 MD5 a5df7a7397ca4a83811ff6c0e2d50a3f files/rtgpoll.confd 355
 MD5 004f47ae719ca8079ce11b5a14593274 files/rtgpoll.initd 1258
-MD5 e25c84fd1a2a0c0e81cacb709f6cbbbe metadata.xml 260
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 b138e43722a99c793eefaac3019389e7 rtg-0.7.4-r1.ebuild 1145
 MD5 9461712353c5f2b5174c41ac74a4892c rtg-0.7.4.ebuild 1003
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BrKI1lqEGTUzyQRAh5SAKDUkoLJHEwE+9po8b4c2uR0mcjRJgCfX+V9
-Aanvdlhk3NfGymp2io24ofQ=
-=oZ+f
------END PGP SIGNATURE-----
