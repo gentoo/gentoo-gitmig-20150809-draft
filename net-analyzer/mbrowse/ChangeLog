@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mbrowse
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.9 2005/10/09 12:12:11 mkay Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.10 2006/01/08 00:55:19 vanquirius Exp $
+
+  08 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> metadata.xml:
+  Remove anti from metadata (retired), add netmon as a herd.
 
   09 Oct 2005; <mkay@gentoo.org> mbrowse-0.3.1.ebuild:
   Fixing gtk dependency (bug #108103)

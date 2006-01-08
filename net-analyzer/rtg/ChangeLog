@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rtg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.6 2004/07/08 23:29:58 eldad Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.7 2006/01/08 00:54:58 vanquirius Exp $
+
+  08 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> metadata.xml:
+  Remove anti from metadata (retired), add netmon as a herd.
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> rtg-0.7.4-r1.ebuild,
   rtg-0.7.4.ebuild:
