@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.15 2006/01/08 21:48:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.16 2006/01/08 22:55:44 allanonjl Exp $
+
+  08 Jan 2006; John N. Laliberte <allanonjl@gentoo.org>
+  gnome-python-extras-2.12.1.ebuild:
+  add libgda dep, change python to virtual/python
 
 *gnome-python-extras-2.12.1 (08 Jan 2006)
 
