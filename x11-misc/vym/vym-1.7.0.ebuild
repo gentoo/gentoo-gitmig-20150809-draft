@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.7.0.ebuild,v 1.2 2006/01/07 18:41:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.7.0.ebuild,v 1.3 2006/01/08 13:06:56 genstef Exp $
 
-inherit eutils kde-functions
+inherit eutils qt3
 
 DESCRIPTION="View Your Mind -- a mindmap tool"
 HOMEPAGE="http://www.insilmaril.de/vym/"
@@ -11,18 +11,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-DEPEND="virtual/x11 \
-	>=dev-libs/expat-1.95.8 \
-	>=media-libs/fontconfig-2.2.3 \
-	>=media-libs/freetype-2.1.5-r1 \
-	>=media-libs/jpeg-6b-r4 \
-	>=media-libs/libmng-1.0.4 \
-	>=media-libs/libpng-1.2.7 \
-	>=sys-devel/gcc-3.3.4-r1 \
-	>=sys-libs/glibc-2.3.4.20040808-r1 \
-	>=sys-libs/zlib-1.2.1-r3 \
+DEPEND="$(qt_min_version 3.3.3)
 	dev-lang/perl"
-need-qt 3
+RDEPEND="${DEPEND}
+	|| ( ( x11-libs/libX11
+	x11-libs/libXext )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +28,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	${QTDIR}/bin/qmake -o Makefile vym.pro
 	emake || die "emake failed"
 

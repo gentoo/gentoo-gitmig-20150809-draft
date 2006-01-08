@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.7 2006/01/07 18:41:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.8 2006/01/08 13:06:56 genstef Exp $
+
+  08 Jan 2006; Stefan Schweizer <genstef@gentoo.org> vym-1.7.0.ebuild:
+  modular depends, bug 118241
 
   07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> vym-1.7.0.ebuild:
   QA: need-qt() needs to be called after R/DEPEND.
