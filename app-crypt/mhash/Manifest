@@ -1,4 +1,4 @@
-MD5 ca17950ae72a0b7bb72acacde99d7f31 ChangeLog 3713
+MD5 9b317bdd83ba140992ff819f19d0a72f ChangeLog 3828
 MD5 b82524ff78b486ef79cccd400ad79348 files/digest-mhash-0.9.1 63
 MD5 fb060fa52ccd63f4970aa3099a43c235 files/digest-mhash-0.9.2 63
 MD5 517095254033047a16a801e352a2cf9e files/digest-mhash-0.9.3 64
@@ -6,6 +6,6 @@ MD5 517095254033047a16a801e352a2cf9e files/digest-mhash-0.9.3-r1 64
 MD5 d27bb1251e5f7314b085056b0c28a600 files/mhash-0.9.3-mhash_free.patch 488
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 c2898e702ba9d02702277c8be7512abf mhash-0.9.1.ebuild 989
-MD5 8567eb305f9641f5257de243688b5efc mhash-0.9.2.ebuild 893
-MD5 821041d7e1bb7b7815dd977d00dc4c72 mhash-0.9.3-r1.ebuild 1060
+MD5 128303d94e5f6c37a4c26df7a7da4e78 mhash-0.9.2.ebuild 912
+MD5 083f7c24499880ac904f9136168397c9 mhash-0.9.3-r1.ebuild 1078
 MD5 3971c9afee469a5a8c3bd0654a2e226a mhash-0.9.3.ebuild 907
