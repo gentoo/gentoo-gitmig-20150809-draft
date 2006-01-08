@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-DBI
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.19 2005/12/30 11:02:25 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.20 2006/01/08 17:51:15 josejx Exp $
+
+  08 Jan 2006; Joseph Jezak <josejx@gentoo.org> Class-DBI-3.0.13.ebuild:
+  Marked ~ppc for bug #116301.
 
   30 Dec 2005; <mcumming@gentoo.org> Class-DBI-0.96.ebuild,
   Class-DBI-3.0.1.ebuild, Class-DBI-3.0.13.ebuild:
