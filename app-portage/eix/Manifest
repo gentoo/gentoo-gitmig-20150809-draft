@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 eb9ce978230a4899ab32156af9a5c616 ChangeLog 8112
 MD5 9453c685fa99329b88b782086419847f eix-0.3.0-r1.ebuild 1283
 MD5 831f9fa6fc48726ee59ba48841b396e9 eix-0.3.0-r2.ebuild 1332
-MD5 f92fe465f9718c9e0c1c5f8befab0280 eix-0.5.0.ebuild 1340
+MD5 70966afc5abec2721c69cac1275a559e eix-0.5.0.ebuild 1342
 MD5 309a6ba7043e7941a8effc552ec3a1a0 files/0.3.0-datatype-mix.patch 2066
 MD5 026ea1bfa86dd00de37c3e3d1305c9c7 files/0.3.0-dbmatchcriteria-fix.patch 445
 MD5 7efa28889b9a45d2abc52e51c5155a7f files/0.3.0-getParentProfile.patch 1016
@@ -15,10 +12,3 @@ MD5 f0687628fdeca80bbcebef82a7a82e6f files/digest-eix-0.3.0-r2 62
 MD5 ae92b4d4f1cdc58d8bb0d13221c4e856 files/digest-eix-0.5.0 62
 MD5 f634c8f0297b381c7b178c9c75202e43 files/eix-0.5.0-redir-fix.patch 342
 MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDv18KmPFBzbX68WERAsC7AJ48x6fIzr9b+DmMeeddVKipr3CsEQCeMloj
-kXmGmvLBMVT+tkbfztm0VUc=
-=Q8HK
------END PGP SIGNATURE-----
