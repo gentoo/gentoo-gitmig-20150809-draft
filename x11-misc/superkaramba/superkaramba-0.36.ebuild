@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.36.ebuild,v 1.5 2005/08/28 13:59:44 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.36.ebuild,v 1.6 2006/01/08 02:13:30 carlo Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ IUSE="doc xmms"
 
 DEPEND="dev-lang/python
 	xmms? ( media-sound/xmms )
-	!>=kde-base/kdeutils-3.5_alpha"
+	( !kde-base/superkaramba !>=kde-base/kdeutils-3.5 )"
 
 need-kde 3.2
 

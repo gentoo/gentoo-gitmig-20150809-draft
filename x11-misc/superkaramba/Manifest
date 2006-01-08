@@ -1,20 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac34dfc7eab13ec0335448a1fbab9bd7 superkaramba-0.34.ebuild 1059
-MD5 ff444765555a4ff5d3df89a07fc7395d superkaramba-0.37_rc2.ebuild 927
-MD5 5160a194629e0ed9c9d233c9a9ea21c6 superkaramba-0.36.ebuild 933
-MD5 ae4d2168521602b4563f9f21189efa0e ChangeLog 4628
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 77d25e4808a26e7e82f801f629e77156 files/digest-superkaramba-0.37_rc2 74
-MD5 3707ced975dbb7ed6431b0d4d783c9a2 files/digest-superkaramba-0.34 70
+MD5 42982a39911787996b7419ef50248861 ChangeLog 4848
 MD5 7f6a05fb24ee63c794eafb5f4f58fa54 files/digest-superkaramba-0.36 70
-MD5 cd41af5125faa130c7a22ae6b158a840 files/superkaramba-0.34-configure.patch 3567
+MD5 77d25e4808a26e7e82f801f629e77156 files/digest-superkaramba-0.37_rc2 74
 MD5 dfffd46934fc1bbec91ae05eb8ec535b files/karamba-env 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDEcNontT9W3vfTuoRAvn0AJ9Zp2BDC9vunc+H0soAM+nDkk3wqwCfd9XF
-4stqBDhrEQaO1iSH5+f3hCE=
-=mq2M
------END PGP SIGNATURE-----
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+MD5 5271d368d8837fb7197c9061a070daae superkaramba-0.36.ebuild 954
+MD5 8432f273fa56ce27889045aeaa111e19 superkaramba-0.37_rc2.ebuild 947
