@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.08.ebuild,v 1.1 2005/12/03 14:37:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.08.ebuild,v 1.2 2006/01/08 09:52:09 josejx Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 #KEYWORDS="~ppc ~x86"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/WWW-Mechanize-1.00
