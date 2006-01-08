@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.3.23.ebuild,v 1.1 2005/12/25 16:15:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.3.23.ebuild,v 1.2 2006/01/08 23:33:23 malc Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ SRC_URI="http://acx100.erley.org/acx-20051220.tar.bz2
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="nomirror"
 
 RDEPEND=">=sys-apps/hotplug-20040923
