@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5-r4.ebuild,v 1.1 2005/12/23 03:48:38 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5-r9.ebuild,v 1.1 2006/01/08 17:38:40 anarchy Exp ${PV}_rc3-r2.ebuild,v 1.1 2005/11/26 04:20:32 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -8,14 +8,20 @@ MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
 MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
 	                 # when older is removed from tree.
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime versionator
+inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
+
+LANGS="ar ca cs da de el es-AR es-ES fi fr he it ja ko nb-NO nl pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW"
+PVER="1.0"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
-	mirror://gentoo/mozilla-jslibmath-alpha.patch
-	mirror://gentoo/embed-typeaheadfind-1.patch
-	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
+	mirror://gentoo/${P}-patches-${PVER}.tar.bz2
+	http://dev.gentoo.org/~anarchy/dist/${P}-patches-${PVER}.tar.bz2"
+
+for X in ${LANGS} ; do
+	SRC_URI="${SRC_URI} linguas_${X}? ( http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/xpi/${X}.xpi )"
+done
 
 KEYWORDS="-* ~amd64 ~ppc ~x86"
 SLOT="0"
@@ -26,6 +32,7 @@ RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.39"
 
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 S=${WORKDIR}/mozilla
@@ -38,75 +45,20 @@ export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 
 src_unpack() {
-	unpack firefox-${PV}-source.tar.bz2
+	unpack firefox-${PV}-source.tar.bz2  ${P}-patches-${PVER}.tar.bz2
+
+	strip-linguas ${LANGS} en
+	for X in ${LINGUAS/en}; do
+		xpi_unpack ${X}.xpi
+	done
+
+	if ! use alpha; then
+		rm ${WORKDIR}/patch/001_mozilla-1.3-alpha-stubs.patch.bz2
+	fi
+
+	# Apply our patches
 	cd ${S} || die "cd failed"
-
-	####################################
-	#
-	# architecture patches
-	#
-	####################################
-
-	# alpha stubs patch from lfs project.
-	# <taviso@gentoo.org> (26 Jun 2003)
-	use alpha && epatch ${FILESDIR}/${PV}/mozilla-1.3-alpha-stubs.patch
-
-	# addresses visibility issues on ppc and amd64
-	# will not hurt to apply on other archs as well.
-	epatch ${FILESDIR}/${PV}/firefox-1.1-visibility.patch
-
-	# hppa patches from Ivar <orskaug@stud.ntnu.no>
-	# <gmsoft@gentoo.org> (22 Dec 2004)
-	epatch ${FILESDIR}/${PV}/mozilla-hppa.patch
-
-	# patch to solve segfaults on ia64, from Debian, originally from David
-	# Mosberger
-	epatch ${FILESDIR}/${PV}/mozilla-firefox-1.1a2-ia64.patch
-
-	# patch to fix math operations on alpha, makes maps.google.com work!
-	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
-
-	# fix pkgconfig files properly to contain gentoo-locations
-	epatch ${FILESDIR}/firefox-gentoo-pkgconfig.patch
-
-	####################################
-	#
-	# general compilation and run-time fixes
-	#
-	####################################
-
-	# patch from fedora to remove the pangoxft things
-	epatch ${FILESDIR}/${PV}/firefox-nopangoxft.patch
-	# cairo-canvas patch, only needed to build against system cairo
-	epatch ${FILESDIR}/${PV}/firefox-cairo-canvas.patch
-
-	# patch from fedora to stop crashing with gnome-vfs
-	epatch ${FILESDIR}/firefox-1.1-uriloader.patch
-
-	####################################
-	#
-	# behavioral fixes
-	#
-	####################################
-
-	# patch to fix typeahead find for browsers which embed Firefox
-	# http://bugzilla.gnome.org/show_bug.cgi?id=157435
-	epatch ${DISTDIR}/embed-typeaheadfind-1.patch
-	epatch ${FILESDIR}/${PV}/${P}-gtk.patch
-
-	# rpath fix
-	epatch ${FILESDIR}/mozilla-rpath-1.patch
-	epatch ${DISTDIR}/mozilla-1.7.10-nsplugins-v2.patch
-
-	# Fix scripts that call for /usr/local/bin/perl #51916
-	ebegin "Patching smime to call perl from /usr/bin"
-	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
-	eend $? || die "sed failed"
-
-	#security fix in history
-	cd ${S}
-	epatch ${FILESDIR}/${PV}/${P}-history.patch
-	epatch ${FILESDIR}/${PV}/${P}-mork.patch
+	epatch ${WORKDIR}/patch/*
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
@@ -117,6 +69,8 @@ src_unpack() {
 		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
 			${S}/security/coreconf/arch.mk
 	fi
+
+	eautoreconf || die "failed  running eautoreconf"
 }
 
 src_compile() {
@@ -206,12 +160,25 @@ src_install() {
 	cp ${D}${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt \
 		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt
 
+	strip-linguas ${LANGS} en
+	for X in ${LINGUAS/en}; do
+		xpi_install ${WORKDIR}/${X}
+	done
+
+	if [ -n ${LINGUAS%% *} ] && [ "${LINGUAS%% *}" != "en" ]; then
+		ebegin "Setting default locale to ${LINGUAS%% *}"
+		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LINGUAS%% *}\"):" \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/firefox.js \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/firefox-l10n.js
+		eend $? || die "sed failed to change locale"
+	fi
+
 	# Create /usr/bin/firefox
 	install_mozilla_launcher_stub firefox ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
 	doicon ${FILESDIR}/icon/firefox-icon.png
-	domenu ${FILESDIR}/icon/mozillafirefox.desktop
+	domenu ${FILESDIR}/icon/mozillafirefox-1.5.desktop
 
 	# Fix icons to look the same everywhere
 	insinto ${MOZILLA_FIVE_HOME}/icons
@@ -271,12 +238,14 @@ pkg_postinst() {
 	ewarn "Please remember to rebuild any packages that you have built"
 	ewarn "against firefox. Some packages might be busted please search"
 	ewarn "http://bugs.gentoo.org if no bug is open, then please open a new"
-	ewarn "bug report so these can be fixed."
+	ewarn "bug report so these can be fixed. Before filling bugs make sure you"
+	ewarn "have moved $HOME/.mozilla our of way and tested with clean profile."
 	ewarn "Thank you! anarchy@gentoo.org."
 	echo     ""
 	einfo "I am unable to brand firefox or thunderbird officially yet."
 	einfo "You will see that everything says Deer Park cause of this."
-	einfo "As soon as I can brand it I will commit a -r1 release."
+
+	epause 15
 }
 
 pkg_postrm() {
