@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.6 2004/07/14 23:23:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.7 2006/01/08 01:39:02 avenj Exp $
+
+opts="${opts} reload"
 
 depend() {
 	provide dns
@@ -17,5 +19,11 @@ start() {
 stop() {
 	ebegin "Stopping dnsmasq"
 	start-stop-daemon --stop --quiet --pidfile /var/run/dnsmasq.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading dnsmasq"
+	start-stop-daemon --stop -s HUP -p /var/run/dnsmasq.pid
 	eend $?
 }
