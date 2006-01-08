@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f1f652bdff5b60e627ab6fd0027171da ChangeLog 1127
 MD5 42dacaa900c60ec26b05238847efeb97 files/digest-tk707-0.8 136
 MD5 42dacaa900c60ec26b05238847efeb97 files/digest-tk707-0.8-r1 136
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 28279f5180a20ee11b81e67d200d7c53 tk707-0.8-r1.ebuild 936
 MD5 746cd6611f2ccf34c8716eae7f590b4a tk707-0.8.ebuild 1109
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWkdV3J2n04EauwRAgHiAJ9SYo4OSRCs+xAvhx8cCGglWfNkCQCcDn4k
+bR1zlFUajvwySgFs75vmmrE=
+=joY0
+-----END PGP SIGNATURE-----
