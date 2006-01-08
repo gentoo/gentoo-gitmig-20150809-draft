@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7cfa7119c911ed5ad9b582ff7695fbb ChangeLog 14910
+MD5 e4c8be30f05a09ae6b5c7f9791f5da5a ChangeLog 15015
 MD5 c8eb68627dc7b53b10143626018ff597 files/0.80.2/gtk2flickerfix.patch 1969
 MD5 a42a33a349ca84fb6e2cc5fdbd627b99 files/0.80.2/trance.patch.WM-0.80.2.diff 9738
 MD5 9a5c9f1b2b44a678526f0fd71b2cf51d files/0.80.2/windowmaker-0.80.2-r1-gentoo.patch 4331
@@ -20,16 +17,9 @@ MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0-r1 144
 MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r7 227
 MD5 56fa606e28d04ba426e4d4cacc8d0b2d files/digest-windowmaker-0.92.0-r1 144
 MD5 f70c1e1b121cfc32dbd802678f3b111f files/wmaker.desktop 221
-MD5 641b83c6027dc91a4ac14e1749a58b41 metadata.xml 222
+MD5 72c8d22e50caaf5dd42b1823f5874206 metadata.xml 160
 MD5 350d1c8fc3f110fa9bbd0f7a681ec880 windowmaker-0.80.2-r2.ebuild 3463
 MD5 056f320591b95b4adaec5b906ae25035 windowmaker-0.80.2-r4.ebuild 4094
 MD5 0b7d5f0f23bea9a4793a92f25117d9f3 windowmaker-0.91.0-r1.ebuild 5881
 MD5 6dfb07e767918268038ad952d0e38029 windowmaker-0.91.0-r7.ebuild 6800
 MD5 7cd4046827ba9b7b99679af4c0a14586 windowmaker-0.92.0-r1.ebuild 5354
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsxJHCRZPokWLroQRAuhEAKDg651JBkQ/WQ6nQVTUEwPNWnLEVgCaA+B1
-cgkBXteAi4dXdNd30FrNyGI=
-=oMdR
------END PGP SIGNATURE-----
