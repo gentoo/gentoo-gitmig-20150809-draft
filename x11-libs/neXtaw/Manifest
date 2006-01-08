@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a3948d4e4a272bafc0b280be0a40b88c ChangeLog 2121
-MD5 666a8261dc3a5ec2fbc8ea95424d4dcc neXtaw-0.12.ebuild 762
-MD5 4d0e2536837483dc77b3adea996b4885 neXtaw-0.15.1.ebuild 792
-MD5 193bc54fd7ed1701eba0c625f65bc005 neXtaw-0.15.1-r1.ebuild 669
 MD5 bc5549fb1bff5f7a480d56d9cde31262 files/digest-neXtaw-0.12 63
 MD5 1c3dd4595fe26cb0d47924d98df607ba files/digest-neXtaw-0.15.1 65
 MD5 1c3dd4595fe26cb0d47924d98df607ba files/digest-neXtaw-0.15.1-r1 65
+MD5 666a8261dc3a5ec2fbc8ea95424d4dcc neXtaw-0.12.ebuild 762
+MD5 1c78dbb974549cf7c4c08564d664b386 neXtaw-0.15.1-r1.ebuild 623
+MD5 e330abe89130384f9b136a1f6ed914d8 neXtaw-0.15.1.ebuild 798
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwJNX2+ySkm8kpY0RAjJJAJ9MdVLs1aRArD8ZJ0o//oZRVOvuUQCfbD7R
+L+ilQdNRCCijgEwY5cVXjKM=
+=LhiD
+-----END PGP SIGNATURE-----
