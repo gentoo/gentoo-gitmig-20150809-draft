@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/argus-clients
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.1 2006/01/08 23:54:36 vanquirius Exp $
+
+*argus-clients-2.0.6 (08 Jan 2006)
+
+  08 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +argus-clients-2.0.6.ebuild:
+  Initial commit. Fixes bug 112157. Thanks to aqu <aqu3l at go2 dot pl>.
+
