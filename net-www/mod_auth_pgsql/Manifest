@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05f17d1ff9458fb214ac061f3f724a75 ChangeLog 3766
+MD5 4e9c6e00225b74299abccd5a18a2ba1e ChangeLog 3878
 MD5 c7576a76e457b6ae681019a0325dc4f8 files/0.9.12-r1/80_mod_auth_pgsql.conf 142
 MD5 c7576a76e457b6ae681019a0325dc4f8 files/2.0.2-r2/80_mod_auth_pgsql.conf 142
 MD5 d62d220e5910e2eefec77ad861d2d040 files/80_mod_auth_pgsql.conf 147
@@ -15,11 +12,4 @@ MD5 a0da823d6a9401b681f1b2fa83a7ff8c mod_auth_pgsql-0.9.12-r1.ebuild 1181
 MD5 ae7a1fe1db04062e9c62fe3dcb6df134 mod_auth_pgsql-0.9.12.ebuild 1449
 MD5 c4af4458f6312bcb5cb685714f5a859a mod_auth_pgsql-2.0.2-r1.ebuild 1097
 MD5 f75e8fa18396c0196f21cae72dd684a6 mod_auth_pgsql-2.0.2-r2.ebuild 1004
-MD5 34b104a0bf8f85f6f96ecee560b3ec7d mod_auth_pgsql-2.0.3.ebuild 980
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwKgHCRZPokWLroQRAvt3AJ9rr4gvjH50VfTsdqgZy4kQ4MP17wCg2kph
-91VnPH7epn0mPUBeZMoISQQ=
-=OEem
------END PGP SIGNATURE-----
+MD5 77c7279a20b77f76147568b3e107828b mod_auth_pgsql-2.0.3.ebuild 977

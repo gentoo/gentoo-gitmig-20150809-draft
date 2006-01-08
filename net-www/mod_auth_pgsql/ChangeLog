@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pgsql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.27 2006/01/08 05:49:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.28 2006/01/08 17:39:08 blubb Exp $
+
+  08 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  mod_auth_pgsql-2.0.3.ebuild:
+  stable on amd64 wrt bug 118096
 
   08 Jan 2006; Mark Loeser <halcy0n@gentoo.org> mod_auth_pgsql-2.0.3.ebuild:
   Stable on x86; bug #118096
