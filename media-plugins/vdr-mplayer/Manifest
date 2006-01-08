@@ -1,0 +1,7 @@
+MD5 0f990562f98e279e7953ddc0309b35e2 ChangeLog 501
+MD5 b7de4186db3fbb5635de8bb610ac00f3 files/digest-vdr-mplayer-0.9.14 66
+MD5 955192f29c395d3439388eaf3982ce11 files/mplayersources.conf 40
+MD5 6ea7c41051b0cc0288353a2f6a4efcd1 files/rc-addon.sh 529
+MD5 2c64b25f82c7f467d26efa6787530258 files/vdr-mplayer-0.9.14-gentoo.diff 1190
+MD5 bbe1275ce1f4cde2cb3d401105b029b1 metadata.xml 512
+MD5 a9305ea020a984cc7c3698324c3b18a9 vdr-mplayer-0.9.14.ebuild 1261
