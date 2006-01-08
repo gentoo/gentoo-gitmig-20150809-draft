@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/net-server
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.20 2005/11/19 13:13:14 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.21 2006/01/08 16:07:26 mcummings Exp $
+
+*net-server-0.90 (08 Jan 2006)
+
+  08 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +net-server-0.90.ebuild:
+  Version bump, bug 115971
 
 *net-server-0.88 (19 Nov 2005)
 
