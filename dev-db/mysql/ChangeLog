@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.290 2006/01/01 19:00:29 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.291 2006/01/08 23:51:13 vivo Exp $
+
+  08 Jan 2006; Francesco Riosa <vivo@gentoo.org>
+  +files/mysql-slot.conf.d-r2, +files/mysql-slot.rc6-r2,
+  mysql-4.1.16-r30.ebuild, mysql-5.0.18-r30.ebuild,
+  mysql-5.1.4_alpha-r30.ebuild:
+  Slotted mysql versions only (considered ready for testing from now):
+  - Modified rc scripts to be more similar to the net.* ones, many script to
+    start the servers, one central config file in /etc/conf.d
+  - modified and moved the creation of the filelist to be used by the
+    mysql-eselect module.
+  - other, forgotten
 
   01 Jan 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.16-r30.ebuild,
   mysql-5.0.18-r30.ebuild, mysql-5.1.4_alpha-r30.ebuild:

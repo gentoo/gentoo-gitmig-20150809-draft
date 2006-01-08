@@ -1,0 +1,260 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r2,v 1.1 2006/01/08 23:51:13 vivo Exp $
+
+# external binaryes used: which, sed, tac
+
+depend() {
+	use dns net localmount netmount nfsmount
+}
+
+function wdebug() {
+	if [[ "${DEBUG}" -ge "${1}" ]] ; then
+		shift
+		echo "dbg:  ${@}"
+	fi
+}
+
+do_escape() {
+	# Ihatethisreallyverymuch
+	#echo "$1" | sed -e "s|'| |" -e "s|=|='|" -e "s|$|'|"
+	echo "$1"
+}
+
+# int get_slot_config()
+get_slot_config() {
+
+	wdebug 4 ">>> get_slot_config()"
+
+	# servers options are (also) defined in /etc/conf.d/mysql
+	[[ -f /etc/conf.d/mysql ]] && source /etc/conf.d/mysql
+
+	# myservice={mysql,mysql-500,mysql-500_1} => {,-500,-500_1,-500.1}
+	local srv="${myservice#mysql}"
+	# srv={,-500,-500_1,-500.1} => {,500,500_1,500.1}
+	srv="${srv:1}"
+	# srv=array(0 => [srv_slot], 1 => [srv_num] )
+	srv=( ${srv//[_.-]/" "} )
+	local srv_slot=${srv[0]} srv_num=${srv[1]}
+	# defined in /etc/conf.d/mysql mysql_slot_{0,500,500_1}
+	local tmp_eval="mysql_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
+	local conf_d_parameters="${!tmp_eval}"
+	MY_SUFFIX="-${srv_slot}"
+	if [[ -z "${srv_slot}" ]] ; then
+		srv_slot="0"
+		MY_SUFFIX=''
+		# try some other default for the default server
+		[[ -z "${conf_d_parameters[@]}" ]] && conf_d_parameters=${mysql_slot_0[@]}
+		[[ -z "${conf_d_parameters[@]}" ]] && conf_d_parameters=${mysql_slot[@]}
+	fi
+	[[ -z "${conf_d_parameters[@]}" ]] && conf_d_parameters=( )
+	basedir="" datadir="" pidfile="" socket=""
+	CHROOT="" NICE="" STARTUPTIMEOUT=5 STOPTIMEOUT=120
+
+	wdebug 3 "myservice          ${myservice}"
+	wdebug 3 "srv                ${srv[@]}"
+	wdebug 3 "srv_slot           ${srv_slot}"
+	wdebug 3 "srv_num            ${srv_num}"
+	wdebug 3 "tmp_eval           ${tmp_eval}"
+	wdebug 3 "conf_d_parameters  ${conf_d_parameters[@]}"
+	wdebug 3 "MY_SUFFIX          ${MY_SUFFIX}"
+
+	local tmp_eval="mysql_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
+	local conf_d_parameters="${!tmp_eval}"
+	# collations need to be defined *after* the character sets,
+	#>so we will duplicate them
+	local collations=""
+	[[ ${conf_d_parameters[*]} == '()' ]] && conf_d_parameters=''
+
+	MY_CNF="/etc/mysql${MY_SUFFIX}/my.cnf"
+	# summa of unmanaged parameters
+	#>some parameters may be present multiple times
+	unmanagedparams=""
+
+	# grab the parameters from conf.d/mysql definition
+	for my_default in ${conf_d_parameters[*]}; do
+		case "${my_default}" in
+			nice=*)
+				NICE="${my_default#nice=}"
+				nice -n $NICE ls /tmp &>/dev/null || NICE=""
+				;;
+			mycnf=*) MY_CNF="${my_default#mycnf=}" ;;
+			startup_timeout=*)
+				STARTUPTIMEOUT="${my_default#startup_timeout=}"	;;
+			stop_timeout=*)
+				STOPTIMEOUT="${my_default#stop_timeout=}"	;;
+			basedir=*) basedir="${my_default#basedir=}" ;;
+			datadir=*) datadir="${my_default#datadir=}" ;;
+			pid-file=*) pidfile="${my_default#pid-file=}" ;;
+			socket=*) socket="${my_default#socket=}" ;;
+			*collation*=)
+				collations="${collations} --$( do_escape "${my_default}" )"
+				;;
+			*=*)
+				# list of parameters we already have
+				# prepend "--" because my_print_defaults do it
+				unmanagedparams="${unmanagedparams} --$( do_escape "${my_default}" )"
+				;;
+			*)
+				unmanagedparams="${unmanagedparams} --${my_default}"
+				;;
+		esac
+	done
+
+	if [[ ! -r "${MY_CNF}" ]]; then
+		ewarn "Cannot access ${MY_CNF} !"
+		MY_CNF=""
+		my_defaults=""
+	else
+		local my_print_defaults="$(which my_print_defaults${MY_SUFFIX} 2>/dev/null)"
+		if [[ ! -x "${my_print_defaults}" ]]; then
+			eerror "my_print_defaults NOT found or not executable"
+			my_defaults=""
+		else
+			my_defaults=$( ${my_print_defaults} \
+				--loose-verbose \
+				--config-file="${MY_CNF}" \
+				mysqld server )
+		fi
+	fi
+
+	# grab needed parameters from my.cnf, don't override the ones from
+	# conf.d mysql
+	for my_default in ${my_defaults}; do
+		case "${my_default}" in
+			--basedir=*)
+				[[ -z "${basedir}" ]] && basedir="${my_default#--basedir=}" ;;
+			--datadir=*)
+				[[ -z "${datadir}" ]] && datadir="${my_default#--datadir=}" ;;
+			--pid-file=*)
+				[[ -z "${pidfile}" ]] && pidfile="${my_default#--pid-file=}" ;;
+			--socket=*)
+				[[ -z "${socket}" ]] && socket="${my_default#--socket=}" ;;
+			--*collation*=)
+				# the order is inversed because we want the conf.d ones override
+				collations="$( do_escape "${my_default}" ) ${collations}"
+				;;
+		esac
+	done
+
+	# still empty, I'm in doubt if assign a default or break, will see
+	basedir="${basedir:-"/usr"}"
+	datadir="${datadir:-"/var/lib/mysql${MY_SUFFIX}"}"
+	pidfile="${pidfile:-"/var/run/mysqld/mysqld${MY_SUFFIX}.pid"}"
+	socket="${socket:-"/var/run/mysqld/mysqld${MY_SUFFIX}.sock"}"
+	unmanagedparams="${unmanagedparams} ${collations}"
+
+	wdebug 3 "chroot dir => ${CHROOT}"
+	wdebug 3 "niceness   => ${NICE}"
+	wdebug 3 "basedir    => ${basedir}"
+	wdebug 3 "datadir    => ${datadir}"
+	wdebug 3 "pidfile    => ${pidfile}"
+	wdebug 3 "socket     => ${socket}"
+	wdebug 3 "Unamanged  => ${unmanagedparams}"
+
+	# extension for sleep tenth of seconds, not very portable so check it before
+	if sleep 0.01 ; then
+		STARTUPTIMEOUT=$(( STARTUPTIMEOUT * 10 ))
+		STOPTIMEOUT=$(( STOPTIMEOUT * 10 ))
+		TIMEUNIT=0.1
+	else
+		TIMEUNIT=1
+	fi
+
+	# push these out to the script
+	export MY_SUFFIX NICE MY_CNF pidfile datadir basedir socket CHROOT
+	export unmanagedparams STARTUPTIMEOUT STOPTIMEOUT TIMEUNIT
+	wdebug 4 "<<< get_slot_config() ok"
+	return 0
+}
+
+checkconfig() {
+	wdebug 4 ">>> checkconfig(\"${1}\")"
+	local datadir="$1"
+	if [ ! -d "${datadir}" ]; then
+		eerror "MySQL datadir is empty or invalid"
+		eerror "Please check your my.cnf : ${MY_CNF}"
+		wdebug 4 "<<< checkconfig() KO"
+		return 1
+	fi
+
+	if [ ! -d "$datadir/mysql" ]; then
+		eerror "You don't appear to have the mysql database installed yet."
+		eerror "Please run /usr/bin/mysql_install_db to have this done..."
+		wdebug 4 "<<< checkconfig() KO"
+		return 1
+	fi
+	wdebug 4 "<<< checkconfig() ok"
+	return 0
+}
+
+start() {
+	wdebug 4 ">>> start()"
+
+	local retstatus=0
+
+	ebegin
+		get_slot_config || return 1
+
+		if [[ -f ${pidfile} ]] || [[ -S ${socket} ]] ; then
+			echo "\"${pidfile}\" and/or \"${socket}\" are still present."
+			echo "Please check that no server is running and remove them."
+			return 1
+		fi
+
+		checkconfig "${datadir}" || return 2
+
+		einfo "Starting ${myservice} (${MY_CNF})"
+
+		wdebug 2 "starting mysqld with: "${basedir}/sbin/mysqld${MY_SUFFIX} ${unmanagedparams} --basedir=${basedir} --datadir=${datadir} --pid-file=${pidfile} --socket=${socket}
+
+		start-stop-daemon --quiet --start --background \
+			${NICE:+"--nicelevel "}${NICE} \
+			--pidfile "${pidfile}" \
+			--exec ${basedir}/sbin/mysqld${MY_SUFFIX} \
+			-- \
+				${MY_CNF:+"--defaults-file="}${MY_CNF} \
+				${unmanagedparams} \
+				--basedir=${basedir} \
+				--datadir=${datadir} \
+				--pid-file=${pidfile} \
+				--socket=${socket}
+
+		retstatus=$?
+
+		# wait for socket creation
+		wdebug 1
+		while ! [[ -S "${socket}" || "${STARTUPTIMEOUT}" -lt 1 || "${retstatus}" -ne 0 ]] ; do
+			STARTUPTIMEOUT=$(( STARTUPTIMEOUT - 1 ))
+			[[ ${DEBUG} -ge 1 ]] && echo -n "${STARTUPTIMEOUT},"
+			sleep ${TIMEUNIT}
+		done
+		wdebug 1  ""
+		if [[ ! -S "${socket}" ]] ; then
+			eerror "MySQL${MY_SUFFIX} NOT started (${retstatus})"
+			retstatus=1
+		fi
+
+	wdebug 4 "<<< start()"
+	eend $retstatus
+}
+
+stop() {
+	get_slot_config
+	local retstatus PID
+	local timeout=${STOPTIMEOUT:-"120"}
+
+	ebegin "Stopping ${myservice}"
+	PID=$(cat "${pidfile}" 2>/dev/null)
+	start-stop-daemon --stop --quiet --pidfile "${pidfile}"
+	#retstatus=$?
+	wdebug 1  ""
+	while ! [[ -n "$PID" || $( kill -0 $PID 2>/dev/null ) || "${timeout}" -lt 1 ]] ; do
+		timeout=$(($timeout - 1))
+		[[ ${DEBUG} -ge 1 ]] && echo -n $(( $STOPTIMEOUT - $timeout ))
+		sleep ${TIMEUNIT}
+	done
+	[[ "${timeout}" -lt 1 ]] && retstatus=1
+	eend ${retstatus}
+}

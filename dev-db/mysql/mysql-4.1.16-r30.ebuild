@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16-r30.ebuild,v 1.4 2006/01/01 19:00:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16-r30.ebuild,v 1.5 2006/01/08 23:51:13 vivo Exp $
 
 # MYSQL_VERSION_ID will be
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
@@ -22,8 +22,10 @@ MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 NDB_VERSION_ID=$(( ${MYSQL_VERSION_ID} / 100 ))
 
 inherit mysql
+KEYWORDS="-*"
 
-DEPEND=">=sys-libs/readline-4.1
+DEPEND="${DEPEND}
+	>=sys-libs/readline-4.1
 	bdb? ( sys-apps/ed )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	userland_GNU? ( sys-process/procps )
@@ -43,9 +45,9 @@ src_test() {
 		local retstatus
 		addpredict /this-dir-does-not-exist/t9.MYI
 
-		mysql_version_is_at_least "5.00.15.00" \
-		&& make test-force-pl \
-		|| make test
+		cd mysql-test
+		sed -i -e "s|MYSQL_TCP_PORT=3306|MYSQL_TCP_PORT=3307|" mysql-test-run
+		./mysql-test-run
 		retstatus=$?
 
 		# to be sure ;)
