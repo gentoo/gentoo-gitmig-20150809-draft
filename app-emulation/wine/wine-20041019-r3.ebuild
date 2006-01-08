@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.19 2006/01/05 03:00:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.20 2006/01/08 04:36:47 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -18,7 +18,15 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	media-fonts/corefonts
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXrandr
+				x11-libs/libXi
+				x11-libs/libXmu
+				x11-libs/libXxf86dga
+				x11-libs/libXxf86vm
+			)
+			virtual/x11
+		)
+	)
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
@@ -29,6 +37,14 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )"
 DEPEND="${RDEPEND}
+	X? ( || ( ( x11-proto/inputproto
+				x11-proto/xextproto
+				x11-proto/xf86dgaproto
+				x11-proto/xf86vidmodeproto
+			)
+			virtual/x11
+		)
+	)
 	sys-devel/bison
 	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
 	sys-devel/flex"
