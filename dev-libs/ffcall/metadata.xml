@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>fafhrd@gentoo.org</email>
-  <description>ffcall is an optional dependency of core GNUstep libs, which I maintain</description>
-</maintainer>
 <longdescription>
 ffcall - foreign function call libraries
 This is a collection of four libraries which can be used to build foreign

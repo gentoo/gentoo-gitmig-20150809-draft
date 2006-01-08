@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd restrict="&gt;=dev-libs/libffi-3.3.3">gnustep</herd>
-<maintainer restrict="&gt;=dev-libs/libffi-3.3.3">
-  <email>fafhrd@gentoo.org</email>
-  <description>Maintainer of GNUstep for Gentoo, and libffi is a core dependency.</description>
-</maintainer>
 <longdescription>
 Compilers for high level languages generate code that follow certain
 conventions. These conventions are necessary, in part, for separate

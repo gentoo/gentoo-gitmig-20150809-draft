@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ffcall
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.22 2005/08/18 02:22:21 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.23 2006/01/08 12:34:21 hansmi Exp $
+
+  08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
   18 Aug 2005; Jason Wever <weeve@gentoo.org> ffcall-1.10.ebuild:
   Stable on SPARC.
