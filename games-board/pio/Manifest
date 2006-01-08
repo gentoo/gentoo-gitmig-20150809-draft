@@ -3,7 +3,7 @@ MD5 a270a5b020f0b2c049fe47b0396bafd9 files/digest-pio-0.9.19 68
 MD5 bd0fefda62535dc61a6c2791b5b194f8 files/digest-pio-0.9.23 68
 MD5 1aa79202dcebe05379ba182e2f361d44 files/digest-pio-0.9.33 68
 MD5 1b814dcc402548c41406881d805130e9 files/digest-pio-0.9.40 68
-MD5 7035b4db1ed5ed0e55ee3dd6524e5b2b metadata.xml 321
+MD5 de3b1e43fa1f75a6c293d00547f3364f metadata.xml 263
 MD5 71a6059bd11e6bb1dc95370eb1cc128a pio-0.9.19.ebuild 1048
 MD5 4a2092784b8521003ff632cf3b614cae pio-0.9.23.ebuild 1127
 MD5 b4c874fb6338e72393001b19e4ca8d77 pio-0.9.33.ebuild 1124
