@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mvideo
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mvideo/ChangeLog,v 1.3 2005/12/06 07:24:30 zaheerm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mvideo/ChangeLog,v 1.4 2006/01/08 12:07:29 flameeyes Exp $
+
+  08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
   06 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   mvideo-0.89.99.ebuild:

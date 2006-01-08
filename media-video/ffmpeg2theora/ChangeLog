@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg2theora
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.8 2005/12/17 13:29:52 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.9 2006/01/08 12:03:19 flameeyes Exp $
+
+  08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
   17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   ffmpeg2theora-0.15.ebuild:
