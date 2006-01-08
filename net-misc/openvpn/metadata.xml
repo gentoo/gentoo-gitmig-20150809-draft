@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>secure-tunneling</herd>
 <maintainer>
-  <email>luckyduck@gentoo.org</email>
-  <name>Jan Brinkmann</name>
-</maintainer>
-<maintainer>
   <email>uberlord@gentoo.org</email>
   <name>Roy Marples</name>
 </maintainer>
