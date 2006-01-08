@@ -1,4 +1,4 @@
-MD5 588157a532f2b31bac611222ef107397 ChangeLog 3952
+MD5 5ba88d45246ea83eea61467dd4608110 ChangeLog 4123
 MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r3 66
 MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r4 66
 MD5 92812f06661bb78ab112d9f8ff6c7b73 files/pdftohtml-0.36-CAN-2005-3193.patch 2644
@@ -8,5 +8,5 @@ MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
 MD5 970c0d92252dd03d92e70f4d0185533f metadata.xml 224
-MD5 c3ea476e8346bf07ac0a594403a13f63 pdftohtml-0.36-r3.ebuild 1198
-MD5 bf3c64b1c953230f94b7526fe2711b0b pdftohtml-0.36-r4.ebuild 1267
+MD5 131d933badb6e33ddf427707ae06491d pdftohtml-0.36-r3.ebuild 1221
+MD5 3e05862170e407bed02e102c1d4508b7 pdftohtml-0.36-r4.ebuild 1289

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36-r3.ebuild,v 1.8 2005/10/29 14:14:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36-r3.ebuild,v 1.9 2006/01/08 22:01:29 nattfodd Exp $
 
 inherit eutils
 
@@ -11,7 +11,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
-DEPEND="virtual/libc sys-devel/gcc"
+DEPEND="virtual/libc
+		sys-devel/gcc
+		!app-text/poppler"
 RDEPEND="virtual/libc"
 
 src_unpack() {
