@@ -1,10 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.2-r1.ebuild,v 1.7 2005/01/01 15:46:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.2-r1.ebuild,v 1.8 2006/01/08 23:28:37 chriswhite Exp $
 
-DESCRIPTION="Orange is a tool and library for squeezing out juicy \
-installable Microsoft Cabinet Files from self-extracting installers \
-for Microsoft Windows"
+DESCRIPTION="A tool and library for extracting cabs from executable installers."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
