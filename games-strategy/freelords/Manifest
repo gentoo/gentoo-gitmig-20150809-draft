@@ -1,7 +1,17 @@
-MD5 4a804fe4d9ecf95bff4aab69a8c3ad8a ChangeLog 2395
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2625efbff3904dbcc1f2dc331688413 ChangeLog 2480
 MD5 6ef80ef4d03f0404bcfbc6ca368861e8 files/digest-freelords-0.3.4 69
 MD5 9b067113cc0e53c706f951a9384dc4d4 files/digest-freelords-0.3.6 69
 MD5 ab1b855445f4e0f4ccbc46662e0bf206 files/freelordsrc 147
 MD5 b40c96132d0344380af85522c934a26e freelords-0.3.4.ebuild 1511
-MD5 0088777e7635102cc7713ff4905746de freelords-0.3.6.ebuild 1491
+MD5 d0d7d468935a8f28b20b76ad4cd5df38 freelords-0.3.6.ebuild 1493
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDwXAkomPajV0RnrERAuj6AJ9bbtkXGOqKzrdI0Wezm6HNnaD3KQCffYNf
+za7bUaAp1PxQAW0w7D7Fj1o=
+=+x/g
+-----END PGP SIGNATURE-----
