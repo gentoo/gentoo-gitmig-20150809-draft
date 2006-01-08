@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fbfa7f429d66d3ed3bc32924cfbde984 ChangeLog 781
+MD5 88668365f07de1fad30ec4ff67ed52db ChangeLog 890
 MD5 29b5bc87736dc6268fdba2fd63641a22 files/digest-vimpython-1.7 64
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 c39f3f1b8f644b21aa0ab72ebe553f6c vimpython-1.7.ebuild 823
+MD5 2ad4f09fee89559de074ce4c53920a28 vimpython-1.7.ebuild 823
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDh3uCQlM6RnzZP+IRAmHJAKCjn0e71tJ0DL4aVxR3Ii5aSdsSxQCgrkaT
-3X4O0OvX1OYQCgckO9W6AJI=
-=prKV
+iD8DBQFDwMJ+csIHjyDViGQRAvB8AJ4+KLXH1SqsKpjggneYb2te1h1ViQCfT0dq
+RY2dOsBPB8XVmmbNEztgmt0=
+=8/kh
 -----END PGP SIGNATURE-----
