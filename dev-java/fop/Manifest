@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c16ed2afc1b2a16bcf845f023d4c631c ChangeLog 2490
 MD5 a85f49d46070d6405ecab8d2a099524f files/0.20.5-buildxml.patch 547
 MD5 656bb7d30e63d5e57f79489637c243ce files/0.20.5-startscript.patch 2435
@@ -6,3 +9,10 @@ MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r3 67
 MD5 6888a76ca900a9c5561ab964ba88868c fop-0.20.5-r1.ebuild 1283
 MD5 704fef3baf28be20b4d55a016c9c09ff fop-0.20.5-r3.ebuild 1645
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwKz3ndWRXhKOboURAn3XAKDlpi8NJGnxZJO3p8YZ9A29Qo4X8QCfQHFi
+0Jrh+kmjL7KZ+0v3aWS4pok=
+=dPIo
+-----END PGP SIGNATURE-----
