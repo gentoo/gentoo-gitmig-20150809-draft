@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1464037f792c24cb543e7c553b3e5b39 ChangeLog 5923
+MD5 f6621d4c6629088fa26767f278c3f578 ChangeLog 6048
 MD5 2ee4cc635af9abc1de963e4d38525430 files/digest-libxklavier-1.02 68
 MD5 e25e334ceafe0426056d920a3ead52c3 files/digest-libxklavier-1.03 68
 MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04 68
@@ -18,13 +15,6 @@ MD5 5a267a38ce83469d40f7eb2e28de500d libxklavier-1.02.ebuild 941
 MD5 11f83de3d100083dec4fa85c3a929f78 libxklavier-1.03.ebuild 949
 MD5 8113cd4dbabec174f47b8767774e5b14 libxklavier-1.04-r1.ebuild 1070
 MD5 ddfe99faedd0be2841fd37eacdc38112 libxklavier-1.04.ebuild 999
-MD5 c465fa7c24d7153aee59a03d9cdd7e78 libxklavier-2.0-r1.ebuild 1276
+MD5 bd063f938f288a6d67331269cd0bbc3b libxklavier-2.0-r1.ebuild 1279
 MD5 b438ab07e92289b506f360e5ebd557cf libxklavier-2.0.ebuild 1182
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDwXYKomPajV0RnrERAiSHAJ9rorE+X2ZM5c8p3f2tk/mU16qnogCeJSiZ
-zPVgGeT3mBU6jIGEKovVRzk=
-=VqLA
------END PGP SIGNATURE-----
