@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r3.ebuild,v 1.8 2006/01/08 15:42:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r3.ebuild,v 1.9 2006/01/08 18:01:03 josejx Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/xml/fop/fop-${MY_V}-src.tar.gz"
 HOMEPAGE="http://xml.apache.org/fop/"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc examples jai jimi" # jikes support currently not possible :/
 RDEPEND=">=virtual/jre-1.4
 	jai? ( dev-java/sun-jai-bin )
