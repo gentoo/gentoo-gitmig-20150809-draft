@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/fwlanusb-0.09.00_beta.ebuild,v 1.2 2005/12/26 15:49:13 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/fwlanusb-0.09.00_beta.ebuild,v 1.3 2006/01/08 23:18:29 sbriesen Exp $
 
 inherit eutils linux-mod
 
@@ -29,6 +29,7 @@ pkg_setup() {
 		die "For using this driver you need a kernel with enabled NET_WIRELESS support."
 	fi
 	BUILD_TARGETS="all"
+	BUILD_PARAMS="LIBDIR=${S}/src"
 	MODULE_NAMES="fwlanusb(net:${S}/src)"
 }
 
