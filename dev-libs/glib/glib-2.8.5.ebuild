@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.3.ebuild,v 1.4 2005/12/27 07:55:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.5.ebuild,v 1.1 2006/01/08 23:21:55 dang Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -28,9 +28,10 @@ src_unpack() {
 
 	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
-		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
+		epatch "${FILESDIR}"/glib-2.6.3-testglib-ssp.patch
 	fi
-	epatch ${FILESDIR}/${P}-macos.patch
+
+	epatch "${FILESDIR}"/${PN}-2.8.3-macos.patch
 }
 
 src_compile() {
