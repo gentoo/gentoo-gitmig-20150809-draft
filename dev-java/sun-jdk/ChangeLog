@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.136 2005/12/28 22:52:57 betelgeuse Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.137 2006/01/08 23:27:53 nichoj Exp $
+
+  08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> files/sun-jdk-1.4.2.10:
+  Fixed LDPATH (bug #110561).
 
   28 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
   -files/sun-jdk-1.4.2.09, -files/sun-jdk-1.5.0.05, -files/javaws-waitid.c,
