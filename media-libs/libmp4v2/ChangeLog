@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.8 2006/01/02 15:35:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.9 2006/01/08 10:16:58 josejx Exp $
+
+  08 Jan 2006; Joseph Jezak <josejx@gentoo.org> libmp4v2-1.4.1.ebuild:
+  Marked ~ppc for bug #115265.
 
   02 Jan 2006; Olivier Crête <tester@gentoo.org>
   +files/mpeg4ip-1.4.1-disable-sdl-test.patch, libmp4v2-1.4.1.ebuild:
