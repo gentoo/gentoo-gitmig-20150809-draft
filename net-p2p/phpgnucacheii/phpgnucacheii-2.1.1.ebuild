@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/phpgnucacheii-2.1.1.ebuild,v 1.5 2005/09/11 14:02:32 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/phpgnucacheii-2.1.1.ebuild,v 1.6 2006/01/08 17:23:48 rl03 Exp $
 
 inherit webapp
 
@@ -38,7 +38,7 @@ src_install() {
 pkg_postinst() {
 	webapp_pkg_postinst
 	einfo "To set up the mysql tables for this package, please run:"
-	einfo "\tebuild /var/db/pkg/net-p2p/${P}/${P}.ebuild config"
+	einfo "\temerge --config ${PF}"
 }
 
 pkg_config() {

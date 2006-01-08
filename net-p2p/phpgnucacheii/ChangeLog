@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/phpgnucacheii
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/ChangeLog,v 1.6 2005/09/11 14:02:32 rl03 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/ChangeLog,v 1.7 2006/01/08 17:23:48 rl03 Exp $
+
+  08 Jan 2006; Renat Lumpau <rl03@gentoo.org> phpgnucacheii-2.1.1.ebuild:
+  Fixed emerge --config wrt bug #109482.
 
   11 Sep 2005; Renat Lumpau <rl03@gentoo.org> phpgnucacheii-2.1.1.ebuild:
   Fixed php dep wrt bug #102850.
