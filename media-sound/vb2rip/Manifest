@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4895a155c7ca07e23e51a00e503c3839 ChangeLog 553
 MD5 ae5b0d95c00fd3f5d1e3b07390abcd47 files/digest-vb2rip-1.4 56
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 46a505e92602c518372d18fe1695f535 vb2rip-1.4.ebuild 655
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwQZhAiZjviIA2XgRAtVgAJwLjQSnV3lsR60TEikBO625a4QHJwCfcjyy
+1kWKap1l7h0zGjxxB4NlAog=
+=Fepz
+-----END PGP SIGNATURE-----
