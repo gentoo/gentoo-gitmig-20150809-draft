@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>fafhrd@gentoo.org</email>
-  <description>My main herd is gnustep, and I'm developing audio backends for that; I use jack-audio-connection-kit heavily, and this module makes its realtime capability use quite straight-forward w/o kernel hackery.</description>
-</maintainer>
-<maintainer>
   <email>jnc@gentoo.org</email>
   <description>I am working to make the Gentoo musician's JACK setup a reliable
 platform, and have been asked to help mantain realtime-lsm stable.</description>
