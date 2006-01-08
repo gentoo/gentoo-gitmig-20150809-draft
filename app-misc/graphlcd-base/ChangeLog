@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/graphlcd-base
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.1 2006/01/08 15:27:11 hd_brummy Exp $
+
+*graphlcd-base-0.1.3_pre4 (08 Jan 2006)
+
+  08 Jan 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +graphlcd-base-0.1.3_pre4.ebuild:
+  initial import, find older versions on gentoo.de CVS
+
