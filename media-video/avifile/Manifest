@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c59cb59e97b3ae3ee01f980ac6183b04 ChangeLog 21842
 MD5 8981c162145c43fd70699f83c3f94ae0 avifile-0.7.38.20030710-r1.ebuild 3980
 MD5 35a55f8388e88bfab099edd7bf8ccffb avifile-0.7.41.20041001-r1.ebuild 4568
@@ -24,4 +27,11 @@ MD5 3eca07dd543790b26539e1c1755d4fde files/digest-avifile-0.7.43.20050224-r1 72
 MD5 3eca07dd543790b26539e1c1755d4fde files/digest-avifile-0.7.43.20050224-r2 72
 MD5 5c7a3ea4957036aa1da3db9880a3ed34 files/flvenc-patch 558
 MD5 c5840e80e1a70f6b5ce25679e53f2dcb files/throw.patch 7396
-MD5 76b95bd390c69f39e5e7b028b3ff69a5 metadata.xml 272
+MD5 3a58fac5e578938333e1e6afea64657c metadata.xml 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWbGV3J2n04EauwRAjTvAJ0ej2tJ2636oKbF76q4AyR1rW4p8QCfVvu+
+8BZBbiNfw0LDA6K5tnEiEQ0=
+=jSF/
+-----END PGP SIGNATURE-----
