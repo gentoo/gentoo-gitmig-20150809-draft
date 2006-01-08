@@ -2,12 +2,96 @@ Index: w3c-libwww-5.4.0/Library/src/Makefile.am
 ===================================================================
 --- w3c-libwww-5.4.0.orig/Library/src/Makefile.am
 +++ w3c-libwww-5.4.0/Library/src/Makefile.am
-@@ -197,6 +197,8 @@ libwwwfile_la_SOURCES = \
+@@ -33,7 +33,7 @@ EXTRA_LTLIBRARIES = \
+         libwwwdav.la \
+ 	libwwwsql.la
+ 
+-SUBDIRS = SSL windows vms
++SUBDIRS = . SSL windows vms
+ 
+ #	.h files are distributed but originally are made from the
+ #	self-documenting hypertext files.
+@@ -181,6 +181,7 @@ libwwwstream_la_SOURCES = \
+ 	HTTee.c \
+ 	HTXParse.h \
+ 	HTXParse.c
++libwwwstream_la_LIBADD = libwwwfile.la
+ 
+ libwwwcache_la_SOURCES = \
+ 	WWWCache.h \
+@@ -197,6 +198,9 @@ libwwwfile_la_SOURCES = \
  	HTFile.c \
  	HTMulti.h \
  	HTMulti.c
 +libwwwfile_la_LIBADD = \
-+	libwwwdir.la
++	libwwwdir.la \
++	libwwwtrans.la
  
  libwwwftp_la_SOURCES = \
  	WWWFTP.h \
+@@ -225,6 +229,9 @@ libwwwmime_la_SOURCES = \
+ 	HTMIMImp.h \
+ 	HTMIMImp.c \
+ 	HTMulpar.h
++libwwwmime_la_LIBADD = \
++	libwwwcache.la \
++	libwwwstream.la
+ 
+ libwwwhttp_la_SOURCES = \
+ 	WWWHTTP.h \
+@@ -252,8 +259,13 @@ libwwwhttp_la_SOURCES = \
+ 	HTPEP.h \
+ 	HTPEP.c
+ 
++libwwwhttp_la_LIBADD = \
++	../../modules/md5/libmd5.la \
++	libwwwmime.la
++
+ libwwwhttp_la_DEPENDENCIES = \
+-	../../modules/md5/libmd5.la
++	../../modules/md5/libmd5.la \
++	libwwwmime.la
+ 
+ libwwwnews_la_SOURCES = \
+ 	WWWNews.h \
+@@ -310,6 +322,8 @@ libwwwdir_la_SOURCES = \
+ 	HTDescpt.c \
+ 	HTDir.h \
+ 	HTDir.c
++libwwwdir_la_LIBADD = \
++	libwwwhtml.la
+ 
+ libwwwapp_la_SOURCES = \
+ 	WWWApp.h \
+Index: w3c-libwww-5.4.0/Library/src/SSL/Makefile.am
+===================================================================
+--- w3c-libwww-5.4.0.orig/Library/src/SSL/Makefile.am
++++ w3c-libwww-5.4.0/Library/src/SSL/Makefile.am
+@@ -39,6 +39,14 @@ libwwwssl_la_SOURCES = \
+ 	HTSSLhttps.h \
+ 	HTSSLhttps.c
+ 
++libwwwssl_la_LIBADD = \
++	../libwwwtrans.la \
++	../libwwwhttp.la
++
++libwwwssl_la_DEPENDENCIES = \
++	../libwwwtrans.la \
++	../libwwwhttp.la
++
+ libwwwssl_la_LDFLAGS = -rpath $(libdir)
+ 
+ LDADD = \
+Index: w3c-libwww-5.4.0/PICS-client/src/Makefile.am
+===================================================================
+--- w3c-libwww-5.4.0.orig/PICS-client/src/Makefile.am
++++ w3c-libwww-5.4.0/PICS-client/src/Makefile.am
+@@ -29,6 +29,8 @@ libpics_la_SOURCES = \
+ 	CSLabel.c	CSLLOut.c	CSLLURLs.c \
+ 	CSMacRed.c	CSMem.c		CSApp.c \
+ 	CSParse.c	CSUsrLst.c	CSUser.c
++libpics_la_LIBADD = \
++	../../Library/src/libwwwmime.la
+ 
+ BUILT_SOURCES = \
+ 	CSLApp.h	CSLUtils.h \

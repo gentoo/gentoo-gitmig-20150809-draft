@@ -1,8 +1,11 @@
-MD5 7f7329dc9787a78255d7a1ba75f17d91 ChangeLog 7292
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82a7e72c01be315ba436298380db165f ChangeLog 7479
 MD5 078b6239f293e1cc65f3f977b3136317 files/digest-libwww-5.4.0-r3 151
 MD5 4c3f7314020d5a1a6a01463a71b4944c files/digest-libwww-5.4.0-r4 151
 MD5 4c3f7314020d5a1a6a01463a71b4944c files/digest-libwww-5.4.0-r5 151
-MD5 527be27e3543b162b0b8e17602ca233b files/libwww-5.4.0-asneeded.patch 378
+MD5 adb28c73b642bd088f1b48e2cad9bb59 files/libwww-5.4.0-asneeded.patch 2428
 MD5 1866b237427a244b9923469b52f54473 files/libwww-5.4.0-autoconf-gentoo.diff 1089
 MD5 ee0dd3b8a76bf8b9e6d051663119eb40 files/libwww-5.4.0-automake-gentoo.diff 346
 MD5 231e5cc6d075b3464a46858f8d2b65e3 files/libwww-5.4.0-automake-macos.patch 436
@@ -15,3 +18,10 @@ MD5 4c70dae7ce4964982b3ebe728633f9f0 libwww-5.4.0-r3.ebuild 1943
 MD5 469a45f9eb035116e1c88cfaee53eff7 libwww-5.4.0-r4.ebuild 2145
 MD5 f3c5fc29fd674e21a4f9bb95e0a57e94 libwww-5.4.0-r5.ebuild 2189
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwQmkAiZjviIA2XgRAjTVAJ4wz3zf2wAEH3ghwpBdfbZhU8UaswCfY8zH
+nMbStcai9PUX3KC+eMcwoGQ=
+=T+zD
+-----END PGP SIGNATURE-----

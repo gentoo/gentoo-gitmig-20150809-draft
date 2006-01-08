@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.50 2006/01/06 14:31:36 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.51 2006/01/08 12:46:15 flameeyes Exp $
+
+  08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/libwww-5.4.0-asneeded.patch:
+  Improve --as-needed patch so that it works with examples and other packages
+  linking to it.
 
 *libwww-5.4.0-r5 (06 Jan 2006)
 
