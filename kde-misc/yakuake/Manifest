@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2fc82573a477282147927da31c2e6baa ChangeLog 595
+MD5 eaf537acd1055847f3023e4ec6bcf53f ChangeLog 698
 MD5 d3fe61d339a4df8b6191566fbdf7c725 files/digest-yakuake-2.7.3 66
 MD5 347e6648a3ba3fa79c7ebeb403703646 metadata.xml 504
-MD5 e306be203a4c37783c8b5e4a664c6954 yakuake-2.7.3.ebuild 503
+MD5 9d724c8b0a81d0e79fccb530a355b1a2 yakuake-2.7.3.ebuild 509
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYhsantT9W3vfTuoRAtMxAKCMkkcJE1GQhxFly8lVsn6F40DV+ACfcUpx
-yUcLuH847ukDAb35sOvG9wM=
-=K3Mp
+iD8DBQFDwN08csIHjyDViGQRAh/QAJ9AW9wY7PuDTSegpQxyQt4p+PPOpwCeP+3H
+e5DVz8BCJamHKwPxm4/4rIA=
+=yPCD
 -----END PGP SIGNATURE-----
