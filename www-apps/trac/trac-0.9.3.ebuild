@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.2.ebuild,v 1.1 2005/12/05 22:30:16 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.3.ebuild,v 1.1 2006/01/08 18:36:13 dju Exp $
 
 inherit distutils webapp
 
@@ -10,15 +10,16 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${P}.tar.gz"
 
 LICENSE="trac"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="vhosts cgi fastcgi postgres sqlite enscript silvercity"
+IUSE="cgi fastcgi postgres sqlite enscript silvercity"
 
 # doing so because utils (such as trac-admin), manpages... overlap
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 
-# we need virtual/httpd-cgi to bring apache/lighttpd/whatever in when USE cgi
-# we need virtual/httpd-fcgi to bring mod_fastcgi/lighttpd/whtever in when USE fastcgi
-# we need virtual/httpd-python to bring mod_python/whatever in (when USE python?)
+# we need to depend on virtual/httpd-cgi to bring apache/lighttpd/whatever in when USE cgi
+# we need to depend on virtual/httpd-fcgi to bring mod_fastcgi/lighttpd/whatever in when USE fastcgi
+# we need to depend on virtual/httpd-python to bring mod_python/whatever in when USE python (python
+#     is rather confusing here, as dev-lang/python is a required dependency, but httpd-python isn't)
 DEPEND="$DEPEND
 	>=dev-lang/python-2.3
 	app-text/pytextile
