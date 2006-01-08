@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11a7abb32b65c8e8a7dcc40c1f1ad543 wavpack-4.1.ebuild 634
-MD5 844f05b90bbd6e838efce4e38a0a13d7 ChangeLog 1017
-MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
-MD5 4e72a729a481fd53f91715d959048988 wavpack-4.2.ebuild 688
+MD5 64a27018d9eedac9409c97cc372ac835 ChangeLog 1122
 MD5 17333ced2ae7a4e6e6e8b0aa6f395558 files/digest-wavpack-4.1 63
 MD5 402a10f74927787724d561e68810c779 files/digest-wavpack-4.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCclkd06ebR+OMO78RAv9oAJ9GB4DvS29F4ec2jDAbiB7T8835cgCdGeeJ
-0gVGLX0aTq+RNxskZjXprMI=
-=7ue/
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 11a7abb32b65c8e8a7dcc40c1f1ad543 wavpack-4.1.ebuild 634
+MD5 4e72a729a481fd53f91715d959048988 wavpack-4.2.ebuild 688

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 778a7bacb2b422b592fa142d214ad181 ptabtools-0.3.1-r1.ebuild 1036
-MD5 e771ed0f3861a459b8284228765bf9ce ptabtools-0.3.1.ebuild 755
-MD5 daa14ba441e1063d35cad44d5dc4f380 ChangeLog 948
-MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
-MD5 c2c473c8b1b1caabcadd86a480b1e098 files/ptabtools-0.3.1-fPIC.patch 586
+MD5 791cfe915ff801210b3cefb28dca75ad ChangeLog 1054
 MD5 24b33a79baff0ec4ed867727fb49fc36 files/digest-ptabtools-0.3.1 66
 MD5 24b33a79baff0ec4ed867727fb49fc36 files/digest-ptabtools-0.3.1-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCGOK445JRcz4sDuoRAjehAJ4i2ny62K+34u6PtEqYbrKFuKphMACfUIqz
-RJfpOd+ApXImZTxa3R3xrTo=
-=3fBe
------END PGP SIGNATURE-----
+MD5 c2c473c8b1b1caabcadd86a480b1e098 files/ptabtools-0.3.1-fPIC.patch 586
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 778a7bacb2b422b592fa142d214ad181 ptabtools-0.3.1-r1.ebuild 1036
+MD5 e771ed0f3861a459b8284228765bf9ce ptabtools-0.3.1.ebuild 755
