@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>jnc@gentoo.org</email>
-  <description>I am working to make the Gentoo musician's JACK setup a reliable
-platform, and have been asked to help mantain realtime-lsm stable.</description>
-</maintainer>
 <longdescription>
 Realtime Linux Security Module
 
