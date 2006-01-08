@@ -2,23 +2,23 @@
 Hash: SHA1
 
 MD5 a2b226de8022eccf954f82b8f04852cd ChangeLog 9165
-MD5 7c405e4bf0d556e8beab56529e784c52 timidity++-2.13.2-r2.ebuild 4105
-MD5 a8034be95425c8a2aa062f2e95529c85 timidity++-2.13.2.ebuild 3832
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 0868926c5290817cacb9a1849bc043c2 files/timidity++-2.13.2-gcc4.patch 1325
-MD5 31bdaea612f18e2c3d45a8a73ab44c81 files/timidity++-2.13.2-exiterror.patch 21406
-MD5 67ee26f08d8de1243029a0a8849cd022 files/gnuconfig_update.patch 477
-MD5 80fb82d4216373cbf4efafd7719628e0 files/timidity.cfg-r1 669
-MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2 71
 MD5 dbfc5d45b6177ffaf7dd74d4971a520a files/conf.d.timidity 912
-MD5 15fce5a2d3dfc834b4de65428105e63b files/timidity-update 2513
-MD5 16a4adec164836d4390dc6b0f9a69ce9 files/timidity++-2.13.2-gtk26.patch 588
+MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2 71
 MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2-r2 71
+MD5 67ee26f08d8de1243029a0a8849cd022 files/gnuconfig_update.patch 477
 MD5 dbc4910aa5c6a5681dd4f121b5db63e8 files/init.d.timidity 457
+MD5 31bdaea612f18e2c3d45a8a73ab44c81 files/timidity++-2.13.2-exiterror.patch 21406
+MD5 0868926c5290817cacb9a1849bc043c2 files/timidity++-2.13.2-gcc4.patch 1325
+MD5 16a4adec164836d4390dc6b0f9a69ce9 files/timidity++-2.13.2-gtk26.patch 588
+MD5 15fce5a2d3dfc834b4de65428105e63b files/timidity-update 2513
+MD5 80fb82d4216373cbf4efafd7719628e0 files/timidity.cfg-r1 669
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 64139cf755355defe1357cfe9ccc0099 timidity++-2.13.2-r2.ebuild 4096
+MD5 9cb6f48c3571e0ef7446942fab32b3b3 timidity++-2.13.2.ebuild 3822
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIv+7j5H05b2HAEkRAjmmAJkBiZ5fTshA36mcsQWWlOn9QlyigQCeOU8+
-7UmjoO9vJ1I7ot5h7Mi5ElA=
-=VfzG
+iD8DBQFDwJLu2+ySkm8kpY0RAgM7AJ4tDlqIj3ov/4ZjFqGs81WvIIhJBgCfcbdf
+cEY+g24bt7bsvBPvzNuKF/o=
+=7zgI
 -----END PGP SIGNATURE-----
