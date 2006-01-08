@@ -4,4 +4,4 @@ MD5 f2f8db86560df060e2ebaa387001a99d files/wargus-2.1-ai.patch 5935
 MD5 0ab572fde330c03c24f73f69d4708e6a files/wargus-2.1-aitransporter.patch 929
 MD5 dda80e07159e799ca5b26f211180139b files/wargus-2.1-humanbasespell.patch 1146
 MD5 59b69aef9a760073b02c82194eab4800 metadata.xml 263
-MD5 bb6c4a440a784a857c0f32ad4e9fa256 wargus-2.1-r1.ebuild 1171
+MD5 069026090b3bc5d32df9cfc72a2721ae wargus-2.1-r1.ebuild 1181

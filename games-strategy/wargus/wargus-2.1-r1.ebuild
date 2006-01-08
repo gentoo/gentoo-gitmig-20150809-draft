@@ -1,6 +1,6 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.1 2006/01/06 20:26:18 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.2 2006/01/08 00:59:07 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -26,9 +26,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${P}-src.tar.gz
 	cd "${S}"
-	epatch ${FILESDIR}/wargus-2.1-humanbasespell.patch \
-		${FILESDIR}/wargus-2.1-ai.patch \
-		${FILESDIR}/wargus-2.1-aitransporter.patch
+	epatch "${FILESDIR}"/wargus-2.1-humanbasespell.patch \
+		"${FILESDIR}"/wargus-2.1-ai.patch \
+		"${FILESDIR}"/wargus-2.1-aitransporter.patch
 }
 
 src_install() {
@@ -39,6 +39,6 @@ src_install() {
 	games_make_wrapper wargus "./stratagus -d \"${dir}\"" "${GAMES_BINDIR}"
 	prepgamesdirs
 
-	doicon ${DISTDIR}/wargus.png
+	doicon "${DISTDIR}"/wargus.png
 	make_desktop_entry wargus Wargus
 }
