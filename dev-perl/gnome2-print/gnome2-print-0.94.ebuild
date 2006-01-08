@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.94.ebuild,v 1.3 2005/08/26 02:43:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.94.ebuild,v 1.4 2006/01/08 14:34:34 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,6 @@ DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2
 	dev-perl/glib-perl
 	>=gnome-base/libgnome-2
+	dev-perl/gnome2-perl
 	>=gnome-base/libgnomeprint-2
 	>=dev-perl/gtk2-perl-${PV}"
