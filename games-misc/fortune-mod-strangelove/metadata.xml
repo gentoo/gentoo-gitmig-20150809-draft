@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>rizzo@gentoo.org</email>
-  <name>Don Seiler</name>
-  <description>Author and maintainer of this fine set of quotes.</description>
-</maintainer>
 </pkgmetadata>
