@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bca4d910fb8e15b526ac0ef38eb21ac7 ChangeLog 1757
 MD5 255d2b71fe09891de8f4c0a84eee581e files/digest-imake-1.0.1 64
 MD5 c5ba0f778fb1722bd319a28441eaddde imake-1.0.1.ebuild 513
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWySoFw4q70f3SsRAg21AJ932GV7LM5Bd9J1qHTyr3bFbEac9wCcD/G8
+BYF2s7ULszy3esQoYFTtONw=
+=1jDE
+-----END PGP SIGNATURE-----
