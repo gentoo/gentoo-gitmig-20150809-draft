@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.31 2005/12/24 19:31:16 halcy0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.32 2006/01/08 16:18:27 anarchy Exp $
+
+*mozilla-firefox-bin-1.5-r2 (08 Jan 2006)
+
+  08 Jan 2006; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-bin-1.0.6-r2.ebuild, -mozilla-firefox-bin-1.5.ebuild,
+  -mozilla-firefox-bin-1.5-r1.ebuild, +mozilla-firefox-bin-1.5-r2.ebuild:
+  revision which includes linguas support
 
   24 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
   mozilla-firefox-bin-1.5-r1.ebuild:

@@ -1,22 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cbd250242e2da10af421f1cb94d34fd ChangeLog 11357
-MD5 a55b185b30df1647429525139fe29ec5 files/digest-mozilla-firefox-bin-1.0.6-r2 66
+MD5 c30c029ab2a50ea96739eda42f77ebcb ChangeLog 11640
 MD5 82be77a0991a01a626a24995353b9c7d files/digest-mozilla-firefox-bin-1.0.7 66
-MD5 868b46dc9449e24d7522e403b339beae files/digest-mozilla-firefox-bin-1.5 64
-MD5 868b46dc9449e24d7522e403b339beae files/digest-mozilla-firefox-bin-1.5-r1 64
+MD5 3706e13456e2631c796d34980eccb3c6 files/digest-mozilla-firefox-bin-1.5-r2 1411
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/mozillafirefox-bin-icon.png 3979
 MD5 dc62e3f15845b0343d1513abada402d7 files/icon/mozillafirefox-bin.desktop 203
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 396d47202cf4e60f89cb995d46294824 mozilla-firefox-bin-1.0.6-r2.ebuild 1874
 MD5 d7aac7b9a5c3e396fd39cea71058116c mozilla-firefox-bin-1.0.7.ebuild 1869
-MD5 b32a2af84db17b97ac2e2ac6c8341915 mozilla-firefox-bin-1.5-r1.ebuild 2027
-MD5 4cb01c1fd7e83cdc8c2fa1f543f109ac mozilla-firefox-bin-1.5.ebuild 1869
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDraIOCRZPokWLroQRAutdAJ4o+IEaWBGmELEiTC2EC4MMX+RlVQCeNzds
-0BXMD8xHF6XNy+j+rAi5gG0=
-=HvhF
------END PGP SIGNATURE-----
+MD5 a14528397e89a09d453218422de57a5f mozilla-firefox-bin-1.5-r2.ebuild 2959
