@@ -3,8 +3,10 @@ MD5 7d3e4c7886b1d1ff429ea98a8182faca files/digest-oracle-instantclient-jdbc-10.1
 MD5 71cef383c61956b0de73640fc392cc06 files/digest-oracle-instantclient-jdbc-10.1.0.3 91
 MD5 4c6dbc856c5695a71b9062919c35e3dc files/digest-oracle-instantclient-jdbc-10.1.0.4 94
 MD5 386a4a2d8849fa564ac7e21e213a9d05 files/digest-oracle-instantclient-jdbc-10.2.0.1 94
+MD5 12e7b58aa67df0161935257e2ac97049 files/digest-oracle-instantclient-jdbc-10.2.0.1-r1 193
 MD5 9f5d6b0af6c2271c1e2bbf0518bcc925 metadata.xml 388
 MD5 f6fd68779ad5a0533253db89d8236312 oracle-instantclient-jdbc-10.1.0.2_p2.ebuild 1376
 MD5 c1e2ee3cc253ee357784775da7cd5034 oracle-instantclient-jdbc-10.1.0.3.ebuild 1321
 MD5 be9bc6a14a8b106d699cbb1d25eaeb57 oracle-instantclient-jdbc-10.1.0.4.ebuild 1268
+MD5 b7c51103523e7df67b8e81755f160e87 oracle-instantclient-jdbc-10.2.0.1-r1.ebuild 1438
 MD5 274696c1841570c0b0f5c7cba8404209 oracle-instantclient-jdbc-10.2.0.1.ebuild 1263

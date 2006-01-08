@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.9 2006/01/07 22:31:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.10 2006/01/08 20:30:40 dertobi123 Exp $
+
+*oracle-instantclient-basic-10.2.0.1-r1 (08 Jan 2006)
+
+  08 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  +oracle-instantclient-basic-10.2.0.1-r1.ebuild:
+  Added amd64 support, many thanks to Danny van Dyk <kugelfang@gentoo.org>
+  Fixes bug #102171.
 
 *oracle-instantclient-basic-10.2.0.1 (07 Jan 2006)
 

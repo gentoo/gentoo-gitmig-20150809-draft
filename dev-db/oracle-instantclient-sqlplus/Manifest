@@ -3,8 +3,10 @@ MD5 77c18d359283aaf49ec2636bae6693f2 files/digest-oracle-instantclient-sqlplus-1
 MD5 0b0f6d200d7e375101ff9b829a3e8704 files/digest-oracle-instantclient-sqlplus-10.1.0.3 93
 MD5 671ba7486b7d55012869a7c0759f93c2 files/digest-oracle-instantclient-sqlplus-10.1.0.4 96
 MD5 d29a8a8cc29134e4feb1589d3e310330 files/digest-oracle-instantclient-sqlplus-10.2.0.1 96
+MD5 d61b51d7c6eeb4a8ac35e7ef51b0c7da files/digest-oracle-instantclient-sqlplus-10.2.0.1-r1 197
 MD5 9f5d6b0af6c2271c1e2bbf0518bcc925 metadata.xml 388
 MD5 2fee274b7df94902d24814e749e298b7 oracle-instantclient-sqlplus-10.1.0.2_p1.ebuild 1734
 MD5 07be143f368b893ebef31e640d337ded oracle-instantclient-sqlplus-10.1.0.3.ebuild 1666
 MD5 5d2001386557c76a5baf50e0b34fd328 oracle-instantclient-sqlplus-10.1.0.4.ebuild 1587
+MD5 631ee93ec5170d258e1684df1be21eb0 oracle-instantclient-sqlplus-10.2.0.1-r1.ebuild 1784
 MD5 b3dfd83c95245414ca99caf3ec0e4722 oracle-instantclient-sqlplus-10.2.0.1.ebuild 1610
