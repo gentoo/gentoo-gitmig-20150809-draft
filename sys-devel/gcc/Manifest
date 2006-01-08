@@ -72,7 +72,7 @@ MD5 deda4097201ccdf66e1f67618a67b6c9 files/digest-gcc-4.0.2-r3 381
 MD5 8ea5a2944f38c53b82789aa7eb6bdbef files/digest-gcc-4.1.0_beta20060106 71
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
-MD5 f80fd6ebeeea00d3e1649dfccdd85062 files/gcc-spec-env.patch 893
+MD5 f6eef7e81b209ca3c63c39e319b4a7a5 files/gcc-spec-env.patch 1389
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
@@ -104,7 +104,7 @@ MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvzZz2+ySkm8kpY0RAs6UAKCF1BZzbySifhuGEPN5Yn5S+VLdrACgnyve
-eRKjylVwjyVaMC5qLKfCCrA=
-=0IcH
+iD8DBQFDwafgZfNLSOUrp0sRAg0BAJwID2LO6uRugbrm3ceqCb9bgsa+QACggy6v
+jSKtEWx3/QIZM8cTS6+4BUg=
+=dG4x
 -----END PGP SIGNATURE-----
