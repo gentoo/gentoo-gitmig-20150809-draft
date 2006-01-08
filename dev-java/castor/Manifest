@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8e6a2e590d359fd198c8beee418d2ff ChangeLog 2346
+MD5 e19158951d2f4fa2800cfcf906e5382d ChangeLog 2595
 MD5 d7c2a05a293c9d5cb5537a60827b062f castor-0.9.5.3-r1.ebuild 1813
 MD5 029653534ff66d4fc39c19faa225d4d2 castor-0.9.7.ebuild 1923
+MD5 235d833c830323a339555e560347f240 castor-0.9.9.1.ebuild 1925
 MD5 c8ea1cd7d3b396c6354ffa40de1dfe8d castor-0.9.9.ebuild 1923
 MD5 a07a47cbd64524563caccf7a0f649553 files/0.9.5.3-jikes.patch 1316
 MD5 925da383ab0658b27587273d0f315f06 files/build-xml.patch 2859
 MD5 943c414729ed76f67dc46a6373bd6094 files/digest-castor-0.9.5.3-r1 68
 MD5 21050c5d30ff492f6d2bedc47492a19c files/digest-castor-0.9.7 66
 MD5 86020e5854d4b9773ab371ceef4dce12 files/digest-castor-0.9.9 66
+MD5 772c7b104899654dd57a6d5101e2dba9 files/digest-castor-0.9.9.1 68
 MD5 774373e19c9c08854e8d705a1756afbb metadata.xml 416
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDohiGndWRXhKOboURAtofAJ0TWeSOr6Widb3rgnkPeKAKVKChkQCfZySc
-D+qvU0K4jUy2s6fkW+UDPdQ=
-=VNkA
+iD8DBQFDwIO6ndWRXhKOboURAjspAJ9odzL4bHndbdH3VWPJ+nJsJ8YMmwCfYr6V
+VElgHdByp3XS2trQVuLlQR0=
+=SShR
 -----END PGP SIGNATURE-----
