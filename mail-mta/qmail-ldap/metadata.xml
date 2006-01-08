@@ -3,10 +3,6 @@
 <pkgmetadata>
     <herd>qmail</herd>
     <maintainer>
-        <email>sj7trunks@gentoo.org</email>
-        <description>qmail-ldap maintainer</description>
-    </maintainer>
-    <maintainer>
         <email>robbat2@gentoo.org</email>
         <name>Robin H. Johnson</name>
         <description>maintainer for the standard qmail part</description>
