@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/k3guitune
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.10 2005/08/24 09:19:00 greg_g Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.11 2006/01/08 12:34:06 flameeyes Exp $
+
+  08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
 *k3guitune-0.5 (24 Aug 2005)
 

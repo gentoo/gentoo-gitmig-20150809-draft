@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kamix
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.21 2005/12/18 17:17:10 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.22 2006/01/08 12:29:12 flameeyes Exp $
+
+  08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
   18 Dec 2005; Markus Rothe <corsair@gentoo.org> kamix-0.6.1.ebuild:
   Stable on ppc64
