@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e07f95ef79f28232b4bf084af3dd93f ChangeLog 374
+MD5 bef09ea33f24e7eabbf54ee688f0cbe4 ChangeLog 480
 MD5 10bdd83e9fbb1406546c3cc1a70de541 camerakit-0.0.1.20041011.ebuild 681
 MD5 b0fdcc252ef12320f672ebb2363cce72 files/digest-camerakit-0.0.1.20041011 69
-MD5 0380ac70206d4e3cd076581be69162b0 metadata.xml 313
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDhYxI1lqEGTUzyQRAgzIAJ4yWj51vWb18AAc90DGS89+qcL4yQCgrusJ
-WURt8KfOIU8pA+MxSMdZSxY=
-=xY8X
------END PGP SIGNATURE-----
+MD5 375d3810e5d7dac6e7d1c302912903f6 metadata.xml 251

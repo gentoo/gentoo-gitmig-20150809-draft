@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f62cdc98fb00b6258bfec5ddd6ad96b3 ChangeLog 1835
+MD5 25e6d56df42e957c54bffce6b6ccc818 ChangeLog 1941
 MD5 284c5f08861b623f3fb54a1bf4cce45e files/1.1.1_pre20050312-build-fixes.patch 1358
 MD5 2cc96fdbe05419ac90eadf8cc470c36d files/2/42_mod_gsweb.conf 264
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gsweb-1.1.1_pre20050312 0
 MD5 b2bed5fd63f7b0ac88c29357e81e52d3 files/gsweb.conf 2267
 MD5 51caed1ae199b15a69dc30558eedff3a gsweb-1.1.1_pre20050312.ebuild 2053
-MD5 793863b2ae98803d7c254bed889178b3 metadata.xml 429
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDhYxI1lqEGTUzyQRAnjiAKCgGIZINg1XpDboMwCQ5jIesS8HhQCg3hBn
-ZK1dlQN2cNLwiJ5FLegr6Rw=
-=PLo1
------END PGP SIGNATURE-----
+MD5 6adc1051825ce8f1549a38102be809bb metadata.xml 367

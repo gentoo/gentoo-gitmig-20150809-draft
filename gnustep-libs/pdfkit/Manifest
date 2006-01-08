@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e6d8298840a4bf8af4841e4910e7837 ChangeLog 1808
+MD5 3467701048a0d9648f4c42b07bddbcef ChangeLog 1914
 MD5 41964a8057a8059f88f443baffe84f44 files/digest-pdfkit-0.8-r3 64
 MD5 41964a8057a8059f88f443baffe84f44 files/digest-pdfkit-0.8-r4 64
 MD5 84d2e5e0ce13534390f4f761f017c67c files/xpdf-3.00-CESA-2004-007.diff.bz2 2075
 MD5 d4de4d643cf7db65c2a6cdbd4ac868e2 files/xpdf-3.00pl2.patch 1645
 MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3.patch 346
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
-MD5 7665a07a9a72d21043383c0cbbc02177 metadata.xml 346
+MD5 cfcc071d3dc85531286d96c9cee5a22e metadata.xml 284
 MD5 bfeaf7b2fcde69a1101e6c1e975e8f71 pdfkit-0.8-r3.ebuild 925
 MD5 c6f51b4362f9120e04f2ac65d21c8062 pdfkit-0.8-r4.ebuild 991
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDhYxI1lqEGTUzyQRAtFOAJ0U048lNKa1X8TjZ0Vf/5lDGzNgBgCZAeU6
-NHelND2mtaZaREH2ft8gS2s=
-=12Qi
------END PGP SIGNATURE-----

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f0aa12a7befe204de844d678d7ecaae8 ChangeLog 544
+MD5 2ed74b5e4372134b18a96dca2616008c ChangeLog 647
 MD5 cd7135583edca0a15c1f02ce0bcbe561 files/digest-rigs-0.2.2.20050714 71
 MD5 85697d2d3e2cd4268eb9e23647690b07 files/rigs-0.2.2.20050714-install-rb.patch 1994
-MD5 446667e22535869be688b1b491ee9e90 metadata.xml 1729
+MD5 42f2cc4862985256e7c927bf3e97f016 metadata.xml 1667
 MD5 50a08e0db668223455a70d0cc7b5bd3a rigs-0.2.2.20050714.ebuild 2282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoqM3AiZjviIA2XgRAqqDAKDloNrV2yzNfEtoy7DDW9pKhw9amQCgj1fS
-bx3rXaWrUm/haeK/8qMYFd4=
-=jzJD
------END PGP SIGNATURE-----
