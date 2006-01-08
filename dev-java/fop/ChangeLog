@@ -1,9 +1,11 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.23 2006/01/08 15:32:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.24 2006/01/08 15:42:17 betelgeuse Exp $
 
   08 Jan 2006; Petteri Räty <betelgeuse@gentoo.org> fop-0.20.5-r3.ebuild:
-  Marked stable on x86 for bug #116310.
+  Marked stable on x86 for bug #116310. Changed dependencies back to match
+  only the 1.5 slot because fop does not compile against the 1.5.1 slot so
+  dropped amd64 back to ~arch.
 
   08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> fop-0.20.5-r3.ebuild:
   Marked stable on amd64, to address bug #116310 in 0.20.5-r1.
