@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.6 2005/08/07 11:34:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.7 2006/01/08 01:37:59 genstef Exp $
 
 inherit eutils
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="xinerama xmms bmp"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libX11
+	x11-libs/libXext )
+	virtual/x11 )
 	bmp? (
 		media-sound/beep-media-player
 	)
@@ -24,7 +26,14 @@ RDEPEND="virtual/x11
 		>=media-libs/gdk-pixbuf-0.22.0
 	)"
 
-DEPEND="${RDEPEND}
+DEPEND="|| ( (
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-proto/xextproto
+	xinerama? ( x11-proto/xineramaproto )
+	x11-proto/xproto )
+	virtual/x11 )
+	${RDEPEND}
 	>=sys-devel/autoconf-2.57
 	>=sys-devel/automake-1.8"
 

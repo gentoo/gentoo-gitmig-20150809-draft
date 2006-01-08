@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.8-r1.ebuild,v 1.8 2005/05/22 19:07:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.8-r1.ebuild,v 1.9 2006/01/08 01:37:59 genstef Exp $
 
 inherit eutils
 
@@ -14,7 +14,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~ia64 ppc sparc x86"
 
-DEPEND="virtual/x11
+DEPEND="|| ( (
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-proto/xextproto
+	x11-proto/xineramaproto
+	x11-proto/xproto )
+	virtual/x11 )
 	xmms? ( media-sound/xmms >=media-libs/gdk-pixbuf-0.22.0 )"
 
 src_unpack() {
