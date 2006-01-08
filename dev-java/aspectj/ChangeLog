@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/aspectj
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.13 2005/10/18 11:06:23 axxo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.14 2006/01/08 05:33:16 nichoj Exp $
+
+*aspectj-1.2-r1 (08 Jan 2006)
+
+  08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> +aspectj-1.2-r1.ebuild:
+  No longer uses bundled jars to build. Patch contributed by Julie Bovee Hill
+  <joulie@gmail.com> (bug #63293).
 
   08 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
   +files/aspectj-1.1.1.build.xml.patch, aspectj-1.1.1.ebuild,
