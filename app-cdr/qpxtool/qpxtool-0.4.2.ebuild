@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.4.2.ebuild,v 1.2 2006/01/04 14:44:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.4.2.ebuild,v 1.3 2006/01/08 02:48:34 vapier Exp $
 
 inherit kde-functions qt3
 
@@ -16,8 +16,8 @@ IUSE=""
 DEPEND="=x11-libs/qt-3*"
 
 src_compile() {
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -project || die "qmake -project failed"
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qpxtool-${PV}.pro || die "qmake qpxtool failed"
+	${QTDIR}/bin/qmake -project || die "qmake -project failed"
+	${QTDIR}/bin/qmake qpxtool-${PV}.pro || die "qmake qpxtool failed"
 	emake || die "emake failed"
 }
 
