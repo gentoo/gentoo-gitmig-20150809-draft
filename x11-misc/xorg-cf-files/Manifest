@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4388c69bfa4f758a0c6e8dcf6fac6a2f ChangeLog 1909
+MD5 506523f6623b1ddf478ecb19a46b4d9a ChangeLog 1991
 MD5 6a9e9624b3fd7590d177806fbada249c files/digest-xorg-cf-files-1.0.1 72
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 e38df796ed1c894c92cbeb5274eb9c2d xorg-cf-files-1.0.1.ebuild 461
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuaHi2+ySkm8kpY0RArEzAJ4qVulUHiLSrp08DBx1mKpfkfeG9QCgj/Z+
-VqEAeSSDsc9H07kkPA0A9EY=
-=P0zi
------END PGP SIGNATURE-----
+MD5 c45335d39f19889717bd64b651b319f0 xorg-cf-files-1.0.1.ebuild 466
