@@ -1,6 +1,16 @@
-MD5 0692cec1016a98eef08c81d9ed15d5e2 sflowtool-3.8-r1.ebuild 701
-MD5 c14fa92fe368878084877c8f3bd42210 sflowtool-3.8.ebuild 602
-MD5 7620b058136e03ebc0823a951d9dc4cf ChangeLog 861
-MD5 b3adfaba0a37452fbd16e0c0c916982f metadata.xml 255
-MD5 ac44eb6d841ec2e4f7f3056727815772 files/digest-sflowtool-3.8-r1 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fcf608d923adc3da2722f53c59ddc81c ChangeLog 970
 MD5 ac44eb6d841ec2e4f7f3056727815772 files/digest-sflowtool-3.8 65
+MD5 ac44eb6d841ec2e4f7f3056727815772 files/digest-sflowtool-3.8-r1 65
+MD5 b3adfaba0a37452fbd16e0c0c916982f metadata.xml 255
+MD5 5ba2e4e61ecf75fa8338172f5a7d351b sflowtool-3.8-r1.ebuild 698
+MD5 c14fa92fe368878084877c8f3bd42210 sflowtool-3.8.ebuild 602
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwMVVcsIHjyDViGQRAtWsAJ0dxiMUSAJB3KVlzNwqFVMFSpBZVgCdEwpB
+H6AnDTmAJiTpSyPjXfUdFMg=
+=8OXd
+-----END PGP SIGNATURE-----

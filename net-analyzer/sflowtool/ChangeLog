@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.5 2005/12/05 21:58:08 strerror Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.6 2006/01/08 07:54:50 josejx Exp $
+
+  08 Jan 2006; Joseph Jezak <josejx@gentoo.org> sflowtool-3.8-r1.ebuild:
+  Marked ppc stable for bug #113620.
 
   05 Dec 2005; Benjamin Smee <strerror@gentoo.org> -sflowtool-3.7.ebuild,
   sflowtool-3.8-r1.ebuild:

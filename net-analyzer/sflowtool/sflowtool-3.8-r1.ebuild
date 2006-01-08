@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.8-r1.ebuild,v 1.2 2005/12/05 21:58:08 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.8-r1.ebuild,v 1.3 2006/01/08 07:54:50 josejx Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.inmon.com/bin/${P}.tar.gz"
 
 LICENSE="inmon-sflow"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 src_compile() {
