@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c2083407740aeea3359c68637b318d5f ChangeLog 739
 MD5 ec9a24556bef93d117f8ef79806afc6b episoder-0.2.1.ebuild 713
 MD5 6554b03a5163c5fd5fc20b39d682f421 files/digest-episoder-0.2.1 64
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwQDJAiZjviIA2XgRAsmDAJ4x5sX3DPyeOaD9QFcdF+VfZ+Ds3gCdEZ/3
+bhkFy6Hss38uM/ZaCTLfxYk=
+=YHcU
+-----END PGP SIGNATURE-----

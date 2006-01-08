@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 648d706cec6eb634e2a958aa8f8d67b1 ChangeLog 753
 MD5 a6194ab44907d1486aab86b2e1a7a3f2 files/digest-mvideo-0.89.99 67
 MD5 7635e616281cf4fa8eb023d44d53af6d files/mvideo-0.89.99-menu.patch 572
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 3b292db753ec97256a6f4b90365fa010 mvideo-0.89.99.ebuild 1874
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwQCNAiZjviIA2XgRAs/nAKDMLtFbO+rxMEfk4OMpoHl03u63SQCgymLP
+kzEtS/zrCocLQzSfwzartTQ=
+=A2ih
+-----END PGP SIGNATURE-----

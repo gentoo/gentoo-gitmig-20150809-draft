@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 51b03be69f3f680e9edeeafa04ae9930 ChangeLog 512
 MD5 b9f1671a1734aa05394e2bfc85152e6b files/digest-stan-0.4.1 61
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 5637adb90156b57ed21a30ac3005423c stan-0.4.1.ebuild 511
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwQAxAiZjviIA2XgRAqxbAJ48v/3wO+c3FCMX8+fzRLia+4jSRQCgzYGz
+BS3jax1oJjhwYkbt5g0Y/eQ=
+=Kjo0
+-----END PGP SIGNATURE-----

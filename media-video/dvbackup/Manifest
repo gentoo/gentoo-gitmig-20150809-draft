@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be1b02700db31e161f68daab142708a6 ChangeLog 604
 MD5 60ff02df1a1799cc917de2a653c6d890 dvbackup-0.0.4.ebuild 640
 MD5 9e4f8e847ed04c5a412695d9a64403ca files/digest-dvbackup-0.0.4 66
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwQFlAiZjviIA2XgRAmErAJ4lYEHlNtBEQctxNJDHeYw/8VblcQCeKXnD
+4MYbWVVrsotY8oWf3iZvlmw=
+=Ikqs
+-----END PGP SIGNATURE-----
