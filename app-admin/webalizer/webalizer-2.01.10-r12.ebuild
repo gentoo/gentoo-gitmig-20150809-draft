@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.1 2006/01/08 16:53:58 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.2 2006/01/08 21:57:58 rl03 Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkil but works well
@@ -66,7 +66,9 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=" --enable-dns"
+	local myconf=" --enable-dns \
+		--with-db=/usr/include/db4.2/ \
+		--with-dblib=db-4.2"
 	use geoip && myconf="${myconf} --enable-geoip"
 
 	# really dirty hack; necessary due to a really gross ./configure
