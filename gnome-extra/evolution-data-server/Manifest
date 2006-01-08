@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f5ae24998e779e1643e0cc6bccc60803 ChangeLog 9676
+MD5 7a5a898ebf1bc73fb487adb5fef1383c ChangeLog 10000
 MD5 98bdbed2d5ce2bec87868d9a46b5f3b0 evolution-data-server-1.0.2.ebuild 1065
 MD5 368efaf736537929d3c127b9608a1ae2 evolution-data-server-1.0.3.ebuild 983
 MD5 4f1c59c7610ff6bcd04eae2d1c044753 evolution-data-server-1.0.4.ebuild 985
-MD5 e3a6586c651eb7025b3a7e6aec86c1b2 evolution-data-server-1.2.3.ebuild 2538
+MD5 4e12ebc21144f74a49043736d7228718 evolution-data-server-1.2.3.ebuild 2536
 MD5 36265d101a2a38d3dd1d8c529614017b evolution-data-server-1.4.1.1.ebuild 3599
-MD5 6d8ba8d0c0b07f4a12f4e7cdfe627e84 evolution-data-server-1.4.2.1.ebuild 2710
+MD5 260475bb891f8f5fbe891ccf7dbd8c34 evolution-data-server-1.4.2.1.ebuild 2809
 MD5 e72d151eb141e23240770c222c39e317 files/digest-evolution-data-server-1.0.2 81
 MD5 dfc34218a032bcd275fc5fb09376abea files/digest-evolution-data-server-1.0.3 81
 MD5 677d10afd2898cc22305dd302a01d2e7 files/digest-evolution-data-server-1.0.4 81
@@ -18,12 +18,13 @@ MD5 c93bb2769f43f6e88e5fcb385a0ab498 files/evolution-data-server-1.0.2-amd64_mut
 MD5 ab9f8a22a7b870a6e1e2edc463949c82 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
 MD5 f198c2b5ab564c7e450ae07be5b1efc5 files/evolution-data-server-1.2.1-local-provider.patch 892
 MD5 9301f93589ecd825aa39e32465a707a3 files/evolution-data-server-1.2.3-gcc4.patch 558
+MD5 e60b90d23a97fbaabc6d4d3467dc47b2 files/evolution-data-server-1.4.2.1-calandar-crash-fix.patch 699
 MD5 31de33250de9b6fe2dba0deae946db46 files/evolution-data-server-no_lazy_bindings.patch 551
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDk4BcomPajV0RnrERAt1NAJsH8BUFxKH9MnYIntWY7/7Bk64JiACeKMC0
-AeDPbg3eaxq8XWNepzDvP24=
-=Q/Oa
+iD8DBQFDwYvJomPajV0RnrERAuXEAJ9yLOF1T1klN7r6Mp/+vtRHuwBw8wCbBdTV
+Sbxn7x/RqEw7N+Apau1J89U=
+=1Tgb
 -----END PGP SIGNATURE-----

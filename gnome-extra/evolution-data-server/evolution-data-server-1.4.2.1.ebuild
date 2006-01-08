@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.2.1.ebuild,v 1.2 2005/12/04 23:48:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.2.1.ebuild,v 1.3 2006/01/08 22:00:49 dang Exp $
 
 inherit eutils gnome2
 
@@ -71,6 +71,9 @@ src_unpack() {
 
 	# Resolve symbols at execution time for setgid binaries
 	epatch "${FILESDIR}"/${PN}-no_lazy_bindings.patch
+
+	# Fix calandar crashing, bug #86174
+	epatch "${FILESDIR}"/${PN}-1.4.2.1-calandar-crash-fix.patch
 
 	sed -n -e '/GNOME_COMPILE_WARNINGS/,/dnl IT_PROG_INTLTOOL/p' \
 		aclocal.m4 > gnome.m4

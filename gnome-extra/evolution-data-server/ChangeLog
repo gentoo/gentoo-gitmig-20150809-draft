@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/evolution-data-server
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.67 2005/12/04 23:48:51 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.68 2006/01/08 22:00:49 dang Exp $
+
+  08 Jan 2006; <dang@gentoo.org>
+  evolution-data-server-1.2.3.ebuild:
+  Downgrade arm to ~ because of mozilla dep, to allow repoman to commit
+
+  08 Jan 2006; <dang@gentoo.org>
+  +files/evolution-data-server-1.4.2.1-calandar-crash-fix.patch,
+  evolution-data-server-1.4.2.1.ebuild:
+  Add fix for calendar crash. Bug #86174
 
   04 Dec 2005; <dang@gentoo.org> evolution-data-server-1.4.2.1.ebuild:
   Begin removing mozilla/firefox as sources for nspf/nss per mozilla herd
