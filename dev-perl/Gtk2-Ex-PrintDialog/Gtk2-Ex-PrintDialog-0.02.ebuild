@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/Gtk2-Ex-PrintDialog-0.02.ebuild,v 1.2 2005/12/13 10:14:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/Gtk2-Ex-PrintDialog-0.02.ebuild,v 1.3 2006/01/08 14:49:20 mcummings Exp $
 
 inherit perl-module
 
@@ -17,5 +17,5 @@ SRC_TEST="do"
 DEPEND=""
 RDEPEND="cups? ( dev-perl/Net-CUPS )
 		dev-perl/gtk2-perl
-		dev-perl/Locale-gettext"
+		>=dev-perl/Locale-gettext-1.04"
 

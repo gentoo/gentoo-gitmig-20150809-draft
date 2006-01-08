@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-Ex-PrintDialog
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.2 2005/12/13 10:14:13 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.3 2006/01/08 14:49:20 mcummings Exp $
+
+  08 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Gtk2-Ex-PrintDialog-0.02.ebuild:
+  Bug 117886, updating version of locale-gettext dep
 
   13 Dec 2005; <mcumming@gentoo.org> Gtk2-Ex-PrintDialog-0.02.ebuild:
   Forgot the iuse for cups
