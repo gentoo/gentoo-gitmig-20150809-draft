@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f85114065f7fabdac1197a64f77a89c5 ChangeLog 2410
+MD5 a061fd20115f32cbb38248e4e366ab29 ChangeLog 2525
 MD5 5df2fa8eb58ab939486364f33ed6bef8 files/0.8.1-gentoo.patch 917
 MD5 853995e0ef6ad781854d0f8973f8bbc9 files/digest-xmms-volnorm-0.4.1 65
 MD5 853995e0ef6ad781854d0f8973f8bbc9 files/digest-xmms-volnorm-0.4.1-r1 65
@@ -9,11 +6,4 @@ MD5 4f9e795e1965d52f07d25575b1c3bdab files/digest-xmms-volnorm-0.8.1 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 474f8ae12621136100e20f10b345465e xmms-volnorm-0.4.1-r1.ebuild 809
 MD5 c51d4a693c7684bbf76ebd98a75c93db xmms-volnorm-0.4.1.ebuild 841
-MD5 7350b5837a7dc4b117470a08ded77e72 xmms-volnorm-0.8.1.ebuild 1021
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvu7LCRZPokWLroQRAjmFAKCdpUIfLeKChTrUanPszQQtt7d32wCfR0R2
-AU6rZQ9NWiSxcGWnO0G7hfk=
-=558S
------END PGP SIGNATURE-----
+MD5 9ffb7df9c44d36bb6eba2f7b384cbb39 xmms-volnorm-0.8.1.ebuild 1023

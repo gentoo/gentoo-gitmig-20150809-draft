@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.8.1.ebuild,v 1.6 2006/01/06 22:27:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.8.1.ebuild,v 1.7 2006/01/08 09:19:16 dertobi123 Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://volnorm.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
 #~arch: Keep in ~arch as this is a dev version upstream.
-KEYWORDS="~alpha amd64 ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 
 DEPEND="media-sound/xmms"
 
