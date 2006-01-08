@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/zipper
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.3 2005/11/04 18:11:35 betelgeuse Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.4 2006/01/08 12:37:57 hansmi Exp $
+
+  08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
   04 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> zipper-0.9.ebuild:
   Added ~x86 keyword. Fixes bug #111375.

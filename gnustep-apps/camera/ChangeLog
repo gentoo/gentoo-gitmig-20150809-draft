@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/camera
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/ChangeLog,v 1.1 2005/01/12 22:41:07 fafhrd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/ChangeLog,v 1.2 2006/01/08 12:35:58 hansmi Exp $
+
+  08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
 *camera-0.8 (12 Jan 2005)
 

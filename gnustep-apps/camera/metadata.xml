@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnustep</herd>
-<maintainer>
-  <email>fafhrd@gentoo.org</email>
-</maintainer>
 <longdescription>
 Camera is a simple application to download files from a digital
 camera. The files can be optionally deleted after download. During

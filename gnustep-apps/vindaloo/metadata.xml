@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnustep</herd>
-<maintainer>
-  <email>fafhrd@gentoo.org</email>
-</maintainer>
 <longdescription>
 A PDF Reader. It is currently under active development. Vindaloo runs under Mac
 OS X and GNUstep. The OSX version that comes as a dmg-file does not require
