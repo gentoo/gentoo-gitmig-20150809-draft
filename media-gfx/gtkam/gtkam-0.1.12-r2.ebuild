@@ -1,48 +1,43 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r2.ebuild,v 1.1 2006/01/07 20:39:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r2.ebuild,v 1.2 2006/01/08 03:26:29 compnerd Exp $
 
 inherit eutils gnome2
-
-IUSE="exif gnome nls"
 
 DESCRIPTION="A frontend for gPhoto 2"
 HOMEPAGE="http://gphoto.org/proj/gtkam"
 SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE="exif gnome nls"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=media-libs/libgphoto2-2.1.6
 	exif? ( media-libs/libexif-gtk media-libs/libexif )
 	gnome? ( >=gnome-base/libbonobo-2 >=gnome-base/libgnomeui-2 )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
+DOCS="ABOUT-NLS AUTHORS MANUAL NEWS README"
+
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable nls) $(use_enable exif) $(use_with gnome) \
+			$(use_with gnome bonobo) --with-rpmbuild=/bin/false --without-gimp"
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	epatch ${FILESDIR}/${PN}-0.1.10-norpm.patch
 	epatch ${FILESDIR}/${PN}-0.1.12-helpdoc.patch
 	epatch ${FILESDIR}/${PN}-0.1.12-desktop-image.patch
 }
 
-src_compile() {
-	econf \
-		$(use_enable nls) \
-		$(use_with exif) \
-		$(use_with gnome gnome) \
-		$(use_with gnome bonobo) \
-		--with-rpmbuild=/bin/false --without-gimp
-	emake || die
-}
-
 src_install() {
-	einstall || die
+	gnome2_src_install
 	rm -rf ${D}/usr/share/doc/gtkam
-	dodoc ABOUT-NLS AUTHORS COPYING INSTALL MANUAL NEWS README
 }

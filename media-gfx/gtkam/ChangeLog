@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.32 2006/01/07 20:39:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.33 2006/01/08 03:26:29 compnerd Exp $
+
+  08 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  gtkam-0.1.12-r2.ebuild:
+  Fixing up scrollkeeper collisions by taking advantage of the GNOME-2 eclass
 
 *gtkam-0.1.12-r2 (07 Jan 2006)
 
