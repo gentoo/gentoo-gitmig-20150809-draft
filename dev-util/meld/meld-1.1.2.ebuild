@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.2.ebuild,v 1.1 2005/11/11 16:56:51 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.2.ebuild,v 1.2 2006/01/08 21:41:21 compnerd Exp $
 
 inherit python gnome2 eutils
 
@@ -18,13 +18,25 @@ DEPEND=">=dev-lang/python-2.2
 	>=dev-python/gnome-python-1.99.15
 	>=dev-python/pygtk-1.99.15
 	>=dev-python/pyorbit-1.99.0
-	dev-python/gnome-python-extras
-	"
+	dev-python/gnome-python-extras"
+
+USE_DESTDIR="1"
+DOCS="AUTHORS COPYING INSTALL README.CVS changelog help/"
+
+pkg_setup() {
+	if ! built_with_use '<dev-python/pygtk-2.8.0-r2' gnome ; then
+		einfo
+		einfo "Meld requires pygtk to be built with the gnome use flag set."
+		einfo "Please re-emerge pygtk with the gnome use flag set."
+		einfo
+		die "You need to re-emerge pygtk with gnome use flag."
+	fi
+}
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
+
 	# Fix the .desktop icon name
 	sed -i -e "s:Icon=meld:Icon=/usr/share/pixmaps/meld.png:" ./meld.desktop.in
 
@@ -38,9 +50,6 @@ src_unpack() {
 src_compile() {
 	emake || die "make failed"
 }
-
-USE_DESTDIR="1"
-DOCS="AUTHORS COPYING INSTALL README.CVS changelog help/"
 
 pkg_postinst() {
 	python_mod_optimize /usr/lib/meld
