@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f80ca2199a73dce5781633f94789980 ChangeLog 567
+MD5 eeca9dfd3766e0e80188bc23256c24a1 ChangeLog 673
 MD5 dfb02b04870aafcf3f09085aa413f9a0 files/digest-vindaloo-0.1 65
 MD5 92b40dbd0309e7fb4a5f053e6c064035 files/digest-vindaloo-0.2 65
-MD5 49647acaee42d84ab690b62a2e47ed08 metadata.xml 507
+MD5 aa5a476a74487b1882f39614f70e5acb metadata.xml 445
 MD5 573e7433b9973ab3791e87669251ca06 vindaloo-0.1.ebuild 649
 MD5 e1c56889bb4911e75fdae8507fcd875d vindaloo-0.2.ebuild 649
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDhSkI1lqEGTUzyQRAnnBAKCU7USr8hjyHf9EQ/KcWbyLfCRS5ACgmX+v
-dWIYd+tLN1NkCqc1vhMR/KY=
-=nTjw
------END PGP SIGNATURE-----

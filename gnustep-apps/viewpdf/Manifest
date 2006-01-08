@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b4f5363d6f7d7bdfa0257b7a6433095 ChangeLog 784
+MD5 17e603b106dfb64d7681cec0ace2bbbe ChangeLog 890
 MD5 39ab004a6d77ef0c595ba5962b369d9c files/digest-viewpdf-0.9 63
-MD5 3a53292e6e137ae19262b2290b026e9a metadata.xml 288
+MD5 99bfa4e3a0d787b1c0844cbf2a3cb890 metadata.xml 226
 MD5 219db3e33408851f5eb03c558873bc1a viewpdf-0.9.ebuild 596
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDhSkI1lqEGTUzyQRAsWUAJwIVDqohgVrlEEvmXKn9WkKQNbrYgCfUWZD
-XY5yrgCxG/XDoDhpAZGIQKc=
-=rHQx
------END PGP SIGNATURE-----
