@@ -1,4 +1,4 @@
-MD5 ad1d614c3cf7e0470900be66bb70d677 tkdiff-4.0.2.ebuild 579
-MD5 151cf9c653f4c4a8c06dc6d6a3862cad ChangeLog 432
+MD5 6479d47d6ccec43742589d30ea8024b3 ChangeLog 622
+MD5 e3ce4ec42aec77c98cdb138b85e1be18 files/digest-tkdiff-4.1.1 63
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
-MD5 ab15eecdf48a35fb325c0ab125a90fd1 files/digest-tkdiff-4.0.2 63
+MD5 111159b6ba5742b25c3e249965122767 tkdiff-4.1.1.ebuild 579
