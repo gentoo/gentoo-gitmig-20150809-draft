@@ -1,0 +1,248 @@
+--- src/memcpy.c	9 Jul 2005 09:30:10 -0000	1.17
++++ src/memcpy.c	7 Jan 2006 11:02:05 -0000
+@@ -203,10 +203,10 @@
+         "movntps %%xmm2, 32(%1)\n"
+         "movntps %%xmm3, 48(%1)\n"
+         :: "r" (from), "r" (to) : "memory");
+-        from +=64;
+-        to +=64;
++        from = 64 + (char *)from;
++        to = 64  + (char *)to;
+       }
+-    else 
++    else
+       /*
+          Only if SRC is aligned on 16-byte boundary.
+          It allows to use movaps instead of movups, which required data
+@@ -225,8 +225,8 @@
+         "movntps %%xmm2, 32(%1)\n"
+         "movntps %%xmm3, 48(%1)\n"
+         :: "r" (from), "r" (to) : "memory");
+-        from +=64;
+-        to +=64;
++        from = 64 + (char *)from;
++        to = 64  + (char *)to;
+       }
+     /* since movntq is weakly-ordered, a "sfence"
+      * is needed to become ordered again. */
+@@ -279,8 +279,8 @@
+       "movq %%mm6, 48(%1)\n"
+       "movq %%mm7, 56(%1)\n"
+       :: "r" (from), "r" (to) : "memory");
+-      from+=64;
+-      to+=64;
++      from = 64 + (char *)from;
++      to = 64  + (char *)to;
+     }
+     __asm__ __volatile__ ("emms":::"memory");
+   }
+@@ -339,8 +339,8 @@
+       "movntq %%mm6, 48(%1)\n"
+       "movntq %%mm7, 56(%1)\n"
+       :: "r" (from), "r" (to) : "memory");
+-      from+=64;
+-      to+=64;
++      from = 64 + (char *)from;
++      to = 64  + (char *)to;
+     }
+      /* since movntq is weakly-ordered, a "sfence"
+      * is needed to become ordered again. */
+@@ -380,10 +380,8 @@
+ 							"	cmpl $0, %%eax\n"
+ 							"	je 1f\n"							// si c'est nul, on passe aux blocs de 128 octets
+ 							"	movl %3, %%edx\n" 					// edx = taille d'un bloc
+-        						"2:	movl %%edx, %%ecx\n"
+-								"	shrl $7, %%ecx\n"
+-   								"3:	movl  -64(%%esi,%%edx), %%ebx\n" 	// boucle de prefetch (source)
+-								"	movl -128(%%esi,%%edx), %%ebx\n"
++   								"3:	movl  -64(%%esi,%%edx), %%ecx\n" 	// boucle de prefetch (source)
++								"	movl -128(%%esi,%%edx), %%ecx\n"
+    								"	subl $128, %%edx\n"
+    								"	jnz 3b\n"
+    								"4:	movups    (%%esi,%%edx), %%xmm0\n"		// boucle de copie
+@@ -403,11 +401,12 @@
+        							"	movntps %%xmm6,  96(%%edi,%%edx)\n"
+        							"	movntps %%xmm7, 112(%%edi,%%edx)\n"
+        							"	addl $128, %%edx\n"
+-       							"	loop 4b\n"							// si le bloc n'est pas termine , on boucle
++       							"	cmpl %3, %%edx\n"
++       							"	jne 4b\n"							// si le bloc n'est pas termine , on boucle
+        							"addl %%edx, %%esi\n"				// sinon, bloc suivant
+        							"addl %%edx, %%edi\n"
+        							"decl %%eax\n"
+-       							"jnz 2b\n"							// s'il reste encore des blocs, on boucle
++       							"jnz 3b\n"							// s'il reste encore des blocs, on boucle
+  							"1: movl %3, %%ecx\n"					// preparation de la copie des blocs de 128 restants
+  							"	dec %%ecx\n"						// ecx = masque de bloc (ex: 4096 -> 0x00000FFF)
+    							"	andl %0, %%ecx\n"					// ecx = n % TAILLE_BLOC
+@@ -448,7 +447,7 @@
+  							"8:	rep movsb\n"						// ...ce que l'on fait
+        						:
+         	     			: "m"(n) , "m"(src) , "m"(dst), "m"(tb)
+-        	         		: "eax", "ebx", "ecx", "edx", "esi", "edi", "memory"
++        	         		: "eax", "ecx", "edx", "esi", "edi", "memory"
+         	            );
+ 
+ 	return dst;
+@@ -518,10 +517,8 @@
+ 							"	cmpl $0, %%eax\n"
+ 							"	je 1f\n"							// si c'est nul, on passe aux blocs de 128 octets
+ 							"	movl %3, %%edx\n" 					// edx = taille d'un bloc
+-        						"2:	movl %%edx, %%ecx\n"
+-								"	shrl $6, %%ecx\n"
+-   								"3:	movl  -64(%%esi,%%edx), %%ebx\n" 	// boucle de prefetch (source)
+-								"	movl -128(%%esi,%%edx), %%ebx\n"
++   								"3:	movl  -64(%%esi,%%edx), %%ecx\n" 	// boucle de prefetch (source)
++								"	movl -128(%%esi,%%edx), %%ecx\n"
+    								"	subl $128, %%edx\n"
+    								"	jnz 3b\n"
+    								"4:	movq   (%%esi,%%edx), %%mm0\n"		// boucle de copie
+@@ -541,11 +538,12 @@
+        							"	movntq %%mm6, 48(%%edi,%%edx)\n"
+        							"	movntq %%mm7, 56(%%edi,%%edx)\n"
+        							"	addl $64, %%edx\n"
+-       							"	loop 4b\n"							// si le bloc n'est pas termine , on boucle
++       							"	cmpl %3, %%edx\n"
++       							"	jne 4b\n"							// si le bloc n'est pas termine , on boucle
+        							"addl %%edx, %%esi\n"				// sinon, bloc suivant
+        							"addl %%edx, %%edi\n"
+        							"decl %%eax\n"
+-       							"jnz 2b\n"							// s'il reste encore des blocs, on boucle
++       							"jnz 3b\n"							// s'il reste encore des blocs, on boucle
+  							"1: movl %3, %%ecx\n"					// preparation de la copie des blocs de 64 restants
+  							"	dec %%ecx\n"						// ecx = masque de bloc (ex: 4096 -> 0x00000FFF)
+    							"	andl %0, %%ecx\n"					// ecx = n % TAILLE_BLOC
+@@ -579,13 +577,13 @@
+        							"addl %%edx, %%esi\n"
+        							"addl %%edx, %%edi\n"
+        						"6: sfence\n"
+-             				"	emms\n"						
++             				"	emms\n"
+ 				            "	movl %0, %%ecx\n"
+    							"	andl $0x0000003F, %%ecx\n"			// il reste au plus 63 octets a copier...
+  							"8:	rep movsb\n"						// ...ce que l'on fait
+        						:
+         	     			: "m"(n) , "m"(src) , "m"(dst), "m"(tb)
+-        	         		: "eax", "ebx", "ecx", "edx", "esi", "edi", "memory"
++        	         		: "eax", "ecx", "edx", "esi", "edi", "memory"
+         	            );
+ 
+ 	return dst;
+@@ -656,12 +654,10 @@
+ 							"	cmpl $0, %%eax\n"
+ 							"	je 1f\n"							// si c'est nul, on passe aux blocs de 128 octets
+ 							"	movl %3, %%edx\n" 					// edx = taille d'un bloc
+-        						"2:	movl %%edx, %%ecx\n"
+-								"	shrl $6, %%ecx\n"
+-								"3:	movl  -64(%%esi,%%edx), %%ebx\n" 	// boucle de prefetch (source)
+-								"	movl -128(%%esi,%%edx), %%ebx\n"
+-								"	movl  -64(%%edi,%%edx), %%ebx\n" 	// boucle de prefetch (destination)
+-								"	movl -128(%%edi,%%edx), %%ebx\n"
++								"3:	movl  -64(%%esi,%%edx), %%ecx\n" 	// boucle de prefetch (source)
++								"	movl -128(%%esi,%%edx), %%ecx\n"
++								"	movl  -64(%%edi,%%edx), %%ecx\n" 	// boucle de prefetch (destination)
++								"	movl -128(%%edi,%%edx), %%ecx\n"
+    								"	subl $128, %%edx\n"
+    								"	jnz 3b\n"
+ 								"4:	movq   (%%esi,%%edx), %%mm0\n"		// boucle de copie
+@@ -681,11 +677,12 @@
+        							"	movq %%mm6, 48(%%edi,%%edx)\n"
+        							"	movq %%mm7, 56(%%edi,%%edx)\n"
+        							"	addl $64, %%edx\n"
+-       							"	loop 4b\n"							// si le bloc n'est pas termine , on boucle
++       							"	cmpl %3, %%edx\n"
++       							"	jne 4b\n"							// si le bloc n'est pas termine , on boucle
+        							"addl %%edx, %%esi\n"				// sinon, bloc suivant
+        							"addl %%edx, %%edi\n"
+        							"decl %%eax\n"
+-       							"jnz 2b\n"							// s'il reste encore des blocs, on boucle
++       							"jnz 3b\n"							// s'il reste encore des blocs, on boucle
+  							"1: movl %3, %%ecx\n"					// preparation de la copie des blocs de 64 restants
+  							"	dec %%ecx\n"						// ecx = masque de bloc (ex: 4096 -> 0x00000FFF)
+    							"	andl %0, %%ecx\n"					// ecx = n % TAILLE_BLOC
+@@ -710,7 +707,7 @@
+        							"	movq %%mm7, 56(%%edi,%%edx)\n"
+        							"	addl $64, %%edx\n"
+        							"	loop 5b\n"							// s'il reste des blocs de 64 , on boucle
+-       							"addl %%edx, %%esi\n"				
++       							"addl %%edx, %%esi\n"
+        							"addl %%edx, %%edi\n"
+        						"6: emms\n"
+ 				            "	movl %0, %%ecx\n"
+@@ -718,7 +715,7 @@
+  							"8:	rep movsb\n"						// ...ce que l'on fait
+        						:
+         	     			: "m"(n) , "m"(src) , "m"(dst), "m"(tb)
+-        	         		: "eax", "ebx", "ecx", "edx", "esi", "edi", "memory"
++        	         		: "eax", "ecx", "edx", "esi", "edi", "memory"
+         	            );
+ 
+ 	return dst;
+@@ -788,12 +785,10 @@
+ 							"	cmpl $0, %%eax\n"
+ 							"	je 1f\n"							// si c'est nul, on passe aux blocs de 128 octets
+ 							"	movl %3, %%edx\n" 					// edx = taille d'un bloc
+-        						"2:	movl %%edx, %%ecx\n"
+-								"	shrl $6, %%ecx\n"
+-								"3:	movl  -64(%%esi,%%edx), %%ebx\n" 	// boucle de prefetch (source)
+-								"	movl -128(%%esi,%%edx), %%ebx\n"
+-								"	movl  -64(%%edi,%%edx), %%ebx\n" 	// boucle de prefetch (destination)
+-								"	movl -128(%%edi,%%edx), %%ebx\n"
++								"3:	movl  -64(%%esi,%%edx), %%ecx\n" 	// boucle de prefetch (source)
++								"	movl -128(%%esi,%%edx), %%ecx\n"
++								"	movl  -64(%%edi,%%edx), %%ecx\n" 	// boucle de prefetch (destination)
++								"	movl -128(%%edi,%%edx), %%ecx\n"
+    								"	subl $128, %%edx\n"
+    								"	jnz 3b\n"
+ 								"4: fildq   (%%esi,%%edx)\n"		// boucle de copie
+@@ -813,11 +808,12 @@
+        							"	fistpq  8(%%edi,%%edx)\n"
+        							"	fistpq   (%%edi,%%edx)\n"
+        							"	addl $64, %%edx\n"
+-       							"	loop 4b\n"							// si le bloc n'est pas termine , on boucle
++       							"	cmpl %3, %%edx\n"
++       							"	jne 4b\n"							// si le bloc n'est pas termine , on boucle
+        							"addl %%edx, %%esi\n"				// sinon, bloc suivant
+        							"addl %%edx, %%edi\n"
+        							"decl %%eax\n"
+-       							"jnz 2b\n"							// s'il reste encore des blocs, on boucle
++       							"jnz 3b\n"							// s'il reste encore des blocs, on boucle
+  							"1: movl %3, %%ecx\n"					// preparation de la copie des blocs de 64 restants
+  							"	dec %%ecx\n"						// ecx = masque de bloc (ex: 4096 -> 0x00000FFF)
+    							"	andl %0, %%ecx\n"					// ecx = n % TAILLE_BLOC
+@@ -849,7 +845,7 @@
+  							"8:	rep movsb\n"						// ...ce que l'on fait
+        						:
+         	     			: "m"(n) , "m"(src) , "m"(dst), "m"(tb)
+-        	         		: "eax", "ebx", "ecx", "edx", "esi", "edi", "memory"
++        	         		: "eax", "ecx", "edx", "esi", "edi", "memory"
+         	            );
+ 
+ 	return dst;
+@@ -963,7 +959,7 @@
+ {
+   unsigned long long int x;
+   __asm__ __volatile__ ("rdtsc" : "=A" (x));
+-  // __asm__ volatile (".byte 0x0f, 0x31" : "=A" (x));     
++  // __asm__ volatile (".byte 0x0f, 0x31" : "=A" (x));
+   return x;
+ }
+ #else
+@@ -1249,13 +1245,13 @@
+     return;
+   }
+ 
+-  if( (buf1 = malloc(BUFSIZE)) == NULL )
++  if( (buf1 = (char *)malloc(BUFSIZE)) == NULL )
+     return;
+-    
+-  if( (buf2 = malloc(BUFSIZE)) == NULL ) {
++
++  if( (buf2 = (char *)malloc(BUFSIZE)) == NULL ) {
+     free(buf1);
+   }
+-    
++
+ #ifdef FLUSH_CACHE
+   if( (buf3 = malloc(FLUSH_CACHE_SIZE)) == NULL ) {
+     free(buf1);

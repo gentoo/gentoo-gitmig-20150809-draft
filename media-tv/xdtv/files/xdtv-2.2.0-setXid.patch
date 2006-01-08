@@ -1,0 +1,12 @@
+Index: xdtv-2.2.0/src/Makefile.am
+===================================================================
+--- xdtv-2.2.0.orig/src/Makefile.am
++++ xdtv-2.2.0/src/Makefile.am
+@@ -135,6 +135,7 @@ xdtv_LDADD = ../alevt/libalevt.a @X_LIBS
+ xdtv_LDFLAGS = -rdynamic
+ 
+ xdtv_v4l_conf_SOURCES = xdtv_v4l-conf.c videodev.h
++xdtv_v4l_conf_LDFLAGS = $(BINDNOW_FLAGS)
+ xdtv_v4l_conf_LDADD = @X_LIBS@ -lX11 @LIBXEXT@ @LIBXXF86DGA@ @LIBXXF86VM@
+ 
+ xdtv_wizard_SOURCES = xdtv_wizard.c translation.c 

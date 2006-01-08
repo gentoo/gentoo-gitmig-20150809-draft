@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xdtv
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.13 2005/12/10 15:07:05 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.14 2006/01/08 12:25:31 flameeyes Exp $
+
+*xdtv-2.2.0-r2 (08 Jan 2006)
+
+  08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xdtv-2.2.0-memcpy.patch, +files/xdtv-2.2.0-setXid.patch,
+  +xdtv-2.2.0-r2.ebuild:
+  Add patch from upstream to fix problems with memcpy.c and hardened (bug
+  #115724). Add also patch to add bindnow flags to setXid executable.
 
   10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0-r1.ebuild:
   Made mostly modular xorg friendly; it won't be until font eclass is
