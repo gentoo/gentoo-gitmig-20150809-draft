@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.0.9.ebuild,v 1.1 2006/01/05 22:33:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.0.9.ebuild,v 1.2 2006/01/08 17:52:48 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 		|| ( sys-libs/glibc libiconv )
 		app-text/scrollkeeper
 		dev-util/pkgconfig"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 DOCS="NEWS README TODO"
 USE_DESTDIR="1"
