@@ -4,7 +4,7 @@
  [Desktop Entry]
  Encoding=UTF-8
  Name=gtkam
-+Image=gtkam.png
++Icon=gtkam.png
  Comment=Transfer pictures from your digital camera
  Exec=gtkam
  StartupNotify=true
