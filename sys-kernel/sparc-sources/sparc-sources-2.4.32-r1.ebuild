@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.32-r1.ebuild,v 1.1 2006/01/03 15:17:20 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.32-r1.ebuild,v 1.2 2006/01/08 11:39:36 joker Exp $
 
 ETYPE="sources"
 IUSE="livecd ultra1"
@@ -11,7 +11,7 @@ PATCH_BASE="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${EXTRAVERSION}"
 
 SSV_URI="mirror://gentoo/patches-${PATCH_BASE}.tar.bz2"
 
-KEYWORDS="-* ~sparc"
+KEYWORDS="-* sparc"
 DESCRIPTION="Full sources for the Gentoo Sparc Linux kernel"
 UNIPATCH_LIST="${DISTDIR}/patches-${PATCH_BASE}.tar.bz2"
 SRC_URI="${KERNEL_URI} ${SSV_URI}"

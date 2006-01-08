@@ -1,4 +1,4 @@
-MD5 c836fe59456fee48556b4e22630f0308 ChangeLog 15689
+MD5 945ca63f2f148574ef13ad39be91ba9c ChangeLog 15795
 MD5 0cae39dcfb06422e094da7e364e67c33 files/2.4-sparc64-ramdisk64.patch 2558
 MD5 ac8d8bb55e33fd4113aaecc98591f533 files/blade1500.patch 1480
 MD5 3af0404d78ae35f6d5b8731fa1758016 files/digest-sparc-sources-2.4.30 140
@@ -10,5 +10,5 @@ MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
 MD5 47d259829b113b4c5210820eb981b569 sparc-sources-2.4.30.ebuild 1195
 MD5 e407e459359f12334ffbefd2ec40823d sparc-sources-2.4.31-r2.ebuild 1201
 MD5 5717b5d7466eb1fdc0556f693ebce473 sparc-sources-2.4.31.ebuild 1195
-MD5 0e21d86cf4071abbfcb1af8e6f9e7db2 sparc-sources-2.4.32-r1.ebuild 1199
+MD5 432e18c7124bdeb7e47ca2765abdea9f sparc-sources-2.4.32-r1.ebuild 1198
 MD5 8866c1c8549bf7279d06fa8522be085a sparc-sources-2.4.32.ebuild 1195
