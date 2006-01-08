@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/argus
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.12 2005/09/29 02:35:02 vanquirius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.13 2006/01/08 23:47:19 vanquirius Exp $
+
+*argus-2.0.6 (08 Jan 2006)
+
+  08 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/argus-2.0.6-libpcap-include.patch, +files/argus.initd,
+  +argus-2.0.6.ebuild:
+  2.0.6 version bump. Note: argus-clients have been split up upstream, I am
+  committing a new package called argus-clients along with this bump.
 
   29 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> argus-2.0.5.ebuild:
   Do not dodoc COPYING/INSTALL, misc fixes.
