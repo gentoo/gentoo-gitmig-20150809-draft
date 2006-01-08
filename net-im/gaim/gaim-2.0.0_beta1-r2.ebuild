@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1-r2.ebuild,v 1.1 2005/12/25 02:58:23 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1-r2.ebuild,v 1.2 2006/01/08 18:55:24 dertobi123 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono
 
@@ -18,7 +18,7 @@ IUSE="bonjour dbus nls perl spell nas cjk gnutls silc eds krb4 tcltk debug mono"
 
 RDEPEND="media-libs/libao
 	media-libs/audiofile
-	bonjour? (net-misc/howl)
+	bonjour? ( net-misc/howl )
 	dbus? ( >=sys-apps/dbus-0.35
 		>=dev-lang/python-2.4 )
 	>=x11-libs/gtk+-2.0

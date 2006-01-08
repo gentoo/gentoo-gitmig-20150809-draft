@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1-r3.ebuild,v 1.1 2005/12/29 13:48:45 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta1-r3.ebuild,v 1.2 2006/01/08 18:55:24 dertobi123 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono
 
@@ -13,12 +13,12 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="bonjour dbus nls perl spell nas cjk gnutls silc eds krb4 tcltk debug mono xscreensaver"
 
 RDEPEND="media-libs/libao
 	media-libs/audiofile
-	bonjour? (net-misc/howl)
+	bonjour? ( net-misc/howl )
 	dbus? ( >=sys-apps/dbus-0.35
 		>=dev-lang/python-2.4 )
 	>=x11-libs/gtk+-2.0
@@ -36,7 +36,7 @@ RDEPEND="media-libs/libao
 		dev-lang/tk )
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
 	mono? ( dev-lang/mono )
-	xscreensaver? (x11-misc/xscreensaver)"
+	xscreensaver? ( x11-misc/xscreensaver )"
 
 DEPEND="$RDEPEND
 	dev-util/pkgconfig
