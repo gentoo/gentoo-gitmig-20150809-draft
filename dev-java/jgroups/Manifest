@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e04cff6e2bfb1a36cb0f21d376568ca8 ChangeLog 1510
+MD5 9379d10b6a04f2318b8296f4b7b5916c ChangeLog 1621
 MD5 2d0fc8f95c511b631fb60b33d6fbd5dc files/digest-jgroups-2.2.7 67
 MD5 2d0fc8f95c511b631fb60b33d6fbd5dc files/digest-jgroups-2.2.7-r1 67
-MD5 dc4ef1c10d72ce5252422839d32cf0b6 jgroups-2.2.7-r1.ebuild 1587
+MD5 fd307909a71084b67ef935211e188dd7 jgroups-2.2.7-r1.ebuild 1586
 MD5 661ddb08d7c1ced845fb4b445614f7c2 jgroups-2.2.7.ebuild 1439
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqgr9ndWRXhKOboURAv2XAKCEH9DmUzzWTV1tUWqrclBVb6mYmgCgwLtF
-WQgYebepphQ6xzFAaMi1Ako=
-=ULn7
------END PGP SIGNATURE-----
