@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/pdfkit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/ChangeLog,v 1.7 2005/06/06 07:11:53 fafhrd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/ChangeLog,v 1.8 2006/01/08 12:39:46 hansmi Exp $
+
+  08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
   06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org> pdfkit-0.8-r4.ebuild:
   Stabilization for GNUstep GWorkspace related ebuilds

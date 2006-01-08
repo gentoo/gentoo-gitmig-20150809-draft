@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnustep</herd>
-<maintainer>
-  <email>fafhrd@gentoo.org</email>
-</maintainer>
 <longdescription>
 PDFKit is a framework that supports rendering of PDF content in GNUstep applications.
 </longdescription> 

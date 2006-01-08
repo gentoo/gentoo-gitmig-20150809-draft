@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnustep</herd>
-<maintainer>
-  <email>fafhrd@gentoo.org</email>
-</maintainer>
 <longdescription>
 ObjcUnit is a unit testing framework for Objective-C on Mac OS X and GNUstep. It's design was copied from JUnit, written by Erich Gamma and Kent Beck, and then adapted somewhat for Objective-C.
 </longdescription>

@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/popplerkit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.3 2005/07/20 21:47:56 fafhrd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.4 2006/01/08 12:40:06 hansmi Exp $
+
+  08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
 *popplerkit-0.0.0.20050720 (20 Jul 2005)
 

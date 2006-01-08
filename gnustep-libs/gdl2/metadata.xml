@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnustep</herd>
-<maintainer>
-  <email>fafhrd@gentoo.org</email>
-</maintainer>
 <longdescription>
 The GNUstep Database Library 2 (GDL2) is a set of libraries to map
 Objective-C objects to rows of relational database management systems

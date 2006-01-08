@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/gsweb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.4 2005/03/24 05:38:11 fafhrd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.5 2006/01/08 12:39:13 hansmi Exp $
+
+  08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove retiring dev from metadata.
 
 *gsweb-1.1.1_pre20050312 (24 Mar 2005)
 
