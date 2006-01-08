@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>blauwers@gentoo.org</email>
-  <name>Bart Lauwers</name>
-</maintainer>
 <longdescription>TV-Out for NVidia cards</longdescription>
 </pkgmetadata>

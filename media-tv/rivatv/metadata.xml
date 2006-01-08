@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-tv</herd>
-<maintainer>
-  <email>blauwers@gentoo.org</email>
-  <name>Bart Lauwers</name>
-</maintainer>
 </pkgmetadata>
