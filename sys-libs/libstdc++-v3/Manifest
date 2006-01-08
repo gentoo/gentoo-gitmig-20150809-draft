@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d115ff8fb138daa3831ef3c59aa208b ChangeLog 6006
+MD5 2590149d416277031157e513f8d3fbf0 ChangeLog 6089
 MD5 14f4d6619c938dbb907e2420c0eeefd9 files/digest-libstdc++-v3-3.3.3-r1 64
 MD5 4068b84d9ce9d440b063718549cfc354 files/digest-libstdc++-v3-3.3.4 64
 MD5 79ef0db9c6e9750aa92334dded832283 files/digest-libstdc++-v3-3.3.6 64
@@ -9,11 +6,4 @@ MD5 b2a96584f4cee72362695ba44c911c40 files/libstdc++_amd64_multilib_hack.patch 3
 MD5 b88c0b00824daf43da881b7291fa3b06 libstdc++-v3-3.3.3-r1.ebuild 7908
 MD5 cd00b79d1f7da394d874d9e788b26315 libstdc++-v3-3.3.4.ebuild 8304
 MD5 ee624df0ac3850ac9bf22df70f77b05a libstdc++-v3-3.3.6.ebuild 8307
-MD5 b6c1db1060c4e856b248a22adec1ff53 metadata.xml 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvYhRKRy60XGEcJIRAucGAJwMjJPPZunWrgvRR5MaMxHEDKVbOgCfY0La
-TfLPWEa7gY641s5TIRynQ/4=
-=zn8B
------END PGP SIGNATURE-----
+MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
