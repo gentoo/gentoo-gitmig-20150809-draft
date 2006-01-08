@@ -3,14 +3,9 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-	<email>coronalvr@gentoo.org</email>
-	<name>Alex Veber</name>
-	<description>Primary maintainer</description>
-</maintainer>
-<maintainer>
 	<email>wschlich@gentoo.org</email>
 	<name>Wolfram Schlich</name>
-	<description>Secondary maintainer</description>
+	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>
 CenterICQ is a text mode menu- and window-driven IM interface that supports the
