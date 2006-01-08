@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3a6a0f157059330fc5fbc3a107a2d8d ChangeLog 1400
+MD5 9b90c750238cdba48db9afc4d741358a ChangeLog 1505
 MD5 e7d81912ff4607d269aa631cb0d6de62 ffmpeg2theora-0.12.ebuild 744
 MD5 8d3db4e56b0208360c424d80e915fe53 ffmpeg2theora-0.13.ebuild 756
 MD5 0c640bc8eef7c671f7b99528f1660415 ffmpeg2theora-0.15.ebuild 935
 MD5 0d6f7ece558f9b1b206da912327edabd files/digest-ffmpeg2theora-0.12 71
 MD5 a7f89b818311037ceabf640863dc07c2 files/digest-ffmpeg2theora-0.13 71
 MD5 2b03309b2b92e1372d1c1e82dcee9904 files/digest-ffmpeg2theora-0.15 71
-MD5 a741469ea595fb76ba3553cb2f3f9b9a metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpBLcAiZjviIA2XgRAif7AKDpuONuxsCDQlQtnkr+muj/5LGHYACfYF15
-ej+1dXevjA5d5EWDE3f5K7s=
-=lWLx
------END PGP SIGNATURE-----
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
