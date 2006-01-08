@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c23f3a57eacf536a0c41f1190a51b3e ChangeLog 464
+MD5 e056642c0f064e4784115cb50724c99a ChangeLog 642
 MD5 660a63e2becad860ad090f3dee173513 files/digest-ortp-0.7.0 62
-MD5 958c5d320e01aa49dce21c884ee6378f files/digest-ortp-0.7.1 62
+MD5 958c5d320e01aa49dce21c884ee6378f files/digest-ortp-0.7.1-r1 62
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
 MD5 63a252b926ec94685fb0afeaf3cd20e5 ortp-0.7.0.ebuild 630
-MD5 12b144fc11d0aa774c465b4bef9445ac ortp-0.7.1.ebuild 777
+MD5 6cf7109d90c65aea977c318e801f947b ortp-0.7.1-r1.ebuild 863
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDdXFFmdTrptrqvGERAqiJAKCX1iWvwAnEGj0GDM9TYtiqsrYeYQCdES8G
-0bRdW3ln6YWnYt9R1Fwy8lQ=
-=kjni
+iD8DBQFDwMe8mdTrptrqvGERAiRWAJ9lsatDDbcCn948sNHYT6143nAkpQCfbuSx
+IqraDj8GXz44nojvtYIAjSY=
+=PLHn
 -----END PGP SIGNATURE-----
