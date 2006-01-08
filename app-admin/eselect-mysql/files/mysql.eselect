@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.3 2006/01/07 22:40:38 vivo Exp $
+# $Id: mysql.eselect,v 1.4 2006/01/08 23:41:42 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/01/07 22:40:38 $'
+SVN_DATE='$Date: 2006/01/08 23:41:42 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/sbin"
 ERR_NOT_FOUND="(not-found)"
+# "unset" is grepped by the MySQL ebuild so don't touch it
 ERR_UNSET="(unset)"
 
 # return a human oriented version
@@ -33,7 +34,7 @@ function version4bash() {
 
 # Return the versions currently installed
 find_versions() {
-	local versions lis
+	local versions list
 	# "eselect mysql set 1" will always set the best version
 	list=${MYSQL_SYMLINK_CHECKDIR}/mysqld-*
 	[[ ${list##/} == mysqld-* ]] && return
@@ -56,8 +57,7 @@ check_symlink() {
 	[[ -z ${filename} ]] || [[ -z ${version} ]] && return 1
 
 	# check link source
-	[[ -f ${filename} ]] || [[ -f "${filename}.gz" ]] \
-		|| [[ -d ${filename} ]] || ret=$(( ${ret} + 1 ))
+	[[ -f ${filename} ]] || [[ -d ${filename} ]] || ret=$(( ${ret} + 1 ))
 
 	# check link targe
 	# not checking for directory (want to keep "/etc/mysql")
@@ -108,7 +108,7 @@ set_current_version() {
 	local version=${1}
 	is_number "${version}" || die -q "No usable version: ${version}"
 	local CWD=$(pwd)
-	local lastdir dir linkname linkname2
+	local lastdir dir linkname
 	local list=$(< $ROOT/var/lib/eselect/mysql/mysql-${version}.filelist )
 
 	# perform a check on the entire file lis
@@ -135,15 +135,29 @@ set_current_version() {
 			lastdir="${dir}"
 		fi
 		linkname="$(basename "${filename}")"
-		for linkname2 in "${linkname}" "${linkname}.gz" ; do
-			if [[ -a "${linkname2}" ]] ; then
-				# rm needed for directory
-				rm -f "${linkname/"-${version}"/}" &> /dev/null
-				ln -sf "${linkname2}" "${linkname2/"-${version}"/}"
-				[[ ! -L "${linkname2/"-${version}"/}" ]] \
-				&& write_warning_msg "FAILED: cd \"${dir}\" && ln -sf \"${linkname2}\" \"${linkname2/"-${version}"/}\""
-			fi
-		done
+		if [[ -a "${linkname}" ]] ; then
+			# rm needed for directory
+			rm -f "${linkname/"-${version}"/}" &> /dev/null
+			ln -sf "${linkname}" "${linkname/"-${version}"/}"
+			[[ ! -L "${linkname/"-${version}"/}" ]] \
+			&& write_warning_msg "FAILED: cd \"${dir}\" && ln -sf \"${linkname}\" \"${linkname/"-${version}"/}\""
+		fi
+	done
+
+	cd "${CWD}"
+}
+
+remove_current_version() {
+
+	local version=${1}
+	is_number "${version}" || die -q "No usable version: ${version}"
+	local CWD=$(pwd)
+	local lastdir dir linkname
+	local list=$(< $ROOT/var/lib/eselect/mysql/mysql-${version}.filelist )
+	
+	for filename in $list ; do
+		linkname="${ROOT}/${filename/"-${version}"/}"
+		[[ -L "${linkname}" ]] && rm -f "${linkname}"
 	done
 
 	cd "${CWD}"
@@ -202,6 +216,24 @@ do_set() {
 	fi
 
 	set_current_version "$(version4bash "${version}")"
+}
+
+### remove action ###
+
+describe_remove() {
+	echo "Remove symlinks of the default server"
+}
+
+do_remove() {
+
+	local version=$(readlink "${MYSQL_SYMLINK_CHECKDIR}/mysqld")
+	version=$(version4human "${version##*-}")
+
+	if [[ -z "${version}" ]] ; then
+		die -q "No symlinks found"
+	fi
+
+	remove_current_version "$(version4bash "${version}")"
 }
 
 # vim: set ft=eselect :
