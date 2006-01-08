@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.2 2006/01/06 20:26:18 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.3 2006/01/08 15:12:25 genstef Exp $
+
+  08 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/wargus-2.1-ai.patch, wargus-2.1-r1.ebuild:
+  Move the ai-patch to the mirrors because it has a cvs Id tag and thus breaks
+  in gentoo cvs, thanks to Anton Romanov <theli@ukr.net> in bug 118221
 
 *wargus-2.1-r1 (06 Jan 2006)
 

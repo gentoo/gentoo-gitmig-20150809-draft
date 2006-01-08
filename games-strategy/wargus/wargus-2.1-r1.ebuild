@@ -1,13 +1,14 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.2 2006/01/08 00:59:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.3 2006/01/08 15:12:25 genstef Exp $
 
 inherit eutils games
 
 DESCRIPTION="Warcraft II for the Stratagus game engine (Needs WC2 DOS CD)"
 HOMEPAGE="http://wargus.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz
-	http://dev.gentoo.org/~genstef/files/wargus.png"
+	http://dev.gentoo.org/~genstef/files/wargus.png
+	http://dev.gentoo.org/~genstef/files/dist/wargus-2.1-ai.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,10 +25,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${P}-src.tar.gz
+	unpack ${A/wargus.png}
 	cd "${S}"
 	epatch "${FILESDIR}"/wargus-2.1-humanbasespell.patch \
-		"${FILESDIR}"/wargus-2.1-ai.patch \
+		"${WORKDIR}"/wargus-2.1-ai.patch \
 		"${FILESDIR}"/wargus-2.1-aitransporter.patch
 }
 
