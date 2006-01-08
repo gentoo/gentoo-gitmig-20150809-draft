@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.3.0_alpha.ebuild,v 1.2 2005/12/16 06:29:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.3.2_alpha.ebuild,v 1.1 2006/01/08 13:27:09 mrness Exp $
 
 inherit eutils
 
@@ -13,21 +13,18 @@ SRC_URI="http://dansguardian.org/downloads/2/Alpha/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="clamav debug ntlm pcre"
+IUSE="clamav kaspersky debug ntlm pcre"
 
-DEPEND="virtual/libc
-	!net-proxy/dansguardian-dgav
+DEPEND="!net-proxy/dansguardian-dgav
 	pcre? ( dev-libs/libpcre )
 	clamav? ( app-antivirus/clamav )"
 
 S=${WORKDIR}/${MY_P}
 
-MY_REFRESH_LOG_OWNER=""
-
 pkg_setup() {
 	if has_version "<${CATEGORY}/${PN}-2.9" ; then
 		ewarn "This version introduces brand new USE flags:"
-		ewarn "   clamav ntlm pcre"
+		ewarn "   clamav kaspersky ntlm pcre"
 		echo
 
 		local f="${ROOT}/etc/dansguardian"
@@ -47,6 +44,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-kaspersky-response.patch
 }
 
 src_compile() {
@@ -58,6 +56,9 @@ src_compile() {
 		myconf="${myconf} --enable-clamd=yes
 			--with-proxyuser=clamav
 			--with-proxygroup=clamav"
+	fi
+	if use kaspersky; then
+		myconf="${myconf} --enable-kavd"
 	fi
 	if use debug; then
 		myconf="${myconf} --with-dgdebug=on"
@@ -79,6 +80,8 @@ src_install() {
 		sed -r -i -e 's/[ \t]+need net.*/& clamd/' ${D}/etc/init.d/dansguardian
 		sed -r -i -e 's/^#( *contentscanner *=.*clamdscan[.]conf.*)/\1/' ${D}/etc/dansguardian/dansguardian.conf
 		sed -r -i -e 's/^#( *clamdudsfile *=.*)/\1/' ${D}/etc/dansguardian/contentscanners/clamdscan.conf
+	elif use kaspersky; then
+		sed -r -i -e 's/^#( *contentscanner *=.*kavdscan[.]conf.*)/\1/' ${D}/etc/dansguardian/dansguardian.conf
 	fi
 
 	# Copying logrotation file
@@ -96,7 +99,7 @@ pkg_postinst() {
 	fi
 	ewarn "The dansguardian daemon will run by default as user & group ${runas}"
 
-	if has_version "<${CATEGORY}/${PN}-2.9" && [ -d "${ROOT}/var/log/dansguardian" ] ; then
+	if [ -d "${ROOT}/var/log/dansguardian" ] ; then
 		chown -R ${runas} "${ROOT}/var/log/dansguardian"
 		chmod o-rwx "${ROOT}/var/log/dansguardian"
 	fi
