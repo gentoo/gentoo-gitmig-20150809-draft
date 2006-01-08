@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 754d2225a1837b93a1825665d4d51c5f altermime-0.3.6.ebuild 809
+MD5 6b19b72d785b289aaf7fabe857eea5c7 ChangeLog 1039
 MD5 4f74d65d2d118e3d109ab43b4276c423 altermime-0.3.1.ebuild 588
 MD5 731d68f538442d4df431ce6f514c7e2e altermime-0.3.3.ebuild 594
-MD5 6b19b72d785b289aaf7fabe857eea5c7 ChangeLog 1039
-MD5 07aa1897fda73805b9d68a2b82090e5f metadata.xml 218
+MD5 754d2225a1837b93a1825665d4d51c5f altermime-0.3.6.ebuild 809
 MD5 f86fdd38d3e7472cc7a5ad554c1fa587 files/digest-altermime-0.3.1 66
 MD5 54eb9c97500893d53149ce1fb7e43ebb files/digest-altermime-0.3.3 66
 MD5 14a73a5565a0d589ab88a9c7163ac996 files/digest-altermime-0.3.6 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCoXSZV3J2n04EauwRAhcyAJ9yb1umMXOdESxzDjZEIFV+1XFVDgCglIN7
-iyMF/wKkYMMX9Gg1syAlALs=
-=uKll
------END PGP SIGNATURE-----
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
