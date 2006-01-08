@@ -1,4 +1,4 @@
-MD5 8528ee8848c21b588f392003605515f0 ChangeLog 19987
+MD5 c500276f0536745c012842dd9a44a697 ChangeLog 20092
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
 MD5 db53dd4219e7b659886408c7174d7e67 files/digest-glib-2.8.3 64
@@ -11,5 +11,5 @@ MD5 02673367ae3d806f2df4dd6fbfff54f4 files/glib-2.8.3-macos.patch 307
 MD5 b75614f954c7353c9e75e011ee1adb59 glib-1.2.10-r5.ebuild 1536
 MD5 32bc1854429ae5772e66a83200cad69e glib-2.6.5.ebuild 1647
 MD5 38545a0a3894a1385ae80963b7af192a glib-2.8.3.ebuild 1688
-MD5 e4e996bcac8b8e0477617fb5baec53ea glib-2.8.4.ebuild 1688
+MD5 ccdec0cc9433b698a20b32158000d2f3 glib-2.8.4.ebuild 1693
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
