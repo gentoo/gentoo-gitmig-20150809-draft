@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.04.0-r2.ebuild,v 1.1 2006/01/08 11:21:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.04.0-r2.ebuild,v 1.2 2006/01/08 16:04:39 mrness Exp $
 
 inherit eutils
 
@@ -39,10 +39,10 @@ src_compile() {
 		--enable-7110incoming \
 		${myconf} || die "configure failed"
 
-	emake || die "make failed"
+	emake shared || die "make failed"
 }
 
 src_install () {
-	make "DESTDIR=${D}" install installshared || die "install failed"
+	make "DESTDIR=${D}" installshared || die "install failed"
 	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${P}"
 }

@@ -9,12 +9,12 @@ MD5 c99ecf9019c20984a405aeea6c2c6e60 files/gammu-1.01.0-caller.patch 1021
 MD5 2dba94c27d92141070e9b76dba40f24b files/gammu-1.04.0-devfunc-sock.patch 381
 MD5 6c95de75bc61252ba025920f0a90675c gammu-1.01.0-r1.ebuild 1655
 MD5 ca8fe507eb178df89cbf153ea4efbbb3 gammu-1.02.0.ebuild 1573
-MD5 adc6c76985a25807a29e72d16574ae03 gammu-1.04.0-r2.ebuild 1343
+MD5 a211c902a733782c1b8d67b569cc9ed0 gammu-1.04.0-r2.ebuild 1342
 MD5 e161c5ddb0e2ddbe68a21690f41e90e1 metadata.xml 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwPXZjG8pv1lIUX4RAhhVAJ4zdHPRmUbQb2L+zxsUfKEJzUGzdgCeP+kB
-rzFfPcdiqwECAe5DjFGcqog=
-=1RP3
+iD8DBQFDwTgpjG8pv1lIUX4RAqqiAKCgAuX07SbmycXscCWY5EV4SF8ANQCgmgCC
+UQGJNfMxpUoczYsprJ6uacE=
+=ztoA
 -----END PGP SIGNATURE-----
