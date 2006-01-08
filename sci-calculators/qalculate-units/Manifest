@@ -1,4 +1,6 @@
 MD5 89905dccb6cafec0646a60288c5053c0 ChangeLog 644
 MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0 73
+MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0-r1 73
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+MD5 d66231538177c3ecc45f3ce568ef6021 qalculate-units-0.9.0-r1.ebuild 789
 MD5 316f1057667c28f0944d645adf1fd6b6 qalculate-units-0.9.0.ebuild 790
