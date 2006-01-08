@@ -1,4 +1,4 @@
-MD5 21699cfaaa15021b5bd92d0a46d6bf99 ChangeLog 24180
+MD5 b3b9a7e1ec99c4b9859afa4674a2a290 ChangeLog 24347
 MD5 9bc2547e30ed7f253626bd88246c0808 files/digest-squid-2.5.10-r2 157
 MD5 6b7e2f22e3d8d628b7f3c0a468f05933 files/digest-squid-2.5.10-r4 157
 MD5 9aae33d4872e127be17e8a1bc587c2a7 files/digest-squid-2.5.11 157
@@ -13,4 +13,4 @@ MD5 cf398556bce540358644ce9a452abfba metadata.xml 241
 MD5 5a123cb8aa8308bf12130208cc3d171b squid-2.5.10-r2.ebuild 6351
 MD5 f3431002a02349e68cd89f7c1770e21e squid-2.5.10-r4.ebuild 6400
 MD5 af1fa843fab3e498b6181dacf8d033b1 squid-2.5.11.ebuild 6338
-MD5 0c1cc40df8925d7135e7dd00f0b0829e squid-2.5.12.ebuild 6365
+MD5 f966c6508c84c7cecbfb0b7b197dae66 squid-2.5.12.ebuild 6367
