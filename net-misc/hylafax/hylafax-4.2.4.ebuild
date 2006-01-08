@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.4.ebuild,v 1.1 2006/01/05 07:51:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.4.ebuild,v 1.2 2006/01/08 22:14:34 nerdboy Exp $
 
-inherit eutils multilib pam
+inherit eutils multilib pam flag-o-matic toolchain-funcs
 
 IUSE="faxonly jpeg pam mgetty"
 
@@ -35,6 +35,12 @@ src_compile() {
 			eerror "You cannot set both faxonly and mgetty, please remove one." && die "invalid use flags"
 		fi
 	fi
+
+	# Hylafax doesn't play nice with gcc-3.4 and SSP (bug #74457)
+	# so drop the flags until a better solution comes along
+	[ $(gcc-major-version) -eq 3 ] && [ $(gcc-minor-version) -ge 4 ] \
+		&& filter-flags -fstack-protector -fstack-protector-all
+
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
