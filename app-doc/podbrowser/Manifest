@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f8e52bc70fc0f02b8f104099d8146704 ChangeLog 484
+MD5 c02df985c89f146e0cad5cfbd8f36e2f ChangeLog 633
+MD5 30f3fe71041b9eb9e566c1aa51bfe083 files/Makefile.new 988
 MD5 f8a957a6512c3c6f09c92d6dcae5a73b files/digest-podbrowser-0.09 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 a2d9e5f7f85ac5324707c48b3f1a9275 podbrowser-0.09.ebuild 834
+MD5 397464f7066a863bd8edd36b310a3934 podbrowser-0.09.ebuild 1049
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDn8aWBtvusYtCZMsRApZOAJ9qK21jJ4ElEqoAUN1cwqMlRV4CMwCeIMqx
-91jbwNzrNKmVC1kJSXzxwuI=
-=nJ0J
+iD8DBQFDwSy5tG5z4I8BtQoRAsO8AJwJAsH7sQCvy+QyVZR6Dk4k2yPKRACgjP/I
+R28FYn1vgf8rZA07J3dPoDE=
+=g18B
 -----END PGP SIGNATURE-----

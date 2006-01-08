@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.09.ebuild,v 1.2 2005/12/14 07:15:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.09.ebuild,v 1.3 2006/01/08 15:15:58 mcummings Exp $
 
 DESCRIPTION="PodBrowser is a documentation browser for Perl."
 HOMEPAGE="http://jodrell.net/projects/podbrowser"
@@ -28,3 +28,15 @@ RDEPEND="dev-perl/Gtk2-PodViewer
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cp ${FILESDIR}/Makefile.new ${S}/Makefile
+}
+src_compile() {
+	 make DESTDIR=${D} PREFIX=/usr  || die "emake failed"
+}
+
+src_install() {
+	make PREFIX=/usr DESTDIR=${D} install || die
+}
