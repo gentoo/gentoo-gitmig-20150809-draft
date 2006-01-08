@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.7.ebuild,v 1.4 2005/07/09 03:16:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.7.ebuild,v 1.5 2006/01/08 17:29:50 rl03 Exp $
 
 inherit eutils
 
@@ -287,7 +287,7 @@ src_install () {
 pkg_postinst() {
 	if use mysql || use postgres; then
 		einfo "To setup dspam to run out-of-the-box on your system with a mysql or pgsql database, run:"
-		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+		einfo "emerge --config ${PF}"
 	fi
 	if use exim ; then
 		echo
