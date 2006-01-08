@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.49 2006/01/04 04:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.50 2006/01/08 03:37:36 vapier Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -102,11 +102,10 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		ia64*)		echo ia64;;
 		m68*)		echo m68k;;
 		mips*)		echo mips;;
-		powerpc64*)	echo ppc64;;
 		powerpc*)
 					# Starting with linux-2.6.15, the 'ppc' and 'ppc64' trees
 					# have been unified into simply 'powerpc'
-					if [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.15) ]] ; then
+					if [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.15) ]] && [[ ${type} == "kern" ]] ; then
 						echo powerpc
 					elif [[ ${host} == powerpc64* ]] ; then
 						echo ppc64
