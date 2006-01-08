@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/disktype-8.ebuild,v 1.1 2005/03/05 22:43:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/disktype-8.ebuild,v 1.2 2006/01/08 04:22:57 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,10 +16,10 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}"
+	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
 	dobin disktype
-	dodoc README HISTORY LICENSE TODO
+	dodoc README HISTORY TODO
 }

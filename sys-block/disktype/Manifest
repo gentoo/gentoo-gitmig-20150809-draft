@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 720f29251ead4108b93c5b455a63f44f disktype-7.ebuild 618
-MD5 8a0c93d088b2f5a799bc29b79f4df94d ChangeLog 750
-MD5 83e4ee097b292ce6083e97dd32f9bc6c disktype-8.ebuild 618
-MD5 ac09ff5648ac83e89b15ec8b94703517 metadata.xml 1372
-MD5 35ee2aad101d9c4b86bc571001b6edc2 files/digest-disktype-7 61
+MD5 244358bb33affcd990244adeba590715 ChangeLog 926
+MD5 293500188fc865355abd9f0c7a9a0eab disktype-8.ebuild 621
 MD5 447fa7f87b130ed587bf7224bd41498f files/digest-disktype-8 61
+MD5 ac09ff5648ac83e89b15ec8b94703517 metadata.xml 1372
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCKu/3I1lqEGTUzyQRAtEiAKCpPubgiUG8gFc2+O1z7PugYGklxQCg1N74
-rFWb2EUn4UYfp8TDO/fsdM4=
-=1PgF
+iD8DBQFDwJvNmdTrptrqvGERAkdwAJ9FGMNl6iu8Bxcybx2tcshv2nmbYwCeMVdy
+EwmItjB3gql3zIRY+dxVj6c=
+=peTC
 -----END PGP SIGNATURE-----
