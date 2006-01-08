@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.16.0.ebuild,v 1.5 2006/01/07 11:23:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.16.0.ebuild,v 1.6 2006/01/08 09:02:32 dertobi123 Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc ssl zlib dbus spell"
 
 RDEPEND=">=dev-libs/glib-2.5.6
