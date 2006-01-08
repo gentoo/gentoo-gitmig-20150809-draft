@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.2.7.ebuild,v 1.3 2005/11/05 15:53:55 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.2.7.ebuild,v 1.4 2006/01/08 17:34:50 rl03 Exp $
 
 inherit webapp eutils
 
@@ -161,7 +161,7 @@ pkg_postinst () {
 	einfo "manually to do this. Another option is to add the user apache"
 	einfo "to the dspam group. You can do this automatically by running:"
 	echo
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "emerge --config ${PF}"
 	echo
 	einfo "This app requires basic auth in order to operate properly."
 	einfo "You will need to add dspam users to the .htpasswd file or"

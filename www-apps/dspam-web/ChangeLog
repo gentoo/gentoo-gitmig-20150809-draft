@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.20 2006/01/08 17:17:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.21 2006/01/08 17:34:50 rl03 Exp $
+
+  08 Jan 2006; Renat Lumpau <rl03@gentoo.org> dspam-web-3.2.7.ebuild,
+  dspam-web-3.4.9-r1.ebuild, dspam-web-3.6.0.ebuild, dspam-web-3.6.1.ebuild:
+  Fixed emerge --config wrt bug #109482.
 
 *dspam-web-3.4.9-r1 (08 Jan 2006)
 

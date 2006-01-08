@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 96d501665fab1f191105ac0440877956 ChangeLog 351
 MD5 9b732e34fa9afacc7c6cb7d00ff97125 files/digest-phpmp2-0.11.0 65
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 b11ecb28534380c23a8963ad22472df0 phpmp2-0.11.0.ebuild 757
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuqeyEzitwsaoONoRAhD0AJ91g3gyu93f7FHdLXlyuIh9fRoxgACeIzqf
-2OWbqxpcaRQVr4sOPOWdXFg=
-=0v53
------END PGP SIGNATURE-----
+MD5 97bd9afcbea388ecd3c6eea6d9187083 phpmp2-0.11.0.ebuild 764
