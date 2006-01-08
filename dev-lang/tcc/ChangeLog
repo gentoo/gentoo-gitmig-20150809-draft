@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.19 2006/01/08 17:22:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.20 2006/01/08 21:29:21 halcy0n Exp $
+
+  08 Jan 2006; Mark Loeser <halcy0n@gentoo.org> tcc-0.9.22.ebuild:
+  Stable on x86; bug #116169
 
 *tcc-0.9.23 (08 Jan 2006)
 
