@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 16e59a218300b52b3f9034cac540fe02 ChangeLog 1426
 MD5 f01bfa0d5b9f01bd2a71e521655378f7 files/digest-s390-tools-1.3.2 278
 MD5 3c7dab306534b6f96e941b6458954639 metadata.xml 319
 MD5 a55b82cdacafaeb34b5872ae9e8489f9 s390-tools-1.3.2.ebuild 1323
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWR/V3J2n04EauwRAmNrAKCKhJgkdC3+DfV/29emqR3CEJgabwCgqD4s
+tW3HC3AJUwNHCIGzdn7MqAI=
+=REyW
+-----END PGP SIGNATURE-----

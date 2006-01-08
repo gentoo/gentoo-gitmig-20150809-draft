@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 04903ee85a4cc5273646eca776969064 ChangeLog 946
 MD5 440db7d822a493f9b4c0dc14d0885bb7 files/digest-s390-oco-2.4.21-r1 83
 MD5 700694cda50a18f342978f1e84c6e2a7 files/digest-s390-oco-2.6.5 81
@@ -5,3 +8,10 @@ MD5 b43c4c5b51c43d85b1aab3939e18ea03 files/s390-oco 65
 MD5 2d317b5b3a5eaaa47f5439690143cdf3 metadata.xml 239
 MD5 429ba8558e6415fd8364af6045e4ed76 s390-oco-2.4.21-r1.ebuild 1122
 MD5 19054bd0384dc94a101c53f2d4a3afe4 s390-oco-2.6.5.ebuild 1128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWQyV3J2n04EauwRAtnpAJ9nqcIZRCCrTZ9liDm+nBbgXTulFgCcCPGS
+ghMJEou7eFA3dyrKvtpuG4M=
+=hgUU
+-----END PGP SIGNATURE-----

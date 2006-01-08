@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b2d3deb994f1b4a8e40d81b34c752801 ChangeLog 582
 MD5 f670700ebad630dced7713f9c08e0ca7 files/digest-lkcdutils-4.1.1 210
 MD5 860c22640574d434f66ee47c48d0c0b2 lkcdutils-4.1.1.ebuild 1935
 MD5 78d1d634582197c744e2a79a20d7faaf metadata.xml 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWPtV3J2n04EauwRAkTfAKDWVVmrIziz4Ubh+Vr63W/RUErDhgCffion
+xRba65G0SU6TEaS3bvhfNqk=
+=SPf1
+-----END PGP SIGNATURE-----
