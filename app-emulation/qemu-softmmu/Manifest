@@ -1,4 +1,4 @@
-MD5 563ae0b96069f89d3c10c6728566bd0a ChangeLog 1893
+MD5 9bb80897ffa08a427964d730f9ecc362 ChangeLog 2052
 MD5 f2e48bae97dad4e6e6bccdb212124ae0 files/digest-qemu-softmmu-0.7.0-r1 127
 MD5 fd7335121f3422f52ac0dfe371ffb6b8 files/digest-qemu-softmmu-0.7.1 125
 MD5 72280464fdfd2d1cfe66d86515efdd4d files/digest-qemu-softmmu-0.7.1-r1 127
@@ -12,4 +12,4 @@ MD5 7f3bdd5bb9e257cf492c0883c148dbbc qemu-softmmu-0.7.0-r1.ebuild 3946
 MD5 7f718ce656aa3a302e286ef4cff10f97 qemu-softmmu-0.7.1-r1.ebuild 4024
 MD5 0ca3dc6e0c595f5da02a132f011afbdc qemu-softmmu-0.7.1.ebuild 3982
 MD5 77aa96bd5cf2d7540edd9d4d6c02726d qemu-softmmu-0.7.2.ebuild 3943
-MD5 4d4b62abf2a12d91347474cc57516df2 qemu-softmmu-0.8.0.ebuild 2608
+MD5 81a42e9e348dc345b28bb0ffd4937c12 qemu-softmmu-0.8.0.ebuild 2627
