@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.4 2006/01/07 16:43:39 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.5 2006/01/08 23:29:20 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -363,7 +363,7 @@ mysql_src_install() {
 	doins scripts/mysqlaccess.conf
 	newins "${FILESDIR}/my.cnf-4.1" my.cnf
 	insinto "/etc/conf.d"
-	newins "${FILESDIR}/mysql-slot.conf.d-r1" "mysql"
+	newins "${FILESDIR}/mysql-slot.conf.d-r2" "mysql"
 	mysql_version_is_at_least "5.00.11.00" \
 	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
 
@@ -377,7 +377,9 @@ mysql_src_install() {
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-slot.rc6-r1" "mysql"
+		newexe "${FILESDIR}/mysql-slot.rc6-r2" "mysql"
+		[[ ${SLOT} -gt 0 ]] && dosym "/etc/init.d/mysql" "/etc/init.d/mysql${MY_SUFFIX}"
+
 		mysql_version_is_at_least "5.00.11.00" \
 		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
 		insinto /etc/logrotate.d
@@ -424,20 +426,6 @@ mysql_src_install() {
 	&& cp -f \
 		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" \
 		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
-
-	# create a list of executable files, to be used
-	# by external utilities
-	# uncompressed because of the small size
-	local exelist="usr/share/mysql${MY_SUFFIX}/.exe-list"
-	pushd "${D}/" &>/dev/null
-		env -i find usr/bin/ usr/sbin/ usr/share/man \
-			-type f -name "*${MY_SUFFIX}*" \
-			> "${exelist}"
-		echo "${MY_SYSCONFDIR##"/"}" >> "${exelist}"
-		echo "${MY_INCLUDEDIR##"/"}" >> "${exelist}"
-		echo "${MY_LIBDIR##"/"}" >> "${exelist}"
-		echo "${MY_SHAREDSTATEDIR##"/"}" >> "${exelist}"
-	popd &>/dev/null
 }
 
 mysql_pkg_preinst() {
@@ -461,22 +449,49 @@ mysql_pkg_postinst() {
 	chown mysql:mysql "${ROOT}${MY_LOGDIR}"/mysql*
 	chmod 0660 "${ROOT}${MY_LOGDIR}"/mysql*
 
+	# create a list of files, to be used
+	# by external utilities
+	# uncompressed because of the small size
+	local filelist="${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}"
+	pushd "${D}/" &>/dev/null
+		mkdir -p "${ROOT}/var/lib/eselect/mysql/"
+		env -i find usr/bin/ usr/sbin/ usr/share/man \
+			-type f -name "*${MY_SUFFIX}*" \
+			> "${filelist}.filelist"
+		echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}.filelist"
+		echo "${MY_INCLUDEDIR#"/"}" >> "${filelist}.filelist"
+		echo "${MY_LIBDIR#"/"}" >> "${filelist}.filelist"
+		echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}.filelist"
+	popd &>/dev/null
+
 	if ! useq minimal; then
+		if [[ ${SLOT} -gt 0 ]] ; then
+			if [[ -f "${ROOT}/usr/sbin/mysqld" ]] ; then
+				einfo "you may want to run unmerge any unslotted MySQL versions with "
+				einfo "emerge -C --pretend dev-db/mysql"
+				einfo "emerge -C =dev-db/mysql-X.Y.Z"
+				einfo "After the unmerge run \"eselect myqsl list\" followed by a "
+				einfo "\"eselect myqsl set 1\" to chose the default mysql server"
+			else
+				local tmpres="$( eselect mysql show )"
+				# "like grep -q unset"
+				if [[ "{$tmpres}" == "{$tmpres/unset/}" ]] ; then
+					eselect mysql set 1
+				else
+					einfo "The version of mysql emerged now stils is _NOT_ the default"
+					einfo "you may want to run \"eselect myqsl list\" followed by a "
+					einfo "\"eselect myqsl set 1\" to chose the default mysql server"
+				fi
+			fi
+		fi
+
 		# your friendly public service announcement...
 		einfo
 		einfo "You might want to run:"
 		einfo "\"emerge --config =${CATEGORY}/${PF}\""
 		einfo "if this is a new install."
 		einfo
-	fi
-
-	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
-	if [[ ${SLOT} -gt 0 ]] ; then
-		einfo "you may want to run \"eselect myqsl list\" followed by a "
-		einfo "\"eselect myqsl list\" to chose the default mysql server"
-		einfo "Prior to do this unmerge any unslotted MySQL versions with "
-		einfo "emerge -C -p dev-db/mysql <<< NOTICE the \"-p\""
-		einfo "emerge -C =dev-db/mysql-X.Y.Z"
+		einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 	fi
 }
 
