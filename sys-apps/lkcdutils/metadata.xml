@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
-  <email>randy@gentoo.org</email>
-</maintainer>
 <longdescription>Linux Kernel Crash Dumps (LKCD) Utilities</longdescription>
 </pkgmetadata>
