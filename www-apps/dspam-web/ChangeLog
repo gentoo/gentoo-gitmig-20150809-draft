@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/dspam-web
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.19 2005/11/15 08:47:37 st_lim Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.20 2006/01/08 17:17:01 rl03 Exp $
+
+*dspam-web-3.4.9-r1 (08 Jan 2006)
+
+  08 Jan 2006; Renat Lumpau <rl03@gentoo.org> -dspam-web-3.4.9.ebuild,
+  +dspam-web-3.4.9-r1.ebuild:
+  Fixed header dep wrt bug #89550.
 
 *dspam-web-3.6.1 (15 Nov 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4.9.ebuild,v 1.1 2005/11/05 15:53:55 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4.9-r1.ebuild,v 1.1 2006/01/08 17:17:01 rl03 Exp $
 
 inherit webapp eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
 		myconf="${myconf} --enable-preferences-extension"
 
-		if has_version sys-kernel/linux26-headers; then
+		if has_version =sys-kernel/linux-headers-2.6*; then
 			myconf="${myconf} --enable-daemon"
 		fi
 
