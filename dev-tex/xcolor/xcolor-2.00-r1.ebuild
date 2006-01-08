@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xcolor/xcolor-2.00-r1.ebuild,v 1.4 2005/12/31 20:32:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xcolor/xcolor-2.00-r1.ebuild,v 1.5 2006/01/08 21:49:59 dertobi123 Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ukern.de/tex/xcolor/ctan/${P//[.-]/}.zip"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ~ppc-macos ~sparc x86"
 
 IUSE=""
 
