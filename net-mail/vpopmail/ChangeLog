@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.65 2005/12/31 20:45:13 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.66 2006/01/08 14:07:08 anarchy Exp $
+
+  08 Jan 2006; Jory A. Pratt <anarchy@gentoo.org> vpopmail-5.4.13.ebuild:
+  ppc stable wrt bug #111313
 
   31 Dec 2005; Simon Stelling <blubb@gentoo.org> vpopmail-5.4.13.ebuild:
   stable on amd64
