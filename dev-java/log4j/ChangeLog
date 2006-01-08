@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.38 2006/01/08 22:13:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.39 2006/01/08 23:14:15 nichoj Exp $
+
+*log4j-1.2.13 (08 Jan 2006)
+
+  08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> +log4j-1.2.13.ebuild:
+  Version bump.
 
   08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> log4j-1.2.12.ebuild:
   Disabled jikes support due to bug #108819.
