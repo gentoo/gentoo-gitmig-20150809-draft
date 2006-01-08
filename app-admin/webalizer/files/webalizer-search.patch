@@ -1,0 +1,833 @@
+diff -uNr webalizer-2.01-10/hashtab.c webalizer-2.01-10-mbm/hashtab.c
+--- webalizer-2.01-10/hashtab.c	Fri Sep 29 04:51:42 2000
++++ webalizer-2.01-10-mbm/hashtab.c	Mon Oct 15 11:16:41 2001
+@@ -70,7 +70,7 @@
+ UNODEPTR new_unode(char *);                   /* new url node             */
+ RNODEPTR new_rnode(char *);                   /* new referrer node        */
+ ANODEPTR new_anode(char *);                   /* new user agent node      */
+-SNODEPTR new_snode(char *);                   /* new search string..      */
++SNODEPTR new_snode(char *, char *);           /* new search string..      */
+ INODEPTR new_inode(char *);                   /* new ident node           */
+ #ifdef USE_DNS
+ DNODEPTR new_dnode(char *);                   /* new DNS node             */
+@@ -669,10 +669,10 @@
+ /* NEW_SNODE - Search str node creation      */
+ /*********************************************/
+ 
+-SNODEPTR new_snode(char *str)
++SNODEPTR new_snode(char *str, char *site)
+ {
+    SNODEPTR newptr;
+-   char     *sptr;
++   char     *sptr, *sptr2;
+ 
+    if (strlen(str) >= MAXSRCHH)
+    {
+@@ -686,15 +686,39 @@
+       str[MAXSRCHH-1]=0;
+    }
+ 
++   if (strlen(site) >= MAXSRCHH)
++   {
++      if (verbose)
++      {
++         fprintf(stderr,"[new_snode] %s (%d)",msg_big_one,strlen(site));
++         if (debug_mode)
++            fprintf(stderr,":\n--> %s",site);
++         fprintf(stderr,"\n");
++      }
++      site[MAXSRCHH-1]=0;
++   }
++
+    if ( (sptr=malloc(strlen(str)+1))==NULL ) return (SNODEPTR)NULL;
+    strcpy(sptr,str);
+ 
++   if ( (sptr2=malloc(strlen(site)+1))==NULL )
++   {
++       free(sptr);
++       return (SNODEPTR)NULL;
++   }
++   strcpy(sptr2,site);
++
+    if (( newptr = malloc(sizeof(struct snode))) != NULL)
+    {
+       newptr->string= sptr;
++      newptr->site= sptr2;
+       newptr->count = 1;
+    }
+-   else free(sptr);
++   else
++   {
++   free(sptr);
++   free(sptr2);
++   }
+    return newptr;
+ }
+ 
+@@ -702,17 +726,18 @@
+ /* PUT_SNODE - insert/update search str node */
+ /*********************************************/
+ 
+-int put_snode(char *str, u_long count, SNODEPTR *htab)
++int put_snode(char *str, char *site, u_long count, SNODEPTR *htab)
+ {
+    SNODEPTR cptr,nptr;
+ 
+-   if (str[0]==0 || str[0]==' ') return 0;     /* skip bad search strs */
++   if (str[0]==' ') return 0;     /* skip bad search strs */
++   if (site[0]==' ') return 0;     /* skip bad search strs */
+ 
+    /* check if hashed */
+    if ( (cptr = htab[hash(str)]) == NULL)
+    {
+       /* not hashed */
+-      if ( (nptr=new_snode(str)) != NULL)
++      if ( (nptr=new_snode(str,site)) != NULL)
+       {
+          nptr->count = count;
+          nptr->next = NULL;
+@@ -724,7 +749,7 @@
+       /* hashed */
+       while (cptr != NULL)
+       {
+-         if (strcmp(cptr->string,str)==0)
++         if (strcmp(cptr->string,str)==0 && strcmp(cptr->site,site)==0)
+          {
+             /* found... bump counter */
+             cptr->count+=count;
+@@ -733,7 +758,7 @@
+          cptr = cptr->next;
+       }
+       /* not found... */
+-      if ( (nptr = new_snode(str)) != NULL)
++      if ( (nptr = new_snode(str,site)) != NULL)
+       {
+          nptr->count = count;
+          nptr->next  = htab[hash(str)];
+@@ -762,6 +787,7 @@
+          {
+             temp = aptr->next;
+             free (aptr->string);
++            free (aptr->site);
+             free (aptr);
+             aptr = temp;
+          }
+diff -uNr webalizer-2.01-10/hashtab.h webalizer-2.01-10-mbm/hashtab.h
+--- webalizer-2.01-10/hashtab.h	Fri Sep 29 04:50:30 2000
++++ webalizer-2.01-10-mbm/hashtab.h	Fri Oct 12 15:37:18 2001
+@@ -53,6 +53,7 @@
+               struct anode *next; };
+ 
+ struct snode {  char *string;                 /* search string struct      */
++                char *site;
+               u_long count;
+               struct snode *next; };
+ 
+@@ -84,7 +85,7 @@
+                         u_long, u_long, INODEPTR *);
+ extern int    put_rnode(char *, int, u_long, u_long *, RNODEPTR *);
+ extern int    put_anode(char *, int, u_long, u_long *, ANODEPTR *);
+-extern int    put_snode(char *, u_long, SNODEPTR *);
++extern int    put_snode(char *, char *, u_long, SNODEPTR *);
+ 
+ #ifdef USE_DNS
+ extern int    put_dnode(char *, struct in_addr *, DNODEPTR *);
+diff -uNr webalizer-2.01-10/lang/webalizer_lang.english webalizer-2.01-10-mbm/lang/webalizer_lang.english
+--- webalizer-2.01-10/lang/webalizer_lang.english	Fri Oct  6 06:27:48 2000
++++ webalizer-2.01-10-mbm/lang/webalizer_lang.english	Mon Oct 15 12:24:15 2001
+@@ -201,6 +201,8 @@
+ char *msg_h_ref   = "Referrer";
+ char *msg_h_ctry  = "Country";
+ char *msg_h_search= "Search String";
++char *msg_h_seasit= "Search Site";
++char *msg_h_seabot= "Search Site/String";
+ char *msg_h_uname = "Username";
+ 
+ /* links along top of page */
+@@ -213,7 +215,9 @@
+ char *msg_hlnk_r  = "Referrers";
+ char *msg_hlnk_en = "Entry";
+ char *msg_hlnk_ex = "Exit";
+-char *msg_hlnk_sr = "Search";
++char *msg_hlnk_sr = "Search Strings";
++char *msg_hlnk_srs= "Search Sites";
++char *msg_hlnk_srb= "Search Site/Strings";
+ char *msg_hlnk_i  = "Users";
+ 
+ /* monthly total table */
+@@ -255,12 +259,16 @@
+ char *msg_top_en  = "Total Entry Pages";
+ char *msg_top_ex  = "Total Exit Pages";
+ char *msg_top_sr  = "Total Search Strings";
++char *msg_top_srs = "Total Search Sites";
++char *msg_top_srb = "Total Search Site/String Pairs";
+ char *msg_top_i   = "Total Usernames";
+ char *msg_v_sites = "View All Sites";
+ char *msg_v_urls  = "View All URLs";
+ char *msg_v_refs  = "View All Referrers";
+ char *msg_v_agents= "View All User Agents";
+ char *msg_v_search= "View All Search Strings";
++char *msg_v_seasit= "View All Search Sites";
++char *msg_v_seabot= "View All Search Site/String Pairs";
+ char *msg_v_users = "View All Usernames";
+ 
+ /* short month names MUST BE 3 CHARS in size... pad if needed*/
+diff -uNr webalizer-2.01-10/lang.h webalizer-2.01-10-mbm/lang.h
+--- webalizer-2.01-10/lang.h	Fri Sep 29 04:50:30 2000
++++ webalizer-2.01-10-mbm/lang.h	Mon Oct 15 12:23:16 2001
+@@ -107,6 +107,8 @@
+ extern char *msg_h_ref   ;
+ extern char *msg_h_ctry  ;
+ extern char *msg_h_search;
++extern char *msg_h_seasit;
++extern char *msg_h_seabot;
+ extern char *msg_h_uname ;
+ 
+ extern char *msg_hlnk_ds ;
+@@ -119,6 +121,8 @@
+ extern char *msg_hlnk_en ;
+ extern char *msg_hlnk_ex ;
+ extern char *msg_hlnk_sr ;
++extern char *msg_hlnk_srs;
++extern char *msg_hlnk_srb;
+ extern char *msg_hlnk_i  ;
+ 
+ extern char *msg_mtot_ms ;
+@@ -154,12 +158,16 @@
+ extern char *msg_top_en  ;
+ extern char *msg_top_ex  ;
+ extern char *msg_top_sr  ;
++extern char *msg_top_srs ;
++extern char *msg_top_srb ;
+ extern char *msg_top_i   ;
+ extern char *msg_v_sites ;
+ extern char *msg_v_urls  ;
+ extern char *msg_v_refs  ;
+ extern char *msg_v_agents;
+ extern char *msg_v_search;
++extern char *msg_v_seasit;
++extern char *msg_v_seabot;
+ extern char *msg_v_users ;
+ 
+ extern char *msg_title   ;
+diff -uNr webalizer-2.01-10/linklist.c webalizer-2.01-10-mbm/linklist.c
+--- webalizer-2.01-10/linklist.c	Fri Sep 29 04:51:02 2000
++++ webalizer-2.01-10-mbm/linklist.c	Fri Oct 12 18:08:46 2001
+@@ -71,7 +71,7 @@
+ GLISTPTR new_glist(char *, char *);                 /* new group list node */
+ void     del_glist(GLISTPTR *);                     /* del group list      */
+ 
+-int      isinstr(char *, char *);
++int      isinstr(const char *, const char *);
+ 
+ /* Linkded list pointers */
+ GLISTPTR group_sites   = NULL;                /* "group" lists            */
+@@ -240,7 +240,7 @@
+ /* ISINLIST - Test if string is in list      */
+ /*********************************************/
+ 
+-char *isinlist(NLISTPTR list, char *str)
++char *isinlist(NLISTPTR list, const char *str)
+ {
+    NLISTPTR lptr;
+ 
+@@ -257,14 +257,35 @@
+ /* ISINGLIST - Test if string is in list     */
+ /*********************************************/
+ 
+-char *isinglist(GLISTPTR list, char *str)
++char *isinglist(GLISTPTR list, const char *str)
+ {
+    GLISTPTR lptr;
+ 
+    lptr=list;
+    while (lptr!=NULL)
+    {
+-      if (isinstr(str,lptr->string)) return lptr->name;
++      if (isinstr((const char *)str,(const char *)lptr->string)) return lptr->name;
++      lptr=lptr->next;
++   }
++   return NULL;
++}
++
++/*********************************************/
++/* NAMEINGLIST - Test if string is in list   */
++/*********************************************/
++
++char *nameinglist(GLISTPTR list, const char *str, char **string)
++{
++   GLISTPTR lptr;
++
++   lptr=list;
++   while (lptr!=NULL)
++   {
++      if (isinstr(str,lptr->string))
++      {
++         if(string != NULL) *string=lptr->string;
++         return lptr->name;
++      }
+       lptr=lptr->next;
+    }
+    return NULL;
+@@ -274,9 +295,9 @@
+ /* ISINSTR - Scan for string in string       */
+ /*********************************************/
+ 
+-int isinstr(char *str, char *cp)
++int isinstr(const char *str, const char *cp)
+ {
+-   char *cp1,*cp2;
++   const char *cp1,*cp2;
+ 
+    cp1=(cp+strlen(cp))-1;
+    if (*cp=='*')
+@@ -303,6 +324,6 @@
+          if (*cp1++!=*cp2++) return 0;
+       }
+       if (*cp1=='*') return 1;
+-         else return 0;
++	 else return 0;
+    }
+ }
+diff -uNr webalizer-2.01-10/linklist.h webalizer-2.01-10-mbm/linklist.h
+--- webalizer-2.01-10/linklist.h	Fri Sep 29 04:50:30 2000
++++ webalizer-2.01-10-mbm/linklist.h	Fri Oct 12 18:01:50 2001
+@@ -40,8 +40,10 @@
+ extern NLISTPTR page_type     ;               /* page view types           */
+ extern GLISTPTR search_list   ;               /* Search engine list        */
+ 
+-extern char     *isinlist(NLISTPTR, char *);        /* scan list for str   */
+-extern char     *isinglist(GLISTPTR, char *);       /* scan glist for str  */
++extern char     *isinlist(NLISTPTR, const char *);  /* scan list for str   */
++extern char     *isinglist(GLISTPTR, const char *); /* scan glist for str  */
++extern char     *nameinglist(GLISTPTR, const char *,
++                             char **);              /* scan glist for str  */
+ extern int      add_nlist(char *, NLISTPTR *);      /* add list item       */
+ extern int      add_glist(char *, GLISTPTR *);      /* add group list item */
+ 
+diff -uNr webalizer-2.01-10/output.c webalizer-2.01-10-mbm/output.c
+--- webalizer-2.01-10/output.c	Fri Sep 29 04:51:42 2000
++++ webalizer-2.01-10-mbm/output.c	Mon Oct 15 12:35:25 2001
+@@ -81,6 +81,8 @@
+ void    top_agents_table();                         /* top n u-agents  ""  */
+ void    top_ctry_table();                           /* top n countries ""  */
+ void    top_search_table();                         /* top n search strs   */
++void    top_searchsite_table();                     /* top n search strs   */
++void    top_searchboth_table();                     /* top n search strs   */
+ void    top_users_table();                          /* top n ident table   */
+ u_long  load_url_array(  UNODEPTR *);               /* load URL array      */
+ u_long  load_site_array( HNODEPTR *);               /* load Site array     */
+@@ -105,6 +107,8 @@
+ int     all_refs_page(u_long, u_long);              /* output refs page    */
+ int     all_agents_page(u_long, u_long);            /* output agents page  */
+ int     all_search_page(u_long, u_long);            /* output search page  */
++int     all_searchsite_page(u_long, u_long);            /* output search page  */
++int     all_searchboth_page(u_long, u_long);        /* output search page  */
+ int     all_users_page(u_long, u_long);             /* output ident page   */
+ void    dump_all_sites();                           /* dump sites tab file */
+ void    dump_all_urls();                            /* dump urls tab file  */
+@@ -417,10 +421,12 @@
+     if ( (s_array=malloc(sizeof(SNODEPTR)*(a_ctr))) != NULL)
+     {
+      a_ctr=load_srch_array(s_array);
+-     if (ntop_search || dump_search)
++     if (ntop_search || ntop_searchsite || ntop_searchboth || dump_search)
+      {
+        qsort(s_array,a_ctr,sizeof(SNODEPTR),qs_srch_cmph);
+        if (ntop_search) top_search_table(); /* top search strings table     */
++       if (ntop_searchsite) top_searchsite_table(); /* top search strings table     */
++       if (ntop_searchboth) top_searchboth_table(); /* top search strings table     */
+        if (dump_search) dump_all_search();  /* dump search string tab file  */
+      }
+      free(s_array);
+@@ -492,6 +498,10 @@
+       fprintf(out_fp,"<A HREF=\"#TOPREFS\">[%s]</A>\n",msg_hlnk_r);
+    if (ntop_search && t_ref)
+       fprintf(out_fp,"<A HREF=\"#TOPSEARCH\">[%s]</A>\n",msg_hlnk_sr);
++   if (ntop_searchsite && t_ref)
++      fprintf(out_fp,"<A HREF=\"#TOPSEARCHSITE\">[%s]</A>\n",msg_hlnk_srs);
++   if (ntop_searchboth && t_ref)
++      fprintf(out_fp,"<A HREF=\"#TOPSEARCHBOTH\">[%s]</A>\n",msg_hlnk_srb);
+    if (ntop_users && t_user)
+       fprintf(out_fp,"<A HREF=\"#TOPUSERS\">[%s]</A>\n",msg_hlnk_i);
+    if (ntop_agents && t_agent)
+@@ -1628,13 +1638,20 @@
+ 
+    if ( (t_ref==0)||(a_ctr==0)) return;   /* don't bother if none to do    */
+ 
+-   cnt=tot_num=a_ctr; pointer=s_array;
++   cnt=a_ctr; pointer=s_array;
++   tot_num=0;
+    while(cnt--)
+    {
++      if(strlen((char *)((SNODEPTR)(*pointer)->site)))
++      {
++         pointer++; continue;
++      }
+       t_val+=(u_long)((SNODEPTR)(*pointer)->count);
++      tot_num++;
+       pointer++;
+    }
+ 
++   cnt=tot_num;
+    if ( tot_num > ntop_search) tot_num=ntop_search;
+ 
+    fprintf(out_fp,"<A NAME=\"TOPSEARCH\"></A>\n");
+@@ -1642,7 +1659,7 @@
+    fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
+    fprintf(out_fp,"<TR><TH BGCOLOR=\"%s\" ALIGN=CENTER COLSPAN=4>"        \
+           "%s %lu %s %lu %s</TH></TR>\n",
+-          GREY, msg_top_top, tot_num, msg_top_of, a_ctr, msg_top_sr);
++          GREY, msg_top_top, tot_num, msg_top_of, cnt, msg_top_sr);
+    fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
+    fprintf(out_fp,"<TR><TH BGCOLOR=\"%s\" ALIGN=center>"                  \
+           "<FONT SIZE=\"-1\">#</FONT></TH>\n",
+@@ -1659,6 +1676,7 @@
+    while(tot_num)
+    {
+       sptr=*pointer++;
++      if(strlen(sptr->site)) continue;
+       fprintf(out_fp,
+          "<TR>\n"                                                     \
+          "<TD ALIGN=center><FONT SIZE=\"-1\"><B>%d</B></FONT></TD>\n" \
+@@ -1674,7 +1692,7 @@
+    fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
+    if ( (all_search) && (a_ctr>ntop_search) )
+    {
+-      if (all_search_page(a_ctr, t_val))
++      if (all_search_page(cnt, t_val))
+       {
+          fprintf(out_fp,"<TR BGCOLOR=\"%s\">",GRPCOLOR);
+          fprintf(out_fp,"<TD COLSPAN=4 ALIGN=\"center\">\n");
+@@ -1687,6 +1705,164 @@
+    fprintf(out_fp,"</TABLE>\n<P>\n");
+ }
+ 
++/***********************************************/
++/* TOP_SEARCHSITE_TABLE - generate top n table */
++/***********************************************/
++
++void top_searchsite_table()
++{
++   u_long   cnt,t_val=0, tot_num;
++   int      i;
++   SNODEPTR sptr, *pointer;
++
++   if ( (t_ref==0)||(a_ctr==0)) return;   /* don't bother if none to do    */
++
++   cnt=a_ctr; pointer=s_array;
++   tot_num=0;
++   while(cnt--)
++   {
++      if(strlen((char *)((SNODEPTR)(*pointer)->string)))
++      {
++         pointer++; continue;
++      }
++      t_val+=(u_long)((SNODEPTR)(*pointer)->count);
++      tot_num++;
++      pointer++;
++   }
++
++   cnt=tot_num;
++   if ( tot_num > ntop_searchsite) tot_num=ntop_searchsite;
++
++   fprintf(out_fp,"<A NAME=\"TOPSEARCHSITE\"></A>\n");
++   fprintf(out_fp,"<TABLE WIDTH=510 BORDER=2 CELLSPACING=1 CELLPADDING=1>\n");
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++   fprintf(out_fp,"<TR><TH BGCOLOR=\"%s\" ALIGN=CENTER COLSPAN=4>"        \
++          "%s %lu %s %lu %s</TH></TR>\n",
++          GREY, msg_top_top, tot_num, msg_top_of, cnt, msg_top_srs);
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++   fprintf(out_fp,"<TR><TH BGCOLOR=\"%s\" ALIGN=center>"                  \
++          "<FONT SIZE=\"-1\">#</FONT></TH>\n",
++          GREY);
++   fprintf(out_fp,"<TH BGCOLOR=\"%s\" ALIGN=center COLSPAN=2>"            \
++          "<FONT SIZE=\"-1\">%s</FONT></TH>\n",
++          DKGREEN,msg_h_hits);
++   fprintf(out_fp,"<TH BGCOLOR=\"%s\" ALIGN=center>"                      \
++          "<FONT SIZE=\"-1\">%s</FONT></TH></TR>\n",
++          CYAN,msg_h_seasit);
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++
++   pointer=s_array; i=0;
++   while(tot_num)
++   {
++      sptr=*pointer++;
++      if(strlen(sptr->string)) continue;
++      fprintf(out_fp,
++         "<TR>\n"                                                     \
++         "<TD ALIGN=center><FONT SIZE=\"-1\"><B>%d</B></FONT></TD>\n" \
++         "<TD ALIGN=right><FONT SIZE=\"-1\"><B>%lu</B></FONT></TD>\n" \
++         "<TD ALIGN=right><FONT SIZE=\"-2\">%3.02f%%</FONT></TD>\n"   \
++         "<TD ALIGN=left NOWRAP><FONT SIZE=\"-1\">",
++         i+1,sptr->count,
++         (t_val==0)?0:((float)sptr->count/t_val)*100.0);
++      fprintf(out_fp,"%s</FONT></TD></TR>\n",sptr->site);
++      tot_num--;
++      i++;
++   }
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++   if ( (all_searchsites) && (cnt>ntop_searchsite) )
++   {
++      if (all_searchsite_page(a_ctr, t_val))
++      {
++         fprintf(out_fp,"<TR BGCOLOR=\"%s\">",GRPCOLOR);
++         fprintf(out_fp,"<TD COLSPAN=4 ALIGN=\"center\">\n");
++         fprintf(out_fp,"<FONT SIZE=\"-1\">");
++         fprintf(out_fp,"<A HREF=\"./searchsite_%04d%02d.%s\">",
++                 cur_year,cur_month,html_ext);
++         fprintf(out_fp,"%s</A></TD></TR>\n",msg_v_seasit);
++      }
++   }
++   fprintf(out_fp,"</TABLE>\n<P>\n");
++}
++
++/***********************************************/
++/* TOP_SEARCHBOTH_TABLE - generate top n table */
++/***********************************************/
++
++void top_searchboth_table()
++{
++   u_long   cnt,t_val=0, tot_num;
++   int      i;
++   SNODEPTR sptr, *pointer;
++
++   if ( (t_ref==0)||(a_ctr==0)) return;   /* don't bother if none to do    */
++
++   cnt=a_ctr; pointer=s_array;
++   tot_num=0;
++   while(cnt--)
++   {
++      if(!strlen((char *)((SNODEPTR)(*pointer)->string))||!strlen((char *)((SNODEPTR)(*pointer)->site)))
++      {
++         pointer++; continue;
++      }
++      t_val+=(u_long)((SNODEPTR)(*pointer)->count);
++      tot_num++;
++      pointer++;
++   }
++
++   cnt=tot_num;
++   if ( tot_num > ntop_searchboth) tot_num=ntop_searchboth;
++
++   fprintf(out_fp,"<A NAME=\"TOPSEARCHBOTH\"></A>\n");
++   fprintf(out_fp,"<TABLE WIDTH=510 BORDER=2 CELLSPACING=1 CELLPADDING=1>\n");
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++   fprintf(out_fp,"<TR><TH BGCOLOR=\"%s\" ALIGN=CENTER COLSPAN=4>"        \
++          "%s %lu %s %lu %s</TH></TR>\n",
++          GREY, msg_top_top, tot_num, msg_top_of, cnt, msg_top_srb);
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++   fprintf(out_fp,"<TR><TH BGCOLOR=\"%s\" ALIGN=center>"                  \
++          "<FONT SIZE=\"-1\">#</FONT></TH>\n",
++          GREY);
++   fprintf(out_fp,"<TH BGCOLOR=\"%s\" ALIGN=center COLSPAN=2>"            \
++          "<FONT SIZE=\"-1\">%s</FONT></TH>\n",
++          DKGREEN,msg_h_hits);
++   fprintf(out_fp,"<TH BGCOLOR=\"%s\" ALIGN=center>"                      \
++          "<FONT SIZE=\"-1\">%s</FONT></TH></TR>\n",
++          CYAN,msg_h_seabot);
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++
++   pointer=s_array; i=0;
++   while(tot_num)
++   {
++      sptr=*pointer++;
++      if(!strlen(sptr->string) || !strlen(sptr->site)) continue;
++      fprintf(out_fp,
++         "<TR>\n"                                                     \
++         "<TD ALIGN=center><FONT SIZE=\"-1\"><B>%d</B></FONT></TD>\n" \
++         "<TD ALIGN=right><FONT SIZE=\"-1\"><B>%lu</B></FONT></TD>\n" \
++         "<TD ALIGN=right><FONT SIZE=\"-2\">%3.02f%%</FONT></TD>\n"   \
++         "<TD ALIGN=left NOWRAP><FONT SIZE=\"-1\">",
++         i+1,sptr->count,
++         (t_val==0)?0:((float)sptr->count/t_val)*100.0);
++      fprintf(out_fp,"%s -&gt; %s</FONT></TD></TR>\n",sptr->site,sptr->string);
++      tot_num--;
++      i++;
++   }
++   fprintf(out_fp,"<TR><TH HEIGHT=4></TH></TR>\n");
++   if ( (all_searchboth) && (cnt>ntop_searchboth) )
++   {
++      if (all_searchboth_page(a_ctr, t_val))
++      {
++         fprintf(out_fp,"<TR BGCOLOR=\"%s\">",GRPCOLOR);
++         fprintf(out_fp,"<TD COLSPAN=4 ALIGN=\"center\">\n");
++         fprintf(out_fp,"<FONT SIZE=\"-1\">");
++         fprintf(out_fp,"<A HREF=\"./searchboth_%04d%02d.%s\">",
++                 cur_year,cur_month,html_ext);
++         fprintf(out_fp,"%s</A></TD></TR>\n",msg_v_seabot);
++      }
++   }
++   fprintf(out_fp,"</TABLE>\n<P>\n");
++}
++
+ /*********************************************/
+ /* ALL_SEARCH_PAGE - HTML for search strings */
+ /*********************************************/
+@@ -1717,6 +1893,94 @@
+    while(tot_num)
+    {
+       sptr=*pointer++;
++      if(strlen(sptr->site)) continue;
++      fprintf(out_fp,"%-8lu %6.02f%%  %s\n",
++         sptr->count,
++         (t_val==0)?0:((float)sptr->count/t_val)*100.0,
++         sptr->string);
++      tot_num--;
++   }
++   fprintf(out_fp,"</PRE></FONT>\n");
++   write_html_tail(out_fp);
++   fclose(out_fp);
++   return 1;
++}
++
++/*************************************************/
++/* ALL_SEARCHSITE_PAGE - HTML for search strings */
++/*************************************************/
++
++int all_searchsite_page(u_long tot_num, u_long t_val)
++{
++   SNODEPTR sptr, *pointer;
++   char     search_fname[256], buffer[256];
++   FILE     *out_fp;
++
++   if (!tot_num) return 0;
++
++   /* generate file name */
++   sprintf(search_fname,"searchsite_%04d%02d.%s",cur_year,cur_month,html_ext);
++
++   /* open file */
++   if ( (out_fp=open_out_file(search_fname))==NULL ) return 0;
++
++   sprintf(buffer,"%s %d - %s",l_month[cur_month-1],cur_year,msg_h_seasit);
++   write_html_head(buffer, out_fp);
++
++   fprintf(out_fp,"<FONT SIZE=\"-1\"></CENTER><PRE>\n");
++
++   fprintf(out_fp," %12s      %s\n",msg_h_hits,msg_h_seasit);
++   fprintf(out_fp,"----------------  ----------------------\n\n");
++
++   pointer=s_array;
++   while(tot_num)
++   {
++      sptr=*pointer++;
++      if(strlen(sptr->string)) continue;
++      fprintf(out_fp,"%-8lu %6.02f%%  %s\n",
++         sptr->count,
++         (t_val==0)?0:((float)sptr->count/t_val)*100.0,
++         sptr->string);
++      tot_num--;
++   }
++   fprintf(out_fp,"</PRE></FONT>\n");
++   write_html_tail(out_fp);
++   fclose(out_fp);
++   return 1;
++}
++
++
++/*************************************************/
++/* ALL_SEARCHSITE_PAGE - HTML for search strings */
++/*************************************************/
++
++int all_searchboth_page(u_long tot_num, u_long t_val)
++{
++   SNODEPTR sptr, *pointer;
++   char     search_fname[256], buffer[256];
++   FILE     *out_fp;
++
++   if (!tot_num) return 0;
++
++   /* generate file name */
++   sprintf(search_fname,"searchsite_%04d%02d.%s",cur_year,cur_month,html_ext);
++
++   /* open file */
++   if ( (out_fp=open_out_file(search_fname))==NULL ) return 0;
++
++   sprintf(buffer,"%s %d - %s",l_month[cur_month-1],cur_year,msg_h_seabot);
++   write_html_head(buffer, out_fp);
++
++   fprintf(out_fp,"<FONT SIZE=\"-1\"></CENTER><PRE>\n");
++
++   fprintf(out_fp," %12s      %s\n",msg_h_hits,msg_h_seabot);
++   fprintf(out_fp,"----------------  ----------------------\n\n");
++
++   pointer=s_array;
++   while(tot_num)
++   {
++      sptr=*pointer++;
++      if(!strlen(sptr->string) || !strlen(sptr->site)) continue;
+       fprintf(out_fp,"%-8lu %6.02f%%  %s\n",
+          sptr->count,
+          (t_val==0)?0:((float)sptr->count/t_val)*100.0,
+@@ -2284,7 +2548,8 @@
+    while(cnt)
+    {
+       sptr=*pointer++;
+-      fprintf(out_fp,"%lu\t%s\n",sptr->count,sptr->string);
++      if(!strlen(sptr->site) || !strlen(sptr->string)) continue;
++      fprintf(out_fp,"%lu\t%s\t%s\n",sptr->count,sptr->string,sptr->site);
+       cnt--;
+    }
+    fclose(out_fp);
+diff -uNr webalizer-2.01-10/preserve.c webalizer-2.01-10-mbm/preserve.c
+--- webalizer-2.01-10/preserve.c	Fri Sep 29 04:51:32 2000
++++ webalizer-2.01-10-mbm/preserve.c	Fri Oct 12 16:36:22 2001
+@@ -352,7 +352,7 @@
+       sptr=sr_htab[i];
+       while (sptr!=NULL)
+       {
+-         sprintf(buffer,"%s\n%lu\n", sptr->string,sptr->count);
++         sprintf(buffer,"%s\n%s\n%lu\n", sptr->string,sptr->site,sptr->count);
+          if (fputs(buffer,fp)==EOF) return 1;  /* error exit */
+          sptr=sptr->next;
+       }
+@@ -402,6 +402,7 @@
+ 
+    char   buffer[BUFSIZE];
+    char   tmp_buf[BUFSIZE];
++   char   tmp_buf2[BUFSIZE];
+ 
+    u_long ul_bogus=0;
+ 
+@@ -657,13 +658,17 @@
+       tmp_buf[strlen(buffer)-1]=0;
+       
+       if ((fgets(buffer,BUFSIZE,fp)) == NULL) return 13;  /* error exit */
++      strncpy(tmp_buf2,buffer,MAXSRCH);
++      tmp_buf2[strlen(buffer)-1]=0;
++
++      if ((fgets(buffer,BUFSIZE,fp)) == NULL) return 13;  /* error exit */
+       if (!isdigit((int)buffer[0])) return 13;  /* error exit */
+ 
+       /* load temporary node data */
+       sscanf(buffer,"%lu",&t_snode.count);
+ 
+       /* insert node */
+-      if (put_snode(tmp_buf,t_snode.count,sr_htab))
++      if (put_snode(tmp_buf,tmp_buf2,t_snode.count,sr_htab))
+       {
+          if (verbose) fprintf(stderr,"%s %s\n", msg_nomem_sc, t_snode.string);
+       }
+diff -uNr webalizer-2.01-10/sample.conf webalizer-2.01-10-mbm/sample.conf
+--- webalizer-2.01-10/sample.conf	Fri Sep 29 04:51:42 2000
++++ webalizer-2.01-10-mbm/sample.conf	Mon Oct 15 13:36:14 2001
+@@ -311,6 +311,8 @@
+ #TopEntry        10
+ #TopExit         10
+ #TopSearch       20
++#TopSearchSites  10
++#TopSearchSiteStrs 30
+ #TopUsers        20
+ 
+ # The All* keywords allow the display of all URL's, Sites, Referrers
+@@ -333,6 +335,8 @@
+ #AllReferrers	no
+ #AllAgents	no
+ #AllSearchStr	no
++#AllSearchSites no
++#AllSearchSiteStrs no
+ #AllUsers       no
+ 
+ # The Webalizer normally strips the string 'index.' off the end of
+diff -uNr webalizer-2.01-10/webalizer.c webalizer-2.01-10-mbm/webalizer.c
+--- webalizer-2.01-10/webalizer.c	Tue Oct 17 05:15:53 2000
++++ webalizer-2.01-10-mbm/webalizer.c	Mon Oct 15 13:32:49 2001
+@@ -149,6 +149,8 @@
+ int     ntop_agents  = 15;                    /* top n user agents ""     */
+ int     ntop_ctrys   = 30;                    /* top n countries   ""     */
+ int     ntop_search  = 20;                    /* top n search strings     */
++int     ntop_searchsite = 10;                 /* top n search sites       */
++int     ntop_searchboth = 30;                 /* top n search site/string */
+ int     ntop_users   = 20;                    /* top n users to display   */
+ 
+ int     all_sites    = 0;                     /* List All sites (0=no)    */
+@@ -156,6 +158,8 @@
+ int     all_refs     = 0;                     /* List All Referrers       */
+ int     all_agents   = 0;                     /* List All User Agents     */
+ int     all_search   = 0;                     /* List All Search Strings  */
++int     all_searchsites = 0;                  /* List All Search Sites    */
++int     all_searchboth  = 0;                  /* List All Search String/Sites */
+ int     all_users    = 0;                     /* List All Usernames       */
+ 
+ int     dump_sites   = 0;                     /* Dump tab delimited sites */
+@@ -1518,7 +1522,11 @@
+ #ifdef USE_GEOIP
+                      "GeoIP",             /* Use GeoIP library (0=no)   88  */
+                      "GeoIPDatabase",     /* GeoIP database             89  */
+ #endif	/* USE_GEOIP */
++                     "TopSearchSites",    /* Top Search Sites           90  */
++                     "TopSearchSiteStrs", /* Top Search Site/String Pair91  */
++                     "AllSearchSites",    /* List all Search Sites      92  */
++                     "AllSearchSiteStrs", /* List all Search Site/String93  */
+                    };
+ 
+    FILE *fp;
+@@ -1668,4 +1678,8 @@
+ #endif	/* USE_GEOIP */
++        case 90: ntop_searchsite = atoi(value);        break; /* Top Search pgs */
++        case 91: ntop_searchboth = atoi(value);        break; /* Top Search pgs */
++        case 92: all_searchsites=(value[0]=='y')?1:0;  break; /* All Srch str   */
++        case 93: all_searchboth=(value[0]=='y')?1:0;   break; /* All Srch str   */
+       }
+    }
+    fclose(fp);
+@@ -1888,11 +1904,11 @@
+    /* ptr should point to unescaped query string */
+    char tmpbuf[BUFSIZE];
+    char srch[80]="";
+-   unsigned char *cp1, *cp2, *cps;
++   unsigned char *cp1, *cp2, *cps, *cpsite;
+    int  sp_flg=0;
+ 
+    /* Check if search engine referrer or return  */
+-   if ( (cps=isinglist(search_list,log_rec.refer))==NULL) return; 
++   if ( (cps=nameinglist(search_list,log_rec.refer,(char **)&cpsite))==NULL) return; 
+ 
+    /* Try to find query variable */
+    srch[0]='?'; strcpy(&srch[1],cps);              /* First, try "?..."      */
+@@ -1928,10 +1943,22 @@
+    /* strip invalid chars */
+    cp1=cp2; while (*cp1!=0) { if ((*cp1<32)||(*cp1==127)) *cp1='_'; cp1++; }
+ 
+-   if (put_snode(cp2,(u_long)1,sr_htab))
++   if (put_snode(cp2,cpsite,(u_long)1,sr_htab))
+    {
+       if (verbose)
+-      /* Error adding search string node, skipping .... */
++      /* Error adding search sitestring node, skipping .... */
++      fprintf(stderr,"%s %s\n", msg_nomem_sc, tmpbuf);
++   }
++   if (put_snode("",cpsite,(u_long)1,sr_htab))
++   {
++      if (verbose)
++      /* Error adding search site node, skipping .... */
++      fprintf(stderr,"%s %s\n", msg_nomem_sc, tmpbuf);
++   }
++   if (put_snode(cp2,"",(u_long)1,sr_htab))
++   {
++      if (verbose)
++      /* Error adding search site node, skipping .... */
+       fprintf(stderr,"%s %s\n", msg_nomem_sc, tmpbuf);
+    }
+    return;
+diff -uNr webalizer-2.01-10/webalizer.h webalizer-2.01-10-mbm/webalizer.h
+--- webalizer-2.01-10/webalizer.h	Tue Oct 17 05:15:53 2000
++++ webalizer-2.01-10-mbm/webalizer.h	Mon Oct 15 12:29:44 2001
+@@ -201,6 +201,8 @@
+ extern int     ntop_agents  ;                 /* top n user agents ""     */
+ extern int     ntop_ctrys   ;                 /* top n countries   ""     */
+ extern int     ntop_search  ;                 /* top n search strings     */
++extern int     ntop_searchsite;               /* top n search sites       */
++extern int     ntop_searchboth;               /* top n search site/strings*/
+ extern int     ntop_users   ;                 /* top n users to display   */
+ 
+ extern int     all_sites    ;                 /* List All sites (0=no)    */
+@@ -208,6 +210,8 @@
+ extern int     all_refs     ;                 /* List All Referrers       */
+ extern int     all_agents   ;                 /* List All User Agents     */
+ extern int     all_search   ;                 /* List All Search Strings  */
++extern int     all_searchsites;               /* List All Search Sites    */
++extern int     all_searchboth;                /* List All Search Site/Strings*/
+ extern int     all_users    ;                 /* List All Usernames       */
+ 
+ extern int     dump_sites   ;                 /* Dump tab delimited sites */

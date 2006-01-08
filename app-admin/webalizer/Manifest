@@ -1,30 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 08b1563e904b31f729cc18cfec00db2b ChangeLog 6135
+MD5 8c71e31d903336a50528c92d27aae811 ChangeLog 6403
 MD5 f04ad397866d35f9ede71fc6da2392ed files/2.01.10/apache.webalizer 306
 MD5 45d6e8c8bd9f76c0e22d80acc0603aff files/2.01.10/reconfig 394
 MD5 7a71200318400e9c4a33e23bfc65904d files/2.01.10/webalizer.conf 23927
 MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r10 157
 MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r11 157
+MD5 3d5021e449cb98a4fe8ab2fa6f222b33 files/digest-webalizer-2.01.10-r12 235
 MD5 99b845afaf9f7417f82f508992e4a5ab files/digest-webalizer-2.01.10-r4 74
 MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r5 157
 MD5 363fe90869a7e9ea50f37ac714bdac2a files/digest-webalizer-2.01.10-r8 157
 MD5 05805530b2e87a3d55e0056a45e330f5 files/output.c.patch 8088
 MD5 006af7bcfeb1e8648c1787c63d28470c files/webalizer-db4-with-geoip.patch 574
+MD5 ff6044f61cca31af6541dc7ee28affd9 files/webalizer-db4.2.patch 552
 MD5 cc68675ea63960bbc80d15110e41bf74 files/webalizer-db4.patch 574
 MD5 94e47e69398034261ac6d26edab9eafb files/webalizer-language-list.txt 1520
 MD5 766a26ff1600e3ea5359278a9dcd1025 files/webalizer-readability.patch 8345
+MD5 e02bdabb67987423cb53ecadc6f70cf3 files/webalizer-search.patch 30559
 MD5 f4ab9f9db4e50708404d47337257cd4e metadata.xml 223
 MD5 db9541cf1c0142945af2a4c72fd78508 webalizer-2.01.10-r10.ebuild 3856
 MD5 b71e077d377e71a2277e7d6ab0279498 webalizer-2.01.10-r11.ebuild 3939
+MD5 6fd145f0718fd4f1a2d006865e106a7c webalizer-2.01.10-r12.ebuild 4195
 MD5 5833410c77eec8d9cff653e67949b5a6 webalizer-2.01.10-r4.ebuild 2056
 MD5 e7883822bb2a1bcd2b8409ba709a964e webalizer-2.01.10-r5.ebuild 2550
 MD5 e07be0b4516c1e9044aa0c668866b570 webalizer-2.01.10-r8.ebuild 2486
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvtqcEzitwsaoONoRAmXCAJ4+q8cSIhR/kIoGA/ipLbjmcFiB2ACgw4H6
-+dZ9umVWl5/At5c4x161pT0=
-=67+c
+iD8DBQFDwUOxEzitwsaoONoRAkiSAJ4i143w5QZ/vmpw8Ranh+MyR7F0FQCff7VU
+9AcjRnX42fMBE12xb5Vd4aE=
+=yoTt
 -----END PGP SIGNATURE-----
