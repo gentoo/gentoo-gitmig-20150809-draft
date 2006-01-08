@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.21 2006/01/04 01:07:28 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.22 2006/01/08 05:48:02 nichoj Exp $
+
+  08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> fop-0.20.5-r3.ebuild:
+  Marked stable on amd64, to address bug #116310 in 0.20.5-r1.
 
   04 Jan 2006; Joshua Nichols <nichoj@gentoo.org> fop-0.20.5-r3.ebuild:
   Loosened dependency on dev-java/batik, in order to help out with stablizing
