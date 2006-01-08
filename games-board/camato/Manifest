@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eea79eacb44ae31cd9eb66c27b712864 ChangeLog 423
 MD5 6002c4bf87a9a26062e5fd267c6388e0 camato-0.6.2.ebuild 791
 MD5 06d68f8f7c55c5e6d8d246f8f7967d1b files/digest-camato-0.6.2 63
 MD5 de56bdc53f520c49912677c15ac3397e metadata.xml 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWFRV3J2n04EauwRAjw1AJ9jfnQSoW6aq+0wEux5WcZYwbXttQCfVTIc
+ECP/GjyX0QPWttW+NZtAIts=
+=Dsh3
+-----END PGP SIGNATURE-----

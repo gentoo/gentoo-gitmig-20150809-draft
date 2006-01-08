@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8cec89b8192bc45aa7342bc38ba1a01a ChangeLog 956
 MD5 a270a5b020f0b2c049fe47b0396bafd9 files/digest-pio-0.9.19 68
 MD5 bd0fefda62535dc61a6c2791b5b194f8 files/digest-pio-0.9.23 68
@@ -8,3 +11,10 @@ MD5 71a6059bd11e6bb1dc95370eb1cc128a pio-0.9.19.ebuild 1048
 MD5 4a2092784b8521003ff632cf3b614cae pio-0.9.23.ebuild 1127
 MD5 b4c874fb6338e72393001b19e4ca8d77 pio-0.9.33.ebuild 1124
 MD5 b0419c569f844b1bca4a5f6990b40902 pio-0.9.40.ebuild 898
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwWGWV3J2n04EauwRAjhdAJ0bYjiGW9kt8WwqAAowyQ9g50LjaACgx+BZ
+2Em9i+pdF5uyi2kQ7617UhU=
+=1ClY
+-----END PGP SIGNATURE-----
