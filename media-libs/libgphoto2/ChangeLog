@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.60 2006/01/05 14:28:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.61 2006/01/08 10:48:16 dertobi123 Exp $
+
+  08 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libgphoto2-2.1.6-r1.ebuild:
+  ppc stable, bug #117596
 
   05 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libgphoto2-2.1.6-r1.ebuild:
