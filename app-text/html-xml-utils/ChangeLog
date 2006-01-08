@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html-xml-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.27 2005/12/22 19:23:30 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.28 2006/01/08 09:48:30 josejx Exp $
+
+  08 Jan 2006; Joseph Jezak <josejx@gentoo.org> html-xml-utils-3.7.ebuild:
+  Marked ~ppc for bug #114326.
 
   22 Dec 2005; Fabian Groffen <grobian@gentoo.org>
   html-xml-utils-3.7.ebuild:
