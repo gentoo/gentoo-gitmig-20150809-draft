@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ce66c606b26a6c7bef6204982b17a13 ChangeLog 3653
 MD5 3556db7ff664537dca11a80a1aa937d3 dspam-web-3.2.7.ebuild 5216
 MD5 26409854de884f5d97f3a6f424e03fa6 dspam-web-3.4.9-r1.ebuild 5034
@@ -10,3 +13,10 @@ MD5 5a495629f2b3fbcfabc0f4ae4a9b4e4b files/digest-dspam-web-3.6.1 129
 MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
 MD5 b4099a94a52af9abd4ade48d82914c3c files/htpasswd 19
 MD5 f1ea445d6b4ddf81c55a4e886bc04218 metadata.xml 341
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwVEAEzitwsaoONoRAkHeAJ98kVPaFoFizhupD12fbJ9I75xNVwCghA8k
+voTOPCDLgREw9tNAFk1cb8s=
+=LGWP
+-----END PGP SIGNATURE-----
