@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.4.ebuild,v 1.3 2006/01/07 17:29:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.4.ebuild,v 1.4 2006/01/08 17:04:05 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -23,14 +23,16 @@ RDEPEND=">=media-tv/gentoo-vdr-scripts-0.2.2"
 VDRPLUGIN_MAKE_TARGET="all -j1"
 
 src_unpack() {
-vdr-plugin_src_unpack
+
+	vdr-plugin_src_unpack
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 
 src_install() {
-vdr-plugin_src_install
+
+	vdr-plugin_src_install
 
 	insinto /etc/vdr/imagecmds
 	newins examples/imagecmds.conf imagecmds.example.conf
@@ -39,13 +41,14 @@ vdr-plugin_src_install
 	insinto /etc/vdr/plugins/image
 	doins examples/imagesources.conf
 
-	insinto /usr/share/vdr/image
+	into /usr/share/vdr/image
 	dobin scripts/imageplugin.sh
 	newbin scripts/mount.sh mount-image.sh
 }
 
 pkg_postinst() {
-vdr-plugin_pkg_postinst
+
+	vdr-plugin_pkg_postinst
 
 	echo
 	einfo "Also check /etc/vdr/plugins/image/imagesources.conf"

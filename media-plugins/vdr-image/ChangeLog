@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.3 2006/01/07 17:29:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.4 2006/01/08 17:04:05 hd_brummy Exp $
+
+  08 Jan 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-image-0.2.4.ebuild:
+  fixed install path
 
   07 Jan 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-image-0.2.4.ebuild:
