@@ -8,11 +8,11 @@ MD5 0936e72530ea6a728df2935e23041bf9 bitpim-0.8.04.ebuild 783
 MD5 b85ac1cda822a8d92521c1a4ef88f7b4 files/digest-bitpim-0.7.33 71
 MD5 b8b665f807f5a22fd495ace7b8080036 files/digest-bitpim-0.7.34 71
 MD5 86f1f1b35aa99d3a607f03d8053c4834 files/digest-bitpim-0.8.04 71
-MD5 cb01270ba9e7d80dcacf2ebbd960653c metadata.xml 553
+MD5 b05575cd16c40945a62bcfee6f1fce07 metadata.xml 493
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuSC3jG8pv1lIUX4RAhtmAKDgR+gQtFHTeZquUNGMw0x5N03LYQCeInFF
-cm7EK5we9qkkmmzns2Rt5nw=
-=9Wht
+iD8DBQFDwWCRV3J2n04EauwRAk1GAJ0Wx67GewHiO7dwKMUtdDA3XI0hAwCfUEF4
+KOeVsGYR1uiXOqgjJFOC6aw=
+=xeTM
 -----END PGP SIGNATURE-----
