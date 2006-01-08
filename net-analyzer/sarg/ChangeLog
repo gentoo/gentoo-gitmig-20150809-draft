@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sarg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.20 2005/12/25 13:32:29 pva Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.21 2006/01/08 15:09:09 pva Exp $
+
+  08 Jan 2006; Peter Volkov <pva@gentoo.org> sarg-1.4.1-r2.ebuild,
+  sarg-2.0.8.ebuild:
+  Changed DESCRIPTION field to better reflect tools purpose.
 
   25 Dec 2005; Peter Volkov <pva@gentoo.org> sarg-2.0.8.ebuild:
   Fix for bug #99951.

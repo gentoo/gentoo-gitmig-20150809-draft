@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.0.8.ebuild,v 1.6 2005/12/25 13:32:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.0.8.ebuild,v 1.7 2006/01/08 15:09:09 pva Exp $
 
 inherit eutils
 
-DESCRIPTION="tool that allows viewing of where users are going on the Internet"
+DESCRIPTION="Squid Analysis Report Generator"
 HOMEPAGE="http://sarg.sourceforge.net/sarg.php"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
