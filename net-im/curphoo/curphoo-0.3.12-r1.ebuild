@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/curphoo/curphoo-0.3.12-r1.ebuild,v 1.2 2005/10/01 21:04:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/curphoo/curphoo-0.3.12-r1.ebuild,v 1.3 2006/01/08 06:10:13 anarchy Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Curphoo is a console Yahoo! Chat client written in Python"
 HOMEPAGE="http://savannah.nongnu.org/projects/curphoo/"
@@ -31,9 +31,9 @@ src_compile() {
 
 src_install () {
 	dodoc BUGS CHANGELOG ChangeLog README TODO floo2phoo
-	dodir /usr/lib/${P}
+	dodir /usr/$(get_libdir)/${P}
 	mv curphoo curphoo.py
-	cp *.py *.so ${D}/usr/lib/${P}
+	cp *.py *.so ${D}/usr/$(get_libdir)/${P}
 	mv curphoo.sh curphoo
 	dobin curphoo
 	doman curphoo.1
