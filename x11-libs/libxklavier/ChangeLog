@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.53 2005/12/11 00:49:36 allanonjl Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.54 2006/01/08 13:29:49 nixnut Exp $
+
+  08 Jan 2006; <nixnut@gentoo.org> libxklavier-2.0-r1.ebuild:
+  marked stable on ppc, bug #118229
 
 *libxklavier-2.0-r1 (11 Dec 2005)
 
