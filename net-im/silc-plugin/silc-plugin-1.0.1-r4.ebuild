@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.3 2005/12/12 10:14:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.4 2006/01/08 15:39:14 ticho Exp $
 
-inherit eutils
+inherit eutils perl-module
 
 IRSSI_PV=0.8.9
 
@@ -83,6 +83,8 @@ src_install() {
 	doins default.theme
 
 	dodoc AUTHORS COPYING README USAGE
+
+	fixlocalpod
 }
 
 pkg_postinst() {
