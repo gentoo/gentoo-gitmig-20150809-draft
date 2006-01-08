@@ -2,11 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-    <email>rizzo@gentoo.org</email>
-    <name>Don Seiler</name>
-</maintainer>
 <longdescription>
-TOra is a Toolkit for Oracle which aims to help the DBA or developer of database application. Features PL/SQL debugger, SQL worksheet with syntax highlighting, DB browser and a comprehensive set of DBA tools.  Also works with mySQL and postgreSQL.
+	TOra is a Toolkit for Oracle which aims to help the DBA or developer of
+	database application. Features PL/SQL debugger, SQL worksheet with syntax
+	highlighting, DB browser and a comprehensive set of DBA tools.  Also works
+	with mySQL and postgreSQL.
 </longdescription>
 </pkgmetadata>
