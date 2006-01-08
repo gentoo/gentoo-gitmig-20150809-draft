@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.1.ebuild,v 1.5 2005/12/23 21:25:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.1.ebuild,v 1.6 2006/01/08 09:27:24 josejx Exp $
 
 inherit webapp eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Multilingual multiuser multi-blog engine"
 HOMEPAGE="http://www.b2evolution.net"
 SRC_URI="mirror://sourceforge/evocms/${P}${MY_EXT}.zip"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 RDEPEND="virtual/httpd-php
 	 >=dev-db/mysql-3.23.23"

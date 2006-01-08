@@ -1,5 +1,15 @@
-MD5 a4557da90e2c6eaa8c23de97b0c2cdca ChangeLog 2404
-MD5 a87207b3b148a8e1057c02dad9d02af8 metadata.xml 247
-MD5 eb459730dc9499743315c712c348ebd9 b2evolution-0.9.1.ebuild 1211
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca0d6f30c0de936d85df75d018034a26 ChangeLog 2517
+MD5 29d62173398f61cd18b2f1af2674f373 b2evolution-0.9.1.ebuild 1211
 MD5 aa3594668732d94839440295a8b4fb79 files/digest-b2evolution-0.9.1 79
 MD5 d584b5d4ec8d7378cbfcc77cde85306d files/postinstall-en.txt 340
+MD5 a87207b3b148a8e1057c02dad9d02af8 metadata.xml 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwNsHcsIHjyDViGQRAt06AKCYHnV5Jfr3LD1thoX7YAujIBi9cQCfUizv
+lWrX8fZwvelXSN526IzIOEw=
+=lhNN
+-----END PGP SIGNATURE-----
