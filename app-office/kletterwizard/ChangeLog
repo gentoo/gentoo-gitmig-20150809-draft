@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kletterwizard
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.13 2005/08/21 20:02:51 greg_g Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.14 2006/01/08 01:26:04 carlo Exp $
+
+  08 Jan 2006; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
+  Developer retired.
 
   21 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
   kletterwizard-0.9.6.ebuild:
