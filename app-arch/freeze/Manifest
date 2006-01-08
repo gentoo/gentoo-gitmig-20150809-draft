@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 15d7c40203caf4ffb50e28b6ca73b3bb ChangeLog 1395
 MD5 be8cdc70d8fc9904b2452458e271aef3 files/digest-freeze-2.5.0 63
 MD5 cd99338ccaa4e99c2dad383d66279d0e freeze-2.5.0.ebuild 1008
-MD5 8ef457f9ac46b73b855b4a4e5ff9d7d3 metadata.xml 243
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi8QsgIKl8Uu19MoRAo/NAJ0YDlwZS+Z3OPesFOSYH6mHGpzIMACfWFfq
-eBVhwvdhtwvVziHE0aC1yBU=
-=4GXB
+iD8DBQFDwWfuV3J2n04EauwRApsuAJ0UmLB16I0UT98rdEf72bioWEGGWACgg1p5
+ybk3JUkYv+fC0Y8hXqKFDkQ=
+=PB3H
 -----END PGP SIGNATURE-----
