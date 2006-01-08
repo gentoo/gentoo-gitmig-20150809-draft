@@ -1,0 +1,15 @@
+--- lastlog.c   2005-12-08 10:33:36.000000000 -0200
++++ new/lastlog.c       2005-12-08 10:33:10.000000000 -0200
+@@ -59,11 +59,9 @@
+       local = localtime(&t);
+       strftime(ftime, 127, "%Y%m%d%H%M%S", local);
+       sprintf(buf,"%s %s\n",ftime,direntp->d_name);
+-printf("BUF=%s\n",buf);
+       fputs(buf,fp_ou);
+       ftot++;
+    }
+-exit(0);
+
+    (void)rewinddir( dirp );
+    (void)closedir( dirp );
+
