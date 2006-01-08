@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.8 2005/08/29 04:19:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.9 2006/01/08 01:06:35 mr_bones_ Exp $
 
 inherit games
 
@@ -45,4 +45,5 @@ src_install() {
 		fi
 	done
 	dodoc README docs/{CHANGES,CONFIG,CREDITS,FAQ,HACKING,WHATSNEW}
+	prepgamesdirs
 }
