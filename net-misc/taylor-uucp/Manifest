@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 135397d55e388ecf5c660b79329a173e taylor-uucp-1.06.2.ebuild 1128
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
-MD5 8bfc2717f433d960b3bf7a697b28fae7 taylor-uucp-1.07.ebuild 1286
-MD5 c817030640309ca9e9520b1b6156dfd1 ChangeLog 2654
-MD5 960bf47654d4d388fad012107bc1dbf4 files/digest-taylor-uucp-1.07 62
+MD5 79aeb3a4d3360c7a1e3dff8a4dd07b2a ChangeLog 2760
 MD5 3d5cc3426a7f1d61f90822a17a8fef03 files/digest-taylor-uucp-1.06.2 64
-MD5 0b3506193c11dfcee3c0db510974019a files/gentoo-uucp.diff 5284
+MD5 960bf47654d4d388fad012107bc1dbf4 files/digest-taylor-uucp-1.07 62
 MD5 e0bcdeb5dc9bf6eaadbe44c39e65b42d files/gentoo-uucp-1.07.patch 4834
+MD5 0b3506193c11dfcee3c0db510974019a files/gentoo-uucp.diff 5284
 MD5 ece1220b2ccfc902946f5c929dc2f3c9 files/uucp-patch.diff 2107
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCftMNmOfEJZHYOKcRAoizAJwMR2nYqqVrLZ6iPaS8rfKGw4qAyQCePddL
-UEZoRUZHl4M5ULXqkiCNofs=
-=1xsn
------END PGP SIGNATURE-----
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 135397d55e388ecf5c660b79329a173e taylor-uucp-1.06.2.ebuild 1128
+MD5 8bfc2717f433d960b3bf7a697b28fae7 taylor-uucp-1.07.ebuild 1286
