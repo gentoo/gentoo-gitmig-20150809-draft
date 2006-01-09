@@ -1,18 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.6 2006/01/09 09:08:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.34.ebuild,v 1.1 2006/01/09 09:08:41 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
 DESCRIPTION="Fax and Voice modem programs."
-SRC_URI="ftp://alpha.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Apr10.tar.gz"
-HOMEPAGE="http://alpha.greenie.net/mgetty/"
+SRC_URI="ftp://mgetty.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Nov30.tar.gz"
+HOMEPAGE="http://mgetty.greenie.net/"
 
-RDEPEND="virtual/libc"
-
-DEPEND="${RDEPEND}
+DEPEND="doc? ( virtual/tetex )
 	>=sys-apps/sed-4
-	doc? ( virtual/tetex )
 	sys-apps/gawk
 	sys-apps/groff
 	dev-lang/perl
@@ -20,7 +17,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc"
 
 pkg_setup() {
@@ -31,11 +28,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	# fix deprecate warnings
-	epatch ${FILESDIR}/${P}-strerror.diff
+	epatch ${FILESDIR}/${P}-strerror.patch
 	# add callback install to Makefile
-	epatch ${FILESDIR}/${P}-callback.diff
+	epatch ${FILESDIR}/${P}-callback.patch
 	# Lucent modem CallerID patch - bug #80366
 	epatch ${FILESDIR}/Lucent.c.patch
 

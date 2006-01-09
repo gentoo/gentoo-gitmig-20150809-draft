@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/mgetty
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.50 2005/12/26 12:24:19 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.51 2006/01/09 09:08:41 mrness Exp $
+
+*mgetty-1.1.34 (09 Jan 2006)
+
+  09 Jan 2006; Alin Nastac <mrness@gentoo.org>
+  +files/mgetty-1.1.34-callback.patch, +files/mgetty-1.1.34-gentoo.patch,
+  +files/mgetty-1.1.34-strerror.patch, metadata.xml, mgetty-1.1.33.ebuild,
+  +mgetty-1.1.34.ebuild:
+  Add description to metadata.xml. Mark 1.1.33 stable on x86. Version bump.
 
   26 Dec 2005; Alin Nastac <mrness@gentoo.org> -mgetty-1.1.30.ebuild,
   -mgetty-1.1.31.ebuild:
