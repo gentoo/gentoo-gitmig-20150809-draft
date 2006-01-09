@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 17e1e66c722f38bb55733c46904cafff ChangeLog 1988
-MD5 75659ae17937f732013a241bbc2b9529 metadata.xml 1396
-MD5 d2051d8980e4c8640abd79349a4aea97 twin-0.4.6.ebuild 2009
 MD5 ad8d26920fc765a6d1fb4a3e4fac3ca7 files/digest-twin-0.4.6 63
 MD5 f170881843dd34e43adcd5cbab719927 files/twin-0.4.6-autotools.patch 248
+MD5 75659ae17937f732013a241bbc2b9529 metadata.xml 1396
+MD5 ebfcf270a260134587799a2443f3e222 twin-0.4.6.ebuild 2012
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCtSSkgIKl8Uu19MoRAmL1AJ9vuyj53m64j7wvczNZEUBlZ7JNtwCgg8sP
-ACO0PqsVRDCfciDxnuBXHos=
-=q6JY
+iD8DBQFDwc1z2+ySkm8kpY0RAoxQAJwO21Io7l88HtFkru4vSTKFBrCAAwCgh+iM
+AnduhUzin2qJh4Fwyk23XI4=
+=RSyM
 -----END PGP SIGNATURE-----
