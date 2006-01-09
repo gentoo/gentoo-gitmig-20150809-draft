@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8.ebuild,v 1.2 2005/11/30 02:36:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8.ebuild,v 1.3 2006/01/09 02:21:53 nichoj Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.4
-		=dev-java/servletapi-2.3*
+		~dev-java/servletapi-2.3
 		~dev-java/hessian-${PV}
 		~dev-java/caucho-services-${PV}"
 

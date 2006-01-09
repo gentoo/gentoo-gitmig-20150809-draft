@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/burlap
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.2 2005/11/30 02:36:31 nichoj Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.3 2006/01/09 02:21:53 nichoj Exp $
+
+  09 Jan 2006; Joshua Nichols <nichoj@gentoo.org> burlap-3.0.8.ebuild:
+  Fixed servletapi dependency.
 
   30 Nov 2005; <nichoj@gentoo.org> burlap-2.1.12.ebuild,
   burlap-3.0.8.ebuild:
