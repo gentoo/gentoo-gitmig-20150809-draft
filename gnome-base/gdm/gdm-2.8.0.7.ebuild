@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.7.ebuild,v 1.3 2006/01/05 23:17:27 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.7.ebuild,v 1.4 2006/01/09 22:57:28 compnerd Exp $
 
 inherit eutils pam gnome2
 
@@ -75,6 +75,9 @@ src_unpack() {
 
 	# remove unneeded linker directive for selinux (#41022)
 	epatch ${FILESDIR}/${PN}-2.4.4-selinux_remove_attr.patch
+
+	# Fix locale string translation (Bug #100753)
+	epatch ${FILESDIR}/${PN}-2.13.0.4-esperanto.patch
 
 	gnome2_omf_fix docs/*/Makefile.in
 }
