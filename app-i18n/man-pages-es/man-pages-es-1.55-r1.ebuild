@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.2 2005/12/27 18:20:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.3 2006/01/09 08:03:16 ferdy Exp $
 
 manpagesextra=${PN}-extra-0.8a
 S2=${WORKDIR}/${manpagesextra}
@@ -13,6 +13,8 @@ SRC_URI="http://ditec.um.es/~piernas/manpages-es/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+
+IUSE=""
 
 RDEPEND="sys-apps/man"
 
