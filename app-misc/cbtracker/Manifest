@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2af782a8ed1544382284c572afd54663 ChangeLog 585
 MD5 f61c69fc2b5a63d7ea48cfbded4c661c cbtracker-1.0b.ebuild 703
 MD5 9bfe88b5fa3f3596ec8776300f9df9fb files/digest-cbtracker-1.0b 67
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwpNJugEuf3OQ0akRAmSwAKCJy00gJAFM4B+1sfxkBOaMJMRCXgCfbm8L
+ZbiF5zi9Dy30FSkFfi4CAwg=
+=L3qg
+-----END PGP SIGNATURE-----
