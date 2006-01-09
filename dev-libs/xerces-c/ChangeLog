@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.37 2006/01/07 11:46:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.38 2006/01/09 01:38:42 halcy0n Exp $
+
+*xerces-c-2.7.0-r1 (09 Jan 2006)
+
+  09 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/xerces-c-2.7.0-libpath.patch, -xerces-c-2.7.0.ebuild,
+  +xerces-c-2.7.0-r1.ebuild:
+  Bump to fix the library issue for everyone that upgraded. Thanks to Phil
+  Pennock <gentoo AT spodhuis DOT demon DOT nl> for the report; bug #118340
 
   07 Jan 2006; Simon Stelling <blubb@gentoo.org> xerces-c-2.7.0.ebuild:
   stable on amd64

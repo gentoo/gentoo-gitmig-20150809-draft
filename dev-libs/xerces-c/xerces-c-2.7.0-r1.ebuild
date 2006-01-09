@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0.ebuild,v 1.5 2006/01/07 11:46:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.1 2006/01/09 01:38:42 halcy0n Exp $
 
 inherit eutils multilib
 
@@ -17,36 +17,37 @@ IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/xerces-c-src
+S="${WORKDIR}"/xerces-c-src
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix multilib install
-	epatch ${FILESDIR}/${P}-multilib.patch
+	epatch "${FILESDIR}"/${P}-multilib.patch
+	epatch "${FILESDIR}"/${P}-libpath.patch
 }
 
 src_compile() {
-	export XERCESCROOT=${S}
+	export XERCESCROOT="${S}"
 	cd src/xercesc
 	./runConfigure -plinux -P/usr
 	emake -j1 || die
 }
 
 src_install () {
-	export XERCESCROOT=${S}
-	cd ${S}/src/xercesc
-	make DESTDIR=${D} MLIBDIR=$(get_libdir) install || die
+	export XERCESCROOT="${S}"
+	cd "${S}"/src/xercesc
+	make DESTDIR="${D}" MLIBDIR=$(get_libdir) install || die
 
 	if use doc; then
 		dodir /usr/share/doc/${P}
-		cp -pPR ${S}/samples ${D}/usr/share/doc/${P}
-		cd ${S}/doc; doxygen
+		cp -pPR "${S}"/samples "${D}"/usr/share/doc/${P}
+		cd "${S}"/doc; doxygen
 		dohtml -r html
 	fi
 
-	cd ${S}
+	cd "${S}"
 	dodoc STATUS credits.txt version.incl
 	dohtml Readme.html
 
