@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antiword
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.24 2005/08/31 10:20:10 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.25 2006/01/09 16:56:55 kloeri Exp $
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove retired dev from metadata.xml
 
   31 Aug 2005; Fabian Groffen <grobian@gentoo.org>
   +files/antiword-0.36.1-ppc-macos.diff, antiword-0.36.1.ebuild:
