@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9d93d93cc2d1d5bc73469be2bd44022 ChangeLog 1599
+MD5 52f876f70e57cbd34cd39e97feda6caf ChangeLog 1705
 MD5 208207aad1e3590eae78ec12697af28d files/digest-whatmask-1.1 64
 MD5 015cb5edc15790f8428a0773c640a850 files/digest-whatmask-1.2 64
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 72cf1b3d4d50252bb3fcab07fa5abc44 whatmask-1.1.ebuild 612
 MD5 0539d7ea7b84f3abc5bf8e62c1aeaf5f whatmask-1.2.ebuild 622
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiZS3CHk4+ZoBpvsRAoO3AKCpBu69X9p5nSe048/Pd6xiAs2DXwCguna0
-Begjoy1cYU1vNinZrpo4rFE=
-=j9yp
------END PGP SIGNATURE-----
