@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.2 2005/12/30 10:46:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.3 2006/01/09 16:45:04 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
 KEYWORDS="~alpha ~ppc ~ppc64 ~sparc ~x86"
-IUSE="berkdb qmail ssl doc mysql postgres sqlite spf tools"
+IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite spf tools"
 
 # To consider (not all may be in tree at this time - mcummings):
 # dev-perl/Net-SMTP
@@ -38,6 +38,7 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 	berkdb? (
 		perl-core/DB_File
 	)
+	ldap? ( dev-perl/perl-ldap )
 	mysql? (
 		dev-perl/DBI
 		dev-perl/DBD-mysql
