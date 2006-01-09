@@ -1,20 +1,27 @@
-MD5 2d3296289e42656d7a1f9c313bf1da36 quagga-0.98.5-r2.ebuild 5012
-MD5 9927651424dd0548ba520a169d1afa88 quagga-0.98.5-r1.ebuild 4901
-MD5 61d0e76aabbdda29251765fa6e84ef54 ChangeLog 10363
-MD5 e3212aca12f84a5cd7164e7727020318 quagga-0.98.4.ebuild 4438
-MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 139fd0489b45828efb3d9374f528e974 ChangeLog 10622
 MD5 cc109a746273bc0d6aee9d758e7524ab files/bgpd.init 900
-MD5 44547b687343ebfed7524cebc5626067 files/ospf6d.init 919
 MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
-MD5 39b8cb21b55de53af38c94c2f5d85917 files/ripd.init 900
-MD5 120ab1b53975ec86e78266f31e935ab6 files/ripngd.init 920
 MD5 d043f8666ea0af9633684d58dcef68e6 files/digest-quagga-0.98.5-r1 147
 MD5 d043f8666ea0af9633684d58dcef68e6 files/digest-quagga-0.98.5-r2 147
+MD5 44547b687343ebfed7524cebc5626067 files/ospf6d.init 919
+MD5 89b0cf4e70172bfcd195b2869cae28da files/ospfd.init 910
 MD5 18c1046db57ea850aabd385058522cc4 files/quagga.env 25
 MD5 0b834e6f9fd5d40f3018fb7e4ba04faa files/quagga.pam 1145
-MD5 89b0cf4e70172bfcd195b2869cae28da files/ospfd.init 910
+MD5 39b8cb21b55de53af38c94c2f5d85917 files/ripd.init 900
+MD5 120ab1b53975ec86e78266f31e935ab6 files/ripngd.init 920
 MD5 c38e884372406e9e59616e436cd26388 files/zebra.conf 371
 MD5 2c1c5b782f96a74b48ccc496ad7a3865 files/zebra.init 1168
-MD5 7da4097332468741416e156a2e5d35e4 files/patches-0.98.2/amir-connected-route.patch 6336
-MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch 14570
-MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.2/ht-20040304-classless-bgp.patch 1581
+MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
+MD5 e3212aca12f84a5cd7164e7727020318 quagga-0.98.4.ebuild 4438
+MD5 9927651424dd0548ba520a169d1afa88 quagga-0.98.5-r1.ebuild 4901
+MD5 2d3296289e42656d7a1f9c313bf1da36 quagga-0.98.5-r2.ebuild 5012
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDwmX+jG8pv1lIUX4RAj4mAJ4w8OrrVxNvdpMS1KKUmCUT08XnZwCcDlwa
+5EdBZFR4C8/+ONGAGYRkigE=
+=UaM5
+-----END PGP SIGNATURE-----

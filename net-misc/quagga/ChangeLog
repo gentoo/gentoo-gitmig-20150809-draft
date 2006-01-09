@@ -1,8 +1,14 @@
 # ChangeLog for net-misc/quagga
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.27 2005/12/13 14:45:07 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.28 2006/01/09 13:32:26 mrness Exp $
+
+  09 Jan 2006; Alin Nastac <mrness@gentoo.org>
+  -files/patches-0.98.2/amir-connected-route.patch,
+  -files/patches-0.98.2/ht-20040304-classless-bgp.patch,
+  -files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch:
+  Remove leftovers of the version 0.98.2.
 
   13 Dec 2005; Amir Guindehi <amir@gentoo.org> -quagga-0.96.5-r1.ebuild,
   -quagga-0.98.2.ebuild, -quagga-0.98.5.ebuild:
