@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3d94e9f9c7cd8f51819a10952bd828e ChangeLog 861
+MD5 f1a8b3a847449b4b3f70b7f7f2df67de ChangeLog 988
 MD5 0c01e6e811c6ed425e2553e85bcb5503 files/digest-moto4lin-0.3 64
 MD5 1de90e24fe911dfb6c89a85a9a787413 files/digest-moto4lin-0.3_p20051125 74
 MD5 a89a5701e09651b16f3f3d6246d841ff metadata.xml 226
-MD5 9f664d2a9528b4a175faf8ffce006668 moto4lin-0.3.ebuild 779
-MD5 9ca1a6acd753b9fbb4259e8a6be390fd moto4lin-0.3_p20051125.ebuild 783
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiusjAiZjviIA2XgRAi7vAJ9CQbQQbwkLDIDd34aSv57PxwS+vwCgjXmM
-TTim+95jLBj+MJqA/dSJLfw=
-=4ydB
------END PGP SIGNATURE-----
+MD5 819b32b65aebd7455d7d61401599054f moto4lin-0.3.ebuild 819
+MD5 560411d612454f1cd35a924345db011b moto4lin-0.3_p20051125.ebuild 820

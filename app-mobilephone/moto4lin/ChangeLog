@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/moto4lin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.5 2005/11/28 11:33:26 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.6 2006/01/09 14:21:26 caleb Exp $
+
+  09 Jan 2006; Caleb Tennis <caleb@gentoo.org> moto4lin-0.3.ebuild,
+  moto4lin-0.3_p20051125.ebuild:
+  Fix qmake call for qt3/qt4
 
   28 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   moto4lin-0.3_p20051125.ebuild:
