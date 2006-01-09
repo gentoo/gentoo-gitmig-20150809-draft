@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7cc05d76ffbc09b74452828dcbf16de3 ChangeLog 16909
 MD5 e5fd05e989560ad9485ddedf7df025e7 blackdown-jdk-1.3.1-r10.ebuild 2606
 MD5 b0cc21fe7cb4de9df138a0311a9f1a25 blackdown-jdk-1.3.1-r8.ebuild 2741
@@ -14,3 +17,10 @@ MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
 MD5 c36468f22832c3157f0fcda9b03b3bff files/digest-blackdown-jdk-1.4.2.02 153
 MD5 74c533f60298d5a44d0c7a38ab1606e0 files/digest-blackdown-jdk-1.4.2.03 153
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDwr6lKRy60XGEcJIRAh+qAJwIl6l+ivi6HS08AHl7Sjh6vGEJiACeIQNi
+O9UjrbCil48c4RwUEXI1r/0=
+=atkN
+-----END PGP SIGNATURE-----

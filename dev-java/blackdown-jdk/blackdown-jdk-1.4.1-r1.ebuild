@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.15 2005/10/30 19:43:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.16 2006/01/09 19:50:40 gustavoz Exp $
 
 
 inherit java
@@ -143,5 +143,14 @@ pkg_postinst() {
 		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
 		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
 		ewarn "update your USE to include 'nsplugin'."
+	fi
+	if use sparc; then
+		echo
+		ewarn "Blackdown has unresolved security bugs on SPARC and is going"
+		ewarn "away soon because of it's binary-only nature."
+		ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=96229 and"
+		ewarn "http://bugs.gentoo.org/show_bug.cgi?id=118114 for details."
+		ebeep 5
+		epause 10
 	fi
 }
