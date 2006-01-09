@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.5 2004/11/11 12:50:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.6 2006/01/09 00:35:48 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,28 +13,26 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libsdl-1.2.7"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND=">=media-libs/libsdl-1.2.7"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Modify game data paths
 	sed -i \
 		-e "s:SDL_LoadBMP(\":SDL_LoadBMP(\"${GAMES_DATADIR}/${PN}/:" \
-		main.c || die "sed main.c failed"
+		main.c || die "sed failed"
 
 	# Modify Makefile (CFLAGS and language)
 	sed -i \
 		-e 's:^CFLAGS=:CFLAGS= $(E_CFLAGS) -DUS:' \
-		Makefile || die "sed Makefile failed"
+		Makefile || die "sed failed"
 
 	epatch "${FILESDIR}/${PV}-warnings.patch"
 }
