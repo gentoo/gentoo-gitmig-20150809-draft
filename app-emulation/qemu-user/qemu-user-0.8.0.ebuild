@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.1 2005/12/23 14:57:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.2 2006/01/09 01:28:53 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,7 +56,7 @@ src_compile() {
 	# Switch off hardened tech
 	filter-flags -fpie -fstack-protector
 
-	myconf=""
+	myconf="--disable-gcc-check"
 	set_target_list
 #		--interp-prefix=${RUNTIME_PATH}/qemu-%M
 	./configure \

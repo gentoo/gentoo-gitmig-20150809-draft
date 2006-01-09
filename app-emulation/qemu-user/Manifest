@@ -1,4 +1,4 @@
-MD5 994dab7804828c923b5ded5e6e17b941 ChangeLog 1000
+MD5 34ed89c53c18c400949ec4f2380c54bb ChangeLog 1155
 MD5 4fac7d5e68ef58489e7734f5dccb2918 files/digest-qemu-user-0.7.0-r1 63
 MD5 36d599117f12a2bf8edc47c1daeff3a6 files/digest-qemu-user-0.7.1 63
 MD5 19c26d3c7d68ccd1ed3a0f74b7ab467e files/digest-qemu-user-0.7.2 63
@@ -9,4 +9,4 @@ MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
 MD5 431458f4c01ad6238f20d77302e4b871 qemu-user-0.7.0-r1.ebuild 2250
 MD5 4af0f0b4cf2b13fc6dfbf3c770d5be6c qemu-user-0.7.1.ebuild 2254
 MD5 6844e6102d3882420b7fc684e72fde6a qemu-user-0.7.2.ebuild 2254
-MD5 a306bc479fcda2274234947627b89526 qemu-user-0.8.0.ebuild 2107
+MD5 cc5111a03432ef0b78f9ecf9c63c1e62 qemu-user-0.8.0.ebuild 2126
