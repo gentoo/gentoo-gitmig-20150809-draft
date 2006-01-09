@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.1 2005/11/04 20:55:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.2 2006/01/09 22:31:56 mr_bones_ Exp $
 
 inherit perl-module webapp eutils
 
@@ -22,8 +22,8 @@ DEPEND="dev-lang/perl
 		>=dev-perl/Mail-Sender-0.8
 		>=dev-perl/Sort-Tree-1.07
 		>=dev-perl/Template-Toolkit-2.08
-		mysql?( dev-db/mysql )
-		auth?( dev-perl/Apache-AuthTicket )"
+		mysql? ( dev-db/mysql )
+		auth? ( dev-perl/Apache-AuthTicket )"
 RDEPEND=""
 
 src_unpack() {

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b1e1308a80dd7c6e1e89297166806279 ChangeLog 469
-MD5 caf4d23f2e35ef5f505b61a98502f0bb Eidetic-2.003003.ebuild 1809
+MD5 f639a40d27aafb5557d0a72fe02cc409 Eidetic-2.003003.ebuild 1810
 MD5 701f43a5e772155825860de41a5961e0 files/Eidetic-2.003003-destdir.patch 1142
 MD5 c8e2352e31ca96dd76d62f7fe06a8861 files/Eidetic-2.003003-sql.patch 1733
 MD5 526f7a225f883b0abd418f354a8330ae files/digest-Eidetic-2.003003 67
 MD5 a4dd86fa69880d54653fb2ebb25c1a92 metadata.xml 684
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDa8q+FdQwWVoAgN4RAruUAJ4rTxsQYA6GdlLINPtUpWKwU8WDMACfbQ/q
-v764Kqul+ivHtZAqHbeaiVM=
-=KRnb
------END PGP SIGNATURE-----
