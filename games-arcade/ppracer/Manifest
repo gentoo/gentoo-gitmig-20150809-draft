@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aae6adf05de0d9c8a5bbbdaef6aff3be ChangeLog 1583
+MD5 146b1e0c38be3cf60fcf32420b4ea509 ChangeLog 1734
 MD5 ba42925d6402fbec2d9e861b53f52c99 files/digest-ppracer-0.3.1 67
 MD5 cbcd30d6a8044d6e9f5d25bea7ad38d6 files/ppracer-0.3.1-gcc41.patch 556
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ca20f3dd2c240cadcd7cf91e13fea2bc ppracer-0.3.1.ebuild 1289
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjMzCr2QksT29OyARAlubAJwIehIAUaxKh+HlrJD74YGJP+jVqACfdLAe
-nH0ED0PcpG2yscqxZetvGu8=
-=SU4p
------END PGP SIGNATURE-----
+MD5 24630a794f36d91b95dc42277ecc534b ppracer-0.3.1.ebuild 1299
