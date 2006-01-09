@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78d69fd8482ff6974caa07255396a0d4 wxperl-0.22.ebuild 765
 MD5 d0323a66c9a85749331f603165ee4d55 ChangeLog 777
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 793d84ccd47c3bb32450c0f6408fd6b5 files/digest-wxperl-0.22 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1vUKBXaUFmZvwyMRAjWXAJ9bTALLbkTSQmD+Avop/v48/rd4uQCfVmeu
-P76PMpgGYwDK1YUXs9C4Ezk=
-=sct1
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1969ec8f9a1d8fe268f9fe59917ba377 wxperl-0.22.ebuild 768

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cbcc31bc0f20a07dc94ea351e93aa58d ChangeLog 354
-MD5 4acbd27bdb1238b0183f4e67fb5779ef Net-CUPS-0.37.ebuild 546
+MD5 1b45427d394234e263bf0e92601d54df Net-CUPS-0.37.ebuild 548
 MD5 b21831c16a7235c927f9ddbda4c0f415 files/digest-Net-CUPS-0.37 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnXcatG5z4I8BtQoRAujVAJ4hO3rEsVtpSv5ysJjwvoWyrA3UdACffMK/
-ANhHhespeekGpk4sHGpBsvU=
-=5B9P
------END PGP SIGNATURE-----
