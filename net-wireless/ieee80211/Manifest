@@ -1,4 +1,4 @@
-MD5 4b60bbc5463b199dfb258d7392742778 ChangeLog 3646
+MD5 ad8aea367d9494a5f3b662158b36b74e ChangeLog 3776
 MD5 cc0dea5fff30f8ea5fe5e62a749115d3 files/digest-ieee80211-1.0.1 63
 MD5 affd67ec6900c1e7f9c123969f709181 files/digest-ieee80211-1.0.2 63
 MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3 63
@@ -8,6 +8,7 @@ MD5 27f61bbea47540d198a62c715e33a5b4 files/digest-ieee80211-1.1.5 63
 MD5 27f61bbea47540d198a62c715e33a5b4 files/digest-ieee80211-1.1.5-r1 63
 MD5 9501aacea3c39a93671e12bdcd199254 files/digest-ieee80211-1.1.6 63
 MD5 0df9ca80228d166621f6d0ed424cd6a8 files/digest-ieee80211-1.1.7 63
+MD5 5cf798889745b65cb107070ad36c513c files/digest-ieee80211-1.1.8 63
 MD5 03afa38292ff5bbcc62500c4b6163888 files/ieee80211-1.0.3-broadcast.patch 622
 MD5 f6533e7149d244dd72eb444853266a8f files/ieee80211-1.0.3-keep_restricted_bit.patch 1220
 MD5 d2bada5c8bb423cb02a88cc4f0011d39 files/ieee80211-1.0.3-open_frag.patch 2638
@@ -23,4 +24,5 @@ MD5 71c6e2c242e709e0649b534c96736d25 ieee80211-1.1.5-r1.ebuild 2872
 MD5 49f0d303a477f0b091dd498e02576a5b ieee80211-1.1.5.ebuild 2828
 MD5 42dbbe85c5f5dd959a3da2fa12c4df9e ieee80211-1.1.6.ebuild 2779
 MD5 0dadded27c72eb389fecc48bc9b94604 ieee80211-1.1.7.ebuild 2787
+MD5 53f24436d9cd3c70f83b2226f872d6d4 ieee80211-1.1.8.ebuild 2677
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
