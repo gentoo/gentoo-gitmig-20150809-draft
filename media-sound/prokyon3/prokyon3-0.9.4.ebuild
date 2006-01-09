@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.4.ebuild,v 1.1 2005/11/16 14:48:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.4.ebuild,v 1.2 2006/01/09 22:22:35 mr_bones_ Exp $
 
 inherit qt3 eutils
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/qt-3*
 	               mp3? ( media-libs/libmad )
 	               vorbis? ( media-libs/libogg
 	                         media-libs/libvorbis )
-	               flac? ( media-libs/flac) )"
+	               flac? ( media-libs/flac ) )"
 
 pkg_setup() {
 	if ! built_with_use x11-libs/qt mysql; then
