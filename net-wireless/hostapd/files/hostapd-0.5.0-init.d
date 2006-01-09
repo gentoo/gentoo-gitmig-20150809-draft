@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.5.0-init.d,v 1.1 2005/12/20 11:09:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.5.0-init.d,v 1.2 2006/01/09 16:55:36 brix Exp $
 
 opts="start stop reload"
 
@@ -45,6 +45,6 @@ reload() {
 	checkconfig || return 1
 
 	ebegin "Reloading hostapd configuration"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/hostapd --signal HUP
+	kill -HUP $(pidof /usr/sbin/hostapd) > /dev/null 2>&1
 	eend ${?}
 }

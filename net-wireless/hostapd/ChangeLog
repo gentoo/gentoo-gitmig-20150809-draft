@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.50 2006/01/02 18:09:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.51 2006/01/09 16:55:36 brix Exp $
+
+*hostapd-0.5.0-r1 (09 Jan 2006)
+*hostapd-0.4.7-r2 (09 Jan 2006)
+
+  09 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  files/hostapd-0.4.7-init.d, files/hostapd-0.5.0-init.d,
+  +hostapd-0.4.7-r2.ebuild, +hostapd-0.5.0-r1.ebuild:
+  Fix init scripts to work with baselayout-1.12.0_rcX.
 
   02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   hostapd-0.4.7-r1.ebuild:
