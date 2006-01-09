@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0a7a47a9eac101987645a7f1100424b1 ChangeLog 10235
 MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5 63
 MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5-r2 63
@@ -5,3 +8,10 @@ MD5 18eeb3875218f95e4351130c755f38e6 files/mpd.rc6 898
 MD5 9fd12e4e26817b28026335eff94d2fde metadata.xml 252
 MD5 c36ea35ad92f862005ceef9a02683e5d mpd-0.11.5-r2.ebuild 3340
 MD5 d785bc485b235bd032eca3d7a23a938a mpd-0.11.5.ebuild 2948
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwjHUQlM6RnzZP+IRAhM4AJ4nfTYnSZNj3snqt+WF5JGFJ2h82QCbBng5
+/lWy63ho4OCUx15r7jYVFw8=
+=4PKO
+-----END PGP SIGNATURE-----
