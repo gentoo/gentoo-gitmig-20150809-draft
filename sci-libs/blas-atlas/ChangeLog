@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/blas-atlas
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.8 2005/09/10 12:11:53 pbienst Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.9 2006/01/09 19:54:40 markusle Exp $
+
+*blas-atlas-3.6.0-r1 (09 Jan 2006)
+
+  09 Jan 2006; Markus Dittrich <markusle@gentoo.org>
+  +blas-atlas-3.6.0-r1.ebuild:
+  New atlas3.6.0-shared-libs.1.patch fixes insecure RUNPATH issues.
+  This closes bug #114587.
 
   10 Sep 2005; Peter Bienstman <pbienst@gentoo.org> blas-atlas-3.6.0.ebuild,
   blas-atlas-3.7.10.ebuild:
