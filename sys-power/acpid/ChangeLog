@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/acpid
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.15 2005/12/17 15:05:59 brix Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.16 2006/01/09 13:05:58 brix Exp $
+
+*acpid-1.0.4-r3 (09 Jan 2006)
+
+  09 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  files/acpid-1.0.4-init.d, +acpid-1.0.4-r3.ebuild:
+  Fix init script to work with baselayout-1.12.0_rcX.
 
   17 Dec 2005; Henrik Brix Andersen <brix@gentoo.org>
   files/acpid-1.0.4-logrotate:
