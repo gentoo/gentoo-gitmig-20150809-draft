@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htun
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/ChangeLog,v 1.4 2005/07/29 22:16:41 vanquirius Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/ChangeLog,v 1.5 2006/01/09 18:23:52 kloeri Exp $
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove retired dev from metadata.xml
 
   29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> htun-0.9.5.ebuild:
   Add dev-util/yacc to DEPEND for bug 100755. Thanks to Stefan Briesenick
