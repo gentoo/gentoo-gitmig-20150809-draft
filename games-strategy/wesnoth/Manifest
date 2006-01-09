@@ -3,5 +3,5 @@ MD5 6a73a3191925d45024cf48879c799e0e files/digest-wesnoth-1.0.1 67
 MD5 3831d294741fa1f1cf243836b6c1788d files/digest-wesnoth-1.0.2 67
 MD5 2238ca275d6ab646096d612c46b1eb05 files/wesnothd.rc 619
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 583db22f94cfbcce2bdf462ddf3615aa wesnoth-1.0.1.ebuild 1980
-MD5 cc042203a2073eeb2ff612d5b221280e wesnoth-1.0.2.ebuild 1982
+MD5 c1f613663e92cda1b3c4516a9b7322da wesnoth-1.0.1.ebuild 1986
+MD5 232a58073ff97530841f2c45f3c9d134 wesnoth-1.0.2.ebuild 1987
