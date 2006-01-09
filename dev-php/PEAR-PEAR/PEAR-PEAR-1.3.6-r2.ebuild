@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r2.ebuild,v 1.2 2006/01/09 15:46:28 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r2.ebuild,v 1.3 2006/01/09 16:13:04 sebastian Exp $
 
 inherit depend.php
 
@@ -31,7 +31,10 @@ DEPEND="dev-lang/php
 		!dev-php/php
 		!dev-php/php-cgi
 		!dev-php/mod_php
-		!<=dev-php/PEAR-PEAR-1.3.6-r2"
+		!<dev-php/PEAR-PEAR-1.3.6-r2
+		!dev-php/PEAR-Archive_Tar
+		!dev-php/PEAR-Console_Getopt
+		!dev-php/PEAR-XML_RPC"
 
 pkg_setup() {
 	# we call this here, to ensure that the eclass picks the right
