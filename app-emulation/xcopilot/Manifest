@@ -1,4 +1,14 @@
-MD5 612d535a20579a356e35ebb375069e5a xcopilot-0.6.6.ebuild 778
-MD5 cef9ff0bc912be7d83f00e58e69d6094 ChangeLog 538
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e483e81c6904a6f445c124422900a3c ChangeLog 640
 MD5 c29c08134028b23d656076378349c7ae files/digest-xcopilot-0.6.6 70
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 612d535a20579a356e35ebb375069e5a xcopilot-0.6.6.ebuild 778
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwqMtugEuf3OQ0akRAjGDAJ9y84uL+blLGVB1YCzhujSbcR6yowCfbMCa
+J7u6Uso0jh6rpasLLJzCZjU=
+=+pL5
+-----END PGP SIGNATURE-----
