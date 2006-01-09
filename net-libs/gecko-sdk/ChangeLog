@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gecko-sdk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.24 2005/10/02 15:45:28 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.25 2006/01/09 22:30:00 josejx Exp $
+
+  09 Jan 2006; Joseph Jezak <josejx@gentoo.org> metadata.xml:
+  Removed myself as maintainer, Anarchy said he will maintain it for the
+  mozilla herd.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   gecko-sdk-1.7.12-r1.ebuild:
