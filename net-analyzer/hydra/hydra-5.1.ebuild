@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-4.7.ebuild,v 1.2 2005/08/11 09:58:53 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.1.ebuild,v 1.1 2006/01/09 20:02:52 vanquirius Exp $
 
 DESCRIPTION="Advanced parallized login hacker"
 HOMEPAGE="http://www.thc.org/thc-hydra/"
@@ -17,23 +17,28 @@ DEPEND="gtk? ( >=x11-libs/gtk+-1.2 )
 		=net-libs/libssh-0.11
 	)"
 
-S=${WORKDIR}/${P}-src
+S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s:-O2:${CFLAGS}:" Makefile.am || die "sed failed"
 }
 
 src_compile() {
-	# has it's own stupid custom configure script
-	./configure --prefix=/usr || die "configure failed"
+	if use gtk ; then
+		./configure --prefix=/usr || die "configure failed"
+	else
+		./configure --prefix=/usr --disable-xhydra || die "configure failed"
+	fi
+
 	sed -i \
 		-e '/^XDEFINES=/s:=.*:=:' \
 		-e '/^XLIBS=/s:=.*:=:' \
 		-e '/^XLIBPATHS/s:=.*:=:' \
 		-e '/^XIPATHS=/s:=.*:=:' \
 		Makefile || die "pruning vars"
+
 	if use ssl ; then
 		sed -i \
 			-e '/^XDEFINES=/s:=:=-DLIBOPENSSL -DLIBSSH:' \
