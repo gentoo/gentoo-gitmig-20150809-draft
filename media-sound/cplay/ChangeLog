@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.15 2005/09/16 23:05:16 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.16 2006/01/09 17:11:36 jer Exp $
+
+  09 Jan 2006; Jeroen Roovers <jer@gentoo.org> cplay-1.49.ebuild:
+  Marked ~hppa.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
