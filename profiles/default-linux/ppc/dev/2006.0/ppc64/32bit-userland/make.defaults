@@ -1,0 +1,15 @@
+ARCH="ppc"
+ACCEPT_KEYWORDS="${ARCH}"
+
+CHOST="powerpc-unknown-linux-gnu"
+PROFILE_ARCH="ppc64"
+
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+ACCEPT_KEYWORDS="${ARCH}"
+
+STAGE1_USE="gcc64 unicode"
+USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 ibm imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls nptl ogg oggvorbis opengl oss pam perl pdflib png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml2 xmms xv zlib"
+
+FEATURES="autoconfig sandbox sfperms"

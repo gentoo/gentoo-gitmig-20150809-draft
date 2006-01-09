@@ -1,0 +1,6 @@
+# Copyright 2003-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/2006.0/ppc64/32bit-userland/packages,v 1.1 2006/01/09 05:22:24 dostrow Exp $
+
+*sys-devel/gcc-powerpc64
+*sys-devel/ppc32
