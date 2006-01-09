@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.11 2005/11/27 11:12:44 slarti Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.12 2006/01/09 17:56:39 kloeri Exp $
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove retired dev from metadata.xml
 
   27 Nov 2005; Tom Martin <slarti@gentoo.org> whatmask-1.2.ebuild:
   Marked ~amd64, resolves bug #113499.
