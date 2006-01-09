@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ca3313dae1a931b3d05b03babd867681 ChangeLog 1054
 MD5 99488d75534448d020cdbea6f10f6d11 autogen-5.6.4.ebuild 685
-MD5 02793af1bd2c41b292a5b24c32e76b07 autogen-5.7.1.ebuild 964
-MD5 bf08bda5668cb55e16319443e7f22ea8 ChangeLog 946
-MD5 8781cbf005c98c1320c7e7afc88d6df4 metadata.xml 307
+MD5 2b6496a689e836a463854fec9a80cfaa autogen-5.7.1.ebuild 971
 MD5 22932a23829bb5a82e333a15df93671a files/digest-autogen-5.6.4 66
 MD5 b0dbdba1c868638ca0b672a329b9ea81 files/digest-autogen-5.7.1 66
+MD5 8781cbf005c98c1320c7e7afc88d6df4 metadata.xml 307
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC0exNBXaUFmZvwyMRAuZ3AKC/Itfv3lKGYVhIz8b30GVvo643dQCeN2dn
-6dTBNOX6roNCB8a7efEafPw=
-=+tzm
+iD8DBQFDwr0QKRy60XGEcJIRAs3aAJ44zRvWhOGx56YPN0DiMMe8N/1CRQCbBcY9
+8GF04CmrnOkcPVsGagAYBvc=
+=kaZK
 -----END PGP SIGNATURE-----
