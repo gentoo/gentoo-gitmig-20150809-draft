@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.0.ebuild,v 1.2 2005/11/20 18:15:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.0.ebuild,v 1.3 2006/01/09 22:29:30 mr_bones_ Exp $
 
 inherit fortran
 
@@ -21,7 +21,7 @@ DEPEND="sys-devel/flex
 	>=sys-apps/sed-4
 	tcltk? ( dev-lang/tk )
 	doc? ( app-doc/doxygen
-		media-gfx/graphviz)"
+		media-gfx/graphviz )"
 
 src_unpack() {
 	unpack ${A}
