@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.27 2006/01/09 00:07:49 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.28 2006/01/09 00:34:39 vanquirius Exp $
 
 # UNKNOWN - SECTION
 
@@ -36,7 +36,7 @@ mono
 
 # 2006/01/08 - Marcelo Goes <vanquirius@gentoo.org>
 # Masking john until app-crypt/johntheripper is available for amd64.
-# Keeps app-crypt/wepattack happy.
+# Keeps net-wireless/wepattack happy.
 john
 
 # 2005/09/19 - Olivier Fisette <ribosome@gentoo.org>
