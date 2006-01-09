@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/Gtk2-Ex-Simple-List-0.50.ebuild,v 1.1 2005/12/12 12:55:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/Gtk2-Ex-Simple-List-0.50.ebuild,v 1.2 2006/01/09 21:14:09 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="A simple interface to Gtk2's complex MVC list widget "
 HOMEPAGE="http://search.cpan.org/search?query=${PN}"
 SRC_URI="mirror://cpan/authors/id/R/RM/RMCFARLA/Gtk2-Perl-Ex/${P}.tar.gz"
 
-LICENSE="|| (Artistic GPL-2)"
+LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
