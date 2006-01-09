@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5b628cbe094368507b8612af1cc2d60 ChangeLog 689
 MD5 fa7aca48d124408b2bb1b8038bfbe13a cedilla-0.3.ebuild 829
 MD5 2325d2b8265c1bd954d3913c90206b2b files/cedilla-gentoo.patch 633
 MD5 f9868caff371960cf00313c91b05e89b files/digest-cedilla-0.3 63
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwpXsugEuf3OQ0akRAi+oAJoD1KJ7dGVORtXlnkWv0UDLsATGVwCfSLSf
+eWydltN229tfiFnfHzXL1PY=
+=zjHI
+-----END PGP SIGNATURE-----
