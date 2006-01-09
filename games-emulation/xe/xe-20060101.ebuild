@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20050801.ebuild,v 1.2 2006/01/09 00:30:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.1 2006/01/09 00:30:03 mr_bones_ Exp $
 
 inherit games
 
 MY_PV="${PV:2:2}.${PV:4:2}.${PV:6:2}"
 DESCRIPTION="a multi system emulator for many console and handheld video game systems"
 HOMEPAGE="http://www.xe-emulator.com/"
-SRC_URI="http://www.xe-emulator.com/files/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://www.xe-emulator.com/files/${PN}-bin-${MY_PV}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -40,7 +40,8 @@ src_install() {
 		-e "s:GENTOODIR:${GAMES_LIBDIR}/${PN}:" "${D}/${GAMES_BINDIR}/xe" \
 		|| die "sed failed"
 	insinto "${GAMES_LIBDIR}/${PN}"
-	doins -r modules || die "doins failed"
+	doins -r modules/ rc/ manual/ || die "doins failed"
+	keepdir "${GAMES_LIBDIR}/${PN}/bios"
 	dodoc README.txt
 	prepgamesdirs
 }
