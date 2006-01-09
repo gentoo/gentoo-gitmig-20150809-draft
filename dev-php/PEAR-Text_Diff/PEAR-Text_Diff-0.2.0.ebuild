@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/PEAR-Text_Diff-0.1.1-r1.ebuild,v 1.6 2005/11/22 19:10:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/PEAR-Text_Diff-0.2.0.ebuild,v 1.1 2006/01/09 06:18:33 sebastian Exp $
 
 inherit php-pear-r1
 

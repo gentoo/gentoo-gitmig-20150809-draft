@@ -1,6 +1,16 @@
-MD5 03002686a97d857713db7bada69f1bb5 ChangeLog 998
-MD5 648d33966885f59a03b04258e29e175c PEAR-Text_Diff-0.1.1-r1.ebuild 394
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64d13016226b0f2de95af77dde5cf9c6 ChangeLog 1173
 MD5 adc0775724f9dbb5e94f0fccdc862bf3 PEAR-Text_Diff-0.1.1.ebuild 415
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 19cb1897e671cdd19824ad5083847a1b PEAR-Text_Diff-0.2.0.ebuild 393
 MD5 ac01993e8dbcebeaf6c40083ec8e09c7 files/digest-PEAR-Text_Diff-0.1.1 63
-MD5 ac01993e8dbcebeaf6c40083ec8e09c7 files/digest-PEAR-Text_Diff-0.1.1-r1 63
+MD5 d2d97f637dbfef3a09c39ceba9f4a8e9 files/digest-PEAR-Text_Diff-0.2.0 63
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwgDWaGfFFLhbXWkRAvPiAJ0Vmlb0oVCjDFBH65Vkhxw0226GswCcCd7t
+prp7U3uNDMWecDMq9x6gIcw=
+=7N+I
+-----END PGP SIGNATURE-----
