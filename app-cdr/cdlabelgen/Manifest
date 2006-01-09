@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d75580264ce32b04d4755d221050f8a3 cdlabelgen-3.5.0.ebuild 1023
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
-MD5 0cf096675a4b49c145f4a72bf4c7389e ChangeLog 3575
+MD5 3de945360d3fb7749caff1f41e258be5 ChangeLog 3680
 MD5 5230711abaa00d2ec967fb630b1b76b4 cdlabelgen-3.0.0.ebuild 940
-MD5 9a1d3d70de160e0f035badcdd3687ace files/digest-cdlabelgen-3.5.0 65
+MD5 d75580264ce32b04d4755d221050f8a3 cdlabelgen-3.5.0.ebuild 1023
 MD5 7ae5079af09947e1f62b692d15814a50 files/digest-cdlabelgen-3.0.0 65
+MD5 9a1d3d70de160e0f035badcdd3687ace files/digest-cdlabelgen-3.5.0 65
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKyqLLLFUmVNQ7rkRAiuGAJ96P17UTAqSng940XbRdDgAVdvg1QCgzDTM
-0VAwnX/UBmV2bHFOe8QppnM=
-=GD3p
+iD8DBQFDwqL7ugEuf3OQ0akRArEKAJ9LdpHMjJd5I06eqzCoMJeIo+wWMACfcX9d
+fLdkxx2OL1wTh/7Cfhnpats=
+=gZhI
 -----END PGP SIGNATURE-----
