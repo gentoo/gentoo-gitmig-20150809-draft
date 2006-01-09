@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/igal
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.13 2004/12/16 10:52:09 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.14 2006/01/09 17:21:04 kloeri Exp $
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove retired dev from metadata.xml
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> igal-1.4.ebuild:
   Stable on ppc64
