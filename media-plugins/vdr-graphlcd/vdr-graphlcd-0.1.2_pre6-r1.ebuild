@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.2_pre6-r1.ebuild,v 1.1 2006/01/08 15:36:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.2_pre6-r1.ebuild,v 1.2 2006/01/09 21:11:44 hd_brummy Exp $
 
 inherit eutils vdr-plugin
 
@@ -19,8 +19,11 @@ IUSE="truetype"
 S=${WORKDIR}/${VDRPLUGIN}-${MY_PV}
 
 DEPEND=">=media-video/vdr-1.2.6
-		>=graphlcd-base-${PV}"
+		>=app-misc/graphlcd-base-${PV}
+		!sys-apps/graphlcd-base"
 
+# DO NOT remove "!sys-apps/graphlcd-base" from DEPEND !!!
+# It will fix a conflict with ebuilds in Gentoo.de OVERLAY CVS
 
 src_unpack() {
 
