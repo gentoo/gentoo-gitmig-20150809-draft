@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.1.8.ebuild,v 1.3 2005/12/06 07:21:38 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.1.8.ebuild,v 1.4 2006/01/09 22:17:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2
 	|| ( =media-libs/gstreamer-0.8.9-r2
 	=media-libs/gstreamer-0.8.10
-	=media-libs/gstreamer-0.8.11)
+	=media-libs/gstreamer-0.8.11 )
 	=media-libs/gst-plugins-0.8*
 	=media-plugins/gst-plugins-gnomevfs-0.8*
 	v4l? ( =media-plugins/gst-plugins-v4l-0.8* )
