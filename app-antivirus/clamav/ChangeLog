@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.122 2005/11/09 16:40:05 ticho Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.123 2006/01/09 22:24:08 ticho Exp $
+
+*clamav-0.88 (09 Jan 2006)
+
+  09 Jan 2006; Andrej Kacian <ticho@gentoo.org> +clamav-0.88.ebuild:
+  Version bump.
 
   09 Nov 2005; Andrej Kacian <ticho@gentoo.org> files/clamd.rc,
   -files/clamd.rc.new, -clamav-0.86.2.ebuild, clamav-0.87.ebuild,

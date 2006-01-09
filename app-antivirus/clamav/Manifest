@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3614ce5863cd4ca5b5ebf0e16e661dfd ChangeLog 21249
+MD5 c4cb28c4c9b5c6eb6d721b7e131bd92f ChangeLog 21363
 MD5 c6afe12050619c04aa8c3d37eb3b4cbc clamav-0.87.1.ebuild 3685
 MD5 ee939a755f330044fd5d41d798a896dc clamav-0.87.ebuild 3682
+MD5 3b5a7c2803008913947b56e123c5695d clamav-0.88.ebuild 3424
 MD5 08f7b320461c04bbb88555e389c2e544 files/clamav-milter.README.gentoo 1124
 MD5 e29ee77ca9bfe28ed18dbf67a9c90e75 files/clamd.conf 193
 MD5 1906bcd8209370d0a03fb066161f6d59 files/clamd.rc 2033
 MD5 17e487f0452933ea8ab559a404329cf2 files/digest-clamav-0.87 64
 MD5 25387621d9eaf247726bf74459264749 files/digest-clamav-0.87.1 66
+MD5 262cbb9bc1b14af67f7a546d65aed16d files/digest-clamav-0.88 64
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDciZ2QlM6RnzZP+IRAvOzAJ9iN15X8naKqGE6OVW/BUsKqSrU7ACfU+pA
-R6zaJgX5rGx0Cd+2EdIbbno=
-=DO0f
+iD8DBQFDwuKaQlM6RnzZP+IRAkzwAKCSGVfzSKPCBU8JDqQYiZlvbvkeuACgoWQw
+MGaaCixzlfoByvJXDkutdZI=
+=VDfK
 -----END PGP SIGNATURE-----
