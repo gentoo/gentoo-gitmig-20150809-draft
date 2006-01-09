@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.50 2006/01/08 03:37:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.51 2006/01/09 04:35:14 dostrow Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -109,6 +109,8 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 						echo powerpc
 					elif [[ ${host} == powerpc64* ]] ; then
 						echo ppc64
+					elif [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
+						ninj ppc64 ppc
 					else
 						echo ppc
 					fi
