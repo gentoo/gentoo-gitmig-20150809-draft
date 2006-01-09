@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r2.ebuild,v 1.3 2006/01/09 16:13:04 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r2.ebuild,v 1.4 2006/01/09 17:00:36 chtekk Exp $
 
 inherit depend.php
 
@@ -9,9 +9,9 @@ CONSOLE_GETOPT="1.2"
 PEAR="1.3.6"
 XML_RPC="1.4.4"
 
-[ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR=/tmp/pear/cache
+[ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR="/tmp/pear/cache"
 
-DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, XML_RPC)"
+DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, XML_RPC)."
 HOMEPAGE="http://pear.php.net/"
 SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 		http://pear.php.net/get/Console_Getopt-${CONSOLE_GETOPT}.tgz
@@ -42,7 +42,11 @@ pkg_setup() {
 	require_php_cli
 
 	# we check that PHP was compiled with the correct USE flags
-	require_php_with_use pear
+	if [[ ${PHP_VERSION} == "4" ]] ; then
+		require_php_with_use cli pcre expat zlib
+	else
+		require_php_with_use cli pcre xml zlib
+	fi
 }
 
 src_install() {
@@ -75,8 +79,7 @@ src_install() {
 
 	# Install XML_RPC Package.
 	cp "${WORKDIR}/XML_RPC-${XML_RPC}/RPC.php" "${WORKDIR}/PEAR/XML/RPC.php"
-	cp "${WORKDIR}/XML_RPC-${XML_RPC}/Server.php"
-	"${WORKDIR}/PEAR/XML/RPC/Server.php"
+	cp "${WORKDIR}/XML_RPC-${XML_RPC}/Server.php" "${WORKDIR}/PEAR/XML/RPC/Server.php"
 
 	# Finalize installation.
 	cd "${WORKDIR}/PEAR"
@@ -86,13 +89,14 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}/pear.conf"
+	sed -e "s|s:SOBSTLEN:\"SOBSTITUTEME\"|s:${#PHPCLI}:\"${PHPCLI}\"|g" -i "${D}/etc/pear.conf"
 
 	keepdir "${PEAR_CACHEDIR}"
 	fperms 755 "${PEAR_CACHEDIR}"
 }
 
 pkg_postinst() {
-	if has_version "<${PV}"; then
+	if has_version "<${PV}" ; then
 		ewarn "The location of the local PEAR repository has been changed"
 		ewarn "from /usr/lib/php to /usr/share/php."
 	fi
