@@ -2,12 +2,12 @@ MD5 abf20d8250387f3a0eb6c2a6bc6f7791 asterisk-chan_capi-cm-0.6.0.ebuild 1579
 MD5 0280c5431b2bc4f09e3d249d25b1010e asterisk-chan_capi-cm-0.5.4.ebuild 1594
 MD5 56c38e32af5d204847de2d9a87b72351 asterisk-chan_capi-cm-0.5.3.ebuild 1588
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 0bd378f4c8e5e9f9085f6c2bb9fb5666 ChangeLog 2435
+MD5 1b27b0837d378d2e67b2faff394a8dc5 ChangeLog 2689
 MD5 d9a3e1125a6c821c5f7347b1fb2a8a58 asterisk-chan_capi-cm-0.6.1.ebuild 1576
 MD5 20866dceae16bdac07ffa8b6f8aa2986 files/chan_capi-0.3.5-gentoo.diff 1113
 MD5 e38626bf14b300bea371ed7dbe17003a files/digest-asterisk-chan_capi-cm-0.6.0 67
 MD5 26ad4e3f1d9f576c0cdb02f80881d678 files/digest-asterisk-chan_capi-cm-0.5.4 69
-MD5 85b3f23fd4bce0fec0aa993cf72ab2f7 files/chan_capi-0.6.1-gentoo.diff 1136
+MD5 89dc5f71961405fa8f2de9b5ce5e602f files/chan_capi-0.6.1-gentoo.diff 1379
 MD5 b6cdcca8eb6385e9b89fd26ee3da46b8 files/digest-asterisk-chan_capi-cm-0.6.1 69
 MD5 7e64c5311ef2ac1051df45fb82b2aed6 files/digest-asterisk-chan_capi-cm-0.5.3 69
 MD5 49f69b06231dd6ef79fe070882426dab files/chan_capi-0.6.0-gentoo.diff 1296

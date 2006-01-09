@@ -1,5 +1,5 @@
---- chan_capi-cm-0.6.1/Makefile.orig	2005-10-01 13:32:58 +0000
-+++ chan_capi-cm-0.6.1/Makefile	2005-12-22 00:16:56 +0000
+--- chan_capi-cm-0.6.1/Makefile.orig	2006-01-09 01:44:42.000000000 +0000
++++ chan_capi-cm-0.6.1/Makefile	2006-01-09 01:45:04.000000000 +0000
 @@ -24,7 +24,9 @@
  
  INSTALL_PREFIX=
@@ -10,15 +10,18 @@
  
  ifeq (${OSNAME},FreeBSD)
  ASTERISK_HEADER_DIR=$(INSTALL_PREFIX)/usr/local/include
-@@ -59,7 +61,6 @@
+@@ -58,9 +60,7 @@
+ INCLUDE+=$(shell [ -d /usr/include/i4b/include ] && \
          echo -n -I/usr/include/i4b/include)
  endif
- CFLAGS=-pipe -fPIC -Wall -Wmissing-prototypes -Wmissing-declarations $(DEBUG) $(INCLUDE) -D_REENTRANT -D_GNU_SOURCE
+-CFLAGS=-pipe -fPIC -Wall -Wmissing-prototypes -Wmissing-declarations $(DEBUG) $(INCLUDE) -D_REENTRANT -D_GNU_SOURCE
 -CFLAGS+=-O6
- CFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
+-CFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
++CFLAGS+=-pipe -fPIC -Wall -Wmissing-prototypes -Wmissing-declarations $(DEBUG) $(INCLUDE) -D_REENTRANT -D_GNU_SOURCE
  CFLAGS+=$(shell if uname -m | grep -q ppc; then echo "-fsigned-char"; fi)
  
-@@ -90,9 +91,11 @@
+ CFLAGS+=-DASTERISKVERSION=\"$(ASTERISKVERSION)\"
+@@ -90,9 +90,11 @@
  	$(CC) -shared -Xlinker -x -o $@ $^ -lcapi20
  
  install: all
