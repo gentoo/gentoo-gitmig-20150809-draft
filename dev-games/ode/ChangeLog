@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.19 2006/01/05 19:05:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.20 2006/01/09 20:36:11 fmccor Exp $
+
+  09 Jan 2006; Ferris McCormick <fmccor@gentoo.org> ode-0.5-r4.ebuild:
+  Add ~sparc keyword. Builds fine on sparc and runs its examples
+  as expected.  (Needed for some simulation packages.)
 
   05 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> ode-0.5-r4.ebuild:
   Added modular X dependencies and closing bug #117542.

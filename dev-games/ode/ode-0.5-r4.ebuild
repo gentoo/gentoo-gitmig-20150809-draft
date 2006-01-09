@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r4.ebuild,v 1.2 2006/01/05 19:05:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r4.ebuild,v 1.3 2006/01/09 20:36:11 fmccor Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/opende/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc debug double-precision"
 
 RDEPEND="virtual/opengl
