@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e3e2f99cb2381f3f68881d75aa9df091 ChangeLog 18173
+MD5 a8e191353a6ad84cca1574cacb79bdf3 ChangeLog 18289
 MD5 af3a24b95f43ea461192736d7e9968c2 ffmpeg-0.4.9_p20050226-r3.ebuild 4384
 MD5 ff615b7d4ca2c8355c1d0a358271e2d8 ffmpeg-0.4.9_p20050226-r5.ebuild 4543
 MD5 e4e188b8783b45bbc9c454b9f4de3aad ffmpeg-0.4.9_p20050906.ebuild 4781
 MD5 df2f3a90e7c7601c0d3b5d765b1a76bd ffmpeg-0.4.9_p20051120.ebuild 4701
-MD5 a12b386da88bb2ac6557ac79416516d1 ffmpeg-0.4.9_p20051216.ebuild 5145
+MD5 ced7cf4a6da443c3740b3510c7bc4a6c ffmpeg-0.4.9_p20051216.ebuild 5144
 MD5 003b0062185efcb0ea5a6115fa8a646a files/0.4.8-gcc3.4-magicF2W.patch 994
 MD5 99176b97ac8dd94ffc1d23961cc54906 files/digest-ffmpeg-0.4.9_p20050226-r3 73
 MD5 99176b97ac8dd94ffc1d23961cc54906 files/digest-ffmpeg-0.4.9_p20050226-r5 73
@@ -27,7 +27,7 @@ MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDv4kp2+ySkm8kpY0RAiNMAJoDUf0hATClO1Qk+N2aBHcR9QKDigCeJMVy
-fn3LF5c/I5xjVpCYJNkhXbM=
-=Axlg
+iD8DBQFDwui8ugEuf3OQ0akRAsg3AJ9sF3xB2+/xwyhAQVL8aCIKbqLvRwCfc/2G
+3+HFlJLzsDuOojP7XISHrHY=
+=jGQ9
 -----END PGP SIGNATURE-----
