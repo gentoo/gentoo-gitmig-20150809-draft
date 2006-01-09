@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a4cbf6aaae5507b9ebee2b2c5624d7a1 ChangeLog 1265
 MD5 407a4d08d15a00bd2d8851be4e5883f5 files/digest-libwefts-0.99c_p20060109 76
-MD5 a905c9a0d17b8da30ab66cf304c0d9c7 libwefts-0.99c_p20060109.ebuild 1114
+MD5 2b5e5e1d1cdf3b21149a8eceeb2de175 libwefts-0.99c_p20060109.ebuild 1113
 MD5 905d9aa79092e760b64a647f4241ea24 metadata.xml 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwa02AiZjviIA2XgRAhkOAKCHOxb44Po1ACaT2B6DSx/GVefnFwCfSH+Y
-0J8J3kKIDKXZReenTZdy/uA=
-=LpPJ
------END PGP SIGNATURE-----
