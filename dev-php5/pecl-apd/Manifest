@@ -1,5 +1,5 @@
-MD5 95f87d1b4c73ea76135521516027af39 ChangeLog 623
+MD5 eb3cdbf82b0e5e0a7abf1e67bda7664f ChangeLog 768
 MD5 3f5b44e18a6fc64c64ad6919e7192603 files/digest-pecl-apd-1.0.1 57
 MD5 28ec9f62ed19b6ea529b0efefcd2c119 files/fix-version-string-1.0.1.patch 278
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 2cc53bff168e1b1eb1e81956c6a1f34a pecl-apd-1.0.1.ebuild 1218
+MD5 c9793662fc3732820f7fcd83852f6870 pecl-apd-1.0.1.ebuild 1210
