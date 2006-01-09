@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/csync2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.6 2005/11/17 02:29:53 xmerlin Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.7 2006/01/09 03:39:35 xmerlin Exp $
+
+  09 Jan 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.26.ebuild:
+  Stable on x86.
 
 *csync2-1.26 (17 Nov 2005)
 

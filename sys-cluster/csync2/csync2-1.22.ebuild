@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.22.ebuild,v 1.3 2005/11/17 02:29:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.22.ebuild,v 1.4 2006/01/09 03:39:35 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"

@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eea83d44a5f004382ba876e17d345b15 csync2-1.16.ebuild 1278
+MD5 9dffcb750e6e7d20097a5401b87c0d08 csync2-1.16.ebuild 1278
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 bd166b30ebf35c685a69eef8eb6a18b0 ChangeLog 1023
-MD5 cf0082b7e30f334191f9f1632d6adf97 csync2-1.22.ebuild 1277
-MD5 7713c4990a5f9a85156e21469dbfc3dc csync2-1.26.ebuild 1278
+MD5 fcc9e003e4824d8a46853718f8469061 ChangeLog 1115
+MD5 633e05a5dc84c42923fb2f5ca9a93b10 csync2-1.22.ebuild 1277
+MD5 328ebaa95fa7090e69340a4bfd3010d5 csync2-1.26.ebuild 1277
 MD5 8f6c0e3b7da5a8b1a5fd7730f6ae8bdd files/csync2.xinetd 388
 MD5 4f935e316a184e40ddf6dfd0f386c761 files/digest-csync2-1.16 62
 MD5 204c4e198fb5a256de4f61c6069a862b files/digest-csync2-1.22 63
@@ -13,7 +13,7 @@ MD5 8fe2d3ad1d8b14adfaa878252ca38430 files/digest-csync2-1.26 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDe+txgMUyd/cdjWsRApfdAJ4gBYkoEVU+5xmf38mg/r08nef/aACeMcUn
-dC3Z31sit1Gg14CEnDSakBo=
-=dR+H
+iD8DBQFDwdsjgMUyd/cdjWsRAjVfAKCIAGuAb4xolfCHifLTAkP5q/nppACeLBlm
+uBcLzXC4PnjmYn607yGy/20=
+=0hry
 -----END PGP SIGNATURE-----
