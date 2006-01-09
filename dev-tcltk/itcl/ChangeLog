@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/itcl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.26 2005/12/29 19:16:31 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.27 2006/01/09 01:54:09 matsuu Exp $
+
+*itcl-3.3-r1 (09 Jan 2006)
+
+  09 Jan 2006; MATSUU Takuto <matsuu@gentoo.org> +itcl-3.3-r1.ebuild:
+  Fixed fails with bash-3.1, Bug 116342.
 
   29 Dec 2005; Simon Stelling <blubb@gentoo.org> itcl-3.3.ebuild:
   stable on amd64
