@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4839 2006/01/08 22:53:58 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4840 2006/01/09 09:04:48 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,10 +24,6 @@
 # John N. Laliberte <allanonjl@gentoo.org> (08 Jan 2006)
 # mask until ia64 tests libgda
 >=dev-python/gnome-python-extras-2.12.1
-
-# Daniel Black <dragonheart@gentoo.org> (07 Jan 2006)
-# masked for testing and seeking help with textrel
-=app-crypt/johntheripper-1.6.40
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (05 Jan 2006)
 # Masked due to problems with vmware-nat.  This package is still safe to use if

@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.28 2006/01/09 00:34:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.29 2006/01/09 09:06:43 dragonheart Exp $
 
 # UNKNOWN - SECTION
 
@@ -33,11 +33,6 @@ kdexdeltas
 mono
 
 # WON'T BUILD - SECTION
-
-# 2006/01/08 - Marcelo Goes <vanquirius@gentoo.org>
-# Masking john until app-crypt/johntheripper is available for amd64.
-# Keeps net-wireless/wepattack happy.
-john
 
 # 2005/09/19 - Olivier Fisette <ribosome@gentoo.org>
 # cmucl is not available on amd64. Masking to keep "sci-mathematics/maxima"
