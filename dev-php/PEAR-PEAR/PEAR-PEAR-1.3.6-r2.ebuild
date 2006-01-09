@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r2.ebuild,v 1.1 2006/01/09 14:15:37 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r2.ebuild,v 1.2 2006/01/09 15:46:28 sebastian Exp $
 
 inherit depend.php
 
@@ -80,6 +80,9 @@ src_install() {
 	insinto /usr/share/php
 	doins -r Archive Console OS PEAR XML *.php
 	dobin pear
+
+	insinto /etc
+	doins "${FILESDIR}/pear.conf"
 
 	keepdir "${PEAR_CACHEDIR}"
 	fperms 755 "${PEAR_CACHEDIR}"
