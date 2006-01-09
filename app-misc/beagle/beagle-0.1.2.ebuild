@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.5 2005/12/14 06:46:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.2.ebuild,v 1.6 2006/01/09 22:30:05 mr_bones_ Exp $
 
 inherit gnome.org eutils mono
 
@@ -32,10 +32,10 @@ RDEPEND=">=dev-lang/mono-1.1.10
 	>=dev-libs/atk-1.2.4
 	>=media-libs/libexif-0.6.0
 	>=dev-libs/libxml2-2.6.19
-	chm? (app-doc/chmlib)
+	chm? ( app-doc/chmlib )
 	pdf? ( app-text/xpdf )
 	spreadsheet? ( >=app-office/gnumeric-1.4.3-r3 )
-	|| ( (	x11-libs/libX11
+	|| ( ( x11-libs/libX11
 		x11-libs/libXScrnSaver
 		x11-libs/libXt )
 	virtual/x11 )"
