@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/multilib/make.defaults,v 1.1 2005/12/06 12:33:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/multilib/make.defaults,v 1.2 2006/01/09 18:39:13 solar Exp $
 
 FEATURES="sandbox autoconfig"
 
@@ -25,7 +25,7 @@ LIBDIR_x86="lib32"
 # In case someone wants to help out by setting FEATURES="multilib-strict"
 MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
 MULTILIB_STRICT_DENY="64-bit.*shared object"
-MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3)"
+MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3|debug)"
 
 # Hack to tell baselayout to use symlinks for /lib, /usr/lib, and /usr/local/lib
 SYMLINK_LIB="yes"
