@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/getdate
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.8 2005/05/01 17:04:51 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.9 2006/01/09 17:15:59 kloeri Exp $
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove retired dev from metadata.xml
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> getdate-1.2.ebuild:
   Stable on ppc.
