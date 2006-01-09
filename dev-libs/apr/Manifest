@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 117d3add4018de2969fea7f294bc9701 ChangeLog 5807
 MD5 2fc416814f4a3443b28fc548cf8d86dc apr-0.9.6-r3.ebuild 1534
 MD5 e60102c3837e3d05e9d2cbf520bce415 apr-0.9.6-r4.ebuild 1741
-MD5 681197365e3848d7d261e110ebb1d0a7 apr-0.9.7.ebuild 1734
+MD5 1810da2d0f89c5b59fe7d1a7a5f22df8 apr-0.9.7.ebuild 1732
 MD5 2a6eccf76c91c46320c26f1bff7a9098 apr-1.1.1.ebuild 2022
 MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r3 62
 MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r4 62
@@ -14,7 +14,7 @@ MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwuIcugEuf3OQ0akRAt0YAJ9tpMytQlw0Wwwmgx0h/943qiFQHwCeLPv9
-kULXAezbSqK0/EKmKJItix8=
-=DUHP
+iD8DBQFDwuL8ugEuf3OQ0akRAs/VAJoCSqachLQZGFp+WwfPO40D+YN+3wCfevWZ
+nVfaJ3IaIluO/rY6r0ySRoY=
+=3xsb
 -----END PGP SIGNATURE-----
