@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 887a818875440bfae67637eab5af7b2f ChangeLog 1360
 MD5 15cc76b6e0734f9cd401828b760f0a73 files/digest-gofish-0.29 63
 MD5 4b891ae1890652c839e64384309076c5 files/digest-gofish-1.0 62
@@ -6,3 +9,10 @@ MD5 a4671e7c6f0585c6a7a9c31660facfca files/gofish.rc 606
 MD5 59c4ef9d973754d0fa225298171b569b gofish-0.29.ebuild 1031
 MD5 2517e5275b759a19edd7ba579724c671 gofish-1.0.ebuild 1052
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwphEugEuf3OQ0akRArcwAJ9wbmx512NIwRJlVBVqdVKUm/eI1ACdFGaz
+yX37CvJNzFLNO2RkFoR+lrs=
+=QWrP
+-----END PGP SIGNATURE-----

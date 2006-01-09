@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 06cc0c88405d2e8141dd4415995be304 ChangeLog 3372
 MD5 e5c8a47e7b30540f4094b1aa6d3f6e5f files/digest-vtun-2.5 59
 MD5 e5c8a47e7b30540f4094b1aa6d3f6e5f files/digest-vtun-2.5-r1 59
@@ -17,3 +20,10 @@ MD5 62c38ac4aea9f0af7847f0e1b9babba5 vtun-2.5-r2.ebuild 2031
 MD5 0cdc5d7ca0eb5bc2f02b0f225e6e6a6b vtun-2.5.ebuild 1704
 MD5 6297fc936f3dec3e595fd170cc2f0efc vtun-2.6-r1.ebuild 1776
 MD5 139727784b34cbb655e5312a2402b847 vtun-2.6.ebuild 1751
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwph7ugEuf3OQ0akRArkBAJ9NfK95FhDm+Ak9GeHZNnXy+54MtgCfVJDU
+2LGRyiGZxFvqC+sQ+4E7ouU=
+=mIjQ
+-----END PGP SIGNATURE-----

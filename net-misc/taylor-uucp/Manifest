@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 79aeb3a4d3360c7a1e3dff8a4dd07b2a ChangeLog 2760
 MD5 3d5cc3426a7f1d61f90822a17a8fef03 files/digest-taylor-uucp-1.06.2 64
 MD5 960bf47654d4d388fad012107bc1dbf4 files/digest-taylor-uucp-1.07 62
@@ -7,3 +10,10 @@ MD5 ece1220b2ccfc902946f5c929dc2f3c9 files/uucp-patch.diff 2107
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 135397d55e388ecf5c660b79329a173e taylor-uucp-1.06.2.ebuild 1128
 MD5 8bfc2717f433d960b3bf7a697b28fae7 taylor-uucp-1.07.ebuild 1286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwpkDugEuf3OQ0akRApu9AKCBK/z0IOThnhiTD5HsLZVcG9U0KACdFGnD
+qNf1rurXLIJrWlutvI+1ml8=
+=bqZO
+-----END PGP SIGNATURE-----
