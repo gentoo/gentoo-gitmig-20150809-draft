@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.31 2005/12/10 21:03:46 tgall Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.32 2006/01/09 19:38:50 corsair Exp $
+
+  09 Jan 2006; Markus Rothe <corsair@gentoo.org> scons-0.96.1.ebuild,
+  scons-0.96.90.ebuild, scons-0.96.91.ebuild:
+  Stable on ppc64/added ~ppc64
 
   10 Dec 2005; Tom Gall <tgall@gentoo.org> scons-0.96.1.ebuild:
   add ~ppc64
