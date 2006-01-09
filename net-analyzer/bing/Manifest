@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 4e2d9e2e1cfab58845dbb04cf50330ea ChangeLog 1291
 MD5 7facfbdd8c2cb74bbacaaf89936658ac bing-1.1.3.ebuild 820
-MD5 9e8b1fd816fc23dbf1d1633a9e6c3612 ChangeLog 1183
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 bf66c0ba5f0a560b8714360b378c26b6 files/digest-bing-1.1.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtI4NV3J2n04EauwRAg9PAJ4lszTZXdVD+qrOEL3VPlu4lzHdaQCg1op4
-oFnxKcR4fKowmsua1MmXRqA=
-=HQ5e
------END PGP SIGNATURE-----
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
