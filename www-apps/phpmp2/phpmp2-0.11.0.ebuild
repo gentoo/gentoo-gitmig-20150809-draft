@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp2/phpmp2-0.11.0.ebuild,v 1.2 2006/01/08 17:37:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp2/phpmp2-0.11.0.ebuild,v 1.3 2006/01/09 04:27:42 weeve Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://musicpd.org/phpMp2.shtml"
 SRC_URI="http://mercury.chem.pitt.edu/~shank/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 S=${WORKDIR}/${MY_PN}
 
 IUSE="gd"
