@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.38 2006/01/06 03:20:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.39 2006/01/09 22:28:08 kloeri Exp $
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org apr-util-0.9.7.ebuild:
+  Stable on x86, alpha and ia64, bug 117835.
 
   06 Jan 2006; Michael Stewart <vericgar@gentoo.org> apr-util-0.9.7.ebuild:
   Remove testing that shouldn't have made it to CVS. Fixes bug 117949.
