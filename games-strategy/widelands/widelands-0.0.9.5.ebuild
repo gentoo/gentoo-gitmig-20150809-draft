@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.5 2006/01/07 23:43:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.6 2006/01/09 12:13:24 genstef Exp $
 
 inherit eutils games
 
@@ -13,13 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libpng
+	media-libs/libsdl
 	media-libs/sdl-image
+	media-libs/sdl-mixer
 	media-libs/sdl-net
 	media-libs/sdl-ttf
-	sys-libs/zlib
-	media-libs/jpeg
-	media-libs/libpng"
+	sys-libs/zlib"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}-b9half
 

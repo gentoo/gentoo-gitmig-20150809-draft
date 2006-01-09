@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.6 2006/01/07 23:08:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.7 2006/01/09 12:13:24 genstef Exp $
+
+  09 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  widelands-0.0.9.5.ebuild:
+  Fix depends, add sdl-mixer, remove jpeg, thanks to Jonas Bergler
+  <jbergler@gmail.com> in bug 118381
 
 *widelands-0.0.9.5 (07 Jan 2006)
 
