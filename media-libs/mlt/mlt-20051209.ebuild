@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-20051209.ebuild,v 1.2 2005/12/12 20:56:04 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-20051209.ebuild,v 1.3 2006/01/09 22:22:21 mr_bones_ Exp $
 
 DESCRIPTION="MLT is an open source multimedia framework, designed and developed
 for television broadcasting"
@@ -20,7 +20,7 @@ DEPEND="media-video/ffmpeg
 				  media-libs/sdl-image )
 		media-libs/libsamplerate
 		jack?	( media-sound/jack-audio-connection-kit
-				  >=dev-libs/libxml2-2.5)
+				  >=dev-libs/libxml2-2.5 )
 		gtk?	( >=x11-libs/gtk+-2.0
 				  x11-libs/pango )
 		sox? 	( media-sound/sox )
