@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.12 2005/10/14 21:30:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.13 2006/01/09 20:06:59 flameeyes Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -9,7 +9,6 @@
 # them.
 
 inherit flag-o-matic eutils multilib toolchain-funcs
-
 
 IUSE="debug doc odbc unicode"
 
@@ -67,6 +66,8 @@ configure_build() {
 # as building the unicode version required redoing it.
 # It takes all the params and passes them to the script
 subconfigure() {
+	filter-ldflags -Wl,--as-needed --as-needed
+
 	ECONF_SOURCE="${S}" \
 		econf \
 			--disable-debugreport \
