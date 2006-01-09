@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/switchtower/switchtower-0.10.0.ebuild,v 1.1 2006/01/02 21:03:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/switchtower/switchtower-0.10.0.ebuild,v 1.2 2006/01/09 13:02:35 caleb Exp $
 
 inherit ruby gems
 
@@ -16,4 +16,4 @@ IUSE=""
 RESTRICT="test"
 
 DEPEND=">=dev-lang/ruby-1.8.2
-	>=dev-ruby/net-ssh-1.0.2-r1"
+	>=dev-ruby/net-ssh-1.0.5"
