@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.13 2005/11/14 21:48:53 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.14 2006/01/09 17:52:50 mcummings Exp $
+
+  09 Jan 2006; <mcumming@gentoo.org> gnome2-vfs-perl-1.00.ebuild,
+  gnome2-vfs-perl-1.021.ebuild:
+  Typo in descriptions, yuval strikes again
 
 *gnome2-vfs-perl-1.041 (14 Nov 2005)
 
