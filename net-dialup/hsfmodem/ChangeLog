@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.19 2006/01/07 10:48:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.20 2006/01/09 11:00:46 mrness Exp $
+
+  09 Jan 2006; Alin Nastac <mrness@gentoo.org>
+  hsfmodem-7.18.00.07-r1.ebuild:
+  Set current directory to MY_ARCH_S before applying upstream patch (#118111).
 
 *hsfmodem-7.18.00.07-r1 (07 Jan 2006)
 

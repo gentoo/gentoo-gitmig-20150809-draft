@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.07-r1.ebuild,v 1.1 2006/01/07 10:48:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.07-r1.ebuild,v 1.2 2006/01/09 11:00:46 mrness Exp $
 
 inherit eutils
 
@@ -18,33 +18,32 @@ KEYWORDS="-* ~x86 ~amd64"
 IUSE="doc"
 SLOT="0"
 
-DEPEND="virtual/libc
-	dev-lang/perl
+DEPEND="dev-lang/perl
 	app-arch/cpio"
 
 S="${WORKDIR}"
 
 pkg_setup() {
 	if useq x86; then
-		MY_ARCH_S=${S}/${P}full
+		MY_ARCH_S="${S}/${P}full"
 	elif useq amd64; then
-		MY_ARCH_S=${S}/${P}x86_64full
+		MY_ARCH_S="${S}/${P}x86_64full"
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${MY_ARCH_S}"
 	epatch ${FILESDIR}/${P}-upstream-20060107.patch
 }
 
 src_compile() {
-	cd ${MY_ARCH_S}
+	cd "${MY_ARCH_S}"
 	emake all || die "make failed"
 }
 
 src_install () {
-	cd ${MY_ARCH_S}
+	cd "${MY_ARCH_S}"
 	make PREFIX=${D}/usr/ ROOT=${D} install || die "make install failed"
 
 	use doc && dodoc "${DISTDIR}/${MY_DOC}"
