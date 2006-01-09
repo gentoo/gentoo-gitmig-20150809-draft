@@ -1,0 +1,64 @@
+# this is a list of USE flags
+# that should not be used on PPC64
+# Tom Gall <tgall@gentoo.org> manages this list
+afs
+acpi
+3dfx
+directfb
+avi
+icc
+icc-pgo
+ifc
+krb4
+lm_sensors
+pcmcia
+pda
+prelude
+svga
+firebird
+mzscheme
+chasen
+fdftk
+mono
+multilib
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
+glitz
+
+# dietlibc
+diet
+
+#pyste has untested/unkeyworded deps on ppc64
+pyste
+
+# Unmask our instruction sets
+-altivec
+
+# This one is needed because cryptsetup will not build on ppc64. This
+# useflag is used in cdrecord and can be removed once bug #90211 is fixed.
+on-the-fly-crypt
+
+# we don't have hardware to test. also see bug #113398
+dvb
