@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 518a3cd0794c3c0b681ee6701dd418cf ChangeLog 918
+MD5 28b211030ec17d2faea25202f2dde263 ChangeLog 1033
 MD5 6ce03c7b4321ce10473ba867d62c9726 files/digest-net-ssh-1.0.2 66
 MD5 bebd237f9abf842a38bbdabb886527f7 files/digest-net-ssh-1.0.2-r1 62
 MD5 f210df6c1cf0bedc9e951b0ac40edc76 files/digest-net-ssh-1.0.3 62
+MD5 eef08296cf6546793a256ff0cf20aa2e files/digest-net-ssh-1.0.5 62
 MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
 MD5 f3dfa46232455b728f630ca695e261e8 net-ssh-1.0.2-r1.ebuild 533
 MD5 0d9a643110d5336d08d353ebe3e68946 net-ssh-1.0.2.ebuild 530
 MD5 dfee248a3704d1c1391e1f5069a89612 net-ssh-1.0.3.ebuild 536
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf1wjcsIHjyDViGQRAsZEAJ9VA8rsuYTIOT+qBJirbv9efyKH+QCfRTwI
-3Mgkhk/WPpLksTa7mVzMyyE=
-=iMdo
------END PGP SIGNATURE-----
+MD5 da1c17ff65c4423e25436d5a54aa7642 net-ssh-1.0.5.ebuild 531
