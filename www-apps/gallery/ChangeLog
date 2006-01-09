@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.45 2006/01/07 15:46:45 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.46 2006/01/09 15:11:29 rl03 Exp $
+
+  09 Jan 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall-en2.txt:
+  Update postinstall instructions to mention patching FfmpegToolkit.class.
 
 *gallery-2.0.2-r1 (07 Jan 2006)
 
