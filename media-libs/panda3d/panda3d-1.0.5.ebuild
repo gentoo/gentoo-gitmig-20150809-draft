@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.0.5.ebuild,v 1.2 2005/12/01 16:42:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.0.5.ebuild,v 1.3 2006/01/09 22:16:47 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -22,7 +22,7 @@ DEPEND="doc? ( dev-python/epydoc )
 		ssl? ( dev-libs/openssl )
 		truetype? ( media-libs/freetype )
 		zlib? ( sys-libs/zlib )
-		python? (dev-lang/python)"
+		python? ( dev-lang/python )"
 
 use_no()
 {
