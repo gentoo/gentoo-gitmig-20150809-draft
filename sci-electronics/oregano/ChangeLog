@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.15 2006/01/05 20:27:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.16 2006/01/09 18:01:20 gustavoz Exp $
+
+  09 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> oregano-0.40.5.ebuild:
+  ppc stable now that gtk-2.8 is stable
 
   05 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> oregano-0.40.5.ebuild:
   Lowered gnome deps wrt #117916, amd64 sparc and x86 stable to avoid cairo loops
