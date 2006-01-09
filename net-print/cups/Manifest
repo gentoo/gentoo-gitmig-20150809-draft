@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40f87a3c0aa7c45f4024ed3dcaa0764e ChangeLog 19460
+MD5 292be521d402e1bc26b0869b6622f48f ChangeLog 19566
 MD5 b92beaae46fa3940593e9915f4feb8f0 cups-1.1.23-r1.ebuild 4130
 MD5 8d5e79b93c34f48926709d33a54eed0f cups-1.1.23-r2.ebuild 4239
 MD5 e6a4dd8cb2896885c0de6bb7129368ec cups-1.1.23-r3.ebuild 4537
 MD5 377407a66d89ce94f1c7cd57322c4100 cups-1.1.23-r4.ebuild 4652
 MD5 c91aced69b6a77c69445b5f500ea78c1 cups-1.1.23-r5.ebuild 4670
 MD5 1bbc34f4f33232d4e0b4c9785597bf64 cups-1.1.23-r6.ebuild 4710
-MD5 4d2c49ab83bd996579411a10d61a3827 cups-1.1.23-r7.ebuild 4727
+MD5 b2cf0dc31cf9b6d1d3e0419ea71700c3 cups-1.1.23-r7.ebuild 4723
 MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
 MD5 b22c12cb42113ddc40988cfbe93e3519 files/cups-1.1.23-bindnow.patch 2087
 MD5 7888ddf6a0c4cfb38b8882651e22d66c files/cups-gcc4-amd64.patch 566
@@ -30,10 +27,3 @@ MD5 f6149424fd2880c5017da501e876de59 files/pdftops.pl 5630
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 a097b6a9c53c9ef50a6f3662d802cdfa files/xpdf-pl3.patch 348
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDs4I72+ySkm8kpY0RAtYJAKC3W5p9NRbc6OMVyFplZJ+qqKbYzACfbJFk
-UBwihkreHFC8K87nfl2Qyyk=
-=Rjr7
------END PGP SIGNATURE-----
