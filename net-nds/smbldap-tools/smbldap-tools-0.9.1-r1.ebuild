@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.1-r1.ebuild,v 1.2 2005/08/18 11:39:26 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.1-r1.ebuild,v 1.3 2006/01/09 15:24:01 seemant Exp $
 
 
 inherit eutils
@@ -20,7 +20,7 @@ DEPEND=">sys-apps/sed-4
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
