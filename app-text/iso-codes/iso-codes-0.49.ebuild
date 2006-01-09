@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49.ebuild,v 1.1 2006/01/06 23:54:24 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49.ebuild,v 1.2 2006/01/09 05:44:24 compnerd Exp $
 
 inherit autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Provides the list of country and language names"
 HOMEPAGE="http://alioth.debian.org/projects/pkg-isocodes/"
 SRC_URI="mirror://debian/pool/main/i/iso-codes/${PN}_${PV}.orig.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""

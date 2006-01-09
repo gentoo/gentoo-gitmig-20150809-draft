@@ -1,6 +1,10 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.10 2006/01/06 23:54:24 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.11 2006/01/09 05:44:24 compnerd Exp $
+
+  09 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  iso-codes-0.49.ebuild:
+  Fixing license change on iso-codes.  Resolves bug #118239.
 
 *iso-codes-0.49 (06 Jan 2006)
 
