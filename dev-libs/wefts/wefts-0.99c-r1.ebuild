@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wefts/wefts-0.99c-r1.ebuild,v 1.1 2005/05/28 12:34:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wefts/wefts-0.99c-r1.ebuild,v 1.2 2006/01/09 00:09:19 flameeyes Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="doc? ( app-doc/doxygen )
 	sys-devel/autoconf
 	sys-devel/automake"
 RDEPEND=""
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
 IUSE="doc debug"
