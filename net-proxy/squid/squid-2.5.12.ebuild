@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.12.ebuild,v 1.8 2006/01/09 06:03:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.12.ebuild,v 1.9 2006/01/09 11:51:47 mrness Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic
 
@@ -172,12 +172,13 @@ src_install() {
 	dodoc helpers/basic_auth/SASL/squid_sasl_auth*
 
 	newpamd "${FILESDIR}/squid.pam" squid
-	newinitd "${FILESDIR}/squid.initd" squid
 	newconfd "${FILESDIR}/squid.confd" squid
 	if use logrotate; then
+		newinitd "${FILESDIR}/squid.initd-logrotate" squid
 		insinto /etc/logrotate.d
-		newins "${FILESDIR}/squid-logrotate" squid
+		newins "${FILESDIR}/squid.logrotate" squid
 	else
+		newinitd "${FILESDIR}/squid.initd" squid
 		exeinto /etc/cron.weekly
 		newexe "${FILESDIR}/squid.cron" squid.cron
 	fi

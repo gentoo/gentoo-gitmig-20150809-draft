@@ -1,11 +1,12 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.59 2006/01/09 06:03:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.60 2006/01/09 11:51:47 mrness Exp $
 
-  09 Jan 2006; Alin Nastac <mrness@gentoo.org> files/squid.pam,
-  -files/squid.pam-include, -squid-2.5.10-r2.ebuild,
+  09 Jan 2006; Alin Nastac <mrness@gentoo.org> files/squid.initd,
+  files/squid.pam, -files/squid.pam-include, +files/squid.initd-logrotate, 
+  +files/squid.logrotate, -files/squid-logrotate, -squid-2.5.10-r2.ebuild,
   -squid-2.5.10-r4.ebuild, squid-2.5.11.ebuild, squid-2.5.12.ebuild:
-  Remove old versions.
+  Remove old versions. Add rotate functionality to init script (#118376).
 
   08 Jan 2006; Stuart Longland <redhatter@gentoo.org> squid-2.5.12.ebuild:
   Marked 2.5.12 stable on MIPS, and fixed the copyright header to keep repoman
