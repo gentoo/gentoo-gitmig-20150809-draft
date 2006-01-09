@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 93b3cc41ece43ee81aaeac26e5b77206 ChangeLog 1077
+MD5 e206f56977c95b147126813f65d47edd ChangeLog 1188
 MD5 5d9f95f51f7d2f4b6eb8722baf13f709 files/digest-qtiplot-0.7.3 62
 MD5 5adcb06c1529439b2546dc3afb1e3609 files/digest-qtiplot-0.7.4 62
 MD5 5d8eba869ecfe0dbeb485ba932ed801a files/qtiplot-0.7.3-qmake.patch 5604
 MD5 4260dd304cd0920a91f163ff379938c3 files/qtiplot-0.7.4-qmake.patch 5573
 MD5 be5373660391ac23dc1d97a654ca9e79 metadata.xml 604
-MD5 8c81cfb77431fafb51538b2491d963d0 qtiplot-0.7.3.ebuild 1067
-MD5 5def2d98e3d95381b372a7f502ddd146 qtiplot-0.7.4.ebuild 986
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpDGWntT9W3vfTuoRAhCJAJ9608ZPxS787Q2rZUQjSWyNR/DxkgCgrvG3
-Y/pxBJV2NqQ1QenNSHd4RAI=
-=Fc/w
------END PGP SIGNATURE-----
+MD5 a095de3396efab16df95ee0de4e1eb48 qtiplot-0.7.3.ebuild 1092
+MD5 cfcd3d5fde60261f6b11618ae36deccf qtiplot-0.7.4.ebuild 1011

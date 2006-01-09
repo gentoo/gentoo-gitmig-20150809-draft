@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.4.ebuild,v 1.1 2005/12/17 15:40:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.4.ebuild,v 1.2 2006/01/09 14:15:40 caleb Exp $
 
 inherit eutils multilib qt3
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	${QTDIR}/bin/qmake ${P}.pro || die 'qmake failed.'
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake ${P}.pro || die 'qmake failed.'
 	emake || die 'emake failed.'
 }
 
