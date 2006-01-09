@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.94 2006/01/04 21:59:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.95 2006/01/09 22:42:51 flameeyes Exp $
+
+  09 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.7-r1.ebuild:
+  Drop kdeenablefinal useflag, it used to work back in 1.2 series but it's not
+  unsupported, and next release line will use unsermake so...
 
   04 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.7-r1.ebuild:
   Add kdeenablefinal flag that can be used to actually build amaroK using
