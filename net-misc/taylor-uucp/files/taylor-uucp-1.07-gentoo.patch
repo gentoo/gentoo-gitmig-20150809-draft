@@ -1,41 +1,43 @@
---- uucp-1.06.1/policy.h	1995-08-20 19:36:06.000000000 +0000
-+++ uucp-1.06.1.old/policy.h	2003-04-12 07:33:43.000000000 +0000
-@@ -295,13 +295,14 @@
-    these lock files will be placed in the named directory; otherwise
-    they will be placed in the default spool directory.  On some HDB
-    systems the lock files are placed in /etc/locks.  On some they are
--   placed in /usr/spool/locks.  On the NeXT they are placed in
--   /usr/spool/uucp/LCK.  */
--/* #define LOCKDIR "/usr/spool/uucp" */
-+   placed in /var/spool/locks.  On the NeXT they are placed in
-+   /var/spool/uucp/LCK.  */
-+/* #define LOCKDIR "/var/spool/uucp" */
- /* #define LOCKDIR "/etc/locks" */
--/* #define LOCKDIR "/usr/spool/locks" */
--/* #define LOCKDIR "/usr/spool/uucp/LCK" */
-+/* #define LOCKDIR "/var/spool/locks" */
-+/* #define LOCKDIR "/var/spool/uucp/LCK" */
- /* #define LOCKDIR "/var/spool/lock" */
-+# define LOCKDIR "/var/lock/subsys"
+diff -Nru uucp-1.07.orig/Makefile.in uucp-1.07/Makefile.in
+--- uucp-1.07.orig/Makefile.in	2003-05-30 04:31:40.000000000 +0300
++++ uucp-1.07/Makefile.in	2006-01-09 23:38:41.470224750 +0200
+@@ -1017,12 +1017,12 @@
  
+ install-exec-hook:
+ 	for f in uucico uuxqt; do \
+-	  chown $(OWNER) $(DESTDIR)$(sbindir)/$${f}; \
+-	  chmod 4555 $(DESTDIR)$(sbindir)/$${f}; \
++	  chown $(OWNER):uucp $(DESTDIR)$(sbindir)/$${f}; \
++	  chmod 6555 $(DESTDIR)$(sbindir)/$${f}; \
+ 	done
+ 	for f in uux uucp uustat uuname cu; do \
+-	  chown $(OWNER) $(DESTDIR)$(bindir)/$${f}; \
+-	  chmod 4555 $(DESTDIR)$(bindir)/$${f}; \
++	  chown $(OWNER):uucp $(DESTDIR)$(bindir)/$${f}; \
++	  chmod 6555 $(DESTDIR)$(bindir)/$${f}; \
+ 	done
+ @HAVE_MKDIR_FALSE@	chown $(OWNER) $(DESTDIR)$(uudirdir)
+ @HAVE_MKDIR_FALSE@	chmod 100 $(DESTDIR)$(uudirdir)
+diff -Nru uucp-1.07.orig/policy.h uucp-1.07/policy.h
+--- uucp-1.07.orig/policy.h	2003-05-29 09:08:45.000000000 +0300
++++ uucp-1.07/policy.h	2006-01-09 23:42:14.667548750 +0200
+@@ -302,8 +302,7 @@
+ /* #define LOCKDIR "/usr/spool/locks" */
+ /* #define LOCKDIR "/usr/spool/uucp/LCK" */
+ /* #define LOCKDIR "/var/spool/lock" */
+-/* #define LOCKDIR "/var/lock" */
+-
++#define LOCKDIR "/var/lock"
  /* You must also specify the format of the lock files by setting
     exactly one of the following macros to 1.  Check an existing lock
-@@ -522,7 +523,7 @@
- 
-    If you define HAVE_HDB_LOGGING, each program will by default use a
-    separate log file.  For uucico talking to uunet, for example, it
--   will be /usr/spool/uucp/.Log/uucico/uunet.  Each line will look
-+   will be /var/spool/uucp/.Log/uucico/uunet.  Each line will look
-    something like this:
- 
-    uucp uunet (12/10-09:04:22,16390,1) Receiving uunet/D./D.uunetSwJ72
-@@ -571,16 +572,16 @@
+    file to decide which of these choices is more appropriate.
+@@ -572,16 +571,14 @@
  /* The name of the default spool directory.  If HAVE_TAYLOR_CONFIG is
     set to 1, this may be overridden by the ``spool'' command in the
     configuration file.  */
 -#define SPOOLDIR "/usr/spool/uucp"
- /* #define SPOOLDIR "/var/spool/uucp" */
-+ #define SPOOLDIR "/var/spool/uucp" 
+-/* #define SPOOLDIR "/var/spool/uucp" */
++#define SPOOLDIR "/var/spool/uucp"
  
  /* The name of the default public directory.  If HAVE_TAYLOR_CONFIG is
     set to 1, this may be overridden by the ``pubdir'' command in the
@@ -43,51 +45,49 @@
     specific public directory by using the ``pubdir'' command in the
     system file.  */
 -#define PUBDIR "/usr/spool/uucppublic"
- /* #define PUBDIR "/var/spool/uucppublic" */
-+ #define PUBDIR "/var/spool/uucppublic" 
+-/* #define PUBDIR "/var/spool/uucppublic" */
++#define PUBDIR "/var/spool/uucppublic" 
  
  /* The default command path.  This is a space separated list of
     directories.  Remote command executions requested by uux are looked
-@@ -643,20 +644,20 @@
+@@ -644,23 +641,17 @@
  /* The default log file when using HAVE_TAYLOR_LOGGING.  When using
     HAVE_TAYLOR_CONFIG, this may be overridden by the ``logfile''
     command in the configuration file.  */
 -#define LOGFILE "/usr/spool/uucp/Log"
 -/* #define LOGFILE "/var/spool/uucp/Log" */
-+/*#define LOGFILE "/var/log/uucp/Log" */
-+ #define LOGFILE "/var/log/uucp/Log" 
+-/* #define LOGFILE "/var/log/uucp/Log" */
++#define LOGFILE "/var/log/uucp/Log" 
  
  /* The default statistics file when using HAVE_TAYLOR_LOGGING.  When
     using HAVE_TAYLOR_CONFIG, this may be overridden by the
     ``statfile'' command in the configuration file.  */
 -#define STATFILE "/usr/spool/uucp/Stats"
 -/* #define STATFILE "/var/spool/uucp/Stats" */
-+/*#define STATFILE "/var/log/uucp/Stats" */
-+ #define STATFILE "/var/log/uucp/Stats" 
+-/* #define STATFILE "/var/log/uucp/Stats" */
++#define STATFILE "/var/log/uucp/Stats" 
  
  /* The default debugging file when using HAVE_TAYLOR_LOGGING.  When
     using HAVE_TAYLOR_CONFIG, this may be overridden by the
     ``debugfile'' command in the configuration file.  */
 -#define DEBUGFILE "/usr/spool/uucp/Debug"
 -/* #define DEBUGFILE "/var/spool/uucp/Debug" */
-+/*#define DEBUGFILE "/var/log/uucp/Debug" */
+-/* #define DEBUGFILE "/var/log/uucp/Debug" */
 +#define DEBUGFILE "/var/log/uucp/Debug" 
  
  #endif /* HAVE_TAYLOR_LOGGING */
  
-@@ -665,17 +666,19 @@
+@@ -669,17 +660,17 @@
  /* The default log file when using HAVE_V2_LOGGING.  When using
     HAVE_TAYLOR_CONFIG, this may be overridden by the ``logfile''
     command in the configuration file.  */
 -#define LOGFILE "/usr/spool/uucp/LOGFILE"
-+/*#define LOGFILE "/var/log/uucp/LOGFILE" */
 +#define LOGFILE "/var/log/uucp/LOGFILE"
  
  /* The default statistics file when using HAVE_V2_LOGGING.  When using
     HAVE_TAYLOR_CONFIG, this may be overridden by the ``statfile''
     command in the configuration file.  */
 -#define STATFILE "/usr/spool/uucp/SYSLOG"
-+/* #define STATFILE "/var/log/uucp/SYSLOG" */
 +#define STATFILE "/var/log/uucp/SYSLOG"
  
  /* The default debugging file when using HAVE_V2_LOGGING.  When using
@@ -98,7 +98,7 @@
  
  #endif /* HAVE_V2_LOGGING */
  
-@@ -688,16 +691,16 @@
+@@ -692,16 +683,16 @@
     be replaced by the system name (if there is no appropriate system,
     "ANY" will be used).  No other '%' character may appear in the
     string.  */

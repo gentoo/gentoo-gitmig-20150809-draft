@@ -1,8 +1,18 @@
 # ChangeLog for net-misc/taylor-uucp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.22 2006/01/09 17:09:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.23 2006/01/09 22:36:07 mrness Exp $
 
-  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+*taylor-uucp-1.07-r1 (09 Jan 2006)
+
+  09 Jan 2006; Alin Nastac <mrness@gentoo.org>
+  +files/taylor-uucp-1.07-gentoo.patch, -files/gentoo-uucp.diff,
+  -files/uucp-patch.diff, metadata.xml, -taylor-uucp-1.06.2.ebuild,
+  +taylor-uucp-1.07-r1.ebuild:
+  Take maintainership of this package. Remove old version. Change lock
+  directory to /var/lock (#96339). Install executables SUIDed and SGIDed,
+  with uucp:uucp as owner:group (#115689).
+
+  09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired dev from metadata.xml
 
   09 May 2005; Olivier Crête <tester@gentoo.org> taylor-uucp-1.07.ebuild:
