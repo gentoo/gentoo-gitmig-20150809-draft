@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xmille
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.6 2004/12/22 01:44:26 absinthe Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.7 2006/01/09 06:03:04 mr_bones_ Exp $
+
+  09 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> xmille-2.0-r1.ebuild:
+  tidy; debian patch bump
 
   21 Dec 2004; Dylan Carlson <absinthe@gentoo.org> xmille-2.0-r1.ebuild:
   keywords ~amd64.
