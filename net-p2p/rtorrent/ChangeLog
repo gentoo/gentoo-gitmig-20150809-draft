@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/rtorrent
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.28 2005/12/26 03:57:18 weeve Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.29 2006/01/09 23:00:00 flameeyes Exp $
+
+*rtorrent-0.4.2 (09 Jan 2006)
+
+  09 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> +rtorrent-0.4.2.ebuild:
+  Bump to last version.
 
   26 Dec 2005; Jason Wever <weeve@gentoo.org> rtorrent-0.4.1.ebuild:
   Added ~sparc keyword wrt bug #116604.
