@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 395a08ae322d69f0ae914cce31740337 ChangeLog 1310
 MD5 33dca44dcca864e9ea3b0f3228842e27 LinNeighborhood-0.6.4.ebuild 849
 MD5 46156292a95dde1bda6f4e53eeac52d2 LinNeighborhood-0.6.5.ebuild 923
@@ -5,3 +8,10 @@ MD5 f25e2bd670406bee53f4190151665cb6 files/digest-LinNeighborhood-0.6.4 73
 MD5 4c3348378d254fdba52a66ba206df4d0 files/digest-LinNeighborhood-0.6.5 73
 MD5 fd801489fc0ef6d6512116d64f3c0a92 files/linneighborhood-0.6.5-samba301.patch 2593
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwqPMugEuf3OQ0akRAouWAJ9qawfoLRKfUC3872DmZWZqjXPY0ACgkTqy
+E12rlGJd5tKzXvRQqAbsHus=
+=di67
+-----END PGP SIGNATURE-----
