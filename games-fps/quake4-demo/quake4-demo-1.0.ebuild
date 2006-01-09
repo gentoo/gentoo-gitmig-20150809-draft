@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.4 2005/12/14 06:12:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.5 2006/01/09 23:19:35 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake4/demo/${MY_P}.x86.run
 
 LICENSE="QUAKE4"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="alsa opengl dedicated"
 RESTRICT="nostrip"
 
