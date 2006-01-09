@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>netmon</herd>
+ <maintainer>
+  <email>pva@gentoo.org</email>
+  <name>Peter Volkov</name>
+ </maintainer>
+ <longdescription>The NetUP ndsad utility captures IP-traffic from network
+ interfaces and export NetFlow v.5.Data is gathered from libpcap library on Unix
+ and from winpcap on Windows. Also you are able to use tee/divert sockets on
+ FreeBSD and ULOG on Linux for data source.
+ </longdescription>
+</pkgmetadata>
