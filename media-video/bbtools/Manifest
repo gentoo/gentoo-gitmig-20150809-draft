@@ -1,5 +1,15 @@
-MD5 6059c9f32e94dffa31351ebdfa61917c metadata.xml 559
-MD5 0bb363190c317e24032bfa93aa11df11 bbtools-1.9.ebuild 915
-MD5 b248079b8bc723ac8a6ec0402e30df96 ChangeLog 640
-MD5 a4a1e55a94bc7019f6c88f684d1286f4 files/digest-bbtools-1.9 60
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 925a55052a36c7bf63cd642a0a07fb4d ChangeLog 759
+MD5 820ec70beff8c1ea8b20df691b7847c0 bbtools-1.9.ebuild 946
 MD5 3935934a35196bfef16ebe39883f7200 files/bbtools-1.9-gentoo.patch 2768
+MD5 a4a1e55a94bc7019f6c88f684d1286f4 files/digest-bbtools-1.9 60
+MD5 6059c9f32e94dffa31351ebdfa61917c metadata.xml 559
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDw5PyAiZjviIA2XgRAjafAJ4qeOxAf4mcZkPh1R4teTTUppckYACgyk0Y
+bXoVPVjkqsGNbkOegot9Z6s=
+=zTVq
+-----END PGP SIGNATURE-----
