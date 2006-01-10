@@ -1,0 +1,11 @@
+# ChangeLog for net-im/wengophone
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/ChangeLog,v 1.1 2006/01/10 18:30:54 genstef Exp $
+
+*wengophone-1.0_pre20060106 (10 Jan 2006)
+
+  10 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +wengophone-1.0_pre20060106.ebuild:
+  New ebuild thanks to Patrizio Bassi <hetfield666@gmail.com> and Ben Urban
+  <benurban@comcast.net> in bug 114017
+
