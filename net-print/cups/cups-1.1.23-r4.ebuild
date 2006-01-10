@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r4.ebuild,v 1.14 2005/12/17 17:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r4.ebuild,v 1.15 2006/01/10 18:51:12 genstef Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -31,7 +31,8 @@ DEPEND="${DEP}
 	>=sys-devel/autoconf-2.58"
 RDEPEND="${DEP}
 	!virtual/lpr
-	app-text/xpdf"
+	|| ( >=app-text/poppler-0.4.3-r1
+	<app-text/xpdf-3.01-r4 )"
 PDEPEND="samba? ( >=net-fs/samba-3.0.8 )"
 PROVIDE="virtual/lpr"
 
