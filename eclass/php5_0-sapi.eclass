@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.10 2006/01/04 18:00:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.11 2006/01/10 18:38:06 chtekk Exp $
 #
 # ########################################################################
 #
@@ -248,7 +248,7 @@ php5_0-sapi_src_unpack() {
 
 	# lib64 support
 	if [ -n "${LIB64_PATCH}" ] ; then
-		epatch "${FILESDIR}/${LIB64_PATCH}"
+		epatch "${WORKDIR}/${LIB64_PATCH}"
 	else
 		ewarn "There is no lib64 patch available for this PHP release yet!"
 	fi
