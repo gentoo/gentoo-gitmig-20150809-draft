@@ -1,0 +1,10 @@
+# ChangeLog for net-www/gnash
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.1 2006/01/10 21:52:08 genstef Exp $
+
+*gnash-0.7_alpha20060110 (10 Jan 2006)
+
+  10 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +gnash-0.7_alpha20060110.ebuild:
+  Alpha ebuild for gnash, closes bug 118527
+
