@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/packit
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.18 2005/10/09 11:00:31 mkay Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.19 2006/01/10 19:00:55 vanquirius Exp $
+
+  10 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> packit-1.0.ebuild:
+  Use virtual/libpcap for bug 117745. Thanks to Michael Zanetta <grimmlin at
+  pentoo dot ch>.
 
   09 Oct 2005; <mkay@gentoo.org> packit-1.0.ebuild:
   Adding libpcap to dependencies. Closing bug #108117
