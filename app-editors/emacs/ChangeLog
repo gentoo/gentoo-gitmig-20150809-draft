@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.75 2005/12/12 03:52:00 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.76 2006/01/10 10:46:24 ferringb Exp $
+
+  10 Jan 2006; <ferringb@gentoo.org> -emacs-21.4.ebuild:
+  Removing 21.4; stale version that is succeeded by 21.4-r1 in keywords.
+  Reason for removal is bug 118386, ungif being screwed over for a good chunk
+  of time thus removed.
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; emacs-21.4-r1.ebuild,
   emacs-22.0.50_pre20050225.ebuild:
