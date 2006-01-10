@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.46 2006/01/09 22:20:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.47 2006/01/10 13:17:46 gustavoz Exp $
+
+  10 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> apr-0.9.7.ebuild:
+  Stable on sparc wrt #117835
 
   09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org apr-0.9.7.ebuild:
   Stable on x86, alpha and ia64, bug 117835.
