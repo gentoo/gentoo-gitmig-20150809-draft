@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.0.ebuild,v 1.1 2005/12/24 04:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.0.ebuild,v 1.2 2006/01/10 00:06:31 vapier Exp $
 
 DESCRIPTION="Restricted shell for SSHd"
 HOMEPAGE="http://rssh.sourceforge.net/"
@@ -15,7 +15,7 @@ RDEPEND="virtual/ssh"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:chmod u+s $(:chmod u+s $(DESTDIR)$(:' Makefile.in
 }
 
