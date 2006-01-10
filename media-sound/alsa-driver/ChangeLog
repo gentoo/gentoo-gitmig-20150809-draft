@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.181 2006/01/03 02:04:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.182 2006/01/10 12:17:55 flameeyes Exp $
+
+  10 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.11_rc2.ebuild:
+  Add check for CONFIG_PM_LEGACY for kernel 2.6.15. Thanks to Jakub for the
+  suggestion. Closes bug #118490.
 
   02 Jan 2006; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-driver-1.0.3.ebuild, -alsa-driver-1.0.8.ebuild,
