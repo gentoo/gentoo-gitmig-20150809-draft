@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/nestra
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.8 2006/01/10 01:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.9 2006/01/10 01:14:17 vapier Exp $
+
+  10 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/nestra-0.66-exec-stack.patch, nestra-0.66-r1.ebuild:
+  Build nestra without an executable stack.
 
   10 Jan 2006; Mike Frysinger <vapier@gentoo.org> nestra-0.66-r1.ebuild:
   Fix LDFLAGS support.

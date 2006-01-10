@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 703916c76156dcef8f6e7e7f76b5f933 ChangeLog 1110
+MD5 d098e08e1bce340c7ddd4471c30b4146 ChangeLog 1267
 MD5 1b72c901305b3f39e947ffbe00b7a13e files/digest-nestra-0.66-r1 126
+MD5 0ce4563cf54ce668376ab9877fffda1e files/nestra-0.66-exec-stack.patch 235
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 cac77da69ac8986a87706bbc759427e9 nestra-0.66-r1.ebuild 1379
+MD5 134f0435d6194602b3bd25c1b92eb56c nestra-0.66-r1.ebuild 1464
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwwd42+ySkm8kpY0RArxEAKCTrRhBK2sgLbntK7hS7dLQ7cpzNACfezkE
-IDD/LrB2kOkIAm8u0Mre5fU=
-=12yD
+iD8DBQFDwwq/2+ySkm8kpY0RAi+xAJ94+S7IELrDlNgLd/VD3eXZ/krCNQCfSqej
+QKeeA4lEnSa0a8Qjcv/ogAk=
+=pbB7
 -----END PGP SIGNATURE-----

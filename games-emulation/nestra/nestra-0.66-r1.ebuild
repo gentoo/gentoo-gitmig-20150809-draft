@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.10 2006/01/10 01:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.11 2006/01/10 01:14:17 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -27,7 +27,7 @@ pkg_setup() {
 	export ABI=x86
 	if has_m32 ; then
 		append-flags -m32
-		append-ldflags -m elf_i386
+		append-ldflags -Wl,-m,elf_i386
 	else
 		eerror "Your compiler seems to be unable to compile 32bit code."
 		eerror "Make sure you compile gcc with:"
@@ -40,9 +40,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}/${PATCH}"
+	epatch "${WORKDIR}"/${PATCH} "${FILESDIR}"/${P}-exec-stack.patch
+	append-ldflags -Wl,-z,noexecstack
 	sed -i \
-		-e "s:-L/usr/X11R6/lib::" \
+		-e "s:-L/usr/X11R6/lib:${LDFLAGS}:" \
 		-e 's:-O2 ::' \
 		-e "s:gcc:$(tc-getCC) ${CFLAGS}:" \
 		-e "s:ld:$(tc-getLD) $(raw-ldflags):" \
