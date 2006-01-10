@@ -1,6 +1,10 @@
 # ChangeLog for games-action/lugaru-demo
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.3 2005/10/21 17:27:06 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.4 2006/01/10 20:27:37 wolf31o2 Exp $
+
+  10 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  lugaru-demo-1.0.ebuild:
+  Added modular X dependencies.
 
   21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   lugaru-demo-1.0.ebuild:
