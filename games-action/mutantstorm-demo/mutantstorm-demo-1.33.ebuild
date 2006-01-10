@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.6 2006/01/10 21:07:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.7 2006/01/10 23:07:14 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -26,14 +26,10 @@ RDEPEND="virtual/opengl
 				x11-libs/libXext )
 			virtual/x11 ) )"
 
+GAMES_CHECK_LICENSE="yes"
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-pkg_setup() {
-	check_license POMPOM
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself
