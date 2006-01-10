@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre010.ebuild,v 1.1 2005/12/23 15:06:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre010.ebuild,v 1.2 2006/01/10 18:49:03 hansmi Exp $
 
 inherit font
 
@@ -19,7 +19,7 @@ RESTRICT="nomirror"
 
 LICENSE="as-is grass-ipafonts"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~hppa ~ppc ~x86"
 
 DEPEND="virtual/x11
 	dev-lang/perl

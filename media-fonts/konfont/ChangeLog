@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/konfont
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/konfont/ChangeLog,v 1.5 2005/04/21 18:54:57 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/konfont/ChangeLog,v 1.6 2006/01/10 18:52:25 hansmi Exp $
+
+  10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> konfont-0.1.ebuild:
+  Added to ~hppa, ~ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> konfont-0.1.ebuild:
   stable on amd64
