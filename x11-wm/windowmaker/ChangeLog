@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.62 2006/01/10 00:44:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.63 2006/01/10 01:08:14 metalgod Exp $
+
+*windowmaker-0.92.0-r2 (10 Jan 2006)
+
+  10 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/0.92.0/windowmaker-0.92.0-fullscreen.patch,
+  +windowmaker-0.92.0-r2.ebuild:
+  Added a patch to fix fullscreen requests thanks to Bernard Cafarelli
+  <voyageur@operamail.com> closes bug #118119. Clean up the ebuild.
 
   10 Jan 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
   Set myself as maintainer.

@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d5ed0a89a9e11f827ec8e469a1be9b91 ChangeLog 15110
+MD5 778f741143423fb239d69ee176cbaf36 ChangeLog 15424
 MD5 c8eb68627dc7b53b10143626018ff597 files/0.80.2/gtk2flickerfix.patch 1969
 MD5 a42a33a349ca84fb6e2cc5fdbd627b99 files/0.80.2/trance.patch.WM-0.80.2.diff 9738
 MD5 9a5c9f1b2b44a678526f0fd71b2cf51d files/0.80.2/windowmaker-0.80.2-r1-gentoo.patch 4331
@@ -13,12 +13,14 @@ MD5 0b1eb289596c8aa934b6c17362b0201c files/0.91.0/maximize-fix-0.9x.patch 1245
 MD5 c41215f830e33a636a440ce389db01eb files/0.91.0/menufocus.patch 1554
 MD5 84bc0e347cd23ca347219959362afa91 files/0.91.0/singleclick-shadeormaxopts-0.9x.patch2 7788
 MD5 3a5eaebd5ccf7d3384c042e13f52bef1 files/0.91.0/wlist-0.9x.patch 2980
+MD5 5abe2330c51f22194319220caf8503ff files/0.92.0/windowmaker-0.92.0-fullscreen.patch 500
 MD5 b5ce486f7df03158abef49d88da24105 files/0.92.0/windowmaker-0.92.0-gcc41.patch 5212
 MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r2 144
 MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r4 144
 MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0-r1 144
 MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r7 227
 MD5 56fa606e28d04ba426e4d4cacc8d0b2d files/digest-windowmaker-0.92.0-r1 144
+MD5 56fa606e28d04ba426e4d4cacc8d0b2d files/digest-windowmaker-0.92.0-r2 144
 MD5 f70c1e1b121cfc32dbd802678f3b111f files/wmaker.desktop 221
 MD5 5b56537f049f24c1e822d5d279e0fff4 metadata.xml 288
 MD5 350d1c8fc3f110fa9bbd0f7a681ec880 windowmaker-0.80.2-r2.ebuild 3463
@@ -26,10 +28,11 @@ MD5 056f320591b95b4adaec5b906ae25035 windowmaker-0.80.2-r4.ebuild 4094
 MD5 0b7d5f0f23bea9a4793a92f25117d9f3 windowmaker-0.91.0-r1.ebuild 5881
 MD5 6dfb07e767918268038ad952d0e38029 windowmaker-0.91.0-r7.ebuild 6800
 MD5 7cd4046827ba9b7b99679af4c0a14586 windowmaker-0.92.0-r1.ebuild 5354
+MD5 21e5037aa8d2c458702857a109ed3530 windowmaker-0.92.0-r2.ebuild 5199
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwwNRwUpWvClEHQoRAlmkAJ9ySjgU5+uszefPug1gcilk3ensCACfZGNF
-vXk9c3OvBQ+j+Xc1SbBU1gc=
-=ocnI
+iD8DBQFDwwjwwUpWvClEHQoRAjpLAJsFs5HrSufX5jUkLOeOYBEiAFj8KQCfVYpZ
+/cFplHT8jVSznmRyb4wHyeM=
+=99Mj
 -----END PGP SIGNATURE-----
