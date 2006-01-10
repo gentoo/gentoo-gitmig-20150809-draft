@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/svk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.22 2005/11/17 22:11:17 kang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.23 2006/01/10 11:34:30 kang Exp $
+
+*svk-1.06 (10 Jan 2006)
+
+  10 Jan 2006; Guillaume Destuynder <kang@gentoo.org>
+  -files/svk-0.29-nognupgtest.patch, +svk-1.06.ebuild:
+  Bump to 1.06, fixes #116331, new local useflags: patch svn-mirror and pager,
+  using skip-deps, added bash completion support (#108295), cleanups,
+  (contribution from Daniel Westermann-Clark)
 
 *svk-1.05 (17 Nov 2005)
 

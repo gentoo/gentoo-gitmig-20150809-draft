@@ -1,10 +1,10 @@
-MD5 02aedc9ca5ddb89e4a073b41d95786e4 ChangeLog 2923
+MD5 7c9a9e89fe0b52a36554680bff6d78d3 ChangeLog 3253
 MD5 b64e484116f5963bfeccf06dde781d96 files/digest-svk-1.00 60
 MD5 fe1920402a42152e3f3646acbfb00612 files/digest-svk-1.01 60
 MD5 a440bcfe7ba94be5b83b0eb0f46ad0c6 files/digest-svk-1.02 60
 MD5 6a8ea12fa86a97e9bc07765bf216bb4e files/digest-svk-1.04 60
 MD5 0855c4afdb948134188ca24cc31b9b8e files/digest-svk-1.05 60
-MD5 84769a42d8df0a121f9cf266c397afb9 files/svk-0.29-nognupgtest.patch 318
+MD5 3f057bd0252490f9c233dda8bb869556 files/digest-svk-1.06 60
 MD5 cc0dd7817cfd7332d4df793ce97c28ff files/svk-1.00-nognupgtest.patch 283
 MD5 cfc592978a6f8a286b0e6dda57f31b16 files/svk-1.01-nognupgtest.patch 283
 MD5 da105038149ea01d55b21ab228862624 files/svk-1.02-nognupgtest.patch 294
@@ -16,3 +16,4 @@ MD5 c52b13d5dc73ba8a1f4a1c183e244f50 svk-1.01.ebuild 1511
 MD5 48a168237aacbfde99e14e194d42cf1d svk-1.02.ebuild 1503
 MD5 909e82a37205e4f70986d7cba0d87453 svk-1.04.ebuild 1516
 MD5 1876aa16b7287a569f339bfa8cef0a18 svk-1.05.ebuild 1514
+MD5 532831047571f13202778c45c295d751 svk-1.06.ebuild 1920
