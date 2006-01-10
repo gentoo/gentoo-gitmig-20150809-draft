@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.9 2005/07/13 21:57:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.10 2006/01/10 01:00:18 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -42,17 +42,12 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}/${PATCH}"
 	sed -i \
+		-e "s:-L/usr/X11R6/lib::" \
 		-e 's:-O2 ::' \
-		-e "s:ld:$(tc-getLD) ${LDFLAGS}:" \
-		-e "s:gcc:$(tc-getCC) ${CFLAGS}:" Makefile \
+		-e "s:gcc:$(tc-getCC) ${CFLAGS}:" \
+		-e "s:ld:$(tc-getLD) $(raw-ldflags):" \
+		Makefile \
 		|| die "sed failed"
-
-	#94871
-	if use amd64 ; then
-		sed -i \
-			-e "s:-L/usr/X11R6/lib:-L/emul/linux/x86/usr/lib32:" Makefile \
-			|| die "sed failed"
-	fi
 }
 
 src_install() {
