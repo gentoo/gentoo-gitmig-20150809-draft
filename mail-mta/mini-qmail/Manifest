@@ -6,11 +6,11 @@ MD5 d9fc73bed819afc98b740f40c274f16c files/1.05-config-mini-help.patch 672
 MD5 38ce537c00a3ca069dbeaee4adb6b990 files/99qmail 84
 MD5 0d6c1596674bf81103e39f12accab64e files/digest-mini-qmail-1.05 134
 MD5 0bf926bf5dd8ca2de2b54c162b66df06 metadata.xml 220
-MD5 0da849471691552cf267853ea4f54007 mini-qmail-1.05.ebuild 2892
+MD5 d9a38941a0401e103b837327df1de4fc mini-qmail-1.05.ebuild 2898
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl6GngIKl8Uu19MoRAp5ZAJ9Bi/pV8GT8EjiAx2oEor302u8U5wCcC4BQ
-fkyXNN79PC8OYIRP0EJqIlQ=
-=BfS7
+iD8DBQFDwxSX2+ySkm8kpY0RArYhAKCUZid1C4BFbt+kW8/4J0QpSanZLQCePB/t
+MMwOy8bhHL2/+trhxo4laO8=
+=9Ssp
 -----END PGP SIGNATURE-----
