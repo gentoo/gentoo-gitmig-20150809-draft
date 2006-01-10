@@ -55,12 +55,12 @@ for many other options
  @item ulimit
  @btindex ulimit
  @example
--ulimit [-acdflmnpstuvSH] [@var{limit}]
+-ulimit [-acdfilmnpqstuvxSH] [@var{limit}]
 +ulimit [-acdefilmnpqrstuvxSH] [@var{limit}]
  @end example
  @code{ulimit} provides control over the resources available to processes
  started by the shell, on systems that allow such control.  If an
-@@ -3854,9 +3854,15 @@
+@@ -3854,6 +3854,9 @@
  @item -d
  The maximum size of a process's data segment.
  
@@ -70,47 +70,28 @@ for many other options
  @item -f
  The maximum size of files created by the shell.
  
-+@item -i
-+The maximum number of pending signals.
-+
- @item -l
- The maximum size that may be locked into memory.
+@@ -3875,6 +3878,9 @@
+ @item -q
+ The maximum number of bytes in POSIX message queues.
  
-@@ -3869,6 +3875,12 @@
- @item -p
- The pipe buffer size.
- 
-+@item -q
-+The maximum number of bytes in POSIX message queues.
-+
 +@item -r
 +The maximum RT priority.
 +
  @item -s
  The maximum stack size.
  
-@@ -3881,6 +3893,9 @@
- @item -v
- The maximum amount of virtual memory available to the process.
- 
-+@item -x
-+The maximum amount of file locks.
-+
- @end table
- 
- If @var{limit} is given, it is the new value of the specified resource;
 --- doc/bash.1
 +++ doc/bash.1
-@@ -8484,7 +8484,7 @@
+@@ -8490,7 +8490,7 @@
  returns true if any of the arguments are found, false if
  none are found.
  .TP
--\fBulimit\fP [\fB\-SHacdflmnpstuv\fP [\fIlimit\fP]]
+-\fBulimit\fP [\fB\-SHacdfilmnpqstuvx\fP [\fIlimit\fP]]
 +\fBulimit\fP [\fB\-SHacdefilmnpqrstuvx\fP [\fIlimit\fP]]
  Provides control over the resources available to the shell and to
  processes started by it, on systems that allow such control.
  The \fB\-H\fP and \fB\-S\fP options specify that the hard or soft limit is
-@@ -8520,9 +8520,15 @@
+@@ -8526,6 +8526,9 @@
  .B \-d
  The maximum size of a process's data segment
  .TP
@@ -120,32 +101,13 @@ for many other options
  .B \-f
  The maximum size of files created by the shell
  .TP
-+.B \-i
-+The maximum number of pending signals
-+.TP
- .B \-l
- The maximum size that may be locked into memory
+@@ -8548,6 +8551,9 @@
+ .B \-q
+ The maximum number of bytes in POSIX message queues
  .TP
-@@ -8536,6 +8542,12 @@
- .B \-p
- The pipe size in 512-byte blocks (this may not be set)
- .TP
-+.B \-q
-+The maximum number of bytes in POSIX message queues
-+.TP
 +.B \-r
 +The maximum rt priority
 +.TP
  .B \-s
  The maximum stack size
  .TP
-@@ -8547,6 +8559,9 @@
- .TP
- .B \-v
- The maximum amount of virtual memory available to the shell
-+.TP
-+.B \-x
-+The maximum number of file locks
- .PD
- .PP
- If

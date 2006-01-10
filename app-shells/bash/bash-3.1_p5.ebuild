@@ -1,25 +1,27 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1-r2.ebuild,v 1.1 2006/01/04 05:47:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p5.ebuild,v 1.1 2006/01/10 00:01:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
 # See ftp://ftp.cwru.edu/pub/bash/bash-3.1-patches/
-PLEVEL=1
+PLEVEL=${PV##*_p}
+MY_PV=${PV/_p*}
+MY_P=${PN}-${MY_PV}
 READLINE_VER=5.1
 READLINE_PLEVEL=1
 
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
 # Hit the GNU mirrors before hitting Chet's site
-SRC_URI="mirror://gnu/bash/${P}.tar.gz
-	ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
+SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz
+	ftp://ftp.cwru.edu/pub/bash/${MY_P}.tar.gz
 	$(for ((i=1; i<=PLEVEL; i++)); do
 		printf 'ftp://ftp.cwru.edu/pub/bash/bash-%s-patches/bash%s-%03d\n' \
-			${PV} ${PV/\.} ${i}
+			${MY_PV} ${MY_PV/\.} ${i}
 		printf 'mirror://gnu/bash/bash-%s-patches/bash%s-%03d\n' \
-			${PV} ${PV/\.} ${i}
+			${MY_PV} ${MY_PV/\.} ${i}
 	done)
 	$(for ((i=1; i<=READLINE_PLEVEL; i++)); do
 		printf 'ftp://ftp.cwru.edu/pub/bash/readline-%s-patches/readline%s-%03d\n' \
@@ -35,15 +37,17 @@ IUSE="afs nls build bashlogger unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
+S=${WORKDIR}/${MY_P}
+
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${MY_P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
 
 	# Include official patches
 	local i
 	for ((i=1; i<=PLEVEL; i++)); do
-		epatch "${DISTDIR}"/${PN}${PV/\.}-$(printf '%03d' ${i})
+		epatch "${DISTDIR}"/${PN}${MY_PV/\.}-$(printf '%03d' ${i})
 	done
 	cd lib/readline
 	for ((i=1; i<=READLINE_PLEVEL; i++)); do
@@ -51,12 +55,10 @@ src_unpack() {
 	done
 	cd ../..
 
-	# Fixup array handling #116352
-	epatch "${FILESDIR}"/${P}-arrays.patch
 	# Fall back to /etc/inputrc
 	epatch "${FILESDIR}"/${PN}-3.0-etc-inputrc.patch
 	# Add more ulimit options (from Fedora)
-	epatch "${FILESDIR}"/${P}-ulimit.patch
+	epatch "${FILESDIR}"/${MY_P}-ulimit.patch
 	# Fix a memleak in read_builtin (from Fedora)
 	epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
 	# Don't barf on handled signals in scripts
