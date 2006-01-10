@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/bwbar
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwbar/ChangeLog,v 1.1 2006/01/10 19:30:40 vanquirius Exp $
+
+*bwbar-1.2.2 (10 Jan 2006)
+
+  10 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +bwbar-1.2.2.ebuild:
+  Initial commit. Fixes bug 58193. Thanks to Frank Benkstein <benkstein at gmx
+  dot de>.
+
