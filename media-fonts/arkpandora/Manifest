@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 000f91b416281ddf49fa4d5e07d71236 ChangeLog 876
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 1be7ef2c0e66cf6de0559d58b2d6e1f9 arkpandora-2.04.ebuild 621
+MD5 2c11c297122840e449a0972698da75b7 ChangeLog 973
+MD5 4a65ca1f0feb38a4d657034d7e901282 arkpandora-2.04.ebuild 625
 MD5 3de3a7403ee92ebb163b1215bbda9d13 files/digest-arkpandora-2.04 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDNB8WKRy60XGEcJIRAhcUAJ4oWa0ABG0uCSjT5Czxl38fEWn53wCfdkjK
-LcOcvbnKfAUu+/Pcy8jWUDg=
-=3Y/G
------END PGP SIGNATURE-----
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
