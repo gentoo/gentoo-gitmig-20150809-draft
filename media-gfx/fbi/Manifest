@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2bc2ba1a51ed83a176d38a6689b6a9e ChangeLog 5068
+MD5 2eb9e848ce8a2bb8b7c3835d25bf6c87 ChangeLog 5168
+RMD160 daef04a452c74fde8d35188f23a32e74d648e88c ChangeLog 5168
+SHA256 0db0480c31a7b4b2a0dcf71ddeac732d6cbdd837ffeeb89d46fdac57cd871700 ChangeLog 5168
 MD5 b25d064daff6fef0c43106cf77602c55 fbi-1.31-r1.ebuild 1133
+RMD160 8d1faf1913d087552b61e90956b718656fb5a1fb fbi-1.31-r1.ebuild 1133
+SHA256 de042ffafbe5b96f2b4bbf45928b48b5a0cd956a1360be42b951a3557cd0afa9 fbi-1.31-r1.ebuild 1133
 MD5 38267ac1df0a9fbc911a7f1707fbaca8 fbi-1.31-r2.ebuild 1259
-MD5 3cea4d52fae981c56e196120997c2a45 fbi-1.31.ebuild 964
+RMD160 83187f0ae64c5068214a414da751b610e8c0746e fbi-1.31-r2.ebuild 1259
+SHA256 d7cb36be0bc2420fddf039d3a09af137ce889970d66ce2e7e2aadbd42ab6acad fbi-1.31-r2.ebuild 1259
+MD5 044d66cfdfb2073f49c6e380c6c7692b fbi-1.31.ebuild 947
+RMD160 f6e924de65dbe0cfb38cb71a1e77081aaf1b276b fbi-1.31.ebuild 947
+SHA256 5ba3f346fd6dc48e01859ee8966e18a7e0879eaf842382cbc08b64bda7159d09 fbi-1.31.ebuild 947
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31 59
+RMD160 543a517b2b1da63a9926164a16e5adcf56970ca9 files/digest-fbi-1.31 59
+SHA256 0af0a9eefd273dd207d55b34aad81922adaef31edaa42f226c42dd67059a86be files/digest-fbi-1.31 59
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r1 59
+RMD160 543a517b2b1da63a9926164a16e5adcf56970ca9 files/digest-fbi-1.31-r1 59
+SHA256 0af0a9eefd273dd207d55b34aad81922adaef31edaa42f226c42dd67059a86be files/digest-fbi-1.31-r1 59
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r2 59
+RMD160 543a517b2b1da63a9926164a16e5adcf56970ca9 files/digest-fbi-1.31-r2 59
+SHA256 0af0a9eefd273dd207d55b34aad81922adaef31edaa42f226c42dd67059a86be files/digest-fbi-1.31-r2 59
 MD5 48eb48a849785597bbb4023d5e67507e files/fbi-1.31-strsignal.patch 308
+RMD160 4ca2f3b52a05c701a4e25bca56fda317ec4afc0b files/fbi-1.31-strsignal.patch 308
+SHA256 fc5a77408b1c71e8ea29c3a3a83e3d8c5096e10cf6a8b74cdacd592edc3a330a files/fbi-1.31-strsignal.patch 308
 MD5 784a957950cb4e63c0f58c4988e75d84 files/libexif-0.6.patch 1489
+RMD160 ac4650d31b5b268ed0a9c941a9a4ad173d8155e8 files/libexif-0.6.patch 1489
+SHA256 9249abb6270ce42a16795b3a185233062f2ebc53d049a26a77f4ed5c3f13ed61 files/libexif-0.6.patch 1489
 MD5 7fc77b947cec0d01897854f31eb34b31 metadata.xml 367
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwVXCcsIHjyDViGQRAjd4AKDOHcPeeyESXm8SkTAsNfBlfxAXDACgwzO7
-nFHmKHGv5lmlXi5ozZ0iSJY=
-=U3Jb
------END PGP SIGNATURE-----
+RMD160 d5da0fb5d292045c811cc29e3ea8b2a058e628fd metadata.xml 367
+SHA256 5b39ed76bcd112fbdeda2e91a0654c51381dcb2ac06ade669b66f179c14bea20 metadata.xml 367

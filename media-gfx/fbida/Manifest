@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d69bffaa675bb236ce5daacd99ebe14a ChangeLog 1132
+MD5 0f43647e134eaa087d22a5e3c68c1129 ChangeLog 1234
+RMD160 389b9ee81aa256b56abc2e51be2053ef522dc3ba ChangeLog 1234
+SHA256 cf51395d15f46a4dc2a827b88b2fe7738852a2fc57ce512740de0bc2b20c8519 ChangeLog 1234
 MD5 e37647448ea8b48da72c3d30b5f4defe fbida-2.03-r1.ebuild 1529
-MD5 a0abba1e77e01c06195dda96f8b9e33b fbida-2.03.ebuild 1645
+RMD160 667ebefb70de9e9e9c56db55500c81be74700f25 fbida-2.03-r1.ebuild 1529
+SHA256 65bb137440918cd8b994356ba66c2250804bbe557d3aa01315f0f2843f69c61a fbida-2.03-r1.ebuild 1529
+MD5 36c58d96d5515ed0fdf8d3221a7f66f8 fbida-2.03.ebuild 1628
+RMD160 f4110b0d4b5143cf3da9950b15368c0413b86de2 fbida-2.03.ebuild 1628
+SHA256 37f87452a8dab3b8be1d9d87502b76d34f5db426ff908f54c07690ff0b6a38db fbida-2.03.ebuild 1628
 MD5 bfb6e027022ffa3822ed655578c0046f files/digest-fbida-2.03 62
+RMD160 f82befbb0807fe2a10f24f0b7d34e0ae35fa597c files/digest-fbida-2.03 62
+SHA256 799f41a2f2b9a0daea8119d9142a1e467ef8b9aa211a44c9d1081ad4b4d4283b files/digest-fbida-2.03 62
 MD5 bfb6e027022ffa3822ed655578c0046f files/digest-fbida-2.03-r1 62
+RMD160 f82befbb0807fe2a10f24f0b7d34e0ae35fa597c files/digest-fbida-2.03-r1 62
+SHA256 799f41a2f2b9a0daea8119d9142a1e467ef8b9aa211a44c9d1081ad4b4d4283b files/digest-fbida-2.03-r1 62
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkZ78chej4aZK9/cRAoWlAJ4p1sx940m3liCTpIwb2++a2WEa3ACfZquX
-YvIS658VtSct8dPIdsLr8pM=
-=6t9B
------END PGP SIGNATURE-----
+RMD160 90fef1dff5d0b3945073e90bb7ffec583ff1bbe8 metadata.xml 221
+SHA256 fd573abb9cf89f320d00d1c107a25a46a5dfba633087d4179d0b8bd9aa539c8e metadata.xml 221
