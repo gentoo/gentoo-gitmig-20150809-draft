@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bafa99bab2264172d75e1e9219cd454d ChangeLog 6156
 MD5 4e849da55bb77ace50565fad72f2621f cyrus-imap-admin-2.2.10.ebuild 2033
 MD5 a378d114b78c41566ba7e951bd4b03d3 cyrus-imap-admin-2.2.12.ebuild 2069
@@ -8,3 +11,10 @@ MD5 5a1c49cf6018aa400e8836ee03238140 files/digest-cyrus-imap-admin-2.2.10 71
 MD5 28d9bdef56c61af75a28f8ae2ea2b5c7 files/digest-cyrus-imap-admin-2.2.12 71
 MD5 0b3de6cdb50c6422f35588a9f8a5c5dc files/digest-cyrus-imap-admin-2.3.1 70
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxBp55FrxP71izLARAnxEAKC9qFHmZDHS77+ZnaB+wLGuo43IcACgrYmd
+GVPONx7c3Q6zZG9jwyqHe7o=
+=irIG
+-----END PGP SIGNATURE-----
