@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.ebuild,v 1.3 2006/01/05 18:39:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.ebuild,v 1.4 2006/01/10 05:59:06 spyderous Exp $
 
 inherit eutils
 
@@ -102,7 +102,7 @@ pkg_postinst() {
 	echo
 
 	ewarn "Please read the modular X migration guide at"
-	ewarn "http://dev.gentoo.org/~spyderous/xorg-x11/migrating_to_modular_x_howto.txt"
+	ewarn "http://www.gentoo.org/proj/en/desktop/x/x11/modular-x-howto.xml"
 	echo
 	einfo "If you encounter any non-configuration issues, please file a bug at"
 	einfo "http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux"
