@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.2.ebuild,v 1.1 2006/01/10 00:11:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.2.ebuild,v 1.2 2006/01/10 18:39:37 vanquirius Exp $
 
 inherit java-pkg eutils
 
@@ -34,13 +34,14 @@ src_install() {
 		dohtml -r "${WORKDIR}"/aoi_manual/
 	fi
 
-	# plugins and scripts
-	dodir /usr/share/${PN}/lib
-	mv Plugins "${D}"/usr/share/${PN}/lib
-	mv Scripts "${D}"/usr/share/${PN}
-
 	# main app
-	mv ArtOfIllusion.jar "${D}"/usr/share/${PN}/lib
+	java-pkg_dojar ArtOfIllusion.jar
+
+	# plugins
+	mv Plugins "${D}"/usr/share/${PN}/lib
+
+	# scripts
+	mv Scripts "${D}"/usr/share/${PN}
 
 	# icon
 	mv Icons/64x64.png Icons/aoi.png
