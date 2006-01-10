@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.15 2006/01/10 14:01:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.1 2006/01/10 14:01:04 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -17,11 +17,11 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="-* alpha amd64 arm hppa ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
 samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts asf
-ffmpeg debug"
+ffmpeg debug modplug"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
 	X? ( || ( (
@@ -57,6 +57,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051120 )
+	modplug? ( media-libs/libmodplug )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -210,10 +211,10 @@ src_compile() {
 		\
 		$(use_enable asf) \
 		$(use_enable win32codecs w32dll) \
+		$(use_enable modplug) \
 		$(use_with ffmpeg external-ffmpeg) \
 		--disable-polypaudio \
 		--disable-optimizations \
-		--disable-modplug \
 		${myconf} \
 		--with-w32-path=/usr/lib/win32 \
 		--disable-dependency-tracking || die "econf failed"
