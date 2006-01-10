@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.5 2006/01/09 23:19:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.6 2006/01/10 19:56:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,15 +21,26 @@ KEYWORDS="-* amd64 x86"
 IUSE="alsa opengl dedicated"
 RESTRICT="nostrip"
 
-DEPEND="app-arch/bzip2
-	app-arch/tar"
 RDEPEND="sys-libs/glibc
-	!amd64? ( media-libs/libsdl )
-	amd64? ( app-emulation/emul-linux-x86-sdl
+	!amd64? (
+		media-libs/libsdl )
+	amd64? (
+		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-xlibs )
-	opengl? ( virtual/opengl )
-	dedicated? ( app-misc/screen )
-	alsa? ( >=media-libs/alsa-lib-1.0.6 )"
+	opengl? (
+		virtual/opengl
+		x86? (
+			|| (
+				(
+					x11-libs/libXext
+					x11-libs/libX11
+					x11-libs/libXau
+					x11-libs/libXdmcp )
+				virtual/x11 ) ) )
+	dedicated? (
+		app-misc/screen )
+	alsa? (
+		>=media-libs/alsa-lib-1.0.6 )"
 
 S=${WORKDIR}
 
@@ -84,6 +95,6 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	einfo "To play the game run:"
-	einfo " quake4"
+	einfo " quake4-demo"
 	echo
 }
