@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.21 2006/01/02 21:15:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.22 2006/01/10 17:28:56 fmccor Exp $
+
+  10 Jan 2006; Ferris McCormick <fmccor@gentoo.org>
+  activerecord-1.13.2.ebuild:
+  Stable on sparc (part of rails).
 
   02 Jan 2006; Caleb Tennis <caleb@gentoo.org> activerecord-1.13.2.ebuild:
   x86 stable
