@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvorbis
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.59 2005/10/16 18:56:10 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.60 2006/01/10 01:21:07 metalgod Exp $
+
+*libvorbis-1.1.2 (10 Jan 2006)
+
+  10 Jan 2006; Luis Medinas <metalgod@gentoo.org> +libvorbis-1.1.2.ebuild:
+  Version Bump. Update Homepage thanks to Thomas Cort <tcort@cs.ubishops.ca>.
+  Closes bug #117980.
 
   16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> libvorbis-1.1.0.ebuild,
   libvorbis-1.1.1.ebuild:
