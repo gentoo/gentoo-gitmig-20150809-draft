@@ -1,10 +1,10 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.0.11.ebuild,v 1.1 2006/01/10 00:36:06 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.0.11.ebuild,v 1.2 2006/01/10 01:36:38 iluxa Exp $
 
 inherit autotools
 
-IUSE="fltk odbc doc"
+IUSE="fltk odbc doc sqlite3"
 
 DESCRIPTION="C++ user interface toolkit for X with database and Excel support"
 SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~sparc ~mips ~amd64 ~ppc"
 
 DEPEND="fltk? ( x11-libs/fltk )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
+	sqlite3? ( >=dev-db/sqlite-3 )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
@@ -30,11 +31,11 @@ src_compile() {
 	local myconf
 	myconf="--enable-shared"
 
-	use odbc || myconf="${myconf} --disable-odbc" #default enabled
-	use fltk || myconf="${myconf} --disable-fltk"
-
 	econf \
 		--prefix=/usr \
+		`use_enable odbc` \
+		`use_enable fltk` \
+		`use_enable sqlite3` \
 		${myconf} || die "Configuration Failed"
 
 	emake || die "Parallel Make Failed"
