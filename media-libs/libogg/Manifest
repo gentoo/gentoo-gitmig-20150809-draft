@@ -1,10 +1,22 @@
-MD5 cd5454a52eca5720e627a3001d702c25 libogg-1.0.ebuild 1249
-MD5 50b684b77c1b80fa4d0235335a0feba8 libogg-1.1.1.ebuild 869
-MD5 71e7782a6d1ab64fa5600b53d058f025 libogg-1.1.ebuild 860
-MD5 079f165f10e185a681dafe915f945585 libogg-1.1.2.ebuild 661
-MD5 12425660d7612ed337139d35a71b87cb ChangeLog 4316
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f901cb70b6af2e9a904ead07ba4c12aa ChangeLog 4520
 MD5 cbb43595399aa585c5246a9fa024dfc6 files/digest-libogg-1.0 62
 MD5 12db5904065ddca9ba537a41acabe033 files/digest-libogg-1.1 62
 MD5 4d79721bf9b4c725e460b92e51ac0db7 files/digest-libogg-1.1.1 64
 MD5 cdafb2eb72c29878b8f8909e35641486 files/digest-libogg-1.1.2 64
+MD5 97ec70bcef26aacda46bbfc3607903f0 files/digest-libogg-1.1.3 64
+MD5 cd5454a52eca5720e627a3001d702c25 libogg-1.0.ebuild 1249
+MD5 50b684b77c1b80fa4d0235335a0feba8 libogg-1.1.1.ebuild 869
+MD5 079f165f10e185a681dafe915f945585 libogg-1.1.2.ebuild 661
+MD5 e4fa5043177bac54a516942e5faca8bb libogg-1.1.3.ebuild 653
+MD5 71e7782a6d1ab64fa5600b53d058f025 libogg-1.1.ebuild 860
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwwr/wUpWvClEHQoRAsMyAKCEyvGOy0rIsn1/M8BOfkvEWZEddwCfT38c
+G80asuTgC42qbmzIykN3Ejg=
+=ZTGr
+-----END PGP SIGNATURE-----
