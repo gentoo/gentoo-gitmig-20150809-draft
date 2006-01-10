@@ -22,6 +22,7 @@ afs
 lesstif
 mono
 pike
+lirc
 
 # Luca Longinotti <chtekk@gentoo.org>
 # fix dev-lang/php + arm + firebird
