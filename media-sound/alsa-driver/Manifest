@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3770fdcc5e708716e04e602a26261f26 ChangeLog 31594
+MD5 a32a4332826533f535dd72055cbaac72 ChangeLog 31729
 MD5 4d36586e82b663b31cef834a9fa0d38b alsa-driver-1.0.10-r1.ebuild 4720
 MD5 ebd180c4a898e9bf0fe0cb8f9dc2b0d6 alsa-driver-1.0.10.ebuild 4620
 MD5 05d84ba8681d1e857e581caf97e6db59 alsa-driver-1.0.10_rc3.ebuild 4675
 MD5 f5876b8d1e91f7d645382d6253115ab7 alsa-driver-1.0.11_rc1.ebuild 4667
-MD5 2765f9471b2dabeeb2b4e5ff25e6f6ce alsa-driver-1.0.11_rc2.ebuild 4817
+MD5 b5bd7bc1ec66ddda7d1f80da354eac41 alsa-driver-1.0.11_rc2.ebuild 4870
 MD5 35dddcb56c05ef64f654c2d1172c4ee8 alsa-driver-1.0.3.ebuild 3315
 MD5 0fe348cacf24ca2c86c34e6adb263358 alsa-driver-1.0.9b.ebuild 4552
 MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
@@ -30,7 +30,7 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDw6X+AiZjviIA2XgRAob9AKDvFr03nPFL3HL/o3Qa8/I5BApL/gCgsguV
-4E/skzGgM0EwMvhP5rmn2u4=
-=W/sr
+iD8DBQFDw6x/AiZjviIA2XgRAq4zAJ90jN97fuFv6ho/GwmakDkcUgNR6wCeInVq
+TzfVxq3rculerJ/VzMyF/wI=
+=rxEe
 -----END PGP SIGNATURE-----
