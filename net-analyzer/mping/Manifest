@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e346adbb4ae09f45b3d375ae04822395 ChangeLog 769
+MD5 dda310823b9d9d5393821c6bd2ece2cb ChangeLog 908
+MD5 5725ef7224452a2a181534d29a0c64fe files/digest-mping-2.01 62
 MD5 c4cb24ed5c26ed05c8d4a164d5e9fe6b files/digest-mping-2.0_rc1 65
 MD5 4a552cfffe105cd4631ce00ed0bb4e61 metadata.xml 597
+MD5 20174ff10616d134384935ef856acf57 mping-2.01.ebuild 523
 MD5 8934eeae4b46e0eebf658145e321eeea mping-2.0_rc1.ebuild 524
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwvse2+ySkm8kpY0RAhxuAKCnQH7J+wlCHNq3MsI6yU7LQqfQxwCeNyEE
-yG3wApETBylJVtNMRvj/d7Y=
-=LfgS
+iD8DBQFDwvuQ2+ySkm8kpY0RAh2YAKDEBXhi7SLiZKrqt/Cti6jnHOvjeQCeJ7ih
+rhJEn8l4CbsoFpqwXK6ogmo=
+=deje
 -----END PGP SIGNATURE-----

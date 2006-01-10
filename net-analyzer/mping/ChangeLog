@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mping
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.7 2005/12/04 20:35:55 tgall Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.8 2006/01/10 00:09:30 vapier Exp $
+
+*mping-2.01 (10 Jan 2006)
+
+  10 Jan 2006; Mike Frysinger <vapier@gentoo.org> +mping-2.01.ebuild:
+  Version bump #118452 by Marcelo Goes.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> mping-2.0_rc1.ebuild:
   stable on ppc64
