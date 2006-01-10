@@ -1,8 +1,18 @@
-MD5 346a9aab6cb248f6138c91c55eff079e ChangeLog 2857
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3d30875bd2ee54e064eca277563588a ChangeLog 2948
 MD5 3591740d02797f38dbbd39d62ad8e1b0 files/digest-httping-1.0.10 62
 MD5 f378aa4539af72c42f3b324667c520d6 files/digest-httping-1.0.7 60
 MD5 6cfac95ce4e1540c38b42b2b3e982897 files/digest-httping-1.0.8 61
 MD5 1034da0a0d4f97ec09cd2e2095b68284 httping-1.0.10.ebuild 859
 MD5 966c5de6a0c4d992e273edd6a2b8b1bf httping-1.0.7.ebuild 850
-MD5 d17d82aa844a70b20fe868bdd14d57d8 httping-1.0.8.ebuild 857
+MD5 f5d8af668df955c5c8f3da3e0a4a09b9 httping-1.0.8.ebuild 850
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDw/SzomPajV0RnrERAklKAJ4wHzywmot7c7LgiFUm95NP15+skgCZAQHC
+uCdD9fSaWvLnyaANgVO2t14=
+=3gpU
+-----END PGP SIGNATURE-----
