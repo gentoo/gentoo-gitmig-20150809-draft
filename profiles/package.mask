@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4847 2006/01/10 20:28:51 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4848 2006/01/10 21:10:19 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -276,10 +276,6 @@ net-wireless/kwirelessmonitor
 # Diego Pettenò <flameeyes@gentoo.org> (02 Dec 2005)
 # API/ABI changes, breaks at least latest amaroK.
 >=media-libs/tunepimp-0.4.0
-
-# Marcelo Goes <vanquirius@gentoo.org> (28 Nov 2005)
-# rpath security issue
-=dev-libs/quantlib-0.3.11
 
 # J. Alberto Suarez <bass@gentoo.org> (27 Nov 2005)
 # Pending removal, will be substituted by ebookmerge
