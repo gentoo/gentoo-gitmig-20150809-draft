@@ -22,7 +22,7 @@ MD5 624541a36c1aae85e3999078d2468215 files/mysql-slot.conf.d-r1 2999
 MD5 85181f07f661daa335fb489aa388cf8d files/mysql-slot.conf.d-r2 3816
 MD5 2e915001528cb4b44591d907168b6a51 files/mysql-slot.rc6 8691
 MD5 8158f25fbd80fba48f0d01b0889ea0b3 files/mysql-slot.rc6-r1 9016
-MD5 be6b10d0ea0dc4e368728447bd64b59a files/mysql-slot.rc6-r2 7824
+MD5 c47178d1724ceeaac0277fbe54107803 files/mysql-slot.rc6-r2 7828
 MD5 73be6460f548f6f73c70246a4cfd13a0 files/mysql.init 886
 MD5 9ff84042930f67b14f418a9dcf78d860 files/mysqlmanager-slot.conf.d 1021
 MD5 69488d8c4aca1adf37e4c24b39305487 files/mysqlmanager-slot.rc6 6614
