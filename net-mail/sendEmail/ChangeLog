@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sendEmail
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.5 2005/06/09 20:32:43 humpback Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.6 2006/01/10 17:01:33 dang Exp $
+
+  10 Jan 2006; <dang@gentoo.org> sendEmail-1.52.ebuild:
+  Marked ~amd64 per bug# 118336
 
 *sendEmail-1.52 (09 Jun 2005)
 

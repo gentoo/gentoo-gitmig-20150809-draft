@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c877d01ddfd636723362a6b21a7575fa ChangeLog 710
-MD5 b9f68f9955ecadf0fa14e09373804b67 metadata.xml 696
-MD5 8921ab45cb985cdaff9b5b1a8e8e6c23 sendEmail-1.42.ebuild 645
-MD5 f0de688ddc2363c1f6e5cb4e5b569ce1 sendEmail-1.52.ebuild 646
+MD5 bf8e58e93e170092eb3870e5aa4d71bc ChangeLog 795
 MD5 09a6b718ff080adf3ca92b588f56b8e8 files/digest-sendEmail-1.42 66
 MD5 58ad8706f456ecc7c405a066f2574f96 files/digest-sendEmail-1.52 66
+MD5 b9f68f9955ecadf0fa14e09373804b67 metadata.xml 696
+MD5 8921ab45cb985cdaff9b5b1a8e8e6c23 sendEmail-1.42.ebuild 645
+MD5 1cee015000231a6262d083b7ef3c7e94 sendEmail-1.52.ebuild 649
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCqLSR8zY1VwezZiERAjvkAJ0bSjxtZ0aKryBpGKpq+6Rpcx5KhgCdFdCx
-mT+xXQwrR6hLo7714E5jMPg=
-=Bbq9
+iD4DBQFDw+ieomPajV0RnrERAkllAJ98mILrvIROpCnnoxGB9lkfvL9LwgCXZ07O
+1f4eTdD46nhzWlDtHLiWmQ==
+=ApFS
 -----END PGP SIGNATURE-----
