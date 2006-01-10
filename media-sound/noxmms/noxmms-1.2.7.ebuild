@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/noxmms-1.2.7.ebuild,v 1.7 2005/04/18 15:40:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/noxmms-1.2.7.ebuild,v 1.8 2006/01/10 09:40:54 jer Exp $
 
 
 DESCRIPTION="a stripped down (command line only) version of XMMS."
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc sparc"
 IUSE="vorbis esd 3dnow nls"
 
-DEPEND="vorbis? ( media-libs/libvorbis )
+DEPEND="=dev-libs/glib-1.2*
+	vorbis? ( media-libs/libvorbis )
 	esd? ( media-sound/esound )"
 RDEPEND="${DEPEND}
 	nls? ( dev-util/intltool )"

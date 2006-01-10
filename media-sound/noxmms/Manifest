@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4ff34f050ef1cbb0f0fccb132fea3caa noxmms-1.2.7.ebuild 1200
-MD5 97c772c0d5c523fbdcf9abf81f704d73 ChangeLog 1126
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7bc495b73ccf991c7a042b3b2c089126 ChangeLog 1300
 MD5 589aef8c3c91720720d7fd9c473db41d files/digest-noxmms-1.2.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCY9Uf06ebR+OMO78RAo3gAJwKbVBP+OHqkm+pAV7Jkgc3JzjXfQCfXOUR
-ciSybbJOgBIt2yNrAwHgjT4=
-=rhnE
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 b21eb54714f18ae5563604af95697e5f noxmms-1.2.7.ebuild 1215

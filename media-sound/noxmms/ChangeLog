@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/noxmms
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/ChangeLog,v 1.8 2005/04/18 15:40:49 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/ChangeLog,v 1.9 2006/01/10 09:40:54 jer Exp $
+
+  10 Jan 2006; Jeroen Roovers <jer@gentoo.org> noxmms-1.2.7.ebuild:
+  Adding glib-1.2 to DEPEND, fixes bug #118497, thanks to loopy and
+  @Ginsu_Squirrel of #gentoo for noticing.
 
   18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> noxmms-1.2.7.ebuild:
   modified message in pkg_postinst, fixes #89210. also moved oggvorbis useflag
