@@ -1,4 +1,7 @@
-MD5 aacb40b2ecc02af2d41b77d8ef9e10e9 ChangeLog 5486
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8093fa453dc36dbcdc306c28ded42bf5 ChangeLog 5664
 MD5 0d386d3861b6fc42122c42da4bef26f8 files/1.3.27/vdr-1.3.27-SourceCaps-lnb-sharing.diff 7138
 MD5 f45571c5192376c05c3acc204fbdfef8 files/1.3.27/vdr-1.3.27-SourceCaps.diff 7152
 MD5 05d546888439560f03f1857d32af2062 files/1.3.34/SourceCaps-1.3.33-lnb-sharing.patch 7959
@@ -26,5 +29,12 @@ MD5 16d2aa27664f631787066edf0ed9a276 vdr-1.3.34-r1.ebuild 4415
 MD5 84538ae48b983c06e43d26f19f29b1ca vdr-1.3.34-r2.ebuild 4461
 MD5 c32310e782ca4a6b34f0ff48c3abb6d0 vdr-1.3.34.ebuild 4149
 MD5 514b263098bc3d78d509c7438f9e6c7d vdr-1.3.36-r1.ebuild 4761
-MD5 efe95fa06787c09ef9132a8d44b7a54f vdr-1.3.36-r2.ebuild 4747
+MD5 715bda6e90ec8940be1e22bf47729ef4 vdr-1.3.36-r2.ebuild 4836
 MD5 fc877f5af6daffeec70f1e60a4de19ae vdr-1.3.36.ebuild 4720
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDw3T2ZfSl1Kp5KmoRAg/qAJ4/94nmJXVVq1Ec4HbYEVaGh5Q65QCfRIG+
+Gwv4YDYRoAJ/XlmnCbU0jow=
+=2jtO
+-----END PGP SIGNATURE-----
