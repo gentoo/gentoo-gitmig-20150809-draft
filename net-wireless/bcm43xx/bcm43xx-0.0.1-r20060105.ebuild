@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060105.ebuild,v 1.1 2006/01/05 22:44:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060105.ebuild,v 1.2 2006/01/10 13:14:03 pylon Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PN}-${PVR}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 
 IUSE="debug"
 DEPEND=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ieee80211softmac-0.1-r20060105.ebuild,v 1.1 2006/01/05 22:37:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ieee80211softmac-0.1-r20060105.ebuild,v 1.2 2006/01/10 13:12:35 pylon Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PN}-${PVR}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="!net-wireless/ieee80211
 		|| ( >=gentoo-sources-2.6.15 >=vanilla-sources-2.6.15 )"

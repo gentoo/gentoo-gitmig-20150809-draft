@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ieee80211softmac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ChangeLog,v 1.1 2006/01/05 22:37:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ChangeLog,v 1.2 2006/01/10 13:12:35 pylon Exp $
+
+  10 Jan 2006; Lars Weiler <pylon@gentoo.org>
+  ieee80211softmac-0.1-r20060105.ebuild:
+  Works with the BCM4306 on an x86 laptop.
 
   05 Jan 2006; Danny van Dyk <kugelfang@gentoo.org> ChangeLog:
   Added initial ebuild. As of this version, ieee80211softmac supports handling
