@@ -1,9 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99c286ec40e56b951ef47593c13d424a ChangeLog 19823
+MD5 8d3753f2bf55c9c059006714dc4fd196 ChangeLog 19993
 MD5 93bafe0822c28a1489ff302d21f37124 alsa-utils-1.0.10.ebuild 2418
-MD5 42098df4cac5e904a14bf519e7cbfcb6 alsa-utils-1.0.11_rc1.ebuild 2511
 MD5 5d8368331e88ae9656d9a0cc1a518f94 alsa-utils-1.0.11_rc2.ebuild 2427
 MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
 MD5 d9b19e1fc31acdd0b7091ce79400ce85 alsa-utils-1.0.9a-r1.ebuild 2525
@@ -11,22 +7,13 @@ MD5 8bf806386c8a966605549b7a91fd9131 alsa-utils-1.0.9a.ebuild 2343
 MD5 954b0951b5fed9bf591abf9e7cc1963e files/alsa-modules.conf-rc 1162
 MD5 6945018085dd4204d2f26490fb7b50b6 files/alsa-utils-1.0.10_rc1-largefile.patch 445
 MD5 4d2059fdfeeafe53e5d42692d9c2f14e files/alsa-utils-1.0.10_rc1-nls.patch 1959
-MD5 708596a63b1150ac0b58f031622e0e27 files/alsa-utils-1.0.11_rc1-bigendian.patch 492
 MD5 504c2047f55a094833631892ab099ada files/alsa-utils-1.0.9a-strsignal.patch 454
 MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
 MD5 6e3b02ef9e95e47eb339f6a3d0d91daa files/alsasound-1.0.10_rc2 7183
 MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
 MD5 a86ec4a87712d028c83f9066f4505551 files/digest-alsa-utils-1.0.10 70
-MD5 d2d3bb29084e36b9640b5cc937e16201 files/digest-alsa-utils-1.0.11_rc1 73
 MD5 d97909af462b2d708b5c64c15d4983d6 files/digest-alsa-utils-1.0.11_rc2 73
 MD5 ec6210532acb9b397bacb3eb81f7593a files/digest-alsa-utils-1.0.8 69
 MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
 MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a-r1 70
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDudstCRZPokWLroQRArkNAKDRORB1W13tf8DR3gq4+FS0T+Sx0QCfcl+g
-r1932/lTfP8FvJm8Hkh6OxA=
-=bU1E
------END PGP SIGNATURE-----
