@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/qcad-parts
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/ChangeLog,v 1.4 2005/08/27 23:39:40 cryos Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/ChangeLog,v 1.5 2006/01/10 03:14:43 markusle Exp $
+
+*qcad-parts-2.0.1.2-r1 (10 Jan 2006)
+
+  10 Jan 2006; Markus Dittrich <markusle@gentoo.org>
+  +qcad-parts-2.0.1.2-r1.ebuild:
+  Use doins to install files in order to avoid world writable files.
+  This fixes bug #114207.
 
   24 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
   qcad-parts-2.0.1.2.ebuild:
