@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.1 2005/11/12 16:11:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.2 2006/01/10 20:08:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,8 +17,14 @@ RESTRICT="nostrip"
 
 DEPEND=""
 RDEPEND="virtual/opengl
-	virtual/x11
-	amd64? ( app-emulation/emul-linux-x86-xlibs
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext )
+			virtual/x11 ) )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-sdl
 		>=sys-libs/lib-compat-loki-0.2 )"
@@ -103,8 +109,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To play the game run:"
 	einfo " descent3"
-
-	games_pkg_postinst
+	echo
 }
