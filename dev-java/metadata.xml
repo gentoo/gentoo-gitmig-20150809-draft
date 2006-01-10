@@ -32,5 +32,9 @@
 	<longdescription lang="it">
 		La categoria dev-java contiene librerie ed utilità per il linguaggio Java.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria dev-java contém bibliotecas e utilitários para a
+		linguagem de programação Java.
+	</longdescription>
 </catmetadata>
 
