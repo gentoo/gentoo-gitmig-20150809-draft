@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc2.ebuild,v 1.3 2006/01/10 12:45:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc2.ebuild,v 1.4 2006/01/10 19:46:55 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -58,8 +58,8 @@ pkg_setup() {
 	fi
 
 	if kernel_is ge 2 6 15; then
-		CONFIG_CHECK="${CONFIG_CHECK} CONFIG_PM_LEGACY"
-		CONFIG_PM_LEGACY_ERROR="You must enable CONFIG_PM_LEGACY to build alsa-driver with recent kernels."
+		CONFIG_CHECK="${CONFIG_CHECK} PM_LEGACY"
+		PM_LEGACY_ERROR="You must enable CONFIG_PM_LEGACY to build alsa-driver with recent kernels."
 	fi
 
 	linux-mod_pkg_setup
