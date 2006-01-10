@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.5 2005/12/18 18:45:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.6 2006/01/10 11:18:29 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -58,7 +58,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 pkg_setup() {
-	if has_version x11-base/xorg-x11 && ! built_with_use x11-base/xorg-x11 xv; then
+	if has_version '<x11-base/xorg-x11-7.0' && ! built_with_use x11-base/xorg-x11 xv; then
 		die "You need xorg-x11 emerged with xv support to compile transcode."
 	fi
 }
@@ -68,7 +68,8 @@ src_unpack() {
 	cd ${S}
 
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
-		${S}/docs/Makefile.am ${S}/docs/html/Makefile.am
+		${S}/Makefile.am ${S}/docs/Makefile.am ${S}/docs/html/Makefile.am \
+		${S}/docs/release-notes/Makefile.am
 
 	epatch "${FILESDIR}/${P}-bigdir.patch"
 	epatch "${FILESDIR}/${P}-lzo2.patch"

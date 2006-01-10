@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.131 2006/01/02 17:52:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.132 2006/01/10 11:18:29 flameeyes Exp $
+
+  10 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-1.0.2-r1.ebuild:
+  Fix check for xv support in xorg-x11 as per bug #118066. Fix documentation
+  installation as per bug #117022.
 
   02 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   transcode-0.6.14-r3.ebuild:
