@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
-MD5 6ccc27fa28dca8fd95ee86b1f89cb0e8 libuninameslist-20030713.ebuild 647
-MD5 f33afb516a57259b907a4616f845b0d1 ChangeLog 1110
+MD5 22d3d1df81ec706eaeca5f4458487f94 ChangeLog 1216
 MD5 d292cf9e7817ff76bfd60f577fad60e1 files/digest-libuninameslist-20030713 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDC4bXKRy60XGEcJIRAuGDAJ44R2J7pobRwhQEf/OMCfv+WYRgVACfbzNF
-DZ0mw/bSqA8IYFtB2MyG6fc=
-=kw1X
------END PGP SIGNATURE-----
+MD5 797f051d192b4bce8e2e13eadd50a3b3 libuninameslist-20030713.ebuild 651
+MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175

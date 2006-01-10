@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.8 2005/08/23 20:27:32 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.9 2006/01/10 18:49:33 hansmi Exp $
+
+  10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  libuninameslist-20030713.ebuild:
+  Added to ~hppa.
 
   23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libuninameslist-20030713.ebuild:
