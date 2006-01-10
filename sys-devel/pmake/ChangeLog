@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.26 2005/08/01 21:31:21 kito Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.27 2006/01/10 10:51:53 flameeyes Exp $
+
+  10 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> pmake-1.111.1.ebuild:
+  Fix typo, thanks to Emanuele Giaquinta in bug #118499.
 
   01 Aug 2005; Kito <kito@gentoo.org> pmake-1.111.1.ebuild:
   ~ppc-macos, add conditional to install bsdmake symlinks on darwin

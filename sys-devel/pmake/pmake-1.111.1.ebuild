@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.1.ebuild,v 1.2 2005/08/01 21:31:21 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.1.ebuild,v 1.3 2006/01/10 10:51:53 flameeyes Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -71,6 +71,6 @@ src_install() {
 		dosym pmake.1.gz /usr/share/man/man1/make.1.gz
 	elif [[ "${USERLAND}" == "Darwin" ]]; then
 		dosym pmake /usr/bin/bsdmake
-		doym pmake.1.gz /usr/share/man/man1/bsdmake.1.gz
+		dosym pmake.1.gz /usr/share/man/man1/bsdmake.1.gz
 	fi
 }
