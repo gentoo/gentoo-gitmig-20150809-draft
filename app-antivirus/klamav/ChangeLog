@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/klamav
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.9 2005/12/03 21:09:24 carlo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.10 2006/01/10 00:07:45 flameeyes Exp $
+
+  10 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/klamav-0.32-parallelmake.patch, klamav-0.32.ebuild:
+  Added patch to fix parallel make issues, bug #115912.
 
 *klamav-0.32 (03 Dec 2005)
 
