@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.23 2006/01/02 21:16:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.24 2006/01/10 17:32:39 fmccor Exp $
+
+  10 Jan 2006; Ferris McCormick <fmccor@gentoo.org>
+  actionmailer-1.1.5.ebuild:
+  Stable on sparc (needed for rails).
 
   02 Jan 2006; Caleb Tennis <caleb@gentoo.org> actionmailer-1.1.5.ebuild:
   x86 stable

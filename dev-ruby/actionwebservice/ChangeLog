@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionwebservice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.22 2006/01/02 21:17:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.23 2006/01/10 17:35:31 fmccor Exp $
+
+  10 Jan 2006; Ferris McCormick <fmccor@gentoo.org>
+  actionwebservice-1.0.0.ebuild:
+  Stable on sparc (needed for rails).
 
   02 Jan 2006; Caleb Tennis <caleb@gentoo.org>
   actionwebservice-1.0.0.ebuild:
