@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/acct
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.7 2005/10/04 23:48:37 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.8 2006/01/10 00:20:00 vapier Exp $
+
+  10 Jan 2006; Mike Frysinger <vapier@gentoo.org> +files/acct.confd,
+  files/acct.rc6, acct-6.3.5-r2.ebuild:
+  Add some custom init.d options by Hubert MERCIER #118399.
 
 *acct-6.3.5-r2 (04 Oct 2005)
 

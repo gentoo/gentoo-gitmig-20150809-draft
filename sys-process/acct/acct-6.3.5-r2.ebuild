@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5-r2.ebuild,v 1.1 2005/10/04 23:48:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5-r2.ebuild,v 1.2 2006/01/10 00:20:00 vapier Exp $
 
 inherit eutils
 
@@ -33,4 +33,5 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL NEWS README ToDo
 	keepdir /var/account
 	newinitd "${FILESDIR}"/acct.rc6 acct
+	newconfd "${FILESDIR}"/acct.confd acct
 }
