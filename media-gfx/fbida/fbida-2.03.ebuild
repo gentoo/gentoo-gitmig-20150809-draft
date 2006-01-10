@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03.ebuild,v 1.3 2005/03/23 14:06:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.03.ebuild,v 1.4 2006/01/10 11:00:37 ferringb Exp $
 
 DESCRIPTION="Image viewers for the framebuffer console (fbi) and X11 (ida)."
 HOMEPAGE="http://linux.bytesex.org/fbida/"
@@ -13,7 +13,7 @@ IUSE="png jpeg gif tiff curl lirc X fbcon"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	png? ( media-libs/libpng )
-	gif? ( media-libs/giflib media-libs/libungif )
+	gif? ( media-libs/giflib )
 	tiff? ( media-libs/tiff )
 	curl? ( net-misc/curl )
 	lirc? ( app-misc/lirc )
