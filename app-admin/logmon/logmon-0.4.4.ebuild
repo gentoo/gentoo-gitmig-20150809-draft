@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.1 2006/01/07 21:10:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.2 2006/01/10 17:50:50 dang Exp $
 
 MY_P="LogMon-${PV}"
 DESCRIPTION="Split-screen terminal/ncurses based log viewer"
@@ -11,7 +11,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
