@@ -1,0 +1,12 @@
+diff -ruN control-center-1.4.0.5.orig/configure control-center-1.4.0.5/configure
+--- control-center-1.4.0.5.orig/configure	2005-12-07 15:18:41.000000000 -0800
++++ control-center-1.4.0.5/configure	2005-12-07 15:19:46.000000000 -0800
+@@ -8218,7 +8218,7 @@
+        fi
+        for lang in $LINGUAS; do
+          case "$ALL_LINGUAS" in
+-          *$lang*) NEW_LINGUAS="$NEW_LINGUAS $lang" ;;
++          $lang|*\ $lang|$lang\ *|*\ $lang\ *) NEW_LINGUAS="$NEW_LINGUAS $lang" ;;
+          esac
+        done
+        LINGUAS=$NEW_LINGUAS
