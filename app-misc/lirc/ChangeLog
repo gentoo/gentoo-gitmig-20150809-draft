@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.75 2006/01/05 08:54:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.76 2006/01/10 21:05:40 cardoe Exp $
+
+*lirc-0.8.0_pre3 (10 Jan 2006)
+
+  10 Jan 2006; Doug Goldstein <cardoe@gentoo.org> +lirc-0.8.0_pre3.ebuild:
+  Reworked the ebuild a little bit and hopefully fixed the problems people are
+  having with it.
 
   05 Jan 2006; Jeremy Huddleston <eradicator@gentoo.org>
   lirc-0.8.0_pre1.ebuild:
