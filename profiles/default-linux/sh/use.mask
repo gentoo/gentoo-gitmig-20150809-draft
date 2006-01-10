@@ -25,3 +25,5 @@ lesstif
 mono
 gtk
 gnome
+emacs
+doc
