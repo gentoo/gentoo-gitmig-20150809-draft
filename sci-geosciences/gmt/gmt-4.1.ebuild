@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.1.ebuild,v 1.1 2006/01/10 12:34:04 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.1.ebuild,v 1.2 2006/01/10 22:21:44 cryos Exp $
 
 inherit multilib
 
@@ -19,8 +19,6 @@ SRC_URI="ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_progs.tar.bz2
 	gmthigh? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_high.tar.bz2 )
 	gmttria? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/triangle.tar.bz2 )"
 # Needed because GMT_share in version 3 is different of that one in version 4, but they have same name.
-
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
