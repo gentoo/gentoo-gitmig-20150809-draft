@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-sftp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.5 2005/12/06 22:47:57 citizen428 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.6 2006/01/10 14:49:27 caleb Exp $
+
+*net-sftp-1.1.0 (10 Jan 2006)
+
+  10 Jan 2006; Caleb Tennis <caleb@gentoo.org> +net-sftp-1.1.0.ebuild:
+  Version bump
 
 *net-sftp-1.0.1 (06 Dec 2005)
 
