@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/mping-2.0_rc1.ebuild,v 1.9 2005/12/04 20:35:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/mping-2.0_rc1.ebuild,v 1.10 2006/01/10 00:07:37 vapier Exp $
 
 DESCRIPTION="IPv4/6 round-robin multiping client"
 HOMEPAGE="http://mping.uninett.no"
@@ -12,6 +12,6 @@ KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
