@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/vsftpd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.64 2005/10/20 09:50:44 uberlord Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.65 2006/01/10 07:17:30 uberlord Exp $
+
+*vsftpd-2.0.4 (10 Jan 2006)
+
+  10 Jan 2006; Roy Marples <uberlord@gentoo.org> +files/vsftpd.logrotate,
+  +vsftpd-2.0.4.ebuild:
+  logrotate support, #115320.
+  New release, #118464.
 
 *vsftpd-2.0.3-r2 (20 Oct 2005)
 
