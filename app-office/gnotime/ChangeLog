@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnotime
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.13 2005/11/02 07:36:41 obz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.14 2006/01/10 00:39:41 obz Exp $
+
+  10 Jan 2006; Mike Gardiner <obz@gentoo.org> gnotime-2.2.1.ebuild:
+  Fix for #109047, don't build in parallel as it can cause problems with
+  libqofsql.
 
   02 Nov 2005; Mike Gardiner <obz@gentoo.org> gnotime-2.2.1.ebuild:
   Moved dependency on libgtkhtml to get the correct slot (3.1), see bug #110463
