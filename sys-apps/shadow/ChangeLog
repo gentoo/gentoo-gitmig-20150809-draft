@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.124 2006/01/04 02:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.125 2006/01/10 00:00:26 vapier Exp $
+
+*shadow-4.0.14-r1 (10 Jan 2006)
+
+  10 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.14-su-cvs.patch, -shadow-4.0.14.ebuild,
+  +shadow-4.0.14-r1.ebuild:
+  Grab a fix from upstream cvs to fix `su -c boo` syntax #118342 by Wolfgang
+  Frisch.
 
 *shadow-4.0.14 (04 Jan 2006)
 

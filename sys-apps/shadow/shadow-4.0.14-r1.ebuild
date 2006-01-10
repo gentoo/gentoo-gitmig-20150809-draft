@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.14.ebuild,v 1.1 2006/01/04 02:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.14-r1.ebuild,v 1.1 2006/01/10 00:00:26 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -57,6 +57,9 @@ src_unpack() {
 
 	# Patch from upstream enables the new environment too early for PAM
 	epatch "${FILESDIR}"/${PN}-4.0.14-su-fix-environment.patch
+
+	# Patch from upstream fixes `su -c ls` #118342
+	epatch "${FILESDIR}"/${P}-su-cvs.patch
 
 	# Some UCLIBC patches
 	epatch "${FILESDIR}"/${PN}-4.0.11.1-uclibc-missing-l64a.patch
