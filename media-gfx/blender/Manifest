@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2430f47c1115ceefe8448c9079c0d1e0 ChangeLog 10691
+MD5 bfca8ed41a2f16172aebbed9b65777f8 ChangeLog 10793
 MD5 f36308ba7cbae244f796a734dda27867 blender-2.36-r1.ebuild 3314
-MD5 806ada9039d5808872d736fcfa1ddbf5 blender-2.40.ebuild 3469
+MD5 c76d8dc03adc519e284aac863059f8eb blender-2.40.ebuild 3475
 MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
 MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
 MD5 bcc3b86202d4c6bb85ef9cef08bfcf9e files/blender-2.37-dirs.patch 725
@@ -16,10 +13,3 @@ MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
 MD5 8637d60394b1e58d4f4c0fe4b71865fa files/digest-blender-2.40 65
 MD5 493f38fb63d60a1ce275fdd2ea43d6e9 metadata.xml 587
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwC2FCRZPokWLroQRAtzHAKCluPCGBht/rw1s9DRzJ5iEIMXpPgCgs45S
-r0kcWIovOnwm3cEdXQYfqdI=
-=WiE7
------END PGP SIGNATURE-----
