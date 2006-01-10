@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/moto4lin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.6 2006/01/09 14:21:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.7 2006/01/10 14:55:58 r3pek Exp $
+
+  10 Jan 2006; Carlos Silva <r3pek@gentoo.org> moto4lin-0.3.ebuild,
+  moto4lin-0.3_p20051125.ebuild:
+  Applied a fix to make moto4lin use LDFLAGS, CXXFLAGS and CFLAGS
 
   09 Jan 2006; Caleb Tennis <caleb@gentoo.org> moto4lin-0.3.ebuild,
   moto4lin-0.3_p20051125.ebuild:
