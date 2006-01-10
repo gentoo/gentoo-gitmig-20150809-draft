@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpmp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/ChangeLog,v 1.5 2004/12/29 01:50:20 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/ChangeLog,v 1.6 2006/01/10 02:50:37 rl03 Exp $
+
+  10 Jan 2006; Renat Lumpau <rl03@gentoo.org> phpmp-0.11.0.ebuild:
+  Fixed mod_php dependency
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
