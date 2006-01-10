@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/infones
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/infones/ChangeLog,v 1.8 2004/11/24 07:54:26 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/infones/ChangeLog,v 1.9 2006/01/10 01:29:52 vapier Exp $
+
+*infones-0.97 (10 Jan 2006)
+
+  10 Jan 2006; Mike Frysinger <vapier@gentoo.org> +infones-0.97.ebuild:
+  Version bump #118355 by Tupone Alfredo.
 
 *infones-0.93 (23 Nov 2004)
 
