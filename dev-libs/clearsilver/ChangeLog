@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clearsilver
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.18 2005/11/28 13:20:49 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.19 2006/01/10 20:27:59 halcy0n Exp $
+
+  10 Jan 2006; Mark Loeser <halcy0n@gentoo.org> clearsilver-0.10.1.ebuild:
+  Stable on x86; bug #118302
 
   28 Nov 2005; <mcumming@gentoo.org> clearsilver-0.10.1.ebuild,
   clearsilver-0.9.14-r1.ebuild, clearsilver-0.9.7.ebuild:
