@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.154 2005/12/21 00:17:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.155 2006/01/10 05:37:36 dostrow Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -465,6 +465,14 @@ install_headers() {
 			[[ ! -e ${D}/${ddir}/asm/arch ]] && ln -sf arch-ebsa285 "${D}"/${ddir}/asm/arch
 			[[ ! -e ${D}/${ddir}/asm/proc ]] && ln -sf proc-armv "${D}"/${ddir}/asm/proc
 			;;
+		powerpc)
+			dodir ${ddir}/asm
+			cp -ax "${S}"/include/asm/* ${D}/${ddir}/asm
+			if [[ -e "${S}"/include/asm-ppc ]] ; then
+				dodir ${ddir}/asm-ppc
+				cp -ax "${S}"/include/asm-ppc/* ${D}/${ddir}/asm-ppc
+			fi
+			;;	
 		*)
 			dodir ${ddir}/asm
 			cp -ax "${S}"/include/asm/* ${D}/${ddir}/asm
