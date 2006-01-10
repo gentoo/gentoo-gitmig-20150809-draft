@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/aoi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.11 2005/09/15 20:11:19 halcy0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.12 2006/01/10 00:11:39 vanquirius Exp $
+
+*aoi-2.2 (10 Jan 2006)
+
+  10 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  +aoi-2.2.ebuild:
+  2.2 version bump. Hopefully fixes bugs 68175 and 63013. Thanks to all
+  reporters. Note that we are no longer building this from source. Also,
+  adding graphics as a herd.
 
   15 Sep 2005; Mark Loeser <halcy0n@gentoo.org> aoi-1.4.ebuild,
   aoi-1.6.ebuild:
