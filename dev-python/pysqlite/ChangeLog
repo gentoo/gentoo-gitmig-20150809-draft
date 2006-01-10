@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.36 2005/11/20 19:57:36 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.37 2006/01/10 20:26:22 halcy0n Exp $
+
+  10 Jan 2006; Mark Loeser <halcy0n@gentoo.org> pysqlite-2.0.5.ebuild:
+  Stable on x86; bug #118302
 
   20 Nov 2005; <dang@gentoo.org> pysqlite-1.0.1.ebuild:
   Marked stable on amd64
