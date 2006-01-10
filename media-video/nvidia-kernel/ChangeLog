@@ -1,6 +1,16 @@
 # ChangeLog for media-video/nvidia-kernel
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.127 2005/12/23 15:32:17 augustus Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.128 2006/01/10 19:59:18 augustus Exp $
+
+*nvidia-kernel-1.0.8178-r1 (10 Jan 2006)
+*nvidia-kernel-1.0.6629-r5 (10 Jan 2006)
+
+  10 Jan 2006; Kristopher Kersey <augustus@gentoo.org>
+  +files/1.0.6629/NVIDIA_kernel-1.0-7174-1296092.diff,
+  +files/1.0.8178/NVIDIA_kernel-1.0-8178-U122205.diff,
+  +nvidia-kernel-1.0.6629-r5.ebuild, +nvidia-kernel-1.0.8178-r1.ebuild:
+  New ebuild nvidia-kernel-1.0.6629-r5 to fix Bug #113466.
+  New ebuild nvidia-kernel-1.0.8178-r1 to fix Bug #115417 and Bug #117996.
 
 *nvidia-kernel-1.0.8178 (23 Dec 2005)
 

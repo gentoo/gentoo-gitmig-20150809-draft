@@ -1,0 +1,97 @@
+diff -ru usr/src/nv/nv-linux.h usr/src/nv.1296092/nv-linux.h
+--- usr/src/nv/nv-linux.h	2005-03-22 16:19:09.000000000 +0100
++++ usr/src/nv.1296092/nv-linux.h	2005-06-14 16:55:30.416687848 +0200
+@@ -76,7 +76,7 @@
+ #include <asm/page.h>               /* PAGE_OFFSET                      */
+ #include <asm/pgtable.h>            /* pte bit definitions              */
+ 
+-#if defined(NVCPU_X86_64) && defined(KERNEL_2_6)
++#if defined(NVCPU_X86_64) && defined(KERNEL_2_6) && !defined(HAVE_COMPAT_IOCTL)
+ #include <linux/syscalls.h>         /* sys_ioctl()                      */
+ #include <linux/ioctl32.h>          /* register_ioctl32_conversion()    */
+ #endif
+diff -ru usr/src/nv/nv.c usr/src/nv.1296092/nv.c
+--- usr/src/nv/nv.c	2005-03-22 16:19:09.000000000 +0100
++++ usr/src/nv.1296092/nv.c	2005-06-14 16:55:16.745766144 +0200
+@@ -153,6 +153,7 @@
+ int           nv_kern_mmap(struct file *, struct vm_area_struct *);
+ unsigned int  nv_kern_poll(struct file *, poll_table *);
+ int           nv_kern_ioctl(struct inode *, struct file *, unsigned int, unsigned long);
++long          nv_kern_compat_ioctl(struct file *, unsigned int, unsigned long);
+ void          nv_kern_isr_bh(unsigned long);
+ irqreturn_t   nv_kern_isr(int, void *, struct pt_regs *);
+ void          nv_kern_rc_timer(unsigned long);
+@@ -209,6 +210,9 @@
+     .owner     = THIS_MODULE,
+     .poll      = nv_kern_poll,
+     .ioctl     = nv_kern_ioctl,
++#if defined(NVCPU_X86_64) && defined(HAVE_COMPAT_IOCTL)
++    .compat_ioctl = nv_kern_compat_ioctl,
++#endif
+     .mmap      = nv_kern_mmap,
+     .open      = nv_kern_open,
+     .release   = nv_kern_close,
+@@ -993,8 +997,10 @@
+     inter_module_register("nv_linux_devices", THIS_MODULE, nv_linux_devices);
+ #endif
+ 
++#if defined(NVCPU_X86_64) && defined(CONFIG_IA32_EMULATION) && !defined(HAVE_COMPAT_IOCTL)
+     /* Register ioctl conversions for 32 bit clients */
+     rm_register_ioctl_conversions();
++#endif
+ 
+ #ifdef NV_SWIOTLB
+     // may need a better test than this eventually
+@@ -1154,8 +1160,10 @@
+ #endif
+     }
+ 
++#if defined(NVCPU_X86_64) && defined(CONFIG_IA32_EMULATION) && !defined(HAVE_COMPAT_IOCTL)
+     /* Unregister ioctl conversions for 32 bit clients */
+     rm_unregister_ioctl_conversions();
++#endif
+ 
+ #if defined(NV_BUILD_NV_PAT_SUPPORT)
+     if (nv_pat_enabled)
+@@ -1930,6 +1938,15 @@
+     return status;
+ }
+ 
++long nv_kern_compat_ioctl(
++    struct file *file,
++    unsigned int cmd,
++    unsigned long i_arg
++)
++{
++    return nv_kern_ioctl(file->f_dentry->d_inode, file, cmd, i_arg);
++}
++
+ /*
+  * driver receives an interrupt
+  *    if someone waiting, then hand it off.
+diff -ru usr/src/nv/os-interface.c usr/src/nv.1296092/os-interface.c
+--- usr/src/nv/os-interface.c	2005-03-22 16:19:09.000000000 +0100
++++ usr/src/nv.1296092/os-interface.c	2005-06-14 16:55:21.366063752 +0200
+@@ -1227,18 +1227,18 @@
+ 
+ void NV_API_CALL os_register_ioctl32_conversion(U032 cmd, U032 size)
+ {
+-#if defined(NVCPU_X86_64) && defined(CONFIG_IA32_EMULATION)
++#if defined(NVCPU_X86_64) && defined(CONFIG_IA32_EMULATION) && !defined(HAVE_COMPAT_IOCTL)
+     unsigned int request = _IOWR(NV_IOCTL_MAGIC, cmd, char[size]);
+     register_ioctl32_conversion(request, (void *)sys_ioctl);
+-#endif /* NVCPU_X86_64 */
++#endif
+ }
+ 
+ void NV_API_CALL os_unregister_ioctl32_conversion(U032 cmd, U032 size)
+ {
+-#if defined(NVCPU_X86_64) && defined(CONFIG_IA32_EMULATION)
++#if defined(NVCPU_X86_64) && defined(CONFIG_IA32_EMULATION) && !defined(HAVE_COMPAT_IOCTL)
+     unsigned int request = _IOWR(NV_IOCTL_MAGIC, cmd, char[size]);
+     unregister_ioctl32_conversion(request);
+-#endif /* NVCPU_X86_64 */
++#endif
+ }
+ 
+ BOOL NV_API_CALL os_pat_supported(void)
