@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94b1a1c910ade844ec3e54d863fbaf5b ChangeLog 482
+MD5 6641ca43bafa3987b5abbfa22fc36fd8 ChangeLog 609
 MD5 d5d8af87c641f506699204e271a9bd7f files/digest-ieee80211softmac-0.1-r20060105 82
-MD5 85b6fcf15f9e36152141587a7af204e3 ieee80211softmac-0.1-r20060105.ebuild 1225
+MD5 7b2ce86d0c9fc5e0f1d925bba2254e8e ieee80211softmac-0.1-r20060105.ebuild 1226
 MD5 5c96f35e0e2b1e2ea4e59c21d5a2414c metadata.xml 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvZ/E5mJXAu5GbtIRAhsUAJ4qdqu2I78mV5ajLUEfSNI5lulxMACfY0iJ
-D0BX2EvvoVC069aIvwdsRNw=
-=vGWn
------END PGP SIGNATURE-----
