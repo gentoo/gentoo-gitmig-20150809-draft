@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.1.ebuild,v 1.15 2005/10/02 14:09:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.1.ebuild,v 1.16 2006/01/10 20:43:27 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="HappyDoc"
 MY_PV=${PV//./_}
@@ -17,6 +17,15 @@ KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/python"
+
+# the tests need extra data not present in the release tarball
+RESTRICT=test
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-python-2.4-compat.patch"
+}
 
 src_install() {
 	mydoc="INSTALL.txt LICENSE.txt CHANGES.txt README.txt"

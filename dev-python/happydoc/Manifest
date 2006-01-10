@@ -1,6 +1,17 @@
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 500298b4bf1a8ff17fb488d4c5b9d3b7 ChangeLog 1719
-MD5 65a0c4ac5f9d2d7a70f477edc7300fe6 happydoc-2.0.1.ebuild 778
-MD5 74e727c0353dbc9c5a982bbd6bcebc5d happydoc-2.1.ebuild 938
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98d71a3c913de8515c51eb58104264e0 ChangeLog 1960
 MD5 ff94dd4cc18291ab80ea2ecbdf87538f files/digest-happydoc-2.0.1 67
 MD5 c59f336e6e9e7950b97b32aa34f59d69 files/digest-happydoc-2.1 65
+MD5 ed3b17f88c00bcc8b329783ed9f7c4a1 files/happydoc-2.1-python-2.4-compat.patch 2373
+MD5 65a0c4ac5f9d2d7a70f477edc7300fe6 happydoc-2.0.1.ebuild 778
+MD5 4d94e042d28ff64e91b1718c6df36c36 happydoc-2.1.ebuild 1115
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxBx+W78445TWHXcRAgQzAJ4skN6LUw2SZ2IZVkpE9tFfPXErygCdGCi0
+cT5oqJu/Tp7D1chMUOYpToA=
+=35u9
+-----END PGP SIGNATURE-----
