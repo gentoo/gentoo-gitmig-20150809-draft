@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.1-r2.ebuild,v 1.3 2005/12/20 03:55:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.1-r2.ebuild,v 1.4 2006/01/10 01:38:02 obz Exp $
 
 inherit eutils
 
@@ -44,6 +44,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/abiword-plugins-2.4.2-gcc41.patch
+	# Patch for newer goffice, see bug #118290
+	has_version ">=x11-libs/goffice-0.1.2" && \
+		epatch ${FILESDIR}/${P}-goffice.patch
 }
 
 src_compile() {

@@ -1,0 +1,70 @@
+diff -ur abiword-2.4.1/abiword-plugins/tools/abigochart/unix/AbiGOChart.cpp abiword-2.4.1-patched/abiword-plugins/tools/abigochart/unix/AbiGOChart.cpp
+--- abiword-2.4.1/abiword-plugins/tools/abigochart/unix/AbiGOChart.cpp	2005-09-06 22:56:27.000000000 +0800
++++ abiword-2.4.1-patched/abiword-plugins/tools/abigochart/unix/AbiGOChart.cpp	2006-01-10 09:24:42.000000000 +0800
+@@ -78,6 +78,8 @@
+ #include <goffice/graph/gog-renderer-gnome-print.h>
+ #include <goffice/utils/go-format.h>
+ #include <gsf/gsf-impl-utils.h>
++#include <gsf/gsf-output-memory.h>
++#include <gsf/gsf-libxml.h>
+ 
+ #include "ut_sleep.h"
+ #include <sys/types.h>  
+@@ -759,15 +761,14 @@
+ {
+ 	g_return_if_fail (IS_GOG_GRAPH (graph));
+ 	AbiControlGUI *acg = ABI_CONTROL_GUI (data);
+-	xmlDocPtr pDoc = xmlNewDoc ((xmlChar const*)"1.0");
+-	xmlChar *mem;
+-	int size;
+ 	AbiGO_LocaleTransactor tn(LC_NUMERIC, "C");
+ 	AbiGO_LocaleTransactor tm(LC_MONETARY, "C");
+-	pDoc->children = gog_object_write_xml (GOG_OBJECT (graph), pDoc);
+-	xmlDocDumpMemory (pDoc, &mem, &size);
++	GsfOutput* output = gsf_output_memory_new ();
++	GsfXMLOut* xml = gsf_xml_out_new (output);
++	gog_object_write_xml_sax (GOG_OBJECT (graph), xml);
++	UT_Byte const *bytes = gsf_output_memory_get_bytes (GSF_OUTPUT_MEMORY (output));
+ 	UT_ByteBuf myByteBuf;
+-	myByteBuf.append((UT_Byte*)mem, size);
++	myByteBuf.append (bytes, strlen ((char const*) bytes));
+ 	XAP_Frame *pFrame = XAP_App::getApp()->getLastFocussedFrame();
+ 	FV_View* pView = static_cast<FV_View*>(pFrame->getCurrentView());
+ 
+@@ -776,8 +777,8 @@
+ 	UT_DEBUGMSG(("Doing Embed Update from GOG callback \n"));
+ 	pView->cmdUpdateEmbed(&myByteBuf,mimetypeGOChart,szProps);
+ 
+-	xmlFree (mem);
+-	xmlFreeDoc (pDoc);
++	g_object_unref (xml);
++	g_object_unref (output);
+ 	g_object_unref (acg);
+ }
+ 
+@@ -798,18 +799,17 @@
+ 	GogGraph *graph = (GogGraph *) g_object_new (GOG_GRAPH_TYPE, NULL);
+ 	/* by default, create one chart and add it to the graph */
+ 	gog_object_add_by_name (GOG_OBJECT (graph), "Chart", NULL);
+-	xmlDocPtr xml = xmlNewDoc ((xmlChar const*)"1.0");
+-	xmlChar *mem;
+-	int size;
++	GsfOutput* output = gsf_output_memory_new ();
++	GsfXMLOut* xml = gsf_xml_out_new (output);
+ 	{
+ 		AbiGO_LocaleTransactor tn(LC_NUMERIC, "C");
+ 		AbiGO_LocaleTransactor tm(LC_NUMERIC, "C");
+-		xml->children = gog_object_write_xml (GOG_OBJECT (graph), xml);
++		gog_object_write_xml_sax (GOG_OBJECT (graph), xml);
+ 	}
+-	xmlDocDumpMemory (xml, &mem, &size);
+-	myByteBuf.append((UT_Byte*)mem, size);
+-	xmlFree (mem);
+-	xmlFreeDoc (xml);
++	UT_Byte const *bytes = gsf_output_memory_get_bytes (GSF_OUTPUT_MEMORY (output));
++	myByteBuf.append(bytes, strlen ((char const*) bytes));
++	g_object_unref (xml);
++	g_object_unref (output);
+ 
+ 	const char* mimetypeGOChart = "application/x-goffice-graph";
+ 	const char * szProps="embed-type: GOChart; width:2.5in; height:2.5in";
