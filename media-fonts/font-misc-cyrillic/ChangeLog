@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-cyrillic
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-cyrillic/ChangeLog,v 1.10 2005/12/18 19:56:19 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-cyrillic/ChangeLog,v 1.11 2006/01/10 18:41:41 hansmi Exp $
+
+  10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  font-misc-cyrillic-1.0.0.ebuild:
+  Added to ~hppa, ~ppc.
 
 *font-misc-cyrillic-1.0.0 (18 Dec 2005)
 

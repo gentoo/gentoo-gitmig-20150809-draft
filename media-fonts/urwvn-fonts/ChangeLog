@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urwvn-fonts
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.6 2005/12/03 09:05:43 pclouds Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.7 2006/01/10 18:45:20 hansmi Exp $
+
+  10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  urwvn-fonts-3.0_rc3.ebuild:
+  Added to ~hppa, ~ppc.
 
 *urwvn-fonts-3.0_rc3 (03 Dec 2005)
 

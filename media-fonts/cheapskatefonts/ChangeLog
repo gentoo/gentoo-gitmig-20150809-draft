@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/cheapskatefonts
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cheapskatefonts/ChangeLog,v 1.4 2005/09/23 15:30:18 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cheapskatefonts/ChangeLog,v 1.5 2006/01/10 18:36:50 hansmi Exp $
+
+  10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  cheapskatefonts-1.0.ebuild:
+  Added to ~hppa, ~ppc.
 
   23 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   cheapskatefonts-1.0.ebuild:

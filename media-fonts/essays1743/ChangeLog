@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/essays1743
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.5 2005/12/09 06:36:30 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.6 2006/01/10 18:37:06 hansmi Exp $
+
+  10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> essays1743-1.0.ebuild:
+  Added to ~hppa, ~ppc.
 
   09 Dec 2005; Mark Loeser <halcy0n@gentoo.org> essays1743-1.0.ebuild:
   Stable on x86; bug #114513

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/pcf2bdf-1.04.ebuild,v 1.4 2005/05/16 04:21:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/pcf2bdf-1.04.ebuild,v 1.5 2006/01/10 18:44:47 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tsg.ne.jp/GANA/S/pcf2bdf/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~hppa ~ppc x86"
 
 IUSE=""
 
