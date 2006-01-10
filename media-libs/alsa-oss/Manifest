@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1db5f21806bd74475579f79274bd749 ChangeLog 8441
 MD5 deda86f5636109915e7c0525a863a08b alsa-oss-1.0.10-r1.ebuild 717
 MD5 909610af901f23e1b0f286d2bcc61c4a alsa-oss-1.0.8-r1.ebuild 696
@@ -6,3 +9,10 @@ MD5 70abfdcf57e22f6b01f8b1a8bb784973 files/digest-alsa-oss-1.0.10-r1 68
 MD5 9bae02d9e262fe870be4d807f546ed55 files/digest-alsa-oss-1.0.8-r1 67
 MD5 5dc114304223294838436eab84acbccb files/digest-alsa-oss-1.0.9 67
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDw8xLKRy60XGEcJIRAje7AJ46mp+foYnVYcNgJAjSsSA/2lqdxQCZAdUF
+laZJMSg3kHPcj8SU60/KJgs=
+=Cyo9
+-----END PGP SIGNATURE-----
