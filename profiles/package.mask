@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4845 2006/01/10 11:37:49 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4846 2006/01/10 16:40:45 josejx Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Joseph Jezak <josejx@gentoo.org> (10 Jan 2006)
+# Marked for removal, use Xorgautoconfig instead
+x11-misc/Xautoconfig
+
+# Joseph Jezak <josejx@gentoo.org> (10 Jan 2006)
+# Marked for removal, see the PPC FAQ instead
+app-laptop/powerbook-tools
 
 # Brian Harring <ferringb@gentoo.org>
 # Masking following packages due to ungif removal- bug 118386
