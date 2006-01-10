@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-demo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.35 2005/12/12 23:08:06 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.36 2006/01/10 16:01:51 wolf31o2 Exp $
+
+  10 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3334.ebuild:
+  Added modular X dependencies and changed to use virtual/libstdc++ instead of
+  listing the separate dependencies.
 
   12 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3334.ebuild:

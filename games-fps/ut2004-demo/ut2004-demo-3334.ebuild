@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.9 2005/12/12 23:08:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.10 2006/01/10 16:01:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,10 +15,17 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
 
-DEPEND="virtual/opengl"
+DEPEND=""
 RDEPEND="virtual/opengl
-	|| ( sys-libs/libstdc++-v3
-		=sys-devel/gcc-3.3* )"
+	=virtual/libstdc++-3.3
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext )
+			virtual/x11 ) )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
