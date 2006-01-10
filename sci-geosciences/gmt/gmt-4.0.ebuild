@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.4 2005/11/20 18:07:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.5 2006/01/10 12:27:33 cryos Exp $
 
 inherit multilib
 
@@ -8,19 +8,20 @@ MAINV="${PV:0:1}"
 
 DESCRIPTION="Powerful map generator"
 HOMEPAGE="http://gmt.soest.hawaii.edu/"
-SRC_URI="ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT${PV}_progs.tar.bz2
-	ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT_share.tar.bz2
-	ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT${PV}_tut.tar.bz2
-	ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT${PV}_scripts.tar.bz2
-	ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT${PV}_man.tar.bz2
-	doc? ( ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT${PV}_pdf.tar.bz2 )
-	gmtsuppl? ( ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT${PV}_suppl.tar.bz2 )
-	gmtfull? ( ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT_full.tar.bz2 )
-	gmthigh? ( ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/GMT_high.tar.bz2 )
-	gmttria? ( ftp://ftp.soest.hawaii.edu/gmt/${MAINV}/triangle.tar.bz2 )"
+SRC_URI="ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_progs.tar.bz2
+	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_share.tar.bz2
+	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_tut.tar.bz2
+	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_scripts.tar.bz2
+	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_man.tar.bz2
+	doc? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_pdf.tar.bz2 )
+	gmtsuppl? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_suppl.tar.bz2 )
+	gmtfull? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_full.tar.bz2 )
+	gmthigh? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_high.tar.bz2 )
+	gmttria? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/triangle.tar.bz2 )"
 # Needed because GMT_share in version 3 is different of that one in version 4, but they have same name.
 
-RESTRICT="nomirror"
+# Emailed one of the authors (Paul Wessel) who gave us permission to mirror
+#RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
