@@ -1,0 +1,7 @@
+MD5 6cd015fd1e1a83e56dad4022152aa2f1 ChangeLog 453
+MD5 0835a464fdaa7a605c63376bb18a2b24 files/config-hook.sh 468
+MD5 072ef383d4b7bba7b7f5d2207c00267c files/digest-pyblosxom-1.2.1 66
+MD5 549472aeb8561d15d9795008c05e2b81 files/gentoo-webapp.patch 1096
+MD5 1b151b39edadce257e08dac6407dd8fd files/postinstall-en.txt 326
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 4dfb3fab8b4317c8f67a2f0cf9c54880 pyblosxom-1.2.1.ebuild 1016

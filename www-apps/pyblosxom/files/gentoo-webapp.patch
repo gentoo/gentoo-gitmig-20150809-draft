@@ -1,0 +1,22 @@
+diff -Naur pyblosxom-1.2.1.orig/setup.py pyblosxom-1.2.1/setup.py
+--- pyblosxom-1.2.1.orig/setup.py	2005-07-31 13:06:25.000000000 +0200
++++ pyblosxom-1.2.1/setup.py	2005-07-31 13:06:46.000000000 +0200
+@@ -64,12 +64,13 @@
+ 
+     # we want to move the web script files as well, so we sneak them
+     # in here.
++# These are handled by the webapp class in Gentoo
++#                  os.path.normpath("web/pyblosxom.cgi"), 
++#                   os.path.normpath("web/config.py")
+     pydf.append( [os.path.join('share', PVER, 'web'),
+-                  [os.path.normpath("web/pyblosxom.cgi"), 
+-                   os.path.normpath("web/pyblosxom.tac"), 
++                  [os.path.normpath("web/pyblosxom.tac"), 
+                    os.path.normpath("web/pyblosxom_wsgi.cgi"), 
+-                   os.path.normpath("web/wsgi_app.py"), 
+-                   os.path.normpath("web/config.py")]])
++                   os.path.normpath("web/wsgi_app.py")]])
+ 
+ else:
+     # we don't know what platform they have, so we print out
+diff -Naur pyblosxom-1.2.1.orig/web/config.py pyblosxom-1.2.1/web/config.py

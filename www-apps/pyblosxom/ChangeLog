@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/pyblosxom
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.1 2006/01/10 21:50:24 wrobel Exp $
+
+*pyblosxom-1.2.1 (10 Jan 2006)
+
+  10 Jan 2006; <wrobel@gentoo.org> +files/config-hook.sh,
+  +files/gentoo-webapp.patch, +files/postinstall-en.txt,
+  +pyblosxom-1.2.1.ebuild:
+  Added pyblosxom-1.2.1 from the webapps overlay to the portage tree
+
