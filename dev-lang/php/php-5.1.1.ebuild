@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.1.ebuild,v 1.2 2006/01/05 17:23:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.1.ebuild,v 1.3 2006/01/10 18:36:52 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -30,6 +30,9 @@ DESCRIPTION="The PHP language runtime engine"
 
 DEPEND="${DEPEND} app-admin/php-toolkit"
 RDEPEND="${RDEPEND} app-admin/php-toolkit"
+
+# PHP patchsets
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${PV}-r1.tar.bz2"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
@@ -84,10 +87,10 @@ src_unpack() {
 	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-gentoo"|g' -i configure.in
 
 	# fix CURL compilation error, bug #117767
-	epatch "${FILESDIR}/${PV}/php${PV}-curl-gcry_threads.patch"
+	epatch "${WORKDIR}/${PV}/php${PV}-curl-gcry_threads.patch"
 
 	# fix ming error in configure
-	epatch "${FILESDIR}/${PV}/php${PV}-ming-config.patch"
+	epatch "${WORKDIR}/${PV}/php${PV}-ming-config.patch"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0

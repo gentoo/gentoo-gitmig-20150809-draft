@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.1-r3.ebuild,v 1.1 2006/01/04 09:24:47 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.1-r3.ebuild,v 1.2 2006/01/10 18:36:52 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -30,6 +30,9 @@ DESCRIPTION="The PHP language runtime engine"
 
 DEPEND="${DEPEND} app-admin/php-toolkit"
 RDEPEND="${RDEPEND} app-admin/php-toolkit"
+
+# PHP patchsets
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${PV}-r1.tar.bz2"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
@@ -84,22 +87,22 @@ src_unpack() {
 	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl3-gentoo"|g' -i configure.in
 
 	# fix open_basedir bypass in CURL extension
-	use curl && epatch "${FILESDIR}/${PV}/php${PV}-curl-open_basedir.patch"
+	use curl && epatch "${WORKDIR}/${PV}/php${PV}-curl-open_basedir.patch"
 
 	# fix header injection in mbstring extension
-	use nls && epatch "${FILESDIR}/${PV}/php${PV}-mbstring-header_inj.patch"
+	use nls && epatch "${WORKDIR}/${PV}/php${PV}-mbstring-header_inj.patch"
 
 	# fix safe_mode bypass in GD extension
 	if use gd || use gd-external ; then
-		epatch "${FILESDIR}/${PV}/php${PV}-gd-safe_mode.patch"
+		epatch "${WORKDIR}/${PV}/php${PV}-gd-safe_mode.patch"
 	fi
 
 	# patch crash with mod_rewrite mentioned in bug #111032 and other Apache2
 	# SAPI bugs fixed by upstream
-	epatch "${FILESDIR}/${PV}/php${PV}-apache2sapi.patch"
+	epatch "${WORKDIR}/${PV}/php${PV}-apache2sapi.patch"
 
 	# fix for http://bugs.php.net/bug.php?id=35067
-	epatch "${FILESDIR}/${PV}/php${PV}-current_key_by_reference.patch"
+	epatch "${WORKDIR}/${PV}/php${PV}-current_key_by_reference.patch"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0

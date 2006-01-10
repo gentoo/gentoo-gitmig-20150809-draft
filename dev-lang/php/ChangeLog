@@ -1,6 +1,40 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.57 2006/01/05 17:23:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.58 2006/01/10 18:36:52 chtekk Exp $
+
+  10 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
+  -files/4.3.11/php4.3.11-apache2sapi.patch,
+  -files/4.3.11/php4.3.11-apachesapi.patch,
+  -files/4.3.11/php4.3.11-curl-open_basedir.patch,
+  -files/4.3.11/php4.3.11-fopen_wrappers.patch,
+  -files/4.3.11/php4.3.11-gd-safe_mode.patch,
+  -files/4.3.11/php4.3.11-globals_overwrite.patch,
+  -files/4.3.11/php4.3.11-mbstring-header_inj.patch,
+  -files/4.3.11/php4.3.11-multilib-search-path.patch,
+  -files/4.3.11/php4.3.11-pcre-security.patch,
+  -files/4.3.11/php4.3.11-phpinfo_xss.patch,
+  -files/4.3.11/php4.3.11-pspell-ext-segf.patch,
+  -files/4.4.1/php4.4.1-apache2sapi.patch,
+  -files/4.4.1/php4.4.1-curl-open_basedir.patch,
+  -files/4.4.1/php4.4.1-current_key_by_reference.patch,
+  -files/4.4.1/php4.4.1-gd-safe_mode.patch,
+  -files/4.4.1/php4.4.1-mbstring-header_inj.patch,
+  -files/4.4.1/php4.4.1-multilib-search-path.patch,
+  -files/5.0.5/php5.0.5-apache2sapi.patch,
+  -files/5.0.5/php5.0.5-curl-open_basedir.patch,
+  -files/5.0.5/php5.0.5-fopen_wrappers.patch,
+  -files/5.0.5/php5.0.5-gd-safe_mode.patch,
+  -files/5.0.5/php5.0.5-globals_overwrite.patch,
+  -files/5.0.5/php5.0.5-mbstring-header_inj.patch,
+  -files/5.0.5/php5.0.5-multilib-search-path.patch,
+  -files/5.0.5/php5.0.5-obj-serialize.patch,
+  -files/5.0.5/php5.0.5-pspell-ext-segf.patch,
+  -files/5.0.5/php5.0.5-tsrm-gcc4.patch,
+  -files/5.1.1/php5.1.1-curl-gcry_threads.patch,
+  -files/5.1.1/php5.1.1-ming-config.patch,
+  -files/5.1.1/php5.1.1-multilib-search-path.patch, php-4.3.11-r5.ebuild,
+  php-4.4.1-r3.ebuild, php-5.0.5-r5.ebuild, php-5.1.1.ebuild:
+  Move version-specific patches into external tarballs.
 
   05 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
   +files/5.1.1/php5.1.1-curl-gcry_threads.patch, php-5.1.1.ebuild:
