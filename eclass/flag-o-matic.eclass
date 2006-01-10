@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.102 2006/01/10 01:00:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.103 2006/01/10 01:14:30 vapier Exp $
 
 
 # need access to emktemp()
@@ -536,7 +536,8 @@ raw-ldflags() {
 	[[ -z ${input} ]] && input=${LDFLAGS}
 	set --
 	for x in ${input} ; do
-		set -- "$@" ${x#-Wl,}
+		x=${x#-Wl,}
+		set -- "$@" ${x//,/ }
 	done
 	echo "$@"
 }
