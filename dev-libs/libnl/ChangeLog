@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.6 2006/01/04 15:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.7 2006/01/10 17:13:22 dang Exp $
+
+  10 Jan 2006; <dang@gentoo.org> libnl-0.5.0.ebuild:
+  Marked stable on amd64 per bug# 118480
 
   04 Jan 2006; Jeroen Roovers <jer@gentoo.org> libnl-0.5.0.ebuild:
   Marked ~hppa (bug #105527).

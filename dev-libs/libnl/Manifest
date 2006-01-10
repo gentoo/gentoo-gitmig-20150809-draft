@@ -1,6 +1,16 @@
-MD5 99a6b58c7436bbc37e9413f0cf9ef888 ChangeLog 958
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6928b0f8c011de941bd4e9fb1681c79f ChangeLog 1054
 MD5 9358c0ce8cc4782ae99aed88ac9abba1 files/digest-libnl-0.5.0 63
 MD5 0eecf3acdb3d426c16ddfd7a398ed1a7 files/libnl-0.5.0-include.diff 364
 MD5 48894de8fc4dadc72e6475da87a5fe73 files/libnl-0.5.0-libdir.patch 1050
-MD5 7868143226924c7503f7e751642757d8 libnl-0.5.0.ebuild 685
+MD5 377c5b004a24d7ab4ce6b07e9df84a11 libnl-0.5.0.ebuild 685
 MD5 5731c4fdc13f68a2dccaacfbc4fbc611 metadata.xml 257
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDw+tiomPajV0RnrERAizcAJ4+nuzzeFydvny++9jdJwmxQ5R+swCdF4bu
+SmeW7wC3QP6FDWcvWltWEbs=
+=Uk6h
+-----END PGP SIGNATURE-----
