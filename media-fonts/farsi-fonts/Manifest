@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e5578fe6d5248f4cd2d503d44026855 ChangeLog 541
-MD5 bbd7e690937a6d91ebd19dd23e470a93 farsi-fonts-0.4.ebuild 537
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 86aa87a5ff3db2326348ddbc113e9eda ChangeLog 643
+MD5 e626f58c666e03effd67cad475c03bdf farsi-fonts-0.4.ebuild 545
 MD5 ae51b9c7c7caa2fd76ef3406e5cc7057 files/digest-farsi-fonts-0.4 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5fhyj5H05b2HAEkRAujHAJ9v0XzN6Oig86XwOfREdNlYkIrbcwCdHkhr
-/i4OrfRQo7jgkWO72gXWp18=
-=s+Ke
------END PGP SIGNATURE-----
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158

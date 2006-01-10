@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 19c72d039eb4a870c77d0c6484e225f9 ChangeLog 553
+MD5 ba9336ed07204ee9c190b2c793e369a6 ChangeLog 659
 MD5 9873872cb04924d04dfe49d9ca042a02 files/digest-ipamonafont-1.0.3 96
-MD5 084a2b818077363a75cab4d1c0e5e56e ipamonafont-1.0.3.ebuild 637
+MD5 18247b98e0bb860aacc5b9696f754bb1 ipamonafont-1.0.3.ebuild 647
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkoxNCRZPokWLroQRApIgAJ0QEFi0m2Rmk8r1e0AMDa8XziYq1wCglV6m
-PZP/lzcsSMYLEjaOO3hfxdk=
-=btJV
------END PGP SIGNATURE-----

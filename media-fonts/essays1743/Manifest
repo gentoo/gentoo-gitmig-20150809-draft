@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd1d37e1975ce1789bc95bc3abcfaf34 ChangeLog 823
-MD5 49834aef4afddf9eed2f73ac875eebe0 essays1743-1.0.ebuild 574
+MD5 819ea451e3491b80c150614476868693 ChangeLog 924
+MD5 15e5af9a74ed508f51c2cb7aa785d490 essays1743-1.0.ebuild 584
 MD5 d27974868deb2a85f8a400864081e65b files/digest-essays1743-1.0 71
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmSX6CRZPokWLroQRApeYAJ9UiwLrFfJroPozdg46BMo4fcJk+gCeN+z1
-xdL0bBM0XfKPE+wX+ZKkoU8=
-=buEF
------END PGP SIGNATURE-----
