@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 96660e29b9fba3cf5e5f49bfbee3266a ChangeLog 467
-MD5 0f650b5d63d13de3c706c297b5beb327 fs-fonts-0.1_alpha3.ebuild 789
+MD5 cf4bd748df6de1142e19d034ae37a271 ChangeLog 567
 MD5 1159f975b85c5e8526a47e7214d29231 files/digest-fs-fonts-0.1_alpha3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCmnRgIKl8Uu19MoRAgdHAJ9JSY/zpANUUB/hPMrYjnhSCPX/9gCfVSUp
-V8SqOMfdsFRhxsUIjihKNGs=
-=uiRv
------END PGP SIGNATURE-----
+MD5 c072258b7e966e752af1b483df29d3fb fs-fonts-0.1_alpha3.ebuild 795
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
