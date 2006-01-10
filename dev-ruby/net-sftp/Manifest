@@ -1,8 +1,18 @@
-MD5 4939923c788668258111fb3a0af96a52 ChangeLog 879
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 93e505a5650830d6a87f9e3f85c67831 ChangeLog 976
 MD5 3ec6c3531942785bb3f91b1aff8e138f files/digest-net-sftp-1.0.0 66
 MD5 74b3b16377cc98670a227c4dab18c501 files/digest-net-sftp-1.0.1 62
 MD5 7fa372e3d0bf9637bd33f771adea1aa2 files/digest-net-sftp-1.1.0 62
 MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
 MD5 9486f318a6454554012b6353260fc0a4 net-sftp-1.0.0.ebuild 476
 MD5 08526223630b54b36a6c90132ffcb11c net-sftp-1.0.1.ebuild 471
-MD5 0fb7ae23d1b169660cc063972ba6b9ce net-sftp-1.1.0.ebuild 466
+MD5 ef20b4550f8feb22e8588c480e678878 net-sftp-1.1.0.ebuild 471
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDxD+CZgSmR+etHJoRApwbAJ9pkgSyDEwq5SoAi9wGulJFMBBcIACdF+9y
+Fp3Zdp5+inr3wt5N9ILJ1kw=
+=4FV7
+-----END PGP SIGNATURE-----
