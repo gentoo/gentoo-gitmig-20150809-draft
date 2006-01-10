@@ -1,4 +1,14 @@
-MD5 0361568db00fc8c6403ea3fdc52150c3 ChangeLog 460
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99332cb6d31e86c20449d0baa83c0c7c ChangeLog 546
 MD5 9b732e34fa9afacc7c6cb7d00ff97125 files/digest-phpmp2-0.11.0 65
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 5dd3bd789740b855854805730df2acdc phpmp2-0.11.0.ebuild 770
+MD5 509f860608b9389c9028343de1991dc4 phpmp2-0.11.0.ebuild 886
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDwyBREzitwsaoONoRAuh5AJ4joIvC0wPiSz4U9hPU07tbe0s15gCgylWB
+MrpKf4Tcb9WHfCqUXi89PKo=
+=sEOq
+-----END PGP SIGNATURE-----

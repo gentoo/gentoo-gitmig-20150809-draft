@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp2/phpmp2-0.11.0.ebuild,v 1.3 2006/01/09 04:27:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp2/phpmp2-0.11.0.ebuild,v 1.4 2006/01/10 02:47:33 rl03 Exp $
 
 inherit webapp
 
@@ -19,6 +19,13 @@ RDEPEND="
 	virtual/php
 	gd? ( media-libs/gd )
 	net-www/apache"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# remove SVN directories
+	find . -type d -name '.svn' -print | xargs rm -rf
+}
 
 src_install () {
 	webapp_src_preinst
