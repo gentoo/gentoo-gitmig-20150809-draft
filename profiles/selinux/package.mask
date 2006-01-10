@@ -1,9 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.5 2005/11/07 22:59:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.6 2006/01/10 02:33:23 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (1 Sep 2005)
 # Masked until net scripts are fixed
 =sys-apps/baselayout-1.12*
-
-# Chris PeBenito <pebenito@gentoo.org> (7 Nov 2005)
-# Masked until an appropriate libselinux is available.
->=sys-apps/shadow-4.0.13
