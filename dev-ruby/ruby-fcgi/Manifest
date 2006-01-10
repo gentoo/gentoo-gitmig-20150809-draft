@@ -1,4 +1,4 @@
-MD5 3389786905ed2ff89a5c5b4606c66315 ChangeLog 1586
+MD5 39ec026f28b4d3faec85f2e1f5925f8c ChangeLog 1702
 MD5 4eea712873b2f18a1972a94c6f1f59aa files/digest-ruby-fcgi-0.8.4 66
 MD5 13d8759a437f19b78ac7c9d6a1af99a5 files/digest-ruby-fcgi-0.8.5 66
 MD5 13d8759a437f19b78ac7c9d6a1af99a5 files/digest-ruby-fcgi-0.8.5-r1 66
@@ -9,4 +9,4 @@ MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 951a04387863c2fc014a7d1644b22dce ruby-fcgi-0.8.4.ebuild 494
 MD5 18e275ab56b6164bb199bfa65f038fb1 ruby-fcgi-0.8.5-r1.ebuild 580
 MD5 48197c357c0d728cd8b6bd56fdb4ca86 ruby-fcgi-0.8.5.ebuild 537
-MD5 b685b36089508593967403a4d5e070ed ruby-fcgi-0.8.6.ebuild 506
+MD5 5afe8ef7965b7258b92941ecab954646 ruby-fcgi-0.8.6.ebuild 506
