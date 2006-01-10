@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0070b92efa4b7da020ce9ee1ca91e576 ChangeLog 5047
 MD5 f78d0a1f0a150e24879f2979bd6e2059 files/digest-startup-notification-0.8 77
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9f97b2f328d22f54eca6bd363a1ffc4e startup-notification-0.8.ebuild 757
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDn8EPBtvusYtCZMsRAof6AJ9KMJAVkyNDeMjEsufu7trGJedbJQCeI+7O
-+M8Bcz01urRMS84c2L0z2zU=
-=tLTm
------END PGP SIGNATURE-----
+MD5 6f10a7551ea40fc76792a5d81a41b461 startup-notification-0.8.ebuild 761
