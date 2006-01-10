@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.5 2005/09/26 17:34:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.6 2006/01/10 21:07:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,17 +10,25 @@ SRC_URI="ftp://ggdev-1.homelan.com/mutantstorm/MutantStormDemo_${PV/./_}.sh.bin"
 
 LICENSE="POMPOM"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* amd64 x86"
 IUSE=""
-
-S=${WORKDIR}
 
 RDEPEND="virtual/opengl
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-soundlibs
 		app-emulation/emul-linux-x86-compat
-		app-emulation/emul-linux-x86-sdl )"
+		app-emulation/emul-linux-x86-sdl )
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext )
+			virtual/x11 ) )"
+
+S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license POMPOM
@@ -32,16 +40,17 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir} ${GAMES_BINDIR}
+	insinto "${dir}"
+	doins -r menu script styles "${dir}"
 
-	cp -r menu script styles ${D}/${dir}/
-
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe bin/Linux/x86/*
-	dosym ${dir}/mutantstormdemo ${GAMES_BINDIR}/mutantstorm-demo
+	# Remove libSDL since we use the system version and our version doesn't
+	# have TEXTRELs in it.
+	rm -f "${Ddir}"/libSDL-1.2.so.0.0.5
+	games_make_wrapper mutantstorm-demo ./mutantstormdemo "${dir}" "${dir}"
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins README.txt buy_me mutant.xpm pompom readme.htm
 
 	prepgamesdirs
