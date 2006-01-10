@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.17 2006/01/10 13:21:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.18 2006/01/10 16:00:46 wolf31o2 Exp $
+
+  10 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r3.ebuild:
+  Added virtual/libstdc++ dependency.
 
   10 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-demo-2206-r3.ebuild:
