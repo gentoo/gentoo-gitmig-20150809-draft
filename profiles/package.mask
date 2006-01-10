@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4843 2006/01/09 20:13:41 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4844 2006/01/10 06:54:40 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -393,11 +393,6 @@ media-libs/alut
 # Thomas Matthijs <axxo@gentoo.org> (23 Oct 2005)
 # Preview release
 =www-client/opera-9*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (20 Oct 2005)
-# Last updated in 2002 and doesn't work with latest xmame
-# Try games-emulation/gxmame instead.
-games-emulation/gnomame
 
 # Aron Griffis <agriffis@gentoo.org> (20 Oct 2005)
 # New version of NX stuff, masked for testing
