@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/package.mask,v 1.1 2006/01/05 21:17:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/package.mask,v 1.2 2006/01/11 15:42:00 gustavoz Exp $
 
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
@@ -70,6 +70,7 @@ media-video/gephe
 gnome-base/gnome-volume-manager
 gnome-extra/hal-device-manager
 sys-apps/hal
+sys-apps/ivman
 sys-apps/pmount
 
 # This probably won't work since -bin is ultra
