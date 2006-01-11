@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.4.ebuild,v 1.1 2006/01/09 11:26:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.4.ebuild,v 1.2 2006/01/11 12:30:47 brix Exp $
 
-inherit linux-mod
+inherit eutils linux-mod
 
 # The following works with both pre-releases and releases
 MY_P=${P/_/-}
@@ -59,6 +59,9 @@ src_unpack() {
 	local debug="n"
 
 	unpack ${A}
+
+	cd "${S}"
+	epatch ${FILESDIR}/${P}-old_kernel_fix.patch
 
 	use debug && debug="y"
 	sed -i -e "s:^\(CONFIG_IPW_DEBUG\)=.*:\1=$debug:" ${S}/Makefile
