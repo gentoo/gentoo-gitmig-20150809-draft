@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.2.ebuild,v 1.2 2005/12/30 02:45:47 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.2.ebuild,v 1.3 2006/01/11 01:44:38 karltk Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -19,8 +19,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc gcj source"
 
 DEPS=">=x11-libs/gtk+-2.8.3
-	  >=dev-java/glib-java-0.2.1
-	  >=dev-java/cairo-java-1.0.1
+	  >=dev-java/glib-java-0.2.2
+	  >=dev-java/cairo-java-1.0.2
 	  >=dev-libs/glib-2.6.0
 	  >=x11-libs/cairo-1.0.0-r2
 		dev-util/pkgconfig"
