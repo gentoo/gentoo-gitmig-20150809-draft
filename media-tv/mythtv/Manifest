@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2aea27805dc29178b82b051e7ed3618d ChangeLog 15189
 MD5 4985a61b90909b7f1c926f79a3ba34bf files/0.18-mythbackend.conf 931
 MD5 946d39e6c7d43c06d11d2bc6e09d5c21 files/0.18-mythbackend.rc 1606
@@ -19,3 +22,10 @@ MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 f2c7e6f87a9c718acdd942b22140e2a9 mythtv-0.18.1-r1.ebuild 5109
 MD5 cac72423d3f6c98d2ef628c3e83c4ff2 mythtv-0.18.1-r2.ebuild 5488
 MD5 d07136e9e07fa2055136e09dd09842da mythtv-0.19_pre8554.ebuild 6418
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxJd4BtvusYtCZMsRAotJAJ9bwi14ndTdXoXWRu15TjEktO4qNACeIa8M
+S7scnsO9XdkjEazMjqkPXo8=
+=Ngz3
+-----END PGP SIGNATURE-----
