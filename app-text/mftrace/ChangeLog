@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.26 2005/11/11 22:51:54 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.27 2006/01/11 19:54:17 robbat2 Exp $
+
+  11 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> mftrace-1.1.17.ebuild:
+  One-liner compile fix to use CFLAGS instead of ignoring them.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> mftrace-1.1.16.ebuild:
   Stable on ppc.

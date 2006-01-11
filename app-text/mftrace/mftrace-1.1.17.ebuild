@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.1.17.ebuild,v 1.1 2005/10/29 03:42:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.1.17.ebuild,v 1.2 2006/01/11 19:54:17 robbat2 Exp $
 
 IUSE="truetype"
 inherit python multilib
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 src_compile() {
 	python_version
 	econf --datadir=/usr/$(get_libdir)/python${PYVER}/site-packages || die "econf failed"
-	emake || die "emake failed"
+	emake CFLAGS="-Wall ${CFLAGS}" || die "emake failed"
 }
 
 src_install () {

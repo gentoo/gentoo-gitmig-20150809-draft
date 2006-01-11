@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ddef172ffc903c6a3fa93c005a477f9 ChangeLog 3652
+MD5 869e13e5bded9be3ead52f1cae6168ba ChangeLog 3794
 MD5 de1d30aed8d0bc3ad7de89005689d7fb files/digest-mftrace-1.0.34 65
 MD5 32022fdf89eb4c9eb1a75f0c6f2f6366 files/digest-mftrace-1.1.16 65
 MD5 711af975cb107aeb5d7c8e3a4e87e3b8 files/digest-mftrace-1.1.17 65
@@ -9,12 +6,5 @@ MD5 b61de718872bea699323bbb544752a6d files/digest-mftrace-1.1.2 64
 MD5 2ff0f713422507205e9611141006ae08 metadata.xml 183
 MD5 1d10364a7e5fe1ed10d0838e38dccaba mftrace-1.0.34.ebuild 1229
 MD5 c17eb0a3b0389f675ccdb2c88034a8af mftrace-1.1.16.ebuild 1147
-MD5 0dcda13708942d5eb5c8b340bdecc99b mftrace-1.1.17.ebuild 1150
+MD5 37464e5d8d145a49511644dfcb89c7d6 mftrace-1.1.17.ebuild 1177
 MD5 85dba6cfc2427975a21b45ae2bb953ae mftrace-1.1.2.ebuild 1228
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkfwAgIKl8Uu19MoRArjOAJ93ZAJ5+I9gvW0h7VWt5nZ0HddH0wCfeYQ9
-hyXM+1PyxEYM12JU87RYoe8=
-=CJbu
------END PGP SIGNATURE-----
