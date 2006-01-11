@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.7.2.ebuild,v 1.1 2006/01/11 01:58:22 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.7.2.ebuild,v 1.2 2006/01/11 02:06:33 sbriesen Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND=">=media-video/dvdauthor-0.6.11
 	>=media-gfx/imagemagick-5.5.4
 	media-video/mjpegtools
 	media-video/transcode
+	media-fonts/urw-fonts
 	>=media-video/ffmpeg-0.4.8
 	media-sound/vorbis-tools
 	media-sound/lame
