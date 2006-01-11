@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>cpp</herd>
+	<maintainer>
+		<email>flameeyes@gentoo.org</email>
+		<name>Diego Pettenò</name>
+	</maintainer>
+	<longdescription lang="en">MXMLPlus is a C++ library based on the engine of MXML (but integrated with stl:: classes) that merges the power and DOM concepts you find in MXML with a real object oriented environment.</longdescription>
+</pkgmetadata>
