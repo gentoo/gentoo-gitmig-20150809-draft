@@ -1,0 +1,25 @@
+Index: kdebase-3.5.0/kdesktop/configure.in.in
+===================================================================
+--- kdebase-3.5.0/kdesktop/configure.in.in	(revision 497039)
++++ kdebase-3.5.0/kdesktop/configure.in.in	(working copy)
+@@ -3,7 +3,11 @@
+ 
+ LIB_XSS=
+ 
+-KDE_CHECK_HEADER(X11/extensions/scrnsaver.h,
++AC_ARG_WITH([xscreensaver],
++  AS_HELP_STRING([--without-xscreensaver], [Disable XScreenSaver support (default: check)]) )
++
++if test "x$with_xscreensaver" != "xno"; then
++  KDE_CHECK_HEADER(X11/extensions/scrnsaver.h,
+     [
+     AC_CHECK_LIB(Xext,XScreenSaverQueryInfo,
+ 	[
+@@ -29,6 +33,7 @@
+      [
+      #include <X11/Xlib.h>
+      ] )
++fi
+ 
+ AC_SUBST(LIB_XSS)
+ LDFLAGS="$xss_save_ldflags"

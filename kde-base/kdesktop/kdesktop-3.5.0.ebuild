@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.0.ebuild,v 1.4 2005/12/17 10:19:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.0.ebuild,v 1.5 2006/01/11 19:58:08 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -9,18 +9,26 @@ inherit kde-meta eutils
 
 DESCRIPTION="The KDE desktop"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="xscreensaver"
 
 DEPEND="$DEPEND
 $(deprange $PV $MAXKDEVER kde-base/libkonq)
 $(deprange $PV $MAXKDEVER kde-base/kdm)
-$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
-	# Requires the desktop background settings module, 
+$(deprange $PV $MAXKDEVER kde-base/kcontrol)
+	xscreensaver? ( || ( (
+			x11-proto/scrnsaverproto
+			) virtual/x11 )
+		)"
+	# Requires the desktop background settings module,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
 	# there's a dep here
 RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kcheckpass)
-$(deprange $PV $MAXKDEVER kde-base/kdialog)"
+$(deprange $PV $MAXKDEVER kde-base/kdialog)
+	xscreensaver? ( || ( (
+			x11-libs/libXScrnSaver
+			) virtual/x11 )
+		)"
 
 KMCOPYLIB="libkonq libkonq/"
 KMEXTRACTONLY="kcheckpass/kcheckpass.h
@@ -30,6 +38,13 @@ KMEXTRACTONLY="kcheckpass/kcheckpass.h
 KMCOMPILEONLY="kcontrol/background
 	kdmlib/"
 KMNODOCS=true
+
+PATCHES="${FILESDIR}/${P}-xscreensaver.patch"
+
+src_compile() {
+	myconf="${myconf} $(use_with xscreensaver)"
+	kde-meta_src_compile
+}
 
 src_install() {
 	# ugly, needs fixing: don't install kcontrol/background
