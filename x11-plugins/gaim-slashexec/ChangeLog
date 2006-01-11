@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gaim-slashexec
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-slashexec/ChangeLog,v 1.1 2005/12/20 20:06:39 gothgirl Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-slashexec/ChangeLog,v 1.2 2006/01/11 23:50:42 metalgod Exp $
+
+  11 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  gaim-slashexec-1.1_beta1.ebuild:
+  Added ~amd64 keyword.
 
 *gaim-slashexec-1.1_beta1 (20 Dec 2005)
 
