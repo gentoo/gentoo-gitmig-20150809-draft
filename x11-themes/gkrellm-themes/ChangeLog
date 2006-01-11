@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gkrellm-themes
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.12 2005/12/16 11:49:44 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.13 2006/01/11 18:31:26 gustavoz Exp $
+
+  11 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellm-themes-0.1.ebuild:
+  Stable on sparc
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   gkrellm-themes-0.1.ebuild:
