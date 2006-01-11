@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.1.16_rc2.ebuild,v 1.5 2004/06/24 23:30:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.1.16_rc2.ebuild,v 1.6 2006/01/11 21:34:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -47,8 +47,8 @@ src_compile() {
 	egamesconf \
 		--enable-network \
 		--with-readline=maybe \
-		`use_with gtk` \
-		`use_with gnome` \
+		$(use_with gtk) \
+		$(use_with gnome) \
 		${myconf} \
 		|| die
 	emake || die "emake failed"

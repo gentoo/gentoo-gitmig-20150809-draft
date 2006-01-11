@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.6 2005/07/07 04:38:44 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.7 2006/01/11 21:34:29 mr_bones_ Exp $
 
 inherit games kde-functions
 
@@ -23,7 +23,7 @@ DEPEND="=x11-libs/qt-3*
 src_compile() {
 	set-qtdir 3
 	egamesconf \
-		`use_with xinerama` \
+		$(use_with xinerama) \
 		|| die
 	emake || die "emake failed"
 }

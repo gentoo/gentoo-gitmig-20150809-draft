@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.0.ebuild,v 1.6 2005/09/16 02:25:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.0.ebuild,v 1.7 2006/01/11 21:34:29 mr_bones_ Exp $
 
 inherit games flag-o-matic eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 		mkdir data ; cd data
 		unpack cc1demo1.zip cc1demo2.zip
 		for f in * ; do
-			mv ${f} `echo ${f} | awk '{print tolower($1)}'` || die "moving $f"
+			mv ${f} $(echo ${f} | awk '{print tolower($1)}') || die "moving $f"
 		done
 	fi
 	cd "${S}"
