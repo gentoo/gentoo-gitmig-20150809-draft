@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.3.0-r2.ebuild,v 1.2 2005/10/29 09:41:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.3.0-r2.ebuild,v 1.3 2006/01/11 04:29:54 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -57,6 +57,8 @@ src_unpack() {
 	# When cross-compiling, we can't do that since 'bin' isn't 
 	# a native binary, so let's just install outdated man-pages.
 	tc-is-cross-compiler && touch man/*.1
+	# There's no reason for this crap to use the private version
+	sed -i 's:__mempcpy:mempcpy:g' lib/*.c
 
 	ebegin "Reconfiguring configure scripts (be patient)"
 	export WANT_AUTOMAKE=1.8
