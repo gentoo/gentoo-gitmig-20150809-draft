@@ -1,0 +1,79 @@
+=== modified file 'test/unittest_db.py'
+--- test/unittest_db.py	
++++ test/unittest_db.py	
+@@ -92,9 +92,12 @@
+ 
+     def test_connection_wrap(self):
+         """Tests the connection wrapping"""
+-        cnx = get_connection('postgres',
+-                             self.host, self.db, self.user, self.passwd,
+-                             quiet=1)
++        try:
++            cnx = get_connection('postgres',
++                                 self.host, self.db, self.user, self.passwd,
++                                 quiet=1)
++        except ImportError:
++            self.skip('postgresql dbapi module not installed')
+         self.failIf(isinstance(cnx, PyConnection),
+                     'cnx should *not* be a PyConnection instance')
+         cnx = get_connection('postgres',
+@@ -106,9 +109,12 @@
+ 
+     def test_cursor_wrap(self):
+         """Tests cursor wrapping"""
+-        cnx = get_connection('postgres',
+-                             self.host, self.db, self.user, self.passwd,
+-                             quiet=1, pywrap = True)
++        try:
++            cnx = get_connection('postgres',
++                                 self.host, self.db, self.user, self.passwd,
++                                 quiet=1, pywrap = True)
++        except ImportError:
++            self.skip('postgresql dbapi module not installed')
+         cursor = cnx.cursor()
+         self.failUnless(isinstance(cursor, PyCursor),
+                         'cnx should be a PyCursor instance')
+@@ -134,8 +140,11 @@
+         
+     def test_pgdb_types(self):
+         """Tests that NUMBER really wraps all number types"""
+-        set_prefered_driver('postgres', 'pgdb')        
+-        module = get_dbapi_compliant_module('postgres')
++        set_prefered_driver('postgres', 'pgdb')
++        try:
++            module = get_dbapi_compliant_module('postgres')
++        except ImportError:
++            self.skip('python-pqsql is not installed')
+         number_types = 'int2', 'int4', 'serial', \
+                        'int8', 'float4', 'float8', \
+                        'numeric', 'bool', 'money'
+@@ -146,16 +155,25 @@
+     def test_pypgsql_getattr(self):
+         """Tests the getattr() delegation for pyPgSQL"""
+         set_prefered_driver('postgres', 'pyPgSQL.PgSQL')
+-        module = get_dbapi_compliant_module('postgres')
++        try:
++            module = get_dbapi_compliant_module('postgres')
++        except ImportError:
++            self.skip('python-pygresql is not installed')
+         try:
+             binary = module.BINARY
+         except AttributeError, err:
+             self.fail(str(err))        
+ 
+     def test_adv_func_helper(self):
+-        module = get_dbapi_compliant_module('postgres')
++        try:
++            module = get_dbapi_compliant_module('postgres')
++        except ImportError:
++            self.skip('postgres dbapi module is not installed')
+         self.failUnless(isinstance(module.adv_func_helper, _PGAdvFuncHelper))
+-        module = get_dbapi_compliant_module('sqlite')
++        try:
++            module = get_dbapi_compliant_module('sqlite')
++        except ImportError:
++            self.skip('pysqlite is not installed')
+         self.failUnless(isinstance(module.adv_func_helper, _GenericAdvFuncHelper))
+ 
+ 
+

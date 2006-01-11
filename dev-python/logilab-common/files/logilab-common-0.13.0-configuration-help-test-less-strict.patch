@@ -1,0 +1,19 @@
+=== modified file 'test/unittest_configuration.py'
+--- test/unittest_configuration.py	
++++ test/unittest_configuration.py	
+@@ -145,7 +145,13 @@
+         
+     def test_help(self):
+         self.cfg.add_help_section('bonus', 'a nice additional help')
+-        self.assertLinesEquals(self.cfg.help().strip(), """usage: Just do it ! (tm)
++        help = self.cfg.help().strip()
++        # at least in python 2.4.2 the output is:
++        # '  -v <string>, --value=<string>'
++        # it is not unlikely some optik/optparse versions do print -v<string>
++        # so accept both
++        help = help.replace(' -v <string>, ', ' -v<string>, ')
++        self.assertLinesEquals(help, """usage: Just do it ! (tm)
+ 
+ options:
+   -h, --help            show this help message and exit
+
