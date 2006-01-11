@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7_alpha20060110.ebuild,v 1.1 2006/01/10 21:52:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7_alpha20060110.ebuild,v 1.2 2006/01/11 20:03:25 dholm Exp $
 
 inherit cvs
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/opengl
