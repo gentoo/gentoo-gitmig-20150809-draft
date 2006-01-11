@@ -1,33 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 86a2eccb4e13cbb1e45a4161da36728f ChangeLog 32225
+MD5 6fc4c25b2e441c776bd78aecaa6751bf ChangeLog 32512
 MD5 4d36586e82b663b31cef834a9fa0d38b alsa-driver-1.0.10-r1.ebuild 4720
 MD5 ebd180c4a898e9bf0fe0cb8f9dc2b0d6 alsa-driver-1.0.10.ebuild 4620
 MD5 05d84ba8681d1e857e581caf97e6db59 alsa-driver-1.0.10_rc3.ebuild 4675
 MD5 6b7004043027c26fec7e40de8edcb77d alsa-driver-1.0.11_rc2.ebuild 4856
 MD5 35dddcb56c05ef64f654c2d1172c4ee8 alsa-driver-1.0.3.ebuild 3315
-MD5 62ebbf151305f21e16788535ec83b40d alsa-driver-1.0.9b.ebuild 4551
-MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
 MD5 11884fe8b770282d2470c5620622e379 files/alsa-driver-1.0.10-oops.patch 1388
 MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 346
-MD5 2f9a74cca5e78c63142073f0c90b9ff8 files/alsa-driver-1.0.10_rc2-audigy2zs.patch 460
 MD5 f6a0e5f4624041d23bbd60726331310e files/alsa-driver-1.0.10_rc3-ppc-unbreakage.patch 2957
-MD5 be4912a88e538a1f620b2fd422859ef6 files/alsa-driver-1.0.9b-sparc64-ioctl-detect.patch 513
 MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10 72
 MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10-r1 72
 MD5 ad7631557a0317471d29e4c26cfb4cf2 files/digest-alsa-driver-1.0.10_rc3 75
 MD5 855ac1fe064602102d683b3396a7c582 files/digest-alsa-driver-1.0.11_rc2 75
 MD5 938a2ee36c54416322d1acd47b249c99 files/digest-alsa-driver-1.0.3 71
-MD5 496627835733f8108e6b10dfc8ee9bf4 files/digest-alsa-driver-1.0.9b 72
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
-MD5 b2791ec892d9be6952fe139cc2309abf files/xbox-1.0.8.patch 1525
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxA9AAiZjviIA2XgRAizdAJ9WqNJ64FPJCAlm7JmyfPJhB78wcwCgl7ba
-eHa2r/9cauRL9zNIogFzRzU=
-=G52H
+iD8DBQFDxSVVAiZjviIA2XgRAioOAJ9qE0+TlePZf1oUtI8xoTW3FIGIXwCgrge5
+PFHFllF1iqhPk43zt1zqD0c=
+=68YN
 -----END PGP SIGNATURE-----
