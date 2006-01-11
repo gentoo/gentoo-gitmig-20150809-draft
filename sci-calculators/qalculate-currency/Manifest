@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fc38e1c743aea63f45d895b43e2c6234 ChangeLog 966
 MD5 20caf431e315bf8e481d023835e95ea3 files/digest-qalculate-currency-0.9.0 76
 MD5 20caf431e315bf8e481d023835e95ea3 files/digest-qalculate-currency-0.9.0-r1 76
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 b8917fa2443ff50b1ccef79e37b84391 qalculate-currency-0.9.0-r1.ebuild 796
 MD5 fb0274d85087898bc2dd40151cc4544a qalculate-currency-0.9.0.ebuild 792
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxFCSCRZPokWLroQRAjKpAKDFnir3CNvBfM0UjKCVWfq9PyY/oACeInmD
+8ptCCCGW40Roiy3IxkybzpY=
+=lfZ4
+-----END PGP SIGNATURE-----

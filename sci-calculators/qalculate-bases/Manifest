@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85e4ea379307e048b71a7c66bbda6ebd ChangeLog 936
 MD5 9691d42afd6104f44d5486e8b5e22049 files/digest-qalculate-bases-0.9.0 73
 MD5 9691d42afd6104f44d5486e8b5e22049 files/digest-qalculate-bases-0.9.0-r1 73
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 3e04c20e72a6012753416f54b1ae4b50 qalculate-bases-0.9.0-r1.ebuild 792
 MD5 85db5cabd56ce95f7037c1ab83f1dec3 qalculate-bases-0.9.0.ebuild 788
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxFBpCRZPokWLroQRAtjuAKDjtQmK7cE+ni8enKGQxkR1A/Z6CACeIfAS
+jtNfqpQOhHmVH05tJ+FELWY=
+=/Arj
+-----END PGP SIGNATURE-----
