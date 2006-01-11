@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcfclock
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.4 2005/11/05 22:43:57 sbriesen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.5 2006/01/11 00:54:47 sbriesen Exp $
+
+  11 Jan 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/pcfclock-0.44-udev.patch, -files/pcfclock-0.44-udev-gentoo.patch,
+  -files/pcfclock.modules.d, -pcfclock-0.44.ebuild, pcfclock-0.44-r1.ebuild:
+  cleanup.
 
 *pcfclock-0.44-r1 (05 Nov 2005)
 
