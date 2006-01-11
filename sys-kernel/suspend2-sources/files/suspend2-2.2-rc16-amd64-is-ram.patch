@@ -1,0 +1,41 @@
+Hi.
+
+The vanilla AMD64 code doesn't include a page_is_ram function so I implemented one, and managed to get it horribly wrong, but didn't notice until this morning. This patch fixes the issue.
+
+Regards,
+
+Nigel
+
+ arch/x86_64/kernel/e820.c |    2 +-
+ include/asm-x86_64/page.h |    2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+diff -ruNp 9180-amd64-page-is-ram.patch-old/arch/x86_64/kernel/e820.c 9180-amd64-page-is-ram.patch-new/arch/x86_64/kernel/e820.c
+--- 9180-amd64-page-is-ram.patch-old/arch/x86_64/kernel/e820.c	2006-01-10 13:20:41.000000000 +1000
++++ 9180-amd64-page-is-ram.patch-new/arch/x86_64/kernel/e820.c	2006-01-10 12:48:26.000000000 +1000
+@@ -197,7 +197,7 @@ int page_is_ram(unsigned long pagenr)
+ 		    ei->addr >= (start + PAGE_SIZE))
+ 			continue;
+ 
+-		return (ei->type != E820_RAM);
++		return (ei->type == E820_RAM);
+ 	}
+ 
+ 	return 0;
+diff -ruNp 9180-amd64-page-is-ram.patch-old/include/asm-x86_64/page.h 9180-amd64-page-is-ram.patch-new/include/asm-x86_64/page.h
+--- 9180-amd64-page-is-ram.patch-old/include/asm-x86_64/page.h	2006-01-03 15:08:44.000000000 +1000
++++ 9180-amd64-page-is-ram.patch-new/include/asm-x86_64/page.h	2006-01-10 12:48:26.000000000 +1000
+@@ -93,6 +93,8 @@ typedef struct { unsigned long pgprot; }
+ 
+ #include <asm/bug.h>
+ 
++extern int page_is_ram(unsigned long pagenr);
++
+ #endif /* __ASSEMBLY__ */
+ 
+ #define PAGE_OFFSET		((unsigned long)__PAGE_OFFSET)
+
+_______________________________________________
+Suspend2-devel mailing list
+Suspend2-devel@lists.suspend2.net
+http://lists.suspend2.net/mailman/listinfo/suspend2-devel
+

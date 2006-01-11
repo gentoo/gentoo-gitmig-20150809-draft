@@ -1,0 +1,11 @@
+--- linux-2.6.15.y.orig/kernel/workqueue.c.orig	2006-01-11 23:38:58.000000000 +0100
++++ linux-2.6.15.y/kernel/workqueue.c	2006-01-11 23:40:07.000000000 +0100
+@@ -335,7 +335,7 @@ struct workqueue_struct *__create_workqu
+ 	lock_cpu_hotplug();
+ 	if (singlethread) {
+ 		INIT_LIST_HEAD(&wq->list);
+-		p = create_workqueue_thread(wq, any_online_cpu(cpu_online_map),
++		p = create_workqueue_thread(wq, singlethread_cpu,
+ 				freezer_flags);
+ 		if (!p)
+ 			destroy = 1;

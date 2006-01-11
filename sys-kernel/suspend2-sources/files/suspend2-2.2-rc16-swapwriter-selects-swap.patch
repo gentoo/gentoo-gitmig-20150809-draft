@@ -1,0 +1,15 @@
+ Kconfig |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+diff -ruNp 9310-swapwriter-selects-swap.patch-old/kernel/power/Kconfig 9310-swapwriter-selects-swap.patch-new/kernel/power/Kconfig
+--- 9310-swapwriter-selects-swap.patch-old/kernel/power/Kconfig	2006-01-11 11:13:00.000000000 +1000
++++ 9310-swapwriter-selects-swap.patch-new/kernel/power/Kconfig	2006-01-11 11:10:57.000000000 +1000
+@@ -133,7 +133,8 @@ menuconfig SUSPEND2
+ 
+ 	config SUSPEND2_SWAPWRITER
+ 		bool '  Swap Writer'
+-		depends on SWAP && SUSPEND2
++		depends on SUSPEND2
++		select SWAP
+ 		---help---
+ 		  This option enables support for storing an image in your
+ 		  swap space.

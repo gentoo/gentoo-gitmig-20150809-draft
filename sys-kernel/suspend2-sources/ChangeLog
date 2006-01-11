@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.32 2006/01/09 13:32:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.33 2006/01/11 23:37:01 brix Exp $
+
+*suspend2-sources-2.6.15-r1 (11 Jan 2006)
+
+  11 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/suspend2-2.2-rc16-amd64-is-ram.patch,
+  +files/suspend2-2.2-rc16-debug-rodata-define.patch,
+  +files/suspend2-2.2-rc16-remove-block-dump.patch,
+  +files/suspend2-2.2-rc16-swapwriter-selects-swap.patch,
+  +files/suspend2-2.2-rc16-workqueue-post-suspend2.patch,
+  +files/suspend2-2.2-rc16-workqueue-pre-suspend2.patch,
+  +suspend2-sources-2.6.15-r1.ebuild:
+  Revision bump to genpatches-2.6.15-2, bug #118692, + patches from upstream.
 
 *suspend2-sources-2.6.15 (09 Jan 2006)
 

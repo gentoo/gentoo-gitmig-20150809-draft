@@ -1,0 +1,29 @@
+Hi.
+
+Per Bojan's email from earlier in the day, this patch fixes a typo in the arch /config specific code for determining whether a page should be saved.
+
+Nigel
+
+ prepare_image.c |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+diff -ruNp 9160-debug-rodata-define.patch-old/kernel/power/prepare_image.c 9160-debug-rodata-define.patch-new/kernel/power/prepare_image.c
+--- 9160-debug-rodata-define.patch-old/kernel/power/prepare_image.c	2006-01-10 13:22:07.000000000 +1000
++++ 9160-debug-rodata-define.patch-new/kernel/power/prepare_image.c	2006-01-10 12:48:26.000000000 +1000
+@@ -228,8 +228,10 @@ static struct page *rodata_start, *rodat
+ static struct page *rotext_start, *rotext_end;
+ static struct page *nosave_start, *nosave_end;
+ static struct page *rtas_start, *rtas_end;
+-#ifdef CONFIG_PPC_RTAS
++#ifdef CONFIG_DEBUG_RODATA
+ extern char __start_rodata, __end_rodata;
++#endif
++#ifdef CONFIG_PPC_RTAS
+ extern unsigned int rtas_data, rtas_size;
+ #endif
+ #ifdef CONFIG_PPC
+
+_______________________________________________
+Suspend2-devel mailing list
+Suspend2-devel@lists.suspend2.net
+http://lists.suspend2.net/mailman/listinfo/suspend2-devel
+

@@ -1,0 +1,12 @@
+Index: linux-2.6.15.y/kernel/workqueue.c
+===================================================================
+--- linux-2.6.15.y.orig/kernel/workqueue.c.orig
++++ linux-2.6.15.y/kernel/workqueue.c
+@@ -335,6 +335,6 @@ struct workqueue_struct *__create_workqu
+ 	lock_cpu_hotplug();
+ 	if (singlethread) {
+ 		INIT_LIST_HEAD(&wq->list);
+-		p = create_workqueue_thread(wq, singlethread_cpu);
++		p = create_workqueue_thread(wq, any_online_cpu(cpu_online_map));
+ 		if (!p)
+ 			destroy = 1;
