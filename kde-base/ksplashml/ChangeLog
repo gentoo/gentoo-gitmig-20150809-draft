@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksplashml
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplashml/ChangeLog,v 1.34 2005/12/17 10:23:15 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplashml/ChangeLog,v 1.35 2006/01/11 23:49:11 flameeyes Exp $
+
+  11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/ksplashml-3.5.0-xinerama.patch, ksplashml-3.5.0.ebuild:
+  Added patch to disable xinerama support from ksplashml.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> ksplashml-3.5.0.ebuild:
   Added ~ppc64
