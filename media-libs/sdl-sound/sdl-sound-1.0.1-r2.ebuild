@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.2 2005/09/30 18:48:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.3 2006/01/11 20:09:05 wolf31o2 Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://icculus.org/SDL_sound/downloads/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="flac mikmod vorbis speex physfs mp3"
+IUSE="flac mikmod vorbis speex physfs mp3 mpeg"
 
 RDEPEND=">=media-libs/libsdl-1.2
 	flac? ( media-libs/flac )
@@ -20,7 +20,8 @@ RDEPEND=">=media-libs/libsdl-1.2
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	speex? ( media-libs/speex
 		media-libs/libogg )
-	physfs? ( dev-games/physfs )"
+	physfs? ( dev-games/physfs )
+	mpeg? ( media-libs/smpeg )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -33,7 +34,7 @@ src_compile() {
 	econf \
 		--disable-dependency-tracking \
 		--enable-midi \
-		--disable-smpeg \
+		$(use_enable mpeg smpeg) \
 		$(use_enable mp3 mpglib) \
 		$(use_enable flac) \
 		$(use_enable speex) \
