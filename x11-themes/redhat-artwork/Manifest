@@ -1,6 +1,16 @@
-MD5 576c9cca2c39dba8cde6e521399c4488 ChangeLog 9537
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45637075ee1657b63f58d6d8c2ddb252 ChangeLog 9646
 MD5 5d907e18affa414570d39790d791b072 files/digest-redhat-artwork-0.122.1-r1 76
 MD5 690317a55f016474c485164477473e87 files/digest-redhat-artwork-0.131 78
 MD5 1c94384c99f530fc87eab2d9b0e16385 metadata.xml 318
-MD5 611ebee93b94ad149153d7be3908c659 redhat-artwork-0.122.1-r1.ebuild 3985
+MD5 7f6ccbfceac5af8d20da39774eb1cc83 redhat-artwork-0.122.1-r1.ebuild 3984
 MD5 b8720eb7b16d6b067775ead858fd2ca8 redhat-artwork-0.131.ebuild 3962
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxUvhKRy60XGEcJIRArzAAJ0UGETVXdPgIERn8MslrUSnmcDZ/ACcD7+0
+sDlBllpWDJjTXsDYp6m9P1I=
+=4Xco
+-----END PGP SIGNATURE-----
