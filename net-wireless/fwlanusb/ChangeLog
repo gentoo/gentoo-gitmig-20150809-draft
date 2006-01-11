@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/fwlanusb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.2 2006/01/08 23:18:29 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.3 2006/01/11 00:46:04 sbriesen Exp $
+
+  11 Jan 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  fwlanusb-0.09.00_beta.ebuild:
+  added KDIR to BUILD_PARAMS.
 
   08 Jan 2006; Stefan Briesenick <sbriesen@gentoo.org>
   fwlanusb-0.09.00_beta.ebuild:
