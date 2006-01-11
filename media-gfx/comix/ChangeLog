@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.1 2006/01/10 23:26:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.2 2006/01/11 02:24:39 metalgod Exp $
+
+  11 Jan 2006; Luis Medinas <metalgod@gentoo.org> comix-2.5.ebuild:
+  Added ~amd64 keyword.
 
 *comix-2.5 (10 Jan 2006)
 
