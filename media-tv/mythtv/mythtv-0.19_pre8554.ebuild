@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8554.ebuild,v 1.2 2006/01/11 05:15:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8554.ebuild,v 1.3 2006/01/11 05:29:33 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa altivec arts debug dbox2 dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
+IUSE="alsa altivec arts debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -27,6 +27,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	arts? ( kde-base/arts )
+	dvd? ( media-libs/libdvdnav )
 	dvb? ( media-libs/libdvb )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
@@ -112,6 +113,7 @@ src_compile() {
 		$(use_enable dvb)
 		$(use_enable dvb dvb-eit)
 		--dvb-path=/usr/include
+		$(use_enable dvd)
 		$(use_enable opengl opengl-vsync)
 		$(use_enable nvidia xvmc)
 		$(use_enable ieee1394 firewire)
