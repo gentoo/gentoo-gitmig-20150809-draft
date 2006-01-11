@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
-</maintainer>
 <longdescription>
 Mame is an arcade machine emulator. Started in 1997 by Nicola Salmoria, mame started out as a 
 series of emulators for individual games. This series of emulators was combined into a simgle 
