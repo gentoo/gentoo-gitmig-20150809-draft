@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.92 2006/01/05 10:25:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.93 2006/01/11 09:22:14 dragonheart Exp $
+
+*lftp-3.4.0-r1 (11 Jan 2006)
+
+  11 Jan 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/lftp-3.4.0-remote-completion-false.patch, +lftp-3.4.0-r1.ebuild:
+  added remote-completion-false.patch from upstream. Changed back to using
+  system readline-5.1 as 5.0 breaks - bug #74815 - thanks Peter Kerwien
 
 *lftp-3.4.0 (05 Jan 2006)
 

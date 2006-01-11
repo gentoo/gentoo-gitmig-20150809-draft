@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.13.ebuild,v 1.12 2005/06/21 12:10:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.13.ebuild,v 1.13 2006/01/11 09:22:14 dragonheart Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	alpha? ( dev-lang/perl )
 	alpha? ( >=sys-apps/sed-4 )
 	virtual/libc
-	sys-libs/readline
+	!ppc-macos? ( sys-libs/readline )
 	sys-apps/gawk
 	sys-devel/bison
 	sys-devel/libtool"
