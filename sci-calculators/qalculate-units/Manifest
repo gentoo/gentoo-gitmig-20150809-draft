@@ -1,6 +1,16 @@
-MD5 778751349d321330b67f83628c7105ba ChangeLog 827
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b82799d21b5cc3ab1522b26a81774db4 ChangeLog 936
 MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0 73
 MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0-r1 73
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 2041e0323cf572d97a7600d8f5565c6c qalculate-units-0.9.0-r1.ebuild 792
-MD5 316f1057667c28f0944d645adf1fd6b6 qalculate-units-0.9.0.ebuild 790
+MD5 8e3a9aa82593fb2630b1745b4f52cdc6 qalculate-units-0.9.0.ebuild 788
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxFNvCRZPokWLroQRAkLeAKCsPiL4HKBeQRrZfYz968FNcWaRzACeKW5W
+z4NU+HEdjrDycoMH1Xc1aVE=
+=+hLE
+-----END PGP SIGNATURE-----

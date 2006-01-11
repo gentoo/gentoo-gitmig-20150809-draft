@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-units
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/ChangeLog,v 1.4 2006/01/08 22:00:13 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/ChangeLog,v 1.5 2006/01/11 00:37:52 halcy0n Exp $
+
+  11 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  qalculate-units-0.9.0.ebuild:
+  Stable on x86; bug #118328
 
 *qalculate-units-0.9.0-r1 (08 Jan 2006)
 
