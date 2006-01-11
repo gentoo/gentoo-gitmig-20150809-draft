@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7-r1.ebuild,v 1.9 2005/06/30 03:35:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7-r1.ebuild,v 1.10 2006/01/11 04:37:28 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,6 +34,9 @@ src_unpack() {
 	# stage2 / stage3 ... don't DEPEND on it or we get a DEPEND loop :(
 	# for more info, see #55479
 	touch man/*.1
+
+	# There's no reason for this crap to use the private version
+	sed -i 's:__mempcpy:mempcpy:g' lib/*.c
 
 	# Fix userpriv perm problems #76600
 	chmod ug+w config/*
