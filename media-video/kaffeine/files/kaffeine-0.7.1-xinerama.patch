@@ -1,0 +1,22 @@
+Index: kaffeine/configure.in.in
+===================================================================
+--- kaffeine/configure.in.in	(revision 497089)
++++ kaffeine/configure.in.in	(working copy)
+@@ -26,11 +26,16 @@
+ dnl
+ dnl Checks for Xinerama extension
+ dnl
+-AC_CHECK_LIB(Xinerama, XineramaQueryExtension,
++AC_ARG_WITH([xinerama],
++  AS_HELP_STRING([--without-xinerama], [Disable xinerama support (defaut: check)]))
++
++if test "x$with_xinerama" != "xno"; then
++  AC_CHECK_LIB(Xinerama, XineramaQueryExtension,
+              X_PRE_LIBS="$X_PRE_LIBS -lXinerama"
+              AC_DEFINE(HAVE_XINERAMA,,[Define this if you have libXinerama installed])
+              ac_have_xinerama="yes",,
+              $X_LIBS $X_PRE_LIBS -lXext $X_EXTRA_LIBS)
++fi
+ AM_CONDITIONAL(HAVE_XINERAMA, test x$ac_have_xinerama = "xyes")
+ 
+ dnl ---------------------------------------------
