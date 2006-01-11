@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f4266176b69f467ef442fe84ae10ec02 ChangeLog 43027
+MD5 6b3886fd99ca14cd5bd73f9fe698c281 ChangeLog 43205
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r1/backgroundrc 342
 MD5 928f7208882e2a90d9cb633dcfa9abf9 files/3.3.2-r1/kdmrc 19878
@@ -43,6 +40,7 @@ MD5 09763d6f85e43dbedf65f713cb378ab7 files/kdesu-3.5.0-bindnow.patch 1112
 MD5 02f59e1fc7390a8946d4adae72ff0d58 files/kicker-3.5.0-composite.patch 2250
 MD5 f557526f4d82f563d8d69f986303d30d files/konqueror-3.5.0-location-bar-focus.patch 433
 MD5 f06224b0a38152e5d3435b00a70bcf6c files/konsole-3.3.2.patch 1201
+MD5 623a9c0df1865e941d98a5a09a9ab3c9 files/ksplashml-3.5.0-xinerama.patch 951
 MD5 72a291ae02f5fe8b283948c8f2aaea30 files/kwin-3.5.0-composite.patch 1158
 MD5 94b8f1686d4ab032ff789fff17b79cee files/kxkb-3.5.0-modularxkb.patch 1265
 MD5 c6866e71fa56d6d12a18e96499716d2c files/post-3.3.2-kdebase-htmlframes2.patch 1342
@@ -55,12 +53,5 @@ MD5 bca1b08e31bfa89d6d04e9996a77c0bd kdebase-3.4.2-r2.ebuild 4527
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 f30c2b7e9f582458651ca7d3b2eac796 kdebase-3.4.3-r1.ebuild 4493
 MD5 b028b31c593bcc849bbde152f85b8dac kdebase-3.4.3.ebuild 4263
-MD5 e5d2bea48d9d87d8d8871e5bd1e9bdf0 kdebase-3.5.0-r1.ebuild 5784
+MD5 0450e084bbe558e1d624001b3046817b kdebase-3.5.0-r1.ebuild 6029
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxWoYAiZjviIA2XgRAljXAJ0Z+7tPOJXj29nr+uCxHoXGC/SJSgCgk/2o
-2XIPuH0LooJ9k+hpQs/a4bU=
-=KFVh
------END PGP SIGNATURE-----
