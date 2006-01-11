@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.254 2006/01/07 22:03:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.255 2006/01/11 17:19:02 chainsaw Exp $
+
+*mm-sources-2.6.15-r3 (11 Jan 2006)
+
+  11 Jan 2006; <chainsaw@gentoo.org> +mm-sources-2.6.15-r3.ebuild:
+  Version bump.
 
 *mm-sources-2.6.15-r2 (07 Jan 2006)
 
