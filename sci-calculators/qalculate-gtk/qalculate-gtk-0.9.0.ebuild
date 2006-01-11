@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.0.ebuild,v 1.1 2005/11/16 03:52:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.0.ebuild,v 1.2 2006/01/11 00:28:16 halcy0n Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
 SLOT="0"
 IUSE="gnome nls"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 
 DEPEND="app-text/scrollkeeper
 	dev-lang/perl
