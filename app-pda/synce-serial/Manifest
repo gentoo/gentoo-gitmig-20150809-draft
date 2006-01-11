@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 636cc908dfeeceb97acb9a4863e6b3fa ChangeLog 1884
 MD5 5aeb344f79c54f1718317cb6044214ff files/digest-synce-serial-0.4 68
 MD5 7867511576c1ea287aa343d3bf4b5459 files/digest-synce-serial-0.7 68
@@ -14,3 +17,10 @@ MD5 20ab48879a1a0c24620818858bbe94ec synce-serial-0.8.9.ebuild 652
 MD5 4cbbe6ada49d7fba500bc80f488313f5 synce-serial-0.8.ebuild 617
 MD5 8b4f6e5c47de43b75414b53e648be601 synce-serial-0.9.0.ebuild 633
 MD5 693df47a5030e0774d9e953d33b401fc synce-serial-0.9.1.ebuild 598
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxRoMFdQwWVoAgN4RAknjAKCieEo4LA7ElsNwA4J7yhjr0Src3ACgsTUx
+efjT9wRiYLQK7iju3MuQ3uM=
+=Ej61
+-----END PGP SIGNATURE-----

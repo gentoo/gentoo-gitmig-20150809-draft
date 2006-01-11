@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9bf216ddddfd6780c30b677752ed31b0 ChangeLog 1562
 MD5 6f1fc03bfbfaf58f13c85f542e17fa6c files/digest-synce-dccm-0.3.1 68
 MD5 7654ee70fbbc30b6d491c132caab1e8d files/digest-synce-dccm-0.7 66
@@ -12,3 +15,10 @@ MD5 712647bfbd4e2e3515abfe00f6149c2b synce-dccm-0.8.9.ebuild 638
 MD5 a54ba89d82462b6209d83c600d8ed357 synce-dccm-0.8.ebuild 629
 MD5 4355aceca75574885f43415e0e1efe36 synce-dccm-0.9.0.ebuild 620
 MD5 b7bd4a9054c6e4b3b27d89b97f5d3b86 synce-dccm-0.9.1.ebuild 563
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxRmAFdQwWVoAgN4RAkgRAKCADNK0up6+W4EGUqhpYSbKvBDbYgCdHlp0
+7U0+as8CZUnaARLqArCOQpM=
+=GWbK
+-----END PGP SIGNATURE-----

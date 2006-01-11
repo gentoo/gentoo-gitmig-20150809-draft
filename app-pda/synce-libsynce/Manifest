@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d087e4a8ffe25021bc9aac146e44bef ChangeLog 2056
 MD5 32106e3bd72b88a593e10392242917fa files/0.8.9/synce-libsynce-0.8.9-gcc33.patch 431
 MD5 7d9811314c87ae1229c45598d0bb2c95 files/digest-synce-libsynce-0.7 70
@@ -11,3 +14,10 @@ MD5 61b330b4ebe07e5e240ba0b00b6fcb7a synce-libsynce-0.8.1.ebuild 622
 MD5 1123cd75d25e2b539772f510ca2e4176 synce-libsynce-0.8.9.ebuild 674
 MD5 af170c1a8e6a2b084bb2c72d7d916df8 synce-libsynce-0.9.0.ebuild 584
 MD5 e78727a559db5e873f43b71f619c975b synce-libsynce-0.9.1.ebuild 589
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxRioFdQwWVoAgN4RAmrxAJ95svStC1pjR+9m8ItJEtxIuSBJbQCgnt4j
+w9dz/VYheVKCyo0fC5a9H6s=
+=73rU
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c3395d26aec388cff4514b06a88f1494 ChangeLog 1963
 MD5 b8f8dd3fb65bc8010c1888e973947998 files/digest-synce-librapi2-0.7 70
 MD5 80909d9cc67db76633d236fa62ac7c00 files/digest-synce-librapi2-0.8.1 72
@@ -10,3 +13,10 @@ MD5 1012f691390eb71772c5b26cf54a44a5 synce-librapi2-0.8.1.ebuild 710
 MD5 3d07d780c6445014e6a684d15c23c4fa synce-librapi2-0.8.9.ebuild 710
 MD5 1587cf252b7a1eb6f84ec8cf1eb2ab5c synce-librapi2-0.9.0.ebuild 694
 MD5 8d574da73b1181bb56b7ae01ab018da3 synce-librapi2-0.9.1.ebuild 632
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxRkiFdQwWVoAgN4RAgY3AKC5SOtcc1czNoq4u8wxTVgDE5xQNQCaAiCa
+ON1Z7dFyGgZRXx29/FUyhzQ=
+=+lnI
+-----END PGP SIGNATURE-----
