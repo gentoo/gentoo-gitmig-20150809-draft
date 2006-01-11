@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/stldb4-0.3.13.ebuild,v 1.2 2005/08/16 04:43:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/stldb4-0.3.13.ebuild,v 1.3 2006/01/11 03:33:49 vapier Exp $
 
 inherit flag-o-matic
 
@@ -16,13 +16,6 @@ IUSE=""
 DEPEND=">=dev-libs/ferrisloki-2.0.3
 	>=dev-libs/libferrisstreams-0.3.6
 	dev-libs/STLport"
-
-fsrc_unpack() {
-	unpack ${A}
-	cd ${S}
-	ln -s ${S}/db-4.1.25/dist STLdb4
-	append-flags -I${S}
-}
 
 src_compile() {
 	econf --enable-wrapdebug --enable-rpc --with-uniquename=stldb4 || die
