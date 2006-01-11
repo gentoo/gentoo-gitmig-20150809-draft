@@ -1,0 +1,29 @@
+--- Makefile.in.old	2006-01-09 09:56:05.000000000 +0900
++++ Makefile.in	2006-01-09 17:07:11.000000000 +0900
+@@ -1,4 +1,3 @@
+-
+ prefix= @prefix@
+ exec_prefix= @exec_prefix@
+ libdir= @libdir@
+@@ -6,7 +5,7 @@
+ 
+ CC=@CC@
+ 
+-CFLAGS+= -Wall @CFLAGS@ @DEFS@
++CFLAGS+= -Wall -fPIC @CFLAGS@ @DEFS@
+ LIBS+= @LIBS@
+ 
+ YACC= @YACC@
+@@ -46,8 +45,10 @@
+ 	./test
+ 
+ install: all
+-	${INSTALL} -m 444 libmimedir.h ${includedir}
+-	${INSTALL} -m 444 libmimedir.a ${libdir}
++	${INSTALL} -d ${DESTDIR}${includedir}
++	${INSTALL} -d ${DESTDIR}${libdir}
++	${INSTALL} -m 444 libmimedir.h ${DESTDIR}${includedir}
++	${INSTALL} -m 444 libmimedir.a ${DESTDIR}${libdir}
+ 
+ clean:
+ 	rm -f *.o *.a *.core
