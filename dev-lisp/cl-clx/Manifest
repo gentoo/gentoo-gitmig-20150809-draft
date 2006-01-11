@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 288135e37690bedcc1d596787cf11501 metadata.xml 666
-MD5 e643dd7a6fc27662d7eb962dd7618714 ChangeLog 1439
+MD5 cd886ebe2731c2b9132d9447cd68230d ChangeLog 1569
 MD5 9b078f4b1984bc0754dfd0e1050c83f5 cl-clx-0.7.1.ebuild 927
-MD5 b3bcdb78187a8d1176e61a82079dcd66 files/digest-cl-clx-0.7.1 61
+MD5 dc5db6359693da806d19fc2ad152aeea cl-clx-0.7.2.ebuild 928
 MD5 f28b823114c37c11f75c9d1d6e6a944c files/0.6.1-gentoo.patch 3860
+MD5 b3bcdb78187a8d1176e61a82079dcd66 files/digest-cl-clx-0.7.1 61
+MD5 1fb85e7931e168c04f2a826c2773a435 files/digest-cl-clx-0.7.2 61
+MD5 288135e37690bedcc1d596787cf11501 metadata.xml 666
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDUtnyiNZaEAZA+ARAl3aAJ9U96KTZ0XWl1/cTwooavgvAs/4SgCcCnkV
-mjS8ZVzvirM6ihM8u7T/Iao=
-=DADj
+iD8DBQFDxLmTyiNZaEAZA+ARAo4MAJ9kyDAsrb44xk7ARjRJX5JR6NoKUQCeKBgS
+Z7j5Ex6XTJ3qEhKfZpWN6ns=
+=ZY1c
 -----END PGP SIGNATURE-----

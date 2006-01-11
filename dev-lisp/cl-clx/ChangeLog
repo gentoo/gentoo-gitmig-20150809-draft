@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-clx
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.9 2005/08/25 04:36:51 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.10 2006/01/11 07:53:02 mkennedy Exp $
+
+*cl-clx-0.7.2 (11 Jan 2006)
+
+  11 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org> +cl-clx-0.7.2.ebuild:
+  New upstream version.
 
 *cl-clx-0.7.1 (25 Aug 2005)
 
