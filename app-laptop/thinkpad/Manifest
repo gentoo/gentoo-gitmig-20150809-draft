@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a054ba6002708cdb2f0ba39d513ff17d ChangeLog 3179
+MD5 446829e5d70e2b297ba268ff12069483 ChangeLog 3461
 MD5 67a420196c59076408625a82b1b0f3eb files/digest-thinkpad-3.2 63
 MD5 f6711c6d29ed136c770235acf6bebf4a files/digest-thinkpad-4.1 63
 MD5 c4bd4b11c836429cb452ababe9575efd files/digest-thinkpad-4.3 63
@@ -12,17 +9,10 @@ MD5 87bb1964098b9b0fd2093bc245c16699 files/digest-thinkpad-5.8 63
 MD5 26886c3a2e8b9c3b807371e643dd5c75 files/thinkpad 545
 MD5 53ea99e36366006d376acc68b63762eb files/thinkpad-5.8-cpu_ptr.patch 634
 MD5 9cb8c919fc98f51c73bb8e42f2057867 metadata.xml 257
-MD5 bb7237bcad0c65485331a72a3a7b5a4f thinkpad-3.2.ebuild 1112
-MD5 6361db80ee7a02086fd0499463b079fb thinkpad-4.1.ebuild 1382
-MD5 7f1ac0323cb5c09a14105276c400f5f3 thinkpad-4.3-r1.ebuild 2017
-MD5 9aa1f77e2dc49c4cefe1b61bffe2d506 thinkpad-4.3.ebuild 1914
-MD5 5a5d9bcd8a38e81c820fca56d6e9f7c2 thinkpad-4.8.ebuild 2014
-MD5 90b9583a2802625b94b2673fba2856af thinkpad-5.7.ebuild 1866
+MD5 f931aa8596c2b096214b3cb7af3b894f thinkpad-3.2.ebuild 1102
+MD5 4f4f4791f1af04f2382bddbece4f9520 thinkpad-4.1.ebuild 1372
+MD5 70d35cbb2f6698600a92fc3df76541d2 thinkpad-4.3-r1.ebuild 2007
+MD5 b70dc4d648e03a18b73d8f69e5a96ec8 thinkpad-4.3.ebuild 1907
+MD5 5a3b38a8550c1f5f07daa4e60052bfe1 thinkpad-4.8.ebuild 2004
+MD5 d4bb94aa4eaa39516296e47fb32257bd thinkpad-5.7.ebuild 1855
 MD5 bed148d23e0d3c49ca3ff29ed6aa81f2 thinkpad-5.8.ebuild 1240
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrTAOQiJ/wx066S4RAsxbAJ99kdBjRiAlTHuvELYQS15urVGWCwCgkwOX
-f/A2iLc5oXSmgDoblljADkY=
-=boCd
------END PGP SIGNATURE-----
