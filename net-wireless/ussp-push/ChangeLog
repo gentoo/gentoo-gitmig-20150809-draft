@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ussp-push
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ChangeLog,v 1.2 2005/11/27 17:30:34 brix Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ChangeLog,v 1.3 2006/01/11 21:05:38 brix Exp $
+
+  11 Jan 2006; Henrik Brix Andersen <brix@gentoo.org> ussp-push-0.5.ebuild:
+  Stable on x86.
 
   27 Nov 2005; Henrik Brix Andersen <brix@gentoo.org> ussp-push-0.4.ebuild:
   Stable on x86.
