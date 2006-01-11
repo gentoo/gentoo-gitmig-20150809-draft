@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.6 2005/09/21 20:27:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.7 2006/01/11 14:41:08 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,15 +14,23 @@ SLOT="0"
 KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
+RDEPEND="virtual/opengl
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-soundlibs
+		app-emulation/emul-linux-x86-compat
+		app-emulation/emul-linux-x86-sdl )
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext )
+			virtual/x11 ) )"
+
+GAMES_CHECK_LICENSE="yes"
+S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-S=${WORKDIR}
-
-pkg_setup() {
-	check_license POMPOM
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself
@@ -31,6 +39,9 @@ src_unpack() {
 src_install() {
 	exeinto "${dir}"
 	doexe bin/x86/*
+	# Remove libSDL since we use the system version and our version doesn't
+	# have TEXTRELs in it.
+	rm -f "${Ddir}"/libSDL-1.2.so.0.0.5
 	sed -i \
 		-e "s:XYZZY:${dir}:" "${Ddir}/${MY_P}" \
 		|| die "sed failed"
@@ -39,8 +50,7 @@ src_install() {
 	doins -r preview run styles || die "doins failed"
 	doins README license.txt icon.xpm
 
-	dodir "${GAMES_BINDIR}"
-	dosym "${dir}/${MY_P}" "${GAMES_BINDIR}/${PN}"
+	games_make_wrapper spacetripper-demo ./spacetripperdemo "${dir}" "${dir}"
 
 	prepgamesdirs
 }
