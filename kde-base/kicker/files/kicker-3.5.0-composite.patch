@@ -1,0 +1,43 @@
+Index: kicker/taskmanager/configure.in.in
+===================================================================
+--- kicker/taskmanager/configure.in.in	(revision 492938)
++++ kicker/taskmanager/configure.in.in	(working copy)
+@@ -1,14 +1,16 @@
+-dnl XComposite check
+-KDE_CHECK_HEADER(X11/extensions/Xcomposite.h, [xcomposite_h=yes], [xcomposite_h=no], [#include <X11/Xlib.h>])
+-if test "$xcomposite_h" = yes; then
+-  KDE_CHECK_LIB(Xcomposite, XCompositeQueryExtension, [
+-    LIB_XCOMPOSITE=-lXcomposite
+-    AC_DEFINE_UNQUOTED(HAVE_XCOMPOSITE, 1, [Define if you have the XComposite extension])
+-  ], [], -lXext -X11 $X_EXTRA_LIBS)
+-else
+-  LIB_XCOMPOSITE=
++if test "x$with_composite" != "xno"; then
++  dnl XComposite check
++  KDE_CHECK_HEADER(X11/extensions/Xcomposite.h, [xcomposite_h=yes], [xcomposite_h=no], [#include <X11/Xlib.h>])
++  if test "$xcomposite_h" = yes; then
++    KDE_CHECK_LIB(Xcomposite, XCompositeQueryExtension, [
++      LIB_XCOMPOSITE=-lXcomposite
++      AC_DEFINE_UNQUOTED(HAVE_XCOMPOSITE, 1, [Define if you have the XComposite extension])
++    ], [], -lXext -X11 $X_EXTRA_LIBS)
++  else
++    LIB_XCOMPOSITE=
++  fi
++  AC_SUBST(LIB_XCOMPOSITE)
+ fi
+-AC_SUBST(LIB_XCOMPOSITE)
+ 
+ dnl XFixes check
+ KDE_CHECK_HEADER(X11/extensions/Xfixes.h, [xfixes_h=yes], [xfixes_h=no], [#include <X11/Xlib.h>])
+Index: configure.in.in
+===================================================================
+--- configure.in.in	(revision 492938)
++++ configure.in.in	(working copy)
+@@ -275,3 +275,7 @@
+ AC_SUBST(LIBART_LIBS)
+ AC_SUBST(LIBART_CFLAGS)
+ AC_SUBST(LIBART_RPATH)
++
++AC_ARG_WITH([composite],
++  AS_HELP_STRING([--without-composite], [Disable Xcomposite support (default: check)]) )
++

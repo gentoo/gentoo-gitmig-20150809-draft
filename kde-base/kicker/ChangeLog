@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kicker
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.35 2005/12/17 09:32:46 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.36 2006/01/11 20:21:38 flameeyes Exp $
+
+  11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kicker-3.5.0-composite.patch, kicker-3.5.0.ebuild:
+  Add patch to disable xcomposite support and xcomposite useflag to
+  enable/disable it.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kicker-3.5.0.ebuild:
   Added ~ppc64
