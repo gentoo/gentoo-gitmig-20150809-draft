@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.4 2006/01/03 19:56:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.20.8.ebuild,v 1.5 2006/01/11 04:31:36 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -205,7 +205,7 @@ src_install() {
 
 	#Work around hardcoded path in 32bit libGL.so on amd64, bug 101539
 	if has_multilib_profile && [ $(get_abi_LIBDIR x86) = "lib32" ] ; then
-		ATI_LIBGL_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"
+		ATI_LIBGL_PATH="/usr/lib32/${xlibdir}/modules/dri/:/usr/$(get_libdir)/${xlibdir}/modules/dri"
 	fi
 		cat >>${T}/09ati <<EOF
 
@@ -275,7 +275,7 @@ src_install-libs() {
 		doexe ${BASE_NAME}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
 	fi
 	cp -pPR ${BASE_NAME}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig} \
-			${D}/${X11_LIB_DIR}
+			${D}/usr/$(get_libdir)
 	#Not the best place
 	insinto ${X11_DIR}/include/X11/extensions
 	doins ${BASE_NAME}/usr/X11R6/include/X11/extensions/fglrx_gamma.h

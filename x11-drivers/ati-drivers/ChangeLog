@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.15 2006/01/03 19:56:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.16 2006/01/11 04:31:36 lu_zero Exp $
+
+  11 Jan 2006; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.20.8.ebuild:
+  Fixed bug #113872
 
   03 Jan 2006; Jory A. Pratt <anarchy@gentoo.org>
   +files/ati-drivers-8.20.8-linux-2.6.15.patch, ati-drivers-8.20.8.ebuild:
