@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.5.ebuild,v 1.1 2005/12/07 15:16:14 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.5.ebuild,v 1.2 2006/01/11 01:38:59 lu_zero Exp $
 
 inherit base fixheadtails
 
@@ -12,7 +12,7 @@ SRC_URI="http://abridgegame.org/darcs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc"
 # disabled wxwindows use flag for now, as I got build errors
 
