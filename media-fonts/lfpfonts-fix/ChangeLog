@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/lfpfonts-fix
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.9 2005/03/12 23:49:34 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.10 2006/01/11 16:02:04 agriffis Exp $
+
+  11 Jan 2006; Aron Griffis <agriffis@gentoo.org>
+  +files/lfpfonts-fix-0.83-noglyph.patch, lfpfonts-fix-0.83-r2.ebuild:
+  Get rid of copious output from compile script, which was drastically slowing
+  down emerge, even in a local xterm.
 
   12 Mar 2005; Aron Griffis <agriffis@gentoo.org>
   -lfpfonts-fix-0.82-r1.ebuild, -lfpfonts-fix-0.83-r1.ebuild,

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/lfpfonts-fix-0.83-r2.ebuild,v 1.2 2005/03/12 23:49:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/lfpfonts-fix-0.83-r2.ebuild,v 1.3 2006/01/11 16:02:04 agriffis Exp $
 
-inherit font
+inherit font eutils
 
 DESCRIPTION="Linux Font Project fixed-width fonts"
 SRC_URI="mirror://sourceforge/xfonts/${PN}-src-${PV}.tar.bz2"
@@ -20,6 +20,12 @@ FONT_SUFFIX="pcf.gz"
 FONT_S=${S}/lfp-fix
 
 DOCS="doc/*"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.83-noglyph.patch
+}
 
 src_compile() {
 	cd src
