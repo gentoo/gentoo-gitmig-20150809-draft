@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8114d21210d6d90478ad5287e9dc13f3 ChangeLog 10687
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.83.1-glx-fix.patch 386
 MD5 ecb76daf5fcb89c5a092da585055c27a files/digest-xmame-0.100 66
@@ -13,3 +16,10 @@ MD5 4943ec78797f74a59e27376b9c022d09 xmame-0.101.ebuild 5836
 MD5 359f5149cdb0e25fe4858eb1a9c00108 xmame-0.102.ebuild 5788
 MD5 d3bb7f074f158a0d42e852eba6a50458 xmame-0.83.1.ebuild 6788
 MD5 2e18c1e9e72f58bf73c5875710891e98 xmame-0.99-r1.ebuild 5789
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxIqM2+ySkm8kpY0RAiDsAJ93j283UvtJzlZrKx8aCK1ZDOGKUACfbiFS
+/XeaJrWrryM2mdksaMpmaMM=
+=hqsr
+-----END PGP SIGNATURE-----

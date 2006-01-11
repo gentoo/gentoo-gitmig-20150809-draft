@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 951d461676b1879add96ec770e39b4d7 ChangeLog 6368
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.83.1-glx-fix.patch 386
 MD5 ecb76daf5fcb89c5a092da585055c27a files/digest-xmess-0.100 66
@@ -13,3 +16,10 @@ MD5 bf39f3d39b4a08f870082aa8d840a983 xmess-0.101.ebuild 5836
 MD5 06b917d9883973c8424e5b0aee5f1f2b xmess-0.102.ebuild 5788
 MD5 e239b0a87b24efd591009f37e09cfa63 xmess-0.83.1.ebuild 6588
 MD5 dd6ace276bcfbbcb022574afe3dbaa2c xmess-0.99-r1.ebuild 5789
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxIqC2+ySkm8kpY0RAriSAJ4o12bMsHt+dax6kIvH3RIN9W6slwCgxtgU
+xgd/Cfl4W++jwx1uJRf87ls=
+=7HRD
+-----END PGP SIGNATURE-----
