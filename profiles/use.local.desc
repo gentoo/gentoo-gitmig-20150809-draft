@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1661 2006/01/11 14:48:31 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1662 2006/01/11 19:18:38 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -481,6 +481,7 @@ kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
 kde-base/kdebase-kioslaves:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdebase:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
+kde-base/kdebase:xcomposite - Enable support for Xorg Composite extension
 kde-base/kdebase:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
@@ -503,6 +504,7 @@ kde-base/kopete:sametime - Enable support for the Sametime protocol for instant 
 kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 kde-base/ksysguard:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
+kde-base/kwin:xcomposite - Enable support for Xorg Composite extension
 mail-client/evolution:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:evolution - Provide an Evolution plugin
