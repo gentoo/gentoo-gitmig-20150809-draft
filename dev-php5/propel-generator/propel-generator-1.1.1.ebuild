@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-generator/propel-generator-1.1.1.ebuild,v 1.2 2006/01/01 16:56:55 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-generator/propel-generator-1.1.1.ebuild,v 1.3 2006/01/11 21:29:36 sebastian Exp $
 
 inherit php-pear-lib-r1
 
@@ -15,3 +15,7 @@ RDEPEND=">=dev-php5/phing-2.1.0"
 S="${WORKDIR}/propel_generator-${PV}"
 
 need_php_by_category
+
+pkg_setup() {
+	require_php_with_use simplexml
+}
