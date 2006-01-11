@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 97c74c23b051ad5d362515792dec030d ChangeLog 3753
+MD5 f205f888a41dc8ca95ab8ad68e35210f ChangeLog 4002
 MD5 a2e15c37686ddad8dd3854b2b9b70700 files/1.3.0/50nxclient 57
 MD5 f44884663100850b12e1fdb12b55645b files/1.5.0/50nxclient 38
 MD5 6532e2cbed5e3c88e36520dc46b1be4b files/digest-nxclient-1.4.0-r5 71
 MD5 f88ec7c11f1f61ad0c0c390e5325e8d5 files/digest-nxclient-1.5.0 149
 MD5 3b564ade1d67ddea768e937fa379c857 files/digest-nxclient-1.5.0-r1 149
+MD5 142a71ee05218b6014d4d8872bc9cd7e files/digest-nxclient-1.5.0-r2 73
 MD5 c1c67a77261d3b3fede94b41a9d0ce1e metadata.xml 455
 MD5 4429f22294184b7381a98271588fc29b nxclient-1.4.0-r5.ebuild 1648
 MD5 79c0f4b4ba001e5eb9d0f7dc41ad5085 nxclient-1.5.0-r1.ebuild 2195
+MD5 6f7657e499eaae7a6593451accdd24e5 nxclient-1.5.0-r2.ebuild 2221
 MD5 ceb7fb63bb0069577d0bf90e30241ab1 nxclient-1.5.0.ebuild 2192
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDoaXoJrHF4yAQTrARAirGAJ4pccJsE6p+qha9a2rIs54SyGJWggCgy9Ui
-iylQw0JNLfKuxD3CL9CT9T8=
-=RWS1
+iD8DBQFDxZo/JrHF4yAQTrARApkHAKC6UpQA6I11O/fZPplNNHbBrIm+/wCgtI/s
+/8+Mez/KPVJ+k6P34GfzTek=
+=yPch
 -----END PGP SIGNATURE-----
