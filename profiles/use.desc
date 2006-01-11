@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.281 2006/01/07 12:32:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.282 2006/01/11 00:47:06 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -110,7 +110,7 @@ freewnn - Adds support for FreeWnn kana to kanji conversion engine
 frontbase - Adds support for the frontbase sql server
 ftp - Adds FTP support
 gb - Adds support for Gnome Basic to gnumeric
-gcj - Enable building with gcj
+gcj - Enable building with gcj (The GNU Compiler for the Javatm Programming Language)
 gd - Adds support for media-libs/gd (to generate graphics on the fly)
 gd-external - Use the external version of gd rather than the bundled one (possibly dangerous)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
