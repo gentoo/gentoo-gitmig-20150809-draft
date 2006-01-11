@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ferrisloki
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.6 2005/09/19 22:27:13 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.7 2006/01/11 01:46:05 vapier Exp $
+
+*ferrisloki-2.1.1 (11 Jan 2006)
+
+  11 Jan 2006; Mike Frysinger <vapier@gentoo.org> +ferrisloki-2.1.1.ebuild:
+  Version bump #118559 by Sebastien Fabbro.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
