@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/orange
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/ChangeLog,v 1.8 2006/01/08 23:28:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/ChangeLog,v 1.9 2006/01/11 06:26:13 chriswhite Exp $
+
+*orange-0.3 (11 Jan 2006)
+
+  11 Jan 2006; Chris White <chriswhite@gentoo.org> +orange-0.3.ebuild:
+  Version bump for bug #109724.
 
   08 Jan 2006; Chris White <chriswhite@gentoo.org> metadata.xml,
   orange-0.2-r1.ebuild:
