@@ -1,0 +1,14 @@
+# Copyright 2006 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.1 2006/01/11 21:36:32 kevquinn Exp $
+
+# This file is additional masking for the hardened profile
+
+# Mask off gcc-4 for all hardened arches until SSP is sorted out (i.e.
+# backport for gcc-4.0 and 4.0/4.1 rigged for SSP support in the C
+# library).  After that, may still need to be masked on x86 as some
+# PIC assembler that worked pre-4 fails post-4, e.g. bug #104996).
+# If you want to play with it, unmask in /etc/portage/package.unmask
+# but be prepared to rebuild anything you build with gcc-4, later.
+# 2006-01-11 kevquinn
+=sys-devel/gcc-4*
