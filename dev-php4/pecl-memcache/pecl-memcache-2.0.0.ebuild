@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-memcache/pecl-memcache-2.0.0.ebuild,v 1.2 2006/01/06 17:39:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-memcache/pecl-memcache-2.0.0.ebuild,v 1.3 2006/01/11 03:59:44 robbat2 Exp $
 
 PHP_EXT_NAME="memcache"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 
-inherit php-ext-pecl-r1
+inherit php-ext-pecl-r1 eutils
 
 KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
 DESCRIPTION="PHP extension for using memcached."
@@ -24,8 +24,9 @@ src_unpack() {
 
 	cd "${S}"
 
-	# change configure to fix bug #117990
-	epatch "${FILESDIR}/config-zlib-det-fix.patch"
+	# fix bug #117990 better, without using a patch
+	# upstream has the file with CRLF instead of LF
+	edos2unix "${S}/config.m4"
 }
 
 src_compile() {
