@@ -1,4 +1,14 @@
-MD5 8928d48a2a178de9ee358a2e8794a4a6 ChangeLog 460
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 970c18a2eec2ffb193f377c323ab1720 ChangeLog 556
 MD5 eae977a6121bc6fb37365ff0a12c6bfa files/digest-gartoon-0.5 64
-MD5 c6337142bafd00d1a7f0989078c6b72d gartoon-0.5.ebuild 538
+MD5 e386d2a254e74be8ad3b9ea16d6d68f1 gartoon-0.5.ebuild 547
 MD5 af4ca1e5f30b0458ea4615644394378c metadata.xml 281
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxWdVKRy60XGEcJIRAln5AJ9vRtP+ETvPTYIvcGKfqWoNohI1mQCeK80c
+TiP5mNF3IoO6/VKH5dWUYyM=
+=3Ep8
+-----END PGP SIGNATURE-----
