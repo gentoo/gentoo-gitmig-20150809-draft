@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c22e56f94e29db99cefd91c6efd11545 ChangeLog 2226
 MD5 5581455144e4c925a184778c26ba5b78 files/digest-gtk-engines-qt-0.6-r2 70
 MD5 8b8d9d95fe481699fe79e5d1617468ec files/gtk-2.8-fix.patch 374
 MD5 8f580df2eb803899e2f8a45a5d133d08 files/gtk-qt-engine-0.6-kcm-fixinstallationdir.patch 657
 MD5 b07fb29f756eea0c456855a74b2dd657 gtk-engines-qt-0.6-r2.ebuild 1056
 MD5 0e79bc82b6162e7b6e378a4eb9845eed metadata.xml 203
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxWQRKRy60XGEcJIRArMtAJ4xCavj+RmWYxx6Ar6CwWUoU9oLSQCfVKwD
+KY+BC4RyN2IfChi3o+2/1wQ=
+=6Ql4
+-----END PGP SIGNATURE-----
