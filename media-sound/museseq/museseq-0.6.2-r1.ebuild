@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.10 2005/11/07 11:17:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.11 2006/01/11 14:21:51 fvdpol Exp $
 
 IUSE="jack fluidsynth ladcca doc alsa"
 
@@ -8,7 +8,7 @@ inherit virtualx eutils kde-functions
 
 MY_P=muse-${PV}
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
-HOMEPAGE="http://muse.seh.de"
+HOMEPAGE="http://www.muse-sequencer.org/"
 SRC_URI="mirror://sourceforge/lmuse/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"

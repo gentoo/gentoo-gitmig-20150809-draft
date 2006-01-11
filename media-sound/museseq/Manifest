@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1429094b2c1e97db91ace88fa6685c1d ChangeLog 5366
+MD5 b2478183a951efdab79309813016d6cf ChangeLog 5569
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
 MD5 20ef97c251eae618ada71d7493308b96 files/digest-museseq-0.7.0-r1 64
 MD5 1006036f5832dc460206b706858ff87b files/digest-museseq-0.7.1 69
@@ -14,15 +14,15 @@ MD5 135d65fe445ace2c95913e681e7a7b68 files/museseq-0.6.2-int2ptr.patch.gz 4000
 MD5 7fb0bc9c25aa67018b8c07120f4f16a1 files/museseq-0.6.2-memory.patch 2032
 MD5 fd23ed0d1b20d7ed5f18d26d4a45acc1 files/museseq-0.7.0-suidinstall.patch 837
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 2f43456dafba0a81b8a39b8073ac34aa museseq-0.6.2-r1.ebuild 3135
-MD5 62d7f40fb8e1d22a6d8869c45eb07cd4 museseq-0.7.0-r1.ebuild 1962
-MD5 6baf2685f122326e713790145fba19cc museseq-0.7.1.ebuild 1754
-MD5 6333dbe21d61980bb1bc89d625d36620 museseq-0.7.1_pre3.ebuild 1698
-MD5 2774e4cfd7bb2f6924e6419df0178279 museseq-0.7.2_pre2.ebuild 1722
+MD5 a03dd77415ceaab8e76a3e8ff75fff88 museseq-0.6.2-r1.ebuild 3144
+MD5 298a2b1058e54c7d5da5294d1d63e07b museseq-0.7.0-r1.ebuild 1960
+MD5 caecf6cff21c5e9ec670b5904f6700ab museseq-0.7.1.ebuild 1752
+MD5 807a8c3d57d8116a56cc51e6c64db7ff museseq-0.7.1_pre3.ebuild 1696
+MD5 e55b1aaf26a535d85a9ee2353999c80a museseq-0.7.2_pre2.ebuild 1720
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDbzflj5H05b2HAEkRAnkJAKCFYx0pvCYre1nCmdzLalFtiUeadwCeOd/p
-kvea7MWQGIrIH6cidRX2N3c=
-=jxnz
+iD8DBQFDxRSevpz1081QvMkRApoKAJ9XWVmEe5uDREqgww5nfTvkpboBqACeLWm3
+JqIIrvKP9IdUfYco8rBMBOY=
+=zSwE
 -----END PGP SIGNATURE-----
