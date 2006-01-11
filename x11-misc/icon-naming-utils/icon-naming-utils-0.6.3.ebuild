@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icon-naming-utils/icon-naming-utils-0.6.3.ebuild,v 1.1 2006/01/11 00:26:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icon-naming-utils/icon-naming-utils-0.6.3.ebuild,v 1.2 2006/01/11 18:37:32 gustavoz Exp $
 
 DESCRIPTION="Utilities to help with the transition to the new freedesktop.org naming scheme, they will map the new names to the legacy names used by the GNOME and KDE desktops."
 HOMEPAGE="http://tango-project.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://tango-project.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/XML-Simple-2
