@@ -1,7 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/use.mask,v 1.1 2005/12/02 14:50:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/use.mask,v 1.2 2006/01/11 15:19:18 gustavoz Exp $
 
 # Can't use these with 2.4 headers
 hal
 ipod
+
+# nptl needs 2.6 stuff
+nptl
+nptlonly
