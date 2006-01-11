@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.60 2006/01/09 10:24:27 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.61 2006/01/11 19:52:31 ferdy Exp $
+
+*git-1.1.1 (11 Jan 2006)
+
+  11 Jan 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/git-1.1.1-glossary-from-1.1.0.diff, -git-1.1.0.ebuild,
+  +git-1.1.1.ebuild:
+  Version bump. Remove 1.1.0 as it reported a wrong version and might make
+  confuse bugreports.
 
   09 Jan 2006; Fernando J. Pereda <ferdy@gentoo.org> git-1.1.0.ebuild:
   http://kernel.org/pub -> mirror://kernel/ in SRC_URI
