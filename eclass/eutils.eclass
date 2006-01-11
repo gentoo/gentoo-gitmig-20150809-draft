@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.221 2005/12/31 14:11:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.222 2006/01/11 01:00:43 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1413,7 +1413,7 @@ _cdrom_locate_file_on_cd() {
 		einfo "of your CD, it is possible that you do not have"
 		einfo "Joliet support enabled in your kernel.  Please"
 		einfo "check that CONFIG_JOLIET is enabled in your kernel."
-		read
+		read || die "something is screwed with your system"
 	done
 }
 
