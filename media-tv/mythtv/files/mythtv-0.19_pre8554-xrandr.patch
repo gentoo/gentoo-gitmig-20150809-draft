@@ -1,0 +1,25 @@
+Index: configure
+===================================================================
+--- configure   (revision 8554)
++++ configure   (working copy)
+@@ -2844,6 +2844,7 @@
+
+ if test x"$xrandr" = x"yes" ; then
+   CCONFIG="$CCONFIG using_xrandr"
++  echo "CONFIG_XRANDR_LIBS=-lXrandr -lX11" >> $MYTH_CONFIG_MAK
+ fi
+
+ if test x"$xvmc" = x"yes" ; then
+Index: settings.pro
+===================================================================
+--- settings.pro        (revision 8554)
++++ settings.pro        (working copy)
+@@ -82,6 +82,7 @@
+
+ EXTRA_LIBS += $$LOCAL_LIBDIR_OGL
+ EXTRA_LIBS += $$LOCAL_LIBDIR_X11
++EXTRA_LIBS += $$CONFIG_XRANDR_LIBS
+ EXTRA_LIBS += $$CONFIG_XV_LIBS
+ EXTRA_LIBS += $$CONFIG_XVMC_LIBS
+ EXTRA_LIBS += $$CONFIG_OPENGL_VSYNC_LIBS
+

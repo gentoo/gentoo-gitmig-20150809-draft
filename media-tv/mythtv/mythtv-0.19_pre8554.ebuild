@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.2_pre7882.ebuild,v 1.2 2006/01/09 13:19:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8554.ebuild,v 1.1 2006/01/11 04:01:47 cardoe Exp $
 
-inherit eutils qt3 flag-o-matic debug
+inherit flag-o-matic eutils debug qt3
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
@@ -11,14 +11,17 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa altivec arts debug dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia vorbis opengl oss unichrome"
+IUSE="alsa altivec arts debug dbox2 dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
 
-DEPEND=">=media-libs/freetype-2.0
+RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
-	|| ( (  x11-libs/libX11
+	|| ( (	x11-libs/libX11
+		x11-libs/libXext
 		x11-libs/libXinerama
 		x11-libs/libXv
-		x11-libs/libXrandr )
+		x11-libs/libXrandr
+		x11-libs/libXxf86vm
+		)
 	virtual/x11 )
 	$(qt_min_version 3.3)
 	dev-db/mysql
@@ -29,7 +32,7 @@ DEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )
-	vorbis? ( media-libs/libvorbis )
+	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			sys-libs/libavc1394
@@ -38,9 +41,10 @@ DEPEND=">=media-libs/freetype-2.0
 	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
 
-S=${WORKDIR}/${PN}
+DEPEND="${RDEPEND}
+	|| ( x11-apps/xinit virtual/x11 )"
 
-MYTHTV_GROUPS="video,audio"
+S=${WORKDIR}/mythtv
 
 pkg_setup() {
 
@@ -50,7 +54,7 @@ pkg_setup() {
 		die "Qt needs MySQL support"
 	fi
 
-	if ! best_version x11-libs/libXv && ! built_with_use x11-base/xorg-x11 xv; then
+	if ! has_version x11-libs/libXv && ! built_with_use x11-base/xorg-x11 xv; then
 		eerror "xorg-x11 is missing XV support. Please add"
 		eerror "'xv' to your USE flags, and re-emerge xorg-x11."
 		die "xorg-x11 needs XV support"
@@ -75,6 +79,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch "${FILESDIR}"/${P}-xrandr.patch
+
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
 			-e "s:\$\${PREFIX}/lib$:\$\${PREFIX}/$(get_libdir):g" \
@@ -82,27 +88,33 @@ src_unpack() {
 		sed -i -e "s:/lib/mythtv/:/$(get_libdir)/mythtv/:" \
 			${S}/libs/libmyth/mythcontext.cpp || die
 	fi
+
+#	# Fix bugs 40964 and 42943.
+#	filter-flags -fforce-addr -fPIC -momit-leaf-frame-pointer
+#	is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
 }
 
 src_compile() {
 	use unichrome && use nvidia && die "You can not have USE="unichrome" and USE="nvidia" at the same time. Must disable one or the other."
-	local myconf="$(use_enable altivec)
-		$(use_enable oss audio-oss)
-		$(use_enable alsa audio-alsa)
-		$(use_enable arts audio-arts)
-		$(use_enable jack audio-jack)
+	local myconf="--prefix=/usr --mandir=/usr/share/man"
+	use oss || myconf="${myconf} --disable-audio-oss"
+	use alsa || myconf="${myconf} --disable-audio-alsa"
+	use arts || myconf="${myconf} --disable-audio-arts"
+	use jack || myconf="${myconf} --disable-audio-jack"
+	use altivec || myconf="${myconf} --disable-altivec"
+	myconf="${myconf}
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
 		$(use_enable unichrome xvmc-vld)
+		$(use_enable dbox2)
 		$(use_enable dvb)
 		$(use_enable dvb dvb-eit)
 		--dvb-path=/usr/include
 		$(use_enable opengl opengl-vsync)
-		$(use_enable vorbis vorbis)
 		$(use_enable nvidia xvmc)
 		$(use_enable ieee1394 firewire)
-		--enable-xv
 		--enable-xrandr
+		--enable-xv
 		--disable-directfb
 		--enable-x11
 		--enable-proc-opt"
@@ -125,7 +137,7 @@ src_compile() {
 	MCPU=$(get-flag "mcpu")
 	strip-flags
 	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
-	filter-flags "-O" "-O?" "-Os"
+	filter-flags "-O" "-O?"
 
 	if [[ -n "${MARCH}" ]]; then
 		myconf="${myconf} --arch=${MARCH}"
@@ -137,22 +149,22 @@ src_compile() {
 		myconf="${myconf} --cpu=${MCPU}"
 	fi
 
-	myconf="${myconf} --extra-cflags=${CFLAGS}"
-
+#	myconf="${myconf} --extra-cxxflags=\"${CXXFLAGS}\" --extra-cflags=\"${CFLAGS}\""
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
-	if use frontendonly; then
-		##Backend Removal
-		cd ${S}
-		sed -e "s:CCONFIG linux backend:CCONFIG linux:" \
-			-i 'configure' || die "Removal of mythbackend failed"
-	fi
+#	if use frontendonly; then
+#		##Backend Removal
+#		cd ${S}
+#		sed -e "s:CCONFIG linux backend:CCONFIG linux:" \
+#			-i 'configure' || die "Removal of mythbackend failed"
+#	fi
 
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	CFLAGS=""
 	CXXFLAGS=""
-	econf ${myconf} || die "configure died"
+	einfo "Running ./configure ${myconf}"
+	./configure ${myconf} || die "configure died"
 
 	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" mythtv.pro || die "qmake failed"
 	emake || die "emake failed"
@@ -162,22 +174,24 @@ src_compile() {
 src_install() {
 
 	einstall INSTALL_ROOT="${D}" || die "install failed"
-	dodoc AUTHORS COPYING FAQ UPGRADING README
+	for doc in AUTHORS COPYING FAQ UPGRADING ChangeLog README; do
+		test -e "${doc}" && dodoc ${doc}
+	done
 
 	if ! use frontendonly; then
 		insinto /usr/share/mythtv/database
 		doins database/*
 
 		exeinto /usr/share/mythtv
-		doexe "${FILESDIR}"/mythfilldatabase.cron
+		doexe "${FILESDIR}/mythfilldatabase.cron"
 
-		newinitd "${FILESDIR}"/mythbackend-0.18.2.rc mythbackend
-		newconfd "${FILESDIR}"/mythbackend-0.18.2.conf mythbackend
+		newinitd ${FILESDIR}/mythbackend-0.18.2.rc mythbackend
+		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
 	fi
 
-	dobin "${FILESDIR}"/runmythfe
+	dobin ${FILESDIR}/runmythfe
 
-	ewarn "Want MythFrontend to always run? Add the following to your"
+	ewarn "Want MythFrontend to always? Add the following to your"
 	ewarn "myth user. i.e. My user is mythtv"
 	echo "crontab -e -u mythtv"
 	echo "* * * * * /usr/bin/runmythfe &"
@@ -186,6 +200,8 @@ src_install() {
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
 
+	keepdir /etc/mythtv
+	chown -R mythtv "${D}"/etc/mythtv
 	keepdir /var/log/mythtv
 	chown -R mythtv "${D}"/var/log/mythtv
 }
@@ -197,7 +213,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	einfo "Want MythFrontend to alway run? Run the following:"
-	echo "crontab -e -u mythtv"
+	echo " #crontab -e -u mythtv"
 	einfo "And add the following:"
 	echo "* * * * * /usr/bin/runmythfe &"
 	echo
@@ -205,3 +221,4 @@ pkg_postinst() {
 	einfo "To always have MythBackend running and available run the following:"
 	echo "rc-update add mythbackend default"
 }
+
