@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.2-r1.ebuild,v 1.2 2006/01/11 21:09:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.2-r1.ebuild,v 1.3 2006/01/11 21:27:57 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -14,22 +14,22 @@ RDEPEND="media-libs/libpng
 	>=dev-libs/glib-2.6
 	>=dev-lang/spidermonkey-1.5_rc6-r1
 	lirc? ( app-misc/lirc )
-	X? ( || ( ( x11-libs/libX11
+	|| ( ( x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXinerama
 		x11-libs/libXrender )
-		virtual/x11 ) )"
+		virtual/x11 )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig
-	X? ( || ( ( x11-base/xorg-server
+	|| ( ( x11-base/xorg-server
 		x11-libs/libX11
 		x11-libs/libXt
 		x11-libs/libXaw
 		x11-proto/xineramaproto
 		x11-proto/xproto
 		x11-proto/xextproto )
-		virtual/x11 ) )"
+		virtual/x11 )"
 
 IUSE="nls lirc nsplugin"
 

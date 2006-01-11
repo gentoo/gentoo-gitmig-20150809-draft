@@ -1,6 +1,15 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.61 2006/01/11 21:09:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.62 2006/01/11 21:27:57 flameeyes Exp $
+
+*gxine-0.5.3-r1 (11 Jan 2006)
+
+  11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gxine-0.5.3-xinerama.patch, gxine-0.5.1-r1.ebuild,
+  gxine-0.5.2-r1.ebuild, gxine-0.5.3.ebuild, +gxine-0.5.3-r1.ebuild:
+  Add patch to make xinerama support optional depending on xinerama useflag.
+  Drop X? conditional from dependencies (also of older ebuilds) as there's no
+  more an X useflag not being possible to disable it at all.
 
   11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> gxine-0.4.5.ebuild,
   gxine-0.5.1-r1.ebuild, gxine-0.5.2-r1.ebuild, gxine-0.5.3.ebuild:

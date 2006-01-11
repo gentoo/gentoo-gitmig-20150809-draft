@@ -1,0 +1,31 @@
+Index: gxine-0.5.3/configure.ac
+===================================================================
+--- gxine-0.5.3.orig/configure.ac
++++ gxine-0.5.3/configure.ac
+@@ -156,15 +156,20 @@ AM_CONDITIONAL([HAVE_XTESTEXTENSION], [t
+ dnl ---------------------------------------------
+ dnl Xinerama Extension
+ dnl ---------------------------------------------
+-saved_CFLAGS="$CFLAGS"
+-saved_LIBS="$LIBS"
+-CFLAGS="$CFLAGS $GTK2_CFLAGS"
+-AC_CHECK_LIB(Xinerama, XineramaQueryExtension,
++AC_ARG_WITH([xinerama],
++  AS_HELP_STRING([--without-xinerama], [Disable xinerama extensions support (default: check)]) )
++
++if test "x$with_xinerama" != "xno"; then
++  saved_CFLAGS="$CFLAGS"
++  saved_LIBS="$LIBS"
++  CFLAGS="$CFLAGS $GTK2_CFLAGS"
++  AC_CHECK_LIB(Xinerama, XineramaQueryExtension,
+              AC_DEFINE(HAVE_XINERAMA,,[Define this if you have libXinerama])
+ 	     ac_have_xinerama="yes", ac_have_xinerama="no", $X_LIBS $X_PRE_LIBS -lXinerama $X_EXTRA_LIBS)
++  CFLAGS="$saved_CFLAGS"
++  LIBS="$saved_LIBS"
++fi
+ AM_CONDITIONAL([HAVE_XINERAMA], [test x$ac_have_xinerama = "xyes"])
+-CFLAGS="$saved_CFLAGS"
+-LIBS="$saved_LIBS"
+ 
+ dnl ---------------------------------------------
+ dnl debug cflags
