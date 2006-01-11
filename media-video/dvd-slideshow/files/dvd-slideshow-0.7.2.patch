@@ -1,0 +1,11 @@
+--- dvd-slideshow.orig	2005-11-23 04:13:05.000000000 +0100
++++ dvd-slideshow	2006-01-11 02:41:43.000000000 +0100
+@@ -2051,7 +2051,7 @@
+ audio_inside_txtfile=0
+ imagefiles=0 ; moviefiles=0 ; audiofiles=0
+ ## let's parse the txtfile:
+-total_lines=`wc -l ${input_txtfile} | awk '{print $1}'`
++total_lines=`wc -l "${input_txtfile}" | awk '{print $1}'`
+ total_lines=$(( $total_lines + 1 ))
+ let line=1
+ 
