@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4849 2006/01/11 03:45:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4850 2006/01/11 22:18:27 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (11 Jan 2006)
+# Masked in preparation for prelude-suite stabilization
+>dev-libs/libprelude-0.9.3
+>dev-libs/libpreludedb-0.9.2
+>app-admin/prelude-manager-0.9.1-r1
+>net-analyzer/prewikka-0.9.3
+>app-admin/prelude-lml-0.9.1
+>net-analyzer/snort-2.4.3
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Jan 2006)
 # masked for testing of the snapshot
