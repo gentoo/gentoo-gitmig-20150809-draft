@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cairo-java
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/ChangeLog,v 1.5 2005/12/30 02:43:13 compnerd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/ChangeLog,v 1.6 2006/01/11 01:43:12 karltk Exp $
+
+  11 Jan 2006; Karl Trygve Kalleberg <karltk@gentoo.org>
+  cairo-java-1.0.2.ebuild:
+  Updated to depend on glib-java-0.2.2. Thanks to rcjsuen, 
+  <remy.suen@gmail.com>.
 
   30 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   cairo-java-1.0.2.ebuild:

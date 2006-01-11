@@ -1,4 +1,4 @@
-MD5 9a8281038e907961bd36defd83658532 ChangeLog 4782
+MD5 ca80dba2916d05f68a1a49f612d10474 ChangeLog 4971
 MD5 984048712e487cfd26ccdc19f1247e63 files/aclocal_voodoo.patch 733
 MD5 c9b06cd33dfa81082635f38a375da14d files/digest-libgtk-java-2.4.8.1 72
 MD5 f4c28fbb216236ce592ffe72a3d4e9ed files/digest-libgtk-java-2.4.9 70
@@ -17,5 +17,5 @@ MD5 894895a802ebec44935045bc8f800c2f libgtk-java-2.4.8.1.ebuild 3350
 MD5 b022186c8e04efb63e91009731c12120 libgtk-java-2.4.9.ebuild 2892
 MD5 856b0e851f16dddc9002d7e1ee2c603e libgtk-java-2.6.2-r1.ebuild 2820
 MD5 ff4ecec720f483314e6e8b688e902425 libgtk-java-2.8.1.ebuild 2111
-MD5 854e42b8ffe9e3c8b961a89155b6a8c9 libgtk-java-2.8.2.ebuild 2212
+MD5 1529be15d188a0377a6ee2936601b64a libgtk-java-2.8.2.ebuild 2210
 MD5 8d139287f93dc4241b670299688f0ae0 metadata.xml 1075

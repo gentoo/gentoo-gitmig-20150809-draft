@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/cairo-java-1.0.2.ebuild,v 1.2 2005/12/30 02:43:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/cairo-java-1.0.2.ebuild,v 1.3 2006/01/11 01:43:12 karltk Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -19,10 +19,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc gcj source"
 
 DEPS=">=x11-libs/cairo-1.0.0-r2
-	  >=dev-java/glib-java-0.2.1
+	  >=dev-java/glib-java-0.2.2
 	  >=media-libs/fontconfig-2.3.1
 	  >=dev-libs/glib-2.6.0
-		dev-util/pkgconfig"
+	    dev-util/pkgconfig"
 
 DEPEND=">=virtual/jdk-1.4
 		>=sys-apps/sed-4
