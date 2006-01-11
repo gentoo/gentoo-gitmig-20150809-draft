@@ -1,1 +1,2 @@
 move dev-libs/wefts dev-cpp/libwefts
+move dev-libs/mxmlplus dev-cpp/libmxmlplus
