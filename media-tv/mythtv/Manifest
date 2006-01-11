@@ -21,11 +21,11 @@ MD5 0d20a49cff965a0f3ab35cb0600b65b4 files/runmythfe 104
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 f2c7e6f87a9c718acdd942b22140e2a9 mythtv-0.18.1-r1.ebuild 5109
 MD5 cac72423d3f6c98d2ef628c3e83c4ff2 mythtv-0.18.1-r2.ebuild 5488
-MD5 dc53a4f942bd8b0eb9fbc2efd941ea36 mythtv-0.19_pre8554.ebuild 6473
+MD5 60420416c4871f57c99937f2af630886 mythtv-0.19_pre8554.ebuild 6438
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxJfJBtvusYtCZMsRApkcAJ93aN7G9fDNzNnEP2vtRthxwtxxewCeIEh3
-JOYCEQn369gT+emQ+rTXZk4=
-=AAOA
+iD8DBQFDxT4/BtvusYtCZMsRAnK6AJ0fj70InssOKbZbsySGKD85FPdIZgCeM301
+soYC4TBOKPq9wFmTKaC1HLY=
+=TlJ3
 -----END PGP SIGNATURE-----

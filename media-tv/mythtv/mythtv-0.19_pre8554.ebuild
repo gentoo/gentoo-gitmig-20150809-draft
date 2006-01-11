@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8554.ebuild,v 1.3 2006/01/11 05:29:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8554.ebuild,v 1.4 2006/01/11 17:19:45 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -42,8 +42,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
 
-DEPEND="${RDEPEND}
-	|| ( x11-apps/xinit virtual/x11 )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/mythtv
 
