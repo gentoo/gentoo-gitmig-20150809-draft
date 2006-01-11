@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.10 2006/01/11 19:58:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.11 2006/01/11 20:26:52 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -87,6 +87,11 @@ src_unpack() {
 
 	# Add --without-xscreenserver option to disable libXSS support
 	epatch "${FILESDIR}/kdesktop-3.5.0-xscreensaver.patch"
+
+	# Extra fix for composite support in kicker this time, different from the
+	# patch with the same name in kicker as it has to interact with the above
+	# kwin patch.
+	epatch "${FILESDIR}/kicker-3.5.0-composite.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die
