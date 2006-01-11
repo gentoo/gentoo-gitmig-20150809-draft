@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.3.1.ebuild,v 1.1 2005/12/05 17:24:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.3.1.ebuild,v 1.2 2006/01/11 23:28:32 marienz Exp $
 
 inherit distutils eutils
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/python-2.4
 	>=dev-python/twisted-2.1
+	dev-python/twisted-mail
 	>=dev-python/nevow-0.5
 	>=dev-python/axiom-0.1
 	>=dev-python/vertex-0.1

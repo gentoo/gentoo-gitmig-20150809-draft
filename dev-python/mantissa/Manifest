@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bd9e1fb796888dad9b8a1bc480efd09c ChangeLog 469
+MD5 cbc7711604371f19871bdce9bf43b2bb ChangeLog 606
 MD5 ce62a51e2ecd31506f49bac4f9bb0f95 files/digest-mantissa-0.3.1 66
 MD5 fa8823721205b6768e8d260ea7f36e1b files/digest-mantissa-0.4.1 66
-MD5 1d994d8c3745f8d39c042535c72134ca mantissa-0.3.1.ebuild 849
-MD5 1bd99283d99185ac36264279f3ea569f mantissa-0.4.1.ebuild 849
+MD5 9552dc02c36d80d8313fc4c1ddb65479 mantissa-0.3.1.ebuild 874
+MD5 3b0d4403021e6f6834e3f9beb4c2acdf mantissa-0.4.1.ebuild 874
 MD5 286c9fff82df32f0f8b8d9960120cfc4 metadata.xml 433
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqVYGW78445TWHXcRAqIzAJ9h3c/X6ZmKl1b+wUd+IFnRNrh0DQCfWqSX
-HRxvFj1e+w+rr/C/QSlflfg=
-=CnKk
+iD8DBQFDxZSvW78445TWHXcRArf3AJ9WH/y9Nu56PypwkBUnoFXFFckHwACfdCNj
+l1YFZNIWiE6v8P0VOWvNRU8=
+=5UNW
 -----END PGP SIGNATURE-----
