@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88567158773e3a17584bedcb25e329fd ChangeLog 913
+MD5 04344584e943ab652b6c108d30b0f6ed ChangeLog 1053
 MD5 2931b9ac6f33b6ea4501b2bbf73b6081 files/digest-unshield-0.2 64
 MD5 691824e8b834caba40e95f0bb3d67ee4 files/digest-unshield-0.4 64
+MD5 90bee39d3ac08b3cc57d6839d5b55ba2 files/digest-unshield-0.5 64
 MD5 7cb6ba62d0a279c13813ec18a9e8c7e8 files/unshield-gcc-3.4.patch 410
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 06f45ea87e6e5c9bd9c9131af2ae7a25 unshield-0.2.ebuild 517
 MD5 eaffa575a2bd54aedc34891fbe8ba381 unshield-0.4.ebuild 637
+MD5 9f63af1a50beceb26385a189ff3c55da unshield-0.5.ebuild 554
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi8UcgIKl8Uu19MoRAjwfAJ4omU25sLmiZD/X0q9CLeSRLsoa1wCdGMgF
-7q4aDsK33gx+YrTNvNPTL2A=
-=IGRY
+iD8DBQFDxRrkFdQwWVoAgN4RApvLAJ9g7q/8fyViljpWH7+6Gqijc5VqTACeOb7p
+WSo8JH0TqdrtEjWY56nP8CQ=
+=IJCA
 -----END PGP SIGNATURE-----

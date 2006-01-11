@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unshield
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.8 2005/06/05 20:37:12 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.9 2006/01/11 06:24:28 chriswhite Exp $
+
+*unshield-0.5 (11 Jan 2006)
+
+  11 Jan 2006; Chris White <chriswhite@gentoo.org> +unshield-0.5.ebuild:
+  Version bump for bug #109724.
 
   05 Jun 2005; Simon Stelling <blubb@gentoo.org>
   +files/unshield-gcc-3.4.patch, unshield-0.4.ebuild:
