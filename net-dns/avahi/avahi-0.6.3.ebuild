@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.2.ebuild,v 1.2 2006/01/06 12:26:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.3.ebuild,v 1.1 2006/01/11 07:02:24 swegener Exp $
 
 inherit eutils qt3 mono python
 
