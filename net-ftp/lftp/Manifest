@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ee51667f33ee2bad4461e377c13288ea ChangeLog 14185
+MD5 76085c15ef2b951c3b565d8ac58fd41c ChangeLog 14318
 MD5 8e29dd236e9977e83aee442106844d7e files/digest-lftp-3.0.13 65
 MD5 16ab74adb63da682a17a18f1d7885b91 files/digest-lftp-3.3.4-r1 63
 MD5 0875626252a85b8c7d94dd225754542b files/digest-lftp-3.4.0 63
@@ -10,13 +10,13 @@ MD5 298e04149e627c6721f2723c16306fa9 files/lftp-3.3.4-blocking-ssl-transfer.patc
 MD5 23f0721bdfd44bdbb7afb954d2cc7895 files/lftp-3.4.0-remote-completion-false.patch 860
 MD5 661d46ff6f06fe8b4ea40b6705377221 lftp-3.0.13.ebuild 1820
 MD5 80fe5afdc5fdb8eb57e8f32106421fc3 lftp-3.3.4-r1.ebuild 1892
-MD5 471796d005289becb25af5640bf51801 lftp-3.4.0-r1.ebuild 1906
+MD5 2aa520597b9605d58e0e358faf2b5b06 lftp-3.4.0-r1.ebuild 1907
 MD5 3062c15b4187f69cf79fa780bcaf7b0a lftp-3.4.0.ebuild 1826
 MD5 bd30469259dd912781df916084edcacd metadata.xml 430
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDxNoymdTrptrqvGERAoYSAJ93A0rM20vfJ98LlV9aFuQPeHFt5QCgheEU
-ePiuwgWmuI3hVUd3Dp+EnYs=
-=zjJp
+iD8DBQFDxXiwmdTrptrqvGERAqADAJ9hk+Hnw+E848p2f6Wcxk3u+OnJ+wCbBe00
+MRbGvlIlsPyUekm8S9auJT4=
+=eRpg
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.0-r1.ebuild,v 1.1 2006/01/11 09:22:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.0-r1.ebuild,v 1.2 2006/01/11 20:36:15 dragonheart Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=sys-libs/ncurses-5.1
 			!gnutls? ( >=dev-libs/openssl-0.9.6 )
 		)
 		virtual/libc
-		ppc-macos? ( >=sys-libs/readline-5.1 )"
+		!ppc-macos? ( >=sys-libs/readline-5.1 )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
