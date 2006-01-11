@@ -1,4 +1,14 @@
-MD5 bf66f078d5dbe3870e91c8e8ead76874 ChangeLog 578
-MD5 7e64ae6a6243151e7adf6d1a2685f67c arpoison-0.6.ebuild 761
-MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e190045a5acb0d7601454cce5dd49639 ChangeLog 679
+MD5 6d9c4329f1682eba382b945b20980ae9 arpoison-0.6.ebuild 762
 MD5 b683b9242e8e001c86df11bfffbe6bf3 files/digest-arpoison-0.6 62
+MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxJPxCRZPokWLroQRAhbeAKDNetuz8XdJIK5GUgWfXQ4mc2/mzwCffJcN
+5Z3T1jm5VMX7ZZKye7+cuwE=
+=k8v4
+-----END PGP SIGNATURE-----

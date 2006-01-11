@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpoison
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.3 2005/07/19 12:47:46 dholm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.4 2006/01/11 05:13:11 halcy0n Exp $
+
+  11 Jan 2006; Mark Loeser <halcy0n@gentoo.org> arpoison-0.6.ebuild:
+  Stable on x86; bug #118407
 
   19 Jul 2005; David Holm <dholm@gentoo.org> arpoison-0.6.ebuild:
   Added to ~ppc.
