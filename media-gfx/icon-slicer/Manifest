@@ -1,3 +1,13 @@
-MD5 c0acc6a42159192605e1124887eb2cf4 icon-slicer-0.3.ebuild 657
-MD5 bbd90ef60b3613b62e3668f837060132 ChangeLog 875
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 efe331565ae8522f12e048d0cbe86ffe ChangeLog 974
 MD5 73f2d6ece5276b5eed4f6dd791a61a11 files/digest-icon-slicer-0.3 67
+MD5 c4c87d586590e57777d0891c5bf06ba4 icon-slicer-0.3.ebuild 663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxUuOKRy60XGEcJIRAtZ8AKCekWlJ3+Akuic1fqhDD/ELWcgLWACghH7k
+grp0/+u282zkjyE7b1ZkSaY=
+=j1EH
+-----END PGP SIGNATURE-----
