@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6-r2.ebuild,v 1.1 2005/10/23 09:18:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6-r2.ebuild,v 1.2 2006/01/11 20:01:03 gustavoz Exp $
 
 inherit eutils kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.freedesktop.org/~davidsansome/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 IUSE="arts debug"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2.2
