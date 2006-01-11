@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 97871ebfac8271811e68732d33469585 ChangeLog 2824
+MD5 5febc19751e70235f5a917b2a5e547bc ChangeLog 2920
 MD5 9afa934cddef76251b808603bda0ff00 files/digest-libdaemon-0.10 66
 MD5 0690fac6ae3f714079ef10ca93af077a files/digest-libdaemon-0.3 65
 MD5 c030d2ae6f46e1372a2ee9dd8b00d42f files/digest-libdaemon-0.5 65
@@ -11,12 +11,12 @@ MD5 122d0500fa23a0d284e172f8506f31fb libdaemon-0.10.ebuild 987
 MD5 833b0ec535a1b2c5d9bc377c6d2663e6 libdaemon-0.3.ebuild 857
 MD5 a3e1e2b2909483ba00265f162dc16611 libdaemon-0.5.ebuild 891
 MD5 1c4d38f214fd886458b54fbb18cbc036 libdaemon-0.7.ebuild 993
-MD5 5139d624549ddfdc4b85873808ef7135 libdaemon-0.8.ebuild 980
+MD5 b45733903a1cfd817fe8d9405b0f2bf4 libdaemon-0.8.ebuild 981
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvc7n2+ySkm8kpY0RAmW1AKCq3pNmDxioUW/ApE4yIyos0eD4kQCgk45f
-UDYqnJwH0WOEEUnROyh0Wx8=
-=kGap
+iD8DBQFDxQLHKRy60XGEcJIRAnVcAJ0ZifUsQSF8hLjF0CaA74Vb3itRHgCgipNf
+9Sb044T7bsn6b2LsIbharhY=
+=yxxG
 -----END PGP SIGNATURE-----
