@@ -1,37 +1,36 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.3.ebuild,v 1.4 2006/01/11 04:57:04 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.1 2006/01/11 04:57:04 ramereth Exp $
 
 inherit eutils apache-module toolchain-funcs
 
-MY_P=${P/-core}
+MY_P=${PN/-core}-${PV/_}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
-IUSE="noweb mysql postgres perl debug apache2"
-
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="noweb perl debug apache2"
+# mysql postgres
 DEPEND="virtual/mailx
 	!noweb? (
 		>=media-libs/jpeg-6b-r3
 		>=media-libs/libpng-1.2.5-r4
 		>=media-libs/gd-1.8.3-r5
 		${NEED_APACHE_DEPEND}
+		perl? ( net-analyzer/traceroute )
 	)
-	perl? ( >=dev-lang/perl-5.6.1-r7 )
-	mysql? ( >=dev-db/mysql-3.23.56 )
-	postgres? ( !mysql? ( >=dev-db/postgresql-7.3.2 ) )"
+	perl? ( >=dev-lang/perl-5.6.1-r7 )"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	# If there's a gd lib on the system, it will try to build with it.
 	# check if gdlib-config is on, and then check its output.
-	if [[ -x /usr/bin/gdlib-config ]]; then
-		if [[ ! $(gdlib-config --libs | grep -- -ljpeg) ]]; then
+	if [[ -x ${ROOT}usr/bin/gdlib-config ]]; then
+		if [[ ! $(${ROOT}usr/bin/gdlib-config --libs | grep -- -ljpeg) ]]; then
 			eerror "Your gd has been compiled without jpeg support."
 			eerror "Please re-emerge gd:"
 			eerror "# USE="jpeg" emerge gd"
@@ -52,59 +51,17 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	epatch ${FILESDIR}/Makefile-distclean.diff.bz2
-
-	# libpq-fe.h isnt in psgql/ 
-	cd xdata/
-	sed -i -e "s:pgsql/::" *.c
-
-	cp ${FILESDIR}/nagios.cfg-sample.gz ./
-	gunzip nagios.cfg-sample.gz
+	epatch ${FILESDIR}/2.x-series-nsca.patch
+	gunzip -c ${FILESDIR}/nagios-2.0b.cfg-sample.gz > ./nagios.cfg-sample
 }
 
 src_compile() {
 	local myconf
 
-	if use mysql && use postgres; then
-		ewarn "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
-		ewarn "Using MySQL as default."
-
-		has_version ">=sys-apps/portage-2.0.50" && (
-			einfo "You can add -"
-			echo
-			einfo "net-analyzer/nagios-core [use flags]"
-			echo
-			einfo "to /etc/portage/package.use to permanently set this package's USE flags"
-			einfo "More info on package.use is available on:"
-			einfo "     man 5 portage"
-		)
-	elif use postgres ; then
-		myconf="${myconf} \
-			--with-pgsql-xdata \
-			--with-pgsql-status \
-			--with-pgsql-comments \
-			--with-pgsql-extinfo \
-			--with-pgsql-retention \
-			--with-pgsql-downtime"
-
-		if [ -r /usr/include/postgresql/libpq-fe.h ] ; then
-			myconf="${myconf} --with-pgsql-inc=/usr/include/postgresql"
-		fi
+	if use perl
+	then
+		myconf="${myconf} --enable-embedded-perl --with-perlcache"
 	fi
-
-	use mysql && myconf="${myconf} \
-		--with-file-perfdata \
-		--with-template-extinfo \
-		--with-mysql-xdata \
-		--with-mysql-status \
-		--with-mysql-comments \
-		--with-mysql-retention \
-		--with-mysql-downtime"
-
-	use perl && myconf="${myconf} \
-		--enable-embedded-perl \
-		--with-perlcache"
 
 	if use debug; then
 		myconf="${myconf} --enable-DEBUG0"
@@ -130,7 +87,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	make CC=$(tc-getCC) DESTDIR=${D} nagios contrib || die "make failed"
+	emake CC=$(tc-getCC) nagios || die "make failed"
 
 	if use !noweb ; then
 		# Only compile the CGI's if "noweb" useflag is not set.
@@ -138,17 +95,21 @@ src_compile() {
 	fi
 
 	emake -C contrib all || "contrib make filed"
+
 }
 
 src_install() {
-	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING contrib/htaccess.sample
+	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING
 	docinto contrib
 	dodoc contrib/README
 
 	if use noweb; then
-		sed -i -e 's/cd $(SRC_CGI) && $(MAKE) $@/# line removed due to noweb use flag/' Makefile
-		sed -i -e 's/cd $(SRC_HTM) && $(MAKE) $@/# line removed due to noweb use flag/' Makefile
+		sed -i -e 's/cd $(SRC_CGI) && $(MAKE) $@/# line removed due to noweb use flag/' \
+			-e 's/cd $(SRC_HTM) && $(MAKE) $@/# line removed due to noweb use flag/' \
+			Makefile
 	fi
+
+	sed -i -e 's/^contactgroups$//g' Makefile
 
 	make DESTDIR=${D} install
 	make DESTDIR=${D} install-config
@@ -158,14 +119,16 @@ src_install() {
 	dodoc ${D}/etc/nagios/*
 	rm ${D}/etc/nagios/*
 
-	# contribs are not configured by the configure script, we'll configure them overselves...
+	dodoc ${S}/nagios.cfg-sample
+
+	#contribs are not configured by the configure script, we'll configure them overselves...
 	find ${S}/contrib/ -type f | xargs sed -e 's:/usr/local/nagios/var/rw:/var/nagios/rw:;
 						s:/usr/local/nagios/libexec:/usr/nagios/libexec:;
 						s:/usr/local/nagios/etc:/etc/nagios:;
 						s:/usr/local/nagios/sbin:/usr/nagios/sbin:;' -i
 
 	insinto /usr/share/doc/${PF}/contrib
-	doins -r contrib/database contrib/eventhandlers
+	doins -r contrib/eventhandlers
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/nagios
@@ -189,17 +152,13 @@ src_install() {
 			doins ${FILESDIR}/nagios.conf
 		fi
 		if use perl; then
-			into /usr/nagios
-			for cgi in `find contrib/ -name "*.cgi" -maxdepth 1` ; do
-				dosbin $cgi
-			done
+			into /usr/nagios ; dosbin contrib/traceroute.cgi
 		fi
 	fi
 
 	for dir in etc/nagios usr/nagios var/nagios ; do
 		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
 	done
-
 }
 
 pkg_preinst() {
@@ -210,12 +169,12 @@ pkg_preinst() {
 	keepdir /var/nagios/rw
 
 	if use noweb; then
-		chown nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+		chown -R nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	else
-		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+		chown -R nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 
-	chmod 2750 ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
+	chmod ug+s ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
 	chmod 0750 ${D}/etc/nagios || die "Failed chmod of ${D}/etc/nagios"
 }
 
@@ -251,21 +210,15 @@ pkg_postinst() {
 		einfo "Thank you!"
 	fi
 
-	if use mysql && use postgres; then
-		ewarn "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
-		ewarn "as a default, MySQL support was built."
-		ewarn "To build nagios with PostgreSQL you'll have to emerge nagios without the mysql useflag."
-	fi
-
-	einfo
-	einfo "If you are using distributed monitoring, check the contrib scripts."
-	einfo "configure the central nagios server for the nsca in /etc/conf.d/nagios."
 	einfo
 	einfo "If your kernel has /proc protection, nagios"
 	einfo "will not be happy as it relies on accessing the proc"
 	einfo "filesystem. You can fix this by adding nagios into"
 	einfo "the group wheel, but this is not recomended."
 	einfo
+
+	einfo
+	ewarn "Use /usr/nagios/bin/convertcfg for configuration file conversion"
 }
 
 pkg_prerm() {
