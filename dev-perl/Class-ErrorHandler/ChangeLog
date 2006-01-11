@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.5 2005/12/02 22:31:35 ferdy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.6 2006/01/11 16:28:50 plasmaroo Exp $
+
+  11 Jan 2006; <plasmaroo@gentoo.org> Class-ErrorHandler-0.01.ebuild:
+  Mark ~ia64; bug #112279.
 
   02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
   Class-ErrorHandler-0.01.ebuild:

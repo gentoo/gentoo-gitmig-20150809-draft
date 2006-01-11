@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/convert-pem
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.18 2005/12/02 22:33:34 ferdy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.19 2006/01/11 16:30:05 plasmaroo Exp $
+
+  11 Jan 2006; <plasmaroo@gentoo.org> convert-pem-0.07.ebuild:
+  Mark ~ia64; bug #112279.
 
   02 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
   convert-pem-0.07.ebuild:
