@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.38 2006/01/09 15:59:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.39 2006/01/11 13:48:29 gustavoz Exp $
+
+  11 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  poppler-0.4.3-r4.ebuild:
+  Stable on sparc wrt #117481 #117495
 
   09 Jan 2006; Jeroen Roovers <jer@gentoo.org> poppler-0.4.3-r4.ebuild:
   Marked hppa stable (bug #117495).
