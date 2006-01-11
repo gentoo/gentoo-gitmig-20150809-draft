@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07b4f05401482e49286de724ec96dc4f ChangeLog 42646
+MD5 ddd48a4e88a576b073ced142f50711ad ChangeLog 42844
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r1/backgroundrc 342
 MD5 928f7208882e2a90d9cb633dcfa9abf9 files/3.3.2-r1/kdmrc 19878
@@ -38,6 +35,7 @@ MD5 cbfa9f15423035b33eb50456dfb04691 files/kdebase-3.4.3-noimake.patch 2214
 MD5 789aca95df83dac88fe68a3cbeeea13a files/kdebase-3.4.3-xdmcp.patch 614
 MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283
 MD5 472a5c5b9ade622637e00a6d28e69614 files/kdebase-3.5.0_beta2-noimake.patch 2248
+MD5 3825d839fdaeeb754564b3428ee92442 files/kdesktop-3.5.0-xscreensaver.patch 705
 MD5 09763d6f85e43dbedf65f713cb378ab7 files/kdesu-3.5.0-bindnow.patch 1112
 MD5 f557526f4d82f563d8d69f986303d30d files/konqueror-3.5.0-location-bar-focus.patch 433
 MD5 f06224b0a38152e5d3435b00a70bcf6c files/konsole-3.3.2.patch 1201
@@ -53,12 +51,5 @@ MD5 bca1b08e31bfa89d6d04e9996a77c0bd kdebase-3.4.2-r2.ebuild 4527
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 f30c2b7e9f582458651ca7d3b2eac796 kdebase-3.4.3-r1.ebuild 4493
 MD5 b028b31c593bcc849bbde152f85b8dac kdebase-3.4.3.ebuild 4263
-MD5 423bcf42a76deb23d8ed26e3a5add93b kdebase-3.5.0-r1.ebuild 5253
+MD5 b0e6fa9e84fd53c53ef148866f2f1ec4 kdebase-3.5.0-r1.ebuild 5567
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxVyfAiZjviIA2XgRAoPcAKCvV8bGpobSey1SPflPgMziBh2PAwCgkt/h
-TfG3P2Vh060tGA3PGuXkBo8=
-=G50S
------END PGP SIGNATURE-----
