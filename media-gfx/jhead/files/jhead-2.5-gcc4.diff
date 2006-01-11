@@ -1,0 +1,36 @@
+diff -Naur jhead-2.5.orig/exif.c jhead-2.5/exif.c
+--- jhead-2.5.orig/exif.c	2006-01-11 22:55:20.000000000 +0100
++++ jhead-2.5/exif.c	2006-01-11 22:59:36.000000000 +0100
+@@ -329,7 +329,7 @@
+         ByteCount -= s;
+         if (ByteCount <= 0) break;
+         printf(", ");
+-        ((char *)ValuePtr) += s;
++        ValuePtr = (char *)ValuePtr + s;
+     }
+     if (n >= 16) printf("...");
+ }
+diff -Naur jhead-2.5.orig/jhead.c jhead-2.5/jhead.c
+--- jhead-2.5.orig/jhead.c	2006-01-11 22:55:20.000000000 +0100
++++ jhead-2.5/jhead.c	2006-01-11 22:58:51.000000000 +0100
+@@ -932,7 +932,7 @@
+ 
+             for (a = 0; a < ImageInfo.numDateTimeTags; a++) {
+                 char * Pointer;
+-                Pointer = ExifSection->Data+ImageInfo.DateTimeOffsets[a]+8;
++                Pointer = (char *)ExifSection->Data+ImageInfo.DateTimeOffsets[a]+8;
+                 memcpy(Pointer, TempBuf, 19);
+             }
+ 
+diff -Naur jhead-2.5.orig/jpgfile.c jhead-2.5/jpgfile.c
+--- jhead-2.5.orig/jpgfile.c	2006-01-11 22:55:20.000000000 +0100
++++ jhead-2.5/jpgfile.c	2006-01-11 22:58:07.000000000 +0100
+@@ -346,7 +346,7 @@
+         char * ThumbnailPointer;
+         Section_t * ExifSection;
+         ExifSection = FindSection(M_EXIF);
+-        ThumbnailPointer = ExifSection->Data+ImageInfo.ThumbnailOffset+8;
++        ThumbnailPointer = (char *)ExifSection->Data+ImageInfo.ThumbnailOffset+8;
+ 
+         fwrite(ThumbnailPointer, ImageInfo.ThumbnailSize ,1, ThumbnailFile);
+         fclose(ThumbnailFile);
