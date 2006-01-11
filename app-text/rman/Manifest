@@ -10,11 +10,11 @@ MD5 10919f9dcf76074e9dc8b597f0df83e8 files/rman-3.1-gentoo.diff 407
 MD5 7c24cf8147972b5fc9a74dcd11a345f3 files/rman-3.2-gentoo.diff 560
 MD5 fbbc1086058fd13785ae3f050787a9ec rman-3.0.9.ebuild 671
 MD5 d6a1189f73825b18a8d5b4dabe577d42 rman-3.1.ebuild 719
-MD5 7cef76d4528d2cf86878e7adb951e59e rman-3.2.ebuild 669
+MD5 099863628c1891e14687846e89704574 rman-3.2.ebuild 675
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvdQMmOfEJZHYOKcRAruQAJ9J7TBBAp2bRNxNL84qdZ6R+ImHOgCgx03h
-eed6rzsRUrdkiRXp8MfYQuc=
-=R7/v
+iD8DBQFDxInn2+ySkm8kpY0RArqxAKDDpybBh4vweay3szZA35ksj3dk0ACdHGHu
+a1+2b/DNL45vj0uSKq+qAk8=
+=+60w
 -----END PGP SIGNATURE-----
