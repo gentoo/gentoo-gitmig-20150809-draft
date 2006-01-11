@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.2.0.ebuild,v 1.1 2006/01/08 13:40:40 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.2.0.ebuild,v 1.2 2006/01/11 04:58:13 weeve Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ LICENSE="ZPL"
 SLOT="${PV}"
 IUSE=""
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 
 RDEPEND="=dev-lang/python-2.4*"
 
