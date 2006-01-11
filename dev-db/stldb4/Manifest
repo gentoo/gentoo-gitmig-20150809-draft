@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 132abdbbac3ef47dbcf11d9d7baf413d ChangeLog 622
-MD5 92329f92aff2f9d589eb69df1fc2c9fe metadata.xml 283
-MD5 e775e6e30e72dd0129eb71cfcb7b4c68 stldb4-0.3.13.ebuild 825
-MD5 d557b4ce616f26188c6294d60b333929 stldb4-0.3.7.ebuild 817
+MD5 85b3d553b454abe649c328726beb0aec ChangeLog 774
 MD5 a0edb977afc428cf1eafc548adeaa723 files/digest-stldb4-0.3.13 67
 MD5 bc3215a0cbff8de4b5d788acc3752aa7 files/digest-stldb4-0.3.7 66
+MD5 8198705a2a18c8842e70237105b570a4 files/digest-stldb4-0.4.0 66
+MD5 62e7e3648b45863683234f787d8735f4 files/stldb4-0.4.0-build.patch 791
+MD5 92329f92aff2f9d589eb69df1fc2c9fe metadata.xml 283
+MD5 770e511832ee1f40d24376154cfa4069 stldb4-0.3.13.ebuild 729
+MD5 d557b4ce616f26188c6294d60b333929 stldb4-0.3.7.ebuild 817
+MD5 6d41a50cc150c9e60b53f6464fe713f8 stldb4-0.4.0.ebuild 803
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMeycCRZPokWLroQRAuo0AJsHNA44MXsYe3uXf1z3qgkAC28FCACfcz0H
-HTohBRPYy3Rk9yv7aTBv84s=
-=OUl+
+iD8DBQFDxH0P2+ySkm8kpY0RAr/WAKCYnPEO+S9Ckp8h0alRaYszcbZfPgCgqpoU
+9Hbv/lMq5bA24pnDWI7qLvs=
+=ncAR
 -----END PGP SIGNATURE-----

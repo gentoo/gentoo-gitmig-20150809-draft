@@ -1,0 +1,19 @@
+Add `make install DESTDIR=...` support
+
+--- db-4.1.25/dist/Makefile.in
++++ db-4.1.25/dist/Makefile.in
+@@ -548,10 +548,10 @@
+ INCINC=	cxx_common.h cxx_except.h
+ install_include:
+ 	@echo "Installing DB include files: $(includedir)/STLdb4 ..."
+-	@test -d $(includedir)/STLdb4 || \
+-	    ($(mkdir) -p $(includedir)/STLdb4 && $(chmod) $(dmode) $(includedir)/STLdb4)
+-	@cd $(includedir)/STLdb4 && $(rm) -f stldbraw.h
+-	@$(cp) -p stldbraw.h $(includedir)/STLdb4
++	@test -d $(DESTDIR)$(includedir)/STLdb4 || \
++	    ($(mkdir) -p $(DESTDIR)$(includedir)/STLdb4 && $(chmod) $(dmode) $(DESTDIR)$(includedir)/STLdb4)
++	@cd $(DESTDIR)$(includedir)/STLdb4 && $(rm) -f stldbraw.h
++	@$(cp) -p stldbraw.h $(DESTDIR)$(includedir)/STLdb4
+ 
+ uninstall_include:
+ 	@cd $(includedir)/STLdb4 && $(rm) -f stldbraw.h
