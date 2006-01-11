@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9654c4cbc0d99200c1af53bc82352ee7 ChangeLog 872
+MD5 8f8404e4bc5216dcf626c229af25abd7 ChangeLog 985
 MD5 877d61c05989e16389902d078ce46ed0 files/digest-pytextile-2.0.10 65
 MD5 102f8255487b2b68e23839f3ab254242 metadata.xml 413
-MD5 c31efcfdabb5724fe99b9dbee74dbd26 pytextile-2.0.10.ebuild 620
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxBisCRZPokWLroQRAkeeAKCjadfPWr3Pp9v1eakyTaKCLWjm7ACg5qRu
-XT+5Q5e+9IgSbFEFwn5p0Bk=
-=g7BX
------END PGP SIGNATURE-----
+MD5 1995bb067821c43f01bb080fe17ce91d pytextile-2.0.10.ebuild 622
