@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.11 2006/01/10 18:38:06 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.12 2006/01/11 06:39:42 robbat2 Exp $
 #
 # ########################################################################
 #
@@ -734,7 +734,7 @@ php5_1-sapi_pkg_postinst() {
 	ewarn "'pdo' USE flags. Also, the MCVE extension was moved to PECL"
 	ewarn "and thus can now be found in dev-php5/pecl-mcve. The Ovrimos"
 	ewarn "and Pfpro extensions were removed altogether and have no"
-	ewarn "available sobstitute."
+	ewarn "available substitute."
 
 	ewarn "The 'xml' and 'xml2' USE flags were unified in only the 'xml' USE"
 	ewarn "flag. To get the features that were once controlled by the 'xml2'"

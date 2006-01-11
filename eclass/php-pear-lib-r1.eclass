@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.3 2006/01/05 09:11:39 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.4 2006/01/11 06:39:42 robbat2 Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 # Maintained by the PHP Herd <php-bugs@gentoo.org>
@@ -48,7 +48,7 @@ php-pear-lib-r1_src_install() {
 	"${D}/usr/share/php/.registry"
 
 	# install to the correct phpX folder, if not specified
-	# /usr/share/php will be kept, also sedding to sobstitute
+	# /usr/share/php will be kept, also sedding to substitute
 	# the path, many files can specify it wrongly
 	if [ -n "${PHP_SHARED_CAT}" ] && [ "${PHP_SHARED_CAT}" != "php" ] ; then
 		mv -f "${D}/usr/share/php" "${D}/usr/share/${PHP_SHARED_CAT}" || die "Unable to move files"
