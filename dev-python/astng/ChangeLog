@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.4 2006/01/08 20:22:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.5 2006/01/11 16:04:21 marienz Exp $
+
+*astng-0.14.0 (11 Jan 2006)
+
+  11 Jan 2006; Marien Zwart <marienz@gentoo.org> +astng-0.14.0.ebuild:
+  Version bump, add src_test.
 
   08 Jan 2006; <nixnut@gentoo.org> astng-0.13.1.ebuild:
   Added ~ppc keyword. Bug #111889
