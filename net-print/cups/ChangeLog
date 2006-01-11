@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.150 2006/01/10 18:51:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.151 2006/01/11 13:53:26 gustavoz Exp $
+
+  11 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> cups-1.1.23-r7.ebuild:
+  Stable on sparc wrt #117481 #117495
 
   10 Jan 2006; Stefan Schweizer <genstef@gentoo.org> -cups-1.1.23-r2.ebuild,
   -cups-1.1.23-r3.ebuild, cups-1.1.23-r4.ebuild, -cups-1.1.23-r5.ebuild,

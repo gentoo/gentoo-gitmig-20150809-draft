@@ -1,7 +1,10 @@
-MD5 03b40cbf742d572764fe5b4f01e4c54e ChangeLog 19822
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2d15e4bbef038d852d3c3f93b3f42ebf ChangeLog 19939
 MD5 b92beaae46fa3940593e9915f4feb8f0 cups-1.1.23-r1.ebuild 4130
 MD5 d15baa8642b3235fdb4f38a75793f8c3 cups-1.1.23-r4.ebuild 4698
-MD5 b2cf0dc31cf9b6d1d3e0419ea71700c3 cups-1.1.23-r7.ebuild 4723
+MD5 83d65017f81b6984d2b985346204e95d cups-1.1.23-r7.ebuild 4727
 MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
 MD5 b22c12cb42113ddc40988cfbe93e3519 files/cups-1.1.23-bindnow.patch 2087
 MD5 7888ddf6a0c4cfb38b8882651e22d66c files/cups-gcc4-amd64.patch 566
@@ -19,3 +22,10 @@ MD5 f6149424fd2880c5017da501e876de59 files/pdftops.pl 5630
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 a097b6a9c53c9ef50a6f3662d802cdfa files/xpdf-pl3.patch 348
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxQ3kKRy60XGEcJIRAqBAAKCwTeRa3Qz8c5LVO/LI0wCzkZlzlwCgpYaj
+/gnMUiT+eyQkUthWGq1nuR8=
+=dnsv
+-----END PGP SIGNATURE-----
