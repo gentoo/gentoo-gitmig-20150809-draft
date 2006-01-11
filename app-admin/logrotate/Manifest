@@ -13,13 +13,13 @@ MD5 b6b2dec981e0b573366f5d0e74783b5b files/logrotate-3.7.1-taboo-to-debug.patch 
 MD5 99475aa9bd9e42d158c0584f3c4544fd files/logrotate-3.7.1-weekly.patch 1165
 MD5 5692e613153f372df5b7510b39ba9c5c files/logrotate.conf 731
 MD5 cf1ca2cfa810abaefc504a76ca38b52a files/logrotate.cron 52
-MD5 56b2e40af8f7d88199bcd55bf9b1d55a logrotate-3.7.1-r1.ebuild 1764
-MD5 b173c5de8be193de7d0e47e4f719c3a6 logrotate-3.7.1-r2.ebuild 1807
+MD5 1f4c3cb1a1f10f5e8f94bf6680102f57 logrotate-3.7.1-r1.ebuild 1765
+MD5 80dae8b2b8264c6d56083cbc2528abfa logrotate-3.7.1-r2.ebuild 1813
 MD5 c7533062993ae53a9a32d0a58416cd84 metadata.xml 216
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUX3YomPajV0RnrERAhCGAJoDMqq+mM6RSCRghjpsFRcnJLBkTQCeIgw/
-TMgSzxXmiOKoJ4w0D9cj/LY=
-=Uuot
+iD8DBQFDxF/Y2+ySkm8kpY0RApovAJ96cnveQk8xLXg7aE74KZuGtDTdowCgnUGy
+6zhHkdofCTbApPta6o7y6HM=
+=4i0e
 -----END PGP SIGNATURE-----
