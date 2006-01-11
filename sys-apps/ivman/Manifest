@@ -1,4 +1,7 @@
-MD5 a0a27e8ae3b432fc3ef3f81224026fc6 ChangeLog 3746
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48809ad19085134fc8cdcc83964bf981 ChangeLog 3841
 MD5 7b663d58e12a086e30f6eb8e5cf965d3 files/digest-ivman-0.5_pre2 67
 MD5 a561344e43c3fcfab148515b471ecd5a files/digest-ivman-0.5_pre3 67
 MD5 4aac9f5d6f83eeda363d051c89933adf files/digest-ivman-0.6.4 64
@@ -11,5 +14,12 @@ MD5 217682a6813a0a28a1a7be4b3b6adc54 ivman-0.5_pre3.ebuild 1310
 MD5 0a279ef04950ef7acd46341ecb0b0d7d ivman-0.6.4.ebuild 2581
 MD5 b233402a9b0c06809675c49c7290c8b8 ivman-0.6.5.ebuild 2601
 MD5 3688ac929410b2952685a389f1753ec8 ivman-0.6.6.ebuild 2601
-MD5 7f87967507c688fff862b424cdebc15d ivman-0.6.8.ebuild 2303
+MD5 1049aeec91cae2fc5df314a1950c72a1 ivman-0.6.8.ebuild 2311
 MD5 94ae54dc83c1b4b61c9edccab725465b metadata.xml 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxSeUKRy60XGEcJIRAuHdAJ91mmsT3rPsACM7NvF8mCggFgfwtQCfRzBZ
+QD9Vy1V5TEiSXckjvF0dvko=
+=EmJg
+-----END PGP SIGNATURE-----
