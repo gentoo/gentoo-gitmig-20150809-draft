@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.8 2006/01/11 19:26:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.9 2006/01/11 19:29:23 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl pam samba ssl zeroconf"
+IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
+pam samba ssl zeroconf xcomposite"
 # hal: enables hal backend for 'media:' ioslave
 
 DEPEND="arts? ( ~kde-base/arts-${PV} )
@@ -88,6 +89,7 @@ src_compile() {
 	              $(use_with lm_sensors sensors) $(use_with logitech-mouse libusb)
 	              $(use_with ieee1394 libraw1394) $(use_with hal)
 	              $(use_enable zeroconf dnssd)
+				  $(use_with xcomposite composite)
 				  --with-usbids=/usr/share/misc/usb.ids"
 
 	if use pam; then

@@ -53,12 +53,12 @@ MD5 bca1b08e31bfa89d6d04e9996a77c0bd kdebase-3.4.2-r2.ebuild 4527
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 f30c2b7e9f582458651ca7d3b2eac796 kdebase-3.4.3-r1.ebuild 4493
 MD5 b028b31c593bcc849bbde152f85b8dac kdebase-3.4.3.ebuild 4263
-MD5 a0e9e56623db3f439e138091984c0cce kdebase-3.5.0-r1.ebuild 5203
+MD5 423bcf42a76deb23d8ed26e3a5add93b kdebase-3.5.0-r1.ebuild 5253
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxVwKAiZjviIA2XgRAknjAKCg3vdk8f5GZK9nCFZ7rPwkUGz5zgCbBZqU
-lITWI1IXRfpk9QPNZaZuoLE=
-=pbi/
+iD8DBQFDxVyfAiZjviIA2XgRAoPcAKCvV8bGpobSey1SPflPgMziBh2PAwCgkt/h
+TfG3P2Vh060tGA3PGuXkBo8=
+=G50S
 -----END PGP SIGNATURE-----
