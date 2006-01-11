@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99889c191ab0b32ce71b8a232aa9a9fb ChangeLog 406
+MD5 fb41cfdda5b811e74610a038766272d2 files/50ses-gentoo.el 161
+MD5 1610f6baab7390a797191d22144b0c8e files/digest-ses-031130 60
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 413d9051cb6f3b6fc959bd8e8b0f79e1 ses-031130.ebuild 759
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxXyAyiNZaEAZA+ARApcfAJ9BNnYGs/PMmZU2C/Tt4R0huwvezwCfeuD+
+E1hjzRtgTHf8MHW3S3cw/cE=
+=MtUH
+-----END PGP SIGNATURE-----
