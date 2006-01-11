@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.7 2005/12/31 21:44:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.8 2006/01/11 19:26:54 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -36,9 +36,19 @@ RDEPEND="${DEPEND}
 	|| ( (
 			x11-misc/xkbdata
 			x11-apps/setxkbmap
-		) virtual/x11 )"
+		) virtual/x11 )
+	xcomposite? ( || ( (
+			x11-libs/libXcomposite
+			x11-libs/libXdamage
+			) <=x11-base/xorg-x11-6.9 )
+		)"
 
 DEPEND="${DEPEND}
+	xcomposite? ( || ( (
+			x11-proto/compositeproto
+			x11-proto/damageproto
+			) <=x11-base/xorg-x11-6.9 )
+		)
 	dev-util/pkgconfig"
 
 src_unpack() {
@@ -62,6 +72,9 @@ src_unpack() {
 	# Add configure option to use /usr/share/misc/usb.ids instead of installing
 	# another copy for kcmusb. SVN Commit 492985.
 	epatch "${FILESDIR}/kcontrol-3.5.0-global-usbids.patch"
+
+	# Add --without-composite option to disable kompmgr.
+	epatch "${FILESDIR}/kwin-3.5.0-composite.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die
