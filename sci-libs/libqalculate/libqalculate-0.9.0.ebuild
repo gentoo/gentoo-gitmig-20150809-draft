@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.0.ebuild,v 1.1 2005/11/16 03:51:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.0.ebuild,v 1.2 2006/01/11 00:23:13 halcy0n Exp $
 
 DESCRIPTION="A modern multi-purpose calculator library"
 LICENSE="GPL-2"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
 SLOT="0"
 IUSE="nls readline"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 
 DEPEND="dev-lang/perl
 	dev-perl/XML-Parser
