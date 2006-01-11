@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/mpich2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.1 2006/01/11 14:51:09 kanaka Exp $
+
+*mpich2-1.0.2_p1 (27 Dec 2005)
+
+  27 Dec 2005; Joel Martin <kanaka@gentoo.org> +metadata.xml,
+  +mpich2-1.0.2_p1.ebuild:
+  Create mpich2 ebuild for version 1.0.2-p1
+

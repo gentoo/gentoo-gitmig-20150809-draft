@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45362bf755dc5da0beaaf4857b80f56c ChangeLog 375
+MD5 71c1e71efad6c6deaef7a04cb6c7e9db files/digest-mpich2-1.0.2_p1 68
+MD5 8030c8b7656ad8112a5f870431e95932 metadata.xml 249
+MD5 bce4f67882911bc523c6c9afcf030cbf mpich2-1.0.2_p1.ebuild 2262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxRxEbaW+3NC9cLgRAn/yAJwIJaAIbrPGoeVbRNar7bINBAe2XQCfZM/f
+2NeuQIx7EMrf7IZ1obe6JGw=
+=909K
+-----END PGP SIGNATURE-----
