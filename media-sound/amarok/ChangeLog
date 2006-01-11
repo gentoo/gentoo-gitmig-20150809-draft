@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.95 2006/01/09 22:42:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.96 2006/01/11 16:04:34 flameeyes Exp $
+
+  11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> -amarok-1.3.7.ebuild:
+  Drop old version.
 
   09 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.7-r1.ebuild:
   Drop kdeenablefinal useflag, it used to work back in 1.2 series but it's not
