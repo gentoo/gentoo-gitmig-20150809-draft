@@ -1,27 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aefd824be16643a56f802d7d6ef4d209 Apache-Gallery-0.8-r2.ebuild 2086
 MD5 81ea0232b55758d1c56a1ff0342b4695 Apache-Gallery-0.6.ebuild 1421
-MD5 ed5914f590c899b06f60b1925b42ebfc Apache-Gallery-0.8.ebuild 1486
-MD5 32430db3c6811677f44ca51b4bd0a6d6 Apache-Gallery-0.8-r1.ebuild 2086
-MD5 d810d3fda63ae815ed953913e95c14f7 Apache-Gallery-0.9.1.ebuild 1594
-MD5 de22fd772d54b278fd2c9c02279c7162 ChangeLog 3746
-MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
-MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r1 69
-MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r2 69
-MD5 f372bf3342f63c4d3a680051e80b5571 files/digest-Apache-Gallery-0.6 69
-MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8 69
+MD5 c1ec0f3028bcc0a80a176d6552f562d5 Apache-Gallery-1.0_rc3.ebuild 1617
+MD5 ef37431f24c04226223c34d833ce6e09 ChangeLog 4046
+MD5 862b7db14e194f66c345bdaee71e0d00 files/76_apache-gallery.conf 1461
+MD5 9e0a44b67c66dc689a3769827946f3f8 files/76_apache1-gallery.conf 738
 MD5 004b7af7fb9d52598cf9ed7db91697c6 files/76_apache2-gallery.conf 1442
 MD5 d9a1361f6d0f1dac9def27a0b57cf30c files/apache-gallery.conf 757
+MD5 f372bf3342f63c4d3a680051e80b5571 files/digest-Apache-Gallery-0.6 69
+MD5 af084bb70094ac69911af16d31ebf83f files/digest-Apache-Gallery-1.0_rc3 72
 MD5 5edd6a9688af26ad0b3f71d8e2ad8770 files/postinstall-en.txt 90
-MD5 9e0a44b67c66dc689a3769827946f3f8 files/76_apache1-gallery.conf 738
-MD5 f946c05f08e4b517465f3a09639a5fe7 files/digest-Apache-Gallery-0.9.1 71
-MD5 862b7db14e194f66c345bdaee71e0d00 files/76_apache-gallery.conf 1461
+MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDW6VVEzitwsaoONoRAusgAKCG/LrSpU2h1es/KddF9RfQd6t7BACfbh/8
-NjkJOlIUA4YRqljl6dPlWCw=
-=jT2S
+iD8DBQFDxR1kEzitwsaoONoRAgiEAJ4lOvgIy9A8VlAAyH7jR7FuhFF/cQCcCn9m
+l0wxr7OyLubG61Vn1SLSg7E=
+=GxVw
 -----END PGP SIGNATURE-----
