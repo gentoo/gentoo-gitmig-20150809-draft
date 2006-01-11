@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha3.ebuild,v 1.4 2006/01/11 21:29:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha3-r1.ebuild,v 1.1 2006/01/11 21:29:35 zzam Exp $
 
 inherit eutils
 
@@ -16,6 +16,20 @@ KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="nvram? ( x86? ( sys-power/nvram-wakeup ) )"
 
+pkg_setup() {
+	enewgroup vdr
+	if getent passwd vdr >/dev/null 2>&1; then
+		einfo "Modifying user vdr"
+		usermod -g vdr -s /bin/bash vdr
+		local grp
+		for grp in video audio cdrom; do
+			gpasswd -a vdr ${grp} >/dev/null
+		done
+	else
+		enewuser vdr -1 /bin/bash ${VDR_HOME} vdr,video,audio,cdrom
+	fi
+}
+
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 	dodoc README TODO ChangeLog
@@ -30,6 +44,23 @@ src_install() {
 			ewarn "nvram-wakeup is not available on this architecture."
 		fi
 	fi
+
+	keepdir /var/vdr/video/dvd-images
+	chown -R vdr:vdr ${D}/etc/vdr ${D}/var/vdr
+}
+
+pkg_preinst() {
+	local owner
+	local d
+	for d in /etc/vdr /var/vdr; do
+		if [[ -d ${d} ]]; then
+			owner=$(stat ${d} -c "%U")
+			if [[ ${owner} != vdr ]]; then
+				einfo "Changing ownership of ${d}"
+				chown -R vdr:vdr ${d}
+			fi
+		fi
+	done
 }
 
 pkg_postinst() {
