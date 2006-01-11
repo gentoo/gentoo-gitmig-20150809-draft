@@ -1,0 +1,24 @@
+NOTE: This is the standalone Zina. For any embedded use, please
+see "http://www.pancake.org/zina/installation-0.11.x.html".
+
+NOTE: To use the Zina web configuration interface, the file
+"zina.ini.php" must be writable by the webserver user/group.
+Or, you can paste the text given by Zina into the file by
+hand, if you are into that sort of thing.
+
+If your web server is running as user apache, you can use the
+following command to ensure the file is writeable:
+
+# chown apache\: ${MY_INSTALLDIR}/zina.ini.php
+
+SECURITY NOTE: You are highly encouraged to restrict access to 
+your Zina (unless you actually WANT to have the world see your
+audio file collections). Zina has no internal user-based authentication
+- only a single administrative user and password.
+
+You might want to also grab some sort of album cover fetching
+application, like "AlbumArt" (in Portage as media-sound/albumart).
+
+Not much to do for Zina to work "out of the box" - just browse
+to the location you've installed it into, and follow the
+simple instructions. (MAKE SURE TO CHANGE YOUR ADMIN PASSWORD!)
