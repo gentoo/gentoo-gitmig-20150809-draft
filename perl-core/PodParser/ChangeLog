@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PodParser
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.3 2006/01/02 16:48:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.4 2006/01/11 09:29:12 mcummings Exp $
+
+  11 Jan 2006; <mcumming@gentoo.org> PodParser-1.28.ebuild,
+  PodParser-1.30.ebuild:
+  DESCRIPTION fix, thanx Beau
 
   02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> PodParser-1.30.ebuild:
   Stable on ppc.

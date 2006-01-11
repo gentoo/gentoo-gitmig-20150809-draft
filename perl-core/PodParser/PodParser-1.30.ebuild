@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.30.ebuild,v 1.4 2006/01/02 16:48:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.30.ebuild,v 1.5 2006/01/11 09:29:13 mcummings Exp $
 
 inherit perl-module
 MY_P=Pod-Parser-${PV}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="Print Usage messages based on your own pod"
+DESCRIPTION="Base class for creating POD filters and translators"
 HOMEPAGE="http://www.cpan.org/modules/by-authors/id/M/MA/MAREKR/${MY_P}.readme"
 SRC_URI="mirror://cpan/authors/id/M/MA/MAREKR/${MY_P}.tar.gz"
 
