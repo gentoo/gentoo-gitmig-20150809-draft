@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/lapack-atlas
-# Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.8 2005/11/13 05:44:04 ribosome Exp $
+# Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.9 2006/01/11 16:13:37 markusle Exp $
+
+*lapack-atlas-3.7.11 (11 Jan 2006)
+
+  11 Jan 2006; Markus Dittrich <markusle@gentoo.org>
+  +lapack-atlas-3.7.11.ebuild:
+  New lapack-atlas ebuild that compiles against the most recent 
+  blas-atlas development release. 
+  This fixes the circular dependency issues reported in bug #118521.
 
 *lapack-atlas-3.6.0-r1 (13 Nov 2005)
 
