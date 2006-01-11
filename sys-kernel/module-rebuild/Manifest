@@ -1,8 +1,18 @@
-MD5 954034d9ca12575efe2e0fd303a077d7 ChangeLog 1878
-MD5 4f16a183ffde9bcb9ad32bc19fafa1aa metadata.xml 526
-MD5 ea0963c42faaa0ae11ab458207259875 module-rebuild-0.1.ebuild 472
-MD5 fcf0f1da6b4b2c6e26fb2f3dbd91fb25 module-rebuild-0.5.ebuild 487
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 83322476f12d841d576f302cbaf75769 ChangeLog 1984
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-module-rebuild-0.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-module-rebuild-0.5 0
 MD5 2a7d0f8657e4bd140b33d1cd4a6a81d9 files/module-rebuild-0.1 4381
 MD5 325bc54cd9cdb43a8211c3c4ab872dcb files/module-rebuild-0.5 6574
+MD5 4f16a183ffde9bcb9ad32bc19fafa1aa metadata.xml 526
+MD5 ea0963c42faaa0ae11ab458207259875 module-rebuild-0.1.ebuild 472
+MD5 9a0b1e3daf1d4fa7a1cce0adf0710eb1 module-rebuild-0.5.ebuild 489
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxRDYKRy60XGEcJIRAkm/AJ0WeKqTgeGIIg+zxYVn2N8b2Sp3HQCfWKHo
+z46H7m2VNs48aoTZBJ6US4U=
+=2tVs
+-----END PGP SIGNATURE-----

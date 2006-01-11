@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/module-rebuild
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.9 2005/08/18 01:22:45 weeve Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.10 2006/01/11 14:06:01 gustavoz Exp $
+
+  11 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  module-rebuild-0.5.ebuild:
+  Stable on sparc
 
   18 Aug 2005; Jason Wever <weeve@gentoo.org> module-rebuild-0.5.ebuild:
   Added ~sparc keyword.
