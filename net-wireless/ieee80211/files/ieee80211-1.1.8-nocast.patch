@@ -1,0 +1,32 @@
+diff -urp ieee80211-1.1.8/ieee80211_tx.c ieee80211-1.1.8-fix/ieee80211_tx.c
+--- ieee80211-1.1.8/ieee80211_tx.c	2006-01-09 14:24:53.000000000 +0800
++++ ieee80211-1.1.8-fix/ieee80211_tx.c	2006-01-10 13:17:00.000000000 +0800
+@@ -49,12 +49,6 @@
+ #define NETDEV_TX_BUSY 1
+ #endif
+ 
+-/* Fix for kernels < 2.6.12, since we use __nocast */
+-#ifndef __nocast
+-#define __nocast
+-#endif
+-
+-
+ /*
+ 
+ 802.11 Data Frame
+diff -urp ieee80211-1.1.8/net/ieee80211.h ieee80211-1.1.8-fix/net/ieee80211.h
+--- ieee80211-1.1.8/net/ieee80211.h	2006-01-09 14:24:53.000000000 +0800
++++ ieee80211-1.1.8-fix/net/ieee80211.h	2006-01-10 13:17:00.000000000 +0800
+@@ -1141,6 +1141,12 @@ static inline int is_multicast_ether_add
+        return addr[0] & 0x01;
+ }
+ #endif
++
++/* Fix for kernels < 2.6.12, since we use __nocast */
++#ifndef __nocast
++#define __nocast
++#endif
++
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,14)
+ static inline void *kzalloc(size_t size, unsigned __nocast flags)
+ {
