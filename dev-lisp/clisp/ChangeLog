@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.43 2005/12/22 22:01:55 mkennedy Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.44 2006/01/11 22:39:06 mkennedy Exp $
+
+*clisp-2.37 (11 Jan 2006)
+
+  11 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/2.37/README.Gentoo, +files/2.37/clisp.sh,
+  +files/2.37/install-clc.lisp, +clisp-2.37.ebuild:
+  New upstream version.
 
   22 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> clisp-2.36.ebuild:
   Depend on >=dev-db/postgresql-8.0*; Install implementation notes and PDF
