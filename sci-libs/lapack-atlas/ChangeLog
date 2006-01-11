@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.9 2006/01/11 16:13:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.10 2006/01/11 16:24:45 markusle Exp $
+
+  11 Jan 2006; Markus Dittrich <markusle@gentoo.org>
+  lapack-atlas-3.6.0.ebuild, lapack-atlas-3.6.0-r1.ebuild:
+  Changed DEPEND such that ebuilds can now depend on any 
+  blas-atlas-3.6.0-r* revision. This fixes the circular dependency 
+  issue in bug #118521.
 
 *lapack-atlas-3.7.11 (11 Jan 2006)
 
