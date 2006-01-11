@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 63d53bd621e26452d17952d80e9764cb ChangeLog 2867
+MD5 3a3f30952f1d35d2e8cc9eb7bb04f5b7 ChangeLog 3019
+MD5 c1926f59cc6919e487e3b1a8cbdbe3b9 files/digest-monafont-2.90-r1 133
+MD5 c1926f59cc6919e487e3b1a8cbdbe3b9 files/digest-monafont-2.90-r2 133
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 52d90aff271d9180497c303a6a1ddc81 monafont-2.90-r1.ebuild 1639
-MD5 c1926f59cc6919e487e3b1a8cbdbe3b9 files/digest-monafont-2.90-r1 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB+JAN60LfUIagIAkRAgSXAKCOkDF354LiswRsNV4nNlYA+Rf0KQCgqY3Z
-DRl8zVynV9jokEOHZgNokLo=
-=Apit
------END PGP SIGNATURE-----
+MD5 6c70a45377934f7f0711bf31bbd8a868 monafont-2.90-r2.ebuild 1687
