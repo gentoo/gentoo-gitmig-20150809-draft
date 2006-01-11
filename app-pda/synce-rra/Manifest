@@ -1,21 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc17bd30dec8123639832e5d5c07b18a synce-rra-0.9.0.ebuild 756
-MD5 49b45141c22209fe804867a5879bc87f synce-rra-0.8.9.ebuild 824
-MD5 a39ec8721ebdc398274d29f445077a7c synce-rra-0.8.4.ebuild 671
-MD5 d87671d02cd692bd14ced0667fc2ca1c ChangeLog 1651
-MD5 7d421aa9d03395eea78de128fe6ad125 metadata.xml 229
-MD5 009223ace0c235f525628b65a929d806 synce-rra-0.8.4-r1.ebuild 717
+MD5 0fec2a14370ff21fc49f7274d0c65039 ChangeLog 1862
 MD5 23c695b57b320fc579e5eeca9eddeb42 files/0.9.0-gcc34.patch 635
 MD5 9f0b8f60164fc14c9920e012284136b1 files/digest-synce-rra-0.8.4 67
+MD5 9f0b8f60164fc14c9920e012284136b1 files/digest-synce-rra-0.8.4-r1 67
 MD5 e74de00e3dbd372656493163ee5d1dbb files/digest-synce-rra-0.8.9 135
 MD5 0a0b5bd2c90ed9063fa72627b67a53d6 files/digest-synce-rra-0.9.0 67
-MD5 9f0b8f60164fc14c9920e012284136b1 files/digest-synce-rra-0.8.4-r1 67
+MD5 a19ae1e965659eee16fbf9c13eb8b5f0 files/digest-synce-rra-0.9.1 67
+MD5 408f942b4cda92c45d93908a0817c8e0 files/synce-rra-0.9.1-textrel.patch 17285
+MD5 7d421aa9d03395eea78de128fe6ad125 metadata.xml 229
+MD5 009223ace0c235f525628b65a929d806 synce-rra-0.8.4-r1.ebuild 717
+MD5 a39ec8721ebdc398274d29f445077a7c synce-rra-0.8.4.ebuild 671
+MD5 49b45141c22209fe804867a5879bc87f synce-rra-0.8.9.ebuild 824
+MD5 dc17bd30dec8123639832e5d5c07b18a synce-rra-0.9.0.ebuild 756
+MD5 1021e38ee957e840a2bbcd79856617a1 synce-rra-0.9.1.ebuild 880
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCZYl2V3J2n04EauwRAuOLAJ4m6nv/U0UtnnIdq4MbzUlQVp/hVACglBG9
-gDjmRmy5YLmrCe/DTv6NJYY=
-=T6ZI
+iD8DBQFDxRx1FdQwWVoAgN4RAob3AJ4ySxz0zugHF6ViDl9DS8pdH/+ejQCeKpk0
+Yk1QgVquJfRH6IvueF1shU0=
+=uOIo
 -----END PGP SIGNATURE-----

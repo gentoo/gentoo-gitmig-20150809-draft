@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-rra
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.14 2005/01/26 14:03:19 liquidx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.15 2006/01/11 06:31:06 chriswhite Exp $
+
+*synce-rra-0.9.1 (11 Jan 2006)
+
+  11 Jan 2006; Chris White <chriswhite@gentoo.org>
+  +files/synce-rra-0.9.1-textrel.patch, +synce-rra-0.9.1.ebuild:
+  Version bump for bug #109724.  Fixed textrel with patch.
 
   26 Jan 2005; Alastair Tse <liquidx@gentoo.org> +files/0.9.0-gcc34.patch,
   synce-rra-0.9.0.ebuild:
