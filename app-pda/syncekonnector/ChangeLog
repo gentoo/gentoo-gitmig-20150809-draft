@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/syncekonnector
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.2 2005/12/21 19:03:09 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.3 2006/01/11 08:20:10 chriswhite Exp $
+
+*syncekonnector-0.3_pre20060108 (11 Jan 2006)
+
+  11 Jan 2006; Chris White <chriswhite@gentoo.org>
+  +files/syncekonnector-0.3_pre20060108-autotools.patch,
+  +syncekonnector-0.3_pre20060108.ebuild:
+  Made autotools actually work right. Version bumped to a cvs snapshot for
+  some bug fixes.
 
 *syncekonnector-0.2.1-r1 (21 Dec 2005)
 
