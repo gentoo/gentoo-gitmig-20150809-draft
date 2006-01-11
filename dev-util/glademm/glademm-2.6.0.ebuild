@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.6.0.ebuild,v 1.1 2004/12/15 05:17:09 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.6.0.ebuild,v 1.2 2006/01/11 05:34:25 halcy0n Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A C++ code generating backend for glade"
 SRC_URI="http://home.wtal.de/petig/Gtk/${P}.tar.gz"
@@ -16,6 +16,12 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 DEPEND="virtual/libc"
 
 DOCS="AUTHORS BUGS COPYING ChangeLog NEWS README TODO docs/*"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 pkg_postinst() {
 
