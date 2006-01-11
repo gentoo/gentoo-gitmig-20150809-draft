@@ -1,5 +1,4 @@
-MD5 b9226835e69becd0b93dc10ddf37d097 ChangeLog 1051
-MD5 7a4ae6237c651bc458cc5dd85224b5e3 files/config-zlib-det-fix.patch 3403
+MD5 d9c601e2e200b57648f85cf06b257aa1 ChangeLog 1213
 MD5 2b340edcc01d9e1afddcf52d7cc5cb32 files/digest-pecl-memcache-2.0.0 62
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 5f8082e47f09b2364c08f0be38da21f9 pecl-memcache-2.0.0.ebuild 780
+MD5 2e3ac5c297ffa5ab9ef21b7d4fba7352 pecl-memcache-2.0.0.ebuild 772
