@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/tango-icon-theme-extras
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.1 2006/01/11 00:49:14 metalgod Exp $
+
+*tango-icon-theme-extras-0.1.0 (11 Jan 2006)
+
+  11 Jan 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
+  +tango-icon-theme-extras-0.1.0.ebuild:
+  Initial Import.
+
