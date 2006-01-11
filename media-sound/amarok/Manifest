@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4f69295517c6ca6951ba988cbadf8bd ChangeLog 15308
 MD5 fae91b0167ef3ca3233931dbb86a52e9 amarok-1.2.4.ebuild 2385
 MD5 e2b134909d4ab6144cf63677a3675894 amarok-1.3.6.ebuild 3208
@@ -8,3 +11,10 @@ MD5 9966964d087dd7c05b7fa2efeff9b1ac files/digest-amarok-1.2.4 66
 MD5 d8cfb3a78866379e2ac9b439de887551 files/digest-amarok-1.3.6 66
 MD5 cbac7ded5054d6932dda9754aa7d8aa7 files/digest-amarok-1.3.7-r1 66
 MD5 b23600108f12c98a4fd574d3487ee598 metadata.xml 175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxSyeAiZjviIA2XgRAi2kAKC70ccGDvUT2HZT/t8i/GgG+9SMPACfavk9
+qHFxySN6FkY290j2YaaLM2A=
+=dZuI
+-----END PGP SIGNATURE-----
