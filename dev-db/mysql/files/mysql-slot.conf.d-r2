@@ -19,7 +19,7 @@
 # mycnf           : string [full path to my.cnf]
 #                 : specify the path to my.cnf file to be used
 # ----------------+-----------------------------------------------------------
-# startup_timeout : integer [seconds] default 5
+# startup_timeout : integer [seconds] default 15
 #                 : time to wait for mysqld up and running, after this it's
 #                 : marked as failed
 # ----------------+-----------------------------------------------------------
