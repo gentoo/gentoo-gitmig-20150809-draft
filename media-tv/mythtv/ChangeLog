@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.80 2006/01/11 04:01:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.81 2006/01/11 05:15:47 cardoe Exp $
+
+  11 Jan 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/mythtv-0.19_pre8554-chanutil-schar.patch,
+  +files/mythtv-0.19_pre8554-freetype.patch, mythtv-0.19_pre8554.ebuild:
+  added some patches that I sent upstream
 
 *mythtv-0.19_pre8554 (11 Jan 2006)
 

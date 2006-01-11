@@ -1,0 +1,33 @@
+Index: configure
+===================================================================
+--- configure   (revision 8554)
++++ configure   (working copy)
+@@ -2383,6 +2383,8 @@
+ fi
+ if test "$freetype2" = "yes" ; then
+   echo "HAVE_FREETYPE2=yes" >> $MYTH_CONFIG_MAK
++  echo "FREETYPE_CFLAGS=`freetype-config --cflags`" >> $MYTH_CONFIG_MAK
++  echo "FREETYPE_LIBS=`freetype-config --libs`" >> $MYTH_CONFIG_MAK
+ fi
+ if test "$sunmlib" = "yes" ; then
+   echo "HAVE_MLIB=yes" >> $MYTH_CONFIG_MAK
+Index: libs/libmythtv/libmythtv.pro
+===================================================================
+--- libs/libmythtv/libmythtv.pro        (revision 8554)
++++ libs/libmythtv/libmythtv.pro        (working copy)
+@@ -33,10 +33,11 @@
+ TARGETDEPS += ../libmythmpeg2/libmythmpeg2-$${LIBVERSION}.$${QMAKE_EXTENSION_LIB}
+
+ DEFINES += _LARGEFILE_SOURCE
+-QMAKE_CXXFLAGS_RELEASE += `freetype-config --cflags`
+-QMAKE_CXXFLAGS_DEBUG += `freetype-config --cflags`
+-QMAKE_LFLAGS_SHLIB += `freetype-config --libs`
+
++QMAKE_CXXFLAGS_RELEASE += $${FREETYPE_CFLAGS}
++QMAKE_CXXFLAGS_DEBUG += $${FREETYPE_CFLAGS}
++QMAKE_LFLAGS_SHLIB += $${FREETYPE_LIBS}
++
+ macx {
+     # Mac OS X Frameworks
+     FWKS = ApplicationServices Carbon QuickTime
+
