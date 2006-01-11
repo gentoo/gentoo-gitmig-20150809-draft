@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.4.0-r2.ebuild,v 1.3 2005/05/23 18:41:11 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.4.0-r2.ebuild,v 1.4 2006/01/11 04:42:52 weeve Exp $
 
 MY_P="${PN}-${PV}-2"
 DESCRIPTION="X11 protocol compression library wrapper"
@@ -10,7 +10,7 @@ SRC_NXPROXY="${MY_P}.tar.gz"
 SRC_URI="$URI_BASE/nxproxy/${SRC_NXPROXY}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ppc ~sparc x86"
 IUSE=""
 DEPEND="=net-misc/nx-x11-1.4*
 	sys-devel/patch

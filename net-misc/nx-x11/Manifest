@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3f7d16237334426c43c9ab164912230b ChangeLog 2009
 MD5 b1b175fda7a68efc0ea21ac829c6449c files/digest-nx-x11-1.4.0-r3 539
 MD5 bf8eb265e3f2cd6cf59883917c7ba833 files/digest-nx-x11-1.4.0-r4 540
@@ -8,11 +5,4 @@ MD5 a9b28f3b18188232c59a035fb2f0812b files/nx-x11-1.4.0-gcc4.patch 384
 MD5 d2caae40bdf5748d68ca46ad1d0ec951 files/nx-x11-1.4.0.xprint.patch 341
 MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
 MD5 dd061df9cf4e99f32835ce0c74fc024e nx-x11-1.4.0-r3.ebuild 2847
-MD5 16fdeb2d748dde9e116f34345568119b nx-x11-1.4.0-r4.ebuild 2912
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrIN6CRZPokWLroQRAi8yAKDM+rspqhriA5E+Sd8e+j5AJjQrNACgv0Z2
-wWodNKP2vtMeLZuSEXjl1oo=
-=zLw7
------END PGP SIGNATURE-----
+MD5 1055c7ef00d773acf930e54f67f7912e nx-x11-1.4.0-r4.ebuild 2919

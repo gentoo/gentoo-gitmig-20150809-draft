@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.13 2005/10/02 14:43:31 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.14 2006/01/11 04:43:26 weeve Exp $
+
+  11 Jan 2006; Jason Wever <weeve@gentoo.org> nxserver-freenx-0.4.0.ebuild:
+  Added ~sparc keyword wrt bug #117825.
 
   02 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   nxserver-freenx-0.2.7.ebuild, nxserver-freenx-0.2.8.ebuild,

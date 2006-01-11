@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.4.0.ebuild,v 1.2 2005/10/02 14:43:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.4.0.ebuild,v 1.3 2006/01/11 04:43:26 weeve Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freenx.berlios.de/"
 SRC_URI="http://debian.tu-bs.de/knoppix/nx/freenx-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~sparc ~x86"
 RESTRICT="nomirror strip"
 IUSE="commercial"
 DEPEND="virtual/ssh

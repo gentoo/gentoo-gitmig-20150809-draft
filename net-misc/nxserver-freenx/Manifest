@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 524cc47dcd343962365d6d6be896cfe6 ChangeLog 3038
 MD5 3210d19111775fb0cf59fb578879c5c2 files/digest-nxserver-freenx-0.2.7 63
 MD5 68fcece75aaa5f55ad36a18960a56806 files/digest-nxserver-freenx-0.2.8 63
@@ -10,11 +7,4 @@ MD5 f58cf7014a645ce96afd27989a893c2f files/nxserver-path.diff 718
 MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
 MD5 95bc5eb4659bbab6c1b40fe962683ee5 nxserver-freenx-0.2.7.ebuild 2744
 MD5 04d7b917ab2c64f2732141f4e8af10ec nxserver-freenx-0.2.8.ebuild 2932
-MD5 ffe58eb0f5e4b1369fc1201cf8dbb324 nxserver-freenx-0.4.0.ebuild 2902
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDP/JEj5H05b2HAEkRArVmAKCC+C5ic461HmwpAf+GXanVCa4FwACfZ2Jd
-V1cceftDbpY1HWJeA/UTPi8=
-=sYHp
------END PGP SIGNATURE-----
+MD5 73b4c2843887fd9fd5bb667416822cf1 nxserver-freenx-0.4.0.ebuild 2909
