@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.150 2006/01/11 15:41:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.151 2006/01/11 15:57:39 flameeyes Exp $
+
+  11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/alsa-lib-1.0.7-pcm_wait.patch, -files/configure.diff,
+  -alsa-lib-1.0.10_rc3.ebuild:
+  Drop old version and FILESDIR cleanup.
 
   11 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   alsa-lib-1.0.10.ebuild:
