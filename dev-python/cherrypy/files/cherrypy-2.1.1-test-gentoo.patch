@@ -1,0 +1,10 @@
+--- cherrypy/test/test.py.org	2005-10-21 13:35:14.068726072 -0700
++++ cherrypy/test/test.py	2005-10-21 13:35:31.693046768 -0700
+@@ -350,7 +350,6 @@
+     CPTestHarness(testList).run()
+     
+     print
+-    raw_input('hit enter')
+ 
+ 
+ if __name__ == '__main__':

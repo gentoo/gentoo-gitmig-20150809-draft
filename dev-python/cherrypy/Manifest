@@ -1,9 +1,22 @@
-MD5 ae445a99e749d9819e31e32b95c172ae ChangeLog 1926
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41d55e6a1fef8316e76664f6442b3186 ChangeLog 2098
 MD5 0f5c2b2e82673db6c01ba3e74a22858c cherrypy-2.0.0.ebuild 1144
 MD5 d890e6d863cbc8bf1e143cdd17f5f2c6 cherrypy-2.1.0.ebuild 914
+MD5 4ae3026c261f367b13d4c93eaec10d62 cherrypy-2.1.1.ebuild 917
 MD5 c885c6173e005c060a73ecf836011132 files/cherrypy-2.0.0-setup-gentoo.diff 471
 MD5 f411ca60958e839619324a1a81b9af4d files/cherrypy-2.0.0-test-gentoo.diff 212
 MD5 4cf9009699f529b3c7921c0e1ab0cc94 files/cherrypy-2.1.0-test-gentoo.patch 260
+MD5 4cf9009699f529b3c7921c0e1ab0cc94 files/cherrypy-2.1.1-test-gentoo.patch 260
 MD5 4991e5ddb5d31fb149fdadc26b75f551 files/digest-cherrypy-2.0.0 65
 MD5 a2ab81d963b17955e9d2eaeff314679c files/digest-cherrypy-2.1.0 66
+MD5 8df5adbbfaa6195b3750466d1647165b files/digest-cherrypy-2.1.1 66
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDxWvZTry2jroju7wRAhaMAJ9zBQfOjmXIzmcU5aJkyY5HgXvDZwCfduTU
+EbvB4hKDiKPrHffAb7kSMWo=
+=v78t
+-----END PGP SIGNATURE-----
