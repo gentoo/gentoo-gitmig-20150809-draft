@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.5.ebuild,v 1.8 2005/09/10 14:05:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.5.ebuild,v 1.9 2006/01/11 21:09:55 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -8,14 +8,15 @@ DESCRIPTION="GTK+ Front-End for libxine"
 HOMEPAGE="http://xine.sourceforge.net/"
 LICENSE="GPL-2"
 
-DEPEND="media-libs/libpng
+RDEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1_beta10
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/glib-2.6
 	dev-lang/spidermonkey
 	lirc? ( app-misc/lirc )
 	X? ( virtual/x11 )"
-RDEPEND="nls? ( sys-devel/gettext )
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
 IUSE="nls lirc nsplugin"
