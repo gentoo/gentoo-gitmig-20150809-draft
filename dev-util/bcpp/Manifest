@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5070797fa6cceb1df31c3a054b2aa166 ChangeLog 726
+MD5 cc1754d6b9ca0b46477a20c5998789ab ChangeLog 823
 MD5 7d216d68e66cbdbe734997d0ec3a4267 bcpp-20030423.ebuild 588
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 6f44c8f5aea34b6e7f3d5acafb46b331 bcpp-20050725.ebuild 983
+MD5 7d438118fbbcf16ca568cc9dcf419d1c bcpp-20050725.ebuild 979
 MD5 68d2fd9c26ff6c376d410bc0139aca34 files/digest-bcpp-20030423 61
 MD5 5b4709dcfa5c8c562c05f88982360272 files/digest-bcpp-20050725 62
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC6U+jFdQwWVoAgN4RArqgAJ9lXCm0PJ3Ycktfer4kEi7qbzaxHwCcDzfR
-rKAfa5PYuF6YMziXiJ0GvKI=
-=Lkat
+iD8DBQFDxFX2CRZPokWLroQRAttCAKC8ZRvq8xSxz1X8ZE5mJplCuHVjYQCgrmOv
+OKxz9JHqAZvB1K4RpkMbR+g=
+=MtbG
 -----END PGP SIGNATURE-----
