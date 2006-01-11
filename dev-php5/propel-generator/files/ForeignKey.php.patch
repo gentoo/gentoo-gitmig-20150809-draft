@@ -1,0 +1,16 @@
+diff -ur propel_generator-1.1.1/engine/database/model/ForeignKey.php propel_generator-1.1.1.patched/engine/database/model/ForeignKey.php
+--- engine/database/model/ForeignKey.php	2005-09-17 16:39:12.000000000 +0200
++++ engine/database/model/ForeignKey.php	2006-01-11 22:41:43.000000000 +0100
+@@ -43,10 +43,10 @@
+ 
+     // the uppercase equivalent of the onDelete/onUpdate values in the dtd
+     const NONE     = "";            // No "ON [ DELETE | UPDATE]" behaviour specified.
+-    const CASCADE  = "NO ACTION";
++    const NOACTION = "NO ACTION";
+     const CASCADE  = "CASCADE";
+     const RESTRICT = "RESTRICT";
+-    const SETNULL  = "SET DEFAULT";
++    const SETDEFAULT = "SET DEFAULT";
+     const SETNULL  = "SET NULL";
+ 
+     /**

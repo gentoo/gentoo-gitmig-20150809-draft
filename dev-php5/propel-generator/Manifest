@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b951e9fe793b67472d56a319149240ef ChangeLog 1760
+MD5 c79945f6a9a3533237d1617362e83911 ChangeLog 1744
+MD5 4a86c144e772d841fc8185247535a67f files/ForeignKey.php.patch 735
 MD5 9fb7570436bd9872be728c945ff22711 files/digest-propel-generator-1.1.1 71
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 d824e48c84f994a450bd23c74f90aa3f propel-generator-1.1.1.ebuild 635
+MD5 bcfc2d22f20de7b8b821cffa0b55f443 propel-generator-1.1.1.ebuild 726
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxXjOaGfFFLhbXWkRAtZNAJ4gx9uElhfwP39daGc3zswlu9OMwgCffj3k
-5LeCOSI3FavDND36EhFutQI=
-=/Uej
+iD8DBQFDxX9ZaGfFFLhbXWkRAky5AJ0VI1EIPgCT2EflY7NjWzp8z6tnLQCeN2mX
+/yMaeuo3ft7s8og7FvIamUQ=
+=FekR
 -----END PGP SIGNATURE-----
