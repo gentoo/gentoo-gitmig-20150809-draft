@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 503ebfa4b74748ca434eca50ec23b7c8 ChangeLog 10616
+MD5 ca124f42bced187803d8afdbe90e0e3e ChangeLog 10730
 MD5 88069f3f6c274e4285bbbba7f5cb5a4f files/FfmpegToolkit.class.patch 576
 MD5 57ed8c8bd13cb72d366ece232dcc2fe9 files/digest-gallery-1.5.1 66
 MD5 9e64f054eb28e98d82b04443023befed files/digest-gallery-1.5.2_rc1 70
@@ -15,13 +12,6 @@ MD5 506282253bfebd77cf1392f54b3e6e5d gallery-1.5.1.ebuild 984
 MD5 cc9c3d2625009ec17b02e5645fcd5556 gallery-1.5.2_rc1.ebuild 990
 MD5 c45373f82c4196a5c38001b3334891dd gallery-1.5.2_rc2.ebuild 990
 MD5 7cae145d1aa9b7900fb4b1b00ebdc774 gallery-1.5_p1.ebuild 980
-MD5 ec33793aab3686284b565a97d34cc259 gallery-2.0.2-r1.ebuild 1126
+MD5 d3d670266a7b29fb37ad63baf2a0f63d gallery-2.0.2-r1.ebuild 1124
 MD5 0d436b8c7053ab86427e53909ec8ca05 gallery-2.0.2.ebuild 995
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDw5nCEzitwsaoONoRAk3KAKDP+ZJnaqaSv8nt5A7b6+5r/SWmuQCgywZR
-YvRqc0HjFj45LZv72o4+5FA=
-=b6H4
------END PGP SIGNATURE-----
