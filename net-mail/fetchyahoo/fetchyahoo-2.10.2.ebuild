@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.8.8.ebuild,v 1.3 2005/12/30 12:03:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.10.2.ebuild,v 1.1 2006/01/11 03:56:08 kanaka Exp $
 
 IUSE=""
 DESCRIPTION="Perl script that downloads mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail."
@@ -20,14 +20,15 @@ DEPEND="dev-lang/perl
 	dev-perl/URI
 	dev-perl/MailTools
 	dev-perl/IO-stringy
-	perl-core/MIME-Base64"
+	perl-core/MIME-Base64
+	dev-perl/TermReadKey"
 
 src_install() {
 	dobin fetchyahoo
 	doman fetchyahoo.1
 	insinto /etc
 	doins fetchyahoorc
-	dodoc ChangeLog Credits INSTALL TODO fetchyahoorc
+	dodoc ChangeLog Credits TODO fetchyahoorc
 	dohtml index.html
 }
 
