@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60c5555907ae6ee4161928ce54cfc8ba ChangeLog 1138
+MD5 fdb7b1b5c063f9be209acbac039d076c ChangeLog 1277
 MD5 f597c9b8fb4a444896a678f68cb21287 files/digest-libferrisstreams-0.3.11 73
 MD5 0da43449ae9ddcc34261d4c008c63678 files/digest-libferrisstreams-0.3.12 73
+MD5 31cda6f377bfec0c15681fb30d156ce7 files/digest-libferrisstreams-0.4.1 72
 MD5 7288fc3f90caffac201641ae7a063bda libferrisstreams-0.3.11.ebuild 721
 MD5 90ceb36ca69059c71ff7a84874ac2841 libferrisstreams-0.3.12.ebuild 726
+MD5 708ab3d7125db984ade4623fa8375470 libferrisstreams-0.4.1.ebuild 725
 MD5 92329f92aff2f9d589eb69df1fc2c9fe metadata.xml 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxGNm2+ySkm8kpY0RAlzaAJwJpRIpg+4GdHNzpmvIHbGLzveh8ACfTRoc
-curfRoScqCkkFooI2cmjMwk=
-=TWVV
------END PGP SIGNATURE-----
