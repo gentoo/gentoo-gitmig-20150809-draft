@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-mailmbox
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-mailmbox/ChangeLog,v 1.9 2005/11/13 11:45:23 genone Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-mailmbox/ChangeLog,v 1.10 2006/01/12 11:14:04 genone Exp $
+
+  12 Jan 2006; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-mailmbox-0.9.ebuild, -sylpheed-claws-mailmbox-1.2.ebuild:
+  Removing old versions, fixing -claws dep in 0.9
 
 *sylpheed-claws-mailmbox-1.4 (13 Nov 2005)
 
