@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.76 2005/12/24 15:54:08 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.77 2006/01/12 20:33:22 dang Exp $
+
+  12 Jan 2006; <dang@gentoo.org> gnucash-1.8.9.ebuild,
+  gnucash-1.8.11.ebuild, gnucash-1.8.12.ebuild:
+  Change gtkhtml dep prior to libgtkhmtl->gtkhtml
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> gnucash-1.8.11.ebuild:
   Stable on ppc.

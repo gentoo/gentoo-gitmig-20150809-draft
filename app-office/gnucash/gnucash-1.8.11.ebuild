@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.11.ebuild,v 1.9 2005/12/24 15:54:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.11.ebuild,v 1.10 2006/01/12 20:33:22 dang Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -30,7 +30,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=sys-libs/zlib-1.1.4
 	>=gnome-base/gnome-print-0.21
 	media-libs/gdk-pixbuf
-	>=gnome-extra/gtkhtml-0.14.0
+	=gnome-extra/gtkhtml-1*
 	<gnome-extra/gal-1.99
 	>=dev-libs/libxml-1.8.3
 	>=dev-libs/g-wrap-1.3.4
