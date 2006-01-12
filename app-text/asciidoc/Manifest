@@ -1,5 +1,8 @@
-MD5 072467eb70e452cdcd8d577f1c529e72 ChangeLog 2979
-MD5 939c24d1215fae86686631b82b9e5fc6 asciidoc-7.0.1-r1.ebuild 1426
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b5ef82910ff3c1d6b9a37e8f4e8224fd ChangeLog 3080
+MD5 de8105d0125e758e846cdea584282e86 asciidoc-7.0.1-r1.ebuild 1428
 MD5 af20cff2004eb7e8793168bae848586c asciidoc-7.0.1.ebuild 1091
 MD5 2fe09a4085aeb30b2b3fc155aa92627c asciidoc-7.0.2.ebuild 1425
 MD5 1a57862f9882e90af6db792429dfea46 asciidoc-7.0.4.ebuild 1480
@@ -8,3 +11,10 @@ MD5 c14add69414e6d58221327d5faec0b12 files/digest-asciidoc-7.0.1-r1 66
 MD5 948aca1b1d1c33db9b5fdf3c469cb9fc files/digest-asciidoc-7.0.2 66
 MD5 85424d319a092c75afc524d1be718a02 files/digest-asciidoc-7.0.4 66
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxlsUKRy60XGEcJIRAtYmAJ4pegD8j62ECST4sccsRKy4ae7WggCeMQD1
+bIk8TgYwMslzuzTEmtENfLo=
+=IMmP
+-----END PGP SIGNATURE-----
