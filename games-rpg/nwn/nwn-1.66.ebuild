@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.8 2006/01/05 00:12:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.9 2006/01/12 13:51:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -92,6 +92,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
+	einfo "There is a possible color problem with Neverwinter Nights.  There is"
+	einfo "not currently a patch for this issue.  For more information, you can"
+	einfo "go to http://bugs.gentoo.org/118728 or"
+	einfo "http://nwn.bioware.com/forums/myviewtopic.html?topic=461888&forum=72"
+	echo
 	if ! use nowin ; then
 		einfo "The NWN linux client is now installed."
 		einfo "Proceed with the following steps in order to get it working:"
