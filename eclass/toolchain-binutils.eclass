@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.51 2005/12/31 11:05:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.52 2006/01/12 00:41:52 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -61,6 +61,8 @@ esac
 	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-patches-${PATCHVER}.tar.bz2"
 [[ -n ${UCLIBC_PATCHVER} ]] && \
 	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
+[[ -n ${ELF2FLT_VER} ]] && \
+	SRC_URI="${SRC_URI} mirror://gentoo/elf2flt-${ELF2FLT_VER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 IUSE="nls multitarget multislot test"
@@ -179,6 +181,27 @@ toolchain-binutils_src_compile() {
 	# we nuke the manpages when we're left with junk
 	# (like when we bootstrap, no perl -> no manpages)
 	find . -name '*.1' -a -size 0 | xargs rm -f
+
+	# elf2flt only works on some arches / targets
+	if [[ -n ${ELF2FLT_VER} ]] && [[ ${CTARGET} == *-linux* || ${CTARGET} == *-elf* ]] ; then
+		cd "${WORKDIR}"/elf2flt-${ELF2FLT_VER}
+
+		local x supported_arches=$(sed -n '/defined(TARGET_/{s:^.*TARGET_::;s:)::;p}' elf2flt.c | sort -u)
+		for x in ${supported_arches} UNSUPPORTED ; do
+			[[ ${CTARGET} == ${x}* ]] && break
+		done
+
+		if [[ ${x} != "UNSUPPORTED" ]] ; then
+			myconf="--with-bfd-include-dir=${MY_BUILDDIR}/bfd \
+				--with-libbfd=${MY_BUILDDIR}/bfd/.libs/libbfd.so \
+				--with-libiberty=${MY_BUILDDIR}/libiberty/libiberty.a \
+				--with-binutils-ldscript-dir=${LIBPATH}/ldscripts \
+				${myconf}"
+			echo ./configure ${myconf}
+			./configure ${myconf} || die "configure elf2flt failed"
+			emake || die "make elf2flt failed"
+		fi
+	fi
 }
 
 toolchain-binutils_src_test() {
@@ -217,6 +240,18 @@ toolchain-binutils_src_install() {
 	fi
 	dodir /usr/${CTARGET}/{bin,include,lib}
 	prepman ${DATAPATH}
+
+	# Insert elf2flt where appropriate
+	if [[ -x ${WORKDIR}/elf2flt-${ELF2FLT_VER}/elf2flt ]] ; then
+		cd "${WORKDIR}"/elf2flt-${ELF2FLT_VER}
+		insinto ${LIBPATH}/ldscripts
+		doins elf2flt.ld || die "doins elf2flt.ld failed"
+		exeinto ${BINPATH}
+		doexe elf2flt flthdr || die "doexe elf2flt flthdr failed"
+		mv "${D}"/${BINPATH}/{ld,ld.real} || die
+		newexe ld-elf2flt ld || die "doexe ld-elf2flt failed"
+		newdoc README README.elf2flt
+	fi
 
 	# Now, some binutils are tricky and actually provide
 	# for multiple TARGETS.  Really, we're talking just
