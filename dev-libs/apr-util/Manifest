@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b920784c7821c33b96aa11cab344969 ChangeLog 5155
+MD5 0e6e31c9fa75a28236fd2a42a2fdaf47 ChangeLog 5258
 MD5 069b36180a4df1925f6d6b7ab8eed362 apr-util-0.9.6-r2.ebuild 2036
-MD5 22b6e466e2dbce375c591f6db925b2f4 apr-util-0.9.7.ebuild 1839
+MD5 98f99bb68668461ab4356a88eee62af6 apr-util-0.9.7.ebuild 1837
 MD5 eb1e072b34afd26a02d5673d81dd0046 apr-util-1.1.2.ebuild 1910
 MD5 5c39070c5a30db4f82b9373cadee4c45 files/apr-util-0.9.x-161086:161087.patch 4671
 MD5 467e8ba98a938b691d27ec9971dbfe12 files/digest-apr-util-0.9.6-r2 66
 MD5 6bf0076ded392d07180f520a63f5cb66 files/digest-apr-util-0.9.7 66
 MD5 c46881efc10b92ab7b6189cdc9070929 files/digest-apr-util-1.1.2 66
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDw7RRKRy60XGEcJIRApbsAKClqvu4tmmDgp+dwNM3A8uaW3hDpACfbjmE
-lz5Vuf5MVD//yIO2y1vOhtw=
-=Wren
------END PGP SIGNATURE-----
