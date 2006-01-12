@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.1 2006/01/10 14:01:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.2 2006/01/12 13:31:24 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="23"
+PATCHLEVEL="24"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -133,7 +133,9 @@ src_compile() {
 	# The default CFLAGS (-O) is the only thing working on hppa.
 	use hppa && unset CFLAGS
 
-	if use xvmc; then
+	if ! use xvmc; then
+		myconf="${myconf} --disable-xvmc"
+	else
 		count="0"
 		if use nvidia; then
 			count="`expr ${count} + 1`"
