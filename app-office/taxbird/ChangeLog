@@ -1,0 +1,7 @@
+# ChangeLog for app-office/taxbird
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.1 2006/01/12 21:41:32 wrobel Exp $
+
+  12 Jan 2006; <wrobel@gentoo.org> ChangeLog:
+  Added taxbird to portage.
+
