@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/koules
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.7 2005/09/16 22:07:09 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.8 2006/01/12 20:37:33 wolf31o2 Exp $
+
+  12 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> -files/1.4-gcc3.patch,
+  koules-1.4-r1.ebuild:
+  Moved patch to mirrors.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

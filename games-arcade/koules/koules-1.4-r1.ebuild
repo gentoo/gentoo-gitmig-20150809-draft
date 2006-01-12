@@ -1,12 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.9 2005/08/11 23:57:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.10 2006/01/12 20:37:33 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="fast action arcade-style game w/sound and network support"
 HOMEPAGE="http://www.ucw.cz/~hubicka/koules/English/"
-SRC_URI="http://www.ucw.cz/~hubicka/koules/packages/koules${PV}-src.tar.gz"
+SRC_URI="http://www.ucw.cz/~hubicka/koules/packages/koules${PV}-src.tar.gz
+	mirror://gentoo/${P}-gcc3.patch.bz2
+	http://dev.gentoo.org/~wolf31o2/sources/dump/${P}-gcc3.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,7 +32,7 @@ S="${WORKDIR}/${PN}${PV}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch "${FILESDIR}/${PV}-gcc3.patch"
+	epatch "${S}/${P}-gcc3.patch"
 	sed -i \
 		-e "/^KOULESDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^SOUNDDIR/s:=.*:=${GAMES_DATADIR}/${PN}:" Iconfig \
