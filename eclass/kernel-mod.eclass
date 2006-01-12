@@ -1,6 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.14 2006/01/12 13:41:52 brix Exp $
+
+# !!!!!!!!!!
+#
+# BEWARE: DO NOT USE. THIS ECLASS IS DEPRECATED AND BROKEN. DO NOT USE.
+# Use linux-mod.eclass and/or linux-info.eclass instead. --brix
+#
+# !!!!!!!!!!
 
 # This eclass provides help for compiling external kernel modules from
 # source.

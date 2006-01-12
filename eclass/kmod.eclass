@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.17 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.18 2006/01/12 13:41:52 brix Exp $
 
 # !!!!!!!!!!
 #
-# BEWARE: DO NOT USE. THIS ECLASS IS DEPRECATED, BROKEN, AND WILL EAT YOUR
-# CHILDREN. DO NOT USE. -latexer
+# BEWARE: DO NOT USE. THIS ECLASS IS DEPRECATED AND BROKEN. DO NOT USE.
+# Use linux-mod.eclass and/or linux-info.eclass instead. --brix
 #
 # !!!!!!!!!!
 
