@@ -1,4 +1,4 @@
-MD5 9c4b12577ab1e08a16009a9a66f9405e ChangeLog 25997
+MD5 336154136a14670c7bf7c0138797b3c6 ChangeLog 26157
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2 125
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r1 125
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r2 125
@@ -17,5 +17,5 @@ MD5 3f3ef53019f559def811f446ba1b0f04 ruby-1.8.2-r1.ebuild 3753
 MD5 a0045c7bdab6743aede398ec740b44ae ruby-1.8.2-r2.ebuild 3917
 MD5 e847e0e7a41e6a1492eb66edab66a10d ruby-1.8.2.ebuild 3449
 MD5 ce1bfc8480546a10c83a8c3b77bb5e22 ruby-1.8.3.ebuild 3687
-MD5 18696d3d96dfd09201011b32a7743dd4 ruby-1.8.4-r1.ebuild 3806
+MD5 2e30316b21d611f6f9ffc4fe8a5c2ea4 ruby-1.8.4-r1.ebuild 3928
 MD5 1ca4cc0bd209f1351a336cf23e8b499c ruby-1.8.4.ebuild 3761
