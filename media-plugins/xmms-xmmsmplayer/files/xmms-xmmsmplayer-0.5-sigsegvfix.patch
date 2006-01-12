@@ -1,0 +1,21 @@
+--- xmmsmplayer-0.5/xmmsmplayer/xmmsmplayer.c.orig	2005-11-12 22:26:22.000000000 +1030
++++ xmmsmplayer-0.5/xmmsmplayer/xmmsmplayer.c	2005-11-12 22:46:24.000000000 +1030
+@@ -95,9 +95,16 @@ int mplayer_is_our_file(char *filename){
+ 	ext++;
+ 	
+ 	char *tok;
+-	char *exts = strdup(mplayer_current_cfg->exts);
++    char *exts;
++	
++	if (!mplayer_current_cfg->exts)
++	{
++		fprintf(stderr, "mplayer_current_cfg->exts == NULL!\n");
++		return FALSE;
++	}
++	
++	exts = strdup(mplayer_current_cfg->exts);
+ 	
+-	strcpy(exts, mplayer_current_cfg->exts);
+ 	tok = strtok(exts, " ");
+ 	
+ 	while (tok != NULL){
