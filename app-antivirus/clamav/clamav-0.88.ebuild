@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.88.ebuild,v 1.5 2006/01/11 14:05:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.88.ebuild,v 1.6 2006/01/12 13:40:44 blubb Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE="crypt milter selinux mailwrapper"
 
 DEPEND="virtual/libc
