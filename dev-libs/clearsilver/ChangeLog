@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.21 2006/01/12 22:53:33 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.22 2006/01/12 22:56:36 dju Exp $
+
+  12 Jan 2006; Julien Allanos <dju@gentoo.org> metadata.xml:
+  Removed upstream from metadata.xml.
 
   12 Jan 2006; Julien Allanos <dju@gentoo.org>
   -files/clearsilver-0.9.7-python24.patch, -files/0.9.7-python.patch,

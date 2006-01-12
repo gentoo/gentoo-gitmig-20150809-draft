@@ -1,4 +1,4 @@
-MD5 edbcfdbfe391adc110f3c9e38b54ca17 ChangeLog 3476
+MD5 4a0d2114f917a5736d74443f3948c1d3 ChangeLog 3576
 MD5 29abb063c48042e9ffe56b50c39c8a84 clearsilver-0.10.1.ebuild 1723
 MD5 7f16986964706012fed064252af5ec8d clearsilver-0.9.14-r1.ebuild 1700
 MD5 67ba91b55c05fa5dc211dfb4dcd8ae0d files/clearsilver-0.10.1-fPIC.patch 2384
@@ -7,4 +7,4 @@ MD5 50cea20dc6a84df4ce015e7d821e97d2 files/clearsilver-0.9.14-python24.patch 867
 MD5 50cea20dc6a84df4ce015e7d821e97d2 files/configure-python24.patch 867
 MD5 e23c35c14e1c418835c33683eae9d7b9 files/digest-clearsilver-0.10.1 70
 MD5 b549fb2f91db6d0719294ae1ef45345b files/digest-clearsilver-0.9.14-r1 70
-MD5 a9ab8b66105d9636c9a5be8d4d20ee18 metadata.xml 274
+MD5 908db14d15dc92bfbb6aa8ce5b426f46 metadata.xml 216
