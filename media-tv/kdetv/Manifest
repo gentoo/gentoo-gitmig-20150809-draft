@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 45d03381f2a36da5668e9e013ef75610 ChangeLog 2396
+MD5 847a3a5396dc29012198b9ca0d68ccbf ChangeLog 2594
 MD5 ce407b1306184d33a91829ef0b8c942d files/digest-kdetv-0.8.8 65
 MD5 ce407b1306184d33a91829ef0b8c942d files/digest-kdetv-0.8.8-r1 65
-MD5 0224e812128d13ec149838f2f5a3f25d files/kdetv-0.8.8-xinerama.patch 633
-MD5 a3381f5d92f7f9f6b95875cfb3a06427 kdetv-0.8.8-r1.ebuild 1717
+MD5 f817eaaa504ef394d2a89a04426d57ae files/kdetv-0.8.8-xinerama.patch 1629
+MD5 b93da52002f5d4b978bbca7fa9e81055 kdetv-0.8.8-r1.ebuild 1698
 MD5 93cd475d4d71a22fd9bd13ef80a71203 kdetv-0.8.8.ebuild 1179
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxa0wAiZjviIA2XgRAh5UAJ4mXSEpPzd1IpB/aP+JaWA6IYpYPgCdEb50
-Be6TD0zSNMC9LXNw6n054Jw=
-=53D6
+iD8DBQFDxletAiZjviIA2XgRAlfUAJ0eiD3PzrhrGR1xWoxRAZZc7AT4GACfcpNH
+QCPDFdOwYPBRyQ4re8AbclM=
+=6Jxn
 -----END PGP SIGNATURE-----

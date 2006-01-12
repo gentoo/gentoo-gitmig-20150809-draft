@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.2 2006/01/12 01:13:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.3 2006/01/12 13:20:27 flameeyes Exp $
 
 inherit kde
 
@@ -22,7 +22,6 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 		x11-libs/libXrandr
 		x11-libs/libX11
 		x11-libs/libXv
-		x11-libs/libXvMC
 		x11-libs/libSM
 		x11-libs/libXxf86vm
 		x11-libs/libXext

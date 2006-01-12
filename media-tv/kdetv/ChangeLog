@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.17 2006/01/12 01:13:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.18 2006/01/12 13:20:27 flameeyes Exp $
+
+  12 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/kdetv-0.8.8-xinerama.patch, kdetv-0.8.8-r1.ebuild:
+  Also remove check for XvMC and remove dependency as it's not used at all
+  either.
 
   12 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kdetv-0.8.8-xinerama.patch, kdetv-0.8.8-r1.ebuild:
