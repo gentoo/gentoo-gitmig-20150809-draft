@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88af56c9f9c8271d3539f049af200f12 gnomesword-2.1.1.ebuild 1011
-MD5 bd804274110c9a3a5604236ffa2edd56 ChangeLog 917
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 c7c3a66ca0618cbc1ec047753829a4aa files/gnomesword-2.1.1-gcc-3.4.patch 365
+MD5 51e6e1eeb2cc8e398e4404f321c9b54f ChangeLog 1056
 MD5 c0c12f952a54eadc42e02d1a65435ed5 files/digest-gnomesword-2.1.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIMKhV3J2n04EauwRAgEqAJ9DaK2IPmq+mIhGn3XLajFs0R9rkwCeLVLD
-mNf3g/O9tdvWtccbL/N2kH4=
-=0aJG
------END PGP SIGNATURE-----
+MD5 c7c3a66ca0618cbc1ec047753829a4aa files/gnomesword-2.1.1-gcc-3.4.patch 365
+MD5 c63305a76fb3609505cdfdbdd651c9eb gnomesword-2.1.1.ebuild 1011
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158

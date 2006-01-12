@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.1.ebuild,v 1.9 2005/05/01 16:52:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.1.ebuild,v 1.10 2006/01/12 22:43:47 compnerd Exp $
 
 inherit libtool gnome2 eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="spell"
 
-RDEPEND="=gnome-extra/libgtkhtml-3.0*
+RDEPEND="=gnome-extra/gtkhtml-3.0*
 	>=app-text/sword-1.5.8_pre1
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
