@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.93.1.ebuild,v 1.1 2005/12/06 02:40:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.93.1-r2.ebuild,v 1.1 2006/01/12 08:05:30 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf makeedit multilib
+inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf makeedit multilib autotools
 
 EMVER=${PV}
-TBVER="1.5rc1"
+TBVER="1.5"
 IPCVER="1.1.3"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
@@ -15,12 +15,12 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/so
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
 	http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz "
 
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
 
-DEPEND=">=mail-client/mozilla-thunderbird-1.5_rc1"
+DEPEND=">=mail-client/mozilla-thunderbird-1.5"
 RDEPEND="${DEPEND}
 	>=app-crypt/gnupg-1.4
 	>=www-client/mozilla-launcher-1.37"
@@ -38,7 +38,8 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die "cd failed"
 
-	epatch ${FILESDIR}/firefox-1.1-visibility.patch
+	epatch ${FILESDIR}/firefox-1.5-visibility-check.patch
+	epatch ${FILESDIR}/firefox-1.5-visibility-fix.patch
 
 	# Unpack the enigmail plugin
 	for x in ipc enigmail; do
@@ -56,6 +57,8 @@ src_unpack() {
 
 	# Fix installation of enigmail.js
 	epatch ${FILESDIR}/70_enigmail-fix.patch
+
+	eautoreconf || die "failed running autoreconf"
 }
 
 src_compile() {
