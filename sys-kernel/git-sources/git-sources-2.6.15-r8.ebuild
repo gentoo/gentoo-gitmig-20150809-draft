@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.15-r8.ebuild,v 1.1 2006/01/12 16:37:34 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.15-r8.ebuild,v 1.2 2006/01/12 18:21:47 gregkh Exp $
 
-GIT_VERSION="7"
+GIT_VERSION="8"
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
