@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.16.1.ebuild,v 1.2 2006/01/06 21:39:44 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.16.1.ebuild,v 1.3 2006/01/12 22:59:46 compnerd Exp $
 
 inherit gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	>=gnome-base/gnome-vfs-2.8.3
 	>=gnome-base/libgnome-2.2
 	>=gnome-base/libgnomeui-2.6
-	=gnome-extra/libgtkhtml-2*
+	=gnome-extra/gtkhtml-2*
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2
 	>=x11-libs/gtksourceview-1.1.90
