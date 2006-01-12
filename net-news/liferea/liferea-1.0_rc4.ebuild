@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0_rc4.ebuild,v 1.1 2005/11/21 21:25:54 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0_rc4.ebuild,v 1.2 2006/01/12 23:25:53 compnerd Exp $
 
 inherit gnome2
 
@@ -19,8 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/libxml2-2.5.10
 	firefox? ( www-client/mozilla-firefox )
 	!firefox? ( mozilla? ( www-client/mozilla ) )
-	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
-	!mozilla? ( !firefox? ( =gnome-extra/libgtkhtml-2* ) )
+	gtkhtml? ( =gnome-extra/gtkhtml-2* )
+	!mozilla? ( !firefox? ( =gnome-extra/gtkhtml-2* ) )
 	>=gnome-base/gconf-2
 	dbus? ( >=sys-apps/dbus-0.30 )"
 
