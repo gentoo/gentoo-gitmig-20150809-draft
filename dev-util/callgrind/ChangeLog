@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/callgrind
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.15 2005/10/12 16:57:40 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.16 2006/01/12 03:06:18 lu_zero Exp $
+
+*callgrind-0.10.1 (12 Jan 2006)
+
+  12 Jan 2006; Luca Barbato <lu_zero@gentoo.org> callgrind-0.10.0.ebuild,
+  +callgrind-0.10.1.ebuild:
+  New version, builds with valgrind-3.1.x and supports ppc
 
   12 Oct 2005; Luis Medinas <metalgod@gentoo.org> callgrind-0.10.0.ebuild:
   Added ~amd64 keyword. Closes bug #108973.
