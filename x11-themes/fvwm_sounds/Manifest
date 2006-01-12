@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 34b183a7ed34336117613d9ff5d656f3 ChangeLog 1251
+MD5 3c16f3458437ca4f92ca03d61b8b955a ChangeLog 1352
 MD5 9fed0f5d6d3d5a45ddba44e4d6030740 files/digest-fvwm_sounds-1.0 59
-MD5 4e6990c5d532e3751534233038fa9de8 fvwm_sounds-1.0.ebuild 579
+MD5 e8af876caf4a893ae488d9a4d109d5ad fvwm_sounds-1.0.ebuild 586
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDlg1/wUpWvClEHQoRAhRPAJ9BCEdLQcGgkp5E8GZCFMYer1wmYwCeJPPq
-zayoYCGEhDGqr+d5k8XkKBI=
-=Ml90
+iD8DBQFDxmy0KRy60XGEcJIRAmJfAJ9vEqJIa0K9NhN4m855M6V7BqSnvgCfQFM/
+5HizztAwEfTvLEYzxkW/Lkk=
+=7yII
 -----END PGP SIGNATURE-----
