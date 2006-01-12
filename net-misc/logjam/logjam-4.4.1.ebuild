@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.4.1.ebuild,v 1.4 2005/08/28 12:41:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.4.1.ebuild,v 1.5 2006/01/12 23:45:26 compnerd Exp $
 
 IUSE="gtk gtkhtml spell svg xmms"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc sparc x86"
 RDEPEND=">=dev-libs/libxml2-2.0
 	net-misc/curl
 	gtk? ( >=x11-libs/gtk+-2 )
-	gtkhtml? ( =gnome-extra/libgtkhtml-3.0.10* )
+	gtkhtml? ( =gnome-extra/gtkhtml-3.0.10* )
 	spell? ( app-text/gtkspell )
 	svg? ( >=gnome-base/librsvg-2.2.3 )
 	xmms? ( media-sound/xmms )"
