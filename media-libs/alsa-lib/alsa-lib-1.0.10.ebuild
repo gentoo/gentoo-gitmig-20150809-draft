@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.10.ebuild,v 1.10 2006/01/11 15:41:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.10.ebuild,v 1.11 2006/01/12 01:08:08 vapier Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="doc jack"
 
 RDEPEND="virtual/alsa
