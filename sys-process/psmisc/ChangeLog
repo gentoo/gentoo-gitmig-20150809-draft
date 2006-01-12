@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.24 2006/01/12 16:00:33 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.25 2006/01/12 21:43:21 corsair Exp $
+
+  12 Jan 2006; Markus Rothe <corsair@gentoo.org> psmisc-21.9.ebuild:
+  Stable on ppc64; bug #118757
 
   12 Jan 2006; Mike Doty <kingtaco@gentoo.org> psmisc-21.9.ebuild:
   amd64 stable, bug 118757
