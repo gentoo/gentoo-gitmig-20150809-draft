@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d96c94e0c46f449f508e740e71467c64 ChangeLog 2722
+MD5 26293eba745be4621a2affcc13522589 ChangeLog 2838
 MD5 e99dbe919e2a9ca39164133ba74ede78 cryptsetup-0.1-r1.ebuild 1738
-MD5 0a826445ff75101b7eb8c7f6c7e9ecf4 cryptsetup-0.1-r2.ebuild 1763
+MD5 47cbf3fded6e4f1266710c25cc5f5251 cryptsetup-0.1-r2.ebuild 1762
 MD5 c98ef83e41e7833603d5fd0d3c073fdc cryptsetup-0.1.ebuild 1119
 MD5 327d83538ed5305bdc3568cd353410bb files/cryptfs.confd 1337
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1 67
@@ -12,10 +9,3 @@ MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1-r2 67
 MD5 3232a190894a35b7d2f3610f2eb652dc files/dm-crypt-start.sh 3937
 MD5 8619b3f74d4d362bab9f430b63243a74 files/dm-crypt-stop.sh 1290
 MD5 cd57823a7232b359b6a8674cde9fadde metadata.xml 290
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxrD4wUpWvClEHQoRAusPAJ9luhfcJ3pwj+l+5oHdwdazYWQTAQCfaHtZ
-pSQwoT/o/QwSaqdm6I6w41A=
-=x39n
------END PGP SIGNATURE-----
