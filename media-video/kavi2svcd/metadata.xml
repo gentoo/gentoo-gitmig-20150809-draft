@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>dma147@linux-stats.org</email>
+  <name>Alexander Mieland</name>
+</maintainer>
+<maintainer>
+  <email>genstef@gentoo.org</email>
+  <name>Stefan Schweizer</name>
+</maintainer>
+</pkgmetadata>
