@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2006.0/make.defaults,v 1.6 2005/12/02 15:20:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2006.0/make.defaults,v 1.7 2006/01/12 17:16:37 wolf31o2 Exp $
 
 # This is currently commented so that the stage1 tarball can also be used to
 # build no-nptl systems.
 #STAGE1_USE="nptl"
 
-USE="alsa apache2 apm arts avi bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg nptl ogg oggvorbis opengl oss pdflib png qt quicktime sdl spell truetype truetype-fonts type1-fonts udev vorbis X xml2 xmms xv"
+USE="cups foomaticdb gdbm gpm libg++ nptl udev"
