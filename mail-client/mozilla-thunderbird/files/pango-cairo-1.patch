@@ -1,0 +1,135 @@
+Index: config/autoconf.mk.in
+===================================================================
+RCS file: /cvsroot/mozilla/config/autoconf.mk.in,v
+retrieving revision 3.363.2.1
+diff -u -p -6 -r3.363.2.1 autoconf.mk.in
+--- config/autoconf.mk.in	17 Aug 2005 17:17:17 -0000	3.363.2.1
++++ config/autoconf.mk.in	27 Aug 2005 19:57:29 -0000
+@@ -456,12 +456,13 @@ MOZ_XFT_CFLAGS		= @MOZ_XFT_CFLAGS@
+ MOZ_XFT_LIBS		= @MOZ_XFT_LIBS@
+ MOZ_ENABLE_COREXFONTS	= @MOZ_ENABLE_COREXFONTS@
+ 
+ MOZ_ENABLE_PANGO        = @MOZ_ENABLE_PANGO@
+ MOZ_PANGO_CFLAGS        = @MOZ_PANGO_CFLAGS@
+ MOZ_PANGO_LIBS          = @MOZ_PANGO_LIBS@
++MOZ_PANGOCAIRO          = @MOZ_PANGOCAIRO@
+ 
+ MOZ_EXTRA_X11CONVERTERS	= @MOZ_EXTRA_X11CONVERTERS@
+ 
+ MOZ_ENABLE_XINERAMA	= @MOZ_ENABLE_XINERAMA@
+ MOZ_XINERAMA_LIBS	= @MOZ_XINERAMA_LIBS@
+ 
+Index: gfx/src/gtk/mozilla-decoder.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/gfx/src/gtk/mozilla-decoder.cpp,v
+retrieving revision 1.3
+diff -u -p -6 -r1.3 mozilla-decoder.cpp
+--- gfx/src/gtk/mozilla-decoder.cpp	7 Nov 2004 23:59:23 -0000	1.3
++++ gfx/src/gtk/mozilla-decoder.cpp	27 Aug 2005 19:57:49 -0000
+@@ -37,13 +37,17 @@
+  * ***** END LICENSE BLOCK ***** */
+ 
+ #define PANGO_ENABLE_BACKEND
+ #define PANGO_ENABLE_ENGINE
+ 
+ #include "mozilla-decoder.h"
++#ifdef MOZ_PANGOCAIRO
++#include <pango/pangocairo.h>
++#else
+ #include <pango/pangoxft.h>
++#endif
+ #include <pango/pangofc-fontmap.h>
+ #include <pango/pangofc-font.h>
+ #include <gdk/gdkx.h>
+ 
+ #include "nsString.h"
+ #include "nsIPersistentProperties2.h"
+@@ -205,13 +209,17 @@ mozilla_decoders_init(void)
+         }
+         else {
+             printf("unknown suffix used for mapping\n");
+         }
+     }
+ 
++#ifdef MOZ_PANGOCAIRO
++    pango_fc_font_map_add_decoder_find_func(PANGO_FC_FONT_MAP(pango_cairo_font_map_get_default()),
++#else
+     pango_fc_font_map_add_decoder_find_func(PANGO_FC_FONT_MAP(pango_xft_get_font_map(GDK_DISPLAY(),gdk_x11_get_default_screen())),
++#endif
+                                             mozilla_find_decoder,
+                                             NULL,
+                                             NULL);
+ 
+     initialized = PR_TRUE;
+ 
+Index: configure.in
+===================================================================
+RCS file: /cvsroot/mozilla/configure.in,v
+retrieving revision 1.1503.2.6
+diff -u -p -6 -r1.1503.2.6 configure.in
+--- configure.in	25 Aug 2005 19:05:34 -0000	1.1503.2.6
++++ configure.in	29 Aug 2005 08:03:32 -0000
+@@ -3707,14 +3707,14 @@ gtk)
+     ;;
+ 
+ gtk2)
+     MOZ_ENABLE_GTK2=1
+     MOZ_ENABLE_XREMOTE=1
+     MOZ_ENABLE_COREXFONTS=${MOZ_ENABLE_COREXFONTS-}
+-    TK_CFLAGS='$(MOZ_GTK2_CFLAGS)'
+-    TK_LIBS='$(MOZ_GTK2_LIBS)'
++    TK_CFLAGS='$(MOZ_GTK2_CFLAGS) $(MOZ_PANGO_CFLAGS)'
++    TK_LIBS='$(MOZ_GTK2_LIBS) $(MOZ_PANGO_LIBS)'
+     AC_DEFINE(MOZ_WIDGET_GTK2)
+     ;;
+ 
+ xlib)
+ 	MOZ_ENABLE_XLIB=1
+     if test "$_HAVE_FREETYPE2"; then
+@@ -4277,33 +4277,44 @@ if test "$MOZ_ENABLE_XFT" && test "$MOZ_
+ fi
+ 
+ if test "$MOZ_ENABLE_XFT"
+ then
+     AC_DEFINE(MOZ_ENABLE_XFT)
+     PKG_CHECK_MODULES(MOZ_XFT, xft)
+-    PKG_CHECK_MODULES(_PANGOCHK, pango >= 1.1.0)
++    PKG_CHECK_MODULES(MOZ_PANGO, pangoxft >= 1.1.0 pangox)
+ fi
+ 
+ AC_SUBST(MOZ_ENABLE_XFT)
+ AC_SUBST(MOZ_XFT_CFLAGS)
+ AC_SUBST(MOZ_XFT_LIBS)
++AC_SUBST(MOZ_PANGO_CFLAGS)
++AC_SUBST(MOZ_PANGO_LIBS)
+ 
+ dnl ========================================================
+ dnl = pango font rendering
+ dnl ========================================================
+ MOZ_ARG_ENABLE_BOOL(pango,
+ [  --enable-pango          Enable Pango font rendering support],
+     MOZ_ENABLE_PANGO=1,
+     MOZ_ENABLE_PANGO=)
+ 
+ if test "$MOZ_ENABLE_PANGO"
+ then
+     AC_DEFINE(MOZ_ENABLE_PANGO)
+-    PKG_CHECK_MODULES(MOZ_PANGO, pango >= 1.6.0 pangoft2 >= 1.6.0)
++    PKG_CHECK_MODULES(MOZ_PANGO, pangoxft >= 1.6.0)
++    PKG_CHECK_MODULES(PANGOCAIRO_CHK, pangocairo >= 1.10.0,
++    [ 
++      MOZ_PANGOCAIRO=1
++      AC_DEFINE(MOZ_PANGOCAIRO)
++      MOZ_PANGO_CFLAGS="$PANGOCAIRO_CHK_CFLAGS $MOZ_PANGO_CFLAGS"
++      MOZ_PANGO_LIBS="$PANGOCAIRO_CHK_LIBS $MOZ_PANGO_LIBS"
++    ],
++    [:])
+ 
+     AC_SUBST(MOZ_ENABLE_PANGO)
++    AC_SUBST(MOZ_PANGOCAIRO)
+     AC_SUBST(MOZ_PANGO_CFLAGS)
+     AC_SUBST(MOZ_PANGO_LIBS)
+ fi
+ 
+ dnl ========================================================
+ dnl = x11 core font support (default and ability to enable depend on toolkit)

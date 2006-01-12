@@ -1,20 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5_rc2.ebuild,v 1.1 2005/12/24 02:52:07 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.ebuild,v 1.1 2006/01/12 07:31:21 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib versionator
-
-MY_P="$(replace_version_separator 2 '')"
-TV=${MY_P/beta/b}
+inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TV}/source/thunderbird-${TV}-source.tar.bz2
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
 	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2
 	mirror://gentoo/mozilla-jslibmath-alpha.patch"
 
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap"
@@ -45,10 +42,10 @@ src_unpack() {
 	#
 	####################################
 
-	# amd64 visibility patch
-	if [[ ${ARCH} == amd64 ]] && [[ $(gcc-major-version) -ge 3 ]]; then
-		epatch ${FILESDIR}/firefox-1.1-visibility.patch
-	fi
+	# addresses visibility issues on ppc and amd64
+	# will not hurt to apply on other archs as well.
+	epatch ${FILESDIR}/firefox-1.5-visibility-check.patch
+	epatch ${FILESDIR}/firefox-1.5-visibility-fix.patch
 
 	# patch to fix math operations on alpha, makes maps.google.com work!
 	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
@@ -60,13 +57,13 @@ src_unpack() {
 	####################################
 
 	# patch from fedora to remove the pangoxft things
-	epatch ${FILESDIR}/thunderbird-nopangoxft.patch
+	epatch ${FILESDIR}/pango-cairo-1.patch
 	#cairo-canvas patch
 	# epatch ${FILESDIR}/thunderbird-cairo-canvas.patch
 
 	# rpath fix
 	epatch ${FILESDIR}/thunderbird-rpath-1.patch
-	epatch ${FILESDIR}/firefox-1.1-uriloader.patch
+	epatch ${FILESDIR}/firefox-1.1-uriloader-1.patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
@@ -78,12 +75,7 @@ src_unpack() {
 			${S}/security/coreconf/arch.mk
 	fi
 
-	echo  ""
-	ewarn "This thunderbird-1.5rc1 ebuild is provided for your convenience,"
-	ewarn "the use of this ebuild is not supported by gentoo developers. "
-	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
-	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
-	ewarn "Thank you Anarchy"
+	eautoreconf || die "failed running autoreconf"
 }
 
 src_compile() {
@@ -182,17 +174,8 @@ pkg_postinst() {
 	update_mozilla_launcher_symlinks
 
 	echo  ""
-	ewarn "Enigmail Support has been dropped since it doesn't work on fresh install."
-	ewarn "The Gentoo Mozilla team is working on making enigmail its own build,"
-	ewarn "sorry for the inconvenience.  For now, you can download enigmail from"
-	ewarn "http://enigmail.mozdev.org"
-
-	echo  ""
-	ewarn "This thunderbird-1.5rc1 ebuild is provided for your convenience,"
-	ewarn "the use of this ebuild is not supported by gentoo developers. "
-	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
-	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
-	ewarn "Thank you Anarchy"
+	einfo "enigmail support is in the tree, simply emerge enigmail"
+	einfo "for all your crypto needs!"
 }
 
 pkg_postrm() {
