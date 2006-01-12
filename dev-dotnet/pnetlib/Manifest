@@ -1,4 +1,4 @@
-MD5 8bcaea6db7105250dcaced8201140025 ChangeLog 4910
+MD5 e6389d189e6aeb29baa1de221caab127 ChangeLog 5041
 MD5 7a91fa4737dbff178231abf061f83052 files/0.6.12-resgen.patch 538
 MD5 7a91fa4737dbff178231abf061f83052 files/0.7.0-resgen.patch 538
 MD5 1b3d4d2a65f581b39e06269baf380594 files/configure-freetype.patch 391
@@ -10,4 +10,4 @@ MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
 MD5 a68373bb94e5543d868a2ffe58488222 pnetlib-0.6.10.ebuild 840
 MD5 44e3a71136efb185faa6d1683a9664f7 pnetlib-0.6.12.ebuild 1188
 MD5 fd4d49f5dfe7fff2c258c6ac24168710 pnetlib-0.7.0.ebuild 1172
-MD5 a07f4bc781bb48e4f852bf7e96682884 pnetlib-0.7.2.ebuild 1172
+MD5 0224f1feb7b37057274082bddf4e23fa pnetlib-0.7.2.ebuild 1174
