@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e730c7798768c6ef7553f7bacd2c3c9c ChangeLog 1490
-MD5 bff38eaac666848279f0ef4c525ade03 zh-kcfonts-1.05.ebuild 933
-MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 1715f32850b4d7b058da1a3346fa7be1 zh-kcfonts-1.05-r1.ebuild 824
-MD5 fcd29c965b2324922c1717732227a787 files/digest-zh-kcfonts-1.05-r1 65
+MD5 a6e98775201e81f1a05c52da63b22f76 ChangeLog 1926
 MD5 fcd29c965b2324922c1717732227a787 files/digest-zh-kcfonts-1.05 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDNCUuKRy60XGEcJIRAk14AJ9oIYJuk8QAIS9TqybDhkEihsvJdgCfU9u5
-6iDTaFfNGLo2p5ZRVdGXV5A=
-=uWoT
------END PGP SIGNATURE-----
+MD5 fcd29c965b2324922c1717732227a787 files/digest-zh-kcfonts-1.05-r1 65
+MD5 989bd743784e18d223710a6930a21be4 files/digest-zh-kcfonts-1.05-r2 142
+MD5 99bf9143fb4e46386c2a36e864f8ec63 files/kcfonts-1.05-code-fixups.patch 4629
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+MD5 733ae1305ac305de0840c7d89b028006 zh-kcfonts-1.05-r1.ebuild 871
+MD5 1eae80ed6a49698fecd5c6ff8bd7504f zh-kcfonts-1.05-r2.ebuild 1315
+MD5 fdc9c89966f126af4a33dd43b929de50 zh-kcfonts-1.05.ebuild 980

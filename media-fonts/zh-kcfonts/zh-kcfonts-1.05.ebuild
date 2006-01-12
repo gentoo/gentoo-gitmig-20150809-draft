@@ -1,10 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.8 2004/07/14 17:11:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.9 2006/01/12 00:42:06 robbat2 Exp $
 
 DESCRIPTION="Kuo Chauo Chinese Fonts collection in BIG5 encoding"
 SRC_URI="ftp://ftp.freebsd.org.tw/pub/releases/i386/4.9-RELEASE/packages/x11-fonts/${P}.tgz"
-HOMEPAGE=""	#No homepage exists that I am aware of or able to find
+HOMEPAGE="http://freebsd.sinica.edu.tw/"
+# no real homepage exists, but this was written by Taiwanese FreeBSD devs
 
 LICENSE="freedist"
 SLOT="0"
