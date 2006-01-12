@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a93bd3856fec0cc04d60920ba76b2119 ChangeLog 1630
 MD5 b4dda0bfb72a5212167d14e033690873 files/digest-fusionx-aqua-1.1 72
 MD5 88b46c9208099feee64463be941b9143 fusionx-aqua-1.1.ebuild 1747
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxmxlKRy60XGEcJIRAlR9AKCv5BkenbFFutcK2OUjTV2k+d/RvwCgjqMY
+pHd1gdW6tkiwL5HwEKe5T14=
+=Nlud
+-----END PGP SIGNATURE-----

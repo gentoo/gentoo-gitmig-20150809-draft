@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a63e6247ca2899aca5752be9c2b2897 ChangeLog 1249
 MD5 edec3e02f6e188d050609c97eacea16c files/digest-fvwm_icons-1.0 63
 MD5 a5c1e83d12474eb4537ec2a3c0fc0080 fvwm_icons-1.0.ebuild 586
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDxmztKRy60XGEcJIRAjheAJ9nNCXp336aarcW/rLdNqXScD1mqgCeJ8Cp
+1JdtoiX7Rf0yahv2tfLCHN0=
+=XbnY
+-----END PGP SIGNATURE-----
