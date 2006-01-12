@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-1.4.3.ebuild,v 1.7 2005/03/26 04:23:12 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-1.4.3.ebuild,v 1.8 2006/01/12 20:29:13 dang Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND="=dev-libs/glib-1.2*
 	cups? ( >=gnome-base/gnome-print-0.30 )
 	perl? ( >=dev-libs/libpcre-3.4 )
 	spell? ( virtual/aspell-dict )
-	gtkhtml? ( >=gnome-extra/gtkhtml-0.16.1 )"
+	gtkhtml? ( =gnome-extra/gtkhtml-1* )"
 
 src_unpack() {
 	unpack ${A}

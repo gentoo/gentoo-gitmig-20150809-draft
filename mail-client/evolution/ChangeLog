@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.104 2005/12/08 20:07:12 allanonjl Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.105 2006/01/12 20:31:05 dang Exp $
+
+  12 Jan 2006; <dang@gentoo.org> evolution-1.2.4.ebuild:
+  Change gtkhtml dep prior to libgtkhmtl->gtkhtml
 
 *evolution-2.4.2.1 (08 Dec 2005)
 
