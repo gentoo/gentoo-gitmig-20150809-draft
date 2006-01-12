@@ -17,12 +17,12 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3b67c96b73c8cb790b25e8b1bf14df3c nas-1.5-r1.ebuild 1109
 MD5 9de655765f4ba715b60ffd73a62c74e1 nas-1.6.ebuild 1018
 MD5 b8146b42d6df26229f2cdffcf4d549d7 nas-1.6c-r2.ebuild 1820
-MD5 fed44c3d2bfeda03e274c3002713942b nas-1.7-r1.ebuild 1921
+MD5 d421f1fe9370fc30bd32a9524704c2bd nas-1.7-r1.ebuild 1924
 MD5 0626f895b20c5da1096b952a129cf277 nas-1.7.ebuild 1827
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvzYf2+ySkm8kpY0RAmiOAKChPRTu0/oZQxLml7nL3f44rme35wCdG0Ip
-75wLBAfM3vQSxAafGWrwkdY=
-=ukoj
+iD8DBQFDxbc02+ySkm8kpY0RAp8bAKClVnBDVcMJyrcCMvtZZrcPB00egACgj2w6
+93wU5l7zzRyf1R1pBVa7jDE=
+=CkcD
 -----END PGP SIGNATURE-----
