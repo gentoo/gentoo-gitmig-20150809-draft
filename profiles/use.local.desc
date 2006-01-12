@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1665 2006/01/11 23:46:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1666 2006/01/12 17:41:50 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -687,6 +687,7 @@ media-sound/mpd-svn:icecast - Enable support for Icecast2
 media-sound/mpd-svn:mpd-mad - Use libmad and libid3tag shipped by MPD
 media-sound/mpd-svn:musepack - Enable support for musepack files
 media-sound/mt-daapd:avahi - Use avahi instead of howl as mdns daemon
+media-sound/mt-daapd:sqlite3 - enable SQLite3 driver
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/ncmpc:clock-screen - Enable clock screen
