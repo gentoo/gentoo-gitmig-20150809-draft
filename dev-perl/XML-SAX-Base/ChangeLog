@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX-Base
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.9 2005/09/17 00:48:01 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.10 2006/01/12 20:59:21 corsair Exp $
+
+  12 Jan 2006; Markus Rothe <corsair@gentoo.org> XML-SAX-Base-1.04.ebuild:
+  Added ~ppc64
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> XML-SAX-Base-1.04.ebuild:
   Mark 1.04 stable on ia64

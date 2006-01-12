@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/XML-SAX-Base-1.04.ebuild,v 1.11 2005/09/17 00:48:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/XML-SAX-Base-1.04.ebuild,v 1.12 2006/01/12 20:59:21 corsair Exp $
 
 inherit perl-module
 
@@ -11,5 +11,5 @@ HOMEPAGE="http://search.cpan.org/~khampton/${P}"
 SRC_TEST="do"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
