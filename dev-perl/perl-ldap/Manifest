@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 560468bd760f484eebb77ce816dbe3eb ChangeLog 4023
+MD5 22be452cd47aa1ab2a4aa5176d10c6fd ChangeLog 4112
 MD5 0de1cb7ea657ce28770d95aa7832827b files/digest-perl-ldap-0.31 66
 MD5 e53054e29e1d8f42f70b035cebb12d5c files/digest-perl-ldap-0.33 66
 MD5 e53054e29e1d8f42f70b035cebb12d5c files/digest-perl-ldap-0.33-r1 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 28c38c34c4099f6024252d98ed10ad48 perl-ldap-0.31.ebuild 741
-MD5 54a71fa7c21bda1e0619ac131c6a4abf perl-ldap-0.33-r1.ebuild 1104
+MD5 21e5daec0c11b6c28884db4fd19bc2d4 perl-ldap-0.33-r1.ebuild 1109
 MD5 b10edb34a83e9d8915e79b36adfbe451 perl-ldap-0.33.ebuild 986
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDwTG6tG5z4I8BtQoRAlHcAJ9pUjOr+lnKokToRbRHDqkmuyoyAQCfWL+j
-s46hBCHNqvYkuqXogihcV6k=
-=53K/
------END PGP SIGNATURE-----
