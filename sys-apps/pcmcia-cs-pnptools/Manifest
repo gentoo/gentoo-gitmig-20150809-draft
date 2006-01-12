@@ -1,0 +1,6 @@
+MD5 36975c445c54d4f1f05c76b6698afa5b ChangeLog 491
+MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-pnptools-3.2.8 68
+MD5 d5958e695d20fb3bcd14c11121ba27a4 files/pcmcia-cs-3.2.8-gcc4.patch 902
+MD5 33c110d98480f8c994d902995356cda2 files/pcmcia-cs-3.2.8-move-pnp-ids.patch 1648
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 4341ad869f1a67b5069d456bfd727751 pcmcia-cs-pnptools-3.2.8.ebuild 1389

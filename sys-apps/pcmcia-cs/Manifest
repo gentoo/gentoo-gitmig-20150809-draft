@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18b6ca0e7d82a13f711ab0bbe6dc98f2 ChangeLog 21682
+MD5 693e11087ce24cf223d1e40c78d08cb1 ChangeLog 21810
 MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-3.2.8-r2 68
 MD5 4aff8abc0109d71184f648e2cc87eb51 files/pcmcia-cs-3.2.8-CS_EVENT_RESET_COMPLETE.patch 1402
 MD5 adfa3588f2c81c2c97fa0fffa18c6bed files/pcmcia-cs-3.2.8-conf.d 524
@@ -14,11 +11,4 @@ MD5 8938df25626d18aa4493d26dea7e00eb files/pcmcia-cs-3.2.8-ppc.config.opts 1657
 MD5 18e1f0bdc6612842839a2b2888ea16ad files/pcmcia-cs-3.2.8-tools-only.patch 1230
 MD5 8df7f8fac6931504e84e1c13acfe92e6 files/pcmcia-cs-3.2.8-x11.patch 874
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
-MD5 d2c4dccac3908bc52274fdf200de6eb9 pcmcia-cs-3.2.8-r2.ebuild 4085
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxGAd2+ySkm8kpY0RAttSAKDAjLZbufDwybyW7N6BBgC2fOzSoQCeNfC0
-OuqXDQXOSdmorFMLnHqqcMQ=
-=Nnwy
------END PGP SIGNATURE-----
+MD5 9c6e69399c126206c6272cceee6d9a34 pcmcia-cs-3.2.8-r2.ebuild 4114
