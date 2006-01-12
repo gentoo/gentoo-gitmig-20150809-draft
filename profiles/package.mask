@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4852 2006/01/12 00:35:24 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4853 2006/01/12 08:15:18 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -59,7 +59,6 @@ app-laptop/powerbook-tools
 # Brian Harring <ferringb@gentoo.org>
 # Masking following packages due to ungif removal- bug 118386
 # mainly masked due to broken dep, waiting for maintainer comments.
-~x11-wm/windowmaker-0.80.2
 <gnustep-base/gnustep-gui-0.9.4-r2
 <gnustep-base/gnustep-back-art-0.9.5
 
