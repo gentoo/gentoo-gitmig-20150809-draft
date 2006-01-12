@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.1 2005/10/26 14:05:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.2 2006/01/12 09:11:00 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -142,6 +142,8 @@ src_unpack() {
 	cp /usr/share/automake/install-sh ${S}/ 2>/dev/null || touch install-sh
 	export WANT_AUTOCONF=2.5
 	autoconf || die
+
+	epatch "${FILESDIR}/${P}-inttypes.patch"
 }
 
 src_compile() {
