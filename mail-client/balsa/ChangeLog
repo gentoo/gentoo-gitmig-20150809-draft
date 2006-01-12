@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.36 2006/01/12 20:29:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.37 2006/01/12 23:37:34 compnerd Exp $
+
+  12 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  balsa-2.0.15-r2.ebuild, balsa-2.2.6-r3.ebuild, balsa-2.2.6-r4.ebuild,
+  balsa-2.3.4-r1.ebuild:
+  pkgmove gnome-extra/libgtkhtml gnome-extra/gtkhtml
 
   12 Jan 2006; <dang@gentoo.org> balsa-1.4.3.ebuild:
   Change gtkhtml dep prior to libgtkhmtl->gtkhtml
