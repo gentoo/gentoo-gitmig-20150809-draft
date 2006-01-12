@@ -22,7 +22,7 @@ MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r7 227
 MD5 56fa606e28d04ba426e4d4cacc8d0b2d files/digest-windowmaker-0.92.0-r1 144
 MD5 56fa606e28d04ba426e4d4cacc8d0b2d files/digest-windowmaker-0.92.0-r2 144
 MD5 f70c1e1b121cfc32dbd802678f3b111f files/wmaker.desktop 221
-MD5 5b56537f049f24c1e822d5d279e0fff4 metadata.xml 288
+MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
 MD5 4c2fa2e58f69afaa7e8b53a09868e07f windowmaker-0.80.2-r2.ebuild 3435
 MD5 1cd863edc032e958fe6cc7c58fbf8d26 windowmaker-0.80.2-r4.ebuild 4066
 MD5 0b7d5f0f23bea9a4793a92f25117d9f3 windowmaker-0.91.0-r1.ebuild 5881
@@ -32,7 +32,7 @@ MD5 fc719636563d4ef47b1be6726231374d windowmaker-0.92.0-r2.ebuild 5217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxau9wUpWvClEHQoRAtE0AJ0dMLfHxP3N9FyyZC2J+kmgj+j4LgCfTgii
-Tnqy8T8x+V+o/4/rbpWzyf0=
-=vRDT
+iD8DBQFDxgkqI1lqEGTUzyQRAgskAKC4LFT5fX2sJTJDYnmeFgUjbP/54gCgm1R+
+19KGGz3PCCfVtVM14tIPutk=
+=QnSb
 -----END PGP SIGNATURE-----
