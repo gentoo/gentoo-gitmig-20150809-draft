@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4856 2006/01/12 21:41:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4857 2006/01/12 22:41:04 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -604,10 +604,6 @@ games-rpg/nwn-data
 # Masked for security reasons, bug 103524
 dev-python/py2play
 games-action/slune
-
-# Marcelo Goes <vanquirius@gentoo.org> (10 Sep 2005)
-# Masking for removal
-app-emulation/plex86
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (9 Sep 2005)
 # Masking for removal
