@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/amsn-skins
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.9 2005/09/17 10:12:30 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.10 2006/01/12 14:43:51 gustavoz Exp $
+
+  12 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  amsn-skins-20040223.ebuild:
+  Keyworded ~sparc
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   amsn-skins-20040223.ebuild:
