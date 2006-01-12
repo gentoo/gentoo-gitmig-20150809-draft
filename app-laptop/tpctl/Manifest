@@ -1,16 +1,26 @@
-MD5 2f4094eedc3aeaece52841fa463897cb tpctl-3.2.ebuild 1478
-MD5 8fd7ed31991171e3df2b066480797c67 tpctl-4.4-r1.ebuild 1627
-MD5 32d951d4387538395114e855a6d2945f tpctl-4.16.ebuild 1015
-MD5 3419199a9b7da60895caf80c894ab27d tpctl-4.2.ebuild 1478
-MD5 8a137ec2e81e6384c845860483dfca1f tpctl-4.4.ebuild 1476
-MD5 b81695ee6599b4449c9e8c55df52ff06 ChangeLog 2440
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f2c04a7c674379fe6af0eaf8ca9a0685 tpctl-4.8.ebuild 1617
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fea9249baebbbdc6b77fddb3f1767ecf ChangeLog 2596
+MD5 4b8b1c61ee0756b730105821afcae4e6 files/apmiser.rc 560
 MD5 4a6eccb7b79fc6b89897fa42a9d63835 files/digest-tpctl-3.2 60
+MD5 ff97f2ecd88355bf3dfcd6192b3efe56 files/digest-tpctl-4.16 61
 MD5 603d662e5051a7e33e5c3cb5cae78962 files/digest-tpctl-4.2 60
 MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4 60
+MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4-r1 60
 MD5 7ea9886f5d9abae5110c5f584d5555fb files/digest-tpctl-4.8 60
 MD5 556f25877822405f7dfd77680d2f6e49 files/tpctlir-cli-4.4-r1.diff 770
-MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4-r1 60
-MD5 4b8b1c61ee0756b730105821afcae4e6 files/apmiser.rc 560
-MD5 ff97f2ecd88355bf3dfcd6192b3efe56 files/digest-tpctl-4.16 61
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 2f4094eedc3aeaece52841fa463897cb tpctl-3.2.ebuild 1478
+MD5 32d951d4387538395114e855a6d2945f tpctl-4.16.ebuild 1015
+MD5 3419199a9b7da60895caf80c894ab27d tpctl-4.2.ebuild 1478
+MD5 fefbcf9dbfd273ce24af45381bdfa0c7 tpctl-4.4-r1.ebuild 1620
+MD5 8a137ec2e81e6384c845860483dfca1f tpctl-4.4.ebuild 1476
+MD5 e39dfb3bb70c1820ffa4a8c2932fb4a8 tpctl-4.8.ebuild 1615
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxaeBAiZjviIA2XgRAu64AJoDqS2NG5XPQJNpM8gcVG0iDkSDRwCfRLd2
+yVsa39wOHapHJQz1mNAplhY=
+=uIVf
+-----END PGP SIGNATURE-----
