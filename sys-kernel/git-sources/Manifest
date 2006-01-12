@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 808f99865d87bae55f5f294672dd73e2 ChangeLog 847
+MD5 066e0efe26860f35c77503e2c8cf0d38 ChangeLog 993
 MD5 9dafbed8ef5d9b1fadaed49f7704d723 files/digest-git-sources-2.6.15-r1 134
 MD5 c72212b9459e3fc8b4dbd9fb1732d673 files/digest-git-sources-2.6.15-r5 134
 MD5 60728ef35491737801b29ad84d4559e3 files/digest-git-sources-2.6.15-r6 134
 MD5 bf3cf2e3a7aed53553997b49cef5a5f2 files/digest-git-sources-2.6.15-r7 134
+MD5 bf3cf2e3a7aed53553997b49cef5a5f2 files/digest-git-sources-2.6.15-r8 134
 MD5 deb106a9da84b940e07660c66bea9664 git-sources-2.6.15-r1.ebuild 1117
 MD5 937f613fda5c90e100ae14223f74d6f0 git-sources-2.6.15-r5.ebuild 1129
 MD5 77293b737e47c7a1767fb687d4cb3484 git-sources-2.6.15-r6.ebuild 1129
 MD5 1394c1d8920a29e37b7c84ed55a9ea2d git-sources-2.6.15-r7.ebuild 1129
+MD5 561756cd7547b4ed7ee19a249b7673c1 git-sources-2.6.15-r8.ebuild 1129
 MD5 8ca405b8c53bdbeb5e1c6e981420b315 metadata.xml 449
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxglhI1lqEGTUzyQRAkNhAKDZcMn1vJiBImulD5vB3OJbXOAhngCg36xN
-ChhXxfnX0WZoP4FhAV3QV9Y=
-=bDIo
------END PGP SIGNATURE-----
