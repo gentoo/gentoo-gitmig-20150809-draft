@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.2 2006/01/03 12:15:07 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.3 2006/01/12 01:14:33 nattfodd Exp $
 
-inherit qt4 eutils versionator
+inherit eutils versionator
 
 DESCRIPTION="a nice LaTeX-IDE"
 
@@ -29,7 +29,7 @@ DEPEND="virtual/x11
 	app-text/psutils
 	virtual/ghostscript
 	media-libs/netpbm
-	$(qt_min_version 4)"
+	=x11-libs/qt-4.0*"
 
 src_compile() {
 	cd ${S}
