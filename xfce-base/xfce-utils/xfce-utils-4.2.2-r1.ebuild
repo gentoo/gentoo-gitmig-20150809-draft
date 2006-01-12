@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.2.2-r1.ebuild,v 1.2 2005/11/06 00:02:01 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.2.2-r1.ebuild,v 1.3 2006/01/12 23:49:56 compnerd Exp $
 
 inherit xfce42
 
@@ -14,7 +14,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 	x11-apps/xrdb )
 	virtual/x11 )
 	~xfce-base/xfce-mcs-manager-${PV}
-	gtkhtml? ( gnome-extra/libgtkhtml )"
+	gtkhtml? ( gnome-extra/gtkhtml )"
 DEPEND="${RDEPEND}
 	|| ( x11-libs/libXt virtual/x11 )"
 
