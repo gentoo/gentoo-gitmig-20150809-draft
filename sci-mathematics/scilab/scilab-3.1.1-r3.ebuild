@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1-r3.ebuild,v 1.1 2005/11/13 05:36:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1-r3.ebuild,v 1.2 2006/01/12 23:21:04 compnerd Exp $
 
 inherit eutils fortran
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/x11
 		sys-libs/zlib
 		>=x11-libs/gtk+-2
 		>=x11-libs/libzvt-2
-		=gnome-extra/libgtkhtml-2*
+		=gnome-extra/gtkhtml-2*
 	)
 	tcltk? ( >=dev-lang/tk-8.4
 		>=dev-lang/tcl-8.4 )

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1-r1.ebuild,v 1.3 2005/09/08 16:14:17 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1-r1.ebuild,v 1.4 2006/01/12 23:21:04 compnerd Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/x11
 		sys-libs/zlib
 		gtk2? ( >=x11-libs/gtk+-2
 			>=x11-libs/libzvt-2
-			=gnome-extra/libgtkhtml-2*
+			=gnome-extra/gtkhtml-2*
 		)
 		!gtk2? ( =x11-libs/gtk+-1.2*
 			>=gnome-base/gnome-libs-1.4.2 )
