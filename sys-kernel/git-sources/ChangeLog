@@ -1,6 +1,6 @@
-# ChangeLog for sys-kernel/vanilla-sources
+# ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.4 2006/01/11 17:03:59 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.5 2006/01/12 07:46:32 swegener Exp $
 
 *git-sources-2.6.15-r7 (11 Jan 2006)
 
