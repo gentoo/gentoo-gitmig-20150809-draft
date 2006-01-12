@@ -1,3 +1,4 @@
 move dev-libs/wefts dev-cpp/libwefts
 move dev-libs/mxmlplus dev-cpp/libmxmlplus
 slotmove =gnome-extra/libgtkhtml-2* 1 2
+slotmove =gnome-extra/gtkhtml-1* 0 1
