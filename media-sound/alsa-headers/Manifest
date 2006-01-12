@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 654cc0acbaef579b022e4696eb90b92e ChangeLog 7970
-MD5 37dd70f38a1e6a60c001f1d8bf5f6155 alsa-headers-1.0.10.ebuild 1053
+MD5 3b984bc3c1bbbd5d32bdbb7d98d9d663 alsa-headers-1.0.10.ebuild 1053
 MD5 68e0083b150cb84847cd0788fa19969c alsa-headers-1.0.10_rc3.ebuild 1054
 MD5 5186c659a43751b49498e38737680a8c alsa-headers-1.0.11_rc2.ebuild 1065
 MD5 c6fb273cd23828076b44c689f5363999 alsa-headers-1.0.8.ebuild 1045
@@ -17,7 +17,7 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxaw32+ySkm8kpY0RAnibAKCWV2rqn2xonKTXbZkYkOD5NUtlrgCfc/lc
-XsZB+2NnxVXXJJWw3osH9Iw=
-=cl3X
+iD8DBQFDxt702+ySkm8kpY0RAic4AKClwfoQJv9lw+zTR3dZ6eDLwyP8jQCfZzjT
+RLRr1SQe3Bl+8Q8d4SHgIzA=
+=jKsE
 -----END PGP SIGNATURE-----
