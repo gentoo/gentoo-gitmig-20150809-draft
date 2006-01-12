@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.17 2005/09/15 11:47:42 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.18 2006/01/12 18:49:12 cryos Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ntop/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc hppa ~amd64 ~ppc64"
+KEYWORDS="amd64 hppa ppc ~ppc64 sparc ~x86"
 IUSE="ssl readline tcpd"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
