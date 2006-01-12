@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.12.ebuild,v 1.1 2005/06/23 03:42:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.12.ebuild,v 1.2 2006/01/12 22:46:10 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -16,7 +16,7 @@ RDEPEND=">=dev-db/mysql-4.0
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
 	>=gnome-base/libglade-2
-	=gnome-extra/libgtkhtml-3.0*
+	=gnome-extra/gtkhtml-3.0*
 	>=dev-libs/glib-2
 	=dev-cpp/gtkmm-2.2*"
 
