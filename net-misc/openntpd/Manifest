@@ -9,11 +9,11 @@ MD5 369bed7d1a552bee3536c8f71d38397a files/digest-openntpd-3.7_p1 66
 MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
 MD5 31c9feba04713eebbe16cd1979fca83d files/openntpd.rc 918
 MD5 5b2bb7e8dd4728c8a2dadedec85df4a3 openntpd-3.6.1_p1-r1.ebuild 1202
-MD5 03891f645adf3c336ae6e87bc9d6c175 openntpd-3.7_p1.ebuild 1207
+MD5 9bfe9bba92a9a831d94acc2a86607e9c openntpd-3.7_p1.ebuild 1211
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYso+gIKl8Uu19MoRAoL7AJsHGEJh/QZVO+qDiufVL3NLy2TfbACfZUCY
-VlCTytUTh/r8JxUFbgop6cg=
-=TT1+
+iD8DBQFDxa4T2+ySkm8kpY0RAlkFAJ4g8sypCfh1ZLBfA2IRBrNCrFL4sgCgkrgT
+VN87uQXP5WptYX3vR9D9YcY=
+=SUf+
 -----END PGP SIGNATURE-----
