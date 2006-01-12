@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1c5ba22010a49ec6ae6b8a59062c1d19 ChangeLog 3435
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1 64
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1-r3 64
@@ -9,12 +6,5 @@ MD5 669994e10d27eea57fd352f0336268fd files/portaudio-18.1-Makefile.macos 1584
 MD5 8461b4a89f5c56d005f6818a8bf410f3 files/portaudio-18.1-use-fpic.patch 3420
 MD5 cd67103269f0834eda38b44bd15c1b52 files/portaudio-Makefile.macos 947
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 30f38334f4aed048bf6d05bfa4d1505e portaudio-18.1-r3.ebuild 995
+MD5 41a49e3fd8d650501ae43e840a8d8d32 portaudio-18.1-r3.ebuild 998
 MD5 e7355796f0c381e5e8128913f94e4b8a portaudio-18.1.ebuild 995
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvxoI2+ySkm8kpY0RAsl+AJ4+0rbkmksxuKCye/HYM8pQ3d2KJACglxrC
-xIrHji4lgYylT+v5c+jIttk=
-=PpfS
------END PGP SIGNATURE-----

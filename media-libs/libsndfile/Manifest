@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e9cd56e684ac10a441e20ee00cfc3d10 ChangeLog 6162
 MD5 a2f27725a7da73281e185f3fed80c16c files/digest-libsndfile-1.0.10 69
 MD5 03568645ed600c683b4289c8a28a3beb files/digest-libsndfile-1.0.11 69
@@ -9,15 +6,8 @@ MD5 69310df3755bad8a23a2dd9de6425318 files/digest-libsndfile-1.0.5 68
 MD5 741beed3c7e02485d6a453ebefaa6f69 files/digest-libsndfile-1.0.9 68
 MD5 a0be4d04e2184eeab1d268871505fe80 files/libsndfile-1.0.12-flac.patch 1188
 MD5 8b60e2e17a0b68294f919d3d25a26550 libsndfile-1.0.10.ebuild 1107
-MD5 63e795bdf2a38036f28c30b1cc359aa8 libsndfile-1.0.11.ebuild 1069
-MD5 d3d91cb4c25e1e4d985d820b82ca9274 libsndfile-1.0.12-r1.ebuild 1285
+MD5 a29018f99a7ac6c26d0a6a750ae1bc38 libsndfile-1.0.11.ebuild 1072
+MD5 c1ef32f41916211f8a8cc050c8ba6dbb libsndfile-1.0.12-r1.ebuild 1285
 MD5 bfcdcbdea917b696ff7e03c25cf84323 libsndfile-1.0.5.ebuild 731
 MD5 90f661dd7cf7029a4c8f00b74da652e5 libsndfile-1.0.9.ebuild 758
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkEfrAiZjviIA2XgRAu75AJ99c7CBAuhdW0XJGRwirGr6285/TwCguuC6
-p+atyr/gwW3/Dwtc/SWY51Y=
-=jAW0
------END PGP SIGNATURE-----
