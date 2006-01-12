@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.11 2005/06/24 00:32:26 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.12 2006/01/12 01:07:56 metalgod Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ HOMEPAGE="http://www.windowmaker.org/"
 DEPEND="virtual/x11
 	media-libs/hermes
 	>=media-libs/tiff-3.5.5
-	gif? ( >=media-libs/giflib-4.1.0-r3
-		>=media-libs/libungif-4.1.0 )
+	gif? ( >=media-libs/giflib-4.1.0-r3 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )"
 

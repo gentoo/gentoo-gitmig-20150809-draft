@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.63 2006/01/10 01:08:14 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.64 2006/01/12 01:07:56 metalgod Exp $
+
+  12 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  windowmaker-0.80.2-r2.ebuild, windowmaker-0.80.2-r4.ebuild,
+  windowmaker-0.92.0-r2.ebuild:
+  Fix dependency of 0.80.2 version to depend only of giflib. Filter -Os flag
+  that seems to be broken fixes bug #105155.
 
 *windowmaker-0.92.0-r2 (10 Jan 2006)
 
