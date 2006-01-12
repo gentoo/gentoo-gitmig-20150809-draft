@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.6.ebuild,v 1.3 2005/09/04 10:47:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.6.ebuild,v 1.4 2006/01/12 23:42:28 compnerd Exp $
 
 IUSE="gtkhtml gnome oss"
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/gtk+-2.0
 	>=dev-python/pygtk-2.0
 	gnome? ( >=dev-python/gnome-python-2.0 )
-	gtkhtml? ( =gnome-extra/libgtkhtml-2*
+	gtkhtml? ( =gnome-extra/gtkhtml-2*
 	           >=dev-python/gnome-python-2.0 )"
 
 DEPEND="${RDEPEND}
