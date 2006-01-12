@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 314e8afbb5011f612fdee01473720a91 ruby-gtkhtml2-0.12.0.ebuild 516
-MD5 9e344ae54425588dc86d9df4c9f138bf ruby-gtkhtml2-0.14.1.ebuild 496
-MD5 772c70d3de8a1f9a73b6ab6d558a847c ruby-gtkhtml2-0.11.0.ebuild 509
-MD5 2bb8ca30a3657c00454525fec13cc031 ChangeLog 891
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 7169ca690d7d79549a9bafc1b511e4d2 ChangeLog 1090
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gtkhtml2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gtkhtml2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gtkhtml2-0.14.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDebzpZgSmR+etHJoRAsYwAJ4wIvfvlf02ocCPpBrVdqiJ2OawbgCePif7
-RwBMeTeAyXb6YBaV5qUVjFQ=
-=dcfH
------END PGP SIGNATURE-----
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 f51782db1e0317d63b38511514f1e8ce ruby-gtkhtml2-0.11.0.ebuild 509
+MD5 2f12aa1f0419ff2e2c144010f2a66486 ruby-gtkhtml2-0.12.0.ebuild 516
+MD5 72ff577cc7f4e8f71fa23f075356af1b ruby-gtkhtml2-0.14.1.ebuild 491
