@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.12.1.ebuild,v 1.1 2006/01/08 21:47:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.12.1.ebuild,v 1.2 2006/01/12 23:34:57 compnerd Exp $
 
 inherit gnome2 python eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/python-2.2
 	>=gnome-base/libbonobo-2.8
 	>=gnome-base/libbonoboui-2.8
 	>=gnome-base/libgnomeprintui-2.8
-	gtkhtml? ( >=gnome-extra/libgtkhtml-3.2.5 )"
+	gtkhtml? ( >=gnome-extra/gtkhtml-3.2.5 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
