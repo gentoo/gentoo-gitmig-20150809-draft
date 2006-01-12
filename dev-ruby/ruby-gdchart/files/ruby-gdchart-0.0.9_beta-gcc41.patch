@@ -1,0 +1,59 @@
+diff --exclude='*~' -Naur ruby-gdchart-0.0.9-beta.orig/gdchart0.11.2dev/gdc.c ruby-gdchart-0.0.9-beta/gdchart0.11.2dev/gdc.c
+--- ruby-gdchart-0.0.9-beta.orig/gdchart0.11.2dev/gdc.c	2002-07-24 00:59:34.000000000 -0300
++++ ruby-gdchart-0.0.9-beta/gdchart0.11.2dev/gdc.c	2006-01-07 16:42:51.000000000 -0200
+@@ -5,6 +5,7 @@
+ #define GDC_LIB
+ #include <math.h>
+ #include "gdc.h"
++#include <string.h>
+ 
+ struct	GDC_FONT_T	GDC_fontc[GDC_numfonts] = { (gdFontPtr)NULL, 8,  5,
+ 											    (gdFontPtr)NULL, 8,  5,
+diff --exclude='*~' -Naur ruby-gdchart-0.0.9-beta.orig/gdchart.c ruby-gdchart-0.0.9-beta/gdchart.c
+--- ruby-gdchart-0.0.9-beta.orig/gdchart.c	2002-09-12 05:19:43.000000000 -0300
++++ ruby-gdchart-0.0.9-beta/gdchart.c	2006-01-07 16:52:09.000000000 -0200
+@@ -235,7 +235,7 @@
+       rb_raise(rb_eTypeError, "%s expect %s", name, "Bool Array");
+ 
+     length = RARRAY(value)->len;
+-    (char*)result = ALLOC_N(char, length);
++    result = (char*)ALLOC_N(char, length);
+ 
+     for (i = 0; i < length; i++) {
+       entry = rb_ary_entry(value, i);
+@@ -272,7 +272,7 @@
+       rb_raise(rb_eTypeError, "%s expect %s", name, "Fixnum Array");
+     
+     length = RARRAY(value)->len;
+-    (int*)result = ALLOC_N(int, length);
++    result = (int*)ALLOC_N(int, length);
+ 
+     for (i = 0; i < length; i++) {
+       entry = rb_ary_entry(value, i);
+@@ -309,7 +309,7 @@
+       rb_raise(rb_eTypeError, "%s expect %s", name, "Fixnum Array");
+ 
+     length = RARRAY(value)->len;
+-    (unsigned long*)result = ALLOC_N(unsigned long, length);
++    result = (unsigned long*)ALLOC_N(unsigned long, length);
+ 
+     for (i = 0; i < length; i++) {
+       entry = rb_ary_entry(value, i);
+@@ -369,7 +369,7 @@
+ 
+   case ANNOTATION_T:
+     /* Because only 1 annotatin is allowd. */
+-    (GDC_ANNOTATION_T*)result = ALLOC(GDC_ANNOTATION_T);
++    result = (GDC_ANNOTATION_T*)ALLOC(GDC_ANNOTATION_T);
+     
+     if (value_to_annotation_t(value, (GDC_ANNOTATION_T*)result) == FALSE) {
+       free(result);
+@@ -384,7 +384,7 @@
+       rb_raise(rb_eTypeError, "%s expect %s Array", name, rb_class2name(cGDChartScatter));
+ 
+     length = RARRAY(value)->len;
+-    (GDC_SCATTER_T*)result = ALLOC_N(GDC_SCATTER_T, length);
++    result = (GDC_SCATTER_T*)ALLOC_N(GDC_SCATTER_T, length);
+ 
+     for (i = 0; i < length; i++) {
+       entry = rb_ary_entry(value, i);
