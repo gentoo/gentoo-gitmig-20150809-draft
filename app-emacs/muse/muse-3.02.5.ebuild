@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.02.5.ebuild,v 1.1 2006/01/11 18:16:00 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.02.5.ebuild,v 1.2 2006/01/12 19:31:35 wrobel Exp $
 
 inherit elisp
 
@@ -20,14 +20,12 @@ SITEFILE=50muse-mode-gentoo.el
 S="${WORKDIR}/${P}"
 
 src_compile() {
-	make lisp
+	make lisp || die
 }
 
 src_install() {
 	dodoc README
-	cp -r examples ${D}/usr/share/doc/${PF}/
-	mkdir -p ${D}/usr/share/${PF}/
-	cp -r contrib experimental scripts ${D}/usr/share/${PF}/
+	cp -r examples contrib experimental scripts ${D}/usr/share/doc/${PF}/
 	elisp-install ${PN} lisp/*.el lisp/*.elc
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 }
