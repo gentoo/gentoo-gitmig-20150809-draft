@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d23eee48ac1eb6e1dd17bdf17952ce6 ChangeLog 18891
+MD5 76225c5468a1f727358f7f7b93108465 ChangeLog 19060
 MD5 1f2800f5de2c490d27d8befe0bf150e3 files/digest-libgtkhtml-2.6.0 69
 MD5 9b8c5022b2135422ff58e52a18662863 files/digest-libgtkhtml-2.6.3 69
 MD5 2e7135d7b2ce243b2df4b22e6f8531ce files/digest-libgtkhtml-3.0.10 68
@@ -18,8 +15,8 @@ MD5 c802878860f7a2692df330e54e635c0c files/libgtkhtml-3.0.7-libtool.patch 656
 MD5 b954bf799749526cc35e4d73e5ebbaba files/libgtkhtml-3.2-i18n.patch 1411
 MD5 c90554e1679e74f013b1c8a914c26a48 files/libgtkhtml-3.6.2-fbsd.patch 319
 MD5 c3a4d4c5994a804fef9d7c8009d5bb67 files/libgtkhtml-fix_preedit.patch 2439
-MD5 ee6c5393adb84e80761124e6ac8a8ebe libgtkhtml-2.6.0.ebuild 933
-MD5 1f0435489c5f1124038a1295fdc0d474 libgtkhtml-2.6.3.ebuild 940
+MD5 c4c6c259cc525480c84cf7dac7fa2cf1 libgtkhtml-2.6.0.ebuild 935
+MD5 b156d9cf9943f287dd87063c09584a33 libgtkhtml-2.6.3.ebuild 942
 MD5 d22b9b90ff956087d0d6e64ee85f091e libgtkhtml-3.0.10-r1.ebuild 1405
 MD5 cb34d9cb6e251d71fe30f3f3260813f4 libgtkhtml-3.0.10.ebuild 1310
 MD5 43514fcb8504e6824e0387f0b9521743 libgtkhtml-3.2.4.ebuild 1234
@@ -29,10 +26,3 @@ MD5 0699ab760baff035a4dccf3c5be7b315 libgtkhtml-3.6.2.ebuild 1274
 MD5 b7695b4cc5e0efa4e81a12b21cc311b3 libgtkhtml-3.8.1.ebuild 1119
 MD5 1b2c008f8b06119e31f4f22baadfa8a8 libgtkhtml-3.8.2.ebuild 1119
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDk8joomPajV0RnrERAtXAAJ4xsPBRjwVlwdjF069nw7GC9ESnpwCeKmLZ
-RmZ4zjKlTS9jfgR+yyykLOQ=
-=ckwG
------END PGP SIGNATURE-----
