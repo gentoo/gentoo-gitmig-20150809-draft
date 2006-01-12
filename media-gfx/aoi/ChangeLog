@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/aoi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.13 2006/01/10 18:39:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.14 2006/01/12 19:44:37 metalgod Exp $
+
+  12 Jan 2006; Luis Medinas <metalgod@gentoo.org> aoi-2.2.ebuild:
+  Added ~amd64 keyword. Closes bug #118540.
 
   10 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> aoi-2.2.ebuild:
   Use java-pkg_dojar to install ArtOfIllusion.jar.

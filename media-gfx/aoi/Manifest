@@ -1,9 +1,19 @@
-MD5 7e9d71ef0353223b2071299eff96a83c ChangeLog 2021
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a0ad125c12ddfdcda54f448c77df04b2 ChangeLog 2130
 MD5 0755b5b6b83c178025bf0196d4b6d8f8 aoi-1.4.ebuild 1231
 MD5 3e498ceae95cb1123df1d498852a1b73 aoi-1.6.ebuild 1422
-MD5 c07adf7f68d51d29e4e33da97d7869c5 aoi-2.2.ebuild 1132
+MD5 c294e6306bffcb5f54a05d8dc2fdbbcd aoi-2.2.ebuild 1137
 MD5 727b608356405769368445d94052541c files/aoi 857
 MD5 3ecf40985d61919e8ca250e839e013a3 files/digest-aoi-1.4 121
 MD5 4ec032a15afd71be0cd9cc75ea3685ed files/digest-aoi-1.6 114
 MD5 b37b3bef7b7d1f576bb061fa4790e17c files/digest-aoi-2.2 115
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxrF9wUpWvClEHQoRAmvfAJ93DcnENBPJu+osWPkaSHOBpHqgSQCeMnyo
+Pxo0DSLgDa4MZ8mKiJMe2G8=
+=8Ytm
+-----END PGP SIGNATURE-----
