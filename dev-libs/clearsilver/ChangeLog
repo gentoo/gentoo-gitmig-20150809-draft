@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.20 2006/01/11 14:28:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.21 2006/01/12 22:53:33 dju Exp $
+
+  12 Jan 2006; Julien Allanos <dju@gentoo.org>
+  -files/clearsilver-0.9.7-python24.patch, -files/0.9.7-python.patch,
+  -clearsilver-0.9.7.ebuild:
+  Removing old ebuild.
 
   11 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   clearsilver-0.10.1.ebuild:
