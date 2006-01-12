@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.1 2005/11/28 22:37:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.2 2006/01/12 17:19:08 sekretarz Exp $
 
 inherit eutils
 
@@ -13,7 +13,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libSM
+				x11-libs/libICE
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXv
+				x11-libs/libXxf86vm
+				x11-libs/libXinerama
+				x11-libs/libXtst
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 )
 	>=media-libs/freetype-2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2

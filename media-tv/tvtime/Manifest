@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7185d4ed722abf036fc55d7bd6465656 ChangeLog 4800
+MD5 eff470b482357b9e8809063fa1935a17 ChangeLog 4912
 MD5 352d39fb5ee53bdb9ea901579c0d7b9d files/digest-tvtime-0.9.12 66
 MD5 da73995bcdbdc131e5bf2864d5e3b85f files/digest-tvtime-0.9.15 66
 MD5 3284a56b7388007a53ad0a907bda2b40 files/digest-tvtime-0.99 64
@@ -15,11 +15,11 @@ MD5 013a7785e90003c22261a994e06146ca tvtime-0.9.12.ebuild 1284
 MD5 deb5eb0bc013371074ff4be5c6a2cd56 tvtime-0.9.15.ebuild 1449
 MD5 1f96f671cfee328c5d95949ef1bea237 tvtime-0.99.ebuild 1393
 MD5 8476949ca4ef9c07c35153ea05418869 tvtime-1.0.1.ebuild 1392
-MD5 fdf3c824b7c0fc73b6d72b93848b6d19 tvtime-1.0.2.ebuild 1440
+MD5 61f0b883016265880a71112c1cb61697 tvtime-1.0.2.ebuild 1665
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDnObrgIKl8Uu19MoRAhYjAJsEDO/aGIPmaJQ9PXhvOu79jy5AUwCfSpM7
-H/IvRnHwhH0dLv1lUzsohag=
-=g3iq
+iD8DBQFDxp3BZ/iYVBmujdURAuxSAJ9mldhz6sYWNUON+fm2DxYleYT8vQCdEBio
+YvHjWJYawRny7c8eeJTnfzc=
+=8X1z
 -----END PGP SIGNATURE-----
