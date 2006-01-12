@@ -1,0 +1,15 @@
+Index: kdetv-0.8.8/kdetv/configure.in.in
+===================================================================
+--- kdetv-0.8.8.orig/kdetv/configure.in.in
++++ kdetv-0.8.8/kdetv/configure.in.in
+@@ -46,10 +46,6 @@ dnl DPMSQueryExtension is included in Xl
+         KDETV_LIBS="-lXdpms $KDETV_LIBS",,
+         -L/usr/X11R6/lib $X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS)
+ 
+-    KDE_CHECK_LIB(Xinerama, XineramaQueryExtension,
+-        KDETV_LIBS="-lXinerama $KDETV_LIBS",,
+-        -L/usr/X11R6/lib $X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS)
+-
+ AC_SUBST(KDETV_LIBS)
+ 
+ if test $ac_cv_lib_Xxf86dga_XF86DGAQueryExtension = yes; then

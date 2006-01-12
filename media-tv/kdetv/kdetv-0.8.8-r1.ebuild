@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.1 2006/01/03 23:07:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.2 2006/01/12 01:13:07 flameeyes Exp $
 
 inherit kde
 
@@ -17,8 +17,7 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	lirc? ( app-misc/lirc )
 	opengl? ( virtual/opengl )
 	media-libs/alsa-lib
-	|| ( ( x11-libs/libXinerama
-		x11-libs/libICE
+	|| ( ( x11-libs/libICE
 		x11-libs/libXxf86dga
 		x11-libs/libXrandr
 		x11-libs/libX11
@@ -40,6 +39,8 @@ DEPEND="${RDEPEND}
 
 need-kde 3.2
 
+PATCHES="${FILESDIR}/${P}-xinerama.patch"
+
 src_unpack() {
 	LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 	LANGS_DOC="da et fr it nl pt ru sv"
@@ -50,6 +51,8 @@ src_unpack() {
 	kde_src_unpack
 	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.in || die "sed for locale failed"
 	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} kdetv:" ${S}/doc/Makefile.in || die "sed for locale failed"
+
+	rm -f ${S}/configure
 }
 
 src_compile() {

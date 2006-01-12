@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.16 2006/01/03 23:07:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.17 2006/01/12 01:13:07 flameeyes Exp $
+
+  12 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdetv-0.8.8-xinerama.patch, kdetv-0.8.8-r1.ebuild:
+  Add patch to disable xinerama checking and linking as it's not used at all
+  (--as-needed dropped it, too).
 
 *kdetv-0.8.8-r1 (03 Jan 2006)
 
