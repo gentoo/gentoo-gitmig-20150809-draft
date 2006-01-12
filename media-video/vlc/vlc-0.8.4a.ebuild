@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.6 2006/01/04 18:12:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.7 2006/01/12 01:00:05 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
 MY_P="${P/_beta/-test}"
 
-PATCHLEVEL="12"
+PATCHLEVEL="13"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -25,7 +25,7 @@ IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
 mp3 xv bidi sdl png xml2 samba daap corba screen mod speex nsplugin shout real
-win32codecs skins hal avahi"
+win32codecs skins hal avahi xinerama"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 			>=media-libs/libcddb-0.9.5 )
@@ -92,17 +92,19 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 			xv? ( x11-libs/libXv )
 			) virtual/x11 )
 			opengl? ( || ( media-libs/mesa virtual/opengl ) )
-			)"
+			xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
+		)"
 
 DEPEND="${RDEPEND}
 	X? ( || ( ( x11-proto/xproto
 		x11-proto/xextproto
 		x11-base/xorg-server
-		) virtual/x11 ) )
+		) virtual/x11 )
+		xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	)
 	=sys-devel/automake-1.6*
 	sys-devel/autoconf
 	sys-devel/libtool
-	sys-devel/autoconf
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
@@ -171,6 +173,7 @@ src_compile () {
 		$(use_enable theora) \
 		$(use_enable X x11) \
 		$(use_enable xv xvideo) \
+		$(use_enable xinerama) \
 		$(use_enable opengl glx) $(use_enable opengl) \
 		$(use_enable truetype freetype) \
 		$(use_enable bidi fribidi) \
