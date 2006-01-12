@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r9.ebuild,v 1.5 2006/01/06 01:08:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r9.ebuild,v 1.6 2006/01/12 02:05:14 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,6 +36,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-perl-segv.patch #95495
 	epatch "${FILESDIR}"/${P}-libintl.patch #92586
 	epatch "${FILESDIR}"/${P}-fix-devices-skip.patch #113640
+
+	# retarded
+	sed -i 's:__mempcpy:mempcpy:g' lib/*.c || die
 
 	# uclibc does not suffer from this glibc bug.
 	use elibc_uclibc || epatch "${FILESDIR}"/${PV}-tests.patch
