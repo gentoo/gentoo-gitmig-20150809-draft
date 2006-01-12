@@ -1,22 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7185dbf038a28ae5e5e7b7256bd7fa51 koffice-1.4.2-r4.ebuild 1605
-MD5 4f2138db76b72bd0803d91c3e17f651e koffice-1.4.2-r6.ebuild 1605
-MD5 ee0123f66b6cf704b3371d41759b9a01 ChangeLog 20889
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 f8fa87af0dc83731a25154443f503548 koffice-1.4.2-r7.ebuild 1695
-MD5 f1f58cce115f40fcba31a4976b61d260 files/kspread-1.4.2-gcc41.patch 451
+MD5 bacd41abe652ac6adb305e5b797ef73f ChangeLog 21020
 MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
-MD5 32ff061a8fba0e82d069a8a6fa6932e0 files/post-1.3-koffice-CAN-2005-3193.diff 6760
-MD5 5f3683b6817935e4f6269bd64398c479 files/kexi-1.4.2-gcc41.patch 1094
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r4 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r6 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r7 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDrMKl3og80iZgVQgRArawAJ9EEHchRz89GXzbANoni1SQmDEIiwCghUqv
-ComdDWd1F4r2k0vopCdjyRI=
-=xf3f
------END PGP SIGNATURE-----
+MD5 5f3683b6817935e4f6269bd64398c479 files/kexi-1.4.2-gcc41.patch 1094
+MD5 7d57f921f9a3827f925a3457413914b8 files/krita-1.4.2-gcc41.patch 656
+MD5 f1f58cce115f40fcba31a4976b61d260 files/kspread-1.4.2-gcc41.patch 451
+MD5 32ff061a8fba0e82d069a8a6fa6932e0 files/post-1.3-koffice-CAN-2005-3193.diff 6760
+MD5 7185dbf038a28ae5e5e7b7256bd7fa51 koffice-1.4.2-r4.ebuild 1605
+MD5 4f2138db76b72bd0803d91c3e17f651e koffice-1.4.2-r6.ebuild 1605
+MD5 6a1d2ec12afd0fcb1117d7f8e22d7152 koffice-1.4.2-r7.ebuild 1732
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
