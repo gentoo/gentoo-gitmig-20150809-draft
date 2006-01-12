@@ -1,21 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4687f9a4f03e0ccccda3b12e8b22b400 ChangeLog 2322
-MD5 a4787c9f8776138e109b4a4c59449f1f files/digest-hyperic-hq-agent-2.1.20 170
+MD5 62b31070810e0a2d9ad2584c118b23eb ChangeLog 2531
 MD5 ce71d392ac9834394255eea0c2249d4f files/digest-hyperic-hq-agent-2.1.30 170
-MD5 41b05dc44543c95002050d16f7f4cf9b files/digest-hyperic-hq-agent-2.5.10 170
-MD5 ba765bbf467ce7c13508be7c15e56e15 files/hyperic-hq-agent.init-2.1.20 348
+MD5 ff32d0144cb00995d1b486ce8e783d09 files/digest-hyperic-hq-agent-2.5.10 170
 MD5 91c27a181eb4abb096e19ab78d2e317f files/hyperic-hq-agent.init-2.1.30 348
 MD5 3bb51c17d0bcda9eaf6372bc14134002 files/hyperic-hq-agent.init-2.5.10 348
-MD5 0c2dbe9d74fdfa74a42d2c96ef530d69 hyperic-hq-agent-2.1.20.ebuild 1433
 MD5 7030b9ebbe756e02468ee370eefc5f8a hyperic-hq-agent-2.1.30.ebuild 1390
-MD5 b67cd9e687c2d39dd312db6d867be445 hyperic-hq-agent-2.5.10.ebuild 1398
+MD5 8fdc89bd2293f415957add65c976b2c1 hyperic-hq-agent-2.5.10.ebuild 1392
 MD5 eddcfeabec90c590787504b96256b98a metadata.xml 475
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoqgRAiZjviIA2XgRAvElAJ4oPcWQGUfAgYpQyi+Gch2nl7M3pwCeKivd
-fsKOt8difLkfspMkklcgkxM=
-=3IfR
------END PGP SIGNATURE-----
