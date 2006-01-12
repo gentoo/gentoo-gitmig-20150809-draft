@@ -1,9 +1,9 @@
-MD5 244ea93216c7fda2050d79e9ec912887 ChangeLog 10942
+MD5 536d7215a7706d2750be51efd9761ca7 ChangeLog 11088
 MD5 e8474104898712edc8575c940152bbd3 files/digest-nginx-0.1.45 64
 MD5 86fb37c347608004443f47aabae2fec7 files/digest-nginx-0.2.6 63
 MD5 1bb0edeb44d5da60091b0c0d24e87c4f files/digest-nginx-0.3.12 64
 MD5 676aa9e60aa117c23ab3a5af4c3c893b files/digest-nginx-0.3.15 64
-MD5 c77d993a64d5595e4f53715cd955cc80 files/digest-nginx-0.3.19 64
+MD5 851322ed490dd8628af1fa6534e830b9 files/digest-nginx-0.3.20 64
 MD5 d8f7e621e098b58848a6b5fb045c49c3 files/nginx 994
 MD5 fecedd05099122b1f8169152e5bc9462 files/nginx.conf 1400
 MD5 822f3c821527e6a34f23a6a92a884766 metadata.xml 220
@@ -11,4 +11,4 @@ MD5 62f46895e63da25c83512f589b9e61cb nginx-0.1.45.ebuild 1935
 MD5 6460bce607f17843cd0c22395e6122e0 nginx-0.2.6.ebuild 1934
 MD5 095ed1434baabf705fdbe6c4fbc92cf1 nginx-0.3.12.ebuild 1935
 MD5 b24f35c96ef3f22c3c1e523ac45da59b nginx-0.3.15.ebuild 1937
-MD5 5539926a55b823e4906be528f3696cbd nginx-0.3.19.ebuild 1937
+MD5 23baa064d6664723ca1b47c6514ba268 nginx-0.3.20.ebuild 1937
