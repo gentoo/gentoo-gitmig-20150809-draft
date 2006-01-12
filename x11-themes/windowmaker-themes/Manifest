@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73f91c423d5e53a0b04aa18f48fb91cc ChangeLog 1761
 MD5 bb89e5465704ca83b392bf019badc1a8 files/digest-windowmaker-themes-0.1 4516
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
 MD5 17800cbb9ca9d495c45bd10462527bf6 windowmaker-themes-0.1.ebuild 4145
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxgj5I1lqEGTUzyQRAhEiAJ9DqJi8KBPPlwt4HYCGgBW2NL/VxQCgyP0t
+6F/vERQ2Q4mip/q/YcFck8o=
+=h3y/
+-----END PGP SIGNATURE-----
