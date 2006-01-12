@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.17 2005/12/13 05:08:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.18 2006/01/12 04:42:13 robbat2 Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -19,12 +19,16 @@ FONT_SUFFIX=""	# Space delimited list of font suffixes to install
 
 FONT_S="${S}" # Dir containing the fonts
 
+FONT_PN="${PN}" # Last part of $FONTDIR
+
+FONTDIR="/usr/share/fonts/${FONT_PN}" # this is where the fonts are installed
+
 DOCS="" # Docs to install
 
 IUSE="X"
 
 DEPEND="X? ( || ( x11-apps/mkfontdir virtual/x11 ) )
-	media-libs/fontconfig"
+		media-libs/fontconfig"
 
 #
 # Public functions
@@ -35,11 +39,11 @@ font_xfont_config() {
 	# create Xfont files
 	if use X ; then
 		einfo "Creating fonts.scale & fonts.dir ..."
-		mkfontscale "${D}/usr/share/fonts/${PN}"
+		mkfontscale "${D}${FONTDIR}"
 		mkfontdir \
 			-e /usr/share/fonts/encodings \
 			-e /usr/share/fonts/encodings/large \
-			"${D}/usr/share/fonts/${PN}"
+			"${D}${FONTDIR}"
 		if [ -e "${FONT_S}/fonts.alias" ] ; then
 			doins "${FONT_S}/fonts.alias"
 		fi
@@ -52,7 +56,7 @@ font_xft_config() {
 	# create fontconfig cache
 	einfo "Creating fontconfig cache ..."
 	# Mac OS X has fc-cache at /usr/X11R6/bin
-	HOME="/root" fc-cache -f "${D}/usr/share/fonts/${PN}"
+	HOME="/root" fc-cache -f "${D}${FONTDIR}"
 
 }
 
@@ -66,7 +70,7 @@ font_src_install() {
 
 	cd "${FONT_S}"
 
-	insinto "/usr/share/fonts/${PN}"
+	insinto "${FONTDIR}"
 
 	for suffix in ${FONT_SUFFIX}; do
 		doins *.${suffix}
@@ -85,11 +89,9 @@ font_src_install() {
 }
 
 font_pkg_setup() {
-
 	# make sure we get no colissions
 	# setup is not the nicest place, but preinst doesn't cut it
-	rm "/usr/share/fonts/${PN}/fonts.cache-1"
-
+	rm -f "${FONTDIR}/fonts.cache-1"
 }
 
 EXPORT_FUNCTIONS src_install pkg_setup
