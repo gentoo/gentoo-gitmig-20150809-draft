@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9cd56e684ac10a441e20ee00cfc3d10 ChangeLog 6162
 MD5 a2f27725a7da73281e185f3fed80c16c files/digest-libsndfile-1.0.10 69
 MD5 03568645ed600c683b4289c8a28a3beb files/digest-libsndfile-1.0.11 69
@@ -11,3 +14,10 @@ MD5 c1ef32f41916211f8a8cc050c8ba6dbb libsndfile-1.0.12-r1.ebuild 1285
 MD5 bfcdcbdea917b696ff7e03c25cf84323 libsndfile-1.0.5.ebuild 731
 MD5 90f661dd7cf7029a4c8f00b74da652e5 libsndfile-1.0.9.ebuild 758
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxj1M2+ySkm8kpY0RApJ0AJsGAYMy79+EOzJEN9boSffhbOp4wACfXyNN
+oAAml+a9AWTlDFxXkZHa+GU=
+=j1t4
+-----END PGP SIGNATURE-----
