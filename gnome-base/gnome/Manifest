@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cb4ef97c5d0a7041e4ef5f434e3066e ChangeLog 27623
+MD5 eb1d5eafe47ace66881958549911916e ChangeLog 27888
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.10-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.10.1 0
@@ -11,18 +8,11 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.12.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.3-r1 0
 MD5 b09ac2c1f9d01f4679ecc08b38d48481 gnome-1.4-r3.ebuild 545
-MD5 1a1d20b2fa26a199e088724b84b72c66 gnome-2.10-r1.ebuild 3974
-MD5 f0f8646e2a59f8e1b52555566f80867e gnome-2.10.1.ebuild 3950
-MD5 4ded216d0b080b7df3f1368adf644c67 gnome-2.10.2.ebuild 3962
-MD5 1269c1af8dca7bb2c35099b55004dae0 gnome-2.12.0.ebuild 4212
-MD5 2211ab29b4ede8330ab9e3197f2716d6 gnome-2.12.1.ebuild 4210
-MD5 0647336686ea378d86291d8795a9e81c gnome-2.8.2.ebuild 3796
-MD5 eb163309756a2b05fa7b095256859fb8 gnome-2.8.3-r1.ebuild 3831
+MD5 49789c9edb0c45b91f4a3e1d95c24b7c gnome-2.10-r1.ebuild 3972
+MD5 841ab288cf8869d6fa7ba1bd200e76fe gnome-2.10.1.ebuild 3948
+MD5 4ea95ad90eeb9a0ff3a241dff85be603 gnome-2.10.2.ebuild 3960
+MD5 88d5e3452aba902169d7c5092653793b gnome-2.12.0.ebuild 4210
+MD5 2864fa0f1b1431d77238c1e6c1e880ae gnome-2.12.1.ebuild 4209
+MD5 f73819e8ba4f46bc99ddd6f08aab2342 gnome-2.8.2.ebuild 3794
+MD5 39f13473d0b3c9f864141e61f4238d63 gnome-2.8.3-r1.ebuild 3829
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsBrvugEuf3OQ0akRAkEWAJ4/YgXCFnvLVGKnZiWtUB7VuNnI2wCeJN//
-L+lFEbZVYeHKm1MMF0A0LCc=
-=Avll
------END PGP SIGNATURE-----

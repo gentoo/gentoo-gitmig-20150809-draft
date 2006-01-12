@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2.ebuild,v 1.13 2005/12/04 15:03:39 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2.ebuild,v 1.14 2006/01/12 23:05:23 compnerd Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -107,7 +107,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=mail-client/evolution-2.0.3
 	>=gnome-extra/evolution-webcal-2.0.1
 	>=gnome-extra/gal-2.2.4
-	>=gnome-extra/libgtkhtml-3.2.4
+	>=gnome-extra/gtkhtml-3.2.4
 
 	>=net-misc/vino-2.8.1
 
