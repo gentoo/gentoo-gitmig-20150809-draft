@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4853 2006/01/12 08:15:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4854 2006/01/12 17:39:18 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Diego Pettenò <flameeyes@gentoo.org> (12 Jan 2006)
+# Nightlie, masked while testing
+=media-sound/mt-daapd-0.3.0_pre*
 
 # Alexandre Buisse <nattfodd@gentoo.org> (12 Jan 2006)
 # Masked for testing purposes
