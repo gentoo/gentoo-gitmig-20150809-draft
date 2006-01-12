@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.2 2006/01/12 13:31:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.3 2006/01/12 14:01:02 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -158,6 +158,7 @@ src_compile() {
 			eerror "   nvidia, i8x0, cle266"
 			eerror ""
 			eerror "XvMC support will not be built."
+			myconf="${myconf} --disable-xvmc"
 		elif [[ -n "${xvmclib}" ]]; then
 			xvmcconf="--with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
 			xvmcdir=$(get_x11_dir libXvMC.so)

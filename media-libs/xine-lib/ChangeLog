@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.305 2006/01/12 13:31:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.306 2006/01/12 14:01:02 flameeyes Exp $
+
+  12 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.1-r3.ebuild, xine-lib-1.1.1-r4.ebuild:
+  Bump also stable version to patchset 24 and allow to actually disable xvmc.
 
   12 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.1-r4.ebuild:
