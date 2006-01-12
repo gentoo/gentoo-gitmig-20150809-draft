@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.3.ebuild,v 1.3 2006/01/09 14:15:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.5.ebuild,v 1.1 2006/01/12 09:54:54 cryos Exp $
 
-inherit eutils qt3
+inherit eutils multilib qt3
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
@@ -23,11 +23,8 @@ S=${WORKDIR}/${P}/${P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	echo ${S}
 	epatch ${FILESDIR}/${P}-qmake.patch
-#	sed -e 's/INCLUDEPATH.*//' -i ${P}.pro
-#	echo "INCLUDEPATH += /usr/include/qwt" >> ${P}.pro
-#	echo "INCLUDEPATH += /usr/include/qwtplot3d" >> ${P}.pro
+	sed -i -e "s|_LIBDIR_|/usr/$(get_libdir)|" ${P}.pro || die "sed failed."
 }
 
 src_compile() {

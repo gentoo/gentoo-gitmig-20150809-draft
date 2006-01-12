@@ -1,0 +1,185 @@
+--- qtiplot-0.7.5.pro.orig	2006-01-12 09:40:27.000000000 +0000
++++ qtiplot-0.7.5.pro	2006-01-12 09:41:50.000000000 +0000
+@@ -4,27 +4,25 @@
+ MOC_DIR      = ../tmp/qtiplot
+ OBJECTS_DIR  = ../tmp/qtiplot
+ DESTDIR           = ../
+-DEFINES += QT_PLUGIN
+-win32:DEFINES  += QT_DLL QWT_DLL QT_THREAD_SUPPORT GSL_DLL QWTPLOT3D_DLL 
++DEFINES += QT_PLUGIN
++win32:DEFINES  += QT_DLL QWT_DLL QT_THREAD_SUPPORT GSL_DLL QWTPLOT3D_DLL 
+ 
+ TRANSLATIONS = translations/qtiplot_de.ts \
+-			   translations/qtiplot_es.ts \
+-			   translations/qtiplot_fr.ts \
+-			   translations/qtiplot_ja.ts \
+-			   translations/qtiplot_pt.ts 
+-
+-win32:INCLUDEPATH += C:/Qt/WinGsl
++			   translations/qtiplot_es.ts \
++			   translations/qtiplot_fr.ts \
++			   translations/qtiplot_ja.ts \
++			   translations/qtiplot_pt.ts 
+ 
+-INCLUDEPATH += ../3rdparty/qwt/include
+-INCLUDEPATH += ../3rdparty/qwtplot3d/include
++win32:INCLUDEPATH += C:/Qt/WinGsl
++
++INCLUDEPATH += /usr/include/qwt
++INCLUDEPATH += /usr/include/qwtplot3d
+ 
+ win32:LIBS     += ../3rdparty/qwt/lib/qwt.lib 
+ win32:LIBS     += ../3rdparty/qwtplot3d/lib/qwtplot3d.lib 
+ win32:LIBS     += C:/Qt/WinGsl/Lib/WinGsl.lib 
+ 
+-unix:LIBS += -L../3rdparty/qwt/lib -lqwt
+-unix:LIBS += -L../3rdparty/qwtplot3d/lib -lqwtplot3d
+-unix:LIBS += -L /usr/lib -lgsl -lgslcblas
++unix:LIBS += -L_LIBDIR_ -lgsl -lgslcblas -lqwt -lqwtplot3d
+ 
+ unix:target.path=/usr/bin
+ unix:INSTALLS += target
+@@ -32,7 +30,7 @@
+ unix:documentation.path = /usr/share/doc/qtiplot
+ unix:documentation.files = doc/*
+ unix:INSTALLS += documentation
+- 
++ 
+ win32:RC_FILE     = src/iPlot.rc
+ HEADERS  = src/application.h \
+               src/graph.h \
+@@ -75,28 +73,28 @@
+ 	 src/bars.h \
+ 	 src/cones.h \
+ 	 src/configDialog.h \
+-	 src/BarCurve.h \
++	 src/BarCurve.h \
+ 	 src/Histogram.h \
+ 	 src/VectXYXYCurve.h \
+      src/scaleDraws.h \
+ 	 src/imageExportDialog.h \
+-	 src/matrix.h \
+-	 src/matrixDialog.h \
+-	 src/matrixSizeDialog.h \
++	 src/matrix.h \
++	 src/matrixDialog.h \
++	 src/matrixSizeDialog.h \
+ 	 src/matrixValuesDialog.h \
+-     src/analysisDialog.h \
+-	 src/parser.h \
+-	 src/colorBox.h \
+-	 src/patternBox.h \
+-	 src/importOPJ.h\
+-	 src/symbolDialog.h \
+-	 src/plot.h \
+-	 src/colorButton.h \
+-	 src/associationsDialog.h \
+-	 src/renameWindowDialog.h \
+-	 src/widget.h \
+-	 src/interpolationDialog.h\
+-	 src/fileDialogs.h\
++     src/analysisDialog.h \
++	 src/parser.h \
++	 src/colorBox.h \
++	 src/patternBox.h \
++	 src/importOPJ.h\
++	 src/symbolDialog.h \
++	 src/plot.h \
++	 src/colorButton.h \
++	 src/associationsDialog.h \
++	 src/renameWindowDialog.h \
++	 src/widget.h \
++	 src/interpolationDialog.h\
++	 src/fileDialogs.h\
+ 	 src/epsExportDialog.h
+      
+ SOURCES  = src/application.cpp \
+@@ -142,48 +140,48 @@
+ 	 src/cones.cpp \
+      src/analysisDialog.cpp \
+ 	 src/configDialog.cpp \
+-	 src/BarCurve.cpp \
++	 src/BarCurve.cpp \
+ 	 src/Histogram.cpp \
+ 	 src/VectXYXYCurve.cpp \
+ 	 src/imageExportDialog.cpp \
+-	 src/matrix.cpp \
+-	 src/matrixDialog.cpp \
+-	 src/matrixSizeDialog.cpp \
+-	 src/matrixValuesDialog.cpp \
+-	 src/parser.cpp\
+-	 src/colorBox.cpp \
+-	 src/patternBox.cpp \
++	 src/matrix.cpp \
++	 src/matrixDialog.cpp \
++	 src/matrixSizeDialog.cpp \
++	 src/matrixValuesDialog.cpp \
++	 src/parser.cpp\
++	 src/colorBox.cpp \
++	 src/patternBox.cpp \
+ 	 src/importOPJ.cpp\
+-	 src/main.cpp \
+-	 src/symbolDialog.cpp \
+-	 src/plot.cpp \
+-	 src/colorButton.cpp \
+-	 src/associationsDialog.cpp \
+-	 src/renameWindowDialog.cpp \
+-	 src/widget.cpp\
+-	 src/interpolationDialog.cpp\
+-	 src/epsExportDialog.cpp
+-
+-#parser (muParser)
+-HEADERS+=../3rdparty/muParser/muParser.h \
+-         ../3rdparty/muParser/muParserBase.h \ 
+-		 ../3rdparty/muParser/muParserInt.h \
+-		 ../3rdparty/muParser/muParserError.h \ 
+-         ../3rdparty/muParser/muParserStack.h \ 
+-         ../3rdparty/muParser/muParserToken.h \
+-		 ../3rdparty/muParser/muParserBytecode.h \
+-		 ../3rdparty/muParser/muParserCallback.h \
+-		 ../3rdparty/muParser/muParserTokenReader.h \ 
+-		 ../3rdparty/muParser/muParserFixes.h \
+-		 ../3rdparty/muParser/muParserDef.h  	   
+-SOURCES+=../3rdparty/muParser/muParser.cpp \
+-         ../3rdparty/muParser/muParserBase.cpp \ 
+-         ../3rdparty/muParser/muParserInt.cpp \
+-		 ../3rdparty/muParser/muParserBytecode.cpp \
+-		 ../3rdparty/muParser/muParserCallback.cpp \
+-		 ../3rdparty/muParser/muParserTokenReader.cpp \
+-		 ../3rdparty/muParser/muParserError.cpp
+-
+-#Origin Import (liborigin)
+-HEADERS+=../3rdparty/liborigin/OPJFile.h   
++	 src/main.cpp \
++	 src/symbolDialog.cpp \
++	 src/plot.cpp \
++	 src/colorButton.cpp \
++	 src/associationsDialog.cpp \
++	 src/renameWindowDialog.cpp \
++	 src/widget.cpp\
++	 src/interpolationDialog.cpp\
++	 src/epsExportDialog.cpp
++
++#parser (muParser)
++HEADERS+=../3rdparty/muParser/muParser.h \
++         ../3rdparty/muParser/muParserBase.h \ 
++		 ../3rdparty/muParser/muParserInt.h \
++		 ../3rdparty/muParser/muParserError.h \ 
++         ../3rdparty/muParser/muParserStack.h \ 
++         ../3rdparty/muParser/muParserToken.h \
++		 ../3rdparty/muParser/muParserBytecode.h \
++		 ../3rdparty/muParser/muParserCallback.h \
++		 ../3rdparty/muParser/muParserTokenReader.h \ 
++		 ../3rdparty/muParser/muParserFixes.h \
++		 ../3rdparty/muParser/muParserDef.h  	   
++SOURCES+=../3rdparty/muParser/muParser.cpp \
++         ../3rdparty/muParser/muParserBase.cpp \ 
++         ../3rdparty/muParser/muParserInt.cpp \
++		 ../3rdparty/muParser/muParserBytecode.cpp \
++		 ../3rdparty/muParser/muParserCallback.cpp \
++		 ../3rdparty/muParser/muParserTokenReader.cpp \
++		 ../3rdparty/muParser/muParserError.cpp
++
++#Origin Import (liborigin)
++HEADERS+=../3rdparty/liborigin/OPJFile.h   
+ SOURCES+=../3rdparty/liborigin/OPJFile.cpp
