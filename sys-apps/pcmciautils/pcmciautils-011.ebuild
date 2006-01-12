@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-011.ebuild,v 1.4 2005/12/12 20:00:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-011.ebuild,v 1.5 2006/01/12 13:07:56 brix Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -13,13 +13,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="cis debug staticsocket udev"
+IUSE="debug staticsocket udev"
 RDEPEND="!virtual/pcmcia
 		>=sys-fs/sysfsutils-1.2.0-r1
 		>=sys-apps/module-init-tools-3.2_pre4
 		udev? ( >=sys-fs/udev-068 )
-		!udev? ( >=sys-apps/hotplug-20040920 )
-		cis? ( sys-apps/pcmcia-cs-cis )"
+		!udev? ( >=sys-apps/hotplug-20040920 )"
 DEPEND="${RDEPEND}
 		dev-util/yacc
 		sys-devel/flex

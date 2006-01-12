@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmciautils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.15 2005/12/28 10:35:07 brix Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.16 2006/01/12 13:07:56 brix Exp $
+
+  12 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  pcmciautils-010.ebuild, pcmciautils-011.ebuild, pcmciautils-012.ebuild:
+  Remove cis USE flag + DEPEND.
 
 *pcmciautils-012 (28 Dec 2005)
 
