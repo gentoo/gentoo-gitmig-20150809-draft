@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.0.ebuild,v 1.5 2005/05/25 14:45:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.0.ebuild,v 1.6 2006/01/12 20:43:29 dang Exp $
 
 inherit perl-module
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="cdr gnome"
 
-DEPEND=" gnome? ( gnome-extra/gtkhtml )
+DEPEND=" gnome? ( =gnome-extra/gtkhtml-1* )
 	cdr? ( >=media-video/vcdimager-0.7.19
 		>=app-cdr/cdrdao-1.1.7
 		virtual/cdrtools )

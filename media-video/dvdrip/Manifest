@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eebd32146d7f190bd3188b40a74425e1 ChangeLog 9029
-MD5 88105f416527cd7fd3342189e2852c92 dvdrip-0.52.0.ebuild 1518
+MD5 a8e710cab224d34753bbc29dcf5df2bb ChangeLog 9133
+MD5 de19b8a4324067dd89f2ffc368d9565b dvdrip-0.52.0.ebuild 1517
 MD5 90d22a4f2fc0bee9e26b0b7176a8cb76 dvdrip-0.52.3-r1.ebuild 1903
 MD5 b263c738906afee7771069b32e807f4f dvdrip-0.52.3.ebuild 1820
 MD5 7a7aec135b1024a852f763c65fa115fd dvdrip-0.52.5.ebuild 2152
@@ -17,9 +17,9 @@ MD5 30514612efaf92047f0cc279816529ac files/digest-dvdrip-0.97.5 71
 MD5 889de67168579e889b441c8b6892b429 files/dvdrip-0.97.5-fix_nptl_workaround.patch 293
 MD5 6f041773f1239601a17e6201405f82ac metadata.xml 218
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDtqyP/aM9DdBw91cRAvnzAJwKQ0rvVHqe1deLUKK3ngfrDbarQwCfXQ9C
-gRWEA4AfdghJk468qmKD53w=
-=yZtH
+iD8DBQFDxr+homPajV0RnrERAgsoAJ9+JFAr+OAwvXfWbUAEa8+ldQgmdACfZhtM
+PIfszGaQ/Ae69eyFua9R7wY=
+=uRqk
 -----END PGP SIGNATURE-----

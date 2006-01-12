@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdrip
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.53 2005/12/31 15:59:44 morfic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.54 2006/01/12 20:43:29 dang Exp $
+
+  12 Jan 2006; <dang@gentoo.org> dvdrip-0.52.0.ebuild:
+  Change gtkhtml dep prior to libgtkhmtl->gtkhtml
 
 *dvdrip-0.97.5 (31 Dec 2005)
 
