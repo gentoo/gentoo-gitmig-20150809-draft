@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.27 2005/12/09 10:42:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.28 2006/01/12 13:13:56 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -12,11 +12,9 @@
 
 inherit eutils gnuconfig
 
-#DEPEND="sys-devel/automake
-#	sys-devel/autoconf
-#	sys-devel/libtool"
-#
-# Ebuilds should rather depend on the proper version of the tool.
+DEPEND="sys-devel/automake
+	sys-devel/autoconf
+	sys-devel/libtool"
 
 # Variables:
 #
