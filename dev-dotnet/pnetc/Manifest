@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ed659eb14368777fc09f79d8cbcfa92a ChangeLog 3925
+MD5 7f046c1bf2bed4fea43ebfedb829b13e files/digest-pnetc-0.6.10 64
+MD5 3aaa783e43b35aab8e5bab6280e85a92 files/digest-pnetc-0.6.12 64
+MD5 bee125ded10eb827d7ad29db334858ee files/digest-pnetc-0.7.0 63
+MD5 24d4c834de8a3ba6092990be62e702c4 files/digest-pnetc-0.7.2 63
+MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
 MD5 0cdffa9baa6b0c14a2c80a33dfdf856c pnetc-0.6.10.ebuild 596
 MD5 f7ddeab0d3e581c7a62da2a323cd884f pnetc-0.6.12.ebuild 602
 MD5 d0eab5dca05ea147ff27feff8badff46 pnetc-0.7.0.ebuild 675
-MD5 ed659eb14368777fc09f79d8cbcfa92a ChangeLog 3925
-MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
-MD5 bee125ded10eb827d7ad29db334858ee files/digest-pnetc-0.7.0 63
-MD5 7f046c1bf2bed4fea43ebfedb829b13e files/digest-pnetc-0.6.10 64
-MD5 3aaa783e43b35aab8e5bab6280e85a92 files/digest-pnetc-0.6.12 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC83fBViELBEf1JB0RApY3AJ9805klzpz3nLUQpgDtKZiSri+pcwCeK4J2
-h+UCiepBnrNq5eJjbw8IIW4=
-=w5V0
------END PGP SIGNATURE-----
+MD5 d0eab5dca05ea147ff27feff8badff46 pnetc-0.7.2.ebuild 675

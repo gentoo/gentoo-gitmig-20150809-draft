@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd4d49f5dfe7fff2c258c6ac24168710 pnetlib-0.7.0.ebuild 1172
-MD5 a68373bb94e5543d868a2ffe58488222 pnetlib-0.6.10.ebuild 840
-MD5 44e3a71136efb185faa6d1683a9664f7 pnetlib-0.6.12.ebuild 1188
 MD5 8bcaea6db7105250dcaced8201140025 ChangeLog 4910
-MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
+MD5 7a91fa4737dbff178231abf061f83052 files/0.6.12-resgen.patch 538
+MD5 7a91fa4737dbff178231abf061f83052 files/0.7.0-resgen.patch 538
+MD5 1b3d4d2a65f581b39e06269baf380594 files/configure-freetype.patch 391
 MD5 d41d3bba0e845a33aee40504dd5b8631 files/digest-pnetlib-0.6.10 67
 MD5 82854df0fe6e2698163ff953a55fe761 files/digest-pnetlib-0.6.12 67
-MD5 7a91fa4737dbff178231abf061f83052 files/0.7.0-resgen.patch 538
 MD5 cd9cb55d031bce14d44d1912ffd54f7a files/digest-pnetlib-0.7.0 66
-MD5 1b3d4d2a65f581b39e06269baf380594 files/configure-freetype.patch 391
-MD5 7a91fa4737dbff178231abf061f83052 files/0.6.12-resgen.patch 538
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC83eUViELBEf1JB0RAtY3AJ9clN3HhCnWZC2Ilzek24j2V9jo7gCfS1Sn
-o3sb4qkR6C+EXUJtdEsJJAU=
-=xVqY
------END PGP SIGNATURE-----
+MD5 7c8cf72a79375749876093b5d29b3af3 files/digest-pnetlib-0.7.2 66
+MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
+MD5 a68373bb94e5543d868a2ffe58488222 pnetlib-0.6.10.ebuild 840
+MD5 44e3a71136efb185faa6d1683a9664f7 pnetlib-0.6.12.ebuild 1188
+MD5 fd4d49f5dfe7fff2c258c6ac24168710 pnetlib-0.7.0.ebuild 1172
+MD5 a07f4bc781bb48e4f852bf7e96682884 pnetlib-0.7.2.ebuild 1172
