@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-2.7.0.25.ebuild,v 1.1 2006/01/12 09:45:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-2.7.0.25.ebuild,v 1.2 2006/01/12 14:30:41 hollow Exp $
 
 inherit eutils toolchain-funcs versionator linux-info
 
@@ -47,6 +47,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/vzctl-2.7.0-gentoo_conf_d.patch
 	epatch "${FILESDIR}"/vzctl-2.7.0.23-gentoo_etc_vz.patch
+
+	# fix hardcoded lib paths
+	use amd64 && epatch "${FILESDIR}"/vzctl-2.7.0-amd64.patch
 }
 
 src_compile() {
