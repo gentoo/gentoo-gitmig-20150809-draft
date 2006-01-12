@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.7 2006/01/12 01:00:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.8 2006/01/12 01:16:58 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -88,7 +88,6 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		X? ( || ( (
 			x11-libs/libX11
 			x11-libs/libXext
-			x11-libs/libXinerama
 			xv? ( x11-libs/libXv )
 			) virtual/x11 )
 			opengl? ( || ( media-libs/mesa virtual/opengl ) )
