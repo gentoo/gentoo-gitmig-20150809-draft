@@ -1,4 +1,4 @@
-MD5 ca124f42bced187803d8afdbe90e0e3e ChangeLog 10730
+MD5 2cfaabf95a000441377fef39453276fe ChangeLog 10836
 MD5 88069f3f6c274e4285bbbba7f5cb5a4f files/FfmpegToolkit.class.patch 576
 MD5 57ed8c8bd13cb72d366ece232dcc2fe9 files/digest-gallery-1.5.1 66
 MD5 9e64f054eb28e98d82b04443023befed files/digest-gallery-1.5.2_rc1 70
@@ -8,7 +8,7 @@ MD5 2766aeba32226962ae298487f56c37aa files/digest-gallery-2.0.2 71
 MD5 2766aeba32226962ae298487f56c37aa files/digest-gallery-2.0.2-r1 71
 MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
 MD5 7fd340b3582fa5f65153a85c04f01160 files/postinstall-en2.txt 913
-MD5 506282253bfebd77cf1392f54b3e6e5d gallery-1.5.1.ebuild 984
+MD5 85ab1834c043a6eea629200ffead9346 gallery-1.5.1.ebuild 985
 MD5 cc9c3d2625009ec17b02e5645fcd5556 gallery-1.5.2_rc1.ebuild 990
 MD5 c45373f82c4196a5c38001b3334891dd gallery-1.5.2_rc2.ebuild 990
 MD5 7cae145d1aa9b7900fb4b1b00ebdc774 gallery-1.5_p1.ebuild 980
