@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.44 2005/12/20 20:13:25 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.45 2006/01/12 08:07:37 mrness Exp $
+
+  12 Jan 2006; Alin Nastac <mrness@gentoo.org> files/radius.init:
+  Use kill -HUP to reload configuration instead start-stop-daemon --stop
+  --signal HUP.
 
   20 Dec 2005; Alin Nastac <mrness@gentoo.org> freeradius-1.0.5-r3.ebuild:
   Stable on x86 and amd64.

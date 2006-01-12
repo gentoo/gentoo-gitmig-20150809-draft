@@ -58,6 +58,6 @@ stop () {
 
 reload () {
 	ebegin "Reloading radiusd"
-	start-stop-daemon --stop --signal HUP --quiet --pidfile=/var/run/radiusd/radiusd.pid
+	kill -HUP `</var/run/radiusd/radiusd.pid`
 	eend $?
 }
