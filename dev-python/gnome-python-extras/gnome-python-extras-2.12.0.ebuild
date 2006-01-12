@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.0.ebuild,v 1.1 2005/09/21 21:42:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.0.ebuild,v 1.2 2006/01/12 22:54:24 compnerd Exp $
 
 inherit eutils gnome2 python
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2.6
 	>=dev-python/gnome-python-2.10
 	>=dev-python/pygtk-2.4
-	=gnome-extra/libgtkhtml-2.6*
+	=gnome-extra/gtkhtml-2.6*
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2
 	>=x11-libs/gtksourceview-1.1.90
