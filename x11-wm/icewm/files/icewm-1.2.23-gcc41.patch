@@ -1,0 +1,36 @@
+diff -Naur icewm-1.2.23/src/wmframe.h icewm-1.2.23-gcc41/src/wmframe.h
+--- icewm-1.2.23/src/wmframe.h	2005-08-14 20:33:08.000000000 +0200
++++ icewm-1.2.23-gcc41/src/wmframe.h	2006-01-11 19:50:05.028527250 +0100
+@@ -106,7 +106,7 @@
+     YClientContainer *container() const { return fClientContainer; }
+ 
+ #ifdef WMSPEC_HINTS
+-    void YFrameWindow::startMoveSize(int x, int y,
++    void startMoveSize(int x, int y,
+                                      int direction);
+ #endif
+ 
+diff -Naur icewm-1.2.23/src/ypixbuf.h icewm-1.2.23-gcc41/src/ypixbuf.h
+--- icewm-1.2.23/src/ypixbuf.h	2005-08-14 20:33:08.000000000 +0200
++++ icewm-1.2.23-gcc41/src/ypixbuf.h	2006-01-11 19:49:37.310795000 +0100
+@@ -51,7 +51,7 @@
+ #if defined(CONFIG_ANTIALIASING) || defined(CONFIG_IMLIB)
+     static ref<YPixbuf> scale(ref<YPixbuf> source, int const width, int const height);
+ private:
+-    YPixbuf::YPixbuf(const ref<YPixbuf> &source,
++    YPixbuf(const ref<YPixbuf> &source,
+                      int const width, int const height);
+ public:
+ #endif
+diff -Naur icewm-1.2.23/src/ywindow.h icewm-1.2.23-gcc41/src/ywindow.h
+--- icewm-1.2.23/src/ywindow.h	2005-08-14 20:33:08.000000000 +0200
++++ icewm-1.2.23-gcc41/src/ywindow.h	2006-01-11 19:49:51.663692000 +0100
+@@ -118,7 +118,7 @@
+ 
+     ref<YPixmap> beginPaint(YRect &r);
+     void endPaint(Graphics &g, ref<YPixmap> pixmap, YRect &r);
+-    void YWindow::paintExpose(int ex, int ey, int ew, int eh);
++    void paintExpose(int ex, int ey, int ew, int eh);
+ 
+     Graphics & getGraphics();
+ 
