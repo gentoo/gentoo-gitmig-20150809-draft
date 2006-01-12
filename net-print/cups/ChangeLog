@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.153 2006/01/11 17:36:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.154 2006/01/12 14:20:27 blubb Exp $
+
+  12 Jan 2006; Simon Stelling <blubb@gentoo.org> cups-1.1.23-r7.ebuild:
+  stable on amd64 wrt bug 117495
 
   11 Jan 2006; Markus Rothe <corsair@gentoo.org> cups-1.1.23-r7.ebuild:
   Stable on ppc64; bug #117495
