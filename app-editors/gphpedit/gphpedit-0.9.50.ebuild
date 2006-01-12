@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.50.ebuild,v 1.2 2005/01/01 13:26:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.50.ebuild,v 1.3 2006/01/12 22:37:46 compnerd Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.0
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libgnomeui-2.0
-	=gnome-extra/libgtkhtml-2*"
+	=gnome-extra/gtkhtml-2*"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
