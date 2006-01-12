@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r3.ebuild,v 1.2 2006/01/12 06:28:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r3.ebuild,v 1.3 2006/01/12 07:40:05 swegener Exp $
 
 inherit font font-ebdftopcf
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	font_src_install
 	doins ${S}/debian/fonts.alias
-	
+
 	if [ -f ${ROOT}/etc/X11/fs/config -a -z "$(grep artwiz /etc/X11/fs/config)" ]
 	then
 		sed 's#^catalog.*$#&\n\t/usr/share/fonts/artwiz:unscaled,#g' \
