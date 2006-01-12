@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.6.5.ebuild,v 1.10 2005/04/08 17:06:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.6.5.ebuild,v 1.11 2006/01/12 23:12:09 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
-	=gnome-extra/libgtkhtml-2*
+	=gnome-extra/gtkhtml-2*
 	>=dev-libs/libxml2-2.6.5
 	>=dev-libs/libxslt-1.1.4
 	>=gnome-base/libglade-2
