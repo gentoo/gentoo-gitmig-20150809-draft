@@ -1,0 +1,20 @@
+--- libtool~	2003-07-11 10:21:31.000000000 +0100
++++ libtool	2003-07-11 10:22:33.000000000 +0100
+@@ -1859,7 +1859,7 @@
+ 	    old_convenience="$old_convenience $ladir/$objdir/$old_library"
+ 	    tmp_libs=
+ 	    # PKGW 
+-	    dependency_libs=
++	    #dependency_libs=
+ 	    for deplib in $dependency_libs; do
+ 	      deplibs="$deplib $deplibs"
+ 	      case "$tmp_libs " in
+@@ -1976,7 +1976,7 @@
+ 
+ 	  tmp_libs=
+ 	  #PKGW
+-	  dependency_libs=
++	  #dependency_libs=
+ 	  for deplib in $dependency_libs; do
+ 	    case $deplib in
+ 	    -L*) newlib_search_path="$newlib_search_path "`$echo "X$deplib" | $Xsed -e 's/^-L//'`;; ### testsuite: skip nested quoting test

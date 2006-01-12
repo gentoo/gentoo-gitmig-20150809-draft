@@ -1,0 +1,82 @@
+--- gtkhtml.c	Sat Jun 28 16:40:03 2003
++++ gtkhtml_new.c	Sat Jun 28 15:54:30 2003
+@@ -789,10 +790,17 @@
+ void
+ gtk_html_im_reset (GtkHTML *html)
+ {
++	/* I don't know why this is called for every keypress, but it f***s up the preedit totally.
++	   gtk_im_context_reset() should only be called if we really want to do a reset,
++	   e.g. a selection is made with somewhere else in the text. 
++	   Adding a character to the text shouldn't trigger this. => FIXME
++	*/
++	/* 
+ 	if (html->priv->need_im_reset) {
+ 		html->priv->need_im_reset = FALSE;
+-		gtk_im_context_reset (html->priv->im_context);
++		gtk_im_context_reset (html->priv->im_context); 
+ 	}
++	*/
+ }
+ 
+ static gint
+@@ -2662,16 +2670,57 @@
+ 	}
+ }
+ 
++static gint last_length; /* FIXME: put these somewhere else */
++static gint last_pos;
++static void 
++gtk_html_delete_preedit(GtkHTML *html)
++{
++	/* delete previous preedit string */
++	if ((last_pos - last_length >= 0) && (last_length > 0)) {
++		html_cursor_jump_to_position_no_spell (html->engine->cursor, html->engine, last_pos - last_length);
++		html_engine_set_mark (html->engine);
++		html_cursor_jump_to_position_no_spell (html->engine->cursor, html->engine, last_pos);
++		html_engine_delete (html->engine);
++	}
++}
++
+ static void
+ gtk_html_im_commit_cb (GtkIMContext *context, const gchar *str, GtkHTML *html)
+ {
++	gint orig_position = html->engine->cursor->position;
++	gtk_html_delete_preedit(html);
++
+ 	html_engine_paste_text (html->engine, str, -1);
++	last_length = 0;
++	last_pos = html->engine->cursor->position;
+ }
+ 
+ static void
+ gtk_html_im_preedit_changed_cb (GtkIMContext *context, GtkHTML *html)
+ {
+-	g_warning ("preedit changed callback: implement me");
++	gint position;
++	gchar *str;
++	PangoAttrList *attribs;
++	gint preedit_cursor_position;
++
++	gtk_im_context_get_preedit_string (context, &str, &attribs, &preedit_cursor_position);
++
++	gtk_html_delete_preedit(html);
++
++	last_length = g_utf8_strlen(str, -1); /* store new string length */
++
++	position = html->engine->cursor->position + preedit_cursor_position;
++	
++	/* FIXME: Apply the pango attributes to the string */
++	html_engine_insert_text (html->engine, str, -1);
++	last_pos = html->engine->cursor->position;
++
++	/* Move the cursor inside the preedit string as requested */
++	if (position >= 0) html_cursor_jump_to_position_no_spell (html->engine->cursor, html->engine, position);
++	
++	pango_attr_list_unref (attribs);
++	g_free (str);
++
+ }
+ 
+ static gchar *
+
+
