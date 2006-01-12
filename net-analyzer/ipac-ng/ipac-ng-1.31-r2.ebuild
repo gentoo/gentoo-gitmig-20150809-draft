@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.2 2006/01/10 19:47:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.3 2006/01/12 18:38:11 vanquirius Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/${P}-iptables-1.3.1.dpatch
+	epatch "${WORKDIR}"/${P}-iptables-1.3.1.patch
 	epatch "${WORKDIR}"/ipcop-${P}-fetchcounter.patch
 }
 
