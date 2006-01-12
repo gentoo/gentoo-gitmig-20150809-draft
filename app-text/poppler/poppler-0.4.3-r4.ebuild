@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r4.ebuild,v 1.9 2006/01/12 14:18:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r4.ebuild,v 1.10 2006/01/12 21:33:04 robbat2 Exp $
 
 inherit eutils autotools
 
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/freetype-2.1.8
 	cairo? ( >=x11-libs/cairo-0.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	zlib? ( sys-libs/zlib )
-	!app-text/pdf2html
+	!app-text/pdftohtml
 	!<app-text/xpdf-3.01-r4"
 
 DEPEND="${RDEPEND}

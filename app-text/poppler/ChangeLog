@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.42 2006/01/12 14:18:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.43 2006/01/12 21:33:04 robbat2 Exp $
+
+  12 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
+  poppler-0.4.3-r4.ebuild:
+  pdf2html != pdftohtml. pdftohtml conflicts with poppler, pdf2html does not.
 
   12 Jan 2006; Simon Stelling <blubb@gentoo.org> poppler-0.4.3-r4.ebuild:
   stable on amd64 wrt bug 117495
