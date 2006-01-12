@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7ca0a8bcd0c8e2f9e91c5784d62bf41c ChangeLog 6625
-MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 3408caad372ca08e789fb597070461ba mplus-fonts-2.2.2.ebuild 722
-MD5 89a2c943da9ee8d6d9073b70f876e376 mplus-fonts-2.2.3.ebuild 730
-MD5 3667704b25a6152a21e0c0357e2fa16e mplus-fonts-2.2.4.ebuild 734
+MD5 b44a17002e01ef58087db9a07e04271d ChangeLog 6724
 MD5 243e34fc978fab7156feb2953a14392b files/digest-mplus-fonts-2.2.2 76
 MD5 79f420242b150dcc1011d974c7e11ecd files/digest-mplus-fonts-2.2.3 76
 MD5 f89858a065739e89033a3743de476614 files/digest-mplus-fonts-2.2.4 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1+6kj5H05b2HAEkRAs36AJ0SNEMjs7eCiQbHK0ISO6jd4IbbHwCff4ji
-YIYhXNo0HDxo8Fxp/KbcVsQ=
-=Mr32
------END PGP SIGNATURE-----
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+MD5 3408caad372ca08e789fb597070461ba mplus-fonts-2.2.2.ebuild 722
+MD5 89a2c943da9ee8d6d9073b70f876e376 mplus-fonts-2.2.3.ebuild 730
+MD5 8aa9f7256c8c0b5d502f03537eac5a7c mplus-fonts-2.2.4.ebuild 766
