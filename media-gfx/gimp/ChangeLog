@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.138 2005/12/30 19:55:04 allanonjl Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.139 2006/01/12 23:40:28 compnerd Exp $
+
+  12 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  gimp-2.2.6-r1.ebuild, gimp-2.2.8-r1.ebuild, gimp-2.2.9.ebuild,
+  gimp-2.2.10.ebuild:
+  pkgmove gnome-extra/libgtkhtml gnome-extra/gtkhtml
 
   30 Dec 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml:
   remove gnome from meta

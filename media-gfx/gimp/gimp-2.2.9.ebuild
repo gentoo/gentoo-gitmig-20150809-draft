@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.9.ebuild,v 1.4 2005/12/13 16:13:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.9.ebuild,v 1.5 2006/01/12 23:40:28 compnerd Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.4.5
 	dev-libs/libxslt
 
 	gimpprint? ( =media-gfx/gimp-print-4.2* )
-	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
+	gtkhtml? ( =gnome-extra/gtkhtml-2* )
 
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2
