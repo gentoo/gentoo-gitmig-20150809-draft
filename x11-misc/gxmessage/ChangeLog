@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.13 2005/12/01 03:04:38 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.14 2006/01/12 22:53:41 nelchael Exp $
+
+  12 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> gxmessage-2.4.4.ebuild:
+  Fixed DEPEND for modular X.
 
   01 Dec 2005; Jason Wever <weeve@gentoo.org> gxmessage-2.4.4.ebuild:
   Stable on SPARC wrt bug #111131.
