@@ -12,11 +12,11 @@ MD5 2dbf220a6cff3180162434cb4ad6a4b1 files/psmisc-21.8-ipv6.patch 13017
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1166d8aabd3561f467db2ee4d10fe2f8 psmisc-21.6.ebuild 1274
 MD5 f3ef3a517b7b6b72a1922cede2ac0e9a psmisc-21.8.ebuild 1169
-MD5 0de89476ce3a5a09a8f7356bd3b7b04c psmisc-21.9.ebuild 1101
+MD5 a82b78a88112c06bd8b932b5dd7415aa psmisc-21.9.ebuild 1095
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqfDF2+ySkm8kpY0RAlH8AKCo3KYf3GSFsDa2OjDiVd1p6Y4WwwCfU1WF
-R8bdoUfm4Rq8wNE3JuwWNU0=
-=2bqN
+iD8DBQFDxj4F2+ySkm8kpY0RAlGqAJ97mKLzDyTFr32s+QDx+G0oCCdyFwCgvGok
+G/+4vUHsvliH/Ewh8r+0Fds=
+=9Ejh
 -----END PGP SIGNATURE-----
