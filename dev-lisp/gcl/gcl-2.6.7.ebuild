@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.5 2005/11/15 13:40:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.6 2006/01/12 22:51:19 mkennedy Exp $
 
-inherit elisp-common flag-o-matic
+inherit elisp-common flag-o-matic autotools
 
 DESCRIPTION="GNU Common Lisp"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
@@ -13,21 +13,27 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE="emacs readline debug X tcltk custreloc dlopen gprof doc ansi"
 
-DEPEND=">=app-text/texi2html-1.64
-	emacs? ( virtual/emacs )
+RDEPEND="emacs? ( virtual/emacs )
 	X? ( virtual/x11 )
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
-	doc? ( virtual/tetex )
 	tcltk? ( dev-lang/tk )"
+
+DEPEND="$RDEPEND
+	doc? ( virtual/tetex )
+	>=app-text/texi2html-1.64
+	>=sys-devel/autoconf-2.52"
 
 src_unpack() {
 	unpack ${A}
 	sed -e "s/gcl-doc/${PF}/g" ${S}/info/makefile > ${T}/makefile
 	mv ${T}/makefile ${S}/info/makefile
+	epatch ${FILESDIR}/${PV}-fix-configure.in-gentoo.patch || die
 }
 
 src_compile() {
+	eautoconf || die
+
 	export SANDBOX_ON=0
 	local myconfig=""
 
@@ -147,6 +153,10 @@ src_install() {
 	dosym ../lib/${P}/unixport/saved_gcl /usr/bin/gcl.exe
 
 	dodoc readme* RELEASE* ChangeLog* doc/*
+
+	for i in ${D}/usr/share/doc/gcl-{tk,si}; do
+		mv $i ${D}/usr/share/doc/${PF}
+	done
 
 	find ${D}/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
 }

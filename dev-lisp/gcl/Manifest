@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 795461872d3d5c4d287dea7639b40611 gcl-2.6.7.ebuild 3808
-MD5 8ff2948460c4a0929a03fcdd99283577 gcl-2.6.6.ebuild 3802
-MD5 a4ba1573c362751377faeb74d21bdecf ChangeLog 5061
-MD5 76c0f2f918c95b927960b6dd7f700d32 metadata.xml 414
+MD5 144b253ac958a78e0a19730618133667 ChangeLog 5320
+MD5 1d2903807a9ecc5ea090f1daebe0f956 files/2.6.7-fix-configure.in-gentoo.patch 1452
 MD5 91930d3515af8406b00bbddaa287b9a3 files/digest-gcl-2.6.6 62
 MD5 bc36d4fbf49d4faa858862d3551da607 files/digest-gcl-2.6.7 62
+MD5 8ff2948460c4a0929a03fcdd99283577 gcl-2.6.6.ebuild 3802
+MD5 51dda308ace95c7621dea73a9af0935c gcl-2.6.7.ebuild 4032
+MD5 76c0f2f918c95b927960b6dd7f700d32 metadata.xml 414
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeeVyKRy60XGEcJIRAp4XAJ4t/jLPQuitywpdDqR40anjEjYlrwCgtNnK
-SYFrKXf5EgjXffpxftmtU6Y=
-=HBho
+iD8DBQFDxt10yiNZaEAZA+ARAqQYAJ9QtGU0/T4nHxbOYrUlWvTE7K4jnACggi/0
+p8fOZAsfnLK24GLg1VVlCbw=
+=jO8l
 -----END PGP SIGNATURE-----
