@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a8a6886912386b91d43a9164369462d ChangeLog 805
-MD5 ebdf1804c80eba8dd5ea1bb62f4b1a94 amyedit-0.8.ebuild 554
-MD5 88fe026be3c9fe15b4416edba1ce3c9a amyedit-0.9.ebuild 566
+MD5 aa36817d1e07d43bf27d4c3502e2471e ChangeLog 959
+MD5 65e3387ede94ebd15a4a402c4ddf903f amyedit-0.8.ebuild 555
+MD5 95673df3fcae1c3cf39ecd88adc3eb01 amyedit-0.9.ebuild 568
 MD5 0592a422c868ed668569bdae582e7dac files/digest-amyedit-0.8 64
 MD5 433d8c31659fcbe7d9f7719336ebe354 files/digest-amyedit-0.9 64
 MD5 a0ec84f1746e35678274bbcee0e37869 metadata.xml 230
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmP/g2ZWR0Jhg/EsRAsZgAJ0XGJ7m/NDNXMSrg1fS+0CZ+/t3IgCdE/jB
-hwZHiPUCfl6/6B/8GVBThzA=
-=pkA8
------END PGP SIGNATURE-----
