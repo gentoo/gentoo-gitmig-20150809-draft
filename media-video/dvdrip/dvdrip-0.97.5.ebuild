@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.5.ebuild,v 1.1 2005/12/31 15:59:44 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.5.ebuild,v 1.2 2006/01/12 23:30:23 compnerd Exp $
 
 
 inherit perl-module eutils
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="cdr gnome xvid rar mplayer ogg fping subtitles"
 
-DEPEND="gnome? ( gnome-extra/libgtkhtml )
+DEPEND="gnome? ( gnome-extra/gtkhtml )
 	cdr? ( >=media-video/vcdimager-0.7.19
 		>=app-cdr/cdrdao-1.1.7
 		virtual/cdrtools
