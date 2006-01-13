@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1ae2366ed64d1f89d95a7dfdf3abf74 ChangeLog 481
 MD5 f5dfb26ab72395b600a321fd5803c012 Mail-DomainKeys-0.80.ebuild 576
 MD5 1dce8fc632b95029b03a2b769f826be7 files/digest-Mail-DomainKeys-0.80 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCE9tG5z4I8BtQoRAvtVAKCEeom4ODJKrW9obZrDMQ/PCjbWOwCeL3GM
+vTsY3kVuRTbn7PIZHZVC1js=
+=Mvgf
+-----END PGP SIGNATURE-----

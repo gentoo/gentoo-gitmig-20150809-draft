@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 010eb2f224d493e143730b336ab24471 ChangeLog 1331
 MD5 f159e950fba97acf1ad57330a48c36a1 Crypt-OpenPGP-1.03.ebuild 1124
 MD5 7a4aa0aa8835586186505583e8d5f5c5 files/digest-Crypt-OpenPGP-1.03 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCIItG5z4I8BtQoRArJ2AJ9euZfbgKAB1s2ogNlUMwMsxedHkgCfUkMj
+QpZbrApM6yjKeXHorJ4E5y0=
+=luKA
+-----END PGP SIGNATURE-----
