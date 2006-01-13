@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f9efe6af288226f0dd19df99bec51514 ChangeLog 353
 MD5 3bf7651a647c641c3fbc62086b1092c0 binutils-bfin-2005.3.1.ebuild 842
 MD5 1e006f68961f68debad9df04f0b98955 files/binutils-bfin-2005.3.1-build.patch 881
 MD5 2e67f8ce5d0ab15db41f211037a9bddd files/digest-binutils-bfin-2005.3.1 75
 MD5 c6712d4b439bc632a23799aa1793fc84 metadata.xml 184
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyDAP2+ySkm8kpY0RAgFrAJ9U9DvuL7ejJiJ8g6weekLTeF1T9ACfY1Me
+Kqg5K06v3yohGzzIwLVTaDM=
+=FK1H
+-----END PGP SIGNATURE-----
