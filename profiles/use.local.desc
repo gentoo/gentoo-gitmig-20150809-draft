@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1666 2006/01/12 17:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1667 2006/01/13 00:32:14 halcy0n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1200,6 +1200,10 @@ sys-cluster/torque:scp - Use SCP instead of RCP for copying files between machin
 sys-cluster/util-vserver:glibc - Don't use dietlibc
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/binutils-bfin:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils-bfin:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/binutils-nios2:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils-nios2:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
 sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
@@ -1211,6 +1215,14 @@ sys-devel/gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
 sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
+sys-devel/gcc-bfin:mudflap - Add support for mudflap, a pointer use checking library
+sys-devel/gcc-bfin:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
+sys-devel/gcc-bfin:objc - Build support for the Objective C code language
+sys-devel/gcc-bfin:objc-gc - Build support for the Objective C code language Garbage Collector
+sys-devel/gcc-nios2:mudflap - Add support for mudflap, a pointer use checking library
+sys-devel/gcc-nios2:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
+sys-devel/gcc-nios2:objc - Build support for the Objective C code language
+sys-devel/gcc-nios2:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/cryptsetup-luks:dynamic - Build cryptsetup-luks dynamically
