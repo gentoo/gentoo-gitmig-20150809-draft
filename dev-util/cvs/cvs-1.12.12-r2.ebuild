@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.12 2005/09/04 11:00:37 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.13 2006/01/13 21:04:00 flameeyes Exp $
 
 inherit eutils pam
 
@@ -33,6 +33,7 @@ src_compile() {
 	econf \
 		--with-external-zlib \
 		--with-tmpdir=/tmp \
+		--disable-nls \
 		`use_enable crypt encryption` \
 		`use_enable pam` \
 		|| die
