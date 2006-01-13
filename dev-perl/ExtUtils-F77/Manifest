@@ -2,7 +2,9 @@ MD5 90a0ee485505f027af855569dcef74f9 ChangeLog 2167
 MD5 a523b6aac5747379d78dd5a9a242541b ExtUtils-F77-1.13-r1.ebuild 475
 MD5 0f8b4de70de89395edb2773440c24109 ExtUtils-F77-1.14-r1.ebuild 519
 MD5 9e249f4d27d3c946424195d30c1b7788 ExtUtils-F77-1.14.ebuild 466
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 69f2d2c193d23dbdbe8fb44c98356b03 ExtUtils-F77-1.15.ebuild 416
 MD5 3327035831837e6fee1dbfc3668dd604 files/digest-ExtUtils-F77-1.13-r1 67
 MD5 d77130a97c663e5178f45cf73fdc8f6d files/digest-ExtUtils-F77-1.14 67
 MD5 d77130a97c663e5178f45cf73fdc8f6d files/digest-ExtUtils-F77-1.14-r1 67
+MD5 1635d57c19f504e50a09329183d8684e files/digest-ExtUtils-F77-1.15 67
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

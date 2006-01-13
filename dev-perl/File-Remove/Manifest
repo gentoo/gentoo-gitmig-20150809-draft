@@ -3,8 +3,10 @@ MD5 148d34221de46dcef9623fcbdac5791d File-Remove-0.20.ebuild 577
 MD5 425705ce96b1b96c67394b38cb74bc53 File-Remove-0.21.ebuild 555
 MD5 94dffa16810317df74296f37b6116a1a File-Remove-0.29.ebuild 565
 MD5 509f2dafdc70934006dfe9fd1339f4be File-Remove-0.30.ebuild 565
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 628956d6a4f5db0e9f11b9e8ac8cac29 File-Remove-0.31.ebuild 457
 MD5 8c0ccdccb87f15924ea07db8c351ac26 files/digest-File-Remove-0.20 65
 MD5 6b270e3cb4b8efd02e008f12ac5baa33 files/digest-File-Remove-0.21 66
 MD5 c3933831892b78883367423c819e7d42 files/digest-File-Remove-0.29 66
 MD5 2781493537f9946b8be8a000cbbfdcac files/digest-File-Remove-0.30 66
+MD5 821d3be17ad62b52e6e7cbe3098a2751 files/digest-File-Remove-0.31 66
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
