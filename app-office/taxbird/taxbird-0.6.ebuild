@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.6.ebuild,v 1.1 2006/01/12 21:41:32 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.6.ebuild,v 1.2 2006/01/13 00:32:07 compnerd Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="
 dev-libs/libgeier
 dev-libs/openssl
-=gnome-extra/libgtkhtml-2*
+=gnome-extra/gtkhtml-2*
 gnome-base/libgnomeui
 sys-devel/gettext
 dev-util/guile"
