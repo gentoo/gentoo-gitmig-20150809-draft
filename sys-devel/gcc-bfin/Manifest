@@ -1,4 +1,4 @@
 MD5 0008525cab504161edfa0a5beec2e43b ChangeLog 338
 MD5 2e67f8ce5d0ab15db41f211037a9bddd files/digest-gcc-bfin-2005.3.1 75
-MD5 16b1e3f601753399d6a7e9262d8611ae gcc-bfin-2005.3.1.ebuild 871
+MD5 fdb786cb33310d3521f25213df18fe25 gcc-bfin-2005.3.1.ebuild 901
 MD5 c6712d4b439bc632a23799aa1793fc84 metadata.xml 184
