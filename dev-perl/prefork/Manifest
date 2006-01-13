@@ -1,4 +1,4 @@
-MD5 601c085b52d9456bde436ac4ed25fae9 ChangeLog 876
+MD5 d8ceb0259c482a691b2cac2716b01cd2 ChangeLog 980
 MD5 de6f209b35dd821d576bce5c004fea47 files/digest-prefork-1.00 63
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f89a1048fc7137c998d7bb8700da4ac7 prefork-1.00.ebuild 605
+MD5 5f98f5cde58a023fe25fd57109d36608 prefork-1.00.ebuild 603
