@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ace415851f28235b56cf9096b4f6dbb3 ChangeLog 2219
 MD5 567c69e1a68f2ce7037e1bf0737a158a DateTime-0.22.ebuild 669
 MD5 96ce9d6f17230cd051408a8b5ea74c6a DateTime-0.28.ebuild 624
@@ -8,3 +11,10 @@ MD5 e3898473328fd1c50847118377dbfdd1 files/digest-DateTime-0.28 64
 MD5 41effd4bb7d53a6f4f6c9ad61aebfe5d files/digest-DateTime-0.2901 66
 MD5 fd0f65a0e027078db59eb2257e515a2f files/digest-DateTime-0.30 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx7M1tG5z4I8BtQoRAtZAAKCOgP2xAG3Oc1m0TwuvoSBBoQmA8QCfUtcJ
+e6pEzGC9gHJ47sSc2aKTj2Q=
+=GVh3
+-----END PGP SIGNATURE-----
