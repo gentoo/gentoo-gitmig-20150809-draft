@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b565225ef6e1d78723d7d535d224fa90 ChangeLog 3499
 MD5 c3906a462f3e92f442550ed7884c79d7 Class-MethodMaker-1.11.ebuild 538
-MD5 5c649f11dab0e3dcfdeb5ae2e9a2a609 Class-MethodMaker-2.07-r2.ebuild 582
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 73ba8ddba2efbe62b419dbb697a23a15 Class-MethodMaker-2.07-r2.ebuild 583
+MD5 4b5a152b498a794d01663c6b30e6874e Class-MethodMaker-2.08.ebuild 440
 MD5 a2a1bcd1e4774ec6755462b1bc3795c2 files/digest-Class-MethodMaker-1.11 73
 MD5 8e850cd4da47af44dddb828b7d3f430e files/digest-Class-MethodMaker-2.07-r2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFC3SUBtG5z4I8BtQoRAsmKAJ0UYicBCvD4TUPxDFpG6izymTnBQwCghB5I
-VRt4L3hEHGGcyjnUSAruw6k=
-=oNWb
------END PGP SIGNATURE-----
+MD5 03dd1a7fee7f3fcaeb688a26f368e4ea files/digest-Class-MethodMaker-2.08 73
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
