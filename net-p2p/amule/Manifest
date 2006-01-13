@@ -1,4 +1,4 @@
-MD5 db738b6a1de99712846ac16df25e0b79 ChangeLog 8657
+MD5 7fb5b92bed515ec22d9a0f7314bf52e2 ChangeLog 8862
 MD5 b3c15e104e1b64f5499fad3b01f9b27d amule-1.2.8-r1.ebuild 829
 MD5 52781eab799d0ab31cdcd3847805789e amule-1.2.8-r2.ebuild 826
 MD5 8089773038f60bec63f9fc87c15aa26e amule-1.2.8.ebuild 922
@@ -13,8 +13,8 @@ MD5 98f71604f7f7ccc8b63b3aaaba3c9b89 amule-2.1.0-r1.ebuild 3117
 MD5 8cde6982e4b5300f4521da90ab8733d6 files/amule-2.0.0_rc7-wxgtk.patch 1293
 MD5 6cfdc1b9b4a65d47e9047a8fed427889 files/amuled.confd 409
 MD5 37c7ee8278a02051a68d062beba82fbc files/amuled.initd 1138
-MD5 9b94153fb9594079c1df009460ece8fd files/amuleweb.confd 697
-MD5 75c780e3a94f217a14a99371aa7e9a56 files/amuleweb.initd 1176
+MD5 a10ba0e3eace37231ef0aab8a91d312c files/amuleweb.confd 758
+MD5 fcb8c3ac5b48723eee8565d59d0fb622 files/amuleweb.initd 1171
 MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8 65
 MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8-r1 65
 MD5 6222124296125a6909963944434e0291 files/digest-amule-1.2.8-r2 65
