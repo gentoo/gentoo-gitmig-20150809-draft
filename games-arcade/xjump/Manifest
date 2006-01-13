@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 355d84dc5551cd831f248181e5b7501d ChangeLog 658
+MD5 2a3ce080858d99fe984aced919d40b80 ChangeLog 753
 MD5 0c9248703c67b3d356fa4e306f7a6db6 files/digest-xjump-2.7.5 133
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 caa9aaf5aba55748ead94a54138c0deb xjump-2.7.5.ebuild 1382
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDpDLnwUpWvClEHQoRAlF5AJ4sLyhSbuhDskyguY/mf2s8+WKbyACYuSNg
-67enxg/0mNf3pHF7YTZXRg==
-=C1BF
------END PGP SIGNATURE-----
+MD5 75b6b4409b2d9ab41c4dbad1741024b2 xjump-2.7.5.ebuild 1632
