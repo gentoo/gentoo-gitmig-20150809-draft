@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Exporter-Cluster
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Cluster/ChangeLog,v 1.1 2005/12/12 13:06:08 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Cluster/ChangeLog,v 1.2 2006/01/13 20:44:53 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Exporter-Cluster-0.31.ebuild:
+  Marking stable x86
 
 *Exporter-Cluster-0.31 (12 Dec 2005)
 
