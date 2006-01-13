@@ -1,4 +1,4 @@
-MD5 1c495bb0a73641e9920306a088bc344b ChangeLog 1426
+MD5 b376892494780c7667b8a337f3ec8f50 ChangeLog 1558
 MD5 998db9369c998907270da8bc9ac54da6 files/digest-spamassassin-ruledujour-20040701 85
 MD5 9d1bea9ead3b9e70de27441abf853ea6 files/digest-spamassassin-ruledujour-20050106 85
 MD5 8e3465fb4f56e79c4d28902f6c7edfd0 files/digest-spamassassin-ruledujour-20050822 85
@@ -7,4 +7,4 @@ MD5 5e658b705b2985d36d82b2a5d218ec78 metadata.xml 224
 MD5 7bbde4c6288951c126a578a403f27c0b spamassassin-ruledujour-20040701.ebuild 1408
 MD5 45bc59d94bd9c1675e96e8a8e3dd3aa8 spamassassin-ruledujour-20050106.ebuild 1957
 MD5 5309b6244ad93c97c00dcb0439a86506 spamassassin-ruledujour-20050822.ebuild 2008
-MD5 1d0731f5c4979749040f73b7bceb89b6 spamassassin-ruledujour-20051123.ebuild 2008
+MD5 4681fde7374dc782255f96b7e9d40c56 spamassassin-ruledujour-20051123.ebuild 2008
