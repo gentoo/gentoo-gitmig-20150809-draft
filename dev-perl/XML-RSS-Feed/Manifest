@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30d6628ceee25f36e2fa8978902d96aa ChangeLog 1084
 MD5 6de97a60797acb1c297dfe5346236950 XML-RSS-Feed-2.04.ebuild 610
 MD5 65ff9f2c0fdb4771844a97421b3072ad XML-RSS-Feed-2.1.ebuild 609
 MD5 d46e2ae4819162007e44d8220379f815 files/digest-XML-RSS-Feed-2.04 68
 MD5 845aab8ea7ebaeefe8cb53828bea72bf files/digest-XML-RSS-Feed-2.1 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCuntG5z4I8BtQoRAtJhAJ9bahuH6cEtJy+rd35jZyUQcs4/YACcDMs9
+8ANESFCAvqmztJib65lwhWY=
+=qa7J
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 58f5315c2e89df4f4f692727003fa2dc ChangeLog 893
 MD5 7cf586a2dee647bd4ab36fdbc64f73a4 Test-WWW-Mechanize-1.04.ebuild 709
 MD5 64e2a0b2773e041f672da55e7416c9e3 Test-WWW-Mechanize-1.08.ebuild 814
 MD5 2b547ad00616c0840304748e9d6c34a5 files/digest-Test-WWW-Mechanize-1.04 73
 MD5 9951ecb719ab16f40ea28e4f9a7df698 files/digest-Test-WWW-Mechanize-1.08 74
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCiItG5z4I8BtQoRAn9dAJ0dWbd3MfsjlgnGWWTqcQ6gkUxTjwCfbMR6
+d3BgtHkyiNGKgiHvCWt1VBA=
+=IMsp
+-----END PGP SIGNATURE-----
