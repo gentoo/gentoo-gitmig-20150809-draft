@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7646d433412b7700fb9037c62f47a0d ChangeLog 1286
 MD5 c58c3fd7d4ebf456c65599b3bf8afe6c files/digest-libvorbis-perl-0.04 70
 MD5 90394f0d8c0914758d8f598c9a805c68 files/digest-libvorbis-perl-0.05 70
 MD5 4ffb7f059a741ca554660b66a210ae32 libvorbis-perl-0.04.ebuild 583
 MD5 1eaacb00af19483b35f964831a0f06dd libvorbis-perl-0.05.ebuild 588
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBzWtG5z4I8BtQoRAg5aAKCABXkn7HdkxX/fU1gNoxoaaOMNvACfZTuR
+p8pAGNGzQnlNU9Cz6Nw12jA=
+=LeUw
+-----END PGP SIGNATURE-----
