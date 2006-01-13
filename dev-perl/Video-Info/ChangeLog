@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Info
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.3 2005/04/25 20:01:34 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.4 2006/01/13 22:32:46 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Video-Info-0.999.ebuild:
+  Marking x86 stable
 
   25 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> Video-Info-0.999.ebuild:
   added ~ppc to KEYWORDS

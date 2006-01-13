@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7beef40da9cfd434006a2d46aefadcd3 Video-Info-0.999.ebuild 533
-MD5 1032e4ea4bda7695918aa90802671f6c ChangeLog 585
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 67f17fcd8af0c39e9906e48563956802 ChangeLog 689
+MD5 72e2ddca1efa46da34c9178f2740cb33 Video-Info-0.999.ebuild 532
 MD5 b61196ae6759f9f91a2023e10d4ca475 files/digest-Video-Info-0.999 66
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbUy006ebR+OMO78RAlK3AJwKNtxhSsCEG0PhwzCZwu+hEeBmKQCeL8/E
-V56EFSvc4Bqw4V1ygsBe1XQ=
-=5r/t
+iD8DBQFDyCqStG5z4I8BtQoRAiziAJ4rWY2oonj0A1IBuIXrNXJbHRkAOACeO+Um
+B7KETzTLUTDPr8nW5Uy994Y=
+=Dijd
 -----END PGP SIGNATURE-----
