@@ -1,4 +1,6 @@
 MD5 aee613ebe3c917388c7b5d098f40875d ChangeLog 1373
 MD5 d3420619483a290f516acd6bc5289f90 Sys-Hostname-Long-1.2.ebuild 521
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 79849d60587a328a126d34001e866153 Sys-Hostname-Long-1.4.ebuild 408
 MD5 2902d9dcf3573609ada284f2d3f90e35 files/digest-Sys-Hostname-Long-1.2 71
+MD5 c57b50e7ea1ccf19867e55e649024371 files/digest-Sys-Hostname-Long-1.4 71
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

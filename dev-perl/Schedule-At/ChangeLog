@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Schedule-At
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.1 2005/05/14 17:42:23 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.2 2006/01/13 16:26:53 mcummings Exp $
+
+*Schedule-At-1.06 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Schedule-At-1.05.ebuild, +Schedule-At-1.06.ebuild:
+  Version bump
 
 *Schedule-At-1.05 (14 May 2005)
 
