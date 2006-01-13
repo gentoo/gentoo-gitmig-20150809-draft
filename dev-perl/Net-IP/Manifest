@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85158ad0159f6d48287e496a2cce0c45 ChangeLog 961
 MD5 5310a7916c644b06fdeb4db4fc4ccdf0 Net-IP-1.24.ebuild 545
 MD5 060154fb0b98977f1b94a6fbdbd2cad6 files/digest-Net-IP-1.24 62
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCMrtG5z4I8BtQoRApCRAJ4g16BzHVydF3k0e3OGHoNDhS1h/ACfUkbL
+jx9qV6czhstiVn1vJjnHYEw=
+=OrAi
+-----END PGP SIGNATURE-----

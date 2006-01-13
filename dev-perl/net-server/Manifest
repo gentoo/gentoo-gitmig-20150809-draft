@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b5abcb3816528ff6eb9d0deb88ad87b5 ChangeLog 2607
 MD5 792d1ec217d44781e9d154e69f665156 files/digest-net-server-0.85 66
 MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87 66
@@ -10,3 +13,10 @@ MD5 a25e4072a0b2144eb4256e264ab5bbf7 net-server-0.87-r1.ebuild 602
 MD5 4dcc804770af05b578530a1d30c6042c net-server-0.87.ebuild 598
 MD5 91db74643ca9265466c11eb805353147 net-server-0.88.ebuild 613
 MD5 817692430ca62b3f841ce7a87702cb84 net-server-0.90.ebuild 615
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCPHtG5z4I8BtQoRApdVAJ4i3RGaBHI5jKUtwYesr+i7DqHj6gCfbkms
+ZwEwXr9hY8COoPRHtbI30VI=
+=ocix
+-----END PGP SIGNATURE-----

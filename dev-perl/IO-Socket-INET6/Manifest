@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c0efb9e18d8190adf9eaa5492c778ce ChangeLog 728
 MD5 ce8fb6531d3aa4d39f320ee4dd967419 IO-Socket-INET6-2.51.ebuild 540
 MD5 b47450971fb16c1a9801693514172530 files/digest-IO-Socket-INET6-2.51 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCNWtG5z4I8BtQoRAgc6AJwP8q8J2x9cEztG5+ONrr+IScUoFACgkbyd
+cvgV/UHvfE+r9Ow71kjNGtU=
+=T/xz
+-----END PGP SIGNATURE-----

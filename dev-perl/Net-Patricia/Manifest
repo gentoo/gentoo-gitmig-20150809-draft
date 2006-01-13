@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 366357b34b07c636b9521a1783f67f9e ChangeLog 733
 MD5 144d215e1f6014262d0e5677da4ea8bc Net-Patricia-1.010.ebuild 505
 MD5 9e4d9ca260cccf5d581f8d8cd26513f5 Net-Patricia-1.014.ebuild 507
 MD5 108e5f24103074d7e53e34b30576a4f0 files/digest-Net-Patricia-1.010 69
 MD5 33eb572b907db750896001c800a092fa files/digest-Net-Patricia-1.014 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCObtG5z4I8BtQoRAomzAJ0aramNrpVMfrSmw/PuHzwOphz9SwCfcV30
+nLDN8B/FzsxUh09AY6jYJs0=
+=ublr
+-----END PGP SIGNATURE-----
