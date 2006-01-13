@@ -1,4 +1,4 @@
-MD5 94dbcbe250f1dce3e7693ff5b9018c26 ChangeLog 1815
+MD5 d65484306555937e8711f0e1bdd9c66d ChangeLog 1959
 MD5 8d42257d4956bde70679b231e0ed74ce files/digest-log-dispatch-2.06 68
 MD5 b6f7ef764c5b1a25215ca0fbde21a986 files/digest-log-dispatch-2.08 68
 MD5 c879383537659d74f314eebc2452e349 files/digest-log-dispatch-2.10 68
@@ -6,5 +6,5 @@ MD5 f1f008c3927ca40a2d92221cd688d90d files/digest-log-dispatch-2.11 68
 MD5 0c0a1b99a403b834f53c8be3422e7d4e log-dispatch-2.06.ebuild 651
 MD5 2f4047b3b220cf4486cdc31ef20da490 log-dispatch-2.08.ebuild 644
 MD5 f2b1801bf52dfa34c12263c5eb07c92f log-dispatch-2.10.ebuild 668
-MD5 0622c24194b396ee2336d19836708fb0 log-dispatch-2.11.ebuild 561
+MD5 3e1803598ae941768f17cc3560bb7dd7 log-dispatch-2.11.ebuild 672
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
