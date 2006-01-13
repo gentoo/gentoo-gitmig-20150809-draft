@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/afterstep
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.48 2005/11/11 23:10:25 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.49 2006/01/13 17:52:12 kloeri Exp $
+
+*afterstep-2.2.0 (13 Jan 2006)
+
+  13 Jan 2006; Bryan Østergaard <kloeri@gentoo.org +afterstep-2.2.0.ebuild:
+  Bump to 2.2.0.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   afterstep-2.1.2.ebuild:
