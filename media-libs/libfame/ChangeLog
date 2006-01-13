@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfame
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.44 2005/11/01 14:22:32 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.45 2006/01/13 23:34:02 vapier Exp $
+
+  13 Jan 2006; Mike Frysinger <vapier@gentoo.org> libfame-0.9.1-r1.ebuild:
+  Cleanup ebuild and add sh love.
 
   01 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> -libfame-0.8.10.ebuild,
   -libfame-0.9.0-r1.ebuild, -libfame-0.9.1.ebuild:
