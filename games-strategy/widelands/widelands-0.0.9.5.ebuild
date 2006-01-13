@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.6 2006/01/09 12:13:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.7 2006/01/13 13:57:58 genstef Exp $
 
-inherit eutils games
+inherit eutils games flag-o-matic
 
 DESCRIPTION="A game similar to Settlers 2"
 HOMEPAGE="http://widelands.sourceforge.net/"
@@ -28,10 +28,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/widelands-0.0.9-amd64.patch"
+	epatch "${FILESDIR}/widelands-makefile.patch"
 	sed -i -e "s:__ppc__:__PPC__:g" "${S}/src/machdep.h" || die "sed failed"
 }
 
 src_compile() {
+	filter-flags -fomit-frame-pointer
 	use debug || export BUILD="release"
 	use elibc_glibc && export IMPLICIT_LIBINTL=1
 	emake || die "emake failed"
