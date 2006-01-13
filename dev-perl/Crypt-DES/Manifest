@@ -1,4 +1,16 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 db0bc080e0f10350df1e53200d2ad25c ChangeLog 1276
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5b2baea5044907b2602359c7ceaf9bb ChangeLog 1414
 MD5 acd3598d3ea3c842d07d6b5858c61c5d Crypt-DES-2.03-r1.ebuild 595
+MD5 14bc3dc58866c5d6e29ff2e1e815a2b6 Crypt-DES-2.05.ebuild 600
 MD5 20b57e088f4bef8d9cefc07ad0a1e884 files/digest-Crypt-DES-2.03-r1 65
+MD5 4f80799d9f3fbc864a383dbcd118436d files/digest-Crypt-DES-2.05 65
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx67WtG5z4I8BtQoRApBAAJ9kWOtIwP0UjQtMU3ud0s2Zg68UvwCfSMkm
+Bc2SZoFT7jh5noTqgDF+pNU=
+=O2Oj
+-----END PGP SIGNATURE-----
