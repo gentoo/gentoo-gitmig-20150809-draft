@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3bcc5d1a95a6464a40f892888881f80a nap-1.5.2.ebuild 690
-MD5 d83ab69c0fac0da7247cf1db5bf6f7f8 nap-1.5.3.ebuild 694
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 d652ac1629afa5985e4fe845a8107224 nap-1.5.1.ebuild 692
-MD5 806ed5402e647b08b38d00f35e4e7431 ChangeLog 1506
-MD5 8d8fead8e54e52fef2163c1794d07320 files/digest-nap-1.5.3 61
-MD5 ee871733447edf5524b77d069cfb79a9 files/digest-nap-1.5.2 61
+MD5 7cbc9faf1c0037084e2f6fd03025bbbc ChangeLog 1675
 MD5 a2bbf8ef0e96487e051c953209d496fb files/digest-nap-1.5.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK1d9LLFUmVNQ7rkRAr5UAJ9w19mRsWW/n6VL6y5WMNbRsZN9kACguxdn
-6sySCs2z1JdozS1p67FMy/o=
-=Fg5r
------END PGP SIGNATURE-----
+MD5 ee871733447edf5524b77d069cfb79a9 files/digest-nap-1.5.2 61
+MD5 8d8fead8e54e52fef2163c1794d07320 files/digest-nap-1.5.3 61
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 da7c66ab4dac108f029089287914ad14 nap-1.5.1.ebuild 680
+MD5 e6680152cd43b40a1dc2d3c2c8587387 nap-1.5.2.ebuild 680
+MD5 f1883fa21150ac2c1f97fff2071ed02a nap-1.5.3.ebuild 683
