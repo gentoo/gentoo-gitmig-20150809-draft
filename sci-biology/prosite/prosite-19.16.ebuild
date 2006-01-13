@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.16.ebuild,v 1.1 2005/12/08 20:15:23 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.16.ebuild,v 1.2 2006/01/13 02:47:15 ribosome Exp $
 
 DESCRIPTION="A protein families and domains database"
 LICENSE="swiss-prot"
@@ -11,7 +11,7 @@ SLOT="0"
 # Minimal build keeps only the indexed files (if applicable) and the
 # documentation. The non-indexed database is not installed.
 IUSE="emboss minimal"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 x86"
 
 DEPEND="emboss? ( >=sci-biology/emboss-3.0.0 )"
 
