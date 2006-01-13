@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.51 2006/01/12 23:57:55 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.52 2006/01/13 13:56:05 cryos Exp $
+
+  13 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> gallery-2.0.2-r1.ebuild:
+  Stable on amd64, bug 117737.
 
   12 Jan 2006; Jose Luis Rivero <yoswink@gentoo.org> gallery-1.5.1.ebuild:
   Stable on alpha wrt #117737
