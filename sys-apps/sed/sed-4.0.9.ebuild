@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.31 2005/02/12 00:43:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.32 2006/01/13 19:42:09 flameeyes Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE="nls static build bootstrap"
 
-RDEPEND="virtual/libc"
+RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
