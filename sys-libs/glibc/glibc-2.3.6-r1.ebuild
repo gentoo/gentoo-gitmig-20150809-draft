@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.10 2006/01/07 03:25:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.11 2006/01/13 12:15:53 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -417,23 +417,6 @@ toolchain-glibc_src_install() {
 		popd > /dev/null
 		rm -rf ${D}/nptl
 	fi
-
-	# Now, strip everything but the thread libs #46186, as well as the dynamic
-	# linker, else we cannot set breakpoints in shared libraries.
-	# Fix for ld-* by Lonnie Princehouse.
-	mkdir -p ${T}/thread-backup
-	for x in ${D}$(alt_libdir)/lib{pthread,thread_db}* \
-	         ${D}$(alt_libdir)/ld-* ; do
-		[[ -f ${x} ]] && mv -f ${x} ${T}/thread-backup/
-	done
-	if want_linuxthreads && want_nptl ; then
-		mkdir -p ${T}/thread-backup/tls
-		for x in ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ; do
-			[[ -f ${x} ]] && mv -f ${x} ${T}/thread-backup/tls
-		done
-	fi
-	env -uRESTRICT CHOST=${CTARGET} prepallstrip
-	cp -a -- ${T}/thread-backup/* ${D}$(alt_libdir)/ || die
 
 	if use pic && [[ $(tc-arch) != "amd64" ]] ; then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}$(alt_libdir)/soinit.o \;
@@ -1273,6 +1256,32 @@ src_test() {
 	toolchain-glibc_src_test
 }
 
+src_strip() {
+	# Now, strip everything but the thread libs #46186, as well as the dynamic
+	# linker, else we cannot set breakpoints in shared libraries due to bugs in
+	# gdb.  Also want to grab stuff in tls subdir.  whee.
+#when new portage supports this ...
+#	env \
+#		-uRESTRICT \
+#		CHOST=${CTARGET} \
+#		STRIP_MASK="/*/{,tls/}{ld-,lib{pthread,thread_db}}*" \
+#		prepallstrip
+	pushd "${D}" > /dev/null
+
+	mkdir -p "${T}"/strip-backup
+	for x in $(find "${D}" -maxdepth 3 \
+	           '(' -name 'ld-*' -o -name 'libpthread*' -o -name 'libthread_db*' ')' \
+	           -a '(' '!' -name '*.a' ')' -type f -printf '%P ')
+	do
+		mkdir -p "${T}/strip-backup/${x%/*}"
+		cp -a -- "${D}/${x}" "${T}/strip-backup/${x}" || die "backing up ${x}"
+	done
+	env -uRESTRICT CHOST=${CTARGET} prepallstrip
+	cp -a -- "${T}"/strip-backup/* "${D}"/ || die "restoring non-stripped libs"
+
+	popd > /dev/null
+}
+
 src_install() {
 	setup_env
 
@@ -1292,6 +1301,7 @@ src_install() {
 			done
 			ABI=${OABI}
 			unset OABI
+			src_strip
 			return 0
 		fi
 	fi
@@ -1315,6 +1325,7 @@ src_install() {
 	else
 		toolchain-glibc_src_install
 	fi
+	[[ -z ${OABI} ]] && src_strip
 
 	# Handle stupid lib32 BS on amd64 and ppc64
 	if [[ -n ${OLD_LIBDIR} ]] ; then
