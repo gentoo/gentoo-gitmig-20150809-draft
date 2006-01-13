@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.38 2006/01/05 07:24:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.39 2006/01/13 18:47:52 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -109,8 +109,12 @@ if [[ "${PN/#xf86-video}" != "${PN}" ]] || [[ "${PN/#xf86-input}" != "${PN}" ]];
 fi
 
 DEPEND="${DEPEND}
-	>=dev-util/pkgconfig-0.18
-	>=x11-misc/util-macros-0.99.2"
+	>=dev-util/pkgconfig-0.18"
+
+if [[ "${PN/util-macros}" != "${PN}" ]]; then
+	DEPEND="${DEPEND}
+		>=x11-misc/util-macros-0.99.2"
+fi
 
 # >=sys-apps/man-1.6b-r2 required to look in [0-8]x/ directories
 RDEPEND="${RDEPEND}
