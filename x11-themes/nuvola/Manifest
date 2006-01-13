@@ -1,4 +1,14 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 50b30c9bf69e467891dd1509143b479d ChangeLog 1670
-MD5 f0ca6fe15c38bf2afd8ea48e258a0e26 nuvola-1.0-r1.ebuild 699
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 97ab5fe6a12f77ac75bfd59b806284f1 ChangeLog 1765
 MD5 4803ed418dd56e0eed289f0c67722023 files/digest-nuvola-1.0-r1 64
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 42d2346a2e5bfa2867d8b67ad23e2221 nuvola-1.0-r1.ebuild 698
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDx+5fKRy60XGEcJIRAqDlAJ4qm0SX63UfGMYWt0Xeyst2L/YsXQCeLY4h
+5pUjdIfoDma99YHSH1Tgy/s=
+=jDkC
+-----END PGP SIGNATURE-----

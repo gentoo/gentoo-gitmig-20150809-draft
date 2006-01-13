@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/nuvola
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.13 2005/10/02 19:58:43 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.14 2006/01/13 18:15:41 gustavoz Exp $
+
+  13 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> nuvola-1.0-r1.ebuild:
+  Stable on sparc
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> nuvola-1.0-r1.ebuild:
   Mark 1.0-r1 stable on ia64

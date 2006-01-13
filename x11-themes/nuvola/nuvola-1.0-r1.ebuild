@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/nuvola-1.0-r1.ebuild,v 1.6 2005/10/02 19:58:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/nuvola-1.0-r1.ebuild,v 1.7 2006/01/13 18:15:41 gustavoz Exp $
 
 DESCRIPTION="Nuvola SVG icon theme."
 SRC_URI="http://www.icon-king.com/files/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.kde-look.org/content/show.php?content=5358"
 LICENSE="LGPL-2"
 
 IUSE=""
-KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 SLOT="0"
 
 RESTRICT="nostrip"
