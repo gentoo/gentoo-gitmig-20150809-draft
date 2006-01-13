@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Inline
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.31 2006/01/03 21:28:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.32 2006/01/13 22:22:53 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Inline-2.103.ebuild:
+  marking sparc x86 stable
 
   03 Jan 2006; <plasmaroo@gentoo.org> Test-Inline-2.103.ebuild:
   Mark ~ia64; bug #113367.

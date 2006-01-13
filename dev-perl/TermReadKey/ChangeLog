@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/TermReadKey
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.15 2005/04/27 17:57:07 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.16 2006/01/13 22:22:10 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  TermReadKey-2.30.ebuild:
+  marking sparc x86 stable
 
 *TermReadKey-2.30 (27 Apr 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/regexp-common-2.120.ebuild,v 1.4 2005/10/14 01:53:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/regexp-common-2.120.ebuild,v 1.5 2006/01/13 22:14:41 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,5 @@ SRC_URI="mirror://cpan/authors/id/A/AB/ABIGAIL/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc sparc x86"
 IUSE=""

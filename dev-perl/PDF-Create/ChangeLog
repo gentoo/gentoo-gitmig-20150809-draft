@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PDF-Create
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.12 2005/08/26 00:00:25 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.13 2006/01/13 22:10:30 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  PDF-Create-0.06.1b.ebuild:
+  marking sparc x86 stable
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> PDF-Create-0.06.1b.ebuild:
   add ~ia64
