@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/IO-Pager-0.05.ebuild,v 1.5 2005/07/18 17:55:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/IO-Pager-0.05.ebuild,v 1.6 2006/01/13 21:29:13 mcummings Exp $
 
 inherit perl-module
 
@@ -12,4 +12,4 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"

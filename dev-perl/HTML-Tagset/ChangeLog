@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Tagset
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.21 2005/11/23 15:39:57 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.22 2006/01/13 21:26:55 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Tagset-3.10.ebuild:
+  Marking stable sparc x86
 
 *HTML-Tagset-3.10 (23 Nov 2005)
 
