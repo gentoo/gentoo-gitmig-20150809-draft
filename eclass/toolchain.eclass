@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.241 2006/01/08 12:32:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.242 2006/01/13 10:38:16 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1943,6 +1943,8 @@ do_gcc_PIE_patches() {
 	want_boundschecking \
 		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch* \
 		|| rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-yes.patch*
+
+	use vanilla && rm -f "${WORKDIR}"/piepatch/*/*uclibc*
 
 	guess_patch_type_in_dir "${WORKDIR}"/piepatch/upstream
 
