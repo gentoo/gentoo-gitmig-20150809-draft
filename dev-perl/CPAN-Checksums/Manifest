@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 27f8610f64b9859061ba31a73c93a30e CPAN-Checksums-1.032.ebuild 626
-MD5 e2fd1aa770d64f5c64d3e01d8d826fd7 CPAN-Checksums-1.039.ebuild 628
-MD5 2dd3cd8ed2662a2e020cb608cc060b1b ChangeLog 744
-MD5 dc5ae15f59af4d63bbbe52b44e35d7f5 files/digest-CPAN-Checksums-1.032 71
+MD5 06266ef207bb2bdbccf59f460ea5c88e CPAN-Checksums-1.039.ebuild 626
+MD5 6dd8023778c112a57a3b1c0835fa1d27 ChangeLog 888
 MD5 f8cd095d363c28873cd3ace8f28a9a2a files/digest-CPAN-Checksums-1.039 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDgx7LtG5z4I8BtQoRAgnOAJwN75rTt4vaMVEvTbcJLyOD4nKxIQCdEro/
-8u/fjXWK5hIyUC0fAs56iXA=
-=VZOo
------END PGP SIGNATURE-----
