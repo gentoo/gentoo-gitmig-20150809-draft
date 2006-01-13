@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xtrlock
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.7 2005/03/29 17:50:04 luckyduck Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.8 2006/01/13 12:21:05 nelchael Exp $
+
+  13 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -xtrlock-2.0.ebuild,
+  xtrlock-2.0-r1.ebuild:
+  Fixed DEPEND for modular X, bug #118778.
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/xtrlock-2.0-gcc34.patch, xtrlock-2.0-r1.ebuild:

@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c50bdbca518909b6bb025acc92ac733 xtrlock-2.0-r1.ebuild 885
-MD5 17fa8ae0675c49c599f740718621167b xtrlock-2.0.ebuild 729
-MD5 771dc4e6cee7055e33e2af1e8868ef83 ChangeLog 1654
-MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 5cd5750d76f6d3cc6e18d5db25e64acb files/xtrlock-2.0-gcc34.patch 310
+MD5 ed63d3ba2e9053ed810893c80e325f37 ChangeLog 1796
 MD5 9c5d390720d5c846a174088a8214c7c8 files/digest-xtrlock-2.0-r1 63
+MD5 5cd5750d76f6d3cc6e18d5db25e64acb files/xtrlock-2.0-gcc34.patch 310
 MD5 4bbac4dd2e60384f0e40af9e37159cd2 files/xtrlock-2.0-overflow.patch 712
-MD5 9c5d390720d5c846a174088a8214c7c8 files/digest-xtrlock-2.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCSZVk06ebR+OMO78RAijiAJ4uqLcREafX8LILPdQ3pkc2jakpeACfWuJV
-cVws3K36Jy65FRLCiOpnXqI=
-=r5g0
------END PGP SIGNATURE-----
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 450d216ef739ac5116f58462a6b966da xtrlock-2.0-r1.ebuild 994
