@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.33 2006/01/11 14:21:51 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.34 2006/01/13 13:24:35 fvdpol Exp $
+
+*museseq-0.7.2_pre5 (13 Jan 2006)
+
+  13 Jan 2006; Frank van de Pol <fvdpol@gentoo.org>
+  +museseq-0.7.2_pre5.ebuild:
+  version bump to 0.7.2_pre5
 
   11 Jan 2006; Frank van de Pol <fvdpol@gentoo.org> museseq-0.6.2-r1.ebuild,
   museseq-0.7.0-r1.ebuild, museseq-0.7.1_pre3.ebuild, museseq-0.7.1.ebuild,
