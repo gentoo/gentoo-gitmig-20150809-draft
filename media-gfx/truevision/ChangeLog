@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/truevision
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.8 2006/01/13 20:16:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.9 2006/01/13 21:59:32 vanquirius Exp $
+
+  13 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  truevision-0.5.5.2.ebuild:
+  Do not install documentation in two places, thanks to Chris Mayo <mayo at
+  clara dot co dot uk> in bug 84530.
 
   13 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
   truevision-0.5.5.2.ebuild:

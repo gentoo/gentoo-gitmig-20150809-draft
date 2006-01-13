@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.2 2006/01/13 20:16:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.3 2006/01/13 21:59:32 vanquirius Exp $
 
 inherit eutils gnome2 versionator
 
@@ -45,6 +45,9 @@ src_install() {
 
 	# causes segfault related to pygtk, needs investigation
 	rm "${D}"/usr/share/truevision/python/plug-ins/starfield.py
+
+	# duplicated, unnecessary documentation
+	rm -rf "${D}"/usr/share/doc/${PN}
 }
 
 pkg_postinst() {
