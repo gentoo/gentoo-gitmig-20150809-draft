@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07941ed90622aa0751ab93964911a943 ChangeLog 1200
 MD5 fd7bca7be5c5d5779b32f4c4e7fe9b4c files/digest-poppler-bindings-0.4.3-r2 65
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 MD5 73800d8735fd2813b3ef67ad511fc2b5 files/poppler-0.4.3-bindings.patch 2915
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 a910c03003c4f6422942661260247207 poppler-bindings-0.4.3-r2.ebuild 1303
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDxwMRCRZPokWLroQRAh8ZAKCjEgbOu+LElAFvLZok4L0iCdBlsQCePxTz
+APQQIjsBRtwARYD9TNMduaU=
+=B8dq
+-----END PGP SIGNATURE-----
