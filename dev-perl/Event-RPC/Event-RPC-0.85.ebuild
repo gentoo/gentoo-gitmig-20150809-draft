@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-0.85.ebuild,v 1.1 2005/11/12 14:28:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-0.85.ebuild,v 1.2 2006/01/13 20:43:50 mcummings Exp $
 
 inherit perl-module
 
@@ -10,6 +10,6 @@ HOMEPAGE="http://www.exit1.org/${PN}/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 SRC_TEST="do"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.6 2006/01/03 21:22:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.7 2006/01/13 20:48:03 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> prefork-1.00.ebuild:
+  Marking stable sparc x86
 
   03 Jan 2006; <plasmaroo@gentoo.org> prefork-1.00.ebuild:
   Mark ~ia64; dep of bug #113367.

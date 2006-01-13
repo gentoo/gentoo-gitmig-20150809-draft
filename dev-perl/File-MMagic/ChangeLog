@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-MMagic
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.28 2005/11/19 08:59:47 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.29 2006/01/13 20:48:59 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  File-MMagic-1.25.ebuild:
+  Marking stable sparc x86
 
 *File-MMagic-1.25 (19 Nov 2005)
 
