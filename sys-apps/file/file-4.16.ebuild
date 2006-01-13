@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.16.ebuild,v 1.1 2005/10/17 22:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.16.ebuild,v 1.2 2006/01/13 07:56:34 vapier Exp $
 
 inherit distutils libtool
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-fix-array-64bit.patch
 	epatch "${FILESDIR}"/${PN}-4.15-empty-mime-buffer.patch #106152
 	epatch "${FILESDIR}"/${PN}-4.15-libtool.patch #99593
 	elibtoolize

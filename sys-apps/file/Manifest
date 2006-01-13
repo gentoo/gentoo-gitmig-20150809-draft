@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f5f921f3a6ef10bf5726db3ee73e86cf ChangeLog 11706
+MD5 a9dbfb0ab774a2e1982eeeac0f0da167 ChangeLog 11865
 MD5 c6073a11ea3fcb5cc0d1625a54aad8d4 file-4.12.ebuild 2081
 MD5 213bc8ded7a22b2fcb129f4ee60e892c file-4.13.ebuild 2226
 MD5 7b53e1d21af2cb92d83127a3765386bf file-4.15-r1.ebuild 1508
-MD5 c8555bdb10c9bc53b598919bc841e1e1 file-4.16.ebuild 1461
+MD5 7f81bd29a66992f3ff2432ca69f3fd35 file-4.16.ebuild 1510
 MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
 MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
 MD5 407c20e1fb3186144d6c7d2788714163 files/digest-file-4.13 61
@@ -17,13 +17,14 @@ MD5 13c1a487996e5e26560f9feaae56e811 files/file-4.14-gcc2.patch 494
 MD5 26e3155407a33adebfc7ed7d06a59988 files/file-4.15-cracklib-magic.patch 352
 MD5 cbb2d6e5512eb5f33299107848ca9e30 files/file-4.15-empty-mime-buffer.patch 708
 MD5 26f26c3f7caf28f0bdb9dbb6fe83c254 files/file-4.15-libtool.patch 561
+MD5 08d341d8ec3debffb4216dd4ef844fa7 files/file-4.16-fix-array-64bit.patch 1942
 MD5 66df8eecd30769daeb3f643dc6432db3 files/file-4.xx-mips-gentoo.patch 5578
 MD5 a952f0eca26a046e4b815529d2b734ef files/misc.magic 71
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVCyWgIKl8Uu19MoRAvPTAJ9x5yfpjXryiagbJ8x9CyydNWDJvwCfQrKC
-02VyJwnaIc+2xDage3mopas=
-=BdQr
+iD8DBQFDx12X2+ySkm8kpY0RAqNfAJ93vJaUGoDXpFTbnszr+a2MSwnNfwCcCi9J
+OgiMPh1LTDAw0pxYNUD/hHE=
+=PLux
 -----END PGP SIGNATURE-----
