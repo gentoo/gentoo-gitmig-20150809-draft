@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fc7208d24f924d0cf3b0c63c5c9c2b0 ChangeLog 2410
+MD5 df4fe433c01df11182d04ad0dd8b92db ChangeLog 2521
 MD5 365248c9c0b74d1d25ed9c1085f9791f HTML-Tree-3.17.ebuild 648
 MD5 72ac2a6a96531412b59b8b82b180d000 HTML-Tree-3.18.ebuild 681
-MD5 605f87d96db5b41bfc36b29e12a1412e HTML-Tree-3.19.01.ebuild 703
+MD5 1c3fb4b67ea95e64ff64edb05404d26b HTML-Tree-3.19.01.ebuild 701
 MD5 8c51fbf556537b33e1b0dd26b00f6ea4 files/digest-HTML-Tree-3.17 66
 MD5 dc00d71c5b3a87e075f25fdc4f2ae5cf files/digest-HTML-Tree-3.18 66
 MD5 49ea65b557a5e17f5d44c9ccedef7c53 files/digest-HTML-Tree-3.19.01 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDhI93tG5z4I8BtQoRAm26AJ4qGI+h+K9b3yImIljAxaw+/5z9YQCeMu37
-vRW2tLGhquyN2QJcO15FNss=
-=GTXF
------END PGP SIGNATURE-----
