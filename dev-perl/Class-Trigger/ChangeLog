@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Trigger
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.13 2005/11/12 15:24:40 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.14 2006/01/13 18:35:47 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-Trigger-0.10.ebuild:
+  Marking stable sparc x86
 
 *Class-Trigger-0.10 (12 Nov 2005)
 
