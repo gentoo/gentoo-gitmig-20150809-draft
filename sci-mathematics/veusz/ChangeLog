@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/veusz
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/veusz/ChangeLog,v 1.1 2006/01/13 20:51:10 cryos Exp $
+
+*veusz-0.8 (13 Jan 2006)
+
+  13 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +veusz-0.8.ebuild:
+  Initial import, thanks to Nicolas Bigaouette <nbigaouette@gmail.com> for the
+  initial ebuild, and Sebastien Fabbro <seb@ist.utl.pt> for his work on it.
+

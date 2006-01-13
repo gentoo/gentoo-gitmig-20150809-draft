@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b409c024814c5d024cfa4afd5a51ca23 ChangeLog 484
+MD5 2bc063a44a7f4f2767c2d31151b7682c files/digest-veusz-0.8 61
+MD5 5feee5e85a6981f386b3e2b34a29ace6 metadata.xml 505
+MD5 fd60ff700be6b645829a637018fc1c81 veusz-0.8.ebuild 925
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyBLOntT9W3vfTuoRAiKRAJ4vN3OV0hdORhsCFY49+Tf92xH2GQCfQ+E2
+QzrHTB9OtcGwS7E/WygThrU=
+=7xHE
+-----END PGP SIGNATURE-----
