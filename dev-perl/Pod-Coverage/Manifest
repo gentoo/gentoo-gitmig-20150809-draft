@@ -2,7 +2,9 @@ MD5 8d20ebd33017cb9baab5795b1b7336f7 ChangeLog 2523
 MD5 1c5b853840528975c969fe55f398f522 Pod-Coverage-0.13.ebuild 573
 MD5 01bcc8a144780a77fc33914b8777c775 Pod-Coverage-0.14.ebuild 596
 MD5 67e123209f61a36e3a39fc4a772917c0 Pod-Coverage-0.16.ebuild 604
+MD5 4238e799b1086a57c618b99591a83977 Pod-Coverage-0.17.ebuild 516
 MD5 f74471409b5c763fa195a809389144b5 files/digest-Pod-Coverage-0.13 68
 MD5 f207a58aff60d54674b292a202526007 files/digest-Pod-Coverage-0.14 68
 MD5 3b1351cf268d7b23d25940bec749bb75 files/digest-Pod-Coverage-0.16 68
+MD5 a2d83a69742bc1af4d30a62a442b2b45 files/digest-Pod-Coverage-0.17 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
