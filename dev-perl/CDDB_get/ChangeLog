@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/CDDB_get
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.23 2005/08/25 22:29:58 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.24 2006/01/13 13:26:19 mcummings Exp $
+
+*CDDB_get-2.27 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +CDDB_get-2.27.ebuild:
+  Version bump upstream
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> CDDB_get-2.25.ebuild:
   add ~ia64
