@@ -1,0 +1,12 @@
+--- ./Makefile.in.orig	2005-01-20 18:01:19.000000000 +0100
++++ ./Makefile.in	2005-12-15 15:02:15.000000000 +0100
+@@ -20,6 +20,9 @@
+ BUILD_HDB=@BUILD_HDB@
+ BUILD_LDBM=@BUILD_LDBM@
+ 
++LD_LIBRARY_PATH=${pwd}../libraries/libldap_r/.libs:${pwd}../libraries/liblber/.libs:${pwd}../libraries/libldap/.libs:$LD_LIBRARY_PATH
++export LD_LIBRARY_PATH
++
+ test tests:
+ 	@$(MAKE) bdb
+ 	@$(MAKE) hdb
