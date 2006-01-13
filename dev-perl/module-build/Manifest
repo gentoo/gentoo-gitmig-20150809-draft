@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d6ed4f5a70e7dd12c5eaa9719e964cc0 module-build-0.25.ebuild 654
-MD5 3a8577282ec116df62383cf94cf4c1e5 module-build-0.26.10.ebuild 699
-MD5 e5b316363a2bf216fb611d7696ec1fc7 module-build-0.26.11.ebuild 699
-MD5 b3a4e1ea8ae1b426d880b3465e48c08d ChangeLog 3927
+MD5 4883dd41297d124be66f594aa15612ab ChangeLog 4044
 MD5 02fe7753001f89b0f496f0669d31a1da files/digest-module-build-0.25 69
 MD5 c6b9381a0113c337f6074a192e6c195f files/digest-module-build-0.26.10 71
 MD5 5a5b67bf218f82dfc2d09bbcbd77865f files/digest-module-build-0.26.11 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLHrgKf2g/qXtneoRAovqAKC43qwLAfS8tchOb+iwjJpYKpl+pgCgojyi
-Qf9UChO9iMQpb6sIpvBVjfY=
-=n2Gh
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d6ed4f5a70e7dd12c5eaa9719e964cc0 module-build-0.25.ebuild 654
+MD5 3a8577282ec116df62383cf94cf4c1e5 module-build-0.26.10.ebuild 699
+MD5 e3630c3d49c6f96a3defee5d92154d97 module-build-0.26.11.ebuild 697
