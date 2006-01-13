@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2143c1bd21b328b05b3470755d9d3fe7 ChangeLog 592
 MD5 9de5c36a2fbd4116375fe6754ba6508f Hook-LexWrap-0.20.ebuild 498
 MD5 57591b1a4733a475bd65e2b4f9f15a62 files/digest-Hook-LexWrap-0.20 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBnBtG5z4I8BtQoRAtm2AKCGAV0pDjivwlrx4rMKgnfmW1b8kwCdEkt9
+BLhLnG4h2f8qrgS+40fXja4=
+=0Oxj
+-----END PGP SIGNATURE-----
