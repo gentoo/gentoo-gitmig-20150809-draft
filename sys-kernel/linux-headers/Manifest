@@ -42,13 +42,13 @@ MD5 6a3b45eded92aace1a5df1a478fa977b linux-headers-2.4.26.ebuild 3340
 MD5 0831e2e23b7f7f5361f5bd7a130dd6a3 linux-headers-2.6.11-r2.ebuild 1748
 MD5 1bb0bd04ebf505649e461439862a02bd linux-headers-2.6.11-r3.ebuild 1840
 MD5 4b63c0075bb42c8937f4c97d07a47ef2 linux-headers-2.6.11-r4.ebuild 1840
-MD5 34394494a84bca539fea305c5470cddd linux-headers-2.6.15_rc6.ebuild 1681
+MD5 ad0f6ced55cd55b35ac0fe22bb7e1667 linux-headers-2.6.15_rc6.ebuild 1678
 MD5 4b7f9dd73295707d019c97d76b76a021 linux-headers-2.6.8.1-r4.ebuild 1213
 MD5 248488cc2cb6484a305e8108b4eaaa6a metadata.xml 489
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvzqs2+ySkm8kpY0RAhIiAJ9cQSe5/qZZfkQn8IoPTArdmRyDYgCgo3i0
-DgwDr+p2DWF3imXdhsBfKzo=
-=KEbb
+iD8DBQFDyDNG2+ySkm8kpY0RAuhjAKCLY6gs2CWApjTnMsRok1klTJBdsgCgp5m5
+Gco16fIF+2D8Tgc2y4Z9Q9Y=
+=ALq/
 -----END PGP SIGNATURE-----
