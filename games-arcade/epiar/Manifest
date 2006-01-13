@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 97531b31f27b8aa0f5b9b1922ac79dd3 epiar-0.5.ebuild 1284
-MD5 3bf3eac8f1a9098bd65e487c37d23560 metadata.xml 652
 MD5 ac54186ed157e39d4f290c52dc8f504e ChangeLog 873
-MD5 a392f30599841b8d022a1fbfc37d4996 files/digest-epiar-0.5 65
+MD5 48588ac8fa863e2a29b24f8a58853263 epiar-0.5.ebuild 1218
 MD5 1b022a2da8cd2a4a366a3792d3439856 files/0.5-gentoo-paths.patch 1710
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK0IDLLFUmVNQ7rkRAkOuAKCcov/ORI0AvkEMbfxFZcGt6/JmOwCeK/9e
-0sDjm10Sh94AJdG3r9rZAVg=
-=9s2G
------END PGP SIGNATURE-----
+MD5 a392f30599841b8d022a1fbfc37d4996 files/digest-epiar-0.5 65
+MD5 3bf3eac8f1a9098bd65e487c37d23560 metadata.xml 652
