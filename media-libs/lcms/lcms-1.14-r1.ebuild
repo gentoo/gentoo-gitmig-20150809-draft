@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.14-r1.ebuild,v 1.4 2005/09/24 07:55:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.14-r1.ebuild,v 1.5 2006/01/13 22:58:47 vapier Exp $
 
-inherit libtool gnuconfig autotools
+inherit libtool autotools
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
 IUSE="tiff jpeg zlib python"
 
 DEPEND="tiff? ( media-libs/tiff )
@@ -22,14 +22,10 @@ RDEPEND="jpeg? ( media-libs/jpeg )
 
 src_unpack() {
 	unpack ${A}
-
-	# an updated config.sub for the uclibc env
-	gnuconfig_update || die
-
-	cd ${S}
+	cd "${S}"
 
 	# fixes bug #98547
-	epatch ${FILESDIR}/lcms.i.diff
+	epatch "${FILESDIR}"/lcms.i.diff
 
 	# fix build on amd64, conditional for ppc-macos because it lacks the
 	# proper automake version (1.7)
@@ -41,17 +37,18 @@ src_unpack() {
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
-		`use_with jpeg` \
-		`use_with tiff` \
-		`use_with zlib` \
-		`use_with python` || die
+		$(use_with jpeg) \
+		$(use_with tiff) \
+		$(use_with zlib) \
+		$(use_with python) \
+		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
 	make \
-		DESTDIR=${D} \
-		BINDIR=${D}/usr/bin \
+		DESTDIR="${D}" \
+		BINDIR="${D}"/usr/bin \
 		install || die "make install failed"
 
 	insinto /usr/share/lcms/profiles
