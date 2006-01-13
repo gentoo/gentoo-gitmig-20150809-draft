@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-Mechanize
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.18 2005/12/03 14:25:18 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.19 2006/01/13 22:34:08 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  WWW-Mechanize-1.16.ebuild:
+  marking sparc x86 stable
 
 *WWW-Mechanize-1.16 (03 Dec 2005)
 

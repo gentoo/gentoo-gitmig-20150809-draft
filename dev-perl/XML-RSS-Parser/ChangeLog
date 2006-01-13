@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-RSS-Parser
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/ChangeLog,v 1.1 2005/11/27 02:28:37 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/ChangeLog,v 1.2 2006/01/13 22:37:50 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-RSS-Parser-4.0.ebuild:
+  marking sparc x86 stable
 
 *XML-RSS-Parser-4.0 (27 Nov 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXSLT
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.34 2005/10/14 01:34:07 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.35 2006/01/13 22:36:19 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-LibXSLT-1.58.ebuild:
+  marking sparc x86 stable
 
   14 Oct 2005; Aron Griffis <agriffis@gentoo.org> XML-LibXSLT-1.58.ebuild:
   Mark 1.58 stable on alpha

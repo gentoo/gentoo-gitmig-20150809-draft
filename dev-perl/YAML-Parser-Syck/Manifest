@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 342c57e7ec9ccb3a9e42ccfe897d776c YAML-Parser-Syck-0.01.ebuild 549
-MD5 d9e35aa2e9b51b020553d6e7d1d30ea6 ChangeLog 385
+MD5 3636265a5ad9026a1d48ced87945e07d ChangeLog 494
+MD5 1f9c1144b6b3b432740a2cd10fb4deb2 YAML-Parser-Syck-0.01.ebuild 548
 MD5 408bea59c796f1fa2eda49b34b6c2855 files/digest-YAML-Parser-Syck-0.01 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFChi+UtG5z4I8BtQoRAgEdAJ9QgIOyWf9/TV/K3hrDOuzQ27VZNQCfVhUb
-VLUdPhBllgufeNig3IV/2S0=
-=dWLZ
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
