@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.4.1.ebuild,v 1.5 2005/10/19 02:11:48 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.4.1.ebuild,v 1.6 2006/01/13 23:57:55 nelchael Exp $
 
 IUSE="debug truetype xgetdefault menubar"
 #IUSE="${IUSE} utempter"
@@ -13,15 +13,22 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~mips ppc ~ppc-macos x86"
 
-DEPEND="virtual/libc
-	virtual/x11
-	dev-libs/expat
+RDEPEND="dev-libs/expat
 	media-libs/libpng
 	media-libs/jpeg
 	truetype? ( virtual/xft
 		media-libs/fontconfig
-		media-libs/freetype )"
-#	utempter? ( sys-apps/utempter )
+		media-libs/freetype )
+	|| ( (
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-libs/libXpm
+			x11-libs/libXrender )
+		virtual/x11 )"
+#      utempter? ( sys-apps/utempter )
+
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )"
 
 src_compile() {
 	local myconf
