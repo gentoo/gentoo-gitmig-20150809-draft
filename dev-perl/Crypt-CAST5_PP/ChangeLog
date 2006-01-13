@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-CAST5_PP
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-CAST5_PP/ChangeLog,v 1.2 2005/11/12 15:44:26 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-CAST5_PP/ChangeLog,v 1.3 2006/01/13 19:43:26 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  -Crypt-CAST5_PP-1.02.ebuild, Crypt-CAST5_PP-1.03.ebuild:
+  marking stable sparc x86
 
 *Crypt-CAST5_PP-1.03 (12 Nov 2005)
 
