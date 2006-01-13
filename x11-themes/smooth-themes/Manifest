@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bfb8033e35ff1f95bc967a8209548999 ChangeLog 915
 MD5 49c17e757d5c60cc925dda14c37b5314 files/digest-smooth-themes-0.5.8 71
 MD5 49c17e757d5c60cc925dda14c37b5314 files/digest-smooth-themes-0.5.8-r1 71
@@ -5,3 +8,10 @@ MD5 e00695d75397a040b1e3fe3038b8b0ce files/smooth-themes-0.5.8-remove_checks.pat
 MD5 a50d6e165e07ea157dfe22ceef559433 metadata.xml 580
 MD5 3b04fcf4f9393ae454a2ac08d346828d smooth-themes-0.5.8-r1.ebuild 940
 MD5 f847597cfc56bd3f20a68d37c0613368 smooth-themes-0.5.8.ebuild 1256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDx/FbKRy60XGEcJIRAjFkAJ9I/veA0oxJEl/LPC9NxyBbhxqigACbB/JY
+AX4JTgjFMgWQ2YRQO5cDr1Q=
+=FwFH
+-----END PGP SIGNATURE-----
