@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-Ex-Simple-List
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/ChangeLog,v 1.1 2005/12/12 12:55:54 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/ChangeLog,v 1.2 2006/01/13 21:00:47 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Gtk2-Ex-Simple-List-0.50.ebuild:
+  marking stable x86
 
 *Gtk2-Ex-Simple-List-0.50 (12 Dec 2005)
 
