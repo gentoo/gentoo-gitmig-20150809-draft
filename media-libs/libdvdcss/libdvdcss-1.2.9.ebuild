@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.11 2005/12/14 19:38:30 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.12 2006/01/13 12:11:40 vapier Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.2"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 sh sparc x86"
 IUSE="doc static"
 
 DEPEND="doc? ( app-doc/doxygen )"
@@ -19,20 +19,19 @@ RDEPEND=""
 pkg_preinst() {
 	# these could cause problems if they exist from
 	# earlier builds
-	for x in libdvdcss.so.0 libdvdcss.so.1 libdvdcss.0.dylib libdvdcss.1.dylib
-	do
-		if [ -f /usr/$(get_libdir)/${x} ] || [ -L /usr/$(get_libdir)/${x} ]; then
-			rm -f /usr/$(get_libdir)/${x}
+	for x in libdvdcss.so.0 libdvdcss.so.1 libdvdcss.0.dylib libdvdcss.1.dylib ; do
+		if [[ -e ${ROOT}/usr/$(get_libdir)/${x} ]] ; then
+			rm -f "${ROOT}"/usr/$(get_libdir)/${x}
 		fi
 	done
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# add configure switches to enable/disable doc building
-	epatch ${FILESDIR}/${P}-doc.patch
+	epatch "${FILESDIR}"/${P}-doc.patch
 
 	eautoreconf
 }
@@ -54,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
 
 	dodoc AUTHORS ChangeLog NEWS README
 	use doc && dohtml doc/html/*

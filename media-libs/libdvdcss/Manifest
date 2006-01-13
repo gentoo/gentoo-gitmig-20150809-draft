@@ -1,7 +1,17 @@
-MD5 5dfab00631dbe105580bb5aab37fd12c ChangeLog 6337
-MD5 04f7ffb6f496ba9edb5cd1da36578c92 libdvdcss-1.2.8.ebuild 1793
-MD5 3c7f2005f50042d1bd7218df14d98f66 libdvdcss-1.2.9.ebuild 1782
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c34a0e60b665fb62c50e49d3388468dd ChangeLog 6444
 MD5 da63484d0425ce9588e97520456a0cf1 files/digest-libdvdcss-1.2.8 68
 MD5 84eef00ec2c7e0b2d30c94c4fb19e453 files/digest-libdvdcss-1.2.9 68
 MD5 41d9bae6e86e991ff9e8c59b5787f6b2 files/libdvdcss-1.2.9-doc.patch 642
+MD5 04f7ffb6f496ba9edb5cd1da36578c92 libdvdcss-1.2.8.ebuild 1793
+MD5 3be5d023e08314d66afc0c0c6827f8f6 libdvdcss-1.2.9.ebuild 1791
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDx5lh2+ySkm8kpY0RAruyAJ9yVDKB/35cNuI2vhnlKOuq0g8VzQCeNahS
+CxF8e/cc9qi6ULlY8RzG3wY=
+=nLlJ
+-----END PGP SIGNATURE-----
