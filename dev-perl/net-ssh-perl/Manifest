@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14b3c7322d2050469c0587f89b1803bf ChangeLog 1727
 MD5 50dc3546abd916eda57d2a4bb353713c files/digest-net-ssh-perl-1.25 68
 MD5 10c0ebdcea378fd01c6f9698ec7e645c files/digest-net-ssh-perl-1.27 68
@@ -6,3 +9,10 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1e39ff63e2e689f91bc900eb4111164d net-ssh-perl-1.25.ebuild 1005
 MD5 4aa94827960d12871aadc65f413bbc28 net-ssh-perl-1.27.ebuild 1023
 MD5 ff8b6fedb17871bd62c3ec19582975da net-ssh-perl-1.29.ebuild 1046
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCQ0tG5z4I8BtQoRAhJLAKCFDpEdXaYngQb/eEFlgs2SJRFuqQCeOITc
++TGbkWgxyPCOUoxpl4AF0FU=
+=QhKk
+-----END PGP SIGNATURE-----

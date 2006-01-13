@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1b2172f025bb12f4a3753f8d72ae9709 ChangeLog 800
 MD5 73886de053a6aeecb53b0af834379765 Ogg-Vorbis-Header-PurePerl-0.07.ebuild 656
 MD5 f4aef2def777add4feaa102b6cc9901e files/digest-Ogg-Vorbis-Header-PurePerl-0.07 82
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCSItG5z4I8BtQoRAsStAKCKMpSse+G+SlhKC3FyS3GnEoLFtgCgh6eC
+D/JbfCS0nkmzFVYwkptF2Hk=
+=mtL7
+-----END PGP SIGNATURE-----
