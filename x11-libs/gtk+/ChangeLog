@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.210 2006/01/08 12:42:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.211 2006/01/13 01:10:14 allanonjl Exp $
+
+*gtk+-2.8.10 (13 Jan 2006)
+
+  13 Jan 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gtk+-gdk-pixbuf-testfix.patch, gtk+-2.8.8.ebuild,
+  gtk+-2.8.9.ebuild, +gtk+-2.8.10.ebuild:
+  apply patch to fix #118722 . Attached patch to gnome bug #317961
 
   08 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> gtk+-2.8.8.ebuild:
   ppc stable, bug #117505

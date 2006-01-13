@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.8.ebuild,v 1.8 2006/01/08 12:42:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.8.ebuild,v 1.9 2006/01/13 01:10:14 allanonjl Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -76,6 +76,9 @@ src_unpack() {
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
 	epatch "${DISTDIR}"/${PN}-2-smoothscroll-r6.patch.bz2
+
+	# fix tests, see #118722
+	epatch "${FILESDIR}"/${PN}-gdk-pixbuf-testfix.patch
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.9.ebuild,v 1.3 2006/01/13 01:10:14 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.10.ebuild,v 1.1 2006/01/13 01:10:14 allanonjl Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -26,7 +26,7 @@ RDEPEND="|| ( (
 			x11-libs/libXfixes )
 		virtual/x11 )
 
-	>=dev-libs/glib-2.7.1
+	>=dev-libs/glib-2.8.5
 	>=x11-libs/pango-1.9
 	>=dev-libs/atk-1.10.1
 	>=x11-libs/cairo-0.9.2
