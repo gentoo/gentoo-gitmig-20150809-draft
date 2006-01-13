@@ -1,6 +1,16 @@
-MD5 4e291c2a3b9606bc8100ee4516592330 ChangeLog 834
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ed2f0f9eba21bf7792986a3cceb9fb8 ChangeLog 950
 MD5 948685a43508c913dd9c0ae36cd39008 Class-Virtual-0.04.ebuild 554
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b401c7ab36d75ad5d621d7a8f2212fd2 Class-Virtual-0.05.ebuild 558
+MD5 c5e533ee9c49ceb7b1bc4c02d7f988c3 Class-Virtual-0.05.ebuild 560
 MD5 85ee09a0d7fa97f2bf40a952f56b72ac files/digest-Class-Virtual-0.04 68
 MD5 6b16f35b97df09a1926903caee2dd3d1 files/digest-Class-Virtual-0.05 68
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx/Q9tG5z4I8BtQoRAsVVAJ9R2+yfDUPobhCH2g6cQ0cD4ppQ5ACfWWA7
+Kob0AlN/1kr2QkLVX72dL0g=
+=Cup6
+-----END PGP SIGNATURE-----
