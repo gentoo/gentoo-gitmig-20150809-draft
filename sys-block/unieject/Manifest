@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c408c4b78d82595c40e0268c68bb893b ChangeLog 2556
+MD5 5a6b4132de916e068205a508f8c537cc ChangeLog 2727
 MD5 9673a4820fb2c204d0e2cd21bc3080b0 files/digest-unieject-5 63
 MD5 b942cb8506d7e616d846ed3b8f13d3f6 files/digest-unieject-5.1 65
 MD5 7f0b2989cfdaf436a2cbd458a718368a metadata.xml 366
-MD5 2e0a2a2c3dfef6c62665475d95fd4107 unieject-5.1.ebuild 1305
-MD5 55aa473d9a45a00b1bf0a46f62bd3222 unieject-5.ebuild 1063
+MD5 d61c5ff05af32b374a10e41c28fff4f7 unieject-5.1.ebuild 1303
+MD5 8ebd480c7cbb24dd7fa0b8a1cac85f18 unieject-5.ebuild 1061
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvQ77AiZjviIA2XgRAtnuAJ0VHb9vJSPHIh+8Ep7mf/LKHFrb1wCgnqJF
-9nrwEi59RjZVTiTZu1MDOJU=
-=lrxj
+iD8DBQFDyAALAiZjviIA2XgRArRJAJ0QaxgUstUitdQT0Jgdj69Isf9j0QCghpr1
+buSoiRq4v69tsk1Ti6XbOFo=
+=O/L1
 -----END PGP SIGNATURE-----
