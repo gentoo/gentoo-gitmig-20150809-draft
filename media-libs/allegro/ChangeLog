@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.46 2005/12/03 07:25:06 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.47 2006/01/13 22:06:26 genstef Exp $
+
+  13 Jan 2006; Stefan Schweizer <genstef@gentoo.org> allegro-4.2.0.ebuild:
+  Add modular depends
 
 *allegro-4.2.0 (03 Dec 2005)
 

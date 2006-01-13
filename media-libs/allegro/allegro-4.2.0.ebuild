@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.0.ebuild,v 1.1 2005/12/03 07:25:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.0.ebuild,v 1.2 2006/01/13 22:06:26 genstef Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,11 +16,32 @@ IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex doc"
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
 	arts? ( kde-base/arts )
-	X? ( virtual/x11 )
+	alsa? ( media-libs/alsa-lib )
+	X? (
+		|| (
+			( x11-libs/libX11
+			x11-libs/libXcursor
+			x11-libs/libXext
+			x11-libs/libXpm
+			x11-libs/libXxf86dga
+			x11-libs/libXxf86vm )
+			virtual/x11
+		)
+	)
 	svga? ( media-libs/svgalib )"
 
 DEPEND="${RDEPEND}
-	tetex? ( virtual/tetex )"
+	tetex? ( virtual/tetex )
+	X? (
+		|| (
+			( x11-libs/libXt
+			x11-proto/xextproto
+			x11-proto/xf86dgaproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/xproto )
+			virtual/x11
+		)
+	)"
 
 src_compile() {
 	filter-flags -fPIC -fprefetch-loop-arrays
