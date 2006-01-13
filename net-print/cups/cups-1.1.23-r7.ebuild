@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.8 2006/01/13 01:33:08 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.9 2006/01/13 20:38:11 flameeyes Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -68,7 +68,7 @@ src_compile() {
 		--with-cups-user=lp \
 		--with-cups-group=lp \
 		--localstatedir=/var \
-		--with-bindnow=$(bindnow_flags) \
+		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
 		$(use_enable ssl) \
 		$(use_enable slp) \

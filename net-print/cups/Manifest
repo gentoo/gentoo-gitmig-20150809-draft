@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f01b0f8d53a366e60699f76507cc87b2 ChangeLog 20366
+MD5 b0c61e4f2f82655b5d8bf8205f03a12f ChangeLog 20509
 MD5 b92beaae46fa3940593e9915f4feb8f0 cups-1.1.23-r1.ebuild 4130
 MD5 d15baa8642b3235fdb4f38a75793f8c3 cups-1.1.23-r4.ebuild 4698
-MD5 4b827f0364b23966071e537c6c225efe cups-1.1.23-r7.ebuild 4722
+MD5 0446db7b14a18d452f11978c3a3a4a16 cups-1.1.23-r7.ebuild 4724
 MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
 MD5 b22c12cb42113ddc40988cfbe93e3519 files/cups-1.1.23-bindnow.patch 2087
 MD5 7888ddf6a0c4cfb38b8882651e22d66c files/cups-gcc4-amd64.patch 566
@@ -25,7 +25,7 @@ MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxwN8CRZPokWLroQRAj5TAJwN0wUuiyF3H5kibpY3/WZbf4nmGgCg2ego
-hRGpCHyirbeghsETtYC9Ajg=
-=snBN
+iD8DBQFDyA/NAiZjviIA2XgRAg9pAKDQhpJ52B86g9xCCshtyNHhFK59SgCcCgeB
+5u8PAebALc/7hIjbiiQKzxQ=
+=3NBJ
 -----END PGP SIGNATURE-----
