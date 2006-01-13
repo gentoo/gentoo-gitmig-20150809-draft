@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.184 2005/11/24 18:22:12 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.185 2006/01/13 07:56:51 vapier Exp $
+
+  13 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/python-2.4.2-no-threads.patch, python-2.4.2.ebuild:
+  Fix from upstream for building without threads.
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> python-2.4.2.ebuild:
   Stable on ppc64

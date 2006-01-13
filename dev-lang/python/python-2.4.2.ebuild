@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2.ebuild,v 1.14 2005/11/24 18:22:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2.ebuild,v 1.15 2006/01/13 07:56:51 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -58,6 +58,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4.2-readline.patch
 	# db4.2 support
 	epatch ${FILESDIR}/${PN}-2.4.1-db4.patch
+
+	# Upstream fix when building w/out thread support
+	epatch ${FILESDIR}/${P}-no-threads.patch
 
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
