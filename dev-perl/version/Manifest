@@ -1,4 +1,6 @@
 MD5 fb8713fb0bae5c7f4eaeb6eaca480255 ChangeLog 533
 MD5 6ccbc7ff1608b339b2f5ebe6b8903521 files/digest-version-0.50 63
+MD5 5ca59ae1287489221765bf77413edce5 files/digest-version-0.52 63
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 faa63827b35cfa446d2eb0bca48604a9 version-0.50.ebuild 559
+MD5 42747f7b8bf088d5be697b5f211737e2 version-0.52.ebuild 458
