@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-opengl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.12 2005/10/17 12:29:58 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.13 2006/01/13 19:17:38 fmccor Exp $
+
+  13 Jan 2006; Ferris McCormick <fmccor@gentoo.org>
+  ruby-opengl-0.32d.ebuild:
+  There are two implementations of glut (media-libs/glut, media-libs/freeglut),
+  and both provide virtual/glut, both work with ruby-opengl.  Hence, depend on
+  virtual/glut instead of media-libs/glut (Bug #118899).
 
   17 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-opengl-0.32d.ebuild:
   Mark 0.32d stable on ia64
