@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d533fda89e5dfa6d6bd0ca7d917442eb ChangeLog 2777
+MD5 b567b7fc708cf545deb92b72e9026668 ChangeLog 2882
 MD5 12b2844e76b017cff25ac3313fa43454 files/digest-gnome2-perl-0.90 62
 MD5 3cbf426bdfef44e955cc30966120329b files/digest-gnome2-perl-1.00 62
 MD5 c11791c7ff5e3bd120eac171efee891f files/digest-gnome2-perl-1.021 63
@@ -9,12 +6,5 @@ MD5 300d277a39d8f6643099a6b0db0a4254 files/digest-gnome2-perl-1.023 63
 MD5 9f7b7db837a7a40aec5b10b904dc6a11 gnome2-perl-0.90.ebuild 803
 MD5 a1a9d8f8e2ae36d8f873e2750fb45e2f gnome2-perl-1.00.ebuild 852
 MD5 7ff1397474a087e392230887807b1578 gnome2-perl-1.021.ebuild 833
-MD5 bcc980e8242f907bf02c668b4105167a gnome2-perl-1.023.ebuild 832
+MD5 e9cbebb9a720d4904c46a39be4c086b3 gnome2-perl-1.023.ebuild 831
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFDeLePtG5z4I8BtQoRAm20AJ9Fsb5jZypfpURg++AA3o6lY2+4VgCfYDVa
-M36PiiS4EoGe1lzVzrT2t/A=
-=J9qw
------END PGP SIGNATURE-----
