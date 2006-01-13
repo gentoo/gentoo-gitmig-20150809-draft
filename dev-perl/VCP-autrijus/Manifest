@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5abb1f1e961e3ecaa34aabe6686f53cd ChangeLog 517
 MD5 8639b0e33d016f07436875a2d6e98930 VCP-autrijus-0.9_p20050110.ebuild 958
 MD5 97eed3b12e115016b8b0676d8f2b00df files/digest-VCP-autrijus-0.9_p20050110 86
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFDyCq7tG5z4I8BtQoRAkwcAJ9yLY5LLYVqfiY+Ck/TKzc0D63jVwCY3lyL
+anOc4Y8/ss0trwL9vgkcWQ==
+=vQZP
+-----END PGP SIGNATURE-----

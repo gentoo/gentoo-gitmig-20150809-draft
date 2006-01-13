@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/VCP-autrijus
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/ChangeLog,v 1.1 2005/04/09 01:16:21 trapni Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/ChangeLog,v 1.2 2006/01/13 22:33:27 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  VCP-autrijus-0.9_p20050110.ebuild:
+  marking x86 stable, ~sparc
 
 *VCP-autrijus-0.9_p20050110 (09 Apr 2005)
 
