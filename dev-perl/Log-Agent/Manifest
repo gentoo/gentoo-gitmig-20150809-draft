@@ -1,4 +1,6 @@
 MD5 00cfa7d6e847cfed116c24efbdfc5751 ChangeLog 858
-MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
 MD5 71994dd42529cd298113f0e83c9572ee Log-Agent-0.306.ebuild 505
+MD5 33e66cad4b99002ee68529b365e252a1 Log-Agent-0.307.ebuild 402
 MD5 2993eb2f95634f44b8551e5812120576 files/digest-Log-Agent-0.306 66
+MD5 4139516f4e7006c602286c2b5d597716 files/digest-Log-Agent-0.307 66
+MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
