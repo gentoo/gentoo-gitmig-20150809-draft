@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/MP3-Info-1.13.ebuild,v 1.2 2005/07/18 11:46:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/MP3-Info-1.13.ebuild,v 1.3 2006/01/13 21:57:09 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~cnandor/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~ppc64 ~sparc ~alpha ~hppa ~ia64 ~mips"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"

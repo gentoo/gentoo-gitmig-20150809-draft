@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CIDR
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.10 2006/01/01 23:35:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.11 2006/01/13 21:57:33 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> Net-CIDR-0.11.ebuild:
+  Marking sparc x86 stable
 
   01 Jan 2006; Martin Holzer <mholzer@gentoo.org> Net-CIDR-0.10.ebuild:
   Marking stable on amd64

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.6 2006/01/03 21:46:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.7 2006/01/13 22:01:11 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> Net-IP-1.24.ebuild:
+  Marking sparc x86 stable
 
   03 Jan 2006; <plasmaroo@gentoo.org> Net-IP-1.24.ebuild:
   Mark ~ia64, bug #112508.

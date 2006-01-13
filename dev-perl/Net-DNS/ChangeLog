@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.69 2006/01/13 15:35:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.70 2006/01/13 22:02:10 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-DNS-0.53-r1.ebuild:
+  Marking sparc x86 stable
 
 *Net-DNS-0.55 (13 Jan 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.21 2006/01/08 16:07:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.22 2006/01/13 22:03:47 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  net-server-0.88.ebuild:
+  Marking sparc x86 stable
 
 *net-server-0.90 (08 Jan 2006)
 

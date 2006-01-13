@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-SNMP
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.29 2005/12/30 11:55:01 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.30 2006/01/13 22:04:31 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-SNMP-5.2.0.ebuild:
+  Marking sparc x86 stable
 
   30 Dec 2005; <mcumming@gentoo.org> Net-SNMP-4.1.2.ebuild,
   Net-SNMP-5.0.0.ebuild, Net-SNMP-5.0.1.ebuild, Net-SNMP-5.2.0.ebuild:

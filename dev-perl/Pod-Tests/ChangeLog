@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Tests
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.5 2006/01/03 21:11:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.6 2006/01/13 22:12:18 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Pod-Tests-0.18.ebuild:
+  Marking sparc x86 stable
 
   03 Jan 2006; <plasmaroo@gentoo.org> Pod-Tests-0.18.ebuild:
   Mark ~ia64; bug #113367.

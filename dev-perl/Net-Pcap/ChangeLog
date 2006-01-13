@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Pcap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.10 2006/01/13 15:39:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.11 2006/01/13 22:03:24 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> Net-Pcap-0.05.ebuild:
+  Marking sparc x86 stable
 
 *Net-Pcap-0.11 (13 Jan 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OLE-StorageLite
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.1 2005/05/01 15:26:23 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.2 2006/01/13 22:07:31 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  OLE-StorageLite-0.14.ebuild:
+  Marking sparc x86 stable
 
 *OLE-StorageLite-0.14 (01 May 2005)
 

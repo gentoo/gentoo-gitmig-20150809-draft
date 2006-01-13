@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Ident
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.3 2005/05/16 19:29:23 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.4 2006/01/13 22:02:27 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-Ident-1.20.ebuild:
+  Marking sparc x86 stable
 
   16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> Net-Ident-1.20.ebuild:
   Keyworded ~sparc
