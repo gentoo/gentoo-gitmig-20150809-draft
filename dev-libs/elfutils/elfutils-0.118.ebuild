@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.5 2006/01/06 01:04:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.6 2006/01/13 08:40:34 vapier Exp $
 
 inherit eutils
 
@@ -14,13 +14,13 @@ SRC_URI="ftp://sources.redhat.com/pub/systemtap/${PN}/${P}.tar.gz
 LICENSE="OpenSoftware"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="nls"
+IUSE=""
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
 # gets pulled in as a dep since this package does not respect virtual/libc
 DEPEND="elibc_glibc? ( >=sys-libs/glibc-2.3.2 )
-	nls? ( sys-devel/gettext )
+	sys-devel/gettext
 	sys-devel/autoconf
 	>=sys-devel/binutils-2.15.90.0.1
 	>=sys-devel/gcc-3.3.3
@@ -47,7 +47,6 @@ src_compile() {
 	econf \
 		--program-prefix="eu-" \
 		--enable-shared \
-		$(use_enable nls) \
 		|| die "./configure failed"
 	emake || die
 }

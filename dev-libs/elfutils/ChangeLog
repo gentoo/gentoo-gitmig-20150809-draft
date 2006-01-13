@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.73 2006/01/06 01:04:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.74 2006/01/13 08:40:34 vapier Exp $
+
+  13 Jan 2006; Mike Frysinger <vapier@gentoo.org> elfutils-0.108.ebuild,
+  elfutils-0.108-r1.ebuild, elfutils-0.118.ebuild:
+  Force nls since the package refuses to build without it.
 
   06 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/elfutils-0.118-no-nested-functions.patch, elfutils-0.118.ebuild:
