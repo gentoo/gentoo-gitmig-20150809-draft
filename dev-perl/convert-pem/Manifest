@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2d486c84b594d4b2ac65f1f6896233c ChangeLog 2328
 MD5 486c10f3e7c7a35e2612dfa1ff6ac698 convert-pem-0.06.ebuild 694
 MD5 ec46ed8cb02d2ad1f8919c460e965a9f convert-pem-0.07.ebuild 779
 MD5 0999457f6730d99c056ac9bd6633c78b files/digest-convert-pem-0.06 66
 MD5 7897277c2840523cf7728bd6c6b4bf43 files/digest-convert-pem-0.07 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx/0StG5z4I8BtQoRAniLAJ9kOIkyozP9NSBsl3awFZ13DpwO9QCgkzYI
+ve8TGG3VA1Pi42QgRXRIJ5c=
+=RBVK
+-----END PGP SIGNATURE-----
