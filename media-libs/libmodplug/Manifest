@@ -1,5 +1,5 @@
 MD5 11e4c6feb9494322704e00eaa9b96477 ChangeLog 773
 MD5 5009236d8b451fecef858961aed24428 files/digest-libmodplug-0.7 66
 MD5 b10f6248932b7fd4ce0df1a025df6e8a files/libmodplug-0.7-amd64.patch 1550
-MD5 cb00ab30d904820bbdd9ba767893fda4 libmodplug-0.7.ebuild 737
+MD5 e5afc97b7f8e51896879c98eae44868d libmodplug-0.7.ebuild 740
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
