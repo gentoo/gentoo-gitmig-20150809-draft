@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 298487ab00fc83ff8a3309cb0dbee289 ChangeLog 470
+MD5 2cedb2155ec4897e82bb268eb832aa3c ChangeLog 616
 MD5 55917ee2399b281615717873c40a1fd6 SQL-Statement-1.09.ebuild 522
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 afa7a4119727937c9fd0c2a086b018ab SQL-Statement-1.14.ebuild 523
 MD5 dd774a278a1c9a73ab02e2fc8126e298 files/digest-SQL-Statement-1.09 69
+MD5 ef7916e3e55f68ed71095200e79325bd files/digest-SQL-Statement-1.14 69
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfC9nKRy60XGEcJIRAtkCAKClLL1vri8IaW19HnlUlNA1p7LrWQCggG3H
-T9nNp196THzPN2gi0PXuA3Q=
-=eDjR
+iD8DBQFDx9EZtG5z4I8BtQoRAsZ+AJsHVJoBnmh0SlSmculnAJ1m0pah9gCeJQbl
+vXyWmYKjfPeKeuw2EfrgPPE=
+=ngqh
 -----END PGP SIGNATURE-----
