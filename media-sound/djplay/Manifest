@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e11c73bcd4db76f3fd168cbba93ccedd ChangeLog 380
+MD5 a696f91edb81ff18aa1de4efe4877742 djplay-0.3.0.ebuild 968
+MD5 f11793ac18ac89156eb4d64ffb100d3f files/digest-djplay-0.3.0 64
+MD5 ae504e0c4333f4138cc3fdc48da58ce0 metadata.xml 264
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyAexvpz1081QvMkRAsRvAJwNcGiW6Y6aB16XOhstEeUA7Ryr0ACaAiZP
++xhIlNrvBatAPPnUTNN2BaM=
+=5Hyo
+-----END PGP SIGNATURE-----

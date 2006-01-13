@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/djplay
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.1 2006/01/13 20:03:40 fvdpol Exp $
+
+*djplay-0.3.0 (13 Jan 2006)
+
+  13 Jan 2006; Frank van de Pol <fvdpol@gentoo.org> +metadata.xml,
+  +djplay-0.3.0.ebuild:
+  New ebuild for djplay, a player for live DJing.
+
