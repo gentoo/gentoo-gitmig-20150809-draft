@@ -1,6 +1,14 @@
-MD5 5159b6906dc57002b1baa7eec05a96c2 ChangeLog 803
-MD5 11c2be1352b97eceffec1d8113e06c15 ccd2iso-0.1.ebuild 601
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f48e71367231989bb42f13bac378821d ChangeLog 1083
+MD5 c6e03a8e7bc3c5c96f47fe07ff2ef789 ccd2iso-0.2-r1.ebuild 705
+MD5 31b4bf51f3c10fb364bd4a379f12b354 files/digest-ccd2iso-0.2-r1 63
 MD5 0524a6dd3bbef425769cea01bad9ebd5 metadata.xml 301
-MD5 1f9c7af3bdaf81847fa4c87dfd0b13cb ccd2iso-0.2.ebuild 603
-MD5 49059d8ec3e9b7da09015859d86fddae files/digest-ccd2iso-0.1 59
-MD5 49059d8ec3e9b7da09015859d86fddae files/digest-ccd2iso-0.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDx29A2+ySkm8kpY0RAu5dAKCmNOsGuGxAy3v1EAuXlEq2cQh4iwCeJRC1
+Dq3xpWmM8mv6aYdeBSXRpJA=
+=3chU
+-----END PGP SIGNATURE-----

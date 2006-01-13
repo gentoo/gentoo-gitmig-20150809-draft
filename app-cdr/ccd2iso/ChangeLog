@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/ccd2iso
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.8 2005/04/21 17:52:09 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.9 2006/01/13 09:11:54 vapier Exp $
+
+*ccd2iso-0.2-r1 (13 Jan 2006)
+
+  13 Jan 2006; Mike Frysinger <vapier@gentoo.org> -ccd2iso-0.1.ebuild,
+  -ccd2iso-0.2.ebuild, +ccd2iso-0.2-r1.ebuild:
+  Clean up old broken ebuilds and make sure we actually install version 0.2 as
+  pointed out by Sascha Geschwandtner in #118850.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> ccd2iso-0.1.ebuild:
   stable on amd64
