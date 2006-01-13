@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7d3c90ac4981082130e6cda17bdeb7d8 ChangeLog 1655
 MD5 18474ee32005bf08fd9d86f6b9d88b18 Text-Aspell-0.03.ebuild 561
 MD5 e905f115213ba98677945e15b9fee54c Text-Aspell-0.04.ebuild 587
@@ -6,3 +9,10 @@ MD5 59e100dfc5083756c580fbe998e3dcb9 files/digest-Text-Aspell-0.03 66
 MD5 a07055db1076492cf241cfe06b695920 files/digest-Text-Aspell-0.04 67
 MD5 f71eedac5b924212c5f45d30e51c37f5 files/digest-Text-Aspell-0.05 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCiXtG5z4I8BtQoRAt2FAJ9McOvrqJQcbOmUFwX4yGPJmqZ7QACeOSQx
+HvNocxVCw4fSuNU0MaJralA=
+=qhmJ
+-----END PGP SIGNATURE-----

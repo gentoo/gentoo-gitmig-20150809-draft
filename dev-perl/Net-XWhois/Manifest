@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7874b69f7852b6b4d95c8f9910635f2b ChangeLog 554
 MD5 1a642f12db78dc9f4d24b729d6d6d72c Net-XWhois-0.90.ebuild 508
 MD5 6d7a54576cc87f03339aa58dbc40cf19 files/digest-Net-XWhois-0.90 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCR1tG5z4I8BtQoRAqQvAJ0VMhhUuhyLXgx8vGk4RGtLPNFvvgCgiY0I
+qrvWivhIRIedEujq4DdHs5w=
+=jUCA
+-----END PGP SIGNATURE-----
