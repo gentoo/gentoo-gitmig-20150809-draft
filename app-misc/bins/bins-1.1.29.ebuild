@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.2 2005/11/14 21:46:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.3 2006/01/13 17:45:04 mcummings Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://zubro.chez.tiscali.fr/BINS/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc x86"
 IUSE="gtk"
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
