@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 93393ef699e7f925add369832419ca7f ChangeLog 3726
 MD5 949775673752514232e1c628f5db7607 Mail-POP3Client-2.15.ebuild 561
 MD5 790b8863aa1bc116c767a9135e510a92 Mail-POP3Client-2.16.ebuild 574
@@ -6,3 +9,10 @@ MD5 ce2af29ade39f6cf293bff8ffe6fe20c files/digest-Mail-POP3Client-2.15 71
 MD5 36e8289ffa7886f4a563423968c1309c files/digest-Mail-POP3Client-2.16 71
 MD5 00266ad03d6a02bef0bbfa705456cc73 files/digest-Mail-POP3Client-2.17 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyCFPtG5z4I8BtQoRAnmzAJ0a2i3MkPjEIT7t5G5co+oSIPm6+gCfXyXR
+P4VroOsI7E9EBQfxr8VCDqw=
+=1snv
+-----END PGP SIGNATURE-----
