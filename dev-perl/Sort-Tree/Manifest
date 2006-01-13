@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 715ae95fc4b8e75bd1645bd2cdc7911b ChangeLog 388
-MD5 b55a961a8cd0643889c20ab68d67af0f Sort-Tree-1.09.ebuild 516
+MD5 94ec70bcc27f0ccf048b99dfc40e6a09 ChangeLog 489
+MD5 299a70d0a8cadb853e303ee40aff9c13 Sort-Tree-1.09.ebuild 514
 MD5 10b1b645b0435a56d3b2c5247ce2df53 files/digest-Sort-Tree-1.09 64
 MD5 b239a72a1e0034e1092490f63730b872 metadata.xml 600
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDa08eFdQwWVoAgN4RAlp/AJ49+yCqnFE0vxwTF5VAGGewc6Mm8QCXbYUm
-0OyBVpZCk8d1C7j2cAJpbQ==
-=ahom
------END PGP SIGNATURE-----
