@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 a3e9a0aa09d957e2b33dff7ceb210d1c ChangeLog 3430
 MD5 0e31c1486a2559fd48120d5f263dbbec binutils-config-1.8-r6.ebuild 562
-MD5 6d3183325e2400b37da716f23f7603f7 files/binutils-config-1.8 9930
+MD5 c38701c65d4d8ed930d59ca62aafe9ea files/binutils-config-1.8 9955
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r6 0
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDqLXL2+ySkm8kpY0RAu0cAJ425Hzs6rmneMFc52RhWlJZr1X7OgCggWSB
-JV2Oc9ebCxcLlr1S1ewplVI=
-=LiLg
+iD8DBQFDx4yA2+ySkm8kpY0RAooBAKCo1H/gnTEdJilGUuVy9VNRWpBKkwCgtW13
+/4Huqk0p0PYgjWgTy9h+RVs=
+=3mif
 -----END PGP SIGNATURE-----

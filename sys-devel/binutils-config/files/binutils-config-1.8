@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.9 2005/12/21 01:53:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.10 2006/01/13 11:16:42 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -186,8 +186,8 @@ uninstall_target() {
 	rm -f "${ENV_D}"/config-${TARGET}
 
 	# XXX: we still leave behind FAKE_TARGETS in /usr/bin ...
-	for x in addr2line ar as c++filt gprof ld nm objcopy \
-	         objdump ranlib readelf size strings strip ; do
+	for x in addr2line ar as c++filt elf2flt flthdr gprof ld ld.real \
+	         nm objcopy objdump ranlib readelf size strings strip ; do
 		rm -f "${ROOT}"/usr/bin/${TARGET}-${x}
 		rm -f "${ROOT}"/usr/${TARGET}/bin/${x}
 	done
@@ -304,7 +304,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-v|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.9 2005/12/21 01:53:32 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.10 2006/01/13 11:16:42 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			echo "binutils-config-${cvsver%%,v *}"
 			exit 0
