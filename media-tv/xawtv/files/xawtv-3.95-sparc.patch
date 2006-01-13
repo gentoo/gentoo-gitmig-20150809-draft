@@ -1,0 +1,46 @@
+--- structs/struct-dump.c.orig	2006-01-09 10:59:31.000000000 +0100
++++ structs/struct-dump.c	2006-01-09 11:12:01.000000000 +0100
+@@ -4,6 +4,7 @@
+ #include <inttypes.h>
+ #include <ctype.h>
+ #include <sys/ioctl.h>
++#include <asm/types.h>
+ 
+ #include "struct-dump.h"
+ 
+@@ -43,7 +44,9 @@
+ 	int16_t  s16;
+ 	uint8_t  u8;
+ 	int8_t   s8;
+-	int al = sizeof(long)-1; /* struct + union + 64bit alignment */
++	struct al64_t { char c; __u64 t; } al64_t;
++	int al = sizeof(long)-1; /* struct + union */
++	int al64 = (unsigned)&al64_t.t - (unsigned)&al64_t.c - 1; /* 64 bit alignement */
+ 	void *p;
+ 	unsigned int i,j,first;
+ 
+@@ -149,7 +152,7 @@
+ 			ptr += 4;
+ 			break;
+ 		case BITS64:
+-			ptr = (void*)(((intptr_t)ptr + al) & ~al);
++			ptr = (void*)(((intptr_t)ptr + al64) & ~al64);
+ 			u64 = *((uint64_t*)ptr);
+ 			first = 1;
+ 			fprintf(fp,"0x%" PRIx64 " [",u64);
+@@ -166,13 +169,13 @@
+ 			break;
+ 
+ 		case UINT64:
+-			ptr = (void*)(((intptr_t)ptr + al) & ~al);
++			ptr = (void*)(((intptr_t)ptr + al64) & ~al64);
+ 			u64 = *((uint64_t*)ptr);
+ 			fprintf(fp,"%" PRIu64,u64);
+ 			ptr += 8;
+ 			break;
+ 		case SINT64:
+-			ptr = (void*)(((intptr_t)ptr + al) & ~al);
++			ptr = (void*)(((intptr_t)ptr + al64) & ~al64);
+ 			s64 = *((int64_t*)ptr);
+ 			fprintf(fp,"%" PRId64,s64);
+ 			ptr += 8;

@@ -1,0 +1,12 @@
+Index: xawtv-3.95/console/Subdir.mk
+===================================================================
+--- xawtv-3.95.orig/console/Subdir.mk
++++ xawtv-3.95/console/Subdir.mk
+@@ -89,6 +89,7 @@ console/ttv      : LDFLAGS := $(DLFLAGS)
+ console/scantv   : LDFLAGS := $(DLFLAGS)
+ console/streamer : LDFLAGS := $(DLFLAGS)
+ console/webcam   : LDFLAGS := $(DLFLAGS)
++console/v4l-conf : LDFLAGS := $(BINDNOW_FLAGS)
+ 
+ # global targets
+ all:: $(TARGETS-console) $(TARGETS-v4l-conf)

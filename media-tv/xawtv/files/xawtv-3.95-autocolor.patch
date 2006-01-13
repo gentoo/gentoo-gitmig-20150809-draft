@@ -1,0 +1,23 @@
+diff -ur xawtv-3.94.org/x11/xv.c xawtv-3.94/x11/xv.c
+--- xawtv-3.94.org/x11/xv.c	2005-06-26 21:18:04.121335230 -0500
++++ xawtv-3.94/x11/xv.c	2005-06-26 21:31:03.416804893 -0500
+@@ -315,6 +315,7 @@
+     struct STRTAB *inputs = NULL;
+     char *h;
+     int n, i, vi_port = -1, vi_adaptor = -1;
++    Atom xv_atom;
+ 
+     if (Success != XvQueryExtension(dpy,&ver,&rel,&req,&ev,&err)) {
+ 	if (debug)
+@@ -424,6 +425,11 @@
+                 handle->xv_encoding = XV_ENCODING;
+             if (0 == strcmp("XV_FREQ",at[i].name))
+                 handle->xv_freq     = XV_FREQ;
++	    if (0 == strcmp("XV_AUTOPAINT_COLORKEY",at[i].name))
++	    {
++		xv_atom = XInternAtom(dpy,"XV_AUTOPAINT_COLORKEY",False);
++		XvSetPortAttribute(dpy,vi_port,xv_atom,1);
++	    }
+ #if 0
+             if (0 == strcmp("XV_COLORKEY",at[i].name))
+                 handle->xv_colorkey = XV_COLORKEY;
