@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.1 2006/01/13 19:49:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.2 2006/01/13 20:16:19 vanquirius Exp $
 
 inherit eutils gnome2 versionator
 
@@ -42,6 +42,9 @@ src_install() {
 	# extra materials
 	cd "${WORKDIR}"/${PN}-extramat-${EM_V}
 	cp -R materials "${D}"/usr/share/truevision/materials/
+
+	# causes segfault related to pygtk, needs investigation
+	rm "${D}"/usr/share/truevision/python/plug-ins/starfield.py
 }
 
 pkg_postinst() {
