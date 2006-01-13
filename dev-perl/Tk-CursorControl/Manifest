@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10ef3ead19b2eec5a2bbcd5fb66d25f7 ChangeLog 523
 MD5 548d91b6831a073ccaf0c52eefe3fc60 Tk-CursorControl-0.4.ebuild 547
 MD5 817d1d1c5960563879ba83653d8243e7 files/digest-Tk-CursorControl-0.4 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx+jHtG5z4I8BtQoRAmjnAJwO3TZikFzrdWQw8vw+HEiqLefRygCfez+X
+6/41YCNUafrlg/fuZAhz8qs=
+=5468
+-----END PGP SIGNATURE-----
