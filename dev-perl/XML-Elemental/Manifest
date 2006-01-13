@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b18955c061e308c7341a1ea97548785d ChangeLog 558
+MD5 362c485a7f00eeebbc0bc3d618454569 ChangeLog 669
 MD5 41dd2ae5d5ea357d45f38b6c565aca46 XML-Elemental-1.03.ebuild 566
-MD5 875214e447b5b59817b52f50c54bec39 XML-Elemental-2.0.ebuild 612
+MD5 a0ba642b6d7379dc5bbc11e43bcebc59 XML-Elemental-2.0.ebuild 610
 MD5 acc403df5b5d8d63f426807bd8f6e102 files/digest-XML-Elemental-1.03 68
 MD5 073fe7e23cafdd79e01186aef318470f files/digest-XML-Elemental-2.0 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDiRMytG5z4I8BtQoRAv9tAJ9lxwbU5AlnOl2h2h1cNMc0xz+ltwCdFfJM
-0u4Ygx7GqYljSYI3IGBRARg=
-=Hxm8
------END PGP SIGNATURE-----

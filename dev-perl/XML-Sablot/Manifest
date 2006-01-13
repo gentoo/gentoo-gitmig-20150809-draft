@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e8ae32db620e768c06c9dd9d381e012 ChangeLog 2665
+MD5 c6dda8b61be53826fbc4b1b8f651fe15 ChangeLog 2774
 MD5 77c6074ac3e9722f48fcc07ad31fbe47 XML-Sablot-0.90-r1.ebuild 563
 MD5 6450c509fa992dac23aa7150dababda2 XML-Sablot-0.90.ebuild 554
 MD5 89cd2c7e45c79c1c7425e2453b2454b2 XML-Sablot-0.98.ebuild 619
-MD5 f5cb244f8a79d1905d6125d607b5f685 XML-Sablot-1.01.ebuild 642
+MD5 47601996906d7079a7851b2d698879ce XML-Sablot-1.01.ebuild 640
 MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90 69
 MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90-r1 69
 MD5 6c649e32064af8fe820f53dafb650196 files/digest-XML-Sablot-0.98 69
 MD5 fbbaf6a03917e928bef987785d3a084b files/digest-XML-Sablot-1.01 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDiR1xtG5z4I8BtQoRAlH3AJ9McoX1YW7Af1scAqbC6HCa22m7fwCfenz/
-2KXMWHaDLn7oWWhAaH2o5ZE=
-=VycT
------END PGP SIGNATURE-----

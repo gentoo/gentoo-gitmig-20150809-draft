@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f71bb4035734b16fbfd91c266b603f4f ChangeLog 533
-MD5 436dd740d9ccb3ede0e8a7b1205de2c8 Schedule-At-1.05.ebuild 528
+MD5 c7ee460db360ab25da23d58e1cfb3047 ChangeLog 643
+MD5 318edfd3f2cb4de2431079c9e95990e1 Schedule-At-1.05.ebuild 526
 MD5 acd92d26dbb94eaaff8870a7e21a9569 Schedule-At-1.06.ebuild 528
 MD5 5a3fdca023f389663894ca2cbb2b87d9 files/digest-Schedule-At-1.05 66
 MD5 5516f7ec9f11a314a889866a3925a578 files/digest-Schedule-At-1.06 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx9TStG5z4I8BtQoRAvQfAJwJmyt4L+lEhqgqUNRnrXbJomyBqwCcCaLh
-yK/L+FEsnQD5yEBlTYhME+8=
-=rDkl
------END PGP SIGNATURE-----
