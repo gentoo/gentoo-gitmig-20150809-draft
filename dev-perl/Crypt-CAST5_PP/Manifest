@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a46c988346cbcd78ac36ce4e560ad6a ChangeLog 676
 MD5 bd2b7dc073e132eefa509927f6a506b8 Crypt-CAST5_PP-1.03.ebuild 485
 MD5 58a0249a1709fe6306cea74d1dbeb482 files/digest-Crypt-CAST5_PP-1.03 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyALitG5z4I8BtQoRAqGkAJ9xdV4NMuUVOnrBpdghHMq5hy/GQQCfRqeb
+qvkNNB6FcibXim/O/WEaBXY=
+=S9bo
+-----END PGP SIGNATURE-----
