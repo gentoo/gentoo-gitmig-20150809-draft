@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 000cdececfbb5d9fa4e457e980f2c920 CPAN-Mini-Inject-0.18.ebuild 687
 MD5 55502638ad67ae214ac1503b2a04cc51 ChangeLog 749
 MD5 585f0284e9011b3a90377446db5412be files/digest-CPAN-Mini-Inject-0.18 72
 MD5 8b90c095b8ce1cae8c507c2ef195742c metadata.xml 414
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx/57tG5z4I8BtQoRAs/vAJ9G1nj/59XhLArfwI0X5oGf5IpuhACfaY0m
+E1CirPEPhf+gDqjLbrOiSRY=
+=ci+x
+-----END PGP SIGNATURE-----
