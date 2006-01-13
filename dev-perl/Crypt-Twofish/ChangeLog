@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Twofish
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Twofish/ChangeLog,v 1.1 2005/04/11 16:38:46 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Twofish/ChangeLog,v 1.2 2006/01/13 20:29:27 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Crypt-Twofish-2.12.ebuild:
+  Marking sparc x86 stable
 
 *Crypt-Twofish-2.12 (11 Apr 2005)
 
