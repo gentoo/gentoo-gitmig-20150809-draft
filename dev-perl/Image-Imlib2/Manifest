@@ -1,4 +1,6 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b2415d18c5c0aa1307d5d4215bfaebd2 ChangeLog 1240
 MD5 ff39d90812542bf52563da094ce6c0cb Image-Imlib2-1.03.ebuild 570
+MD5 8c15608505c151e8cb84715d47589f92 Image-Imlib2-1.07.ebuild 464
 MD5 6cef0dbd828f8b29a301e71669681740 files/digest-Image-Imlib2-1.03 68
+MD5 50055d415889568b6d7c0c1094139a07 files/digest-Image-Imlib2-1.07 68
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
