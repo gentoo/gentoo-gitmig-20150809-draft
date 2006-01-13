@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-ClassAPI
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/ChangeLog,v 1.5 2005/08/26 00:21:00 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/ChangeLog,v 1.6 2006/01/13 18:01:23 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-ClassAPI-1.02.ebuild:
+  Marking stable sparc x86
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Test-ClassAPI-1.02.ebuild:
   add ~ia64

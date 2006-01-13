@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Dependency
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.5 2006/01/03 21:14:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.6 2006/01/13 18:01:41 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Algorithm-Dependency-1.101.ebuild:
+  Marking stable sparc x86
 
   03 Jan 2006; <plasmaroo@gentoo.org> Algorithm-Dependency-1.101.ebuild:
   Mark ~ia64; bug #113367.
