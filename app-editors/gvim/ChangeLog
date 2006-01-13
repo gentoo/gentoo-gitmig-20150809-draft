@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.172 2006/01/13 19:08:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.173 2006/01/13 20:11:11 ciaranm Exp $
+
+  13 Jan 2006; Ciaran McCreesh <ciaranm@gentoo.org>
+  -gvim-7.0_alpha20051207.ebuild, -gvim-7.0_alpha20051215.ebuild,
+  -gvim-7.0_alpha20051224.ebuild:
+  Tidy up old versions
 
 *gvim-7.0_alpha20060113 (13 Jan 2006)
 
