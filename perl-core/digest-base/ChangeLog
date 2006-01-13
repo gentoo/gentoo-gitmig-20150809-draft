@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/digest-base
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.12 2006/01/13 14:09:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.13 2006/01/13 22:43:26 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  digest-base-1.13.ebuild:
+  marking sparc x86 stable
 
 *digest-base-1.14 (13 Jan 2006)
 

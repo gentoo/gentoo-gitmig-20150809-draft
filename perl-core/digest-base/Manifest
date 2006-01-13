@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b4dfb9ce5a76b97f5facedae1b5b53c ChangeLog 3296
+MD5 dcdd16784ff6e8dd3633417685eb5032 ChangeLog 3406
 MD5 e706dff64d9dbfd06bfe1f07dec80873 digest-base-1.05.ebuild 589
 MD5 b0eab3436874706df4bce6c12b201ccf digest-base-1.08.ebuild 646
 MD5 1d978089832613376d69bef2716253ad digest-base-1.10.ebuild 633
-MD5 fbec6ae8da1d3ab4b2913c0d96450932 digest-base-1.13.ebuild 646
+MD5 39ab7a9d288b8d06c1f60e2c028b6a6b digest-base-1.13.ebuild 644
 MD5 68b75b8de3151cd8eb20c546dd832d66 digest-base-1.14.ebuild 646
 MD5 35900ffbfad8f86b1af3a6ad4e16018e files/digest-digest-base-1.05 61
 MD5 824966168d7aa40d2879cf23686d97df files/digest-digest-base-1.08 61
@@ -16,7 +16,7 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDx7S0tG5z4I8BtQoRAkZZAJ4oElgiOkTl9x7DoKPF5bf+F5cU6QCffCbu
-kUi4/4p0AbW5ltKmKhPAo1Y=
-=LTfQ
+iD8DBQFDyC0RtG5z4I8BtQoRAs2IAKCJzZIYp5crWDNLUBP5O0+k+norswCgkBSk
+BijZIaIz6kR5Mak3ZCWo+0M=
+=gMq7
 -----END PGP SIGNATURE-----
