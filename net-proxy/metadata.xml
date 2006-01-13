@@ -23,5 +23,8 @@
 	<longdescription lang="it">
 		La categoria net-proxy contiene software proxy come squid e privoxy.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria net-proxy contém softwares de proxy de rede.
+	</longdescription>
 </catmetadata>
 
