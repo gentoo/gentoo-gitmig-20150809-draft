@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/IO-String
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/ChangeLog,v 1.25 2005/11/23 16:10:16 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/ChangeLog,v 1.26 2006/01/13 14:44:27 mcummings Exp $
+
+*IO-String-1.08 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +IO-String-1.08.ebuild:
+  Version bump upstream
 
 *IO-String-1.07 (23 Nov 2005)
 

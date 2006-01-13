@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1f9d01e29c5f688c061085da646805b6 ChangeLog 820
 MD5 91ca1cbf784bf3a631251d6c3c7aeade files/digest-gtk2-ex-formfactory-0.57 75
 MD5 1f5d24af8b851b875fa6f3f62a04cc6e files/digest-gtk2-ex-formfactory-0.58 75
+MD5 0ca150d6e96d1e766b1c946497b04c76 files/digest-gtk2-ex-formfactory-0.59 75
 MD5 bc361816c5573df5d08a3824c14083c7 gtk2-ex-formfactory-0.57.ebuild 561
 MD5 4517f6680b62aa67b9c2e43f83f2c5db gtk2-ex-formfactory-0.58.ebuild 564
+MD5 14b7ce1ce9ec3a2b0b05bf0233c0fdf8 gtk2-ex-formfactory-0.59.ebuild 439
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdfyatG5z4I8BtQoRAg+TAJ46mC2QC7pLc8v5Nq4Jnti30uPGzwCglK+E
-JXT5cu4yjOEWkghFHI3y9A4=
-=FWS8
------END PGP SIGNATURE-----
