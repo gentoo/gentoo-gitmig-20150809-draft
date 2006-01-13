@@ -5,12 +5,12 @@ MD5 cae5539da6a3c372bd59ddcc2e836c53 ChangeLog 3731
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2-r3 64
 MD5 fd6b9d9fe6c3ddd6a9c69a3f5fa00fdd files/libdts-0.0.2-freebsd.patch 501
 MD5 2828f6a30d2829e6df8ba4fc11868140 files/libdts-0.0.2-libtool.patch 3533
-MD5 36c61aa8915913184f93d0c7f49919e2 libdts-0.0.2-r3.ebuild 1034
+MD5 609b9cfdf03c00389c7aad6b9e47b7c1 libdts-0.0.2-r3.ebuild 1041
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvAzXAiZjviIA2XgRAl/fAJ9AQHwh7n/hKaEaQX4GShqQFLtMaQCeNpFh
-kjEtQwenRhLxMZHQoVN6oc0=
-=9j4d
+iD8DBQFDx5qu2+ySkm8kpY0RAhUeAKCsZegWQBwm4gEJ2WMVq5BdpuFZ3gCfRuJA
+2iPH+Smck/isqkGXacU2X1U=
+=kwHx
 -----END PGP SIGNATURE-----
