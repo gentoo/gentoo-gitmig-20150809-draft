@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Getopt-Long
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/ChangeLog,v 1.4 2005/12/30 10:47:03 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/ChangeLog,v 1.5 2006/01/13 14:19:54 mcummings Exp $
+
+*Getopt-Long-2.35 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +Getopt-Long-2.35.ebuild:
+  Version bump upstream
 
   30 Dec 2005; <mcumming@gentoo.org> Getopt-Long-2.34.ebuild:
   PodParser moved to perl-core
