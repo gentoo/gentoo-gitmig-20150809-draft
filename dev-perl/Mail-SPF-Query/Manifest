@@ -1,4 +1,6 @@
 MD5 40c116f0b5dcf55b1815014fbd4193a5 ChangeLog 1373
 MD5 9c042892bd891df9c96c67ec99963fa3 Mail-SPF-Query-1.997.ebuild 646
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 3fc26cb8c49a5a85a96f182b29835e4a Mail-SPF-Query-1.998.ebuild 564
 MD5 71e582a192c3b6a343098a3b8dad38d4 files/digest-Mail-SPF-Query-1.997 71
+MD5 cfd71e2c83c90cf6505f1befb4183f6b files/digest-Mail-SPF-Query-1.998 71
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
