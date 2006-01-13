@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.10 2005/09/24 06:34:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.11 2006/01/13 21:59:23 genstef Exp $
 
 inherit games
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc flac mp3 mikmod ogg opengl vorbis"
 
-RDEPEND="virtual/x11
-	app-arch/bzip2
+RDEPEND="app-arch/bzip2
 	dev-lang/lua
 	media-libs/libpng
 	media-libs/libsdl
@@ -24,7 +23,9 @@ RDEPEND="virtual/x11
 	mp3? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
 	ogg? ( vorbis? ( media-libs/libogg media-libs/libvorbis ) )"
+
 DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/stratagus-${MY_PV}
