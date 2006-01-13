@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0405588858c99944df65f02bb032e7df OLE-StorageLite-0.14.ebuild 563
-MD5 0930d4c0ee89d772ac0f35ea4bad87b3 ChangeLog 441
+MD5 b9f22cb8ecbdb169c7d5dbb9a053aeba ChangeLog 555
+MD5 aeee0f5992507190b5b14d04888f7b47 OLE-StorageLite-0.14.ebuild 561
 MD5 45189174d21b988e8d469e1256a1cad1 files/digest-OLE-StorageLite-0.14 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdPUftG5z4I8BtQoRAnN3AJ0UyRTEHSkpZrHH/Z6rTmoNlq8RYwCeLlLC
-6Fp3xP9ZEr4HwHZdDltUVQw=
-=uXd4
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

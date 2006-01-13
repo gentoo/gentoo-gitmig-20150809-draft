@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b82808f8bf0648460e503309edcbd68b ChangeLog 2006
+MD5 a399c88bf9242b27cfc9da23ef7f1cef ChangeLog 2118
 MD5 3cf89fc3967ac0caa566f7c3e7b32462 Net-Netmask-1.9004.ebuild 525
 MD5 d9b309a061d93dc0c7b1245f7b7c99f4 Net-Netmask-1.9011.ebuild 530
-MD5 24d95f6c5e43808d86abdbdf30e5579e Net-Netmask-1.9012.ebuild 536
+MD5 9879f9ffa82e66686d6eff3a01db670d Net-Netmask-1.9012.ebuild 534
 MD5 da7d08732944549d9d1cadf7fced1ced files/digest-Net-Netmask-1.9004 69
 MD5 8ebfe566b369b553144397269a1c85de files/digest-Net-Netmask-1.9011 69
 MD5 bce4cfa3d000a7d879ecb57306543f61 files/digest-Net-Netmask-1.9012 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfyA8tG5z4I8BtQoRAqlsAJ0TO3hZG1cXdk48praPcd+oYQagQgCfWgWd
-TCnC8PMNEiXSx4ltQ1JQzpc=
-=MJx9
------END PGP SIGNATURE-----
