@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4857 2006/01/12 22:41:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4858 2006/01/13 14:14:33 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (13 Jan 2006)
+# Vulnerable to security issue. See bug #115760
+media-video/xmovie
 
 # Marcelo Goes <vanquirius@gentoo.org> (12 Jan 2006)
 # Mask development version
