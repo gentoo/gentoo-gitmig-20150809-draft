@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 5632716586be0a9927d2ac1dd99fd76a ChangeLog 2322
 MD5 36b9f4034a9787c7debced23a636192f caps-plugins-0.2.1-r1.ebuild 780
 MD5 03ff691908a4f90a1f55f00e9a7565f5 caps-plugins-0.2.3.ebuild 768
-MD5 4a4d1e3b055cf6bedc51746415052fbe ChangeLog 2180
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 7d9315ae31052c00fdbc6759716b1575 files/digest-caps-plugins-0.2.1-r1 62
+MD5 d7d999219da997702bdd427dcbdd0032 caps-plugins-0.3.0.ebuild 946
 MD5 e6f951f4aa31c9482b8cafafa280cde6 files/caps-plugins-0.1.10-fpic.patch 293
+MD5 7d9315ae31052c00fdbc6759716b1575 files/digest-caps-plugins-0.2.1-r1 62
 MD5 0deb7d760b246dd431f75b0d88608797 files/digest-caps-plugins-0.2.3 62
+MD5 7e7dafcf97de6a1894620989920a8363 files/digest-caps-plugins-0.3.0 62
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSrlrvpz1081QvMkRArsZAJ4nz6qzQ2xc2WMttT1rsmU/NSguNQCfdKDe
-DAePmH67hUt01bkLflWFbek=
-=jEWU
+iD8DBQFDx7x3vpz1081QvMkRAtsgAJ9HYEqlXfwtg+QNjbPKm9YS2HSHsgCcDuie
+PDy7Vd5FGTmPyHs7saw9M7g=
+=yPNP
 -----END PGP SIGNATURE-----
