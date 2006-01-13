@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.11.1.ebuild,v 1.3 2006/01/04 07:01:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.11.1.ebuild,v 1.4 2006/01/13 12:43:04 vapier Exp $
 
 inherit eutils autotools libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.xiph.org/releases/speex/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
 IUSE="ogg sse"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.0 )"

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6839e349dfb0bbab3235525678df90d3 ChangeLog 5788
 MD5 ba0dba31926ad8799962806a688b7594 files/digest-speex-1.0.2 63
 MD5 e103df8cbfd726cbc56768dd2a813130 files/digest-speex-1.0.3 63
@@ -9,7 +12,14 @@ MD5 a2c995072243f9de940b69082d909548 files/speex-1.1.10-sse.patch 336
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
 MD5 fa5d9248e3f54c1a596d57b192d49715 speex-1.0.2.ebuild 935
 MD5 73f8070fe449bc710645a292d325f360 speex-1.0.3.ebuild 942
-MD5 6caad76233a1bf92dba410c72c9da6d3 speex-1.1.10.ebuild 933
-MD5 beb3899ddf9ef58f8ed18c601443abfc speex-1.1.11.1.ebuild 1122
+MD5 df06e953fab5c56578823e1b02c46874 speex-1.1.10.ebuild 937
+MD5 d4b623d30ef220303e8741a0de9f137a speex-1.1.11.1.ebuild 1123
 MD5 aa8b056df8d1a1d2a36d44cd721f0e82 speex-1.1.5.ebuild 963
-MD5 6422153be85815565c22cb86fcbf4272 speex-1.1.7.ebuild 966
+MD5 82f7f94e3e02b088bdb6e6fc5112a206 speex-1.1.7.ebuild 969
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDx6DF2+ySkm8kpY0RAgl2AKCh8eLQkZJ5Br/2F5PnSi2dBmEFhwCcCQAM
+bOC/GGqomcgmT+HJZHmGfhA=
+=A/2o
+-----END PGP SIGNATURE-----
