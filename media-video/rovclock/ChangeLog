@@ -1,0 +1,10 @@
+# ChangeLog for media-video/rovclock
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.1 2006/01/13 20:51:34 genstef Exp $
+
+*rovclock-0.6e (13 Jan 2006)
+
+  13 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +rovclock-0.6e.ebuild:
+  New ebuild thanks to Sebastian Witt <se.witt@gmx.net> and t35t0r in bug 102919
+
