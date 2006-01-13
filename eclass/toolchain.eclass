@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.242 2006/01/13 10:38:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.243 2006/01/13 19:00:17 flameeyes Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1213,15 +1213,7 @@ gcc_do_configure() {
 			fi
 		fi
 	else
-		confgcc="${confgcc} --enable-threads=posix"
-
-		# FreeBSD (and maybe not only that) does not support --as-needed flag
-		# that's used to link against libgcc_s only when needed, thus breaking
-		# when linking different libc versions. Disable it for safety.
-		case ${CTARGET} in
-			*-freebsd*)	confgcc="${confgcc} --disable-shared" ;;
-			*)			confgcc="${confgcc} --enable-shared" ;;
-		esac
+		confgcc="${confgcc} --enable-shared --enable-threads=posix"
 	fi
 	# __cxa_atexit is "essential for fully standards-compliant handling of
 	# destructors", but apparently requires glibc.
