@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-NamespaceSupport
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.28 2005/10/19 18:43:54 killerfox Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.29 2006/01/13 22:36:33 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-NamespaceSupport-1.09.ebuild:
+  Marking sparc x86 stable
 
   19 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
   XML-NamespaceSupport-1.09.ebuild:

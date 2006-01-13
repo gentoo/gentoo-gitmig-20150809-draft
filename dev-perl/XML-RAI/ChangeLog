@@ -1,8 +1,9 @@
 # ChangeLog for dev-perl/XML-RAI
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.2 2005/11/27 02:32:12 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.3 2006/01/13 22:38:02 mcummings Exp $
 
-*XML-RAI-1.301 (27 Nov 2005)
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> XML-RAI-1.301.ebuild:
+  Marking sparc x86 stable
 
   27 Nov 2005; Michael Cummings <mcummings@gentoo.org> XML-RAI-1.2.ebuild,
   +XML-RAI-1.301.ebuild:

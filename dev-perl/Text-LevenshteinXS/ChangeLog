@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-LevenshteinXS
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-LevenshteinXS/ChangeLog,v 1.2 2006/01/13 17:52:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-LevenshteinXS/ChangeLog,v 1.3 2006/01/13 22:25:01 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-LevenshteinXS-0.03.ebuild:
+  Marking sparc x86 stable
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Text-LevenshteinXS-0.03.ebuild:

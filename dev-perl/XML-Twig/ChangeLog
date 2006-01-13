@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.28 2006/01/01 23:20:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.29 2006/01/13 22:39:09 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> XML-Twig-3.22.ebuild:
+  Marking sparc x86 stable
 
   01 Jan 2006; Chris White <chriswhite@gentoo.org> -XML-Twig-3.15-r1.ebuild:
   Old version cleanup.  Fixes bug #112673.

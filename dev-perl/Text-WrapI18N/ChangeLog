@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-WrapI18N
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WrapI18N/ChangeLog,v 1.2 2006/01/13 17:58:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WrapI18N/ChangeLog,v 1.3 2006/01/13 22:30:28 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-WrapI18N-0.06.ebuild:
+  Marking sparc x86 stable
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Text-WrapI18N-0.06.ebuild:
