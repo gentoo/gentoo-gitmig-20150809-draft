@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/noia
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.22 2005/10/04 11:31:40 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.23 2006/01/13 18:07:52 gustavoz Exp $
+
+  13 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> noia-1.0-r1.ebuild:
+  Stable on sparc
 
   04 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> -noia-1.0.ebuild:
   Removed 1.0 ebuild.
