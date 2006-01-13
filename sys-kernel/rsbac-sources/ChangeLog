@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/rsbac-sources
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.41 2005/11/17 22:25:32 kang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.42 2006/01/13 13:49:25 kang Exp $
+
+*rsbac-sources-2.6.14 (13 Jan 2006)
+
+  13 Jan 2006; Guillaume Destuynder <kang@gentoo.org>
+  +rsbac-sources-2.6.14.ebuild:
+  2.6.14 based on hardened+pax and rsbac 1.2.5.1
+
+*rsbac-sources-2.6.13 (07 Oct 2005)
 
   17 Nov 2005; Guillaume Destuynder <kang@gentoo.org>
   rsbac-sources-2.4.31.ebuild, rsbac-sources-2.6.13.ebuild,
@@ -12,7 +20,6 @@
   rsbac-sources-2.6.13.ebuild, rsbac-sources-2.4.31.ebuild:
   2.6.13 with 1.2.5 marked stable.
 
-*rsbac-sources-2.6.13 (07 Oct 2005)
 *rsbac-sources-2.4.31 (07 Oct 2005)
 
   07 Oct 2005; Guillaume Destuynder <kang@gentoo.org>
