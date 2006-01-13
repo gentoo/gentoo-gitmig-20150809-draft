@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87b3f4fa6cb41d12f4b1e53f27e32b7a ChangeLog 74566
+MD5 d0aeca0c010af7e809bb47718435dbdb ChangeLog 74676
 MD5 26a30fcfe2a6fbbf994b64756ed4f604 apache-1.3.32-r1.ebuild 6685
 MD5 f154daabfa5b59d9597f8ede26b839d2 apache-1.3.33-r13.ebuild 8674
 MD5 17e12318b6dd1cd8bb25cb987490c7fd apache-1.3.33-r6.ebuild 7108
@@ -11,7 +8,7 @@ MD5 8dfa3f0fbdc01264e754bd3ebf7b8a5a apache-2.0.54-r15.ebuild 12594
 MD5 be59fbc220730a0212fbf6f34a1a6652 apache-2.0.54-r30.ebuild 12930
 MD5 17f7420f9957d17a514ee70bc4786a25 apache-2.0.54-r31.ebuild 13375
 MD5 e1e33b99a1b8f95a419f0e95a6ebb2dc apache-2.0.54-r9.ebuild 12595
-MD5 28320af8eb9b59d33916f0b6788db2a8 apache-2.0.55.ebuild 13415
+MD5 a889a3f412aeca199e8171cc16c90bb7 apache-2.0.55.ebuild 13417
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
 MD5 3d94c56af17136b6c408f076c32e0362 files/2.0.49/40_mod_ssl.conf 3213
 MD5 1d10cc98714a34ddc38525743c2989f9 files/2.0.49/41_mod_ssl.default-vhost.conf 8053
@@ -51,7 +48,7 @@ MD5 282e8f0ae737d778a643251ad4f21122 files/digest-apache-2.0.54-r15 217
 MD5 b9925be24e72acc1031f76a8bc0a07cb files/digest-apache-2.0.54-r30 151
 MD5 f3ab77f6b13c80af68614aa80de7af2b files/digest-apache-2.0.54-r31 154
 MD5 35d8cf2217559d96a69696d69f4c85cc files/digest-apache-2.0.54-r9 214
-MD5 803227bbf1ffe414e9771f219768640d files/digest-apache-2.0.55 147
+MD5 76c56212c3095c58a713ffb7d5263cdf files/digest-apache-2.0.55 147
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 MD5 d52999376f67a872ee48cbae72db0160 files/httpd-2.0.49-cgi.patch 10319
 MD5 8cb4313e58d7bd5dc369eb92f75daa2b files/httpd-2.0.49-ipv6.patch 788
@@ -64,10 +61,3 @@ MD5 59a6ba7dcde461f5350af41e6aff92b1 files/robots.txt 342
 MD5 d3626a1e31a675c60d066c111d552adf files/suexec.pam 59
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
 MD5 27c9cb37c510e08bb69df277229a03ea metadata.xml 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxsThugEuf3OQ0akRAr+bAJ9TQeGpg7+u2zfheMPCXLaJ/38TCgCfaiZc
-oq0Y0ltStMLfigrR3fFNu6c=
-=YFL/
------END PGP SIGNATURE-----
