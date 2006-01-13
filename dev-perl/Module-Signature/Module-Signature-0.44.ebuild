@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.44.ebuild,v 1.4 2005/05/25 14:09:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.44.ebuild,v 1.5 2006/01/13 21:56:42 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AU/AUTRIJUS/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 SRC_TEST="do"

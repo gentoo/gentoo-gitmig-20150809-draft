@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-DomainKeys
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/ChangeLog,v 1.1 2005/11/21 17:17:13 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/ChangeLog,v 1.2 2006/01/13 21:52:57 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Mail-DomainKeys-0.80.ebuild:
+  Marking x86 stable
 
 *Mail-DomainKeys-0.80 (21 Nov 2005)
 
