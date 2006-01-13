@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0979acdd1bd1e425b309923f78572bd0 metadata.xml 226
-MD5 738a977d58afbb103ad5e396a7f4c574 ChangeLog 3562
-MD5 ce10ceea0cc30efd96c1e5cfafdafede kth-krb-1.2.2-r2.ebuild 1597
-MD5 5f6a2cdfe29f03bdbfe4e0a05bfcdf9f files/kth-krb-1.2.2-no_libedit.patch 387
-MD5 daffa490e9b86f52a9fe5b88559d00e2 files/digest-kth-krb-1.2.2-r2 63
-MD5 c6ac0230ef8dc2b0476517e265a1bc4c files/kth-gentoo.patch 426
-MD5 a4d154cc6e477b4c6a443592fab2d4d6 files/kth-krb-1.2.2-fPIC.patch 702
+MD5 339db5b9dd4f9acac9f4803b4096972c ChangeLog 3727
 MD5 be7f2f326e6022797dca6608b6248b7e files/02kth-krb 118
+MD5 daffa490e9b86f52a9fe5b88559d00e2 files/digest-kth-krb-1.2.2-r2 63
 MD5 55f56de790181ad8a1df5176a53551dd files/kth-gentoo-ssl.patch 6873
+MD5 c6ac0230ef8dc2b0476517e265a1bc4c files/kth-gentoo.patch 426
 MD5 35eed8dc7a9b322e4ed6220ef29cd1bc files/kth-krb-1.2.2-berkdb.patch 542
+MD5 a4d154cc6e477b4c6a443592fab2d4d6 files/kth-krb-1.2.2-fPIC.patch 702
+MD5 a65d513d35e24fa61fc961df6582216f files/kth-krb-1.2.2-gcc.patch 284
+MD5 5f6a2cdfe29f03bdbfe4e0a05bfcdf9f files/kth-krb-1.2.2-no_libedit.patch 387
+MD5 e2375da28d1bc3914e7a9cf8f5dcea55 kth-krb-1.2.2-r2.ebuild 1614
+MD5 0979acdd1bd1e425b309923f78572bd0 metadata.xml 226
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHKXpgIKl8Uu19MoRAm4jAJ9vQ4rqqxf3UYEG8TaWlZPBkbAC/wCbBIYQ
-XgV7o4LDlmo5w+yahFNzzlI=
-=rcNc
+iD8DBQFDx44T2+ySkm8kpY0RAuNsAJ4s1DbxpAt2noakRpySUkRFOvtDWQCdHaxX
+jUm+TvmeINKqdQYewUjBg80=
+=8l+J
 -----END PGP SIGNATURE-----

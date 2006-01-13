@@ -1,0 +1,18 @@
+--- lib/roken/getifaddrs.c
++++ lib/roken/getifaddrs.c
+@@ -669,6 +669,7 @@
+ 	    case IFLA_QDISC:
+ 	      break;
+ 	    default:
++	      ;
+ 	    }
+ 	    break;
+ 	  case RTM_NEWADDR:
+@@ -709,6 +710,7 @@
+ 	    case IFA_CACHEINFO:
+ 	      break;
+ 	    default:
++	      ;
+ 	    }
+ 	  }
+ 	}
