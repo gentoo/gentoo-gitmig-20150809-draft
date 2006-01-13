@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Rijndael
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.2 2005/03/11 10:08:17 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.3 2006/01/13 20:18:47 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Crypt-Rijndael-0.05.ebuild:
+  Marking stable sparc x86
 
   11 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   Crypt-Rijndael-0.05.ebuild:
