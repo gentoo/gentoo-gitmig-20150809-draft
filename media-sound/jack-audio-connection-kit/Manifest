@@ -19,17 +19,17 @@ MD5 0ad8a4c606e807460bce497d044044ef files/jack-audio-connection-kit-doc-option.
 MD5 8e9c72734364a9d7e4a6d781e13beec8 files/jack-audio-connection-kit-transport.patch 309
 MD5 88d8b7c74bb2f24bea9c523e326a62ff jack-audio-connection-kit-0.100.0-r1.ebuild 3444
 MD5 18042171cc5c2205302821ac7e8f8327 jack-audio-connection-kit-0.100.0.ebuild 2894
-MD5 1ac547c8b18182ac456b61a14d6e23a6 jack-audio-connection-kit-0.100.7.ebuild 3356
+MD5 1b23cc38c3aa54bfaf84814972e3d2ab jack-audio-connection-kit-0.100.7.ebuild 3360
 MD5 292483ebb4d3f1d1e8ec827768344c25 jack-audio-connection-kit-0.80.0.ebuild 1771
 MD5 4c3e2cd2840952f1a90477dedb64a766 jack-audio-connection-kit-0.98.1-r1.ebuild 2117
-MD5 f8981d469a042926e1946ae8ef1aeda9 jack-audio-connection-kit-0.99.0-r1.ebuild 2361
+MD5 df45c04f919d15db4f29531d85407208 jack-audio-connection-kit-0.99.0-r1.ebuild 2364
 MD5 fa41812d1f6cbbf29371fddcefa1f1ac jack-audio-connection-kit-0.99.0-r2.ebuild 2235
 MD5 3169635fb6706e22dde19c9dfdfd5ec7 jack-audio-connection-kit-0.99.0-r3.ebuild 2271
 MD5 e9914343b13388692a7ed11361d53724 metadata.xml 218
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvxoK2+ySkm8kpY0RAjvIAKCVFAdjqCybrVA3/+basRtY9SnL+ACglDuz
-qATqKvwpKwCUI0Zcw+s8L+k=
-=LeOf
+iD8DBQFDx4yQ2+ySkm8kpY0RAsnZAJ9Oqo6AVBNeHxERMR5sAYnTkKlk1gCgi9Vm
+bKHB8E3+9cdmga6ud5JRGgo=
+=2bk5
 -----END PGP SIGNATURE-----
