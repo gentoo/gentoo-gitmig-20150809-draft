@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gliv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.21 2005/12/26 18:20:37 vanquirius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.22 2006/01/13 00:55:06 vanquirius Exp $
+
+  13 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -gliv-1.8.ebuild,
+  gliv-1.9.4.ebuild:
+  Remove old ebuild, do not set RDEPEND=DEPEND.
 
   26 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> -gliv-1.8.1.ebuild,
   -gliv-1.8.2.ebuild, -gliv-1.9.2.ebuild, -gliv-1.9.3.ebuild,
