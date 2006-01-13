@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/swh-plugins
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.27 2005/09/04 00:04:01 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.28 2006/01/13 16:20:33 fvdpol Exp $
+
+*swh-plugins-0.4.14 (13 Jan 2006)
+
+  13 Jan 2006; Frank van de Pol <fvdpol@gentoo.org>
+  -swh-plugins-0.4.2.ebuild, -swh-plugins-0.4.3.ebuild,
+  -swh-plugins-0.4.3-r1.ebuild, -swh-plugins-0.4.7.ebuild,
+  +swh-plugins-0.4.14.ebuild:
+  Version bump to 0.4.14, closes #108347. Cleanup older versions from portage.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   swh-plugins-0.4.2.ebuild, swh-plugins-0.4.3.ebuild,

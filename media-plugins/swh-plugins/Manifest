@@ -1,27 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cca4487a65ab73aaa91f2c42829de610 ChangeLog 4507
-MD5 9ce887e0533319554d98aad33de5553a swh-plugins-0.4.7.ebuild 995
-MD5 14c32408a145c2330012bcfeb7f256af swh-plugins-0.4.3-r1.ebuild 1083
-MD5 330c2888f587983c64b89f9f3c34a280 swh-plugins-0.4.3.ebuild 988
-MD5 afb1dec172dfc09951014e71a07f993a swh-plugins-0.4.2.ebuild 982
-MD5 6db402fd00e6249cba8b359b988f204c swh-plugins-0.4.11.ebuild 1076
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4177551596358101a270634b2e3d9150 swh-plugins-0.4.13.ebuild 1340
-MD5 32e3b0473a59b47fad48f53d2dd9e1b3 files/digest-swh-plugins-0.4.3 69
-MD5 a211072ae4a6f238780abf17493f29a4 files/digest-swh-plugins-0.4.2 69
-MD5 9f05dc15f929c14b519f4da30953079d files/digest-swh-plugins-0.4.7 69
+MD5 b052d47a683e0eb254acba22e20b3507 ChangeLog 4816
+MD5 3566688b3137d825328645ee202c38cb files/digest-swh-plugins-0.4.11 70
+MD5 9b623c0940b738b4851300c7a1dbdea3 files/digest-swh-plugins-0.4.13 70
+MD5 cbc3b8d526459500bc18ec812f8a7325 files/digest-swh-plugins-0.4.14 71
 MD5 f2e2e9a24cb7656a2b80410230a8d5bc files/swh-plugins-0.4.3-compile.patch 2201
 MD5 be6ca617ab81436133132bb94d72b0b4 files/swh-plugins-0.4.3-ppc.patch 498
-MD5 9b623c0940b738b4851300c7a1dbdea3 files/digest-swh-plugins-0.4.13 70
-MD5 3566688b3137d825328645ee202c38cb files/digest-swh-plugins-0.4.11 70
-MD5 32e3b0473a59b47fad48f53d2dd9e1b3 files/digest-swh-plugins-0.4.3-r1 69
 MD5 ba085fb52c6c98c80b1250bf14c3e49c files/swh-plugins-quickfixes.patch 1194
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 6db402fd00e6249cba8b359b988f204c swh-plugins-0.4.11.ebuild 1076
+MD5 4177551596358101a270634b2e3d9150 swh-plugins-0.4.13.ebuild 1340
+MD5 ef377ecee1c7788c36b38b1f92e54fb9 swh-plugins-0.4.14.ebuild 1337
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGjoDj5H05b2HAEkRAn5WAKCNQkAARA5QD1eaX5yn16Lc1hQfSwCdHWVm
-vJi3NSRNcf75r1+iyWOXjcs=
-=bfvd
+iD8DBQFDx9Nqvpz1081QvMkRAj3dAJ41RM5mxXQXLlok86zYjS1jFGXJuQCfTUmF
+oqz2Sf+VWOcVn0i1ee2QDkY=
+=pUq5
 -----END PGP SIGNATURE-----
