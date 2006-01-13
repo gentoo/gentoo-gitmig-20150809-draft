@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 965b915f092c35574aa017285aea83cc ChangeLog 1836
 MD5 0fffd2ffa1dec72c314d89946b2b633c Clone-0.15.ebuild 555
 MD5 6722250ec34f5e4f2a53eb7669c765d0 Clone-0.16.ebuild 563
@@ -6,3 +9,10 @@ MD5 91b6b75986d48a294a67abf7c36adb21 files/digest-Clone-0.15 60
 MD5 c052c9ac4e1a9b6d2784477f3378225d files/digest-Clone-0.16 60
 MD5 b7af8c1f8ea985eed5d421803d0184be files/digest-Clone-0.18 60
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx/VGtG5z4I8BtQoRAqSOAJ45BrM9SDGvYdjn4er89AhqHdVrGACgg25y
+11akD/yo77lobcY+nWo8HEg=
+=vzc+
+-----END PGP SIGNATURE-----
