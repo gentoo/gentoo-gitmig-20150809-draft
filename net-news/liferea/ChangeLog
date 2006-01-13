@@ -1,6 +1,12 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.31 2006/01/12 23:25:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.32 2006/01/13 23:14:22 citizen428 Exp $
+
+*liferea-1.0-r1 (13 Jan 2006)
+
+  13 Jan 2006; Michael Kohl <citizen428@gentoo.org>
+  +files/liferea-firefox-1.5.patch, +liferea-1.0-r1.ebuild:
+  Revision bump to include a patch so Liferea can be built against Firefox 1.5.
 
   12 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   liferea-0.9.6.ebuild, liferea-0.9.7a.ebuild, liferea-0.9.7b.ebuild,
