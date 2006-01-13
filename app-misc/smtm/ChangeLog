@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/smtm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.9 2005/11/28 12:09:35 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.10 2006/01/13 17:56:37 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> smtm-1.6.6.ebuild:
+  Marking stable x86
 
   28 Nov 2005; <mcumming@gentoo.org> smtm-1.6.5.ebuild, smtm-1.6.6.ebuild:
   Switched from perl-module to perl-app eclass
