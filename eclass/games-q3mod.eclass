@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.32 2006/01/06 16:28:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.33 2006/01/13 15:10:17 wolf31o2 Exp $
 
 inherit games
 
@@ -10,15 +10,12 @@ DESCRIPTION="Quake III - ${MOD_DESC}"
 
 SLOT="0"
 KEYWORDS="-* amd64 ~ppc x86"
-IUSE="opengl X dedicated"
+IUSE="dedicated"
 
 DEPEND="app-arch/unzip"
 RDEPEND="|| ( games-fps/quake3 games-fps/quake3-bin )
-	amd64? ( app-emulation/emul-linux-x86-baselibs
-		X? ( app-emulation/emul-linux-x86-xlibs ) )
-	dedicated? ( app-misc/screen )
-	opengl? ( virtual/opengl )
-	X? ( virtual/x11 )"
+	amd64? ( app-emulation/emul-linux-x86-baselibs )
+	dedicated? ( app-misc/screen )"
 
 S=${WORKDIR}
 
