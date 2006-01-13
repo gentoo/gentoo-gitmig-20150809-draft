@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r4.ebuild,v 1.10 2006/01/12 21:33:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r4.ebuild,v 1.11 2006/01/13 01:30:41 halcy0n Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="jpeg zlib cairo"
 
 RDEPEND=">=media-libs/freetype-2.1.8

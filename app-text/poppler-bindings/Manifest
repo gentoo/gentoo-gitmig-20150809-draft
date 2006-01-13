@@ -3,4 +3,4 @@ MD5 fd7bca7be5c5d5779b32f4c4e7fe9b4c files/digest-poppler-bindings-0.4.3-r2 65
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 MD5 73800d8735fd2813b3ef67ad511fc2b5 files/poppler-0.4.3-bindings.patch 2915
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 287b16dd6227e084c1771c116bf0fc98 poppler-bindings-0.4.3-r2.ebuild 1302
+MD5 970eff7a2c45ee2e91399022ad463504 poppler-bindings-0.4.3-r2.ebuild 1301
