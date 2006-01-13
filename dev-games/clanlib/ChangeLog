@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.25 2005/03/02 02:33:55 vapier Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.26 2006/01/13 22:00:39 genstef Exp $
+
+  13 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  clanlib-0.7.8-r1.ebuild:
+  Add modular depends
 
 *clanlib-0.6.5-r3 (01 Mar 2005)
 

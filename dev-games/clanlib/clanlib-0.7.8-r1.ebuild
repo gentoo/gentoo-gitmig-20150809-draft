@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.6 2005/05/28 09:18:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.7 2006/01/13 22:00:39 genstef Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,11 +16,30 @@ IUSE="opengl X sdl vorbis doc mikmod clanVoice clanJavaScript ipv6"
 DEPEND="virtual/libc
 	media-libs/libpng
 	media-libs/jpeg
+	media-libs/freetype
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl )
-	X? ( virtual/x11 )
+	X? (
+		|| (
+			( media-libs/mesa
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-proto/inputproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/xproto )
+			virtual/x11
+		)
+	)
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
 	vorbis? ( media-libs/libvorbis )"
+RDEPEND="${DEPEND}
+	|| (
+		( media-libs/mesa
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXxf86vm )
+		virtual/x11
+	)"
 
 S="${WORKDIR}/ClanLib-${PV}"
 

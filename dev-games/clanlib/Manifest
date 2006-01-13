@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e45c7e83d1cd597cd23f16d5230538fa clanlib-0.7.8-r1.ebuild 2132
-MD5 33ee8adc6546aef9881086d98bfadb79 metadata.xml 3010
+MD5 5c4ff6c24aca12f4bd606d1c2c814b50 ChangeLog 5933
 MD5 e6db078f4e90d2db32070769edbbaa56 clanlib-0.6.5-r3.ebuild 2174
-MD5 50fae1e6fa3a765f2551928d911345b4 ChangeLog 5829
+MD5 92e9b6527a187713a92c4d1602e78b66 clanlib-0.7.8-r1.ebuild 2426
 MD5 7c2e9c0016e1bcd9daaa26d1dd55228a files/0.7.8-install-opengl-wrap.patch 346
-MD5 3e439d751339f684be1c709644d71a4d files/digest-clanlib-0.6.5-r3 68
-MD5 18bfa200838fa3b2398d70ba78ede344 files/clanlib-0.6.5-gcc3.patch 3225
-MD5 96c4aa6ca05f84d43464c80d9e7565d9 files/digest-clanlib-0.7.8-r1 69
-MD5 c700c77d44839f9d8bfda3e4faedfb75 files/clanlib-0.6.5-freetype.patch 354
-MD5 f0d65c6800d4f5ff51260b66bbc08670 files/clanlib-0.6.5-DirectFB-update.patch 1103
 MD5 940618fa67a1354533249defe3a89739 files/0.7.8-port.patch 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5NFCgIKl8Uu19MoRApTsAJ9iRSBD+AxWPE7QJhGIfMjlzul86QCdG/Nl
-rcfDFiKHAmldBcNqP1T+Uxw=
-=I9xG
------END PGP SIGNATURE-----
+MD5 f0d65c6800d4f5ff51260b66bbc08670 files/clanlib-0.6.5-DirectFB-update.patch 1103
+MD5 c700c77d44839f9d8bfda3e4faedfb75 files/clanlib-0.6.5-freetype.patch 354
+MD5 18bfa200838fa3b2398d70ba78ede344 files/clanlib-0.6.5-gcc3.patch 3225
+MD5 3e439d751339f684be1c709644d71a4d files/digest-clanlib-0.6.5-r3 68
+MD5 96c4aa6ca05f84d43464c80d9e7565d9 files/digest-clanlib-0.7.8-r1 69
+MD5 33ee8adc6546aef9881086d98bfadb79 metadata.xml 3010
