@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cfc760967529ad51836b3ce687ef303f ChangeLog 2555
 MD5 e0921c0f8e9345f2f5d53bcc7a2b6cdc Class-DBI-0.96.ebuild 790
 MD5 2d5ac285a7f150f7c3db4908fef1f813 Class-DBI-3.0.1.ebuild 791
@@ -6,3 +9,10 @@ MD5 24cfe54414ca526572a8558e5d2839df files/digest-Class-DBI-0.96 65
 MD5 34d2c8b1138d68f08fbe8245fb82e5fb files/digest-Class-DBI-3.0.1 66
 MD5 69e5067f4c629787011772b33df016c4 files/digest-Class-DBI-3.0.13 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx+6ntG5z4I8BtQoRAk7TAJ4kR/qJXsf8WO+AaBeXfEDcNx+qfACffT4t
+uvwM2nEj0Um6R9UYCF9+A88=
+=JvT7
+-----END PGP SIGNATURE-----

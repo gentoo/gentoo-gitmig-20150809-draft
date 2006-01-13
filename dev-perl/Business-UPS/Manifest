@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 35dadf42b3b4d115fd6a8b012bb52713 Business-UPS-2.0.ebuild 483
 MD5 eb2125a0c3ab4255f3efea1b134e28d6 ChangeLog 573
 MD5 944d323d4fde15455969128bc695717a files/digest-Business-UPS-2.0 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx+yZtG5z4I8BtQoRAulzAJ43zSCOnmP5sIP7NY8QHLmtF27xwACeM2dW
+t/uEimTfatwhD8jiovPHw9A=
+=rmdn
+-----END PGP SIGNATURE-----
