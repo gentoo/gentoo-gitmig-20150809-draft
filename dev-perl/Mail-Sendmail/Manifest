@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a84c8dee3285217a6596f93e490c59cd ChangeLog 1457
-MD5 34704a6e99ceec0a5979b09a905e15ab Mail-Sendmail-0.79.ebuild 507
+MD5 dca3eac09f28220658b99a2e26a47bfe ChangeLog 1545
+MD5 8572b19d92a0bd329c98ca5e786820ce Mail-Sendmail-0.79.ebuild 510
 MD5 2f159f5a3ada4d43001bccb7eff21f13 files/digest-Mail-Sendmail-0.79 69
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwur3ViELBEf1JB0RApOtAJ9cHennLItOqN0LUmjNWogWiKwpFgCdFA3O
-8RZea3i+TA/W6akyDlc8z1E=
-=7kCg
------END PGP SIGNATURE-----
