@@ -39,12 +39,12 @@ MD5 e48784e20efad8d2437f1c271104a4b4 libtool-1.5.16.ebuild 5178
 MD5 50b3b9fe1d346665231c739e48d616b6 libtool-1.5.18-r1.ebuild 5181
 MD5 86dd9bc18548613d5629e361b17fb257 libtool-1.5.20-r1.ebuild 5117
 MD5 467da9b02d51eb96bfb0c519d71e2fa6 libtool-1.5.20.ebuild 5102
-MD5 acb693a41e8c551fd1480d6048c0a3c0 libtool-1.5.22.ebuild 4772
+MD5 25bcc4f6216eb91d9c74d88ae558a647 libtool-1.5.22.ebuild 4766
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpkh02+ySkm8kpY0RArHWAKCrmaS2g9k0gfjYGf+2cNJhA5sa9ACfVUKd
-QR3jPIRG28Y4pLJFHsnWCp0=
-=Jb/E
+iD8DBQFDx5Gj2+ySkm8kpY0RAj6UAJ4v+p2E8l58MBYyJ30nCiwjE0JKMwCglOuF
+xfTWgxua6KVTvl5JbIh6ga0=
+=NEM3
 -----END PGP SIGNATURE-----
