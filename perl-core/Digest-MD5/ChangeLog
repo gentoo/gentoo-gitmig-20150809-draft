@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Digest-MD5
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.2 2005/05/26 20:10:04 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.3 2006/01/13 14:11:16 mcummings Exp $
+
+*Digest-MD5-2.36 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +Digest-MD5-2.36.ebuild:
+  Version bump
 
 *Digest-MD5-2.33 (24 May 2005)
 
