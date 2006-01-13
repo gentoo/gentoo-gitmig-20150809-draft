@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.2.1.ebuild,v 1.3 2005/11/08 19:33:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.2.1.ebuild,v 1.4 2006/01/13 21:57:52 dertobi123 Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}${PV//./}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="dedicated sdl"
 
 RDEPEND="virtual/opengl
