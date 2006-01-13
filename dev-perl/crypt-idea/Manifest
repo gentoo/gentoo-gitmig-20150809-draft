@@ -1,4 +1,6 @@
 MD5 31165de3e268170fc06782142b4b08e1 ChangeLog 1518
 MD5 f39bf6585f442416681918d60fda2574 crypt-idea-1.02.ebuild 590
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 bb66086bc5c5183af5ad8ee889696e1b crypt-idea-1.06.ebuild 495
 MD5 688706e9b493b5517ce6995745f8006b files/digest-crypt-idea-1.02 65
+MD5 11c604c0bbb259bb66d34245ead9088e files/digest-crypt-idea-1.06 65
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
