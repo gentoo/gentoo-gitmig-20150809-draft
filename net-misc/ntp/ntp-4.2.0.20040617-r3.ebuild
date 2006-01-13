@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617-r3.ebuild,v 1.2 2006/01/11 01:30:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617-r3.ebuild,v 1.3 2006/01/13 10:51:12 vapier Exp $
 
 inherit eutils
 
@@ -110,10 +110,8 @@ src_install() {
 	dosed "s:-Q::" /etc/conf.d/ntp-client # no longer needed
 	dosed "s:/usr/bin:/usr/sbin:" /etc/init.d/ntpd
 
-	dodir /var/lib/ntp
+	keepdir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp
-	touch "${D}"/var/lib/ntp/ntp.drift
-	fowners ntp:ntp /var/lib/ntp/ntp.drift
 
 	if use openntpd ; then
 		cd "${D}"

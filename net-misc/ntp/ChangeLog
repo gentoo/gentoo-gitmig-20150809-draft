@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.68 2005/08/25 22:10:40 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.69 2006/01/13 10:51:12 vapier Exp $
+
+  13 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  ntp-4.2.0.20040617-r3.ebuild, ntp-4.2.0.20050303-r1.ebuild:
+  Dont create an empty drift file anymore #110674.
 
 *ntp-4.2.0.20050303-r1 (25 Aug 2005)
 *ntp-4.2.0.20040617-r3 (25 Aug 2005)
