@@ -1,6 +1,19 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.39 2006/01/03 16:14:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.40 2006/01/13 14:34:32 leonardop Exp $
+
+*docbook-xml-dtd-4.4-r1 (13 Jan 2006)
+*docbook-xml-dtd-4.3-r1 (13 Jan 2006)
+*docbook-xml-dtd-4.2-r2 (13 Jan 2006)
+*docbook-xml-dtd-4.1.2-r6 (13 Jan 2006)
+
+  13 Jan 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +docbook-xml-dtd-4.1.2-r6.ebuild, +docbook-xml-dtd-4.2-r2.ebuild,
+  +docbook-xml-dtd-4.3-r1.ebuild, +docbook-xml-dtd-4.4-r1.ebuild:
+  Install the catalogs in the global SGML catalog system too. Added the
+  OVERRIDE directive to the catalogs. This should fix the problems that
+  usually come up when trying to process DocBook XML files with SGML tools
+  (e.g. openjade).  See bug #116350.
 
   03 Jan 2006; Luis Medinas <metalgod@gentoo.org>
   docbook-xml-dtd-4.4.ebuild:
