@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/smoothgnome
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/ChangeLog,v 1.4 2005/09/19 22:29:07 leonardop Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/ChangeLog,v 1.5 2006/01/13 18:27:07 gustavoz Exp $
+
+  13 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  smoothgnome-2.0.4.ebuild, smoothgnome-2.0.4-r1.ebuild:
+  Keyworded ~sparc
 
 *smoothgnome-2.0.4-r1 (19 Sep 2005)
 
