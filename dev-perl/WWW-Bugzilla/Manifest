@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eee760031c050eec90b105b8f40d661c ChangeLog 1388
 MD5 eab2fa4df5b800c20f98c302decda2be WWW-Bugzilla-0.2.ebuild 530
 MD5 5f22b9e0ddee95646c744540434059a0 WWW-Bugzilla-0.4.ebuild 564
@@ -6,3 +9,10 @@ MD5 30288160a3fb34e4ff894edd4ba12651 files/digest-WWW-Bugzilla-0.2 67
 MD5 d302b2385bfff140c17830f02c675eff files/digest-WWW-Bugzilla-0.4 67
 MD5 b80f1e6b66c8494a3c6b0ec5705efa24 files/digest-WWW-Bugzilla-0.5 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx9xMtG5z4I8BtQoRAvfdAJ9Fft+CmrL9ZsrTpuzsvDQjk99Q8ACeOjtl
+XGijrdgX1rzjP9wuKmSwwUk=
+=gLkd
+-----END PGP SIGNATURE-----
