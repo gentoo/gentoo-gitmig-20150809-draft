@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-UUID
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.1 2005/12/05 16:18:20 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.2 2006/01/13 20:31:05 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Data-UUID-0.11.ebuild:
+  marking stable sparc x86
 
 *Data-UUID-0.11 (05 Dec 2005)
 

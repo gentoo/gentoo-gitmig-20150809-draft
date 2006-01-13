@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Type
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.6 2005/06/14 19:00:35 killerfox Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.7 2006/01/13 20:50:31 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  File-Type-0.22.ebuild:
+  marking stable sparc x86
 
   14 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> File-Type-0.22.ebuild:
   Added to ~hppa.

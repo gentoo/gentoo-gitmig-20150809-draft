@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.18 2006/01/13 14:03:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.19 2006/01/13 20:33:29 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  DateTime-0.2901.ebuild:
+  marking stable sparc x86
 
 *DateTime-0.30 (13 Jan 2006)
 

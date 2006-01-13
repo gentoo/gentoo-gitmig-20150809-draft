@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-AutoInstall
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ChangeLog,v 1.22 2005/11/12 15:09:25 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ChangeLog,v 1.23 2006/01/13 20:45:13 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  ExtUtils-AutoInstall-0.63.ebuild:
+  marking stable sparc x86
 
 *ExtUtils-AutoInstall-0.63 (12 Nov 2005)
 
