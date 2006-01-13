@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 da3b38e86917991a3276e32f367ec98e ChangeLog 505
 MD5 ab8aa1d5709e6e89ed8162ddee9d3f49 Exporter-Cluster-0.31.ebuild 511
 MD5 aa22638073069081ec3fc23f0dc89ccd files/digest-Exporter-Cluster-0.31 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBFKtG5z4I8BtQoRAieDAKCTdf9wQqhGsfLVwCrWugK6VkostQCfXwwD
+k0mK3z536suUuMRFzAAe+6A=
+=KSj+
+-----END PGP SIGNATURE-----

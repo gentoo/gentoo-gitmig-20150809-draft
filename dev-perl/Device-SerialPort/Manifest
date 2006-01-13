@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6b8a93998169e34a5980060bd7bda50b ChangeLog 1178
 MD5 781c93e90d9f58d4b5ca22b841245ab2 Device-SerialPort-1.000002.ebuild 518
 MD5 8920ca9acaa1300532c6411e7e32973e Device-SerialPort-1.002.ebuild 673
 MD5 9d23d4f863fdb725c894659192410b78 files/digest-Device-SerialPort-1.000002 78
 MD5 41694e503d2a0dce8ca1dd7df65a648f files/digest-Device-SerialPort-1.002 75
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBCstG5z4I8BtQoRAqAYAJ9xMi2Xbj7i3nBodbrMqdrhHYfIvACcCrV/
+8Vg/ErYIV53Fj80e5a++oA0=
+=XmDH
+-----END PGP SIGNATURE-----
