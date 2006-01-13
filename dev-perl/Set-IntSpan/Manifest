@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2c3948cd28f3ec369d7d7c22b28f2d4b ChangeLog 1247
 MD5 c66fd8f77f40b38f391d8dbb00a3442b Set-IntSpan-1.07.ebuild 519
 MD5 5c809dbe07053ae0f7ebb8c87662cff3 Set-IntSpan-1.08.ebuild 521
@@ -6,3 +9,10 @@ MD5 e6da8858af637fa5ea8329360d34f5c8 files/digest-Set-IntSpan-1.07 67
 MD5 bd1809235b299f8dae246ec70681f926 files/digest-Set-IntSpan-1.08 67
 MD5 057aa570f1eaae1e2c16f5ecbdc93141 files/digest-Set-IntSpan-1.09 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx9UHtG5z4I8BtQoRAicCAJ9GGJvFNudYLIuE0ye6JzivepjGegCfYetX
+Zx70X8n7TpYo6lf6qcNdWX8=
+=eGpq
+-----END PGP SIGNATURE-----
