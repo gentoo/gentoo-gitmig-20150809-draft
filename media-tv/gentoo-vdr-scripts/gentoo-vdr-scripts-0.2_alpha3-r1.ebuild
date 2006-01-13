@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha3-r1.ebuild,v 1.1 2006/01/11 21:29:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2_alpha3-r1.ebuild,v 1.2 2006/01/13 08:45:13 zzam Exp $
 
 inherit eutils
 
 IUSE="nvram"
 
-SRC_URI="http://dev.gentoo.org/~zzam/distfiles/${P}.tgz"
+SRC_URI="mirror://gentoo/${P}.tgz"
 DESCRIPTION="scripts necessary for use of vdr as a set-top-box"
 HOMEPAGE="http://www.gentoo.org/"
 LICENSE="GPL-2"
