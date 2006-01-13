@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.119 2006/01/08 12:41:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.120 2006/01/13 18:28:42 killerfox Exp $
+
+  13 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> pango-1.10.2.ebuild:
+  Stable on hppa.
 
   08 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> pango-1.10.2.ebuild:
   ppc stable, bug #117505
