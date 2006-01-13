@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc0fccf56b9681451b2ff348b343d72d ChangeLog 895
+MD5 c74de4a023effb982117a6cd49c26eec ChangeLog 990
 MD5 566331abd0a542709051209aeedc9324 files/digest-po4a-0.21 61
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b1f954ef6e7a5e284d721fe7541356ae po4a-0.21.ebuild 775
+MD5 fedc060a3dcf918172ee3eb18998a080 po4a-0.21.ebuild 774
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDivPBtG5z4I8BtQoRAoV7AJ9laJLDtZuMx4FLbq7+VmkaIO4JDACfSxqX
-wGsEkGwd0XcPnxomKKH1s6I=
-=kGd6
+iD8DBQFDx+pvtG5z4I8BtQoRAqqVAJ9bygGewBtR24biRE/Gv/K+k1EgpgCcCZSD
+sXVyMZGdl82chH//8OQUs2I=
+=DWXy
 -----END PGP SIGNATURE-----

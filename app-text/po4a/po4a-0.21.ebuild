@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.21.ebuild,v 1.2 2005/11/28 12:10:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.21.ebuild,v 1.3 2006/01/13 17:59:07 mcummings Exp $
 
 inherit perl-app
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="${DEPEND}
 	dev-perl/SGMLSpm
