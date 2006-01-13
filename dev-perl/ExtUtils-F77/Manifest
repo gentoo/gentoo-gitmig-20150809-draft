@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7b45b3f172a740dbb96a4e04a2e87a3 ChangeLog 2301
 MD5 a523b6aac5747379d78dd5a9a242541b ExtUtils-F77-1.13-r1.ebuild 475
 MD5 0f8b4de70de89395edb2773440c24109 ExtUtils-F77-1.14-r1.ebuild 519
@@ -8,3 +11,10 @@ MD5 d77130a97c663e5178f45cf73fdc8f6d files/digest-ExtUtils-F77-1.14 67
 MD5 d77130a97c663e5178f45cf73fdc8f6d files/digest-ExtUtils-F77-1.14-r1 67
 MD5 1635d57c19f504e50a09329183d8684e files/digest-ExtUtils-F77-1.15 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx7Y2tG5z4I8BtQoRAoUSAJ9/2bFdhyVOEV2mTT8/t4KBwLoW5QCgiqyp
+2AuzmOfSgnj01apI389ci7A=
+=xLVy
+-----END PGP SIGNATURE-----
