@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.15 2006/01/13 14:23:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.16 2006/01/13 20:58:53 mcummings Exp $
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  -Graph-0.20.105.ebuild, Graph-0.67.ebuild:
+  Marking stable x86
 
 *Graph-0.69 (13 Jan 2006)
 
