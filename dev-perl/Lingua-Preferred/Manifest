@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e4389b2504f0c4aaa87fb75aeed3d11 ChangeLog 1814
 MD5 933b69425260ea8f268f7fb86b3a600e Lingua-Preferred-0.2.1.ebuild 557
 MD5 1655699652474c24ead3c68cbfe23b2e Lingua-Preferred-0.2.2.ebuild 569
@@ -6,3 +9,10 @@ MD5 97072f36c367b396da12fb2e2a807be5 files/digest-Lingua-Preferred-0.2.1 72
 MD5 34f9a9f577933c1ca313a0c2b6511a88 files/digest-Lingua-Preferred-0.2.2 72
 MD5 af1dac468ff97ada2c93452f9844b82e files/digest-Lingua-Preferred-0.2.4 72
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyB3etG5z4I8BtQoRArQOAJ0QzrjhvzcAPW0cBmuuUYOz0aEEpwCdHMWd
+oCDuElUqiBSHrpZawjX7Dec=
+=c7jZ
+-----END PGP SIGNATURE-----
