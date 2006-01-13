@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69d8529cb88dd77e085a6fa8d0ebe75d ChangeLog 2669
+MD5 a58c3f4473d11e69711defde04f2e342 ChangeLog 2779
 MD5 f3a8f7c20e12a96f00dd349c49fe4525 Math-BigInt-1.69.ebuild 587
 MD5 61705195ceb28c886ecb4d0ed1429d64 Math-BigInt-1.70.ebuild 592
 MD5 9bb8e8e960e528c28c0a86277b0a6c2a Math-BigInt-1.73.ebuild 609
-MD5 d3eb3ca0824456800413955750355233 Math-BigInt-1.77.ebuild 615
+MD5 368005654de2c4cdd188cad68fefbdeb Math-BigInt-1.77.ebuild 613
 MD5 b461900d92f57d4e040ce12dfe67f876 files/digest-Math-BigInt-1.69 68
 MD5 d6a633b9a6acedb716053a67339c2a00 files/digest-Math-BigInt-1.70 68
 MD5 109b3f67b6c2ed044cbd5921a74aa244 files/digest-Math-BigInt-1.73 68
 MD5 6bc4996509cd0bee8aa18599440f4572 files/digest-Math-BigInt-1.77 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtRchtG5z4I8BtQoRAqS8AJwKegeoDmxswogVpCXc7YV5DvoXcwCfVeNv
-2/LzTGzx2Jpi2/bFb6oCptE=
-=QgUV
------END PGP SIGNATURE-----

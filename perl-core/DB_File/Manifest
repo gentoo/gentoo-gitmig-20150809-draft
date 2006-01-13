@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39e05c876bca92ce6db02f4cb73bb483 ChangeLog 5278
+MD5 9d30a92b927b99776f01314b4574e9c5 ChangeLog 5383
 MD5 fd70565e0d9cc8afeb68fd536f908510 DB_File-1.811-r1.ebuild 818
 MD5 29ec4bf3df6cd0b8c361ec5f07d2a56e DB_File-1.811.ebuild 815
 MD5 24fe783e3e63fbc463e9fdd8937a595c DB_File-1.813.ebuild 828
-MD5 33bd59766990e268c061b61be3e0b9b9 DB_File-1.814.ebuild 828
+MD5 da6eaccafa7f3ee1c67be4f02d415e15 DB_File-1.814.ebuild 826
 MD5 a8508928a7565d049db19d4045693201 files/DB_File-MakeMaker.patch 569
 MD5 2259e73a14e4f2c7bd63215dba073b10 files/config.in 3121
 MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811 64
@@ -13,10 +10,3 @@ MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811-r1 64
 MD5 be1f6d276d491e58897fd1011deaae51 files/digest-DB_File-1.813 64
 MD5 ff4fbe2030e1bb500bac3c91284e03b2 files/digest-DB_File-1.814 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDd0vjtG5z4I8BtQoRAm7NAJwJf8n+siRbeQDGZDT6tQQZ+s5XpgCggfMU
-vZq8UB6AU1tNtAPWNDk4AXI=
-=G4Jf
------END PGP SIGNATURE-----
