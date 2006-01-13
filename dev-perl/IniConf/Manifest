@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ccec8d0b4fc15cbe1048e0134835a542 ChangeLog 543
 MD5 16b0c98b0ec14bd3b34e0fd4ed9d0cbb IniConf-1.03.ebuild 562
 MD5 ebe11ac9ab1e8b6f3ef2c72e2e3a5192 files/digest-IniConf-1.03 62
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBuftG5z4I8BtQoRAr5tAKCRCi/gs8Ex6MsBhQuMWLN7o6CWqgCaA2xW
+/i/nLb0M4Msn+244H4Km1NI=
+=VK2p
+-----END PGP SIGNATURE-----
