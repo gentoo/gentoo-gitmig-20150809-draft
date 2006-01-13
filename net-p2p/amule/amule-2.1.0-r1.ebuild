@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.0.ebuild,v 1.2 2006/01/08 17:46:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.0-r1.ebuild,v 1.1 2006/01/13 11:18:44 mkay Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="amuled debug gtk gtk2 nls remote stats unicode"
+IUSE="amuled debug gtk nls remote stats unicode"
 
 DEPEND=">=x11-libs/wxGTK-2.6.0
 		>=sys-libs/zlib-1.2.1
@@ -25,37 +25,29 @@ DEPEND=">=x11-libs/wxGTK-2.6.0
 pkg_setup() {
 		export WX_GTK_VER="2.6"
 
-		if ( ! use gtk || ! use gtk2 )  && ! use remote && ! use amuled; then
+		if ! use gtk && ! use remote && ! use amuled; then
 				eerror ""
-				eerror "You have to specify at least one of X, remote or amuled"
+				eerror "You have to specify at least one of gtk, remote or amuled"
 				eerror "USE flag to build amule."
 				eerror ""
 				die "Invalid USE flag set"
 		fi
 
-		if use unicode && use gtk2; then
+		if use unicode && use gtk; then
 				einfo "wxGTK with gtk2 and unicode support will be used"
 				need-wxwidgets unicode
-		elif use gtk2; then
+		elif use gtk; then
 				einfo "wxGTK with gtk2 support will be used"
 				need-wxwidgets gtk2
-		elif use unicode && use gtk; then
-				einfo "wxGTK with gtk2 support will be used"
-				need-wxwidgets gtk
-		elif use gtk; then
-				einfo "wxGTK with gtk1 support will be used"
-				need-wxwidgets gtk
-		elif use unicode && built_with_use x11-libs/wxGTK -X unicode; then
+		elif use unicode; then
 				einfo "wxGTK with unicode and without X support will be used"
-				einfo "(wxbase unicode)"
 				need-wxwidgets base-unicode
 		else
 				einfo "wxGTK without X support will be used"
-				einfo "(wxbase)"
 				need-wxwidgets base
 		fi
 
-		if use stats && ( ! use gtk || ! use gtk2 ); then
+		if use stats && ! use gtk; then
 				einfo "Note: You would need both the gtk and stats USE flags"
 				einfo "to compile aMule Statistics GUI."
 				einfo "I will now compile console versions only."
@@ -69,7 +61,7 @@ pkg_setup() {
 src_compile() {
 		local myconf=""
 
-		if use gtk || use gtk2; then
+		if use gtk ; then
 				use stats && myconf="${myconf}
 					--enable-wxcas
 					--enable-alc"
