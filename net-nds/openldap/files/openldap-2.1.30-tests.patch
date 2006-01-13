@@ -1,0 +1,12 @@
+--- ./Makefile.in.orig	2003-03-03 18:10:11.000000000 +0100
++++ ./Makefile.in	2005-12-18 15:45:08.000000000 +0100
+@@ -8,6 +8,9 @@
+ BUILD_BDB=@BUILD_BDB@
+ BUILD_MONITOR=@BUILD_MONITOR@
+ 
++LD_LIBRARY_PATH=${pwd}../libraries/libldap_r/.libs:${pwd}../libraries/liblber/.libs:${pwd}../libraries/libldap/.libs:$LD_LIBRARY_PATH
++export LD_LIBRARY_PATH
++
+ test: tests
+ tests: bdb ldbm
+ 

@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8fc2420240de8701682a3cdca6e9b8dc ChangeLog 28318
+MD5 e71ee524ec382d72d7f12ce77bd5085c ChangeLog 28711
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
 MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
@@ -15,6 +12,7 @@ MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r3 65
 MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r4 65
 MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r5 65
 MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r6 65
+MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r7 65
 MD5 27d2ee25b32bf4a429ae80149508ff34 files/digest-openldap-2.2.14 65
 MD5 d1db1a9bf4afc66b26e33beef17f07f4 files/digest-openldap-2.2.19 65
 MD5 fa0a0dfbb9f3984fb2907c020e02ec73 files/digest-openldap-2.2.23 65
@@ -33,9 +31,12 @@ MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
 MD5 c16eada85fafe1c17bf0089d0ef90ae3 files/gencert.sh-2.2.27 2939
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
 MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
+MD5 b51f63396bab5123f8b24674ed4481b2 files/openldap-2.1.30-autoconf-archived-fix.patch 1912
 MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.1.30-autoconf25.patch 382
 MD5 c58db81c8d7084a9abf48747134da0a8 files/openldap-2.1.30-db40.patch 718
+MD5 a240004c097944335b15bcb489661c2c files/openldap-2.1.30-m4_underquoted.patch 3916
 MD5 07a689148742f0fd74dcedf572a8f092 files/openldap-2.1.30-rpath.patch 13131
+MD5 c3c348e2e475de1b8f04c674aa15d27e files/openldap-2.1.30-tests.patch 378
 MD5 1afdae6ce6fa709abed41ce45f41f5e8 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
 MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
 MD5 4c6ef684996786b3a7cc2dc15c4ae7a4 files/openldap-2.2.14-db40.patch 773
@@ -44,7 +45,7 @@ MD5 4591bdcf0bd459c6fdbcabc93f5b6b55 files/openldap-2.2.26-tls-fix-connection-te
 MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.2.28-r1-configure.in-rpath.patch 382
 MD5 f940f4e9ac544ed0a0f28b87df5cd2c8 files/openldap-2.2.28-ximian_connector.patch 5669
 MD5 7d80c3708d5940a3b7a428740af863d0 files/openldap-2.2.6-ntlm.patch 5011
-MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
+MD5 a9fa8b856c438b132dac2edbb2d7171a metadata.xml 392
 MD5 2e5ce39205e9dc1feeab9ff802236317 openldap-2.1.26.ebuild 7088
 MD5 ef0fa55269a7ae32b56ca1095148995a openldap-2.1.27-r1.ebuild 7444
 MD5 cfaff772158053886baf083d75fca2ff openldap-2.1.27.ebuild 7051
@@ -54,6 +55,7 @@ MD5 992888650b5b09f265a46469585bcba8 openldap-2.1.30-r3.ebuild 7208
 MD5 2d4e17747e16fdd75a17a66c5537184c openldap-2.1.30-r4.ebuild 7308
 MD5 2950a8442733483861d191c433359f59 openldap-2.1.30-r5.ebuild 7628
 MD5 80349b77cb15c3fcae8812961ade31a2 openldap-2.1.30-r6.ebuild 8137
+MD5 41ddaae1efa5f62acef48fd20236b9e0 openldap-2.1.30-r7.ebuild 8904
 MD5 aebb509ea0634689f1e3a4549d4d343d openldap-2.1.30.ebuild 7361
 MD5 917840881094150cd91192866ec4e1c6 openldap-2.2.14.ebuild 7247
 MD5 7ddeb08466499dbe3c49b850b336744f openldap-2.2.19.ebuild 7955
@@ -69,10 +71,3 @@ MD5 d0b2e396543e06107bd1b2f492c246f2 openldap-2.2.28-r1.ebuild 13109
 MD5 a6c77f6fc6a7c7af923cc334d2bab94a openldap-2.2.28-r2.ebuild 13214
 MD5 bb134104d80c1eafe50d526e99a75032 openldap-2.2.28-r3.ebuild 13715
 MD5 72bade434d8afe3c9c9f665518a6d786 openldap-2.2.28.ebuild 12908
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpEfJ2+ySkm8kpY0RApbLAKCNRB8566GeDvceRLtll4GjVIw0/ACeNGWt
-sM5FGk9I2oDa34bMYjONc20=
-=aTB6
------END PGP SIGNATURE-----

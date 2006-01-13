@@ -1,0 +1,67 @@
+--- ./configure.in.orig	2005-12-18 15:52:54.000000000 +0100
++++ ./configure.in	2005-12-18 15:54:24.000000000 +0100
+@@ -683,8 +683,8 @@
+ 
+ dnl ----------------------------------------------------------------
+ dnl Checks for system services
+-AC_CYGWIN
+-AC_MINGW32
++dnl AC_CYGWIN
++dnl AC_MINGW32
+ AC_EXEEXT
+ AC_OBJEXT
+ 
+@@ -2308,7 +2308,7 @@
+ AC_TYPE_MODE_T
+ AC_TYPE_OFF_T
+ AC_TYPE_PID_T
+-AM_TYPE_PTRDIFF_T
++AC_CHECK_TYPES([ptrdiff_t])
+ AC_TYPE_SIGNAL
+ AC_TYPE_SIZE_T
+ 
+@@ -2337,7 +2337,7 @@
+ 	AC_C_BIGENDIAN
+ fi
+ 
+-AC_COMPILE_CHECK_SIZEOF(short) 
++OL_AC_COMPILE_CHECK_SIZEOF(short) 
+-AC_COMPILE_CHECK_SIZEOF(int) 
++OL_AC_COMPILE_CHECK_SIZEOF(int) 
+-AC_COMPILE_CHECK_SIZEOF(long)
++OL_AC_COMPILE_CHECK_SIZEOF(long)
+ 
+ if test "$ac_cv_sizeof_int" -lt 4 ; then
+         AC_MSG_WARN([OpenLDAP requires 'int' to be 32 bits or greater.])
+--- ./build/openldap.m4.orig	2005-12-19 01:20:14.000000000 +0100
++++ ./build/openldap.m4	2005-12-19 01:24:11.000000000 +0100
+@@ -1237,3 +1237,29 @@
+ 		[define if struct msghdr has msg_accrights])
+   fi
+ ])dnl
++
++AC_DEFUN([OL_AC_COMPILE_CHECK_SIZEOF],
++[changequote(<<, >>)dnl
++dnl The name to #define.
++define(<<AC_TYPE_NAME>>, translit(sizeof_$1, [a-z *], [A-Z_P]))dnl
++dnl The cache variable name.
++define(<<AC_CV_NAME>>, translit(ac_cv_sizeof_$1, [ *], [_p]))dnl
++changequote([, ])dnl
++AC_MSG_CHECKING(size of $1)
++AC_CACHE_VAL(AC_CV_NAME,
++[for ac_size in 4 8 1 2 16 $2 ; do # List sizes in rough order of prevalence.
++  AC_TRY_COMPILE([#include "confdefs.h"
++#include <sys/types.h>
++$2
++], [switch (0) case 0: case (sizeof ($1) == $ac_size):;], AC_CV_NAME=$ac_size)
++  if test x$AC_CV_NAME != x ; then break; fi
++done
++])
++if test x$AC_CV_NAME = x ; then
++  AC_MSG_ERROR([cannot determine a size for $1])
++fi
++AC_MSG_RESULT($AC_CV_NAME)
++AC_DEFINE_UNQUOTED(AC_TYPE_NAME, $AC_CV_NAME, [The number of bytes in type $1])
++undefine([AC_TYPE_NAME])dnl
++undefine([AC_CV_NAME])dnl
++])
