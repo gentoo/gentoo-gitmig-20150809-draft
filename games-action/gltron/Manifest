@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 957175ce287654abe956522d690dd9da gltron-0.70-r1.ebuild 1108
-MD5 fed2b5d7af72c424bbc4b1b4a90d8ecf ChangeLog 2420
-MD5 d53c903bba366af12c1fdcc578d32da1 files/gltron-0.70-debian.patch 873
-MD5 9cd844f561d537df49a35fac21d5b51c files/gltron-0.70-configure.patch 618
-MD5 744c0f80394f8713aebdf7038044570e files/gltron-0.70-prototypes.patch 625
+MD5 f1bb568d69c0284040fbad8f5fccc55f ChangeLog 2520
 MD5 e609d589da3c307eeae20a7b515cb920 files/digest-gltron-0.70-r1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6wfwgIKl8Uu19MoRAk+kAJ45gDGizd1i99mKMf/c8c6Vq5AUhACeN0qC
-Gz3OFemdttXmtWOF5JUwLf4=
-=EL7k
------END PGP SIGNATURE-----
+MD5 9cd844f561d537df49a35fac21d5b51c files/gltron-0.70-configure.patch 618
+MD5 d53c903bba366af12c1fdcc578d32da1 files/gltron-0.70-debian.patch 873
+MD5 744c0f80394f8713aebdf7038044570e files/gltron-0.70-prototypes.patch 625
+MD5 9992c386cf4f7a6fe9da77721a4a7d5e gltron-0.70-r1.ebuild 1096
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
