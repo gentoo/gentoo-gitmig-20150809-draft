@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 fd086bb3f3ae1b5b438ee67d815ba0d5 ChangeLog 2232
 MD5 a70654d04a1411967d0de994d72d57ce Class-Default-1.0.ebuild 601
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 18205261504e6e5300c35bbec5c70700 Class-Default-1.1.ebuild 663
-MD5 e06148b69bb8bed1a51fe46467159b70 ChangeLog 2120
-MD5 fec301712f9c00ac3a73b282cf43c45b Class-Default-1.3.ebuild 672
+MD5 2b1ec586c056a3d803ea7a0ef8397b75 Class-Default-1.3.ebuild 671
 MD5 15d0ee70f33e8c147f50485c518e9cc4 files/digest-Class-Default-1.0 68
-MD5 04e1a364fd96005314df32761374613a files/digest-Class-Default-1.3 68
 MD5 78ed031723fea97ed8749446fa1c52fc files/digest-Class-Default-1.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDTwYEJrHF4yAQTrARApqHAJ9hEmnU4Cj9B+OzC+590eW6FIYNWQCgxOvL
-H3WtrH0wgD8mjhIUrPWxEkQ=
-=7csQ
------END PGP SIGNATURE-----
+MD5 04e1a364fd96005314df32761374613a files/digest-Class-Default-1.3 68
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

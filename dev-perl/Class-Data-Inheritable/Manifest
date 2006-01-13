@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4aa956f1838f1eaec324fe8b47b6d1d5 ChangeLog 1337
+MD5 d8a7fc67114fa0897ed412825c1320d1 ChangeLog 1458
 MD5 eb0a85a7ab059a1907adedc5de5d5fbc Class-Data-Inheritable-0.02.ebuild 565
-MD5 b67dd08711ea64c1eea21ac07ef4f371 Class-Data-Inheritable-0.04.ebuild 556
+MD5 b7d6b1a63034de1f51aa5d2b95ebd93d Class-Data-Inheritable-0.04.ebuild 554
 MD5 5833bcb6b531f67b516cd9cf524d9410 files/digest-Class-Data-Inheritable-0.02 77
 MD5 6fa7f3912c28dc7044c1d548a2ac8683 files/digest-Class-Data-Inheritable-0.04 77
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdgf7tG5z4I8BtQoRAoQRAJ0eHGdKV79BaUeKk2ig2b1zMQ0KeACfQoSf
-y7IGX8gJiuqfD0WM1USwtAI=
-=YqCs
------END PGP SIGNATURE-----
