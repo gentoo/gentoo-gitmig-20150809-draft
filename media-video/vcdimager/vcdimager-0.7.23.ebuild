@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.23.ebuild,v 1.2 2005/11/29 00:40:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.23.ebuild,v 1.3 2006/01/13 23:02:00 vapier Exp $
 
 inherit eutils libtool
 
@@ -10,8 +10,9 @@ SRC_URI="http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sh ~sparc ~x86"
 IUSE="xml2 minimal"
+RESTRICT="test"
 
 RDEPEND=">=dev-libs/libcdio-0.71
 	!minimal? ( dev-libs/popt )
@@ -40,5 +41,3 @@ src_install() {
 
 	dodoc AUTHORS BUGS ChangeLog FAQ HACKING NEWS README THANKS TODO
 }
-
-src_test() { :; }

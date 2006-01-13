@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f755573fc9f394dc4a01e00cead42a9 ChangeLog 5793
 MD5 e82176935b2c91da5a4bc00977928d5c files/cdio.patch 301
 MD5 bc5affe96540d5d15693b7cb5b0e16ea files/digest-vcdimager-0.7.19 73
@@ -13,6 +16,13 @@ MD5 ef8fe2d47f9624d2c9bb0d3065c4120a vcdimager-0.7.19.ebuild 1138
 MD5 40088185559b0adcb34784c80187328c vcdimager-0.7.20-r1.ebuild 1248
 MD5 6463f36c7b061098c188898be1e99ba6 vcdimager-0.7.20-r2.ebuild 1240
 MD5 cc511d5252df214ed0e6946785fb87d6 vcdimager-0.7.20.ebuild 1169
-MD5 ef5f4f1df55b8264d4e9f45db8022c0a vcdimager-0.7.21.ebuild 1167
+MD5 e667a2d2c3863506b4ab388f47b497a8 vcdimager-0.7.21.ebuild 1170
 MD5 1cf18f5f5f5adaf9b9d74d18b33eb398 vcdimager-0.7.22.ebuild 1234
-MD5 e931d98d25ba824fc7c752e8e37db88d vcdimager-0.7.23.ebuild 1205
+MD5 540666ed5db2629cfd7c5c5600263bc8 vcdimager-0.7.23.ebuild 1218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyDHQ2+ySkm8kpY0RAjOHAJ4qrt8ATI2/hIeaavYGv+YXUWfjqgCfbWgs
+F0GN60oW6jjj4hdpsVO3Hpg=
+=QWs8
+-----END PGP SIGNATURE-----
