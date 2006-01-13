@@ -1,4 +1,16 @@
-MD5 65d265b9064472a3b1ce585cebfaeeca ChangeLog 1107
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c2d0b1c92bae56f71425781b0632aca ChangeLog 1237
 MD5 816a0a1a5ca5a79b4af23c5bcf2a8b13 MIME-Types-1.13.ebuild 481
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 30a3e82c9c35e92421d6d38715d513ed MIME-Types-1.16.ebuild 486
 MD5 45ff15f2ed7ef6d91da8547042ce1149 files/digest-MIME-Types-1.13 66
+MD5 35974092252fb8624ae230cba860e6f9 files/digest-MIME-Types-1.16 66
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx8NjtG5z4I8BtQoRAqsiAJ4rMb8isMHynuth3hudgcGDRwwIRwCcCAtl
+olEj+Xm1G1/pueFaxnug++0=
+=Kobg
+-----END PGP SIGNATURE-----
