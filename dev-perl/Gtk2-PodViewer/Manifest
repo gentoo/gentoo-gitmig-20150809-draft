@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a0719ad75f851cca846be8d107c633ba ChangeLog 737
 MD5 2bf7fd2d188267ff2d8aa7e0373e67cc Gtk2-PodViewer-0.09.ebuild 620
 MD5 8cf0c890aaf6150107f8bd90d13c172c Gtk2-PodViewer-0.13.ebuild 602
 MD5 aa317e6d2ce745b03620359af438d274 files/digest-Gtk2-PodViewer-0.09 70
 MD5 3d56caeba96a01581f6b17853f5934d8 files/digest-Gtk2-PodViewer-0.13 68
 MD5 98a07b36e9be7916e31f086a8493b080 metadata.xml 344
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBlXtG5z4I8BtQoRAtsMAJ4ojo6Kgp4m6ZHetr9wCGDHx3W7ZQCfSnMi
+yNu7c1j6LDWLbk9NGfxm8/E=
+=UypZ
+-----END PGP SIGNATURE-----
