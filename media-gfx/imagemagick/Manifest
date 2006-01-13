@@ -32,12 +32,12 @@ MD5 a07eea32253acfb7e95db9bd1daebe9c imagemagick-6.2.4.2-r1.ebuild 2700
 MD5 5511a30e523ec782cd0fbfe640fdb64e imagemagick-6.2.4.2.ebuild 2669
 MD5 93b2c6a6f1385d05b35ae5406b8a2800 imagemagick-6.2.5.2.ebuild 2705
 MD5 d07c1ad811fbc83b076177a93522b077 imagemagick-6.2.5.4.ebuild 2769
-MD5 c4bbd8a8287b7c29ff86fe93d8d76847 imagemagick-6.2.5.5.ebuild 2775
+MD5 9208f3df9722e6b6eb95f88781de8621 imagemagick-6.2.5.5.ebuild 2779
 MD5 3dc350be33069338fa083ca16ec11cc8 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtcJ52+ySkm8kpY0RAgbGAJ9QJ+Opr3VwJuc58SYz9HuS4CzBUwCZARLa
-2pdxui284TzDvFzYnlm3JHE=
-=NzGC
+iD8DBQFDyDPA2+ySkm8kpY0RAgOVAJsExkRQWVOC1tJZsq4rkzbxxH/OVACfci+q
+tZHl+5sZshujIjIWEhg2fyk=
+=/EPD
 -----END PGP SIGNATURE-----

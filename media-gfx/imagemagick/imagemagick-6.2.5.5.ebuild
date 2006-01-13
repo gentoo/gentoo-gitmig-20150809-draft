@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.5.5.ebuild,v 1.1 2005/12/30 23:27:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.5.5.ebuild,v 1.2 2006/01/13 23:10:16 vapier Exp $
 
 inherit eutils perl-app multilib
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/imagemagick/${MY_P2}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="bzip2 doc fpx graphviz gs jbig jpeg lcms mpeg nocxx perl png tiff truetype X wmf xml2 zlib"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
