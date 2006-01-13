@@ -6,4 +6,8 @@
         <email>robbat2@gentoo.org</email>
         <name>Robin H. Johnson</name>
     </maintainer>
+    <maintainer>
+        <email>strerror@gentoo.org</email>
+        <name>Benjamin Smee</name>
+    </maintainer>
 </pkgmetadata>
