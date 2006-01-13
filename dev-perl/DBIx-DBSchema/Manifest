@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3cd50a11b23e0c65a8e666035e3ec6e4 ChangeLog 534
 MD5 71f1c90a7dc60a8434ea63d5d7472dd7 DBIx-DBSchema-0.27.ebuild 528
 MD5 4db85c1f1b2051af8d38128ba11f4c20 DBIx-DBSchema-0.28.ebuild 528
 MD5 56131c7ac1fe033b98e79fa1ddf1690d files/digest-DBIx-DBSchema-0.27 69
 MD5 b1c01aa9fbb663b39cf4bc86500bf339 files/digest-DBIx-DBSchema-0.28 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx7H+tG5z4I8BtQoRAkeLAJwJCSDYLKRG6jwammEhY11dVF+Y4ACfZlkQ
++SLhklEW4j73zW4inNZLNN4=
+=lBcM
+-----END PGP SIGNATURE-----
