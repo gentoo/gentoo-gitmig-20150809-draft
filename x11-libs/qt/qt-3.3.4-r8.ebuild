@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.12 2006/01/03 12:12:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.13 2006/01/13 12:56:28 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,6 +22,7 @@ IUSE="cups debug doc examples firebird gif ipv6 mysql nas odbc opengl postgres s
 DEPEND="|| ( ( x11-libs/libXcursor
 			x11-libs/libXi
 			x11-libs/libXrandr
+			x11-libs/libSM
 			x11-proto/inputproto
 			x11-proto/xextproto
 			xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )

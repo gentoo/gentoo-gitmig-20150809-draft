@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0-r2.ebuild,v 1.1 2006/01/13 12:47:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.0-r2.ebuild,v 1.2 2006/01/13 12:56:28 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -20,6 +20,7 @@ DEPEND="|| ( ( x11-libs/libXrandr
 			x11-libs/libXcursor
 			x11-libs/libXi
 			x11-libs/libXfont
+			x11-libs/libSM
 			x11-proto/xextproto
 			x11-proto/inputproto
 			xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )

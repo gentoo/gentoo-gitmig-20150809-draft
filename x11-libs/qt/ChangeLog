@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.281 2006/01/13 12:47:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.282 2006/01/13 12:56:28 caleb Exp $
+
+  13 Jan 2006; Caleb Tennis <caleb@gentoo.org> qt-3.3.4-r8.ebuild,
+  qt-3.3.5.ebuild, qt-4.0.1.ebuild, qt-4.1.0-r2.ebuild:
+  Add x11-libs/libSM as a modular X dep per bug #118420
 
 *qt-4.1.0-r2 (13 Jan 2006)
 
