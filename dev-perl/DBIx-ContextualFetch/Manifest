@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 19dfeaa1e77078001f2bc39d32caf131 ChangeLog 1826
+MD5 9bab77fc5baf90826d9b63567b6d9044 ChangeLog 1945
 MD5 405659630dae6ae175d6ea5f3cc4e3bc DBIx-ContextualFetch-1.01.ebuild 594
 MD5 a1d1902c5cca4dee9e56454f2e6b55d6 DBIx-ContextualFetch-1.02.ebuild 624
-MD5 477da079d5db021a30a5d473c9484699 DBIx-ContextualFetch-1.03.ebuild 626
+MD5 a8bdb2b3b7cb209b97591e763b0e46b6 DBIx-ContextualFetch-1.03.ebuild 624
 MD5 817ab6248809ca35535dde64f30d9b00 files/digest-DBIx-ContextualFetch-1.01 75
 MD5 05c315d46d0a4fda79aa771689124de1 files/digest-DBIx-ContextualFetch-1.02 75
 MD5 ca11cdba5a39996a73519e8ce0aa38a3 files/digest-DBIx-ContextualFetch-1.03 75
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDd04JtG5z4I8BtQoRAoCTAJwLd4P71TXF6ri4fXgX1E4teGVK5wCgh0TL
-XcMtb0P7Nya0kcUFfciC9rM=
-=a1av
------END PGP SIGNATURE-----

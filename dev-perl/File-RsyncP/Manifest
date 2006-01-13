@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b4a180d4c34bf64ddf6d1e1970e943c ChangeLog 561
-MD5 60dd936a04bc941a0d0faef01ca6195f File-RsyncP-0.52.ebuild 512
+MD5 fa4704272e1e2ed4324534f6c8efa140 ChangeLog 672
+MD5 57be18547ffcd5299524ffee09c377f1 File-RsyncP-0.52.ebuild 511
 MD5 6dec83003623fe89e9a9cae6dc0ad5d7 files/digest-File-RsyncP-0.52 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0FnNI1lqEGTUzyQRAk2fAJ9UGT+JdI8qElahXadfnZZJ+xP/1QCgjlrE
-A+QEKEj6/MWmyqC+O54Z458=
-=pOgV
------END PGP SIGNATURE-----
