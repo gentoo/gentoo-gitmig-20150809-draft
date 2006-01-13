@@ -1,4 +1,16 @@
-MD5 d0323a66c9a85749331f603165ee4d55 ChangeLog 777
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9ef0fbbd6db02298618d76e3efd45c5f ChangeLog 906
 MD5 793d84ccd47c3bb32450c0f6408fd6b5 files/digest-wxperl-0.22 59
+MD5 e52b67e1688aac0e57738caf265d22b6 files/digest-wxperl-0.27 59
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1969ec8f9a1d8fe268f9fe59917ba377 wxperl-0.22.ebuild 768
+MD5 2e3c1967831e5905916052580192eabf wxperl-0.27.ebuild 768
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx+GatG5z4I8BtQoRAunGAJ44DxxunduG7xIRtwJyJP2d0hfi+gCfYLkc
+pyQB49QKIwtlBLc9fJnBwQE=
+=oQU3
+-----END PGP SIGNATURE-----
