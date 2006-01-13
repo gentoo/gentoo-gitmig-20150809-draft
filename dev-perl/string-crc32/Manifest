@@ -1,4 +1,6 @@
 MD5 75be6758e918b309daf15460c8f8dac0 ChangeLog 1462
+MD5 a13bf17cbfe594af4f6a1111c4df169e files/digest-string-crc32-1.2 66
+MD5 f1230bd14c3db1dc445845de13dbfd6a files/digest-string-crc32-1.3 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 591573f09137ce1bad48dff1a27113a2 string-crc32-1.2.ebuild 614
-MD5 a13bf17cbfe594af4f6a1111c4df169e files/digest-string-crc32-1.2 66
+MD5 292540d512e344af740a65330a673330 string-crc32-1.3.ebuild 514

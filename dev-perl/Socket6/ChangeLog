@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Socket6
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.13 2005/08/26 00:14:10 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.14 2006/01/13 16:30:09 mcummings Exp $
+
+*Socket6-0.19 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org> +Socket6-0.19.ebuild:
+  Version bump upstream
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Socket6-0.18.ebuild:
   add ~ia64

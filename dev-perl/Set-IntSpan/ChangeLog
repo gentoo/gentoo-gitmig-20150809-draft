@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Set-IntSpan
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.9 2005/10/02 13:14:40 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.10 2006/01/13 16:27:46 mcummings Exp $
+
+*Set-IntSpan-1.09 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +Set-IntSpan-1.09.ebuild:
+  Version bump upstream
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Set-IntSpan-1.08.ebuild:
   Mark 1.08 stable on ia64
