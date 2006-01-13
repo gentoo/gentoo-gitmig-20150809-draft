@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2c38ffb92a1bdd25a14afb93ec0849b5 ChangeLog 2081
 MD5 f6c880c8045d9abded5c736db2b80698 Crypt-Blowfish-2.09-r3.ebuild 586
 MD5 4e36cf1bed54ca7d01fa1afc4fb9b3aa Crypt-Blowfish-2.10.ebuild 605
 MD5 9b7176201a0221bce2793cd2e7038de1 files/digest-Crypt-Blowfish-2.09-r3 70
 MD5 35885df7e93cfb39798073bb5f91ffb0 files/digest-Crypt-Blowfish-2.10 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx650tG5z4I8BtQoRAu8nAJ0RWPFOGXoC10abJuoXn/7T9GVtmwCdEOxi
+2O6/r3wYyW3w8CDsr3m/iy8=
+=FDVF
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ebd9307d213c34f6126291cf58f86c88 ChangeLog 1652
 MD5 f39bf6585f442416681918d60fda2574 crypt-idea-1.02.ebuild 590
 MD5 bf6f98447a8ebfbe6cd7244a72174683 crypt-idea-1.06.ebuild 602
 MD5 688706e9b493b5517ce6995745f8006b files/digest-crypt-idea-1.02 65
 MD5 11c604c0bbb259bb66d34245ead9088e files/digest-crypt-idea-1.06 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx68UtG5z4I8BtQoRAgzHAJ97+gp6BiurLnDoPebQkPIf1qLcagCeIgrf
+ZsMzowLriTbZevnAbhZElT4=
+=FiUv
+-----END PGP SIGNATURE-----
