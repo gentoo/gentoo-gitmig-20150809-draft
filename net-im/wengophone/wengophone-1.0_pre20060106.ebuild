@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-1.0_pre20060106.ebuild,v 1.1 2006/01/10 18:30:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-1.0_pre20060106.ebuild,v 1.2 2006/01/13 12:26:19 genstef Exp $
 
-inherit qt3
+inherit qt3 eutils
 
 DESCRIPTION="Wengophone is a VoIP client featuring the SIP protcol"
 HOMEPAGE="http://dev.openwengo.com"
