@@ -1,4 +1,7 @@
-MD5 8e54fe5de93621ed017ecd2d572b36fe ChangeLog 10801
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 59093641b7a48c96cb005ef9ba492256 ChangeLog 10897
 MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
 MD5 175cc82c17dfbb2ab785271ff71e8f5c files/digest-vpopmail-5.4.10 67
 MD5 932b241ee21fdbe7601622592f4ef78e files/digest-vpopmail-5.4.13 67
@@ -15,6 +18,13 @@ MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
 MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 dddfe003571e18a6ec4bf6a066a529a0 vpopmail-5.4.10.ebuild 7821
-MD5 bf5a5ffe012454d28358d0fb6c59460e vpopmail-5.4.13.ebuild 7701
+MD5 5dc445ad506e2566cf17d6942b4e9e1a vpopmail-5.4.13.ebuild 7697
 MD5 8908c9b0ecaf8f8f23be07251f981cd0 vpopmail-5.4.6-r1.ebuild 7627
 MD5 2b1d36bf9b4e5b467609704541ee1402 vpopmail-5.4.9-r2.ebuild 7816
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDx/JBV3J2n04EauwRAokUAKDd7EHLhJ7XbKDmjGhbCwE0rfu2IwCgqa0n
+VaeBSSZ8XxfME48e8MdV3SA=
+=l7vo
+-----END PGP SIGNATURE-----
