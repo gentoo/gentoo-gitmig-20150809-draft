@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b567b7fc708cf545deb92b72e9026668 ChangeLog 2882
 MD5 12b2844e76b017cff25ac3313fa43454 files/digest-gnome2-perl-0.90 62
 MD5 3cbf426bdfef44e955cc30966120329b files/digest-gnome2-perl-1.00 62
@@ -8,3 +11,10 @@ MD5 a1a9d8f8e2ae36d8f873e2750fb45e2f gnome2-perl-1.00.ebuild 852
 MD5 7ff1397474a087e392230887807b1578 gnome2-perl-1.021.ebuild 833
 MD5 e9cbebb9a720d4904c46a39be4c086b3 gnome2-perl-1.023.ebuild 831
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBPotG5z4I8BtQoRAprqAJ0duyry6kEwwWplYK46A6/J/+460gCeL1oP
+vWgS+4L6BzaIZljkXAgILHU=
+=DJ+0
+-----END PGP SIGNATURE-----
