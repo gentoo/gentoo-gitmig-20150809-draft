@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/xsupplicant
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.7 2005/02/19 11:10:36 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.8 2006/01/13 14:47:59 brix Exp $
+
+*xsupplicant-1.2.2 (13 Jan 2006)
+
+  13 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/xsupplicant-1.2.2-conf.d, +files/xsupplicant-1.2.2-init.d,
+  +xsupplicant-1.2.2.ebuild:
+  Version bump, fixes bug #81338 and bug #100680 (If you use this package,
+  please consider contributing a solution to bug #98253).
 
   19 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   xsupplicant-1.0.1.ebuild:
