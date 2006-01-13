@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8abe47b410cb9ef6c3c910d61b313c8d ChangeLog 2686
 MD5 f78f463f921d26328a21aef85f3fc76e Curses-1.06-r1.ebuild 745
 MD5 db30ee513016f259ff979ffc983fe3b1 Curses-1.06-r2.ebuild 750
@@ -17,3 +20,10 @@ MD5 6447ec88564b6d52731d1530af710368 files/digest-Curses-1.08 60
 MD5 9ef4b48414c2145f5007be1447991411 files/digest-Curses-1.12 59
 MD5 a8d5d58e2831f7877e2daf9c82df443d files/digest-Curses-1.13 59
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyA3jtG5z4I8BtQoRAthbAJ4omeF6K7py0fhd22kBN6NmJJ2jmACcCpcQ
+z1qOy8CwADPeE1ccidtR1jY=
+=lzrp
+-----END PGP SIGNATURE-----

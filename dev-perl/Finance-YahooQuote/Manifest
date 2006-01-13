@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a73d54c8ed9a8d0ca6493450b3d25ca6 ChangeLog 1199
 MD5 e1c0efabb4dee8bfa376e3c084837ce7 Finance-YahooQuote-0.20.ebuild 695
 MD5 9c851d2dcbb7033cd7972213aed0eea9 Finance-YahooQuote-0.21.ebuild 685
 MD5 ec0d13bd6e8b8147e5972f8729ed7484 files/digest-Finance-YahooQuote-0.20 74
 MD5 833b9909433777a355e0b0ccf50f303b files/digest-Finance-YahooQuote-0.21 74
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyBLQtG5z4I8BtQoRAlXbAJ9ggiMk1zV7AoI+uBA48XB3cj4XMwCeIh8G
+bz6mH5gq0bp1p8Euqg82WAA=
+=2rfa
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c68ca291211a5646fafbab48a317f1a2 ChangeLog 535
 MD5 827bfa8b78cade064a25dd7e7ca3d791 IO-Tee-0.64.ebuild 486
 MD5 c69b183270341f58adaf41214be6158c files/digest-IO-Tee-0.64 61
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyA+HtG5z4I8BtQoRAmikAJ4hWQ7m+wJyIaqj2Hm6rbcMUrZf7QCgjIxv
+sSeozIruD2GmmWUn0Put8rQ=
+=R1b+
+-----END PGP SIGNATURE-----
