@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.82 2006/01/03 02:20:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.83 2006/01/13 23:22:14 kumba Exp $
+
+*mips-sources-2.6.14.6 (13 Jan 2006)
+
+  13 Jan 2006; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.14.5.ebuild, +mips-sources-2.6.14.6.ebuild:
+  Another 2.6.14 stable bump, this time to .6. Patches several security flaws
+  from upstream, and incorporates a fix for Octane to fix a keyboard detection
+  issue that was reported.
 
 *mips-sources-2.6.14.5 (03 Jan 2006)
 
