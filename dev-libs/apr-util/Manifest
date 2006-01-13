@@ -1,6 +1,6 @@
 MD5 0e6e31c9fa75a28236fd2a42a2fdaf47 ChangeLog 5258
 MD5 069b36180a4df1925f6d6b7ab8eed362 apr-util-0.9.6-r2.ebuild 2036
-MD5 98f99bb68668461ab4356a88eee62af6 apr-util-0.9.7.ebuild 1837
+MD5 5cdfe1dc0fb6f667e5e64d99b664c390 apr-util-0.9.7.ebuild 1836
 MD5 eb1e072b34afd26a02d5673d81dd0046 apr-util-1.1.2.ebuild 1910
 MD5 5c39070c5a30db4f82b9373cadee4c45 files/apr-util-0.9.x-161086:161087.patch 4671
 MD5 467e8ba98a938b691d27ec9971dbfe12 files/digest-apr-util-0.9.6-r2 66
