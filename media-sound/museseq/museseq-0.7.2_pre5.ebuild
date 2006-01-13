@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre5.ebuild,v 1.1 2006/01/13 13:24:35 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre5.ebuild,v 1.2 2006/01/13 21:13:36 fvdpol Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -14,8 +14,7 @@ HOMEPAGE="http://http://www.muse-sequencer.org/"
 LICENSE="GPL-2"
 SLOT="0"
 
-# masked for amd64 because of segfaults on startup, see bug #118869 
-KEYWORDS="-amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc ladcca debug"
 
 DEPEND="$(qt_min_version 3.2)
@@ -29,6 +28,12 @@ DEPEND="$(qt_min_version 3.2)
 	>=media-libs/libsamplerate-0.1.0
 	>=media-sound/jack-audio-connection-kit-0.98.0
 	ladcca? ( >=media-libs/ladcca-0.4.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-rtctimerfix.patch
+}
 
 src_compile() {
 	cd ${WORKDIR}/${MY_P}

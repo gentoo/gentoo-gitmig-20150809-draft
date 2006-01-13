@@ -1,0 +1,12 @@
+diff -ru muse-0.7.2pre5.orig/muse/driver/rtctimer.cpp muse-0.7.2pre5/muse/driver/rtctimer.cpp
+--- muse-0.7.2pre5.orig/muse/driver/rtctimer.cpp	2006-01-13 21:07:29.000000000 +0100
++++ muse-0.7.2pre5/muse/driver/rtctimer.cpp	2006-01-13 21:09:49.000000000 +0100
+@@ -141,7 +141,7 @@
+     {
+     if(TIMER_DEBUG)
+       printf("getTimerTicks()\n");
+-    unsigned int nn;
++    unsigned long nn;
+     if (timerFd==-1) {
+         fprintf(stderr,"RtcTimer::getTimerTicks(): no RTC open to read!\n");
+         return 0;
