@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a751aebdcc4b1da16526b07a686d2cd File-DirWalk-0.2.ebuild 521
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d2b3418871e1169382eee9f640af5e58 ChangeLog 414
+MD5 840992d4be61b8a37e7539c5a63ff5b2 ChangeLog 518
+MD5 30b283ca77ebf3f7b4b8e5f2a109a145 File-DirWalk-0.2.ebuild 520
 MD5 5cdb4e981499ba547bc0e42ff4d59958 files/digest-File-DirWalk-0.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFC7MpltG5z4I8BtQoRAmmUAJip2tjg70ynnmct5x+8LAORCOHiAKCC1npz
-vxPjL7IP0UA75Fq3Od66Dg==
-=whSC
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

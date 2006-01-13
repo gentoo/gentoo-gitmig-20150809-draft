@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e15864c5435b0f6e1eee5cffea6cd046 Authen-PAM-0.14.ebuild 564
-MD5 bcc19cb7f1d9f7ce0924411690d32849 Authen-PAM-0.16.ebuild 572
-MD5 046598fde9643096bb4f51b7a46ff326 ChangeLog 2447
+MD5 11917b9b7b7324d3d3560e65fa12adbc Authen-PAM-0.16.ebuild 570
+MD5 11be50bea2926a3828f5031f1a6af768 ChangeLog 2549
 MD5 6249ef33dd089241a20b9b36c1c6f56f files/digest-Authen-PAM-0.14 66
 MD5 b082452c80b06074f06e1667f8eb0aaa files/digest-Authen-PAM-0.16 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDcdytFdQwWVoAgN4RAh8PAKDbbKHqKwxgfy51k68qweuc/wXgbQCfUuiI
-hXQH1hmzQD7iefJLCi6JCEs=
-=HxWv
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83fcdc1541ffc1b5d26686346b387090 Text-WrapI18N-0.06.ebuild 624
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 29d4f8aa0be71e4b46bf79885dbe1b70 ChangeLog 436
+MD5 f390e1a11af9dabb1b824ce55d2b980e ChangeLog 542
+MD5 7f9a100c297c45acc64f41b19393df3b Text-WrapI18N-0.06.ebuild 623
 MD5 e3cec36ecad4d978fb80920394b6cefe files/digest-Text-WrapI18N-0.06 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYY9DtG5z4I8BtQoRAmO/AJ9ccc4k+cKTKNXJ48oKQTodC3IqGgCfTEJg
-ADJRwZ9bY2NClKTBw6hZcjY=
-=8/i8
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

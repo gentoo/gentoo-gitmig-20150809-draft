@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c2da8cfcaa767de90411efe9abb28e1 Audio-Mixer-0.7.ebuild 623
-MD5 686b6572f82121e0da54a0ffd0647e7c ChangeLog 490
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 68ec18c8faa60c5c292a9d376b65501b Audio-Mixer-0.7.ebuild 622
+MD5 5d6f12c0b04ca4350d675f2fe771add0 ChangeLog 593
 MD5 64346c7abb817b2ecd69738c64e5a4ad files/digest-Audio-Mixer-0.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCZSqp06ebR+OMO78RAotoAKCPGnoZ8ZGaznxMO2nsdaZD7G73uQCgjB7P
-DOzCpYZd5YbL6hIhKMbJ+8Q=
-=VcdL
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

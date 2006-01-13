@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 378679a4dd9e402754e4051cc2e4622c Text-CharWidth-0.04.ebuild 532
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8b885303fcf8d8ecac7de595a2b50482 ChangeLog 425
+MD5 f6c2e0995c366419b091e8d725cb26dc ChangeLog 532
+MD5 06c024556897d3fec3695f2c583f7e35 Text-CharWidth-0.04.ebuild 531
 MD5 1898860a07c315f3dadaca6375b992ce files/digest-Text-CharWidth-0.04 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYY7UtG5z4I8BtQoRAsKdAJ4766F6iTsIOYmIzanNWEHIoIFFqwCeNqav
-YN5Na+Hj9wrrHVclVbwSc58=
-=QokP
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
