@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 69592558d9af1fc65473881cb64e2d0e ChangeLog 1346
 MD5 875073a17be739578508cf7557f5394a Ima-DBI-0.33.ebuild 598
 MD5 171bc7651ebc53ad3e47331dbf1d1f53 Ima-DBI-0.34.ebuild 602
 MD5 c9bd5a407251dcb0558de7fbfcae04f4 files/digest-Ima-DBI-0.33 63
 MD5 5c1c1c01d7bff92ece0de573d11f5f8a files/digest-Ima-DBI-0.34 63
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDx70xtG5z4I8BtQoRAtrmAKCP2HY57LnBi6qHwDNygs/emCPLZgCffdA4
+Sn9m4dYhtMwbnpTN+aJ4hTs=
+=uwma
+-----END PGP SIGNATURE-----
