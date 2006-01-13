@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.1 2005/07/30 04:53:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.2 2006/01/13 22:08:59 genstef Exp $
 
 inherit eutils games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/opengl
+DEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/libpng
 	>=media-libs/libsdl-1.2

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bomberclone
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.18 2005/10/03 19:48:25 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.19 2006/01/13 22:08:31 genstef Exp $
+
+  13 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  bomberclone-0.11.6.2.ebuild:
+  Add modular depends
 
   03 Oct 2005; Markus Rothe <corsair@gentoo.org>
   bomberclone-0.11.6.2.ebuild:
