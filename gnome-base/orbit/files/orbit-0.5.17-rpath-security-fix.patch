@@ -1,0 +1,75 @@
+diff -Nuar ORBit-0.5.17.orig/aclocal.m4 ORBit-0.5.17.maybe/aclocal.m4
+--- ORBit-0.5.17.orig/aclocal.m4	2002-06-06 04:27:07.000000000 -0700
++++ ORBit-0.5.17.maybe/aclocal.m4	2006-01-12 16:53:21.000000000 -0800
+@@ -1492,7 +1492,7 @@
+ 
+   if test "$ld_shlibs" = yes; then
+     runpath_var=LD_RUN_PATH
+-    hardcode_libdir_flag_spec='${wl}--rpath ${wl}$libdir'
++    hardcode_libdir_flag_spec='${wl}-L${wl}$libdir'
+     export_dynamic_flag_spec='${wl}--export-dynamic'
+     case $host_os in
+     cygwin* | mingw* | pw32*)
+@@ -1717,7 +1717,7 @@
+     else
+       archive_cmds='$LD -shared $libobjs $deplibs $linker_flags -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+     fi
+-    hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
++    hardcode_libdir_flag_spec='${wl}-L${wl}$libdir'
+     hardcode_libdir_separator=:
+     link_all_deplibs=yes
+     ;;
+@@ -1736,7 +1736,7 @@
+   newsos6)
+     archive_cmds='$LD -G -h $soname -o $lib $libobjs $deplibs $linker_flags'
+     hardcode_direct=yes
+-    hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
++    hardcode_libdir_flag_spec='${wl}-L${wl}$libdir'
+     hardcode_libdir_separator=:
+     hardcode_shlibpath_var=no
+     ;;
+@@ -1746,7 +1746,7 @@
+     hardcode_shlibpath_var=no
+     if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
+       archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $linker_flags'
+-      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++      hardcode_libdir_flag_spec='${wl}-L$libdir'
+       export_dynamic_flag_spec='${wl}-E'
+     else
+       case "$host_os" in
+@@ -1756,7 +1756,7 @@
+         ;;
+       *)
+         archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $linker_flags'
+-        hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++        hardcode_libdir_flag_spec='${wl}-L$libdir'
+         ;;
+       esac
+     fi
+@@ -1778,7 +1778,7 @@
+       allow_undefined_flag=' -expect_unresolved \*'
+       archive_cmds='$LD -shared${allow_undefined_flag} $libobjs $deplibs $linker_flags -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+     fi
+-    hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
++    hardcode_libdir_flag_spec='${wl}-L${wl}$libdir'
+     hardcode_libdir_separator=:
+     ;;
+ 
+@@ -1786,7 +1786,7 @@
+     if test "$GCC" = yes; then
+       allow_undefined_flag=' ${wl}-expect_unresolved ${wl}\*'
+       archive_cmds='$CC -shared${allow_undefined_flag} $libobjs $deplibs $compiler_flags ${wl}-msym ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
+-      hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
++      hardcode_libdir_flag_spec='${wl}-L${wl}$libdir'
+     else
+       allow_undefined_flag=' -expect_unresolved \*'
+       archive_cmds='$LD -shared${allow_undefined_flag} $libobjs $deplibs $linker_flags -msym -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${output_objdir}/so_locations -o $lib'
+@@ -1794,7 +1794,7 @@
+       $LD -shared${allow_undefined_flag} -input $lib.exp $linker_flags $libobjs $deplibs -soname $soname `test -n "$verstring" && echo -set_version $verstring` -update_registry ${objdir}/so_locations -o $lib~$rm $lib.exp'
+ 
+       #Both c and cxx compiler support -rpath directly
+-      hardcode_libdir_flag_spec='-rpath $libdir'
++      hardcode_libdir_flag_spec='-L$libdir'
+     fi
+     hardcode_libdir_separator=:
+     ;;
