@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 bcaaa299f2d990e2ee69243489eab091 Spreadsheet-ParseExcel-0.2603.ebuild 540
-MD5 084507bf87bd44c55e21992eda9927d6 ChangeLog 427
+MD5 dbe7fe5afd7469d8daa14ce969e86d90 ChangeLog 550
+MD5 731293eeee0fb0834d56d19531911074 Spreadsheet-ParseExcel-0.2603.ebuild 538
 MD5 d5fb8102c29cb9c73ff5b5f77d2cc189 files/digest-Spreadsheet-ParseExcel-0.2603 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdPWBtG5z4I8BtQoRAlL9AJ0WCDfPCaMLBFlRiGPsrvIrb36VagCfRTF+
-kTFWqfMx+QUEe8OdUrtWACA=
-=qwqC
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
