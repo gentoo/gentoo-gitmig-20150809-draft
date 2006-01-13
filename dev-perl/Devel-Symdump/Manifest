@@ -1,4 +1,6 @@
 MD5 9236a0618279f626c599d21326a9c68b ChangeLog 1699
 MD5 efa46f8984e512cd29c402c7b117d557 Devel-Symdump-2.03.ebuild 518
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2bfd304ee143234f3024e8499c223a65 Devel-Symdump-2.05.ebuild 415
 MD5 e458f60d0c6560fd4ffef60ac20bbd6b files/digest-Devel-Symdump-2.03 68
+MD5 64eabba356e0adade89572cb86e8a3ea files/digest-Devel-Symdump-2.05 69
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
