@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/libintl-0.ebuild,v 1.1 2006/01/13 19:27:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/libintl-0.ebuild,v 1.2 2006/01/13 19:39:26 flameeyes Exp $
 
 DESCRIPTION="Virtual for the GNU Internationalization Library"
 HOMEPAGE="http://www.gentoo.org/proj/en/gentoo-alt/"
 SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 DEPEND=""
 

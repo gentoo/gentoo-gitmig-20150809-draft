@@ -1,6 +1,9 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.1 2006/01/13 19:27:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.2 2006/01/13 19:39:26 flameeyes Exp $
+
+  13 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> libintl-0.ebuild:
+  Add m68k and ppc-macos keywords to the virtual.
 
 *libintl-0 (13 Jan 2006)
 
