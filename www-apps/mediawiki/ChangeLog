@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.46 2006/01/14 10:19:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.47 2006/01/14 10:21:32 dertobi123 Exp $
+
+  14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  mediawiki-1.5.4.ebuild:
+  added to ~ppc
 
   14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   mediawiki-1.4.12.ebuild:
