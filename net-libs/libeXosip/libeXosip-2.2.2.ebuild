@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-2.2.2.ebuild,v 1.1 2006/01/09 07:34:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-2.2.2.ebuild,v 1.2 2006/01/14 13:56:39 genstef Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	append-cflags "-I/usr/include/glib-2.0"
-	econf || die # $(use_enable josua) || die
+	econf --disable-josua || die # $(use_enable josua) || die
 	emake || die
 }
 

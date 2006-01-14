@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10c6d93a8c83da160b789a3c81e11b13 ChangeLog 606
+MD5 3f5d85893eb34b6a7a0b5a97286cb7ef ChangeLog 756
 MD5 10598d0fdff2285a0bbf5bd2d52332a2 files/digest-libeXosip-0.9.0 67
 MD5 1bbf2403bbe9a6b2551644d20391d32f files/digest-libeXosip-1.9.1_pre16 74
 MD5 4e46bde6e26f0c0f81a2a12310e2adb3 files/digest-libeXosip-2.2.2 68
 MD5 f3c1617c6d7e8ce6b8bc6d50375cddc7 libeXosip-0.9.0.ebuild 749
 MD5 2cd92225976906fa9c01caa1dd3d754b libeXosip-1.9.1_pre16.ebuild 774
-MD5 f271fcd13bfc7e35b8f41a8c01bc37ee libeXosip-2.2.2.ebuild 887
+MD5 acb57ccc7c6b1f342aa87045440eeeae libeXosip-2.2.2.ebuild 899
 MD5 c1a6093f6bf43cae3b4360e3620d9992 metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDwhuOmdTrptrqvGERAqaxAJ9xHjseHIf38UJ65V0OtDHG4D8aHQCePZ5H
-DyAq5IbCpIdekMUxn3onvGo=
-=M2Gq
------END PGP SIGNATURE-----
