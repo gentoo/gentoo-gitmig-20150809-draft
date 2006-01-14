@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.6.4.ebuild,v 1.3 2006/01/14 15:47:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.6.5.ebuild,v 1.1 2006/01/14 15:47:37 metalgod Exp $
 
 DESCRIPTION="SVG icon theme from the Tango project"
 HOMEPAGE="http://tango-project.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="png"
 
-RDEPEND=">=x11-misc/icon-naming-utils-0.6
+RDEPEND=">=x11-misc/icon-naming-utils-0.6.5
 	 media-gfx/imagemagick
 	 >=gnome-base/librsvg-2.12"
 
