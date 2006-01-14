@@ -1,0 +1,60 @@
+http://bugs.gentoo.org/118395
+
+--- rlocate-module/rlocate.c
++++ rlocate-module/rlocate.c
+@@ -60,6 +60,9 @@
+ #else
+ static struct class *rlocate_class;
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,15)
++static struct rw_semaphore namespace_sem;
++#endif
+ 
+ MODULE_AUTHOR("Rasto Levrinc");
+ MODULE_DESCRIPTION("rlocate");
+@@ -680,7 +681,11 @@
+                 ret = PTR_ERR(rlocate_class);
+                 goto no_simple_class; 
+         }
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,15)
++        class_device_create(rlocate_class, NULL, MKDEV(Major, 0), NULL, 
++#else
+         class_device_create(rlocate_class, MKDEV(Major, 0), NULL, 
++#endif
+                                 DEVICE_NAME);
+         // devfs
+         devfs_mk_cdev(MKDEV(Major, 0), S_IFCHR|S_IRUSR|S_IWUSR, DEVICE_NAME);
+@@ -835,7 +836,11 @@
+                 }
+                 return;
+         }
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,15)
++        down_read(&namespace_sem); 
++#else
+         down_read(&namespace->sem); 
++#endif
+         list_for_each(head, &namespace->list) {
+ 	        mnt = list_entry(head, struct vfsmount, mnt_list); 
+ 	        if (mnt->mnt_root == sb_root) {
+@@ -848,7 +849,11 @@
+                         }
+                 }
+         }
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,15)
++        up_read(&namespace_sem); 
++#else
+         up_read(&namespace->sem); 
++#endif
+         dput(sb_root); 
+ }
+ 
+@@ -930,6 +931,9 @@
+ static int __init init_rlocate(void)
+ {
+         int ret;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,15)
++	init_rwsem(&namespace_sem);
++#endif
+ 	printk(KERN_INFO "rlocate version "RL_VERSION"\n");
+         //init_waitqueue_head (&filenames_wq);
+         // register dev 
