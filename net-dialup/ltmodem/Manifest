@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb8e933a4cd687ae8b987774ae2ed41c ltmodem-8.31_alpha10-r1.ebuild 3548
-MD5 9e2015e88460daa627e5a850e8e56747 ChangeLog 3271
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 b990e7d5303c86f37ea21cf471d22e03 files/ltmodem_devfs 198
+MD5 67d990f3f0ab1e4e01f4f1d0d1c4c92e ChangeLog 3491
 MD5 0093643280b04ff8473b33e908df5b67 files/digest-ltmodem-8.31_alpha10-r1 137
+MD5 c1fadb641074695c728bd065813e112f files/digest-ltmodem-8.31_alpha10-r2 137
+MD5 b990e7d5303c86f37ea21cf471d22e03 files/ltmodem_devfs 198
+MD5 bb8e933a4cd687ae8b987774ae2ed41c ltmodem-8.31_alpha10-r1.ebuild 3548
+MD5 1742a472c5ba23de6f66983bed38b5cb ltmodem-8.31_alpha10-r2.ebuild 3601
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDE4XtNSP4Vda7IdsRAsnfAKCHMWUrAsxusBuSzBjXVakVr5eiigCeLTUy
-Sd3VbWFTAkLcPdQ4oZCURzs=
-=S4Ro
+iD8DBQFDyP7mjG8pv1lIUX4RAqidAJ9yrH90IZotM7oQQReNlyWRQ6YHSACgsS9v
+N2kr5e6HXaw0klQAHKjEtAQ=
+=ttOS
 -----END PGP SIGNATURE-----
