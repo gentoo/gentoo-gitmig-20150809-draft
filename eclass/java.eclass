@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.23 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.24 2006/01/14 21:31:31 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
 inherit eutils
 
 DESCRIPTION="Based on the $ECLASS eclass"
+DEPEND=">=dev-java/java-config-1.2.11"
+RDEPEND=">=dev-java/java-config-1.2.11"
 
 VMHANDLE=${PN}-${PV}
 
