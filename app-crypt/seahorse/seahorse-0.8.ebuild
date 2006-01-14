@@ -1,18 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.8.ebuild,v 1.10 2006/01/14 08:58:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.ebuild,v 1.1 2006/01/14 08:58:11 dragonheart Exp $
 
-inherit gnome2 eutils flag-o-matic
+inherit gnome2 eutils autotools flag-o-matic
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="virtual/x11
-	>=app-crypt/gnupg-1.2.0
+RDEPEND=">=app-crypt/gnupg-1.2.0
 	>=app-crypt/gpgme-1.0.0
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
@@ -39,14 +38,18 @@ DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="ldap"
 
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.7.9-gedit-2.12.patch"
-	epatch "${FILESDIR}/${PN}-0.7.9-gpgme-1.1.0.patch"
-	autoconf
+	unpack ${A}
+	cd ${S}
+	# Should be fixed in seahorse-0.8.1
+	# http://bugzilla.gnome.org/show_bug.cgi?id=318107#c4
+	epatch ${FILESDIR}/${PN}-0.7.9-gpgme-1.1.0.patch
+	# Re-configure
+	#autoconf
+
 }
 
 src_compile() {
+	# autoconf
 	append-ldflags $(bindnow-flags)
 	G2CONF=$(use_enable ldap)
 	gnome2_src_compile

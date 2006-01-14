@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.51 2005/12/14 20:06:18 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.52 2006/01/14 08:58:11 dragonheart Exp $
+
+*seahorse-0.8 (14 Jan 2006)
+
+  14 Jan 2006; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.8.ebuild,
+  +seahorse-0.8.ebuild:
+  version 0.8 added - bug #115122 by Alexander Minges. In 0.7.8 the 0.7.9
+  gpgme configure patch was applied to avoid a configure failure as per bug
+  #116628 by Tim. Also in 0.7.8 the gedit patch was backported thanks Paul
+  Belt
 
   14 Dec 2005; <dang@gentoo.org> seahorse-0.7.9.ebuild:
   Don't need explicit X deps, only uses what gtk+ requires
