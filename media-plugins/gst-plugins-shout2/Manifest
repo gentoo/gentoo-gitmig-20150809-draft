@@ -1,4 +1,4 @@
-MD5 3089dfddd3ababe303d39df4564dfd34 ChangeLog 2213
+MD5 f21116b883a4da9ae49ea87c971e3cd3 ChangeLog 2214
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-shout2-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-shout2-0.10.1 76
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-shout2-0.8.10 72
@@ -8,7 +8,7 @@ MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-shout2-0.8.8-r1 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-shout2-0.8.9 71
 MD5 812cd03e2b249b82a81cca7abf90ed53 files/gst-plugins-shout2-0.8.8-name.patch 3906
 MD5 3d61405e254ebf1dc88ca18db79eb878 gst-plugins-shout2-0.10.0.ebuild 415
-MD5 1c6db4af103dad1566cbccaf38db7045 gst-plugins-shout2-0.10.1.ebuild 415
+MD5 3e0080f67246aa95fa72b894020bda78 gst-plugins-shout2-0.10.1.ebuild 416
 MD5 8a5dd00e249e63721700c01545078745 gst-plugins-shout2-0.8.10.ebuild 411
 MD5 f99878db9af56e53e2149d43583577b1 gst-plugins-shout2-0.8.11.ebuild 415
 MD5 365e939e3e23d4fbf5e2aad9fa843a1b gst-plugins-shout2-0.8.8-r1.ebuild 534
