@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-7227.ebuild,v 1.1 2005/12/28 09:13:43 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-7307.ebuild,v 1.1 2006/01/14 15:00:48 hattya Exp $
 
 inherit elisp-common eutils
 
@@ -10,7 +10,7 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/18219/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/18359/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -31,7 +31,7 @@ src_compile() {
 	if has_version 'app-dicts/canna-2ch'; then
 		einfo "Adding nichan.ctd to anthy.dic."
 		sed -i -e /placename/a"read ${cannadicdir}/nichan.ctd" \
-			mkanthydic/dict.args.in
+			mkworddic/dict.args.in
 	fi
 
 	unset TMPDIR
