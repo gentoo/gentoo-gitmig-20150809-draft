@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enscript
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.31 2005/05/31 23:42:32 lanius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.32 2006/01/14 22:39:19 genstef Exp $
+
+  14 Jan 2006; Stefan Schweizer <genstef@gentoo.org> enscript-1.6.4.ebuild:
+  Fix Configure thanks to Keri Harris <harriskeri@mcs.vuw.ac.nz> in bug 94948
 
 *enscript-1.6.4 (31 May 2005)
 

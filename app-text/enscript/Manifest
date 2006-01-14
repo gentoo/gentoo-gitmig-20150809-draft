@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 794f46700fef8cc85dce162de4fe79ac ChangeLog 3832
 MD5 3ecae1143becc2047418f67b38407479 enscript-1.6.3-r3.ebuild 913
-MD5 1bc042c49707a1d8e41a4d8353d3f0e4 enscript-1.6.4.ebuild 967
-MD5 5c3b2d942c40177893cae6f77192d19d ChangeLog 3676
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 2982cb4ed62b45684d5e6e015c34a52e files/enscript-1.6.3-language.patch 456
+MD5 f1204f14336bb01477ad8e1721eabee9 enscript-1.6.4.ebuild 978
 MD5 528d3e39a7e18ff200cccfd037ee0422 files/digest-enscript-1.6.3-r3 66
 MD5 96b207f1bc22828660e417ebaab43d03 files/digest-enscript-1.6.4 67
+MD5 2982cb4ed62b45684d5e6e015c34a52e files/enscript-1.6.3-language.patch 456
 MD5 e105a37406fc2ff7aa4895780e4b5a66 files/enscript-1.6.3-security.patch 5447
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFCnPd1evY57Fted3ERAqauAJdbS/xPpREmhKtqg4wIDOT8UQ/SAJ9SzG3+
-xFKf2dec7RNmR9XOVliMww==
-=iI23
------END PGP SIGNATURE-----
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4.ebuild,v 1.1 2005/05/31 23:42:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4.ebuild,v 1.2 2006/01/14 22:39:19 genstef Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
+	unset CC
 	econf `use_enable nls` || die
 	emake || die
 }
