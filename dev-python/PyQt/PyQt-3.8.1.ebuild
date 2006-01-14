@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.15 2006/01/05 20:39:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.16 2006/01/14 20:46:44 yoswink Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/PyQt-x11-gpl-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc alpha"
+KEYWORDS="ppc"
 IUSE=""
 
 PV_MAJOR=${PV/.*/}
