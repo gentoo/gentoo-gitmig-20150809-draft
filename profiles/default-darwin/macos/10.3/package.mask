@@ -62,6 +62,12 @@ dev-lang/ruby
 dev-ruby/racc
 dev-ruby/rubygems
 
+# these applications need a newer perl
+media-gfx/imagemagick
+
+# needs imagemagick
+media-gfx/pdf2html
+
 # these apps require a newer version of unzip than Panther has
 =dev-util/astyle-1.15.3-r1
 app-text/docbook-sgml-dtd
