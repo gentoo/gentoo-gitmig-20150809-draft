@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>sci</herd>
+  <maintainer>
+	<email>cryos@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    Interactive geometry program for exploring Euclidean geometry. You can
+	create a construction, such as a triangle with a circumcenter, and then, as
+	you drag the vertices of the triangle you can see the circumcenter moving in
+	real time. Can be used to make high quality figures in LaTeX and is built
+	using Qt.
+  </longdescription>
+</pkgmetadata>
+

@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6cfa89aa5fb044701e870be39de20c88 ChangeLog 573
+MD5 9f5e1bfb3507fbe41ce730d4978accfa files/digest-kseg-0.402 62
+MD5 5bdb86daaabadc0b8738f79047f6bdc1 files/kseg-0.402-gentoo.patch 1461
+MD5 1daf11f91676b12b0646039a0aecb45b kseg-0.402.ebuild 935
+MD5 3ccc7fe7122b4e24d2627ce1c5071a54 metadata.xml 580
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyTGZntT9W3vfTuoRAjTKAKCKOPhjtYwZ+YFm0UIXd8627SR6bQCfXghS
+JmcJ65iTY2bbLFs1TqnlK/I=
+=ToV1
+-----END PGP SIGNATURE-----
