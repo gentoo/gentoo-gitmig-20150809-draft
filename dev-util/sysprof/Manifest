@@ -1,15 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0697ddab41c19eed32f4535106422a0b ChangeLog 469
-MD5 adee278e0e445f2badb640ef691c2caf files/digest-sysprof-0.91 64
+MD5 0010860f582ae08a0e50b869c2672ecc ChangeLog 660
 MD5 5fec4f12ce04d543378e727bb656b667 files/digest-sysprof-1.0 63
-MD5 daf49bff783b56d005079fd65a2bf10d sysprof-0.91.ebuild 974
+MD5 429f624174cefeb78d91124db803d3bf files/digest-sysprof-1.0.1 65
+MD5 b4292fb75bf4f8aab984575afe9f7d67 files/sysprof-1.0.1-INTERVAL_should_not_be_zero.patch 449
+MD5 e59e2c97f895c559493ade6e57c02b72 sysprof-1.0.1.ebuild 1066
 MD5 21681e9f1f0fed0cca56543e5cdab098 sysprof-1.0.ebuild 980
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYWvpgIKl8Uu19MoRAgQpAJ4zTP2orqKthtwWcCWkFPsj2ShC4gCbBp9q
-V8gwqw6keyvN9oBSRuVAQ6I=
-=WxZW
+iD8DBQFDyERW2+ySkm8kpY0RAtTUAKC7f/D9t5eVdOfNQyKjnhLWjRiWwACfS88Z
+mZd8OlzPFIx7fTHodTCbblk=
+=lvhn
 -----END PGP SIGNATURE-----
