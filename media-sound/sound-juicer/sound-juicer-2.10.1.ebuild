@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.10.1.ebuild,v 1.9 2005/09/15 19:50:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.10.1.ebuild,v 1.10 2006/01/14 15:49:30 leonardop Exp $
 
 inherit gnome2
 
@@ -23,12 +23,14 @@ RDEPEND=">=dev-libs/glib-2
 	gnome-extra/gnome-media
 	>=media-libs/musicbrainz-2
 	=media-plugins/gst-plugins-cdparanoia-0.8*
-	vorbis? ( =media-plugins/gst-plugins-vorbis-0.8*
+	vorbis? (
+		=media-plugins/gst-plugins-vorbis-0.8*
 		=media-plugins/gst-plugins-ogg-0.8* )
 	flac? ( =media-plugins/gst-plugins-flac-0.8* )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.20
+	~app-text/docbook-xml-dtd-4.3
+	>=dev-util/intltool-0.28
 	>=app-text/scrollkeeper-0.3.5
 	dev-util/pkgconfig"
 

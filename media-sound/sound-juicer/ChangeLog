@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.60 2006/01/14 09:56:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.61 2006/01/14 15:49:30 leonardop Exp $
+
+  14 Jan 2006; Leonardo Boshell <leonardop@gentoo.org>
+  sound-juicer-2.10.1.ebuild, sound-juicer-2.12.2-r1.ebuild,
+  sound-juicer-2.12.3.ebuild:
+  Added docbook-xml-dtd to DEPEND, required to process help files (bug #104014)
 
   14 Jan 2006; Leonardo Boshell <leonardop@gentoo.org>
   sound-juicer-2.12.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.12.2-r1.ebuild,v 1.2 2006/01/14 09:56:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.12.2-r1.ebuild,v 1.3 2006/01/14 15:49:30 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
+	~app-text/docbook-xml-dtd-4.3
 	>=dev-util/intltool-0.28
 	>=app-text/scrollkeeper-0.3.5
 	>=dev-util/pkgconfig-0.9"
