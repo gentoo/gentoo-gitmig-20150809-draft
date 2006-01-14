@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.212 2006/01/13 23:03:48 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.213 2006/01/14 20:30:38 dang Exp $
+
+  14 Jan 2006; <dang@gentoo.org> +files/gtk+-2.8.10-xinerama.patch,
+  gtk+-2.8.10.ebuild:
+  Make xinerama support optional. Bug #118744
 
   13 Jan 2006; Fernando J. Pereda <ferdy@gentoo.org> gtk+-2.8.8.ebuild:
   Stable on alpha wrt bug #117505

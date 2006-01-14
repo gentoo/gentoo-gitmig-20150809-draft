@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8764a868bf9b5e68f76dbccbdd8929b0 ChangeLog 30452
+MD5 785f66f11a59b26fb3cc84bbedda449a ChangeLog 30588
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
 MD5 f0e0f202bdf17540985215d5384480ed files/digest-gtk+-2.6.10-r1 212
@@ -14,19 +14,20 @@ MD5 cd1c96c0a81026a3af29449389e455d5 files/gtk+-2-xpm_loader.patch 920
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 MD5 0df92cf64a9324ef85fc72885a4285b1 files/gtk+-2.4.9-ppc64.patch 1732
 MD5 5f35263753f0ad976c13f501247b8d51 files/gtk+-2.8.0-multilib.patch 2456
+MD5 8289aa1fb556b38e9fb2f9201a065755 files/gtk+-2.8.10-xinerama.patch 1083
 MD5 9ea5c063ade44a46b279eab398fc969a files/gtk+-gdk-pixbuf-testfix.patch 578
 MD5 36d00cf3b4035e6cb9873ade9ed1a9ce files/gtkrc 627
 MD5 03ae62ac03643ccc0a36779df1bfd6af gtk+-1.2.10-r10.ebuild 1702
 MD5 60b495d6aa1169ba2dc4b20a303b18d7 gtk+-1.2.10-r11.ebuild 1916
 MD5 6017f72966d53602c58c288364dd61a9 gtk+-2.6.10-r1.ebuild 3125
-MD5 f0afd1a0ef262a76f38f8651ce34f2cf gtk+-2.8.10.ebuild 4123
+MD5 d07770ad85c46bcdc72f37cd92873317 gtk+-2.8.10.ebuild 4267
 MD5 98a655345fb0223bea83f0b1318ae056 gtk+-2.8.8.ebuild 4112
 MD5 b1d222ade0fd24eb5aa4b7f22b49fc6d gtk+-2.8.9.ebuild 4122
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDyDHzViELBEf1JB0RAtl7AJ492/g0KjC1Npz4hC9VFXUD6bJXUQCcC2T1
-zG+nALaRNSjrfWTalaeNQgE=
-=iY9p
+iD8DBQFDyV+oomPajV0RnrERApqLAJ9k2VK7u9oRBpGzlIr3CVbIBvatYQCfQZfi
+Tbf32dIQ73hHsEwayFQJk2A=
+=Bfo/
 -----END PGP SIGNATURE-----

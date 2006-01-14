@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.10.ebuild,v 1.1 2006/01/13 01:10:14 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.10.ebuild,v 1.2 2006/01/14 20:30:38 dang Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug doc jpeg tiff"
+IUSE="debug doc jpeg tiff xinerama"
 
 RDEPEND="|| ( (
 			x11-libs/libXrender
@@ -20,7 +20,7 @@ RDEPEND="|| ( (
 			x11-libs/libXi
 			x11-libs/libXt
 			x11-libs/libXext
-			x11-libs/libXinerama
+			xinerama? ( x11-libs/libXinerama )
 			x11-libs/libXcursor
 			x11-libs/libXrandr
 			x11-libs/libXfixes )
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xextproto
 			x11-proto/xproto
 			x11-proto/inputproto
-			x11-proto/xineramaproto )
+			xinerama? ( x11-proto/xineramaproto ) )
 		virtual/x11 )
 
 	doc? (
@@ -77,6 +77,9 @@ src_unpack() {
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
 	epatch "${DISTDIR}"/${PN}-2-smoothscroll-r6.patch.bz2
 
+	# Make xinerama support optional
+	epatch "${FILESDIR}"/${PN}-2.8.10-xinerama.patch
+
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	has_multilib_profile && epatch "${FILESDIR}"/${PN}-2.8.0-multilib.patch
@@ -102,6 +105,7 @@ src_compile() {
 	local myconf="$(use_enable doc gtk-doc) \
 		$(use_with jpeg libjpeg) \
 		$(use_with tiff libtiff) \
+		$(use_enable xinerama) \
 		--with-libpng            \
 		--with-gdktarget=x11     \
 		--with-xinput"
