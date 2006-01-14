@@ -75,3 +75,6 @@ app-text/docbook-xml-simple-dtd
 
 # these need autoconf-2.59+
 app-arch/rzip
+
+# needs gmp
+dev-lang/swi-prolog-lite
