@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.48 2006/01/14 15:44:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.49 2006/01/14 15:51:12 grobian Exp $
+
+  14 Jan 2006; Fabian Groffen <grobian@gentoo.org> rebase-512.ebuild:
+  Marked ppc-macos stable (bug #118832)
 
   14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> rebase-512.ebuild:
   ppc stable, bug #118832
