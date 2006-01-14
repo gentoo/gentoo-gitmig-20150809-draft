@@ -1,18 +1,31 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.4 2005/09/03 22:48:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.5 2006/01/14 11:05:30 nelchael Exp $
 
 DESCRIPTION="OpenGL virtual desktop switching"
 HOMEPAGE="http://desk3d.sourceforge.net/"
 SRC_URI="mirror://sourceforge/desk3d/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXxf86vm )
+	virtual/x11 )
 	media-libs/imlib2
-	virtual/opengl"
+	virtual/glut"
+
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xf86vidmodeproto
+		x11-proto/xproto )
+	virtual/x11 )"
 
 src_install () {
 	make DESTDIR="${D}" install || die
