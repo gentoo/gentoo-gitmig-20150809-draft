@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.152 2005/12/25 14:44:07 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.153 2006/01/14 18:36:40 vanquirius Exp $
+
+*gnupg-1.9.20 (14 Jan 2006)
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -gnupg-1.9.18.ebuild,
+  -gnupg-1.9.19.ebuild, +gnupg-1.9.20.ebuild:
+  1.9.20 version bump for bug 117717. Add DEPEND to RDEPEND. Use RESTRICT=test
+  and remove src_test. Thanks to Stefan Schweizer <genstef at gentoo dot org>.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> gnupg-1.4.2-r3.ebuild,
   gnupg-1.9.19.ebuild:

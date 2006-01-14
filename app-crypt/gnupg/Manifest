@@ -1,15 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b289dc3d588da5d3909e26c4dd7a490a ChangeLog 24634
+MD5 664c59b4b95af932b6638b932f06c462 ChangeLog 24943
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 4b92f911e900cfd1a37439bd19412f5d files/digest-gnupg-1.4.1 190
 MD5 4b92f911e900cfd1a37439bd19412f5d files/digest-gnupg-1.4.1-r1 190
 MD5 331553038bdcb95cc843c60b01b73925 files/digest-gnupg-1.4.2-r1 190
 MD5 f972c88baf3f90f8ef0953df6f328e28 files/digest-gnupg-1.4.2-r2 190
 MD5 f972c88baf3f90f8ef0953df6f328e28 files/digest-gnupg-1.4.2-r3 190
-MD5 7247c8f0379977f0a3dd13568bf283c7 files/digest-gnupg-1.9.18 66
-MD5 28ad3af724b879fe86743d59ae4447dd files/digest-gnupg-1.9.19 66
+MD5 15f59d2129cdfb1c8e6121d45a1e61ca files/digest-gnupg-1.9.20 66
 MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454
 MD5 494103ac08d870d8a9c1ed0b83c4ae35 files/gnupg-1.4.1-selftest.patch 1180
 MD5 e893ac3e7a6b11ab9806e16d3a8582fd files/gnupg-1.4.2-badruman.patch 463
@@ -23,13 +19,5 @@ MD5 6f5e7ed6dfb1ae31f877486a9ff7e441 gnupg-1.4.1.ebuild 6186
 MD5 ffd1a6a73df273ee13e112dc428eb06c gnupg-1.4.2-r1.ebuild 6241
 MD5 314fb0111680f30cd551152636225ea9 gnupg-1.4.2-r2.ebuild 6795
 MD5 b723494957d3a13a8281999f582f5416 gnupg-1.4.2-r3.ebuild 6843
-MD5 3fd02f30190d0919bf9a5972d40182c2 gnupg-1.9.18.ebuild 3205
-MD5 8c676ec2c88ae9ce2e9041efb5de10ac gnupg-1.9.19.ebuild 3193
+MD5 7786b7baae2a2fd09672dcc425373490 gnupg-1.9.20.ebuild 3191
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrrBDAiZjviIA2XgRApzwAJ4t3a1K5/5t+LUBUs0z3tTHSkpQMQCgpdTS
-zEtZ9yurto03J5fxB7yu+mA=
-=qnH5
------END PGP SIGNATURE-----
