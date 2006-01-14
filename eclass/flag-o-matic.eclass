@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.103 2006/01/10 01:14:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.104 2006/01/14 10:52:12 kevquinn Exp $
 
 
 # need access to emktemp()
@@ -343,10 +343,9 @@ test-flags-CXX() { test-flags-PROG "CXX" "$@"; }
 # its really only present due to the append-flags() abomination.
 test-flags() { test-flags-CC "$@"; }
 
-# Depriciated, use test-flags()
+# Deprecated, use test-flags()
 test_flag() {
-	addwrite "/dev/stderr"
-	ewarn "test_flag: deprecated, please use test-flags()!" >/dev/stderr
+	ewarn "test_flag: deprecated, please use test-flags()!" >&2
 
 	test-flags-CC "$@"
 }
@@ -392,9 +391,7 @@ get-flag() {
 
 # DEPRECATED - use gcc-specs-relro or gcc-specs-now from toolchain-funcs
 has_hardened() {
-	addwrite "/dev/stderr"
-	ewarn "has_hardened: deprecated, please use gcc-specs-{relro,now}()!" \
-		>/dev/stderr
+	ewarn "has_hardened: deprecated, please use gcc-specs-{relro,now}()!" >&2
 
 	test_version_info Hardened && return 0
 	# The specs file wont exist unless gcc has GCC_SPECS support
@@ -404,8 +401,7 @@ has_hardened() {
 # DEPRECATED - use gcc-specs-pie from toolchain-funcs
 # indicate whether PIC is set
 has_pic() {
-	addwrite "/dev/stderr"
-	ewarn "has_pic: deprecated, please use gcc-specs-pie()!" >/dev/stderr
+	ewarn "has_pic: deprecated, please use gcc-specs-pie()!" >&2
 
 	[[ ${CFLAGS/-fPIC} != ${CFLAGS} || \
 	   ${CFLAGS/-fpic} != ${CFLAGS} || \
@@ -415,8 +411,7 @@ has_pic() {
 # DEPRECATED - use gcc-specs-pie from toolchain-funcs
 # indicate whether PIE is set
 has_pie() {
-	addwrite "/dev/stderr"
-	ewarn "has_pie: deprecated, please use gcc-specs-pie()!" >/dev/stderr
+	ewarn "has_pie: deprecated, please use gcc-specs-pie()!" >&2
 
 	[[ ${CFLAGS/-fPIE} != ${CFLAGS} || \
 	   ${CFLAGS/-fpie} != ${CFLAGS} || \
@@ -428,8 +423,7 @@ has_pie() {
 # DEPRECATED - use gcc-specs-ssp from toolchain-funcs
 # indicate whether code for SSP is being generated for all functions
 has_ssp_all() {
-	addwrite "/dev/stderr"
-	ewarn "has_ssp_all: deprecated, please use gcc-specs-ssp()!" >/dev/stderr
+	ewarn "has_ssp_all: deprecated, please use gcc-specs-ssp()!" >&2
 
 	# note; this matches only -fstack-protector-all
 	[[ ${CFLAGS/-fstack-protector-all} != ${CFLAGS} || \
@@ -440,8 +434,7 @@ has_ssp_all() {
 # DEPRECATED - use gcc-specs-ssp from toolchain-funcs
 # indicate whether code for SSP is being generated
 has_ssp() {
-	addwrite "/dev/stderr"
-	ewarn "has_ssp: deprecated, please use gcc-specs-ssp()!" >/dev/stderr
+	ewarn "has_ssp: deprecated, please use gcc-specs-ssp()!" >&2
 
 	# note; this matches both -fstack-protector and -fstack-protector-all
 	[[ ${CFLAGS/-fstack-protector} != ${CFLAGS} || \
