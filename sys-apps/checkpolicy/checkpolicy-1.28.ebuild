@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.28.ebuild,v 1.2 2005/12/15 21:59:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.28.ebuild,v 1.3 2006/01/14 01:06:16 spb Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="x86 ppc sparc amd64 mips"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 
 DEPEND="=sys-libs/libsemanage-${SEMNG_VER}*
 	sys-devel/flex
