@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.2.2.ebuild,v 1.1 2006/01/13 14:47:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.2.2.ebuild,v 1.2 2006/01/14 13:10:28 brix Exp $
 
 inherit flag-o-matic
 
@@ -22,12 +22,20 @@ DEPEND="sys-devel/bison
 		${RDEPEND}"
 
 src_compile() {
+	local conf
+
 	# fix compilation with recent kernels
-	# fix compilation with pcsc-lite-1.2.9_beta9 (bug #81338)
-	append-flags -DHEADERS_KERNEL -I/usr/include/PCSC
+	append-flags -DHEADERS_KERNEL
+
+	if use gsm; then
+		# fix USE=-gsm (bug #118885)
+		conf="--enable-eap-sim"
+		# fix compilation with pcsc-lite-1.2.9_beta9 (bug #81338)
+		append-flags -I/usr/include/PCSC
+	fi
 
 	econf \
-		$(use_enable gsm eap-sim) \
+		${conf} \
 		|| die "econf failed"
 
 	emake || die "emake failed"

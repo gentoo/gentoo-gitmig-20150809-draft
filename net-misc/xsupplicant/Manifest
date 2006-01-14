@@ -1,4 +1,4 @@
-MD5 e3d22fa85dd10d79fe4a5ce54d2de0e8 ChangeLog 1463
+MD5 c092a4d3e888e895182a32088dde04b8 ChangeLog 1592
 MD5 98df32cc0295a0acc372414a8a4b5c08 files/digest-xsupplicant-0.8b 68
 MD5 e46d442b40e1d828c4a8fa3d51fab7c5 files/digest-xsupplicant-1.0 67
 MD5 8b5c0592ffed1b7f540d7c53af133cad files/digest-xsupplicant-1.0.1 69
@@ -11,4 +11,4 @@ MD5 db76d51212bff92212cb8dd316a0931d metadata.xml 222
 MD5 c49a576040df261bcd5648365763162b xsupplicant-0.8b.ebuild 809
 MD5 fa581e5a6cadc7e082b8554eeffaff81 xsupplicant-1.0.1.ebuild 1286
 MD5 a7272f606860d801af53bb3e292b9352 xsupplicant-1.0.ebuild 1262
-MD5 9a3588d6f4c6e05e04899b23fcf936ad xsupplicant-1.2.2.ebuild 1499
+MD5 07e56f89a2c6eaacac200908c6915cf9 xsupplicant-1.2.2.ebuild 1590

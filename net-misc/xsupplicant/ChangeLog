@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xsupplicant
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.8 2006/01/13 14:47:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.9 2006/01/14 13:10:28 brix Exp $
+
+  14 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  xsupplicant-1.2.2.ebuild:
+  Allow compiling with USE=-gsm, bug #118885.
 
 *xsupplicant-1.2.2 (13 Jan 2006)
 
