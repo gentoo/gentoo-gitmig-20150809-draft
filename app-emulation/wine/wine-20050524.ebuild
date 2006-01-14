@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050524.ebuild,v 1.12 2006/01/08 04:36:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050524.ebuild,v 1.13 2006/01/14 18:39:32 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-*"
 IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses lcms" #doc
 RESTRICT="test" #72375
 
@@ -76,6 +76,7 @@ src_unpack() {
 	unpack Wine-${PV}.tar.gz
 	cd "${S}"
 
+	epatch "${FILESDIR}"/wine-wmf.patch
 	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
 	epatch "${FILESDIR}"/wine-hangfix-bug2660.patch #98156
