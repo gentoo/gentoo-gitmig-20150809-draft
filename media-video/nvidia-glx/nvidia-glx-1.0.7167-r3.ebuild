@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.4 2005/09/05 23:18:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.5 2006/01/14 21:34:36 blubb Exp $
 
 inherit eutils multilib versionator
 
@@ -53,7 +53,7 @@ pkg_setup() {
 	check_xfree
 
 	if use amd64 && has_multilib_profile && [ "${DEFAULT_ABI}" != "amd64" ]; then
-		eerror "This ebuild doesn't currently support changing your defualt abi."
+		eerror "This ebuild doesn't currently support changing your default abi."
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
 	fi
 }

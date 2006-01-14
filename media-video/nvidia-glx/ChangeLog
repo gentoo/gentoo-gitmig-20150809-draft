@@ -1,6 +1,16 @@
 # ChangeLog for media-video/nvidia-glx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.109 2005/12/23 20:51:11 augustus Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.110 2006/01/14 21:34:36 blubb Exp $
+
+  14 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  nvidia-glx-1.0.6111-r2.ebuild, nvidia-glx-1.0.6111-r3.ebuild,
+  nvidia-glx-1.0.6629-r6.ebuild, nvidia-glx-1.0.6629-r7.ebuild,
+  nvidia-glx-1.0.7167-r2.ebuild, nvidia-glx-1.0.7167-r3.ebuild,
+  nvidia-glx-1.0.7174-r5.ebuild, nvidia-glx-1.0.7667-r1.ebuild,
+  nvidia-glx-1.0.7676-r1.ebuild, nvidia-glx-1.0.7676-r2.ebuild,
+  nvidia-glx-1.0.8174.ebuild, nvidia-glx-1.0.8174-r1.ebuild,
+  nvidia-glx-1.0.8178.ebuild:
+  fix typo in pkg_setup
 
   23 Dec 2005; Kristopher Kersey <augustus@gentoo.org>
   nvidia-glx-1.0.8178.ebuild:
