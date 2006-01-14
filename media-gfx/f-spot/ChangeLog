@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.4 2005/12/12 17:53:52 joem Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.5 2006/01/14 20:32:02 dertobi123 Exp $
+
+  14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> f-spot-0.1.5.ebuild:
+  added to ~ppc, bug #114054
 
 *f-spot-0.1.5 (12 Dec 2005)
 
