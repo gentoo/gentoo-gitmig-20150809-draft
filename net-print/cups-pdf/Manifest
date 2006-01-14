@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53f2122d542d04c93dcf2cc2d4e825d0 ChangeLog 2498
+MD5 49b6ba400cb4e41a6e560c90267abfd3 ChangeLog 2777
 MD5 3974adb92bfc83daa77086187652a741 cups-pdf-1.7.0a.ebuild 865
 MD5 13685c4f39fa051e3e206ff599202c3b cups-pdf-1.7.3.ebuild 867
+MD5 dadba3a72f8c1b52ede18b2d7c472c61 cups-pdf-2.0.3.ebuild 898
 MD5 63d30955280af99d1bc5c3c73d00c038 files/README.gentoo 1141
 MD5 176f85d8e8929d023c44364dda413dd9 files/digest-cups-pdf-1.7.0a 66
 MD5 70283ae57c157a901cd435c3c7c36f29 files/digest-cups-pdf-1.7.3 65
+MD5 8b7f30bdd916c360ee7518da4c937538 files/digest-cups-pdf-2.0.3 65
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf7KfomPajV0RnrERAlgeAJ9HQsJVIocy4wvIC6nKGONB3vqiKwCeKXqB
-sMcZQutcRtEVxV7OuAXra10=
-=G07a
------END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups-pdf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.20 2005/11/19 23:17:45 dang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.21 2006/01/14 23:16:29 genstef Exp $
+
+*cups-pdf-2.0.3 (14 Jan 2006)
+
+  14 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +cups-pdf-2.0.3.ebuild:
+  version bump thanks to Charles J. Gruener <cjg9411@rit.edu>, Jonathan
+  Pappworth <gentoo@pappworth.com> and Jan Vansteenkiste <Jan@buitendezone.be>
+  in bug 112190
 
   19 Nov 2005; <dang@gentoo.org> cups-pdf-1.7.0a.ebuild:
   SRC_URL location changed. bug #112362
