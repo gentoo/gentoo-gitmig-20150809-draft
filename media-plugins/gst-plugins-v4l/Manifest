@@ -1,4 +1,4 @@
-MD5 4eaaf1e228a95349f67e91a741e6e8f0 ChangeLog 2092
+MD5 32e49e6d28505ed6b77b7ce1137b8654 ChangeLog 2093
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-v4l-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-v4l-0.10.1 77
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-v4l-0.8.10 72
@@ -6,7 +6,7 @@ MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-v4l-0.8.11 72
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-v4l-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-v4l-0.8.9 71
 MD5 9713a840ad51ae352b593331a160169c gst-plugins-v4l-0.10.0.ebuild 455
-MD5 490e9c9e2479042dc43dc4b3a36cc058 gst-plugins-v4l-0.10.1.ebuild 456
+MD5 8c77902a5af399e38a35b2f1a8a21abc gst-plugins-v4l-0.10.1.ebuild 457
 MD5 8fb95c984416e2dd9a96693fae53b1b8 gst-plugins-v4l-0.8.10.ebuild 452
 MD5 4ccb3c554858805824b16d015420e74b gst-plugins-v4l-0.8.11.ebuild 456
 MD5 173287afa2445fd9c14cd3d698c63a5b gst-plugins-v4l-0.8.8.ebuild 452

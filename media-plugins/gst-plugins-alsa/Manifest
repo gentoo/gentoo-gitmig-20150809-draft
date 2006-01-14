@@ -1,4 +1,4 @@
-MD5 49d0100b253c7b95fc2f735808f13d26 ChangeLog 6310
+MD5 a042ac330dbf3203cecb9478dadc1654 ChangeLog 6311
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-alsa-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-alsa-0.10.1 77
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-alsa-0.8.10 72
@@ -6,7 +6,7 @@ MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-alsa-0.8.11 72
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-alsa-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-alsa-0.8.9 71
 MD5 c164b0c837ff50746bb8b8ac7bcba3af gst-plugins-alsa-0.10.0.ebuild 347
-MD5 5c3a47a2b36f13bb3f79f0aab4df2ba5 gst-plugins-alsa-0.10.1.ebuild 347
+MD5 1b7215acc19bff266d362dfee8e96b44 gst-plugins-alsa-0.10.1.ebuild 348
 MD5 e71865f8f646448ec2f305f8cfaf5e12 gst-plugins-alsa-0.8.10.ebuild 382
 MD5 c490a709082281c6cb9caf0da7423a88 gst-plugins-alsa-0.8.11.ebuild 390
 MD5 fbfc38a83be0524c39ae23a0222ffda8 gst-plugins-alsa-0.8.8.ebuild 373
