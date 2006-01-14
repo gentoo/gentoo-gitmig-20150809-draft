@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab06dae30813bd72222f49f30320661e ChangeLog 4544
+MD5 0b1be3e218fc1ca826a770997bcbd323 ChangeLog 4626
 MD5 15fc088b37155656e008679f3c07eea7 files/3.2.1/postinstall-en.txt 1648
 MD5 ea7fd972eafdc6962d1c3a0cdeba47e7 files/3.2.1/reconfig 1213
 MD5 cee32ca276838f6d74230c66d0bfc961 files/3.4.2/Callback.patch 1567
@@ -23,11 +23,11 @@ MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
 MD5 939107934a799efb520c62c057341273 rt-3.2.1.ebuild 4362
 MD5 ead23ec5d52fefb7d8ba409ff8302d32 rt-3.4.3.ebuild 5999
 MD5 ec84cbf93ee4b1263f5ad967e4507099 rt-3.4.4.ebuild 5897
-MD5 a9a6706d7f505f7c8fcdd41eeaf61abc rt-3.4.5.ebuild 5936
+MD5 dea59afd35273a811524b83b8eb3e799 rt-3.4.5.ebuild 5938
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyBHJEzitwsaoONoRAhKeAJ0TyQFy+Ks8564RGsjqSpv11N+iUACghwjP
-28iFhwvdM0Lnk0udNKpnXr0=
-=nGtx
+iD8DBQFDyFh2EzitwsaoONoRAlF9AJ9or6zjTEyVKNIQm6VSr2QDCfFaqACfRlkb
+lo3LW37nQnAJ9bwnRSBg/vU=
+=QFRV
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.1 2006/01/13 20:46:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.2 2006/01/14 01:48:28 rl03 Exp $
 
 inherit webapp eutils
 
@@ -58,7 +58,7 @@ DEPEND="
 	>=perl-core/File-Spec-0.8
 	dev-perl/HTML-Parser
 	>=dev-perl/HTML-Scrubber-0.08
-	dev-perl/libnet
+	perl-core/libnet
 	>=dev-perl/log-dispatch-2.0
 	>=dev-perl/locale-maketext-lexicon-0.32
 	dev-perl/locale-maketext-fuzzy
@@ -71,7 +71,7 @@ DEPEND="
 	dev-perl/text-autoformat
 	>=dev-perl/Text-Quoted-1.3
 	>=dev-perl/Tree-Simple-1.04
-	dev-perl/Scalar-List-Utils
+	perl-core/Scalar-List-Utils
 	dev-perl/Module-Versions-Report
 	dev-perl/Cache-Simple-TimedExpiry
 	dev-perl/XML-Simple
