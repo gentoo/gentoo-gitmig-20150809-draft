@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/bcpp-20050725.ebuild,v 1.2 2006/01/11 00:48:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/bcpp-20050725.ebuild,v 1.3 2006/01/14 10:41:39 dertobi123 Exp $
 
 DESCRIPTION="Indents C/C++ source code"
 HOMEPAGE="http://invisible-island.net/bcpp/"
 SRC_URI="ftp://invisible-island.net/bcpp/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 DEPEND=""
 RDEPEND=""
