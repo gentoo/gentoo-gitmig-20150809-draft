@@ -53,7 +53,6 @@ pfpro
 solid
 sybase
 sybase-ct
-glitz
 
 # dietlibc
 diet
@@ -63,10 +62,6 @@ pyste
 
 # Unmask our instruction sets
 -altivec
-
-# This one is needed because cryptsetup will not build on ppc64. This
-# useflag is used in cdrecord and can be removed once bug #90211 is fixed.
-on-the-fly-crypt
 
 # we don't have hardware to test. also see bug #113398
 dvb
