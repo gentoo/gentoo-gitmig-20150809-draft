@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49c73730c6d059af39374f3c693aa7e6 ChangeLog 4343
+MD5 2bd03283da58b3dba8109de1ce946ef4 ChangeLog 4588
 MD5 80a892383a2ec3e9e4b4efe8868b6db0 files/digest-sgml-common-0.6.3-r4 65
-MD5 2fdf1b8183007d09402459693e573c25 files/sgml-common-0.6.3-r4-install-catalog.in 4354
+MD5 d54c8e50cf0f9e8fc72433ca67cd848a files/sgml-common-0.6.3-r4-install-catalog.in 4917
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 add6231a92a0dcef3ca51daea81e2415 sgml-common-0.6.3-r4.ebuild 1982
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDudft2+ySkm8kpY0RAhpbAJoCIHzuUEZwoo60szIbfeuuN6OVlACglCtC
-WgQ9qh/WXI29X6PzPXpvN9Y=
-=5fou
------END PGP SIGNATURE-----
+MD5 ea9d3b4989187dc3e2645e7b1982ff1e sgml-common-0.6.3-r4.ebuild 1994

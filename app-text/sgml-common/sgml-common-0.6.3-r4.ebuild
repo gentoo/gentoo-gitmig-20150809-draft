@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.29 2006/01/03 01:47:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.30 2006/01/14 14:02:33 leonardop Exp $
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
@@ -28,23 +28,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	local file
-
-	if [ -x "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
-	then
-		einfo "Installing Catalogs..."
-		install-catalog --add \
-			/etc/sgml/sgml-ent.cat \
-			/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
-
-		install-catalog --add \
-			/etc/sgml/sgml-docbook.cat \
-			/etc/sgml/sgml-ent.cat
-	else
-		ewarn "install-catalog not found! Something went wrong!"
+	local installer="${ROOT}usr/bin/install-catalog"
+	if [ ! -x "${installer}" ]; then
+		eerror "install-catalog not found! Something went wrong!"
 		die
 	fi
-	for file in `find /etc/sgml/ -name "*.cat"` /etc/sgml/catalog
+
+	einfo "Installing Catalogs..."
+	$installer --add \
+		/etc/sgml/sgml-ent.cat \
+		/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
+	$installer --add \
+		/etc/sgml/sgml-docbook.cat \
+		/etc/sgml/sgml-ent.cat
+
+	local file
+	for file in `find ${ROOT}etc/sgml/ -name "*.cat"` ${ROOT}etc/sgml/catalog
 	do
 		einfo "Fixing ${file}"
 		awk '/"$/ { print $1 " " $2 }
@@ -54,25 +53,24 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	cp /usr/bin/install-catalog ${T}
+	cp ${ROOT}usr/bin/install-catalog ${T}
 }
 
 pkg_postrm() {
-	if [ ! -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
-	then
-		einfo "Removing Catalogs..."
-		if [ -e /etc/sgml/sgml-ent.cat ]
-		then
+	if [ ! -x  "${T}/install-catalog" ]; then
+		return
+	fi
+
+	einfo "Removing Catalogs..."
+	if [ -e "${ROOT}etc/sgml/sgml-ent.cat" ]; then
 		${T}/install-catalog --remove \
 			/etc/sgml/sgml-ent.cat \
 			/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
-		fi
+	fi
 
-		if [ -e /etc/sgml/sgml-docbook.cat ]
-		then
+	if [ -e "${ROOT}etc/sgml/sgml-docbook.cat" ]; then
 		${T}/install-catalog --remove \
 			/etc/sgml/sgml-docbook.cat \
 			/etc/sgml/sgml-ent.cat
-		fi
 	fi
 }

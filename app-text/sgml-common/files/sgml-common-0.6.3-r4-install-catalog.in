@@ -3,6 +3,9 @@
 # Send any comments to Eric Bischoff <eric@caldera.de>
 # This program is under GPL license. See LICENSE file for details.
 
+# Modified by Gentoo developers to better integrate it to portage.
+# <text-markup@gentoo.org>
+
 # Set help message
 SGML_HELP_MESSAGE="Usage: `basename $0` [<option>] <action>\n\
 where <option> is:\n\
@@ -25,6 +28,11 @@ SGML_ACTION=""
 # Set catalogs
 SGML_CENTRALIZED=""
 SGML_ORDINARY=""
+
+# Default ROOT value (usually defined by portage)
+[ -z "$ROOT" ] && ROOT="/"
+[[ $ROOT == */ ]] || ROOT="${ROOT}/"
+
 
 # Process options
 case $1 in
@@ -62,6 +70,14 @@ case $1 in
 		;;
 esac
 
+
+# The arguments to this program should always be relative to $ROOT. Here we
+# declare some extra variables to distingish between the absolute and
+# relative paths.
+SGML_ROOT_CENTRALIZED="${ROOT%/}${SGML_CENTRALIZED}"
+SGML_ROOT_ORDINARY="${ROOT%/}${SGML_ORDINARY}"
+
+
 # Check that the super catalog can be created and changed and deleted
 if [ ! -w ${ROOT}etc/sgml ]
 then
@@ -86,39 +102,39 @@ case $SGML_ACTION in
 esac
 
 # Check that the centralized catalog can be created, changed and deleted
-if [ -z "$SGML_CENTRALIZED" ]
+if [ -z "$SGML_ROOT_CENTRALIZED" ]
 then
   echo -e $SGML_HELP_MESSAGE >&2
   exit 1
 fi
 case $SGML_ACTION in
    addition)
-	if [ -e $SGML_CENTRALIZED -a ! -w $SGML_CENTRALIZED ]
+	if [ -e "$SGML_ROOT_CENTRALIZED" -a ! -w "$SGML_ROOT_CENTRALIZED" ]
 	then
-	  echo "`basename $0`: can not modify \"$SGML_CENTRALIZED\"." >&2
+	  echo "`basename $0`: can not modify \"$SGML_ROOT_CENTRALIZED\"." >&2
 	  exit 2
 	fi
 	;;
    removal)
-	if [ ! -w $SGML_CENTRALIZED ]
+	if [ ! -w "$SGML_ROOT_CENTRALIZED" ]
 	then
-	  echo "`basename $0`: can not modify \"$SGML_CENTRALIZED\"." >&2
+	  echo "`basename $0`: can not modify \"$SGML_ROOT_CENTRALIZED\"." >&2
 	  exit 2
 	fi
 	;;
 esac
 
 # Check that we have at least one ordinary package to process
-if [ -z "$SGML_ORDINARY" ]
+if [ -z "$SGML_ROOT_ORDINARY" ]
 then
   echo -e $SGML_HELP_MESSAGE >&2
   exit 1
 fi
 case $SGML_ACTION in
    addition)
-	if [ ! -s $SGML_ORDINARY ]
+	if [ ! -s $SGML_ROOT_ORDINARY ]
 	then
-	  echo "`basename $0`: \"$SGML_ORDINARY\" does not exist or is empty." >&2
+	  echo "`basename $0`: \"$SGML_ROOT_ORDINARY\" does not exist or is empty." >&2
 	  exit 2
 	fi
 	;;
@@ -128,31 +144,32 @@ esac
 case $SGML_ACTION in
     addition)
 	echo "`basename $0`: addition of $SGML_ORDINARY in $SGML_CENTRALIZED"
-	if grep -q $SGML_ORDINARY $SGML_CENTRALIZED 2>/dev/null
+	if grep -q $SGML_ORDINARY $SGML_ROOT_CENTRALIZED 2>/dev/null
 	then
 	  echo "Warning: $SGML_ORDINARY is already installed in the centralized catalog $SGML_CENTRALIZED" >&2
 	else
-	  echo "$SGML_POINTER \"$SGML_ORDINARY\"" >> $SGML_CENTRALIZED
+	  echo "$SGML_POINTER \"$SGML_ORDINARY\"" >> $SGML_ROOT_CENTRALIZED
 	fi
 	grep -q $SGML_CENTRALIZED ${ROOT}etc/sgml/catalog 2>/dev/null
 	if [ $? -ne 0 ]
 	then
-	  echo "`basename $0`: addition of $SGML_CENTRALIZED in ${ROOT}etc/sgml/catalog"
-	  echo "$SGML_POINTER \"$SGML_CENTRALIZED\"" >> ${ROOT}etc/sgml/catalog
+		echo "`basename $0`: addition of $SGML_CENTRALIZED in ${ROOT}etc/sgml/catalog"
+		echo "$SGML_POINTER \"$SGML_CENTRALIZED\"" >> ${ROOT}etc/sgml/catalog
 	fi
 	;;
    removal)
 	echo "`basename $0`: removal of $SGML_ORDINARY from $SGML_CENTRALIZED"
-	if grep -q $SGML_ORDINARY $SGML_CENTRALIZED 2>/dev/null
+	if grep -q $SGML_ORDINARY $SGML_ROOT_CENTRALIZED 2>/dev/null
 	then
-          sed -e "\:$SGML_POINTER \"$SGML_ORDINARY\":d" < $SGML_CENTRALIZED > ${SGML_CENTRALIZED}.new
-          mv ${SGML_CENTRALIZED}.new $SGML_CENTRALIZED
+		sed -e "\:$SGML_POINTER \"$SGML_ORDINARY\":d" < \
+			$SGML_ROOT_CENTRALIZED > ${SGML_ROOT_CENTRALIZED}.new
+		mv ${SGML_ROOT_CENTRALIZED}.new $SGML_ROOT_CENTRALIZED
 	else
 	  echo "Warning: $SGML_ORDINARY was not found in the centralized catalog $SGML_CENTRALIZED" >&2
 	fi
-	if [ ! -s $SGML_CENTRALIZED ]
+	if [ ! -s "$SGML_ROOT_CENTRALIZED" ]
 	then
-	  rm $SGML_CENTRALIZED
+	  rm $SGML_ROOT_CENTRALIZED
 	  echo "`basename $0`: removal of $SGML_CENTRALIZED from ${ROOT}etc/sgml/catalog"
           sed -e "\:$SGML_POINTER \"$SGML_CENTRALIZED\":d" < ${ROOT}etc/sgml/catalog > ${ROOT}etc/sgml/catalog.new
           mv ${ROOT}etc/sgml/catalog.new ${ROOT}etc/sgml/catalog
