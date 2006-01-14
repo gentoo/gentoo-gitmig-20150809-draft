@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Info
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.5 2006/01/14 00:52:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.6 2006/01/14 00:53:09 mcummings Exp $
+
+  14 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  -Video-Info-0.999.ebuild:
+  Removing 0.999 per aforementioned bug, it was just a stub :(
 
 *Video-Info-0.993 (14 Jan 2006)
 
