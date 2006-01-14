@@ -62,5 +62,7 @@ dev-lang/ruby
 dev-ruby/racc
 dev-ruby/rubygems
 
-# astyle requires a newer version of unzip than Panther has
+# these apps require a newer version of unzip than Panther has
 =dev-util/astyle-1.15.3-r1
+app-text/docbook-sgml-dtd
+app-text/docbook-xml-simple-dtd
