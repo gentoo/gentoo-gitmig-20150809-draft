@@ -1,7 +1,8 @@
-MD5 5355f2a2c971f3cc261235e5dcfd119a ChangeLog 29086
+MD5 49644ff1019a535a57df7a97bd78c501 ChangeLog 29276
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
 MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
+MD5 d00ccd5b4b44ac1df463da80d5ebb8a1 files/DB_CONFIG.fast.example 746
 MD5 30ef1dc504563809f990b72ffe2be6c0 files/digest-openldap-2.1.26 65
 MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27 65
 MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27-r1 65
@@ -28,6 +29,7 @@ MD5 a8e7c88a9f6b88fb9b88d4e66fae5d92 files/digest-openldap-2.2.28-r1 130
 MD5 dd664a5abce13e402f1e0322ce2464fd files/digest-openldap-2.2.28-r2 130
 MD5 dd664a5abce13e402f1e0322ce2464fd files/digest-openldap-2.2.28-r3 130
 MD5 dd664a5abce13e402f1e0322ce2464fd files/digest-openldap-2.2.28-r4 130
+MD5 5cfab69fddcc0ccc8ccdd7c4b3362d9a files/digest-openldap-2.3.17 195
 MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
 MD5 c16eada85fafe1c17bf0089d0ef90ae3 files/gencert.sh-2.2.27 2939
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
@@ -76,3 +78,4 @@ MD5 a6c77f6fc6a7c7af923cc334d2bab94a openldap-2.2.28-r2.ebuild 13214
 MD5 bb134104d80c1eafe50d526e99a75032 openldap-2.2.28-r3.ebuild 13715
 MD5 2056935c62653a4bd11900925ab054bf openldap-2.2.28-r4.ebuild 14820
 MD5 72bade434d8afe3c9c9f665518a6d786 openldap-2.2.28.ebuild 12908
+MD5 9f73fa844593e52205f9e55b0ac27ca1 openldap-2.3.17.ebuild 16191
