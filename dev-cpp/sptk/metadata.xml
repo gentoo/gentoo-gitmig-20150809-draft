@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>desktop-misc</herd>
 <maintainer>
-  <email>desktop-misc@gentoo.org</email>
+  <email>iluxa@gentoo.org</email>
 </maintainer>
 <longdescription>C++ user interface toolkit for X with ODBC, IMAP, Excel support.</longdescription> 
 </pkgmetadata>
