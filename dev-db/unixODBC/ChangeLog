@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/unixODBC
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.53 2005/10/02 11:49:50 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.54 2006/01/14 08:16:19 vapier Exp $
+
+  14 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/unixODBC-2.2.11-flex.patch, unixODBC-2.2.11-r1.ebuild:
+  Add patch by Francisco José Cañizares Santofimia to fix building with
+  newer versions of flex #110167.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> unixODBC-2.2.11-r1.ebuild:
   Mark 2.2.11-r1 stable on ia64

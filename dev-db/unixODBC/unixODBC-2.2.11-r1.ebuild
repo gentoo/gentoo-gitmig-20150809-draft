@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.10 2005/10/02 11:49:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.11 2006/01/14 08:16:19 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -22,11 +22,12 @@ DEPEND="virtual/libc
 # the configure.in patch is required for 'use qt'
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-flex.patch #110167
 	# braindead check in configure fails - hack approach
-	epatch ${FILESDIR}/${P}-configure.in.patch
-	epatch ${FILESDIR}/${P}-Makefile.am.patch
+	epatch "${FILESDIR}"/${P}-configure.in.patch
+	epatch "${FILESDIR}"/${P}-Makefile.am.patch
 	aclocal && \
 	libtoolize -c -f && \
 	automake && \
@@ -42,9 +43,6 @@ src_compile() {
 	else
 		myconf="--enable-gui=no"
 	fi
-
-	# Detect mips systems properly
-	gnuconfig_update
 
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
