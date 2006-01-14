@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/truevision
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.9 2006/01/13 21:59:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.10 2006/01/14 19:19:32 vanquirius Exp $
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  truevision-0.5.5.2.ebuild:
+  Fix desktop entry for bug 84530, thanks again to Chris Mayo <mayo at clara
+  dot co dot uk>.
 
   13 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
   truevision-0.5.5.2.ebuild:

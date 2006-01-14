@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.3 2006/01/13 21:59:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.4 2006/01/14 19:19:32 vanquirius Exp $
 
 inherit eutils gnome2 versionator
 
@@ -48,6 +48,10 @@ src_install() {
 
 	# duplicated, unnecessary documentation
 	rm -rf "${D}"/usr/share/doc/${PN}
+
+	# fix desktop entry
+	echo "NoDisplay=true" >> "${D}"/usr/share/applications/truevision.desktop
+	make_desktop_entry truevision "Truevision" /usr/share/pixmaps/truevision/gnome-truevision.png "Graphics;3DGraphics;RasterGraphics;"
 }
 
 pkg_postinst() {
