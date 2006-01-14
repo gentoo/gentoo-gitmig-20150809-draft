@@ -72,3 +72,6 @@ app-text/pdf2html
 =dev-util/astyle-1.15.3-r1
 app-text/docbook-sgml-dtd
 app-text/docbook-xml-simple-dtd
+
+# these need autoconf-2.59+
+app-arch/rzip
