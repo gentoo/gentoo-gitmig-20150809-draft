@@ -14,6 +14,9 @@ svga
 fdftk
 3dfx
 
+# broken upstream, see libavcodec/sh4/idct_sh4.c:#error
+ffmpeg
+
 # havent tested yet
 qt
 arts
