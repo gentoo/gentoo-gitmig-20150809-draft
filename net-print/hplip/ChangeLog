@@ -1,6 +1,15 @@
 # ChangeLog for net-print/hplip
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.11 2005/12/04 15:17:36 vanquirius Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.12 2006/01/14 18:23:03 vanquirius Exp $
+
+*hplip-0.9.7-r1 (14 Jan 2006)
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7.ebuild,
+  +hplip-0.9.7-r1.ebuild:
+  Add python fix for bug 98428, thanks to Sridhar Dhanapalan <lists dot
+  sridhar at dhanapalan dot com>, William Keaney <keaneyw at gmail dot com>,
+  boris faure <billiob at gmail dot com> and others. Add upstream patch for
+  bug 116952, thanks to Keri Harris <harriskeri at mcs dot vuw dot ac dot nz>.
 
   04 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7.ebuild:
   Use mirrors to host foomatic-db-hpijs tarball. This should fix bug 114033,

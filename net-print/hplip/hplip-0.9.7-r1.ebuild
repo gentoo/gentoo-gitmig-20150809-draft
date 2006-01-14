@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7.ebuild,v 1.2 2005/12/04 15:17:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r1.ebuild,v 1.1 2006/01/14 18:23:03 vanquirius Exp $
 
 inherit eutils
 
@@ -8,6 +8,7 @@ DB_V=1.5-20051126
 DESCRIPTION="HP Linux Imaging and Printing System. Includes net-print/hpijs, scanner drivers and service tools."
 HOMEPAGE="http://hpinkjet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
+	mirror://sourceforge/hpinkjet/${P}-2.patch
 	foomaticdb? ( mirror://gentoo/foomatic-db-hpijs-${DB_V}.tar.gz
 	http://dev.gentoo.org/~vanquirius/files/foomatic-db-hpijs-${DB_V}.tar.gz )"
 	#http://www.linuxprinting.org/download/foomatic/foomatic-db-hpijs-${DB_V}.tar.gz
@@ -39,8 +40,17 @@ RDEPEND="virtual/ghostscript
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	# bug 116952
+	epatch "${DISTDIR}"/${P}-2.patch
+
 	sed -i -e "s:(uint32_t)0xff000000) >> 24))):(uint32_t)0xff000000) >> 24):" \
 		"${S}"/scan/sane/mfpdtf.h
+
+	# bug 98428
+	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" \
+		"${S}"/hpssd.py
 }
 src_compile() {
 	myconf="${myconf} --disable-cups-install --disable-foomatic-install"
