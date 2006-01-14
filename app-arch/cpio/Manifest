@@ -1,6 +1,4 @@
 MD5 7d230948beced54e710a2b79162ce1e3 ChangeLog 7629
-MD5 e55fdc50aad5d87ac28cc3317fc750d8 cpio-2.6-r3.ebuild 1367
-MD5 f6a1777511b6fdef55f762281e3b97fc cpio-2.6-r4.ebuild 1419
 MD5 1aa1e97053e83282aecbbff9c590534d cpio-2.6-r5.ebuild 1579
 MD5 527f6d401d12741d17a7ac7761a6d2d7 files/2.6-isnumber.patch 861
 MD5 ae93625090241de60fb662d4dd0153dc files/2.6-lstat.patch 843
@@ -12,7 +10,5 @@ MD5 ad27a9309017220fb814c7877fd52cb1 files/cpio-2.6-dirTraversal.patch 6673
 MD5 c1efb6f13ac85b99cf4f468083101b53 files/cpio-2.6-gcc4-tests.patch 542
 MD5 5264c887ab223304098de4bc540617a0 files/cpio-2.6-warnings.patch 6280
 MD5 8e7b24c3c6b13e2228034d738bc9732b files/cpio-2.6-writeOutHeaderBufferOverflow.patch 18611
-MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r3 61
-MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r4 61
 MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r5 61
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
