@@ -1,4 +1,7 @@
-MD5 090ec5f461f1c8aea78ca75f82cb17f7 ChangeLog 2019
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c71ea09fcb5ee6374b4af14ae3529a2c ChangeLog 2128
 MD5 7e521c0a8b36e52832b9287be6b84e58 files/digest-perlpanel-0.4.2 67
 MD5 970e12664d9587c95b42ff5016fc4e75 files/digest-perlpanel-0.6.0 67
 MD5 ff6ad744e27adfe217e69872a4ed713d files/digest-perlpanel-0.7.0 67
@@ -10,5 +13,12 @@ MD5 340ac2e898824b93708f3c4a13403961 perlpanel-0.4.2.ebuild 933
 MD5 2442e8b41641339276c24e6f739de79e perlpanel-0.6.0.ebuild 965
 MD5 893682683784da816f616ba1d8156940 perlpanel-0.7.0.ebuild 1034
 MD5 c8d45e5cdf43e134fd778b3a69693491 perlpanel-0.9.0.ebuild 1081
-MD5 01ca20e8b6d621ffe47c1db5af0a03f9 perlpanel-0.9.1-r1.ebuild 1173
+MD5 1537bb92100bf60512dbd462c92f670e perlpanel-0.9.1-r1.ebuild 1175
 MD5 2bc4dc73ea507662378ccdb76ccf99b1 perlpanel-0.9.1.ebuild 1146
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyEb3tG5z4I8BtQoRAj+lAJ90L0mbOycY7I3lCBIz3tISOeRyXgCghksc
+c2Z/IJPMlmR5W1ekzHc19z0=
+=cVvf
+-----END PGP SIGNATURE-----
