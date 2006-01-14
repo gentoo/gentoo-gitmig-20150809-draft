@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/setiathome
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.13 2006/01/04 22:38:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.14 2006/01/14 22:42:39 cryos Exp $
+
+  14 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  setiathome-4.18-r1.ebuild:
+  Added >=media-libs/jpeg-6b to DEPEND, closes bug 118695.
 
   04 Jan 2006; Olivier Fisette <ribosome@gentoo.org> -files/seti-conf.d-r1,
   -files/seti-init.d-r1, -files/setiathome-wrapper,
