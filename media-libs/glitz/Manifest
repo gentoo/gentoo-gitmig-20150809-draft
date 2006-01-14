@@ -1,4 +1,4 @@
-MD5 f322a8836a51c91dd4c006307447cb13 ChangeLog 2468
+MD5 bb48cdc44b91f76d054f6778021c6e30 ChangeLog 2553
 MD5 da3806ac5f02e88b51d0e0a91077f7ab files/digest-glitz-0.2.3 63
 MD5 da3d9e4c1a226dc5c7a4af62ce6896d3 files/digest-glitz-0.3.0.20050115 72
 MD5 2dd21fec0a014af9c094c3ed6e9670a2 files/digest-glitz-0.4.0 63
@@ -7,5 +7,5 @@ MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
 MD5 1bcad3b98a9f7ca2a88c5119df7c8bde glitz-0.2.3.ebuild 1045
 MD5 9ff0e7c53c651de73e73db4cc69c5d13 glitz-0.3.0.20050115.ebuild 626
 MD5 0024906341e1e45f6ebb88fed0c008a9 glitz-0.4.0.ebuild 602
-MD5 6c16261308ac494ebab5f58124b964cc glitz-0.4.4.ebuild 612
+MD5 b204c49664ff4057bc018ae8dc57be13 glitz-0.4.4.ebuild 608
 MD5 13d5049b8405e67dc76afb9670cb0d4b metadata.xml 429
