@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.44 2006/01/06 22:11:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.45 2006/01/14 23:16:35 nichoj Exp $
+
+  14 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
+  sun-jre-bin-1.4.2.10.ebuild, sun-jre-bin-1.5.0.06.ebuild:
+  Removed redundant dependencies provided by java.eclass (bug #118651).
 
   06 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
   sun-jre-bin-1.5.0.06.ebuild:
