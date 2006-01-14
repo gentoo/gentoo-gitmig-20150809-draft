@@ -33,3 +33,7 @@ idn
 
 # OSX has pam, but openvpn doesn't compile against it (yet?)
 pam
+
+# needs keywording
+avahi
+physfs
