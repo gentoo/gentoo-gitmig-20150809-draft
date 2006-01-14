@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/files/hplip.init.d,v 1.1 2005/06/07 17:02:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/files/hplip.init.d,v 1.2 2006/01/14 18:53:41 vanquirius Exp $
 
 depend() {
 	before cupsd
@@ -16,7 +16,8 @@ start() {
 
 	ebegin "Starting hpssd"
 	start-stop-daemon --quiet --start --exec /usr/share/hplip/hpssd.py \
-		--pidfile /var/run/hpssd.pid >/dev/null 2>&1
+		--pidfile /var/run/hpssd.pid --name "python /usr/share/hplip/hpssd.py" \
+		>/dev/null 2>&1
 	eend $?
 }
 
