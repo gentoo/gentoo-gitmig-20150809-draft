@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.38 2006/01/11 19:24:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.39 2006/01/14 09:28:44 flameeyes Exp $
+
+  14 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kwin-3.5.0-composite.patch, kwin-3.5.0.ebuild:
+  Use patch from tarball in mirrors.
 
   11 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kwin-3.5.0-composite.patch, kwin-3.5.0.ebuild:

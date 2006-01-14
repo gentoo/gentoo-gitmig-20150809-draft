@@ -5,8 +5,7 @@ MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1-r1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2 287
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2-r1 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcontrol-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kcontrol-3.5.0 68
-MD5 8f494976be0b5e5286f26d5ef7ee8d7d files/kcontrol-3.5.0-global-usbids.patch 1790
+MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kcontrol-3.5.0 142
 MD5 5da6ade21525a3e320c94c4b3351a7a3 files/kdebase-3.4.1-configure.patch 2936
 MD5 65ca7243fb9d880e763019fdcf5b7264 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
 MD5 4a0b15f07ae8a1bc4c778165f7083a13 kcontrol-3.4.1-r1.ebuild 1551
@@ -14,5 +13,5 @@ MD5 8c071d64261cb5641d4f140ab61debd2 kcontrol-3.4.1.ebuild 1326
 MD5 ac9c4ad066ae48aaee618b7f297f1768 kcontrol-3.4.2-r1.ebuild 1916
 MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
 MD5 ea2e76e8a64aa4ce995d6e1de2d17af4 kcontrol-3.4.3.ebuild 1773
-MD5 eb2b549afb6c18ab6faa671179b2c085 kcontrol-3.5.0.ebuild 1744
+MD5 f5a587797837449b99f43a3a1bdd8474 kcontrol-3.5.0.ebuild 1903
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

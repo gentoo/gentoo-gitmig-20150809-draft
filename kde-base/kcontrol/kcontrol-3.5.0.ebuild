@@ -1,11 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.0.ebuild,v 1.6 2006/01/01 06:53:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.0.ebuild,v 1.7 2006/01/14 09:28:04 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/kdebase-${PV}-patches-1.tar.bz2"
 
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
@@ -45,7 +48,12 @@ KMCOPYLIB="libkonq libkonq
 	libtaskbar kicker/taskbar
 	libtaskmanager kicker/taskmanager"
 
-PATCHES="${FILESDIR}/${P}-global-usbids.patch"
+src_unpack() {
+	unpack "kdebase-${PV}-patches-1.tar.bz2"
+	kde-meta_src_unpack
+
+	epatch "${WORKDIR}/patches/${P}-global-usbids.patch"
+}
 
 src_compile() {
 	myconf="$myconf `use_with ssl` `use_with arts` `use_with opengl gl`

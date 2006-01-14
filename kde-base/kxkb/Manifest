@@ -1,21 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 90f65e06822afb40c9798cbbd3874462 ChangeLog 4789
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kxkb-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kxkb-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kxkb-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kxkb-3.5.0 68
-MD5 94b8f1686d4ab032ff789fff17b79cee files/kxkb-3.5.0-modularxkb.patch 1265
+MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kxkb-3.5.0 142
 MD5 421bfb1b3a38ff0fa7428dca89981ff3 kxkb-3.4.1.ebuild 399
 MD5 fba2ac6062d3c7e87e6c3762ee19c245 kxkb-3.4.2.ebuild 412
 MD5 6bb9bb872499703635e47ca53c1b4981 kxkb-3.4.3.ebuild 406
-MD5 b60b3083f1e52772e6a712d997a5f66c kxkb-3.5.0.ebuild 548
+MD5 11f04a38a5fa05fc2f93f8649363a5dc kxkb-3.5.0.ebuild 707
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuV2BAiZjviIA2XgRAtzOAKC/GdMcnMKAXAQMAvtL9iKmNw3dbwCeJp2/
-fB0TNMjN1NEkIuS0RL1AeRU=
-=F4AP
------END PGP SIGNATURE-----

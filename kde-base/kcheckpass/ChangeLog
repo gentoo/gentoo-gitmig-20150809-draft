@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.37 2005/12/17 10:12:18 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.38 2006/01/14 09:24:55 flameeyes Exp $
+
+  14 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kcheckpass-3.5.0-bindnow.patch, kcheckpass-3.5.0.ebuild:
+  Use patch from tarball in mirrors.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kcheckpass-3.5.0.ebuild:
   Added ~ppc64
