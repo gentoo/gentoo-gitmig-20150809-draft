@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.7 2005/12/28 20:58:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.10.ebuild,v 1.8 2006/01/14 22:50:36 nichoj Exp $
 
 inherit java eutils
 
@@ -22,8 +22,7 @@ KEYWORDS="-* x86"
 RESTRICT="fetch stricter"
 IUSE="X alsa doc browserplugin nsplugin jce mozilla examples"
 
-DEPEND=">=dev-java/java-config-1.1.5
-	sys-apps/sed
+DEPEND="sys-apps/sed
 	app-arch/unzip"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

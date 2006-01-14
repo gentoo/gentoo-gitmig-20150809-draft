@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.7 2005/12/28 20:58:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.8 2006/01/14 22:50:36 nichoj Exp $
 
 inherit java
 
@@ -20,7 +20,6 @@ IUSE="doc X"
 # libraries.  Even some non-graphical libraries (such as JavaMail) have bizarre
 # dependencies on windowing toolkits.
 DEPEND="virtual/libc
-	>=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.2.2* )"
 RDEPEND="sys-libs/lib-compat"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.06.ebuild,v 1.3 2005/12/28 20:58:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.06.ebuild,v 1.4 2006/01/14 22:50:36 nichoj Exp $
 
 inherit java eutils
 
@@ -30,8 +30,7 @@ RESTRICT="fetch nostrip stricter"
 IUSE="X alsa doc browserplugin nsplugin jce mozilla examples"
 
 #
-DEPEND=">=dev-java/java-config-1.2
-	sys-apps/sed
+DEPEND="sys-apps/sed
 	jce? ( app-arch/unzip )
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
 
