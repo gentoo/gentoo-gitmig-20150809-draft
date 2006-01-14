@@ -12,13 +12,13 @@ MD5 cd292167e0ca6e7910e1cf32091e3a27 files/xine-lib-formatstring.patch 315
 MD5 40462be9f1caff6326630fc3b93e7105 metadata.xml 330
 MD5 3e7009cff141eff5526219bfc185ece9 xine-lib-1.1.0.ebuild 7254
 MD5 d876573d0c98143ef9fe1272aa6df29d xine-lib-1.1.1-r2.ebuild 6761
-MD5 f83e3437a588787cfdb9b54a8ee7f50c xine-lib-1.1.1-r3.ebuild 7229
-MD5 52ec20e09dbaaf493eebf03bed1b4904 xine-lib-1.1.1-r4.ebuild 7269
+MD5 b57646f1ae167abcf0991f11ad326aea xine-lib-1.1.1-r3.ebuild 7232
+MD5 b739528d44f50e3dcfedc2c0bc449517 xine-lib-1.1.1-r4.ebuild 7273
 MD5 9763f892b768b1c556fb311680ede798 xine-lib-1_rc8-r2.ebuild 5278
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDx5l92+ySkm8kpY0RAp1TAKC3sUxRryDdNxng+51zdQj4a11jzACgk1nn
-21OKvkHklfU4LzIuwDZiRcM=
-=bp+w
+iD8DBQFDyI/l2+ySkm8kpY0RAmqIAJ9zd519ZkKNJiOhHkIhdV7qdKaYBwCgr/ri
+B3I5AssCE70URj1O8ChTIyI=
+=Lla2
 -----END PGP SIGNATURE-----
