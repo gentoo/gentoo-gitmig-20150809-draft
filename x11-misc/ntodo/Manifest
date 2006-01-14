@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dee014e9a0fe19bd1b54fb0b6e1ec1e ntodo-1.1.ebuild 689
-MD5 95a38d4205c5973486b04908598b1248 ChangeLog 1014
-MD5 85bda191fe060c385adb03eb3974eacd ntodo-1.0.ebuild 683
-MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
-MD5 047f6fe31d4f87e920cc1040275d77ee files/digest-ntodo-1.1 57
+MD5 7b3cd7a9295ea34577fa16b8b668bed8 ChangeLog 1104
 MD5 be2fbdcfb22f73eef9261f398ddd319d files/digest-ntodo-1.0 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCr1nwI7fK2cqeyXkRApK3AJ9lDzM8dUwHjq0DApW7Rgn1xRmnVACg4jPT
-3ETzbJ7VZIH/wgUhG2ocNCM=
-=mhy7
------END PGP SIGNATURE-----
+MD5 047f6fe31d4f87e920cc1040275d77ee files/digest-ntodo-1.1 57
+MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
+MD5 85bda191fe060c385adb03eb3974eacd ntodo-1.0.ebuild 683
+MD5 43cc04ed2a46ce763340da49f9a91068 ntodo-1.1.ebuild 689
