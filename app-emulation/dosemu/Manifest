@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4414de49cdd20a4e9fdc18c835daf198 ChangeLog 4251
-MD5 2a0c730756dbf17b977d93a37dd5f4c9 dosemu-1.2.2-r1.ebuild 1557
-MD5 4ae7e3a9ddadfe1192178e71729650a3 dosemu-1.3.2.ebuild 1563
+MD5 400c1bb757b779190c69cd0c283c6766 ChangeLog 4371
+MD5 d279d56a7164ec3cf121f09f37710b26 dosemu-1.2.2-r1.ebuild 1657
+MD5 cbacf0e9e457027ac9544f793a5c1d22 dosemu-1.3.2.ebuild 1663
 MD5 7b6524cc4d37cd8b381b03fbd1db190b files/digest-dosemu-1.2.2-r1 135
 MD5 32eebf50bc21249c045ec012f5b70d82 files/digest-dosemu-1.3.2 135
 MD5 497a92330b10bea8772669b9bb821233 files/dosemu-1.2.2-cflags.patch 2584
@@ -12,7 +12,7 @@ MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSYDpr2QksT29OyARArzkAJ0aju6JO4GcZwYf3gNOtTkSaAeDhgCfXOzP
-wJBDKdLKR//B6+V8GVW6hqM=
-=XxrU
+iD8DBQFDyMJ2r2QksT29OyARAnlNAKCR2C/ZRcQ0oG7uEHP26jJfVcGCrQCbBL4g
+Ga+ApdKUf6ne+bnGQ/rQwAE=
+=eNkK
 -----END PGP SIGNATURE-----
