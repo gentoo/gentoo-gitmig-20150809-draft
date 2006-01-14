@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.40.ebuild,v 1.2 2006/01/07 12:34:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.40.ebuild,v 1.3 2006/01/14 07:22:31 dragonheart Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}"
 src_unpack() {
 	unpack ${A}
 	epatch ${MY_PBASE}-banquise-to-bigpatch-17.patch
-	sed -i -e "s|^CFLAGS.*|CFLAGS= -c -Wall ${CFLAGS}|" "${MY_PBASE}"/src/Makefile
+	sed -i -e "s|^CFLAGS.*|CFLAGS= -c -Wall ${CFLAGS}|" \
+		-e 's|^LDFLAGS =\(.*\)|LDFLAGS =\1 -lm|' "${MY_PBASE}"/src/Makefile
 }
 
 
