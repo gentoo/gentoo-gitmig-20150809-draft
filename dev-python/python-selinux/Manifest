@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f2e537fab389ffe2353672ae38a2bc4 ChangeLog 4256
+MD5 d932db5f12b0d67320623e66f11c393b ChangeLog 4343
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-python-selinux-2.15 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-python-selinux-2.16 0
 MD5 135bcb03bcb0dbed4e8bc354e1ff38f3 files/python-selinux-2.15.c.bz2 6831
 MD5 d5dc9417a58fe239af4d9e126be2ceff files/python-selinux-2.16.c.bz2 8500
 MD5 c998c579cfc08c6860f78304a67cfce9 metadata.xml 525
 MD5 c614ac830f5ecad17c6be55f351af604 python-selinux-2.15.ebuild 852
-MD5 ed6067cf51c71fed8171b734861d1329 python-selinux-2.16.ebuild 899
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDt52SJ+ChZlpDtAoRAoy9AJ9QYkDimc3Gecq/8AA2BG6V+wpz2QCffpGS
-Xa7ycx75U1zfZ7vwjPva5QQ=
-=Y9jr
------END PGP SIGNATURE-----
+MD5 515ce0b804275917b1d3b0331a4d719e python-selinux-2.16.ebuild 901
