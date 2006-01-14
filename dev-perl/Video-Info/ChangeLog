@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Video-Info
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.4 2006/01/13 22:32:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.5 2006/01/14 00:52:14 mcummings Exp $
+
+*Video-Info-0.993 (14 Jan 2006)
+
+  14 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +Video-Info-0.993.ebuild:
+  Bug 118614 has pointed out that 0.999, which has been the tree forever now,
+  was a bogus release, and that 0.993 was the last good release on cpan.
+  Thanks ruetama for pointing this out - too bad it had to happen after I
+  finally marked 0.999 stable (stub that it is)
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Video-Info-0.999.ebuild:
