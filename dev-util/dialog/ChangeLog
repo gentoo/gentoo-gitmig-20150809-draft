@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/dialog
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.58 2005/11/21 13:34:22 truedfx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.59 2006/01/14 07:51:22 truedfx Exp $
+
+  14 Jan 2006; Harald van Dĳk <truedfx@gentoo.org>
+  dialog-1.0.20051107.ebuild:
+  unicode flag requires wide ncurses, immediately die with a clearer error
+  message if that's not available (bug #67524)
 
   21 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
   dialog-1.0.20051107.ebuild:
