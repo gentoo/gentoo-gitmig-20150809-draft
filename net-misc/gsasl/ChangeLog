@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.22 2006/01/02 15:57:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.23 2006/01/14 16:12:09 grobian Exp $
+
+  14 Jan 2006; Fabian Groffen <grobian@gentoo.org> gsasl-0.2.10.ebuild:
+  Marked ~ppc-macos (bug #111381)
 
 *gsasl-0.2.10 (02 Jan 2006)
 
