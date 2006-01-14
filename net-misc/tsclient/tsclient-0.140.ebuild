@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.140.ebuild,v 1.1 2006/01/13 05:56:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.140.ebuild,v 1.2 2006/01/14 18:59:50 compnerd Exp $
+
+inherit eutils
 
 DESCRIPTION="GTK2 frontend for rdesktop"
 HOMEPAGE="http://www.gnomepro.com/tsclient"
@@ -21,6 +23,14 @@ RDEPEND=">=x11-libs/gtk+-2.0
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Patch for segfaults on connect and quit
+	epatch ${FILESDIR}/${PN}-0.140-connect-path-builder.patch
+}
 
 src_compile() {
 	econf $(use_enable debug) || die "configure failed"

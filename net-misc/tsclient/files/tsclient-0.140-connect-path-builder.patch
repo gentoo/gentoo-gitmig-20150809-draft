@@ -1,0 +1,20 @@
+--- src/connect.c	2006-01-14 12:29:49.000000000 -0600
++++ src/connect.c	2006-01-14 12:30:08.000000000 -0600
+@@ -1288,7 +1288,7 @@
+   GtkWidget *main_window;
+   rdp_file *rdp = NULL;
+   gchar *home = tsc_home_path ();
+-  gchar *filename = g_build_path ("/", home, "last.tsc");
++  gchar *filename = g_build_path ("/", home, "last.tsc", NULL);
+ 
+   #ifdef TSCLIENT_DEBUG
+   printf ("on_btnConnect_clicked\n");
+@@ -1325,7 +1325,7 @@
+   GtkWidget *main_window;
+   rdp_file *rdp_last = NULL;
+   gchar *home = tsc_home_path ();
+-  gchar *filename = g_build_path ("/", home, "last.tsc");
++  gchar *filename = g_build_path ("/", home, "last.tsc", NULL);
+ 
+   #ifdef TSCLIENT_DEBUG
+   printf ("on_btnQuit_clicked\n");
