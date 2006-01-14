@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r1.ebuild,v 1.1 2006/01/14 18:23:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r2.ebuild,v 1.1 2006/01/14 19:12:41 vanquirius Exp $
 
 inherit eutils
 
@@ -83,6 +83,14 @@ src_install() {
 		rm -f "${D}"/usr/lib/libsane-hpaio.so
 		rm -f "${D}"/usr/lib/libsane-hpaio.so.1
 		rm -f "${D}"/usr/lib/libsane-hpaio.so.1.0.0
+	fi
+
+	# bug 106035
+	if ! use qt ; then
+		rm -f "${D}"/usr/bin/hp-print
+		rm -f "${D}"/usr/bin/hp-toolbox
+		rm -f "${D}"/usr/share/hplip/print
+		rm -f "${D}"/usr/share/hplip/toolbox
 	fi
 
 	if use ppds; then

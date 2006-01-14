@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.13 2006/01/14 18:53:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.14 2006/01/14 19:12:41 vanquirius Exp $
+
+*hplip-0.9.7-r2 (14 Jan 2006)
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7-r1.ebuild,
+  +hplip-0.9.7-r2.ebuild:
+  Do not install qt applications with USE=-qt. Fixes bug 106035. Thanks to
+  Chris White <chriswhite at gentoo dot org> and others.
 
   14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> files/hplip.init.d:
   Add Alex Rostovtsev <tetromino at gmail dot com>'s init fix for bug 97033.
