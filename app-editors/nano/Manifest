@@ -1,4 +1,4 @@
-MD5 b14802e417b77ab6b0b38e255da94d36 ChangeLog 9375
+MD5 6154fc3c7ff1837e183c172b79504ea9 ChangeLog 9479
 MD5 c3684059e73752ce1f114e768ecbaa2b files/1.3.4-nanobrack.patch 557
 MD5 4cf6c77ed7c28d94c8de44d8318176c3 files/1.3.4-nomac.patch 511
 MD5 b075a7a5fe393380c5f00e4efd3146fb files/digest-nano-1.2.5 62
@@ -18,4 +18,4 @@ MD5 32ad8dd2260ac44dbbeb2d50e2ed0df6 nano-1.2.5.ebuild 1429
 MD5 9221a1c204707554b4c05ad03d5042e6 nano-1.3.10.ebuild 1954
 MD5 042d14bbc6965489bd62af12f5943519 nano-1.3.7.ebuild 1742
 MD5 45fcb350931e56594b7bfcc19838f5c9 nano-1.3.8.ebuild 1880
-MD5 8c237114613ebeae13c252bae74b2fb7 nano-1.3.9.ebuild 1869
+MD5 df5a5e617c98e5690bc12e701264f89a nano-1.3.9.ebuild 1865
