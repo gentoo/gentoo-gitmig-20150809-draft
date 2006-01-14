@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5.ebuild,v 1.7 2005/05/30 18:07:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5.ebuild,v 1.8 2006/01/14 17:44:19 nelchael Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,8 @@ KEYWORDS="x86 ppc sparc ~mips amd64 alpha"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
-	x11-libs/openmotif"
+	x11-libs/openmotif
+	|| ( x11-libs/libXp virtual/x11 )"
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	x11-libs/openmotif"

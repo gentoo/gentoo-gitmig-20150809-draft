@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.39 2005/05/30 18:07:02 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.40 2006/01/14 17:44:19 nelchael Exp $
+
+  14 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> nedit-5.5.ebuild:
+  Added libXp to RDEPEND for modular X, bug #118881.
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> nedit-5.4.ebuild,
   nedit-5.5.ebuild:

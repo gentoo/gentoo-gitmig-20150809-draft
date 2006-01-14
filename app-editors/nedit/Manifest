@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57a804b3a9007f9ef4275de8cd0bde0a nedit-5.5.ebuild 1158
-MD5 ecdd24d5404c13d3d18ec210b7ea20b8 nedit-5.4.ebuild 922
-MD5 b2fd9a4c1c589f4a80e0aa482fac448e ChangeLog 5423
-MD5 f1de401822d203ac95aa0366234fb63a files/nedit-5.3-gentoo.diff 2629
+MD5 a041edb8e048acda1827e69e71bb37cb ChangeLog 5548
 MD5 4223c3125634eaecc7bd7556581cc29b files/digest-nedit-5.4 69
 MD5 6cf9b886dea4a5ed42e0a83603218a9d files/digest-nedit-5.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm1ZgI1lqEGTUzyQRAkUZAKC98qd70fn8VxPqKSP5Hxq7p5mt3gCgw6Pe
-nbwbbGmT8uhpCxXEfQ6iM3c=
-=5/YC
------END PGP SIGNATURE-----
+MD5 f1de401822d203ac95aa0366234fb63a files/nedit-5.3-gentoo.diff 2629
+MD5 ecdd24d5404c13d3d18ec210b7ea20b8 nedit-5.4.ebuild 922
+MD5 2e034a894566df866b85876639642b1d nedit-5.5.ebuild 1193
