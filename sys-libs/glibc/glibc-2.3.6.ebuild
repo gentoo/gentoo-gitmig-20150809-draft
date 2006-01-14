@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.12 2006/01/13 12:15:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.13 2006/01/14 20:12:20 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1221,16 +1221,20 @@ src_strip() {
 #		prepallstrip
 	pushd "${D}" > /dev/null
 
-	mkdir -p "${T}"/strip-backup
-	for x in $(find "${D}" -maxdepth 3 \
-	           '(' -name 'ld-*' -o -name 'libpthread*' -o -name 'libthread_db*' ')' \
-	           -a '(' '!' -name '*.a' ')' -type f -printf '%P ')
-	do
-		mkdir -p "${T}/strip-backup/${x%/*}"
-		cp -a -- "${D}/${x}" "${T}/strip-backup/${x}" || die "backing up ${x}"
-	done
+	if ! is_crosscompile ; then
+		mkdir -p "${T}"/strip-backup
+		for x in $(find "${D}" -maxdepth 3 \
+		           '(' -name 'ld-*' -o -name 'libpthread*' -o -name 'libthread_db*' ')' \
+		           -a '(' '!' -name '*.a' ')' -type f -printf '%P ')
+		do
+			mkdir -p "${T}/strip-backup/${x%/*}"
+			cp -a -- "${D}/${x}" "${T}/strip-backup/${x}" || die "backing up ${x}"
+		done
+	fi
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
-	cp -a -- "${T}"/strip-backup/* "${D}"/ || die "restoring non-stripped libs"
+	if ! is_crosscompile ; then
+		cp -a -- "${T}"/strip-backup/* "${D}"/ || die "restoring non-stripped libs"
+	fi
 
 	popd > /dev/null
 }
