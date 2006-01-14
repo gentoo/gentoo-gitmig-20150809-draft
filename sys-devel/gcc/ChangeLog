@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.488 2006/01/14 02:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.489 2006/01/14 14:58:09 kevquinn Exp $
+
+  14 Jan 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +gcc-3.3.5.20050130-r1.ebuild:
+  Re-add gcc-3.3.5.200501300-r1 as it is the current stable for sparc
+  on profiles <2006.0
 
   14 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/4.0.2/gcc-4.0.2-softfloat.patch, gcc-4.0.2-r3.ebuild:
