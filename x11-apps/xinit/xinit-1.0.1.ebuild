@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.1.ebuild,v 1.5 2005/12/31 09:47:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.1.ebuild,v 1.6 2006/01/14 20:38:13 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -16,6 +16,7 @@ RDEPEND="x11-libs/libX11
 		x11-apps/xrdb
 		x11-terms/xterm"
 DEPEND="${RDEPEND}"
+LICENSE="${LICENSE} GPL-2"
 
 PATCHES="${FILESDIR}/nolisten-tcp-and-black-background.patch
 	${FILESDIR}/gentoo-startx-customization-0.99.4.patch"
