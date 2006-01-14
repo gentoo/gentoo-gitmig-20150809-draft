@@ -1,6 +1,10 @@
 # ChangeLog for net-print/lprng
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.39 2005/08/03 03:15:45 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.40 2006/01/14 23:01:30 genstef Exp $
+
+  14 Jan 2006; Stefan Schweizer <genstef@gentoo.org> lprng-3.8.28.ebuild:
+  Fix configure flags thanks to Henrik Sankala <hensan@gentoo.se> and Ryan
+  Hendrickson <rhendric@mit.edu> in bugs 111655 and 112408
 
 *lprng-3.8.28 (03 Aug 2005)
 

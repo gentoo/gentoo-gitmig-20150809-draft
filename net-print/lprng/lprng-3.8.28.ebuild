@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.1 2005/08/03 03:15:45 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.2 2006/01/14 23:01:30 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( app-crypt/mit-krb5 )"
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
@@ -36,20 +36,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use nls && myconf="--enable-nls"
-	use kerberos && myconf="--enable-kerberos"
-	if use ssl;
-		then
-			myconf="--enable-ssl"
-		else
-			myconf="--disable-ssl"
-	fi
-
 	# wont compile with -O3, needs -O2
 	replace-flags -O[3-9] -O2
 
 	./configure \
+		$(use_enable nls) \
+		$(use_enable kerberos) \
+		$(use_enable ssl) \
 		--prefix=/usr \
 		--disable-setuid \
 		--with-userid=lp \
@@ -59,7 +52,7 @@ src_compile() {
 		--libexecdir=/usr/lib \
 		--sysconfdir=/etc/lprng \
 		--mandir=/usr/share/man \
-		--host=${CHOST} ${myconf} || die
+		--host=${CHOST} || die
 
 	make || die "printer on fire!"
 }
