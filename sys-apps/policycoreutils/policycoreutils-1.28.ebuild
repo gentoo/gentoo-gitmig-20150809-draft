@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.28.ebuild,v 1.2 2005/12/15 21:52:54 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.28.ebuild,v 1.3 2006/01/14 00:55:12 spb Exp $
 
 IUSE="build nls pam"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="x86 ppc sparc amd64 mips"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND=">=sys-libs/libselinux-${PV}
 	!build? ( pam? ( sys-libs/pam ) =sys-libs/libsemanage-${SEMNG_VER}* )
