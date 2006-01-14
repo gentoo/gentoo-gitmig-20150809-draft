@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/br2684ctl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/ChangeLog,v 1.3 2005/05/16 17:07:12 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/ChangeLog,v 1.4 2006/01/14 11:44:34 mrness Exp $
+
+  14 Jan 2006; Alin Nastac <mrness@gentoo.org> br2684ctl-20040226.ebuild:
+  Add check for RFC2684 kernel support.
 
   16 May 2005; Alin Nastac <mrness@gentoo.org> br2684ctl-20040226.ebuild:
   Replace usage of obsolete gcc.eclass with toolchains-funcs.eclass (#92745).

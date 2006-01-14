@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.4 2005/05/16 17:07:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.5 2006/01/14 11:44:34 mrness Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs linux-info
 
 DEBIANPKG_TARBALL="${PN}_${PV}.orig.tar.gz"
 DEBIANPKG_PATCH="${PN}_${PV}-1.diff.gz"
@@ -45,6 +45,15 @@ src_install() {
 }
 
 pkg_postinst() {
+	if get_version ; then
+		echo
+		ewarn "If any of the following kernel configuration options is missing,"
+		ewarn "you should reconfigure and rebuild your kernel before running br2684ctl."
+		CONFIG_CHECK="~ATM_BR2684"
+		check_extra_config
+		echo
+	fi
+
 	einfo "br2684ctl can be use to setup Ethernet bridge interface of"
 	einfo "some ADSL USB modem devices"
 	einfo "Ethernet interface name are nas0 (,nas1,nas2 ...) not eth0"
