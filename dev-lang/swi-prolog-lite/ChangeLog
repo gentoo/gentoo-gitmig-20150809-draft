@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog-lite
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.23 2005/12/01 09:05:56 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.24 2006/01/14 18:41:38 grobian Exp $
+
+  14 Jan 2006; Fabian Groffen <grobian@gentoo.org>
+  swi-prolog-lite-5.5.39.ebuild:
+  Marked ~ppc-macos (bug #106271)
 
 *swi-prolog-lite-5.5.39 (01 Dec 2005)
 
