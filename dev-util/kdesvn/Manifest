@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 521ad4aad04cfbad979c9bdafac524b8 ChangeLog 716
+MD5 651b868a8848e12a9a02a91cbd74bedb ChangeLog 919
 MD5 f5f38151856589df7ea286453d95bd56 files/digest-kdesvn-0.6.2 64
 MD5 d43d03e91d589e9fe6dd7250e3d05384 files/digest-kdesvn-0.7.1 65
+MD5 1fff8ac8ff590dd102d1533034b1252f files/kdesvn-0.7.1-gcc41.patch 400
 MD5 109768ff1ad806169a8ed2f56ae594d6 kdesvn-0.6.2.ebuild 626
-MD5 1fcea399e496f38c329f1f68bd8c7050 kdesvn-0.7.1.ebuild 634
+MD5 a081912c60064c54ca40c8a2754381ca kdesvn-0.7.1.ebuild 715
 MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDohm1EZCkKN40op4RAlenAKC5GMZvQtamrbv0Lk7W4/muA8HkOwCgmo0P
-i0c5Boo9zjLWe4sdLENdWVw=
-=EFNO
+iD8DBQFDyJWbCRZPokWLroQRArf6AKDERAf9hrTg/nVNe6rdWvo5jKDLBgCcDY3O
++hI/WL8AlyS9JjRZXj2aFOQ=
+=7Omf
 -----END PGP SIGNATURE-----

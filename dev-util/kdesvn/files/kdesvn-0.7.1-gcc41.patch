@@ -1,0 +1,15 @@
+--- kdesvn-0.7.1/src/svncpp/targets.hpp.orig    2005-12-14 16:09:29.000000000
+-0700
++++ kdesvn-0.7.1/src/svncpp/targets.hpp 2005-12-14 16:13:21.000000000 -0700
+@@ -78,7 +78,7 @@
+      * Constructor. Convert stringlist into target list.
+      * @param targets
+      */
+-    Targets::Targets(const QStringList&targets);
++    Targets (const QStringList & targets);
+
+     /**
+      * Copy Constructor
+
+
+
