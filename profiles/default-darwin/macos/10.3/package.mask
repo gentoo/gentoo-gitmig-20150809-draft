@@ -58,6 +58,9 @@ net-dns/libidn
 # Ruby 1.8.2 compiles, but it contains a security bug.  We cannot
 # compile 1.8.3 because it needs autoconf 2.59 which we don't have
 dev-lang/ruby
+# these applications depend on >=ruby-1.8
+dev-ruby/racc
+dev-ruby/rubygems
 
 # astyle requires a newer version of unzip than Panther has
 =dev-util/astyle-1.15.3-r1
