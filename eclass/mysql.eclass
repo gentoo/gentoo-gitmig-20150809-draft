@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.5 2006/01/08 23:29:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.6 2006/01/14 19:00:32 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -18,7 +18,7 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 NEWP="${PN}-${PV/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20051220.tar.bz2"
+	mirror://gentoo/mysql-extras-20060114.tar.bz2"
 LICENSE="GPL-2"
 IUSE="big-tables berkdb debug minimal perl selinux ssl static"
 RESTRICT="primaryuri"
@@ -120,7 +120,8 @@ mysql_src_unpack() {
 		popd &>/dev/null
 	done
 
-	if ! mysql_check_version_range "5.01.00.00 to 5.01.06.99" ; then
+	if ! useq bdbdir && ! mysql_check_version_range "5.01.00.00 to 5.01.06.99"
+	then
 		[[ -w "${bdbdir}/ltmain.sh" ]] && cp -f ltmain.sh "${bdbdir}/ltmain.sh"
 		pushd "${bdbdir}" && sh s_all || die "failed bdb reconfigure" &>/dev/null
 		popd &>/dev/null
@@ -128,7 +129,7 @@ mysql_src_unpack() {
 
 }
 
-src_compile() {
+mysql_src_compile() {
 
 	mysql_init_vars
 	local myconf
@@ -424,7 +425,7 @@ mysql_src_install() {
 	# oops, temporary fix
 	mysql_check_version_range "5.00.16.00 to 5.00.18.99" \
 	&& cp -f \
-		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0.15" \
+		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0" \
 		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
 }
 
@@ -457,9 +458,9 @@ mysql_pkg_postinst() {
 		mkdir -p "${ROOT}/var/lib/eselect/mysql/"
 		env -i find usr/bin/ usr/sbin/ usr/share/man \
 			-type f -name "*${MY_SUFFIX}*" \
+			-and -not -name "mysql_config${MY_SUFFIX}" \
 			> "${filelist}.filelist"
 		echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}.filelist"
-		echo "${MY_INCLUDEDIR#"/"}" >> "${filelist}.filelist"
 		echo "${MY_LIBDIR#"/"}" >> "${filelist}.filelist"
 		echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}.filelist"
 	popd &>/dev/null

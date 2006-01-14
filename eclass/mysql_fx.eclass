@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.2 2006/01/04 20:40:26 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.3 2006/01/14 19:00:32 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -161,16 +161,51 @@ mysql_version_is_at_least() {
 	[[ ${want_s} -le ${have_s} ]] && return 0 || return 1
 }
 
+# another one inherited from versionator.eclass (version_sort)
+mysql_make_file_list() {
+	local items= left=0
+	items=( ${1}-[[:digit:]][[:digit:]][[:digit:]] )
+	[[ "${items}" == "${1}-[[:digit:]][[:digit:]][[:digit:]]" ]] && items=( )
+
+	while [[ ${left} -lt ${#items[@]} ]] ; do
+		local lowest_idx=${left}
+		local idx=$(( ${lowest_idx} + 1 ))
+		while [[ ${idx} -lt ${#items[@]} ]] ; do
+			[[ "${items[${lowest_idx}]}" > "${items[${idx}]}" ]] \
+				&& lowest_idx=${idx}
+			idx=$(( ${idx} + 1 ))
+		done
+		local tmp=${items[${lowest_idx}]}
+		items[${lowest_idx}]=${items[${left}]}
+		items[${left}]=${tmp}
+		left=$(( ${left} + 1 ))
+	done
+	echo ${items[@]}
+}
+
+mysql_choose_better_version() {
+	local items= better="" i
+	items=${1}-[[:digit:]][[:digit:]][[:digit:]]
+	[[ "${items}" == "${1}-[[:digit:]][[:digit:]][[:digit:]]" ]] && items=""
+	for i in ${items} ; do
+		if [[ "${i}" > "${better}" ]] ; then
+			better="${i}"
+		fi
+	done
+	echo "${better}"
+}
+
+
 # void mysql_lib_symlinks()
 #
 # To be called on the live filesystem, reassign symlinks to each mysql
 # library to the best version avaiable
 # 2005-12-30 <vivo at gentoo.org>
 mysql_lib_symlinks() {
-	local d dirlist maxdots soname sonameln
+	local d dirlist maxdots soname sonameln other better
 	pushd "${ROOT}/usr/$(get_libdir)/"
 		# dirlist must contain the less significative directory left
-		dirlist="mysql $(ls -d mysql-[[:digit:]][[:digit:]][[:digit:]] | sort)"
+		dirlist="mysql (mysql_make_file_list mysql)"
 
 		# waste some time in removing and recreating symlinks
 		for d in $dirlist ; do
@@ -180,7 +215,7 @@ mysql_lib_symlinks() {
 				sonameln=${soname##*/}
 				# loop in version of the library to link it, similar to the
 				# libtool work
-				while [[ ${sonameln:(-3)} != '.so' ]] && [[ ${maxdots} -lt 6 ]]
+				while [[ ${sonameln:0-3} != '.so' ]] && [[ ${maxdots} -lt 6 ]]
 				do
 					rm -f "${sonameln}"
 					ln -s "${soname}" "${sonameln}"
@@ -192,4 +227,15 @@ mysql_lib_symlinks() {
 			done
 		done
 	popd
+
+	# "include"s and "mysql_config", needed to compile other sw
+	for other in "/usr/include/mysql" "/usr/bin/mysql_config" ; do
+		pushd "${ROOT}${other%/*}" &> /dev/null
+		if ! [[ -d "${other##*/}" ]] ; then
+			better=$( mysql_choose_better_version "${other##*/}" )
+			[[ -L "${other##*/}" ]] && rm -f "${other##*/}"
+			! [[ -f "${other##*/}" ]] && ln -sf "${better}" "${other##*/}"
+		fi
+		popd &> /dev/null
+	done
 }
