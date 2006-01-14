@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.11 2006/01/07 11:24:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.12 2006/01/14 09:13:34 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -61,9 +61,8 @@ src_compile() {
 	use skey && OPTIONS="${OPTIONS} SKEY=true"
 	if use mysql;
 	then
-		OPTIONS="${OPTIONS} MYSQL=true"
-		# bug #106652 thanks to Rutger
-		append-ldflags -lm
+		OPTIONS="${OPTIONS} MYSQL=true LIBS=-lm"
+		# bug #106652
 	fi
 
 	if use x86 ; then
