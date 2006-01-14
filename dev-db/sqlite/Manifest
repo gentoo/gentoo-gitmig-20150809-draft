@@ -1,23 +1,33 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f14f98e98aaf7459c93c28c7b4e47d39 ChangeLog 13946
-MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
-MD5 fdbecebdb331496cd81f02ea4487e430 sqlite-2.8.13.ebuild 843
-MD5 99bf2a671c91f7499255003439d5eac0 sqlite-2.8.14.ebuild 862
-MD5 6afc5fac20c52267be1b09c7b1cadfb1 sqlite-2.8.15.ebuild 979
-MD5 685abf9946c0a1d8488ce0bbf3eccc36 sqlite-2.8.16-r1.ebuild 1786
-MD5 87d575ca2d0ad2648300d9e2ac3862f1 sqlite-3.2.7.ebuild 1545
-MD5 a263109868b70b29ed7abaec05d28eed sqlite-2.8.16-r2.ebuild 1839
-MD5 2328b34bef313c5f4be5e780f9932dc3 sqlite-3.2.1-r3.ebuild 1574
-MD5 9d85746f36a561d7229a4d2652390fea sqlite-3.2.7-r1.ebuild 1597
 MD5 c35f34620d18893001720951f8ea0c73 files/digest-sqlite-2.8.13 65
 MD5 c9c200833c7c14eb4d750bb00455199e files/digest-sqlite-2.8.14 65
 MD5 b4031f19b8a32fa2b9dd4dfaf4b57ad0 files/digest-sqlite-2.8.15 65
-MD5 b30bbb90979fff71122f08b8cbee4013 files/digest-sqlite-3.2.7 65
 MD5 3f0417272ef2e01ef38d27021a93aeaf files/digest-sqlite-2.8.16-r1 65
 MD5 3f0417272ef2e01ef38d27021a93aeaf files/digest-sqlite-2.8.16-r2 65
-MD5 b30bbb90979fff71122f08b8cbee4013 files/digest-sqlite-3.2.7-r1 65
 MD5 9dce926cc47853cb563ab467d1c5ba28 files/digest-sqlite-3.2.1-r3 65
+MD5 b30bbb90979fff71122f08b8cbee4013 files/digest-sqlite-3.2.7 65
+MD5 b30bbb90979fff71122f08b8cbee4013 files/digest-sqlite-3.2.7-r1 65
 MD5 d0fc4c53a61d386992d16680140548d0 files/maketcllib.sh 879
 MD5 217c8f27a3185a30858423e31e1aa4d9 files/sqlite-2.8.15-alignement-fix.patch 538
 MD5 60fec205107aa53f0cf83d62c2300183 files/sqlite-2.8.16-multilib.patch 4038
 MD5 46cefa8dc3aa8a97c973f54cd08f0ace files/sqlite-3.2.1-data-corruption.patch 6529
 MD5 0473fa5a1fcc0a84af76122d016070e7 files/sqlite-3.2.1-tcl-fix.patch 915
+MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
+MD5 fdbecebdb331496cd81f02ea4487e430 sqlite-2.8.13.ebuild 843
+MD5 99bf2a671c91f7499255003439d5eac0 sqlite-2.8.14.ebuild 862
+MD5 bd439cea4f334f6d1aa57eed87c251ca sqlite-2.8.15.ebuild 982
+MD5 7882c50758ad52018f654a9fe3c0f316 sqlite-2.8.16-r1.ebuild 1785
+MD5 a128a8faa4099cc920954ef2865a30b8 sqlite-2.8.16-r2.ebuild 1843
+MD5 1041e20dae935fba256ac55ae98601b4 sqlite-3.2.1-r3.ebuild 1576
+MD5 7eee6b1abc84d8dc4188e7fe52080359 sqlite-3.2.7-r1.ebuild 1604
+MD5 48e1d74027ff233b6e0aee6f346fa82b sqlite-3.2.7.ebuild 1552
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyUEd2+ySkm8kpY0RAr+GAJ9rup1GrNOEA3I/aH8OP77js12caACeL4WJ
+GSblEcGULcFUl7HM0thg8cw=
+=YuNt
+-----END PGP SIGNATURE-----
