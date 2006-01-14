@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3610d40b076aac656cc5ac30e3353654 ChangeLog 517
+MD5 9ab6b3c9f9cf88b51de90678b23c1eb7 ChangeLog 605
 MD5 20301b8fcf12252f5e0de0cbe2b4b135 files/digest-libsemanage-1.4 63
-MD5 ec08ababe382aa7a93c0700e5fde4b5b libsemanage-1.4.ebuild 1184
+MD5 012edcf2bcd9365b439ede780e8c4eec libsemanage-1.4.ebuild 1191
 MD5 77bbd07b4b596ae67c79079d2b13f3af metadata.xml 300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoefgJ+ChZlpDtAoRAtDyAJ9N8THmqRU/75oni9d2/HQMTjx9JACfc2/a
-1fiKOyYuRINL88sKPLAf93k=
-=npvq
------END PGP SIGNATURE-----

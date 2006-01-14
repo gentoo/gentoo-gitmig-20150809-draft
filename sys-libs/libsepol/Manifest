@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c89beb78d01b825d6b5bb8b4e7fc2ac9 ChangeLog 1482
+MD5 71570d40ce4fafb79a359be96241f065 ChangeLog 1568
 MD5 3a1697f8209d83a20e217a7a2637437f files/digest-libsepol-1.10 62
 MD5 05ac1efb03172378fffe98ce979053be files/digest-libsepol-1.6 60
-MD5 fc1f37a852b8fd4d0f40795792331a99 libsepol-1.10.ebuild 1045
+MD5 37736eedd9bb8cc835d96e04ea9b3dd8 libsepol-1.10.ebuild 1052
 MD5 78801c460cda10505cb6960980478bc9 libsepol-1.6.ebuild 1079
 MD5 77bbd07b4b596ae67c79079d2b13f3af metadata.xml 300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmNK7J+ChZlpDtAoRAuE4AJ47K+pSGgmCzXU8UehRL1Lw60WcIgCeN5G9
-Jnr4m0qlBRhoJtPgTpM5dOQ=
-=lZZl
------END PGP SIGNATURE-----

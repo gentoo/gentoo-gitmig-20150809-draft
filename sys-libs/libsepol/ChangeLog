@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsepol
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.11 2005/12/09 00:41:20 pebenito Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.12 2006/01/14 00:48:32 spb Exp $
+
+  14 Jan 2006; Stephen Bennett <spb@gentoo.org> libsepol-1.10.ebuild:
+  Added ~alpha
 
 *libsepol-1.10 (09 Dec 2005)
 
