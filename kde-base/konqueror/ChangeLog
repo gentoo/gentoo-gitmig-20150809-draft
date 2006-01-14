@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konqueror
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.39 2005/12/17 12:09:08 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.40 2006/01/14 09:20:35 flameeyes Exp $
+
+  14 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/konqueror-3.5.0-location-bar-focus.patch, -konqueror-3.5.0.ebuild,
+  konqueror-3.5.0-r1.ebuild:
+  Use patch from tarball in mirrors. Drop old version.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> konqueror-3.5.0-r1.ebuild:
   Added ~ppc64
