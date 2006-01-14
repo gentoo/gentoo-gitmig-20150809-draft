@@ -1,6 +1,6 @@
 MD5 2d4a77b379899b49af8ea64ebdc0a768 ChangeLog 1379
 MD5 e39a2359502dafc730380be78246173f files/digest-trigger-0.5.1c 144
-MD5 066eb7ae9669a876eb928cfad337905e files/digest-trigger-0.5.2 142
+MD5 ac43101e9cf3b3740d2bbd70a03902c6 files/digest-trigger-0.5.2 142
 MD5 fab012ed7b17d5eeb472e71a6c9c7c06 files/trigger-0.5.1c-glx-check.patch 590
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 336c4b59fb55032317d71c5c05f80571 trigger-0.5.1c.ebuild 1389
