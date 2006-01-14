@@ -1,11 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 621801c887402617f152673d74ef779d ChangeLog 4039
 MD5 32b26b08f6f3c26b01ec945ed260310a alternate-2.11a.ebuild 641
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 301b414f6e988b3c5d3dfd5df48efbac ChangeLog 3940
 MD5 cb2f99df471cb29d00f4710776a655c4 alternate-2.12-r1.ebuild 801
 MD5 f821c3423eec4126b3043cca6e13f4cf alternate-2.8.ebuild 644
-MD5 ea693e4d24e9d94447395a07b00f761b alternate-2.12.ebuild 648
-MD5 a9a74dbe884f01ee74de6fd24334eb06 files/digest-alternate-2.12 65
-MD5 50483e6b076d990c989289eabd2b6420 files/digest-alternate-2.11a 66
 MD5 a2aa124c296728c1816b432d6d374264 files/alternate-2.12-hh-cc-alternation.patch 938
-MD5 4e7361e887c76c32db726568dab6b2e3 files/digest-alternate-2.8 64
+MD5 50483e6b076d990c989289eabd2b6420 files/digest-alternate-2.11a 66
 MD5 a9a74dbe884f01ee74de6fd24334eb06 files/digest-alternate-2.12-r1 65
+MD5 4e7361e887c76c32db726568dab6b2e3 files/digest-alternate-2.8 64
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyE/uLLFUmVNQ7rkRAqoJAKDUI4SFltAovPeocBau2KwS7VTRlgCbBMeV
+wsASJzEDB+w7Nh/fuqOgg9w=
+=5aWV
+-----END PGP SIGNATURE-----
