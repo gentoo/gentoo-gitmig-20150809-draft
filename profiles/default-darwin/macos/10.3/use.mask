@@ -35,3 +35,6 @@ pam
 # needs keywording
 avahi
 physfs
+
+# libfpx doesn't compile, see bug #103269
+fpx
