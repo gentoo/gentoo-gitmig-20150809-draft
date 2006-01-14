@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 41b0494dd656e6af27ccf49dfc621758 ChangeLog 4546
 MD5 07e3f3f7982d29e2317f32f209e06573 files/applets-configure.in.in.diff 606
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kicker-3.4.1 212
@@ -9,3 +12,10 @@ MD5 cc9e587f4748ebb5f8aadab99eba7b8f kicker-3.4.2.ebuild 693
 MD5 b20ed87b60ff2dc2058c88eedbe44fec kicker-3.4.3.ebuild 687
 MD5 58a288bde98bcac51adc6a1c355e83a4 kicker-3.5.0.ebuild 1215
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyMTSAiZjviIA2XgRAs9iAJ4sEATXxUJQBm/NMDAaHTCFX5MuQQCdFOyQ
+irzKo9IN/YT62GsffQp+TrA=
+=nlo2
+-----END PGP SIGNATURE-----
