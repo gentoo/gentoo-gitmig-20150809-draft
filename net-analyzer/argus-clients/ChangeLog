@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.1 2006/01/08 23:54:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.2 2006/01/14 10:30:24 dertobi123 Exp $
+
+  14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  argus-clients-2.0.6.ebuild:
+  added to ~ppc, bug #112157
 
 *argus-clients-2.0.6 (08 Jan 2006)
 
