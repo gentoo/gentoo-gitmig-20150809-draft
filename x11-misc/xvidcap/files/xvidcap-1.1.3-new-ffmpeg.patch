@@ -1,0 +1,60 @@
+diff -Nru xvidcap-1.1.3.vanilla/src/xtoffmpeg.c xvidcap-1.1.3/src/xtoffmpeg.c
+--- xvidcap-1.1.3.vanilla/src/xtoffmpeg.c	2006-01-14 12:20:42.000000000 +0100
++++ xvidcap-1.1.3/src/xtoffmpeg.c	2006-01-14 13:05:06.000000000 +0100
+@@ -682,7 +682,7 @@
+             exit (1);
+         }
+         
+-        c = &out_st->codec;
++        c = out_st->codec;
+         c->codec_id = transCodec;
+         c->codec_type = CODEC_TYPE_VIDEO;
+         
+@@ -696,8 +696,10 @@
+         #endif  /* DEBUG */
+         
+         /* frames per second */
+-        c->frame_rate = job->fps;
+-        c->frame_rate_base = 1;
++        /*c->frame_rate = job->fps;
++        c->frame_rate_base = 1;*/
++		c->time_base.den = job->fps * 1000;
++		c->time_base.num = 1000;
+         c->gop_size = 250; /* emit one intra frame every 10 frames */
+         //        c->me_method = ME_EPZS;
+         //	    c->debug = 0x00000FFF;
+@@ -707,10 +709,13 @@
+          */
+         memset (p_fParams, 0, sizeof(*p_fParams));
+         p_fParams->image_format = image_format;
+-        p_fParams->frame_rate = out_st->codec.frame_rate;
++        /*p_fParams->frame_rate = out_st->codec.frame_rate;
+         p_fParams->frame_rate_base = out_st->codec.frame_rate_base;
+         p_fParams->width = out_st->codec.width;
+-        p_fParams->height = out_st->codec.height;
++        p_fParams->height = out_st->codec.height;*/
++		p_fParams->time_base = out_st->codec->time_base;
++		p_fParams->width = out_st->codec->width;
++		p_fParams->height = out_st->codec->height;
+         if (av_set_parameters (output_file, p_fParams) < 0) {
+             //        if (av_set_parameters(output_file, NULL) < 0) {
+             fprintf (stderr, "xtoffmpeg.XImageToFFMPEG(): Invalid encoding parameters ... aborting\n");
+@@ -720,7 +725,8 @@
+         /*
+          * open codec
+          */
+-        c = &out_st->codec;
++        c = out_st->codec;
++		c->pix_fmt = PIX_FMT_YUV420P;
+         
+         /* find the video encoder */
+         codec = avcodec_find_encoder (c->codec_id);
+@@ -1159,7 +1165,7 @@
+     #endif // HAVE_FFMPEG_AUDIO
+     
+     if (out_st) {
+-        avcodec_close (&out_st->codec);
++        avcodec_close (out_st->codec);
+         out_st = NULL;
+     }
+ 
