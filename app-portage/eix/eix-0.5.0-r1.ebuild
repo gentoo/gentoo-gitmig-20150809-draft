@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.0-r1.ebuild,v 1.1 2006/01/11 21:53:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.0-r1.ebuild,v 1.2 2006/01/14 16:00:38 grobian Exp $
 
 inherit eutils bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~hollow/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
