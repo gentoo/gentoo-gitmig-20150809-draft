@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.7 2006/01/13 22:00:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.8 2006/01/14 04:53:16 halcy0n Exp $
 
 inherit flag-o-matic eutils
 
@@ -49,6 +49,7 @@ src_unpack() {
 	find . -name .cvsignore -exec rm -f '{}' \;
 	epatch "${FILESDIR}"/${PV}-port.patch
 	epatch "${FILESDIR}"/${PV}-install-opengl-wrap.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 	if ! use doc ; then
 		sed -i \
 			-e '/^SUBDIRS/s:Documentation::' \

@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.26 2006/01/13 22:00:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.27 2006/01/14 04:53:16 halcy0n Exp $
+
+  14 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/clanlib-0.6.5-gcc41.patch, +files/clanlib-0.7.8-gcc41.patch,
+  clanlib-0.6.5-r3.ebuild, clanlib-0.7.8-r1.ebuild:
+  Add patch by Kristiaan Lenaerts <kristiaan.lenaerts AT gmail DOT com> to fix
+  compilation with gcc-4.1; bug #115847
 
   13 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
   clanlib-0.7.8-r1.ebuild:
