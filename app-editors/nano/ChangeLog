@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.86 2006/01/14 16:16:03 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.87 2006/01/14 17:24:19 cryos Exp $
+
+  14 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> nano-1.3.9.ebuild:
+  Stable on amd64, bug 118946.
 
   14 Jan 2006; Jose Luis Rivero <yoswink@gentoo.org> nano-1.3.9.ebuild:
   Stable on alpha wrt bug #118946
