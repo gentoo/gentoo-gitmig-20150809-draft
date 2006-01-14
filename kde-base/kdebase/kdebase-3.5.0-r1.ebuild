@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.12 2006/01/11 23:47:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0-r1.ebuild,v 1.13 2006/01/14 08:59:45 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/kdebase-${PV}-patches-1.tar.bz2"
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
@@ -59,38 +62,36 @@ DEPEND="${DEPEND}
 src_unpack() {
 	kde_src_unpack
 
-	epatch "${FILESDIR}/kdebase-3.5-startkde-gentoo.patch"
+	epatch "${WORKDIR}/patches/kdebase-3.5-startkde-gentoo.patch"
 
 	# Avoid using imake (kde bug 114466).
-	epatch "${FILESDIR}/kdebase-3.5.0_beta2-noimake.patch"
+	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
 
 	# Fix the location bar focus, bug 114329.
-	epatch "${FILESDIR}/konqueror-3.5.0-location-bar-focus.patch"
+	epatch "${WORKDIR}/patches/konqueror-3.5.0-location-bar-focus.patch"
 
 	# add support for non-lazy-bindings, see bug #114049
-	epatch "${FILESDIR}/kdesu-3.5.0-bindnow.patch"
-	epatch "${FILESDIR}/kcheckpass-3.5.0-bindnow.patch"
+	epatch "${WORKDIR}/patches/kdesu-3.5.0-bindnow.patch"
+	epatch "${WORKDIR}/patches/kcheckpass-3.5.0-bindnow.patch"
 
 	# Fix (again) modular support, when /usr/X11R6 is present this time
-	epatch "${FILESDIR}/kxkb-3.5.0-modularxkb.patch"
+	epatch "${WORKDIR}/patches/kxkb-3.5.0-modularxkb.patch"
 
 	# Add configure option to use /usr/share/misc/usb.ids instead of installing
 	# another copy for kcmusb. SVN Commit 492985.
-	epatch "${FILESDIR}/kcontrol-3.5.0-global-usbids.patch"
+	epatch "${WORKDIR}/patches/kcontrol-3.5.0-global-usbids.patch"
 
-	# Add --without-composite option to disable kompmgr.
-	epatch "${FILESDIR}/kwin-3.5.0-composite.patch"
+	# Add --without-composite option to kdebase's configure and then support it
+	# in kwin and kicker.
+	epatch "${WORKDIR}/patches/kdebase-3.5.0-composite.patch"
+	epatch "${WORKDIR}/patches/kwin-3.5.0-composite.patch"
+	epatch "${WORKDIR}/patches/kicker-3.5.0-composite.patch"
 
 	# Add --without-xscreenserver option to disable libXSS support
-	epatch "${FILESDIR}/kdesktop-3.5.0-xscreensaver.patch"
-
-	# Extra fix for composite support in kicker this time, different from the
-	# patch with the same name in kicker as it has to interact with the above
-	# kwin patch.
-	epatch "${FILESDIR}/kicker-3.5.0-composite.patch"
+	epatch "${WORKDIR}/patches/kdesktop-3.5.0-xscreensaver.patch"
 
 	# Add --without-xinerama option to disable xinerama on ksplashml
-	epatch "${FILESDIR}/ksplashml-3.5.0-xinerama.patch"
+	epatch "${WORKDIR}/patches/ksplashml-3.5.0-xinerama.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die

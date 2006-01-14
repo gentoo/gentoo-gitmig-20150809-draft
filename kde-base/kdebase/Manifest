@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6b3886fd99ca14cd5bd73f9fe698c281 ChangeLog 43205
+MD5 e562513e16ace0cb5dbc23e37b8473da ChangeLog 43779
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r1/backgroundrc 342
 MD5 928f7208882e2a90d9cb633dcfa9abf9 files/3.3.2-r1/kdmrc 19878
@@ -23,9 +23,7 @@ MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-kdebase-3.4.2-r1 68
 MD5 387a99610a8332cea995ed48d7e3339b files/digest-kdebase-3.4.2-r2 143
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3 145
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3-r1 145
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdebase-3.5.0-r1 68
-MD5 d57023f742587584d5493144970b07c6 files/kcheckpass-3.5.0-bindnow.patch 574
-MD5 8f494976be0b5e5286f26d5ef7ee8d7d files/kcontrol-3.5.0-global-usbids.patch 1790
+MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kdebase-3.5.0-r1 142
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
@@ -36,16 +34,7 @@ MD5 65ca7243fb9d880e763019fdcf5b7264 files/kdebase-3.4.2-kinfocenter-opengl-fix.
 MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
 MD5 cbfa9f15423035b33eb50456dfb04691 files/kdebase-3.4.3-noimake.patch 2214
 MD5 789aca95df83dac88fe68a3cbeeea13a files/kdebase-3.4.3-xdmcp.patch 614
-MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283
-MD5 472a5c5b9ade622637e00a6d28e69614 files/kdebase-3.5.0_beta2-noimake.patch 2248
-MD5 3825d839fdaeeb754564b3428ee92442 files/kdesktop-3.5.0-xscreensaver.patch 705
-MD5 09763d6f85e43dbedf65f713cb378ab7 files/kdesu-3.5.0-bindnow.patch 1112
-MD5 02f59e1fc7390a8946d4adae72ff0d58 files/kicker-3.5.0-composite.patch 2250
-MD5 f557526f4d82f563d8d69f986303d30d files/konqueror-3.5.0-location-bar-focus.patch 433
 MD5 f06224b0a38152e5d3435b00a70bcf6c files/konsole-3.3.2.patch 1201
-MD5 623a9c0df1865e941d98a5a09a9ab3c9 files/ksplashml-3.5.0-xinerama.patch 951
-MD5 72a291ae02f5fe8b283948c8f2aaea30 files/kwin-3.5.0-composite.patch 1158
-MD5 94b8f1686d4ab032ff789fff17b79cee files/kxkb-3.5.0-modularxkb.patch 1265
 MD5 c6866e71fa56d6d12a18e96499716d2c files/post-3.3.2-kdebase-htmlframes2.patch 1342
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
 MD5 9ea970c24377c122bfd0d1024d1aed0e kdebase-3.3.2-r2.ebuild 3627
@@ -56,12 +45,12 @@ MD5 bca1b08e31bfa89d6d04e9996a77c0bd kdebase-3.4.2-r2.ebuild 4527
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 f30c2b7e9f582458651ca7d3b2eac796 kdebase-3.4.3-r1.ebuild 4493
 MD5 b028b31c593bcc849bbde152f85b8dac kdebase-3.4.3.ebuild 4263
-MD5 0450e084bbe558e1d624001b3046817b kdebase-3.5.0-r1.ebuild 6029
+MD5 de71b2d5d1c1a0d31d6de863e02a9f86 kdebase-3.5.0-r1.ebuild 6116
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxZk1AiZjviIA2XgRAuBIAJ9gDtiUCGZO4Pt/4Ma1BwpRlKNUWgCfaNEp
-npbswUAhqQSBdnfAqmr4cog=
-=svUd
+iD8DBQFDyL2ZAiZjviIA2XgRAhqlAKDe51+k6Li08LMrBaY4H3RSrXhGJACfa9f2
+sCwlITfLjjWmUiZuVfot478=
+=4s6K
 -----END PGP SIGNATURE-----
