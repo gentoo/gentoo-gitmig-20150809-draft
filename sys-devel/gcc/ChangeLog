@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.487 2006/01/14 01:42:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.488 2006/01/14 02:34:35 vapier Exp $
+
+  14 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/4.0.2/gcc-4.0.2-softfloat.patch, gcc-4.0.2-r3.ebuild:
+  Update softfloat patch from yuri.
 
 *gcc-4.1.0_beta20060113 (14 Jan 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.4 2006/01/07 03:31:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.5 2006/01/14 02:34:35 vapier Exp $
 
 PATCH_VER="1.5"
 PATCH_GCC_VER="4.0.2"
@@ -62,5 +62,8 @@ src_unpack() {
 
 	# Fix cross-compiling
 	epatch "${FILESDIR}"/4.0.2/gcc-4.0.2-cross-compile.patch
+
+#	[[ ${CTARGET} == *-softfloat-* ]] && 
+epatch "${FILESDIR}"/4.0.2/gcc-4.0.2-softfloat.patch
 }
 
