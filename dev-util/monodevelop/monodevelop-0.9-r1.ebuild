@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.9.ebuild,v 1.3 2006/01/14 05:20:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.9-r1.ebuild,v 1.1 2006/01/14 05:20:33 latexer Exp $
 
 inherit mono eutils fdo-mime
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 IUSE="boo java"
 DEPEND=">=dev-dotnet/gtksourceview-sharp-0.10
 	>=dev-dotnet/gecko-sharp-0.10
-	>=dev-lang/mono-1.1.9.1
+	>=dev-lang/mono-1.1.10
 	>=dev-util/monodoc-1.0
 	>=dev-dotnet/gtk-sharp-2.4.0
 	>=dev-dotnet/gnomevfs-sharp-2.4.0
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-boo-0.7.5-api.diff
+	epatch ${FILESDIR}/${P}-mono-unix.diff
 }
 
 src_compile() {

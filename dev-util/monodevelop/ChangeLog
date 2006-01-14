@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.40 2005/11/26 19:28:07 herbs Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.41 2006/01/14 05:20:33 latexer Exp $
+
+*monodevelop-0.9-r1 (14 Jan 2006)
+
+  14 Jan 2006; Peter Johanson <latexer@gentoo.org>
+  +files/monodevelop-0.9-mono-unix.diff, +monodevelop-0.9-r1.ebuild:
+  Revision bump with fix for Mono.Posix deprecated class removal in upcoming
+  mono-1.1.13
 
   26 Nov 2005; Herbie Hopkins <herbs@gentoo.org> monodevelop-0.9.ebuild:
   Marked ~amd64 wrt bug #113591.

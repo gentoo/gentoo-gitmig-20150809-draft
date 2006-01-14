@@ -1,25 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a39851156bed5dde1790386e62f2e4ac ChangeLog 6984
+MD5 27274d21870284654caba919d8966748 ChangeLog 7233
 MD5 48b44fa7ba76c3b567d260ecff9e7aea files/digest-monodevelop-0.7-r1 68
 MD5 48b44fa7ba76c3b567d260ecff9e7aea files/digest-monodevelop-0.7-r2 68
 MD5 2200a01878af7bc8553e3c3181d70463 files/digest-monodevelop-0.8 68
 MD5 250597441f581876665088e0d7888579 files/digest-monodevelop-0.9 68
+MD5 250597441f581876665088e0d7888579 files/digest-monodevelop-0.9-r1 68
 MD5 cff7e9d967516c14789c6d0246791c9d files/monodevelop-0.7-boo-0.6.0-compat.diff 1576
 MD5 31886624cd9fce60d5c7346c2b22960e files/monodevelop-0.7-gtksharp-update.diff 8260
 MD5 48b6815b0eb2b1996cc0bd00b3e312a6 files/monodevelop-0.7-mcs-path-fix.diff 1917
 MD5 606a61241cec46077c00541c346b0f9f files/monodevelop-0.8-iso-api-update.diff 3528
 MD5 98d5248c9e644ef7da01ec81fd6ae4e2 files/monodevelop-0.9-boo-0.7.5-api.diff 2720
+MD5 65ddf63bd9115be37adc22216df302b3 files/monodevelop-0.9-mono-unix.diff 642
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 9cf588769f67de01bdb230e64b451ac5 monodevelop-0.7-r1.ebuild 1800
 MD5 a430f9561f918a21f460a4749427c249 monodevelop-0.7-r2.ebuild 1843
 MD5 5aad04df993aec977ae3ca15a3bc192a monodevelop-0.8.ebuild 1358
-MD5 c47643ec7af8e9396027fb0bc4694426 monodevelop-0.9.ebuild 1379
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiLdf2G5bA0cA/ScRAggkAKDOV0i+5Vqj9/0yVlYk0UbOWtN/kgCeOT1X
-RDalAtC7mS+rbhy4mdAexjg=
-=zdna
------END PGP SIGNATURE-----
+MD5 b8cffbdfea35de56fd1d1f0089108557 monodevelop-0.9-r1.ebuild 1423
+MD5 932ee3ed7050fa82053679c3cf9f5fb6 monodevelop-0.9.ebuild 1381
