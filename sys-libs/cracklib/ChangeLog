@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.78 2005/10/06 22:53:43 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.79 2006/01/14 09:02:24 dertobi123 Exp $
+
+  14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  cracklib-2.8.5.ebuild:
+  ppc stable, bug #118945
 
 *cracklib-2.8.5 (06 Oct 2005)
 

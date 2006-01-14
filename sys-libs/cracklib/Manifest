@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 230af206aef44d7a3e40e7ba7a34c812 ChangeLog 10300
+MD5 619b1e807afa9df0d144811876d7e25d ChangeLog 10412
 MD5 6bb9f556ff62935bc596599f9a9b6802 cracklib-2.8.3-r1.ebuild 1538
-MD5 70168ebf3edd1ed28eb033fd3a38ef13 cracklib-2.8.5.ebuild 1445
+MD5 a2170812a49f0d5647b6864dcf980e86 cracklib-2.8.5.ebuild 1448
 MD5 8a109d0d79bed1fb528d2f7c2e0bdbc0 files/cracklib-2.7-buffer-packer.patch 602
 MD5 efb1b540d35f2929768dcb3dcf723fee files/cracklib-2.7-cross-compile.patch 492
 MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
@@ -18,10 +15,3 @@ MD5 6b7b4e9536a1420eed242b648d5a7aa7 files/cracklib-2.8.3-packer-defines.patch 8
 MD5 e00f36f63e3879e2da10580921e484b6 files/digest-cracklib-2.8.3-r1 66
 MD5 44e1c89acbadcbd16e795bb6b7cce486 files/digest-cracklib-2.8.5 66
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyIZO2+ySkm8kpY0RAmdfAJ0YlZmd7xLEiwa0K+Yc19eXaV5zSgCcCCX0
-c1jm2GqcVRcnHQkhd5xLp7w=
-=vSAu
------END PGP SIGNATURE-----
