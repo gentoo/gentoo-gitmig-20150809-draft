@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r4.ebuild,v 1.11 2006/01/13 01:30:41 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.3-r4.ebuild,v 1.12 2006/01/14 20:58:04 dang Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,6 @@ IUSE="jpeg zlib cairo"
 
 RDEPEND=">=media-libs/freetype-2.1.8
 	media-libs/fontconfig
-	virtual/ghostscript
 	cairo? ( >=x11-libs/cairo-0.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	zlib? ( sys-libs/zlib )
