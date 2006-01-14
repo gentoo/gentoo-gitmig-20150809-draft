@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.16 2006/01/09 19:50:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.17 2006/01/14 21:46:11 nichoj Exp $
 
 
 inherit java
@@ -24,7 +24,6 @@ KEYWORDS="-* x86 sparc amd64"
 IUSE="doc emul-linux-x86 browserplugin nsplugin mozilla"
 
 DEPEND="virtual/libc
-	>=dev-java/java-config-0.2.6
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
 

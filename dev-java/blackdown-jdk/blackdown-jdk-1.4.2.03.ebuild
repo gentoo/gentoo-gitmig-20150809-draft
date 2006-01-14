@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03.ebuild,v 1.3 2006/01/07 23:39:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03.ebuild,v 1.4 2006/01/14 21:46:11 nichoj Exp $
 
 inherit java versionator
 
@@ -19,8 +19,7 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* amd64 x86"
 IUSE="X alsa doc browserplugin nsplugin mozilla"
 
-DEPEND=">=dev-java/java-config-1.2.11
-	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+DEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 RDEPEND="${DEPEND}
 	sys-libs/glibc
