@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2.ebuild,v 1.1 2005/07/05 00:34:31 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2.ebuild,v 1.2 2006/01/14 16:24:06 arj Exp $
 
 inherit eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 	rm -rf src/baz/annotate
 
 	epatch ${FILESDIR}/baz-gpgme-fix.patch
+	epatch ${FILESDIR}/neon-0.24-fix.patch
 }
 
 src_compile() {
