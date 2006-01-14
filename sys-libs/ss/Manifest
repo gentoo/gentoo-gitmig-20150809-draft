@@ -1,19 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 15c83156c78a99dad89ea139641a4533 ChangeLog 2572
-MD5 65689a8be4c1b58f8e64f22165313292 files/digest-ss-1.37 67
 MD5 0911aedd4968aa4053139791a961e2a2 files/digest-ss-1.38 67
 MD5 7f1f3f4827354d52879671fc615fba03 files/ss-1.37-makefile.patch 1318
-MD5 4a7d54ccac4002d10462c40660712a72 files/ss-1.37-sed-locale.patch 2142
 MD5 00423a451b42112f3b6897978f16ccdd files/ss-1.38-locale.patch 220
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 cf167c86a300ffb7f8e3762c30723b6f ss-1.37.ebuild 1618
 MD5 b299c803edc0704823a2567904a81a8e ss-1.38.ebuild 1862
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvxLnI1lqEGTUzyQRAroyAJ9V7X2WgiFxdB+KsmAuW78VxOiHTQCgziU0
-Y3JrHbu9Bs2db7/4ws8TAEE=
-=cRj0
------END PGP SIGNATURE-----
