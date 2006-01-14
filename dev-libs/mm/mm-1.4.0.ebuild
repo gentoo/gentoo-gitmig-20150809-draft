@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.4.0.ebuild,v 1.1 2005/09/03 12:07:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.4.0.ebuild,v 1.2 2006/01/14 08:04:49 dragonheart Exp $
 
-inherit libtool
+inherit libtool multilib
 
 DESCRIPTION="Shared Memory Abstraction Library"
 HOMEPAGE="http://www.ossp.org/pkg/lib/mm/"
@@ -22,4 +22,10 @@ src_test() {
 src_install() {
 	make install DESTDIR=${D} || die
 	dodoc README ChangeLog INSTALL PORTING THANKS
+}
+
+pkg_postinst() {
+	ewarn 'if you upgraded from mm-1.3 or earlier please run:'
+	ewarn "revdep-rebuild --library \"/usr/$(get_libdir)/libmm.so.13\""
+
 }
