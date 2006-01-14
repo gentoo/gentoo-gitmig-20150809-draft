@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.2.0.ebuild,v 1.10 2005/09/24 04:14:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.2.0.ebuild,v 1.11 2006/01/14 15:42:25 leonardop Exp $
 
 inherit python gnome2
 
@@ -17,6 +17,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 	>=dev-lang/python-2"
 
 DEPEND="${RDEPEND}
+	~app-text/docbook-xml-dtd-4.3
 	sys-devel/gettext
 	dev-util/intltool"
 

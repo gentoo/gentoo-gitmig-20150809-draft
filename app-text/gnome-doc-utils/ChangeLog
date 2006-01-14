@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gnome-doc-utils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.41 2005/11/29 08:23:44 leonardop Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.42 2006/01/14 15:42:25 leonardop Exp $
+
+  14 Jan 2006; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-doc-utils-0.1.3.ebuild, gnome-doc-utils-0.2.0.ebuild,
+  gnome-doc-utils-0.2.1.ebuild, gnome-doc-utils-0.4.4.ebuild:
+  Adding docbook-xml-dtd to DEPEND, required for processing XML files under
+  doc/xslt (bug #104014).
 
 *gnome-doc-utils-0.4.4 (29 Nov 2005)
 
