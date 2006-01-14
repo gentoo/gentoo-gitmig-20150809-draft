@@ -6,14 +6,14 @@ MD5 a9f9ea68a0659a1bd63f423e5028d5bf files/digest-libtheora-1.0_alpha3 72
 MD5 f828864823910f80ec4368be981c0a61 files/digest-libtheora-1.0_alpha4-r1 73
 MD5 5839fe9a5b09d214b1e39bf1d6695277 files/digest-libtheora-1.0_alpha5 73
 MD5 e0d4279bd99d241bd9414fcab198c847 files/libtheora-1.0_alpha4-enable-flags.patch 876
-MD5 5cd390daa69c4b3a98e62c4d7e975e71 libtheora-1.0_alpha3.ebuild 920
-MD5 7ecf3f5d542322ef4206b769efdde62b libtheora-1.0_alpha4-r1.ebuild 1325
-MD5 8ac898abf7c57cee01fdaa9a9e562038 libtheora-1.0_alpha5.ebuild 1232
+MD5 826568d3db817852b40b6ac12d9962bd libtheora-1.0_alpha3.ebuild 920
+MD5 c233112ea55c5cdfacff0291ada327d2 libtheora-1.0_alpha4-r1.ebuild 1329
+MD5 5a61f27e469ae86a8f63eee4d4430f4c libtheora-1.0_alpha5.ebuild 1205
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpMS4AiZjviIA2XgRAn7cAKDfEPJlL4oVs36sVfc8r8J5MjtldQCg3t/9
-uIso+LlyZR8G2kHcwQ/diLs=
-=P3gU
+iD8DBQFDyEA62+ySkm8kpY0RAq3lAJ0Ucf8ilpRbDpUZ1zQoAC68IpCGVwCeJl7L
+0jPnRRU0aNHDQHnw5dZndVU=
+=hcni
 -----END PGP SIGNATURE-----
