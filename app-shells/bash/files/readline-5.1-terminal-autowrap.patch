@@ -1,0 +1,59 @@
+http://bugs.gentoo.org/118205
+http://lists.gnu.org/archive/html/bug-bash/2006-01/msg00045.html
+
+Date: Fri, 13 Jan 2006 23:44:49 -0500
+From: Chet Ramey <chet.ramey@case.edu>
+To: Mike Frysinger <vapier@gentoo.org>
+Subject: Re: off by one in wrapping long lines in bash-3.1
+
+Mike Frysinger wrote:
+> On Friday 13 January 2006 23:12, Chet Ramey wrote:
+>> You have `checkwinsize' set, don't you.
+> 
+> yes, that is something i enable on all my machines
+
+Well, that's it, then.  Here's a fix.
+
+Chet
+
+-- 
+``The lyf so short, the craft so long to lerne.'' - Chaucer
+( ``Discere est Dolere'' -- chet )
+						Live Strong.
+Chet Ramey, ITS, CWRU    chet@case.edu    http://cnswww.cns.cwru.edu/~chet/
+
+--------------090207020201070609090304
+Content-Type: text/plain; x-mac-type="0"; x-mac-creator="0";
+ name="terminal.c.patch"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="terminal.c.patch"
+
+*** ../bash-3.1-patched/lib/readline/terminal.c	Sat Nov 12 20:46:54 2005
+--- lib/readline/terminal.c	Fri Jan 13 23:23:44 2006
+***************
+*** 123,127 ****
+  
+  /* Non-zero means the terminal can auto-wrap lines. */
+! int _rl_term_autowrap;
+  
+  /* Non-zero means that this terminal has a meta key. */
+--- 123,127 ----
+  
+  /* Non-zero means the terminal can auto-wrap lines. */
+! int _rl_term_autowrap = -1;
+  
+  /* Non-zero means that this terminal has a meta key. */
+***************
+*** 275,278 ****
+--- 275,281 ----
+       int rows, cols;
+  {
++   if (_rl_term_autowrap == -1)
++     _rl_init_terminal_io (rl_terminal_name);
++ 
+    if (rows > 0)
+      _rl_screenheight = rows;
+
+--------------090207020201070609090304--
+
