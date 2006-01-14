@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.25 2006/01/05 07:34:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.26 2006/01/14 17:11:07 tester Exp $
+
+  14 Jan 2006; Olivier Crête <tester@gentoo.org> insight-6.4.ebuild:
+  Fix configurewith bash 3.1, bug #118985
 
   05 Jan 2006; Olivier Crête <tester@gentoo.org> insight-6.1.ebuild,
   insight-6.4.ebuild:
