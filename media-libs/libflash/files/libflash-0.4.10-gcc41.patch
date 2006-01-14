@@ -1,0 +1,51 @@
+--- libflash-0.4.10/lib/matrix.h.old	2006-01-11 21:23:55.000000000 +0100
++++ libflash-0.4.10/lib/matrix.h	2006-01-11 21:24:19.000000000 +0100
+@@ -33,13 +33,13 @@
+ #endif
+ 
+ 	inline
+-	long Matrix::getX(long x, long y)
++	long getX(long x, long y)
+ 	{
+ 		return (long) (x*a+y*b+tx);
+ 	};
+ 
+ 	inline
+-	long Matrix::getY(long x, long y)
++	long getY(long x, long y)
+ 	{
+ 		return (long) (x*c+y*d+ty);
+ 	};
+--- libflash-0.4.10/lib/graphic16.h.old	2006-01-11 21:24:39.000000000 +0100
++++ libflash-0.4.10/lib/graphic16.h	2006-01-11 21:24:52.000000000 +0100
+@@ -24,7 +24,7 @@
+ 
+ class GraphicDevice16: public GraphicDevice {
+ private:
+-	long GraphicDevice16::allocColor(Color color);
++	long allocColor(Color color);
+ 
+ public:
+ 	GraphicDevice16(FlashDisplay *fd);
+--- libflash-0.4.10/lib/graphic24.h.old	2006-01-11 21:25:06.000000000 +0100
++++ libflash-0.4.10/lib/graphic24.h	2006-01-11 21:25:39.000000000 +0100
+@@ -24,7 +24,7 @@
+ 
+ class GraphicDevice24: public GraphicDevice {
+ private:
+-	long GraphicDevice24::allocColor(Color color);
++	long allocColor(Color color);
+ 
+ public:
+ 	GraphicDevice24(FlashDisplay *fd);
+--- libflash-0.4.10/lib/graphic32.h.old	2006-01-11 21:26:01.000000000 +0100
++++ libflash-0.4.10/lib/graphic32.h	2006-01-11 21:26:40.000000000 +0100
+@@ -24,7 +24,7 @@
+ 
+ class GraphicDevice32: public GraphicDevice {
+ private:
+-	long GraphicDevice32::allocColor(Color color);
++	long allocColor(Color color);
+ 
+ public:
+ 	GraphicDevice32(FlashDisplay *fd);

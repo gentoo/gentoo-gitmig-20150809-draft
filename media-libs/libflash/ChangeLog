@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libflash
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.11 2004/06/24 23:09:19 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.12 2006/01/14 04:13:15 halcy0n Exp $
+
+  14 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/libflash-0.4.10-gcc41.patch, +metadata.xml,
+  libflash-0.4.10-r1.ebuild:
+  Add patch by Stefan Vunckx <stefan.vunckx AT skynet DOT be> to fix
+  compilation with gcc-4.1; bug #118816. Also added metadata.xml
+  with maintainer-needed
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libflash-0.4.10-r1.ebuild:
   Add inherit eutils

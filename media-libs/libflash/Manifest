@@ -1,4 +1,16 @@
-MD5 697320826f707d58ba1b6313ce852801 ChangeLog 1654
-MD5 f223dd7e4c95a1acc38b8f374a739df3 libflash-0.4.10-r1.ebuild 831
-MD5 093e0256b6d6954b15274cad821aa8d3 files/libflash-0.4.10-sqrt.patch 292
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 766cdbf0de3db1b4c66deae0c83aa2a1 ChangeLog 1943
 MD5 10de24634161cc6889d3617199541857 files/digest-libflash-0.4.10-r1 67
+MD5 efb833ab4eb40978248150f9c202068d files/libflash-0.4.10-gcc41.patch 1462
+MD5 093e0256b6d6954b15274cad821aa8d3 files/libflash-0.4.10-sqrt.patch 292
+MD5 2ac75cd5a6b6f559e6c0cadca44d6216 libflash-0.4.10-r1.ebuild 875
+MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyHpqCRZPokWLroQRAqBJAKDSBkmg3RQfF/meUxtcRhtY6N6peACdEyQ9
+eRarCjOsfO0WziGffNjgO/E=
+=0N7G
+-----END PGP SIGNATURE-----
