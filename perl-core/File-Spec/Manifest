@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b884f653032b98ad50d3e205571a6dec ChangeLog 4315
+MD5 234c62081a33f853468c40cef39829bd ChangeLog 4423
 MD5 5081ac797edca2c2428292468783d8ac File-Spec-0.84-r1.ebuild 646
 MD5 81754d706af1e6ef45f3d08a847628bd File-Spec-0.87.ebuild 621
 MD5 84bbeaa4289f4f671c01f41598a21427 File-Spec-3.01.ebuild 680
 MD5 5f66da3bbadc5e4c2831acac37e0d0da File-Spec-3.06.ebuild 668
-MD5 e06d0e13115c776bfc3fc35f5ac4c14b File-Spec-3.12.ebuild 680
+MD5 cf8700af1c9dce17d2e1a8fe6849b56f File-Spec-3.12.ebuild 678
 MD5 144ba852cf94f6d50b9e39e953c5936a files/digest-File-Spec-0.84-r1 65
 MD5 e8c2b2625d8031840c76c7fd1fdafcad files/digest-File-Spec-0.87 65
 MD5 5ef01c0e76ba047775421be5b11033c6 files/digest-File-Spec-3.01 65
 MD5 690e170d12aed701e762e1eda88e2535 files/digest-File-Spec-3.06 66
 MD5 235519af71c6ddcb5c93217b5ba95760 files/digest-File-Spec-3.12 66
 MD5 24aa63fc8db1ae9616cba4285022c7eb metadata.xml 596
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDc/y/tG5z4I8BtQoRAvIlAJ0e3VWBZoUpB/Lo31lbx5T5OLtwiwCfYNL/
-Vp9fCaO+mREOxD0kzoTNIaQ=
-=LaYk
------END PGP SIGNATURE-----
