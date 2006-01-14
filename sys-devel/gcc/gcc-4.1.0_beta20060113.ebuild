@@ -1,21 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.12 2006/01/07 03:31:54 vapier Exp $
-
-PATCH_VER="1.0"
-PATCH_GCC_VER="4.0.1"
-UCLIBC_VER="1.0"
-UCLIBC_GCC_VER="4.0.0"
-PIE_VER="8.7.8"
-PIE_GCC_VER="4.0.0"
-PP_VER=""
-HTB_VER="1.00"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_beta20060113.ebuild,v 1.1 2006/01/14 01:42:17 halcy0n Exp $
 
 ETYPE="gcc-compiler"
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=no #${SPLIT_SPECS-true} hard disable until #106690 is fixed
 
 inherit toolchain
 
@@ -26,7 +13,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-*"
 
 RDEPEND="!sys-devel/hardened-gcc
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	fortran? (
@@ -35,7 +22,10 @@ RDEPEND="!sys-devel/hardened-gcc
 	)
 	!build? (
 		gcj? (
-			gtk? ( >=x11-libs/gtk+-2.2 )
+			gtk? (
+				|| ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libXtst x11-proto/xproto x11-proto/xextproto ) virtual/x11 )
+				>=x11-libs/gtk+-2.2
+			)
 			>=media-libs/libart_lgpl-2.1
 		)
 		>=sys-libs/ncurses-5.2-r2
@@ -47,10 +37,23 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	>=${CATEGORY}/binutils-2.15.94"
+	>=${CATEGORY}/binutils-2.16.1"
 
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
+
+pkg_setup() {
+	if [ -z $I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS ] ; then
+		die "Please \`export I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS=1\` or define it in your make.conf if you want to use this ebuild.  This is to try and cut down on people filing bugs for a compiler we do not currently support."
+	fi
+}
+
+src_unpack() {
+	toolchain_src_unpack
+
+	echo ${PV/_/-} > "${S}"/gcc/BASE-VER
+	echo "" > "${S}"/gcc/DATESTAMP
+}
 
 pkg_postinst() {
 	toolchain_pkg_postinst
