@@ -1,4 +1,14 @@
-MD5 c515d650e974e2aa1499049b5387d606 ChangeLog 344
-MD5 1e7188ea321fc594628f41c8961e0e45 bzrtools-0.6.1.ebuild 522
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb30a7bb649a38022ef418b61de5e301 ChangeLog 445
+MD5 f86e5dd6d8957d6332117777f44c3da9 bzrtools-0.6.1.ebuild 531
 MD5 03e6ce6083f7bb3915faa7db2c234666 files/digest-bzrtools-0.6.1 65
 MD5 5dff6cc33967055cfde969cbcb7b6d5d metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDySIoAiZjviIA2XgRArKoAKCmUL7WglTyE7gOoM50+TOYg9TqFgCaAnM+
+gyPR68NJW1b+WhnU8wuDGDc=
+=/Ucr
+-----END PGP SIGNATURE-----

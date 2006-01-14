@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bzrtools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.1 2005/11/24 14:29:44 marienz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.2 2006/01/14 16:08:51 flameeyes Exp $
+
+  14 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> bzrtools-0.6.1.ebuild:
+  Add ~amd64 keyword.
 
 *bzrtools-0.6.1 (24 Nov 2005)
 
