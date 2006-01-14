@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.156 2006/01/13 20:38:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.157 2006/01/14 23:33:24 genstef Exp $
+
+  14 Jan 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.1.23-r7.ebuild:
+  Add post-einfo note suggesting to emerge ghsotscript with USE=cups thanks to
+  Corvus Corax <corvus-gentoo@cybertrench.com> in bug 96985
 
   13 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.1.23-r7.ebuild:
   The name of the function is bindnow-flags, not bindnow_flags.

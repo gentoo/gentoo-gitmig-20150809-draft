@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.9 2006/01/13 20:38:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.10 2006/01/14 23:33:24 genstef Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -139,6 +139,9 @@ src_install() {
 	exeinto /usr/lib/cups/filter/
 	newexe ${FILESDIR}/pdftops.pl pdftops
 	dosed "s:/usr/local:/usr:" /usr/lib/cups/filter/pdftops
+
+	# allow lppasswd, #107306
+	fowners root /usr/bin/lppasswd
 }
 
 pkg_preinst() {
@@ -168,4 +171,5 @@ pkg_postinst() {
 		einfo "app-text/xpdf with your LINGUAS variable set instead of"
 		einfo "the CJK flag. (Bug: 67493)"
 	fi
+	einfo "You need to emerge ghostscript with the cups-USEflag turned on"
 }
