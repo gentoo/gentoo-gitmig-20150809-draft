@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e8594894f72aa5202f24461a98fec22c ChangeLog 7150
 MD5 a8859052e282ebc02dafdb66abf24dec bzip2-1.0.3-r5.ebuild 2220
 MD5 cc73bebefba3a38c58fc49b49d7d25a7 files/bzip2-1.0.2-NULL-ptr-check.patch 838
@@ -9,3 +12,10 @@ MD5 d1cf85cb43e35c9ecba9954295318ab8 files/bzip2-1.0.3-saneso.patch 323
 MD5 613ebf0fa8c5fd2ed2973ffe0d727e2a files/bzip2-1.0.3-shared-largefile-support.patch 404
 MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3-r5 63
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyImm2+ySkm8kpY0RAsZ9AJ9MA8x1EiIGpyrWTnA20yypEpExhQCghWiF
+SoEu71k+I/Wyv0YX680Kmxs=
+=Womr
+-----END PGP SIGNATURE-----
