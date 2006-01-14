@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2d4a77b379899b49af8ea64ebdc0a768 ChangeLog 1379
+MD5 e39a2359502dafc730380be78246173f files/digest-trigger-0.5.1c 144
+MD5 066eb7ae9669a876eb928cfad337905e files/digest-trigger-0.5.2 142
+MD5 fab012ed7b17d5eeb472e71a6c9c7c06 files/trigger-0.5.1c-glx-check.patch 590
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 336c4b59fb55032317d71c5c05f80571 trigger-0.5.1c.ebuild 1389
-MD5 22912a8b6736c76adf016c8d33c52bbe ChangeLog 1180
-MD5 e39a2359502dafc730380be78246173f files/digest-trigger-0.5.1c 144
-MD5 fab012ed7b17d5eeb472e71a6c9c7c06 files/trigger-0.5.1c-glx-check.patch 590
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7Hi9gIKl8Uu19MoRAjyuAJ4hpENqUnV0Xt+wIVqJgDbDP83vogCcDl+7
-+cQkGVx+NigwItpbB6YzJxw=
-=7nuf
------END PGP SIGNATURE-----
+MD5 6743c78697f1413d51d4873fb611b1b6 trigger-0.5.2.ebuild 1563
