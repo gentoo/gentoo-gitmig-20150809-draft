@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d7179d0b79fdc01831668bf6e27d2efb ChangeLog 8920
+MD5 05ebbcad45030e806f8be710defa0aac files/digest-net-tools-1.60-r11 145
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 525ce366a2cad86e72c01e2cfe84ef2c net-tools-1.60-r11.ebuild 2103
-MD5 f2d060ba7da394a61bdd8510cd205b6b net-tools-1.60-r9.ebuild 3311
-MD5 21723cf8906d7431823260022ba2bb12 files/1.60-gcc34.patch 712
-MD5 f8edd79687cbd930b5a5d749b3d8b4f1 files/1.60-man.patch 987
-MD5 05ebbcad45030e806f8be710defa0aac files/digest-net-tools-1.60-r11 145
-MD5 b1288e643ec595e07f37d7fd0d755ba5 files/digest-net-tools-1.60-r9 148
-MD5 51de6eabe2d6d6dc860f72c41cee636b files/net-tools-1.60-2.6-compilefix.patch 784
-MD5 e98da89f3a64d4842946223b199fd5c7 files/net-tools-1.60-cleanup-list-handling.patch 1322
-MD5 492e3dfd36d8f80cfd73ef58dcb2082e files/net-tools-1.60-get_name.patch 1608
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyIli2+ySkm8kpY0RAuKBAJ4sFwz/N2nQKcsxX4UFM6QzLool1QCeJ8SH
+5mHmZnXkT4+9ZWbnWP2FOhU=
+=ExYa
+-----END PGP SIGNATURE-----
