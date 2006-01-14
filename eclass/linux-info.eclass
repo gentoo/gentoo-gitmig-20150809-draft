@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.36 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.37 2006/01/14 00:15:07 vapier Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -24,6 +24,7 @@
 #				You can also check that an option doesn't exist by
 #				prepending it with an exclamation mark (!).
 #				ie: CONFIG_CHECK="!MTRR"
+#				To simply warn about a missing option, prepend a '~'.
 # ERROR_CFG		<string>	The error message to display when the above check
 #				fails. <CFG> should reference the appropriate option
 #				as above. ie: ERROR_MTRR="MTRR exists in the .config
