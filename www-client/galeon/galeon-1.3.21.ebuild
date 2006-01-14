@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.21.ebuild,v 1.9 2005/09/17 01:02:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.21.ebuild,v 1.10 2006/01/14 09:09:04 hanno Exp $
 
 inherit gnome2 debug libtool
 
@@ -13,8 +13,7 @@ IUSE="firefox"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 SLOT="0"
 
-RDEPEND="virtual/x11
-	!firefox? ( >=www-client/mozilla-1.7.6-r1 )
+RDEPEND="!firefox? ( >=www-client/mozilla-1.7.6-r1 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4.0
