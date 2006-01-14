@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4862 2006/01/14 12:24:48 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4863 2006/01/14 18:31:48 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -222,7 +222,7 @@ media-video/avifile
 # Due to the significant changes to the ebuild during
 # the version bump the package is being masked for some 
 # additional testing
-=sci-mathematics/singular-3.0.1.1
+>=sci-mathematics/singular-3.0.1.1
 
 # Stefan Knoblich <stkn@gentoo.org> (17 Dec 2005)
 # Bug #115798
