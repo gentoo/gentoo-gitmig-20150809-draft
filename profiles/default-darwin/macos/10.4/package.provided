@@ -29,6 +29,7 @@ dev-lang/python-2.3.5
 dev-lang/ruby-1.8.2
 dev-lang/tcl-8.4.7
 dev-lang/tk-8.4.7
+dev-libs/cyrus-sasl-2.1.18
 dev-libs/icu-3.2
 dev-libs/libedit-2.6.9
 dev-libs/libiconv-1.9
@@ -75,7 +76,6 @@ net-mail/mail_cmds-15
 net-mail/mailman-2.1.4
 net-misc/curl-7.13.1
 net-misc/efax-0.9a
-net-misc/gsasl-2.1.1
 net-misc/mdnsresponder-107
 net-misc/openssh-3.8.1_p1
 net-misc/rsync-2.6.3
