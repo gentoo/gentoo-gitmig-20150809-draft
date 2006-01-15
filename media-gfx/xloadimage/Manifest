@@ -1,24 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 018a157304c0097dadeaaa1d95646834 ChangeLog 5979
-MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r1 140
-MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r2 140
-MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r3 140
+MD5 9f60dbdf2bd35b67048fc919417f73de ChangeLog 6141
 MD5 1e91f350f870e196e1f181a27f3fd1ab files/digest-xloadimage-4.1-r4 140
 MD5 fb91a22d37e6c6db534f1dc81add707e files/xloadimage-4.1-endif.patch 321
 MD5 c411c977cc7ae79dd96aad933980dbb2 files/xloadimage-4.1-include-errno_h.patch 303
 MD5 9208b10866e00f1e47bb12a7f8bec04a files/xloadimage-4.1-zio-shell-meta-char.diff 1372
 MD5 49ea6a01c79f1540896bd264c3606cb3 files/xloadimage-gentoo.patch 8956
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 078fc3ab12c2f7564321ccdb25dda6f7 xloadimage-4.1-r1.ebuild 1987
-MD5 c70706f60bc9c49272d9117bd7d0ea00 xloadimage-4.1-r2.ebuild 2036
-MD5 eb2e15ec1eb2e879d416b8692be3cee6 xloadimage-4.1-r3.ebuild 2072
 MD5 4be205332400a34b50b65202e55cae02 xloadimage-4.1-r4.ebuild 2302
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtclIAiZjviIA2XgRAo27AJ0b92qD1EMyjICYFWDCCKe0WtlmxACghNFa
-6cDyEkbwsema/okl075dzvU=
-=fMnh
------END PGP SIGNATURE-----
