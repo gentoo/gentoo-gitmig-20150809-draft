@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.0.ebuild,v 1.2 2005/11/22 19:21:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.0.ebuild,v 1.3 2006/01/15 23:27:56 ticho Exp $
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://sourceforge.net/projects/fail2ban"
 SRC_URI="mirror://sourceforge/fail2ban/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4"

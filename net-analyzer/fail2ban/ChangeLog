@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.2 2005/11/22 19:21:50 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.3 2006/01/15 23:27:56 ticho Exp $
+
+  15 Jan 2006; Andrej Kacian <ticho@gentoo.org> fail2ban-0.6.0.ebuild:
+  Stable on x86, bug #119036.
 
   22 Nov 2005; Luis Medinas <metalgod@gentoo.org> fail2ban-0.6.0.ebuild:
   Added ~amd64 keywords.
