@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/DBD-mysql
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.46 2005/12/30 16:53:53 ferdy Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.47 2006/01/15 17:03:07 mcummings Exp $
+
+*DBD-mysql-3.0002 (15 Jan 2006)
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +DBD-mysql-3.0002.ebuild:
+  As pointed out in bug 110363, DBD-mysql-3.0002 seems to be the only working
+  one in the 3.0002X series. Adding so people can use it instead.
 
   30 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org>
   DBD-mysql-2.9007.ebuild:

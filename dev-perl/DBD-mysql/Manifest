@@ -1,24 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c71d5020a651a1dff7a67f79199922a ChangeLog 5552
+MD5 bfc15243fcd0653643b5a252874deea6 ChangeLog 5817
 MD5 a6ae96f1686c621af79bc868a36a7415 DBD-mysql-2.1027.ebuild 562
 MD5 985e957d1fff607e9e8439c0c4e21d37 DBD-mysql-2.9003.ebuild 577
 MD5 3611666af080f2b4fecdebbf6edb7db7 DBD-mysql-2.9007.ebuild 595
+MD5 cd4fb6ad69fcdf42c61f3cb055b15476 DBD-mysql-3.0002.ebuild 648
 MD5 973033c4b97c1e1411874e09fead0142 DBD-mysql-3.0002_p3.ebuild 641
 MD5 409e9f864077dadda7c746a1aa2b76dc DBD-mysql-3.0002_p4.ebuild 738
 MD5 f40eecb7d598ce677826cb398539758f files/digest-DBD-mysql-2.1027 67
 MD5 5213da48718338e1d1164d1c5479d18b files/digest-DBD-mysql-2.9003 68
 MD5 77d091a5ff85d5d195d78693a662fae3 files/digest-DBD-mysql-2.9007 68
+MD5 28e317a81157aff7c5aa966b0a2091e1 files/digest-DBD-mysql-3.0002 68
 MD5 31a4a8ffca04c0de391fa5f8e216ac0d files/digest-DBD-mysql-3.0002_p3 70
 MD5 f85b62240da6965826cc2326a528fd0a files/digest-DBD-mysql-3.0002_p4 70
 MD5 1e7e8cdcdfe45851d63691a85f463762 files/makemaker.patch 398
 MD5 41410536dd5f7348dda0f6e01bb38c6f files/mysql-5.0-new_bit_type.patch 1404
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDtWY0ViELBEf1JB0RAhSnAJ9JByOVk8OEfaCAMoqX/mg9p3bv8QCdHVq/
-uGvr+rKje8/7fWQyjFiechE=
-=Hoon
+iD8DBQFDyoBTtG5z4I8BtQoRApciAJ9vkpalzEsC/qdYDkxSSxUpJTOugwCeOXX6
+0p/qt5roUTZiLdtu1vjcX0U=
+=jCXG
 -----END PGP SIGNATURE-----
