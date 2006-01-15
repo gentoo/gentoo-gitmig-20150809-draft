@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.7.0.ebuild,v 1.2 2005/10/04 19:35:36 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.7.0.ebuild,v 1.3 2006/01/15 04:20:53 dang Exp $
 
 DESCRIPTION="Graphical front end for GNUnet."
 HOMEPAGE="http://www.gnu.org/software/GNUnet/"
 SRC_URI="mirror://gnu//gnunet/${P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

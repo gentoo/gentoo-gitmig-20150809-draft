@@ -1,4 +1,14 @@
-MD5 da7d21d8afb39eb0c9a83bbfc164e85f gnunet-gtk-0.7.0.ebuild 654
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 b31765b43564c9834c814c4617939045 ChangeLog 552
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 abc89bf9374478af48405e6906d863d7 ChangeLog 643
 MD5 1b5d9a62455927369d8025a1a193e73a files/digest-gnunet-gtk-0.7.0 69
+MD5 e6ff838f187aa289611854da92e87b84 gnunet-gtk-0.7.0.ebuild 661
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDyc3UomPajV0RnrERAkKsAJ0QGgxETm2KekvLY0J8fFmepAGGeQCgg6B0
+jlzoHntIMkrWr0TQI7h9n04=
+=e3V8
+-----END PGP SIGNATURE-----
