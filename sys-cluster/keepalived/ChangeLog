@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.28 2006/01/04 07:37:16 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.29 2006/01/15 20:15:05 weeve Exp $
+
+  15 Jan 2006; Jason Wever <weeve@gentoo.org> keepalived-1.1.11.ebuild:
+  Stable on SPARC wrt bug #90501.
 
   04 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
   keepalived-1.1.11.ebuild:

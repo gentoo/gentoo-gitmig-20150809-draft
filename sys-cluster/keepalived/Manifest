@@ -1,4 +1,4 @@
-MD5 0d07199a97337d7a6fb278bc140658b0 ChangeLog 4668
+MD5 1531ac800cbfde327f8f8741422903c6 ChangeLog 4771
 MD5 1716d524c251b84b871482412868a023 files/digest-keepalived-1.1.10 69
 MD5 dbc11c02d66c9b997d45103ee7e8d8b4 files/digest-keepalived-1.1.11 69
 MD5 f3304b4ccd8b7876ffc599ca9e5b37ce files/digest-keepalived-1.1.5 68
@@ -6,7 +6,7 @@ MD5 5f5fe4377fe13ed4b83bd4ad10496428 files/digest-keepalived-1.1.6 68
 MD5 f74c89e703a83cc81224e7abd0b084ef files/digest-keepalived-1.1.7 68
 MD5 eb44784c8591fa108fa55b5cacd29745 files/init-keepalived 746
 MD5 32d511edfc8bc07d735457d98fa437bd keepalived-1.1.10.ebuild 1333
-MD5 3ff25a955e2d59de226f6b016913f517 keepalived-1.1.11.ebuild 1475
+MD5 45728db9e2a8daac80fad6a041d6a668 keepalived-1.1.11.ebuild 1470
 MD5 809f94f0f77e80ee92b389de54e5ca13 keepalived-1.1.5.ebuild 1426
 MD5 e0bda0fecab2722ed34dfddf945d7447 keepalived-1.1.6.ebuild 1327
 MD5 af2791a93593adaedfb5041b2ae2ef1f keepalived-1.1.7.ebuild 1326
