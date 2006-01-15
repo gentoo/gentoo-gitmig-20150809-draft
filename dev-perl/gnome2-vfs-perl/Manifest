@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28e8294b94f74c2cffc5b86467388dd6 ChangeLog 2225
+MD5 3954af1d853f8c95d125530147c0f61d ChangeLog 2326
 MD5 aa354e0aaaf380c87630956862202409 files/digest-gnome2-vfs-perl-1.00 66
 MD5 9cc08a81f72fc3c67a30a58d7b3fa76d files/digest-gnome2-vfs-perl-1.021 67
 MD5 3e0c8517fd06e769e88ec2aa5dc9d4db files/digest-gnome2-vfs-perl-1.041 67
 MD5 e1e4aaad0f99f8c88b4a71311bcdfda1 files/vfs.typemap 417
 MD5 31294035ca6d2401462ab68cd46c4b90 gnome2-vfs-perl-1.00.ebuild 745
 MD5 0cf7001efa7b6fe9b5d033df2f8c652e gnome2-vfs-perl-1.021.ebuild 739
-MD5 97cbc63f6dd40018650cdd38b482290d gnome2-vfs-perl-1.041.ebuild 739
+MD5 9eb5dbefa07cc42801ffa642ce691909 gnome2-vfs-perl-1.041.ebuild 735
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyBRDtG5z4I8BtQoRAo3FAJ9dEbmqR4qFE6PlO9sscs/SvN8/bwCeKaUX
-tr1VibRCW1rtL6/Lt3AnjOA=
-=KYMN
------END PGP SIGNATURE-----
