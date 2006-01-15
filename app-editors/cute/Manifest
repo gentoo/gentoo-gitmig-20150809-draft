@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d2f0b0914b78f50a1fb2dca05ca592d ChangeLog 2327
+MD5 dab2144925d2e4a80a22fcde24a3c315 ChangeLog 2419
 MD5 967cd62e0f3b1904a90740d63dd01dea cute-0.2.9-r1.ebuild 2084
-MD5 2369654bc6dd6e142ba60cb9e44779b3 cute-0.2.9-r2.ebuild 2117
+MD5 44308f61ec293a051a52e5f92508888e cute-0.2.9-r2.ebuild 2114
 MD5 46be2b5390080bf32c551b20b9fd16ce cute-0.2.9.ebuild 1552
 MD5 d8e651c892fe13f3ed796b87faac96bd files/digest-cute-0.2.9 63
 MD5 d8e651c892fe13f3ed796b87faac96bd files/digest-cute-0.2.9-r1 63
 MD5 d8e651c892fe13f3ed796b87faac96bd files/digest-cute-0.2.9-r2 63
 MD5 70f06600556327dcfbc31fa03f610042 metadata.xml 155
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvYKsKRy60XGEcJIRAtTvAKCRv7g26/gPU6+soVgd8398AV8FbgCgrT6F
-+31GS423p8YJAO9pNPyzJLQ=
-=5sGh
------END PGP SIGNATURE-----
