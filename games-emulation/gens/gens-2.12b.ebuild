@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12b.ebuild,v 1.4 2005/09/26 17:45:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12b.ebuild,v 1.5 2006/01/15 03:37:52 mr_bones_ Exp $
 
-inherit eutils games
+inherit flag-o-matic eutils games
 
 DESCRIPTION="A Sega Genesis/CD/32X emulator"
 HOMEPAGE="http://gens.consolemul.com/"
@@ -13,13 +13,19 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	>=media-libs/libsdl-1.2
+RDEPEND=">=media-libs/libsdl-1.2
 	>=x11-libs/gtk+-2.4"
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
 
 S=${WORKDIR}/GensForLinux
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	append-ldflags -Wl,-z,noexecstack
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
