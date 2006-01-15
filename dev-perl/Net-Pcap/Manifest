@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d65de966baa310e41a534b4ccb8d013 ChangeLog 1262
+MD5 7c0db7bc22eec21e88237b111013bfb0 ChangeLog 1353
 MD5 1eb80e5b2e8aaa565582d88e5a636749 Net-Pcap-0.04.ebuild 518
-MD5 84b208df9d43590f7b5e6b8466fbcedb Net-Pcap-0.05.ebuild 524
+MD5 fcc750c93452c229e29fc83e4a6ac7c0 Net-Pcap-0.05.ebuild 520
 MD5 eab0f7930dde646317448fbf992e7429 Net-Pcap-0.10.ebuild 524
 MD5 fd3db58105d110137a45cb6b170ef118 Net-Pcap-0.11.ebuild 524
 MD5 b85cb3a98637130d8cb2b038dcc7fabb files/digest-Net-Pcap-0.04 63
@@ -11,10 +8,3 @@ MD5 d6934032d14cb413153f5e4b70e97072 files/digest-Net-Pcap-0.05 64
 MD5 94c649117902add6b6a3e7227d2f8862 files/digest-Net-Pcap-0.10 64
 MD5 9ba162f9690f31bd0d2e0f476a13c702 files/digest-Net-Pcap-0.11 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyCOwtG5z4I8BtQoRAoryAJ9CBZPA1IgMNQAynvUy14ItoX3pngCdEhtp
-XOdHJCMjmHW6VuvN6MtFLsU=
-=l13v
------END PGP SIGNATURE-----
