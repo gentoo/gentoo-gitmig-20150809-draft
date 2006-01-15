@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4863 2006/01/14 18:31:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4864 2006/01/15 07:00:23 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -686,20 +686,6 @@ net-im/jive-messenger
 # Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
 # Toxine needs to be verified with upstream for a few issues.
 media-video/toxine
-
-# Peter Johanson <latexer@gentoo.org> (18 May 2005)
-# Masking the *-sharp-2.5.x stuff, as 2.3.x is prefered by upstream.
-=dev-dotnet/art-sharp-2.5*
-=dev-dotnet/gconf-sharp-2.5*
-=dev-dotnet/gda-sharp-2.5*
-=dev-dotnet/glade-sharp-2.5*
-=dev-dotnet/gnomedb-sharp-2.5*
-=dev-dotnet/gnome-sharp-2.5*
-=dev-dotnet/gnomevfs-sharp-2.5*
-=dev-dotnet/gtkhtml-sharp-2.5*
-=dev-dotnet/gtk-sharp-2.5*
-=dev-dotnet/rsvg-sharp-2.5*
-=dev-dotnet/vte-sharp-2.5*
 
 # Jory A. Pratt <anarchy@gentoo.org> (15 Aug 2005)
 # Mozilla rpath inclusion. For testing purposes only.
