@@ -7,12 +7,12 @@ MD5 5f459823e615437c8845443bdeb6be2b files/digest-mairix-0.17 63
 MD5 f805482bc69bbd318d123aab95ed1ed4 files/digest-mairix-0.17.1 65
 MD5 48904a3540f1b1440d486c00df0c6d73 mairix-0.16.1.ebuild 1002
 MD5 fb3dc4fd9c7b490c6d777bf4f8f4dd14 mairix-0.17.1.ebuild 1006
-MD5 eeb8eafd1f81db8ac6a0cf0a417a337f mairix-0.17.ebuild 1003
+MD5 32bfad03d8a35f9e5d6417b5bd6be603 mairix-0.17.ebuild 1003
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwjA8QlM6RnzZP+IRAhXOAJ9omtlq9z0unWsfXqArtDa9SU2RWgCgwm0M
-gkYKUui0J/UxK5je6/uch9M=
-=YuRm
+iD8DBQFDyaas2+ySkm8kpY0RAjwCAKCWvhmaKYoXhKZb57v28CFoqK4W9QCeLS5d
+HuTmacW9HwbjmATzPyUL26M=
+=KEl1
 -----END PGP SIGNATURE-----
