@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/mono
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.70 2005/12/23 06:05:29 latexer Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.71 2006/01/15 07:08:22 latexer Exp $
+
+*mono-1.1.13.1 (15 Jan 2006)
+*mono-1.1.12.1-r1 (15 Jan 2006)
+
+  15 Jan 2006; Peter Johanson <latexer@gentoo.org>
+  +files/mono-1.1.13-pathfix.diff, +files/mono-1.1.13-resource-manager.diff,
+  -mono-1.1.10.ebuild, -mono-1.1.12.ebuild, -mono-1.1.12.1.ebuild,
+  +mono-1.1.12.1-r1.ebuild, +mono-1.1.13.1.ebuild:
+  Bump to new release, revision bump older release to include fix for problem
+  with boo, and remove some older releases.
 
 *mono-1.1.12.1 (23 Dec 2005)
 

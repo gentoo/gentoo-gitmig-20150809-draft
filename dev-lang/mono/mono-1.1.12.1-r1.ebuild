@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.12.ebuild,v 1.2 2006/01/09 22:09:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.12.1-r1.ebuild,v 1.1 2006/01/15 07:08:22 latexer Exp $
 
 inherit eutils mono flag-o-matic multilib
 
@@ -34,6 +34,7 @@ src_unpack() {
 
 	# Fix munging of Unix paths
 	epatch ${FILESDIR}/${PN}-1.1.5-pathfix.diff
+	epatch ${FILESDIR}/${PN}-1.1.13-resource-manager.diff
 
 	# Install all our .dlls under $(libdir), not $(prefix)/lib
 	if [ $(get_libdir) != "lib" ] ; then

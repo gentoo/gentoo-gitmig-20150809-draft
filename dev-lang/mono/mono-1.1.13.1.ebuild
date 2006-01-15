@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.12.1.ebuild,v 1.2 2006/01/09 22:09:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.13.1.ebuild,v 1.1 2006/01/15 07:08:22 latexer Exp $
 
 inherit eutils mono flag-o-matic multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com/"
 SRC_URI="http://www.go-mono.com/sources/mono-${PV:0:3}/${P}.tar.gz"
 
-LICENSE="|| ( GPL-2 LGPL-2 X11 )"
+LICENSE="|| ( GPL-2 LGPL-2 X11)"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="nptl X"
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 	)"
 
 RDEPEND="${DEPEND}
-	X? ( >=dev-dotnet/libgdiplus-1.1.11 )
+	X? ( >=dev-dotnet/libgdiplus-1.1.13 )
 	dev-util/pkgconfig
 	dev-libs/libxml2"
 
@@ -33,7 +33,8 @@ src_unpack() {
 	cd ${S}
 
 	# Fix munging of Unix paths
-	epatch ${FILESDIR}/${PN}-1.1.5-pathfix.diff
+	epatch ${FILESDIR}/${PN}-1.1.13-pathfix.diff
+	epatch ${FILESDIR}/${PN}-1.1.13-resource-manager.diff
 
 	# Install all our .dlls under $(libdir), not $(prefix)/lib
 	if [ $(get_libdir) != "lib" ] ; then
