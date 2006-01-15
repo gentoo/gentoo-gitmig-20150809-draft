@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-SNMP
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.31 2006/01/15 11:28:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.32 2006/01/15 17:43:26 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-SNMP-5.0.0.ebuild:
+  mirror syntax in 5.0.0
 
   15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> Net-SNMP-5.2.0.ebuild:
   Stable on ppc.

@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-5.0.0.ebuild,v 1.7 2005/12/30 11:55:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-5.0.0.ebuild,v 1.8 2006/01/15 17:43:26 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A SNMP Perl Module"
-SRC_URI="http://www.cpan.org/modules/by-module/Net/${P}.tar.gz"
+SRC_URI="mirror://cpan/modules/by-module/Net/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Net/${P}.readme"
 
 SLOT="0"
