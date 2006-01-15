@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 575eca6c513cfeada64870994d37ed43 ChangeLog 3713
+MD5 fab47a15049833f99aee34fc3198562c ChangeLog 3827
 MD5 a365ade7e8047e2b00544df5cda0f6fe Params-Validate-0.24-r1.ebuild 654
 MD5 458c672734d62405aa2e460769253708 Params-Validate-0.24-r2.ebuild 654
 MD5 000a8451012e9467f94b8b43d77812ae Params-Validate-0.24.ebuild 651
@@ -9,7 +6,7 @@ MD5 00ab83d1f28d0116589b095a021303e6 Params-Validate-0.59.ebuild 652
 MD5 908745efbe6b438ec7d341214e20ced6 Params-Validate-0.72.ebuild 664
 MD5 dddd7009a6628491d091375a1bdd1bb6 Params-Validate-0.74.ebuild 642
 MD5 da1079a312a2b1f1c21b8aa56081928e Params-Validate-0.76.ebuild 628
-MD5 57d77e360fddf9134f772569d9099db4 Params-Validate-0.78.ebuild 634
+MD5 897c99109bb24ba1eafa544d9381f5d4 Params-Validate-0.78.ebuild 632
 MD5 f5e2b97ae1277484927fb4589123d13e files/digest-Params-Validate-0.24 71
 MD5 f5e2b97ae1277484927fb4589123d13e files/digest-Params-Validate-0.24-r1 71
 MD5 f5e2b97ae1277484927fb4589123d13e files/digest-Params-Validate-0.24-r2 71
@@ -19,10 +16,3 @@ MD5 9d961a530f6cd3be26e824d4d02f6ea4 files/digest-Params-Validate-0.74 71
 MD5 69581fc5e3a3db6ffd7334fff0176547 files/digest-Params-Validate-0.76 71
 MD5 93dab68d4d55cafaf4324bee45734292 files/digest-Params-Validate-0.78 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfyiTtG5z4I8BtQoRArBBAJ4yUEt5hrXw3Lbk4jn8EjezLnuEkQCfSwsN
-JvOuTGtvK7XaKf9CLPOogvw=
-=KdGk
------END PGP SIGNATURE-----
