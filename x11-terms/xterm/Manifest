@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b16c741929c22ba30852c0812b42031 ChangeLog 17377
+MD5 385c41a747d5104c140ee14c4c44db8e ChangeLog 17475
 MD5 8c7c791e44946002c03410f9a6e9fc69 files/digest-xterm-204 58
 MD5 f5ee205af95a801f901ea6ce2764bf3d files/digest-xterm-207 58
 MD5 4b2c84f62ff017e1c868ace1cd2f4394 files/digest-xterm-208 58
 MD5 a5048a1a15d86d400d3e2dbaaa0ac1c8 files/xterm-LANG.patch 1698
 MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
 MD5 444f8b10a7261b2ce95b3e13a05cf505 xterm-204.ebuild 2530
-MD5 14aaa4c99c5866c53dc3871013e65c6d xterm-207.ebuild 2948
+MD5 dfc30f63330b185d3bcffcfc98674fd7 xterm-207.ebuild 2946
 MD5 99579b460e4bebc8ec3bcbfa36f0062c xterm-208.ebuild 2951
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyrPZoFw4q70f3SsRAhdjAKCtVDndr3oDYsP4i+35BJpuJU/QugCfVgDS
-bf7pJ8X7yYCjiHSJA1v6u3U=
-=5EGF
------END PGP SIGNATURE-----
