@@ -1,16 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20051207.ebuild,v 1.2 2005/12/08 09:46:40 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20060115.ebuild,v 1.1 2006/01/15 14:15:27 mkay Exp $
 
 inherit flag-o-matic eutils
 
 MY_PV=${PV/_*}
 SNAPSHOT=${PV#*_pre}		#http://www.kadu.net/download/snapshots/
 
-TABS="rev45"				#http://gov.one.pl/svnsnap
-AMAROK="1.16"				#http://scripts.one.pl/amarok
+TABS="rev46"				#http://gov.one.pl/svnsnap
+AMAROK="1.17"				#http://scripts.one.pl/amarok
 WEATHER="2.07"				#http://www.kadu.net/~blysk/
-EXT_INFO="2.0beta6"			#http://kadu-ext-info.berlios.de
+EXT_INFO="2.0beta8"			#http://kadu-ext-info.berlios.de
 XMMS="1.30"					#http://scripts.one.pl/xmms
 XOSD_NOTIFY="051121"		#http://www.kadu.net/~joi/xosd_notify
 MAIL="0.2.0"				#http://michal.gov.one.pl/mail
@@ -20,6 +20,7 @@ LED_NOTIFY="0.5" 			#http://http://www.kadu.net/~blysk/
 SCREEN_SHOT="0.4.0"			#http://scripts.one.pl/screenshot
 CONTACTS="1.0rc1"			#http://obeny.kicks-ass.net/obeny/kadu/modules/contacts
 OSD_NOTIFY="0.2.7.2"		#http://www.kadu.net/~pan_wojtas/osdhints_notify/
+POWERKADU="20060109"		#http://kadu.net/~patryk/powerkadu/
 THEMES="kadu-theme-crystal-16
 	kadu-theme-crystal-22
 	kadu-theme-gg3d
@@ -37,7 +38,7 @@ HOMEPAGE="http://kadu.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE="X debug alsa arts esd voice speech nas oss spell ssl xmms xosd amarok extraicons extramodules mail"
 
@@ -77,7 +78,8 @@ SRC_URI="http://kadu.net/download/snapshots/${PN}-${SNAPSHOT}.tar.bz2
 		http://scripts.one.pl/screenshot/devel/${MY_PV}/screenshot-${SCREEN_SHOT}.tar.gz
 		http://obeny.kicks-ass.net/obeny/kadu/modules/contacts/contacts-${CONTACTS}.tar.bz2
 		http://www.kadu.net/~joi/kde_transparency.tar.bz2
-		http://www.kadu.net/~pan_wojtas/osdhints_notify/download/kadu-osdhints_notify-${OSD_NOTIFY}.tar.gz )
+		http://www.kadu.net/~pan_wojtas/osdhints_notify/download/kadu-osdhints_notify-${OSD_NOTIFY}.tar.gz
+		http://kadu.net/~patryk/powerkadu/powerkadu-${POWERKADU}.tar.gz )
 	xmms? ( http://scripts.one.pl/xmms/devel/${MY_PV}/xmms-${XMMS}.tar.gz )
 	xosd? ( http://www.kadu.net/~joi/xosd_notify/packages/xosd_notify-${XOSD_NOTIFY}.tar.bz2 )
 	mail? ( http://michal.kernel-panic.cjb.net/mail/tars/release/mail-${MAIL}.tar.bz2 )
@@ -90,7 +92,7 @@ S=${WORKDIR}/${PN}
 
 enable_module() {
 	if use ${1}; then
-	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/
+	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/ || die "Error moving module	${2}"
 	    module_config ${2} m
 	fi
 }
@@ -133,9 +135,10 @@ src_unpack() {
 	enable_module extramodules led_notify
 	enable_module extramodules tabs
 	enable_module extramodules screenshot
+	enable_module extramodules powerkadu
 
 	# put some patches
-#	epatch ${FILESDIR}/kadu-toolbar_toggle-gentoo.diff
+	# epatch ${FILESDIR}/kadu-toolbar_toggle-gentoo.diff
 	use xosd && epatch ${FILESDIR}/xosd-gentoo.patch
 }
 
