@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/qcad-parts-2.0.1.2-r1.ebuild,v 1.2 2006/01/11 04:57:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/qcad-parts-2.0.1.2-r1.ebuild,v 1.3 2006/01/15 00:41:09 cryos Exp $
 
 MY_PN="partlibrary"
 MY_PV="${PV}-1"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ribbonsoft.com/qcad_library.html"
 SRC_URI="http://www.ribbonsoft.com/archives/partlibrary/partlibrary-${MY_PV}.zip"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
