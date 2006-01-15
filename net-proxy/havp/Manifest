@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d78180d222e75d46d8ee5a8849e38cd ChangeLog 397
+MD5 5f0038e98c854750a47b461140103117 files/digest-havp-0.76 61
+MD5 84d09e8602d90d8f9be9fffbd4dbf0d3 files/havp-0.76-gentoo.patch 1684
+MD5 2a830a7c8f88a3fc5df6dc89e67bef72 files/havp.initd 1604
+MD5 d6ea90eaf342c7105a4db463b0d22b05 havp-0.76.ebuild 1064
+MD5 eeef2b4ba39eb40826f14b0bd0489563 metadata.xml 309
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyrCXjG8pv1lIUX4RAmM4AJ0dg8R1RrogZ67bVmUVtv9dIgI4fACfY0J5
+OIWseZ4WEXOL8P45z2NYZr0=
+=2On0
+-----END PGP SIGNATURE-----

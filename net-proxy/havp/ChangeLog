@@ -1,0 +1,11 @@
+# ChangeLog for net-proxy/havp
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.1 2006/01/15 20:28:55 mrness Exp $
+
+*havp-0.76 (15 Jan 2006)
+
+  15 Jan 2006; Alin Nastac <mrness@gentoo.org>
+  +files/havp-0.76-gentoo.patch, +files/havp.initd, +metadata.xml,
+  +havp-0.76.ebuild:
+  Initial import from bug #99303.
+
