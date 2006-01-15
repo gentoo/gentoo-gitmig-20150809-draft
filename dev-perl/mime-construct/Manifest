@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 124b6dd0c50ea877dc44ae585b96ef0e mime-construct-1.9.ebuild 520
-MD5 b0ab82ef074a97317fb1e1955f9101f6 ChangeLog 408
+MD5 3e1c401b9a955a0b4019dfb85ac92b83 ChangeLog 514
 MD5 4007d9d91fe6f9cbd791c77e4b7bbfa5 files/digest-mime-construct-1.9 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCjFvgtG5z4I8BtQoRAuJAAJ99MhlvfvbPmZ74Xi9KBnt4Z+dFjgCdF3z9
-xhdtv6C4mcZhv2OaIc9z834=
-=pds4
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 73b5d24e92dc2e5cae82586677fb16c0 mime-construct-1.9.ebuild 519
