@@ -1,0 +1,65 @@
+ suspend_file.c |   18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+diff -ruNp 9040-filewriter-fix.patch-old/kernel/power/suspend_file.c 9040-filewriter-fix.patch-new/kernel/power/suspend_file.c
+--- 9040-filewriter-fix.patch-old/kernel/power/suspend_file.c	2006-01-12 14:06:25.000000000 +1000
++++ 9040-filewriter-fix.patch-new/kernel/power/suspend_file.c	2006-01-12 14:06:29.000000000 +1000
+@@ -453,6 +453,8 @@ static int filewriter_write_header_init(
+ {
+ 	char new_sig[sig_size];
+ 	
++	extent_state_goto_start(&suspend_writer_posn);
++
+ 	suspend_writer_buffer = (char *) get_zeroed_page(GFP_ATOMIC);
+ 	suspend_writer_buffer_posn = 0;
+ 
+@@ -460,8 +462,6 @@ static int filewriter_write_header_init(
+ 	strcpy(new_sig, NoImage);
+ 	suspend_bio_ops.write_header_chunk(new_sig, sig_size);
+ 
+-	extent_state_goto_start(&suspend_writer_posn);
+-
+ 	/* Info needed to bootstrap goes at the start of the header.
+ 	 * First we save the basic info needed for reading, including the number
+ 	 * of header pages. Then we save the structs containing data needed
+@@ -473,6 +473,9 @@ static int filewriter_write_header_init(
+ 	suspend_bio_ops.write_header_chunk((char *) &suspend_writer_posn_save, 
+ 			3 * sizeof(struct extent_iterate_saved_state));
+ 
++	suspend_bio_ops.write_header_chunk((char *) &devinfo,
++			sizeof(devinfo));
++
+ 	serialise_extent_chain(&block_chain);
+ 	
+ 	return 0;
+@@ -491,7 +494,7 @@ static int filewriter_write_header_clean
+ 	suspend_bio_ops.finish_all_io();
+ 
+ 	extent_state_goto_start(&suspend_writer_posn);
+-	extent_state_next(&suspend_writer_posn);
++	suspend_bio_ops.forward_one_page();
+ 
+ 	/* Adjust image header */
+ 	suspend_bio_ops.bdev_page_io(READ, target_bdev,
+@@ -584,6 +587,7 @@ static int file_init(void)
+ static int filewriter_read_header_init(void)
+ {
+ 	int result;
++	struct block_device *tmp;
+ 
+ 	*(suspend_bio_ops.need_extra_next) = 1;
+ 
+@@ -604,6 +608,14 @@ static int filewriter_read_header_init(v
+ 	
+ 	suspend_writer_buffer_posn += 3 * sizeof(struct extent_iterate_saved_state);
+ 
++	tmp = devinfo.bdev;
++
++	memcpy(&devinfo,
++			suspend_writer_buffer + suspend_writer_buffer_posn,
++			sizeof(struct suspend2_bdev_info));
++	devinfo.bdev = tmp;
++	suspend_writer_buffer_posn += sizeof(struct suspend2_bdev_info);
++
+ 	extent_state_goto_start(&suspend_writer_posn);
+ 	load_extent_chain(&block_chain);
+ 

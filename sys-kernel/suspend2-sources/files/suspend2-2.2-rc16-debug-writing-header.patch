@@ -1,0 +1,75 @@
+ block_io.h         |    1 +
+ suspend_block_io.c |   34 +++++++++++++++++++++++++++++-----
+ suspend_file.c     |   14 ++++++--------
+ suspend_swap.c     |   18 ++----------------
+ 4 files changed, 38 insertions(+), 29 deletions(-)
+--- 9050-misc-other.patch-old/kernel/power/suspend_block_io.c	2006-01-12 14:02:12.000000000 +1000
++++ 9050-misc-other.patch-new/kernel/power/suspend_block_io.c	2006-01-12 11:21:39.000000000 +1000
+@@ -810,8 +810,8 @@
+ 	return 0;
+ }
+ 
+-static int suspend_rw_page(int rw, struct page *page,
+-		int readahead_index, int sync)
++static int __suspend_rw_page(int rw, struct page *page,
++		int readahead_index, int sync, int debug)
+ {
+ 	int i, current_chain;
+ 	struct submit_params submit_params;
+@@ -831,7 +831,10 @@
+ 		       s2_devinfo[current_chain].blocks_per_page + 1) <<
+ 		s2_devinfo[current_chain].bmap_shift;
+ 
+-	//printk("%s: %lx:%d.\n", rw ? "Write" : "Read", submit_params.dev->bd_dev, submit_params.block[0]);
++	if (debug)
++		printk("%s: %lx:%lx.\n", rw ? "Write" : "Read",
++				(long) submit_params.dev->bd_dev,
++				(long) submit_params.block[0]);
+ 
+ 	i = suspend_do_io(rw, &submit_params, sync);
+ 
+@@ -841,6 +844,12 @@
+ 	return 0;
+ }
+ 
++static int suspend_rw_page(int rw, struct page *page,
++		int readahead_index, int sync)
++{
++	return __suspend_rw_page(rw, page, readahead_index, sync, 0);
++}
++
+ static int suspend_bio_read_chunk(struct page *buffer_page, int sync)
+ {
+ 	static int last_result;
+@@ -976,12 +985,18 @@
+ 		char *from = rw ? source_start : dest_start;
+ 
+ 		if (bytes_left <= capacity) {
++			if (test_debug_state(SUSPEND_HEADER))
++				printk("Copy %d bytes from %p to %p.\n",
++						bytes_left, to, from);
+ 			memcpy(to, from, bytes_left);
+ 			suspend_writer_buffer_posn += bytes_left;
+ 			return rw ? 0 : buffer_size;
+ 		}
+ 
+ 		/* Next to read the next page */
++		if (test_debug_state(SUSPEND_HEADER))
++			printk("Copy %d bytes from %p to %p.\n",
++					capacity, to, from);
+ 		memcpy(to, from, capacity);
+ 		bytes_left -= capacity;
+ 
+@@ -989,9 +1004,10 @@
+ 			sys_read(suspend_read_fd,
+ 				suspend_writer_buffer, BLOCK_SIZE);
+ 		else {
+-			if (suspend_rw_page(rw,
++			if (__suspend_rw_page(rw,
+ 					virt_to_page(suspend_writer_buffer),
+-					-1, !rw))
++					-1, !rw,
++					test_debug_state(SUSPEND_HEADER)))
+ 				return -EIO;
+ 		}
+ 

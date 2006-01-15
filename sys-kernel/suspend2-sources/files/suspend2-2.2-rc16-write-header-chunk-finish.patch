@@ -1,0 +1,87 @@
+ block_io.h         |    1 +
+ suspend_block_io.c |    8 ++++++++
+ suspend_file.c     |    8 ++------
+ suspend_swap.c     |   18 ++----------------
+ 4 files changed, 13 insertions(+), 22 deletions(-)
+diff -ruNp 9070-write-header-chunk-finish.patch-old/kernel/power/block_io.h 9070-write-header-chunk-finish.patch-new/kernel/power/block_io.h
+--- 9070-write-header-chunk-finish.patch-old/kernel/power/block_io.h	2006-01-12 14:05:18.000000000 +1000
++++ 9070-write-header-chunk-finish.patch-new/kernel/power/block_io.h	2006-01-12 10:48:22.000000000 +1000
+@@ -64,6 +64,7 @@ struct suspend_bio_ops {
+ 	int (*write_cleanup) (void);
+ 	int (*read_header_chunk) (char *buffer, int buffer_size);
+ 	int (*write_header_chunk) (char *buffer, int buffer_size);
++	int (*write_header_chunk_finish) (void);
+ };
+ 
+ extern struct suspend_bio_ops suspend_bio_ops;
+diff -ruNp 9070-write-header-chunk-finish.patch-old/kernel/power/suspend_block_io.c 9070-write-header-chunk-finish.patch-new/kernel/power/suspend_block_io.c
+--- 9070-write-header-chunk-finish.patch-old/kernel/power/suspend_block_io.c	2006-01-12 14:05:19.000000000 +1000
++++ 9070-write-header-chunk-finish.patch-new/kernel/power/suspend_block_io.c	2006-01-12 11:21:39.000000000 +1000
+@@ -1018,6 +1018,13 @@ static int suspend_rw_header_chunk(int r
+ 	return rw ? 0 : buffer_size;
+ }
+ 
++static int write_header_chunk_finish(void)
++{
++	return __suspend_rw_page(WRITE,
++		virt_to_page(suspend_writer_buffer),
++		-1, 0, test_debug_state(SUSPEND_HEADER)) ? -EIO : 0;
++}
++
+ static int read_header_chunk(char *buffer, int buffer_size)
+ {
+ 	return suspend_rw_header_chunk(READ, buffer, buffer_size);
+@@ -1051,6 +1058,7 @@ struct suspend_bio_ops suspend_bio_ops =
+ 	.write_cleanup = suspend_write_cleanup,
+ 	.read_header_chunk = read_header_chunk,
+ 	.write_header_chunk = write_header_chunk,
++	.write_header_chunk_finish = write_header_chunk_finish,
+ };
+ 
+ static struct suspend_plugin_ops suspend_blockwriter_ops = 
+diff -ruNp 9070-write-header-chunk-finish.patch-old/kernel/power/suspend_file.c 9070-write-header-chunk-finish.patch-new/kernel/power/suspend_file.c
+--- 9070-write-header-chunk-finish.patch-old/kernel/power/suspend_file.c	2006-01-12 14:05:19.000000000 +1000
++++ 9070-write-header-chunk-finish.patch-new/kernel/power/suspend_file.c	2006-01-12 14:05:21.000000000 +1000
+@@ -484,12 +484,8 @@ static int filewriter_write_header_init(
+ static int filewriter_write_header_cleanup(void)
+ {
+ 	/* Write any unsaved data */
+-	if (suspend_writer_buffer_posn) {
+-		if (suspend_bio_ops.rw_page(WRITE,
+-				virt_to_page(suspend_writer_buffer),
+-				-1, 0))
+-			return -EIO;
+-	}
++	if (suspend_writer_buffer_posn)
++		suspend_bio_ops.write_header_chunk_finish();
+ 
+ 	suspend_bio_ops.finish_all_io();
+ 
+diff -ruNp 9070-write-header-chunk-finish.patch-old/kernel/power/suspend_swap.c 9070-write-header-chunk-finish.patch-new/kernel/power/suspend_swap.c
+--- 9070-write-header-chunk-finish.patch-old/kernel/power/suspend_swap.c	2006-01-12 14:05:18.000000000 +1000
++++ 9070-write-header-chunk-finish.patch-new/kernel/power/suspend_swap.c	2006-01-12 12:27:35.000000000 +1000
+@@ -578,22 +578,8 @@ static int swapwriter_write_header_clean
+ 	int result;
+ 
+ 	/* Write any unsaved data */
+-	if (suspend_writer_buffer_posn) {
+-		struct submit_params submit_params;
+-		int current_chain;
+-
+-		if (suspend_bio_ops.forward_one_page())
+-			return -EIO;
+-		
+-		current_chain = suspend_writer_posn.current_chain;
+-		submit_params.readahead_index = -1;
+-		submit_params.dev = swap_info[suspend_writer_posn.current_chain].bdev;
+-		submit_params.block[0] = suspend_writer_posn.current_offset <<
+-			devinfo[current_chain].bmap_shift;
+-		submit_params.page = virt_to_page(suspend_writer_buffer);
+-
+-		suspend_bio_ops.submit_io(WRITE, &submit_params, 0);
+-	}
++	if (suspend_writer_buffer_posn)
++		suspend_bio_ops.write_header_chunk_finish();
+ 
+ 	extent_state_goto_start(&suspend_writer_posn);
+ 	suspend_bio_ops.forward_one_page();

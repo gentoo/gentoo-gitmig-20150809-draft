@@ -1,0 +1,53 @@
+ prepare_image.c |    7 ++++---
+ suspend.c       |   12 +++++-------
+ 2 files changed, 9 insertions(+), 10 deletions(-)
+diff -ruNp 9060-clean-prepare-image-result-testing.patch-old/kernel/power/prepare_image.c 9060-clean-prepare-image-result-testing.patch-new/kernel/power/prepare_image.c
+--- 9060-clean-prepare-image-result-testing.patch-old/kernel/power/prepare_image.c	2006-01-12 13:56:09.000000000 +1000
++++ 9060-clean-prepare-image-result-testing.patch-new/kernel/power/prepare_image.c	2006-01-12 10:14:43.000000000 +1000
+@@ -744,7 +744,7 @@
+ 	header_space_allocated = 0;
+ 
+ 	if (attempt_to_freeze())
+-		return 0;
++		return 1;
+ 
+ 	if (!extra_pd1_pages_allowance)
+ 		get_extra_pd1_allowance();
+@@ -755,7 +755,7 @@
+ 		printk(KERN_ERR "You need some storage available to be able to suspend.\n");
+ 		set_result_state(SUSPEND_ABORTED);
+ 		set_result_state(SUSPEND_NOSTORAGE_AVAILABLE);
+-		return 0;
++		return 1;
+ 	}
+ 
+ 	do {
+@@ -780,5 +780,5 @@
+ 
+ 	check_shift_keys(1, "Image preparation complete.");
+ 
+-	return !result;
++	return result;
+ }
+diff -ruNp 9060-clean-prepare-image-result-testing.patch-old/kernel/power/suspend.c 9060-clean-prepare-image-result-testing.patch-new/kernel/power/suspend.c
+--- 9060-clean-prepare-image-result-testing.patch-old/kernel/power/suspend.c	2006-01-12 13:56:08.000000000 +1000
++++ 9060-clean-prepare-image-result-testing.patch-new/kernel/power/suspend.c	2006-01-12 10:29:52.000000000 +1000
+@@ -646,13 +646,11 @@
+ 	if (test_result_state(SUSPEND_KEPT_IMAGE) && check_still_keeping_image()) 
+ 		goto cleanup;
+ 
+-	if (suspend2_init() && suspend2_prepare_image() && !test_result_state(SUSPEND_ABORTED) &&
+-		!test_action_state(SUSPEND_FREEZER_TEST))
+-	{
+-		if (!test_result_state(SUSPEND_ABORTED)) {
+-			suspend2_prepare_status(DONT_CLEAR_BAR, "Starting to save the image..");
+-			save_image();
+-		}
++
++	if (suspend2_init() && !suspend2_prepare_image() && !test_result_state(SUSPEND_ABORTED) &&
++		!test_action_state(SUSPEND_FREEZER_TEST)) {
++		suspend2_prepare_status(DONT_CLEAR_BAR, "Starting to save the image..");
++		save_image();
+ 	}
+ 	
+ 	suspend2_cleanup();

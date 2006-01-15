@@ -1,4 +1,4 @@
-MD5 fdc6932a50c212e0d401b3d6abffc6f6 ChangeLog 8274
+MD5 954cdb7589e5c7f3b8b3ef96b1c61fb0 ChangeLog 8758
 MD5 8c885e50de95004ba759a137c3f93495 files/101-software-suspend-2.2-rc3-for-2.6.13-gcc4.patch 877
 MD5 a67db8b8f894652b4d1456406d307a37 files/digest-suspend2-sources-2.6.13 310
 MD5 5ff92c313009119044ed51956fb509f9 files/digest-suspend2-sources-2.6.13-r1 310
@@ -16,6 +16,7 @@ MD5 da3f42bad1e36436b75ebe041d853c0a files/digest-suspend2-sources-2.6.14-r8 303
 MD5 d7831b5753d35ae55b212e95a7bc955f files/digest-suspend2-sources-2.6.14-r9 303
 MD5 be9478be473d2185379b70443b714c65 files/digest-suspend2-sources-2.6.15 302
 MD5 514a1a6b724c2da7d174db76741c1a31 files/digest-suspend2-sources-2.6.15-r1 303
+MD5 57cb3e2f103c1f69e64ea6a48b2526cb files/digest-suspend2-sources-2.6.15-r2 305
 MD5 d1eff82a3bab3c5b67dec45a552888e4 files/linux-2.6.13-poweroff.patch 500
 MD5 4c9a2a6532217c3e54a52f6633e33c9f files/suspend2-2.2-rc13-filewriter.patch 5283
 MD5 3a1912556d15f96edb9a356555dadf67 files/suspend2-2.2-rc14-do-correct-init-routine.patch 744
@@ -31,11 +32,16 @@ MD5 d33577823e512a90a2b24754f74fdc07 files/suspend2-2.2-rc15-no-pageflags.patch 
 MD5 6cd7d0c37cc50881f3d3b0feffedb4f1 files/suspend2-2.2-rc15-pageflags.h.patch 3990
 MD5 e85851586d845a8b1d841ae93444d28b files/suspend2-2.2-rc15-processor.h.patch 583
 MD5 417ee135d00c8e35c1f576c37f55e2d8 files/suspend2-2.2-rc16-amd64-is-ram.patch 1574
+MD5 eb08f1e0877c1949bb649bd278f8ad5b files/suspend2-2.2-rc16-amd64-temporary-mapping.patch 4459
+MD5 6e588370dc66e90b705b5e87ed22dc14 files/suspend2-2.2-rc16-clean-prepare-image-result-testing.patch 2093
 MD5 9e649815f55422127e1e239627ee2971 files/suspend2-2.2-rc16-debug-rodata-define.patch 1155
+MD5 4700d50d9d279ad1d8d61aba313dcfaf files/suspend2-2.2-rc16-debug-writing-header.patch 2290
+MD5 b353a7f443c97a1681251f6657686a0d files/suspend2-2.2-rc16-filewriter-fix.patch 2344
 MD5 ff097383fa8607f8da27f2d62fe3e313 files/suspend2-2.2-rc16-remove-block-dump.patch 1037
 MD5 003a076c7965317f25792c5ee8c59b76 files/suspend2-2.2-rc16-swapwriter-selects-swap.patch 656
 MD5 7b1dd9333115cf6aa3ca5241f5f07392 files/suspend2-2.2-rc16-workqueue-post-suspend2.patch 462
 MD5 f3c382e7ff5bc9c62f303b6482a5b434 files/suspend2-2.2-rc16-workqueue-pre-suspend2.patch 480
+MD5 5c00a3bc7a4e8410fae25bef22884041 files/suspend2-2.2-rc16-write-header-chunk-finish.patch 3937
 MD5 e40cb3df546efa5003fe3778c5a50854 metadata.xml 275
 MD5 df999badafc06dd65c6f777b684ad9d6 suspend2-sources-2.6.13-r1.ebuild 2006
 MD5 5d404bb0571ae11e7702c33c9577af76 suspend2-sources-2.6.13-r2.ebuild 1967
@@ -52,4 +58,5 @@ MD5 d472627bfcb34566f5b3ef71e410737a suspend2-sources-2.6.14-r8.ebuild 2019
 MD5 e88e904ea7b2db03adb7e231ec6d95b4 suspend2-sources-2.6.14-r9.ebuild 2069
 MD5 a24f87b3199f5a851070c6ce817dc3ca suspend2-sources-2.6.14.ebuild 1758
 MD5 498a52cfb7b6046820f62cfbe3bfd7d3 suspend2-sources-2.6.15-r1.ebuild 2100
+MD5 1ca94d7fe636ae46eec711f47f67e358 suspend2-sources-2.6.15-r2.ebuild 2285
 MD5 f6140ecc2feb0c046a6d5cb812bce375 suspend2-sources-2.6.15.ebuild 1759

@@ -1,0 +1,136 @@
+ arch/x86_64/kernel/suspend.c  |    6 ---
+ include/asm-x86_64/suspend2.h |   68 ++++++++++++++++++++++++++++++++++++++++--
+ kernel/power/atomic_copy.c    |    3 +
+ 3 files changed, 69 insertions(+), 8 deletions(-)
+diff -ruNp 9020-amd64-temporary-mapping.patch-old/arch/x86_64/kernel/suspend.c 9020-amd64-temporary-mapping.patch-new/arch/x86_64/kernel/suspend.c
+--- 9020-amd64-temporary-mapping.patch-old/arch/x86_64/kernel/suspend.c	2006-01-11 16:53:54.000000000 +1000
++++ 9020-amd64-temporary-mapping.patch-new/arch/x86_64/kernel/suspend.c	2006-01-11 16:50:14.000000000 +1000
+@@ -144,7 +144,7 @@ void fix_processor_context(void)
+ 
+ }
+ 
+-#if defined(CONFIG_SOFTWARE_SUSPEND) || defined(CONFIG_SUSPEND2)
++#if defined(CONFIG_SOFTWARE_SUSPEND)
+ /* Defined in arch/x86_64/kernel/suspend_asm.S */
+ extern int restore_image(void);
+ 
+@@ -224,8 +224,4 @@ int swsusp_arch_resume(void)
+ 	return 0;
+ }
+ 
+-int suspend2_mapping_prepare(void)
+-{
+-	return set_up_temporary_mappings();
+-}
+ #endif /* CONFIG_SOFTWARE_SUSPEND */
+diff -ruNp 9020-amd64-temporary-mapping.patch-old/include/asm-x86_64/suspend2.h 9020-amd64-temporary-mapping.patch-new/include/asm-x86_64/suspend2.h
+--- 9020-amd64-temporary-mapping.patch-old/include/asm-x86_64/suspend2.h	2006-01-11 16:53:54.000000000 +1000
++++ 9020-amd64-temporary-mapping.patch-new/include/asm-x86_64/suspend2.h	2006-01-11 16:53:29.000000000 +1000
+@@ -14,7 +14,7 @@
+ #include <asm/proto.h>
+ #include <asm/page.h>
+ 
+-extern pgd_t *temp_level4_pgt;
++static pgd_t *temp_level4_pgt;
+ extern int suspend2_mapping_prepare(void);
+ 
+ /* image of the saved processor states */
+@@ -303,13 +303,77 @@ static inline void suspend2_arch_post_co
+ {
+ }
+ 
++/* Based on the version from swsusp */
++static int res_phys_pud_init(pud_t *pud, unsigned long address, unsigned long end)
++{
++	long i, j;
++
++	i = pud_index(address);
++	pud = pud + i;
++	for (; i < PTRS_PER_PUD; pud++, i++) {
++		unsigned long paddr;
++		pmd_t *pmd;
++
++		paddr = address + i*PUD_SIZE;
++		if (paddr >= end)
++			break;
++
++		pmd = (pmd_t *)suspend2_get_nonconflicting_pages(0);
++		if (!pmd)
++			return -ENOMEM;
++		set_pud(pud, __pud(__pa(pmd) | _KERNPG_TABLE));
++		for (j = 0; j < PTRS_PER_PMD; pmd++, j++, paddr += PMD_SIZE) {
++			unsigned long pe;
++
++			if (paddr >= end)
++				break;
++			pe = _PAGE_NX | _PAGE_PSE | _KERNPG_TABLE | paddr;
++			pe &= __supported_pte_mask;
++			set_pmd(pmd, __pmd(pe));
++		}
++	}
++	return 0;
++}
++
++static int set_up_temporary_mappings_suspend2(void)
++{
++	unsigned long start, end, next;
++	int error;
++
++	temp_level4_pgt = (pgd_t *)suspend2_get_nonconflicting_pages(0);
++	if (!temp_level4_pgt)
++		return -ENOMEM;
++
++	/* It is safe to reuse the original kernel mapping */
++	set_pgd(temp_level4_pgt + pgd_index(__START_KERNEL_map),
++		init_level4_pgt[pgd_index(__START_KERNEL_map)]);
++
++	/* Set up the direct mapping from scratch */
++	start = (unsigned long)pfn_to_kaddr(0);
++	end = (unsigned long)pfn_to_kaddr(end_pfn);
++
++	for (; start < end; start = next) {
++		pud_t *pud = (pud_t *)suspend2_get_nonconflicting_pages(0);
++		if (!pud)
++			return -ENOMEM;
++		next = start + PGDIR_SIZE;
++		if (next > end)
++			next = end;
++		if ((error = res_phys_pud_init(pud, __pa(start), __pa(next))))
++			return error;
++		set_pgd(temp_level4_pgt + pgd_index(start),
++			mk_kernel_pgd(__pa(pud)));
++	}
++	return 0;
++}
++
+ static inline void suspend2_arch_pre_copyback(void)
+ {
+ 	/* We want to run from swsusp_pg_dir, since swsusp_pg_dir is stored in
+ 	 * constant place in memory.
+ 	 */
+ 
+-	suspend2_mapping_prepare();
++	set_up_temporary_mappings_suspend2();
+ 
+ 	asm volatile ("movq	$0xffff810000000000, %rdx");
+ 	asm volatile ("movq	temp_level4_pgt(%rip), %rax");
+diff -ruNp 9020-amd64-temporary-mapping.patch-old/kernel/power/atomic_copy.c 9020-amd64-temporary-mapping.patch-new/kernel/power/atomic_copy.c
+--- 9020-amd64-temporary-mapping.patch-old/kernel/power/atomic_copy.c	2006-01-11 16:53:55.000000000 +1000
++++ 9020-amd64-temporary-mapping.patch-new/kernel/power/atomic_copy.c	2006-01-11 16:30:07.000000000 +1000
+@@ -5,7 +5,6 @@
+ #include <linux/highmem.h>
+ #include <linux/kthread.h>
+ #include <asm/setup.h>
+-#include <asm/suspend2.h>
+ #include <asm/param.h>
+ #include <asm/thread_info.h>
+ #include "suspend2_common.h"
+@@ -21,6 +20,8 @@
+ #include "debug_pagealloc.h"
+ #include "storage.h"
+ 
++#include <asm/suspend2.h>
++
+ volatile static int state1 __nosavedata = 0;
+ volatile static int state2 __nosavedata = 0;
+ volatile static int state3 __nosavedata = 0;
