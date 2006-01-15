@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-cvs/v4l-dvb-cvs-0.1.ebuild,v 1.1 2006/01/08 17:36:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-cvs/v4l-dvb-cvs-0.1.ebuild,v 1.2 2006/01/15 13:10:13 zzam Exp $
 
 
-inherit linux-mod eutils
+inherit linux-mod eutils toolchain-funcs
 
 ECVS_ANON="yes"
 ECVS_CVS_OPTIONS="-dP"
@@ -19,7 +19,7 @@ DESCRIPTION="CVS-Version of v4l&dvb-driver for Kernel 2.6"
 SRC_URI=""
 HOMEPAGE="http://www.linuxtv.org"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -46,8 +46,9 @@ src_unpack() {
 	MY_MAKE_OPTS="KDIR=${KV_DIR}"
 
 	cd ${S}
-	unset ARCH
+	export ARCH=$(tc-arch-kernel)
 	make links ${MY_MAKE_OPTS} >/dev/null
+	export ARCH=$(tc-arch)
 
 	# apply local patches
 	if test -n "${DVB_LOCAL_PATCHES}";
@@ -81,6 +82,7 @@ src_install() {
 	# install the modules
 	make {v4l,dvb}-install DESTDIR="${D}" \
 		DEST="/lib/modules/${KV_FULL}/${PN}" \
+		KERNELRELEASE=${KV_FULL} SUBLEVEL=${KV_PATCH} PATCHLEVEL=${KV_MINOR} \
 	|| die "make install failed"
 
 	cd ${S}/..
