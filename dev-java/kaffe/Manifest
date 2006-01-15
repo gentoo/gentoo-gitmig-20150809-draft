@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 879cdbf2167b4dcaa498fed29f8d1173 ChangeLog 6699
 MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4 64
 MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4-r1 64
@@ -16,3 +19,10 @@ MD5 f1d64d96296bdad2ade674b87f24c17b kaffe-1.1.5.ebuild 1397
 MD5 41e4973adbbe9f3852fe29d2408c93d2 kaffe-1.1.6-r2.ebuild 3177
 MD5 8e843f11037571fd8c1f031874443033 kaffe-1.1.6.ebuild 3109
 MD5 d63ca386275c4844b0c8211d76e01d6f metadata.xml 542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyptnndWRXhKOboURAnMNAJ9OvSbVXygdsz3DTyKIyXiI1SOSbQCglbqi
+d6WT3FahZ7fBLFhLvsgSfhM=
+=spht
+-----END PGP SIGNATURE-----
