@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.31 2005/12/16 11:18:07 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.32 2006/01/15 11:48:51 blubb Exp $
+
+  15 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  gnustep-back-art-0.9.5.ebuild:
+  stable on amd64
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   gnustep-back-art-0.9.6-r1.ebuild:
