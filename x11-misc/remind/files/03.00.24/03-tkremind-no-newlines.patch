@@ -1,0 +1,23 @@
+diff -Naur remind-03.00.24/scripts/tkremind remind/scripts/tkremind
+--- remind-03.00.24/scripts/tkremind	2005-04-14 19:34:34.000000000 +0200
++++ remind/scripts/tkremind	2006-01-15 15:50:55.000000000 +0100
+@@ -1240,7 +1240,8 @@
+ 		lappend ans "-global-$winstem" [eval set $winstem]
+ 	    }
+ 	    "Entry" {
+-		lappend ans "-entry-$winstem" [$win get]
++	    	# Do not put newlines in the reminder files
++		lappend ans "-entry-$winstem" [string map -nocase {"\n" " "} [$win get]]
+ 	    }
+ 	}
+     }
+@@ -1519,7 +1520,8 @@
+ 	regsub -- {^-stdin-\([0-9]*\): } $err {} err
+ 	error "Error from Remind: $err"
+     }
+-    append rem " MSG $body"
++    # Do not include newline characters after MSG
++    append rem " MSG " [string map -nocase {"\n" " "} $body]
+     return $rem
+ }
+ 

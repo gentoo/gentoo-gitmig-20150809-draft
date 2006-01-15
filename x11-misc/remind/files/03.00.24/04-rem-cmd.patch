@@ -1,0 +1,12 @@
+diff -Naur remind-03.00.24/src/dorem.c remind/src/dorem.c
+--- remind-03.00.24/src/dorem.c	2005-11-20 02:26:59.000000000 +0100
++++ remind/src/dorem.c	2006-01-15 15:55:28.000000000 +0100
+@@ -880,7 +880,7 @@
+ 	    }
+ 	}
+     }
+-    if (l >= 0 && DBufPutc(&execBuffer, cmd[l]) != OK) {
++    if (l!=(i-1) && l >= 0 && DBufPutc(&execBuffer, cmd[l]) != OK) {
+ 	r = E_NO_MEM;
+ 	goto finished;
+     }

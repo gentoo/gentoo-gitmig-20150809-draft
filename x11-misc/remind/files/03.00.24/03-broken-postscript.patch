@@ -1,0 +1,11 @@
+diff -Naur remind-03.00.24/src/rem2ps.c remind/src/rem2ps.c
+--- remind-03.00.24/src/rem2ps.c	2005-09-30 05:29:32.000000000 +0200
++++ remind/src/rem2ps.c	2006-01-15 15:48:26.000000000 +0100
+@@ -601,7 +601,6 @@
+ 	    PutChar(')');
+ 	    while(isspace((unsigned char)*s)) s++;
+ 	    if (!*s) {
+-		printf("]\n");
+ 		goto finish;
+ 	    }
+ 	    PutChar('(');

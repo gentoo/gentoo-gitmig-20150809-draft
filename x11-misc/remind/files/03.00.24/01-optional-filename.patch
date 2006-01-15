@@ -1,0 +1,100 @@
+diff -Naur remind-03.00.24/man/remind.1 remind/man/remind.1
+--- remind-03.00.24/man/remind.1	2005-09-30 05:33:53.000000000 +0200
++++ remind/man/remind.1	2006-01-15 15:40:42.000000000 +0100
+@@ -4,7 +4,7 @@
+ .SH NAME
+ remind \- a sophisticated reminder service
+ .SH SYNOPSIS
+-.B remind [\fIoptions\fR] \fIfilename\fR [\fIdate\fR] [\fI*rep\fR] [\fItime\fR]
++.B remind [\fIoptions\fR] [\fIfilename\fR [\fIdate\fR] [\fI*rep\fR] [\fItime\fR] ]
+ .SH DESCRIPTION
+ \fBRemind\fR reads the supplied \fIfilename\fR and executes the commands
+ found in it.  The commands are used to issue reminders and alarms.  Each
+@@ -13,7 +13,9 @@
+ .PP
+ If \fIfilename\fR is specified as a single dash '-', then \fBRemind\fR
+ takes its input from standard input.  This also implicitly enables
+-the \fB\-o\fR option, described below.
++the \fB\-o\fR option, described below. If no filename is given, remind uses
++\fI~/.reminders\fR or the content of the DOT_REMINDERS environment
++variable.
+ .SH OPTIONS
+ \fBRemind\fR has a slew of options.  If you're new to the program,
+ ignore them for now and skip to the section "Reminder Files".
+diff -Naur remind-03.00.24/src/init.c remind/src/init.c
+--- remind-03.00.24/src/init.c	2005-09-30 05:29:32.000000000 +0200
++++ remind/src/init.c	2006-01-15 15:40:42.000000000 +0100
+@@ -32,6 +32,8 @@
+ #include "version.h"
+ #include "globals.h"
+ 
++#define DOT_REMINDERS ".reminders"
++
+ /***************************************************************
+  *
+  *  Command line options recognized:
+@@ -87,6 +89,30 @@
+ 
+ /***************************************************************/
+ /*                                                             */
++/*  DefaultReminders                                           */
++/*                                                             */
++/*  Detect a default reminder file                             */
++/*                                                             */
++/***************************************************************/
++
++char* DefaultReminders()
++{
++    char *dot_reminders;
++    char *home;
++    size_t len;
++    if((dot_reminders=getenv("DOT_REMINDERS")))
++	return dot_reminders;
++    else if((home=getenv("HOME"))) {
++	len = strlen(home) + strlen(DOT_REMINDERS) + 2;
++	dot_reminders = (char*)malloc(len);
++	snprintf(dot_reminders, len, "%s/%s", home, DOT_REMINDERS);
++	return dot_reminders;
++    }
++    else return DOT_REMINDERS;
++}
++
++/***************************************************************/
++/*                                                             */
+ /*  InitRemind                                                 */
+ /*                                                             */
+ /*  Initialize the system - called only once at beginning!     */
+@@ -348,11 +374,8 @@
+     }
+ 
+     /* Get the filename. */
+-    if (i >= argc) {
+-	Usage();
+-	exit(1);
+-    }
+-    InitialFile = argv[i++];
++    if (i >= argc) InitialFile = DefaultReminders(); 
++    else InitialFile = argv[i++];
+ 
+     /* Get the date, if any */
+     if (i < argc) {
+@@ -448,7 +471,7 @@
+ #ifdef BETA
+     fprintf(ErrFp, ">>>> BETA VERSION <<<<\n");
+ #endif
+-    fprintf(ErrFp, "Usage: remind [options] filename [date] [time] [*rep]\n");
++    fprintf(ErrFp, "Usage: remind [options] [filename [date] [time] [*rep] ]\n");
+     fprintf(ErrFp, "Options:\n");
+     fprintf(ErrFp, " -n     Output next occurrence of reminders in simple format\n");
+     fprintf(ErrFp, " -r     Disable RUN directives\n");
+diff -Naur remind-03.00.24/src/protos.h remind/src/protos.h
+--- remind-03.00.24/src/protos.h	2005-09-30 05:29:32.000000000 +0200
++++ remind/src/protos.h	2006-01-15 15:42:11.000000000 +0100
+@@ -45,6 +45,7 @@
+ int SetAccessDate (char *fname, int jul);
+ int TopLevel (void);
+ int CallFunc (Operator *f, int nargs);
++char *DefaultReminders (void);
+ void InitRemind (int argc, char *argv[]);
+ void Usage (void);
+ int main (int argc, char *argv[]);
