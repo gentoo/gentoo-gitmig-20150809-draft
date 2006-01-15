@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre12.ebuild,v 1.5 2005/09/17 02:02:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre12.ebuild,v 1.6 2006/01/15 13:11:56 nelchael Exp $
 
 inherit eutils
 
@@ -13,8 +13,22 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
 
 IUSE=""
-DEPEND="virtual/x11
+
+RDEPEND="|| ( (
+			x11-libs/libXtst
+			x11-libs/libX11
+			x11-libs/libXmu
+			x11-libs/libXt
+			x11-libs/libXext )
+		virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xproto )
+	virtual/x11 )
 	>=sys-apps/sed-4"
+
 S="${WORKDIR}/${P/_/}"
 
 src_unpack() {
