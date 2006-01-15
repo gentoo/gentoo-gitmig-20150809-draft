@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Memory-Cycle
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.5 2005/12/14 07:19:47 cardoe Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.6 2006/01/15 17:47:33 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Memory-Cycle-1.02.ebuild:
+  marking stable sparc x86
 
   14 Dec 2005; Doug Goldstein <cardoe@gentoo.org>
   Test-Memory-Cycle-1.02.ebuild:
