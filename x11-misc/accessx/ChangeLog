@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/accessx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.18 2005/11/02 19:03:12 nelchael Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.19 2006/01/15 15:59:25 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -accessx-0950-r1.ebuild, accessx-0951.ebuild:
+  Fixed DEPEND for modular X.
 
   02 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -accessx-0950.ebuild,
   accessx-0951.ebuild:
