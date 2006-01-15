@@ -1,12 +1,22 @@
-MD5 16dbb12a6bfc7182bf6b0bcd9abd8e6b ChangeLog 1139
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6dc518a739696784f6c173aa6f9813ef ChangeLog 1359
 MD5 92b9af1bbae1bb2cd67c5e4eb996b986 files/digest-flagedit-0.0.2 65
 MD5 6408f28d6916ebe9f93105cd20de82e8 files/digest-flagedit-0.0.3 65
 MD5 a1d207ee2d2cbcad738c791c7fea13ec files/digest-flagedit-0.0.4 65
 MD5 cab365bea06e31e948a56f17ee10f435 files/digest-flagedit-0.0.5 65
 MD5 521120f8b13d127647a16e274c79f2e7 files/digest-flagedit-0.0.7 65
-MD5 90ecdaf495143836015f6096f6c754ac flagedit-0.0.2.ebuild 590
-MD5 cd2b3c6e675a5f16322721fc6b3dacdb flagedit-0.0.3.ebuild 589
-MD5 62f30c1ad6d39d573909ab57585a5a6e flagedit-0.0.4.ebuild 589
-MD5 6e3b70a008b734c2b88a52de0372d82b flagedit-0.0.5.ebuild 587
-MD5 95079a1064054e1a377fd29bedca171f flagedit-0.0.7.ebuild 589
+MD5 88cf61ba2e1f14b4474a4ab87fb3b98e flagedit-0.0.2.ebuild 603
+MD5 8f0075605581970c95ce45049b090af6 flagedit-0.0.3.ebuild 603
+MD5 58f9b0f59769e2e74a2d6a157300bf0b flagedit-0.0.4.ebuild 603
+MD5 b3e4af2442164688698b62424cf71f13 flagedit-0.0.5.ebuild 601
+MD5 fdebfea61406d3b4788c0fa267152434 flagedit-0.0.7.ebuild 603
 MD5 b65665d43270676b80e0389cf877dbb3 metadata.xml 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyowTtG5z4I8BtQoRAl/sAJ9w+XBLpvuRAEtDXnNRhYU47GScTwCdEziw
+57bUA3HWJm8DcmsROIqya34=
+=WTuv
+-----END PGP SIGNATURE-----
