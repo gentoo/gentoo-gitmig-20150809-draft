@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b155f88854eaedd7a99351e0cde1cf2 ChangeLog 1978
+MD5 df085c410613792e491529923026be3c ChangeLog 2074
 MD5 148d34221de46dcef9623fcbdac5791d File-Remove-0.20.ebuild 577
 MD5 425705ce96b1b96c67394b38cb74bc53 File-Remove-0.21.ebuild 555
 MD5 94dffa16810317df74296f37b6116a1a File-Remove-0.29.ebuild 565
-MD5 0dab8c9db0f2a8605578fd0845d088fb File-Remove-0.30.ebuild 564
+MD5 d1258c48bd1df71ca305a153b04cab30 File-Remove-0.30.ebuild 560
 MD5 cec2ba326b0269d089101cdd5ae22309 File-Remove-0.31.ebuild 566
 MD5 8c0ccdccb87f15924ea07db8c351ac26 files/digest-File-Remove-0.20 65
 MD5 6b270e3cb4b8efd02e008f12ac5baa33 files/digest-File-Remove-0.21 66
@@ -13,10 +10,3 @@ MD5 c3933831892b78883367423c819e7d42 files/digest-File-Remove-0.29 66
 MD5 2781493537f9946b8be8a000cbbfdcac files/digest-File-Remove-0.30 66
 MD5 821d3be17ad62b52e6e7cbe3098a2751 files/digest-File-Remove-0.31 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyBHztG5z4I8BtQoRAixTAJ9lPDWRhL3KmL8Kub4HYwPuavgVyACfYkiC
-gFHDP7D8xGoefNWOcQXWBP8=
-=1FAA
------END PGP SIGNATURE-----
