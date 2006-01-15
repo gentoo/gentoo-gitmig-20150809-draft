@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d441ea5beb7ab6d3aafc4b95c78c126 ChangeLog 1601
+MD5 5d61d2da8d85b1b41f9d8cc53e50738f ChangeLog 1774
 MD5 4c6cac29aa5eaec6ae74cbd9988a61d9 files/digest-hugin-0.5 62
 MD5 549db5b9b4146eb8aff8a35d39eabf1e files/digest-hugin-0.5_rc1-r2 67
+MD5 b8fcbff3c90dbf2257a5414317c33d32 files/hugin-0.5-gcc41.patch 1667
 MD5 6cf4d590cbb78ac98c424c8d58d1cc4f files/hugin-0.5_rc2-gcc4.patch 1356
-MD5 0970e5fc1e465125afee313f4d22683c hugin-0.5.ebuild 1417
+MD5 bf55cee24d6f3ec3ad386d9a84822535 hugin-0.5.ebuild 1477
 MD5 497db1fa2082827dd88807dffec1fe22 hugin-0.5_rc1-r2.ebuild 1483
 MD5 958a93f482686868d880a8b448d0899d metadata.xml 324
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpQ9jCRZPokWLroQRAo11AJwNaY+OTtykkoE6cHDkto+Kb7RevACgssI8
-RZuFC4HnJRy2eCRSUIXYptg=
-=V8Oy
+iD8DBQFDyr75CRZPokWLroQRAmApAKCLe+WZjwgKo9Sn8b/2MAnExfhFgQCdFfzd
+PqNSTVgy5jTxLTjrT+nuZvI=
+=XIOg
 -----END PGP SIGNATURE-----

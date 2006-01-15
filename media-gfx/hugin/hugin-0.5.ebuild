@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5.ebuild,v 1.1 2005/12/18 07:27:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5.ebuild,v 1.2 2006/01/15 21:30:23 halcy0n Exp $
 
 inherit wxwidgets eutils
 
@@ -18,10 +18,13 @@ DEPEND=">=media-libs/libpano12-2.7.0.8
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/jpeg
-		media-libs/tiff"
+		media-libs/tiff
+		media-gfx/enblend"
 
 src_unpack() {
 	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 
 	sed -i -e 's/autopanog\.exe/autopanog/' "${S}"/src/include/hugin/config_defaults.h
 }

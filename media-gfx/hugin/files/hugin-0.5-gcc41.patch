@@ -1,0 +1,40 @@
+diff -ur hugin-0.5-orig/src/include/PT/Panorama.h hugin-0.5/src/include/PT/Panorama.h
+--- hugin-0.5-orig/src/include/PT/Panorama.h	2005-12-26 21:35:42.000000000 -0500
++++ hugin-0.5/src/include/PT/Panorama.h	2005-12-26 21:36:14.000000000 -0500
+@@ -542,7 +542,7 @@
+      *
+      *  only copies inherited variables
+      */
+-    void Panorama::updateLensToImages(unsigned int lensNr);
++    void updateLensToImages(unsigned int lensNr);
+ 
+     /** copy lens variables to image variables.
+      *  update all images that use lensNr
+diff -ur hugin-0.5-orig/src/include/PT/PanoramaMemento.h hugin-0.5/src/include/PT/PanoramaMemento.h
+--- hugin-0.5-orig/src/include/PT/PanoramaMemento.h	2005-12-26 21:35:57.000000000 -0500
++++ hugin-0.5/src/include/PT/PanoramaMemento.h	2005-12-26 21:34:00.000000000 -0500
+@@ -154,7 +154,7 @@
+     double getHFOV() const;
+ 
+     /** set HFOV in degrees */
+-    void Lens::setHFOV(double d);
++    void setHFOV(double d);
+ 
+     /** get focal length of lens, it is calculated from the HFOV */
+     double getFocalLength() const;
+@@ -389,13 +389,13 @@
+     void printScriptLine(std::ostream & o) const;
+ 
+     /// return string name of output file format
+-    static const std::string & PanoramaOptions::getFormatName(FileFormat f);
++    static const std::string & getFormatName(FileFormat f);
+ 
+     /** returns the FileFormat corrosponding to name.
+      *
+      *  if name is not recognized, FileFormat::TIFF is returned
+      */
+-    static FileFormat PanoramaOptions::getFormatFromName(const std::string & name);
++    static FileFormat getFormatFromName(const std::string & name);
+ 
+     /** calculate height of the output panorama
+      *
