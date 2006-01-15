@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8ffd45f5c77569e82c6c32f4c2932c41 ChangeLog 997
 MD5 2a11e86072c1179c939ff7d3cf22436b Text-Levenshtein-0.05.ebuild 514
 MD5 99cef1977d5520d0463137c9a87f4390 files/digest-Text-Levenshtein-0.05 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyor7tG5z4I8BtQoRAgYgAJ9PYcYkcZH37NW1PITzXQpv3BuDrACfUT8L
+lFfadigZxXXLmZz3lsrDmFo=
+=1cdD
+-----END PGP SIGNATURE-----

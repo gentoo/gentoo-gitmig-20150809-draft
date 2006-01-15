@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28419d855637ef420816cdbe28525436 ChangeLog 842
 MD5 da1bba7ec76ffac82a6d3bd174ad7582 Text-Unaccent-1.08.ebuild 534
 MD5 2b8e34ea6f33d943306d6ff4b0049e8e files/digest-Text-Unaccent-1.08 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyosxtG5z4I8BtQoRAsWGAKCNlLht7F67gzP7tPyf1Af3rqoC1QCfU5tl
+Ei4YUX7kvFIBfj1ewsBTVho=
+=MLbo
+-----END PGP SIGNATURE-----
