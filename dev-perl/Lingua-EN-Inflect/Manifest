@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 607f3163d8d9d9e81340b6a3dce03de7 ChangeLog 1243
+MD5 ce4647553b5547b7d5798fb0e59cbb79 ChangeLog 1345
 MD5 e5675d85c9f8776cf97fe78e6a18dd90 Lingua-EN-Inflect-1.88.ebuild 531
-MD5 31ff1f30c636d1f5e6dcb5d9f555d864 Lingua-EN-Inflect-1.89.ebuild 550
+MD5 7b3075faeffe33e808376ee413827653 Lingua-EN-Inflect-1.89.ebuild 546
 MD5 5888c1e9be9835b7ba6c77b5c591b933 files/digest-Lingua-EN-Inflect-1.88 73
 MD5 bc5d2b9ad9e026b40fed36d9c56e71a5 files/digest-Lingua-EN-Inflect-1.89 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyB2ctG5z4I8BtQoRAj8lAKCBB0x9VptJxGAgaOHkPSV4XJAAwwCeLoy5
-at320owgI3Yl3X2rxzyIv3g=
-=LgBS
------END PGP SIGNATURE-----
