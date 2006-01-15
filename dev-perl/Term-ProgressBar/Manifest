@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4408a8719ab8bef3b7f23c1bb0e1d325 ChangeLog 2277
+MD5 4320e200a1430bb7b1f8846817f22222 ChangeLog 2378
 MD5 fcfe8416783ca4ce58ded673b6f5ffba Term-ProgressBar-2.06-r1.ebuild 618
-MD5 e2f6cf586701838bda146d04d6cf68c4 Term-ProgressBar-2.09.ebuild 602
+MD5 d29a0000d353ebd014a362e78b8d97b0 Term-ProgressBar-2.09.ebuild 598
 MD5 cddf5a7ef6c653864d83a61836a18f89 files/digest-Term-ProgressBar-2.06-r1 75
 MD5 83c5f931597ddb7c5ac80d414ccfdc13 files/digest-Term-ProgressBar-2.09 72
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyCgHtG5z4I8BtQoRAjpRAJ0VvbPjlJdtBBkmQNSJGh64xW+prQCfRixv
-f1+gJ8bBW0s/NzYa61VQydo=
-=+O6U
------END PGP SIGNATURE-----
