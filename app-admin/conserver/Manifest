@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e4fbbf5cdcde8513f588bd52c6e7b184 conserver-8.1.5.ebuild 1975
-MD5 d4a8757dd8fd8e596cc1e76d38ce8181 conserver-8.1.11.ebuild 2150
-MD5 0e6dedf3b40e9a2fcbb7afbc3c5b17b2 ChangeLog 5905
+MD5 4da894e67c8bf35b8183e30565da62d1 ChangeLog 6025
 MD5 b675e5fadf569a18cdaffb6bce06dd24 conserver-8.1.11-r1.ebuild 2221
-MD5 db109ae3e620120b654118ff198a9d0a metadata.xml 1062
-MD5 9350f4c960a6d72a525857cd3ad5b1a6 files/digest-conserver-8.1.11 68
-MD5 2e7603feaff187884dd9b1e66601f02b files/conserver.pam 382
-MD5 f5a67a54ac210a8747b3790d28589f1d files/digest-conserver-8.1.5 67
-MD5 9350f4c960a6d72a525857cd3ad5b1a6 files/digest-conserver-8.1.11-r1 68
-MD5 609774f17b0470a793fb7791278e270d files/conserver.pam-include 210
+MD5 d4a8757dd8fd8e596cc1e76d38ce8181 conserver-8.1.11.ebuild 2150
+MD5 7cd546128320ea6cfa20b818948f1eb4 conserver-8.1.13.ebuild 2220
+MD5 e4fbbf5cdcde8513f588bd52c6e7b184 conserver-8.1.5.ebuild 1975
 MD5 a42dde46eb6704092cf513ff732d8b43 files/conserver.confd 288
 MD5 bc6ee1aa7fdefaa6d2f54494deb7f920 files/conserver.initd 1172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHBQG3og80iZgVQgRApFFAJsFyp8s7UajJ8yrIZG6CiqQ/T1WwQCgqt8Y
-JyVd/4nRNO5WtkcgHtW4kFU=
-=d2XA
------END PGP SIGNATURE-----
+MD5 2e7603feaff187884dd9b1e66601f02b files/conserver.pam 382
+MD5 609774f17b0470a793fb7791278e270d files/conserver.pam-include 210
+MD5 9350f4c960a6d72a525857cd3ad5b1a6 files/digest-conserver-8.1.11 68
+MD5 9350f4c960a6d72a525857cd3ad5b1a6 files/digest-conserver-8.1.11-r1 68
+MD5 6dd000e1999a9313956c89a5ba815007 files/digest-conserver-8.1.13 68
+MD5 f5a67a54ac210a8747b3790d28589f1d files/digest-conserver-8.1.5 67
+MD5 db109ae3e620120b654118ff198a9d0a metadata.xml 1062
