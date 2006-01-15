@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r1.ebuild,v 1.1 2006/01/15 00:20:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r1.ebuild,v 1.2 2006/01/15 00:23:55 genstef Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ src_unpack() {
 
 	# Brother HL-12XX support
 	cp ${FILESDIR}/gdevhl12.c ${S}/src/gdevhl12.c || die
-        cat ${FILESDIR}/gdevhl12-hl1250.mak >> ${S}/src/devs.mak || die
+	cat ${FILESDIR}/gdevhl12-hl1250.mak >> ${S}/src/devs.mak || die
 	sed 's#^\(DEVICE_DEVS6=.*\)$#\1 $(DD)hl1240.dev $(DD)hl1250.dev#' \
 		-i ${S}/src/Makefile.in || die
 }
@@ -106,13 +106,13 @@ src_compile() {
 	# build ijs
 	cd ijs
 	./autogen.sh
-	econf --prefix=${D}/usr || die "econf failed"
+	econf || die "econf failed"
 	emake || die "emake failed"
 	cd ..
 }
 
 src_install() {
-	einstall install_prefix=${D} soinstall
+	einstall D=/ install_prefix=${D} soinstall
 
 	rm -fr ${D}/usr/share/ghostscript/${PV}/doc || die
 	dodoc doc/README
@@ -132,5 +132,5 @@ src_install() {
 	# install ijs
 	cd ${S}/ijs
 	dodir /usr/bin /usr/include /usr/lib
-	einstall install_prefix=${D}
+	einstall D=/ install_prefix=${D}
 }

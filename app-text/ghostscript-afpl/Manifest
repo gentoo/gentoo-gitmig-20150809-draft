@@ -1,4 +1,4 @@
-MD5 cc75e38fc67211e83b8e33d30b12cf00 ChangeLog 4535
+MD5 2dd46aec43eb8634f7b2c408feccf6f5 ChangeLog 4645
 MD5 e10b8f4566648e7bc09f6b7336d74b2d files/digest-ghostscript-afpl-8.15 280
 MD5 cc1e3a109091c74903b8607870a89016 files/digest-ghostscript-afpl-8.53 281
 MD5 93f779532d9efb34337bc06b23f288d6 files/digest-ghostscript-afpl-8.53-r1 281
@@ -9,6 +9,6 @@ MD5 dbdb3cd0aea8f9032baa11bc335d181a files/gs-8.11-ijs.patch 757
 MD5 0a7cbf3d9b9644442d7521969cdb9efd files/gs852-lib.patch 4045
 MD5 dbaa6966d91fc14f9460882e8686c44e files/rinkj.patch 1353
 MD5 b662c27eb9c0bce8d365d1c081d5af54 ghostscript-afpl-8.15.ebuild 3347
-MD5 6779bde6142c0f38f7001a299133cec1 ghostscript-afpl-8.53-r1.ebuild 3944
+MD5 f73241fc89a26cf83270db3291cd2879 ghostscript-afpl-8.53-r1.ebuild 3927
 MD5 f7d1dac4064e1cb2c7a59d92b0258667 ghostscript-afpl-8.53.ebuild 3683
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
