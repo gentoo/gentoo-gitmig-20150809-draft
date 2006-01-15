@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdockapp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.24 2005/11/03 20:37:02 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.25 2006/01/15 14:25:55 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/install-paths.patch-0.5.0-r1, -libdockapp-0.5.0-r1.ebuild,
+  libdockapp-0.6.0.ebuild:
+  Fixed DEPEND for modular X (bug #118261), removed old version.
 
   03 Nov 2005; Luis Medinas <metalgod@gentoo.org> libdockapp-0.6.0.ebuild:
   Marked Stable on amd64.

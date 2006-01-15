@@ -1,19 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b402641472ccab9c544f9952e6d765f ChangeLog 3524
-MD5 343593eb3d4db7ce043a12878ae1949e files/digest-libdockapp-0.5.0-r1 69
+MD5 806d3f1101980ed9f25f4a1a77f13ed6 ChangeLog 3738
 MD5 6cc13b5b510882fd40013a8a35b6725f files/digest-libdockapp-0.6.0 69
-MD5 a70c186c6965fe64569ea3cb109adad9 files/install-paths.patch-0.5.0-r1 1837
 MD5 40670187d13933635b287522420fa9f2 files/install-paths.patch-0.6.0 514
 MD5 0ef2deedbab54627102e1e97fcf4cb9a files/legacy.patch-0.6.0 395
-MD5 bdfff5e10e5ac87947825496dc70ce2a libdockapp-0.5.0-r1.ebuild 2020
-MD5 a13702840981856a86b3d4cabe75e0a5 libdockapp-0.6.0.ebuild 2014
+MD5 75822f3430762ea27ac85903efc5d0b3 libdockapp-0.6.0.ebuild 2187
 MD5 6d7c8273694466206e24aefb3fc0b5b4 metadata.xml 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDanSAwUpWvClEHQoRAkLvAJ4oca3scNNkv+RzT2c8yF/pn5LrOQCfTjrC
-A6Ek7bTuopYcY749GhI83TE=
-=Wx50
------END PGP SIGNATURE-----
