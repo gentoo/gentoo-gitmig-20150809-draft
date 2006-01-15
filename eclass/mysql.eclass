@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.6 2006/01/14 19:00:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.7 2006/01/15 13:26:51 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -16,9 +16,9 @@ S="${WORKDIR}/${PN}"
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
-NEWP="${PN}-${PV/_/-}"
+NEWP="${P/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20060114.tar.bz2"
+	mirror://gentoo/mysql-extras-20060115.tar.bz2"
 LICENSE="GPL-2"
 IUSE="big-tables berkdb debug minimal perl selinux ssl static"
 RESTRICT="primaryuri"
@@ -120,7 +120,7 @@ mysql_src_unpack() {
 		popd &>/dev/null
 	done
 
-	if ! useq bdbdir && ! mysql_check_version_range "5.01.00.00 to 5.01.06.99"
+	if useq berkdb && ! mysql_check_version_range "5.01.00.00 to 5.01.06.99"
 	then
 		[[ -w "${bdbdir}/ltmain.sh" ]] && cp -f ltmain.sh "${bdbdir}/ltmain.sh"
 		pushd "${bdbdir}" && sh s_all || die "failed bdb reconfigure" &>/dev/null
