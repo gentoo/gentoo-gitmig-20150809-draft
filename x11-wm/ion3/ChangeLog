@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion3
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.29 2005/12/10 22:31:44 twp Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.30 2006/01/15 17:33:07 twp Exp $
+
+  15 Jan 2006; Tom Payne <twp@gentoo.org> -ion3-20050116.ebuild:
+  Remove old version. ion3 is still under development and should not be marked
+  stable.
 
 *ion3-20051210 (10 Dec 2005)
 
