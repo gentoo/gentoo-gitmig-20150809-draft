@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xplanet
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.56 2005/11/19 13:20:54 killerfox Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.57 2006/01/15 12:36:47 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -xplanet-1.1.1.ebuild,
+  -xplanet-1.1.2-r1.ebuild:
+  Removed old versions.
 
   19 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org> xplanet-1.2.0.ebuild:
   Stable on hppa.
