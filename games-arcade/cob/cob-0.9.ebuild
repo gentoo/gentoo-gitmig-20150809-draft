@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/cob-0.9.ebuild,v 1.7 2005/10/30 03:33:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/cob-0.9.ebuild,v 1.8 2006/01/15 14:30:05 mr_bones_ Exp $
 
 inherit games
 
@@ -14,6 +14,16 @@ KEYWORDS="~alpha ~amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# gcc34 compile fix (bug #119061)
+	sed -i \
+		-e '195 s/;//' \
+		cob/sdw.hxx \
+		|| die "sed failed"
+}
 
 src_install() {
 	egamesinstall || die "egamesinstall failed"

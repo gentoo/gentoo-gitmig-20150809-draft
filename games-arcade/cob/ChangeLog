@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/cob
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.4 2005/10/30 03:33:36 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.5 2006/01/15 14:30:05 mr_bones_ Exp $
+
+  15 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> cob-0.9.ebuild:
+  gcc34 compile fix (bug #119061)
 
   30 Oct 2005; Jason Wever <weeve@gentoo.org> cob-0.9.ebuild:
   Added ~sparc keyword.
