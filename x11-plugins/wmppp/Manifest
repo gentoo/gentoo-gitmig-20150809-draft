@@ -1,4 +1,4 @@
-MD5 7468b739ee6eca89f2183e3aa9e6738a wmppp-1.3.0.ebuild 713
-MD5 d04c04185414f6c508763a9cc2e0408b ChangeLog 821
-MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 b6dec5b636646d36af1ccb412c6f44d9 ChangeLog 928
 MD5 4400a05794189fba85296c0ad90190f0 files/digest-wmppp-1.3.0 62
+MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 4dac62e96b2d54788957c02f2318d502 wmppp-1.3.0.ebuild 844
