@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.62 2006/01/11 21:27:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.63 2006/01/15 22:52:21 flameeyes Exp $
+
+  15 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/gxine-0.5.1-pixmap-fixup.patch, -files/gxine-0.5.2-nolirc.patch,
+  -gxine-0.5.1-r1.ebuild, -gxine-0.5.2-r1.ebuild, -gxine-0.5.3.ebuild:
+  Drop old versions.
 
 *gxine-0.5.3-r1 (11 Jan 2006)
 
