@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4866 2006/01/15 12:56:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4867 2006/01/15 17:25:35 twp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tom Payne <twp@gentoo.org> (15 Jan 2006)
+# sys-fs/convertfs is broken. Masked pending likely removal. Bug # 107635.
+sys-fs/convertfs
 
 # Peter Johanson <latexer@gentoo.org> (14 Jan 2006)
 # Masking mono-1.1.13.1 til Mono.Posix changes can be fixed in consuming applications
