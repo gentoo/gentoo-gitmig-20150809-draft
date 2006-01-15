@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.5 2005/08/07 13:32:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.6 2006/01/15 13:44:35 nelchael Exp $
 
 inherit gnome2
 
@@ -15,8 +15,8 @@ SLOT="0"
 IUSE="xinerama"
 KEYWORDS="~amd64 ppc x86"
 
-RDEPEND="virtual/x11
-		>=x11-libs/pango-1.2
+# All needed X11 related DEPEND atoms are in gtk+
+RDEPEND=">=x11-libs/pango-1.2
 		>=x11-libs/gtk+-2.2.0-r1
 		>=gnome-base/gconf-2
 		>=x11-libs/startup-notification-0.4
@@ -29,4 +29,4 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 G2CONF="${G2CONF} $(use_enable xinerama)"
 
-DOCS="AUTHORS Changelog COPYING HACKING INSTALL NEWS README*"
+DOCS="AUTHORS Changelog HACKING NEWS README*"
