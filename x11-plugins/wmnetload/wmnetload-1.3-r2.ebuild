@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.3-r2.ebuild,v 1.3 2006/01/09 21:07:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.3-r2.ebuild,v 1.4 2006/01/15 17:56:34 nelchael Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc ppc64 sparc"
 
-DEPEND="virtual/x11
-	=x11-libs/libdockapp-0.5.0-r1"
+DEPEND="x11-libs/libdockapp"
 
 src_unpack()
 {
