@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/regexxer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.14 2006/01/14 12:57:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.15 2006/01/15 15:00:59 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -regexxer-0.6.ebuild:
+  Removed old version.
 
   14 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> regexxer-0.8.ebuild:
   Stable on x86.
