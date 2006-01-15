@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/Crypt-SmbHash-0.12.ebuild,v 1.3 2006/01/15 01:34:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/Crypt-SmbHash-0.12.ebuild,v 1.4 2006/01/15 10:34:53 hansmi Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="${BASE_URI}/${P}.readme"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/Digest-MD4"
