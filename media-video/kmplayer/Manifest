@@ -1,8 +1,18 @@
-MD5 406612ce6b08acee7c6f8ed6dddf2bac ChangeLog 7516
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9df4f8992fc396ab8b23dd26d9821bfa ChangeLog 7623
 MD5 cc7843dcf532036a977b880a100fb2ac files/digest-kmplayer-0.9.0c 68
 MD5 f29e659db42381b323bdabe29fa20a09 files/digest-kmplayer-0.9.1 67
 MD5 e1cdd9e874e967b80de458c838bbbe89 files/digest-kmplayer-0.9.1a 68
 MD5 9344f66708447fa8ef3ebedd060dfc47 kmplayer-0.9.0c.ebuild 1106
 MD5 2ccc18c481ce9db85156eb1380a34574 kmplayer-0.9.1.ebuild 1108
-MD5 dcc8ced5624194d2b475c5027bbadc03 kmplayer-0.9.1a.ebuild 1338
+MD5 f2e543a65881ff6d14bb8330285fdb8a kmplayer-0.9.1a.ebuild 1336
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDya/pntT9W3vfTuoRAvb/AJ9W5BWPjms9YxIpOcbQmZZAZLMrtACfXaSJ
+elHV5gR3ChiFha7/muXvxdk=
+=lZun
+-----END PGP SIGNATURE-----
