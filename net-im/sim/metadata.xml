@@ -3,6 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>aliz@gentoo.org</email>
+  <email>pva@gentoo.org</email>
+  <name>Peter Volkov</name>
 </maintainer>
+<longdescription>
+SIM-IM (SIM Instant Messenger) is plugins-based instant messenger with support
+for various protocols: Oscar (ICQ and AIM support), Jabber, LiveJournal, MSN,
+Yahoo. Based on the Qt library and has optional with KDE support.
+</longdescription>
 </pkgmetadata>
