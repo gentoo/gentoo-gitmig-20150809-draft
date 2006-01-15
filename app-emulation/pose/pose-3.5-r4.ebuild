@@ -1,14 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r4.ebuild,v 1.6 2005/09/30 21:26:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r4.ebuild,v 1.7 2006/01/15 21:42:41 vanquirius Exp $
 
 inherit eutils
 
 S="${WORKDIR}/Emulator_Src_3.5"
 HOMEPAGE="http://www.palmos.com/dev/tools/emulator/"
 SRC_URI="http://www.palmos.com/dev/tools/emulator/sources/emulator_src_3.5.tar.gz
-	mirror://gentoo/${P}-genpatches.tar.bz2
-	http://dev.gentoo.org/~vanquirius/files/${P}-genpatches.tar.bz2"
+	mirror://gentoo/${P}-genpatches.tar.bz2"
 
 DESCRIPTION="Palm OS Emulator"
 
