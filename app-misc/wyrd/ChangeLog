@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/wyrd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/ChangeLog,v 1.4 2006/01/15 18:02:13 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/ChangeLog,v 1.5 2006/01/15 18:38:24 twp Exp $
+
+  15 Jan 2006; Tom Payne <twp@gentoo.org>
+  +files/wyrd-1.2.0-no-remind-version-check.patch, wyrd-1.2.0.ebuild:
+  Remove broken remind version check.
 
 *wyrd-1.2.0 (15 Jan 2006)
 

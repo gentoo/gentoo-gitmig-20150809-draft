@@ -1,0 +1,24 @@
+diff -Naur wyrd-1.2.0/configure.in wyrd/configure.in
+--- wyrd-1.2.0/configure.in	2005-11-20 09:16:35.000000000 +0100
++++ wyrd/configure.in	2006-01-15 19:32:17.000000000 +0100
+@@ -150,20 +150,6 @@
+    AC_MSG_ERROR(Cannot find a curses library.  Perhaps you failed to install an ncurses development package?)
+ fi
+ 
+-# check Remind version
+-REMINDVERSION=`remind --help 2> /dev/null | head -n 2 | tail -n 1 | cut -d ' ' -f 2`
+-echo "remind version is $REMINDVERSION"
+-REMMAJORVERSION=`echo $REMINDVERSION | cut -d '.' -f 1`
+-REMMINORVERSION=`echo $REMINDVERSION | cut -d '.' -f 2`
+-REMFIXVERSION=`echo $REMINDVERSION | cut -d '.' -f 3`
+-if test $REMMAJORVERSION -lt 3 ; then
+-   AC_MSG_WARN(Wyrd requires Remind version 03.00.24 or greater.)
+-else
+-   if test $REMFIXVERSION -lt 24 ; then
+-   AC_MSG_WARN(Wyrd requires Remind version 03.00.24 or greater.)
+-   fi
+-fi
+-
+ # substitutions to perform
+ AC_SUBST(OCAMLC)
+ AC_SUBST(OCAMLOPT)
