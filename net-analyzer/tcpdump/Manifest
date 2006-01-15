@@ -10,12 +10,12 @@ MD5 373e9bba235a67d1de8eb1356151f32c files/tcpdump-3.8.3-gcc4.patch 3162
 MD5 4d0df7aa1535098ccef25ba7e86e5e95 files/tcpdump-3.8.3-gentoo.patch 4002
 MD5 1465cdeb961745379a8ae1402b3e51ab metadata.xml 268
 MD5 7a2060950c186c05933e76d09893a89f tcpdump-3.8.3-r4.ebuild 1476
-MD5 0c3d447c811f6da2cb8032cd9ca2cae9 tcpdump-3.9.3.ebuild 1454
-MD5 195c70282a9d7cb90a2049818857dada tcpdump-3.9.4.ebuild 1462
+MD5 7466061661a45674b8ebef63568c7676 tcpdump-3.9.3.ebuild 1460
+MD5 3e9bad240b342094d2fd965b21f5a604 tcpdump-3.9.4.ebuild 1468
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyajintT9W3vfTuoRAvcjAJ9D4re+QHQRoRuFBbHe4QZaxF03sACfXJIR
-nOnfDrhWPBogVz4lwAgK8Mg=
-=QMfU
+iD8DBQFDyapC2+ySkm8kpY0RAjbAAJ4qeBk7yFdprEdAXAXBb5ynCnS3tACdED1A
+zNmkEyh4gwX1HhA2aXxqlD0=
+=7aDs
 -----END PGP SIGNATURE-----
