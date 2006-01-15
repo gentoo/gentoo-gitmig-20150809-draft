@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.6 2006/01/15 01:40:24 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.7 2006/01/15 12:24:35 nelchael Exp $
+
+inherit eutils
 
 DESCRIPTION="OpenGL virtual desktop switching"
 HOMEPAGE="http://desk3d.sourceforge.net/"
@@ -27,7 +29,12 @@ DEPEND="${RDEPEND}
 		x11-proto/xproto )
 	virtual/x11 )"
 
-src_install () {
+src_unpack() {
+	unpack "${A}"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+}
+
+src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc README AUTHORS TODO ChangeLog README.windowmanagers
 }
