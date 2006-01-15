@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.26 2006/01/13 22:38:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.27 2006/01/15 11:42:01 hansmi Exp $
+
+  15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> XML-SAX-0.13.ebuild:
+  Stable on ppc.
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org> XML-SAX-0.13.ebuild:
   marking sparc x86 stable
