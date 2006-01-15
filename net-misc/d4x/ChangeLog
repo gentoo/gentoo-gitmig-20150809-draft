@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/d4x
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.37 2005/12/28 19:05:48 nelchael Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.38 2006/01/15 15:24:43 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/d4x-2.5.0-fix-compile-gtk26.patch,
+  -files/d4x-2.5.0_rc2-gtk24.patch, -files/d4x-2.5.0_rc4-fix-cast.patch,
+  -files/d4x-2.5.5-stdint.patch, -d4x-2.5.0-r1.ebuild, -d4x-2.5.5.ebuild,
+  d4x-2.5.6.ebuild:
+  Removed old versions, 2.5.6 stable on x86.
 
   28 Dec 2005; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/d4x-2.5.6-libintl_fix.patch, d4x-2.5.6.ebuild:
