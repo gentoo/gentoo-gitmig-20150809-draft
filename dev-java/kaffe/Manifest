@@ -9,10 +9,10 @@ MD5 5705b7951b83fc326ce97b101de8cb49 files/kaffe-1.1.4 506
 MD5 6b922132b47393ca82554800904339da files/kaffe-1.1.4-r1 467
 MD5 db3c5b7c7434756580165a330667dde8 files/kaffe-1.1.5 464
 MD5 42825d131cd9a6c5f3ed65112e06f7a7 files/kaffe-1.1.6 464
-MD5 fbe6520260055eea60aa62c9e6c0525a kaffe-1.1.4-r1.ebuild 1428
-MD5 73eba47e4376b8ef0277917e9775d215 kaffe-1.1.4.ebuild 1384
-MD5 831beddc81e4a4530773218f39a8a467 kaffe-1.1.5-r1.ebuild 2594
-MD5 5537a1325fe5c1edf280f06e46a14a5d kaffe-1.1.5.ebuild 1431
-MD5 aec053d88ce597b2f5a53c280233fa49 kaffe-1.1.6-r2.ebuild 3207
-MD5 ffe01c57cefea0e6bdc10e4bc158dbcc kaffe-1.1.6.ebuild 3143
+MD5 cf5ece1bcaa60e3e8e2bb1f65d7bb178 kaffe-1.1.4-r1.ebuild 1397
+MD5 62339f0f1fa5c8e885e317128e7c68e1 kaffe-1.1.4.ebuild 1353
+MD5 7ec2ba6cd71edbf0e83d5ebd8b1dd489 kaffe-1.1.5-r1.ebuild 2564
+MD5 8c837eb71a85487f9cd786804b726a20 kaffe-1.1.5.ebuild 1401
+MD5 2be206c929f65bd35c5b883779fbb8b9 kaffe-1.1.6-r2.ebuild 3177
+MD5 20a6bcdc0ee9f7a7665b6feb3c742e9c kaffe-1.1.6.ebuild 3113
 MD5 d63ca386275c4844b0c8211d76e01d6f metadata.xml 542

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 02b5119444f6a1c681de95e4de7c90c8 ChangeLog 2195
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 b6b7a221387d8658e6b430c4cbf5c404 compaq-jre-1.3.1-r3.ebuild 1199
-MD5 4c552a6669f3e2e9d6f530bdebae0bc2 files/digest-compaq-jre-1.3.1-r3 74
+MD5 f61faaa4b6a35e020c89e688aa4fa05d compaq-jre-1.3.1-r3.ebuild 1169
 MD5 ffa4ab0dddfad7a43bf180db0f512566 files/compaq-jre-1.3.1 460
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDwxRj5H05b2HAEkRAmksAJ0VBnbfrcRDB9O9btfk65HcAmbLvQCeIMNW
-70iMKdL3zj9CSwVNtQ7PaVs=
-=HksF
------END PGP SIGNATURE-----
+MD5 4c552a6669f3e2e9d6f530bdebae0bc2 files/digest-compaq-jre-1.3.1-r3 74
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
