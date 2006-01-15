@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec56256ee70b0fcd3b36b19fabc7dc31 ChangeLog 1841
-MD5 8e1fd49c29f85eea8da87d6e7de450c6 metadata.xml 165
-MD5 4064d7ae779a65bc5e5300fb8b25e92d scmxx-0.8.1.ebuild 669
-MD5 ba729a9621ca5c31531b65f5c2c4a259 scmxx-0.7.5.ebuild 656
-MD5 057a020e4c5edcc9641204933a4a07f4 scmxx-0.8.0.ebuild 668
-MD5 676742ccfa55b77fe19e8b8caf44caee scmxx-0.8.2.ebuild 669
+MD5 7e3ddb73d9840cddd632dbcc8f8c9c8e ChangeLog 1985
+MD5 6743d3a18bcb5403b3f5e19ed582a2d5 files/digest-scmxx-0.8.0 64
 MD5 e29687d26cfe90ce3dac133667b07094 files/digest-scmxx-0.8.1 64
 MD5 5612ff2f947bd106fbfded0f885af0d7 files/digest-scmxx-0.8.2 64
-MD5 4841a129968f6eb4e7edbf7c190fa534 files/digest-scmxx-0.7.5 64
-MD5 6743d3a18bcb5403b3f5e19ed582a2d5 files/digest-scmxx-0.8.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDqAhkNSP4Vda7IdsRAjTaAJwMDCgvuyVOPQzXj5pyO1ZbVibu/gCgh5wQ
-I0CTR8eV7TdA6V+jgZj76PE=
-=ryIj
------END PGP SIGNATURE-----
+MD5 8e1fd49c29f85eea8da87d6e7de450c6 metadata.xml 165
+MD5 057a020e4c5edcc9641204933a4a07f4 scmxx-0.8.0.ebuild 668
+MD5 4064d7ae779a65bc5e5300fb8b25e92d scmxx-0.8.1.ebuild 669
+MD5 b973fd60b077cd951a33dbd26d6a5921 scmxx-0.8.2.ebuild 645
