@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.78 2005/12/31 08:17:54 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.79 2006/01/15 22:14:42 halcy0n Exp $
+
+  15 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  files/wvstreams-4.2.1-gcc41.patch:
+  Fix gcc-4.1 patch by Gene Seto <geneseto AT hotmail DOT com>; bug #118734
 
   31 Dec 2005; Alin Nastac <mrness@gentoo.org> wvstreams-4.2.1.ebuild:
   Replace eautoreconf with autoconf (#116947).

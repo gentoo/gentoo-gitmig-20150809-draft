@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e76b95dafedbb2060cf1184bf447d6d ChangeLog 11949
+MD5 e3507320b4851a8ecee83d92e4284649 ChangeLog 12112
 MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2-r1 68
 MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2-r2 68
 MD5 5e3ce238e271e55db146969b050836da files/digest-wvstreams-4.2.1 68
@@ -14,7 +14,7 @@ MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
 MD5 dbec7770662be21658b4ba9740cf2793 files/wvstreams-4.0.2-wireless-user.patch 466
 MD5 637930659665610f5bfe52f077fe5112 files/wvstreams-4.2.1-MOC-fix.patch 496
 MD5 7325e9c7f69a6d03560dc3b2c5700f7e files/wvstreams-4.2.1-external-xplc.patch 1213
-MD5 ea4c5b90b703bcd05c3629093614f433 files/wvstreams-4.2.1-gcc41.patch 482
+MD5 661c717a39715ecdc27330245f08c61f files/wvstreams-4.2.1-gcc41.patch 2221
 MD5 fe54c7dbb4770aad4ef9a5dcb44106ec files/wvstreams-4.2.1-linux-serial.patch 1649
 MD5 b44c2e240e03736bc5acc41ce7069455 files/wvstreams-4.2.1-ptr2int-cast.patch 356
 MD5 dcb8a3f592baa616e6123867b2fdced8 files/wvstreams-4.2.1-tcl_8_4.patch 1022
@@ -26,7 +26,7 @@ MD5 c3f188d12bf345985f947c6066d92cc9 wvstreams-4.2.1.ebuild 2529
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtj7NjG8pv1lIUX4RAh+cAKDGTStKCMMuaCfSWoFhgFKm0/EbGgCfUQvy
-JECsk8G5Mj4+9/DAigt1bcE=
-=xq57
+iD8DBQFDyslfCRZPokWLroQRApC8AKDdnMCw4pGkVy2q4OOT3ZJSPtjTvQCgtpJy
+XIolGvRGiuj00xng/pzIu74=
+=afAp
 -----END PGP SIGNATURE-----
