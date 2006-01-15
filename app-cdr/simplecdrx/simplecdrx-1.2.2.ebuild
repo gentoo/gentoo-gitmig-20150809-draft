@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.2.ebuild,v 1.11 2005/01/01 12:21:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.2.ebuild,v 1.12 2006/01/15 02:59:22 metalgod Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
@@ -20,7 +20,6 @@ DEPEND="media-sound/madplay
 	media-libs/libogg
 	media-libs/libvorbis
 	virtual/mpg123
-	virtual/x11
 	=x11-libs/gtk+-1.2*
 	dev-libs/glib
 	media-libs/libao"
