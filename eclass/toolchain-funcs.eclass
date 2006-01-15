@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.52 2006/01/15 20:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.53 2006/01/15 20:31:52 vapier Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -96,7 +96,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 	case ${host} in
 		alpha*)		echo alpha;;
 		arm*)		echo arm;;
-		bfin*)		ninj bfin blackfin;;
+		bfin*)		ninj blackfin bfin;;
 		cris*)		echo cris;;
 		hppa*)		ninj parisc hppa;;
 		i?86*)		ninj i386 x86;;
