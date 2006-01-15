@@ -33,7 +33,7 @@
 	Create a directory for the swish index files to go in, and put the
 	path of this directory in the 'swishdir' variable.
 
-4. An .htaccess file has been installed into ${MY_HTDOCSDIR}. Please note that
+4. An .htaccess file has been installed into ${MY_INSTALLDIR}. Please note that
 you must take special care not to make lxr.conf visible to the world. If you
 are not using mod_perl, use .htaccess_cgi instead.
 
