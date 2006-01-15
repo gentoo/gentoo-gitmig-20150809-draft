@@ -1,41 +1,36 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.01.ebuild,v 1.3 2005/04/28 19:46:33 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.03.ebuild,v 1.1 2006/01/15 02:16:58 dragonheart Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="A collection of file system and media management forensic analysis tools"
 HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
-SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
-#	mirror://gentoo/${P}_dbtool.patch.bz2"
+SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz
+		mirror://gentoo/${P}_dbtool.patch.bz2"
 
 LICENSE="GPL-2 IBM"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/perl
-	dev-perl/DateManip
-	virtual/libc
-	sys-libs/zlib"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	sys-devel/gcc"
+RDEPEND="dev-perl/DateManip"
 
 src_unpack() {
-	unpack ${A}
-#	epatch ${P}_dbtool.patch || die "patch failed"
+	unpack "${P}.tar.gz"
+	#unpack "${A}"
+	einfo 'unpacked'
+	#epatch "${P}_dbtool.patch"
+	epatch "${DISTDIR}/${P}_dbtool.patch.bz2"
 	cd ${S}
 	sed -i '63,69d' src/timeline/config-perl || die "sed config-perl failed"
 	sed -i 's:`cd ../..; pwd`:/usr:' src/sorter/install \
-		|| die "sed install failed"
-	if use amd64; then
-		epatch ${FILESDIR}/${P}-include_fix.patch
-	fi
+#		|| die "sed install failed"
 }
 
 src_compile() {
 	export CC="$(tc-getCC)" OPT="${CFLAGS}"
+	# this is so it doesn't remake sys-apps/file
 	env -u CFLAGS \
 		emake -e no-perl sorter mactime || die "make failed"
 }

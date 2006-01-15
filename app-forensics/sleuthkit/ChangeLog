@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/sleuthkit
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.18 2005/07/27 15:27:18 ka0ttic Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.19 2006/01/15 02:16:58 dragonheart Exp $
+
+*sleuthkit-2.03 (15 Jan 2006)
+
+  15 Jan 2006; Daniel Black <dragonheart@gentoo.org> -sleuthkit-1.73.ebuild,
+  -sleuthkit-2.01.ebuild, +sleuthkit-2.03.ebuild:
+  version bump. added dbtool from pyflag which is going to add to gentoo soon
+  old version removal
 
 *sleuthkit-2.02 (27 Jul 2005)
 
