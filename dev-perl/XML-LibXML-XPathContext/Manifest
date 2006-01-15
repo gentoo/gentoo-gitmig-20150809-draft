@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40c3c2e5ad884812e38774fe8a0690d2 ChangeLog 1819
 MD5 bed72c1e431c897320b3270479d5e960 XML-LibXML-XPathContext-0.05.ebuild 621
 MD5 b4c517df732781f8d8b74b256c6eb591 XML-LibXML-XPathContext-0.06.ebuild 635
@@ -6,3 +9,10 @@ MD5 fc905d00413181ba93903f35f0d5bc33 files/digest-XML-LibXML-XPathContext-0.05 7
 MD5 8f71d28ea64be05fa03f27398a43f021 files/digest-XML-LibXML-XPathContext-0.06 79
 MD5 6d13d6769f029d4c64e299048f6ff870 files/digest-XML-LibXML-XPathContext-0.07 79
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDyouutG5z4I8BtQoRAr3JAJ4oaKpCIXdyi2IeshupQLe//7CJqACfYk88
+eRWc+o0cI9UBq3ZOQPdJWhs=
+=bhQS
+-----END PGP SIGNATURE-----
