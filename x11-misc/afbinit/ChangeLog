@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/afbinit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.9 2004/10/22 19:19:26 fmccor Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.10 2006/01/15 16:08:00 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -afbinit-1.0.1.ebuild,
+  -afbinit-1.0.1-r1.ebuild:
+  Removed old versions.
 
   22 Oct 2004; Ferris McCormick <fmccor@gentoo.org> afbinit-1.0.1-r2.ebuild:
   Mark stable for sparc.  This has been working fine for both kernel-2.4.xx and
