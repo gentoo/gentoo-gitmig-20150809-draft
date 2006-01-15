@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef460efbd62a7ab3d27366e26117a4d4 ChangeLog 5445
+MD5 773854c9f2b643896bdd0f4fcf5b5880 ChangeLog 5561
 MD5 ab527f255d04f1158b6415f2c2d6630d files/digest-monodoc-1.0.4-r1 66
 MD5 896cd9767cb24e6972b9fc0279d28749 files/digest-monodoc-1.0.5 66
 MD5 d34ec1713afad1384e5271c7ef773283 files/digest-monodoc-1.0.6 67
 MD5 3f326461f82eded0d9c8b956676f79d2 files/digest-monodoc-1.1.10 68
+MD5 de3f98c25b206f007769b325854047e7 files/digest-monodoc-1.1.13 68
 MD5 64f44b1f3dc70bb45f1568c30ed7749c files/digest-monodoc-1.1.9 67
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 591d8f4076437a07efd2e3b825e65cdb monodoc-1.0.4-r1.ebuild 972
 MD5 04426363e03707230801dc91cf106d92 monodoc-1.0.5.ebuild 968
 MD5 2acc7ece6f712669d86a4d05c764f3e7 monodoc-1.0.6.ebuild 949
 MD5 5123b89578be4d34cfe8677b553bf1a7 monodoc-1.1.10.ebuild 1229
+MD5 14df9c34413154fdd97054bc0b92036a monodoc-1.1.13.ebuild 1230
 MD5 556e7252605ab27e449155e93380b838 monodoc-1.1.9.ebuild 769
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgUYCcsIHjyDViGQRAq/QAJ0U5QrTGX/T1aactNde13Ogp5rl+gCgn5hF
-yEdM0BV5+hufuy+N9dp6S0g=
-=mEcP
------END PGP SIGNATURE-----
