@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop3
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.5 2004/07/25 21:11:36 s4t4n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.6 2006/01/15 18:00:45 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmpop3-0.5.6a.ebuild:
+  Fixed DEPEND for modular X.
 
   25 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmpop3-0.5.6a.ebuild:
   Stable for x86.

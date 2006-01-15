@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.6 2005/12/01 03:25:05 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.7 2006/01/15 17:59:40 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmpop-0.53.ebuild:
+  Fixed DEPEND for modular X.
 
   01 Dec 2005; Jason Wever <weeve@gentoo.org> wmpop-0.53.ebuild:
   Stable on SPARC wrt bug #111103.

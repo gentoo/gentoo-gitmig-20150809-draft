@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/wmpop3-0.5.6a.ebuild,v 1.9 2004/07/25 21:11:36 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/wmpop3-0.5.6a.ebuild,v 1.10 2006/01/15 18:00:45 nelchael Exp $
 
 DESCRIPTION="dockapp for checking pop3 accounts"
 HOMEPAGE="http://www.cs.mun.ca/~scotth/"
@@ -9,9 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
-DEPEND="virtual/libc
-	virtual/x11
-	x11-wm/windowmaker
+DEPEND="x11-wm/windowmaker
 	>=sys-apps/sed-4"
 
 src_unpack() {
