@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.7.ebuild,v 1.6 2005/04/29 15:14:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.7.ebuild,v 1.7 2006/01/15 17:49:02 mcummings Exp $
 
 # this is an RT dependency
 
 inherit perl-module
 
 DESCRIPTION="Extract the structure of a quoted mail message"
-SRC_URI="http://www.cpan.org/modules/by-authors/id/J/JE/JESSE/${P}.tar.gz"
+SRC_URI="mirror://cpan/modules/by-authors/id/J/JE/JESSE/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-authors/id/J/JE/JESSE/${P}.readme"
 
 SRC_TEST="do"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Levenshtein
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Levenshtein/ChangeLog,v 1.6 2005/04/29 15:10:32 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Levenshtein/ChangeLog,v 1.7 2006/01/15 17:48:35 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-Levenshtein-0.05.ebuild:
+  Mirror syntax
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Text-Levenshtein-0.04.ebuild, Text-Levenshtein-0.05.ebuild:

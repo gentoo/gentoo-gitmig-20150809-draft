@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Kakasi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.10 2005/07/30 12:46:58 pvdabeel Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.11 2006/01/15 17:48:14 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-Kakasi-2.04.ebuild:
+  Mirror syntax
 
   30 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
   Text-Kakasi-2.04.ebuild:
