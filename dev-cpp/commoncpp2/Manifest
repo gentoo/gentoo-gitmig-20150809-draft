@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d87a13292659faa327aed02826b76a6a ChangeLog 3018
+MD5 5a099b776129a606e48624245d7f87fd ChangeLog 3162
 MD5 7a0c4df125348dd52f15164d617b639a commoncpp2-1.3.1.ebuild 1015
 MD5 80cb3c94e24416e019030be54bf3933b commoncpp2-1.3.13.ebuild 1026
 MD5 fb2311f7cb6235117e43d99eae169c1d commoncpp2-1.3.20-r1.ebuild 1040
 MD5 7ed1789cb6b69a014c742807b0f79e28 commoncpp2-1.3.20.ebuild 1073
+MD5 61186b497130f81bc592253d81d1ae01 commoncpp2-1.3.22.ebuild 1033
 MD5 989863ac3c644b855628421d81012679 files/digest-commoncpp2-1.3.1 68
 MD5 24b577b86d1c3649917142f48079a7d9 files/digest-commoncpp2-1.3.13 69
 MD5 c895d9a7cdc2548a180bd0db5f02d1d7 files/digest-commoncpp2-1.3.20 69
 MD5 c895d9a7cdc2548a180bd0db5f02d1d7 files/digest-commoncpp2-1.3.20-r1 69
+MD5 e625dea2654351b1d7bbe79ff9c1d62a files/digest-commoncpp2-1.3.22 69
 MD5 9b2404bcf93a0418e748ec611550b00f metadata.xml 245
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDo4DHLLFUmVNQ7rkRAoW7AJ41JGE3B8TC5JSGjrhznUflRgG49QCfcdW0
-tr4/o8v/0Je5sLrV4RL9hv4=
-=Zz7K
------END PGP SIGNATURE-----
