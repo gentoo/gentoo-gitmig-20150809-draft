@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9bcb5ffeb0288181a003af4f072860cf ChangeLog 2063
 MD5 c8d850961b913c94de2e73e13370824f Convert-ASN1-0.17.ebuild 554
 MD5 64bb6670004da82aa95b11b3f56887f0 Convert-ASN1-0.18.ebuild 576
@@ -6,3 +9,10 @@ MD5 676086cde6b6c5897efad058c864c556 files/digest-Convert-ASN1-0.17 68
 MD5 02886aee7f578e8d10c87d73900a7962 files/digest-Convert-ASN1-0.18 68
 MD5 5c9b00d41bc6030dcd86cf5c5668647e files/digest-Convert-ASN1-0.19 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyab12+ySkm8kpY0RAqzjAJ95MjIvbMbNfxKgBk3eHR3BfUs42QCfZjHy
+QAV4BMLduTyXB66Xb/BIu74=
+=yO5G
+-----END PGP SIGNATURE-----
