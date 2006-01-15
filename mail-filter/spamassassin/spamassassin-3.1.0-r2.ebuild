@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.3 2006/01/09 16:45:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.4 2006/01/15 14:56:22 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite spf tools"
 # dev-perl/IP-Country-Fast
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
-	>=perl-core/PodParser-1.22
+	|| ( >=perl-core/PodParser-1.22 >=dev-lang/perl-5.8.6 )
 	perl-core/MIME-Base64
 	perl-core/Storable
 	perl-core/Time-HiRes
