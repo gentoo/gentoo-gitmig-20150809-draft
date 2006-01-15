@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r2.ebuild,v 1.1 2006/01/14 19:12:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r2.ebuild,v 1.2 2006/01/15 21:54:53 vanquirius Exp $
 
 inherit eutils
 
@@ -9,8 +9,7 @@ DESCRIPTION="HP Linux Imaging and Printing System. Includes net-print/hpijs, sca
 HOMEPAGE="http://hpinkjet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 	mirror://sourceforge/hpinkjet/${P}-2.patch
-	foomaticdb? ( mirror://gentoo/foomatic-db-hpijs-${DB_V}.tar.gz
-	http://dev.gentoo.org/~vanquirius/files/foomatic-db-hpijs-${DB_V}.tar.gz )"
+	foomaticdb? ( mirror://gentoo/foomatic-db-hpijs-${DB_V}.tar.gz )"
 	#http://www.linuxprinting.org/download/foomatic/foomatic-db-hpijs-${DB_V}.tar.gz
 
 LICENSE="GPL-2"
