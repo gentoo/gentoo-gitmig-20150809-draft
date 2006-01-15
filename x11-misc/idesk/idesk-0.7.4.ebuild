@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.4.ebuild,v 1.7 2005/11/11 23:07:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.4.ebuild,v 1.8 2006/01/15 16:39:22 nelchael Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ KEYWORDS="~alpha amd64 hppa ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/imlib2-1.1.2.20040912
-	virtual/x11
 	media-libs/freetype
 	>=dev-util/pkgconfig-0.12.0
 	dev-libs/libxml2

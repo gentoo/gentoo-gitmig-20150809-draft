@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.44 2006/01/02 18:09:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.45 2006/01/15 16:39:22 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -idesk-0.7.3-r1.ebuild,
+  idesk-0.7.4.ebuild, idesk-0.7.5-r1.ebuild:
+  Fixed DEPEND for modular X, removed old version.
 
   02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> idesk-0.7.5-r1.ebuild:
   Stable on ppc.
