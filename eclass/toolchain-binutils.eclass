@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.52 2006/01/12 00:41:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.53 2006/01/15 11:33:58 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -192,6 +192,7 @@ toolchain-binutils_src_compile() {
 		done
 
 		if [[ ${x} != "UNSUPPORTED" ]] ; then
+			append-flags -I"${S}"/include
 			myconf="--with-bfd-include-dir=${MY_BUILDDIR}/bfd \
 				--with-libbfd=${MY_BUILDDIR}/bfd/.libs/libbfd.so \
 				--with-libiberty=${MY_BUILDDIR}/libiberty/libiberty.a \
