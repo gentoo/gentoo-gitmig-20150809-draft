@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12aa3e69a1bf27d7737915cd51b14f9b ChangeLog 2447
+MD5 e2e896ce24d89c5b6a4598c7762497f5 ChangeLog 2543
 MD5 55e704e0d38ee6bedd96a544a741b652 HTML-Tagset-3.03-r1.ebuild 476
 MD5 a321f607c4dcbf0ec7fec20f24d6f6b7 HTML-Tagset-3.03-r2.ebuild 503
 MD5 2cec2ee82df2f4bd34b98ea71dc4a80d HTML-Tagset-3.04.ebuild 526
-MD5 1fcb6eab3b2fd6b3d8e05b749b3f982f HTML-Tagset-3.10.ebuild 532
+MD5 ae2b16aadd160fcf3f45789184a3385f HTML-Tagset-3.10.ebuild 528
 MD5 370bb4a6ebe76973f555a473d1a0b6a4 files/digest-HTML-Tagset-3.03-r1 66
 MD5 370bb4a6ebe76973f555a473d1a0b6a4 files/digest-HTML-Tagset-3.03-r2 66
 MD5 81485e4cdf4f2a30ed7f87861b8864c5 files/digest-HTML-Tagset-3.04 66
 MD5 78cefb55a617decde617a88601488a43 files/digest-HTML-Tagset-3.10 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyBsjtG5z4I8BtQoRAoB6AKCCluQLyXOSqchufI0FxFBCdNgh+QCdEYW1
-ZMFRv8sH+BhN3sutgpJKKV8=
-=/UfA
------END PGP SIGNATURE-----
