@@ -1,4 +1,4 @@
-MD5 1a16e1ad8b99519e8e8f4a7e140c70df ChangeLog 8642
+MD5 81e225f58718ed2d5a5d337a82a64c96 ChangeLog 8731
 MD5 e052f291e46bb8d1de4cfb1b45aeac88 files/digest-sip-3.10.2 62
 MD5 18e143f22df1dd8636fc12aa07ac9f36 files/digest-sip-3.11.1 62
 MD5 821af86e779d5bc5b3457336a0426fa1 files/digest-sip-3.8-r1 67
@@ -15,7 +15,7 @@ MD5 9d3daf7553357420608a0ae0826d8fae sip-3.11.1.ebuild 1003
 MD5 4cbd85c00f83fdd1a2afe0fb119fffe7 sip-3.8-r1.ebuild 1101
 MD5 c8f82ca832ec3fad5ef76f15bda84fc6 sip-4.0.1.ebuild 1051
 MD5 27e6d61c2fded90b8fa96b1078f86fc8 sip-4.1.1.ebuild 1214
-MD5 5fb3cc85c18224c8f0fe88eab9162699 sip-4.2.1.ebuild 1414
+MD5 680a37cb186127d6c55dfac485d549ac sip-4.2.1.ebuild 1412
 MD5 128c5bf316b6d0029cb43fb0bddb249e sip-4.2.ebuild 1390
 MD5 12bbcf91e753c326fa7725be85b3bdb2 sip-4.3.1.ebuild 1397
 MD5 8b8fcef2fd959854c5429f10dc759a1a sip-4.3.2.ebuild 1410
