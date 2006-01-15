@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/p5-Palm-1.3.0.ebuild,v 1.5 2006/01/13 22:08:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/p5-Palm-1.3.0.ebuild,v 1.6 2006/01/15 11:00:54 hansmi Exp $
 
 inherit perl-module
 
@@ -15,5 +15,5 @@ HOMEPAGE="http://search.cpan.org/doc/ARENSB/${P}/README"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc sparc x86"
 IUSE=""
