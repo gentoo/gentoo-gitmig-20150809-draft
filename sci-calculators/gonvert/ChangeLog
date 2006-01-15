@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/gonvert
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.3 2005/12/24 19:27:40 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.4 2006/01/15 01:53:48 cryos Exp $
+
+*gonvert-0.2.15 (15 Jan 2006)
+
+  15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +gonvert-0.2.15.ebuild:
+  Version bump, bug 116712.
 
   24 Dec 2005; Mark Loeser <halcy0n@gentoo.org> gonvert-0.2.12.ebuild:
   Adding ~x86
