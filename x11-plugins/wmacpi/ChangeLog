@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmacpi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.17 2005/08/29 08:01:23 s4t4n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.18 2006/01/15 14:31:56 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmacpi-1.34.ebuild,
+  wmacpi-1.99_p7.ebuild, wmacpi-2.1_rc1.ebuild:
+  Fixed DEPEND for modular X, see bug #118297.
 
   29 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmacpi-2.1_rc1.ebuild:
   Stable for x86.

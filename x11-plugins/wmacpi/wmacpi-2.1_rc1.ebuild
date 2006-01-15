@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-2.1_rc1.ebuild,v 1.2 2005/08/29 08:01:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-2.1_rc1.ebuild,v 1.3 2006/01/15 14:31:56 nelchael Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -sparc ~amd64 -ppc"
 
-DEPEND="virtual/x11
-	>=x11-libs/libdockapp-0.5.0"
+DEPEND="x11-libs/libdockapp"
 
 src_unpack()
 {
