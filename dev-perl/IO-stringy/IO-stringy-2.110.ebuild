@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/IO-stringy-2.110.ebuild,v 1.6 2006/01/13 21:30:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/IO-stringy-2.110.ebuild,v 1.7 2006/01/15 10:55:21 hansmi Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/IO/ERYQ/${P}.readme"
 SRC_URI="mirror://cpan/authors/id/D/DS/DSKOLL/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 ~s390 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
