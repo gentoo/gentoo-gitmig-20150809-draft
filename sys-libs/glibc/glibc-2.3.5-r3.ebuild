@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.14 2006/01/14 20:12:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.15 2006/01/15 23:36:30 josejx Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-* alpha ~amd64 ~arm -hppa ~ppc sparc ~x86"
+KEYWORDS="-* alpha ~amd64 ~arm -hppa ppc sparc ~x86"
 
 BRANCH_UPDATE=""
 
@@ -1044,11 +1044,6 @@ pkg_setup() {
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && want_linuxthreads ; then
 
-		if use ppc ; then
-			eerror "glibc doesn't currently work with nptl and linuxthreads"
-			eerror "please select either nptlonly or -nptl"
-			die "nptlonly not set on ppc"
-		fi
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
 		ewarn "glibc from almost every other distribution out there. This means"
 		ewarn "that glibc is compiled -twice-, once with linuxthreads and once"
@@ -1284,6 +1279,11 @@ src_install() {
 		if want_nptl && want_linuxthreads ; then
 			dosed  "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/nptl/lib{c,pthread}.so
 		fi
+	fi
+
+	# PPC NPTL fix
+	if [[ $(tc-arch) == "ppc" ]] && use nptl && ! use nptlonly ; then
+		cp ${WORKDIR}/build-default-${CTARGET}-nptl/elf/ld.so ${D}/lib/ld-${PV}.so
 	fi
 }
 

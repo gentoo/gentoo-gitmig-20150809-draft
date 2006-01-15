@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.422 2006/01/13 12:15:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.423 2006/01/15 23:36:30 josejx Exp $
+
+  15 Jan 2006; Joseph Jezak <josejx@gentoo.org> glibc-2.3.5-r3.ebuild,
+  glibc-2.3.6-r2.ebuild:
+  Added PPC NPTL workaround and marked glibc-2.3.5-r3 ppc stable.
 
   13 Jan 2006; Mike Frysinger <vapier@gentoo.org> glibc-2.3.5-r1.ebuild,
   glibc-2.3.5-r2.ebuild, glibc-2.3.5-r3.ebuild, glibc-2.3.6.ebuild,
