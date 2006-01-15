@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bf50cdd0f4ea0afc8894de37280bcb1 ChangeLog 5309
+MD5 c3c509d4bc13e70989eca986b2361e67 ChangeLog 5404
 MD5 3eb54986987eea8036782a76d3bbdec3 Time-HiRes-1.66.ebuild 625
-MD5 f74c474f60ffdc5814235756bb19e544 Time-HiRes-1.82.ebuild 627
+MD5 5dc767abcceb52b7f337b3053e479617 Time-HiRes-1.82.ebuild 626
 MD5 e3c968f83585714c2eec0dea4edc8319 Time-HiRes-1.86.ebuild 638
 MD5 b262894962dc80c2da7c94a0e267483c files/digest-Time-HiRes-1.66 66
 MD5 8a3f6c45fb62aac99ba5d7b890aeb4ad files/digest-Time-HiRes-1.82 66
 MD5 f8687d8c548cc995c450d21407fdbb0a files/digest-Time-HiRes-1.86 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyajp2+ySkm8kpY0RAgEjAJ4tuJPuDvhCq7Xj9ktE/ikEgR3OSQCggqyB
-s5tO+MSPrnh/KSu5GipIorI=
-=Xr4Y
------END PGP SIGNATURE-----
