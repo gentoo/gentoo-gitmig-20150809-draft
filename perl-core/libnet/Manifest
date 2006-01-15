@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f13a0ce14164fd568bf54a631cb0cf5 ChangeLog 4594
 MD5 ebfa5958fea15492b23d41aceae03fe4 files/digest-libnet-1.19 62
 MD5 655ae6886075bd2902bd1b1bcbbffa4d files/libnet.cfg 268
 MD5 89f259d39aa30f27e28b95cbc6817abf libnet-1.19.ebuild 600
 MD5 5754ff268b56f63cc6b8cca33848cfaf metadata.xml 485
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDyag92+ySkm8kpY0RAgidAJ9yzSSfc/C2LttUPkISEgTe5HkdCgCgnylz
+r9EeVJhKmiHkSVZ6nI3u5mc=
+=5XT9
+-----END PGP SIGNATURE-----
