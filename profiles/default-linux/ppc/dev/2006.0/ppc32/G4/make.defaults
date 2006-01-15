@@ -1,12 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/2006.0/ppc32/G4/make.defaults,v 1.2 2006/01/08 19:23:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/2006.0/ppc32/G4/make.defaults,v 1.3 2006/01/15 22:54:01 pylon Exp $
 
 CFLAGS="-O2 -mtune=G4 -mcpu=G4 -mabi=altivec -pipe"
 CXXFLAGS="${CFLAGS}"
 
-# This is currently commented so that the stage1 tarball can also be used to
-# build no-nptl systems.
-#STAGE1_USE="altivec nptl unicode"
-STAGE1_USE="altivec unicode"
+STAGE1_USE="altivec nptl unicode"
 USE="${STAGE1_USE} alsa apache2 apm arts avi bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg nptl ogg oggvorbis opengl pdflib png qt quicktime sdl spell truetype truetype-fonts type1-fonts udev vorbis X xml2 xmms xv"
