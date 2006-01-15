@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 634fbc2413707ce70b4363c4e43c9509 ChangeLog 3039
 MD5 b674d8a694bfb090ca98c2e63d04ec1a IO-String-1.03.ebuild 497
 MD5 71426bd9eacac67236503b23f8565ed2 IO-String-1.05.ebuild 552
 MD5 aa7399769f81d7124d64a2a5253a3290 IO-String-1.06.ebuild 561
-MD5 1fa3f74db4b415e684bc58d01d2ac083 IO-String-1.07.ebuild 559
+MD5 6745b49d764135a6e4151d766098e249 IO-String-1.07.ebuild 550
 MD5 c2063d5d56283f84f33768dd8e4ef9c4 IO-String-1.08.ebuild 561
 MD5 8ff8dded3a891cfe559d99ca55806fd1 files/digest-IO-String-1.03 64
 MD5 aa99d018de05ab75d7092aaae720766a files/digest-IO-String-1.05 64
@@ -13,10 +10,3 @@ MD5 db37a90951927331d6a5c665a77d181f files/digest-IO-String-1.06 64
 MD5 2ee9e7170be13f97ef595de48bab7c64 files/digest-IO-String-1.07 64
 MD5 a256d14f790a921d50f1b37b96793414 files/digest-IO-String-1.08 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyBvjtG5z4I8BtQoRAh1lAKCPvWLgcf0swKE6rf+VnH1Zlq2rTgCghjOS
-SmChduhVzX6FYoPUGLDpado=
-=OXUp
------END PGP SIGNATURE-----
