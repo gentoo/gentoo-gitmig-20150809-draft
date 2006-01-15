@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2e3990d32b4fced29b5ee997c4a5615f CDDB_get-2.10-r2.ebuild 477
 MD5 fb5131dccb3da03136948f5e74998a23 CDDB_get-2.2.ebuild 475
 MD5 be1de7f5962836523675e372f5234926 CDDB_get-2.23.ebuild 484
-MD5 97ba5deb8d7b44780623b6cbcf8e8ee5 CDDB_get-2.25.ebuild 512
+MD5 8202bbad7815368bd4edce090fee0858 CDDB_get-2.25.ebuild 512
 MD5 2483720b32597ed33cb7d0d99ad4efb5 CDDB_get-2.27.ebuild 513
-MD5 7dfce915c2518a606f0d84b1246f4c20 ChangeLog 3134
+MD5 70e6710b970eaa6c54d4e7f4be921e16 ChangeLog 3233
 MD5 af86cf36238d7d49fcf69a1cff394ddb files/digest-CDDB_get-2.10-r2 64
 MD5 6d44d5c90ee0ccc761289b0ae7c3083c files/digest-CDDB_get-2.2 63
 MD5 d0603657ddc88afef40017ccbda582c8 files/digest-CDDB_get-2.23 64
 MD5 c4d9d54a1aafa7f92c53cbb7feaf7a02 files/digest-CDDB_get-2.25 64
 MD5 04f5893d4c4c1bcbf4fbe2dd90ca9645 files/digest-CDDB_get-2.27 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx6qAtG5z4I8BtQoRAuG2AJ495d2jpsXZOH+Oxn4IUt9lbG2wnwCfaPJu
-QfTS5b+oQFLYZbIDkX0a6Wc=
-=i1Re
------END PGP SIGNATURE-----
