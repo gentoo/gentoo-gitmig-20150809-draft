@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23da5b0cc844fe0accb42c9fba28cf02 ChangeLog 4142
+MD5 824cbea43d1f5d9f02345b0bf9928400 ChangeLog 4240
 MD5 d68920349ed95894fcea3e2c4470dd84 IO-Socket-SSL-0.96.ebuild 767
-MD5 99f390eeca7a09fc04ab1ec82ae0fec6 IO-Socket-SSL-0.97.ebuild 782
+MD5 e40a581600d269310f29358c87a453bf IO-Socket-SSL-0.97.ebuild 781
 MD5 eaab7a552e3db6f6a4562b7e77cb7c34 files/digest-IO-Socket-SSL-0.96 69
 MD5 4d5ad4beaa001cbac73f98b6420b1bd3 files/digest-IO-Socket-SSL-0.97 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyade2+ySkm8kpY0RAh0+AJ9F0N7LpAxw3ElnbY/1sP6CWYD1RQCgpYMv
-Hby+Hjv+Opq2P4JMOxregsM=
-=YYD5
------END PGP SIGNATURE-----
