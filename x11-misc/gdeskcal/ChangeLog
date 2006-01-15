@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gdeskcal
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.11 2005/08/13 23:25:40 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.12 2006/01/15 16:35:06 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -gdeskcal-0.57.1.ebuild:
+  Removed old version.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   gdeskcal-0.57.1-r1.ebuild:
