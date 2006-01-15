@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6700c98dced31e2934a36b472769844d ChangeLog 896
-MD5 f1d669f0715bb24791f15c96b9413849 libodbc++-0.2.3-r1.ebuild 1994
-MD5 c0d850ab79376dbc9aef722e2f88b242 libodbc++-0.2.3.ebuild 1393
-MD5 514696112b44a9f879fd54be4de53dc5 metadata.xml 219
+MD5 fe0f38624f7d70f3db19e389b96d4b6a ChangeLog 1113
 MD5 76859551271b481b467298625eca2fbf files/digest-libodbc++-0.2.3 67
 MD5 76859551271b481b467298625eca2fbf files/digest-libodbc++-0.2.3-r1 67
+MD5 a99a6a9bdf9dffba15a2aeeb1d2bcecb files/libodbc++-0.2.3-std-streamsize.patch 358
+MD5 ec335ee1e74b97bfc82a7b995a76b098 libodbc++-0.2.3-r1.ebuild 2089
+MD5 c0d850ab79376dbc9aef722e2f88b242 libodbc++-0.2.3.ebuild 1393
+MD5 514696112b44a9f879fd54be4de53dc5 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLzl9CRZPokWLroQRAm8pAKDNCW+xSLSUcUAZqz1WjFmYDH78oQCdGNXY
-Zsyic3BxOz8HuzAFAUmjVTc=
-=pK4C
+iD8DBQFDys4GCRZPokWLroQRAigOAJ441MuG6+XN7pbkUZEgsUqBsYxDjgCfWV6d
+5v7bfOpBBejiLWwhLCCKEGE=
+=abhn
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libodbc++
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.6 2005/09/19 22:19:25 halcy0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.7 2006/01/15 22:34:36 halcy0n Exp $
+
+  15 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/libodbc++-0.2.3-std-streamsize.patch, libodbc++-0.2.3-r1.ebuild:
+  Fix compilation on amd64 with patch by Dan Hirsch <thequux AT gmail DOT
+  com>; bug #117652
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
