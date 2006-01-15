@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.243 2006/01/13 19:00:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.244 2006/01/15 04:56:35 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1076,7 +1076,9 @@ gcc-compiler-configure() {
 		confgcc="${confgcc} --disable-multilib"
 	fi
 
-	confgcc="${confgcc} $(use_enable mudflap libmudflap)"
+	if version_is_at_least "4.0" ; then
+		confgcc="${confgcc} $(use_enable mudflap libmudflap)"
+	fi
 
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
 	# right now). Much thanks to <csm@gnu.org> for the heads up.
