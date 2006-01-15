@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a9e17a78e2f9da9ba9298187a302bfd ChangeLog 1129
+MD5 71d58cdc6cbaed0a543275d5f1f69054 ChangeLog 1229
 MD5 27bce0aa0aa43b2e1fb74cc1f8fb1561 Getopt-ArgvFile-1.08.ebuild 521
-MD5 e45ede137115627c8167a42e207db1a3 Getopt-ArgvFile-1.10.ebuild 522
+MD5 ce959dcb0496a47b7feb7a7f807aa499 Getopt-ArgvFile-1.10.ebuild 518
 MD5 8c0f2465ea17569c2f0d2c28147af2fd files/digest-Getopt-ArgvFile-1.08 68
 MD5 ff72346b74db75ebdcef148565e3c75f files/digest-Getopt-ArgvFile-1.10 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyBMdtG5z4I8BtQoRAifQAJ9jUwdvvEG3NLOu+21wVRD9+FPvUQCcCerC
-24WrD4rAH8Od+JeKfJvGvms=
-=b9hx
------END PGP SIGNATURE-----

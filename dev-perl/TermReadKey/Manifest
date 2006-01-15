@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d34b1d5d3c9f0efb7035bc93d872f9a2 ChangeLog 1777
+MD5 e88559bf6e65b155b369a59c294c5c36 ChangeLog 1873
 MD5 4bf844abaf842e0229b2f2468123fa8f TermReadKey-2.21.ebuild 528
-MD5 fb5ee1263501bbb566e5d7ff76ac6de6 TermReadKey-2.30.ebuild 550
+MD5 3cc4a8420e6bef38829e2649b067d3d9 TermReadKey-2.30.ebuild 549
 MD5 c7e25064a98d9f185a66cfe7e11019a4 files/digest-TermReadKey-2.21 67
 MD5 b2c6020c202dd26278a98100df846c1d files/digest-TermReadKey-2.30 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyafc2+ySkm8kpY0RAopuAJ4slEQe89ggXCKU2aQO3fJwj2Ic7ACfZOfi
-YYQp0ZOYRbqPxzC5MIWkbYY=
-=qmIM
------END PGP SIGNATURE-----
