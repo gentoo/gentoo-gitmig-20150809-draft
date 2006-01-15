@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.10.ebuild,v 1.5 2005/10/15 23:50:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.10.ebuild,v 1.6 2006/01/15 08:04:22 latexer Exp $
 
 inherit eutils mono
 
@@ -14,14 +14,15 @@ SLOT="1"
 IUSE=""
 RESTRICT="test"
 
-RDEPEND=">=sys-apps/sed-4.0
-	>=dev-lang/mono-1.0
-	sys-devel/automake
-	sys-devel/autoconf
+RDEPEND=">=dev-lang/mono-1.0
+	dev-perl/XML-LibXML
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/orbit-2.8.3"
 
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0
+	sys-devel/automake
+	sys-devel/autoconf
 	dev-util/pkgconfig"
 
 KEYWORDS="~amd64 ppc x86"

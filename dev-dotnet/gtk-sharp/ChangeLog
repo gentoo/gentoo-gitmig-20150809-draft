@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-sharp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.52 2005/11/21 06:43:14 latexer Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.53 2006/01/15 08:04:22 latexer Exp $
+
+  15 Jan 2006; Peter Johanson <latexer@gentoo.org>
+  gtk-sharp-1.0.8-r1.ebuild, gtk-sharp-1.0.10.ebuild:
+  Add XML-LibXML dep to 1.0.x ebuilds. See bug #116603.
 
   21 Nov 2005; Peter Johanson <latexer@gentoo.org> -gtk-sharp-2.3.92.ebuild,
   -gtk-sharp-2.5.92.ebuild:
