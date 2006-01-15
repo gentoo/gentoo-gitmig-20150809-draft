@@ -7,9 +7,9 @@ SHA256 b3d4fc24055cb5f276eb365652ccd80489cb04c373c1685c544b484bf9527902 files/di
 MD5 50b2f4eba738bc0b9eb5ca4b8f718cbe files/digest-mozilla-thunderbird-bin-1.0.7 71
 RMD160 1acdd748cb23b6d9d68c2a019e62c87299efd6aa files/digest-mozilla-thunderbird-bin-1.0.7 71
 SHA256 cc713c978bdfdd5ea7e0653774e7d1eb5ea50f0ddda0788de2e3286731bb2726 files/digest-mozilla-thunderbird-bin-1.0.7 71
-MD5 97ae85bccae3880743ac718855363430 files/digest-mozilla-thunderbird-bin-1.5 250
-RMD160 cb5e2d995b08beea3f81b78996b8b43436daf388 files/digest-mozilla-thunderbird-bin-1.5 250
-SHA256 f7a85b1bd7432e6394be499cdf77f0bec3bb1680db05bcc3e337302d61ada5be files/digest-mozilla-thunderbird-bin-1.5 250
+MD5 28acc87e3b2192b21786dc144951f3a3 files/digest-mozilla-thunderbird-bin-1.5 253
+RMD160 55eb957101a106da7f907726109d95b2e2c5b7a8 files/digest-mozilla-thunderbird-bin-1.5 253
+SHA256 ae4131c9f0a57aa5d3be5e4321de12e79be99fecd6990abcca1801e4cb5437cc files/digest-mozilla-thunderbird-bin-1.5 253
 MD5 04115f0e204444eac76a092a63c89027 files/icon/mozillathunderbird-bin-icon.png 6499
 RMD160 1aeece7719c1c1629b98fc11870641769681a048 files/icon/mozillathunderbird-bin-icon.png 6499
 SHA256 ff9749e42b82b80425bb52883d63baa53298af7be98870ee6b73f0a6cf0ab22d files/icon/mozillathunderbird-bin-icon.png 6499
