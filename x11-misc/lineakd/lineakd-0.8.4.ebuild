@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.4.ebuild,v 1.1 2005/12/25 00:24:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.4.ebuild,v 1.2 2006/01/15 16:48:49 nelchael Exp $
 
 inherit eutils
 
@@ -13,22 +13,19 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND="|| (
-			( sys-libs/glibc
+RDEPEND="|| ( (
 			x11-libs/libICE
 			x11-libs/libSM
 			x11-libs/libX11
 			x11-libs/libXext )
-			virtual/x11
-		)"
+		virtual/x11 )"
 DEPEND="${RDEPEND}
-		|| (
-			( x11-libs/libxkbfile
+		|| ( (
+			x11-libs/libxkbfile
 			x11-libs/libXt
 			x11-proto/xextproto
 			x11-proto/xproto )
-			virtual/x11
-		)"
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
