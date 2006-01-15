@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.38 2006/01/15 11:54:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.39 2006/01/15 19:28:37 weeve Exp $
+
+  15 Jan 2006; Jason Wever <weeve@gentoo.org> strongswan-2.5.7.ebuild:
+  Added ~sparc keyword wrt bug #60816.
 
   15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   strongswan-2.5.7.ebuild:
