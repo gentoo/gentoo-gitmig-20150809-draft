@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 553c6866faa1d2cfc3b62f9b97eee943 ChangeLog 436
+MD5 913c33f8b833d39c3ae87866b1229280 ChangeLog 523
 MD5 bb05c8de627ac32f4185a3f28aa33292 files/digest-tucnak1-1.22 64
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 d9974c46f5349cdb6390c4cb71b8f316 tucnak1-1.22.ebuild 1223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmtxrV3J2n04EauwRAoNsAJ9YZK30IkyHuJ+d1mvqUUKGl3WODACgk4Hk
-qrQMUcHutbxtp6H0pdsgaCE=
-=NNkN
------END PGP SIGNATURE-----
+MD5 3cd792cd563f542b5c0a62344832c8f6 tucnak1-1.22.ebuild 1230

@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tucnak1
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/ChangeLog,v 1.1 2005/08/11 00:20:24 killsoft Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/ChangeLog,v 1.2 2006/01/15 04:19:09 dang Exp $
+
+  15 Jan 2006; <dang@gentoo.org> tucnak1-1.22.ebuild:
+  Marked ~amd64 per bug# 104926
 
 *tucnak1-1.22 (10 Aug 2005)
 
