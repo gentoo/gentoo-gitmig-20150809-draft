@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 d31fef2e29835853c502378428611df4 ChangeLog 6156
 MD5 599404b725ab4c48c4b79aced53e6a1c crossdev-0.9.11-r1.ebuild 597
-MD5 0daf17629cb8f411f13a25a5078976e3 files/crossdev 15677
+MD5 dbc082bc4bc166ed34ecc1767c5dcdc3 files/crossdev 15700
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crossdev-0.9.11-r1 0
 MD5 e91cdaf464f515f3528da02cf06e54a1 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwICy2+ySkm8kpY0RAoUTAKCmL32795hh7P5DFYsUSmfZjM5qCwCgprdb
-imUfMDXDsljuwkWesqhM6I0=
-=qjaf
+iD8DBQFDyq7d2+ySkm8kpY0RAphjAKC9l6x2WBYa8MRItyCL4b/obF5QhQCfdg5v
+NizYAh94RG8oGkX7swZRB5M=
+=dhST
 -----END PGP SIGNATURE-----
