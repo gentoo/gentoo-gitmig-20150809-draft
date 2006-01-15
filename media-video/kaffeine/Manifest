@@ -1,21 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bd0b121d2a56d444321b74f457fad46f ChangeLog 6129
-MD5 0fc6c600e680a127863fc22e097daec4 files/digest-kaffeine-0.6-r1 66
+MD5 e711a0cd89a0cb48b051b1b2d3bdf90c ChangeLog 6269
 MD5 297331248320491bcc0f2926e32ccacc files/digest-kaffeine-0.7.1 68
 MD5 297331248320491bcc0f2926e32ccacc files/digest-kaffeine-0.7.1-r1 68
-MD5 3b5f1da0e1ceab40aabee361a20e6ae5 files/kaffeine-0.6-formats.patch 3420
 MD5 34ae486ff059c3c8e8f80ae6597429b3 files/kaffeine-0.7.1-systemproto.patch 489
 MD5 7eb46dd81c8493beac19e7078813bfc3 files/kaffeine-0.7.1-xinerama.patch 863
-MD5 eb11794e0440683d63c7663fe8ae5cdc kaffeine-0.6-r1.ebuild 737
 MD5 66281fafae47f5f771bb1e65423f1079 kaffeine-0.7.1-r1.ebuild 1179
 MD5 fa875c206ccdfd2356cc4e0d64a93014 kaffeine-0.7.1.ebuild 925
 MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDybdnntT9W3vfTuoRAo5CAKCo0ugkz03bmtkX4FwG5KL1JhPTPQCfZll6
-yjtZWPcvx+3uVNZNWbHUlEw=
-=uL1/
+iD8DBQFDyk5LAiZjviIA2XgRApQrAKCO/Awbb+YB04ZgDzQGzze5096uvgCfT0sy
+4SpEofiemrvx3G0PNWquvz8=
+=0rYU
 -----END PGP SIGNATURE-----
