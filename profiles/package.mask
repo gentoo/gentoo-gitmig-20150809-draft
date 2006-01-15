@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4864 2006/01/15 07:00:23 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4865 2006/01/15 07:07:04 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Peter Johanson <latexer@gentoo.org> (14 Jan 2006)
+# Masking mono-1.1.13.1 til Mono.Posix changes can be fixed in consuming applications
+=dev-lang/mono-1.1.13.1
+=dev-dotnet/libgdiplus-1.1.13
 
 # Benjamin Smee <strerror@gentoo.org> (14 Jan 2006)
 # Masking openldap 2.3.x for testing
