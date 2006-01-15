@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 198bb9c49a37b5176ae8b26edcee18b7 ChangeLog 5063
+MD5 2beb24ca7bb0fcf1a7af0774a7f490f0 ChangeLog 5171
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r1 63
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r2 63
 MD5 e16277e2e6a0398b090274b47e9ae7fe files/digest-pyrex-0.9.3.1 65
@@ -9,12 +6,5 @@ MD5 b5bb4ba679c6de2f55651b7c6af8f013 files/pyrex-0.9.2.1-gcc4.patch 2877
 MD5 c587d86c063eda8fb02e18b9b1c83aec files/pyrex-0.9.3-python24_distutils.patch 622
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 d08c9ca7453de3d3f1520a83830e794b pyrex-0.9.3-r1.ebuild 988
-MD5 80ca257e3cde1071c99414503ab74cda pyrex-0.9.3-r2.ebuild 1067
+MD5 74b0f77e2f250d0e7cd8baf16d8baebd pyrex-0.9.3-r2.ebuild 1067
 MD5 b47d3a13d2acee7812646d323f1b211a pyrex-0.9.3.1.ebuild 833
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvgGl2+ySkm8kpY0RAuf/AKCERdUqrnYQc3KTEf6tIBAKITl+QACePDCJ
-dowk8BSUE8rZeBc6eQPAdNY=
-=1S93
------END PGP SIGNATURE-----
