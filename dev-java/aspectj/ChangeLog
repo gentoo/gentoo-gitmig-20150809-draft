@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectj
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.14 2006/01/08 05:33:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.15 2006/01/15 17:45:30 nichoj Exp $
+
+  15 Jan 2006; Joshua Nichols <nichoj@gentoo.org> aspectj-1.2-r1.ebuild:
+  Fixed jar-from call for saxon to fix bug #119089.
 
 *aspectj-1.2-r1 (08 Jan 2006)
 

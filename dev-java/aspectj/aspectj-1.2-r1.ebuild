@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2-r1.ebuild,v 1.1 2006/01/08 05:33:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2-r1.ebuild,v 1.2 2006/01/15 17:45:30 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -55,28 +55,38 @@ src_unpack() {
 	sed -i -e "s,@PV@,${PV},g" -e "s,@PV_LONG@,${PV} (Gentoo Build),g" \
 		org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc/messages.properties
 
-	find lib -name "*.jar" -exec rm {} \;
-
 	cd lib/ant/lib
+		rm *.jar
 		java-pkg_jar-from xalan
 		java-pkg_jar-from ant-core
 		java-pkg_jar-from xml-commons xml-apis.jar
 		java-pkg_jar-from xerces-2
+	
+	cd ../../commons
+		rm *.jar
 
 	cd ../../bcel
+		rm *.jar
 		java-pkg_jar-from bcel
 
+	cd ../../jdiff
+		rm *.jar
+
 	cd ../junit
+		rm *.jar
 		java-pkg_jar-from junit
 
 	cd ../jython
+		rm *.jar
 		java-pkg_jar-from jython
 
 	cd ../regexp
+		rm *.jar
 		java-pkg_jar-from jakarta-regexp-1.3
 
 	cd ../saxon
-		java-pkg_jar-from saxon-6.5 saxon6.5.jar saxon.jar
+		rm *.jar
+		java-pkg_jar-from saxon-6.5
 }
 
 src_compile() {
