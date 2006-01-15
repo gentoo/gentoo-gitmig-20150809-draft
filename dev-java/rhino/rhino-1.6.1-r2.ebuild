@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r1.ebuild,v 1.6 2006/01/15 18:50:54 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r2.ebuild,v 1.1 2006/01/15 18:50:54 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${T}/jsscript
+	newbin ${T}/jsscript jsscript-${SLOT}
 	java-pkg_dojar build/*/js.jar
 	use source && java-pkg_dosrc {src,toolsrc}/org
 	use doc && java-pkg_dohtml -r docs/*

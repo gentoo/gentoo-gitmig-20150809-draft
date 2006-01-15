@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/rhino
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.32 2005/08/22 19:03:30 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.33 2006/01/15 18:50:54 nichoj Exp $
+
+*rhino-1.6.1-r2 (15 Jan 2006)
+*rhino-1.5.5-r2 (15 Jan 2006)
+
+  15 Jan 2006; Joshua Nichols <nichoj@gentoo.org> files/jsscript,
+  +rhino-1.5.5-r2.ebuild, rhino-1.6.1-r1.ebuild, +rhino-1.6.1-r2.ebuild:
+  Fixed slot problem in jsscript (bug #118863). Also fixed collison between 
+  1.5 and 1.6 over /usr/bin/jsscript.
 
   22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> rhino-1.6.1-r1.ebuild:
   Stable on sparc

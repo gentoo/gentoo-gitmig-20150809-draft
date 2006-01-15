@@ -1,2 +1,2 @@
 #!/bin/sh
-exec $(java-config --java) -classpath $(java-config --classpath=rhino) org.mozilla.javascript.tools.shell.Main $@
+exec $(java-config --java) -classpath $(java-config --classpath=rhino-@SLOT@) org.mozilla.javascript.tools.shell.Main $@
