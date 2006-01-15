@@ -1,19 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.13-r1.ebuild,v 1.2 2006/01/15 17:40:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.15.ebuild,v 1.1 2006/01/15 17:40:34 taviso Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 HOMEPAGE="http://www.fvwm.org/"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-	mirror://gentoo/fvwm-2.5.11-translucent-menus.diff.gz
-	perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3-4.tar.gz )"
+	mirror://gentoo/fvwm-2.5.14-translucent-menus.diff.gz"
 
 LICENSE="GPL-2 FVWM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bidi debug gtk gtk2 imlib nls perl png readline rplay stroke tcltk truetype xinerama"
+IUSE="bidi debug gtk imlib nls perl png readline rplay stroke tcltk truetype xinerama"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		gtk? ( =x11-libs/gtk+-1.2*
@@ -30,11 +29,23 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		>=dev-lang/perl-5.6.1-r10
 		>=sys-libs/zlib-1.1.4-r1
 		sys-apps/debianutils
-		virtual/x11"
+		|| ( (
+			x11-libs/libXpm
+			x11-libs/libXft
+			xinerama? ( x11-libs/libXinerama ) )
+		virtual/x11 )"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
 # XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
-DEPEND="${RDEPEND} dev-util/pkgconfig !x11-wm/metisse"
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig
+		!x11-wm/metisse
+		|| ( (
+			x11-libs/libXrandr
+			x11-proto/xextproto
+			x11-proto/xproto
+			xinerama? ( x11-proto/xineramaproto ) )
+		virtual/x11 )"
 
 SFT=${WORKDIR}/FvwmTabs-v3-4
 
@@ -44,34 +55,22 @@ src_unpack() {
 	# this patch enables fast translucent menus in fvwm. this is a
 	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
-	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.11-translucent-menus.diff
+	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.14-translucent-menus.diff
 
-	if use perl; then
-		# I'll supply a default icon for FvwmTabs, this removes the need for
-		# installing an iconset, this one comes from the fvwm_icons package.
-		cd ${SFT}
-		ebegin "	Setting default icon for FvwmTabs"
-			sed -i 's#happyMini.xpm#/usr/share/fvwm/mini-happy.xpm#g' \
-				FvwmTabs FvwmTabs.1 fvwmtabrc
-		eend $?
-	fi
+	# FvwmTabs pod not included in dist
+	sed -i -e 's/\(.*pod.*\)/#\1/g' ${S}/modules/FvwmTabs/Makefile.am || die
 
 	# fixing #51287, the fvwm-menu-xlock script is not compatible
 	# with the xlockmore implementation in portage.
 	cd ${S}; epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
-
-	# 64bit fixes.
-	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/fvwm-64bit-fixes.diff.gz
 
 	# remove XBell when grab fails.
 	cd ${S}; epatch ${FILESDIR}/fvwm-noxbell-grab-fail.diff
 }
 
 src_compile() {
-	local myconf="--libexecdir=/usr/lib \
-		--with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm \
-		--enable-package-subdirs"
+	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm --enable-package-subdirs"
+
 
 	# use readline in FvwmConsole.
 	if ! use readline; then
@@ -91,7 +90,6 @@ src_compile() {
 		myconf="${myconf} --without-gnome"
 	fi
 
-	# rplay is a cool, but little used way of playing sounds over a network
 	if ! use rplay; then
 		myconf="${myconf} --without-rplay-library"
 	fi
@@ -103,21 +101,20 @@ src_compile() {
 		myconf="${myconf} --disable-perllib"
 	fi
 
-	# xinerama support for those who have multi-headed machines.
 	if use xinerama; then
 		myconf="${myconf} --enable-xinerama"
 	else
 		myconf="${myconf} --disable-xinerama"
 	fi
 
-	# bidirectional writing support, eg hebrew
+	# bidirectional writing support
 	if use bidi; then
 		myconf="${myconf} --enable-bidi"
 	else
 		myconf="${myconf} --disable-bidi"
 	fi
 
-	# png image support (very nice in fvwm)
+	# png image support
 	if ! use png; then
 		myconf="${myconf} --without-png-library"
 	fi
@@ -134,7 +131,6 @@ src_compile() {
 		myconf="${myconf} --without-stroke-library"
 	fi
 
-	# more verbosity for module developers/hackers/etc.
 	if use debug; then
 		myconf="${myconf} --enable-debug-msgs --enable-command-log"
 	fi
@@ -149,6 +145,8 @@ src_compile() {
 	# set the local maintainer for fvwm-bug.
 	export FVWM_BUGADDR="taviso@gentoo.org"
 
+	append-flags -fno-strict-aliasing
+
 	econf ${myconf} || die
 	emake || die
 }
@@ -158,26 +156,9 @@ src_install() {
 
 	if use perl; then
 
-		local toolkits="gtk2 gtk tcltk"
+		local toolkits="gtk tcltk"
 
-		if use tcltk; then
-			# Install the very cool FvwmTabs module
-			# http://users.tpg.com.au/users/scottie7/FvwmTabs
-			einfo "Installing FvwmTabs module..."
-
-			exeinto /usr/lib/fvwm/${PV}/
-			doexe ${SFT}/FvwmTabs
-
-			dodoc ${SFT}/fvwmtabrc ${SFT}/tab.zsh
-			doman ${SFT}/FvwmTabs.1
-			dohtml ${SFT}/FvwmTabs.man.html
-
-			newdoc ${SFT}/README README.fvwmtabs
-
-			# install default drag and drop icon.
-			insinto /usr/share/fvwm
-			newins ${FILESDIR}/mini.happy.xpm mini-happy.xpm
-		else
+		if ! use tcltk; then
 			# Remove the Tk bindings (requires perl-tk)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
 			toolkits=${toolkits/tcltk/}
@@ -186,14 +167,7 @@ src_install() {
 			# Remove gtk bindings (requires gtk-perl/gtk2-perl)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm \
 				${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
-			toolkits=${toolkits/gtk2/}
 			toolkits=${toolkits/gtk/}
-		else
-			if ! use gtk2; then
-				# Just remove the gtk2 bindings (requires gtk2-perl)
-				rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
-				toolkits=${toolkits/gtk2/}
-			fi
 		fi
 		toolkits=${toolkits// /}
 		if ! test "${toolkits}"; then
@@ -230,9 +204,6 @@ src_install() {
 	docs/COMMANDS docs/DEVELOPERS docs/FAQ docs/error_codes docs/TODO \
 	docs/fvwm.lsm
 
-	dodoc utils/fvwm_make_directory_menu.sh  utils/fvwm_make_browse_menu.sh \
-	utils/quantize_pixmaps utils/xselection.c
-
 	dodoc ${FILESDIR}/README.transluceny.gz
 
 	# fix a couple of symlinks.
@@ -240,16 +211,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use perl; then
-		if use tcltk; then
-			einfo "By setting the perl and tcltk USE flags, you have elected to"
-			einfo "install the FvwmTabs module, a configurable tabbing system"
-			einfo "for FVWM. You can read more about FvwmTabs here:"
-			einfo
-			einfo "	http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
-			einfo
-		fi
-	fi
 	echo
 	einfo "For information about the changes in this release, please"
 	einfo "refer to the NEWS file."
