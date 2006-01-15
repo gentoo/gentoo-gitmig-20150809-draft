@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.62 2006/01/13 13:56:47 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.63 2006/01/15 11:06:42 mkay Exp $
+
+  15 Jan 2006; Marcin Kryczek <mkay@gentoo.org>
+  -files/amule-2.0.0_rc7-wxgtk.patch, -amule-1.2.8.ebuild,
+  -amule-1.2.8-r1.ebuild, -amule-1.2.8-r2.ebuild, -amule-2.0.1.ebuild,
+  -amule-2.0.1-r1.ebuild, -amule-2.0.3.ebuild, -amule-2.0.3-r2.ebuild,
+  -amule-2.0.3-r3.ebuild:
+  Removing old ebuilds
 
   13 Jan 2006; Marcin Kryczek <mkay@gentoo.org> files/amuleweb.confd,
   files/amuleweb.initd:
