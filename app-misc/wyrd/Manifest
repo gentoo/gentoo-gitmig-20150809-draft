@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2e193cbd74bbe209ab0eed4c1bd4d234 ChangeLog 529
-MD5 65a525dfc3a83c73839897525012df68 files/digest-wyrd-1.0.0 62
+MD5 2e5c3558df34a7adcd4bbb06e788b4cf ChangeLog 691
 MD5 141d7e8a8e5f82f55bd83bbb664a46d9 files/digest-wyrd-1.1.1 62
+MD5 b8d6116a6882a07c79a6d9b056347430 files/digest-wyrd-1.2.0 62
 MD5 4a6a953879a42aee5735cb2434ae754d metadata.xml 369
-MD5 a37aaf3472cf7340609b98b82dd06d5f wyrd-1.0.0.ebuild 599
 MD5 f39bfdc091ab5e5702097d597b83d01d wyrd-1.1.1.ebuild 738
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDX+hPV3J2n04EauwRAu9zAJ9a4B7xPAP4/0JOmonpmyl/jTDTeACgo95G
-kVCrI3x3DpN5HnA57ikkTm0=
-=lIiW
------END PGP SIGNATURE-----
+MD5 a2a162767f32eb5d388d9d19d4e9984e wyrd-1.2.0.ebuild 705
