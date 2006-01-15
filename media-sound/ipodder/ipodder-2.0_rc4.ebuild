@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ipodder/ipodder-2.0_rc4.ebuild,v 1.1 2005/07/09 09:27:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ipodder/ipodder-2.0_rc4.ebuild,v 1.2 2006/01/15 00:13:51 nichoj Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://ipodder.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3.0
 		>=dev-python/wxpython-2.6

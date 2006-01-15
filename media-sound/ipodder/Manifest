@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 89548ff452209f596c02be0e9571ba88 metadata.xml 414
-MD5 ec9b006c897ee1ccfccdd1ddb405c6f3 ChangeLog 692
-MD5 c39dd502528c73e8b6e27a083394b9cb ipodder-2.0_rc4.ebuild 1257
-MD5 1d983b972f7bd801d6b38e6a48c8318c files/digest-ipodder-2.0_rc4 74
+MD5 536f99e3ad0a01e83a54a72e6d61d8f8 ChangeLog 787
 MD5 535cd8628eb9d4003ab9bd7e653fc205 files/2.0_rc4-wx26-selector.patch 1953
+MD5 1d983b972f7bd801d6b38e6a48c8318c files/digest-ipodder-2.0_rc4 74
+MD5 5a3e1258f5abb02e6c5eb855560ab925 ipodder-2.0_rc4.ebuild 1260
+MD5 89548ff452209f596c02be0e9571ba88 metadata.xml 414
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjsXUFdQwWVoAgN4RApbQAKDX7MowBLAEyv4Ex7FleN+vVyyV4QCdHCom
-cpjae+Id3ZuRHS2zvQ71oo0=
-=fFXA
+iD8DBQFDyZQDndWRXhKOboURAvVCAKCMnVl7fJHK5oVGKMigOa1qdWndhwCgkt42
+VHWQZPxuMO5KbjowNzQ+6Z4=
+=F0Vi
 -----END PGP SIGNATURE-----
