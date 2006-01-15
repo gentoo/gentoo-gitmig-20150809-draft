@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.24 2006/01/13 20:30:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.25 2006/01/15 11:18:50 hansmi Exp $
+
+  15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> Curses-1.13.ebuild:
+  Stable on ppc.
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org> Curses-1.13.ebuild:
   marking stable sparc x86
