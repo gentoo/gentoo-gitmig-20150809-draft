@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.88 2006/01/14 19:10:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.89 2006/01/15 04:29:48 weeve Exp $
+
+  15 Jan 2006; Jason Wever <weeve@gentoo.org> nano-1.3.9.ebuild:
+  Stable on SPARC wrt bug #118946.
 
   14 Jan 2006; Fabian Groffen <grobian@gentoo.org> nano-1.3.9.ebuild:
   Marked ppc-macos stable (bug #118946)
