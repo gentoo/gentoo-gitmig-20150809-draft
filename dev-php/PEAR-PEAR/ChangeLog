@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.32 2006/01/15 06:25:26 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.33 2006/01/15 06:28:00 sebastian Exp $
 
 *PEAR-PEAR-1.3.6-r3 (15 Jan 2006)
 
@@ -10,7 +10,7 @@
 
   09 Jan 2006; Luca Longinotti <chtekk@gentoo.org> files/pear.conf,
   PEAR-PEAR-1.3.6-r2.ebuild:
-  Change pear.conf to auto-sobstitute the php binary's path, plus some other
+  Change pear.conf to auto-substitute the php binary's path, plus some other
   cosmetical fixes. Fix pear USE flag requirement, not really needed.
 
   09 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org>
