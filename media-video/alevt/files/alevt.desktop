@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Videotext Viewer
-Comment=AleVT Videotext Viewer
-Exec=alevt
-Icon=alevt.xpm
-Terminal=0
-Type=Application
-Categories=Application;AudioVideo;
-
