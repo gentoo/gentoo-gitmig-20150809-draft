@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/singular
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.5 2005/12/18 13:10:04 markusle Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.6 2006/01/15 06:04:28 markusle Exp $
+
+*singular-3.0.1.2 (14 Jan 2006)
+
+  14 Jan 2006; Markus Dittrich <markusle@gentoo.org>
+  +singular-3.0.1.2.ebuild:
+  Version bump. Also, fixed small bug in the ebuild which prevented 
+  the singular info file from being properly installed.
 
 *singular-3.0.1.1 (18 Dec 2005)
 
