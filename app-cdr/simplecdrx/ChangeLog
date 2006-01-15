@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/simplecdrx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/ChangeLog,v 1.23 2005/01/01 12:21:02 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/ChangeLog,v 1.24 2006/01/15 02:45:15 metalgod Exp $
+
+  15 Jan 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Set media-optical the maintainer of this package.
 
   28 Nov 2004; Andrej Kacian <ticho@gentoo.org> +files/1.3.2-gcc34.patch,
   simplecdrx-1.3.2.ebuild:
