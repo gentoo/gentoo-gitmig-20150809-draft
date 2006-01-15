@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.447 2006/01/13 22:19:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.448 2006/01/15 02:35:49 cryos Exp $
+
+  15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> apache-2.0.55.ebuild:
+  Stable on amd64, bug 117835.
 
   13 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   apache-2.0.55.ebuild:
