@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd44f32852308ee74bca4abb1e113f92 metadata.xml 184
+MD5 37a6c63fc6eaca47bb14da7ceca9bbf7 ChangeLog 3309
 MD5 0da0557d51c8b76b5e7a7ea6b7f6b557 culmus-0.100-r1.ebuild 1256
-MD5 0b383205ee614867ee677bff05053610 ChangeLog 3208
 MD5 984b914c4e522186d41c2f30d5dd96c1 culmus-0.101.ebuild 1211
-MD5 78ab1addaebacf5689e6eb24b5461b16 culmus-0.93-r1.ebuild 1140
-MD5 4cc63b6813a1b35e532fb7816752f7a2 files/digest-culmus-0.93-r1 287
 MD5 c82a1c4c293c4c91772373e614d9963b files/digest-culmus-0.100-r1 405
 MD5 ce612bbdefb9cf15d866bb39c787de5a files/digest-culmus-0.101 405
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVEoMJrHF4yAQTrARAunXAJ9mP8QJO6t7CuZDLhroiCBp9D8M2ACeN4pP
-gz7XofuXFKd2zS9ZHneFFQM=
-=SCsb
------END PGP SIGNATURE-----
+MD5 bd44f32852308ee74bca4abb1e113f92 metadata.xml 184
