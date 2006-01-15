@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.292 2006/01/11 12:21:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.293 2006/01/15 14:18:30 vivo Exp $
+
+  15 Jan 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.16-r30.ebuild,
+  mysql-5.0.18-r30.ebuild, mysql-5.1.4_alpha-r30.ebuild:
+  All changes refer to slotted versions and eclasses for these.
+  - Updated mysql-extra to version 20060115
+  - mysql_config for version >= 5.0 now recognize slot correctly
+  - updated fill_help_tables sql script
+  - added confcache to RESTRICT since it has problems with innodb storage engine
+  - The better version of MySQL is _always_ the one other software compile on
 
   11 Jan 2006; Francesco Riosa <vivo@gentoo.org> files/mysql-slot.conf.d-r2,
   files/mysql-slot.rc6-r2:

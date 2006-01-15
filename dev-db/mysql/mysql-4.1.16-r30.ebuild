@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16-r30.ebuild,v 1.5 2006/01/08 23:51:13 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16-r30.ebuild,v 1.6 2006/01/15 14:18:30 vivo Exp $
 
 # MYSQL_VERSION_ID will be
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
@@ -13,7 +13,7 @@ tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
 for vatom in 0 1 2 3; do
 	# pad to lenght 2
 	tpv[${vatom}]="00${tpv[${vatom}]}"
-	MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:(-2)}"
+	MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:0-2}"
 done
 # strip leading "0" (otherwise it's considered an octal number from bash)
 MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
