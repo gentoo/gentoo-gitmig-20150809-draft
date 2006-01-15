@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/DB_File
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.8 2006/01/13 22:43:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.9 2006/01/15 11:23:45 hansmi Exp $
+
+  15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> DB_File-1.814.ebuild:
+  Stable on ppc.
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org> DB_File-1.814.ebuild:
   Marking sparc x86 stable
