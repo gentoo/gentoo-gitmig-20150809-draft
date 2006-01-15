@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.15 2006/01/13 20:57:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.16 2006/01/15 11:24:27 hansmi Exp $
+
+  15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  gnome2-wnck-0.11.ebuild:
+  Stable on ppc.
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   gnome2-wnck-0.11.ebuild:

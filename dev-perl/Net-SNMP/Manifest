@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 599dd5e0abe18edfe821448adae63fed ChangeLog 3764
+MD5 123a4e092a6bb0d7aeb2ff29540a0ad9 ChangeLog 3856
 MD5 22e96a92d304f562c5cf9eeaab66eb36 Net-SNMP-4.1.2.ebuild 622
 MD5 eb72e3965f013423206ac8b49c07f5db Net-SNMP-5.0.0.ebuild 622
 MD5 c1dba4d8b280530d3f5dfd477883a404 Net-SNMP-5.0.1.ebuild 627
-MD5 210afcffd3e143941639d10ee8fb5739 Net-SNMP-5.2.0.ebuild 652
+MD5 d2dff6d5503641dcf32229ed249e24bd Net-SNMP-5.2.0.ebuild 648
 MD5 004f2f68d8e8833ad514eda16c83b25b files/digest-Net-SNMP-4.1.2 65
 MD5 dcf653c4174d6f402d3c717f9313968b files/digest-Net-SNMP-5.0.0 65
 MD5 d73b423266c5c377e5e0d161614ef949 files/digest-Net-SNMP-5.0.1 65
 MD5 da41aaadba24f6ac89a98cc88f017458 files/digest-Net-SNMP-5.2.0 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyCP0tG5z4I8BtQoRAsU+AJ4tnlYUutcbQZlwHCxR8RPq5y68CwCfTY+P
-SNA8L1vhC+XcN6n6m3tpb+k=
-=eFe8
------END PGP SIGNATURE-----
