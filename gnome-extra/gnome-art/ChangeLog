@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-art
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.7 2006/01/03 02:02:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.8 2006/01/15 15:03:33 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -gnome-art-0.2.ebuild:
+  Removed old version.
 
   03 Jan 2006; Caleb Tennis <caleb@gentoo.org> gnome-art-0.2.ebuild,
   gnome-art-0.2-r1.ebuild:
