@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r3.ebuild,v 1.9 2006/01/15 10:23:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r3.ebuild,v 1.10 2006/01/15 17:18:18 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -450,25 +450,25 @@ src_remove_extra_files()
 	${prV}/filetest.pm
 	${prVA}/attrs.pm
 	${prVA}/auto/attrs
-	${prVA}/auto/Cwd/Cwd.$(get_libname)
-	${prVA}/auto/Data/Dumper/Dumper.$(get_libname)
+	${prVA}/auto/Cwd/Cwd$(get_libname)
+	${prVA}/auto/Data/Dumper/Dumper$(get_libname)
 	${prVA}/auto/DynaLoader/dl_findfile.al
-	${prVA}/auto/Fcntl/Fcntl.$(get_libname)
-	${prVA}/auto/File/Glob/Glob.$(get_libname)
-	${prVA}/auto/IO/IO.$(get_libname)
+	${prVA}/auto/Fcntl/Fcntl$(get_libname)
+	${prVA}/auto/File/Glob/Glob$(get_libname)
+	${prVA}/auto/IO/IO$(get_libname)
 	${prVA}/auto/POSIX/autosplit.ix
 	${prVA}/auto/POSIX/fstat.al
 	${prVA}/auto/POSIX/load_imports.al
 	${prVA}/auto/POSIX/POSIX.bs
-	${prVA}/auto/POSIX/POSIX.$(get_libname)
+	${prVA}/auto/POSIX/POSIX$(get_libname)
 	${prVA}/auto/POSIX/stat.al
 	${prVA}/auto/POSIX/tmpfile.al
-	${prVA}/auto/re/re.$(get_libname)
-	${prVA}/auto/Socket/Socket.$(get_libname)
+	${prVA}/auto/re/re$(get_libname)
+	${prVA}/auto/Socket/Socket$(get_libname)
 	${prVA}/auto/Storable/autosplit.ix
 	${prVA}/auto/Storable/_retrieve.al
 	${prVA}/auto/Storable/retrieve.al
-	${prVA}/auto/Storable/Storable.$(get_libname)
+	${prVA}/auto/Storable/Storable$(get_libname)
 	${prVA}/auto/Storable/_store.al
 	${prVA}/auto/Storable/store.al
 	${prVA}/B/Deparse.pm
