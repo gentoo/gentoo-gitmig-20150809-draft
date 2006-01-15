@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23.ebuild,v 1.10 2006/01/03 23:30:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23.ebuild,v 1.11 2006/01/15 12:59:15 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -85,7 +85,8 @@ src_unpack() {
 
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
 	# use gnome-terminal in tests rather than gnome-open (bug #94708)
-	epatch ${FILESDIR}/${PN}-4.22-configure.patch
+	# and bug 118028:
+	epatch "${FILESDIR}/${PN}-4.23-norpm.patch"
 
 	# tweaks the default configuration (driver/XScreenSaver.ad.in)
 	epatch ${FILESDIR}/${PN}-4.22-settings.patch
@@ -101,7 +102,6 @@ src_unpack() {
 	eautoreconf
 
 	# change old head/tail to POSIX ones
-	#cd hacks
 	ht_fix_all
 }
 

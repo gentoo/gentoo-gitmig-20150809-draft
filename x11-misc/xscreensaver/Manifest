@@ -1,10 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f07baf6f1bc5e1c77f3b878c6b2b470 ChangeLog 21001
+MD5 1bac3ba003c9983ccca0e473a0dfe6cf ChangeLog 21235
 MD5 51377e1938cf119bd11972b3c30c0a25 files/desktop_entries/screensaver-properties.desktop 1000
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20 70
-MD5 24bb039b898635c9224f9866f29757ed files/digest-xscreensaver-4.22-r2 70
 MD5 24bb039b898635c9224f9866f29757ed files/digest-xscreensaver-4.22-r4 70
 MD5 4e81a52673c939318a008be6a0835435 files/digest-xscreensaver-4.23 70
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
@@ -16,17 +12,10 @@ MD5 e6a4444e1548adf83be31a933c5e19bf files/xscreensaver-4.22-interaggregate.patc
 MD5 cab8a426e9f99c0b49f598983b896b80 files/xscreensaver-4.22-nsfw-webcollage.patch 5029
 MD5 0802ff58ba46dfdc9d155798ef4936e5 files/xscreensaver-4.22-settings.patch 1766
 MD5 bd61d24250fdc129cf9b86e154c8c27a files/xscreensaver-4.23-app-defaults.patch 1080
+MD5 0ed894eebbc461f9523539a8d273535e files/xscreensaver-4.23-norpm.patch 1775
 MD5 e24f49eb6b4473a5fd9f0869065cfe85 files/xscreensaver-4.23-nsfw.patch 6634
 MD5 7528066fa9a88bd1b6d46224d118dd7b files/xscreensaver-blank-screen.patch 487
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 30baa75aa8ad6b15fa87c15cce9d3f40 xscreensaver-4.20.ebuild 4842
-MD5 ec122eaf5cf8ae7c3738b52c5d3d42c1 xscreensaver-4.22-r2.ebuild 5474
 MD5 eca40273355199f6c11a72010194217e xscreensaver-4.22-r4.ebuild 5657
-MD5 1d53f49b3d175911ed29b0998d10b43b xscreensaver-4.23.ebuild 5851
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuwkFwUpWvClEHQoRAmH0AKCIVtGIhW3OE5dgKU63M4TnFQFeuACggNoU
-VKN1iQkyOqO7rZVUjx+9q9A=
-=daQY
------END PGP SIGNATURE-----
+MD5 8d800b1bdb32ff691b97ca0df3fe70ae xscreensaver-4.23.ebuild 5857
