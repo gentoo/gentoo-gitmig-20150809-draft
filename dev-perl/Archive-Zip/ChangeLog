@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Archive-Zip
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.30 2005/08/25 22:21:46 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.31 2006/01/15 17:07:12 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Archive-Zip-1.16.ebuild:
+  Marking stable sparc x86
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Archive-Zip-1.16.ebuild:
   add ~ia64
