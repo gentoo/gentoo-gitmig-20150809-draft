@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.22 2006/01/13 20:40:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.23 2006/01/15 17:06:19 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  dbix-searchbuilder-0.95.ebuild:
+  Fixing mirror syntax in 0.95
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   dbix-searchbuilder-1.35.ebuild:
