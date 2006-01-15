@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 058d638107774d411be26d41450c7159 ChangeLog 6146
+MD5 387de1b4d3ae962be51413db3a35ea1b ChangeLog 6243
 MD5 7421c230db078e850be063b28fdf18cf files/config-gnustep-back-art.sh 415
 MD5 9c943c0c0837bfe718a98769bc25d366 files/digest-gnustep-back-art-0.9.4-r1 70
 MD5 886a210bb5db57775f15aa3261c8e632 files/digest-gnustep-back-art-0.9.5 70
@@ -12,15 +9,8 @@ MD5 e80f67b11659da59c1aeb0d995a8cf4c files/font-make-fix.patch-0.9.5 737
 MD5 f9dd4c1b68af4bef2e272d82202323ea files/font-make-fix.patch-0.9.5_pre20050312 501
 MD5 1a11b68ef3b40eefd6f0d2ae207a80c1 files/gnustep-back-art-0.9.4-ft219-backport.patch.bz2 19263
 MD5 8bc74a0dd1f6f27949e88611a0b86499 gnustep-back-art-0.9.4-r1.ebuild 1273
-MD5 73887767b180f21d449ffad58dc93d75 gnustep-back-art-0.9.5.ebuild 1523
+MD5 1b8c99652b3d4ba9c8a52efe06240575 gnustep-back-art-0.9.5.ebuild 1521
 MD5 d38f51c70add9c9b83fa08da0f1a69c4 gnustep-back-art-0.9.5_pre20050312.ebuild 1484
 MD5 6c6a04c880a9eca4934a1976ef83e987 gnustep-back-art-0.9.6-r1.ebuild 1552
 MD5 eb668dd58da2dc8a5edf8de61a255207 gnustep-back-art-0.9.6.ebuild 1528
 MD5 e2bc2a5b2bdec3808102e5a2caf41f7f metadata.xml 1030
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoqJ7AiZjviIA2XgRAvfyAJ9o8YIL++rWS14beWm+XNgb6AMPpACaA8ax
-DrbanQw4EOH8xHkzzubQHb4=
-=ysf3
------END PGP SIGNATURE-----
