@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 84420d6c5c3bd35e765a43803cd3d278 ChangeLog 1557
+MD5 4a0530bea6548213ad4360d653c4d823 ChangeLog 1662
 MD5 0c1db012ad805f07e316ba39b5fa0c22 files/digest-qcad-parts-2.0.1.2 72
 MD5 0c1db012ad805f07e316ba39b5fa0c22 files/digest-qcad-parts-2.0.1.2-r1 72
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 8821f40489854892993995959edf026c qcad-parts-2.0.1.2-r1.ebuild 1132
+MD5 4e67abda1c314507e7ef3c6eb9363866 qcad-parts-2.0.1.2-r1.ebuild 1132
 MD5 571a2721f4dad5b92e7994a0edfec3e1 qcad-parts-2.0.1.2.ebuild 1458
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyZowntT9W3vfTuoRApIfAKCZoaXLB1ZtdMdlYO1Rdwwkz7TAxwCfVE7N
-SiV5H6y1iXHqVPFvdO1QJxM=
-=Psms
------END PGP SIGNATURE-----
