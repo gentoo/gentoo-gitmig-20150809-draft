@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-gladexml
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.17 2005/11/22 16:27:56 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.18 2006/01/15 17:35:49 mcummings Exp $
+
+  15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  gtk2-gladexml-0.94.ebuild, gtk2-gladexml-1.00.ebuild,
+  gtk2-gladexml-1.005.ebuild:
+  Marking 1.005 stable x86; cleaning up mirror syntax
 
 *gtk2-gladexml-1.005 (22 Nov 2005)
 
