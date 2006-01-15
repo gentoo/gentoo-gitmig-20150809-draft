@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.234 2006/01/10 14:25:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.235 2006/01/15 17:27:36 dsd Exp $
+
+*gentoo-sources-2.6.15-r1 (15 Jan 2006)
+
+  15 Jan 2006; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.15-r1.ebuild:
+  Update to Linux 2.6.15.1 - misc fixes, and some security fixes too. sky2
+  updated to v0.12. Add support for Intel ICH8. suspend/resume support for
+  ata_piix driver.
 
   10 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   gentoo-sources-2.6.15.ebuild:
