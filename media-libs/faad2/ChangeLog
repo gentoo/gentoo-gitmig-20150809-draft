@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.60 2006/01/08 17:34:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.61 2006/01/15 17:52:42 flameeyes Exp $
+
+*faad2-2.0-r10 (15 Jan 2006)
+
+  15 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> -faad2-2.0-r6.ebuild,
+  -faad2-2.0-r9.ebuild, +faad2-2.0-r10.ebuild:
+  Add patch to avoid segmentation fault when using unknown long options. Bug
+  #70387. Thanks to Thomas Cort for the patch.
 
   08 Jan 2006; Joseph Jezak <josejx@gentoo.org> faad2-2.0-r9.ebuild:
   Marked ~ppc for bug #116022.
