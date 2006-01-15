@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce90580845cd35dc61978818a0d051e0 ChangeLog 3194
+MD5 96e8bdffb16e2e5a6b4e9b91fafc0332 ChangeLog 3296
 MD5 ba2c68413c4a7fb3128d608a710ca06e Class-MakeMethods-1.009.ebuild 641
-MD5 f0b1acec234e2d35d1ff7986e59446e9 Class-MakeMethods-1.01.ebuild 525
+MD5 205d1fc2117385106e999421ddf79589 Class-MakeMethods-1.01.ebuild 521
 MD5 71396e578ffcfa6be6464b548159bc0d files/digest-Class-MakeMethods-1.009 75
 MD5 e834273d477412f0495d2c791e053ff5 files/digest-Class-MakeMethods-1.01 74
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx++otG5z4I8BtQoRAlW1AJ9OzTQzQAk4FGDB4pBpOMZ2RJvdUACfZjjw
-kfuCU7RL5R3jijICLTOK+Tg=
-=LEGL
------END PGP SIGNATURE-----
