@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.15 2005/12/18 00:31:43 jer Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.16 2006/01/15 12:54:48 yoswink Exp $
+
+  15 Jan 2006; Jose Luis Rivero <yoswink@gentoo.org> an-0.95.3.ebuild:
+  mark ~alpha as requested by bug #113966
 
   18 Dec 2005; Jeroen Roovers <jer@gentoo.org> +files/an_0.95-3.diff,
   -files/an_0.95-3.diff.gz, an-0.95.3.ebuild:
