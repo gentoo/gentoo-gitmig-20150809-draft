@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.16 2006/01/15 18:28:57 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.17 2006/01/15 18:34:36 vanquirius Exp $
+
+  15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> files/ipcad.conf.d:
+  Same for conf.d.
 
   15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> files/ipcad.init:
   Add missing header information to initscript. Thanks to pva.
