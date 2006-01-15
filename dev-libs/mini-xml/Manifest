@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 90986ed8d289396e3d9731b6179fef32 ChangeLog 922
-MD5 c22db93f2bc10eb60a519d953c11f8d9 metadata.xml 220
-MD5 2d69b1199f38ef3ea0f3367fc58db86e mini-xml-2.0.0.ebuild 818
-MD5 008b6fdbf60cbb9a2dad3683a5b74e2b mini-xml-2.2.0.ebuild 815
-MD5 365646c87c1f582c8725276810a3b8c0 mini-xml-2.2.1.ebuild 796
 MD5 5b6c95aceb1378a60910f022aef1bdec files/digest-mini-xml-2.0.0 60
 MD5 5b6c95aceb1378a60910f022aef1bdec files/digest-mini-xml-2.2.0 60
 MD5 4cb9852b3b42e025169a59c1760cc2ff files/digest-mini-xml-2.2.1 62
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+MD5 2d69b1199f38ef3ea0f3367fc58db86e mini-xml-2.0.0.ebuild 818
+MD5 008b6fdbf60cbb9a2dad3683a5b74e2b mini-xml-2.2.0.ebuild 815
+MD5 365646c87c1f582c8725276810a3b8c0 mini-xml-2.2.1.ebuild 796
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCi07Y+uC/ViVka/0RAnIdAJ9+a2kjpdzmh311axOzL07CAGqrkACfV8sB
-kqQ5cvTBQJqIubPjp52HVHE=
-=Bsty
+iD8DBQFDyrUuvpz1081QvMkRAhTzAJ9zhxIr6vean5VUC3lqGmdn3xGCDQCdHawB
+Zx02GCgMR5KVF/Mvu8GifU0=
+=ObGt
 -----END PGP SIGNATURE-----
