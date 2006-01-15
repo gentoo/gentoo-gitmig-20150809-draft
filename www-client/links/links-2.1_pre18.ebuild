@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre18.ebuild,v 1.15 2005/12/03 16:52:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre18.ebuild,v 1.16 2006/01/15 22:01:45 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,6 @@ HOMEPAGE="http://links.twibright.com/"
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~vanquirius/files/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-utf8.diff.bz2"
 
 LICENSE="GPL-2"
