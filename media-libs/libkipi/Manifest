@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7dabed597b55c68d6c2c420151189da6 ChangeLog 1526
+MD5 570e7d732c0ba220cab3cb8683251bdd ChangeLog 1627
 MD5 ad6aaaabfd77646ea1b2ab2f9972e230 files/digest-libkipi-0.1 64
 MD5 bcae8a7b274f837cab4eafd4c65e91e1 files/digest-libkipi-0.1.1 66
 MD5 bbe932f305949265ddf6197fb66d5e9d files/digest-libkipi-0.1.2 66
 MD5 1873477441be6b81cd0880b345f4d1a9 libkipi-0.1.1.ebuild 520
-MD5 d81a6a6afe4a114ceec42a362fa79857 libkipi-0.1.2.ebuild 525
+MD5 d1f15b0474bff0ba35ac4c42518e1d9c libkipi-0.1.2.ebuild 519
 MD5 cd8165cd8f60f4a6bba8efa8e1205831 libkipi-0.1.ebuild 506
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDullRQiJ/wx066S4RAlaNAJ4qucS0hrJPbbjTXTZ3V2Llga5VKgCdHZ1+
-qNZXpz0iK8ErVLCTdSG0+y0=
-=XE97
------END PGP SIGNATURE-----

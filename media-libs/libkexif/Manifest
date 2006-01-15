@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac8b818af8b96a70696a9919888506d6 ChangeLog 1413
+MD5 9b95c0b629f7b3c1fa60f2595fec1a5a ChangeLog 1622
 MD5 e36a88fab83880a32b9e0da85493b6ca files/digest-libkexif-0.1 65
 MD5 a4bfd1b081257d97d2c1d8a52ccb1c50 files/digest-libkexif-0.2.1 67
 MD5 a4bfd1b081257d97d2c1d8a52ccb1c50 files/digest-libkexif-0.2.1-r1 67
@@ -10,12 +7,5 @@ MD5 0cf957abbe3ce8f33e84934b88ed11c8 files/libkexif-0.2.1-gcc4.patch 382
 MD5 d281168730da1227d5539d2d301767d2 libkexif-0.1.ebuild 548
 MD5 6bb403f6783ff3dbf60c4811fe2a3631 libkexif-0.2.1-r1.ebuild 650
 MD5 664b6ea08ca197961e436ad0b3704003 libkexif-0.2.1.ebuild 548
-MD5 378c0ccb6532782430e6cdd7be91a11c libkexif-0.2.2.ebuild 575
+MD5 e2c7d03afe7ee6e54b5253eb69cbee31 libkexif-0.2.2.ebuild 569
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDulklQiJ/wx066S4RAtTVAJoDczkm9i2ORlmjlCP/Rx3SEIXF0wCgiGIq
-KFEHSMTrzZk30aQJrQsY/NY=
-=vIPO
------END PGP SIGNATURE-----
