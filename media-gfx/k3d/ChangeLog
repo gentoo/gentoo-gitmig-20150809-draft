@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.19 2005/12/10 19:41:35 vanquirius Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.20 2006/01/15 21:47:09 vanquirius Exp $
+
+  15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> k3d-0.2.5.4.ebuild:
+  Take my devspace out of SRC_URI.
 
 *k3d-0.5.0.34 (10 Dec 2005)
 

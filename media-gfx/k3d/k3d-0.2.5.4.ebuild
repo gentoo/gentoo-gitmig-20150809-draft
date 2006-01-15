@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.9 2005/09/17 03:09:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.10 2006/01/15 21:47:09 vanquirius Exp $
 
 inherit python eutils
 
@@ -9,8 +9,7 @@ IUSE="truetype doc python ruby"
 DESCRIPTION="K-3D is a free 3D modeling, animation, and rendering system."
 HOMEPAGE="http://k3d.sourceforge.net"
 SRC_URI="mirror://sourceforge/k3d/${P}-src.tar.bz2
-	mirror://gentoo/${P}-gentoo.patch.tar.bz2
-	http://dev.gentoo.org/~vanquirius/files/${P}-gentoo.patch.tar.bz2"
+	mirror://gentoo/${P}-gentoo.patch.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
