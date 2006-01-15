@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.5 2005/09/02 12:28:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.6 2006/01/15 19:40:49 nichoj Exp $
 
 IUSE=""
 
@@ -26,7 +26,6 @@ LICENSE="jrockit"
 SLOT="1.4"
 KEYWORDS="~x86 ~ia64"
 DEPEND="virtual/libc
-	>=dev-java/java-config-0.2.5
 	>=app-arch/unzip-5.50-r1"
 
 PROVIDE="virtual/jre
