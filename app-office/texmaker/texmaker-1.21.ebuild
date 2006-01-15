@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.3 2006/01/12 01:14:33 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.4 2006/01/15 19:39:18 nattfodd Exp $
 
 inherit eutils versionator
 
@@ -55,4 +55,12 @@ src_install() {
 pkg_postinst() {
 	einfo "A user manual with many screenshots is available at:"
 	einfo "/usr/share/doc/${PF}/html/usermanual.html"
+	einfo ""
+	ewarn "texmaker-1.21 does not currently work with qt-4.1, only qt-4.0."
+	ewarn "Unfortunately, portage can not handle this correctly yet, so it is"
+	ewarn "possible that you obtain an infinite qt-4.0/qt-4.1 cycle in your emerge world."
+	ewarn ""
+	ewarn "If that happens, it is suggested to either mask qt-4.1"
+	ewarn "  (echo \">=x11-libs/qt-4.1\" >> /etc/portage/package.mask)"
+	ewarn "or downgrade texmaker."
 }

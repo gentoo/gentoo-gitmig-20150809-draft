@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.15 2006/01/12 01:14:33 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.16 2006/01/15 19:39:18 nattfodd Exp $
+
+  15 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org> texmaker-1.21.ebuild:
+  Added big ewarn about possible qt-4.0/4.1 up/down cycle in emerge world.
 
   08 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   texmaker-1.11-r1.ebuild:
