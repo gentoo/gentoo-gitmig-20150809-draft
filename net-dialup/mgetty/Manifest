@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7edf07de3817a325dfb1515c8e606ca3 ChangeLog 7981
+MD5 9b0b5c2efeb143f7774cb465893bbbdc ChangeLog 8073
 MD5 503ed4bbf18bb0b46850cb173873e16a files/Lucent.c.patch 814
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r2 70
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r3 70
@@ -23,12 +20,5 @@ MD5 1bb6061bf8000d07f70ffdd74f5659f4 metadata.xml 377
 MD5 5c1fecd73b6e0ccb0044b2997a067a8c mgetty-1.1.30-r2.ebuild 3541
 MD5 613c00d8bb964fcd6799ffb1bd97356a mgetty-1.1.30-r3.ebuild 3808
 MD5 292c3f40fe41b373489b01659b894ce4 mgetty-1.1.31-r1.ebuild 3843
-MD5 143f701ef38d5af4bfaa17c7c5b1b2ba mgetty-1.1.33.ebuild 4312
+MD5 18e09e8b013ab4bf6cc7cd7b0ba39f64 mgetty-1.1.33.ebuild 4309
 MD5 5051a985cf1e4c819f69daa2c4624fe8 mgetty-1.1.34.ebuild 4274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDwrAtKRy60XGEcJIRAssvAJ9tWLV8ryU7k5CN6YGd4TMP6uPgjwCbBXJk
-veOmR4k1jBSYVR2YwOERXSo=
-=IV67
------END PGP SIGNATURE-----
