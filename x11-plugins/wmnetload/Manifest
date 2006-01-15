@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 259a75293e41042388b24cb2edd2f966 ChangeLog 3615
+MD5 57752a5024581f4d4d7dc48a906ae949 ChangeLog 3724
 MD5 91c8ced226a5e46438cc17ca8e0eaa19 files/add_support_for_libdockapp_0.5.patch 2028
 MD5 8287f37c009e97ceef426da1acdc9965 files/digest-wmnetload-1.3-r2 65
 MD5 7692affc1abe16d7addf9effd39ffc04 files/wmnetload-1.3-norpath.patch 1927
 MD5 a4e6b8fede98f4471909cda8b29bc02d metadata.xml 600
-MD5 7eb4c52d6e28f0e3aab54cb0e8fd2de9 wmnetload-1.3-r2.ebuild 874
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDwtqumdTrptrqvGERAt0dAKCXOW0NeezEXR00qUDFXXbdrNkZyACeMNlY
-u/TBl14QpxTXH323TbHEYT8=
-=7DRg
------END PGP SIGNATURE-----
+MD5 9d2f3faa0b20d9d30ea0ca65ab2ac5bb wmnetload-1.3-r2.ebuild 848
