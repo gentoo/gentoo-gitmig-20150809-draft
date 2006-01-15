@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mod_python
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.40 2005/12/28 16:21:07 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.41 2006/01/15 17:16:13 marienz Exp $
+
+  15 Jan 2006; Marien Zwart <marienz@gentoo.org>
+  +files/mod_python-3.1.4-configure-bash-3.1.patch,
+  mod_python-3.1.4-r1.ebuild:
+  Patch to make configure work with bash 3.1 (bug #118948)
 
   28 Dec 2005; Simon Stelling <blubb@gentoo.org> mod_python-3.1.4-r1.ebuild:
   stable on amd64

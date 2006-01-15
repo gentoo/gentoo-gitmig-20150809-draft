@@ -1,0 +1,13 @@
+=== modified file 'configure.in'
+--- configure.in	
++++ configure.in	
+@@ -275,7 +275,7 @@
+ # get the mod_python version
+ AC_SUBST(MP_VERSION)
+ MP_VERSION=`awk '/MPV_STRING/ {print $3}' src/include/mpversion.h`
+-MP_VERSION=`echo $MP_VERSION | sed s/\\"//g`                                      
++MP_VERSION=`echo $MP_VERSION | sed s/\"//g`                                      
+ 
+ AC_OUTPUT(Makefile src/Makefile Doc/Makefile test/testconf.py dist/setup.py dist/Makefile)
+ 
+

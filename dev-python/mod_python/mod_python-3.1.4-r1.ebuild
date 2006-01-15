@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.6 2005/12/28 16:21:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.7 2006/01/15 17:16:13 marienz Exp $
 
-inherit python eutils apache-module
+inherit python eutils apache-module autotools
 
 DESCRIPTION="An Apache2 DSO providing an embedded Python interpreter"
 HOMEPAGE="http://www.modpython.org/"
@@ -32,6 +32,10 @@ src_unpack() {
 	if has_version ">=dev-lang/python-2.3"; then
 		sed -ie 's:LONG_LONG:PY_LONG_LONG:g' "${S}/src/requestobject.c"
 	fi
+
+	# fix configure with bash 3.1
+	epatch "${FILESDIR}/${P}-configure-bash-3.1.patch"
+	eautoconf
 }
 
 src_compile() {
