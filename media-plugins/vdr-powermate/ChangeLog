@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-powermate
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-powermate/ChangeLog,v 1.2 2005/12/15 21:21:18 hd_brummy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-powermate/ChangeLog,v 1.3 2006/01/15 20:30:30 hd_brummy Exp $
+
+  15 Jan 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/vdr-powermate-0.0.2-1.3.18.diff, -vdr-powermate-0.0.2.ebuild,
+  vdr-powermate-0.0.3.ebuild:
+  cleanup old version; stabel on x86
 
 *vdr-powermate-0.0.3 (15 Dec 2005)
 
