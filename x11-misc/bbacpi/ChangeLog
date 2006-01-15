@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbacpi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbacpi/ChangeLog,v 1.3 2005/11/01 14:11:49 nelchael Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbacpi/ChangeLog,v 1.4 2006/01/15 16:24:38 nelchael Exp $
+
+  15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> bbacpi-0.1.3.ebuild:
+  Fixed DEPEND for modular X.
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> bbacpi-0.1.3.ebuild:
   Fixed dodoc not to install COPYING and/or INSTALL.
