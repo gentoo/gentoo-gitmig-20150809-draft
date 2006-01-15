@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.6 2006/01/06 04:42:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.7 2006/01/15 16:14:28 tester Exp $
 
 
 
@@ -21,14 +21,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin i8kbuttons i8kctl i8kfan i8kmon
-	use tcltk && dobin i8kmon
+	dobin i8kbuttons i8kctl
 	doman i8kbuttons.1 i8kctl.1
-	use tcltk && doman i8kmon.1
 	dosym /usr/bin/i8kctl /usr/bin/i8kfan
 	dodoc README.i8kutils
-	dodoc i8kmon.conf
-	dodoc Configure.help.i8k
 	docinto examples/
 	dodoc examples/*
 
@@ -37,4 +33,17 @@ src_install() {
 	fperms 755 /etc/init.d/i8k
 	insinto /etc/conf.d
 	newins ${FILESDIR}/i8k.conf i8k
+
+	if use tcltk
+	then
+	        dobin i8kmon
+        	doman i8kmon.1
+		docinto /
+        	dodoc i8kmon.conf
+	else
+		echo >> ${D}/etc/conf.d/i8k
+		echo '# i8kmon disabled because the package was installed without USE=tcltk' >> ${D}/etc/conf.d/i8k
+		echo 'NOMON=1' >> ${D}/etc/conf.d/i8k
+	fi
+
 }

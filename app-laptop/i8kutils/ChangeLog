@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/i8kutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.9 2006/01/06 04:42:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.10 2006/01/15 16:14:28 tester Exp $
+
+  15 Jan 2006; Olivier Crête <tester@gentoo.org> i8kutils-1.25.ebuild:
+  More fixing of the installation of i8kmon
 
   06 Jan 2006; Olivier Crête <tester@gentoo.org> metadata.xml,
   -i8kutils-1.17.ebuild, -i8kutils-1.17-r1.ebuild, i8kutils-1.25.ebuild:

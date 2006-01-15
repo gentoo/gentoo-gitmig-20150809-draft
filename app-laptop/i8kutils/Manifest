@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d34ff47e4edff2c885c9eec8f978f05 ChangeLog 1702
+MD5 c1fb7e87780a1dbb1510b703193d48b6 ChangeLog 1820
 MD5 3b93250488155c8ff80461d5f4f1d220 files/digest-i8kutils-1.25 64
 MD5 d4d358aea65a5d6fd19f4abb17c043d4 files/i8k.conf 891
 MD5 1dae8e3aae85f468d86aaddf072bb559 files/i8k.init 1165
-MD5 e466cf220f470ca9804791ebe0eab936 i8kutils-1.25.ebuild 958
+MD5 5dbb914981f40e0442be8dd0ac9471df i8kutils-1.25.ebuild 1132
 MD5 8ad10de4d8833ae2a73147d6e65c199c metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvfVKmOfEJZHYOKcRAneTAKCVKd1GJXkscBsRzNmuFX22EAV4NACgv+PP
-4K64fYWMsFX5Q+czUF/Sma8=
-=E1mk
------END PGP SIGNATURE-----
