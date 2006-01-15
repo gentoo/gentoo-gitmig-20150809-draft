@@ -1,6 +1,9 @@
 # ChangeLog for games-action/parsec
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.7 2006/01/02 18:52:14 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.8 2006/01/15 14:43:18 mr_bones_ Exp $
+
+  15 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> parsec-0197.ebuild:
+  preserve execute permissions.  bug #119081
 
   02 Jan 2006; Luis Medinas <metalgod@gentoo.org> parsec-0197.ebuild:
   Fix package to work on amd64 thanks to Marti Raudsepp <integor@gmail.com>.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.8 2006/01/02 20:07:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.9 2006/01/15 14:43:18 mr_bones_ Exp $
 
 inherit games
 
@@ -31,8 +31,9 @@ src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	dogamesbin "${FILESDIR}/parsec" || die "dogamesbin failed"
-	insinto "${dir}"
-	doins -r * || die "doins failed"
+	dodir "${dir}"
+	# preserve execute permissions.  bug #119081
+	cp -r * "${D}${dir}" || die "cp failed"
 	sed -i \
 		-e "s:GENTOO_DIR:${dir}:" \
 		"${D}${GAMES_BINDIR}/parsec" \

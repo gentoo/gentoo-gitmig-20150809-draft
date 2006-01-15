@@ -1,5 +1,5 @@
-MD5 afff99d473c9fb53c554401cb939dbf1 ChangeLog 866
+MD5 8ab39a53ca4cca33e9edb750ff35d18c ChangeLog 988
 MD5 b1474fdd4dba91a127dd4edee3137e96 files/digest-parsec-0197 74
 MD5 dbf54802fadb1edabd6f18885c2fb502 files/parsec 45
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 26f138f9eb7a63e4dcab9dcfef95eb81 parsec-0197.ebuild 1134
+MD5 79f83d03023225b3283bcc425dfac61b parsec-0197.ebuild 1185
