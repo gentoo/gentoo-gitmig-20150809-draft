@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.29.ebuild,v 1.3 2005/10/01 05:51:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.29.ebuild,v 1.4 2006/01/15 13:14:13 cryos Exp $
 
 inherit eutils libtool distutils
 
@@ -23,6 +23,8 @@ DEPEND="X? ( virtual/motif
 	app-text/xmlto
 	virtual/libc
 	sys-devel/gcc"
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}

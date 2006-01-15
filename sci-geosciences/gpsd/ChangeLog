@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.8 2005/12/16 12:10:52 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.9 2006/01/15 13:14:13 cryos Exp $
+
+  15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> gpsd-2.29.ebuild,
+  gpsd-2.30.ebuild:
+  Added RESTRICT test as the tests seem to be broken, closes bug 118585.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> gpsd-2.30.ebuild:
   Remove --with-gnu-ld option, bug #108386.

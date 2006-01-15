@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30.ebuild,v 1.2 2005/12/16 12:10:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30.ebuild,v 1.3 2006/01/15 13:14:13 cryos Exp $
 
 inherit eutils libtool distutils
 
@@ -29,6 +29,8 @@ src_unpack() {
 	cd ${S}
 	elibtoolize
 }
+
+RESTRICT="test"
 
 src_compile() {
 	distutils_python_version
