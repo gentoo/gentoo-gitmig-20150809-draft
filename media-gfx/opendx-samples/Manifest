@@ -1,4 +1,14 @@
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 e284983050cf759dc2a26456013b60ab ChangeLog 535
-MD5 c9f7b709e22c3a814bb0dcf6f8015707 opendx-samples-4.3.2.ebuild 1196
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2911cbd9aa2c5b770d45f99787b6bab3 ChangeLog 647
 MD5 79e9088507c29d4854546506167d851c files/digest-opendx-samples-4.3.2 68
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 5db594ce4a91641fa9bc9597c7b50eff opendx-samples-4.3.2.ebuild 1202
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDybkJntT9W3vfTuoRAgj1AJ9wydzXakw/o2fyxadynnCUqaCesQCggxYQ
+gBBUY6zAaO1DNK6Af9P1tNY=
+=0I/h
+-----END PGP SIGNATURE-----
