@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>netmon</herd>
+<maintainer>
+  <email>pva@gentoo.org</email>
+  <name>Peter Volkov</name>
+</maintainer>
+<longdescription>
+This program tries to prevent unauthorized usage of IPs within the local
+ethernet broadcastdomain by giving an answer to ARP-requests. After receiving
+such a faked reply, the requesting party stores the told MAC in its ARP-table
+and will send future packets to this MAC. Because this MAC is invalid, the host
+with the invalid IP can not be reached.
+</longdescription>
+</pkgmetadata>
