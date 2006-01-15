@@ -1,9 +1,10 @@
-MD5 159914c326a241f1ff3121d1cef75608 ChangeLog 9461
+MD5 62d61bc80b2d6008f26c836fd49b3055 ChangeLog 9577
 MD5 966945411ce792116eaca60972578869 bitlbee-0.92-r1.ebuild 3491
 MD5 83acd826aee3a5733fbde5b23cb51669 bitlbee-0.92-r2.ebuild 4246
 MD5 a2b6bd1475c65caa456bf6079c0b2456 bitlbee-0.92-r3.ebuild 4633
 MD5 fb98267549502ea8bc56340613a29c29 bitlbee-0.92.ebuild 3127
 MD5 08fd554a8e6ee7eaa164b5fc56505977 bitlbee-0.99.ebuild 3870
+MD5 2d9e3634a3ba5f098446bfd93770d815 bitlbee-1.0.1.ebuild 3798
 MD5 3a44f5b7110e7ae24a3bd0ac946e84a5 bitlbee-1.0.ebuild 3825
 MD5 348ecbcec9cf34e7164b0f0189ea5963 files/bitlbee-0.80-xinetd.patch 730
 MD5 ccb2adcfc701f086102639f5d5b38802 files/bitlbee-0.82-segv.diff 415
@@ -19,4 +20,5 @@ MD5 f6bb34a36e7f5f5d61aa430d2614a56a files/digest-bitlbee-0.92-r2 189
 MD5 139ef04e41295e394934ac1606d2fe51 files/digest-bitlbee-0.92-r3 258
 MD5 0780b3b3747aeb38d06130cd071271a1 files/digest-bitlbee-0.99 136
 MD5 6e79fac8fae093968db5d08fc8e89539 files/digest-bitlbee-1.0 135
+MD5 5bb7647bf6772f9eb33a99019faadc02 files/digest-bitlbee-1.0.1 138
 MD5 fc51bd6f3a89c98a4a447e9b1725e488 metadata.xml 465
