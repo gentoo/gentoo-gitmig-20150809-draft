@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.8 2006/01/05 00:22:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.9 2006/01/15 00:54:10 cryos Exp $
+
+  15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  ghostscript-gnu-8.16-r1.ebuild:
+  Stable on amd64, bug 111212.
 
   05 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
   ghostscript-gnu-8.16-r1.ebuild:
