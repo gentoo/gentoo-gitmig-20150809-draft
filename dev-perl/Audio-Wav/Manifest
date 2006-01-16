@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4ea721d3d923442867cd9464f1e2f904 Audio-Wav-0.02.ebuild 555
-MD5 f1691d6f5ed40daf21f39756c70659f1 Audio-Wav-0.04.ebuild 527
-MD5 78c0db46feefff5476ae757a512df798 ChangeLog 1364
+MD5 5f27a35bd52d37e96d1f84b21bc69e95 Audio-Wav-0.04.ebuild 527
+MD5 64f208e3dfc4bcda4054ba30cdc01896 ChangeLog 1461
 MD5 9aaaa211e913114565eb06d34c5a8754 files/digest-Audio-Wav-0.02 65
 MD5 4df1a8dbdd90e9fbb345255a62918da2 files/digest-Audio-Wav-0.04 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDy/jMKRy60XGEcJIRApqhAJ9hw43+89WnUARkCaujtweNYefPbwCfdxjm
-8IoZt7lLJFapggWSdtE4HHc=
-=jgkX
------END PGP SIGNATURE-----
