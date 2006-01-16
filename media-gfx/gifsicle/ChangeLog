@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gifsicle
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.8 2005/12/20 23:17:18 vanquirius Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.9 2006/01/16 14:48:08 vanquirius Exp $
+
+  16 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> gifsicle-1.44.ebuild:
+  1.44 ready for modular X. Fixes bug 116807. Thanks to Keri Harris
+  <harriskeri at mcs dot vuw dot ac dot nz>.
 
 *gifsicle-1.44 (20 Dec 2005)
 
