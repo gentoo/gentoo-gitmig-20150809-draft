@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1d5b99daea310c4c1fb6e4e8629cab5f ChangeLog 5740
 MD5 1649e9d7c3239cdd2b6625f880f2be7f PDL-2.4.0-r2.ebuild 2100
 MD5 0638df8582a977fdf0e92ab0e7584d82 PDL-2.4.2.ebuild 2518
@@ -6,3 +9,10 @@ MD5 ec437e93538a4c2ac25d8618f51ddc86 files/digest-PDL-2.4.2 62
 MD5 5c22c0f59ad10f36608505d621618f2b files/gsl.patch 483
 MD5 62cbe79e2c7c354d5c165b63c571cc13 files/perldl.conf 2716
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDzAiTtG5z4I8BtQoRAlmvAJ9D/7M3Q44/2CR9uynQ/exHWzmPhQCZAfs4
+jlDFQyxULv6aPZIxcKPns5Q=
+=I9H3
+-----END PGP SIGNATURE-----
