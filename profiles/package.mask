@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4869 2006/01/16 15:53:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4870 2006/01/16 18:39:53 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,10 +38,6 @@ sys-fs/convertfs
 # masked pending removal - upstream dead and bugs keep piling. conky is a forked maintained
 # replacement
 app-admin/torsmo
-
-# Marcelo Goes <vanquirius@gentoo.org> (13 Jan 2006)
-# Masked for testing
-=media-gfx/truevision-0.5.5.2
 
 # Matthew Kennedy <mkennedy@gentoo.org> (13 Jan 2006)
 # OPEN ... :IF-EXISTS :APPEND causes data loss (see: 
