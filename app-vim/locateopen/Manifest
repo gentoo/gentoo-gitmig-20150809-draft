@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2396460701a3b08b28351c8133ed1a26 ChangeLog 1954
+MD5 d15730494c33c41ccfc629c1d63227c9 ChangeLog 2163
 MD5 0dc1da8270e79992ef31a37a8fe27e97 files/digest-locateopen-0.8.0 67
 MD5 556202cdd756a664a6944bdeeff67695 files/digest-locateopen-1.1 65
-MD5 c47a82ec1fa7a77d0e9ae91c629af250 files/digest-locateopen-1.2 65
+MD5 4cf66057882962c37bdbcda686aa507b files/digest-locateopen-1.3 65
 MD5 15a9c6b73d64428d5a27c6bd5ad2fc68 locateopen-0.8.0.ebuild 869
 MD5 1d5b5f32fefad84a5b7dfbb4dcfb9530 locateopen-1.1.ebuild 891
-MD5 46fffe32d90dad5e414da197b20c81e4 locateopen-1.2.ebuild 923
+MD5 3cdedc32b880f8a9d110307f772dfd38 locateopen-1.3.ebuild 922
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyQefLLFUmVNQ7rkRAtsdAJ4o9iy1lVlbRzinhJCYNXt8+h2taACfVf4F
-t0FcX1SrDo0fB2VMC9iNIyo=
-=oQkK
+iD8DBQFDzC5mLLFUmVNQ7rkRAsIsAJ9T1YFP2x5cRtKYHM7u0SWcEb0rMgCfSRZE
+MKMNy5bNHvRn6AuKT//GOHs=
+=nCYP
 -----END PGP SIGNATURE-----
