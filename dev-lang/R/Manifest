@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cd348eedde9bfaf1fb465ee2d6964007 ChangeLog 10215
+MD5 741147898ceed1dadb6d7be4290349a7 ChangeLog 10313
 MD5 f4c46f25907c3aa68c31a150acaf151b R-2.1.1.ebuild 2644
 MD5 c47d2c1039131afdf9b275f9302e015f R-2.2.0-r1.ebuild 2985
-MD5 4ee6a0cf5a92b561e813937a0a587630 R-2.2.1.ebuild 3012
+MD5 a523557fadc1353ab1b5e689b170e2f0 R-2.2.1.ebuild 3125
 MD5 8f28d07ba48615d7a496f31db3e9bf4d files/R-2.2.0-ifc-configure.patch 524
 MD5 44015fe4137f1326769e89f2c2c2eda7 files/R-logo.png 4867
 MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
@@ -15,7 +15,7 @@ MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyupfntT9W3vfTuoRAvH3AKCeWD6bpbd0TQxbcjlx7ptJ1fANpgCeIwcM
-80OvqHiVfDrjaPjcY3UmKwk=
-=nJI+
+iD8DBQFDyvL4ntT9W3vfTuoRAhjtAJ9+pZTA6c2wI+DrnxocqrgX5Tj6RgCgsN4I
+0FFFWmXF2yBB1lF4k+ceuU0=
+=LqJG
 -----END PGP SIGNATURE-----
