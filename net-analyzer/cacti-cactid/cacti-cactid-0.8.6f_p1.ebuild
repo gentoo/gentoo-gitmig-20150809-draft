@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6f_p1.ebuild,v 1.4 2005/12/18 06:54:26 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6f_p1.ebuild,v 1.5 2006/01/16 03:26:53 weeve Exp $
 
 MY_PV=${PV/_p/-}
 DESCRIPTION="Cactid is a poller for Cacti that primarily strives to be as fast
@@ -10,7 +10,7 @@ SRC_URI="http://www.cacti.net/downloads/cactid/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp
