@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.13-r2.ebuild,v 1.7 2005/12/13 20:19:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.13-r2.ebuild,v 1.8 2006/01/16 19:11:52 vanquirius Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -33,6 +33,16 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	sys-apps/sed"
+
+pkg_setup() {
+	# bug 119208
+	if built_with_use dev-lang/perl minimal ; then
+		ewarn "ethereal will not build if dev-lang/perl is compiled with"
+		ewarn "USE=minimal. Rebuild dev-lang/perl with USE=-minimal and try again."
+		ebeep 5
+		die "dev-lang/perl compiled with USE=minimal"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
