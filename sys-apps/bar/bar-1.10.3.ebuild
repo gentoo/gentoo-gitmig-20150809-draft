@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.10.3.ebuild,v 1.3 2005/12/14 15:02:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.10.3.ebuild,v 1.4 2006/01/16 23:07:35 gustavoz Exp $
 
 DESCRIPTION="Console Progress Bar"
 HOMEPAGE="http://clpbar.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/clpbar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc x86"
+KEYWORDS="sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.3.5 )"

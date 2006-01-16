@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/bar
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.14 2005/12/14 15:02:36 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.15 2006/01/16 23:07:35 gustavoz Exp $
+
+  16 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> bar-1.10.3.ebuild:
+  Stable on sparc
 
   14 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> bar-1.10.3.ebuild:
   Fixed and keyworded ~sparc wrt #113392
