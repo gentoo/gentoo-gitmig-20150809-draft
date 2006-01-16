@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 13a590e0d7b99d11b2b04393cbcbe7f3 syck-0.53.ebuild 565
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 33bc40226dd64f716024fa08a1698a22 ChangeLog 401
+MD5 0deec751bd31f7b9943f2af04c406707 ChangeLog 589
 MD5 45f7a45317376b71bea73a1cddfccda4 files/digest-syck-0.53 61
+MD5 eb4793a7d48077b2644c9a5c67e7c61a files/digest-syck-0.55 61
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 13a590e0d7b99d11b2b04393cbcbe7f3 syck-0.53.ebuild 565
+MD5 ae4c4f95918c96941cdf33270a2ca962 syck-0.55.ebuild 627
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChi6ZtG5z4I8BtQoRAh8qAJ499Y+hbuHRxQjJcq1lkgzfkynJbgCePjtE
-nF25FrqRvlWZiuWBFdroSbg=
-=11Qk
+iD8DBQFDzB77tG5z4I8BtQoRAjQeAJ4rjvYf8FaHV+MIys0dqfJIV7tpNgCffBem
+XlQU1GFKFtiOCNqyLxPdH4Q=
+=Z53i
 -----END PGP SIGNATURE-----
