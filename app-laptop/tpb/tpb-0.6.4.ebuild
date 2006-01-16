@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.6.4.ebuild,v 1.2 2005/11/25 13:09:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.6.4.ebuild,v 1.3 2006/01/16 19:43:45 brix Exp $
 
 inherit linux-info eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="-ppc x86"
 
 IUSE="nls xosd"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libXt x11-libs/libXext ) virtual/x11 )
 		xosd? ( >=x11-libs/xosd-2.2.0 )"
 
 CONFIG_CHECK="~NVRAM"
