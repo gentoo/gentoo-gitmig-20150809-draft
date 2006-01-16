@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.3 2006/01/12 18:38:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.4 2006/01/16 01:16:23 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg"
 HOMEPAGE="http://sourceforge.net/projects/ipac-ng/"
 SRC_URI="mirror://sourceforge/ipac-ng/${P}.tar.bz2
-	http://dev.gentoo.org/~vanquirius/files/${P}-patches.tar.bz2"
+	mirror://gentoo/${P}-patches.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
