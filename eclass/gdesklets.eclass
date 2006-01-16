@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.10 2005/08/26 19:44:10 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.11 2006/01/16 18:14:47 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -27,7 +27,7 @@ SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.gz"
 # Ebuild writer shouldn't need to touch these (except maybe $RDEPEND)
 SLOT="0"
 IUSE=""
-RDEPEND=">=gnome-extra/gdesklets-core-0.34.3"
+RDEPEND=">=gnome-extra/gdesklets-core-0.34.3-r1"
 
 GDESKLETS_INST_DIR="/usr/$(get_libdir)/gdesklets"
 
@@ -53,6 +53,7 @@ gdesklets_src_install() {
 	[ -z "${DISPLAY}" ] && DISPLAY=""
 	export DISPLAY
 
+	debug-print-section sensor_install
 	# First, install the Sensor (if there is one)
 	if [[ -n "${SENSOR_NAME}" ]]; then
 		for SENS in ${SENSOR_NAME[@]}; do
@@ -65,20 +66,21 @@ gdesklets_src_install() {
 		done # for in ${SENSOR_NAME}
 	fi # if -n "${SENSOR_NAME}"
 
+	debug-print-section display_install
 	# This finds the Displays
 	DISPLAY_FILES=(`find . -iname "*.display"`)
 
-	GD_INSDIR=""
+	DESKLET_INSDIR=""
 
-	# There is more than likely only one display per package
+	# There is most likely only one display per package
 	if [[ -n "${DISPLAY_FILES[@]}" ]]; then
-		# Base installation directory for displays
-		GD_INSDIR="${GDESKLETS_INST_DIR}/Displays/${DESKLET_NAME}"
+		# Base installation directory for displays from this desklet
+		DESKLET_INSDIR="${GDESKLETS_INST_DIR}/Displays/${DESKLET_NAME}"
 
 		# This creates the subdirectory of ${DESKLET_NAME}
 		# in the global Displays directory
-		[[ -d ${GD_INSDIR} ]] || \
-			dodir ${GD_INSDIR}
+		[[ -d ${DESKLET_INSDIR} ]] || \
+			dodir ${DESKLET_INSDIR}
 
 		# For each of the Display files, there may be
 		# scripts included inline which don't necessarily
@@ -87,8 +89,11 @@ gdesklets_src_install() {
 		# and install them.
 		for DSP in ${DISPLAY_FILES[@]}; do
 
+			cd `dirname ${DSP}`
 			einfo "Installing Display `basename ${DSP} .display`"
-			insinto ${GD_INSDIR}
+			debug-print "Installing ${DSP} into ${DESKLET_INSDIR}"
+			DSP=`basename ${DSP}`
+			insinto ${DESKLET_INSDIR}
 			doins ${DSP}
 
 			SCRIPTS=$(grep "script .*uri" ${DSP} | \
@@ -100,10 +105,11 @@ gdesklets_src_install() {
 			# relative to the display.
 			for SCR in ${SCRIPTS[@]}; do
 
-				cd `dirname ${DSP}`/`dirname ${SCR}`
+				cd `dirname ${SCR}`
 
-				insinto ${GD_INSDIR}/`dirname ${SCR}`
+				insinto ${DESKLET_INSDIR}/`dirname ${SCR}`
 				doins `basename ${SCR}`
+				debug-print "Installed `basename ${SCR}` into ${DESKLET_INSDIR}/`dirname ${SCR}`"
 
 				cd ${S}/`dirname ${DSP}`
 
@@ -121,8 +127,9 @@ gdesklets_src_install() {
 
 			for G in ${GFX[@]}; do
 
-				insinto ${GD_INSDIR}/`dirname ${G}`
+				insinto ${DESKLET_INSDIR}/`dirname ${G}`
 				doins ${G}
+				debug-print "Installed ${G} into ${DESKLET_INSDIR}/`dirname ${G}`"
 
 			done # for in ${GFX}
 
@@ -132,13 +139,17 @@ gdesklets_src_install() {
 
 	fi
 
+	debug-print-section control_install
+	
+	CONTROL_INSDIR=""
+	
 	# Make sure that it only finds Controls and not Sensors
 	# If it uses a Sensor, it shouldn't use a Control (since
 	# Sensors are deprecated).
 	if [[ -z "${SENSOR_NAME}" ]]; then
 
 		# Base installation directory for Controls
-		GD_INSDIR="${GDESKLETS_INST_DIR}/Controls"
+		CONTROL_INSDIR="${GDESKLETS_INST_DIR}/Controls"
 
 		CONTROL_INITS=$(find . -iname "__init__.py" | grep [Cc]ontrols)
 
@@ -151,10 +162,10 @@ gdesklets_src_install() {
 			einfo "Installing Control ${CTRL_NAME}"
 			# This creates the subdirectory of ${CTRL_NAME}
 			# in the global Controls directory
-			[[ -d ${GD_INSDIR}/${CTRL_NAME} ]] || \
-				dodir ${GD_INSDIR}/${CTRL_NAME}
+			[[ -d ${CONTROL_INSDIR}/${CTRL_NAME} ]] || \
+				dodir ${CONTROL_INSDIR}/${CTRL_NAME}
 
-			insinto ${GD_INSDIR}/${CTRL_NAME}
+			insinto ${CONTROL_INSDIR}/${CTRL_NAME}
 
 			doins -r *
 
@@ -173,13 +184,17 @@ gdesklets_src_install() {
 		-o -iname "*.xcf")
 
 	if [[ -n "${GFX}" ]]; then
+
 		# Install to the Displays directory of the Desklet
 		insinto ${GDESKLETS_INST_DIR}/Displays/${DESKLET_NAME}
 		doins ${GFX}
+		debug-print "Installed ${GFX} into ${GDESKLETS_INST_DIR}/Displays/${DESKLET_NAME}"
+
 	fi # if -n "${GFX}"
 
 	# Install some docs if so requested
 	[[ -n "${DOCS}" ]] && dodoc ${DOCS}
+	debug-print "Installed ${DOCS}"
 
 }
 
