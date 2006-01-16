@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.65 2006/01/03 11:14:55 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.66 2006/01/16 00:35:27 cryos Exp $
+
+  16 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> R-2.2.1.ebuild:
+  Add gfortran to the list of allowed Fortran compilers, closes bug 118147.
 
 *R-2.2.1 (03 Jan 2006)
 

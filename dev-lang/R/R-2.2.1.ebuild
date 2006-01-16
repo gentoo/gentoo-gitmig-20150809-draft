@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.1 2006/01/03 11:14:55 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.2 2006/01/16 00:35:27 cryos Exp $
 
 inherit fortran toolchain-funcs
 
@@ -29,10 +29,10 @@ pkg_setup() {
 	echo 'int main(){}' > test.c
 	$(tc-getCC) -c test.c -o test.o
 	if file test.o | grep -qs 64-bit ; then
-		einfo "64 bit architecture detected, using g77."
-		FORTRAN="g77 ifc"
+		einfo "64 bit architecture detected, using g77 or gfortran."
+		FORTRAN="gfortran g77 ifc"
 	else
-		FORTRAN="g77 f2c"
+		FORTRAN="gfortran g77 f2c"
 	fi
 	rm -f test.{c,o}
 	fortran_pkg_setup
