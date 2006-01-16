@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rlocate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.8 2006/01/14 00:24:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.9 2006/01/16 09:11:09 vapier Exp $
+
+*rlocate-0.4.0 (16 Jan 2006)
+
+  16 Jan 2006; Mike Frysinger <vapier@gentoo.org> +rlocate-0.4.0.ebuild:
+  Version bump.
 
   14 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/rlocate-0.3.3-linux-2.6.15.patch, rlocate-0.3.3.ebuild:
