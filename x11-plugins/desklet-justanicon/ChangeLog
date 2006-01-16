@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-justanicon
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/ChangeLog,v 1.1 2005/08/30 20:04:57 nixphoeni Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/ChangeLog,v 1.2 2006/01/16 18:01:14 nixphoeni Exp $
+
+  16 Jan 2006; Joe Sapp <nixphoeni@gentoo.org>
+  desklet-justanicon-0.2.ebuild:
+  Updated HOMEPAGE and SRC_URI to reflect new gDesklets website
 
 *desklet-justanicon-0.2 (30 Aug 2005)
 

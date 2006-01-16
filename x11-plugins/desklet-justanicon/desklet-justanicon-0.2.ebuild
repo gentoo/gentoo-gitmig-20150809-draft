@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/desklet-justanicon-0.2.ebuild,v 1.1 2005/08/30 20:04:57 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/desklet-justanicon-0.2.ebuild,v 1.2 2006/01/16 18:01:14 nixphoeni Exp $
 
 inherit gdesklets
 
@@ -10,8 +10,8 @@ MY_P="${DESKLET_NAME}-${PV}"
 S=${WORKDIR}/Displays/${DESKLET_NAME}
 
 DESCRIPTION="A configurable desktop icon"
-HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=281"
-SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.gz"
+HOMEPAGE="http://www.gdesklets.org/?mod=project/uview&pid=19"
+SRC_URI="http://www.gdesklets.org/projects/19/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
