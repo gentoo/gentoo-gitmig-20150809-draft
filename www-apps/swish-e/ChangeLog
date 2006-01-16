@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/swish-e
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.8 2005/09/08 13:09:32 beu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.9 2006/01/16 14:43:52 mcummings Exp $
+
+*swish-e-2.4.3-r2 (16 Jan 2006)
+
+  16 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/perl-makefile.patch, swish-e-2.4.3-r1.ebuild,
+  +swish-e-2.4.3-r2.ebuild:
+  Bug 103072, thanks to damon for pointing out we still needed a varient of
+  this patch; also closes bug 115230
 
 *swish-e-2.4.3-r1 (08 Sep 2005)
 *swish-e-2.2.2-r2 (08 Sep 2005)

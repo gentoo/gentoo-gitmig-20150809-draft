@@ -1,20 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca578dcf545fc58b733b6640e6749489 swish-e-2.4.3-r1.ebuild 1712
-MD5 58e5db560ab2c09d34270b201352068c swish-e-2.2.2-r1.ebuild 892
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f90789edf8a1b32e4bee487e7476a79d ChangeLog 1799
-MD5 b9556bd730ff4631983bfad590fd2834 swish-e-2.4.3.ebuild 1570
-MD5 08d6578d805c2ddde5af5720f81cc323 swish-e-2.2.2-r2.ebuild 1037
-MD5 0af7d0e3bdf537f307d8f2e7df0bd924 files/digest-swish-e-2.4.3 66
-MD5 fc5a8d65b3761bfbd7f7744fda4c324e files/digest-swish-e-2.2.2-r2 65
-MD5 0af7d0e3bdf537f307d8f2e7df0bd924 files/digest-swish-e-2.4.3-r1 66
+MD5 be20e2f808b3468568496c089332ec52 ChangeLog 2090
 MD5 fc5a8d65b3761bfbd7f7744fda4c324e files/digest-swish-e-2.2.2-r1 65
+MD5 fc5a8d65b3761bfbd7f7744fda4c324e files/digest-swish-e-2.2.2-r2 65
+MD5 0af7d0e3bdf537f307d8f2e7df0bd924 files/digest-swish-e-2.4.3 66
+MD5 0af7d0e3bdf537f307d8f2e7df0bd924 files/digest-swish-e-2.4.3-r1 66
+MD5 0af7d0e3bdf537f307d8f2e7df0bd924 files/digest-swish-e-2.4.3-r2 66
+MD5 8c8df6c22ed2449f850c4694e9cc78b4 files/perl-makefile.patch 407
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 58e5db560ab2c09d34270b201352068c swish-e-2.2.2-r1.ebuild 892
+MD5 08d6578d805c2ddde5af5720f81cc323 swish-e-2.2.2-r2.ebuild 1037
+MD5 fdb2755317deafeb47b847e1616c251c swish-e-2.4.3-r1.ebuild 1765
+MD5 61adbb704181d23f4b92c3a573432026 swish-e-2.4.3-r2.ebuild 1765
+MD5 b9556bd730ff4631983bfad590fd2834 swish-e-2.4.3.ebuild 1570
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDIEZLjUHll2nfF60RAsIKAJ9oOsi8/wB3LOl2XXudpgiiPE2OVgCdGOYM
-g4Dhkxted7bPc51srAfTkQ8=
-=MjqC
+iD8DBQFDy7EutG5z4I8BtQoRAnXwAJ9Xz3PbFMo0yGDutmxN4YrF96BLUQCfYSvD
+IPx/8B/vqsHNJPg3YD0MlNg=
+=3dCz
 -----END PGP SIGNATURE-----
