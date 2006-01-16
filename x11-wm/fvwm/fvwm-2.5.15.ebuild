@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.15.ebuild,v 1.1 2006/01/15 17:40:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.15.ebuild,v 1.2 2006/01/16 17:17:54 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,9 +56,6 @@ src_unpack() {
 	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
 	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.14-translucent-menus.diff
-
-	# FvwmTabs pod not included in dist
-	sed -i -e 's/\(.*pod.*\)/#\1/g' ${S}/modules/FvwmTabs/Makefile.am || die
 
 	# fixing #51287, the fvwm-menu-xlock script is not compatible
 	# with the xlockmore implementation in portage.
