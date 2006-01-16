@@ -1,0 +1,5 @@
+MD5 a9ae2763fcdc48d5459e7bcbcefc86cd ChangeLog 577
+MD5 992b3caf08737c6f1df10cf8da60aaf1 files/digest-xf86-input-vmmouse-20060113 149
+MD5 9bebfd51ac049aa7ad35d6e16af59490 files/xf86-input-vmmouse-20060113-PIC-fix.patch 1012
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 e7b27cb217ebdc932035ad8e88c8760f xf86-input-vmmouse-20060113.ebuild 569
