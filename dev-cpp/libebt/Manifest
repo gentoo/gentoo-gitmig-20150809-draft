@@ -1,8 +1,18 @@
-MD5 832adfacc03309621fdf56d912ca9704 ChangeLog 1523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 02367d1d92e4c019097d3a2e8e4b14ff ChangeLog 1613
 MD5 786cc3956463cc0e30923e345f715881 files/digest-libebt-1.1.0 65
 MD5 2ab7b111ff831610b3bbf2573349439b files/digest-libebt-1.2.0 65
 MD5 cdc68cbdeff730b875b64b291d5df020 files/digest-libebt-1.2.1 65
 MD5 1266ac70f6598fbb24bf2a26b7007a7b libebt-1.1.0.ebuild 828
 MD5 d57f9e87ab460e7e6296a3bf5057609a libebt-1.2.0.ebuild 845
-MD5 b0bd71bb466284142a125618495f62d2 libebt-1.2.1.ebuild 849
+MD5 d485b3a31bf3010e2f65d82d9b4ddeaf libebt-1.2.1.ebuild 859
 MD5 49b5ca6a324b8f95eba6721c1e5e7793 metadata.xml 582
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDy5IuEZCkKN40op4RAvopAJ9VzR/bAo6VjoXxIV9OF5pH8M6I2QCdF8BL
+3Io0VoYHXgGGrLBveQbkZiE=
+=a7jB
+-----END PGP SIGNATURE-----

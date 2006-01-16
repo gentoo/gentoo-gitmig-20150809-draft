@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libebt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.12 2005/12/29 13:29:52 jer Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.13 2006/01/16 12:31:15 ka0ttic Exp $
+
+  16 Jan 2006; Aaron Walker <ka0ttic@gentoo.org> libebt-1.2.1.ebuild:
+  Added ~mips.
 
   29 Dec 2005; Jeroen Roovers <jer@gentoo.org> Manifest:
   Fixed libebt-1.2.1 digest
