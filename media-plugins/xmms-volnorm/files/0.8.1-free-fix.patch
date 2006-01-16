@@ -1,0 +1,15 @@
+diff -urN volnorm-0.8.1.orig/src/normvol.c volnorm-0.8.1/src/normvol.c
+--- volnorm-0.8.1.orig/src/normvol.c	2001-08-05 16:36:21.000000000 +0000
++++ volnorm-0.8.1/src/normvol.c	2006-01-13 05:23:51.000000000 +0000
+@@ -112,8 +112,10 @@
+ static void normvol_cleanup(void) {
+ 	gint channel = 0;
+ 
+-	for (channel = 0; channel < MAX_CHANNELS; ++channel)
++	for (channel = 0; channel < MAX_CHANNELS; ++channel) {
+ 		SmoothDelete(smooth[channel]);
++		smooth[channel] = NULL;
++	}
+ }
+ 
+ static void normvol_configure(void) 
