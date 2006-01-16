@@ -5,4 +5,4 @@ MD5 e81d6f91ee6cd06aeb46872bd1d0c911 files/digest-yaml-0.39 60
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 415d20775b4d37de9438f72c476519a4 yaml-0.35.ebuild 637
 MD5 9cb91cdfc0fd2faa17ce87d329b6c0a7 yaml-0.36.ebuild 655
-MD5 e538d4d25d809c45f0e2c109ec514fb1 yaml-0.39.ebuild 700
+MD5 f997f7333832b71129b8f3fbc1d8e546 yaml-0.39.ebuild 694
