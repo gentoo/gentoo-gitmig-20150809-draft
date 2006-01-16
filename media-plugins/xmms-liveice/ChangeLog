@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-liveice
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveice/ChangeLog,v 1.8 2005/09/14 06:11:57 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveice/ChangeLog,v 1.9 2006/01/16 19:24:20 metalgod Exp $
+
+  16 Jan 2006; Luis Medinas <metalgod@gentoo.org> ChangeLog:
+  Added a patch to fix crash on xmms thanks to Thomas Cort
+  <tcort@cs.ubishops.ca>. Fixes bug #111160.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> xmms-liveice-1.0.0.ebuild:
   Mark 1.0.0 stable on alpha

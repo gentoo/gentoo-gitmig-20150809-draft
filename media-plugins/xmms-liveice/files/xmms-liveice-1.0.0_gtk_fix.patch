@@ -1,0 +1,12 @@
+diff -urN LiveIce-1.0.0.orig/src/gui.c LiveIce-1.0.0/src/gui.c
+--- LiveIce-1.0.0.orig/src/gui.c	2006-01-15 16:17:13.000000000 +0000
++++ LiveIce-1.0.0/src/gui.c	2006-01-15 16:17:48.000000000 +0000
+@@ -181,8 +181,6 @@
+ 				gui_bitrate = 32000;
+ 		}			
+ 	}
+-	if(bitrate_menu_menu)
+-		gtk_widget_destroy(bitrate_menu_menu);
+ 	
+ 	bitrate_menu_menu = gtk_menu_new ();
+ 	for(item_loop = min_bitrate; item_loop <= max_bitrate; item_loop++){
