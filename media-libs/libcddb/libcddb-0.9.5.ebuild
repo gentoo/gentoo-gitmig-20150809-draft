@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-0.9.5.ebuild,v 1.8 2005/10/04 20:51:07 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-0.9.5.ebuild,v 1.9 2006/01/16 09:33:30 vapier Exp $
 
 DESCRIPTION="A library for accessing a CDDB server"
 HOMEPAGE="http://libcddb.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="doc"
 
 DEPEND=">=dev-libs/libcdio-0.67
