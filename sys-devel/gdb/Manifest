@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 818a63a042ed9604c80ce3331c44e668 ChangeLog 11985
+MD5 2dfdd3bce446534f7ff349e23fa07463 ChangeLog 12240
 MD5 d3ab2683d88b3cbecb8a9faa439703a1 files/bfd-malloc-wrap.patch 782
 MD5 460629563df21e6a68b8941c07d4f30b files/digest-gdb-6.1 131
 MD5 b3790be989db97b22c599572afbce109 files/digest-gdb-6.2.1 133
@@ -25,7 +22,7 @@ MD5 2657b597618d0c35b48f47e3f808d171 files/gdb-6.3-relative-paths.patch 3286
 MD5 a4610ec65e88f73e0b00b525467a5372 files/gdb-6.3-scanmem.patch 6652
 MD5 8b7f5c46b8dabbc9239c37f52278b971 files/gdb-6.3-uclibc.patch 8221
 MD5 8323dafe6749f0da44b8e11ebbbc96c4 files/gdb-6.4-relative-paths.patch 3147
-MD5 c8fced1c2241b098eae50b1f8c8ef463 files/gdb-6.4-scanmem.patch 6692
+MD5 2eb930fae4af7203dc929220ce68096c files/gdb-6.4-scanmem.patch 6176
 MD5 ec7f411b90047b1ea848513ee5676072 files/gdb-6.4-sse2-register-display.patch 1533
 MD5 78d8fa43c0e2e339346b3bc7aa10c2d9 files/gdb-6.4-uclibc.patch 2435
 MD5 7ea8f83bb7b0d70e7e6d6c8cf42292d3 files/gdb-6.x-crash.patch 678
@@ -35,10 +32,3 @@ MD5 20334b11833489b3bcc13c0fea645a1d gdb-6.3-r4.ebuild 2983
 MD5 abe5b46c3552ca8670ffb68c048d4ffd gdb-6.4-r1.ebuild 3009
 MD5 f5428a658b66b60aeaa511d39cc450b3 gdb-6.4.ebuild 2996
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoi+12+ySkm8kpY0RAjxNAKCX5q+1FY9gNL5Pff3qLfSCWPm/JACeNeDA
-DQD0r+lZ2ZhNUBGB40y5Tg4=
-=ALbN
------END PGP SIGNATURE-----

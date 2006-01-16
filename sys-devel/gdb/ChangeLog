@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.82 2005/12/09 04:48:35 solar Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.83 2006/01/16 15:19:32 solar Exp $
+
+  16 Jan 2006; <solar@gentoo.org> files/gdb-6.4-scanmem.patch:
+  - scanmem patch updates from the PaX Team. Fixed compilation warnings and
+  clean up the control flow a bit (one less level of indentation) and I also
+  added tab completion for 'scanmem'.
 
 *gdb-6.4-r1 (08 Dec 2005)
 
