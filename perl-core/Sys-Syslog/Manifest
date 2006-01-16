@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 633a4031881b36465bd3a358ccc3bcd5 ChangeLog 442
+MD5 5846d8b1a2768fc53413ae45fb097a5a Sys-Syslog-0.13.ebuild 492
+MD5 324da45db49e0386412c7198bdbcbc55 files/digest-Sys-Syslog-0.13 66
+MD5 4b172591f2727bc1038ae5665539f817 metadata.xml 539
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDy++xtG5z4I8BtQoRAgxOAJ4+qoDIU3tQsGaHc+6gYomBQpK41ACdEJYO
+jkjemj63lJHZcsWCDvhyIio=
+=nVaS
+-----END PGP SIGNATURE-----
