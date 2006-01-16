@@ -1,0 +1,251 @@
+Index: ChangeLog
+===================================================================
+--- ChangeLog	(revision 1821)
++++ ChangeLog	(working copy)
+@@ -1,6 +1,15 @@
+ # ChangeLog for Gentoo System Intialization ("rc") scripts
+ # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPLv2
+ 
++  15 Jan 2005; Roy Marples <uberlord@gentoo.org>:
++
++    Changed wording about network modules in /etc/modules.autoload.d/*,
++    #118419.
++
++  14 Jan 2006; Roy Marples <uberlord@gentoo.org>:
++
++    Changed runscript.sh to store it's services to restart like rc.
++
+ * baselayout-1.12.0_pre14 (13 Jan 2006)
+ 
+   13 Jan 2006; Roy Marples <uberlord@gentoo.org>:
+Index: etc/modules.autoload.d/kernel-2.4
+===================================================================
+--- etc/modules.autoload.d/kernel-2.4	(revision 1821)
++++ etc/modules.autoload.d/kernel-2.4	(working copy)
+@@ -3,13 +3,11 @@
+ # Note that this file is for 2.4 kernels.  If you need different modules
+ # for a 2.6 kernel, you can create /etc/modules.autoload.d/kernel-2.6
+ #
+-# This file should only be used to load modules that are essential to the
+-# mounting of local partitions, such as RAID controllers.
+-# Coldplug or similar should be used to load the rest of the modules
+-# for your hardware automatically.
+-#
+ # WARNING: It is dangerous to put modules here which will cause hotplug to
+ # start services, for example network driver modules.
++# For network modules it is advisable to use coldplug to load your modules.
++# You can do this by emerging coldplug and adding coldplug do the boot runlevel
++# using rc-update. See bug #118419 for why this is.
+ 
+ # Add the names of modules that you'd like to load when the system
+ # starts into this file, one per line.  Comments begin with # and
+Index: etc/modules.autoload.d/kernel-2.6
+===================================================================
+--- etc/modules.autoload.d/kernel-2.6	(revision 1821)
++++ etc/modules.autoload.d/kernel-2.6	(working copy)
+@@ -2,13 +2,11 @@
+ #
+ # Note that this file is for 2.6 kernels.
+ #
+-# This file should only be used to load modules that are essential to the
+-# mounting of local partitions, such as RAID controllers.
+-# Coldplug or similar should be used to load the rest of the modules
+-# for your hardware automatically.
+-#
+ # WARNING: It is dangerous to put modules here which will cause hotplug to
+ # start services, for example network driver modules.
++# For network modules it is advisable to use coldplug to load your modules.
++# You can do this by emerging coldplug and adding coldplug do the boot runlevel
++# using rc-update. See bug #118419 for why this is.
+ 
+ # Add the names of modules that you'd like to load when the system
+ # starts into this file, one per line.  Comments begin with # and
+Index: sbin/runscript.sh
+===================================================================
+--- sbin/runscript.sh	(revision 1821)
++++ sbin/runscript.sh	(working copy)
+@@ -65,17 +65,13 @@
+ [[ -e ${conf} ]] && source "${conf}"
+ 
+ # Call svc_quit if we abort AND we have obtained a lock
+-svcbegun=1
+ service_started "${myservice}"
+ svcstarted="$?"
+ service_inactive "${myservice}"
+ svcinactive="$?"
+ svc_quit() {
+ 	eerror "ERROR:  ${myservice} caught an interrupt"
+-	if [[ ${svcbegun} == 0 ]] ; then
+-		end_service "${myservice}"
+-		svcbegun=1
+-	fi
++	end_service "${myservice}"
+ 	if service_inactive "${myservice}" || [[ ${svcinactive} == 0 ]] ; then
+ 		mark_service_inactive "${myservice}"
+ 	elif [[ ${svcstarted} == 0 ]] ; then
+@@ -116,12 +112,29 @@
+ 
+ svc_schedule_restart() {
+ 	local service="$1" restart="$2"
+-	if [[ ! -e "${svcdir}/restart/${service}" ]] \
+-		|| ! grep -q "^${restart}$" "${svcdir}/restart/${service}" ; then
+-		echo "${restart}" >> "${svcdir}/restart/${service}"
+-	fi
++	[[ ! -d "${svcdir}/restart/${service}" ]] \
++		&& mkdir -p "${svcdir}/restart/${service}"
++	[[ ! -e "${svcdir}/restart/${service}/${restart}" ]] \
++		&& ln -snf "/etc/init.d/${service}" \
++			"${svcdir}/restart/${service}/${restart}"
+ }
+ 
++svc_start_restart() {
++	[[ ! -d "${svcdir}/restart/${myservice}" ]] && return
++	local x= services= scripts="$(dolisting "${svcdir}/restart/${myservice}/")"
++
++	for x in ${scripts} ; do
++		services="${services} ${x##*/}"
++	done
++		
++	for x in $(trace_dependencies "${services}") ; do
++		service_stopped "${x}" && start_service "${x}"
++		rm -f "${svcdir}/restart/${myservice}/${x}"
++	done
++
++	rmdir "${svcdir}/restart/${myservice}"
++}
++
+ svc_stop() {
+ 	local x= mydep= mydeps= retval=0
+ 	local -a servicelist=()
+@@ -147,7 +160,6 @@
+ 	trap "svc_quit" INT QUIT TSTP
+ 	
+ 	begin_service "${myservice}"
+-	svcbegun="$?"
+ 	
+ 	service_message "Stopping service ${myservice}"
+ 
+@@ -162,13 +174,10 @@
+ 			# A net.* service
+ 			if in_runlevel "${myservice}" "${BOOTLEVEL}" || \
+ 			   in_runlevel "${myservice}" "${mylevel}" ; then
+-				# Only worry about net.* services if this is the last one running,
+-				# or if RC_NET_STRICT_CHECKING is set ...
+-				if ! is_net_up ; then
+-					mydeps="net"
+-				fi
++				# Only worry about net.* services if this is the last one
++				# running or if RC_NET_STRICT_CHECKING is set ...
++				! is_net_up && mydeps="net"
+ 			fi
+-
+ 			mydeps="${mydeps} ${myservice}"
+ 		else
+ 			mydeps="${myservice}"
+@@ -189,6 +198,8 @@
+ 		done
+ 	done
+ 
++	[[ ${RC_PARALLEL_STARTUP} == "yes" ]] && wait
++
+ 	for x in "${service_list[@]}" ; do
+ 		# We need to test if the service has been marked stopped
+ 		# as the fifo may still be around if called by custom code
+@@ -227,7 +238,7 @@
+ 		# may attempt to start it again later
+ 		if service_inactive "${myservice}" ; then
+ 			svcinactive=0
+-			[[ ${svcbegun} == 0 ]] && end_service "${myservice}" 0
++			end_service "${myservice}" 0
+ 			return 0
+ 		fi
+ 	fi
+@@ -259,10 +270,7 @@
+ 		service_message "Stopped service ${myservice}"
+ 	fi
+ 
+-	if [[ ${svcbegun} == 0 ]] ; then
+-		end_service "${myservice}" "${retval}"
+-		svcbegun=1
+-	fi
++	end_service "${myservice}" "${retval}"
+ 	
+ 	# Reset the trap
+ 	svc_trap
+@@ -300,8 +308,6 @@
+ 	trap "svc_quit" INT QUIT TSTP
+ 	
+ 	begin_service "${myservice}"
+-	svcbegun=$?
+-
+ 	service_message "Starting service ${myservice}"
+ 
+ 	# Save the IN_BACKGROUND var as we need to clear it for starting depends
+@@ -329,6 +335,8 @@
+ 		fi
+ 	done
+ 
++	[[ ${RC_PARALLEL_STARTUP} == "yes" ]] && wait
++
+ 	# We also wait for any services we're after to finish incase they
+ 	# have a "before" dep but we don't dep on them.
+ 	if is_runlevel_start ; then
+@@ -409,7 +417,7 @@
+ 		# may attempt to start it again later
+ 		if service_inactive "${myservice}" ; then
+ 			svcinactive=0
+-			[[ ${svcbegun} == 0 ]] && end_service "${myservice}" 1
++			end_service "${myservice}" 1
+ 			return 1
+ 		fi
+ 	fi
+@@ -436,11 +444,7 @@
+ 		service_message "Service ${myservice} started OK"
+ 	fi
+ 
+-	if [[ ${svcbegun} == 0 ]] ; then
+-		end_service "${myservice}" "${retval}"
+-		svcbegun=1
+-	fi
+-	
++	end_service "${myservice}" "${retval}"
+ 	# Reset the trap
+ 	svc_trap
+ 	
+@@ -556,7 +560,7 @@
+ 	case "${arg}" in
+ 	stop)
+ 		if [[ -e "${svcdir}/restart/${myservice}" ]] ; then
+-			rm -f "${svcdir}/restart/${myservice}"
++			rm -Rf "${svcdir}/restart/${myservice}"
+ 		fi
+ 
+ 		# Stoped from the background - treat this as a restart so that
+@@ -583,14 +587,7 @@
+ 	start)
+ 		svc_start
+ 		retval=$?
+-		if ! is_runlevel_start && [[ -s "${svcdir}/restart/${myservice}" ]] ; then
+-			for x in $(trace_dependencies $(< "${svcdir}/restart/${myservice}")) ; do
+-				service_stopped "${x}" && start_service "${x}"
+-			done
+-		fi
+-		if [[ -e "${svcdir}/restart/${myservice}" ]] ; then
+-			rm -f "${svcdir}/restart/${myservice}"
+-		fi
++		service_started "${myservice}" && svc_start_restart
+ 		exit "${retval}"
+ 		;;
+ 	needsme|ineed|usesme|iuse|broken)
+@@ -650,10 +647,7 @@
+ 				fi
+ 			done
+ 		elif service_started "${myservice}" ; then
+-			for x in $(trace_dependencies \
+-				$(dolisting "${svcdir}/snapshot/$$/") ) ; do
+-				service_stopped "${x##*/}" && start_service "${x##*/}"
+-			done
++			svc_start_restart
+ 		fi
+ 
+ 		rm -rf "${svcdir}/snapshot/$$"
