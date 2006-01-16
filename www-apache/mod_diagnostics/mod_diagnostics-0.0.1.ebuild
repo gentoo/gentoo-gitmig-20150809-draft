@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_diagnostics/mod_diagnostics-0.0.1.ebuild,v 1.3 2005/03/02 06:34:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_diagnostics/mod_diagnostics-0.0.1.ebuild,v 1.4 2006/01/16 06:29:14 chriswhite Exp $
 
 inherit eutils apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://apache.webthing.com/mod_diagnostics"
 SRC_URI="mirror://gentoo/${P}.c"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
