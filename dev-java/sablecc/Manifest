@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0203d6a3adf48f260cf7b04de217123c sablecc-2.18.2.ebuild 822
-MD5 b89b68d1fe3293dd9e3d8863e219545c ChangeLog 1158
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 fb6637bd67a315edd8425b3ee8dc9cdd files/sablecc 75
+MD5 e5c98c8012e5318374d5f354e888f488 ChangeLog 1286
 MD5 0ad7d919cbd78998f70716572d00e6d9 files/digest-sablecc-2.18.2 66
+MD5 37c5ee5beb0d23e96d8f41f51ebcb221 files/digest-sablecc-3.1 63
+MD5 fb6637bd67a315edd8425b3ee8dc9cdd files/sablecc 75
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 0203d6a3adf48f260cf7b04de217123c sablecc-2.18.2.ebuild 822
+MD5 bb9ccc1ff2a7b6d6ac5a0135e72919c6 sablecc-3.1.ebuild 826
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2DH6/rLF9B432nYRArzMAKCGB8wDX0/9fZG8uK122WYPJATA6gCgpEEP
-c/vAUKjibT1OnyYWvlLREc8=
-=VJgV
+iD8DBQFDyvXJndWRXhKOboURAiidAKDMeJnnUJYC1n6cSpOiGGftx/B+qQCfTPFA
+bbq5LU56YUuI0kjzFetTAdY=
+=3H3Y
 -----END PGP SIGNATURE-----
