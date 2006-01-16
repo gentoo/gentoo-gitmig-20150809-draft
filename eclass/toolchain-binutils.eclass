@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.53 2006/01/15 11:33:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.54 2006/01/16 11:10:03 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -183,7 +183,7 @@ toolchain-binutils_src_compile() {
 	find . -name '*.1' -a -size 0 | xargs rm -f
 
 	# elf2flt only works on some arches / targets
-	if [[ -n ${ELF2FLT_VER} ]] && [[ ${CTARGET} == *-linux* || ${CTARGET} == *-elf* ]] ; then
+	if [[ -n ${ELF2FLT_VER} ]] && [[ ${CTARGET} == *linux* || ${CTARGET} == *-elf* ]] ; then
 		cd "${WORKDIR}"/elf2flt-${ELF2FLT_VER}
 
 		local x supported_arches=$(sed -n '/defined(TARGET_/{s:^.*TARGET_::;s:)::;p}' elf2flt.c | sort -u)
@@ -194,7 +194,7 @@ toolchain-binutils_src_compile() {
 		if [[ ${x} != "UNSUPPORTED" ]] ; then
 			append-flags -I"${S}"/include
 			myconf="--with-bfd-include-dir=${MY_BUILDDIR}/bfd \
-				--with-libbfd=${MY_BUILDDIR}/bfd/.libs/libbfd.so \
+				--with-libbfd=${MY_BUILDDIR}/bfd/libbfd.a \
 				--with-libiberty=${MY_BUILDDIR}/libiberty/libiberty.a \
 				--with-binutils-ldscript-dir=${LIBPATH}/ldscripts \
 				${myconf}"
