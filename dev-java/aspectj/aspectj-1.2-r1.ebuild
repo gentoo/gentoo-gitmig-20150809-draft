@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2-r1.ebuild,v 1.2 2006/01/15 17:45:30 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2-r1.ebuild,v 1.3 2006/01/16 04:47:42 halcy0n Exp $
 
 inherit java-pkg eutils
 
@@ -61,7 +61,7 @@ src_unpack() {
 		java-pkg_jar-from ant-core
 		java-pkg_jar-from xml-commons xml-apis.jar
 		java-pkg_jar-from xerces-2
-	
+
 	cd ../../commons
 		rm *.jar
 
