@@ -1,4 +1,14 @@
-MD5 c83837352989ef34d4952ffcaf837464 ChangeLog 680
-MD5 1205deeddb38667724f965da392aee42 fail2ban-0.6.0.ebuild 991
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d717f692f368d790f3ad6c33eaa28fe2 ChangeLog 771
+MD5 add6b2ea47e6f8a3ffd1fe0df5f38574 fail2ban-0.6.0.ebuild 991
 MD5 c88c72853e503959a9db2c78824a40c3 files/digest-fail2ban-0.6.0 66
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDy/9lH6mNYUtVdIARAl7PAJ90ab75/TdEbRqRtklgMjpF5syqFACdHMKl
+1G84TS5J3JctoQQUN0vijyY=
+=2jKs
+-----END PGP SIGNATURE-----
