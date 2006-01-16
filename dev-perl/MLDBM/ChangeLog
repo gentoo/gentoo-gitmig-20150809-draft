@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MLDBM
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.21 2005/09/17 00:42:01 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.22 2006/01/16 20:05:29 mcummings Exp $
+
+  16 Jan 2006; Michael Cummings <mcummings@gentoo.org> MLDBM-2.01.ebuild:
+  Bug 107533, fixing src-uri
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> MLDBM-2.01.ebuild:
   Mark 2.01 stable on ia64
