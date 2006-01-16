@@ -1,5 +1,17 @@
-MD5 c5749c1b3c89af8e24a5e351aa37bcc0 ChangeLog 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1e5aebb50a6699271b618d16aa61ad65 ChangeLog 953
 MD5 284836865ddf8c5a3437c8dc40d4aa81 cl-aim-1.1.ebuild 830
-MD5 741cfcfbba1ee698e3c05b957dbf09c7 metadata.xml 427
+MD5 341f27adc1a432808817c6bd3ef27a57 cl-aim-1.2.ebuild 742
 MD5 4c5c491805150312b86a5ab005d7ec71 files/1.1-trivial-sockets-gentoo.patch 2961
 MD5 b3c73da3b07ef5e1e1101296e31f9005 files/digest-cl-aim-1.1 60
+MD5 d9be042276185546202aa75a920fddad files/digest-cl-aim-1.2 60
+MD5 741cfcfbba1ee698e3c05b957dbf09c7 metadata.xml 427
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDy/kmyiNZaEAZA+ARAiFFAJwJUDa+csL8GQZJpMFiMKzT36TGdQCff0xL
+WWvVIprgwtwwPO4aznjSxEQ=
+=8x25
+-----END PGP SIGNATURE-----
