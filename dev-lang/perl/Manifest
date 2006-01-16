@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 654d8ca97e858a90adec98f2e0d0f8f7 ChangeLog 46894
+MD5 38cd03aa71538700acb44431fd50e08d ChangeLog 47096
 MD5 bd75f0242e3b7791803d089c38a3f920 files/CAN-2005-0156-suid.patch 703
 MD5 2bd41aec5e22962224dc9376e27bdde3 files/CAN-2005-0448-rmtree.patch 7629
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r5 64
@@ -35,15 +35,15 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 5629b922f2a4ce997ae4ae25014451cf perl-5.8.6-r5.ebuild 17658
 MD5 4a6d2527f08696b59e7d5f0f7d2a72a6 perl-5.8.6-r6.ebuild 18036
 MD5 45b2cc80281b071a098c2ec40818e19e perl-5.8.6-r7.ebuild 18104
-MD5 cfd02fde9657f8491a652d5e928f5125 perl-5.8.6-r8.ebuild 18099
+MD5 9ca9d08fd5ba7584ec124bdfa3d5afba perl-5.8.6-r8.ebuild 18171
 MD5 36f0bd0344966231663c7d99c94d3997 perl-5.8.7-r1.ebuild 19456
 MD5 3f172d664435893f2cfaaf21865c6cb7 perl-5.8.7-r2.ebuild 19525
-MD5 eb8438ff626475e260bf2701d44f1331 perl-5.8.7-r3.ebuild 19543
+MD5 c2a92adc19ce5c2ab386afa51b3e6f49 perl-5.8.7-r3.ebuild 19611
 MD5 8617318edb0a9de62024383369894fd2 perl-5.8.7.ebuild 19224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDyoPitG5z4I8BtQoRAvjtAJ9uy1N4uz04hZeEhn2SxHV+v/3vDQCfWNRa
-LFtD1tvggz+mmtMaYXgToC0=
-=crzV
+iD8DBQFDy/2atG5z4I8BtQoRAvrZAJ959x3RXP9k4UirNbhhtRfRSzJQigCfXshO
+0SHBhkxjcPEidbY2hNnA4LM=
+=B8zj
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r3.ebuild,v 1.10 2006/01/15 17:18:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7-r3.ebuild,v 1.11 2006/01/16 20:09:56 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -619,6 +619,8 @@ pkg_postinst() {
 		   	find ${ROOT}/$DIR -depth -type d | xargs -r rmdir &> /dev/null
 		   fi
 		done
+		ebegin "Generating ConfigLocal.pm (ignore any error)"
+		enc2xs -C
 		ebegin "Converting C header files to the corresponding Perl format"
 		cd /usr/include;
 		h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*
