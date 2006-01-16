@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.24 2006/01/14 21:31:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.25 2006/01/16 03:38:10 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
 inherit eutils
 
 DESCRIPTION="Based on the $ECLASS eclass"
-DEPEND=">=dev-java/java-config-1.2.11"
+DEPEND=">=dev-java/java-config-1.2.11
+	sys-apps/findutils"
 RDEPEND=">=dev-java/java-config-1.2.11"
 
 VMHANDLE=${PN}-${PV}
@@ -101,4 +102,16 @@ java_mozilla_clean_() {
 	for file in ${plugin_dir}/libjavaplugin*; do
 		rm -f ${file}
 	done
+}
+
+# Use this to remove libjsoundalsa.so from ${D}.
+# You generally would want to use this like:
+# use !alsa && java_remove-libjoundalsa /opt/${P}
+java_remove-libjsoundalsa() {
+	[[ ${#} -ne 1 ]] && die "Expected one argument"
+	local search_path="$@"
+	local libs=$(find ${D}/${search_path} -name libjsoundalsa.so)
+	if [[ -n ${libs} ]]; then
+		rm ${libs} || die "Failed to delete ${libs}"
+	fi
 }
