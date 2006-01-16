@@ -1,7 +1,20 @@
-MD5 f39545c75a594e9a58c1309d2bab2130 ChangeLog 2050
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1807506384ba89b1173ee8f34c16dca ChangeLog 2243
+MD5 47652a5253fccf717d404edb28643700 files/1.0.1-gtk28.patch 6215
 MD5 d075b04f52c6cf3b2079fbe4b93b9b36 files/digest-pygtkglext-1.0.0 69
 MD5 c8846a912c477160cd7c8048f45e0974 files/digest-pygtkglext-1.0.1 69
+MD5 c8846a912c477160cd7c8048f45e0974 files/digest-pygtkglext-1.0.1-r1 69
 MD5 f80ded0efbdb1b2b18b06a96be350c7e files/pygtkglext-1.0.1-gentoo.diff 1985
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 5e6b6d52dea5c94e225e73653dcf488f pygtkglext-1.0.0.ebuild 979
+MD5 b5da5b3a2d8a7dd1639aa63cc3479963 pygtkglext-1.0.1-r1.ebuild 1027
 MD5 fbaec3648e5e7a99755eedfb1fe5f150 pygtkglext-1.0.1.ebuild 990
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzAuy9ZFPrqoILX8RAjgHAKCzQjNmTOgEYKFwHMM2jyOWb0qcDACcDVcq
+pQ4C+isWccRJ3Ej06EmTFz0=
+=OVke
+-----END PGP SIGNATURE-----
