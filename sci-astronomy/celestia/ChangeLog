@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.5 2006/01/16 06:28:52 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.6 2006/01/16 17:04:20 blubb Exp $
+
+  16 Jan 2006; Simon Stelling <blubb@gentoo.org> celestia-1.4.0.ebuild:
+  add missing ? in DEPEND
 
 *celestia-1.4.0 (16 Jan 2006)
 
