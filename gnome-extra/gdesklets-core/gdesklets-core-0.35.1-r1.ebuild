@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.1-r1.ebuild,v 1.1 2005/07/11 04:18:49 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.1-r1.ebuild,v 1.2 2006/01/16 15:30:09 nixphoeni Exp $
 
 inherit gnome2 eutils multilib
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="GNOME Desktop Applets: core library for the desktop applets"
 SRC_URI="http://www.gdesklets.org/releases/${MY_P}.tar.bz2 \
 		http://www.pycage.de/develbook/develbook.tar.bz2"
-HOMEPAGE="http://gdesklets.gnomedesktop.org"
+HOMEPAGE="http://www.gdesklets.org"
 LICENSE="GPL-2"
 
 SLOT="0"
