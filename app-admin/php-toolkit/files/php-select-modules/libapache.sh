@@ -12,7 +12,7 @@
 
 actionSet ()
 {
-	setApacheConf
+	setApacheConf $1
 }
 
 actionShow ()

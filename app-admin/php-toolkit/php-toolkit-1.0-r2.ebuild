@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/php-toolkit/php-toolkit-1.0-r1.ebuild,v 1.1 2006/01/04 17:19:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/php-toolkit/php-toolkit-1.0-r2.ebuild,v 1.1 2006/01/16 16:18:21 chtekk Exp $
 
 inherit eutils
 
