@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/eq-xmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.14 2006/01/07 03:14:54 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.15 2006/01/16 17:42:39 voxus Exp $
+
+*eq-xmms-0.7 (16 Jan 2006)
+
+  16 Jan 2006; Konstantin Arkhipov <voxus@gentoo.org> +eq-xmms-0.7.ebuild,
+  +files/eq-xmms-0.7-amd64_support.patch:
+  Version bump.
 
   07 Jan 2006; Konstantin Arkhipov <voxus@gentoo.org> eq-xmms-0.6-r3.ebuild,
   eq-xmms-0.6-r4.ebuild:

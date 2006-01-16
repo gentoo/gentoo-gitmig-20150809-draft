@@ -1,0 +1,45 @@
+--- configure.in	2006-01-16 20:04:58.268962424 +0300
++++ configure.in	2006-01-16 20:07:43.681815848 +0300
+@@ -155,6 +155,9 @@
+               XF_CFLAGS="$XF_CFLAGS -DBENCHMARK"
+             fi
+           ;;
++	  x86_64-*-*)
++	    autodetect=no
++	    ARCH_DEFINES="-DARCH_X86_64 -march=k8"
+         esac  
+       ;;
+       *)
+--- src/iir.c	2006-01-16 20:01:23.000000000 +0300
++++ src/iir.c	2006-01-16 20:09:50.580524312 +0300
+@@ -60,7 +60,7 @@
+   clean_history();
+ }
+ 
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) || defined(ARCH_X86_64)
+ /* Round function provided by Frank Klemm which saves around 100K
+  * CPU cycles in my PIII for each call to the IIR function with 4K samples
+  */
+--- src/iir_fpu.c	2006-01-15 03:26:32.000000000 +0300
++++ src/iir_fpu.c	2006-01-16 20:10:22.492672928 +0300
+@@ -163,7 +163,7 @@
+ #ifdef ARCH_PPC
+       tempgint = round_ppc(out[channel]);
+ #else
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) || defined(ARCH_X86_64)
+       tempgint = round_trick(out[channel]);
+ #else
+       tempgint = (int)out[channel];
+--- src/iir.h	2006-01-15 03:26:32.000000000 +0300
++++ src/iir.h	2006-01-16 20:15:35.987014544 +0300
+@@ -58,7 +58,7 @@
+ 
+ __inline__ int iir(gpointer * d, gint length, gint srate, gint nch);
+ 
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) || defined(ARCH_X86_64)
+ __inline__ int round_trick(float floatvalue_to_round);
+ #endif
+ #ifdef ARCH_PPC
