@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/color-theme
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.18 2005/08/20 18:25:34 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.19 2006/01/16 18:51:34 mkennedy Exp $
+
+*color-theme-6.5.5 (16 Jan 2006)
+
+  16 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/6.5.5-easy-menu-gentoo.patch, +color-theme-6.5.5.ebuild:
+  New upstream version; Alter the Emacs 22 versus Emacs 21 patch for
+  easy-menu-add-item so the check is done during evaluation.
 
   20 Aug 2005; Fabian Groffen <grobian@gentoo.org>
   color-theme-6.5.4-r1.ebuild:
