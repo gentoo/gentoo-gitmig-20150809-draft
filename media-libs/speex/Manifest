@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a075bf082ef4c4c1aa4c39bb017669c8 ChangeLog 5983
+MD5 976ab40a8b2053c8c8538949005ef140 ChangeLog 6138
 MD5 72fed2862c8474730d712250d2810156 files/digest-speex-1.1.11.1 66
+MD5 6da617acf87c6c46c21e958ab494e9b0 files/digest-speex-1.1.5 63
 MD5 d7d10212f2bf174a7d04e72c4a56f4be files/digest-speex-1.1.7 63
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
 MD5 d4b623d30ef220303e8741a0de9f137a speex-1.1.11.1.ebuild 1123
+MD5 3e39cbb8880343748967f05340b028d6 speex-1.1.5.ebuild 963
 MD5 82f7f94e3e02b088bdb6e6fc5112a206 speex-1.1.7.ebuild 969
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyt1BAiZjviIA2XgRAjtrAKDzE4rzJ//fLPlYX53QbpsIGO+rRwCeIDso
-cNWwlVAK+U/tXGFuBJo65Vk=
-=6n5s
+iD8DBQFDy9QSAiZjviIA2XgRAoEtAKCHMuXoNKUXHuqxRRiXyKeuy6re5QCdGlPc
+zpsTVzJh1fbfRTg5/qjaM20=
+=JOON
 -----END PGP SIGNATURE-----
