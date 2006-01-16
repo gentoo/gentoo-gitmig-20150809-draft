@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.4.ebuild,v 1.1 2005/12/02 20:39:59 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.6.ebuild,v 1.1 2006/01/16 19:39:23 kaiowas Exp $
 
 inherit eutils
 
 DESCRIPTION="Nepenthes is a low interaction honeypot that captures worms by emulating known vulnerabilities"
 HOMEPAGE="http://nepenthes.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
