@@ -1,4 +1,4 @@
-MD5 e6c523cda005e1ac29386fe76757acc3 ChangeLog 1469
+MD5 7987cd997354a94a7070708ddaabbb35 ChangeLog 1560
 MD5 006481ae255582fae4fa22107dfb359e files/digest-gcc-hppa64-3.3.2 64
 MD5 006481ae255582fae4fa22107dfb359e files/digest-gcc-hppa64-3.3.2-r1 64
 MD5 ba0f5e25062066184f3513100252770f files/digest-gcc-hppa64-3.4.5 64
@@ -8,5 +8,5 @@ MD5 23e11b0b1e3621760d3e4d831d000161 files/gcc-3.4.0-gentoo-branding.patch 843
 MD5 b859dad4b64217f98ba18423c059e30f files/gcc-3.4.0-rtl-optimization.patch 5681
 MD5 fd281452f7ed3759922fd322e26bfecc gcc-hppa64-3.3.2-r1.ebuild 2320
 MD5 83ef63e1e7d02336c0ebba43fa81aef5 gcc-hppa64-3.3.2.ebuild 2264
-MD5 fcd57ed46a8a71d8571abb0ebead960d gcc-hppa64-3.4.5.ebuild 3366
+MD5 36783b4987b597f3c78f3a85b222161f gcc-hppa64-3.4.5.ebuild 3365
 MD5 016028badcf024e3ef4688435ffbce58 metadata.xml 223
