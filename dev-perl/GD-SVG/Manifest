@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45f3fcbcdfe674c72336c6c7bc1b0b18 ChangeLog 1744
 MD5 ade592ac3f8a03eaa4e4a552f41fd41b GD-SVG-0.25.ebuild 563
 MD5 cc0188b0351e91eb6fae0f2409e3a137 GD-SVG-0.27.ebuild 557
 MD5 68ce0edca85ee67b7dded2e18ce904d2 files/digest-GD-SVG-0.25 62
 MD5 c3412e1befa52585a2e3e1b76b6940a6 files/digest-GD-SVG-0.27 62
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDy/rDKRy60XGEcJIRAjicAKChNP3JamIxb72SokgliErG8cE/xACfTyqR
+dW77/G0Sn839NugQ+/uCcQQ=
+=ptTZ
+-----END PGP SIGNATURE-----
