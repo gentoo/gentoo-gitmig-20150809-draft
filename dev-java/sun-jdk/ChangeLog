@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.139 2006/01/16 04:35:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.140 2006/01/16 19:23:19 nichoj Exp $
+
+  16 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
+  sun-jdk-1.4.2.10-r1.ebuild:
+  Accidentally marked 1.4.2.10-r1 stable on x86.
 
 *sun-jdk-1.5.0.06-r1 (16 Jan 2006)
 *sun-jdk-1.4.2.10-r1 (16 Jan 2006)
