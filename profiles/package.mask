@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4868 2006/01/16 01:12:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4869 2006/01/16 15:53:16 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -636,11 +636,6 @@ x11-base/y-windows
 # Joshua Baergen <joshuabaergen@gentoo.org> (8 Sep 2005)
 # Only tested against modular x
 x11-misc/driconf
-
-# Elfyn McBratney <beu@gentoo.org> (8 Sep 2005)
-#
-# Broken (many compile errors).
->=www-apps/swish-e-2.4
 
 # Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
 # Beta code
