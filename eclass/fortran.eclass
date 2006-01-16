@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.11 2005/11/22 14:55:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.12 2006/01/16 00:24:27 cryos Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -32,6 +32,7 @@ fortran_conf() {
 #  profiles = <profile> ... <profile>
 #
 #  profile:
+#   * gfortran - GCC Fortran 95
 #   * g77 - GCC Fortran 77
 #   * f2c - Fortran 2 C Translator
 #   * ifc - Intel Fortran Compiler
@@ -47,6 +48,11 @@ need_fortran() {
 	local PROFILE
 	for PROFILE in $@; do
 		case ${PROFILE} in
+			gfortran)
+				if [ -x "$(which gfortran 2> /dev/null)" ]; then
+					AVAILABLE="${AVAILABLE} gfortran"
+				fi
+				;;
 			g77)
 				if [ -x "$(which g77 2> /dev/null)" ]; then
 					AVAILABLE="${AVAILABLE} g77"
@@ -78,8 +84,11 @@ need_fortran() {
 		i=1
 		for PROFILE in $@; do
 			case ${PROFILE} in
+				gfortran)
+					eerror "[${i}] USE=\"fortran\" emerge sys-devel/gcc-4.*"
+					;;
 				g77)
-					eerror "[${i}] USE=\"fortran\" emerge sys-devel/gcc"
+					eerror "[${i}] USE=\"fortran\" emerge sys-devel/gcc-3.*"
 					;;
 				f2c)
 					eerror "[${i}] emerge dev-lang/f2c"
@@ -117,9 +126,13 @@ need_fortran() {
 			fi
 		fi
 
-		# default to g77
+		# default to gfortran if available, g77 if not
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
-		MY_FORTRAN=${MY_FORTRAN:=g77}
+		if hasq gfortran ${AVAILABLE}; then
+			MY_FORTRAN=${MY_FORTRAN:=gfortran}
+		else
+			MY_FORTRAN=${MY_FORTRAN:=g77}
+		fi
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
 
 		if ! hasq ${MY_FORTRAN} ${AVAILABLE}; then
@@ -157,7 +170,7 @@ patch_fortran() {
 #  can be used for the ebuild.
 #  If not set in ebuild, FORTRAN will default to f77
 fortran_pkg_setup() {
-	need_fortran ${FORTRAN:=g77}
+	need_fortran ${FORTRAN:="gfortran g77"}
 }
 
 # fortran_src_unpack():
