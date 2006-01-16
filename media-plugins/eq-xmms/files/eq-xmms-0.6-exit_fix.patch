@@ -1,0 +1,61 @@
+diff -urN eq-xmms-0.6.orig/src/configuration.c eq-xmms-0.6/src/configuration.c
+--- eq-xmms-0.6.orig/src/configuration.c	2004-05-16 00:11:31.000000000 +0000
++++ eq-xmms-0.6/src/configuration.c	2006-01-14 06:56:29.000000000 +0000
+@@ -640,6 +640,13 @@
+     gint i,chn;
+     cfgfile = xmms_cfg_open_default_file();
+ 
++    if (!eqcfg.skin)
++        eqcfg.skin = "default";
++    if (!eqcfg.eqpreset_default_file)
++        eqcfg.eqpreset_default_file = g_strdup("eq_dir_default.preset");
++    if (!eqcfg.eqpreset_extension)
++        eqcfg.eqpreset_extension = g_strdup("eq_preset");
++
+     xmms_cfg_write_int(cfgfile, "eq_plugin", "x", eqcfg.x);
+     xmms_cfg_write_int(cfgfile, "eq_plugin", "y", eqcfg.y);
+     xmms_cfg_write_int(cfgfile, "eq_plugin", "band_num", eqcfg.band_num);
+diff -urN eq-xmms-0.6.orig/src/eq.c eq-xmms-0.6/src/eq.c
+--- eq-xmms-0.6.orig/src/eq.c	2004-05-16 02:24:31.000000000 +0000
++++ eq-xmms-0.6/src/eq.c	2006-01-14 07:07:21.000000000 +0000
+@@ -31,7 +31,7 @@
+ static gint raisevol(gpointer data);
+ static gint monitor_song_change(gpointer data);
+ static int volume_diff;
+-static guint monitor_id;
++static guint monitor_id = 0;
+ static gint previous_pos;
+ static gchar *previous_filename;
+ 
+@@ -75,7 +75,8 @@
+ static void cleanup(void)
+ {
+     clean_gui();
+-    gtk_timeout_remove(monitor_id);
++    if (monitor_id)
++        gtk_timeout_remove(monitor_id);
+     g_free(previous_filename);
+ }
+ 
+diff -urN eq-xmms-0.6.orig/src/gui.c eq-xmms-0.6/src/gui.c
+--- eq-xmms-0.6.orig/src/gui.c	2004-04-03 11:55:58.000000000 +0000
++++ eq-xmms-0.6/src/gui.c	2006-01-14 06:56:29.000000000 +0000
+@@ -194,8 +194,16 @@
+ void clean_gui(void)
+ {
+     eq_write_config();
+-    gtk_widget_destroy(GTK_WIDGET(eqskinwin));
+-    gtk_widget_destroy(GTK_WIDGET(EQequalizerwin));
++
++    if (eqskinwin) {
++        gtk_widget_destroy(GTK_WIDGET(eqskinwin));
++        eqskinwin = NULL;
++    }
++
++    if (EQequalizerwin) {
++        gtk_widget_destroy(GTK_WIDGET(EQequalizerwin));
++        EQequalizerwin = NULL;
++    }
+     
+     eq_has_been_initialized = FALSE;
+ }
