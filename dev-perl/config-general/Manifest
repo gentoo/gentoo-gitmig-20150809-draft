@@ -1,10 +1,22 @@
-MD5 a0ce8e399878311f858d5cd731db0714 ChangeLog 2368
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6fbbc40b0d14ec3411700464ef64f853 ChangeLog 2519
 MD5 85798865ac66b13a7085132b310be7b9 config-general-2.21.ebuild 538
 MD5 74c75377c02b622bc6568111ccc6eb6b config-general-2.27.ebuild 548
 MD5 b07244411e437506901a52e216717a76 config-general-2.29.ebuild 563
 MD5 118cb87a4aedf52493475d84e0d4bc25 config-general-2.30.ebuild 558
+MD5 da18b0ec755125709f020a7df919e368 config-general-2.31.ebuild 564
 MD5 214984e441e1a76252a3a17f8ada0e35 files/digest-config-general-2.21 70
 MD5 9ab5d871612b2f207deb51ada8a49c98 files/digest-config-general-2.27 70
 MD5 e235fe7d3d95d178e8650d688953d8fe files/digest-config-general-2.29 70
 MD5 9b374299f6d470ffec3ed9fe894325c6 files/digest-config-general-2.30 70
+MD5 663d8c5b8c2777089ff307b1afcfc993 files/digest-config-general-2.31 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDy7oGtG5z4I8BtQoRAs+zAJ4+jSicSq5pFZNf6EJk/wUphWK0ugCeOdfg
+cF8PQ76Bm1CzIP3swZtkcAo=
+=R3aj
+-----END PGP SIGNATURE-----
