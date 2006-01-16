@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.4.ebuild,v 1.2 2005/09/08 00:07:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.4.ebuild,v 1.3 2006/01/16 23:06:11 mkay Exp $
 
 inherit libtool eutils
 
