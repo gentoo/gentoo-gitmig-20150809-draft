@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.4.5.ebuild,v 1.1 2006/01/08 13:22:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.4.5.ebuild,v 1.2 2006/01/16 18:31:49 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~hppa"
+KEYWORDS="hppa"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-hppa64-2.16.1
