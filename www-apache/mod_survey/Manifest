@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 83a2f7bc293c0e97c1866393e493f1e0 ChangeLog 1253
+MD5 aed973712277c0f9f373b76770b141b8 ChangeLog 1428
 MD5 f9af89edc8c1f89343a626d9801d6a90 files/digest-mod_survey-3.2.3_pre2 128
-MD5 ba2e5fb76687abf0c16d16eda59d7981 files/postinstall-en.txt 262
+MD5 f9af89edc8c1f89343a626d9801d6a90 files/digest-mod_survey-3.2.3_pre2-r1 128
+MD5 597d4a1386896cc5e4e3f269da7cf10f files/postinstall-en.txt 158
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 de9f766e4e6a7a8c5b214b318262103e mod_survey-3.2.3_pre2-r1.ebuild 1980
 MD5 e3e204459afd4c4af8afc1c4685fe437 mod_survey-3.2.3_pre2.ebuild 2074
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDv/ZGEzitwsaoONoRAjN4AJ4mvsQbS61anXVnes1IrKaFz5TxlQCg10Gf
-KjHjtq/R9XxQrmMi57mQyJA=
-=+VKi
+iD8DBQFDy+E3EzitwsaoONoRAteIAJ49BlQNLU7CITdEHp3iGEWuEqTBZACgv0NR
+CZXTxrMkbamxjYGIknpvjpE=
+=s+yG
 -----END PGP SIGNATURE-----

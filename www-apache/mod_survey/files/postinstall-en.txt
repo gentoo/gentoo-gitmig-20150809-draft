@@ -1,6 +1,4 @@
-1. Execute sed -i "|/usr/lib/mod_survey/webroot|${VHOST_ROOT}/${PN}|g" /usr/lib/mod_survey/survey.conf
+0. Copy /usr/lib/mod_survey/survey.conf to your Apache modules directory.
 
-2. Copy /usr/lib/mod_survey/survey.conf to your Apache modules directory.
-
-3. Restart Apache and test your installation:
+1. Restart Apache and test your installation:
  http://${VHOST_HOSTNAME}/mod_survey
