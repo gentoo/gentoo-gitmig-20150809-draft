@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.128 2006/01/06 18:10:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.129 2006/01/16 22:26:43 vanquirius Exp $
+
+  16 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> net-snmp-5.1.3.1.ebuild,
+  net-snmp-5.2.1.2-r1.ebuild, net-snmp-5.2.2.ebuild,
+  net-snmp-5.3_rc2.ebuild:
+  Remove useless sys-libs/db dependency for bug 104195. Thanks to Sven Wegener
+  <swegener at gentoo dot org>.
 
   06 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
   +files/net-snmp-5.2.2-asneeded.patch, net-snmp-5.2.2.ebuild:
