@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.3.1.ebuild,v 1.3 2006/01/16 22:26:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r1.ebuild,v 1.1 2006/01/16 22:47:35 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc"
+IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc rpm elf"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
@@ -19,7 +19,12 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	lm_sensors? (
 		x86?   ( sys-apps/lm_sensors )
 		amd64? ( sys-apps/lm_sensors )
-	)"
+	)
+	rpm? ( app-arch/rpm
+		dev-libs/popt
+		app-arch/bzip2
+	)
+	elf? ( dev-libs/elfutils )"
 
 RDEPEND="${DEPEND}
 	perl? (
@@ -34,11 +39,13 @@ DEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-5.2.2-conf-elf-rpm-bz2.patch
 
 	if use lm_sensors; then
 		if use x86 || use amd64; then
-			epatch ${FILESDIR}/${PN}-lm_sensors.patch
+			epatch "${FILESDIR}"/${PN}-lm_sensors.patch
 		else
 			eerror "Unfortunatly you are trying to enable lm_sensors support for an unsupported arch."
 			eerror "please check the availability of sys-apps/lm_sensors - if it is available on"
@@ -47,10 +54,10 @@ src_unpack() {
 		fi
 	fi
 
+	# bug 118016
+	epatch "${FILESDIR}"/${PN}-5.2.2-asneeded.patch
+
 	# bugs 68467 and 68254
-	sed -i -e \
-		's/^NSC_AGENTLIBS="@AGENTLIBS@"/NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"/' \
-		net-snmp-config.in || die "sed net-snmp-config.in"
 	sed -i -e 's;embed_perl="yes",;embed_perl=$enableval,;' configure.in \
 		|| die "sed configure.in failed"
 	# Insecure run-path - bug 103776
@@ -91,6 +98,9 @@ src_compile() {
 		$(use_enable !ssl internal-md5) \
 		$(use_with ssl openssl) \
 		$(use_with tcpd libwrap) \
+		$(use_with rpm) \
+		$(use_with rpm bzip2) \
+		$(use_with elf) \
 		|| die "econf failed"
 
 	emake -j1 || die "emake failed"
@@ -136,26 +146,26 @@ src_install () {
 
 	keepdir /etc/snmp /var/lib/net-snmp
 
-	newinitd ${FILESDIR}/snmpd-5.1.rc6 snmpd || die
-	newconfd ${FILESDIR}/snmpd-5.1.conf snmpd || die
+	newinitd "${FILESDIR}"/snmpd-5.1.rc6 snmpd || die
+	newconfd "${FILESDIR}"/snmpd-5.1.conf snmpd || die
 
 	# snmptrapd can use the same rc script just slightly modified
 	sed -e 's/net-snmpd/snmptrapd/g' \
 		-e 's/snmpd/snmptrapd/g' \
 		-e 's/SNMPD/SNMPTRAPD/g' \
-		${D}/etc/init.d/snmpd > ${D}/etc/init.d/snmptrapd || \
+		"${D}"/etc/init.d/snmpd > "${D}"/etc/init.d/snmptrapd || \
 			die "failed to create snmptrapd init script"
-	chmod 0755 ${D}/etc/init.d/snmptrapd
+	chmod 0755 "${D}"/etc/init.d/snmptrapd
 
-	newconfd ${FILESDIR}/snmptrapd.conf snmptrapd || die
+	newconfd "${FILESDIR}"/snmptrapd.conf snmptrapd || die
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
 	if use minimal; then
 		einfo "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
-		rm -rf ${D}/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
-		rm -rf ${D}/usr/share/snmp/snmpconf-data ${D}/usr/share/snmp/*.conf
-		rm -rf ${D}/usr/bin/{net-snmp-config,fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
-		find ${D} -name '*.pl' -exec rm -f '{}' \;
-		use ipv6 || rm -rf ${D}/usr/share/snmp/mibs/IPV6*
+		rm -rf "${D}"/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
+		rm -rf "${D}"/usr/share/snmp/snmpconf-data "${D}"/usr/share/snmp/*.conf
+		rm -rf "${D}"/usr/bin/{fixproc,traptoemail} "${D}"/usr/bin/snmpc{heck,onf}
+		find "${D}" -name '*.pl' -exec rm -f '{}' \;
+		use ipv6 || rm -rf "${D}"/usr/share/snmp/mibs/IPV6*
 	fi
 }

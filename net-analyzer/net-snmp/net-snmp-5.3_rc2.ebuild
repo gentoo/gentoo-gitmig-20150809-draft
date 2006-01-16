@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3_rc2.ebuild,v 1.2 2006/01/16 22:26:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3_rc2.ebuild,v 1.3 2006/01/16 22:47:35 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -167,7 +167,7 @@ src_install () {
 		einfo "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
 		rm -rf ${D}/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
 		rm -rf ${D}/usr/share/snmp/snmpconf-data ${D}/usr/share/snmp/*.conf
-		rm -rf ${D}/usr/bin/{net-snmp-config,fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
+		rm -rf ${D}/usr/bin/{fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
 		find ${D} -name '*.pl' -exec rm -f '{}' \;
 		use ipv6 || rm -rf ${D}/usr/share/snmp/mibs/IPV6*
 	fi
