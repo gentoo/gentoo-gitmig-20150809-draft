@@ -1,0 +1,5 @@
+MD5 5f6100b525b5b29e81f43cc7c55f4000 cacti-0.8.6h.tar.gz 1096877
+MD5 20dd3bd4688e95490d649768e9191f3a fix_search_session_clear_issue.patch 1154
+MD5 4ab874541b292e07eacbbce6dc505717 fix_sql_syntax_related_to_default_rra_id.patch 1058
+MD5 055b4e270e0586ff630b45886850bbbf mysql_5x_strict.patch 2593
+MD5 b64160dd736d404eb1b2537e9c80199d nth_percentile_empty_return_set_issue.patch 4792
