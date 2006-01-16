@@ -1,0 +1,12 @@
+# ChangeLog for x11-drivers/xf86-input-vmmouse
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.1 2006/01/16 21:56:40 battousai Exp $
+
+*xf86-input-vmmouse-20060113 (16 Jan 2006)
+
+  16 Jan 2006; Bryan Stine <battousai@gentoo.org>
+  +files/xf86-input-vmmouse-20060113-PIC-fix.patch,
+  +xf86-input-vmmouse-20060113.ebuild:
+  Initial import of VMWare mouse driver for Xorg. The driver and PIC fix patch
+  need testing. The patch might also be able to use some speed improvement.
+
