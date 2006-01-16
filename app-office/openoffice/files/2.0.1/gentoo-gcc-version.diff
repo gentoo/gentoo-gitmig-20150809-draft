@@ -1,0 +1,11 @@
+--- solenv/bin/getcompver.awk.orig	2005-12-01 03:45:51.000000000 +0100
++++ solenv/bin/getcompver.awk	2005-12-01 03:46:18.000000000 +0100
+@@ -71,7 +71,7 @@
+         CCversion = $0
+     }
+ }
+-/^[0-9]*[.][0-9]*[.][0-9]*-[0-9]*$/ {
++/^[0-9]*[.][0-9]*[.][0-9]*-.*$/ {
+     if ( compiler_matched == 0 ) {
+         CCversion = substr($0, 0, index($0, "-") - 1)
+     }

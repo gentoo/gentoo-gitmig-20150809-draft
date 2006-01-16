@@ -1,0 +1,11 @@
+--- patches/src680/apply.orig	2005-12-29 10:37:11.000000000 +0200
++++ patches/src680/apply	2005-12-29 10:37:45.000000000 +0200
+@@ -941,6 +941,8 @@
+ stlport-ppc-buildfix.diff
+ # Re-add DicOOo
+ gentoo-dicooo.diff
++# Fix for odd compiler versions
++gentoo-gcc-version.diff
+ 
+ #
+ # NOTE: 64 bit OOo is work in progress!

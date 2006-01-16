@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.8 2005/12/27 07:23:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.9 2006/01/16 15:54:21 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="curl eds gnome gtk java kde ldap mozilla zlib xml2"
+IUSE="binfilter curl eds gnome gtk java kde ldap mozilla zlib xml2"
 
 PATCHLEVEL="OOA680"
 SRC="OOO_2_0_1"
@@ -15,6 +15,7 @@ DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-system.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
+	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
 	http://go-ooo.org/packages/libwpd/libwpd-0.8.3.tar.gz
 	http://go-oo.org/packages/SRC680/ooo_crystal_images-6.tar.bz2
@@ -131,8 +132,10 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
-	use !gnome && use !gtk && epatch ${FILESDIR}/2.0.1/noquickstarter.diff
-	epatch ${FILESDIR}/2.0.1/alwayscrystal.diff
+	use !gnome && use !gtk && epatch ${FILESDIR}/${PV}/noquickstarter.diff
+	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
+	cp ${FILESDIR}/${PV}/gentoo-gcc-version.diff ${S}/patches/src680/ || die
+	epatch ${FILESDIR}/${PV}/ooo-build-gentoo-gcc-version.diff
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
@@ -140,6 +143,7 @@ src_unpack() {
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
 
+	echo "`use_enable binfilter`" >> ${CONFFILE}
 	echo "`use_with curl system-curl`" >> ${CONFFILE}
 	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
 	echo "`use_with zlib system-zlib`" >> ${CONFFILE}
@@ -162,6 +166,7 @@ src_compile() {
 	addpredict "/root/.gnome"
 
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break 
+	export JOBS="1"
 	if [ "${WANT_DISTCC}" == "true" ]; then
 		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	fi
