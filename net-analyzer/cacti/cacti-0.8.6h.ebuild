@@ -1,27 +1,32 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h.ebuild,v 1.1 2006/01/04 16:26:57 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h.ebuild,v 1.2 2006/01/16 03:56:37 ramereth Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.apache
+
+# (patched versions)
+# MY_P=${P/_p*/}
+MY_P=${P}
 
 DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
-# patches (none needed for new 0.8.6h)
-#UPSTREAM_PATCHES=""
-SRC_URI="http://www.cacti.net/downloads/${P}.tar.gz"
+# patches 
+UPSTREAM_PATCHES=""
+SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 #for i in $UPSTREAM_PATCHES ; do
-#	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV}/${i}"
+#	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 #done
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="snmp"
 
 DEPEND=""
 
-# TODO: RDEPEND Not just apache... but there's no virtual/webserver (yet)
+want_apache
 
-RDEPEND="net-www/apache
+# alpha doesn't have lighttpd keyworded yet
+RDEPEND="!alpha? ( !apache? ( !apache2? ( www-servers/lighttpd ) ) )
 	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
 	dev-db/mysql
@@ -29,13 +34,13 @@ RDEPEND="net-www/apache
 	virtual/php
 	virtual/httpd-php"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	# patches (none needed for new 0.8.6h)
+#src_unpack() {
+	#unpack ${MY_P}.tar.gz ; mv ${MY_P} ${P}
+	# patches
 	#for i in ${UPSTREAM_PATCHES} ; do
-	#	EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}
+	#	EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}.patch
 	#done ;
-}
+#}
 
 pkg_setup() {
 	webapp_pkg_setup
