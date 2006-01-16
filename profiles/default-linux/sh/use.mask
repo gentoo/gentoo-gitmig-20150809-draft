@@ -30,3 +30,4 @@ gtk
 gnome
 emacs
 doc
+xmms
