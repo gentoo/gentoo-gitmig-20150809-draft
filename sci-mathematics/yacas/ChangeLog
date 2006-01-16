@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/yacas
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.5 2005/10/02 02:47:45 ribosome Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.6 2006/01/16 01:27:57 cryos Exp $
+
+*yacas-1.0.61 (16 Jan 2006)
+
+  16 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> -yacas-1.0.57.ebuild,
+  yacas-1.0.58.ebuild, +yacas-1.0.61.ebuild:
+  Version bump, marked stable on amd64.
 
 *yacas-1.0.58 (02 Oct 2005)
 

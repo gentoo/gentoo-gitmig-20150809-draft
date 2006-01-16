@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.58.ebuild,v 1.1 2005/10/02 02:47:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.58.ebuild,v 1.2 2006/01/16 01:27:57 cryos Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.sourceforge.net/backups/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~x86"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4

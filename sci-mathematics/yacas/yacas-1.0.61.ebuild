@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.57.ebuild,v 1.2 2005/10/02 02:47:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.61.ebuild,v 1.1 2006/01/16 01:27:57 cryos Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}.patch
 	if ! use glut; then
 		sed -e 's:opengl::g' -i plugins/Makefile.in || die "sed (opengl) failed"
 		sed -e 's/\(^PLUGINDOCSCHAPTERS.*\)opengl.chapt\(.*\)/\1 \2/' -i \
