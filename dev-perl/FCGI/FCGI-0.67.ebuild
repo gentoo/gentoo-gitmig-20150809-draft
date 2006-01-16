@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/FCGI-0.67.ebuild,v 1.7 2005/12/15 20:40:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/FCGI-0.67.ebuild,v 1.8 2006/01/16 20:37:03 mcummings Exp $
 
 # this is an RT dependency
 
@@ -12,6 +12,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/S/SK/SKIMO/${P}.readme"
 
 SRC_TEST="do"
 SLOT="0"
-LICENSE="|| ( Artistic GPL-2 )"
+LICENSE="openmarket"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
