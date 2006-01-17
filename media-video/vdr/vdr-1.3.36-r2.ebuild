@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r2.ebuild,v 1.2 2006/01/10 08:48:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r2.ebuild,v 1.3 2006/01/17 19:33:06 zzam Exp $
 
 inherit eutils
 
@@ -28,17 +28,15 @@ SLOT="0"
 LICENSE="GPL-2"
 
 
-_DEPEND="media-libs/jpeg
+DEPEND="media-libs/jpeg
 	lirc? ( app-misc/lirc )
-	sys-apps/gawk"
+	sys-apps/gawk
+	media-tv/linuxtv-dvb-headers"
 
-RDEPEND="${_DEPEND}
+RDEPEND="${DEPEND}
 	dev-lang/perl
 	media-tv/vdrplugin-rebuild
-	media-tv/gentoo-vdr-scripts"
-
-DEPEND="${_DEPEND}
-	media-tv/linuxtv-dvb-headers"
+	>=media-tv/gentoo-vdr-scripts-0.2.2"
 
 # Relevant Pathes for vdr on gentoo
 DVB_DIR=/usr/include
