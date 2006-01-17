@@ -1,18 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ff9ebaa1c09c40b544fa478e593d6d97 ChangeLog 2323
+MD5 f9b7e7376e7ff66958f2bd78741fa416 ChangeLog 2493
 MD5 69bfc13da9bf05db8ed8130680aa9820 files/digest-qbankmanager-0.9.29 71
 MD5 e9bbaee0b1e81453e3a61c0c7d909a4d files/digest-qbankmanager-0.9.30_beta 75
+MD5 095a3e3f94db0f0378f096fa47c39463 files/digest-qbankmanager-0.9.33 71
 MD5 513e5771877e65400c1b4641105070a8 files/editcategoryreport.ui.gz 2306
 MD5 5d8d78b137d4898950fb1baf2ca856b3 files/qbankmanager-0.9.30beta-gcc41.patch 513
+MD5 c091379973efba8c5518abb6e58a974b files/qbankmanager-0.9.33-gcc41.patch 450
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 b6b69331283df7db4b5859a2bd5947b2 qbankmanager-0.9.29.ebuild 1079
 MD5 34830fd1608b17dbf4ee4a76f158973a qbankmanager-0.9.30_beta.ebuild 1028
+MD5 0e31c85966ba9cd2f8b9b0a6a45694bd qbankmanager-0.9.33.ebuild 1137
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi5har2QksT29OyARAuP+AJ0YOzL47jlSSHWp6r8S6iqHaqn6dgCfSK4r
-RJd2jWYsZM6FRLv9txsnJ1s=
-=H6Sq
+iD8DBQFDzWeUr2QksT29OyARAp9kAJ9v8/tcekLyhf7+ir6Wn6PJIod2UwCggAPK
+NqarP5lpU34E/1xlJNkUJw8=
+=9y1j
 -----END PGP SIGNATURE-----
