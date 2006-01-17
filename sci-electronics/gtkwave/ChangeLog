@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.8 2005/11/10 23:54:10 chrb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.9 2006/01/17 20:23:03 plasmaroo Exp $
+
+  17 Jan 2006; <plasmaroo@gentoo.org> gtkwave-1.3.72.ebuild:
+  Fix #119326.
 
   10 Nov 2005; <chrb@gentoo.org> gtkwave-1.3.72.ebuild:
   /bin -> /usr/bin/ (#108933)
