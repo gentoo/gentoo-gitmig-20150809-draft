@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.12 2006/01/16 00:24:27 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.13 2006/01/17 03:29:31 spyderous Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -141,7 +141,7 @@ need_fortran() {
 		fi
 
 		case ${MY_FORTRAN} in
-			g77|ifc|f2c)
+			gfortran|g77|ifc|f2c)
 				FORTRANC="${MY_FORTRAN}"
 		esac
 	fi
