@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 74520046584d6c54e1778712385a3cc0 ChangeLog 4587
+MD5 3985332eaeddb9efc47ff60d27941674 ChangeLog 4728
 MD5 bbb25789b80690a06bae3aeb2f18b16f files/digest-rtorrent-0.3.6 66
 MD5 68495c48ac3f70023ce4894e94c112ff files/digest-rtorrent-0.4.0 66
 MD5 a66428f7c22e95e3ae63cbaad1c76046 files/digest-rtorrent-0.4.1 66
@@ -10,11 +10,11 @@ MD5 dc4336d6e768b550ef6da8f6c965d234 metadata.xml 374
 MD5 74347323b69e29ee8f3ffaadc7758969 rtorrent-0.3.6.ebuild 1106
 MD5 1b9545166b163b35b5e2fc57d6478bf8 rtorrent-0.4.0.ebuild 1115
 MD5 e080dbf8313d726e1ac6b44c1cede618 rtorrent-0.4.1.ebuild 1120
-MD5 f45fdc23dfed78356a54de0cbf830d7f rtorrent-0.4.2.ebuild 1124
+MD5 67d08b0aa08aa2a7c7916e944d4f6a69 rtorrent-0.4.2.ebuild 1148
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwur3AiZjviIA2XgRAjcsAKDUljmfCSpCKgH26JLiXyxB6sXhvACfdoMb
-V/cXPq5muOuvfjEAVCNnW2Q=
-=lDLU
+iD8DBQFDzLXbAiZjviIA2XgRAojvAJ97lZfHScs9N00wDu1yr37Bu1AuzwCfT1ua
+aqqdE/ITTphVsLGE5hKrQ68=
+=bEOE
 -----END PGP SIGNATURE-----
