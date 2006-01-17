@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d49a8aafd76d8d74f0c170cdb1ed58f ChangeLog 2981
+MD5 5a130c5ca53c372c74726439b3fc02cd ChangeLog 3072
 MD5 13d7b2fc768be35add585a8e7facd48f files/digest-gnome2-canvas-1.00 69
 MD5 41e837f799b79d30c1ed4831fe8a5f99 files/digest-gnome2-canvas-1.002 70
 MD5 39f2011b824023df764b3aef16e608ca gnome2-canvas-1.00.ebuild 742
-MD5 0075b868de9d07640396ec5d124598dd gnome2-canvas-1.002.ebuild 732
+MD5 53eb989d31964bd5f70f5845467cdb1e gnome2-canvas-1.002.ebuild 729
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDzAUOKRy60XGEcJIRAuAXAJ4/8xXZeLYCcCqw3Hd3bdK4uallnwCgtQ4h
-1H2gECUmQzh/LjDMyQxXaHY=
-=Dxpe
------END PGP SIGNATURE-----
