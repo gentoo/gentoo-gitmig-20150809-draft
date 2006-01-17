@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0d031983ceb19d8f45f3be18b316cfa7 ChangeLog 3739
 MD5 5f94105e0b503a39fda5fb65d885e16c files/2.86-gentoo.patch 641
 MD5 3ba9251f1f4f0ae0dd30d682b28183dd files/2.86-selinux.patch 6525
@@ -16,3 +19,10 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
 MD5 f6a11b79bc4c15813b73475f28fd4fff sysvinit-2.86-r3.ebuild 3059
 MD5 6eec1ad98ec6dd5dad32785f73f469c0 sysvinit-2.86.ebuild 2503
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzFPN2+ySkm8kpY0RAsbVAKDD+XxOjiyhCygKpKE+8PrSrfms8QCeNUTD
+UiBUP40ulT7AYEoCPSgQLd4=
+=e0Jj
+-----END PGP SIGNATURE-----
