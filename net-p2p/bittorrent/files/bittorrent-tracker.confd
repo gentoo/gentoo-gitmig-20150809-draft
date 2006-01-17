@@ -1,7 +1,4 @@
-# /etc/conf.d/bttrack
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/files/bittorrent-tracker.confd,v 1.1 2005/12/18 20:08:06 mkay Exp $
+# /etc/conf.d/bittorrent-tracker: config file for /etc/init.d/bittorrent-tracker
 
 # Change this to this to the port you would like to connect to for the tracker.
 # It is accessible at http://localhost:PORT/ from any web browser.
