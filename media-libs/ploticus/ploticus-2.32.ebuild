@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.1 2005/10/01 07:29:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.2 2006/01/17 21:27:54 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="media-libs/libpng
 	gd? ( >=media-libs/gd-1.84 media-libs/jpeg )
 	flash? ( =media-libs/ming-0.2a )
 	truetype? ( =media-libs/freetype-2* )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
