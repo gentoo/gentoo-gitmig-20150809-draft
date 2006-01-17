@@ -9,10 +9,10 @@ MD5 d0f61288e81ce020573f3f6965af8489 files/dhcp-3.0.2-gmake.patch 1872
 MD5 2bfa28477aff891d25c06a00677d261c files/dhcp-3.0.3-libdst.patch 322
 MD5 85a5d65a92d74e828c539b6642962463 files/dhcp-3.0.3-no_isc_blurb.patch 3002
 MD5 ce6d18eef914ac8a39b0cb1bc4d63de2 files/dhcp-3.0.3-tr.patch 377
-MD5 2a2635a76ada362d73f6c004a31199d0 files/dhcp.conf 952
+MD5 0ab9c8e1c34a43a23d47d9649cd3ddcf files/dhcp.conf 792
 MD5 8dde07d126b5d50723a176ba1591ad66 files/dhcp.init 1411
 MD5 81b9256728a5daab31f0513ab55e8354 files/dhcp.rc6 1092
-MD5 02ea0c813e6dae9194379a195fa56e0c files/dhcrelay.conf 564
+MD5 7d49ecbe9f433f8c00d1fafe087abb9b files/dhcrelay.conf 408
 MD5 6e2bc3e08290c60d4f339ab9182fce07 files/dhcrelay.init 748
 MD5 8a19dd005c33231e02c03659f0c658df files/dhcrelay.rc6 626
 MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1-r1 128
