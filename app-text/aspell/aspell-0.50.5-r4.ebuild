@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.12 2005/01/29 17:10:11 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.13 2006/01/17 01:42:45 vapier Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86 ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sh sparc x86"
 IUSE="gpm"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -18,9 +18,9 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.50.5-charcount.patch
-	epatch ${FILESDIR}/${PN}-quotechar-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-0.50.5-charcount.patch
+	epatch "${FILESDIR}"/${PN}-quotechar-fix.patch
 }
 
 src_compile() {
