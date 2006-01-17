@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gpc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.15 2005/04/17 21:28:18 george Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.16 2006/01/17 13:09:04 george Exp $
+
+*gpc-20051104 (17 Jan 2006)
+
+  17 Jan 2006; George Shapovalov <george@gentoo.org> +gpc-20051104.ebuild:
+  new version, dependency on gcc is no longer necessary (slightly different
+  build, #119138)
 
 *gpc-20050331 (17 Apr 2005)
 
