@@ -1,4 +1,4 @@
-MD5 b70be44d049fc2c43d1cfff9260b143d ChangeLog 7871
+MD5 1d947f94d3898bc942e75a04681132dd ChangeLog 7981
 MD5 ead53e30977f8d368de26fae5a67ad32 courier-authlib-0.53.ebuild 5903
 MD5 616ebeb89647092c49a7c841274a5c6a courier-authlib-0.54.20050224.ebuild 6027
 MD5 f8e2293e9807a0b229675d9a92f9cffa courier-authlib-0.55.20050320.ebuild 6099
@@ -8,7 +8,7 @@ MD5 8bbd72f9613e3a82351e915aabbac7c8 courier-authlib-0.57-r1.ebuild 5970
 MD5 d0d8527656af2f96f526b5163a484e93 courier-authlib-0.57-r2.ebuild 6011
 MD5 2f26f5dd7b2847b4d13a0e7dd5917062 courier-authlib-0.57.20051116.ebuild 6142
 MD5 c02fd230688d2f9a2d0f4e8b45a3898e courier-authlib-0.57.ebuild 6089
-MD5 12f1f202d7477040459834dd644ddb97 courier-authlib-0.58.ebuild 6093
+MD5 0da1a03df6753c585f1be4fd211ecc79 courier-authlib-0.58.ebuild 6092
 MD5 452ec8a16d520bb91316b7dc1390b325 files/CVE-2005-3532.patch 456
 MD5 6930587c358320ecb1043761d7ff97f1 files/configure-db4.patch 2544
 MD5 ac879be5878ebe9b1eb18655b3538bf8 files/courier-authlib-initd 1095
