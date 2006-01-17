@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7a6efb9ede8e2321042195d885ae279e ChangeLog 828
+MD5 b63573667f714c6552ced61daebcca32 ChangeLog 914
 MD5 e45b84221c7a081fd11c7f44b083b0e9 files/11_mod_bw.conf 511
 MD5 7fff28dc6fff1c1ce2dcc9d6a36ffe5b files/digest-mod_bw-0.5 58
 MD5 e115388638f885e2b23d665bae2bed12 files/digest-mod_bw-0.5_rc1 61
@@ -9,11 +9,11 @@ MD5 dfac2de074a4b16c95034264d21f9f61 files/digest-mod_bw-0.6 58
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 4992afc22d51cafed2167d4bdb66d7e5 mod_bw-0.5.ebuild 692
 MD5 9158c225e2c427351554935f52ec5017 mod_bw-0.5_rc1.ebuild 696
-MD5 7c3ebee7f6fce57b22f8fa9f877bf5db mod_bw-0.6.ebuild 700
+MD5 32424b493d7ad4563d41dbc32cb34f7f mod_bw-0.6.ebuild 703
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSXVSKf2g/qXtneoRAkd0AJ0bd1NEmOmEkK9u5aPs8ycVlQq1ogCfXNOv
-kWjoGAW3PxxGBqKoy0/Clag=
-=MTPo
+iD8DBQFDzSB7oFw4q70f3SsRAk5iAJ4z7+UiGbZ9DfHevR8TTdwzO7uMZgCfTrjo
+barjsh2TcRJhpocvRrGMYQE=
+=brUW
 -----END PGP SIGNATURE-----
