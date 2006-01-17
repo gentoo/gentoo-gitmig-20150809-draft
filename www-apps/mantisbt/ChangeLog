@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mantisbt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.24 2005/12/20 17:51:55 rl03 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.25 2006/01/17 22:37:52 rl03 Exp $
+
+*mantisbt-1.0.0_rc5 (17 Jan 2006)
+
+  17 Jan 2006; Renat Lumpau <rl03@gentoo.org> +mantisbt-1.0.0_rc5.ebuild:
+  Version bump wrt security bug #119324.
 
   20 Dec 2005; Renat Lumpau <rl03@gentoo.org> -files/0.19.3-debian.patch,
   -mantisbt-0.19.3.ebuild:
