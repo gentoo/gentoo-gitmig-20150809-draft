@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.51.2.ebuild,v 1.10 2005/11/01 01:41:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.51.2.ebuild,v 1.11 2006/01/17 02:35:22 vapier Exp $
 
 inherit eutils
 
@@ -13,37 +13,32 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="gtk"
 
-DEPEND="virtual/libc
-	>=sys-libs/readline-4.1
+DEPEND=">=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	gtk? ( >=x11-libs/gtk+-1.2.10 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/libiodbc-3.51.2_install_symlink.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/libiodbc-3.51.2_install_symlink.diff
 }
 
 src_compile() {
-	local myconf
-	myconf="--with-layout=gentoo"
+	local myconf=""
+	use gtk \
+		&& myconf="${myconf} --enable-gui=yes" \
+		|| myconf="${myconf} --disable-gui"
 
-	if use gtk
-	then
-		myconf="$myconf --enable-gui=yes"
-	else
-		myconf="$myconf --disable-gui"
-	fi
-
-	./configure --host=${CHOST} ${myconf} || die
+	econf \
+		--with-layout=gentoo \
+		${myconf} || die
 	make || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	#dodoc AUTHORS ChangeLog NEWS README*
+	dodoc AUTHORS ChangeLog NEWS README*
 	#find doc/ -name "Makefile*" -exec rm '{}' \;
 	#dohtml doc/*
-	#prepalldocs
 }
