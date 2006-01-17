@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.9.199.ebuild,v 1.3 2005/11/29 19:47:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.9.199.ebuild,v 1.4 2006/01/17 19:00:31 gustavoz Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.145 2005/11/29 19:47:06 suka Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.146 2006/01/17 19:00:31 gustavoz Exp $
+
+  17 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  openoffice-ximian-1.9.199.ebuild:
+  Stable on sparc wrt OO 2.0.0 going stable
 
   29 Nov 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.9.199.ebuild:
