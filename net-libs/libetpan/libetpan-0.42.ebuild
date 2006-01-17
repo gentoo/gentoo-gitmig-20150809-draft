@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.42.ebuild,v 1.1 2006/01/09 06:56:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.42.ebuild,v 1.2 2006/01/17 20:28:58 genone Exp $
 
 DESCRIPTION="A portable, efficient middleware for different kinds of mail access."
 HOMEPAGE="http://libetpan.sourceforge.net"
@@ -32,4 +32,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc NEWS TODO ChangeLog
+}
+
+pkg_postinst() {
+	ewarn "The soname for libetpan has cahnged in this release."
+	ewarn "It is recommended that you run revdep-rebuild to fix any linking errors caused by this."
 }
