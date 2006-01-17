@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.22 2006/01/16 16:08:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.23 2006/01/17 19:31:33 nixnut Exp $
+
+  17 Jan 2006; <nixnut@gentoo.org> yaml-0.51.ebuild:
+  Added ~ppc keyword. bug 119199
 
 *yaml-0.51 (16 Jan 2006)
 
