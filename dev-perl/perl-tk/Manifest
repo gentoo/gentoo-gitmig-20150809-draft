@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d93d01b6431cc13cac3905e28c1d453 ChangeLog 4094
 MD5 0f1f6e9b0ed927dc06a26a50906da667 files/digest-perl-tk-804.027 63
 MD5 11a3b779734992780308fabad2d9f967 files/perl-tk-800.025-dirtarget.patch 518
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7f449e642333d2f0b42eac3a71bdc799 perl-tk-804.027.ebuild 636
+MD5 b800ecef5ee63a38a5feb0a9e5fe11e0 perl-tk-804.027.ebuild 636
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzG2v2+ySkm8kpY0RAqp8AKC+z3bUFmwOAu+KQyc804qAa3KruACffUwa
+0mAiVXw9BU+nyPrKpaMSw8s=
+=IZO9
+-----END PGP SIGNATURE-----
