@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010603.ebuild,v 1.6 2005/11/10 02:05:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010603.ebuild,v 1.7 2006/01/17 10:12:06 mcummings Exp $
 
 inherit perl-module eutils
 
