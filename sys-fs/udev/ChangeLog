@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.166 2005/12/25 02:26:42 kumba Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.167 2006/01/17 17:09:05 gregkh Exp $
+
+  14 Jan 2006; Greg Kroah-Hartman <gregkh@gentoo.org> udev-079.ebuild:
+  079 marked stable on x86 to handle upcoming 2.6.15 stable marking too.
 
   25 Dec 2005; Joshua Kinard <kumba@gentoo.org> udev-070-r1.ebuild:
   Marked stable on mips.
