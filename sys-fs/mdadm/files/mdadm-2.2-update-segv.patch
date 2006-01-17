@@ -1,0 +1,16 @@
+Fix segfault when update is NULL
+
+http://bugs.gentoo.org/119245
+http://www.mail-archive.com/linux-raid@vger.kernel.org/msg03242.html
+
+--- Assemble.c
++++ Assemble.c
+@@ -219,7 +219,7 @@
+ 		}
+ 		if (dfd >= 0) close(dfd);
+ 
+-		if (ident->uuid_set && (!update && strcmp(update, "uuid")!= 0) &&
++		if (ident->uuid_set && update && strcmp(update, "uuid")!= 0 &&
+ 		    (!super || same_uuid(info.uuid, ident->uuid, tst->ss->swapuuid)==0)) {
+ 			if ((inargv && verbose >= 0) || verbose > 0)
+ 				fprintf(stderr, Name ": %s has wrong uuid.\n",
