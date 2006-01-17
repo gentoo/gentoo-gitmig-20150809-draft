@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 50041fe2758f2fde2b58887c74f7338c ChangeLog 6338
+MD5 1303ff5c9d63575980ca793e0c650ed3 ChangeLog 6460
 MD5 6be90f964bc6ca0195b0623338dfd1f0 celestia-1.3.2.ebuild 3063
-MD5 f0e7f804f3b7a8fa304cc33842e1fcb4 celestia-1.4.0.ebuild 2618
+MD5 45a1093958a7d5955633dc737b3a069f celestia-1.4.0.ebuild 2645
 MD5 f659f2616eeaaa4d3b6422e586d2bfa2 files/celestia-1.3.2-noarts.patch 3566
 MD5 d4ff8e51fb3a546279e7442cf24e07d7 files/digest-celestia-1.3.2 68
 MD5 8e1dfea9c274b2242b921a467ec1d54b files/digest-celestia-1.4.0 68
@@ -12,7 +12,7 @@ MD5 1b55bd73a1313e288a88762af6cd0fb7 metadata.xml 330
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDy9IiH6mNYUtVdIARAhyjAJ9ALNovWyMkHG8suY94U+rriJ84fACdGTRh
-pF3bSn15FQ2jFL6znA1d0RA=
-=Q/al
+iD8DBQFDzIes/aM9DdBw91cRAg9aAKChTpZJYvXd8UhKBYeowNAMiz1U4wCg3Flz
+cOa50F4Gn4lkYiRNf4BnhcA=
+=lEoG
 -----END PGP SIGNATURE-----
