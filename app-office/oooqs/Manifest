@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d2a17f5db506b6f48f49fc32257a8e62 ChangeLog 2518
 MD5 b96223d4f6f3f644e5a345c12982ab72 files/digest-oooqs-2.0.3 63
 MD5 b96223d4f6f3f644e5a345c12982ab72 files/digest-oooqs-2.0.3-r1 63
@@ -8,3 +11,10 @@ MD5 d89f6d524fdd9cce162c5959fa9fed1b metadata.xml 269
 MD5 f3855b265eefcd0fa1f90489b077cf74 oooqs-2.0.3-r1.ebuild 971
 MD5 6d26b6f7360070119788d19ccf962e1b oooqs-2.0.3-r2.ebuild 622
 MD5 1b4a6eb83c4267e11b9089d34206029b oooqs-2.0.3.ebuild 664
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDzT+pKRy60XGEcJIRAiP/AJ9acgY+0kPW7nmUt1kuXRndCKxTUgCeOTDr
+CZiAoVLAeEtAwCls259hyk8=
+=PBhx
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/oooqs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.20 2006/01/07 18:50:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.21 2006/01/17 19:03:53 gustavoz Exp $
+
+  17 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> oooqs-2.0.3-r2.ebuild:
+  Stable on sparc directly wrt OO 2.0.0
 
   07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> oooqs-2.0.3-r2.ebuild:
   QA: need-kde() needs to be called after R/DEPEND.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.0.3-r2.ebuild,v 1.3 2006/01/07 18:50:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.0.3-r2.ebuild,v 1.4 2006/01/17 19:03:53 gustavoz Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://segfaultskde.berlios.de/index.php"
 SRC_URI="http://download.berlios.de/segfaultskde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 SLOT="0"
 
