@@ -1,0 +1,50 @@
+--- gfx/include/EvasHelper.hh.bak	2006-01-16 22:50:55.000000000 -0500
++++ gfx/include/EvasHelper.hh	2006-01-16 22:50:30.000000000 -0500
+@@ -28,6 +28,7 @@
+ 
+ #include <Evas.h>
+ #include <inttypes.h>
++#include <time.h>
+ 
+ #include <string>
+ 
+@@ -129,16 +130,16 @@
+   */
+   
+   void EventFeedMouseDown      (int b, Evas_Button_Flags flags) {
+-    evas_event_feed_mouse_down (ob, b, flags, NULL);
++    evas_event_feed_mouse_down (ob, b, flags, time(NULL), NULL);
+   };
+   void EventFeedMouseUp        (int b, Evas_Button_Flags flags) {
+-    evas_event_feed_mouse_up (ob, b, flags, NULL);
++    evas_event_feed_mouse_up (ob, b, flags, time(NULL), NULL);
+   };
+   void EventFeedMouseMove      (int x, int y) {
+-    evas_event_feed_mouse_move (ob, x, y, NULL);
++    evas_event_feed_mouse_move (ob, x, y, time(NULL), NULL);
+   };
+   void EventFeedmouseIn        () {
+-    evas_event_feed_mouse_in (ob, NULL);
++    evas_event_feed_mouse_in (ob, time(NULL), NULL);
+   };
+   
+   /*
+@@ -147,13 +148,15 @@
+   void EventFeedKeyUpData      (const char *keyname, const void *data) {
+   };
+   */
++ /* This isn't used for macosd and it's breaking compiles */
++ /*
+   void EventFeedKeyDown        (const char *keyname, const char *keysymbol, const char *key_compose) {
+-    evas_event_feed_key_down (ob, keyname, keysymbol, key_compose, NULL, NULL);
++    evas_event_feed_key_down (ob, keyname, keysymbol, key_compose, time(NULL), NULL);
+   };
+   void EventFeedKeyUp          (const char *keyname, const char *keysymbol, const char *key_compose) {
+-    evas_event_feed_key_up (ob, keyname, keysymbol, key_compose, NULL, NULL);
++    evas_event_feed_key_up (ob, keyname, keysymbol, key_compose, time(NULL), NULL);
+   };
+-
++*/
+   
+   Evas* c_obj () {
+       return ob;
