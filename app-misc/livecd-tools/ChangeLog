@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/livecd-tools
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.67 2005/12/06 20:45:10 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.68 2006/01/17 19:41:44 wolf31o2 Exp $
+
+  17 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-tools-1.0.28.ebuild:
+  Marking stable. This has been very well tested and resolves quite a few
+  issues with the release media.
 
 *livecd-tools-1.0.28 (06 Dec 2005)
 
