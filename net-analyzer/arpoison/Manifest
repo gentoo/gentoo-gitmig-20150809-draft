@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e190045a5acb0d7601454cce5dd49639 ChangeLog 679
-MD5 6d9c4329f1682eba382b945b20980ae9 arpoison-0.6.ebuild 762
+MD5 e72ac86067a4e74d799e69d85ceabcd6 ChangeLog 767
+MD5 bfb1dea83ffeb10aecb7fc1b2393ae76 arpoison-0.6.ebuild 760
 MD5 b683b9242e8e001c86df11bfffbe6bf3 files/digest-arpoison-0.6 62
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxJPxCRZPokWLroQRAhbeAKDNetuz8XdJIK5GUgWfXQ4mc2/mzwCffJcN
-5Z3T1jm5VMX7ZZKye7+cuwE=
-=k8v4
+iD8DBQFDzQc8oFw4q70f3SsRAteyAKCZ6zs/RYcgZcW0ocFY7C3Y8TzLJACgkKLc
+shNHNL2/ndec0xyHt0WV7FQ=
+=KKdz
 -----END PGP SIGNATURE-----
