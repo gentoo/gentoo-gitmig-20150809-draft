@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5.ebuild,v 1.4 2006/01/11 11:47:57 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5.ebuild,v 1.5 2006/01/17 19:42:35 genstef Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -56,14 +56,17 @@ src_install() {
 	for i in ${DIRS}
 	do
 		if [ -d ${i} ] ; then
-			chown -R --dereference root:0 ${i}
+			chown -R --dereference -L root:0 ${i}
 			mv ${i} ${D}${INSTALLDIR}
 		fi
 	done
 
 	exeinto ${INSTALLDIR}
 	doexe bin/acroread || die "doexe failed"
-	dodoc Browser/Browser_Plugin_HowTo.txt
+	# The Browser_Plugin_HowTo.txt is now in a subdirectory, which
+	# is named according to the language the user is using.
+	# Ie. for German, it is in a DEU directory.	See bug #118015
+	#dodoc Browser/${LANG_TAG}/Browser_Plugin_HowTo.txt
 
 	if use nsplugin ; then
 		exeinto /opt/netscape/plugins
@@ -86,7 +89,7 @@ src_install() {
 
 pkg_postinst () {
 	# fix wrong directory permissions (bug #25931)
-	find ${INSTALLDIR} -type d | xargs chmod 755 || die
+	find ${INSTALLDIR}/. -type d | xargs chmod 755 || die
 
 	einfo "The Acrobat(TM) Security Plugin will be enabled with USE=ldap"
 	einfo "The Acrobat(TM) Browser Plugin will be enabled with USE=nsplugin"
