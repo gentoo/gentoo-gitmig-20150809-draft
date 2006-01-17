@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 adf726172791402126c1aedba2543095 ChangeLog 497
+MD5 5758a45272829b2395928d230f83438c ChangeLog 654
 MD5 3bf7651a647c641c3fbc62086b1092c0 binutils-bfin-2005.3.1.ebuild 842
-MD5 1ceca2b52130809d1546b07ef8842102 binutils-bfin-2005.4_rc1.ebuild 931
+MD5 489500462a395e74c31da3a5164ebe52 binutils-bfin-2005.4_rc1.ebuild 1104
 MD5 1e006f68961f68debad9df04f0b98955 files/binutils-bfin-2005.3.1-build.patch 881
 MD5 2e67f8ce5d0ab15db41f211037a9bddd files/digest-binutils-bfin-2005.3.1 75
-MD5 ac47fd3947c0fb43354621b168aa080f files/digest-binutils-bfin-2005.4_rc1 141
+MD5 6a082930e28e902cadfa76d9032da9db files/digest-binutils-bfin-2005.4_rc1 73
+MD5 3dc65c334fbcf16311d3d437dc746cb5 files/elf2flt-configure-ldscript-path.patch 3539
 MD5 c6712d4b439bc632a23799aa1793fc84 metadata.xml 184
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyjVM2+ySkm8kpY0RAtD5AKCPz/bJRFXjxhIUSVH9TxAmVlcT2QCgwawN
-idm4C2jtT/fabaa4CCcH1tI=
-=Y7vd
+iD8DBQFDzFG22+ySkm8kpY0RAlnnAKCFu3bsxh1V+nVEcoMLNOyJLOAFbgCgl2k1
+KdwKJDHXfYVIdT9705zDUqs=
+=Gr24
 -----END PGP SIGNATURE-----

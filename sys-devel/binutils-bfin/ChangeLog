@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils-bfin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-bfin/ChangeLog,v 1.2 2006/01/15 11:41:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-bfin/ChangeLog,v 1.3 2006/01/17 02:06:55 vapier Exp $
+
+  17 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/elf2flt-configure-ldscript-path.patch,
+  binutils-bfin-2005.4_rc1.ebuild:
+  Fix elf2flt support.
 
 *binutils-bfin-2005.4_rc1 (15 Jan 2006)
 
