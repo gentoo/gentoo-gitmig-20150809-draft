@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.55.ebuild,v 1.9 2006/01/15 02:35:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.55.ebuild,v 1.10 2006/01/17 01:35:48 vapier Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -271,11 +271,8 @@ src_install () {
 	rm -rf var/www/localhost
 
 	# config files
-	insinto /etc/conf.d
-	newins ${GENTOO_PATCHDIR}/init/apache2.confd apache2
-
-	exeinto /etc/init.d
-	newexe ${GENTOO_PATCHDIR}/init/apache2.initd apache2
+	newconfd ${GENTOO_PATCHDIR}/init/apache2.confd apache2
+	newinitd ${GENTOO_PATCHDIR}/init/apache2.initd apache2
 
 	insinto /etc/logrotate.d
 	newins ${GENTOO_PATCHDIR}/scripts/apache2-logrotate apache2
