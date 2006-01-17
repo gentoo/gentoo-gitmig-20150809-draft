@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 de279af290d9903ed34fa22487439528 ChangeLog 6878
+MD5 a04487eb0fa862277ee810fd1d421232 ChangeLog 7019
 MD5 07f4fde34f29b1823ba3ece4ddfcb022 files/digest-libtorrent-0.7.6 68
 MD5 8ad855ece3b0f111304a144e49174930 files/digest-libtorrent-0.8.0 68
 MD5 79de4e36bbb6533aea56538826c1f27e files/digest-libtorrent-0.8.1 68
 MD5 fd5e43cbabffe533114ae9c6b24f0a13 files/digest-libtorrent-0.8.2 68
+MD5 e1d84ef8add415739cddd11e6da7569f files/digest-libtorrent-0.8.3 68
 MD5 48ab5c77f02a4e38d9886e85d77aade2 files/libtorrent-0.8.0-inttypes.patch 322
 MD5 ae059f1aaf57ca3031303e2d9bff3446 libtorrent-0.7.6.ebuild 927
 MD5 e1b9b5f3a2aa0e842f5825b9cb1aac76 libtorrent-0.8.0.ebuild 1012
 MD5 6441874387596350f3614c43e69bf600 libtorrent-0.8.1.ebuild 934
 MD5 7097d912ddd41c5539f10bc5d434ff60 libtorrent-0.8.2.ebuild 961
+MD5 1b7fdda38e20de56eae4717661e919d9 libtorrent-0.8.3.ebuild 961
 MD5 b59f615ff4e1c464f88d1667a66f6b5d metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzLWhAiZjviIA2XgRAg+yAKC7GgnsjTftC1pBvADj0OGNaBZXBgCdGoOM
-xoe+mXBRgqGRZgZY6i5lwQk=
-=JE77
+iD8DBQFDzU43AiZjviIA2XgRArdlAKCdnEwdZCNN/GC6/PrnNOQH9Zc7LACgokdc
+QpWAyc5c9PEwB9tZviICaBc=
+=FJJ5
 -----END PGP SIGNATURE-----
