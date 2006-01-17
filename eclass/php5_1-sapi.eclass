@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.12 2006/01/11 06:39:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.13 2006/01/17 22:45:09 chtekk Exp $
 #
 # ########################################################################
 #
@@ -266,12 +266,16 @@ php5_1-sapi_src_unpack() {
 	# Patch PHP to support heimdal instead of mit-krb5
 	if has_version "app-crypt/heimdal" ; then
 		sed -e "s|gssapi_krb5|gssapi|g" -i acinclude.m4 || die "Failed to fix heimdal libname"
+		sed -e 's|PHP_ADD_LIBRARY(k5crypto, 1, $1)||g' -i acinclude.m4 || die "Failed to fix heimdal crypt lib"
 	fi
 
 	# Patch for PostgreSQL support
 	if use postgres ; then
 		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
 	fi
+
+	# Disable interactive make test
+	sed -e 's/'`echo "\!getenv('NO_INTERACTION')"`'/false/g' -i run-tests.php
 
 	# Patch for session persistence bug
 	epatch "${FILESDIR}/5.1-any/php5-soap_persistence_session.diff"
@@ -355,7 +359,7 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"gettext"		"nls"			1
 	enable_extension_with		"gmp"			"gmp"			1
 	enable_extension_with		"hwapi"			"hyperwave-api"	1
-	enable_extension_without	"iconv"			"iconv"			1
+	enable_extension_without	"iconv"			"iconv"			0
 	enable_extension_with		"informix"		"informix"		1
 	enable_extension_disable	"ipv6"			"ipv6"			0
 	# ircg extension not supported on Gentoo at this time

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.9 2006/01/10 18:38:06 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.10 2006/01/17 22:40:18 chtekk Exp $
 #
 # ########################################################################
 #
@@ -254,12 +254,16 @@ php4_4-sapi_src_unpack() {
 	# Patch PHP to support heimdal instead of mit-krb5
 	if has_version "app-crypt/heimdal" ; then
 		sed -e "s|gssapi_krb5|gssapi|g" -i acinclude.m4 || die "Failed to fix heimdal libname"
+		sed -e 's|PHP_ADD_LIBRARY(k5crypto, 1, $1)||g' -i acinclude.m4 || die "Failed to fix heimdal crypt lib"
 	fi
 
 	# Patch for PostgreSQL support
 	if use postgres ; then
 		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
 	fi
+
+	# Disable interactive make test
+	sed -e 's/'`echo "\!getenv('NO_INTERACTION')"`'/false/g' -i run-tests.php
 
 	# stop php from activating the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
