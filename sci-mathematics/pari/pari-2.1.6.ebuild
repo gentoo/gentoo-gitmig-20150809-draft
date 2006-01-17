@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.14 2005/11/08 17:41:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.15 2006/01/17 10:11:00 mcummings Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
