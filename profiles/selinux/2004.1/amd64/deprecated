@@ -1,0 +1,8 @@
+selinux/2004.1/amd64
+Please follow the conversion guide here, doing the
+upgrading by hand:
+
+http://www.gentoo.org/proj/en/base/amd64/howtos/2005.0-upgrade-amd64.xml
+
+EXCEPT when updating the profile symlink (/etc/make.profile)
+point it to /usr/portage/profiles/selinux/2005.1/amd64.

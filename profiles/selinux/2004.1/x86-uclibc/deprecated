@@ -1,0 +1,4 @@
+selinux/2005.1/x86-uclibc
+# cd /etc/
+# rm make.profile
+# ln -s /usr/portage/profiles/selinux/2005.1/x86-uclibc make.profile
