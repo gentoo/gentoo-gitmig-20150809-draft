@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.21 2005/12/03 18:53:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.22 2006/01/17 18:59:22 gustavoz Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 
 RDEPEND="!app-office/openoffice-bin
 	!app-office/openoffice-ximian-bin
@@ -111,6 +111,11 @@ pkg_setup() {
 		ewarn " java in your USE-flags. Also the xml2 use-flag is disabled with "
 		ewarn " -java to prevent build breakage. "
 		ewarn
+	elif use sparc; then
+		ewarn " Java support on sparc is very flaky, we don't recommend "
+		ewarn " building openoffice this way."
+		ebeep 5
+		epause 10
 	fi
 
 }
