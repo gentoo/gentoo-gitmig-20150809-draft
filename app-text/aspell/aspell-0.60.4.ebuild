@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.3 2006/01/15 22:27:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.4 2006/01/17 01:42:59 vapier Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -10,16 +10,17 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc-macos ~ppc"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~s390 ~sh ~sparc ~x86"
 IUSE="gpm"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( sys-libs/gpm )"
 
 src_unpack() {
-	unpack ${A}; cd ${S}
-	epatch ${FILESDIR}/aspell-0.60.3-templateinstantiations.patch
-	epatch ${FILESDIR}/aspell-0.60.4-gcc-4.1-fix.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/aspell-0.60.3-templateinstantiations.patch
+	epatch "${FILESDIR}"/aspell-0.60.4-gcc-4.1-fix.patch
 }
 
 src_compile() {
@@ -41,8 +42,8 @@ src_install() {
 	dodoc README* TODO
 
 	make DESTDIR="${D}" install || die
-	mv ${D}/usr/share/doc/${PF}/man-html ${D}/usr/share/doc/${PF}/html
-	mv ${D}/usr/share/doc/${PF}/man-text ${D}/usr/share/doc/${PF}/text
+	mv "${D}"/usr/share/doc/${PF}/man-html "${D}"/usr/share/doc/${PF}/html
+	mv "${D}"/usr/share/doc/${PF}/man-text "${D}"/usr/share/doc/${PF}/text
 
 	# install ispell/aspell compatibility scripts
 	exeinto /usr/bin

@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 09f7fd92798972f835690ec0db7c3276 ChangeLog 12060
-MD5 d40ff6a488da2fdffb038f21cea2aedf aspell-0.50.5-r4.ebuild 1888
-MD5 7ad2996cc3d4ce2e8d3f49666be41a9e aspell-0.60.3.ebuild 1809
-MD5 619f46adfbddbd17cf697e52f4a0ad7e aspell-0.60.4.ebuild 1850
+MD5 9e65faa589b6fc7105f3ee3b35cc8c71 aspell-0.50.5-r4.ebuild 1895
+MD5 e67f599d5793e4b71209409651b42464 aspell-0.60.3.ebuild 1835
+MD5 ff593dec5d007f34f4d0b338312c0c26 aspell-0.60.4.ebuild 1890
 MD5 4fa550930c5e5fb38177ac9f77619891 files/01-gcc3.3-assert.patch 309
 MD5 f956a4b48687a0823d0d5d7608b567e9 files/02-gcc3.3-constcast.patch 453
 MD5 d2091b79a60b395e1ce3c496b7e3d45a files/aspell-0.50.5-charcount.patch 2264
@@ -13,3 +16,10 @@ MD5 1b5d84b6b88a3dfe388ad2e4b1f48155 files/digest-aspell-0.50.5-r4 66
 MD5 1b48dc4c225359e25d93946c0f313adb files/digest-aspell-0.60.3 66
 MD5 3fa02bca76a99a620612aa0b52c14f41 files/digest-aspell-0.60.4 66
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzEwa2+ySkm8kpY0RArA7AJ41naRTG5WYz8cxKsflHV9jzY6WCACgwLFc
+aG6rl20T7zOBG6H0Awe4mTA=
+=tHFw
+-----END PGP SIGNATURE-----
