@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.62 2006/01/04 21:46:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.63 2006/01/17 18:16:27 brix Exp $
+
+*bluez-utils-2.24 (17 Jan 2006)
+
+  17 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/bluez-utils-2.24-init.d, +files/bluez-utils-2.24-pin,
+  +files/bluez-utils-2.24-pin-helper.sh, +files/bluez-utils-2.24-udev.rules,
+  +files/bluez-utils-2.24-udev.script, +bluez-utils-2.24.ebuild:
+  Version bump. Added udev helper, bug #84431.
 
 *bluez-utils-2.22-r1 (04 Jan 2006)
 
