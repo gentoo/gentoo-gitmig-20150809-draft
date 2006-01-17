@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 403bfbf48e6c4df5db4781485c8a06f6 ChangeLog 2656
+MD5 97b194cf7534c34fc1994ab5bdfc3cf5 ChangeLog 2748
 MD5 c2c4ec5a0ec34e3f7744f2f8220fbf86 files/digest-math-pari-2.010500-r1 132
 MD5 2946e7c9e5bbdb5a6d5a592cf5d7c523 files/digest-math-pari-2.010603 130
 MD5 7a28837d7d66fda2cbedacc81aea8916 files/digest-math-pari-2.010702 130
 MD5 0796c30582a5a757aaf98a324261e176 files/math-pari-hppa.patch 637
-MD5 508e2511c5d0a49e2945dcced2bf6c6c math-pari-2.010500-r1.ebuild 895
-MD5 6e10eaf4bb6730c553c9a338d8132392 math-pari-2.010603.ebuild 988
-MD5 cbcefa65ec5af21138af6017fc2a280b math-pari-2.010702.ebuild 926
+MD5 91aad64a08ab5135550d165791a3b1fe math-pari-2.010500-r1.ebuild 899
+MD5 21b533121f8bd25448d011b360ddc95f math-pari-2.010603.ebuild 992
+MD5 5e708ca979a135717efc2eab12e17cb6 math-pari-2.010702.ebuild 924
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf0pKtG5z4I8BtQoRAiD9AJ4qMkof89YVR65YSmN/F+W0ix5krQCdHElD
-79ejl6mwWUeEx9yDpA0VzXY=
-=t79x
------END PGP SIGNATURE-----
