@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Spiffy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.1 2006/01/16 16:05:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.2 2006/01/17 19:19:03 nixnut Exp $
+
+  17 Jan 2006; <nixnut@gentoo.org> Spiffy-0.26.ebuild:
+  Added ~ppc keyword. bug 119199
 
 *Spiffy-0.26 (16 Jan 2006)
 
