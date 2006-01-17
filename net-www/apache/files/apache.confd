@@ -1,8 +1,4 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apache.confd,v 1.5 2004/07/15 00:24:42 agriffis Exp $
-
-# Config file for /etc/init.d/apache
+# /etc/conf.d/apache2: config file for /etc/init.d/apache2
 
 # Here's an example from /etc/apache/conf/apache.conf using mod_ssl:
 #
