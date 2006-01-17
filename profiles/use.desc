@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.282 2006/01/11 00:47:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.283 2006/01/17 23:14:58 genone Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -297,6 +297,7 @@ speex - Adds support for the speex audio codec
 spell - Adds dictionary support
 spl - Adds support for the Standard PHP Library
 sqlite - Adds support for sqlite - embedded sql database
+sqlite3 - Adds support for sqlite3 - embedded sql database
 sse - fast floating point optimization for PentiumIII+ class chips
 sse2 - faster floating point optimization for SSE2 capable chips
 ssl - Adds support for Secure Socket Layer connections
