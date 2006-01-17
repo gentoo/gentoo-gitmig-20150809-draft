@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1671 2006/01/16 20:43:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1672 2006/01/17 15:15:06 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1080,6 +1080,9 @@ net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/linux-wlan-ng-modules:pci - Enable the Prism2.5 native PCI (_pci) driver
 net-wireless/linux-wlan-ng-modules:plx - Enable the Prism2 PLX9052 based PCI (_plx) adapter driver
+net-wireless/madwifi-driver:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
+net-wireless/madwifi-driver:onoe - Use Atsushi Onoe's bit rate control algorithm
+net-wireless/madwifi-tools:udev - Enable udev rules file installation
 net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
