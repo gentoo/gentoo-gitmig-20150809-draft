@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37b763665cc9d1988342c35cec930a42 ChangeLog 67783
+MD5 59a32bf14bb9668b585668f5c0488e3b ChangeLog 68054
 MD5 87eaee8eee7f139ff75e74dd02f0890d baselayout-1.11.13-r1.ebuild 18930
 MD5 c0d40a19bd595c5a772988bfef6a3dd8 baselayout-1.11.13-r2.ebuild 19000
-MD5 89c374f7777f5801b25b87015cc5b104 baselayout-1.11.14.ebuild 18945
+MD5 6a30eb16fba8692360f9ce1292c8d4d2 baselayout-1.11.14.ebuild 19023
 MD5 37705358669d6569de60a9edaf43debd baselayout-1.12.0_pre13-r1.ebuild 19333
 MD5 119f61f75688b74f9b5055eb0505bb00 baselayout-1.12.0_pre13.ebuild 19287
 MD5 93e1ab7bf7be78c9f5f7c98445386951 baselayout-1.12.0_pre14-r1.ebuild 19341
@@ -24,10 +21,3 @@ MD5 9b965215857e748676396f53b8402af3 files/digest-baselayout-1.12.0_pre14 76
 MD5 9b965215857e748676396f53b8402af3 files/digest-baselayout-1.12.0_pre14-r1 76
 MD5 9b965215857e748676396f53b8402af3 files/digest-baselayout-1.12.0_pre14-r2 76
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzFPV2+ySkm8kpY0RAvUGAJ4uCWsLkEXLhvPW/y3TCcnVyERRhwCfc1ol
-94lt1cRqxgm4lgtLHS37XMU=
-=MN3y
------END PGP SIGNATURE-----

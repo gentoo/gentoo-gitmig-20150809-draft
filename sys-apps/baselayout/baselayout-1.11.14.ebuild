@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.14.ebuild,v 1.5 2006/01/17 02:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.14.ebuild,v 1.6 2006/01/17 19:53:53 wolf31o2 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -151,12 +151,15 @@ src_install() {
 	libdirs=$(get_all_libdirs)
 	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 
-	# This should be /lib/rcscripts, but we have to support old profiles too.
+	# fixes 110143
 	if [[ ${SYMLINK_LIB} == "yes" ]]; then
-		rcscripts_dir="/$(get_abi_LIBDIR ${DEFAULT_ABI})/rcscripts"
+		default_lib_dir="$(get_abi_LIBDIR ${DEFAULT_ABI})"
 	else
-		rcscripts_dir="/lib/rcscripts"
+		default_lib_dir="lib"
 	fi
+
+	# This should be /lib/rcscripts, but we have to support old profiles too.
+	rcscripts_dir="/${default_lib_dir}/rcscripts"
 
 	einfo "Creating directories..."
 	kdir /usr
@@ -238,8 +241,8 @@ src_install() {
 		ksym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/local/lib
 	fi
 
-	kdir /lib/dev-state
-	kdir /lib/udev-state
+	kdir /${default_lib_dir}/dev-state
+	kdir /${default_lib_dir}/udev-state
 
 	# FHS compatibility symlinks stuff
 	ksym /var/tmp /usr/tmp
