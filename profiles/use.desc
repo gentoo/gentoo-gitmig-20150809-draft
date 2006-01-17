@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.283 2006/01/17 23:14:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.284 2006/01/17 23:23:54 genone Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -249,6 +249,7 @@ pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
 pcntl - Adds support for process creation functions
 pcre - Adds support for Perl Compatible Regular Expressions
 pda - Adds support for portable devices.
+pdf - Adds general support for PDF (Portable Document Format), this will replace the pdflib and cpdflib flags
 pdflib - Adds support for PDF (Portable Document Format)
 perl - Adds support/bindings for the Perl language.
 pfpro - Adds support for Verisign Payflow Pro

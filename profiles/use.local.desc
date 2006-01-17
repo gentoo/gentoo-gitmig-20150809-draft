@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1673 2006/01/17 23:14:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1674 2006/01/17 23:23:54 genone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -120,7 +120,6 @@ app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
-app-misc/beagle:pdf - Enable indexing of Portable Document Format files (.pdf)
 app-misc/beagle:spreadsheet - Enable indexing of spreadsheet files via gnumeric
 app-misc/beagle:webservices - Enable the Beagle WebServices interface
 app-misc/beagle:wv - Enable indexing of MS Word documents (.doc)
@@ -143,7 +142,6 @@ app-mobilephone/yaps:capi - Enable CAPI support
 app-mobilephone/yaps:slang - Enable SLang scripting support
 app-office/abiword-plugins:grammar - Enable grammar checking via grammar-link
 app-office/abiword-plugins:math - Enable gtkmathview support
-app-office/abiword-plugins:pdf - Enable PDF importer
 app-office/abiword-plugins:thesaurus - Enable thesaurus support
 app-office/abiword-plugins:wordperfect - Enable wordperfect file support via libwpd
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
@@ -370,7 +368,6 @@ dev-php5/znf:smarty - Include support for Smarty.
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
-dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/gnome-python-extras:firefox - allow building against firefox libs
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
@@ -1299,7 +1296,6 @@ www-apps/moinmoin:rss - Add RSS support
 www-apps/nut:cgi - Add CGI script support
 www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  
 www-apps/rt:lighttpd - Add lighttpd support
-www-apps/swish-e:pdf - enable support for exporting to pdf
 www-apps/tikiwiki:graphviz - enable graphviz support
 www-apps/trac:cgi - Add CGI script support
 www-apps/trac:enscript -  Add enscript support to colourize code stored in the repository
@@ -1379,7 +1375,6 @@ x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gt
 x11-misc/linuxwacom:dlloader - Installs dynamically linked linuxwacom Xorg driver
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/openclipart:gzip - Compresses clip art using gzip
-x11-misc/openclipart:pdf - Installs pdf files as "clipart"
 x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
