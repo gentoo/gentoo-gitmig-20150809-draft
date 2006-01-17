@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.139 2006/01/13 18:45:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.140 2006/01/17 17:00:30 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -328,6 +328,10 @@ END
 			"${S}/src/po/Makefile"
 	fi
 
+	# Temporary vim7 fix, bug #119023.
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		sed -i -e '/deadly_exit/d' "${S}/src/gui_gtk_x11.c"
+	fi
 }
 
 vim_src_compile() {
