@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3bf76d5c0cce8a2f1e6b5ccbce0d5a9 ChangeLog 9941
 MD5 48d634c6abc444cac5d45d17b2a7bdee dnsmasq-2.15.ebuild 936
 MD5 24757d5e7ba1c0fd1705e59434bfe994 dnsmasq-2.18.ebuild 985
@@ -20,6 +23,13 @@ MD5 9740ffe29b6d012b66cd2e532b8915ce files/digest-dnsmasq-2.5-r1 62
 MD5 39075dfeab4bbded5f0e8680df29e414 files/digest-dnsmasq-2.8-r1 63
 MD5 d48a297550b42f81be10bd5fcf4e15a7 files/digest-dnsmasq-2.9 63
 MD5 bd6146f8e6623df5220cd06ceb3d4269 files/dnsmasq-init 612
-MD5 fc1326c5ef78a5ba4a73f6261806579f files/dnsmasq.confd 339
+MD5 5990c2d2cb92209feacf8f3a5a7d0831 files/dnsmasq.confd 140
 MD5 d1c7a35f0fe7e1e17d98990eec175b06 files/dnsmasq221-netlink.diff 337
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzGW+2+ySkm8kpY0RAm9VAJ0dYMtylp5BMq6RsZBQm4YyXoS7aQCggyO2
+EHjJ4oNZNPPiii6ENHRmVpk=
+=2N0S
+-----END PGP SIGNATURE-----
