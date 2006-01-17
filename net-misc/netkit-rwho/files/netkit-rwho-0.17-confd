@@ -1,6 +1,4 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/files/netkit-rwho-0.17-confd,v 1.1 2005/12/07 20:47:26 strerror Exp $
-#
+# /etc/conf.d/rwhod: config file for /etc/init.d/rwhod
+
 # rwhod arguments
 RWHOD_OPTIONS="-b"
