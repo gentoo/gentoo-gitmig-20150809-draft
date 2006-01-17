@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67fa9a11a35bc3d7391aca22c36934d0 ChangeLog 345
+MD5 4521b6e94721163309bdd024dcbd55d1 entropy-9999.ebuild 381
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-entropy-9999 0
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzD8Q2+ySkm8kpY0RAr8MAKCv1KqNZpLgaFXqcW52UzqjXH883gCgu05f
+Y8cMbzLgSeMe45WrI2R5qCU=
+=rDxe
+-----END PGP SIGNATURE-----
