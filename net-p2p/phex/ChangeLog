@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/phex
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.7 2005/09/26 21:09:27 mkay Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.8 2006/01/17 21:14:39 sekretarz Exp $
+
+*phex-2.8.2.92 (17 Jan 2006)
+
+  17 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/phex-2.8.2.92.sh, +phex-2.8.2.92.ebuild:
+  Version bump, bug #111812 by Roel Brook <Rainmaker526@hotmail.com>. Added
+  ~amd64 keyword
 
 *phex-2.6.4.89 (26 Sep 2005)
 
