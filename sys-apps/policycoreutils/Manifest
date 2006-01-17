@@ -1,4 +1,4 @@
-MD5 7e97dc2fc404ffc896099063301b9256 ChangeLog 8246
+MD5 30e96fe76f270d3d6090aee4249d865a ChangeLog 8374
 MD5 7a74a3135f746668eccc7a1521bd11cb files/digest-policycoreutils-1.22 146
 MD5 888c48de2a246f60017c7d2f3b6eccd0 files/digest-policycoreutils-1.24-r2 146
 MD5 8b17a28b65ab524d9d67e1933c22d12e files/digest-policycoreutils-1.28 146
@@ -8,4 +8,4 @@ MD5 b506c1ab31feeaa1394d45eedeaa2cc7 files/policycoreutils-1.28-quietlp.diff 817
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
 MD5 258910c124d547d1bf3945ed62bdf085 policycoreutils-1.22.ebuild 3374
 MD5 6e5218a65a8155983ed7b93dfb30e4fd policycoreutils-1.24-r2.ebuild 3609
-MD5 27db7b852dddadf101f51b62747faecb policycoreutils-1.28.ebuild 3550
+MD5 a06e287fc7e03f44d6046f28dbd864c4 policycoreutils-1.28.ebuild 3514
