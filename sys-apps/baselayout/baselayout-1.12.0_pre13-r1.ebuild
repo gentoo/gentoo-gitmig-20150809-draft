@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre13-r1.ebuild,v 1.3 2006/01/16 15:51:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre13-r1.ebuild,v 1.4 2006/01/17 00:35:37 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -19,7 +19,7 @@ IUSE="bootstrap build static unicode"
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
-RDEPEND=">=sys-apps/sysvinit-2.84
+RDEPEND=">=sys-apps/sysvinit-2.86-r3
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
 		>=app-shells/bash-3.0-r10
