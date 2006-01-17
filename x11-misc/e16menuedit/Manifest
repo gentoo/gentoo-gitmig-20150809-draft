@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e6359512481c84906915dd1461c61265 e16menuedit-0.1.ebuild 763
 MD5 9026be756e31d50a8ae8441bff72b5c5 ChangeLog 763
-MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
+MD5 b4821cbceff8eb98e336e75c7b9dd7ae e16menuedit-0.1.ebuild 732
 MD5 1cbe5e864e088adcf92c40c1221b1e81 files/digest-e16menuedit-0.1 65
+MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCSWnI06ebR+OMO78RAkxPAJ9HyJCQ/hhgSdlgt2SBR4SnHTm9TgCeM5n9
-1uyiTxnhEbg1wnuO1w9B8Zc=
-=TwEC
+iD8DBQFDzD+A2+ySkm8kpY0RAt+sAKCBOrkPdmtvUz/4uFCjfJD/inVmiQCeK7YE
+5r4v5Pfd9ksk+KE5Rt69GoE=
+=VWH4
 -----END PGP SIGNATURE-----
