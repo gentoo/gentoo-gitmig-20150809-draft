@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/eselect-gnat
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.1 2006/01/17 15:18:52 george Exp $
+
+*eselect-gnat-0.5 (17 Jan 2006)
+
+  17 Jan 2006; George Shapovalov <george@gentoo.org> +files/gnat.eselect,
+  +metadata.xml, +eselect-gnat-0.5.ebuild:
+  initial commit. eselect module for the gnat compilers (#111340)

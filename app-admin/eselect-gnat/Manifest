@@ -1,0 +1,5 @@
+MD5 4c2265bc761bc2859c8ac42668a920ee ChangeLog 433
+MD5 cc6de5656c9a32406a8ac1daf4002efe eselect-gnat-0.5.ebuild 532
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-gnat-0.5 0
+MD5 ecea91aed77d42448b0b49491f364f30 files/gnat.eselect 4311
+MD5 92e9934d7cc8cadaa1ca50badb669313 metadata.xml 244
