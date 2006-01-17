@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d81753d87bf6c0fbe7259fb52cf327fe ChangeLog 11322
 MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r6 204
 MD5 62972fab38bf033135efad0bd025f65b files/digest-rsync-2.6.3-r1 63
@@ -20,3 +23,10 @@ MD5 aa87fe072475d63b9476540033b38d01 rsync-2.6.4.ebuild 2001
 MD5 e498c1a53adae08aa9947326d1cde06b rsync-2.6.5.ebuild 2002
 MD5 51e3e1bd8ea781df225e47862b7ac98a rsync-2.6.6-r1.ebuild 2185
 MD5 cb139d23b5710072b79baf8546b9d7c4 rsync-2.6.6.ebuild 2011
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzGWA2+ySkm8kpY0RAsI5AJ4uwbHgpXI7sNg3rN2344zFxYHXoQCfT5Yl
+W+7szB3eL+0YeJ8N/kHBtVU=
+=cWuP
+-----END PGP SIGNATURE-----

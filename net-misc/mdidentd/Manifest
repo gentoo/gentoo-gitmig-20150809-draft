@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47a04d4bbc57024ad948ff98c62a1d09 ChangeLog 786
 MD5 bb24159ce9ff81560bf15e634d686e1e files/1.04a-pidfile.patch 483
 MD5 344e73b9ea63553c5430cf7cb26a83cf files/1.04a-security.patch 2804
@@ -7,3 +10,10 @@ MD5 9acee6c13960432fa792b22eae9f2698 files/mdidentd.conf.d 84
 MD5 752deb910376ea926065c57efb096911 files/mdidentd.init.d 487
 MD5 418653f6ebc9d7d570ffabe1b6497f6f mdidentd-1.04a.ebuild 1088
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzGXz2+ySkm8kpY0RAtNBAJ9izWYStpSUByKjFQ7oyJRowKIzSwCfY+T4
+kBGqqXtfzyq42HwoG59s27U=
+=yOGV
+-----END PGP SIGNATURE-----

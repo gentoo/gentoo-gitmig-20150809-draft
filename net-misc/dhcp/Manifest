@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 704075529169796bc46970096e52e88f ChangeLog 12277
 MD5 269137b4332a1524e1cf1b094d313166 dhcp-3.0.1-r1.ebuild 3958
 MD5 3474758c40d70d78876ea37fd929c945 dhcp-3.0.3-r2.ebuild 3921
@@ -19,3 +22,10 @@ MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1-r1 128
 MD5 c6df78cb1777bebada64f9c629b9f8eb files/digest-dhcp-3.0.3-r2 62
 MD5 be9ba2d7afab9b446197c45fe60d02bc files/digest-dhcp-3.0.4_beta2-r1 64
 MD5 436163172942ee1a0bcfb47534a71cce metadata.xml 330
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzGbP2+ySkm8kpY0RAhbkAJ96ukH2JQSRwgrUidZv3+TNFy1lKQCeKCi5
+cWKyeuqDBVGKLg84ZoFakhU=
+=b3i2
+-----END PGP SIGNATURE-----

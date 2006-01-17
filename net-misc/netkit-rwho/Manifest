@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 93aabefeed0b6030e03d2d2263331049 ChangeLog 1567
 MD5 4817c77ec114079b62c6825805637f78 files/digest-netkit-rwho-0.17-r1 67
 MD5 4817c77ec114079b62c6825805637f78 files/digest-netkit-rwho-0.17-r2 67
@@ -10,3 +13,10 @@ MD5 90c2da8beb52736b4e4f7973e0b16489 files/netkit-rwho-0.17-tiny-packet-dos.patc
 MD5 5355b4f79a0130d075711f0a54840239 metadata.xml 223
 MD5 f613f5046419a1577a9efccb54994819 netkit-rwho-0.17-r1.ebuild 1142
 MD5 b5d107cee29cb2fe9975106b0ab252db netkit-rwho-0.17-r2.ebuild 1285
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzGaN2+ySkm8kpY0RAtiTAKCHJEtrUxHjksKapkynvPG/DIK5ywCglbGl
+g0BgK+ZBR56MaBr+wYGgrI8=
+=Sk95
+-----END PGP SIGNATURE-----

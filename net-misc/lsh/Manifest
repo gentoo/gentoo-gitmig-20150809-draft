@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f96b557191c2c6ae08c7970add58834e ChangeLog 1913
 MD5 912d87383add43e1cb70bcbe484dc674 files/digest-lsh-2.0.1 62
 MD5 6813ec4e9dc95f6767e612961d38f090 files/lsh.confd 210
 MD5 3e325f3a64bf91a900f317fd2e49a4c2 files/lsh.rc 814
 MD5 31689a24c8ac91fb8ec178c531f44392 lsh-2.0.1.ebuild 2088
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzGWY2+ySkm8kpY0RAlcKAJ9FUd5sOAQevjC89c9KwWLL+Lu2ZACZAen2
+kjnw7B0Hh8b6UfpfON1xZ+4=
+=vavE
+-----END PGP SIGNATURE-----
