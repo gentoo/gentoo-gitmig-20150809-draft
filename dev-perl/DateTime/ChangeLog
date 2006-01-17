@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.19 2006/01/13 20:33:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.20 2006/01/17 18:36:51 mcummings Exp $
+
+*DateTime-0.29.01 (17 Jan 2006)
+
+  17 Jan 2006; <mcumming@gentoo.org> +DateTime-0.29.01.ebuild,
+  -DateTime-0.2901.ebuild:
+  2901 should have been added as 29.01 originally, case in point being that now
+  .30 will never be picked up because 2901 > 30 always, no matter true decimal
+  extension would say it correctly. Bah. Sorry for the downgrade folks, but its
+  not *really* a downgrade...
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   DateTime-0.2901.ebuild:
