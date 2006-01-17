@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.1.1.ebuild,v 1.2 2006/01/12 18:00:26 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.1.3.ebuild,v 1.1 2006/01/17 13:16:54 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
-DOC_VER="1.1.0"
+DOC_VER=${PV}
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
@@ -59,13 +59,8 @@ exportmakeopts() {
 
 src_unpack() {
 	unpack ${A}
-
-	if use doc ; then
-		cd ${WORKDIR}/${PN}-html-${DOC_VER}/
-		epatch "${FILESDIR}/${P}-glossary-from-1.1.0.diff"
-	fi
-
 	cd ${S}
+
 	sed -i \
 		-e "s:^\(CFLAGS = \).*$:\1${CFLAGS} -Wall:" \
 		-e "s:^\(LDFLAGS = \).*$:\1${LDFLAGS}:" \
