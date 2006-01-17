@@ -1,10 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb0e6c5f853fbd3a05012cfed1231033 ChangeLog 5203
+MD5 9cc34ed6080554fb719446a825740c4c ChangeLog 5312
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r1 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r2 64
-MD5 8c655620e7f5d0dc0ee9b8ef6351158d files/librep-0.15.2-exec.patch 425
 MD5 4d33f5e870cd659d295eaa8c1a8948da files/libtool.patch 3037
 MD5 ad28e56472f07a05a704ecfc7cf58434 files/rep_file_fdopen.patch 219
 MD5 ac5dfa439cd36f285d75eacb12125fb5 librep-0.17-r1.ebuild 1377
@@ -13,7 +12,7 @@ MD5 aabaa608acb879f04a961ad9e6d8e19c metadata.xml 233
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeENxwnQyISwouHwRAvHTAJ933R9oFYIEusny5wNS5irFYPcqPwCfchAG
-1AiQU9ZRndVJXkSkDUoYy98=
-=zE27
+iD8DBQFDzD6iJrHF4yAQTrARAmIKAJ4kQx/2FUp4jI7+oevl+oQ/7RuLvACgoUAW
+sNlqCfAD75hAntghsJvVR/4=
+=GdCC
 -----END PGP SIGNATURE-----
