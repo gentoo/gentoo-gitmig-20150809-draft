@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 074c50ee2851bf76560fbec6027259eb ChangeLog 5874
+MD5 0023c746d98f1e623c75ba7ed1fc6e52 ChangeLog 5955
 MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r4 63
 MD5 2fd9906f2bf293fdad42d572846508de files/digest-pari-2.1.6 60
 MD5 af657a173514360dabaac40ecd6ee695 files/digest-pari-2.1.7 60
@@ -11,11 +8,4 @@ MD5 cbd309a01e2fee1a5ba6cb3a93ba5708 files/wrong_functype.patch 1946
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 12d02fbdc3b89b45adf6fae221237532 pari-2.1.5-r4.ebuild 2523
 MD5 944e7cfb4a53d51b8619a0d3dc3b4be9 pari-2.1.6.ebuild 2485
-MD5 c86679b66731d93d8f2071a4b9449103 pari-2.1.7.ebuild 2455
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzMK9tG5z4I8BtQoRAk73AJ40SyR7RuDYt3N+92NYfj+Pg1aD/wCgjYCW
-S/+vZSHiOjG8ocrH5m8QaCY=
-=KVvA
------END PGP SIGNATURE-----
+MD5 71ac6ec3f46e5e840512359d1b2182d5 pari-2.1.7.ebuild 2451
