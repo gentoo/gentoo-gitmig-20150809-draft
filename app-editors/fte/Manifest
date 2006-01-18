@@ -1,10 +1,20 @@
-MD5 0960b72b6494de01232b0fd9da73de46 fte-20020324-r2.ebuild 1738
-MD5 6e2061e6962ff423f5f1dafe4fea2bd5 fte-20050108-r3.ebuild 2081
-MD5 94f7ffe6f72329086238a033f0014a7d ChangeLog 5285
-MD5 b73a542414b6cbad1ebdccc7279b7828 metadata.xml 318
-MD5 7c996af2e2e68f96a748f4269c76f710 files/fte 604
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd9afc360d2267e9ce40d80af1e0ca90 ChangeLog 5374
 MD5 333d7c07d793fca986bf2558e5105607 files/configpath.patch 572
-MD5 5890d034c66b5003475090a5312cfbe8 files/digest-fte-20050108-r3 133
 MD5 23d2b8a8749e3a4a9f9ab911641d50e8 files/digest-fte-20020324-r2 133
-MD5 6247d87b3178cdf9fbcb8c9dbca1549a files/fte-new_keyword.patch 340
+MD5 5890d034c66b5003475090a5312cfbe8 files/digest-fte-20050108-r3 133
+MD5 7c996af2e2e68f96a748f4269c76f710 files/fte 604
 MD5 be13218f7abfe31d83940c80adcbc59c files/fte-gcc34 1092
+MD5 6247d87b3178cdf9fbcb8c9dbca1549a files/fte-new_keyword.patch 340
+MD5 0960b72b6494de01232b0fd9da73de46 fte-20020324-r2.ebuild 1738
+MD5 16eebe436d582d97c9a319ad5af71602 fte-20050108-r3.ebuild 2142
+MD5 b73a542414b6cbad1ebdccc7279b7828 metadata.xml 318
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzjyyr2QksT29OyARAmfFAKCkLt4PSU8rAzRKSKLgywHACpIR4gCfeafz
+ovSXjkRFNVKNZbJcnlJhikM=
+=GzhE
+-----END PGP SIGNATURE-----

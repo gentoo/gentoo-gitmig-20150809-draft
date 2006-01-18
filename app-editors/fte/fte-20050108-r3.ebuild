@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.3 2005/06/23 17:59:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.4 2006/01/18 13:02:21 hanno Exp $
 
 inherit eutils
 
@@ -15,12 +15,16 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="gpm slang X"
 S=${WORKDIR}/${PN}
 
-RDEPEND=">=sys-libs/ncurses-5.2
+RDEPEND="|| ( (
+		x11-libs/libXdmcp
+		x11-libs/libXau
+		x11-libs/libX11
+	) virtual/x11 )
+	>=sys-libs/ncurses-5.2
 	gpm? ( >=sys-libs/gpm-1.20 )"
 DEPEND="${RDEPEND}
 	slang? ( sys-libs/slang )
-	app-arch/unzip
-	X? ( virtual/x11 )"
+	app-arch/unzip"
 
 set_targets() {
 	export TARGETS=""
