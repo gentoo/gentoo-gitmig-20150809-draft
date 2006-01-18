@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.3.21.ebuild,v 1.1 2006/01/16 15:14:56 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.3.22.ebuild,v 1.1 2006/01/18 14:31:09 voxus Exp $
 
 inherit eutils
 
@@ -11,12 +11,13 @@ SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug fastcgi imap pcre threads ssl zlib"
+IUSE="debug fastcgi imap pcre perl threads ssl zlib"
 
 DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
 	ssl? ( dev-libs/openssl )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib )
+	perl? ( >=dev-lang/perl-5.8 )"
 
 src_compile() {
 	local myconf
@@ -37,6 +38,7 @@ src_compile() {
 	use debug	&& myconf="${myconf} --with-debug"
 	use ssl		&& myconf="${myconf} --with-http_ssl_module"
 	use imap	&& myconf="${myconf} --with-imap" # pop3/imap4 proxy support
+	use perl	&& myconf="${myconf} --with-http_perl_module"
 
 	./configure \
 		--prefix=/usr \
@@ -56,15 +58,15 @@ src_compile() {
 src_install() {
 	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi}
 
-	dodir /etc/${PN}
-
 	dosbin objs/nginx
 	doinitd ${FILESDIR}/nginx
 
-	insinto /etc/${PN}
 	rm conf/nginx.conf
-	doins -r conf/*
-	doins ${FILESDIR}/nginx.conf
+	cp ${FILESDIR}/nginx.conf-r1 ${T}/nginx.conf
+
+	dodir /etc/${PN}
+	insinto /etc/${PN}
+	doins conf/* ${T}/nginx.conf
 
 	dodoc CHANGES{,.ru} LICENSE README
 }
