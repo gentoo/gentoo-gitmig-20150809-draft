@@ -1,0 +1,66 @@
+--- configure.ac.orig	2006-01-18 13:44:16.000000000 -0500
++++ configure.ac	2006-01-18 13:45:35.000000000 -0500
+@@ -502,8 +502,7 @@
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_ARM"
+     ;;
+   athlon*)
+-    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I386 -DOPTIMIZE_MMX"
+-    CFLAGS="$CFLAGS -mmmx"
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I386"
+     ;;
+   i386)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I386"
+@@ -527,23 +526,19 @@
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I586"
+     ;;
+   pentium-mmx)
+-    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I586 -DOPTIMIZE_MMX"
+-    CFLAGS="$CFLAGS -mmmx"
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I586"
+     ;;
+   pentiumpro)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686"
+     ;;
+   pentium2)
+-    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX"
+-    CFLAGS="$CFLAGS -mmmx"
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686"
+     ;;
+   pentium3)
+-    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX -DOPTIMIZE_SSE"
+-    CFLAGS="$CFLAGS -msse"
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686"
+     ;;
+   pentium4)
+-    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX -DOPTIMIZE_SSE -DOPTIMIZE_SSE2"
+-    CFLAGS="$CFLAGS -msse2"
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686"
+     ;;
+   powerpc)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_POWERPC"
+--- acinclude.m4.orig	2006-01-18 13:46:02.000000000 -0500
++++ acinclude.m4	2006-01-18 13:47:46.000000000 -0500
+@@ -454,9 +454,8 @@
+       ;;
+     esac
+   fi
+-  if test "$ac_enable_debug" = yes; then
+-    BEECRYPT_CFLAGS_REM([-O2])
+-    CFLAGS="$CFLAGS -Wall -pedantic"
++  if true; then
++    CFLAGS="$CFLAGS -Wall"
+   else
+     # Generic optimizations, including cpu tuning
+     BEECRYPT_CFLAGS_REM([-g])
+@@ -566,9 +565,8 @@
+       ;;
+     esac
+   fi
+-  if test "$ac_enable_debug" = yes; then
+-    BEECRYPT_CXXFLAGS_REM([-O2])
+-    CXXFLAGS="$CXXFLAGS -Wall -pedantic"
++  if true; then
++    CXXFLAGS="$CXXFLAGS -Wall"
+   else
+     # Generic optimizations, including cpu tuning
+     BEECRYPT_CXXFLAGS_REM([-g])
