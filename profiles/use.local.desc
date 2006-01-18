@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1674 2006/01/17 23:23:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1675 2006/01/18 10:58:27 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1066,6 +1066,7 @@ net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
+net-wireless/bluez-utils:udev - Enable udev rules file installation
 net-wireless/hostapd:logwatch - Install support files for logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi-driver (Atheros chipset)
 net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
