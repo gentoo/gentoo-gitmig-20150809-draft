@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4921d4d1c7a8e27e16ff854c65d7a502 ChangeLog 20714
 MD5 cfce6770c86e3e3bc76800c6bd6ee8c6 files/digest-net-snmp-5.2.1.2-r1 69
 MD5 92b7d3fe0c5dad9c215a170199e3c66c files/digest-net-snmp-5.2.2-r1 67
@@ -11,6 +14,13 @@ MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
 MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
 MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
-MD5 d0b22e66e621632a1fc5b489059d361a net-snmp-5.2.1.2-r1.ebuild 5028
-MD5 aa3797e8bf1a94d3d41303348af0af6b net-snmp-5.2.2-r1.ebuild 5059
-MD5 d5f2813d854d9c5e1c1c1b84a55d81fd net-snmp-5.3_rc2.ebuild 5195
+MD5 c80411f366b0543efc1512966ba754c6 net-snmp-5.2.1.2-r1.ebuild 4980
+MD5 c176416ab74d0e271496936dd6225101 net-snmp-5.2.2-r1.ebuild 5012
+MD5 265247aa7566a34595027e1833ff86db net-snmp-5.3_rc2.ebuild 5148
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzs/K2+ySkm8kpY0RAiAwAJ9GODIcgXZR9Dwk7x+51bP5fj4zRACfa8Cv
+kq+TNgOYxGpx92WtVyUcXBs=
+=3MEK
+-----END PGP SIGNATURE-----
