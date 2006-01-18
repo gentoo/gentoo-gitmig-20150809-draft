@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4879 2006/01/18 19:03:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4880 2006/01/18 23:53:24 chriswhite Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Chris White <chriswhite@gentoo.org> (18 Jan 2006)
+# Package depends on package.mask sys-libs/db
+dev-libs/ice
 
 # Thierry Carrez <koon@gentoo.org> (18 Jan 2006)
 # Package contains insecure tmpfile handling, bug #108072
