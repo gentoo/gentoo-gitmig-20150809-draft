@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/kyro-drivers/kyro-drivers-2.01.21.7.ebuild,v 1.1 2005/12/07 00:14:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/kyro-drivers/kyro-drivers-2.01.21.7.ebuild,v 1.2 2006/01/18 23:57:15 spyderous Exp $
 
 inherit eutils
 
@@ -18,9 +18,10 @@ KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="nostrip"
 
-DEPEND="virtual/linux-sources
+RDEPEND=""
+DEPEND="${RDEPEND}
+	virtual/linux-sources
 	>=sys-apps/portage-1.9.10"
-RDEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
