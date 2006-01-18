@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ntodo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.11 2006/01/14 12:54:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.12 2006/01/18 14:26:15 metalgod Exp $
+
+  18 Jan 2006; Luis Medinas <metalgod@gentoo.org> ntodo-1.1.ebuild:
+  Marked Stable on amd64.
 
   14 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> ntodo-1.1.ebuild:
   Stable on x86.
