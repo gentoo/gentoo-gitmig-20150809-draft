@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.58 2006/01/10 18:36:52 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.59 2006/01/18 20:38:25 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> php-4.4.1-r3.ebuild,
+  php-5.0.5-r5.ebuild:
+  Stable on ppc64; bug #119461
 
   10 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
   -files/4.3.11/php4.3.11-apache2sapi.patch,
