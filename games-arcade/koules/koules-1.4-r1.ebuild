@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.10 2006/01/12 20:37:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.11 2006/01/18 20:42:41 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,24 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="svga joystick tcltk"
 
-DEPEND=">=sys-apps/sed-4
-	|| (
+DEPEND="|| (
 		svga? ( media-libs/svgalib )
 		virtual/x11 )"
-RDEPEND="virtual/libc
-	|| (
+RDEPEND="|| (
 		svga? ( media-libs/svgalib )
 		virtual/x11 )
 	|| (
 		tcltk? ( dev-lang/tk dev-lang/tcl )
 		dev-util/dialog )"
 
-S="${WORKDIR}/${PN}${PV}"
+S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${S}/${P}-gcc3.patch"
+	cd "${S}"
+	epatch "${DISTDIR}"/${P}-gcc3.patch.bz2
 	sed -i \
 		-e "/^KOULESDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^SOUNDDIR/s:=.*:=${GAMES_DATADIR}/${PN}:" Iconfig \
@@ -87,7 +85,7 @@ src_install() {
 	if use tcltk ; then
 		dogamesbin koules.tcl || die "dogamebin failed (tcl)"
 	fi
-	insinto ${GAMES_DATADIR}/${PN}
+	insinto "${GAMES_DATADIR}/${PN}"
 	doins sounds/* || die "doins failed (sounds)"
 
 	doman xkoules.6
