@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 664c59b4b95af932b6638b932f06c462 ChangeLog 24943
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 4b92f911e900cfd1a37439bd19412f5d files/digest-gnupg-1.4.1 190
@@ -13,11 +16,18 @@ MD5 c23d51ccf048f10b5e8b10b45570c13a files/gnupg-1.4.2-jari.patch 370
 MD5 ee3a4487eadfb9858f32adde3554394c files/gnupg-1.4.2-keyserver.patch 389
 MD5 fb96d149b5fc7dacc041dda2a57b2315 files/gnupg-1.4.2-mpicoder.patch 991
 MD5 552b43a0705ea006efa282b7d5645143 files/gnupg-1.4.2-selftest.patch 1358
-MD5 3dedd2cc4e62aef96d919c74970e758b gnupg-1.2.6.ebuild 3795
+MD5 1539f94509914bf1a9dfeec57f8725e7 gnupg-1.2.6.ebuild 3794
 MD5 c77b579997468bf58a6fc5a5e1a2fb00 gnupg-1.4.1-r1.ebuild 6272
 MD5 6f5e7ed6dfb1ae31f877486a9ff7e441 gnupg-1.4.1.ebuild 6186
 MD5 ffd1a6a73df273ee13e112dc428eb06c gnupg-1.4.2-r1.ebuild 6241
 MD5 314fb0111680f30cd551152636225ea9 gnupg-1.4.2-r2.ebuild 6795
-MD5 b723494957d3a13a8281999f582f5416 gnupg-1.4.2-r3.ebuild 6843
-MD5 7786b7baae2a2fd09672dcc425373490 gnupg-1.9.20.ebuild 3191
+MD5 b112e76cfc68dc716e5a301523a9411e gnupg-1.4.2-r3.ebuild 6842
+MD5 3eb0f9a3445d5dc346ae950f12977452 gnupg-1.9.20.ebuild 3191
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzsnh2+ySkm8kpY0RAkcgAJ9ZD/pCzTT6s8YvEHtp21c/uKZirwCgmxg+
+8v6YWuEJT6hpHetvlfueo2c=
+=TXLO
+-----END PGP SIGNATURE-----
