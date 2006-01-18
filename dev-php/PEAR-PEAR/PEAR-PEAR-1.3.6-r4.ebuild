@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r3.ebuild,v 1.1 2006/01/15 06:25:26 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r4.ebuild,v 1.1 2006/01/18 06:37:04 sebastian Exp $
 
 inherit depend.php
 
@@ -66,10 +66,11 @@ src_install() {
 
 	# Prepare /usr/bin/pear script.
 	cp "${WORKDIR}/PEAR-${PEAR}/scripts/pearcmd.php" "${WORKDIR}/PEAR/pearcmd.php"
+	sed -i "s:@pear_version@:${PEAR}:g" "${WORKDIR}/PEAR/pearcmd.php"
 	cp "${WORKDIR}/PEAR-${PEAR}/scripts/pear.sh" "${WORKDIR}/PEAR/pear"
 	sed -i "s:@php_bin@:${PHPCLI}:g" "${WORKDIR}/PEAR/pear" || die
 	sed -i "s:@bin_dir@:/usr/bin:g" "${WORKDIR}/PEAR/pear" || die
-	sed -i 's:@php_dir@:/usr/share/php:g' "${WORKDIR}/PEAR/pear" || die
+	sed -i "s:@php_dir@:/usr/share/php:g" "${WORKDIR}/PEAR/pear" || die
 
 	# Install Archive_Tar Package.
 	cp -r "${WORKDIR}/Archive_Tar-${ARCHIVE_TAR}/Archive" "${WORKDIR}/PEAR/Archive"
