@@ -1,4 +1,14 @@
-MD5 7c858d1522b0a8e65a68e3d4ff61f476 calamaris-2.59.ebuild 584
-MD5 649454cacac6e6a35aa8e27bded15f7f ChangeLog 1274
-MD5 e0407ed1cf5f670e1cb0b92ff677ab87 metadata.xml 285
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9f48ace87199d53478ee0f8a3f171738 ChangeLog 1370
+MD5 9545b29e0a954faf491d829affdbf5d7 calamaris-2.59.ebuild 590
 MD5 560ba0df8a31604d365899566009c309 files/digest-calamaris-2.59 65
+MD5 e0407ed1cf5f670e1cb0b92ff677ab87 metadata.xml 285
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDzi+Uub4+zaPCR/oRAtxnAJ43B77h5KSdB/ncaz6ov1yIgYY6XQCgrPhp
+wEc/2X+T116JlvPL8prZzJI=
+=TXi0
+-----END PGP SIGNATURE-----
