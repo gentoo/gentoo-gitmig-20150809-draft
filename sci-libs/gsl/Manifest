@@ -1,8 +1,18 @@
-MD5 543ecf56f9fcd9c8be5975608361dbfa gsl-1.4.ebuild 751
-MD5 97343b0540dc688442a0020ff04f928a gsl-1.6.ebuild 773
-MD5 dca8a60010e255054845ffdb78ed8798 ChangeLog 3115
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 bea43e3a37b37989ea00e6074b2578fe gsl-1.7.ebuild 839
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0bc30adf9bc57101fc0836a8892e668 ChangeLog 3201
 MD5 5f0a27845cdb652d4720cf49199a0770 files/digest-gsl-1.4 60
 MD5 5f476c7aedf436616ae45ce5e4bc1a1a files/digest-gsl-1.6 60
 MD5 85f679eae9dc66478eacbaf839652f01 files/digest-gsl-1.7 60
+MD5 543ecf56f9fcd9c8be5975608361dbfa gsl-1.4.ebuild 751
+MD5 97343b0540dc688442a0020ff04f928a gsl-1.6.ebuild 773
+MD5 df04c7900c61cb382284f4a79a12c3aa gsl-1.7.ebuild 836
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzsUXntT9W3vfTuoRAiciAKCmVp6CRsZFGLXHEdkz8Uh+Yn4cJwCfYeJa
+axkZP9f7Gqx2XgHJnwuR2gQ=
+=jVBM
+-----END PGP SIGNATURE-----
