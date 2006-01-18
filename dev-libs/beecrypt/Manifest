@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 f559fc12fb134d6fc4ea94eafc20097f ChangeLog 4257
 MD5 7437e6ee38f80ea81754bca5de8e8c86 beecrypt-3.1.0-r1.ebuild 1402
-MD5 b2fc390b530420129f6adc5e9a8d23e4 beecrypt-3.1.0-r2.ebuild 1721
+MD5 b6c457c06f2f7babce8779dc33405e21 beecrypt-3.1.0-r2.ebuild 1723
 MD5 175fd15e60fb2b2d9e02019bb0cc41f4 beecrypt-4.1.2-r1.ebuild 1673
 MD5 4f40a1b10e6111cd51d5d054174bc856 beecrypt-4.1.2.ebuild 1569
 MD5 9801ec0e3201addd45f08dea31ac5324 files/beecrypt-3.1.0-alpha.patch 321
@@ -18,7 +18,7 @@ MD5 1088d87436deafc76d2114137c9a6330 files/digest-beecrypt-4.1.2-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzs8Z2+ySkm8kpY0RAlchAJ9eOHIOGd1uwPq3vYYfVl9Lq7ePHgCff7Op
-NgYm8di+W00KN1/My5nYNrg=
-=TCwE
+iD8DBQFDzs+X2+ySkm8kpY0RAkMkAJ9bQGy4vZ4wx92BC5soOr4atVu7agCgk23N
+DFVRCdYF/XBVxrHybW7Dow4=
+=cO9x
 -----END PGP SIGNATURE-----
