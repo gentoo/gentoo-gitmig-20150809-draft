@@ -1,8 +1,18 @@
-MD5 0da05a13ba9b29b2643ac864e251e792 ChangeLog 4153
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 651dde9aa066c7d0c48de0166a6f9616 ChangeLog 4270
 MD5 e1e4217dfb45debd7da4d287b018d813 antiword-0.36.1.ebuild 903
-MD5 50b23cc27a9a3cb779b8c05aff0500f4 antiword-0.37.ebuild 1036
+MD5 7081d7eae37e42c053b3ce8cdbe24c61 antiword-0.37.ebuild 1036
 MD5 f35c9cb9fec58f1b5fc7379ebab7dcb5 files/antiword-0.36.1-ppc-macos.diff 440
 MD5 8970b39f62ba21a9a9699c6f6b907147 files/digest-antiword-0.36.1 67
 MD5 87c4f04119c126255fc64ede6ed4217c files/digest-antiword-0.37 140
 MD5 dc4b195386deeddbd406c7aa5afb8a60 files/gentoo-antiword.diff 380
 MD5 e8782d415ca5296d717bc98dade6616b metadata.xml 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDzn6SKRy60XGEcJIRAjYOAJ0RtIEVu8EVHj0ehvX803cYVeCzegCeP6wx
+ZtcG/hW2Dwl1l5M5ovQx4s0=
+=z2sv
+-----END PGP SIGNATURE-----
