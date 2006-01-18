@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a832cfe334cbe16bf7d0f4f3d2f95e12 ChangeLog 1602
+MD5 a18d8ac03b676bc8a6b9b227855ee4d0 ChangeLog 1803
 MD5 b937e024b7bc2cff8924389c1d966689 banshee-0.10-r1.ebuild 2647
 MD5 14653520a3ad0af3407971ee4eaa6c45 banshee-0.10.2.ebuild 2760
+MD5 c2a8b63ad4e54431faa2958bd6d13368 banshee-0.10.4.ebuild 2790
 MD5 2ce464fafc8bffde14c9b0f3effb7d8a banshee-0.9.12.ebuild 2282
 MD5 1c431dc8f1cb2ffc23e88861c3cb8a73 files/banshee-0.10-AudioCdCore.cs.diff 568
 MD5 d2f2f2a8d85cb8505768e3b54519219f files/digest-banshee-0.10-r1 65
 MD5 f0bcad684ef636265462d49c42199a08 files/digest-banshee-0.10.2 67
+MD5 c97dc16a07c557a56a81612b73c672f2 files/digest-banshee-0.10.4 67
 MD5 81d990077b77688af3d905db25b40e55 files/digest-banshee-0.9.12 67
 MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrHf5wUpWvClEHQoRApgvAJ4o8hghiyyyAi/yBr/vaz8j7zAB6QCfcqGH
-tC/dOrOl/eGTHBKa0K7xv9A=
-=EdYI
+iD8DBQFDzZWvwUpWvClEHQoRAgodAJ48V7Dtid0xL6LZYhTG2HbCyNDbQQCfVIK/
+RtlAlZSdwOcaMFybTgll35E=
+=RqFO
 -----END PGP SIGNATURE-----
