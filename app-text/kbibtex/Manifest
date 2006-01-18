@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88873bb3f7bd0a75a674b41d87fede84 ChangeLog 1113
-MD5 ba6f76293055004ed31994c63a03bc50 files/digest-kbibtex-0.1.2-r1 66
+MD5 31381bf2b0e43170d54f935421efd0a9 ChangeLog 1216
 MD5 28265cf98171e85a67caa02a23491532 files/digest-kbibtex-0.1.3 66
 MD5 d73b24ac9d7c9901907110465a1d2d3f files/kbibtex-0.1.2-strings-fix.patch 428
-MD5 b5ff03d7ab6efe36ba64c11b7f82cd95 kbibtex-0.1.2-r1.ebuild 559
 MD5 9226f3c970df369b61e2acca80b0dcfa kbibtex-0.1.3.ebuild 601
 MD5 636e395cdc2eb9b72ab00fa7ea45ad0f metadata.xml 408
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpDN+ntT9W3vfTuoRAmjaAJ9gLVLh0f9f6BmvnsRFGwAwmfO8FQCfdVyG
-/XcMcHue+8rCWldfnEQvR64=
-=jqhn
+iD8DBQFDzsqSntT9W3vfTuoRAr3DAKCE+n0z2k3FUDCrMfmvOUNdnEbVdgCeIHfg
+9+6wEzADIgjfwcw/ox0gLP8=
+=7G0y
 -----END PGP SIGNATURE-----
