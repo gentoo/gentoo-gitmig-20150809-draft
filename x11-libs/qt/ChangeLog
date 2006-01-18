@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.283 2006/01/14 14:10:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.284 2006/01/18 19:28:22 josejx Exp $
+
+  18 Jan 2006; Joseph Jezak <josejx@gentoo.org> qt-4.1.0-r2.ebuild:
+  Marked ~ppc for bug #112811.
 
   14 Jan 2006; Fabian Groffen <grobian@gentoo.org> qt-3.3.4-r8.ebuild:
   Marked ppc-macos stable
