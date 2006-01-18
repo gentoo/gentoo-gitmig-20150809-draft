@@ -1,5 +1,5 @@
-MD5 075cf284fe96e4a23a9278d6ada1bec0 ChangeLog 1111
+MD5 3eefbc271fd3592c2ad90b75743afffb ChangeLog 1224
 MD5 3056c682a94fb76a1c8adeb30bf69c6b files/config-sed.patch 490
 MD5 4ee92172ccf8ef55a8ec4ab538ddcaa0 files/digest-pecl-pdo-mysql-1.0.1 63
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 cd11839e9e93e19b999b833598f0844e pecl-pdo-mysql-1.0.1.ebuild 1187
+MD5 faa1287a636d59b306ae1b6bbf8d3857 pecl-pdo-mysql-1.0.1.ebuild 1187

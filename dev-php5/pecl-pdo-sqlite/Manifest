@@ -1,4 +1,4 @@
-MD5 ca41f34845395db091a41569d80a75ba ChangeLog 1025
+MD5 5b52411fbef8afefc7f6ff5a5ec032d3 ChangeLog 1135
 MD5 c461ca8eb5580c8a514a8b8827200fda files/digest-pecl-pdo-sqlite-1.0 63
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 e89cb11508f97b0ffa92a195afd2ffb2 pecl-pdo-sqlite-1.0.ebuild 976
+MD5 ae76781107a3fdbad1ffae2b39d4ba8d pecl-pdo-sqlite-1.0.ebuild 976
