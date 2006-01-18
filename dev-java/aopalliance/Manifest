@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 475937044c65894f4c139cbc761c7c9c ChangeLog 352
 MD5 1bafc33846d9d5bcf5c4c08876a52caa aopalliance-1.0.ebuild 1236
 MD5 3524cc5c83d6223d54057537db1a113d files/digest-aopalliance-1.0 73
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzewTndWRXhKOboURAumnAJ47LJUeClwHbRUP+7e7A5vdCxmRVwCgpaPC
+/Og5mAezXSqRPdmIXWYiMcY=
+=YPse
+-----END PGP SIGNATURE-----
