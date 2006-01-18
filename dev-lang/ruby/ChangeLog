@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.177 2006/01/12 13:35:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.178 2006/01/18 14:27:39 caleb Exp $
+
+  18 Jan 2006; Caleb Tennis <caleb@gentoo.org> ruby-1.8.4-r1.ebuild:
+  I think this is now a good candidate for x86 stable
 
   12 Jan 2006; Caleb Tennis <caleb@gentoo.org> ruby-1.8.4-r1.ebuild:
   Install the sample directory into DOCDIR if the examples use flag is on -
