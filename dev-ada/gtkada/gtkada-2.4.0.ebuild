@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0.ebuild,v 1.2 2005/01/01 17:25:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0.ebuild,v 1.3 2006/01/18 14:15:40 metalgod Exp $
 
 inherit gnat eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://libre.act-europe.fr/${Name}/${Name}-${PV}.tgz"
 
 LICENSE="GMGPL"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls opengl"
 
 DEPEND=">=dev-lang/gnat-3.14p
