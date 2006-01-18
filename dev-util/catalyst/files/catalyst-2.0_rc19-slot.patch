@@ -1,6 +1,6 @@
-diff -urN catalyst-2.0_rc17.orig/catalyst catalyst-2.0_rc17/catalyst
---- catalyst-2.0_rc17.orig/catalyst	2005-12-20 07:07:45.000000000 -0500
-+++ catalyst-2.0_rc17/catalyst	2005-12-20 07:09:19.000000000 -0500
+diff -urN catalyst-2.0_rc19.orig/catalyst catalyst-2.0_rc19/catalyst
+--- catalyst-2.0_rc19.orig/catalyst	2005-12-20 07:07:45.000000000 -0500
++++ catalyst-2.0_rc19/catalyst	2005-12-20 07:09:19.000000000 -0500
 @@ -51,10 +51,10 @@
  	myconf={}
  	config_file=""
