@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.27 2006/01/11 07:02:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.28 2006/01/18 16:24:25 cardoe Exp $
+
+  18 Jan 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/avahi-0.6.3-mono-docs.patch, avahi-0.6.3.ebuild:
+  Added patch to make mono docs compile.
 
 *avahi-0.6.3 (11 Jan 2006)
 
