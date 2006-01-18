@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p5-r2.ebuild,v 1.1 2006/01/03 23:11:42 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p5-r2.ebuild,v 1.2 2006/01/18 07:51:39 spyderous Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,9 +21,10 @@ PROVIDE="virtual/pbs"
 
 # ed is used by makedepend-sh
 DEPEND_COMMON="virtual/libc
-			   X? ( virtual/x11 dev-lang/tk )
-			   tcltk? ( dev-lang/tcl )
-			   !virtual/pbs"
+			X? ( || ( x11-libs/libX11 virtual/x11 )
+				dev-lang/tk )
+			tcltk? ( dev-lang/tcl )
+			!virtual/pbs"
 DEPEND="${DEPEND_COMMON}
 		sys-apps/ed"
 RDEPEND="${DEPEND_COMMON}

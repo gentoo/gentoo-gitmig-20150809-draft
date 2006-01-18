@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.24 2006/01/03 23:11:42 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.25 2006/01/18 07:51:39 spyderous Exp $
+
+  18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  torque-1.2.0_p5-r2.ebuild:
+  Add modular X dependencies. Untested, since torque won't compile for me
+  right now, but expected to be the same as openpbs.
 
 *torque-1.2.0_p5-r2 (03 Jan 2006)
 

@@ -1,4 +1,4 @@
-MD5 d1e1c606818c5c4791c8cf0abc84530d ChangeLog 4761
+MD5 1fed2a40e8539bd4111addf4911e567f ChangeLog 4976
 MD5 49d4d243a6dd96ba20531b240a7a32b6 files/digest-torque-1.0.1_p6 67
 MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5 379
 MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5-r1 379
@@ -9,5 +9,5 @@ MD5 271d60925bb60edca8249e8bc0657fa8 files/torque-1.2.0_p5-setuid-safety.patch 8
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 MD5 6f5db7991fecbb7e58833b6e4f8b30ee torque-1.0.1_p6.ebuild 1908
 MD5 806db4773b288c43a27116785278e439 torque-1.2.0_p5-r1.ebuild 4833
-MD5 003eccfe8c63903136a8e1abbabeb723 torque-1.2.0_p5-r2.ebuild 4864
+MD5 3d491a9ae775b0476c29ad4c9b6b72e6 torque-1.2.0_p5-r2.ebuild 4885
 MD5 72956cfb24805eaeee0df78dde48b8a3 torque-1.2.0_p5.ebuild 4518
