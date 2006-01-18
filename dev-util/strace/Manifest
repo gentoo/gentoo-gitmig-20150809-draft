@@ -1,36 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6a6267edcec5a19a8bb91eb41228e1aa ChangeLog 8616
-MD5 38e4a65d3a6a6e39695752ba68b2db78 files/digest-strace-4.5.1 65
+MD5 89e37eea0815c1c6b9e2d8e549acc3f0 ChangeLog 8736
 MD5 fdb191f71c367e18de7f236b17d51401 files/digest-strace-4.5.11 66
 MD5 9b1d73be67c2e1359d1490b62a2bb84e files/digest-strace-4.5.12 66
-MD5 b2d46a601a4bd117795f40178cf40612 files/digest-strace-4.5.2 65
-MD5 332b30ad46b6f4ee72387a779580f321 files/digest-strace-4.5.7 65
-MD5 4cab7a7a05a80b3cc46421302239ab92 files/digest-strace-4.5.9 65
-MD5 b7c93d383818fc6aa8ac330514b866e0 files/strace-4.5.1-2.6.patch 5756
+MD5 3d24c4fda96efb8d9c51c4666b80a980 files/digest-strace-4.5.14 66
 MD5 cbd6857cb3c5b57e1364ca621fb1a5b3 files/strace-4.5.11-alpha-stat64.patch 1418
 MD5 3eb9b0a09aef20e2fd45e7f6e73557d1 files/strace-4.5.11-fbsd.patch 4767
 MD5 a7d7842ae1d4d47bd0f7351b9859a20c files/strace-4.5.12-libaio.patch 2592
 MD5 a60a27ad25c9a4be8f74cac3b50d26e1 files/strace-4.5.12-quota.patch 2947
 MD5 d35971fd734b9597cc50db1060fd2b8f files/strace-4.5.12-superh-update.patch 540
-MD5 3d30271a2e23ac6401b2b54f99b91e5c files/strace-4.5.2-s390-april2004.diff 11986
 MD5 335622a1648a690be4e5eddba97f3034 files/strace-4.5.8-ia64.patch 2271
 MD5 df94e08f4b2b33edc62a8e700bdb37ca files/strace-dont-use-REG_SYSCALL-for-sh.patch 630
 MD5 ee93a7bc6c247bdc094c2d9f932bfb5a files/strace-fix-arm-bad-syscall.patch 560
 MD5 ff683dfacf57a09947ca5e6c4406249d files/strace-superh-update.patch 300
 MD5 661ca5a1974846c6f778c6c47d8b382e files/strace-undef-syscall.patch 656
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 85f383eadb2ed8c50c1a494e679bd2a2 strace-4.5.1.ebuild 1294
 MD5 0ad191371a52a40b85dfb14db954593a strace-4.5.11.ebuild 1675
 MD5 34ac133ba38e0bfca1a22f792dc98a61 strace-4.5.12.ebuild 2120
-MD5 4474209bd9ff4ef6827bc37e512e6885 strace-4.5.2.ebuild 1311
-MD5 7a45d471b2608afbcfac7b22f86726ce strace-4.5.7.ebuild 1139
-MD5 c9d8ca6c43099729a9c981ed49e94ce3 strace-4.5.9.ebuild 1429
+MD5 1178adf39b00ab51df610467d2679ce6 strace-4.5.14.ebuild 2059
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvxVO2+ySkm8kpY0RAtnuAJ9FpiE10ZiNCgoTw2+0djmN1DrTxwCgxHr2
-RGHcLAyP5+1cVMDIgnWNq+E=
-=EwPr
+iD8DBQFDzi1C2+ySkm8kpY0RAuQ6AJ4rH/VBcEkIeWdtbQOUlnqMHFvp3wCfcAh2
+0H4BD5I8qeJBy4wjzZls7kU=
+=hWuc
 -----END PGP SIGNATURE-----
