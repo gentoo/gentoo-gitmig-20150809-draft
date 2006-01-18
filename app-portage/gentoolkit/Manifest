@@ -1,4 +1,7 @@
-MD5 060737cb5d8f1b9a1c5d15a72402e700 ChangeLog 33461
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5e8f58f8c9328b9137caf1c74b83860d ChangeLog 33575
 MD5 99dee3ece4f06bd49f471db77a5cea21 files/digest-gentoolkit-0.2.0 67
 MD5 99dee3ece4f06bd49f471db77a5cea21 files/digest-gentoolkit-0.2.0-r3 67
 MD5 995990de80fff3d09b1da6ce7119a974 files/digest-gentoolkit-0.2.1 67
@@ -7,6 +10,13 @@ MD5 35d6ebb9b58acec73ac1c363df947347 files/qpkg-deprecated.patch 1870
 MD5 54512c5b6ccfdad8c9bd5e7785cd3f4c files/revdep-rebuild.112099.patch 1040
 MD5 210c6b284b9407d52d7dc5cfc860e54f gentoolkit-0.2.0-r3.ebuild 1387
 MD5 83de6e1010084bfb0ed83caa6c522d5d gentoolkit-0.2.0.ebuild 1007
-MD5 66b1c5578861e3adf273165493e34431 gentoolkit-0.2.1.ebuild 1562
+MD5 d3ec3afb4c5ead7bb7456f68b8f4b843 gentoolkit-0.2.1.ebuild 1564
 MD5 c95f68ae6a4e40ccc7419ebf96a09b5f gentoolkit-0.2.2_pre2.ebuild 1554
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzbKjcsIHjyDViGQRAgaqAJ93rcfD+7Suy3JR9Llxjfc/VtEiLQCfVbZY
+5ejc+R4o/uB0GeKOGZW7YN4=
+=qBMl
+-----END PGP SIGNATURE-----
