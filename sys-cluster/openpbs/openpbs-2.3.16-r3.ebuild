@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r3.ebuild,v 1.1 2005/12/29 00:35:45 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r3.ebuild,v 1.2 2006/01/18 07:20:55 spyderous Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ RESTRICT="fetch"
 
 PROVIDE="virtual/pbs"
 DEPEND="virtual/libc
-		X? ( virtual/x11 )
-		tcltk? ( dev-lang/tcl )
+		X? ( || ( x11-libs/libX11 virtual/x11 ) )
+		tcltk? ( dev-lang/tk )
 		!virtual/pbs"
 RDEPEND="${DEPEND}
 		crypt? ( net-misc/openssh )"
