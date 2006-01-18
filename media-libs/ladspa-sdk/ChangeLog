@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-sdk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.30 2005/09/30 15:33:23 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.31 2006/01/18 00:16:09 hanno Exp $
+
+  18 Jan 2006; Hanno Boeck <hanno@gentoo.org>
+  +files/ladspa-sdk-1.12-gcc4.patch, ladspa-sdk-1.12-r2.ebuild:
+  Fix for gcc 4.
 
   30 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   ladspa-sdk-1.12-r2.ebuild:
