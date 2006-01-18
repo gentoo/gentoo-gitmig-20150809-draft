@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.11 2006/01/12 01:54:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.12 2006/01/18 14:15:54 gmsoft Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE=""
 
 RDEPEND="|| (

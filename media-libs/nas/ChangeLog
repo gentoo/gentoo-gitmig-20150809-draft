@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.44 2006/01/05 04:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.45 2006/01/18 14:15:54 gmsoft Exp $
+
+  18 Jan 2006; Guy Martin <gmsoft@gentoo.org> nas-1.7-r1.ebuild:
+  Stable on hppa.
 
   05 Jan 2006; Mike Frysinger <vapier@gentoo.org> nas-1.7-r1.ebuild:
   Touchup ebuild, add support for modular X, and add arm KEYWORDS.
