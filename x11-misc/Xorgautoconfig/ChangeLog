@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/Xorgautoconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.7 2006/01/06 21:28:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.8 2006/01/18 18:45:01 josejx Exp $
+
+*Xorgautoconfig-0.2.3 (18 Jan 2006)
+
+  18 Jan 2006; Joseph Jezak <josejx@gentoo.org> Xorgautoconfig-0.2.ebuild,
+  Xorgautoconfig-0.2.1.ebuild, Xorgautoconfig-0.2.2.ebuild,
+  +Xorgautoconfig-0.2.3.ebuild:
+  Fixed ATI Radeon NV reporting as nvidia card, fixed homepage and source links.
 
 *Xorgautoconfig-0.2.2 (06 Jan 2006)
 

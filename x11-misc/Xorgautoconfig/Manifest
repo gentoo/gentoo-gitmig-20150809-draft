@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c0fe91baa4c6a131fd14a67ac8e3286 ChangeLog 1172
-MD5 3ff5fe24415a2fabf741e42e494c1259 Xorgautoconfig-0.2.1.ebuild 871
-MD5 28528f8aa681c9bccce69599225b46d1 Xorgautoconfig-0.2.2.ebuild 837
-MD5 7bf9db274cb3f4499f7010b44d60954f Xorgautoconfig-0.2.ebuild 827
+MD5 ef84e4ea339f12f21b77c38a8b79a29d ChangeLog 1458
+MD5 bfcf07815fb7b99219df599b14cde57f Xorgautoconfig-0.2.1.ebuild 885
+MD5 1a844448dfd128c9db6a4a83528ed4f9 Xorgautoconfig-0.2.2.ebuild 851
+MD5 a43fc2913ff300ceb157639d9d6ee167 Xorgautoconfig-0.2.3.ebuild 851
+MD5 abb0393b6b273c69076f38494665fe9a Xorgautoconfig-0.2.ebuild 840
 MD5 2acd791c33364e32f005276d651f92bf files/digest-Xorgautoconfig-0.2 70
 MD5 70ed740b857fe2a2fad9c599bc6b3f56 files/digest-Xorgautoconfig-0.2.1 72
 MD5 8bec8145e4639a5211178f05d84c53ed files/digest-Xorgautoconfig-0.2.2 72
+MD5 72e71e517b209e6676c1663c3379e00f files/digest-Xorgautoconfig-0.2.3 72
 MD5 5e3b07e8a8033524f7df96c02d7d166b files/pciutils.patch 648
 MD5 48169cd3f60d9ce3ade2ef3a03c92da6 metadata.xml 341
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvuD8csIHjyDViGQRAv/gAKDm7dUCIGcDsceVNyUa4aifNedHYwCgwvD0
-0lozIcc/srHsuNEv8mx2BRQ=
-=p3Rw
+iD8DBQFDzoy3csIHjyDViGQRAi/GAKDhZsoU6g6lbEu/imlazxwNdA5d8gCg5jMo
+e/KUtPJBYZGFsNzwvrOp1Lg=
+=hJIR
 -----END PGP SIGNATURE-----
