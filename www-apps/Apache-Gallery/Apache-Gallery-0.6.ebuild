@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.9 2005/10/23 14:59:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.10 2006/01/18 23:09:53 rl03 Exp $
 
 inherit perl-module
 
@@ -24,9 +24,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/CGI-FastTemplate-1.09
 	>=dev-perl/Parse-RecDescent-1.80-r3
 	>=dev-perl/Inline-0.43-r1
-	virtual/x11"
-
-
+"
 
 src_install() {
 	mydoc="INSTALL"

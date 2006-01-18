@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81ea0232b55758d1c56a1ff0342b4695 Apache-Gallery-0.6.ebuild 1421
-MD5 c1ec0f3028bcc0a80a176d6552f562d5 Apache-Gallery-1.0_rc3.ebuild 1617
-MD5 ef37431f24c04226223c34d833ce6e09 ChangeLog 4046
+MD5 88551a93725b273a01a1e68ae17e19d7 Apache-Gallery-0.6.ebuild 1408
+MD5 7046d8bc257379a8222fef19ad471e7b Apache-Gallery-1.0_rc3.ebuild 1604
+MD5 29018b9582b5518588daa5801b94662e ChangeLog 4228
 MD5 862b7db14e194f66c345bdaee71e0d00 files/76_apache-gallery.conf 1461
 MD5 9e0a44b67c66dc689a3769827946f3f8 files/76_apache1-gallery.conf 738
 MD5 004b7af7fb9d52598cf9ed7db91697c6 files/76_apache2-gallery.conf 1442
@@ -15,7 +15,7 @@ MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxR1kEzitwsaoONoRAgiEAJ4lOvgIy9A8VlAAyH7jR7FuhFF/cQCcCn9m
-l0wxr7OyLubG61Vn1SLSg7E=
-=GxVw
+iD8DBQFDzsq+EzitwsaoONoRAlAvAJ44L93VPqPqqtqUXRXyXHpW7jVw6wCfTULB
+f3+tRWXhQh7kgIa0+ALIHNk=
+=9Ut5
 -----END PGP SIGNATURE-----

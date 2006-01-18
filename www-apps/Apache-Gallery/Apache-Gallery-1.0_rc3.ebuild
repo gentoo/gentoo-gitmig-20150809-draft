@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.1 2006/01/11 14:59:37 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.2 2006/01/18 23:09:53 rl03 Exp $
 
 inherit depend.apache perl-module webapp
 
@@ -23,7 +23,6 @@ DEPEND="${DEPEND}
 		=www-apache/libapreq-1* )
 	apache2? ( >=net-www/apache-2.0.43-r1
 		=www-apache/libapreq2-2* )
-	virtual/x11
 	>=media-libs/imlib2-1.0.6-r1
 	dev-perl/URI
 	>=dev-perl/ImageInfo-1.04-r2
