@@ -1,57 +1,56 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.4 2005/07/09 19:26:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20060111.ebuild,v 1.1 2006/01/18 17:47:41 nakano Exp $
 
-inherit cvs eutils
+inherit cvs
 
-ECVS_BRANCH=""
 ECVS_SERVER="cvs.sourceforge.jp:/cvsroot/kazehakase"
-ECVS_USER="anonymous"
 ECVS_MODULE="kazehakase"
 
 DESCRIPTION="Kazehakase is a browser with gecko engine like Epiphany or Galeon."
 SRC_URI=""
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
-IUSE="migemo estraier thumbnail"
+IUSE="migemo estraier thumbnail firefox ssl ruby"
 
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 LICENSE="GPL-2"
 
-DEPEND=">=www-client/mozilla-1.7
+DEPEND="!firefox? ( >=www-client/mozilla-1.7 )
+	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	x11-libs/pango
 	>=x11-libs/gtk+-2
 	dev-util/pkgconfig
-	net-misc/curl
 	migemo? ( || ( app-text/migemo app-text/cmigemo ) )
 	estraier? ( app-text/estraier )
 	thumbnail? ( virtual/ghostscript )
+	ssl? ( net-libs/gnutls )
+	ruby? ( dev-ruby/ruby-gtk2 )
 	sys-devel/autoconf
 	sys-devel/automake"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
 pkg_setup(){
-	local moz_use="$(</var/db/pkg/`best_version www-client/mozilla`/USE)"
-
-	# >=www-client/mozilla-1.7.3-r2 always depend on gtk2.
-	if ! has_version '>=www-client/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
-	then
-		echo
-		eerror
-		eerror "This needs mozilla used gtk2."
-		eerror "To build mozilla use gtk2, please type following command:"
-		eerror
-		eerror "    # USE=\"gtk2\" emerge mozilla"
-		eerror
-		die
+	if ! use firefox; then
+		local moz_use="$(</var/db/pkg/`best_version www-client/mozilla`/USE)"
+		if ! has_version '>=www-client/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
+		then
+			echo
+			eerror
+			eerror "This needs mozilla used gtk2."
+			eerror "To build mozilla use gtk2, please type following command:"
+			eerror
+			eerror "    # USE=\"gtk2\" emerge mozilla"
+			eerror
+			die
+		fi
 	fi
 }
 
 src_unpack(){
 	cvs_src_unpack || die
 	cd ${S}
-	# epatch ${FILESDIR}/${PN}-gentoo.patch
 
 	mv configure.in configure.in.org
 	sed -e "s/\(AC_INIT(kazehakase\|GETTEXT_PACKAGE=kazehakase\)/\1-cvs/" \
@@ -65,11 +64,16 @@ src_unpack(){
 }
 
 src_compile(){
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.6
-
 	./autogen.sh || die
-	econf `use_enable migemo` --program-suffix="-cvs" || die
+
+	if use firefox; then
+		geckoengine="firefox"
+	else
+		geckoengine="mozilla"
+	fi
+
+	econf `use_enable migemo` `use_enable ssl` --program-suffix="-cvs" \
+	--with-gecko-engine=${geckoengine} || die
 	emake || die
 }
 
