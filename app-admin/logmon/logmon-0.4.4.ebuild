@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.2 2006/01/10 17:50:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.3 2006/01/18 14:53:25 vanquirius Exp $
+
+inherit eutils
 
 MY_P="LogMon-${PV}"
 DESCRIPTION="Split-screen terminal/ncurses based log viewer"
@@ -15,6 +17,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# bug 119403 - should be in upstream next release
+	epatch "${FILESDIR}"/${PN}-0.4.4-char2int.diff
+}
 
 src_install() {
 	dobin logmon || die
