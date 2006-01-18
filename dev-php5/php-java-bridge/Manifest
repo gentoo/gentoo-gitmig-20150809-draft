@@ -1,5 +1,5 @@
-MD5 501ad9dba2783187a5dd676938b67644 ChangeLog 1501
+MD5 cf17df7bb041048a97b5fcea8c3c353b ChangeLog 1615
 MD5 8562d753d236eb755256a67623db0e81 files/digest-php-java-bridge-2.0.8 74
 MD5 577f0cc2a32d6c1b81c06997c4f55aff files/zend_backtrace_api_change.diff 572
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 a40fdd3acefc69ff42504578f2d32273 php-java-bridge-2.0.8.ebuild 1483
+MD5 928537806acf16e2d85ce3cb635a9cca php-java-bridge-2.0.8.ebuild 1483
