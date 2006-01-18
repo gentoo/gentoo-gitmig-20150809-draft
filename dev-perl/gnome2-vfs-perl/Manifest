@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a6c0755e68da308caddce0334aab037 ChangeLog 2433
+MD5 5faef1e281d708802cdd5b9487925591 ChangeLog 2526
 MD5 aa354e0aaaf380c87630956862202409 files/digest-gnome2-vfs-perl-1.00 66
 MD5 9cc08a81f72fc3c67a30a58d7b3fa76d files/digest-gnome2-vfs-perl-1.021 67
 MD5 3e0c8517fd06e769e88ec2aa5dc9d4db files/digest-gnome2-vfs-perl-1.041 67
 MD5 e1e4aaad0f99f8c88b4a71311bcdfda1 files/vfs.typemap 417
 MD5 31294035ca6d2401462ab68cd46c4b90 gnome2-vfs-perl-1.00.ebuild 745
 MD5 0cf7001efa7b6fe9b5d033df2f8c652e gnome2-vfs-perl-1.021.ebuild 739
-MD5 68d46b1eca04402ec310b2dbe5c13884 gnome2-vfs-perl-1.041.ebuild 736
+MD5 b55d49c61205405358913f40f014cdc0 gnome2-vfs-perl-1.041.ebuild 733
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDzAVNKRy60XGEcJIRAp1FAKCeNJ80Do1kQhDgo7WhBc9nZHFL8wCgoIX1
-98SOi+YhGksyW3CaqehOfIc=
-=1hgj
------END PGP SIGNATURE-----
