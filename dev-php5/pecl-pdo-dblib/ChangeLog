@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdo-dblib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-dblib/ChangeLog,v 1.5 2005/12/18 01:39:43 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-dblib/ChangeLog,v 1.6 2006/01/18 20:32:08 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> pecl-pdo-dblib-1.0.ebuild:
+  Stable on ppc64; bug #119456
 
 *pecl-pdo-dblib-1.0 (17 Dec 2005)
 
