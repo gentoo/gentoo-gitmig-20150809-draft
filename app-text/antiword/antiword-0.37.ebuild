@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.37.ebuild,v 1.4 2006/01/18 17:44:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.37.ebuild,v 1.5 2006/01/18 19:21:36 fuzzyray Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.winfield.demon.nl/linux/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc-macos ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc-macos ppc64 sparc x86"
 
 DEPEND="virtual/ghostscript"
 
