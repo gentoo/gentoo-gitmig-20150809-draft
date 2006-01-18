@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.4 2006/01/18 05:45:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.5 2006/01/18 05:46:30 spyderous Exp $
 
-IUSE="X"
+IUSE=""
 
 S=${WORKDIR}
 DESCRIPTION="Program for performing molecular dynamics simulations."
@@ -15,16 +15,11 @@ SLOT="0"
 KEYWORDS="x86 ppc-macos"
 
 DEPEND="virtual/libc
-	virtual/tetex
-	X? ( virtual/x11 )"
+	virtual/tetex"
 
 addwrite /var/cache/fonts
 
 src_compile() {
-	local myconf
-
-	myconf=`use_with X`
-
 #Individuals may want to edit the OPT* variables below.
 #From the READ.ME:
 #You may need to  "hand-tune" compiler or optimization options,
@@ -39,7 +34,7 @@ src_compile() {
 	OPT=${CFLAGS} OPT2=${CFLAGS} \
 	./configure --prefix=/usr \
 		--host=${CHOST} \
-		${myconf} || die
+		|| die
 
 	emake || die
 	make moldy.pdf || die

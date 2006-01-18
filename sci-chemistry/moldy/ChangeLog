@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/moldy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.6 2006/01/18 05:45:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.7 2006/01/18 05:46:30 spyderous Exp $
+
+  18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  Fix for modular X.
 
   18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
   Fix SRC_URI.
