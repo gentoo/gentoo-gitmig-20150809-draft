@@ -1,1 +1,3 @@
 sys-libs/glibc
+# breaks gcc and such
+dev-libs/libiconv
