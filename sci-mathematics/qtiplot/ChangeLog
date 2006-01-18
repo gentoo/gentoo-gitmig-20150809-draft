@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/qtiplot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.8 2006/01/16 23:16:16 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.9 2006/01/18 22:59:09 cryos Exp $
+
+  18 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> qtiplot-0.7.4.ebuild,
+  qtiplot-0.7.6.ebuild:
+  Stable on amd64, addition of app-arch/unzip to the deps.
 
 *qtiplot-0.7.6 (16 Jan 2006)
 

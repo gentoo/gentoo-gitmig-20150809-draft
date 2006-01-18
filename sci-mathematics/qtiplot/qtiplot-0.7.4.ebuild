@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.4.ebuild,v 1.2 2006/01/09 14:15:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.4.ebuild,v 1.3 2006/01/18 22:59:09 cryos Exp $
 
 inherit eutils multilib qt3
 
@@ -10,13 +10,15 @@ SRC_URI="http://soft.proindependent.com/src/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.3)
+RDEPEND="$(qt_min_version 3.3)
 	>=x11-libs/qwt-4.2.0
 	>=x11-libs/qwtplot3d-0.2.6
 	>=sci-libs/gsl-1.6"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/${P}/${P}
 
