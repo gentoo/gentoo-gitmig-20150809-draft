@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b1914f24c7c3de9dba6c745d45d45c13 online-bookmarks-0.6.1c.ebuild 951
-MD5 b81a11ffafa1d5c4c69a4d1dcd3cb901 online-bookmarks-0.4.0.ebuild 1463
-MD5 f6d6a36c61b73c3a466b085bd211f4dd ChangeLog 1575
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 b887b7150525fd0effaa66c705c2599a files/postinstall-en.txt 96
+MD5 9b15ad03155ecd2a5d3f72306e25762a ChangeLog 1727
 MD5 ecc864d6e8a42284be157e0ce864593c files/digest-online-bookmarks-0.4.0 73
 MD5 30f252628aa933133b811094d4f7f3c2 files/digest-online-bookmarks-0.6.1c 74
+MD5 17d73b17eba69f6d47650dc2e0aff2ba files/digest-online-bookmarks-0.6.3 73
+MD5 b887b7150525fd0effaa66c705c2599a files/postinstall-en.txt 96
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 b81a11ffafa1d5c4c69a4d1dcd3cb901 online-bookmarks-0.4.0.ebuild 1463
+MD5 b1914f24c7c3de9dba6c745d45d45c13 online-bookmarks-0.6.1c.ebuild 951
+MD5 43f870996a7fe4bf3e525b7c2b59bac1 online-bookmarks-0.6.3.ebuild 1011
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDXqPtEzitwsaoONoRAsZiAKDKpx2y6D3bBJpSh3f7pJS17XEv+ACeKMni
-W5mXpEjrlXhIZEuFMzTV23M=
-=jPYr
+iD8DBQFDziL6EzitwsaoONoRAslrAJ9MMZBrI9PWwaT56Iq1qnHmoQohggCg2WwD
+GgMpmpF9Vi2u3U90zp2Mv+4=
+=otgN
 -----END PGP SIGNATURE-----
