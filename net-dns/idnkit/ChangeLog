@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.7 2005/04/23 14:18:29 carlo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.8 2006/01/18 14:18:07 metalgod Exp $
+
+  18 Jan 2006; Luis Medinas <metalgod@gentoo.org> idnkit-1.0.ebuild:
+  Added ~amd64 keyword.
 
   23 Apr 2005; Carsten Lohrke <carlo@gentoo.org> idnkit-1.0.ebuild:
   whitespace

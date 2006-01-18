@@ -1,4 +1,14 @@
-MD5 dcc00d6ac3b24419841a8385e33435df idnkit-1.0.ebuild 755
-MD5 bc0bd06983924faafbc967f516d8426b ChangeLog 742
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8214de602784b4a5f10e01c2881f177a ChangeLog 839
 MD5 f4b16764d0d170b15f5440741a20c45a files/digest-idnkit-1.0 66
+MD5 0123f29b5cead7b93a0d85265570029e idnkit-1.0.ebuild 765
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzk25wUpWvClEHQoRAnSxAJ9WP9T3wUwuS9hWgB4UaRb9AZy9qACdE/Z4
+2jMhggpnn4BSfDZo8QW5y+8=
+=89jx
+-----END PGP SIGNATURE-----
