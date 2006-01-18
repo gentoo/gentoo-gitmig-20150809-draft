@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 71646c01c002ad7048955e629faf3ef8 Apache-Session-1.60.ebuild 614
-MD5 e6bde0006f6730992964fb8e39e24f34 Apache-Session-1.80.ebuild 569
-MD5 e50cea03e3e41cd96c897267b774c8db ChangeLog 2442
+MD5 7f02a6fd4453fa22d78e2d82637998a5 Apache-Session-1.80.ebuild 567
+MD5 b53a5fb19b3b1b484c422e1f13051afe ChangeLog 2544
 MD5 890c172aa22b4374dbd5ecce92db0e37 files/digest-Apache-Session-1.60 69
 MD5 5b07a91ecc6926148831148061d72e3a files/digest-Apache-Session-1.80 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDzj4XtG5z4I8BtQoRAhECAJ9qNPdozj+CfjH+PDyetAoE8CHNzwCgklaT
-+GQioqMKdff/aMOIp5CmZKA=
-=6WqS
+iD4DBQFDzo1TKRy60XGEcJIRAt3iAJ0fZvm158Y82lFEUhVhHrlIN7BxIgCXVvg4
+QX2t//SdppiMbUKrD5iJGw==
+=ZMh6
 -----END PGP SIGNATURE-----
