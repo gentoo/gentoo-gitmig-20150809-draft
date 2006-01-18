@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8554.ebuild,v 1.4 2006/01/11 17:19:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8642.ebuild,v 1.1 2006/01/18 19:05:42 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -42,7 +42,8 @@ RDEPEND=">=media-libs/freetype-2.0
 	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	|| ( x11-apps/xinit virtual/x11 )"
 
 S=${WORKDIR}/mythtv
 
@@ -78,10 +79,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	epatch "${FILESDIR}"/${P}-xrandr.patch
-	epatch "${FILESDIR}"/${P}-chanutil-schar.patch
-	epatch "${FILESDIR}"/${P}-freetype.patch
 
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
