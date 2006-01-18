@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/transfig
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.22 2005/10/31 18:30:22 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.23 2006/01/18 07:55:51 spyderous Exp $
+
+  18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  transfig-3.2.4-r2.ebuild:
+  Fix dependencies for modular X.
 
   31 Oct 2005; Fabian Groffen <grobian@gentoo.org> transfig-3.2.4-r2.ebuild:
   Also apply GGC3.3 patch for GCC4.  Allows compilation on ppc-macos, marked
