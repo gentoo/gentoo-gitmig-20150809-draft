@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0474ed8156a200c3e54cd52a96e034f ChangeLog 5424
+MD5 a379d3f7ffc78bee21c8ab86c9805c03 ChangeLog 5543
 MD5 e348edabfe6f659ea8360e7892d89af6 files/digest-hsfmodem-7.18.00.07 230
 MD5 83ef8c3c538249abc93745ecf124151b files/digest-hsfmodem-7.18.00.07-r1 230
 MD5 55b57b492577870de5cb58229f0426d7 files/hsfmodem-7.18.00.07-upstream-20060107.patch 2809
-MD5 77af87e1f3549a0edbff59cfc3e192af hsfmodem-7.18.00.07-r1.ebuild 1593
+MD5 6f3c975173976a825b545ae010d9047c hsfmodem-7.18.00.07-r1.ebuild 1592
 MD5 39f793360c07f15ea11b06e09425892b hsfmodem-7.18.00.07.ebuild 1496
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwkJwjG8pv1lIUX4RAhuTAKC7oLhZPV+LIY5BA+BzzArfc9oFDwCg4WD2
-QAYXdfLrxi/gIznFryqJEnM=
-=H+9W
+iD8DBQFDznq4jG8pv1lIUX4RApfHAKDGLMP3Nwj4Hf8OCIzJY9eroqRoJQCePWog
+Or0Pnmky7ybY61j99PN4VOY=
+=hA/F
 -----END PGP SIGNATURE-----
