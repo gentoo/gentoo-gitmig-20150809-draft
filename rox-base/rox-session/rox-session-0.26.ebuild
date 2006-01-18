@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.26.ebuild,v 1.2 2005/11/19 18:33:18 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.26.ebuild,v 1.3 2006/01/18 20:36:58 vanquirius Exp $
+
+inherit rox eutils
 
 MY_PN="ROX-Session"
 DESCRIPTION="Rox-Session is a really simple session manager"
@@ -19,8 +21,6 @@ DEPEND="rox-base/rox
 APPNAME=${MY_PN}
 S="${WORKDIR}/${MY_PN}-${PV}"
 
-inherit rox eutils
-
 src_unpack() {
 	if ! built_with_use sys-apps/dbus python
 	then
@@ -29,12 +29,12 @@ src_unpack() {
 		die "python dbus modules missing"
 	fi
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 pkg_preinst() {
 	# need to fixup some permissions
-	cd ${D}/usr/lib/rox/${APPNAME}
+	cd "${D}"/usr/lib/rox/${APPNAME}
 	chmod 0755 browser Login ROX-Session RunROX ROX-Session \
 		ROX-Session.dbg RunROX SetupPanel *.py *.py?
 	# clean up a stray directory used in the build process

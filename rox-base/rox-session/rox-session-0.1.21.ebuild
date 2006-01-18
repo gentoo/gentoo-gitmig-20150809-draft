@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.1.21.ebuild,v 1.2 2004/11/26 18:48:26 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.1.21.ebuild,v 1.3 2006/01/18 20:36:58 vanquirius Exp $
 
 MY_PN="ROX-Session"
 DESCRIPTION="Rox-Session is a really simple session manager"
@@ -24,6 +24,6 @@ src_install() {
 	rm -rf src || die
 	dodir /usr/share/${MY_PN}
 
-	cp -rf * ${D}/usr/share/${MY_PN} || die
-	dobin ${FILESDIR}/${MY_PN} || die
+	cp -rf * "${D}"/usr/share/${MY_PN} || die
+	dobin "${FILESDIR}"/${MY_PN} || die
 }
