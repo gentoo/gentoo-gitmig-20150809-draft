@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 0a7da5d6056d9a67933b9884bf2b682b ChangeLog 10100
-MD5 dcdc16c0a53303167229ad2749c591a8 elfutils-0.108-r1.ebuild 1745
-MD5 8162d8d05d72f5c542bb943ccc5581b4 elfutils-0.108.ebuild 1728
-MD5 289336006abc2529cece4c996464005d elfutils-0.118.ebuild 1804
+MD5 28209ab420090316b273c67152474f2e elfutils-0.108-r1.ebuild 1749
+MD5 a38c2930857b9e11f6155946a47bf1a2 elfutils-0.108.ebuild 1731
+MD5 43277bbbd5bca9a85c659e4fa337fa10 elfutils-0.118.ebuild 1808
 MD5 648c7e7b8f19b21266e556cc6979c0a6 files/digest-elfutils-0.108 143
 MD5 e9fcbbccbeaf0d6f3fdfb27f9563e824 files/digest-elfutils-0.108-r1 145
 MD5 d27a5faa3886979a3b6592519692fe22 files/digest-elfutils-0.118 145
@@ -18,7 +18,7 @@ MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDx2fn2+ySkm8kpY0RAhz1AJ9OIxvy0hBFu5tPDgNVoGYrNwwTgQCgrnOs
-cdgeX4Ox+fx3FruF6nOuF34=
-=bLz+
+iD8DBQFDzjPK2+ySkm8kpY0RAickAJ9Fy6vRZvjydjf+Kz27lBYOoAsA7gCgozVr
+GpVcE9Z3z8rxZZptkqUt72w=
+=3uC5
 -----END PGP SIGNATURE-----
