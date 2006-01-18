@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.1 2006/01/17 20:02:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.2 2006/01/18 00:32:07 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -295,7 +295,10 @@ gnatbuild_src_unpack() {
 #  gnatlib_and_tools, gnatlib-shared
 gnatbuild_src_compile() {
 	debug-print-function ${FUNCNAME} $@
-	[ -z "$1" ] &&  ( gnatbuild_src_compile all; exit )
+	if [[ -z "$1" ]]; then
+		gnatbuild_src_compile all
+		return $?
+	fi
 	
 	if [ "all" == "$1" ]
 	then # specialcasing "all" to avoid scanning sources unnecessarily
@@ -419,7 +422,10 @@ gnatbuild_src_compile() {
 gnatbuild_src_install() {
 	debug-print-function ${FUNCNAME} $@
 	
-	[ -z "$1" ] &&  ( gnatbuild_src_install all; exit )
+	if [[ -z "$1" ]] ; then
+		gnatbuild_src_install all
+		return $?
+	fi
 
 	while [ "$1" ]; do
 	case $1 in
