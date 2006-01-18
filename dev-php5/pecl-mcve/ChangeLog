@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-mcve
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.6 2005/12/28 11:37:31 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.7 2006/01/18 20:18:09 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> pecl-mcve-5.2.0.ebuild:
+  Stable on ppc64; bug #119444
 
   28 Dec 2005; Simon Stelling <blubb@gentoo.org> pecl-mcve-5.2.0.ebuild:
   added ~amd64 keyword
