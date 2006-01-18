@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.10 2005/05/01 18:26:17 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.11 2006/01/18 15:57:19 ehmsen Exp $
+
+  18 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> detex-2.7.ebuild:
+  Fixes "conflicting types for 'malloc'" compilation error, see bug #116046
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> detex-2.7.ebuild:
   Stable on ppc.
