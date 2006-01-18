@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-java-bridge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.8 2006/01/07 16:41:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.9 2006/01/18 20:23:58 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org>
+  php-java-bridge-2.0.8.ebuild:
+  Stable on ppc64; bug #119448
 
   07 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
   +files/zend_backtrace_api_change.diff, -php-java-bridge-2.0.7.ebuild,

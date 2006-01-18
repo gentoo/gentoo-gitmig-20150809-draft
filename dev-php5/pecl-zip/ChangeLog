@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-zip
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.4 2005/11/19 19:21:44 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.5 2006/01/18 20:22:31 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> pecl-zip-1.0.ebuild:
+  Stable on ppc64; bug #119448
 
   19 Nov 2005; Markus Rothe <corsair@gentoo.org> pecl-zip-1.0.ebuild:
   Added ~ppc64 keyword; bug #102649
