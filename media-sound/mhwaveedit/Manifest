@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 612220fac03cb84ed6a909dd28bb4154 mhwaveedit-1.3.3.ebuild 833
-MD5 8a6015332fe4653a9492dd82a1315123 mhwaveedit-1.4.1.ebuild 971
-MD5 028a17de520f0704e2a980bb61dbca52 ChangeLog 2059
-MD5 3d396644f49363450640af614648d74a metadata.xml 227
-MD5 9ed9eb675bffc045c4a3f14b67176bd5 mhwaveedit-1.4.5b.ebuild 1389
+MD5 7ad14854b9520649187926608dd7da46 ChangeLog 2162
 MD5 7ca7e59ea083c20a28e0886347bcca9c files/digest-mhwaveedit-1.3.3 68
 MD5 0a8c9cc0089d3e4f69e46ebc925ba355 files/digest-mhwaveedit-1.4.1 69
 MD5 201a685f1b417668b3a46957a010d947 files/digest-mhwaveedit-1.4.5b 70
+MD5 3d396644f49363450640af614648d74a metadata.xml 227
+MD5 612220fac03cb84ed6a909dd28bb4154 mhwaveedit-1.3.3.ebuild 833
+MD5 8a6015332fe4653a9492dd82a1315123 mhwaveedit-1.4.1.ebuild 971
+MD5 a2f74dbda35e5bf1871f4c2cb4e3ec1b mhwaveedit-1.4.5b.ebuild 1388
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDXkWIKRy60XGEcJIRAiLxAJ98Pe+B4EvZUn2yGNBPgU7mnYcmZgCeKmpo
-POEHogSIVcFvIPpTfsXuxok=
-=rVpc
+iD8DBQFDzlA8wUpWvClEHQoRAi8qAJ0VB2t5m63iZoGJqw56FjwXPXC0+QCgiwpq
+xjqjuAu+BDAkIESO22tezpk=
+=8MlB
 -----END PGP SIGNATURE-----
