@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-ru
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-ru/ChangeLog,v 1.1 2006/01/18 00:05:59 pva Exp $
+
+*vim-spell-ru-20060113 (18 Jan 2006)
+
+  18 Jan 2006; Peter Volkov <pva@gentoo.org> +metadata.xml,
+  +vim-spell-ru-20060113.ebuild:
+  Initial commit.
+
