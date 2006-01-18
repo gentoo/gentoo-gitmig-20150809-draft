@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.13 2005/12/30 23:56:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.14 2006/01/18 23:02:05 vapier Exp $
 
 inherit alternatives eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86"
 IUSE="tiff jpeg png"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
@@ -25,19 +25,19 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-zio-shell-meta-char.diff
-	epatch ${FILESDIR}/${P}-endif.patch
+	cd "${S}"
+	epatch "${WORKDIR}"/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-zio-shell-meta-char.diff
+	epatch "${FILESDIR}"/${P}-endif.patch
 
 	# Do not define errno extern, but rather include errno.h
 	# <azarah@gentoo.org> (1 Jan 2003)
-	epatch ${FILESDIR}/${P}-include-errno_h.patch
+	epatch "${FILESDIR}"/${P}-include-errno_h.patch
 
-	epatch "${FILESDIR}/xloadimage-gentoo.patch"
+	epatch "${FILESDIR}"/xloadimage-gentoo.patch
 
 	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
-	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
+	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" "${S}"/rlelib.c
 
 	# On FreeBSD systems malloc.h is a false header asking for fixes.
 	# On MacOSX it would require malloc/malloc.h
@@ -50,12 +50,12 @@ src_unpack() {
 		done
 	fi
 
-	chmod +x ${S}/configure
+	chmod +x "${S}"/configure
 }
 
 src_install() {
-	dobin xloadimage
-	dobin uufilter
+	dobin xloadimage || die
+	dobin uufilter || die
 
 	insinto /etc/X11
 	doins xloadimagerc
