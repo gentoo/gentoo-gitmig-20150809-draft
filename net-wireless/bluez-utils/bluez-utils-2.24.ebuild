@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: £
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.24.ebuild,v 1.2 2006/01/18 05:15:11 halcy0n Exp $
 
 inherit eutils
 
