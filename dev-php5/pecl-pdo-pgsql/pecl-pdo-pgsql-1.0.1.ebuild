@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-1.0.1.ebuild,v 1.2 2006/01/01 08:08:45 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-1.0.1.ebuild,v 1.3 2006/01/18 20:20:30 chtekk Exp $
 
 PHP_EXT_NAME="pdo_pgsql"
 PHP_EXT_PECL_PKG="PDO_PGSQL"
@@ -33,6 +33,15 @@ pkg_setup() {
 		eerror
 		die "PHP built to use bundled PDO support"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+
+	# fix Gentoo bug #116914
+	epatch "${FILESDIR}/fix-tsrm.patch"
 }
 
 src_compile() {

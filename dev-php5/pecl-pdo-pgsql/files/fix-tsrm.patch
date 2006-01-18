@@ -1,0 +1,11 @@
+--- pgsql_driver.c	2006-01-18 20:54:18.000000000 +0100
++++ pgsql_driver.c	2006-01-18 20:55:15.000000000 +0100
+@@ -132,7 +132,7 @@
+ 		lo_close(self->conn, self->lfd);
+ 	}
+ 	efree(self);
+-	php_pdo_dbh_delref(dbh TSRMLS_DC);
++	php_pdo_dbh_delref(dbh TSRMLS_CC);
+ 	return 0;
+ }
+ 
