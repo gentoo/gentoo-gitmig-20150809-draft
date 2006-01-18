@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r4.ebuild,v 1.1 2006/01/18 06:37:04 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r4.ebuild,v 1.2 2006/01/18 20:21:20 corsair Exp $
 
 inherit depend.php
 
@@ -20,7 +20,7 @@ SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 # we deliberately force people to remove their old PEAR installations,
