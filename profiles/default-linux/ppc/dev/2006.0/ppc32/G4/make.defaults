@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/2006.0/ppc32/G4/make.defaults,v 1.3 2006/01/15 22:54:01 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/2006.0/ppc32/G4/make.defaults,v 1.4 2006/01/18 18:58:35 pylon Exp $
 
 CFLAGS="-O2 -mtune=G4 -mcpu=G4 -mabi=altivec -pipe"
 CXXFLAGS="${CFLAGS}"
 
 STAGE1_USE="altivec nptl unicode"
-USE="${STAGE1_USE} alsa apache2 apm arts avi bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg nptl ogg oggvorbis opengl pdflib png qt quicktime sdl spell truetype truetype-fonts type1-fonts udev vorbis X xml2 xmms xv"
+USE="${STAGE1_USE} alsa apache2 apm arts avi berkdb bitmap-fonts crypt cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls ogg oggvorbis opengl pam perl pdflib png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml2 xmms xv zlib"
