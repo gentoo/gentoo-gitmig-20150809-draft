@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/pager
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.2 2005/10/24 11:14:43 svyatogor Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.3 2006/01/18 20:32:26 vanquirius Exp $
+
+  18 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> pager-1.0.0.ebuild,
+  pager-1.0.1.ebuild:
+  Move inherit to top of ebuilds for bug 117764. Thanks to Alexandru Toma
+  <flash3001 at yahoo dot com>.
 
 *pager-1.0.1 (24 Oct 2005)
 
