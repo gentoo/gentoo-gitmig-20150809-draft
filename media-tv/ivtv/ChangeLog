@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.39 2005/12/30 05:03:53 cardoe Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.40 2006/01/18 05:15:46 cardoe Exp $
+
+*ivtv-0.4.2 (18 Jan 2006)
+
+  18 Jan 2006; Doug Goldstein <cardoe@gentoo.org> +ivtv-0.4.2.ebuild:
+  rev bump. Now we support the 2.6.15 kernel
 
 *ivtv-0.4.0-r3 (30 Dec 2005)
 
