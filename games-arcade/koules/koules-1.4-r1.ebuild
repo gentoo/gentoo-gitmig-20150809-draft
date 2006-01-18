@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.11 2006/01/18 20:42:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.12 2006/01/18 20:45:26 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/${PN}${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${DISTDIR}"/${P}-gcc3.patch.bz2
+	epatch "${WORKDIR}"/${P}-gcc3.patch
 	sed -i \
 		-e "/^KOULESDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^SOUNDDIR/s:=.*:=${GAMES_DATADIR}/${PN}:" Iconfig \
