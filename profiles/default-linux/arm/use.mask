@@ -23,6 +23,7 @@ lesstif
 mono
 pike
 lirc
+lm_sensors
 
 # Luca Longinotti <chtekk@gentoo.org>
 # fix dev-lang/php + arm + firebird

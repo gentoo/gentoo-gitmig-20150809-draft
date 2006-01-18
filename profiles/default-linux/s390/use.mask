@@ -73,3 +73,4 @@ mono
 pike
 ocaml
 sdl
+lm_sensors
