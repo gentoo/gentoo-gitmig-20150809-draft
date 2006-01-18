@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/sendmail
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.49 2005/09/17 10:22:13 lcars Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.50 2006/01/18 10:51:05 lcars Exp $
+
+  18 Jan 2006; Andrea Barisani <lcars@gentoo.org>
+  -files/sendmail-8.12.2-makemapman.patch,
+  -files/sendmail-8.12.2-smrsh-paths.patch,
+  -files/sendmail-8.12.2-unix.patch, -files/sendmail-8.12.6-r1-gentoo.diff,
+  -files/sendmail.cf, -files/sendmail-procmail.cf,
+  -sendmail-8.13.1-r1.ebuild:
+  Cleaned unused files.
 
 *sendmail-8.13.5 (17 Sep 2005)
 
