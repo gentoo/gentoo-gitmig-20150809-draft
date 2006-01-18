@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.19 2006/01/18 12:44:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.20 2006/01/18 22:56:01 mcummings Exp $
+
+*math-pari-2.010702-r1 (18 Jan 2006)
+
+  18 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/math-pari-2.010702-hppa.patch, files/math-pari-hppa.patch,
+  math-pari-2.010702.ebuild, +math-pari-2.010702-r1.ebuild:
+  bug 101448, hardened patch, plus added hppa patch back into 2.010702 builds
 
   18 Jan 2006; Guy Martin <gmsoft@gentoo.org> math-pari-2.010702.ebuild:
   Stable on hppa.
