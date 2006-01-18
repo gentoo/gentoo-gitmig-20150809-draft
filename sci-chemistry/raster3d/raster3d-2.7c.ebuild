@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.1 2005/10/20 00:18:52 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.2 2006/01/18 06:55:24 spyderous Exp $
 
 NAME="Raster3D"
 
@@ -13,7 +13,10 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86"
 
-DEPEND="virtual/x11"
+RDEPEND="media-libs/jpeg
+	media-libs/libpng
+	media-libs/tiff"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${NAME}_${PV}"
 
