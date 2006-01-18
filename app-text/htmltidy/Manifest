@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6d6edcf4da99914dbbd28d474651745 ChangeLog 4080
-MD5 4f76e6bff087e53592f96e7fd4e89584 htmltidy-3.10.29.ebuild 2522
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 af31ff88170408b3a0d1f072c62ca070 htmltidy-4.8.6.ebuild 2524
 MD5 47ad3e22b233024cc46fa12e2e56656b files/03-html2db-null.patch 4249
 MD5 2fe7c73c1e39e2714ee35931b23b0b22 files/03-htmltidy-docbook.patch 2948
-MD5 501b4fb1a986d22c54e6e00429ebcf56 files/digest-htmltidy-3.10.29 186
 MD5 3e05bf3979c6a34b1b4166a2caee4024 files/04-htmltidy-docbook.patch 2975
+MD5 501b4fb1a986d22c54e6e00429ebcf56 files/digest-htmltidy-3.10.29 186
 MD5 77631526ec9513a440167223556fb2f8 files/digest-htmltidy-4.8.6 186
+MD5 7e13d83180df14aa9b50529973ded2ab htmltidy-3.10.29.ebuild 2521
+MD5 216e3bc36f28d37b90eac4d81399f337 htmltidy-4.8.6.ebuild 2527
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzjKg2+ySkm8kpY0RAjTFAJ41kNL6HrBdVashVN/pQFeWI83zowCgv9pO
+ZO+xEjxNKw090aTyvFp4kFU=
+=qNNY
+-----END PGP SIGNATURE-----
