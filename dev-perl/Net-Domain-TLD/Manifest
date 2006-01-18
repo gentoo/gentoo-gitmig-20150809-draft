@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3dc5152f2f5018e4864cc8ef86b5219a ChangeLog 689
 MD5 8d5bd7259af2caeb280a86457429c7c7 Net-Domain-TLD-1.5.ebuild 612
 MD5 aeff85063d0937c688441aeca5a4e1d0 Net-Domain-TLD-1.62.ebuild 636
 MD5 967b8a5a60db63aa7f69b181c9aef844 files/digest-Net-Domain-TLD-1.5 69
 MD5 6c5a0f900f4cdd010f75e23b36f79c7b files/digest-Net-Domain-TLD-1.62 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzpXTtG5z4I8BtQoRAhnXAJsHVuMcGFAOulcOMTk0FQZ8m09hIQCaApNS
+JNWCoDr2Guqc2wb/kL8kEGM=
+=xRrq
+-----END PGP SIGNATURE-----
