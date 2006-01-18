@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antiword
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.27 2006/01/18 16:38:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.28 2006/01/18 16:50:07 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> antiword-0.37.ebuild:
+  Stable on ppc64; bug #119309
 
   18 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   antiword-0.37.ebuild:
