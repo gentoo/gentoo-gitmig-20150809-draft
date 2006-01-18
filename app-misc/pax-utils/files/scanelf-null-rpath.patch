@@ -1,0 +1,16 @@
+Index: scanelf.c
+===================================================================
+RCS file: /var/cvsroot/gentoo-projects/pax-utils/scanelf.c,v
+retrieving revision 1.106
+diff -u -B -r1.106 scanelf.c
+--- scanelf.c	14 Jan 2006 01:39:55 -0000	1.106
++++ scanelf.c	18 Jan 2006 22:28:02 -0000
+@@ -465,7 +465,7 @@
+ 						} \
+ 					} \
+ 					if (*r) { \
+-						if (fix_elf > 2 || **r == '\0') { \
++						if (fix_elf > 2 || (fix_elf && **r == '\0')) { \
+ 							/* just nuke it */ \
+ 							nuke_it##B: \
+ 							memset(*r, 0x00, offset); \

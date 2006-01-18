@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.39 2006/01/12 18:15:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.40 2006/01/18 22:53:13 solar Exp $
+
+*pax-utils-0.1.7-r1 (18 Jan 2006)
+
+  18 Jan 2006; <solar@gentoo.org> +files/scanelf-null-rpath.patch,
+  -pax-utils-0.1.7.ebuild, +pax-utils-0.1.7-r1.ebuild:
+  - bugfix: dont write to memory when NULL rpaths exists and not using
+  -X/--fix in scanelf
 
 *pax-utils-0.1.7 (12 Jan 2006)
 

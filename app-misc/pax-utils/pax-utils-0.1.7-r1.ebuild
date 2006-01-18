@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.7.ebuild,v 1.1 2006/01/12 18:15:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.7-r1.ebuild,v 1.1 2006/01/18 22:53:13 solar Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="Various ELF related utils for ELF32, ELF64 binaries useful tools that can check files for security relevant properties"
 HOMEPAGE="http://hardened.gentoo.org/pax-utils.xml"
@@ -17,12 +17,17 @@ IUSE="caps"
 
 DEPEND="caps? ( sys-libs/libcap )"
 
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}"/scanelf-null-rpath.patch
+}
+
 src_compile() {
-	if use caps ; then
-		append-flags -DWANT_SYSCAP
-		append-ldflags -lcap
-	fi
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" all || die
+	use caps && append-flags -DWANT_SYSCAP
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" dumpelf scanelf || die
+	use caps && append-ldflags -lcap
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" pspax || die
 }
 
 src_install() {
