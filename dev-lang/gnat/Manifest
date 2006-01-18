@@ -1,4 +1,7 @@
-MD5 1fdf5ca68defaf22235c99181378e31e ChangeLog 6916
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 086d63bcfb59300b6c33c359653e4af9 ChangeLog 7012
 MD5 59500f81e672cff22232586fc278547b files/digest-gnat-3.14p 213
 MD5 737e39907fb4f28640a1b4cbbc1cdc78 files/digest-gnat-3.15p 216
 MD5 5710cea3459403d02bc4ad4674fa7d1b files/digest-gnat-3.15p-r3 378
@@ -24,5 +27,12 @@ MD5 7e1abff13d1add33756c2f586bbb5e63 gnat-3.41.ebuild 4012
 MD5 140f94774ca1df5f61298c4a7982bf3a gnat-3.43.ebuild 4041
 MD5 a434a32f31860757df690d7a1ec2a21d gnat-3.44-r1.ebuild 4983
 MD5 0ff3825a470fb91b5522a30180da1648 gnat-3.44-r2.ebuild 5082
-MD5 b452c1cb66a4abcd08126ae78eaa3a22 gnat-3.45.ebuild 5529
+MD5 2e0f1948e3ecf4963b4702f34c0377f3 gnat-3.45.ebuild 5527
 MD5 4b8299d1078b0c3a88969f43c9ae6a64 metadata.xml 927
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzaB6QlM6RnzZP+IRAkXgAJ0UjM+xrZpuBV1mYesQX+myXmOMTwCfcJCv
+tuejhUvFdXRl0iPLZihJO2M=
+=to1I
+-----END PGP SIGNATURE-----
