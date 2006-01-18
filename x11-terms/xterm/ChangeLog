@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.120 2006/01/15 22:39:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.121 2006/01/18 20:43:43 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> xterm-207.ebuild:
+  Stable on ppc64; bug #119108
 
   15 Jan 2006; Andrej Kacian <ticho@gentoo.org> xterm-207.ebuild:
   Stable on x86, bug #119108.
