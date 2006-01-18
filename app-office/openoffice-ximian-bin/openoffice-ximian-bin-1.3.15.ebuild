@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.3.15.ebuild,v 1.2 2005/12/05 14:56:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.3.15.ebuild,v 1.3 2006/01/18 11:29:36 suka Exp $
 
 inherit fdo-mime rpm
 
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 RDEPEND="!app-office/openoffice-ximian
-	virtual/x11
+	|| ( x11-libs/libXaw virtual/x11 )
 	virtual/libc
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.0
