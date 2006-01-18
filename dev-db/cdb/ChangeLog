@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.19 2005/12/15 16:37:51 seemant Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.20 2006/01/18 20:05:28 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> cdb-0.75.ebuild:
+  Stable on ppc64; bug #119443
 
 *cdb-0.75-r1 (15 Dec 2005)
 
