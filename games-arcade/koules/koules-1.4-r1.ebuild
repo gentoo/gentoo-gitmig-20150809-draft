@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.12 2006/01/18 20:45:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.13 2006/01/18 20:59:37 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -65,6 +65,7 @@ src_compile() {
 	if ! use svga ; then
 		xmkmf -a
 		sed -i \
+			-e '/SYSDEFS =/d' \
 			-e "/^ *CFLAGS =/s:$: ${CFLAGS}:" Makefile \
 				|| die "sed Makefile failed"
 		emake -j1 || die "emake X failed"
