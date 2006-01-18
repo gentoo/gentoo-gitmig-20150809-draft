@@ -1,4 +1,7 @@
-MD5 fd3f26e1fa57320f0677f86521035570 ChangeLog 33257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f11bdf8a2891303c7610fd1ed060e94 ChangeLog 33358
 MD5 99dee3ece4f06bd49f471db77a5cea21 files/digest-gentoolkit-0.2.0 67
 MD5 99dee3ece4f06bd49f471db77a5cea21 files/digest-gentoolkit-0.2.0-r3 67
 MD5 995990de80fff3d09b1da6ce7119a974 files/digest-gentoolkit-0.2.1 67
@@ -7,6 +10,13 @@ MD5 35d6ebb9b58acec73ac1c363df947347 files/qpkg-deprecated.patch 1870
 MD5 54512c5b6ccfdad8c9bd5e7785cd3f4c files/revdep-rebuild.112099.patch 1040
 MD5 210c6b284b9407d52d7dc5cfc860e54f gentoolkit-0.2.0-r3.ebuild 1387
 MD5 83de6e1010084bfb0ed83caa6c522d5d gentoolkit-0.2.0.ebuild 1007
-MD5 197d5201a4a635bcbf667b5f3850173f gentoolkit-0.2.1.ebuild 1569
+MD5 9b55f443ce089c4b3f90ed47362a6d2d gentoolkit-0.2.1.ebuild 1565
 MD5 c95f68ae6a4e40ccc7419ebf96a09b5f gentoolkit-0.2.2_pre2.ebuild 1554
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzYyfQlM6RnzZP+IRAuEAAJ9vGftSrqVZsfLGfcKmw62HGcQtRgCgphtp
+FQ0uyV5s9uVNBxikP1HgvkI=
+=Tr7/
+-----END PGP SIGNATURE-----
