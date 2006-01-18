@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bada145c02d70f4c3d54dee0fa622e3d ChangeLog 987
 MD5 cf9aaa8e69c2706b69104c537365485c files/digest-qwtplot3d-0.2.6-r1 64
 MD5 290c6e0f0680b16ea16f5e27cbb89980 files/digest-qwtplot3d-0.2.6-r2 126
 MD5 215d34fcda8923ada4f99f2fbcd3a983 metadata.xml 401
 MD5 78ef49702234e7449e57b6295acf4976 qwtplot3d-0.2.6-r1.ebuild 1639
 MD5 c5ef1c50365a9ab3877d13029e51237d qwtplot3d-0.2.6-r2.ebuild 1865
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzscKntT9W3vfTuoRAlYYAJwNjuaVLkA7kI55niyCw3M9N5F2VwCfYVgR
+eePRe7LSQxMOToUYkDhjBfE=
+=rjkr
+-----END PGP SIGNATURE-----
