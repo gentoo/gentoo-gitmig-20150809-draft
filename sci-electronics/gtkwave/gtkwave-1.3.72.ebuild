@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-1.3.72.ebuild,v 1.4 2006/01/17 20:23:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-1.3.72.ebuild,v 1.5 2006/01/18 14:22:42 metalgod Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/gtkwave-1.3.72.tar.gz"
 IUSE=""
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2

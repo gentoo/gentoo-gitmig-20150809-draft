@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnetman
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.4 2005/10/08 14:44:50 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.5 2006/01/18 14:20:20 metalgod Exp $
+
+  18 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  gnetman-0.0.1_pre20050429.ebuild:
+  Added ~amd64 keyword.
 
 *gnetman-0.0.1_pre20050429 (08 Oct 2005)
 
