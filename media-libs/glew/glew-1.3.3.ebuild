@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.3.ebuild,v 1.10 2005/10/24 15:41:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.3.ebuild,v 1.11 2006/01/18 23:35:23 spyderous Exp $
 
 inherit eutils multilib
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 
 RDEPEND="virtual/opengl
-	virtual/x11
 	virtual/glu"
 DEPEND="${RDEPEND}"
 
