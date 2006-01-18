@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.178 2006/01/18 14:27:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.179 2006/01/18 14:57:36 caleb Exp $
+
+  18 Jan 2006; Caleb Tennis <caleb@gentoo.org> -ruby-1.8.2.ebuild,
+  -ruby-1.8.2-r1.ebuild:
+  Remove old versions
 
   18 Jan 2006; Caleb Tennis <caleb@gentoo.org> ruby-1.8.4-r1.ebuild:
   I think this is now a good candidate for x86 stable

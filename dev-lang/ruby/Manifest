@@ -1,6 +1,4 @@
-MD5 29a422aef89cc59f49791b5af7ccfab6 ChangeLog 26281
-MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2 125
-MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r1 125
+MD5 13b745c10e65e862d87ced159910906a ChangeLog 26396
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r2 125
 MD5 e496eaf8c6af0debd1c74f8e66746a0c files/digest-ruby-1.8.3 125
 MD5 abf0468a972fff8b129ec750fd804ab5 files/digest-ruby-1.8.4 125
@@ -13,9 +11,7 @@ MD5 d1fd7f979894cfe7da89ec38992788eb files/ruby-1.8.2-xmlrpc-ipimethods-fix.diff
 MD5 2fade36ba9727ddc61257d1588b5db16 files/ruby-1.8.4-yaml.diff 457
 MD5 e7fc14a584186eb629eddc20bc853a24 files/ruby-rdoc-gentoo.diff 455
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 3f3ef53019f559def811f446ba1b0f04 ruby-1.8.2-r1.ebuild 3753
 MD5 a0045c7bdab6743aede398ec740b44ae ruby-1.8.2-r2.ebuild 3917
-MD5 e847e0e7a41e6a1492eb66edab66a10d ruby-1.8.2.ebuild 3449
 MD5 ce1bfc8480546a10c83a8c3b77bb5e22 ruby-1.8.3.ebuild 3687
 MD5 98db2537c61fd62c57d75b0f644044d4 ruby-1.8.4-r1.ebuild 3927
 MD5 1ca4cc0bd209f1351a336cf23e8b499c ruby-1.8.4.ebuild 3761
