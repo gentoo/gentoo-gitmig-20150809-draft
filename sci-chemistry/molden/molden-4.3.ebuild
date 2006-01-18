@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.3.ebuild,v 1.4 2005/05/14 08:55:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.3.ebuild,v 1.5 2006/01/18 06:43:43 spyderous Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -53,10 +53,10 @@ src_compile() {
 		${FFLAGS:+FFLAGS="${FFLAGS}"} )
 
 	einfo "Building Molden..."
-	emake "${args[@]}" || die "molden emake failed"
+	emake -j1 "${args[@]}" || die "molden emake failed"
 	if use opengl ; then
 		einfo "Building Molden OpenGL helper..."
-		emake "${args[@]}" moldenogl || die "moldenogl emake failed"
+		emake -j1 "${args[@]}" moldenogl || die "moldenogl emake failed"
 	fi
 }
 
