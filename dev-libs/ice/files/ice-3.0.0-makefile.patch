@@ -1,0 +1,31 @@
+--- config/Make.rules.old	2006-01-19 06:03:32.000000000 +0900
++++ config/Make.rules	2006-01-19 06:02:52.000000000 +0900
+@@ -12,7 +12,7 @@
+ # if it does not exist.
+ #
+ 
+-prefix			= /opt/Ice-$(VERSION)
++prefix			= $(DESTDIR)/opt/Ice-$(VERSION)
+ 
+ #
+ # Define OPTIMIZE as yes if you want to build with
+--- Makefile.old	2006-01-19 05:24:42.000000000 +0900
++++ Makefile	2006-01-19 07:08:27.000000000 +0900
+@@ -19,7 +19,7 @@
+ 	@if test ! -d $(prefix) ; \
+ 	then \
+ 	    echo "Creating $(prefix)..." ; \
+-	    $(call mkdir,$(prefix)) ; \
++	    mkdir -p $(prefix) ; \
+ 	fi
+ 
+ 	@for subdir in $(INSTALL_SUBDIRS); \
+@@ -27,7 +27,7 @@
+ 	    if test ! -d $$subdir ; \
+ 	    then \
+ 		echo "Creating $$subdir..." ; \
+-		mkdir $$subdir ; \
++		mkdir -p $$subdir ; \
+ 		chmod a+rx $$subdir ; \
+ 	    fi ; \
+ 	done
