@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a24991cd80843bcd3cbc235967c90f45 ChangeLog 739
-MD5 128d3ffbce1151a8127bdf85883bba43 files/digest-gwyddion-1.13 67
-MD5 a5484ca003ce4573572042bca1fb1987 files/digest-gwyddion-1.14 67
-MD5 ae28be5e9c9039fdbc582e506d3c1d0e gwyddion-1.13.ebuild 1008
-MD5 7621e5f61576b06d47f738836269d593 gwyddion-1.14.ebuild 1008
+MD5 db599f7213df63942e7d148fbe6b3256 ChangeLog 930
+MD5 238248f75d5882e4b42a04e1c688fab0 files/digest-gwyddion-1.15 67
+MD5 841a609ecde4127b71aac0f27e163f2b gwyddion-1.15.ebuild 921
 MD5 8b540c5fcae8b4718136d43ae501f9fd metadata.xml 557
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDl5B8ntT9W3vfTuoRAu7CAJ9JLcf03bRq9MgETwd4xGznm6k2lwCdFGbj
-xTUUCFIGzJ21P8V7ky1vkPk=
-=899z
+iD8DBQFDztUsntT9W3vfTuoRAqlYAJ9ft/YTFtita3CGzXfzCMXuLClnyQCeIi6U
+rxv7aQOZ3KP/OsB426eyKQE=
+=e2vj
 -----END PGP SIGNATURE-----
