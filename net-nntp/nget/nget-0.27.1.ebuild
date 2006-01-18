@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.27.1.ebuild,v 1.1 2005/08/27 21:15:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.27.1.ebuild,v 1.2 2006/01/18 23:53:47 vapier Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Network utility to retrieve files from an NNTP news server"
 HOMEPAGE="http://nget.sourceforge.net/"
@@ -9,28 +11,24 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~arm ~ppc ~amd64"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static debug ipv6 pcre zlib"
 
-RDEPEND="virtual/libc
-	dev-libs/popt
+RDEPEND="dev-libs/popt
 	pcre? ( dev-libs/libpcre )
 	zlib? ( sys-libs/zlib )"
 DEPEND="dev-libs/uulib"
 
 src_compile() {
+	use static && append-flags -static
+
 	econf \
 		$(use_enable debug) \
 		$(use_enable ipv6) \
 		$(use_with pcre) \
 		$(use_with zlib) \
 		|| die "econf failed"
-
-	if use static ; then
-		emake LDFLAGS="-static" || die "emake failed"
-	else
-		emake || die "emake failed"
-	fi
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -40,6 +38,6 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install || die "install failed"
 
-	dodoc COPYING Changelog FAQ README TODO
+	dodoc Changelog FAQ README TODO
 	newdoc .ngetrc ngetrc.sample
 }

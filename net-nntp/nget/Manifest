@@ -1,8 +1,18 @@
-MD5 088e28b7ef706bdde3fbfecf47c71737 nget-0.26.ebuild 1230
-MD5 a3828006b4dc1398ec2a3d0c7750716c nget-0.27.ebuild 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5c584dbb436a88a9ef9e93bfb203c4e2 ChangeLog 2181
-MD5 e54b54e04da18a997e743708904e9b50 nget-0.27.1.ebuild 1077
-MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 c17cef108e16646aeb342d949cb1bfd8 files/digest-nget-0.27.1 63
 MD5 e60b241e5d6ce73c6516002f53529a1c files/digest-nget-0.26 67
 MD5 b8b9b7c4345bd3ca7601ee62d94e3489 files/digest-nget-0.27 61
+MD5 c17cef108e16646aeb342d949cb1bfd8 files/digest-nget-0.27.1 63
+MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
+MD5 088e28b7ef706bdde3fbfecf47c71737 nget-0.26.ebuild 1230
+MD5 706d0b99dca7469f3a3ff594d2716c53 nget-0.27.1.ebuild 1029
+MD5 a3828006b4dc1398ec2a3d0c7750716c nget-0.27.ebuild 1086
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDztWK2+ySkm8kpY0RAvTWAKDDmwM62E9ABjUeVzYNFPvAqxp4+QCfQuw/
+C+6CWATck0dMQYQI8TFAxQM=
+=Dzbq
+-----END PGP SIGNATURE-----
