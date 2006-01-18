@@ -1,34 +1,28 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.2 2005/11/26 16:04:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.3 2006/01/18 11:36:15 uberlord Exp $
 
 inherit linux-mod cvs
-
-IEEE80211_VERSION="1.1.6"
 
 DESCRIPTION="Driver for the RaLink RT2x00 wireless chipsets"
 HOMEPAGE="http://rt2x00.serialmonkey.com"
 LICENSE="GPL-2"
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/rt2400"
-ECVS_MODULE="experimental/rt2x00_beta"
+ECVS_MODULE="source/rt2x00"
 ECVS_LOCALNAME="${P}"
 
 KEYWORDS="-*"
 IUSE="debug"
-DEPEND="
-	>=net-wireless/ieee80211-${IEEE80211_VERSION}
-	sys-apps/sed
-"
-RDEPEND="
-	>=net-wireless/ieee80211-${IEEE80211_VERSION}
-	net-wireless/wireless-tools
-"
+#DEPEND="sys-apps/sed"
+RDEPEND="net-wireless/wireless-tools"
 
 MODULE_NAMES="
-	rt2x00core(net/wireless:) rt2400pci(net/wireless:)
-	rt2500pci(net/wireless:) rt2500usb(net/wireless:)
-"
+	ieee80211/80211(rt2x00/ieee80211:)
+	ieee80211/rate_control(rt2x00/ieee80211:)
+	rt2400pci(rt2x00:)
+	rt2500pci(rt2x00:)
+	rt2500usb(rt2x00:)"
 
 CONFIG_CHECK="NET_RADIO"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
@@ -38,48 +32,21 @@ pkg_setup() {
 
 	linux-mod_pkg_setup
 
-	if [[ ! -f /lib/modules/${KV_FULL}/net/ieee80211/ieee80211.${KV_OBJ} ]]; then
-		eerror
-		eerror "Looks like you forgot to remerge net-wireless/ieee80211 after"
-		eerror "upgrading your kernel."
-		eerror
-		eerror "Hint: use sys-kernel/module-rebuild for keeping track of which"
-		eerror "modules needs to be remerged after a kernel upgrade."
-		eerror
-		die "/lib/modules/${KV_FULL}/net/ieee80211/ieee80211.${KV_OBJ} not found"
-	fi
-
 	BUILD_PARAMS="KERNDIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 	if use debug ; then
-		BUILD_TARGETS="rt2x00-debug"
+		BUILD_TARGETS="debug"
 	else
-		BUILD_TARGETS="rt2x00-nodebug"
+		BUILD_TARGETS="nodebug"
 	fi
+}
+
+src_compile() {
+	linux-mod_src_compile
 }
 
 src_install() {
 	linux-mod_src_install
 	dodoc CHANGELOG COPYING README THANKS
-}
-
-src_unpack() {
-	cvs_src_unpack
-	cd "${S}"
-
-	# We need to remove the ieee80211 stack they supply and use the
-	# portage one instead
-	mv ieee80211/net/ieee80211_compat.h .
-	rm ieee80211 -rf
-	sed -i 's,^\(CFLAGS\|CPPFLAGS\) := .*,\1 := -include ieee80211_compat.h $(\1) -I/usr/include,g' Makefile
-}
-
-src_compile() {
-	linux-mod_src_compile
-
-	einfo
-	einfo "You may safely ignore any warnings from above compilation about"
-	einfo "undefined references to the ieee80211 subsystem."
-	einfo
 }
 
 pkg_postinst() {

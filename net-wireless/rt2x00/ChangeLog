@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2x00
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.5 2005/12/19 15:54:58 uberlord Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.6 2006/01/18 11:36:15 uberlord Exp $
+
+  18 Jan 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
+  Updated for new upstream locations and IEEE 80211 stack.
 
 *rt2x00-2.0.0_beta3 (19 Dec 2005)
 
