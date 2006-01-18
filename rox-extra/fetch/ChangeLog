@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/fetch
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.6 2005/11/06 19:23:39 svyatogor Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.7 2006/01/18 20:41:36 vanquirius Exp $
+
+  18 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> fetch-0.0.3.ebuild,
+  fetch-0.1.1.ebuild, fetch-0.1.2.ebuild:
+  Move inherit to top of ebuilds for bug 117764, add quotes to S, D, etc.
+  Thanks to Alexandru Toma <flash3001 at yahoo dot com>.
 
 *fetch-0.1.2 (06 Nov 2005)
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.0.3.ebuild,v 1.3 2005/08/15 00:27:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.0.3.ebuild,v 1.4 2006/01/18 20:41:36 vanquirius Exp $
+
+inherit rox
 
 DESCRIPTION="Fetch - an downloader for the ROX Desktop"
 
@@ -22,6 +24,4 @@ ROX_LIB_VER=1.9.11
 
 APPNAME=Fetch
 
-S=${WORKDIR}
-
-inherit rox
+S="${WORKDIR}"
