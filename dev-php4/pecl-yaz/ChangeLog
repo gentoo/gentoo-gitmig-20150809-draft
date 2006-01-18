@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-yaz
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-yaz/ChangeLog,v 1.5 2005/11/25 15:31:00 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-yaz/ChangeLog,v 1.6 2006/01/18 20:26:59 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> pecl-yaz-1.0.4.ebuild:
+  Stable on ppc64; bug #119451
 
   25 Nov 2005; Luca Longinotti <chtekk@gentoo.org> pecl-yaz-1.0.4.ebuild:
   Fix var ordering.
