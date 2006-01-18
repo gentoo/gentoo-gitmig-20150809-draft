@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4877 2006/01/17 23:48:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4878 2006/01/18 14:06:13 koon Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Thierry Carrez <koon@gentoo.org> (18 Jan 2006)
+# Package contains insecure tmpfile handling, bug #108072
+app-cdr/cdrx
 
 # Michael Imhof <tantive@gentoo.org> (17 Jan 2006)
 # masked pending removal - upstream discontinued this project
