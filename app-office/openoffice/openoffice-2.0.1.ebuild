@@ -1,14 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.10 2006/01/17 18:59:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.11 2006/01/18 12:02:06 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="binfilter curl eds gnome gtk java kde ldap mozilla zlib xml2"
 
+MY_PV="${PV}.1"
 PATCHLEVEL="OOA680"
 SRC="OOO_2_0_1"
-S="${WORKDIR}/ooo-build-${PV}"
+S="${WORKDIR}/ooo-build-${MY_PV}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
@@ -16,7 +17,7 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-system.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
-	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
+	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
 	http://go-ooo.org/packages/libwpd/libwpd-0.8.3.tar.gz
 	http://go-oo.org/packages/SRC680/ooo_crystal_images-6.tar.bz2
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2"
@@ -133,11 +134,10 @@ pkg_setup() {
 
 src_unpack() {
 
-	unpack ooo-build-${PV}.tar.gz
+	unpack ooo-build-${MY_PV}.tar.gz
 
 	#Some fixes for our patchset
 	cd ${S}
-	use !gnome && use !gtk && epatch ${FILESDIR}/${PV}/noquickstarter.diff
 	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
 	cp ${FILESDIR}/${PV}/gentoo-gcc-version.diff ${S}/patches/src680/ || die
 	epatch ${FILESDIR}/${PV}/ooo-build-gentoo-gcc-version.diff

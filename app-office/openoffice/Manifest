@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 41dd69d751733142b8eb06a7f6c88e12 ChangeLog 36761
+MD5 084af5031ea70400399d02db5c5d8a9a ChangeLog 36942
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 9784ab4484e09b8230284b27d20d4264 files/1.1.4/build-new-xslt.diff 650
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
@@ -37,21 +34,13 @@ MD5 fd1c64677627b46e5528f72564bcc8fd files/1.1.5/pthreadlink-fix.patch 1133
 MD5 aa01d8f68b27d3df4af58ed02c080df5 files/1.1.5/pyunolink-fix.patch 475
 MD5 500f7e71be57d40b0a8042cab1484df9 files/2.0.1/alwayscrystal.diff 3222
 MD5 e990584aa63a1636aa84ba22c568383b files/2.0.1/gentoo-gcc-version.diff 361
-MD5 88bf8cd578cde25c883e4fd2f9f0ea89 files/2.0.1/noquickstarter.diff 495
 MD5 22c906b692d3cd8ac18549d2a82285e3 files/2.0.1/ooo-build-gentoo-gcc-version.diff 315
 MD5 b2cb01ba0d5824f2892c150dce1d8771 files/digest-openoffice-1.1.4-r1 325
 MD5 387adcb6e397b6e7f825c8384ce52389 files/digest-openoffice-1.1.5 322
 MD5 f43c98cba404ee89be6bed4f785dfd00 files/digest-openoffice-2.0.0 478
-MD5 0130abb512287d7604fd27cfd3839dc8 files/digest-openoffice-2.0.1 550
+MD5 5cba4a6aa38cbfc6b9b91671aa500dd6 files/digest-openoffice-2.0.1 552
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 eae9be6a4eb2de3c689d24cb348d0b9c openoffice-1.1.4-r1.ebuild 16659
 MD5 a69a836ff536fa824b7bb4390198d2e6 openoffice-1.1.5.ebuild 16566
 MD5 ece6469b501209c7971a74c4dd0fbae8 openoffice-2.0.0.ebuild 7072
-MD5 eb1c990ff0821383a1b8dc77bbdb87da openoffice-2.0.1.ebuild 7598
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDzT6aKRy60XGEcJIRAhT1AJwNxcKS/EtrVP1S4j0Cl1tw/XHVwACgj92h
-SWezdrF4ibOdXnez3tG4R7E=
-=DSP7
------END PGP SIGNATURE-----
+MD5 f908949613e9781cf1ebfd054e289628 openoffice-2.0.1.ebuild 7547
