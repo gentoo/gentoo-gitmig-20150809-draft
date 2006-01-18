@@ -1,6 +1,15 @@
 # ChangeLog for app-doc/doxygen
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.91 2005/12/27 12:19:30 kloeri Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.92 2006/01/18 07:17:19 nerdboy Exp $
+
+*doxygen-1.4.6 (18 Jan 2006)
+
+  18 Jan 2006; Steve Arnold <nerdboy@gentoo.org> doxygen-1.4.2.ebuild,
+  doxygen-1.4.3-r1.ebuild, doxygen-1.4.4.ebuild, doxygen-1.4.5.ebuild,
+  +doxygen-1.4.6.ebuild:
+  Added workaround for bug 118580, and new version for bugs 117613 and 110615.
+  ~mips removed temporarily from 1.4.5 and 1.4.6 until it gets updated to
+  graphviz-2.6 or better.
 
   27 Dec 2005; Bryan Østergaard <kloeri@gentoo.org doxygen-1.4.4.ebuild:
   Stable on alpha.

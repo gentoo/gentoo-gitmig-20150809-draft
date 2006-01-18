@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.14 2006/01/18 07:17:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.1 2006/01/18 07:17:19 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,28 +10,26 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc qt tetex unicode"
 
-DEPEND="media-gfx/graphviz
+RDEPEND=">=media-gfx/graphviz-2.6
 	qt? ( =x11-libs/qt-3* )
 	tetex? ( virtual/tetex )
-	virtual/ghostscript
-	>=sys-apps/sed-4"
+	virtual/ghostscript"
+DEPEND=">=sys-apps/sed-4
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# use CFLAGS and CXXFLAGS
+	# use CFLAGS and CXXFLAGS (on linux and ppc-macos)
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
-		tmake/lib/linux-g++/tmake.conf
+		tmake/lib/{linux-g++,macosx-c++}/tmake.conf
 
-	if use userland_Darwin; then
-		epatch ${FILESDIR}/bsd-configure.patch
-		[[ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]] &&  sed -i -e 's:-D__FreeBSD__:-D__FreeBSD__=5:' \
-		tmake/lib/macosx-c++/tmake.conf
-	fi
+	epatch ${FILESDIR}/doxygen-1.4.3-cp1251.patch
+#	epatch ${FILESDIR}/doxygen-1.4.4-darwin.patch
 
 	if use unicode; then
 		epatch ${FILESDIR}/${PN}-utf8-ru.patch.gz || die "utf8-ru patch failed"
@@ -52,8 +50,8 @@ src_compile() {
 	fi
 
 	# ./configure and compile
-	./configure ${my_conf} || die '"./configure" failed.'
-	make DESTDIR="${D}" all || die '"make all" failed.'
+	./configure ${my_conf} || die '"configure" failed.'
+	emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
@@ -64,7 +62,7 @@ src_compile() {
 			addwrite /var/cache/fonts
 			addwrite /usr/share/texmf/fonts/pk
 			addwrite /usr/share/texmf/ls-R
-			make pdf || ewarn '"make docs" failed.'
+			make pdf || ewarn '"make pdf docs" failed.'
 		else
 			cp doc/Doxyfile doc/Doxyfile.orig
 			cp doc/Makefile doc/Makefile.orig
@@ -72,7 +70,7 @@ src_compile() {
 			sed -i.orig -e "s/@epstopdf/# @epstopdf/" \
 				-e "s/@cp Makefile.latex/# @cp Makefile.latex/" \
 				-e "s/@sed/# @sed/" doc/Makefile
-			make docs || ewarn '"make docs" failed.'
+			make docs || ewarn '"make html docs" failed.'
 		fi
 	fi
 }

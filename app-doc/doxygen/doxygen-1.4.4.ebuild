@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.4.ebuild,v 1.14 2006/01/07 03:29:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.4.ebuild,v 1.15 2006/01/18 07:17:19 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,11 +42,15 @@ src_unpack() {
 
 src_compile() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
-	local confopts="--prefix ${D}usr"
-	use qt && confopts="${confopts} --with-doxywizard"
+	local my_conf="--prefix ${D}usr"
+	if use qt; then
+	    export LD_LIBRARY_PATH=$QTDIR/$(get_libdir):$LD_LIBRARY_PATH \
+	    export LIBRARY_PATH=$QTDIR/$(get_libdir):$LIBRARY_PATH \
+	    my_conf="${my_conf} $(use_with qt doxywizard)"
+	fi
 
 	# ./configure and compile
-	./configure ${confopts} || die '"./configure" failed.'
+	./configure ${my_conf} || die '"./configure" failed.'
 	emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.

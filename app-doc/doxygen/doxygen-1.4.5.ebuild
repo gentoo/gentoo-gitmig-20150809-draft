@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.5.ebuild,v 1.3 2006/01/04 05:00:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.5.ebuild,v 1.4 2006/01/18 07:17:19 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,10 +10,10 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc qt tetex unicode"
 
-RDEPEND="media-gfx/graphviz
+RDEPEND=">=media-gfx/graphviz-2.6
 	qt? ( =x11-libs/qt-3* )
 	tetex? ( virtual/tetex )
 	virtual/ghostscript"
@@ -42,11 +42,15 @@ src_unpack() {
 
 src_compile() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
-	local confopts="--prefix ${D}usr"
-	use qt && confopts="${confopts} --with-doxywizard"
+	local my_conf="--prefix ${D}usr"
+	if use qt; then
+	    export LD_LIBRARY_PATH=$QTDIR/$(get_libdir):$LD_LIBRARY_PATH \
+	    export LIBRARY_PATH=$QTDIR/$(get_libdir):$LIBRARY_PATH \
+	    my_conf="${my_conf} $(use_with qt doxywizard)"
+	fi
 
 	# ./configure and compile
-	./configure ${confopts} || die '"configure" failed.'
+	./configure ${my_conf} || die '"configure" failed.'
 	emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
