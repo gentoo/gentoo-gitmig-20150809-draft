@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-SessionX
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/ChangeLog,v 1.3 2005/11/30 21:08:28 superlag Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/ChangeLog,v 1.4 2006/01/18 12:51:36 mcummings Exp $
+
+  18 Jan 2006; <mcumming@gentoo.org> Apache-SessionX-2.00_beta5.ebuild,
+  Apache-SessionX-2.01.ebuild:
+  Marking 2.00_beta stable x86; IUSE syntax fixes
 
 *Apache-SessionX-2.01 (30 Nov 2005)
 

@@ -1,8 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/Apache-SessionX-2.01.ebuild,v 1.1 2005/11/30 21:08:28 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/Apache-SessionX-2.01.ebuild,v 1.2 2006/01/18 12:51:36 mcummings Exp $
 
 inherit perl-module
+
+IUSE=""
 
 MY_PV=${PV/0_beta5/0b5}
 MY_P="${PN}-${MY_PV}"

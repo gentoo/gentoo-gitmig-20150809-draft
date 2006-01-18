@@ -1,6 +1,16 @@
-MD5 f417691e6650faaf419e360348b87918 Apache-SessionX-2.00_beta5.ebuild 681
-MD5 aaeb75f1c37a8c703b00351620567dd3 ChangeLog 703
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 3e813c32055c04e893c2c93b7b13d5f4 Apache-SessionX-2.01.ebuild 681
-MD5 a7e52a6c3676506fc02c85e0673bc474 files/digest-Apache-SessionX-2.01 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a7a08026648eee1a27622f3e359efe2f Apache-SessionX-2.00_beta5.ebuild 689
+MD5 c3054a0a7f2b4764ae34b99366a0908a Apache-SessionX-2.01.ebuild 691
+MD5 38c40c56cc420ad16eea6f81fa37e880 ChangeLog 858
 MD5 674d66bc77866022adc5aa9d754ccece files/digest-Apache-SessionX-2.00_beta5 73
+MD5 a7e52a6c3676506fc02c85e0673bc474 files/digest-Apache-SessionX-2.01 71
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzjnhtG5z4I8BtQoRAkXoAJ0aKeCHFwHFjMArGBTZka4J/j3R/QCfWXKs
+gBLwXuIc9ORBiGSHhFE0pzI=
+=sDmz
+-----END PGP SIGNATURE-----
