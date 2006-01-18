@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openpbs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog,v 1.22 2006/01/18 07:20:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog,v 1.23 2006/01/18 07:31:25 spyderous Exp $
+
+  18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  openpbs-2.3.16-r3.ebuild:
+  Fix USE=tcltk
 
   18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
   openpbs-2.3.16-r3.ebuild:
