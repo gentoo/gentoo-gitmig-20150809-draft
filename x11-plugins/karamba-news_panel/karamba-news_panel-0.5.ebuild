@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-news_panel/karamba-news_panel-0.5.ebuild,v 1.8 2006/01/18 20:59:42 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-news_panel/karamba-news_panel-0.5.ebuild,v 1.9 2006/01/18 21:41:32 vanquirius Exp $
 
 IUSE=""
 DESCRIPTION="RSS News plugin for Karamba"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 RDEPEND="( || ( kde-base/superkaramba
-	>=x11-misc/superkaramba-0.21 ) )
+	>=x11-misc/superkaramba-0.21
+	>=kde-base/kdeutils-3.5.0 ) )
 	dev-perl/HTML-Parser
 	dev-perl/libwww-perl"
 
