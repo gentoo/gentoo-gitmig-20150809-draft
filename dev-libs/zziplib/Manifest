@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf692902cff7fbdeceff6b9938cabe14 ChangeLog 2126
+MD5 e635d3c2f0fb748bda6b8bf067d7c887 ChangeLog 2232
 MD5 8c8297e1f481bd0a0e076393cd827e40 files/digest-zziplib-0.13.36 68
 MD5 6f915eca707d184af05408eb5a75e73c files/digest-zziplib-0.13.38 68
 MD5 2e7c47c7774d9c41b99fbb49a686a665 files/digest-zziplib-0.13.45 68
 MD5 86d067c70c3a362f7761faf2776050bd metadata.xml 285
 MD5 de39c4481f01799a68687e64255b391b zziplib-0.13.36.ebuild 934
-MD5 8f8db724fae9244f615b245cf8f7edf8 zziplib-0.13.38.ebuild 1032
+MD5 5be749ec7e4c65d330011ad3bdada9a1 zziplib-0.13.38.ebuild 1031
 MD5 094a56d255dece843cd0a94cd14f66ea zziplib-0.13.45.ebuild 1072
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnGWOgIKl8Uu19MoRAgxLAJ9egCQ/rmuM4/N6CXhUNLanoLV5mACdFWo8
-lkAkwkxgLy4jbRl4gYDXwMw=
-=DI/F
------END PGP SIGNATURE-----
