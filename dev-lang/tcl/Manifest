@@ -1,4 +1,7 @@
-MD5 d1e453d42662db5e6b9c3d160c076ae6 ChangeLog 7525
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3682a77dee3083e7581012f160b6109 ChangeLog 7627
 MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
 MD5 3750ae675c54bcfb446406014a177605 files/digest-tcl-8.4.11 66
 MD5 3750ae675c54bcfb446406014a177605 files/digest-tcl-8.4.11-r1 66
@@ -9,8 +12,15 @@ MD5 23a4b408a4ea393df1da149ed8cb4d4c files/tcl-8.4.11-multilib.patch 1808
 MD5 1209abd340cad17f50f87c58f1c0f9f5 files/tcl-8.4.6-multilib.patch 1070
 MD5 72be7b18671e9312d64a3fb833dceecd metadata.xml 264
 MD5 298311384d5fa55d9baeb0da21211103 tcl-8.3.4.ebuild 2537
-MD5 08ab434e8550c7cb64a3b87fe749ae56 tcl-8.4.11-r1.ebuild 3331
+MD5 f41a969078d7210a013a3accd2fe4fbd tcl-8.4.11-r1.ebuild 3339
 MD5 69d01ea195cf8047c70a0d4d9e5521dd tcl-8.4.11.ebuild 3246
 MD5 a94e31aed8689fc3a31e268720b50938 tcl-8.4.6-r1.ebuild 3329
 MD5 90748478dfa508929dea3baefdcce7ef tcl-8.4.6.ebuild 2923
 MD5 eec3607c728a5f0125ea427870897539 tcl-8.4.9.ebuild 3262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzqLLH6mNYUtVdIARAlMMAKCel2zOvE7KQjYnYy4sBcrJfT9o/wCZAfmo
+xJk1dxJVtNZxF7C8rOlPjf4=
+=jk20
+-----END PGP SIGNATURE-----
