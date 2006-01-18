@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.28 2006/01/12 13:13:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.29 2006/01/18 23:04:57 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -88,11 +88,6 @@ eaclocal() {
 			case "${x}" in
 			"-I")
 				# We handle it below
-				;;
-			"-I"*)
-				# Invalid syntax, but maybe we should help out ...
-				ewarn "eaclocal: Proper syntax is (note the space after '-I'): aclocal -I <dir>"
-				aclocal_opts="${aclocal_opts} -I ${x}"
 				;;
 			*)
 				[[ ! -d ${x} ]] && ewarn "eaclocal: '${x}' does not exist"
