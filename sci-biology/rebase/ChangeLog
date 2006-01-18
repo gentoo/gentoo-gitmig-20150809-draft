@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.50 2006/01/15 02:48:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.51 2006/01/18 21:28:24 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> rebase-512.ebuild:
+  Stable on ppc64; bug #118832
 
   15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> rebase-512.ebuild:
   Stable on amd64, bug 118832.
