@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.12 2006/01/17 02:35:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.13 2006/01/18 20:02:05 corsair Exp $
+
+  18 Jan 2006; Markus Rothe <corsair@gentoo.org> libiodbc-3.51.2.ebuild:
+  Stable on ppc64; bug #119437
 
   17 Jan 2006; Mike Frysinger <vapier@gentoo.org> libiodbc-3.51.2.ebuild:
   Use econf like a good package.
