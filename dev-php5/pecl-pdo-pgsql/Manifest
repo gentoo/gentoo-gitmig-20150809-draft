@@ -1,5 +1,5 @@
-MD5 ef5a6b079b3e8cd62b589d4c1eb24968 ChangeLog 1276
+MD5 09fefd64f08b99be601ff0628f0fd63c ChangeLog 1379
 MD5 e5a2977f694281ca74ceaf9979c390ae files/digest-pecl-pdo-pgsql-1.0.1 63
 MD5 9c34bea17941802581a4d9372fafdb45 files/fix-tsrm.patch 276
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 511e9d52534a3322ed6e8758b8c39436 pecl-pdo-pgsql-1.0.1.ebuild 1185
+MD5 e79eba745d4d3bb76d48ffdff6bad18c pecl-pdo-pgsql-1.0.1.ebuild 1185
