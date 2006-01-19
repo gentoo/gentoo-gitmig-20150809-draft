@@ -2,10 +2,12 @@ MD5 c94cbffc8b0d7b48130e1e67d29fe8a6 xsane-0.98a-r1.ebuild 1723
 MD5 a4416ea123de82828b0caf78bdc0fb6d xsane-0.97-r1.ebuild 1634
 MD5 56c10f08c157591519451f7a2a271c6d xsane-0.98a.ebuild 1632
 MD5 0d9837fd281c0a06adf23414c6dc2e47 xsane-0.97.ebuild 1681
-MD5 972c32e29840b6a19d28a30eb3e5c7f0 ChangeLog 5539
+MD5 746db44a5c073a4ca477e0937f69d62f ChangeLog 5656
 MD5 1f00d52c238ab654e46144b458cb8090 metadata.xml 347
+MD5 dcb9bcddfffcb100a3a0b165b5c7e3fb xsane-0.99.ebuild 1647
 MD5 5922362071da7ad02ab5957b25c40a73 files/0.98b.patch 707
 MD5 918ef3f00d812af7c8417080ff4b8f75 files/digest-xsane-0.97 63
+MD5 671d2eaec5bf81783f70fe0ba7b1cdb3 files/digest-xsane-0.99 63
 MD5 918ef3f00d812af7c8417080ff4b8f75 files/digest-xsane-0.97-r1 63
 MD5 6994739c50e135088e6a65d231c67230 files/digest-xsane-0.98a-r1 64
 MD5 6994739c50e135088e6a65d231c67230 files/digest-xsane-0.98a 64
