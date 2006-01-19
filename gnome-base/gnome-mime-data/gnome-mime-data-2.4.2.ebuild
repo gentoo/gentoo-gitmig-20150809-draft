@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/gnome-mime-data-2.4.2.ebuild,v 1.11 2005/06/13 05:28:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/gnome-mime-data-2.4.2.ebuild,v 1.12 2006/01/19 19:40:45 blubb Exp $
 
 inherit gnome2
 
@@ -17,3 +17,9 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 RDEPEND=""
 
 DOCS="AUTHORS ChangeLog README"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's:libdir=${exec_prefix}/lib:libdir=@libdir@:' ${PN}-2.0.pc.in || die 'sed-ing pkgconfig-file failed'
+}
