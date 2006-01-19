@@ -1,17 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d958a91f6e3734f5ee144cbb6dcfca37 ChangeLog 1540
+MD5 830295ff5277d1f2e049fe9136998c0f ebtables-2.0.6-r1.ebuild 1078
 MD5 9979552c18681dd6edfe1e91f6717609 ebtables-2.0.6.ebuild 975
-MD5 3212022ecac9dfe74493b71305fe0ee3 ChangeLog 1347
-MD5 3eaf375e87551d0b332db3a82109c9d7 metadata.xml 221
-MD5 0488ef6b4eb8aa41352527597cb5d2ad files/ebtables-2.0.6-gcc34.patch 272
 MD5 72232fd4c734d316f9f588216d3228f2 files/digest-ebtables-2.0.6 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iQCVAwUBQqZUpJ4WFLgrx1GWAQIcsAQAxwinc5q0S1SvqJbV6t8loNMMDzqHgD0+
-lDB5XJYZNk97nMV+UQB4JATLz4aemyYfs0WULDYsi6E+nWzMP9s/l6WjZiQkebu5
-13nAS18+A+jW8gVTPQzhsAh4MUZ5klg+kSeOWRT52NRGyKOd6OszdsPZmiBNYvev
-NY8zv2L6izs=
-=y9pC
------END PGP SIGNATURE-----
+MD5 72232fd4c734d316f9f588216d3228f2 files/digest-ebtables-2.0.6-r1 66
+MD5 0488ef6b4eb8aa41352527597cb5d2ad files/ebtables-2.0.6-gcc34.patch 272
+MD5 49410b65a0fadade808e745f1e309bb9 files/ebtables-2.0.6-gcc4.patch 3966
+MD5 3eaf375e87551d0b332db3a82109c9d7 metadata.xml 221
