@@ -22,5 +22,8 @@
 	<longdescription lang="it">
 		La categoria app-benchmarks contiene programmi per l'analisi delle prestazioni.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-benchmarks contém programas para benchmarking.
+	</longdescription>
 </catmetadata>
 
