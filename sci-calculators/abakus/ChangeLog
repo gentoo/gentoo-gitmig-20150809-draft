@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/abakus
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.3 2005/10/04 23:22:42 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.4 2006/01/19 00:48:33 cryos Exp $
+
+  19 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> abakus-0.90.ebuild:
+  Stable on amd64.
 
   04 Oct 2005; <dang@gentoo.org> abakus-0.90.ebuild:
   Marked ~amd64

@@ -1,4 +1,14 @@
-MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
-MD5 684c301934ebe2078b144e8accda0b36 abakus-0.90.ebuild 1204
-MD5 205f686931e65123022c533b9ed8a549 ChangeLog 559
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 33c6d92eca2dd2f3f3cc97481308527a ChangeLog 652
+MD5 d8d0e68e6c9634afab01e120b499d3a5 abakus-0.90.ebuild 1204
 MD5 914f518b2e58d9185a0e70d8911bbdc5 files/digest-abakus-0.90 70
+MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDzuHwntT9W3vfTuoRAthpAKCMBaOujRymsZqCcH9KPoxuT6WMRgCgr7cx
+sGk1TO7CCGzDnffFBck9Xkg=
+=X0UN
+-----END PGP SIGNATURE-----
