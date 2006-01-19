@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3ff6045c5c3b62e4b2fc0a683c1e3a00 ChangeLog 870
+MD5 1142641afdbca76e7c33e452a8301044 ChangeLog 870
 MD5 268b521924cf1c9e6f31dcf8d95f577c files/digest-logmon-0.4.4 64
 MD5 9d1229ebb0d52a760f4ae0d41d7107a0 files/logmon-0.4.4-char2int.diff 202
 MD5 720e1ca508bf1f6bd244b6b853c4ef44 logmon-0.4.4.ebuild 757
@@ -9,7 +9,7 @@ MD5 5c0cf8693a8e3f46bbd06854f4d8a6f7 metadata.xml 258
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFD4t7+/NoSW7FuNV8RAj97AKCaChreiBMmf59egHYV7O+mBRxF6QCfb6u1
-5s6tsQmO1Qn7kyTi2AehWg8=
-=kFdl
+iD8DBQFD4t/3/NoSW7FuNV8RAm4lAKDEyJFWWIyQXOpt5S1RuHxH8IaxigCeOeUL
+nQ1cmJ45R+XlVWY07DYkHlw=
+=hBKw
 -----END PGP SIGNATURE-----
