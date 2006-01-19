@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.16.3.ebuild,v 1.1 2006/01/17 12:53:50 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.16.4.ebuild,v 1.1 2006/01/19 14:31:55 r3pek Exp $
 
 inherit eutils
 
