@@ -1,7 +1,17 @@
-MD5 8690e315aa499d49e3e2241bd7d49e27 libid3tag-0.15.1b.ebuild 940
-MD5 9f58fccf835f11cbb2abefe2b5b8d101 libid3tag-0.15.0b.ebuild 843
-MD5 1749e7508c1b10a98802aacfa928b1f3 ChangeLog 2963
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 54aa87c4ea713263f56e3abf87b1ef12 files/id3tag.pc 222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 283ee5b1c6573aafcd5eacf066f263db ChangeLog 3076
 MD5 3c479075f74ef05646c045d14b21478a files/digest-libid3tag-0.15.0b 69
 MD5 2599ada700e902044f823c6b5be3e1ba files/digest-libid3tag-0.15.1b 69
+MD5 54aa87c4ea713263f56e3abf87b1ef12 files/id3tag.pc 222
+MD5 9f58fccf835f11cbb2abefe2b5b8d101 libid3tag-0.15.0b.ebuild 843
+MD5 c0dcf7a7afa5b43152fc17b2a0f0af6c libid3tag-0.15.1b.ebuild 1064
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDz/H4H6mNYUtVdIARAlWNAJ0Y2AmmlJOu4Qzy71L+2zc63+mPLwCfaF8j
+72UVNK8vOTwfqrX2MeoZ+9o=
+=3xmz
+-----END PGP SIGNATURE-----

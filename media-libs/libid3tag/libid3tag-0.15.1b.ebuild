@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.19 2005/10/04 11:20:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.20 2006/01/19 20:09:13 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="The MAD id3tag library"
 HOMEPAGE="http://mad.sourceforge.net/"
@@ -35,4 +35,6 @@ src_install() {
 	# This file must be updated with every version update
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins ${FILESDIR}/id3tag.pc
+	sed -i -e "s:libdir=\${exec_prefix}/lib:libdir=/usr/$(get_libdir):" \
+		${D}/usr/$(get_libdir)/pkgconfig/id3tag.pc
 }
