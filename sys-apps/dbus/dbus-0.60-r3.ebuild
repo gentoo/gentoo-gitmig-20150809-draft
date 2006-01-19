@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r3.ebuild,v 1.6 2006/01/16 09:30:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r3.ebuild,v 1.7 2006/01/19 20:40:35 compnerd Exp $
 
 inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE="doc gcj gtk mono python qt selinux X xml2"
 
 RDEPEND=">=dev-libs/glib-2.6
 	X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
-	gtk? ( >=x11-libs/gtk+-2.4 )
+	gtk? ( >=x11-libs/gtk+-2.6 )
 	mono? ( >=dev-lang/mono-0.95 )
 	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
 	qt? ( $(qt_min_version 3.3) )

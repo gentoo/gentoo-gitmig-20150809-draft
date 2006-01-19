@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r1.ebuild,v 1.4 2005/12/17 13:07:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r1.ebuild,v 1.5 2006/01/19 20:40:35 compnerd Exp $
 
 inherit eutils mono python multilib autotools debug qt3
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		x11-libs/libX11
 		)
 	virtual/x11 ) )
-	gtk? ( >=x11-libs/gtk+-2 )
+	gtk? ( >=x11-libs/gtk+-2.6 )
 	python? ( >=dev-lang/python-2.4
 		>=dev-python/pyrex-0.9.3-r2 )
 	qt? ( $(qt_min_version 3.3) )
