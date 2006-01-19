@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pylint
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.22 2005/11/10 19:33:48 pythonhead Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.23 2006/01/19 17:18:24 marienz Exp $
+
+*pylint-0.9.0 (19 Jan 2006)
+
+  19 Jan 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pylint-0.9.0-extra-todo.patch, +pylint-0.9.0.ebuild:
+  Version bump. Start running the tests in src_test, stop installing them (bug
+  #97506).
 
   10 Nov 2005; Rob Cakebread <pythonhead@gentoo.org> pylint-0.8.1.ebuild:
   Changed dep to logilab-common-0.12.0. bug# 112090
