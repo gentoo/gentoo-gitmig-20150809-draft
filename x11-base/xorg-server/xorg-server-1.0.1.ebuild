@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1.ebuild,v 1.3 2006/01/02 05:04:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1.ebuild,v 1.4 2006/01/19 03:53:22 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -89,6 +89,7 @@ DEPEND="${RDEPEND}
 	xprint? ( x11-proto/printproto
 		x11-apps/mkfontdir
 		x11-apps/mkfontscale )"
+LICENSE="${LICENSE} MIT"
 
 pkg_setup() {
 	# localstatedir is used for the log location; we need to override the default
