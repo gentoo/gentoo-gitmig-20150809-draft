@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.5.ebuild,v 1.8 2006/01/13 12:56:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.5.ebuild,v 1.9 2006/01/19 13:54:31 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -117,6 +117,9 @@ src_unpack() {
 	epatch ${FILESDIR}/0038-dragobject-dont-prefer-unknown.patch
 #	epatch ${FILESDIR}/${P}-0051-qtoolbar_77047.patch
 #	epatch ${FILESDIR}/${P}-0047-fix-kmenu-widget.diff
+
+   # ulibc patch (bug #100246)
+   epatch ${FILESDIR}/qt-ulibc.patch
 
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff

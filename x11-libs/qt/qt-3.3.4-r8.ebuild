@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.14 2006/01/14 14:10:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.15 2006/01/19 13:54:31 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -112,6 +112,9 @@ src_unpack() {
 	# patches for gcc4
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 	epatch "${FILESDIR}/${P}-gcc4-volatile.patch"
+
+	# patch for ulibc (bug #100246)
+	epatch "${FILESDIR}/qt-ulibc.patch"
 
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
