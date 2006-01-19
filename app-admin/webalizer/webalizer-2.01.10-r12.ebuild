@@ -1,10 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.2 2006/01/08 21:57:58 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.3 2006/01/19 21:09:47 rl03 Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkil but works well
 inherit eutils webapp
+
+SLOT="0"
+WEBAPP_MANUAL_SLOT="yes"
 
 MY_PV=${PV/.10/-10}
 MY_P=${PN}-${MY_PV}
