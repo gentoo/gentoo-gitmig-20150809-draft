@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.16.ebuild,v 1.11 2005/07/11 23:13:02 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.16.ebuild,v 1.12 2006/01/19 19:58:21 blubb Exp $
 
 inherit eutils fdo-mime
 
@@ -19,6 +19,13 @@ RDEPEND=">=dev-libs/glib-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.29"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	sed -i -e 's:libdir=${exec_prefix}/lib:libdir=@libdir@:' ${PN}.pc.in
+}
 
 src_compile() {
 
