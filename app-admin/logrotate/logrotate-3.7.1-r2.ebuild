@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.1-r2.ebuild,v 1.2 2006/01/11 01:29:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.1-r2.ebuild,v 1.3 2006/01/19 17:21:55 dang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux"
 
 RDEPEND="
