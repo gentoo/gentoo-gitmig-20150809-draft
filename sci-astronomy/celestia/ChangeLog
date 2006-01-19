@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.7 2006/01/17 05:58:44 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.8 2006/01/19 07:31:12 morfic Exp $
+
+  19 Jan 2006; Daniel Goller <morfic@gentoo.org> celestia-1.4.0.ebuild:
+  Fixing bug #119339 while taking care of access violations
 
   17 Jan 2006; Daniel Goller <morfic@gentoo.org> celestia-1.4.0.ebuild:
   Fixing Access Violations, closing bug #119189

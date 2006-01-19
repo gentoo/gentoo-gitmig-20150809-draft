@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.0.ebuild,v 1.3 2006/01/17 05:58:44 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.0.ebuild,v 1.4 2006/01/19 07:31:12 morfic Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions
 
@@ -43,8 +43,8 @@ pkg_setup() {
 		einfo "USE=\"gtk\" detected."
 		mygui="gtk"
 	elif use kde && use gnome; then
-		einfo "Both gnome and kde support requested. Defaulting to gtk"
-		mygui="gtk"
+		einfo "Both gnome and kde support requested. Defaulting to kde"
+		mygui="kde"
 	else
 		ewarn "If you want to use the full gui, set USE=\"{kde/gnome/gtk}\""
 		ewarn "Defaulting to glut support (no GUI)."
@@ -74,11 +74,17 @@ src_compile() {
 
 	econf \
 		--with-${mygui} \
+		--with-pic \
 		$(use_with arts) \
 		$(use_with lua) \
 		$(use_enable threads threading) \
 		$(use_enable nls) \
 		|| die "econf failed"
+
+	#fix Makefiles to avoid Access Violations while fixing bug #119339
+	for d in . src data extras textures textures/lores textures/medres textures/hires models shaders fonts  po ; do
+	sed -i -e "s#pkgdatadir = /usr/share/celestia#pkgdatadir = ${D}/usr/share/celestia#" $d/Makefile; done
+
 	emake || die "emake failed"
 }
 
@@ -86,7 +92,6 @@ src_install() {
 	if [ "${mygui}" = "gnome" ]; then
 		gnome2_src_install
 	else
-		EXTRA_EINSTALL="pkgdatadir=${D}/usr/share/celestia"
 		einstall	|| die "einstall failed"
 	fi
 
