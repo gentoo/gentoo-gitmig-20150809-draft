@@ -28,5 +28,9 @@
 	<longdescription lang="it">
 		La categoria app-arch contiene strumenti di archiviazione, compressione e decompressione di file o gruppi di files.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-arch contém ferramentas para arquivar, comprimir
+		e descomprimir arquivos ou grupos de arquivos.
+	</longdescription>
 </catmetadata>
 
