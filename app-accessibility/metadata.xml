@@ -27,5 +27,9 @@
 	<longdescription lang="it">
 		La categoria app-accessibility contiene strumenti per l'accessibilità del software (ad esempio lettori di schermo per ipovedenti).
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-accessibility contém pacotes que ajudam com
+		acessibilidade (por exemplo, leitores de tela).
+	</longdescription>
 </catmetadata>
 
