@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_survey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/ChangeLog,v 1.8 2006/01/16 18:08:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/ChangeLog,v 1.9 2006/01/19 02:28:42 rl03 Exp $
+
+*mod_survey-3.2.3_pre3 (19 Jan 2006)
+
+  19 Jan 2006; Renat Lumpau <rl03@gentoo.org> -mod_survey-3.2.3_pre2.ebuild,
+  -mod_survey-3.2.3_pre2-r1.ebuild, +mod_survey-3.2.3_pre3.ebuild:
+  Version bump, removed old versions
 
 *mod_survey-3.2.3_pre2-r1 (16 Jan 2006)
 
