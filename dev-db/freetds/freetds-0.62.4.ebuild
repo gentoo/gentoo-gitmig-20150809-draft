@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.62.4.ebuild,v 1.1 2005/02/18 11:48:25 sebastian Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.62.4.ebuild,v 1.2 2006/01/19 12:06:39 vapier Exp $
 
 DESCRIPTION="Tabular Datastream Library"
 HOMEPAGE="http://www.freetds.org/"
@@ -10,16 +8,8 @@ SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="odbc mssql"
-
-DEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	local myconf
