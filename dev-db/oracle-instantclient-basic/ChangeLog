@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.10 2006/01/08 20:30:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.11 2006/01/19 21:47:28 nelchael Exp $
+
+  19 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  oracle-instantclient-basic-10.1.0.2_p1.ebuild,
+  oracle-instantclient-basic-10.1.0.2_p1-r1.ebuild,
+  oracle-instantclient-basic-10.1.0.3.ebuild,
+  oracle-instantclient-basic-10.1.0.4.ebuild,
+  oracle-instantclient-basic-10.2.0.1.ebuild,
+  oracle-instantclient-basic-10.2.0.1-r1.ebuild:
+  Fixed SLOT, 10.1.0.4 stable on x86.
 
 *oracle-instantclient-basic-10.2.0.1-r1 (08 Jan 2006)
 

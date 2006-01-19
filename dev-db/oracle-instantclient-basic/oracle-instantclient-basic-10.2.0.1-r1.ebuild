@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.1-r1.ebuild,v 1.1 2006/01/08 20:30:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.1-r1.ebuild,v 1.2 2006/01/19 21:47:28 nelchael Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ${MY_P_x86}.zip ${MY_PSDK_x86}.zip )
 		 amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )"
 
 LICENSE="OTN"
-SLOT="${KV}"
+SLOT="${PV}"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="fetch"
 IUSE=""
