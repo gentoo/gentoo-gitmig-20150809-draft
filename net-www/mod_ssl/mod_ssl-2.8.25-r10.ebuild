@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.25-r10.ebuild,v 1.7 2005/12/23 07:31:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.25-r10.ebuild,v 1.8 2006/01/19 12:23:18 vapier Exp $
 
 inherit apache-module
 
@@ -10,9 +10,9 @@ DESCRIPTION="An SSL module for the Apache 1.3 Web server"
 HOMEPAGE="http://www.modssl.org/"
 SRC_URI="http://www.modssl.org/source/${MY_P}.tar.gz"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6k"
