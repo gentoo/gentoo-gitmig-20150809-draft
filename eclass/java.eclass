@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.26 2006/01/19 03:29:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.27 2006/01/19 03:47:55 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -129,10 +129,12 @@ fix-i386-dir() {
 		host=${host%%-*}
 		
 		if [[ ${host} != i386 ]]; then
-			local orig_dir="${D}/${libdir}/i386"
-			local new_dir="${D}/${libdir}/${host}"
-			mv ${orig_dir} ${new_dir} || 
+			local orig_dir="${libdir}/i386"
+			local new_dir="${libdir}/${host}"
+			mv ${D}/${orig_dir} ${D}/${new_dir} || 
 				die "Failed to move ${orig_dir} to ${new_dir}"
+			dosym ${host} ${orig_dir} || die "Failed to dosym"
+			
 
 			sed -i -e "s/i386/${host}/g" \
 				${D}/etc/env.d/java/20${VMHANDLE} || die "Failed to sed"
