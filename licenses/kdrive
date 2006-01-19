@@ -1,0 +1,7 @@
+The normal process of generating licenses for modular X packages is to run
+through all source files in an editor and copy all the copyright/license info
+into the license file.  However, in the case of kdrive, there are almost
+1000 source files.  We're not paid enough to do that much work in a short
+period of time. ;)
+
+An approximation of the licenses is stated in the ebuild.
