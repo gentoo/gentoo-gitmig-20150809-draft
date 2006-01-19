@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.35 2006/01/15 00:23:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.36 2006/01/19 20:33:04 genstef Exp $
+
+  19 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  files/digest-ghostscript-afpl-8.53-r1, Manifest:
+  Fix digest thanks to Felix Braun <Felix.Braun@mail.mcgill.ca> in bug 119197
 
   15 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
   ghostscript-afpl-8.53-r1.ebuild:
