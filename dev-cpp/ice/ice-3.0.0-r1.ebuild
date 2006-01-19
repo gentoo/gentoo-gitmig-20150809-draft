@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.0.0-r1.ebuild,v 1.2 2006/01/19 17:50:03 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.0.0-r1.ebuild,v 1.3 2006/01/19 18:03:34 nattfodd Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.zeroc.com/download/Ice/3.0/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="readline test debug"
+IUSE="ncurses test debug"
 
 DEPEND="ncurses? ( sys-libs/ncurses
 				   sys-libs/readline )
@@ -40,7 +40,7 @@ src_unpack() {
 		|| die "Failed to set lib64 directory"
 	fi
 
-	if ! use readline; then
+	if ! use ncurses; then
 		sed -i -e "s#   USE_READLINE.*#   USE_READLINE := no#g" \
 		${S}/config/Make.rules || die "Failed to set no readline"
 	fi
