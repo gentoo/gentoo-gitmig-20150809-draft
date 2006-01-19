@@ -1,0 +1,5 @@
+MD5 814515bb5530350346e79f10f3b45c33 ChangeLog 620
+MD5 5643b69002aaa0bd00051022b1b087aa files/digest-ice-3.0.0-r1 62
+MD5 c8d682f5487fe005ed4a2bd2efcbe79b files/ice-3.0.0-makefile.patch 1412
+MD5 fcbf362bfee7b92a5c09e51ee48f0088 ice-3.0.0-r1.ebuild 1485
+MD5 fa56365fdfb0c6f7e71fe6bbae6e26b2 metadata.xml 1168
