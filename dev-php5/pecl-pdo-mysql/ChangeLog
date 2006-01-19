@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-pdo-mysql
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.8 2006/01/18 20:31:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.9 2006/01/19 21:26:31 nelchael Exp $
+
+  19 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  pecl-pdo-mysql-1.0.1.ebuild:
+  Stable on x86.
 
   18 Jan 2006; Markus Rothe <corsair@gentoo.org>
   pecl-pdo-mysql-1.0.1.ebuild:
