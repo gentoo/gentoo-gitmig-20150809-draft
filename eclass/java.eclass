@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.25 2006/01/16 03:38:10 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.26 2006/01/19 03:29:31 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -113,5 +113,29 @@ java_remove-libjsoundalsa() {
 	local libs=$(find ${D}/${search_path} -name libjsoundalsa.so)
 	if [[ -n ${libs} ]]; then
 		rm ${libs} || die "Failed to delete ${libs}"
+	fi
+}
+
+# Fixes ${JAVA_HOME}/jre/lib/i386 for i?86. See bug #23579.
+#
+# Takes an argument, which is a directory living in ${D}
+# which has a directory named i386, that should be i686, i486, etc.
+# This argument defaults to /opt/${P}/jre/lib
+fix-i386-dir() {
+	[[ ${#} != 1 ]] && die "Expected one argument"
+	local libdir=${1}
+	if use x86; then
+		local host=${CTARGET:-${CHOST}}
+		host=${host%%-*}
+		
+		if [[ ${host} != i386 ]]; then
+			local orig_dir="${D}/${libdir}/i386"
+			local new_dir="${D}/${libdir}/${host}"
+			mv ${orig_dir} ${new_dir} || 
+				die "Failed to move ${orig_dir} to ${new_dir}"
+
+			sed -i -e "s/i386/${host}/g" \
+				${D}/etc/env.d/java/20${VMHANDLE} || die "Failed to sed"
+		fi
 	fi
 }
