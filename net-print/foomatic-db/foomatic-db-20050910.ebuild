@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20050910.ebuild,v 1.3 2005/09/11 07:13:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20050910.ebuild,v 1.4 2006/01/19 23:08:38 vanquirius Exp $
 
 inherit eutils
 
@@ -35,6 +35,9 @@ src_compile() {
 		cd ../foomatic-filters-ppds-${PV}
 		rm -f `find . -name "*gimp-print*" `
 		rm -f `find . -name "*hpijs*" `
+		# conflicts with foomatic-filters
+		rm -f bin/{foomatic-gswrapper,foomatic-rip}
+		rm -f share/man/man1/{foomatic-gswrapper,foomatic-rip}.1
 	fi
 }
 
