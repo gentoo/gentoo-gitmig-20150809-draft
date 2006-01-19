@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.2 2006/01/19 18:01:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.3 2006/01/19 18:08:25 corsair Exp $
 
 inherit eutils apache-module toolchain-funcs gnuconfig
 
@@ -53,6 +53,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/2.x-series-nsca.patch
 	gunzip -c ${FILESDIR}/nagios-2.0b.cfg-sample.gz > ./nagios.cfg-sample
+	# ppc64 needs this
 	gnuconfig_update
 }
 
