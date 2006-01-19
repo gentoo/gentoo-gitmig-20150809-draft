@@ -1,25 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a6debc6341f864d7b2cdc9a2feefe42 stardict-2.2.1.ebuild 1801
-MD5 f61bc4d9e3497dc99018ada95342ba24 stardict-2.4.2.ebuild 1759
-MD5 738f054045c75c5cb12c47fbe90a17fd stardict-2.4.4.ebuild 1692
-MD5 7e6e906efc68497a767d4f8718624a59 stardict-2.4.1.ebuild 1820
-MD5 c60c53fa1fc8e792bacfbf0527b984ef ChangeLog 3655
-MD5 b1119d84c7a4c3535572b94ec508e907 metadata.xml 215
-MD5 d9ea47072247d298ac52d2ccaf574321 stardict-2.4.3.ebuild 1777
-MD5 40e8df6800d5f7bf138a3a6692854a56 files/stardict-gentoo.patch 547
-MD5 b41107d5daeb5414fa21b3f9905e105c files/stardict-config.sh 565
-MD5 9f2bc974d89734beae9aa192bafc68ef files/stardict-gtk24.patch 1210
+MD5 8e6860225f791312a040a39317015db8 ChangeLog 3816
 MD5 3316b188ec45fd4d24db494c5990c20b files/digest-stardict-2.2.1 67
 MD5 38728c3a0ad675dd5f23d72cb143741a files/digest-stardict-2.4.1 67
 MD5 390090b978f088147ce59b0308822093 files/digest-stardict-2.4.2 67
 MD5 666d327d13233da6a7b9842e01a4eda7 files/digest-stardict-2.4.3 67
 MD5 0437329b647de88a34fa6bd46bf48cb7 files/digest-stardict-2.4.4 68
+MD5 b21990e1c95c3be8e19d2385c21fd741 files/digest-stardict-2.4.6 68
+MD5 b41107d5daeb5414fa21b3f9905e105c files/stardict-config.sh 565
+MD5 40e8df6800d5f7bf138a3a6692854a56 files/stardict-gentoo.patch 547
+MD5 9f2bc974d89734beae9aa192bafc68ef files/stardict-gtk24.patch 1210
+MD5 b1119d84c7a4c3535572b94ec508e907 metadata.xml 215
+MD5 3a6debc6341f864d7b2cdc9a2feefe42 stardict-2.2.1.ebuild 1801
+MD5 7e6e906efc68497a767d4f8718624a59 stardict-2.4.1.ebuild 1820
+MD5 f61bc4d9e3497dc99018ada95342ba24 stardict-2.4.2.ebuild 1759
+MD5 d9ea47072247d298ac52d2ccaf574321 stardict-2.4.3.ebuild 1777
+MD5 738f054045c75c5cb12c47fbe90a17fd stardict-2.4.4.ebuild 1692
+MD5 64121dd9db23dcc0e667879e36351337 stardict-2.4.6.ebuild 1794
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLsFlKRy60XGEcJIRAtjXAJ9cz4lSAwsX6wGp6IqovDX9b52wNQCgkV95
-CJZwtfr5DprNxgDkBAwvUko=
-=VKrp
+iD8DBQFDz5afwnQyISwouHwRAhWmAJ93gLfMcjPYUnvpH/zJci1ZZ6H2IgCeK+/+
+weuYxzItnuKHtyplKZGvIY4=
+=O/D/
 -----END PGP SIGNATURE-----
