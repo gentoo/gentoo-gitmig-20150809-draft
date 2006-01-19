@@ -1,36 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22016128c5425d009bc69b884bbe3a7e ChangeLog 5749
+MD5 4cc051ad0b6898ac0f38dbbe7a85c6f4 ChangeLog 6354
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0-r1 65
-MD5 be62fc9641cde65e89b62b2a629bb617 files/digest-poppler-0.4.2 65
 MD5 be62fc9641cde65e89b62b2a629bb617 files/digest-poppler-0.4.2-r1 65
-MD5 fd7bca7be5c5d5779b32f4c4e7fe9b4c files/digest-poppler-0.4.3 65
-MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r1 137
-MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r2 137
-MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r3 137
 MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r4 137
+MD5 549a2b9f8016feedcb7a4fa849aa28e3 files/digest-poppler-0.4.4 137
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 MD5 c6805b961ecb2a526246a39bbff57f23 files/poppler-0.4.2-CAN-2005-3193.patch 3940
 MD5 85f437a5b01fef3f2139fcee826c4c6a files/poppler-0.4.3-bug117481.patch 2593
 MD5 8b92823cdaec86c3cb5993440d95c306 files/poppler-0.4.3-gcc41.patch 479
+MD5 93baf580cd860acff7c064fe57408d32 files/poppler-0.4.3-pdf2xml.patch 840
+MD5 63413b6d02c3bc97a966821e7befd8eb files/poppler-0.4.4-bug117481.patch 696
+MD5 29dc1ccc279993123bd97abfe9d60287 files/poppler-0.4.4-cairo-lines.patch 760
 MD5 f52250f6bc64f4201e663a46ed126f9b files/poppler-gcc41.patch 1131
 MD5 580dbf31fbeac60b3e29d38fdeabc4f1 files/poppler-no-libjpeg.patch 773
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 2638f0cdd789bc7e7ffd78e5b1555008 poppler-0.3.0-r1.ebuild 1019
 MD5 6999412acc1316a8e229eada23ab192b poppler-0.3.0.ebuild 856
 MD5 e9d6d5b72e5ba3ca39372fa29ff9ffb7 poppler-0.4.2-r1.ebuild 1442
-MD5 0a4aeea8b99f0bde18dd89db5fc6d313 poppler-0.4.2.ebuild 1383
-MD5 aadc332cb628ee3dbee13cffc0682acf poppler-0.4.3-r1.ebuild 1467
-MD5 23a4cfea729b004e919713beb75035a2 poppler-0.4.3-r2.ebuild 1377
-MD5 56e58601b60af35c7a06bae16d88a4d4 poppler-0.4.3-r3.ebuild 1466
-MD5 8340d3401e19d4a0efa091e0306b0ee0 poppler-0.4.3-r4.ebuild 1506
-MD5 73581022e21e0c1521e08454a71ca131 poppler-0.4.3.ebuild 1350
+MD5 49580afaf5b4b9002297bf66e452f9bf poppler-0.4.3-r4.ebuild 1576
+MD5 fb29205148f6f6e6ce94b5587f4aecad poppler-0.4.4.ebuild 1532
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDyaYO2+ySkm8kpY0RAiTFAKCBKvbjuAzPF0QBbWJXB4jxVuwZUQCfV8mk
-I8lZJ/eDEHEDxfZicYxIOn8=
-=bJsG
+iD8DBQFDz+RtomPajV0RnrERAjeRAJ90nfLvo7Xysm6txYpbmS7rX/BU5wCfSyab
+Y7d/tUWDkbHo+IjleTqEf1A=
+=548X
 -----END PGP SIGNATURE-----
