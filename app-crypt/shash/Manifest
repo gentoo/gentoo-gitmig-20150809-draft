@@ -1,6 +1,16 @@
-MD5 9f77c50b978cc8dcdb0b259aa12ab292 ChangeLog 1800
-MD5 5aa9af147b815004b0cf0a2dfd88124a metadata.xml 445
-MD5 11a5ee7d921824e00764d90981e47f34 shash-0.2.6-r1.ebuild 981
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 03225392f913527b6a11e0ec3df49a5a ChangeLog 1897
 MD5 6a686d232cbb0eeadba51ea32851c8a9 files/0.2.6-manpage-fixes.patch 1451
 MD5 d49dfbc3613b62886594562719104b4a files/digest-shash-0.2.6-r1 63
 MD5 1f217dc9a5042927a1cf690a44da380f files/shash.bash-completion 1003
+MD5 5aa9af147b815004b0cf0a2dfd88124a metadata.xml 445
+MD5 e7107ae3823425514b71bb2cb88578ee shash-0.2.6-r1.ebuild 981
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDz6uOKRy60XGEcJIRAnSQAJwOvaiV8qRzqqk1zwHx/hKzo2RY6wCfcZox
+pFhNvoZecUN5/zKvk+2CINE=
+=eo4n
+-----END PGP SIGNATURE-----
