@@ -1,6 +1,9 @@
 # ChangeLog for net-print/mtink
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.17 2005/10/22 22:01:29 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.18 2006/01/19 19:58:16 genstef Exp $
+
+  19 Jan 2006; Stefan Schweizer <genstef@gentoo.org> mtink-1.0.9.ebuild:
+  modular deps
 
   22 Oct 2005; Luis Medinas <metalgod@gentoo.org> mtink-1.0.5.ebuild,
   -mtink-1.0.8.ebuild, mtink-1.0.9.ebuild:
