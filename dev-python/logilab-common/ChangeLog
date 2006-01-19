@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.19 2006/01/11 16:02:06 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.20 2006/01/19 16:45:37 marienz Exp $
+
+*logilab-common-0.13.0-r1 (19 Jan 2006)
+
+  19 Jan 2006; Marien Zwart <marienz@gentoo.org>
+  +logilab-common-0.13.0-r1.ebuild:
+  Revbump with no ebuild changes to ensure common/__init__.py is from
+  logilab-common, not astng (bug #111970).
 
 *logilab-common-0.13.0 (11 Jan 2006)
 

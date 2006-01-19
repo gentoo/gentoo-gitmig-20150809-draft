@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 661770e5865248cb1ecd9e902a47c951 ChangeLog 3053
+MD5 7206f686a86939a9e0675ac8012dce0e ChangeLog 3293
 MD5 3d47855a9c3abeeaacd705ff63e2499d files/digest-logilab-common-0.10.0 65
 MD5 af0e585126bf2c86e2be032d330c7368 files/digest-logilab-common-0.12.0 65
 MD5 3f1b9bd57f733c35b7a950b575e6f6c2 files/digest-logilab-common-0.13.0 65
+MD5 3f1b9bd57f733c35b7a950b575e6f6c2 files/digest-logilab-common-0.13.0-r1 65
 MD5 229d5c1c48d6d7a481231e941be3abc6 files/digest-logilab-common-0.5.0 63
 MD5 532c5af1f9cb47abbf7283f6ba517826 files/digest-logilab-common-0.9.3 64
 MD5 2ffb9ac6967bf309c84dcfdd346f8d7c files/logilab-common-0.13.0-configuration-help-test-less-strict.patch 776
 MD5 d66ad0d8dd7f9d5712b47aa45cdf7083 files/logilab-common-0.13.0-dbapi-skip-tests.patch 3255
 MD5 a55d8a892bae77097273d31368d8f02c logilab-common-0.10.0.ebuild 723
 MD5 7601e2d066dcdaa761b5e8c7660cc9ce logilab-common-0.12.0.ebuild 773
+MD5 1c704f94fc1632735fd4164ed03ed7be logilab-common-0.13.0-r1.ebuild 1531
 MD5 eb117262a203016d1f7950ac5ad99ad7 logilab-common-0.13.0.ebuild 1528
 MD5 49e47ae120639f7eaed252393cd57f9c logilab-common-0.5.0.ebuild 627
 MD5 3545fd8d38016d3e7aa7ce59ec1ca6a6 logilab-common-0.9.3.ebuild 719
@@ -18,7 +20,7 @@ MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxSwRW78445TWHXcRAiobAJ9ytMrx+5MfFMSAQabaJ1ltlifu7ACbBX5i
-FXcA7+r0d+pKE30TF3aEhwE=
-=WSmE
+iD8DBQFDz8JAW78445TWHXcRAnAQAJ90Vo/QIpn7HE1Dng9SWuQzVK8SWwCeN5kp
+WsWmjTN1KRlTQLMH556Tw+8=
+=K13z
 -----END PGP SIGNATURE-----
