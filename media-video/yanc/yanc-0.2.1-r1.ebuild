@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/yanc-0.2.1-r1.ebuild,v 1.3 2004/07/14 22:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/yanc-0.2.1-r1.ebuild,v 1.4 2006/01/19 00:58:44 spyderous Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 # the dependances are not clear.
 # TODO: Emerge the real compilable yanc's code
 DEPEND=">=sys-apps/sed-4"
-RDEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
