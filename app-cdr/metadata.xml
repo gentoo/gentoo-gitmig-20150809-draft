@@ -28,5 +28,9 @@
 	<longdescription lang="it">
 		La categoria app-cdr contiene programmi per scrivere CD e DVD e lavorare con file .iso .
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-cdr contém software para gravar CDs e DVDs, e para
+		trabalhar com arquivos .iso.
+	</longdescription>
 </catmetadata>
 
