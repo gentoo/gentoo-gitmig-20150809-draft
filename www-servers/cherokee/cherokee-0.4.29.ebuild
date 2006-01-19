@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.29.ebuild,v 1.2 2005/12/27 09:19:48 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.29.ebuild,v 1.3 2006/01/19 07:25:30 bass Exp $
 
 inherit eutils pam
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.0x50.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="ipv6 ssl gnutls static doc pam"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1

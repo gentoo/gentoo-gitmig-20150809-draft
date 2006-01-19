@@ -1,8 +1,17 @@
 # ChangeLog for www-servers/cherokee
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.19 2005/12/27 09:19:48 bass Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.20 2006/01/19 07:25:30 bass Exp $
 
 *cherokee-0.4.29 (13 Nov 2005)
+
+  19 Jan 2006; josé Alberto Suárez López <bass@gentoo.org>
+  -cherokee-0.4.5.ebuild, -cherokee-0.4.17.ebuild,
+  -cherokee-0.4.17.1.ebuild, -cherokee-0.4.19.ebuild,
+  -cherokee-0.4.21.ebuild, -cherokee-0.4.21-r1.ebuild,
+  -cherokee-0.4.22.ebuild, -cherokee-0.4.23.ebuild, -cherokee-0.4.24.ebuild,
+  -cherokee-0.4.24-r1.ebuild, cherokee-0.4.29.ebuild:
+  Remove old ebuilds.
+  Marked 0.4.29 as stable in x86.
 
   27 Dec 2005; josé Alberto Suárez López <bass@gentoo.org>
   +files/cherokee-0.4.25-fix-static.diff, cherokee-0.4.23.ebuild,
