@@ -1,4 +1,4 @@
-MD5 6e2c2fadeaa4e7d4b7075067882b4318 ChangeLog 9282
+MD5 cd426f5fb2930b91ce5800610bc95239 ChangeLog 9462
 MD5 ae95e997f0e9496adfb824ee7f166c5d files/digest-suspend2-sources-2.6.14 301
 MD5 bafcb8b6afdd5ecf198e3ee604a410ee files/digest-suspend2-sources-2.6.14-r10 303
 MD5 92ba5acc4df4d19ceaa8d998eb57738d files/digest-suspend2-sources-2.6.14-r4 303
@@ -9,6 +9,7 @@ MD5 da3f42bad1e36436b75ebe041d853c0a files/digest-suspend2-sources-2.6.14-r8 303
 MD5 be9478be473d2185379b70443b714c65 files/digest-suspend2-sources-2.6.15 302
 MD5 514a1a6b724c2da7d174db76741c1a31 files/digest-suspend2-sources-2.6.15-r1 303
 MD5 57cb3e2f103c1f69e64ea6a48b2526cb files/digest-suspend2-sources-2.6.15-r2 305
+MD5 9fb73e4e5ba2db8c0b482963cb7ff013 files/digest-suspend2-sources-2.6.15-r3 305
 MD5 4c9a2a6532217c3e54a52f6633e33c9f files/suspend2-2.2-rc13-filewriter.patch 5283
 MD5 3a1912556d15f96edb9a356555dadf67 files/suspend2-2.2-rc14-do-correct-init-routine.patch 744
 MD5 185ab2bbe913834d2839b1f010120e5b files/suspend2-2.2-rc14-freeze-fses-in-reverse-mount-order.patch 2487
@@ -41,4 +42,5 @@ MD5 d472627bfcb34566f5b3ef71e410737a suspend2-sources-2.6.14-r8.ebuild 2019
 MD5 a24f87b3199f5a851070c6ce817dc3ca suspend2-sources-2.6.14.ebuild 1758
 MD5 498a52cfb7b6046820f62cfbe3bfd7d3 suspend2-sources-2.6.15-r1.ebuild 2100
 MD5 1ca94d7fe636ae46eec711f47f67e358 suspend2-sources-2.6.15-r2.ebuild 2285
+MD5 bee70b9b48f2fd8713365db32291680f suspend2-sources-2.6.15-r3.ebuild 2285
 MD5 f6140ecc2feb0c046a6d5cb812bce375 suspend2-sources-2.6.15.ebuild 1759
