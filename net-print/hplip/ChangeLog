@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.15 2006/01/15 21:54:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.16 2006/01/19 22:41:47 vanquirius Exp $
+
+*hplip-0.9.7-r3 (19 Jan 2006)
+
+  19 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7-r2.ebuild,
+  +hplip-0.9.7-r3.ebuild:
+  Add net-print/foomatic-filters to RDEPEND for bug 94368. Thanks to Jakub
+  Kocourek <jakub dot kocourek at gmail dot com> and others.
 
   15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.3.ebuild,
   -hplip-0.9.4.ebuild, hplip-0.9.7-r2.ebuild:
