@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 016574796efa4419078707c41d792eb4 ChangeLog 4435
 MD5 5da4a9160b981e4d0f2e64e12a39de37 avahi-0.5.2-r1.ebuild 2085
-MD5 9e8a889b7779b70eccb1c5d02e168892 avahi-0.6.4.ebuild 2714
+MD5 9f77e49e7168653de5c733743cba4abb avahi-0.6.4.ebuild 2715
 MD5 2189d236532868b9ae0d0ae87195acda files/0.6.1-need-dbus-initscript.patch 322
 MD5 317c28eba6516a18140aa8e2cb26d618 files/avahi-0.6.1-no-ipv6.patch 362
 MD5 2770e5c252b0067d578052ad75557319 files/avahi-0.6.3-mono-docs.patch 485
@@ -13,7 +13,7 @@ MD5 b8a99a5b7fa586fe9cabbacc87d88bfe metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDznyABtvusYtCZMsRAkrLAJ9fRs9lHp2FOe/Bw82zqsKdOcNyxQCfTxs4
-PPMF7mnZGviyQwsy4vytujo=
-=idHn
+iD8DBQFDz+HnBtvusYtCZMsRAoJ9AJ9XdryqeakUjDG2nQPyFrn5UMQN2QCfbkxd
+QAK7v2a9grbuI/UZj1cQtIs=
+=qJq4
 -----END PGP SIGNATURE-----
