@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.6 2005/07/13 00:00:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.7 2006/01/19 03:49:43 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/ws/${PN}/${MY_PV}/${SRCFILE}"
 LICENSE="Apache-1.1"
 SLOT="1"
 KEYWORDS="x86 amd64"
-IUSE="debug doc jikes"
+IUSE="debug doc"
 
 RDEPEND=">=virtual/jre-1.4
 		=dev-java/servletapi-2.4*
@@ -33,8 +33,7 @@ RDEPEND=">=virtual/jre-1.4
 		dev-java/sun-javamail-bin"
 DEPEND=">=virtual/jdk-1.4
 		${RDEPEND}
-		>=dev-java/ant-1.6
-		jikes? ( >=dev-java/jikes-1.21 )"
+		>=dev-java/ant-1.6"
 
 S=${WORKDIR}/${MY_P}
 
@@ -66,7 +65,6 @@ src_compile() {
 	use doc && antflags="${antflags} javadocs"
 	use debug && antflags="${antflags} -Ddebug=on"
 	use !debug && antflags="${antflags} -Ddebug=off"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compilation problem"
 }
 

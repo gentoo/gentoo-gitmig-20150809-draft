@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/axis
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.5 2005/05/04 22:18:37 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.6 2006/01/19 03:49:43 nichoj Exp $
+
+  19 Jan 2006; Joshua Nichols <nichoj@gentoo.org> axis-1.2_rc2.ebuild:
+  Disabled jikes, because it makes the build fail.
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> axis-1.2_rc2.ebuild:
   stable on amd64 and x86
