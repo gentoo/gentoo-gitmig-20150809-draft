@@ -32,3 +32,4 @@ emacs
 doc
 xmms
 lm_sensors
+firebird
