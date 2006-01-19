@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.0.0-r1.ebuild,v 1.1 2006/01/19 15:35:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.0.0-r1.ebuild,v 1.2 2006/01/19 17:50:03 nattfodd Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ SRC_URI="http://www.zeroc.com/download/Ice/3.0/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="readline test"
+IUSE="readline test debug"
 
-DEPEND="readline? ( sys-libs/ncurses
+DEPEND="ncurses? ( sys-libs/ncurses
 				   sys-libs/readline )
 		test? ( >=dev-lang/python-2.2 )
 		>=sys-libs/db-4.3.29
@@ -45,15 +45,14 @@ src_unpack() {
 		${S}/config/Make.rules || die "Failed to set no readline"
 	fi
 
+	if ! use debug; then
+		sed -i -e "s:#OPTIMIZE:OPTIMIZE:" \
+		${S}/config/Make.rules || die "Failed to remove debug"
+	fi
+
 	sed -i -e \
 	"s:.*CXXFLAGS[^\+]*\=\s:CXXFLAGS = ${CXXFLAGS} :g" \
 	${S}/config/Make.rules.Linux || die "CXXFLAGS patching failed!"
-
-	for files in ${S}/src/Freeze*/*.{h,cpp}
-	do
-		sed -i -e "s:db_cxx\.h:db4.3/db_cxx\.h:g" \
-		${files} || die "Failed to patch db headers."
-	done
 }
 
 src_install() {

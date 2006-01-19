@@ -1,28 +1,5 @@
---- config/Make.rules.old	2006-01-19 21:47:21.000000000 +0900
-+++ config/Make.rules	2006-01-19 14:13:37.000000000 +0900
-@@ -12,7 +12,7 @@
- # if it does not exist.
- #
- 
--prefix			= /opt/Ice-$(VERSION)
-+prefix			= $(DESTDIR)/usr
- 
- #
- # Define OPTIMIZE as yes if you want to build with
-@@ -154,9 +154,9 @@
- endif
- 
- install_includedir	= $(prefix)/include
--install_slicedir	= $(prefix)/slice
-+install_slicedir	= $(prefix)/share/ice-$(VERSION)/slice
- install_schemadir	= $(prefix)/schema
--install_docdir		= $(prefix)/doc
-+install_docdir		= $(prefix)/share/doc/ice-$(VERSION)
- 
- INSTALL			= cp -fp
- INSTALL_PROGRAM		= ${INSTALL}
---- Makefile.old	2006-01-19 05:24:42.000000000 +0900
-+++ Makefile	2006-01-19 13:37:03.000000000 +0900
+--- Ice-3.0.0/Makefile.old	2006-01-19 05:24:42.000000000 +0900
++++ Ice-3.0.0/Makefile	2006-01-19 13:37:03.000000000 +0900
 @@ -19,7 +19,7 @@
  	@if test ! -d $(prefix) ; \
  	then \
@@ -52,3 +29,35 @@
  
  clean::
  	@if test -d doc ; \
+--- Ice-3.0.0/config/Make.rules.old	2006-01-19 19:27:15.000000000 +0100
++++ Ice-3.0.0/config/Make.rules	2006-01-19 19:27:28.000000000 +0100
+@@ -12,7 +12,7 @@
+ # if it does not exist.
+ #
+ 
+-prefix			= /opt/Ice-$(VERSION)
++prefix			= $(DESTDIR)/usr
+ 
+ #
+ # Define OPTIMIZE as yes if you want to build with
+@@ -154,9 +154,9 @@
+ endif
+ 
+ install_includedir	= $(prefix)/include
+-install_slicedir	= $(prefix)/slice
++install_slicedir	= $(prefix)/share/ice-$(VERSION)/slice
+ install_schemadir	= $(prefix)/schema
+-install_docdir		= $(prefix)/doc
++install_docdir		= $(prefix)/share/doc/ice-$(VERSION)
+ 
+ INSTALL			= cp -fp
+ INSTALL_PROGRAM		= ${INSTALL}
+@@ -212,7 +212,7 @@
+     DB_FLAGS		= -I$(DB_HOME)/include
+     DB_LIBS		= -L$(DB_HOME)/$(libsubdir) -ldb_cxx
+ else
+-    DB_FLAGS		=
++    DB_FLAGS		= -I/usr/include/db4.3
+     DB_LIBS		= -ldb_cxx
+ endif
+ 
