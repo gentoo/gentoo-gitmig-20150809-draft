@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/boo
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.10 2005/11/25 22:37:59 latexer Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.11 2006/01/19 05:40:36 latexer Exp $
+
+  19 Jan 2006; Peter Johanson <latexer@gentoo.org> -boo-0.5.3.1544.ebuild,
+  -boo-0.5.4.1629.ebuild, -boo-0.5.5.1651.ebuild, -boo-0.6.0.1858.ebuild,
+  -boo-0.7.0.1921.ebuild, boo-0.7.5.2013.ebuild:
+  Force building against mono-1.0 nant profile
 
 *boo-0.7.5.2013 (25 Nov 2005)
 

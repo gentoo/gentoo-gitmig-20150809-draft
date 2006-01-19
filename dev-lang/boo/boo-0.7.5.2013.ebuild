@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013.ebuild,v 1.1 2005/11/25 22:37:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013.ebuild,v 1.2 2006/01/19 05:40:36 latexer Exp $
 
 inherit mono fdo-mime eutils
 
@@ -37,12 +37,12 @@ src_unpack() {
 }
 
 src_compile() {
-	LC_ALL="C" LANG="C" nant -D:install.prefix=/usr || die
+	LC_ALL="C" LANG="C" nant -t:mono-1.0 -D:install.prefix=/usr || die
 }
 
 src_install() {
 	LC_ALL="C" LANG="C" nant install \
-		-D:install.destdir=${D} -D:install.prefix=/usr || die
+		-D:install.destdir=${D} -t:mono-1.0 -D:install.prefix=/usr || die
 }
 
 pkg_postinst() {
