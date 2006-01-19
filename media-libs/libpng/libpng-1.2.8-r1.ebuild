@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8-r1.ebuild,v 1.2 2005/12/23 23:14:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8-r1.ebuild,v 1.3 2006/01/19 19:53:52 blubb Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs multilib
 
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
@@ -40,6 +40,9 @@ src_unpack() {
 		-e "/^LIBPATH=/s:/lib:/$(get_libdir):" \
 		-e 's:mkdir:mkdir -p:' \
 		${makefilein} > Makefile || die
+
+	sed -i -e "s:libdir=\${exec_prefix}/lib:libdir=/usr/$(get_libdir):" \
+		scripts/${PN}.pc.in || die
 }
 
 src_compile() {
