@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.4 2005/12/25 15:40:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.5 2006/01/19 04:18:17 joshuabaergen Exp $
 
 SNAPSHOT="yes"
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 	x11-proto/compositeproto
 	x11-proto/resourceproto
 	x11-proto/recordproto"
+LICENSE="${LICENSE} GLX SGI-B-1.1 MIT"
 
 # Strip off the version
 S="${WORKDIR}/${MY_P%%-[0-9]*}"
