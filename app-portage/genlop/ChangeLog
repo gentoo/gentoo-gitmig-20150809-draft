@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.35 2005/08/24 09:40:18 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.36 2006/01/19 00:05:25 mcummings Exp $
+
+  19 Jan 2006; Michael Cummings <mcummings@gentoo.org> genlop-0.30.5.ebuild:
+  Marking stable for x86 sparc, bug 117908
 
 *genlop-0.30.5 (24 Aug 2005)
 
