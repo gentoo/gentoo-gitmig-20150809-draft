@@ -1,6 +1,11 @@
 # ChangeLog for app-office/imposter
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.8 2005/10/27 16:35:54 suka Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.9 2006/01/19 16:52:41 suka Exp $
+
+  19 Jan 2006; Andreas Proschofsky <suka@gentoo.org> imposter-0.2.ebuild,
+  imposter-0.3.ebuild:
+  No need to depend on virtual/x11, gtk+ does that for us. Also fixes modular
+  X deps.
 
 *imposter-0.3 (27 Oct 2005)
 

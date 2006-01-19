@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/imposter-0.2.ebuild,v 1.6 2005/01/01 15:34:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/imposter-0.2.ebuild,v 1.7 2006/01/19 16:52:41 suka Exp $
 
 DESCRIPTION="Imposter is a standalone viewer for the presentations created by OpenOffice.org Impress software"
 HOMEPAGE="http://imposter.sourceforge.net/"
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 IUSE=""
-DEPEND="virtual/x11
-	dev-libs/atk
+DEPEND="dev-libs/atk
 	x11-libs/pango
 	dev-libs/glib
 	dev-util/pkgconfig

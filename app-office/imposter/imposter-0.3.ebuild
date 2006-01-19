@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/imposter-0.3.ebuild,v 1.1 2005/10/27 16:35:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/imposter-0.3.ebuild,v 1.2 2006/01/19 16:52:41 suka Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 IUSE="iksemel"
-DEPEND="virtual/x11
-	dev-libs/atk
+DEPEND="dev-libs/atk
 	x11-libs/pango
 	dev-libs/glib
 	dev-util/pkgconfig
