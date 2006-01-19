@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2.ebuild,v 1.1 2005/11/02 15:07:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2.ebuild,v 1.2 2006/01/19 11:29:06 ka0ttic Exp $
 
 inherit bash-completion
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="debug doc ncurses test"
 
-RDEPEND=">=dev-cpp/libherdstat-0.1.1"
+RDEPEND="~dev-cpp/libherdstat-0.1.1"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-util/pkgconfig
