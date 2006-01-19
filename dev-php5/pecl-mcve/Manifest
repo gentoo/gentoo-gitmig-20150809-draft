@@ -1,4 +1,4 @@
-MD5 d45000d9a3cde907464c6386a19743a7 ChangeLog 987
+MD5 bb977b52dbbc741da82902474e82d9f7 ChangeLog 1083
 MD5 c694fb2c7dfd99fef10620b31b9d9073 files/digest-pecl-mcve-5.2.0 58
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 c3b091419cb45d48fa83a5cd371fe82b pecl-mcve-5.2.0.ebuild 783
+MD5 5cee42680df4bd73d95fd2174c7b5e1b pecl-mcve-5.2.0.ebuild 783
