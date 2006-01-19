@@ -1,6 +1,16 @@
-MD5 da9f1c498d1f89d41160d0d7499f1c80 libmoe-1.5.8.ebuild 1009
-MD5 8f5989c42fc8735e81255dc3df7e109d ChangeLog 1727
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 6bcc239fbd5eaaddd0112d2b0a9f9289 libmoe-1.5.8-r1.ebuild 865
-MD5 f70d51adb730402fb0ed8b46d24a5e01 files/digest-libmoe-1.5.8-r1 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3240a74dab64a16ac1d8a6a28401db6d ChangeLog 1829
 MD5 f70d51adb730402fb0ed8b46d24a5e01 files/digest-libmoe-1.5.8 65
+MD5 f70d51adb730402fb0ed8b46d24a5e01 files/digest-libmoe-1.5.8-r1 65
+MD5 3edbadabea45a1a5e0b94b037156c400 libmoe-1.5.8-r1.ebuild 867
+MD5 da9f1c498d1f89d41160d0d7499f1c80 libmoe-1.5.8.ebuild 1009
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDz+5xub4+zaPCR/oRAslBAJ4yBGDuFFYmm0DQ0yf5aCMScQzALACglcHp
+/Wmjqbj6zddzRnbnvGg54tI=
+=+fbm
+-----END PGP SIGNATURE-----
