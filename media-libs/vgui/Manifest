@@ -1,4 +1,6 @@
-MD5 ea7cf8bc706cd7c5010fe259b39abd4f ChangeLog 713
+MD5 ce9f8c4442ce97e827fe3c7d59f9fac7 ChangeLog 846
 MD5 c9d6203cfe71070013d566d835146f74 files/digest-vgui-1.90a 122
+MD5 c9d6203cfe71070013d566d835146f74 files/digest-vgui-1.90a-r1 122
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 49c796adb7fd087d452bfef6b19e6c37 vgui-1.90a-r1.ebuild 1964
 MD5 81ce15216079f8361fa89bf535509732 vgui-1.90a.ebuild 1786

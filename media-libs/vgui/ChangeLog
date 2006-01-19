@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/vgui
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.5 2005/12/12 09:02:54 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.6 2006/01/19 08:24:37 robbat2 Exp $
+
+*vgui-1.90a-r1 (19 Jan 2006)
+
+  19 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> +vgui-1.90a-r1.ebuild:
+  Fix deps for Modular-X.
 
   12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Add metadata.xml
