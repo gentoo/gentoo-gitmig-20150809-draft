@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-dtd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.47 2005/09/21 18:39:41 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.48 2006/01/19 11:41:07 cryos Exp $
+
+  19 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  docbook-sgml-dtd-4.4.ebuild:
+  Stable on amd64.
 
   21 Sep 2005; Fabian Groffen <grobian@gentoo.org>
   docbook-sgml-dtd-4.4.ebuild:
