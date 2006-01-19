@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.20 2006/01/03 21:59:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.21 2006/01/19 15:34:33 dang Exp $
+
+  19 Jan 2006; <dang@gentoo.org> evince-0.4.0-r3.ebuild:
+  Evince deps on ghostscript to process postscript files. Bug #119103
 
 *evince-0.4.0-r3 (03 Jan 2006)
 
