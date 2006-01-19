@@ -1,4 +1,6 @@
-MD5 21d034d7c09d22e7dabf621ad65e7c5a ChangeLog 2971
+MD5 4a2e7e473c7ff9107de6dd96e00443d4 ChangeLog 3081
 MD5 ca3f484c64cdb795e9d87f40d09f02bd biopython-1.40b.ebuild 796
+MD5 0e8a0e66a4e14146021c927ecaf2949a biopython-1.41.ebuild 848
 MD5 d246b958fac8cca5b9ea50119eedbc50 files/digest-biopython-1.40b 68
+MD5 93cd219847a378a0505a2ea5cb150d3b files/digest-biopython-1.41 67
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
