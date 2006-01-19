@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-012.ebuild,v 1.2 2006/01/12 13:07:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-012.ebuild,v 1.3 2006/01/19 17:40:39 brix Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="debug static staticsocket udev"
-RDEPEND="!virtual/pcmcia
-		>=sys-fs/sysfsutils-1.2.0-r1
+RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
 		>=sys-apps/module-init-tools-3.2_pre4
 		udev? ( >=sys-fs/udev-068 )
 		!udev? ( >=sys-apps/hotplug-20040920 )"
@@ -23,7 +22,6 @@ DEPEND="${RDEPEND}
 		dev-util/yacc
 		sys-devel/flex
 		sys-apps/sed"
-PROVIDE="virtual/pcmcia"
 
 CONFIG_CHECK="~PCMCIA"
 ERROR_PCMCIA="${P} requires 16-bit PCMCIA support (CONFIG_PCMCIA)"
