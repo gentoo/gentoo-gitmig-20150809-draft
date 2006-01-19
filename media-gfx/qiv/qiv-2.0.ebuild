@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.0.ebuild,v 1.2 2005/07/28 21:10:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.0.ebuild,v 1.3 2006/01/19 18:28:52 vanquirius Exp $
 
-MY_P=${P/_/-}
-S=${WORKDIR}/${P%%_*}
+MY_P="${P/_/-}"
+S="${WORKDIR}/${P%%_*}"
 DESCRIPTION="Quick Image Viewer"
 SRC_URI="http://www.kdown1.de/files/${MY_P}-src.tgz"
 HOMEPAGE="http://www.klografx.net/qiv/"
@@ -16,16 +16,19 @@ IUSE="xinerama"
 DEPEND="media-libs/libpng
 	>=media-libs/tiff-3.5.5
 	>=media-libs/imlib-1.9.10
-	virtual/x11"
+	|| (
+	( >=x11-libs/libX11-1.0.0
+	>=x11-proto/xineramaproto-1.1.2 )
+	virtual/x11 )"
 
 src_compile() {
 	use xinerama && sed -i "s:# GTD_XINERAMA = -DGTD_XINERAMA:GTD_XINERAMA = -DGTD_XINERAMA:" Makefile
-	make || die
+	emake || die
 }
 
 src_install () {
 	into /usr
 	dobin qiv
 	doman qiv.1
-	dodoc README*
+	dodoc README{,.TODO,.CHANGES}
 }
