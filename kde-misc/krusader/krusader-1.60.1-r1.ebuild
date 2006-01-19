@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.1-r1.ebuild,v 1.1 2005/11/29 15:58:36 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.1-r1.ebuild,v 1.2 2006/01/19 12:00:51 cryos Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/krusader/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="javascript kde"
 # kde: adds support for Konqueror's right-click actions
 
