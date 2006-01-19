@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r1.ebuild,v 1.1 2006/01/17 14:02:10 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r1.ebuild,v 1.2 2006/01/19 12:19:46 cryos Exp $
 
 inherit multilib java versionator
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.blackdown.org"
 
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="nsplugin"
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
