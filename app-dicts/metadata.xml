@@ -23,5 +23,9 @@
 	<longdescription lang="it">
 		La categoria app-dicts contiene pacchetti di dizionari ed elenchi di parole.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-dicts contém pacotes relacionados a dicionários e
+		listas de palavras.
+	</longdescription>
 </catmetadata>
 
