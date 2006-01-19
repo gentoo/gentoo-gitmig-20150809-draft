@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.39 2006/01/13 18:47:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.40 2006/01/19 04:38:27 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -46,8 +46,11 @@ SRC_URI="http://xorg.freedesktop.org/releases/X11R7.0/src/everything/${P}.tar.bz
 	http://xorg.freedesktop.org/releases/X11R7.0-RC2/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC1/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC0/everything/${P}.tar.bz2"
-LICENSE="X11"
 SLOT="0"
+
+# Set the license for the package. This can be overridden by setting
+# LICENSE after the inherit.
+LICENSE=${PN}
 
 # Set up shared dependencies
 if [[ -n "${SNAPSHOT}" ]]; then
