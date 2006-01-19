@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-imagick/PECL-imagick-0.9.11.ebuild,v 1.3 2006/01/19 06:49:39 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-imagick/PECL-imagick-0.9.11.ebuild,v 1.4 2006/01/19 11:39:15 chtekk Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_INI="yes"
@@ -19,8 +19,8 @@ DEPEND="${DEPEND}
 		graphicsmagick? ( >=media-gfx/graphicsmagick-1.0.0 )"
 
 src_compile () {
-	my_conf="--with-imagick"
-	use graphicsmagick && my_conf="${my_conf} --with-imagick-gm"
+	myconf="--with-imagick"
+	use graphicsmagick && myconf="${myconf} --with-imagick-gm"
 	php-ext-pecl_src_compile
 }
 
