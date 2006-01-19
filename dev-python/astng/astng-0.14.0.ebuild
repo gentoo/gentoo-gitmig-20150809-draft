@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.14.0.ebuild,v 1.1 2006/01/11 16:04:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.14.0.ebuild,v 1.2 2006/01/19 16:46:17 marienz Exp $
 
 inherit distutils
 
@@ -12,8 +12,17 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
-DEPEND=">=dev-lang/python-2.1"
+DEPEND=">=dev-lang/python-2.1
+	>=dev-python/logilab-common-0.13-r1"
 
+
+src_install() {
+	distutils_src_install
+	python_version
+	# we need to remove this file because it collides with the one
+	# from logilab-common (which we depend on).
+	rm ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/logilab/__init__.py
+}
 
 src_test() {
 	# The tests will not work properly from the source dir, so do a
