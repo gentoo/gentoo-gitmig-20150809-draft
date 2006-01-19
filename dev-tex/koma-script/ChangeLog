@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/koma-script
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.12 2004/12/28 21:30:54 absinthe Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.13 2006/01/19 20:49:10 ehmsen Exp $
+
+  19 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> ChangeLog:
+  Version bumped. Thanks to Kai Sommer <gentoo@sokai.name>, closing bug #114045.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   koma-script-20040616.ebuild:
