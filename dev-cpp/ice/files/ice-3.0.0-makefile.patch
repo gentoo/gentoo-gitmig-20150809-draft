@@ -24,8 +24,8 @@
  	fi
 -	$(call installdata,ICE_LICENSE,$(prefix))
 -	$(call installdata,LICENSE,$(prefix))
-+	$(call install_docdir,ICE_LICENSE,$(prefix))
-+	$(call install_docdir,LICENSE,$(prefix))
++	$(call installdata,ICE_LICENSE,$(install_docdir))
++	$(call installdata,LICENSE,$(install_docdir))
  
  clean::
  	@if test -d doc ; \
