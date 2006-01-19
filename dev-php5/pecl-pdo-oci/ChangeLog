@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-pdo-oci
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/ChangeLog,v 1.3 2005/12/18 01:42:49 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/ChangeLog,v 1.4 2006/01/19 21:59:10 nelchael Exp $
+
+  19 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  pecl-pdo-oci-1.0.ebuild:
+  Stable on x86.
 
 *pecl-pdo-oci-1.0 (18 Dec 2005)
 
