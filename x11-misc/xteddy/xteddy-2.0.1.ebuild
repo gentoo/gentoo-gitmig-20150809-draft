@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/xteddy-2.0.1.ebuild,v 1.2 2005/11/07 17:31:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/xteddy-2.0.1.ebuild,v 1.3 2006/01/19 19:27:25 ticho Exp $
 
 DESCRIPTION="A cuddly teddy bear (or other image) for your X desktop"
 HOMEPAGE="http://www.itn.liu.se/~stegu/xteddy/"
@@ -11,8 +11,20 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	media-libs/imlib"
+RDEPEND="|| ( ( x11-libs/libX11
+				x11-libs/libSM
+				x11-libs/libICE
+				media-libs/imlib
+			)
+			virtual/x11
+		)"
+
+DEPEND="${RDEPEND}
+		|| ( ( x11-proto/xextproto
+				x11-proto/xproto
+			)
+			virtual/x11
+		)"
 
 src_compile() {
 	econf || die "econf failed"

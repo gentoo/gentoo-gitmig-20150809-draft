@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xteddy
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.2 2005/11/07 17:31:57 nelchael Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.3 2006/01/19 19:27:25 ticho Exp $
+
+  19 Jan 2006; Andrej Kacian <ticho@gentoo.org> xteddy-2.0.1.ebuild:
+  Fixed deps to support modular X.
 
   07 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xteddy-2.0.1.ebuild:
   Stable on x86.

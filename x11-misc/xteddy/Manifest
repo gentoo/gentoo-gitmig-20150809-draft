@@ -1,4 +1,14 @@
-MD5 70944612cf4656b4ac6eeca812c13c92 ChangeLog 432
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 019797a3eaf7ca1b104f8c2dc66f5311 ChangeLog 534
 MD5 ce3865f92a97ebfdd820bdbc306c4839 files/digest-xteddy-2.0.1 64
 MD5 757c624ead05cb380f3294ab4d550ddc metadata.xml 616
-MD5 0f2f0c536a06f6622506d17a82cb15d0 xteddy-2.0.1.ebuild 665
+MD5 3bf04a2896edec1a3c6ac5459d7bebbd xteddy-2.0.1.ebuild 835
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDz+gsQlM6RnzZP+IRAmdmAJ9WAfgB4rFQltJD9c25+vHOTWB6NwCgrKax
+16kERAMxiM+1dGfqGkQ3Occ=
+=avS/
+-----END PGP SIGNATURE-----
