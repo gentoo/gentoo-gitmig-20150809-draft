@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.2.ebuild,v 1.2 2005/11/14 05:05:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.2.ebuild,v 1.3 2006/01/19 06:05:25 latexer Exp $
 
 inherit libtool eutils flag-o-matic toolchain-funcs
 
@@ -22,6 +22,7 @@ RDEPEND="|| ( (	x11-libs/libXrender
 	virtual/x11 )
 	dev-libs/glib
 	media-libs/freetype
+	media-libs/fontconfig
 	tiff? ( media-libs/tiff )
 	gif? ( >=media-libs/giflib-4.1.3 )
 	jpeg? ( media-libs/jpeg )

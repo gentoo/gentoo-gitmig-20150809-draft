@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.48 2006/01/15 07:07:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.49 2006/01/19 06:05:25 latexer Exp $
+
+  19 Jan 2006; Peter Johanson <latexer@gentoo.org>
+  libgdiplus-1.1.9.2.ebuild, libgdiplus-1.1.10.ebuild,
+  libgdiplus-1.1.11.ebuild, libgdiplus-1.1.13.ebuild:
+  Add missing fontconfig dependancy. See bug #119375.
 
 *libgdiplus-1.1.13 (15 Jan 2006)
 
