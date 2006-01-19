@@ -1,0 +1,14 @@
+diff -urN scilab-3.1.1.orig/routines/gzvt2/Makefile.in scilab-3.1.1/routines/gzvt2/Makefile.in
+--- scilab-3.1.1.orig/routines/gzvt2/Makefile.in	2004-10-05 13:45:17.000000000 -0700
++++ scilab-3.1.1/routines/gzvt2/Makefile.in	2006-01-18 17:24:20.000000000 -0800
+@@ -5,8 +5,8 @@
+ 
+ ZTERM_LDFLAGS= `pkg-config libzvt-2.0 --cflags --libs` -DHAS_I18N
+ ZTERM_CFLAGS= `pkg-config libzvt-2.0 --cflags ` -DHAS_I18N
+-VTE_LDFLAGS= `pkg-config vte --cflags --libs` 
+-VTE_CFLAGS=  `pkg-config vte --cflags` 
++VTE_LDFLAGS= `pkg-config vte --cflags --libs` `pkg-config gtk+-2.0 --cflags --libs`
++VTE_CFLAGS=  `pkg-config vte --cflags` `pkg-config gtk+-2.0 --cflags`
+ 
+ TERM_NAME=@TERM_NAME@
+ LDFLAGS=$(@TERM_LDFLAGS@)

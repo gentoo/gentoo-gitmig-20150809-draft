@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1-r3.ebuild,v 1.2 2006/01/12 23:21:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1-r3.ebuild,v 1.3 2006/01/19 20:23:51 spyderous Exp $
 
 inherit eutils fortran
 
@@ -13,8 +13,7 @@ SLOT="0"
 IUSE="ifc ocaml tcltk gtk Xaw3d"
 KEYWORDS="~x86 ~ppc"
 
-RDEPEND="virtual/x11
-	virtual/blas
+RDEPEND="virtual/blas
 	virtual/lapack
 	sys-libs/ncurses
 	gtk? (
@@ -54,6 +53,9 @@ src_unpack() {
 
 	# fix scilab script causing problems (#67905)
 	# epatch ${FILESDIR}/${P}-initialization.patch
+
+	# Doesn't include the directories etc for gtk
+	epatch ${FILESDIR}/gzvt2-add-gtk2-flags.patch
 }
 
 src_compile() {
