@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4883 2006/01/19 17:58:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4884 2006/01/19 18:34:06 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andreas Proschofsky <suka@gentoo.org> (19 Jan 2006)
+# Up for removal, use openoffice-bin instead
+app-office/openoffice-ximian-bin
 
 # Marcelo Goes <vanquirius@gentoo.org> (19 Jan 2006)
 # Masked for testing
