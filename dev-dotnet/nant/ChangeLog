@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/nant
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.5 2005/06/03 22:03:25 dholm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.6 2006/01/19 17:15:58 latexer Exp $
+
+*nant-0.85_rc3-r1 (19 Jan 2006)
+
+  19 Jan 2006; Peter Johanson <latexer@gentoo.org> +nant-0.85_rc3-r1.ebuild:
+  Add a revision bump to fix bug #113712. This is actually a nightly snapshot
+  uploaded to gentoo mirrors, but ebuild naming conventions left me with no
+  choice but to call this an -r1.
 
   03 Jun 2005; David Holm <dholm@gentoo.org> nant-0.85_rc3.ebuild:
   Added to ~ppc.
