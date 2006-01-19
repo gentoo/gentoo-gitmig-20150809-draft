@@ -1,4 +1,4 @@
-MD5 e15d9f9a931d6d378737e50817874633 ChangeLog 864
+MD5 bbecf8185b2bd21fa6f682a9ab8acd0d ChangeLog 957
 MD5 8e622d17c5cd06fa9b2da272281982b0 files/digest-pecl-zip-1.0 54
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 56531549c16b11bb902b2f3bfeedbefa pecl-zip-1.0.ebuild 506
+MD5 e9727362d27d055dc052d5cb80e11fed pecl-zip-1.0.ebuild 506

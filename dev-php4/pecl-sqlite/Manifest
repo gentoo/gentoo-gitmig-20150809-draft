@@ -1,4 +1,4 @@
-MD5 5692a9672dba8f0d81cc396bf56e5850 ChangeLog 1124
+MD5 a24bad24e8e20eb73cb5263f34c2a818 ChangeLog 1224
 MD5 b85e19ab14d10f3db890b786a1bf2111 files/digest-pecl-sqlite-1.0.3 61
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 a3349ef20ae9eed5716bce2fb8472415 pecl-sqlite-1.0.3.ebuild 591
+MD5 1ebbb3156e7d527a07af0988136f6742 pecl-sqlite-1.0.3.ebuild 591
