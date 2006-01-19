@@ -1,4 +1,4 @@
-MD5 2f6ca7b43fedcf0933fed2987dc50393 ChangeLog 9754
+MD5 be4e354e37e189e98c8bd370a02bf490 ChangeLog 9854
 MD5 312fdc938b56dedf0fab04efe6266cb1 files/digest-gdesklets-core-0.33.1 131
 MD5 8293012469f5859ebfb450e81f87a165 files/digest-gdesklets-core-0.34.3-r1 131
 MD5 66ab1d1c9445bb382edafdb15eee161d files/digest-gdesklets-core-0.35 129
@@ -15,7 +15,7 @@ MD5 de113ac26b6f1d0691a8d1e5d90df4a8 gdesklets-core-0.33.1.ebuild 2426
 MD5 6da2bfb9278943ed16c468a86085bdc0 gdesklets-core-0.34.3-r1.ebuild 2379
 MD5 ce26b81fda37597674119e6d50294f74 gdesklets-core-0.35-r1.ebuild 2273
 MD5 759a9f87f0c18bd724f0c4cc6f13aa12 gdesklets-core-0.35.1-r1.ebuild 2275
-MD5 08f930547b1ed2cfa8ca73e3f5e4ebb0 gdesklets-core-0.35.2-r1.ebuild 2509
+MD5 39cff9849adfcea0f682aab052eea09f gdesklets-core-0.35.2-r1.ebuild 2504
 MD5 dfd30219f5f56a0fc3300bd64b2b6a52 gdesklets-core-0.35.3.ebuild 2559
 MD5 0ed07665a552a388295ad2438f2fd925 gdesklets-core-0.35.ebuild 2067
 MD5 a281adab3a8905e5d93c69b9ec155847 gdesklets-core-0.35_rc1-r1.ebuild 2144
