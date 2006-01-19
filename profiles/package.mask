@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4882 2006/01/19 15:56:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4883 2006/01/19 17:58:25 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (19 Jan 2006)
+# Masked for testing
+>=net-analyzer/dsniff-2.4_beta1
 
 # George Shapovalov (19 Jan 2006)
 # Matching version of gcc is no longer in portage.
