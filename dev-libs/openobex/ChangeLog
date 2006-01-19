@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openobex
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.24 2005/12/01 04:08:35 tgall Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.25 2006/01/19 18:35:51 mrness Exp $
+
+  19 Jan 2006; Alin Nastac <mrness@gentoo.org> openobex-1.0.0.ebuild,
+  openobex-1.0.1.ebuild:
+  Remove bogus glib dependency (#119485).
 
   30 Nov 2005; Tom Gall <tgall@gentoo.org> openobex-1.0.1.ebuild:
   stable on ppc64

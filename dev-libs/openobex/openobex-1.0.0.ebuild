@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.0.ebuild,v 1.8 2005/04/21 20:04:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.0.ebuild,v 1.9 2006/01/19 18:35:51 mrness Exp $
 
 IUSE=""
 
@@ -10,9 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/openobex"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64"
-
-DEPEND=">=dev-libs/glib-1.2"
+KEYWORDS="amd64 sparc x86"
 
 src_compile() {
 	econf || die
