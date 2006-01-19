@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/stardict-jmdict-en-ja
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/ChangeLog,v 1.7 2005/08/02 20:19:24 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/ChangeLog,v 1.8 2006/01/19 13:08:53 truedfx Exp $
+
+*stardict-jmdict-en-ja-2.4.2-r1 (19 Jan 2006)
+
+  19 Jan 2006; Harald van Dĳk <truedfx@gentoo.org>
+  -stardict-jmdict-en-ja-2.4.2.ebuild,
+  +stardict-jmdict-en-ja-2.4.2-r1.ebuild:
+  Actually install files
 
   02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   stardict-jmdict-en-ja-2.4.2.ebuild:
