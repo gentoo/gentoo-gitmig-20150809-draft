@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.1 2006/01/11 04:57:04 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.2 2006/01/19 18:01:59 corsair Exp $
 
-inherit eutils apache-module toolchain-funcs
+inherit eutils apache-module toolchain-funcs gnuconfig
 
 MY_P=${PN/-core}-${PV/_}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
@@ -53,6 +53,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/2.x-series-nsca.patch
 	gunzip -c ${FILESDIR}/nagios-2.0b.cfg-sample.gz > ./nagios.cfg-sample
+	gnuconfig_update
 }
 
 src_compile() {
