@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/hexcalc-1.11.ebuild,v 1.3 2005/12/08 01:08:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/hexcalc-1.11.ebuild,v 1.4 2006/01/19 01:07:21 spyderous Exp $
 
 DESCRIPTION="A simple hex calculator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/"
@@ -10,7 +10,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libXaw virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-misc/imake virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 
