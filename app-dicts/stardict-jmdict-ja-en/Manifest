@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a293caf336a973a8d56840bb184a46d ChangeLog 1112
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 6c93094d777396f74793b62083ad2bcf stardict-jmdict-ja-en-2.1.1.ebuild 478
-MD5 6a4ee5956b44c1b2c1ac5df0cf28d7df stardict-jmdict-ja-en-2.4.2-r1.ebuild 592
+MD5 8fe92bebc713ce88c4986cdb4623bfbf ChangeLog 1111
 MD5 581586287dfab0a58207f95a5f53f3bf files/digest-stardict-jmdict-ja-en-2.1.1 77
 MD5 09748aeaec578627158b611dad04c541 files/digest-stardict-jmdict-ja-en-2.4.2-r1 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDz4+LwnQyISwouHwRAhmkAJ9N0Ih3ZRD2025nIGvLKqhJYihSGwCfWiiq
-WMbV6a/V0IF83R/UGJBbHTg=
-=ciiT
------END PGP SIGNATURE-----
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 6c93094d777396f74793b62083ad2bcf stardict-jmdict-ja-en-2.1.1.ebuild 478
+MD5 69fefbe62ab2849f33d87e9d9110a8b9 stardict-jmdict-ja-en-2.4.2-r1.ebuild 594
