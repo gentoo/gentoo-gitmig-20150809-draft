@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3af8c6f6e73d794468bf14832ea42ee0 ChangeLog 810
+MD5 8e0cf866b61ad5a7811544481fe737e6 ChangeLog 913
 MD5 b5cbe5cbac74c77b72e4aecd8903e29e files/digest-hexcalc-1.11 57
-MD5 74d238f6d09533ca641117b618352ee4 hexcalc-1.11.ebuild 580
+MD5 3369035883b31ccfe32b40db85a24d3f hexcalc-1.11.ebuild 663
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDl4eJntT9W3vfTuoRAoDlAJ9u2gH27W/Mb1G5XhipAOwjsnvA8gCgoqeF
-YS4TKF30MriQeAUpx+TZ8F8=
-=t9os
------END PGP SIGNATURE-----
