@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.83 2006/01/05 00:03:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.84 2006/01/19 17:41:44 brix Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -62,7 +62,6 @@ virtual/pager				sys-apps/less
 # directive to phase out pam_stack.
 virtual/pam					>=sys-libs/pam-0.78
 virtual/pbs					sys-cluster/torque
-virtual/pcmcia				sys-apps/pcmcia-cs
 virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-php/mod_php
 virtual/portage				sys-apps/portage
