@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Digest-SHA1
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.29 2005/10/10 07:44:10 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.30 2006/01/19 11:46:14 mcummings Exp $
+
+*Digest-SHA1-2.11 (19 Jan 2006)
+
+  19 Jan 2006; <mcumming@gentoo.org> +Digest-SHA1-2.11.ebuild:
+  Version bump upstream
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org> Digest-SHA1-2.10.ebuild:
   Stable on mips.

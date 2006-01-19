@@ -1,6 +1,18 @@
-MD5 ee18f4cca1b32e4ee5092cf27c7daa17 ChangeLog 3343
-MD5 7074850f22c697761dc6e273ff3300f5 Digest-SHA1-2.07.ebuild 564
-MD5 f40096b0deb71ddba4cc9df144e148eb Digest-SHA1-2.10.ebuild 623
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e2d36896bf50eb739b59d79b520bea8 ChangeLog 3466
+MD5 47be90568faab2a069587c14b689002e Digest-SHA1-2.07.ebuild 564
+MD5 f66f702130c916a3b64d5120fed597d3 Digest-SHA1-2.10.ebuild 625
+MD5 2cd1e08459f17b765be45fc37732b054 Digest-SHA1-2.11.ebuild 635
 MD5 26ff95cfb3c2675e3c843c334a46d2b5 files/digest-Digest-SHA1-2.07 67
 MD5 60acd549a2829d91ed2a1200adc7a0d4 files/digest-Digest-SHA1-2.10 67
+MD5 5243977bdbbeaf618ab0c0faee675c75 files/digest-Digest-SHA1-2.11 67
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDz3wQtG5z4I8BtQoRAvdTAJ984ZoSuDWnKm9jfVsXrkA4x7DgbQCffZLT
+mzRJ5KdxX3tOtgRQFRes1+o=
+=txh5
+-----END PGP SIGNATURE-----
