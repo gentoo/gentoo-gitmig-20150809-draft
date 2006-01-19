@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.0.2.ebuild,v 1.9 2006/01/04 17:20:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.0.2.ebuild,v 1.10 2006/01/19 16:43:03 caleb Exp $
 
 DESCRIPTION="A Qt Interface for coin"
 SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/${P}.tar.gz"
@@ -11,9 +11,7 @@ LICENSE="|| ( GPL-2 PEL )"
 KEYWORDS="~amd64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/opengl
-	<x11-libs/qt-4
+DEPEND="=x11-libs/qt-3*
 	>=media-libs/coin-${PV}"
 
 src_install() {
