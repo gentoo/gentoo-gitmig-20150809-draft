@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4881 2006/01/19 15:33:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4882 2006/01/19 15:56:40 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# George Shapovalov (19 Jan 2006)
+# Matching version of gcc is no longer in portage.
+# New gpc I issued recently avoids this problem (no gcc dep anymore).
+# Older versions will be removed upon stabilization of gpc-20051104
+<=dev-lang/gpc-20050331
 
 # Chris White <chriswhite@gentoo.org> (18 Jan 2006)
 # Package depends on package.mask sys-libs/db
@@ -1255,10 +1261,6 @@ www-client/netscape
 # Before adding for testing ;)
 =dev-libs/apr-1.1.1
 =dev-libs/apr-util-1.1.2
-
-# Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
-# Doesn't build anymore. Asked maintainer to fix or remove it.
-dev-lang/gpc
 
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
