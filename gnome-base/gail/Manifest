@@ -1,4 +1,4 @@
-MD5 605183178ee3e04876c4b7b3f07ddc04 ChangeLog 9242
+MD5 49e4e77f50e8b93b9d142e6c66860f34 ChangeLog 9345
 MD5 6879c3a5683682c41708b230927f69b2 files/digest-gail-1.8.4 63
 MD5 562d367f9ad2501733d08ee5f8a0e684 files/digest-gail-1.8.5 63
 MD5 06ed51b730c82c214d1f968731ca6fe3 files/digest-gail-1.8.6 63
@@ -6,5 +6,5 @@ MD5 f26fd82b1ff1de190d0d387497cdf913 files/digest-gail-1.8.8 63
 MD5 853e82e86bc3aa14811998d519b863c0 gail-1.8.4.ebuild 705
 MD5 6f59d9f4d3f81f9dcfc1afa1270a6530 gail-1.8.5.ebuild 732
 MD5 597a69bbff20784d95bb4e857d7a3b0c gail-1.8.6.ebuild 676
-MD5 ea7b86c379b116765a9ed0b59da6ea33 gail-1.8.8.ebuild 677
+MD5 bb06433aae471a49022f5675a59d43e8 gail-1.8.8.ebuild 675
 MD5 fa390c5d79274a7d4e1e4bc3e945058f metadata.xml 714

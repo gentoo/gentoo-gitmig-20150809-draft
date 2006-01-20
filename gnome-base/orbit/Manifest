@@ -1,4 +1,4 @@
-MD5 d1800355236876af8fc49cb79175b3d2 ChangeLog 5379
+MD5 50e7d91a63d514bb7c961b181b7679fe ChangeLog 5484
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-orbit-0.5.17 66
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-orbit-0.5.17-r1 66
 MD5 66a18f0f92e9cd0f658690bf1e5c862c files/digest-orbit-2.12.2 66
@@ -11,4 +11,4 @@ MD5 208d70f7ad8f8e9d85a148411e00e084 orbit-0.5.17-r1.ebuild 1749
 MD5 6f6fa3795d0324df35315d2215d55248 orbit-0.5.17.ebuild 1650
 MD5 e3a8dc018eb029f302884b2fc80adf56 orbit-2.12.2.ebuild 1017
 MD5 de5762757b63214d7f117d5141114acf orbit-2.12.3.ebuild 1064
-MD5 fec6516c19ae8ef845a84da2f323d6d7 orbit-2.12.4.ebuild 1072
+MD5 2bdf83c482a7ab7fb94dc384e413881c orbit-2.12.4.ebuild 1073
