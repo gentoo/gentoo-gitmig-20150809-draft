@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.9 2005/12/26 15:16:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.0.ebuild,v 1.1 2006/01/20 17:28:15 dang Exp $
 
 inherit eutils gnome2
 
@@ -10,18 +10,18 @@ LICENSE="GPL-2"
 
 # TODO: Use 'gnome' flag instead of 'nautilus'
 IUSE="dbus doc dvi nautilus t1lib tiff"
-# For use.local.desc:
-# app-text/evince:t1lib - Enable Type1 fonts support in .dvi files
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="
-	dvi? ( app-text/tetex )
-	dvi? ( t1lib? ( >=media-libs/t1lib-5.0.0 ) )
+	dvi? (
+		app-text/tetex
+		t1lib? ( >=media-libs/t1lib-5.0.0 )
+	)
 	dbus? ( >=sys-apps/dbus-0.33 )
 	tiff? ( >=media-libs/tiff-3.6 )
-	>=app-text/poppler-0.4.1
+	>=app-text/poppler-bindings-0.5.0
 	>=dev-libs/glib-2
 	>=gnome-base/gnome-vfs-2.0
 	>=gnome-base/libglade-2
@@ -31,7 +31,8 @@ RDEPEND="
 	>=gnome-base/libgnomeui-2.6
 	nautilus? ( >=gnome-base/nautilus-2.10 )
 	>=x11-libs/gtk+-2.8
-	"
+	gnome-base/gnome-keyring
+	virtual/ghostscript"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
@@ -49,15 +50,16 @@ ELTCONF="--portage"
 
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
+		--enable-comics		\
 		$(use_enable dvi)   \
 		$(use_enable t1lib) \
 		$(use_enable dbus)  \
 		$(use_enable tiff)  \
 		$(use_enable nautilus)"
 
-	if ! built_with_use app-text/poppler gtk; then
-		einfo "Please re-emerge app-text/poppler with the gtk USE flag set"
-		die "poppler needs gtk flag set"
+	if ! built_with_use app-text/poppler-bindings gtk; then
+		einfo "Please re-emerge app-text/poppler-bindings with the gtk USE flag set"
+		die "poppler-bindings needs gtk flag set"
 	fi
 }
 
@@ -65,11 +67,8 @@ src_unpack(){
 	unpack "${A}"
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-t1lib_is_t1.patch
 	# Fix .desktop file so menu item shows up
-	epatch ${FILESDIR}/${P}-display-menu.patch
-	# Make tiff really optional
-	epatch ${FILESDIR}/${P}-no-tiff.patch
+	epatch ${FILESDIR}/${PN}-0.4.0-display-menu.patch
 
 	export WANT_AUTOMAKE=1.7
 	automake || die "automake failed"
