@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.5.0.ebuild,v 1.1 2006/01/16 15:10:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.5.0.ebuild,v 1.2 2006/01/20 14:42:11 dsd Exp $
 
 inherit linux-mod eutils
 
@@ -14,10 +14,13 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 MODULE_NAMES="fuse(fs:${S}/kernel)"
+CONFIG_CHECK="@FUSE_FS:fuse"
 BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
 			  fusemoduledir=${ROOT}/lib/modules/${KV_FULL}/fs"
 BUILD_TARGETS="all"
-ECONF_PARAMS="--with-kernel=${KV_OUT_DIR} --enable-kernel-module"
+ECONF_PARAMS="--with-kernel=${KV_OUT_DIR}"
+FUSE_FS_ERROR="We have detected FUSE already built into the kernel.
+We will continue, but we wont build the module this time."
 
 src_unpack() {
 	unpack ${A}

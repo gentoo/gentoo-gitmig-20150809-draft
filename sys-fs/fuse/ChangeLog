@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.37 2006/01/16 15:10:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.38 2006/01/20 14:42:11 dsd Exp $
+
+  20 Jan 2006; Daniel Drake <dsd@gentoo.org> fuse-2.4.2.ebuild,
+  fuse-2.5.0.ebuild:
+  Readd build-on-demand support now that the eclass is fixed. Reported by Derk
+  W te Bokkel in bug #117834
 
 *fuse-2.5.0 (16 Jan 2006)
 
