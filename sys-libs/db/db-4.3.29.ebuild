@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29.ebuild,v 1.1 2005/12/26 06:58:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29.ebuild,v 1.2 2006/01/20 13:19:04 caleb Exp $
 
 inherit eutils gnuconfig db
 
@@ -110,7 +110,7 @@ src_install() {
 	db_src_install_usrlibcleanup
 
 	dodir /usr/sbin
-	mv ${D}/usr/bin/berkeley_db_svc ${D}/usr/sbin/berkeley_db42_svc
+	mv ${D}/usr/bin/berkeley_db_svc ${D}/usr/sbin/berkeley_db43_svc
 
 	if use java; then
 		mkdir -p ${D}/usr/share/db

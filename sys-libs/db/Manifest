@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2bf969112dc6e1918a57d420d90be038 ChangeLog 22854
+MD5 a01b9be70704ecf336e502e5e3b7c162 ChangeLog 22985
 MD5 15e26e1303761aa1b814d1d46f930d74 db-1.85-r1.ebuild 1435
 MD5 a0435de0fd1dacc747f315502eda91bc db-1.85-r2.ebuild 1467
 MD5 f63d1e3bb30c46a75c47bd3460a1703a db-1.85-r3.ebuild 1221
@@ -16,8 +13,8 @@ MD5 3316d306f09820f7daaeed2a6b179eef db-4.2.52_p1.ebuild 2836
 MD5 1c490c034443f2905f855abf0722fff5 db-4.2.52_p2-r1.ebuild 2991
 MD5 fa0e2188b8f14d47bc85775d74115c76 db-4.2.52_p2.ebuild 2958
 MD5 5abdbb4f1913b81faff09fed8666411c db-4.2.52_p4.ebuild 3191
-MD5 74f280853789512d578b7cb488c28733 db-4.3.27.ebuild 2917
-MD5 8c77d6ee368cc8a9a215062609541af7 db-4.3.29.ebuild 3092
+MD5 5af00753644a8ec5ab33b55732b2f0ac db-4.3.27.ebuild 2914
+MD5 7968d65cc2c60203feef27411e84752f db-4.3.29.ebuild 3090
 MD5 86aca9a49a082dc56e4103ec8112f344 files/db-1.85-gentoo-paths.patch 684
 MD5 194200b3295b95b46b4564980af27f1f files/db-3.2.9-fix-dep-link.patch 1005
 MD5 6eb8be5f7803acaa5bcfd4ed5ffabf83 files/db-3.2.9-jarlocation.patch 492
@@ -53,10 +50,3 @@ MD5 1ef24208f7a41603e6958e15c6278278 files/digest-db-4.3.29 62
 MD5 9cf113248f29b1e319ae73b266df4986 files/patch.3.2.9.1 2139
 MD5 f8edd1cf6535cd62f9b8ff81e0474273 files/patch.3.2.9.2 495
 MD5 e1753ef0eb3e9614fadff321ecd1b082 metadata.xml 1460
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzsmj2+ySkm8kpY0RAna6AKCQbL3CWwe7VLRG9Zw2+PKVYD1nCACgmCUh
-uy42c1ZgWFUrgbIv8qYoOJ0=
-=5FCJ
------END PGP SIGNATURE-----
