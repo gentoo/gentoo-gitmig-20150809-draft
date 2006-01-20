@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.5.4-r2.ebuild,v 1.5 2005/09/10 15:00:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.5.4-r2.ebuild,v 1.6 2006/01/20 04:42:53 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -36,10 +36,11 @@ src_unpack() {
 
 src_compile() {
 	addwrite "/proc/self/maps"
+	local myclasspath deps
 
 	[ -z ${JDK_HOME} ] && einfo "JDK_HOME not set, please check with java-config" && die
 
-	export JAVA_HOME=${JDK_HOME}
+	JAVA_HOME=${JDK_HOME}
 	if [ `arch` == "ppc" ] ; then
 		# We're compiling _ON_ PPC
 		export THREADS_FLAG="green"
@@ -47,45 +48,46 @@ src_compile() {
 
 	# Make sure junit tasks get built if we have junit
 	if [ -f "/usr/share/junit/lib/junit.jar" ] ; then
-		export CLASSPATH="/usr/share/junit/lib/junit.jar"
-		export DEP_APPEND="junit"
+		myclasspath="/usr/share/junit/lib/junit.jar"
+		deps="junit"
 		if [ -f "/usr/share/xalan/lib/xalan.jar" ] ; then
-			export CLASSPATH="${CLASSPATH}:/usr/share/xalan/lib/xalan.jar"
-			export DEP_APPEND="${DEP_APPEND} xalan"
+			myclasspath="${myclasspath}:/usr/share/xalan/lib/xalan.jar"
+			deps="${deps} xalan"
 		fi
 	fi
 
 	# Add Xerces in if we have it
 	if [ -f "/usr/share/xerces/lib/xercesImpl.jar" ] ; then
-		export CLASSPATH="${CLASSPATH}:/usr/share/xerces/lib/xercesImpl.jar:/usr/share/xerces/lib/xml-apis.jar"
-		export DEP_APPEND="${DEP_APPEND} xerces"
+		myclasspath="${myclasspath}:/usr/share/xerces/lib/xercesImpl.jar:/usr/share/xerces/lib/xml-apis.jar"
+		deps="${deps} xerces"
 	fi
 
 	# Add oro in if we have it
 	if [ -f "/usr/share/oro/lib/oro.jar" ] ; then
-		export CLASSPATH="${CLASSPATH}:/usr/share/oro/lib/oro.jar"
-		export DEP_APPEND="${DEP_APPEND} oro"
+		myclasspath="${myclasspath}:/usr/share/oro/lib/oro.jar"
+		deps="${deps} oro"
 	fi
 
 	# Add beanutils if we have it
 	if [ -f "/usr/share/commons-beanutils/lib/commons-beanutils.jar" ] ; then
-		export CLASSPATH="${CLASSPATH}:/usr/share/commons-beanutils/lib/commons-beanutils.jar"
-		export DEP_APPEND="${DEP_APPEND} commons-beanutils"
+		myclasspath="${myclasspath}:/usr/share/commons-beanutils/lib/commons-beanutils.jar"
+		deps="${deps} commons-beanutils"
 	fi
 
 	# add antlr if we have it
 	if [ -f "/usr/share/antlr/lib/antlr.jar" ] ; then
-		export CLASSPATH="${CLASSPATH}:/usr/share/antlr/lib/antlr.jar"
-		export DEP_APPEND="${DEP_APPEND} antlr"
+		myclasspath="${myclasspath}:/usr/share/antlr/lib/antlr.jar"
+		deps="${deps} antlr"
 	fi
 
 	# add bcel if we have it
 	if [ -f "/usr/share/bcel/lib/bcel.jar" ] ; then
-		export CLASSPATH="${CLASSPATH}:/usr/share/bcel/lib/bcel.jar"
-		export DEP_APPEND="${DEP_APPEND} bcel"
+		myclasspath="${myclasspath}:/usr/share/bcel/lib/bcel.jar"
+		deps="${deps} bcel"
 	fi
 
-	./build.sh -Ddist.dir=${D}/usr/share/${PN} || die
+	DEP_APPEND=${deps} CLASSPATH=${myclasspath} \
+		./build.sh -Ddist.dir=${D}/usr/share/${PN} || die
 }
 
 src_install() {
