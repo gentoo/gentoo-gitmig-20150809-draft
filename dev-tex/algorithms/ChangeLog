@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/algorithms
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/algorithms/ChangeLog,v 1.1 2006/01/20 11:15:40 ehmsen Exp $
+
+*algorithms-2005.07.05 (20 Jan 2006)
+
+  20 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> +metadata.xml,
+  +algorithms-2005.07.05.ebuild:
+  Initial import. Ebuild submitted by Tivadar Szemethy
+  <tivadar.szemethy@gmail.com> in bug #116733.
+
