@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1.ebuild,v 1.1 2005/11/22 15:32:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1.ebuild,v 1.2 2006/01/20 17:12:09 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,17 +15,24 @@ LICENSE="as-is"
 
 SLOT="0"
 
-# Has an "x86_64" dir, so maybe works on other arches (untested).
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="strip fetch"
 
-DEPEND="app-arch/tar
-	app-arch/gzip"
-
-RDEPEND="virtual/x11
-	virtual/opengl
-	amd64? ( app-emulation/emul-linux-x86-soundlibs
+RDEPEND="virtual/opengl
+	x86? (
+		media-libs/libogg
+		media-libs/openal
+		media-libs/libvorbis
+		media-libs/smpeg
+		dev-libs/glib
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext )
+			virtual/x11 ) )
+	amd64? (
+		app-emulation/emul-linux-x86-soundlibs
 		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-medialibs
 		app-emulation/emul-linux-x86-baselibs
