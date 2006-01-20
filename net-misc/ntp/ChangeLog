@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.69 2006/01/13 10:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.70 2006/01/20 00:56:08 vapier Exp $
+
+  20 Jan 2006; Mike Frysinger <vapier@gentoo.org> +files/ntp.logrotate,
+  ntp-4.2.0.20040617-r3.ebuild, ntp-4.2.0.20050303-r1.ebuild:
+  Add an optional logrotate file #119092 by Toralf Förster.
 
   13 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   ntp-4.2.0.20040617-r3.ebuild, ntp-4.2.0.20050303-r1.ebuild:

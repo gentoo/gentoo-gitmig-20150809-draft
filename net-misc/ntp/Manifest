@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab7fb139d74522b50fc1f373a708b7c1 ChangeLog 10540
+MD5 e7673152b5b98f9a4d0322c06beceb6a ChangeLog 10736
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
 MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
 MD5 24574e6ad1b468152839c10361b51a0f files/4.2.0-linux-config-phone.patch 711
@@ -25,6 +25,7 @@ MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
 MD5 47d7106c23cb6ac99c5bbfdcd2f3a7fa files/ntp-client.confd 747
 MD5 5eecb47ab966b2003b73b8cbd371de40 files/ntp-client.rc 933
 MD5 5bd3924f5720b97837969ec4ec4d5e09 files/ntp.conf 1451
+MD5 19b878e23991b3aa64868b35670385b7 files/ntp.logrotate 50
 MD5 4d502821fd36c5a63b14ae4b54cb3526 files/ntpd-4.1.2.confd 185
 MD5 87951141777f50b2e4a2347a96f987b8 files/ntpd-4.1.2.rc 806
 MD5 5e1591f145a63cf66ee20ab65495781a files/ntpd.confd 189
@@ -32,12 +33,12 @@ MD5 299ea30653b1e0b93d51f19e07176bc4 files/ntpd.rc 805
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
 MD5 4874c08acda470ce7373d36b64c39c09 ntp-4.1.2.ebuild 3162
 MD5 7e567989a1392464a324fd0cd64e54a3 ntp-4.2.0-r2.ebuild 3815
-MD5 92e2cb55c1c98f39c61e6d88c464ff17 ntp-4.2.0.20040617-r3.ebuild 4248
-MD5 c833f076378515e568dac37ac729f0f7 ntp-4.2.0.20050303-r1.ebuild 4284
+MD5 bef0fda9b9f08e0939ee95554b94385e ntp-4.2.0.20040617-r3.ebuild 4356
+MD5 f327af337a6e366fb7b21ca295878385 ntp-4.2.0.20050303-r1.ebuild 4392
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDx4aF2+ySkm8kpY0RAqUXAJ95SObvE2HgjYWblyym2PM2CkAokgCcCgph
-F81MDOWirJSNV2bMmrSwuls=
-=+nM8
+iD8DBQFD0DWt2+ySkm8kpY0RAtHyAJ9AJSTvVBvqYqTnTEAVc4/Vxm1BjgCfbMqV
+0OLHBqZVXvWG9HaRXFfTcUM=
+=OAgg
 -----END PGP SIGNATURE-----

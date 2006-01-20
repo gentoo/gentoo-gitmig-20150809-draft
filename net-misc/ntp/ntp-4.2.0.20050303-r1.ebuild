@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303-r1.ebuild,v 1.3 2006/01/13 10:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303-r1.ebuild,v 1.4 2006/01/20 00:56:08 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/snapshots/ntp-stable/${PV
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="parse-clocks nodroproot selinux ssl ipv6 openntpd debug"
+IUSE="logrotate parse-clocks nodroproot selinux ssl ipv6 openntpd debug"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
@@ -111,6 +111,11 @@ src_install() {
 
 	keepdir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp
+
+	if use logrotate ; then
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}"/ntp.logrotate ntp
+	fi
 
 	if use openntpd ; then
 		cd "${D}"
