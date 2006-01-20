@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/elvis
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.18 2005/09/20 18:11:38 kito Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.19 2006/01/20 00:18:28 vanquirius Exp $
+
+*elvis-2.2.0-r1 (20 Jan 2006)
+
+  20 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/elvis-2.1.4-keysym.patch, -elvis-2.1.4.ebuild,
+  -elvis-2.1.4-r1.ebuild, +elvis-2.2.0-r1.ebuild:
+  Remove old ebuilds, make modular X friendly.
 
   20 Sep 2005; Kito <kito@gentoo.org> elvis-2.2.0.ebuild:
   ~ppc-macos. Closes Bug 106579
