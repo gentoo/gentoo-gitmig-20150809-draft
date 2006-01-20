@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.99 2005/12/26 15:24:00 kloeri Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.100 2006/01/20 20:39:54 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> pygtk-2.8.2.ebuild:
+  Stable on sparc wrt #119634
 
   26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org pygtk-2.8.0-r2.ebuild,
   pygtk-2.8.2.ebuild:
