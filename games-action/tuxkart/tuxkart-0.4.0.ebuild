@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.4.0.ebuild,v 1.3 2004/10/31 05:06:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.4.0.ebuild,v 1.4 2006/01/20 20:37:23 wolf31o2 Exp $
 
 inherit games
 
@@ -14,15 +14,26 @@ KEYWORDS="alpha amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/plib-1.8.0
-	virtual/x11
+	|| (
+		(
+			x11-libs/libX11
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXext
+			x11-libs/libXmu
+			x11-libs/libXi )
+		virtual/x11 )
 	virtual/opengl"
 DEPEND="${RDEPEND}
+	|| (
+		x11-libs/libXt
+		virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 
-	cd ${S}
+	cd "${S}"
 	# apparently <sys/perm.h> doesn't exist on alpha
 	if use alpha; then
 		sed -i \
