@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 1fe6ee1ea3a0a792c5ffb33b570c5e2e ChangeLog 4540
-MD5 d868b353b991a150bae7f1e6b95869de docbook-dsssl-stylesheets-1.77-r2.ebuild 1595
-MD5 0f5ac539cf8e18ba5578ec6e5ce4672f docbook-dsssl-stylesheets-1.79.ebuild 1666
+MD5 5f64ee5e0d34d0b7439dd99fb27714fc docbook-dsssl-stylesheets-1.77-r2.ebuild 1598
+MD5 782caa46fa434b2263b6e2fc7117d726 docbook-dsssl-stylesheets-1.79.ebuild 1670
 MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r2 70
 MD5 b699a5dd4e690ad2197647822d5aac92 files/digest-docbook-dsssl-stylesheets-1.79 71
 MD5 aa413b2500a9fa5f6ac08e657d0958d5 files/docbook-dsssl-stylesheets-1.77.Makefile 676
@@ -11,7 +11,7 @@ MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDz3qBntT9W3vfTuoRAknDAKCUomJXxFFxY0S2kvc0Y5zdRAXK+gCghqeg
-I84dUdgh7BnM5S7VEuh+D3Y=
-=IA9d
+iD8DBQFD0HAe2+ySkm8kpY0RAlmVAKCTR0bnKdgxvVdjDd6o2iDWlrTqXQCeLAIL
+Q4l7iEjWPVNuE4N0dUITZOs=
+=gIkL
 -----END PGP SIGNATURE-----
