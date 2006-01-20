@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.1.ebuild,v 1.1 2005/09/19 12:08:40 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.1.ebuild,v 1.2 2006/01/20 23:12:08 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2.4"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~ppc64 ~hppa"
+KEYWORDS="~amd64 ~ppc ~x86 sparc ~ppc64 ~hppa"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2.3.6
