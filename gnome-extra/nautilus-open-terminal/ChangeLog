@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-open-terminal
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.4 2005/10/24 15:44:32 dertobi123 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.5 2006/01/20 23:20:37 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  nautilus-open-terminal-0.6.ebuild:
+  Keyworded ~sparc
 
   24 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   nautilus-open-terminal-0.6.ebuild:
