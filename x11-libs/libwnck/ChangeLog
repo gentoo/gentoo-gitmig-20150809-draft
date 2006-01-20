@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.108 2005/12/14 21:14:59 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.109 2006/01/20 22:11:28 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> libwnck-2.12.2.ebuild:
+  Stable on sparc wrt #119634
 
   14 Dec 2005; <dang@gentoo.org> libwnck-2.12.2.ebuild:
   Fix modular X deps to not dup gtk+ ones
