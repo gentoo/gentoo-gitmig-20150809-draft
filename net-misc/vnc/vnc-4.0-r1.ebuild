@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.16 2005/11/18 10:00:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.17 2006/01/20 21:57:24 vanquirius Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -23,7 +23,8 @@ IUSE="server"
 
 DEPEND="sys-libs/zlib
 	media-libs/freetype
-	x11-base/xorg-x11"
+	x11-base/xorg-x11
+	!net-misc/tightvnc"
 
 S="${WORKDIR}/${MY_P}"
 
