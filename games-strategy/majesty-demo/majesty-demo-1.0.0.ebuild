@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.3 2005/10/21 18:16:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.4 2006/01/20 20:09:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,26 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="sys-libs/glibc
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+	ppc? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
