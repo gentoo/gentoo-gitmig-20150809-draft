@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sara
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.16 2006/01/09 22:15:49 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.17 2006/01/20 19:26:40 pva Exp $
+
+  20 Jan 2006; Peter Volkov <pva@gentoo.org> sara-6.0.4.ebuild,
+  sara-6.0.7d.ebuild:
+  Modular X dependencies are fixed.
 
 *sara-6.0.7d (09 Jan 2006)
 
