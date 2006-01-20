@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 659872cd908aaf20fd2c7040c9113ce5 ChangeLog 3650
+MD5 f57068ba7131fafc6b43c19d4dd6d12f ChangeLog 3785
 MD5 8eed8feaa65a3ab28f60e67e609ed512 files/destdir.patch 488
 MD5 ac0b2bc6ebbb0b4d807dc2e7f88c0edf files/digest-swi-prolog-lite-5.0.10 67
 MD5 640ff31e82704bfbbd79ac576d005850 files/digest-swi-prolog-lite-5.1.13 62
@@ -22,11 +22,11 @@ MD5 5532502b84186d942b9e511ac418da60 swi-prolog-lite-5.1.13.ebuild 1243
 MD5 7d72dd5171c98a306021fbf58e52fb43 swi-prolog-lite-5.2.11.ebuild 1157
 MD5 e5130b48bc4c49b2a6c9fb96947892a7 swi-prolog-lite-5.3.14.ebuild 1153
 MD5 9604df1e2eb962f22c4e1a82e56dc79f swi-prolog-lite-5.4.7.ebuild 1212
-MD5 25f5437b798aceee8ff4f6a2660d37c7 swi-prolog-lite-5.5.39.ebuild 1991
+MD5 5398ca539fdc8a956a840a9ff722deb7 swi-prolog-lite-5.5.39.ebuild 2000
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0D8r2+ySkm8kpY0RAm3pAJwLuwh5WSRnbo918PZ9JvRo2zyYEwCgw4xZ
-ueCd16LQHYrVntD/PjcEIq8=
-=dCiT
+iD8DBQFD0D+F2+ySkm8kpY0RAr/7AJwPMC4SgyLG6ufaOCmBqHw1euQSbACcD2dw
+FQGbdulJV4K+1R6UTQyra18=
+=Ci0T
 -----END PGP SIGNATURE-----

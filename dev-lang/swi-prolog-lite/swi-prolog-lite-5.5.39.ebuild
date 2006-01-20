@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.5.39.ebuild,v 1.5 2006/01/20 01:36:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.5.39.ebuild,v 1.6 2006/01/20 01:38:08 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -61,7 +61,7 @@ src_compile() {
 		$(use_with berkdb db) \
 		--with-http \
 		--without-jasmine \
-		--with-jpl \
+		$(use_with x86 jpl) \
 		$(use_with tetex ltx2htm) \
 		$(use_with gmp mp) \
 		$(use_with odbc) \
