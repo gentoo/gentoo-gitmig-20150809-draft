@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.128 2005/11/24 18:37:43 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.129 2006/01/20 22:47:28 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> gedit-2.12.1.ebuild:
+  Stable on sparc wrt #119634
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> gedit-2.10.5.ebuild:
   Stable on ppc64
