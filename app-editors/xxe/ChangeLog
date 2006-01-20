@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/xxe
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.26 2005/11/12 02:38:49 rizzo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.27 2006/01/20 00:04:51 vanquirius Exp $
+
+*xxe-3.0_p1 (20 Jan 2006)
+
+  20 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -xxe-3.0.ebuild,
+  +xxe-3.0_p1.ebuild:
+  3.0_p1 version bump for bug 118553. Removing previous version as it is gone
+  from upstream/mirrors. Thanks to marcus bueschleb <marcus dot bueschleb at
+  googlemail dot com>.
 
 *xxe-3.0 (12 Nov 2005)
 

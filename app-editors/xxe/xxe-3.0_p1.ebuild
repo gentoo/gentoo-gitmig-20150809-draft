@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-3.0.ebuild,v 1.1 2005/11/12 02:38:49 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-3.0_p1.ebuild,v 1.1 2006/01/20 00:04:51 vanquirius Exp $
 
 MY_PV="${PV/./}"
 MY_PV="${MY_PV/_p/p}"
@@ -17,17 +17,17 @@ KEYWORDS="~x86 ~ppc ~amd64"
 RESTRICT="nostrip nomirror"
 RDEPEND=">=virtual/jre-1.4.1"
 DEPEND=""
-INSTALLDIR=/opt/${PN}
+INSTALLDIR="/opt/${PN}"
 
 src_install() {
-	dodir ${INSTALLDIR}
-	cp -pPR ${S}/* ${D}/${INSTALLDIR}
+	dodir "${INSTALLDIR}"
+	cp -pPR "${S}"/* "${D}/${INSTALLDIR}"
 
 	dodir /etc/env.d
-	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}" > ${D}/etc/env.d/10xxe
+	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}" > "${D}"/etc/env.d/10xxe
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/xxe.desktop
+	doins "${FILESDIR}"/xxe.desktop
 }
 
 pkg_postinst() {
