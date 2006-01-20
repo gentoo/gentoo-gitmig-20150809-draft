@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/gamess
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.5 2005/12/07 15:01:23 markusle Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.6 2006/01/20 17:23:32 markusle Exp $
+
+*gamess-05272005.5 (20 Jan 2006)
+
+  20 Jan 2006; Markus Dittrich <markusle@gentoo.org>
+  +gamess-05272005.5.ebuild:
+  Bump to latest revision 27 JUN 2005 (R5).
 
 *gamess-05272005.3-r2 (07 Dec 2005)
 
