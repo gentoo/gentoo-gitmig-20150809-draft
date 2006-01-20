@@ -1,5 +1,5 @@
 MD5 c2c4be5c78e9deb96264e39ee9a2db5b ChangeLog 2198
-MD5 f40bbfa2eda5672febaa041b87f025b7 metadata.xml 1049
-MD5 eb79e990fc764b8c3622e0a6611fea1d pingus-0.6.0-r1.ebuild 1349
 MD5 cf74eabf33bb46fc3ed87e741b182c10 files/digest-pingus-0.6.0-r1 66
 MD5 50abceb94694d0b53196bf840e5e2710 files/pingus-0.6.0-gcc.patch 4456
+MD5 f40bbfa2eda5672febaa041b87f025b7 metadata.xml 1049
+MD5 12a7dead9941089b9bff66bddf271862 pingus-0.6.0-r1.ebuild 1389

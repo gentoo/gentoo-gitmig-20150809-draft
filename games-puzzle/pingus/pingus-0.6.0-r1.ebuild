@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.15 2005/10/08 13:56:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.16 2006/01/20 08:26:17 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -47,5 +47,6 @@ src_install() {
 	mv games/pingus .
 	rm -rf games
 	# end pos install process
+	make_desktop_entry pingus "Pingus"
 	prepgamesdirs
 }
