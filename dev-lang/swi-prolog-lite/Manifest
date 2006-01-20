@@ -16,7 +16,7 @@ MD5 5b26039ee25ba0666cd711bf838962d8 files/swi-prolog-lite-5.5.30-runtime-build.
 MD5 b498044bf1fdc8d27c5b5a399ba423e1 files/swi-prolog-lite-5.5.39-packages-ltx2htm-DESTDIR.patch 1138
 MD5 426062cdd96638f41290e4d0533b6056 files/swi-prolog-lite-5.5.39-packages-mp-DESTDIR.patch 824
 MD5 f69c969b54b8edba72f27dba32590241 files/swi-prolog-lite-5.5.39-packages-semweb-64bit.patch 617
-MD5 64f0ce0f82a854a575007c06de84b20b metadata.xml 218
+MD5 532da1346eadd018af720563c93c66cf metadata.xml 217
 MD5 279806ebf5d32d9c17d55d4ab837991e swi-prolog-lite-5.0.10.ebuild 1250
 MD5 5532502b84186d942b9e511ac418da60 swi-prolog-lite-5.1.13.ebuild 1243
 MD5 7d72dd5171c98a306021fbf58e52fb43 swi-prolog-lite-5.2.11.ebuild 1157
@@ -26,7 +26,7 @@ MD5 5398ca539fdc8a956a840a9ff722deb7 swi-prolog-lite-5.5.39.ebuild 2000
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0D+F2+ySkm8kpY0RAr/7AJwPMC4SgyLG6ufaOCmBqHw1euQSbACcD2dw
-FQGbdulJV4K+1R6UTQyra18=
-=Ci0T
+iD8DBQFD0M/62+ySkm8kpY0RAqCoAJ42Xk/K0Dq5G4y8FiUkvollJ3NA+gCgrEK/
+Gt0y5BZLMKxUa8fx08SeMgI=
+=qdXF
 -----END PGP SIGNATURE-----
