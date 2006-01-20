@@ -1,4 +1,4 @@
-MD5 e3a4521ac2e2538ba86cab13c1f7cce1 ChangeLog 2291
+MD5 8b36cbae1d9c249e6e631eb4fdc0c75b ChangeLog 2415
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-libvisual-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-libvisual-0.10.1 77
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-libvisual-0.10.2 77
@@ -10,7 +10,7 @@ MD5 d56c25a98ca57d0a056a810fe7b90051 gst-plugins-libvisual-0.10.0.ebuild 350
 MD5 7a1961496fbfd16ba5642246d2c03ee9 gst-plugins-libvisual-0.10.1.ebuild 351
 MD5 68d291b5a6cb08c2daeb212e66112a95 gst-plugins-libvisual-0.10.2.ebuild 351
 MD5 82f8b73da04d38a4f6457f344ac79358 gst-plugins-libvisual-0.8.10.ebuild 347
-MD5 1b875d7562278f827c5d4c0ea00a968c gst-plugins-libvisual-0.8.11.ebuild 349
+MD5 01b2bb8d6dedf1832e09cb058bebfc4c gst-plugins-libvisual-0.8.11.ebuild 349
 MD5 bb0d155f51dd267046f80532c047c84c gst-plugins-libvisual-0.8.8.ebuild 342
 MD5 324f616e4bbef1f7acf99588f3f2a528 gst-plugins-libvisual-0.8.9.ebuild 349
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
