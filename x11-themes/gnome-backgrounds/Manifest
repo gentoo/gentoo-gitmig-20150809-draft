@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ad85b61e5813bec94f8d5ac89e779a6 ChangeLog 4188
 MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
 MD5 c547e18a1541ee20308a075e7c49b66f files/digest-gnome-backgrounds-2.10.1 78
@@ -10,3 +13,10 @@ MD5 f907b730d0bad22dc6bb63d181b6d13c gnome-backgrounds-2.10.2.ebuild 559
 MD5 e8c325b8de110bf04ae6ad338abf07a6 gnome-backgrounds-2.12.1.ebuild 568
 MD5 6cbb1ed87300f4cc5239c804dd05e4c7 gnome-backgrounds-2.12.2.ebuild 569
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0V8pKRy60XGEcJIRAsfHAJ9EGzhxrWhxnEoJyp4uzSV+6CsJqgCgiEvO
+45YoSEOq/fg5y+97XoxQzhE=
+=rfIK
+-----END PGP SIGNATURE-----
