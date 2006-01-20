@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r2.ebuild,v 1.1 2006/01/14 13:38:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r2.ebuild,v 1.2 2006/01/20 11:25:37 mrness Exp $
 
 inherit linux-mod
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.physcip.uni-stuttgart.de/heby/ltmodem/${MY_P}.tar.gz
 	http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/ltmodem-${MY_ALK_VER}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RESTRICT="nouserpriv"
