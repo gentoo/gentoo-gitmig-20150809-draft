@@ -1,2 +1,4 @@
+MD5 6408e5d533dcf5255d6835d0189da882 ChangeLog 331
 MD5 42cc3e2c74c8e669645cb8abc447a037 files/digest-metaid-1.0 57
-MD5 fba6c18a7f448838f8f3ecf8a9e5e9de metaid-1.0.ebuild 494
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 c43c2d675105120062bf6f087cc8fc29 metaid-1.0.ebuild 492
