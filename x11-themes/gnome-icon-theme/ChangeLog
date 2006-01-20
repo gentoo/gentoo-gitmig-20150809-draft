@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.89 2005/10/10 06:42:11 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.90 2006/01/20 22:08:08 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-icon-theme-2.12.1.ebuild:
+  Stable on sparc wrt #119634
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org>
   gnome-icon-theme-2.10.1.ebuild:
