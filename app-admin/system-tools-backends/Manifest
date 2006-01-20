@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0512d3db68a5a3537ebf6dd7a94baf73 ChangeLog 2365
 MD5 946729e7340edc6a1bae2e1a5e02a1d2 files/digest-system-tools-backends-1.2.0 80
 MD5 54db3221ddfb6a9393e2f1576f8d7a5e files/digest-system-tools-backends-1.4.0 80
@@ -6,3 +9,10 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aab38d32daaa9ee6e5c99cd978603fac system-tools-backends-1.2.0.ebuild 754
 MD5 481c8379524aaefeedacf79c8438321b system-tools-backends-1.4.0.ebuild 763
 MD5 7240dbf0c9f7f2f569a96ceb282a577a system-tools-backends-1.4.1.ebuild 776
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0WvqKRy60XGEcJIRAsijAJ0S1rsHBzrgvlTP5Dxs39+FeZluWACfWzMz
+0aknDfQ09iuPSrFHIoxThYQ=
+=6y3W
+-----END PGP SIGNATURE-----
