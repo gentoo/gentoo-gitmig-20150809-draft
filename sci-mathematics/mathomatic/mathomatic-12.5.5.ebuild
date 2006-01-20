@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.4.11-r1.ebuild,v 1.1 2005/10/02 03:13:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.5.5.ebuild,v 1.1 2006/01/20 16:20:37 cryos Exp $
 
 inherit eutils
 
 DESCRIPTION="Automatic algebraic manipulator"
 HOMEPAGE="http://www.mathomatic.com/"
-SRC_URI="http://www.panix.com/~gesslein/${P}.tgz"
+SRC_URI="http://www.panix.com/~gesslein/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -29,7 +29,7 @@ src_install() {
 	# It was easier just to install the files manually
 	dobin mathomatic
 	dodoc changes.txt README.txt
-	doman doc/mathomatic.1
+	doman mathomatic.1
 
 	if use doc; then
 		dohtml doc/*
