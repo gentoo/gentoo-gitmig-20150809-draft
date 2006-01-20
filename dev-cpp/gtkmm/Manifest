@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6ad344eeae31854acf4ab54c753d279 ChangeLog 12161
 MD5 cd03ba8b48e5e090cb055a176291475a files/digest-gtkmm-1.2.9-r2 63
 MD5 f824eb6aaffd23a260a89d01e9c0a4e6 files/digest-gtkmm-2.2.10 66
@@ -29,3 +32,10 @@ MD5 48b2eec42b0f51e12c5e770f4a27f2b7 gtkmm-2.6.5.ebuild 645
 MD5 ee85a08aa89b99d513f47d0ef413b517 gtkmm-2.8.0.ebuild 645
 MD5 b7965d3b462efece8158f2a33d43e9bf gtkmm-2.8.1.ebuild 645
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0WzxKRy60XGEcJIRAt/VAKCwq3tc+slpom2j/tdoUPSF8PkGhACgjoXJ
+/k1F2sFnunT7Ve/cnqmgcH4=
+=YAof
+-----END PGP SIGNATURE-----

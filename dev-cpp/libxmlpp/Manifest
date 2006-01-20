@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7f9df42c9817a2f2c8feac96f2e3b36 ChangeLog 6618
 MD5 ababb33432c4d45282fa2fe2c0a2b0d5 files/digest-libxmlpp-0.27.0 67
 MD5 d8908feca35d34dbd88eab2dc2eaa621 files/digest-libxmlpp-1.0.2 67
@@ -17,3 +20,10 @@ MD5 1aad7bb1f5a0847f887315133e871d99 libxmlpp-2.10.0-r1.ebuild 1202
 MD5 333b204eac09dd3d16cdf774baad9567 libxmlpp-2.12.0.ebuild 1154
 MD5 5c17a05be406dbe943ddd3ef9dc53b52 libxmlpp-2.8.0-r2.ebuild 1197
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0W0iKRy60XGEcJIRAuQbAJ9EZdQ/vFwJsfdpEEPVl2i+D052AgCfekcs
+mahNNvURG8yFoT4Qf9EPuJY=
+=mrWU
+-----END PGP SIGNATURE-----
