@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtecla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.6 2006/01/20 17:49:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.7 2006/01/20 23:07:49 tsunam Exp $
+
+  20 Jan 2006; Joshua Jackson <tsunam@gentoo.org> libtecla-1.6.0-r1.ebuild:
+  Stable on x86 to fix security bug #119477
 
 *libtecla-1.6.1 (20 Jan 2006)
 
