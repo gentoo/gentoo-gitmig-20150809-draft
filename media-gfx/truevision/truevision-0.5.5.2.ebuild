@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.4 2006/01/14 19:19:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.5 2006/01/20 15:11:53 vanquirius Exp $
 
 inherit eutils gnome2 versionator
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 DEPEND=">=x11-libs/gtk+-2.8.8
-	>=x11-libs/gtkglext-1.0.6-r2
+	>=x11-libs/gtkglext-1.0.6-r3
 	gnome-base/libgnome
 	>=media-gfx/povray-3.6.1
 	sys-libs/zlib
