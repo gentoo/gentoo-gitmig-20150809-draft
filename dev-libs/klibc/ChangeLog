@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.14 2006/01/02 08:04:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.15 2006/01/20 11:03:48 azarah Exp $
+
+*klibc-1.1.16 (20 Jan 2006)
+
+  20 Jan 2006; Martin Schlemmer <azarah@gentoo.org> +klibc-1.1.16.ebuild:
+  New version.
 
   02 Jan 2006; Joshua Kinard <kumba@gentoo.org> klibc-1.1.ebuild:
   Bump to stable for getdvhoff on mips.
