@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2b5b7b547fe3338eecb3638742f40647 ChangeLog 6976
 MD5 786a6b1c325885af1776c3b23add917a files/digest-gtksourceview-1.2.0 72
 MD5 088df070b51e3abe2e1090afdd67d7ca files/digest-gtksourceview-1.4.2 72
 MD5 5311d54156d920761a174b622c42ef0b gtksourceview-1.2.0.ebuild 843
 MD5 54a4ab487240619772046e5993a4c8eb gtksourceview-1.4.2.ebuild 858
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0V+zKRy60XGEcJIRAraoAKCMDI8pDTfeN8OqwaJlyMUATo+BcQCeI/3W
+CSvWVgQ+Xs84+3BNEJw4LQA=
+=aDJy
+-----END PGP SIGNATURE-----
