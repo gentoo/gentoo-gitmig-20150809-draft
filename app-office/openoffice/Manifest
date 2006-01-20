@@ -1,4 +1,7 @@
-MD5 084af5031ea70400399d02db5c5d8a9a ChangeLog 36942
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fbac027b872baa4f2d6f3f757b59b002 ChangeLog 37072
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 9784ab4484e09b8230284b27d20d4264 files/1.1.4/build-new-xslt.diff 650
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
@@ -43,4 +46,11 @@ MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 eae9be6a4eb2de3c689d24cb348d0b9c openoffice-1.1.4-r1.ebuild 16659
 MD5 a69a836ff536fa824b7bb4390198d2e6 openoffice-1.1.5.ebuild 16566
 MD5 ece6469b501209c7971a74c4dd0fbae8 openoffice-2.0.0.ebuild 7072
-MD5 f908949613e9781cf1ebfd054e289628 openoffice-2.0.1.ebuild 7547
+MD5 843ba4afcee1cf087a83a964617af02f openoffice-2.0.1.ebuild 7550
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0UjUKRy60XGEcJIRAo8kAJwKDfcpJLVCTgngA2dIv496kZEC4gCfb5FL
+gDz/OQ97sW89Im1y8pk3Oco=
+=/oUx
+-----END PGP SIGNATURE-----
