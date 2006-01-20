@@ -1,5 +1,15 @@
-MD5 ca941fb8e76f8a48ef9601801c1efdb2 ChangeLog 1104
-MD5 ed64cce441ba3119c627bd4d8714d5ae asmem-1.10.ebuild 679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c8e74104bc6f4170af428549cf8f616 ChangeLog 1202
+MD5 5b0004e16104a5e162169fd19fc5c78d asmem-1.10.ebuild 689
 MD5 329806857b8a65ad34c7528cf9cd6e9d files/asmem-1.10-gentoo.patch 762
 MD5 33fafb23eadaab9d28fe8c19aabc92a1 files/digest-asmem-1.10 61
 MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0Vy4wUpWvClEHQoRAiZ+AJoDrQY9jNrok363NJjOd9Ku8tcINgCeOZX2
+LavNPjBPsU4BnV8Ichyeh2I=
+=Gggx
+-----END PGP SIGNATURE-----
