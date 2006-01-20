@@ -44,6 +44,15 @@ diff --exclude-from=/home/dang/.diffrc -u -ruN poppler-0.5.0.orig/Makefile.am po
 diff --exclude-from=/home/dang/.diffrc -u -ruN poppler-0.5.0.orig/qt/Makefile.am poppler-0.5.0/qt/Makefile.am
 --- poppler-0.5.0.orig/qt/Makefile.am	2006-01-03 09:02:31.000000000 -0500
 +++ poppler-0.5.0/qt/Makefile.am	2006-01-20 10:36:39.000000000 -0500
+@@ -21,7 +21,7 @@
+ 	poppler-private.h
+ 
+ libpoppler_qt_la_LIBADD = 			\
+-	$(top_builddir)/poppler/libpoppler.la	\
++	-lpoppler				\
+ 	$(POPPLER_QT_LIBS)			\
+ 	$(FREETYPE_LIBS)
+ 
 @@ -35,7 +35,7 @@
         test-poppler-qt.cpp
  

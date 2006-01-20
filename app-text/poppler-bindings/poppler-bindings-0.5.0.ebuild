@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.0.ebuild,v 1.1 2006/01/20 17:01:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.0.ebuild,v 1.2 2006/01/20 19:47:55 azarah Exp $
 
-inherit eutils
+inherit autotools eutils
 
 MY_P=${P/-bindings/}
 DESCRIPTION="Poppler bindings are rendering bindings for GUI toolkits for poppler"
@@ -29,7 +29,7 @@ src_unpack(){
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${MY_P}-bindings.patch
-	autoreconf -f -v -i || die "autoreconf failed"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
