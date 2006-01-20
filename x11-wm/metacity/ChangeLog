@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.138 2005/12/14 21:21:53 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.139 2006/01/20 22:56:14 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  metacity-2.12.2.ebuild:
+  Stable on sparc wrt #119634
 
   14 Dec 2005; <dang@gentoo.org> metacity-2.12.2.ebuild:
   Don't need explicit X deps, only uses what gtk+ requires
