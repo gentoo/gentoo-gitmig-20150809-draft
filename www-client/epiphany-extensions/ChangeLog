@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.17 2005/11/02 18:18:40 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.18 2006/01/20 22:45:39 gustavoz Exp $
+
+  20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  epiphany-extensions-1.8.1.ebuild:
+  Stable on sparc wrt #119634
 
   02 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   epiphany-extensions-1.6.4-r1.ebuild:
