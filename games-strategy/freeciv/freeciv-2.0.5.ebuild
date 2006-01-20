@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.5.ebuild,v 1.3 2005/09/20 20:32:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.5.ebuild,v 1.4 2006/01/20 21:36:14 wolf31o2 Exp $
 
 inherit games
 
@@ -9,10 +9,12 @@ DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
 SRC_URI="ftp://ftp.freeciv.org/pub/freeciv/stable/${MY_P}.tar.bz2
 	!dedicated? (
-		alsa? ( http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
-		esd? ( http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
-		sdl? ( http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
-	)"
+		alsa? (
+			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
+		esd? (
+			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
+		sdl? (
+			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz ))"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,7 +24,6 @@ IUSE="alsa dedicated esd gtk nls readline sdl Xaw3d"
 RDEPEND="sys-libs/zlib
 	readline? ( sys-libs/readline )
 	!dedicated? (
-		virtual/x11
 		gtk? (
 			>=x11-libs/gtk+-2.0.0
 			>=dev-libs/glib-2.0.0
@@ -30,8 +31,21 @@ RDEPEND="sys-libs/zlib
 			>=x11-libs/pango-1.0.5
 		)
 		!gtk? (
-			Xaw3d? ( x11-libs/Xaw3d )
-		)
+			Xaw3d? (
+				x11-libs/Xaw3d )
+			!Xaw3d? (
+				|| (
+					x11-libs/libXaw
+					virtual/x11 ) )
+			|| ( (
+					x11-libs/libX11
+					x11-libs/libICE
+					x11-libs/libSM
+					x11-libs/libXt
+					x11-libs/libXext
+					x11-libs/libXmu
+					x11-libs/libXpm )
+				virtual/x11 ) )
 		alsa? (
 			>=media-libs/alsa-lib-1.0
 			>=media-libs/audiofile-0.2
