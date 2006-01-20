@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.28.ebuild,v 1.2 2006/01/17 19:41:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.28.ebuild,v 1.3 2006/01/20 14:38:54 wolf31o2 Exp $
 
 IUSE="opengl X"
 
@@ -15,14 +15,12 @@ KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 
 RDEPEND="x86? ( opengl? ( virtual/opengl
 			>=x11-base/opengl-update-2.2.1 )
-		X? ( virtual/x11
-			sys-apps/pciutils
+		X? ( sys-apps/pciutils
 			x11-misc/mkxf86config
 			sys-apps/gawk ) )
 	amd64? ( opengl? ( virtual/opengl
 			>=x11-base/opengl-update-2.2.1 )
-		X? ( virtual/x11
-			sys-apps/pciutils
+		X? ( sys-apps/pciutils
 			>=x11-misc/mkxf86config-0.9.2
 			sys-apps/gawk ) )"
 
