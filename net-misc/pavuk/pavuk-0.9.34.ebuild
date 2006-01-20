@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34.ebuild,v 1.1 2006/01/20 15:19:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34.ebuild,v 1.2 2006/01/20 15:40:52 vanquirius Exp $
 
 inherit eutils
 
@@ -11,23 +11,24 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ssl X gnome mozilla nls"
+IUSE="gnome gtk mozilla nls ssl"
 
 DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
 	sys-libs/zlib
 	ssl? ( dev-libs/openssl )
-	X? ( virtual/x11 )
 	gnome? ( gnome-base/gnome-libs )
-	mozilla? ( www-client/mozilla )"
+	mozilla? ( www-client/mozilla )
+	=dev-libs/glib-1.2*
+	gtk? ( >=x11-libs/gtk+-2.8.8
+	virtual/x11 )"
 
 src_compile() {
 	econf \
 		--enable-threads \
 		--with-regex=auto \
-		--disable-gtk \
 		--disable-socks \
-		$(use_with X x) \
+		$(use_enable gtk) \
 		$(use_enable ssl) \
 		$(use_enable gnome) \
 		$(use_enable mozilla js) \
