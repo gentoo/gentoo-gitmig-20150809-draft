@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 82747fd483959d1cc39456f2e76aadcb ChangeLog 6467
 MD5 1be6bc7c3c71d0d777fbef0592e7218b files/digest-gnome-netstatus-2.10.0 75
 MD5 1be6bc7c3c71d0d777fbef0592e7218b files/digest-gnome-netstatus-2.10.0-r1 75
@@ -10,3 +13,10 @@ MD5 5c018d92383163aa4e36b638afd3b60c gnome-netstatus-2.10.0-r2.ebuild 835
 MD5 97f8a858994fc26019a6d6edb1511d18 gnome-netstatus-2.10.0.ebuild 699
 MD5 eb89116066d760922fe4fc3816b76062 gnome-netstatus-2.12.0.ebuild 898
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0WtGKRy60XGEcJIRAl72AKCZhuxZTt0IvrrPmIt+d0LCf7GLSgCeN/mR
+R+HTLD3AKL47X/Qh/UJSCx4=
+=i6vs
+-----END PGP SIGNATURE-----
