@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75c4f844e83ccd54d679bec4d82c3ab4 ChangeLog 19945
 MD5 e8861003d9c73bcf26b9df775ec65fbe files/digest-gnome-applets-1.4.0.5 75
 MD5 fa49e6f2df38c7035ec9671ffbc030de files/digest-gnome-applets-2.10.1 74
@@ -17,3 +20,10 @@ MD5 7edc4c5000f243f41430c6534b467300 gnome-applets-2.12.1.ebuild 1815
 MD5 050d47f57846609f28aef7fbf87cb501 gnome-applets-2.12.2.ebuild 2067
 MD5 c5ad9a1f39e8b3bf62e7a728a1d45fb6 gnome-applets-2.6.2.ebuild 1569
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0WlPKRy60XGEcJIRAnvDAJ0fJgoO58iD49pugKNzzgcfa2kPiACfXbkY
+l3DFPcMItFplOj+F8mUcCRA=
+=PYCf
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 160ddae98940d08ea466485fc22ebfea ChangeLog 16301
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
 MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0 134
@@ -12,3 +15,10 @@ MD5 56aa74472b71a3a0189ff2ea99acd943 gnome-session-2.10.0-r3.ebuild 2124
 MD5 4499ec98ae9a50f5de83b8ce43411a80 gnome-session-2.10.0.ebuild 1586
 MD5 b965f3db93dd51f285b8f58480c57ce5 gnome-session-2.12.0.ebuild 1975
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0WkTKRy60XGEcJIRAg6dAJ9Q6PM68PQ9LObq1S1sFL9dis5FtgCeMOlJ
+l64EsqFnwdR357gYgj1OAiQ=
+=gtQn
+-----END PGP SIGNATURE-----
