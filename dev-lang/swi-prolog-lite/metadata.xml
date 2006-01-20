@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>prolog</herd>
+<maintainer><email>vapier@gentoo.org</vapier></maintainer>
 </pkgmetadata>
