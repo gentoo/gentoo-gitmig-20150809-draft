@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f44e7916277f346bd86a5b21cd8f1851 gnome-terminal-2.10.0.ebuild 1161
-MD5 deb83fba66b34d722f90cc991168f174 gnome-terminal-2.12.0.ebuild 1225
-MD5 6b9716eb662f65087bd7a068907f2f3d ChangeLog 12291
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 39319897f878b9eb6bed21179d9ab2a5 gnome-terminal-2.8.2.ebuild 1149
+MD5 8961aea44afb2394a421d15acb9f2e4e ChangeLog 12412
+MD5 c6d9c33f98e008a1bb1ca3caa6028f8d files/digest-gnome-terminal-2.10.0 75
+MD5 319f3c55edc2ba11fe8592faf32c35a3 files/digest-gnome-terminal-2.12.0 75
 MD5 566ca1ffc1b71593c39529fb9af82cb1 files/digest-gnome-terminal-2.8.2 74
 MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
 MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.patch 1000
-MD5 c6d9c33f98e008a1bb1ca3caa6028f8d files/digest-gnome-terminal-2.10.0 75
-MD5 319f3c55edc2ba11fe8592faf32c35a3 files/digest-gnome-terminal-2.12.0 75
+MD5 f44e7916277f346bd86a5b21cd8f1851 gnome-terminal-2.10.0.ebuild 1161
+MD5 260e6b1106759ac2f4fe45410ae5cbd5 gnome-terminal-2.12.0.ebuild 1228
+MD5 39319897f878b9eb6bed21179d9ab2a5 gnome-terminal-2.8.2.ebuild 1149
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDIlOaomPajV0RnrERAuG6AJ9yDO9FsC2CWa+XymzqkWfc3ulA7wCdESUR
-ryNFrgYmYxDMxhlQsgBofZw=
-=dOVA
+iD8DBQFD0WnEKRy60XGEcJIRApZGAJ9L27O5GzzNPwVZVe3q3XABf4G+vQCgq0x/
+rkdCjsOTCS/gl9A0NX9pJfM=
+=QV0I
 -----END PGP SIGNATURE-----
