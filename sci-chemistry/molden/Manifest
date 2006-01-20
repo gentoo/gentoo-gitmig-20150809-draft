@@ -1,4 +1,7 @@
-MD5 97ab624a6f895ac2f9d7cad6dd742c4e ChangeLog 3331
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e132dc92c3027a43bfc0cebb3ea74183 ChangeLog 3431
 MD5 d06154ddfaab5d99bd967f2ca2b53652 files/digest-molden-3.9 61
 MD5 bbe8bcdbccb478cc81982616a13d5e5f files/digest-molden-4.0 61
 MD5 05e3e6790a565d9173b003c02a09c902 files/digest-molden-4.1 61
@@ -8,4 +11,11 @@ MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
 MD5 890c58c19b40fc682db3be5e0588f619 molden-3.9.ebuild 1752
 MD5 41d6eaa284c17fef533c07982a6afff0 molden-4.0.ebuild 1832
 MD5 aef43a63df97086181f3e85d37c17100 molden-4.1.ebuild 1845
-MD5 60fecfaf4c95594c04732293a4ef61b8 molden-4.3.ebuild 1906
+MD5 cdc9ac3602ebb56910dfd8b5f3dcaa60 molden-4.3.ebuild 1902
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0GyrSENan+PfizARAmddAJ9PC3ims1DxyQdjThZq95/M3hB2CACcDi27
+AUcqbVMhx7YGwHhPfTdC3iw=
+=cOex
+-----END PGP SIGNATURE-----
