@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.10 2006/01/18 19:07:22 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.11 2006/01/20 01:02:24 gregkh Exp $
+
+*git-sources-2.6.16_rc1-r2 (20 Jan 2006)
+
+  20 Jan 2006; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +git-sources-2.6.16_rc1-r2.ebuild:
+  fixed up the kernel-2 eclass so that the git packages are
+  easier to maintain.
+  
+  2.6.16-rc1-git2 release.
 
 *git-sources-2.6.16_rc1-r1 (18 Jan 2006)
 
