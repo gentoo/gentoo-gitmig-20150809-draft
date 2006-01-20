@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.27 2006/01/19 03:47:55 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.28 2006/01/20 00:08:39 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -39,9 +39,9 @@ java_pkg_prerm() {
 }
 
 java_set_default_vm_() {
-		java-config --set-system-vm=${VMHANDLE}
-		/usr/sbin/env-update
-		source /etc/profile
+	java-config --set-system-vm=${VMHANDLE}
+	/usr/sbin/env-update
+	source /etc/profile
 
 	echo
 	einfo " After installing ${P} this"
@@ -116,7 +116,8 @@ java_remove-libjsoundalsa() {
 	fi
 }
 
-# Fixes ${JAVA_HOME}/jre/lib/i386 for i?86. See bug #23579.
+# Symlinks i386 to i?86. Updates env file to then use i?86 
+# for LD_LIBRARY_PATH. See bug #23579.
 #
 # Takes an argument, which is a directory living in ${D}
 # which has a directory named i386, that should be i686, i486, etc.
@@ -131,9 +132,7 @@ fix-i386-dir() {
 		if [[ ${host} != i386 ]]; then
 			local orig_dir="${libdir}/i386"
 			local new_dir="${libdir}/${host}"
-			mv ${D}/${orig_dir} ${D}/${new_dir} || 
-				die "Failed to move ${orig_dir} to ${new_dir}"
-			dosym ${host} ${orig_dir} || die "Failed to dosym"
+			dosym i386 ${new_dir} || die "Failed to dosym"
 			
 
 			sed -i -e "s/i386/${host}/g" \
