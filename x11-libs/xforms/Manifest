@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 05745157f9a327d7cc26cfcfb7aa0d41 ChangeLog 4415
 MD5 767bd772780965ae657e0daf4180eb14 files/digest-xforms-1.0 68
 MD5 5716f7fa251112babf0eee119e0df382 files/digest-xforms-1.0-r1 135
 MD5 934259031d3f2bb9b64ae3702e56bbb7 files/digest-xforms-1.0.90 65
+MD5 934259031d3f2bb9b64ae3702e56bbb7 files/digest-xforms-1.0.90-r1 65
 MD5 5b4646a68892b97d7f2187623b290a2e xforms-1.0-r1.ebuild 1199
+MD5 5e7a19793e36f8e157cd32b8967ed3bb xforms-1.0.90-r1.ebuild 907
 MD5 19a362a1cd68075c0ea5dc6070828d45 xforms-1.0.90.ebuild 599
 MD5 b69e642bb731bfd1d14ffbf83ddce4ed xforms-1.0.ebuild 1001
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxGA42+ySkm8kpY0RAmzoAJ98r1xNVdJXJKGY0ROfT1qEzGeAEQCfZX6M
-t43QTlpwL7aoK5FPSGbJpE8=
-=2wGn
------END PGP SIGNATURE-----
