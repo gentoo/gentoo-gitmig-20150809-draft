@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/php-gtk-1.0.2.ebuild,v 1.3 2005/12/29 03:27:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/php-gtk-1.0.2.ebuild,v 1.4 2006/01/20 18:07:29 chtekk Exp $
 
 PHP_EXT_NAME="php_gtk"
 PHP_EXT_INI="yes"
@@ -30,6 +30,15 @@ pkg_setup() {
 	has_php
 
 	require_php_with_use cli
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+
+	# patch to fix bug #90570
+	epatch "${FILESDIR}/undef-gtk_shpaned_new.patch"
 }
 
 src_compile() {
