@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.15.ebuild,v 1.2 2006/01/16 17:17:54 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.16.ebuild,v 1.1 2006/01/20 20:40:14 taviso Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 HOMEPAGE="http://www.fvwm.org/"
-SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-	mirror://gentoo/fvwm-2.5.14-translucent-menus.diff.gz"
+SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2 mirror://gentoo/fvwm-2.5.16-translucent-menus.diff.gz"
 
 LICENSE="GPL-2 FVWM"
 SLOT="0"
@@ -47,22 +46,17 @@ DEPEND="${RDEPEND}
 			xinerama? ( x11-proto/xineramaproto ) )
 		virtual/x11 )"
 
-SFT=${WORKDIR}/FvwmTabs-v3-4
-
 src_unpack() {
 	unpack ${A}; export EPATCH_OPTS="-F3 -l"
 
 	# this patch enables fast translucent menus in fvwm. this is a
 	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
-	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.14-translucent-menus.diff
+	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.16-translucent-menus.diff
 
 	# fixing #51287, the fvwm-menu-xlock script is not compatible
 	# with the xlockmore implementation in portage.
 	cd ${S}; epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
-
-	# remove XBell when grab fails.
-	cd ${S}; epatch ${FILESDIR}/fvwm-noxbell-grab-fail.diff
 }
 
 src_compile() {
@@ -142,6 +136,7 @@ src_compile() {
 	# set the local maintainer for fvwm-bug.
 	export FVWM_BUGADDR="taviso@gentoo.org"
 
+	# reccommended by upstream
 	append-flags -fno-strict-aliasing
 
 	econf ${myconf} || die
@@ -208,8 +203,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
+	einfo
 	einfo "For information about the changes in this release, please"
 	einfo "refer to the NEWS file."
-	echo
+	einfo
 }
