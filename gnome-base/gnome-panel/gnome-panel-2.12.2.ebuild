@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.2.ebuild,v 1.1 2005/12/05 04:09:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.2.ebuild,v 1.2 2006/01/20 01:27:28 allanonjl Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="The GNOME panel"
 HOMEPAGE="http://www.gnome.org/"
@@ -41,6 +41,11 @@ USE_DESTDIR="1"
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
 		$(use_enable eds)"
+
+	if ! built_with_use dev-libs/libxml2 python; then
+		einfo "Please re-emerge dev-libs/libxml2 with the python USE flag set"
+		die "libxml2 needs the python use flag set"
+	fi
 }
 
 src_unpack() {
