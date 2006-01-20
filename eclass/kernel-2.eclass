@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.155 2006/01/10 05:37:36 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.156 2006/01/20 00:57:22 gregkh Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -133,10 +133,10 @@ detect_version() {
 	RELEASE=${RELEASE/_beta}
 	RELEASE=${RELEASE/_rc/-rc}
 	RELEASE=${RELEASE/_pre/-pre}
-	kernel_is ge 2 6 && RELEASE=${RELEASE/-pre/-bk}
+	kernel_is ge 2 6 && RELEASE=${RELEASE/-pre/-git}
 	RELEASETYPE=${RELEASE//[0-9]}
 
-	# Now we know that RELEASE is the -rc/-bk
+	# Now we know that RELEASE is the -rc/-git
 	# and RELEASETYPE is the same but with its numerics stripped
 	# we can work on better sorting EXTRAVERSION.
 	# first of all, we add the release
@@ -177,11 +177,11 @@ detect_version() {
 	S=${WORKDIR}/linux-${KV_FULL}
 	KV=${KV_FULL}
 
-	# -rc-bk pulls can be achieved by specifying CKV
+	# -rc-git pulls can be achieved by specifying CKV
 	# for example:
 	#   CKV="2.6.11_rc3_pre2"
 	# will pull:
-	#   linux-2.6.10.tar.bz2 & patch-2.6.11-rc3.bz2 & patch-2.6.11-rc3-bk2.bz2
+	#   linux-2.6.10.tar.bz2 & patch-2.6.11-rc3.bz2 & patch-2.6.11-rc3-git2.bz2
 
 	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
@@ -190,18 +190,18 @@ detect_version() {
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
 	fi
 
-	if [[ ${RELEASETYPE} == -bk ]]; then
+	if [[ ${RELEASETYPE} == -git ]]; then
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${OKV}${RELEASE}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${RELEASE}.bz2"
 	fi
 
-	if [[ ${RELEASETYPE} == -rc-bk ]]; then
+	if [[ ${RELEASETYPE} == -rc-git ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 	fi
 
 	handle_genpatches
