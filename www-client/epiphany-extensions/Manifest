@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b2fadbe85284b82a4e10b45e4985fdbd ChangeLog 3966
 MD5 82452a5693e265225e96d4222547dafa epiphany-extensions-1.6.0.ebuild 1210
 MD5 8f44ce32180bc48d3a92d4aa1b129afb epiphany-extensions-1.6.4-r1.ebuild 1976
@@ -9,3 +12,10 @@ MD5 cc94941ad96bbbd969542ee260c77e4c files/epiphany-extensions-1.6.0-disable_boo
 MD5 6b4caa4057fe795d71689814affe5100 files/epiphany-extensions-1.6.0-fix_includes.patch 1412
 MD5 67ceb0a8ab526d679f2cf09219d6e6ce files/epiphany-extensions-1.8.0-fix-includes.patch 2848
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0WgmKRy60XGEcJIRAgN6AKCv17Hf8OhKcZjWSxxiDldOMf4T1gCeI4Hu
+Qb+v4nlDCEplCZHXF6shTJs=
+=s5A7
+-----END PGP SIGNATURE-----
