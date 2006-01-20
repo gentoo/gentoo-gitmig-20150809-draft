@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0.ebuild,v 1.1 2006/01/20 17:00:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0.ebuild,v 1.2 2006/01/20 19:16:15 azarah Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
@@ -33,7 +33,7 @@ src_unpack(){
 	epatch ${FILESDIR}/${PN}-0.4.4-bug117481.patch
 	epatch ${FILESDIR}/${PN}-0.4.3-pdf2xml.patch
 	epatch ${FILESDIR}/${PN}-0.4.4-cairo-lines.patch
-	autoreconf -f -v -i || die "autoreconf failed"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
