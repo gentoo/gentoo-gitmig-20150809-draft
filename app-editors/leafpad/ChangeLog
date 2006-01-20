@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/leafpad
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.7 2005/10/24 08:15:19 taviso Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.8 2006/01/20 21:01:53 taviso Exp $
+
+*leafpad-0.8.7 (20 Jan 2006)
+
+  20 Jan 2006; Tavis Ormandy <taviso@gentoo.org> +leafpad-0.8.7.ebuild:
+  bump
 
   24 Oct 2005; Tavis Ormandy <taviso@gentoo.org> leafpad-0.8.3.ebuild:
   stable on x86
