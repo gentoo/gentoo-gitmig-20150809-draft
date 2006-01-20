@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.1 2006/01/18 11:06:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.2 2006/01/20 19:07:57 spyderous Exp $
 
 inherit eutils
 
 DESCRIPTION="Motif based schedule planner"
 HOMEPAGE="http://www.bitrot.de/plan.html"
-SRC_URI="ftp://plan.ftp.fu-berlin.de/unix/X11/apps/plan/${P}.tar.gz
+SRC_URI="ftp://ftp.fu-berlin.de/unix/X11/apps/plan/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.tar.bz2"
 
 LICENSE="as-is"
