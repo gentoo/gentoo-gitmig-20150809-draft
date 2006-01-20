@@ -1,4 +1,7 @@
-MD5 4c75c3cd9c11aa85f91ddeecb0aa1748 ChangeLog 11614
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82125b5bf0482ef68162fe7f823350db ChangeLog 11725
 MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15-r1 64
@@ -13,5 +16,12 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa4d3fbbdfc954475759cebe1f450a58 vte-0.11.13-r2.ebuild 1401
 MD5 cf8a45837bc6fdc036e01d2fe916a545 vte-0.11.15-r1.ebuild 1394
 MD5 f389741157c2b244d42781121f5e597a vte-0.11.15.ebuild 1294
-MD5 4dd516df6138f83a4c37ecfe9ee7d267 vte-0.11.16-r1.ebuild 1350
+MD5 bb7efa8edabd010fe347ebec046e4ae6 vte-0.11.16-r1.ebuild 1353
 MD5 c1bb4fc20b0ddfa11a4e7ba3a28e52e3 vte-0.11.16.ebuild 1297
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0V0hKRy60XGEcJIRAnTIAKCkn9wl1SkkDCLmXloUb4l/0z1HiACcDbSm
+u+IBUDWK5JhBjX+mCw03RE4=
+=X8Br
+-----END PGP SIGNATURE-----
