@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/markaby
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.1 2006/01/20 23:36:38 caleb Exp $
+
+*markaby-0.2 (20 Jan 2006)
+
+  20 Jan 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +markaby-0.2.ebuild:
+  Initial import
+
