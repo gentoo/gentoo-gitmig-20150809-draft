@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libebt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.14 2006/01/20 04:16:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.15 2006/01/20 04:17:53 ciaranm Exp $
+
+  20 Jan 2006; Ciaran McCreesh <ciaranm@gentoo.org> -libebt-1.1.0.ebuild,
+  -libebt-1.2.0.ebuild:
+  Tidy up old versions
 
 *libebt-1.2.2 (20 Jan 2006)
 
