@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cisco-aironet-client-utils
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-aironet-client-utils/ChangeLog,v 1.8 2005/03/10 20:14:24 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-aironet-client-utils/ChangeLog,v 1.9 2006/01/20 15:52:17 wolf31o2 Exp $
+
+  20 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -cisco-aironet-client-utils-2.0.ebuild,
+  cisco-aironet-client-utils-2.1.ebuild:
+  I removed virtual/x11 since it already has gtk+ in RDEPEND.
 
   10 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   cisco-aironet-client-utils-2.0.ebuild,

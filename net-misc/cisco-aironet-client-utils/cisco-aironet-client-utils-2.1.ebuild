@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-aironet-client-utils/cisco-aironet-client-utils-2.1.ebuild,v 1.6 2005/03/10 20:14:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-aironet-client-utils/cisco-aironet-client-utils-2.1.ebuild,v 1.7 2006/01/20 15:52:17 wolf31o2 Exp $
 
 DESCRIPTION="Cisco Aironet Client Utilities"
 HOMEPAGE="http://www.cisco.com/pcgi-bin/tablebuild.pl/aironet-utils-linux"
@@ -15,8 +15,7 @@ IUSE="pcmcia"
 DEPEND="virtual/libc
 	pcmcia? ( sys-apps/pcmcia-cs )"
 
-RDEPEND="virtual/x11
-	=x11-libs/gtk+-1.2*
+RDEPEND="=x11-libs/gtk+-1.2*
 	<=dev-cpp/gtkmm-2.0"
 
 S=${WORKDIR}
