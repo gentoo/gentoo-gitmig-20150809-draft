@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 15c91057dfba30cf6241fb48b1f0e7cc ChangeLog 2969
 MD5 9cabcd5a2b9e4c9f0c8d8ccb5277cb41 files/digest-yaz-2.0.19 63
 MD5 2c601b2958127cb7cfb70ec3fb718177 files/digest-yaz-2.0.8 62
@@ -11,3 +14,10 @@ MD5 aef400e4f4a3f386a996b33f6155c197 yaz-2.0.8.ebuild 1117
 MD5 9a1d52c67033b0303d004a64cf19e377 yaz-2.1.10.ebuild 1253
 MD5 60a23bc625363217bdf2680536352fe3 yaz-2.1.8-r1.ebuild 1245
 MD5 13ca3ea500aec8995024ce9e9be67d23 yaz-2.1.8.ebuild 1079
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0G/+2+ySkm8kpY0RAhjtAJ9fCYqefyP+CcSaqvegH6w+r2BxLACfR2EK
+LafsNN4lqbE6cVHJhruTQYk=
+=9Ud4
+-----END PGP SIGNATURE-----
