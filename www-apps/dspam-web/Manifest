@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ce66c606b26a6c7bef6204982b17a13 ChangeLog 3653
+MD5 26bb32d0d03d5017f5bc6a1e2a8b2542 ChangeLog 3776
 MD5 3556db7ff664537dca11a80a1aa937d3 dspam-web-3.2.7.ebuild 5216
 MD5 26409854de884f5d97f3a6f424e03fa6 dspam-web-3.4.9-r1.ebuild 5034
 MD5 1898f823113a777c154c426f9ee8d194 dspam-web-3.6.0.ebuild 5177
 MD5 ff51188171a9e215248bf6f62cda5138 dspam-web-3.6.1.ebuild 5177
+MD5 2a1f7d326abc49bdb7201cec33769898 dspam-web-3.6.3.ebuild 5179
 MD5 7735956f416bd58bfcbeee99af43bea0 files/digest-dspam-web-3.2.7 63
 MD5 c26bf920b2afa7ae432ac6b6d96fb9b4 files/digest-dspam-web-3.4.9-r1 63
 MD5 03b69dda833751bdda04e5413a9305e0 files/digest-dspam-web-3.6.0 129
 MD5 5a495629f2b3fbcfabc0f4ae4a9b4e4b files/digest-dspam-web-3.6.1 129
+MD5 f73f2bd58b9d8ace7a6f431e8587c909 files/digest-dspam-web-3.6.3 129
 MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
 MD5 b4099a94a52af9abd4ade48d82914c3c files/htpasswd 19
 MD5 f1ea445d6b4ddf81c55a4e886bc04218 metadata.xml 341
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwVEAEzitwsaoONoRAkHeAJ98kVPaFoFizhupD12fbJ9I75xNVwCghA8k
-voTOPCDLgREw9tNAFk1cb8s=
-=LGWP
------END PGP SIGNATURE-----
