@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.41 2006/01/15 18:58:30 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.42 2006/01/20 05:32:03 nichoj Exp $
+
+  20 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/kaffe-1.1.6-alsa.patch, kaffe-1.1.6-r2.ebuild:
+  Applied patch from upstream (bug #119272) to fix compile problems with newer
+  version of alsa-lib.
 
   15 Jan 2006; Joshua Nichols <nichoj@gentoo.org> kaffe-1.1.4.ebuild,
   kaffe-1.1.4-r1.ebuild, kaffe-1.1.5.ebuild, kaffe-1.1.5-r1.ebuild,

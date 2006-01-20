@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.6-r2.ebuild,v 1.3 2006/01/15 18:58:30 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.6-r2.ebuild,v 1.4 2006/01/20 05:32:03 nichoj Exp $
 
 inherit base eutils java flag-o-matic
 
@@ -32,7 +32,7 @@ DEPEND="
 	gmp? ( >=dev-libs/gmp-3.1 )"
 RDEPEND=${DEPEND}
 
-#We need to build this after kaffe because it is implemented in java
+# We need to build this after kaffe because it is implemented in java
 PDEPEND="dev-java/gjdoc"
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,7 +43,9 @@ IUSE="alsa esd gmp gtk nls"
 PROVIDE="virtual/jdk
 	virtual/jre"
 
-PATCHES="${DISTDIR}/${P}-kaffeh.patch.bz2"
+# ${P}-alsa is needed to prevent compile errors with newer alsas
+#	(see bug #119272)
+PATCHES="${DISTDIR}/${P}-kaffeh.patch.bz2 ${FILESDIR}/${P}-alsa.patch"
 
 pkg_setup() {
 	if ! use gmp; then
