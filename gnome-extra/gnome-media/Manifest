@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c6194f91dd44cb4ad7af4adca936fa13 ChangeLog 11820
 MD5 88dec384b5105a1bffd46847025909b0 files/digest-gnome-media-1.2.3-r2 70
 MD5 097229597447674a84ade529e1f51f9f files/digest-gnome-media-2.10.2 72
@@ -8,3 +11,10 @@ MD5 9a851876fa16d622d4b1b13f1c9f0abd gnome-media-2.10.2.ebuild 1427
 MD5 b2eaa694690afb4a11419c82f3fc79a3 gnome-media-2.12.0.ebuild 1564
 MD5 ca96772c1d9f33a48ddbbe1d9050939b gnome-media-2.8.0.ebuild 1227
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD4DBQFD0WbcKRy60XGEcJIRAsYGAKCRTY5rTYua5/Q5wTuFAFhDLRjvqgCY4U2K
+qI6qHYKC28QRvu3UZZf9Rw==
+=N5Vx
+-----END PGP SIGNATURE-----
