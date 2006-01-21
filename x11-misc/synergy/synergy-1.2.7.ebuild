@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.2.7.ebuild,v 1.1 2006/01/18 16:03:47 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.2.7.ebuild,v 1.2 2006/01/21 13:28:19 nelchael Exp $
 
 inherit eutils
 
@@ -12,7 +12,20 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libXtst
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXinerama )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xproto
+		x11-proto/kbproto
+		x11-proto/xineramaproto
+		x11-libs/libXt )
+	virtual/x11 )"
 
 src_compile() {
 	econf --sysconfdir=/etc || die
