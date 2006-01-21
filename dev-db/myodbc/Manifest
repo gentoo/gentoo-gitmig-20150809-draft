@@ -1,8 +1,18 @@
-MD5 9e5495c7932575e1cb3ca5fef8233e21 myodbc-3.51.11.ebuild 2435
-MD5 0e442cf14faf52ff7cc880f1ee89d2e9 myodbc-3.51.06.ebuild 2366
-MD5 9e1b88e13c5a5108d210d160ac0ecbdc ChangeLog 1320
-MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2937be65bfa608784d3c764d830ce0f ChangeLog 1404
 MD5 af6071c0c469470111c00d957ccad675 files/digest-myodbc-3.51.06 66
 MD5 b305275bdb6622eccc8d3df6e5b59657 files/digest-myodbc-3.51.11 66
-MD5 ef517bf6e6fb65582a5198a63db3b786 files/odbcinst.ini.m4 233
 MD5 bdcd6e3e92526bd31f3dad197f3ff9e4 files/odbc.ini.m4 517
+MD5 ef517bf6e6fb65582a5198a63db3b786 files/odbcinst.ini.m4 233
+MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
+MD5 0e442cf14faf52ff7cc880f1ee89d2e9 myodbc-3.51.06.ebuild 2366
+MD5 6ddd465c90ad4938f824519444ea9f6d myodbc-3.51.11.ebuild 2442
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0pnkoFw4q70f3SsRAqrOAKCZApBo/XvYTeaK29G+/aGu72YDTgCgkh+A
+TpUCJJWm4biwIKvFJacAQj8=
+=lImr
+-----END PGP SIGNATURE-----
