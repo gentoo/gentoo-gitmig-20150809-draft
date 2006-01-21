@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a250bcf352e3e7022f9cac68a00c8985 ChangeLog 766
+MD5 369319004c0543835ddae8e8b059f2d3 ChangeLog 876
 MD5 32a6a1684d866f5beb1ee8ff56a836db files/digest-pam_pwdfile-0.99 67
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7ee7bdbe85d902d067c2064570d01758 pam_pwdfile-0.99.ebuild 870
+MD5 241b781beb6cd37a869eef0937ed2a56 pam_pwdfile-0.99.ebuild 868
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuLuGCRZPokWLroQRAlsVAJ9u6pgENopOqNCd+UnyR1/DykWeLgCgqEqW
-rcu7m20fRTtz09Cjb8OUuU8=
-=DDgO
+iD8DBQFD0oqUcsIHjyDViGQRAp54AJ0aRvXYq7SKY3/PnmozSTxaDMDw7wCZAQJx
+e8+41DKuyxSUlZypZNwohAU=
+=Kiza
 -----END PGP SIGNATURE-----
