@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/lineak-defaultplugin-0.8.3.ebuild,v 1.6 2005/12/25 12:40:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/lineak-defaultplugin-0.8.3.ebuild,v 1.7 2006/01/21 13:05:43 nelchael Exp $
 
 inherit multilib
 
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-		x11-misc/lineakd"
+RDEPEND="x11-misc/lineakd"
 
 src_install () {
 	make DESTDIR=${D} PLUGINDIR=/usr/$(get_libdir)/lineakd/plugins lineakddocdir=/usr/share/doc/${MY_P} install || die

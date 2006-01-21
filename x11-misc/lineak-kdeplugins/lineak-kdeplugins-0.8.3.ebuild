@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/lineak-kdeplugins-0.8.3.ebuild,v 1.8 2005/12/25 12:40:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/lineak-kdeplugins-0.8.3.ebuild,v 1.9 2006/01/21 13:04:26 nelchael Exp $
 
 inherit kde multilib
 
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	x11-misc/lineakd"
+RDEPEND="x11-misc/lineakd"
 
 need-kde 3.2
 
