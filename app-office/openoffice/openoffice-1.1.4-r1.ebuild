@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.9 2005/11/20 19:27:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.10 2006/01/21 13:40:46 suka Exp $
 
 # Notes:
 #
@@ -45,7 +45,11 @@ SLOT="0"
 KEYWORDS="x86 ppc -sparc"
 
 RDEPEND="!app-office/openoffice-bin
-	virtual/x11
+	|| ( (
+			x11-libs/libXaw
+			x11-libs/libXinerama
+		)
+		virtual/x11 )
 	virtual/libc
 	virtual/lpr
 	>=dev-lang/perl-5.0
@@ -62,6 +66,14 @@ RDEPEND="!app-office/openoffice-bin
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+			x11-libs/libXrender
+			x11-proto/printproto
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/xineramaproto
+		)
+		virtual/x11 )
 	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
 	dev-util/pkgconfig
