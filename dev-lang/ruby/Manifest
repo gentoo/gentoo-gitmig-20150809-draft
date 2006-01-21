@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ffb34e68502c75bff005d03fc1d40e36 ChangeLog 26494
+MD5 e078de7f81c1fd23fe90cba90c6bd2e0 ChangeLog 26586
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r2 125
 MD5 e496eaf8c6af0debd1c74f8e66746a0c files/digest-ruby-1.8.3 125
 MD5 abf0468a972fff8b129ec750fd804ab5 files/digest-ruby-1.8.4 125
@@ -16,12 +13,5 @@ MD5 e7fc14a584186eb629eddc20bc853a24 files/ruby-rdoc-gentoo.diff 455
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 a0045c7bdab6743aede398ec740b44ae ruby-1.8.2-r2.ebuild 3917
 MD5 ce1bfc8480546a10c83a8c3b77bb5e22 ruby-1.8.3.ebuild 3687
-MD5 6c743b8a088d2dbd0d641b1e3c249165 ruby-1.8.4-r1.ebuild 3929
+MD5 55ad4fdaf357a62132fec41155335e72 ruby-1.8.4-r1.ebuild 3926
 MD5 1ca4cc0bd209f1351a336cf23e8b499c ruby-1.8.4.ebuild 3761
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDz80yKRy60XGEcJIRAiaUAKCU7SoiTroCLFRVuL3S1tccWoejUACfbE2F
-tF+rV2AwhowDqFFshwYS1ik=
-=d0oX
------END PGP SIGNATURE-----
