@@ -1,49 +1,53 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10_rc2.ebuild,v 1.2 2006/01/03 02:16:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.1 2006/01/21 21:12:44 humpback Exp $
 
-inherit eutils
+inherit eutils qt3
 
-VER="${PV/_rc/-test}"
-MY_PV="${VER}"
+# usefull for test/rc releases
+MY_PV="${PV/_rc/-test}"
 MY_P="${PN}-${MY_PV}"
-HTTPMIRR="http://gentoo-pt.org/~humpback/psi"
-IUSE="kde ssl crypt extras"
+
+HTTPMIRR="http://vivid.dat.pl/psi"
+IUSE="ssl crypt xscreensaver extras xmms insecure-patches"
 QV="2.0"
+
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
-HOMEPAGE="http://psi.affinix.com"
+HOMEPAGE="http:/psi-im.org/"
 # translations from http://tanoshi.net/language.html
 # polish translation contains special texts for patches from extras-version
 #		extras? ( ${HTTPMIRR}/${PN}-${VER}-gentoo-extras-0.5.tar.bz2  )
 SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
-		extras? ( ${HTTPMIRR}/${PN}-${VER}-gentoo-extras-0.1.tar.bz2 )
+		extras? ( http://felisberto.net/~humpback/psi/gentoo-psi-0.10.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-0.9.3.tar.bz2 )
+		linguas_bg? ( ${HTTPMIRR}/psi_bg-0.10-a.tar.bz2 )
 		linguas_ca? ( ${HTTPMIRR}/psi_ca-0.9.3.tar.bz2 )
 		linguas_cs? ( ${HTTPMIRR}/psi_cs-0.9.3-a.tar.bz2 )
 		linguas_da? ( ${HTTPMIRR}/psi_da-0.9.3.tar.bz2 )
 		linguas_de? ( ${HTTPMIRR}/psi_de-0.9.3-c.tar.bz2 )
 		linguas_ee? ( ${HTTPMIRR}/psi_ee-0.9.3_rc1.tar.bz2 )
 		linguas_el? ( ${HTTPMIRR}/psi_el-0.9.3-a.tar.bz2 )
-		linguas_eo? ( ${HTTPMIRR}/psi_eo-0.9.3-c.tar.bz2 )
-		linguas_es? ( ${HTTPMIRR}/psi_es-0.9.3-a.tar.bz2 )
+		linguas_eo? ( ${HTTPMIRR}/psi_eo-0.10-a.tar.bz2 )
+		linguas_es? ( ${HTTPMIRR}/psi_es-0.10-a.tar.bz2 )
 		linguas_et? ( ${HTTPMIRR}/psi_et-0.9.3-a.tar.bz2 )
 		linguas_fi? ( ${HTTPMIRR}/psi_fi-0.9.3.tar.bz2 )
 		linguas_fr? ( ${HTTPMIRR}/psi_fr-0.9.3-a.tar.bz2 )
 		linguas_it? ( ${HTTPMIRR}/psi_it-0.9.3.tar.bz2 )
 		linguas_jp? ( ${HTTPMIRR}/psi_jp-0.9.3.tar.bz2 )
-		linguas_mk? ( ${HTTPMIRR}/psi_mk-0.9.3-a.tar.bz2 )
-		linguas_nl? ( ${HTTPMIRR}/psi_nl-0.9.3-b.tar.bz2 )
+		linguas_hu? ( ${HTTPMIRR}/psi_hu-0.10-a.tar.bz2 )
+		linguas_mk? ( ${HTTPMIRR}/psi_mk-0.10-a.tar.bz2 )
+		linguas_nl? ( ${HTTPMIRR}/psi_nl-0.10-a.tar.bz2 )
 		linguas_pl? ( ${HTTPMIRR}/psi_pl-0.9.3-1.tar.bz2 )
 		linguas_pt? ( ${HTTPMIRR}/psi_pt-0.9.3.tar.bz2 )
-		linguas_ptBR? ( ${HTTPMIRR}/psi_ptbr-0.9.3.tar.bz2 )
+		linguas_ptBR? ( ${HTTPMIRR}/psi_ptBR-0.10-a.tar.bz2 )
 		linguas_ru? ( ${HTTPMIRR}/psi_ru-0.9.3-a.tar.bz2 )
 		linguas_se? ( ${HTTPMIRR}/psi_se-0.9.3_rc1.tar.bz2 )
 		linguas_sk? ( ${HTTPMIRR}/psi_sk-0.9.3-a.tar.bz2 )
-		linguas_sl? ( ${HTTPMIRR}/psi_sl-0.9.3-a.tar.bz2 )
+		linguas_sl? ( ${HTTPMIRR}/psi_sl-0.10-a.tar.bz2 )
 		linguas_sr? ( ${HTTPMIRR}/psi_sr-0.9.3.tar.bz2 )
 		linguas_sv? ( ${HTTPMIRR}/psi_sv-0.9.3.tar.bz2 )
 		linguas_sw? ( ${HTTPMIRR}/psi_sw-0.9.3.tar.bz2 )
-		linguas_vi? ( ${HTTPMIRR}/psi_vi-0.9.3-a.tar.bz2 )
+		linguas_vi? ( ${HTTPMIRR}/psi_vi-0.10-a.tar.bz2 )
 		linguas_zh? ( ${HTTPMIRR}/psi_zh-0.9.3-a.tar.bz2 )"
 
 SLOT="0"
@@ -54,12 +58,15 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=app-crypt/qca-1.0-r2
-	>=x11-libs/qt-3.3.1"
+	$(qt_min_version 3.3)
+	xscreensaver? ( x11-misc/xscreensaver )
+	extras? ( xmms? ( media-sound/xmms ) )"
 
-RDEPEND="ssl? ( >=app-crypt/qca-tls-1.0-r2 )
-		crypt? ( >=app-crypt/gnupg-1.2.2 )"
+RDEPEND="${DEPEND}
+	ssl? ( >=app-crypt/qca-tls-1.0-r2 )
+	crypt? ( >=app-crypt/gnupg-1.2.2 )"
 
-PATCHBASE="${WORKDIR}"
+PATCHBASE="${FILESDIR}"
 PATCHDIR="${PATCHBASE}/${PV}"
 
 src_unpack() {
@@ -67,11 +74,10 @@ src_unpack() {
 
 		cd ${S}
 		epatch ${FILESDIR}/psi-pathfix2.patch
-		epatch ${FILESDIR}/psi-desktop.patch
-		epatch ${FILESDIR}/psi-desktop_file_and_icons_directories.patch
+		epatch ${FILESDIR}/psi-desktop2.patch
 		epatch ${FILESDIR}/psi-reverse_trayicon2.patch
 
-		if !(use extras); then
+		if ! use extras; then
 			ewarn "You are going to install the original psi version. You might want to"
 			ewarn "try the version with extra unsuported patches by adding 'extras' to"
 			ewarn "your use flags."
@@ -85,27 +91,29 @@ src_unpack() {
 			epause 10
 
 			cd ${S}
+			# from http://norman.rasmussen.co.za/darcs/psi-muc/
+			epatch ${PATCHDIR}/psi-muc_support.patch
+			epatch ${PATCHDIR}/psi-muc_support-update-20051123.patch
+			epatch ${PATCHDIR}/psi-muc_support-update-20060114.patch
+
 			# roster-nr
-			epatch ${PATCHDIR}/psi-roster-nr-0.8.patch
+			epatch ${PATCHDIR}/psi-fix_popup_richtext.patch
+			epatch ${PATCHDIR}/psi-roster-nr-0.9.14.patch
 			epatch ${PATCHDIR}/psi-status_indicator++_add-on_roster-nr.patch
 			# indicator icon
 			cp ${FILESDIR}/psi-indicator.png ${S}/iconsets/roster/default/indicator.png
 
 			# from http://www.cs.kuleuven.ac.be/~remko/psi/
-			epatch ${PATCHDIR}/rosteritems_iris.diff
-			epatch ${PATCHDIR}/rosteritems_psi.diff
 			epatch ${PATCHDIR}/jep8-avatars_iris.diff
 			epatch ${PATCHDIR}/jep8-avatars_psi.diff
-			epatch ${PATCHDIR}/caps_broadcast.diff
 
 			# from http://machekku.uaznia.net/jabber/psi/patches/
-			epatch ${PATCHDIR}/psi-machekku-smart_reply_and_forward-0.5.diff
+			epatch ${PATCHDIR}/psi-machekku-smart_reply_and_forward-0.5_psi-gentoo.diff
 			epatch ${PATCHDIR}/psi-machekku-keep_message_in_auto_away_status.diff
 			epatch ${PATCHDIR}/psi-machekku-quote_emoticons.diff
 			epatch ${PATCHDIR}/psi-machekku-emoticons_advanced_toggle.diff
 			epatch ${PATCHDIR}/psi-machekku-enable_thread_in_messages.diff
 			epatch ${PATCHDIR}/psi-machekku-linkify_fix.diff
-			epatch ${PATCHDIR}/psi-machekku-new_headings_gui_resurrection.diff
 			epatch ${PATCHDIR}/psi-machekku-autostatus_while_dnd.diff
 			epatch ${PATCHDIR}/psi-machekku-visual_styles_manifest.diff
 			epatch ${PATCHDIR}/psi-machekku-tool_window_minimize_fix_for_windows.diff
@@ -117,22 +125,18 @@ src_unpack() {
 			epatch ${PATCHDIR}/psi-line_in_options-mod.diff
 			epatch ${PATCHDIR}/psi-empty_group-fix.diff
 			epatch ${PATCHDIR}/psi-no_online_status-mod.diff
-			epatch ${PATCHDIR}/psi-status_history-add.diff
+			epatch ${PATCHDIR}/psi-status_history-add-psi-gentoo.diff
 			epatch ${PATCHDIR}/psi-icon_buttons_big_return-mod.diff
 			epatch ${PATCHDIR}/psi-linkify-mod-rev-fix.diff
 			epatch ${PATCHDIR}/psi-save_profile-mod.diff
 			epatch ${PATCHDIR}/psi-url_emoticon-mod.diff
-			epatch ${PATCHDIR}/psi-subs_reason-recv.diff
-			epatch ${PATCHDIR}/psi-subs_reason-send.diff
 			epatch ${PATCHDIR}/psi-thin_borders-mod.diff
 
 			# from http://www.uaznia.net/psi-daisy/patches/
 			epatch ${PATCHDIR}/filetransfer.diff
-			epatch ${PATCHDIR}/emergency_button.diff
 			epatch ${PATCHDIR}/psi-emots-mod.diff
 			epatch ${PATCHDIR}/psi_michalj_statusicon_in_chatdlg_titlebar.diff
-			# emergency icon
-			cp ${FILESDIR}/psi-emergency.png ${S}/iconsets/system/default/emergency.png
+			epatch ${PATCHDIR}/psi_michalj_custom_rostericons_in_tooltips.diff
 
 			# from ftp://ftp.patryk.one.pl/pub/psi/patches/
 			epatch ${PATCHDIR}/psi-psz-chatdlg_typed_msgs_history.diff
@@ -141,21 +145,6 @@ src_unpack() {
 			epatch ${PATCHDIR}/psi-status-timeout-kfix.diff
 			epatch ${PATCHDIR}/psi-kg-spoof.diff
 			epatch ${PATCHDIR}/psi-kg-individual_status_add.diff
-			epatch ${PATCHDIR}/psi-apa-invite_reason2-add.diff
-			epatch ${PATCHDIR}/psi-kg-hide-disabled-emottoolbutton.diff
-
-			# from http://home.unclassified.de/files/psi/patches/
-			epatch ${PATCHDIR}/statusdlg-enterkey.diff
-			epatch ${PATCHDIR}/fix-min-window-notify.diff
-			epatch ${PATCHDIR}/offline-contact-animation.diff
-			epatch ${PATCHDIR}/hide-no-resource-from-contextmenu.diff
-			epatch ${PATCHDIR}/custom-sound-popup.diff
-
-			# from bugs.gentoo.org
-			epatch ${PATCHDIR}/psi-add-status-history.patch
-
-			# from http://www.uni-bonn.de/~nieuwenh/
-			epatch ${PATCHDIR}/libTeXFormula.diff
 
 			# from pld-linux.org
 			epatch ${PATCHDIR}/psi-certs.patch
@@ -164,7 +153,13 @@ src_unpack() {
 			epatch ${PATCHDIR}/psi-fix_groupsortingstyle_toggles.patch
 			epatch ${PATCHDIR}/psi-multiple_account_groups.diff
 
-			# psi-devel mailing list
+			# from http://psi-pedrito.go.pl/
+			epatch ${PATCHDIR}/pedrito-null-key-string-fix.diff
+			epatch ${PATCHDIR}/pedrito-avatars-printf-off.diff
+			epatch ${PATCHDIR}/pedrito-linkify_and_wrap-client.diff
+			epatch ${PATCHDIR}/pedrito-group_menuitem_for_notinlist.diff
+
+			# from psi-devel mailing list
 			epatch ${PATCHDIR}/psi-history_lug.patch
 			epatch ${PATCHDIR}/psi-history-deletion-bugfix.patch
 			epatch ${PATCHDIR}/checkboxes-sound-options.diff
@@ -172,20 +167,76 @@ src_unpack() {
 			# from http://mircea.bardac.net/psi/patches/
 			epatch ${PATCHDIR}/psi-cli-v2.diff
 
+			# from ubuntu
+			epatch ${PATCHDIR}/psi-trayicon_ubuntu_fix.patch
+
+			# from http://home.unclassified.de/files/psi/patches/
+			epatch ${PATCHDIR}/statusdlg-enterkey.diff
+			epatch ${PATCHDIR}/fix-min-window-notify.diff
+			epatch ${PATCHDIR}/hide-no-resource-from-contextmenu.diff
+			epatch ${PATCHDIR}/custom-sound-popup.patch
+			epatch ${PATCHDIR}/offline-contact-animation.diff
+
+			# from bugs.gentoo.org
+			epatch ${PATCHDIR}/psi-add-status-history.patch
+
+			# from http://rydz.homedns.org
+			epatch ${PATCHDIR}/psi-filetransfer-finish-popup-qsorix.patch
+
+			# from http://k.uaznia.net/jabber/psi/patches/
+			epatch ${PATCHDIR}/a-psi-k-emergency_away_status_button.diff
+			epatch ${PATCHDIR}/psi-evil_message_support.patch
+			epatch ${PATCHDIR}/psi-auto_responder.patch
+			epatch ${PATCHDIR}/psi-auto_responder_gui.patch
+
+			# from http://www.cs.kuleuven.ac.be/~remko/psi/
+			epatch ${PATCHDIR}/rosteritems_iris.diff
+			# this one was chagned because of muc support
+			epatch ${PATCHDIR}/rosteritems_psi_with_muc.diff
+
+			# from http://delx.cjb.net/psi/
+			epatch ${PATCHDIR}/psi-nicknames.patch
+
+			# from http://norman.rasmussen.co.za/darcs/psi-rc/
+			epatch ${PATCHDIR}/norman-rc.diff
+			epatch ${PATCHDIR}/norman-darcs-20051129.diff
+			# from http://machekku.uaznia.net/jabber/psi/patches/
+			epatch ${PATCHDIR}/psi-machekku-rc_multiline_status_fix.diff
+			# from http://norman.rasmussen.co.za/darcs/psi-rc/
+			epatch ${PATCHDIR}/psi-dynamic-priority-rc-fix.diff
+			epatch ${PATCHDIR}/norman-darcs-20051231.patch
+
 			# created for psi-gentoo and roster-nr
+			epatch ${PATCHDIR}/psi-smile_icon_emoticonset.patch
+			epatch ${PATCHDIR}/psi-enable_avatars.patch
 			epatch ${PATCHDIR}/psi-transport_icons_and_avatars.patch
+			epatch ${PATCHDIR}/psi-client_avatars_icons.patch
 			epatch ${PATCHDIR}/psi-emoticons_advanced_toggle-add-roster-nr.patch
-			epatch ${PATCHDIR}/psi-roster_right_align_group_names.patch
 			epatch ${PATCHDIR}/psi-chatdlg_messages_colors_distinguishes.patch
 			epatch ${PATCHDIR}/psi-messages_color_backgrounds_in_chat.patch
-			epatch ${PATCHDIR}/psi-sort-contacts-style-on-roster-nr.patch
+			epatch ${PATCHDIR}/psi-sort-style-on-roster-nr.patch
 			epatch ${PATCHDIR}/psi-says_mod.patch
-			epatch ${PATCHDIR}/psi-enable_avatars.patch
+			epatch ${PATCHDIR}/psi-muc_support_langpacks_fix.patch
+			epatch ${PATCHDIR}/psi-copy_jid_or_status_message_to_clipboard.patch
+			epatch ${PATCHDIR}/psi-timestamps_option_and_date_showing.patch
+			epatch ${PATCHDIR}/psi-avatars_graph_settings_filetypes.patch
+			epatch ${PATCHDIR}/psi-auto_responder_by_message.patch
+			# by nelchael
+			epatch ${PATCHDIR}/psi-nelchael-exec_command.patch
+			use xmms && epatch ${PATCHDIR}/psi-nelchael-xmms-status.patch
+
+			if use insecure-patches; then
+				# from http://www.uni-bonn.de/~nieuwenh/
+				epatch ${PATCHDIR}/libTeXFormula.diff
+				# from pld-linux.org
+				epatch ${PATCHDIR}/psi-libTeXFormula-nicechats.patch
+			fi;
+
 			epatch ${PATCHDIR}/psi-gentoo-version.patch
 		fi
 		einfo ""
 		einfo "Unpacking language files, you must have linguas_* in USE where"
-		einfo "* is the language files you wish. English is always available"
+		einfo "'*' is the language files you wish. English is always available"
 		einfo ""
 		cd ${WORKDIR}
 		if ! [ -d langs ] ; then
@@ -198,17 +249,26 @@ src_unpack() {
 }
 
 src_compile() {
-	use kde || myconf="${myconf} --disable-kde"
-	./configure --prefix=/usr $myconf || die "Configure failed"
+	# growl is mac osx extension only - maybe someday we will want this
+	local myconf="--disable-growl"
+	use xscreensaver || myconf="${myconf} --disable-xss"
 
-	${QTDIR}/bin/qmake psi.pro \
-			QMAKE=${QTDIR}/bin/qmake \
-			QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS} ${extras}" \
-			QMAKE_RPATH= \
+	./configure --prefix=/usr ${myconf} || die "Configure failed"
+
+	# for CXXFLAGS from make.conf
+	cd ${S}/src
+	${QTDIR}/bin/qmake src.pro \
+		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
+		QMAKE=${QTDIR}/bin/qmake \
+		QMAKE_RPATH= \
 			|| die "Qmake failed"
+	cd ${S}
+	${QTDIR}/bin/qmake psi.pro \
+		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
+		QMAKE=${QTDIR}/bin/qmake \
+		QMAKE_RPATH= \
+		|| die "Qmake failed"
 
-	addwrite "$HOME/.qt"
-	addwrite "$QTDIR/etc/settings"
 	emake || die "Make failed"
 
 	einfo "Building language packs"
@@ -219,6 +279,7 @@ src_compile() {
 }
 
 src_install() {
+	einfo "Installing"
 	make INSTALL_ROOT="${D}" install || die "Make install failed"
 
 	#this way the docs will also be installed in the standard gentoo dir
@@ -231,4 +292,3 @@ src_install() {
 	#Install language packs
 	cp ${WORKDIR}/langs/psi_*.qm ${D}/usr/share/psi/
 }
-

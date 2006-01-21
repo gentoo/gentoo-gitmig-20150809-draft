@@ -1,13 +1,18 @@
-MD5 ce14718a3b99956e2c2c59c5dbdd141b ChangeLog 10053
-MD5 c1ccb520f5b861da2a97cf5a4c17cc20 files/digest-psi-0.10_rc2 1984
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 343a6d22852649be1b667c1b635319a0 ChangeLog 10402
+MD5 f13f9686a5acb361193702deb53cb477 files/digest-psi-0.10 2087
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
 MD5 db2a4c5b68dbb0147392a4657f2dbc92 files/digest-psi-0.9.3-r2 2132
 MD5 839e6fa5502e1f03a660918bc30e48b5 files/digest-psi-0.9.3-r3 2211
 MD5 beb3eefd03626a48e73775691c6c794b files/digest-psi-0.9.3-r4 1975
 MD5 b35105d488f11cae19484290159023b1 files/psi-add-status-history.patch 13703
 MD5 1c741813b6d820d43475058dbfab3100 files/psi-desktop.patch 492
+MD5 7440595a3fc9d3c73f203443a1014352 files/psi-desktop2.patch 591
 MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
 MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
+MD5 b0b03bd664be63fcda744e18e5b4dc5c files/psi-fix_popup_richtext.patch 3903
 MD5 0d5cafd17325fc912c4855252d73378f files/psi-indicator.png 300
 MD5 76f5cc28b75698adddaa068e5f4593f5 files/psi-pathfix.patch 462
 MD5 0dacabdec9ce29cc56faadeeff01ec3b files/psi-pathfix2.patch 364
@@ -16,8 +21,15 @@ MD5 c2528c15be8277434647506d791663d8 files/psi-reverse_trayicon2.patch 937
 MD5 18253b59a4622a06bc3a17a4eef93d22 files/psi-status_indicator++_add-on_roster-nr.patch 9821
 MD5 0250867fe42d1dc91e798336869a09d6 files/vcard-photo-interface.patch 32494
 MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
-MD5 ce7a88f45be8a343a289726ec103db69 psi-0.10_rc2.ebuild 8842
+MD5 34aa34a26b781d61097b4d5daeab60f8 psi-0.10.ebuild 11112
 MD5 3c2b96d4564d64824c71f4bc8e35a873 psi-0.9.3-r1.ebuild 8177
 MD5 e526c4a46dc2ead569b41607c46ceb5f psi-0.9.3-r2.ebuild 9464
 MD5 9cc6eb11ab3f94a5ebc0506bf57838aa psi-0.9.3-r3.ebuild 9862
 MD5 0c6d6cce6f4af4a0160f4f31c407c237 psi-0.9.3-r4.ebuild 9160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0qQC8zY1VwezZiERAj5eAKCc/vsi9mxr+bIgzCqRYdcAj/2RBwCgnblm
+v8apaWgFJf9H9JvCWSc1Uo4=
+=tqig
+-----END PGP SIGNATURE-----
