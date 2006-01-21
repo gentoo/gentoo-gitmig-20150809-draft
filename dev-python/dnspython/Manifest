@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10269c550001d50f26dd85612d79ac19 ChangeLog 2865
+MD5 d46148c364ea1d299ade8c13c69c7705 ChangeLog 2969
 MD5 5c6716def3b559f745ada456bf396a1d dnspython-1.3.2.ebuild 925
 MD5 ca73e71ae675e127b369c71f49495862 dnspython-1.3.3.ebuild 951
 MD5 536e71a68877293051ee0e58923375fe dnspython-1.3.4.ebuild 964
-MD5 1d3c75676e442f6f7742ac0ebbf62b65 dnspython-1.3.5.ebuild 965
+MD5 970e95e73e77a616e16786280a12d463 dnspython-1.3.5.ebuild 961
 MD5 ec5b0f4a9cb24f7812f360d7aeae2f81 files/digest-dnspython-1.3.2 66
 MD5 3b52da045415784241fc9ae4d169de85 files/digest-dnspython-1.3.3 66
 MD5 e89e30abad80039c3811d50c3789bb73 files/digest-dnspython-1.3.4 66
 MD5 92a9a5780c78e70ffef19544cc1e9c9e files/digest-dnspython-1.3.5 66
 MD5 d543a62aa1a2072b30094dde66e1da79 metadata.xml 1301
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfv0vFdQwWVoAgN4RAmumAJ40r1cx0AHMToMchR4Q61rK1gdBWQCg5eWk
-71IfO8YCswy9tv+0L7o3m6c=
-=GS2p
------END PGP SIGNATURE-----
