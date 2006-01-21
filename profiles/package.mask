@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4891 2006/01/21 15:47:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4892 2006/01/21 20:06:36 nattfodd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1402,6 +1402,7 @@ app-vim/vim-spell-es
 app-vim/vim-spell-nl
 app-vim/vim-spell-da
 app-vim/vim-spell-ru
+app-vim/vim-spell-fr
 
 # <pythonhead@gentoo.org (13 Nov 2004)
 # 2.6.0 is now in portage but will remove this soon as deps in other ebuilds are fixed
