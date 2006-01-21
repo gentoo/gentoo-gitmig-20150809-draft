@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.18 2006/01/21 19:56:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.19 2006/01/21 21:15:52 anarchy Exp $
+
+  21 Jan 2006; <anarchy@gentoo.org>
+  +files/ati-drivers-8.21.7-linux-2.6.15.patch, ati-drivers-8.21.7.ebuild:
+  2.6.15 patch added, small fix for libfglrxdrm.so
 
 *ati-drivers-8.21.7 (21 Jan 2006)
 

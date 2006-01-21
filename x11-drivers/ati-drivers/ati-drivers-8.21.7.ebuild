@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.21.7.ebuild,v 1.1 2006/01/21 19:56:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.21.7.ebuild,v 1.2 2006/01/21 21:15:52 anarchy Exp $
 
 IUSE="opengl"
 
@@ -58,7 +58,6 @@ choose_driver_paths() {
 	else
 		ARCH_DIR="${ARCH_DIR}/x86"
 	fi
-	
 }
 
 pkg_setup(){
@@ -283,6 +282,11 @@ src_install-libs() {
 	else
 		doexe ${BASE_DIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
 	fi
+
+	if has_version "x11-base/xorg-server"; then
+		doexe ${BASE_DIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.so
+	fi
+
 	cp -pPR ${ARCH_DIR}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig} \
 			${D}/usr/$(get_libdir)
 	#Not the best place
