@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/CDDB-File-1.05.ebuild,v 1.2 2006/01/15 17:09:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/CDDB-File-1.05.ebuild,v 1.3 2006/01/21 13:51:23 hansmi Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ DEPEND="${DEPEND}
 	perl-core/Test-Simple"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc x86"
 IUSE=""
 SRC_TEST="do"
