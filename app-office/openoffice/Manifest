@@ -1,4 +1,4 @@
-MD5 fbac027b872baa4f2d6f3f757b59b002 ChangeLog 37072
+MD5 817b900deef5b02cf9a64ef49937b1f6 ChangeLog 37236
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 9784ab4484e09b8230284b27d20d4264 files/1.1.4/build-new-xslt.diff 650
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
@@ -42,5 +42,5 @@ MD5 5cba4a6aa38cbfc6b9b91671aa500dd6 files/digest-openoffice-2.0.1 552
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 cf9dc94e784a56867f8dfee43802c82f openoffice-1.1.4-r1.ebuild 16863
 MD5 9f4b77d9e3bc77ce21f5dae51c1c94cc openoffice-1.1.5.ebuild 16769
-MD5 a8947bb9eee6c9e83a083168d28e73ef openoffice-2.0.0.ebuild 7271
-MD5 843ba4afcee1cf087a83a964617af02f openoffice-2.0.1.ebuild 7550
+MD5 2f1e07abc3a1aca8e8c5278657df12f3 openoffice-2.0.0.ebuild 7236
+MD5 5c62876a9340fbbf00e737613aac3905 openoffice-2.0.1.ebuild 7511
