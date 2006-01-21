@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ocaml-doc
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.1 2006/01/21 23:59:08 nattfodd Exp $
+
+*ocaml-doc-3.09 (22 Jan 2006)
+
+  22 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org> +metadata.xml,
+  +ocaml-doc-3.09.ebuild:
+  Initial commit. The ebuild is provided by Ingo Bormuth (bug #119838).
+
