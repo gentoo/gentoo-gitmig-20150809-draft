@@ -23,5 +23,9 @@
 	<longdescription lang="it">
 		La categoria app-text contiene utilità per lavorare con file di testo.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-text contém ferramentas para trabalhar com
+		arquivos de texto em linguagens humanas.
+	</longdescription>
 </catmetadata>
 
