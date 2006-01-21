@@ -1,4 +1,4 @@
-MD5 39172b25f756dc1c8ccaf5398ccd187d ChangeLog 7074
+MD5 817c0bed98291a07a3a7f19f5d8ae94f ChangeLog 7185
 MD5 6c580284e5773f292a32a5a30fcf539a files/digest-rss-glx-0.8.0-r2 67
 MD5 6c580284e5773f292a32a5a30fcf539a files/digest-rss-glx-0.8.0-r3 67
 MD5 4dbe321921028a106a05564a14b2f814 files/jwz-vroot.h 6234
@@ -8,4 +8,4 @@ MD5 b50c007842cc6ee24f667e1755b2bb6c files/rss-glx-0.8.0-hyperspace-install-fix.
 MD5 643bf4d6986ea275bc5b21a5626657c2 files/rss-glx-0.8.0-r2-kdedesktop.patch 1413
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 1c3d19c7c4c92c2b88d78cbc6bc0bee2 rss-glx-0.8.0-r2.ebuild 4919
-MD5 6892bf4a7d74d7351b649aea07ce855e rss-glx-0.8.0-r3.ebuild 4945
+MD5 d300a71d08edd8bda75b29eb373c423b rss-glx-0.8.0-r3.ebuild 4966
