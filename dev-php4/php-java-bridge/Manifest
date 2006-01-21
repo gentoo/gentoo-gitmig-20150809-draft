@@ -1,4 +1,14 @@
-MD5 c291cf0a3ac6d57e2867e1626411034c ChangeLog 1792
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10fb7f61398c68be910a6c9c6b09c37f ChangeLog 1888
 MD5 8562d753d236eb755256a67623db0e81 files/digest-php-java-bridge-2.0.8 74
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 adab7aa6d7dd5fdf92d057a4420af7bb php-java-bridge-2.0.8.ebuild 1667
+MD5 90d58e8d88029a21402017742c828504 php-java-bridge-2.0.8.ebuild 1664
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0p7boFw4q70f3SsRAq3QAKCeZjSo9VqZO+hNlAUoMzQdGLO7aQCfeQIj
+TuMhQhfjfn5famGqGJcflow=
+=chl+
+-----END PGP SIGNATURE-----
