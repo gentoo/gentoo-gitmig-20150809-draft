@@ -1,20 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.10 2005/11/28 12:03:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.11 2006/01/21 17:32:30 ribosome Exp $
 
 inherit perl-app eutils
 
-DESCRIPTION="collection of tools for bioinformatics, genomics and life science research"
+DESCRIPTION="Collection of tools for bioinformatics, genomics and life science research"
 HOMEPAGE="http://www.bioperl.org/"
-SRC_URI="http://www.bioperl.org/ftp/DIST/${P}.tar.bz2"
+SRC_URI="http://www.${PN}.org/ftp/DIST/${P}.tar.bz2"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
 IUSE="mysql gd"
 
-DEPEND="
-	perl-core/File-Temp
+DEPEND="perl-core/File-Temp
 	dev-perl/HTML-Parser
 	dev-perl/IO-String
 	dev-perl/IO-stringy
@@ -37,7 +36,7 @@ DEPEND="
 
 src_compile() {
 	yes "" | perl Makefile.PL ${myconf} \
-	         PREFIX=${D}/usr INSTALLDIRS=vendor
+	         PREFIX="${D}"/usr INSTALLDIRS=vendor
 }
 
 src_test() {

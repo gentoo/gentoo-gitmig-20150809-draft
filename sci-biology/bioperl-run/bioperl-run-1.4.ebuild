@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.4.ebuild,v 1.6 2005/11/28 12:02:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.4.ebuild,v 1.7 2006/01/21 17:34:58 ribosome Exp $
 
 inherit perl-app eutils
 
@@ -36,11 +36,10 @@ src_install() {
 	einfo 'Adding bioperl examples and scripts to /usr/share/...'
 	dodir /usr/share/${PF}/scripts
 	#insinto /usr/share/${PF}/scripts
-	cd ${S}/scripts/
-	tar cf - ./ | ( cd ${D}/usr/share/${PF}/scripts; tar xf -)
+	cd "${S}"/scripts/
+	tar cf - ./ | ( cd "${D}"/usr/share/${PF}/scripts; tar xf -)
 	dodir /usr/share/${PF}/examples
-	cd ${S}/examples/
-	tar cf - ./ | ( cd ${D}/usr/share/${PF}/examples; tar xf -)
-	cd ${S}
-
+	cd "${S}"/examples/
+	tar cf - ./ | ( cd "${D}"/usr/share/${PF}/examples; tar xf -)
+	cd "${S}"
 }
