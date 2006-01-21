@@ -1,14 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.14.ebuild,v 1.1 2005/11/05 12:30:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.15.ebuild,v 1.1 2006/01/21 20:38:30 dsd Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="3"
 inherit kernel-2
 detect_version
 
-UML_VER="uml-2.6.14-bs1"
+UML_VER="uml-2.6.15-bs1"
 UNIPATCH_LIST="${DISTDIR}/${UML_VER}.patch.bz2"
 
 DESCRIPTION="Full sources for the User Mode Linux kernel"
