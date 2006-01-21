@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.9 2006/01/21 09:02:44 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.10 2006/01/21 09:15:08 sebastian Exp $
 #
 # ========================================================================
 #
@@ -343,16 +343,22 @@ require_php_cli()
 
 	# detect which PHP version installed
 	if has_version '=dev-lang/php-4*' ; then
+		PHP_PACKAGE_FOUND=1
 		pkg="`best_version '=dev-lang/php-4*'`"
 		if built_with_use =${pkg} cli ; then
 			PHP_VERSION=4
 		fi
-	elif has_version '=dev-lang/php-5*' ; then
+	fi
+
+	if has_version '=dev-lang/php-5*' ; then
+		PHP_PACKAGE_FOUND=1
 		pkg="`best_version '=dev-lang/php-5*'`"
 		if built_with_use =${pkg} cli ; then
 			PHP_VERSION=5
 		fi
-	else
+	fi
+
+	if [[ -z ${PHP_PACKAGE_FOUND} ]]; then
 		die "Unable to find an installed dev-lang/php package"
 	fi
 
