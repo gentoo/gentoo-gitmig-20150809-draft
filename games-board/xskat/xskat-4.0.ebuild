@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/xskat-4.0.ebuild,v 1.2 2004/06/24 22:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/xskat-4.0.ebuild,v 1.3 2006/01/21 18:04:50 wolf31o2 Exp $
 
 inherit games
 
@@ -10,10 +10,16 @@ SRC_URI="http://www.xskat.de/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| (
+	x11-libs/libX11
+	virtual/x11 )"
+RDEPEND="${DEPEND}
+	|| (
+		x11-proto/xproto
+		virtual/x11 )"
 
 src_compile() {
 	xmkmf -a || die "xmkmf failed"
