@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.4 2005/12/11 15:39:14 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.5 2006/01/21 15:40:49 suka Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -11,7 +11,6 @@ app-emulation/crossover-office-bin
 app-emulation/winex-transgaming
 app-office/mozilla-sunbird-bin
 app-office/openoffice-bin
-app-office/openoffice-ximian-bin
 app-emulation/cedega
 app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
