@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/xearth-1.1.ebuild,v 1.8 2006/01/21 16:58:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/xearth-1.1.ebuild,v 1.9 2006/01/21 23:46:24 nelchael Exp $
 
 HOMEPAGE="http://www.cs.colorado.edu/~tuna/xearth/"
 DESCRIPTION="Xearth sets the X root window to an image of the Earth"
@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND="|| ( (
 		x11-libs/libX11
-		11-libs/libXt
+		x11-libs/libXt
 		x11-libs/libXext )
 	virtual/x11 )"
 DEPEND="${RDEPEND}
