@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.15 2005/04/24 03:26:08 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.16 2006/01/21 16:34:12 nelchael Exp $
+
+  21 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> xcalendar-4.0.ebuild:
+  Fixed DEPEND for modular X.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xcalendar-4.0.ebuild:
   Stable on ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.84.ebuild,v 1.2 2005/12/28 20:04:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.84.ebuild,v 1.3 2006/01/21 17:01:05 nelchael Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~ppc64"
 IUSE="nls"
 
 # only fox-1.4.x is compatible with this version of xfe...
-DEPEND="virtual/x11
-	=x11-libs/fox-1.4*"
+DEPEND="=x11-libs/fox-1.4*"
 
 src_unpack()
 {
