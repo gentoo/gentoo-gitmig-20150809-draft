@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.64.ebuild,v 1.4 2005/10/17 05:14:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.64.ebuild,v 1.5 2006/01/21 15:59:51 gongloo Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://evolution.genetics.washington.edu/pub/${PN}/${P}.tar.gz"
 LICENSE="freedist"
 
 SLOT="0"
-KEYWORDS="ppc ppc-macos x86"
+KEYWORDS="ppc ~ppc-macos x86"
 IUSE=""
 
 DEPEND="virtual/libc
