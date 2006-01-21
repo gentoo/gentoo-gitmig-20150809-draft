@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.00.24.ebuild,v 1.1 2006/01/15 17:53:36 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.00.24.ebuild,v 1.2 2006/01/21 12:12:14 nelchael Exp $
 
 inherit eutils
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X"
 
-RDEPEND="X? ( virtual/x11
-		dev-lang/tk )"
+RDEPEND="X? ( dev-lang/tk )"
 
 src_unpack() {
 	unpack "${A}"
