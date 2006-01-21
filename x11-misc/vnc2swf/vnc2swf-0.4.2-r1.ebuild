@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.4.2-r1.ebuild,v 1.5 2005/10/08 22:03:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.4.2-r1.ebuild,v 1.6 2006/01/21 19:48:28 nelchael Exp $
 
 inherit eutils
 
@@ -13,9 +13,19 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="x11vnc"
 
-DEPEND=">=media-libs/ming-0.2a
-	virtual/libc
-	virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libXaw
+		x11-libs/libXext )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xproto )
+	virtual/x11 )
+	>=media-libs/ming-0.2a
 	sys-apps/sed
 	x11vnc? ( x11-misc/x11vnc )
 	sys-libs/zlib"
@@ -25,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 	sed -ie "s:docs:html:" README
 	sed -ie "s:-mouse ::" recordwin.sh
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_install() {

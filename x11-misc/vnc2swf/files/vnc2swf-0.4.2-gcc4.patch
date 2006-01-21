@@ -1,0 +1,26 @@
+diff -Nru vnc2swf-0.4.2.vanilla/desktop.c vnc2swf-0.4.2/desktop.c
+--- vnc2swf-0.4.2.vanilla/desktop.c	2006-01-21 20:41:56.000000000 +0100
++++ vnc2swf-0.4.2/desktop.c	2006-01-21 20:42:58.000000000 +0100
+@@ -22,6 +22,7 @@
+  * desktop.c - functions to deal with "desktop" window.
+  */
+ 
++#define ___gentoo_gcc4
+ #include "vncviewer.h"
+ #include <X11/Xaw/Viewport.h>
+ #include <X11/Xmu/Converters.h>
+diff -Nru vnc2swf-0.4.2.vanilla/vncviewer.h vnc2swf-0.4.2/vncviewer.h
+--- vnc2swf-0.4.2.vanilla/vncviewer.h	2006-01-21 20:41:56.000000000 +0100
++++ vnc2swf-0.4.2/vncviewer.h	2006-01-21 20:43:27.000000000 +0100
+@@ -157,9 +157,11 @@
+ 
+ extern Atom wmDeleteWindow;
+ extern Widget form, viewport, desktop;
++#ifndef ___gentoo_gcc4
+ extern Window desktopWin;
+ extern GC gc;
+ extern GC srcGC, dstGC;
++#endif
+ extern Dimension dpyWidth, dpyHeight;
+ extern XImage* image;
+ 
