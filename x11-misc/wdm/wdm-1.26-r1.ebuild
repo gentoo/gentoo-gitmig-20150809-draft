@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26-r1.ebuild,v 1.5 2005/09/17 02:03:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26-r1.ebuild,v 1.6 2006/01/21 13:45:31 nelchael Exp $
 
 inherit eutils pam
 
@@ -15,7 +15,6 @@ KEYWORDS="alpha ~amd64 x86"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-wm/windowmaker-0.65.1
-	virtual/x11
 	truetype? ( virtual/xft )
 	pam? ( sys-libs/pam )"
 

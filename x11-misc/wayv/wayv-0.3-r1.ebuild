@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/wayv-0.3-r1.ebuild,v 1.2 2005/06/20 00:19:41 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/wayv-0.3-r1.ebuild,v 1.3 2006/01/21 13:43:26 nelchael Exp $
 
 DESCRIPTION="Wayv is hand-writing/gesturing recognition software for X"
 HOMEPAGE="http://www.stressbunny.com/wayv"
@@ -10,8 +10,12 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/x11 virtual/libc"
-RDEPEND=""
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXtst )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )"
 
 src_install() {
 	einstall || die
