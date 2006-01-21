@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/PEAR-XML_CSSML/PEAR-XML_CSSML-1.1.1.ebuild,v 1.2 2006/01/06 17:47:10 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/PEAR-XML_CSSML/PEAR-XML_CSSML-1.1.1.ebuild,v 1.3 2006/01/21 20:26:52 corsair Exp $
 
 inherit php-pear-r1 depend.php
 
 DESCRIPTION="A template system for generating cascading style sheets (CSS)"
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 pkg_postinst () {
