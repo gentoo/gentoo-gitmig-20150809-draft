@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3cb9c312ace616f9f40638eebc95b1f ChangeLog 1173
+MD5 74d480e993c01eef67baa5d74989dced ChangeLog 1279
 MD5 c694fb2c7dfd99fef10620b31b9d9073 files/digest-pecl-mcve-5.2.0 58
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 f5a5e651fcbb57e456a67ee3003bc46a pecl-mcve-5.2.0.ebuild 781
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0nU4oFw4q70f3SsRAi6HAKCKwCF8ZlhlpxsoDGas5LdDIYtQiQCgvGtk
-KHn5wVnwrZSZWNWAsFZBBEs=
-=hAYX
------END PGP SIGNATURE-----
+MD5 dde6ff5323f86a549f16a260762e76f5 pecl-mcve-5.2.0.ebuild 779
