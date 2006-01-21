@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.70-r1.ebuild,v 1.3 2005/12/29 22:25:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.70-r1.ebuild,v 1.4 2006/01/21 18:15:50 nelchael Exp $
 
 DESCRIPTION="XnView image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
@@ -11,7 +11,15 @@ LICENSE="free-noncomm as-is"
 KEYWORDS="x86 -*"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libXau
+		x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libXp
+		x11-libs/libXdmcp )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
 		sys-libs/glibc"
 
 S="${WORKDIR}/XnView-1.70-x86-unknown-linux2.x-static-fc4"
