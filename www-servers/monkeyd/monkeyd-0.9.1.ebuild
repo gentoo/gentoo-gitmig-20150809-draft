@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.4 2005/08/11 01:51:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.5 2006/01/21 07:42:17 sebastian Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs depend.php
 
 WEBROOT=/var/www/localhost
 
@@ -19,9 +19,13 @@ IUSE="php"
 DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.51"
 RDEPEND="virtual/libc
-	php? ( dev-php/php-cgi )"
+	php? ( virtual/httpd-php )"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	use php && require_php_cgi
+}
 
 src_unpack() {
 	unpack ${A}
