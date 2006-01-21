@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.23 2006/01/19 17:18:24 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.24 2006/01/21 17:13:48 pylon Exp $
+
+  21 Jan 2006; Lars Weiler <pylon@gentoo.org> pylint-0.9.0.ebuild:
+  Added ~ppc to keywords; bug #111889.
 
 *pylint-0.9.0 (19 Jan 2006)
 
