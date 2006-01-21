@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2006.0/make.defaults,v 1.7 2006/01/12 17:16:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2006.0/make.defaults,v 1.8 2006/01/21 05:02:23 wolf31o2 Exp $
 
 # This is currently commented so that the stage1 tarball can also be used to
 # build no-nptl systems.
 #STAGE1_USE="nptl"
+STAGE1_USE="pam"
 
-USE="cups foomaticdb gdbm gpm libg++ nptl udev"
+USE="cups foomaticdb gdbm gpm ldap libg++ nptl udev"
