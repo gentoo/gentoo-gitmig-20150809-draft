@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/seyon-2.20c.ebuild,v 1.6 2005/07/26 14:52:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/seyon-2.20c.ebuild,v 1.7 2006/01/21 12:31:50 nelchael Exp $
 
 inherit eutils
 
@@ -13,7 +13,16 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libXaw
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXp )
+	virtual/x11 )"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-compile-fix.patch
