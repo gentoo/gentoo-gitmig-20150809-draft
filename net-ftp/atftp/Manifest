@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cd5fb4b7755c4d8f992f3c56a615141 atftp-0.7.ebuild 963
+MD5 f443c2ed93b42cfa3efd7e9c7869cc0b ChangeLog 2782
 MD5 6f53cf043ccea8c37c9bba4d68703c16 atftp-0.6.2.ebuild 1039
-MD5 a483bfda64ff5f38d280ac88fa3206d8 ChangeLog 2702
-MD5 e14c6bca387e9af7d2734fb9f08a67ee files/digest-atftp-0.6.2 63
-MD5 f3d1e03f8ce70ea8ed775de7407304f3 files/atftp.init 437
-MD5 939f5bfbb9b7a728330cc124175c39e3 files/atftp.confd 105
-MD5 0adc9648a64aa6a05a55bf822eec7265 files/atftp-0.7-gcc.patch 540
+MD5 cc5b35a0f64f5009cf13ea9d959caea6 atftp-0.7.ebuild 961
 MD5 ef1244d13cccdfbe2dff44442e0c3d1f files/atftp-0.6-security.patch 1019
+MD5 0adc9648a64aa6a05a55bf822eec7265 files/atftp-0.7-gcc.patch 540
+MD5 939f5bfbb9b7a728330cc124175c39e3 files/atftp.confd 105
+MD5 f3d1e03f8ce70ea8ed775de7407304f3 files/atftp.init 437
+MD5 e14c6bca387e9af7d2734fb9f08a67ee files/digest-atftp-0.6.2 63
 MD5 401c2182f70ea502b2b13567dee9daf9 files/digest-atftp-0.7 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLdM+gIKl8Uu19MoRAksJAJ9vTPce+baVdD17oTOVVQ82qBRaxACfRTVV
-WNiYRplQCiBa5ARtPz0aE5w=
-=HSU4
------END PGP SIGNATURE-----
