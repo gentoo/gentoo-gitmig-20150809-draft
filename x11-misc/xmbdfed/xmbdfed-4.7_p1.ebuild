@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.6 2005/10/01 08:52:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.7 2006/01/21 17:55:49 nelchael Exp $
 
 inherit eutils
 MY_P=${P/_p*}
@@ -15,8 +15,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc"
 IUSE="truetype"
 
-DEPEND="virtual/x11
-	>=x11-libs/openmotif-2.1.30
+DEPEND=">=x11-libs/openmotif-2.1.30
 	truetype? ( media-libs/freetype )"
 
 S=${WORKDIR}/${MY_P}
@@ -25,6 +24,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
 	epatch ${DISTDIR}/${P/_p/-patch}
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {
