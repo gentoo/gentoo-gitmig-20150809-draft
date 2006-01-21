@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4-r1.ebuild,v 1.11 2005/03/08 16:58:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4-r1.ebuild,v 1.12 2006/01/21 18:30:32 nelchael Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc ~amd64"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}.parse-color.patch

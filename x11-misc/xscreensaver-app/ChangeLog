@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver-app
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.7 2005/11/03 20:38:41 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.8 2006/01/21 18:31:47 nelchael Exp $
+
+  21 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  xscreensaver-app-2.3.ebuild:
+  Fixed DEPEND for modular X.
 
   03 Nov 2005; Luis Medinas <metalgod@gentoo.org>
   xscreensaver-app-2.3.ebuild:
