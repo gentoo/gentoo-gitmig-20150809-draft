@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/readseq
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.3 2005/11/10 19:35:41 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.4 2006/01/21 18:09:40 ribosome Exp $
+
+  21 Jan 2006; Olivier Fisette <ribosome@gentoo.org>
+  readseq-19930201.ebuild:
+  Ebuild clean-up.
 
   10 Nov 2005; <dang@gentoo.org> readseq-19930201.ebuild:
   Marked ~amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.5 2006/01/04 23:31:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.6 2006/01/21 18:08:49 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -22,33 +22,33 @@ src_compile () {
 	sed -e "s/CC     = gcc/CC = $(tc-getCC)/" \
 		-e "s/CFLAGS = -g -O2/CFLAGS = ${CFLAGS}/" \
 		-i squid02/Makefile
-	cd ${S}/squid
+	cd "${S}"/squid
 	emake || die
-	cd ${S}/squid02
+	cd "${S}"/squid02
 	emake || die
-	cd ${S}/src
+	cd "${S}"/src
 	emake || die
 }
 
 src_install () {
-	cd ${S}/src
-	dobin cfgbuild eqrna eqrna_sample main rnamat_main shuffle
-	cd ${S}/squid02
+	cd "${S}"/src
+	dobin cfgbuild eqrna eqrna_sample main rnamat_main shuffle || die
+	cd "${S}"/squid02
 	dobin afetch alistat compalign compstruct revcomp seqsplit seqstat \
-		sfetch shuffle sindex sreformat translate weight
-	cd ${S}
-	dobin scripts/*
+		sfetch shuffle sindex sreformat translate weight || die
+	cd "${S}"
+	dobin scripts/* || die
 
-	newdoc 00README
+	newdoc 00README || die
 	insinto /usr/share/doc/${PF}
-	doins documentation/*
+	doins documentation/* || die
 
 	insinto /usr/share/${PN}/data
-	doins lib/*
+	doins lib/* || die
 	insinto /usr/share/${PN}/demos
-	doins Demos/*
+	doins Demos/* || die
 
 	# Sets the path to the QRNA data files.
 	insinto /etc/env.d
-	doins ${FILESDIR}/26qrna
+	doins "${FILESDIR}"/26qrna || die
 }
