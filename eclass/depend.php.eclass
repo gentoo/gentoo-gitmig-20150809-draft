@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.10 2006/01/21 09:15:08 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.11 2006/01/21 11:48:29 chtekk Exp $
 #
 # ========================================================================
 #
@@ -186,7 +186,7 @@ require_php_with_use()
 {
 	has_php
 
-	local missing_use=
+	local missing_use=""
 	local x
 
 	einfo "Checking for required PHP feature(s):"
@@ -198,7 +198,7 @@ require_php_with_use()
 		fi
 	done
 
-	if [[ -z ${missing_use} ]]; then
+	if [[ -z ${missing_use} ]] ; then
 		return
 	fi
 
@@ -219,16 +219,16 @@ has_php()
 	# if PHP_PKG is set, then we have remembered our PHP settings
 	# from last time
 
-	if [[ -n ${PHP_PKG} ]]; then
+	if [[ -n ${PHP_PKG} ]] ; then
 		return
 	fi
 
-	if [[ -z ${PHP_VERSION} ]]; then
+	if [[ -z ${PHP_VERSION} ]] ; then
 		# detect which PHP version installed
-		if has_version '=dev-lang/php-4*' ; then
-			PHP_VERSION=4
-		elif has_version '=dev-lang/php-5*' ; then
+		if has_version '=dev-lang/php-5*' ; then
 			PHP_VERSION=5
+		elif has_version '=dev-lang/php-4*' ; then
+			PHP_VERSION=4
 		else
 			die "Unable to find an installed dev-lang/php package"
 		fi
@@ -284,13 +284,17 @@ require_pdo()
 {
 	has_php
 
-	# do we have php5.1 installed?
+	# do we have php5 installed?
 
 	if [[ ${PHP_VERSION} == 4 ]] ; then
 		eerror
 		eerror "This package requires PDO."
 		eerror "PDO is only available for PHP 5."
-		eerror "Please install dev-lang/php-5*"
+		eerror "You must install =dev-lang/php-5.0* with"
+		eerror "the 'pdo-external' USE flag or you must"
+		eerror "install >=dev-lang/php-5.1 with either"
+		eerror "the 'pdo' or the 'pdo-external' USE flags"
+		eerror "turned on."
 		eerror
 		die "PHP 5 not installed"
 	fi
@@ -319,9 +323,9 @@ require_pdo()
 	eerror "No PDO extension for PHP found."
 	eerror "Please note that PDO only exists for PHP 5."
 	eerror "Please install a PDO extension for PHP 5,"
-	eerror "you must install dev-lang/php-5.0* with"
+	eerror "you must install =dev-lang/php-5.0* with"
 	eerror "the 'pdo-external' USE flag or you must"
-	eerror "install dev-lang/php-5.1* with either"
+	eerror "install >=dev-lang/php-5.1 with either"
 	eerror "the 'pdo' or the 'pdo-external' USE flags"
 	eerror "turned on."
 	eerror
@@ -337,7 +341,7 @@ require_php_cli()
 	# if PHP_PKG is set, then we have remembered our PHP settings
 	# from last time
 
-	if [[ -n ${PHP_PKG} ]]; then
+	if [[ -n ${PHP_PKG} ]] ; then
 		return
 	fi
 
@@ -358,11 +362,11 @@ require_php_cli()
 		fi
 	fi
 
-	if [[ -z ${PHP_PACKAGE_FOUND} ]]; then
+	if [[ -z ${PHP_PACKAGE_FOUND} ]] ; then
 		die "Unable to find an installed dev-lang/php package"
 	fi
 
-	if [[ -z ${PHP_VERSION} ]]; then
+	if [[ -z ${PHP_VERSION} ]] ; then
 		die "No PHP CLI installed"
 	fi
 
@@ -381,7 +385,7 @@ require_php_cgi()
 	# if PHP_PKG is set, then we have remembered our PHP settings
 	# from last time
 
-	if [[ -n ${PHP_PKG} ]]; then
+	if [[ -n ${PHP_PKG} ]] ; then
 		return
 	fi
 
@@ -401,12 +405,12 @@ require_php_cgi()
 			PHP_VERSION=5
 		fi
 	fi
-	
-	if [[ -z ${PHP_PACKAGE_FOUND} ]]; then
+
+	if [[ -z ${PHP_PACKAGE_FOUND} ]] ; then
 		die "Unable to find an installed dev-lang/php package"
 	fi
 
-	if [[ -z ${PHP_VERSION} ]]; then
+	if [[ -z ${PHP_VERSION} ]] ; then
 		die "No PHP CGI installed"
 	fi
 
