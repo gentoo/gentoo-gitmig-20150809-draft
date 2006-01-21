@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.3.4.ebuild,v 1.5 2004/06/24 22:32:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.3.4.ebuild,v 1.6 2006/01/21 21:48:57 chainsaw Exp $
 
 inherit games flag-o-matic
 
@@ -18,7 +18,6 @@ RDEPEND="dev-libs/libxml2
 	sys-libs/zlib
 	media-libs/sdl-image
 	media-libs/libsdl
-	virtual/x11
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"

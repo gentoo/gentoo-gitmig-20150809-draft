@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.4.0.ebuild,v 1.4 2004/09/12 10:06:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.4.0.ebuild,v 1.5 2006/01/21 21:48:57 chainsaw Exp $
 
 inherit flag-o-matic eutils games
 
@@ -19,7 +19,6 @@ DEPEND="dev-lang/tcl
 	sys-libs/zlib
 	media-libs/sdl-image
 	media-libs/libsdl
-	virtual/x11
 	virtual/opengl"
 
 src_unpack() {

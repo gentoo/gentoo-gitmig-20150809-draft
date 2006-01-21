@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/openmsx
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.16 2005/09/10 20:36:27 chainsaw Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.17 2006/01/21 21:48:57 chainsaw Exp $
+
+  21 Jan 2006; <chainsaw@gentoo.org> openmsx-0.3.4.ebuild,
+  openmsx-0.4.0.ebuild, openmsx-0.5.1.ebuild, openmsx-0.5.2.ebuild:
+  Remove redundant virtual/x11 dependency which does not play well with
+  modular X. virtual/opengl & libsdl will drag X in anyway.
 
   10 Sep 2005; Tony Vroon <chainsaw@gentoo.org> openmsx-0.5.2.ebuild:
   Marked 0.5.2 stable on amd64 and x86.
