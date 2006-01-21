@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capi4k-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.41 2005/12/23 20:42:25 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.42 2006/01/21 20:35:19 pylon Exp $
+
+  21 Jan 2006; Lars Weiler <pylon@gentoo.org> capi4k-utils-20050509.ebuild:
+  Stable on ppc; bug #112457.
 
   23 Dec 2005; Simon Stelling <blubb@gentoo.org>
   capi4k-utils-20050509.ebuild:
