@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p5.ebuild,v 1.7 2004/09/09 21:28:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p5.ebuild,v 1.8 2006/01/21 10:53:33 nelchael Exp $
 
 inherit eutils
 
@@ -15,7 +15,16 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libXext )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-misc/imake
+		x11-proto/xproto )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
