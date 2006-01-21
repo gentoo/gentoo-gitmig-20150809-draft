@@ -1,0 +1,7 @@
+MD5 c904594e30fe4939e2f45b9b14ce297b ChangeLog 466
+MD5 ba75f37528e15ab126c6ff28d1e0e822 adjtime-0.4.ebuild 984
+MD5 2947b44650fb5fcc620b35ad052a0b0f files/adjtime.conf 167
+MD5 8efb4a24580f52714e4065770d0f0251 files/adjtime.init 375
+MD5 1933f57cad4cdf6f8ae7e38fa0535cce files/adjtime.pl 8536
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-adjtime-0.4 0
+MD5 583413c267e514ed42e788dfa43f31d5 metadata.xml 403
