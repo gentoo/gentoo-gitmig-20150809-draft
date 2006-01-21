@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/wily
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.9 2005/09/25 12:33:45 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.10 2006/01/21 19:41:06 vanquirius Exp $
+
+*wily-1.0-r1 (21 Jan 2006)
+
+  21 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> +wily-1.0-r1.ebuild:
+  Make modular X friendly.
 
   25 Sep 2005; Torsten Veller <tove@gentoo.org> wily-1.0.ebuild:
   Adapts changes in dev-libs/9libs.
