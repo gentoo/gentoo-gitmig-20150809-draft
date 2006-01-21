@@ -1,4 +1,14 @@
-MD5 eb6f4705c4c78095adb8cd6fe7c8c86a ChangeLog 937
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b5287ccd7eb1a784c3fbed8c987e8d3 ChangeLog 1022
 MD5 daef77cdcc6f351416cb7db67c4e2471 files/digest-hcalc-1.0 55
-MD5 2b94917815ebc0a73cd69c420aa9d9d3 hcalc-1.0.ebuild 716
+MD5 fb1e7a1d1972157fde5f478f67582a02 hcalc-1.0.ebuild 712
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0Y+hcsIHjyDViGQRApROAKDe6HcSqZJpZ/+nwILeC/UaplWMkQCgs79n
+ifWI85f14nL3K5M413SBWBo=
+=GUUw
+-----END PGP SIGNATURE-----
