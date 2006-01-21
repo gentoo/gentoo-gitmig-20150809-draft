@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.139 2006/01/12 23:40:28 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.140 2006/01/21 00:41:03 brix Exp $
+
+*gimp-9999 (21 Jan 2006)
+
+  21 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/gimp-9999-autogen-gentoo.patch, metadata.xml, +gimp-9999.ebuild:
+  Added live CVS HEAD ebuild, thanks to latexer for testing this.
 
   12 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   gimp-2.2.6-r1.ebuild, gimp-2.2.8-r1.ebuild, gimp-2.2.9.ebuild,
