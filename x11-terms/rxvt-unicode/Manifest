@@ -11,7 +11,7 @@ MD5 ef0128bf40e8bab59b43618810ac0109 files/digest-rxvt-unicode-7.1 69
 MD5 27f475fce3946d48a23f36e0279a978c files/rxvt-unicode-2.3-font-fix.diff 431
 MD5 8d13934dc747f15f11334bd642c342cd files/rxvt-unicode-3.9-64bit.patch 632
 MD5 63548e76ee03f6dc4fee9e2239453ca1 files/rxvt-unicode-4.0-64bit.patch 728
-MD5 089b67c9232a8697f01a9c5d8f63c68c metadata.xml 291
+MD5 ae6f4504c04a4a030d1028340a2f4f9a metadata.xml 226
 MD5 ae0e078fda7b29d36a2b6d5233c16cda rxvt-unicode-3.0.ebuild 1751
 MD5 2e49f34769297a5cdf516e44c8aa40c2 rxvt-unicode-4.0.ebuild 1587
 MD5 4a59732c305c41e1347aa674334213a1 rxvt-unicode-5.1.ebuild 1571
@@ -21,7 +21,7 @@ MD5 0cbedb63683ebc560e23b3f904bce7c6 rxvt-unicode-7.1.ebuild 1629
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0GkFLLFUmVNQ7rkRAr6SAKC6RjxOVaQlPxAYlQYhRql2aPwOhACghgWN
-m7JFvV60taopxQYo1zRmy0k=
-=BU3t
+iD8DBQFD0oJMLLFUmVNQ7rkRAtQvAJ99zgRy3xD8Ib3dMLjXsCbpAaEnswCfeZm4
+SJAyNRLpk1nQCh9evYFFWfE=
+=W00l
 -----END PGP SIGNATURE-----
