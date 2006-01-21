@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/temperature-app-1.4.ebuild,v 1.5 2005/11/01 13:12:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/temperature-app-1.4.ebuild,v 1.6 2006/01/21 13:35:20 nelchael Exp $
 
 IUSE=""
 
@@ -12,9 +12,14 @@ DESCRIPTION="Temperature.app is a Window Maker dockapp to display the local temp
 SRC_URI="http://www.fukt.bth.se/~per/temperature/${MY_PN}-${PV}.tar.gz"
 HOMEPAGE="http://www.fukt.bth.se/~per/temperature/"
 
-DEPEND="virtual/x11
-	net-misc/wget
-	media-libs/xpm"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )
+	net-misc/wget"
 
 SLOT="0"
 LICENSE="GPL-2"
