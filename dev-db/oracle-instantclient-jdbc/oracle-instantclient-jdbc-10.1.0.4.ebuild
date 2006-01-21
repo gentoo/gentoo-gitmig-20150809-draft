@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.1.0.4.ebuild,v 1.1 2005/06/21 19:41:24 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.1.0.4.ebuild,v 1.2 2006/01/21 16:15:04 dertobi123 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://otn.oracle.com/software/tech/oci/instantclient/htdocs/linuxsoft
 SRC_URI="${MY_P}.zip"
 
 LICENSE="OTN"
-SLOT="${KV}"
+SLOT="${PV}"
 KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE=""
