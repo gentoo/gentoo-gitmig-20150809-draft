@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.2 2006/01/14 23:33:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.3 2006/01/21 16:18:47 corsair Exp $
 
 inherit java eutils
 
@@ -9,18 +9,18 @@ HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
 SRC_URI="x86? ( ibm-java2-sdk-50-linux-i386.tgz )
 	amd64? ( ibm-java2-sdk-50-linux-x86_64.tgz )
 	ppc? ( ibm-java2-sdk-50-linux-ppc.tgz )
+	ppc64? ( ibm-java2-sdk-50-linux-ppc64.tgz )
 	javacomm? (
 		x86? ( ibm-java2-javacomm-50-linux-i386.tgz )
 		amd64? ( ibm-java2-javacomm-50-linux-x86_64.tgz )
 		ppc? ( ibm-java2-javacomm-50-linux-ppc.tgz )
+		ppc64? ( ibm-java2-javacomm-50-linux-ppc64.tgz )
 		)"
-#	ppc64? ( ibm-java2-sdk-50-linux-ppc64.tgz )
-#		ppc64? ( ibm-java2-javacomm-50-linux-ppc64.tgz )
 PROVIDE="virtual/jdk
 	virtual/jre"
 SLOT="1.5"
 LICENSE="IBM-J1.5"
-KEYWORDS="~amd64 ~ppc ~x86 -*"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 
 DEPEND="virtual/libc
