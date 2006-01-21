@@ -28,5 +28,9 @@
 	<longdescription lang="it">
 		La categoria dev-db contiene librerie ed utilità per la programmazione di basi di dati.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria dev-db contém bibliotecas e utilitários para a
+		programação relacionada a bancos de dados.
+	</longdescription>
 </catmetadata>
 
