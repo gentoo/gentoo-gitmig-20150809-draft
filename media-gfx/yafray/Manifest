@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a52f632f852e39403fdabda59e9c479c ChangeLog 3422
+MD5 5af2d2d5478fe47ee727ed6cb44ce71b ChangeLog 3515
 MD5 1369fb0f3bdcd1b7cbf08c71ded07fca files/digest-yafray-0.0.7 64
 MD5 b99ce19d58e373fa5dd2529e24bb3bfc files/digest-yafray-0.0.8 64
 MD5 7b50d20a15ce12bca91f1354401f1351 files/yafray-0.0.7-scons.patch 866
@@ -10,11 +7,4 @@ MD5 065bf1da4acf58011d3907c814822bb1 files/yafray-0.0.8-libdir.patch 962
 MD5 78f9242de2b0493dab84891fe6c9e2eb files/yafray-0.0.8-scons.patch 782
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
 MD5 a998d11d232890b45f990edea55e4fa5 yafray-0.0.7.ebuild 995
-MD5 97b4bce515655c29e6333857f1bcc041 yafray-0.0.8.ebuild 1157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzGsgSENan+PfizARAn0IAJ41Ia1p4uoMjcGtTWL0wWhvBu4MnACfXCGQ
-kRnUJc3YEmahCAK+2L+gzm8=
-=jt6S
------END PGP SIGNATURE-----
+MD5 9c73d51726d37c99edf8bbe19264c751 yafray-0.0.8.ebuild 1156
