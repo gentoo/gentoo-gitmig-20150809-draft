@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.10 2005/07/26 15:16:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.11 2006/01/21 19:24:00 nelchael Exp $
 
 inherit eutils
 
@@ -10,8 +10,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-DEPEND="virtual/x11"
 IUSE=""
+
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-misc/imake
+		x11-proto/xproto )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/xwit-3.4.ebuild,v 1.6 2005/07/26 15:15:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/xwit-3.4.ebuild,v 1.7 2006/01/21 19:17:09 nelchael Exp $
 
 inherit eutils
 
@@ -14,7 +14,15 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~ppc x86"
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-misc/imake
+		x11-proto/xproto )
+	virtual/x11 )"
 
 src_compile() {
 	epatch ${FILESDIR}/malloc.patch
