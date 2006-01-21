@@ -27,5 +27,9 @@
 	<longdescription lang="it">
 		La categoria app-portage contiene programmi per portage o per le ebuilds.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria app-portage contém programas que funcionam com o portage
+		ou ebuilds.
+	</longdescription>
 </catmetadata>
 
