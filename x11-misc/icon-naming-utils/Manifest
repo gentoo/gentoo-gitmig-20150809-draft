@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6eb17f87230f377d558d98248bff6ed6 ChangeLog 882
+MD5 9fdd6ff1ba91f67b0528e79207a99774 ChangeLog 1024
 MD5 bd5440b327cecc2b5eeaaba50cd9a066 files/digest-icon-naming-utils-0.6.2 74
 MD5 31f9daa04ded540b32c88bf11a98096c files/digest-icon-naming-utils-0.6.3 74
 MD5 a3f487e649e759105b08437912df1934 files/digest-icon-naming-utils-0.6.5 74
+MD5 0e1512cb0c651c4ba05375eddcc68b94 files/digest-icon-naming-utils-0.6.6 74
 MD5 e6f1d27aa90310465df6cc493828de98 icon-naming-utils-0.6.2.ebuild 732
 MD5 a308c95649475f264e171fb9450989dd icon-naming-utils-0.6.3.ebuild 739
 MD5 8fc779e2a14427cb70c06521a41fc46e icon-naming-utils-0.6.5.ebuild 739
+MD5 1103c8d730e23bf4d7ba8438dd7b3aff icon-naming-utils-0.6.6.ebuild 739
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyRxNwUpWvClEHQoRAsu9AJ44AjWp/DT/Zp/J2DoAsiUL0cL87QCfUo1t
-DaYni43GOpa/16vw3O0q46s=
-=dGo+
------END PGP SIGNATURE-----

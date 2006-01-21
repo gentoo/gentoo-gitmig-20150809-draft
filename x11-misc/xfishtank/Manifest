@@ -1,5 +1,5 @@
-MD5 b50fe1b22519da0e8357df6da8cf1915 ChangeLog 1117
+MD5 76b7d6dd803c1862da92dc537fff42f9 ChangeLog 1224
 MD5 f334f7ee0979c62671de0916bc4c7908 files/digest-xfishtank-2.1 67
 MD5 559fc2c6f75e887149cb9c1502480394 files/xfishtank-2.1tp-Makefile.patch 703
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 e76a9ac01a7895fe2d97de0a5248e1fb xfishtank-2.1.ebuild 805
+MD5 51dde9c724877fad713072d98694332a xfishtank-2.1.ebuild 960

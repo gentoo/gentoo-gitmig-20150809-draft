@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.9 2005/12/18 15:29:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.10 2006/01/21 17:18:10 nelchael Exp $
 
 inherit eutils
 
@@ -15,7 +15,17 @@ SLOT="0"
 KEYWORDS="ppc ppc64 x86"
 
 IUSE=""
-DEPEND="virtual/x11"
+
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libXext )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-misc/makedepend )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack "${A}"
