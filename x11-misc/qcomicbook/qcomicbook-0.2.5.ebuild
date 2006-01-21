@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.5.ebuild,v 1.1 2005/12/28 20:02:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.5.ebuild,v 1.2 2006/01/21 11:58:58 nelchael Exp $
 
 inherit eutils qt3
 
@@ -14,8 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND="virtual/x11
-	$(qt_min_version 3.3)"
+DEPEND="$(qt_min_version 3.3)"
 
 RDEPEND="${DEPEND}
 	app-arch/unrar

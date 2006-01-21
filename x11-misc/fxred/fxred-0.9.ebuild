@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fxred/fxred-0.9.ebuild,v 1.6 2005/11/01 14:43:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fxred/fxred-0.9.ebuild,v 1.7 2006/01/21 12:06:51 nelchael Exp $
 
 DESCRIPTION="FXred is handler for the red scroll button of the Logitech TrackMan Marble FX, a trackball."
 HOMEPAGE="http://www.larskrueger.homestead.com/files/index.html#X11"
@@ -10,7 +10,16 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXtst )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xproto
+		x11-libs/libXt )
+	virtual/x11 )"
 
 src_compile() {
 	./configure \
