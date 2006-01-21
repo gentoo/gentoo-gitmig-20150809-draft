@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6e920b30490f7a45ccb6a2a40ef1c0c1 ChangeLog 962
 MD5 fa7c0d0ad55b381a4c8aebaa525434a9 files/digest-pecl-yaz-1.0.4 57
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 16d4584d96851f2eb98d48c9de957d43 pecl-yaz-1.0.4.ebuild 661
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0nXfoFw4q70f3SsRAvnSAKCSsXdzOhHnnXTQdANhrQMzR1QGNACgojtA
+KrQaXugMR4R+4GWiBqwPkEY=
+=+kKF
+-----END PGP SIGNATURE-----
