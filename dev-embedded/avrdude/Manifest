@@ -1,4 +1,4 @@
-MD5 398310dc5c43e003f321532995d51f07 avrdude-5.0.ebuild 907
-MD5 3f953339a1409de0cc4b9167c4e5fc8f ChangeLog 2081
-MD5 c83ea1f0126514b245654a5f9e0b2965 metadata.xml 364
+MD5 5ba23ebba63ca44c99cb9bba0cf80f19 ChangeLog 2166
+MD5 8c12a76ff8eb5290c9d23ac7c7024cf1 avrdude-5.0.ebuild 904
 MD5 40c8d7cbb73dcfb94d40b67add137d15 files/digest-avrdude-5.0 63
+MD5 c83ea1f0126514b245654a5f9e0b2965 metadata.xml 364
