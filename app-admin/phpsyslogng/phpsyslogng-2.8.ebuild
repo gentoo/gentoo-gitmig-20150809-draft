@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.8.ebuild,v 1.1 2006/01/21 17:48:53 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.8.ebuild,v 1.2 2006/01/21 19:52:05 strerror Exp $
 
 inherit webapp
 
@@ -24,7 +24,6 @@ src_install() {
 	dodoc scripts/*
 
 	cp -r . ${D}${MY_HTDOCSDIR}
-	cd ${D}${MY_HTDOCSDIR}
 
 	webapp_configfile ${MY_HTDOCSDIR}/config/config.php
 
