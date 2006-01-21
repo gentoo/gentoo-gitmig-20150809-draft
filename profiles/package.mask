@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4890 2006/01/21 15:22:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4891 2006/01/21 15:47:25 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1134,7 +1134,7 @@ gnome-extra/gnobog
 
 # Jonathan Smith <smithj@gentoo.org> (15 Jun 2005)
 # masked for testing
->=x11-misc/xlockmore-5.18
+=x11-misc/xlockmore-5.19
 
 # David Holm <dholm@gentoo.org> (11 Jun 2005)
 # Masked since it is known to create broken partition
