@@ -1,5 +1,5 @@
-MD5 77ba0cdcf7cbe9350fe5925148fff16a ChangeLog 1214
+MD5 281339da78d85b2003afacb81233b131 ChangeLog 1316
 MD5 bcfae9591c9931439f5bcb29d8c93a94 files/digest-xfm-1.4.3 61
 MD5 0f75a007428c6d3d50de93fcdbb67a6f files/xfm-1.4.3-malloc.patch 413
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 1283bd48097f58a680a260028e51a640 xfm-1.4.3.ebuild 1108
+MD5 7d26e1158d7588597ab96e7bacf8ab65 xfm-1.4.3.ebuild 1288
