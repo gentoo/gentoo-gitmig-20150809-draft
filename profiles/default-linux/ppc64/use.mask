@@ -71,3 +71,6 @@ pike
 
 # we don't have hardware to test. also see bug #113398
 dvb
+
+# until media-libs/portaudio is keyworded for ppc64
+portaudio
