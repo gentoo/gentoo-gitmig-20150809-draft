@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r1.ebuild,v 1.5 2006/01/21 13:54:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5-r2.ebuild,v 1.1 2006/01/21 13:54:27 zzam Exp $
 
 inherit eutils
 
@@ -18,14 +18,18 @@ RDEPEND="media-tv/linuxtv-dvb-headers"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	unpack ${A} && cd "${S}"
 
 	# Disable compilation of sample programs
 	# and use DESTDIR when installing
-	epatch "${FILESDIR}"/${P}-gentoo.patch || die "patch failed"
-	sed -i -e '/^CFLAGS=/d' config.mk || die
-	sed -i.orig Makefile -e 's-/include-/include/libdvb-'
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/errno.patch"
+	epatch "${FILESDIR}/${P}-gentoo-file-collisions.patch"
+	sed -i.orig Makefile -e 's-/include-/include/libdvb-g'
+}
+
+src_compile() {
+	emake || die "compile problem"
 }
 
 src_install() {
@@ -37,8 +41,10 @@ src_install() {
 	insinto "/usr/share/doc/${PF}/samplerc" && \
 	doins samplerc/*
 
+	echo
 	einfo "The script called 'dia' has been installed as dia-dvb"
 	einfo "so that it doesn't overwrite the binary of app-office/dia."
+	einfo
 
 	dodoc README
 }

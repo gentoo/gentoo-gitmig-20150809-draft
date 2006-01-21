@@ -1,18 +1,37 @@
-MD5 2f4b306e59ae68295fca207192036ceb ChangeLog 3917
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b12a73b6f7332a761c635ad33b1b1375 ChangeLog 4393
 MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r1 64
 MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r2 64
+MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r3 64
 MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5 64
 MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5-r1 64
+MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5-r2 64
 MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1 66
 MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1-r1 66
+MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1-r2 66
 MD5 69502406503f38e60bd8e35f2f80e586 files/errno.patch 258
+MD5 170099215f05e824a2320838ef728199 files/libdvb-0.5.0-gentoo-file-collisions.patch 4051
 MD5 76dfb6639fdd6868d34b0eec46123c06 files/libdvb-0.5.0-gentoo.patch 2448
+MD5 f9f9ac189a879c339aade17f3bacb284 files/libdvb-0.5.5-gentoo-file-collisions.patch 4796
 MD5 2be0eba6ba9919ca334c327d3310a254 files/libdvb-0.5.5-gentoo.patch 1065
+MD5 f9f9ac189a879c339aade17f3bacb284 files/libdvb-0.5.5.1-gentoo-file-collisions.patch 4796
 MD5 34510a9d50277d893ab3a8b316291349 files/libdvb-0.5.5.1-gentoo.patch 1052
 MD5 1ea18f4c6370ce0cf6cb0bb16a7d1f1a libdvb-0.5.0-r1.ebuild 1062
 MD5 503001b583ab47c70e40a1951758be9b libdvb-0.5.0-r2.ebuild 1120
+MD5 ca3cd1038c41a8b60c377ad2f3db54a2 libdvb-0.5.0-r3.ebuild 1134
 MD5 c236283cf89eba4b41f10120b39ee7be libdvb-0.5.5-r1.ebuild 1345
-MD5 a225473ff2e7b11b574fdac8bd2b4892 libdvb-0.5.5.1-r1.ebuild 1268
+MD5 995c2795fbe87b68b0d1a715c5dd78de libdvb-0.5.5-r2.ebuild 1359
+MD5 7a30ede843c9956487979f2b7c9f4347 libdvb-0.5.5.1-r1.ebuild 1268
+MD5 7f27b3d68a225574bbcfc3794bcb09c3 libdvb-0.5.5.1-r2.ebuild 1303
 MD5 ee02cb01e35096c862f3a90eea650799 libdvb-0.5.5.1.ebuild 1234
-MD5 a135911c3d02ffb273acd8d8896fa8f2 libdvb-0.5.5.ebuild 1326
-MD5 46b3654b1563aad69c575e55e8d67b61 metadata.xml 220
+MD5 5d374892aafc3e2d726d59bd714564df libdvb-0.5.5.ebuild 1326
+MD5 dff9ded73ffb6549a59f5e6144af1cfd metadata.xml 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0j1OZfSl1Kp5KmoRAtW+AJ9EIRXYJv+5PT7igMdkEINAIi6qVwCdFWqQ
+t6Dsbi3klRyHTVEwMWI9kfI=
+=HoSi
+-----END PGP SIGNATURE-----
