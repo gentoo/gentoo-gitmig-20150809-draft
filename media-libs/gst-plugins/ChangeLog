@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.133 2006/01/20 20:04:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.134 2006/01/21 21:01:07 jer Exp $
+
+  21 Jan 2006; Jeroen Roovers <jer@gentoo.org> gst-plugins-0.8.11.ebuild:
+  Make depend on dev-libs/liboil for hppa (bug #117908).
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-0.8.11.ebuild:
