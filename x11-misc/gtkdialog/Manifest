@@ -1,6 +1,4 @@
-MD5 a16da880356fdfdd4f03777282d15ba8 ChangeLog 1462
-MD5 0fd87623295843316131184e1c4f4957 files/digest-gtkdialog-0.59.4 68
+MD5 726cb4849a2c8a36a2d36b1e3608ecd3 ChangeLog 1569
 MD5 ca3e7dcb868d11bf4da39011d267c6bd files/digest-gtkdialog-0.59.8 68
-MD5 3d0b0803b476fcbeeb85481adbbac29b gtkdialog-0.59.4.ebuild 669
 MD5 c9c10d70dac02d371a0771c15a948728 gtkdialog-0.59.8.ebuild 685
 MD5 427e58a2a402d09cdf22976c7d733f46 metadata.xml 685

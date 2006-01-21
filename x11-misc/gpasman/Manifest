@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7a1670e2bf0978b11d0598d52b4fba8 gpasman-1.3.1.ebuild 570
-MD5 d4603281bdcc2e4b6a52f665033411f4 gpasman-1.3.0.ebuild 649
-MD5 b938ee3d9c2740d0db6b6db8ff32e310 ChangeLog 1173
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 551dc7143c7dabb147a35b9a24f7db0d files/digest-gpasman-1.3.0 64
+MD5 3d911e1ecad4506696bfdde93a91ec1a ChangeLog 1273
 MD5 cab118aa7025c2aacadfbced1b28a0b4 files/digest-gpasman-1.3.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDegL2KRy60XGEcJIRAtR0AJwPacZwXp03K3+P7sebzWCPKSOUwwCeMXBx
-JYc54QJ5uNRmfNytMfWphMo=
-=sVAB
------END PGP SIGNATURE-----
+MD5 b7a1670e2bf0978b11d0598d52b4fba8 gpasman-1.3.1.ebuild 570
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
