@@ -1,0 +1,7 @@
+MD5 804574fc3c4758cb6cb3cac81eafacc5 kuroevtd-1.1.3.ebuild 1323
+MD5 b6bd61ed2635d004501be297d9a3496d files/kuroevtd.initd 535
+MD5 9ee57cc3ef125b722d1f849ffaffefcb files/digest-kuroevtd-1.1.3 61
+MD5 9c01a7a8770e8b6531bcb04e2fcf15b8 files/kuroevtd.d/powerpress 146
+MD5 79d71a7e07783badf6d245d4359f3fbd files/kuroevtd.d/resetpress 274
+MD5 4f073418728e4b5baf8104f16cea5123 files/kuroevtd.d/powerdown 418
+MD5 2801389561cbf0e6bb92c9d81e4bf232 files/kuroevtd.d/powerup 184
