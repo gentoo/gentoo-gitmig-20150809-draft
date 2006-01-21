@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.58.ebuild,v 1.6 2005/09/16 03:16:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.58.ebuild,v 1.7 2006/01/21 17:34:48 taviso Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,11 +13,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="doc gtk ipv6"
 
-RDEPEND="gtk? ( =x11-libs/gtk+-1.2* virtual/x11 )"
+RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 DEPEND="${RDEPEND} dev-lang/perl"
 
 src_compile() {
-	use gtk || local ptargets="puttygen plink pscp psftp"
+	use gtk && unset ptargets || local ptargets="puttygen plink pscp psftp"
+
 	cd ${S}/unix
 
 	append-flags '-I.././' '-I../charset/' '-I../unix/'
