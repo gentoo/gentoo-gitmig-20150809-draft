@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/trnascan-se-1.23-r1.ebuild,v 1.1 2005/08/12 21:14:38 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/trnascan-se-1.23-r1.ebuild,v 1.2 2006/01/21 18:36:49 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e "s%BINDIR  = \$(HOME)/bin%BINDIR = ${ROOT}/usr/bin%" \
 		-e "s%LIBDIR  = \$(HOME)/lib/tRNAscan-SE%LIBDIR = ${ROOT}/usr/lib/${PN}%" \
 		-e "s%MANDIR  = \$(HOME)/man%MANDIR = ${ROOT}/usr/share/man%" \
@@ -28,17 +28,17 @@ src_unpack() {
 
 src_compile() {
 	emake || die
-	mv tRNAscan-SE.man tRNAscan-SE.man.1
+	mv tRNAscan-SE.man tRNAscan-SE.man.1 || die
 }
 
 src_install() {
-	dobin covels-SE coves-SE eufindtRNA tRNAscan-SE trnascan-1.4
-	doman tRNAscan-SE.man.1
-	dodoc MANUAL README Release.history
+	dobin covels-SE coves-SE eufindtRNA tRNAscan-SE trnascan-1.4 || die
+	doman tRNAscan-SE.man.1 || die
+	dodoc MANUAL README Release.history || die
 	insinto /usr/lib/${PN}/
-	doins *.cm gcode.* Dsignal TPCsignal
+	doins *.cm gcode.* Dsignal TPCsignal || die
 	insinto /usr/share/doc/${PF}
-	doins Manual.ps
+	doins Manual.ps || die
 }
 
 src_test() {

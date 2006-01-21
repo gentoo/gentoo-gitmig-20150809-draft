@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.2.0.ebuild,v 1.3 2005/05/21 23:31:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.2.0.ebuild,v 1.4 2006/01/21 18:40:12 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,11 +20,11 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	virtual/tetex"
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}/${PN}${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 #	if use threads; then
 #		append-flags "-DPTHREAD"
 #		sed -e "s/#EXTRALIBS = -lpthread/EXTRALIBS = -lpthread/" -i makefile || die
@@ -32,16 +32,16 @@ src_unpack() {
 	sed -e "s/CC = cc/CC = $(tc-getCC)/" \
 		-e "s/CFLAGS = -c -O/CFLAGS = -c ${CFLAGS}/" \
 		-i makefile || die
-	cd ${S}/docs
-	cat ${S}/src/models/*.tex ${S}/src/dynlibsrc/*.tex | perl gettex.pl > temp.tex
+	cd "${S}"/docs
+	cat "${S}"/src/models/*.tex "${S}"/src/dynlibsrc/*.tex | perl gettex.pl > temp.tex
 	cat wise2api.tex temp.tex apiend.tex > api.tex
-	epatch ${FILESDIR}/${PN}-api.tex.patch
+	epatch "${FILESDIR}"/${PN}-api.tex.patch
 }
 
 src_compile() {
 	cd src
 	make all || die
-	cd ${S}/docs
+	cd "${S}"/docs
 	for i in api appendix dynamite wise2 wise3arch; do
 		latex ${i} || die
 		latex ${i} || die
@@ -50,19 +50,19 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/src/bin/*
-	dolib ${S}/src/base/libwisebase.a
-	dolib ${S}/src/dynlibsrc/libdyna.a
-	dobin ${S}/src/dynlibsrc/testgendb
-	dolib ${S}/src/models/libmodel.a
+	dobin "${S}"/src/bin/*
+	dolib "${S}"/src/base/libwisebase.a
+	dolib "${S}"/src/dynlibsrc/libdyna.a
+	dobin "${S}"/src/dynlibsrc/testgendb
+	dolib "${S}"/src/models/libmodel.a
 	insinto /usr/share/${PN}
-	doins -r ${S}/wisecfg
+	doins -r "${S}"/wisecfg
 	insinto /usr/share/doc/${PF}
-	doins ${S}/docs/*.ps
-	newenvd ${FILESDIR}/${PN}-env 24wise
+	doins "${S}"/docs/*.ps
+	newenvd "${FILESDIR}"/${PN}-env 24wise
 }
 
 src_test() {
-	cd ${S}/src
+	cd "${S}"/src
 	WISECONFIGDIR="${S}/wisecfg" make test || die
 }
