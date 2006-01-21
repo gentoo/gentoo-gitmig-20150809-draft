@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.4.0.ebuild,v 1.3 2006/01/19 06:59:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.4.0.ebuild,v 1.4 2006/01/21 20:29:32 latexer Exp $
 
 inherit eutils mono
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-lang/mono-1.1.9
 	>=gnome-base/orbit-2.8.3"
 
 DEPEND="${RDEPEND}
+	doc? ( >=dev-util/monodoc-1.1.8 )
 	>=sys-apps/sed-4.0
 	sys-devel/automake
 	sys-devel/autoconf
@@ -60,12 +61,6 @@ src_compile() {
 
 	econf ${myconf} || die "./configure failed"
 	LANG=C emake -j1 || die
-
-	#if use doc && has_version dev-util/monodoc
-	#then
-	#	cd ${S}/doc
-	#	emake -j1 assemble || die "Failed to generate docs"
-	#fi
 }
 
 src_install () {
@@ -73,22 +68,4 @@ src_install () {
 		DESTDIR=${D} install || die
 
 	dodoc README* ChangeLog
-
-	#if use doc && has_version dev-util/monodoc
-	#then
-	#	cd ${S}/doc
-	#	insinto $(monodoc --get-sourcesdir)
-	#	doins gtk-sharp-docs.{tree,zip}
-	#fi
-}
-
-pkg_postinst() {
-	if use doc && ! has_version dev-util/monodoc
-	then
-		ewarn
-		ewarn "Although 'doc' is in the USE flag list, gtk-sharp will"
-		ewarn "not install its monodoc documentation unless you have monodoc"
-		ewarn "installed. If you want the documentation to be available in"
-		ewarn "monodoc, please emerge monodoc then re-emerge gtk-sharp."
-	fi
 }
