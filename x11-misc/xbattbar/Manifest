@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c9d71231d15176e218af43d8f0640c41 ChangeLog 1027
+MD5 80000ab9fdd245a9f5a62e93a2bd5ed9 ChangeLog 1136
 MD5 60d0f8e87130d8e8211e724e2a3f734e files/digest-xbattbar-1.4.2 65
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 461bfa6f5e54352e8169a181a3aa5e2a xbattbar-1.4.2.ebuild 661
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf9n3csIHjyDViGQRApwkAKDWoqOUG4jJD+rA3K73EY/RCgYPnwCg24Op
-kaXCszuWvUvI0QIDhRNZhWs=
-=Mwe4
------END PGP SIGNATURE-----
+MD5 ef690ec8cf1aadb21b367bdfda090dab xbattbar-1.4.2.ebuild 799
