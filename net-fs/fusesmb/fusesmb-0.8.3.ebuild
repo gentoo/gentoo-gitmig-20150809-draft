@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.3.ebuild,v 1.1 2005/12/30 11:06:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.3.ebuild,v 1.2 2006/01/21 15:56:58 genstef Exp $
 
 inherit eutils
 
@@ -20,6 +20,12 @@ DEPEND="${RDEPEND}
 	virtual/libc
 	sys-devel/libtool
 	sys-devel/make"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i "s:\(FUSE_USE_VERSION.\)23:\122:" config* || die "sed failed"
+}
 
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
