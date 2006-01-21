@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1681 2006/01/21 11:31:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1682 2006/01/21 19:55:52 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1261,7 +1261,7 @@ sys-libs/glibc:n64 - Enable n64 ABI support on mips
 sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that prevent and detect data corruption. this removes the small overhead introduced by the check.
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
-sys-libs/libvserver:alt-syscall - Enables alternative syscall implementation
+sys-libs/libvserver:diet - Enables linking again dietlibc
 sys-libs/pam:pam_chroot - Builds the pam_chroot module (enables per-user chroots at login)
 sys-libs/pam:pam_console - Builds the pam_console module (enables per-user device permissions for console user)
 sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
