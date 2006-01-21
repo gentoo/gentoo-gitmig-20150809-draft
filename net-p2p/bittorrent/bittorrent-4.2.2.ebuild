@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.2.2.ebuild,v 1.4 2006/01/20 21:29:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.2.2.ebuild,v 1.5 2006/01/21 02:03:27 gustavoz Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc sparc x86"
 IUSE="gtk"
 
 RDEPEND="gtk? (
