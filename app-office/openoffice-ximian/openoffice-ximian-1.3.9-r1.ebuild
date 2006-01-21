@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.9 2005/11/20 19:48:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.10 2006/01/21 14:35:03 suka Exp $
 
 # Notes:
 #
@@ -54,7 +54,11 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 
 RDEPEND="!app-office/openoffice-ximian-bin
-	virtual/x11
+	|| ( (
+			x11-libs/libXaw
+			x11-libs/libXinerama
+		)
+		virtual/x11 )
 	virtual/libc
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.0
@@ -79,6 +83,14 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+			x11-libs/libXrender
+			x11-proto/printproto
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/xineramaproto
+		)
+		virtual/x11 )
 	net-print/cups
 	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
