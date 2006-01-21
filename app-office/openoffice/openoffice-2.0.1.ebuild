@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.14 2006/01/21 18:46:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.15 2006/01/21 18:59:22 josejx Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~ppc sparc x86"
+KEYWORDS="ppc sparc x86"
 
 RDEPEND="!app-office/openoffice-bin
 	!app-office/openoffice-ximian
