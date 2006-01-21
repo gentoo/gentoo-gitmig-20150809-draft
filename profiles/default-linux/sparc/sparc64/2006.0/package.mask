@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.7 2005/11/24 18:27:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.8 2006/01/21 23:27:24 weeve Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -164,3 +164,9 @@ www-servers/orion
 www-servers/resin
 www-servers/resin-ee
 www-servers/tomcat
+
+# Jason Wever <weeve@gentoo.org>
+# Mask java related PHP packages
+dev-php4/php-java-bridge
+dev-php5/php-java-bridge
+

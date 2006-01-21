@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/package.mask,v 1.5 2006/01/11 15:42:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/package.mask,v 1.6 2006/01/21 23:27:24 weeve Exp $
 
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
@@ -222,3 +222,8 @@ www-servers/orion
 www-servers/resin
 www-servers/resin-ee
 www-servers/tomcat
+
+# Jason Wever <weeve@gentoo.org>
+# Mask java related PHP packages
+dev-php4/php-java-bridge
+dev-php5/php-java-bridge

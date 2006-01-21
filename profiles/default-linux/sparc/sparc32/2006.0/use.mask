@@ -1,7 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/use.mask,v 1.1 2005/11/15 18:34:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/use.mask,v 1.2 2006/01/21 23:27:24 weeve Exp $
 
 # Java and java-related stuff
 freetts
 java
+java-internal
+java-external
