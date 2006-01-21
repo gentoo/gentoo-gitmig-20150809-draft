@@ -1,15 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kuroevtd/kuroevtd-1.1.3.ebuild,v 1.1 2006/01/21 21:24:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kuroevtd/kuroevtd-1.1.3.ebuild,v 1.2 2006/01/21 21:53:29 nerdboy Exp $
 
-DESCRIPTION="Monitor the Kurobox' power/reset buttons"
+DESCRIPTION="Monitors the Kurobox and LinkStation power and reset buttons."
 HOMEPAGE="http://kuro.dsk.jp/"
 SRC_URI="http://kuro.dsk.jp/data/bin/${PN}_${PV}.tgz"
+
 RESTRICT="nomirror nostrip"
 LICENSE="as-is"
 SLOT="0"
+
 KEYWORDS="ppc"
 IUSE=""
+
 DEPEND="sys-apps/sed"
 
 S=${WORKDIR}/${PN}
@@ -25,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	dodir /usr/sbin
 	dosbin kuroevtd
 	dodoc README
