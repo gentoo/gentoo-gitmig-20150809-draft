@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r3.ebuild,v 1.2 2005/11/25 19:19:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r3.ebuild,v 1.3 2006/01/21 23:45:10 wormo Exp $
 
 inherit java-pkg eutils
 
