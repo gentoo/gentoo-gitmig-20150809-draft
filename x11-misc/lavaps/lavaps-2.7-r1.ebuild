@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r1.ebuild,v 1.5 2005/11/21 18:50:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r1.ebuild,v 1.6 2006/01/21 11:42:47 nelchael Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="ppc x86"
 IUSE="gtk"
 
 DEPEND=">=dev-lang/tk-8.3.3
-	virtual/x11
 	gtk? ( x11-libs/gtk+ )
 	!gtk? ( dev-lang/tcl )"
 
