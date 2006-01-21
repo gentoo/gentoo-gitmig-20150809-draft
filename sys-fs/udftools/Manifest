@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3d3e50f1e1d48d21a7a11b5a4606b0c udftools-1.0.0b-r5.ebuild 1002
-MD5 3e8c58cd74fe55b4a7d1d830ed0f7f05 ChangeLog 2469
-MD5 0cf47a30a6ac05387d56c265d786ade1 metadata.xml 249
-MD5 72f421d199c391071d3271f025f9ef4f files/pktcdvd.init 1313
+MD5 fa42a8481299e03c23f3d388cae19f38 ChangeLog 2566
 MD5 3e4db84bced51283c2de39869e96e554 files/cdrwtool-linux2.6-fix-v2.patch 876
 MD5 d52ea5d393bd61a45f983ebc01703d93 files/digest-udftools-1.0.0b-r5 137
+MD5 72f421d199c391071d3271f025f9ef4f files/pktcdvd.init 1313
 MD5 966bd7ff249b4fd8e8b6aec16ace1fb9 files/udftools-1.0.0b-gcc4.patch 478
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDivyoTOXg++0VvJQRAlAUAJ44ctXefPJYdUctdzg40RyuZLP5dgCdEz4y
-YaKqQBWsrWNs8yxoMBDRMSE=
-=kCcZ
------END PGP SIGNATURE-----
+MD5 0cf47a30a6ac05387d56c265d786ade1 metadata.xml 249
+MD5 5bfdd341b6cb75cc3bfe02ec7f674336 udftools-1.0.0b-r5.ebuild 1004
