@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9fdd6ff1ba91f67b0528e79207a99774 ChangeLog 1024
 MD5 bd5440b327cecc2b5eeaaba50cd9a066 files/digest-icon-naming-utils-0.6.2 74
 MD5 31f9daa04ded540b32c88bf11a98096c files/digest-icon-naming-utils-0.6.3 74
@@ -8,3 +11,10 @@ MD5 a308c95649475f264e171fb9450989dd icon-naming-utils-0.6.3.ebuild 739
 MD5 8fc779e2a14427cb70c06521a41fc46e icon-naming-utils-0.6.5.ebuild 739
 MD5 1103c8d730e23bf4d7ba8438dd7b3aff icon-naming-utils-0.6.6.ebuild 739
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0myewUpWvClEHQoRAll4AJwMyXs73b9dYz6G2gDe3SXqnABxwACeJFlE
+9tKA1dfQ8goZrJw7QTUkeRg=
+=Xtl4
+-----END PGP SIGNATURE-----
