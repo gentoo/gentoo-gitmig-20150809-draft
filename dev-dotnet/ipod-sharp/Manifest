@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cbf0ea0a48f78f67b80f1d609e34b92e ChangeLog 863
+MD5 63b90ea19164633abd27f97fe730dd12 ChangeLog 1009
 MD5 1020c9fcd11853fdf78f6feb29979179 files/digest-ipod-sharp-0.5.11.1 71
 MD5 27fb0200d18a4f1a6a51a4c5699a10d8 files/digest-ipod-sharp-0.5.12 69
-MD5 aec133d5e4f8de2b65587e55d859d205 ipod-sharp-0.5.11.1.ebuild 861
-MD5 d4498b48b701a9e54b1fdf893794fd1b ipod-sharp-0.5.12.ebuild 875
+MD5 6c1610c98625a757e284b58697c9fd03 ipod-sharp-0.5.11.1.ebuild 869
+MD5 61ea27098406cff40cd157e6ea733d4d ipod-sharp-0.5.12.ebuild 883
 MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDuUyGwUpWvClEHQoRAl0bAJicIT/xpVPAU36twN4Tx3zPme4VAJ4/se81
-kN1rvV1TOu0CTlFgx8Rrwg==
-=NCc6
------END PGP SIGNATURE-----
