@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.97 2006/01/13 19:52:31 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.98 2006/01/21 11:47:35 nattfodd Exp $
+
+  21 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/tetex-2.0.2-dvi-draw-conflicting-types.patch,
+  tetex-2.0.2-r5.ebuild, tetex-2.0.2-r6.ebuild, tetex-2.0.2-r7.ebuild:
+  Added a patch to fix a compilation error in texk/xdvik/dvi-draw.c for
+  tetex-2.0.2, closing bug #118264. Credit goes to GerbilSoft.
 
 *tetex-3.0_p1 (13 Jan 2006)
 
