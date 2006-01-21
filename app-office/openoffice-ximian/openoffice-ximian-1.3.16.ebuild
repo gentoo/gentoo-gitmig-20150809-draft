@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.16.ebuild,v 1.4 2006/01/21 14:35:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.16.ebuild,v 1.5 2006/01/21 15:11:39 suka Exp $
 
 # Notes:
 #
@@ -53,7 +53,7 @@ LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-RDEPEND="!app-office/openoffice-ximian-bin
+RDEPEND="
 	|| ( (
 			x11-libs/libXaw
 			x11-libs/libXinerama
