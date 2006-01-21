@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/DB_File
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.9 2006/01/15 11:23:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.10 2006/01/21 22:03:17 corsair Exp $
+
+  21 Jan 2006; Markus Rothe <corsair@gentoo.org> DB_File-1.814.ebuild:
+  Stable on ppc64
 
   15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> DB_File-1.814.ebuild:
   Stable on ppc.
