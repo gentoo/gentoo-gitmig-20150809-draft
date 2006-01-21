@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d852448f7a4b97b37cc27041c855ddc ChangeLog 1766
+MD5 c0fe6639941c3545012482454ea8ba49 ChangeLog 1874
 MD5 bf083fadf4e1d7d36a3d0711631089b4 files/digest-libiodbc-3.51.1-r2 67
 MD5 8e6928061b056f72be3d9e7abbbc507c files/digest-libiodbc-3.51.2 67
 MD5 ece9aefd2a148885ecbc7d22ce7b23bd files/libiodbc-3.51.2_install_symlink.diff 978
 MD5 18fbcec8c2b07f0dc399113c62c302b2 libiodbc-3.51.1-r2.ebuild 1069
-MD5 371bdf1f034a4d80604a9dcb65616bcd libiodbc-3.51.2.ebuild 1021
+MD5 bcd72a431ee2331bade0b4e8fba269de libiodbc-3.51.2.ebuild 1023
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0girH6mNYUtVdIARAg6cAJ0bqSUcvI5+TAZ/ZZM1bYue+HwXlQCgoEmO
-PSUcgBt7sqOGZBIcEuFY54I=
-=xP1p
+iD8DBQFD0kaCJrHF4yAQTrARAiATAJ9HxCfa6q8AKVWYrC8efr7FR/Jh9QCg0aGg
+P70G+y7yX97jXweVdDzNMOU=
+=5/xc
 -----END PGP SIGNATURE-----
