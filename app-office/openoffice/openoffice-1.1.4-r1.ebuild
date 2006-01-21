@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.10 2006/01/21 13:40:46 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.11 2006/01/21 20:47:48 suka Exp $
 
 # Notes:
 #
@@ -388,7 +388,7 @@ src_compile() {
 
 	export buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
 
-	# Should the build use multiprocessing? Not enabled by default, as it tends to break 
+	# Should the build use multiprocessing? Not enabled by default, as it tends to break
 	if [ "${WANT_DISTCC}" == "true" ]
 	then
 		if [ "${JOBS}" -gt 1 ]
