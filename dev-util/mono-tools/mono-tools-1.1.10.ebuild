@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.1.10.ebuild,v 1.4 2005/11/27 22:52:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.1.10.ebuild,v 1.5 2006/01/22 01:31:29 compnerd Exp $
 
 inherit eutils mono multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/mono
