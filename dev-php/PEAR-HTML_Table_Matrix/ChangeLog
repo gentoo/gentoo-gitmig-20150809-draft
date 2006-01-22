@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Table_Matrix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.10 2006/01/22 07:38:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.11 2006/01/22 21:52:25 blubb Exp $
+
+  22 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  PEAR-HTML_Table_Matrix-1.0.9.ebuild:
+  stable on amd64 wrt bug 119722
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-HTML_Table_Matrix-1.0.9.ebuild:

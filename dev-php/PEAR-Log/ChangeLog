@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.49 2006/01/22 16:51:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.50 2006/01/22 21:55:51 blubb Exp $
+
+  22 Jan 2006; Simon Stelling <blubb@gentoo.org> PEAR-Log-1.9.3.ebuild:
+  stable on amd64 wrt bug 119722
 
   22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-Log-1.9.3.ebuild:
   Stable on SPARC wrt bug #119722.

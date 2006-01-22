@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.44 2006/01/22 16:22:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.45 2006/01/22 21:48:38 blubb Exp $
+
+  22 Jan 2006; Simon Stelling <blubb@gentoo.org> PEAR-DB-1.7.6-r1.ebuild:
+  stable on amd64 wrt bug 119722
 
   22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-DB-1.7.6-r1.ebuild:
   Stable on SPARC wrt bug #119722.
