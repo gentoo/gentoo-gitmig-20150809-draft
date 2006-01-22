@@ -1,4 +1,4 @@
-MD5 88c3c22391e9e47a0270281bf62c6973 ChangeLog 10387
+MD5 1851b71c84dc94b2664a1258f9484c3c ChangeLog 10487
 MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42-r1 70
 MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42-r2 70
 MD5 68df1a9c637b61c0421a78791093e710 files/digest-gcalctool-5.6.31 70
@@ -6,5 +6,5 @@ MD5 643f5117320cc2c403b8eceff4d156b9 files/gcalctool-5.5.42-hexdec-fix.patch 426
 MD5 6885edfd95cdbdf6c3963d6eeb58147d files/gcalctool-5.5.42-malloc.patch 380
 MD5 a0957eb94771af086e1f9cc2933137e8 gcalctool-5.5.42-r1.ebuild 1040
 MD5 b74792c56ed4c153a284d0ad375ca181 gcalctool-5.5.42-r2.ebuild 1076
-MD5 6e22fdb776ae4e05ea9d29c80b295757 gcalctool-5.6.31.ebuild 988
+MD5 2f7d4ac40f479c8c2b5f8797dd48dd4a gcalctool-5.6.31.ebuild 987
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
