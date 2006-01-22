@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.16 2006/01/21 20:47:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.17 2006/01/22 20:12:27 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -139,7 +139,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
 	cp ${FILESDIR}/${PV}/gentoo-gcc-version.diff ${S}/patches/src680/ || die
-	epatch ${FILESDIR}/${PV}/ooo-build-gentoo-gcc-version.diff
+	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"

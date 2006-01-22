@@ -1,0 +1,32 @@
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -313,9 +313,6 @@
+ [ Shrink ]
+ # strip 450k of .comment sections - i#57063
+ size-strip.diff
+-# save 1.7Mb of (shared) memory for non-asian locales
+-cws-i18nshrink.diff
+-
+ 
+ [ QuickStarter ]
+ # An improved built-in quick-starter applet / systray thing. i#57872
+@@ -941,6 +941,8 @@
+ stlport-ppc-buildfix.diff
+ # Re-add DicOOo
+ gentoo-dicooo.diff
++# Fix for odd compiler versions
++gentoo-gcc-version.diff
+ 
+ #
+ # NOTE: 64 bit OOo is work in progress!
+--- patches/src680/buildfix-gcc41-friend-decl-i18npool.diff 
++++ patches/src680/buildfix-gcc41-friend-decl-i18npool.diff 
+@@ -8,7 +8,7 @@
+ +    return l1.Language == l2.Language && l1.Country == l2.Country && l1.Variant == l2.Variant;
+ +};
+ +
+- class I18NPOOL_DLLPUBLIC LocaleData : public cppu::WeakImplHelper2
++ class LocaleData : public cppu::WeakImplHelper2
+  <
+  	XLocaleData,
+ @@ -131,13 +135,7 @@
