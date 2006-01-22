@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.58 2006/01/20 22:09:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.59 2006/01/22 03:37:43 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org>
+  gtksourceview-1.4.2.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gtksourceview-1.4.2.ebuild:
