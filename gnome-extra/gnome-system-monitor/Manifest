@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6dc7b2ca13d75efd3df29208fad0594d ChangeLog 12541
 MD5 23d046a3eb3b6f9c2b9ec078e73f3d5d files/digest-gnome-system-monitor-2.10.0 80
 MD5 4ce03a83c4231e4b30b504c9e3e8faf2 files/digest-gnome-system-monitor-2.10.1 80
@@ -10,13 +7,6 @@ MD5 1717d3423ff0c95f21dd6037d93a26cf files/gnome-system-monitor-2.10.1-icon_warn
 MD5 9948d4c847a49ac1a9db168f46c0d376 files/gnome-system-monitor-execlp.patch 365
 MD5 168daae62943a3874cba7e0e441dc407 gnome-system-monitor-2.10.0.ebuild 913
 MD5 f36dfb295a2fc9d680d5ad3054b7107c gnome-system-monitor-2.10.1.ebuild 926
-MD5 0442b042d62f07cb56d4746a6cff6019 gnome-system-monitor-2.12.1.ebuild 794
+MD5 3568f615d100de95527c9127301d4e62 gnome-system-monitor-2.12.1.ebuild 793
 MD5 c3ed0ed14350666a1e54d0a014fe9591 gnome-system-monitor-2.8.3.ebuild 918
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0vyjSENan+PfizARAvDnAKCBnmFbV0j9pC/GRpLwBJWD/JXSiACeKXWG
-0ByrzoQ4zWPHmo7vKFOAd4o=
-=rvvL
------END PGP SIGNATURE-----
