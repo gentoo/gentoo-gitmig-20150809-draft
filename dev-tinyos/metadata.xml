@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The dev-tinyos category contains libraries and utilities of the TinyOS
+		operating system for embedded wireless sensor networks.
+	</longdescription>
+	<longdescription lang="it">
+		La categoria dev-embedded contiene librerie ed utilità del sitema operativo TinyOS
+		per reti di sensori wireless embedded.
+	</longdescription>
+</catmetadata>
+
