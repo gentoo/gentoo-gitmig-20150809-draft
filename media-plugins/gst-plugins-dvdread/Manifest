@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efae374fa9c4aede348d4c153aff0423 ChangeLog 3601
+MD5 2bd09e62846260642436b51497ac4d48 ChangeLog 3705
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-dvdread-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-dvdread-0.8.11 72
 MD5 9dda5b5f81b3ba9591b6adf0c428513e gst-plugins-dvdread-0.8.10.ebuild 366
-MD5 cd2ab13746c1975791aeb1afe1c56308 gst-plugins-dvdread-0.8.11.ebuild 373
+MD5 a2a90dee4c98c9a81128675e8ec283c5 gst-plugins-dvdread-0.8.11.ebuild 371
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0UYsKRy60XGEcJIRAkUUAJkBTgWF9BPaA4Hw/P3868RyYRt2xgCfWesp
-9mghPegrfQogMfG48ugNt38=
-=F7Ju
------END PGP SIGNATURE-----
