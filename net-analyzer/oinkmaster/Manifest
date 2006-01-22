@@ -1,6 +1,16 @@
-MD5 00b4ef59b1ea4a75ac607dc663d91fae ChangeLog 1985
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f6a86992df94bf2629b3f31ef945fd0 ChangeLog 2077
 MD5 d39a6dd3af176592dc47aff3885ca667 files/digest-oinkmaster-1.1 65
 MD5 cc825c2a99a50e5fdc0dd0a10ddd5a36 files/digest-oinkmaster-1.2 65
 MD5 b807b01f2e4bbab81ecbe6b01657d13b metadata.xml 220
 MD5 9bfb7a103040285d749b4f2fc68f5c10 oinkmaster-1.1.ebuild 973
-MD5 19a17bcfd4ff5823b32009118acf2e61 oinkmaster-1.2.ebuild 839
+MD5 80b3917e2f5892c18acc42fdd503ff2c oinkmaster-1.2.ebuild 839
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD02L0H6mNYUtVdIARAp/FAJ9wBLgctllpBdFajS4mnrEFFpX4kgCaAn1l
+ClOymF9gEfuRcrTzDeuJiU0=
+=E33w
+-----END PGP SIGNATURE-----
