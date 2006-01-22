@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.28 2006/01/02 17:55:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.29 2006/01/22 22:52:56 danarmak Exp $
+
+*kdejava-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdejava-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   kdejava-3.4.3-r1.ebuild:

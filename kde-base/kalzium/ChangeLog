@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.37 2005/12/17 10:02:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.38 2006/01/22 22:52:51 danarmak Exp $
+
+*kalzium-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +kalzium-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kalzium-3.5.0.ebuild:
   Added ~ppc64

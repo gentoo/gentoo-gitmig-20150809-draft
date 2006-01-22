@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.30 2005/12/12 16:26:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.31 2006/01/22 22:53:04 danarmak Exp $
+
+*kpilot-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +kpilot-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   12 Dec 2005; Joseph Jezak <josejx@gentoo.org> kpilot-3.5.0.ebuild:
   Marked ~ppc.

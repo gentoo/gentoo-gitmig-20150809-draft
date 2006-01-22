@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.36 2005/12/29 11:07:07 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.37 2006/01/22 22:52:55 danarmak Exp $
+
+*kdegraphics-kfile-plugins-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdegraphics-kfile-plugins-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   29 Dec 2005; Gregorio Guidi <greg_g@gentoo.org>
   kdegraphics-kfile-plugins-3.4.3.ebuild:

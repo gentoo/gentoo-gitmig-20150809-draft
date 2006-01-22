@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-3.5.0.ebuild,v 1.2 2005/12/12 19:27:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-3.5.0.ebuild,v 1.3 2006/01/22 22:52:58 danarmak Exp $
 
 KMNAME=kdesdk
 KMNOMODULE="true"
 KMNODOCS="true"
-MAXKDEVER=$PV
+MAXKDEVER=3.5.1
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

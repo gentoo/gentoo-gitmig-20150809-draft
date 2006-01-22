@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.23 2005/11/16 14:57:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.24 2006/01/22 22:52:55 danarmak Exp $
+
+*kdebase-pam-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdebase-pam-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   16 Nov 2005; Markus Rothe <corsair@gentoo.org> kdebase-pam-6.ebuild:
   Stable on ppc64

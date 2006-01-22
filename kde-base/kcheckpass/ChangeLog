@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.38 2006/01/14 09:24:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.39 2006/01/22 22:52:53 danarmak Exp $
+
+*kcheckpass-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +kcheckpass-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   14 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kcheckpass-3.5.0-bindnow.patch, kcheckpass-3.5.0.ebuild:

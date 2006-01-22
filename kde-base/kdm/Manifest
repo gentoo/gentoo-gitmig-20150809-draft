@@ -1,12 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dad47e06a6ed712253598fb8a02c5c87 ChangeLog 4892
+MD5 4171f8f6f5ad301f5c49099a385e260b ChangeLog 5056
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdm-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdm-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdm-3.4.3 68
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdm-3.4.3-r1 68
 MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kdm-3.5.0 142
+MD5 340e546ce7b64129122115c8301d915e files/digest-kdm-3.5.1 142
 MD5 cbfa9f15423035b33eb50456dfb04691 files/kdebase-3.4.3-noimake.patch 2214
 MD5 789aca95df83dac88fe68a3cbeeea13a files/kdebase-3.4.3-xdmcp.patch 614
 MD5 f8fabdf3377ba617123c9c4ed476270c kdm-3.4.1.ebuild 2429
@@ -14,11 +12,5 @@ MD5 32da1a4ba2aef00f40978e17c71c0da2 kdm-3.4.2.ebuild 2442
 MD5 cf928431e3417108734016766a13d896 kdm-3.4.3-r1.ebuild 2688
 MD5 f5e3f03ba2148dd882645285c61bcc69 kdm-3.4.3.ebuild 2444
 MD5 bdceb7399e9e216929cabc4e768678a1 kdm-3.5.0.ebuild 2348
+MD5 512b4d22f281164d38455706a5de2ca8 kdm-3.5.1.ebuild 2348
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyMDeAiZjviIA2XgRAm9pAKCZ14r4GzePaVOT55c2e4PaePkb2gCdH8Ot
-Y8/ssUjH1GP2vL2snGw0jFI=
-=LWxx
------END PGP SIGNATURE-----

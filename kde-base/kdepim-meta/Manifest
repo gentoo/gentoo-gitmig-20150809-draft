@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17fe08ef7a5bb828b02e8f7f9065bf7 ChangeLog 5396
+MD5 2a008ee0d69cee252d93154ecdcce0b4 ChangeLog 5576
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.5.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.5.1 0
 MD5 8683d24fb10b7f474a88d6035b7901c1 kdepim-meta-3.4.1.ebuild 2036
 MD5 98b68ae849aa52d779658e81d1cc6451 kdepim-meta-3.4.2.ebuild 2068
 MD5 b48b8b390af4f6b69bc13d8a70157739 kdepim-meta-3.4.3.ebuild 2101
 MD5 13f766346609acf3520bb3045847ac87 kdepim-meta-3.5.0.ebuild 2092
+MD5 f66937c95a4c441bed35d85c1a078be4 kdepim-meta-3.5.1.ebuild 2102
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDpeaIAiZjviIA2XgRAu7MAJ9/jnqL4anq8fSZFyrEhV4MotkybACbBES5
-fHDq4cdAIti8Y5DFQW9G0UA=
-=/01x
------END PGP SIGNATURE-----

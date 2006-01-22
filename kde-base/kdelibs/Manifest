@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 63961292231a5925ed135dcd21a097b5 ChangeLog 48280
 MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
 MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
@@ -12,6 +9,7 @@ MD5 e7fe23c3618de82d63dfdc90fb483a86 files/digest-kdelibs-3.4.3-r1 68
 MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0 68
 MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0-r1 68
 MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0-r2 68
+MD5 6508f7c84d8b68a6977113b719de2ff2 files/digest-kdelibs-3.5.1 68
 MD5 a5d3cb18c9572d8ca3dd06cbe5d226f1 files/kde3-dcopidlng.patch 681
 MD5 25ab050b323a8efb2049fd770f50058b files/kdelibs-3.3.2-anchor-fix.patch 5947
 MD5 d3df6d042148fd884422822aaf4ffbab files/kdelibs-3.3.2-aspell-dir.patch 467
@@ -36,11 +34,5 @@ MD5 a63c94e0dd87823f669a385d1e3a4b01 kdelibs-3.4.3.ebuild 3383
 MD5 d4581e4fb36f23fdb3d871207f79bb94 kdelibs-3.5.0-r1.ebuild 3758
 MD5 359c57fe1577ee4141ffedbffab53628 kdelibs-3.5.0-r2.ebuild 3795
 MD5 f0e4dcbb7b8e88eeecf66511befbc047 kdelibs-3.5.0.ebuild 3718
+MD5 9226ccdc9610431272a3e078ccbd514b kdelibs-3.5.1.ebuild 3768
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0QB7ntT9W3vfTuoRAm9LAJ9hiwWlWTF7zV4A0jsQMnO7+DyFGgCfTigz
-Mw0vQWALEDp7jc65xEmbrB4=
-=QJwy
------END PGP SIGNATURE-----

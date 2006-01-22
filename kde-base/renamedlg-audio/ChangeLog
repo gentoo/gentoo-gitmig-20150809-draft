@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/renamedlg-audio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-audio/ChangeLog,v 1.27 2005/12/17 09:27:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-audio/ChangeLog,v 1.28 2006/01/22 22:53:10 danarmak Exp $
+
+*renamedlg-audio-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +renamedlg-audio-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org>
   renamedlg-audio-3.5.0.ebuild:

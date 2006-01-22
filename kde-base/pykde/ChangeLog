@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pykde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.2 2005/12/09 22:26:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.3 2006/01/22 22:53:10 danarmak Exp $
+
+*pykde-3.5.1 (23 Jan 2006)
+
+  23 Jan 2006; Dan Armak <danarmak@gentoo.org> +pykde-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
   09 Dec 2005; Carsten Lohrke <carlo@gentoo.org> pykde-3.4.3.ebuild,
   pykde-3.5.0.ebuild:

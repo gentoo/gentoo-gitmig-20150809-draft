@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d38fbc1ffa074190b0ee39d3af7440ff ChangeLog 8865
+MD5 16ea6feef8215fb3df06f4d3779b445c ChangeLog 9031
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
 MD5 912bf2607fc0c67f023f6084731eba21 files/digest-kpdf-3.4.1-r3 221
@@ -14,6 +11,7 @@ MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kpdf-3.4.3-r3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kpdf-3.5.0 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kpdf-3.5.0-r2 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kpdf-3.5.0-r3 71
+MD5 caced8d9ad43d51ee9d60fa05a53ed52 files/digest-kpdf-3.5.1 71
 MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
 MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
 MD5 cba50683fe0c9704ddfcd91fde5129c8 files/kpdf-3.5.0-cropbox-fix.patch 631
@@ -33,11 +31,5 @@ MD5 71273e2bb8b2c3a5e1407a5a32a4b68a kpdf-3.4.3.ebuild 576
 MD5 531c4b155103eed24f2f88d83d3b6461 kpdf-3.5.0-r2.ebuild 953
 MD5 319d936787de54e4423c1a9fdf499c5e kpdf-3.5.0-r3.ebuild 1101
 MD5 83802275c8156d6e4aff171ef643d683 kpdf-3.5.0.ebuild 841
+MD5 4e29c0bf94069dec23ac31e7f1eedeb4 kpdf-3.5.1.ebuild 952
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvY1OcsIHjyDViGQRAg/vAKDMAFxhHhM8jQ/B/zF+a6Pjxu/l+wCeNJqh
-K/abi28uN6CBzNcqoVwjsdk=
-=8kQW
------END PGP SIGNATURE-----

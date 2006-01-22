@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 87a4a3bfcf77645cd5afc1fb6c932d09 ChangeLog 2815
-MD5 10cf39315da282f65e8d8559adfe6111 kpackage-3.4.1.ebuild 430
-MD5 32e784b64efa09cba9fc28c00de94078 kpackage-3.5.0.ebuild 430
-MD5 4e4ef9eae332801fcca31e9575e1d6d3 kpackage-3.4.3.ebuild 432
-MD5 77367f93b958ae31556b9d853c2a43cd kpackage-3.4.2.ebuild 433
-MD5 80b3c1753e84c4d6d9caf0502325b7b4 files/digest-kpackage-3.4.3 68
-MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-kpackage-3.4.2 286
+MD5 cacf27528be577d2e1209ce1d7302ffc ChangeLog 2989
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kpackage-3.4.1 211
+MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-kpackage-3.4.2 286
+MD5 80b3c1753e84c4d6d9caf0502325b7b4 files/digest-kpackage-3.4.3 68
 MD5 5e640d90c8921056fae9b3ca328a8093 files/digest-kpackage-3.5.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoFb6FdQwWVoAgN4RAty5AKC5V0Rrr+vDUejZc2nGF/TDpZ7XeACgyEGV
-8vI6uGGXnKFuUIb/7goMYH8=
-=x4d1
------END PGP SIGNATURE-----
+MD5 223a891a18c8ca71d7a7fb46a382f708 files/digest-kpackage-3.5.1 68
+MD5 10cf39315da282f65e8d8559adfe6111 kpackage-3.4.1.ebuild 430
+MD5 77367f93b958ae31556b9d853c2a43cd kpackage-3.4.2.ebuild 433
+MD5 4e4ef9eae332801fcca31e9575e1d6d3 kpackage-3.4.3.ebuild 432
+MD5 32e784b64efa09cba9fc28c00de94078 kpackage-3.5.0.ebuild 430
+MD5 32e784b64efa09cba9fc28c00de94078 kpackage-3.5.1.ebuild 430
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

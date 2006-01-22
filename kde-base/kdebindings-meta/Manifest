@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2730af65ee19bbce168461c9ebcf6710 kdebindings-meta-3.4.1.ebuild 870
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 6ec7f54df7686987620d3981fe70dc00 ChangeLog 4547
-MD5 12b79deb58d7cc5f2296eef7b59fda85 kdebindings-meta-3.3.2.ebuild 868
-MD5 5ea4e0fd15e486bcd5cfb66c96b05121 kdebindings-meta-3.5.0.ebuild 927
-MD5 3892b4c063ddf7aab83e20cece8a0ba8 kdebindings-meta-3.4.3.ebuild 932
-MD5 75a15cf3ac183925f2cbf9e9370962eb kdebindings-meta-3.4.2.ebuild 935
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.1 0
+MD5 68d594fb08ef78b18fbbf50640436945 ChangeLog 4737
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.3.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoF+eFdQwWVoAgN4RAlwCAJ49SJu2mVu7eQdr08juCk1fdFGp9gCgpNBg
-djDZLSW8ibtHUwm1Y8Ulh+s=
-=0ytl
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.5.1 0
+MD5 12b79deb58d7cc5f2296eef7b59fda85 kdebindings-meta-3.3.2.ebuild 868
+MD5 2730af65ee19bbce168461c9ebcf6710 kdebindings-meta-3.4.1.ebuild 870
+MD5 75a15cf3ac183925f2cbf9e9370962eb kdebindings-meta-3.4.2.ebuild 935
+MD5 3892b4c063ddf7aab83e20cece8a0ba8 kdebindings-meta-3.4.3.ebuild 932
+MD5 5ea4e0fd15e486bcd5cfb66c96b05121 kdebindings-meta-3.5.0.ebuild 927
+MD5 d866effdddf32b9bfb99020932a72741 kdebindings-meta-3.5.1.ebuild 933
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
