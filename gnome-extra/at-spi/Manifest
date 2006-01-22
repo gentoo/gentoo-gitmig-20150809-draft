@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7d7375725e3c9fbb06e91656e6b343b ChangeLog 11575
+MD5 6971affb6260c49cefde99338e968cf2 ChangeLog 11670
 MD5 46f84533bc16ff13dd51d6c72b642673 at-spi-1.6.4.ebuild 789
-MD5 fa743bbb0609adbd49130c73c80d130b at-spi-1.6.6-r1.ebuild 1109
+MD5 86ea416de9045b03f6d299e4cabb504d at-spi-1.6.6-r1.ebuild 1111
 MD5 8746d394d6122dd05e7ee86223621db7 files/digest-at-spi-1.6.4 65
 MD5 d3f3d5556f8425af862d1403ee1c8cf6 files/digest-at-spi-1.6.6-r1 65
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0+KIomPajV0RnrERAsUWAJ9FeJhXmAbbf756HXqPpJj/qJD7ugCggJo9
-49vbi4gWeit/6RdxCs0KGIc=
-=tIP3
------END PGP SIGNATURE-----
