@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d31fef2e29835853c502378428611df4 ChangeLog 6156
-MD5 599404b725ab4c48c4b79aced53e6a1c crossdev-0.9.11-r1.ebuild 597
-MD5 9787def994f8028d98235f8a4048823e files/crossdev 15719
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crossdev-0.9.11-r1 0
+MD5 5b3e8b234817728b19591b5414fc6e1a ChangeLog 6407
+MD5 42c5932fe9f6c779c194aa572e30b783 crossdev-0.9.12.ebuild 594
+MD5 1109e3e63425a16bc98de0f1d0c5b1e8 files/crossdev 15703
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crossdev-0.9.12 0
 MD5 e91cdaf464f515f3528da02cf06e54a1 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyrZi2+ySkm8kpY0RAmZQAJ0Zp7sgmp/bxqPov0MGDcG/Kiti9wCfeUM5
-yZwzG1Gnq0E5TjMJT5lZyBA=
-=WYZe
+iD8DBQFD09/p2+ySkm8kpY0RAouQAJ9RRWKKkCRVbbtOKJyePelmn0asFQCff6+g
+icYhvVhyiZvMaREZY1zb5g0=
+=z+Uz
 -----END PGP SIGNATURE-----
