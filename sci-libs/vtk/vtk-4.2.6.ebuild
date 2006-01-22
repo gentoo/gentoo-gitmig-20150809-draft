@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.8 2005/12/19 16:09:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.9 2006/01/22 12:44:31 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -28,7 +28,8 @@ RDEPEND="java? ( virtual/jdk )
 	media-libs/libpng
 	media-libs/tiff
 	virtual/opengl
-	virtual/x11"
+	|| ( x11-libs/libXmu virtual/x11 )"
+
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-1.8"
 
@@ -76,7 +77,7 @@ src_compile() {
 		python_version
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_PYTHON:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_INCLUDE_PATH:PATH=/usr/include/python${PYVER}"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/lib/libpython${PYVER}.so"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/$(get_libdir)/libpython${PYVER}.so"
 	fi
 
 	use tcltk && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
@@ -95,22 +96,22 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
 	# fix config file
-	sed -i -e "s:${D}:/:g" ${D}/usr/lib/${PN}/VTKConfig.cmake
+	sed -i -e "s:${D}:/:g" ${D}/usr/$(get_libdir)/${PN}/VTKConfig.cmake
 
-	LDPATH="/usr/lib/${PN}"
+	LDPATH="/usr/$(get_libdir)/${PN}"
 	# install python modules
 	if use python; then
 		distutils_python_version
-		LDPATH="${LDPATH}:/usr/lib/python${PYVER}/site-packages/${PN}_python"
+		LDPATH="${LDPATH}:/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}_python"
 		cd ${S}/Wrapping/Python
 		docinto vtk_python
 		distutils_src_install
 
 		# make symlinks to vtk python modules
-		FILES="${D}/usr/lib/vtk/libvtk*Python*.so"
+		FILES="${D}/usr/$(get_libdir)/vtk/libvtk*Python*.so"
 		for file in ${FILES}
 		do
-			dosym ${file} /usr/lib/python${PYVER}/site-packages/${PN}_python
+			dosym ${file} /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}_python
 		done
 	fi
 
@@ -142,11 +143,11 @@ src_install() {
 	# environment
 	echo "LDPATH=${LDPATH}" > ${T}/40${PN}
 	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> ${T}/40${PN}
+	echo "LD_LIBRARY_PATH=/usr/$(get_libdir)/${PN}" >> ${T}/40${PN}
 	if use java; then
 		echo "CLASSPATH=/usr/share/${PN}/lib/${PN}.jar" >> ${T}/40${PN}
-		echo "LD_LIBRARY_PATH=/usr/lib/${PN}" >> ${T}/40${PN}
 	fi
-	use tcltk && echo "TCLLIBPATH=/usr/lib/${PN}/tcl" >> ${T}/40${PN}
+	use tcltk && echo "TCLLIBPATH=/usr/$(get_libdir)/${PN}/tcl" >> ${T}/40${PN}
 	doenvd ${T}/40${PN}
 }
 
