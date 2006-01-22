@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emms
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.1 2005/12/06 20:36:29 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.2 2006/01/22 01:15:07 marienz Exp $
+
+  22 Jan 2006; Marien Zwart <marienz@gentoo.org> emms-1.0.20051204.ebuild:
+  Fix typo ("mirro://" -> "mirror://").
 
 *emms-1.0.20051204 (06 Dec 2005)
 

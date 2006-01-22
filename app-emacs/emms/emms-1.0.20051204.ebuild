@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-1.0.20051204.ebuild,v 1.1 2005/12/06 20:36:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-1.0.20051204.ebuild,v 1.2 2006/01/22 01:15:07 marienz Exp $
 
 inherit elisp
 
 DESCRIPTION="EMMS is the Emacs Multimedia System"
 HOMEPAGE="http://www.gnu.org/software/emms/ http://www.emacswiki.org/cgi-bin/wiki/EMMS"
-SRC_URI="mirro://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
