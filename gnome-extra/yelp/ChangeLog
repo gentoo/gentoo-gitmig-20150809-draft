@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.101 2006/01/20 22:57:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.102 2006/01/22 03:53:53 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> yelp-2.12.2.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> yelp-2.12.2.ebuild:
   Stable on sparc wrt #119634
