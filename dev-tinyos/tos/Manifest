@@ -1,0 +1,6 @@
+MD5 b37534f217349eb852f641750e617bab ChangeLog 527
+MD5 ee24973a00e138fd2eca95bd9fab4a03 files/99tinyos 63
+MD5 4dc70773e9fed2b077c03fbbfbfab313 files/digest-tos-1.1.15 77
+MD5 fd8fe27c1335153ae750f7aed6d8cb1d files/tos-1.1.15-system-AMStandard-Control.patch 866
+MD5 cfea867833b0cdee3cee8444a4054f4d metadata.xml 551
+MD5 7c49f50477edca2e85fcf4078baa5028 tos-1.1.15.ebuild 2543
