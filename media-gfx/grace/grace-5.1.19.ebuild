@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.19.ebuild,v 1.2 2005/12/14 04:08:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.19.ebuild,v 1.3 2006/01/22 18:04:51 genone Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug png jpeg pdflib fftw netcdf"
+IUSE="debug png jpeg pdf fftw netcdf"
 
 DEPEND="x11-libs/openmotif
 	>=sys-libs/zlib-1.0.3
@@ -21,7 +21,7 @@ DEPEND="x11-libs/openmotif
 	netcdf? ( >=sci-libs/netcdf-3.0 )
 	png? ( >=media-libs/libpng-0.9.6 )
 	jpeg? ( media-libs/jpeg )
-	pdflib? ( >=media-libs/pdflib-4.0.3 )
+	pdf? ( >=media-libs/pdflib-4.0.3 )
 	>=sys-apps/sed-4"
 #	x11-libs/xmhtml
 
@@ -64,7 +64,7 @@ src_compile() {
 		`use_enable debug` \
 		`use_enable jpeg jpegdrv` \
 		`use_enable png pngdrv` \
-		`use_enable pdflib pdfdrv` || die
+		`use_enable pdf pdfdrv` || die
 		# --enable-xmhtml
 
 	cp doc/Makefile doc/Makefile.orig
