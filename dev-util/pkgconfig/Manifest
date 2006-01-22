@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 39d41b99cd47116fae43d02c0d207615 ChangeLog 5145
 MD5 bdbcd3d1ac04770d48111cc96734d0c7 files/digest-pkgconfig-0.17.2-r1 69
 MD5 c5219c9571cf5aafc3aef2dcd973a658 files/digest-pkgconfig-0.19 68
@@ -6,3 +9,10 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5ccc90cb05a7c03b3e4f28a4fc1c1064 pkgconfig-0.17.2-r1.ebuild 853
 MD5 2f1cf813265bfc9d0ad424adfb42e68d pkgconfig-0.19.ebuild 877
 MD5 41aea624bad3e8f4b3259d56fb5ef3cf pkgconfig-0.20.ebuild 818
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD09dyomPajV0RnrERAoakAJ405zH9TpXKKZBzclKJ1LPsV/376ACfdvTe
+0ksqnOJRdpuNuW1zJl+iUC8=
+=Ldmg
+-----END PGP SIGNATURE-----
