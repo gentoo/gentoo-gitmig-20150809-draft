@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c8cbf007e24732a84b706a8cf701979 ChangeLog 2269
-MD5 75bf1a2523c837fdd89f903e4b8252a4 metadata.xml 385
-MD5 9e47f72279a569c74d6aaffe78cbdb2e wmium-1.0.9b.ebuild 1297
+MD5 5f8f2f0c117e4d8054eaa0fb70b5b1a6 ChangeLog 2497
 MD5 e420d58fe2bc90bec34c26a6e31cc60b files/digest-wmium-1.0.9b 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC27PsmdTrptrqvGERAt6DAJ9ylb4vcBmTWafWgtUnNLqdmSIYzgCfakqX
-DovI6NnXEkIvlN24cZHEfKY=
-=ZT0M
------END PGP SIGNATURE-----
+MD5 e420d58fe2bc90bec34c26a6e31cc60b files/digest-wmium-1.0.9b-r1 63
+MD5 75bf1a2523c837fdd89f903e4b8252a4 metadata.xml 385
+MD5 f53d62de38d23ac82091ea13366a6100 wmium-1.0.9b-r1.ebuild 1516
+MD5 458645aa982271da991cc9e1748c8876 wmium-1.0.9b.ebuild 1264

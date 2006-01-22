@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.3 2006/01/22 02:21:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.1 2006/01/22 02:21:35 vanquirius Exp $
 
 IUSE="gtk"
 
@@ -9,24 +9,36 @@ HOMEPAGE="http://www.earthmagic.org/?software"
 SRC_URI="http://www.earthmagic.org/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 DEPEND="virtual/libc
-	virtual/x11
 	dev-libs/openssl
 	gtk? (
 		>=x11-libs/gtk+-2
 		app-admin/gkrellm
 		dev-util/pkgconfig
+	)
+	( || (
+	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libXext-1.0.0
+	>=x11-libs/libXpm-3.5.4.2
+	>=x11-proto/xextproto-7.0.2 )
+	virtual/x11 )
 	)"
 
 RDEPEND="virtual/libc
-	virtual/x11
 	dev-libs/openssl
 	gtk? (
 		>=x11-libs/gtk+-2
 		app-admin/gkrellm
 	)
-	!gtk? ( x11-wm/windowmaker )"
+	!gtk? ( x11-wm/windowmaker )
+	( || (
+	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libXext-1.0.0
+	>=x11-libs/libXpm-3.5.4.2
+	>=x11-proto/xextproto-7.0.2 )
+	virtual/x11 )
+	)"
 
 src_compile() {
 	emake build || die

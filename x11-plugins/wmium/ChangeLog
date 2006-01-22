@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmium
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.15 2005/07/18 13:51:15 dragonheart Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.16 2006/01/22 02:21:35 vanquirius Exp $
+
+*wmium-1.0.9b-r1 (22 Jan 2006)
+
+  22 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> wmium-1.0.9b.ebuild,
+  +wmium-1.0.9b-r1.ebuild:
+  Make modular X friendly, remove media-libs/xpm dependency (it's a dummy
+  ebuild these days).
 
   18 Jul 2005; Daniel Black <dragonheart@gentoo.org> -wmium-1.0.9.ebuild,
   wmium-1.0.9b.ebuild:
