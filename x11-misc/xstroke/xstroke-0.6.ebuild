@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.6.ebuild,v 1.6 2006/01/21 18:56:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.6.ebuild,v 1.7 2006/01/22 02:06:09 kloeri Exp $
 
 DESCRIPTION="Gesture/Handwriting recognition engine for X"
 HOMEPAGE="http://www.xstroke.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.xstroke.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha hppa ~mips ppc sparc x86"
+KEYWORDS="alpha hppa ~mips ppc sparc x86"
 IUSE=""
 
 RDEPEND="|| ( (
