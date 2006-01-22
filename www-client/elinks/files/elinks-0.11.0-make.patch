@@ -1,24 +1,11 @@
-diff -Naurp elinks-0.11.0-orig/Makefile.config elinks-0.11.0-make/Makefile.config
---- elinks-0.11.0-orig/Makefile.config	2006-01-22 10:58:05.000000000 +0100
-+++ elinks-0.11.0-make/Makefile.config	2006-01-22 11:28:37.000000000 +0100
-@@ -16,7 +16,7 @@ top_srcdir = $(PATHPREFIX).
+--- elinks-0.11.0/src/intl/gettext/Makefile	2006-01-22 11:07:59.000000000 +0100
++++ elinks-0.11.0/src/intl/gettext/Makefile	2006-01-22 11:08:08.000000000 +0100
+@@ -27,7 +27,7 @@
  
- SRCPATH = $(shell cd $(top_srcdir)/$(RELPATH) && pwd)
- ifeq ($(SRCPATH),$(CURPATH))
--srcdir = 
-+srcdir = $(CURPATH)/ 
- else
- srcdir = $(top_srcdir)/$(RELPATH)
- endif
-diff -Naurp elinks-0.11.0-orig/Makefile.config.in elinks-0.11.0-make/Makefile.config.in
---- elinks-0.11.0-orig/Makefile.config.in	2006-01-22 10:58:05.000000000 +0100
-+++ elinks-0.11.0-make/Makefile.config.in	2006-01-22 11:28:24.000000000 +0100
-@@ -16,7 +16,7 @@ top_srcdir = $(PATHPREFIX)@top_srcdir@
+ # $(builddir)/charset.alias: $(srcdir)/config.charset
+ $(builddir)/charset.alias: $(srcdir)config.charset
+-	$(SHELL) $(srcdir)/config.charset '$(host)' > $@.new
++	$(SHELL) $(srcdir)config.charset '$(host)' > $@.new
+ 	mv $@.new $@
  
- SRCPATH = $(shell cd $(top_srcdir)/$(RELPATH) && pwd)
- ifeq ($(SRCPATH),$(CURPATH))
--srcdir = 
-+srcdir = $(CURPATH)/
- else
- srcdir = $(top_srcdir)/$(RELPATH)
- endif
+ # FIXME: Building plural.c from plural.y on the fly doesn't work
