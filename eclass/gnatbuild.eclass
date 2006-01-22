@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.2 2006/01/18 00:32:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.3 2006/01/22 20:11:22 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -8,7 +8,7 @@
 
 inherit versionator toolchain-funcs flag-o-matic multilib
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install
+EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm src_unpack src_compile src_install
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -191,7 +191,9 @@ add_profile_eselect_conf() {
 
 
 create_eselect_conf() {
-	local config_dir="/etc/eselect/gnat"
+	# it would be good to source gnat.eselect module here too,
+	# but we only need one path
+	local config_dir="/usr/share/gnat/eselect"
 	local gnat_config_file="${D}/${config_dir}/${CTARGET}-${PN}-${SLOT}"
 	local abi
 
@@ -243,6 +245,32 @@ gnatbuild_pkg_setup() {
 
 gnatbuild_pkg_postinst() {
 	do_gnat_config
+}
+
+# eselect-gnat can be unmerged together with gnat-*, so we better do this before
+# actual removal takes place, rather than in postrm, like toolchain does
+gnatbuild_pkg_prerm() {
+	# files for eselect module are left behind, so we need to cleanup.
+	if [ ! -f /usr/share/eselect/modules/gnat.eselect ] ; then
+		eerror "eselect-gnat was prematurely unmerged!"
+		eerror "You will have to manually remove unnecessary files" 
+		eerror "under /etc/eselect/gnat and /etc/env.d/55gnat-xxx"
+		exit # should *not* die, as this will stop unmerge!
+	fi
+
+	# this copying/modifying and then sourcing of a gnat.eselect is a hack, 
+	# but having a duplicate functionality is really bad - gnat.eselect module
+	# might change..
+	cat /usr/share/eselect/modules/gnat.eselect | \
+		grep -v "svn_date_to_version" | \
+		grep -v "DESCRIPTION" \
+		> ${WORKDIR}/gnat.esel
+	. ${WORKDIR}/gnat.esel
+
+	# see if we need to unset gnat
+	if [[ $(get_current_gnat) == "${CTARGET}-${PN}-${SLOT}" ]] ; then
+		eselect gnat unset &> /dev/null
+	fi
 }
 #---->> pkg_* <<----
 
@@ -316,14 +344,15 @@ gnatbuild_src_compile() {
 	
 		export CC="${GNATBOOT}/bin/gnatgcc"
 		
-		local ADA_OBJECTS_PATH="${GNATLIB}/adalib"
-		local ADA_INCLUDE_PATH="${GNATLIB}/adainclude"
+		export ADA_OBJECTS_PATH="${GNATLIB}/adalib"
+		export ADA_INCLUDE_PATH="${GNATLIB}/adainclude"
+		export LDFLAGS="-L${GNATLIB}"
 
 #		if [ "2.8.1" == ${GCCVER} ]; then
 #			export BINUTILS_ROOT="${GNATBOOT}"
 #		fi
 
-#		einfo "CC=${CC},  ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH}"
+		#einfo "CC=${CC},  ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH},	LDFLAGS=${LDFLAGS}"
 
 		while [ "$1" ]; do
 		case $1 in
