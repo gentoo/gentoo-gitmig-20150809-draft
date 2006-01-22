@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.5 2005/12/09 20:36:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.6 2006/01/22 19:24:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,8 +16,14 @@ IUSE="videos"
 RESTRICT="nostrip"
 
 DEPEND="games-util/loki_patch"
-RDEPEND="virtual/x11
-	sys-libs/glibc
+RDEPEND="sys-libs/glibc
+	|| (
+		(
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXau
+			x11-libs/libXdmcp )
+		virtual/x11 )
 	sys-libs/lib-compat-loki
 	media-libs/libsdl
 	media-libs/sdl-ttf
