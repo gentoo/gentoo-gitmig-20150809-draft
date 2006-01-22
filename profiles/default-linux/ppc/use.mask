@@ -1,0 +1,3 @@
+# Luca Longinotti <chtekk@gentoo.org>
+# mask Oracle
+oci8
