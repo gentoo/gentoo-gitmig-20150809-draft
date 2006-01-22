@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.29 2006/01/20 01:20:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.30 2006/01/22 02:53:36 mr_bones_ Exp $
+
+  22 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  quake3-1.33_alpha510.ebuild:
+  support dedicated use flag more (bug #119874)
 
 *quake3-1.33_alpha510 (20 Jan 2006)
 

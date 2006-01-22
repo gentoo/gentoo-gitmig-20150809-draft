@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha510.ebuild,v 1.1 2006/01/20 01:20:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha510.ebuild,v 1.2 2006/01/22 02:53:36 mr_bones_ Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -8,7 +8,7 @@
 # quake3-VER           -> normal quake release
 
 if [[ ${PV} == 9999* ]] ; then
-	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999.}"
+	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
 	inherit subversion games toolchain-funcs
 
@@ -17,8 +17,8 @@ if [[ ${PV} == 9999* ]] ; then
 elif [[ ${PV} == *_alpha* ]] ; then
 	inherit games toolchain-funcs
 
-	MY_PV=${PV/_alpha*}
-	SNAP=${PV/*_alpha}
+	MY_PV=${PV/_alpha*/}
+	SNAP=${PV/*_alpha/}
 	MY_P=${PN}-${MY_PV}_SVN${SNAP}M
 	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 	S=${WORKDIR}/${MY_P}
@@ -86,14 +86,16 @@ src_install() {
 	cd code/unix
 	dodoc README.*
 
-	doicon quake3.xpm
-	make_desktop_entry quake3 "Quake III Arena" quake3.xpm
+	if use opengl ; then
+		doicon quake3.xpm
+		make_desktop_entry quake3 "Quake III Arena" quake3.xpm
+	fi
 
 	cd ../../build/release*
 	local old_x x
-	for old_x in ioquake3* ; do
+	for old_x in ioq* ; do
 		x=${old_x%.*}
-		newgamesbin ${old_x} ${x} || die "dobin ${x}"
+		newgamesbin ${old_x} ${x} || die "newgamesbin ${x}"
 		dosym ${x} "${GAMES_BINDIR}"/${x/io}
 	done
 	exeinto "${GAMES_LIBDIR}"/${PN}/baseq3
