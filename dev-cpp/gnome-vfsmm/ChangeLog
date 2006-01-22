@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.23 2006/01/22 20:36:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.24 2006/01/22 20:57:43 corsair Exp $
+
+  22 Jan 2006; Markus Rothe <corsair@gentoo.org> gnome-vfsmm-2.12.0.ebuild:
+  Stable on ppc64
 
   22 Jan 2006; <dang@gentoo.org> gnome-vfsmm-2.12.0.ebuild:
   Marked stable on amd64 per bug #119634
