@@ -3,5 +3,5 @@ MD5 0ed300488be87ed223f0356a3fc2d0bc files/digest-libstroke-0.4 65
 MD5 f326e3b555cd7ab918577090c330cc42 files/digest-libstroke-0.5.1 67
 MD5 442280d6a75b0d2f47a7435d6f6b5c64 files/libstroke-0.5.1-m4_syntax.patch 2203
 MD5 5372189e0a44253f6db3a2b21b122407 libstroke-0.4.ebuild 633
-MD5 03b6878627e6ab5075455aa73f040970 libstroke-0.5.1.ebuild 871
+MD5 a7a0fb3b842f1ae73055d2ab9d502c7e libstroke-0.5.1.ebuild 742
 MD5 a5c50833bcc05f696a75e5dc8bb9eb4d metadata.xml 225
