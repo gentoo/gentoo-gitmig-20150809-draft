@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.13 2006/01/22 19:59:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.14 2006/01/22 21:12:10 dertobi123 Exp $
+
+  22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  pycairo-1.0.2.ebuild:
+  Marked ppc stable for bug #119634; Stabilize Gnome-2.12.2
 
   22 Jan 2006; <dang@gentoo.org> pycairo-1.0.2.ebuild:
   Marked stable on amd64 per bug #119634
