@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r3.ebuild,v 1.7 2006/01/22 08:29:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.5.1-r3.ebuild,v 1.8 2006/01/22 09:09:19 corsair Exp $
 
 inherit eutils linux-info debug
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 sparc x86"
 IUSE="acpi debug doc pam_console pcmcia selinux"
 
 RDEPEND=">=dev-libs/glib-2.6
