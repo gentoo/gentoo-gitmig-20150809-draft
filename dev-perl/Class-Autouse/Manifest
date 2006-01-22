@@ -1,12 +1,24 @@
-MD5 121d704718bf0f6be3abb4b5efa4f63c ChangeLog 3520
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7729884613779f5bc0dceb1659c6f642 ChangeLog 3659
 MD5 6055806a0602a70dce9675fba861ac6f Class-Autouse-1.03.ebuild 576
 MD5 cf6ff674622fbe8352841ac0f8f734e4 Class-Autouse-1.12.ebuild 654
 MD5 9f5f59731f6399acae13ada0df7697bb Class-Autouse-1.17.ebuild 618
 MD5 a83b0eae71dbb69ae5c505f4dc6e379e Class-Autouse-1.21.ebuild 622
 MD5 73d468f5331bb56422a4b6b9455e93bb Class-Autouse-1.23.ebuild 633
+MD5 2ed0585ebfb8395fd3b9dd86ff33e745 Class-Autouse-1.24.ebuild 636
 MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
 MD5 c71169c7dcd7e74a58b7412569fe4dd2 files/digest-Class-Autouse-1.12 69
 MD5 42ac8b07b7aca4aa4b49d15d03b32853 files/digest-Class-Autouse-1.17 69
 MD5 31da9465e450d12c0ecb2076f0ddecd0 files/digest-Class-Autouse-1.21 69
 MD5 393d693ba3b5b3e37f3389b59fd570f2 files/digest-Class-Autouse-1.23 69
+MD5 3f5a8e1159a20db286d0d91339bab0b5 files/digest-Class-Autouse-1.24 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD0+TitG5z4I8BtQoRAm00AKCG/rrCTXtBIIogE2DZu+xqcXZwmACdEJIN
+eW9ZctsmROhzp0acrfM5M1U=
+=bD5f
+-----END PGP SIGNATURE-----
