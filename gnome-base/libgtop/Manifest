@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4f39185499eb2d7d7ae8297a1ce6a32a ChangeLog 12066
 MD5 b1a2be73a4e3ecb6d70da68624080ba9 files/1.0.13-remote_buffer_overflow.diff 543
 MD5 15330eddda755f3d7e434c1a2f45199a files/digest-libgtop-1.0.13-r2 67
@@ -17,12 +14,5 @@ MD5 016a0c95b0ac828509be96d45e9060e5 libgtop-2.10.0.ebuild 589
 MD5 6cb186574bc79b0bc3a1672a9a164049 libgtop-2.10.1.ebuild 735
 MD5 01869ea14c131afefa9cdbe453362066 libgtop-2.10.2.ebuild 638
 MD5 f5f4a3adb9913e1318ce2e8581e4901c libgtop-2.12.0.ebuild 743
-MD5 5700d6a10b92cede29455140614e1e3e libgtop-2.12.2.ebuild 738
+MD5 717242f504ed3a06144c6ebdc4219562 libgtop-2.12.2.ebuild 737
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0vlXSENan+PfizARAgxUAJ0X6+iEaF62Ll9/DXGDMgFWlUBGTgCgkFty
-gi/Xhs9XnP16z/1ku/cYreE=
-=h3FX
------END PGP SIGNATURE-----
