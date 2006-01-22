@@ -1,4 +1,4 @@
-MD5 e6a3686b779f0732f7f4085e08e00afc ChangeLog 4716
+MD5 13394d973a83ca04889587c502df0d82 ChangeLog 4715
 MD5 07e3f3f7982d29e2317f32f209e06573 files/applets-configure.in.in.diff 606
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kicker-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kicker-3.4.2 287
@@ -9,5 +9,5 @@ MD5 3f169df7532dad28d299bdb3c4683484 kicker-3.4.1.ebuild 680
 MD5 cc9e587f4748ebb5f8aadab99eba7b8f kicker-3.4.2.ebuild 693
 MD5 b20ed87b60ff2dc2058c88eedbe44fec kicker-3.4.3.ebuild 687
 MD5 58a288bde98bcac51adc6a1c355e83a4 kicker-3.5.0.ebuild 1215
-MD5 2fae2409e00af849dd27e6cbff5aea8d kicker-3.5.1.ebuild 953
+MD5 899d2ca57f611a02e71d62cb386a778f kicker-3.5.1.ebuild 952
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

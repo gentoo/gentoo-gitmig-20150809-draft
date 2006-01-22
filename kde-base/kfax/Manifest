@@ -1,4 +1,4 @@
-MD5 07dfbeb7efc34c5eeb360dc76655f2ca ChangeLog 4355
+MD5 d97a8615aced385f0f1ff6f4e033a6fd ChangeLog 4357
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kfax-3.4.1 221
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kfax-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kfax-3.5.0 71
@@ -6,5 +6,5 @@ MD5 caced8d9ad43d51ee9d60fa05a53ed52 files/digest-kfax-3.5.1 71
 MD5 ec9ed2c0766fbaf6ab10db80f58bbd2d kfax-3.4.1.ebuild 578
 MD5 7d7ed35501e24336e1a247fca0489b36 kfax-3.4.3.ebuild 581
 MD5 0830ffd678718d6eff110535c834d0cf kfax-3.5.0.ebuild 562
-MD5 0830ffd678718d6eff110535c834d0cf kfax-3.5.1.ebuild 562
+MD5 3e67d9eb3db66f6077249e799fec160c kfax-3.5.1.ebuild 564
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

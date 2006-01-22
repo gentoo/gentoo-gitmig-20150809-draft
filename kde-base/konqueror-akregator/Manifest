@@ -1,4 +1,4 @@
-MD5 abc025c475672e974b69ec310cc5a195 ChangeLog 4925
+MD5 476fda2c9ec94de2aee1a9b6da6c8285 ChangeLog 4926
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-konqueror-akregator-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-konqueror-akregator-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-konqueror-akregator-3.4.3 69
@@ -8,5 +8,5 @@ MD5 68b6c01cea68645753003becd3257d6c konqueror-akregator-3.4.1.ebuild 652
 MD5 5e9f31ba95c766a56e4e9800e874cb49 konqueror-akregator-3.4.2.ebuild 667
 MD5 d0553d7f11287bfcb5e1aa4421db0d95 konqueror-akregator-3.4.3.ebuild 661
 MD5 e3aef63cd70414adae0aa753510c014f konqueror-akregator-3.5.0.ebuild 666
-MD5 33e72d91c51e6b98e45ed0864e494243 konqueror-akregator-3.5.1.ebuild 668
+MD5 33e597c941525cfbcd1edb07d2f812c5 konqueror-akregator-3.5.1.ebuild 669
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

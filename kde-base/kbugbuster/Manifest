@@ -1,4 +1,4 @@
-MD5 5ead97d45dadc9bfc35333b8b439bbcd ChangeLog 3984
+MD5 33658cd44210ab957c05ab26fed5fcc4 ChangeLog 3986
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kbugbuster-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kbugbuster-3.4.2 280
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kbugbuster-3.4.3 66
@@ -8,5 +8,5 @@ MD5 f0185e15faeb197ecb66dc00f9562191 kbugbuster-3.4.1.ebuild 609
 MD5 d4446996a1eea24d28c40f0bef4c4e98 kbugbuster-3.4.2.ebuild 617
 MD5 8fde1993d0c1cf4b4c0eacccd327156d kbugbuster-3.4.3.ebuild 613
 MD5 2c2e54029fb9b8b12c5a5e5f2d093e48 kbugbuster-3.5.0.ebuild 557
-MD5 2c2e54029fb9b8b12c5a5e5f2d093e48 kbugbuster-3.5.1.ebuild 557
+MD5 8c3ccd7c4f5f4b1a8b5ae5e3967305be kbugbuster-3.5.1.ebuild 559
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

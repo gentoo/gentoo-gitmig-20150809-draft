@@ -1,4 +1,4 @@
-MD5 3520a4a01fe0dfc94ccd4c2fd0ed3a5f ChangeLog 5664
+MD5 f2f1b83780757f218d2e51ad5dbfb46f ChangeLog 5665
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-kappfinder-data-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kdemultimedia-kappfinder-data-3.4.2 308
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kdemultimedia-kappfinder-data-3.4.3 73
@@ -8,5 +8,5 @@ MD5 6e402e000c62ad3fef16218c1e414681 kdemultimedia-kappfinder-data-3.4.1.ebuild 
 MD5 ebc4bb57cd9cf8cb538eb3ea0917af03 kdemultimedia-kappfinder-data-3.4.2.ebuild 484
 MD5 9730189fd623e7554aebfc3eb2f5de4a kdemultimedia-kappfinder-data-3.4.3.ebuild 478
 MD5 08099d69959c84d573cfa03905bbb9d2 kdemultimedia-kappfinder-data-3.5.0.ebuild 485
-MD5 08099d69959c84d573cfa03905bbb9d2 kdemultimedia-kappfinder-data-3.5.1.ebuild 485
+MD5 be99001729ce8b2b16898d7939b8ebfd kdemultimedia-kappfinder-data-3.5.1.ebuild 486
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

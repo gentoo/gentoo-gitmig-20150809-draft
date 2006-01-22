@@ -1,4 +1,4 @@
-MD5 156b54e203286954bca5dff41a903db3 ChangeLog 3953
+MD5 8ceadeeef0343cf0dcbf110d3fd3d0ea ChangeLog 3954
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kbruch-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kbruch-3.4.2 282
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kbruch-3.5.0 67
@@ -6,5 +6,5 @@ MD5 f189373524a470a1665a94fe8ba1f935 files/digest-kbruch-3.5.1 67
 MD5 4d7c8098d79608b38f85a521aef44aa1 kbruch-3.4.1.ebuild 411
 MD5 5f198d152be9b71dc2f6795f24d1eae8 kbruch-3.4.2.ebuild 420
 MD5 988272ca01f56821770514acd9a09564 kbruch-3.5.0.ebuild 425
-MD5 988272ca01f56821770514acd9a09564 kbruch-3.5.1.ebuild 425
+MD5 5dc901b4c21bd448ed7fb6fcf9a6cb6f kbruch-3.5.1.ebuild 426
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 c9c46c52e30084ac629de5468bdeb5e4 ChangeLog 4126
+MD5 992d96c3ed888a837c053a75114b5538 ChangeLog 4127
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kcron-3.4.1 211
 MD5 80b3c1753e84c4d6d9caf0502325b7b4 files/digest-kcron-3.4.3 68
 MD5 5e640d90c8921056fae9b3ca328a8093 files/digest-kcron-3.5.0 68
@@ -6,5 +6,5 @@ MD5 223a891a18c8ca71d7a7fb46a382f708 files/digest-kcron-3.5.1 68
 MD5 7d070e7472fea8fbc31dc4bc4a7db226 kcron-3.4.1.ebuild 391
 MD5 581bf36569de23530f0d98d1e19c65c9 kcron-3.4.3.ebuild 410
 MD5 7f2f79aa1c808432d32e7b8e009b123c kcron-3.5.0.ebuild 417
-MD5 7f2f79aa1c808432d32e7b8e009b123c kcron-3.5.1.ebuild 417
+MD5 304725770237198707c628eb161b6a8e kcron-3.5.1.ebuild 418
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

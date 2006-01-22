@@ -1,4 +1,4 @@
-MD5 3f5bead4bff8f9edc6d18ca2cbe509f6 ChangeLog 4341
+MD5 db13fbf47ac950e6a14967ef65ef6c2e ChangeLog 4342
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpoker-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpoker-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpoker-3.4.3 68
@@ -8,5 +8,5 @@ MD5 9049dbbf96296bf83c76c2df1b7824fe kpoker-3.4.1.ebuild 528
 MD5 d84b74f740fcfd74b8b9ffaf21d57ba1 kpoker-3.4.2.ebuild 541
 MD5 b02d9458bc74ea9e5f564ee640ed8a17 kpoker-3.4.3.ebuild 535
 MD5 640de76328365812635d02e32916294d kpoker-3.5.0.ebuild 503
-MD5 640de76328365812635d02e32916294d kpoker-3.5.1.ebuild 503
+MD5 f5def28d752e0c6b85f7fc0a3a1129e1 kpoker-3.5.1.ebuild 504
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

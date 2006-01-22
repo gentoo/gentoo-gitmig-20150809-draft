@@ -1,4 +1,4 @@
-MD5 484f55348adc538db50daf6e90a24bed ChangeLog 6499
+MD5 e6ff3ea33d964fc6976ae9172b81f79e ChangeLog 6498
 MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1-r1 212
@@ -15,5 +15,5 @@ MD5 ac9c4ad066ae48aaee618b7f297f1768 kcontrol-3.4.2-r1.ebuild 1916
 MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
 MD5 ea2e76e8a64aa4ce995d6e1de2d17af4 kcontrol-3.4.3.ebuild 1773
 MD5 56b9e8593291ac1f0589fe24b73e0892 kcontrol-3.5.0.ebuild 1903
-MD5 5a4e7c392a240bba75318137b94c29a0 kcontrol-3.5.1.ebuild 1700
+MD5 f9c0cfc59003f26a6b3ec29f9ddef85b kcontrol-3.5.1.ebuild 1699
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

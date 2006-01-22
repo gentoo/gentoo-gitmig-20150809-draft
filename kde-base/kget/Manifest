@@ -1,4 +1,4 @@
-MD5 3a8d2ccaac1dffa860bdb05f92143439 ChangeLog 4267
+MD5 93f5e5be2b65f1d478d19e29d4ca3f05 ChangeLog 4268
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kget-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-kget-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kget-3.4.3 70
@@ -8,5 +8,5 @@ MD5 49f5f21c49d28bf8ac99daf2bb59d575 kget-3.4.1.ebuild 395
 MD5 724b80e184d58c3f2699784b38ffd257 kget-3.4.2.ebuild 408
 MD5 45049669e236db7f4c32c2a2e7523c98 kget-3.4.3.ebuild 402
 MD5 78991ea7af4556245e938f437581e1f7 kget-3.5.0.ebuild 409
-MD5 78991ea7af4556245e938f437581e1f7 kget-3.5.1.ebuild 409
+MD5 ee946c4ea6dff427dc4ec81b85a2fc5b kget-3.5.1.ebuild 410
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 a2a4dabf99a59f62842aa9a583b2f07f ChangeLog 4708
+MD5 020f9ff5b587ab41632d4821796bc1f5 ChangeLog 4709
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-krec-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-krec-3.4.2 308
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-krec-3.4.3 73
@@ -8,5 +8,5 @@ MD5 3c4bdf7d457e879c9d19df3be0d0d0c3 krec-3.4.1.ebuild 1137
 MD5 d1bb5c295eb347f6d44fd764b2cb9069 krec-3.4.2.ebuild 1152
 MD5 d9c8498f14125416bafafba2dd8d9672 krec-3.4.3.ebuild 1146
 MD5 bed85178ff5e270ce66a20adf0e6b6e3 krec-3.5.0.ebuild 905
-MD5 bed85178ff5e270ce66a20adf0e6b6e3 krec-3.5.1.ebuild 905
+MD5 0c0765cd397bc10bc4f13803292da545 krec-3.5.1.ebuild 906
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

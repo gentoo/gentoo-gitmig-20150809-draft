@@ -1,4 +1,4 @@
-MD5 9ecc46973b6a9394ae5f91c88bef1641 ChangeLog 4631
+MD5 277d560c6bd669f0f1d67180e7705830 ChangeLog 4632
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1 208
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1-r1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kweather-3.4.2 282
@@ -11,5 +11,5 @@ MD5 ded899b7f4c97daf259ac5ab7f26eed7 kweather-3.4.1.ebuild 400
 MD5 41146ed745d8b48aa9e9d7f77557d3bc kweather-3.4.2.ebuild 406
 MD5 954b6691f4ec660567b886d86c0c2291 kweather-3.4.3.ebuild 400
 MD5 ec9bc833ccd9acc99708f68f8d1d0bab kweather-3.5.0.ebuild 407
-MD5 ec9bc833ccd9acc99708f68f8d1d0bab kweather-3.5.1.ebuild 407
+MD5 1353b4e419b1bc0ff43089438e7f3615 kweather-3.5.1.ebuild 408
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

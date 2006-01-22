@@ -1,4 +1,4 @@
-MD5 6cfff079d2e1b9c41d31e972751ed23f ChangeLog 4428
+MD5 3b55bea5e91a50371ae2ee172ff93c06 ChangeLog 4426
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-korundum-3.3.2-r1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-korundum-3.4.1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-korundum-3.4.2 300
@@ -12,5 +12,5 @@ MD5 3d3324748c4a3ed4495e9ad9d765a81a korundum-3.4.1.ebuild 1101
 MD5 8d4896027e14644e52a9743af9a123e4 korundum-3.4.2.ebuild 1107
 MD5 fc4142300e5a34db361900b0c20c9b5f korundum-3.4.3.ebuild 1106
 MD5 9e83b55d60cd382ce93aaa76b19f1515 korundum-3.5.0-r1.ebuild 1139
-MD5 26bb4c963ca4f20932e4a5c2a4d96b3d korundum-3.5.1.ebuild 1144
+MD5 5459b5869302057086ce74f6df82ed34 korundum-3.5.1.ebuild 1143
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

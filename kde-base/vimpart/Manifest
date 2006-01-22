@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b863e8bf3008271f07dd9b3d2071e57 ChangeLog 3071
-MD5 74c652e19ac74ee8a1189ca4c79aa401 vimpart-3.4.1.ebuild 574
-MD5 0be09a1f962c7eae38531237fc77e6f4 vimpart-3.4.2.ebuild 584
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 8a3fc46ae788e0908f403d758d0d6f21 ChangeLog 3245
+MD5 60c005ebe876a0e127dcf1083620803e files/digest-vimpart-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-vimpart-3.4.2 291
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
-MD5 60c005ebe876a0e127dcf1083620803e files/digest-vimpart-3.4.1 215
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm2zeugEuf3OQ0akRAu1hAJ4/Id87rBLrMzc85RWXFnVioCpiogCdFgEJ
-EekYrP6fX898Eyy4vBWxuMU=
-=oss2
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 74c652e19ac74ee8a1189ca4c79aa401 vimpart-3.4.1.ebuild 574
+MD5 0be09a1f962c7eae38531237fc77e6f4 vimpart-3.4.2.ebuild 584

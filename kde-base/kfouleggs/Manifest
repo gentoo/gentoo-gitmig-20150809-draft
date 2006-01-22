@@ -1,4 +1,4 @@
-MD5 d43d2d5c691fc31ed6aba5f0e0578a28 ChangeLog 4515
+MD5 3f33780c7781e6c9f9760429967b0efd ChangeLog 4516
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kfouleggs-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kfouleggs-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kfouleggs-3.4.3 68
@@ -8,5 +8,5 @@ MD5 76655851bc58e2362c923a77891742ea kfouleggs-3.4.1.ebuild 703
 MD5 284d5146795cda90a5326e29452d914d kfouleggs-3.4.2.ebuild 716
 MD5 6e91141432ddf1a13b1ffa45b30f24b9 kfouleggs-3.4.3.ebuild 710
 MD5 33e34c687bba89e2e2166101c0231df1 kfouleggs-3.5.0.ebuild 655
-MD5 33e34c687bba89e2e2166101c0231df1 kfouleggs-3.5.1.ebuild 655
+MD5 6a5e821e462e59053f41c381f7938725 kfouleggs-3.5.1.ebuild 656
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

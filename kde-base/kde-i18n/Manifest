@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d59182ebef4f40d4f6c468c4a06a0def ChangeLog 10014
+MD5 12223e48c0f42e16f1a0f1073957e7cf ChangeLog 10190
 MD5 be2b24a376f130383c134228731eea5b files/digest-kde-i18n-3.3.2 3714
 MD5 19f50dd0a35e4946b903767ee0781d05 files/digest-kde-i18n-3.4.1 3567
 MD5 868980d85a65572dbd8fccdbc95a9e52 files/digest-kde-i18n-3.4.2 3638
@@ -14,10 +11,3 @@ MD5 0e7f0dd7b167205b5ba69e9a72f52744 kde-i18n-3.4.2.ebuild 1686
 MD5 b3e722caab7b20755e33891de7d8921a kde-i18n-3.4.3.ebuild 1499
 MD5 2e85eb61b6ec3fa497f5e91189065d44 kde-i18n-3.5.0.ebuild 1651
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsBEzugEuf3OQ0akRAkdhAJ9JRB3aIHA136Fo5sIaJVp3rP2P7wCgkkB6
-LjpbVI1xQW/+QwxPitVK93s=
-=ljp8
------END PGP SIGNATURE-----

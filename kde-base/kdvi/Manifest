@@ -1,4 +1,4 @@
-MD5 28a88447b3936357a0a1c9099e929432 ChangeLog 4367
+MD5 9da7cfa1d718b67a81da453253a6f044 ChangeLog 4368
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdvi-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kdvi-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdvi-3.4.3 71
@@ -9,5 +9,5 @@ MD5 0a3f067dd1b66b620c60400b05c86006 kdvi-3.4.1.ebuild 637
 MD5 6e5fdcba7f99d0ab4d661e2d0649816f kdvi-3.4.2.ebuild 703
 MD5 bd15e7b363a79eef66016a1ffce7243d kdvi-3.4.3.ebuild 644
 MD5 49ea724fc164ac9e054595d16bf162e1 kdvi-3.5.0.ebuild 615
-MD5 49ea724fc164ac9e054595d16bf162e1 kdvi-3.5.1.ebuild 615
+MD5 9c1682d86230a554686ad928331427e5 kdvi-3.5.1.ebuild 616
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

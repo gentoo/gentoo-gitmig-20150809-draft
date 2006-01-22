@@ -1,4 +1,4 @@
-MD5 fb84a4947565765c8f81bb3ab7b79b0a ChangeLog 3847
+MD5 4a128bbb5723f1272dd14bb235fb485d ChangeLog 3848
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-ktux-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-ktux-3.4.2 282
 MD5 fc43cf1b5d793f48d2131d421d051d95 files/digest-ktux-3.5.0 67
@@ -6,5 +6,5 @@ MD5 a68df6eb11c6d1e6f0fbff6676b5fd82 files/digest-ktux-3.5.1 67
 MD5 774e93586bf6c1bf70939025191581ef ktux-3.4.1.ebuild 405
 MD5 96c3bf181a3a639689a6d02b3dd277cf ktux-3.4.2.ebuild 415
 MD5 01afbc8456bc066e606c654ebb1651ef ktux-3.5.0.ebuild 419
-MD5 01afbc8456bc066e606c654ebb1651ef ktux-3.5.1.ebuild 419
+MD5 6f0d781fcb1ca8e739358d5c32b443d9 ktux-3.5.1.ebuild 420
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

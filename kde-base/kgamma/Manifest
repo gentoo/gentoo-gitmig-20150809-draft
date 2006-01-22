@@ -1,4 +1,4 @@
-MD5 6ea68149dcab227c9f2301c32dbb2c40 ChangeLog 4222
+MD5 fd9942f5d9ebd8d7d6e56f26561accad ChangeLog 4223
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kgamma-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kgamma-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kgamma-3.4.3 71
@@ -8,5 +8,5 @@ MD5 91b30754f620ffbdb6f6832caa934459 kgamma-3.4.1.ebuild 403
 MD5 6c4f1ee8ac0071db4bf3cb33b4060bab kgamma-3.4.2.ebuild 416
 MD5 8ec8ddc7aceec511297d5e18f6e4e33e kgamma-3.4.3.ebuild 410
 MD5 7c1e47e8d035278f017a6516afc549b6 kgamma-3.5.0.ebuild 417
-MD5 7c1e47e8d035278f017a6516afc549b6 kgamma-3.5.1.ebuild 417
+MD5 4fb2458510bc20456d4f85cd84eb2143 kgamma-3.5.1.ebuild 418
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

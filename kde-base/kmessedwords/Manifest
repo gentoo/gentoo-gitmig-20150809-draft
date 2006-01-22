@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f2649520260b9442563b5468af8f0c1 ChangeLog 3411
-MD5 7b8180d30edebb255d685ac987ca09e6 kmessedwords-3.4.2.ebuild 405
-MD5 2d357c2a7915df58a3b456c06f6e1b9c kmessedwords-3.4.1.ebuild 396
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 58276583f9ff7b54f880cdb177e9a897 ChangeLog 3595
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kmessedwords-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kmessedwords-3.4.2 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDm0BOugEuf3OQ0akRAmr9AKCTzJR0ORdehSrgNBWxnZh6b/uckwCfYHY3
-hFO7p6LLsa+jfFKe8d5udco=
-=vBHL
------END PGP SIGNATURE-----
+MD5 2d357c2a7915df58a3b456c06f6e1b9c kmessedwords-3.4.1.ebuild 396
+MD5 7b8180d30edebb255d685ac987ca09e6 kmessedwords-3.4.2.ebuild 405
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

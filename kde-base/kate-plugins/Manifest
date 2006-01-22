@@ -1,4 +1,4 @@
-MD5 4bcf90b7795a29a8e3697b681256da55 ChangeLog 4864
+MD5 37f50368c25a1cbbf93e096a4b2631b1 ChangeLog 4865
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kate-plugins-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-kate-plugins-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kate-plugins-3.4.3 69
@@ -8,5 +8,5 @@ MD5 ee742e534fe545c6250e9bfcca863ff1 kate-plugins-3.4.1.ebuild 499
 MD5 d717083a99ee39a5a324d9d9a5b91f5d kate-plugins-3.4.2.ebuild 512
 MD5 169405dbbc2475ee85dcf9e66305e341 kate-plugins-3.4.3.ebuild 506
 MD5 f96065c80ae4ca24679525fcc0a9c665 kate-plugins-3.5.0.ebuild 483
-MD5 f96065c80ae4ca24679525fcc0a9c665 kate-plugins-3.5.1.ebuild 483
+MD5 2fd17f620e55c26c255ffafbcb7190b4 kate-plugins-3.5.1.ebuild 484
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

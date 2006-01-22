@@ -1,4 +1,4 @@
-MD5 ee971a014451673eaed10bde35e9a02c ChangeLog 4444
+MD5 f12dd191f766f7ce5a9ce7333aa54ead ChangeLog 4445
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kcalc-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kcalc-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kcalc-3.4.3 68
@@ -8,5 +8,5 @@ MD5 4f951674a5ce6584753cb2b966ec4c62 kcalc-3.4.1.ebuild 372
 MD5 be903c0bf1f70dd069c4057bc9c67666 kcalc-3.4.2.ebuild 385
 MD5 7344b236752b099065e7f534b969b5e9 kcalc-3.4.3.ebuild 380
 MD5 10f0efdc5e4d6a010000f94cdcf73d79 kcalc-3.5.0.ebuild 411
-MD5 10f0efdc5e4d6a010000f94cdcf73d79 kcalc-3.5.1.ebuild 411
+MD5 4bf4e1f940150e75ae71c636fbadaeda kcalc-3.5.1.ebuild 412
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

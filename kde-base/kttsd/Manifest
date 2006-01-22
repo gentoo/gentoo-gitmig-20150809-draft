@@ -1,4 +1,4 @@
-MD5 75a2fad149f672d4d21b3060f08fb3cb ChangeLog 4401
+MD5 fd8ba8aca1cca02151057ce75e517b8e ChangeLog 4402
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kttsd-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kttsd-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kttsd-3.4.3 76
@@ -9,5 +9,5 @@ MD5 f5b30301365e185400b1f67197085a6c kttsd-3.4.1.ebuild 1162
 MD5 f9bf1c79cab41eacc7c9f4f62c587b25 kttsd-3.4.2.ebuild 1181
 MD5 5b61cdf30ac54bab155d030aff90a16d kttsd-3.4.3.ebuild 1174
 MD5 ecaf329e32887637e08f8acd0b96b9cb kttsd-3.5.0.ebuild 921
-MD5 ecaf329e32887637e08f8acd0b96b9cb kttsd-3.5.1.ebuild 921
+MD5 bd7a8fa0382dad03d1f79bfa0bff2ebb kttsd-3.5.1.ebuild 922
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

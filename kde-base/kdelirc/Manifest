@@ -1,4 +1,4 @@
-MD5 0f684dcb2ef54daf9f9ef7c65a1a5042 ChangeLog 4269
+MD5 48c2bd03e93f8a380841adbf3e8ad5ad ChangeLog 4270
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kdelirc-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kdelirc-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdelirc-3.4.3 68
@@ -8,5 +8,5 @@ MD5 2f2c5c0c1a314b617e60231562a52f56 kdelirc-3.4.1.ebuild 421
 MD5 c880fc5ac6a88e2f1fe2666873815952 kdelirc-3.4.2.ebuild 433
 MD5 9ab7940793e38aa88f68ab23d10f69cf kdelirc-3.4.3.ebuild 428
 MD5 e4bc82f168e3ca9ea2e865cefc549f1c kdelirc-3.5.0.ebuild 434
-MD5 e4bc82f168e3ca9ea2e865cefc549f1c kdelirc-3.5.1.ebuild 434
+MD5 a237219075e1ab159001445efeb437f2 kdelirc-3.5.1.ebuild 435
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

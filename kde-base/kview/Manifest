@@ -1,4 +1,4 @@
-MD5 3f360572d1b5db839e5d716a5c6e4ec9 ChangeLog 4294
+MD5 982a96d952b72d0d926f1cb8a1296010 ChangeLog 4295
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kview-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kview-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kview-3.4.3 71
@@ -8,5 +8,5 @@ MD5 ac6678af014cece07fc8d1b3945a907f kview-3.4.1.ebuild 376
 MD5 ecd242e68ddcf6d213b5a0e399afba03 kview-3.4.2.ebuild 389
 MD5 d8feca1fa3a02becbc13f39f60f0d6d9 kview-3.4.3.ebuild 384
 MD5 44d2740be7b12666a074c62c7ebe0af3 kview-3.5.0.ebuild 390
-MD5 44d2740be7b12666a074c62c7ebe0af3 kview-3.5.1.ebuild 390
+MD5 ac9cde0e99f31ad27e391485649b592d kview-3.5.1.ebuild 391
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

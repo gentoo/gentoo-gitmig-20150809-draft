@@ -1,4 +1,4 @@
-MD5 e0e60ca79aa3f9de39631fa3952c3ada ChangeLog 4663
+MD5 b9564ff3feafcceb0d710761e03c4754 ChangeLog 4664
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpersonalizer-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpersonalizer-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kpersonalizer-3.4.3 68
@@ -8,5 +8,5 @@ MD5 8813ba5f121b35e19fe79572207ef851 kpersonalizer-3.4.1.ebuild 401
 MD5 a91c6e82ca3cea74a65b1c0a554a49d9 kpersonalizer-3.4.2.ebuild 414
 MD5 4fe1cb4fd55d9288d58959e8b0c7357b kpersonalizer-3.4.3.ebuild 408
 MD5 70d9d17e9a12fbd2c450605de3a5cee7 kpersonalizer-3.5.0.ebuild 439
-MD5 70d9d17e9a12fbd2c450605de3a5cee7 kpersonalizer-3.5.1.ebuild 439
+MD5 3549c92e5aa4fb225571c113c34043e1 kpersonalizer-3.5.1.ebuild 440
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

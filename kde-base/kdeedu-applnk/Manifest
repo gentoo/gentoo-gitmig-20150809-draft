@@ -1,4 +1,4 @@
-MD5 5b59f9e5914ab61d3de7efb9da1dec20 ChangeLog 4417
+MD5 7a8de4a7b51de0aa0dcc4f4b11c48e4e ChangeLog 4418
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kdeedu-applnk-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kdeedu-applnk-3.4.2 282
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-kdeedu-applnk-3.5.0 67
@@ -6,5 +6,5 @@ MD5 f189373524a470a1665a94fe8ba1f935 files/digest-kdeedu-applnk-3.5.1 67
 MD5 a893b67057bb2913fd7c68473079e8dc kdeedu-applnk-3.4.1.ebuild 428
 MD5 f185c2a238f173f389e9ed3f09f38d03 kdeedu-applnk-3.4.2.ebuild 437
 MD5 595291c3ce63b78ee4fcaf6aa3946acb kdeedu-applnk-3.5.0.ebuild 442
-MD5 595291c3ce63b78ee4fcaf6aa3946acb kdeedu-applnk-3.5.1.ebuild 442
+MD5 ae2e9ffd97968f1cc1baf6fce91ef6b0 kdeedu-applnk-3.5.1.ebuild 443
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

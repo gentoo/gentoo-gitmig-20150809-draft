@@ -1,4 +1,4 @@
-MD5 31c8d37544b5713c7b0b725811a64fdb ChangeLog 4964
+MD5 111fe803efc208b4013afc52780cf326 ChangeLog 4965
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.3 0
@@ -8,5 +8,5 @@ MD5 fe6afb4316caa27b96c4573484e9b23f kdeutils-meta-3.4.1.ebuild 1212
 MD5 c8c516fb64409e74c2eb12f2386dd79c kdeutils-meta-3.4.2.ebuild 1235
 MD5 81d8e95cb777c35dd492852b1a61d736 kdeutils-meta-3.4.3.ebuild 1227
 MD5 ab6389e12b137015e32a2e7cd25c9a50 kdeutils-meta-3.5.0.ebuild 1276
-MD5 ab6389e12b137015e32a2e7cd25c9a50 kdeutils-meta-3.5.1.ebuild 1276
+MD5 e0d8262b75cd2849d28d26cfbf1e47c0 kdeutils-meta-3.5.1.ebuild 1277
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

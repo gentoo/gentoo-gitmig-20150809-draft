@@ -1,4 +1,4 @@
-MD5 ef70df1b0efba5b10f1acd7a5ba64eb0 ChangeLog 4174
+MD5 7aef9800434cb182790046636cc97492 ChangeLog 4175
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kdf-3.4.1 212
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdf-3.4.3 68
 MD5 61427700c31d5d6a145005b5945e00e5 files/digest-kdf-3.5.0 68
@@ -6,5 +6,5 @@ MD5 34b52102c89fb28f61eafe4d7560ef7a files/digest-kdf-3.5.1 68
 MD5 f007e558c29a0839c7f7a52bc77fc9a3 kdf-3.4.1.ebuild 392
 MD5 444e7685401a98fb8659c8907ad4a35c kdf-3.4.3.ebuild 389
 MD5 655560edae06ce648c2241abc6c6f474 kdf-3.5.0.ebuild 395
-MD5 655560edae06ce648c2241abc6c6f474 kdf-3.5.1.ebuild 395
+MD5 42c58aa31036273632b8c451bba279ea kdf-3.5.1.ebuild 396
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

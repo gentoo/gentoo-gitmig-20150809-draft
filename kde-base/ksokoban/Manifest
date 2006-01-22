@@ -1,4 +1,4 @@
-MD5 1f197d4ae5cfb6bd352b10d0ad8f3353 ChangeLog 4461
+MD5 6e79072a2711c6a0eb0efbb90d79c1f5 ChangeLog 4462
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksokoban-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksokoban-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksokoban-3.4.3 68
@@ -8,5 +8,5 @@ MD5 1ba6e4b8955f6531be68ac85460f4a76 ksokoban-3.4.1.ebuild 549
 MD5 976a8d361928453f731aeace546ca282 ksokoban-3.4.2.ebuild 562
 MD5 edeb6bc409a7e7a541d31d351099c16e ksokoban-3.4.3.ebuild 556
 MD5 8dbc066b1f35609cf50037b12677ddf4 ksokoban-3.5.0.ebuild 526
-MD5 8dbc066b1f35609cf50037b12677ddf4 ksokoban-3.5.1.ebuild 526
+MD5 d8a460bc337872f2aed0814d6853d02a ksokoban-3.5.1.ebuild 527
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 846092ad2587d401af03f61bdf13d05f ChangeLog 4246
+MD5 de9fec8e7c8dc7f7eae56a4ca19de028 ChangeLog 4247
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kwifimanager-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-kwifimanager-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kwifimanager-3.4.3 70
@@ -9,5 +9,5 @@ MD5 be6641f0ea4623cf43ebc5e05038d5e3 kwifimanager-3.4.1.ebuild 555
 MD5 57e7e35f19d9e6b9da2a87718504b127 kwifimanager-3.4.2.ebuild 487
 MD5 6c17fd8f2ab4449eeb6463d8c67b0b34 kwifimanager-3.4.3.ebuild 484
 MD5 71bb7cd47eb7d185714c63dbbcc8ce12 kwifimanager-3.5.0.ebuild 485
-MD5 71bb7cd47eb7d185714c63dbbcc8ce12 kwifimanager-3.5.1.ebuild 485
+MD5 4a3a581e77a7f01be80195bb36fb4f85 kwifimanager-3.5.1.ebuild 486
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

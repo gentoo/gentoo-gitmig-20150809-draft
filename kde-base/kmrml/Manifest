@@ -1,4 +1,4 @@
-MD5 cced3d459847ec1b22ed844c14b724b5 ChangeLog 4049
+MD5 fc4392187b0e59fb84a97d60a9b796cf ChangeLog 4050
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kmrml-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kmrml-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kmrml-3.4.3 71
@@ -8,5 +8,5 @@ MD5 6b3549223a1b6d11f2f46b5dc8179059 kmrml-3.4.1.ebuild 423
 MD5 52290ba8c3f1af8d628ca8381427bc33 kmrml-3.4.2.ebuild 436
 MD5 825407299cb10ce0836095ad204c26d9 kmrml-3.4.3.ebuild 431
 MD5 0e933f9b8c655115e5ef49c488c910dc kmrml-3.5.0.ebuild 437
-MD5 0e933f9b8c655115e5ef49c488c910dc kmrml-3.5.1.ebuild 437
+MD5 97ddcdb2eb2e412e54933fe771005262 kmrml-3.5.1.ebuild 438
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

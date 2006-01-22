@@ -1,4 +1,4 @@
-MD5 0f9dd3be1be3ecdf4bbea5d102dbf972 ChangeLog 4294
+MD5 c19d78d7aa003139407ca73df0fd6880 ChangeLog 4295
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-lskat-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-lskat-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-lskat-3.4.3 68
@@ -8,5 +8,5 @@ MD5 6ea8165c40aba6b4855bbf80074b49f0 lskat-3.4.1.ebuild 522
 MD5 7f8aff6a39412ead1516c8725486c435 lskat-3.4.2.ebuild 535
 MD5 d2c6598889c2bdc2c64101742ff3df43 lskat-3.4.3.ebuild 529
 MD5 dde55c3b20fbe740d1ea7a0602829b77 lskat-3.5.0.ebuild 499
-MD5 dde55c3b20fbe740d1ea7a0602829b77 lskat-3.5.1.ebuild 499
+MD5 d5d49d0651b85041c151067818874308 lskat-3.5.1.ebuild 500
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

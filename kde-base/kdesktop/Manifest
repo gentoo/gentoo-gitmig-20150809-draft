@@ -1,4 +1,4 @@
-MD5 1819eaa02cac00f2a61608160c8e756f ChangeLog 5199
+MD5 1386d307c6f5d23fba600dc22ee9610f ChangeLog 5198
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdesktop-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdesktop-3.4.3 68
@@ -8,5 +8,5 @@ MD5 ffb8567a9ab217b33273996584a848f5 kdesktop-3.4.1.ebuild 1355
 MD5 72704bb9b1063c9447f0101cb11d95b5 kdesktop-3.4.2.ebuild 1370
 MD5 de979b633e1249d35a977c4e3b3000c5 kdesktop-3.4.3.ebuild 1364
 MD5 e83d1886055d170d849bd1c5995dde92 kdesktop-3.5.0.ebuild 1703
-MD5 f225b28d7f7218638b2389fee2d2df5e kdesktop-3.5.1.ebuild 1501
+MD5 d274079b5bc2de9c1cd30118e3506b84 kdesktop-3.5.1.ebuild 1500
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 efa867c1fe9603c7deecdf2ac1c2349f ChangeLog 4251
+MD5 320a9fc902e788e523ef5611262f1a0c ChangeLog 4252
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdnssd-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-kdnssd-3.4.2 296
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdnssd-3.5.0 70
@@ -6,5 +6,5 @@ MD5 4747b54355e84108037b9fd2986a8f87 files/digest-kdnssd-3.5.1 70
 MD5 b347b6571ea46568938d0742ca46e5c8 kdnssd-3.4.1.ebuild 439
 MD5 f06e177c80db5cb8af4877966827bae4 kdnssd-3.4.2.ebuild 448
 MD5 61292e1ec5614bb1f3c4dfba3c4d43d0 kdnssd-3.5.0.ebuild 453
-MD5 61292e1ec5614bb1f3c4dfba3c4d43d0 kdnssd-3.5.1.ebuild 453
+MD5 c9ccc8509effb88962516218e165bd78 kdnssd-3.5.1.ebuild 454
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

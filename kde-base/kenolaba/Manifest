@@ -1,4 +1,4 @@
-MD5 d1d276d9c3cfd6645a3f8d90148587fc ChangeLog 4461
+MD5 1e515938b6fb130eaa3be57781f60d84 ChangeLog 4462
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kenolaba-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kenolaba-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kenolaba-3.4.3 68
@@ -8,5 +8,5 @@ MD5 73a2e72b10109c770a98c5ef32b52357 kenolaba-3.4.1.ebuild 550
 MD5 33c5a113e81f4401958371eae7790db0 kenolaba-3.4.2.ebuild 563
 MD5 74a9b7fe4e458ac548f5da74fa40d84d kenolaba-3.4.3.ebuild 557
 MD5 d34bc668b3625b9646d93cfd0036a0fd kenolaba-3.5.0.ebuild 527
-MD5 d34bc668b3625b9646d93cfd0036a0fd kenolaba-3.5.1.ebuild 527
+MD5 bd9b35c2e403867ae7f25398a93884ab kenolaba-3.5.1.ebuild 528
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

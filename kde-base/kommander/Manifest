@@ -1,4 +1,4 @@
-MD5 fc0c05964f95e3cbed619ea79cc94756 ChangeLog 5217
+MD5 4713873f24d1a6d0bee716bd4e6093e5 ChangeLog 5218
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kommander-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kommander-3.4.2 292
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kommander-3.4.3 69
@@ -9,5 +9,5 @@ MD5 d7ed5766cdc1be112c8f526f7876745f kommander-3.4.1.ebuild 402
 MD5 d10c382abf550bc82b53bf6b9821ecf4 kommander-3.4.2.ebuild 415
 MD5 f2d4ad1aa08bb299a1560ac724036c10 kommander-3.4.3.ebuild 409
 MD5 f1a041ee936561177b32d99f5b0b5646 kommander-3.5.0.ebuild 416
-MD5 f1a041ee936561177b32d99f5b0b5646 kommander-3.5.1.ebuild 416
+MD5 b723da7bfcb72a3464e07b3ea22820db kommander-3.5.1.ebuild 417
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

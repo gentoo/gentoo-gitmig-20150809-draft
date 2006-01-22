@@ -1,4 +1,4 @@
-MD5 0847d2c4891a6409d66ec10c0326b091 ChangeLog 5103
+MD5 22d9174e6f16d186286044a18cce4eb1 ChangeLog 5102
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kxkb-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kxkb-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kxkb-3.4.3 68
@@ -8,5 +8,5 @@ MD5 421bfb1b3a38ff0fa7428dca89981ff3 kxkb-3.4.1.ebuild 399
 MD5 fba2ac6062d3c7e87e6c3762ee19c245 kxkb-3.4.2.ebuild 412
 MD5 6bb9bb872499703635e47ca53c1b4981 kxkb-3.4.3.ebuild 406
 MD5 d0864f4c15353d727b87e1a21ca3e077 kxkb-3.5.0.ebuild 707
-MD5 d8282bd058cd61d04a11e8476def7fb0 kxkb-3.5.1.ebuild 503
+MD5 201d512ececea0b9c91100a1f3390a00 kxkb-3.5.1.ebuild 502
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

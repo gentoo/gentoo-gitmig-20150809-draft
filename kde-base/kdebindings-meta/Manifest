@@ -1,4 +1,4 @@
-MD5 68d594fb08ef78b18fbbf50640436945 ChangeLog 4737
+MD5 c50877baad1e7a95985f4d9d9d81d12e ChangeLog 4735
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.3.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.2 0
@@ -10,5 +10,5 @@ MD5 2730af65ee19bbce168461c9ebcf6710 kdebindings-meta-3.4.1.ebuild 870
 MD5 75a15cf3ac183925f2cbf9e9370962eb kdebindings-meta-3.4.2.ebuild 935
 MD5 3892b4c063ddf7aab83e20cece8a0ba8 kdebindings-meta-3.4.3.ebuild 932
 MD5 5ea4e0fd15e486bcd5cfb66c96b05121 kdebindings-meta-3.5.0.ebuild 927
-MD5 d866effdddf32b9bfb99020932a72741 kdebindings-meta-3.5.1.ebuild 933
+MD5 f1cdc3afc17fc71971086d64b1387e4f kdebindings-meta-3.5.1.ebuild 935
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

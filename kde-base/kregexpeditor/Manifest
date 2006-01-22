@@ -1,4 +1,4 @@
-MD5 25046ebaffc95b4faf2a1252c605d19e ChangeLog 4877
+MD5 2997b7f95ba66681775e340428f4a573 ChangeLog 4878
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1 212
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1-r1 212
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kregexpeditor-3.4.3 68
@@ -8,5 +8,5 @@ MD5 0d2726deffd1ecb49751c7fe4f21a194 kregexpeditor-3.4.1-r1.ebuild 451
 MD5 423ef3625e90b6424ac0043842ee8e7c kregexpeditor-3.4.1.ebuild 421
 MD5 ca6a65a932f100382e6ce1997b09def1 kregexpeditor-3.4.3.ebuild 446
 MD5 aed0ae062cae050eb0bb52e3a1f28c17 kregexpeditor-3.5.0.ebuild 453
-MD5 aed0ae062cae050eb0bb52e3a1f28c17 kregexpeditor-3.5.1.ebuild 453
+MD5 327276124269b420f18544fb1c38559f kregexpeditor-3.5.1.ebuild 454
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

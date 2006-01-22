@@ -1,4 +1,4 @@
-MD5 ea0f756fea154d23e237d5d0db3f1f4f ChangeLog 4474
+MD5 5cd75fd453297e1b10b36c6d7b0186db ChangeLog 4475
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khotkeys-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khotkeys-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-khotkeys-3.4.3 68
@@ -9,5 +9,5 @@ MD5 51330a32c6197d220bb44ef01c8b94ec khotkeys-3.4.1.ebuild 384
 MD5 b4fcb29bb7e550874e315084ff94d427 khotkeys-3.4.2.ebuild 443
 MD5 5125b774368fb9f862124df87c8584ed khotkeys-3.4.3.ebuild 389
 MD5 e6051f84a736ef84a4cdd9e1db5949a1 khotkeys-3.5.0.ebuild 396
-MD5 e6051f84a736ef84a4cdd9e1db5949a1 khotkeys-3.5.1.ebuild 396
+MD5 39e185cb8c4d8723167830348af44b06 khotkeys-3.5.1.ebuild 397
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

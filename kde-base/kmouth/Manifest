@@ -1,4 +1,4 @@
-MD5 503ce3513e52bb24583a56eb9d02291d ChangeLog 4341
+MD5 69d365a3b8894a25763c2507a561fe59 ChangeLog 4342
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmouth-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmouth-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmouth-3.4.3 76
@@ -8,5 +8,5 @@ MD5 a9a1d3eeb3bf7257eae053ed10ab6910 kmouth-3.4.1.ebuild 425
 MD5 5d4e24e370f2f2ac4b9629b2efb94908 kmouth-3.4.2.ebuild 438
 MD5 1ab77e54c77891db2d2d71600c78ecd7 kmouth-3.4.3.ebuild 432
 MD5 5499c8ff1861d7c2228f9ab2ad261386 kmouth-3.5.0.ebuild 439
-MD5 5499c8ff1861d7c2228f9ab2ad261386 kmouth-3.5.1.ebuild 439
+MD5 68cd962b745c5147f6845991ff844fd4 kmouth-3.5.1.ebuild 440
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 bf5ec731ff2c7aeaa5657b5f873f817b ChangeLog 3536
+MD5 cc98522a4ab4f4d2d55eb2c22b6a972d ChangeLog 3534
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-kalyptus-3.3.2 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kalyptus-3.4.1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-kalyptus-3.4.2 300
@@ -9,5 +9,5 @@ MD5 67f69a490c47381d82c77c9cde372ce5 kalyptus-3.3.2.ebuild 688
 MD5 0ee39aeccf35dcd265240cd4f12be93e kalyptus-3.4.1.ebuild 701
 MD5 86c7605d0ed532d9d2fc414a95df7549 kalyptus-3.4.2.ebuild 707
 MD5 34c8ba6413cd6235ffc6e676f9a11c8d kalyptus-3.5.0.ebuild 697
-MD5 34c8ba6413cd6235ffc6e676f9a11c8d kalyptus-3.5.1.ebuild 697
+MD5 59f450e11a7f7062c8e12cee2a2cdf2f kalyptus-3.5.1.ebuild 699
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

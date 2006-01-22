@@ -1,4 +1,4 @@
-MD5 042f60c98d17faa7a6c00f77e8cc8a5e ChangeLog 5553
+MD5 b830bbf94a674d60a6bc7e761a2ed65c ChangeLog 5554
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kresources-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kresources-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-kresources-3.4.3 67
@@ -9,5 +9,5 @@ MD5 0a2cbfdefb831eac9e2513108f3d5e0b kdepim-kresources-3.4.1.ebuild 1232
 MD5 fe6bf70826d578fd3c7c156c2100329f kdepim-kresources-3.4.2.ebuild 1248
 MD5 bb88a6b627560e92f628fa600fb92299 kdepim-kresources-3.4.3.ebuild 1239
 MD5 d9b1cf77e030158c391fd5931fb481a0 kdepim-kresources-3.5.0.ebuild 1320
-MD5 3b41731ebafb2aefff7be67e26dbd51c kdepim-kresources-3.5.1.ebuild 1322
+MD5 718dee86d93ced39846106fdf518b887 kdepim-kresources-3.5.1.ebuild 1323
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

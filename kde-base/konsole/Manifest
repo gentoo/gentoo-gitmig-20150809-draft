@@ -1,4 +1,4 @@
-MD5 16202f301da1045e550ff3121bdc61b1 ChangeLog 4371
+MD5 de623b2833910bd64a046e1e5914b353 ChangeLog 4372
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konsole-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konsole-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-konsole-3.4.3 68
@@ -8,5 +8,5 @@ MD5 6633760e033c5f04ab794e91bfdbff8f konsole-3.4.1.ebuild 392
 MD5 caded7869fdce4348fc731037bbcc504 konsole-3.4.2.ebuild 405
 MD5 40af59d4baa8ffa2df48e9246963cbea konsole-3.4.3.ebuild 399
 MD5 6564ed23df179f2c07986eb8a49a5f5e konsole-3.5.0.ebuild 406
-MD5 6564ed23df179f2c07986eb8a49a5f5e konsole-3.5.1.ebuild 406
+MD5 c79ba02b20960d20ec6859b33a903a5f konsole-3.5.1.ebuild 407
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 00e64589d6d4540893abea4bb432bc59 ChangeLog 4294
+MD5 80aad5b76e901f2e840db0135adf38ac ChangeLog 4295
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kmoon-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kmoon-3.4.2 282
 MD5 4792409083f3033f880840748c1ec31a files/digest-kmoon-3.4.3 67
@@ -8,5 +8,5 @@ MD5 d28639bb2adf6ef1962a01badc8ddf97 kmoon-3.4.1.ebuild 382
 MD5 ba862c567ee76fcf8c0cf25e23731df5 kmoon-3.4.2.ebuild 395
 MD5 739e76a0631374350b7985d8702431f3 kmoon-3.4.3.ebuild 390
 MD5 ef7beccbcfa0142c4f5fcdd334166663 kmoon-3.5.0.ebuild 396
-MD5 ef7beccbcfa0142c4f5fcdd334166663 kmoon-3.5.1.ebuild 396
+MD5 bb6c3023837b9cd3caa637d62cdb5c37 kmoon-3.5.1.ebuild 397
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

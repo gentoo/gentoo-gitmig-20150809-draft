@@ -1,4 +1,4 @@
-MD5 25f8cc0d28bc9861317e73984068cee9 ChangeLog 5400
+MD5 24dd05b5e35a5a05dd0449757ec50646 ChangeLog 5401
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1 208
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kig-3.4.1-r10 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kig-3.4.2 282
@@ -12,5 +12,5 @@ MD5 e4ad8498983c1d267a8a9f93d3f22a94 kig-3.4.2.ebuild 556
 MD5 5f7cc0b78746a4901f1f2ad2f507fbec kig-3.4.3-r10.ebuild 555
 MD5 9c7be46c69e5bcb19aced09d8b875f0a kig-3.4.3.ebuild 647
 MD5 ab6c9f36c6179c7267d7ed90a604bcc0 kig-3.5.0.ebuild 557
-MD5 ab6c9f36c6179c7267d7ed90a604bcc0 kig-3.5.1.ebuild 557
+MD5 8b85812d3119f7f4b80a5986a959318c kig-3.5.1.ebuild 558
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

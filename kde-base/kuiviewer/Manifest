@@ -1,4 +1,4 @@
-MD5 9316b3a4569a114b0feaf7533852d7b4 ChangeLog 3658
+MD5 8a1a8e314515ecbb80124e2aef8616b5 ChangeLog 3660
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kuiviewer-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kuiviewer-3.4.2 280
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kuiviewer-3.4.3 66
@@ -8,5 +8,5 @@ MD5 2e53ca88a63eca2bd4ef5c5e82499f55 kuiviewer-3.4.1.ebuild 405
 MD5 b4ce96aa13413692645be3adf3f06279 kuiviewer-3.4.2.ebuild 413
 MD5 07d8c458d01125a9db44bb1082952584 kuiviewer-3.4.3.ebuild 410
 MD5 b3f44e98368d95c110bf5415e6b3f12d kuiviewer-3.5.0.ebuild 396
-MD5 b3f44e98368d95c110bf5415e6b3f12d kuiviewer-3.5.1.ebuild 396
+MD5 5193f5c88489498389fdfeb3c57efb71 kuiviewer-3.5.1.ebuild 398
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

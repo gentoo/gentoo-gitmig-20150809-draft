@@ -1,4 +1,4 @@
-MD5 9315930a203cfbdc7fa56669668650eb ChangeLog 4260
+MD5 f7b06ec39ab820ecd87788dc09671957 ChangeLog 4261
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-libkdeedu-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-libkdeedu-3.4.2 282
 MD5 9c4d55683f93bc4ade8253a467f2cdfb files/digest-libkdeedu-3.5.0 67
@@ -6,5 +6,5 @@ MD5 f189373524a470a1665a94fe8ba1f935 files/digest-libkdeedu-3.5.1 67
 MD5 ce9f4b7c582fb22c4e0004c371cb37aa libkdeedu-3.4.1.ebuild 407
 MD5 498e3fb0f733bfcc6ec43870a8ee7351 libkdeedu-3.4.2.ebuild 416
 MD5 6d961425e45437731ba06084d34e7c2e libkdeedu-3.5.0.ebuild 421
-MD5 6d961425e45437731ba06084d34e7c2e libkdeedu-3.5.1.ebuild 421
+MD5 3fc2b35353d1567b19f7249bbfb35cdf libkdeedu-3.5.1.ebuild 422
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
