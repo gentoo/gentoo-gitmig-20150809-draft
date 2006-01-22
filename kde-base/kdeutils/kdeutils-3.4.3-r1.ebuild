@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.4.3-r1.ebuild,v 1.7 2005/12/11 11:02:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.4.3-r1.ebuild,v 1.8 2006/01/22 10:05:26 corsair Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE utilities"
 
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
 IUSE="crypt snmp pbbuttonsd"
 
 DEPEND="~kde-base/kdebase-${PV}

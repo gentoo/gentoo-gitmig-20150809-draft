@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.190 2005/12/17 20:45:42 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.191 2006/01/22 09:58:56 corsair Exp $
+
+  22 Jan 2006; Markus Rothe <corsair@gentoo.org> kdepim-3.4.3.ebuild:
+  Stable on ppc64
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kdepim-3.5.0-r3.ebuild:
   Added ~ppc64
