@@ -1,4 +1,4 @@
-MD5 74b9c5debdd5f66a54f6b1858a55cccf ChangeLog 8973
+MD5 517cc1d3769a7788a274c69d42f85125 ChangeLog 9071
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14 71
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r1 71
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r2 71
@@ -8,5 +8,5 @@ MD5 4eed4de8024d2cf496f50695b0a5e71f files/scrollkeeper-0.3.14-nls.patch 10005
 MD5 865456e567efe5df6f1069f2d99b46ed files/scrollkeeper-logrotate 265
 MD5 50da2ea188fbcc09d9f995915da8af85 metadata.xml 183
 MD5 82d51678f39dcc2f1ace5219780b8db5 scrollkeeper-0.3.14-r1.ebuild 2544
-MD5 302e32442df68529bce71d109a1ee804 scrollkeeper-0.3.14-r2.ebuild 2467
+MD5 f64d1caadb19bdfd4962eedac04caa5c scrollkeeper-0.3.14-r2.ebuild 2463
 MD5 6a5f16d1c02485adc69fffaa6d44bfe1 scrollkeeper-0.3.14.ebuild 2446
