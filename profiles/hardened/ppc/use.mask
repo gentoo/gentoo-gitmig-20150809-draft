@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/use.mask,v 1.3 2005/05/21 01:13:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/use.mask,v 1.4 2006/01/22 01:20:48 chtekk Exp $
 
 3dfx
 3dnow
@@ -37,3 +37,7 @@ sybase-ct
 tcc
 uclibc
 uml
+
+# Luca Longinotti <chtekk@gentoo.org>
+# mask Oracle
+oci8
