@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3eeb4194f0cefe42b52fbff47ed2396e ChangeLog 6629
 MD5 c05083a16f957fda1c27e0b0cfc91005 files/digest-gtk-engines-0.12 68
 MD5 5de5aab24161a9716ab7936e39fc238d files/digest-gtk-engines-2.6.5 70
@@ -8,13 +5,6 @@ MD5 848cbb7e59d60d96b21aa378724db101 files/digest-gtk-engines-2.6.6 70
 MD5 82550dc12924920f5f7835e1ce9b0df1 files/digest-gtk-engines-2.6.7 70
 MD5 d792d5b0ca15aad2214ca213459bae78 gtk-engines-0.12.ebuild 825
 MD5 1d104b2c08bb2830d2f3f8c2ffced9af gtk-engines-2.6.5.ebuild 704
-MD5 4fe135c69147ad27ef6e0bcbf959d99c gtk-engines-2.6.6.ebuild 711
+MD5 d70555b9db16e8ef92d1c3c4e2f16223 gtk-engines-2.6.6.ebuild 710
 MD5 03250e0bbe0ba7f035578389b5aec157 gtk-engines-2.6.7.ebuild 668
 MD5 36faf46cc298a5e4b601aafac15ec93b metadata.xml 568
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0v6lSENan+PfizARAjk9AJ95ipwHh9G3dSR+qrJo4E8A7mTepwCdFn5G
-cV5l7Iuf4HHz+obYc/mBXc8=
-=pQL0
------END PGP SIGNATURE-----
