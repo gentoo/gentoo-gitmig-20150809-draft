@@ -1,6 +1,19 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.174 2006/01/21 18:59:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.175 2006/01/22 09:34:01 suka Exp $
+
+  22 Jan 2006; Andreas Proschofsky <suka@gentoo.org>
+  -files/1.1.4/gcc-instlib.patch, -files/1.1.4/getcompver.awk.patch,
+  -files/1.1.4/freetype-217.patch, -files/1.1.4/STLport-vector.patch,
+  -files/1.1.4/gcc34-nojava-fix.patch, -files/1.1.4/hardened-link.patch,
+  -files/1.1.4/gcc34-sal-link-to-libsupc++.diff, -files/1.1.4/javafix.patch,
+  -files/1.1.4/cws-heapbug_CAN-2005-0941.diff,
+  -files/1.1.4/build-new-xslt.diff, -files/1.1.4/gcc34.patch.bz2,
+  -files/1.1.4/newstlportfix.patch, -files/1.1.4/nptl.patch,
+  -files/1.1.4/openoffice-java.patch, -files/1.1.4/ooffice-wrapper-1.3,
+  -files/1.1.4/pthreadlink-fix.patch, -files/1.1.4/pyunolink-fix.patch,
+  -openoffice-1.1.4-r1.ebuild, -openoffice-2.0.0.ebuild:
+  Finally get rid of the old 1.1.x-versions, as all archs are now on 2.0.x
 
   21 Jan 2006; Joseph Jezak <josejx@gentoo.org> openoffice-2.0.1.ebuild:
   Marked ppc stable for bug #119587.
