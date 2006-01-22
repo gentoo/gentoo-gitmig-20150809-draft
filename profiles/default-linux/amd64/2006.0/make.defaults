@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.6 2006/01/22 06:00:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.7 2006/01/22 14:04:22 wolf31o2 Exp $
 
 FEATURES="sandbox autoconfig"
 
@@ -34,4 +34,4 @@ SYMLINK_LIB="yes"
 USE="nptl -nptlonly"
 
 # This is added due to bug #113298
-SATGE1_USE="pam"
+STAGE1_USE="pam"
