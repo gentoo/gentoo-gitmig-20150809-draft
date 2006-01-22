@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.107 2006/01/20 22:19:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.108 2006/01/22 03:07:09 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> evolution-2.4.2.1.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   evolution-2.4.2.1.ebuild:
