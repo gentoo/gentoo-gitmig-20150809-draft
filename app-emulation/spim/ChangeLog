@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.32 2006/01/14 11:23:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.33 2006/01/22 08:30:24 compnerd Exp $
+
+*spim-7.2.1-r3 (22 Jan 2006)
+
+  22 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/spim-7.2.1-string-handling-fix.patch, +spim-7.2.1-r3.ebuild:
+  Fixing bugs #110644, #105542
 
   14 Jan 2006; Fabian Groffen <grobian@gentoo.org> spim-7.2.1-r2.ebuild:
   Marked last version stable ppc-macos.  Removing keyword from older ebuilds
