@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.4.6.ebuild,v 1.2 2006/01/20 22:27:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.4.6.ebuild,v 1.3 2006/01/22 04:31:44 tsunam Exp $
 
 inherit java-pkg gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libbonobo-2
