@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-Spiffy
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.1 2006/01/22 16:47:33 mcummings Exp $
+
+*Class-Spiffy-0.12 (22 Jan 2006)
+
+  22 Jan 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Class-Spiffy-0.12.ebuild:
+  Subclass of spiffy, new dep of yaml
+

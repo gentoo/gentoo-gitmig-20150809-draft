@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7654180147c5155013c80d43bdf17eee ChangeLog 390
 MD5 8dd708134c073d0cfafe4a766a4c64c7 Class-Spiffy-0.12.ebuild 534
 MD5 db4b3832370cdbb3f7be11ae3f9fbdd8 files/digest-Class-Spiffy-0.12 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD07cgtG5z4I8BtQoRAovvAJ42Tzbb+YYpTgqYcwpogRjeTA5VRQCgh8OG
+7zVSsFFccFSWMr0TnPmppr0=
+=vzFe
+-----END PGP SIGNATURE-----
