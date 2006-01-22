@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e5f8d348c760ccffc92cccb10a18744 ChangeLog 2027
 MD5 8562d753d236eb755256a67623db0e81 files/digest-php-java-bridge-2.0.8 74
 MD5 577f0cc2a32d6c1b81c06997c4f55aff files/zend_backtrace_api_change.diff 572
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 1aaca739ff707d6844ca06edd0ba5cd1 php-java-bridge-2.0.8.ebuild 1478
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD05+qH6mNYUtVdIARAqauAJ4rk7TUKnt0PRUns/PTBaKSK03jJACfdUQZ
+Tgypk8AaB+Jo3N523hm/8cg=
+=zY/6
+-----END PGP SIGNATURE-----
