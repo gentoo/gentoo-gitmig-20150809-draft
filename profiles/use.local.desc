@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1685 2006/01/21 22:56:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1686 2006/01/22 11:01:33 spock Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1315,6 +1315,7 @@ www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the
 www-apps/viewcvs:mod_python - Add mod_python support
 www-apps/viewcvs:standalone - Install the standalone client
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
+www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:nntp - Enable support for the NNTP
