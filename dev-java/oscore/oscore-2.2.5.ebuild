@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/oscore-2.2.5.ebuild,v 1.1 2006/01/22 04:31:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/oscore-2.2.5.ebuild,v 1.2 2006/01/22 15:00:20 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -10,15 +10,8 @@ SRC_URI="https://${PN}.dev.java.net/files/documents/725/17892/${P}.zip"
 
 LICENSE="OpenSymphony-1.1"
 SLOT="2.2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc source"
-
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.6
-	>=dev-java/ant-tasks-1.6
-	${LIB_DEPS}"
-RDEPEND=">=virtual/jre-1.4
-	${LIB_DEPS}"
 
 LIB_DEPS="
 	~dev-java/servletapi-2.2
@@ -29,6 +22,14 @@ LIB_DEPS="
 	dev-java/sun-ejb-spec
 	=dev-java/ognl-2.6*
 	dev-java/xdoclet"
+
+DEPEND=">=virtual/jdk-1.4
+	>=dev-java/ant-core-1.6
+	>=dev-java/ant-tasks-1.6
+	${LIB_DEPS}"
+RDEPEND=">=virtual/jre-1.4
+	${LIB_DEPS}"
+
 
 S="${WORKDIR}"
 

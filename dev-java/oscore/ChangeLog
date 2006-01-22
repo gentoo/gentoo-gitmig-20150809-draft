@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/oscore
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/ChangeLog,v 1.1 2006/01/22 04:31:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/ChangeLog,v 1.2 2006/01/22 15:00:20 nichoj Exp $
+
+  22 Jan 2006; Joshua Nichols <nichoj@gentoo.org> oscore-2.2.5.ebuild:
+  Keyworded ~amd64. Fixed dependencies.
 
 *oscore-2.2.5 (22 Jan 2006)
 
