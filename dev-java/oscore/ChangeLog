@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/oscore
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/ChangeLog,v 1.1 2006/01/22 04:31:41 nichoj Exp $
+
+*oscore-2.2.5 (22 Jan 2006)
+
+  22 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/oscore-2.2.5-build.patch, +files/osbuild.xml, +metadata.xml,
+  +oscore-2.2.5.ebuild:
+  Initial commit that builds from source (bug #63282).
+

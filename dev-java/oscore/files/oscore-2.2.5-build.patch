@@ -1,0 +1,43 @@
+Only in oscore: build
+diff -ru oscore-orig/build.xml oscore/build.xml
+--- oscore-orig/build.xml	2005-07-29 15:30:10.000000000 -0400
++++ oscore/build.xml	2006-01-21 00:41:51.000000000 -0500
+@@ -3,7 +3,7 @@
+     <property name="src.test" location="src/test"/>
+     <property name="src.etc" location="src/etc"/>
+ 
+-    <property name="common.build" value="../opensymphony/common/osbuild.xml"/>
++<!--    <property name="common.build" value="../opensymphony/common/osbuild.xml"/>-->
+     <import file="${common.build}"/>
+ 
+     <path id="jalopy.classpath">
+@@ -12,9 +12,11 @@
+         </fileset>
+     </path>
+ 
++	<!--
+     <taskdef name="jalopy" classname="de.hunsicker.jalopy.plugin.ant.AntPlugin">
+         <classpath refid="jalopy.classpath"/>
+     </taskdef>
++	-->
+ 
+     <target name="clean" depends="common.clean">
+         <delete>
+@@ -52,6 +54,7 @@
+     </target>
+ 
+     <target name="precompile" depends="ejbdoclet">
++		<!--
+         <jalopy fileformat="unix" convention="src/etc/jalopy.xml" history="file" historymethod="adler32" loglevel="error" threads="2" classpathref="cp">
+             <fileset dir="${src.java}">
+                 <include name="**/*.java"/>
+@@ -60,6 +63,7 @@
+                 <include name="**/*.java"/>
+             </fileset>
+         </jalopy>
++		-->
+     </target>
+ 
+-</project>
+\ No newline at end of file
++</project>
