@@ -1,5 +1,5 @@
-MD5 76c094ca87c4995dca51175ddc11e657 ChangeLog 3187
-MD5 a214ad0c7a23278dd982fb5086e2b6a8 aircrack-2.41-r1.ebuild 1178
+MD5 70cb81593ae3c728892b11c3d1b8b4b8 ChangeLog 3375
+MD5 cb88370c111730e4679ba26d4bbab054 aircrack-2.41-r1.ebuild 1258
 MD5 a5ad592794615b1a0e86d958af70276c files/aircrack-2.41-stack.diff 348
 MD5 135fb7dd84e0ed40486075aae2bb4e3f files/digest-aircrack-2.41-r1 62
 MD5 30ce62b2f7c51e6a3882a314a996de7f metadata.xml 704
