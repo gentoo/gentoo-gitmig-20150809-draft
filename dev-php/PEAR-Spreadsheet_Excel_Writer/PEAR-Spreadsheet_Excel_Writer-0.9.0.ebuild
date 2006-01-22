@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Spreadsheet_Excel_Writer/PEAR-Spreadsheet_Excel_Writer-0.9.0.ebuild,v 1.2 2006/01/21 20:15:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Spreadsheet_Excel_Writer/PEAR-Spreadsheet_Excel_Writer-0.9.0.ebuild,v 1.3 2006/01/22 07:50:48 halcy0n Exp $
 
 inherit php-pear-r1
 
 DESCRIPTION="Package for generating Excel spreadsheets"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 RDEPEND=">=dev-php/PEAR-OLE-0.5-r1"
 IUSE=""

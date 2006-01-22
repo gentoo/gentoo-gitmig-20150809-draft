@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_IT
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.19 2006/01/21 19:11:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.20 2006/01/22 07:39:35 halcy0n Exp $
+
+  22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  PEAR-HTML_Template_IT-1.1.3.ebuild:
+  Stable on x86; bug #119722
 
   21 Jan 2006; Markus Rothe <corsair@gentoo.org>
   PEAR-HTML_Template_IT-1.1.3.ebuild:
