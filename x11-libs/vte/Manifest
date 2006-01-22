@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8d93732c0b8f701d291b25d1b4bed28 ChangeLog 12091
+MD5 b4f0cddd2bb11963b5039732ee9f0832 ChangeLog 12185
 MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15-r1 64
@@ -16,12 +13,5 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa4d3fbbdfc954475759cebe1f450a58 vte-0.11.13-r2.ebuild 1401
 MD5 cf8a45837bc6fdc036e01d2fe916a545 vte-0.11.15-r1.ebuild 1394
 MD5 f389741157c2b244d42781121f5e597a vte-0.11.15.ebuild 1294
-MD5 1bc3ca210d67a0c72e17e37c07c47500 vte-0.11.16-r1.ebuild 1346
+MD5 37a50f66076e9b23751db76d3b826262 vte-0.11.16-r1.ebuild 1348
 MD5 c1bb4fc20b0ddfa11a4e7ba3a28e52e3 vte-0.11.16.ebuild 1297
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD09ibomPajV0RnrERArUGAJwKGdLlEfAB6/j0WEfYKZcwePxR6ACfbZ7J
-Q18fA9cr1f0NW1W/k5dekD4=
-=MZ44
------END PGP SIGNATURE-----
