@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8_rc1.ebuild,v 1.1 2006/01/22 17:02:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8_rc1.ebuild,v 1.2 2006/01/22 22:28:48 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -103,16 +103,6 @@ pkg_setup() {
 		ewarn "your own discretion. "
 		ewarn ""
 		epause 10
-	else
-		ewarn ""
-		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
-		ewarn "threading enabled , you must restart this emerge"
-		ewarn "with USE=ithreads emerge...."
-		ewarn "Threading is not supported by all applications "
-		ewarn "that compile against perl. You use threading at "
-		ewarn "your own discretion. "
-		ewarn ""
-		epause 10
 	fi
 }
 
@@ -148,9 +138,16 @@ src_unpack() {
 
 src_compile() {
 	# Perl has problems compiling with -Os in your flags
+	# some arches and -O do not mix :)
+	use arm && replace-flags -O? -O1
+	use ppc && replace-flags -O? -O1
+	use ia64 && replace-flags -O? -O1
+	# Perl has problems compiling with -Os in your flags with glibc
 	use elibc_uclibc || replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
 	filter-flags "-malign-double"
+	# Fixes bug #97645
+	use ppc && filter-flags -mpowerpc-gpopt
 
 	export LC_ALL="C"
 	local myconf=""
@@ -176,18 +173,27 @@ src_compile() {
 		myarch="${myarch%%-*}-${osname}"
 	fi
 
-	ewarn "myarch: ${myarch}"
+	local inclist=$(for v in $PERL_OLDVERSEN; do echo -n "$v $v/$myarch$mythreading "; done)
+
+	# allow either gdbm to provide ndbm (in <gdbm/ndbm.h>) or db1
+
+	myndbm='U'
+	mygdbm='U'
+	mydb='U'
 
 	if use gdbm
 	then
-		myconf="${myconf} -Di_gdbm"
+		mygdbm='D'
+		myndbm='D'
 	fi
 	if use berkdb
 	then
-		myconf="${myconf} -Di_db -Di_ndbm"
-	else
-		myconf="${myconf} -Ui_db -Ui_ndbm"
+		mydb='D'
+		has_version '=sys-libs/db-1*' && myndbm='D'
 	fi
+
+	myconf="${myconf} -${myndbm}i_ndbm -${mygdbm}i_gdbm -${mydb}i_db"
+
 	if use mips
 	then
 		# this is needed because gcc 3.3-compiled kernels will hang
@@ -204,6 +210,12 @@ src_compile() {
 	if use sparc
 	then
 		myconf="${myconf} -Ud_longdbl"
+	fi
+
+	if use alpha && "$(tc-getCC)" == "ccc"
+	then
+		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
+		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
 
 	rm -f config.sh Policy.sh
@@ -235,7 +247,7 @@ src_compile() {
 		-Dd_semctl_semun \
 		-Dcf_by='Gentoo' \
 		-Ud_csh \
-		${myconf} || die
+		${myconf} || die "Unable to configure"
 
 	emake -j1 -f Makefile depend || die "Couldn't make libperl$(get_libname) depends"
 	emake -j1 -f Makefile LIBPERL=${LIBPERL} ${LIBPERL} || die "Unable to make libperl$(get_libname)"
