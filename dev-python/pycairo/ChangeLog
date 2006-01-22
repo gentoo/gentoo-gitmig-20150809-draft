@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.10 2006/01/20 20:40:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.11 2006/01/22 01:57:56 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> pycairo-1.0.2.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> pycairo-1.0.2.ebuild:
   Stable on sparc wrt #119634
