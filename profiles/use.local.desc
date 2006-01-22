@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1689 2006/01/22 22:44:25 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1690 2006/01/22 23:25:55 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -774,8 +774,10 @@ media-video/vdr:bigpatch - enable almost all additional features flying around o
 media-video/vdr:jumpplay - enables automatic jumping over cut marks while watching a recording
 media-video/vdr:lnbsharing - enable support for two or more dvb cards sharing the cable to the lnb
 media-video/vdr:rcu - enable support for a special type of remote control unit
+media-video/vdr:setup-plugin - Enable support for the plugin vdr-setup
 media-video/vdr:sourcecaps - adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
 media-video/vdr:vfat - allow vdr to store its recordings on vfat filesystems
+media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg
 media-video/vlc:avahi - support for avahi mdns daemon
 media-video/vlc:cdda - Enables libcdda cd audio playback support
 media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
