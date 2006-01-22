@@ -34,3 +34,7 @@ xmms
 lm_sensors
 firebird
 qdbm
+
+# Luca Longinotti <chtekk@gentoo.org>
+# mask Oracle
+oci8
