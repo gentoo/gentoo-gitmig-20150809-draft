@@ -1,4 +1,4 @@
-MD5 70ade3d7adb8d81f03c74608103cd527 ChangeLog 18468
+MD5 69b09aa9905029a239daa3f3bab7e55e ChangeLog 18560
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-0.8.11 72
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
@@ -12,7 +12,7 @@ MD5 62a6ceb0d791f58680a8260b121f06ba files/gst-plugins-0.8.9-qtdemux-fixrawpcm.p
 MD5 5f3b15884236441972571887125d0a48 files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
 MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
 MD5 72130cbac13e9edb34b298efea9f26e6 gst-plugins-0.8.10.ebuild 1933
-MD5 8c9de5a694d607d7e0a0caba944cba7a gst-plugins-0.8.11.ebuild 2024
+MD5 8c7c2f4bbb02feec0d8d3781280fb239 gst-plugins-0.8.11.ebuild 2020
 MD5 1b1f6a35ef00183ae4d1fad94cfcb208 gst-plugins-0.8.2.ebuild 1868
 MD5 5bf55731d3e6a8e4220656629a5a7114 gst-plugins-0.8.8-r2.ebuild 2161
 MD5 648907592c915d4c6b7ca8c68eda195c gst-plugins-0.8.8.ebuild 1933
