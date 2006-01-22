@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.24 2006/01/21 14:11:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.25 2006/01/22 13:19:48 markusle Exp $
+
+*pari-2.1.7-r1 (22 Jan 2006)
+
+  22 Jan 2006; Markus Dittrich <markusle@gentoo.org> 
+  +files/pari-non-exec-stack-x86-gentoo.patch, +pari-2.1.7-r1.ebuild:
+  This revision fixes the insecure RUNPATH issues and executable 
+  stacks on x86.
 
   21 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> pari-2.1.7.ebuild:
   Stable on ppc.
