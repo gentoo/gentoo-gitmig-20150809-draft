@@ -1,4 +1,4 @@
-MD5 c31af122d27a8225ffb1204b1d0d4865 ChangeLog 6364
+MD5 44afa4043f0eabf03327536de16b5d01 ChangeLog 6358
 MD5 fcd04d3a6284a16bdffaddaf7311cfe8 files/digest-gnome-volume-manager-1.2.1 79
 MD5 16d8909214e29b02eb989b948601461c files/digest-gnome-volume-manager-1.2.2 79
 MD5 019e01caf376cfa12bd42566ab4d4f44 files/digest-gnome-volume-manager-1.5.1 173
@@ -10,5 +10,5 @@ MD5 72c1bae8ef38e67c06baafe764e34065 gnome-volume-manager-1.2.1.ebuild 1008
 MD5 c6349a883ff4a07cc8acbded5dd9bd3b gnome-volume-manager-1.2.2.ebuild 1032
 MD5 a9385b6ba060065fb7d55f25902e3bbf gnome-volume-manager-1.5.1.ebuild 1527
 MD5 0f67e70ef2099c779265301e2c6f84c5 gnome-volume-manager-1.5.3.ebuild 1490
-MD5 435248212256d41fb378f8077bb5fc64 gnome-volume-manager-1.5.4.ebuild 1432
+MD5 d8922697949e9ee3d4132e5913c39518 gnome-volume-manager-1.5.4.ebuild 1426
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158

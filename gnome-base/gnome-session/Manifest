@@ -1,4 +1,4 @@
-MD5 57b77885c298729de00f93037b79dca4 ChangeLog 16693
+MD5 0ad2f3ea4f41006a8182987606094482 ChangeLog 16687
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
 MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0 134
 MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0-r3 134
@@ -10,5 +10,5 @@ MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.pat
 MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
 MD5 56aa74472b71a3a0189ff2ea99acd943 gnome-session-2.10.0-r3.ebuild 2124
 MD5 4499ec98ae9a50f5de83b8ce43411a80 gnome-session-2.10.0.ebuild 1586
-MD5 fa5f25c8a6f8f76b2ab216f643c7f718 gnome-session-2.12.0.ebuild 1974
+MD5 1ab3e57a753afc3edd173ab9c0fac895 gnome-session-2.12.0.ebuild 1968
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
