@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.102 2006/01/20 22:25:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.103 2006/01/22 02:08:31 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> at-spi-1.6.6-r1.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   at-spi-1.6.6-r1.ebuild:
