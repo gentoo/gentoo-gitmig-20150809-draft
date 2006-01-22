@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r3.ebuild,v 1.2 2005/12/17 20:41:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.0-r3.ebuild,v 1.3 2006/01/22 18:50:09 genone Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gphoto2 imlib openexr opengl pdflib povray scanner tetex"
+IUSE="gphoto2 imlib openexr opengl pdf povray scanner tetex"
 
 DEPEND="~kde-base/kdebase-${PV}
 	>=media-libs/freetype-2
@@ -23,7 +23,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	openexr? ( >=media-libs/openexr-1.2 )
 	povray? ( media-gfx/povray
 		  virtual/opengl )
-	pdflib? ( >=app-text/poppler-0.3.1 )"
+	pdf? ( >=app-text/poppler-0.3.1 )"
 
 RDEPEND="${DEPEND}
 	tetex? (
@@ -46,7 +46,7 @@ pkg_setup() {
 		eerror "Please reemerge virtual/ghostscript with USE=\"X\"."
 		die "Please reemerge virtual/ghostscript with USE=\"X\"."
 	fi
-	if use pdflib && ! built_with_use app-text/poppler qt; then
+	if use pdf && ! built_with_use app-text/poppler qt; then
 		eerror "This package requires app-text/poppler compiled with Qt support."
 		eerror "Please reemerge app-text/poppler with USE=\"qt\"."
 		die "Please reemerge app-text/poppler with USE=\"qt\"."
@@ -54,7 +54,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf="$(use_with openexr) $(use_with pdflib poppler)
+	local myconf="$(use_with openexr) $(use_with pdf poppler)
 	              $(use_with gphoto2 kamera)"
 
 	use imlib || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kuickshow"
