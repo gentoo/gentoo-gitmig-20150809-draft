@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.1 2006/01/20 18:16:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.2 2006/01/22 20:29:08 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -28,6 +28,7 @@ RDEPEND="!sys-apps/pcmcia-cs-cis
 				 xforms? ( x11-libs/xforms ) )"
 DEPEND="${RDEPEND}
 		virtual/linux-sources
+		dev-util/yacc
 		>=sys-apps/sed-4"
 
 pkg_setup() {
