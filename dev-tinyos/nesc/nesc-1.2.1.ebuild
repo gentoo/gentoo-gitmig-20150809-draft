@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.1.ebuild,v 1.1 2006/01/22 09:23:49 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.1.ebuild,v 1.2 2006/01/22 18:01:17 sanchan Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ pkg_setup() {
 		eerror "In order to compile nesc you have to set the"
 		eerror "\$TOSDIR environment properly."
 		eerror ""
-		eerror "You can achieve this by emerging >=dev-embedded/tos-1.1.14-r1"
+		eerror "You can achieve this by emerging >=dev-tinyos/tos-1.1.15"
 		eerror "or by exporting TOSDIR=\"path to your tinyos dir\""
 		die "Couldn't find a valid TinyOS home"
 	else
