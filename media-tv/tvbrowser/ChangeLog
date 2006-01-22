@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/tvbrowser
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.1 2006/01/22 12:37:59 zzam Exp $
+
+*tvbrowser-2.1 (22 Jan 2006)
+
+  22 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/tvbrowser-2.1-makefiles.patch, +metadata.xml,
+  +tvbrowser-2.1.ebuild:
+  Inital import of ebuild (ebuild slightly based on the one from Bug #104792)
+
