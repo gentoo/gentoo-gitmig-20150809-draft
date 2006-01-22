@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.4 2005/08/17 16:48:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.5 2006/01/22 19:39:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,7 +15,10 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="X tcltk svga fbcon kde"
 
 DEPEND="virtual/libc
-	X? ( virtual/x11 )
+	X? (
+		|| (
+			x11-libs/libXext
+			virtual/x11 ) )
 	>=media-libs/sdl-mixer-1.2
 	>=media-libs/libsdl-1.2
 	>=media-libs/sdl-net-1.2"
