@@ -1,5 +1,7 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/x86/virtuals,v 1.1 2004/10/23 00:13:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/x86/virtuals,v 1.2 2006/01/22 13:25:42 chtekk Exp $
 
 virtual/bootloader			sys-boot/grub
+virtual/php					dev-lang/php
+virtual/httpd-php			dev-lang/php

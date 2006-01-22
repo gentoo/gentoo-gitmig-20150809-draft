@@ -1,9 +1,11 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/virtuals,v 1.9 2005/11/16 17:01:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/virtuals,v 1.10 2006/01/22 13:24:20 chtekk Exp $
 
 # This file is used to either override or extend the parent profile's
 # virtuals mappings.   In this case, this is for ARCHITECTURE SPECIFIC
 # mappings
 
 virtual/bootloader		sys-boot/grub
+virtual/php				dev-lang/php
+virtual/httpd-php		dev-lang/php
