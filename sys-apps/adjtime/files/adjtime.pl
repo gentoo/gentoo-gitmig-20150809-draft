@@ -219,10 +219,12 @@ sub get_offset { # ()
 
 sub get_tickadj { # ($)
 
+    my $TICKADJ = (`which tickadj`);
+    printf STDERR "Using %s", $TICKADJ;
     my ($tick) = @_;
     $tick = '' unless defined($tick);
 
-    foreach my $line (`/usr/sbin/tickadj $tick`) {
+    foreach my $line (`$TICKADJ $tick`) {
 	printf STDERR "DEBUG: [%s]\n", $line if $DEBUG;
 	return $1 if $line =~ m/^tick\s+=\s+(\d+)\s*$/i;
     }

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4.ebuild,v 1.1 2006/01/21 23:21:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r1.ebuild,v 1.1 2006/01/22 22:36:50 nerdboy Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="ppc"
 IUSE=""
 
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	>=net-misc/ntp-4.2*"
 
 src_install() {
 	dodir /usr/sbin
