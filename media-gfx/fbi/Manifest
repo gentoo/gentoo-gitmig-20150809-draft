@@ -1,6 +1,9 @@
-MD5 c946c8c498160543afb5caac28a8c3b1 ChangeLog 5255
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 34e1ace2439d90becd141303e75fae26 ChangeLog 5356
 MD5 b25d064daff6fef0c43106cf77602c55 fbi-1.31-r1.ebuild 1133
-MD5 35c1d4a483a768843e5b5d53534f056b fbi-1.31-r2.ebuild 1259
+MD5 ea6621ebbb72d99e0e53fed85217f8ab fbi-1.31-r2.ebuild 1396
 MD5 044d66cfdfb2073f49c6e380c6c7692b fbi-1.31.ebuild 947
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31 59
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r1 59
@@ -8,3 +11,10 @@ MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r2 59
 MD5 48eb48a849785597bbb4023d5e67507e files/fbi-1.31-strsignal.patch 308
 MD5 784a957950cb4e63c0f58c4988e75d84 files/libexif-0.6.patch 1489
 MD5 7fc77b947cec0d01897854f31eb34b31 metadata.xml 367
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD055nchej4aZK9/cRAjiXAKCIXjXiOLIBukugOEnKIoUbpygtFACeMi1c
+K/Vt+03AfuJykwk+izEZUbE=
+=dYAv
+-----END PGP SIGNATURE-----
