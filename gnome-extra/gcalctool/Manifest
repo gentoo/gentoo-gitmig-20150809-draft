@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e51ffc25bc312c3272e5d1b63a8ef1b3 ChangeLog 10239
 MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42-r1 70
 MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42-r2 70
@@ -9,12 +6,5 @@ MD5 643f5117320cc2c403b8eceff4d156b9 files/gcalctool-5.5.42-hexdec-fix.patch 426
 MD5 6885edfd95cdbdf6c3963d6eeb58147d files/gcalctool-5.5.42-malloc.patch 380
 MD5 a0957eb94771af086e1f9cc2933137e8 gcalctool-5.5.42-r1.ebuild 1040
 MD5 b74792c56ed4c153a284d0ad375ca181 gcalctool-5.5.42-r2.ebuild 1076
-MD5 e8a264b6e246d6ff3730eea2f1552de3 gcalctool-5.6.31.ebuild 985
+MD5 8bfb72716eed260c2529de38837277b9 gcalctool-5.6.31.ebuild 984
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0vg3SENan+PfizARAvQGAJ9nU+Kt2pgcm5GHrl7RKAyAiOcZuwCcD2jy
-qoE5XVB5ocG68VWzxxdw4ZA=
-=aEl6
------END PGP SIGNATURE-----
