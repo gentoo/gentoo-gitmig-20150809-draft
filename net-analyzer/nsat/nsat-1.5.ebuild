@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.11 2005/07/19 15:31:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.12 2006/01/22 13:24:27 pva Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc x86"
 IUSE="X"
 
-RDEPEND="X? ( virtual/x11 dev-lang/tk )
+RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 )
+				dev-lang/tk )
 	virtual/libpcap"
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
