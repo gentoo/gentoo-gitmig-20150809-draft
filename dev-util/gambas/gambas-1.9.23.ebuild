@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.9.23.ebuild,v 1.1 2006/01/18 01:45:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.9.23.ebuild,v 1.2 2006/01/22 19:02:09 genone Exp $
 
 inherit eutils qt3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gambas/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 -amd64"
-IUSE="postgres mysql sdl doc curl sqlite xml zlib kde bzip2 odbc ldap pdflib opengl sqlite3 pcre"
+IUSE="postgres mysql sdl doc curl sqlite xml zlib kde bzip2 odbc ldap pdf opengl sqlite3 pcre"
 
 S=${WORKDIR}/${MY_P}
 
@@ -32,7 +32,7 @@ RDEPEND="$(qt_min_version 3.2)
 	odbc? ( dev-db/unixODBC )
 	ldap? ( net-nds/openldap )
 	gtk? ( >=x11-libs/gtk+-2.6.4 )
-	pdflib? ( app-text/poppler )
+	pdf? ( app-text/poppler )
 	pcre? ( dev-libs/libpcre )"
 #DEPEND="${RDEPEND}
 #	>=sys-devel/autoconf-2.59
@@ -84,7 +84,7 @@ src_compile() {
 		$(use_enable kde) \
 		$(use_enable gtk) \
 		$(use_enable odbc) \
-		$(use_enable pdflib pdf) \
+		$(use_enable pdf) \
 		$(use_enable pcre) \
 		$(use_enable ldap) \
 		${ext_conf} \
