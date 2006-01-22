@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.7 2006/01/06 18:45:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.8 2006/01/22 01:44:55 wolf31o2 Exp $
+
+  22 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-player-1.0.1.19317.ebuild:
+  Changed vmplayer->vmware for the init script name and closing bug #119871.
 
   06 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-player-1.0.1.19317.ebuild:

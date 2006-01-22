@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317.ebuild,v 1.2 2006/01/06 18:45:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317.ebuild,v 1.3 2006/01/22 01:44:55 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -208,10 +208,10 @@ pkg_postinst() {
 	einfo "After configuring, type 'vmplayer' to launch"
 	einfo
 	einfo "Also note that when you reboot you should run:"
-	einfo "/etc/init.d/vmplayer start"
+	einfo "/etc/init.d/vmware start"
 	einfo "before trying to run vmplayer.  Or you could just add"
 	einfo "it to the default run level:"
-	einfo "rc-update add vmplayer default"
+	einfo "rc-update add vmware default"
 	echo
 	ewarn "Remember, in order to run vmplayer, you have to"
 	ewarn "be in the '${VMWARE_GROUP}' group."
