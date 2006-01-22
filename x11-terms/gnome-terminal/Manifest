@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a5443c29bd745fa7544db960f81bbf4f ChangeLog 12549
+MD5 5f9541678c99651cd11afa9e6344110a ChangeLog 12702
 MD5 c6d9c33f98e008a1bb1ca3caa6028f8d files/digest-gnome-terminal-2.10.0 75
 MD5 319f3c55edc2ba11fe8592faf32c35a3 files/digest-gnome-terminal-2.12.0 75
 MD5 566ca1ffc1b71593c39529fb9af82cb1 files/digest-gnome-terminal-2.8.2 74
 MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
 MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.patch 1000
 MD5 f44e7916277f346bd86a5b21cd8f1851 gnome-terminal-2.10.0.ebuild 1161
-MD5 312916c38d702c0545366ece5e31c2a0 gnome-terminal-2.12.0.ebuild 1225
+MD5 2b53cd81ff7632def3abf1672127ad2e gnome-terminal-2.12.0.ebuild 1228
 MD5 39319897f878b9eb6bed21179d9ab2a5 gnome-terminal-2.8.2.ebuild 1149
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0v0GSENan+PfizARAlEzAJ0U+4EORCD3oFQBVmdvCMvJwdJTTgCfcNfh
-OyLYS3CrIGAaRWf1kjcCSZk=
-=XrzV
------END PGP SIGNATURE-----
