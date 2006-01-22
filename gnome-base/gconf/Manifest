@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e1bc450aa928f853fbd1f5c18aa803c ChangeLog 17039
+MD5 92af690eb3e08b0aa18a52493ebc80fd ChangeLog 17131
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r3 64
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r5 64
 MD5 faf030a14a8782cfd512c48b4b0d3297 files/digest-gconf-1.0.9 64
@@ -15,12 +12,5 @@ MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
 MD5 a3295c560e968484fb4d35f2b3bb4d49 gconf-1.0.9.ebuild 1842
 MD5 e9577b3216e9a2ab22f87bf5b234ca27 gconf-2.10.1-r1.ebuild 2015
 MD5 9f586fcd2813a75ccd7da699616850b9 gconf-2.12.0.ebuild 2011
-MD5 b97da74c65bddf350aa288a02c51fd81 gconf-2.12.1.ebuild 1972
+MD5 8271c27e3084c883bc21a99bb39093ef gconf-2.12.1.ebuild 1974
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD09YEomPajV0RnrERAkByAJ4vvhwVp5R3nO4C7f5TZ6tvOj/0jQCeOMpA
-RC/DgKXR2IKLxOvTH+O5HVA=
-=606l
------END PGP SIGNATURE-----
