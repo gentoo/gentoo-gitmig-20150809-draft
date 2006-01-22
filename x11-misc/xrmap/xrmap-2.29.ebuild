@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.29.ebuild,v 1.6 2005/11/01 11:42:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.29.ebuild,v 1.7 2006/01/22 00:28:19 nelchael Exp $
 
 DESCRIPTION="The Xrmap program is a X client for generating images of the Earth and manipulating the CIA World data bank"
 HOMEPAGE="http://frmas.free.fr/li_1.htm#_Xrmap_"
@@ -13,10 +13,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="zlib"
-DEPEND="media-gfx/imagemagick
+
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )
+	media-gfx/imagemagick
 	app-text/gv
 	sys-apps/less
-	media-libs/xpm
 	>=sys-apps/sed-4
 	zlib? ( sys-libs/zlib )"
 

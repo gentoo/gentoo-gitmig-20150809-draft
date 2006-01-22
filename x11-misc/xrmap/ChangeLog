@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrmap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.10 2005/11/01 11:42:14 nelchael Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.11 2006/01/22 00:28:19 nelchael Exp $
+
+  22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> xrmap-2.29.ebuild,
+  xrmap-2.30.ebuild, xrmap-2.32.ebuild:
+  Fixed DEPEND for modular X.
 
 *xrmap-2.32 (01 Nov 2005)
 
