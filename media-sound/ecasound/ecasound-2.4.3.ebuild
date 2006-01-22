@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.3 2005/12/26 14:42:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.4 2006/01/22 22:43:14 flameeyes Exp $
+
+inherit multilib
 
 IUSE="alsa arts audiofile debug jack libsamplerate mikmod ncurses vorbis oss python ruby sndfile"
 
@@ -56,7 +58,7 @@ src_compile () {
 		python_prefix="`python -c 'import sys; print sys.prefix'`"
 
 		python_includes="$python_prefix/include/python$python_version"
-		python_modules="$python_prefix/lib/python$python_version"
+		python_modules="$python_prefix/$(get_libdir)/python$python_version"
 
 		myconf="$myconf --with-python-includes=$python_includes"
 		myconf="$myconf --with-python-modules=$python_modules"
