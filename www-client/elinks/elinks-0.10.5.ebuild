@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.9 2005/09/16 14:21:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.10 2006/01/22 11:41:44 spock Exp $
 
 inherit eutils
 
@@ -22,7 +22,8 @@ DEPEND="virtual/libc
 	>=dev-libs/expat-1.95.4
 	>=sys-apps/portage-2.0.45-r3
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libX11 x11-libs/libXt )
+			virtual/x11 ) )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	lua? ( >=dev-lang/lua-4 )
 	gpm? ( >=sys-libs/ncurses-5.2 >=sys-libs/gpm-1.20.0-r5 )
