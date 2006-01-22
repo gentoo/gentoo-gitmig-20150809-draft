@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetron
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.10 2005/08/04 08:04:37 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.11 2006/01/22 19:28:47 wolf31o2 Exp $
+
+  22 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  armagetron-0.2.6.1.ebuild:
+  Added modular X dependencies and closing bug #119921.
 
   04 Aug 2005; Simon Stelling <blubb@gentoo.org> armagetron-0.2.6.1.ebuild:
   added ~amd64 keyword

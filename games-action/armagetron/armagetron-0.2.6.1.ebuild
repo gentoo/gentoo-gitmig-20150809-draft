@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.1.ebuild,v 1.2 2005/08/04 08:04:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.1.ebuild,v 1.3 2006/01/22 19:28:47 wolf31o2 Exp $
 
 inherit flag-o-matic eutils games
 
@@ -15,14 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
+RDEPEND="
 	virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
+	media-libs/sdl-mixer
+	media-libs/jpeg
 	sys-libs/zlib
 	media-libs/libpng"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	|| (
+		x11-libs/libXt
+		virtual/x11 )"
 
 src_compile() {
 	#	$(use_enable !dedicated glout)
