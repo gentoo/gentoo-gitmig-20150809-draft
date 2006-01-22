@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.6.ebuild,v 1.1 2005/07/31 10:23:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.6.ebuild,v 1.2 2006/01/22 11:16:08 nattfodd Exp $
 
 inherit kde-functions eutils libtool flag-o-matic
 
@@ -18,19 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="cjk cups debug nls qt"
 
-# these dependencies need looking at.
-# does lyx only need qt to compile but not run ?
-# I'll look into it <obz@gentoo.org>
-DEPEND="virtual/x11
-	virtual/tetex
-	>=dev-lang/perl-5
-	nls? ( sys-devel/gettext )
-	app-text/aiksaurus
-	qt? ( =x11-libs/qt-3* )
-	!qt? ( cjk? ( =x11-libs/xforms-1.0-r1 )
-		!cjk? ( =x11-libs/xforms-1* ) )"
-
-RDEPEND="${DEPEND}
+RDEPEND="|| ( (
+			x11-libs/libXi
+			x11-libs/libXrandr
+			x11-libs/libXcursor
+			x11-libs/libXft
+		)
+		virtual/x11
+	)
 	virtual/ghostscript
 	virtual/pdfviewer
 	virtual/psviewer
@@ -42,7 +37,27 @@ RDEPEND="${DEPEND}
 	app-text/noweb
 	dev-tex/chktex"
 
-DEPEND="$DEPEND >=sys-devel/autoconf-2.58"
+# these dependencies need looking at.
+# does lyx only need qt to compile but not run ?
+# I'll look into it <obz@gentoo.org>
+DEPEND="${RDEPEND}
+	|| ( (
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-libs/libXpm
+			x11-proto/xproto
+		)
+		virtual/x11
+	)
+	virtual/tetex
+	>=dev-lang/perl-5
+	nls? ( sys-devel/gettext )
+	app-text/aiksaurus
+	qt? ( =x11-libs/qt-3* )
+	!qt? ( cjk? ( =x11-libs/xforms-1.0-r1 )
+		!cjk? ( =x11-libs/xforms-1* ) )
+	>=sys-devel/autoconf-2.58"
+
 
 src_unpack() {
 	unpack ${P}.tar.bz2
