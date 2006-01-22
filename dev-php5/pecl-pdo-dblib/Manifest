@@ -1,4 +1,4 @@
-MD5 e9630296a2e37867717e1d95dd89cc8b ChangeLog 1299
+MD5 2ad23d4bb70845b79671f6e96ba188d6 ChangeLog 1395
 MD5 47067e80e69167a5983a02e56b46dcff files/digest-pecl-pdo-dblib-1.0 60
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 8c5d99dc51f2ce122edfa14d54bf400d pecl-pdo-dblib-1.0.ebuild 1075
+MD5 dba756f50f9a5705dd70c3738262e71c pecl-pdo-dblib-1.0.ebuild 1074
