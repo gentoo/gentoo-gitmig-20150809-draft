@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8be78466302d913b1e3f4b9e44efdaa4 ChangeLog 13960
 MD5 3a3d6f15ca39ac8335433820d89b0934 eel-1.0.2-r3.ebuild 1053
 MD5 e7a8e50df4d296e6fcb991515167fbf4 eel-2.10.0.ebuild 926
 MD5 ad0630500309a74724515f1447d7229c eel-2.10.1.ebuild 1066
 MD5 3acf3ddf37b102f8f28162e6f80d53aa eel-2.12.1.ebuild 1114
-MD5 f9a74f3c0811442f6922ab438193c5c9 eel-2.12.2.ebuild 1098
+MD5 f7a83e098074db24ec1ac66deb0e4482 eel-2.12.2.ebuild 1097
 MD5 c884c4a35910537301a9beec39b4d3ce files/digest-eel-1.0.2-r3 61
 MD5 89f62dff205403c2cdd39f793f3833d4 files/digest-eel-2.10.0 63
 MD5 d29cf83b3200c45a68efc08a64b9fdef files/digest-eel-2.10.1 63
 MD5 9e2fc1269295e908e26b05b649f2deaa files/digest-eel-2.12.1 63
 MD5 9d2bd2c557293cd000023375cf215c96 files/digest-eel-2.12.2 63
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0vMJSENan+PfizARAu1SAKCdK+oLQaA1PaJEzQfCQg+LngSXXwCcDysW
-cplc43Zcg2v3PlpsqgdV+L4=
-=/OUh
------END PGP SIGNATURE-----

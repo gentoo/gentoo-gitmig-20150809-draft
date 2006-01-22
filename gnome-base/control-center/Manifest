@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5244540010c3a1e96f83eb33021a63a2 ChangeLog 20818
 MD5 d4f0febb27460c43fb258412acde17b8 control-center-1.4.0.5-r1.ebuild 1333
 MD5 7160be1e5e6bca7c0839455c738bbb57 control-center-1.4.0.5-r2.ebuild 1407
 MD5 0061acdf30db726f129a10947d4373bc control-center-1.4.0.5-r3.ebuild 987
 MD5 b328b2668f71ee382c72bca66bd43a96 control-center-2.10.2.ebuild 2128
 MD5 fb5ca50373f5813456ab01b99119916c control-center-2.12.1.ebuild 2523
-MD5 de8e2f64b2d579387a01a6ad80bf8945 control-center-2.12.2-r1.ebuild 2577
+MD5 f2b4c84c68eed369b2d2f88a04850d7f control-center-2.12.2-r1.ebuild 2576
 MD5 dbc915ad73576e8f0ae8a948e52fb621 files/control-center-1.4.0.5-cflags.patch 744
 MD5 09a1e4823269f8f299609708c2db8bb5 files/control-center-1.4.0.5-linguas.patch 528
 MD5 f14d2fe3d15320580a2ab5715e6e2d94 files/control-center-2.10.1-pathfix.patch 6670
@@ -25,10 +22,3 @@ MD5 cd6f25b991e95ef9f518b4c499f2e2f7 files/digest-control-center-2.10.2 75
 MD5 ce951b06688a38662ed2c0e5e8d0d1bc files/digest-control-center-2.12.1 75
 MD5 ee57d7f95478cf42c392dd7c457d4fe7 files/digest-control-center-2.12.2-r1 75
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0whaSENan+PfizARAkUAAJ46HSvF/8Fy9CjaQc+7R1RDIIck0QCfeXrP
-Vrj9BYTHtwU2tj3d61zdQes=
-=Dh2K
------END PGP SIGNATURE-----
