@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 30c3086b77a3de38c20b10188c26d446 Archive-Tar-1.23-r1.ebuild 618
 MD5 ba09cce142bde4bfbe42fde927359c70 Archive-Tar-1.26.ebuild 639
-MD5 df18fcbaa66eb1727d1e6d072f508fc2 ChangeLog 5649
+MD5 f0072c4b9a06ffd0716cc8e38caf1619 Archive-Tar-1.28.ebuild 654
+MD5 6d09e34099ebb54c0f085ec0b313e3ca ChangeLog 5792
 MD5 51ec5b92f118dc1788fb084caa09512c files/digest-Archive-Tar-1.23-r1 67
 MD5 bc76a840fb7f7252a4cd444c2b595e54 files/digest-Archive-Tar-1.26 67
+MD5 40ac7d038107c40253131cca617024a4 files/digest-Archive-Tar-1.28 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDgBNmgIKl8Uu19MoRAn00AJ9puRCUBO5pcv+hoylHFhvFKMAzswCfSyeg
-aIyQ2O0hRdhS1FII4xXJ/Bw=
-=Spe8
+iD8DBQFD07kdtG5z4I8BtQoRAiLSAJ9Gjd8WsXZGn2iv6pjENcwxPtIfdACeLHh9
+K94mJ5R9kjue/Qnbwxu3T5A=
+=y0fV
 -----END PGP SIGNATURE-----
