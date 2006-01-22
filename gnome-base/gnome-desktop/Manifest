@@ -1,4 +1,4 @@
-MD5 26e6ee6ba9a35906913fe043d9519e81 ChangeLog 15503
+MD5 1a92c2efa45672868b3fe8f7534f29c8 ChangeLog 15607
 MD5 79c8cb7777a1a9aaee6cf55091178161 files/digest-gnome-desktop-2.10.0 74
 MD5 fc33ae327ce643e23d6cd59cf5773f27 files/digest-gnome-desktop-2.10.1 74
 MD5 88c70084020fb481d7b76375fb3e09ec files/digest-gnome-desktop-2.10.2 73
@@ -8,5 +8,5 @@ MD5 527372db6ac3daa5ddfc243286890690 gnome-desktop-2.10.0.ebuild 1164
 MD5 ada70d2ac7be7fb407903205feca008b gnome-desktop-2.10.1.ebuild 1165
 MD5 a82f5b9e02c3b83b4f9887a5870dee4a gnome-desktop-2.10.2.ebuild 1167
 MD5 63813ec7aeca76a800dd249d559c1966 gnome-desktop-2.12.1.ebuild 1230
-MD5 f060283e62f9196a1371adeb5374cc6f gnome-desktop-2.12.2.ebuild 1228
+MD5 d2952a1672fce9b93284b8417e53cb36 gnome-desktop-2.12.2.ebuild 1227
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
