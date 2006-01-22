@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.1.16.ebuild,v 1.2 2006/01/21 20:59:54 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.1.16.ebuild,v 1.3 2006/01/22 01:30:04 kumba Exp $
 
 inherit eutils linux-mod
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/libs/klibc/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/libs/klibc/Stable/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 LGPL-2 )"
-KEYWORDS="~amd64 ~mips ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 RESTRICT="nostrip"
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.17 2006/01/22 00:14:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.18 2006/01/22 01:30:04 kumba Exp $
+
+  26 Jan 2006; Joshua Kinard <kumba@gentoo.org>
+  +files/klibc-1.1.16-mips-ldpaths.patch, +files/klibc-1.1.16-mips32.patch,
+  klibc-1.1.1.ebuild, klibc-1.1.16.ebuild, klibc-1.1.16-r1.ebuild:
+  Build fixes for mips - force 32bit build on mips64 systems if not using n32
+  and fix a linker path bug for mips.
 
 *klibc-1.1.16-r1 (22 Jan 2006)
 

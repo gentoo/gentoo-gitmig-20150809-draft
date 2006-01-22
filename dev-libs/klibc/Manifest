@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1405d35f8d27cdff1bf1de46d9902f0 ChangeLog 2736
+MD5 2e2d9313ffe8189d16cb0e02a8694ddb ChangeLog 3043
 MD5 5f74818fe6743d6f26cd199480a6d4ea files/digest-klibc-1.0.14-r1 65
 MD5 9f7934fa62dac32c7a1f7fb7f3c1eff6 files/digest-klibc-1.1 62
 MD5 40dd929bc6cde977c4e309596afcd6fe files/digest-klibc-1.1.1 64
@@ -9,17 +6,12 @@ MD5 0e893c37516ea180bbbdcb60081bbec8 files/digest-klibc-1.1.16 65
 MD5 0e893c37516ea180bbbdcb60081bbec8 files/digest-klibc-1.1.16-r1 65
 MD5 4b098438d57b0f7ad9f16d534fb98eb4 files/klibc-1.0.14-nostdlib.patch 460
 MD5 d771e07746a2d5b2bdac366cd992c885 files/klibc-1.1-mips32.patch 670
+MD5 25555d8cb9cd5bca679f411b73a0d6f8 files/klibc-1.1.16-mips-ldpaths.patch 441
+MD5 bc6971ccb91f090d38a5490d630d8973 files/klibc-1.1.16-mips32.patch 711
 MD5 790a9f0a9a74e6eac6c6c1dbde2a94b6 files/klibc.m4 3619
 MD5 87eac36868c96b295f5b4b631a505db9 klibc-1.0.14-r1.ebuild 4123
-MD5 b6ca70e7577c32b484f33e067d12cd94 klibc-1.1.1.ebuild 4174
-MD5 ffb1dea6d4f5d05b460fe514871cea70 klibc-1.1.16-r1.ebuild 4135
-MD5 27bd12955ef0d8dca931558bab66708f klibc-1.1.16.ebuild 4088
+MD5 7d2be2d1eb8c7df488373415c7a1a5f3 klibc-1.1.1.ebuild 4172
+MD5 92a3930943687a2c731a7a6eab4850cd klibc-1.1.16-r1.ebuild 4240
+MD5 40263c09cc9924e72ca0ce91630b4039 klibc-1.1.16.ebuild 4082
 MD5 8aeec3288335b9aa00b16bf2c0ae45b6 klibc-1.1.ebuild 4165
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0s6P1ZcsMnZjRyIRAmEmAKCttqpGS/Q8JGFboil1H8qe1OrpvwCePWOr
-Za9Ppv5EENm//hdYDvZhLiU=
-=X7uk
------END PGP SIGNATURE-----
