@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 07a49c1791364804eb3a133c7bb47a96 ChangeLog 2890
-MD5 25424634bd29d9751d39cd4028e739fa aalib-1.4_rc4-r2.ebuild 1305
-MD5 2b1888dc37c8a373ec42ad39d3fd1a29 aalib-1.4_rc5.ebuild 1437
+MD5 cdc4f11b86e45a652b93307e1c5dd496 aalib-1.4_rc4-r2.ebuild 1318
+MD5 9dc6494d44fbd759bcc96de042dccc6d aalib-1.4_rc5.ebuild 1450
 MD5 4aff44ab71184e49f997a1b6f0593b83 files/aalib-1.4_rc4-gentoo.patch 1245
 MD5 224b7aa8488763f7d7b4bfa63948adef files/aalib-1.4_rc4-m4.patch 241
 MD5 09587da2537886441b0d5590bfd45d47 files/aalib-1.4_rc5-osx.patch 3121
@@ -14,7 +14,7 @@ MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtmxn2+ySkm8kpY0RAg1uAKCoUCWlaNrCWLJMJshm95wwpDbcUgCfXRb3
-xh0ORKCHk1Mu2mDLcTchc8I=
-=ezv4
+iD8DBQFD075w2+ySkm8kpY0RAgPbAKCR+eBAELEiym/WbzCI7AgwM3Ck6ACeM2Nt
+hpmubTxD1JC0kgtKakNi8dE=
+=5LUS
 -----END PGP SIGNATURE-----

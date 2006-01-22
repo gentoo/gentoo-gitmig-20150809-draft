@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.33 2005/12/31 11:32:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.34 2006/01/22 17:16:11 vapier Exp $
 
 inherit eutils libtool
 
@@ -30,6 +30,7 @@ src_unpack() {
 		cd src
 		epatch "${FILESDIR}"/${PN}-osx.patch
 	fi
+	elibtoolize
 }
 
 src_compile() {
