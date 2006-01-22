@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.62 2006/01/20 22:42:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.63 2006/01/22 03:48:49 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org>
+  sound-juicer-2.12.3.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   sound-juicer-2.12.3.ebuild:
