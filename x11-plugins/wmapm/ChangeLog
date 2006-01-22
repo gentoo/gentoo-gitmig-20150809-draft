@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmapm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/ChangeLog,v 1.8 2006/01/22 12:29:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/ChangeLog,v 1.9 2006/01/22 12:36:21 nelchael Exp $
+
+  22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Moved to desktop-dock.
 
   22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -wmapm-3.1.ebuild,
   wmapm-3.1-r1.ebuild:
