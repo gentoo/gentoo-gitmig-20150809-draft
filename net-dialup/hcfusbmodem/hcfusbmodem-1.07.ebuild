@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.06.ebuild,v 1.1 2005/06/24 05:30:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.07.ebuild,v 1.1 2006/01/22 20:33:16 mrness Exp $
+
+inherit linux-info eutils
 
 DESCRIPTION="hcfusbmodem - Modem driver for Connexant HSF chipset"
 SRC_URI="http://www.linuxant.com/drivers/hcf/full/archive/${P}powerpcfull.tar.gz"
@@ -13,6 +15,12 @@ KEYWORDS="~ppc"
 DEPEND="virtual/libc"
 
 S="${WORKDIR}/${P}powerpcfull"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-upstream-20060122.patch
+}
 
 src_compile() {
 	emake all || die
