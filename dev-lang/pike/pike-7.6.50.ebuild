@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.50.ebuild,v 1.1 2006/01/04 00:25:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.50.ebuild,v 1.2 2006/01/22 17:32:24 genone Exp $
 
 DESCRIPTION="Pike programming language and runtime"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -9,7 +9,7 @@ SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="bzip2 crypt debug doc fftw gdbm gif gmp gtk hardened jpeg kerberos mime mmx mysql opengl pcre pdflib scanner sdl ssl svg tiff truetype zlib"
+IUSE="bzip2 crypt debug doc fftw gdbm gif gmp gtk hardened jpeg kerberos mime mmx mysql opengl pcre pdf scanner sdl ssl svg tiff truetype zlib"
 
 DEPEND="bzip2? ( app-arch/bzip2 )
 	crypt? ( dev-libs/nettle )
@@ -23,7 +23,7 @@ DEPEND="bzip2? ( app-arch/bzip2 )
 	mysql? ( dev-db/mysql )
 	opengl? ( virtual/opengl virtual/glut )
 	pcre? ( dev-libs/libpcre )
-	pdflib? ( media-libs/pdflib )
+	pdf? ( media-libs/pdflib )
 	scanner? ( media-gfx/sane-backends )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )
 	ssl? ( dev-libs/openssl )
@@ -66,7 +66,7 @@ src_compile() {
 			$(use_with opengl GL) \
 			$(use_with opengl GLUT) \
 			$(use_with pcre _Regexp_PCRE) \
-			$(use_with pdflib libpdf) \
+			$(use_with pdf libpdf) \
 			$(use_with scanner sane) \
 			$(use_with sdl SDL) \
 			$(use_with sdl SDL_mixer) \

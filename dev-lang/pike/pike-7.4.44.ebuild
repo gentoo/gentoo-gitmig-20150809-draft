@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation, Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
+# Copyright 1999-2006 Gentoo Foundation, Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.44.ebuild,v 1.5 2004/10/20 15:38:20 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.44.ebuild,v 1.6 2006/01/22 17:32:24 genone Exp $
 
 inherit fixheadtails
 
-IUSE="debug doc gdbm gif gtk java jpeg mysql oci8 odbc opengl pdflib postgres scanner sdl tiff truetype zlib"
+IUSE="debug doc gdbm gif gtk java jpeg mysql oci8 odbc opengl pdf postgres scanner sdl tiff truetype zlib"
 
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -17,7 +17,7 @@ KEYWORDS="x86 ppc"
 
 DEPEND="dev-libs/gmp
 	zlib?	( sys-libs/zlib )
-	pdflib? ( media-libs/pdflib )
+	pdf? ( media-libs/pdflib )
 	gdbm?	( sys-libs/gdbm )
 	java?	( virtual/jdk )
 	scanner? ( media-gfx/sane-backends )
@@ -50,7 +50,7 @@ src_compile() {
 	use mysql 	|| myconf="${myconf} --without-mysql"
 	use debug 	|| myconf="${myconf} --without-debug"
 	use gdbm  	|| myconf="${myconf} --without-gdbm"
-	use pdflib	|| myconf="${myconf} --without-libpdf"
+	use pdf	|| myconf="${myconf} --without-libpdf"
 	use java	|| myconf="${myconf} --without-java"
 	use odbc	|| myconf="${myconf} --without-odbc"
 	use scanner	|| myconf="${myconf} --without-sane"

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.8 2006/01/04 00:23:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.9 2006/01/22 17:32:24 genone Exp $
 
-IUSE="crypt debug doc fftw gdbm gif gtk hardened jpeg kerberos opengl pdflib scanner svg tiff truetype zlib"
+IUSE="crypt debug doc fftw gdbm gif gtk hardened jpeg kerberos opengl pdf scanner svg tiff truetype zlib"
 
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -22,7 +22,7 @@ DEPEND="crypt?	( dev-libs/nettle )
 	kerberos? ( virtual/krb5 )
 	opengl? ( virtual/opengl
 		virtual/glut )
-	pdflib?	( media-libs/pdflib )
+	pdf?	( media-libs/pdflib )
 	scanner? ( media-gfx/sane-backends )
 	svg?	( gnome-base/librsvg )
 	tiff?	( media-libs/tiff )
@@ -48,7 +48,7 @@ src_compile() {
 			`use_with kerberos krb5` \
 			`use_with opengl GL` \
 			`use_with opengl GLUT` \
-			`use_with pdflib libpdf` \
+			`use_with pdf libpdf` \
 			`use_with scanner sane` \
 			`use_with svg` \
 			`use_with tiff tifflib` \

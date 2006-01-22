@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/pike
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.16 2006/01/04 00:25:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.17 2006/01/22 17:32:24 genone Exp $
+
+  22 Jan 2006; Marius Mauch <genone@gentoo.org> pike-7.4.44.ebuild,
+  pike-7.6.6.ebuild, pike-7.6.24.ebuild, pike-7.6.50.ebuild:
+  Replacing pdflib use flag with pdf use flag
 
 *pike-7.6.50 (04 Jan 2006)
 
