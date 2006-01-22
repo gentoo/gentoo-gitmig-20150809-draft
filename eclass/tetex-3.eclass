@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.8 2005/12/04 07:36:49 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.9 2006/01/22 16:23:54 nattfodd Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -112,9 +112,9 @@ tetex-3_src_install() {
 	dodir /etc/texmf/{updmap.d,fmtutil.d,texmf.d}
 	#cp ${D}/usr/share/texmf/web2c/updmap.cfg ${D}/etc/texmf/updmap.d/00updmap.cfg
 	dosym /etc/texmf/web2c/updmap.cfg ${TEXMF_PATH}/web2c/updmap.cfg
-	mv ${D}/usr/share/texmf/web2c/updmap.cfg ${D}/etc/texmf/updmap.d/00updmap.cfg
-	mv ${D}/etc/texmf/web2c/fmtutil.cnf ${D}/etc/texmf/fmtutil.d/00fmtutil.cnf
-	mv ${D}/etc/texmf/web2c/texmf.cnf ${D}/etc/texmf/texmf.d/00texmf.cnf
+	dosym /usr/share/texmf/web2c/updmap.cfg /etc/texmf/updmap.d/00updmap.cfg
+	dosym /etc/texmf/web2c/fmtutil.cnf /etc/texmf/fmtutil.d/00fmtutil.cnf
+	dosym /etc/texmf/web2c/texmf.cnf /etc/texmf/texmf.d/00texmf.cnf
 
 	# xdvi
 	if useq X ; then
