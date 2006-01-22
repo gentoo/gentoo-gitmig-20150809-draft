@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j-r1.ebuild,v 1.6 2005/01/02 06:45:19 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j-r1.ebuild,v 1.7 2006/01/22 18:12:17 genone Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 LICENSE="gnuplot"
 SLOT="0"
 KEYWORDS="-x86 -ppc -sparc -alpha amd64 -ia64"
-IUSE="X readline svga plotutils pdflib doc"
+IUSE="X readline svga plotutils pdf doc"
 
 # Old png driver seems to have problems; switching to gd instead
 DEPEND=">=media-libs/gd-2
-	pdflib? ( media-libs/pdflib )
+	pdf? ( media-libs/pdflib )
 	doc? ( virtual/tetex )
 	X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
@@ -41,7 +41,7 @@ src_compile() {
 		&& myconf="${myconf} --with-plot=/usr/lib" \
 		|| myconf="${myconf} --without-plot"
 
-	myconf="${myconf} `use_with pdflib pdf`"
+	myconf="${myconf} `use_with pdf`"
 	myconf="${myconf} `use_with X x`"
 
 	use readline \

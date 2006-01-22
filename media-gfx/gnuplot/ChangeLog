@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnuplot
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.45 2005/12/13 05:24:49 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.46 2006/01/22 18:12:17 genone Exp $
+
+  22 Jan 2006; Marius Mauch <genone@gentoo.org> gnuplot-3.8j.ebuild,
+  gnuplot-3.8j-r1.ebuild, gnuplot-4.0-r1.ebuild:
+  Replacing pdflib use flag with pdf use flag
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   gnuplot-4.0-r1.ebuild:

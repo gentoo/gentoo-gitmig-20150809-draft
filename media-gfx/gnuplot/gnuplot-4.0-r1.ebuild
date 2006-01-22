@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.18 2005/12/13 05:24:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.19 2006/01/22 18:12:17 genone Exp $
 
 inherit eutils elisp-common
 
@@ -13,12 +13,12 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 LICENSE="gnuplot"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ppc-macos ppc64 s390 sparc x86"
-IUSE="doc emacs gd ggi pdflib plotutils png readline svga X xemacs"
+IUSE="doc emacs gd ggi pdf plotutils png readline svga X xemacs"
 
 DEPEND="
 	xemacs? ( virtual/xemacs )
 	emacs? ( virtual/emacs !app-emacs/gnuplot-mode )
-	pdflib? ( media-libs/pdflib )
+	pdf? ( media-libs/pdflib )
 	ggi? ( media-libs/libggi )
 	png? ( media-libs/libpng )
 	gd? ( >=media-libs/gd-2 )
@@ -47,7 +47,7 @@ src_compile() {
 	myconf="${myconf} $(use_with gd)"
 	myconf="${myconf} $(use_with plotutils plot /usr/lib)"
 	myconf="${myconf} $(use_with png png /usr/lib)"
-	myconf="${myconf} $(use_with pdflib pdf /usr/lib)"
+	myconf="${myconf} $(use_with pdf pdf /usr/lib)"
 
 	use ggi \
 		&& myconf="${myconf} --with-ggi=/usr/lib --with-xmi=/usr/lib" \
