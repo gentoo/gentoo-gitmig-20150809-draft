@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9.ebuild,v 1.2 2005/12/30 18:43:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9.ebuild,v 1.3 2006/01/22 14:19:41 plasmaroo Exp $
 
 inherit eutils
 
@@ -33,7 +33,9 @@ src_compile() {
 
 	# Fix gcl so the "real" Axiom can compile code after we're out of the chroot
 	cp ${FILESDIR}/gcl-2.6.7.fix-out-of-build-root-compile.patch.input ${S}/zips/gcl-2.6.7.fix-out-of-build-root-compile.patch
+	cp ${FILESDIR}/gcl-2.6.7.fix-configure.in-gentoo.patch.input ${S}/zips/gcl-2.6.7.fix-configure.in-gentoo.patch
 	epatch ${FILESDIR}/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
+	epatch ${FILESDIR}/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
 
 	# Sandbox happiness, fix noweb
 	cd ${WORKDIR}
