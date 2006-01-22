@@ -6,3 +6,4 @@ slotmove =gnome-extra/gtkhtml-1* 0 1
 move gnome-extra/libgtkhtml gnome-extra/gtkhtml
 move dev-util/screem app-editors/screem
 move dev-libs/ice dev-cpp/ice
+move dev-embedded/channelgen dev-tinyos/channelgen
