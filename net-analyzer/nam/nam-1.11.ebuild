@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.3 2005/08/28 17:41:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.4 2006/01/22 14:43:14 pva Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="debug"
 need_tclver="8.4.4"
 valid_tclver="${need_tclver}"
 mytclver=""
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libXmu virtual/x11 )
 		>=dev-lang/tcl-${need_tclver}
 		>=dev-lang/tk-${need_tclver}
 		>=dev-tcltk/otcl-1.0.8a

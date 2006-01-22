@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.10.ebuild,v 1.5 2005/02/13 22:27:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.10.ebuild,v 1.6 2006/01/22 14:43:14 pva Exp $
 
 DESCRIPTION="Network Simulator GUI for NS"
 HOMEPAGE="http://www.isi.edu/nsnam/${PN}/"
@@ -12,7 +12,7 @@ IUSE="debug"
 need_tclver="8.4.4"
 valid_tclver="${need_tclver}"
 mytclver=""
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libXmu virtual/x11 )
 		>=dev-lang/tcl-${need_tclver}
 		>=dev-lang/tk-${need_tclver}
 		>=dev-tcltk/otcl-1.0.8a
