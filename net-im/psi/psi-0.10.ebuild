@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.1 2006/01/21 21:12:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.2 2006/01/22 11:26:57 humpback Exp $
 
 inherit eutils qt3
 
@@ -16,9 +16,8 @@ DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http:/psi-im.org/"
 # translations from http://tanoshi.net/language.html
 # polish translation contains special texts for patches from extras-version
-#		extras? ( ${HTTPMIRR}/${PN}-${VER}-gentoo-extras-0.5.tar.bz2  )
 SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
-		extras? ( http://felisberto.net/~humpback/psi/gentoo-psi-0.10.tar.bz2 )
+		extras? ( ${HTTPMIRR}/gentoo-psi-0.10.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-0.9.3.tar.bz2 )
 		linguas_bg? ( ${HTTPMIRR}/psi_bg-0.10-a.tar.bz2 )
 		linguas_ca? ( ${HTTPMIRR}/psi_ca-0.9.3.tar.bz2 )
@@ -66,7 +65,7 @@ RDEPEND="${DEPEND}
 	ssl? ( >=app-crypt/qca-tls-1.0-r2 )
 	crypt? ( >=app-crypt/gnupg-1.2.2 )"
 
-PATCHBASE="${FILESDIR}"
+PATCHBASE="${WORKDIR}"
 PATCHDIR="${PATCHBASE}/${PV}"
 
 src_unpack() {
