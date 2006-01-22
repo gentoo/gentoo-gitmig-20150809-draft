@@ -1,6 +1,9 @@
 # ChangeLog for app-text/clara
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.9 2005/12/24 23:12:18 spock Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.10 2006/01/22 15:24:18 spock Exp $
+
+  22 Jan 2006; Michał Januszewski <spock@gentoo.org> clara-20031214.ebuild:
+  Fixed X-related dependencies (support for modular X).
 
   24 Dec 2005; Michał Januszewski <spock@gentoo.org> clara-20031214.ebuild:
   Updated the homepage and source URIs (bug #115950).
