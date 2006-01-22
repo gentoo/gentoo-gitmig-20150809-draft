@@ -1,4 +1,4 @@
-MD5 2b5623b47f1a58af9bd23f89c87908bb ChangeLog 1162
+MD5 b11dc5537c5d1bb87678a0be7b194dca ChangeLog 1254
 MD5 fa7c0d0ad55b381a4c8aebaa525434a9 files/digest-pecl-yaz-1.0.4 57
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 971a7aa21ea344858d0c2d6aa8292441 pecl-yaz-1.0.4.ebuild 636
+MD5 aa87636acc4782f8f181f4e800c47fdd pecl-yaz-1.0.4.ebuild 635
