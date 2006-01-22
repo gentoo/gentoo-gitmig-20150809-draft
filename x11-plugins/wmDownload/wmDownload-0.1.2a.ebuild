@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a.ebuild,v 1.14 2004/11/24 04:40:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a.ebuild,v 1.15 2006/01/22 11:47:38 nelchael Exp $
 
 S=${WORKDIR}/wmDownload
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc ~sparc"
 
-DEPEND="virtual/libc virtual/x11 x11-libs/docklib
-	>=sys-apps/sed-4"
+DEPEND="x11-libs/libdockapp"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
