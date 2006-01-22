@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 089095cb828cb3da7006fe83c7f39a8c ChangeLog 14823
+MD5 8a162745777feb219b2ea6aa4cb586f8 ChangeLog 14915
 MD5 b1cd4f5d4adf64b0c6ce68ebe818a495 files/digest-gedit-0.9.6-r1 64
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3 66
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3-r1 66
@@ -12,12 +9,5 @@ MD5 291dcd2524b897c18af75968be9c0ef3 gedit-0.9.6-r1.ebuild 905
 MD5 2e3a9745a373aa384d93662c048eea05 gedit-2.10.3-r1.ebuild 1078
 MD5 8f1e9c292ba4538868f72a7413279984 gedit-2.10.3.ebuild 923
 MD5 21be6ae25fea18ed5c0045e4dce9e0bb gedit-2.10.5.ebuild 1024
-MD5 735db21393ff77b91169c62abeff7836 gedit-2.12.1.ebuild 980
+MD5 4d98a810cf75ed33b19fbb449cb28f9a gedit-2.12.1.ebuild 982
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0+bBomPajV0RnrERAnOXAJ9cZls8QJiDmiRt8CbAkeLA8dy+hgCdEBM4
-uk1U6BFV/xeHdzWslOCE9LQ=
-=5SJc
------END PGP SIGNATURE-----
