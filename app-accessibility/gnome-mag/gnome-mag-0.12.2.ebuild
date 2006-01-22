@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.12.2.ebuild,v 1.5 2006/01/22 19:47:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.12.2.ebuild,v 1.6 2006/01/22 20:14:11 dang Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-1.3.11
