@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ecb4747b05b6550bbd3445ca96f7caf6 ChangeLog 409
+MD5 1b7618e2e808abe3ffa7fba11e146ffd files/digest-sun-ejb-spec-2.1 67
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 3b2a6bb8c5da17ff58c5608c07c361f5 sun-ejb-spec-2.1.ebuild 1055
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0vw6ndWRXhKOboURAgKfAKDztMSdgJvZE83Y9BfowAJr0e75gQCg6Ph4
+tzMVDhGgeul4L+KZ7/7vm4g=
+=nJ7C
+-----END PGP SIGNATURE-----
