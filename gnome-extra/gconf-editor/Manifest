@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fec891017949efe55e7d06ab4f33f01f ChangeLog 7672
 MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
 MD5 0447e714b91ff808a549c4f667aedeb8 files/digest-gconf-editor-2.12.0 72
@@ -8,3 +11,10 @@ MD5 2bff53343f5d7957c8a7703615dd35b9 gconf-editor-2.12.0.ebuild 722
 MD5 b7f4e7bb93cc5ebfd6f9061e9e48c087 gconf-editor-2.12.1.ebuild 722
 MD5 e4aa9d6ef39937d97a1324819c0ccc1d gconf-editor-2.8.2.ebuild 687
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0vhsSENan+PfizARAgiRAKCMT/PvYxUqW1i1jGnMadrw4pc7wwCfdYQM
+wSqYUasMPM0ppjyPqXXXglw=
+=GFZD
+-----END PGP SIGNATURE-----
