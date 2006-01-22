@@ -1,10 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13.ebuild,v 1.3 2005/12/07 11:26:17 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13-r2.ebuild,v 1.1 2006/01/22 17:43:41 vanquirius Exp $
 
-inherit eutils
+inherit eutils versionator
 
-MY_P=arpwatch-2.1a13
+#MY_P=${PN}-${PV%.*}a${PV##*.}
+MY_P="${PN}-$(replace_version_separator 2 'a')"
 DESCRIPTION="An ethernet monitor program that keeps track of ethernet/ip address pairings"
 HOMEPAGE="http://www-nrg.ee.lbl.gov/"
 SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
@@ -50,16 +51,14 @@ src_install () {
 	keepdir /var/lib/arpwatch
 
 	make DESTDIR="${D}" install || die "install failed"
-
 	doman *.8
 	dodoc README CHANGES
 
-
-	exeinto /var/lib/arpwatch
+	exeinto /usr/share/doc/${PF}/
 	exeopts -m0755 -o arpwatch -g arpwatch
 	doexe arp2ethers arpfetch bihourly massagevendor massagevendor-old
 
-	insinto /var/lib/arpwatch
+	insinto /usr/share/doc/${PF}/
 	insopts -m0644 -o arpwatch -g arpwatch
 	doins d.awk duplicates.awk e.awk euppertolower.awk p.awk
 
@@ -70,9 +69,13 @@ src_install () {
 	newinitd "${FILESDIR}/arpwatch.init" arpwatch
 
 	newconfd "${FILESDIR}/arpwatch.confd" arpwatch
-
 }
+
 pkg_postinst() {
 	einfo "If you want arpwatch to start at boot then type:"
-	ewarn "      rc-update add arpwatch default"
+	einfo "      rc-update add arpwatch default"
+	einfo "To enable arpwatch to run as a user please uncomment"
+	einfo "the appropriate line in /etc/conf.d/arpwatch"
+	einfo "Some scripts that come with the package are in:"
+	einfo "/usr/share/doc/${PF}/"
 }
