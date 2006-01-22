@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/pecl-pdo-oci-1.0.ebuild,v 1.6 2006/01/22 00:51:58 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-oci/pecl-pdo-oci-1.0.ebuild,v 1.7 2006/01/22 15:06:53 blubb Exp $
 
 PHP_EXT_NAME="pdo_oci"
 PHP_EXT_PECL_PKG="PDO_OCI"
@@ -9,7 +9,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="-* ~amd64 ia64 x86"
+KEYWORDS="-* amd64 ia64 x86"
 DESCRIPTION="PHP Data Objects (PDO) Driver For Oracle Call Interface (OCI)."
 LICENSE="PHP"
 SLOT="0"
