@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jing
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.13 2005/07/12 18:11:17 axxo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.14 2006/01/22 05:30:44 nichoj Exp $
+
+  22 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/jing-20030619-xerces.patch, jing-20030619-r1.ebuild:
+  Added patch to fix compilation with xerces-2.7 to fix bug #119366.
 
   12 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jing-20030619-r1.ebuild:
   Style/Dep fixes

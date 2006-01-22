@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619-r1.ebuild,v 1.6 2005/07/12 18:11:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619-r1.ebuild,v 1.7 2006/01/22 05:30:44 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unzip -qq -d src/ src.zip || die "failed to unzip"
 	cd src/
 	epatch ${FILESDIR}/build-patch.diff
+	epatch ${FILESDIR}/${P}-xerces.patch
 
 	cd ../bin/
 	rm -f *.jar
