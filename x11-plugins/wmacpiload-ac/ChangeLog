@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmacpiload-ac
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.4 2005/10/01 23:36:11 morfic Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.5 2006/01/22 12:14:11 nelchael Exp $
+
+  22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  wmacpiload-ac-0.1.2_p3.ebuild:
+  Fixed DEPEND for modular X.
 
   01 Oct 2005; Daniel Goller <morfic@gentoo.org>
   wmacpiload-ac-0.1.2_p3.ebuild:

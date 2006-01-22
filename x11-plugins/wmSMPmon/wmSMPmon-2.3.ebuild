@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/wmSMPmon-2.3.ebuild,v 1.4 2005/07/09 15:56:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/wmSMPmon-2.3.ebuild,v 1.5 2006/01/22 12:05:43 nelchael Exp $
 
 IUSE=""
 DESCRIPTION="SMP system monitor dockapp"
@@ -11,9 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
 
-DEPEND="virtual/libc
-	virtual/x11
-	>=sys-apps/sed-4"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )"
 
 S="${WORKDIR}/${PN}-2.x/${PN}"
 
