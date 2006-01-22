@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5.ebuild,v 1.1 2004/12/27 20:20:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5.ebuild,v 1.2 2006/01/22 16:40:54 markusle Exp $
 
 IUSE=""
 
@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND="sys-libs/ncurses
-	virtual/x11"
+	|| ( ( x11-libs/libXaw
+		x11-proto/xproto
+		)
+		virtual/x11 )"
 
 S=${WORKDIR}/${MY_P}
 
