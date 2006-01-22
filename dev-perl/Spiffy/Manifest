@@ -1,4 +1,6 @@
-MD5 87bedbdd0bcfaf540d018d588f006be8 ChangeLog 528
+MD5 1e84a55a70954d2093ae799cff0c4701 ChangeLog 663
 MD5 edcb433b2ae86259e3bc14b793185eb6 Spiffy-0.26.ebuild 516
+MD5 6ed7e346018b9b894ee7f40660fa5f5b Spiffy-0.29.ebuild 516
 MD5 00131c43fdd9f09a6b92820e1d76fbc9 files/digest-Spiffy-0.26 62
+MD5 fde8adb2efa125b5f6639f260ad1e8a0 files/digest-Spiffy-0.29 62
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

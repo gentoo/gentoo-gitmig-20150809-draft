@@ -1,4 +1,6 @@
-MD5 3d06bee769b1a89ed873d7cea38afaad ChangeLog 546
+MD5 cf8dc3dd76de8ae799264693576ccdc4 ChangeLog 689
 MD5 094d4687ab540cdd04b124332d01583b Test-Base-0.46.ebuild 570
+MD5 88ab9da6c08ebbda71adfdfe8377b0ba Test-Base-0.47.ebuild 570
 MD5 b002bea709358ae8df6590f9355cf00e files/digest-Test-Base-0.46 65
+MD5 bbf6a4c8797df2877f1b92c293189d5c files/digest-Test-Base-0.47 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
