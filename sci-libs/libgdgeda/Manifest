@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e66b421413b7ff80804820328b37d831 ChangeLog 802
 MD5 ebd85aeeca675d66f010bdee5c69dfff files/digest-libgdgeda-2.0.15 68
-MD5 eadcc63fb153274feeb8ac23581b7ca3 libgdgeda-2.0.15.ebuild 617
+MD5 d27f6e4b662389de90085abc5e499ad6 libgdgeda-2.0.15.ebuild 624
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDnv3YomPajV0RnrERAuKfAJ4weRK52ZqFgBqa6n83ui9FAlnZJwCeJC8C
-C5ngomiC17RCSwVRnJ2oPWY=
-=adas
------END PGP SIGNATURE-----

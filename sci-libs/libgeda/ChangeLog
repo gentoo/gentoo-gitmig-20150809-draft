@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeda
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.7 2005/12/13 16:59:53 dang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.8 2006/01/22 00:30:34 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> libgeda-20050820.ebuild:
+  Added ~sparc keyword wrt bug #119765.
 
   13 Dec 2005; <dang@gentoo.org> libgeda-20050820.ebuild:
   Marked ~amd64
