@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.7.1.ebuild,v 1.1 2005/10/15 11:46:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.8.1.ebuild,v 1.1 2006/01/22 12:14:01 ferdy Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~alpha"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-util/git-0.99"
+RDEPEND=">=dev-util/git-1.1.0"
 
 src_install() {
 	sed -i -e 's-\(prefix:\) ~-\1 /usr-' setup.cfg
