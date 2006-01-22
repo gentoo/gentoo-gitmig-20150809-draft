@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.14 2006/01/22 13:23:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.15 2006/01/22 19:56:16 dang Exp $
+
+  22 Jan 2006; <dang@gentoo.org> iso-codes-0.49.ebuild:
+  Marked stable on amd64 per bug #119634
 
   22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   iso-codes-0.49.ebuild:
