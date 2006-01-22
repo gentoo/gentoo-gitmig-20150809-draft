@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 00b5938e692e8bb645b41845b0f783e1 ChangeLog 8713
+MD5 0a87846293e88e1bf8b8c952c8f9bb72 ChangeLog 8821
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14 71
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r1 71
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r2 71
@@ -11,12 +11,12 @@ MD5 4eed4de8024d2cf496f50695b0a5e71f files/scrollkeeper-0.3.14-nls.patch 10005
 MD5 865456e567efe5df6f1069f2d99b46ed files/scrollkeeper-logrotate 265
 MD5 50da2ea188fbcc09d9f995915da8af85 metadata.xml 183
 MD5 82d51678f39dcc2f1ace5219780b8db5 scrollkeeper-0.3.14-r1.ebuild 2544
-MD5 2b70db5dd1a9bb2c8796402877a04e9b scrollkeeper-0.3.14-r2.ebuild 2465
+MD5 17044fdca9dd6ec35f338563d6765854 scrollkeeper-0.3.14-r2.ebuild 2466
 MD5 6a5f16d1c02485adc69fffaa6d44bfe1 scrollkeeper-0.3.14.ebuild 2446
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD0wE/SENan+PfizARAs7uAJ9/UOcvZ7zmn1C6xVIMqIeAO7zF7QCfT6oz
-KolkkRQF92m1wagC8+DF16c=
-=JGZ0
+iD8DBQFD04lPKRy60XGEcJIRAsMhAJ0cPv6C1o3/xI3Id9vqCquE7Xv6BQCeOEkQ
+fnNVqN7InkfzmyUYf5/lh8w=
+=siJH
 -----END PGP SIGNATURE-----
