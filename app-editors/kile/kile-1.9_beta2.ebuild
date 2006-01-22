@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_beta2.ebuild,v 1.2 2006/01/18 19:32:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_beta2.ebuild,v 1.3 2006/01/22 11:00:21 ehmsen Exp $
 
 inherit kde
 
@@ -18,6 +18,7 @@ IUSE="kde"
 
 RDEPEND="dev-lang/perl
 	virtual/tetex
+	dev-tex/latex2html
 	kde? ( || ( ( kde-base/kpdf
 	              kde-base/kghostview
 	              kde-base/kdvi
