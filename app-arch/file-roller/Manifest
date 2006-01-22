@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2744d9bbd1914034125c6e433aa8c3a8 ChangeLog 17532
+MD5 7457576186a8c4d6b69b2f7b9d64ed56 ChangeLog 17664
 MD5 6a822233a7d4799925d086c7fe2b743e file-roller-2.10.0-r1.ebuild 1489
 MD5 fab7851231fc02801db3f51c775a447a file-roller-2.10.3.ebuild 1354
 MD5 ca9d6d105d2d3b03f4e87a84e637a1de file-roller-2.10.4.ebuild 1408
 MD5 e50968e75d2b69cc87787c176ef6ced4 file-roller-2.12.1.ebuild 1385
-MD5 7c7f88b1dd484abb357184ed68368c29 file-roller-2.12.2.ebuild 1383
+MD5 9126c21a0b21697fba8fbce5a4f49d2d file-roller-2.12.2.ebuild 1380
 MD5 d779986864325c09e5caba951a634f9a files/digest-file-roller-2.10.0-r1 72
 MD5 be190f54f0aaa0ff36a6d17c56e1a5b6 files/digest-file-roller-2.10.3 72
 MD5 639fd7660e2205b9a529b1df15ff765b files/digest-file-roller-2.10.4 72
@@ -20,9 +20,9 @@ MD5 67f58f96b7c00be703c9bf9cf38cd191 files/file-roller-2.8.0-use_bin_tar.patch 4
 MD5 d23f66e1c734a44ce6ee89b0e724b371 files/rpm2cpio-file-roller 2556
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0WdPKRy60XGEcJIRApHIAKCg32oTNsO0opuyJiDPNvhn0/5J/gCgpR3k
-diBmgK2fdUfIQ5BzPdif+bQ=
-=S7H7
+iD8DBQFD0vf3SENan+PfizARAi4LAJ9QKS3xItjoGq8Re/L4ryevSXbG/gCeLDan
+q97k+TqWkzta+3x9KnOVGP0=
+=K/AL
 -----END PGP SIGNATURE-----

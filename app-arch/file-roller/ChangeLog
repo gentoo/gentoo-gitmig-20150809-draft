@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.145 2006/01/20 22:42:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.146 2006/01/22 03:08:21 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> file-roller-2.12.2.ebuild:
+  Stable on x86 for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   file-roller-2.12.2.ebuild:
