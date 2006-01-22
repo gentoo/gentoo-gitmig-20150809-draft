@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.18.ebuild,v 1.3 2005/12/31 21:26:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.1.ebuild,v 1.1 2006/01/22 12:42:31 dragonheart Exp $
 
 inherit java-pkg
 
@@ -10,10 +10,11 @@ SRC_URI="ftp://alpha.gnu.org/pub/gnu/libidn/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="java doc nls emacs"
 
-DEPEND="java? ( >=virtual/jdk-1.4 )"
+DEPEND="java? ( >=virtual/jdk-1.4
+				dev-java/gjdoc )"
 RDEPEND="java? ( >=virtual/jre-1.4 )"
 
 src_compile() {

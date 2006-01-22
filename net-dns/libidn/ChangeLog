@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/libidn
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.38 2005/10/26 17:13:43 carlo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.39 2006/01/22 12:42:31 dragonheart Exp $
+
+*libidn-0.6.1 (22 Jan 2006)
+
+  22 Jan 2006; Daniel Black <dragonheart@gentoo.org> -libidn-0.5.18.ebuild,
+  +libidn-0.6.1.ebuild:
+  version bump - checked with curl. removed older version. ppc64 dropped 
+  due to new dependency as per bug #119910.
 
 *libidn-0.5.20 (26 Oct 2005)
 
