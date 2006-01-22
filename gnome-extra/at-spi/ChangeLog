@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.104 2006/01/22 13:34:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.105 2006/01/22 19:51:58 dang Exp $
+
+  22 Jan 2006; <dang@gentoo.org> at-spi-1.6.6-r1.ebuild:
+  Marked stable on amd64 per bug #119634
 
   22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   at-spi-1.6.6-r1.ebuild:
