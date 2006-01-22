@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ef3223d513679a60f3d14659cb5c31e ChangeLog 17687
+MD5 8db9a941a5cecc254ccb61e3719ff9ed ChangeLog 17833
 MD5 4afb7240de6f033dc7cd147c38d2b06f files/digest-libxml2-2.6.20-r2 68
 MD5 185f99db7f8b720eb02aa1fb59bd57b9 files/digest-libxml2-2.6.22 68
 MD5 b9b6f547f58add3111d351dccca5142a files/digest-libxml2-2.6.23 68
 MD5 f0c57d3000da7a65966ef827bc3243fc libxml2-2.6.20-r2.ebuild 2357
 MD5 db40c499e56cf2734f79e30b625415e1 libxml2-2.6.22.ebuild 2607
-MD5 3838169e8c01a25918d0dfaafedf7135 libxml2-2.6.23.ebuild 2577
+MD5 8904f5706a586be806d40ddb145db784 libxml2-2.6.23.ebuild 2580
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0u3zSENan+PfizARAvBuAKCNZ1LiDbMjCWk9HGu2zG9RpKjWMwCglUBQ
-HiGGPA6y9WFps9Ie+8XP4bo=
-=PZOg
------END PGP SIGNATURE-----
