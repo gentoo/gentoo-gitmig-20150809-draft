@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1688 2006/01/22 20:17:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1689 2006/01/22 22:44:25 wrobel Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -73,6 +73,7 @@ app-editors/vim:vim-with-x - Link console vim against X11 libraries to enable ti
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-emacs/auctex:preview-latex - Use bundled preview-latex
+app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emulation/bochs:debugger - Enable the bochs debugger
 app-emulation/emul-linux-ppc-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
