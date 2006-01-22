@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49938411789e0b08dfea6eb3aeb72639 ChangeLog 4723
+MD5 685459f246beb9452b0587ab610df145 ChangeLog 4853
 MD5 0731a8a0e452b8680e9c1a35542a7cf0 files/digest-libglademm-2.0.1 68
 MD5 66fd7d47c340bb225311c438b12ceca1 files/digest-libglademm-2.2.0 69
 MD5 512533da32d18333ca7dbb1a7c33224c files/digest-libglademm-2.4.0 69
@@ -15,12 +12,5 @@ MD5 884259438edca450cc99ec740e79db33 libglademm-2.2.0.ebuild 762
 MD5 ff5849a0091cc7bcce805308ce46835c libglademm-2.4.0.ebuild 798
 MD5 52f96c5504d1190c74869abb152171c1 libglademm-2.4.1.ebuild 728
 MD5 63d0da3d2578d24d9c025eeae32e6b45 libglademm-2.6.0.ebuild 717
-MD5 6902a703077cfb603a8eb2f92da0e6e4 libglademm-2.6.1.ebuild 718
+MD5 a6696108820e631d9d62c15e0f525d90 libglademm-2.6.1.ebuild 715
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0W5ZKRy60XGEcJIRAkOrAKCAIFJmmZwdFqt2FHzk0Baz2WEl9ACdFMcj
-6CI9faSZfMeOOIPatCfrtk0=
-=9bnN
------END PGP SIGNATURE-----
