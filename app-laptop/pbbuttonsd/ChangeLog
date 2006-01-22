@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.39 2006/01/19 17:31:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.40 2006/01/22 06:55:12 josejx Exp $
+
+*pbbuttonsd-0.7.3.6g (22 Jan 2006)
+
+  22 Jan 2006; Joseph Jezak <josejx@gentoo.org> +pbbuttonsd-0.7.3.6g.ebuild:
+  Latest beta with Fn key support for the new powerbooks.
 
 *pbbuttonsd-0.7.3.5g (19 Jan 2006)
 
