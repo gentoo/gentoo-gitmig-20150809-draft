@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.21.ebuild,v 1.1 2006/01/22 16:53:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.21.ebuild,v 1.2 2006/01/22 17:20:47 tove Exp $
 
 inherit toolchain-funcs multilib
 
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i 's/^#define DEF_FONT.*/#define DEF_FONT "fixed"/' evilwm.h \
+		|| die "sed font failed"
 	sed -i '/^CFLAGS/s/ -Os / /' Makefile || die "sed opt failed"
 }
 
