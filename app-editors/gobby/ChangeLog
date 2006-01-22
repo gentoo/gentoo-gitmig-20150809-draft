@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.7 2005/12/09 18:36:00 humpback Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.8 2006/01/22 05:08:13 tsunam Exp $
+
+  22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> gobby-0.3.0.ebuild:
+  stable on x86 for bug #115113
 
 *gobby-0.3.0 (09 Dec 2005)
 
