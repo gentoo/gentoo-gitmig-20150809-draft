@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.78 2006/01/08 21:42:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.79 2006/01/22 19:59:19 dsd Exp $
+
+  22 Jan 2006; Daniel Drake <dsd@gentoo.org> easytag-1.99.11.ebuild:
+  RDEPEND should be DEPEND. Thanks to Mark Loeser for pointing this out.
 
   08 Jan 2006; Jeroen Roovers <jer@gentoo.org> easytag-1.99.11.ebuild:
   Marked ~hppa (bug #111427).
