@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c15c76f8401da37d84e24388455edc9 ChangeLog 4071
 MD5 5fd677b22e214f23f6647c324c161f4e PEAR-Net_Sieve-1.1.1-r1.ebuild 528
 MD5 dfe9afc891a05681916e6cb280e8098e PEAR-Net_Sieve-1.1.1.ebuild 534
 MD5 18d89c9aa63c77fb9e800790e7bd4f8f files/digest-PEAR-Net_Sieve-1.1.1 62
 MD5 18d89c9aa63c77fb9e800790e7bd4f8f files/digest-PEAR-Net_Sieve-1.1.1-r1 62
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0zhtCRZPokWLroQRAlHXAKCC55Utj1uRU5RJRhxmyXQb4tY8gwCg2IKT
+OqtrUNkRjWqy8T7rt1qCYZc=
+=SJ7j
+-----END PGP SIGNATURE-----
