@@ -1,9 +1,9 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.140 2006/01/22 01:13:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.141 2006/01/22 01:50:23 nerdboy Exp $
 
   22 Jan 2006; Steve Arnold <nerdboy@gentoo.org>
-  vanilla-sources-2.4.31.ebuild:
+  vanilla-sources-2.4.31.ebuild, vanilla-sources-2.4.32.ebuild:
   Keywording for ~ppc (needed for kurobox and LinkStation)
 
 *vanilla-sources-2.6.16_rc1 (17 Jan 2006)
