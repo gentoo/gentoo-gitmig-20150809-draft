@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/ognl
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.1 2006/01/22 03:12:19 nichoj Exp $
+
+*ognl-2.6.7 (22 Jan 2006)
+
+  22 Jan 2006; Joshua Nichols <nichoj@gentoo.org> +metadata.xml,
+  +ognl-2.6.7.ebuild:
+  Initial import. Dependency to build oscore from source (bug #63282).
+

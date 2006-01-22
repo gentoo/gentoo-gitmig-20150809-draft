@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7e35d3debb560b2af94470b6fefabd22 ChangeLog 385
+MD5 1b99e0c13b616536de7d7db8584ffd6d files/digest-ognl-2.6.7 64
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 2ce185d43b09a126dd80461b54a3e9f9 ognl-2.6.7.ebuild 1071
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0vVDndWRXhKOboURAocCAKCm+szqSPsKzAtFVp3W8US2fN6eTgCg4Axw
+S7Sqtg8BxtvBb+DqLB7PCak=
+=Oux+
+-----END PGP SIGNATURE-----
