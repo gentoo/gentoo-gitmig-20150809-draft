@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.43 2006/01/22 19:04:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.44 2006/01/22 19:54:23 corsair Exp $
+
+  22 Jan 2006; Markus Rothe <corsair@gentoo.org> pkgconfig-0.20.ebuild:
+  Stable on ppc64
 
   22 Jan 2006; <dang@gentoo.org> pkgconfig-0.20.ebuild:
   Marked stable on amd64 per bug #119634
