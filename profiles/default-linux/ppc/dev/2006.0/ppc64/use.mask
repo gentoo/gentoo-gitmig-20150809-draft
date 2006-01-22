@@ -40,7 +40,6 @@ hyperwave
 informix
 ingres
 oracle7
-oci8
 pfpro
 solid
 sybase
