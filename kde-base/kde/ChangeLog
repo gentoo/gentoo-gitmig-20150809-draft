@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.132 2005/12/17 20:51:00 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.133 2006/01/22 11:28:05 corsair Exp $
+
+  22 Jan 2006; Markus Rothe <corsair@gentoo.org> kde-3.4.3.ebuild:
+  Stable on ppc64
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> kde-3.5.0.ebuild:
   Added ~ppc64
