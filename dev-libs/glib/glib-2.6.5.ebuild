@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.5.ebuild,v 1.11 2005/12/27 07:55:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.5.ebuild,v 1.12 2006/01/22 02:14:48 tsunam Exp $
 
 inherit libtool eutils flag-o-matic
 
