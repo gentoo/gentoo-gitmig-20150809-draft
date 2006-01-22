@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.5 2005/08/19 01:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.6 2006/01/22 19:32:51 wolf31o2 Exp $
 
 
 inherit flag-o-matic eutils games
@@ -20,14 +20,17 @@ IUSE="dedicated opengl"
 
 RDEPEND="sys-libs/zlib
 	opengl? (
-		virtual/x11
 		virtual/opengl
 		media-libs/libsdl
 		media-libs/sdl-image
-		media-libs/libpng
-	)"
+		media-libs/sdl-mixer
+		media-libs/jpeg
+		media-libs/libpng )"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	|| (
+		x11-libs/libX1
+		virtual/x11 )"
 
 src_compile() {
 	filter-flags -fno-exceptions
