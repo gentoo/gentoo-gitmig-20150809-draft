@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 38252d2655e0dd96ad50e6a3ec5c7574 ChangeLog 11853
+MD5 2abf0324a42e804aeb0745c473659f54 ChangeLog 11999
 MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15-r1 64
@@ -16,12 +13,5 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa4d3fbbdfc954475759cebe1f450a58 vte-0.11.13-r2.ebuild 1401
 MD5 cf8a45837bc6fdc036e01d2fe916a545 vte-0.11.15-r1.ebuild 1394
 MD5 f389741157c2b244d42781121f5e597a vte-0.11.15.ebuild 1294
-MD5 7baaf535a1b57ed97e4476671831c4ed vte-0.11.16-r1.ebuild 1350
+MD5 6d11127c977828c27a7e6cdd7a8d9682 vte-0.11.16-r1.ebuild 1353
 MD5 c1bb4fc20b0ddfa11a4e7ba3a28e52e3 vte-0.11.16.ebuild 1297
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0wJrSENan+PfizARAgejAJ9BkXhcYFOHdse0/SS3GnrY3aUXyQCeNRiv
-ngEpERfS2/h/fRBL149O6dM=
-=fxAU
------END PGP SIGNATURE-----
