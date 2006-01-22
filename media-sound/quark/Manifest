@@ -1,4 +1,14 @@
-MD5 0df263a4967cf403af5ac1b936ad8212 metadata.xml 246
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f9ce994ef9a1553564ec53d5d317c915 ChangeLog 924
-MD5 f26ea2d3500d9f6b34955eebd7e6c413 quark-3.21.ebuild 804
 MD5 1e33c8d5bb524f68369ad64a2c7e0933 files/digest-quark-3.21 62
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 f26ea2d3500d9f6b34955eebd7e6c413 quark-3.21.ebuild 804
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0/58V3J2n04EauwRAtYVAJ9TUV0fUnb45uEZXrNctbqmU8xhVwCfbPUs
+8S2NtoDLipbfM1NNw48/79I=
+=PtyU
+-----END PGP SIGNATURE-----
