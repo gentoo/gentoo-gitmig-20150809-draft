@@ -1,6 +1,18 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.129 2006/01/12 14:24:24 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.130 2006/01/22 21:27:54 augustus Exp $
+
+*nvidia-kernel-1.0.7174-r1 (22 Jan 2006)
+
+  22 Jan 2006; Kristopher Kersey <augustus@gentoo.org>
+  +files/1.0.7174/NVIDIA_kernel-1.0-7174-1258475.diff,
+  +files/1.0.7174/NVIDIA_kernel-1.0-7174-1296092.diff,
+  +files/1.0.7174/NVIDIA_kernel-1.0-7174-1321905.diff,
+  +files/1.0.7174/NVIDIA_kernel-1.0-7174-1361053.diff,
+  +files/1.0.7174/NVIDIA_kernel-1.0-7174-1386866.diff,
+  +nvidia-kernel-1.0.7174-r1.ebuild:
+  Added all 1.0.7174 provided by Zander for people still using 7174.  Bug
+  #118835.
 
 *nvidia-kernel-1.0.8178-r2 (12 Jan 2006)
 
