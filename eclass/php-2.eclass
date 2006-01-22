@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.19 2005/09/25 12:30:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.20 2006/01/22 18:52:00 genone Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This eclass is the old style of php, that was used before php-core was
@@ -35,7 +35,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdf png postgres qt snmp spell ssl tiff truetype xml2"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -68,7 +68,7 @@ RDEPEND="
    nls? ( sys-devel/gettext )
    odbc? ( >=dev-db/unixODBC-1.8.13 )
    pam? ( >=sys-libs/pam-0.75 )
-   pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b
+   pdf? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b
              >=media-libs/libpng-1.2.5 >=media-libs/tiff-3.5.5 )
    png? ( >=media-libs/libpng-1.2.5 )
    postgres? ( >=dev-db/postgresql-7.1 )

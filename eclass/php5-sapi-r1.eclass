@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.20 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.21 2006/01/22 18:52:00 genone Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -21,14 +21,14 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP-3"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="adabas bcmath berkdb birdstep bzip2 calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro firebird ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+IUSE="adabas bcmath berkdb birdstep bzip2 calendar cdb pdf crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro firebird ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
 	!<=dev-php/php-4.99.99
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
-	cpdflib? ( >=media-libs/clibpdf-2 )
+	pdf? ( >=media-libs/clibpdf-2 )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.5 )
 	fam? ( virtual/fam )
@@ -186,7 +186,7 @@ php5-sapi-r1_check_awkward_uses() {
 		enable_extension_with 	"gd" 			"gd" 		0
 	fi
 
-	confutils_use_depend_any "jpeg" "gd" "gd-external" "cpdflib"
+	confutils_use_depend_any "jpeg" "gd" "gd-external" "pdf"
 	confutils_use_depend_any "png"  "gd" "gd-external"
 	confutils_use_depend_any "tiff" "gd" "gd-external"
 	confutils_use_depend_any "xpm"  "gd" "gd-external"
@@ -349,7 +349,7 @@ php5-sapi-r1_src_compile() {
 	enable_extension_enable		"bcmath"		"bcmath"		1
 	enable_extension_with		"bz2"			"bzip2"			1
 	enable_extension_enable		"calendar"		"calendar"		1
-	enable_extension_with		"cpdflib"		"cpdflib"		1 # depends on jpeg
+	enable_extension_with		"cpdflib"		"pdf"		1 # depends on jpeg
 	enable_extension_disable	"ctype"			"ctype"			0
 	enable_extension_with		"curl"			"curl"			1
 	enable_extension_with		"curlwrappers"	"curlwrappers"	1
