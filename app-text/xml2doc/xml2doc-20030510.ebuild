@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510.ebuild,v 1.12 2005/12/01 05:21:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510.ebuild,v 1.13 2006/01/22 18:15:31 genone Exp $
 
-IUSE="pdflib"
+IUSE="pdf"
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An XML processor tool that allows for converting documents written in simple XML to a variety of document formats (eg pdf,html,txt,manpage)"
@@ -14,12 +14,10 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~hppa ~mips amd64 ia64 ppc64"
 
 DEPEND=">=dev-libs/libxml2-2.5
-	pdflib? ( >=media-libs/pdflib-4 )"
+	pdf? ( >=media-libs/pdflib-4 )"
 
 src_compile() {
-	use pdflib || myconf="${myconf} --disable-pdf"
-
-	econf `use_enable pdflib pdf` || die
+	econf `use_enable pdf` || die
 	emake || die
 }
 
