@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/syncekonnector
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.4 2006/01/18 08:01:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.5 2006/01/22 01:32:49 chriswhite Exp $
+
+  22 Jan 2006; Chris White <chriswhite@gentoo.org>
+  syncekonnector-0.3_pre20060108.ebuild,
+  syncekonnector-0.3_pre20060117.ebuild:
+  Explicit mirror://gentoo in SRC_URI.
 
 *syncekonnector-0.3_pre20060117 (18 Jan 2006)
 

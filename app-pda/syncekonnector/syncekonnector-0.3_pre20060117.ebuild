@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/syncekonnector-0.3_pre20060117.ebuild,v 1.1 2006/01/18 08:01:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/syncekonnector-0.3_pre20060117.ebuild,v 1.2 2006/01/22 01:32:49 chriswhite Exp $
 
 inherit eutils kde autotools
 
 DESCRIPTION="Synchronize Windows CE devices with Linux.  KDE Konnector."
 HOMEPAGE="http://synce.sourceforge.net/synce/kde/"
-SRC_URI="${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
