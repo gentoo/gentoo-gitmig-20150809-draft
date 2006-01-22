@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgdgeda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgdgeda/ChangeLog,v 1.4 2006/01/22 00:31:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgdgeda/ChangeLog,v 1.5 2006/01/22 14:33:00 plasmaroo Exp $
+
+  22 Jan 2006; <plasmaroo@gentoo.org> libgdgeda-2.0.15.ebuild:
+  Port over to modular X.
 
   22 Jan 2006; Jason Wever <weeve@gentoo.org> libgdgeda-2.0.15.ebuild:
   Added ~sparc keyword wrt bug #119765.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgdgeda/libgdgeda-2.0.15.ebuild,v 1.3 2006/01/22 00:31:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgdgeda/libgdgeda-2.0.15.ebuild,v 1.4 2006/01/22 14:33:00 plasmaroo Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgdgeda - a PNG creation library for gEDA"
@@ -13,7 +13,11 @@ SLOT="0"
 
 DEPEND=">=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
-	virtual/x11"
+	|| ( (	x11-libs/libXt
+		x11-libs/libXpm
+	     )
+	     virtual/x11
+	)"
 
 src_compile() {
 
