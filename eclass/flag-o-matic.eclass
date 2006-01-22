@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.104 2006/01/14 10:52:12 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.105 2006/01/22 17:51:27 kevquinn Exp $
 
 
 # need access to emktemp()
@@ -21,9 +21,15 @@ inherit eutils toolchain-funcs multilib
 # Replace march/mcpu flags that specify <old.cpus>
 # with flags that specify <new.cpu>
 #
-#### is-flag <flag> ####
+#### is-flag[q] <flag> ####
 # Returns "true" if flag is set in C[XX]FLAGS
 # Matches only complete a flag
+# q version sets return code but doesn't echo
+#
+#### is-ldflag[q] <flag> ####
+# Returns "true" if flag is set in LDFLAGS
+# Matches only complete a flag
+# q version sets return code but doesn't echo
 #
 #### strip-flags ####
 # Strip C[XX]FLAGS of everything except known
@@ -51,13 +57,6 @@ inherit eutils toolchain-funcs multilib
 #### filter-ldflags <flags> ####
 # Remove particular flags from LDFLAGS
 # Matches only complete flags
-#
-#### fstack-flags ####
-# hooked function for hardened gcc that appends
-# -fno-stack-protector to {C,CXX,LD}FLAGS
-# when a package is filtering -fstack-protector, -fstack-protector-all
-# notice: modern automatic specs files will also suppress -fstack-protector-all
-# when only -fno-stack-protector is given
 #
 #### bindnow-flags ####
 # Returns the flags to enable "now" binding in the current selected linker.
@@ -98,7 +97,7 @@ setup-allowed-flags() {
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -O -O0 -O1 -O2 -mcpu -march -mtune"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fstack-protector -fstack-protector-all"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fbounds-checking -fno-bounds-checking"
-		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-unit-at-a-time"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-PIE -fno-pie -fno-unit-at-a-time"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g0 -g1 -g2 -g3 -ggdb -ggdb0 -ggdb1 -ggdb2 -ggdb3"
 	fi
 	# allow a bunch of flags that negate features / control ABI
@@ -119,34 +118,52 @@ setup-allowed-flags() {
 	return 0
 }
 
-filter-flags() {
-	local x f fset
-	declare -a new_CFLAGS new_CXXFLAGS
-
-	for x in "$@" ; do
-		case "${x}" in
-			-fPIC|-fpic|-fPIE|-fpie|-pie)
-				append-flags `test_flag -fno-pie`;;
-			-fstack-protector|-fstack-protector-all)
-				fstack-flags;;
+# inverted filters for hardened compiler.  This is trying to unpick
+# the hardened compiler defaults.
+_filter-hardened() {
+	local f
+	for f in "$@" ; do
+		case "${f}" in
+			# Ideally we should only concern ourselves with PIE flags,
+			# not -fPIC or -fpic, but too many places filter -fPIC without
+			# thinking about -fPIE.
+			-fPIC|-fpic|-fPIE|-fpie|-Wl,pie|-pie)
+				gcc-specs-pie || continue
+				is-flagq -nopie || append-flags -nopie;;
+			-fstack-protector)
+				gcc-specs-ssp || continue
+				is-flagq -fno-stack-protector || append-flags -fno-stack-protector;;
+			-fstack-protector-all)
+				gcc-specs-ssp-to-all || continue
+				is-flagq -fno-stack-protector-all || append-flags -fno-stack-protector-all;;
 		esac
 	done
+}
 
-	for fset in CFLAGS CXXFLAGS; do
-		# Looping over the flags instead of using a global
-		# substitution ensures that we're working with flag atoms.
-		# Otherwise globs like -O* have the potential to wipe out the
-		# list of flags.
-		for f in ${!fset}; do
-			for x in "$@"; do
-				# Note this should work with globs like -O*
-				[[ ${f} == ${x} ]] && continue 2
-			done
-			eval new_${fset}\[\${\#new_${fset}\[@]}]=\${f}
+# Remove occurrences of strings from variable given in $1
+# Strings removed are matched as globs, so for example
+# '-O*' would remove -O1, -O2 etc.
+_filter-var() {
+	local f x VAR VAL
+	declare -a new
+
+	VAR=$1
+	shift
+	eval VAL=\${${VAR}}
+	for f in ${VAL}; do
+		for x in "$@"; do
+			# Note this should work with globs like -O*
+			[[ ${f} == ${x} ]] && continue 2
 		done
-		eval export ${fset}=\${new_${fset}\[*]}
+		eval new\[\${\#new\[@]}]=\${f}
 	done
+	eval export ${VAR}=\${new\[*]}
+}
 
+filter-flags() {
+	_filter-hardened "$@"
+	_filter-var CFLAGS "$@"
+	_filter-var CXXFLAGS "$@"
 	return 0
 }
 
@@ -164,8 +181,6 @@ append-flags() {
 	[[ -z $* ]] && return 0
 	export CFLAGS="${CFLAGS} $*"
 	export CXXFLAGS="${CXXFLAGS} $*"
-	[ -n "`is-flag -fno-stack-protector`" -o \
-		-n "`is-flag -fno-stack-protector-all`" ] && fstack-flags
 	return 0
 }
 
@@ -206,16 +221,43 @@ replace-cpu-flags() {
 	return 0
 }
 
-is-flag() {
+is-flagq() {
 	local x
 
 	for x in ${CFLAGS} ${CXXFLAGS} ; do
 		# Note this should work with globs like -mcpu=ultrasparc*
 		if [[ ${x} == ${1} ]]; then
-			echo true
 			return 0
 		fi
 	done
+	return 1
+}
+
+is-flag() {
+	if is-flagq ${1}; then
+		echo true
+		return 0
+	fi
+	return 1
+}
+
+is-ldflagq() {
+	local x
+
+	for x in ${LDFLAGS} ; do
+		# Note this should work with globs like -mcpu=ultrasparc*
+		if [[ ${x} == ${1} ]]; then
+			return 0
+		fi
+	done
+	return 1
+}
+
+is-ldflag() {
+	if is-ldflagq ${1}; then
+		echo true
+		return 0
+	fi
 	return 1
 }
 
@@ -343,7 +385,7 @@ test-flags-CXX() { test-flags-PROG "CXX" "$@"; }
 # its really only present due to the append-flags() abomination.
 test-flags() { test-flags-CC "$@"; }
 
-# Deprecated, use test-flags()
+# Depriciated, use test-flags()
 test_flag() {
 	ewarn "test_flag: deprecated, please use test-flags()!" >&2
 
@@ -404,8 +446,8 @@ has_pic() {
 	ewarn "has_pic: deprecated, please use gcc-specs-pie()!" >&2
 
 	[[ ${CFLAGS/-fPIC} != ${CFLAGS} || \
-	   ${CFLAGS/-fpic} != ${CFLAGS} || \
-	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__) ]]
+	   ${CFLAGS/-fpic} != ${CFLAGS} ]] || \
+	gcc-specs-pie
 }
 
 # DEPRECATED - use gcc-specs-pie from toolchain-funcs
@@ -414,10 +456,8 @@ has_pie() {
 	ewarn "has_pie: deprecated, please use gcc-specs-pie()!" >&2
 
 	[[ ${CFLAGS/-fPIE} != ${CFLAGS} || \
-	   ${CFLAGS/-fpie} != ${CFLAGS} || \
-	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__) || \
-	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__) ]]
-	# test PIC while waiting for specs to be updated to generate __PIE__
+	   ${CFLAGS/-fpie} != ${CFLAGS} ]] || \
+	gcc-specs-pie
 }
 
 # DEPRECATED - use gcc-specs-ssp from toolchain-funcs
@@ -428,7 +468,7 @@ has_ssp_all() {
 	# note; this matches only -fstack-protector-all
 	[[ ${CFLAGS/-fstack-protector-all} != ${CFLAGS} || \
 	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__) ]] || \
-	gcc-specs-ssp
+	gcc-specs-ssp-all
 }
 
 # DEPRECATED - use gcc-specs-ssp from toolchain-funcs
@@ -503,27 +543,21 @@ replace-sparc64-flags() {
 }
 
 append-ldflags() {
+	[[ -z $* ]] && return 0
 	export LDFLAGS="${LDFLAGS} $*"
 	return 0
 }
 
+# Remove flags from LDFLAGS - it's up to the ebuild to filter
+# CFLAGS and CXXFLAGS via filter-flags if they need to.
 filter-ldflags() {
-	local x
-
-	# we do this fancy spacing stuff so as to not filter
-	# out part of a flag ... we want flag atoms ! :D
-	LDFLAGS=" ${LDFLAGS} "
-	for x in "$@" ; do
-		LDFLAGS=${LDFLAGS// ${x} / }
-	done
-	[[ -z ${LDFLAGS// } ]] \
-		&& LDFLAGS="" \
-		|| LDFLAGS=${LDFLAGS:1:${#LDFLAGS}-2}
-	export LDFLAGS
+	_filter-var LDFLAGS "$@"
 	return 0
 }
 
-# Turn C style ldflags (-Wl,-foo) into straight ldflags
+# Turn C style ldflags (-Wl,-foo) into straight ldflags - the results
+# are suitable for passing directly to 'ld'; note LDFLAGS is usually passed
+# to gcc where it needs the '-Wl,'.
 raw-ldflags() {
 	local x input="$@"
 	[[ -z ${input} ]] && input=${LDFLAGS}
@@ -533,14 +567,6 @@ raw-ldflags() {
 		set -- "$@" ${x//,/ }
 	done
 	echo "$@"
-}
-
-fstack-flags() {
-	if gcc-specs-ssp; then
-		[ -z "`is-flag -fno-stack-protector`" ] &&
-			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
-	fi
-	return 0
 }
 
 # This is thanks to great work from Paul de Vrieze <gentoo-user@devrieze.net>,
