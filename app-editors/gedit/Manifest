@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c3d4eb38849f898ae1dca50524e57153 ChangeLog 14465
+MD5 8c739cbd4f03b397b8e5271ef507a85d ChangeLog 14591
 MD5 b1cd4f5d4adf64b0c6ce68ebe818a495 files/digest-gedit-0.9.6-r1 64
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3 66
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3-r1 66
@@ -12,12 +12,12 @@ MD5 291dcd2524b897c18af75968be9c0ef3 gedit-0.9.6-r1.ebuild 905
 MD5 2e3a9745a373aa384d93662c048eea05 gedit-2.10.3-r1.ebuild 1078
 MD5 8f1e9c292ba4538868f72a7413279984 gedit-2.10.3.ebuild 923
 MD5 21be6ae25fea18ed5c0045e4dce9e0bb gedit-2.10.5.ebuild 1024
-MD5 52fa26f84d02bee863362cfc7e49eb5b gedit-2.12.1.ebuild 987
+MD5 3a109cba58c0fc3fb5f4b6038b7810bb gedit-2.12.1.ebuild 984
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0WiRKRy60XGEcJIRAn7aAJ9U1RCVc+PRIwdoXmC0x5aRIAcXwACfQ4h4
-jxraqT2aFPbl2IDn/p2Uz8Y=
-=MNcK
+iD8DBQFD0vjtSENan+PfizARAnguAJ9UgFfpBCAMVyyZou1mfDk0tavaxQCgg5Lw
+uknBgf8aTDSZBijsHCC9Q4Y=
+=bLAg
 -----END PGP SIGNATURE-----
