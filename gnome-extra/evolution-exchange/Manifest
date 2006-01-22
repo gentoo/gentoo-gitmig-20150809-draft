@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1a3a3beab98d3e036952cdc33ac31d7 ChangeLog 1802
 MD5 ecad4ba5fcd290f39ccb2776da114fa8 evolution-exchange-2.4.1.ebuild 1342
 MD5 0ac3c9713b1ad86e806428b64d0a8830 evolution-exchange-2.4.2.ebuild 1339
@@ -5,3 +8,10 @@ MD5 1fac0d46b9c505c385acfcff5c0215f9 files/digest-evolution-exchange-2.4.1 78
 MD5 b1ebcb59defa26446f2da0a510937a76 files/digest-evolution-exchange-2.4.2 78
 MD5 8e9cb8386aac62d3a0124200f562db09 files/evolution-exchange-2.4.0-kerb.patch 576
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0+XaomPajV0RnrERAr2wAJ4r5mp/SsmpatsYYEYHtWPQr/kvYwCePj92
+y1TFpuNE9/R44hXg0rynyXw=
+=tMa6
+-----END PGP SIGNATURE-----
