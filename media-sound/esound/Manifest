@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 37409df834b9f797736faea77a75fb3e ChangeLog 8161
+MD5 95eafd994dbedb2c8cc8ff03f0ec825d ChangeLog 8278
 MD5 ae22795b520c0e4e7dece068198d0f00 esound-0.2.34.ebuild 1369
 MD5 228a9bc18b1ac249760fde582df90a72 esound-0.2.36-r1.ebuild 1692
 MD5 e2bd989e15dcb9b15096d1a9cd29edf0 files/digest-esound-0.2.34 66
@@ -14,7 +14,7 @@ MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtmWZ2+ySkm8kpY0RAitFAKCBHO6LfPfOiuUrL4Y/Qbu0MVfzwgCdED9K
-m+GPZxkq1ekvrFxqmGqCh/0=
-=BpKA
+iD8DBQFD0uqzSENan+PfizARAiAEAJ9grBMMteW+LQ9txtXqL4UsyWlSfACffVny
+KE+pu96BaBV1jqV22G4TdRM=
+=FHTa
 -----END PGP SIGNATURE-----
