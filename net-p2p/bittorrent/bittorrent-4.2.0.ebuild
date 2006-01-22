@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.2.0.ebuild,v 1.2 2005/12/18 20:08:06 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.2.0.ebuild,v 1.3 2006/01/22 10:20:07 mkay Exp $
 
 inherit distutils fdo-mime eutils
 

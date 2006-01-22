@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.2.2.ebuild,v 1.7 2006/01/21 17:25:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.2.2.ebuild,v 1.8 2006/01/22 10:20:07 mkay Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -68,13 +68,17 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo
 	einfo "Remember that BitTorrent has changed file naming scheme"
 	einfo "To run BitTorrent just execute /usr/bin/bittorrent"
 	einfo
-	einfo "Please use /etc/init.d/bittorrent-tracker and "
-	einfo "/etc/conf.d/bittorrent-tracker instead of"
-	einfo "/etc/init.d/bttrack and /etc/init.d/bttrack. "
-	einfo "You can safety remove the old script files"
+	if [ -f ${ROOT}/etc/init.d/bttrack -o -f ${ROOT}/etc/conf.d/bttrack ]; then
+		einfo "Please use /etc/init.d/bittorrent-tracker and "
+		einfo "/etc/conf.d/bittorrent-tracker instead of"
+		einfo "/etc/init.d/bttrack and /etc/conf.d/bttrack. "
+		einfo "You can safety remove the old files"
+		einfo
+	fi
 	distutils_pkg_postinst
 	fdo-mime_desktop_database_update
 }
