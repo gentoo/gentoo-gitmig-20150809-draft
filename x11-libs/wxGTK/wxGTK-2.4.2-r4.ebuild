@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.4 2005/11/26 20:02:59 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.5 2006/01/22 03:09:09 spyderous Exp $
 
 inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="2.4"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="debug wxgtk1 gtk2 odbc opengl unicode"
 
-RDEPEND="virtual/x11
-	sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
