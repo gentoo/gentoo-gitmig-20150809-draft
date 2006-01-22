@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71c6865e5193cbf3e072731933fec5f6 ChangeLog 6866
 MD5 7869b61dbb8436c4c525b9fc10b55c8d files/digest-gnome-keyring-0.4.2 72
 MD5 d5ff2eaffe54dd4b73af7bb2e7de0c55 files/digest-gnome-keyring-0.4.3 72
@@ -10,3 +13,10 @@ MD5 1f208e847bd316a8b2738a3e95abcda3 gnome-keyring-0.4.4.ebuild 625
 MD5 68d816c5f868f1f0ee0f41e7913eb353 gnome-keyring-0.4.5.ebuild 592
 MD5 e9685ac89c257cb2a950a08fc7acfcb3 gnome-keyring-0.4.6.ebuild 583
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD0+GComPajV0RnrERAiWSAJ0SjcKk9ANp9IEX21E0ce+/rssPbACdHpNY
+3pjw4e81p8i7gYOSLCdiiBU=
+=SwSn
+-----END PGP SIGNATURE-----

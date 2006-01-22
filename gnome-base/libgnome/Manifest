@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e0f3478a973bea195e7880e8956f6f9b ChangeLog 12262
 MD5 3111d83a6edd0cd8430b893cbbaedd88 files/digest-libgnome-2.10.0 68
 MD5 0216190dd7ef123c458e740d241ee252 files/digest-libgnome-2.10.1-r1 69
@@ -8,3 +11,10 @@ MD5 838e34b163bd061ae18b4899e3a7813c libgnome-2.10.0.ebuild 961
 MD5 d128ecaf07d885d845b4621052caf2e1 libgnome-2.10.1-r1.ebuild 1313
 MD5 9154ffefb271ede4ab0b02a353c7b2e8 libgnome-2.12.0.1.ebuild 1185
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD09uJomPajV0RnrERAuUsAJsEN222MiH6fnz7CvGSgQpvZMk9UACfSXuA
+0xS1gSVgFXoqcP93CTzwLQw=
+=WrKl
+-----END PGP SIGNATURE-----
