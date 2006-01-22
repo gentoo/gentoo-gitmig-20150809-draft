@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Select_Common
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.21 2006/01/22 07:38:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.22 2006/01/22 16:41:28 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org>
+  PEAR-HTML_Select_Common-1.1-r2.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-HTML_Select_Common-1.1-r2.ebuild:

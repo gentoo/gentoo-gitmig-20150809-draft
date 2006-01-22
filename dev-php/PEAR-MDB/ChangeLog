@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-MDB
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB/ChangeLog,v 1.25 2006/01/22 07:42:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB/ChangeLog,v 1.26 2006/01/22 16:52:02 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-MDB-1.3.0-r1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org> PEAR-MDB-1.3.0-r1.ebuild:
   Stable on x86; bug #119722

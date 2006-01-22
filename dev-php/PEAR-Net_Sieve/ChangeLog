@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.34 2006/01/22 07:46:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.35 2006/01/22 17:04:47 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org>
+  PEAR-Net_Sieve-1.1.1-r1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-Net_Sieve-1.1.1-r1.ebuild:

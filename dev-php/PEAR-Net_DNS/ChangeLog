@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.14 2006/01/22 07:44:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.15 2006/01/22 16:58:11 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-Net_DNS-0.03-r1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org> PEAR-Net_DNS-0.03-r1.ebuild:
   Stable on x86; bug #119722

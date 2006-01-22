@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Beautifier
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Beautifier/ChangeLog,v 1.14 2006/01/22 07:53:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Beautifier/ChangeLog,v 1.15 2006/01/22 17:28:48 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org>
+  PEAR-XML_Beautifier-1.1-r1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-XML_Beautifier-1.1-r1.ebuild:

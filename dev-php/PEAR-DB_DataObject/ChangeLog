@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.10 2006/01/22 07:35:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.11 2006/01/22 16:31:24 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org>
+  PEAR-DB_DataObject-1.8.0.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-DB_DataObject-1.8.0.ebuild:

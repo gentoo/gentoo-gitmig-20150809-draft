@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_IPTC
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_IPTC/ChangeLog,v 1.17 2006/01/22 07:41:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_IPTC/ChangeLog,v 1.18 2006/01/22 16:50:24 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org>
+  PEAR-Image_IPTC-1.0.2-r1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-Image_IPTC-1.0.2-r1.ebuild:

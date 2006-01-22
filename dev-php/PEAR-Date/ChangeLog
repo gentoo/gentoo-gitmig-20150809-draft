@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.33 2006/01/22 07:36:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.34 2006/01/22 16:30:03 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-Date-1.4.6.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org> PEAR-Date-1.4.6.ebuild:
   Stable on x86; bug #119722

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_RSS
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.19 2006/01/22 07:53:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.20 2006/01/22 17:21:30 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-XML_RSS-0.9.2-r1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-XML_RSS-0.9.2-r1.ebuild:

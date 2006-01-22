@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTML_Table
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.11 2006/01/22 07:38:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.12 2006/01/22 16:42:24 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-HTML_Table-1.6.1.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-HTML_Table-1.6.1.ebuild:

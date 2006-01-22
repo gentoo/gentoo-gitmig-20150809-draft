@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Cache_Lite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache_Lite/ChangeLog,v 1.9 2006/01/22 07:34:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache_Lite/ChangeLog,v 1.10 2006/01/22 16:27:08 weeve Exp $
+
+  22 Jan 2006; Jason Wever <weeve@gentoo.org> PEAR-Cache_Lite-1.6.0.ebuild:
+  Stable on SPARC wrt bug #119722.
 
   22 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   PEAR-Cache_Lite-1.6.0.ebuild:
