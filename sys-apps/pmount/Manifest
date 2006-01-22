@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 911363f274df575b377eb50149646e2d ChangeLog 2128
+MD5 1ea4997d3b18a4767bfa79cc91197d83 ChangeLog 2254
 MD5 0460e313c5378e4ac58402a91e1b130e files/digest-pmount-0.9.6 64
 MD5 aac86bf5e50eb9cef83a6f6800c560af metadata.xml 253
-MD5 e66bfff99b8ef8f3aae03ab3251e170c pmount-0.9.6.ebuild 1425
+MD5 68cb5f44dc811d19d5582ddcccdd135e pmount-0.9.6.ebuild 1422
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0W68KRy60XGEcJIRAgLSAJ4o1UvB382PB4oB+Vi6tT4xlCwBAACfddME
-Zh6DkxhuJ94+GazVs3D9Ww0=
-=tTzu
+iD8DBQFD0ufGSENan+PfizARAoO9AJ9AU+3mG9lfLBrkXqp9zMgNZevuxACdGD+I
+m28vFzwJkay02Gc48kv9Wmw=
+=zgf8
 -----END PGP SIGNATURE-----
