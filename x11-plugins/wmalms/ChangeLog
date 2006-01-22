@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmalms
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.7 2005/02/27 12:23:09 brix Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.8 2006/01/22 12:25:19 nelchael Exp $
+
+  22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml,
+  wmalms-1.0.0a-r1.ebuild:
+  Fixed DEPEND for modular X.
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> wmalms-1.0.0a-r1.ebuild:
   Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
@@ -9,7 +13,7 @@
   Masked on sparc as lm_sensors doesn't work.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *wmalms-1.0.0a-r1 (6 Jun 2002)
 
   29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
@@ -20,12 +24,12 @@
 
   add dependency on lm_sensors
 
-  6 Jun 2002; Brandon Low <lostlogic@gentoo.org> wmalms-1.0.0a-r1.ebuild
+  6 Jun 2002; Brandon Low <lostlogic@gentoo.org> wmalms-1.0.0a-r1.ebuild:
 
   Fix doc locations
 
 *wmalms-1.0.0a (3 Jun 2002)
 
-  3 Jun 2002; Brandon Low <lostlogic@gentoo.org> wmalms-1.0.0a.ebuild
+  3 Jun 2002; Brandon Low <lostlogic@gentoo.org> wmalms-1.0.0a.ebuild:
 
   Initial package

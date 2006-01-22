@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/wmapm-3.1-r1.ebuild,v 1.11 2005/10/31 13:35:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/wmapm-3.1-r1.ebuild,v 1.12 2006/01/22 12:29:30 nelchael Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}/${PN}
@@ -12,7 +12,16 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc amd64 ppc"
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )"
 
 src_install () {
 	cd ${S}
