@@ -1,0 +1,25 @@
+# ChangeLog for dev-embedded/channelgen
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/channelgen/ChangeLog,v 1.1 2006/01/22 13:01:16 sanchan Exp $
+
+  22 Jan 2006; Sandro Bonazzola <sanchan@gentoo.org> +metadata.xml,
+  +channelgen-1.1.14.ebuild, +channelgen-1.1.15.ebuild:
+  Moved from dev-embedded/channelgen to dev-tinyos/channelgen.
+
+*channelgen-1.1.15 (22 Jan 2006)
+
+  22 Jan 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  +channelgen-1.1.15.ebuild:
+  Version bump in order to use the same tarball of the rest of tinyos apps.
+  This ebuild will be moved to dev-tinyos ASAP.
+
+  15 Dec 2005; Sandro Bonazzola <sanchan@gentoo.org>
+  channelgen-1.1.14.ebuild:
+  Ebuild fixed, thanks to brix and dragonheart
+
+*channelgen-1.1.14 (15 Dec 2005)
+
+  15 Dec 2005; Sandro Bonazzola <sanchan@gentoo.org> +metadata.xml,
+  +channelgen-1.1.14.ebuild:
+  Initial import, closing bug #98658.
+
