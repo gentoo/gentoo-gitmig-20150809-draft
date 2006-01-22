@@ -1,4 +1,4 @@
-MD5 1494dcae00a514aeec7147cb81446b19 ChangeLog 7923
+MD5 5a49fddcc06af55f12538f129be1f3cf ChangeLog 7917
 MD5 beee6dc1f9b01326aec9a28c8959c395 files/digest-gtkhtml-1.1.10-r1 68
 MD5 1f2800f5de2c490d27d8befe0bf150e3 files/digest-gtkhtml-2.6.0 69
 MD5 9b8c5022b2135422ff58e52a18662863 files/digest-gtkhtml-2.6.3 69
@@ -28,5 +28,5 @@ MD5 7788772b0b3f0a442389e31cb7efc98d gtkhtml-3.2.5.ebuild 1065
 MD5 9f8dffd167fa12c4a06ea411f54c9010 gtkhtml-3.6.1.ebuild 906
 MD5 5ccacad75988f3925714324ef32dd55f gtkhtml-3.6.2.ebuild 1080
 MD5 1738729d9974cf21de2092f2cffe59b9 gtkhtml-3.8.1.ebuild 955
-MD5 beb581bbb38b532e41e4c8930640a1e9 gtkhtml-3.8.2.ebuild 953
+MD5 6e8127e596f8b3b89c9f1ad47f1cc8ae gtkhtml-3.8.2.ebuild 947
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
