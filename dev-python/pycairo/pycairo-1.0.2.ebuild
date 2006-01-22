@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.0.2.ebuild,v 1.5 2006/01/22 19:43:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.0.2.ebuild,v 1.6 2006/01/22 19:59:02 dang Exp $
 
 DESCRIPTION="Python wrapper for cairo vector graphics library"
 HOMEPAGE="http://cairographics.org/pycairo"
 SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86"
 IUSE="gtk numeric svg"
 
 DEPEND=">=dev-lang/python-2.3
