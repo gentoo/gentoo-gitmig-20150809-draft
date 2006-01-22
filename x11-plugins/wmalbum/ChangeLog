@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmalbum
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalbum/ChangeLog,v 1.5 2005/11/07 16:14:32 s4t4n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalbum/ChangeLog,v 1.6 2006/01/22 13:24:40 nelchael Exp $
+
+  22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmalbum-0.1.5.ebuild:
+  Fixed DEPEND for modular X.
 
   07 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmalbum-0.1.5.ebuild:
   Removed COPYING and INSTALL from dodoc.
