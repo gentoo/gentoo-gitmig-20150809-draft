@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.20 2006/01/20 20:29:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.21 2006/01/22 10:35:07 dertobi123 Exp $
+
+  22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libsvg-cairo-0.1.6.ebuild:
+  Marked ppc stable for bug #119634; Stabilize Gnome-2.12.2
 
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libsvg-cairo-0.1.6.ebuild:
