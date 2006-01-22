@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.1 2006/01/22 04:12:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.2 2006/01/22 23:18:06 halcy0n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://mydns.bboy.net/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE="debug mysql nls postgres ssl static zlib"
 
 RDEPEND="virtual/libc
