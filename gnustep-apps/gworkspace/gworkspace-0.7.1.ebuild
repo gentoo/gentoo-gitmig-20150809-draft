@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.7.1.ebuild,v 1.3 2005/07/16 15:46:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.7.1.ebuild,v 1.4 2006/01/22 18:41:30 genone Exp $
 
 inherit gnustep
 
@@ -14,13 +14,13 @@ KEYWORDS="~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="pdfkit"
+IUSE="pdf"
 DEPEND="${GS_DEPEND}
-	pdfkit? ( gnustep-libs/pdfkit )
+	pdf? ( gnustep-libs/pdfkit )
 	!gnustep-apps/desktop
 	!gnustep-apps/recycler"
 RDEPEND="${GS_RDEPEND}
-	pdfkit? ( gnustep-libs/pdfkit )
+	pdf? ( gnustep-libs/pdfkit )
 	!gnustep-apps/desktop
 	!gnustep-apps/recycler"
 
