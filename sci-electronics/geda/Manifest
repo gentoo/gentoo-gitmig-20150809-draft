@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 057812d874b8fe816290f925c58b088f ChangeLog 2169
+MD5 6baf1a4c58cb16dad82ebfba38ede9af ChangeLog 2279
 MD5 c575d149d8e5dcc2b1de8eb4bcfe97e9 files/digest-geda-20050313 784
 MD5 52eece9b408d98d1fc6a91ae584e81c8 files/digest-geda-20050820 784
 MD5 75ad7d10e422e8b6d10b55be9956c336 geda-20050313.ebuild 2845
-MD5 4e3311b9ca0b1c8bad95f7f8e678b9c9 geda-20050820.ebuild 2614
+MD5 c6d464f16e153db12c759045e1b37624 geda-20050820.ebuild 2622
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDnv5NomPajV0RnrERApN7AJ4uFtfs4JAkCOQvZsRkumMk9s/W5ACfVdDI
-0Ln1WbGqfMNhup7A9EeedDU=
-=n4dF
------END PGP SIGNATURE-----
