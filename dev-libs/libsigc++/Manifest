@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f434b3a694596ab104a99eb055b2e78f ChangeLog 9693
 MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
 MD5 2097fbc4c79a21de2b7f3a7e89a35137 files/digest-libsigc++-1.2.5 67
@@ -15,3 +18,10 @@ MD5 738d5a6d87ce081585a0d7cdcb18562d libsigc++-2.0.15.ebuild 1823
 MD5 b496e50c4b4cc09d43492aaf38bb9707 libsigc++-2.0.16.ebuild 1824
 MD5 6b17a879fe86bc2b447e8d3c6489f0c6 libsigc++-2.0.5.ebuild 1446
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD09eoomPajV0RnrERAiJLAJ4mytk+2TBkQ2IZzrA2rjUTFzU5vQCfWbU2
+NUlmV3lrueRX01vfwTHplDM=
+=unZN
+-----END PGP SIGNATURE-----

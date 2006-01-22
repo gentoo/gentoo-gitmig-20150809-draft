@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aa548b584a0208920d1625fb407406e1 ChangeLog 2681
 MD5 9224d2f16c82093310f3ec19f52c3ef3 files/digest-liboil-0.2.0 64
 MD5 d136c393a4dd1c5b99a077392d18a736 files/digest-liboil-0.2.2 64
@@ -14,3 +17,10 @@ MD5 098ea0d17b9254c19d47f62248af5ed8 liboil-0.3.2.ebuild 729
 MD5 e156b9dbcb5b5069ab64814c5e91f8e1 liboil-0.3.3.ebuild 731
 MD5 eb3c7cb99f68f860f955325ab825e822 liboil-0.3.6.ebuild 730
 MD5 d3b860c5004ed0f5fbc21ec0687c9bf0 metadata.xml 223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD09gKomPajV0RnrERAoU5AJ46r5/ZwqGjPW3tXbRyaIi2G+9NLACdG820
+v6CtcRHE6hhgMB3vYENxP0o=
+=CXpZ
+-----END PGP SIGNATURE-----
