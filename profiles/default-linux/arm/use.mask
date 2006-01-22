@@ -28,3 +28,7 @@ lm_sensors
 # Luca Longinotti <chtekk@gentoo.org>
 # fix dev-lang/php + arm + firebird
 firebird
+
+# Luca Longinotti <chtekk@gentoo.org>
+# mask Oracle
+oci8
