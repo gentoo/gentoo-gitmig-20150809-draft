@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.5 2005/09/16 01:22:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.6 2006/01/22 17:49:54 chainsaw Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/wolfgl"
 #ECVS_MODULE="wolfgl"
@@ -21,7 +21,10 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	virtual/x11"
+	|| (
+		virtual/x11
+		x11-proto/xproto
+	)"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
