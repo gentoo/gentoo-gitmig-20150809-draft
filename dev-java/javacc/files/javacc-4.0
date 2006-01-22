@@ -1,0 +1,7 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/files/javacc-4.0,v 1.1 2006/01/22 05:08:34 nichoj Exp $
+
+VERSION="JavaCC @PV@"
+JAVACC_HOME=/usr/share/@PN@
+ENV_VARS="JAVACC_HOME"

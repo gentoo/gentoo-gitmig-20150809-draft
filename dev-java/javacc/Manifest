@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 17b29e34c53e7f0fcda8b5607fdae8b5 ChangeLog 2597
 MD5 c1977d510ff18a454666499bed5aa797 files/digest-javacc-3.2-r3 62
 MD5 b4cf54b450f74c1d4979294a8c4956a7 files/digest-javacc-4.0 65
@@ -14,3 +17,10 @@ MD5 169889bcf3545fed8164d19166f6216d files/jjtree-4.0 388
 MD5 6c1ebcc79768612c5b81789b7d932074 javacc-3.2-r3.ebuild 1722
 MD5 5ec3a0ccdbcfc94921cc60db8994d2e6 javacc-4.0.ebuild 1703
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD0xF3ndWRXhKOboURAjooAKCjOM5H+3NM47WfGb28qzLj2Qo+ZACeOTz/
+MALfb1BVYDDDZzXl3Y7hA+8=
+=M8jr
+-----END PGP SIGNATURE-----

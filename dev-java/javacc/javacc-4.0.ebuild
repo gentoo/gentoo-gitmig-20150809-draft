@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.9 2006/01/22 05:08:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-4.0.ebuild,v 1.1 2006/01/22 05:08:34 nichoj Exp $
 
 inherit java-pkg eutils
 
-DESCRIPTION="Java Compiler Compiler [tm] (JavaCC [tm]) - The Java Parser Generator"
+DESCRIPTION="Java Compiler Compiler"
 HOMEPAGE="https://javacc.dev.java.net/servlets/ProjectHome"
-SRC_URI="https://${PN}.dev.java.net/files/documents/17/3616/${P}.tar.gz"
+SRC_URI="https://${PN}.dev.java.net/files/documents/17/26783/${P}src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples jikes source"
 DEPEND=">=virtual/jdk-1.3
 	sys-apps/sed
@@ -18,10 +18,10 @@ DEPEND=">=virtual/jdk-1.3
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3"
 
+S="${WORKDIR}/${PN}"
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
 	epatch ${FILESDIR}/${P}-javadoc.patch
 }
 
@@ -31,7 +31,7 @@ src_compile() {
 	use doc && antflags="${antflags} javadoc"
 	ant ${antflags} || die "compilation failed"
 
-	cp ${FILESDIR}/${P} ${S}/ || die "Missing env file ${P}"
+	cp ${FILESDIR}/${P} ${WORKDIR}/${PN}/ || die "Missing env file ${P}"
 	sed -i \
 		-e "s:@PV@:${PV}:" \
 		-e "s:@PN@:${PN}:" \
