@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.8 2006/01/22 03:06:14 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.9 2006/01/22 14:51:58 dertobi123 Exp $
+
+  22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  evolution-exchange-2.4.2.ebuild:
+  Marked ppc stable for bug #119634; Stabilize Gnome-2.12.2
 
   22 Jan 2006; Joshua Jackson <tsunam@gentoo.org>
   evolution-exchange-2.4.2.ebuild:
