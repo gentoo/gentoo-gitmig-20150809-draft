@@ -1,6 +1,16 @@
-MD5 8538382f66f276974b8b9dd3a7d04838 ChangeLog 1041
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 551add3e2b8cb9ee56f728817db101f7 ChangeLog 1141
 MD5 af7c69b54bd11d39937c736403e21fc6 files/digest-itk-3.3 58
 MD5 af7c69b54bd11d39937c736403e21fc6 files/digest-itk-3.3-r1 58
-MD5 4bd52b027411bec944553829604b14bf itk-3.3-r1.ebuild 851
+MD5 11b56bfb8b5cef32071bcf57e5a17728 itk-3.3-r1.ebuild 856
 MD5 add4cd98f86381a231666ac5b3ddb051 itk-3.3.ebuild 748
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1BugcsIHjyDViGQRAnobAJ45ERro/e4hC/n4xzClkK5Y+mb2mwCg1u1y
+RWFTmTtLSWljhqpW5TIQw1Q=
+=Csi3
+-----END PGP SIGNATURE-----
