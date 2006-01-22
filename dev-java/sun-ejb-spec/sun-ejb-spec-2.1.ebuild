@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-ejb-spec/sun-ejb-spec-2.1.ebuild,v 1.1 2006/01/22 03:41:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-ejb-spec/sun-ejb-spec-2.1.ebuild,v 1.2 2006/01/22 14:58:33 nichoj Exp $
 
 inherit java-pkg versionator
 
@@ -15,7 +15,7 @@ DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDet
 
 LICENSE="sun-ejb-spec-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"
@@ -27,7 +27,6 @@ S="${WORKDIR}"
 pkg_nofetch() {
 	einfo "Please download ${A} from the following URL and place it in ${DISTDIR}:"
 	einfo "${DOWNLOAD_URL}"
-	einfo "The link is found under '2.1 Final Release', next to 'Download Class Files'"
 }
 
 
