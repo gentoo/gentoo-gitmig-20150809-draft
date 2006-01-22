@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/evilwm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.29 2005/12/24 08:04:17 cardoe Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.30 2006/01/22 16:53:47 tove Exp $
+
+*evilwm-0.99.21 (22 Jan 2006)
+
+  22 Jan 2006; Torsten Veller <tove@gentoo.org> +evilwm-0.99.21.ebuild:
+  Version bump. Removes dependency on motif.
 
   24 Dec 2005; Doug Goldstein <cardoe@gentoo.org> evilwm-0.99.18.ebuild:
   adding modular X depends
