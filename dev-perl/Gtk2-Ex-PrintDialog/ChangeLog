@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Gtk2-Ex-PrintDialog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.4 2006/01/13 21:02:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.5 2006/01/22 22:42:56 mcummings Exp $
+
+  22 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Gtk2-Ex-PrintDialog-0.02.ebuild:
+  Removing SRC_TEST since when enabled, it requires a display (and another
+  module)
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Gtk2-Ex-PrintDialog-0.02.ebuild:
