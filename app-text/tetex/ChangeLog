@@ -1,6 +1,16 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.98 2006/01/21 11:47:35 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.99 2006/01/22 16:35:23 nattfodd Exp $
+
+*tetex-3.0_p1-r1 (22 Jan 2006)
+
+  22 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/tetex-3.0_p1-fmtutil-etex.patch,
+  +files/tetex-3.0_p1-xpdf-vulnerabilities.patch, +tetex-3.0_p1-r1.ebuild:
+  Fixes fmtutil problems with elatex not being found and texi2dvi/etex
+  complaining about being stymied, closing bug #98029. Thanks to Tupone
+  Alfredo for one of the patches. Also security fixes of xpdf code from bug
+  #115775.
 
   21 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org>
   +files/tetex-2.0.2-dvi-draw-conflicting-types.patch,
