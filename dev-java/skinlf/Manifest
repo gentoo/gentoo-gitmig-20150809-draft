@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ff591a1b1d50681f94e98a4d870adb82 ChangeLog 521
+MD5 712c7b8f9a62b32643ac3bbe18b56e36 files/digest-skinlf-1.2.12 71
+MD5 3fb7968ec94470fdcdce84fa8cbe2bab files/skinlf-1.2.12-build.xml 11622
+MD5 ac87465a658ce799c09247109b646312 files/skinlf-1.2.12-common-devjavanet.xml 1370
+MD5 5c756abb1a1f464545c91c576b919dfc files/skinlf-1.2.12-common.xml 5452
+MD5 105061490c4431c113a77768131aa5fe files/skinlf-1.2.12-image-utils.patch 1497
+MD5 2edcd635da8bde46bdfbb82e5929a5da metadata.xml 296
+MD5 209a8550773afe9b590f9c2edb9196c9 skinlf-1.2.12.ebuild 1406
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD03tpZfSl1Kp5KmoRAmADAJwP80iQrmfgE5fvNyd8xnTVYinE9QCg4Exu
+t25I57f0A46QabIcB67b2HA=
+=trHC
+-----END PGP SIGNATURE-----

@@ -1,0 +1,13 @@
+# ChangeLog for dev-java/skinlf
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.1 2006/01/22 12:31:49 zzam Exp $
+
+*skinlf-1.2.12 (22 Jan 2006)
+
+  22 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/skinlf-1.2.12-build.xml, +files/skinlf-1.2.12-common.xml,
+  +files/skinlf-1.2.12-common-devjavanet.xml,
+  +files/skinlf-1.2.12-image-utils.patch, +metadata.xml,
+  +skinlf-1.2.12.ebuild:
+  Initial import of ebuild written by me
+
