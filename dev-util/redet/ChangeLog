@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/redet
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.1 2006/01/22 10:34:29 jmglov Exp $
+
+*redet-8.4 (22 Jan 2006)
+
+  22 Jan 2006; Josh Glover <jmglov@gentoo.org> +metadata.xml,
+  +redet-8.4.ebuild:
+  This package was submitted by Josh Glover in bug #84404
+
