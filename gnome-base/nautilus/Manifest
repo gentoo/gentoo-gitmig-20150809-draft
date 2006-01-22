@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 16559a70676dbc9fe8b83df9f189c110 ChangeLog 21982
+MD5 b60402bace4f5ed4ef698943b840eccf ChangeLog 22111
 MD5 3db7f854e279f4032b8d1e86d64157aa files/digest-nautilus-1.0.6-r9 68
 MD5 567191aa3b9ef17acb8e3b0ba006afdf files/digest-nautilus-2.10.1-r1 69
 MD5 62b04598faf13b6c5ca417651b88d000 files/digest-nautilus-2.12.1-r1 69
@@ -21,11 +18,4 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 00c95b6b319c4650c8e666dbe2354c7a nautilus-1.0.6-r9.ebuild 3398
 MD5 f7d00aeb5e458b7a34f9d39f9a508c79 nautilus-2.10.1-r1.ebuild 2554
 MD5 e32b9dca56cdd213e985fca3066ded30 nautilus-2.12.1-r1.ebuild 1891
-MD5 457d16b67e3e958e3e7808b3e141b55e nautilus-2.12.2.ebuild 1912
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0WZMKRy60XGEcJIRAnXYAJ9GWfmiNg+9WsrE05Kqn5Nc5b92EACeO6sm
-mt9iwHFJ09fAZbiCSdL9p3w=
-=duiH
------END PGP SIGNATURE-----
+MD5 908d92cd66e33261a194cdb7fc66d3c7 nautilus-2.12.2.ebuild 1909
