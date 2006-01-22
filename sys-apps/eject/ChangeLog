@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/eject
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.42 2005/12/25 17:45:27 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.43 2006/01/22 23:05:31 corsair Exp $
+
+  22 Jan 2006; Markus Rothe <corsair@gentoo.org> eject-2.1.0.ebuild:
+  Stable on ppc64
 
   25 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> eject-2.1.0.ebuild:
   Stable on ppc because it adds the -t parameter which is very useful on newer
