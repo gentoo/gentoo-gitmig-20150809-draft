@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc1.ebuild,v 1.3 2006/01/15 00:20:24 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc1.ebuild,v 1.4 2006/01/23 11:34:07 centic Exp $
 
 inherit kde
 
@@ -14,11 +14,11 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE="opengl"
+IUSE="opengl gphoto2"
 
 DEPEND="media-libs/libkexif
 	media-libs/libkipi
-	>=media-libs/libgphoto2-2.1.4
+	gphoto2? ( >=media-libs/libgphoto2-2.1.4 )
 	>=media-libs/imlib2-1.1.0
 	>=media-gfx/imagemagick-5.5.4
 	>=media-video/mjpegtools-1.6.0
@@ -33,6 +33,6 @@ pkg_setup(){
 }
 
 src_compile() {
-	myconf="$(use_with opengl)"
+	myconf="$(use_with opengl) $(use_with gphoto2)"
 	kde_src_compile all
 }
