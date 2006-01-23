@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.4 2005/09/28 23:19:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.5 2006/01/23 21:35:21 ciaranm Exp $
 
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
@@ -11,8 +11,10 @@
 # How to make a vim spell file package using prebuilt spell lists
 # from upstream (${CODE} is the language's two letter code):
 #
-# * Get the ${CODE}.*.spl and README_${CODE}.txt files. Currently they're
-#   at ftp://ftp.vim.org/pub/vim/unstable/runtime/spell/ .
+# * Get the ${CODE}.*.spl, ${CODE}.*.sug (if your language has them) and
+#   README_${CODE}.txt files. Currently they're at
+#   ftp://ftp.vim.org/pub/vim/unstable/runtime/spell/ (except for English,
+#   which should be taken from CVS instead).
 #
 # * Stick them in vim-spell-${CODE}-$(date --iso | tr -d - ).tar.bz2 . Make sure
 #   that they're in the appropriately named subdirectory to avoid having to mess
@@ -82,7 +84,7 @@ vim-spell_src_install() {
 	insinto "${target}"
 
 	had_spell_file=
-	for f in *.spl ; do
+	for f in *.spl *.sug ; do
 		doins "${f}"
 		had_spell_file="yes"
 	done
