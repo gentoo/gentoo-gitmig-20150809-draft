@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.9 2006/01/12 13:51:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.10 2006/01/23 15:04:08 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,7 +21,9 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.
 	) ) ) )
 	nowin? ( http://bsd.mikulas.com/nwresources129.tar.gz
 	http://163.22.12.40/FreeBSD/distfiles/nwresources129.tar.gz
-	ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources129.tar.gz )"
+	ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources129.tar.gz )
+	mirror://gentoo/nwn.png
+	http://dev.gentoo.org/~wolf31o2/sources/dump/nwn.png"
 
 LICENSE="NWN-EULA"
 SLOT="0"
@@ -84,7 +86,7 @@ src_install() {
 		-e "s:GENTOO_DIR:${GAMES_PREFIX_OPT}:" \
 		${FILESDIR}/fixinstall > ${WORKDIR}/nwn/fixinstall
 	mv ${S} ${D}/${GAMES_PREFIX_OPT}
-	doicon ${FILESDIR}/nwn.png
+	doicon ${DISTDIR}/nwn.png
 	games_make_wrapper nwn ./nwn "${dir}" "${dir}"
 	make_desktop_entry nwn "Neverwinter Nights" nwn.png
 	prepgamesdirs
