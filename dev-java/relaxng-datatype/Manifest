@@ -1,5 +1,5 @@
-MD5 2b7f7c6efb90038d178181236a6c74fe ChangeLog 796
+MD5 f5f68b4c40d1be248f09ffec9a95cffd ChangeLog 906
 MD5 96a39cd43588e4f12ff5456a863d810b files/digest-relaxng-datatype-1.0 67
 MD5 ebbff7778f132e9e205c25d4daa5e84f files/relaxng-datatype-1.0-build_xml.patch 1972
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 911615880fee37f09c15596a095c2ac0 relaxng-datatype-1.0.ebuild 1132
+MD5 6f08efcea070f08989da98dc52ea65c1 relaxng-datatype-1.0.ebuild 1134
