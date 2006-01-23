@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailgraph
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.9 2005/10/21 22:01:34 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.10 2006/01/23 21:18:28 corsair Exp $
+
+  23 Jan 2006; Markus Rothe <corsair@gentoo.org> mailgraph-1.12.ebuild:
+  Added ~ppc64; bug #117851
 
 *mailgraph-1.12 (21 Oct 2005)
 
