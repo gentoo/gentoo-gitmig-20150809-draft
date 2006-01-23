@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/jfsutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.32 2005/11/21 13:34:54 killerfox Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.33 2006/01/23 18:07:05 dsd Exp $
+
+*jfsutils-1.1.10-r1 (23 Jan 2006)
+
+  23 Jan 2006; Daniel Drake <dsd@gentoo.org> +jfsutils-1.1.10-r1.ebuild:
+  Add static USE-flag to support linking jfsutils statically. Contributed by
+  Evgeniy Dushistov in bug #119178
 
   21 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org> jfsutils-1.1.8.ebuild:
   Stable on hppa.
