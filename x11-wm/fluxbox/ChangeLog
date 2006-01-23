@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.177 2005/12/18 18:15:08 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.178 2006/01/23 19:35:10 grobian Exp $
+
+  23 Jan 2006; Fabian Groffen <grobian@gentoo.org> fluxbox-0.9.14-r1.ebuild:
+  Marked ppc-macos stable (bug #120081)
 
   18 Dec 2005; Markus Rothe <corsair@gentoo.org> fluxbox-0.9.14-r1.ebuild:
   Stable on ppc64
