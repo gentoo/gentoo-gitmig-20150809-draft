@@ -12,7 +12,7 @@ MD5 78c7c75b18a3cd415626174a1a7b327e gst-plugins-pango-0.10.0.ebuild 329
 MD5 d4e815f6b70c076b1bc7d3d1cb3e4c88 gst-plugins-pango-0.10.1.ebuild 331
 MD5 36c8bd5d22146d5ba201505f97f2e87c gst-plugins-pango-0.10.2.ebuild 331
 MD5 ca7332713a6a8e9863e4e74ba47d4bf0 gst-plugins-pango-0.8.10.ebuild 356
-MD5 1aaee1567236b73278f8a0dcbb6a78eb gst-plugins-pango-0.8.11.ebuild 361
+MD5 af909ae40e61e7669a50bf61afa75709 gst-plugins-pango-0.8.11.ebuild 360
 MD5 5b58b711dd4a2a3e76aa212d0f83fe20 gst-plugins-pango-0.8.8-r1.ebuild 495
 MD5 6f59ae92dbb0b81b182584e892ba7501 gst-plugins-pango-0.8.8.ebuild 336
 MD5 501ae3ac26a06994fe11d3c2b86b1370 gst-plugins-pango-0.8.9.ebuild 361
