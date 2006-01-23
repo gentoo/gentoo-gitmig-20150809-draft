@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libifp
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.1 2006/01/23 21:08:05 chutzpah Exp $
+
+*libifp-1.0.0.2 (23 Jan 2006)
+
+  23 Jan 2006; Patrick McLean <chutzpah@gentoo.org> +metadata.xml, +libifp-1.0.0.2.ebuild:
+  Initial version, ebuild submitted by Przemyslaw Maciag <p_maciag@wp.pl>.
+
