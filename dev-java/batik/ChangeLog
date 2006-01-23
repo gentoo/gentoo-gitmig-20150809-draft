@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.31 2006/01/23 06:02:59 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.32 2006/01/23 09:12:03 betelgeuse Exp $
+
+  23 Jan 2006; Petteri Räty <betelgeuse@gentoo.org> +batik-1.5.ebuild:
+  Added batik-1.5 back because it is needed by dev-java/fop.
 
   23 Jan 2006; Karl Trygve Kalleberg <karltk@gentoo.org> -batik-1.5.ebuild:
   Removed old revision.
