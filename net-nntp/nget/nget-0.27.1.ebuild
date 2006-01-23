@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.27.1.ebuild,v 1.3 2006/01/23 03:48:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.27.1.ebuild,v 1.4 2006/01/23 21:15:36 rphillips Exp $
 
 inherit flag-o-matic
 
@@ -16,8 +16,7 @@ IUSE="static debug ipv6 pcre zlib"
 
 RDEPEND="dev-libs/popt
 	pcre? ( dev-libs/libpcre )
-	zlib? ( sys-libs/zlib )
-	test? ( dev-util/cppunit )"
+	zlib? ( sys-libs/zlib )"
 DEPEND="dev-libs/uulib"
 
 src_compile() {
@@ -42,3 +41,8 @@ src_install() {
 	dodoc Changelog FAQ README TODO
 	newdoc .ngetrc ngetrc.sample
 }
+
+src_test() {
+	true
+}
+
