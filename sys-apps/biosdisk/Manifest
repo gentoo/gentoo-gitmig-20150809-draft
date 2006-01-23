@@ -1,6 +1,16 @@
-MD5 95cc1a4a9d4327f169ea84d5c01c1c27 biosdisk-0.65.ebuild 821
-MD5 78f4fa344a2d2180e9c312f07311a289 ChangeLog 564
-MD5 a25bc82f23ed36bc5fa881adfee6a295 metadata.xml 224
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48e8b636d1e028a20cad3135f75e042a ChangeLog 673
 MD5 be061ca016c439254363214a8959617f biosdisk-0.50.ebuild 742
+MD5 95cc1a4a9d4327f169ea84d5c01c1c27 biosdisk-0.65.ebuild 821
 MD5 1a9f8e09103565280c74e359dff11d7b files/digest-biosdisk-0.50 65
 MD5 e133105ebe6031f5ac0702f17a6e69e5 files/digest-biosdisk-0.65 65
+MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1LEwugEuf3OQ0akRAg43AJ4piSlIr+ycmMa1DAcgfsSODc1FjACfSI/j
+gHLGP2QijCHVGXtzly5VDeY=
+=j9NE
+-----END PGP SIGNATURE-----
