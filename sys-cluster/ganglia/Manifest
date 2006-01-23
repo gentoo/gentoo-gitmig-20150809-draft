@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cd75f66c55fc0db752e6bedcabc93d45 ChangeLog 2239
 MD5 74ecbeb128e34713e09439d74152b8e3 files/digest-ganglia-2.5.7 78
 MD5 d55d7372c5a81de843fe58ccf4fc0212 files/digest-ganglia-3.0.1 67
 MD5 68d78e3a6db6ace89bcdca84021d1833 files/digest-ganglia-3.0.2 66
+MD5 6ea88507b7ec6a23c51a280c9cfe5da4 files/gmetad.rc 328
+MD5 bdc9561d6348490789845f386576d97b files/gmond.rc 322
 MD5 b756c1b6f1a65455236551d1befef2a0 ganglia-2.5.7.ebuild 1206
 MD5 16d45b033e883fb008d6f832d9527569 ganglia-3.0.1.ebuild 1152
-MD5 ca7a6b98f29974ee8bc10048de53dd1f ganglia-3.0.2.ebuild 1151
+MD5 ca40dbf95dc1bebc5256c369a9602cd3 ganglia-3.0.2.ebuild 1180
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1DXaKtJO8LeSoosRAih3AJ9BfDqjqaVoMoexAc9U4CRPwc9tRACgnaVv
-0fU86oZ7gPrZF6rFtnB/2cM=
-=QO7o
------END PGP SIGNATURE-----
