@@ -1,14 +1,5 @@
 --- PEAR-1.4.6/PEAR/Installer.php	2006/01/06 04:47:36	1.224
 +++ PEAR-1.4.6/PEAR/Installer.php	2006/01/16 12:24:23	1.225
-@@ -18,7 +18,7 @@
-  * @author     Greg Beaver <cellog@php.net>
-  * @copyright  1997-2006 The PHP Group
-  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
-- * @version    CVS: $Id: fix-packagingroot-1.4.6.patch,v 1.1 2006/01/23 14:37:33 sebastian Exp $
-+ * @version    CVS: $Id: fix-packagingroot-1.4.6.patch,v 1.1 2006/01/23 14:37:33 sebastian Exp $
-  * @link       http://pear.php.net/package/PEAR
-  * @since      File available since Release 0.1
-  */
 @@ -1329,7 +1329,11 @@
              }
              $dest = $ext['dest'];
@@ -24,15 +15,6 @@
                  if (!$this->mkDirHier($copydir)) {
 --- PEAR-1.4.6/PEAR/Command/Install.php	2006/01/06 04:47:36	1.112
 +++ PEAR-1.4.6/PEAR/Command/Install.php	2006/01/16 12:24:23	1.113
-@@ -16,7 +16,7 @@
-  * @author     Greg Beaver <cellog@php.net>
-  * @copyright  1997-2006 The PHP Group
-  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
-- * @version    CVS: $Id: fix-packagingroot-1.4.6.patch,v 1.1 2006/01/23 14:37:33 sebastian Exp $
-+ * @version    CVS: $Id: fix-packagingroot-1.4.6.patch,v 1.1 2006/01/23 14:37:33 sebastian Exp $
-  * @link       http://pear.php.net/package/PEAR
-  * @since      File available since Release 0.1
-  */
 @@ -543,16 +543,19 @@
                      $reg = &$this->config->getRegistry();
                  }

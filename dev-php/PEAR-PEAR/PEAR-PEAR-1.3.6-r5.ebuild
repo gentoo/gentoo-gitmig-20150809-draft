@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r4.ebuild,v 1.7 2006/01/22 15:07:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6-r5.ebuild,v 1.1 2006/01/23 16:03:17 chtekk Exp $
 
 inherit depend.php
 
@@ -90,10 +90,14 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}/pear.conf"
-	sed -e "s|s:SOBSTLEN:\"SOBSTITUTEME\"|s:${#PHPCLI}:\"${PHPCLI}\"|g" -i "${D}/etc/pear.conf"
+	sed -e "s|s:SUBSTLEN:\"SUBSTITUTEME\"|s:${#PHPCLI}:\"${PHPCLI}\"|g" -i "${D}/etc/pear.conf"
 
 	keepdir "${PEAR_CACHEDIR}"
 	fperms 755 "${PEAR_CACHEDIR}"
+}
+
+pkg_preinst() {
+	rm -f "${ROOT}/etc/pear.conf"
 }
 
 pkg_postinst() {
