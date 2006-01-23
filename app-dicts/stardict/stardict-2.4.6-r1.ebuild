@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.6-r1.ebuild,v 1.1 2006/01/20 13:35:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.6-r1.ebuild,v 1.2 2006/01/23 21:00:14 corsair Exp $
 
 inherit gnome2 eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 
 RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
