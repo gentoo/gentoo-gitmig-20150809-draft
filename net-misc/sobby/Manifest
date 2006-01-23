@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85ebe855507854f09354e9e598584d24 ChangeLog 708
+MD5 1d29540cb15dd64ffbbabf23e5f95c5b ChangeLog 793
 MD5 9383a1f60a0fce0f3a86e31199a886e0 files/digest-sobby-0.2.0 63
 MD5 ead18d412475882cbc774dda43017713 files/digest-sobby-0.3.0 63
 MD5 f5f94a0b4ed63e9a9f74d182a9cf1846 files/sobby-conf-0.2.0 480
 MD5 925da2634d9246b4f9a8045cf4e13b0b files/sobby-init-0.2.0 587
 MD5 9c6acf8b7103a5a76752783ea820c568 metadata.xml 312
 MD5 b5688bbf07fe796fdffe7f75e965dc7c sobby-0.2.0.ebuild 1542
-MD5 96c08b7fb3e1ad1f7d9012d1d08ca42c sobby-0.3.0.ebuild 1560
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmdDr8zY1VwezZiERAm81AJ4in7UI0+mctbqScJf639erGH8pNwCgl+qn
-BcHUFJe77fw4Qct7zXiadaE=
-=exR4
------END PGP SIGNATURE-----
+MD5 e3f49e666634c7089c9b2ee2079b655d sobby-0.3.0.ebuild 1556
