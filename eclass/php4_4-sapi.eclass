@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.10 2006/01/17 22:40:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.11 2006/01/23 18:46:49 chtekk Exp $
 #
 # ########################################################################
 #
@@ -39,7 +39,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl db2 dba dbase dbmaker dbx debug doc empress empress-bcs esoob exif expat fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external kerberos ldap libedit mcal mcve memlimit mhash ming mnogosearch msql mssql mysql ncurses nls oci8 oci8-instant-client odbc oracle7 overload ovrimos pcntl pcre pear pfpro pic posix postgres readline recode sapdb session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tiff tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl db2 dba dbase dbmaker dbx debug doc empress empress-bcs esoob exif expat fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external kerberos ldap libedit mcal mcve memlimit mhash ming mnogosearch msql mssql mysql ncurses nls oci8 oci8-instant-client odbc oracle7 overload ovrimos pcntl pcre pfpro pic posix postgres readline recode sapdb session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tiff tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -112,7 +112,6 @@ RDEPEND="${RDEPEND} ${DEPEND}"
 PDEPEND="${PDEPEND}
 		doc? ( app-doc/php-docs )
 		java-external? ( dev-php4/php-java-bridge )
-		pear? ( >=dev-php/PEAR-PEAR-1.3.6 )
 		sqlite? ( dev-php4/pecl-sqlite )
 		yaz? ( dev-php4/pecl-yaz )
 		zip? ( dev-php4/pecl-zip )"
@@ -207,9 +206,6 @@ php4_4-sapi_check_awkward_uses() {
 	confutils_use_depend_all "iodbc"		"odbc"
 	confutils_use_depend_all "sapdb"		"odbc"
 	confutils_use_depend_all "solid"		"odbc"
-
-	# PEAR support
-	confutils_use_depend_all "pear"			"cli" "pcre" "expat" "zlib"
 
 	# Readline and libedit do the same thing; you can't have both
 	confutils_use_conflict "readline" "libedit"

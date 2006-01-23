@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.12 2006/01/17 22:41:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.13 2006/01/23 18:46:49 chtekk Exp $
 #
 # ########################################################################
 #
@@ -39,7 +39,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming mnogosearch msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo-external pear pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming mnogosearch msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo-external pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -115,7 +115,6 @@ PDEPEND="${PDEPEND}
 		java-external? ( dev-php5/php-java-bridge )
 		mcve? ( dev-php5/pecl-mcve )
 		pdo-external? ( dev-php5/pecl-pdo )
-		pear? ( >=dev-php/PEAR-PEAR-1.3.6 )
 		yaz? ( dev-php5/pecl-yaz )
 		zip? ( dev-php5/pecl-zip )"
 
@@ -209,9 +208,6 @@ php5_0-sapi_check_awkward_uses() {
 	confutils_use_depend_all "iodbc"		"odbc"
 	confutils_use_depend_all "sapdb"		"odbc"
 	confutils_use_depend_all "solid"		"odbc"
-
-	# PEAR support
-	confutils_use_depend_all "pear"			"cli" "pcre" "xml" "zlib"
 
 	# QDBM doesn't play nicely with GDBM
 	confutils_use_conflict "qdbm" "gdbm"
