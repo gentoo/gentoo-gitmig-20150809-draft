@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dotconf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.7 2004/07/23 09:28:09 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.8 2006/01/23 00:28:46 williamh Exp $
+
+  23 Jan 2006; William Hubbs <williamh@gentoo.org> metadata.xml:
+  Took maintainership of this since I am also maintaining speech-dispatcher
+  which is the only thing that I know of that uses it.
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dotconf-1.1.0.ebuild:
   Stable amd64.
