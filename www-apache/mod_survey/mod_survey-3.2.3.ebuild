@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.3_pre3.ebuild,v 1.1 2006/01/19 02:28:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.3.ebuild,v 1.1 2006/01/23 13:42:53 rl03 Exp $
 
 inherit webapp
 
@@ -8,15 +8,15 @@ WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
 
 DESCRIPTION="XML-defined web questionnaires as a plug-in module for Apache"
-HOMEPAGE="http://gathering.itm.mh.se/modsurvey/"
+HOMEPAGE="http://www.modsurvey.org"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE="apache2 doc mysql postgres"
 MY_PN=${PN/_/}
 MY_PV=${PV/_/-}
 S=${WORKDIR}/${MY_PN}-${MY_PV}
-SRC_URI="http://gathering.itm.mh.se/${MY_PN}/download/test/${MY_PN}-${MY_PV}.tar.gz
-	doc? ( http://gathering.itm.mh.se/${MY_PN}/download/test/docs32x.tgz )"
+SRC_URI="http://www.modsurvey.org/download/tarballs/${MY_PN}-${MY_PV}.tgz
+doc? ( http://www.modsurvey.org/download/tarballs/${MY_PN}-docs-${MY_PV}.tgz )"
 
 DEPEND=">=dev-lang/perl-5.6.1"
 RDEPEND="${DEPEND}
@@ -33,7 +33,7 @@ src_unpack() {
 	cd ${S}
 	rm -f docs/LICENSE.txt
 	sed -i "s|/usr/local/mod_survey/|${D}/usr/lib/mod_survey/|g" installer.pl
-	use doc && unpack docs32x.tgz
+	use doc && unpack ${MY_PN}-docs-${PV}.tgz
 
 	if ! use apache2; then
 		sed "s|\$isa2 = \"Off\"|\$isa2 = \"On\"|" -i installer.pl
