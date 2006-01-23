@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6be4aea4802d50de63a66b5b8713e174 ChangeLog 1064
-MD5 c91ed50bfb3f6f62b5903acf02fbe11b metadata.xml 1005
-MD5 1424bdce43fe9c7370d052475269cbc0 gnu-jaf-1.0-r1.ebuild 919
+MD5 a9939de83f74453114763ff49f2c11d3 ChangeLog 1161
 MD5 7645f60d5936a5bac43a832d3aa143fc files/digest-gnu-jaf-1.0-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLH5fQiJ/wx066S4RAj7zAKCi+J1DImDP+mIuHs8qUKBWaO770QCgk7OU
-5aDHeEUXk/nwfcjK4JCh/PE=
-=TjiY
------END PGP SIGNATURE-----
+MD5 4396fc7ffa9e3b66651ba7ce3f243f7e gnu-jaf-1.0-r1.ebuild 923
+MD5 c91ed50bfb3f6f62b5903acf02fbe11b metadata.xml 1005
