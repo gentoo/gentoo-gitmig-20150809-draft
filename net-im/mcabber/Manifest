@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4e5b460497dbf7fd9a1e92260edf3087 ChangeLog 419
+MD5 47eee034069beda7b217eb5b61415862 files/digest-mcabber-0.7.4 66
+MD5 c0c413ba00e4cb839cb1fd18cd41e0ba mcabber-0.7.4.ebuild 1219
+MD5 355c04aa4a9dda9f5ff471aff404d32e metadata.xml 313
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1QOg8zY1VwezZiERAqg+AJ9LWT99BbbdxUhlbk9MfblHTOI/4ACgmfr3
+vJ6bJjLNRFK7G4iATH7BjMg=
+=WfAc
+-----END PGP SIGNATURE-----
