@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.74.ebuild,v 1.7 2005/04/24 12:33:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.74.ebuild,v 1.8 2006/01/23 15:16:28 killerfox Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.corpit.ru/mjt/tinycdb.html"
 SRC_URI="http://www.corpit.ru/mjt/tinycdb/${P}.tar.gz"
 
 LICENSE="public-domain"
-KEYWORDS="x86 ppc ia64"
+KEYWORDS="~hppa ia64 ppc x86"
 SLOT="0"
 
 DEPEND=""
