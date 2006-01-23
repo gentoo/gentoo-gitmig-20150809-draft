@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20051005.ebuild,v 1.2 2005/10/31 14:25:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20051005.ebuild,v 1.3 2006/01/23 09:29:52 lu_zero Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -70,6 +70,8 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 	dohtml -a png,html,texi,sdw -r doc/*
+	# workaround
+	rm -fR ${D}/usr/include
 }
 
 pkg_postinst () {
