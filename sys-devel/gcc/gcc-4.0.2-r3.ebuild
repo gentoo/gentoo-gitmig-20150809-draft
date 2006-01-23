@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.6 2006/01/20 00:51:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.7 2006/01/23 04:14:38 halcy0n Exp $
 
 PATCH_VER="1.5"
 PATCH_GCC_VER="4.0.2"
@@ -12,6 +12,11 @@ PP_VER=""
 HTB_VER="1.00"
 
 ETYPE="gcc-compiler"
+
+# bug #118361 and bug #108231
+# I will remove them on the next revbump, unless a better fix is made by then
+# - Halcy0n
+GENTOO_PATCH_EXCLUDE="30_all_gcc4-pr22252.patch 35_all_gcc41-pr25010.patch"
 
 # whether we should split out specs files for multiple {PIE,SSP}-by-default
 # and vanilla configurations.

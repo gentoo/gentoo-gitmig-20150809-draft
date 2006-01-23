@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94cbe6f7de9f9af8223faafe7e26b85c ChangeLog 100092
+MD5 b1f972345c6df93e4a30d7b2c9f50ccb ChangeLog 100234
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
@@ -91,13 +91,13 @@ MD5 af5f12b517a97a2185797f639bfc842f gcc-3.3.6.ebuild 3234
 MD5 307b46ee9b86bb1d182824303c4b01f3 gcc-3.4.1-r3.ebuild 31283
 MD5 c44289f25b99d3c631f97a8043826901 gcc-3.4.4-r1.ebuild 5203
 MD5 d771594bed0108dd38d143656cbb52c4 gcc-3.4.5.ebuild 5111
-MD5 ad56090704446703053f2a171f7c94a5 gcc-4.0.2-r3.ebuild 1943
+MD5 33a1e5955698636f9c2577ec2425dd7e gcc-4.0.2-r3.ebuild 2141
 MD5 ebe028f71133246ecf32b75e6d886ebb gcc-4.1.0_beta20060120.ebuild 2092
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0bWTCRZPokWLroQRAqpCAJ4n/lNBFii3DgQupnrWZER3DtupAQCcCUux
-EbF0LQQbTiTNxAO7JiJ7120=
-=lIMU
+iD8DBQFD1FhfCRZPokWLroQRAgdpAKCxZJIOzYMd5T7r9R6e0i8eyozMHQCaAn+r
+BXkVG4DX9sgfQe2ybTgeEFE=
+=2yR+
 -----END PGP SIGNATURE-----
