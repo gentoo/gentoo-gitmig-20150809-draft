@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f5f68b4c40d1be248f09ffec9a95cffd ChangeLog 906
 MD5 96a39cd43588e4f12ff5456a863d810b files/digest-relaxng-datatype-1.0 67
 MD5 ebbff7778f132e9e205c25d4daa5e84f files/relaxng-datatype-1.0-build_xml.patch 1972
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 6f08efcea070f08989da98dc52ea65c1 relaxng-datatype-1.0.ebuild 1134
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1EnindWRXhKOboURAgw2AKCTfIOK5lQNoCM+vnUHjOdM/IPjvwCdGlH8
+vnTb03xUlFvAHJEtBBXA7wo=
+=A+QF
+-----END PGP SIGNATURE-----
