@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logmon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.5 2006/01/19 23:41:15 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.6 2006/01/23 21:28:12 corsair Exp $
+
+  23 Jan 2006; Markus Rothe <corsair@gentoo.org> logmon-0.4.4.ebuild:
+  Added ~ppc64; bug #119403
 
   19 Jan 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   logmon-0.4.4.ebuild:
