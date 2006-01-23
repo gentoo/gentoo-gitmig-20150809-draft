@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c7ee18d45067f002767e722be7d1a9d ChangeLog 1649
+MD5 7229a74e0a29e1dec555f479ec0687bc ChangeLog 1735
 MD5 15fc9f86a11d14a292fd3053fbf31a91 files/digest-obby-0.2.0 62
 MD5 3eb5cfe2654ba837a61ae2da5ce9cc7d files/digest-obby-0.2.1 62
 MD5 1ca7b0ceed60d22ec007e1adbb60fc4d files/digest-obby-0.3.0 62
 MD5 dd068133bd54bcb0e2d32191cc97a088 metadata.xml 355
 MD5 e05565fc4e92799c0e5dca24f7fbb655 obby-0.2.0.ebuild 793
 MD5 da07f1d796b475dc0fa5cd9c82ca79a2 obby-0.2.1.ebuild 795
-MD5 d3c98d6bc746fea0d5d876ec5554a296 obby-0.3.0.ebuild 834
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0xPiSENan+PfizARAqf0AJ9jlmUJ/AY7xaOCv3dzpJzh4q95cQCfZmq8
-cH7wN0YtDsDfIjP6kOgV2sY=
-=rPgF
------END PGP SIGNATURE-----
+MD5 2000c7f842fb66becc6e692e2e74f337 obby-0.3.0.ebuild 832
