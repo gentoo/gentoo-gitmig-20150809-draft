@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.3.0.ebuild,v 1.3 2006/01/08 10:07:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.3.0.ebuild,v 1.4 2006/01/23 04:21:01 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="hal gtk"
 
 RDEPEND=">=dev-libs/glib-2.4
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.4
 		hal? ( >=sys-apps/dbus-0.5.2
 				>=sys-apps/hal-0.5
 				>=sys-apps/pmount-0.9.6 )
-		sys-apps/eject"
+		virtual/eject"
 DEPEND="${RDEPEND}
 		sys-devel/autoconf
 		sys-devel/libtool
