@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.8 2006/01/04 07:47:23 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.9 2006/01/23 20:57:19 corsair Exp $
+
+  23 Jan 2006; Markus Rothe <corsair@gentoo.org>
+  dragonflycms-9.0.6.1.ebuild:
+  Added ~ppc64; bug #97319
 
   04 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
   dragonflycms-9.0.6.1.ebuild:
