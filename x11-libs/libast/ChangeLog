@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libast
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.17 2005/06/01 04:14:59 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.18 2006/01/23 23:02:49 vapier Exp $
+
+*libast-0.7 (23 Jan 2006)
+
+  23 Jan 2006; Mike Frysinger <vapier@gentoo.org> +libast-0.7.ebuild:
+  Version bump for security.
 
 *libast-0.6.1-r1 (01 Jun 2005)
 
