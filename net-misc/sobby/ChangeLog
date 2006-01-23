@@ -1,23 +1,7 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.4 2006/01/23 14:13:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.5 2006/01/23 14:26:49 wolf31o2 Exp $
 
-  23 Jan 2006; Simon Stelling <blubb@gentoo.org> sobby-0.3.0.ebuild:
-  stable on amd64
-
-*sobby-0.3.0 (09 Dec 2005)
-
-  09 Dec 2005; Gustavo Felisberto <humpback@gentoo.org>;
-  +sobby-0.3.0.ebuild:
-  Version bump and removed the rc version. This marks the release of gobby 0.3.0.
-
-*sobby-0.3.0_rc1 (20 Nov 2005)
-
-  20 Nov 2005; Gustavo Felisberto <humpback@gentoo.org>;
-  +sobby-0.3.0_rc1.ebuild:
-  Bump to version 0.3.0_rc1. Arch teams please do not mark stable, I'll open a
-  bug when i think it is ready.
-
-  14 Aug 2005; Gustavo Felisberto <humpback@gentoo.org>; ChangeLog:
-  Initial import
+  23 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> sobby-0.3.0.ebuild:
+  Marking stable on x86 wrt bug #115113.
 
