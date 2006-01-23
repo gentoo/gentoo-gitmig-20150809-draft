@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.3 2005/12/26 13:49:10 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.4 2006/01/23 04:10:27 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -67,9 +67,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/makedepend-location.patch
 	epatch ${FILESDIR}/6.4-dont-install-gles-headers.patch
-	# Don't change it but make it configurable and set it below - Herbs
-	#epatch ${FILESDIR}/change-default-dri-driver-dir.patch
-	epatch ${FILESDIR}/configurable-dri-dir.patch
+	epatch ${FILESDIR}/change-default-dri-driver-dir.patch
 	epatch ${FILESDIR}/6.4-multilib-fix.patch
 	epatch ${FILESDIR}/${PV}-amd64-include-assyntax.patch
 
