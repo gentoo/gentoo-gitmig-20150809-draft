@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.4 2006/01/22 22:43:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.5 2006/01/23 01:14:22 halcy0n Exp $
 
 inherit multilib
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://eca.cx/"
 LICENSE="GPL-2"
 
 SLOT="1"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc x86"
 
 DEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk
