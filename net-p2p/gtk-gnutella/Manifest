@@ -1,4 +1,4 @@
-MD5 f5819647bf01791b3942ec5bf73d17c7 ChangeLog 9358
+MD5 867e4765c51ccdcb1cbb9612ef905ffd ChangeLog 9463
 MD5 ae9bb9e16331554a4cb95a17526ae2e5 files/0.95-gtk2.6.patch 1475
 MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95 71
 MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95-r1 71
@@ -9,7 +9,7 @@ MD5 c853cca1cdb98ecc95612841790820ac files/digest-gtk-gnutella-0.96b-r1 72
 MD5 1edaa8e1c79da47114bd08eeec6f50c3 files/gtk-gnutella.desktop 186
 MD5 cb48051df9336ec980daefd330832201 gtk-gnutella-0.95-r1.ebuild 2276
 MD5 24e2ea86d85eb6fbaeb4fd1cd1738e15 gtk-gnutella-0.95-r2.ebuild 1805
-MD5 bfb377df07375b3a2cf8ef09ee6868a2 gtk-gnutella-0.95.4-r1.ebuild 1259
+MD5 852643629a5f1c7673f4863a2fcb7fdc gtk-gnutella-0.95.4-r1.ebuild 1258
 MD5 c1bff3b2d62c830ca26aa580dcee277b gtk-gnutella-0.95.4.ebuild 1385
 MD5 7501dfee4eca51d7affba43b576a6156 gtk-gnutella-0.95.ebuild 2177
 MD5 2424a00d400a510a6a9a98c8476d2cea gtk-gnutella-0.96b-r1.ebuild 1306
