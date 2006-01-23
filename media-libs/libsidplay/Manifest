@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b5322a217f967e52e0b53bb426345ec ChangeLog 3142
 MD5 4e2a41563a14e632e37d162203ef4d45 files/digest-libsidplay-1.36.57 67
 MD5 c22ab29986ab10f688530269ab08efc3 files/digest-libsidplay-2.1.1 71
@@ -6,3 +9,10 @@ MD5 4ebc8fcee99f7cf51e43a3b0c9425ac5 files/libsidplay2-gcc41.patch 1555
 MD5 ac3ca28745743027f27980afc1e88187 libsidplay-1.36.57.ebuild 734
 MD5 dc8a2369d53e6dbfa8705b87b9834360 libsidplay-2.1.1.ebuild 1004
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1BzTcsIHjyDViGQRAo4rAJ9Em286gZVDu+81ci07aG4SYjJIAQCg3CZu
+F9D/rS+a4SYB1Ef1p8CvsO0=
+=YyWn
+-----END PGP SIGNATURE-----
