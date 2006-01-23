@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.192 2006/01/13 20:09:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.193 2006/01/23 21:21:06 ciaranm Exp $
+
+*vim-core-7.0_alpha20060123 (23 Jan 2006)
+
+  23 Jan 2006; Ciaran McCreesh <ciaranm@gentoo.org>
+  +vim-core-7.0_alpha20060123.ebuild:
+  New vim7 snapshot.
 
   13 Jan 2006; Ciaran McCreesh <ciaranm@gentoo.org>
   -vim-core-7.0_alpha20051207.ebuild, -vim-core-7.0_alpha20051215.ebuild,
