@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
-	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
-	</maintainer>
+  <maintainer>
+    <email>centic@gentoo.org</email>
+    <name>Dominik Stadler</name>
+  </maintainer>
 </pkgmetadata>

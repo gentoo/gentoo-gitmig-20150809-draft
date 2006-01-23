@@ -1,10 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.11 2005/07/04 07:12:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.12 2006/01/23 10:56:02 centic Exp $
 
 DESCRIPTION="simple yet effective CD indexing program"
-SRC_URI="http://littledragon.home.ro/unix/${P}.tar.gz"
-HOMEPAGE="http://littledragon.home.ro/unix/"
+# original src went away: SRC_URI="http://littledragon.home.ro/unix/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~centic/${PN}/${P}.tar.gz"
+HOMEPAGE="http://dev.gentoo.org/~centic/cdcat/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -26,6 +27,9 @@ src_unpack() {
 
 	# fix path to cd index files to be FHS-compliant
 	sed -i 's:/mnt/ext/cd:/var/lib/cdcat:' src/cdcat.pl
+
+	# work around problem with isoinfo -di
+	sed -i 's:isoinfo -di:isoinfo -d -i:' src/cdcat.pl
 }
 
 src_install() {
@@ -41,4 +45,7 @@ src_install() {
 	# now use the included install.sh
 	./install.sh --prefix=${D}/usr \
 		--man_prefix=${D}/usr/share/man || die "Install script failed."
+
+	insinto /etc
+	doins doc/cdcat.conf || die
 }
