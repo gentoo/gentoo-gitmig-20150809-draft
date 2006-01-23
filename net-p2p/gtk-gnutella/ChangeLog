@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gtk-gnutella
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.53 2005/12/29 11:26:56 eldad Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.54 2006/01/23 17:22:01 mkay Exp $
+
+*gtk-gnutella-0.96b-r1 (23 Jan 2006)
+
+  23 Jan 2006; Marcin Kryczek <mkay@gentoo.org> -gtk-gnutella-0.96b.ebuild,
+  +gtk-gnutella-0.96b-r1.ebuild:
+  Removing gtk2 flag from IUSE
 
 *gtk-gnutella-0.96b (29 Dec 2005)
 
