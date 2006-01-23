@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.39 2006/01/22 15:07:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.40 2006/01/23 14:37:33 sebastian Exp $
+
+*PEAR-PEAR-1.4.6 (23 Jan 2006)
+
+  23 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  +files/fix-packagingroot-1.4.6.patch, files/pear.conf,
+  +PEAR-PEAR-1.4.6.ebuild:
+  Version bump, closes bug 111525.
 
   22 Jan 2006; Simon Stelling <blubb@gentoo.org> PEAR-PEAR-1.3.6-r4.ebuild:
   stable on amd64
