@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gjdoc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.6 2005/12/19 22:30:22 betelgeuse Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.7 2006/01/23 08:40:41 betelgeuse Exp $
+
+  23 Jan 2006; Petteri Räty <betelgeuse@gentoo.org> gjdoc-0.7.7.ebuild:
+  Forcing to use java and javac binaries to solve bug #116804. Thanks to Zac
+  Medico <zmedico@gmail.com> for the fix.
 
 *gjdoc-0.7.7 (19 Dec 2005)
 
