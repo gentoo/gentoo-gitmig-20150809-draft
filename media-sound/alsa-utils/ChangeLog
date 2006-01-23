@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.134 2006/01/11 18:40:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.135 2006/01/23 19:10:25 flameeyes Exp $
+
+  23 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-utils-1.0.11_rc2-nls.patch, alsa-utils-1.0.11_rc2.ebuild:
+  Add patch to fix include order.
 
   11 Jan 2006; Jeroen Roovers <jer@gentoo.org> alsa-utils-1.0.11_rc2.ebuild:
   Marked stable for hppa (bug #111968).
