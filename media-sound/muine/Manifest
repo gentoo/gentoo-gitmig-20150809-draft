@@ -1,4 +1,4 @@
-MD5 32beb1888193303dc780388ed355440a ChangeLog 4098
+MD5 a945b3e495cffda2e103986b1135f279 ChangeLog 4251
 MD5 80e26562df326c5879e45ac707aa7923 files/digest-muine-0.8.3 63
 MD5 80e26562df326c5879e45ac707aa7923 files/digest-muine-0.8.3-r1 63
 MD5 d5dc53fe5feabb06a5204e6e51934bc7 files/muine-0.8.2-autoconf.diff 1187
@@ -6,5 +6,5 @@ MD5 c8375c619daa713f08a6a564fb7b67a5 files/muine-0.8.3-64-bit-int.diff 439
 MD5 31aa500432a0c61481b3c6b02dd0c37d files/muine-0.8.3-gtk-sharp-2.x.90-compat.diff 490
 MD5 b04462b969c03f2679e7e45ebf828e08 files/muine-0.8.3-monodoc-update.diff 2898
 MD5 42dcaa983276bbd8e849c07f13677337 metadata.xml 245
-MD5 fb424385484795701a6eb4bf77a233ac muine-0.8.3-r1.ebuild 2982
+MD5 458ed65dd2953361bce6c9d66cf595ac muine-0.8.3-r1.ebuild 3007
 MD5 d990aa2f2adc4cf42db6f4c2ccb28df5 muine-0.8.3.ebuild 2802

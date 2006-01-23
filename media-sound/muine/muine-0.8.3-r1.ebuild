@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3-r1.ebuild,v 1.1 2006/01/21 20:17:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3-r1.ebuild,v 1.2 2006/01/23 17:58:30 latexer Exp $
 
 inherit gnome2 mono eutils multilib
 
@@ -44,6 +44,7 @@ RDEPEND=">=dev-lang/mono-1.0
 	media-libs/flac"
 
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	>=dev-util/monodoc-1.1.8
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
