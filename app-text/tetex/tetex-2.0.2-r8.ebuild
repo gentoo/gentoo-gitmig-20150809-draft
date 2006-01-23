@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r6.ebuild,v 1.4 2006/01/21 11:47:36 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r8.ebuild,v 1.1 2006/01/23 22:08:23 nattfodd Exp $
 
 inherit tetex-2 flag-o-matic
 
@@ -19,7 +19,14 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}/libs/xpdf -p1" epatch ${FILESDIR}/xpdf2-underflow.patch
 	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl2-CAN-2004-1125.patch
 	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl3-CAN-2005-0064.patch
+
+	#bug 115775
+	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p2" epatch ${FILESDIR}/xpdf-2.02pl1-CAN-2005-3191-3.patch
+
 	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/xdvizilla.patch
+
+	# bug 85404
+	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/${P}-epstopdf-wrong-rotation.patch
 
 	# bug 118264
 	EPATCH_OPTS="-d ${WORKDIR} -p0" epatch ${FILESDIR}/${P}-dvi-draw-conflicting-types.patch
