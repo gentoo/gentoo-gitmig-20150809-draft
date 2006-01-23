@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.0.2.ebuild,v 1.1 2006/01/23 01:46:08 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.0.2.ebuild,v 1.2 2006/01/23 02:30:03 tantive Exp $
 
 DESCRIPTION="Ganglia is a scalable distributed monitoring system for high-performance computing systems such as clusters and Grids"
 HOMEPAGE="http://ganglia.sourceforge.net/"
@@ -32,14 +32,15 @@ src_install() {
 	einstall || die
 
 	insinto /etc
-	doins gmond/gmond.conf
+	#doins gmond/gmond.conf
 	doins gmetad/gmetad.conf
 	doman mans/{gmetad.1,gmetric.1,gmond.1,gstat.1}
+	doman gmond/gmond.conf.5
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
-	dodir /var/lib/ganglia/rrds
+	keepdir /var/lib/ganglia/rrds
 	fowners nobody:nobody /var/lib/ganglia/rrds
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/gmond.rc gmond
-	newexe ${FILESDIR}/gmetad.rc gmetad
+	newexe gmond/gmond.init gmond
+	newexe gmetad/gmetad.init gmetad
 
 }
