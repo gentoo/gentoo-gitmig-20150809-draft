@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a226d14da7241aa106315c69cea5490f ChangeLog 398
 MD5 6376867c220e2ea1a32303280b76e1a7 ezc-ImageAnalysis-1.0_rc1.ebuild 380
 MD5 2882f22e6946acdc60288d5907c77fc2 files/digest-ezc-ImageAnalysis-1.0_rc1 69
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1O2RaGfFFLhbXWkRAnv9AJwO5ACXdr1gROVgfQva/RfyUAxhFACeLwCC
+5gnSUtK6b2VibczfzVwIyPk=
+=UnLr
+-----END PGP SIGNATURE-----

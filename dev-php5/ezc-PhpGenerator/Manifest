@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 960970d4271a394ab4b6f39dd54da826 ChangeLog 394
 MD5 4860bbb5c2207bc6115355ab487a83d8 ezc-PhpGenerator-1.0_rc1.ebuild 400
 MD5 c2d71a499fa6cc70de32524650bc8bfe files/digest-ezc-PhpGenerator-1.0_rc1 66
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1O5CaGfFFLhbXWkRAqhZAJ9cXLprYMb3tgvP2G9V5qHP+GgtEQCgiu34
+l+dIL80Uiu1mWXpWHgoi19s=
+=d2W+
+-----END PGP SIGNATURE-----

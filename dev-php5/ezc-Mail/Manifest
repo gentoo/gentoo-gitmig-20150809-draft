@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 977fdc15968edb7148f113210c5a481b ChangeLog 362
 MD5 e534437d1287172030c1e1657b120305 ezc-Mail-1.0_rc1.ebuild 368
 MD5 b8289d30f3cc5875d7d6626a65bc8805 files/digest-ezc-Mail-1.0_rc1 59
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1O3naGfFFLhbXWkRAuRyAKCZjwFipkctunWZ/vPm0aApLTQcDwCfYjbB
+JeEOaYim+Ip/X2bq2rzLd4I=
+=rgvz
+-----END PGP SIGNATURE-----

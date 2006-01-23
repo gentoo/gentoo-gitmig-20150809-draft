@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 523cc274310de0ff810b1b012c1e4cbd ChangeLog 362
 MD5 cc739edfea9b748bcfa6f18bcc0a8fa5 ezc-Base-1.0_rc1.ebuild 672
 MD5 dd3052ceb58049014999810f5859f799 files/digest-ezc-Base-1.0_rc1 58
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1OsvaGfFFLhbXWkRAlYDAJ9QboDZwFV75YKw1CKGZurBBK7hUwCfbDxr
+PpcIBE6vPuxD0bBkAIazOVs=
+=mM8o
+-----END PGP SIGNATURE-----
