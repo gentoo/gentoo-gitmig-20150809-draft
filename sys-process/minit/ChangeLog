@@ -1,15 +1,6 @@
 # ChangeLog for sys-process/minit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.5 2006/01/13 10:46:38 vapier Exp $
-
-  13 Jan 2006; Mike Frysinger <vapier@gentoo.org> minit-0.9.1.ebuild:
-  Fix by Jérôme Poulin for building without dietlibc #118860.
-
-  28 Aug 2005; Mike Frysinger <vapier@gentoo.org> minit-0.9.1.ebuild:
-  Punt USE=diet.
-
-  16 Apr 2005; Mike Frysinger <vapier@gentoo.org> minit-0.9.1.ebuild:
-  Make dietlibc optional #89249 by James Rowe.
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.6 2006/01/23 23:59:55 vapier Exp $
 
 *minit-0.9.1 (03 Mar 2005)
 
