@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4906 2006/01/22 23:20:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4907 2006/01/23 22:49:04 ciaranm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -330,7 +330,6 @@
 =kde-base/lilo-config-3.5.1*
 =kde-base/lisa-3.5.1*
 =kde-base/lskat-3.5.1*
-=kde-base/metadata.xml-3.5.1*
 =kde-base/mimelib-3.5.1*
 =kde-base/mpeglib-3.5.1*
 =kde-base/networkstatus-3.5.1*
