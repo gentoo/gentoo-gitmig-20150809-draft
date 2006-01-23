@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 451b208d6d453af539176c97a16c938b ChangeLog 12145
 MD5 55de4abd16a9d1691977235bb18b8e7d bittorrent-3.4.2-r2.ebuild 1930
 MD5 f3256fa4363f786d8a4c42e09f6567d3 bittorrent-4.0.2.ebuild 1970
 MD5 5ab3e9f41eb94e533a6819741bab218b bittorrent-4.0.4.ebuild 2045
 MD5 517fe07a317e96c0fb8e56c9d2ad0426 bittorrent-4.1.8.ebuild 2218
 MD5 648622c245a3e1c9443ef5d327d70d3c bittorrent-4.2.0.ebuild 2218
-MD5 7da6ebbc62e5fb2719637d66ac19a364 bittorrent-4.2.2.ebuild 2306
+MD5 bebf63b0f85240607ab4a2265db1c1a1 bittorrent-4.2.2.ebuild 2307
 MD5 21ec89d06de83ddcc4cf6d6616355190 files/bittorrent-4.1.0-fix-all.patch 2483
 MD5 c200bdbccb6ccbf18bef6338363c1a4a files/bittorrent-tracker.confd 565
 MD5 48316c1ff208c04a7f2de73860fc48e6 files/bittorrent-tracker.initd 648
@@ -19,3 +22,10 @@ MD5 690238ce5ac8b5e708f9e6f9e6285721 files/digest-bittorrent-4.2.0 69
 MD5 8c7a2e819a64a6d8cf71d388e3663226 files/digest-bittorrent-4.2.2 69
 MD5 7779a7eaf51eb9f84da8a588050f53fa files/favicon.ico 1406
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1WDj2+ySkm8kpY0RAs8gAJ9kW9uqmMl49/88HO4R40JrjB0IbgCffmfr
+GNTJw/MXP+bywKQwGKIV6bQ=
+=3K1N
+-----END PGP SIGNATURE-----
