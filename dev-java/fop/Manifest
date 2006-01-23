@@ -7,12 +7,12 @@ MD5 656bb7d30e63d5e57f79489637c243ce files/0.20.5-startscript.patch 2435
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r1 67
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r3 67
 MD5 6888a76ca900a9c5561ab964ba88868c fop-0.20.5-r1.ebuild 1283
-MD5 2b88b9a0851deed9b1511930913c552b fop-0.20.5-r3.ebuild 1649
+MD5 ae622af96cf7f3f2ebb52bf682848c49 fop-0.20.5-r3.ebuild 1649
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwWJqndWRXhKOboURAvGuAJ9wHEs2gK4eHoteDFkTSt8ppRYdZQCeJVYX
-6GGjWlredpMP6joaHKktzrA=
-=84TX
+iD8DBQFD1OTJndWRXhKOboURAlZqAJ4hIUADjWon44UuGlcqGUPbxoUmhACfeh8e
+sI2BPtqxhUCZiQpPdDCcTD8=
+=21tr
 -----END PGP SIGNATURE-----
