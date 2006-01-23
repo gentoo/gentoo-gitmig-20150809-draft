@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.98 2005/12/20 21:11:53 stkn Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.99 2006/01/23 15:12:58 stkn Exp $
+
+  23 Jan 2006; Stefan Knoblich <stkn@gentoo.org> asterisk-1.2.0.ebuild,
+  asterisk-1.2.1.ebuild:
+  Fixed SRC_URI.
 
   20 Dec 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/1.2.0/asterisk-1.2.1-uclibc-getloadavg.diff,
