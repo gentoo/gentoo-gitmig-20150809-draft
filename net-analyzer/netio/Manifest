@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d937f9db3863634a79e88e29e0af66d0 netio-1.23.ebuild 1480
-MD5 faac2f7f818517292d07e09ddd4dc0db ChangeLog 4062
-MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+MD5 8be82a33d225e9acc94b45be77636fc5 ChangeLog 4236
 MD5 e2011a67f325086737a95017b12456d1 files/digest-netio-1.23 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+haAEZCkKN40op4RAsgOAJoDhLhL2engnobaWQyMom+wE2LpVACgiPtY
-1J3lgz2nZhCMSrB2xRiVOK8=
-=cptX
------END PGP SIGNATURE-----
+MD5 3fe01eaca6952739673292b48fea4b62 files/digest-netio-1.26 57
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+MD5 d937f9db3863634a79e88e29e0af66d0 netio-1.23.ebuild 1480
+MD5 dd5ca5051522a589f752b5842ea70642 netio-1.26.ebuild 1548
