@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.7 2006/01/12 21:36:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.8 2006/01/22 23:59:46 josejx Exp $
+
+  22 Jan 2006; Joseph Jezak <josejx@gentoo.org> libmodplug-0.7.ebuild:
+  Marked ppc stable.
 
   12 Jan 2006; Markus Rothe <corsair@gentoo.org> libmodplug-0.7.ebuild:
   Added ~ppc64
