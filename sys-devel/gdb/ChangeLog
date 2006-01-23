@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.83 2006/01/16 15:19:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.84 2006/01/23 23:29:42 vapier Exp $
+
+*gdb-6.4-r2 (23 Jan 2006)
+
+  23 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/gdb-6.3-partial-die-20050503.patch, +gdb-6.4-r2.ebuild:
+  Add patch from Fedora to fix #120091 by Ed Catmur.
 
   16 Jan 2006; <solar@gentoo.org> files/gdb-6.4-scanmem.patch:
   - scanmem patch updates from the PaX Team. Fixed compilation warnings and
