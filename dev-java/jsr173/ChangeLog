@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.4 2005/09/26 10:58:35 axxo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.5 2006/01/23 14:17:46 nichoj Exp $
+
+  23 Jan 2006; Joshua Nichols <nichoj@gentoo.org> jsr173-1.0.ebuild:
+  Marked stable on amd64.
 
   26 Sep 2005; Thomas Matthijs <axxo@gentoo.org> jsr173-1.0.ebuild:
   keyword x86
