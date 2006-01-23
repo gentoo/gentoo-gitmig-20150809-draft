@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.10 2006/01/05 19:33:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.11 2006/01/23 14:53:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,7 +20,9 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/${MY_PV}/nwclien
 	nowin? (
 		http://bsd.mikulas.com/nwresources${MY_PV}.tar.gz
 		http://163.22.12.40/FreeBSD/distfiles/nwresources${MY_PV}.tar.gz
-		ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources${MY_PV}.tar.gz )"
+		ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources${MY_PV}.tar.gz )
+	mirror://gentoo/nwn.png
+	http://dev.gentoo.org/~wolf31o2/sources/dump/nwn.png"
 
 LICENSE="NWN-EULA"
 SLOT="0"
@@ -155,7 +157,7 @@ src_install() {
 	then
 		chmod a-x ${Ddir}/data/patch.bif ${Ddir}/patch.key
 	fi
-	doicon "${FILESDIR}"/nwn.png
+	doicon "${DISTDIR}"/nwn.png
 	prepgamesdirs
 	chmod -R g+rwX ${Ddir}/saves ${Ddir}/localvault ${Ddir}/dmvault \
 		2>&1 > /dev/null || die "could not chmod"
