@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/libifp-module/libifp-module-1.0.0.2.ebuild,v 1.1 2006/01/23 20:59:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/libifp-module/libifp-module-1.0.0.2.ebuild,v 1.2 2006/01/23 21:05:53 chutzpah Exp $
 
 inherit linux-mod
 
@@ -18,4 +18,4 @@ S="${WORKDIR}/libifp-${PV}"
 
 MODULE_NAMES="libifp(misc:${S}:${S}/kbuild)"
 BUILD_TARGETS="all"
-ECONF_PARAMS="--with-kmodule --without-libifp" 
+ECONF_PARAMS="--with-kmodule --without-libifp"
