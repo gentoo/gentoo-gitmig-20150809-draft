@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.9 2006/01/09 15:48:03 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.10 2006/01/23 14:36:18 sebastian Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Maintained by the PHP Herd <php-bugs@gentoo.org>
@@ -58,8 +58,15 @@ php-pear-r1_src_install() {
 
 	cd "${S}"
 	mv "${WORKDIR}/package.xml" "${S}"
-	pear -d php_bin="${PHP_BIN}" install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
-	rm -rf "${D}/usr/share/php/.filemap" \
+	if has_version '=dev-php/PEAR-PEAR-1.3*' ; then
+		pear -d php_bin="${PHP_BIN}" install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
+	else
+		pear -d php_bin="${PHP_BIN}" install --nodeps --packagingroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
+	fi
+	rm -rf "${D}/usr/share/php/.channels" \
+	"${D}/usr/share/php/.depdblock" \
+	"${D}/usr/share/php/.depdb" \
+	"${D}/usr/share/php/.filemap" \
 	"${D}/usr/share/php/.lock" \
 	"${D}/usr/share/php/.registry"
 }

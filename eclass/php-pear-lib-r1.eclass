@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.4 2006/01/11 06:39:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.5 2006/01/23 14:36:17 sebastian Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 # Maintained by the PHP Herd <php-bugs@gentoo.org>
@@ -41,14 +41,20 @@ php-pear-lib-r1_src_install() {
 
 	cd "${S}"
 	mv "${WORKDIR}/package.xml" "${S}"
-	pear -d php_bin="${PHP_BIN}" install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
-
-	rm -rf "${D}/usr/share/php/.filemap" \
+	if has_version '=dev-php/PEAR-PEAR-1.3*' ; then
+		pear -d php_bin="${PHP_BIN}" install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
+	else
+		pear -d php_bin="${PHP_BIN}" install --nodeps --packagingroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
+	fi
+	rm -rf "${D}/usr/share/php/.channels" \
+	"${D}/usr/share/php/.depdblock" \
+	"${D}/usr/share/php/.depdb" \
+	"${D}/usr/share/php/.filemap" \
 	"${D}/usr/share/php/.lock" \
 	"${D}/usr/share/php/.registry"
 
 	# install to the correct phpX folder, if not specified
-	# /usr/share/php will be kept, also sedding to substitute
+	# /usr/share/php will be kept, also sedding to sobstitute
 	# the path, many files can specify it wrongly
 	if [ -n "${PHP_SHARED_CAT}" ] && [ "${PHP_SHARED_CAT}" != "php" ] ; then
 		mv -f "${D}/usr/share/php" "${D}/usr/share/${PHP_SHARED_CAT}" || die "Unable to move files"
