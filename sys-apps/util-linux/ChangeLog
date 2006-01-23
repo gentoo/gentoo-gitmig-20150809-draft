@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.135 2005/12/27 12:51:45 kloeri Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.136 2006/01/23 23:47:03 vapier Exp $
+
+*util-linux-2.12r-r3 (23 Jan 2006)
+
+  23 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +util-linux-2.12r-r3.ebuild:
+  Version bump the loop-aes support #119846 by Alon Bar-Lev.
 
   27 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   util-linux-2.12r-r1.ebuild:
