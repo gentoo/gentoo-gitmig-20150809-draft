@@ -1,4 +1,4 @@
-MD5 379a1f9dfc103c328a3c9cc0f93b982d ChangeLog 1891
+MD5 b5db8b95292e59944dcd7887588f0ba2 ChangeLog 2041
 MD5 5b5d5d5d530d675c1f8fea3e2bda27c6 files/comp-gentoo.1.patch 1376
 MD5 cc629344d268783ea8be555bd06249af files/comp-gentoo.patch 1276
 MD5 88aa0ef3a19289c609a5167e2176bbf6 files/compall-gentoo.patch 445
@@ -7,7 +7,7 @@ MD5 7635651c5b13ead41c16d56094238fcb files/ddi-use-ssh-gentoo.patch 518
 MD5 51d32e48137f8f59ff14cd870cbc70b2 files/digest-gamess-05272005.3 70
 MD5 51d32e48137f8f59ff14cd870cbc70b2 files/digest-gamess-05272005.3-r1 70
 MD5 51d32e48137f8f59ff14cd870cbc70b2 files/digest-gamess-05272005.3-r2 70
-MD5 2ce51ae457f40f1b4d7499b7d7e3dd17 files/digest-gamess-05272005.5 71
+MD5 814c3315966a1277cdc407629afde8c5 files/digest-gamess-05272005.5 70
 MD5 d2f6837d02ac960e7bed4addf9632eec files/lked-gentoo.patch 783
 MD5 e4d9a65b9c8e365bf2e4f2de8a5e1e55 files/runall-gentoo.1.patch 483
 MD5 bfc4049f6e2546889b161c6c9b3be72f files/runall-gentoo.patch 688
