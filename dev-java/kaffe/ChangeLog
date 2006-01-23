@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.43 2006/01/22 15:39:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.44 2006/01/23 05:49:26 karltk Exp $
+
+  23 Jan 2006; Karl Trygve Kalleberg <karltk@gentoo.org>
+  -kaffe-1.1.5.ebuild, -kaffe-1.1.6.ebuild:
+  Removed old revisions.
 
 *kaffe-1.1.7_rc1 (22 Jan 2006)
 
