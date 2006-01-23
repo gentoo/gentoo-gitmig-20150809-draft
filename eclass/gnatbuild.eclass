@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.3 2006/01/22 20:11:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.4 2006/01/23 23:03:08 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -502,12 +502,22 @@ gnatbuild_src_install() {
 		ln -s rts-native/adalib adalib
 		ln -s rts-native/adainclude adainclude
 
+		# force gnatgcc to use its own specs - when installed it reads specs
+		# from system gcc location. Do the simple wrapper trick for now
+		# !ATTN! change this if eselect-gnat starts to follow eselect-compiler
+		cd "${D}${BINPATH}"
+		mv gnatgcc gnatgcc_2wrap
+		cat > gnatgcc << EOF
+#! /bin/bash
+# wrapper to cause gnatgcc read appropriate specs
+BINDIR=\$(dirname \$0)
+\${BINDIR}/gnatgcc_2wrap -specs="${LIBPATH}/specs" \$@
+EOF
+		chmod a+x gnatgcc
+
 		# use gid of 0 because some stupid ports don't have
 		# the group 'root' set to gid 0 (toolchain.eclass)
 		chown -R root:0 "${D}${LIBPATH}"
-
-		# some provided ada specific Makefiles, may be usefull
-		#mv "${D}${PREFIX}/share/gnat" "${D}${DATAPATH}"
 		;;
 
 	cleanup)
@@ -528,7 +538,7 @@ gnatbuild_src_install() {
 		cd "${D}${DATAPATH}"
 		has noinfo ${FEATURES} \
 			&& rm -rf info \
-			|| rm -f info/{gcc,cpp}*
+			|| rm -f info/{dir,gcc,cpp}*
 		has noman  ${FEATURES} \
 			&& rm -rf man \
 			|| rm -rf man/man7/
