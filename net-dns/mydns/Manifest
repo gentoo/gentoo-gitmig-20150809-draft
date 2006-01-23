@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a19cebe8dae388ae7b4179fe24489fc3 ChangeLog 2192
+MD5 37eaf271f20d224cf2f3d3a39e7ef7dc ChangeLog 2309
 MD5 23af670a16b78f2ed91017e898efa177 files/digest-mydns-0.11.0 65
 MD5 9d4a562f99499ac86ee42d360e55b4d8 files/digest-mydns-1.0.0 64
 MD5 2e5710abe63e66ba058b8cab7a3c7fa7 files/digest-mydns-1.1.0 64
@@ -11,11 +8,4 @@ MD5 4c0162b2fafe950563e223e5a939c5c7 files/mydns.rc6-0.11.0 763
 MD5 c50346bf0fb8b39c521dca42b145f6ee metadata.xml 230
 MD5 80e9ef6371c327c8784736f7cfdbba9f mydns-0.11.0.ebuild 2148
 MD5 22250bac26f3f000198d9016dfd9c935 mydns-1.0.0.ebuild 2140
-MD5 b02d2738eaa3103097a3a6c58581ff4d mydns-1.1.0.ebuild 2251
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1BK5CRZPokWLroQRAvRzAJ9dLx2XPFUes+tu1lVL2BxWAVLBLQCfeml3
-KyM7gh4DoaRmZC4TlZyejPo=
-=j8Sx
------END PGP SIGNATURE-----
+MD5 1484acf0d62f09b780412280e021281e mydns-1.1.0.ebuild 2250
