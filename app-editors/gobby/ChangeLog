@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.8 2006/01/22 05:08:13 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.9 2006/01/23 14:15:32 blubb Exp $
+
+  23 Jan 2006; Simon Stelling <blubb@gentoo.org> gobby-0.3.0.ebuild:
+  stable on amd64
 
   22 Jan 2006; Joshua Jackson <tsunam@gentoo.org> gobby-0.3.0.ebuild:
   stable on x86 for bug #115113
