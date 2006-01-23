@@ -1,0 +1,46 @@
+diff -Naur anyterm-1.1.8/browser/.htaccess anyterm/browser/.htaccess
+--- anyterm-1.1.8/browser/.htaccess	2005-09-05 00:49:44.000000000 +0200
++++ anyterm/browser/.htaccess	2006-01-23 22:36:42.000000000 +0100
+@@ -7,6 +7,11 @@
+ 
+ <IfModule anyterm>
+ 
++# twp: To force Anyterm installations to be as secure as possible "out-of-the-
++# twp: box", we also require that both mod_ssl and mod_auth_pam are present.
++<IfModule mod_ssl.c>
++<IfModule mod_auth_pam.c>
++
+ # Use an anyterm_command directive to specify the command to run
+ # inside the terminal:
+ #
+@@ -24,6 +29,18 @@
+ # Example:
+ # anyterm_command '/path/to/anygetty --remotehost "Anyterm: %h" --autologin=%u'
+ 
++# twp: Use ssh to avoid problems with Gentoo's /bin/login.
++anyterm_command '/usr/bin/ssh %u@%h'
++
++# twp: Only provide Anyterm over SSL connections.
++SSLRequireSSL
++
++# twp: Require a valid user using mod_auth_pam.
++AuthPAM_Enabled on
++AuthType Basic
++AuthName "Anyterm"
++Require valid-user
++
+ <Files anyterm-module>
+   SetHandler anyterm
+ 
+@@ -34,7 +51,10 @@
+   # CustomLog /path/to/logfile combined env=!DONTLOG
+   # See the Apache documentation for details.  Note "=!" not "!=" !
+ 
+-  # SetEnv DONTLOG
++  SetEnv DONTLOG
+ </Files>
+ 
+ </IfModule>
++</IfModule>
++
++</IfModule>
