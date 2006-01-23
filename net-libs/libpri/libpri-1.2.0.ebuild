@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.0.ebuild,v 1.2 2005/11/20 21:33:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.0.ebuild,v 1.3 2006/01/23 15:16:43 stkn Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ BRI_VERSION="0.3.0-PRE-1"
 
 DESCRIPTION="Primary Rate ISDN (PRI) library"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://ftp.digium.com/pub/libpri/${MY_P}.tar.gz
+SRC_URI="http://ftp.digium.com/pub/libpri/old/${MY_P}.tar.gz
 	bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 
 S="${WORKDIR}/${MY_P}"
