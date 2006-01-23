@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r1.ebuild,v 1.2 2006/01/18 23:29:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r1.ebuild,v 1.3 2006/01/23 01:24:35 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -16,12 +16,12 @@ IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc rpm elf"
 DEPEND=">=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	lm_sensors? ( sys-apps/lm_sensors )
 	rpm? ( app-arch/rpm
 		dev-libs/popt
 		app-arch/bzip2
 	)
 	elf? ( dev-libs/elfutils )"
+#	lm_sensors? ( sys-apps/lm_sensors )
 
 RDEPEND="${DEPEND}
 	perl? (
@@ -40,16 +40,19 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-5.2.2-conf-elf-rpm-bz2.patch
 
-	if use lm_sensors; then
-		if use x86 || use amd64; then
-			epatch "${FILESDIR}"/${PN}-lm_sensors.patch
-		else
-			eerror "Unfortunatly you are trying to enable lm_sensors support for an unsupported arch."
-			eerror "please check the availability of sys-apps/lm_sensors - if it is available on"
-			eerror "your arch, please file a bug about this."
-			die "lm_sensors patch error: unsupported arch."
-		fi
-	fi
+#	The lm_sensors patch has a memory leak
+#	If you can help, please attach a patch to bug 109785
+
+#	if use lm_sensors; then
+#		if use x86 || use amd64; then
+#			epatch "${FILESDIR}"/${PN}-lm_sensors.patch
+#		else
+#			eerror "Unfortunatly you are trying to enable lm_sensors support for an unsupported arch."
+#			eerror "please check the availability of sys-apps/lm_sensors - if it is available on"
+#			eerror "your arch, please file a bug about this."
+#			die "lm_sensors patch error: unsupported arch."
+#		fi
+#	fi
 
 	# bug 118016
 	epatch "${FILESDIR}"/${PN}-5.2.2-asneeded.patch
@@ -77,7 +80,7 @@ src_compile() {
 
 	mibs="host ucd-snmp/dlmod"
 	use smux && mibs="${mibs} smux"
-	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
+#	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
 
 	econf \
 		--with-install-prefix="${D}" \
@@ -164,5 +167,12 @@ src_install () {
 		rm -rf "${D}"/usr/bin/{fixproc,traptoemail} "${D}"/usr/bin/snmpc{heck,onf}
 		find "${D}" -name '*.pl' -exec rm -f '{}' \;
 		use ipv6 || rm -rf "${D}"/usr/share/snmp/mibs/IPV6*
+	fi
+}
+
+pkg_postinst() {
+	if use lm_sensors ; then
+		ewarn "lm_sensors support is no longer available because it"
+		ewarn "causes a memory leak."
 	fi
 }
