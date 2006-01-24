@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/skinlf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.1 2006/01/22 12:31:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.2 2006/01/24 21:05:10 zzam Exp $
+
+*skinlf-1.2.12-r1 (24 Jan 2006)
+
+  24 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/skinlf-1.2.12-image-utils-without-jimi.patch,
+  +skinlf-1.2.12-r1.ebuild:
+  patch to work without fetch-restricted sun-jimi
 
 *skinlf-1.2.12 (22 Jan 2006)
 
