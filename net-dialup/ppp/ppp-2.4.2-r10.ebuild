@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.9 2005/05/14 09:27:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.10 2006/01/24 18:09:32 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Point-to-point protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
 	mirror://gentoo/${P}-patches-20050514.tar.gz
-	mppe-mppc? ( http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz )
+	mppe-mppc? ( http://mppe-mppc.alphacron.de/ppp-2.4.2-mppe-mppc-1.1.patch.gz )
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -22,6 +22,20 @@ RDEPEND="virtual/libc
 	pam? ( sys-libs/pam )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+pkg_setup() {
+	if use mppe-mppc; then
+		echo
+		ewarn "The mppe-mppc flag overwrites the pppd native MPPE support with MPPE-MPPC"
+		ewarn "patch developed by Jan Dubiec."
+		ewarn "The resulted pppd will work only with patched kernels with version <= 2.6.14."
+		einfo "You could obtain the kernel patch from MPPE-MPPC homepage:"
+		einfo "   http://mppe-mppc.alphacron.de/"
+		ewarn "CAUTION: MPPC is a U.S. patented algorithm!"
+		ewarn "Ask yourself if you really need it and, if you do, consult your lawyer first."
+		ebeep
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -153,7 +167,7 @@ src_install() {
 	insopts -m0644
 	newins ${FILESDIR}/modules.ppp ppp
 	if use mppe-mppc; then
-		echo 'alias ppp-compress-18 ppp_mppe_mppc' >> ${D}/etc/modules.d/ppp
+		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' ${D}/etc/modules.d/ppp
 	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ

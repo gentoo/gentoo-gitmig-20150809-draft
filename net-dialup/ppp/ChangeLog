@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.133 2005/12/25 15:08:40 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.134 2006/01/24 18:09:32 mrness Exp $
+
+  23 Jan 2006; Alin Nastac <mrness@gentoo.org> files/modules.ppp,
+  ppp-2.4.2-r10.ebuild, ppp-2.4.2-r15.ebuild, -ppp-2.4.3-r9.ebuild,
+  ppp-2.4.3-r10.ebuild:
+  Remove old test version. Add warnings about MPPE-MPPC patch problems and
+  incompatibilities (#119705). If eap-tls is enabled, apply eap-tls-0.7-mppe 
+  patch regardless whether mppe-mppc flag is enabled or not.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ppp-2.4.3-r10.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.

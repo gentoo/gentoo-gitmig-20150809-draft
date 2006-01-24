@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r10.ebuild,v 1.2 2005/12/25 15:08:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r10.ebuild,v 1.3 2006/01/24 18:09:32 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20051105.tar.gz
+	mirror://gentoo/${P}-patches-20060123.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -25,10 +25,15 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	if ! use radius; then
+	if use mppe-mppc; then
 		echo
-		ewarn "RADIUS plugins installation is now controled by radius useflag!"
-		ewarn "If you need them, hit Ctrl-C now!"
+		ewarn "The mppe-mppc flag overwrites the pppd native MPPE support with MPPE-MPPC"
+		ewarn "patch developed by Jan Dubiec."
+		ewarn "The resulted pppd will work only with patched kernels with version <= 2.6.14."
+		einfo "You could obtain the kernel patch from MPPE-MPPC homepage:"
+		einfo "   http://mppe-mppc.alphacron.de/"
+		ewarn "CAUTION: MPPC is a U.S. patented algorithm!"
+		ewarn "Ask yourself if you really need it and, if you do, consult your lawyer first."
 		ebeep
 	fi
 
@@ -89,12 +94,13 @@ src_unpack() {
 		# see http://eaptls.spe.net/index.html for more info
 		einfo "Enabling EAP-TLS support"
 		epatch ${WORKDIR}/patch/eaptls-0.7-gentoo.patch
+		use mppe-mppc || epatch ${WORKDIR}/patch/eaptls-mppe-0.7.patch
 	}
 
 	use mppe-mppc && {
 		einfo "Enabling MPPE-MPPC support"
 		epatch ${WORKDIR}/patch/mppe-mppc-1.1.patch
-		use eap-tls && epatch ${WORKDIR}/patch/eaptls-mppe-0.7-gentoo.patch
+		use eap-tls && epatch ${WORKDIR}/patch/eaptls-mppe-0.7-with-mppc.patch
 	}
 
 	use atm && {
@@ -235,7 +241,7 @@ src_install() {
 	insopts -m0644
 	newins ${FILESDIR}/modules.ppp ppp
 	if use mppe-mppc; then
-		echo 'alias ppp-compress-18 ppp_mppe_mppc' >> ${D}/etc/modules.d/ppp
+		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' ${D}/etc/modules.d/ppp
 	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
