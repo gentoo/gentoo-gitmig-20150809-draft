@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4910 2006/01/24 10:18:09 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4911 2006/01/24 14:24:16 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -585,10 +585,6 @@ sys-apps/gli
 # files, causing patching to fail.  I am currently masking this version and
 # most likely will be removing it in the near future.
 =games-util/loki_patch-20051209
-
-# Diego Pettenò <flameeyes@gentoo.org> (18 Dec 2005)
-# Masked pending removal, broken upstream
-kde-base/kmobile
 
 # Luca Barbato <lu_zero@gentoo.org> (18 Dec 2005)
 # avifile isn't mantained anymore and doesn't build with the
