@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.13 2006/01/18 21:09:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r1.ebuild,v 1.14 2006/01/24 00:41:36 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -258,8 +258,6 @@ toolchain-glibc_headers_compile() {
 	cd "${GBUILDDIR}"
 
 	# Pick out the correct location for build headers
-	local headersloc=$(alt_headers)
-	tc-is-cross-compiler && headersloc=${ROOT}${headersloc}
 	local myconf="--disable-sanity-checks --enable-hacker-mode"
 	myconf="${myconf}
 		--enable-add-ons=linuxthreads
@@ -267,7 +265,7 @@ toolchain-glibc_headers_compile() {
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}
-		--with-headers=${headersloc}
+		--with-headers=$(alt_build_headers)
 		--prefix=$(alt_prefix)
 		--mandir=$(alt_prefix)/share/man
 		--infodir=$(alt_prefix)/share/info
@@ -618,6 +616,13 @@ alt_headers() {
 	fi
 	echo "${ALT_HEADERS}"
 }
+alt_build_headers() {
+	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
+		ALT_BUILD_HEADERS=$(alt_headers)
+		tc-is-cross-compiler && ALT_BUILD_HEADERS=${ROOT}${headersloc}
+	fi
+	echo "${ALT_BUILD_HEADERS}"
+}
 
 alt_prefix() {
 	if is_crosscompile ; then
@@ -735,7 +740,7 @@ setup_flags() {
 }
 
 check_kheader_version() {
-	local header="${ROOT}$(alt_headers)/linux/version.h"
+	local header="$(alt_build_headers)/linux/version.h"
 
 	[[ -z $1 ]] && return 1
 

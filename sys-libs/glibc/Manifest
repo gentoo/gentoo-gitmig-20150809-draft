@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 66ec8aaf696bb217a0f8668275cc1578 ChangeLog 88731
+MD5 2d2fb232be126e8c062500540f0674cc ChangeLog 89042
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 MD5 67b125cec4f1f0d26ce4df706451fee6 files/2.3.1/glibc-2.3.1-fpu-cw-mips.patch 433
 MD5 1c4e567ed001f9489e11ee06c1ced0b7 files/2.3.1/glibc-2.3.1-libc_wait-compat.patch 1053
@@ -131,18 +131,18 @@ MD5 e67d64767c058da9a992f207155d0650 glibc-2.3.4.20040808-r1.ebuild 27869
 MD5 c9960e58c934162d756bc22d4e0047a9 glibc-2.3.4.20041102-r1.ebuild 34434
 MD5 d0501b95beefec42d574b34ef0d0cecb glibc-2.3.4.20041102-r2.ebuild 41390
 MD5 dcc9e5194707e88476804f3a43d65517 glibc-2.3.4.20050125-r1.ebuild 39583
-MD5 44f39e42f8ba51393ae4a1d9fc439732 glibc-2.3.5-r1.ebuild 40989
-MD5 8f1d6087f92a4a68c8b619349383b813 glibc-2.3.5-r2.ebuild 39315
-MD5 16f4e4474f9155a287345ec32a83f817 glibc-2.3.5-r3.ebuild 39393
-MD5 23af2c26bf05b7b899e05875ebc22af5 glibc-2.3.5.ebuild 40252
-MD5 6f39cf067f6c5e2c8facfedccbd0eae7 glibc-2.3.6-r1.ebuild 42256
-MD5 fcf35936d27b3ffcbca4880f6ea48656 glibc-2.3.6-r2.ebuild 42765
-MD5 76dd43d100b7c127d5ca51e981e0e768 glibc-2.3.6.ebuild 40584
+MD5 7eff2c955b8ecd4e63c4e5d159144203 glibc-2.3.5-r1.ebuild 41103
+MD5 da2e1d110594a8d29527eb3bbd7a645d glibc-2.3.5-r2.ebuild 39429
+MD5 88e9a837d0efc7a083e70de9f70ec65c glibc-2.3.5-r3.ebuild 39507
+MD5 30b7b2154ef88abb20edccf224def10f glibc-2.3.5.ebuild 40366
+MD5 309f0973518bd1f7614c61f9fa00472e glibc-2.3.6-r1.ebuild 42369
+MD5 1c2d19969ce336ca85fd771d54f551a8 glibc-2.3.6-r2.ebuild 42878
+MD5 5795f4dfc7b83202112dd0985fac5b36 glibc-2.3.6.ebuild 40697
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzq6FCRZPokWLroQRAnefAJ4kw1FDpLi3bNFJ0ENwXSCo0wJB8gCggsBL
-RMDnjVIZrBJlHSKwX0aSGm4=
-=lsl0
+iD8DBQFD1XhY2+ySkm8kpY0RApFoAJ0aq8lEzeW4YZQOHsQQyMeg2/wsfgCfXD9Y
+gIzxL0TGm/qroSvw29Jm4sM=
+=iBKo
 -----END PGP SIGNATURE-----
