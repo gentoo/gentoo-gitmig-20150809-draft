@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.53 2006/01/15 20:31:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.54 2006/01/24 20:12:53 josejx Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -107,9 +107,16 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		nios*)		echo nios;;
 		powerpc*)
 					# Starting with linux-2.6.15, the 'ppc' and 'ppc64' trees
-					# have been unified into simply 'powerpc'
-					if [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.15) ]] && [[ ${type} == "kern" ]] ; then
+					# have been unified into simply 'powerpc', but until 2.6.16,
+					# ppc32 is still using ARCH="ppc" as default
+					if [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.16) ]] && [[ ${type} == "kern" ]] ; then
 						echo powerpc
+					elif [[ $(KV_to_int ${KV}) -eq $(KV_to_int 2.6.15) ]] && [[ ${type} == "kern" ]] ; then
+						if [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
+							echo powerpc
+						else
+							echo ppc
+						fi	
 					elif [[ ${host} == powerpc64* ]] ; then
 						echo ppc64
 					elif [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
