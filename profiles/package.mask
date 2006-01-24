@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4913 2006/01/24 15:56:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4914 2006/01/24 18:59:55 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -444,10 +444,6 @@ media-video/xmovie
 # Alexandre Buisse <nattfodd@gentoo.org> (12 Jan 2006)
 # Masked for testing purposes
 dev-tex/mpm
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (11 Jan 2006)
-# Masked for testing purposes
->=sys-kernel/genkernel-3.3.11_pre1
 
 # Marcelo Goes <vanquirius@gentoo.org> (11 Jan 2006)
 # Masked in preparation for prelude-suite stabilization
