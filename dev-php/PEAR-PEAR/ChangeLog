@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.46 2006/01/24 20:29:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.47 2006/01/24 21:03:11 chtekk Exp $
+
+  24 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
+  PEAR-PEAR-1.4.6-r1.ebuild:
+  Dropping ~hppa on PEAR 1.4.6-r1 as dev-lang/php and its deps are not
+  keyworded hppa yet.
 
   24 Jan 2006; Jeroen Roovers <jer@gentoo.org> PEAR-PEAR-1.4.6-r1.ebuild:
   Marked ~hppa (bug #111525).
