@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0aa06fe6049facc4bbb7dd429f5bac94 ChangeLog 4993
-MD5 fe9490386a7c44c998192206c323f19c blas-atlas-3.6.0-r1.ebuild 4269
+MD5 2fb14af0f7b568b901be0f2826dcac68 ChangeLog 5101
+MD5 382a4d2e5d90df2abb3cec8882e023b2 blas-atlas-3.6.0-r1.ebuild 4265
 MD5 e4f6ae29d0e76b96a1c391ca95fe00c2 blas-atlas-3.6.0.ebuild 4259
 MD5 3155cc6ced3cc3eb6d293165bdb967dc blas-atlas-3.7.10.ebuild 4170
 MD5 f6b72f50853bebc6a15f453dc135217c blas-atlas-3.7.11.ebuild 4346
@@ -17,10 +14,3 @@ MD5 c0a79db6ec6fb95a56ce677107f08c01 files/f77-threaded-ATLAS 492
 MD5 e362a664ac2e543545706b85664af921 files/unbuffered.patch 497
 MD5 13d26350d75e6993f1b3ec48ca97f14e files/war 545
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD1p53KRy60XGEcJIRAklHAJ9bf/b82toT7MsHPwCAryLBdlxPDgCaA9Xg
-twmdf9eOaZY9TfUs/YR+OVA=
-=p57q
------END PGP SIGNATURE-----
