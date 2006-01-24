@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 26d7850e833f0ad4f02178a52d61df87 ChangeLog 47403
+MD5 6e743f7b9d93319ad66ad8007d0d980d ChangeLog 47566
 MD5 bd75f0242e3b7791803d089c38a3f920 files/CAN-2005-0156-suid.patch 703
 MD5 2bd41aec5e22962224dc9376e27bdde3 files/CAN-2005-0448-rmtree.patch 7629
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r5 64
@@ -22,6 +22,7 @@ MD5 044b90a8895f8a03bef8e4cf5759eecc files/perl-5.8.7-MakeMaker-RUNPATH.patch 85
 MD5 528fa2521c530d5a47df32b663e629af files/perl-5.8.7-regexp-nossp.patch 460
 MD5 26a1e7c48c7f68f39db4262500f6a1d8 files/perl-5.8.7-tempfiles.patch 1007
 MD5 fd8a46de4b22dbf9146a6d0459e812c4 files/perl-5.8.8_rc1-CAN-2005-0448-rmtree.patch 6961
+MD5 f6c5dc893c771f72cc183c946628d35e files/perl-5.8.8_rc1-reorder-INC.patch 3046
 MD5 c2612d59f380ad6e0c2de4d941e83dfd files/perl-cleaner 8879
 MD5 cc54c9f18cd584f4cac0ec109eae9335 files/perl-exp_intwrap.patch 1635
 MD5 060e9f10466fdc1268c75a7cf4dcbc7c files/perl-h2ph-ansi-header.patch 446
@@ -43,11 +44,11 @@ MD5 36f0bd0344966231663c7d99c94d3997 perl-5.8.7-r1.ebuild 19456
 MD5 3f172d664435893f2cfaaf21865c6cb7 perl-5.8.7-r2.ebuild 19525
 MD5 4f26a59cea9d114b7ee5e3e338df38df perl-5.8.7-r3.ebuild 19608
 MD5 8617318edb0a9de62024383369894fd2 perl-5.8.7.ebuild 19224
-MD5 b28377350cf285f5f92167966de7a755 perl-5.8.8_rc1.ebuild 19684
+MD5 5f8f6e58a90510d80087aa68ab862e98 perl-5.8.8_rc1.ebuild 19673
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD07sGtG5z4I8BtQoRAh5cAJ9GNDc2EpFcEjNq/p6W3IYLZH1HjwCePdOW
-qFDbvAyQkQH+0nVwX4X1uU0=
-=czGd
+iD4DBQFD1mCYtG5z4I8BtQoRArPPAJi6CUm6sXnTn90+FpW2AouC4TEiAJ0SJSKc
+x6OziTq6sgJXTT04neYaYw==
+=UOTq
 -----END PGP SIGNATURE-----

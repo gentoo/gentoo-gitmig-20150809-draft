@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8_rc1.ebuild,v 1.1 2006/01/22 17:04:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8_rc1.ebuild,v 1.2 2006/01/24 17:15:13 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -20,20 +20,24 @@ LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="berkdb debug doc gdbm ithreads perlsuid build minimal"
-PERL_OLDVERSEN="5.8.0 5.8.2 5.8.4 5.8.5 5.8.6"
+PERL_OLDVERSEN="5.8.0 5.8.2 5.8.4 5.8.5 5.8.6 5.8.7"
 
 DEPEND="berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
-	>=sys-devel/libperl-${PV}
+	~sys-devel/libperl-${PV}
 	!<perl-core/ExtUtils-MakeMaker-6.17
 	!<perl-core/File-Spec-0.87
 	!<perl-core/Test-Simple-0.47-r1"
 
-RDEPEND=">=sys-devel/libperl-${PV}
+RDEPEND="~sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
-PDEPEND="app-admin/perl-cleaner"
+PDEPEND="app-admin/perl-cleaner
+		>=perl-core/PodParser-1.32
+		>=perl-core/Test-Harness-2.56
+		>=perl-core/Test-Simple-0.62
+		>=perl-core/ExtUtils-MakeMaker-6.30"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
@@ -85,7 +89,7 @@ src_unpack() {
 	# when people (or ebuilds) install different versiosn of modules
 	# that are in the core, by rearranging the @INC directory to look
 	# site -> vendor -> core.
-	cd ${S}; epatch ${FILESDIR}/${PN}-reorder-INC.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
 
 	# some well-intentioned stuff in http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&selm=Pine.SOL.4.10.10205231231200.5399-100000%40maxwell.phys.lafayette.edu
 	# attempts to avoid bringing cccdlflags to bear on static
@@ -295,19 +299,6 @@ src_install() {
 	fi
 	make DESTDIR="${D}" ${installtarget} || die "Unable to make ${installtarget}"
 
-	# 2004.07.28 rac
-
-	# suidperl has had a history of security trouble, and the
-	# perldelta has recommended against using it for a while.  genone
-	# alerted me to the fact that the hardlinks aren't carrying
-	# through the staging directory, and we end up with four copies of
-	# perl, basically.  two normal, two suid.  fix this up here, and
-	# delete suidperl entirely.  if this causes outrage, here's where
-	# to fix.
-
-	# Moved to a use flag enablement - bug 64823 - mcummings
-	#rm ${D}/usr/bin/sperl${PV}
-	#rm ${D}/usr/bin/suidperl
 	rm ${D}/usr/bin/perl
 	ln -s perl${MY_PV} ${D}/usr/bin/perl
 
@@ -371,6 +362,17 @@ EOF
 	# CAN patch in bug 79685
 	epatch ${FILESDIR}/${P}-CAN-2005-0448-rmtree.patch
 
+	# Remove those items we PDPEND on
+	rm -f ${D}/usr/bin/instmodsh
+	rm -f ${D}/usr/bin/pod2usage
+	rm -f ${D}/usr/bin/podchecker
+	rm -f ${D}/usr/bin/podselect
+	rm -f ${D}/usr/bin/prove
+	rm -f ${D}/usr/share/man/man1/pod2usage*
+	rm -f ${D}/usr/share/man/man1/podchecker*
+	rm -f ${D}/usr/share/man/man1/podselect*
+	rm -f ${D}/usr/share/man/man1/prove*
+	rm -f ${D}/usr/share/man/man1/instmodsh*
 	if use minimal || use build ; then
 		src_remove_extra_files
 	fi
