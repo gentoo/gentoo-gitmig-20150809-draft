@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.54 2006/01/24 20:12:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.55 2006/01/24 22:35:10 dostrow Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -112,7 +112,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 					if [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.16) ]] && [[ ${type} == "kern" ]] ; then
 						echo powerpc
 					elif [[ $(KV_to_int ${KV}) -eq $(KV_to_int 2.6.15) ]] && [[ ${type} == "kern" ]] ; then
-						if [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
+						if [[ ${host} == powerpc64* ]] || [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
 							echo powerpc
 						else
 							echo ppc
