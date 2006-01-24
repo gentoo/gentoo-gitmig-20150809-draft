@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f33e8f07369f900d73d777a998bcce3 ChangeLog 2105
-MD5 082b64a036a2bbbb1bc45ffea0dffe48 mon-0.99.2-r1.ebuild 1258
+MD5 3a8d04cf9ce9affed4b3c687bf4545a1 ChangeLog 2191
 MD5 c1b296ca6c47a90395f9950e261dbd85 files/digest-mon-0.99.2-r1 63
 MD5 b7e59d208dfd4162a4d6c04f8410cafd files/mon.cf 795
 MD5 f83ef533930787d7b81f5e434a42ac78 files/mon.rc6 715
+MD5 fba066736dd3b66a5738f1ec9fde0684 mon-0.99.2-r1.ebuild 1257
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFClJgitG5z4I8BtQoRAuvTAJ9Ok/TmmpkqZuaJm4AiWaIU5h/+/wCglJwF
-3hATeifiWkC2eoVz9+y/vf4=
-=CCBw
+iD8DBQFD1lx4tG5z4I8BtQoRAqM2AKCTeCF04C0n6du+4rTpBAShSqSqWgCfTx4p
+dqyNH4X5oPNe+yMNpobWfgo=
+=db78
 -----END PGP SIGNATURE-----
