@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.123 2006/01/18 21:21:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.124 2006/01/24 18:58:53 wolf31o2 Exp $
+
+*genkernel-3.3.11_pre4 (24 Jan 2006)
+
+  24 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.3.11_pre3.ebuild, +genkernel-3.3.11_pre4.ebuild:
+  Version bumped to 3.3.11_pre4 for testing. This includes a patch for ppc64
+  compilation with a 32-bit userland.
 
   18 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -genkernel-3.3.11_pre2.ebuild:
