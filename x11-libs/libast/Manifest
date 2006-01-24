@@ -1,4 +1,4 @@
-MD5 3304939e33d8edc38ca197d707f5ea50 ChangeLog 2772
+MD5 de73dddb4de7ebfe44cf38e346c56458 ChangeLog 2880
 MD5 2a9e814b7851e9e22178430153da8110 files/digest-libast-0.5-r2 62
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1 64
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1-r1 64
@@ -9,6 +9,6 @@ MD5 177b67afc64c8e52522833c7ce007ab5 files/libast-64bit.patch 295
 MD5 11b1f2e66569782863ba4ab5e8660df1 libast-0.5-r2.ebuild 865
 MD5 44c5a6b967f1259df4f297d7f1813368 libast-0.6.1-r1.ebuild 1048
 MD5 4817e8c873a7ae52fbc5794e708a6f7d libast-0.6.1.ebuild 849
-MD5 4aa0b987df9a09c066e4fea323c0f5dd libast-0.7.ebuild 932
+MD5 498645690b00df7d0f78d885614ac00f libast-0.7.ebuild 930
 MD5 cdf153f9f63c593807adda0e8513e79c libast-9999.ebuild 1100
 MD5 ec45fec065a8eccc43870fc678126de7 metadata.xml 820
