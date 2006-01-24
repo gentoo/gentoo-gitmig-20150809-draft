@@ -1,9 +1,15 @@
-MD5 5e7f4ffdb97e3fece1cfb66d5eb07e5d mysqlnavigator-1.4.2.ebuild 1363
-MD5 dfdadf235508a8b42fda830d1d0e9902 mysqlnavigator-1.4.1.ebuild 948
-MD5 82f53a5d714bf3c9a346890c6c711e83 ChangeLog 2535
-MD5 06d93604c72182bd53e046f4f6cefb52 metadata.xml 247
-MD5 a1c8222244bb028ab05c6abae74a70eb files/mysqlnavigator-1.4.1-about.patch 31554
-MD5 850d88298fe12c24a123d194231d5fce files/mysqlnavigator-1.4.2-mysql-gt-4.1.3.patch 1738
-MD5 e5d5793a432b6cb1c563845ddc344c63 files/mysqlnavigator-1.4.1-mysql.patch 535
-MD5 2ca75439ae281db9a0dd3e0aa0f2c1b5 files/digest-mysqlnavigator-1.4.1 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4602c6513973d8fb2ebd566ca6022e98 ChangeLog 2731
 MD5 765311fbbc2c57958979e2de14bedc32 files/digest-mysqlnavigator-1.4.2 154
+MD5 850d88298fe12c24a123d194231d5fce files/mysqlnavigator-1.4.2-mysql-gt-4.1.3.patch 1738
+MD5 06d93604c72182bd53e046f4f6cefb52 metadata.xml 247
+MD5 5e7f4ffdb97e3fece1cfb66d5eb07e5d mysqlnavigator-1.4.2.ebuild 1363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1fi5KolR564NvWYRAjAcAKCdVOQ22LJc5fs/mxcZH/u36Yv6WQCdGSOB
+OEJiwyowrY+MGOpmmo5zECc=
+=g8UD
+-----END PGP SIGNATURE-----

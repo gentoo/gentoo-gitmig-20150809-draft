@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysqlnavigator
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.19 2005/10/10 21:37:16 vivo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.20 2006/01/24 09:51:35 vivo Exp $
+
+  24 Jan 2006; Francesco Riosa <vivo@gentoo.org>
+  -files/mysqlnavigator-1.4.1-about.patch,
+  -files/mysqlnavigator-1.4.1-mysql.patch, -mysqlnavigator-1.4.1.ebuild:
+  Campaign for a cleaner tree
 
   10 Oct 2005; Francesco Riosa <vivo@gentoo.org>
   mysqlnavigator-1.4.1.ebuild, mysqlnavigator-1.4.2.ebuild:
