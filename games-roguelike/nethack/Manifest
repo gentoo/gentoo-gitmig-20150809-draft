@@ -10,4 +10,4 @@ MD5 bbf4b9ccced679d68ffb476b32c1a4e8 files/3.4.3-macos.patch 307
 MD5 ed68fbd43d4e591eee4930aa4578a012 files/digest-nethack-3.4.3-r1 65
 MD5 f128c014d1efb8861cec5dae19eedb5b files/dot.nethackrc 2717
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 28c4ed62f71128cc8ab3a43882f79173 nethack-3.4.3-r1.ebuild 5301
+MD5 75b70d36e9c09818cf2910a70824700d nethack-3.4.3-r1.ebuild 5299
