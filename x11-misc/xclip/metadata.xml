@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-misc</herd>
-<maintainer>
-	<email>tseng@gentoo.org</email>
-	<name>Brandon Hale</name>
-</maintainer>
 </pkgmetadata>
-	
