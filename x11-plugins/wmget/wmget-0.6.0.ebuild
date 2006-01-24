@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.4 2004/10/19 08:55:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.5 2006/01/24 23:22:38 nelchael Exp $
 
 IUSE=""
 DESCRIPTION="libcurl-based dockapp for automated-downloads"
@@ -11,8 +11,17 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )
 	>=net-misc/curl-7.9.7"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 
