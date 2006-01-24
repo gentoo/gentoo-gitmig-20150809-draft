@@ -61,9 +61,9 @@ src_install() {
 	games_make_wrapper rtcwmp-demo ./wolf.x86 "${dir}" "${dir}"
 
 	if use dedicated; then
-		games_make_wrapper rtcwmp-demo-ded ./wolfded.x86 ${dir}
+		games_make_wrapper rtcwmp-demo-ded ./wolfded.x86 "${dir}" "${dir}"
 		exeinto /etc/init.d
-		newexe ${FILESDIR}/rtcwmp-demo-ded.rc rtcwmp-demo-ded
+		newexe "${FILESDIR}"/rtcwmp-demo-ded.rc rtcwmp-demo-ded
 		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/rtcwmp-demo-ded
 	fi
 
