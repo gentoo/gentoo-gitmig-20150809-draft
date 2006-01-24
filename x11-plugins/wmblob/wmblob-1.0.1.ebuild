@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.1.ebuild,v 1.6 2005/07/10 21:31:59 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.1.ebuild,v 1.7 2006/01/24 22:24:55 nelchael Exp $
 
 inherit eutils
 
@@ -10,8 +10,7 @@ DESCRIPTION="wmblob shows some blobs moving around"
 SRC_URI="http://dockapps.org/download.php/id/440/${P}.tar.bz2"
 HOMEPAGE="http://dockapps.org/file.php/id/155"
 
-DEPEND="virtual/x11
-	>=x11-libs/pango-1.4.0
+DEPEND=">=x11-libs/pango-1.4.0
 	>=x11-libs/gtk+-2.4.1
 	>=dev-util/pkgconfig-0.15.0"
 

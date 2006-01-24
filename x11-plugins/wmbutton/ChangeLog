@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbutton
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.7 2005/09/25 17:29:14 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.8 2006/01/24 22:29:38 nelchael Exp $
+
+  24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmbutton-0.5.ebuild:
+  Fixed DEPEND for modular X.
 
   25 Sep 2005; Luis Medinas <metalgod@gentoo.org> wmbutton-0.5.ebuild:
   Added ~amd64 keywords. Closes bug #107124

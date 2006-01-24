@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbio
-# Copyright 2001-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.10 2004/11/24 05:00:21 weeve Exp $
+# Copyright 2001-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.11 2006/01/24 22:23:26 nelchael Exp $
+
+  24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmbio-1.02.ebuild:
+  Fixed DEPEND for modular X.
 
   23 Nov 2004; Jason Wever <weeve@gentoo.org> wmbio-1.02.ebuild:
   Added ~sparc keyword.
