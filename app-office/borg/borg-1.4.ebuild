@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/borg/borg-1.4.ebuild,v 1.5 2005/07/22 10:02:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/borg/borg-1.4.ebuild,v 1.6 2006/01/24 22:10:34 chutzpah Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://borg-calendar.sourceforge.net/"
 SRC_URI="mirror://sourceforge/borg-calendar/borg_src_${PV}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip

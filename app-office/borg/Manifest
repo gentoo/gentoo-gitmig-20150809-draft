@@ -1,4 +1,4 @@
-MD5 82795b1ded966aa80ccafbf9155ae265 ChangeLog 615
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 245b18810acced0769004b0befa7d655 borg-1.4.ebuild 889
+MD5 261fdd51705cb58cd985df78b0fa2480 ChangeLog 717
+MD5 65cc75fb0bdb398a4f13cb271ea43df9 borg-1.4.ebuild 899
 MD5 b9b26f87940f58677145382f1828b66e files/digest-borg-1.4 62
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
