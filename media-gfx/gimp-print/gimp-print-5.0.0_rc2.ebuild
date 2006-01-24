@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.1 2006/01/24 19:16:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.2 2006/01/24 22:30:52 genstef Exp $
 
 inherit flag-o-matic libtool autotools
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/${MY_P}
 append-flags -fno-inline-functions
 
 pkg_setup() {
-	if built_with_use media-gfx/gimp gimpprint; then
+	if has_version media-gfx/gimp && built_with_use media-gfx/gimp gimpprint; then
 		ewarn "gimpprint is not yet available due to the API Change in version 5.0"
 		ewarn "Please remerge gimp with USE=-gimpprint to avoid collissions"
 		die "gimp with gimpprint USE-flag detected"
