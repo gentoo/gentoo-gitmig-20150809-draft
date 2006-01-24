@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.8.0.ebuild,v 1.1 2005/10/19 03:31:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.8.0.ebuild,v 1.2 2006/01/24 20:09:10 wolf31o2 Exp $
 
 inherit games
 
@@ -42,9 +42,7 @@ src_compile() {
 		myconf="${myconf} --disable-gtk"
 	fi
 	if ! use alsa ; then
-		has_version '>=media-libs/alsa-lib-0.9' \
-			&& myconf="${myconf} --disable-alsa9" \
-			|| myconf="${myconf} --disable-alsa"
+		myconf="${myconf} --disable-alsa9 --disable-alsa"
 	fi
 	egamesconf ${myconf} || die
 	emake -j1 -C sound-src || die "sound building failed"
