@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.1.ebuild,v 1.1 2006/01/22 22:53:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.1.ebuild,v 1.2 2006/01/24 19:52:58 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -15,6 +15,8 @@ KMEXTRA="kfile-plugins/pdf"
 DEPEND=">=media-libs/freetype-2.0.5
 	media-libs/t1lib
 	>=app-text/poppler-bindings-0.3.1"
+
+PATCHES="${FILESDIR}/${P}-saveas.patch"
 
 pkg_setup() {
 	if ! built_with_use app-text/poppler-bindings qt; then
