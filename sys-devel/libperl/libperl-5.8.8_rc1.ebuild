@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8_rc1.ebuild,v 1.2 2006/01/22 22:28:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8_rc1.ebuild,v 1.3 2006/01/24 17:13:55 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -133,7 +133,7 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
 
 	# we need the same @INC-inversion magic here we do in perl
-	cd ${S}; epatch ${FILESDIR}/${PN}-reorder-INC.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
 }
 
 src_compile() {
