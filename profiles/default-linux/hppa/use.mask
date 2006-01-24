@@ -88,6 +88,10 @@ selinux
 # Many java apps need java => 1.3 and hppa has only 1.1 right now
 java
 
+# 24 Jan 2006 Jeroen Roovers <jer@gentoo.org>
+# Same for dev-lang/php:java-external
+java-external
+
 # 5 Jan 2005 Ciaran McCreesh <ciaranm@gentoo.org>
 # No reliable java, no netbeans. bug 66762
 netbeans
