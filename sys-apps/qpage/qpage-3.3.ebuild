@@ -1,28 +1,26 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/qpage-3.3.ebuild,v 1.5 2006/01/24 16:40:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/qpage-3.3.ebuild,v 1.6 2006/01/24 23:56:33 vapier Exp $
 
 inherit eutils
-
-IUSE="tcpd"
 
 DESCRIPTION="Sends messages to an alphanumeric pager"
 HOMEPAGE="http://www.qpage.org/"
 SRC_URI="http://www.qpage.org/download/${P}.tar.Z"
+
 LICENSE="qpage"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~x86"
+IUSE="tcpd"
 
-DEPEND="tcpd? ( sys-apps/tcp-wrappers )
-	!tcpd? ( >=sys-apps/sed-4 )"
-RDEPEND="
-	tcpd? ( sys-apps/tcp-wrappers )
+DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
+RDEPEND="${DEPEND}
 	virtual/mta"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S}	    || die "cd failed"
-	epatch ${FILESDIR}/qpage-3.3-gentoo.patch || die "epatch failed"
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/qpage-3.3-gentoo.patch
 }
 
 src_compile() {
@@ -30,7 +28,7 @@ src_compile() {
 
 	# There doesn't seem to be a clean way to disable tcp wrappers in
 	# this package if you have it installed, but don't want to use it.
-	if ! use tcpd; then
+	if ! use tcpd ; then
 		sed -i 's/-lwrap//g; s/-DTCP_WRAPPERS//g' Makefile
 		echo '#undef TCP_WRAPPERS' >> config.h
 	fi
@@ -49,13 +47,10 @@ src_install() {
 	fowners daemon:daemon /var/lock/subsys/qpage
 	fperms 770 /var/lock/subsys/qpage
 
-	dodir /etc/qpage
 	insinto /etc/qpage
-	doins example.cf		|| die "doins example.cf failed"
+	doins example.cf || die "doins example.cf failed"
 
-	insopts -m0755
-	insinto /etc/init.d
-	doins ${FILESDIR}/qpage	|| die "doins qpage failed"
+	doinitd "${FILESDIR}"/qpage
 }
 
 pkg_postinst() {
