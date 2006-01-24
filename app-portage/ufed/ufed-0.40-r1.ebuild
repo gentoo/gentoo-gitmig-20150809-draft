@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40.ebuild,v 1.1 2005/11/26 16:30:59 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r1.ebuild,v 1.1 2006/01/24 19:17:13 truedfx Exp $
+
+inherit eutils
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org/"
@@ -14,6 +16,12 @@ IUSE=""
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	dev-lang/perl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-useorder.patch
+}
 
 src_compile() {
 	./configure || die "configure failed"
