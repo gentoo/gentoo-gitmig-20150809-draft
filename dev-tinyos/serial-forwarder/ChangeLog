@@ -1,0 +1,11 @@
+# ChangeLog for dev-tinyos/serial-forwarder
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/serial-forwarder/ChangeLog,v 1.1 2006/01/24 19:18:02 sanchan Exp $
+
+*serial-forwarder-1.1.15 (24 Jan 2006)
+
+  24 Jan 2006; Sandro Bonazzola <sanchan@gentoo.org> +metadata.xml,
+  +serial-forwarder-1.1.15.ebuild:
+  New ebuild, thanks to Aurélien Francillon and Daniel Black.
+  Closing bug #98660.
+
