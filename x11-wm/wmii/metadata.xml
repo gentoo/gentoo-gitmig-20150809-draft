@@ -7,12 +7,12 @@
 		<name>Torsten Veller</name>
 	</maintainer>
 	<longdescription lang="en">
-		wmii is a highly customizable keyboard- and mouse-driven X11 window
-		manager which supports conventional, tabbed and tiled window management
-		with low memory usage and a vi-alike user interaction. Due to a complete
-		rewrite it is highly modularized and uses a new configuration and
-		inter-process communication interface which is oriented on the 9p
-		protocol of the plan9 operating system.
+		wmii is a dynamic window manager for X11. It is highly customizable and
+		usable with keyboard and mouse. It supports conventional, tabbed and
+		tiled window management and has a small memory footprint. It is highly
+		modularized and uses an inter-process communication interface which
+		conforms to the 9P2000 protocol introduced by the Plan 9 operating
+		system.
 	</longdescription>
 </pkgmetadata>
 
