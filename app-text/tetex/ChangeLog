@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.101 2006/01/24 01:11:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.102 2006/01/24 14:23:50 killerfox Exp $
+
+  24 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> tetex-2.0.2-r8.ebuild:
+  Stable on hppa. See bug #115775.
 
   24 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> tetex-2.0.2-r8.ebuild:
   Stable on sparc wrt security #115775
