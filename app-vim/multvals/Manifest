@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f85b65a1f1e49b9f72df9e6af1eca1e6 ChangeLog 1212
-MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
-MD5 eb3d555bcac9993f452a8169ea92fa35 multvals-3.6.1.ebuild 601
-MD5 df8731fcc9ce8a8602de98e91bc8388d multvals-3.10.ebuild 616
-MD5 3a15d8afc444e8aceafb48dc8e6ef3bd files/digest-multvals-3.6.1 66
+MD5 4d079df02f027470ab899e7ff7ac9f14 ChangeLog 1304
 MD5 c5306f7031aa2d693387df5d4184c305 files/digest-multvals-3.10 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDE1SV5mJXAu5GbtIRAqxwAJwMGeY4ZW5ZMYjzdrCdX2yD3t5xtgCfU8QT
-e3eEekkDdLbcuG8xnwQZY7U=
-=Xn9l
------END PGP SIGNATURE-----
+MD5 3a15d8afc444e8aceafb48dc8e6ef3bd files/digest-multvals-3.6.1 66
+MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
+MD5 92c9f105e148197d40c2b21c1f416689 multvals-3.10.ebuild 614
+MD5 eb3d555bcac9993f452a8169ea92fa35 multvals-3.6.1.ebuild 601
