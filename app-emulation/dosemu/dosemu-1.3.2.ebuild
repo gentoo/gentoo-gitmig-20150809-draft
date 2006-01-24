@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.2.ebuild,v 1.2 2006/01/14 09:19:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.2.ebuild,v 1.3 2006/01/24 02:00:05 hanno Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,8 @@ RDEPEND="X? (
 		x11-libs/libXau
 		x11-libs/libXdmcp
 		x11-proto/xf86dgaproto
+		x11-apps/xset
+		x11-apps/xlsfonts
 	)
 	virtual/x11
 	) )
