@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a2000e38ae31c42d8f9c788fdd17b127 ChangeLog 324
+MD5 2d38edb15f27a28749d3d0ab44449081 devio-1.2.ebuild 537
+MD5 c333337ab2652af8e62d0d3e2bef04b1 files/digest-devio-1.2 60
+MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1Y8t2+ySkm8kpY0RAihPAJ9jsQGaBUR20d994h9JjhdarECPZwCfSkY5
+KX3djpcJenQh2F9tA218lZs=
+=lg4l
+-----END PGP SIGNATURE-----
