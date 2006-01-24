@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.23.ebuild,v 1.5 2006/01/12 11:44:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.23.ebuild,v 1.6 2006/01/24 23:42:29 nelchael Exp $
 
 inherit eutils
 
@@ -21,7 +21,17 @@ KEYWORDS="amd64 ppc sparc x86"
 
 IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libXau
+		x11-libs/libX11
+		x11-libs/libXrandr
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXrender
+		x11-libs/libXft
+		x11-libs/libXt
+		x11-libs/libXdmcp )
+	virtual/x11 )
 	esd? ( media-sound/esound )
 	gnome? ( gnome-base/gnome-libs gnome-base/gnome-desktop dev-util/pkgconfig )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
@@ -31,6 +41,11 @@ RDEPEND="virtual/x11
 	media-libs/giflib"
 
 DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto
+		x11-proto/xineramaproto )
+	virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {
