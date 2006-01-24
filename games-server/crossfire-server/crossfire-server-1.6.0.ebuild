@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.6.0.ebuild,v 1.5 2004/07/01 11:23:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.6.0.ebuild,v 1.6 2006/01/24 19:41:08 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,12 +11,22 @@ SRC_URI="mirror://sourceforge/crossfire/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE="X"
 
 DEPEND="virtual/libc
 	X? (
-		virtual/x11
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXt
+				x11-libs/libXmu
+				x11-libs/libXaw
+				x11-libs/libXpm )
+			virtual/x11 )
 		media-libs/libpng )"
 
 S="${WORKDIR}/${MY_P}"
