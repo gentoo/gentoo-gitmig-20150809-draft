@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 290dd14159cae2d72a89736690aba6f0 wmtimer-2.4.ebuild 793
-MD5 29dad15b2d403e1f5225ef8b26e8baa3 metadata.xml 505
-MD5 4901d73b56fd6bd7ce89481a41b2fb64 wmtimer-2.9.2.ebuild 874
-MD5 5a60a0dd7c9fd78a6a05ef3b5896b172 ChangeLog 2191
-MD5 49cf497c9616c2dc6e57a24f096e9b07 files/digest-wmtimer-2.9.2 63
+MD5 a42f350d79c64d3f1ed09caa616e829d ChangeLog 2320
 MD5 e9893dea144b35a7eb054a48c737d0cc files/digest-wmtimer-2.4 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFDK2ktLLFUmVNQ7rkRAnaJAJ0VXVYm2Dom1oqEsnckw3/5fUqCXQCY+rRr
-wxrzBtFGzvgJe0+Bg7cUNg==
-=WG+p
------END PGP SIGNATURE-----
+MD5 49cf497c9616c2dc6e57a24f096e9b07 files/digest-wmtimer-2.9.2 63
+MD5 29dad15b2d403e1f5225ef8b26e8baa3 metadata.xml 505
+MD5 08f3822d0964f424a3615ac099a144a5 wmtimer-2.4.ebuild 769
+MD5 4f1d7c61b880319c3a8eaf20d18ff806 wmtimer-2.9.2.ebuild 848
