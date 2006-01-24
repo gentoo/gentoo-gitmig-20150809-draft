@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a905c9dd804ce8510e9425dfed432f03 ChangeLog 58939
+MD5 84ebd6a4f165a427c434e430088dde23 ChangeLog 59702
 MD5 c6fcd70c34bed04e59808ec71c5bedfb files/digest-mysql-3.23.58-r1 140
 MD5 0feb3b501c47708ea13707c8e4cdde9c files/digest-mysql-4.0.25-r2 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26 139
@@ -12,11 +12,13 @@ MD5 bbb9e8ef722b301fe22323fbf373c3d1 files/digest-mysql-5.0.17 139
 MD5 2217697573a3f8e3c8ad3f9c7a80ff70 files/digest-mysql-5.0.18 139
 MD5 b780f68ac543a4a0b728d047bae97021 files/digest-mysql-5.0.18-r30 139
 MD5 c97294b384ac1f53d113585d5dd4bf25 files/digest-mysql-5.1.4_alpha-r30 144
+MD5 631d741e2c56442abacaa4c1ca5db499 files/logrotate-slot.mysql 502
 MD5 d200345efa421d012cf858134d2c8884 files/logrotate.mysql 440
 MD5 f1fc8bfe540d6f1268b53b7cad275080 files/my.cnf 1231
 MD5 a8f89d11a0913332c5f8c1da5a21cc3f files/my.cnf-4.0.14-r1 2816
 MD5 9946a8f7163970ec4f6a713c97eadbe0 files/my.cnf-4.0.24-r1 4271
 MD5 277705080f05b5b98b815487e080e562 files/my.cnf-4.1 4068
+MD5 0ad942c25eb224912a699844fc15ff75 files/my.cnf-4.1-r1 4243
 MD5 625b4007f035e3da9a4f1eeee1db6b9c files/mysql-4.0.15.rc6 1187
 MD5 d0fbdf4e41f2b52210eef6cb3a53e128 files/mysql-4.0.24-r1.rc6 1662
 MD5 356c1b4211a0b3d229bcb09c7c8742a7 files/mysql-4.0.24-r2.rc6 2151
@@ -25,7 +27,7 @@ MD5 624541a36c1aae85e3999078d2468215 files/mysql-slot.conf.d-r1 2999
 MD5 7855af91fd7c2253e5da6b6a0e245375 files/mysql-slot.conf.d-r2 3817
 MD5 2e915001528cb4b44591d907168b6a51 files/mysql-slot.rc6 8691
 MD5 8158f25fbd80fba48f0d01b0889ea0b3 files/mysql-slot.rc6-r1 9016
-MD5 f1ccf59573d77bf58bd654f44af43c0c files/mysql-slot.rc6-r2 7848
+MD5 e498f5d3b097ab0ab2db0e46b2a8e9a0 files/mysql-slot.rc6-r2 7883
 MD5 73be6460f548f6f73c70246a4cfd13a0 files/mysql.init 886
 MD5 9ff84042930f67b14f418a9dcf78d860 files/mysqlmanager-slot.conf.d 1021
 MD5 69488d8c4aca1adf37e4c24b39305487 files/mysqlmanager-slot.rc6 6614
@@ -34,16 +36,16 @@ MD5 eb11a08abb447b7a69b192a6f9be3dbf mysql-3.23.58-r1.ebuild 7219
 MD5 04a6e805b1d24c4c0e4b953d663594dc mysql-4.0.25-r2.ebuild 14265
 MD5 bc01b998b62fcca567651ca0c99d86af mysql-4.0.26.ebuild 14894
 MD5 739b8a544851021d0045944084bec221 mysql-4.1.14.ebuild 18858
-MD5 b993c502a73a76f9868a82f851cdb70d mysql-4.1.16-r30.ebuild 1966
+MD5 4e0cc80f911d3fa35b10a62d3e7b1794 mysql-4.1.16-r30.ebuild 1975
 MD5 fabd73e14eabebac968e6a5ded7569e1 mysql-4.1.16.ebuild 24836
 MD5 d9df2dc4d1233c6bc8f4628c1624b275 mysql-5.0.17.ebuild 24839
-MD5 b2e22c700cf74068e4fcdbc50507f4f5 mysql-5.0.18-r30.ebuild 1966
+MD5 970b4e45e1595d0edbe37c1a8ed68cf3 mysql-5.0.18-r30.ebuild 1975
 MD5 d2ecaaa530a5a25ff3dc4ad4974f8a61 mysql-5.0.18.ebuild 24839
-MD5 239954c043f690385d633ca9e5eb4172 mysql-5.1.4_alpha-r30.ebuild 1971
+MD5 51a06a62df32804d95eb0865d5117f07 mysql-5.1.4_alpha-r30.ebuild 1980
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyopNKolR564NvWYRAl2+AJ9A+WTjrAryk7xFQ6URiXtUbFgslACeO9Eh
-TyLphzwMwuRW6yfktTjjvnQ=
-=sLYA
+iD8DBQFD1n9fKolR564NvWYRAvJLAKCL29ZHRrEqLQecCU3RcNoFMaVcrACfXK8a
+KLovDnpK/aHzmeh43IFJmFE=
+=u3z+
 -----END PGP SIGNATURE-----

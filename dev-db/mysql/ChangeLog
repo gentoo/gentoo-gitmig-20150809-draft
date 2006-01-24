@@ -1,6 +1,20 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.293 2006/01/15 14:18:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.294 2006/01/24 19:25:57 vivo Exp $
+
+  24 Jan 2006; Francesco Riosa <vivo@gentoo.org> +files/my.cnf-4.1-r1,
+  +files/logrotate-slot.mysql, files/mysql-slot.rc6-r2,
+  mysql-4.1.16-r30.ebuild, mysql-5.0.18-r30.ebuild,
+  mysql-5.1.4_alpha-r30.ebuild:
+  All changes refer to slotted versions and eclasses for these.
+  - removed "utf8" controversial use flag, it was simply replacing utf8 in
+  > my.cnf
+  - added "srvdir" use flag, on a system without previous installed MySQL it
+  > will use datadir="/srv/localhost/mysql/datadir"
+  - support for NOCHECK in rc scripts to be used during upgrade
+  - inherit mysql_fx from ebuilds, instead of mysql.eclass to make easyer
+  > froze a "stable" package moving the mysql.eclass into the ebuild itself.
+  - updated "logrotate" and "my.cnf" to support slotting
 
   15 Jan 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.16-r30.ebuild,
   mysql-5.0.18-r30.ebuild, mysql-5.1.4_alpha-r30.ebuild:

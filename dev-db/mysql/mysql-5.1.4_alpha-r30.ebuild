@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.4_alpha-r30.ebuild,v 1.6 2006/01/15 14:18:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.4_alpha-r30.ebuild,v 1.7 2006/01/24 19:25:57 vivo Exp $
 
 # MYSQL_VERSION_ID will be
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
@@ -21,7 +21,7 @@ MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 # for future use ...
 NDB_VERSION_ID=$(( ${MYSQL_VERSION_ID} / 100 ))
 
-inherit mysql
+inherit mysql_fx mysql
 KEYWORDS="-*"
 
 DEPEND="${DEPEND}

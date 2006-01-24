@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r2,v 1.3 2006/01/11 12:21:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r2,v 1.4 2006/01/24 19:25:57 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -170,6 +170,7 @@ get_slot_config() {
 }
 
 checkconfig() {
+	[[ -n "${NOCHECK}" ]] && return 0
 	wdebug 4 ">>> checkconfig(\"${1}\")"
 	local datadir="$1"
 	if [ ! -d "${datadir}" ]; then
