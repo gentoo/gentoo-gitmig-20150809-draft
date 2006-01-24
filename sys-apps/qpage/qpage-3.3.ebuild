@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/qpage-3.3.ebuild,v 1.4 2004/06/24 22:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/qpage-3.3.ebuild,v 1.5 2006/01/24 16:40:13 chutzpah Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.qpage.org/"
 SRC_URI="http://www.qpage.org/download/${P}.tar.Z"
 LICENSE="qpage"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~alpha ~amd64 ~x86"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	!tcpd? ( >=sys-apps/sed-4 )"
