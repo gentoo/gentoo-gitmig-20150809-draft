@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/xml-commons-external-1.3.02.ebuild,v 1.2 2006/01/21 22:15:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/xml-commons-external-1.3.02.ebuild,v 1.3 2006/01/24 01:31:23 nichoj Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1.3"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 amd64 ~ppc"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.3
