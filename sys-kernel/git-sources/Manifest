@@ -1,4 +1,4 @@
-MD5 e276f60ec91d0550e2d83bf7d2108ba0 ChangeLog 1963
+MD5 6646a55c71183560c46845214996fa15 ChangeLog 2115
 MD5 9dafbed8ef5d9b1fadaed49f7704d723 files/digest-git-sources-2.6.15-r1 134
 MD5 218d44f9dfc675303c35c2189f8b624f files/digest-git-sources-2.6.15-r11 135
 MD5 edd0836800d0d550e83a3806c148b1c3 files/digest-git-sources-2.6.15-r12 135
@@ -9,6 +9,7 @@ MD5 607913b39e451b96dcba825dbcaf518a files/digest-git-sources-2.6.15-r8 134
 MD5 6a2928dc07fe66a529e76f8824df3c58 files/digest-git-sources-2.6.16_rc1-r1 200
 MD5 60a330cde843606a895d91029eea387e files/digest-git-sources-2.6.16_rc1-r2 203
 MD5 c832a1a13d99bb9ea5904664b62faa0d files/digest-git-sources-2.6.16_rc1-r3 203
+MD5 83a5299b7dccf53833896ff9a37acef5 files/digest-git-sources-2.6.16_rc1-r4 203
 MD5 deb106a9da84b940e07660c66bea9664 git-sources-2.6.15-r1.ebuild 1117
 MD5 f2eb8e0949c84c391a07ec656b10e2d2 git-sources-2.6.15-r11.ebuild 1137
 MD5 dc7d0a87afb62aec6c6e0ffbbff86903 git-sources-2.6.15-r12.ebuild 1135
@@ -19,4 +20,5 @@ MD5 703be5952bd2f958e4ed54374baf2bb6 git-sources-2.6.15-r8.ebuild 1129
 MD5 2286924f70dd87d8ba0a6f280f728b89 git-sources-2.6.16_rc1-r1.ebuild 1138
 MD5 3e4f644b29f1471d977f9c646b23fcec git-sources-2.6.16_rc1-r2.ebuild 1035
 MD5 7aeed115c8d228446e0a4726a8860f3b git-sources-2.6.16_rc1-r3.ebuild 1035
+MD5 482587fc28752ec2db43387b6c82da4e git-sources-2.6.16_rc1-r4.ebuild 1035
 MD5 8ca405b8c53bdbeb5e1c6e981420b315 metadata.xml 449
