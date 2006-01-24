@@ -1,7 +1,0 @@
-MD5 15b835a61a8bbdeee0e08e1a14d7d682 ChangeLog 667
-MD5 183ae67c5f92d03975318d40a50f1a16 eselect-php-0.96.ebuild 702
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-php-0.96 0
-MD5 2c2f1ee6a6de5732b601b8444099aa18 files/php-cgi.eselect 4261
-MD5 0e16c19617c890564754bba88e29ba78 files/php-devel.eselect 4275
-MD5 7e4b06e9f537e77689b9a56c416e5bb3 files/php.eselect 4249
