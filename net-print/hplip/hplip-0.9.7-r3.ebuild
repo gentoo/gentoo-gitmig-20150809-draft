@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r3.ebuild,v 1.2 2006/01/21 14:44:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r3.ebuild,v 1.3 2006/01/24 23:40:27 vanquirius Exp $
 
 inherit eutils
 
@@ -65,8 +65,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}"/hplip.init.d hplip
+	newinitd "${FILESDIR}"/hplip.init.d hplip
 
 	if use scanner; then
 		insinto /etc/sane.d

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.17 2006/01/21 14:44:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.18 2006/01/24 23:40:27 vanquirius Exp $
+
+  24 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.5.ebuild,
+  hplip-0.9.7-r3.ebuild:
+  Use newinitd instead of exeinto, newexe.
 
   21 Jan 2006; Lars Weiler <pylon@gentoo.org> hplip-0.9.7-r3.ebuild:
   Stable on ppc; Bug #112425.
