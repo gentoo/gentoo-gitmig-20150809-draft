@@ -1,0 +1,28 @@
+GCC 3.4 patch thanks to Erik Ridderby <paddlaren@gmail.com> in http://bugs.gentoo.org/119969
+
+--- kaspaliste-0.96/kaspaliste/klib/kaspabase.cpp.orig	2006-01-24 20:59:41.000000000 +0100
++++ kaspaliste-0.96/kaspaliste/klib/kaspabase.cpp	2006-01-24 21:01:09.000000000 +0100
+@@ -184,7 +184,22 @@
+ LockTableItem *KaspaBase::locktable=0L;
+ 
+ Oid KaspaBase::getNo(Str tab, Oid o) {
+-  exec("select no from "+tab+" where oid="+oid2str(o));
++	// Patched by Erik Ridderby 
++	// starting here: 
++	// 
++	Str command; 
++	command = "select no from "; 
++	command += tab; 
++	command += " where oid="; 
++	command += oid2str(o); 
++
++	exec(command); 
++
++	//  exec("select no from "+tab+" where oid="+oid2str(o)); 
++	// 
++	//  Patch ends here. 
++	// 
++
+   if(tuples())
+     return str2oid(getValue(0, "no"));
+   else
