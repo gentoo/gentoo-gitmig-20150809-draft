@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.69 2006/01/19 18:01:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.70 2006/01/24 13:36:43 dertobi123 Exp $
+
+  24 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> Manifest:
+  Digest fixed.
 
   19 Jan 2006; Markus Rothe <corsair@gentoo.org> nagios-core-2.0_rc2.ebuild:
   added gnuconfig_update for ppc64: bug #119520
