@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/cgoban-1.9.14.ebuild,v 1.5 2005/04/02 22:29:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/cgoban-1.9.14.ebuild,v 1.6 2006/01/24 20:14:36 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,16 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="media-gfx/imagemagick
+	|| (
+		(
+			x11-libs/libX11 
+			x11-libs/libXt )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| (
+		x11-proto/xproto
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
