@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9dac222b889059029c42080e537c77a ChangeLog 449
+MD5 2c977e5e4f9cbdcc2b3206b3b58a734c ChangeLog 578
 MD5 45b73b563b0dfda4f6005e25c5a01a44 files/digest-tvbrowser-2.1 129
 MD5 2a50d11a23b770a3d4b7b34bbaca2c36 files/tvbrowser-2.1-makefiles.patch 3385
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
-MD5 cf476b6042d16e494bccbe51bec7fa03 tvbrowser-2.1.ebuild 2627
+MD5 59a821e32a6909326f5a284e30b59456 tvbrowser-2.1.ebuild 2850
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD03zZZfSl1Kp5KmoRAvfQAKCP/e8k8eVTATN+hKMxHsmsye5o7QCgo+qL
-/j/3mwHZwiI7z2BKxpPXr0A=
-=7ZjY
+iD8DBQFD1nUVZfSl1Kp5KmoRAp+pAKCKkO9urZbt9snLIO5OJyvEFHCMfQCgpe9H
+x3HWg1GuVtOpoD+S/GNr5x0=
+=1x5D
 -----END PGP SIGNATURE-----

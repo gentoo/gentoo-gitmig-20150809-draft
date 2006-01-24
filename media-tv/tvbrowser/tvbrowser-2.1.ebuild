@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.1 2006/01/22 12:37:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.2 2006/01/24 18:42:10 zzam Exp $
 
-inherit eutils java-pkg libtool
+inherit eutils java-pkg libtool flag-o-matic
 
 DESCRIPTION="Themeable and easy to use TV Guide - written in Java"
 HOMEPAGE="http://www.tvbrowser.org/"
@@ -35,6 +35,16 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-makefiles.patch
 
+	local J_ARCH
+	case "${ARCH}" in
+		x86)	J_ARCH=i386 ;;
+		amd64)	J_ARCH=amd64 ;;
+		*) die "not supported arch for this ebuild" ;;
+	esac
+
+	sed -i ${S}/deployment/x11/src/Makefile.am \
+		-e "s-/lib/i386/-/lib/${J_ARCH}/-"
+
 	cd ${S}/lib
 	rm *.jar
 
@@ -43,9 +53,6 @@ src_unpack() {
 	java-pkg_jar-from jgoodies-forms forms.jar forms-1.0.5.jar
 	java-pkg_jar-from bsh bsh.jar bsh-2.0b1.jar
 	java-pkg_jar-from skinlf
-
-	cd ${S}
-	find -name "*.jar"
 
 	cd ${S}/deployment/x11
 	rm configure
@@ -64,6 +71,7 @@ src_compile() {
 
 	# second part: systray-module
 	cd ${S}/deployment/x11
+	append-flags -fPIC
 	econf || die "econf failed"
 	emake || die "emake failed"
 }
