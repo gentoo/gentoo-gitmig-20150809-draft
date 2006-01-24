@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.17 2006/01/24 18:09:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.18 2006/01/24 18:20:53 corsair Exp $
+
+  24 Jan 2006; Markus Rothe <corsair@gentoo.org> an-0.95.3.ebuild:
+  Stable on ppc64; bug #113966
 
   24 Jan 2006; Jeroen Roovers <jer@gentoo.org> an-0.95.3.ebuild:
   Stable on hppa (bug #113966).
