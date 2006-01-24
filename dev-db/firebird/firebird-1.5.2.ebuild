@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.6 2005/12/30 23:48:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.7 2006/01/24 22:10:44 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,6 +23,13 @@ S=${WORKDIR}/${P}.${extra_ver}
 pkg_setup() {
 	enewgroup firebird 450
 	enewuser firebird 450 /bin/bash /opt/firebird firebird
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-build.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.35 2005/12/30 23:48:35 carlo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.36 2006/01/24 22:10:44 sekretarz Exp $
+
+  24 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/firebird-1.5.2-build.patch, firebird-1.5.2.ebuild:
+  Firebird now uses user CFLAGS instead its own, bug #108275, thanks to vapier
 
   30 Dec 2005; Carsten Lohrke <carlo@gentoo.org> firebird-1.5.1.ebuild,
   firebird-1.5.2.ebuild:
