@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.18.ebuild,v 1.6 2006/01/22 19:53:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.18.ebuild,v 1.7 2006/01/24 22:18:53 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -22,7 +22,9 @@ RDEPEND="dev-libs/expat
 	>=gnome-base/libglade-2
 	>=dev-libs/glib-2
 	>=x11-libs/libwnck-1
-	virtual/x11
+	|| ( (
+			x11-libs/libX11 )
+		virtual/x11 )
 	gnome? (
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2
@@ -35,6 +37,12 @@ RDEPEND="dev-libs/expat
 		>=gnome-extra/at-spi-1 )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-libs/libXt )
+		virtual/x11 )
+
 	>=dev-util/intltool-0.28
 	>=dev-util/pkgconfig-0.9
 	app-text/scrollkeeper"

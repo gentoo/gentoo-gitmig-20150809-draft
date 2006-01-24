@@ -1,22 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29559b4f91ebaf33b0f5580698480aba ChangeLog 6648
+MD5 b20d2ab1866b7075078bf1fe21d97aef ChangeLog 6828
 MD5 266e95dffa745c00a8fa6f0d5c4ba811 dasher-3.2.15.ebuild 1512
-MD5 b36aedb6555c20ac2d20f53dbeb30989 dasher-3.2.16.ebuild 1738
-MD5 993cd40f1be659a5450be19014171459 dasher-3.2.17.ebuild 1738
-MD5 d850c91e9d4c71f2773426a0754ba7f3 dasher-3.2.18.ebuild 1621
+MD5 cfa8cbe0af2de000d5f0dbd28f883b18 dasher-3.2.18.ebuild 1746
 MD5 497bed8a975cd29705cb0e9b41f45d76 files/dasher-3.2.11-xtst_fix.patch 872
 MD5 29b515c44bcfdd79db45f38f65879994 files/dasher-3.2.15-buildwindowtree.patch 499
 MD5 5b4b3e17b421919e17bc182404ffa36c files/digest-dasher-3.2.15 67
-MD5 8f98c5422486b58fc0d6850e20582140 files/digest-dasher-3.2.16 67
-MD5 9fcdb2723451b2020f4736773717c62b files/digest-dasher-3.2.17 67
 MD5 ec3cb701a9f3f224e16cc88cb09f810b files/digest-dasher-3.2.18 67
 MD5 76d666e6399f7768a17fe572e9a3096e metadata.xml 718
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0+LiomPajV0RnrERArvJAJ9lAhxe3QpXW87Cn2CtCfCjJoxb1QCePK+2
-vZPyCkjZ7L2wp00H6ohZ3sM=
-=ZNhQ
------END PGP SIGNATURE-----
