@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83b2e3af7f3696b8343fedf70b61eaab ChangeLog 2651
-MD5 5ad9832d22021a0946294d43574d3a8e files/digest-wmdrawer-0.10.5 66
+MD5 c94b7d338f2acdfb0f42a3cf006d1d2f ChangeLog 2789
 MD5 5ad9832d22021a0946294d43574d3a8e files/digest-wmdrawer-0.10.5-r2 66
 MD5 94bb15f1aab434295518a9a3cb0a4afe files/wmdrawer-0.10.5-gtk+-2.patch 370
 MD5 3c43064285561d1783722ecf8d694c51 metadata.xml 302
-MD5 4c361d5ffe7fc5052f00db932a6b72f1 wmdrawer-0.10.5-r2.ebuild 1071
-MD5 dde0084ab17e3672b3d2ef1563b470cc wmdrawer-0.10.5.ebuild 881
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDeKBjwUpWvClEHQoRAqaTAKCCDQo3VB4McvXq+gEBOjVMM6htwwCeOMjJ
-Uf/jtyOBGsRQrdGLfV4+068=
-=fCYe
------END PGP SIGNATURE-----
+MD5 dda830a329a349d941dc16d0869cec24 wmdrawer-0.10.5-r2.ebuild 1032
