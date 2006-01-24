@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/rtcwmp-demo
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/ChangeLog,v 1.1 2006/01/24 17:51:36 wolf31o2 Exp $
+
+*rtcwmp-demo-1.1 (24 Jan 2006)
+
+  24 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/rtcwmp-demo-ded.rc, +metadata.xml, +rtcwmp-demo-1.1.ebuild:
+  Initial import. Ebuild by Alexander Nicolaysen Sornes
+  <alex@thehandofagony.com>. Closing bug #115712.
+
