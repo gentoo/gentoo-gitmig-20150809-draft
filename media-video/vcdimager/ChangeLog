@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdimager
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.39 2005/11/29 00:40:31 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.40 2006/01/24 21:17:32 corsair Exp $
+
+  24 Jan 2006; Markus Rothe <corsair@gentoo.org> vcdimager-0.7.23.ebuild:
+  Added ~ppc64
 
   29 Nov 2005; Jason Wever <weeve@gentoo.org> vcdimager-0.7.23.ebuild:
   Added ~sparc keyword as it was dropped without notification in the version
