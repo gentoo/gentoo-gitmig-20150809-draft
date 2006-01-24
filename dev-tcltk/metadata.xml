@@ -25,5 +25,9 @@
 	<longdescription lang="it">
 		La categoria dev-tcltk contiene utilità e librerie per Tcl e Tk.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria dev-tcltk contém bibliotecas e ferramentas
+		referentes a Tcl e Tk.
+	</longdescription>
 </catmetadata>
 
