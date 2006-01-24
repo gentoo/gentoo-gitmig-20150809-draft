@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.141 2006/01/04 21:55:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.142 2006/01/24 14:21:05 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -100,7 +100,7 @@ kde_src_compile() {
 				debug-print-section myconf
 				myconf="$myconf --with-x --enable-mitshm $(use_with xinerama) --with-qt-dir=${QTDIR} --enable-mt --with-qt-libraries=${QTDIR}/$(get_libdir)"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
-				[ -z "$UNSERMAKE" ] && myconf="$myconf --disable-dependency-tracking"
+				[[ -z "$UNSERMAKE" ]] && myconf="$myconf --disable-dependency-tracking"
 				if use debug ; then
 					myconf="$myconf --enable-debug=full --with-debug"
 				else
@@ -109,8 +109,8 @@ kde_src_compile() {
 				if hasq kdeenablefinal ${IUSE}; then
 					myconf="$myconf $(use_enable kdeenablefinal final)"
 				fi
-				[ -z "$KDEBASE" ] && myconf="$myconf $(use_with arts)"
-				[ -n "$KDEBASE" -a "$KDEMINORVER" -ge 3 ] && myconf="$myconf $(use_with arts)"
+				[[ -z "$KDEBASE" ]] && myconf="$myconf $(use_with arts)"
+				[[ -n "$KDEBASE" && "$KDEMINORVER" -ge 3 ]] && myconf="$myconf $(use_with arts)"
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
 			configure)
