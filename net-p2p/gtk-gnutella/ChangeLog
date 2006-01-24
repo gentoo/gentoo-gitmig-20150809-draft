@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.55 2006/01/23 18:41:45 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.56 2006/01/24 00:30:40 metalgod Exp $
+
+  24 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  gtk-gnutella-0.95.4-r1.ebuild:
+  Stable on amd64. Bug #120069.
 
   23 Jan 2006; Marcin Kryczek <mkay@gentoo.org>
   gtk-gnutella-0.95.4-r1.ebuild:
