@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.7 2006/01/15 13:26:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.8 2006/01/24 19:14:00 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
 
-inherit eutils flag-o-matic gnuconfig mysql_fx
+inherit eutils flag-o-matic gnuconfig
 
 #major, minor only in the slot
 SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
@@ -20,12 +20,12 @@ NEWP="${P/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
 	mirror://gentoo/mysql-extras-20060115.tar.bz2"
 LICENSE="GPL-2"
-IUSE="big-tables berkdb debug minimal perl selinux ssl static"
-RESTRICT="primaryuri"
+IUSE="big-tables berkdb debug minimal perl selinux srvdir ssl static"
+RESTRICT="primaryuri confcache"
 DEPEND="app-admin/eselect-mysql"
 
 mysql_version_is_at_least "4.01.03.00" \
-&& IUSE="${IUSE} cluster utf8 extraengine"
+&& IUSE="${IUSE} cluster extraengine"
 
 mysql_version_is_at_least "5.00.18.00" \
 && IUSE="${IUSE} max-idx-128"
@@ -34,6 +34,61 @@ mysql_version_is_at_least "5.01.00.00" \
 && IUSE="${IUSE} innodb"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_config pkg_postrm
+
+# void mysql_init_vars()
+#
+# initialize global variables
+# 2005-11-19 <vivo at gentoo.org>
+mysql_init_vars() {
+
+	if [[ ${SLOT} -eq 0 ]] ; then
+		MY_SUFFIX=""
+	else
+		MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
+	fi
+	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR:-"/usr/share/mysql${MY_SUFFIX}"}
+	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql${MY_SUFFIX}"}
+	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql${MY_SUFFIX}"}
+	MY_LOCALSTATEDIR=${MY_LOCALSTATEDIR="/var/lib/mysql${MY_SUFFIX}"}
+	MY_LOGDIR=${MY_LOGDIR="/var/log/mysql${MY_SUFFIX}"}
+	MY_INCLUDEDIR=${MY_INCLUDEDIR="/usr/include/mysql${MY_SUFFIX}"}
+
+	if [ -z "${DATADIR}" ]; then
+		DATADIR=""
+		if [ -f "${SYSCONFDIR}/my.cnf" ] ; then
+			DATADIR=`"my_print_defaults${MY_SUFFIX}" mysqld 2>/dev/null | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
+			if [ -z "${DATADIR}" ]; then
+				if useq "srvdir" ; then
+					DATADIR="/srv/localhost/mysql/datadir"
+				else
+					DATADIR=`grep ^datadir "${SYSCONFDIR}/my.cnf" | sed -e 's/.*=\s*//'`
+				fi
+			fi
+		fi
+		if [ -z "${DATADIR}" ]; then
+			DATADIR="${MY_LOCALSTATEDIR}"
+			einfo "Using default DATADIR"
+		fi
+		einfo "MySQL DATADIR is ${DATADIR}"
+
+		if [ -z "${PREVIOUS_DATADIR}" ] ; then
+			if [ -a "${DATADIR}" ] ; then
+				ewarn "Previous datadir found, it's YOUR job to change"
+				ewarn "ownership and have care of it"
+				PREVIOUS_DATADIR="yes"
+				export PREVIOUS_DATADIR
+			else
+				PREVIOUS_DATADIR="no"
+				export PREVIOUS_DATADIR
+			fi
+		fi
+	fi
+
+	export MY_SUFFIX MY_SHAREDSTATEDIR MY_SYSCONFDIR
+	export MY_LIBDIR MY_LOCALSTATEDIR MY_LOGDIR
+	export MY_INCLUDEDIR
+	export DATADIR
+}
 
 mysql_pkg_setup() {
 
@@ -192,7 +247,7 @@ mysql_src_compile() {
 		fi
 
 		if ! mysql_version_is_at_least "5.00.00.00" ; then
-			if mysql_version_is_at_least "4.01.00.00" && useq utf8; then
+			if mysql_version_is_at_least "4.01.00.00" ; then
 				myconf="${myconf} --with-charset=utf8"
 				myconf="${myconf} --with-collation=utf8_general_ci"
 			else
@@ -264,9 +319,14 @@ mysql_src_compile() {
 			fi
 		fi
 
-		mysql_version_is_at_least "5.00.18.00" \
-		&& useq "max-idx-128" \
-		&& myconf="${myconf} --with-max-indexes=128"
+	fi
+
+	mysql_version_is_at_least "5.00.18.00" \
+	&& useq "max-idx-128" \
+	&& myconf="${myconf} --with-max-indexes=128"
+
+	if mysql_version_is_at_least "5.01.05.00" ; then
+		myconf="${myconf} --with-row-based-replication"
 	fi
 
 	#Bug #114895,Bug #110149
@@ -362,17 +422,15 @@ mysql_src_install() {
 	# config stuff
 	insinto "${MY_SYSCONFDIR}"
 	doins scripts/mysqlaccess.conf
-	newins "${FILESDIR}/my.cnf-4.1" my.cnf
+	newins "${FILESDIR}/my.cnf-4.1-r1" my.cnf
 	insinto "/etc/conf.d"
 	newins "${FILESDIR}/mysql-slot.conf.d-r2" "mysql"
 	mysql_version_is_at_least "5.00.11.00" \
 	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
 
-	local charset='utf8'
-	! useq utf8 && local charset='latin1'
 	sed --in-place \
 		-e "s/@MY_SUFFIX@/${MY_SUFFIX}/" \
-		-e "s/@CHARSET@/${charset}/" \
+		-e "s/@DATADIR@/${DATADIR}/" \
 		"${D}/etc/mysql${MY_SUFFIX}/my.cnf"
 
 	# minimal builds don't have the server
@@ -384,8 +442,10 @@ mysql_src_install() {
 		mysql_version_is_at_least "5.00.11.00" \
 		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
 		insinto /etc/logrotate.d
-		# TODO
-		newins "${FILESDIR}/logrotate.mysql" "mysql${MY_SUFFIX}"
+		sed -e "s!___MY_SUFFIX___!${MY_SUFFIX}!" \
+			"${FILESDIR}/logrotate-slot.mysql" \
+			> "${TMPDIR}/logrotate.mysql"
+		newins "${TMPDIR}/logrotate.mysql" "mysql${MY_SUFFIX}"
 
 		#empty dirs...
 		diropts "-m0750"
@@ -532,9 +592,9 @@ mysql_pkg_config() {
 	local options=""
 	local sqltmp="$(emktemp)"
 
-	local help_tables="${ROOT}/usr/share/doc/mysql-${PVR}/scripts/fill_help_tables.sql.gz"
+	local help_tables="${MY_SHAREDSTATEDIR}/fill_help_tables.sql"
 	[[ -r "${help_tables}" ]] \
-	&& zcat "${help_tables}" > "${TMPDIR}/fill_help_tables.sql" \
+	&& cp "${help_tables}" "${TMPDIR}/fill_help_tables.sql" \
 	|| touch "${TMPDIR}/fill_help_tables.sql"
 	help_tables="${TMPDIR}/fill_help_tables.sql"
 

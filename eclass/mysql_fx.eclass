@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.3 2006/01/14 19:00:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.4 2006/01/24 19:14:00 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -87,59 +87,7 @@ mysql_mv_patches() {
 		&& for (( i=0 ; $i < $ndsc ; i++ )) ; do einfo ">    ${dsc[$i]}" ; done
 }
 
-
-# void mysql_init_vars()
-#
-# initialize global variables
-# 2005-11-19 <vivo at gentoo.org>
-mysql_init_vars() {
-
-	if [[ ${SLOT} -eq 0 ]] ; then
-		MY_SUFFIX=""
-	else
-		MY_SUFFIX=${MY_SUFFIX:-"-${SLOT}"}
-	fi
-	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR:-"/usr/share/mysql${MY_SUFFIX}"}
-	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql${MY_SUFFIX}"}
-	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql${MY_SUFFIX}"}
-	MY_LOCALSTATEDIR=${MY_LOCALSTATEDIR="/var/lib/mysql${MY_SUFFIX}"}
-	MY_LOGDIR=${MY_LOGDIR="/var/log/mysql${MY_SUFFIX}"}
-	MY_INCLUDEDIR=${MY_INCLUDEDIR="/usr/include/mysql${MY_SUFFIX}"}
-
-	if [ -z "${DATADIR}" ]; then
-		DATADIR=""
-		if [ -f "${SYSCONFDIR}/my.cnf" ] ; then
-			DATADIR=`"my_print_defaults${MY_SUFFIX}" mysqld 2>/dev/null | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
-			if [ -z "${DATADIR}" ]; then
-				DATADIR=`grep ^datadir "${SYSCONFDIR}/my.cnf" | sed -e 's/.*=\s*//'`
-			fi
-		fi
-		if [ -z "${DATADIR}" ]; then
-			DATADIR="${MY_LOCALSTATEDIR}"
-			einfo "Using default DATADIR"
-		fi
-		einfo "MySQL DATADIR is ${DATADIR}"
-
-		if [ -z "${PREVIOUS_DATADIR}" ] ; then
-			if [ -a "${DATADIR}" ] ; then
-				ewarn "Previous datadir found, it's YOUR job to change"
-				ewarn "ownership and have care of it"
-				PREVIOUS_DATADIR="yes"
-				export PREVIOUS_DATADIR
-			else
-				PREVIOUS_DATADIR="no"
-				export PREVIOUS_DATADIR
-			fi
-		fi
-	fi
-
-	export MY_SUFFIX MY_SHAREDSTATEDIR MY_SYSCONFDIR
-	export MY_LIBDIR MY_LOCALSTATEDIR MY_LOGDIR
-	export MY_INCLUDEDIR
-	export DATADIR
-}
-
-# void mysql_init_vars()
+# * char mysql_strip_double_slash()
 #
 # initialize global variables
 # 2005-11-19 <vivo at gentoo.org>
