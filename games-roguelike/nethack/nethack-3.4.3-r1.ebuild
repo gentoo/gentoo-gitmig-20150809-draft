@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.10 2005/11/22 22:07:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.11 2006/01/24 20:29:04 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -15,11 +15,22 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ~ppc-macos sparc x86"
 IUSE="X qt gnome"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5
-	X? ( virtual/x11 )
+	X? (
+		|| (
+			(
+				x11-libs/libXaw 
+				x11-libs/libXpm 
+				x11-libs/libXt )
+			virtual/x11 ) )
 	qt? ( =x11-libs/qt-3* )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )"
+DEPEND="${RDEPEND}
+	X? (
+		|| (
+			x11-proto/xproto
+			virtual/x11 ) )"
 
 HACKDIR="${GAMES_DATADIR}/${PN}"
 
