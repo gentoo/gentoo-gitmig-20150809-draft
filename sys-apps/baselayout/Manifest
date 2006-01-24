@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 137017edbbb7c6bbe5a83a2b58a49f3b ChangeLog 68644
+MD5 fca7b5d60354e07b6c6c4291d72019fa ChangeLog 68879
 MD5 8bd6dd1987c5333b1c1cf227a296bd76 baselayout-1.11.13-r1.ebuild 18944
 MD5 22a10db577b1b646d12ba31ed7b77a6c baselayout-1.11.13-r2.ebuild 19014
 MD5 f766cf82a790fd41852625508323d341 baselayout-1.11.14-r1.ebuild 19085
 MD5 f948b3c2c635db77512589bb3062238b baselayout-1.11.14-r2.ebuild 19133
 MD5 83b799404d491c3b9e95a2665921f53f baselayout-1.11.14.ebuild 19039
 MD5 37705358669d6569de60a9edaf43debd baselayout-1.12.0_pre13-r1.ebuild 19333
+MD5 43cc59dc37e019ea45c484cd2b2d1a31 baselayout-1.12.0_pre15-r1.ebuild 19391
 MD5 f54f0df8f2da3275e07c9d9cf0b3e882 baselayout-1.12.0_pre15.ebuild 19289
 MD5 8d10a229861f862fca52cd8e3bc655d9 files/baselayout-1.11.0-split-out-udev.patch 7413
 MD5 ab0d5a169769126f5c9d679a86244ee2 files/baselayout-1.11.14-essidnet.patch 619
 MD5 34964dc9fff04e8eaa948a9a60185e94 files/baselayout-1.11.14-udev-sysinit.patch 1097
 MD5 8ea4c9d04ce5657625cf371ee8c055be files/baselayout-1.12.0_pre13-iproute2.patch 598
+MD5 36914006cc61a9d746502b7d85b4cb8b files/baselayout-1.12.0_pre15-1839.patch 2432
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r1 70
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r2 70
@@ -21,11 +23,12 @@ MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14-r1 70
 MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14-r2 70
 MD5 2c06dc3a42153a5b07bab75e0337f0be files/digest-baselayout-1.12.0_pre13-r1 76
 MD5 2629fa7eb55e4f72024f4e46e7b2714b files/digest-baselayout-1.12.0_pre15 76
+MD5 2629fa7eb55e4f72024f4e46e7b2714b files/digest-baselayout-1.12.0_pre15-r1 76
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0L4cEbVyYKaZ/NERAko4AJwIKbjpCyS+BtMhTcsX54cC0BpMTwCgh84M
-oyyvCgdMpxzVdOG809Zhwsk=
-=SlGk
+iD8DBQFD1qelEbVyYKaZ/NERAh6SAJ9cqPaHRcRX3k5pUxfL41bQ3GnYGACfQHVy
+sM4AxGrFhLQg+qz5KvntckU=
+=wUnq
 -----END PGP SIGNATURE-----
