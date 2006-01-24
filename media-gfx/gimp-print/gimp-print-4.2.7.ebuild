@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.7.ebuild,v 1.11 2005/09/13 16:37:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.7.ebuild,v 1.12 2006/01/24 19:16:36 genstef Exp $
 
 inherit libtool
 
@@ -84,4 +84,5 @@ src_install () {
 	dohtml doc/FAQ.html
 	dohtml -r doc/users_guide/html doc/developer/developer-html
 	rm -fR ${D}/usr/share/gimp-print/doc
+	use foomaticdb && rm -f ${D}/usr/share/foomatic/db/source/driver/gimp-print.xml
 }
