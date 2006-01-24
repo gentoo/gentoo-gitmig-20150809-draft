@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0.ebuild,v 1.4 2004/09/01 02:16:07 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0.ebuild,v 1.5 2006/01/24 22:43:20 nelchael Exp $
 
 IUSE=""
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc amd64 ppc ppc64"
 LICENSE="GPL-2"
 
-DEPEND="virtual/x11
-	=x11-libs/gtk+-1.2*"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_install () {
 	einstall || die "make install failed"

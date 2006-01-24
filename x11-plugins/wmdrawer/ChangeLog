@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmdrawer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.17 2005/11/14 14:33:47 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.18 2006/01/24 23:09:29 nelchael Exp $
+
+  24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -wmdrawer-0.10.5.ebuild, wmdrawer-0.10.5-r2.ebuild:
+  Fixed DEPEND for modular X.
 
   14 Nov 2005; Luis Medinas <metalgod@gentoo.org> wmdrawer-0.10.5-r2.ebuild:
   Marked Stable on amd64.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdate
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.8 2005/05/15 00:47:48 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.9 2006/01/24 22:59:20 nelchael Exp $
+
+  24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmdate-0.7.ebuild:
+  Fixed DEPEND for modular X.
 
   15 May 2005; Jan Brinkmann <luckyduck@gentoo.org> wmdate-0.7.ebuild:
   stable on amd64

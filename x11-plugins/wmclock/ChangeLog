@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmclock
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/ChangeLog,v 1.6 2004/06/28 20:37:50 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/ChangeLog,v 1.7 2006/01/24 22:41:19 nelchael Exp $
+
+  24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  wmclock-1.0.12.2.ebuild:
+  Fixed DEPEND for modular X.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmclock-1.0.12.2.ebuild:
   glibc -> libc
