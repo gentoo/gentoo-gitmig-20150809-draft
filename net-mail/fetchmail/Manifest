@@ -3,8 +3,6 @@ Hash: SHA1
 
 MD5 ca246c97fbd9fa5b8e512d18bc6912e8 ChangeLog 13665
 MD5 04125f54e4be33fd55348f69c38e0942 fetchmail-6.2.5.2-r1.ebuild 3051
-MD5 0136920aabb2c3d064af46b355c86773 fetchmail-6.3.0.ebuild 2428
-MD5 3f433eab168a5ff473f55d3d6e7548cb fetchmail-6.3.1.ebuild 2428
 MD5 1af332dd1003fa074a06d433d0888ec6 fetchmail-6.3.2.ebuild 2419
 MD5 29d376a1042aeeeba94e911a943d5a7f files/conf.d-fetchmail 347
 MD5 c74bd41e6321522be59c6c475ce005f3 files/digest-fetchmail-6.2.5.2-r1 204
@@ -18,7 +16,7 @@ MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1qPpV3J2n04EauwRAhLkAKCUDkC/jY+eACgzE1HyPkpfNL4I3ACfdlxb
-nsQTijV7bAvJLD6vwIkKfCs=
-=H48r
+iD8DBQFD1qRuV3J2n04EauwRAqePAJ9ExilFlpuGBYyAp533B3NwQV/PrwCdGtZF
+WAQieCeUJkbAkVJy7sHpc0A=
+=rOb6
 -----END PGP SIGNATURE-----
