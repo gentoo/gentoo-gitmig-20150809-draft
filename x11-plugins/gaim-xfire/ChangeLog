@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gaim-xfire
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xfire/ChangeLog,v 1.2 2005/12/21 22:11:14 gothgirl Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xfire/ChangeLog,v 1.3 2006/01/24 00:24:04 metalgod Exp $
+
+  24 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  gaim-xfire-0.5.8-r1.ebuild:
+  Added ~amd64 keyword.
 
 *gaim-xfire-0.5.8-r1 (21 Dec 2005)
 
