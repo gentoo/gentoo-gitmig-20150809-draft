@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/anyterm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.1 2006/01/23 22:50:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.2 2006/01/24 00:03:28 twp Exp $
+
+*anyterm-1.1.8-r1 (24 Jan 2006)
+
+  24 Jan 2006; Tom Payne <twp@gentoo.org>
+  files/anyterm-1.1.8-browser-gentoo.patch, -anyterm-1.1.8.ebuild,
+  +anyterm-1.1.8-r1.ebuild:
+  Fix dumb anyterm_command configuration error.
 
 *anyterm-1.1.8 (23 Jan 2006)
 

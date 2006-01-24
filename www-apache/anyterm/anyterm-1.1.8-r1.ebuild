@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.8.ebuild,v 1.1 2006/01/23 22:50:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.8-r1.ebuild,v 1.1 2006/01/24 00:03:28 twp Exp $
 
 inherit apache-module eutils toolchain-funcs webapp
 

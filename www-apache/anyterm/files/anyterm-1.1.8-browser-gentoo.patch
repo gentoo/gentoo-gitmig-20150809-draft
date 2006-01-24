@@ -18,7 +18,7 @@ diff -Naur anyterm-1.1.8/browser/.htaccess anyterm/browser/.htaccess
  # anyterm_command '/path/to/anygetty --remotehost "Anyterm: %h" --autologin=%u'
  
 +# twp: Use ssh to avoid problems with Gentoo's /bin/login.
-+anyterm_command '/usr/bin/ssh %u@%h'
++anyterm_command '/usr/bin/ssh %u@localhost'
 +
 +# twp: Only provide Anyterm over SSL connections.
 +SSLRequireSSL
