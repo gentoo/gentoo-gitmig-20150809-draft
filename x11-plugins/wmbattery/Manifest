@@ -1,4 +1,4 @@
-MD5 1b780b2359a7a7ca5100698aae4e6b0d wmbattery-2.19-r1.ebuild 827
-MD5 f3ce4c465ccf06dc8564d2bfe4aab8cb ChangeLog 2503
-MD5 96467fd518228a7950cea6d046f812dc metadata.xml 510
+MD5 eff344803ad96d3761566f49a389510c ChangeLog 2618
 MD5 4a7cd817e096ff1bf23412612b22fa34 files/digest-wmbattery-2.19-r1 65
+MD5 96467fd518228a7950cea6d046f812dc metadata.xml 510
+MD5 f3ca89e6c4be1655f0e0f69dd074362f wmbattery-2.19-r1.ebuild 975
