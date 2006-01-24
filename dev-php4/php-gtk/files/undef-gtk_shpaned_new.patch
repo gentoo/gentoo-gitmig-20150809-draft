@@ -11,5 +11,5 @@
  
    AC_DEFINE(HAVE_SPANED,1,[spaned support])
 -  PHP_GTK_EXTENSION(spaned, $php_gtk_ext_shared, php_spaned.c gtkspaned.c gtksvpaned.c, gen_spaned.c)
-+  PHP_GTK_EXTENSION(spaned, $php_gtk_ext_shared, php_spaned.c gtkspaned.c gtkshpaned.c, gtksvpaned.c, gen_spaned.c)
++  PHP_GTK_EXTENSION(spaned, $php_gtk_ext_shared, php_spaned.c gtkspaned.c gtksvpaned.c gtkshpaned.c, gen_spaned.c)
  fi

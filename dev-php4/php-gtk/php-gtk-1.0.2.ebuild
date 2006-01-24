@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/php-gtk-1.0.2.ebuild,v 1.4 2006/01/20 18:07:29 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/php-gtk-1.0.2.ebuild,v 1.5 2006/01/24 20:35:50 chtekk Exp $
 
 PHP_EXT_NAME="php_gtk"
 PHP_EXT_INI="yes"
@@ -29,7 +29,7 @@ MAKEOPTS="-j1"
 pkg_setup() {
 	has_php
 
-	require_php_with_use cli
+	require_php_with_use cli pcre session
 }
 
 src_unpack() {
