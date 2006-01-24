@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.8 2006/01/24 19:14:00 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.9 2006/01/24 23:09:00 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -422,16 +422,17 @@ mysql_src_install() {
 	# config stuff
 	insinto "${MY_SYSCONFDIR}"
 	doins scripts/mysqlaccess.conf
-	newins "${FILESDIR}/my.cnf-4.1-r1" my.cnf
+	sed -e "s!@MY_SUFFIX@!${MY_SUFFIX}!g" \
+		-e "s!@DATADIR@!${DATADIR}!g" \
+		"${FILESDIR}/my.cnf-4.1-r1" \
+		> "${TMPDIR}/my.cnf.ok"
+ls -l ${TMPDIR} ${FILESDIR}/my.cnf-4.1-r1
+	newins "${TMPDIR}/my.cnf.ok" my.cnf
+
 	insinto "/etc/conf.d"
 	newins "${FILESDIR}/mysql-slot.conf.d-r2" "mysql"
 	mysql_version_is_at_least "5.00.11.00" \
 	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
-
-	sed --in-place \
-		-e "s/@MY_SUFFIX@/${MY_SUFFIX}/" \
-		-e "s/@DATADIR@/${DATADIR}/" \
-		"${D}/etc/mysql${MY_SUFFIX}/my.cnf"
 
 	# minimal builds don't have the server
 	if ! useq minimal; then
@@ -442,7 +443,7 @@ mysql_src_install() {
 		mysql_version_is_at_least "5.00.11.00" \
 		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
 		insinto /etc/logrotate.d
-		sed -e "s!___MY_SUFFIX___!${MY_SUFFIX}!" \
+		sed -e "s!___MY_SUFFIX___!${MY_SUFFIX}!g" \
 			"${FILESDIR}/logrotate-slot.mysql" \
 			> "${TMPDIR}/logrotate.mysql"
 		newins "${TMPDIR}/logrotate.mysql" "mysql${MY_SUFFIX}"
