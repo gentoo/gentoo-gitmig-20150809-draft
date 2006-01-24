@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.4 2006/01/24 19:14:00 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.5 2006/01/24 20:21:37 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -133,8 +133,7 @@ mysql_make_file_list() {
 
 mysql_choose_better_version() {
 	local items= better="" i
-	items=${1}-[[:digit:]][[:digit:]][[:digit:]]
-	[[ "${items}" == "${1}-[[:digit:]][[:digit:]][[:digit:]]" ]] && items=""
+	items="$( ls ${1}-[[:digit:]][[:digit:]][[:digit:]] )"
 	for i in ${items} ; do
 		if [[ "${i}" > "${better}" ]] ; then
 			better="${i}"
@@ -151,9 +150,9 @@ mysql_choose_better_version() {
 # 2005-12-30 <vivo at gentoo.org>
 mysql_lib_symlinks() {
 	local d dirlist maxdots soname sonameln other better
-	pushd "${ROOT}/usr/$(get_libdir)/"
+	pushd "${ROOT}/usr/$(get_libdir)/" &> /dev/null
 		# dirlist must contain the less significative directory left
-		dirlist="mysql (mysql_make_file_list mysql)"
+		dirlist="mysql $( mysql_make_file_list mysql )"
 
 		# waste some time in removing and recreating symlinks
 		for d in $dirlist ; do
@@ -174,7 +173,7 @@ mysql_lib_symlinks() {
 				ln -s "${soname}" "${sonameln}"
 			done
 		done
-	popd
+	popd &> /dev/null
 
 	# "include"s and "mysql_config", needed to compile other sw
 	for other in "/usr/include/mysql" "/usr/bin/mysql_config" ; do
