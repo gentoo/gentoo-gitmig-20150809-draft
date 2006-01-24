@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.9 2005/10/21 17:39:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.10 2006/01/24 18:01:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,21 +16,35 @@ KEYWORDS="x86 amd64"
 IUSE="opengl dedicated"
 RESTRICT="nostrip nomirror"
 
-DEPEND="virtual/libc"
-RDEPEND="dedicated? ( app-misc/screen )
-	!dedicated? ( virtual/opengl )
-	opengl? ( virtual/opengl )
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="sys-libs/glibc
+	dedicated? (
+		app-misc/screen )
+	!dedicated? (
+		virtual/opengl
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+	opengl? (
+		virtual/opengl
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-pkg_setup() {
-	check_license RTCW
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself wolf-linux-goty-maps.x86.run
@@ -38,20 +52,19 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
+	insinto "${dir}"
+	doins -r main Docs pb
 
-	cp -r main Docs pb ${Ddir}
+	exeinto "${dir}"
+	doexe bin/Linux/x86/*.x86 openurl.sh || die "copying exe"
 
-	exeinto ${dir}
-	doexe bin/Linux/x86/*.x86 openurl.sh
-
-	games_make_wrapper wolfmp ./wolf.x86 "${dir}" "${dir}"
-	games_make_wrapper wolfsp ./wolfsp.x86 "${dir}" "${dir}"
+	games_make_wrapper rtcwmp ./wolf.x86 "${dir}" "${dir}"
+	games_make_wrapper rtcwsp ./wolfsp.x86 "${dir}" "${dir}"
 
 	if use dedicated; then
-		games_make_wrapper wolf-ded ./wolfded.x86 ${dir}
+		games_make_wrapper wolf-ded ./wolfded.x86 "${dir}" "${dir}"
 		exeinto /etc/init.d
-		newexe ${FILESDIR}/wolf-ded.rc wolf-ded
+		newexe "${FILESDIR}"/wolf-ded.rc wolf-ded
 		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/wolf-ded
 	fi
 
@@ -60,8 +73,8 @@ src_install() {
 	doicon WolfMP.xpm WolfSP.xpm
 
 	prepgamesdirs
-	make_desktop_entry wolfmp "Return to Castle Wolfenstein (MP)" WolfMP.xpm
-	make_desktop_entry wolfsp "Return to Castle Wolfenstein (SP)" WolfSP.xpm
+	make_desktop_entry rtcwmp "Return to Castle Wolfenstein (MP)" WolfMP.xpm
+	make_desktop_entry rtcwsp "Return to Castle Wolfenstein (SP)" WolfSP.xpm
 }
 
 pkg_postinst() {
@@ -75,8 +88,8 @@ pkg_postinst() {
 	einfo "sp_pak1.pk3 and sp_pak2.pk3 from a Window installation into ${dir}/main/"
 	echo
 	einfo "To play the game run:"
-	einfo " wolfsp (single-player)"
-	einfo " wolfmp (multi-player)"
+	einfo " rtcwsp (single-player)"
+	einfo " rtcwmp (multi-player)"
 	if use dedicated
 	then
 		echo
