@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.9 2006/01/24 23:09:00 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.10 2006/01/24 23:56:01 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig mysql_fx
 
 #major, minor only in the slot
 SLOT=$(( ${MYSQL_VERSION_ID} / 10000 ))
@@ -426,7 +426,6 @@ mysql_src_install() {
 		-e "s!@DATADIR@!${DATADIR}!g" \
 		"${FILESDIR}/my.cnf-4.1-r1" \
 		> "${TMPDIR}/my.cnf.ok"
-ls -l ${TMPDIR} ${FILESDIR}/my.cnf-4.1-r1
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
 
 	insinto "/etc/conf.d"
