@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.0/make.defaults,v 1.1 2006/01/22 19:08:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.0/make.defaults,v 1.2 2006/01/24 16:26:52 wolf31o2 Exp $
 
 ARCH="mips"
 
@@ -16,5 +16,3 @@ ACCEPT_KEYWORDS="mips"
 
 STAGE1_USE="pam"
 USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips -multilib nomultilib -n32 -n64"
-GRP_STAGE23_USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips -multilib nomultilib -n32 -n64"
-
