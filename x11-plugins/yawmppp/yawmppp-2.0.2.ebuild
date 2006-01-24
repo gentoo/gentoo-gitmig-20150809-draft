@@ -1,17 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.5 2005/11/11 11:41:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.6 2006/01/24 23:31:59 nelchael Exp $
 
 inherit eutils
 
 DESCRIPTION="Yet Another PPP Window Maker dock applet"
 SRC_URI="ftp://ftp.seul.org/pub/yawmppp/${P}.tar.gz"
 HOMEPAGE="http://yawmppp.seul.org/"
-DEPEND=">=net-dialup/ppp-2.3.11 =x11-libs/gtk+-1.2*"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE=""
+
+DEPEND=">=net-dialup/ppp-2.3.11
+	=x11-libs/gtk+-1.2*"
 
 src_unpack() {
 	unpack ${A}
