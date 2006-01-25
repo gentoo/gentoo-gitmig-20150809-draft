@@ -1,4 +1,4 @@
-MD5 5f59929081a2e68e5340f27ce1b715e3 ChangeLog 3851
+MD5 1b914734abb8dd9ad4e9206003aad9e8 ChangeLog 3963
 MD5 88664b266f34957e871e07457c605227 files/Xli.ad 123
 MD5 56c2673ad567dbf5ca2163c932571234 files/digest-xli-1.17.0 62
 MD5 4f4d73aa9e90de9931e810d283ab6db6 files/digest-xli-1.17.0-r1 66
@@ -6,5 +6,5 @@ MD5 4f4d73aa9e90de9931e810d283ab6db6 files/digest-xli-1.17.0-r2 66
 MD5 5cfa67b158e1deae4d28589f9a7da60a files/xli-security-gentoo.diff 6940
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 102b722f83fa906cc5ce1a687bbd240f xli-1.17.0-r1.ebuild 2211
-MD5 c75be2f06d4afdb642b4899be00b70dd xli-1.17.0-r2.ebuild 2324
+MD5 47ae376d3339804cf06a1000a616641c xli-1.17.0-r2.ebuild 2455
 MD5 9cde58e96d0616fd7a7707bcc8a44eec xli-1.17.0.ebuild 2119
