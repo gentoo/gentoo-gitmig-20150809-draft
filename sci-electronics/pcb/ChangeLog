@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.16 2005/11/14 20:10:39 plasmaroo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.17 2006/01/25 17:04:16 phosphan Exp $
+
+  25 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> -pcb-20050127.ebuild,
+  pcb-20050315.ebuild, pcb-20050609.ebuild:
+  Fixing deps for modular X, cleaning up.
 
 *pcb-20050609 (14 Nov 2005)
 

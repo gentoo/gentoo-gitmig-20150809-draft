@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20050609.ebuild,v 1.1 2005/11/14 20:10:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20050609.ebuild,v 1.2 2006/01/25 17:04:16 phosphan Exp $
 
 DESCRIPTION="tool for the layout of printed circuit boards"
 HOMEPAGE="http://pcb.sourceforge.net/"
@@ -11,10 +11,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND=">=x11-libs/gtk+-2.4"
 DEPEND="${RDEPEND}
 	=dev-lang/tk-8*
-	>=x11-libs/gtk+-2.4"
+	|| (
+		virtual/x11
+		x11-proto/xproto
+	   )"
 
 src_unpack() {
 	unpack ${A}
