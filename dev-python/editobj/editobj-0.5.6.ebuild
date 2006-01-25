@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.6.ebuild,v 1.3 2006/01/05 14:43:29 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.6.ebuild,v 1.4 2006/01/25 19:38:36 marienz Exp $
 
 inherit distutils
 
@@ -12,9 +12,7 @@ HOMEPAGE="http://home.gna.org/oomadness/en/editobj/index.html"
 KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
-DEPEND="virtual/x11
-	virtual/opengl
-	>=dev-lang/python-2.2.2
+DEPEND=">=dev-lang/python-2.2.2
 	>=dev-lang/tk-8.3"
 
 S=${WORKDIR}/${MY_P}
