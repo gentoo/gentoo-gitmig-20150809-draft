@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.3.12.ebuild,v 1.6 2005/09/26 17:10:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.3.12.ebuild,v 1.7 2006/01/25 17:23:12 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,7 +21,6 @@ RDEPEND="media-libs/libpng
 	x11-libs/pango
 	x11-libs/gtkglext
 	dev-libs/libxml2
-	virtual/x11
 	virtual/opengl"
 
 S=${WORKDIR}
