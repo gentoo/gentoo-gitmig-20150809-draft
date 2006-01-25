@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.21 2005/05/10 22:50:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.22 2006/01/25 21:07:05 flameeyes Exp $
 
-inherit libtool eutils flag-o-matic
+inherit libtool eutils flag-o-matic autotools
 
 DESCRIPTION="Parse Options - Command line parser"
 HOMEPAGE="http://www.rpm.org/"
@@ -13,15 +13,18 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE="nls"
 
-RDEPEND=""
+RDEPEND="nls? ( virtual/libintl )"
 DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	elibtoolize
 	epatch "${FILESDIR}"/${P}-missing-tests.patch
+	epatch "${FILESDIR}"/${P}-nls.patch
 	use nls || touch ../rpm.c
+
+	eautomake
+	elibtoolize
 }
 
 src_compile() {
