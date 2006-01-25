@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libast
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.23 2006/01/25 07:22:59 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.24 2006/01/25 10:52:22 metalgod Exp $
+
+  25 Jan 2006; Luis Medinas <metalgod@gentoo.org> libast-0.7.ebuild:
+  Stable on amd64. See security bug #120106.
 
   25 Jan 2006; Joshua Jackson <tsunam@gentoo.org> libast-0.7.ebuild:
   stable on x86; bug #120106
