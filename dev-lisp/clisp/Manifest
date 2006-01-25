@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 70027dd716521b9bdd92638463edc66a ChangeLog 10174
+MD5 ecdad53cb564615d4b853eb1e3ef5162 ChangeLog 10303
 MD5 fce61ccc24ef4d9aa4b70cc4c8fde0be clisp-2.33.2-r2.ebuild 4238
 MD5 703fc21066f759fb89bd66a28a9ee91f clisp-2.34-r1.ebuild 4160
 MD5 875bf0b817f57e16ad20f42f094ad8a1 clisp-2.35.ebuild 2879
-MD5 9e6248cf0be7ec4870e11beca0ce5480 clisp-2.36.ebuild 3050
-MD5 05ced13b529e80ae8c900b93ebc34bae clisp-2.37.ebuild 3050
+MD5 cd8df21d6d2351d3116a6cfafe5cdf6e clisp-2.36.ebuild 3142
+MD5 a822ec0dc19ee23f368643841c94d675 clisp-2.37.ebuild 3142
 MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.33.2/README.Gentoo 334
 MD5 fe93240f140623bf55d2e503f6d8e01e files/2.33.2/clisp.sh 2792
 MD5 8d8449ba456d4f8b789d4349496845b6 files/2.33.2/compilefix.patch 1174
@@ -33,10 +30,3 @@ MD5 f9c5dbcccff51886eb3704fd7fa7c429 files/digest-clisp-2.35 64
 MD5 08b8b798be80ccd9fe2e06b3a94d11ec files/digest-clisp-2.36 64
 MD5 2d45de933623d2c7336e5717130fd321 files/digest-clisp-2.37 64
 MD5 485cde76397408cf913fc6d4c7a45a67 metadata.xml 882
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxYkbyiNZaEAZA+ARAlj2AJ9l1iZwXTck+wJa16iBCFP/r/LxCACfYDN9
-zhIyscOXB9HmQfyGaeL81cs=
-=AOgi
------END PGP SIGNATURE-----
