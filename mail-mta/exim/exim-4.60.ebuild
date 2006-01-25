@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.60.ebuild,v 1.1 2005/11/28 23:32:47 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.60.ebuild,v 1.2 2006/01/25 00:54:32 vanquirius Exp $
 
 inherit eutils
 
@@ -28,7 +28,13 @@ DEPEND=">=sys-apps/sed-4.0.5
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )
 	srs? ( mail-filter/libsrs_alt )
-	X? ( virtual/x11 )
+	X? ( || ( (	x11-proto/xproto
+			x11-libs/libX11
+			x11-libs/libXmu
+			x11-libs/libXt
+			x11-libs/libXaw )
+		virtual/x11 )
+	)
 	sqlite? ( dev-db/sqlite )"
 	# added X check for #57206
 RDEPEND="${DEPEND}

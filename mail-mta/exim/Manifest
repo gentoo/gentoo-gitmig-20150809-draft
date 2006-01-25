@@ -1,4 +1,4 @@
-MD5 bdfdc7f90e9fb6b7eaeef581729a38f5 ChangeLog 20115
+MD5 0595ed31d511d4395a531e98d0bae174 ChangeLog 20287
 MD5 b736c67bb1a5d294ee2df24413cf9100 exim-4.43-r2.ebuild 8033
 MD5 9b839c970416e71bf6e0602bda37fa76 exim-4.50-r1.ebuild 7956
 MD5 5faf10649096a3bc679e28b0c319eb6c exim-4.50-r2.ebuild 8497
@@ -6,8 +6,7 @@ MD5 c5d0c353ed73c403a957dc4f7ce88cf7 exim-4.50-r999.ebuild 7638
 MD5 f850af9bb97ec3801c5f27cc6d6c7930 exim-4.50.ebuild 7923
 MD5 1e2488b29f4d874082d026bbf5e9027d exim-4.52.ebuild 8419
 MD5 6c399a024ae828416dad6e931a3ee274 exim-4.54.ebuild 8654
-MD5 a6d09cd8eee4b8d7ee053b806b858e39 exim-4.60.ebuild 9027
-MD5 ee52da73838435e93e200a5cba155fa3 metadata.xml 1029
+MD5 7841e2a5bc734c188ee8304bb1e471c6 exim-4.60.ebuild 9136
 MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
 MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
 MD5 f05ff505c7b77a17696736e2730ae8d1 files/digest-exim-4.43-r2 133
@@ -32,3 +31,4 @@ MD5 eb249c90af3ab11e5a4d307e184a75ac files/exiscan.conf 22113
 MD5 49698cb738763bbaebbbe89470f914ef files/mailer.conf 169
 MD5 d230e0fa45f2b65d5bc50c0879c40148 files/pam.d-exim 101
 MD5 4c0b8ee742360c08f0bc0b526fcaad10 files/system_filter.exim 8120
+MD5 ee52da73838435e93e200a5cba155fa3 metadata.xml 1029
