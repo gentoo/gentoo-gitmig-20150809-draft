@@ -1,0 +1,54 @@
+--- Makefile.orig	2006-01-25 16:25:45.000000000 -0500
++++ Makefile	2006-01-25 16:28:04.000000000 -0500
+@@ -19,7 +19,7 @@
+ 	@if test ! -d $(prefix) ; \
+ 	then \
+ 	    echo "Creating $(prefix)..." ; \
+-	    $(call mkdir,$(prefix)) ; \
++		 mkdir -p $(prefix) ; \
+ 	fi
+ 
+ 	@for subdir in $(INSTALL_SUBDIRS); \
+@@ -47,8 +47,8 @@
+ 	then \
+ 	    ( cd doc && $(MAKE) install ) || exit 1 ; \
+ 	fi
+-	$(call installdata,ICE_LICENSE,$(prefix))
+-	$(call installdata,LICENSE,$(prefix))
++	$(call installdata,ICE_LICENSE,$(install_docdir))
++	$(call installdata,LICENSE,$(install_docdir))
+ 
+ clean::
+ 	@if test -d doc ; \
+--- config/Make.rules.orig	2006-01-25 16:28:18.000000000 -0500
++++ config/Make.rules	2006-01-25 16:29:11.000000000 -0500
+@@ -12,7 +12,7 @@
+ # if it does not exist.
+ #
+ 
+-prefix			?= /opt/Ice-$(VERSION)
++prefix			?= $(DESTDIR)/usr
+ 
+ #
+ # Define OPTIMIZE as yes if you want to build with
+@@ -154,9 +154,9 @@
+ endif
+ 
+ install_includedir	= $(prefix)/include
+-install_slicedir	= $(prefix)/slice
++install_slicedir	= $(prefix)/share/ice-$(VERSION)/slice
+ install_schemadir	= $(prefix)/schema
+-install_docdir		= $(prefix)/doc
++install_docdir		= $(prefix)/share/doc/ice-$(VERSION)
+ 
+ INSTALL			= cp -fp
+ INSTALL_PROGRAM		= ${INSTALL}
+@@ -212,7 +212,7 @@
+     DB_FLAGS		= -I$(DB_HOME)/include
+     DB_LIBS		= -L$(DB_HOME)/$(libsubdir) -ldb_cxx
+ else
+-    DB_FLAGS		=
++    DB_FLAGS		= -I/usr/include/db4.3
+     DB_LIBS		= -ldb_cxx
+ endif
+ 
