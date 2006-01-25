@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ad23d4bb70845b79671f6e96ba188d6 ChangeLog 1395
+MD5 06f8ab02593778cc0eabf26c696fd092 ChangeLog 1514
 MD5 47067e80e69167a5983a02e56b46dcff files/digest-pecl-pdo-dblib-1.0 60
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 dba756f50f9a5705dd70c3738262e71c pecl-pdo-dblib-1.0.ebuild 1074
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD058HH6mNYUtVdIARAth4AJ9taWIpAxd0zJsvfwt63Q9y54th0QCeLKNr
-PWEny3w9CgBYUIYTAGzMkpQ=
-=OS8+
------END PGP SIGNATURE-----
+MD5 bf1dbebd4dcde5ac65d93677e3dbfdbf pecl-pdo-dblib-1.0.ebuild 1078
