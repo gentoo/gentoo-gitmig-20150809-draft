@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.2.1.ebuild,v 1.1 2005/10/18 01:55:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.2.1.ebuild,v 1.2 2006/01/25 00:29:59 vapier Exp $
 
 inherit eutils mono
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl python java tcltk php ruby mono"
 
 DEPEND=">=dev-libs/redland-1.0.0
-	dev-lang/swig
+	>=dev-lang/swig-1.3.25
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
 	java? ( virtual/jdk )

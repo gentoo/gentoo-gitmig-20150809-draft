@@ -9,11 +9,11 @@ MD5 5e3b83c344a49513d7ab4194d905ccbd files/redland-bindings-1.0.0.2-configure.pa
 MD5 d5fa7c77bc2bf04a37cf23b801926245 files/redland-bindings-1.0.0.2-swig-update.patch 308
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 5da7b430ac5c74c7873d0e858717f179 redland-bindings-1.0.0.2.ebuild 1402
-MD5 1cf43fec89db6465d52f68a1dc564d47 redland-bindings-1.0.2.1.ebuild 1423
+MD5 1d6335d3c317c49e639a0e7e8becf618 redland-bindings-1.0.2.1.ebuild 1432
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVFbggIKl8Uu19MoRAkV9AJ95QFBKtUUPdxDsAiHN+odjMfpZNgCdFSHY
-mUpJ1wRgcNb1FsMdNDFkLUk=
-=nJu6
+iD8DBQFD1scp2+ySkm8kpY0RAnkkAJ96JitCLsnsgOna/pkjjF3UIT9SQwCgsJEB
+EgCxUjnvk0YVFrMbRtcWfx4=
+=oW9k
 -----END PGP SIGNATURE-----
