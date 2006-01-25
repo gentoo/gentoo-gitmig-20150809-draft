@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.1 2005/05/07 19:37:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.2 2006/01/25 05:08:14 spyderous Exp $
 
 inherit fox
 
@@ -9,13 +9,23 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~ia64 ~ppc ~ppc64 ~sparc"
 IUSE="cups jpeg opengl png tiff zlib"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXrandr
+			x11-libs/libXcursor
+		)
+		virtual/x11
+	)
 	cups? ( net-print/cups )
 	jpeg? ( >=media-libs/jpeg-6b )
-	opengl? ( virtual/opengl )
+	opengl? ( virtual/opengl virtual/glu )
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xextproto
+			x11-libs/libXt
+		)
+		virtual/x11
+	)"
 
 FOXCONF="$(use_enable cups) \
 	$(use_enable jpeg) \
