@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gxmame
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.16 2005/12/26 06:45:04 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.17 2006/01/25 15:48:47 mr_bones_ Exp $
+
+  25 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  gxmame-0.35_beta2.ebuild:
+  X is implicit
 
   26 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org>
   gxmame-0.35_beta2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_beta2.ebuild,v 1.4 2005/12/26 06:45:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_beta2.ebuild,v 1.5 2006/01/25 15:48:47 mr_bones_ Exp $
 
 inherit games
 
@@ -15,8 +15,7 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="nls joystick"
 RESTRICT="nostrip"
 
-DEPEND="virtual/x11
-	dev-libs/expat
+DEPEND="dev-libs/expat
 	>=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.4
 	x11-themes/gnome-icon-theme
