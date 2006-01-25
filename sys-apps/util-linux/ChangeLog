@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.142 2006/01/24 23:50:59 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.143 2006/01/25 05:48:50 vapier Exp $
+
+*util-linux-2.13_pre6 (25 Jan 2006)
+
+  25 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +util-linux-2.13_pre6.ebuild:
+  Add a pre version for people to play with #119734 by Matthew Schick.
 
   24 Jan 2006; Jose Luis Rivero <yoswink@gentoo.org>
   util-linux-2.12r-r2.ebuild:
