@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r4.ebuild,v 1.3 2006/01/25 22:06:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r4.ebuild,v 1.4 2006/01/25 22:19:10 chutzpah Exp $
 
 inherit eutils
 
@@ -25,7 +25,18 @@ SLOT="0"
 KEYWORDS="-alpha -amd64 ~ppc ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( ( x11-libs/libXpm
+			x11-proto/xextproto
+		)
+		virtual/x11
+	)"
+
+DEPEND="${RDEPEND}
+	|| ( ( app-text/rman
+			x11-misc/gccmakedep
+		)
+		virtual/x11
+	)"
 
 src_unpack() {
 	unpack $A

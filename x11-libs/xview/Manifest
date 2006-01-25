@@ -1,4 +1,4 @@
-MD5 14550310ad3f069a2377a8dee11750c6 ChangeLog 2571
+MD5 5346b91344a64db4d3ca63797b2da0cf ChangeLog 2679
 MD5 ca8ca75012c0086e91666513ea0da88d files/CAN-2005-0076.patch 984
 MD5 6de3c812dee458777db24502d252984f files/digest-xview-3.2 138
 MD5 48636f5ace70cc3f5033a87188e4e7bf files/digest-xview-3.2-r1 138
@@ -7,5 +7,5 @@ MD5 d7d90bd733aab393a20a5919e05c0b49 files/digest-xview-3.2-r4 70
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 1f80b853ffb94e1a3fcad18538a35918 xview-3.2-r1.ebuild 2596
 MD5 9a0c239967b3664c61caac1548137243 xview-3.2-r3.ebuild 2669
-MD5 49b3da5fdc2ce272c47ac5f4b664f5bf xview-3.2-r4.ebuild 2923
+MD5 bc369c9dbc5c218e8ffab0309fd98b8b xview-3.2-r4.ebuild 3066
 MD5 d6f0240a1b502222522db7d875a66cd8 xview-3.2.ebuild 2280
