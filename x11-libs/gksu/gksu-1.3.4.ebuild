@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.3.4.ebuild,v 1.2 2005/09/05 23:33:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.3.4.ebuild,v 1.3 2006/01/25 00:46:56 vanquirius Exp $
 
 inherit gnome2
 
@@ -16,10 +16,18 @@ RDEPEND=">=x11-libs/libgksu-1.3.3
 	>=x11-libs/libgksuui-1.0.6
 	>=x11-libs/gtk+-2.4.0
 	>=gnome-base/gconf-2.0
-	gnome-base/gnome-keyring
+	>=gnome-base/gnome-keyring-0.4.3
 	app-admin/sudo
-	virtual/x11
-	nls? ( sys-devel/gettext )"
+	>=gnome-base/orbit-2.12.2
+	dev-libs/atk
+	x11-libs/pango
+	x11-libs/cairo
+	media-libs/libpng
+	nls? ( sys-devel/gettext )
+	>=dev-libs/glib-2.8.4
+	|| (
+	( >=x11-libs/libX11-1.0.0 )
+	virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
