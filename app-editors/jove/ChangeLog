@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jove
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.10 2005/11/03 13:25:46 seemant Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.11 2006/01/25 22:00:12 chutzpah Exp $
+
+  25 Jan 2006; Patrick McLean <chutzpah@gentoo.org> jove-4.16.0.56.1.ebuild,
+  jove-4.16.0.65.4.ebuild:
+  Mask on amd64 due to bug #108261.
 
 *jove-4.16.0.65.4 (03 Nov 2005)
 
