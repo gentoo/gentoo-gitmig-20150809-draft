@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.4 2005/09/02 20:24:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.5 2006/01/25 14:23:49 phosphan Exp $
 
 inherit eutils python
 
@@ -22,7 +22,10 @@ KEYWORDS="~amd64 ppc x86"
 SLOT="0"
 IUSE="X doc python"
 
-DEPEND="X? ( virtual/x11
+DEPEND="X? ( || (
+					virtual/x11
+					x11-proto/xproto
+				)
 	x11-libs/Xaw3d )
 	>=sys-apps/sed-4
 	python? ( >=dev-lang/python-2.3 )"
