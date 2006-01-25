@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.2.ebuild,v 1.5 2005/12/16 01:47:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.2.ebuild,v 1.6 2006/01/25 04:14:00 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -33,6 +33,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-interface.patch
 	epatch ${FILESDIR}/${P}-buildfile.patch
+	# Fixes problems experienced when behind a proxy.
+	# Contributed by Gergan Penkov <gpp666_999@yahoo.de> bug #99642
+	epatch ${FILESDIR}/${PN}-modules_common_ent.patch
 
 	cd ${S}/lib && rm -f *.jar
 	java-pkg_jar-from xjavadoc
