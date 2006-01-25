@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.20.ebuild,v 1.2 2005/12/31 21:26:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.20.ebuild,v 1.3 2006/01/25 22:01:23 dragonheart Exp $
 
 inherit java-pkg
 

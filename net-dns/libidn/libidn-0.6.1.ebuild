@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.1.ebuild,v 1.1 2006/01/22 12:42:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.1.ebuild,v 1.2 2006/01/25 22:01:23 dragonheart Exp $
 
-inherit java-pkg
+inherit java-pkg mono
 
 DESCRIPTION="Internationalized Domain Names (IDN) implementation"
 HOMEPAGE="http://www.gnu.org/software/libidn/"
@@ -11,14 +11,17 @@ SRC_URI="ftp://alpha.gnu.org/pub/gnu/libidn/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="java doc nls emacs"
+IUSE="java doc emacs mono nls"
 
 DEPEND="java? ( >=virtual/jdk-1.4
+		mono? ( >=dev-lang/mono-0.95 )
 				dev-java/gjdoc )"
-RDEPEND="java? ( >=virtual/jre-1.4 )"
+RDEPEND="java? ( >=virtual/jre-1.4 )
+		mono? ( >=dev-lang/mono-0.95 )"
 
 src_compile() {
-	local jdkhome
+	local jdkhome=""
+	local myconf=" --disable-csharp"
 
 	if use java; then
 		jdkhome=$(java-config --jdk-home)
@@ -27,9 +30,12 @@ src_compile() {
 		fi
 	fi
 
+	use mono && myconf="--enable-csharp=mono"
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable java) \
+		${myconf} \
 		|| die
 
 	emake || die
