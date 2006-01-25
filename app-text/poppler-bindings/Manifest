@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c0cc51ba132218eff781ed157ddeb8da ChangeLog 1863
+MD5 a6898066d68ebf8a7de6f53bd3b9c011 ChangeLog 1964
 MD5 fd7bca7be5c5d5779b32f4c4e7fe9b4c files/digest-poppler-bindings-0.4.3-r2 65
 MD5 391a4af00a2993115c7fa9145936a221 files/digest-poppler-bindings-0.4.4 65
 MD5 342ecc2fc9aa2b0328c7522269b66049 files/digest-poppler-bindings-0.5.0 65
@@ -11,11 +11,11 @@ MD5 293623f77988fe5a042ce6fa81099ae5 files/poppler-0.5.0-bindings.patch 2928
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 17718533861047e0a2180686cc7006cf poppler-bindings-0.4.3-r2.ebuild 1829
 MD5 7aa626ab7d9b67a88877d88c40203bd1 poppler-bindings-0.4.4.ebuild 1780
-MD5 a1d52008fcb5468bc1a55a1caea882dc poppler-bindings-0.5.0.ebuild 1788
+MD5 b57d6a7db882cd6d9575e40d2b8d8ada poppler-bindings-0.5.0.ebuild 1817
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD2ADWomPajV0RnrERAoTJAJ9WGCTX6nqhHrj1x8oCMLF0+CMROgCdF/BE
-xuKlqxmK9ZF3v7dJCwRGYEc=
-=uS9M
+iD8DBQFD2AIoomPajV0RnrERAi78AJ9HzIoz4grC0lwqo6vzqGVgbirBgQCfadjy
+PjRANsiTS4O1wZMGCgaSEuk=
+=L1Js
 -----END PGP SIGNATURE-----
