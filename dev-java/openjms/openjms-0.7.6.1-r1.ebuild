@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.1 2005/10/15 13:19:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.2 2006/01/25 00:16:58 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -31,6 +31,7 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/xerces-2.3*"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
+	jikes? ( dev-java/jikes )
 	dev-java/ant"
 
 src_unpack() {
