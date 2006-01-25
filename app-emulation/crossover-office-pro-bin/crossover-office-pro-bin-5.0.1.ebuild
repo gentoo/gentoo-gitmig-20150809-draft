@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-5.0.1.ebuild,v 1.1 2006/01/15 19:09:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-5.0.1.ebuild,v 1.2 2006/01/25 22:59:06 vapier Exp $
 
 inherit eutils
 
@@ -14,8 +14,11 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE="nas"
 RESTRICT="fetch nostrip"
 
-RDEPEND="virtual/x11
-	nas? ( media-libs/nas )
+RDEPEND="nas? ( media-libs/nas )
+	|| (
+		( x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86dga x11-libs/libXxf86vm )
+		virtual/x11
+	)
 	sys-libs/glibc
 	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
