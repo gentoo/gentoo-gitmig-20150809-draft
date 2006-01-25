@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.56.1.ebuild,v 1.2 2006/01/25 22:00:12 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.56.1.ebuild,v 1.3 2006/01/25 22:10:51 chutzpah Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-amd64 x86"
+KEYWORDS="x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
