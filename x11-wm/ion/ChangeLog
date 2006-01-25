@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.13 2005/07/10 15:19:56 twp Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.14 2006/01/25 16:43:32 twp Exp $
+
+  25 Jan 2006; Tom Payne <twp@gentoo.org> ChangeLog:
+  Update for Modular X.
 
   10 Jul 2005; Tom Payne <twp@gentoo.org> -ion-20020207.ebuild,
   ion-20020207-r1.ebuild:
