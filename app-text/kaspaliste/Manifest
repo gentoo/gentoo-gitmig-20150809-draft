@@ -2,6 +2,6 @@ MD5 505a1d5a1bcb2b126537c22d09d1d12b ChangeLog 1173
 MD5 3f0461a89ce9b6c776da694a8c844a4a files/digest-kaspaliste-0.96 68
 MD5 3f0461a89ce9b6c776da694a8c844a4a files/digest-kaspaliste-0.96-r1 68
 MD5 bfd96ad682d601276091e780988778d7 files/gcc34.patch 797
-MD5 1b9b297a6caefd32057b416d73011e23 kaspaliste-0.96-r1.ebuild 797
+MD5 5092ee2adb883766215e2a252ebb4d20 kaspaliste-0.96-r1.ebuild 796
 MD5 ebe80b86bdca9e197cff6653387a8764 kaspaliste-0.96.ebuild 713
 MD5 8aa1330b2ef552c8d74708dd84d73d08 metadata.xml 178
