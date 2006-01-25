@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.148 2006/01/25 00:03:14 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.149 2006/01/25 05:02:50 vapier Exp $
+
+*coreutils-5.93 (25 Jan 2006)
+
+  25 Jan 2006; Mike Frysinger <vapier@gentoo.org> +coreutils-5.93.ebuild:
+  Version bump #119794 by Daniel Drake.
 
   25 Jan 2006; Jose Luis Rivero <yoswink@gentoo.org>
   coreutils-5.2.1-r7.ebuild:
