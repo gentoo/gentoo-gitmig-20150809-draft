@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.17 2006/01/22 20:12:27 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.18 2006/01/25 06:40:36 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -129,6 +129,9 @@ pkg_setup() {
 		epause 10
 	fi
 
+	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
+	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
+
 }
 
 src_unpack() {
@@ -140,9 +143,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
 	cp ${FILESDIR}/${PV}/gentoo-gcc-version.diff ${S}/patches/src680/ || die
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
-
-	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
-	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
