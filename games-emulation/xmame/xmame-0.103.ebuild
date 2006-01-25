@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.103.ebuild,v 1.1 2006/01/18 17:10:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.103.ebuild,v 1.2 2006/01/25 22:07:29 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -76,6 +76,7 @@ src_unpack() {
 		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
 		-e "/^TARGET/s:mame:${TARGET:1}:" \
 		-e "/^CFLAGS =/d" \
+		-e "/\bCFLAGS +=/d" \
 		Makefile \
 		|| die "sed Makefile failed"
 
