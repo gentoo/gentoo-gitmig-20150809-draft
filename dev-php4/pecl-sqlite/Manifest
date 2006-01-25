@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 abb9ad390084d42dbb1a90beb9775992 ChangeLog 1518
+MD5 29d7ed75635bf0185fcde1a4cecd0bd0 ChangeLog 1619
 MD5 b85e19ab14d10f3db890b786a1bf2111 files/digest-pecl-sqlite-1.0.3 61
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 3ee89ddf874189a990224e543d2b2092 pecl-sqlite-1.0.3.ebuild 585
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD08ZBH6mNYUtVdIARAoMTAJ4mVLAqE4HtOLJhjpy1bkSHDz1AVACfVxsH
-UHZTmpxLQg86DzFEbYg8DA8=
-=49ua
------END PGP SIGNATURE-----
+MD5 5d4e8aecb7624d86e1b45b539b04b1bc pecl-sqlite-1.0.3.ebuild 585

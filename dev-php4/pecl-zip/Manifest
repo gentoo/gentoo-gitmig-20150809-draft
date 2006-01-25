@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d45f77e3d97ecd6c9bdb134ce0c7b8d8 ChangeLog 1236
+MD5 143d54028d6ae36cc708e574a00c3af8 ChangeLog 1330
 MD5 8e622d17c5cd06fa9b2da272281982b0 files/digest-pecl-zip-1.0 54
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 998c110b7e86ca4463c76755c87d8511 pecl-zip-1.0.ebuild 501
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD08XsH6mNYUtVdIARAulXAJ95ri7fUWF968sGhiT/h+/QPZhUBwCeJuwy
-A+jIPr09Tzz/ne5+R9st7FA=
-=+dyH
------END PGP SIGNATURE-----
+MD5 4e3780aeb411bca7807b0362caad6c53 pecl-zip-1.0.ebuild 501
