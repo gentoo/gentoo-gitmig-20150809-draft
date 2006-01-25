@@ -46,19 +46,19 @@ src_install() {
 	exeinto "${dir}"
 	doexe bin/x86/wolfsp.x86 openurl.sh || die "copying exe"
 
-	games_make_wrapper rtcwmp-demo ./wolfsp.x86 "${dir}" "${dir}"
+	games_make_wrapper ${PN} ./wolfsp.x86 "${dir}" "${dir}"
 
 	doins WolfSP.xpm CHANGES
-	newicon WolfSP.xpm rtcwsp-demo.xpm
+	newicon WolfSP.xpm ${PN}.xpm
 
 	prepgamesdirs
-	make_desktop_entry rtcwsp-demo "Return to Castle Wolfenstein (SP demo)" \
-		rtcwsp-demo.xpm
+	make_desktop_entry ${PN} "Return to Castle Wolfenstein (SP demo)" \
+		${PN}.xpm
 }
 
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "Install 'rtcwmp-demo' for multi-player"
 	echo
-	einfo "Run 'rtcwmp-demo' for single-player"
+	einfo "Run '${PN}' for single-player"
 }
