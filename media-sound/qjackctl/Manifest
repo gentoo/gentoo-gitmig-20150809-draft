@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cdbc9eb582796719b5f16fb28d20e930 ChangeLog 4026
 MD5 0f2e564161d8153fb35077ef7e531178 files/digest-qjackctl-0.2.11 67
 MD5 f1bdcaff4be30dcbde7c6e3f155ef655 files/digest-qjackctl-0.2.13 67
@@ -16,3 +19,10 @@ MD5 166c9f8535d79b14211e6a5b5aec5d76 qjackctl-0.2.17.ebuild 675
 MD5 8f219c259c721ce95d34893e49538ce1 qjackctl-0.2.19a.ebuild 675
 MD5 7781109af7a0962cdb1d368b2c32b7f2 qjackctl-0.2.8.ebuild 1116
 MD5 ed9db084578afd029b5f3fd2142e02e0 qjackctl-0.2.9.ebuild 1153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD1+OMKRy60XGEcJIRAtmhAJ9UNa5Ih/IvYuAlcQ4VZaQt56mQKgCghOZO
+WRFj4ympJOie/Mf536f2ISo=
+=M64n
+-----END PGP SIGNATURE-----
