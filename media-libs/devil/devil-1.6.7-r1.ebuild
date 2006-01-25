@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.5 2006/01/02 17:25:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.6 2006/01/25 04:26:26 spyderous Exp $
 
 inherit eutils
 
@@ -18,11 +18,13 @@ RDEPEND="gif? ( media-libs/giflib )
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	xpm? ( virtual/x11 )
+	xpm? ( || ( x11-libs/libXpm virtual/x11 ) )
 	allegro? ( media-libs/allegro )
-	opengl? ( virtual/opengl )
+	opengl? ( virtual/glu )
 	sdl? ( media-libs/libsdl )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libXext virtual/x11 ) )"
+DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 
 S=${WORKDIR}/DevIL-${PV}
 
