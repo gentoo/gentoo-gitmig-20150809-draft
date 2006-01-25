@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.9.37.ebuild,v 1.2 2005/12/20 18:40:03 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.9.37.ebuild,v 1.3 2006/01/25 00:32:22 vanquirius Exp $
 
 inherit eutils
 
@@ -12,13 +12,12 @@ LICENSE="GPL-2 Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~ppc amd64"
 DEPEND="app-arch/unzip
-	virtual/x11
 	gtk? ( >=x11-libs/gtk+-2.4 )"
 
 RDEPEND="virtual/jre
-		virtual/jdk"
+	virtual/jdk"
 
-S=${WORKDIR}/LimeWire
+S="${WORKDIR}/LimeWire"
 PREFIX="/opt/limewire"
 
 src_compile() {
@@ -40,7 +39,7 @@ src_install() {
 	newenvd limewire.envd 99limewire
 
 	insinto /usr/share/icons/hicolor/32x32/apps
-	newins ${FILESDIR}/main-icon.png limewire.png
+	newins "${FILESDIR}"/main-icon.png limewire.png
 
 	make_desktop_entry limewire LimeWire
 }
