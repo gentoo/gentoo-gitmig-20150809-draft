@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.2 2005/11/02 00:22:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.3 2006/01/25 20:05:21 marienz Exp $
 
-inherit debug
+inherit debug eutils
 
 DESCRIPTION="Cal3D is a skeletal based character animation library"
 HOMEPAGE="http://cal3d.sourceforge.net/"
@@ -19,6 +19,12 @@ DEPEND=">=sys-devel/automake-1.4
 
 S=${WORKDIR}/${PN}
 
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-libtool-compat.patch"
+}
 
 src_compile() {
 	use debug && my_conf="${my_conf} --enable-debug"

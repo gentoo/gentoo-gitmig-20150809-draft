@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/cal3d
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.13 2005/08/31 19:12:05 malverian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.14 2006/01/25 20:05:21 marienz Exp $
+
+  25 Jan 2006; Marien Zwart <marienz@gentoo.org>
+  +files/cal3d-0.11.0_pre20050823-libtool-compat.patch,
+  cal3d-0.11.0_pre20050823.ebuild:
+  Add a patch to build with recent versions of libtool (bug #116077)
 
 *cal3d-0.11.0_pre20050823 (31 Aug 2005)
 
