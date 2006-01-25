@@ -1,5 +1,5 @@
-MD5 38a44adeb15cdf176624ab27c60da1fe ChangeLog 2428
+MD5 abd3b34d379f9cfdd6cd76941c3400b0 ChangeLog 2545
 MD5 1b5bc6a0f8cc7f7aa3476666132d5390 files/digest-kinput2-3.1-r1 64
 MD5 64dca3570f9b42cbeee9fe208f59ec15 files/kinput2-3.1-r1-gentoo.diff 3806
-MD5 4be61fa7e7a669a3ea21c4ecf62a29fa kinput2-3.1-r1.ebuild 1624
+MD5 e605ef12060ee068dc7370bb762fa22e kinput2-3.1-r1.ebuild 1628
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
