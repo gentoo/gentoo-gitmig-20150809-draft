@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.11 2005/12/12 02:57:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.12 2006/01/25 08:40:28 spyderous Exp $
 
 inherit elisp-common eutils fixheadtails
 
@@ -31,6 +31,8 @@ DEPEND="${MY_DEPEND}
 	sys-devel/autoconf
 	|| ( ( x11-proto/xextproto
 			x11-libs/libxkbfile
+			app-text/rman
+			x11-misc/imake
 		)
 		virtual/x11
 	)"
