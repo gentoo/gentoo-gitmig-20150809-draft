@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/peacock-1.9.1.ebuild,v 1.6 2005/05/22 13:24:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/peacock-1.9.1.ebuild,v 1.7 2006/01/25 11:31:36 nattfodd Exp $
 
 IUSE=""
 
@@ -12,8 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 SLOT="0"
 
-DEPEND="virtual/x11
-	dev-util/pkgconfig
+DEPEND="dev-util/pkgconfig
 	>=x11-libs/gtksourceview-0.5
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
