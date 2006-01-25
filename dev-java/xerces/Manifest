@@ -1,4 +1,4 @@
-MD5 50401e9503901d51afd0dd39d81eb3cc ChangeLog 8702
+MD5 631114a07df064f9908e4bcb9e07952b ChangeLog 8809
 MD5 b0ae8698b0ae0ee1e309b38ba1f81141 files/digest-xerces-1.3.1-r1 70
 MD5 37e61d014a2f8f79909f6d0775c1959b files/digest-xerces-2.3.0-r1 71
 MD5 202c6353e68e489ff4ca668a0999534d files/digest-xerces-2.6.2-r1 144
@@ -15,4 +15,4 @@ MD5 8b623267348a4cdce9b325a74c1a5b0e xerces-1.3.1-r1.ebuild 1213
 MD5 d3b214b938f042eb3b7d18a4d9d14cce xerces-2.3.0-r1.ebuild 1570
 MD5 d0902a15fe993b8b2074e18ae40a68f3 xerces-2.6.2-r1.ebuild 1171
 MD5 16be7f5c1e1b9c35446fcab49aecdc9f xerces-2.6.2-r2.ebuild 1730
-MD5 867b99385c6cadfe04ba306a62caca78 xerces-2.7.1.ebuild 1740
+MD5 caf4f6e47c0d75738fd117cdb90925e0 xerces-2.7.1.ebuild 1741
