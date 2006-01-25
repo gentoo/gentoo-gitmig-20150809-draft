@@ -1,6 +1,10 @@
 # ChangeLog for net-www/kaffeine-mozilla-plugin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/ChangeLog,v 1.8 2005/09/03 23:28:58 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/ChangeLog,v 1.9 2006/01/25 06:31:01 spyderous Exp $
+
+  25 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  kaffeine-mozilla-plugin-0.2.ebuild:
+  (#117230) Add modular X deps.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   kaffeine-mozilla-plugin-0.2.ebuild:
