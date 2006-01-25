@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f9910c807b810deebe5945f65b179687 ChangeLog 422
+MD5 ea85cfc6bf5694d715ec61f3eb7ee56a files/digest-soundconverter-0.8.3 71
+MD5 55caebb0cf39466dbb5e4e322d8a1498 files/soundconverter-0.8.3-makefile-fix.diff 1026
+MD5 d9885b371cf444e9a26ef0f8a0418d9b metadata.xml 219
+MD5 f9126f9197b6e202e2751e042ad7f1e7 soundconverter-0.8.3.ebuild 1064
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD14o9r2QksT29OyARAqL7AKCHKndyptemlh1fFGlSGo3PzjX+vACfZlis
+X5vwSZK2IG23QMxVaQk0tI4=
+=Fs10
+-----END PGP SIGNATURE-----
