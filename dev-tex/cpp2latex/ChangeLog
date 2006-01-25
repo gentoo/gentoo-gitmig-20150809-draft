@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/cpp2latex
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.7 2004/11/27 07:53:20 pclouds Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.8 2006/01/25 16:09:19 ehmsen Exp $
+
+*cpp2latex-2.3-r1 (25 Jan 2006)
+
+  25 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> +files/cpp2latex-2.3.patch,
+  +cpp2latex-2.3-r1.ebuild:
+  Added patch, thanks to Alessandro Flacco, for fixing odd number of '*' in 
+  comments, see bug #44585.
 
   27 Nov 2004; <pclouds@gentoo.org> cpp2latex-2.3.ebuild:
   HOMEPAGE moved
