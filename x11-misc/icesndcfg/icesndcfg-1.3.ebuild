@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.3.ebuild,v 1.8 2005/07/07 05:21:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.3.ebuild,v 1.9 2006/01/25 11:20:20 phosphan Exp $
 
 IUSE=""
 
@@ -8,8 +8,7 @@ DESCRIPTION="IceWM sound editor."
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
 HOMEPAGE="http://icecc.sourceforge.net/"
 
-DEPEND="virtual/x11
-	=x11-libs/qt-3*"
+DEPEND="=x11-libs/qt-3*"
 
 SLOT="0"
 LICENSE="GPL-2"
