@@ -1,6 +1,16 @@
 # ChangeLog for x11-plugins/wmsysmon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.20 2005/11/07 13:10:40 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.21 2006/01/25 08:22:27 s4t4n Exp $
+
+*wmsysmon-0.7.7 (January 24 2006)
+
+  24 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> wmsysmon-0.7.7.ebuild:
+  Version bump. Closes bug #120140. Updated my own patch for this new release,
+  thus (re)adding support for 2.6 kernels and CPU load monitoring. Renamed
+  high-ints patch not to include version numbers as it applies cleanly to
+  both package versions.
+  wmsysmon-0.7.6-r3.ebuild:
+  Updated ebuild to reflect high-ints patch name change.
 
   07 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmsysmon-0.7.6-r3.ebuild:
   Removed COPYING from dodoc.
