@@ -1,8 +1,18 @@
-MD5 60768555ed60e0732c8747ad97245b9c ChangeLog 1343
-MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
-MD5 9b6e8f0463ec36a5e20f5b74d484bef8 piave-0.2.4-r1.ebuild 1167
-MD5 fab7e989e9e16e9167d7a6c1abba0240 piave-0.2.4.ebuild 1093
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9f1dd96dc7622018872cd765cba359ee ChangeLog 1438
 MD5 e82020c9dafa6d2c570921b0fafbd5ff files/digest-piave-0.2.4 63
 MD5 e82020c9dafa6d2c570921b0fafbd5ff files/digest-piave-0.2.4-r1 63
 MD5 b39211483360995059bfb6eb8e23fd30 files/piave-0.2.4-gcc34.patch 671
 MD5 b3f256c82b671e109307527c6d78a51a files/piave-0.2.4-include-arts.diff 1216
+MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
+MD5 b00481a58d0948a83498bb1afd2384a9 piave-0.2.4-r1.ebuild 1293
+MD5 fab7e989e9e16e9167d7a6c1abba0240 piave-0.2.4.ebuild 1093
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD13cCK6zgPxRBWYQRAjHiAKCQb3H4eaYKbgPaMCbXcPRYCmP2PQCfcNtr
+mUcA+Iqq9H8C0a1VoE3shdM=
+=Lb7U
+-----END PGP SIGNATURE-----

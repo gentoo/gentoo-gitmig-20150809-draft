@@ -1,6 +1,9 @@
 # ChangeLog for media-video/piave
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/piave/ChangeLog,v 1.11 2005/05/15 13:53:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/piave/ChangeLog,v 1.12 2006/01/25 13:02:43 zypher Exp $
+
+  25 Jan 2005; Marc Hildebrand <zypher@gentoo.org> piave-0.2.4-r1.ebuild:
+  Ported to modular X.
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org> piave-0.2.4-r1.ebuild:
   Cleaned up ebuild to not use gcc eclass. Moved patches in src_unpack. Moved
