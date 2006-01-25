@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.9 2005/12/18 02:10:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.10 2006/01/25 03:22:17 dostrow Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -18,7 +18,7 @@
 
 # This version supports only PPC64!
 # Other architecture needs addition of patches.
-KEYWORDS="-* ~ppc64"
+KEYWORDS="-* ppc64"
 
 BRANCH_UPDATE="20041102"
 

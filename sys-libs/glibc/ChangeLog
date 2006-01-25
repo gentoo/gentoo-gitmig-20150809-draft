@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.425 2006/01/24 00:41:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.426 2006/01/25 03:22:16 dostrow Exp $
+
+  25 Jan 2006; Daniel Ostrow <dostrow@gentoo.org>
+  glibc-2.3.4.20041102-r2.ebuild:
+  Stable for stage building.
 
   24 Jan 2006; Mike Frysinger <vapier@gentoo.org> glibc-2.3.5.ebuild,
   glibc-2.3.5-r1.ebuild, glibc-2.3.5-r2.ebuild, glibc-2.3.5-r3.ebuild,
