@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/vblade
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.3 2005/12/05 02:01:48 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.4 2006/01/25 06:17:55 robbat2 Exp $
+
+*vblade-10 (25 Jan 2006)
+
+  25 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> +files/conf.d-vblade,
+  +files/init.d-vblade.vblade0, +files/vbladed, +vblade-10.ebuild:
+  Version bump, bug #118594. Also now includes init scripts, partially based
+  on a submission by Markus Wagner <markus1108wagner@t-online.de>.
 
 *vblade-9 (05 Dec 2005)
 
