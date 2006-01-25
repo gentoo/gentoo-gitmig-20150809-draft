@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.507 2006/01/10 05:59:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.508 2006/01/25 09:29:38 spyderous Exp $
+
+  25 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r6.ebuild,
+  xorg-x11-6.8.99.15-r4.ebuild:
+  Change conditional PROVIDEs to standard DEPEND structure. Hopefully
+  everyone's got new enough portage that this works now, since the new
+  virtual/x11 should force it anyway. Prompted by ciaranm.
 
   10 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-7.0.ebuild:
   Change to new URL for modular X HOWTO, reported by Obz.
