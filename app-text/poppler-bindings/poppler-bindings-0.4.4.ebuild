@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.4.4.ebuild,v 1.1 2006/01/20 15:53:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.4.4.ebuild,v 1.2 2006/01/25 22:48:27 dang Exp $
 
 inherit eutils autotools
 
@@ -24,6 +24,18 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.9.6"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use cairo && ! built_with_use app-text/poppler cairo; then
+		einfo "You have the cairo USE flag set for poppler-bindings but not"
+		einfo "for poppler.  Make those use flags match"
+		die "Make cairo use flags for poppler and poppler-bindings match"
+	elif ! use cairo && built_with_use app-text/poppler cairo; then
+		einfo "You have the cairo USE flag set for poppler but not for"
+		einfo "poppler-bindings.  Make those use flags match"
+		die "Make cairo use flags for poppler and poppler-bindings match"
+	fi
+}
 
 src_unpack(){
 	unpack ${A}
