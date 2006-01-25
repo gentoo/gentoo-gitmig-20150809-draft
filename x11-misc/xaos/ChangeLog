@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.17 2005/12/12 12:53:45 phosphan Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.18 2006/01/25 11:30:43 phosphan Exp $
+
+  25 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> xaos-3.1.3.ebuild:
+  I guess -sparc is a mistake (can't find any change in the log, and 3.1.1 works)
 
 *xaos-3.1.3 (12 Dec 2005)
 
