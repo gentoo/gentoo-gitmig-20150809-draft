@@ -1,4 +1,4 @@
-MD5 4a06d0704b2e8061c037ed0c08ff8c2d ChangeLog 7681
+MD5 da6b7a1a44e77008f33f9b7e4036ea3b ChangeLog 7787
 MD5 dd22cba6dc210f48cc6236d1d4566e9a files/digest-vnc-4.0-r1 270
 MD5 33601310b3a1040e1d836d1648e84b41 files/vnc-4.0/imake-tmpdir.patch 1062
 MD5 0959d633e7ca36b8995398b1ba1e315c files/vnc-4.0/vnc-cookie.patch 819
@@ -15,4 +15,4 @@ MD5 43179a2e046f430fea7d2bc617dce6b0 files/vnc-4.0/vnc-xorg.patch 3440
 MD5 7c75fc548aa928b203396bc80a301d6c files/xc.patch-cfbglblt8.patch 1738
 MD5 2132dc5ea4e5a5349f5ec193ea3667c6 files/xc.patch-eieio.patch 703
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 c34bcac25e36468f300efecdf3103d38 vnc-4.0-r1.ebuild 2813
+MD5 72b612d9e0d66e33ec634f4bfbed2d10 vnc-4.0-r1.ebuild 3031

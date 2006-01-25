@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.17 2006/01/20 21:57:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.18 2006/01/25 02:24:50 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -21,10 +21,26 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="server"
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	media-libs/freetype
-	x11-base/xorg-x11
+	|| ( ( x11-libs/libSM
+			x11-libs/libXtst
+		)
+		virtual/x11
+	)
+	server? ( || ( ( x11-libs/libXi
+				x11-libs/libXmu
+				x11-libs/libXrender
+			)
+			virtual/x11
+		)
+	)
 	!net-misc/tightvnc"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xextproto
+		)
+		virtual/x11
+	)"
 
 S="${WORKDIR}/${MY_P}"
 
