@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.2 2006/01/24 22:30:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.3 2006/01/25 20:42:50 flameeyes Exp $
 
-inherit flag-o-matic libtool autotools
+inherit flag-o-matic libtool eutils autotools
 
 IUSE="cups foomaticdb gtk nls readline ppds"
 
@@ -35,6 +35,18 @@ pkg_setup() {
 		ewarn "Please remerge gimp with USE=-gimpprint to avoid collissions"
 		die "gimp with gimpprint USE-flag detected"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${MY_P}-asneeded.patch"
+
+	# Remove the broken libtool.m4
+	rm ${S}/m4extra/libtool.m4
+
+	AT_M4DIR="m4 m4extra" eautoreconf
 }
 
 src_compile() {

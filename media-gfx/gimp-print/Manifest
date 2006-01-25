@@ -1,6 +1,17 @@
-MD5 aac46d30a750c0d5ec7172f2900a9f1c ChangeLog 9672
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe5aa75de2db5209445d1d8174bb2595 ChangeLog 9844
 MD5 0dbf86fe4303814e2dfa36f8c4b8e67c files/digest-gimp-print-4.2.7 69
 MD5 502e8c97082b9b79169fdaf3692ebbd7 files/digest-gimp-print-5.0.0_rc2 74
+MD5 a4008ff715378b9dc53d13898ef7c236 files/gutenprint-5.0.0-rc2-asneeded.patch 1923
 MD5 5742009b196e73622e3496d99180485b gimp-print-4.2.7.ebuild 2298
-MD5 c639016abb972df6b8560909ea4489c8 gimp-print-5.0.0_rc2.ebuild 2341
+MD5 545dc48032fffdc508ca4745893135f7 gimp-print-5.0.0_rc2.ebuild 2533
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD1+LeAiZjviIA2XgRAgD0AKCHhEJufWB+SzgH+7AWWr91Ia1m9gCgodss
+Eavyy/GBXqnnTHYJDNXRS2k=
+=RhRk
+-----END PGP SIGNATURE-----
