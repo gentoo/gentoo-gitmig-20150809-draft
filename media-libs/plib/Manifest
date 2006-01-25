@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 1c970ec9d6c3c98a4a03ab416a21f446 plib-1.6.0.ebuild 657
-MD5 f8915237fa1d1686476624f817624f6b ChangeLog 3176
-MD5 0773aed01e52822be34a9f21ae6a2fbc plib-1.8.4.ebuild 791
-MD5 59fca21b21f958ff270346276284ba02 plib-1.8.3.ebuild 612
+MD5 f7bb97110a370fdedf4eb5438b26869b ChangeLog 3405
 MD5 f5061365a80c4d8aececf56604d9b5c8 files/digest-plib-1.6.0 62
 MD5 bc913bb51ba51adf7d83ee2a5b784fac files/digest-plib-1.8.3 62
 MD5 b786078ffac425978e62d0f7ebdb6feb files/digest-plib-1.8.4 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2ftBgIKl8Uu19MoRAk4NAJ4v/LaO/yRDpT5wNVqvrsVKvaOZIwCfdd2B
-xim8shpwPdC6Idx6EOaLVLM=
-=xdi9
------END PGP SIGNATURE-----
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 db364c5aee519d415253d0c5b6acecb9 plib-1.6.0.ebuild 667
+MD5 ea22495868a2ff1a662361db0244592a plib-1.8.3.ebuild 740
+MD5 67ba18cd6eab2dbbdc830f5b7539d6fa plib-1.8.4.ebuild 919

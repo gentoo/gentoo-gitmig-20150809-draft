@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4.ebuild,v 1.8 2005/07/17 06:29:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4.ebuild,v 1.9 2006/01/25 05:26:24 joshuabaergen Exp $
 
 inherit flag-o-matic
 
@@ -13,8 +13,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/opengl"
+RDEPEND="virtual/glut
+	virtual/opengl
+	media-libs/libsdl"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xproto
+			x11-libs/libX11
+			x11-libs/libXt )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
