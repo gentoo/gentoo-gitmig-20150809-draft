@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.11 2006/01/24 00:41:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.12 2006/01/25 04:39:50 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -629,7 +629,7 @@ alt_headers() {
 alt_build_headers() {
 	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
 		ALT_BUILD_HEADERS=$(alt_headers)
-		tc-is-cross-compiler && ALT_BUILD_HEADERS=${ROOT}${headersloc}
+		tc-is-cross-compiler && ALT_BUILD_HEADERS=${ROOT}$(alt_headers)
 	fi
 	echo "${ALT_BUILD_HEADERS}"
 }
