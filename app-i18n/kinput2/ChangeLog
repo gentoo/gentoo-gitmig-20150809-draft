@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kinput2
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.20 2005/04/21 18:53:09 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.21 2006/01/25 07:27:58 spyderous Exp $
+
+  25 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  kinput2-3.1-r1.ebuild:
+  (#118603) Add modular X deps.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> kinput2-3.1-r1.ebuild:
   stable on amd64

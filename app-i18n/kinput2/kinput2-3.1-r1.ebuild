@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.14 2005/04/21 18:53:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.15 2006/01/25 07:27:58 spyderous Exp $
 
 inherit eutils
 
@@ -16,6 +16,12 @@ IUSE="canna freewnn"
 
 DEPEND="virtual/libc
 	canna? ( >=app-i18n/canna-3.5_beta2-r1 )
+	|| ( ( x11-misc/gccmakedep
+			x11-misc/imake
+			app-text/rman
+		)
+		virtual/x11
+	)
 	!amd64? ( freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 ) )
 	!freewnn? ( >=app-i18n/canna-3.5_beta2-r1 )"
 
