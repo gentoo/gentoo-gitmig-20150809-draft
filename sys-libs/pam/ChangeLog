@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.96 2006/01/12 09:11:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.97 2006/01/25 13:55:37 flameeyes Exp $
+
+*pam-0.78-r4 (25 Jan 2006)
+
+  25 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam-0.78-xauth-path.patch, +pam-0.78-r4.ebuild:
+  Add patch to fix xauth path (bug #111307).
 
   12 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/pam-0.78-inttypes.patch, pam-0.78-r3.ebuild:
