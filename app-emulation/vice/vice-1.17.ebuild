@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.17.ebuild,v 1.4 2005/11/13 20:57:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.17.ebuild,v 1.5 2006/01/25 02:50:36 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,16 +13,62 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="X Xaw3d arts esd ffmpeg gnome nls readline sdl"
 
-DEPEND="esd? ( media-sound/esound )
+XDEPEND="|| ( ( 
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXxf86vm
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXv
+			x11-libs/libXxf86dga
+		)
+		virtual/x11
+	)"
+RDEPEND="esd? ( media-sound/esound )
 	media-libs/libpng
 	sys-libs/zlib
 	arts? ( kde-base/arts )
-	gnome? ( gnome-base/gnome-libs )
+	gnome? (
+		${XDEPEND}
+		gnome-base/gnome-libs
+	)
 	readline? ( sys-libs/readline )
-	sdl? ( media-libs/libsdl )
-	X? ( virtual/x11 )
-	Xaw3d? ( x11-libs/Xaw3d )
+	sdl? (
+		${XDPENED}
+		|| ( ( 
+				x11-libs/libXt
+				x11-libs/libXmu
+			)
+			virtual/x11
+		)
+		media-libs/libsdl
+	)
+	X? (
+		${XDEPEND}
+		|| ( (
+				x11-libs/libXt
+				x11-libs/libXmu
+				x11-libs/libXpm
+				x11-libs/libXaw
+			)
+			virtual/x11
+		)
+	)
+	Xaw3d? ( 
+		${XDEPEND}
+		x11-libs/Xaw3d
+	)
 	ffmpeg? ( media-video/ffmpeg )"
+DEPEND="${RDEPEND}
+	|| ( ( 
+			x11-proto/xproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/xextproto
+			x11-proto/xf86dgaproto
+			x11-proto/videoproto
+		)
+		virtual/x11
+	)"
 
 src_compile() {
 	egamesconf \

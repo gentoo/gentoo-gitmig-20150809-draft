@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.32 2006/01/17 22:38:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.33 2006/01/25 02:50:36 wolf31o2 Exp $
+
+  25 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> vice-1.17.ebuild,
+  vice-1.19.ebuild:
+  Added modular X dependencies and closing bug #120225.
 
 *vice-1.19 (17 Jan 2006)
 
