@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/znf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.1 2005/12/04 00:51:46 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.2 2006/01/25 20:05:27 chtekk Exp $
+
+  25 Jan 2006; Luca Longinotti <chtekk@gentoo.org> znf-0.7.6.ebuild:
+  Fix USE flag check.
 
 *znf-0.7.6 (04 Dec 2005)
 

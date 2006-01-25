@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/znf-0.7.6.ebuild,v 1.1 2005/12/04 00:51:46 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/znf-0.7.6.ebuild,v 1.2 2006/01/25 20:05:27 chtekk Exp $
 
 inherit php-pear-lib-r1
 
@@ -24,5 +24,5 @@ pkg_setup() {
 	has_php
 
 	# we need XML/XSL support in PHP5 for this
-	require_php_with_use xml2 xsl
+	require_php_with_use xml xsl
 }
