@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.18 2005/04/18 16:55:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.19 2006/01/25 05:15:01 spyderous Exp $
 
 inherit eutils
 
@@ -13,9 +13,13 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
+	|| ( ( x11-libs/libXaw
+			x11-misc/xbitmaps
+		)
+		virtual/x11
+	)
 	virtual/ghostscript"
 PROVIDE="virtual/pdfviewer
 	virtual/psviewer"
