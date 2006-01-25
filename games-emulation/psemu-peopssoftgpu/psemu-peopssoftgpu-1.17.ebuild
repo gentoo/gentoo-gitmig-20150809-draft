@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.2 2006/01/07 05:03:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.3 2006/01/25 02:40:12 spyderous Exp $
 
 inherit eutils games
 
@@ -14,12 +14,16 @@ KEYWORDS="~ppc ~x86"
 IUSE="sdl"
 
 RDEPEND="=x11-libs/gtk+-1*
-	sdl? ( media-libs/libsdl )
-	virtual/x11"
+	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x86? ( dev-lang/nasm )
-	amd64? ( dev-lang/nasm )"
+	amd64? ( dev-lang/nasm )
+	|| ( ( x11-proto/xf86dgaproto
+			x11-proto/xf86vidmodeproto
+		)
+		virtual/x11
+	)"
 
 S=${WORKDIR}
 
