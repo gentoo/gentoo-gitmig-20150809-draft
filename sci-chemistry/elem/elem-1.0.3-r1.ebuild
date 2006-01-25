@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/elem/elem-1.0.3-r1.ebuild,v 1.2 2005/05/29 23:08:55 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/elem/elem-1.0.3-r1.ebuild,v 1.3 2006/01/25 13:45:28 phosphan Exp $
 
 inherit toolchain-funcs
 
@@ -12,9 +12,7 @@ KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/libc
-	x11-libs/xforms"
+DEPEND="x11-libs/xforms"
 
 src_unpack() {
 	unpack ${A}
