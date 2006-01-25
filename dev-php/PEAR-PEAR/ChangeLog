@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.48 2006/01/24 22:07:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.49 2006/01/25 23:46:53 kloeri Exp $
+
+  25 Jan 2006; Bryan Østergaard <kloeri@gentoo.org
+  PEAR-PEAR-1.4.6-r1.ebuild:
+  Stable on alpha.
 
   24 Jan 2006; Simon Stelling <blubb@gentoo.org> PEAR-PEAR-1.4.6-r1.ebuild:
   stable on amd64 wrt bug 111525
