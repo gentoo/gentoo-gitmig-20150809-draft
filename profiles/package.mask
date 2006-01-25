@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4918 2006/01/25 21:16:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4919 2006/01/25 22:03:45 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -364,10 +364,6 @@ app-office/openoffice-ximian
 =kde-base/unsermake-3.5.1*
 =kde-base/vimpart-3.5.1*
 =kde-base/xparts-3.5.1*
-
-# Daniel Black <dragonheart@gentoo.org> (23 Jan 2006)
-# unidentified sandbox fault - bug #119929
-=net-dns/libidn-0.6.1
 
 # Michael Cummings <mcummings@gentoo.org> (22 Jan 2006)
 # Masked - release candidate, for pre-emptive testing only
