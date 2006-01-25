@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20031105-r3.ebuild,v 1.1 2005/09/19 22:25:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20031105-r3.ebuild,v 1.2 2006/01/25 13:41:04 phosphan Exp $
 
 inherit toolchain-funcs
 
@@ -35,8 +35,17 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11"
+RDEPEND="virtual/libc
+	|| (
+		virtual/x11
+		x11-libs/libX11
+	   )"
+
+DEPEND="${RDEPEND}
+		|| (
+			virtual/x11
+			x11-proto/xproto
+		   )"
 
 src_compile() {
 
