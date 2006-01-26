@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/udev-syntax
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/udev-syntax/ChangeLog,v 1.2 2005/12/07 21:50:25 cryos Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/udev-syntax/ChangeLog,v 1.3 2006/01/26 18:23:09 ticho Exp $
+
+  26 Jan 2006; Andrej Kacian <ticho@gentoo.org> udev-syntax-20051016.ebuild:
+  Added ~x86 keyword.
 
   07 Dec 2005; Marcus D. Hanwell <cryos@gentoo.org>
   udev-syntax-20051016.ebuild:
