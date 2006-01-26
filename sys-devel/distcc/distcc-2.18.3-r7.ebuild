@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r7.ebuild,v 1.8 2005/07/30 23:01:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r7.ebuild,v 1.9 2006/01/26 23:57:55 vapier Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -15,19 +15,14 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 sh sparc x86"
-
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow
-	gnome? (
-	  dev-util/pkgconfig
-	)
-	gtk? (
-	  dev-util/pkgconfig
-	)"
+	gnome? ( dev-util/pkgconfig )
+	gtk? ( dev-util/pkgconfig )"
 RDEPEND="
 	gnome? (
 		>=x11-libs/gtk+-2.0.0
