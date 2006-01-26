@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.8.ebuild,v 1.2 2005/09/29 02:21:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.9-r1.ebuild,v 1.1 2006/01/26 22:31:04 vanquirius Exp $
 
 inherit eutils
 
@@ -24,11 +24,22 @@ DEPEND=">=sys-devel/autoconf-2.2
 
 S="${WORKDIR}/${PN}1-${PV}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/nss.patch
+}
+
 src_compile() {
-	econf --enable-xkms `use_with mozilla nss` `use_with mozilla nspr` \
-		`use_enable ssl openssl` `use_enable ssl aes` --with-html-dir=/usr/share/doc/${PF} \
+
+	econf --enable-xkms \
+		$(use_enable ssl openssl) $(use_enable ssl aes) --with-html-dir=/usr/share/doc/${PF} \
 		|| die "configure failed"
 	emake || die "emake failed"
+}
+
+src_test() {
+	TMPFOLDER="${T}" make check || die
 }
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
