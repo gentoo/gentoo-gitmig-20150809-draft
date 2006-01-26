@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.11 2006/01/04 05:15:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.12 2006/01/26 02:21:00 chutzpah Exp $
+
+  26 Jan 2006; Patrick McLean <chutzpah@gentoo.org> libdbi-0.7.2-r1.ebuild:
+  Stable on amd64 (but #120325).
 
   04 Jan 2006; Jeroen Roovers <jer@gentoo.org> libdbi-0.8.0.ebuild:
   Marked ~hppa (bug #105447).
