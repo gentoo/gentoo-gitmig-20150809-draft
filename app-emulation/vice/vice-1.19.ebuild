@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.3 2006/01/25 02:57:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.4 2006/01/26 23:58:46 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X Xaw3d arts esd ffmpeg gnome nls readline sdl"
 
 XDEPEND="|| (
-	( 
+	(
 			x11-libs/libX11
 			x11-libs/libXext
 			x11-libs/libXxf86vm
@@ -34,7 +34,7 @@ RDEPEND="esd? ( media-sound/esound )
 	sdl? (
 		${XDPENED}
 		|| (
-			( 
+			(
 				x11-libs/libXt
 				x11-libs/libXmu	)
 			virtual/x11 )
@@ -48,13 +48,13 @@ RDEPEND="esd? ( media-sound/esound )
 				x11-libs/libXpm
 				x11-libs/libXaw	)
 			virtual/x11	) )
-	Xaw3d? ( 
+	Xaw3d? (
 		${XDEPEND}
 		x11-libs/Xaw3d )
 	ffmpeg? ( media-video/ffmpeg )"
 DEPEND="${RDEPEND}
 	|| (
-		( 
+		(
 			x11-proto/xproto
 			x11-proto/xf86vidmodeproto
 			x11-proto/xextproto
