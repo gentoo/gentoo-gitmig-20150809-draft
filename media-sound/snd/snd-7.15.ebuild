@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.4 2006/01/26 16:45:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.5 2006/01/26 17:06:16 ticho Exp $
 
 IUSE="X alsa esd fam fftw gsl gtk guile jack ladspa motif nls opengl ruby"
 
@@ -19,8 +19,6 @@ DEPEND="media-libs/audiofile
 	X? (
 		|| (
 			(
-				x11-proto/xextproto
-				x11-proto/xproto
 				x11-libs/libX11
 				x11-libs/libXt
 				x11-libs/libXpm
