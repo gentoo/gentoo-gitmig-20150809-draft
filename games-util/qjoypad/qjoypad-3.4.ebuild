@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.4 2005/07/21 07:57:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.5 2006/01/26 22:16:30 wolf31o2 Exp $
 
 inherit eutils
 
@@ -14,7 +14,15 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt
-	virtual/x11"
+	|| (
+		(
+			x11-proto/xextproto
+			x11-proto/xproto )
+		virtual/x11 )"
+RDEPEND="x11-libs/qt
+	|| (
+		x11-libs/libXtst
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
