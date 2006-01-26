@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ion
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.14 2006/01/25 16:43:32 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.15 2006/01/26 10:25:14 spyderous Exp $
+
+  26 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  ion-20020207-r2.ebuild:
+  Typo in DEPEND was preventing modular X from working, and that section was
+  redundant anyway, so pull it.
 
   25 Jan 2006; Tom Payne <twp@gentoo.org> ChangeLog:
   Update for Modular X.
