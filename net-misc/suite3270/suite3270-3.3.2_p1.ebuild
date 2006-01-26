@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.5 2004/07/13 21:14:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.6 2006/01/26 06:32:16 robbat2 Exp $
 
 IUSE="tcltk X cjk ssl debug"
 
@@ -15,13 +15,17 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~amd64 s390"
 
-RDEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( || ( x11-libs/libXaw virtual/x11 ) )
 		tcltk? ( dev-lang/tcl )
 		sys-libs/ncurses
 		sys-libs/readline
 		ssl? ( dev-libs/openssl )
 		cjk? ( dev-libs/icu )"
 DEPEND="${RDEPEND}
+		X? ( || ( ( app-text/rman 
+					x11-misc/imake 
+					x11-proto/xproto ) 
+				virtual/x11 ) )
 		sys-apps/sed
 		sys-apps/grep"
 
