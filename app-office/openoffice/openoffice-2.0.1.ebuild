@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.18 2006/01/25 06:40:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.19 2006/01/26 06:34:52 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="binfilter curl eds gnome gtk java kde ldap mozilla zlib xml2"
 
-MY_PV="${PV}.1"
+MY_PV="${PV}.2"
 PATCHLEVEL="OOA680"
 SRC="OOO_2_0_1"
 S="${WORKDIR}/ooo-build-${MY_PV}"
@@ -141,8 +141,6 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
-	cp ${FILESDIR}/${PV}/gentoo-gcc-version.diff ${S}/patches/src680/ || die
-	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
