@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/x48
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.1 2006/01/26 20:18:30 taviso Exp $
+
+*x48-0.4.3 (26 Jan 2006)
+
+  26 Jan 2006; Tavis Ormandy <taviso@gentoo.org> +metadata.xml,
+  +x48-0.4.3.ebuild:
+  initial import
+
