@@ -92,6 +92,10 @@ java
 # Same for dev-lang/php:java-external
 java-external
 
+# 26 Jan 2006 Jeroen Roovers <jer@gentoo.org>
+# Same for dev-lang/php:java-internal
+java-internal
+
 # 5 Jan 2005 Ciaran McCreesh <ciaranm@gentoo.org>
 # No reliable java, no netbeans. bug 66762
 netbeans
