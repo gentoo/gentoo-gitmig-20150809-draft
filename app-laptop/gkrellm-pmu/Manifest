@@ -3,4 +3,4 @@ MD5 c295418637755f0dc50cc1d79e02652c files/digest-gkrellm-pmu-2.3 67
 MD5 d1fd9b75ba9cefa85cddec0ba8534f39 files/digest-gkrellm-pmu-2.4 67
 MD5 dbc9c7a2dcce749c4017414f0c81962a gkrellm-pmu-2.3.ebuild 724
 MD5 17b77f36922515550ce77935741c579f gkrellm-pmu-2.4.ebuild 716
-MD5 4b51fbb7e1263dbedfab200b1f34275d metadata.xml 284
+MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
