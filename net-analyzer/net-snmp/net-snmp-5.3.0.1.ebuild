@@ -1,14 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3_rc2.ebuild,v 1.5 2006/01/23 01:24:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3.0.1.ebuild,v 1.1 2006/01/26 18:49:13 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
-MY_P="${P/_rc/.rc}"
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
-#SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+#SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is BSD"
 SLOT="0"
@@ -35,8 +34,6 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	>=sys-apps/sed-4
 	doc? ( app-doc/doxygen )"
-
-S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -149,27 +146,27 @@ src_install () {
 
 	keepdir /etc/snmp /var/lib/net-snmp
 
-	newinitd ${FILESDIR}/snmpd-5.1.rc6 snmpd || die
-	newconfd ${FILESDIR}/snmpd-5.1.conf snmpd || die
+	newinitd "${FILESDIR}"/snmpd-5.1.rc6 snmpd || die
+	newconfd "${FILESDIR}"/snmpd-5.1.conf snmpd || die
 
 	# snmptrapd can use the same rc script just slightly modified
 	sed -e 's/net-snmpd/snmptrapd/g' \
 		-e 's/snmpd/snmptrapd/g' \
 		-e 's/SNMPD/SNMPTRAPD/g' \
-		${D}/etc/init.d/snmpd > ${D}/etc/init.d/snmptrapd || \
+		"${D}"/etc/init.d/snmpd > "${D}"/etc/init.d/snmptrapd || \
 			die "failed to create snmptrapd init script"
-	chmod 0755 ${D}/etc/init.d/snmptrapd
+	chmod 0755 "${D}"/etc/init.d/snmptrapd
 
-	newconfd ${FILESDIR}/snmptrapd.conf snmptrapd || die
+	newconfd "${FILESDIR}"/snmptrapd.conf snmptrapd || die
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
 	if use minimal; then
 		einfo "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
-		rm -rf ${D}/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
-		rm -rf ${D}/usr/share/snmp/snmpconf-data ${D}/usr/share/snmp/*.conf
-		rm -rf ${D}/usr/bin/{fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
-		find ${D} -name '*.pl' -exec rm -f '{}' \;
-		use ipv6 || rm -rf ${D}/usr/share/snmp/mibs/IPV6*
+		rm -rf "${D}"/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
+		rm -rf "${D}"/usr/share/snmp/snmpconf-data "${D}"/usr/share/snmp/*.conf
+		rm -rf "${D}"/usr/bin/{fixproc,traptoemail} "${D}"/usr/bin/snmpc{heck,onf}
+		find "${D}" -name '*.pl' -exec rm -f '{}' \;
+		use ipv6 || rm -rf "${D}"/usr/share/snmp/mibs/IPV6*
 	fi
 }
 
