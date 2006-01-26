@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.125 2006/01/25 21:10:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.126 2006/01/26 22:09:11 wolf31o2 Exp $
+
+*genkernel-3.3.11_pre6 (26 Jan 2006)
+
+  26 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.3.11_pre5.ebuild, +genkernel-3.3.11_pre6.ebuild:
+  Version bump to 3.3.11_pre6 to resolve some issues with
+  mixed-userland/kernel environments.
 
 *genkernel-3.3.11_pre5 (25 Jan 2006)
 
