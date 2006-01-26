@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.1 2006/01/26 22:25:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.2 2006/01/26 22:28:02 taviso Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_install() {
 
 	dodir /usr/share/hp48
 	insinto /usr/share/hp48
-	doins ${S}/gxrom-r ${S}/sxrom-j
+	doins ${WORKDIR}/gxrom-r ${WORKDIR}/sxrom-j
 
 	dodoc ${S}/doc/CARDS.doc ${S}/doc/ROMDump.doc
 	dodoc ${S}/romdump/ROMDump ${S}/romdump/ROMDump.s
