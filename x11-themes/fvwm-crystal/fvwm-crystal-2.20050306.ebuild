@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20050306.ebuild,v 1.6 2005/10/18 20:08:10 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20050306.ebuild,v 1.7 2006/01/26 19:21:34 lucass Exp $
 
 MY_P="${P/-2./-}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
@@ -45,7 +45,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "After installation, execute following commands:"
-	einfo " $ cp -r /usr/share/${PN}/addons/Xresources-EN ~/.Xresources"
+	einfo " $ cp -r /usr/share/${PN}/addons/Xresources ~/.Xresources"
 	einfo " $ cp -r /usr/share/${PN}/addons/Xsession ~/.xinitrc"
 	einfo
 	einfo "Authors of fvwm-crystal recommend also installing"
