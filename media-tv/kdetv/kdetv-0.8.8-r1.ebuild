@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.3 2006/01/12 13:20:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.4 2006/01/26 12:03:50 flameeyes Exp $
 
 inherit kde
 
@@ -48,8 +48,8 @@ src_unpack() {
 	MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
 
 	kde_src_unpack
-	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.in || die "sed for locale failed"
-	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} kdetv:" ${S}/doc/Makefile.in || die "sed for locale failed"
+	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.am || die "sed for locale failed"
+	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} kdetv:" ${S}/doc/Makefile.am || die "sed for locale failed"
 
 	rm -f ${S}/configure
 }
