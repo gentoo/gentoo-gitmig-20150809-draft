@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/files/3.4.2/rt.init.d,v 1.2 2005/06/21 11:09:49 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/files/rt.init.d,v 1.1 2006/01/26 21:10:33 rl03 Exp $
 
 depend() {
 	use mysql postgresql lighttpd

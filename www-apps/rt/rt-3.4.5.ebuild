@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.2 2006/01/14 01:48:28 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.3 2006/01/26 21:10:33 rl03 Exp $
 
 inherit webapp eutils
 
@@ -135,9 +135,7 @@ add_user_rt() {
 pkg_setup() {
 	webapp_pkg_setup
 
-	if useq mysql; then
-		ewarn "RT needs MySQL with innodb support"
-	fi
+	use mysql && ewarn "RT needs MySQL with innodb support"
 	ewarn
 	ewarn "If you are upgrading from an existing _RT2_ installation,"
 	ewarn "stop this ebuild (Ctrl-C now), download the upgrade tool,"
@@ -155,7 +153,7 @@ src_unpack() {
 	cd ${S}
 
 	# add Gentoo-specific layout
-	cat ${FILESDIR}/3.4.2/config.layout-gentoo >> config.layout
+	cat ${FILESDIR}/config.layout-gentoo >> config.layout
 	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|
 			s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" -i ./config.layout || die
 
@@ -215,19 +213,17 @@ src_install() {
 	grep -Rl "${D}" * | xargs dosed
 
 	if useq lighttpd; then
-		newinitd ${FILESDIR}/3.4.2/${PN}.init.d ${PN}
-		insinto /etc/conf.d
-		newins ${FILESDIR}/3.4.2/${PN}.conf.d ${PN}
+		newinitd ${FILESDIR}/${PN}.init.d ${PN}
+		newconfd ${FILESDIR}/${PN}.conf.d ${PN}
 	else
 		if useq apache2; then
 			local CONF="rt_apache2_fcgi.conf rt_apache2.conf"
 		else
 			local CONF="rt_apache1_fcgi.conf rt_apache.conf"
 		fi
-		cd ${FILESDIR}/3.4.2
-		cp ${CONF} ${D}/${MY_HOSTROOTDIR}/${PF}/etc
+		cd ${FILESDIR} && cp ${CONF} ${D}/${MY_HOSTROOTDIR}/${PF}/etc
 	fi
-	webapp_postinst_txt en ${FILESDIR}/3.4.2/postinstall-en.txt
-	webapp_hook_script ${FILESDIR}/3.4.4/reconfig
+	webapp_postinst_txt en ${FILESDIR}/${PN}/postinstall-en.txt
+	webapp_hook_script ${FILESDIR}/${PN}/reconfig
 	webapp_src_install
 }
