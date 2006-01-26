@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.88 2006/01/07 18:24:29 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.89 2006/01/26 06:06:40 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -75,7 +75,7 @@ RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1*
 RDEPEND="${RDEPEND}
 	!dev-lang/php
 	app-arch/bzip2
-	X? ( virtual/x11 )
+	X? ( || ( x11-libs/libXpm virtual/x11 ) )
 	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
 	curl? ( >=net-misc/curl-7.10.2 )
 	x86? ( firebird? ( >=dev-db/firebird-1.0 ) )

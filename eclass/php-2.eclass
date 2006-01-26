@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.20 2006/01/22 18:52:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.21 2006/01/26 06:06:40 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This eclass is the old style of php, that was used before php-core was
@@ -52,7 +52,7 @@ RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.*
 RDEPEND="
    >=sys-libs/cracklib-2.7-r7
    app-arch/bzip2
-   X? ( virtual/x11 )
+   X? ( || ( x11-libs/libXpm virtual/x11 ) )
    crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
    curl? ( >=net-misc/curl-7.10.2 )
    x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
