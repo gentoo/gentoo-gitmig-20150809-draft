@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sexypsf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.13 2005/11/15 20:59:30 kugelfang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.14 2006/01/26 06:32:22 truedfx Exp $
+
+  26 Jan 2006; Harald van Dĳk <truedfx@gentoo.org> sexypsf-0.4.7.ebuild:
+  Fix parallel build issue (bug #119240)
 
   15 Nov 2005; Danny van Dyk <kugelfang@gentoo.org> sexypsf-0.4.7.ebuild:
   This works on amd64 as of version 0.4.7, marked accordingly.

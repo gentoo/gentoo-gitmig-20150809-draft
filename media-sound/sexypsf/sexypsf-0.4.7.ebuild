@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/sexypsf-0.4.7.ebuild,v 1.3 2005/11/15 20:59:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/sexypsf-0.4.7.ebuild,v 1.4 2006/01/26 06:32:23 truedfx Exp $
 
 inherit eutils
 
@@ -44,9 +44,10 @@ src_compile() {
 		fi
 
 		cd "${S}"
-		# don't generate separate xmms and bmp plugins; they're compatible
 		# do make clean to force rebuild with -fPIC
-		emake CPU="${CPU}" XMMSCONF="${XMMSCONF}" clean sexypsf || die "emake failed"
+		make clean || die "make clean failed"
+		# don't generate separate xmms and bmp plugins; they're compatible
+		emake CPU="${CPU}" XMMSCONF="${XMMSCONF}" sexypsf || die "building plugin failed"
 	fi
 }
 
