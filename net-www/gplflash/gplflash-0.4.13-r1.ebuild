@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.13-r1.ebuild,v 1.1 2005/12/17 00:13:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.13-r1.ebuild,v 1.2 2006/01/26 21:03:47 genstef Exp $
 
 inherit nsplugins eutils flag-o-matic autotools
 
@@ -16,9 +16,15 @@ IUSE="nosound"
 DEPEND="media-libs/libmad
 	media-libs/jpeg
 	sys-libs/zlib
-	virtual/x11
+	|| ( ( x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXt
+	x11-proto/xextproto
+	x11-proto/xproto )
+	virtual/x11 )
 	!net-www/netscape-flash
 	!media-libs/libflash"
+
 
 PLUGDIR="/opt/netscape/plugins"
 
