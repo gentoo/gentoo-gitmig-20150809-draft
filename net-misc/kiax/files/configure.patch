@@ -1,0 +1,8 @@
+--- configure.orig	2005-04-05 16:53:41.000000000 -0500
++++ configure	2006-01-26 08:15:32.000000000 -0500
+@@ -20,4 +20,4 @@
+     ./repath.pl --prefix=$prefix
+ esac
+ 
+-qmake -o Makefile qkiax.pro
++${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o Makefile qkiax.pro

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.4.ebuild,v 1.4 2005/08/15 20:37:15 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.4.ebuild,v 1.5 2006/01/26 13:18:20 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -21,6 +21,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.8.4-iaxwrapper.patch
+	epatch ${FILESDIR}/configure.patch
 
 	# add prefix for make install
 	sed -i -e "s:\(\$(DEST_PATH)\):\${INSTALL_ROOT}\1:" \
