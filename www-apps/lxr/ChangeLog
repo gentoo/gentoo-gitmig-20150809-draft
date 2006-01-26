@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/lxr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.7 2006/01/15 18:00:35 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.8 2006/01/26 20:45:45 rl03 Exp $
+
+*lxr-0.9.4-r1 (26 Jan 2006)
+
+  26 Jan 2006; Renat Lumpau <rl03@gentoo.org> +files/initdb-mysql.patch,
+  -lxr-0.9.4.ebuild, +lxr-0.9.4-r1.ebuild:
+  Fixes for bug #108924.
 
   15 Jan 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
   Minor fix in postinstall instructions

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.4.ebuild,v 1.1 2006/01/10 20:38:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.4-r1.ebuild,v 1.1 2006/01/26 20:45:45 rl03 Exp $
 
-inherit webapp
+inherit webapp multilib eutils
 
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
@@ -26,6 +26,11 @@ RDEPEND="dev-util/ctags
 		postgres? ( dev-db/postgresql dev-perl/DBD-Pg )
 		mysql? ( >=dev-db/mysql-4 dev-perl/DBD-mysql )
 "
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/initdb-mysql.patch
+}
 
 src_install() {
 	webapp_src_preinst
@@ -34,9 +39,10 @@ src_install() {
 	PERLVERSION=${version}
 	eval `perl '-V:archname'`
 	ARCHVERSION=${archname}
-	dodir /usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION} /usr/bin
-	mv Local.pm ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}
-	cp -r lib/LXR ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}
+	local PERLDIR="/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}"
+	dodir ${PERLDIR} /usr/bin
+	mv Local.pm ${D}${PERLDIR}
+	cp -r lib/LXR ${D}${PERLDIR}
 	sed "s|/usr/local/bin/swish-e|/usr/bin/swish-e|
 		s|/usr/bin/ctags|/usr/bin/exuberant-ctags|
 		s|'glimpse|#'glimpse|g
