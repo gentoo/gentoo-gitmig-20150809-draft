@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/paros-3.2.3.ebuild,v 1.2 2005/07/31 11:17:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/paros-3.2.9.ebuild,v 1.1 2006/01/26 07:44:08 mrness Exp $
 
 inherit eutils
 
@@ -19,13 +19,6 @@ DEPEND="app-arch/unzip
 RDEPEND=">=virtual/jre-1.4.2"
 
 S="${WORKDIR}/${PN}"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${PF}-unixhome.patch
-}
 
 src_compile() {
 	cd ${S}/build
