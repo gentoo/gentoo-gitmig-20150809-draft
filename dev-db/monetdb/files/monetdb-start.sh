@@ -7,8 +7,8 @@ MPID=$!
 echo `date` Mserver started, PID: $MPID >> $LOG
 rm -f ~monetdb/Mserver.pid > /dev/null
 sleep 2
-ALIVE=`ps --no-heading --format pid -p $MPID`
-if [ "$ALIVE" == "$MPID" ]; then
+ALIVE=`ps --no-heading --format pid -p $MPID | sed 's- --'`
+if [ "$ALIVE" = "$MPID" ]; then
 	echo $MPID > ~monetdb/Mserver.pid
 else
 	echo Mserver died immediately
