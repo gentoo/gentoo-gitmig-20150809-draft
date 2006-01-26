@@ -1,14 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.5.ebuild,v 1.3 2005/10/13 05:06:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.0.ebuild,v 1.1 2006/01/26 19:47:22 mrness Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="-amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="edirectory frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
@@ -18,6 +18,7 @@ DEPEND="!net-dialup/cistronradius
 	virtual/libc
 	>=sys-libs/db-3.2
 	sys-libs/gdbm
+	dev-lang/perl
 	snmp? ( net-analyzer/net-snmp )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
@@ -25,8 +26,7 @@ DEPEND="!net-dialup/cistronradius
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
-	frxp? ( dev-lang/python
-		dev-lang/perl )"
+	frxp? ( dev-lang/python )"
 
 pkg_setup() {
 	if use edirectory && ! use ldap ; then
@@ -42,10 +42,10 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-whole-archive-gentoo.patch
+	epatch ${FILESDIR}/${P}-libeap-fPIC.patch #needed for rlm_eap installation on amd64
 }
 
 src_compile() {
-#	export WANT_AUTOCONF=2.1
 	autoconf
 
 	local myconf=" \
@@ -83,7 +83,7 @@ src_compile() {
 
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
 		--mandir=/usr/share/man \
-		--with-large-files --disable-ltdl-install --disable-static \
+		--with-large-files --disable-ltdl-install --disable-static --with-pic \
 		${myconf} || die
 
 	make || die
@@ -98,7 +98,7 @@ src_install() {
 	dodir /etc/raddb
 	diropts -m0750 -o radiusd -g radiusd
 	dodir /var/log/radius
-	dodir /var/log/radius/radacct
+	keepdir /var/log/radius/radacct
 	dodir /var/run/radiusd
 	diropts
 
