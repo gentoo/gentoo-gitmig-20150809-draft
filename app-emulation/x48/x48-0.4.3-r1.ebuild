@@ -1,13 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3.ebuild,v 1.3 2006/01/26 22:25:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.1 2006/01/26 22:25:22 taviso Exp $
 
 inherit eutils
 
 DESCRIPTION="HP48 Calculator Emulator"
 HOMEPAGE="http://x48.berlios.de/"
-SRC_URI="http://download.berlios.de/x48/${P}.tar.gz"
-LICENSE="GPL-2"
+SRC_URI="http://download.berlios.de/x48/${P}.tar.gz
+	http://www.hpcalc.org/hp48/pc/emulators/sxrom-j.zip
+	http://www.hpcalc.org/hp48/pc/emulators/gxrom-r.zip"
+LICENSE="GPL-2 free-noncomm"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -20,6 +22,7 @@ DEPEND="${RDEPEND}
 		)
 	sys-libs/readline
 	sys-libs/ncurses
+	app-arch/unzip
 	sys-libs/gpm"
 
 src_compile() {
@@ -36,6 +39,10 @@ src_install() {
 	insinto /usr/lib/X11/app-defaults/
 	newins ${S}/src/X48.ad X48
 
+	dodir /usr/share/hp48
+	insinto /usr/share/hp48
+	doins ${S}/gxrom-r ${S}/sxrom-j
+
 	dodoc ${S}/doc/CARDS.doc ${S}/doc/ROMDump.doc
 	dodoc ${S}/romdump/ROMDump ${S}/romdump/ROMDump.s
 }
@@ -43,6 +50,16 @@ src_install() {
 pkg_postinst() {
 	einfo "The X48 emulator requires an HP48 ROM Image to run."
 	einfo
-	einfo "You can use the ROMDump utility and documentation included with this"
-	einfo "package to obtain this from your HP48 calculator."
+	einfo "If you own an HP-48 calculator, you can use the ROMDump utility"
+	einfo "included with this package to obtain this from your calculator."
+	einfo
+	einfo "Alternatively, HP has provided two ROM images for non-commercial"
+	einfo "use only."
+	einfo
+	einfo "For an HP-48SX type: x48 -rom /usr/share/hp48/sxrom-j"
+	einfo "For an HP-48GX type: x48 -rom /usr/share/hp48/gxrom-r"
+	einfo
+	einfo "(If you're not sure which one you want, go with HP-48GX)"
+	einfo
+	einfo "Note: you only need to use the '-rom' argument once"
 }
