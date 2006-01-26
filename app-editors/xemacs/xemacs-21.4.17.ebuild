@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.17.ebuild,v 1.1 2006/01/26 02:13:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.17.ebuild,v 1.2 2006/01/26 05:45:01 robbat2 Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND="virtual/libc
 	nas? ( media-libs/nas )
 	dnd? ( x11-libs/dnd )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
-	athena? || ( ( $X_DEPEND  x11-libs/libXaw ) virtual/x11 )
+	athena? ( || ( ( $X_DEPEND  x11-libs/libXaw ) virtual/x11 ) )
 	Xaw3d? ( x11-libs/Xaw3d )
 	neXt? ( x11-libs/neXtaw )
 	xface? ( media-libs/compface )
@@ -38,7 +38,7 @@ DEPEND="virtual/libc
 	canna? ( app-i18n/canna )
 	!amd64? ( freewnn? ( app-i18n/freewnn ) )
 	>=sys-libs/ncurses-5.2
-	X? || ( ( $X_DEPEND ) virtual/x11 )"
+	X? ( || ( ( $X_DEPEND ) virtual/x11 ) )"
 
 PDEPEND="app-xemacs/xemacs-base
 	mule? ( app-xemacs/mule-base )"

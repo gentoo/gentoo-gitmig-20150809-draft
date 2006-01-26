@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fdbbea1a8ef759720782044b671082b3 ChangeLog 10420
+MD5 bb86f3fa159573c7176b32f892bd7f12 ChangeLog 10593
 MD5 df382940daa67bb8888fbae22d617cb4 files/README.Gentoo 1426
 MD5 6d3780dc77d3dd7c017d8864d2f0b07d files/digest-xemacs-21.4.12 130
 MD5 a15e4793a81736335419229a12101bc1 files/digest-xemacs-21.4.15 274
@@ -26,12 +23,5 @@ MD5 c49d5e1449c0ae8eade0e5ec6e3224a1 xemacs-21.4.15-r1.ebuild 5046
 MD5 1e7f35e3642c3b31d3e72ec64731e488 xemacs-21.4.15-r2.ebuild 5111
 MD5 c8b16d9ce480a33720c9b4ad7b510b63 xemacs-21.4.15-r3.ebuild 5210
 MD5 a4f298f675fc5c0ed0ceaa6bfecce583 xemacs-21.4.15.ebuild 3835
-MD5 0e55cb5badddd5fc35215c82ff6b856d xemacs-21.4.17.ebuild 5036
+MD5 4c55f6e81cbcc6fdbf49ad8c56792fe4 xemacs-21.4.17.ebuild 5043
 MD5 7dc7dbe3b86bdf29083a4a85a4f232d5 xemacs-21.4.9.ebuild 4179
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2DBcyiNZaEAZA+ARAu77AJ0V8OgGGepGJOUUJQ2CSQwuZPIpIgCeL/LC
-rp5fb6MVn+pboaYFNDqpzZw=
-=4dok
------END PGP SIGNATURE-----
