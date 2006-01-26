@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/multiimonc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/ChangeLog,v 1.6 2006/01/09 22:56:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/ChangeLog,v 1.7 2006/01/26 13:09:39 hansmi Exp $
+
+  26 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
+  multiimonc-0.3.6.ebuild:
+  Removed unnecessary dependency to X11.
 
   09 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   multiimonc-0.3.6.ebuild:

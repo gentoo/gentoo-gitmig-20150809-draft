@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/multiimonc-0.3.6.ebuild,v 1.5 2006/01/09 22:56:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/multiimonc-0.3.6.ebuild,v 1.6 2006/01/26 13:09:39 hansmi Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND="=x11-libs/wxGTK-2.4*
-		virtual/libc
-		virtual/x11"
+		virtual/libc"
 
 src_unpack() {
 	unpack ${A}
