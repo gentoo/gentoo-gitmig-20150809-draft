@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.52 2006/01/11 01:04:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.53 2006/01/26 02:17:30 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -86,6 +86,13 @@ alt_headers() {
 		fi
 	fi
 	echo "${ALT_HEADERS}"
+}
+alt_build_headers() {
+	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
+		ALT_BUILD_HEADERS=$(alt_headers)
+		tc-is-cross-compiler && ALT_BUILD_HEADERS=${ROOT}$(alt_headers)
+	fi
+	echo "${ALT_BUILD_HEADERS}"
 }
 alt_prefix() {
 	if [[ ${CTARGET} = ${CHOST} ]] ; then
@@ -201,7 +208,7 @@ setup_flags() {
 
 
 check_kheader_version() {
-	local header="$(alt_headers)/linux/version.h"
+	local header="$(alt_build_headers)/linux/version.h"
 
 	[ -z "$1" ] && return 1
 
@@ -672,15 +679,13 @@ src_compile() {
 	mkdir -p ${WORKDIR}/build
 	cd ${WORKDIR}/build
 	# Pick out the correct location for build headers
-	local headersloc=$(alt_headers)
-	tc-is-cross-compiler && headersloc=${ROOT}${headersloc}
 	${S}/configure \
 		--build=${CHOST} \
 		--host=${CTARGET} \
 		--disable-profile \
 		--without-gd \
 		--without-cvs \
-		--with-headers=${headersloc} \
+		--with-headers=$(alt_build_headers) \
 		--prefix=$(alt_prefix) \
 		--mandir=$(alt_prefix)/share/man \
 		--infodir=$(alt_prefix)/share/info \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.12 2006/01/25 04:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.13 2006/01/26 02:17:30 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -266,8 +266,6 @@ toolchain-glibc_headers_compile() {
 	cd "${GBUILDDIR}"
 
 	# Pick out the correct location for build headers
-	local headersloc=$(alt_headers)
-	tc-is-cross-compiler && headersloc=${ROOT}${headersloc}
 	local myconf="--disable-sanity-checks --enable-hacker-mode"
 	myconf="${myconf}
 		--enable-add-ons=linuxthreads
@@ -275,7 +273,7 @@ toolchain-glibc_headers_compile() {
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}
-		--with-headers=${headersloc}
+		--with-headers=$(alt_build_headers)
 		--prefix=$(alt_prefix)
 		--mandir=$(alt_prefix)/share/man
 		--infodir=$(alt_prefix)/share/info

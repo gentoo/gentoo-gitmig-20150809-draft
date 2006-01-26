@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.10 2006/01/25 03:22:17 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.11 2006/01/26 02:17:30 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -612,6 +612,13 @@ alt_headers() {
 	fi
 	echo "${ALT_HEADERS}"
 }
+alt_build_headers() {
+	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
+		ALT_BUILD_HEADERS=$(alt_headers)
+		tc-is-cross-compiler && ALT_BUILD_HEADERS=${ROOT}$(alt_headers)
+	fi
+	echo "${ALT_BUILD_HEADERS}"
+}
 
 alt_prefix() {
 	if is_crosscompile ; then
@@ -711,7 +718,7 @@ setup_flags() {
 }
 
 check_kheader_version() {
-	local header="${ROOT}$(alt_headers)/linux/version.h"
+	local header="$(alt_build_headers)/linux/version.h"
 
 	[[ -z $1 ]] && return 1
 
@@ -940,8 +947,6 @@ glibc_do_configure() {
 	fi
 
 	# Pick out the correct location for build headers
-	local headersloc=$(alt_headers)
-	tc-is-cross-compiler && headersloc=${ROOT}${headersloc}
 	myconf="${myconf}
 		--without-cvs
 		--enable-bind-now
@@ -949,7 +954,7 @@ glibc_do_configure() {
 		--host=${CTARGET_OPT:-${CTARGET}}
 		--disable-profile
 		--without-gd
-		--with-headers=${headersloc}
+		--with-headers=$(alt_build_headers)
 		--prefix=$(alt_prefix)
 		--mandir=$(alt_prefix)/share/man
 		--infodir=$(alt_prefix)/share/info
