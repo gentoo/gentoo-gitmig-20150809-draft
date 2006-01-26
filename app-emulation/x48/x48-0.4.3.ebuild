@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3.ebuild,v 1.1 2006/01/26 20:18:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3.ebuild,v 1.2 2006/01/26 22:00:18 taviso Exp $
 
 inherit eutils
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="|| ( ( x11-proto/xextproto ) virtual/x11 )"
+RDEPEND="|| ( ( x11-proto/xextproto app-text/rman ) virtual/x11 )"
 DEPEND="${RDEPEND}
-	|| ( ( x11-libs/libXext x11-libs/libX11 x11-misc/imake ) virtual/x11 )
+	|| ( ( x11-libs/libXext x11-libs/libX11 x11-misc/imake app-text/rman ) 
+	     virtual/x11 
+		)
 	sys-libs/readline
 	sys-libs/ncurses
 	sys-libs/gpm"
