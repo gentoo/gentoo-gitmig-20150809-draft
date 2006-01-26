@@ -1,4 +1,4 @@
-MD5 b4fca7bff1b9669db56cbe429fc9360d ChangeLog 4639
+MD5 96c1c8e8add6b81a8d00afcb504b0966 ChangeLog 4722
 MD5 55d2e29f1ae90b8b2b4ec47402429a27 ddd-3.3.1-r1.ebuild 859
 MD5 87a2b74f6dbb1b8a8b23af267758e457 ddd-3.3.1-r2.ebuild 1001
 MD5 fc4bcd797606e1b0c052fcac51acc48f ddd-3.3.1-r3.ebuild 1687
@@ -20,4 +20,4 @@ MD5 ca6dfd3a6c633c787192cac15d9796dc files/digest-ddd-3.3.11 63
 MD5 cce61fcc7e8624cc8f3519dc93be9d59 files/digest-ddd-3.3.7 63
 MD5 3f4ee432776983fdd43cb322ab8540e0 files/digest-ddd-3.3.8 62
 MD5 b611121e84b1fbdfdd025b98758ce836 files/digest-ddd-3.3.9 62
-MD5 c07f447e039ccf7a071633a6fa8682e5 metadata.xml 658
+MD5 4cc6b42c77bdbc558dd43c04b770a464 metadata.xml 556
