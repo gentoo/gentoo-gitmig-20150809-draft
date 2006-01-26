@@ -1,0 +1,8 @@
+# ChangeLog for games-engines/gargoyle
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.1 2006/01/26 14:26:10 s4t4n Exp $
+
+*gargoyle-20051002 (26 Jan 2006)
+
+  26 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> gargoyle-20051002.ebuild.ebuild:
+  Initial import. Closes bug #116406, submitted by Rafal Rzepecki.
