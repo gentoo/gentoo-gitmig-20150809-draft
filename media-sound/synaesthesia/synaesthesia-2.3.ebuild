@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.3.ebuild,v 1.3 2006/01/26 17:04:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.3.ebuild,v 1.4 2006/01/26 17:08:15 ticho Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ IUSE="sdl svga esd"
 
 DEPEND="|| ( (
 				x11-proto/xproto
-				x11-libs/libXt
-			)
+				x11-proto/xextproto
+				x11-libs/libXt )
 			virtual/x11
 		)
 	esd? ( >=media-sound/esound-0.2.22 )
@@ -24,9 +24,7 @@ DEPEND="|| ( (
 	svga? ( >=media-libs/svgalib-1.4.3 )"
 
 RDEPEND="${DEPEND}
-	|| ( (
-			x11-libs/libICE
-		)
+	|| ( ( x11-libs/libICE )
 		virtual/x11
 	)"
 
