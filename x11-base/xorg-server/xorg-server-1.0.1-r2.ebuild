@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r1.ebuild,v 1.4 2006/01/19 03:53:22 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r2.ebuild,v 1.1 2006/01/26 02:48:58 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -15,7 +15,8 @@ MESA_PV="6.4.1"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
-PATCHES="${FILESDIR}/${P}-Sbus.patch"
+PATCHES="${FILESDIR}/${P}-Sbus.patch
+	${FILESDIR}/${P}-backtrace.patch"
 
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2"
