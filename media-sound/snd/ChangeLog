@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.23 2005/10/04 13:49:09 matsuu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.24 2006/01/26 16:45:58 ticho Exp $
+
+  26 Jan 2006; Andrej Kacian <ticho@gentoo.org> snd-7.15.ebuild:
+  Prepared for modular X.
 
 *snd-7.15 (04 Oct 2005)
 
