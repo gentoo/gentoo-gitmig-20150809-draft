@@ -1,5 +1,17 @@
-MD5 8d98aac28b718ce06e254adc0e616f97 ChangeLog 1078
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0873a9b9cb384e210dd7d0efe0fec784 ChangeLog 1215
 MD5 c71cab746f41e9fd4fd12bc183b9e62c cl-series-2.2.8.ebuild 809
-MD5 e4df73cef0575435a1a5905d418379b2 metadata.xml 673
+MD5 99a8fc70c79d0801a50579efaf66897c cl-series-2.2.9.ebuild 705
 MD5 181e9c54ab93583e5ab095a12011fa5b files/2.2.8-sbcl-gentoo.patch 1181
 MD5 02812c874a74d1a2094d38372ebf325e files/digest-cl-series-2.2.8 65
+MD5 3fe36a604628e31265b06e4a2002295d files/digest-cl-series-2.2.9 65
+MD5 e4df73cef0575435a1a5905d418379b2 metadata.xml 673
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2PQHyiNZaEAZA+ARAoXYAJwJQvMmPQjFL74FolKjSY6mAcP3oACeMOwT
+mtEVp0QMnbhVco1Aami4Uj8=
+=bOVc
+-----END PGP SIGNATURE-----
