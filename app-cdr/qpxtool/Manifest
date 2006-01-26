@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e2d3781a64b551832022a1964058379a ChangeLog 436
+MD5 e2941df399e05013ce3863f9f18b0342 ChangeLog 586
 MD5 806efa2abfcee7b241033d301df0e080 files/digest-qpxtool-0.4.2 65
+MD5 1abd253b0fcfbc7a12c5c8d4eb9d00b9 files/digest-qpxtool-0.4.3 65
 MD5 b32afa54b2ba40f3c2fb8faa745b0464 qpxtool-0.4.2.ebuild 760
+MD5 2225c0eac6bd78f468305a7e620787d1 qpxtool-0.4.3.ebuild 760
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwH3P2+ySkm8kpY0RAkrwAJ4yVFhhiUP7kvBUay9o3uMXU7hU4QCcC9wp
-+fjGHjdF+OZa+VtikCzAhhc=
-=m++E
+iD8DBQFD2WGh2+ySkm8kpY0RAomJAKCb9P3Is0det1tY6GCcB41c8Jcn7ACggfTW
+y8GKcprtj/FtUNmJf8aoFUk=
+=llkb
 -----END PGP SIGNATURE-----
