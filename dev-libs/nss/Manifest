@@ -1,19 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6bcae02650491a8e27a7c7dcf0f7362f ChangeLog 5386
-MD5 5a175354c5a11c16ce7018948acc98be metadata.xml 218
-MD5 80437a059e77f1ec174f0985632dab5a nss-3.9.2-r2.ebuild 3263
-MD5 70c12077b7e7383d38606366f23b041f nss-3.9.2-r3.ebuild 3324
-MD5 31208c12f404d120fb880b0e8300c175 files/nss-3.9.2-ppc64.patch 526
+MD5 05878d59376e2d58af9cd83b3096502a ChangeLog 5537
+MD5 5ff9f249fea8d2955ae67d2af2047376 files/digest-nss-3.10 61
 MD5 5b40cac4fbb267e83bdf04c269a7c665 files/digest-nss-3.9.2-r2 62
-MD5 8e9778b27c44abf6fb4319b7f5289b21 files/nss-3.9.2-mips64.patch 508
 MD5 5b40cac4fbb267e83bdf04c269a7c665 files/digest-nss-3.9.2-r3 62
 MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/nss-3.9.2-gcc4.patch 1818
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9GRYmdTrptrqvGERAi35AJ0S2ULE/FCrW+H4EnMIQxbicki1SACcCKLw
-XFXL4SPiFDZ1wjWi0uceawo=
-=T5Y4
------END PGP SIGNATURE-----
+MD5 8e9778b27c44abf6fb4319b7f5289b21 files/nss-3.9.2-mips64.patch 508
+MD5 31208c12f404d120fb880b0e8300c175 files/nss-3.9.2-ppc64.patch 526
+MD5 6fff6f2a02f311ef3fb3dc6e870ec467 files/nss.pc.in 275
+MD5 5a175354c5a11c16ce7018948acc98be metadata.xml 218
+MD5 98abb302fdce015234913d52f338fdf2 nss-3.10.ebuild 3508
+MD5 80437a059e77f1ec174f0985632dab5a nss-3.9.2-r2.ebuild 3263
+MD5 70c12077b7e7383d38606366f23b041f nss-3.9.2-r3.ebuild 3324
