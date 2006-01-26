@@ -1,8 +1,18 @@
-MD5 532d6f8c2d2469f25e95f2341a0ee2ab ChangeLog 2396
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af540aa384ba0cc315a49efa75c7b26c ChangeLog 2536
 MD5 7d39eec7b0bdf6f3ba14b266f4799d2a files/digest-gpc-20040516 129
 MD5 1ae0cf0dc51fa1811dc89ec5f4a1ccb4 files/digest-gpc-20050331 130
 MD5 c6e6f9112b5cbbe602a6a6b0ad9ffa93 files/digest-gpc-20051104 135
 MD5 18b0357cd7e1abeabb5072b7989b72ad gpc-20040516.ebuild 4518
 MD5 1f77a71e0c3fa6606ca65ded8517ba0c gpc-20050331.ebuild 4421
-MD5 a5eadb8087e5243cf2fca47eebf008b7 gpc-20051104.ebuild 4025
+MD5 36e5d153d405d0e532c396e4d1049486 gpc-20051104.ebuild 4089
 MD5 1895a0b05d28c3ad7eaabcd41791e3eb metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD2CWtKRy60XGEcJIRAvlhAJ9a4dYGgN5SxnlWG2r9uPzb2VzE7QCbBSIz
+D7b6ytimzqWsCu3TJZIz41o=
+=ka7O
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.1 2006/01/17 13:09:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.2 2006/01/26 01:27:58 gustavoz Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.math.uni.wroc.pl/~hebisch/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="nls"
 
 DEPEND="virtual/libc"
@@ -146,4 +146,5 @@ src_install () {
 	# create an env.d entry
 	dodir /etc/env.d
 	echo "PATH=${LIBEXECPATH}" > ${D}etc/env.d/56gpc
+	echo "ROOTPATH=${LIBEXECPATH}" >> ${D}etc/env.d/56gpc
 }
