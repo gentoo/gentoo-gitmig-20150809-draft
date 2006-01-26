@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r1.ebuild,v 1.1 2006/01/23 22:58:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r1.ebuild,v 1.2 2006/01/26 06:09:18 vapier Exp $
 
 inherit eutils
 
@@ -22,7 +22,9 @@ RDEPEND="dev-libs/gmp
 	tcpd? ( sys-apps/tcp-wrappers )
 	pam? ( sys-libs/pam )"
 #	kerberos? ( virtual/krb5 )
+# need guile because the source changes
 DEPEND="${RDEPEND}
+	dev-util/guile
 	>=sys-apps/portage-2.0.51"
 
 src_unpack() {
