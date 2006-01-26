@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.4.ebuild,v 1.4 2005/03/15 14:25:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.4.ebuild,v 1.5 2006/01/26 07:09:50 robbat2 Exp $
 
 inherit zproduct
 
@@ -18,7 +18,7 @@ MYDOC="${MYDOC} TODO README LICENSE.txt ChangeLog"
 
 DEPEND_BOTH="dev-python/docutils
 		www-client/lynx
-		app-text/pdftohtml"
+		app-text/poppler"
 
 RDEPEND="${RDEPEND}
 		app-text/htmltidy

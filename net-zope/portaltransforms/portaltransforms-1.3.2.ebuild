@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.3.2.ebuild,v 1.2 2005/03/15 14:25:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.3.2.ebuild,v 1.3 2006/01/26 07:09:50 robbat2 Exp $
 
 inherit zproduct
 
@@ -26,7 +26,7 @@ RDEPEND=">=net-zope/cmf-1.4.7
 		app-text/unrtf
 		dev-python/docutils
 		www-client/lynx
-		app-text/pdftohtml"
+		app-text/poppler"
 
 src_install()
 {
