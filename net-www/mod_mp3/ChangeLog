@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_mp3
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.24 2005/11/01 18:59:54 dertobi123 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.25 2006/01/26 02:06:11 gustavoz Exp $
+
+  26 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  mod_mp3-0.35-r1.ebuild, mod_mp3-0.35-r2.ebuild, mod_mp3-0.39.ebuild,
+  mod_mp3-0.40.ebuild, mod_mp3-0.40-r1.ebuild:
+  Keyworded -sparc, see #106429
 
   01 Nov 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   mod_mp3-0.40-r1.ebuild:

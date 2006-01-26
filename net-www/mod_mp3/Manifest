@@ -1,4 +1,7 @@
-MD5 267f62a10bcff73a1188fb7f2fd2b6ca ChangeLog 2477
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0812d825d0584b50c258548db791575d ChangeLog 2680
 MD5 6a03f86a88d5a545bc73452dbb87d3d4 files/50_mod_mp3.conf 771
 MD5 8a7822e7dc0ef7f482a9eea2f2dc7f99 files/digest-mod_mp3-0.35-r1 63
 MD5 8a7822e7dc0ef7f482a9eea2f2dc7f99 files/digest-mod_mp3-0.35-r2 63
@@ -7,8 +10,15 @@ MD5 a87aa3881f9296ed5334e2bccf010ab1 files/digest-mod_mp3-0.40 63
 MD5 a87aa3881f9296ed5334e2bccf010ab1 files/digest-mod_mp3-0.40-r1 63
 MD5 b5e3152aec6736c0cb2be7346b0423dd files/mod_mp3.conf 316
 MD5 4b562dac77e8dcbc4aaea4b9bf4dbac2 metadata.xml 264
-MD5 166dde06f27197e103333729287545ce mod_mp3-0.35-r1.ebuild 1356
-MD5 f92e1745c1371b8858a5411aa1a686f4 mod_mp3-0.35-r2.ebuild 1460
-MD5 c0c26ee75ac83000063d0a9d00c926d9 mod_mp3-0.39.ebuild 1548
-MD5 9d73d63500b12afbdd1357169f29e1bb mod_mp3-0.40-r1.ebuild 975
-MD5 305caa68dfc47442b092a17fa9b2499f mod_mp3-0.40.ebuild 1552
+MD5 49737104b4a147fd7b906aab516bd430 mod_mp3-0.35-r1.ebuild 1357
+MD5 80804b0f1ad6856b5a262174c8dd1edb mod_mp3-0.35-r2.ebuild 1467
+MD5 d60c4ff65a1b758f10c8da1a5e26eb3e mod_mp3-0.39.ebuild 1549
+MD5 1ce9c785da9c6ea2adca53e66a8628e9 mod_mp3-0.40-r1.ebuild 973
+MD5 5ef171fbfc478251b3cb47e06b0fc137 mod_mp3-0.40.ebuild 1553
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD2C6kKRy60XGEcJIRAmNuAKC0dNMz79WHWOQZOJMa7n1LYcMZtQCfbeUm
+E6rDaa97exEOgHns0IZFE4g=
+=y0pj
+-----END PGP SIGNATURE-----
