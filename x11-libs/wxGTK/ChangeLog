@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.99 2006/01/22 03:09:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.100 2006/01/26 20:34:24 vanquirius Exp $
+
+*wxGTK-2.6.1-r1 (26 Jan 2006)
+
+  26 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/wxGTK-2.6.1-windowcpp.diff, +wxGTK-2.6.1-r1.ebuild:
+  2.6.1-r1 revision bump with patch for bug 105189. Fixes undefined symbol:
+  pango_x_get_context problem. Thanks to Alex Rostovtsev <tetromino at gmail
+  dot com>, Mart Raudsepp <leioat dustbite dot net>, Sander Sweers
+  <Sander.Sweers at gmail dot com> and others.
 
   22 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
   wxGTK-2.4.2-r4.ebuild:
