@@ -1,13 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/matlab-2.2.3.ebuild,v 1.10 2005/10/24 14:52:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/matlab-2.2.3.ebuild,v 1.11 2006/01/26 15:49:52 mkennedy Exp $
 
 inherit elisp
 
 IUSE=""
 
 DESCRIPTION="Major modes for MATLAB dot-m and dot-tlc files"
-HOMEPAGE="ftp://ftp.mathworks.com/pub/contrib/emacs_add_ons/"
+HOMEPAGE="http://www.mathworks.com/products/matlab/"
+# the original home page
+# ftp://ftp.mathworks.com/pub/contrib/emacs_add_ons but this has since
+# moved to http://www.mathworks.com/access/pub/emacs_add_ons.zip
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,21 +19,3 @@ KEYWORDS="~amd64 ~ppc sparc x86"
 DEPEND="virtual/emacs"
 
 SITEFILE=50matlab-gentoo.el
-
-src_compile() {
-	emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
-}
-
-src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
-}
-
-pkg_postinst() {
-	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/ for the complete documentation."
-}
-
-pkg_postrm() {
-	elisp-site-regen
-}
