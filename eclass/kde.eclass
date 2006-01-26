@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.142 2006/01/24 14:21:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.143 2006/01/26 12:14:38 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -144,7 +144,7 @@ kde_src_compile() {
 
 				# If we're in a kde-base ebuild, set the prefixed directories to
 				# override the ones set by econf.
-				if [[ ${PREFIX} != "/usr" ]]; then
+				if [[ -n ${PREFIX} && ${PREFIX} != "/usr" ]]; then
 					myconf="${myconf} --prefix=${PREFIX}
 						--mandir=${PREFIX}/share/man
 						--infodir=${PREFIX}/share/info
