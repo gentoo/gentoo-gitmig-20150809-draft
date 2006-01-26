@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.10.0.ebuild,v 1.3 2005/08/31 19:12:05 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.10.0.ebuild,v 1.4 2006/01/26 23:14:57 marienz Exp $
+
+inherit eutils
 
 MY_P=${P/cal3d/cal3d-full}
 DESCRIPTION="skeletal based character animation library"
@@ -15,6 +17,12 @@ IUSE=""
 RDEPEND=""
 DEPEND=">=sys-devel/automake-1.4
 	>=sys-devel/autoconf-2.13"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/cal3d-0.11.0_pre20050823-libtool-compat.patch"
+}
 
 src_compile() {
 	./autogen.sh || die "autogen failed"
