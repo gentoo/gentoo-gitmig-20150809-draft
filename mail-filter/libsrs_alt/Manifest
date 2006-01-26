@@ -1,4 +1,14 @@
-MD5 30bbdc5f251fbca4ab38627af1e0ce74 ChangeLog 2017
-MD5 3aedab1948cfe4e8d48f4bb83d223849 libsrs_alt-1.0_rc1-r1.ebuild 978
-MD5 ae8ed326545606db951ae5e263a3af91 metadata.xml 577
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7fac5db11c8d0487d36b01397339184a ChangeLog 2136
 MD5 5e7dc1e1287f48e6d59858ac6a695851 files/digest-libsrs_alt-1.0_rc1-r1 69
+MD5 5bb61bd4c98bfb042d5fa15bcc610c02 libsrs_alt-1.0_rc1-r1.ebuild 986
+MD5 ae8ed326545606db951ae5e263a3af91 metadata.xml 577
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Vf1JrHF4yAQTrARAudlAJ0ekzpGKWLzS2WoVSo7PAx1pl2WbACghzq/
+BpfSMwaNvFaPF6khNpmHt0A=
+=lT8u
+-----END PGP SIGNATURE-----
