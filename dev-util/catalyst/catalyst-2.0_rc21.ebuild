@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc21.ebuild,v 1.1 2006/01/24 19:48:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc21.ebuild,v 1.2 2006/01/26 14:51:30 wolf31o2 Exp $
 
 inherit eutils
 
@@ -24,6 +24,8 @@ RDEPEND="dev-lang/python
 		dev-util/ccache )
 	cdr? (
 		virtual/cdrtools
+		ia64? (
+			sys-fs/dosfstools )
 		!sh? (
 			app-misc/zisofs-tools )
 		!mips? (
