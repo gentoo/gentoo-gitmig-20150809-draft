@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/xemacs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.58 2005/02/15 14:40:49 mkennedy Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.59 2006/01/26 02:13:34 mkennedy Exp $
+
+*xemacs-21.4.17 (26 Jan 2006)
+
+  26 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/xemacs-21.4.17-gdbm.patch, +xemacs-21.4.17.ebuild:
+  Only install the NeXT icon set if neXt is in USE; New upstream version; Port
+  to modular X dependencies.
 
 *xemacs-21.4.15-r3 (15 Feb 2005)
 
