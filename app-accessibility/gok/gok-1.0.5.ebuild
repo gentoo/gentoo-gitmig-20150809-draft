@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.13 2005/09/20 19:19:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.14 2006/01/26 05:21:33 leonardop Exp $
 
 inherit virtualx gnome2
 
@@ -24,13 +24,24 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-extra/at-spi-1.5.2
 	>=gnome-base/orbit-2
 	app-accessibility/gnome-speech
-	virtual/x11"
+	|| ( (
+			x11-libs/libXi
+			x11-libs/libX11
+			x11-libs/libSM
+			x11-libs/libICE )
+		virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27.3
 	dev-util/pkgconfig
 	app-text/scrollkeeper
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1 )
+	|| ( (
+			x11-libs/libXt
+			x11-proto/inputproto
+			x11-proto/kbproto
+			x11-proto/xproto )
+		virtual/x11 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

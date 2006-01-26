@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.59 2005/09/20 19:12:06 seemant Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.60 2006/01/26 05:21:33 leonardop Exp $
+
+  26 Jan 2006; Leonardo Boshell <leonardop@gentoo.org> gok-1.0.5.ebuild:
+  Added modular X deps. Patch provided by Olivier Crete on bug #115679.
 
   20 Sep 2005; Seemant Kulleen <seemant@gentoo.org> gok-1.0.5.ebuild:
   tests are now run in a virtual X session. Closes bug #106686
