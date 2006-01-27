@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b1ae76b288df51d4c9ec1650764ab4ad ChangeLog 3450
 MD5 c5e330ddedbbbd8b06f8d6176cd3f786 files/digest-zwiki-0.37 61
 MD5 1439cea48c2d0dbe1025001a943c8e44 files/digest-zwiki-0.40 61
@@ -12,3 +15,10 @@ MD5 6ef142cebe177219d11895c90b2fa5c0 zwiki-0.42.ebuild 486
 MD5 fe7ad8eb44901317e9ae80038cb25bd6 zwiki-0.44.ebuild 487
 MD5 b4cb991539bf50af83e8a55d678c5b48 zwiki-0.45.ebuild 487
 MD5 0293aee17ecf475a288a46033efb18ab zwiki-0.48.ebuild 487
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Ytt2+ySkm8kpY0RAhphAJ9nibqPeuk/qwyPgRmUSL730Eh03QCgkmyO
+3WR4No9gyZXsYiEbQzmdBo0=
+=EYdi
+-----END PGP SIGNATURE-----

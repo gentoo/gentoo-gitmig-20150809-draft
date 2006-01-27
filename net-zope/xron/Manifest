@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd3577ed4171e734cb5763edcf117497 ChangeLog 432
 MD5 39696e8d743f1d3af5a595aea8096fa8 files/digest-xron-0.0.10 59
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 bb306d85a55c1d190bf910538ab3208b xron-0.0.10.ebuild 769
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Ypa2+ySkm8kpY0RAsd6AJ9x/zTBzvCG6JhTmBJ3gG8vuU1mwACfXq0w
+aOFFAtw/0WPH7tB+2v9UuBU=
+=dley
+-----END PGP SIGNATURE-----

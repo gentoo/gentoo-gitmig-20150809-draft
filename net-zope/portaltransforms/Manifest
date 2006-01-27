@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab04bb6943f2ff2891d2e0be749dbcaf ChangeLog 3705
 MD5 e99beeef3cb5d46572961e0b38e1b7ca files/digest-portaltransforms-1.0.3 71
 MD5 ef0ccb5a871e069463dd79e5498c5e21 files/digest-portaltransforms-1.0.4 71
@@ -12,3 +15,10 @@ MD5 a510110e24215a0cea5cdbcb03d2d776 portaltransforms-1.0.4.ebuild 1113
 MD5 be5bb83cad482a891b25657e76876cf6 portaltransforms-1.3.2.7.ebuild 816
 MD5 65aa7a39ec3adfa468522b994ede6614 portaltransforms-1.3.2.ebuild 797
 MD5 85238d749bd89b54decf1002f81abf29 portaltransforms-1.3.3.ebuild 818
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Yjs2+ySkm8kpY0RAmquAJ0XkBXY06cR45CUHzQMKgN82xnUWQCfdWx/
+nLnAbW88T+S2NExjx/k4t/M=
+=XaLS
+-----END PGP SIGNATURE-----

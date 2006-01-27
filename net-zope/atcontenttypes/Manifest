@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fe5ea38a991105fa375c33aaed6ba721 ChangeLog 525
 MD5 e593fc5dccab22fa6bfdd1733a4c0a41 atcontenttypes-0.2.0.ebuild 551
 MD5 aaac75ebf650cf0ee631199e2d347288 files/digest-atcontenttypes-0.2.0 78
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YSx2+ySkm8kpY0RAuZpAKCMoCFMLcTgn+oqJ6TUcn/YZ5/VeACguxRq
+cfwmihXMOkDxJhNcyUQO9ic=
+=nl6+
+-----END PGP SIGNATURE-----

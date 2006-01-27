@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e1a1d99053e07a608f93f76b1d906640 ChangeLog 1462
 MD5 1a90021e54de488512c0ad904d0f1e68 btreefolder2-0.5.0.ebuild 523
 MD5 8e99756793a982b352d6a1b9e6c761a9 btreefolder2-1.0.1.ebuild 529
@@ -6,3 +9,10 @@ MD5 5f9af7e791e225acb40040c82a872157 files/digest-btreefolder2-0.5.0 68
 MD5 254b1fabcd0cd1b5095ef32477fcd5ca files/digest-btreefolder2-1.0 67
 MD5 d8bc6a40a0034c9bd1c899f4aec00315 files/digest-btreefolder2-1.0.1 69
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YTG2+ySkm8kpY0RAqYuAKCowxPq/6OM2pbLGrauehiL5YA/rQCgjXGs
+omK7OTd9ycjA4WVWcgL/pHs=
+=G/8d
+-----END PGP SIGNATURE-----

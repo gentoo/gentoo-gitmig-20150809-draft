@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 654840d47e3829ac886af7025d8548bf ChangeLog 15269
 MD5 a18ddd3f2cdcb815cf86f4b9c4bdd6fe files/2.6.4/zope.confd 950
 MD5 4d278d26bb7be7693f7213861a9d3805 files/2.6.4/zope.initd 3791
@@ -22,3 +25,10 @@ MD5 f76863e894f8ff3636f888a5b209b177 zope-2.8.4.ebuild 3508
 MD5 b4ce94ff5a7f1e62a04fbb159583aa33 zope-2.9.0.ebuild 2300
 MD5 a351702850c91a8d80f6a5454aaeb8ee zope-3.1.0.ebuild 3235
 MD5 0b5d48405c986e7dac7c5a82b037e182 zope-3.2.0.ebuild 3641
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YrY2+ySkm8kpY0RAlnOAKCIj5uI3RX1bBRR1qdgZCNZSCMIFgCgo0qN
+1DOtH0x0LxZLHFPOrgSwYzE=
+=zyzj
+-----END PGP SIGNATURE-----

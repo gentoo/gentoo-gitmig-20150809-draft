@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7df2a78cbc36888bcf4dec9123e46baa ChangeLog 1201
 MD5 be302d904ebd5970225fad40bc3a46fd coreblog-0.6.ebuild 446
 MD5 f7dd10db2ee6a4d84b9b048aaba88fdd coreblog-1.0.ebuild 444
@@ -8,3 +11,10 @@ MD5 bb2032e03623aab437333e6985010ca6 files/digest-coreblog-1.0 58
 MD5 f38c7624b4d10057ff505bdeb88eb3a8 files/digest-coreblog-1.11 59
 MD5 b4991e7135a17cbe8a166ba9dc99e984 files/digest-coreblog-1.20 58
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YXq2+ySkm8kpY0RAimlAJ97jLkAaGQ0zPkgn1Dv86PyXLWL4QCggzaz
+4hXmguSze80xBm5XZVA4dfE=
+=PJP+
+-----END PGP SIGNATURE-----

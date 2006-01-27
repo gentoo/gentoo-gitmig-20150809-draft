@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cf2db7e349086575a3a23361f69bac4a ChangeLog 590
 MD5 0895034bcfc94c95f735d059aa2cd57d files/digest-propertyfolder-1.3.3 71
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 4255843272b640e1e7373e438c242019 propertyfolder-1.3.3.ebuild 513
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YkA2+ySkm8kpY0RAs9pAKC/lF6je3sclD8yl23ebX+TEMBA/gCfS6wY
+rhgRhDnT+zHJtUn2RCT7xhM=
+=+STj
+-----END PGP SIGNATURE-----

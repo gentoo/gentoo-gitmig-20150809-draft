@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aac6c39fb7c27d18f9b7d1951f1da755 ChangeLog 378
 MD5 a78b8517ebc32ffc3e4d79bbc836cebc files/digest-i18ndude-2.0 63
 MD5 3fcdf71e63e8fbc229a39556ef8f63e8 i18ndude-2.0.ebuild 565
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YcL2+ySkm8kpY0RAkeHAJ9yf3uqtHzcQVeZFQBNHmxsAEdWJwCcClK0
+5FwvsNVwRh1idgN65rnjgr4=
+=9HiL
+-----END PGP SIGNATURE-----

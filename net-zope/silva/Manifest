@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 932edbe1af7aeb041ef320edc4c4fbd4 ChangeLog 1554
 MD5 5ff4580b4c8e190b5642f7fcef3730ac files/digest-silva-0.9.1.2 62
 MD5 eacefadb7b5941ba179384041d96fcdf files/digest-silva-1.0.2 61
@@ -8,3 +11,10 @@ MD5 69bb76f1ad5795115549531c90294605 silva-0.9.1.2.ebuild 559
 MD5 d010b0af1ff35a42cb6e5ed1f7cbb8bf silva-1.0.2.ebuild 732
 MD5 8d5a68fc1b3a2cc46378b9e6523b2b85 silva-1.1-r1.ebuild 769
 MD5 c1686c1d99eb94dd9e40aae49e38fa22 silva-1.2.ebuild 773
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Yk/2+ySkm8kpY0RApbKAJ9rugyoyUlWRx1cMfsSuZKdGKIGJQCglfqf
+AcyHSLdjNS3HXTbr+vq1NPY=
+=ClwU
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dba0cf4c78fabfb37a6ec766d44192af ChangeLog 441
 MD5 984c5ddf22f5a246bea38385c240e5b7 files/digest-ttwtype-0.9.1 60
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 80cd3c1023abd551da8d2e3e2cf6c3b3 ttwtype-0.9.1.ebuild 487
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YoJ2+ySkm8kpY0RAjkfAKCGhbFGQdPJ00NuDdPcus2J5miaTACgtjeQ
+Wyj0cKBc5UAjad2/5w99HWo=
+=SWWn
+-----END PGP SIGNATURE-----

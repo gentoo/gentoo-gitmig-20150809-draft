@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 60d464c219e8a46f4be75823820ed4eb ChangeLog 419
 MD5 6c383819d9732cac12cf9fd7913c3a02 files/digest-passwordresettool-0.3.0 74
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 f9bff75b1be9b977e8187e53545120ec passwordresettool-0.3.0.ebuild 572
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YgT2+ySkm8kpY0RAjyvAJ9H98yfbqQ+IuQU7BQcmOhXODojWwCggRBV
+IWCXwdlu5vZUepS3GwJgocw=
+=yrZo
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4dc42967cecea0aa06c8075f4ac20e51 ChangeLog 551
 MD5 54475386dd0256752519b24e611d70bd files/digest-placelesstranslationservice-1.0_beta3 93
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 2f5584429cdb82ed95afac486223e119 placelesstranslationservice-1.0_beta3.ebuild 582
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YhA2+ySkm8kpY0RAkO1AKClyk+GCUc+hIErHn3g+SbkRuKLnACff5R2
+lbQM98oUVrID3XZpvdkk9sU=
+=IS+X
+-----END PGP SIGNATURE-----

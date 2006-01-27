@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 51da574d949095dcdefc755d0d282b56 ChangeLog 2896
 MD5 f6603c74a50f6868def5dc6df3c982e7 cmf-1.3.2.ebuild 582
 MD5 f28a1e5bf95f1359ab78df46f2c9d5d1 cmf-1.4.4.ebuild 594
@@ -10,3 +13,10 @@ MD5 f52277d74614e10fa6ffdff76db99a67 files/digest-cmf-1.4.7 61
 MD5 49c7ffc900dfff6e902e6d5c1725d706 files/digest-cmf-1.5.0 61
 MD5 b32d859be4c2b18d91457353a14f3cbe files/digest-cmf-1.5.1 61
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YTv2+ySkm8kpY0RApyNAJ473V89jQ3UjbmGXvJEvKGTiwxUzQCbBQVg
+tzYK4FXtF+m07Txbwgh7WW8=
+=cWQZ
+-----END PGP SIGNATURE-----

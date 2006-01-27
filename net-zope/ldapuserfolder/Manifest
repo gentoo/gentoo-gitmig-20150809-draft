@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b9765350f766125c0e035ed5d5a75d18 ChangeLog 1041
 MD5 24bc85e0b885b23c5367f353b28b4232 files/digest-ldapuserfolder-2.4 66
 MD5 cbda432df9c245758ec78562d73c445b ldapuserfolder-2.4.ebuild 558
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Ydf2+ySkm8kpY0RAj8SAKC8NlkpJeP+OW8AXe4XMwzR0udvtwCgg0IM
+m04dCxpzcWknWv4OkTgP6OE=
+=G6f3
+-----END PGP SIGNATURE-----

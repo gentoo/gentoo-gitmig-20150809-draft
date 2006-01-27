@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30b2aad9e40dcdf79f846968953a61d0 ChangeLog 3359
 MD5 27a91b40c9701da470369eda322ef786 files/digest-zodb-3.2.8 60
 MD5 ccd57537a21261a171605e4205d626d0 files/digest-zodb-3.2.9 60
@@ -17,3 +20,10 @@ MD5 7f84b6fcd14ea549f5360047e1c3759f zodb-3.4.1.ebuild 740
 MD5 5a2f418715d2b736e1386dc5eb075d61 zodb-3.5.0.ebuild 519
 MD5 f7c0705c3a0a1099f1240e69ff8d774d zodb-3.5.1.ebuild 519
 MD5 35509342bf8e5c70319645721d2a096d zodb-3.6.0.ebuild 519
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YrC2+ySkm8kpY0RAqnHAKCVuJY11rqW4Za0tW+BLvnjGMwtEQCfeqIs
++LHscIpVyr010hUU8PjuF2w=
+=Ung5
+-----END PGP SIGNATURE-----

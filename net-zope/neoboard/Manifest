@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7de4506c62f5353a3d3d120f1c933dba ChangeLog 611
 MD5 6ee7c29cdaa177c24908f6efebfe4dc7 files/digest-neoboard-1.1 64
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 d97cdaef2a2300e3228a438fb6f22e12 neoboard-1.1.ebuild 747
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YfX2+ySkm8kpY0RAgMmAJ4+n8OV9pzJ6QfzA6tv2fPyy3PwWgCglz+M
+4yWLayUISzw0OYjjC6XmQGw=
+=c2vy
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 599774c24d53b7a50bab1cda0aa58f53 ChangeLog 889
 MD5 5572015a80c9667ba20f348cb9c6d0b8 files/digest-ploneerrorreporting-0.1 73
 MD5 7cf7cda4fadf9bb72f5213f849cfd683 files/digest-ploneerrorreporting-0.11 75
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 99754cdee18d5cedcfbe69b2a3a0fa9c ploneerrorreporting-0.1.ebuild 586
 MD5 26544f060e852f048eb52a881fc5ff67 ploneerrorreporting-0.11.ebuild 599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YiX2+ySkm8kpY0RAkcPAJ47+eMPTlzKhDxJkEql2dnfj6SkPgCcDzvX
+gUm6XdhzEWKXxfAfd8li5kY=
+=DGxA
+-----END PGP SIGNATURE-----

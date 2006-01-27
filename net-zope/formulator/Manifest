@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 83eecfc58b3257c39839cd1e8e9868b3 ChangeLog 1898
 MD5 26afeaac04342be233ba6e537b73113c files/digest-formulator-1.3.1 64
 MD5 19d9d7e29c2a2e711e0064db88cc5ddd files/digest-formulator-1.4.2 64
@@ -10,3 +13,10 @@ MD5 2c83b2abc1b2195a231f17288410c00c formulator-1.6.1.ebuild 536
 MD5 68b69c141b161fa8f610b03c8fdc4430 formulator-1.6.2.ebuild 548
 MD5 a3d5f1b847190521902513524cb9446a formulator-1.8.0.ebuild 531
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Yai2+ySkm8kpY0RAoBcAJkBRtNPB1uqRnlsTI57gBh/WRyPnQCeKFV8
+7FVx7rwj42OgGh7uX3vmEMo=
+=AlTa
+-----END PGP SIGNATURE-----

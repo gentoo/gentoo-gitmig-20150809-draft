@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b11c1c61208aa213be82d0d7a05ffcb6 ChangeLog 581
 MD5 1ede0ae32b95d62e4b664c4ecffc60cc files/digest-genericuserfolder-1.2.4 71
 MD5 b94b523e55242427d37926d514f9cb76 genericuserfolder-1.2.4.ebuild 828
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YbM2+ySkm8kpY0RAn+FAKCw22YSgVMD7gtuXEQpPVcWwEjLgACdF/yN
+InRpHKLzdelfebvWba8Qfyw=
+=siVY
+-----END PGP SIGNATURE-----

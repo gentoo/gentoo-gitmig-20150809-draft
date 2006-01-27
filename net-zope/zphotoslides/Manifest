@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fff4b45dee5e063d596f5db3523770a0 ChangeLog 1012
 MD5 8145c1c025b0fca5505c00fddad16298 files/digest-zphotoslides-1.1-r1 69
 MD5 cb90bc9664693b24399c5d9a3624ccf5 files/digest-zphotoslides-2.0 68
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 ac69c0a5d0a1223a51e97c6d996f2fe6 zphotoslides-1.1-r1.ebuild 592
 MD5 ed0efba40ac7a34475ea244072e5b651 zphotoslides-2.0.ebuild 535
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2Yss2+ySkm8kpY0RAlsxAJ40uKH4OI/6CU5s3Y6sfjLXa7802ACfcNkO
+Bm1qnx7QGNKtEGRX8Wjmm/E=
+=cG/E
+-----END PGP SIGNATURE-----

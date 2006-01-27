@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a0a23eb1fd11366e20ef3b21b03cb40 ChangeLog 2513
 MD5 f9316085b90faec816ac96b8ccc62991 archetypes-1.2.5_rc5.ebuild 639
 MD5 380bbb58ca39998b571bce6b953aaac5 archetypes-1.3.1.ebuild 727
@@ -6,3 +9,10 @@ MD5 b2c84d4daad233137f3c9ac65b342715 files/digest-archetypes-1.2.5_rc5 72
 MD5 37c846011334d0541cc73f2b945b34b0 files/digest-archetypes-1.3.1 74
 MD5 687ed5a2b2b3ca04db8473a1b6238a29 files/digest-archetypes-1.3.2 74
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YSX2+ySkm8kpY0RAtDRAJ98wdNGN9IhC1tFmY08q5uYmQC71gCgkSwT
+XAc3NjWyRWAlHStguwdIsNM=
+=jAZs
+-----END PGP SIGNATURE-----
