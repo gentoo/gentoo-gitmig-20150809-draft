@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.13 2005/08/24 16:18:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.14 2006/01/27 21:47:51 ticho Exp $
 
 inherit eutils
 
@@ -19,13 +19,24 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64"
 
 # block media-libs/libcddb for now, see bug #90945
-DEPEND="virtual/x11
-	x11-libs/openmotif
+RDEPEND="x11-libs/openmotif
 	media-libs/flac
 	!media-libs/libcddb
+	sys-libs/ncurses
 	alsa? ( media-libs/alsa-lib )
 	encode? ( >=media-sound/lame-3.93.1 )
-	vorbis? ( >=media-libs/libvorbis-1.0 )"
+	vorbis? ( >=media-libs/libvorbis-1.0 )
+	|| ( ( x11-libs/libXt
+			x11-libs/libXp )
+		virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	sys-apps/sed
+	|| ( ( x11-misc/imake
+			x11-misc/gccmakedep
+			x11-proto/printproto
+			x11-proto/xextproto )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
