@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/net-sftp-1.1.0.ebuild,v 1.3 2006/01/25 21:18:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/net-sftp-1.1.0.ebuild,v 1.4 2006/01/27 19:51:51 hansmi Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 USE_RUBY="ruby18"
