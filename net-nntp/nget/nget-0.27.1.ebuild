@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.27.1.ebuild,v 1.5 2006/01/25 07:08:25 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.27.1.ebuild,v 1.6 2006/01/27 15:47:25 blubb Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="static debug ipv6 pcre zlib"
 
 RDEPEND="dev-libs/popt
