@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r3.ebuild,v 1.1 2005/10/22 13:09:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r3.ebuild,v 1.2 2006/01/27 23:42:48 ticho Exp $
 
 inherit kde-functions eutils flag-o-matic libtool
 
@@ -25,8 +25,7 @@ RDEPEND=">=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2 )
 	mp3? ( >=media-libs/id3lib-3.8.0 )
 	vorbis? ( media-libs/libvorbis )
-	xosd? ( x11-libs/xosd )
-	X? ( virtual/x11 )"
+	xosd? ( x11-libs/xosd )"
 
 # When updating next, check boost to see if the newer versions fix compilation
 DEPEND="${RDEPEND}
