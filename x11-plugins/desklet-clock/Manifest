@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ab209715df22d800b5b52ca9b1e37b1 ChangeLog 2285
+MD5 004adff9b6af38af9b1d7f40529f16a3 ChangeLog 2385
 MD5 61b514eb7ae6b6b3af48824e98d69c7a desklet-clock-0.31.ebuild 1085
 MD5 be48b2c6879617a24e33b6bc28f3e4f2 desklet-clock-0.32-r1.ebuild 1227
 MD5 cbaeed43598e2110990a4362a73a4682 desklet-clock-0.32.ebuild 1092
 MD5 6d1ab3b956c6b23635c7d3e03c5d012e desklet-clock-0.40.ebuild 664
-MD5 57112a82d7bb38408cd0b9d1909d0c3f desklet-clock-0.50.ebuild 677
+MD5 ee12be781c93c7e31967348f39288a8b desklet-clock-0.50.ebuild 675
 MD5 5d9158812e523c5765f013a933fddfdf files/digest-desklet-clock-0.31 71
 MD5 093c33f89910f51e4696c9cc9ed03901 files/digest-desklet-clock-0.32 71
 MD5 093c33f89910f51e4696c9cc9ed03901 files/digest-desklet-clock-0.32-r1 71
 MD5 3ea2aac5596dbc13e63928ee6ba46738 files/digest-desklet-clock-0.40 70
 MD5 33e35258c1cb215369ff9371d77d8367 files/digest-desklet-clock-0.50 70
 MD5 a175a96fb7e85b152ade748dbd2360e0 metadata.xml 213
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1DDPCRZPokWLroQRAsQgAJ9A3dPK3kW3qLB7e9q0I2buGQiSpACfe0/4
-Cj/jkPeQNB3wiu/+VmAPKRU=
-=39eg
------END PGP SIGNATURE-----
