@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/asmail
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.5 2005/06/13 13:13:39 ka0ttic Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.6 2006/01/27 23:52:46 ticho Exp $
+
+  27 Jan 2006; Andrej Kacian <ticho@gentoo.org> asmail-0.56.ebuild:
+  Ported dependencies for modular X.
 
   13 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
   Added afterstep herd.
