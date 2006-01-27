@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.78 2005/12/02 15:43:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.79 2006/01/27 00:14:04 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -47,6 +47,12 @@ v_echo() {
 	env "$@"
 }
 
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.79 2006/01/27 00:14:04 wolf31o2 Exp $"
+cvsver=${cvsver##*,v }
+cvsver=${cvsver%%Exp*}
+cvsyear=${cvsver#* }
+cvsyear=${cvsyear%%/*}
+
 usage() {
 	echo -e "Usage: ${HILITE}${0##*/}${NORMAL} ${GOOD}[options]${NORMAL}"
 	echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
@@ -57,7 +63,7 @@ usage() {
 	echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
 }
 
-unset STRAP_EMERGE_OPTS
+STRAP_EMERGE_OPTS="--oneshot"
 STRAP_RUN=1
 V_ECHO=env
 DEBUG=0
@@ -72,15 +78,13 @@ for opt in "$@" ; do
 			usage
 			exit 0;;
 		--debug|-d)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
-		--info|-i)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info"   ; unset STRAP_RUN ;;
-		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p" ; unset STRAP_RUN ;;
-		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"; unset STRAP_RUN ;;
+		--info|-i)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info" ; unset STRAP_RUN ;;
+		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p"     ; unset STRAP_RUN ;;
+		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"  ; unset STRAP_RUN ;;
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
-		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.78 2005/12/02 15:43:57 wolf31o2 Exp $"
-			cvsver=${cvsver##*,v }
-			einfo "Gentoo Linux bootstrap ${cvsver%%Exp*}"
+		--version|-V)
+			einfo "Gentoo Linux bootstrap ${cvsver}"
 			exit 0
 			;;
 		*)
@@ -117,8 +121,8 @@ fi
 [[ -e /etc/profile ]] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux; ${BRACKET}http://www.gentoo.org/${NORMAL}"
-echo -e "Copyright 1999-2005 Gentoo Foundation; Distributed under the GPLv2"
-if [[ ${STRAP_EMERGE_OPTS:0:2} = "-f" ]] ; then
+echo -e "Copyright 1999-${cvsyear} Gentoo Foundation; Distributed under the GPLv2"
+if [[ " ${STRAP_EMERGE_OPTS} " == *" -f "* ]] ; then
 	echo "Fetching all bootstrap-related archives ..."
 elif [[ -n ${STRAP_RUN} ]] ; then
 	if [ ${BOOTSTRAP_STAGE} -gt 2 ] ; then
@@ -191,12 +195,25 @@ if [[ ${INVALID_USE} = "yes" ]] ; then
 	cleanup 1
 fi
 
+# since our logic here ignores stuff found in package.use, let's warn the
+# user so they can avert disaster early
+if [[ -n $(sed -n '/^[ 	]*#/d;/^[ 	]*$/d;p' /etc/portage/package.use 2>/dev/null) ]] ; then
+	echo
+	ewarn "You appear to have custom USE flags set in /etc/portage/package.use."
+	ewarn "Be aware that these settings may be ignored while running this script"
+	ewarn "(due to limitations in the bootstrap process).  If you have some USE"
+	ewarn "flags you wish to apply to say gcc or glibc, you should hit CTRL+C"
+	ewarn "now, export them in your environment (see below), and then restart."
+	ewarn " # export USE='some flags i want'"
+	read
+fi
+
 # gettext should only be needed when used with nls
 for opt in ${ORIGUSE} ; do
 	case "${opt}" in
 		nls)
 			USE_NLS=1
-			STAGE1_USE="${STAGE1_USE} nls"
+			ALLOWED_USE="${ALLOWED_USE} nls"
 			;;
 		nptl)
 			if [[ -z $(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0') ]] ; then
@@ -213,10 +230,10 @@ for opt in ${ORIGUSE} ; do
 			USE_NPTLONLY=1
 			;;
 		multilib)
-			STAGE1_USE="${STAGE1_USE} multilib"
+			ALLOWED_USE="${ALLOWED_USE} multilib"
 			;;
 		userlocales)
-			STAGE1_USE="${STAGE1_USE} userlocales"
+			ALLOWED_USE="${ALLOWED_USE} userlocales"
 			;;
 	esac
 done
@@ -249,9 +266,9 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 if [[ ${USE_NPTL} = "1" ]] ; then
 	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0')"
 	[[ -n ${myOS_HEADERS} ]] && myOS_HEADERS=">=${myOS_HEADERS}"
-	STAGE1_USE="${STAGE1_USE} nptl"
+	ALLOWED_USE="${ALLOWED_USE} nptl"
 	# Should we build with nptl only?
-	[[ ${USE_NPTLONLY} = "1" ]] && STAGE1_USE="${STAGE1_USE} nptlonly"
+	[[ ${USE_NPTLONLY} = "1" ]] && ALLOWED_USE="${ALLOWED_USE} nptlonly"
 fi
 [[ -z ${myOS_HEADERS} ]] && myOS_HEADERS="virtual/os-headers"
 
@@ -275,7 +292,7 @@ export ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
 	CFLAGS CHOST CXXFLAGS MAKEOPTS ACCEPT_KEYWORDS PROXY HTTP_PROXY
 	FTP_PROXY FEATURES STAGE1_USE"
 
-eval $(python -c'import portage,os,string;print "\n".join(["export %s=\"%s\";[[ -z \"%s\" ]] || einfo %s=\"%s\";" % (k, portage.settings[k], portage.settings[k], k, portage.settings[k]) for k in os.getenv("ENV_EXPORTS").split()])')
+eval $(python -c 'import portage,os,string;	print "\n".join(["export %s=\"%s\"; [[ -z \"%s\" ]] || einfo %s=\\\"%s\\\";" % (k, portage.settings[k], portage.settings[k], k, portage.settings[k]) for k in os.getenv("ENV_EXPORTS").split()])')
 unset ENV_EXPORTS
 
 echo -------------------------------------------------------------------------------
@@ -295,11 +312,11 @@ export FEATURES="${FEATURES} -collision-protect"
 
 if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
 	show_status 2 Updating portage
-	${V_ECHO} USE="-* build bootstrap ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
+	${V_ECHO} USE="-* build bootstrap ${ALLOWED_USE} ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 2
 fi
-export USE="-* bootstrap ${STAGE1_USE}"
+export USE="-* bootstrap ${ALLOWED_USE} ${STAGE1_USE}"
 
 # We can't unmerge headers which may or may not exist yet. If your
 # trying to use nptl, it may be needed to flush out any old headers
@@ -327,6 +344,7 @@ if [[ -n ${STRAP_RUN} ]] ; then
 	then
 		# Make sure we get the old gcc unmerged ...
 		emerge clean || cleanup 1
+		emerge prune sys-devel/gcc || cleanup 1
 		# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
 		${GCC_CONFIG} "$(${GCC_CONFIG} --get-current-profile)" &>/dev/null
 	fi
