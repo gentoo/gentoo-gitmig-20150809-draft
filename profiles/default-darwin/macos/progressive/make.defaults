@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # System-wide defaults for all ppc-macos progressive profiles
+ACCEPT_KEYWORDS="~ppc-macos"
 ARCH=ppc
 CHOST=powerpc-apple-darwin8
 KERNEL=Darwin

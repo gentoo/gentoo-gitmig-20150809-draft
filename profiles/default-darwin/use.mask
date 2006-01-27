@@ -53,7 +53,7 @@ mikmod
 mono
 mzscheme
 nas
-on-the-fly-crypt
+pike
 qdbm
 socks5
 xmms
@@ -81,7 +81,6 @@ pfpro
 solid
 
 # masks for x11-libs/qt
-nas
 odbc
 postgres
 
