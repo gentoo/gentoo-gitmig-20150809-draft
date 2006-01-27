@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-2.5.1-r2.ebuild,v 1.1 2006/01/04 03:05:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-2.5.1-r2.ebuild,v 1.2 2006/01/27 16:04:31 rl03 Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.php
 
 DESCRIPTION="phpSysInfo is a nice package that will display your system stats via PHP."
 HOMEPAGE="http://phpsysinfo.sourceforge.net/"
@@ -14,8 +14,12 @@ IUSE=""
 
 S=${WORKDIR}/${PN}
 
-DEPEND="$DEPEND
-	>=virtual/httpd-php-4.3.8"
+need_php
+
+pkg_setup() {
+	webapp_pkg_setup
+	require_php_with_use pcre
+}
 
 src_install() {
 	webapp_src_preinst
