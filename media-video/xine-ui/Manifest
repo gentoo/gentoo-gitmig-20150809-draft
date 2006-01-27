@@ -1,6 +1,16 @@
-MD5 855da1bfee68ae026bb33394c6e92ee0 ChangeLog 17184
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ecfbfef2519dae34608eb0c8213d9d4b ChangeLog 17297
 MD5 21319eb55b4549ab5e5cc6aeb2f51649 files/digest-xine-ui-0.99.3-r1 135
 MD5 39002a0b13bd6e79fb6b863e93a3bcc6 files/digest-xine-ui-0.99.4-r3 136
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 088346360c2ce14d6cd1ac45c06d1d8a xine-ui-0.99.3-r1.ebuild 1805
-MD5 d519db843a3b0d95902f4c2668bdd9e2 xine-ui-0.99.4-r3.ebuild 2136
+MD5 1c18f2b5227d8ee4530706105c6b2574 xine-ui-0.99.4-r3.ebuild 2140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2p9tFdQwWVoAgN4RAkC2AJ9LPWw0TqvHC+34tlLKr/HE9KqITQCgzKS+
+jOt/ISgzu8B1DiFqCLo+Srs=
+=6psL
+-----END PGP SIGNATURE-----
