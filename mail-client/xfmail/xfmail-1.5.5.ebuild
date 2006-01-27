@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/xfmail/xfmail-1.5.5.ebuild,v 1.1 2006/01/25 19:50:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/xfmail/xfmail-1.5.5.ebuild,v 1.2 2006/01/27 17:09:00 ticho Exp $
 
 IUSE="ldap"
 DESCRIPTION="A full-featured mail program using XForms"
@@ -9,17 +9,18 @@ HOMEPAGE="http://www.xfmail.org"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
-RDEPEND="|| (
-			(
-				x11-libs/libXt
-			)
-			virtual/x11
-		)
+RDEPEND="|| ( ( x11-libs/libX11
+				x11-libs/libICE
+				x11-libs/libXpm )
+			virtual/x11 )
 		=dev-libs/glib-1.2*
 		sys-libs/gdbm
 		>=x11-libs/xforms-1.0_rc4
 		ldap? ( >=net-nds/openldap-2.0.11 )"
 DEPEND="${RDEPEND}
+		|| ( ( x11-proto/xextproto
+				x11-libs/libXt )
+			virtual/x11 )
 		sys-apps/sed"
 
 src_compile() {
