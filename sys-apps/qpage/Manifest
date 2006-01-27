@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f41b3c43416ba0856bb0cc46eaf3a5ac ChangeLog 779
+MD5 27d8f626ea92b79fa7a8c2d53a44c224 ChangeLog 978
 MD5 55f62becd8c8b17a893657b3f59d4aa5 files/digest-qpage-3.3 60
 MD5 c83c7ad21cc06145316f2725e8d07cbf files/qpage 671
+MD5 077fe753878522de473c0cb19c9274d8 files/qpage-3.3-fix-warning.patch 450
 MD5 e8298db8d15de50d701f0cdcb29c86c7 files/qpage-3.3-gentoo.patch 1764
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d0ff60d1bb8a17b07b5e3f401bf20114 qpage-3.3.ebuild 1704
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2aYlSENan+PfizARArgFAJ9zXofJQF96tvEZSwxbEHK+s3QDXACfaqSk
-NRNgwpg6iU4rbsAqZDY3GwA=
-=8eMS
------END PGP SIGNATURE-----
+MD5 d503fdfef32e9fb7b9713c6a51c46f9b qpage-3.3.ebuild 1741
