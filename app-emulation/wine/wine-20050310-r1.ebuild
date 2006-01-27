@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050310-r1.ebuild,v 1.13 2006/01/27 00:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050310-r1.ebuild,v 1.14 2006/01/27 00:42:07 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -83,6 +83,7 @@ src_unpack() {
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/wine-20050310-upstream-colortable.patch #88715
 	epatch "${FILESDIR}"/wine-no-ssp.patch #66002
+	epatch "${FILESDIR}"/wine-20050725-gcc-32bit.patch
 	epatch "${FILESDIR}"/wine-20050930-dont-warn-lib-path.patch #107971
 	epatch "${FILESDIR}"/wine-cvs-winelauncher-temp.patch #101773
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785

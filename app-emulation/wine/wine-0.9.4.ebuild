@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.4.ebuild,v 1.6 2006/01/27 00:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.4.ebuild,v 1.7 2006/01/27 00:42:07 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -85,6 +85,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/wine-no-ssp.patch #66002
+	epatch "${FILESDIR}"/wine-20050830-gcc-32bit.patch
 	epatch "${FILESDIR}"/${P}-null-thread-check.patch
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
