@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.2.8.20051203.ebuild,v 1.1 2005/12/12 08:10:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.2.8.20051203.ebuild,v 1.2 2006/01/27 01:46:29 robbat2 Exp $
 
 inherit eutils flag-o-matic versionator linux-info
 
 MY_PV="$(replace_version_separator 3 '-' )"
 MY_P="${PN}-${MY_PV}"
-DESCRIPTION="IPset tool for iptables, successor to ippool."
+DESCRIPTION="IPset userspace tool for iptables, successor to ippool."
 HOMEPAGE="http://people.netfilter.org/kadlec/ipset/"
 SRC_URI="${HOMEPAGE}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
