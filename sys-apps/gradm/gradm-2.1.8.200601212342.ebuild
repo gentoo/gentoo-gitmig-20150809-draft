@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.5.200504081812.ebuild,v 1.4 2006/01/27 01:27:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.8.200601212342.ebuild,v 1.1 2006/01/27 01:27:59 solar Exp $
 
-inherit flag-o-matic toolchain-funcs versionator
+inherit flag-o-matic toolchain-funcs eutils versionator
 
 myPV="$(replace_version_separator 3 -)"
 
@@ -13,12 +13,13 @@ SRC_URI="http://www.grsecurity.net/gradm-${myPV}.tar.gz"
 #RESTRICT=primaryuri
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~arm ~amd64 ~ppc64 ~ia64 ~mips ~alpha"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="pam"
 RDEPEND=""
 DEPEND="virtual/libc
 	sys-devel/bison
 	sys-devel/flex
+	pam? ( virtual/pam )
 	|| (
 		sys-apps/paxctl
 		sys-apps/chpax
@@ -26,8 +27,18 @@ DEPEND="virtual/libc
 
 S="${WORKDIR}/${PN}2"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/2.1.7.200511041858-non-lazy-bindings.patch
+}
+
 src_compile() {
-	emake OPT_FLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "compile problem"
+	local target=""
+	use pam || target="nopam"
+
+	emake ${target} CC="$(tc-getCC)" OPT_FLAGS="${CFLAGS}" || die "compile problem"
 }
 
 src_install() {
