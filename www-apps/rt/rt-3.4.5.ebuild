@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.3 2006/01/26 21:10:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.4 2006/01/27 00:25:27 rl03 Exp $
 
 inherit webapp eutils
 
@@ -223,7 +223,7 @@ src_install() {
 		fi
 		cd ${FILESDIR} && cp ${CONF} ${D}/${MY_HOSTROOTDIR}/${PF}/etc
 	fi
-	webapp_postinst_txt en ${FILESDIR}/${PN}/postinstall-en.txt
-	webapp_hook_script ${FILESDIR}/${PN}/reconfig
+	webapp_postinst_txt en ${FILESDIR}/${PV}/postinstall-en.txt
+	webapp_hook_script ${FILESDIR}/${PV}/reconfig
 	webapp_src_install
 }
