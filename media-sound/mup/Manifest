@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb61fa6ad5c68568e93e84593b7f9d33 ChangeLog 2166
+MD5 8c91483a1c80f061e10bbfe37148a69f ChangeLog 2265
 MD5 d73a9c5effa0eb340ee9eb4b799e32b8 files/4.6-gcc.patch 272
 MD5 234ec2d99e4c992ccc12fa76de885a0e files/5.0-beaming-bug.patch 928
 MD5 3cdff463ef32c2e7b16982e0db999cfa files/digest-mup-4.4 120
@@ -13,11 +13,11 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 2aa7f964e840bea93ea0ceb418be50ed mup-4.4.ebuild 2103
 MD5 41c3b17508896d4f8d030ffa37446b2a mup-4.6.ebuild 2134
 MD5 948103f2005dce62a32f289b0981a282 mup-5.0.ebuild 2119
-MD5 08158847e2c08c60947d6927304f6976 mup-5.1.ebuild 2182
+MD5 fa7e06c6e7cf9511e26c533d9752511f mup-5.1.ebuild 2212
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD2PCkQlM6RnzZP+IRAr1dAJ9zOpnQ282WOYBzHr4KvyX8nuJ02QCfaBYM
-xpA2seS6FRVBdymiplMI2Tg=
-=/BcE
+iD8DBQFD2msGQlM6RnzZP+IRAvpJAJoDpqhQa7FMMm3jK1Im5xTdgHXG0QCfUEUM
+UrQrwYvl1vlaw3uK/Z5D/cU=
+=rMqF
 -----END PGP SIGNATURE-----

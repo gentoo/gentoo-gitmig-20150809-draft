@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.1.ebuild,v 1.2 2006/01/26 15:53:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.1.ebuild,v 1.3 2006/01/27 18:48:23 ticho Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,21 +8,18 @@ DESCRIPTION="Program for printing music scores"
 HOMEPAGE="http://www.arkkra.com/"
 SRC_URI="ftp://ftp.arkkra.com/pub/unix/mup${PV//.}src.tar.gz
 	ftp://ftp.arkkra.com/pub/unix/mup${PV//.}doc.tar.gz"
-
+#"
 LICENSE="Arkkra"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X svga"
 
-DEPEND="X? ( || (
-					(
-						x11-proto/xproto
-						x11-libs/libX11
-					)
-					virtual/x11
-				)
-			)
-	svga? ( >=media-libs/svgalib-1.4.3 )"
+RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
+	svga? ( >=media-libs/svgalib-1.4.3 )
+	virtual/libc"
+
+DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
