@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmapi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.27 2005/11/29 02:22:43 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.28 2006/01/27 00:57:21 vapier Exp $
+
+*dmapi-2.2.3 (27 Jan 2006)
+
+  27 Jan 2006; Mike Frysinger <vapier@gentoo.org> +dmapi-2.2.3.ebuild:
+  Version bump.
 
   29 Nov 2005; Mike Frysinger <vapier@gentoo.org>
   +files/dmapi-2.2.1-only-symlink-when-needed.patch, dmapi-2.2.1.ebuild:
