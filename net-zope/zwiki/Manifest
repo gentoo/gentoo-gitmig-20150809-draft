@@ -6,9 +6,9 @@ MD5 1504cc1bd90a6d701f361b8e0d5e7c7a files/digest-zwiki-0.44 61
 MD5 0334460f21a3fcfd2f4dc8cf3a40f060 files/digest-zwiki-0.45 61
 MD5 b44a801a088c7c842d189f78d6fd1684 files/digest-zwiki-0.48 61
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 45f730490932542b23d6064ac9763be6 zwiki-0.37.ebuild 483
-MD5 067b393c127dccc0a8bec1e1a39773ee zwiki-0.40.ebuild 483
-MD5 9cd6146a73292805c2ffff0494126eeb zwiki-0.42.ebuild 515
-MD5 ae23ac1e69621b1fd0611525a735d44a zwiki-0.44.ebuild 516
-MD5 06755b9f06ffda4471f33a7afc6e4a2e zwiki-0.45.ebuild 516
-MD5 5cee707075d12f061a05ba5812b51df3 zwiki-0.48.ebuild 516
+MD5 4b9a960f22347e3bd28805074d2383c5 zwiki-0.37.ebuild 466
+MD5 12d141cc8f46256f2c3badf39005f600 zwiki-0.40.ebuild 466
+MD5 6ef142cebe177219d11895c90b2fa5c0 zwiki-0.42.ebuild 486
+MD5 fe7ad8eb44901317e9ae80038cb25bd6 zwiki-0.44.ebuild 487
+MD5 b4cb991539bf50af83e8a55d678c5b48 zwiki-0.45.ebuild 487
+MD5 0293aee17ecf475a288a46033efb18ab zwiki-0.48.ebuild 487

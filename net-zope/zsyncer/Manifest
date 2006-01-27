@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2258a72fc8b91e40b834e1ae84645d9 zsyncer-0.6.1.ebuild 542
 MD5 fa671f723f66b5fdf93616acd39089f9 ChangeLog 289
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 f2a317e0dba55419c6459eb1fc133505 files/digest-zsyncer-0.6.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakmII1lqEGTUzyQRAovyAJ9TZp6La9saPFo2mM9OHBrJtmK6BgCfYRNK
-XUcc6LYcA0jd6svYS0+g52U=
-=ImLl
------END PGP SIGNATURE-----
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 6557a01008e905df9d306468abe92014 zsyncer-0.6.1.ebuild 525

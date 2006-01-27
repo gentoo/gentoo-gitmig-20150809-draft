@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 456ab907885bf14dc10844d1a5d71a3e plonecollectorng-1.2.6.ebuild 694
-MD5 a6d86e729ad7d53469275a1a9b4694fd plonecollectorng-1.2.3.ebuild 699
-MD5 006c82632d95cd60403a79be68452f8b plonecollectorng-1.2.2.ebuild 699
 MD5 ef268ebf5fcb3c9772f5704e496e26fb ChangeLog 850
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 683d8faeaa24514bd79856b6b525d684 files/digest-plonecollectorng-1.2.2 74
 MD5 54b62f0b3423589a29af97f1710fe416 files/digest-plonecollectorng-1.2.3 74
 MD5 8b0d63ad9f44cf392056e1165204fa2e files/digest-plonecollectorng-1.2.6 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe4WxI1lqEGTUzyQRAo3aAJ0QPO0lqRAJCMY5EMgcCq0flCyrSwCfeA/P
-dN67qEC5moyf3pri7/ibvL4=
-=XlWF
------END PGP SIGNATURE-----
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 c43ebb2302954d2df5a014edf4e52a00 plonecollectorng-1.2.2.ebuild 681
+MD5 33d708a9730e937dec5fc964f3ce28bd plonecollectorng-1.2.3.ebuild 681
+MD5 3a6471892f9771416a6d54316895a000 plonecollectorng-1.2.6.ebuild 673

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0d8206842083580d7102531d84af7254 calendarx-0.4.15.ebuild 641
-MD5 9c8455228fa21f2ec95ef3ff76bdd613 calendarx-0.6.0.ebuild 651
 MD5 89b06d88886e68291ad27b1a0bdf5169 ChangeLog 617
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 68bf1f6178e03200a196bbe515eb5be6 files/digest-calendarx-0.6.0 67
+MD5 46a197c9968d57b25a47ddab7e2d9488 calendarx-0.4.15.ebuild 624
+MD5 e1d0d475a9437a82d68eda7249a79ad6 calendarx-0.6.0.ebuild 630
 MD5 21a2938f905b10b3210f9d1d313661ec files/digest-calendarx-0.4.15 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCckZu06ebR+OMO78RAi1lAJwObGcUdv+F3P7p2E+BlXr7+VJNfACeNZCz
-zO5kAdqnsmN7licpklD++wA=
-=7JfN
------END PGP SIGNATURE-----
+MD5 68bf1f6178e03200a196bbe515eb5be6 files/digest-calendarx-0.6.0 67
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161

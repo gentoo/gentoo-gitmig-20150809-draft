@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d78eb591643f71cf73754af70d6f3369 cmfcollectorng-0.20.ebuild 790
 MD5 89252c06bc8b9d7129db17beacea4a9e ChangeLog 1058
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 2b9036b661578e470b44411a7f10e71d cmfcollectorng-0.20.ebuild 776
 MD5 5c750ae965064848a19d06a90199a85a files/digest-cmfcollectorng-0.20 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBooAtI1lqEGTUzyQRAuaRAJ9ETomSfzoUzEtc3uERvEirKBenzQCgqE4D
-ROQRrfmMToPwBcmowiDfeBk=
-=vcQi
------END PGP SIGNATURE-----
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
