@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/ifp-gnome
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ChangeLog,v 1.1 2006/01/27 15:49:27 chutzpah Exp $
+
+*ifp-gnome-0.7 (27 Jan 2006)
+
+  27 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/ifp-gnome-0.7-file-locations.patch, +metadata.xml,
+  +ifp-gnome-0.7.ebuild:
+  Initial revision.
+
