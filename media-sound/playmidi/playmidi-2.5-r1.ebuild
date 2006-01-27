@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5-r1.ebuild,v 1.2 2006/01/27 18:40:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5-r1.ebuild,v 1.3 2006/01/27 22:11:28 ticho Exp $
 
 IUSE="svga X gtk"
 
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/ncurses
 	gtk? ( =dev-libs/glib-1*
 		=x11-libs/gtk+-1* )
 	X? ( || ( ( x11-libs/libX11
-				x11-libs/libICE
+				x11-libs/libSM
 				x11-libs/libXaw )
 			virtual/x11 ) )"
 DEPEND="${RDEPEND}
