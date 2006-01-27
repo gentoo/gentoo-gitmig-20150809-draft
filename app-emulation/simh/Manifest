@@ -1,7 +1,19 @@
-MD5 f74d633296503b0ddecebd61760b4311 simh-3.5.0.ebuild 1131
-MD5 38e799a79ed7992f527d662e4b4e1df4 simh-3.3.0.ebuild 1115
-MD5 7c76ea3d5a473643f61337d862ee2efb ChangeLog 741
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 1dc0c3f3a27cb7fb307f8d027cb65f85 files/makefile.patch 383
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d01e17c3bbed5fa1f39e6159e644b6de ChangeLog 854
 MD5 ff5b80de0c6ccbeb7007cd208b3882d1 files/digest-simh-3.3.0 59
 MD5 106dbb8bf6477a1d79d4eced5719a9a8 files/digest-simh-3.5.0 59
+MD5 9f9d5fb80195ba128486b4826de4dd25 files/digest-simh-3.5.2 59
+MD5 1dc0c3f3a27cb7fb307f8d027cb65f85 files/makefile.patch 383
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 38e799a79ed7992f527d662e4b4e1df4 simh-3.3.0.ebuild 1115
+MD5 f74d633296503b0ddecebd61760b4311 simh-3.5.0.ebuild 1131
+MD5 35bd52c6a4b8ca792982f0c760df4a10 simh-3.5.2.ebuild 1128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2YRM2+ySkm8kpY0RApC7AJ0UQua2Pkac+yBJ881/hxh/c9hIuwCeLWCf
+xq05VSZCxmVeJcQWgbicfJE=
+=IMxm
+-----END PGP SIGNATURE-----
