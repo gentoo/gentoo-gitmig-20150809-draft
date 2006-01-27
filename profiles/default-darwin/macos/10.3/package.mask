@@ -4,7 +4,6 @@
 ##
 app-arch/zip
 app-arch/unzip
-app-editors/nano
 app-editors/vim-core
 app-editors/vim
 >=app-portage/esearch-0.7.1
@@ -49,7 +48,7 @@ x11-libs/gtk+
 # a separate location so the package does not cause a collision.
 # Nonetheless, cpio is part of System, and we don't want it pulled in
 # for users of this profile
-app-arch/cpio
+#app-arch/cpio
 
 # libidn needs java-config.  This one is not yet ported, so as long as
 # thre is no solution for that it is masked
