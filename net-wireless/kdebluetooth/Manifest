@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1eb6fb271c90203c535da1cb3edf0159 ChangeLog 5990
+MD5 d058c9d78dbbe174395cc0cb72d75911 ChangeLog 6096
 MD5 8cc409d86fe7e8cdbe634fd6a075797d files/digest-kdebluetooth-0.99_beta1-r1 76
 MD5 65837e8b7c7f001267c9139f49051cd2 files/digest-kdebluetooth-1.0_beta1 75
 MD5 b30c15ec6f9c1af8e6b502ab3f39c368 kdebluetooth-0.99_beta1-r1.ebuild 1614
-MD5 f5448a39fc1e9d6015c33c5b9bbfc334 kdebluetooth-1.0_beta1.ebuild 1661
+MD5 0ad9c9b635013fa0378ec2cdae6fe665 kdebluetooth-1.0_beta1.ebuild 1660
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDqwaJKRy60XGEcJIRAku3AJ0ebmrtzPsvGt2aSrQ5KRp8DSXUjgCeKZXn
-QvFJ6FsLVVqVtyKhtxO4FnA=
-=wc1t
+iD8DBQFD2h2gKRy60XGEcJIRAszHAJ9qVn3hbPTKyqvVcx0QdeQugyUYowCghmpu
+QQJMdwYhKsIGfJbFoyPqB3k=
+=YBas
 -----END PGP SIGNATURE-----
