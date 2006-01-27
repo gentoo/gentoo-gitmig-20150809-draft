@@ -7,3 +7,4 @@ move gnome-extra/libgtkhtml gnome-extra/gtkhtml
 move dev-util/screem app-editors/screem
 move dev-libs/ice dev-cpp/ice
 move dev-embedded/channelgen dev-tinyos/channelgen
+move sys-apps/qpage app-admin/qpage
