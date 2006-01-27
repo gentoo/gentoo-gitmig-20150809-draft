@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/mini-qmail
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.5 2004/07/20 14:03:37 tomk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.6 2006/01/27 03:42:08 vapier Exp $
+
+*mini-qmail-1.05-r1 (27 Jan 2006)
+
+  27 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +mini-qmail-1.05-r1.ebuild:
+  Touchup the build system to build just the mini parts and not require any
+  qmail users #114818 by rhumbliner.
 
   20 Jul 2004; <tomk@gentoo.org> mini-qmail-1.05.ebuild:
   Added third party mirror to SRC_URI
