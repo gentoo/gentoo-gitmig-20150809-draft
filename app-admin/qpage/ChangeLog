@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qpage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.1 2006/01/27 20:13:06 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.2 2006/01/27 20:34:42 chutzpah Exp $
+
+  27 Jan 2006; Patrick McLean <chutzpah@gentoo.org> ChangeLog:
+  Move package from sys-apps to app-admin.
 
   27 Jan 2006; Patrick McLean <chutzpah@gentoo.org> metadata.xml,
   qpage-3.3.ebuild:
