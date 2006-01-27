@@ -1,0 +1,7 @@
+MD5 0e80bd5c8627844caa6008abba72c1ed ChangeLog 1153
+MD5 55f62becd8c8b17a893657b3f59d4aa5 files/digest-qpage-3.3 60
+MD5 c83c7ad21cc06145316f2725e8d07cbf files/qpage 671
+MD5 077fe753878522de473c0cb19c9274d8 files/qpage-3.3-fix-warning.patch 450
+MD5 e8298db8d15de50d701f0cdcb29c86c7 files/qpage-3.3-gentoo.patch 1764
+MD5 f0e8b0db5b7b6d8d44fe7ef60c954f1b metadata.xml 627
+MD5 40deacabfc68fc24a8ca9ab7194b518c qpage-3.3.ebuild 1759

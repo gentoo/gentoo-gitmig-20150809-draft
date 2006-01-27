@@ -1,0 +1,30 @@
+# ChangeLog for sys-apps/qpage
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.1 2006/01/27 20:13:06 chutzpah Exp $
+
+  27 Jan 2006; Patrick McLean <chutzpah@gentoo.org> metadata.xml,
+  qpage-3.3.ebuild:
+  Take over maintainership of package, update metadata.xml and minor
+  description fix.
+
+  27 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/qpage-3.3-fix-warning.patch, qpage-3.3.ebuild:
+  Trivial compile warning fix. Thanks to Thomas Cort for the patch
+  (see bug #120195).
+
+  27 Jan 2006; Joshua Jackson <tsunam@gentoo.org> qpage-3.3.ebuild:
+  Stable on x86; thanks to Thomas Cort for testing
+
+  24 Jan 2006; Patrick McLean <chutzpah@gentoo.org> qpage-3.3.ebuild:
+  added ~amd64 keyword, updated copyright header.
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> qpage-3.3.ebuild:
+  don't use deprecated ?: use syntax
+
+*qpage-3.3 (08 Aug 2003)
+
+  08 Aug 2003; Aron Griffis <agriffis@gentoo.org> qpage-3.3.ebuild,
+  files/qpage, files/qpage-3.3-gentoo.patch:
+  Initial import.  Ebuild submitted by Mark Wagner <mark@lanfear.net>
+  in bug 19961.
+
