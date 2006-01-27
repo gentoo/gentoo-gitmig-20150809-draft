@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.16 2005/12/29 12:30:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.17 2006/01/27 01:05:51 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -21,7 +21,7 @@ fi
 
 MY_P=uClibc-${PV}
 SVN_VER=""
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -37,8 +37,8 @@ LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="-* ~arm ~m68k -mips ~ppc sh ~sparc ~x86"
-IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen userlocales wordexp"
+KEYWORDS="-* arm m68k -mips ppc sh sparc x86"
+IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen savedconfig userlocales wordexp"
 RESTRICT="nostrip"
 
 RDEPEND=""
@@ -318,6 +318,22 @@ src_unpack() {
 		echo "SSP_QUICK_CANARY=y" >> .config
 		echo "UCLIBC_BUILD_SSP=n" >> .config
 		echo "UCLIBC_BUILD_NOW=n" >> .config
+	fi
+
+	# Allow users some custom control over the config
+	if use savedconfig ; then
+		[[ -r .config ]] && rm .config
+		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
+			configfile=${ROOT}/etc/${PN}/${CTARGET}/${conf}.config
+			einfo "Checking existence of ${configfile} ..."
+			[[ -r ${configfile} ]] || configfile=/etc/${PN}/${CHOST}/${conf}.config
+			if [[ -r ${configfile} ]] ; then
+				cp "${configfile}" "${S}"/.config
+				einfo "Found your ${configfile} and using it."
+				einfo "Note that this feature is *totally unsupported*."
+				break
+			fi
+		done
 	fi
 
 	# setup build and run paths
