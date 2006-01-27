@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.0.ebuild,v 1.1 2006/01/20 17:28:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.0.ebuild,v 1.2 2006/01/27 20:50:28 dang Exp $
 
 inherit eutils gnome2
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.gnome.org/projects/evince/"
 LICENSE="GPL-2"
 
 # TODO: Use 'gnome' flag instead of 'nautilus'
-IUSE="dbus doc dvi nautilus t1lib tiff"
+IUSE="dbus djvu doc dvi nautilus t1lib tiff"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="
 	dvi? (
@@ -32,6 +32,7 @@ RDEPEND="
 	nautilus? ( >=gnome-base/nautilus-2.10 )
 	>=x11-libs/gtk+-2.8
 	gnome-base/gnome-keyring
+	djvu? ( >=app-text/djvu-3.5.15 )
 	virtual/ghostscript"
 
 DEPEND="${RDEPEND}
@@ -51,9 +52,10 @@ ELTCONF="--portage"
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
 		--enable-comics		\
+		$(use_enable dbus)  \
+		$(use_enable djvu)  \
 		$(use_enable dvi)   \
 		$(use_enable t1lib) \
-		$(use_enable dbus)  \
 		$(use_enable tiff)  \
 		$(use_enable nautilus)"
 
