@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/gtkhtml-sharp-2.8.0.ebuild,v 1.1 2006/01/27 02:47:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/gtkhtml-sharp-2.8.0.ebuild,v 1.2 2006/01/27 16:41:58 latexer Exp $
 
 inherit gtk-sharp-component
 
@@ -12,6 +12,7 @@ DEPEND="${DEPEND}
 		=dev-dotnet/gnome-sharp-${PV}*
 		=dev-dotnet/art-sharp-${PV}*
 		|| (
+			=gnome-extra/gtkhtml-3.8*
 			=gnome-extra/gtkhtml-3.6*
 			=gnome-extra/gtkhtml-3.2*
 			=gnome-extra/gtkhtml-3.0.10*
