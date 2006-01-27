@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 036d5eb266035391e73296105e2fac58 ChangeLog 2865
+MD5 1751065b5df047361e71a0d706f3e4d8 ChangeLog 2966
 MD5 e57eeeaa5f1529988b95c2c2a23d8ba5 PEAR-Mail-1.1.4.ebuild 446
 MD5 d66beedfc1674121dffde40ce65133e8 PEAR-Mail-1.1.6.ebuild 457
-MD5 7abe6b13e35b14fc21e36dbc6a4c9a27 PEAR-Mail-1.1.9.ebuild 434
+MD5 7520196e6afb49ffda66a47197984e9a PEAR-Mail-1.1.9.ebuild 437
 MD5 195e282fe659ef03e3a563c9e6a41f52 files/digest-PEAR-Mail-1.1.4 58
 MD5 cbeb194bbd13e2f75261f77a7a83be39 files/digest-PEAR-Mail-1.1.6 58
 MD5 1c9acda21c769d47aef6fcfd357b4e9e files/digest-PEAR-Mail-1.1.9 58
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFD1CgOugEuf3OQ0akRAnyrAJdoeVT5o+IVZkXGVeCU1H/wH1+xAJ4uqAGg
-4NU+ZQWDNmkNQWkCDxPXnA==
-=Gks8
------END PGP SIGNATURE-----
