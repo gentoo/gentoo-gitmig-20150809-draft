@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.9 2005/11/12 22:23:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.10 2006/01/27 02:32:58 vanquirius Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,13 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 IUSE=""
 
-S=${WORKDIR}
+S="${WORKDIR}"
+
+src_unpack() {
+	unpack ${A}
+	# bug 117547 - gcc4
+	epatch "${FILESDIR}"/${PN}-5.2.1-ubuntu-gcc4.patch
+}
 
 src_compile() {
 	# -O3 causes segfaults
