@@ -8,3 +8,6 @@ nvidia
 
 # dev-db/oracle-instantclient-basic is only available on x86
 oci8-instant-client
+
+# net-libs/osptoolkit is only available on x86 (used by asterisk, bug 115798)
+osp
