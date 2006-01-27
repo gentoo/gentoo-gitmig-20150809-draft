@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.1-r1.ebuild,v 1.1 2006/01/26 20:34:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.1-r1.ebuild,v 1.2 2006/01/27 05:42:08 tsunam Exp $
 
 inherit wxlib gnuconfig
 
@@ -8,7 +8,7 @@ DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit and
 wxbase non-gui library"
 
 SLOT="2.6"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="gnome gtk2 joystick odbc opengl sdl wxgtk1"
 RDEPEND="${RDEPEND}
 	opengl? ( virtual/opengl )
