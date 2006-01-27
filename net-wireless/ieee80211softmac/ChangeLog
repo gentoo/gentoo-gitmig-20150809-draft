@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ieee80211softmac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ChangeLog,v 1.3 2006/01/10 18:02:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ChangeLog,v 1.4 2006/01/27 16:21:18 pylon Exp $
+
+  27 Jan 2006; Lars Weiler <pylon@gentoo.org>
+  ieee80211softmac-0.1-r20060105.ebuild:
+  Added suspend2-sources to the dependency list.
 
   10 Jan 2006; <dang@gentoo.org> ieee80211softmac-0.1-r20060105.ebuild:
   Marked ~amd64
