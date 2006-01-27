@@ -1,9 +1,0 @@
---- loader/Makefile.in
-+++ loader/Makefile.in
-@@ -21,5 +21,6 @@
- 
- @MAKE_RULES@
-+CFLAGS += -fno-pic -fno-stack-protector
- 
- LIBPTHREAD  = @LIBPTHREAD@
- LDEXECFLAGS = @LDEXECFLAGS@

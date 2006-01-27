@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ee8efa996e4101ca01fc18eaf1b233c ChangeLog 22653
+MD5 b288433532b46ce839f37c7ab19de3b3 ChangeLog 23222
 MD5 fb8724a36ec3bef0ad3a3c36376b786a files/digest-wine-0.9 63
 MD5 d46df5add2535f22ad43db8247d7a45b files/digest-wine-0.9.1 65
 MD5 cc82e89428aa4f49f2f2ab3544488c02 files/digest-wine-0.9.2 65
@@ -23,7 +23,6 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-wine-9999 0
 MD5 491474e73029992d0fd9b888d0d1b4ce files/wine-0.9.4-null-thread-check.patch 878
 MD5 125d70d60f356673616cf1effa73d5d1 files/wine-0.9.6-force-ddraw-gamma.patch 862
 MD5 138d22e6669e8997cdf4dc6292db748d files/wine-20041019-alsa-headers.patch 448
-MD5 bcce3a9782f7fdfae1035b456e394ce2 files/wine-20041019-no-stack.patch 180
 MD5 32c5bd022b8547d02b07517dd7a9bc02 files/wine-20050111-upstream-registry-fix.patch.bz2 13584
 MD5 3e8110a5c409098abadc38cee8f440f7 files/wine-20050211-docs.patch 642
 MD5 45243901331840c35f12426a17b31bd2 files/wine-20050310-upstream-colortable.patch 1546
@@ -35,31 +34,32 @@ MD5 d2a0eccb86ce76caa334965b6bdd9251 files/wine-20050930-dont-warn-lib-path.patc
 MD5 c3bac6bd0a3c6a35aaaae8c7888c30f3 files/wine-20050930-no-x.patch 601
 MD5 e1f0b4cbd720c0f77c445d370c0c3b46 files/wine-cvs-winelauncher-temp.patch 1007
 MD5 46ecb0d10e6a2ad66abeb0a2d6dd0a3d files/wine-hangfix-bug2660.patch 476
+MD5 a4727870f6da9ca5370ba0263e220f49 files/wine-no-ssp.patch 676
 MD5 68927499c968ed305a0f5125fb3b7d19 files/wine-wmf.patch 857
 MD5 1668a758aa2007cb99a773b3c5c844c9 files/winearts-kdecvs-fix.patch 325
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
-MD5 6dd5b36cc358ea23d97aa38c8c94a520 wine-0.9.1.ebuild 4150
-MD5 1dab11f89e3d7f4b10bd789bed7d0265 wine-0.9.2.ebuild 4150
-MD5 7631647054ad75a7482c54627b6bc6c0 wine-0.9.3.ebuild 4150
-MD5 05dad88ebc41ff704ccae477c247cbcf wine-0.9.4.ebuild 4201
-MD5 eb706be561b681a9fa0b68ee46e0f095 wine-0.9.5-r1.ebuild 4153
-MD5 899c0866cff91c999e4d24346b01467c wine-0.9.6.ebuild 4180
-MD5 034954140861812f7f678c15391019ba wine-0.9.ebuild 4148
-MD5 901fdaa0cd066cc44ee555ae51e334de wine-20041019-r3.ebuild 3505
-MD5 f70a71dc17b70bded5afc14ac1dd0c7d wine-20050111-r2.ebuild 3647
-MD5 361a9c1394f0ded7bd9a22f24b3e608a wine-20050211.ebuild 4150
-MD5 d32ccd4e240ccdc9271094fd7b52d185 wine-20050310-r1.ebuild 4250
-MD5 835c76a51fd05d0dcc10011048404a56 wine-20050419.ebuild 4190
-MD5 713d0daa395d9cab0d78cb6d0a37372d wine-20050524.ebuild 4253
-MD5 f80914d2c8fe3a11322f3420036e4f2b wine-20050628.ebuild 4254
-MD5 90cc9832c7629f1c96ccf3f46c8c6b3e wine-20050725-r1.ebuild 4304
-MD5 f7c66332c79a2b4da16a88dd2b54e22d wine-20050830.ebuild 4288
-MD5 6fe3fa571face8f4ae589cda0618fc26 wine-20050930.ebuild 4257
-MD5 1755d1d5e576c6a1c9c567f380843050 wine-9999.ebuild 4171
+MD5 9e988b9d7974d8d496108ab7d3e353f2 wine-0.9.1.ebuild 4139
+MD5 b9eff914ba660a215f9b6888a4487be4 wine-0.9.2.ebuild 4139
+MD5 bcd1daeed62677d7d025f36b9c9604d3 wine-0.9.3.ebuild 4139
+MD5 f066443f1d60dca6180bbf5dc7026404 wine-0.9.4.ebuild 4190
+MD5 23b6bcd8c8e5289045767a7efba5a906 wine-0.9.5-r1.ebuild 4142
+MD5 9b8d3b13dde00aac76619be9c363137b wine-0.9.6.ebuild 4169
+MD5 5b0219682a1f79cb46f55c8360e50889 wine-0.9.ebuild 4137
+MD5 f309bdd3f92cbd1c5c6e09a4a68c0441 wine-20041019-r3.ebuild 3494
+MD5 59efeb5f12b2323197e284d344eae34b wine-20050111-r2.ebuild 3636
+MD5 aead3d19df6656469ee2168f15ad39b6 wine-20050211.ebuild 4139
+MD5 8ecf462dc40670c3dcd0fb9c1ac822b0 wine-20050310-r1.ebuild 4239
+MD5 7832679823ce23d29c567af5269cb4a5 wine-20050419.ebuild 4179
+MD5 3c7bf58ba3c7b03f352f48e8c798acdd wine-20050524.ebuild 4242
+MD5 e50cd69e7957a2857e481c858d1949b8 wine-20050628.ebuild 4243
+MD5 fef3b6e6e1be2cd62696496c3def906e wine-20050725-r1.ebuild 4293
+MD5 e7508dd444c69b42cd58a3e7d3fcb650 wine-20050830.ebuild 4277
+MD5 d689a6f1cd379dc3d033bfc66f76c687 wine-20050930.ebuild 4247
+MD5 682d2be1b51759df59002719bfe25346 wine-9999.ebuild 4113
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1sDj2+ySkm8kpY0RAgXAAJ48kNz7ZVvI7Nmw1EptwL9zYB2hkgCfVSdc
-Ba7XJaZofo5UuBCAfdfjpX8=
-=5yA7
+iD8DBQFD2WrD2+ySkm8kpY0RAqxQAKC77xY75hC6UREpZz/UKrH7u7BCVACdGyP7
+qqZtaJgyUsDY9IV6OA0kzEE=
+=800q
 -----END PGP SIGNATURE-----
