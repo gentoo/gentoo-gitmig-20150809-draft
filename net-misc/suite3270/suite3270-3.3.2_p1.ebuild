@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.6 2006/01/26 06:32:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.7 2006/01/27 00:45:19 mr_bones_ Exp $
 
 IUSE="tcltk X cjk ssl debug"
 
@@ -22,9 +22,9 @@ RDEPEND="X? ( || ( x11-libs/libXaw virtual/x11 ) )
 		ssl? ( dev-libs/openssl )
 		cjk? ( dev-libs/icu )"
 DEPEND="${RDEPEND}
-		X? ( || ( ( app-text/rman 
-					x11-misc/imake 
-					x11-proto/xproto ) 
+		X? ( || ( ( app-text/rman
+					x11-misc/imake
+					x11-proto/xproto )
 				virtual/x11 ) )
 		sys-apps/sed
 		sys-apps/grep"
