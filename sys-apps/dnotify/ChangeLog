@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dnotify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.20 2006/01/27 15:41:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.21 2006/01/27 17:35:52 blubb Exp $
+
+  27 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  +files/dnotify-0.18.0-nls.patch, dnotify-0.18.0.ebuild:
+  fix problem stated in bug 118108 comment 6
 
   27 Jan 2006; Simon Stelling <blubb@gentoo.org> dnotify-0.18.0.ebuild:
   stable on amd64

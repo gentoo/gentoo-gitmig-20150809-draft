@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.18.0.ebuild,v 1.7 2006/01/27 15:41:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.18.0.ebuild,v 1.8 2006/01/27 17:35:52 blubb Exp $
+
+inherit eutils
 
 DESCRIPTION="Execute a command when the contents of a directory change"
 HOMEPAGE="http://oskarsapps.mine.nu/dnotify.html"
@@ -12,6 +14,13 @@ KEYWORDS="amd64 mips ppc -sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-nls.patch
+}
 
 src_compile() {
 	econf $(use_enable nls) || die "failed to configure"
