@@ -1,6 +1,7 @@
-MD5 bfca8ed41a2f16172aebbed9b65777f8 ChangeLog 10793
+MD5 97694873f96cd166aa4d61474161b1c3 ChangeLog 10903
 MD5 f36308ba7cbae244f796a734dda27867 blender-2.36-r1.ebuild 3314
 MD5 c76d8dc03adc519e284aac863059f8eb blender-2.40.ebuild 3475
+MD5 7f9b982f4d80a129cae771766e94be46 blender-2.41.ebuild 3470
 MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
 MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
 MD5 bcc3b86202d4c6bb85ef9cef08bfcf9e files/blender-2.37-dirs.patch 725
@@ -12,4 +13,5 @@ MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
 MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
 MD5 8637d60394b1e58d4f4c0fe4b71865fa files/digest-blender-2.40 65
+MD5 595a9f3015d93ffaf7ad2cef48f3b3d9 files/digest-blender-2.41 65
 MD5 493f38fb63d60a1ce275fdd2ea43d6e9 metadata.xml 587
