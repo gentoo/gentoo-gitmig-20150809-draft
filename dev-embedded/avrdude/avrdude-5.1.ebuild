@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.1.ebuild,v 1.1 2006/01/24 13:49:15 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.1.ebuild,v 1.2 2006/01/27 23:53:18 dragonheart Exp $
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
@@ -20,6 +20,11 @@ DEPEND="doc? ( app-text/texi2html
 		sys-devel/bison
 		sys-devel/flex
 		${RDEPEND}"
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	rm lexer.c config_gram.c config_gram.h
+}
 
 src_compile() {
 	econf $(use_enable doc) || die "econf failed"
