@@ -3,4 +3,4 @@ MD5 165cdde955fa7f445d03005d25665e20 files/digest-openobex-1.0.0 66
 MD5 a577e794f16a7f437408fcbd5861b9ed files/digest-openobex-1.0.1 66
 MD5 04575f2be24f9d061c624e41b93d0394 metadata.xml 414
 MD5 aaf22cbbc6d71ac9d9475ce10b34ed74 openobex-1.0.0.ebuild 615
-MD5 a0212a8fd7ef821126d2093612d7e10f openobex-1.0.1.ebuild 911
+MD5 b1fe0220e290db877f78f6c5996bcd76 openobex-1.0.1.ebuild 914

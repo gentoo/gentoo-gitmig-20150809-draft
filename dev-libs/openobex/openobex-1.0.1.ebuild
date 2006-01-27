@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.20 2006/01/26 14:29:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.21 2006/01/27 00:43:52 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 hppa ppc ppc64 sparc x86"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	gnuconfig_update
 }
 
