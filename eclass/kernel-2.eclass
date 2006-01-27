@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.156 2006/01/20 00:57:22 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.157 2006/01/27 00:28:27 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -956,6 +956,10 @@ kernel-2_src_unpack() {
 
 	[[ -n ${UNIPATCH_LIST} || -n ${UNIPATCH_LIST_DEFAULT} || -n ${UNIPATCH_LIST_GENPATCHES} ]] && \
 		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST_GENPATCHES} ${UNIPATCH_LIST}"
+
+	# allow ebuilds to massage the source tree after patching but before
+	# we run misc `make` functions below
+	type kernel-2_hook_premake > /dev/null && kernel-2_hook_premake
 
 	[[ -z ${K_NOSETEXTRAVERSION} ]] && unpack_set_extraversion
 	unpack_fix_docbook
