@@ -1,33 +1,32 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-1.0.6.ebuild,v 1.1 2004/07/24 22:56:26 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-1.0.6.ebuild,v 1.2 2006/01/27 02:41:36 vapier Exp $
 
 inherit zproduct
-S="${WORKDIR}/CMFPlone-${PV}"
 
-DESCRIPTION="A Zope Content Management System, based on Zope CMF."
+DESCRIPTION="A Zope Content Management System, based on Zope CMF"
 HOMEPAGE="http://plone.org"
 SRC_URI="mirror://sourceforge/plone/Plone-${PV}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
-IUSE=""
+KEYWORDS="~ppc ~x86"
+
 RDEPEND="=net-zope/cmf-1.3*
-	>=net-zope/formulator-1.2.0
-	${RDEPEND}"
+	>=net-zope/formulator-1.2.0"
+
+S=${WORKDIR}/CMFPlone-${PV}
 
 ZPROD_LIST="CMFPlone DCWorkflow"
 MYDOC="docs/NavigationTool.txt docs/SiteTypes.txt ${MYDOC}"
 
-src_install()
-{
+src_install() {
 	rm -R Formulator/
 	zproduct_src_install all
 }
 
 # Since i18n isn't a product folder, leaving it in $ZP_DIR/$PF.
 
-pkg_postinst()
-{
+pkg_postinst() {
 	zproduct_pkg_postinst
 	einfo "---> NOTE: i18n folder location: ${ZP_DIR}/${PF}"
 }

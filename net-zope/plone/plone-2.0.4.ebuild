@@ -1,17 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.6 2005/11/14 13:38:11 seemant Exp $
-
-SLOT="2.0"
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.7 2006/01/27 02:41:36 vapier Exp $
 
 inherit zproduct
 
-DESCRIPTION="A Zope Content Management System, based on Zope CMF."
+DESCRIPTION="A Zope Content Management System, based on Zope CMF"
 HOMEPAGE="http://plone.org"
 SRC_URI="mirror://sourceforge/plone/PloneBase-${PV}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
-IUSE=""
+SLOT="2.0"
+KEYWORDS="~amd64 ppc x86"
+
 RDEPEND=">=net-zope/cmf-1.4.7
 	>=net-zope/zope-2.7
 	>=net-zope/btreefolder2-1.0.1
@@ -27,7 +27,6 @@ RDEPEND=">=net-zope/cmf-1.4.7
 	>=net-zope/portaltransforms-1.0.4
 	>=net-zope/externaleditor-0.8
 	>=net-zope/epoz-0.8.2
-	>=app-admin/zope-config-0.4
-	${RDEPEND}"
+	>=app-admin/zope-config-0.4"
 
 ZPROD_LIST="CMFPlone"

@@ -1,20 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/verbosesecurity/verbosesecurity-0.6.ebuild,v 1.1 2005/01/13 20:56:11 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/verbosesecurity/verbosesecurity-0.6.ebuild,v 1.2 2006/01/27 02:49:08 vapier Exp $
 
 inherit zproduct eutils
 
 DESCRIPTION="Zope Product which explains the reason for denied security access"
 HOMEPAGE="http://hathawaymix.org/Software/VerboseSecurity"
 SRC_URI="${HOMEPAGE}/VerboseSecurity-${PV}.tar.gz"
-S="${WORKDIR}"
+
 LICENSE="GPL-2"
 KEYWORDS="~x86"
-ZPROD_LIST="VerboseSecurity"
-IUSE=""
 
-RDEPEND=">=net-zope/zope-2.7.0
-	${RDEPEND}"
+RDEPEND=">=net-zope/zope-2.7.0"
+
+S=${WORKDIR}
+
+ZPROD_LIST="VerboseSecurity"
 
 pkg_preinst() {
 	echo

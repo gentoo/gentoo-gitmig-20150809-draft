@@ -1,37 +1,31 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.6 2005/10/18 16:49:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.7 2006/01/27 02:52:56 vapier Exp $
 
 inherit eutils
 
 MYPN="ZopeX3"
-
-DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
+DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites"
 HOMEPAGE="http://www.zope.org"
 SRC_URI="http://www.zope.org/Products/${MYPN}/${PV}final/${MYPN}-${PV}.tgz"
+
 LICENSE="ZPL"
 SLOT="${PV}"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
-
-KEYWORDS="x86 ~ppc ~amd64"
 
 RDEPEND="=dev-lang/python-2.3*"
 python='python2.3'
 
 DEPEND="${RDEPEND}
-virtual/libc
->=sys-apps/sed-4.0.5"
+	virtual/libc
+	>=sys-apps/sed-4.0.5"
 
 S="${WORKDIR}/${MYPN}-${PV}"
 ZS_DIR=${ROOT%/}/usr/lib
 ZSERVDIR=${ZS_DIR}/${PN}-${PV}
 ZSKELDIR=${ZSERVDIR}/zopeskel
 ZINSTDIR=/var/lib/zope/${PN}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	./configure --prefix=${D}${ZSERVDIR} --with-python=/usr/bin/python2.3 || die "Failed to configure."

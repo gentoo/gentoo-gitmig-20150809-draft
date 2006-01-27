@@ -1,16 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.15 2005/07/09 16:06:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.16 2006/01/27 02:51:54 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
+DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites"
 HOMEPAGE="http://www.zope.org"
 SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
+
 LICENSE="ZPL"
 SLOT="${PV}"
-
-KEYWORDS="x86 sparc ppc ~alpha"
+KEYWORDS="~alpha ppc sparc x86"
 IUSE="unicode"
 
 # This is for developers that wish to test Zope with virtual/python.
@@ -102,7 +102,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc LICENSE.txt README.txt
+	dodoc README.txt
 	docinto doc ; dodoc doc/*.txt
 	docinto doc/PLATFORMS ; dodoc doc/PLATFORMS/*
 	docinto doc/changenotes ; dodoc doc/changenotes/*

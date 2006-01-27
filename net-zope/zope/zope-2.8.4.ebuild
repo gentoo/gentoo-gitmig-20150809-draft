@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.4.ebuild,v 1.4 2006/01/02 17:51:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.4.ebuild,v 1.5 2006/01/27 02:51:54 vapier Exp $
 
 inherit eutils multilib
 
-DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
+DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites"
 HOMEPAGE="http://www.zope.org"
 SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-final.tgz"
+
 LICENSE="ZPL"
 SLOT="${PV}"
-
 KEYWORDS="~alpha ~amd64 ppc sparc x86"
 IUSE="unicode"
 
@@ -107,4 +107,3 @@ pkg_prerm() {
 
 	rm ${ZSERVDIR}/bin/python
 }
-
