@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0957140a2c126c57e90f2b7b852b5bdc ChangeLog 7422
+MD5 0a1d0933360b300ede370ee4bb6cf0c5 ChangeLog 7538
 MD5 5bf9405e2ffb4ac628eced8fd0efcac6 attr-2.4.19-r1.ebuild 1430
 MD5 fdf15553ad62bbd1f8b040a5e69339e9 attr-2.4.23.ebuild 1291
-MD5 65591f46d631a64da3a17176e2da98be attr-2.4.24.ebuild 1455
+MD5 f3b22e0016f04001817cc74af2c89e27 attr-2.4.24.ebuild 1449
+MD5 5f385ad3b6dafb7bdd578a623150b598 attr-2.4.28.ebuild 1412
 MD5 c09974172d4e6f9fd20a4c4b53c0a8d4 files/attr-2.4.19-attr_copy_file-suppress-warning.patch 715
 MD5 6204834fe8dda5a8e61bb52b8db06673 files/attr-2.4.24-only-symlink-when-needed.patch 836
 MD5 8c0ffc8078bf36ce6eb5c698e9df7e0f files/attr-no-man2pages.patch 398
 MD5 9884f12ef497050faff6f6418acae8e2 files/digest-attr-2.4.19-r1 67
 MD5 2a77f72ca75841e774fdcf83147b8aa3 files/digest-attr-2.4.23 67
 MD5 6a5a82b72177e87022374d7dbdd4aea1 files/digest-attr-2.4.24 67
+MD5 a09a158a96d2f2107e6b16c803a03084 files/digest-attr-2.4.28 67
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi70fgIKl8Uu19MoRAuKVAJ4kNR7PeHXSwG+gpMz62te61WSvBACfcxUA
-CNTn4mjUxGaUx11lZMFW60M=
-=EFFP
------END PGP SIGNATURE-----

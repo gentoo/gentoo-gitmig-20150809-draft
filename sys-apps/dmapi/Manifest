@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45a5713f4a0140b4eb4eb90397f6ffc3 ChangeLog 3475
+MD5 bea13dc53d255470e75a41d7bbc4e361 ChangeLog 3591
 MD5 799e08ae5995a0253aa9587b6706a1be dmapi-2.2.1.ebuild 1141
+MD5 bf755131b033ba0093444d288bf06420 dmapi-2.2.3.ebuild 1103
 MD5 c38b511afc9ceb131628d5d903ee3834 files/digest-dmapi-2.2.1 66
+MD5 5d4fc62ace9c885bf14a7ad89f404fad files/digest-dmapi-2.2.3 66
 MD5 6204834fe8dda5a8e61bb52b8db06673 files/dmapi-2.2.1-only-symlink-when-needed.patch 836
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi7v/gIKl8Uu19MoRAjQ2AJ9ZeKzqWtdFO7sgOr8C8RuY9DP7FACeJZh7
-R7Vug1QFotKKfXJi77PKlKQ=
-=QYw4
------END PGP SIGNATURE-----
