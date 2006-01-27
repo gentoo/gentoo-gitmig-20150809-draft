@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.3.ebuild,v 1.3 2006/01/25 13:19:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.3.ebuild,v 1.4 2006/01/27 00:46:06 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
-RDEPEND="X? ( 
+RDEPEND="X? (
 			 || (
 					virtual/x11
 					(
@@ -37,7 +37,7 @@ RDEPEND="X? (
 #	ggi?   ( media-libs/libggi )
 
 DEPEND="${RDEPEND}
-		X? ( 
+		X? (
 			|| (
 					virtual/x11
 					(

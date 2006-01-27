@@ -4,6 +4,6 @@ MD5 a5aa09876dbb6a8b3800c2ddeb749264 files/digest-xaos-3.1.1 63
 MD5 ffe0ee7c85eaba15fb216fc1f400fc03 files/digest-xaos-3.1.3 63
 MD5 7589bd8d57e0ddebeb3463df943ed3a2 files/gcc3.4.patch 7778
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 7334bb0e9bcfb068018c95406d5821c4 xaos-3.1.1.ebuild 2011
-MD5 fa19e668df846ef01ea235d28922a141 xaos-3.1.3.ebuild 2012
-MD5 9226153c6f92c86f50a18e6c0a15a753 xaos-3.1.ebuild 2081
+MD5 2112f36ce5645e5358863eab17cf7732 xaos-3.1.1.ebuild 2010
+MD5 5a3379be4e96319b548b0c7dee6e2c59 xaos-3.1.3.ebuild 2011
+MD5 100a801a4fd1524f102dfe1187babd83 xaos-3.1.ebuild 2080
