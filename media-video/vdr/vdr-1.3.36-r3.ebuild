@@ -1,15 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.1 2006/01/22 23:30:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.2 2006/01/27 12:59:34 zzam Exp $
 
 inherit eutils
 
-IUSE="aio bigpatch jumpplay lnbsharing sourcecaps yaepg setup-plugin"
+IUSE="aio bigpatch jumpplay lnbsharing sourcecaps yaepg setup-plugin subtitles"
+
+PATCHSET_V=0.1
+PATCHSET_NAME=${P}-gentoo-patchset-${PATCHSET_V}
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.cadsoft.de/vdr/"
 SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2
-	http://dev.gentoo.org/~zzam/${P}-patchset.tgz"
+	http://dev.gentoo.org/~zzam/distfiles/${PATCHSET_NAME}.tar.bz2"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
@@ -102,7 +105,12 @@ apply_vdr_patchset() {
 
 src_unpack() {
 	unpack ${A}
-	PATCHSET_DIR=${WORKDIR}/${P}-patchset
+	if [[ -n "${LOCAL_VDR_PATCHSET}" && -d "${ROOT}/${LOCAL_VDR_PATCHSET}" ]]; then
+		PATCHSET_DIR="${ROOT}/${LOCAL_VDR_PATCHSET}"
+	else
+		PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
+	fi
+
 	cd ${S}
 
 	ebegin "Changing pathes for gentoo"
@@ -181,6 +189,11 @@ src_install() {
 		insinto ${VDRSOURCE_DIR}/${P}
 		doins -r ${T}/source-tree/*
 		keepdir ${VDRSOURCE_DIR}/${P}/PLUGINS/lib
+	fi
+
+	if use setup-plugin; then
+		insinto /usr/share/vdr/setup
+		doins ${S}/menu.c
 	fi
 }
 
