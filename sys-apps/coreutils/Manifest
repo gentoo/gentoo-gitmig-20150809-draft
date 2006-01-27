@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b8811bdad351cbea5b1d5306b584b2a ChangeLog 23945
+MD5 3df60ba46c9b319ab8d636a669eec2d9 ChangeLog 24039
 MD5 dad6f5e5b11fa505d937744875049b5e coreutils-5.2.1-r2.ebuild 4175
 MD5 d42fe8eb18b6bc0ce5b32a565bbfc5b2 coreutils-5.2.1-r6.ebuild 4579
-MD5 23f0e1c40d57816d86181c413483960b coreutils-5.2.1-r7.ebuild 4575
+MD5 21b4622e2a7f0da8982edd34e505b5d3 coreutils-5.2.1-r7.ebuild 4573
 MD5 f0af52a774fe8a60ba4cdaf3723bb50d coreutils-5.3.0-r1.ebuild 4167
 MD5 43feef270ef1300e884e59b565fc356f coreutils-5.3.0-r2.ebuild 4269
 MD5 040b32b1556a1c38a658d3b5558dc4f5 coreutils-5.93.ebuild 4257
@@ -16,10 +13,3 @@ MD5 897ff60239ed7b2b12ab098b2516a7ac files/digest-coreutils-5.3.0-r1 148
 MD5 6971790215509377129f29b52928ecae files/digest-coreutils-5.3.0-r2 148
 MD5 8ae2e3c38b000e2946c08447f467e1b0 files/digest-coreutils-5.93 146
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1wcW2+ySkm8kpY0RAt37AJ9/OM/BTFuyXevYjol9D0i3IdBrrgCgoa2H
-aHNhhG8WSKPn8m+Ayjz4BD0=
-=pJDT
------END PGP SIGNATURE-----
