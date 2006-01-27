@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/cdparanoia
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.25 2005/07/02 00:26:57 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.26 2006/01/27 18:30:33 chutzpah Exp $
+
+*cdparanoia-3.9.8-r3 (27 Jan 2006)
+
+  27 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
+  +cdparanoia-3.9.8-r3.ebuild:
+  New revision. When running a 2.6 kernel, add patches written by Red Hat to
+  use the new SG_IO system rather than the old IO system. See bug #118189
+  for more info.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> cdparanoia-3.9.8-r2.ebuild:
   Stable on mips
