@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/qpage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/ChangeLog,v 1.6 2006/01/27 16:27:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/ChangeLog,v 1.7 2006/01/27 16:58:38 chutzpah Exp $
+
+  27 Jan 2006; Patrick McLean <chutzpah@gentoo.org> metadata.xml,
+  qpage-3.3.ebuild:
+  Take over maintainership of package, update metadata.xml and minor
+  description fix.
 
   27 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
   +files/qpage-3.3-fix-warning.patch, qpage-3.3.ebuild:
