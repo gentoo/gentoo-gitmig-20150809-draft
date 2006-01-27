@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1ffa441608899bacc589ed23645ad129 ChangeLog 1192
 MD5 689e23daf8f2c4890c537153642c682d files/CAN-2005-0020.patch 2512
 MD5 503417b957f61f0cfcfade05c51cc8c5 files/digest-playmidi-2.5-r1 64
 MD5 ee0356dc56ad13119227d036ad8f409a files/playmidi-2.5.patch 773
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 adbb733ff8578a2f8914fb4809be7970 playmidi-2.5-r1.ebuild 1648
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2mkRQlM6RnzZP+IRAgwrAKCCfGNWMP0PcGO901JA6eRhQnryRACfSAV5
-QX/WyW5MIQwPQ70HSdk19cU=
-=xkb+
------END PGP SIGNATURE-----
+MD5 7a6356a4220e21e971f6edc69aa5733f playmidi-2.5-r1.ebuild 1647
