@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.6.0.ebuild,v 1.5 2006/01/21 20:29:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.0.ebuild,v 1.1 2006/01/27 02:45:46 latexer Exp $
 
 inherit eutils mono
 
@@ -14,9 +14,9 @@ SLOT="2"
 IUSE="doc"
 RESTRICT="test"
 
-RDEPEND=">=dev-lang/mono-1.1.9
+RDEPEND=">=dev-lang/mono-1.0
 	dev-perl/XML-LibXML
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.8
 	>=gnome-base/orbit-2.8.3"
 
 DEPEND="${RDEPEND}
@@ -68,14 +68,4 @@ src_install () {
 		DESTDIR=${D} install || die
 
 	dodoc README* ChangeLog
-}
-
-pkg_postinst() {
-	echo
-	ewarn "gtk-sharp-2.6.x is completely, and utterly unsupported by upstream."
-	ewarn "If you experience any bugs related to using gtk-sharp-2.6.x, do"
-	ewarn "*not* submit them upstream, ask about them on IRC, or email any"
-	ewarn "mailinglists. If you think you have found a genuine bug or need help,"
-	ewarn "first down grade *all* *-sharp packages to the 2.4.x release and"
-	ewarn "test there."
 }

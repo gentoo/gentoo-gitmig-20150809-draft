@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0710db95cb6c76b42d4544fe17f4bfdf ChangeLog 4295
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-rsvg-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-rsvg-sharp-1.0.8-r1 147
 MD5 a1d68897943900a3597a99cc8d5edf11 files/digest-rsvg-sharp-2.4.0 147
 MD5 75b16375b6fef2be7427c9bfd4cdda0d files/digest-rsvg-sharp-2.6.0 147
+MD5 42cefaeaf6c4a7f03db4c0de8a0abbf4 files/digest-rsvg-sharp-2.8.0 147
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 ab1735650cf691621570b84dd64fe073 rsvg-sharp-1.0.10.ebuild 443
 MD5 e3d2d2704795ff4e9fe1d511f5d46b55 rsvg-sharp-1.0.8-r1.ebuild 447
 MD5 2ba2d19b97bcd903bca28c7829d77d39 rsvg-sharp-2.4.0.ebuild 487
 MD5 ac2aa89693961f1362b41fe2580f848b rsvg-sharp-2.6.0.ebuild 487
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiLZpwUpWvClEHQoRAiLtAJ9pLF6vV1Z86nPDW0ccaoUoVYnMMACff1CI
-AL9NaKmjK9tUvyzOQAScLzk=
-=SHtB
------END PGP SIGNATURE-----
+MD5 4f9b844252705be85a8d147fd60e43b5 rsvg-sharp-2.8.0.ebuild 480

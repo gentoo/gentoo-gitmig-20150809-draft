@@ -3,8 +3,10 @@ MD5 788553e6350716aa1b0d81e17519ba1a files/digest-gtk-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gtk-sharp-1.0.8-r1 147
 MD5 a1d68897943900a3597a99cc8d5edf11 files/digest-gtk-sharp-2.4.0 147
 MD5 75b16375b6fef2be7427c9bfd4cdda0d files/digest-gtk-sharp-2.6.0 147
+MD5 42cefaeaf6c4a7f03db4c0de8a0abbf4 files/digest-gtk-sharp-2.8.0 147
 MD5 c679989ccfe59add3c35246d205c72f6 gtk-sharp-1.0.10.ebuild 1609
 MD5 224e9e58d006812e0fa5fe648b49bacc gtk-sharp-1.0.8-r1.ebuild 1486
 MD5 881970f79365091da1275e6bcda8d8b4 gtk-sharp-2.4.0.ebuild 1748
 MD5 649e6fcbf9761ea27ad20383dd9f116b gtk-sharp-2.6.0.ebuild 2171
+MD5 f24a67cbe7bd93a1fe8b80a9b1f78901 gtk-sharp-2.8.0.ebuild 1747
 MD5 e06909c47712ae995f4879eefb22e38b metadata.xml 160

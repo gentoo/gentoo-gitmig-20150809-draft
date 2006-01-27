@@ -3,8 +3,10 @@ MD5 788553e6350716aa1b0d81e17519ba1a files/digest-gtkhtml-sharp-1.0.10 149
 MD5 884d78d2f7ca19b6cf1e79662a2aa46d files/digest-gtkhtml-sharp-1.0.8-r1 147
 MD5 2bdfcdc0386e5d88b68abb8880d5e0a2 files/digest-gtkhtml-sharp-2.4.0 147
 MD5 3982687ed5414457d7b9161e83f5fcb5 files/digest-gtkhtml-sharp-2.6.0 147
+MD5 42cefaeaf6c4a7f03db4c0de8a0abbf4 files/digest-gtkhtml-sharp-2.8.0 147
 MD5 81f474f4c6f9f3f88ab62bc08187f463 gtkhtml-sharp-1.0.10.ebuild 548
 MD5 f6e4361cb712d4ab91e10fff1b896139 gtkhtml-sharp-1.0.8-r1.ebuild 543
 MD5 a595a6085d2ef4a9fb4620fffce1ad3c gtkhtml-sharp-2.4.0.ebuild 633
 MD5 d09d7de5e7489c38ef07df074c3e42dd gtkhtml-sharp-2.6.0.ebuild 604
+MD5 c924b9e577fb05faecc48cc61afb53d6 gtkhtml-sharp-2.8.0.ebuild 604
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222

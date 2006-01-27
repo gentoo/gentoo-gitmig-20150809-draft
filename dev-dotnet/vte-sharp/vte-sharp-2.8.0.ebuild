@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/vte-sharp-2.6.0.ebuild,v 1.2 2005/11/26 19:00:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/vte-sharp-2.8.0.ebuild,v 1.1 2006/01/27 02:47:09 latexer Exp $
 
 inherit gtk-sharp-component
 
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="${DEPEND}
@@ -14,4 +14,3 @@ DEPEND="${DEPEND}
 GTK_SHARP_COMPONENT_SLOT="2"
 GTK_SHARP_COMPONENT_SLOT_DEC="-2.0"
 GTK_SHARP_COMPONENT_BUILD_DEPS="gnome art"
-
