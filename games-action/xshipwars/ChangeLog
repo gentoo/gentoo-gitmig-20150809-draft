@@ -1,6 +1,10 @@
 # ChangeLog for games-action/xshipwars
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.10 2005/11/08 04:55:26 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.11 2006/01/28 21:19:10 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xshipwars-1.34.0.ebuild, xshipwars-2.4.7.ebuild:
+  Add modular X dependencies.
 
 *xshipwars-2.4.7 (08 Nov 2005)
 

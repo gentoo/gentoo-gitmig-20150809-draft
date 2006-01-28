@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.9 2005/09/26 19:40:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.10 2006/01/28 21:19:10 joshuabaergen Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXext virtual/x11 )
 	virtual/opengl"
 
 DEPEND="${RDEPEND}

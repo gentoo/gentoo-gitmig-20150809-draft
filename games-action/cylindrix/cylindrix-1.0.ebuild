@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/cylindrix-1.0.ebuild,v 1.3 2004/06/24 21:53:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/cylindrix-1.0.ebuild,v 1.4 2006/01/28 21:19:10 joshuabaergen Exp $
 
 inherit games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/x11
-	>=media-libs/allegro-4.0.3"
+DEPEND=">=media-libs/allegro-4.0.3"
 
 S=${WORKDIR}/${PN}
 

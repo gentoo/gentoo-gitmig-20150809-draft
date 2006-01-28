@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/phobiaiii-1.0-r1.ebuild,v 1.4 2004/07/14 14:21:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/phobiaiii-1.0-r1.ebuild,v 1.5 2006/01/28 21:19:10 joshuabaergen Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ RDEPEND="kde-base/arts
 	media-sound/esound
 	media-libs/audiofile
 	media-libs/sdl-mixer
-	virtual/x11
+	|| ( x11-libs/libXext virtual/x11 )
 	media-libs/libvorbis
 	media-libs/libogg
 	>=sys-libs/lib-compat-1.3

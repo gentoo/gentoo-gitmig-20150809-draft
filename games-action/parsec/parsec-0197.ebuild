@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.9 2006/01/15 14:43:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.10 2006/01/28 21:19:10 joshuabaergen Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libXi virtual/x11 )
 	virtual/opengl
 	virtual/glut
 	virtual/glu

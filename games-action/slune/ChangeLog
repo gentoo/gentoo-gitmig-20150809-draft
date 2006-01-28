@@ -1,6 +1,10 @@
 # ChangeLog for games-action/slune
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.11 2005/09/07 04:48:30 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.12 2006/01/28 21:19:10 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> slune-1.0.9.ebuild:
+  This is a Python app, so it's doesn't depend on any X libraries directly.
+  Drop the dependency.
 
 *slune-1.0.9 (06 Sep 2005)
 

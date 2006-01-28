@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.7 2005/06/15 17:30:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.8 2006/01/28 21:19:10 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
 IUSE=""
 
-RDEPEND="virtual/x11
-	>=media-libs/libsdl-1.1.6"
+RDEPEND=">=media-libs/libsdl-1.1.6"
 DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )
+	virtual/opengl
 	>=sys-apps/sed-4"
 
 DATA="${WORKDIR}/datafiles"

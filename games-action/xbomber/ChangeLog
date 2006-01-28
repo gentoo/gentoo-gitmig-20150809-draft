@@ -1,6 +1,9 @@
 # ChangeLog for games-action/xbomber
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/ChangeLog,v 1.7 2005/11/06 16:12:01 kugelfang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/ChangeLog,v 1.8 2006/01/28 21:19:10 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> xbomber-101.ebuild:
+  Add modular X dependencies.
 
   06 Nov 2005; Danny van Dyk <kugelfang@gentoo.org>
   +files/xbomber-101-va_list.patch, xbomber-101.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.7 2005/09/26 19:23:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.8 2006/01/28 21:19:10 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="X"
 
-RDEPEND="X? ( virtual/x11 )"
+RDEPEND="X? ( || ( x11-libs/libXpm virtual/x11 ) )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

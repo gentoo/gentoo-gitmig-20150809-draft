@@ -1,6 +1,10 @@
 # ChangeLog for games-action/phobiaiii
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/ChangeLog,v 1.5 2004/06/24 21:58:18 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/ChangeLog,v 1.6 2006/01/28 21:19:10 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  phobiaiii-1.0-r1.ebuild, phobiaiii-1.0-r2.ebuild:
+  Add modular X dependencies.
 
 *phobiaiii-1.0-r2 (10 Feb 2004)
 
