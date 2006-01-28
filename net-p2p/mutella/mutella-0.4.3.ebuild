@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.3.ebuild,v 1.9 2004/07/01 09:36:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.3.ebuild,v 1.10 2006/01/28 13:29:52 mkay Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/mutella-gcc33-fix.gz
+	epatch ${FILESDIR}/mutella-gcc33-fix
 }
 
 src_compile() {
