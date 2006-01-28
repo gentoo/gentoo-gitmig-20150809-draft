@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-0.56.ebuild,v 1.5 2006/01/27 23:52:46 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-0.56.ebuild,v 1.6 2006/01/28 11:40:51 ticho Exp $
 
 DESCRIPTION="Afterstep mail-checker like xbiff"
 HOMEPAGE="http://asmail.sourceforge.net/"
@@ -16,7 +16,7 @@ RDEPEND="virtual/libc
 	X? ( || ( x11-libs/libXpm virtual/x11 ) )"
 
 DEPEND="${RDEPEND}
-	X? ( || ( x11-libs/xextproto virtual/x11 ) )"
+	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 
 src_compile() {
 	econf \

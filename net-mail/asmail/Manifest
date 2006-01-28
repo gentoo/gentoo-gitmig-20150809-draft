@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 c6d7bba5f1ea62432c39066296431d1c ChangeLog 881
-MD5 46c35ae71e256b17ee5baa898159fdf6 asmail-0.56.ebuild 900
+MD5 095e6ab7886b9afb6b38552f79a663fd asmail-0.56.ebuild 901
 MD5 a748083efe71212fc0b5737b769448ce files/digest-asmail-0.56 63
 MD5 72edd7185aada4e767733d5fdab92376 metadata.xml 184
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD2rJpQlM6RnzZP+IRAmNBAJ0XC3Eloq3Dw7a+wxaCbgKORdOSTwCfWr2J
-BzmylNSe9AEPxAM5p7qa6Nc=
-=DNHL
+iD8DBQFD21hSQlM6RnzZP+IRAmS/AKCkxR+bdtB29MHh68VDwYJIrGvEuwCgu1DY
+ZclGYsJoxuIiX3IhfLpKD8M=
+=6W/6
 -----END PGP SIGNATURE-----
