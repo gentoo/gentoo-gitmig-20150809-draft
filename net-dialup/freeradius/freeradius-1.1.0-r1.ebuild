@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.0.ebuild,v 1.1 2006/01/26 19:47:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.0-r1.ebuild,v 1.1 2006/01/28 17:52:22 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="-amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="edirectory frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-whole-archive-gentoo.patch
+	epatch ${FILESDIR}/${P}-dict-attr-sizeof.patch
 	epatch ${FILESDIR}/${P}-libeap-fPIC.patch #needed for rlm_eap installation on amd64
 }
 
