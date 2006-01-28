@@ -1,11 +1,15 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31.ebuild,v 1.1 2005/09/27 20:44:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31.ebuild,v 1.2 2006/01/28 06:40:00 compnerd Exp $
 
 inherit gnome2
 
 DESCRIPTION="GNOME CUPS Printer Management Interface"
 HOMEPAGE="http://www.gnome.org/"
+
+#
+# Please ensure that gcc-3.4 is stable on the arch before moving this to stable.
+#
 
 LICENSE="GPL-2"
 SLOT="0"
