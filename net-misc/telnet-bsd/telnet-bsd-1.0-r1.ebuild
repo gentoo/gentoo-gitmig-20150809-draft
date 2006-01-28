@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0-r1.ebuild,v 1.2 2005/03/31 16:59:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0-r1.ebuild,v 1.3 2006/01/28 13:42:17 blubb Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="!net-misc/netkit-telnetd"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/telnet-bsd_gentoo.diff.gz
+	epatch "${FILESDIR}"/telnet-bsd_gentoo.diff
 	epatch "${FILESDIR}"/${P}-overflow.patch #87019
 	sed -i \
 		-e 's:destdir=:destdir=$(DESTDIR):' \
