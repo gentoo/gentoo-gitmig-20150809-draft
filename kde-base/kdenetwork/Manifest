@@ -1,4 +1,4 @@
-MD5 f4245036e003099c58b3c9e596014612 ChangeLog 24337
+MD5 33dcad50a0a3fc5666a11f358f36e455 ChangeLog 24482
 MD5 c6db44a9df98a9927235b28065adb065 files/digest-kdenetwork-3.3.2-r2 149
 MD5 7e1dab8dea5082d73c25c6ae6b4251b1 files/digest-kdenetwork-3.4.1-r1 149
 MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kdenetwork-3.4.2 70
@@ -21,5 +21,5 @@ MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
 MD5 f01a7eb66338a4264475bdd11347ac4b kdenetwork-3.4.2.ebuild 1794
 MD5 981197c95e99c8fc5e37c0c02f4c5716 kdenetwork-3.4.3.ebuild 1764
 MD5 45dc358f9d30bc7a8e2903d7ed24ab8b kdenetwork-3.5.0.ebuild 1802
-MD5 45dc358f9d30bc7a8e2903d7ed24ab8b kdenetwork-3.5.1.ebuild 1802
+MD5 4f05147f44023371fbeeef3dc6bda061 kdenetwork-3.5.1.ebuild 1803
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
