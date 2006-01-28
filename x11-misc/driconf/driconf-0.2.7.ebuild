@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.2.7.ebuild,v 1.3 2006/01/28 02:30:18 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.2.7.ebuild,v 1.4 2006/01/28 03:38:02 spyderous Exp $
 
 inherit distutils
 
@@ -18,8 +18,8 @@ DEPEND=">=x11-libs/gtk+-2.4
 	dev-python/pygtk
 	dev-python/pyxml
 	|| (
-		virtual/x11
 		x11-apps/xdriinfo
+		virtual/x11
 	)"
 
 DOCS="CHANGELOG COPYING PKG-INFO README TODO"
