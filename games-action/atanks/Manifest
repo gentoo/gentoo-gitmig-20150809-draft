@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85536d6b7e3cf3d30297b6081fcaa8f7 ChangeLog 3315
-MD5 21a6d0930ae7d81f77c793636203c0a5 atanks-1.1.0.ebuild 1256
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 76b2e7dda68b564ab8697ac958e7b008 ChangeLog 3475
+RMD160 1fa0b91a73379f5419f082394cac9f66b8570a86 ChangeLog 3475
+SHA256 83ff392d3b361e8252e111f628efac0dca74a1418d4b448ca5bb2e331d7ee7df ChangeLog 3475
+MD5 6d5f1d72bdd26709a43fb4bd5d3aaaff atanks-1.1.0.ebuild 1249
+RMD160 c2cfd6da5bb4b32fd145fac10ba4349f59ad6fcd atanks-1.1.0.ebuild 1249
+SHA256 da6cc721baa1952bad450a9ee7c270abbdefae1bedce5fa8af769ea41aa97e77 atanks-1.1.0.ebuild 1249
 MD5 e3857ce0d93e17bc2ad85dca19571131 files/1.1.0-gentoo.patch 5379
-MD5 ea52207aee01685ed0e4b52b4cd66958 files/digest-atanks-1.1.0 65
+RMD160 774ee3ad923fe3f15cdf266647b17c7da8646953 files/1.1.0-gentoo.patch 5379
+SHA256 f6ee56d7ea43a8f586e05b48756dfce627ed5bc639846f487e2031c8e5011a9a files/1.1.0-gentoo.patch 5379
 MD5 847ff435578601cfeba1de5e58d0d2cb files/atanks-1.1.0-gcc4.patch 1212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBUSqCRZPokWLroQRAgKDAKDZruVyQ3whLykbdQKd7enqQ2t0WACdENzm
-DwTi7PY+egtBYF3efB3getU=
-=Kfnb
------END PGP SIGNATURE-----
+RMD160 29a5fef99ae74b5ddde372be19b4775019fda43e files/atanks-1.1.0-gcc4.patch 1212
+SHA256 bae78551665f316e61b96d8fd5044974b7b81a7d956f7c203cf0c5bd8f00629b files/atanks-1.1.0-gcc4.patch 1212
+MD5 ea52207aee01685ed0e4b52b4cd66958 files/digest-atanks-1.1.0 65
+RMD160 318858a88147b3e08d75e3cdf6b224f34d9e8479 files/digest-atanks-1.1.0 65
+SHA256 3f5ad14a35641ca1b41356261d4ebbae515dfbf0292794031262099137b19cd4 files/digest-atanks-1.1.0 65
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158

@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6491f6186c46d5ddbb097d3dbe8ef2e2 ChangeLog 1175
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 dde66bcf1f7cfd0cfff937f0f7015c3f nighthawk-2.2.ebuild 747
+MD5 16db9aa10d462d939b2103c76548a7a2 ChangeLog 1296
+RMD160 15be97d9b6d296ab2d24df24d0744879d5c3b043 ChangeLog 1296
+SHA256 f93103fcef6b453fa4192e7b62808c757137359daee63e9b61b20e2581566afc ChangeLog 1296
 MD5 28c1f0d1d7d1c8823306d9966fb387ff files/digest-nighthawk-2.2 68
+RMD160 afd8744046656c17d4bbeb49ba6fe0147994bc26 files/digest-nighthawk-2.2 68
+SHA256 8305f1b916cddfd79fc012e47d24423db32a615c1f5e0885c664b4a28e50ee62 files/digest-nighthawk-2.2 68
 MD5 91536401b3a8a82fd155e6ca166dfc54 files/nighthawk.patch 1235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnC85ntT9W3vfTuoRAr7sAJ9rRkc67/+ExzKlGwsO/yT/c9LwOgCghpN9
-6IJ/r3MWi4xmrQH/GGcnnkU=
-=Hisa
------END PGP SIGNATURE-----
+RMD160 9c277bcaf77d13aa1a3edc50ae049ba09e2d45e9 files/nighthawk.patch 1235
+SHA256 f19d57d8cbf53300b46c3dc853b2d5af039ab403fb16c39466307327c0fd179d files/nighthawk.patch 1235
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 0671605892059f5b85c53b087eb15257 nighthawk-2.2.ebuild 778
+RMD160 37328134868337ccbd1dd5d94157a465d22a24be nighthawk-2.2.ebuild 778
+SHA256 2fe85e57365d14c6b0fe902ad74f4da9b321bd4abede1b66ed88c1238880490e nighthawk-2.2.ebuild 778

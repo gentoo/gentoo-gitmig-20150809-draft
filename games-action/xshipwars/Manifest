@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 141f733432bba2c531bb6b7f5c8554b5 ChangeLog 1832
+MD5 d84163ce822ba6b2928a3ea4cfe00b6b ChangeLog 1978
+RMD160 d654f714750219b054abacd48d0a1d83bf5c599e ChangeLog 1978
+SHA256 811ce4655ba80f587a17a2be431eafe0b99b5c47b0234fdc95782383b68af3c3 ChangeLog 1978
 MD5 825e4e161401b86551eb3985d7fdc357 files/digest-xshipwars-1.34.0 327
+RMD160 ff9e6332a9ff3d972dd8b0676e33ee7fbdd885f8 files/digest-xshipwars-1.34.0 327
+SHA256 e69a82590e58d84f390dae093afeec957419e96e71506871e7ec3f4387e7903f files/digest-xshipwars-1.34.0 327
 MD5 79fbba0e261f275b54cb1eed3bcf7ec8 files/digest-xshipwars-2.4.7 266
+RMD160 c12c67c034985b22ad6b7e8edc32454a8e3d5b05 files/digest-xshipwars-2.4.7 266
+SHA256 6e5042b3a3d1680a953039e9bdae8c9a04cbbd70ac0196464761bf5a84edb228 files/digest-xshipwars-2.4.7 266
 MD5 810c3eb40cc4e406109ac3f0e33b3fa9 files/xshipwars-1.34.0-gcc3.patch 1338
+RMD160 4a45e47d1baba133b3056d152283a9a5858ca5cc files/xshipwars-1.34.0-gcc3.patch 1338
+SHA256 60cf88c546e092ca40719f20888f9deed780b2f3db3b73f003dd77827adfa0b9 files/xshipwars-1.34.0-gcc3.patch 1338
 MD5 0bc5c432a5c0eec30c650e255deadf48 files/xshipwars-1.34.0-gcc33.patch 889
+RMD160 2966af941be60a7be3f2736a9299444ae1806bc7 files/xshipwars-1.34.0-gcc33.patch 889
+SHA256 e9b752c228369900ae909d64cc735ead41b728008ddc1b69882c3f618e953f37 files/xshipwars-1.34.0-gcc33.patch 889
 MD5 ed89b718110f543135fe63d2e29ac249 files/xshipwars-2.4.7-64bit-warnings.patch 2103
+RMD160 7d50ab273152b9d4024d4227367c9031b11b7332 files/xshipwars-2.4.7-64bit-warnings.patch 2103
+SHA256 ead8d779c75e0b5c4ca326d74c8114142b55628512533f19cb3560a23582acdc files/xshipwars-2.4.7-64bit-warnings.patch 2103
 MD5 83d712c227f57834b2d4dc250ba60d41 files/xshipwars-2.4.7-build.patch 3279
+RMD160 3a37627936fce0e20f95119f3883033e382b1c01 files/xshipwars-2.4.7-build.patch 3279
+SHA256 ecf4e849f2bf80906c94dd4c513a099c36a4bcf339f8267d4eb9643ce8a47473 files/xshipwars-2.4.7-build.patch 3279
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 bbf219f5bb56ba64a8367cc40c386156 xshipwars-1.34.0.ebuild 2686
-MD5 62ccd557e63c941e9b6a7338733fafe0 xshipwars-2.4.7.ebuild 2671
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDcDARgIKl8Uu19MoRAnC8AJ42UhOPK31kWyxMEZec31w/+6DtJQCfbDyP
-j1NnNY73e7Vpk/kcXVFmlwM=
-=3ph9
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 1ecadced331420e070d873a231e6ad3f xshipwars-1.34.0.ebuild 2777
+RMD160 23b707caf55a13e23bdd00c9acb575dba9e0d44c xshipwars-1.34.0.ebuild 2777
+SHA256 3ba7cd1cc27acc0b238cd542ca808c7b3126b593b87b627b93739f599ff6efa4 xshipwars-1.34.0.ebuild 2777
+MD5 e7d694e96802d3a14ff8b3b390afe295 xshipwars-2.4.7.ebuild 2762
+RMD160 8e6386aca0274159ec5d2d778f520eecaf7f2041 xshipwars-2.4.7.ebuild 2762
+SHA256 85469feead02b14cb17ba0868fec71687f17e494f28e42825c9801be191b01d7 xshipwars-2.4.7.ebuild 2762
