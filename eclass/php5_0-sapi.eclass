@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.13 2006/01/23 18:46:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.14 2006/01/28 01:35:11 chtekk Exp $
 #
 # ########################################################################
 #
@@ -591,7 +591,7 @@ php5_0-sapi_pkg_postinst() {
 	if useq apache ; then
 		"${ROOT}/usr/sbin/php-select" -t apache1 php5 > /dev/null 2>&1
 		exitStatus=$?
-		if [[ ${exitStatus} == 5 ]] ; then
+		if [[ ${exitStatus} == 2 ]] ; then
 			php-select apache1 php5
 		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
@@ -607,7 +607,7 @@ php5_0-sapi_pkg_postinst() {
 	if useq apache2 ; then
 		"${ROOT}/usr/sbin/php-select" -t apache2 php5 > /dev/null 2>&1
 		exitStatus=$?
-		if [[ ${exitStatus} == 5 ]] ; then
+		if [[ ${exitStatus} == 2 ]] ; then
 			php-select apache2 php5
 		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
