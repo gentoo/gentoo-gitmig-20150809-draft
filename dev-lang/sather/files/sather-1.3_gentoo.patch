@@ -1,0 +1,93 @@
+diff -ru Sather-1.3orig/bin/sacomp-boot.code/LINK_OPTIONS Sather-1.3/bin/sacomp-boot.code/LINK_OPTIONS
+--- Sather-1.3orig/bin/sacomp-boot.code/LINK_OPTIONS	2001-11-07 02:09:37.000000000 +0100
++++ Sather-1.3/bin/sacomp-boot.code/LINK_OPTIONS	2003-05-27 18:15:27.000000000 +0200
+@@ -2,7 +2,7 @@
+ CFLAGS = -I.  -O2  -I../system
+ CC     =gcc
+ HDR    =sather.h tags.h
+-LIBS   = -lgc -lm
++LIBS   = -lgc -ldl -lm
+ CS     =sacomp-boot
+ OBJ    = a_stackA_STACK2014955575.o am_outAM_OUT1363671444.o am_outAM_OUT1363671444x.o arefFSETAM_ROU1518004496.o arefFSETIMMUTA2116029667.o arefFSETTUPSIG268064465.o arrayARRAYAM_I1084914261.o arrayARRAYTUPI1927875024.o as_outAS_OUT1429002792.o as_outAS_OUT1429002792x.o cgenCGEN1354269066.o cgenCGEN1354269066x.o cgenCGEN1354269066xx.o cgenCGEN1354269066xxx.o cgenCGEN1354269066xxxx.o cgenCGEN1354269066xxxxx.o cgenCGEN1354269066xxxxxx.o cgenCGEN1354269066xxxxxxx.o cgenCGEN1354269066xxxxxxxx.o cgenCGEN1354269066xxxxxxxxx.o cgenCGEN1354269066xxxxxxxxxx.o code_fileCODE_372141741.o configCONFIG_R422014871.o constAM_VOID_C1458622435.o cs_optionsCS_O301318552.o cs_optionsCS_O301318552x.o cursorAM_CURSO1314676474.o cursorAM_CURSO1314676474x.o cursorAM_CURSO1314676474xx.o cursorAM_CURSO1314676474xxx.o dispatch.o eltELT742463773.o elt_algELT_ALG1548486913.o elt_algELT_ALG241706736.o elt_algELT_ALG433952755.o elt_algELT_ALG656599769.o elt_algELT_ALG987448979.o flistFLISTAM_C1171004157.o flistFLISTTUPA253333040.o fmapFMAPAM_ROU1000508936.o fmapFMAPSTRFSE258056667.o fmapFMAPdTPCOD1051074108.o generate_amGEN60284023.o get_optionsCOD183550016.o globals.o get_optionsCOD183550016x.o implIMPL_CREAT99472218.o inlineINLINE_I1557365391.o intiINTI1462257232.o layoutCLASS_LA1330944056.o mangleMANGLE1705139666.o mangleNAMESPAC760510184.o o_localOPT_LOC907909712.o o_localOPT_LOC907909712x.o optimizeOPT_CO1177876774.o optimizeOPT_IT1193060919.o parsePARSER311504339.o parsePARSER311504339x.o parsePARSER311504339xx.o parsePARSER311504339xxx.o parsePARSER311504339xxxx.o progPROG_AS_TB824135997.o scanSCANNER1990933774.o side_effectSE_411721069.o strings.o stringsx.o stringsxx.o system.o stmtAM_FORK_ST1674905658.o tpTP_BUILTIN1142074570.o tpTP_ITER145455607.o transTRANS2123847391.o transTRANS2123847391x.o transTRANS2123847391xx.o transTRANS2123847391xxx.o transTRANS2123847391xxxx.o tupTUPAM_CURSO1313579705.o unbox.o unixUNIX1766692.o runtime.o
+ OTHER  =
+diff -ru Sather-1.3orig/bin/sacomp-boot.code/Makefile Sather-1.3/bin/sacomp-boot.code/Makefile
+--- Sather-1.3orig/bin/sacomp-boot.code/Makefile	2001-11-07 02:09:37.000000000 +0100
++++ Sather-1.3/bin/sacomp-boot.code/Makefile	2003-05-27 18:15:33.000000000 +0200
+@@ -2,7 +2,7 @@
+ CFLAGS = -I.  -O  -I../system
+ CC     =gcc
+ HDR    =sather.h tags.h
+-LIBS   = -lgc -lm
++LIBS   = -lgc -ldl -lm
+ CS     =sacomp-boot
+ OBJ    = a_stackA_STACK2014955575.o am_outAM_OUT1363671444.o am_outAM_OUT1363671444x.o arefFSETAM_ROU1518004496.o arefFSETIMMUTA2116029667.o arefFSETTUPSIG268064465.o arrayARRAYAM_I1084914261.o arrayARRAYTUPI1927875024.o as_outAS_OUT1429002792.o as_outAS_OUT1429002792x.o cgenCGEN1354269066.o cgenCGEN1354269066x.o cgenCGEN1354269066xx.o cgenCGEN1354269066xxx.o cgenCGEN1354269066xxxx.o cgenCGEN1354269066xxxxx.o cgenCGEN1354269066xxxxxx.o cgenCGEN1354269066xxxxxxx.o cgenCGEN1354269066xxxxxxxx.o cgenCGEN1354269066xxxxxxxxx.o cgenCGEN1354269066xxxxxxxxxx.o code_fileCODE_372141741.o configCONFIG_R422014871.o constAM_VOID_C1458622435.o cs_optionsCS_O301318552.o cs_optionsCS_O301318552x.o cursorAM_CURSO1314676474.o cursorAM_CURSO1314676474x.o cursorAM_CURSO1314676474xx.o cursorAM_CURSO1314676474xxx.o dispatch.o eltELT742463773.o elt_algELT_ALG1548486913.o elt_algELT_ALG241706736.o elt_algELT_ALG433952755.o elt_algELT_ALG656599769.o elt_algELT_ALG987448979.o flistFLISTAM_C1171004157.o flistFLISTTUPA253333040.o fmapFMAPAM_ROU1000508936.o fmapFMAPSTRFSE258056667.o fmapFMAPdTPCOD1051074108.o generate_amGEN60284023.o get_optionsCOD183550016.o globals.o get_optionsCOD183550016x.o implIMPL_CREAT99472218.o inlineINLINE_I1557365391.o intiINTI1462257232.o layoutCLASS_LA1330944056.o mangleMANGLE1705139666.o mangleNAMESPAC760510184.o o_localOPT_LOC907909712.o o_localOPT_LOC907909712x.o optimizeOPT_CO1177876774.o optimizeOPT_IT1193060919.o parsePARSER311504339.o parsePARSER311504339x.o parsePARSER311504339xx.o parsePARSER311504339xxx.o parsePARSER311504339xxxx.o progPROG_AS_TB824135997.o scanSCANNER1990933774.o side_effectSE_411721069.o strings.o stringsx.o stringsxx.o system.o stmtAM_FORK_ST1674905658.o tpTP_BUILTIN1142074570.o tpTP_ITER145455607.o transTRANS2123847391.o transTRANS2123847391x.o transTRANS2123847391xx.o transTRANS2123847391xxx.o transTRANS2123847391xxxx.o tupTUPAM_CURSO1313579705.o unbox.o unixUNIX1766692.o runtime.o
+ OTHER  =
+diff -ru Sather-1.3orig/platforms/linux/smp/CONFIG Sather-1.3/platforms/linux/smp/CONFIG
+--- Sather-1.3orig/platforms/linux/smp/CONFIG	2001-11-07 02:10:43.000000000 +0100
++++ Sather-1.3/platforms/linux/smp/CONFIG	2003-05-27 18:12:09.000000000 +0200
+@@ -10,5 +10,5 @@
+ --   is fixed!
+ 
+ CC_OPTIONS:     "-I$(SATHER_HOME)/system/include -DPSATHER -D_REENTRANT";
+-GC_LINK:	"-lgc";
++GC_LINK:	"-lgc -ldl";
+ LINK_OPTIONS:   "-L$(SATHER_HOME)/system/lib -lat -lqt -lsched -lm" ;
+diff -ru Sather-1.3orig/system/CONFIG-boot.proto Sather-1.3/system/CONFIG-boot.proto
+--- Sather-1.3orig/system/CONFIG-boot.proto	2001-11-07 02:11:07.000000000 +0100
++++ Sather-1.3/system/CONFIG-boot.proto	2003-05-27 18:03:05.000000000 +0200
+@@ -26,7 +26,7 @@
+ VERSION:		CONFIG_VERSION;
+ C_COMPILER:		"gcc";
+ CC_OPTIONS:		"";
+-GC_LINK:		"-lgc";
++GC_LINK:		"-lgc -ldl";
+ LINK_OPTIONS:		"-lm";
+ MAKE_COMMAND:		"make";
+ OBJECT_EXT:		".o";
+diff -ru Sather-1.3orig/system/CONFIG.proto Sather-1.3/system/CONFIG.proto
+--- Sather-1.3orig/system/CONFIG.proto	2001-11-07 23:53:58.000000000 +0100
++++ Sather-1.3/system/CONFIG.proto	2003-05-27 18:02:59.000000000 +0200
+@@ -29,7 +29,7 @@
+ VERSION:		CONFIG_VERSION;
+ C_COMPILER:		"gcc";
+ CC_OPTIONS:		"";
+-GC_LINK:		"-lgc";
++GC_LINK:		"-lgc -ldl";
+ LINK_OPTIONS:		"-lm";
+ MAKE_COMMAND:		"make";
+ OBJECT_EXT:		".o";
+diff -ru Sather-1.3orig/system/activethreads/src/at-inline.h Sather-1.3/system/activethreads/src/at-inline.h
+--- Sather-1.3orig/system/activethreads/src/at-inline.h	2001-11-07 02:11:01.000000000 +0100
++++ Sather-1.3/system/activethreads/src/at-inline.h	2003-05-27 18:02:45.000000000 +0200
+@@ -108,7 +108,7 @@
+ extern void at_create_wrapper_6(void* arg) ;
+ 
+ extern AT_SPINLOCK_DEC(thr_num_lck) ;
+-extern int at_thr_num ;
++extern volatile int at_thr_num ;
+ 
+ #define AT_WHICH_QUEUE(t)     (((t)->affinity == AT_UNBOUND) ? \
+                (&at_global_run_queue) : at_local_run_queues[(t)->affinity])
+@@ -835,7 +835,7 @@
+      return t->affinity ;
+      }
+ 
+-extern unsigned int at_concurrency ;
++extern volatile unsigned int at_concurrency ;
+ 
+ /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+diff -ru Sather-1.3orig/system/activethreads/src/at-lwp.h Sather-1.3/system/activethreads/src/at-lwp.h
+--- Sather-1.3orig/system/activethreads/src/at-lwp.h	2001-11-07 02:11:01.000000000 +0100
++++ Sather-1.3/system/activethreads/src/at-lwp.h	2003-05-27 18:02:49.000000000 +0200
+@@ -28,8 +28,8 @@
+   int   id;            /* this lwp's id */
+ } lwp_private_t;
+ 
+-extern unsigned int at_stack_size;
+-extern unsigned int at_local_size;
++extern volatile unsigned int at_stack_size;
++extern volatile unsigned int at_local_size;
+ /* 
+  * If the processor does not have private memory, we use the thread
+  * stack to store the pointer to LWP structure. In this case, the stack

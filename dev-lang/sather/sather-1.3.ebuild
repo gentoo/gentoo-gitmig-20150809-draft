@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.17 2005/08/23 17:59:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.18 2006/01/28 13:20:04 blubb Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 
-	epatch ${FILESDIR}/${P}_gentoo.patch.gz
+	epatch ${FILESDIR}/${P}_gentoo.patch
 
 	mkdir doc
 	cd doc
