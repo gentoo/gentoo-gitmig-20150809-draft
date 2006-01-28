@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4926 2006/01/28 19:05:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4927 2006/01/28 19:30:12 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,10 +35,6 @@ app-text/pdftohtml
 # Luca Barbato <lu_zero@gentoo.org> (25 Jan 2006)
 # untested
 =app-emulation/bochs-2.2.5-r1
-
-# Andreas Proschofsky <suka@gentoo.org> (25 Jan 2006)
-# Up for removal
-app-office/openoffice-ximian
 
 # Mike Frysinger <vapier@gentoo.org> (25 Jan 2006)
 # Added for fun, but incomplete atm
