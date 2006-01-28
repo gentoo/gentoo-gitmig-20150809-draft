@@ -5,6 +5,7 @@ MD5 5ec470abb58c9e1fe99f0410cb14dffd files/digest-kdeutils-3.4.2 68
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdeutils-3.4.3 68
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdeutils-3.4.3-r1 68
 MD5 61427700c31d5d6a145005b5945e00e5 files/digest-kdeutils-3.5.0 68
+MD5 34b52102c89fb28f61eafe4d7560ef7a files/digest-kdeutils-3.5.1 68
 MD5 e733c7ad1c42938d7b945ea0f6f563ab files/kdeutils-3.4-configure.patch 2539
 MD5 0ebe4d00a1fd5845db2172027d12f531 files/kdeutils-3.4.3-klaptopdaemon.patch 1895
 MD5 82cc61148d380f77c98ea1b8bc88dbef files/superkaramba-3.5.0-fbsd.patch 4218
@@ -14,4 +15,5 @@ MD5 326614fcd8c1c2f949a93435d1ae2965 kdeutils-3.4.2.ebuild 869
 MD5 f64dd86e4c6c7af91edd033fed5cdb19 kdeutils-3.4.3-r1.ebuild 986
 MD5 7e2dc2cebe0b2d3f7a7d0f6dc648dc8e kdeutils-3.4.3.ebuild 881
 MD5 a24002a527f0c4b4531cf91399064be1 kdeutils-3.5.0.ebuild 1029
+MD5 2de69d428b594628d1f377c33b7fa12d kdeutils-3.5.1.ebuild 929
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -6,6 +6,7 @@ MD5 d8037944499434322bc1a939ec5ecf39 files/digest-kdewebdev-3.4.2 69
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kdewebdev-3.4.3 69
 MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kdewebdev-3.4.3-r1 69
 MD5 eefd34bb06d5f84a5f77adf4a6e69fdf files/digest-kdewebdev-3.5.0 69
+MD5 abb8468fa7557d2174e9974843af4d44 files/digest-kdewebdev-3.5.1 69
 MD5 41c00d38b3cc5e36bbd994c43d8c466e files/kxsldbg-3.4.3-fmt-str.patch 494
 MD5 64933746cbdc378bd6d40e0b56eac91f files/post-3.4-kdewebdev-2.diff 2703
 MD5 c44af4e971a0c10fd3adf8e95e093215 kdewebdev-3.3.2-r2.ebuild 509
@@ -15,4 +16,5 @@ MD5 46bda3cba97f5cd548b43d37647331b0 kdewebdev-3.4.2.ebuild 500
 MD5 69349a84ea7c5c47f1b2176a6d92926c kdewebdev-3.4.3-r1.ebuild 542
 MD5 7aa54d48d883ed586c49a8d25a730e09 kdewebdev-3.4.3.ebuild 491
 MD5 501e65238310f18c03d0482f37a60c30 kdewebdev-3.5.0.ebuild 489
+MD5 501e65238310f18c03d0482f37a60c30 kdewebdev-3.5.1.ebuild 489
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

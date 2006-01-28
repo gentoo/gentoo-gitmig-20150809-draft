@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.255 2006/01/22 22:52:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.256 2006/01/28 14:29:26 danarmak Exp $
+
+  28 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdebase-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
 *kdebase-3.5.1 (23 Jan 2006)
 

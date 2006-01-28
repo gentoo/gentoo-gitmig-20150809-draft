@@ -5,6 +5,7 @@ MD5 7768e89277edde1b1e163ae65e5a4e9c files/digest-kdemultimedia-3.4.1-r1 73
 MD5 dfce952f93ee14ecafcfea645134aec2 files/digest-kdemultimedia-3.4.2 73
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kdemultimedia-3.4.3 73
 MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-kdemultimedia-3.5.0 73
+MD5 f7bf563f8c0291854194ea855b77a18d files/digest-kdemultimedia-3.5.1 73
 MD5 ab4383e2b9810696530127a0a5464bfc files/kdemultimedia-3.4-configure.patch 5211
 MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
 MD5 0ed594ab9238b688fca70c1959d3932e files/kdemultimedia-3.4.1-akode-hang.patch 653
@@ -15,4 +16,5 @@ MD5 3c278760391c3f291cc6b3ec5ef7c32b kdemultimedia-3.4.1.ebuild 1773
 MD5 7b2b37aa321b64e715a57b9401ccd891 kdemultimedia-3.4.2.ebuild 2008
 MD5 76a3965f5b50292a662e9b95ef7c3543 kdemultimedia-3.4.3.ebuild 2016
 MD5 9318f262db9bdcbe4ad716a29a4ecaf5 kdemultimedia-3.5.0.ebuild 2195
+MD5 9318f262db9bdcbe4ad716a29a4ecaf5 kdemultimedia-3.5.1.ebuild 2195
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

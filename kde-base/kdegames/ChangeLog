@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.146 2006/01/22 22:52:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.147 2006/01/28 14:28:24 danarmak Exp $
+
+  28 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdegames-3.5.1.ebuild:
+  Version 3.5.1. Not yet released upstream, so package.masked for now.
 
 *kdegames-3.5.1 (23 Jan 2006)
 

@@ -4,6 +4,7 @@ MD5 7e1dab8dea5082d73c25c6ae6b4251b1 files/digest-kdenetwork-3.4.1-r1 149
 MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kdenetwork-3.4.2 70
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kdenetwork-3.4.3 70
 MD5 c1796dff01cbd770e451d9686766c581 files/digest-kdenetwork-3.5.0 70
+MD5 4747b54355e84108037b9fd2986a8f87 files/digest-kdenetwork-3.5.1 70
 MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
 MD5 cb87d2a81f7430f823e9173c3f478523 files/kdenetwork-3.3.2-kopete-msn.patch 34696
 MD5 e07566eb35cec7afdfa2e38edf7cdcd1 files/kdenetwork-3.3.2-kwifimanager-configlocation.patch 720
@@ -20,4 +21,5 @@ MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
 MD5 f01a7eb66338a4264475bdd11347ac4b kdenetwork-3.4.2.ebuild 1794
 MD5 981197c95e99c8fc5e37c0c02f4c5716 kdenetwork-3.4.3.ebuild 1764
 MD5 45dc358f9d30bc7a8e2903d7ed24ab8b kdenetwork-3.5.0.ebuild 1802
+MD5 45dc358f9d30bc7a8e2903d7ed24ab8b kdenetwork-3.5.1.ebuild 1802
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -21,6 +21,7 @@ MD5 387a99610a8332cea995ed48d7e3339b files/digest-kdebase-3.4.2-r2 143
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3 145
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-3.4.3-r1 145
 MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kdebase-3.5.0-r1 142
+MD5 340e546ce7b64129122115c8301d915e files/digest-kdebase-3.5.1 142
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
@@ -43,4 +44,5 @@ MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 42304c6555f5ae573d5e99c4fb3f0f4a kdebase-3.4.3-r1.ebuild 4492
 MD5 b028b31c593bcc849bbde152f85b8dac kdebase-3.4.3.ebuild 4263
 MD5 de71b2d5d1c1a0d31d6de863e02a9f86 kdebase-3.5.0-r1.ebuild 6116
+MD5 7a1f90c701d5248cd600ac4a1ba5abfd kdebase-3.5.1.ebuild 4987
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

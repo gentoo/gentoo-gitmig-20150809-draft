@@ -4,6 +4,7 @@ MD5 b222a3f919d71f11915038fe18b0a7d7 files/digest-kdeaddons-3.4.1 69
 MD5 bed9e2e46d8e7de37c5996e1ad3025bd files/digest-kdeaddons-3.4.2 69
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kdeaddons-3.4.3 69
 MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-kdeaddons-3.5.0 69
+MD5 2d970f21c7a6a6abbc56363e2e55d22e files/digest-kdeaddons-3.5.1 69
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
 MD5 76a1c9bb2b631b0233e79ed5ab7eb20e files/kdeaddons-3.4-configure.patch 3422
 MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0.diff 625
@@ -12,4 +13,5 @@ MD5 5cb3102b5887be89c0079df0a6028d51 kdeaddons-3.4.1.ebuild 1350
 MD5 4b184080c3a26edabff3c4d61409516d kdeaddons-3.4.2.ebuild 1549
 MD5 0ac1a38431c9a7e41d57be6a33a92200 kdeaddons-3.4.3.ebuild 1549
 MD5 99563776b508ebf9776c1a625cd5afa7 kdeaddons-3.5.0.ebuild 1146
+MD5 99563776b508ebf9776c1a625cd5afa7 kdeaddons-3.5.1.ebuild 1146
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
