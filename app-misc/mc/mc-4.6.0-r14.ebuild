@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r14.ebuild,v 1.6 2006/01/03 22:02:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r14.ebuild,v 1.7 2006/01/28 10:26:33 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -65,7 +65,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-key.c.patch
 	# Fix building with gcc4.
 	epatch ${FILESDIR}/${P}-gcc4.patch
-
+	epatch ${FILESDIR}/${P}-bug-102356.patch
 	if use slang && use unicode; then
 		epatch ${FILESDIR}/${P}-utf8.patch.bz2
 	fi

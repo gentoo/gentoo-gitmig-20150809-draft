@@ -1,0 +1,38 @@
+--- mc-4.6.0-orig/vfs/smb/configure	2005-08-13 13:00:45.000000000 +0200
++++ mc-4.6.0/vfs/smb/configure	2005-08-13 13:34:45.000000000 +0200
+@@ -3546,6 +3546,8 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/utsname.h>
+ main() {
+diff -urN mc-4.6.0-orig/vfs/smb/configure.in mc-4.6.0/vfs/smb/configure.in
+--- mc-4.6.0-orig/vfs/smb/configure.in	2005-08-13 13:00:45.000000000 +0200
++++ mc-4.6.0/vfs/smb/configure.in	2005-08-13 13:34:16.000000000 +0200
+@@ -458,6 +458,8 @@
+         old_CPPFLAGS="$CPPFLAGS"
+         CPPFLAGS="-D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE $CPPFLAGS"
+        AC_TRY_RUN([
++#include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/utsname.h>
+ main() {
+diff -urN mc-4.6.0-orig/vfs/smb/tests/crypttest.c mc-4.6.0/vfs/smb/tests/crypttest.c
+--- mc-4.6.0-orig/vfs/smb/tests/crypttest.c	2005-08-13 13:00:45.000000000 +0200
++++ mc-4.6.0/vfs/smb/tests/crypttest.c	2005-08-13 13:35:23.000000000 +0200
+@@ -803,9 +803,9 @@
+ 	strcpy(passwd, "12345678");
+ 	strcpy(salt, "12345678");
+ 	
+-	strcpy(c_out1, crypt(passwd, salt));
++	strcpy(c_out1, (const char *) crypt(passwd, salt));
+ 	salt[2] = '\0';
+-	strcpy(c_out2, crypt(passwd, salt));
++	strcpy(c_out2, (const char *) crypt(passwd, salt));
+ 
+ 	/*
+ 	 * If the non-trucated salt fails but the
