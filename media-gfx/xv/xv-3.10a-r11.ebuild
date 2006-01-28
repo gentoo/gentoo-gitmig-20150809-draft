@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r11.ebuild,v 1.13 2005/07/12 04:31:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r11.ebuild,v 1.14 2006/01/28 21:05:07 blubb Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -28,8 +28,8 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-jumbo-enh-patch-${JUMBOV}.txt || die
 
 	# various security issues.
-	epatch ${FILESDIR}/${P}-bmpfix.patch.bz2 || die
-	epatch ${FILESDIR}/${P}-yaos.dif.bz2 || die
+	epatch ${FILESDIR}/${P}-bmpfix.patch || die
+	epatch ${FILESDIR}/${P}-yaos.diff || die
 
 	if use ppc-macos; then
 		epatch ${FILESDIR}/${PF}-xv-osx.patch

@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.75 2005/12/13 15:52:49 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.76 2006/01/28 21:05:07 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  +files/xv-3.10a-bmpfix.patch, -files/xv-3.10a-bmpfix.patch.bz2,
+  -files/xv-3.10a-yaos.dif.bz2, +files/xv-3.10a-yaos.diff,
+  xv-3.10a-r11.ebuild:
+  no need to bzip smallish patches
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; xv-3.10a-r12.ebuild:
   Add modular X dependencies.
