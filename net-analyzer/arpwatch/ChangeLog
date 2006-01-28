@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.18 2006/01/22 17:43:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.19 2006/01/28 19:23:06 vanquirius Exp $
+
+  28 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/arpwatch-2.1.11-r1.diff.gz, -files/arpwatch-2.1.13.diff.gz,
+  arpwatch-2.1.11-r1.ebuild, arpwatch-2.1.13-r2.ebuild:
+  Move patches to mirrors for bug 120669.
 
 *arpwatch-2.1.13-r2 (22 Jan 2006)
 

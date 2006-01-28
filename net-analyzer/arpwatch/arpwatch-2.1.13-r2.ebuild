@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13-r2.ebuild,v 1.1 2006/01/22 17:43:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13-r2.ebuild,v 1.2 2006/01/28 19:23:06 vanquirius Exp $
 
 inherit eutils versionator
 
@@ -8,7 +8,8 @@ inherit eutils versionator
 MY_P="${PN}-$(replace_version_separator 2 'a')"
 DESCRIPTION="An ethernet monitor program that keeps track of ethernet/ip address pairings"
 HOMEPAGE="http://www-nrg.ee.lbl.gov/"
-SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz
+	mirror://gentoo/${P}.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -25,14 +26,14 @@ pkg_setup() {
 	enewuser arpwatch -1 -1 /var/lib/arpwatch arpwatch
 }
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	einfo "Patching arpwatch with debian and redhat patches"
-	gzip -dc ${FILESDIR}/${P}.diff.gz | patch -s
+	gzip -dc "${DISTDIR}"/${P}.diff.gz | patch -s
 }
 
 src_compile() {

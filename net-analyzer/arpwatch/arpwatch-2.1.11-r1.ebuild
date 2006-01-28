@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.15 2005/07/09 18:30:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.16 2006/01/28 19:23:06 vanquirius Exp $
 
 MY_P=arpwatch-2.1a11
-S=${WORKDIR}/$MY_P
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="An ethernet monitor program that keeps track of ethernet/ip address pairings"
 HOMEPAGE="http://www-nrg.ee.lbl.gov/"
-SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz
+	mirror://gentoo/${P}-r1.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,10 +21,10 @@ RDEPEND="selinux? ( sec-policy/selinux-arpwatch )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	einfo "Patching arpwatch with debian and redhat patches"
-	gzip -dc ${FILESDIR}/${P}-r1.diff.gz | patch -s
+	gzip -dc "${DISTDIR}"/${P}-r1.diff.gz | patch -s
 }
 
 src_compile() {
@@ -40,7 +41,7 @@ src_install () {
 	dodir /var/arpwatch /usr/sbin
 	keepdir /var/arpwatch
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	doman *.8
 
@@ -54,10 +55,10 @@ src_install () {
 	doins ethercodes.dat
 
 	dodoc README CHANGES
-	exeinto /etc/init.d ; newexe ${FILESDIR}/arpwatch.init arpwatch
+	exeinto /etc/init.d ; newexe "${FILESDIR}"/arpwatch.init arpwatch
 
 	insinto /etc/conf.d
-	newins ${FILESDIR}/arpwatch.confd arpwatch
+	newins "${FILESDIR}"/arpwatch.confd arpwatch
 
 }
 pkg_postinst() {
