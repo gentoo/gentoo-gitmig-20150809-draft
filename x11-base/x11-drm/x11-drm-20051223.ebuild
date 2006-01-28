@@ -1,11 +1,28 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.3 2006/01/28 21:49:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.4 2006/01/28 21:56:26 spyderous Exp $
 
 inherit eutils x11 linux-mod
 
-IUSE=""
-IUSE_VIDEO_CARDS="3dfx ati ffb i810 i830 i915 mach64 mga nv rage128 radeon savage sis via"
+IUSE_VIDEO_CARDS="
+	video_cards_3dfx
+	video_cards_ati
+	video_cards_ffb
+	video_cards_ffb
+	video_cards_i810
+	video_cards_i830
+	video_cards_i915
+	video_cards_mach64
+	video_cards_mach64
+	video_cards_mga
+	video_cards_nv
+	video_cards_radeon
+	video_cards_rage128
+	video_cards_savage
+	video_cards_sis
+	video_cards_sis
+	video_cards_via"
+IUSE="${IUSE_VIDEO_CARDS}"
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
