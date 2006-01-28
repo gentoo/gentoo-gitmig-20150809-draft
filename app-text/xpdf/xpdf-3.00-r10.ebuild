@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r10.ebuild,v 1.8 2005/08/14 03:54:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r10.ebuild,v 1.9 2006/01/28 14:43:26 blubb Exp $
 
 inherit eutils
 
@@ -51,15 +51,15 @@ PROVIDE="virtual/pdfviewer"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use truetype && epatch ${FILESDIR}/xpdf-3.00-truetype-new.diff.gz
+	use truetype && epatch ${FILESDIR}/xpdf-3.00-truetype-new.diff
 	use truetype && epatch ${FILESDIR}/xpdf-3.00-freetype-2.1.7.patch
 	epatch ${FILESDIR}/xpdf-3.00-empty-bookmark.patch
-	epatch ${FILESDIR}/xpdf-3.00-core.patch.bz2
-	epatch ${FILESDIR}/xpdf-3.00-overflow.patch.bz2
-	epatch ${FILESDIR}/xpdf-3.00-PathScanner.patch.bz2
+	epatch ${FILESDIR}/xpdf-3.00-core.patch
+	epatch ${FILESDIR}/xpdf-3.00-overflow.patch
+	epatch ${FILESDIR}/xpdf-3.00-PathScanner.patch
 	use nodrm && epatch ${FILESDIR}/xpdf-3.00-nodrm.diff
 	epatch ${FILESDIR}/xpdf-goo-sizet.patch
-	epatch ${FILESDIR}/xpdf-3.00-scroll-opts.patch.bz2
+	epatch ${FILESDIR}/xpdf-3.00-scroll-opts.patch
 	epatch ${FILESDIR}/xpdf-3.00-pl2.patch
 	epatch ${FILESDIR}/xpdf-3.00-pl3.patch
 	epatch ${FILESDIR}/xpdf-3.00-fonts.patch

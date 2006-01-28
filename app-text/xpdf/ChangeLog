@@ -1,6 +1,16 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.124 2006/01/25 23:06:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.125 2006/01/28 14:43:26 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  +files/xpdf-3.00-PathScanner.patch,
+  -files/xpdf-3.00-PathScanner.patch.bz2, +files/xpdf-3.00-core.patch,
+  -files/xpdf-3.00-core.patch.bz2, +files/xpdf-3.00-overflow.patch,
+  -files/xpdf-3.00-overflow.patch.bz2, +files/xpdf-3.00-scroll-opts.patch,
+  -files/xpdf-3.00-scroll-opts.patch.bz2,
+  +files/xpdf-3.00-truetype-new.diff, -files/xpdf-3.00-truetype-new.diff.gz,
+  xpdf-3.00-r8.ebuild, xpdf-3.00-r10.ebuild:
+  no need to bzip smallish patches
 
   25 Jan 2006; Bryan Østergaard <kloeri@gentoo.org xpdf-3.01-r5.ebuild:
   Stable on alpha, bug 117495.
