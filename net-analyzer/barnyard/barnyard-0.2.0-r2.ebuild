@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.1 2005/12/24 23:38:31 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.2 2006/01/28 17:17:45 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="Fast output system for Snort"
-SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz"
 HOMEPAGE="http://www.snort.org/dl/barnyard/"
+SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz
+	mirror://gentoo/${P}-patches.tar.bz2"
 
 SLOT="0"
 LICENSE="QPL"
@@ -21,16 +22,16 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	net-analyzer/snort"
 
-S=${WORKDIR}/${P/_/-}
+S="${WORKDIR}/${P/_/-}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	if use sguil ; then
-		epatch "${FILESDIR}/${PV}-sguil_files.patch.gz"
-		epatch "${FILESDIR}/${PV}-configure-in.patch.gz"
+		epatch "${WORKDIR}/${PV}-sguil_files.patch"
+		epatch "${WORKDIR}/${PV}-configure-in.patch"
 		cd "${S}/src/output-plugins"
-		epatch "${FILESDIR}/${PV}-op_plugbase.c.patch.gz"
+		epatch "${WORKDIR}/${PV}-op_plugbase.c.patch"
 		cd "${S}"
 		ebegin "Recreating configure"
 		aclocal && autoheader && automake --add-missing --copy \
