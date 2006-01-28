@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6.ebuild,v 1.2 2005/01/29 08:36:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6.ebuild,v 1.3 2006/01/28 05:40:03 halcy0n Exp $
 
 inherit eutils confutils
 
@@ -23,7 +23,8 @@ src_unpack() {
 
 	# add patch for PHP extension sandbox violation
 	cd ${S} || die "Unable to cd to ${S}"
-	epatch ${FILESDIR}/${PN}-2.2.5-php.patch || die "Unable to apply PHP patch"
+	epatch "${FILESDIR}"/${PN}-2.2.5-php.patch || die "Unable to apply PHP patch"
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
