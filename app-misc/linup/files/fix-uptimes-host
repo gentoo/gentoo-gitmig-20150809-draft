@@ -1,0 +1,11 @@
+--- linup.h.dist	2003-12-21 19:36:38.000000000 -0500
++++ linup.h	2003-12-21 19:32:46.000000000 -0500
+@@ -29,7 +29,7 @@
+ #define AUTHOR "Joao Ribeiro <sena@smux.net>"
+ 
+ /* The uptimes project host. */
+-#define HOST "uptimes.wonko.com"
++#define HOST "uptimes.hostingwired.com"
+ /* The port to use (80 is default for HTTP), with the old (4.20) protocol. */
+ #define PORT 80
+ /* The location of the document to where we should POST. */
