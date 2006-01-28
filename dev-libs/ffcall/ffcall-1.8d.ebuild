@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.20 2005/04/24 02:50:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.21 2006/01/28 13:22:08 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use hppa && epatch ${FILESDIR}/ffcall_hppa_1.8-4.2.diff.gz
+	use hppa && epatch ${FILESDIR}/ffcall_hppa_1.8-4.2.diff
 }
 
 src_compile() {
