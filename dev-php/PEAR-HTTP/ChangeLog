@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTTP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.19 2006/01/23 00:27:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.20 2006/01/28 15:36:16 jer Exp $
+
+  28 Jan 2006; Jeroen Roovers <jer@gentoo.org> PEAR-HTTP-1.4.0.ebuild:
+  Marked ~hppa (bug #119722).
 
   23 Jan 2006; Bryan Østergaard <kloeri@gentoo.org PEAR-HTTP-1.4.0.ebuild:
   Add ~ia64 keyword, bug 119722.
