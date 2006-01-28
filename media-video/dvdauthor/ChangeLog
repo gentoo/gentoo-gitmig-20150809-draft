@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdauthor
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.23 2005/05/24 11:48:43 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.24 2006/01/28 18:06:49 dertobi123 Exp $
+
+  28 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  dvdauthor-0.6.11.ebuild:
+  Stable on ppc, bug #120743
 
   24 May 2005; Markus Rothe <corsair@gentoo.org> dvdauthor-0.6.11.ebuild:
   Stable on ppc64
