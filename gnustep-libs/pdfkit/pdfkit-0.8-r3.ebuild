@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/pdfkit-0.8-r3.ebuild,v 1.2 2005/08/25 19:03:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/pdfkit-0.8-r3.ebuild,v 1.3 2006/01/28 18:10:51 blubb Exp $
 
 inherit gnustep
 
@@ -25,7 +25,7 @@ src_unpack()
 {
 	unpack ${A}
 	cd ${S}
-	( cd xpdf/xpdf-3.00/xpdf; epatch ${FILESDIR}/xpdf-3.00-CESA-2004-007.diff.bz2 )
+	( cd xpdf/xpdf-3.00/xpdf; epatch ${FILESDIR}/xpdf-3.00-CESA-2004-007.diff )
 	( cd xpdf/xpdf-3.00/goo; epatch ${FILESDIR}/xpdf-goo-sizet.patch )
 	( cd xpdf/xpdf-3.00/xpdf; epatch ${FILESDIR}/xpdf-3.00pl2.patch )
 }
