@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.11 2005/06/15 19:23:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.12 2006/01/28 07:24:55 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -15,12 +15,15 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="virtual/opengl
-	virtual/x11
+# A lot of deps are inherited from emilia-pinball, so we don't repeat
+# them here.
+RDEPEND="virtual/xft
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	>=games-arcade/emilia-pinball-0.3.1"
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

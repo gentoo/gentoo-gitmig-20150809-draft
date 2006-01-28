@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/aabrowse-0.0.6.ebuild,v 1.2 2005/07/25 17:45:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/aabrowse-0.0.6.ebuild,v 1.3 2006/01/28 07:24:55 joshuabaergen Exp $
 
 inherit qt3
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="geoip"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXext
+				x11-libs/libSM )
+			virtual/x11 )"
+DEPEND="${RDEPEND}
 	$(qt_min_version 3.2)
 	sys-libs/zlib
 	media-libs/libpng
