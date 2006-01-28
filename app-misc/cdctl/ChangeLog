@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/cdctl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.7 2005/04/21 19:05:12 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.8 2006/01/28 12:56:14 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  +files/cdctl-0.15-Makefile.in.patch, -files/00_all_Makefile.in.patch.bz2,
+  cdctl-0.15.ebuild:
+  no need to have a bzipped patch in portage
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> cdctl-0.15.ebuild:
   stable on amd64

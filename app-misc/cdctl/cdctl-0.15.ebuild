@@ -1,9 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/cdctl-0.15.ebuild,v 1.15 2005/04/21 19:05:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/cdctl-0.15.ebuild,v 1.16 2006/01/28 12:56:14 blubb Exp $
 
 inherit eutils
-EPATCH_SOURCE=${FILESDIR}
 
 DESCRIPTION="Utility to control your cd/dvd drive"
 HOMEPAGE="http://cdctl.sourceforge.net/"
@@ -19,7 +18,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch
+	epatch ${FILESDIR}/${P}-Makefile.in.patch
 }
 
 src_install() {

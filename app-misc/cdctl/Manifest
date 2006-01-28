@@ -1,4 +1,4 @@
-MD5 4d7008295c224cc4613206aa50f94c76 ChangeLog 727
-MD5 643cf8b51a9ef04739b2abe1e2689eea cdctl-0.15.ebuild 636
-MD5 65699ac25cca9d0d86e0588dbebe7cb2 files/00_all_Makefile.in.patch.bz2 672
+MD5 504e1de251c83034373cd01f5af51a98 ChangeLog 919
+MD5 ce4817d167b3e00762835ec9d9503372 cdctl-0.15.ebuild 645
+MD5 2ea3bfb2935b2a417d3fc1d5545a6491 files/cdctl-0.15-Makefile.in.patch 1437
 MD5 c5efe4abf3b6a476cad53ea639ddf263 files/digest-cdctl-0.15 61
