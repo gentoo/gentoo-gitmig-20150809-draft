@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.26 2006/01/27 07:38:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.27 2006/01/28 21:57:37 halcy0n Exp $
+
+  28 Jan 2006; Mark Loeser <halcy0n@gentoo.org> xfsdump-2.2.30.ebuild:
+  Stable on x86; bug #120488
 
   27 Jan 2006; Luca Barbato <lu_zero@gentoo.org> xfsdump-2.2.30.ebuild:
   Marked ppc
