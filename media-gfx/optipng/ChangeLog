@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/optipng
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.24 2005/10/30 19:00:56 grobian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.25 2006/01/28 19:31:48 reb Exp $
+
+*optipng-0.5 (28 Jan 2006)
+
+  28 Jan 2006; Karol Pasternak <reb@gentoo.org> +optipng-0.5.ebuild:
+  Version bump
 
   30 Oct 2005; Fabian Groffen <grobian@gentoo.org> optipng-0.4.8-r1.ebuild:
   Marked ~ppc-macos (bug #110826)
