@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 909233d8bf4e32495c5e9e79987820b7 ChangeLog 4614
 MD5 0e67d8cbd140744d8d483f791477a2a4 common-lisp-controller-4.15.ebuild 2759
 MD5 e95ec6fe9966b661e113f8c15871d88a common-lisp-controller-4.27.ebuild 2746
@@ -7,3 +10,10 @@ MD5 4fa3931e4dabb6efecce0efdbd063ec4 files/README.Gentoo 973
 MD5 522385f0885f4699612696a4fca536a0 files/digest-common-lisp-controller-4.15 84
 MD5 8bdbce796e9bccc837d42e64697ba3a8 files/digest-common-lisp-controller-4.27 78
 MD5 e5a9822d3fd5f5c726cc4bdc793d4e08 metadata.xml 511
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD2sXqCRZPokWLroQRAgFHAJoDfnbHVFP1ZsCmfBsmy+GJpmXPTgCcDBNI
++NiGBhI4rQkLAuQ+nE1rPog=
+=RFF8
+-----END PGP SIGNATURE-----
