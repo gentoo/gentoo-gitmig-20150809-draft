@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.5_pre20050312-r1.ebuild,v 1.4 2005/07/16 15:49:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.5_pre20050312-r1.ebuild,v 1.5 2006/01/28 18:08:09 blubb Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -40,7 +40,7 @@ egnustep_install_domain "System"
 src_unpack() {
 	cvs_src_unpack ${A}
 	cd ${S}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/gui-use-giflib.patch.bz2
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/gui-use-giflib.patch
 }
 
 src_compile() {
