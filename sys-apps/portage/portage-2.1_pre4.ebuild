@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre3-r1.ebuild,v 1.2 2006/01/20 14:11:45 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4.ebuild,v 1.1 2006/01/28 02:51:46 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s39
 SLOT="0"
 IUSE="build doc selinux"
 DEPEND=">=dev-lang/python-2.3"
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.3 userland_GNU? ( sys-apps/debianutils ) >=app-shells/bash-2.05a ) !userland_Darwin? ( app-misc/pax-utils sys-apps/sandbox ) selinux? ( >=dev-python/python-selinux-2.15 ) doc? ( app-portage/portage-manpages )"
+RDEPEND="!build? ( >=sys-apps/sed-4.0.5 \
+                   dev-python/python-fchksum \
+                   >=dev-lang/python-2.3 \
+                   userland_GNU? ( sys-apps/debianutils ) \
+                   >=app-shells/bash-2.05a ) \
+         !userland_Darwin? ( app-misc/pax-utils sys-apps/sandbox ) \
+         selinux? ( >=dev-python/python-selinux-2.15 ) \
+         doc? ( app-portage/portage-manpages )"
+
 PROVIDE="virtual/portage"
 
 S=${WORKDIR}/${PN}-${PV}
@@ -22,8 +30,6 @@ S=${WORKDIR}/${PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/xterm-titles.patch
 }
 
 src_compile() {
@@ -93,6 +99,8 @@ src_install() {
 
 	doman "${S}"/man/*.[0-9]
 	dodoc "${S}"/ChangeLog
+	dodoc "${S}"/NEWS
+	dodoc "${S}"/RELEASE-NOTES
 
 	dodir /usr/bin
 	for x in ebuild emerge portageq repoman tbz2tool xpak; do
@@ -140,9 +148,14 @@ pkg_postinst() {
 	ewarn "This series contains a completely rewritten caching framework."
 	ewarn "If you are using any cache modules (such as the CDB cache"
 	ewarn "module) portage will not work until they have been disabled."
-	ewarn "For reference, they are configured at /etc/portage/modules."
 	echo
 	einfo "The default cache format has changed beginning with this"
 	einfo "version. Before using emerge, run \`emerge --metadata\` to"
 	einfo "restore portage's local cache."
+	echo
+	einfo "Flag ordering has changed for \`emerge --pretend --verbose\`."
+	einfo "Add EMERGE_DEFAULT_OPTS=\"--alphabetical\" to /etc/make.conf"
+	einfo "to restore the previous ordering."
+	echo
+	einfo "See NEWS and RELEASE-NOTES for further changes."
 }
