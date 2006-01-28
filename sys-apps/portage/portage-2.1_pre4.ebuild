@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4.ebuild,v 1.2 2006/01/28 07:28:43 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4.ebuild,v 1.3 2006/01/28 20:49:05 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -15,14 +15,14 @@ SLOT="0"
 IUSE="build doc selinux"
 DEPEND=">=dev-lang/python-2.3"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 \
-                   dev-python/python-fchksum \
-                   >=dev-lang/python-2.3 \
-                   userland_GNU? ( sys-apps/debianutils ) \
-                   >=app-shells/bash-2.05a ) \
-         !userland_Darwin? ( app-misc/pax-utils sys-apps/sandbox ) \
-         selinux? ( >=dev-python/python-selinux-2.15 ) \
-         doc? ( app-portage/portage-manpages )
-         dev-python/pycrypto"
+					dev-python/python-fchksum \
+					>=dev-lang/python-2.3 \
+					userland_GNU? ( sys-apps/debianutils ) \
+					>=app-shells/bash-2.05a ) \
+		!userland_Darwin? ( app-misc/pax-utils sys-apps/sandbox ) \
+		selinux? ( >=dev-python/python-selinux-2.15 ) \
+		doc? ( app-portage/portage-manpages )
+		dev-python/pycrypto"
 
 PROVIDE="virtual/portage"
 
