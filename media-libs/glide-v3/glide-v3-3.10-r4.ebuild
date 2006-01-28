@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.10 2006/01/05 18:38:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.11 2006/01/28 09:35:03 spyderous Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/glide3x-${PV}.tar.gz
 LICENSE="3DFX"
 SLOT="0"
 KEYWORDS="x86 -sparc alpha"
-IUSE="voodoo3 3dnow"
+IUSE="voodoo3"
 
 RDEPEND="|| ( ( x11-libs/libXxf86dga
 			x11-libs/libXxf86vm
@@ -68,8 +68,8 @@ src_compile() {
 		--prefix=/usr \
 		--enable-fx-glide-hw=${compilefor} \
 		--enable-fx-dri-build \
-		`use_enable 3dnow amd3d` \
 			|| die "configure failed"
+#		`use_enable 3dnow amd3d` \
 
 	# On alpha at least, glide incorrectly guesses 486 processor.
 	# Fixup the makefiles.
