@@ -1,3 +1,8 @@
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
 oci8
+
+# 2006/01/28 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: unmask for architectures on which they are available
+-input_devices_synaptics
+-input_devices_wacom
