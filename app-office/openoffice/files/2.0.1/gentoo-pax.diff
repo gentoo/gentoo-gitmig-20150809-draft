@@ -1,0 +1,26 @@
+--- solenv/inc/unxlngi4.mk.orig	2005-10-29 17:09:48.000000000 +0200
++++ solenv/inc/unxlngi4.mk	2005-10-29 17:18:46.000000000 +0200
+@@ -138,8 +138,8 @@
+ LINKFLAGS=-z combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
+ 
+ # linker flags for linking applications
+-LINKFLAGSAPPGUI= -Wl,-export-dynamic -Wl,--noinhibit-exec
+-LINKFLAGSAPPCUI= -Wl,-export-dynamic -Wl,--noinhibit-exec
++LINKFLAGSAPPGUI= -Wl,-export-dynamic -Wl,--noinhibit-exec -Wl,-z,execheap
++LINKFLAGSAPPCUI= -Wl,-export-dynamic -Wl,--noinhibit-exec -Wl,-z,execheap
+ 
+ # linker flags for linking shared libraries
+ LINKFLAGSSHLGUI= -shared
+--- solenv/inc/unxlngi6.mk.orig	2005-10-29 17:16:27.000000000 +0200
++++ solenv/inc/unxlngi6.mk	2005-10-29 17:19:08.000000000 +0200
+@@ -147,8 +147,8 @@
+ LINKFLAGS=-Wl,-z,combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
+ 
+ # linker flags for linking applications
+-LINKFLAGSAPPGUI= -Wl,-export-dynamic -Wl,--noinhibit-exec
+-LINKFLAGSAPPCUI= -Wl,-export-dynamic -Wl,--noinhibit-exec
++LINKFLAGSAPPGUI= -Wl,-export-dynamic -Wl,--noinhibit-exec -Wl,-z,execheap
++LINKFLAGSAPPCUI= -Wl,-export-dynamic -Wl,--noinhibit-exec -Wl,-z,execheap
+ 
+ # linker flags for linking shared libraries
+ LINKFLAGSSHLGUI= -shared

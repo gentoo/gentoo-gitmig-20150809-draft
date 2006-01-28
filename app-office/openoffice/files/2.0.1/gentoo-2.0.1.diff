@@ -1,0 +1,11 @@
+--- patches/src680/apply
++++ patches/src680/apply
+@@ -976,6 +976,8 @@
+ stlport-ppc-buildfix.diff
+ # Re-add DicOOo
+ gentoo-dicooo.diff
++# Allow build to proceed with PaX enabled
++gentoo-pax.diff
+ 
+ #
+ # NOTE: 64 bit OOo is work in progress!

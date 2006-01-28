@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.20 2006/01/28 19:28:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.21 2006/01/28 23:42:58 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -140,6 +140,8 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
+	cp ${FILESDIR}/${PV}/gentoo-pax.diff ${S}/patches/src680/ || die
+	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
@@ -156,6 +158,14 @@ src_unpack() {
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}
 	echo "`use_enable gnome gnome-vfs`" >> ${CONFFILE}
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
+
+	# Gentoo installs both static and dynamic libraries for Xinerama;
+	# Openoffice configure defaults to static if both are present,
+	# unless --with-dynamic-xinerama is specified.  Without this,
+	# libvclplug_gen680li.so links to the static library causing
+	# unnecessary TEXTRELs. This option only takes effect when
+	# both libraries are present so it's safe to enable always.
+	echo "--with-dynamic-xinerama" >> ${CONFFILE}
 
 }
 
