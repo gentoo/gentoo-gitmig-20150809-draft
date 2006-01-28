@@ -1,24 +1,22 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.3.5g.ebuild,v 1.1 2006/01/19 17:31:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.4.ebuild,v 1.1 2006/01/28 15:30:43 josejx Exp $
 
-inherit eutils linux-info flag-o-matic versionator
-
-MY_P=$( replace_version_separator 3 '-' )
+inherit eutils linux-info flag-o-matic
 
 DESCRIPTION="Handles power management and special keys on laptops."
 HOMEPAGE="http://pbbuttons.sf.net"
-SRC_URI="ftp://ftp.berlios.de/pub/pbbuttons/${PN}-${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="acpi debug alsa oss ibam"
 
-DEPEND=">=sys-apps/baselayout-1.8.6.12-r1"
-RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )"
-
-S="${WORKDIR}/${PN}-${MY_P}"
+DEPEND=">=sys-apps/baselayout-1.8.6.12-r1
+		>=dev-libs/glib-2.6"
+RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )
+		 >=dev-libs/glib-2.6"
 
 src_compile() {
 	# Fix crash bug on some systems
