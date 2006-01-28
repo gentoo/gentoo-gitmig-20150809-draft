@@ -1,4 +1,4 @@
-MD5 3cb0adcb5aa4d8e0018446cbb666d3a6 ChangeLog 7075
+MD5 a1e5d4852ad396701f25139d0730a70b ChangeLog 7185
 MD5 c05083a16f957fda1c27e0b0cfc91005 files/digest-gtk-engines-0.12 68
 MD5 5de5aab24161a9716ab7936e39fc238d files/digest-gtk-engines-2.6.5 70
 MD5 848cbb7e59d60d96b21aa378724db101 files/digest-gtk-engines-2.6.6 70
@@ -6,5 +6,5 @@ MD5 82550dc12924920f5f7835e1ce9b0df1 files/digest-gtk-engines-2.6.7 70
 MD5 d792d5b0ca15aad2214ca213459bae78 gtk-engines-0.12.ebuild 825
 MD5 1d104b2c08bb2830d2f3f8c2ffced9af gtk-engines-2.6.5.ebuild 704
 MD5 ca25410a09e1ad22b42f660570e59e23 gtk-engines-2.6.6.ebuild 706
-MD5 caccf64d8d654f43d8311450a7500620 gtk-engines-2.6.7.ebuild 665
+MD5 eed29649b3c5dd527f5c744599b58866 gtk-engines-2.6.7.ebuild 663
 MD5 36faf46cc298a5e4b601aafac15ec93b metadata.xml 568
