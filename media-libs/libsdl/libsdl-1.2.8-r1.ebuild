@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.25 2005/12/29 08:10:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.26 2006/01/28 19:13:52 blubb Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -63,7 +63,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/libsdl-1.2.9-endian-cvs-updates.patch
 
 	# This patch breaks compiling >-O0 on gcc4 ; bug #87809
-	[ "`gcc-major-version`" -lt "4" ] && epatch "${FILESDIR}"/${P}-gcc2.patch.bz2 #86481
+	[ "`gcc-major-version`" -lt "4" ] && epatch "${FILESDIR}"/${P}-gcc2.patch #86481
 	epatch "${FILESDIR}"/${PV}-keyrepeat.patch #76448
 	epatch "${FILESDIR}"/${PV}-linux26.patch #74608
 	#epatch "${FILESDIR}"/${PV}-direct-8bit-color.patch #76946
