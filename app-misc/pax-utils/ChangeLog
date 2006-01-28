@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.40 2006/01/18 22:53:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.41 2006/01/28 20:35:28 solar Exp $
+
+*pax-utils-0.1.8 (28 Jan 2006)
+
+  28 Jan 2006; <solar@gentoo.org> -files/scanelf-null-rpath.patch,
+  pax-utils-0.1.4.ebuild, -pax-utils-0.1.5.ebuild, -pax-utils-0.1.6.ebuild,
+  -pax-utils-0.1.7-r1.ebuild, +pax-utils-0.1.8.ebuild:
+  - New -A option to scan *.a archives. Better handling of invalid elf files.
 
 *pax-utils-0.1.7-r1 (18 Jan 2006)
 

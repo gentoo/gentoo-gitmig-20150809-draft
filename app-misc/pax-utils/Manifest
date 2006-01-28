@@ -1,11 +1,30 @@
-MD5 c3f5c9253271ef5ec2c517352419b218 ChangeLog 6694
-MD5 dc77856d07055e511131e862afbb09eb files/digest-pax-utils-0.1.4 67
-MD5 a600ef77f69ccf3b549a95e326603592 files/digest-pax-utils-0.1.5 67
-MD5 2423859a4ed3486389cbb553bd1bf0f0 files/digest-pax-utils-0.1.6 67
-MD5 c04057e6e31a00de3e0ddef9f4db3f92 files/digest-pax-utils-0.1.7-r1 67
-MD5 4c62b41578df556f326806228afe1f99 files/scanelf-null-rpath.patch 534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54e1eb01e71e4c8ad7aaa75f3b936630 ChangeLog 7003
+RMD160 14996ac10ac3a7814cfb448cb22aa7404a8ceb69 ChangeLog 7003
+SHA256 224f2868f5b74db0054bcd90739d061f9a141ed252c5c3cb4b3036c162d529b4 ChangeLog 7003
+MD5 212af09c0c8a660ecc4dc1df67e8c3b2 files/digest-pax-utils-0.1.4 247
+RMD160 98bff41509da6d7d67c93924b0144011c28b1048 files/digest-pax-utils-0.1.4 247
+SHA256 2cc81e1b4f9b199ddc9f9a04f8cba60f1eeeb0666f3e583c441eb62526feb37c files/digest-pax-utils-0.1.4 247
+MD5 9e860c5d83a3dfeaea3b092895033a2c files/digest-pax-utils-0.1.8 247
+RMD160 3583aeb057f174bf3dde64c0c0df62ac296b4de0 files/digest-pax-utils-0.1.8 247
+SHA256 40fd140bce16bd8cf040eaac270e353227458feb431a239d6b58d7fc60c1ac14 files/digest-pax-utils-0.1.8 247
 MD5 90f775b6c4fdbeb494f7d8e1d94ad30d metadata.xml 604
-MD5 16be1632892be8a4398d2284ec734854 pax-utils-0.1.4.ebuild 930
-MD5 8b51b7c8db335a2bf83e439832c23a89 pax-utils-0.1.5.ebuild 1028
-MD5 b3f155a95d4684a1c398bdf2dbad2152 pax-utils-0.1.6.ebuild 1013
-MD5 1cf59984913adbf72186dfde270ff096 pax-utils-0.1.7-r1.ebuild 1200
+RMD160 7f581ee400ba8449455baf903183c12136a53838 metadata.xml 604
+SHA256 f3aaada3dde296c02797c2f68e88bf7f3cf650449aaf956126bc54ebd36e686e metadata.xml 604
+MD5 a068acf44055609fdf44de3c54674cc0 pax-utils-0.1.4.ebuild 926
+RMD160 5f41cecfa6c828bcf480f4f7f7b6a85206ea4a15 pax-utils-0.1.4.ebuild 926
+SHA256 b4d3fabd3fb5998965d5b5750e8e9999c34aa71fc2054b31b2de92450a2edd8e pax-utils-0.1.4.ebuild 926
+MD5 1f2aacd06392ac7b7933f7619503e01b pax-utils-0.1.8.ebuild 1106
+RMD160 432465006eed484ac2466db20c2f2e48f2c70992 pax-utils-0.1.8.ebuild 1106
+SHA256 2f4a0215a7277d97cdea4ddf32d6d21c917bd17b0394953e967e77288fa50db6 pax-utils-0.1.8.ebuild 1106
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iQCVAwUBQ9vVnJ4WFLgrx1GWAQKbfgP+JqKEX/wHog+kohHFfWjSYznYXAb8bvOV
+R60VHlggB4q2nKZVq2g+GWcfdkDwVCI1Z3MlEZIiV8CAdrEUCCtq6yLOyBb5XEw5
+y341HcJHi1WGBN2zWSBRoFbzNYOgnSuczbSkk9GoTOE2Ht6qtE60E7+SGD7Y9AKc
+29VQA1FVYR8=
+=UcjC
+-----END PGP SIGNATURE-----

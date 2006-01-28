@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.4.ebuild,v 1.4 2005/12/07 01:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.4.ebuild,v 1.5 2006/01/28 20:35:28 solar Exp $
 
 inherit flag-o-matic toolchain-funcs
 
-DESCRIPTION="Various ELF related utils for ELF32, ELF64 binaries useful for displaying PaX and security info on a large groups of bins"
+DESCRIPTION="Various ELF related utils for ELF32, ELF64 binaries useful tools that can check files for security relevant properties"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened"
 SRC_URI="mirror://gentoo/pax-utils-${PV}.tar.bz2
 	http://dev.gentoo.org/~solar/pax/pax-utils-${PV}.tar.bz2"
