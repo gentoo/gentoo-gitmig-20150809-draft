@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c41d59a55392505114451b081a6ad558 ChangeLog 1426
+MD5 0e93c08c4c25101fa85b6b6f71888f91 ChangeLog 1546
+MD5 ec130e196a8c6b8a6aa58f027e03678a files/digest-libdsk-1.1.0 64
+MD5 ff74a732def146b14fd58e696be16ae1 files/digest-libdsk-1.1.5 64
+MD5 c23119642b9add713a082cf56ad2ed29 files/digest-libdsk-1.1.6 64
+MD5 770fbca8122798d14b913c304d6bb4c9 files/digest-libdsk-1.1.9 64
 MD5 e8fd165188427455ff367b4fc471d175 libdsk-1.1.0.ebuild 698
-MD5 a92ccc9109f3bb8c36e7597064966708 metadata.xml 314
 MD5 4f3ba1d81a3ad2d1701be496b631316f libdsk-1.1.5.ebuild 800
 MD5 d1722ea6cbaf05e99cf8a745ca4a2ba5 libdsk-1.1.6.ebuild 801
-MD5 ec130e196a8c6b8a6aa58f027e03678a files/digest-libdsk-1.1.0 64
-MD5 c23119642b9add713a082cf56ad2ed29 files/digest-libdsk-1.1.6 64
-MD5 ff74a732def146b14fd58e696be16ae1 files/digest-libdsk-1.1.5 64
+MD5 41aa09bebc2a6edbfefe4fb8a641c9bf libdsk-1.1.9.ebuild 802
+MD5 a92ccc9109f3bb8c36e7597064966708 metadata.xml 314
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDNnxfmdTrptrqvGERAqCKAJ9LlJ76aw/ck3TKb0S7bl5M6un1MACdGo3U
-WabwvMtxVb5csMUHg7Uax/8=
-=IfPJ
+iD8DBQFD2+z3mdTrptrqvGERAsDJAKCZviJKMrr0Yu3yCz+gQi0NJ/oOqQCcDHHG
+Pi2XIhpL5qoU60nGacpSR3E=
+=PYAX
 -----END PGP SIGNATURE-----
