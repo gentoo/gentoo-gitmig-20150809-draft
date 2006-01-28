@@ -1,37 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 363c1727652dbfbd85dbff66e246b467 erlang-10.2.5.ebuild 2944
-MD5 952017d9165b65d7786b75dbf44a10e2 erlang-9c-r1.ebuild 1686
+MD5 6aac9a779d7c4fbf8e575dd9aed23e44 ChangeLog 4973
 MD5 dc1d9134a5f6e8146cc4ca6c5e130f0a erlang-10.2.0.ebuild 2372
+MD5 363c1727652dbfbd85dbff66e246b467 erlang-10.2.5.ebuild 2944
+MD5 f710894b1b9115ed6aa49b7abf22e22f erlang-10.2.6.ebuild 2938
 MD5 85b2cea64e7e0b81aac2e79a2c3dd3c2 erlang-10.2.7.ebuild 3090
 MD5 f947170e5f0fef952a0efc7dcc947f37 erlang-8b.ebuild 1178
+MD5 1312109e62858b6c8261dc42b2c42eca erlang-9c-r1.ebuild 1680
+MD5 4df8bcb2597f95b5d00f898f0dbc9e96 erlang-9c-r2.ebuild 1808
 MD5 92087ace1ec7f4f5fafb31419db5fafa erlang-9c-r3.ebuild 1822
 MD5 888709019e83eac37f3e95c7739de933 erlang-9c.ebuild 1505
-MD5 f710894b1b9115ed6aa49b7abf22e22f erlang-10.2.6.ebuild 2938
-MD5 4df8bcb2597f95b5d00f898f0dbc9e96 erlang-9c-r2.ebuild 1808
-MD5 3a12493b39eaf7c69c99d052beced762 ChangeLog 4814
-MD5 aea374917adc11a2d42b0b9d1bba3598 metadata.xml 402
 MD5 34433096e1c6e84b5dbb4a50a4e3c2e8 files/10.2.6-manpage-emacs-gentoo.patch 1348
+MD5 34433096e1c6e84b5dbb4a50a4e3c2e8 files/10.2.7-manpage-emacs-gentoo.patch 1348
+MD5 28397dc6ef4a633a8084ce44fbb1c6f3 files/50erlang-gentoo.el 140
+MD5 e61c0249e23b7e44ef3629ea5dc5997a files/9c.patch 2005
 MD5 f3de2b6ca821b977f0e1811a1f0a1409 files/digest-erlang-10.2.0 67
 MD5 915a9f490e6f58cafe26c3f6f6aeb54d files/digest-erlang-10.2.5 209
 MD5 935d6f9403c781eb7c3234136b1684e0 files/digest-erlang-10.2.6 210
 MD5 9a4549378412ae567bc58f2d7a9336a3 files/digest-erlang-10.2.7 280
-MD5 b1f610dc1caa7c176d7da4919bcabba9 files/erlang-10.2.6-export-TARGET.patch 242
-MD5 e61c0249e23b7e44ef3629ea5dc5997a files/9c.patch 2005
-MD5 28397dc6ef4a633a8084ce44fbb1c6f3 files/50erlang-gentoo.el 140
 MD5 0ef311d4fbeb2b5e16aab201dcf37297 files/digest-erlang-8b 67
 MD5 9a235de49a6c0988f033448fdac8a0a8 files/digest-erlang-9c 66
 MD5 9a235de49a6c0988f033448fdac8a0a8 files/digest-erlang-9c-r1 66
 MD5 ae2205c16664d70f5ea47d249b2e566f files/digest-erlang-9c-r2 66
 MD5 ae2205c16664d70f5ea47d249b2e566f files/digest-erlang-9c-r3 66
-MD5 e88b4d733b41026e691a981320ac7806 files/erlang-9c.patch.gz 1503
+MD5 b1f610dc1caa7c176d7da4919bcabba9 files/erlang-10.2.6-export-TARGET.patch 242
 MD5 b1f610dc1caa7c176d7da4919bcabba9 files/erlang-10.2.7-export-TARGET.patch 242
-MD5 34433096e1c6e84b5dbb4a50a4e3c2e8 files/10.2.7-manpage-emacs-gentoo.patch 1348
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkYGgViELBEf1JB0RAibRAJ0cqGJDMJ6+zSY0dDBH9WwKiBg7CwCfd1X+
-LWX5hwFDixOb7O0hVtGd73E=
-=J/rK
------END PGP SIGNATURE-----
+MD5 162a0f246dd57cae2c3a6908d8446944 files/erlang-9c.patch 4868
+MD5 aea374917adc11a2d42b0b9d1bba3598 metadata.xml 402

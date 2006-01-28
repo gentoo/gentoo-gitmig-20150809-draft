@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.26 2005/12/03 11:29:17 ferdy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.27 2006/01/28 19:06:51 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org> +files/erlang-9c.patch,
+  -files/erlang-9c.patch.gz, erlang-9c-r1.ebuild:
+  no need to gzip smallish patches
 
   03 Dec 2005; Fernando J. Pereda <ferdy@gentoo.org> erlang-10.2.7.ebuild:
   marked ~alpha wrt bug #91132

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.7 2004/06/24 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.8 2006/01/28 19:06:51 blubb Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack(){
 	unpack ${A}
 	cd ${S}
 	#combines nsswitch.conf parsing and a fix for strange install behaviour on some systems
-	epatch ${FILESDIR}/${P}.patch.gz
+	epatch ${FILESDIR}/${P}.patch
 }
 
 src_compile() {

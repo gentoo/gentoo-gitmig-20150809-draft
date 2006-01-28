@@ -1,0 +1,130 @@
+diff -ru otp_src_R9B-1-orig/lib/cosNotification/src/Makefile otp_src_R9B-1/lib/cosNotification/src/Makefile
+--- otp_src_R9B-1-orig/lib/cosNotification/src/Makefile	2002-10-02 15:01:31.000000000 -0700
++++ otp_src_R9B-1/lib/cosNotification/src/Makefile	2003-07-03 17:44:41.000000000 -0700
+@@ -363,7 +363,7 @@
+ 	$(INSTALL_DIR) $(RELSYSDIR)/ebin
+ 	$(INSTALL_DATA) $(TARGET_FILES) $(APP_TARGET) $(APPUP_TARGET) $(RELSYSDIR)/ebin
+ 	$(INSTALL_DIR) $(RELSYSDIR)/src
+-	$(INSTALL_DATA) $(GEN_FILES) $(IDL_FILES) $(YECC_FILES) $(GEN_YECC_ERL_FILES) $(GEN_YECC_HRL_FILES) $(RELSYSDIR)/src
++	$(INSTALL_DATA) $(GEN_FILES) $(IDL_FILES) $(YECC_FILES)  $(GEN_YECC_HRL_FILES) $(RELSYSDIR)/src
+ 	$(INSTALL_DATA) $(ERL_FILES) $(HRL_FILES) $(GEN_ERL_FILES) $(IDL_FILES) $(YECC_FILES) $(RELSYSDIR)/src
+ 	$(INSTALL_DIR) $(RELSYSDIR)/include
+ 	$(INSTALL_DATA) $(GEN_HRL_FILES) $(RELSYSDIR)/include
+diff -ru otp_src_R9B-1-orig/lib/gs/src/Makefile otp_src_R9B-1/lib/gs/src/Makefile
+--- otp_src_R9B-1-orig/lib/gs/src/Makefile	2001-10-12 07:18:38.000000000 -0700
++++ otp_src_R9B-1/lib/gs/src/Makefile	2003-07-03 17:44:41.000000000 -0700
+@@ -114,7 +114,7 @@
+ 	$(INSTALL_DATA) $(APP_SRC) $(ERL_FILES) $(HRL_FILES) $(GEN_HRL_FILES) \
+ 		$(GSTK_GENERIC) $(RELSYSDIR)/src
+ 	$(INSTALL_DIR) $(RELSYSDIR)/ebin
+-	$(INSTALL_DATA) $(TARGET_FILES) $(KEEP_AS_IS) $(RELSYSDIR)/ebin
++	$(INSTALL_DATA) $(TARGET_FILES)  $(RELSYSDIR)/ebin
+ 
+ 
+ release_docs_spec:
+diff -ru otp_src_R9B-1-orig/lib/kernel/src/inet_config.erl otp_src_R9B-1/lib/kernel/src/inet_config.erl
+--- otp_src_R9B-1-orig/lib/kernel/src/inet_config.erl	2002-10-09 07:39:22.000000000 -0700
++++ otp_src_R9B-1/lib/kernel/src/inet_config.erl	2003-07-03 17:43:37.000000000 -0700
+@@ -82,8 +82,13 @@
+ 		'bsd/os' ->
+ 		    load_resolv(filename:join(Etc,"irs.conf"), host_conf_bsdos);
+ 		linux ->
+-		    load_resolv(filename:join(Etc,"host.conf"),host_conf_linux),
+-
++		    case load_resolv(filename:join(Etc,"host.conf"),host_conf_linux) of
++			ok ->
++			    ok;
++			_Other ->
++			    load_resolv(filename:join(Etc,"nsswitch.conf"), nsswitch_conf)
++		    end,
++		    
+ 		    % It may be the case that the domain name was not set
+ 		    % because the hostname was short. But we can now look it
+ 		    % up and get the long name and the domain name from it.
+@@ -296,10 +301,12 @@
+ 	    case apply(inet_parse, Func, [File,{chars,Bin}]) of
+ 		{ok, Ls} -> inet_db:add_rc_list(Ls);
+ 		{error, Reason} ->
+-		    error("parse error in file ~s: ~p", [File, Reason])
++		    error("parse error in file ~s: ~p", [File, Reason]),
++		    {error, Reason}
+ 	    end;
+ 	Error ->
+-	    warning("file not found ~s~n", [File])
++	    warning("file not found ~s~n", [File]),
++	    Error
+     end.
+ 
+ %%
+diff -ru otp_src_R9B-1-orig/lib/megaco/src/text/Makefile otp_src_R9B-1/lib/megaco/src/text/Makefile
+--- otp_src_R9B-1-orig/lib/megaco/src/text/Makefile	2002-11-28 05:50:00.000000000 -0800
++++ otp_src_R9B-1/lib/megaco/src/text/Makefile	2003-07-03 17:44:41.000000000 -0700
+@@ -48,10 +48,15 @@
+ 	$(INTERNAL_YRL_FILES:%.yrl=%.erl)
+ 
+ BEAM_TARGET_FILES = \
+-	$(INTERNAL_YRL_FILES:%.yrl=$(EBIN)/%.$(EMULATOR)) \
+ 	$(MODULES:%=$(EBIN)/%.$(EMULATOR))
+ 
+-TARGET_FILES = $(ERL_TARGET_FILES) $(BEAM_TARGET_FILES)
++YRL_BEAM_TARGET_FILES = \
++	$(INTERNAL_YRL_FILES:%.yrl=$(EBIN)/%.$(EMULATOR)) 
++
++
++
++TARGET_FILES = $(ERL_TARGET_FILES) $(BEAM_TARGET_FILES) $(YRL_BEAM_TARGETS)
++
+ 
+ 
+ # ----------------------------------------------------
+@@ -65,6 +70,10 @@
+ # ERL_COMPILE_FLAGS += +native
+ # endif
+ 
++# ifeq ($(USE_HIPE),true)
++# ERL_COMPILE_FLAGS += +native
++# endif
++
+ ifeq ($(WARN_UNUSED_WARS),true)
+ ERL_COMPILE_FLAGS += +warn_unused_vars
+ endif
+@@ -94,6 +103,8 @@
+ 	@echo ""
+ 	@echo "INTERNAL_HRL_FILES = $(INTERNAL_HRL_FILES)"
+ 	@echo ""
++	@echo "BEAM_TARGET_FILES = $(BEAM_TARGET_FILES) "
++	@echo ""
+ 
+ 
+ # ----------------------------------------------------
+Только в otp_src_R9B-1/lib/megaco/src/text: Makefile.orig
+diff -ru otp_src_R9B-1-orig/lib/orber/priv/Makefile otp_src_R9B-1/lib/orber/priv/Makefile
+--- otp_src_R9B-1-orig/lib/orber/priv/Makefile	2002-10-02 15:17:29.000000000 -0700
++++ otp_src_R9B-1/lib/orber/priv/Makefile	2003-07-03 17:44:41.000000000 -0700
+@@ -37,7 +37,6 @@
+ 	blank.html \
+ 	info_frames.html \
+ 	main_frame.html \
+-	orber_help.txt \
+ 	start_info.html
+ 
+ #
+diff -ru otp_src_R9B-1-orig/lib/snmp/mibs/Makefile otp_src_R9B-1/lib/snmp/mibs/Makefile
+--- otp_src_R9B-1-orig/lib/snmp/mibs/Makefile	2002-10-02 14:48:43.000000000 -0700
++++ otp_src_R9B-1/lib/snmp/mibs/Makefile	2003-07-03 17:44:41.000000000 -0700
+@@ -59,13 +59,9 @@
+ FUNCS_FILES = \
+ 	STANDARD-MIB.funcs \
+ 	SNMPv2-MIB.funcs \
+-	SNMP-COMMUNITY-MIB.mib \
+-	SNMP-FRAMEWORK-MIB.mib \
+-	SNMP-MPD-MIB.mib \
+ 	SNMP-NOTIFICATION-MIB.funcs \
+-	SNMP-TARGET-MIB.funcs \
+-	SNMP-USER-BASED-SM-MIB.mib \
+-	SNMP-VIEW-BASED-ACM-MIB.mib
++	SNMP-TARGET-MIB.funcs 
++
+ 
+ V1_MIB_FILES= v1/OTP-SNMPEA-MIB.mib.v1
+ 
