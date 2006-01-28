@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/apollo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.18 2005/07/28 20:56:30 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.19 2006/01/28 18:46:55 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org> +files/apollo-1.4.1.patch,
+  -files/apollo-1.4.1.patch.bz2, apollo-1.4.1.ebuild:
+  no need to bzip smallish patches
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> apollo-1.4.1.ebuild,
   apollo-1.4.2.ebuild:

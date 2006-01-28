@@ -1,0 +1,312 @@
+--- install.sh        2002-09-26 09:29:50.000000000 +0200
++++ ../../apollo-1.4.1-1/install.sh        2002-10-04 21:48:22.000000000 +0200
+@@ -101,7 +101,6 @@
+ echo "Installing binaries to $BINDIR"
+
+ install -m 755 apollo $BINDIR || exit 1
+-install -m 755 apollo-client $BINDIR || exit 1
+
+ echo "Installing documentation to $DOCDIR"
+ echo
+--- qmaccelmanager.cpp	2002-09-26 09:29:49.000000000 +0200
++++ ../../apollo-1.4.1-1/qmaccelmanager.cpp	2002-10-03 04:04:08.000000000 +0200
+@@ -35,7 +35,7 @@
+ #include <qobject.h>
+ #include <qdict.h>
+ 
+-#include <iostream>
++#include <iostream.h>
+ 
+ /*!
+    \file qmaccelmanager.cpp
+--- qmmadplayer.cpp   2002-09-26 09:29:49.000000000 +0200
++++ ../../apollo-1.4.1-1/qmmadplayer.cpp   2002-10-04 21:07:47.000000000 +0200
+@@ -28,7 +28,7 @@
+ 
+ #include "qmmadplayer.h"
+
+-#include <iostream>
++#include <iostream.h>
+ #include <sys/mman.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+--- qmconfig.cpp	2002-09-26 09:29:49.000000000 +0200
++++ ../../apollo-1.4.1-1/qmconfig.cpp	2002-10-03 04:05:29.000000000 +0200
+@@ -35,7 +35,7 @@
+ #include <qstring.h>
+ #include <qtextstream.h>
+ 
+-#include <iostream>
++#include <iostream.h>
+ 
+ #include <unistd.h>
+ 
+--- qmlistview.cpp	2002-09-26 09:29:49.000000000 +0200
++++ ../../apollo-1.4.1-1/qmlistview.cpp	2002-10-03 04:06:26.000000000 +0200
+@@ -919,8 +919,8 @@
+ 	
+     QTextStream save_stream( &save_file );
+     save_stream.setEncoding(QTextStream::UnicodeUTF8);
+-    save_stream << "<?xml version='1.0'?>" << std::endl
+-                << "<!DOCTYPE APOLLO-PLAYLIST>" << std::endl;
++    save_stream << "<?xml version='1.0'?>" << endl
++                << "<!DOCTYPE APOLLO-PLAYLIST>" << endl;
+ 	save(save_stream);
+ }
+ 
+--- qmminibuffer.cpp	2002-09-26 09:29:49.000000000 +0200
++++ ../../apollo-1.4.1-1/qmminibuffer.cpp	2002-10-03 04:49:17.000000000 +0200
+@@ -152,7 +152,7 @@
+ 	m_pMessage->clear();
+ }
+ 
+-QmMiniBuffer::QmLineEdit::QmLineEdit(QmMiniBuffer *buf, QWidget *parent, const char *name=0)
++QmMiniBuffer::QmLineEdit::QmLineEdit(QmMiniBuffer *buf, QWidget *parent, const char *name)
+ 	: QLineEdit(parent, name),
+ 	  m_pBuf(buf)
+ {
+--- qmminibuffer.h	2002-09-26 09:29:50.000000000 +0200
++++ ../../apollo-1.4.1-1/qmminibuffer.h	2002-10-03 04:10:03.000000000 +0200
+@@ -66,7 +66,7 @@
+     
+ private:
+ 	class QmLineEdit;
+-	friend QmLineEdit;
++	friend struct QmMiniBuffer::QmLineEdit;
+ 	class QmLineEdit : public QLineEdit
+ 	{
+ 		QmMiniBuffer *m_pBuf;
+--- qmmpg123player.cpp	2002-09-26 09:29:49.000000000 +0200
++++ ../../apollo-1.4.1-1/qmmpg123player.cpp	2002-10-03 04:15:58.000000000 +0200
+@@ -289,7 +289,7 @@
+ 	{
+ 		m_Message = "";
+ 		QTextOStream ostr(&m_Message);
+-		ostr << "mpg123 process exited with status " << WIFEXITED(status) << "." << std::endl;
++		ostr << "mpg123 process exited with status " << WIFEXITED(status) << "." << endl;
+ 		emit playerMessage(m_Message);
+ 		m_PlayerPid = 0;
+ 		return -1;
+@@ -467,8 +467,8 @@
+ 				m_Message = "";
+ 				QTextOStream ostr(&m_Message);
+ 				ostr << "dataReceived(): Received " << bytes_read
+-					 << " bytes, skipping line " << line_counter << ":" << std::endl
+-					 << line_ptr << " - Filename: " << m_Filename << std::endl;
++					 << " bytes, skipping line " << line_counter << ":" << endl
++					 << line_ptr << " - Filename: " << m_Filename << endl;
+ 				emit playerMessage(m_Message);
+ 			}
+ 
+@@ -561,7 +561,7 @@
+         default:
+ 			m_Message = "";
+ 			QTextOStream ostr(&m_Message);
+-			ostr << "Unknown code: " << read_buffer << std::endl;
++			ostr << "Unknown code: " << read_buffer << endl;
+ 			emit playerMessage(m_Message);
+             break;
+     }
+@@ -679,7 +679,7 @@
+ 	 {
+ 		 m_Message = "";
+ 		 QTextOStream ostr(&m_Message);
+-		 ostr << "Failed to parse status from mpg123. Failed on: " << read_buffer << std::endl;
++		 ostr << "Failed to parse status from mpg123. Failed on: " << read_buffer << endl;
+ 		 emit playerMessage(m_Message);
+ 	 }
+ }
+@@ -870,7 +870,7 @@
+ 	default:
+ 		m_Message = "";
+ 		QTextOStream ostr(&m_Message);
+-		ostr << "Unknown play status: " << read_buffer << std::endl;
++		ostr << "Unknown play status: " << read_buffer << endl;
+ 		emit playerMessage(m_Message);
+ 		break;
+ 	}
+@@ -891,7 +891,7 @@
+ {
+ 	m_Message = "";
+ 	QTextOStream ostr(&m_Message);
+-	ostr << "Error: " << read_buffer << std::endl;
++	ostr << "Error: " << read_buffer << endl;
+ 	emit playerMessage(m_Message);
+ }
+ 
+--- qmplaylist.cpp	2002-09-26 09:29:50.000000000 +0200
++++ ../../apollo-1.4.1-1/qmplaylist.cpp	2002-10-03 04:23:58.000000000 +0200
+@@ -1379,9 +1379,9 @@
+         out.setEncoding(QTextStream::UnicodeUTF8);
+ 
+     out << "<?xml version='1.0' encoding=\"" << QmConfig::instance()->getString( "stuff", "encoding")
+-        << "\"?>" << std::endl
+-        << "<!DOCTYPE APOLLO-PLAYLIST>" << std::endl
+-        << "<apollo-playlist>" << std::endl;
++        << "\"?>\n"
++        << "<!DOCTYPE APOLLO-PLAYLIST>\n"
++        << "<apollo-playlist>\n";
+     
+     QmDirItem *dir;
+     QmSongItem *song;
+@@ -1422,8 +1422,8 @@
+         }
+     }
+     while (depth-->0)
+-        out << "</dir>" << std::endl;
+-    out << "</apollo-playlist>" << std::endl;
++        out << "</dir>\n";
++    out << "</apollo-playlist>\n";
+     
+     int duration = time(0) - start_time;
+     
+@@ -1467,7 +1467,7 @@
+ 
+ 	updateSongIndex();
+     for (uint i=0; i<m_SongIndex.size(); ++i)
+-        out << m_SongIndex[i]->filePath() << std::endl;
++        out << m_SongIndex[i]->filePath() << "\n";
+ 
+     QmMainWindow::mainwin->statusUpdate(new Message(Message::Status,
+                                                     "Saved %d songs in %s",
+@@ -1708,9 +1708,9 @@
+                 if (utf8)
+                     tout.setEncoding(QTextStream::UnicodeUTF8);
+                 
+-                tout << "<?xml version='1.0' encoding=\"" << enc << "\"?>" << endl;
+-                tout << "<!DOCTYPE APOLLO-PLAYLISTTREE>" << endl;
+-                tout << "<apollo-playlisttree>" << endl;
++                tout << "<?xml version='1.0' encoding=\"" << enc << "\"?>\n";
++                tout << "<!DOCTYPE APOLLO-PLAYLISTTREE>\n";
++                tout << "<apollo-playlisttree>\n";
+             }
+         }
+     }
+@@ -1743,8 +1743,8 @@
+                 if (!first) 
+                 {
+                     if (!firstAlbum)
+-                        arout << "</dir>" << endl;
+-                    arout << "</dir>" << endl << "</apollo-playlist>" << endl;
++                        arout << "</dir>\n";
++                    arout << "</dir>\n</apollo-playlist>\n";
+                     
+                     arfile.close();
+                 }
+@@ -1775,8 +1775,8 @@
+                 if (alsoPlayListTree)
+                 {
+ 					if (!first)
+-						tout << "</dir>" << endl;
+-					tout << "<dir><name><![CDATA[" << artist << "]]></name>" << endl;
++						tout << "</dir>\n";
++					tout << "<dir><name><![CDATA[" << artist << "]]></name>\n";
+ 				} 
+                     
+                 QmMainWindow::mainwin->statusUpdate(new Message(Message::Update,
+@@ -1789,11 +1789,11 @@
+                 if (utf8)
+                     arout.setEncoding(QTextStream::UnicodeUTF8);
+ 
+-                arout << "<?xml version='1.0' encoding=\"" << enc << "\"?>" << endl
+-					  << "<!DOCTYPE APOLLO-PLAYLIST>" << endl
+-					  << "<apollo-playlist>" << endl;
++                arout << "<?xml version='1.0' encoding=\"" << enc << "\"?>\n"
++					  << "<!DOCTYPE APOLLO-PLAYLIST>\n"
++					  << "<apollo-playlist>\n";
+ 
+-                arout << "<dir>" << endl << "<name><![CDATA[" << artist << "]]></name>" << endl;
++                arout << "<dir>\n<name><![CDATA[" << artist << "]]></name>\n";
+             }
+             album = si[i]->album();
+ 			
+@@ -1808,8 +1808,8 @@
+ 			alfilename = pldir + arclean + "  " + alclean + ".xml";
+ 			if (!first)
+ 			{
+-				alout << "</dir></dir>" << endl; 
+-				alout << "</apollo-playlist>" << endl; 
++				alout << "</dir></dir>\n"; 
++				alout << "</apollo-playlist>\n"; 
+ 				alfile.close();
+ 			}
+ 
+@@ -1829,24 +1829,24 @@
+ 			if (utf8)
+ 				alout.setEncoding(QTextStream::UnicodeUTF8);
+ 			
+-			alout << "<?xml version='1.0' encoding=\"" << enc << "\"?>" << endl
+-				  << "<!DOCTYPE APOLLO-PLAYLIST>" << endl
+-				  << "<apollo-playlist>" << endl;
++			alout << "<?xml version='1.0' encoding=\"" << enc << "\"?>\n"
++				  << "<!DOCTYPE APOLLO-PLAYLIST>\n"
++				  << "<apollo-playlist>\n";
+ 
+ 			if (alsoPlayListTree)
+ 			{
+-				tout << "<playlist>" << endl
+-					 << "<name><![CDATA[" << album << "]]></name>" << endl
+-					 << "<path><![CDATA[" << alfilename << "]]></path>" << endl
+-					 << "</playlist>" << endl;
++				tout << "<playlist>\n"
++					 << "<name><![CDATA[" << album << "]]></name>\n"
++					 << "<path><![CDATA[" << alfilename << "]]></path>\n"
++					 << "</playlist>\n";
+ 			}
+             
+             if (!firstAlbum) 
+-                arout << "</dir>" << endl; 
++                arout << "</dir>\n"; 
+             
+-            arout << "<dir>" << endl << "<name><![CDATA[" << album << "]]></name>" << endl;
+-			alout << "<dir>" << endl << "<name><![CDATA[" << artist << "]]></name>" << endl;
+-			alout << "<dir>" << endl << "<name><![CDATA[" << album << "]]></name>" << endl;
++            arout << "<dir>\n<name><![CDATA[" << album << "]]></name>\n";
++			alout << "<dir>\n<name><![CDATA[" << artist << "]]></name>\n";
++			alout << "<dir>\n<name><![CDATA[" << album << "]]></name>\n";
+ 
+ 			first = firstAlbum = false;
+         } 
+@@ -1856,7 +1856,7 @@
+     }
+     
+     if (alsoPlayListTree)
+-        tout << "</dir>" << endl << "</apollo-playlisttree>" << endl;
++        tout << "</dir>\n</apollo-playlisttree>\n";
+     
+     QmMainWindow::mainwin->statusUpdate(new Message(Message::Status, "Generated %i playlists", count));
+     QmMainWindow::mainwin->setState(QmMainWindow::Ready);
+--- qmplaylistpropertypage.cpp	2002-09-26 09:29:50.000000000 +0200
++++ ../../apollo-1.4.1-1/qmplaylistpropertypage.cpp	2002-10-03 04:31:30.000000000 +0200
+@@ -56,8 +56,8 @@
+ QmPlayListPropertyPage::QmPlayListPropertyPage(
+ 	QmPlayListBrowserItem *item,
+ 	QmConfigDialog *parent,
+-	const char *name)
+-	: QmConfigPage(parent, name, WType_Modal),
++	const char *namea)
++	: QmConfigPage(parent, namea, WType_Modal),
+ 	  m_pItem(item),
+ 	  m_pFile(0)
+ {
+--- qmplaylistpropertypage.h	2002-09-26 09:29:50.000000000 +0200
++++ ../../apollo-1.4.1-1/qmplaylistpropertypage.h	2002-10-03 04:32:31.000000000 +0200
+@@ -47,7 +47,7 @@
+ 
+ private slots:
+ 	void okay();
+-	void nameChanged(const QString &name);
++	void nameChanged(const QString &);
+ 	void browse();
+ 
+ private:
+--- qmremotecontrol.cpp	2002-09-26 09:29:50.000000000 +0200
++++ ../../apollo-1.4.1-1/qmremotecontrol.cpp	2002-10-03 04:53:31.000000000 +0200
+@@ -42,6 +42,7 @@
+ #include <pwd.h>
+ #include <stdio.h>
+ #include <fcntl.h>
++#include <iostream>
+ 
+ #ifndef FALSE
+ #define FALSE (0)

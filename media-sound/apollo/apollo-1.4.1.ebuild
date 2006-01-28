@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.1.ebuild,v 1.9 2005/07/28 20:56:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.1.ebuild,v 1.10 2006/01/28 18:46:55 blubb Exp $
+
+inherit eutils
 
 IUSE="kde qt"
 
@@ -24,7 +26,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
 	cd ${S}
-	bzip2 -dc ${FILESDIR}/${P}.patch.bz2 | patch || die "Patch failed"
+	epatch ${FILESDIR}/${P}.patch
 	mv install.sh install.sh.orig
 	sed -e 's:$PREFIX/local:$PREFIX:g' -e 's:BINDIR=$dir::' \
 		install.sh.orig > install.sh
