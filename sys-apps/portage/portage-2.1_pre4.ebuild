@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4.ebuild,v 1.1 2006/01/28 02:51:46 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4.ebuild,v 1.2 2006/01/28 07:28:43 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc-macos ~sh ~sparc ~x86"
 
 SLOT="0"
 IUSE="build doc selinux"
@@ -21,7 +21,8 @@ RDEPEND="!build? ( >=sys-apps/sed-4.0.5 \
                    >=app-shells/bash-2.05a ) \
          !userland_Darwin? ( app-misc/pax-utils sys-apps/sandbox ) \
          selinux? ( >=dev-python/python-selinux-2.15 ) \
-         doc? ( app-portage/portage-manpages )"
+         doc? ( app-portage/portage-manpages )
+         dev-python/pycrypto"
 
 PROVIDE="virtual/portage"
 
