@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.12 2004/07/02 04:59:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.13 2006/01/28 13:24:20 blubb Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ S=${WORKDIR}/${PN}/src
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc3.3.patch.tar.bz2
+	epatch ${FILESDIR}/${P}-gcc3.3.patch
 }
 
 src_compile() {
