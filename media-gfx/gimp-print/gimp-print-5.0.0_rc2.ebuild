@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.3 2006/01/25 20:42:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.4 2006/01/28 23:14:38 flameeyes Exp $
 
 inherit flag-o-matic libtool eutils autotools
 
@@ -11,7 +11,8 @@ MY_P=gutenprint-${PV/_/-}
 DESCRIPTION="Gimp Print Drivers"
 HOMEPAGE="http://gimp-print.sourceforge.net"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ppc64"
-SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2
+	mirror://gentoo/${MY_P}-m4.patch.bz2"
 
 RDEPEND="cups? ( >=net-print/cups-1.1.14 )
 	media-gfx/imagemagick
@@ -42,6 +43,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${MY_P}-asneeded.patch"
+	epatch "${WORKDIR}/${MY_P}-m4.patch"
 
 	# Remove the broken libtool.m4
 	rm ${S}/m4extra/libtool.m4

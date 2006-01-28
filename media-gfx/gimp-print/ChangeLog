@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.67 2006/01/25 20:42:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.68 2006/01/28 23:14:38 flameeyes Exp $
+
+  28 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gimp-print-5.0.0_rc2.ebuild:
+  Add patch to add missing glib.m4 file required by gtk.m4 file. See bug #120527.
 
   25 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/gutenprint-5.0.0-rc2-asneeded.patch, gimp-print-5.0.0_rc2.ebuild:
