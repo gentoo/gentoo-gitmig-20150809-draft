@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050807.ebuild,v 1.2 2005/10/29 03:18:25 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050807.ebuild,v 1.3 2006/01/28 21:46:20 spyderous Exp $
 
 inherit eutils x11 linux-mod
 
 IUSE=""
-IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage sis via"
+IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 mga rage128 radeon savage sis via"
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -25,8 +25,7 @@ SLOT="0"
 LICENSE="X11"
 KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
 
-DEPEND="virtual/x11
-	>=sys-devel/automake-1.7
+DEPEND=">=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/libtool-1.5.14
 	>=sys-devel/m4-1.4
@@ -172,7 +171,7 @@ set_vidcards() {
 
 	VIDCARDS=""
 
-	use video_cards_matrox && \
+	use video_cards_mga && \
 		VIDCARDS="${VIDCARDS} mga.${KV_OBJ}"
 	use video_cards_3dfx && \
 		VIDCARDS="${VIDCARDS} tdfx.${KV_OBJ}"

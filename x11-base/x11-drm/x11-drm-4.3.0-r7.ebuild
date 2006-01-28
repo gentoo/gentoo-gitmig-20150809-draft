@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r7.ebuild,v 1.6 2005/05/19 04:38:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r7.ebuild,v 1.7 2006/01/28 21:46:20 spyderous Exp $
 
 IUSE="gatos"
-IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
+IUSE_VIDEO_CARDS="3dfx gamma i810 i830 mga rage128 radeon sis mach64"
 
 inherit eutils x11
 
@@ -42,8 +42,7 @@ LICENSE="X11"
 KEYWORDS="x86 alpha ia64 ppc"
 
 # Need new portage for USE_EXPAND
-DEPEND="virtual/x11
-	virtual/linux-sources
+DEPEND="virtual/linux-sources
 	>=sys-apps/portage-2.0.49-r13"
 
 pkg_setup() {
@@ -197,7 +196,7 @@ check_exclusive() {
 set_vidcards() {
 	VIDCARDS=""
 
-	use video_cards_matrox && \
+	use video_cards_mga && \
 		VIDCARDS="${VIDCARDS} mga.o"
 	use video_cards_3dfx && \
 		VIDCARDS="${VIDCARDS} tdfx.o"
