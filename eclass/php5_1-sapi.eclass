@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.15 2006/01/28 01:35:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.16 2006/01/28 15:49:28 chtekk Exp $
 #
 # ########################################################################
 #
@@ -484,7 +484,7 @@ php5_1-sapi_src_compile() {
 		enable_extension_with		"pdo-oci"		"oci8"			1
 		if useq oci8-instant-client ; then
 			OCI8IC_PKG="`best_version dev-db/oracle-instantclient-basic`"
-			OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g'`"
+			OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g' | sed -e 's|-r.*||g'`"
 		fi
 		enable_extension_with		"pdo-oci"		"oci8-instant-client"	1	"instantclient,/usr,${OCI8IC_PKG}"
 		enable_extension_with		"pdo-odbc"		"odbc"			1 "unixODBC,/usr"
