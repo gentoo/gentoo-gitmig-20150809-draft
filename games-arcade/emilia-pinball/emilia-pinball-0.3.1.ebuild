@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1.ebuild,v 1.9 2005/06/15 18:07:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1.ebuild,v 1.10 2006/01/28 06:50:46 joshuabaergen Exp $
 
 inherit games
 
@@ -15,11 +15,13 @@ SLOT="0"
 KEYWORDS="x86 alpha ~amd64 ppc ~sparc"
 IUSE=""
 
-DEPEND="virtual/opengl
-	virtual/x11
+RDEPEND="virtual/opengl
+	|| ( x11-libs/libSM virtual/x11 )
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )"
 
 S=${WORKDIR}/${MY_P}
 
