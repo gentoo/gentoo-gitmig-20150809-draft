@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.1.015.ebuild,v 1.4 2005/09/22 14:53:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.1.015.ebuild,v 1.5 2006/01/28 00:10:25 ticho Exp $
 
 inherit eutils qt3
 
@@ -11,12 +11,14 @@ SRC_URI="${P}-linux-i686.tar.gz
 	amd64? ( ciphire-redir64.so )"
 LICENSE="Ciphire"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="nostrip fetch nomirror"
 IUSE="X gnome kde"
 
 DEPEND=
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libSM
+				x11-libs/libXext )
+			virtual/x11 )
 	x86? ( $(qt_min_version 3.2) )
 	amd64? ( app-emulation/emul-linux-x86-glibc
 			 >=app-emulation/emul-linux-x86-baselibs-2.1.1
