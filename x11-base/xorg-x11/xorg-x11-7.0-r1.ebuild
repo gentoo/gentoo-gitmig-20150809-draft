@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.1 2006/01/28 11:02:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.2 2006/01/28 18:02:45 joshuabaergen Exp $
 
 inherit eutils
 
@@ -356,8 +356,9 @@ pkg_postinst() {
 	einfo "http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux"
 	einfo "and attach /etc/X11/xorg.conf, /var/log/Xorg.0.log and emerge info"
 	echo
-	einfo "In the future, you will be able to affect which drivers are installed"
-	einfo "with the VIDEO_CARDS and INPUT_DEVICES settings."
+	einfo "You can now choose which drivers are installed with the VIDEO_CARDS"
+	einfo "and INPUT_DEVICES settings. Set these like any other Portage"
+	einfo "variable in /etc/make.conf or on the command line."
 	echo
 
 	# (#76985)
