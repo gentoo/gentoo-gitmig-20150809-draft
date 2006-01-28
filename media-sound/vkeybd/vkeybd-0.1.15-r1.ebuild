@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.2 2005/08/17 21:51:04 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.3 2006/01/28 00:02:56 ticho Exp $
 
 IUSE="alsa oss ladcca"
 
@@ -12,11 +12,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
+RDEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	>=dev-lang/tk-8.3
-	>=dev-lang/tcl-8.3
-	virtual/x11
-	ladcca? ( >=media-libs/ladcca-0.3.1 )"
+	ladcca? ( >=media-libs/ladcca-0.3.1 )
+	|| ( x11-libs/libX11 virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xf86bigfontproto
+			x11-proto/bigreqsproto
+			x11-proto/xextproto
+			x11-proto/xcmiscproto )
+		virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 
