@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0feeaff0a7ea7fc590fb981d0a0e07b ChangeLog 1743
-MD5 7b6f485f16b8c9cab5a37fbdacfc2c2c PEAR-Net_UserAgent_Detect-2.1.0-r1.ebuild 473
+MD5 510803d0261afaa3a97bfddc698c009d ChangeLog 1863
+RMD160 8bae453938d413bb700cb43e322f2dfffafb443e ChangeLog 1863
+SHA256 dc1a0d98ab876fdc4252ea5e85035b53990e91f6391bc68857e922c08a91606d ChangeLog 1863
+MD5 0cbd25b7cf8a4b18295dd4c7157edaa6 PEAR-Net_UserAgent_Detect-2.1.0-r1.ebuild 476
+RMD160 fa2cbd6c01ca70ac17a8cdaa092592568a47615f PEAR-Net_UserAgent_Detect-2.1.0-r1.ebuild 476
+SHA256 3a799d2b5158f2c2e6ef4ceace779d2822f43b0eef7237c16f21ee4c70745d2f PEAR-Net_UserAgent_Detect-2.1.0-r1.ebuild 476
 MD5 95d5fdda0840026abe26886b747d0d17 PEAR-Net_UserAgent_Detect-2.1.0.ebuild 492
+RMD160 090e68cd00a3871fc940a23326fadcd7b48fd518 PEAR-Net_UserAgent_Detect-2.1.0.ebuild 492
+SHA256 4bd0b74e68963ef7f8dfa8075a0b0f5e8bb65374d0cd65fc91e48959746fe469 PEAR-Net_UserAgent_Detect-2.1.0.ebuild 492
 MD5 80c3180784a194573793760d408cb9af files/digest-PEAR-Net_UserAgent_Detect-2.1.0 73
+RMD160 79fc9cacf2c383daac929411775916b797a3b51a files/digest-PEAR-Net_UserAgent_Detect-2.1.0 73
+SHA256 474c0a3a2acd6beb690ccfbcb7edaabeee01c50fbf0300b07944a072d7fcecf8 files/digest-PEAR-Net_UserAgent_Detect-2.1.0 73
 MD5 80c3180784a194573793760d408cb9af files/digest-PEAR-Net_UserAgent_Detect-2.1.0-r1 73
+RMD160 79fc9cacf2c383daac929411775916b797a3b51a files/digest-PEAR-Net_UserAgent_Detect-2.1.0-r1 73
+SHA256 474c0a3a2acd6beb690ccfbcb7edaabeee01c50fbf0300b07944a072d7fcecf8 files/digest-PEAR-Net_UserAgent_Detect-2.1.0-r1 73
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1DDDugEuf3OQ0akRAqYFAKCIEtIHeBCoiICpWL6zpZJG2SUvWQCeImQA
-9oHvQDXogz15UKwchx9sVos=
-=CsAc
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

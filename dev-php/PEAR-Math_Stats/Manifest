@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ebebcc3a00542782eeb096907a968f4 ChangeLog 1913
-MD5 9b2e6d1b4095d8668aa6801a63499014 PEAR-Math_Stats-0.9.0_beta3-r1.ebuild 498
+MD5 fde3a830bd29c55692abb8b79f3c284a ChangeLog 2029
+RMD160 66be617260f16bdcfe1a0a453a5fcfa6e1765521 ChangeLog 2029
+SHA256 405f020fd57c51bc40d88596f2653cebd11bed45d4fd1d9d0e689fd447ea92ba ChangeLog 2029
+MD5 b63a51ba4d8ac71ea9776d617ff7e46e PEAR-Math_Stats-0.9.0_beta3-r1.ebuild 501
+RMD160 3837816945c718abaf7217e84df15eea59fafbf8 PEAR-Math_Stats-0.9.0_beta3-r1.ebuild 501
+SHA256 f50aea22d4aedf4cbfe1846da8be8413a99a280653d6c9aab21ca6398816654e PEAR-Math_Stats-0.9.0_beta3-r1.ebuild 501
 MD5 97b2e4b13acd8f9421fbebd4a54e6ecc PEAR-Math_Stats-0.9.0_beta3.ebuild 517
+RMD160 a8b121189323a259f0d938174967664611bcec30 PEAR-Math_Stats-0.9.0_beta3.ebuild 517
+SHA256 8612234a355057325c447c1fda01d052a7a49cfaf9f56eeb7c3e0092107fb5bf PEAR-Math_Stats-0.9.0_beta3.ebuild 517
 MD5 8607daa6ecb55edf20515a92245d7ffe files/digest-PEAR-Math_Stats-0.9.0_beta3 69
+RMD160 b33f4db79ada658aa5d6c9e7a7ec5f7584cf5ddb files/digest-PEAR-Math_Stats-0.9.0_beta3 69
+SHA256 c49c01c5e55c587087ad61b9a43e82fd24d0f74ca10f1c0259b3f7b9d803c333 files/digest-PEAR-Math_Stats-0.9.0_beta3 69
 MD5 8607daa6ecb55edf20515a92245d7ffe files/digest-PEAR-Math_Stats-0.9.0_beta3-r1 69
+RMD160 b33f4db79ada658aa5d6c9e7a7ec5f7584cf5ddb files/digest-PEAR-Math_Stats-0.9.0_beta3-r1 69
+SHA256 c49c01c5e55c587087ad61b9a43e82fd24d0f74ca10f1c0259b3f7b9d803c333 files/digest-PEAR-Math_Stats-0.9.0_beta3-r1 69
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1CkaugEuf3OQ0akRAnhTAJ4rrN+NnmOMs91od8rCsuvNI5s0DACgi/3s
-6LabJu5qTHCAhuMttFRNHvs=
-=bpHu
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

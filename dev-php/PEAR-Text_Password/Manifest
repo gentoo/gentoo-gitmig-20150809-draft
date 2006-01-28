@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49023f0dfe5039528c8d72149737c4db ChangeLog 1767
+MD5 5f8778551d7f3fee94ba3f89845f51dd ChangeLog 1877
+RMD160 41f4c5c14847c978ee0c09637eab7ed1adde2ea2 ChangeLog 1877
+SHA256 d7e6613d0aca77c535f4606f218f8ecdd8bcc834fab234251a424ef5ec3c5876 ChangeLog 1877
 MD5 5e094c4adc574e130055a78e7a2f1fa6 PEAR-Text_Password-1.0.ebuild 402
-MD5 064cc6f6949f1a68139aeff9bbd85fbb PEAR-Text_Password-1.1.0.ebuild 382
+RMD160 1053c9bcaf415b0bb98b00795ca47219b218e50b PEAR-Text_Password-1.0.ebuild 402
+SHA256 83f7942fb17fb30ca8e689c27bd5c2f05f998f609ae7d80e7f3fe65f0bc5dc78 PEAR-Text_Password-1.0.ebuild 402
+MD5 4bd2bff3dd2f82237b8b501656894a95 PEAR-Text_Password-1.1.0.ebuild 386
+RMD160 bc5a5a8f565d70117f9427ea81c66b29842832f1 PEAR-Text_Password-1.1.0.ebuild 386
+SHA256 cb7536a457f5c8776893ae3042cdf5fdae944e92c0e4f5fe8b9cde8780a26ee4 PEAR-Text_Password-1.1.0.ebuild 386
 MD5 cfead7107d6233ba64d820f60da36be0 files/digest-PEAR-Text_Password-1.0 64
+RMD160 3e3667a55c1b65dc2c0f1a5f265a87022dd81be1 files/digest-PEAR-Text_Password-1.0 64
+SHA256 c1d31a90107ac73af99b86b30e80673d760b7a446b1e7a829d2ef282fa8f8f8e files/digest-PEAR-Text_Password-1.0 64
 MD5 f6d9a2bf5dc4ef314df4a38c11bcb0e7 files/digest-PEAR-Text_Password-1.1.0 66
+RMD160 8b9a459203c99198e0d027ff773b1bf072939ffc files/digest-PEAR-Text_Password-1.1.0 66
+SHA256 739306e23192228be721b4760fa590ef49e02ae5ae9411860fa8ad5bc1ce0851 files/digest-PEAR-Text_Password-1.1.0 66
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1Q8PugEuf3OQ0akRAiKAAKCRdYuccfhc6gO1FZweQ24aoXLIsQCfTaXS
-hAgi1L4aonDm69Xf/tkBEc8=
-=IEH9
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
