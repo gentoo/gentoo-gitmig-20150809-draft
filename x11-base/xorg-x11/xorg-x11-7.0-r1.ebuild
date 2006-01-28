@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.3 2006/01/28 23:16:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.4 2006/01/28 23:20:39 spyderous Exp $
 
 inherit eutils
 
@@ -41,7 +41,8 @@ IUSE_INPUT_DEVICES="
 	input_devices_vmmouse
 	input_devices_void
 
-	input_devices_synaptics"
+	input_devices_synaptics
+	input_devices_wacom"
 IUSE_VIDEO_CARDS="
 	video_cards_apm
 	video_cards_ark
@@ -171,6 +172,7 @@ RDEPEND="${RDEPEND}
 				input_devices_void? ( x11-drivers/xf86-input-void )
 
 				input_devices_synaptics? ( x11-drivers/synaptics )
+				input_devices_wacom? ( x11-misc/linuxwacom )
 			)
 			(
 				x11-drivers/xf86-input-acecad
@@ -199,13 +201,19 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-input-summa
 				x11-drivers/xf86-input-tek4957
 				x11-drivers/xf86-input-ur98
-				amd64? ( x11-drivers/xf86-input-vmmouse )
-				x86? ( x11-drivers/xf86-input-vmmouse )
 				x11-drivers/xf86-input-void
 
-				x86? ( x11-drivers/synaptics )
-				amd64? ( x11-drivers/synaptics )
-				ppc? ( x11-drivers/synaptics )
+				x86? ( x11-drivers/xf86-input-vmmouse
+					x11-drivers/synaptics
+					x11-misc/linuxwacom
+				)
+				amd64? ( x11-drivers/xf86-input-vmmouse
+					x11-drivers/synaptics
+					x11-misc/linuxwacom
+				)
+				ppc? ( x11-drivers/synaptics
+					x11-misc/linuxwacom
+				)
 			)
 		)
 	|| (
@@ -283,14 +291,6 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-video-siliconmotion
 				x11-drivers/xf86-video-sis
 				x11-drivers/xf86-video-sisusb
-				sparc? ( x11-drivers/xf86-video-sunbw2
-					x11-drivers/xf86-video-suncg14
-					x11-drivers/xf86-video-suncg3
-					x11-drivers/xf86-video-suncg6
-					x11-drivers/xf86-video-sunffb
-					x11-drivers/xf86-video-sunleo
-					x11-drivers/xf86-video-suntcx
-				)
 				x11-drivers/xf86-video-tdfx
 				x11-drivers/xf86-video-tga
 				x11-drivers/xf86-video-trident
@@ -299,11 +299,20 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-video-vesa
 				x11-drivers/xf86-video-vga
 				x11-drivers/xf86-video-via
-				x86? ( x11-drivers/xf86-video-vmware )
-				amd64? ( x11-drivers/xf86-video-vmware )
 				x11-drivers/xf86-video-voodoo
 
-				x86? ( >=media-libs/glide-v3-3.10 )
+				sparc? ( x11-drivers/xf86-video-sunbw2
+					x11-drivers/xf86-video-suncg14
+					x11-drivers/xf86-video-suncg3
+					x11-drivers/xf86-video-suncg6
+					x11-drivers/xf86-video-sunffb
+					x11-drivers/xf86-video-sunleo
+					x11-drivers/xf86-video-suntcx
+				)
+				x86? ( x11-drivers/xf86-video-vmware
+					>=media-libs/glide-v3-3.10
+				)
+				amd64? ( x11-drivers/xf86-video-vmware )
 				alpha? ( >=media-libs/glide-v3-3.10 )
 			)
 		)"
