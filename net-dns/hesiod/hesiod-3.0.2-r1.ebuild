@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.17 2005/08/13 17:18:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.18 2006/01/28 13:31:38 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	filter-flags -fstack-protector
 
 	#Patches stolen from RH
-	epatch ${FILESDIR}/hesiod-${PV}-redhat.patch.gz
+	epatch ${FILESDIR}/hesiod-${PV}-redhat.patch
 	autoconf || die "autoconf failed"
 
 	for manpage in *.3
