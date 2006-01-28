@@ -1,8 +1,34 @@
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ce8c2f0e2a77a4444404176bd4dbe31f ChangeLog 1270
-MD5 e6bd6659be0ac68ffed34bc9c4a381f8 gpart-0.1h-r1.ebuild 970
-MD5 ae6d86b0268618d34e618824dcd82754 files/gpart-0.1h-vfat.patch 515
-MD5 8161c02116ee4575906587eb09e35bde files/gpart-0.1h-ntfs.patch 2430
-MD5 81eee5d9985df9bf9c23624e46cf945f files/gpart-0.1h-errno.patch 384
-MD5 1d99cacbe74a8d1d559fdeb0d843359e files/gpart-0.1h-PIC.patch 394
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 59271f3c36fa3bdaefbbcc9a0420f8d3 ChangeLog 1409
+RMD160 0d85e1b572054891c0c4e02e690b35e613212cc0 ChangeLog 1409
+SHA256 c5a422466a4d2af5c28bb97694719f631b7213b0b2b67b03c9791df03a9f23e4 ChangeLog 1409
 MD5 1ed269d6c15522200092b17a53c7a90c files/digest-gpart-0.1h-r1 136
+RMD160 76f75a88516be133602b5cda085096162aafa063 files/digest-gpart-0.1h-r1 136
+SHA256 fdd47963e58562ec4ee2e92a637c1443c60a6e883d865d253f41f286421a124c files/digest-gpart-0.1h-r1 136
+MD5 1d99cacbe74a8d1d559fdeb0d843359e files/gpart-0.1h-PIC.patch 394
+RMD160 7441c4c12a52e0d46f4bee978d18e9676b1898fe files/gpart-0.1h-PIC.patch 394
+SHA256 287b24c4dd2518bfecfbe3fec5eaa93d37f53be673984dc8d5b395e84a03ca98 files/gpart-0.1h-PIC.patch 394
+MD5 81eee5d9985df9bf9c23624e46cf945f files/gpart-0.1h-errno.patch 384
+RMD160 5ed7a9dd0382aad1eb998509faef8d6795efbfb1 files/gpart-0.1h-errno.patch 384
+SHA256 fe910231e5cf8640d8b07b2767219f0a3794a57f3b18d3af49d3980ca96058f5 files/gpart-0.1h-errno.patch 384
+MD5 8161c02116ee4575906587eb09e35bde files/gpart-0.1h-ntfs.patch 2430
+RMD160 bd6888a82f0e8c8663cc336b48f2f0e67307aea2 files/gpart-0.1h-ntfs.patch 2430
+SHA256 01617b0fdb729232073d808efb137bc33790c3d071b7d945ce1ac8e0f697761b files/gpart-0.1h-ntfs.patch 2430
+MD5 ae6d86b0268618d34e618824dcd82754 files/gpart-0.1h-vfat.patch 515
+RMD160 c992bebc62017de118fe61eee0655ba01bdc7b57 files/gpart-0.1h-vfat.patch 515
+SHA256 39d542bb6ee52008b08fd161b051dc08658d363076df56a1b054b5403ceb4661 files/gpart-0.1h-vfat.patch 515
+MD5 c41946454f8e71abc9af38618482e2fc gpart-0.1h-r1.ebuild 974
+RMD160 b12bb8624eca91f88e54d1e7fd2f35d9ee7b3453 gpart-0.1h-r1.ebuild 974
+SHA256 d455a83833caa8c9d416caabe720cf3a4a276c3830005b2f4961c1cdfd39fdad gpart-0.1h-r1.ebuild 974
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD26kuAiZjviIA2XgRAhY/AJ97KRVZ/wptkPBJ6iAcu2YkY4AAngCg4E5Q
+BvvSVZg3YaAnlA+0bCx0tyA=
+=RDiK
+-----END PGP SIGNATURE-----
