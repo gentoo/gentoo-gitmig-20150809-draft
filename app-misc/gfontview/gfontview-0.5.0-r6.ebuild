@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.11 2005/09/26 16:09:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.12 2006/01/28 18:30:16 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="Fontviewer for PostScript Type 1 and TrueType"
 HOMEPAGE="http://gfontview.sourceforge.net/"
-SRC_URI="mirror://sourceforge/gfontview/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gfontview/${P}.tar.gz
+	mirror://gentoo/${P}-gcc-34.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,8 +24,8 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc-34.patch.gz
+	cd "${S}"
+	epatch "${DISTDIR}"/${P}-gcc-34.patch.gz
 }
 
 src_compile() {
