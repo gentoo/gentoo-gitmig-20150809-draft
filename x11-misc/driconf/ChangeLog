@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/driconf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.1 2005/09/09 03:03:31 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.2 2006/01/28 02:30:18 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  driconf-0.2.7.ebuild:
+  Fix dependencies per #120548.
 
 *driconf-0.2.7 (09 Sep 2005)
 

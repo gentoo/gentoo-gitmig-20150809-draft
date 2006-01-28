@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e184f2ed2d0d636ce2bcaae90455225 ChangeLog 445
-MD5 e570ab097b5e0ef35b70f342111f9ca0 driconf-0.2.7.ebuild 868
+MD5 a17408d7a448808879cd6ba6ea49e89a ChangeLog 559
+MD5 d7f0a804bd34096e2ec0590bd28b9a33 driconf-0.2.7.ebuild 867
 MD5 318407f0ee7f45e6c9caaebbe7037ab6 files/digest-driconf-0.2.7 64
 MD5 c2016633bd3fa2cd61f736596d135529 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJDRMI1lqEGTUzyQRAqczAKCbzZByopsDqZcj/HozbCJE33fbDQCeNIKE
-n5lsbkgTelvzoEHHqw7IKU8=
-=cv09
------END PGP SIGNATURE-----
