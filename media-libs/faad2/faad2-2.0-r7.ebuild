@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r7.ebuild,v 1.7 2005/12/16 10:58:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r7.ebuild,v 1.8 2006/01/28 18:24:38 blubb Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -33,7 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-makefile-space.patch
 	epatch ${FILESDIR}/${P}-configure-mpeg4ip.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
-	epatch ${FILESDIR}/${PN}-gcc4-warnings-and-errors.patch.gz
+	epatch ${FILESDIR}/${PN}-gcc4-warnings-and-errors.patch
 
 	cd ${S}/common/mp4v2
 	epatch ${FILESDIR}/mp4atom-sliver.patch

@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7acd2d7ced95fc07fdec7ecf73f83013 ChangeLog 8621
+MD5 652b208bb6598b403fe506486cd0c9e8 ChangeLog 8820
 MD5 8822829781eb944ed840124f915a2c0b faad2-2.0-r10.ebuild 1481
 MD5 9167396e4beb71ea1c2f38c0933e2241 faad2-2.0-r3.ebuild 2091
-MD5 9744749cd5b5b9f8315709147174f04e faad2-2.0-r7.ebuild 2141
+MD5 3b8536be60c586dc67be2f19cb5bdf4a faad2-2.0-r7.ebuild 2134
 MD5 de6aa302f0d9b074fc8da5b2c43f4583 files/digest-faad2-2.0-r10 127
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r3 61
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r7 61
@@ -13,13 +10,6 @@ MD5 042669e1c5f4755340520e417eafad15 files/faad2-2.0-configure-mpeg4ip.patch 416
 MD5 c7b0b0563f7c682ecd92ef4c32ceef60 files/faad2-2.0-gcc34.patch 296
 MD5 f597fe37924ee807ccafd546e2662513 files/faad2-2.0-makefile-space.patch 326
 MD5 1ceab8b26925d147b1e0a359ce23d56e files/faad2-2.0-noext.patch 856
-MD5 c3dc0623a7f8ff83085ae703b2312d48 files/faad2-gcc4-warnings-and-errors.patch.gz 3265
+MD5 9fcaf9f55fd1f37b129ce5457b50e40d files/faad2-gcc4-warnings-and-errors.patch 12071
 MD5 6264dccf9a4c49712b65b406825c5113 files/mp4atom-sliver.patch 659
 MD5 fa11072383948db52dccac007cc2c73d metadata.xml 387
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyowAAiZjviIA2XgRAgKFAJ9QrYLVypW/JRuvqGUj4uVN8pk9BACghKeE
-m5ebEFRNX7/DY1R4MkT/nPw=
-=1mQR
------END PGP SIGNATURE-----
