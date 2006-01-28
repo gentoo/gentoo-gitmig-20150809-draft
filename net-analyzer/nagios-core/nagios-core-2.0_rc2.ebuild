@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.3 2006/01/19 18:08:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc2.ebuild,v 1.4 2006/01/28 21:42:17 eldad Exp $
 
 inherit eutils apache-module toolchain-funcs gnuconfig
 
 MY_P=${PN/-core}-${PV/_}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
+	mirror://gentoo/nagios-2.0b.cfg-sample.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -52,7 +53,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/2.x-series-nsca.patch
-	gunzip -c ${FILESDIR}/nagios-2.0b.cfg-sample.gz > ./nagios.cfg-sample
 	# ppc64 needs this
 	gnuconfig_update
 }
@@ -121,7 +121,7 @@ src_install() {
 	dodoc ${D}/etc/nagios/*
 	rm ${D}/etc/nagios/*
 
-	dodoc ${S}/nagios.cfg-sample
+	newdoc ${WORKDIR}/nagios-2.0b.cfg-sample nagios.cfg-sample
 
 	#contribs are not configured by the configure script, we'll configure them overselves...
 	find ${S}/contrib/ -type f | xargs sed -e 's:/usr/local/nagios/var/rw:/var/nagios/rw:;

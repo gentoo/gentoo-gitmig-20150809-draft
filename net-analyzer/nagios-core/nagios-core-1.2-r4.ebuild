@@ -1,13 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.11 2006/01/11 04:57:04 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.12 2006/01/28 21:42:17 eldad Exp $
 
 inherit eutils apache-module toolchain-funcs
 
 MY_P=${P/-core}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
+	mirror://gentoo/nagios-1.x-Makefile-distclean-gentoo.diff.bz2
+	mirror://gentoo/nagios-1.x.cfg-sample.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -55,14 +57,11 @@ src_unpack() {
 
 	epatch ${FILESDIR}/submit_check_result_via_nsca.patch
 
-	epatch ${FILESDIR}/Makefile-distclean.diff.bz2
+	epatch ${WORKDIR}/nagios-1.x-Makefile-distclean-gentoo.diff
 
 	# libpq-fe.h isnt in psgql/ 
 	cd xdata/
 	sed -i -e "s:pgsql/::" *.c
-
-	cp ${FILESDIR}/nagios.cfg-sample.gz ./
-	gunzip nagios.cfg-sample.gz
 }
 
 src_compile() {
@@ -143,7 +142,7 @@ src_install() {
 	dodoc ${D}/etc/nagios/*
 	rm ${D}/etc/nagios/*
 
-	dodoc ${S}/nagios.cfg-sample
+	newdoc ${WORKDIR}/nagios-1.x.cfg-sample nagios.cfg-sample
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/nagios
