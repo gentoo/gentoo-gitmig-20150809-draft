@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/base
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.1 2006/01/28 20:16:52 vanquirius Exp $
+
+*base-1.2.2 (28 Jan 2006)
+
+  28 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +base-1.2.2.ebuild:
+  Initial commit for bug 119623. Thanks to Travis Post <tukachinchila at gmail
+  dot com>. Added netmon as a herd.
+
