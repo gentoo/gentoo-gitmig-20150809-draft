@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.6 2005/06/23 16:01:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.7 2006/01/28 23:09:29 mr_bones_ Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -18,11 +18,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa"
-IUSE="hardened perl opengl" # nophysfs"
+KEYWORDS="hppa ppc x86"
+IUSE="hardened perl opengl"
 
-RDEPEND="virtual/x11
-	media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-sound/timidity++
 	media-sound/timidity-eawpatches
