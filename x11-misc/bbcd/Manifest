@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94175dcd60e2071a4e06ced99ecff740 ChangeLog 1022
-MD5 383b4f1929e5478c1e9985e6617b4ba7 bbcd-0.3.1-r1.ebuild 717
+MD5 d8e0708aefd1d8960f511574cfa04e88 ChangeLog 1196
+MD5 57b8a0869760bce1a48c80d2718fe738 bbcd-0.3.1-r1.ebuild 711
 MD5 3d600a8a4c6661df79ac8ca93d406d48 bbcd-0.3.1.ebuild 585
 MD5 e9344eb09d7760ae2319499a525e661b files/bbcd-0.3.1-gcc3.3.patch 547
-MD5 17e5480cfc711d70db4bd28885335bb0 files/bbcd-0.3.1_0.3.1a.diff.gz 624
+MD5 20c27223a1d97c5632ffa17da92dc3f6 files/bbcd-0.3.1_0.3.1a.diff 1794
 MD5 b2d736f86e75b80b047b20f6a6a960af files/digest-bbcd-0.3.1 61
 MD5 b2d736f86e75b80b047b20f6a6a960af files/digest-bbcd-0.3.1-r1 61
 MD5 1fabf567822c7f832e84fc9ffdbfc635 metadata.xml 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9OnUI1lqEGTUzyQRAvU/AJwKVQAFLbSVZ1HflMh8CnogT/jztwCeJaZu
-Bnj0aAI7Bk7Yjx0obRBjFtw=
-=q8Au
------END PGP SIGNATURE-----
