@@ -1,4 +1,4 @@
-MD5 1fec6a980ebbed309065324457bd2a9b ChangeLog 9789
+MD5 aaa9aaef0a95883cfe109b8f241f6954 ChangeLog 9891
 MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
 MD5 2097fbc4c79a21de2b7f3a7e89a35137 files/digest-libsigc++-1.2.5 67
 MD5 10662f31c9be983522a9e54748c50069 files/digest-libsigc++-2.0.11 70
@@ -12,6 +12,6 @@ MD5 6a5e7834acbb57c4d7b7263ce97d2e20 libsigc++-1.2.5.ebuild 1476
 MD5 2dce41630775743cced6079f6629dfb8 libsigc++-2.0.11.ebuild 1287
 MD5 47250b26164016336e14098ca923768f libsigc++-2.0.14.ebuild 1825
 MD5 738d5a6d87ce081585a0d7cdcb18562d libsigc++-2.0.15.ebuild 1823
-MD5 30d073e9c3eece0b7765bbaa8e89fe35 libsigc++-2.0.16.ebuild 1826
+MD5 ea47766eb2aba97585f27579df9e9215 libsigc++-2.0.16.ebuild 1827
 MD5 6b17a879fe86bc2b447e8d3c6489f0c6 libsigc++-2.0.5.ebuild 1446
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
