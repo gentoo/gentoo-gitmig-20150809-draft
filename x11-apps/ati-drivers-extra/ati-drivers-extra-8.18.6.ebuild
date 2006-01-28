@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.18.6.ebuild,v 1.2 2005/11/12 23:20:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.18.6.ebuild,v 1.3 2006/01/28 14:51:19 lu_zero Exp $
 
 IUSE="qt"
 
@@ -42,7 +42,7 @@ src_unpack() {
 		${WORKDIR}/usr/src/ATI/fglrx_panel_sources.tgz \
 		|| die "Failed to unpack fglrx_panel_sources.tgz!"
 	cd ${WORKDIR}/extra/fglrx_panel
-	epatch ${FILESDIR}/ati-drivers-extra-8.14.13-improvements.patch.bz2
+	epatch ${DISTDIR}/ati-drivers-extra-8.14.13-improvements.patch.bz2
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 		-i ${WORKDIR}/extra/fglrx_panel/Makefile
 
@@ -77,7 +77,7 @@ src_install() {
 		doexe ${WORKDIR}/extra/fglrx_panel/fireglcontrol
 
 		insinto /usr/share/applications/
-		doins ${FILESDIR}/fireglcontrol.desktop
+		doins ${DISTDIR}/fireglcontrol.desktop
 
 		insinto /usr/share/pixmaps/
 		doins ${WORKDIR}/extra/fglrx_panel/ati.xpm
