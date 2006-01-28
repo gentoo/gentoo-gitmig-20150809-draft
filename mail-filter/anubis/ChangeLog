@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/anubis
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.7 2004/11/27 12:38:50 ticho Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.8 2006/01/28 11:49:06 ticho Exp $
+
+  28 Jan 2006; Andrej Kacian <ticho@gentoo.org>
+  -files/3.6.2-secfixes.patch.gz:
+  Removed unused patchfile. Bug #120652.
 
   27 Nov 2004; Andrej Kacian <ticho@gentoo.org> -anubis-3.6.2-r1.ebuild,
   -anubis-3.6.2.ebuild, anubis-3.9.95.ebuild:
