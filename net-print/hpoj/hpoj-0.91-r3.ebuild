@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.11 2005/07/25 18:04:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.12 2006/01/28 13:54:46 blubb Exp $
 
 inherit eutils qt3
 
@@ -22,7 +22,7 @@ DEPEND="qt?      ( $(qt_min_version 3.1) )
 
 src_compile() {
 	epatch ${FILESDIR}/udev.patch
-	epatch ${FILESDIR}/${P}-kernel26.patch.bz2
+	epatch ${FILESDIR}/${P}-kernel26.patch
 
 	use snmp \
 	&& myconf="${myconf} --with-snmp=/usr" \
