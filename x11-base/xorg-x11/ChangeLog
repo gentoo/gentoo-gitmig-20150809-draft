@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.510 2006/01/28 18:02:45 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.511 2006/01/28 23:16:39 spyderous Exp $
+
+  28 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-7.0-r1.ebuild:
+  First pass at not pulling in packages that are known to be useless on
+  particular architectures.
 
   28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-x11-7.0-r1.ebuild:

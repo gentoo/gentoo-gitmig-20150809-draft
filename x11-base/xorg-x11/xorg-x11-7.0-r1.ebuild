@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.2 2006/01/28 18:02:45 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.3 2006/01/28 23:16:40 spyderous Exp $
 
 inherit eutils
 
@@ -199,10 +199,13 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-input-summa
 				x11-drivers/xf86-input-tek4957
 				x11-drivers/xf86-input-ur98
-				x11-drivers/xf86-input-vmmouse
+				amd64? ( x11-drivers/xf86-input-vmmouse )
+				x86? ( x11-drivers/xf86-input-vmmouse )
 				x11-drivers/xf86-input-void
 
-				x11-drivers/synaptics
+				x86? ( x11-drivers/synaptics )
+				amd64? ( x11-drivers/synaptics )
+				ppc? ( x11-drivers/synaptics )
 			)
 		)
 	|| (
@@ -280,13 +283,14 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-video-siliconmotion
 				x11-drivers/xf86-video-sis
 				x11-drivers/xf86-video-sisusb
-				x11-drivers/xf86-video-sunbw2
-				x11-drivers/xf86-video-suncg14
-				x11-drivers/xf86-video-suncg3
-				x11-drivers/xf86-video-suncg6
-				x11-drivers/xf86-video-sunffb
-				x11-drivers/xf86-video-sunleo
-				x11-drivers/xf86-video-suntcx
+				sparc? ( x11-drivers/xf86-video-sunbw2
+					x11-drivers/xf86-video-suncg14
+					x11-drivers/xf86-video-suncg3
+					x11-drivers/xf86-video-suncg6
+					x11-drivers/xf86-video-sunffb
+					x11-drivers/xf86-video-sunleo
+					x11-drivers/xf86-video-suntcx
+				)
 				x11-drivers/xf86-video-tdfx
 				x11-drivers/xf86-video-tga
 				x11-drivers/xf86-video-trident
@@ -295,10 +299,12 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-video-vesa
 				x11-drivers/xf86-video-vga
 				x11-drivers/xf86-video-via
-				x11-drivers/xf86-video-vmware
+				x86? ( x11-drivers/xf86-video-vmware )
+				amd64? ( x11-drivers/xf86-video-vmware )
 				x11-drivers/xf86-video-voodoo
 
-				>=media-libs/glide-v3-3.10
+				x86? ( >=media-libs/glide-v3-3.10 )
+				alpha? ( >=media-libs/glide-v3-3.10 )
 			)
 		)"
 
