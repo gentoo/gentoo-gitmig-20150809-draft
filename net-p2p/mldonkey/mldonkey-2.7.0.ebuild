@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.0.ebuild,v 1.3 2005/11/29 15:47:23 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.0.ebuild,v 1.4 2006/01/28 13:25:58 mkay Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ MOZVER="1.7"
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
 SRC_URI="http://savannah.nongnu.org/download/mldonkey/${P}.tar.bz2
+	mirror://gentoo/${P}-endianess.patch.bz2
 	mozilla? ( http://www.informatik.uni-oldenburg.de/~dyna/${PN}/${MOZVER}/mldonkey_protocol_handler-${MOZVER}.xpi )"
 
 LICENSE="GPL-2"
@@ -62,8 +63,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	epatch ${FILESDIR}/${P}-endianess.patch.bz2
+	epatch ../${P}-endianess.patch
 }
 
 src_compile() {
