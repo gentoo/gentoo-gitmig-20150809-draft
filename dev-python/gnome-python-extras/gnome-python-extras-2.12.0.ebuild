@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.0.ebuild,v 1.2 2006/01/12 22:54:24 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.0.ebuild,v 1.3 2006/01/28 16:47:15 allanonjl Exp $
 
 inherit eutils gnome2 python
 
@@ -61,10 +61,6 @@ src_compile() {
 	use firefox && G2CONF="${G2CONF} --with-gtkmozembed=firefox"
 	if ! use firefox; then
 		use mozilla && G2CONF="${G2CONF} --with-gtkmozembed=mozilla"
-	fi
-
-	if ! use firefox && ! use mozilla; then
-		G2CONF="${G2CONF} --without-gtkmozembed"
 	fi
 
 	gnome2_src_configure ${G2CONF}
