@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a2492e468660fca3ec4ca3bbc3d7c610 ChangeLog 2146
+RMD160 a2f71006ce436e69b6cff9fbcc4d21e39628ae87 ChangeLog 2146
+SHA256 ae7f2f9094650054e5f4764998644623d109c9d23cd54757ea6b6b252bcf1e68 ChangeLog 2146
 MD5 e50ed8d4a1b9184df765b72f6fcab6f1 files/digest-showeq-5.0.0.18 68
+RMD160 cc85a6b982d563c7a2e69736dc3ddd749bb83cea files/digest-showeq-5.0.0.18 68
+SHA256 b987bee4bf55ed04388a3911765b52a11cd158da8647f51c58f2f6660afc16cf files/digest-showeq-5.0.0.18 68
 MD5 9ac4988f43ff998c0009d351a0d64274 files/digest-showeq-5.2.4.0 67
+RMD160 1a6eaa96ac492620d2788944a79f705ac26b9a0a files/digest-showeq-5.2.4.0 67
+SHA256 2240833721c76bad54d2c4fa55e2f5294a155be1e52536039381f7feef0e97e8 files/digest-showeq-5.2.4.0 67
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9f6375dee4abcef38295589fce003dda showeq-5.0.0.18.ebuild 798
-MD5 b67d5eafbaeec2b2bd7c2d575f1e1c5d showeq-5.2.4.0.ebuild 806
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmvPcgIKl8Uu19MoRAoKwAJ0ZbOhiSIacORAB7mFBjTN+Hzbk2gCaArPG
-LFwMbuCp4D6U62/6vTEdTAM=
-=Wpfm
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 6546465debd781752cb5a95aea18abfc showeq-5.0.0.18.ebuild 828
+RMD160 b063fda36d7630b28b37bc98336eb122332be9e8 showeq-5.0.0.18.ebuild 828
+SHA256 d81bcd6719d45156fcbdbd72cebbe3e3c7c5c1b16d4cff3cb6f22d527d7870c0 showeq-5.0.0.18.ebuild 828
+MD5 4b2f7c20e6b8c36265c14c80ded243ac showeq-5.2.4.0.ebuild 835
+RMD160 b6a80dbfa93e232b085139ba5c8554f7b7bf5670 showeq-5.2.4.0.ebuild 835
+SHA256 c56e0f31d83132f8f6129d0af8a06165ea271e93c9c87a1c0a5340d4a6ebb1aa showeq-5.2.4.0.ebuild 835
