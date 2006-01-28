@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.14 2006/01/24 23:17:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.15 2006/01/28 15:32:30 dertobi123 Exp $
+
+  28 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  blas-atlas-3.6.0.ebuild, blas-atlas-3.6.0-r1.ebuild,
+  blas-atlas-3.7.10.ebuild, blas-atlas-3.7.11.ebuild:
+  re-keyworded for (~)ppc as per bug #114587
 
   24 Jan 2006; Simon Stelling <blubb@gentoo.org> blas-atlas-3.6.0-r1.ebuild:
   stable on amd64 wrt bug 114587
