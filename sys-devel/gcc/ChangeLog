@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.491 2006/01/23 04:14:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.492 2006/01/28 00:31:15 halcy0n Exp $
+
+*gcc-4.1.0_beta20060127 (28 Jan 2006)
+
+  28 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.1.0_beta20060120.ebuild, +gcc-4.1.0_beta20060127.ebuild:
+  Weekly gcc-4.1 snapshot bump
 
   23 Jan 2006; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.2-r3.ebuild:
   Remove patches for bug #108231 since they caused issues; bug #118361.
