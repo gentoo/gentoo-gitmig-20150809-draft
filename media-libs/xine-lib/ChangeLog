@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.307 2006/01/12 21:40:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.308 2006/01/29 13:45:34 flameeyes Exp $
+
+  29 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/CVE-2005-4048.patch, -files/xine-lib-formatstring.patch,
+  -xine-lib-1_rc8-r2.ebuild, -xine-lib-1.1.0.ebuild,
+  -xine-lib-1.1.1-r2.ebuild, xine-lib-1.1.1-r3.ebuild:
+  Drop old versions (dropping ~mips keyword, see bug #111561); remove -*
+  keyword from newer ones. Remove orphan patches.
 
   12 Jan 2006; Markus Rothe <corsair@gentoo.org> xine-lib-1.1.1-r4.ebuild:
   Added ~ppc64

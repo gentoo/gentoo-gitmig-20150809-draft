@@ -1,24 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0e4ffaf1cd7f889615d4775f48988f4 ChangeLog 22912
-MD5 943fd105ac79aeededd17357690d76bc files/CVE-2005-4048.patch 3426
-MD5 33da8deb9637be23cd464aba9c5c4ac4 files/digest-xine-lib-1.1.0 137
-MD5 60ba654646d7fd13683362fa0121bbd3 files/digest-xine-lib-1.1.1-r2 138
+MD5 65b5d955ff88c2a7a68e27b957dfffba ChangeLog 23265
+RMD160 c7b2f549405e6aa228bbcc7b8d21f18bb9dbf959 ChangeLog 23265
+SHA256 76b48750cfad6cad67f94922e118e2624f87aac66da7ed85672e2fec4fb4cb96 ChangeLog 23265
 MD5 4a70a1198dbbc1b64b20071aacdee503 files/digest-xine-lib-1.1.1-r3 138
+RMD160 58a9ed42c2a8800b52a54810e73472fad33f23d2 files/digest-xine-lib-1.1.1-r3 138
+SHA256 c7e3bb0f349b3ce5f05541400a85c74ad5c66107d357719146061c344ae98e88 files/digest-xine-lib-1.1.1-r3 138
 MD5 4a70a1198dbbc1b64b20071aacdee503 files/digest-xine-lib-1.1.1-r4 138
-MD5 51e97df2f6ae538ab33a802eafb10457 files/digest-xine-lib-1_rc8-r2 138
-MD5 cd292167e0ca6e7910e1cf32091e3a27 files/xine-lib-formatstring.patch 315
+RMD160 58a9ed42c2a8800b52a54810e73472fad33f23d2 files/digest-xine-lib-1.1.1-r4 138
+SHA256 c7e3bb0f349b3ce5f05541400a85c74ad5c66107d357719146061c344ae98e88 files/digest-xine-lib-1.1.1-r4 138
 MD5 40462be9f1caff6326630fc3b93e7105 metadata.xml 330
-MD5 3e7009cff141eff5526219bfc185ece9 xine-lib-1.1.0.ebuild 7254
-MD5 d876573d0c98143ef9fe1272aa6df29d xine-lib-1.1.1-r2.ebuild 6761
-MD5 b57646f1ae167abcf0991f11ad326aea xine-lib-1.1.1-r3.ebuild 7232
+RMD160 19830d3a2049c3ad75c580173d0436d7ec9dc8f2 metadata.xml 330
+SHA256 b36ce82ff9c321a5ed63eded0c3a191e78752cd38220b86bd8639a0d70ac9d92 metadata.xml 330
+MD5 578712f99de216da48aefcc69567dcf1 xine-lib-1.1.1-r3.ebuild 7232
+RMD160 6a7024dedd3646e054cbe2731af58eed8013e9bd xine-lib-1.1.1-r3.ebuild 7232
+SHA256 1a281ed1ce771661ae909ecfe5de3e83e8fe5be6b93ed1ebc07b59227301cc25 xine-lib-1.1.1-r3.ebuild 7232
 MD5 b739528d44f50e3dcfedc2c0bc449517 xine-lib-1.1.1-r4.ebuild 7273
-MD5 9763f892b768b1c556fb311680ede798 xine-lib-1_rc8-r2.ebuild 5278
+RMD160 9f272897899b944d53fa276605234efc7ab8f409 xine-lib-1.1.1-r4.ebuild 7273
+SHA256 a6b0d300499895fa328193ffe1cb146030fda9d3789e1aa0739140a334cdff3b xine-lib-1.1.1-r4.ebuild 7273
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyI/l2+ySkm8kpY0RAmqIAJ9zd519ZkKNJiOhHkIhdV7qdKaYBwCgr/ri
-B3I5AssCE70URj1O8ChTIyI=
-=Lla2
+iD8DBQFD3McNAiZjviIA2XgRAlabAJ9A5qJnDgz3VGvUMDNxBG9cXjg8rwCg2W/r
+b6r2boVFqTQdso8pZbLeLY0=
+=teke
 -----END PGP SIGNATURE-----
