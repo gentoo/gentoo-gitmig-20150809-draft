@@ -1,4 +1,4 @@
-MD5 8abe11277fdfb4b604155d688ca87c32 ChangeLog 6368
+MD5 0229d067b1800260d5c20eda9cbdca94 ChangeLog 6464
 MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
 MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
 MD5 df31c402a8203f95b628cad41a9bafa0 files/digest-glibmm-2.6.1 66
@@ -8,5 +8,5 @@ MD5 99d38f342fc31bd084bdb61bf3603ae1 glibmm-2.4.4.ebuild 538
 MD5 8ce03c33ee4c7715e5f4be86dbe27553 glibmm-2.4.7-r1.ebuild 1054
 MD5 fecf343fd045f83562986d9c6d29e0c9 glibmm-2.6.1.ebuild 1168
 MD5 2ab74c7a7ad815cd82b32bf8cbbac5c5 glibmm-2.8.0.ebuild 1194
-MD5 afb035736818336065b10e1aee2ab385 glibmm-2.8.1.ebuild 1189
+MD5 972f1404588c9823a0780d52775223a4 glibmm-2.8.1.ebuild 1190
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
