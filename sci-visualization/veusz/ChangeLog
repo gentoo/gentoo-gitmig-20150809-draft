@@ -1,0 +1,20 @@
+# ChangeLog for sci-mathematics/veusz
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.1 2006/01/29 20:28:35 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +veusz-0.8.ebuild, +veusz-0.9.ebuild:
+  Moved from sci-mathematics/veusz to sci-visualization/veusz.
+
+*veusz-0.9 (21 Jan 2006)
+
+  21 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +veusz-0.9.ebuild:
+  Version bump.
+
+*veusz-0.8 (13 Jan 2006)
+
+  13 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +veusz-0.8.ebuild:
+  Initial import, thanks to Nicolas Bigaouette <nbigaouette@gmail.com> for the
+  initial ebuild, and Sebastien Fabbro <seb@ist.utl.pt> for his work on it.
+
