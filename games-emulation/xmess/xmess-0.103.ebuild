@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.103.ebuild,v 1.2 2006/01/25 04:01:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.103.ebuild,v 1.3 2006/01/29 06:20:50 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -89,6 +89,7 @@ src_unpack() {
 		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
 		-e "/^TARGET/s:mame:${TARGET:1}:" \
 		-e "/^CFLAGS =/d" \
+		-e "/\bCFLAGS +=/d" \
 		Makefile \
 		|| die "sed Makefile failed"
 
