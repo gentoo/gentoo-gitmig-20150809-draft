@@ -1,15 +1,55 @@
-MD5 3df60ba46c9b319ab8d636a669eec2d9 ChangeLog 24039
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a96b9cfa0971a0a5ac4753b42cfb0b8 ChangeLog 24170
+RMD160 a5781715405ef30a1c4f7a99f74682e1b4443b9d ChangeLog 24170
+SHA256 9e13ebdab7d9dba536466925ef13c42e57a656be9f152e4b15767dc1dad5818e ChangeLog 24170
 MD5 dad6f5e5b11fa505d937744875049b5e coreutils-5.2.1-r2.ebuild 4175
+RMD160 77c1bfb9a9d7f350e9e7e45912cd82ecaf0b5bb8 coreutils-5.2.1-r2.ebuild 4175
+SHA256 72bf74d298bca540f400dd244890f3f9efea008c92002689be054f95be8e9207 coreutils-5.2.1-r2.ebuild 4175
 MD5 d42fe8eb18b6bc0ce5b32a565bbfc5b2 coreutils-5.2.1-r6.ebuild 4579
+RMD160 a8d78183374fc885f45a7006d86e8ef9e091537c coreutils-5.2.1-r6.ebuild 4579
+SHA256 d336740848ef6f2d865199cc87c57ba4008bf1f792cb3198808c4e8a956fa319 coreutils-5.2.1-r6.ebuild 4579
 MD5 21b4622e2a7f0da8982edd34e505b5d3 coreutils-5.2.1-r7.ebuild 4573
+RMD160 199e4ac32ac9707df7b6c8c6374742bda7514bad coreutils-5.2.1-r7.ebuild 4573
+SHA256 5c2d28c9ebc4a75cfe0c119734b5e0654419e28539f30e2eaed5b53fb96950be coreutils-5.2.1-r7.ebuild 4573
 MD5 f0af52a774fe8a60ba4cdaf3723bb50d coreutils-5.3.0-r1.ebuild 4167
+RMD160 d15dea667704f7f56ab8250122b63b1350ec36ee coreutils-5.3.0-r1.ebuild 4167
+SHA256 8bd3cb8219d81e81180c3d1813d735c8e6d3ee5509d745c464fef38d696e4337 coreutils-5.3.0-r1.ebuild 4167
 MD5 43feef270ef1300e884e59b565fc356f coreutils-5.3.0-r2.ebuild 4269
-MD5 040b32b1556a1c38a658d3b5558dc4f5 coreutils-5.93.ebuild 4257
+RMD160 a72cb524ba3fd4b4ef41c924f9ee2f4c36b87b1c coreutils-5.3.0-r2.ebuild 4269
+SHA256 8192888c3785249e72608112c6dff5e23c5b13d459eba0cd8c61cf5f63ac53dd coreutils-5.3.0-r2.ebuild 4269
+MD5 d3724d5d5f399862519aec5e04b529c6 coreutils-5.93.ebuild 4259
+RMD160 804f48aa9d283b22a4dae1584794b34d0a8eedd6 coreutils-5.93.ebuild 4259
+SHA256 3da1519e347df9bb5e1a618b676fc1634d0597893fb627490f8087be98da3129 coreutils-5.93.ebuild 4259
 MD5 8c4e2e82c0b5e6fc4088d1bc496681b4 files/DIR_COLORS 3593
+RMD160 677f738160a23ee81b8a3c93d28939c26768a0d2 files/DIR_COLORS 3593
+SHA256 4fd0221c327865ee050fce4e65e74868f5797fb187f2a789d135e6bc241dd748 files/DIR_COLORS 3593
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
+RMD160 4b0f6e255ba759345ef94bead1c5cf8a1368b40b files/digest-coreutils-5.2.1-r2 225
+SHA256 0ae6d8c7bd9164ad50a6b9ae52f76f3bba77681afb249dfb258f7332204b80d3 files/digest-coreutils-5.2.1-r2 225
 MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149
+RMD160 b133e6b1c44eb307c053a83156a1f2c5d2b43e5c files/digest-coreutils-5.2.1-r6 149
+SHA256 a2bd6655f08531c3dab3f2f7e5d026743de30638409f5da169588206c65f2fb1 files/digest-coreutils-5.2.1-r6 149
 MD5 caa7a4a1b50dda12a878ff8b2d146da0 files/digest-coreutils-5.2.1-r7 148
+RMD160 780fcd15f60aec3c3c86087b7d2562a3f657711f files/digest-coreutils-5.2.1-r7 148
+SHA256 62fa8f95e9e286c9124e79a47ae3a1151084f366e57bcb77b747e9fafe02c73a files/digest-coreutils-5.2.1-r7 148
 MD5 897ff60239ed7b2b12ab098b2516a7ac files/digest-coreutils-5.3.0-r1 148
+RMD160 c478ae6089d77941c50f787ca902de02cbc61030 files/digest-coreutils-5.3.0-r1 148
+SHA256 921ee00a1c0b79ad7f35866e8f091ccb48b8b9f3c52009653910f1a9ca20ceb9 files/digest-coreutils-5.3.0-r1 148
 MD5 6971790215509377129f29b52928ecae files/digest-coreutils-5.3.0-r2 148
-MD5 8ae2e3c38b000e2946c08447f467e1b0 files/digest-coreutils-5.93 146
+RMD160 487376953d931a2f11235ef631d57b6ec7bbb150 files/digest-coreutils-5.3.0-r2 148
+SHA256 2b7ad3f7cfe2029e4ab6b8b9a4b504524a4713b5cf4f887aad0f590f31938b8b files/digest-coreutils-5.3.0-r2 148
+MD5 e5db07cba242a6d0511c097d536f0823 files/digest-coreutils-5.93 146
+RMD160 f666c56338ef3759547d07d95c6bfc7184ee1cdb files/digest-coreutils-5.93 146
+SHA256 92f130ccd11650a43e35de32f2c39d98c259a6771b9c052e380b7221f52b0750 files/digest-coreutils-5.93 146
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3FjXJ+ChZlpDtAoRAqrtAJ9JG4sbdHAB0wosaiZbGlaMEEnh7ACfcNaZ
++wnVgzyqN7GEp25aMwiE/bs=
+=xDOS
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.150 2006/01/27 16:53:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.151 2006/01/29 05:54:55 pebenito Exp $
+
+  29 Jan 2006; Chris PeBenito <pebenito@gentoo.org> coreutils-5.93.ebuild:
+  Update SELinux patch for 5.93, fixes bug #120254.
 
   27 Jan 2006; Simon Stelling <blubb@gentoo.org> coreutils-5.2.1-r7.ebuild:
   stable on amd64
