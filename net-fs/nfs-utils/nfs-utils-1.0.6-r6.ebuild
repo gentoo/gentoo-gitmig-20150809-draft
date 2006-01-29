@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.12 2005/03/15 05:27:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.13 2006/01/29 05:55:53 vapier Exp $
 
 inherit gnuconfig eutils
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/nfs-utils-1.0.6-usn36.patch.gz
+	epatch ${FILESDIR}/nfs-utils-1.0.6-usn36.patch
 
 	# getrpcbynumber_r is not in the SuSv3 spec. disable it for uClibc
 	cd ${S}

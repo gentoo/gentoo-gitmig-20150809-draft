@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.71 2005/10/08 20:34:06 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.72 2006/01/29 05:55:53 vapier Exp $
+
+  29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.0.6-usn36.patch, -files/nfs-utils-1.0.6-usn36.patch.gz,
+  nfs-utils-1.0.6-r6.ebuild:
+  Uncompress patch #120673 by Simon Stelling.
 
 *nfs-utils-1.0.7-r2 (08 Oct 2005)
 
