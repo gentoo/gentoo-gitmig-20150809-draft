@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/PEAR-OLE-0.5.ebuild,v 1.12 2006/01/29 06:41:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/PEAR-OLE-0.5.ebuild,v 1.13 2006/01/29 06:45:50 vapier Exp $
 
 inherit php-pear
 
