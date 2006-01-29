@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.93.ebuild,v 1.2 2006/01/29 05:54:55 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.93.ebuild,v 1.3 2006/01/29 09:17:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -60,7 +60,7 @@ src_unpack() {
 	# There's no reason for this crap to use the private version
 	sed -i 's:__mempcpy:mempcpy:g' lib/*.c
 
-	export WANT_AUTOMAKE=1.8
+	export WANT_AUTOMAKE=1.9
 	export WANT_AUTOCONF=2.5
 	ebegin "Reconfiguring configure scripts (be patient)"
 	aclocal -I m4 || die "aclocal"
