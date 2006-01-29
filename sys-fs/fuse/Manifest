@@ -1,8 +1,9 @@
-MD5 3471f6a530c420333b034a3faaaeaeac ChangeLog 5917
+MD5 27d972b237c40e9c424859b9c63c4c68 ChangeLog 6090
 MD5 ad233d63810d8501e80affb6e4b8f40f files/digest-fuse-2.4.1-r1 62
 MD5 939e1bcac7a96bb8eaef27299f400422 files/digest-fuse-2.4.2 62
 MD5 27f3a473a3318158e742b8c4d53b63f0 files/digest-fuse-2.5.0 62
 MD5 27f3a473a3318158e742b8c4d53b63f0 files/digest-fuse-2.5.0-r1 62
+MD5 c3135bced407a697a5220453362a772e files/digest-fuse-2.5.1 62
 MD5 cd6d8213487f9be260e992e612bd23c4 files/fuse-2.6.16.patch 1328
 MD5 c1ef6366ba5892111ddef08887328663 files/fuse-fix-lazy-binding.patch 398
 MD5 da9f962a4e5f50406efd2cbda5ce3381 files/fuse-fix-memleak.patch 587
@@ -11,4 +12,5 @@ MD5 f552be18e87f9c498393e7c02013b5ea fuse-2.4.1-r1.ebuild 1355
 MD5 19c327c7dcc5f50a5c63a1c2764d4d67 fuse-2.4.2.ebuild 1490
 MD5 d66a379eba73ba62a97c8fcb42b2cd95 fuse-2.5.0-r1.ebuild 1492
 MD5 e2d07e2f65d33d734598f83f57645897 fuse-2.5.0.ebuild 1447
+MD5 7672a1474cae69e5fb86055e9b5d1403 fuse-2.5.1.ebuild 1451
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.39 2006/01/20 20:20:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.40 2006/01/29 01:36:42 genstef Exp $
+
+*fuse-2.5.1 (29 Jan 2006)
+
+  29 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +fuse-2.5.1.ebuild:
+  version bump thanks to Thomas Meyer <thomas.mey@web.de> in bug 120736
 
 *fuse-2.5.0-r1 (20 Jan 2006)
 
