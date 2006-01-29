@@ -15,3 +15,4 @@ move media-gfx/gnuplot sci-visualization/gnuplot
 move media-gfx/grace sci-visualization/grace
 move media-gfx/kpl sci-visualization/kpl
 move media-gfx/labplot sci-visualization/labplot
+move media-gfx/opendx sci-visualization/opendx
