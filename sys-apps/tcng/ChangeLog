@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tcng
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.13 2006/01/29 19:46:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.14 2006/01/29 19:46:30 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> tcng-9l.ebuild:
+  Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> tcng-9i.ebuild:
   Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
