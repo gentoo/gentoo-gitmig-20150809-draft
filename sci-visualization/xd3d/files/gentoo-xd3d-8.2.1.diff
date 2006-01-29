@@ -1,0 +1,184 @@
+diff -U 3 -dHrN -- xd3d-8.2.0-orig/Makefile xd3d-8.2.0/Makefile
+--- xd3d-8.2.0-orig/Makefile	2003-11-25 13:47:13.000000000 +0100
++++ xd3d-8.2.0/Makefile	2004-05-09 02:41:11.192321664 +0200
+@@ -15,7 +15,9 @@
+ 
+ all :; make libs ; make utils ; make xgraphic ; make xd3d
+ 
+-install :; /bin/cp $(EXE) ./infps $(INSTALL_DIR)
++install :; \
++install -d $(INSTALL_DIR) ;\
++install $(EXE) ./infps $(INSTALL_DIR)
+ 
+ libs :; \
+ cd $(SRCDIR)/qlib   ; echo "---- Building utility lib ----" ; make ;\
+diff -U 3 -dHrN -- xd3d-8.2.0-orig/RULES.gentoo xd3d-8.2.0/RULES.gentoo
+--- xd3d-8.2.0-orig/RULES.gentoo	1970-01-01 01:00:00.000000000 +0100
++++ xd3d-8.2.0/RULES.gentoo	2004-05-09 02:28:27.156472768 +0200
+@@ -0,0 +1,81 @@
++#--------------------------------------------------------
++# Configuration file for the Makefiles of xd3d          |
++# François Jouve 2003 (Francois.Jouve@Polytechnique.fr) |
++#--------------------------------------------------------
++
++#
++# Modifiable parameters
++#
++
++#
++# Root directory of the distribution
++#
++#XD3D_DIR = $(HOME)/xd3d-8.1.0
++XD3D_DIR = Please_Configure
++
++#
++# Install directory
++#
++#INSTALL_DIR = /usr/local/bin
++INSTALL_DIR = ##D##/usr/bin
++
++#
++# Location of the X11 lib (libX11.a)
++#
++#LIBX11 = /usr/X11R6/lib
++LIBX11 = /usr/X11R6/lib
++
++#
++# Language parameter
++#
++#LANGUAGE = FRANCAIS
++#LANGUAGE = ENGLISH
++LANGUAGE = ENGLISH
++
++#
++# Max memory for xd3d (MBytes)
++#
++#MEMORY_XD3D = 64
++MEMORY_XD3D = 64
++
++#
++# Fortran compiler
++#
++COMPILF = g77
++
++#
++# C compiler
++#
++COMPILC = gcc
++RANLIB  = ranlib
++AR      = ar r
++STRIP   = strip $@
++
++#
++# Options for the Fortran compiler
++#
++OPTF = ##CFLAGS##
++#
++# Options for the C compiler
++#
++OPTC = ##CFLAGS##
++
++#-----------------------------------------------
++# You should not need to change anything below !
++#-----------------------------------------------
++
++SRCDIR = $(XD3D_DIR)/src
++BINDIR = $(XD3D_DIR)/bin
++LIBDIR = $(XD3D_DIR)/lib
++INCF   = -I$(XD3D_DIR)/src/include
++INCC   = -I$(LIBX11)/../include
++
++LINK      = $(COMPILF) $(OPTF) -o
++LINKOPT   = -lc -lm
++LINKOPTX  = -L$(LIBX11) -lX11 -lXpm -lc -lm
++LIBRAIRIE = $(LIBDIR)/question_lib.a
++MYXLIB    = $(LIBDIR)/my_Xlib.a
++INTERP    = $(LIBDIR)/interp.a
++
++.f.o: ; $(COMPILF) $(INCF) $(OPTF) -c $*.f
++.c.o: ; $(COMPILC) $(INCC) $(OPTC) -D$(LANGUAGE) -c $*.c
+diff -U 3 -dHrN -- xd3d-8.2.0-orig/RULES.icc xd3d-8.2.0/RULES.icc
+--- xd3d-8.2.0-orig/RULES.icc	1970-01-01 01:00:00.000000000 +0100
++++ xd3d-8.2.0/RULES.icc	2004-05-09 02:28:40.138499200 +0200
+@@ -0,0 +1,81 @@
++#--------------------------------------------------------
++# Configuration file for the Makefiles of xd3d          |
++# François Jouve 2003 (Francois.Jouve@Polytechnique.fr) |
++#--------------------------------------------------------
++
++#
++# Modifiable parameters
++#
++
++#
++# Root directory of the distribution
++#
++#XD3D_DIR = $(HOME)/xd3d-8.1.0
++XD3D_DIR = Please_Configure
++
++#
++# Install directory
++#
++#INSTALL_DIR = /usr/local/bin
++INSTALL_DIR = ##D##/usr/bin
++
++#
++# Location of the X11 lib (libX11.a)
++#
++#LIBX11 = /usr/X11R6/lib
++LIBX11 = /usr/X11R6/lib
++
++#
++# Language parameter
++#
++#LANGUAGE = FRANCAIS
++#LANGUAGE = ENGLISH
++LANGUAGE = ENGLISH
++
++#
++# Max memory for xd3d (MBytes)
++#
++#MEMORY_XD3D = 64
++MEMORY_XD3D = 64
++
++#
++# Fortran compiler
++#
++COMPILF = ifort
++
++#
++# C compiler
++#
++COMPILC = icc
++RANLIB  = ranlib
++AR      = xiar r
++STRIP   = strip $@
++
++#
++# Options for the Fortran compiler
++#
++OPTF = -O3 -axWNBKP -ipo
++#
++# Options for the C compiler
++#
++OPTC = -O3 -axWNBKP -ipo
++
++#-----------------------------------------------
++# You should not need to change anything below !
++#-----------------------------------------------
++
++SRCDIR = $(XD3D_DIR)/src
++BINDIR = $(XD3D_DIR)/bin
++LIBDIR = $(XD3D_DIR)/lib
++INCF   = -I$(XD3D_DIR)/src/include
++INCC   = -I$(LIBX11)/../include
++
++LINK      = $(COMPILF) $(OPTF) -o
++LINKOPT   = -lc -lm
++LINKOPTX  = -L$(LIBX11) -lX11 -lXpm -lc -lm
++LIBRAIRIE = $(LIBDIR)/question_lib.a
++MYXLIB    = $(LIBDIR)/my_Xlib.a
++INTERP    = $(LIBDIR)/interp.a
++
++.f.o: ; $(COMPILF) $(INCF) $(OPTF) -c $*.f
++.c.o: ; $(COMPILC) $(INCC) $(OPTC) -D$(LANGUAGE) -c $*.c
