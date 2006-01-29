@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.92 2006/01/18 07:17:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.93 2006/01/29 15:41:41 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  -files/doxygen-utf8-ru.patch.gz, doxygen-1.4.2.ebuild,
+  doxygen-1.4.3-r1.ebuild, doxygen-1.4.4.ebuild, doxygen-1.4.5.ebuild,
+  doxygen-1.4.6.ebuild:
+  move compressed patches to the mirrors
 
 *doxygen-1.4.6 (18 Jan 2006)
 
