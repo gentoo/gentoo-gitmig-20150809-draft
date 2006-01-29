@@ -11,5 +11,5 @@ MD5 02673367ae3d806f2df4dd6fbfff54f4 files/glib-2.8.3-macos.patch 307
 MD5 b75614f954c7353c9e75e011ee1adb59 glib-1.2.10-r5.ebuild 1536
 MD5 3c669304d71f54e783024332877d71d0 glib-2.6.5.ebuild 1647
 MD5 ccdec0cc9433b698a20b32158000d2f3 glib-2.8.4.ebuild 1693
-MD5 bb6d047d098074fb9453967b868ffcfd glib-2.8.5.ebuild 1696
+MD5 7a62a58deb0e0b402896bb4409bbb88a glib-2.8.5.ebuild 1690
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158

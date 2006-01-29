@@ -4,5 +4,5 @@ MD5 185f99db7f8b720eb02aa1fb59bd57b9 files/digest-libxml2-2.6.22 68
 MD5 b9b6f547f58add3111d351dccca5142a files/digest-libxml2-2.6.23 68
 MD5 f0c57d3000da7a65966ef827bc3243fc libxml2-2.6.20-r2.ebuild 2357
 MD5 db40c499e56cf2734f79e30b625415e1 libxml2-2.6.22.ebuild 2607
-MD5 1d3462a2615220d7972beac1d9835324 libxml2-2.6.23.ebuild 2575
+MD5 8b97062015679b950917e977fa218f49 libxml2-2.6.23.ebuild 2568
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
