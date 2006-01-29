@@ -1,0 +1,191 @@
+# ChangeLog for media-gfx/grace
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.1 2006/01/29 19:55:46 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/grace-helpviewer-gentoo.diff, +metadata.xml, +grace-5.1.18.ebuild,
+  +grace-5.1.19.ebuild:
+  Moved from media-gfx/grace to sci-visualization/grace.
+
+  22 Jan 2006; Marius Mauch <genone@gentoo.org> grace-5.1.18.ebuild,
+  grace-5.1.19.ebuild:
+  Replacing pdflib use flag with pdf use flag
+
+  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.19.ebuild:
+  Fix modular X dependencies. openmotif pulls in X libs.
+
+*grace-5.1.19 (30 Nov 2005)
+
+  30 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>; -files/10grace,
+  +grace-5.1.19.ebuild:
+  (#113892) Grace update from Evgeny Stambulchik <fnevgeny@weizmann.ac.il>.
+  Full list of changes at
+  http://plasma-gate.weizmann.ac.il/Grace/phpbb/viewtopic.php?t=503.
+
+  25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> -grace-5.1.14.ebuild:
+  Removed old version.
+
+  11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> grace-5.1.18.ebuild:
+  Stable on ppc.
+
+  08 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> grace-5.1.18.ebuild:
+  Stable on sparc
+
+  06 Nov 2005; <soulse@gentoo.org> grace-5.1.18.ebuild:
+  Stable on x86 wrt bug #111728.
+
+  26 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> -grace-5.1.13.ebuild,
+  grace-5.1.18.ebuild:
+  Stable on amd64, pruned old version.
+
+  16 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> grace-5.1.14.ebuild:
+  Stable on amd64.
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> grace-5.1.14.ebuild:
+  Stable on ppc.
+
+  27 May 2005; Jason Wever <weeve@gentoo.org> grace-5.1.14.ebuild:
+  Stable on SPARC.
+
+  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/grace-5.1.10-t1lib-fix-gentoo.patch,
+  -files/grace-5.1.12-t1lib-fix-gentoo.patch, -grace-5.1.7-r2.ebuild,
+  -grace-5.1.10-r1.ebuild, -grace-5.1.12-r1.ebuild:
+  Pull old versions.
+
+  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.14.ebuild:
+  Stable on x86.
+
+*grace-5.1.18 (25 May 2005)
+
+  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; +grace-5.1.18.ebuild:
+  (#73898) Version bump. Highlights include PDF-1.4 support, pdflib-6
+  compatibility, better TrueType font support.
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.14.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.14.ebuild:
+  change dep from net-www/epiphany to www-client/epiphany
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.14.ebuild:
+  Galeon is now in www-client from net-www
+
+  07 Nov 2004; Jason Wever <weeve@gentoo.org> grace-5.1.13.ebuild:
+  Stable on sparc.
+
+  10 Oct 2004; Jason Wever <weeve@gentoo.org> grace-5.1.14.ebuild:
+  Added ~sparc keyword.
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.14.ebuild:
+  Moved net-www/dillo to www-client/dillo.
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> grace-5.1.14.ebuild:
+  Adding amd64 keyword. Closing #44900.
+
+*grace-5.1.14 (18 Mar 2004)
+
+  18 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.14.ebuild:
+  Version bump. Upstream changes include fixes for 64-bit, for a race condition
+  and for memory issues.
+
+  18 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.12-r1.ebuild,
+  grace-5.1.13.ebuild:
+  Fixing broken dependency on fftw. fftw-2 and fftw-3 are incompatible, so a >=
+  dep doesn't work. It needs to be done like gtk+-1 and gtk+-2.
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.7-r2.ebuild:
+  fixed motif dep
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.7-r2.ebuild:
+  fixed motif dep
+
+  10 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> grace-5.1.13.ebuild:
+  I guess ~ppc was removed by accident, at least there is no !ppc.
+
+  01 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Adding metadata.xml for sci herd.
+
+  30 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild:
+  Removed browsers from DEPEND, see Bug #32290
+
+  30 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.12-r1.ebuild,
+  grace-5.1.13.ebuild:
+  Added fftw and netcdf local IUSE flags, as suggested by Donnie Berkholz
+  <spyderous@gentoo.org> in Bug #26842
+
+*grace-5.1.13 (27 Oct 2003)
+
+  27 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.10.ebuild, grace-5.1.12-r1.ebuild, grace-5.1.12.ebuild,
+  grace-5.1.13.ebuild, files/grace-helpviewer-gentoo.diff:
+  Version bumped. Marked 5.1.10-r1 and 5.1.12-r1 stable for x86.
+  Removed 5.1.10 and 5.1.12 (since -r1 are in there).  Fixed
+  environment variable settings in 10grace.
+
+*grace-5.1.10-r1 (09 Sep 2003)
+*grace-5.1.12-r1 (09 Sep 2003)
+
+  09 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild:
+  Fixed browsers dependency.  This closes Bug #23292
+
+*grace-5.1.12 (18 Aug 2003)
+
+  19 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> grace-5.1.12.ebuild:
+  Added ~sparc to KEYWORDS.
+
+  18 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.12.ebuild,
+  files/grace-5.1.12-t1lib-fix-gentoo.patch:
+  Version bump.  New debug, png and jpeg IUSE flags.  Added
+  dev-libs/fftw and app-sci/netcdf to DEPEND.  Thanks to MATSUU Takuto
+  <matsuu@gentoo.org> in bug #26842
+
+*grace-5.1.10 (05 Nov 2002)
+
+  09 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10.ebuild,
+  files/grace-5.1.10-t1lib-fix-gentoo.patch:
+  Added t1lib DEPEND and a patch to compile grace against t1lib-5.0.0.
+  Patch submitted by Derek Dolney <dolney@astro.physics.upenn.edu>
+  in bug #25798
+
+  30 Mar 2003; Alastair Tse <liquidx@gentoo.org> grace-5.1.10.ebuild,
+  grace-5.1.7-r2.ebuild:
+  update deps to virtual/motif
+
+  05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+*grace-5.1.7-r2 (19 May 2002)
+
+  7 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
+
+  19 May 2002; Seemant Kulleen <seemant@gentoo.org> grace-5.1.7-r2.ebuild
+  files/digest-grace-5.1.7-r2 :
+
+  updated the libpng dependency info which was written incorrectly
+  Thanks to vt@vt.fermentas.lt in bug #2780
+
+*grace-5.1.7 (1 Apr 2002)
+
+  1 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  New version.  Thanks to Daniel Mettler.
+  
+*grace-5.1.6 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
