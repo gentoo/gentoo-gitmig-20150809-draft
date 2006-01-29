@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20a.ebuild,v 1.2 2005/11/08 13:16:13 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20a.ebuild,v 1.3 2006/01/29 05:19:31 vapier Exp $
 
 inherit eutils versionator
 
@@ -68,6 +68,9 @@ src_unpack() {
 		epatch ${PATCHDIR}/vscan
 		cp -pPR ${WORKDIR}/${PFVSCAN} ${S2}/examples/VFS
 	fi
+
+	# https://bugzilla.samba.org/show_bug.cgi?id=3451
+	sed -i -e '/include.*fstab.h/d' "${S}"/client/umount.cifs.c
 }
 
 src_compile() {

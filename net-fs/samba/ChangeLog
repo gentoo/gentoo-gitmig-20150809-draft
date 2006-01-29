@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.211 2005/11/08 13:16:13 satya Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.212 2006/01/29 05:19:31 vapier Exp $
+
+  29 Jan 2006; Mike Frysinger <vapier@gentoo.org> samba-3.0.20a.ebuild,
+  samba-3.0.20b.ebuild:
+  Remove pointless fstab.h include to fix building on uClibc.
 
   08 Nov 2005; Christian Andreetta <satya@gentoo.org>
   samba-3.0.14a-r2.ebuild, samba-3.0.14a-r3.ebuild, samba-3.0.20-r1.ebuild,
