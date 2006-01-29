@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.12 2005/01/01 14:20:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.13 2006/01/29 07:07:37 vapier Exp $
 
 MY_P1=tcltk-${P}
 MY_P=${P/-/_}-1.1
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/w/winesetuptk/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-*"
 IUSE=""
 
 DEPEND="virtual/x11"
