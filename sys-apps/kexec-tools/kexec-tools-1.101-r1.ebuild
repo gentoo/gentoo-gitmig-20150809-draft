@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r1.ebuild,v 1.1 2006/01/20 20:39:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r1.ebuild,v 1.2 2006/01/29 10:23:38 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Load another kernel from the currently executing Linux kernel"
 HOMEPAGE="http://www.xmission.com/~ebiederm/files/kexec/"
@@ -11,12 +13,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
+}
+
 src_install() {
 	into /
 	dosbin objdir*/build/sbin/kexec || die "dosbin failed"
 	doman kexec/kexec.8
 	dodoc News AUTHORS TODO
 
-	newinitd ${FILESDIR}/kexec.init kexec
-	newconfd ${FILESDIR}/kexec.conf kexec
+	newinitd "${FILESDIR}"/kexec.init kexec
+	newconfd "${FILESDIR}"/kexec.conf kexec
 }

@@ -1,10 +1,21 @@
-MD5 8162106b3e5c1cb71e903c77a1217dff ChangeLog 1478
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3ef4a78ca6d8d45f9d54fdc5236411bb ChangeLog 1628
 MD5 3346c0b5fcc5f5974c6edb1a43acec3e files/digest-kexec-tools-1.100-r1 69
 MD5 66fbf8cb76d68e3bc10effd7fec63974 files/digest-kexec-tools-1.101 69
 MD5 66fbf8cb76d68e3bc10effd7fec63974 files/digest-kexec-tools-1.101-r1 69
+MD5 df309b1ada2cd833888ea0227e414c8a files/kexec-tools-1.101-LDFLAGS.patch 361
 MD5 d6017250a94f6bd50a9744694b02da7f files/kexec.conf 292
 MD5 a7abfebdf076007dc64c9959610551d1 files/kexec.init 1293
 MD5 5ccd33e89ab18e2a83476d6a60fa9030 kexec-tools-1.100-r1.ebuild 692
-MD5 aefa997a0e05affc7e1327d9b73948c6 kexec-tools-1.101-r1.ebuild 699
+MD5 0e30d46353f99135c7327e3505e456f0 kexec-tools-1.101-r1.ebuild 801
 MD5 905c6adbdbf88509d95c342774b3b931 kexec-tools-1.101.ebuild 694
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3JfD2+ySkm8kpY0RArxoAKCpYlkW42nyjtf//Ocqo6jpXCd2OgCgt6F6
+I3bIHNpOdPkTxPALWOGo/FA=
+=f6FC
+-----END PGP SIGNATURE-----

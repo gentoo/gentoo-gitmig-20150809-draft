@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.5 2006/01/20 20:39:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.6 2006/01/29 10:23:38 vapier Exp $
+
+  29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/kexec-tools-1.101-LDFLAGS.patch, kexec-tools-1.101-r1.ebuild:
+  Fix building with LDFLAGS.
 
 *kexec-tools-1.101-r1 (20 Jan 2006)
 
