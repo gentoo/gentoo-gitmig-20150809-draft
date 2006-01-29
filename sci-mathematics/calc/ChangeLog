@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/calc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.5 2005/11/20 13:20:50 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.6 2006/01/29 10:57:03 corsair Exp $
+
+  29 Jan 2006; Markus Rothe <corsair@gentoo.org> calc-2.11.10.1.ebuild:
+  Stable on ppc64
 
   20 Nov 2005; Markus Rothe <corsair@gentoo.org> calc-2.11.10.1.ebuild:
   Added ~ppc64 keyword
