@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1146c36398d6471d4190c1432984cdcc ChangeLog 2753
 MD5 61d4e490f398a43b99d988c9809432e6 PEAR-XML_Util-1.1.1-r1.ebuild 379
 MD5 e34f4b2508bfac69c1ad99f158cf8a29 PEAR-XML_Util-1.1.1.ebuild 401
 MD5 c0c497644cbe27839bf239dba8ccecda files/digest-PEAR-XML_Util-1.1.1 61
 MD5 c0c497644cbe27839bf239dba8ccecda files/digest-PEAR-XML_Util-1.1.1-r1 61
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3GfA2+ySkm8kpY0RAvukAJ9J1SmWhhxx9mbHKi57A4bu2GdgMwCfYvYb
+Soi7+Jw8PieH3I+cAMHxzho=
+=QSo5
+-----END PGP SIGNATURE-----
