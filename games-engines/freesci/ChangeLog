@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/freesci
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/ChangeLog,v 1.10 2004/09/11 09:02:23 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/ChangeLog,v 1.11 2006/01/29 00:11:38 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  freesci-0.3.4c.ebuild, freesci-0.6.1b.ebuild:
+  Add modular X dependencies.
 
   11 Sep 2004; <blubb@gentoo.org> freesci-0.6.1b.ebuild:
   added ~amd64 keyword

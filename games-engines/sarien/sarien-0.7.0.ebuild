@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/sarien-0.7.0.ebuild,v 1.7 2004/12/28 17:17:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/sarien-0.7.0.ebuild,v 1.8 2006/01/29 00:11:39 joshuabaergen Exp $
 
 inherit games
 
@@ -14,8 +14,12 @@ KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
-	virtual/x11"
+	|| ( x11-libs/libXext virtual/x11 )"
 DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xextproto
+			x11-proto/xf86dgaproto
+			x11-proto/xf86vidmodeproto )
+		virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {

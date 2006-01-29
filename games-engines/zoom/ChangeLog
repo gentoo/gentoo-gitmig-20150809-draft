@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/zoom
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.10 2005/10/31 08:22:50 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.11 2006/01/29 00:11:39 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> zoom-1.0.3.ebuild,
+  zoom-1.0.4a.ebuild:
+  Add modular X dependencies.
 
 *zoom-1.0.4a (31 Oct 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.3.4c.ebuild,v 1.4 2005/04/15 04:05:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.3.4c.ebuild,v 1.5 2006/01/29 00:11:38 joshuabaergen Exp $
 
 inherit flag-o-matic games
 
@@ -16,7 +16,9 @@ IUSE="X ggi directfb alsa sdl ncurses"
 
 RDEPEND="virtual/libc
 	X? (
-		virtual/x11
+		|| ( ( x11-libs/libXi
+				x11-libs/libXrender )
+			virtual/x11 )
 		=media-libs/freetype-2*
 	)
 	ggi? ( media-libs/libggi )
@@ -24,7 +26,12 @@ RDEPEND="virtual/libc
 	alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	sdl? ( >=media-libs/libsdl-1.1.8 )
 	ncurses? ( sys-libs/ncurses )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	X? (
+		|| ( ( x11-libs/libXft
+				x11-libs/libXt )
+			virtual/x11 )
+	)"
 
 src_compile() {
 	sed -i -e 's:DSPF_RGB15:DSPF_ARGB1555:' src/gfx/drivers/directfb_driver.c

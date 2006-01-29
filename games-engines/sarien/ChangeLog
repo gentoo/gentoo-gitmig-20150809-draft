@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/sarien
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/ChangeLog,v 1.6 2004/12/28 17:17:21 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/ChangeLog,v 1.7 2006/01/29 00:11:39 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  sarien-0.7.0.ebuild:
+  Add modular X dependencies.
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> sarien-0.7.0.ebuild:
   Marked ppc stable.
