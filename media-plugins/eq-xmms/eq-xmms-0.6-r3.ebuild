@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r3.ebuild,v 1.3 2006/01/07 03:14:54 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r3.ebuild,v 1.4 2006/01/29 15:48:48 blubb Exp $
 
 IUSE="sse-filters"
 
@@ -8,7 +8,8 @@ inherit eutils autotools
 
 DESCRIPTION="EQU is a realtime graphical equalizer effect plugin that will equalize almost everything that you play through XMMS, not just the MP3s"
 HOMEPAGE="http://equ.sourceforge.net/"
-SRC_URI="mirror://sourceforge/equ/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/equ/${P}.tar.gz
+		mirror://gentoo/${P}-sse_filters.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -28,7 +29,7 @@ src_unpack() {
 		cd ${S}
 
 		if use sse-filters; then
-			epatch ${FILESDIR}/${P}-sse_filters.patch.bz2
+			epatch ${WORKDIR}/${P}-sse_filters.patch
 
 			use x86 || epatch ${FILESDIR}/${P}-sse_round_trickfilters.patch
 		fi
