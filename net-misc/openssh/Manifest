@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec01228f6a479f9deda35f218ed3a840 ChangeLog 23641
+MD5 d81f5218d33f3b966dd39d7692f27126 ChangeLog 23860
 MD5 2fc26aef45c8705e6da5e3fe6650af47 files/digest-openssh-3.8.1_p1-r1 219
 MD5 1c2b632d1118068966049ae41b33c012 files/digest-openssh-3.9_p1-r3 281
 MD5 c92c33beb73a2d008cb3744ebd7e4f88 files/digest-openssh-4.0_p1-r2 360
@@ -33,6 +33,7 @@ MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
 MD5 f58807d5d75bc9929883e6876c7ddd46 files/openssh-3.9_p1-terminal_restore.patch.bz2 332
 MD5 d235f6e0c273e8a968b6759b12a8fd11 files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5770
 MD5 4bee5c8ce11f30487154c3742e004f7d files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
+MD5 8155bbbeb16c552ccb793f05904074b5 files/openssh-4.2_p1-cross-compile.patch 1028
 MD5 21a3d3ba5d33cb010404c562ef1078b1 files/openssh-4.2_p1-kerberos-detection.patch 359
 MD5 551a19fc1be4d7792633865816bc9426 files/openssh-4.2_p1-selinux.patch 2355
 MD5 9cf3a0fb4e8709dde06bd4a3c61eeaff files/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2 5718
@@ -43,13 +44,13 @@ MD5 a0e3088a437e10b3fc27c60744a1be52 files/sshd.rc6 1468
 MD5 02a1e50ab3fa841edec86694bd71c8d1 metadata.xml 1251
 MD5 3af6afd052caef27a0707c9b941d41c6 openssh-3.8.1_p1-r1.ebuild 4407
 MD5 007223c0520d91c52557714c4bc6b0ca openssh-3.9_p1-r3.ebuild 5010
-MD5 f57b335cd90d3ec4233a98c6617dce3b openssh-4.0_p1-r2.ebuild 5362
-MD5 6a8c34205a609252e4811a9ff5fbb8bf openssh-4.1_p1-r1.ebuild 5323
-MD5 89c6d6b39b132960a3874f09ef9db435 openssh-4.2_p1.ebuild 5287
+MD5 c5709a9f3df3235191214e4ec18831b6 openssh-4.0_p1-r2.ebuild 5427
+MD5 2074b6c09767920dbf22191362b3d1cc openssh-4.1_p1-r1.ebuild 5389
+MD5 cec65de1ae2a6a0b20779c5de9daf2b6 openssh-4.2_p1.ebuild 5349
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDrrjxAiZjviIA2XgRAlzJAKDI3TyV/ZpfZDqaXr6l1/3LKxW1yQCfbkEG
-oS7Wh8ouwCIH0hUYidiczqI=
-=OQhr
+iD8DBQFD3K6g2+ySkm8kpY0RAhFdAKCt3WmTZMCIetGW2ZaRetD6w2BfTACfWEfc
+yaFL6xVLDHAwheKAX83E4Jo=
+=5EPt
 -----END PGP SIGNATURE-----
