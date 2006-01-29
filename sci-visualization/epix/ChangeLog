@@ -1,0 +1,62 @@
+# ChangeLog for media-gfx/epix
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.1 2006/01/29 19:32:25 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +epix-1.0.0.ebuild:
+  Moved from media-gfx/epix to sci-visualization/epix.
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> epix-1.0.0.ebuild:
+  Stable on ppc.
+
+  09 May 2005; David Holm <dholm@gentoo.org> epix-1.0.0.ebuild:
+  Added to ~ppc.
+
+  09 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> -epix-0.8.10a-r1.ebuild:
+  Removed old ebuild.
+
+  04 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> epix-1.0.0.ebuild:
+  Marked stable on amd64 and x86.
+
+*epix-1.0.0 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +epix-0.8.10a-r1.ebuild, +epix-1.0.0.ebuild:
+  Moved from app-sci/epix to media-gfx/epix.
+
+  23 Nov 2004; Olivier Fisette <ribosome@gentoo.org> epix-0.8.10a-r1.ebuild,
+  epix-1.0.0.ebuild:
+  Added "virtual/tetex" dependency. Required to build the documentation.
+
+*epix-1.0.0 (23 Nov 2004)
+
+  23 Nov 2004; Olivier Fisette <ribosome@gentoo.org> +epix-1.0.0.ebuild:
+  New version. Credits go to Marcus Hanwell <gentoo@cryos.net>.
+
+  22 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> epix-0.8.10a-r1.ebuild:
+  Using tc-getCXX now (bug #71849). Cleanup.
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> epix-0.8.10a-r1.ebuild:
+  Marked stable on amd64.
+
+  22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> epix-0.8.10a-r1.ebuild:
+  marked ~amd64
+
+*epix-0.8.10a-r1 (20 Nov 2003)
+
+  20 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> epix-0.8.10a-r1.ebuild:
+  Installing tutorial aswell.
+
+*epix-0.8.10a (19 Jun 2003)
+
+  19 Jun 2003; Peter Johanson <latexer@gentoo.org> epix-0.8.10a.ebuild,
+  epix-0.8.8a.ebuild:
+  Bump, and marking 0.8.8a as stable
+
+  09 May 2003; Peter Johanson <latexer@gentoo.org> epix-0.8.8a.ebuild:
+  Add some sedding for bug #20633
+
+*epix-0.8.8a (14 Feb 2003)
+
+  14 Feb 2003; Peter Johanson <latexer@gentoo.org> epix-0.8.8a.ebuild files/digest-epix-0.8.8a :
+  Initial import. Ebuilds by me.
