@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.11 2005/02/13 04:56:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.12 2006/01/29 19:45:30 cryos Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="doc? ( virtual/ghostscript virtual/tetex media-gfx/transfig )
 	virtual/os-headers
 	sys-apps/iproute2"
 RDEPEND="sys-devel/gcc
-	tcsim? ( media-gfx/gnuplot )
+	tcsim? ( sci-visualization/gnuplot )
 	dev-lang/perl
 	sys-apps/iproute2"
 
