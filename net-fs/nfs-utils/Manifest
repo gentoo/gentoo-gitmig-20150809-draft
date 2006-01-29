@@ -2,24 +2,54 @@
 Hash: SHA1
 
 MD5 b94b089a64ff876396b5a2834b7b41d2 ChangeLog 10789
+RMD160 5c608ce26063d25f1bf321bb24ab81cfd5aa7d9d ChangeLog 10789
+SHA256 801dac4e09b8bb44cf35d6c0aed706b2a614b5b3374b6427ff7fdf5fc3bb80f3 ChangeLog 10789
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r6 67
+RMD160 813c5ac91e1e991aa5f5b7396051e66ceadb76a3 files/digest-nfs-utils-1.0.6-r6 67
+SHA256 1352c2a3716deea0bfbbdfcc1e498379611fe929bf0d842d11f5b31c7b399a9a files/digest-nfs-utils-1.0.6-r6 67
 MD5 46e91b0dea9cbbfedcdccc9386b6326d files/digest-nfs-utils-1.0.7-r2 67
+RMD160 6b6ef3960cee9f3504e52e84d34d05bbd2f4d90e files/digest-nfs-utils-1.0.7-r2 67
+SHA256 fb7a810340d1b8f7a0998fe8b3ea7ffb327d5039a27e76b33e3f3fbf2dd10ef8 files/digest-nfs-utils-1.0.7-r2 67
 MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
+RMD160 0a61ad40dc321be39fb54d5b9fe717caa714e878 files/exports 66
+SHA256 5d6356df546682e2f1a87131d1bb67de9b1f9a34d3a5742343dc64e890cf71d5 files/exports 66
 MD5 1d8228f424a87830f927ea90b9ad2b7f files/nfs 6863
+RMD160 b10f9fabdd7ebc778467f304ffc4021207bbd929 files/nfs 6863
+SHA256 e17fb64add8c70e8b891e6e074f1fd6f2af0ba471b2329f91787dacce6411f66 files/nfs 6863
 MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
+RMD160 6ee6c4780080fc85ab51064a816fb2fa505ea0c5 files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
+SHA256 eab80cae9dca3c9682f124981ae79cb5f953aff53a4f7e456df6dc15513cc568 files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
 MD5 3878538fac900450212b414f8c8c39ab files/nfs-utils-1.0.6-uclibc.patch 547
+RMD160 64efb01e8ac745fd5aebc20fc77d6beee4fa6a2f files/nfs-utils-1.0.6-uclibc.patch 547
+SHA256 101e9152171b445894c6254251a79aef4cf71e916cd4055b0cdb006be97b6703 files/nfs-utils-1.0.6-uclibc.patch 547
 MD5 2c74906c8e74e98c9bd309177e7e2053 files/nfs-utils-1.0.6-usn36.patch 3676
+RMD160 b2a435fa3003eab20d49ce12190514bfb3744675 files/nfs-utils-1.0.6-usn36.patch 3676
+SHA256 a1c58833558b7eb39777ae4aea598a6989b73492b533a4b0337ee275bc828a71 files/nfs-utils-1.0.6-usn36.patch 3676
 MD5 77b7b275efe6533d3aaf065c89f804ef files/nfs-utils-1.0.7-gcc4.patch 553
+RMD160 91102f66da5d6736469c2308b270450386467ac9 files/nfs-utils-1.0.7-gcc4.patch 553
+SHA256 697490e2fbef35617cfa34434e0a90ec2bf804d51409d2bbfb6b9fcea4310a0e files/nfs-utils-1.0.7-gcc4.patch 553
 MD5 39cf4f293c56793694cb75afbd5c0c17 files/nfs-utils-1.0.7-man-pages.patch 219
+RMD160 7fdda782077c5bf423586bf5385a23dbf8204aca files/nfs-utils-1.0.7-man-pages.patch 219
+SHA256 0ae11565eea729a409df095450593060320039e18a4a67fac71db176ed27fcce files/nfs-utils-1.0.7-man-pages.patch 219
 MD5 fc332370f9517304bc251f505b17abf2 files/nfs.confd 533
+RMD160 bad552a256a86bc374cd7ff3d685afa4ff5d816e files/nfs.confd 533
+SHA256 a9b8395590b8d15b52eee8cb637fdc23afce007de42442ef4448e76f2ac899fd files/nfs.confd 533
 MD5 1f3e6130e4a60767a213d34ff3131ae4 files/nfsmount 1171
+RMD160 d6c720dd7f25332dfe1a01fa5afe814867188f88 files/nfsmount 1171
+SHA256 a174969140860185bfc19cec33f25e565feb81a4cd8d76d91b11bb17b5566a01 files/nfsmount 1171
 MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
-MD5 61577ca1560634f3e6391c6b056eee6e nfs-utils-1.0.6-r6.ebuild 2923
+RMD160 477581252d7edf18d7b8a274766e2ed04c61935a metadata.xml 225
+SHA256 42f511d0cc6e82e29b011c686ba8bb7965f4d92eb6e47ba3e63d4c7edfe9883a metadata.xml 225
+MD5 9ff9d72b0fb667d05d3d3ae955bf8f55 nfs-utils-1.0.6-r6.ebuild 2923
+RMD160 91d0907cfdf42ba33a5d869960d44d335c6db846 nfs-utils-1.0.6-r6.ebuild 2923
+SHA256 67f8ae21a2b2fd81b18ed552a3ba173ee3524020432db068a2dd020407176240 nfs-utils-1.0.6-r6.ebuild 2923
 MD5 5aa17cc2095bdbd3379b5eb15ab91784 nfs-utils-1.0.7-r2.ebuild 3346
+RMD160 cc4ee9f41ffb01167d5801518b6fdb293d440ee4 nfs-utils-1.0.7-r2.ebuild 3346
+SHA256 5f14de5e1a6552ed25861c8917919eb8faafb092a431cc5b0e77f34c8bf95bb8 nfs-utils-1.0.7-r2.ebuild 3346
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3FkC2+ySkm8kpY0RAvnQAJsFTOuL2tdmfWezm3NT2JLmMPaHTQCbBv9/
-vY5rskTt5b5LE6SfuXtYvds=
-=2/9I
+iD8DBQFD3SLg2+ySkm8kpY0RAs1jAKCS+t9ndZb68f9DyYkS+0nSJcvMjwCeMR4S
+umNpS3pxUXoAOVeIq2/3RQU=
+=yYOX
 -----END PGP SIGNATURE-----
