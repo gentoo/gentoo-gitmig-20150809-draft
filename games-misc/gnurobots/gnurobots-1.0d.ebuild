@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.6 2005/08/24 02:58:23 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.7 2006/01/29 22:17:24 joshuabaergen Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ IUSE="X"
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND="X? ( virtual/x11 )
+DEPEND="X? ( || ( x11-libs/libXpm virtual/x11 ) )
 	dev-util/guile"
 
 src_compile() {

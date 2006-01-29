@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.4 2005/06/10 14:09:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.5 2006/01/29 22:17:24 joshuabaergen Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libX11 virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

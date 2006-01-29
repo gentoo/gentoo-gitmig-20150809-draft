@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/xcruiser-0.30.ebuild,v 1.2 2005/06/15 18:46:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/xcruiser-0.30.ebuild,v 1.3 2006/01/29 22:17:24 joshuabaergen Exp $
 
 DESCRIPTION="Fly about 3D-formed file system"
 HOMEPAGE="http://xcruiser.sourceforge.net/"
@@ -11,7 +11,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( ( x11-libs/libXaw
+				x11-libs/libXp )
+			virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( ( app-text/rman
+			x11-misc/gccmakedep
+			x11-misc/imake )
+		virtual/x11 )"
 
 src_compile() {
 	xmkmf -a
