@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2-r1.ebuild,v 1.2 2005/08/25 21:26:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2-r1.ebuild,v 1.3 2006/01/29 01:50:48 halcy0n Exp $
 
 inherit python flag-o-matic libtool eutils
 
@@ -26,15 +26,16 @@ RDEPEND="=sys-libs/db-3.2*
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/rpm-4.2-python2.3.diff
-	epatch ${FILESDIR}/rpm-4.2-pic.patch
+	epatch "${FILESDIR}"/rpm-4.2-python2.3.diff
+	epatch "${FILESDIR}"/rpm-4.2-pic.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	# Disable the configue scripts handling of multilib libdirs
 	# since econf already sets --libdir correctly
 	sed -i -e 's:MARK64=64:MARK64=:' \
-		${S}/{,file,popt,beecrypt}/configure  || die "sed failed"
+		"${S}"/{,file,popt,beecrypt}/configure  || die "sed failed"
 	sed -i -e 's:$(libdir)/rpm:$(prefix)/lib/rpm:' \
-		${S}/Makefile.in || die "sed failed"
+		"${S}"/Makefile.in || die "sed failed"
 }
 
 src_compile() {
@@ -55,20 +56,20 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	mv ${D}/bin/rpm ${D}/usr/bin
-	rm -rf ${D}/bin
+	make DESTDIR="${D}" install || die
+	mv "${D}"/bin/rpm "${D}"/usr/bin
+	rm -rf "${D}"/bin
 	# Fix for bug #8578 (app-arch/rpm create dead symlink)
 	# Local RH 7.3 install has no such symlink anywhere
 	# ------
 	# UPDATE for 4.1!
 	# There is a /usr/lib/rpm/rpmpopt-4.1 now
 	# the symlink is still created incorrectly. ???
-	rm -f ${D}/usr/lib/rpmpopt
-	rm -f ${D}/usr/$(get_libdir)/libpopt*
-	rm -f ${D}/usr/include/popt.h
-	use nls && rm -f  ${D}/usr/share/locale/*/LC_MESSAGES/popt.mo
-	rm -f ${D}/usr/share/man/man3/popt*
+	rm -f "${D}"/usr/lib/rpmpopt
+	rm -f "${D}"/usr/$(get_libdir)/libpopt*
+	rm -f "${D}"/usr/include/popt.h
+	use nls && rm -f  "${D}"/usr/share/locale/*/LC_MESSAGES/popt.mo
+	rm -f "${D}"/usr/share/man/man3/popt*
 
 	keepdir /var/lib/rpm
 	keepdir /usr/src/pc/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
@@ -76,7 +77,7 @@ src_install() {
 	keepdir /usr/src/pc
 	dodoc CHANGES CREDITS GROUPS README* RPM* TODO
 
-	use nls || rm -rf ${D}/usr/share/man/{ko,ja,fr,pl,ru,sk}
+	use nls || rm -rf "${D}"/usr/share/man/{ko,ja,fr,pl,ru,sk}
 
 	# create /usr/src/redhat/ and co for rpmbuild
 	for d in /usr/src/redhat/{BUILD,RPMS,SOURCES,SPECS,SRPMS}; do
