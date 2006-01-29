@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.2.ebuild,v 1.1 2006/01/03 15:56:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.2.ebuild,v 1.2 2006/01/29 19:43:34 cryos Exp $
 
 DESCRIPTION="A modern multi-purpose calculator library"
 LICENSE="GPL-2"
@@ -18,7 +18,7 @@ DEPEND="dev-lang/perl
 RDEPEND=">=sci-libs/cln-1.1
 	dev-libs/libxml2
 	>=dev-libs/glib-2.4
-	>=media-gfx/gnuplot-3.7
+	>=sci-visualization/gnuplot-3.7
 	net-misc/wget
 	nls? ( sys-devel/gettext )
 	readline? ( sys-libs/readline )"
