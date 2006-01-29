@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/gtk2hs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.19 2005/12/14 15:40:42 dcoutts Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.20 2006/01/29 15:45:14 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  -files/gtk2hs-0.9.7-ghc64.patch.gz, gtk2hs-0.9.7.ebuild:
+  move compressed patches to the mirros
 
   14 Dec 2005; <duncan@gentoo.org> gtk2hs-0.9.10.ebuild:
   Make the DEPEND include the RDEPEND.

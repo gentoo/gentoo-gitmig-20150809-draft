@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.5 2005/08/31 10:08:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.6 2006/01/29 15:45:14 blubb Exp $
 
 inherit base check-reqs ghc-package
 
 DESCRIPTION="GTK+-2.x bindings for Haskell"
 HOMEPAGE="http://haskell.org/gtk2hs/"
-SRC_URI="mirror://sourceforge/gtk2hs/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gtk2hs/${P}.tar.gz
+		mirror://gentoo/gtk2hs-0.9.7-ghc64.patch.gz"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 
@@ -33,7 +34,7 @@ src_unpack() {
 	base_src_unpack
 
 	# patch for GHC 6.4 compatability
-	epatch ${FILESDIR}/gtk2hs-0.9.7-ghc64.patch.gz
+	epatch ${WORKDIR}/gtk2hs-0.9.7-ghc64.patch
 }
 
 src_compile() {
