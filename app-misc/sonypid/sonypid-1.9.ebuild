@@ -1,17 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/sonypid-1.9.ebuild,v 1.6 2005/01/01 15:24:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/sonypid-1.9.ebuild,v 1.7 2006/01/29 16:22:24 hanno Exp $
 
 DESCRIPTION="tool to use the Sony Vaios jog-dial as a mouse-wheel"
-HOMEPAGE="http://spop.free.fr/sonypi/"
-SRC_URI="http://spop.free.fr/sonypi/${P}.tar.bz2"
+HOMEPAGE="http://www.popies.net/sonypi/"
+SRC_URI="http://www.popies.net/sonypi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libXtst virtual/x11 )"
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die
