@@ -1,16 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.3 2006/01/29 23:31:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.4 2006/01/29 23:38:50 genstef Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 HOMEPAGE="http://www.cups.org/ghostscript.php"
 SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
+	mirror://gentoo/gs7.07.1-cjk.diff.bz2
 	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
-		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz
-		mirror://gentoo/gs7.07.1-cjk.diff.bz2
-		)"
+		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
