@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-streamdev
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/ChangeLog,v 1.1 2005/12/19 18:39:09 zzam Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/ChangeLog,v 1.2 2006/01/29 21:55:20 zzam Exp $
+
+  29 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-streamdev-server-0.3.3_pre20051219.ebuild:
+  added installation of a default configuration file
 
 *vdr-streamdev-server-0.3.3_pre20051219 (19 Dec 2005)
 
