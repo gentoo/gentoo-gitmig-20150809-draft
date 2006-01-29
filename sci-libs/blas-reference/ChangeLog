@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-reference
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.6 2005/11/13 16:54:03 markusle Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.7 2006/01/29 16:22:30 blubb Exp $
+
+  29 Jan 2006; Simon Stelling <blubb@gentoo.org> +files/Makefile,
+  -files/Makefile.gz, blas-reference-19940131.ebuild,
+  blas-reference-19940131-r1.ebuild, blas-reference-19940131-r2.ebuild:
+  no need to gzip smallish files
 
   13 Nov 2005; Markus Dittrich <markusle@gentoo.org>
   blas-reference-19940131-r2.ebuild:

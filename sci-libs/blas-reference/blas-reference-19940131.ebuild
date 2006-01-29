@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131.ebuild,v 1.4 2005/04/22 13:49:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131.ebuild,v 1.5 2006/01/29 16:22:30 blubb Exp $
 
 inherit eutils
 
@@ -54,8 +54,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp ${FILESDIR}/Makefile.gz .
-	gunzip Makefile.gz
+	cp ${FILESDIR}/Makefile .
 }
 
 src_compile() {

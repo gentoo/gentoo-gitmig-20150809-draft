@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r2.ebuild,v 1.2 2005/11/13 16:54:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r2.ebuild,v 1.3 2006/01/29 16:22:30 blubb Exp $
 
 inherit eutils fortran
 
@@ -47,8 +47,7 @@ ifc_info() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	cp "${FILESDIR}"/Makefile.gz .
-	gunzip Makefile.gz
+	cp "${FILESDIR}"/Makefile .
 }
 
 src_compile() {

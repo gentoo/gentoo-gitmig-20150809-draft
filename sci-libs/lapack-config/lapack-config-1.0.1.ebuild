@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-config/lapack-config-1.0.1.ebuild,v 1.5 2005/09/17 21:54:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-config/lapack-config-1.0.1.ebuild,v 1.6 2006/01/29 16:19:57 blubb Exp $
 
 DESCRIPTION="Utility to change the default LAPACK library"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,8 +16,7 @@ DEPEND=""
 RDEPEND="app-shells/bash"
 
 src_unpack(){
-	cp ${FILESDIR}/${P}.gz ${WORKDIR}/${PN}.gz
-	gunzip ${WORKDIR}/${PN}.gz
+	cp ${FILESDIR}/${P} ${WORKDIR}/${PN}
 }
 
 src_install () {
