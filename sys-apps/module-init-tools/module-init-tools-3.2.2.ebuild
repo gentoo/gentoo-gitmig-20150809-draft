@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2.ebuild,v 1.2 2006/01/29 08:24:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2.ebuild,v 1.3 2006/01/29 13:27:12 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -137,7 +137,7 @@ src_install() {
 #	fi
 
 	cd "${S}"
-	einstall prefix="${D}" || die
+	make install DESTDIR="${D}" || die
 	dosym modprobe.conf.5 /usr/share/man/man5/modprobe.d.5
 
 	# Install compat symlink

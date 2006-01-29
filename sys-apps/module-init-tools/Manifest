@@ -19,14 +19,14 @@ MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.pa
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3e2546d3dcec80540a104faf7767b449 module-init-tools-3.0-r2.ebuild 5628
 MD5 47229c8c9b55ff325e42a6d1fa6cb4aa module-init-tools-3.1-r1.ebuild 5550
-MD5 dd4c57c3d3c14dad4f41f7621b7dfea6 module-init-tools-3.2.1.ebuild 5791
-MD5 59cdc061ef5f17f13a7f8765e820e61a module-init-tools-3.2.2.ebuild 5764
+MD5 b525f2e968d9a07affdc03215b293222 module-init-tools-3.2.1.ebuild 5759
+MD5 602d273f05cace7e63b3989bda4a10d0 module-init-tools-3.2.2.ebuild 5769
 MD5 0e9cc79d40e71ac19d2c30beb83ee0a3 module-init-tools-3.2_pre7-r1.ebuild 5833
 MD5 ef19ad39c0567e3720cd650a2a07f6b2 module-init-tools-3.2_pre7.ebuild 5434
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3Hvo2+ySkm8kpY0RAlbcAJ9s9Ww5z2c4GFEDuoDzrlamXF0CHwCfaUmC
-D7zFeD2imf+L9UHRwSzrEsw=
-=ko9/
+iD8DBQFD3MLK2+ySkm8kpY0RAllNAJoC+JHAgi0hmP5i535ucbqCLNxzgwCfXKnV
+syXNbmYz55v3HwoM6F8NWh4=
+=6xDR
 -----END PGP SIGNATURE-----
