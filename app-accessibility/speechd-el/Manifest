@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 63ed033f9f66f28df055a049b23da808 speechd-el-0.4.ebuild 877
-MD5 93d9441c24e63ff5db043e4d44799f15 speechd-el-0.3.ebuild 877
-MD5 54847cbdcd2062519bcaa5edd2acc035 ChangeLog 833
-MD5 e206f7cd655afe2644bb78cc9d15bd7f metadata.xml 166
+MD5 ae937ec8e1621dec56c0bb0fe41c9ebe ChangeLog 970
+RMD160 e3b2a2e3614d5f7dd4a0ba15be1ce4f143a6c607 ChangeLog 970
+SHA256 5702434b8bea6dfd704dedb2cbabb826f90a52ee1c7a4d95604dd6ae897c1fc6 ChangeLog 970
 MD5 ddc678bf383f48a6c3a8fdd677a9561a files/digest-speechd-el-0.3 66
+RMD160 f05766b82e761981d6035241d20d859e2b27a95a files/digest-speechd-el-0.3 66
+SHA256 c7ee76d9061efee12864f74a0e47e2b2325ffb2099ecc4c9489eff9e74242bbc files/digest-speechd-el-0.3 66
 MD5 ffe62bb3220ef5a35da89644c4340775 files/digest-speechd-el-0.4 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIIedV3J2n04EauwRAutXAJ9/jUIVCKj/F4ntutWlVq3gM6IF/ACfRaU0
-I3AJGUP1ynoMdTmQitNxZa0=
-=3xE8
------END PGP SIGNATURE-----
+RMD160 f9cdbba9ece84f88edc37834bff33cfbc7bdf796 files/digest-speechd-el-0.4 66
+SHA256 542110c0870a6eef53dc8fb3ee9267fbf0891f9753a07deea3cb1a903b8bff2c files/digest-speechd-el-0.4 66
+MD5 c234a8e13dd376895c35c9be8ccc19f8 files/digest-speechd-el-1.0 244
+RMD160 15c803193c08fbb37294a9eaf7c46f74429b4464 files/digest-speechd-el-1.0 244
+SHA256 b54b29cbd492123e7021f54b9273bb37194de90b8f2115e8269b7f8d0518c57d files/digest-speechd-el-1.0 244
+MD5 f49c8c33105389ec215a01ef378c98e1 metadata.xml 228
+RMD160 eab1a8846c5f4d7218d7f3065702c36abd697537 metadata.xml 228
+SHA256 5caa0f8c17af41df6a1cc2c79b27566dfa6a67bbbd0116241dc7f5d17454f1d7 metadata.xml 228
+MD5 93d9441c24e63ff5db043e4d44799f15 speechd-el-0.3.ebuild 877
+RMD160 cc3eaa2d822b6b5b361611dafaef92436187197a speechd-el-0.3.ebuild 877
+SHA256 f0fd4b3f0ef02d0d24cfc8e2eba8125b5578803e7f085bca7839a109c2a3384b speechd-el-0.3.ebuild 877
+MD5 63ed033f9f66f28df055a049b23da808 speechd-el-0.4.ebuild 877
+RMD160 f5ed11f23c1e7b21f6c3bd21bc9191bcbd4635f9 speechd-el-0.4.ebuild 877
+SHA256 91f7fb2ca3c849726abba5939a8835d9a7ae4a9cc35ada8c483c05148095e8b8 speechd-el-0.4.ebuild 877
+MD5 82d8b980c10a24efdebf82a749654180 speechd-el-1.0.ebuild 950
+RMD160 3b6dfa8cbd352699759e002de132a8b7e53f1f6f speechd-el-1.0.ebuild 950
+SHA256 2090b4f3f38869c736e9a1b3d4ded83d529435d41216144414fb4095a0a98349 speechd-el-1.0.ebuild 950
