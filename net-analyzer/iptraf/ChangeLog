@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/iptraf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.32 2005/11/01 05:44:04 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.33 2006/01/29 13:47:36 jokey Exp $
+
+*iptraf-3.0.0-r1 (29 Jan 2006)
+
+  29 Jan 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/iptraf-3.0.0-Makefile.patch, +files/iptraf-3.0.0-bnep.patch,
+  +iptraf-3.0.0-r1.ebuild:
+  Adding bnepX support bug #118471, thanks to Jan Spitalnik <jan@spitalnik.net>
+  Adding optional ipv6 support bug #106775
 
 *iptraf-3.0.0 (01 Nov 2005)
 

@@ -1,21 +1,45 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0778f39c2d1240985f0e8c1ba4f16dc6 ChangeLog 4156
+RMD160 15931a129bd49b7433e2bfc575bab3a3395d28bb ChangeLog 4156
+SHA256 b8cb3fb337a8e5fcc8f0536babecf412b973375ecc9291e46f9d826761962372 ChangeLog 4156
 MD5 301043df68f5969e9455c53d409a8c3e files/digest-iptraf-2.7.0-r1 138
+RMD160 bc154b348bd992ccaeaa776bd9d4b49f1aa5adc8 files/digest-iptraf-2.7.0-r1 138
+SHA256 3daf422d5f99c1ccf75f5148447c3acfe09c05c4b84f82aa8708fb15dc0f37a6 files/digest-iptraf-2.7.0-r1 138
 MD5 ddf09316d6ccb3f72355dbf82d9fd1e2 files/digest-iptraf-3.0.0 64
+RMD160 768d3a247cc29c38374abfc112e406dce2b9881d files/digest-iptraf-3.0.0 64
+SHA256 3d088b94702567832770d30b90d30adb6fdeb92ec39bb934f0034acedf15cb11 files/digest-iptraf-3.0.0 64
+MD5 d17a4675bb2066a4624512c84292e321 files/digest-iptraf-3.0.0-r1 497
+RMD160 5bcc0c5ecc6945b3abfd43dcc11dc409ae5af4c8 files/digest-iptraf-3.0.0-r1 497
+SHA256 3a40ce7007c51191bedddacfcab6de40e1e66c2a00dff68832e22126f8f410c8 files/digest-iptraf-3.0.0-r1 497
 MD5 98fb7659373bc05930f0f3837135c811 files/iptraf-2.7.0-2.6.patch 1711
+RMD160 f839a835d8553803d47dd9c0905254c41ba6e33b files/iptraf-2.7.0-2.6.patch 1711
+SHA256 59441534079f43a381c68d48f1160ddd64bbf0ecdc42bd364559287504e8b57a files/iptraf-2.7.0-2.6.patch 1711
 MD5 1bf72405b3017f7732841188b6914160 files/iptraf-2.7.0-atheros.patch 1644
+RMD160 90c21cbced797182f39c22713bef74e110fe004a files/iptraf-2.7.0-atheros.patch 1644
+SHA256 17d3d64c204297dca178e546b49f5ab980377b3f7a6cfa53c7e724de44eed127 files/iptraf-2.7.0-atheros.patch 1644
+MD5 a39e6f036e00cc0497eadbc3095c41e5 files/iptraf-3.0.0-Makefile.patch 740
+RMD160 5d7b61d42843c2c2e70e7b33358e11caf4ee73be files/iptraf-3.0.0-Makefile.patch 740
+SHA256 d4246568afb834b35deca81e49860335cfa1c57d2f6848d0f3713c34843a9835 files/iptraf-3.0.0-Makefile.patch 740
 MD5 a713b7ba056a4b78e177e3a801246152 files/iptraf-3.0.0-atheros.patch 1508
+RMD160 b27416c045e1f0c9de5ea1d3ca3eb1390c87f7ca files/iptraf-3.0.0-atheros.patch 1508
+SHA256 b7201f79837046fcb787c4e76bafada04236a4c90b45ba5f140eca05c66b33b6 files/iptraf-3.0.0-atheros.patch 1508
+MD5 cb19837ee60a0627ab7ca8528c1ea76f files/iptraf-3.0.0-bnep.patch 2156
+RMD160 3a054a51015f93f6115758c4cb088e450036665b files/iptraf-3.0.0-bnep.patch 2156
+SHA256 dcd54d8dd2cb5c92448359f9ffe9312d6171586fb47a2d091a3c933040713531 files/iptraf-3.0.0-bnep.patch 2156
 MD5 20c0e87723c58d6ce51de7fc3af1781a files/iptraf-3.0.0-build.patch 949
+RMD160 15dfd3e0a9385af04c592b71c4a3ca55ace86fee files/iptraf-3.0.0-build.patch 949
+SHA256 a0fd3a9ae85f565df9322465aea0163b9bee9268d12b173e63a4bf7b44e3bd91 files/iptraf-3.0.0-build.patch 949
 MD5 59493b3c2f0bb06541a55aeffd9f097c files/iptraf-3.0.0-linux-headers.patch 963
+RMD160 aac7828fdeab874ad44f6f019398497a1e15d4c5 files/iptraf-3.0.0-linux-headers.patch 963
+SHA256 6fa481ad5111e05f4b4ad84f34bf386ae8cc05f998b3d746ece9fb0c79bac6ae files/iptraf-3.0.0-linux-headers.patch 963
 MD5 ff7fbdbad9ee9726c93c7ae00b072900 iptraf-2.7.0-r1.ebuild 1455
+RMD160 75f812f46d7bc45b5e17644f5f8aab1fa8d23534 iptraf-2.7.0-r1.ebuild 1455
+SHA256 eca9cc55a364046d35a57d91327522666796e3341b9f165d27cf9c3b21ef90dd iptraf-2.7.0-r1.ebuild 1455
+MD5 be093c9846127a5ae66e93b5e1290f29 iptraf-3.0.0-r1.ebuild 1108
+RMD160 bdf7912da894e7c6e23e345d5deeb375fd6c9aa5 iptraf-3.0.0-r1.ebuild 1108
+SHA256 88a2830af68ecfb1c4af4cb54a0ce8a05d37ce4a1569390b71f26913e738578d iptraf-3.0.0-r1.ebuild 1108
 MD5 fbad68fe2caf5b78a9ee437bcd634377 iptraf-3.0.0.ebuild 1188
+RMD160 110f661fb47ab11264e83e6bc29b94596ea67052 iptraf-3.0.0.ebuild 1188
+SHA256 22fcd4b97a75cea31c0df33183f2969f85eaa29a52c9aa59ddc918c132233c5c iptraf-3.0.0.ebuild 1188
 MD5 a94566c6927ccaeca24681c25540624d metadata.xml 236
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZwDFgIKl8Uu19MoRAndQAJ9WfkgeHdIvmouTQt7qpswmZIOLRQCaAzYl
-m8yM+XfJ9fO/m+Old40/Ib4=
-=Vhjt
------END PGP SIGNATURE-----
+RMD160 42b34c8fdced6d21f13690c9e15d94f84d23e377 metadata.xml 236
+SHA256 5b6e4809a5c8961695ce4f6c1a9f83e81782c69b244a610c3999bfd3bb9e699f metadata.xml 236

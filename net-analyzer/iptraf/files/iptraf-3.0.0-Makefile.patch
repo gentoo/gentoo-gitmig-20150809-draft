@@ -1,0 +1,18 @@
+--- ./iptraf-3.0.0.orig/src/Makefile	2006-01-10 07:51:13.000000000 +0100
++++ ./iptraf-3.0.0/src/Makefile	2006-01-10 07:53:33.000000000 +0100
+@@ -29,10 +29,11 @@
+ # options to be passed to the compiler.  I don't believe they need to be
+ # modified (except for -m486 on non-Intel x86 platforms).
+ 
+-CFLAGS		= -Wall #-O2 #-m486
+-DIRS		= -DWORKDIR=\"$(WORKDIR)\" \
+-		  -DLOGDIR=\"$(LOGDIR)\" -DEXECDIR=\"$(TARGET)\"
+-LDOPTS		= #-static
++#CFLAGS		= -Wall #-O2 #-m486
++DIRS		= -DWORKDIR=\"/var/lib/iptraf\" \
++		  -DLOGDIR=\"$(LOGDIR)\" -DEXECDIR=\"/usr/sbin\"
++#LDOPTS		= #-static
++LDOPTS		= $(LDFLAGS)
+ 
+ # you may want to change this to point to your ncurses include directory
+ # if the ncurses include files are not in the default location.
