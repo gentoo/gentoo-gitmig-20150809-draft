@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.4.03.ebuild,v 1.1 2006/01/22 15:46:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.4.03.ebuild,v 1.2 2006/01/29 22:37:37 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,25 +22,19 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	|| ( x11-proto/xproto virtual/x11 )"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	cd ${S}
-	cp Makefile Makefile.orig
-	replace-flags "-funroll-all-loops" "-funroll-loops"
-	sed -e "s:CFLAGS = :CFLAGS = $CFLAGS :" Makefile.orig >Makefile
+	epatch "${FILESDIR}"/${P}-makefile.patch
+}
 
-	emake -j1
+src_compile() {
+	replace-flags "-funroll-all-loops" "-funroll-loops"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/xfractint
-	dodir /usr/man/man1
-
-	make \
-		BINDIR=${D}usr/bin \
-		MANDIR=${D}usr/man/man1 \
-		SRCDIR=${D}usr/share/xfractint \
-		install || die
+	make DESTDIR="${D}"	install || die
 
 	chmod 0644 -R ${D}usr/share/xfractint/*
 

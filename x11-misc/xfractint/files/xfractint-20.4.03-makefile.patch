@@ -1,0 +1,85 @@
+diff -Naurp xfractint-20.04p03-orig/Makefile xfractint-20.04p03/Makefile
+--- xfractint-20.04p03-orig/Makefile	2006-01-29 23:08:39.000000000 +0100
++++ xfractint-20.04p03/Makefile	2006-01-29 23:28:09.000000000 +0100
+@@ -2,11 +2,11 @@ SHELL=/bin/sh
+ 
+ # SRCDIR should be a path to the directory that will hold fractint.hlp
+ # SRCDIR should also hold the .par, .frm, etc. files
+-SRCDIR = /usr/share/xfractint
++SRCDIR = $(DESTDIR)/usr/share/xfractint
+ # BINDIR is where you put your X11 binaries
+-BINDIR = /usr/X11R6/bin
++BINDIR = $(DESTDIR)/usr/X11R6/bin
+ # MANDIR is where you put your chapter 1 man pages
+-MANDIR = /usr/X11R6/man/man1
++MANDIR = $(DESTDIR)/usr/X11R6/man/man1
+ 
+ HFD = ./headers
+ UDIR = ./unix
+@@ -85,14 +85,14 @@ AFLAGS = -f elf -w+orphan-labels
+ ifeq ($(AS),/usr/bin/nasm)
+ 
+ #CFLAGS = -I. -D_CONST $(DEFINES)
+-CFLAGS = -I$(HFD) $(DEFINES) -g -DBIG_ANSI_C -DLINUX -Os \
+-         -mcpu=pentium -DNASM -fno-builtin
++CFLAGS += -I$(HFD) $(DEFINES) -g -DBIG_ANSI_C -DLINUX -DNASM -fno-builtin
++HCFLAGS += -I$(HFD) $(DEFINES) -g -DBIG_ANSI_C -DLINUX -DNASM -fno-builtin
+ #CFLAGS = -I. $(DEFINES) -g -DBIG_ANSI_C -DLINUX -Os -DNASM -fno-builtin
+ 
+ else
+ 
+-CFLAGS = -I$(HFD) $(DEFINES) -g -DBIG_ANSI_C -DLINUX -Os \
+-         -mcpu=pentium -fno-builtin
++CFLAGS += -I$(HFD) $(DEFINES) -g -DBIG_ANSI_C -DLINUX -fno-builtin
++HCFLAGS += -I$(HFD) $(DEFINES) -g -DBIG_ANSI_C -DLINUX -DNASM -fno-builtin
+ #CFLAGS = -I. $(DEFINES) -g -DBIG_ANSI_C -DLINUX -Os -fno-builtin
+ 
+ endif
+@@ -257,18 +257,20 @@ clean:
+ install: xfractint fractint.hlp
+ 	strip xfractint
+ # only next 4 lines might need su
++	if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR) ; fi
+ 	cp xfractint $(BINDIR)/xfractint;
+ 	chmod a+x $(BINDIR)/xfractint;
++	if [ ! -d $(MANDIR) ]; then mkdir -p $(MANDIR) ; fi
+ 	cp $(UDIR)/xfractint.man $(MANDIR)/xfractint.1;
+ 	chmod a+r $(MANDIR)/xfractint.1
+ # create directories if they don't exist
+-	if [ ! -d $(SRCDIR) ] ; then mkdir $(SRCDIR) ; fi
+-	if [ ! -d $(SRCDIR)/$(PDIR) ] ; then mkdir $(SRCDIR)/$(PDIR) ; fi
+-	if [ ! -d $(SRCDIR)/$(FDIR) ] ; then mkdir $(SRCDIR)/$(FDIR) ; fi
+-	if [ ! -d $(SRCDIR)/$(IDIR) ] ; then mkdir $(SRCDIR)/$(IDIR) ; fi
+-	if [ ! -d $(SRCDIR)/$(LDIR) ] ; then mkdir $(SRCDIR)/$(LDIR) ; fi
+-	if [ ! -d $(SRCDIR)/$(MDIR) ] ; then mkdir $(SRCDIR)/$(MDIR) ; fi
+-	if [ ! -d $(SRCDIR)/$(XDIR) ] ; then mkdir $(SRCDIR)/$(XDIR) ; fi
++	if [ ! -d $(SRCDIR) ] ; then mkdir -p $(SRCDIR) ; fi
++	if [ ! -d $(SRCDIR)/$(PDIR) ] ; then mkdir -p $(SRCDIR)/$(PDIR) ; fi
++	if [ ! -d $(SRCDIR)/$(FDIR) ] ; then mkdir -p $(SRCDIR)/$(FDIR) ; fi
++	if [ ! -d $(SRCDIR)/$(IDIR) ] ; then mkdir -p $(SRCDIR)/$(IDIR) ; fi
++	if [ ! -d $(SRCDIR)/$(LDIR) ] ; then mkdir -p $(SRCDIR)/$(LDIR) ; fi
++	if [ ! -d $(SRCDIR)/$(MDIR) ] ; then mkdir -p $(SRCDIR)/$(MDIR) ; fi
++	if [ ! -d $(SRCDIR)/$(XDIR) ] ; then mkdir -p $(SRCDIR)/$(XDIR) ; fi
+ # copy all the files to the appropriate directories
+ 	cp fractint.hlp sstools.ini $(DOCS) $(SRCDIR)
+ 	cd ./$(PDIR); cp $(PARFILES) $(SRCDIR)/$(PDIR)
+@@ -312,10 +314,10 @@ doc: hc $(HELP)
+ 	./hc /p
+ 
+ hc:	$(HOBJS)
+-	$(CC) -o hc $(CFLAGS) $(HOBJS)
++	$(CC) -o hc $(HCFLAGS) $(HOBJS)
+ 
+ unix.o: $(UDIR)/unix.c
+-	$(CC) $(CFLAGS) -DSRCDIR=\"$(SRCDIR)\" -c $(UDIR)/unix.c
++	$(CC) $(HCFLAGS) -DSRCDIR=\"$(SRCDIR)\" -c $(UDIR)/unix.c
+ 
+ copy: $(FILES)
+ 	mv $(FILES) backup
+@@ -324,3 +326,6 @@ copy: $(FILES)
+ 
+ hc.o: $(COMDIR)/hc.c $(HFD)/helpcom.h $(HFD)/port.h
+ 
++$(COMDIR)/hc.o: $(COMDIR)/hc.c
++	$(CC) $(HCFLAGS) $(COMDIR)/hc.c -c -o $(COMDIR)/hc.o
++
