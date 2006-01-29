@@ -12,3 +12,4 @@ move sci-mathematics/qtiplot sci-visualization/qtiplot
 move media-gfx/epix sci-visualization/epix
 move media-gfx/fig2sxd sci-visualization/fig2sxd
 move media-gfx/gnuplot sci-visualization/gnuplot
+move media-gfx/grace sci-visualization/grace
