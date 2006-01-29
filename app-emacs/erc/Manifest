@@ -1,21 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 421a0698a2967ca62e4e3ef0107809ab ChangeLog 2603
+MD5 9e49f25d484b6fd1e9cb56ed1cde6d13 ChangeLog 2752
 MD5 d588aaf74c2e7892c36ff6e48682defe erc-5.0.2.ebuild 686
 MD5 618a7e12d0c2916ebc0d5a6ddc87d6e1 erc-5.0.3.ebuild 695
 MD5 78be39acf55cbd6d03d8da1183264a1c erc-5.0.4.ebuild 695
+MD5 3d6866025140c3d7b8c8745bd62dd2e2 erc-5.1.ebuild 731
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.2/50erc-gentoo.el 87
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.3/50erc-gentoo.el 87
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.4/50erc-gentoo.el 87
+MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.1/50erc-gentoo.el 87
 MD5 bbf2a316136100c46b67f11dd4c04629 files/digest-erc-5.0.2 61
 MD5 e3caca5f67d85c344b59d357cee50244 files/digest-erc-5.0.3 61
 MD5 678770ae39d1acf4f6246265102b26d2 files/digest-erc-5.0.4 61
+MD5 ffdaae52510edbbea2b39dbf3346484a files/digest-erc-5.1 59
 MD5 412b2136b80db7ac2a1fc58fccb01f63 metadata.xml 239
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVnz0yiNZaEAZA+ARAlE1AJ48huPf7IpC/VorAvpxg62IMXIaYACfQQzK
-crWC2G6kuiFPs5hbR5QJK6E=
-=KCu6
+iD8DBQFD3SwSyiNZaEAZA+ARAn2cAJ9dk0QvwXBVx70dyo0oDyRRGIRdXQCcDLI3
+pn7jutalR/pMgwWwLXu703s=
+=Mhji
 -----END PGP SIGNATURE-----
