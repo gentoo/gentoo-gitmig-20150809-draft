@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.3.2.ebuild,v 1.1 2006/01/29 20:09:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.3.2.ebuild,v 1.2 2006/01/29 22:36:46 cryos Exp $
 
 S="${WORKDIR}/dxsamples-${PV}"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="=media-gfx/opendx-${PV}*"
+DEPEND="=sci-visualization/opendx-${PV}*"
 
 # this einstall do not define datadir, because
 # it will cause problems since datadir is redefined
