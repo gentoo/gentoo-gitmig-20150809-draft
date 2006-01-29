@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2.ebuild,v 1.1 2005/12/28 20:38:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2.ebuild,v 1.2 2006/01/29 08:24:46 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -53,8 +53,6 @@ src_unpack() {
 
 	cd "${S}"
 	# make sure we don't try to regen the manpages
-	cp "${FILESDIR}"/3.1-modprobe.d.5.bz2 modprobe.d.5.bz2 || die
-	bunzip2 modprobe.d.5.bz2 || die
 	touch *.5
 
 	rm -f missing
@@ -139,7 +137,8 @@ src_install() {
 #	fi
 
 	cd "${S}"
-	einstall prefix=${D}
+	einstall prefix="${D}" || die
+	dosym modprobe.conf.5 /usr/share/man/man5/modprobe.d.5
 
 	# Install compat symlink
 	dosym ../bin/lsmod /sbin/lsmod
