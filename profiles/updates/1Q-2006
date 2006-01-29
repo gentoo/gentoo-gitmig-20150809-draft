@@ -20,3 +20,4 @@ move media-gfx/opendx-samples sci-visualization/opendx-samples
 move media-gfx/qmatplot sci-visualization/qmatplot
 move media-gfx/quickplot sci-visualization/quickplot
 move media-gfx/scigraphica sci-visualization/scigraphica
+move media-gfx/spectromatic sci-visualization/spectromatic
