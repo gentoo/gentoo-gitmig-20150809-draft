@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20cde90ecdafe4dba27661758e0b357a ChangeLog 885
+MD5 e0f93cb1fd34d37f9cc4404f4929eec6 ChangeLog 1030
+RMD160 add3b69c91a28da1cec4036b1e47adc7cd7861ec ChangeLog 1030
+SHA256 1715b801bd4f0155ad21f025e8cd5c59cb3d90e35e1b42635dc036e1aaa0974f ChangeLog 1030
 MD5 b7f2006ec18910b7afeb0149537a650a files/digest-gccmakedep-1.0.1 68
-MD5 128971203ec63de8645de2a428586505 gccmakedep-1.0.1.ebuild 454
+RMD160 4a02f10a272b28bdda2049a56cc617a8635dea57 files/digest-gccmakedep-1.0.1 68
+SHA256 4b48c4a025dc7b49bfbd7ef51777c3e896d28b474c64e1ea40def5214f6cf39b files/digest-gccmakedep-1.0.1 68
+MD5 ea34635463da735d228129081d205171 gccmakedep-1.0.1.ebuild 461
+RMD160 262f59fe7eafe37d9ba4ff8a37bbffc5afa2272a gccmakedep-1.0.1.ebuild 461
+SHA256 ed5f9b864d86ffe41508fdc637d1a1a45e372e6a4d735bb476433598a507e521 gccmakedep-1.0.1.ebuild 461
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuaG32+ySkm8kpY0RAnySAJ9H8r/T+0r47MhN+bljfYEfEzLBJwCaAw/o
-gWmaYcX9HkTo0t3M11DPNNo=
-=gUpy
------END PGP SIGNATURE-----
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
