@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r1.ebuild,v 1.2 2004/09/03 17:27:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r1.ebuild,v 1.3 2006/01/29 15:50:02 blubb Exp $
 
 inherit ccc eutils flag-o-matic
 
 DESCRIPTION="A tiny vt100 terminal emulator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/xvt-1.0.README"
-SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z"
+SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z
+		mirror://gentoo/xvt-2.1.diff.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
@@ -19,7 +20,8 @@ src_unpack() {
 	unpack ${A}
 
 	# this brings the distribution upto version 2.1
-	cd ${S}; epatch ${FILESDIR}/xvt-2.1.diff.gz
+	cd ${S}
+	epatch ${WORKDIR}/xvt-2.1.diff
 
 	# fix #61393
 	epatch ${FILESDIR}/xvt-ttyinit-svr4pty.diff

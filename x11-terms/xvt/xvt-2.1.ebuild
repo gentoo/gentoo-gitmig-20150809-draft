@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.7 2004/06/28 22:15:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.8 2006/01/29 15:50:02 blubb Exp $
 
 inherit ccc eutils flag-o-matic
 
 DESCRIPTION="A tiny vt100 terminal emulator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/xvt-1.0.README"
-SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z"
+SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z
+		mirror://gentoo/xvt-2.1.diff.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 alpha"
@@ -19,7 +20,8 @@ src_unpack() {
 	unpack ${A}
 
 	# this brings the distribution upto version 2.1
-	cd ${S}; epatch ${FILESDIR}/xvt-2.1.diff.gz
+	cd ${S}
+	epatch ${WORKDIR}/xvt-2.1.diff
 
 	# set the makefile options
 	sed -i 's/#\(ARCH=LINUX\)/\1/g' Makefile
