@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-4.2.ebuild,v 1.6 2006/01/25 22:54:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-4.2.ebuild,v 1.7 2006/01/29 05:41:17 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="install-crossover-standard-${PV}.sh"
 
 LICENSE="CROSSOVER"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="nas"
 RESTRICT="fetch nostrip"
 
