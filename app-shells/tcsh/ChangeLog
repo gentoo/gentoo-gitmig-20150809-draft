@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.52 2006/01/02 17:35:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.53 2006/01/29 11:19:23 grobian Exp $
+
+*tcsh-6.14-r3 (29 Jan 2006)
+
+  29 Jan 2006; Fabian Groffen <grobian@gentoo.org>
+  +files/tcsh-6.14.00-debian-dircolors.patch, +tcsh-6.14-r3.ebuild:
+  Making fixes for bug #119703: providing a csh -> tcsh symlink, and bug #120792
+  to stop tcsh complaining on newest coreutils' LS_COLORS var.
 
   02 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> tcsh-6.14-r2.ebuild:
   Stable on ppc.
