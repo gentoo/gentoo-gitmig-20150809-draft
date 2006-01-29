@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.8 2005/01/01 11:32:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.9 2006/01/29 15:39:26 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,8 @@ TW_VER="2.3.1-2"
 DESCRIPTION="Open Source File Integrity Checker and IDS"
 HOMEPAGE="http://www.tripwire.org/"
 SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
-	http://non-us.debian.org/debian-non-US/pool/non-US/main/t/tripwire/tripwire_2.3.1.2-6.1.diff.gz"
+	http://non-us.debian.org/debian-non-US/pool/non-US/main/t/tripwire/tripwire_2.3.1.2-6.1.diff.gz
+	mirror://gentoo/twpol.txt.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,16 +29,18 @@ S=${WORKDIR}/tripwire-${TW_VER}
 
 src_unpack() {
 	# unpack tripwire source tarball
-	unpack tripwire-${TW_VER}.tar.gz; cd ${S}
-
+	unpack tripwire-${TW_VER}.tar.gz
+	unpack twpol.txt.gz
+	cd ${S}
+	
 	# some patches ive collected/made for tripwire
 	# mostly from mandrake, some from other sources
-	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1-2-fhs.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1-2-gcc-3.3.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1-gcc3.patch.bz2
-	epatch ${FILESDIR}/tripwire-jbj.patch.bz2
-	epatch ${FILESDIR}/tripwire-mkstemp.patch.bz2
+	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch
+	epatch ${FILESDIR}/tripwire-2.3.1-2-fhs.patch
+	epatch ${FILESDIR}/tripwire-2.3.1-2-gcc-3.3.patch
+	epatch ${FILESDIR}/tripwire-2.3.1-gcc3.patch
+	epatch ${FILESDIR}/tripwire-jbj.patch
+	epatch ${FILESDIR}/tripwire-mkstemp.patch
 
 	# pull out the interesting debian patches
 	filterdiff  -i '*/man/man8/twadmin.8' -z  --strip=1	\
@@ -82,9 +85,8 @@ src_install() {
 	dodoc README Release_Notes ChangeLog policy/policyguide.txt TRADEMARK \
 		${FILESDIR}/tripwire.gif ${FILESDIR}/tripwire.txt
 
-	zcat ${FILESDIR}/twpol.txt > ${T}/twpol.txt || ewarn "twcfg.txt zcat error"
 	insinto /etc/tripwire
-	doins ${T}/twpol.txt ${FILESDIR}/twcfg.txt
+	doins ${WORKDIR}/twpol.txt ${FILESDIR}/twcfg.txt
 
 	exeinto /etc/tripwire
 	doexe ${FILESDIR}/twinstall.sh

@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r3.ebuild,v 1.12 2005/07/09 16:53:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r3.ebuild,v 1.13 2006/01/29 15:38:14 blubb Exp $
 
 inherit flag-o-matic ccc eutils
 
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.sparc.spb.su/solaris/skey/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+		mirror://gentoo/${P}-gentoo.diff.gz"
 
 LICENSE="BSD X11"
 SLOT="0"
@@ -26,7 +27,7 @@ src_unpack() {
 	# NetBSD project, some other updates and fixes, and the addition
 	# of some new features like shadow password and cracklib support.
 	# 	(05 Nov 2003) -taviso@gentoo.org
-	epatch ${FILESDIR}/skey-1.1.5-gentoo.diff.gz
+	epatch ${FILESDIR}/skey-1.1.5-gentoo.diff
 
 	# glibc 2.2.x does not define LOGIN_NAME_MAX #33315
 	# 	(12 Nov 2003) -taviso@gentoo.org

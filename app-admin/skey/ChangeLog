@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/skey
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.34 2005/10/06 06:21:15 hardave Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.35 2006/01/29 15:38:14 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  -files/skey-1.1.5-gentoo.diff.gz, skey-1.1.5-r3.ebuild,
+  skey-1.1.5-r4.ebuild, skey-1.1.5-r5.ebuild:
+  move compressed patches to the mirrors
 
   06 Oct 2005; Hardave Riar <hardave@gentoo.org> skey-1.1.5-r4.ebuild:
   Stable on mips.
