@@ -1,4 +1,4 @@
-MD5 56bff86890b27a617ffaa9f3c3b07f28 ChangeLog 4677
+MD5 6a5d0aa189d010a7e1305b0e5f6bbb31 ChangeLog 4675
 MD5 8f60d24f315a2d3035f0fd78c06a3f9c files/3.5.8-gcc3.patch 490
 MD5 58e541e2bfa2062aaccea95f9cbaed2b files/digest-gv-3.5.8-r4 126
 MD5 05a9505958dac0203a0c43462f7e9ce2 files/digest-gv-3.6.1 123
@@ -10,7 +10,7 @@ MD5 cdda43ebb8ee0fa1525767cd36b0aa81 files/gv-3.6.1-a0.patch 2429
 MD5 4dda8a392fb59b4a5e3c0f25ad773b34 files/gv-3.6.1-landscape.patch 464
 MD5 365f92dfb8a1d598913847341e8fec7f files/gv-3.6.1-scrollbar.patch 395
 MD5 8d217b566c2eeae39312f35d950610bb files/gv-3.6.1-setenv.patch 378
-MD5 046647420f357dc2a7798ab9c6316d69 gv-3.5.8-r4.ebuild 1729
+MD5 002ba248bf14653b1487aa1c49b4da80 gv-3.5.8-r4.ebuild 1727
 MD5 651cc5e733968fbada1acd5c6daf9fe5 gv-3.6.1-r1.ebuild 1272
 MD5 a23958c6c1ce1c30e492bb849ff7ecd7 gv-3.6.1.ebuild 1228
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
