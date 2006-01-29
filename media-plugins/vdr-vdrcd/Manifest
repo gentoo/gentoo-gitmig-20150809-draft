@@ -1,0 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82da904a4d4acc2919f5eea4a93e5ba6 ChangeLog 555
+MD5 cd4973c2eda5a962079fd4a06a0f2b1b files/commands.vdrcd.conf 110
+MD5 9f2c7160eae352daf6f5ff6040af7358 files/confd 883
+MD5 ea6d03a7a2f1cca291463458de9c7a31 files/digest-vdr-vdrcd-0.0.10.1-r1 66
+MD5 065cc64a616b3976439edcc270609889 files/mount-vdrcd.sh 748
+MD5 bf1c6f97e7f1c41c3740d04742f55126 files/rc-addon.sh 521
+MD5 8247c85e3fd8392da185369624cc075d files/vdr-vdrcd-0.0.10.1-mp3ng.diff 1650
+MD5 68f72b0a67abb943bf9183e3be23bbc0 metadata.xml 480
+MD5 36df7906e3561361b9ea500e347b100f vdr-vdrcd-0.0.10.1-r1.ebuild 917
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFD3TVYdn07HTTCgIoRAgY1AJsF8vzm3NxTCMv5rm+MKEvME4XtPACghKaK
+2xzj932RFtw/FflX5IDdoUc=
+=VonO
+-----END PGP SIGNATURE-----
