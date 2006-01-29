@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/pxlinux
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/pxlinux/ChangeLog,v 1.4 2005/09/10 07:33:48 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/pxlinux/ChangeLog,v 1.5 2006/01/29 19:50:58 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> pxlinux-0.0.4-r1.ebuild:
+  Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
 
 *pxlinux-0.0.4-r1 (10 Sep 2005)
 

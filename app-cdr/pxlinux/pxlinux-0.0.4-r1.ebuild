@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/pxlinux/pxlinux-0.0.4-r1.ebuild,v 1.1 2005/09/10 07:33:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/pxlinux/pxlinux-0.0.4-r1.ebuild,v 1.2 2006/01/29 19:50:58 cryos Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnuplot"
 
-RDEPEND="gnuplot? ( dev-lang/python media-gfx/gnuplot )"
+RDEPEND="gnuplot? ( dev-lang/python sci-visualization/gnuplot )"
 
 S=${WORKDIR}/${PN}
 
