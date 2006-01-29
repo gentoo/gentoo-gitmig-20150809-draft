@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.07.ebuild,v 1.10 2005/10/02 18:39:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.07.ebuild,v 1.11 2006/01/29 05:21:36 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/${P}-suse-update.patch.bz2
 	epatch "${FILESDIR}"/${PV}-no-TIOCGDEV.patch
+	epatch "${FILESDIR}"/${PN}-1.08-quiet.patch
 }
 
 src_compile() {

@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.1 2005/11/29 02:22:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.2 2006/01/29 05:21:36 vapier Exp $
 
 # This tarball is extracted from SuSe's sysvinit-2.86-#.src.rpm
 # You can find said src rpm via opensuse.org:
-# http://mirrors.kernel.org/opensuse/distribution/SL-OSS-edge/inst-source/suse/src/
+# http://mirrors.kernel.org/opensuse/distribution/SL-OSS-*/inst-source/suse/src/
 
 inherit eutils toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
 	epatch "${FILESDIR}"/1.07-no-TIOCGDEV.patch
+	epatch "${FILESDIR}"/${P}-quiet.patch
 }
 
 src_compile() {
