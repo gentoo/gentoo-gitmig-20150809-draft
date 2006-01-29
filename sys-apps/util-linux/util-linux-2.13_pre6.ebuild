@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.1 2006/01/25 05:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.2 2006/01/29 12:47:54 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="crypt nls static pam selinux perl"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2
+RDEPEND="!sys-process/schedutils
+	>=sys-libs/ncurses-5.2-r2
 	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )

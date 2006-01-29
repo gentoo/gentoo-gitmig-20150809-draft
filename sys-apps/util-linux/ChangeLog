@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.143 2006/01/25 05:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.144 2006/01/29 12:47:54 vapier Exp $
+
+  29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  util-linux-2.13_pre6.ebuild:
+  Block schedutils package since its been integrated.
 
 *util-linux-2.13_pre6 (25 Jan 2006)
 
