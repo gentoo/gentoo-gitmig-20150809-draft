@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71.ebuild,v 1.2 2005/10/22 23:39:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71.ebuild,v 1.3 2006/01/29 19:40:02 cryos Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="emacs static readline zlib tetex hdf5 mpi ifc blas"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r3
-	>=media-gfx/gnuplot-3.7.1-r3
+	>=sci-visualization/gnuplot-3.7.1-r3
 	>=sci-libs/fftw-2.1.3
 	>=dev-util/gperf-2.7.2
 	zlib? ( sys-libs/zlib )
