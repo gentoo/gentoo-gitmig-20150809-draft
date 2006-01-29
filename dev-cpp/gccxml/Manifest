@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 18f06ac378eb2b2d137992fc07b2492d ChangeLog 1222
+MD5 f0fb335b3f26c2d9095cac51da0c8499 ChangeLog 1308
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0-r1 65
 MD5 792c797769c6059ef2f9ebd6ce4b2e65 files/obstack.h.diff 3852
@@ -11,7 +11,7 @@ MD5 d698342d42579c976d124866016978c1 metadata.xml 228
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYxTdCRZPokWLroQRAhewAJ9DxbbNH1djh/QR/VDN4pPpG1Kt4wCeJf3c
-Ock0A3C3nE9v1kr/k+A9jrw=
-=GqvC
+iD8DBQFD3QoW/aM9DdBw91cRAqcgAJsFfulN5vinCt5QEDOpWtvR9ioxZgCgoTqs
+i72sE3W5WJvO/UvnX54hH50=
+=VzgU
 -----END PGP SIGNATURE-----
