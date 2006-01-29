@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f83398092701980fcb4e7ea3c0949040 ChangeLog 3320
 MD5 d03719fb30d985805838d5403de59b0d PEAR-PHPUnit-1.3.0-r1.ebuild 402
 MD5 48ab95bd46c9f0e68b11ae8c9e929bf2 PEAR-PHPUnit-1.3.0.ebuild 422
@@ -6,3 +9,10 @@ MD5 5eb098b2c0cd6d547511befaaa27bbf2 files/digest-PEAR-PHPUnit-1.3.0 61
 MD5 5eb098b2c0cd6d547511befaaa27bbf2 files/digest-PEAR-PHPUnit-1.3.0-r1 61
 MD5 a217211b5c48663dd2dd5af58feb5ca2 files/digest-PEAR-PHPUnit-1.3.2 61
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3GS82+ySkm8kpY0RAqGhAJ9b9PrKclimroUQdhGA5y1e5s12pACePJ/Y
+1q5R6wHoQDSkJ7pACayibn0=
+=FE4A
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b70b9d4cd8ed56712a38fdff91a62367 ChangeLog 2443
 MD5 a4c7bbb9dd8c2086911d6e713b72833c PEAR-OLE-0.5-r1.ebuild 382
 MD5 6483bb49c77762a27b3768ca3d259e01 PEAR-OLE-0.5.ebuild 390
 MD5 23deb4be1f2f6df8c8d3f1efac9b38a2 files/digest-PEAR-OLE-0.5 54
 MD5 23deb4be1f2f6df8c8d3f1efac9b38a2 files/digest-PEAR-OLE-0.5-r1 54
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3GS32+ySkm8kpY0RAhiYAKCIx5hABTZIpoo4pxbi7WjmaEPA7ACfRjyL
+jLeySGsuhXtssnGCs4A4Vng=
+=RugZ
+-----END PGP SIGNATURE-----
