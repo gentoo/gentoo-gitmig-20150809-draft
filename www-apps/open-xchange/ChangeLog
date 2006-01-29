@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/open-xchange
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.11 2005/11/30 22:46:20 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.12 2006/01/29 19:15:20 eradicator Exp $
+
+  29 Jan 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  open-xchange-0.8.0.6.ebuild, open-xchange-0.8.1.5.ebuild:
+  Changed dev-perl/XML-SAX-Base to dev-perl/XML-SAX.
 
 *open-xchange-0.8.1.5 (30 Nov 2005)
 

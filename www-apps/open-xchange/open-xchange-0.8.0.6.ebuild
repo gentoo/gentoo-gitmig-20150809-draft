@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.5 2005/11/30 22:51:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.0.6.ebuild,v 1.6 2006/01/29 19:15:20 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -33,7 +33,7 @@ RDEPEND=">=virtual/jre-1.4
 	 app-text/ispell
 	 dev-java/sun-javamail-bin
 	 dev-perl/XML-NamespaceSupport
-	 dev-perl/XML-SAX-Base
+	 dev-perl/XML-SAX
 	 dev-perl/Authen-SASL
 	 dev-perl/Convert-ASN1
 	 dev-perl/perl-ldap

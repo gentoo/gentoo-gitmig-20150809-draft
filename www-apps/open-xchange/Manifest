@@ -1,23 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07160f6b6760098cb517bfaa2434ea1c ChangeLog 2412
+MD5 119e7848962e04b68792ff16fcfa2fdb ChangeLog 2583
+RMD160 9aed4a26f5b4771e765092fc3098ca498cbf8a64 ChangeLog 2583
+SHA256 4a145ee4d972ee0af323b8b05865623ea71d4262ed7ac3c3757c2f9bb6f683ec ChangeLog 2583
 MD5 cfa72c4f5e62b779052acf1cd629234b files/88_mod_jk.ox.conf 1228
+RMD160 ac45be1d0824ab54728d5a304b59d5824297c974 files/88_mod_jk.ox.conf 1228
+SHA256 f62c842769c9675968e9d1f3d6469315cf18b1802049e57d1dbfb39f66725a9a files/88_mod_jk.ox.conf 1228
 MD5 9bc76a01ee94faa11aaf1e5b47f59236 files/digest-open-xchange-0.8.0.6 138
+RMD160 8a4a160794fa94911b3bb68999019967c2dc2c1a files/digest-open-xchange-0.8.0.6 138
+SHA256 f1a39fd91effcb6a88053e251344bb605b24d177c09ee2c9e3bb289fb40bfc42 files/digest-open-xchange-0.8.0.6 138
 MD5 33e4a0d6040f26db82ba3de6f9e4f7d4 files/digest-open-xchange-0.8.1.5 138
+RMD160 307a9ffb0291bc3108520c90037d79af31a4dea6 files/digest-open-xchange-0.8.1.5 138
+SHA256 c10f4aa00d251f28ad13d1eb96ca2cc026c7c2ba349c26d71e5bb6e8f569e522 files/digest-open-xchange-0.8.1.5 138
 MD5 5388f979621c5e4d333aef5cd37f0062 files/init.d.open-xchange 1877
+RMD160 47fb7e7bc7e3325bae0fbfd33121de9cf58bd78e files/init.d.open-xchange 1877
+SHA256 2645eece4eed70079736c892efdea50bf448907cd116415d9c593a50245e97e5 files/init.d.open-xchange 1877
 MD5 b9bb53f0dd8125a862c1cbc45ab7c06f files/open-xchange-0.8.1.2-login.patch 638
+RMD160 0bf05c78eb72e6c591c878c1884bbb7abec7933f files/open-xchange-0.8.1.2-login.patch 638
+SHA256 b2fbc697b30815f6f8cb435a1707e1d5db5fe7d71b958ef065328adb4c5655cf files/open-xchange-0.8.1.2-login.patch 638
 MD5 f7cf85b70e2c9930e965a10daf42d695 files/open-xchange-0.8.1.5-oxFolder.patch 676
+RMD160 e90b70fad2e3d874a6a4de425821a3f3c52d63d6 files/open-xchange-0.8.1.5-oxFolder.patch 676
+SHA256 b58324ffcec78ec09db0c67dc641c06c13322f560fd961807e36144e8d5c241e files/open-xchange-0.8.1.5-oxFolder.patch 676
 MD5 7d1504e4241974d3583575b3827b0f5a files/open-xchange-htaccess 174
+RMD160 9fe2a5be9db7253351fa856994c237d867f7f2df files/open-xchange-htaccess 174
+SHA256 4596825adb0067148596ef7948b2f452457d0b43aff64b4ec3a3628e9fcbbaa5 files/open-xchange-htaccess 174
 MD5 4c772a7e944bed0e5f8e17b99cb32939 files/ox_reminder.sql 178
+RMD160 0c80af0d7927debe4db383a6de08a3d662063829 files/ox_reminder.sql 178
+SHA256 41b640b0b1fdbb20ee8f108ca0e1bad69c494c8e6a0d351fe4904824e759a0fd files/ox_reminder.sql 178
 MD5 2ad5cb7b97eca4314016247cde421449 files/slapd.ox.inc 2019
+RMD160 1c5bcb56d603f489da113fbfdd8b39adabcf4ad6 files/slapd.ox.inc 2019
+SHA256 08409d20efa9af517d52ae813de86d935b1eff07672566f0786f13475305aef4 files/slapd.ox.inc 2019
 MD5 a339b15041bb6d450a7535f3df1fcc4c metadata.xml 247
-MD5 a1fd5bcff517ddbeba5a30db101fcfbc open-xchange-0.8.0.6.ebuild 21131
-MD5 7b969cadb7769db842d3dc71a9ce3d7c open-xchange-0.8.1.5.ebuild 21460
+RMD160 d02acfac88a4c8bac4526154d2301306c9b11298 metadata.xml 247
+SHA256 c3bbe82f2dee641f1f30aa0b3c8c0b7c2f23f0e3a8f6019c447daf8cc25d7136 metadata.xml 247
+MD5 8dd407204d076c93f793a35310451f72 open-xchange-0.8.0.6.ebuild 21126
+RMD160 a0320d7bb6e5849c40521281468af7109c7c28c6 open-xchange-0.8.0.6.ebuild 21126
+SHA256 779deed734fb084ba181491be6b99b178894016aeb59362ef84856b2471f30ca open-xchange-0.8.0.6.ebuild 21126
+MD5 38e1f0bf0d800057236a0d70bc48dfde open-xchange-0.8.1.5.ebuild 21455
+RMD160 2929491b341d0f16e9625917b2ee5422a62fdee8 open-xchange-0.8.1.5.ebuild 21455
+SHA256 4e6b1d1bbea9f179336d4de8f0bec1428ddf9fe839eb359c1d3852159a3afb74 open-xchange-0.8.1.5.ebuild 21455
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDjizvOpjtAl+gMRURAu3tAKDOPdAqH+ai0lUhbXcjvSS6vXAUxwCg3tre
-QjkRNUrmBZH48uI2ApCgcvg=
-=z3dP
+iD8DBQFD3RUrOpjtAl+gMRURAhYtAKCjDt/MMuhh/azAHRcsrUF5PX6V3gCgmlAy
+d3G2DcE8SZ1INn8mRA52zd8=
+=gh83
 -----END PGP SIGNATURE-----
