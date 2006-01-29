@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.6.0.ebuild,v 1.6 2005/10/24 14:27:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.6.0.ebuild,v 1.7 2006/01/29 19:44:03 cryos Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 
 DEPEND="virtual/emacs
-	media-gfx/gnuplot"
+	sci-visualization/gnuplot"
 
 S="${WORKDIR}/${MY_P}"
 
