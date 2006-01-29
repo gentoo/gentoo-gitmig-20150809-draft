@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emergence-bin/emergence-bin-0.9.ebuild,v 1.2 2005/01/31 03:50:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emergence-bin/emergence-bin-0.9.ebuild,v 1.3 2006/01/29 00:00:27 joshuabaergen Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-libs/zlib-1.2.1
 	>=media-libs/libpng-1.2.5
 	>=media-libs/libvorbis-1.0
 	>=media-libs/alsa-lib-1.0.2
-	virtual/x11"
+	|| ( x11-libs/libXrandr virtual/x11 )"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/mtp-target-bin-1.2.0.ebuild,v 1.4 2005/08/23 19:21:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/mtp-target-bin-1.2.0.ebuild,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ DEPEND=""
 RDEPEND="dev-libs/STLport
 	sys-libs/zlib
 	dev-libs/libxml2
-	virtual/x11
+	|| ( x11-libs/libXmu virtual/x11 )
 	virtual/opengl
 	=media-libs/freetype-2*
 	media-libs/jpeg

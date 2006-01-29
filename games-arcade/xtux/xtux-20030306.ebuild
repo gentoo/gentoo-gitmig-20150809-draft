@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.10 2005/02/21 20:38:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.11 2006/01/29 00:00:28 joshuabaergen Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libXpm virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 

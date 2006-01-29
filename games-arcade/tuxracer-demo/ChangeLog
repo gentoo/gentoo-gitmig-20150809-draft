@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tuxracer-demo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/ChangeLog,v 1.4 2005/09/26 17:38:43 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/ChangeLog,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  tuxracer-demo-1.1.ebuild:
+  Add modular X dependencies.
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   tuxracer-demo-1.1.ebuild:

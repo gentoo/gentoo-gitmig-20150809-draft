@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/defendguin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/ChangeLog,v 1.5 2005/10/30 02:22:55 weeve Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/ChangeLog,v 1.6 2006/01/29 00:00:27 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  defendguin-0.0.10.ebuild:
+  Remove x11 dependencies as this package does not directly depend on X.
 
   30 Oct 2005; Jason Wever <weeve@gentoo.org> defendguin-0.0.10.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/mtp-target-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.9 2005/09/16 22:07:38 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.10 2006/01/29 00:00:27 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  mtp-target-bin-1.2.0.ebuild:
+  Add modular X dependencies.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

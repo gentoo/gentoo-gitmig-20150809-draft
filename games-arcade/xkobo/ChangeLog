@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xkobo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.4 2004/06/24 22:14:30 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.5 2006/01/29 00:00:28 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> xkobo-1.11.ebuild:
+  Add modular X dependencies.
 
   21 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> xkobo-1.11.ebuild:
   keyword for amd64 (bug #48647)

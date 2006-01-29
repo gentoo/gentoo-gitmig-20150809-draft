@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xscavenger/xscavenger-1.4.4.ebuild,v 1.3 2005/06/15 18:15:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xscavenger/xscavenger-1.4.4.ebuild,v 1.4 2006/01/29 00:00:28 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libXext virtual/x11 )"
 DEPEND="${RDEPEND}
+	|| ( x11-misc/imake virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {

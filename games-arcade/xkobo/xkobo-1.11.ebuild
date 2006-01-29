@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/xkobo-1.11.ebuild,v 1.7 2004/07/01 03:08:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/xkobo-1.11.ebuild,v 1.8 2006/01/29 00:00:28 joshuabaergen Exp $
 
 inherit games
 
@@ -16,8 +16,11 @@ KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
-	virtual/x11"
+	|| ( x11-libs/libXext virtual/x11 )"
 DEPEND="${RDEPEND}
+	|| ( ( x11-misc/gccmakedep
+			x11-misc/imake )
+		virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {

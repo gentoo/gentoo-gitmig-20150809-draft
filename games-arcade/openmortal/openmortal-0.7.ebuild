@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.7.ebuild,v 1.4 2005/05/31 22:41:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.7.ebuild,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
 
 inherit games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	media-libs/libsdl
+DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf

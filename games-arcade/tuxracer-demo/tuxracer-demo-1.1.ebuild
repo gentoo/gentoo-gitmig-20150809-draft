@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/tuxracer-demo-1.1.ebuild,v 1.7 2005/09/26 17:38:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/tuxracer-demo-1.1.ebuild,v 1.8 2006/01/29 00:00:27 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -16,7 +16,9 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	virtual/x11"
+	|| ( ( x11-libs/libXi
+			x11-libs/libXmu )
+		virtual/x11 )"
 
 S=${WORKDIR}
 

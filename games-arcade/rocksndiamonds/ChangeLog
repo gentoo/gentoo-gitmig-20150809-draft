@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/rocksndiamonds
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.18 2006/01/12 18:16:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.19 2006/01/29 00:00:27 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  rocksndiamonds-3.1.0.ebuild, rocksndiamonds-3.1.1.ebuild,
+  rocksndiamonds-3.1.2.ebuild:
+  Add modular X dependencies.
 
 *rocksndiamonds-3.1.2 (12 Jan 2006)
 

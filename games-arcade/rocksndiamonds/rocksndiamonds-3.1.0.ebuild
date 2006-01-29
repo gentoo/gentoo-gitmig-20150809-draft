@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.1.0.ebuild,v 1.4 2005/04/27 21:38:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.1.0.ebuild,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
 
 inherit flag-o-matic games
 
@@ -21,8 +21,8 @@ IUSE="X sdl"
 
 RDEPEND="virtual/libc
 	app-arch/unzip
-	X? ( virtual/x11 )
-	!sdl? ( virtual/x11 )
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )
+	!sdl? ( || ( x11-libs/libX11 virtual/x11 ) )
 	sdl? ( >=media-libs/libsdl-1.2.3
 		>=media-libs/sdl-mixer-1.2.4
 		media-libs/sdl-net

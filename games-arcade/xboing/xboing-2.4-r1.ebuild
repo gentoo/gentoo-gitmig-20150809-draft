@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.8 2005/09/26 17:39:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.9 2006/01/29 00:00:27 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -14,7 +14,12 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libXpm virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( ( app-text/rman
+			x11-misc/gccmakedep
+			x11-misc/imake )
+		virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 

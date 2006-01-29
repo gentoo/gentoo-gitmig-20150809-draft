@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xboing
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.7 2005/09/26 17:39:14 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.8 2006/01/29 00:00:27 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xboing-2.4-r1.ebuild:
+  Add modular X dependencies.
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> xboing-2.4-r1.ebuild:
   Making games last on inherit line.

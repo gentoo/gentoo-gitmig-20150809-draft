@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xtux
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.8 2005/02/21 20:38:43 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.9 2006/01/29 00:00:28 joshuabaergen Exp $
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xtux-20030306.ebuild:
+  Add modular X dependencies.
 
   21 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> xtux-20030306.ebuild:
   fix to be able to start tux_serv from the menu
