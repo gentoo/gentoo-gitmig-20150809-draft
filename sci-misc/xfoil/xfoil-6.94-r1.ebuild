@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/xfoil-6.94-r1.ebuild,v 1.5 2005/06/26 03:21:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/xfoil-6.94-r1.ebuild,v 1.6 2006/01/29 07:20:06 robbat2 Exp $
 
 inherit toolchain-funcs fortran
 
@@ -20,8 +20,8 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc"
 
 DEPEND="virtual/blas
-	sci-libs/blas-config
-	virtual/x11"
+		sci-libs/blas-config
+		|| ( x11-libs/libX11 virtual/x11 )"
 
 S=${WORKDIR}/XFOIL${MY_PV}
 
