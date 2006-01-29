@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.2.ebuild,v 1.3 2006/01/10 19:50:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.2.ebuild,v 1.4 2006/01/29 01:04:23 eldad Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	radius? ( >=net-dialup/radiusclient-0.3.2 )"
 
-# test broken anyway	test? ( >=dev-perl/Cache-Cache-1.03 )"
+RESTRICT="test"
 
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.6.1-r7
@@ -104,13 +104,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild has a number of USE flags which determines what nagios isable to monitor."
+	einfo "This ebuild has a number of USE flags which determines what nagios is able to monitor."
 	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
 	einfo "flags need to be set for nagios to function correctly."
 	echo
 	einfo "contrib plugins are installed into /usr/nagios/libexec/contrib"
 }
 
-src_test() {
-	einfo "test broken"
-}

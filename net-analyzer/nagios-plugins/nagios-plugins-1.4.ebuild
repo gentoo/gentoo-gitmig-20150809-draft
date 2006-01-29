@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.9 2005/10/07 18:33:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.10 2006/01/29 01:04:23 eldad Exp $
 
 inherit eutils
 
@@ -95,7 +95,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild has a number of USE flags which determines what nagios isable to monitor."
+	einfo "This ebuild has a number of USE flags which determines what nagios is able to monitor."
 	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
 	einfo "flags need to be set for nagios to function correctly."
 	echo

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.20 2006/01/29 00:32:52 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.21 2006/01/29 01:04:23 eldad Exp $
 
 inherit eutils
 
@@ -11,6 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc amd64"
 IUSE="ldap mysql postgres ssl samba snmp nagios-dns nagios-ntp nagios-ping nagios-ssh"
+
+RESTRICT="test"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( >=dev-db/mysql-3.23.52-r1 )
