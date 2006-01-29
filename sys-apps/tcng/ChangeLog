@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tcng
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.11 2005/04/19 05:43:56 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.12 2006/01/29 19:45:30 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> tcng-9h.ebuild:
+  Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
 
   18 Apr 2005; Robin H. Johnson <robbat2@gentoo.org> tcng-9m.ebuild:
   Bug #89550 - cleanup linux26-headers DEPEND.
