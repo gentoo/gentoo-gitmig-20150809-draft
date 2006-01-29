@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.2 2005/12/16 10:50:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.3 2006/01/29 15:46:12 blubb Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
-SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
+SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz
+		mirror://gentoo/nodoc-configure.patch.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
@@ -22,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/svncpp_0.6.1_link.patch
-	epatch ${FILESDIR}/nodoc-configure.patch.gz
+	epatch ${WORKDIR}/nodoc-configure.patch
 }
 
 src_compile() {
