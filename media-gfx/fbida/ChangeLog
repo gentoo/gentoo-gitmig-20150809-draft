@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.11 2006/01/24 16:31:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.12 2006/01/29 21:36:56 spock Exp $
+
+*fbida-2.03-r2 (29 Jan 2006)
+
+  29 Jan 2006; Michał Januszewski <spock@gentoo.org> +fbida-2.03-r2.ebuild:
+  Only install fbgs if the 'pdf' flag is enabled (bug #120250). Please note
+  that to be able to use fbgs, fbi has to be compiled with support for TIFF
+  images. Thus, the 'pdf' flag adds a dependency on media-libs/tiff.
 
   24 Jan 2006; Markus Rothe <corsair@gentoo.org> fbida-2.03-r1.ebuild:
   Added ~ppc64; bug #119923
