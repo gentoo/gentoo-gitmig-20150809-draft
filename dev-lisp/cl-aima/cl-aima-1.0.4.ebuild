@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.4.ebuild,v 1.3 2005/05/24 18:48:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.4.ebuild,v 1.4 2006/01/29 16:16:19 blubb Exp $
 
 inherit common-lisp eutils
 
@@ -24,9 +24,7 @@ CLPACKAGE=aima
 src_unpack() {
 	unpack ${A}
 	epatch ${PN}_${PV}-${DEB_PV}.diff
-	gunzip -c ${FILESDIR}/${PV}-defsystem-and-package-lock-gentoo.patch.gz \
-		>${PV}-defsystem-and-package-lock-gentoo.patch \
-		&& epatch ${PV}-defsystem-and-package-lock-gentoo.patch || die
+	epatch ${FILESDIR}/${PV}-defsystem-and-package-lock-gentoo.patch
 }
 
 src_install() {
