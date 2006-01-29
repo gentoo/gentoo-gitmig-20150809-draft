@@ -18,3 +18,4 @@ move media-gfx/labplot sci-visualization/labplot
 move media-gfx/opendx sci-visualization/opendx
 move media-gfx/opendx-samples sci-visualization/opendx-samples
 move media-gfx/qmatplot sci-visualization/qmatplot
+move media-gfx/quickplot sci-visualization/quickplot
