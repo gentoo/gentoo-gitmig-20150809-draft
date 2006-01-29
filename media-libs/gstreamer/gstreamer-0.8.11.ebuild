@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.11.ebuild,v 1.6 2006/01/22 19:30:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.11.ebuild,v 1.7 2006/01/29 22:45:16 allanonjl Exp $
 
 inherit eutils flag-o-matic libtool gnome2 flag-o-matic
 
@@ -52,6 +52,7 @@ src_compile() {
 		--with-configdir=/etc/gstreamer \
 		--disable-tests  \
 		--disable-examples \
+		--disable-valgrind \
 		`use_enable doc docs-build` \
 		|| die "./configure failed"
 
