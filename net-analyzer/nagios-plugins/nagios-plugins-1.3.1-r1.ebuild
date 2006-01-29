@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.19 2005/07/09 18:26:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.20 2006/01/29 00:32:52 eldad Exp $
 
 inherit eutils
 
@@ -34,6 +34,14 @@ pkg_setup() {
 }
 
 src_compile() {
+	# check for mtab, as this will otherwise let configure not detect a usable "df" command.
+	if [[ ! -r /etc/mtab ]];
+	then
+		eerror "Can't find /etc/mtab. Are you running under chroot?"
+		eerror "If so copy the /etc/mtab to the chroot'ed enviornment and try again."
+		die "can't find /etc/mtab."
+	fi
+
 	local myconf
 	use mysql && myconf="${myconf} --with-mysql" || myconf="${myconf} --without-mysql"
 	use postgres && myconf="${myconf} --with-pgsql" || myconf="${myconf} --without-pgsql"
