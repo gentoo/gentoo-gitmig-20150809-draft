@@ -24,3 +24,4 @@ move media-gfx/spectromatic sci-visualization/spectromatic
 move media-gfx/xgraph sci-visualization/xgraph
 move sci-misc/gwyddion sci-visualization/gwyddion
 move sci-mathematics/veusz sci-visualization/veusz
+move media-gfx/xd3d sci-visualization/xd3d
