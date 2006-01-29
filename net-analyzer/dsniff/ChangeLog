@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.26 2006/01/21 21:10:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.27 2006/01/29 21:15:12 vanquirius Exp $
+
+  29 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> dsniff-2.3-r7.ebuild,
+  dsniff-2.4_beta1.ebuild:
+  Depend exactly on net-libs/libnids-1.18 for bug 120798. Thanks to Rumen
+  Yotov <gentoo at mach dot qrypto dot org>. Forced to drop amd64 keyword on
+  account of this.
 
   21 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> dsniff-2.4_beta1.ebuild:
   More fixes for bug 119557. Thanks to a1200ux <a1200ux at gmail dot com> for
