@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.2 2005/11/03 00:57:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.3 2006/01/29 09:20:09 vapier Exp $
 
 inherit eutils
 
@@ -11,11 +11,11 @@ SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="tcpd"
+IUSE="perl tcpd"
 
 DEPEND="tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 RDEPEND="${DEPEND}
-	dev-lang/perl"
+	perl? ( dev-lang/perl )"
 PROVIDE="virtual/inetd"
 
 src_unpack() {
@@ -36,6 +36,7 @@ src_compile() {
 
 src_install() {
 	make install install-contrib DESTDIR="${D}" || die "failed install"
+	use perl || rm -f "${D}"/usr/sbin/xconv.pl
 
 	newinitd "${FILESDIR}"/xinetd.rc6 xinetd || die
 	newconfd "${FILESDIR}"/xinetd.confd xinetd || die
