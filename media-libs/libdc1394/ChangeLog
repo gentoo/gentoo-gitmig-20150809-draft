@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.13 2006/01/29 08:02:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.14 2006/01/29 08:10:21 robbat2 Exp $
+
+  29 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> libdc1394-1.0.0.ebuild:
+  Fix 1.0.0 for modular-x as well.
 
   29 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
   libdc1394-2.0.0_pre5.ebuild:

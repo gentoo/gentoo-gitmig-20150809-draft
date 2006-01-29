@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.0.0.ebuild,v 1.5 2005/10/19 18:08:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.0.0.ebuild,v 1.6 2006/01/29 08:10:21 robbat2 Exp $
 
 inherit eutils
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="X"
 
-DEPEND=">=sys-libs/libraw1394-0.9.0
-	sys-devel/libtool
-	X? ( virtual/x11 )"
+RDEPEND=">=sys-libs/libraw1394-0.9.0
+		X? ( || ( ( x11-libs/libSM x11-libs/libXv )
+				  virtual/x11 ) )"
+DEPEND="${RDEPEND}
+		sys-devel/libtool"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
