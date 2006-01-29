@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.5 2006/01/29 15:43:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.6 2006/01/29 23:31:49 genstef Exp $
+
+  29 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-esp-7.07.1-r7.ebuild:
+  Add forgotten cjk.patch to SRC_URI thanks to Obst <sprossel.de@gmail.com>
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   -files/gs7.05-gdevhl12.c.bz2, -files/gs7.07.1-cjk.diff.bz2,

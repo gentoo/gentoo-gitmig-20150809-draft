@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.2 2006/01/29 15:43:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.3 2006/01/29 23:31:49 genstef Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -21,7 +21,10 @@ DEP="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
-	X? ( virtual/x11 )
+	X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libXt )
+		virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( net-print/cups )
 	!virtual/ghostscript"
@@ -44,7 +47,7 @@ PROVIDE="virtual/ghostscript"
 src_unpack() {
 	unpack espgs-${PV}-source.tar.bz2
 	unpack gs7.07.1-cjk.diff.bz2
-	
+
 	cd ${S}
 
 	if use ppc-macos; then

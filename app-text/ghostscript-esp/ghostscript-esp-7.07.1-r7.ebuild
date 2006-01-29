@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r7.ebuild,v 1.2 2006/01/29 15:43:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r7.ebuild,v 1.3 2006/01/29 23:31:49 genstef Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz
 		mirror://gentoo/gs7.07.1-cjk.diff.bz2 )
 	mirror://gentoo/gs7.07.1-fontconfig-rh.patch.2.bz2
+	mirror://gentoo/gs7.07.1-cjk.diff.bz2
 	mirror://gentoo/gs7.07.1-krgb.patch.gz"
 
 LICENSE="GPL-2 LGPL-2"
@@ -22,7 +23,10 @@ RDEPEND="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
-	X? ( virtual/x11 )
+	X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libXt )
+		virtual/x11 ) )
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
