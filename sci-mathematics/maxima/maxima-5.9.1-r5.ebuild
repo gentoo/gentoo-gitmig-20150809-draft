@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r5.ebuild,v 1.2 2005/10/04 19:52:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r5.ebuild,v 1.3 2006/01/29 19:42:31 cryos Exp $
 
 inherit eutils elisp-common
 
@@ -22,7 +22,7 @@ DEPEND="tetex? ( virtual/tetex )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	sbcl?  ( >=dev-lisp/sbcl-0.8.14 )"
 RDEPEND=">=dev-lang/tk-8.3.3
-	 >=media-gfx/gnuplot-4.0-r1"
+	 >=sci-visualization/gnuplot-4.0-r1"
 
 src_unpack() {
 	unpack ${A}
