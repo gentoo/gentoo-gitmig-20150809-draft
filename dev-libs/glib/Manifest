@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb65ea76ac235f2a0829d984a2dcb45a ChangeLog 20785
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
@@ -13,3 +16,10 @@ MD5 3c669304d71f54e783024332877d71d0 glib-2.6.5.ebuild 1647
 MD5 ccdec0cc9433b698a20b32158000d2f3 glib-2.8.4.ebuild 1693
 MD5 7a62a58deb0e0b402896bb4409bbb88a glib-2.8.5.ebuild 1690
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3F7r2+ySkm8kpY0RAr/IAJ94Snwog1ZQh0O5yX7d5OC7GlMuHgCeKSdo
+AWSXdD1pTksTlYXnQMih9T8=
+=vht/
+-----END PGP SIGNATURE-----
