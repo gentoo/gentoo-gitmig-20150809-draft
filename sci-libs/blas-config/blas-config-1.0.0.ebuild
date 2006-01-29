@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-config/blas-config-1.0.0.ebuild,v 1.1 2004/12/29 18:17:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-config/blas-config-1.0.0.ebuild,v 1.2 2006/01/29 16:25:33 blubb Exp $
 
 DESCRIPTION="Utility to change the default BLAS library"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,8 +16,7 @@ DEPEND=""
 RDEPEND="app-shells/bash"
 
 src_unpack(){
-	cp ${FILESDIR}/blas-config.bz2 ${WORKDIR}
-	bunzip2 ${WORKDIR}/blas-config.bz2
+	cp ${FILESDIR}/blas-config ${WORKDIR}
 }
 
 src_install () {
