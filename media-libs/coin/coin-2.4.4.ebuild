@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.4.ebuild,v 1.1 2006/01/04 17:16:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.4.ebuild,v 1.2 2006/01/29 08:44:22 robbat2 Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="media-libs/freetype
 	fontconfig? ( media-libs/fontconfig )
 	openal?	( media-libs/openal )
 	opengl? ( virtual/opengl virtual/glu )
-	X?	( virtual/x11 )
+	X?	( || ( ( x11-libs/libXt x11-libs/libXext ) virtual/x11 ) )
 	zlib? 	( sys-libs/zlib )"
 	# java?	( virtual/jdk )
 	# javascript? ( dev-lang/spidermonkey )

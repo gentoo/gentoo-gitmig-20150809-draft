@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.19 2005/07/29 20:19:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.20 2006/01/29 08:47:01 robbat2 Exp $
 
 inherit eutils
 
@@ -12,9 +12,9 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE="doc nls"
 
-DEPEND="virtual/x11
-	<x11-libs/gtkglarea-1.99.0
-	media-libs/coin
+RDEPEND="media-libs/coin
+		<x11-libs/gtkglarea-1.99.0"
+DEPEND="${RDEPEND}
 	=sys-apps/sed-4*
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"

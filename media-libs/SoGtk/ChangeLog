@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/SoGtk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/ChangeLog,v 1.10 2005/07/29 20:19:14 vanquirius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/ChangeLog,v 1.11 2006/01/29 08:47:01 robbat2 Exp $
+
+  29 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
+  SoGtk-20010601-r1.ebuild:
+  Fix deps for modular-x.
 
   29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
   +files/SoGtk-20010601-string.patch, +metadata.xml,
