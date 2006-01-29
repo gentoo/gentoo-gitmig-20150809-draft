@@ -1,26 +1,64 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d652059306cc7e021ed7a023fe1dcf1a ChangeLog 3687
+MD5 a6969f294fd7f2ca13bb985b163ca4d5 ChangeLog 3847
+RMD160 37992d318140e7be93c39f0bb6a71d6128fc6b5a ChangeLog 3847
+SHA256 1918998bfd1b78bbe78094002ecd4997ba9c863125a0ce9f11f2331ab0b24f65 ChangeLog 3847
 MD5 ee354651ff3fa41baa3e00119f65563b files/digest-libnjb-1.2 62
+RMD160 9b36f9c36aa85ecad6a5fb19ba5a1ba1e61afed3 files/digest-libnjb-1.2 62
+SHA256 ef402f865ecba9aa62aa3d8ebca357350c756de64ab5b9924c4c7d3d6f8fb103 files/digest-libnjb-1.2 62
 MD5 1ad18266b17b36578ea26405aae99b91 files/digest-libnjb-2.1.2 64
+RMD160 e71b31d0b0efa74f61984197d3a0225a77619a83 files/digest-libnjb-2.1.2 64
+SHA256 1be1a586782207bd06649f2f8509e436a2d4b65650ed3cd55cd31828609a046a files/digest-libnjb-2.1.2 64
 MD5 7c3b243f6eefe2001b8ed9286411d69c files/digest-libnjb-2.2 62
+RMD160 da8d93f84902242b9cfa96800a736909641ddd81 files/digest-libnjb-2.2 62
+SHA256 a7bf6ebce179c948d7a7f759e73c5e14bd4904d509f067a7061d452022b9a83c files/digest-libnjb-2.2 62
 MD5 cac891c4604b957c05c0311b0ed398c6 files/digest-libnjb-2.2.3 64
+RMD160 49ce885532f3aafb1c1fbf6718cbe8627eefb1cc files/digest-libnjb-2.2.3 64
+SHA256 53a55fc80107d1655f2fbddc97c2df9bc3aed5b06200cad72c97401c2261ba3b files/digest-libnjb-2.2.3 64
 MD5 52f1f2e225196985b151cd3557640f43 files/digest-libnjb-2.2.4 64
+RMD160 b1f89d76eaae381efd60eb90b216db6cc762eacd files/digest-libnjb-2.2.4 64
+SHA256 a30f19819a5524c3f631fd138720754f167a21fef1ea46ee195bffe3167acac9 files/digest-libnjb-2.2.4 64
+MD5 ed2ba623592c68f6a6e835a64b60372d files/digest-libnjb-2.2.5 238
+RMD160 09239fa69e3431a26f6321d92d72fda210798fe5 files/digest-libnjb-2.2.5 238
+SHA256 3728d08a6ba0760e46d64bc5ab543c929522fc72e44ab2fc4941f75a0160d717 files/digest-libnjb-2.2.5 238
 MD5 abf7c2c90f2fa0bda8417050514e1e2d files/libnjb-1.2-gentoo-multilib.patch 640
+RMD160 f1ca47aa21bda2b2fa6a8b06f9307a94b174e3c7 files/libnjb-1.2-gentoo-multilib.patch 640
+SHA256 5ef40e3bbd43eed9d08bb30f1a81369064151479abfa0ae7cba5e008c27b4316 files/libnjb-1.2-gentoo-multilib.patch 640
 MD5 786a98942a3fda4f8367f518f413731d files/libnjb-2.0_pre20050208-gentoo-multilib.patch 640
+RMD160 77bf096ea6bbd57273b5007841dc5daec8ef24ef files/libnjb-2.0_pre20050208-gentoo-multilib.patch 640
+SHA256 2cf7f4502577d845d18f2922a72db4525f95fb2034f48ce9df9d114ebd04f115 files/libnjb-2.0_pre20050208-gentoo-multilib.patch 640
 MD5 eccde352d9d2ac120ddcaa4183003577 files/libnjb-errno.patch 278
+RMD160 03dc9b9d90695d31c6e31a6bba359708a1642aab files/libnjb-errno.patch 278
+SHA256 7d9bd3ae978bfbef8faf20048745af2cc960f669ce5be5ba7ac23e50c34f3577 files/libnjb-errno.patch 278
 MD5 b8b03bca7250e43640fce00915a54f69 files/nomadjukebox 1048
+RMD160 5ef6daff155e96d8095be123a41b2e6ddfd92b61 files/nomadjukebox 1048
+SHA256 f35cc59cbd6f22ff75832a6e854dfd3cf80c965a22b8ed2b2283a38be442e5de files/nomadjukebox 1048
 MD5 08a6b13091c718edd325a42cb2e7a997 libnjb-1.2.ebuild 1207
+RMD160 b220f6a98b486081c36c411989acf8bf14bb52ba libnjb-1.2.ebuild 1207
+SHA256 081ac3b41d74187137b6e1ff46ac1e1532d9cfbb2d2adc8a0f4f859219cdf680 libnjb-1.2.ebuild 1207
 MD5 50b86e6675cc517cda9bf631e1cad5b3 libnjb-2.1.2.ebuild 1087
+RMD160 93d8d107b4501dfb4d9ede0c1f157d3a5785994f libnjb-2.1.2.ebuild 1087
+SHA256 5ef2863f1588b2b2283206faff411178c1047ff1e452ecfd83804dc70d36cea5 libnjb-2.1.2.ebuild 1087
 MD5 2eca29b2083d4b122b7d6021ed378578 libnjb-2.2.3.ebuild 1066
-MD5 b97d7e76fa5497854a96b31e8c6c4231 libnjb-2.2.4.ebuild 1067
+RMD160 4d3146f6b64ee6e554c5df33b580bafc734341df libnjb-2.2.3.ebuild 1066
+SHA256 7110f14ac96ff1ff11886693210468f3771eb37f9bb3ca4df75e30070758aa1a libnjb-2.2.3.ebuild 1066
+MD5 459ee408341973d62671ab96bab14d9f libnjb-2.2.4.ebuild 1066
+RMD160 f0ada890a05a9e142f339280f05938b2bde36ea5 libnjb-2.2.4.ebuild 1066
+SHA256 3162f6c2c47b07fae09816a720181b898ee2519a4b8a5922d69d6bdb85977a86 libnjb-2.2.4.ebuild 1066
+MD5 5dd6faea74803c976fef43ae3c7f90ec libnjb-2.2.5.ebuild 1068
+RMD160 ae81ff04f5320e928997b8636ba30d8c7955305a libnjb-2.2.5.ebuild 1068
+SHA256 32b22d44c3f2ad451e76bebf15db5f2e47b006e0914a73f6a6a7c551eec6068a libnjb-2.2.5.ebuild 1068
 MD5 8b1346477a12e418214f060eec94b6a1 libnjb-2.2.ebuild 1051
+RMD160 f84b7be2671af111f607bf8af9847820820dcbd2 libnjb-2.2.ebuild 1051
+SHA256 e68068872e0d9fbeb5348a8a9102fb37f850893e4c070eb85f294171d6be0a50 libnjb-2.2.ebuild 1051
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
+SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDgid/p5vW4rUFj5oRAszKAJ9u9Ji4P2PdYUTzRKeKv3ltkzo35ACfW7ED
-7wZDu0K42cXEK7lm83uMdh4=
-=dYf/
+iD8DBQFD3TE/p5vW4rUFj5oRAkI+AKCQhiuoP21UXh/K/z+9GZy6wStvmgCgvp9b
+ObMWolvJbrqxG7vd9OOtzVk=
+=Z82Z
 -----END PGP SIGNATURE-----
