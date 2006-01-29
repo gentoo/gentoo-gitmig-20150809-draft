@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.40 2006/01/28 21:00:40 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.41 2006/01/29 13:26:23 nakano Exp $
+
+  29 Jan 2006; Masatomo Nakano <nakano@gentoo.org> Manifest:
+  Fixed digest files. (#120795)
 
 *libpq-8.1.2 (28 Jan 2006)
 *libpq-8.0.6 (28 Jan 2006)
