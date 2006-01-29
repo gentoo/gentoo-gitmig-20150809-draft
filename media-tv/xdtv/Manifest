@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ec2200cacdb097861fd10a353326f8a ChangeLog 2726
-RMD160 38f4c86e45da6262979d1b7ccac10c0c29f5ee42 ChangeLog 2726
-SHA256 9e42ba53af9fd0cd3740daffa8565e77ddb77b2df0cba633285f2b5fa32d8743 ChangeLog 2726
+MD5 ef82408a7731ff36a0c9dbc47c5b2423 ChangeLog 2842
+RMD160 95b9523cb55cef925d0813e6fea9af81165d9749 ChangeLog 2842
+SHA256 77daa6522c831baa80f3dd838731058ecd06256a44b12c05d15c089b3b65c763 ChangeLog 2842
 MD5 1e0e7da6d22eed35ae25e84d5b0dcad7 files/digest-xdtv-2.2.0-r1 1777
 RMD160 6339a0c25a7d00a13ffa578b0fd62c1061cf211c files/digest-xdtv-2.2.0-r1 1777
 SHA256 45c5a060e6eaadcb583bc590d8321afa55889cc537ec4a22a0b5bb93df09067e files/digest-xdtv-2.2.0-r1 1777
 MD5 1e0e7da6d22eed35ae25e84d5b0dcad7 files/digest-xdtv-2.2.0-r2 1777
 RMD160 6339a0c25a7d00a13ffa578b0fd62c1061cf211c files/digest-xdtv-2.2.0-r2 1777
 SHA256 45c5a060e6eaadcb583bc590d8321afa55889cc537ec4a22a0b5bb93df09067e files/digest-xdtv-2.2.0-r2 1777
-MD5 690077a756b32da9a4070c281249cd86 files/digest-xdtv-2.3.0 8463
-RMD160 45a538a3f8d6fc5acce32f59881d04b22bde340d files/digest-xdtv-2.3.0 8463
-SHA256 dc2594f9112af02b70980fcdc43eb841d71a42ed13bdb0de3a3bf70d936b219d files/digest-xdtv-2.3.0 8463
+MD5 9fd96641c3ff2f99648db754523a365b files/digest-xdtv-2.3.0 8635
+RMD160 e00fff9ce9d39b9fd98b88cea3bf25f44b76677b files/digest-xdtv-2.3.0 8635
+SHA256 922be643e0fcd05653e30c45a84b66c6b1297a52cb671bff33b50599dde499ff files/digest-xdtv-2.3.0 8635
 MD5 26b0db8fc43f5f4d60fa824a4ed54082 files/xdtv-2.2.0-memcpy.patch 10418
 RMD160 0780262ef6a7eb12d8d20b6a043d9fa0d7337ead files/xdtv-2.2.0-memcpy.patch 10418
 SHA256 feacbea8e5898c3ee16418d02013032020f6215fda85e7c0025bcfdc568a7c06 files/xdtv-2.2.0-memcpy.patch 10418
@@ -37,7 +37,7 @@ SHA256 15c6f01cb96c4cf7732505016d775c29d9afe907f25fbf2f5800c27742acedc4 xdtv-2.3
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD278zAiZjviIA2XgRApl0AKDafuPiVO/9xTqbE87rf4ryO6+OeQCdH2cg
-My6BH052L6e/zrvigTVq1X4=
-=FPb+
+iD8DBQFD3MhIAiZjviIA2XgRAnURAJ0YffoSMz0r8+lZ51MlxwybT3z08QCfS19G
+SmQGCmF90j54IS3DalRDWKo=
+=XqUk
 -----END PGP SIGNATURE-----
