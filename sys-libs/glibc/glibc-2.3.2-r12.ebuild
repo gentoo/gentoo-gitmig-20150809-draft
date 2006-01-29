@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.18 2005/12/03 00:55:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.19 2006/01/29 07:48:20 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,6 +33,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${MY_PV}.tar.bz2
 	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
+	mirror://gentoo/${P}-manpages.tar.bz2
 	hppa? ( mirror://gentoo/${P}-hppa-patches-p1.tar.bz2 )"
 
 LICENSE="LGPL-2"
@@ -291,7 +292,7 @@ src_unpack() {
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
-	use_nptl || tar xjf ${FILESDIR}/glibc-manpages-${MY_PV}.tar.bz2
+	use_nptl || tar xjf ${DESTDIR}/glibc-${MY_PV}-manpages.tar.bz2
 
 	cd ${S}
 	# Extract our threads package ...

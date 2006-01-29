@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.426 2006/01/25 03:22:16 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.427 2006/01/29 07:48:20 vapier Exp $
+
+  29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  -files/glibc-manpages-2.2.5.tar.bz2, -files/glibc-manpages-2.3.2.tar.bz2,
+  glibc-2.3.2-r12.ebuild:
+  Move glibc 2.3.2 manpages to mirrors #120700 by Simon Stelling.
 
   25 Jan 2006; Daniel Ostrow <dostrow@gentoo.org>
   glibc-2.3.4.20041102-r2.ebuild:
