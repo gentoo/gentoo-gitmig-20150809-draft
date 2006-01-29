@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.22 2005/11/08 16:54:16 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.23 2006/01/29 04:05:30 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -168,7 +168,7 @@ gtk-sharp-component_src_compile() {
 	gtk-sharp-component_src_configure ${@}
 
 	cd ${S}/${GTK_SHARP_COMPONENT_BUILD_DIR}
-	LANG=C emake || die "compile failure"
+	LANG=C emake -j1 || die "compile failure"
 }
 
 gtk-sharp-component_src_install() {
