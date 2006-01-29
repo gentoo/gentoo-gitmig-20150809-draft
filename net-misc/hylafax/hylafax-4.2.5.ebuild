@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.1 2006/01/13 08:05:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.2 2006/01/29 18:10:45 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -19,6 +19,7 @@ DEPEND="!faxonly? ( net-dialup/mgetty )
 	virtual/ghostscript
 	>=media-libs/tiff-3.7.0
 	jpeg? ( media-libs/jpeg )
+	media-libs/jbigkit
 	sys-apps/gawk
 	pam? ( virtual/pam )
 	mgetty? ( net-dialup/mgetty )"
