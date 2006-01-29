@@ -23,3 +23,4 @@ move media-gfx/scigraphica sci-visualization/scigraphica
 move media-gfx/spectromatic sci-visualization/spectromatic
 move media-gfx/xgraph sci-visualization/xgraph
 move sci-misc/gwyddion sci-visualization/gwyddion
+move sci-mathematics/veusz sci-visualization/veusz
