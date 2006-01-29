@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.1c.ebuild,v 1.3 2005/07/30 05:48:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.1c.ebuild,v 1.4 2006/01/29 08:04:42 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -16,13 +16,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	virtual/opengl
+RDEPEND="virtual/opengl
+	|| (
+		( x11-libs/libX11 )
+		virtual/x11 )
 	>=media-libs/libsdl-1.2.5
 	>=media-libs/sdl-image-1.2
 	media-libs/openal
 	dev-games/physfs"
 DEPEND="${RDEPEND}
+	|| (
+		( x11-libs/libXt
+			x11-proto/xproto )
+		virtual/x11
+	)
 	dev-util/jam"
 
 S=${WORKDIR}/${PSOURCE}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.12 2006/01/11 21:42:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.13 2006/01/29 08:04:42 joshuabaergen Exp $
 
 inherit gnuconfig eutils games
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 IUSE="gif jpeg png joystick"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libXi
+				x11-libs/libXmu )
+			virtual/x11 )
 	virtual/glu
 	virtual/glut
 	virtual/opengl
@@ -26,9 +28,8 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch \
-		"${FILESDIR}"/${PV}-gldefs.patch
-		"${FILESDIR}"/${PN}-gcc-3.4.patch
+	epatch "${FILESDIR}"/${PV}-gldefs.patch
+	epatch "${FILESDIR}"/${PN}-gcc-3.4.patch
 }
 
 src_compile() {

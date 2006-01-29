@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.6 2005/01/05 02:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.7 2006/01/29 08:04:42 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="sdl"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libXaw
+				x11-libs/libXi )
+			virtual/x11
+		)
 	virtual/opengl
 	>=media-libs/freetype-2.0.9
 	>=media-libs/libpng-1.2.1

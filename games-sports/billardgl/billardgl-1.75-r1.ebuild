@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.4 2004/06/24 23:24:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.5 2006/01/29 08:04:42 joshuabaergen Exp $
 
 inherit games
 
@@ -13,7 +13,9 @@ KEYWORDS="amd64 x86 ppc"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXi
+				x11-libs/libXmu )
+			virtual/x11 )
 	virtual/opengl
 	virtual/glu
 	virtual/glut"
