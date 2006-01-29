@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.22 2006/01/13 09:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.23 2006/01/29 15:47:50 blubb Exp $
 
 inherit libtool eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 HOMEPAGE="http://flac.sourceforge.net/"
-SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/flac/${P}.tar.gz
+		mirror://gentoo/${P}-altivec.patch.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -29,7 +30,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-m4.patch
 	epatch ${FILESDIR}/${P}-libtool.patch
-	epatch ${FILESDIR}/${P}-altivec.patch.gz
+	epatch ${WORKDIR}/${P}-altivec.patch
 
 	elibtoolize --reverse-deps
 }
