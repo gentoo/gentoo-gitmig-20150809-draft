@@ -1,30 +1,39 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54e1eb01e71e4c8ad7aaa75f3b936630 ChangeLog 7003
-RMD160 14996ac10ac3a7814cfb448cb22aa7404a8ceb69 ChangeLog 7003
-SHA256 224f2868f5b74db0054bcd90739d061f9a141ed252c5c3cb4b3036c162d529b4 ChangeLog 7003
+MD5 059cff615ee111d02ee6b6119029be4c ChangeLog 7202
+RMD160 7c8f77f211866f3cee77f12e1c8379477fdccc6a ChangeLog 7202
+SHA256 db81ea6b91acebec4abe9a17c40e35c2594ec460499d1f311e9ad69e861caea5 ChangeLog 7202
 MD5 212af09c0c8a660ecc4dc1df67e8c3b2 files/digest-pax-utils-0.1.4 247
 RMD160 98bff41509da6d7d67c93924b0144011c28b1048 files/digest-pax-utils-0.1.4 247
 SHA256 2cc81e1b4f9b199ddc9f9a04f8cba60f1eeeb0666f3e583c441eb62526feb37c files/digest-pax-utils-0.1.4 247
 MD5 9e860c5d83a3dfeaea3b092895033a2c files/digest-pax-utils-0.1.8 247
 RMD160 3583aeb057f174bf3dde64c0c0df62ac296b4de0 files/digest-pax-utils-0.1.8 247
 SHA256 40fd140bce16bd8cf040eaac270e353227458feb431a239d6b58d7fc60c1ac14 files/digest-pax-utils-0.1.8 247
+MD5 9e860c5d83a3dfeaea3b092895033a2c files/digest-pax-utils-0.1.8-r1 247
+RMD160 3583aeb057f174bf3dde64c0c0df62ac296b4de0 files/digest-pax-utils-0.1.8-r1 247
+SHA256 40fd140bce16bd8cf040eaac270e353227458feb431a239d6b58d7fc60c1ac14 files/digest-pax-utils-0.1.8-r1 247
+MD5 1d2fb0772c392d620433367009b70901 files/pax-utils-0.1.8-paxelf-fd-mmap.patch 547
+RMD160 662a0ca2b1c90fc4a8bd50c8ccd54267411c0d2d files/pax-utils-0.1.8-paxelf-fd-mmap.patch 547
+SHA256 8910703ee5aced8ed7f1083f604cc3b9ed6dd7aea396a3e8ce7761574b0eca2e files/pax-utils-0.1.8-paxelf-fd-mmap.patch 547
 MD5 90f775b6c4fdbeb494f7d8e1d94ad30d metadata.xml 604
 RMD160 7f581ee400ba8449455baf903183c12136a53838 metadata.xml 604
 SHA256 f3aaada3dde296c02797c2f68e88bf7f3cf650449aaf956126bc54ebd36e686e metadata.xml 604
 MD5 a068acf44055609fdf44de3c54674cc0 pax-utils-0.1.4.ebuild 926
 RMD160 5f41cecfa6c828bcf480f4f7f7b6a85206ea4a15 pax-utils-0.1.4.ebuild 926
 SHA256 b4d3fabd3fb5998965d5b5750e8e9999c34aa71fc2054b31b2de92450a2edd8e pax-utils-0.1.4.ebuild 926
+MD5 7858695e746e3768602065c2de1865e5 pax-utils-0.1.8-r1.ebuild 1211
+RMD160 dc183780569be9fd2b2ba618a3f37db169f9955f pax-utils-0.1.8-r1.ebuild 1211
+SHA256 1ced4a153ba6516096647988595c6c14b6580d34b74a7796f089059bfd953f58 pax-utils-0.1.8-r1.ebuild 1211
 MD5 1f2aacd06392ac7b7933f7619503e01b pax-utils-0.1.8.ebuild 1106
 RMD160 432465006eed484ac2466db20c2f2e48f2c70992 pax-utils-0.1.8.ebuild 1106
 SHA256 2f4a0215a7277d97cdea4ddf32d6d21c917bd17b0394953e967e77288fa50db6 pax-utils-0.1.8.ebuild 1106
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iQCVAwUBQ9vWGJ4WFLgrx1GWAQIcGAP9Fnop25cHageXKUmCeAvCw3UIc5QYUJhE
-Rf9/xsAQzFTWhGxYcKdP6TaUweeVnqrozKiRBtsv7Te9aQeSPeJ0/WFV36Vf5LgP
-+c+2we0q02jO7WjOxqSx2pVpYCZFtUFvuOv5Z0zcUi7R/croQUr/eLqWugXAsEsv
-c6ufpRc/pBM=
-=09TC
+iQCVAwUBQ9zk2Z4WFLgrx1GWAQKVfgQAhyhzw+1m3Y2rv6my8GMhZI7KRr/ylP8x
+Z/FaVYtNT8YI1Cu2RPKlS5cBdY8CGNkk4WAbv6NnTYeoGtcK1Rt1Hch3KbdNUbsi
+ZtsbjIEY+GrsQnbvVuMdMMQRkmEXgFIIPPQNSlw44Y+Ev9F8OzIJG9zbNuPYcNJX
+gTcjURHFMx4=
+=esnf
 -----END PGP SIGNATURE-----
