@@ -1,0 +1,38 @@
+diff -uNr portage-2.1_pre4/pym/portage.py portage-2.1_pre4-r1/pym/portage.py
+--- portage-2.1_pre4/pym/portage.py	2006-01-28 09:50:04.000000000 +0900
++++ portage-2.1_pre4-r1/pym/portage.py	2006-01-29 20:52:51.000000000 +0900
+@@ -4,7 +4,7 @@
+ # $Id: /var/cvsroot/gentoo-src/portage/pym/portage.py,v 1.524.2.76 2005/05/29 12:40:08 jstubbs Exp $
+ 
+ 
+-VERSION="2.1_pre4"
++VERSION="2.1_pre4-r1"
+ 
+ # ===========================================================================
+ # START OF IMPORTS -- START OF IMPORTS -- START OF IMPORTS -- START OF IMPORT
+@@ -3161,6 +3161,11 @@
+ 					return 1
+ 			elif x==1:
+ 					return 1
++		#XXX: unless there's no available atoms in the list
++		#in which case we need to assume that everything is
++		#okay as some ebuilds are relying on an old bug.
++		if len(deplist) == 1:
++			return 1
+ 		return 0
+ 	else:
+ 		for x in deplist:
+diff -uNr portage-2.1_pre4/pym/portage_dep.py portage-2.1_pre4-r1/pym/portage_dep.py
+--- portage-2.1_pre4/pym/portage_dep.py	2006-01-28 09:49:48.000000000 +0900
++++ portage-2.1_pre4-r1/pym/portage_dep.py	2006-01-29 20:52:51.000000000 +0900
+@@ -87,7 +87,9 @@
+ 			if additions:
+ 				rlist.append(additions)
+ 			elif rlist and rlist[-1] == "||":
+-				raise portage_exception.InvalidDependString("No default atom(s) in \""+paren_enclose(deparray)+"\"")
++			#XXX: Currently some DEPEND strings have || lists without default atoms.
++			#	raise portage_exception.InvalidDependString("No default atom(s) in \""+paren_enclose(deparray)+"\"")
++				rlist.append([])
+ 
+ 		else:
+ 			if head[-1] == "?": # Use reduce next group on fail.
