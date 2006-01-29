@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7.ebuild,v 1.4 2005/06/04 15:18:26 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7.ebuild,v 1.5 2006/01/29 19:49:59 cryos Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ppc s390 x86"
 IUSE=""
 
 DEPEND="virtual/python
-	media-gfx/gnuplot
+	sci-visualization/gnuplot
 	dev-python/numeric"
 
 src_install() {
