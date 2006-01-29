@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.36 2006/01/24 22:10:44 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.37 2006/01/29 21:23:29 sekretarz Exp $
+
+*firebird-1.5.3 (29 Jan 2006)
+
+  29 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  -files/firebird-1.5.2-build.patch, +files/firebird-1.5-build.patch,
+  firebird-1.5.2.ebuild, +firebird-1.5.3.ebuild:
+  Version bump, release fixes security problems, bug #120343
 
   24 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/firebird-1.5.2-build.patch, firebird-1.5.2.ebuild:

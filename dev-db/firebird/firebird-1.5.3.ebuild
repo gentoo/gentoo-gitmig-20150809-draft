@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.8 2006/01/29 21:23:29 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3.ebuild,v 1.1 2006/01/29 21:23:29 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
-extra_ver="4731"
+extra_ver="4870"
 DESCRIPTION="A relational database offering many ANSI SQL-99 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
 SRC_URI="mirror://sourceforge/firebird/${P}.${extra_ver}.tar.bz2"
