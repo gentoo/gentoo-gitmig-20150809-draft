@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.21 2006/01/28 23:42:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.22 2006/01/29 12:12:41 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="binfilter curl eds gnome gtk java kde ldap mozilla zlib xml2"
+IUSE="binfilter curl eds gnome gtk java kde ldap mozilla xml2"
 
 MY_PV="${PV}.2"
 PATCHLEVEL="OOA680"
@@ -101,7 +101,7 @@ pkg_setup() {
 	ewarn " instead. "
 	ewarn
 
-	strip-linguas af ar be_BY bg bn br bs ca cs cy da de el en en_GB en_US en_ZA es et fa fi fr ga gu_IN he hi_IN hr hu it ja km ko lo lt lv mk nb ne nl nn nr ns pa_IN pl pt pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tn tr vi xh zh_CN zh_TW zu
+	strip-linguas af ar be_BY bg bn br bs ca cs cy da de el en en_GB en_US en_ZA es et fa fi fr ga gu_IN he hi_IN hr hu it ja km ko lo lt lv mk nb ne nl nn nr ns pa_IN pl pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tn tr vi xh zh_CN zh_TW zu
 
 	if [ -z "${LINGUAS}" ]; then
 		export LINGUAS_OOO="en-US"
@@ -149,7 +149,6 @@ src_unpack() {
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 	echo "`use_with curl system-curl`" >> ${CONFFILE}
 	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
-	echo "`use_with zlib system-zlib`" >> ${CONFFILE}
 
 	echo "`use_with mozilla system-mozilla`" >> ${CONFFILE}
 	echo "`use_enable mozilla`" >> ${CONFFILE}
