@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.39 2006/01/17 01:06:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.40 2006/01/29 20:00:59 pebenito Exp $
+
+  29 Jan 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.28.ebuild:
+  Add python version handling to fix #120829, and add -fPIC to LDFLAGS to
+  hopefully fix #119271.
 
   17 Jan 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.28.ebuild:
   Mark stable, x86, amd64, ppc, sparc.

@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.28.ebuild,v 1.4 2006/01/17 01:06:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.28.ebuild,v 1.5 2006/01/29 20:00:59 pebenito Exp $
 
 IUSE=""
 
 SEPOL_VER="1.10"
 
-inherit eutils multilib
+inherit eutils multilib python
+python_version
 
 DESCRIPTION="SELinux userland library"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -15,17 +16,12 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~mips ppc sparc x86"
 
-DEPEND="=sys-libs/libsepol-${SEPOL_VER}*"
+DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
+	dev-lang/swig"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	# make portage CFLAGS work
-	sed -i -e "s:-Wall:-Wall ${CFLAGS}:g" ${S}/src/Makefile \
-		|| die "src Makefile CFLAGS fix failed."
-	sed -i -e "s:-Wall:-Wall ${CFLAGS}:g" ${S}/utils/Makefile \
-		|| die "utils Makefile CFLAGS fix failed."
 
 	# fix up paths for multilib
 	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" ${S}/src/Makefile \
@@ -35,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake PYLIBVER="python${PYVER}" LDFLAGS="-fPIC ${LDFLAGS}" || die
 }
 
 src_install() {
