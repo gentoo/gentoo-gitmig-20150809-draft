@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.1 2006/01/05 00:00:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.2 2006/01/29 15:43:40 blubb Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -8,7 +8,9 @@ DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with bett
 HOMEPAGE="http://www.cups.org/ghostscript.php"
 SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
-		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )"
+		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz
+		mirror://gentoo/gs7.07.1-cjk.diff.bz2
+		)"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -41,7 +43,8 @@ PROVIDE="virtual/ghostscript"
 
 src_unpack() {
 	unpack espgs-${PV}-source.tar.bz2
-
+	unpack gs7.07.1-cjk.diff.bz2
+	
 	cd ${S}
 
 	if use ppc-macos; then
@@ -54,7 +57,7 @@ src_unpack() {
 	fi
 
 	if use cjk ; then
-		epatch ${FILESDIR}/gs7.07.1-cjk.diff.bz2
+		epatch ${WORKDIR}/gs7.07.1-cjk.diff
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 

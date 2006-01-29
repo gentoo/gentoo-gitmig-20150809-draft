@@ -1,3 +1,6 @@
 MD5 2fbae60417d42779f6488ab897dcaaf6 acro5-cmaps-2001.tar.gz 631653
 MD5 a3bf430a7e21cd82401258a2ec3b8afb adobe-cmaps-200204.tar.gz 4360486
 MD5 d30bf5c09f2c7caa8291f6305cf03044 espgs-7.07.1-source.tar.bz2 5400198
+MD5 06fe485954243190f4f0f4d8e1542f92 gs7.07.1-cjk.diff.bz2 3055
+MD5 0cb94835c5d49c5eeeba6e11b2cd65ed gs7.07.1-fontconfig-rh.patch.2.bz2 6113
+MD5 acda8ddfde1efeaf451cb28a67dcc773 gs7.07.1-krgb.patch.gz 5569

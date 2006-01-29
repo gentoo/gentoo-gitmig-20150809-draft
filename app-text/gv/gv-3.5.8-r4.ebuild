@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.15 2006/01/03 09:57:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.16 2006/01/29 15:44:27 blubb Exp $
 
 inherit eutils
 
 DESCRIPTION="gv is used to view PostScript and PDF documents using Ghostscript"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
-SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz"
+SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz
+		mirror://gentoo/${P}-debian.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,7 +37,7 @@ PROVIDE="virtual/pdfviewer
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-debian.diff.gz
+	epatch ${WORKDIR}/${P}-debian.diff
 }
 
 src_compile() {

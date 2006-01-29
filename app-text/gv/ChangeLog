@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.37 2006/01/03 09:57:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.38 2006/01/29 15:44:27 blubb Exp $
+
+  28 Jan 2006; Simon Stelling <blubb@gentoo.org>
+  -files/gv-3.5.8-debian.diff.gz, gv-3.5.8-r4.ebuild:
+  move compressed patches to the mirrors
 
   03 Jan 2006; Stefan Schweizer <genstef@gentoo.org> gv-3.5.8-r4.ebuild,
   gv-3.6.1.ebuild, gv-3.6.1-r1.ebuild:
