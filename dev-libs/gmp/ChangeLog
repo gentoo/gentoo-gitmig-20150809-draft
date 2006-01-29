@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gmp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.57 2005/12/27 22:40:43 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.58 2006/01/29 10:21:09 vapier Exp $
+
+*gmp-4.1.4-r3 (29 Jan 2006)
+
+  29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/gmp-4.1.4-ABI-multilib.patch, +files/gmp-4.1.4-noexecstack.patch,
+  +files/gmp-4.1.4-ppc64-asm-dots.patch, +gmp-4.1.4-r3.ebuild:
+  Rewrite patches to not require autotools since we need gcc-4.x to DEPEND on
+  gmp.
 
   29 Dec 2005; Daniel Black <dragonheart@gentoo.org>
   +files/gmp-4.1.4-nostackexec.patch, gmp-4.1.4-r2.ebuild:
