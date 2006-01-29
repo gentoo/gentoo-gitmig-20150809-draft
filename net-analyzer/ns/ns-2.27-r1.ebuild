@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.27-r1.ebuild,v 1.8 2005/08/29 15:26:01 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.27-r1.ebuild,v 1.9 2006/01/29 20:24:16 cryos Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND_COMMON=">=dev-lang/tcl-8.4.4
 		>=dev-tcltk/otcl-1.0.8a
 		>=dev-tcltk/tclcl-1.0.13b
 		virtual/libpcap
-		debug? ( =dev-lang/perl-5* >=media-gfx/xgraph-12.1 >=dev-libs/dmalloc-4.8.2 >=dev-tcltk/tcl-debug-2.0 )"
+		debug? ( =dev-lang/perl-5* >=sci-visualization/xgraph-12.1 >=dev-libs/dmalloc-4.8.2 >=dev-tcltk/tcl-debug-2.0 )"
 DEPEND="doc? ( virtual/tetex virtual/ghostscript dev-tex/latex2html ) ${DEPEND_COMMON}"
 RDEPEND="${DEPEND_COMMON}"
 

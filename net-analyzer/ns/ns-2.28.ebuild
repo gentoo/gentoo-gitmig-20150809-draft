@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.28.ebuild,v 1.3 2005/09/12 11:22:10 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.28.ebuild,v 1.4 2006/01/29 20:23:46 cryos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/tcl-8.4.4
 		>=dev-tcltk/tclcl-1.0.13b
 		virtual/libpcap
 		debug? ( 	=dev-lang/perl-5*
-					>=media-gfx/xgraph-12.1
+					>=sci-visualization/xgraph-12.1
 					>=dev-libs/dmalloc-4.8.2
 					>=dev-tcltk/tcl-debug-2.0 )"
 DEPEND="${RDEPEND}
