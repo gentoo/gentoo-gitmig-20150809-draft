@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xmille
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.7 2006/01/09 06:03:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.8 2006/01/29 21:28:01 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xmille-2.0-r1.ebuild:
+  Add modular X dependencies.
 
   09 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> xmille-2.0-r1.ebuild:
   tidy; debian patch bump

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.6.3.ebuild,v 1.5 2005/07/06 04:44:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.6.3.ebuild,v 1.6 2006/01/29 21:28:01 joshuabaergen Exp $
 
 inherit games
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	=x11-libs/gtk+-1.2*"
+RDEPEND="=x11-libs/gtk+-1.2*"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 

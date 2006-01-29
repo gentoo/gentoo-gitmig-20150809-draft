@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mah-jong
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.6 2004/11/11 00:51:27 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.7 2006/01/29 21:28:01 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  mah-jong-1.6.3.ebuild:
+  Drop x11 dependency since build explicitly uses gtk-config for libraries.
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> mah-jong-1.6.3.ebuild:
   Marked ppc stable.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.7 2004/12/22 01:42:52 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.8 2006/01/29 21:28:01 joshuabaergen Exp $
 
 inherit eutils
 
@@ -14,7 +14,11 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libXaw virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( ( app-text/rman
+			x11-misc/imake )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

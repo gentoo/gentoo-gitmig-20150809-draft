@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.2 2005/08/27 11:53:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.3 2006/01/29 21:28:01 joshuabaergen Exp $
 
 inherit eutils games multilib
 
@@ -15,7 +15,13 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc-macos x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( ( x11-libs/libXaw
+				x11-libs/libXp )
+			virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( ( x11-misc/gccmakedep
+			x11-misc/imake )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${P}.tgz

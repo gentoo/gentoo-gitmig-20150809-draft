@@ -1,6 +1,10 @@
 # ChangeLog for games-board/scid
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.10 2005/09/16 01:14:05 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.11 2006/01/29 21:28:01 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> scid-3.5.ebuild,
+  scid-3.6.1.ebuild:
+  Add modular X dependencies.
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> scid-3.5.ebuild,
   scid-3.6.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xfreecell
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/ChangeLog,v 1.6 2005/02/06 17:04:33 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/ChangeLog,v 1.7 2006/01/29 21:28:01 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xfreecell-1.0.5b.ebuild:
+  Add modular X dependencies.
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> xfreecell-1.0.5b.ebuild:
   Stable on ppc64

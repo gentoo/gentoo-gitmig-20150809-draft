@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.2 2005/02/25 22:07:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.3 2006/01/29 21:28:01 joshuabaergen Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -32,13 +32,12 @@ DEPEND="virtual/libc
 		=dev-libs/glib-2*
 		opengl? ( x11-libs/gtkglext
 			media-libs/ftgl )
-		virtual/x11
 	)
 	guile? ( dev-util/guile )
 	nas? ( media-libs/nas )
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libXmu virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}

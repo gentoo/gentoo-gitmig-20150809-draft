@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xmahjongg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/ChangeLog,v 1.7 2005/12/08 21:48:00 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/ChangeLog,v 1.8 2006/01/29 21:28:01 joshuabaergen Exp $
+
+  29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xmahjongg-3.6.1.ebuild, xmahjongg-3.7.ebuild:
+  Add modular X dependencies.
 
 *xmahjongg-3.7 (08 Dec 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.10 2005/06/15 18:29:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.11 2006/01/29 21:28:01 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -15,7 +15,7 @@ IUSE="X"
 
 RDEPEND="virtual/libc
 	sys-libs/ncurses
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.34
 	>=sys-devel/flex-2.5

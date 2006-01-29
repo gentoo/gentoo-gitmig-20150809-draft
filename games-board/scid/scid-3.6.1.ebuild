@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1.ebuild,v 1.4 2005/09/16 01:14:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1.ebuild,v 1.5 2006/01/29 21:28:01 joshuabaergen Exp $
 
 inherit games
 
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	>=dev-lang/tk-8.3
+DEPEND=">=dev-lang/tk-8.3
 	>=sys-libs/zlib-1.1.3"
 RDEPEND="${DEPEND}
+	|| ( x11-libs/libX11 virtual/x11 )
 	>=dev-lang/python-2.1"
 DEPEND="${DEPEND}
 	app-arch/unzip"
