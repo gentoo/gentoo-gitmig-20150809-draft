@@ -10,3 +10,4 @@ move dev-embedded/channelgen dev-tinyos/channelgen
 move sys-apps/qpage app-admin/qpage
 move sci-mathematics/qtiplot sci-visualization/qtiplot
 move media-gfx/epix sci-visualization/epix
+move media-gfx/fig2sxd sci-visualization/fig2sxd
