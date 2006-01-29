@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/libnss-mysql
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.2 2005/09/18 03:13:54 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.3 2006/01/29 21:29:26 vanquirius Exp $
+
+*libnss-mysql-1.5 (29 Jan 2006)
+
+  29 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +libnss-mysql-1.5.ebuild:
+  1.5 version bump for bug 120449. Thanks to Christian Skarby <christian dot
+  skarby at interhost dot no>.
 
   18 Sep 2005; Jason Wever <weeve@gentoo.org> libnss-mysql-1.4.ebuild:
   Added ~sparc keyword.
