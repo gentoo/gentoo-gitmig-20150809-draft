@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.6.ebuild,v 1.2 2006/01/28 13:43:05 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-1.6.ebuild,v 1.3 2006/01/29 04:05:21 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 	hddtemp? ( >=app-admin/hddtemp-0.3_beta13 )"
 
 DEPEND="${RDEPEND} >=dev-util/pkgconfig-0.12
-		>=gnome-doc-utils-0.3.2"
+		>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
