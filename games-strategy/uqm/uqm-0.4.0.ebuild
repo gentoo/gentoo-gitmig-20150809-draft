@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.4.0.ebuild,v 1.3 2005/09/23 15:45:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.4.0.ebuild,v 1.4 2006/01/29 23:49:41 mr_bones_ Exp $
 
 inherit games
 
@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="music opengl remix voice"
 
-RDEPEND="virtual/x11
-	media-libs/libvorbis
+RDEPEND="media-libs/libvorbis
 	media-libs/jpeg
 	media-libs/libpng
 	>=media-libs/libsdl-1.2.5
@@ -75,29 +74,29 @@ src_install() {
 	doexe uqm || die "doexe failed"
 
 	dodir "${GAMES_DATADIR}/${PN}/content/packages/content"
-	echo ${P} > ${D}${GAMES_DATADIR}/${PN}/content/version \
+	echo ${P} > "${D}${GAMES_DATADIR}"/${PN}/content/version \
 		|| die "creating version file failed"
 
 	cp "${DISTDIR}"/${P}-content.uqm \
-		 "${D}${GAMES_DATADIR}/${PN}/content/packages" \
+		 "${D}${GAMES_DATADIR}"/${PN}/content/packages \
 		|| die "cp failed"
 
 	if use music; then
 		cp "${DISTDIR}"/${P}-3domusic.uqm \
-			"${D}${GAMES_DATADIR}/${PN}/content/packages" \
+			"${D}${GAMES_DATADIR}"/${PN}/content/packages \
 			|| die "cp failed"
 	fi
 
 	if use voice; then
 		cp "${DISTDIR}"/${P}-voice.uqm \
-			"${D}${GAMES_DATADIR}/${PN}/content/packages" \
+			"${D}${GAMES_DATADIR}"/${PN}/content/packages \
 			|| die "cp failed"
 	fi
 
 	if use remix; then
-		dodir "${GAMES_DATADIR}/${PN}/content/packages/addons/uqmremix"
+		dodir "${GAMES_DATADIR}"/${PN}/content/packages/addons/uqmremix
 		cp "${DISTDIR}"/${PN}-remix-pack{1,2,3}.zip \
-			"${D}${GAMES_DATADIR}/${PN}/content/packages/addons/uqmremix" \
+			"${D}${GAMES_DATADIR}"/${PN}/content/packages/addons/uqmremix \
 			|| die "cp failed"
 	fi
 
