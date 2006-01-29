@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.104 2006/01/22 21:32:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.105 2006/01/29 18:05:29 allanonjl Exp $
+
+*vte-0.11.17 (29 Jan 2006)
+
+  29 Jan 2006; John N. Laliberte <allanonjl@gentoo.org> +vte-0.11.17.ebuild:
+  new version. remove pkgconfig patch since it has been merged upstream.
 
   22 Jan 2006; Markus Rothe <corsair@gentoo.org> vte-0.11.16-r1.ebuild:
   Stable on ppc64
