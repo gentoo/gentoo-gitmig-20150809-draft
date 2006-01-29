@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tiers
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.5 2005/12/12 09:08:02 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.6 2006/01/29 19:48:01 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> tiers-1.1.ebuild:
+  Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
 
   12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Add metadata.xml
