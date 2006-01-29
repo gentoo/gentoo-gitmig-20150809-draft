@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.19 2006/01/29 15:39:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.20 2006/01/29 20:13:18 blubb Exp $
+
+  29 Jan 2006; Simon Stelling <blubb@gentoo.org> -files/twpol.txt.gz:
+  pull twpol.txt.gz out of FILESDIR, it's no longer needed
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/tripwire-2.3.0-50-rfc822.patch,
