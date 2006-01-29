@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0fb335b3f26c2d9095cac51da0c8499 ChangeLog 1308
+MD5 ebd2ceadad14a00c15ef9a1aeee64575 ChangeLog 1415
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0-r1 65
 MD5 792c797769c6059ef2f9ebd6ce4b2e65 files/obstack.h.diff 3852
-MD5 c79d320ec210d61db57c6594771b1917 gccxml-0.6.0-r1.ebuild 865
+MD5 8cf90164a16c8c36cf1aa946ce8fff77 gccxml-0.6.0-r1.ebuild 864
 MD5 a8b450d46ca0ff085af0238d32d858a6 gccxml-0.6.0.ebuild 810
 MD5 d698342d42579c976d124866016978c1 metadata.xml 228
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3QoW/aM9DdBw91cRAqcgAJsFfulN5vinCt5QEDOpWtvR9ioxZgCgoTqs
-i72sE3W5WJvO/UvnX54hH50=
-=VzgU
+iD8DBQFD3Q1i/aM9DdBw91cRAl4wAJ4tfk0J9WbQfEAimsCh66PfD+gxRwCfYraP
+e1uD2GAeVYgXe+2wxuiyaxU=
+=o53Q
 -----END PGP SIGNATURE-----
