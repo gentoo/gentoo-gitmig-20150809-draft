@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.6 2006/01/22 17:49:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.7 2006/01/29 00:01:17 halcy0n Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/wolfgl"
 #ECVS_MODULE="wolfgl"
@@ -33,7 +33,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-gcc.patch \
 		"${FILESDIR}"/${PV}-sample-rate.patch \
-		"${FILESDIR}"/${PV}-sprite.patch
+		"${FILESDIR}"/${PV}-sprite.patch \
+		"${FILESDIR}"/${PV}-gcc4.patch
 }
 
 src_compile() {

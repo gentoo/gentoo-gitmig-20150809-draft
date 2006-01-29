@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/wolfgl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/ChangeLog,v 1.7 2006/01/22 17:49:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/ChangeLog,v 1.8 2006/01/29 00:01:17 halcy0n Exp $
+
+  29 Jan 2006; Mark Loeser <halcy0n@gentoo.org> +files/0.93-gcc4.patch,
+  wolfgl-0.93-r1.ebuild:
+  Add patch to fix compilation with gcc-4; bug #119208
 
   22 Jan 2006; <chainsaw@gentoo.org> metadata.xml,
   wolfgl-0.93-r1.ebuild:
