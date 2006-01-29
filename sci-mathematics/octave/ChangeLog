@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.18 2005/11/16 14:51:35 fmccor Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.19 2006/01/29 19:39:33 cryos Exp $
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> octave-2.1.69.ebuild:
+  Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
 
   16 Nov 2005; Ferris McCormick <fmccor@gentoo.org> octave-2.1.71-r2.ebuild:
   (Re)add ~sparc keyword after having changed sparc's default virtual for
