@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/tkdvd-3.10.1.ebuild,v 1.1 2006/01/14 17:46:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/tkdvd-3.10.1.ebuild,v 1.2 2006/01/30 00:16:18 metalgod Exp $
 
 DESCRIPTION="A Tcl/Tk GUI for dvd+rw-tools"
 HOMEPAGE="http://regis.damongeot.free.fr/tkdvd/"
@@ -14,7 +14,7 @@ RDEPEND="app-cdr/dvd+rw-tools
 	 dev-lang/tcl
 	 dev-lang/tk"
 
-S=${WORKDIR}/TkDVD
+S=${WORKDIR}/tkdvd
 
 src_compile() {
 	einfo "Nothing to compile!"
