@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/postfix
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.92 2005/12/25 15:00:24 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.93 2006/01/30 20:33:02 langthang Exp $
+
+*postfix-2.2.8-r1 (30 Jan 2006)
+*postfix-2.2.8 (30 Jan 2006)
+
+  30 Jan 2006; Tuấn Văn <langthang@gentoo.org> +postfix-2.2.8.ebuild,
+  +postfix-2.2.8-r1.ebuild:
+  patch level 8.
+  drop ~mips keyword. Bug #115716.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   postfix-2.2.7-r1.ebuild:
