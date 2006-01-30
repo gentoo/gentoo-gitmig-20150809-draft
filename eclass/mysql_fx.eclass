@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.5 2006/01/24 20:21:37 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.6 2006/01/30 17:51:47 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -110,6 +110,7 @@ mysql_version_is_at_least() {
 }
 
 # another one inherited from versionator.eclass (version_sort)
+# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_make_file_list() {
 	local items= left=0
 	items=( ${1}-[[:digit:]][[:digit:]][[:digit:]] )
@@ -131,6 +132,7 @@ mysql_make_file_list() {
 	echo ${items[@]}
 }
 
+# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_choose_better_version() {
 	local items= better="" i
 	items="$( ls ${1}-[[:digit:]][[:digit:]][[:digit:]] )"
@@ -148,6 +150,7 @@ mysql_choose_better_version() {
 # To be called on the live filesystem, reassign symlinks to each mysql
 # library to the best version avaiable
 # 2005-12-30 <vivo at gentoo.org>
+# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_lib_symlinks() {
 	local d dirlist maxdots soname sonameln other better
 	pushd "${ROOT}/usr/$(get_libdir)/" &> /dev/null
