@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a78deb4986ce9348b1c4adc92f26f5ec ChangeLog 13689
+MD5 4227b446264d13fb2ee9ff6a047f97c3 ChangeLog 13813
 MD5 ff64a30a61d21ad47aab6594e4b1325b files/digest-gaim-encryption-2.32-r1 72
 MD5 69dd2444e1c1a7c90b61128c9912f975 files/digest-gaim-encryption-2.34 72
 MD5 1bba644fecfb18831e18edb3d06f0de5 files/digest-gaim-encryption-2.35 72
@@ -20,12 +17,5 @@ MD5 89dc5f0c668b2281d7914d72cc4d2931 gaim-encryption-2.37.ebuild 978
 MD5 b45fff756dd5498a00552868cd96765e gaim-encryption-2.38.ebuild 999
 MD5 757b58073867ea176efb65fd8c867363 gaim-encryption-3.0_beta1.ebuild 1122
 MD5 ec57a68e7c96bdbfe52234668a1b6cab gaim-encryption-3.0_beta2.ebuild 1077
-MD5 bcb45f0913797426f6bfd6938479fba2 gaim-encryption-3.0_beta3.ebuild 1084
+MD5 2396964b1dfd186627c72ed7a88d7f57 gaim-encryption-3.0_beta3.ebuild 1091
 MD5 f9adb0cad926cb239205a2b354cbda8b metadata.xml 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD2m4uKRy60XGEcJIRAqlqAJ9fACugIx4JNkBZADPT7iBjjWzRHACfSZEr
-MYJc3lzE5qcfQXEhc9e6T3E=
-=RTBH
------END PGP SIGNATURE-----
