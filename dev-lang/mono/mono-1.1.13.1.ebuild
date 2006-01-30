@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.13.1.ebuild,v 1.2 2006/01/16 03:23:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.13.1.ebuild,v 1.3 2006/01/30 18:32:34 herbs Exp $
 
 inherit eutils mono flag-o-matic multilib
 
@@ -44,6 +44,7 @@ src_unpack() {
 			${S}/{scripts,mono/metadata,mono/os/unix}/Makefile.am \
 			${S}/configure.in || die "sed failed"
 		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+			-e 's:${prefix}/lib/:${libdir}/:g' \
 			${S}/{scripts,}/*.pc.in || die "sed failed"
 	fi
 
