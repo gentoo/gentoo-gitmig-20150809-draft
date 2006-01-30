@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.63 2006/01/08 14:13:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.64 2006/01/30 07:15:01 mr_bones_ Exp $
+
+  30 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> tk-8.4.6.ebuild,
+  tk-8.4.6-r1.ebuild, tk-8.4.9.ebuild:
+  more modular X dependencies
 
 *tk-8.4.11-r1 (08 Jan 2006)
 

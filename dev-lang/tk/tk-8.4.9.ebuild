@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.11 2006/01/02 21:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.12 2006/01/30 07:15:02 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,10 +13,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="threads"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	=dev-lang/tcl-${PV}*"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.47-r10"
+	>=sys-apps/portage-2.0.47-r10
+	|| (
+		( x11-libs/libXt x11-proto/xproto )
+		virtual/x11
+	)"
 
 S=${WORKDIR}/${PN}${PV}
 
