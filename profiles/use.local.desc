@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1701 2006/01/29 20:52:41 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1702 2006/01/30 00:47:58 vanquirius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -599,6 +599,7 @@ media-gfx/inkscape:effects - enables additional scripts (effects)
 media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/iscan:gimp - Build a plugin for the GIMP
+media-gfx/k3d:graphviz - Add graphviz support
 media-gfx/k3d:ngui - build NGUI user-interface plug-in
 media-gfx/k3d:openexr - build OpenEXR plug-ins
 media-gfx/k3d:plib - build plib-based import/export library
