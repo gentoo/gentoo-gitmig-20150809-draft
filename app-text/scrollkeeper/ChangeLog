@@ -1,6 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.64 2006/01/22 20:29:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.65 2006/01/30 09:11:38 leonardop Exp $
+
+  30 Jan 2006; Leonardo Boshell <leonardop@gentoo.org>
+  scrollkeeper-0.3.14-r1.ebuild, scrollkeeper-0.3.14-r2.ebuild:
+  Added docbook-xsl-stylesheets to RDEPEND; removed docbook-sgml-utils (bug
+  #114231).
 
   22 Jan 2006; <dang@gentoo.org> scrollkeeper-0.3.14-r2.ebuild:
   Marked stable on amd64 per bug #119634
