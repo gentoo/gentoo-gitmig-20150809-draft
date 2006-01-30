@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta2.ebuild,v 1.1 2006/01/25 17:03:00 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta2.ebuild,v 1.2 2006/01/30 17:46:36 dertobi123 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="bonjour dbus nls perl spell nas cjk gnutls silc eds krb4 tcltk debug mono xscreensaver"
 
 RDEPEND="media-libs/libao

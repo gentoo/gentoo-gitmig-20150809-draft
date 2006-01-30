@@ -1,4 +1,4 @@
-MD5 8248469ec5b5eaf9d87e5c43536484ec ChangeLog 55146
+MD5 33f68e4588a5ad68c739767e9b5cd34b ChangeLog 55264
 MD5 55807d838af0375bc41eabe3534fdda8 files/digest-gaim-1.5.0 64
 MD5 2c4a27af96f02fda96088c16ba7391e2 files/digest-gaim-2.0.0_beta1 69
 MD5 2c4a27af96f02fda96088c16ba7391e2 files/digest-gaim-2.0.0_beta1-r2 69
@@ -9,5 +9,5 @@ MD5 375e4842d0812bfba079e1b2539c7b17 gaim-1.5.0.ebuild 4181
 MD5 e7fe0971decaac174b390c856713f5d6 gaim-2.0.0_beta1-r2.ebuild 5308
 MD5 9b6693ba4f48fff6ea644ac0eec0d008 gaim-2.0.0_beta1-r3.ebuild 5352
 MD5 12626653ef7113ed485dee81da7dd8e1 gaim-2.0.0_beta1.ebuild 4595
-MD5 d5a1c7dd180b434d7fc5177f2b5de1b4 gaim-2.0.0_beta2.ebuild 5470
+MD5 49a069d9da8c3cb8455e85dbc6af39e1 gaim-2.0.0_beta2.ebuild 5477
 MD5 6727d140d07549b6be4b0ca9886e2514 metadata.xml 414
