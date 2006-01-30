@@ -1,4 +1,4 @@
-MD5 c0d1291683f199418b1536fa63685815 ChangeLog 2487
+MD5 b6e9e1cd3fefcc6d2457e5067ec8da12 ChangeLog 2586
 MD5 1082bcf4c903a8ad9783910524fc419c files/digest-orinoco-0.15_rc2-r2 66
 MD5 7c8b7df86c967166eb696662418f8e6a files/digest-orinoco-0.15_rc3-r1 66
 MD5 42da389565989c142acbb2d86aef0784 files/digest-orinoco-0.15_rc4 66
@@ -9,5 +9,5 @@ MD5 05e38fad13b920f1e776939a0ecf0e09 files/orinoco-0.15rc3-memleak.patch 1044
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 e93a03c1e5af887a9761d23b158ac188 orinoco-0.15_rc2-r2.ebuild 2714
 MD5 b99cf4ff02774f0766865fe373c22b1a orinoco-0.15_rc3-r1.ebuild 2856
-MD5 fd29525d61b83a55ad4b752ace52fbe8 orinoco-0.15_rc4.ebuild 2533
+MD5 a3afde30176ba049fbf46cd0ff4b9c71 orinoco-0.15_rc4.ebuild 2532
 MD5 0b05bebfecdd5675cc4a8377c6fabdb6 orinoco-9999.ebuild 2758
