@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.256 2006/01/28 14:29:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.257 2006/01/30 01:01:04 flameeyes Exp $
+
+  30 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdebase-3.3.2-r1.ebuild, kdebase-3.3.2-r2.ebuild, kdebase-3.3.2-r3.ebuild,
+  kdebase-3.4.1-r1.ebuild, kdebase-3.4.2.ebuild, kdebase-3.4.2-r1.ebuild,
+  kdebase-3.4.2-r2.ebuild, kdebase-3.4.3.ebuild, kdebase-3.4.3-r1.ebuild,
+  kdebase-3.5.0-r1.ebuild, kdebase-3.5.1.ebuild:
+  Add dependencies for modular X (startkde), thanks to Ryan Hill in bug #117033.
 
   28 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdebase-3.5.1.ebuild:
   Version 3.5.1. Not yet released upstream, so package.masked for now.

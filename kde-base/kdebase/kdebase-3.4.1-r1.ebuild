@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.1-r1.ebuild,v 1.9 2005/10/03 14:36:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.1-r1.ebuild,v 1.10 2006/01/30 01:01:04 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -25,6 +25,15 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	       =sys-apps/hal-0.4* )"
 
 RDEPEND="${DEPEND}
+	|| ( (
+			x11-apps/xmessage
+			x11-apps/xsetroot
+			x11-apps/xset
+			x11-apps/xrandr
+			x11-apps/mkfontdir
+			x11-misc/xkbdata
+			x11-apps/setxkbmap
+		) virtual/x11 )
 	java? ( || ( virtual/jdk virtual/jre ) )
 	virtual/eject"
 

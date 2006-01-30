@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r1.ebuild,v 1.13 2005/02/22 02:36:41 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r1.ebuild,v 1.14 2006/01/30 01:01:04 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -18,6 +18,15 @@ DEPEND="arts? ( ~kde-base/arts-${PV//3.3/1.3} )
 	samba? ( >=net-fs/samba-3.0.1 )
 	java? ( || ( virtual/jdk virtual/jre ) )"
 RDEPEND="${DEPEND}
+	|| ( (
+			x11-apps/xmessage
+			x11-apps/xsetroot
+			x11-apps/xset
+			x11-apps/xrandr
+			x11-apps/mkfontdir
+			x11-misc/xkbdata
+			x11-apps/setxkbmap
+		) virtual/x11 )
 	sys-apps/eject"
 
 src_unpack() {
