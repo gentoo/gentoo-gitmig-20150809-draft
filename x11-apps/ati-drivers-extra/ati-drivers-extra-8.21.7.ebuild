@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.21.7.ebuild,v 1.2 2006/01/28 14:51:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.21.7.ebuild,v 1.3 2006/01/30 10:13:29 lu_zero Exp $
 
 IUSE="qt"
 
@@ -25,9 +25,11 @@ src_unpack() {
 	local OLDBIN="/usr/X11R6/bin"
 
 	cd ${WORKDIR}
+	use x86 && MY_P="ati-driver-installer-${PV}-i386.run"
+	use amd64 && MY_P="ati-driver-installer-${PV}-x86_64.run"
 
 	ebegin "Unpacking Ati drivers"
-	sh ${DISTDIR}/${A} --extract ${WORKDIR} &> /dev/null
+	sh ${DISTDIR}/${MY_P} --extract ${WORKDIR} &> /dev/null
 	eend $? || die "unpack failed"
 
 	mkdir -p ${WORKDIR}/extra
@@ -49,7 +51,7 @@ src_unpack() {
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 		-i ${WORKDIR}/extra/fglrx_panel/Makefile
 	#workaround
-	cp ${DISTDIR}/fglrx_pp_proto.h ${WORKDIR}/extra/fglrx_panel
+	cp ${FILESDIR}/fglrx_pp_proto.h ${WORKDIR}/extra/fglrx_panel
 	}
 
 src_compile() {
