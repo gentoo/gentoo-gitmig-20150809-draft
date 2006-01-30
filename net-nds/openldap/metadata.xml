@@ -10,4 +10,8 @@
         <email>strerror@gentoo.org</email>
         <name>Benjamin Smee</name>
     </maintainer>
+    <maintainer>
+        <email>jokey@gentoo.org</email>
+        <name>Markus Ullmann</name>
+    </maintainer>
 </pkgmetadata>
