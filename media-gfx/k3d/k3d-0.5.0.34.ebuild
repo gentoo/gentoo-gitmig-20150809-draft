@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.34.ebuild,v 1.1 2005/12/10 19:41:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.34.ebuild,v 1.2 2006/01/30 00:47:28 vanquirius Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/k3d/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="expat gnome imagemagick jpeg nls openexr plib png python qt tiff truetype xml2"
+IUSE="expat gnome graphviz imagemagick javascript jpeg nls openexr plib png python qt svg tiff truetype xml2"
 
 DEPEND="virtual/x11
 	virtual/opengl
@@ -31,7 +31,8 @@ DEPEND="virtual/x11
 	python? ( >=dev-lang/python-2.3 )
 	qt? ( x11-libs/qt )
 	tiff? ( media-libs/tiff )
-	=dev-libs/libsigc++-2.0*"
+	=dev-libs/libsigc++-2.0*
+	svg? ( gnome-base/librsvg )"
 
 src_compile() {
 	local myconf="--with-ngui"
