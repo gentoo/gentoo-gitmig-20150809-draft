@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.2 2006/01/14 10:30:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.3 2006/01/30 19:57:32 blubb Exp $
+
+  30 Jan 2006; Simon Stelling <blubb@gentoo.org> argus-clients-2.0.6.ebuild:
+  added ~amd64 keyword
 
   14 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   argus-clients-2.0.6.ebuild:
