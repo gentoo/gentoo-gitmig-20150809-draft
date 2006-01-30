@@ -1,24 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29ce69ab4528abb511fc598386051271 ChangeLog 15239
-RMD160 5abd6286096769d9e811164131d0b89eebdcfc88 ChangeLog 15239
-SHA256 cf065272b93dab0a07d6122dd88fb2129f1b6518503c44d6887925df0ff56b3a ChangeLog 15239
-MD5 94b7b5a9e866775b5f76d1c0d672a414 cyrus-imapd-2.2.10-r1.ebuild 9134
-RMD160 0eb7e23e08620e626986a9a1aa75552dea819961 cyrus-imapd-2.2.10-r1.ebuild 9134
-SHA256 0316d58f4201e5061b18871053ed3ff09729e785eec9de70a8beef04854b04c2 cyrus-imapd-2.2.10-r1.ebuild 9134
-MD5 ced6ee910436e03f72d9d0bc72ea1b9b cyrus-imapd-2.2.10.ebuild 8735
-RMD160 63baa1474a79fc2129c14cfc7a837e560897974c cyrus-imapd-2.2.10.ebuild 8735
-SHA256 8a10f3e351653c34b2576bcd3d3975ea0aaeffc0debdaabd5831bd7b9a48fcca cyrus-imapd-2.2.10.ebuild 8735
-MD5 e0323e25f3fcda3dcc9a991e394db445 cyrus-imapd-2.2.12-r1.ebuild 9369
-RMD160 7716489b559e95cd9e87485e2186da6a89b6875d cyrus-imapd-2.2.12-r1.ebuild 9369
-SHA256 73f79e7bc3f7d0ee9fbfb7ab36e1da45c3d54503ad21d0736cd364055ebb514d cyrus-imapd-2.2.12-r1.ebuild 9369
-MD5 1b657d8264a75acd8c920b267c8857f6 cyrus-imapd-2.2.12-r2.ebuild 9168
-RMD160 a25f9675280aa4cabadb1d767e10429c593c0cfd cyrus-imapd-2.2.12-r2.ebuild 9168
-SHA256 fe2716933b575f7021c26e97334065e44cd80bcf8dfd8722424a7cd933811ace cyrus-imapd-2.2.12-r2.ebuild 9168
-MD5 4c88b12181bd8de5b359192607a922e9 cyrus-imapd-2.2.12-r3.ebuild 9246
-RMD160 a5c2752cb627c9f8396dd23f3b53d550cb4fae7d cyrus-imapd-2.2.12-r3.ebuild 9246
-SHA256 6569e0b7b60297e32baeb9d683bdbf14d2026c825c27fcf1966fa6503ca31446 cyrus-imapd-2.2.12-r3.ebuild 9246
+MD5 9deb354b49b7d7604f2e1a98f8ab7b96 ChangeLog 15470
+RMD160 91fd7cf3290e6cb8be6fd2797bc6e2a0af881f18 ChangeLog 15470
+SHA256 c2ae6baeb81e81b12e0616e0ef759625a4cf7f6a035b7d5331ac3d8ad2d760ab ChangeLog 15470
 MD5 e184737af1fd4ea55c02161a848f5272 cyrus-imapd-2.2.12-r4.ebuild 9313
 RMD160 b230e248da358867bfe73c9603a0888b67c517e1 cyrus-imapd-2.2.12-r4.ebuild 9313
 SHA256 34335429c6088ebb02a7d1b2efe0fec439b9d8e2e5ec7cca6660eabde42c46c4 cyrus-imapd-2.2.12-r4.ebuild 9313
@@ -61,24 +46,9 @@ SHA256 d4ef9ed9c7c9add97df75f0e19a833bee872d3863a2b3cb1d0674fefba54e3d8 files/cy
 MD5 756c504a8b0b90aaa0630c089ae42f50 files/cyrus.rc6 573
 RMD160 1ca59773442962d47cf1c9899730410e168b563f files/cyrus.rc6 573
 SHA256 c5534ef121f1c509f0005846b10df12f32e11c282656bf48699c2b457a40e187 files/cyrus.rc6 573
-MD5 5a1c49cf6018aa400e8836ee03238140 files/digest-cyrus-imapd-2.2.10 71
-RMD160 e7f87504cf2587b42ddde07e835bcf2f237a0a16 files/digest-cyrus-imapd-2.2.10 71
-SHA256 74c37507adf78f57b3dd433e2be38e7d71c5664be6b868be2756400a6902226e files/digest-cyrus-imapd-2.2.10 71
-MD5 5a1c49cf6018aa400e8836ee03238140 files/digest-cyrus-imapd-2.2.10-r1 71
-RMD160 e7f87504cf2587b42ddde07e835bcf2f237a0a16 files/digest-cyrus-imapd-2.2.10-r1 71
-SHA256 74c37507adf78f57b3dd433e2be38e7d71c5664be6b868be2756400a6902226e files/digest-cyrus-imapd-2.2.10-r1 71
 MD5 28d9bdef56c61af75a28f8ae2ea2b5c7 files/digest-cyrus-imapd-2.2.12 71
 RMD160 0b5fcc75e58ca8cfc21069205bb6e63381622ba8 files/digest-cyrus-imapd-2.2.12 71
 SHA256 a662da942213a1f3444e9d11a0853a7bb500d7a211a915ad0cf460185e87b328 files/digest-cyrus-imapd-2.2.12 71
-MD5 28d9bdef56c61af75a28f8ae2ea2b5c7 files/digest-cyrus-imapd-2.2.12-r1 71
-RMD160 0b5fcc75e58ca8cfc21069205bb6e63381622ba8 files/digest-cyrus-imapd-2.2.12-r1 71
-SHA256 a662da942213a1f3444e9d11a0853a7bb500d7a211a915ad0cf460185e87b328 files/digest-cyrus-imapd-2.2.12-r1 71
-MD5 28d9bdef56c61af75a28f8ae2ea2b5c7 files/digest-cyrus-imapd-2.2.12-r2 71
-RMD160 0b5fcc75e58ca8cfc21069205bb6e63381622ba8 files/digest-cyrus-imapd-2.2.12-r2 71
-SHA256 a662da942213a1f3444e9d11a0853a7bb500d7a211a915ad0cf460185e87b328 files/digest-cyrus-imapd-2.2.12-r2 71
-MD5 28d9bdef56c61af75a28f8ae2ea2b5c7 files/digest-cyrus-imapd-2.2.12-r3 71
-RMD160 0b5fcc75e58ca8cfc21069205bb6e63381622ba8 files/digest-cyrus-imapd-2.2.12-r3 71
-SHA256 a662da942213a1f3444e9d11a0853a7bb500d7a211a915ad0cf460185e87b328 files/digest-cyrus-imapd-2.2.12-r3 71
 MD5 8c219986e0c374c302460c7204eb96fe files/digest-cyrus-imapd-2.2.12-r4 259
 RMD160 c3b34254e2030756e02decdb2593e4ebb3604994 files/digest-cyrus-imapd-2.2.12-r4 259
 SHA256 ad62d41892313174ffa09db9b0f48fdbc5a1feb33e2ba0bf6d9f1b7e06ce62d5 files/digest-cyrus-imapd-2.2.12-r4 259
@@ -97,7 +67,7 @@ SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3l4r5FrxP71izLARAuieAKC3cVck7UlQqBQzlfgW9aRydfDkTwCfShIy
-RAJ75T2V2vTdHqXVC51iXz8=
-=wiY4
+iD8DBQFD3l9E5FrxP71izLARAit+AJ9YrEIgPAnD7TADki1gGlD9TuN/NACfRaAs
+cGj1iwbrxxEUOYUmNWyvuUs=
+=Faxk
 -----END PGP SIGNATURE-----
