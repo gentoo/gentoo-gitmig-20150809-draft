@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a1f7d65508c212be9ca3d5c688c2f46 ChangeLog 410
-MD5 b67b3792b82c55fd82a6eccd8ede3e73 ezc-PersistentObject-1.0_rc1.ebuild 409
-MD5 915083b5dee5c8889be9bfe222d6e900 files/digest-ezc-PersistentObject-1.0_rc1 71
+MD5 503e324101d617a4a7917bc06ae0480c ChangeLog 599
+RMD160 7f686d58f2831179d6a52f5349436f9b09e56776 ChangeLog 599
+SHA256 c646cc6147ac9a06db8fcf4885747111e6fedb423c5e0f86063d122300c05b70 ChangeLog 599
+MD5 b67b3792b82c55fd82a6eccd8ede3e73 ezc-PersistentObject-1.0.ebuild 409
+RMD160 9f060ffa28397b1155ba59f5db4de9484e7356fd ezc-PersistentObject-1.0.ebuild 409
+SHA256 b5e0b01753a0e32fc59b282fbacadba3f4def0e17dbc843b81d6497f1f074abf ezc-PersistentObject-1.0.ebuild 409
+MD5 7ff6f160a3167bd2146fcbf4ddfe9a5c files/digest-ezc-PersistentObject-1.0 250
+RMD160 6c3af5e3541828035d499a9f7fcce85aaf5e8f98 files/digest-ezc-PersistentObject-1.0 250
+SHA256 dc1037df6d31e1e2482f4801273b1800767266d0f227876df27e6d7632a2b978 files/digest-ezc-PersistentObject-1.0 250
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1O4SaGfFFLhbXWkRAqVrAJ9QNXIxaNvmOVIVxOreWazvCCRdOACglNjT
-rjBVk6cJsqToSBQ7REHHmq0=
-=dbXN
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

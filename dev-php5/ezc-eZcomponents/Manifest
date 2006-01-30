@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4bf9003af51b971257fd039bd0e4d709 ChangeLog 394
-MD5 6dd2ba1ff2c0193821cdccb86dfcc12f ezc-eZcomponents-1.0_rc1.ebuild 800
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ezc-eZcomponents-1.0_rc1 0
+MD5 484bb866239eaa8354992910d1651dc2 ChangeLog 571
+RMD160 a67fa0263d207e2398f7f020f4b250897256b895 ChangeLog 571
+SHA256 f7f5df330146a9886a818c712c24d601d20a06a1d2aab109f79e74f6f4214e0e ChangeLog 571
+MD5 e5319d13dc0e0da12456445c4149f050 ezc-eZcomponents-1.0.ebuild 872
+RMD160 7219d21cd6b61714f2249ee6a080061470a202b1 ezc-eZcomponents-1.0.ebuild 872
+SHA256 ea0518b7f198d86010c364e48d39fd38e94312dc9ed89389bef1091556fa5b90 ezc-eZcomponents-1.0.ebuild 872
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ezc-eZcomponents-1.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-ezc-eZcomponents-1.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-ezc-eZcomponents-1.0 0
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1QWbaGfFFLhbXWkRAriSAJ9Bz2kDjvE4Bl2tTdkbWgilVAvmgwCff9BP
-tVSswt+UXvDZV0fiPadpLXI=
-=llgA
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 960970d4271a394ab4b6f39dd54da826 ChangeLog 394
-MD5 4860bbb5c2207bc6115355ab487a83d8 ezc-PhpGenerator-1.0_rc1.ebuild 400
-MD5 c2d71a499fa6cc70de32524650bc8bfe files/digest-ezc-PhpGenerator-1.0_rc1 66
+MD5 75c29c81c6da870098eed7177685a86a ChangeLog 571
+RMD160 9a1a899bd24e296a4fff990bc45f6a1c5850580a ChangeLog 571
+SHA256 d456f42c89889030cfd064f9c9564f758074e66de361fb1829ba8ad4efd5bd37 ChangeLog 571
+MD5 4860bbb5c2207bc6115355ab487a83d8 ezc-PhpGenerator-1.0.ebuild 400
+RMD160 28204d8dd1c5168e70f2cfd6e142b830eea459e8 ezc-PhpGenerator-1.0.ebuild 400
+SHA256 8e98d57a608cca27886186827324e375dfab6ff28c5fb4f77a46464458cfe938 ezc-PhpGenerator-1.0.ebuild 400
+MD5 e0ac9d552ea5502d2409423b90b07a00 files/digest-ezc-PhpGenerator-1.0 238
+RMD160 1a1bc8f04ed89f67e5e5b9fcd63424994810939a files/digest-ezc-PhpGenerator-1.0 238
+SHA256 da07590ecb627fd9f958b5299ef4a922e87f7bd229c3c33bc73f17a382173c0e files/digest-ezc-PhpGenerator-1.0 238
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1O5CaGfFFLhbXWkRAqhZAJ9cXLprYMb3tgvP2G9V5qHP+GgtEQCgiu34
-l+dIL80Uiu1mWXpWHgoi19s=
-=d2W+
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 349ce6f838f47d1601a80b2b4fd5f65c ChangeLog 374
-MD5 26ec3698019dda2e4231bc6dde66fb12 ezc-Archive-1.0_rc1.ebuild 391
-MD5 ed90c0c57b2a2ecefc44d4aa6227802f files/digest-ezc-Archive-1.0_rc1 62
+MD5 c961d3f09ba6526a495d95097ec93fd1 ChangeLog 536
+RMD160 0bc02e3a03a3b7fa503fcacfa2a374233cfbae54 ChangeLog 536
+SHA256 24ec78939a965a8453e21124869141a568959f6c8651fd8d1566e2684dedb09e ChangeLog 536
+MD5 26ec3698019dda2e4231bc6dde66fb12 ezc-Archive-1.0.ebuild 391
+RMD160 f4b2e44802d0a2972b28bde40e1c83fd44bcc16e ezc-Archive-1.0.ebuild 391
+SHA256 47230667ab811f5bbb3de51ee75b1d102b2516be96d29aa890d986eebcd25df5 ezc-Archive-1.0.ebuild 391
+MD5 7e335ea407b670684f3d9250ea205559 files/digest-ezc-Archive-1.0 223
+RMD160 c3a7561206380c9d5a4bae181cc0d7dee762c2fc files/digest-ezc-Archive-1.0 223
+SHA256 1be4e54eaedadf3487f9ffbcc09cccbfe969fdd18199740abe16b3039772fe47 files/digest-ezc-Archive-1.0 223
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1OwwaGfFFLhbXWkRAjzcAKCW0uQ3jhcYpYZO8KKZaSq3wr3AdwCglnOF
-QWlZWfeFZ7r2L2kGcXgB/C0=
-=ZwHP
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

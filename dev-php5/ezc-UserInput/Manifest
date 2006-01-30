@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4531fb6303f1c820545c36fea2de3e94 ChangeLog 382
-MD5 6fa3d33f08360ef393859a4918d222d4 ezc-UserInput-1.0_rc1.ebuild 392
-MD5 cd18a50ef3ac85f2add7f321f98a0fa5 files/digest-ezc-UserInput-1.0_rc1 63
+MD5 3c1de2c7478cbacc8f42b498c648e9f2 ChangeLog 550
+RMD160 a745d79bbf812bb6c688753920fadc9153b2f73f ChangeLog 550
+SHA256 ab998acdf51558714127dc0c5bcf6c45f4abe47e4445f86dd405c870b8fa3639 ChangeLog 550
+MD5 6fa3d33f08360ef393859a4918d222d4 ezc-UserInput-1.0.ebuild 392
+RMD160 d6b7458632d03b155e7f7a22856796810ef0d526 ezc-UserInput-1.0.ebuild 392
+SHA256 8460b35d45e5705cdcecb0fe448f628a925e1f52036ecb9c3169cff8e13e4b0c ezc-UserInput-1.0.ebuild 392
+MD5 8a197dc76674a972adad21c6b5765f44 files/digest-ezc-UserInput-1.0 229
+RMD160 995b6a94cf6dfbff91e3fae445c18ee353014f4e files/digest-ezc-UserInput-1.0 229
+SHA256 be9ad41c251570f6ece87efd7dbfd4d7f3e1a74d9fa12843d370a6441944ab69 files/digest-ezc-UserInput-1.0 229
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1O6XaGfFFLhbXWkRAnY9AJsER1hb6o9b8++lakdPqnh9Q8SDUwCcDZ3p
-GV/9mF9PB5OjFoWpFe7UEJU=
-=N9h1
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

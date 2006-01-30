@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af5dd0f90f3f88a0d34525812dedc261 ChangeLog 394
-MD5 16efa31eb5ce8f57afc4f7098e5211fb ezc-ConsoleTools-1.0_rc1.ebuild 393
-MD5 ea0efe8b4858223f9a405f18f188ed52 files/digest-ezc-ConsoleTools-1.0_rc1 67
+MD5 ca424dab1f6d0c95b5ba4ba50ed6545e ChangeLog 571
+RMD160 a2d939ed5ade7f6f9522a829868661a8b59275d1 ChangeLog 571
+SHA256 6fbea8c97cf87c57254c5da42b69604d1be8204368d72e0a485c87ee7032d1f6 ChangeLog 571
+MD5 16efa31eb5ce8f57afc4f7098e5211fb ezc-ConsoleTools-1.0.ebuild 393
+RMD160 3492066074c97a072e70732fcd4fd8ee03771775 ezc-ConsoleTools-1.0.ebuild 393
+SHA256 16abccf8bd113d6d8d279e701b3e7f5b1ed96e4bf71e21169dbff4ef7404f85d ezc-ConsoleTools-1.0.ebuild 393
+MD5 9f8161152c22311cd85c7a49af5c8545 files/digest-ezc-ConsoleTools-1.0 238
+RMD160 b50ead8d3a03eea46c2b1ae941fa387efa84ca4e files/digest-ezc-ConsoleTools-1.0 238
+SHA256 2fb6fe9040f69dba86e04d5c96639518c90dbca6416025f80c019e0a24edac7b files/digest-ezc-ConsoleTools-1.0 238
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1Oy6aGfFFLhbXWkRAhAvAJ4rifb5atBpAWUyyZODoo9KMp1XhQCeIoxq
-uoCNrRHNg+QVnim9b/ykUb4=
-=7CsE
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

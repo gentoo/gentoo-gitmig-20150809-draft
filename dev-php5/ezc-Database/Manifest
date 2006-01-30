@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85ef2eb03480573b5c7ffd802d8a3a27 ChangeLog 378
-MD5 ece689f17a7f3147ae41e8c7912faa7b ezc-Database-1.0_rc1.ebuild 370
-MD5 59f1d9fa81744c6d9f8ed10ceaf1b418 files/digest-ezc-Database-1.0_rc1 63
+MD5 239701c3988670d8a807c34fe20a02c4 ChangeLog 543
+RMD160 bbbee3dbaea707541276cf217b62845ab76ebb81 ChangeLog 543
+SHA256 1c926c27965825f032a2c8fa9fa8e6bd59e1780bb9941dd02f24bce880cf56b3 ChangeLog 543
+MD5 ece689f17a7f3147ae41e8c7912faa7b ezc-Database-1.0.ebuild 370
+RMD160 791476425ab49a8f1b29fd12c03209c6e66135e9 ezc-Database-1.0.ebuild 370
+SHA256 9b8a0dc95ce1b9335d9f6d99090a6f3a29ccee05a796a7466e02c1ccc844b2d3 ezc-Database-1.0.ebuild 370
+MD5 766c46b750d8ad0e022d5df52dfa364c files/digest-ezc-Database-1.0 226
+RMD160 2dfe2d45fb2cb9ebed43e9af57f61bdf636d68a1 files/digest-ezc-Database-1.0 226
+SHA256 c2a19adfa4f23a3ef30be5181bf5ac4158dd507f383e7c8a4b4c609a89771c54 files/digest-ezc-Database-1.0 226
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1OzkaGfFFLhbXWkRApKbAJ9CsSZaSGZk9Hj4n3Ii9BOL8aTgawCdEjJE
-ii32xU37N5tuG+mpjxvG228=
-=mCGf
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156

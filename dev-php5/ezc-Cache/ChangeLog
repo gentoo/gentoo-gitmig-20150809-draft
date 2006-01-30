@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/ezc-Cache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Cache/ChangeLog,v 1.1 2006/01/23 14:46:47 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Cache/ChangeLog,v 1.2 2006/01/30 15:23:31 sebastian Exp $
+
+*ezc-Cache-1.0 (30 Jan 2006)
+
+  30 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  -ezc-Cache-1.0_rc1.ebuild, +ezc-Cache-1.0.ebuild:
+  Version bump.
 
 *ezc-Cache-1.0_rc1 (23 Jan 2006)
 
