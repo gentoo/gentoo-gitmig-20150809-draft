@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/version-0.53.ebuild,v 1.1 2006/01/16 16:14:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/version-0.53.ebuild,v 1.2 2006/01/30 17:27:32 superlag Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/J/JP/JPEACOCK/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
