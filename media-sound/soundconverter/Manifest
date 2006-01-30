@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f9910c807b810deebe5945f65b179687 ChangeLog 422
+MD5 dd1b6b8ea8d4918ae1fe211996a86c23 ChangeLog 525
+RMD160 527e9e9650dd898c32d995098d5f43c0e6b34349 ChangeLog 525
+SHA256 66f9dee4b1331252e8526d0a0958845570ca08cfefc0b4f73731740f1064076e ChangeLog 525
 MD5 ea85cfc6bf5694d715ec61f3eb7ee56a files/digest-soundconverter-0.8.3 71
+RMD160 b7efe5787d7d18e5743c087b02ae08aee20b3b66 files/digest-soundconverter-0.8.3 71
+SHA256 0522cd6719c8659da99bc201970d37f48dbbc1dc4207d8a951e32f6a402607eb files/digest-soundconverter-0.8.3 71
 MD5 55caebb0cf39466dbb5e4e322d8a1498 files/soundconverter-0.8.3-makefile-fix.diff 1026
+RMD160 17f9e7190c8197cc224fdba336bfe90be399ab8d files/soundconverter-0.8.3-makefile-fix.diff 1026
+SHA256 48ca63bde14bc07a8997fb4c6a4c2fe85a1948f80e58a93bd091c183a756d617 files/soundconverter-0.8.3-makefile-fix.diff 1026
 MD5 d9885b371cf444e9a26ef0f8a0418d9b metadata.xml 219
-MD5 f9126f9197b6e202e2751e042ad7f1e7 soundconverter-0.8.3.ebuild 1064
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD14o9r2QksT29OyARAqL7AKCHKndyptemlh1fFGlSGo3PzjX+vACfZlis
-X5vwSZK2IG23QMxVaQk0tI4=
-=Fs10
------END PGP SIGNATURE-----
+RMD160 c3357aa8edfab7033261267720250a36fc96e7f8 metadata.xml 219
+SHA256 c76952c442b16a3d2efe40e95e84f1110ec9b13775882012b30a25ca3b063ada metadata.xml 219
+MD5 5552890682b3195a7c9e09f82b889bb0 soundconverter-0.8.3.ebuild 1074
+RMD160 ea532ad5e8d516e26d78ea104c8fb425c847ab6d soundconverter-0.8.3.ebuild 1074
+SHA256 2d45cb6a14b7387e96cc7fc5ad15396f89a1c89820afca5b10b200b75f1ab4cd soundconverter-0.8.3.ebuild 1074
