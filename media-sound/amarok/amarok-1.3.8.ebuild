@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.8.ebuild,v 1.1 2006/01/15 22:06:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.8.ebuild,v 1.2 2006/01/30 10:15:08 flameeyes Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -19,6 +19,7 @@ visualization vorbis musicbrainz"
 # kde: enables compilation of the konqueror sidebar plugin
 
 DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
+	|| ( kde-base/kdemultimedia-kioslaves kde-base/kdemultimedia )
 	arts? ( kde-base/arts
 	        || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
