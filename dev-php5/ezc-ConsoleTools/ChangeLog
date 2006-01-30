@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-ConsoleTools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.2 2006/01/30 15:24:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.3 2006/01/30 17:41:06 sebastian Exp $
+
+  30 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  ezc-ConsoleTools-1.0.ebuild:
+  Require SPL extension.
 
 *ezc-ConsoleTools-1.0 (30 Jan 2006)
 
