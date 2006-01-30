@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.47 2006/01/30 19:35:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.48 2006/01/30 19:48:00 blubb Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -41,7 +41,7 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~m68k mips ppc ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k mips ppc ~s390 ~sh sparc x86"
 RESTRICT="userpriv usersandbox test"
 
 DEPEND="virtual/libc
