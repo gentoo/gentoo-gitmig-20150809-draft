@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.19 2006/01/28 18:40:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.20 2006/01/30 00:07:58 metalgod Exp $
+
+  30 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  epiphany-extensions-1.8.1.ebuild:
+  Stable on amd64. Bug #120725.
 
   28 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   epiphany-extensions-1.8.1.ebuild:
