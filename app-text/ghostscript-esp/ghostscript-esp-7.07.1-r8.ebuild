@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.4 2006/01/29 23:38:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.5 2006/01/30 01:19:21 vanquirius Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -45,7 +45,6 @@ PROVIDE="virtual/ghostscript"
 
 src_unpack() {
 	unpack espgs-${PV}-source.tar.bz2
-	unpack gs7.07.1-cjk.diff.bz2
 
 	cd ${S}
 
@@ -59,6 +58,7 @@ src_unpack() {
 	fi
 
 	if use cjk ; then
+		unpack gs7.07.1-cjk.diff.bz2
 		epatch ${WORKDIR}/gs7.07.1-cjk.diff
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
