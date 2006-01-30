@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bff
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bff/ChangeLog,v 1.1 2005/12/30 17:58:56 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bff/ChangeLog,v 1.2 2006/01/30 13:25:59 blubb Exp $
+
+  30 Jan 2006; Simon Stelling <blubb@gentoo.org> bff-1.0.3.1.ebuild:
+  stable on amd64
 
 *bff-1.0.3.1 (30 Dec 2005)
 
