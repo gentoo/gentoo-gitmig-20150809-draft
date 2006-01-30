@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/orinoco-fwutils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/ChangeLog,v 1.1 2005/11/27 19:01:14 brix Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/ChangeLog,v 1.2 2006/01/30 22:00:28 brix Exp $
+
+  30 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  orinoco-fwutils-0.1.ebuild:
+  Stable on x86.
 
 *orinoco-fwutils-0.1 (27 Nov 2005)
 

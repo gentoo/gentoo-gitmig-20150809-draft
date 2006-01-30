@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.15 2006/01/01 23:17:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.16 2006/01/30 21:59:18 brix Exp $
+
+  30 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  orinoco-0.15_rc4.ebuild:
+  Stable on x86.
 
 *orinoco-0.15_rc4 (01 Jan 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc4.ebuild,v 1.1 2006/01/01 23:17:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc4.ebuild,v 1.2 2006/01/30 21:59:18 brix Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 MPL-1.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 
 IUSE="pcmcia"
 RDEPEND="net-wireless/wireless-tools"
