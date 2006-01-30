@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r6.ebuild,v 1.5 2005/09/30 18:48:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r6.ebuild,v 1.6 2006/01/30 06:41:50 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,9 +14,16 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE="X debug gtk mmx opengl"
 
 DEPEND=">=media-libs/libsdl-1.2.0
-	opengl? ( virtual/opengl virtual/glu )
+	opengl? (
+		virtual/opengl
+		virtual/glu )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	X? ( virtual/x11 )"
+	X? ( || (
+		(
+			x11-libs/libXext
+			x11-libs/libXi
+			x11-libs/libX11 )
+		virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
