@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/profuse
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.40 2005/11/23 15:43:02 dams Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.41 2006/01/30 20:35:15 dams Exp $
+
+*profuse-0.25.0 (30 Jan 2006)
+
+  30 Jan 2006; Damien Krotkine <dams@gentoo.org> +profuse-0.25.0.ebuild:
+  version bump, -* implemented, ncurses color schemes
 
 *profuse-0.24.0 (23 Nov 2005)
 
