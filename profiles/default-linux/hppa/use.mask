@@ -158,3 +158,7 @@ lirc
 
 3dfx
 pike
+
+# Adding h323 to mask. For more information see bug #115798
+h323
+
