@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ksb26
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.4 2005/12/20 10:56:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.5 2006/01/30 11:17:50 s4t4n Exp $
+
+*ksb26-0.0.4 (30 Jan 2006)
+
+  30 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> ksb26-0.0.4.ebuild:
+  Version bump.
 
   20 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> ksb26-0.0.3.ebuild:
   stable for x86.
