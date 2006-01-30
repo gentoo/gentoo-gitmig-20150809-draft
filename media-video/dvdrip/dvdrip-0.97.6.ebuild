@@ -1,7 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.2.ebuild,v 1.2 2006/01/12 23:30:23 compnerd Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.6.ebuild,v 1.1 2006/01/30 00:33:17 morfic Exp $
 
 
 inherit perl-module eutils
@@ -31,7 +30,7 @@ DEPEND="gnome? ( gnome-extra/gtkhtml )
 	>=media-video/transcode-0.6.14
 	>=media-gfx/imagemagick-5.5.3
 	dev-perl/gtk2-perl
-	>=dev-perl/gtk2-ex-formfactory-0.57
+	>=dev-perl/gtk2-ex-formfactory-0.59
 	>=dev-perl/Event-RPC-0.84
 	perl-core/Storable
 	dev-perl/Event"
@@ -46,16 +45,15 @@ pkg_setup() {
 	built_with_use media-video/transcode dvdread \
 		|| die	"transcode needs dvdread support builtin." \
 				"Please re-emerge transcode with the dvdread USE flag."
-
-	built_with_use sys-libs/glibc nptlonly \
-		&& die	"dvd::rip will not function without the" \
-				"linuxthreads fallback in glibc. This is" \
-				"being worked on upstream."
+	built_with_use >=media-video/transcode-1.0.2-r1 extrafilters \
+		&& die  "Please remerge transcode with -extrafilters in USE=, " \
+				"you have filters installed not compatible with dvdrip."
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-fix_nptl_workaround.patch
 	sed -i -e 's:cc :$(CC) :' src/Makefile || die "sed failed"
 }
 
@@ -75,4 +73,3 @@ pkg_postinst() {
 	einfo "for csh:  setenv PERLIO stdio"
 	einfo "into your /.${shell}rc"
 }
-
