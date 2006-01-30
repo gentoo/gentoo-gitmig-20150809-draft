@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.4 2006/01/08 23:41:42 vivo Exp $
+# $Id: mysql.eselect,v 1.5 2006/01/30 17:47:13 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/01/08 23:41:42 $'
+SVN_DATE='$Date: 2006/01/30 17:47:13 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/sbin"
 ERR_NOT_FOUND="(not-found)"
@@ -66,6 +66,87 @@ check_symlink() {
 
 	return ${ret}
 }
+
+# another one inherited from versionator.eclass (version_sort)
+# THERE IS A COPY OF THIS ONE IN MYSQL_FX.ECLASS, keep the two synced
+mysql_make_file_list() {
+	local items= left=0
+	items=( ${1}-[[:digit:]][[:digit:]][[:digit:]] )
+	[[ "${items}" == "${1}-[[:digit:]][[:digit:]][[:digit:]]" ]] && items=( )
+
+	while [[ ${left} -lt ${#items[@]} ]] ; do
+		local lowest_idx=${left}
+		local idx=$(( ${lowest_idx} + 1 ))
+		while [[ ${idx} -lt ${#items[@]} ]] ; do
+			[[ "${items[${lowest_idx}]}" > "${items[${idx}]}" ]] \
+				&& lowest_idx=${idx}
+			idx=$(( ${idx} + 1 ))
+		done
+		local tmp=${items[${lowest_idx}]}
+		items[${lowest_idx}]=${items[${left}]}
+		items[${left}]=${tmp}
+		left=$(( ${left} + 1 ))
+	done
+	echo ${items[@]}
+}
+
+# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
+mysql_choose_better_version() {
+	local items= better="" i
+	items="$( ls ${1}-[[:digit:]][[:digit:]][[:digit:]] )"
+	for i in ${items} ; do
+		if [[ "${i}" > "${better}" ]] ; then
+			better="${i}"
+		fi
+	done
+	echo "${better}"
+}
+
+# void mysql_lib_symlinks()
+#
+# To be called on the live filesystem, reassign symlinks to each mysql
+# library to the best version avaiable
+# 2005-12-30 <vivo at gentoo.org>
+# THERE IS A COPY OF THIS ONE IN MYSQL_FX.ECLASS, keep the two synced
+mysql_lib_symlinks() {
+	local d dirlist maxdots soname sonameln other better
+	pushd "${ROOT}/usr/lib/" &> /dev/null
+		# dirlist must contain the less significative directory left
+		dirlist="mysql $( mysql_make_file_list mysql )"
+
+		# waste some time in removing and recreating symlinks
+		for d in $dirlist ; do
+			for soname in $(find "${d}" -name "*.so*" -and -not -type "l") ; do
+				# maxdot is a limit versus infinite loop
+				maxdots=0
+				sonameln=${soname##*/}
+				# loop in version of the library to link it, similar to the
+				# libtool work
+				while [[ ${sonameln:0-3} != '.so' ]] && [[ ${maxdots} -lt 6 ]]
+				do
+					rm -f "${sonameln}"
+					ln -s "${soname}" "${sonameln}"
+					(( ++maxdots ))
+					sonameln="${sonameln%.*}"
+				done
+				rm -f "${sonameln}"
+				ln -s "${soname}" "${sonameln}"
+			done
+		done
+	popd &> /dev/null
+
+	# "include"s and "mysql_config", needed to compile other sw
+	for other in "/usr/include/mysql" "/usr/bin/mysql_config" ; do
+		pushd "${ROOT}${other%/*}" &> /dev/null
+		if ! [[ -d "${other##*/}" ]] ; then
+			better=$( mysql_choose_better_version "${other##*/}" )
+			[[ -L "${other##*/}" ]] && rm -f "${other##*/}"
+			! [[ -f "${other##*/}" ]] && ln -sf "${better}" "${other##*/}"
+		fi
+		popd &> /dev/null
+	done
+}
+
 
 # work out which MYSQL version the user has chosen from the list
 #
@@ -216,6 +297,7 @@ do_set() {
 	fi
 
 	set_current_version "$(version4bash "${version}")"
+	mysql_lib_symlinks
 }
 
 ### remove action ###
@@ -234,6 +316,7 @@ do_remove() {
 	fi
 
 	remove_current_version "$(version4bash "${version}")"
+	mysql_lib_symlinks
 }
 
 # vim: set ft=eselect :

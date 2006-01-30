@@ -1,5 +1,15 @@
-MD5 292cd87be527af4de5f87b1e2b5a6af1 ChangeLog 997
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 51e50a482a295166aa4aba9d8a9ac9be ChangeLog 1210
 MD5 c069ec9f84ebf9fab35f5d0ccdcc8943 eselect-mysql-1.0.0.ebuild 614
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-mysql-1.0.0 0
-MD5 80f375dbb99b7608ce24e40919ead50a files/mysql.eselect 5689
+MD5 6b8f8f5d9e1f816e8321448469c395f2 files/mysql.eselect 8249
 MD5 fa97fe3e6f213f79ccf7ffbd53838095 metadata.xml 338
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3lEyKolR564NvWYRAqv9AKCP+7sBwp5UV8B6GQBbUVz69PBX2wCgyL5t
+RgmSbsBUfXp1RqHhUAWw1ow=
+=jmvg
+-----END PGP SIGNATURE-----
