@@ -1,4 +1,4 @@
-MD5 0d23a32d8afcd198e0d95d60ba710e8a ChangeLog 1092
+MD5 a4be506357eff1b0f8c1326d436e01f1 ChangeLog 1195
 MD5 b2ce7b853100d51bbfe70170eef865ad files/digest-xf86-input-vmmouse-12.3.1.0 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 c9f185bc9d7ad478bc9af04cec53cfe0 xf86-input-vmmouse-12.3.1.0.ebuild 635
+MD5 dcbfa648fbe1ed82f9b25c8d6e056961 xf86-input-vmmouse-12.3.1.0.ebuild 627
