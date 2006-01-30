@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.20 2006/01/29 22:41:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.21 2006/01/30 00:10:35 metalgod Exp $
+
+  30 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  gnome-python-extras-2.12.0.ebuild:
+  Stable on amd64. Bug #120726.
 
   29 Jan 2006; Jason Wever <weeve@gentoo.org>
   gnome-python-extras-2.12.0.ebuild:

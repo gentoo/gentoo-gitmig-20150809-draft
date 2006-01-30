@@ -1,6 +1,9 @@
-MD5 880fe80b3a5e97099c2c80ae6e3a3161 ChangeLog 3182
-RMD160 de99eb159fcd6784bd259c0a3a410fa1daa1587d ChangeLog 3182
-SHA256 016c715aeb6759194e99765482069889044c318b098a9c5b70df26871ac5202c ChangeLog 3182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8530c605954ee9a40cbbed32efc0813c ChangeLog 3305
+RMD160 0851c1fef740267ed4d72e2e9ef21f6ccde9d879 ChangeLog 3305
+SHA256 bb6af534c1d85c3eede9c1eddb1e70be81166f6feea5a6cb5ae2e0b0b543ca4c ChangeLog 3305
 MD5 dee99b75f4b766a4a588ddb6b8a086c0 files/digest-gnome-python-extras-2.10.2 79
 RMD160 f87879a97dbea64c4dd6f100fdcd78d4050423f0 files/digest-gnome-python-extras-2.10.2 79
 SHA256 5e1fad2231e98098eb52741a5231a3847b85fd824da90cfaa75d4af31a47e3be files/digest-gnome-python-extras-2.10.2 79
@@ -16,12 +19,19 @@ SHA256 f65484fa95ba2ccfb2f17714a6a73328c4efbf0fea91255785413ccd12cdff40 files/gn
 MD5 390328416983a72b9d3241bcc005879f gnome-python-extras-2.10.2.ebuild 1678
 RMD160 8bbb4d5447c70f2e21202e15d9107a97734ae2ff gnome-python-extras-2.10.2.ebuild 1678
 SHA256 e11ec266edb003f69d6146c0d6a030961033d87fe8dc0aca72d7947bb4eb45c3 gnome-python-extras-2.10.2.ebuild 1678
-MD5 5c565952974647bf3d60ec82d948e7bf gnome-python-extras-2.12.0.ebuild 2002
-RMD160 8a6d0be343949fe8b07c558b4d3cd25768f1f320 gnome-python-extras-2.12.0.ebuild 2002
-SHA256 3086d8dad5a022d66bd82b06fbdeea6caada7d37bacd4aac04c2870424f9a4cb gnome-python-extras-2.12.0.ebuild 2002
+MD5 e496dff57439053af04d0dedf0d6ba18 gnome-python-extras-2.12.0.ebuild 2004
+RMD160 578fa4c8efeb4b80167c242cb7d20a30b0994ca2 gnome-python-extras-2.12.0.ebuild 2004
+SHA256 76f21af78a1fb8d8915a64fd1f0faa4d768cf306c1f282ce69285ae355303617 gnome-python-extras-2.12.0.ebuild 2004
 MD5 306fc8100f2087553a636ba488bcba81 gnome-python-extras-2.12.1.ebuild 1761
 RMD160 13b87519c732817b36c422616f0e763649a295b6 gnome-python-extras-2.12.1.ebuild 1761
 SHA256 6577ac5ae70d7fb55073e638855c26c0d59fefe32b0b0d422be15e8d88aaa281 gnome-python-extras-2.12.1.ebuild 1761
 MD5 7815efa8e3c1eece4b748785c644df85 metadata.xml 243
 RMD160 744a2788cbe20380a4d1652d0de573cddd0aa35f metadata.xml 243
 SHA256 1f38898a4be9f039c909d729aca8dbbe5c5c6a8340a6448ab3c4c69a7ff4ccc6 metadata.xml 243
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3VjSwUpWvClEHQoRAmxMAJ9wWSP9YEmfz32TBcOmnVRjyHG03gCfRRRY
+FHdYupvH4bCbW+pPFgpI0xA=
+=28eo
+-----END PGP SIGNATURE-----
