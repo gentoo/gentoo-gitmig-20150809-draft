@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.6-r3.ebuild,v 1.1 2005/09/18 09:34:40 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.6-r3.ebuild,v 1.2 2006/01/30 23:00:02 tsunam Exp $
 
 inherit gnome2 autotools
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
