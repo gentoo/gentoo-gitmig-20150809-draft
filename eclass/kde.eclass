@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.143 2006/01/26 12:14:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.144 2006/01/30 13:24:35 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -156,6 +156,13 @@ kde_src_compile() {
 				# still honored.
 				if [[ $(get_libdir) != "lib" ]] ; then
 					myconf="${myconf} --enable-libsuffix=$(get_libdir | sed s/lib//)"
+				fi
+
+				# Sometimes it doesn't get the include and library paths right,
+				# so hints them.
+				if [[ -z ${PREFIX} || ${PREFIX} != ${KDEDIR} ]]; then
+					myconf="${myconf} --with-extra-includes=${KDEDIR}/include
+						--with-extra-libs=${KDEDIR}/$(get_libdir)"
 				fi
 
 				econf \
