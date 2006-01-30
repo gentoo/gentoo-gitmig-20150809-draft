@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.26 2006/01/28 19:13:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.27 2006/01/30 05:58:28 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -21,8 +21,19 @@ RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( >=media-sound/esound-0.2.19 )
 	arts? ( kde-base/arts )
-	nas? ( media-libs/nas virtual/x11 )
-	X? ( virtual/x11 )
+	nas? (
+		media-libs/nas
+		|| ( (
+			x11-libs/libXt
+			x11-libs/libXext
+			x11-libs/libX11 )
+		virtual/x11 ) )
+	X? (
+		|| ( (
+			x11-libs/libXt
+			x11-libs/libXext
+			x11-libs/libX11 )
+		virtual/x11 ) )
 	directfb? ( >=dev-libs/DirectFB-0.9.19 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
@@ -30,6 +41,16 @@ RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	libcaca? ( >=media-libs/libcaca-0.9-r1 )
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
+	nas? (
+		|| ( (
+			x11-proto/xextproto
+			x11-proto/xproto )
+		virtual/x11 ) )
+	X? (
+		|| ( (
+			x11-proto/xextproto
+			x11-proto/xproto )
+		virtual/x11 ) )
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/SDL-${PV}
