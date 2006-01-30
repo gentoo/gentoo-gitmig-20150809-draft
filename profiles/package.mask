@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4929 2006/01/30 17:35:44 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4930 2006/01/30 20:27:26 langthang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1491,6 +1491,7 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.4
 =mail-mta/postfix-2.2.5-r1
 =mail-mta/postfix-2.2.7-r1
+=mail-mta/postfix-2.2.8-r1
 =mail-mta/sendmail-8.13.4-r1
 =mail-mta/exim-4.50-r999
 
