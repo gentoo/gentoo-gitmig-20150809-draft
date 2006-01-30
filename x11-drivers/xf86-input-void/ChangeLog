@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-void
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-void/ChangeLog,v 1.10 2005/12/26 20:19:21 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-void/ChangeLog,v 1.11 2006/01/30 18:20:58 fmccor Exp $
+
+  30 Jan 2006; Ferris McCormick <fmccor@gentoo.org>
+  xf86-input-void-1.0.0.5.ebuild:
+  Add ~sparc keyword.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xf86-input-void-1.0.0.3.ebuild, -xf86-input-void-1.0.0.4.ebuild:
