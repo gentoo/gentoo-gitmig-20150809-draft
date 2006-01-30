@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.2.ebuild,v 1.3 2005/11/19 20:37:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.2.ebuild,v 1.4 2006/01/30 02:44:35 josejx Exp $
 
-inherit eutils linux-info flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="program to map special Powerbook/iBook keys"
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -19,12 +19,6 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )"
 src_compile() {
 	# Fix crash bug on some systems
 	replace-flags -O? -O1
-
-	if ! linux_chkconfig_present INPUT_EVDEV ; then
-		eerror "Please enable CONFIG_INPUT_EVDEV in your kernel"
-		eerror "pbbuttonsd will not work without it."
-		die "Kernel not compiled with CONFIG_INPUT_EVDEV support"
-	fi
 
 	if use x86; then
 		if use acpi; then
@@ -53,10 +47,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	if linux_chkconfig_module INPUT_EVDEV ; then
-		ewarn "Ensure that the evdev kernel module is loaded otherwise"
-		ewarn "pbbuttonsd won't work."
-	fi
+	ewarn "Ensure that the evdev kernel module is loaded or built in"
+	ewarn "pbbuttonsd won't work without it."
+	einfo
 
 	if use ppc; then
 	einfo
@@ -65,6 +58,7 @@ pkg_postinst() {
 	einfo "replace_pmud=no in /etc/pbbuttonsd.conf. Otherwise you can"
 	einfo "try setting replace_pmud=yes in /etc/pbbuttonsd.conf and"
 	einfo "disabling PMUD"
+	einfo
 	ewarn "Warning: the NoTapTyping option is unstable, see bug #86768."
 	fi
 }
