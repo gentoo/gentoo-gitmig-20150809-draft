@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.40 2006/01/22 22:52:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.41 2006/01/30 00:49:22 flameeyes Exp $
+
+  30 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdebase-startkde-3.4.1.ebuild, kdebase-startkde-3.4.2.ebuild,
+  kdebase-startkde-3.4.3.ebuild, kdebase-startkde-3.5.0.ebuild,
+  kdebase-startkde-3.5.1.ebuild:
+  Add dependencies for modular X, thanks to Ryan Hill in bug #117033.
 
 *kdebase-startkde-3.5.1 (23 Jan 2006)
 

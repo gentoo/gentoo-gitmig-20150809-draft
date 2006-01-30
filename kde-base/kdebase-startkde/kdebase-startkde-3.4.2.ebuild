@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.4.2.ebuild,v 1.2 2005/08/08 22:23:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.4.2.ebuild,v 1.3 2006/01/30 00:49:22 flameeyes Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -17,6 +17,13 @@ IUSE=""
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
 RDEPEND="$RDEPEND
+	|| ( (
+			x11-apps/xmessage
+			x11-apps/xsetroot
+			x11-apps/xset
+			x11-apps/xrand
+			x11-apps/mkfontdir
+		) virtual/x11 )
 $(deprange $PV $MAXKDEVER kde-base/kdesktop)
 $(deprange 3.4.1 $MAXKDEVER kde-base/kcminit)
 $(deprange 3.4.1 $MAXKDEVER kde-base/ksmserver)
