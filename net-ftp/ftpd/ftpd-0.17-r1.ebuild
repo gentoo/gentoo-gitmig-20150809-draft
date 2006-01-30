@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17-r1.ebuild,v 1.10 2005/07/26 13:41:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17-r1.ebuild,v 1.11 2006/01/30 19:03:56 blubb Exp $
 
 inherit eutils
 
@@ -9,7 +9,8 @@ IUSE="ssl"
 S=${WORKDIR}/linux-${P}
 DESCRIPTION="The netkit FTP server with optional SSL support"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/linux-${P}.tar.gz"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/linux-${P}.tar.gz
+		ssl? ( mirror://gentoo/${P}-ssl.diff.gz )"
 
 SLOT="0"
 LICENSE="as-is"
@@ -24,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	if use ssl; then
-		epatch ${FILESDIR}/ssl.diff.gz
+		epatch ${WORKDIR}/${P}-ssl.diff
 	fi
 	epatch ${FILESDIR}/${P}-shadowfix.patch
 }
