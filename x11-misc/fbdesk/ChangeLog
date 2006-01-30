@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbdesk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.15 2005/10/03 12:15:00 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.16 2006/01/30 19:21:44 robbat2 Exp $
+
+  30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> fbdesk-1.2.1.ebuild:
+  Modular-X fixing.
 
   03 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> fbdesk-1.2.1.ebuild:
   Cleaned up ebuild: fixed LICENSE (its MIT not GPL-2), fixed DEPEND (libpng
