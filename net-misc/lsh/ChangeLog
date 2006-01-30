@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lsh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.6 2006/01/23 22:58:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.7 2006/01/30 23:04:16 tsunam Exp $
+
+  30 Jan 2006; Joshua Jackson <tsunam@gentoo.org> lsh-2.0.1-r1.ebuild:
+  Stable on x86 for Security bug #119966
 
 *lsh-2.0.1-r1 (23 Jan 2006)
 
