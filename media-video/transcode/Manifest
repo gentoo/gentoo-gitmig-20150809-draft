@@ -1,22 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 346eb809071c79beb027fc9678dc768c ChangeLog 25278
+MD5 bd60b2856957a1356bda87b3809261e5 ChangeLog 25384
+RMD160 e9d872db8a65d05281f8925d1ab1f9931ce1e6be ChangeLog 25384
+SHA256 191fd94b2da306ed26555e74b9a6552f4ff22aeeac4cc580533ac4cd03459478 ChangeLog 25384
 MD5 8e1251c76b508dfdfe0e4f0c0b166540 files/digest-transcode-0.6.14-r2 144
+RMD160 8f8d40b9c1343a02f9002185540bd6c455750940 files/digest-transcode-0.6.14-r2 144
+SHA256 007a460fcd8420b02d0c87b58f2fd999a592307ba37d9579571e6fa1a9e0d0d0 files/digest-transcode-0.6.14-r2 144
 MD5 03b7d892f34025e0c5854e0977b5fb49 files/digest-transcode-0.6.14-r3 144
+RMD160 8b70da9f0103e5df85d020819183ead70ad0db59 files/digest-transcode-0.6.14-r3 144
+SHA256 cb2f22a71deddfef9664cba639308c71e3050ccb90316b7f83e1dd45fd27c01e files/digest-transcode-0.6.14-r3 144
 MD5 2ee1936ab9b228cc4350881352426bd8 files/digest-transcode-1.0.2-r1 68
+RMD160 470a5c6116101efa480d4b1e4a82cc91ff46d17b files/digest-transcode-1.0.2-r1 68
+SHA256 0bd586ad78abcb1383d2e4ca50d6b452cd3bde9429d817647048b64f6be05cf7 files/digest-transcode-1.0.2-r1 68
 MD5 9c8ef7a1b3cb0f04ff6e37e1bc6e05e7 files/digest-transcode-1.0.2-r2 136
+RMD160 7356676bbe1543f64485cec1f3d6b1a082a8b8ca files/digest-transcode-1.0.2-r2 136
+SHA256 74c597e6316498e2673e4545885d27ac5773c4f3cfd90dba6e41ce76de58e436 files/digest-transcode-1.0.2-r2 136
 MD5 09d908064da685a17f52adb57e0c8075 files/transcode-1.0.2-bigdir.patch 10634
+RMD160 dca043f16a24d58802ead53b41e26adf9336c7b9 files/transcode-1.0.2-bigdir.patch 10634
+SHA256 306f238ceb11bf81a01f27b684b0ec014aa576fb48c4072e1e67324a86c99bab files/transcode-1.0.2-bigdir.patch 10634
 MD5 07f7315638c5e4058ed39d914aed0d0f files/transcode-1.0.2-lzo2.patch 2922
+RMD160 669ee845670e4cd007d613be9ab10d84a56d73da files/transcode-1.0.2-lzo2.patch 2922
+SHA256 e1b0631a4e790821160fa5cef7ffc14d80556ff51daf01a5df250d331e0b4b7b files/transcode-1.0.2-lzo2.patch 2922
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
+SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 MD5 78dd013b06017dffa629d94d27c361fb transcode-0.6.14-r2.ebuild 3995
+RMD160 f7e7fba49a72cb604785a8853f1c7c285d361186 transcode-0.6.14-r2.ebuild 3995
+SHA256 001cd3b6b74e6429a082a84c4253f22e65b061eeecba05f9ad5dc434e282dd5a transcode-0.6.14-r2.ebuild 3995
 MD5 13d0c52e74628292c83986d79e87223d transcode-0.6.14-r3.ebuild 3569
+RMD160 9849965b6b01e55bbf523f11475b8e271fc81180 transcode-0.6.14-r3.ebuild 3569
+SHA256 e9847e2552592fabbd7481726aa5b7f3164189864651035b92c09b2eb0df41be transcode-0.6.14-r3.ebuild 3569
 MD5 b15cb6b73f828461bd418ff5faf8194c transcode-1.0.2-r1.ebuild 3789
-MD5 a45d12c57aa8182054a4b7255b5bd157 transcode-1.0.2-r2.ebuild 4121
+RMD160 e1094b4825fa82976c2fb8b2264eaad4db8a65ab transcode-1.0.2-r1.ebuild 3789
+SHA256 c8a42864ca7c34b5b4ab79028221717da1e921e305dd50010efa17503ce37731 transcode-1.0.2-r1.ebuild 3789
+MD5 b950acea835759a878f4e28b1afb6918 transcode-1.0.2-r2.ebuild 4126
+RMD160 ac5b446d98a3834dc3ff82b05187017cdef2e738 transcode-1.0.2-r2.ebuild 4126
+SHA256 6820664caa3db32a6771016d17569d2a870625fa824332c18a4fd18e5f468e3f transcode-1.0.2-r2.ebuild 4126
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3WDG/aM9DdBw91cRAuiGAJ9sJap4O2+zkobTkfO4QtjAIEfjBgCfVtWK
-Cr8ejS1E33Csbtkfe1MiMYE=
-=yArS
+iD8DBQFD3ppkSENan+PfizARAipJAKCWokMinikJ5fQQPJLPLIaV9zcsigCbBHen
+0nFEYF+RHymwH26rWokITxA=
+=pKzK
 -----END PGP SIGNATURE-----
