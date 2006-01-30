@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.2 2006/01/28 17:10:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.3 2006/01/30 00:27:54 morfic Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -13,8 +13,8 @@ SRC_URI="mirror://transcode/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc64 ~sparc"
-IUSE="X 3dnow a52 altivec dv dvdread mp3 fame truetype gtk imagemagick jpeg
+KEYWORDS="~ppc ~amd64 ~ppc64 ~sparc"
+IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype gtk imagemagick jpeg
 lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l2
 xvid xml2 ffmpeg"
 
@@ -136,6 +136,12 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+
+	#do not install the filters that make dvdrip hang unless we ask for them
+	if ! use extrafilters ; then
+	rm ${D}/usr/$(get_libdir)/transcode/filter_logo.*
+	rm ${D}/usr/$(get_libdir)/transcode/filter_compare.*
+	fi
 
 	dodoc AUTHORS ChangeLog README TODO
 }
