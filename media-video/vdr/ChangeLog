@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.41 2006/01/29 20:01:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.42 2006/01/30 22:30:40 zzam Exp $
+
+  30 Jan 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.36-r3.ebuild:
+  prepared for unmasking: changed SRC_URI to mirror://gentoo, changed name of
+  patchset-name-variable
 
   29 Jan 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.36-r3.ebuild:
   changed to patchset version 0.2 (solves a bug with USE=subtitles bigpatch)

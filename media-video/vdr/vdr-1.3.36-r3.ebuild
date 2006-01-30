@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.3 2006/01/29 20:01:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.4 2006/01/30 22:30:40 zzam Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ PATCHSET_NAME=${P}-gentoo-patchset-${PATCHSET_V}
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.cadsoft.de/vdr/"
 SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2
-	http://dev.gentoo.org/~zzam/distfiles/${PATCHSET_NAME}.tar.bz2"
+	mirror://gentoo/${PATCHSET_NAME}.tar.bz2"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
@@ -105,8 +105,8 @@ apply_vdr_patchset() {
 
 src_unpack() {
 	unpack ${A}
-	if [[ -n "${LOCAL_VDR_PATCHSET}" && -d "${ROOT}/${LOCAL_VDR_PATCHSET}" ]]; then
-		PATCHSET_DIR="${ROOT}/${LOCAL_VDR_PATCHSET}"
+	if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${ROOT}/${VDR_LOCAL_PATCHSET}" ]]; then
+		PATCHSET_DIR="${ROOT}/${VDR_LOCAL_PATCHSET}"
 	else
 		PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
 	fi
