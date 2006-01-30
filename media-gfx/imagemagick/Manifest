@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5a8841340ddf0fb55ede1c990087ee4 ChangeLog 25480
+MD5 d5b40908e842d9fb1827bb5d2474f1e9 ChangeLog 25586
 MD5 42fd34630ded62400ed31be1426e3b32 files/digest-imagemagick-6.1.8.8 73
 MD5 b5fd28bb0167a5ab5f5422e7335a5c11 files/digest-imagemagick-6.2.0.4 72
 MD5 3463dd071a5d891ab69d1797c256df76 files/digest-imagemagick-6.2.0.6 72
@@ -33,13 +30,6 @@ MD5 05d71d7340a6ab59648cffa7a8c44a3f imagemagick-6.2.4.2-r1.ebuild 2700
 MD5 5511a30e523ec782cd0fbfe640fdb64e imagemagick-6.2.4.2.ebuild 2669
 MD5 93b2c6a6f1385d05b35ae5406b8a2800 imagemagick-6.2.5.2.ebuild 2705
 MD5 d07c1ad811fbc83b076177a93522b077 imagemagick-6.2.5.4.ebuild 2769
-MD5 e19c87c295801b257a8101aec523eaeb imagemagick-6.2.5.5.ebuild 2791
+MD5 019ef98b0b923c5e15c8fcb9d6361444 imagemagick-6.2.5.5.ebuild 2790
 MD5 d34d6c2b30484dc8bfacda4d6068d023 imagemagick-6.2.6.0.ebuild 2794
 MD5 3dc350be33069338fa083ca16ec11cc8 metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2U9bub4+zaPCR/oRAiywAKChtpK3fznd/CWRdCe+RRx7PRu1yACgszIW
-iSuA2vV63LT/QFKS71WUQkA=
-=IplD
------END PGP SIGNATURE-----
