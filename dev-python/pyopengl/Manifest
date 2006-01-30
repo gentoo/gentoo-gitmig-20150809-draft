@@ -4,5 +4,5 @@ MD5 9feca450998c720327067463fea8cdc0 files/digest-pyopengl-2.0.0.44 70
 MD5 1160aa70c95cda6bac58711ef532c929 files/digest-pyopengl-2.0.1.09 70
 MD5 c3e4064cdb5f7ab59c2e27e91f7ed4c0 files/pyopengl-2.0.0.44-fix_togl.patch 946
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 8917900a36bd56b70e5428b8cfb5fc40 pyopengl-2.0.0.44.ebuild 1423
+MD5 4547ffdcb45ca7300701fcfb10b61ba6 pyopengl-2.0.0.44.ebuild 1477
 MD5 1a7fba354f5c460720fd951aa8a31c19 pyopengl-2.0.1.09.ebuild 1415
