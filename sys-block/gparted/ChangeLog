@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.13 2006/01/22 22:14:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.14 2006/01/30 13:11:54 blubb Exp $
+
+*gparted-0.2 (30 Jan 2006)
+
+  30 Jan 2006; Simon Stelling <blubb@gentoo.org> +gparted-0.2.ebuild:
+  new upstream release
 
   22 Jan 2006; Simon Stelling <blubb@gentoo.org> Manifest:
   fix bug 119974
