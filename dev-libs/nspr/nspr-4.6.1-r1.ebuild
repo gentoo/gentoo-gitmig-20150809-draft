@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r1.ebuild,v 1.1 2006/01/30 17:35:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r1.ebuild,v 1.2 2006/01/30 17:40:58 anarchy Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="Netscape Portable Runtime"
 HOMEPAGE="http://www.mozilla.org/projects/nspr/"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar.gz"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar.gz
+		mirror://gentoo/${P}-disable-gcc-ansi.patch.bz2
+		http://dev.gentoo.org/~anarchy/dist/${P}-disable-gcc-ansi.patch.bz2"
 
 LICENSE="MPL-1.1"
 SLOT="0"
