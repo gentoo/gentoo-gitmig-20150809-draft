@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.5 2006/01/28 23:25:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.6 2006/01/30 19:12:22 spyderous Exp $
 
 inherit eutils
 
@@ -91,8 +91,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_fglrx"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
-	3dfx
-	xprint"
+	3dfx"
 
 # Collision protect will scream bloody murder if we install over old versions
 RDEPEND="!<=x11-base/xorg-x11-6.9"
@@ -118,11 +117,11 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/libXcursor-1.1.5.2
 	>=x11-libs/libXdamage-1.0.2.2
 	>=x11-libs/libXfixes-3.0.1.2
+	>=x11-libs/libXp-1
 	>=x11-libs/libXv-1.0.1
 	>=x11-libs/libXxf86dga-1
 	>=x11-libs/libXinerama-1.0.1
-	>=x11-libs/libXScrnSaver-1.0.1
-	xprint? ( >=x11-libs/libXp-1 )"
+	>=x11-libs/libXScrnSaver-1.0.1"
 
 # Some fonts
 RDEPEND="${RDEPEND}
