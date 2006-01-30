@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20051216.ebuild,v 1.18 2006/01/13 12:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20051216.ebuild,v 1.19 2006/01/30 06:07:35 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -68,18 +68,21 @@ src_unpack() {
 	cd ${S}
 	cp -R ${S_BASE} ${S_STATIC}
 	mv ${S_BASE} ${S_SHARED}
+
+	# Patch for gcc-4 shared build only
+	cd ${S_SHARED}
+	epatch ${FILESDIR}/ffmpeg-shared-gcc4.patch
 }
 
 src_compile() {
 	#Note; library makefiles don't propogate flags from config.mak so
 	#use specified CFLAGS are only used in executables
-	filter-flags -fforce-addr -momit-leaf-frame-pointer
 	replace-flags -O0 -O2
 
 	local myconf=""
 
 	#disable mmx accelerated code if not requirested, or if PIC is required
-	# as the provided asm decidedly isn't PIC.
+	# as the provided asm decidedly is not PIC.
 	if ( ! has_pic && use mmx ) || use amd64; then
 		myconf="${myconf} --enable-mmx"
 	else
@@ -115,6 +118,18 @@ src_compile() {
 	cd ${S_STATIC}
 	econf --disable-shared-pp --disable-shared --enable-static ${myconf} || die "Configure failed"
 	emake CC="$(tc-getCC)" || die "static failed"
+
+	# Specific workarounds for too-few-registers arch...
+	if [[ $(tc-arch) == "x86" ]]; then
+		filter-flags -fforce-addr -momit-leaf-frame-pointer
+		append-flags -fomit-frame-pointer
+		is-flag -O? || append-flags -O2
+		ewarn ""
+		ewarn "Debug information will be almost useless as the frame pointer is omitted."
+		ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
+		ewarn "difficult to fix. Please have that in mind."
+		ewarn ""
+	fi
 
 	cd ${S_SHARED}
 	econf --enable-shared-pp --enable-shared --disable-static ${myconf} || die "Configure failed"

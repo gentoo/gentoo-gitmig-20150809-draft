@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8e191353a6ad84cca1574cacb79bdf3 ChangeLog 18289
+MD5 6105512dde5052e731abd9dfe61a1433 ChangeLog 18509
 MD5 af3a24b95f43ea461192736d7e9968c2 ffmpeg-0.4.9_p20050226-r3.ebuild 4384
 MD5 ff615b7d4ca2c8355c1d0a358271e2d8 ffmpeg-0.4.9_p20050226-r5.ebuild 4543
 MD5 e4e188b8783b45bbc9c454b9f4de3aad ffmpeg-0.4.9_p20050906.ebuild 4781
 MD5 faab330a828982afbde572059cedc47f ffmpeg-0.4.9_p20051120.ebuild 4707
-MD5 8c15dfa166c4f44f80112007906cb673 ffmpeg-0.4.9_p20051216.ebuild 5149
+MD5 a0bb2c92819f677e9a54da4e25610aaf ffmpeg-0.4.9_p20051216.ebuild 5657
 MD5 003b0062185efcb0ea5a6115fa8a646a files/0.4.8-gcc3.4-magicF2W.patch 994
 MD5 99176b97ac8dd94ffc1d23961cc54906 files/digest-ffmpeg-0.4.9_p20050226-r3 73
 MD5 99176b97ac8dd94ffc1d23961cc54906 files/digest-ffmpeg-0.4.9_p20050226-r5 73
@@ -20,14 +17,8 @@ MD5 96c7f1f67e0299ad71b9c0fad55c3960 files/ffmpeg-configure.patch 585
 MD5 b1cd277309faaaa03e3dafb3b89b2a09 files/ffmpeg-libdir-pic.patch 6027
 MD5 1a8c0be3a5a5ba1d929b7773265943b7 files/ffmpeg-missing_links.patch 1199
 MD5 b4ecc62e882107f766cf621bfc6c7e20 files/ffmpeg-osx.patch 5940
+MD5 f486e0b9d41c3d417a3b918189f2be9e files/ffmpeg-shared-gcc4.patch 1575
 MD5 1b97a7c3bc63b61423f8837f11aaa9cd files/ffmpeg-soname-symlink.patch 4937
 MD5 02a1298f3a982efa3dc25f1746e3dccc files/ffmpeg-unknown-options.patch 414
 MD5 f0c54c934c78216a2bd0b157028a6f84 files/gentoo-ffmpeg001.patch 752
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDx5lU2+ySkm8kpY0RAhcdAKC05LxCeFo1imrPg6vpSh8yt0/yfwCgsltx
-Yz2o2zoaJKymR6sm2mJBieQ=
-=QHLc
------END PGP SIGNATURE-----
