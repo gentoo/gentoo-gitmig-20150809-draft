@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5df609dcaa684ccbdcdc36ff3c571aeb ChangeLog 1776
+MD5 278f4039360f0e3a0e99d50a0746346a ChangeLog 1881
 MD5 4d0aa84ce23c94f0874e8c3449d6350b epydoc-1.1.ebuild 680
 MD5 5c70b22aeb539bff010f261755fadb38 epydoc-2.0.ebuild 679
 MD5 4456cba6bb8b27cbb26391cebdd0b1e7 epydoc-2.1-r1.ebuild 721
-MD5 b02cbee57de29b2147792b27bbce3765 epydoc-2.1-r2.ebuild 654
+MD5 32b88dec3287b17529e05fe9cce40c51 epydoc-2.1-r2.ebuild 663
 MD5 427ba96becc847c49a9a0c76a7469c51 epydoc-2.1.ebuild 684
 MD5 d21c286501b0192dd368d1f9476ab2cd files/digest-epydoc-1.1 62
 MD5 079c7f26b5e482c98875b8ad3f1826f7 files/digest-epydoc-2.0 62
@@ -13,10 +10,3 @@ MD5 25de883fcadc3fadb6e3d3a7ad9239d0 files/digest-epydoc-2.1 62
 MD5 25de883fcadc3fadb6e3d3a7ad9239d0 files/digest-epydoc-2.1-r1 62
 MD5 25de883fcadc3fadb6e3d3a7ad9239d0 files/digest-epydoc-2.1-r2 62
 MD5 b7528c74e22361c21e6dd4cf0725dcb8 metadata.xml 1070
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfv/jFdQwWVoAgN4RAi9FAJ0cte5eF44ShhYJ4b3TR1Tw/dZvkgCcC5Er
-4g1cBw15XcnAphmluCJCVZ8=
-=NgwC
------END PGP SIGNATURE-----
