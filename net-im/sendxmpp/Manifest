@@ -1,4 +1,16 @@
-MD5 8d0106c0f3c57f55e0c5543e3f6a69ea ChangeLog 914
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bdb293d29c13cfd4c7ba48f290e980fe ChangeLog 1031
+MD5 3148e9749b00e87fb31fbf1ccef9743c files/digest-sendxmpp-0.0.6 64
+MD5 040a57d28c5a28bcec634b23dc5509e6 files/digest-sendxmpp-0.0.8 64
 MD5 777dd6192cc0e6ca0bc051ab9f92a54a metadata.xml 221
 MD5 1207051af9791f34ada3ac32bacdd59e sendxmpp-0.0.6.ebuild 760
-MD5 3148e9749b00e87fb31fbf1ccef9743c files/digest-sendxmpp-0.0.6 64
+MD5 cab18d6d8c294147a8041f23a3d76b5a sendxmpp-0.0.8.ebuild 759
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD33t63mryvu3JUUURAq1gAJ9KG8xEH5Lutk1uDEzWrwok31coMQCeMajM
+/Ra19mx2248ybBsGBYAH+H8=
+=2fOD
+-----END PGP SIGNATURE-----
