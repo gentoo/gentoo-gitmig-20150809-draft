@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.7 2005/10/31 16:21:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.8 2006/01/31 21:29:00 nelchael Exp $
 
 IUSE="jpeg png nls debug"
 
@@ -12,7 +12,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc x86"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libXtst
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXrender
+		x11-libs/libXft )
+	virtual/x11 )
 	dev-libs/expat
 	x11-libs/startup-notification
 	x11-libs/libxsettings-client
@@ -20,6 +27,10 @@ RDEPEND="virtual/x11
 	jpeg? ( media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )
 	sys-devel/libtool"
 
 use debug && RESTRICT="nostrip"
