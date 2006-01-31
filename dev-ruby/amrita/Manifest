@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57afe0e211007de84080366d04d819a4 ChangeLog 2454
-MD5 57f61174aabd1074e22e18669089055b amrita-1.8.2-r1.ebuild 593
+MD5 dcabdb9063f32ce548ee7bae93a015a5 amrita-1.8.2-r1.ebuild 594
 MD5 c485a522781eb5285875f6700518b7cb files/digest-amrita-1.8.2-r1 64
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD371UJrHF4yAQTrARAu1fAJ43TSr+zqSQZFUcaI3uOi0nfiZsHgCfTp3+
+yj++8pkln/CeqW42joyrcGA=
+=RziC
+-----END PGP SIGNATURE-----
