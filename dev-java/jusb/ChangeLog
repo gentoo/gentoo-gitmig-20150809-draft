@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jusb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.1 2005/04/19 19:26:58 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.2 2006/01/31 04:34:18 nichoj Exp $
+
+  31 Jan 2006; Joshua Nichols <nichoj@gentoo.org> jusb-0.4.4.ebuild:
+  Fixed multilib-strict violation.
 
 *jusb-0.4.4 (19 Apr 2005)
 

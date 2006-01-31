@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/jusb-0.4.4.ebuild,v 1.1 2005/04/19 19:26:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/jusb-0.4.4.ebuild,v 1.2 2006/01/31 04:34:18 nichoj Exp $
 
-inherit eutils java-pkg linux-info flag-o-matic
+inherit eutils java-pkg linux-info flag-o-matic multilib
 
 DESCRIPTION="jUSB provides a Free Software Java API for USB"
 HOMEPAGE="http://jusb.sourceforge.net/"
@@ -53,7 +53,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar jusb.jar
-	java-pkg_sointo /usr/lib
+	java-pkg_sointo /usr/$(get_libdir)
 	java-pkg_doso libjusb.so
 
 	dodoc README*
