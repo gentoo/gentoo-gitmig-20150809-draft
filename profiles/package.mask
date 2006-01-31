@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4930 2006/01/30 20:27:26 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4931 2006/01/31 14:01:19 pva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -625,10 +625,6 @@ media-video/avifile
 >=net-misc/asterisk-1.2.0
 >=net-libs/libpri-1.2.0
 >=net-misc/zaptel-1.2.0
-
-# Carsten Lohrke <carlo@gentoo.org (17 Dec 2005)
-# completely broken and unmaintained, see #110241
-net-im/sim
 
 # Tuan Van <langthang@gentoo.org> (15 Dec 2005)
 # waiting on cdb keyword.
