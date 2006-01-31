@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 62092d7d39c5c1d3b3ae787bee9082a9 ChangeLog 1641
+MD5 c3cb508cdb4950ac7022118fe80492c3 ChangeLog 1731
 MD5 79a6a551f61f1c670dfd17a2c343c127 files/digest-xrdb-1.0.1 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 e06ee8c9bea3c3d088d62f833aa9ffce xrdb-1.0.1.ebuild 460
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDtlPk2+ySkm8kpY0RAtTOAJdTqxmUn9IBG8tKvk2IAA0VnhIUAJ9LMswO
-uaG3asievIXlauaPTvzYyg==
-=fwld
------END PGP SIGNATURE-----
+MD5 764f8e294c59b977e0317337943ff39f xrdb-1.0.1.ebuild 469
