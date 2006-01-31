@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r2.ebuild,v 1.6 2006/01/31 17:04:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r3.ebuild,v 1.1 2006/01/31 17:04:43 fmccor Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ IUSE=""
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="-* sparc"
+KEYWORDS="-* ~sparc"
 
 DEPEND="virtual/libc"
 
@@ -22,6 +22,8 @@ src_unpack() {
 	einfo "Patching to handle both kernel 2.4.x and 2.6.x style afb identification"
 	cd ${S}
 	epatch ${FILESDIR}/rc.afb-${PV}.patch || die "Cannot patch rc.afb init script"
+	einfo 'Patching afbinit.c to use MMAP_PUBLIC (needed for kernels > 2.6.14)'
+	epatch ${FILESDIR}/afbinit-mmap-${PV}.patch || die "Cannot patch for mmap"
 }
 
 src_compile() {
