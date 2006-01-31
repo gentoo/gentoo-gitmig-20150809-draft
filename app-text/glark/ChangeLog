@@ -1,6 +1,11 @@
 # ChangeLog for app-text/glark
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.34 2005/10/15 09:27:34 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.35 2006/01/31 17:39:20 ciaranm Exp $
+
+*glark-1.7.5 (31 Jan 2006)
+
+  31 Jan 2006; Ciaran McCreesh <ciaranm@gentoo.org> +glark-1.7.5.ebuild:
+  Bump
 
   15 Oct 2005; Fabian Groffen <grobian@gentoo.org> glark-1.7.4.ebuild:
   Marked ~ppc-macos (bug #108632)
