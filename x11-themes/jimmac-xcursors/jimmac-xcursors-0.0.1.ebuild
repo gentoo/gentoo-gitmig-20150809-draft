@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/jimmac-xcursors-0.0.1.ebuild,v 1.10 2006/01/03 23:25:27 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/jimmac-xcursors-0.0.1.ebuild,v 1.11 2006/01/31 14:57:12 josejx Exp $
 
 MY_P="6550-Jimmac.tar.gz"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -9,7 +9,7 @@ SRC_URI="http://kde-look.org/content/files/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 x86"
+KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND="${RDEPEND}"
