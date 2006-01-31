@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.18 2006/01/18 09:42:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.19 2006/01/31 22:39:10 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org>
+  gnome2-vfs-perl-1.041.ebuild:
+  Mark 1.041 stable on alpha
 
   18 Jan 2006; Guy Martin <gmsoft@gentoo.org> gnome2-vfs-perl-1.041.ebuild:
   Stable on hppa.
