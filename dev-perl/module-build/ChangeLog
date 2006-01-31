@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/module-build
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.29 2006/01/21 21:46:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.30 2006/01/31 22:59:34 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org>
+  module-build-0.26.11.ebuild:
+  Mark 0.26.11 stable on alpha
 
   21 Jan 2006; Markus Rothe <corsair@gentoo.org>
   module-build-0.26.11.ebuild:
