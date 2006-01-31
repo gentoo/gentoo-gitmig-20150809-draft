@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ccd1f07ab20e833d4d07775c5d1b4da1 ChangeLog 1381
+MD5 fbe5374b14812026b0b6a37f51afca21 ChangeLog 1520
+RMD160 26b8d25de603a0eb890d361137d89003694b2e8e ChangeLog 1520
+SHA256 574d2bcd4c365dc4de675040428dd374db664a1d28ab92a72399121dd34ca9ea ChangeLog 1520
 MD5 a528f3c540097a5f2e8c4c2a610ee01e cl-ironclad-0.10.ebuild 758
+RMD160 b324d1145a4942dc5fa526da2a22d3c7d6f733a2 cl-ironclad-0.10.ebuild 758
+SHA256 edb4d78660751280b4e3af211c7f13269faa52bb175c1c2747683d8a0b72ad31 cl-ironclad-0.10.ebuild 758
 MD5 bbf6fcaf424287bba292a5f39ad7d822 cl-ironclad-0.11.ebuild 758
+RMD160 15279e86430285b6b6d2753735f9f42010c6cabc cl-ironclad-0.11.ebuild 758
+SHA256 f0c559d729b6bc840523f01fac9957a12c2947eec2470867161ac501701b7072 cl-ironclad-0.11.ebuild 758
+MD5 eb02611c9bd0ef15c77cd21459b59b1c cl-ironclad-0.12.ebuild 758
+RMD160 f15a62c14e69febb9cc71eb48c3af970fb21074f cl-ironclad-0.12.ebuild 758
+SHA256 703743b733a137d7d6f7650c682b7aa7ca7ac1566e7ddd8e616ee5304abd1a91 cl-ironclad-0.12.ebuild 758
 MD5 b3fa94c475623417a7fa9e505bfab234 cl-ironclad-0.9.1.ebuild 758
+RMD160 e27f451c592645ec12c2c802b1b8d6c70723c318 cl-ironclad-0.9.1.ebuild 758
+SHA256 39671e612c918623cefd3ec1a6a0d5f9cfc16bb236e09b3df04aac3fdac1048c cl-ironclad-0.9.1.ebuild 758
 MD5 2f4a734954170f6d6095ce6960a57a3b files/digest-cl-ironclad-0.10 65
+RMD160 53c2eddc092d715147a2d89cda89edf11f6ec5c1 files/digest-cl-ironclad-0.10 65
+SHA256 fa88de0582644c06461bcf675d9ad3baba70a76bea798bcb1c2a3a627590f9ec files/digest-cl-ironclad-0.10 65
 MD5 bc326a9f4724af08e076a2bb0db3bf9c files/digest-cl-ironclad-0.11 65
+RMD160 e29fa8af88604c78bd03d637512424e2a6d3681a files/digest-cl-ironclad-0.11 65
+SHA256 4216a849410863e7f21fad22a3e285994fd8af11c159fe9631fd1117e9a2b970 files/digest-cl-ironclad-0.11 65
+MD5 e5e65783250d712207108be246242a4e files/digest-cl-ironclad-0.12 241
+RMD160 ce793cd2bd98c0a8587c9319d77c1dc028f06dc5 files/digest-cl-ironclad-0.12 241
+SHA256 4d627388ba886dc2bd10353825fbe271b21faa1c1a6df001dd55ffacf868cc65 files/digest-cl-ironclad-0.12 241
 MD5 f07002ad3147f75c96724c01a9901c58 files/digest-cl-ironclad-0.9.1 66
+RMD160 a3765dd89f432c4fad960a04926cf29fcde33968 files/digest-cl-ironclad-0.9.1 66
+SHA256 9f651007fbbcc9b946ea9ee7beae1d7e5e329a233bee52180b17ad89da86ca61 files/digest-cl-ironclad-0.9.1 66
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDeO6lyiNZaEAZA+ARAhL6AJkBJRcRPz0mLFdoRlqttWqKfMQKngCcCkyB
-8BQIwVtBFPiKsVy8yMzHTIg=
-=jrVK
+iD8DBQFD3vyxyiNZaEAZA+ARAkriAJwJ6nT3/ni1w+yEOunppxYfM9f/rwCfbSky
+RgtdEIcPIsctmsm5/8Pp5Yg=
+=tPCx
 -----END PGP SIGNATURE-----
