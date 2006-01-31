@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.23 2005/10/06 12:56:03 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.24 2006/01/31 20:22:12 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.14-r1.ebuild:
+  Mark 0.6.14-r1 stable on ia64
 
   06 Oct 2005; Caleb Tennis <caleb@gentoo.org> rdtool-0.6.14-r1.ebuild:
   Remove ruby 1.6 dep
