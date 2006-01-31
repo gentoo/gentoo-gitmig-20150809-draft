@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.4 2006/01/30 22:30:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.5 2006/01/31 18:56:35 zzam Exp $
 
 inherit eutils
 
@@ -199,4 +199,15 @@ src_install() {
 
 pkg_postinst() {
 	einfo "It is a good idea to run vdrplugin-rebuild now"
+	if has_version "<media-video/vdr-1.3.36-r3"; then
+		ewarn "Upgrade Info:"
+		ewarn
+		ewarn "If you had used the use-flags lirc, rcu or vfat"
+		ewarn "then, you now have to enable the associated functionality"
+		ewarn "in /etc/conf.d/vdr"
+		ewarn
+		ewarn "vfat is now set with VFAT_FILENAMES."
+		ewarn "lirc/rcu are now set with IR_CTRL."
+		ebeep
+	fi
 }
