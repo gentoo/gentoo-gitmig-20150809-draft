@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.49 2006/01/25 23:05:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.50 2006/01/31 15:50:18 dang Exp $
+
+*poppler-0.5.0-r1 (31 Jan 2006)
+
+  31 Jan 2006; <dang@gentoo.org> +poppler-0.5.0-r1.ebuild:
+  Make poppler > 0.5.0 install the xpdf include files. Bug #119919
 
   25 Jan 2006; Bryan Østergaard <kloeri@gentoo.org poppler-0.4.3-r4.ebuild:
   Stable on alpha, bug 117495.
