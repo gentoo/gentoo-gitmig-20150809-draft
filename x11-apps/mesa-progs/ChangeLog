@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/mesa-progs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.7 2005/12/16 10:09:08 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.8 2006/01/31 12:58:08 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  mesa-progs-6.4.1.ebuild:
+  Unstable on hppa.
 
   16 Dec 2005; Herbie Hopkins <herbs@gentoo.org> mesa-progs-6.4.1.ebuild:
   Explicitly unset PIC_FLAGS else -fPIC gets used on amd64 anyway.
