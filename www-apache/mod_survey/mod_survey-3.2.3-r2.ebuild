@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.3-r1.ebuild,v 1.1 2006/01/31 17:01:17 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.3-r2.ebuild,v 1.1 2006/01/31 22:06:14 rl03 Exp $
 
 inherit webapp
 
@@ -78,10 +78,8 @@ src_install() {
 	sed -i "s|/usr/lib/mod_survey/data/|/var/lib/mod_survey/data/|" ${D}/usr/lib/mod_survey/survey.conf
 	mv ${D}/usr/lib/mod_survey/survey.conf ${D}/${MY_HOSTROOTDIR}/${PN}
 
-	# install webroot using webapp.eclass
-	# webroot should not go into MY_HTDOCSDIR b/c that throws off Alias
 	rm -rf ${D}/usr/lib/mod_survey/webroot ${D}/usr/lib/mod_survey/data
-	cp -R webroot/* ${D}/${MY_HOSTROOTDIR}/${PN}
+	cp -R webroot/* ${D}/${MY_HTDOCSDIR}
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 	webapp_hook_script ${FILESDIR}/reconfig
@@ -93,7 +91,7 @@ pkg_postinst(){
 	if [ ${#LINGUAS} -gt 2 ] && use nls; then
 		ewarn
 		ewarn "You have more than one language in LINGUAS"
-		ewarn "Due to the limitations of this packge, it was built"
+		ewarn "Due to the limitations of this package, it was built"
 		ewarn "only with ${LINGUAS:0:2} support. If this is not what"
 		ewarn "you intended, please place the language you desire"
 		ewarn "_first_ in the list of LINGUAS in /etc/make.conf"

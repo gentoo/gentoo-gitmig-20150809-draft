@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3ea952b9482ec9c56731164e6a789075 ChangeLog 2084
-MD5 a37f666937f5688f7467a09f127543ee files/digest-mod_survey-3.2.3-r1 133
+MD5 f56b814ce72601666339a93d2ad3d170 ChangeLog 2269
+MD5 a37f666937f5688f7467a09f127543ee files/digest-mod_survey-3.2.3-r2 133
 MD5 93b4750ff04770f08971e73b328c3486 files/language-list.txt 15
 MD5 e844b8372b46feedac36c6b5141c3696 files/postinstall-en.txt 158
-MD5 0663294143b6e81b1aed773a44aedf3e files/reconfig 244
+MD5 8d92b174d7809f56199ddc42c0e05b3a files/reconfig 304
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 d865c9aeb504fbd6d0eba11e84a34d33 mod_survey-3.2.3-r1.ebuild 3239
+MD5 3cfa9de0f5f872833cae6470e520598c mod_survey-3.2.3-r2.ebuild 3124
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD35foEzitwsaoONoRAuKBAJ9NJwEqO6f1jwRpnCtGeUGO2GVAggCgyzMs
-pXRLU1dd7ZOp7e/hamH2MY0=
-=aY1f
+iD8DBQFD39+UEzitwsaoONoRAh6CAJ0a5PhStIFhRvyHFdUaTqunlbWz0wCfe93c
+Pz4Vo/2w0eHMy+RjMOxJEk0=
+=JEAn
 -----END PGP SIGNATURE-----

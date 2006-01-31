@@ -8,7 +8,9 @@ die() {
 }
 
 if [ $1 = "install" ]; then
-	sed -e "s|/usr/lib/mod_survey/webroot/|${VHOST_ROOT}/${PN}/|g" -i ${VHOST_ROOT}/${PN}/survey.conf || die
+	sed -e "s|/usr/lib/mod_survey/webroot/|${MY_INSTALLDIR}/|g
+			s|\"/mod_survey/\"|\"${VHOST_APPDIR}/\"|
+			s|Alias|#Alias|" -i ${VHOST_ROOT}/${PN}/survey.conf || die
 
 elif [ $1 = "clean" ]; then
 	echo $1
