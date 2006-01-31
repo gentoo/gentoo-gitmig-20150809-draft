@@ -1,0 +1,119 @@
+diff -Naur bcm43xx.h bcm43xx.h
+--- bcm43xx.h	2006-01-31 13:03:41.000000000 -0500
++++ bcm43xx.h	2006-01-31 13:04:20.000000000 -0500
+@@ -614,6 +614,7 @@
+ 
+ struct bcm43xx_stats {
+ 	u8 link_quality;
++	u8 noise;
+ 	/* Store the last TX/RX times here for updating the leds. */
+ 	unsigned long last_tx;
+ 	unsigned long last_rx;
+@@ -649,6 +650,7 @@
+ 	    firmware_norelease:1;	/* Do not release the firmware. Used on suspend. */
+ 
+ 	struct bcm43xx_stats stats;
++	struct iw_statistics wstats;
+ 
+ 	/* Bus type we are connected to.
+ 	 * This is currently always BCM43xx_BUSTYPE_PCI
+diff -Naur bcm43xx_main.c bcm43xx_main.c
+--- bcm43xx_main.c	2006-01-31 13:03:41.000000000 -0500
++++ bcm43xx_main.c	2006-01-31 13:03:49.000000000 -0500
+@@ -1872,6 +1872,16 @@
+ 		average *= 125;
+ 		average += 64;
+ 		average /= 128;
++
++/* In early tests, 'average' has values that ranged from 3 - 14.
++ * As a first approximation, set the noise value to 'average' with a range of 0 to 100.
++ */
++		bcm->stats.noise = average;
++
++/* The following algorithm comes from the clean-room reverse engineers. It results
++ * in a link quality from 0 to 3 (higher is better). The granularity should probably be
++ * increased before the driver goes "mainstream".
++ */
+ 		tmp = bcm43xx_shm_read16(bcm, BCM43xx_SHM_SHARED, 0x40C);
+ 		tmp = (tmp / 128) & 0x1F;
+ 		if (tmp >= 8)
+diff -Naur bcm43xx_wx.c bcm43xx_wx.c
+--- bcm43xx_wx.c	2006-01-31 13:03:41.000000000 -0500
++++ bcm43xx_wx.c	2006-01-31 13:03:49.000000000 -0500
+@@ -262,13 +262,13 @@
+ 
+ 	range->max_qual.qual = 100;
+ 	/* TODO: Real max RSSI */
+-	range->max_qual.level = 0;
+-	range->max_qual.noise = 0;
++	range->max_qual.level = 3;
++	range->max_qual.noise = 100;
+ 	range->max_qual.updated = 7;
+ 
+ 	range->avg_qual.qual = 70;
+-	range->avg_qual.level = 0;
+-	range->avg_qual.noise = 0;
++	range->avg_qual.level = 2;
++	range->avg_qual.noise = 40;
+ 	range->avg_qual.updated = 7;
+ 
+ 	range->min_rts = BCM43xx_MIN_RTS_THRESHOLD;
+@@ -959,6 +959,50 @@
+ 	return err;
+ }
+ 
++/* Get wireless statistics.  Called by /proc/net/wireless and by SIOCGIWSTATS */
++
++static struct iw_statistics *bcm43xx_get_wireless_stats(struct net_device *net_dev)
++{
++	struct bcm43xx_private *bcm = bcm43xx_priv(net_dev);
++	struct ieee80211softmac_device *mac = ieee80211_priv(net_dev);
++	struct ieee80211_device *net = ieee80211_priv(net_dev);
++	struct iw_statistics *wstats;
++
++		wstats = &bcm->wstats;
++		if (!mac->associated) {
++			wstats->miss.beacon = 0;
++			net->ieee_stats.tx_retry_limit_exceeded = 0;
++			wstats->discard.retries = 0;
++			net->ieee_stats.tx_discards_wrong_sa = 0;
++			wstats->discard.nwid = 0;
++			bcm->ieee->ieee_stats.rx_discards_undecryptable = 0;
++			wstats->discard.code = 0;
++			net->ieee_stats.rx_fragments = 0;
++			wstats->discard.fragment = 0;
++			wstats->discard.misc = 0;
++			wstats->qual.qual = 0;
++			wstats->qual.level = 0;
++			wstats->qual.noise = 0;
++			wstats->qual.updated = 7;
++			wstats->qual.updated |= IW_QUAL_NOISE_INVALID |
++				IW_QUAL_QUAL_INVALID | IW_QUAL_LEVEL_INVALID;
++			return wstats;
++		}
++		/* fill in the real statistics when iface associated */
++		wstats->qual.qual = 100;     // TODO: get the real signal quality
++		wstats->qual.level = 3 - bcm->stats.link_quality;
++		wstats->qual.noise = bcm->stats.noise;
++		wstats->qual.updated = IW_QUAL_QUAL_UPDATED | IW_QUAL_LEVEL_UPDATED |
++				IW_QUAL_NOISE_UPDATED;
++		wstats->discard.code = bcm->ieee->ieee_stats.rx_discards_undecryptable;
++		wstats->discard.retries = net->ieee_stats.tx_retry_limit_exceeded;
++		wstats->discard.nwid = net->ieee_stats.tx_discards_wrong_sa;
++		wstats->discard.fragment = net->ieee_stats.rx_fragments;
++		wstats->discard.misc = 0;	// FIXME
++		wstats->miss.beacon = 0;	// FIXME
++		return wstats;
++	}
++
+ 
+ #ifdef WX
+ # undef WX
+@@ -1094,6 +1138,7 @@
+ 	.num_private_args	= ARRAY_SIZE(bcm43xx_priv_wx_args),
+ 	.private		= bcm43xx_priv_wx_handlers,
+ 	.private_args		= bcm43xx_priv_wx_args,
++	.get_wireless_stats	= bcm43xx_get_wireless_stats,
+ };
+ 
+ /* vim: set ts=8 sw=8 sts=8: */

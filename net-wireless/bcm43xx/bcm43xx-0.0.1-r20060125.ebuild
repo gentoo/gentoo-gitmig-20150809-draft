@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060125.ebuild,v 1.2 2006/01/31 11:15:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060125.ebuild,v 1.3 2006/01/31 18:09:39 josejx Exp $
 
 inherit linux-mod eutils
 
@@ -22,8 +22,11 @@ BUILD_TARGETS="modules"
 MODULE_NAMES="bcm43xx(net/wireless:)"
 
 CONFIG_CHECK="NET_RADIO FW_LOADER"
+use debug && CONFIG_CHECK="${CONFIG_CHECK} DEBUG_FS"
 ERROR_NET_RADIO="${P} requires support for \"Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)\"."
 ERROR_FW_LOADER="${P} requires \"Hotplug firmware loading support (CONFIG_FW_LOADER)\"."
+ERROR_DEBUG_FS="${P} requires Debug Filesystem support (CONFIG_DEBUG_FS) for
+buidling with USE=\"debug\"."
 
 FWCUTTER_DIR="${WORKDIR}/bcm43xx-fwcutter-${PR#r}"
 
@@ -40,6 +43,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/add_stats.patch
 	epatch ${FILESDIR}/remove_ieee_check.patch
 }
 
