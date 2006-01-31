@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.11 2006/01/31 00:55:36 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.12 2006/01/31 19:47:50 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -490,6 +490,21 @@ mysql_src_install() {
 
 mysql_pkg_preinst() {
 
+	# create a list of files, to be used
+	# by external utilities
+	# will be used in pkg_postinst
+	local filelist="${TMPDIR}/FILELIST"
+	pushd "${D}/" &>/dev/null
+		mkdir -p "${ROOT}/var/lib/eselect/mysql/"
+		env -i find usr/bin/ usr/sbin/ usr/share/man \
+			-type f -name "*${MY_SUFFIX}*" \
+			-and -not -name "mysql_config${MY_SUFFIX}" \
+			> "${filelist}"
+		echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}"
+		echo "${MY_LIBDIR#"/"}" >> "${filelist}"
+		echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
+	popd &>/dev/null
+
 	enewgroup mysql 60 || die "problem adding group mysql"
 	enewuser mysql 60 -1 /dev/null mysql \
 	|| die "problem adding user mysql"
@@ -509,20 +524,10 @@ mysql_pkg_postinst() {
 	chown mysql:mysql "${ROOT}${MY_LOGDIR}"/mysql*
 	chmod 0660 "${ROOT}${MY_LOGDIR}"/mysql*
 
-	# create a list of files, to be used
+	# list of files, to be used
 	# by external utilities
-	# uncompressed because of the small size
-	local filelist="${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}"
-	pushd "${D}/" &>/dev/null
-		mkdir -p "${ROOT}/var/lib/eselect/mysql/"
-		env -i find usr/bin/ usr/sbin/ usr/share/man \
-			-type f -name "*${MY_SUFFIX}*" \
-			-and -not -name "mysql_config${MY_SUFFIX}" \
-			> "${filelist}.filelist"
-		echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}.filelist"
-		echo "${MY_LIBDIR#"/"}" >> "${filelist}.filelist"
-		echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}.filelist"
-	popd &>/dev/null
+	mkdir -p "${ROOT}/var/lib/eselect/mysql/"
+	cp "${TMPDIR}/FILELIST" "${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}"
 
 	if ! useq minimal; then
 		if [[ ${SLOT} -gt 0 ]] ; then
