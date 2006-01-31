@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.0.ebuild,v 1.1 2006/01/27 02:45:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.0.ebuild,v 1.2 2006/01/31 04:19:05 latexer Exp $
 
 inherit eutils mono
 
@@ -14,7 +14,7 @@ SLOT="2"
 IUSE="doc"
 RESTRICT="test"
 
-RDEPEND=">=dev-lang/mono-1.0
+RDEPEND=">=dev-lang/mono-1.1.9
 	dev-perl/XML-LibXML
 	>=x11-libs/gtk+-2.8
 	>=gnome-base/orbit-2.8.3"
