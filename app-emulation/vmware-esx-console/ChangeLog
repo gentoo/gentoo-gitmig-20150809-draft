@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/vmware-esx-console
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.1 2006/01/31 21:25:03 mattm Exp $
+
+*vmware-esx-console-2.5.2.16390 (31 Jan 2006)
+
+  31 Jan 2006; Matthew Marlowe <mattm@gentoo.org> +metadata.xml,
+  +vmware-esx-console-2.5.2.16390.ebuild:
+  initial migration of the esx versions of vmware-console
+  to vmware-esx-console.
+
