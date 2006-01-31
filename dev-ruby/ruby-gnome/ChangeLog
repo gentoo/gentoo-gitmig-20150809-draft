@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnome
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.17 2005/10/03 13:49:56 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.18 2006/01/31 20:03:56 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> ruby-gnome-0.34.ebuild:
+  Mark 0.34 stable on ia64
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-gnome-0.34.ebuild:
   Mark 0.34 ~ia64

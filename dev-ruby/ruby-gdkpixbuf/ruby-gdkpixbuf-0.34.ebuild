@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ruby-gdkpixbuf-0.34.ebuild,v 1.12 2005/10/03 13:49:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ruby-gdkpixbuf-0.34.ebuild,v 1.13 2006/01/31 20:02:53 agriffis Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha ~ia64 ppc ~sparc x86"
+KEYWORDS="alpha ia64 ppc ~sparc x86"
 IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 

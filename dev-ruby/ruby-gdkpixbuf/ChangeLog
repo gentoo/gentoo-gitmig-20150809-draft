@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.18 2005/10/03 13:49:02 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.19 2006/01/31 20:02:53 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org>
+  ruby-gdkpixbuf-0.34.ebuild:
+  Mark 0.34 stable on ia64
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   ruby-gdkpixbuf-0.34.ebuild:
