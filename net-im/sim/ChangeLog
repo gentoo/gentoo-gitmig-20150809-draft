@@ -1,6 +1,15 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.49 2006/01/16 09:58:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.50 2006/01/31 13:44:43 pva Exp $
+
+  31 Jan 2006; Peter Volkov <pva@gentoo.org> -files/sim-0.8.3-nostl.diff,
+  -files/sim-0.9.1-configure.in.patch, -files/sim-0.9.1-head.patch,
+  -files/sim-0.9.2-configure.in.patch, -files/sim-0.9.2-head.patch,
+  -files/sim-0.9.3-alt-histpreview-apply-fix.diff,
+  -files/sim-0.9.3-gcc34.diff, -sim-0.8.3.ebuild, -sim-0.9.2.ebuild,
+  -sim-0.9.3-r1.ebuild, -sim-0.9.3-r2.ebuild, -sim-0.9.3-r3.ebuild:
+  Sim was long time in package mask. Thus I'm cleaning out previous versions not
+  to allow people to fall back on them.
 
   16 Jan 2006; Peter Volkov <pva@gentoo.org> sim-0.9.4_pre060114.ebuild:
   Backticks are not necessary in "if" statements... removed. Thanks Thomas
