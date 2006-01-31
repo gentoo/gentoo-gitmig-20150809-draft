@@ -1,18 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a3388f4e1bb253da6b2fafcec7cba26 matrixssl-1.2.4.ebuild 824
-MD5 a50ba1b1817afdce07718a84fbb89858 matrixssl-1.0.2.ebuild 818
-MD5 ccf6a59f5e76f8da2032d5c97a3d82c3 ChangeLog 610
-MD5 c5b5abb3be81bb53cfee6c21c8ee3645 metadata.xml 222
-MD5 3557203dfacbdb7addd52ce0c9c86566 files/digest-matrixssl-1.0.2 67
+MD5 676a7e501b31fb52583138d8365f37e9 ChangeLog 773
+RMD160 6d1c6071f14d3cb23fde84b143a93295b90d896e ChangeLog 773
+SHA256 8ef87f63f554d20e93f5baab8208a563fcfbd00eee3c6cf1a4b943e1c6ed42eb ChangeLog 773
 MD5 9d5cac00857bb69eee434733dcf182e9 files/digest-matrixssl-1.2.4 67
+RMD160 e48609ed9cc8466238cbbbfd1977b841538178d6 files/digest-matrixssl-1.2.4 67
+SHA256 5ad9994bd6c128f552e5f6e2b6b345d807dce8336c58f29a9b7c673a129aebfd files/digest-matrixssl-1.2.4 67
+MD5 ed9d899996695707219735f0a4db666a files/digest-matrixssl-1.7.3 262
+RMD160 b44befb850d675b0da21cfd0a0b58c263608d0dd files/digest-matrixssl-1.7.3 262
+SHA256 33f01eee6dc6d80c9b5d64ddb41915ee532b51d869abfb52f05a539d92fa96e4 files/digest-matrixssl-1.7.3 262
+MD5 2dcd782899cb642eb163be648060daea files/matrixssl-1.7.3-build.patch 1053
+RMD160 608db19b05038c3670617d9ec454ad348667bc70 files/matrixssl-1.7.3-build.patch 1053
+SHA256 934b32013e0e2de3c50beb6c535308f1483a0f235bb0104e1d95b12f5ebbea55 files/matrixssl-1.7.3-build.patch 1053
+MD5 1a3388f4e1bb253da6b2fafcec7cba26 matrixssl-1.2.4.ebuild 824
+RMD160 b92bd7191b5029f882295110e9cdcdda24d249bf matrixssl-1.2.4.ebuild 824
+SHA256 54376cd53f7ab3de4f2f464a2e0bc1d3625a99808fbd3263a13a62d98cf962f9 matrixssl-1.2.4.ebuild 824
+MD5 f4a8dbe1fb23aa4dc96a7f569ca4f305 matrixssl-1.7.3.ebuild 855
+RMD160 06575519513fe5b303e087d11512f379cbbaef3e matrixssl-1.7.3.ebuild 855
+SHA256 95b9f05a1f6fa1b558322c7bea7bade749fb77f4903a9f65e794ca4ba0d2847a matrixssl-1.7.3.ebuild 855
+MD5 c5b5abb3be81bb53cfee6c21c8ee3645 metadata.xml 222
+RMD160 9a51d118e31a99b3a5f6e028b2333834797b04e4 metadata.xml 222
+SHA256 1303584dbc7a47704409f60381c08cacc03111cc9813f0bf4013af127c02e10d metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iQCVAwUBQjrwjZ4WFLgrx1GWAQLAHAQAlSYBNSQPfvV+ew0HO7EQet58vGIu7ljp
-WVGPGAT8A2xCLqUk1z9vccd1teBrHF7kcAQCokNkFPhlP95MlHufRtW7Dc5A7L0q
-YuKWF6Axvg9t/A+TSoDP8eWBeNvWESLc9R7YPPAsdItOxeWBRzcooSKzLvnUqeh2
-d5iZ/WmFw2M=
-=NLvf
+iD8DBQFD3rsO2+ySkm8kpY0RAi+VAJ9uYURdU1fC6FaLTHX/jkaPGb5MjACcD1ce
+UAajoBeWJtfx6kJlOttPUyk=
+=vvgW
 -----END PGP SIGNATURE-----
