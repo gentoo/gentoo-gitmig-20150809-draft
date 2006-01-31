@@ -1,6 +1,11 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.36 2006/01/22 12:55:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.37 2006/01/31 21:10:16 jer Exp $
+
+  31 Jan 2006; Jeroen Roovers <jer@gentoo.org> elinks-0.10.6.ebuild,
+  elinks-0.11.0.ebuild:
+  0.10.6 marked stable on hppa, removed javascript dep in both ebuilds marked
+  hppa.
 
   22 Jan 2006; Michał Januszewski <spock@gentoo.org>
   files/elinks-0.11.0-make.patch:

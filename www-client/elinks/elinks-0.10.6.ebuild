@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.6.ebuild,v 1.11 2006/01/22 11:41:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.6.ebuild,v 1.12 2006/01/31 21:10:16 jer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="bzip2 debug finger ftp gnutls gopher gpm guile idn ipv6 javascript javascript lua nls nntp perl ruby samba ssl X zlib"
 RESTRICT="test"
 
@@ -28,7 +28,7 @@ DEPEND=">=dev-libs/expat-1.95.4
 	idn? ( net-dns/libidn )
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby )
-	!mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) )
+	!hppa? ( !mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) ) )
 	samba? ( net-fs/samba )"
 PROVIDE="virtual/textbrowser"
 

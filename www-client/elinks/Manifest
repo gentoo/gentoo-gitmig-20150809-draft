@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21e35535078d2823213c597e68b4208b ChangeLog 12432
+MD5 5401ba85763dbca08cc48c3d979b5cdf ChangeLog 12610
+RMD160 2a05b97613b5e323019ad88f7f26bf3652458299 ChangeLog 12610
+SHA256 29c6244ffe6706edb80c8addeae69090ebc6cd6081965bb7e7c841355142449a ChangeLog 12610
 MD5 77809539a1fc470b15666ab9b111932b elinks-0.10.5-r1.ebuild 4068
+RMD160 925b9968ea48d2c13be3a3b8e64c9e116c7ef6f1 elinks-0.10.5-r1.ebuild 4068
+SHA256 0a7b26c7fd875dba72dc51b4d3d9a7a0540058cb7b5d240ab73f31d2c8d71731 elinks-0.10.5-r1.ebuild 4068
 MD5 a6aae1c470f18573d077f9a17f3dc12d elinks-0.10.5.ebuild 3573
-MD5 fbf2f4dc5d80b8fb9a6c454acb2b08a1 elinks-0.10.6.ebuild 3955
-MD5 b4cb25337664eb8052a716142845486f elinks-0.11.0.ebuild 4234
+RMD160 06e04ff26813a15d4a6e2e468079031a3cdd3ce2 elinks-0.10.5.ebuild 3573
+SHA256 46cb7c5ef90a64c1dac22fbd827933aa0727c83871c920f7883650059438cd59 elinks-0.10.5.ebuild 3573
+MD5 c6084861e662d899c18583ee74426daf elinks-0.10.6.ebuild 3963
+RMD160 cb54ca1829c497bc7f9196e8c417bdcfad07fc46 elinks-0.10.6.ebuild 3963
+SHA256 e8664bb56d5933a0255ed47e1eb69b148b8d460df687d0740820f5b4bfc5bca0 elinks-0.10.6.ebuild 3963
+MD5 ca7ae26a637be4469f7dde29eca2ce18 elinks-0.11.0.ebuild 4243
+RMD160 02933e815651b15dbef4f837b25ca0b89091e4cd elinks-0.11.0.ebuild 4243
+SHA256 bbbd928c70daecfaada0214026b66c52364d6419719e50b44e0816f0513c8d04 elinks-0.11.0.ebuild 4243
 MD5 db4038d1a62b31535db38c97c40928d8 files/digest-elinks-0.10.5 132
+RMD160 ebccbdfe4678af05408201c5ca4392fec4390fc2 files/digest-elinks-0.10.5 132
+SHA256 b54ee447d190121ed1413c8d17d23f302795c26ff588821665961e8d1b692b0d files/digest-elinks-0.10.5 132
 MD5 db4038d1a62b31535db38c97c40928d8 files/digest-elinks-0.10.5-r1 132
+RMD160 ebccbdfe4678af05408201c5ca4392fec4390fc2 files/digest-elinks-0.10.5-r1 132
+SHA256 b54ee447d190121ed1413c8d17d23f302795c26ff588821665961e8d1b692b0d files/digest-elinks-0.10.5-r1 132
 MD5 a2f9214a88eeac493c0bbaef6c2bf76b files/digest-elinks-0.10.6 132
+RMD160 23d6e253180ba4589e810097cc8fd0019585da67 files/digest-elinks-0.10.6 132
+SHA256 a6dc3f2bf597c0211760c88516a55d692a803d66973536ce8d575d451ff45c53 files/digest-elinks-0.10.6 132
 MD5 9ca53bf2dc67fc8abf0deb36eb2526f8 files/digest-elinks-0.11.0 132
+RMD160 c59d7698a899f3f510d34adc685b4f46858c1f1d files/digest-elinks-0.11.0 132
+SHA256 81d6fd31dab65abc034710584a3a9cf64a9aff184e5641fa9d6ef47d3acd296d files/digest-elinks-0.11.0 132
 MD5 52b202f65c123224829a121624237100 files/elinks-0.11.0-gcc4-inline.patch 388
+RMD160 535a758ae6a315053f8ab8bcb9f450d427e2098f files/elinks-0.11.0-gcc4-inline.patch 388
+SHA256 583d5da585201707b483a3e99c27595b88142d3a5f5c2e65a917d8131bdabe4f files/elinks-0.11.0-gcc4-inline.patch 388
 MD5 94333484d4304521e637c2c5f7a43a67 files/elinks-0.11.0-make.patch 479
+RMD160 f403240b76cd61908729a47003dca3c204dead0a files/elinks-0.11.0-make.patch 479
+SHA256 b9bbe15e67878bb7a99d18bbea40dbe9d7e302c6f2884bdceaaa90502b2e2c73 files/elinks-0.11.0-make.patch 479
 MD5 8641dcff9f251387e7eba19875a7077c files/elinks-osx-configure.diff 919
+RMD160 e0007cb59e98d07563f3e888a59732848a75cbd3 files/elinks-osx-configure.diff 919
+SHA256 9c32c7af01203569b75deee06a809e49dc7ef798d4148c4c8dc429b9549f9c8d files/elinks-osx-configure.diff 919
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD04Dvchej4aZK9/cRAqHPAJ4pmyb8z6WvxHY/etsDiN6pzKkxVgCgiImn
-1E92/c1ckwXUsxC/X4kohIw=
-=bwXg
------END PGP SIGNATURE-----
+RMD160 399f78e98260d4f311124e71c6d294e368a76976 metadata.xml 255
+SHA256 b2dfe92cb4cae7ec4ecb4af91e94b9aa507a3c8214af32f75cf44f6011a13cc5 metadata.xml 255
