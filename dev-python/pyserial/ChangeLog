@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.15 2005/11/22 22:34:34 chrb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.16 2006/01/31 20:53:54 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> pyserial-2.2.ebuild:
+  Mark 2.2 stable on alpha/ia64
 
 *pyserial-2.2 (22 Nov 2005)
 
