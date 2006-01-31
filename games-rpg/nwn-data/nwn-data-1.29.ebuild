@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.11 2006/01/23 14:53:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.12 2006/01/31 20:10:25 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -82,13 +82,16 @@ src_unpack() {
 		touch .metadata/linguas_en || die "touching en"
 	fi
 	unpack nwclient129.tar.gz
-	cd "${WORKDIR}"
-	use nowin && unpack nwresources129.tar.gz
-	cd "${S}"
+	if use nowin
+	then
+		cd "${WORKDIR}"
+		unpack nwresources129.tar.gz || die "unpacking nwresources129.tar.gz"
+		cd "${S}"
+	fi
 	rm -rf override/*
 	# the following is so ugly, please pretend it doesnt exist
 	declare -a Aarray=(${A})
-	use nowin && if [ "${#Aarray[*]}" == "3" ]
+	use nowin && if [ "${#Aarray[*]}" == "4" ]
 	then
 		unpack ${Aarray[1]}
 	fi
@@ -112,20 +115,22 @@ src_unpack() {
 		unzip -o ${CDROM_ROOT}/Data_Shared.zip
 		unzip -o ${CDROM_ROOT}/Language_data.zip
 		unzip -o ${CDROM_ROOT}/Language_update.zip
+		touch .metadata/hou || die "touching hou"
 	fi
-	touch .metadata/hou || die "touching hou"
+
 	sed -i -e '\:^./nwmain .*:i \
 if [[ -f ./nwmouse.so ]]; then \
 	export XCURSOR_PATH="$(pwd)" \
 	export XCURSOR_THEME=nwmouse \
 	export LD_PRELOAD=./nwmouse.so:$LD_PRELOAD \
 fi \
-	' "${S}/nwn"
+	' "${S}/nwn" || die "sed nwn"
 }
 
 src_install() {
 	dodir "${dir}"
-	# Since the movies don't play anyway, we'll remove them
+	# Since the movies don't play anyway, we'll remove them.  This should
+	# eventually be removed to allow for nwmovies to work.
 	rm -rf "${S}"/movies
 	mkdir -p "${S}"/dmvault "${S}"/hak "${S}"/portraits "${S}"/localvault
 	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dmclient "${S}"/nwmain \
@@ -158,6 +163,7 @@ src_install() {
 		chmod a-x ${Ddir}/data/patch.bif ${Ddir}/patch.key
 	fi
 	doicon "${DISTDIR}"/nwn.png
+
 	prepgamesdirs
 	chmod -R g+rwX ${Ddir}/saves ${Ddir}/localvault ${Ddir}/dmvault \
 		2>&1 > /dev/null || die "could not chmod"

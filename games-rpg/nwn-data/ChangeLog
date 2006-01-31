@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.10 2006/01/23 14:53:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.11 2006/01/31 20:10:25 wolf31o2 Exp $
+
+  31 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-data-1.29.ebuild:
+  This revision resolves the broken installation that happened after moving
+  nwn.png from FILESDIR to DISTFILES.
 
   23 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> -files/nwn.png,
   nwn-data-1.29.ebuild:
