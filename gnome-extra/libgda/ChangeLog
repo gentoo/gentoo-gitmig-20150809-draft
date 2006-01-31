@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/libgda
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.84 2005/11/02 18:18:58 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.85 2006/01/31 05:22:16 leonardop Exp $
+
+*libgda-1.2.3 (31 Jan 2006)
+
+  31 Jan 2006; Leonardo Boshell <leonardop@gentoo.org> +libgda-1.2.3.ebuild:
+  New version. Dropped patches that have been included upstream. Don't call
+  eautoreconf as it's no longer necessary.
 
   02 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   libgda-1.2.2-r1.ebuild:
