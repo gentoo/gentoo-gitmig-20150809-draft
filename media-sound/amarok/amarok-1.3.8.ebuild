@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.8.ebuild,v 1.2 2006/01/30 10:15:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.8.ebuild,v 1.3 2006/01/31 10:38:29 flameeyes Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -16,10 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts flac gstreamer kde mp3 mysql noamazon opengl postgres xine xmms
 visualization vorbis musicbrainz"
-# kde: enables compilation of the konqueror sidebar plugin
+# kde: enables compilation of the konqueror sidebar plugin and brings in
+# kioslaves for audiocd support
 
-DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
-	|| ( kde-base/kdemultimedia-kioslaves kde-base/kdemultimedia )
+DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase )
+		|| ( kde-base/kdemultimedia-kioslaves kde-base/kdemultimedia ) )
 	arts? ( kde-base/arts
 	        || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
@@ -68,14 +69,14 @@ pkg_setup() {
 src_unpack() {
 	kde_src_unpack
 
-	LANGS="$(ls ${S}/po | grep -v Makefile)"
-	LANGS_DOC="$(ls ${S}/doc | grep -v Makefile)"
+	LANGS="az be bg br ca cs cy da de el en_GB eo es et fi fr ga gl he hi hr hu id is it ja ko ku lo lt nb nds nl nn pa pl pt pt_BR ro ru se sl sq sr sr@Latn ss sv ta tg th tr uk uz zh_CN zh_TW"
+	LANGS_DOC="da de et fr it nl pt pt_BR ru sv"
 
 	MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
 	MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
 
 	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.am || die "sed for locale failed"
-	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} amarok:" ${S}/doc/Makefile.am || die "sed for locale failed"
+	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} ${PN}:" ${S}/doc/Makefile.am || die "sed for locale failed"
 
 	rm -f ${S}/configure
 }
@@ -115,3 +116,9 @@ src_install() {
 		${D}/usr/share/icons || die
 }
 
+pkg_postinst() {
+	if ! use kde; then
+		einfo "Audio CDs won't be played unless you install kdebase-kioslaves."
+		einfo "If you want to bring them in, add kde useflag."
+	fi
+}
