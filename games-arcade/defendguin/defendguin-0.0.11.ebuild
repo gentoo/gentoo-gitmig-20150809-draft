@@ -1,0 +1,30 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.11.ebuild,v 1.1 2006/01/31 16:56:38 mr_bones_ Exp $
+
+inherit eutils games
+DESCRIPTION="A clone of the arcade game Defender, but with a Linux theme"
+HOMEPAGE="http://www.newbreedsoftware.com/defendguin/"
+SRC_URI="ftp://ftp.billsgames.com/unix/x/defendguin/src/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ppc ~sparc x86"
+IUSE=""
+
+DEPEND="media-libs/sdl-mixer
+	media-libs/libsdl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-makefile.patch"
+	rm -f data/images/*.sh
+}
+
+src_install() {
+	dogamesbin defendguin || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r ./data/* || die "doins failed"
+	prepgamesdirs
+}
