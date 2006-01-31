@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.2.16390.ebuild,v 1.1 2006/01/31 21:25:03 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.2.16390.ebuild,v 1.2 2006/01/31 21:34:19 mattm Exp $
 
 MY_PN="VMware-console-2.5.2-16390.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
@@ -15,8 +15,18 @@ KEYWORDS="~x86"
 IUSE=""
 RESTRICT="fetch nostrip"
 
-DEPEND="virtual/libc
-	virtual/x11"
+DEPEND="virtual/libc"
+
+RDEPEND="|| ( ( x11-libs/gtk+
+		 	    x11-libs/libICE
+		 	    x11-libs/libSM
+		 	    x11-libs/libXext
+		 		x11-libs/libXi
+		 		x11-libs/libXpm
+		 		x11-libs/libXtst
+		 		x11-libs/libX11 )
+			  virtual/x11 )
+		 sys-libs/zlib"
 
 pkg_nofetch() {
 	einfo "Please place ${FN} in ${DISTDIR}"
