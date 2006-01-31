@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrdb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.13 2005/12/26 21:24:13 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.14 2006/01/31 13:30:34 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> xrdb-1.0.1.ebuild:
+  Unstable on hppa.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xrdb-0.99.2.ebuild, -xrdb-1.0.0.ebuild:
