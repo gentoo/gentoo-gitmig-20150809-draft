@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/disc-cover
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.24 2006/01/10 03:24:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.25 2006/01/31 23:06:01 dju Exp $
+
+  31 Jan 2006; Julien Allanos <dju@gentoo.org> -disc-cover-1.3.1.ebuild,
+  -disc-cover-1.5.2.ebuild, disc-cover-1.5.4.ebuild,
+  disc-cover-1.5.4-r1.ebuild:
+  Removed old versions. Fixed HOMEPAGE and SRC_URI.
 
   10 Jan 2006; Jason Wever <weeve@gentoo.org> disc-cover-1.5.4-r1.ebuild:
   Added ~sparc keyword wrt bug #61374.
