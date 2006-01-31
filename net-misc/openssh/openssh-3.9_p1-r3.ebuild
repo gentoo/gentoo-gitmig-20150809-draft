@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.9 2005/10/19 03:32:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.10 2006/01/31 00:11:37 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -50,20 +50,19 @@ src_unpack() {
 		-e '/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:/usr/bin/xauth:' \
 		pathnames.h || die
 
-	epatch "${FILESDIR}"/${P}-pamfix.patch.bz2
-	#epatch "${FILESDIR}"/${P}-largekey.patch.bz2
+	epatch "${FILESDIR}"/${P}-pamfix.patch
 	use X509 || epatch "${FILESDIR}"/${P}-fix_suid.patch
 	epatch "${FILESDIR}"/${P}-infoleak.patch #59361
-	epatch "${FILESDIR}"/${P}-terminal_restore.patch.bz2
+	epatch "${FILESDIR}"/${P}-terminal_restore.patch
 	epatch "${FILESDIR}"/${P}-configure-openct.patch #78730
 	epatch "${FILESDIR}"/${P}-kerberos-detection.patch #80811
 
 	use sftplogging && epatch "${FILESDIR}"/${P}-sftplogging-1.2-gentoo.patch.bz2
-	use skey && epatch "${FILESDIR}"/${P}-skey.patch.bz2
+	use skey && epatch "${FILESDIR}"/${P}-skey.patch
 	use chroot && epatch "${FILESDIR}"/${P}-chroot.patch
 	use X509 && epatch "${DISTDIR}"/${X509_PATCH} && epatch "${FILESDIR}"/${P}-fix_suid-x509.patch
-	use selinux && epatch "${FILESDIR}"/${SELINUX_PATCH}.bz2
-	use smartcard && epatch "${FILESDIR}"/${P}-opensc.patch.bz2
+	use selinux && epatch "${FILESDIR}"/${SELINUX_PATCH}
+	use smartcard && epatch "${FILESDIR}"/${P}-opensc.patch
 	if use ldap ; then
 		if use X509 || use sftplogging ; then
 			ewarn "Sorry, x509/sftplogging and ldap don't get along"
