@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.30.ebuild,v 1.1 2005/12/11 19:31:20 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.30.ebuild,v 1.2 2006/01/31 21:26:56 hanno Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -18,6 +18,7 @@ S=${WORKDIR}/${PN}_${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch ${FILESDIR}/${P}-gcc41.diff
 	use static && epatch "${FILESDIR}"/p7zip-4.16_x86_static.patch
 	sed -i \
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
