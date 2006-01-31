@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.34 2006/01/31 17:33:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.35 2006/01/31 23:58:40 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> psycopg-1.1.18.ebuild:
+  Mark 1.1.18 stable on ia64
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> psycopg-1.1.18.ebuild:
   Mark 1.1.18 stable on alpha
