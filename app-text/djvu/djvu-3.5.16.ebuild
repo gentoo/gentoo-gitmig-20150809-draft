@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.1 2006/01/23 19:50:01 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.2 2006/01/31 13:11:36 ehmsen Exp $
 
-inherit nsplugins flag-o-matic fdo-mime
+inherit nsplugins flag-o-matic fdo-mime eutils
 
 MY_P="${PN}libre-${PV}"
 
@@ -23,11 +23,15 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
+	# gcc 4.1 compilation fixes
+	epatch ${FILESDIR}/${P}-gcc41-hash.patch || die
+	epatch ${FILESDIR}/${P}-gcc41.patch || die
 
 	# Replace autochecking acdesktop.m4 with a gentoo-specific one
 	cp ${FILESDIR}/gentoo-acdesktop.m4 ${S}/gui/desktop/acdesktop.m4
 
-	cd ${S}
 	aclocal -I config -I gui/desktop || die "aclocal failed"
 	autoconf || die "autoconf failed"
 	libtoolize --copy --force

@@ -1,0 +1,26 @@
+--- libdjvu/GURL.h.old	2006-01-29 10:22:53.000000000 +0100
++++ libdjvu/GURL.h	2006-01-29 10:24:04.000000000 +0100
+@@ -278,10 +278,10 @@
+       //@}
+ 
+       /// Returns TRUE if #gurl1# and #gurl2# are the same
+-   bool	GURL::operator==(const GURL & gurl2) const;
++   bool	operator==(const GURL & gurl2) const;
+ 
+       /// Returns TRUE if #gurl1# and #gurl2# are different
+-   bool	GURL::operator!=(const GURL & gurl2) const;
++   bool	operator!=(const GURL & gurl2) const;
+ 
+       /// Assignment operator
+    GURL &	operator=(const GURL & url);
+--- libdjvu/ByteStream.h.old	2006-01-29 10:24:38.000000000 +0100
++++ libdjvu/ByteStream.h	2006-01-29 10:24:55.000000000 +0100
+@@ -242,7 +242,7 @@
+       and writes it to the specified stream. */
+   void formatmessage( const char *fmt, ... );
+   /** Looks up the message and writes it to the specified stream. */
+-  void ByteStream::writemessage( const char *message );
++  void writemessage( const char *message );
+   /** Writes a one-byte integer to a ByteStream. */
+   void write8 (unsigned int card8);
+   /** Writes a two-bytes integer to a ByteStream.
