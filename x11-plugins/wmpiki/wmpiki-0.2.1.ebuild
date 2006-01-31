@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.5 2004/11/25 05:36:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.6 2006/01/31 20:12:48 nelchael Exp $
 
 inherit eutils
 
@@ -14,7 +14,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )"
 
 src_compile()
 {

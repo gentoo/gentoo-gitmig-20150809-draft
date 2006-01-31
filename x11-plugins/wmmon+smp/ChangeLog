@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmon+smp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.7 2005/03/07 16:47:06 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.8 2006/01/31 20:00:36 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  wmmon+smp-1.0-r1.ebuild:
+  Fixed DEPEND for modular X.
 
   07 Mar 2005; Markus Rothe <corsair@gentoo.org> wmmon+smp-1.0-r1.ebuild:
   Stable on ppc64

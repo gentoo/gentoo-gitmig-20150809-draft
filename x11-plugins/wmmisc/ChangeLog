@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmisc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmisc/ChangeLog,v 1.3 2005/04/28 20:55:51 wormo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmisc/ChangeLog,v 1.4 2006/01/31 19:54:16 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmmisc-0.9.ebuild:
+  Fixed DEPEND for modular X.
 
   28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> wmmisc-0.9.ebuild:
   mark ~ppc

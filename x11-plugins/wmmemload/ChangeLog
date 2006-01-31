@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmemload
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.14 2005/09/17 10:10:30 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.15 2006/01/31 19:50:16 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -wmmemload-0.1.5.ebuild, wmmemload-0.1.6.ebuild:
+  Fixed DEPEND for modular X.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> wmmemload-0.1.6.ebuild:
   Mark 0.1.6 stable on alpha

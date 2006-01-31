@@ -1,14 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.2.0.ebuild,v 1.3 2005/11/11 08:45:45 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.2.0.ebuild,v 1.4 2006/01/31 19:42:41 nelchael Exp $
 
 DESCRIPTION="A dockapp to monitor LongRun on a Transmeta Crusoe processor"
 HOMEPAGE="http://www.sh.rim.or.jp/~ssato/dockapp/index.shtml"
 SRC_URI="http://www.sh.rim.or.jp/~ssato/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND="virtual/x11"
 IUSE=""
+
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )"
 
 # Since this will only work with a Crusoe processor, it's safe to assume that
 # the functionality is only available on x86.

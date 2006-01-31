@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmnd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.36 2005/11/11 10:10:08 s4t4n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.37 2006/01/31 20:03:49 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmnd-0.4.11.ebuild,
+  wmnd-0.4.11-r1.ebuild:
+  Fixed DEPEND for modular X.
 
   11 Nov 2005; Michele Noberaco <s4t4n@gentoo.org> wmnd-0.4.11-r1.ebuild,
   wmnd-0.4.11.ebuild:

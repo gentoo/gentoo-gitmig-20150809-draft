@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpiki
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/ChangeLog,v 1.5 2004/11/25 05:36:06 weeve Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/ChangeLog,v 1.6 2006/01/31 20:12:48 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmpiki-0.2.1.ebuild:
+  Fixed DEPEND for modular X.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmpiki-0.2.1.ebuild:
   Added ~sparc keyword.

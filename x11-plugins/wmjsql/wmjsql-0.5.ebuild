@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.7 2005/11/10 09:42:37 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.8 2006/01/31 19:36:49 nelchael Exp $
 
 IUSE=""
 
@@ -11,7 +11,16 @@ DESCRIPTION="MySQL monitor dockapp"
 SRC_URI="http://www.dockapps.org/download.php/id/73/${P}.tar.gz"
 HOMEPAGE="http://www.dockapps.org/file.php/id/42"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )
 	>=dev-db/mysql-4.0.20"
 
 SLOT="0"

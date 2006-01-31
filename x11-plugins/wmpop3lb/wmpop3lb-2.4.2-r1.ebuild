@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r1.ebuild,v 1.1 2005/12/01 14:40:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r1.ebuild,v 1.2 2006/01/31 20:18:13 nelchael Exp $
 
 inherit eutils
 
@@ -16,7 +16,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {

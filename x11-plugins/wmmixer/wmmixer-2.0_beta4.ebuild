@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.8 2005/11/11 09:23:17 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.9 2006/01/31 19:56:31 nelchael Exp $
 
 inherit eutils
 
@@ -10,7 +10,16 @@ DESCRIPTION="The next generation of WMMixer with native ALSA and OSS support."
 SRC_URI="http://freakzone.net/gordon/src/${PN}-2.0b4.tar.gz"
 HOMEPAGE="http://freakzone.net/gordon/#wmmixer"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )
 	alsa? ( media-libs/alsa-lib )
 	>=sys-apps/sed-4"
 

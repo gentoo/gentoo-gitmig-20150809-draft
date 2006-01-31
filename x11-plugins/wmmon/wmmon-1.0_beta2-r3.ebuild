@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.4 2005/11/11 09:25:33 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.5 2006/01/31 19:58:51 nelchael Exp $
 
 inherit eutils
 
@@ -11,7 +11,13 @@ WMMON_VERSION=1_0b2
 SRC_URI="http://rpig.dyndns.org/~anstinus/Linux/${PN}-${WMMON_VERSION}.tar.gz"
 HOMEPAGE="http://www.bensinclair.com/dockapp/"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )
 	>=sys-apps/sed-4"
 
 SLOT="0"
