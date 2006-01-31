@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/dekorator
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.1 2006/01/31 19:59:08 vanquirius Exp $
+
+*dekorator-0.2 (31 Jan 2006)
+
+  31 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +dekorator-0.2.ebuild:
+  Initial commit for bug 113748. Thanks to Bjorn Ruberg <bjoern at ruberg dash
+  wegener dot de> and Luca Marturana <lucamarturana at gmail dot com>.
+
