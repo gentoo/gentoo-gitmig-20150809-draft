@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060125.ebuild,v 1.1 2006/01/31 05:35:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060125.ebuild,v 1.2 2006/01/31 11:15:20 josejx Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 DESCRIPTION="Driver for Broadcom 43xx based wireless network devices"
 HOMEPAGE="http://bcm43xx.berlios.de"
@@ -35,6 +35,12 @@ pkg_setup() {
 	if kernel_is lt 2 6 15; then
 		die "${P} does not support building against kernels older than 2.6.15."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/remove_ieee_check.patch
 }
 
 src_compile() {
@@ -73,7 +79,7 @@ pkg_postinst() {
 		einfo
 	fi
 
-	einfo "Please read this forums thread for help and troubleshooting:"
+	einfo "Please read this forum thread for help and troubleshooting:"
 	einfo "http://forums.gentoo.org/viewtopic-t-409194.html"
 	einfo
 }

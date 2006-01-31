@@ -1,0 +1,15 @@
+--- bcm43xx.h.bak	2006-01-31 05:58:27.000000000 -0500
++++ bcm43xx.h	2006-01-31 05:57:15.000000000 -0500
+@@ -944,10 +944,12 @@
+ # error "The bcm43xx driver does not support kernels < 2.6.15"
+ # error "The driver will _NOT_ compile on your kernel. Please upgrade to the latest 2.6 kernel."
+ # error "DO NOT COMPLAIN ABOUT BUGS. UPDATE FIRST AND TRY AGAIN."
++/*
+ #else
+ # if !defined(CONFIG_IEEE80211_MODULE) && !defined(CONFIG_IEEE80211)
+ #  error "Generic IEEE 802.11 Networking Stack (CONFIG_IEEE80211) not available."
+ # endif
++*/
+ #endif
+ #ifdef IEEE80211SOFTMAC_API
+ # if IEEE80211SOFTMAC_API != 0

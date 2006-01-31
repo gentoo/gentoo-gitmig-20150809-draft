@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bcm43xx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/ChangeLog,v 1.4 2006/01/31 05:35:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/ChangeLog,v 1.5 2006/01/31 11:15:20 josejx Exp $
+
+  31 Jan 2006; Joseph Jezak <josejx@gentoo.org>
+  +files/remove_ieee_check.patch, bcm43xx-0.0.1-r20060125.ebuild:
+  Removed ieee check to fix compilation problem.
 
 *bcm43xx-0.0.1-r20060125 (31 Jan 2006)
 
