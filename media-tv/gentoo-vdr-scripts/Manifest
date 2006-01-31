@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 28b772a5d1e6247db5389eeb71f2acfe ChangeLog 7480
-RMD160 ebacfd01f62332fd9009b1ed3a5d3960dcf1c4f7 ChangeLog 7480
-SHA256 aa387ca0389f46734e842ce916dbe3757e22c1b93a9e694e3de785c89230e1f3 ChangeLog 7480
+MD5 480705fa4b2cbfe7c5814d30d15436ea ChangeLog 7606
+RMD160 eacd8eeb0f00bcc8aaa31d1d20b9b33161679e16 ChangeLog 7606
+SHA256 ea847e84ef4f18547e4f30495dc4c42cebdca94d6216007452052fd5edad8d65 ChangeLog 7606
 MD5 f138047c23306296259dd46c6a272ef3 files/digest-gentoo-vdr-scripts-0.2 70
 RMD160 cf00f8968872a3aa00c0e3d239ab6ddb6f2fb57f files/digest-gentoo-vdr-scripts-0.2 70
 SHA256 dfc8798967b9aff50db3951e079b434834407de067b8f1e5ec304a506d389b9b files/digest-gentoo-vdr-scripts-0.2 70
@@ -37,9 +37,9 @@ SHA256 5d45bc91ef77c05bbced572cf811e767a96d59491ce35501617b036d31436489 gentoo-v
 MD5 992fc1e208cf427e97d5d1ddf9268343 gentoo-vdr-scripts-0.2.2.ebuild 2717
 RMD160 3c238e9364435c6d6e13030819fb225e0a26076b gentoo-vdr-scripts-0.2.2.ebuild 2717
 SHA256 4da688356ae6e51908dfc1260c53148a94762ca1094436e8588491616cefcbd8 gentoo-vdr-scripts-0.2.2.ebuild 2717
-MD5 4b9d9fd9b656a066035533015227649d gentoo-vdr-scripts-0.2.3.ebuild 2717
-RMD160 140d2b8dd739a9114b89d42517f22fb48b351642 gentoo-vdr-scripts-0.2.3.ebuild 2717
-SHA256 c776928c3db6be45758bee39650b62d647c134ddc94484ef80a32afc80ec4ee5 gentoo-vdr-scripts-0.2.3.ebuild 2717
+MD5 54392b157314ab34552456a086a61e9b gentoo-vdr-scripts-0.2.3.ebuild 2640
+RMD160 6fa502ee6a6197ae5f25975dfb744746c251bd28 gentoo-vdr-scripts-0.2.3.ebuild 2640
+SHA256 ca92452039a52a7882f2e6b7ded23e94cdd2aa555d2d37528175081c5200376e gentoo-vdr-scripts-0.2.3.ebuild 2640
 MD5 1b50c10a7fd9a43654b499e2be7bdb20 gentoo-vdr-scripts-0.2.ebuild 2603
 RMD160 891c70a0cce485fc3be5131277be9ce56b914b5f gentoo-vdr-scripts-0.2.ebuild 2603
 SHA256 66422760021fd5aac6d361fdf44aa47dc88913f83ac59ee31686bf2ca5527c7c gentoo-vdr-scripts-0.2.ebuild 2603
@@ -55,7 +55,7 @@ SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD38MwZfSl1Kp5KmoRAniEAKDoSwPvLxv9qDsK1zFzDQEo4q/CzQCgz/Ae
-HSmKI+gdBLayt8i+vTn2PyA=
-=f8SM
+iD8DBQFD38R+ZfSl1Kp5KmoRAo5oAKCJJt44pBZ5l6df+3kWysb5KzeDtACg6XhK
+67L9OEMr276chJJsdgnbzEc=
+=LUgB
 -----END PGP SIGNATURE-----
