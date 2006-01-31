@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.9 2005/12/21 13:14:45 marienz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.10 2006/01/31 23:57:06 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> nevow-0.7.0.ebuild:
+  Mark 0.7.0 ~alpha/~ia64
 
 *nevow-0.7.0 (21 Dec 2005)
 
