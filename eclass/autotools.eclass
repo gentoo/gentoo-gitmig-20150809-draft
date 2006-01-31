@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.29 2006/01/18 23:04:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.30 2006/01/31 10:25:56 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -10,7 +10,7 @@
 #
 # NB:  If you add anything, please comment it!
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig libtool
 
 DEPEND="sys-devel/automake
 	sys-devel/autoconf
@@ -69,6 +69,10 @@ eautoreconf() {
 
 	# Normally run by econf()
 	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
+
+	# Call it here to prevent failures due to elibtoolize called _before_
+	# eautoreconf.
+	elibtoolize
 
 	return 0
 }
