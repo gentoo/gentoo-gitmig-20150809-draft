@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/eruby
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.19 2005/10/03 13:01:24 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.20 2006/01/31 19:45:09 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> eruby-1.0.5.ebuild:
+  Mark 1.0.5 stable on ia64
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> eruby-1.0.5.ebuild:
   Mark 1.0.5 ~ia64
