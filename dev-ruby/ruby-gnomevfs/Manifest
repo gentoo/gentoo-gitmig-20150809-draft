@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fafa46883495229b5d3464c1cfc73728 ruby-gnomevfs-0.11.0.ebuild 610
-MD5 463553d7b03c69181f3a0a83898bc818 ruby-gnomevfs-0.12.0.ebuild 617
-MD5 487b167be20f4be968217db0563dd1c5 ruby-gnomevfs-0.14.1.ebuild 615
-MD5 f8c9287a2ca118d33f63f1ab5af032ac ruby-gnomevfs-0.10.1.ebuild 543
 MD5 938cf6bb241789b48743a3c403816905 ChangeLog 1636
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 de3904c2fed5b50c19a7353eb864ed4134f46756 ChangeLog 1636
+SHA256 92aa5f54d8593f8adfece2f391d31fb3974175a7e1150fed05e2f0ac777288af ChangeLog 1636
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gnomevfs-0.10.1 74
+RMD160 fa6949bedae0740172dc78e728e43bd62a6eb1bf files/digest-ruby-gnomevfs-0.10.1 74
+SHA256 d657f9a43ed60a35bee960b104511f1d24fcb74261ef4d9ec8a9af8fd76509ce files/digest-ruby-gnomevfs-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gnomevfs-0.11.0 75
-MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gnomevfs-0.12.0 75
+RMD160 0e6efdd0873fe5061792a4fe17657c82ef4a2f8e files/digest-ruby-gnomevfs-0.11.0 75
+SHA256 c6fd0fc0e6d59329556416a92126ce1c59ec5fde901ce22db41c04abe570ed9a files/digest-ruby-gnomevfs-0.11.0 75
+MD5 a4b34a50cd6ba325e1e9e2e1bf1b9302 files/digest-ruby-gnomevfs-0.12.0 271
+RMD160 b0a4cc6eb95abe26f447486a012fd1f272395186 files/digest-ruby-gnomevfs-0.12.0 271
+SHA256 b773851d732ca0499a78b1648bab98c613f369249eb2f93cad323842f4860dc1 files/digest-ruby-gnomevfs-0.12.0 271
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gnomevfs-0.14.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDebwAZgSmR+etHJoRAsMVAJ46XzH+3NwPTuSw9wTT28ZJkLF0CACffOHo
-C1LorPGqgbH2+ZKtBzL3C+4=
-=DZQw
------END PGP SIGNATURE-----
+RMD160 ebf4d5f37e45706e78fdca4bac50a0311a6e9b69 files/digest-ruby-gnomevfs-0.14.1 75
+SHA256 0ca308d4b2ac8e367873d30133ec61d5592222d3c44a1c676bbd084926b59583 files/digest-ruby-gnomevfs-0.14.1 75
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 e11407ce8fd8190481bf0bf20b788cdea87f76b3 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 f8c9287a2ca118d33f63f1ab5af032ac ruby-gnomevfs-0.10.1.ebuild 543
+RMD160 e8876290a6a4ae109731276032192988ed09bc46 ruby-gnomevfs-0.10.1.ebuild 543
+SHA256 076a87e1f2c1687b2e2a7457098626f608261adee1de2bfb7e84d878d9420412 ruby-gnomevfs-0.10.1.ebuild 543
+MD5 fafa46883495229b5d3464c1cfc73728 ruby-gnomevfs-0.11.0.ebuild 610
+RMD160 f2089b38425fb0202df03a852d7d5e797bd6424a ruby-gnomevfs-0.11.0.ebuild 610
+SHA256 32c75e4a7fb40800005849e91c6c265993e60b2bec0ac2274fe0ad407175ec30 ruby-gnomevfs-0.11.0.ebuild 610
+MD5 28a9da8ee711b18640c2cf247d998afd ruby-gnomevfs-0.12.0.ebuild 616
+RMD160 670f9f391aa55d7677ade36c539ff86688a8e173 ruby-gnomevfs-0.12.0.ebuild 616
+SHA256 732e488610e807f711dcb2ea7bf4fb14757b3218c6f8c17f48eb9538d778cd23 ruby-gnomevfs-0.12.0.ebuild 616
+MD5 487b167be20f4be968217db0563dd1c5 ruby-gnomevfs-0.14.1.ebuild 615
+RMD160 10e50566fc47e70c4b81813714c03cf71c657b86 ruby-gnomevfs-0.14.1.ebuild 615
+SHA256 a4205a0690bba6a6717e9d431a962e67c60c65687260e67dc29973dfabb9f980 ruby-gnomevfs-0.14.1.ebuild 615
