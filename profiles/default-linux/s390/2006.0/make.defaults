@@ -1,4 +1,1 @@
-# This was added for bug #113298
-STAGE1_USE="pam"
-
 USE="nptl unicode"
