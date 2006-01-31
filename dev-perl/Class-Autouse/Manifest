@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7729884613779f5bc0dceb1659c6f642 ChangeLog 3659
+MD5 3989a1f75254e3a302777a110adb4d96 ChangeLog 3764
+RMD160 f95b2e332125443a158dbb61c1a7557db8e6d8ce ChangeLog 3764
+SHA256 debf0453b9ced910d93fa9b5cd71e2993c58d639c35946f5a1fee7e0e3e7d495 ChangeLog 3764
 MD5 6055806a0602a70dce9675fba861ac6f Class-Autouse-1.03.ebuild 576
+RMD160 d0243a946cfeb365741be710c08b5acf7d007836 Class-Autouse-1.03.ebuild 576
+SHA256 7cee41c52840271c43c4471d8b537c66f41b38361f4856d0c679ac7888745f01 Class-Autouse-1.03.ebuild 576
 MD5 cf6ff674622fbe8352841ac0f8f734e4 Class-Autouse-1.12.ebuild 654
+RMD160 4557e7156748fb0395c2bd2a7608d9fcc756f43c Class-Autouse-1.12.ebuild 654
+SHA256 31e7b8b8356b2ae2375766964b7419902ebace87789e6707852595b0169d1191 Class-Autouse-1.12.ebuild 654
 MD5 9f5f59731f6399acae13ada0df7697bb Class-Autouse-1.17.ebuild 618
-MD5 a83b0eae71dbb69ae5c505f4dc6e379e Class-Autouse-1.21.ebuild 622
+RMD160 642ad8c35bb218eea24cf02c921672234703c918 Class-Autouse-1.17.ebuild 618
+SHA256 c538de74c0897da683f69659ca950656f4c1878f83257f2b84da1ac0f4ed1933 Class-Autouse-1.17.ebuild 618
+MD5 547f6787a7ec2c7b0ab8c4113b5ff037 Class-Autouse-1.21.ebuild 623
+RMD160 afbddec40c32a05fbe6bb820bf3e5bbf566be0c4 Class-Autouse-1.21.ebuild 623
+SHA256 5dd1e19d7e423e9277ebbbeda2607436c386c6a943d0dc91991325e26a014246 Class-Autouse-1.21.ebuild 623
 MD5 73d468f5331bb56422a4b6b9455e93bb Class-Autouse-1.23.ebuild 633
+RMD160 b2812b6ff9abb41b90462c59f2a574e51817db3a Class-Autouse-1.23.ebuild 633
+SHA256 9ebe2b347b3ac67c24b68215a7dcb2821c81776c2edc6b5b4a010f84c9c0f554 Class-Autouse-1.23.ebuild 633
 MD5 2ed0585ebfb8395fd3b9dd86ff33e745 Class-Autouse-1.24.ebuild 636
+RMD160 2529041cbf3e27fa5d33731b85addbd52bd55f49 Class-Autouse-1.24.ebuild 636
+SHA256 de4a83e0594e1c0f23fd5b1cfd558c6c8b4b2a10e4f8296c4b0e4d80f7287052 Class-Autouse-1.24.ebuild 636
 MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
+RMD160 a7c5650d50f9c06c4671f230a0c5e0ec1faab8ed files/digest-Class-Autouse-1.03 69
+SHA256 ca2ba258858c19f2e34b6c77c5c9e11d2ce41b34c6b7b6f10e8ed020e200c19a files/digest-Class-Autouse-1.03 69
 MD5 c71169c7dcd7e74a58b7412569fe4dd2 files/digest-Class-Autouse-1.12 69
+RMD160 a662d5f32a9e3c323f8f7a6b46e2577b6075879f files/digest-Class-Autouse-1.12 69
+SHA256 228f96f16df6f415222ca2a09612ffcc89ab76813eb123344fa7b5a0323b325e files/digest-Class-Autouse-1.12 69
 MD5 42ac8b07b7aca4aa4b49d15d03b32853 files/digest-Class-Autouse-1.17 69
+RMD160 5e5635a9f2a93cc5265f89854d0480313ca87146 files/digest-Class-Autouse-1.17 69
+SHA256 0c7acf7ac0eff857257401f078c22b71318c81d82092275be539104849f1a02e files/digest-Class-Autouse-1.17 69
 MD5 31da9465e450d12c0ecb2076f0ddecd0 files/digest-Class-Autouse-1.21 69
+RMD160 06d824354183a18cf7da5b54fe7a6827ada9ae70 files/digest-Class-Autouse-1.21 69
+SHA256 99d6fcb7c2ce061cd08b82050a38436b9111421c7c16198aa2c93b1b89acf0ad files/digest-Class-Autouse-1.21 69
 MD5 393d693ba3b5b3e37f3389b59fd570f2 files/digest-Class-Autouse-1.23 69
+RMD160 84f5ad510a6739c8d492a3c52a00e5f9d0f21fcb files/digest-Class-Autouse-1.23 69
+SHA256 d50bd5652b424e4028f8d312ace340f070c31c58f7f6465178107f217c994098 files/digest-Class-Autouse-1.23 69
 MD5 3f5a8e1159a20db286d0d91339bab0b5 files/digest-Class-Autouse-1.24 69
+RMD160 7a34c121ace11d458db02b4ccc2cfe4ec0209c77 files/digest-Class-Autouse-1.24 69
+SHA256 2df0d31c8c65ad189d117683ce48486837dba0f09f7a4514ce58f5553d151513 files/digest-Class-Autouse-1.24 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD0+TitG5z4I8BtQoRAm00AKCG/rrCTXtBIIogE2DZu+xqcXZwmACdEJIN
-eW9ZctsmROhzp0acrfM5M1U=
-=bD5f
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
