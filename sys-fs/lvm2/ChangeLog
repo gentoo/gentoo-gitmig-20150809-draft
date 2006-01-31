@@ -1,9 +1,13 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.48 2005/11/02 21:01:32 rocket Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.49 2006/01/31 23:27:59 rocket Exp $
 
-  02 Nov 2005; Eric Edgar <rocket@gentoo.org> files/lvm2-stop.sh:
-  Update lvm2-stop.sh for bug 57229
+*lvm2-2.01.14-r1 (31 Jan 2006)
+
+  31 Jan 2006; Eric Edgar <rocket@gentoo.org> +files/lvm2-2.01.14.patch,
+  -lvm2-2.01.14.ebuild, +lvm2-2.01.14-r1.ebuild:
+  remove lvm2-2.01.14.ebuild;Change device-mapper depend; add selinux suport;
+  gcc patch
 
 *lvm2-2.01.14 (14 Oct 2005)
 

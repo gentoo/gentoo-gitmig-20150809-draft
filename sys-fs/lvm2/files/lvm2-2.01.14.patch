@@ -1,0 +1,30 @@
+Index: LVM2.2.01.14/lib/mm/pool-fast.c
+===================================================================
+--- LVM2.2.01.14.orig/lib/mm/pool-fast.c
++++ LVM2.2.01.14/lib/mm/pool-fast.c
+@@ -30,8 +30,8 @@ struct pool {
+ 	unsigned object_alignment;
+ };
+ 
+-void _align_chunk(struct chunk *c, unsigned alignment);
+-struct chunk *_new_chunk(struct pool *p, size_t s);
++static void _align_chunk(struct chunk *c, unsigned alignment);
++static struct chunk *_new_chunk(struct pool *p, size_t s);
+ 
+ /* by default things come out aligned for doubles */
+ #define DEFAULT_ALIGNMENT __alignof__ (double)
+@@ -204,12 +204,12 @@ void pool_abandon_object(struct pool *p)
+ 	p->object_alignment = DEFAULT_ALIGNMENT;
+ }
+ 
+-void _align_chunk(struct chunk *c, unsigned alignment)
++static void _align_chunk(struct chunk *c, unsigned alignment)
+ {
+ 	c->begin += alignment - ((unsigned long) c->begin & (alignment - 1));
+ }
+ 
+-struct chunk *_new_chunk(struct pool *p, size_t s)
++static struct chunk *_new_chunk(struct pool *p, size_t s)
+ {
+ 	struct chunk *c;
+ 
