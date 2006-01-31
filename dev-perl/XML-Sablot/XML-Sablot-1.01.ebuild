@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-1.01.ebuild,v 1.4 2006/01/21 21:41:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-1.01.ebuild,v 1.5 2006/01/31 22:03:37 agriffis Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://search.cpan.org/~pavelh/${MY_P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="app-text/sablotron
