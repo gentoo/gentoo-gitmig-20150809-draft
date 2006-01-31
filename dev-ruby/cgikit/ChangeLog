@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cgikit
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/ChangeLog,v 1.4 2005/10/03 13:00:10 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/ChangeLog,v 1.5 2006/01/31 19:43:44 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> cgikit-1.2.0.ebuild:
+  Mark 1.2.0 stable on ia64
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> cgikit-1.2.0.ebuild:
   Mark 1.2.0 ~ia64
