@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-1.7.3.ebuild,v 1.1 2006/01/31 01:18:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-1.7.3.ebuild,v 1.2 2006/01/31 01:28:15 vapier Exp $
 
 inherit eutils
 
@@ -29,13 +29,11 @@ src_unpack() {
 }
 
 src_install() {
-	dolib.so libmatrixssl.so || die
+	make install DESTDIR="${D}" || die
 	cd ..
 	if use doc ; then
 		dodoc doc/*
 		docinto examples
 		dodoc examples/*
 	fi
-	insinto /usr/include
-	doins *.h || die
 }

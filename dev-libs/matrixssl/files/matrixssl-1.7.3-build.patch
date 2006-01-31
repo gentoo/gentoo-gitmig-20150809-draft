@@ -2,6 +2,15 @@ Respect host build env
 
 --- matrixssl/src/Makefile
 +++ matrixssl/src/Makefile
+@@ -15,7 +15,7 @@
+ E       =
+ 
+ LIBRARY	= libmatrixssl$(SO)
+-STATIC	= libmatrixsslstatic$(A)
++STATIC	= libmatrixssl$(A)
+ 
+ OBJECTS	= \
+ 		cipherSuite$(O) \
 @@ -51,5 +51,6 @@
  else
  #DFLAGS	= -Os
@@ -41,3 +50,24 @@ Respect host build env
 +LDFLAGS += -flat_namespace -install_name @executable_path/../src/$(LIBRARY)
  STRIP = test
  endif
+@@ -122,6 +122,20 @@
+ 	$(RANLIB) $@
+ 
+ #
++# Install the package
++#
++DESTDIR =
++PREFIX  = /usr
++LIBDIR  = $(PREFIX)/lib
++INCDIR  = $(PREFIX)/include
++MKDIR   = mkdir -p
++
++install: $(LIBRARY) $(STATIC)
++	$(MKDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCDIR)
++	install -m 0644 $(LIBRARY) $(STATIC) $(DESTDIR)$(LIBDIR)
++	install -m 0644 ../*.h $(DESTDIR)$(INCDIR)
++
++#
+ #	Clean up all generated files
+ #
+ clean:

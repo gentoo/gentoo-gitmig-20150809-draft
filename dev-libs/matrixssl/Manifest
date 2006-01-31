@@ -10,22 +10,22 @@ SHA256 5ad9994bd6c128f552e5f6e2b6b345d807dce8336c58f29a9b7c673a129aebfd files/di
 MD5 ed9d899996695707219735f0a4db666a files/digest-matrixssl-1.7.3 262
 RMD160 b44befb850d675b0da21cfd0a0b58c263608d0dd files/digest-matrixssl-1.7.3 262
 SHA256 33f01eee6dc6d80c9b5d64ddb41915ee532b51d869abfb52f05a539d92fa96e4 files/digest-matrixssl-1.7.3 262
-MD5 2dcd782899cb642eb163be648060daea files/matrixssl-1.7.3-build.patch 1053
-RMD160 608db19b05038c3670617d9ec454ad348667bc70 files/matrixssl-1.7.3-build.patch 1053
-SHA256 934b32013e0e2de3c50beb6c535308f1483a0f235bb0104e1d95b12f5ebbea55 files/matrixssl-1.7.3-build.patch 1053
+MD5 d0c2fd11d79920131963f7103c8de997 files/matrixssl-1.7.3-build.patch 1613
+RMD160 64a98b2abadd5161ac181926f3ae86e74526a914 files/matrixssl-1.7.3-build.patch 1613
+SHA256 903bf53774cffce669eb917419e527894c75d4171c2e54646aec1f62b5cf22be files/matrixssl-1.7.3-build.patch 1613
 MD5 1a3388f4e1bb253da6b2fafcec7cba26 matrixssl-1.2.4.ebuild 824
 RMD160 b92bd7191b5029f882295110e9cdcdda24d249bf matrixssl-1.2.4.ebuild 824
 SHA256 54376cd53f7ab3de4f2f464a2e0bc1d3625a99808fbd3263a13a62d98cf962f9 matrixssl-1.2.4.ebuild 824
-MD5 f4a8dbe1fb23aa4dc96a7f569ca4f305 matrixssl-1.7.3.ebuild 855
-RMD160 06575519513fe5b303e087d11512f379cbbaef3e matrixssl-1.7.3.ebuild 855
-SHA256 95b9f05a1f6fa1b558322c7bea7bade749fb77f4903a9f65e794ca4ba0d2847a matrixssl-1.7.3.ebuild 855
+MD5 074da35ddc53fcc20b712104264a65ae matrixssl-1.7.3.ebuild 818
+RMD160 0b2d1d0a7e3199eb8f4d7c44bb1141b7069e0652 matrixssl-1.7.3.ebuild 818
+SHA256 8395e09b5bd852040e3452b34373f0b40d0d97dc1e55ce33454699d830710b4e matrixssl-1.7.3.ebuild 818
 MD5 c5b5abb3be81bb53cfee6c21c8ee3645 metadata.xml 222
 RMD160 9a51d118e31a99b3a5f6e028b2333834797b04e4 metadata.xml 222
 SHA256 1303584dbc7a47704409f60381c08cacc03111cc9813f0bf4013af127c02e10d metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3rsO2+ySkm8kpY0RAi+VAJ9uYURdU1fC6FaLTHX/jkaPGb5MjACcD1ce
-UAajoBeWJtfx6kJlOttPUyk=
-=vvgW
+iD8DBQFD3r1Q2+ySkm8kpY0RAiSiAJ0afh1/ADBlyinrcSjXwRFKVkcngwCggBoM
+f+xeT+M0pow71oI2UCy6B1w=
+=VRHK
 -----END PGP SIGNATURE-----
