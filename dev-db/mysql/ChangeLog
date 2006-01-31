@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.294 2006/01/24 19:25:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.295 2006/01/31 00:59:05 vivo Exp $
+
+  31 Jan 2006; Francesco Riosa <vivo@gentoo.org> files/mysql-slot.conf.d-r1,
+  -files/mysql-slot.conf.d-r2, -files/mysql-slot.rc6-r2,
+  +files/mysql-slot.rc6-r3:
+  - pointer to http://www.gentoo.org/doc/en/mysql-upgrade-slotted.xml added
+  - workarounds for test baselayout, also again starting also slotted MySQL
+  > from only one file /etc/init.d/mysql
 
   24 Jan 2006; Francesco Riosa <vivo@gentoo.org> +files/my.cnf-4.1-r1,
   +files/logrotate-slot.mysql, files/mysql-slot.rc6-r2,

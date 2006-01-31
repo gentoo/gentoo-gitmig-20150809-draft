@@ -1,12 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r2,v 1.4 2006/01/24 19:25:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r3,v 1.1 2006/01/31 00:59:05 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
-depend() {
-	use dns net localmount netmount nfsmount
+# int in_list(char * elem, char * list)
+function in_list() {
+	local elem=${1:-"none"}
+	local list=${2:-","}
+
+	[[ "${list}" == "${list/,${elem},/}" ]] \
+		&& return 1 \
+		|| return 0
 }
 
 function wdebug() {
@@ -16,43 +22,38 @@ function wdebug() {
 	fi
 }
 
+depend() {
+	use dns net localmount netmount nfsmount
+}
+
 do_escape() {
 	# Ihatethisreallyverymuch
 	#echo "$1" | sed -e "s|'| |" -e "s|=|='|" -e "s|$|'|"
 	echo "$1"
 }
 
-# int get_slot_config()
+# int get_slot_config(srv_slot=0, srv_num)
 get_slot_config() {
-
 	wdebug 4 ">>> get_slot_config()"
 
-	# servers options are (also) defined in /etc/conf.d/mysql
-	[[ -f /etc/conf.d/mysql ]] && source /etc/conf.d/mysql
-
-	# myservice={mysql,mysql-500,mysql-500_1} => {,-500,-500_1,-500.1}
-	local srv="${myservice#mysql}"
-	# srv={,-500,-500_1,-500.1} => {,500,500_1,500.1}
-	srv="${srv:1}"
+	local srv srv_slot srv_num
+	srv_slot="${1:-"0"}"
+	srv_num="${2}"
+	MY_SUFFIX="-${srv_slot}"
 	# srv=array(0 => [srv_slot], 1 => [srv_num] )
-	srv=( ${srv//[_.-]/" "} )
-	local srv_slot=${srv[0]} srv_num=${srv[1]}
-	# defined in /etc/conf.d/mysql mysql_slot_{0,500,500_1}
+	srv=( ${srv_slot} ${srv_num} )
+	
 	local tmp_eval="mysql_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
 	local conf_d_parameters="${!tmp_eval}"
-	MY_SUFFIX="-${srv_slot}"
-	if [[ -z "${srv_slot}" ]] ; then
-		srv_slot="0"
+	if [[ "${srv_slot}" == "0" ]] ; then
 		MY_SUFFIX=''
 		# try some other default for the default server
-		[[ -z "${conf_d_parameters[@]}" ]] && conf_d_parameters=${mysql_slot_0[@]}
 		[[ -z "${conf_d_parameters[@]}" ]] && conf_d_parameters=${mysql_slot[@]}
 	fi
 	[[ -z "${conf_d_parameters[@]}" ]] && conf_d_parameters=( )
 	basedir="" datadir="" pidfile="" socket=""
 	CHROOT="" NICE="" STARTUPTIMEOUT=5 STOPTIMEOUT=120
 
-	wdebug 3 "myservice          ${myservice}"
 	wdebug 3 "srv                ${srv[@]}"
 	wdebug 3 "srv_slot           ${srv_slot}"
 	wdebug 3 "srv_num            ${srv_num}"
@@ -82,8 +83,6 @@ get_slot_config() {
 			mycnf=*) MY_CNF="${my_default#mycnf=}" ;;
 			startup_timeout=*)
 				STARTUPTIMEOUT="${my_default#startup_timeout=}"	;;
-			stop_timeout=*)
-				STOPTIMEOUT="${my_default#stop_timeout=}"	;;
 			basedir=*) basedir="${my_default#basedir=}" ;;
 			datadir=*) datadir="${my_default#datadir=}" ;;
 			pid-file=*) pidfile="${my_default#pid-file=}" ;;
@@ -193,35 +192,87 @@ checkconfig() {
 start() {
 	wdebug 4 ">>> start()"
 
-	local retstatus=0
+	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
+	# servers are defined in /etc/conf.d/mysql
+	local serverlist=${!mysql_slot_*}
+	# provide default for empty conf.d/mysql
+	if [[ -z "${serverlist}" ]] ; then
+		serverlist=0
+		export mysql_slot_0=( )
+	fi
+	local retstatus timeout
+	local globretstatus=1
+	local srv_slot srv_num
+	# server MUST NOT share same location for these
+	local pidfilelist=',' datadirlist=',' socketlist=','
+	local ssd_thing=1
+	local mysqld_thing
 
 	ebegin
-		get_slot_config || return 1
+	# try to start each server
+	for srv in ${serverlist[*]} ; do
+
+		srv_slot="${srv#mysql_slot_}"
+		if [[ "${srv_slot}" == "${srv_slot#*_}" ]] ; then
+			srv_num=''
+		else
+			srv_num="${srv_slot#*_}"
+		fi
+		srv_slot="${srv_slot%%_*}"
+
+		retstatus=0
+		get_slot_config "${srv_slot}" "${srv_num}" || retstatus=1
 
 		if [[ -f ${pidfile} ]] || [[ -S ${socket} ]] ; then
 			echo "\"${pidfile}\" and/or \"${socket}\" are still present."
 			echo "Please check that no server is running and remove them."
-			return 1
+			retstatus=1 ; continue			
+		fi
+		
+		# pre_run checks
+		[[ "$retstatus" -eq 0 ]] && checkconfig "${datadir}" || retstatus=2
+		if [[ "$retstatus" -eq 0 ]] ; then
+			if in_list "${pidfile}" "${pidfilelist}" ; then
+				eerror "Sorry, won't start with same pid-file: ${pidfile}"
+				retstatus=3 ; continue
+			fi
+			if in_list "${datadir}" "${datadirlist}" ; then
+				eerror "Sorry, won't start with same datadir: ${datadir}"
+				retstatus=4 ; continue
+			fi
+			if in_list "${socket}" "${socketlist}" ; then
+				eerror "Sorry, won't start with same socket: ${socket}"
+				retstatus=5 ; continue
+			fi
 		fi
 
-		checkconfig "${datadir}" || return 2
+		if ! checkconfig "${datadir}" ; then
+			retstatus=6 ; continue
+		fi
 
 		einfo "Starting ${myservice} (${MY_CNF})"
+		
+		mysqld_thing="${MY_CNF:+"--defaults-file="}${MY_CNF}"
+		mysqld_thing="${mysqld_thing} ${unmanagedparams}"
+		mysqld_thing="${mysqld_thing} --basedir=${basedir}"
+		mysqld_thing="${mysqld_thing} --datadir=${datadir}"
+		mysqld_thing="${mysqld_thing} --pid-file=${pidfile}"
+		mysqld_thing="${mysqld_thing} --socket=${socket}"
 
-		wdebug 2 "starting mysqld with: ${MY_CNF:+"--defaults-file="}${MY_CNF} ${unmanagedparams} --basedir=${basedir} --datadir=${datadir} --pid-file=${pidfile} --socket=${socket}"
+		wdebug 2 "starting mysqld with: ${mysqld_thing}"
+		
+		if [[ ${ssd_thing} -eq 1 ]] ; then
+			start-stop-daemon --quiet ${DEBUG/*/"--verbose"} --start \
+			--background ${NICE:+"--nicelevel "}${NICE} \
+			--exec ${basedir}/sbin/mysqld${MY_SUFFIX} -- ${mysqld_thing}
+			retstatus=$?
+		else
+			${basedir}/sbin/mysqld${MY_SUFFIX} ${mysqld_thing} &
+			retstatus=0
+		fi
 
-		start-stop-daemon --quiet ${DEBUG/*/"--verbose"} --start --background \
-			${NICE:+"--nicelevel "}${NICE} \
-			--exec ${basedir}/sbin/mysqld${MY_SUFFIX} \
-			-- \
-				${MY_CNF:+"--defaults-file="}${MY_CNF} \
-				${unmanagedparams} \
-				--basedir=${basedir} \
-				--datadir=${datadir} \
-				--pid-file=${pidfile} \
-				--socket=${socket}
-
-		retstatus=$?
+		# only the first run is done by start-stop-daemon
+		ssd_thing=""
 
 		# wait for socket creation
 		wdebug 1
@@ -230,34 +281,56 @@ start() {
 			[[ ${DEBUG} -ge 1 ]] && echo -n "${STARTUPTIMEOUT},"
 			sleep ${TIMEUNIT}
 		done
-		wdebug 1  ""
+		wdebug 1 ""
 		if [[ ! -S "${socket}" ]] ; then
 			eerror "MySQL${MY_SUFFIX} NOT started (${retstatus})"
 			retstatus=1
+		else
+			globretstatus=0
+			pidfilelist="${pidfilelist}${pidfile},"
+			datadirlist="${datadirlist}${datadir},"
+			socketlist="${socketlist}${socket},"
+			echo "${srv_slot}${srv_num:+"_"}${srv_num}=${pidfile}" >> "${MYSQL_GLOB_PID_FILE}"
 		fi
-
+	done
+	# successfull if at least one mysqld started
 	wdebug 4 "<<< start()"
-	eend $retstatus
+	eend $globretstatus
 }
 
 stop() {
-	get_slot_config
-	local retstatus=0 PID
-	local timeout=${STOPTIMEOUT:-"120"}
+	get_slot_config &> /dev/null
+	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
+	local runwhat pidfile shutdown_elem
+	local PID cnt timeout=${STOPTIMEOUT:-"120"}
+	local retstatus=0
+	local shutdown_list="$(tac "${MYSQL_GLOB_PID_FILE}")"
 
-	PID=$(< "${pidfile}")
 	ebegin "Stopping ${myservice} (pid=${PID})"
+	for shutdown_elem in $shutdown_list; do
+		runwhat=${shutdown_elem%%=*}
+		pidfile=${shutdown_elem#*=}
+		timeout=${STOPTIMEOUT:-"120"}
+		PID=$(< "${pidfile}" )
+		wdebug 3 "runwhat            ${runwhat}"
+		wdebug 3 "pidfile            ${pidfile}"
+		wdebug 3 "timeout            ${timeout}"
+		wdebug 3 "PID                ${PID}"
 
-	start-stop-daemon --quiet ${DEBUG/*/"--verbose"} --stop --pidfile "${pidfile}"
-	wdebug 1  ""
-	while [[ -n "$PID" ]] \
-		&& $( kill -15 $PID 2>/dev/null ) \
-		&& [[ "${timeout}" -ge 1 ]]
-	do
-		timeout=$(($timeout - 1))
-		[[ ${DEBUG} -ge 1 ]] && echo -n "$(( $STOPTIMEOUT - $timeout )),"
-		sleep ${TIMEUNIT}
+		einfo "Stopping mysqld (${runwhat})"
+
+		start-stop-daemon --quiet ${DEBUG/*/"--verbose"} --stop --pidfile "${pidfile}" &
+		wdebug 1 ""
+		while [[ -n "$PID" ]] \
+			&& $( kill -15 $PID 2>/dev/null ) \
+			&& [[ "${timeout}" -ge 1 ]]
+		do
+			timeout=$(($timeout - 1))
+			[[ ${DEBUG} -ge 1 ]] && echo -n "$(( $STOPTIMEOUT - $timeout )),"
+			sleep ${TIMEUNIT}
+		done
+		[[ "${timeout}" -lt 1 ]] && retstatus=1
 	done
-	[[ "${timeout}" -lt 1 ]] && retstatus=1
+	[[ "$retstatus" -eq 0 ]] && rm -f "$MYSQL_GLOB_PID_FILE"
 	eend ${retstatus}
 }

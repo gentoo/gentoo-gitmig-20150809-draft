@@ -16,8 +16,8 @@
 # mycnf           : string [full path to my.cnf]
 #                 : specify the path to my.cnf file to be used
 # ----------------+-----------------------------------------------------------
-# startup_timeout : integer [seconds] default 5
-#                 : time to wait for mysqld up and running, after this it's 
+# startup_timeout : integer [seconds] default 15
+#                 : time to wait for mysqld up and running, after this it's
 #                 : marked as failed
 # ----------------+-----------------------------------------------------------
 #
@@ -44,21 +44,34 @@
 # Be more verbose accept values from 1 to 4
 #DEBUG=4
 #
-# The default location for the "master" pid file 
-#MYSQL_GLOB_PID_FILE="/var/run/svc-started-mysqld"
+# The default location for the "master" pid file
+# MYSQL_GLOB_PID_FILE="/var/run/svc-started-mysqld"
 #
 # The timeout for a failed attempt to stop a server
 # STOPTIMEOUT=120
 #
 
-## Examples:
+## The parameters are passed in a bash array variable,
+# the variable name is mysql_slot_[server-ver]_[server-num]
+# Where "server-ver" and "server-num" are optional.
+# in case are defined "server-num" MUST be of three digits.
+# The first digit is the mayor version, the following two the minor
+# i.e. having installed mysql-5.1.x "server-num" will be "501"
+# "server-num" it's an optional number used mainly to start more servers
+# of the same version.
+#
+# The /etc/init.d/mysql-* script will choose the parameters analyzing it's own name
+# i.e. /etc/init.d/mysql-501 will look for mysql_slot_501
+# side note the script could be called "mysql-501_1" or "mysql.501.1" with the same result
+#
+# Examples:
 #
 # start a default server with default options:
 #mysql_slot_0=()
 #
 # start MySQL 7.5.x reniced, overriding some start parameters
 #mysql_slot_705=(
-#	"nice=-5"
+#   "nice=-5"
 #   "server-id=123"
 #   "log-bin="myhost"
 #   "port=3307"
@@ -66,7 +79,7 @@
 #
 # start another server, same version, different my.cnf
 #mysql_slot_705_1=(
-#	"mycnf=/home/test/my.cnf"
+#   "mycnf=/home/test/my.cnf"
 #   "server-id=124"
 #)
 #
