@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/m68k/make.defaults,v 1.3 2005/04/16 08:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/m68k/make.defaults,v 1.4 2006/01/31 23:24:12 wolf31o2 Exp $
 
 ARCH="m68k"
 ACCEPT_KEYWORDS="m68k"
@@ -11,6 +11,8 @@ CXXFLAGS="${CFLAGS}"
 
 FEATURES="-sandbox sfperms"
 
-GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"
+# I am commenting these out simply because I don't know if they want to be
+# transferred to USE or not.  --wolf31o2
+#GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"
 
 USE="crypt ncurses readline ssl zlib"
