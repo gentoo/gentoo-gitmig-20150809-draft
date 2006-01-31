@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.21 2006/01/18 17:28:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.22 2006/01/31 11:17:14 mrness Exp $
+
+*hsfmodem-7.18.00.07-r2 (31 Jan 2006)
+
+  31 Jan 2006; Alin Nastac <mrness@gentoo.org>
+  +files/hsfmodem-7.18.00.07-udev-group.patch, -hsfmodem-7.18.00.07.ebuild,
+  +hsfmodem-7.18.00.07-r2.ebuild:
+  Remove obsolete version. Set device group to "dialout" in udev rules (#121019).
 
   18 Jan 2006; Alin Nastac <mrness@gentoo.org>
   hsfmodem-7.18.00.07-r1.ebuild:
