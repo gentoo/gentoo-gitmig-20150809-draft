@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.3 2005/04/10 11:55:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.4 2006/01/31 19:16:21 nelchael Exp $
 
 inherit eutils
 
@@ -13,10 +13,20 @@ DESCRIPTION="wmGrabImage grabs an image from the WWW and displays it"
 SRC_URI="http://www.dockapps.com/download.php/id/19/${MY_P}-${PV}.tgz"
 HOMEPAGE="http://www.dockapps.com/file.php/id/12"
 
-DEPEND="virtual/x11
-	>=net-misc/wget-1.9-r2
+
+RDEPEND=">=net-misc/wget-1.9-r2
 	>=media-gfx/imagemagick-5.5.7.15
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )"
 
 SLOT="0"
 LICENSE="GPL-2"
