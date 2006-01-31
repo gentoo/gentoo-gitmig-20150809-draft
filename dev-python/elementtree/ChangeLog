@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elementtree
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.14 2005/12/17 01:23:58 liquidx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.15 2006/01/31 20:32:20 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> elementtree-1.2.6.ebuild:
+  Mark 1.2.6 stable on ia64
 
   17 Dec 2005; Alastair Tse <liquidx@gentoo.org> elementtree-1.2.ebuild,
   elementtree-1.2.6.ebuild:
