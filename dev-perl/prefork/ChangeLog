@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.9 2006/01/27 20:25:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.10 2006/01/31 23:04:35 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> prefork-1.00.ebuild:
+  Mark 1.00 stable on alpha
 
   27 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> prefork-1.00.ebuild:
   Stable on ppc.
