@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.17.ebuild,v 1.13 2005/05/08 15:13:02 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.17.ebuild,v 1.14 2006/01/31 11:50:03 tove Exp $
 
 MY_P="${PN}_${PV}.orig"
 S=${WORKDIR}/${MY_P/_/-}
@@ -14,9 +14,13 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-DEPEND="virtual/x11
-	sys-apps/coreutils
+RDEPEND="|| ( x11-libs/libXext virtual/x11 )
 	motif? ( x11-libs/openmotif )"
+
+DEPEND="${RDEPEND}
+	|| ( (  x11-proto/xextproto
+			x11-proto/xproto )
+		virtual/x11 )"
 
 src_unpack() {
 

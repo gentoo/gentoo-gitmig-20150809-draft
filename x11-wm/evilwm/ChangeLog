@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.30 2006/01/22 16:53:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.31 2006/01/31 11:50:03 tove Exp $
+
+*evilwm-0.99.22 (31 Jan 2006)
+
+  31 Jan 2006; Torsten Veller <tove@gentoo.org> +files/evilwm.desktop,
+  -evilwm-0.99.4.ebuild, -evilwm-0.99.14.ebuild, evilwm-0.99.17.ebuild,
+  -evilwm-0.99.18.ebuild, +evilwm-0.99.22.ebuild:
+  Version bump. Added desktop file. Removed old versions.
 
 *evilwm-0.99.21 (22 Jan 2006)
 
