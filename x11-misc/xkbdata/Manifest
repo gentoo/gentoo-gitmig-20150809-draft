@@ -1,4 +1,4 @@
-MD5 dfb5ce1d891de9b2f5d14d5af5bd3c65 ChangeLog 2121
+MD5 225c101bd7808bfd4e980b22f0dabd64 ChangeLog 2214
 MD5 1206c10b4d50fcf26e3b26e48d8d3dad files/digest-xkbdata-1.0.1 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 b052b426998896c8090859877a3e28ac xkbdata-1.0.1.ebuild 665
+MD5 c10bf1c929ae58f21e153ec11c2db61a xkbdata-1.0.1.ebuild 673
