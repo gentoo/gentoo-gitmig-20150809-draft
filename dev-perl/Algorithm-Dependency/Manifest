@@ -1,4 +1,22 @@
-MD5 8cd9e629950f86d2390c10cc38906752 Algorithm-Dependency-1.101.ebuild 624
-MD5 494629b1b79b47083b3f5260cf5e6dbe ChangeLog 1210
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 03c59eb5ecfd6cb349d6727309f837a6 Algorithm-Dependency-1.101.ebuild 625
+RMD160 a36ded2186e2ed95440ce16aad2e9e293da54877 Algorithm-Dependency-1.101.ebuild 625
+SHA256 7ee770d2001079f17ec74d8edc70426453894d16cece960e1448bfbc4fa61e49 Algorithm-Dependency-1.101.ebuild 625
+MD5 37d9d4e334cdc36b07f90368d4a6bf4e ChangeLog 1329
+RMD160 4c40dd3fa02a393093ada63708b29480e9162925 ChangeLog 1329
+SHA256 d52d1b4c79bf9e034087b6780292c5bb1fb67ac8e4b715f331add642a132a0c5 ChangeLog 1329
 MD5 6aa8de3d8e467189720157ca1f361904 files/digest-Algorithm-Dependency-1.101 77
+RMD160 c1cd38e85da43f30c6e49428822bef3375737cf8 files/digest-Algorithm-Dependency-1.101 77
+SHA256 589dd6bafeccf37e12fa5a8fc0f3bc022a9f6e9d7c4afcc75b8d16be89e54bf0 files/digest-Algorithm-Dependency-1.101 77
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD3/HEJrHF4yAQTrARAsv2AJ9b32rOGeV9LRf2iMTKeOQrbTM/3gCfa+2t
+Dm9EKVp5Vzm59qjbrQISt/U=
+=I/dS
+-----END PGP SIGNATURE-----
