@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.10 2006/01/24 23:56:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.11 2006/01/31 00:55:36 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -429,15 +429,14 @@ mysql_src_install() {
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
 
 	insinto "/etc/conf.d"
-	newins "${FILESDIR}/mysql-slot.conf.d-r2" "mysql"
+	newins "${FILESDIR}/mysql-slot.conf.d-r1" "mysql"
 	mysql_version_is_at_least "5.00.11.00" \
 	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
 
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-slot.rc6-r2" "mysql"
-		[[ ${SLOT} -gt 0 ]] && dosym "/etc/init.d/mysql" "/etc/init.d/mysql${MY_SUFFIX}"
+		newexe "${FILESDIR}/mysql-slot.rc6-r3" "mysql"
 
 		mysql_version_is_at_least "5.00.11.00" \
 		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
@@ -528,11 +527,8 @@ mysql_pkg_postinst() {
 	if ! useq minimal; then
 		if [[ ${SLOT} -gt 0 ]] ; then
 			if [[ -f "${ROOT}/usr/sbin/mysqld" ]] ; then
-				einfo "you may want to run unmerge any unslotted MySQL versions with "
-				einfo "emerge -C --pretend dev-db/mysql"
-				einfo "emerge -C =dev-db/mysql-X.Y.Z"
-				einfo "After the unmerge run \"eselect myqsl list\" followed by a "
-				einfo "\"eselect myqsl set 1\" to chose the default mysql server"
+				einfo "you may want to read:"
+				einfo "http://www.gentoo.org/doc/en/mysql-upgrade-slotted.xml"
 			else
 				local tmpres="$( eselect mysql show )"
 				# "like grep -q unset"
