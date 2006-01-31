@@ -1,4 +1,4 @@
-MD5 12f7a322ad55970eaea45806bf0bc38a ChangeLog 4871
+MD5 98a5beabc2b6c689e268b299bc8fbb38 ChangeLog 5034
 MD5 f1c337772d8c495c76c36499d9efa5c9 files/digest-skey-1.1.5-r3 131
 MD5 f1c337772d8c495c76c36499d9efa5c9 files/digest-skey-1.1.5-r4 131
 MD5 f1c337772d8c495c76c36499d9efa5c9 files/digest-skey-1.1.5-r5 131
@@ -7,6 +7,6 @@ MD5 ab3f803b5ad68dc89dfb5b544342b403 files/skey-1.1.5-fPIC.patch 271
 MD5 f227550f3aee8a1988f3bbc6176cbaf8 files/skey-1.1.5-otp.diff 1437
 MD5 2bc2fd632a13d33a3832ec3bf2449c1b files/skey-login_name_max.diff 386
 MD5 fb946a077c4e2ae03befc41f3a095b39 metadata.xml 1425
-MD5 05f978f63d95e2fd81e301d0d0c96625 skey-1.1.5-r3.ebuild 2310
-MD5 177f80ac20ac65ad5f94b5e7f4737aad skey-1.1.5-r4.ebuild 2888
-MD5 bb491e3667a23d94d51570a4fcf680d9 skey-1.1.5-r5.ebuild 3077
+MD5 44750741ff7ca51feec40095290259f3 skey-1.1.5-r3.ebuild 2313
+MD5 467bfb8254076bef10ae320c38d1d528 skey-1.1.5-r4.ebuild 2891
+MD5 616ab9d37d588b7a09483023f5e8b950 skey-1.1.5-r5.ebuild 3080
