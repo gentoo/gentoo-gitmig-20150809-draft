@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.147 2006/01/20 13:19:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.148 2006/01/31 08:43:33 pauldv Exp $
 
   20 Jan 2006; Caleb Tennis <caleb@gentoo.org> db-4.3.27.ebuild,
   db-4.3.29.ebuild:
@@ -49,6 +49,9 @@
   +files/db-1.85-gentoo-paths.patch, +db-1.85-r3.ebuild:
   Further cleanup the patch from Redhat, add a SONAME fix for alpha #48616,
   and tweak how we build/install.
+
+  25 Aug 2005; <pauldv@gentoo.org> -db-3.2.9-r7.ebuild:
+  Remove old ebuild versions
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> db-4.2.52_p2.ebuild:
   stable on ia64
