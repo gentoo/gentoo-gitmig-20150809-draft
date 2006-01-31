@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/files/mon.rc6,v 1.5 2005/01/16 08:27:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/files/mon.rc6,v 1.6 2006/01/31 12:30:13 uberlord Exp $
 
 depend() {
 	need clock
@@ -19,12 +19,14 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting mon"
-	start-stop-daemon --start --quiet --exec /usr/sbin/mon -- -P /var/run/mon.pid -f 1>&2
+	start-stop-daemon --start --exec /usr/sbin/mon \
+	    --pidfile /var/run/mod.pid \
+	    -- -P /var/run/mon.pid -f
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping mon"
-	start-stop-daemon --stop --quiet --pid /var/run/mon.pid 1>&2
+	start-stop-daemon --stop --pidfile /var/run/mon.pid
 	eend $?
 }
