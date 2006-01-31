@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.8.2.ebuild,v 1.4 2005/12/08 21:48:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.8.2.ebuild,v 1.5 2006/01/31 15:48:16 metalgod Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc vim emacs"
 DEPEND="virtual/libc
 	doc? ( sys-apps/texinfo )

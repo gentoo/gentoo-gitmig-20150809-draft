@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 642fb031549dae0c5e3cc61536634222 ChangeLog 2406
+MD5 6d4d0191c791a079f3e7013cb0780ec1 ChangeLog 2523
+RMD160 3a156d11c24739c20d38a43fda80cfea0dd8825e ChangeLog 2523
+SHA256 52314e8e8e4991e72792d0d94fb68093f6920e9e79ac624d5238d6b980fec41f ChangeLog 2523
 MD5 050c877ef3774d638722b9a90dbd48b2 files/50gtags-gentoo.el 184
+RMD160 38ffa8e74a0617fd5742eb88c9aac42c9de53edc files/50gtags-gentoo.el 184
+SHA256 8453e25df3e5d19222539aa8f477fc6ae1b6ac7e9fed98013c25fdf77a98e006 files/50gtags-gentoo.el 184
 MD5 0424e6fe5b2cb2d127bb8c2d358c86f0 files/digest-global-4.5 62
+RMD160 fa6ff11d695bdf9ab36469e710831b19ca229d3f files/digest-global-4.5 62
+SHA256 270d64ca84aef4a6328646765d894e242525d103684ab23d2b583c3e9707b6b6 files/digest-global-4.5 62
 MD5 e9f2d3ff22577cbeeb33f207c8660067 files/digest-global-4.7.2 64
+RMD160 08d6ab752ba3eca406fb73ada3ef896006a80c21 files/digest-global-4.7.2 64
+SHA256 3bac859c36caf3ceb1e5246ff91104edf8b9c225814353b604d8e23908466e28 files/digest-global-4.7.2 64
 MD5 abfcd62d837afb87d067cc5175a77b72 files/digest-global-4.8.2 64
+RMD160 382ea0800bb1e2f8103e76e7c6960e79d1fc57f2 files/digest-global-4.8.2 64
+SHA256 89fa4dada1aeef98177b5bea605f61a9c94b331e96d2467aa40e645de57f4ca0 files/digest-global-4.8.2 64
 MD5 d938a5a567a195b4379516bf21c8e926 global-4.5.ebuild 730
+RMD160 6d57e4b2dd6f294f0172f64825cc9aea2c8c2109 global-4.5.ebuild 730
+SHA256 b1913fe2ddcf1f1f02d7548fde2e846919c7be255d4356c209b8560830ed7149 global-4.5.ebuild 730
 MD5 f4661530b9745748bd43ad19b0ca7f7c global-4.7.2.ebuild 1104
-MD5 e6d7c50724a7fa2121c2e3bdef0a85af global-4.8.2.ebuild 1487
+RMD160 cf66d042be78c904b8eb6a75edf01c1b4d9fcaba global-4.7.2.ebuild 1104
+SHA256 e242d08f5fa122a577c99cf2bb74ddb9bb7b124ae5a4efd104fdba3d64fccd7c global-4.7.2.ebuild 1104
+MD5 c6189f0688a3e8ca574d153fbd3e73e0 global-4.8.2.ebuild 1494
+RMD160 b237fe464fc7550a245e05312a5e3b00659df0b8 global-4.8.2.ebuild 1494
+SHA256 51eb299c0d7e361b7ea4f345773e68bc60aa3f3c35b607e10eece367b61b49e1 global-4.8.2.ebuild 1494
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmKpRyiNZaEAZA+ARAhvPAJsFkA310wgGAR6a/dUx0iS2Prt0wQCcDtgY
-DZZfImd6BkuCyxtcEZ54oe0=
-=S/nK
+iD8DBQFD34YcwUpWvClEHQoRAiT4AJ9gRKZvZCn6DAOXcH31JgVmNUoRnwCfbN/n
+kwC6Cp4mwlAICwJ5i1hJRhY=
+=LANY
 -----END PGP SIGNATURE-----
