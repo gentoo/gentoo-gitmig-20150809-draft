@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf0e063d4559ca52e4c8d05a37061f58 ChangeLog 3039
+MD5 3e1270e07e4a7e38548f8fe8f241587f ChangeLog 3144
+RMD160 e414e8128c65d84b1067ef73bb18d3d7984fabbb ChangeLog 3144
+SHA256 5c0e036599e9b4f3315b7e8f1dd66bb0f0db3c828cf26ba20d0fbec523fe8e7c ChangeLog 3144
 MD5 9731513f376c56ac27d3c86372ebad47 Finance-Quote-1.08-r1.ebuild 668
-MD5 f6bce0934ac4b9f042ea506b4da509dd Finance-Quote-1.10.ebuild 588
+RMD160 2897ee7f912da120fbc74d582b58f999fab99d10 Finance-Quote-1.08-r1.ebuild 668
+SHA256 9cc70b37bb5f3f51539c80ae6197013363cf835f6a50c0be7db54fdb24127c2d Finance-Quote-1.08-r1.ebuild 668
+MD5 a8b007a621bd43c9da97f6634cf7856c Finance-Quote-1.10.ebuild 589
+RMD160 ef2ec784719f407acbaa5f5107f709117348da6b Finance-Quote-1.10.ebuild 589
+SHA256 c5a2421ec3506ed6a3a3a117de227bfd3ba685eb7f58e2883f31eaaaab86a6de Finance-Quote-1.10.ebuild 589
 MD5 c1e48c1e66ca701ef9ad11a86242f7b4 Finance-Quote-1.11.ebuild 594
+RMD160 103e02c378e25fff0e05c5c2a1f8ef741c1ba11f Finance-Quote-1.11.ebuild 594
+SHA256 8148f12ed414f7b7b7b9fcc0b4c8eb51501eb6ead26cf974f4f76478e43ef23f Finance-Quote-1.11.ebuild 594
 MD5 62b4a2ad0eb4c559f6495a5b333ab1de files/Finance-Quote-1.08-tase.patch 772
+RMD160 ed02f758b02926fe3d9e82d6f9838f29e0bc5e1f files/Finance-Quote-1.08-tase.patch 772
+SHA256 0f3d1b5e1c4a0cd958946ee5cbf55d3162b6ffb003c299fbcc60326555385ff3 files/Finance-Quote-1.08-tase.patch 772
 MD5 792a9010390ffc352513b6cb5ed77e36 files/digest-Finance-Quote-1.08-r1 69
+RMD160 e791e41c5e08186f8aece9cf77e5195ebe944491 files/digest-Finance-Quote-1.08-r1 69
+SHA256 ac32913ab0f4cf7e95d5f47eb1f38f82499dff1af92cda62af26a3f1d9265014 files/digest-Finance-Quote-1.08-r1 69
 MD5 84731b21fceee4c3a7337b50537ddfdc files/digest-Finance-Quote-1.10 69
+RMD160 853e4a9faab889251331791b55197a024f9ab2fc files/digest-Finance-Quote-1.10 69
+SHA256 9d95e8df2346015911404e6bd10f4852ade422bfc7a822b6b514db7a498d2978 files/digest-Finance-Quote-1.10 69
 MD5 30acd688d5693995b3bfbfaedaa0dd99 files/digest-Finance-Quote-1.11 69
+RMD160 a271c371c765c36998cb542922abbcbe5fc2d7d4 files/digest-Finance-Quote-1.11 69
+SHA256 52d8f4de9345355a183a1d043ec0861c3eda3bc00ef363324bc194f12d31e7ac files/digest-Finance-Quote-1.11 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDy71KtG5z4I8BtQoRAoAyAKCFtJKJ9Oi/pnSk/qLG2tI6G0hEqwCbB5Wq
-qNyjBRVmPtuudJpXiFfILoo=
-=XpVt
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
