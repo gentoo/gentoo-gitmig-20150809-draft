@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.64 2006/01/12 01:07:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.65 2006/01/31 16:08:13 metalgod Exp $
+
+*windowmaker-0.92.0-r3 (31 Jan 2006)
+
+  31 Jan 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/0.92.0/windowmaker-0.92.0-qtdialogsfix.patch,
+  windowmaker-0.80.2-r2.ebuild, windowmaker-0.80.2-r4.ebuild,
+  +windowmaker-0.92.0-r3.ebuild:
+  Added a patch to fix qt dialogs thanks to Dejan Lesjak <dejan.lesjak@ijs.si>
+  closes bug #120187. Modular X love to 0.80 series.
 
   12 Jan 2006; Luis Medinas <metalgod@gentoo.org>
   windowmaker-0.80.2-r2.ebuild, windowmaker-0.80.2-r4.ebuild,
