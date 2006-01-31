@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.60 2006/01/23 04:10:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.61 2006/01/31 12:56:07 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> mesa-6.4.1-r1.ebuild:
+  Unstable on hppa.
 
   23 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
   -files/configurable-dri-dir.patch, mesa-6.4.1-r1.ebuild:
