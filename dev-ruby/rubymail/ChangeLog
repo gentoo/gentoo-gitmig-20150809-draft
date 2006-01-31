@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubymail
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.18 2005/11/26 17:13:37 tgall Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.19 2006/01/31 17:02:05 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> rubymail-0.17.ebuild:
+  Mark 0.17 stable on alpha
 
   26 Nov 2005; Tom Gall <tgall@gentoo.org> rubymail-0.17.ebuild:
   stable on ppc64
