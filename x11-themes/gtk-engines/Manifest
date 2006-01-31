@@ -7,9 +7,6 @@ SHA256 da08a45da736daaa8a52a7c9798a4ebbf01e71293b9d57aa5566508fc9f9594c files/di
 MD5 5de5aab24161a9716ab7936e39fc238d files/digest-gtk-engines-2.6.5 70
 RMD160 00521b596f5e465904727e2e333b9465fe3b4a5b files/digest-gtk-engines-2.6.5 70
 SHA256 c8d860bcad571261ea27fd6195e83003dd0064340572639123de148c1eb377a4 files/digest-gtk-engines-2.6.5 70
-MD5 848cbb7e59d60d96b21aa378724db101 files/digest-gtk-engines-2.6.6 70
-RMD160 8dcc021057eb7b6d28d00aa8e14e9c6e2bb56ce1 files/digest-gtk-engines-2.6.6 70
-SHA256 16b6e2640cfa226631a83f070c80117cdbee2a16dd993bfa77b7b4614baa9724 files/digest-gtk-engines-2.6.6 70
 MD5 82550dc12924920f5f7835e1ce9b0df1 files/digest-gtk-engines-2.6.7 70
 RMD160 474767139c9742941fb56253b5c36e9207de5eaf files/digest-gtk-engines-2.6.7 70
 SHA256 0cdb00a56df9c1170378b0c58f9a197cff0894d76bd2cc8a94691f12dfa49576 files/digest-gtk-engines-2.6.7 70
@@ -19,9 +16,6 @@ SHA256 2799cc500b4df3e5349e7be959faa1f3a6fad25d661bbe6d2d1c0751cb438b59 gtk-engi
 MD5 1d104b2c08bb2830d2f3f8c2ffced9af gtk-engines-2.6.5.ebuild 704
 RMD160 01577830d9f191a51ca19577413608b52bfb111a gtk-engines-2.6.5.ebuild 704
 SHA256 c4ca86851de8af58898840bfdc0b28a450101c5d308c3db0e475379f02ea7298 gtk-engines-2.6.5.ebuild 704
-MD5 ca25410a09e1ad22b42f660570e59e23 gtk-engines-2.6.6.ebuild 706
-RMD160 6e3fe9daf40a153b5add6e1b865b101860f62bac gtk-engines-2.6.6.ebuild 706
-SHA256 8ce5d4b3c7c63fb9ca2daf09c48b9d95f210a66c5eb49c0aea61c7f79715028c gtk-engines-2.6.6.ebuild 706
 MD5 07efefb78567e462f308132896908d82 gtk-engines-2.6.7.ebuild 659
 RMD160 d01ae0c656a0f43771f663a28a30b42fbf161c23 gtk-engines-2.6.7.ebuild 659
 SHA256 8866d41389e7526f9a03d3a7115417b3b9637d2020abfa68f19c33d27fbb96e8 gtk-engines-2.6.7.ebuild 659
