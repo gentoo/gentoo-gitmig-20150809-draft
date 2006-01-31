@@ -1,4 +1,6 @@
-MD5 2d52dd6b9d820667cda87e2d8774a043 ChangeLog 644
+MD5 de0414f64a8aa48df7f971da546ba36d ChangeLog 775
 MD5 e30076048f9ae387a191d92491932cfe ceferino-0.96.ebuild 1494
+MD5 897ed0cb8ed2c4823f696d6cf8f206f7 ceferino-0.97.5.ebuild 1470
 MD5 07bfb24917e4c2498fcaf781a30ef459 files/digest-ceferino-0.96 66
+MD5 75db4fe90e4da8f8a8aa6662f362d380 files/digest-ceferino-0.97.5 68
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
