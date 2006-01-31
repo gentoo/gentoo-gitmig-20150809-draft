@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.8 2006/01/19 07:31:12 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.9 2006/01/31 05:16:35 morfic Exp $
+
+  31 Jan 2006; Daniel Goller <morfic@gentoo.org> celestia-1.4.0.ebuild:
+  Work around gnome eclass writing files to /var/tmp/portage/*
 
   19 Jan 2006; Daniel Goller <morfic@gentoo.org> celestia-1.4.0.ebuild:
   Fixing bug #119339 while taking care of access violations
