@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.18 2005/12/26 21:49:25 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.19 2006/01/31 13:16:53 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> libSM-1.0.0.ebuild:
+  Unstable on hppa.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -libSM-0.99.3.ebuild:

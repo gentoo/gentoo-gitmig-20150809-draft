@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.22 2005/12/26 21:54:58 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.23 2006/01/31 13:42:18 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> libXfont-1.0.0.ebuild:
+  Unstable on hppa.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -files/configurable-encodingsdir.patch, -libXfont-0.99.3-r2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcursor
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.18 2005/12/26 21:51:50 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.19 2006/01/31 13:30:06 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  libXcursor-1.1.5.2.ebuild:
+  Unstable on hppa.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -files/make-icondir-configurable-1.1.5.1.patch,

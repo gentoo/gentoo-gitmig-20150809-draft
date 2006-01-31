@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfontenc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.17 2005/12/26 21:47:00 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.18 2006/01/31 13:24:02 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  libfontenc-1.0.1.ebuild:
+  Unstable on hppa.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -files/configurable-encodingsdir.patch, -libfontenc-0.99.3-r1.ebuild,
