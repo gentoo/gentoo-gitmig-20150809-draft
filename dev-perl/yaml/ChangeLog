@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.27 2006/01/23 20:49:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.28 2006/01/31 23:06:47 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> yaml-0.39.ebuild:
+  Mark 0.39 stable on alpha
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org> yaml-0.53.ebuild:
   Added ~ppc64; bug #119199
