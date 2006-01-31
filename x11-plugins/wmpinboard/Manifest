@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7154ac28fd39be2b6594aa27b3aed0b ChangeLog 1176
+MD5 efc1dec35e74b3d015fcf4fd5acf36b1 ChangeLog 1283
+RMD160 26fcaa7889752d8e6a96a0b9bdb2836a7567a86d ChangeLog 1283
+SHA256 5a825109f767f5057dab0fff2b18144aed34b1f711334b13c4f13a869894d1b0 ChangeLog 1283
 MD5 45429fba57096382c86e58733f1f0385 files/digest-wmpinboard-1.0 67
+RMD160 b0c198e1ed40eefd6e4edbce4e2b2ed564db3121 files/digest-wmpinboard-1.0 67
+SHA256 16e6c9ffc86bec76fefd993b1efe990615e273073c85bf4d3e66ef311eac35ad files/digest-wmpinboard-1.0 67
 MD5 b7532acbb5f32e091d85cf67e343fd30 files/wmpinboard-1.0-segfault.patch 320
+RMD160 cf58acb4a0589a22f7accbc6552e587236d67812 files/wmpinboard-1.0-segfault.patch 320
+SHA256 3d340c32a4acd66c2799459110f544ebf0d347ccce3a4b3d3097257f467f5868 files/wmpinboard-1.0-segfault.patch 320
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 1286449f1cd4f17b8a52f543803f1f4f wmpinboard-1.0.ebuild 708
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0wIaI1lqEGTUzyQRAjZ/AKCAfrah7Y8WwJDvypB04KWPS3JMTwCgmY1z
-UkE/X1kyy2go0p1yEDqgsE8=
-=sLKt
------END PGP SIGNATURE-----
+RMD160 a554e96dc33b1fb4b3518f27a21bf3f59dc21b1c metadata.xml 165
+SHA256 c2f8a0b30c83dba56f0c36a4ba1cb002621ae58dfc13fae94b9db6eb67fb9f1b metadata.xml 165
+MD5 c4bce286235b9835f11a0b005c85bc6d wmpinboard-1.0.ebuild 862
+RMD160 a30cdde09f473e7dae788d48f783be01c91cbed7 wmpinboard-1.0.ebuild 862
+SHA256 4b8f7f3875603a6a3ef62f6a24f9dfb65c340cefa47337bc0c643f5f06702c73 wmpinboard-1.0.ebuild 862

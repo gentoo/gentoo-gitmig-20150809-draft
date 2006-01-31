@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1a1ce817d5eeb90640dd41435c5ebfa ChangeLog 683
+MD5 14086be8afb4d206624d18ea188df56f ChangeLog 788
+RMD160 4e9fdffe0b72f0042ba084b8335ea93404b3166e ChangeLog 788
+SHA256 ae5d8763b011d4e0191c0159141b48bc60ceb66c9200d0f18feaca2b3264ad79 ChangeLog 788
 MD5 c823cd1d37e96a8be63985398723429f files/digest-wmlaptop-1.3 64
+RMD160 9f1b41bdf1bf6e6a674e891904496783f3cc53c8 files/digest-wmlaptop-1.3 64
+SHA256 d34a3496a37d987d9ff0aba1c19a2b837771105c131c2532994dc556c03110d5 files/digest-wmlaptop-1.3 64
 MD5 52c5fb0171548d186357ef1f1f0e768b files/wmlaptop.desktop 174
+RMD160 0637e06c1769afa153761b05598227938f8b4b35 files/wmlaptop.desktop 174
+SHA256 854b3490e71c715439a3f05bf38ca8538391e944748c94e7e0b15cc3542bc726 files/wmlaptop.desktop 174
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 122ee580738e49daa5d4f3a49870f05d wmlaptop-1.3.ebuild 804
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDj2FMwUpWvClEHQoRArttAJ9DaUvPLa2AGBWAnuQSw85UT8T5FQCfZFre
-RWD8hBu5GxuOJ2R+HhwCXyU=
-=kRsb
------END PGP SIGNATURE-----
+RMD160 a554e96dc33b1fb4b3518f27a21bf3f59dc21b1c metadata.xml 165
+SHA256 c2f8a0b30c83dba56f0c36a4ba1cb002621ae58dfc13fae94b9db6eb67fb9f1b metadata.xml 165
+MD5 c67f8159b6d5bb42eb366a9d99ded2d7 wmlaptop-1.3.ebuild 921
+RMD160 1f5c4a1e78b8cc23c43f40d60ed538de3f41eb74 wmlaptop-1.3.ebuild 921
+SHA256 80ec429a5e9c37395808e4dd549147e04b826d5a6fd31462e35ed1cc1d89bb8d wmlaptop-1.3.ebuild 921

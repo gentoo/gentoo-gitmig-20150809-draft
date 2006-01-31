@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 30b525e83915e738c53133e56ded8e10 ChangeLog 1311
+MD5 0d8e70ef36e735d5d9e338fcf50af594 ChangeLog 1421
+RMD160 abf95d15719647429423617cb0ab048b997eabde ChangeLog 1421
+SHA256 f7af47863773cd8859b28240acd69a2c349f9b1161306fa5fa9ddd0d6db6f864 ChangeLog 1421
 MD5 0a55dceead9ad7a2f7205718807cc4df files/digest-wmhdplop-0.9.7 66
+RMD160 b14e2b99357fee01631c566d17ea902786d24031 files/digest-wmhdplop-0.9.7 66
+SHA256 40b9b1b29704869b1fdc357c6e54c092fda677514cf45007432edab9011494b2 files/digest-wmhdplop-0.9.7 66
 MD5 2745de508ae424a95df9b4ec8cbd8a1a files/wmhdplop-cflags.patch 313
+RMD160 2d3b34ea1907cd635d783e49b1bc9ad8d8452006 files/wmhdplop-cflags.patch 313
+SHA256 a39817756af047d0d98128b9a3d7624481d8cf6629fda53ac735bf0cc5f3ee24 files/wmhdplop-cflags.patch 313
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 ca86c2665439951f9df04e4ace9e813a wmhdplop-0.9.7.ebuild 1359
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDty7ZI1lqEGTUzyQRArM2AJ0UlXl390/dlq+w0l7MM5JROP/jRgCfaLiz
-yexhaXZZNIDdfAH1ux5nJxI=
-=QxP9
------END PGP SIGNATURE-----
+RMD160 a554e96dc33b1fb4b3518f27a21bf3f59dc21b1c metadata.xml 165
+SHA256 c2f8a0b30c83dba56f0c36a4ba1cb002621ae58dfc13fae94b9db6eb67fb9f1b metadata.xml 165
+MD5 8f4dd36933f6c7af5a05e3d24f768099 wmhdplop-0.9.7.ebuild 1486
+RMD160 9b09574f626025650d90d8b9cd9bfd3858b5e385 wmhdplop-0.9.7.ebuild 1486
+SHA256 54b97ef83ca904b4ff44eec3af4f8c553be6645c3e5ec50b7552fcb1f764a27d wmhdplop-0.9.7.ebuild 1486
