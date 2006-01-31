@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 86efbfe3ff4d078e51a927d8c36de19c ChangeLog 7959
+MD5 04ac67307ed52aae6dd7cb9c8338933d ChangeLog 8062
+RMD160 59adcb2b242df8555e94e8aab99b579fcb15ecc9 ChangeLog 8062
+SHA256 441d70627162ac72acbbaf89f3a12386b50c9dbf2f96afb7563f3a610678228e ChangeLog 8062
 MD5 433d272f48bb1d9cd086043a6f156e44 files/digest-libol-0.3.16 64
-MD5 bc06a0ad77a4cb5ab4625fb6ec0c7c4d files/digest-libol-0.3.17 64
+RMD160 38e495e9f9a7322e9d1f48c97b1d1f18aa2f68e1 files/digest-libol-0.3.16 64
+SHA256 b841361f2a6eab3922e53487de25517347751a0b66d9ac2b43fa895690c51614 files/digest-libol-0.3.16 64
+MD5 69da33013c03979f8cdaefbb67b8135c files/digest-libol-0.3.17 238
+RMD160 97409a2a7074e9d49be1ff8ded5b8e9681976de2 files/digest-libol-0.3.17 238
+SHA256 cf6eba952082ece1a352b4a9831e939edeb7a6a115ac0eba1adba7f4f6f68914 files/digest-libol-0.3.17 238
 MD5 575c0101c4cbe4de0586e1c2dc611d63 libol-0.3.16.ebuild 805
-MD5 f17a84f8406da6c2c3ce09ead8192b34 libol-0.3.17.ebuild 806
+RMD160 d034cc3c7dae71f2b85b0c5705798cb2143abe9f libol-0.3.16.ebuild 805
+SHA256 1ff4fcda4cc9f1fe08e2b577a5ccaef53b723e3832b87ce9a4dd3e499c46108c libol-0.3.16.ebuild 805
+MD5 b08c5a7fc5a91bef20071fc1e2972af6 libol-0.3.17.ebuild 807
+RMD160 cad8c99670b82af599ebda8fdb3ce4e2fca67003 libol-0.3.17.ebuild 807
+SHA256 73eb8dff487341c89c77368050086473dc06e9af5c30d2684c40ebd2ac612c36 libol-0.3.17.ebuild 807
 MD5 06a2fa1e0308f065f818db6fae959fe9 metadata.xml 257
+RMD160 42855264f35e8e834ee96a1140b24c82df0a0cb2 metadata.xml 257
+SHA256 2b9dd09d2c92c1f9ae799f53cc0440871441b5f1aa9b949d0b8e227d607bf22d metadata.xml 257
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1V112+ySkm8kpY0RAqN/AJ4ltPbd0y13yGVTT87OpYXHU9y/2gCfTULg
-nm5gnYpNlIT++Nu+aBiYjcY=
-=na+k
+iD8DBQFD38kUJrHF4yAQTrARAqh8AJwP/S5KT2ePmSEooLoYCIb3lRdTiACgx1RV
+ZhjtDznGHk10bB6+6pibKjA=
+=A96W
 -----END PGP SIGNATURE-----
