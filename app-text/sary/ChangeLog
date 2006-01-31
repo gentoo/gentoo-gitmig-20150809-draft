@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sary
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.18 2005/11/25 19:32:37 tgall Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.19 2006/01/31 20:14:03 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> sary-1.2.0.ebuild:
+  Mark 1.2.0 stable on ia64
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> sary-1.2.0.ebuild
   stable on ppc64
