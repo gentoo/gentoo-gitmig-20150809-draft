@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.18 2006/01/22 10:38:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.19 2006/01/31 19:16:00 agriffis Exp $
+
+  31 Jan 2006; Aron Griffis <agriffis@gentoo.org> libsvg-0.1.4.ebuild:
+  Mark 0.1.4 stable on alpha
 
   22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> libsvg-0.1.4.ebuild:
   Marked ppc stable for bug #119634; Stabilize Gnome-2.12.2
