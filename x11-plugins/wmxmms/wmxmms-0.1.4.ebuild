@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4.ebuild,v 1.9 2005/04/11 08:52:04 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4.ebuild,v 1.10 2006/01/31 21:13:19 nelchael Exp $
 
 IUSE=""
 MY_P=${P/wm/WM}
@@ -13,8 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha hppa amd64"
 
-DEPEND="virtual/x11
-	media-sound/xmms"
+DEPEND="media-sound/xmms"
 
 src_unpack() {
 	unpack ${A}

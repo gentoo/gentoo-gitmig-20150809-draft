@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmxkb
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.6 2005/08/29 08:36:58 s4t4n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.7 2006/01/31 21:11:35 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -wmxkb-1.2.0.ebuild,
+  wmxkb-1.2.2.ebuild:
+  Fixed DEPEND for modular X.
 
   29 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmxkb-1.2.2.ebuild:
   Stable for x86.

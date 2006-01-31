@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtz
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.13 2005/11/13 07:18:42 morfic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.14 2006/01/31 21:01:53 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmtz-0.7.ebuild:
+  Fixed DEPEND for modular X.
 
   13 Nov 2005; Daniel Goller <morfic@gentoo.org> wmtz-0.7.ebuild:
   Removing condition for patch, so gcc4 can compile this too

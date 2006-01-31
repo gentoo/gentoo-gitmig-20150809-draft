@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.7 2005/07/25 15:00:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.8 2006/01/31 20:58:16 nelchael Exp $
 
 inherit eutils
 
@@ -10,8 +10,11 @@ DESCRIPTION="Window Maker dock app that provides a system tray for GNOME/KDE app
 SRC_URI="http://kai.vm.bytemark.co.uk/~arashi/wmsystray/release/${P}.tar.bz2"
 HOMEPAGE="http://kai.vm.bytemark.co.uk/~arashi/wmsystray/"
 
-DEPEND="virtual/x11"
-RDEPEND=""
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"

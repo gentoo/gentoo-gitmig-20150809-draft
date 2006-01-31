@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4-r1.ebuild,v 1.5 2005/11/19 11:30:40 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4-r1.ebuild,v 1.6 2006/01/31 21:13:19 nelchael Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 hppa ppc ~sparc x86"
 
-DEPEND="virtual/x11
-	media-sound/xmms"
+DEPEND="media-sound/xmms"
 
 src_unpack() {
 	unpack ${A}

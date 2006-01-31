@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmxres
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/ChangeLog,v 1.3 2004/09/04 01:48:27 s4t4n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/ChangeLog,v 1.4 2006/01/31 21:15:04 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmxres-1.2.ebuild:
+  Fixed DEPEND for modular X.
 
   04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmxres-1.2.ebuild:
   Stable on x86.

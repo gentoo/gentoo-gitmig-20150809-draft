@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfortune
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.6 2004/11/24 05:39:48 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.7 2006/01/31 21:24:02 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmfortune-0.241.ebuild:
+  Fixed DEPEND for modular X.
 
   23 Nov 2004; Jason Wever <weeve@gentoo.org> wmfortune-0.241.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.84.ebuild,v 1.10 2004/06/28 21:45:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.84.ebuild,v 1.11 2006/01/31 21:00:15 nelchael Exp $
 
 IUSE=""
 DESCRIPTION="top in a dockapp"
@@ -11,15 +11,22 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc amd64 ppc"
 
-DEPEND="virtual/libc
-	virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )
 	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	sed -i -e "s:-O3 -g -Wall:${CFLAGS}:" \
 		-e "s:/local::" Makefile
-
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsystray
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.7 2005/07/25 15:00:41 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.8 2006/01/31 20:58:16 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmsystray-0.1.1.ebuild:
+  Fixed DEPEND for modular X.
 
   25 Jul 2005; Simon Stelling <blubb@gentoo.org> wmsystray-0.1.1.ebuild:
   stable on amd64
