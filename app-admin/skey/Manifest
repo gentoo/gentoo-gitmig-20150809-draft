@@ -7,6 +7,6 @@ MD5 ab3f803b5ad68dc89dfb5b544342b403 files/skey-1.1.5-fPIC.patch 271
 MD5 f227550f3aee8a1988f3bbc6176cbaf8 files/skey-1.1.5-otp.diff 1437
 MD5 2bc2fd632a13d33a3832ec3bf2449c1b files/skey-login_name_max.diff 386
 MD5 fb946a077c4e2ae03befc41f3a095b39 metadata.xml 1425
-MD5 d8d486ac181e5eb97ac36ac17a666455 skey-1.1.5-r3.ebuild 2311
-MD5 5caef540952cfc5372550c5458453c6a skey-1.1.5-r4.ebuild 2889
-MD5 dc7304e872d4d0c00034c527d31748d8 skey-1.1.5-r5.ebuild 3078
+MD5 05f978f63d95e2fd81e301d0d0c96625 skey-1.1.5-r3.ebuild 2310
+MD5 177f80ac20ac65ad5f94b5e7f4737aad skey-1.1.5-r4.ebuild 2888
+MD5 bb491e3667a23d94d51570a4fcf680d9 skey-1.1.5-r5.ebuild 3077

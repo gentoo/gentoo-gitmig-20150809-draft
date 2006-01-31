@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r3.ebuild,v 1.13 2006/01/29 15:38:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r3.ebuild,v 1.14 2006/01/31 09:46:20 sbriesen Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	# NetBSD project, some other updates and fixes, and the addition
 	# of some new features like shadow password and cracklib support.
 	# 	(05 Nov 2003) -taviso@gentoo.org
-	epatch ${FILESDIR}/skey-1.1.5-gentoo.diff
+	epatch ${WORKDIR}/skey-1.1.5-gentoo.diff
 
 	# glibc 2.2.x does not define LOGIN_NAME_MAX #33315
 	# 	(12 Nov 2003) -taviso@gentoo.org
