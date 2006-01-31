@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-1.25-r1.ebuild,v 1.1 2006/01/31 02:33:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-1.25-r1.ebuild,v 1.2 2006/01/31 05:44:55 solar Exp $
+
+inherit eutils toolchain-funcs
 
 MY_P=${P/-ucl/}
 S=${WORKDIR}/${MY_P}
@@ -23,7 +25,16 @@ RDEPEND=">=dev-libs/ucl-1.02 !app-arch/upx"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	epatch "${FILESDIR}"/${PN}-${PV}-pie.patch
+
+	# used with valgrind
+	sed -i -e s/-lmcheck//g src/Makefile.bld || die
+
+	# >=gcc-3.4.x
+	if [ "`gcc-major-version`" -ge "3" ] && [ "`gcc-minor-version`" -ge "4" ]; then
+		sed -i -e s/-mcpu/-mtune/g src/Makefile.bld || die
+	fi
 }
 
 src_compile() {

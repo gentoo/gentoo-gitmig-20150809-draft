@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/upx-ucl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.7 2006/01/31 02:33:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.8 2006/01/31 05:44:55 solar Exp $
+
+  31 Jan 2006; <solar@gentoo.org> upx-ucl-1.25-r1.ebuild:
+  - get rid of compiler warning when using mcpu with newer gcc. no need to force
+  linking with mcheck when not using valgrind which fixes building with uclibc
 
 *upx-ucl-1.25-r1 (30 Jan 2006)
 
