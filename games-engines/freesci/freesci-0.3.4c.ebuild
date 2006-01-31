@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.3.4c.ebuild,v 1.5 2006/01/29 00:11:38 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.3.4c.ebuild,v 1.6 2006/01/31 05:37:50 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="X ggi directfb alsa sdl ncurses"
 
-RDEPEND="virtual/libc
+RDEPEND="
 	X? (
 		|| ( ( x11-libs/libXi
 				x11-libs/libXrender )
@@ -34,7 +34,10 @@ DEPEND="${RDEPEND}
 	)"
 
 src_compile() {
-	sed -i -e 's:DSPF_RGB15:DSPF_ARGB1555:' src/gfx/drivers/directfb_driver.c
+	sed -i \
+		-e 's:DSPF_RGB15:DSPF_ARGB1555:' \
+		src/gfx/drivers/directfb_driver.c \
+		|| die "sed failed"
 	use X && append-flags -I/usr/include/freetype2
 	egamesconf \
 		$(use_with X x) \
