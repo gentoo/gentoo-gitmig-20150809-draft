@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.175 2006/01/22 09:16:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.176 2006/01/31 03:44:41 gregkh Exp $
+
+*udev-084 (31 Jan 2006)
+
+  31 Jan 2006; Greg Kroah-Hartman <gregkh@gentoo.org>
+  files/05-udev-early.rules-079, +files/udev.rules-084,
+  +files/udev.conf.post_081, +files/udev-parisc-path_id-again.patch,
+  +udev-084.ebuild:
+  084 release - lots of little bug fixes, and config file updates.
 
   22 Jan 2006; Markus Rothe <corsair@gentoo.org> udev-079-r1.ebuild:
   Stable on ppc64
