@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmspaceclock
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/ChangeLog,v 1.14 2005/12/01 14:08:48 s4t4n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/ChangeLog,v 1.15 2006/01/31 20:43:37 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  wmspaceclock-1.2d.ebuild:
+  Fixed DEPEND for modular X.
 
   01 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> wmspaceclock-1.2d.ebuild:
   Added optional dependency to dev-libs/STLport (with local USE flag stlport).

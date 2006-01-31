@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmrack
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/ChangeLog,v 1.5 2005/07/18 09:25:46 s4t4n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/ChangeLog,v 1.6 2006/01/31 20:34:28 nelchael Exp $
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmrack-1.2.0.ebuild:
+  Fixed DEPEND for modular X.
 
   18 Jul 2005; Michele Noberasco <s4t4n@gentoo.org> wmrack-1.2.0.ebuild:
   Set x-includes and x-libraries in econf. Hopefully fixes #98537.

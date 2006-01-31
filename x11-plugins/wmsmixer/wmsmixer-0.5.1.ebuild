@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.1.ebuild,v 1.8 2005/08/16 10:10:59 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.1.ebuild,v 1.9 2006/01/31 20:40:38 nelchael Exp $
 
 inherit eutils
 IUSE=""
@@ -12,8 +12,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 
-DEPEND="virtual/libc
-	virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libXpm
+		x11-libs/libXext
+		x11-libs/libX11 )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )"
 
 src_compile() {
 	g++ ${CFLAGS} -I/usr/X11R6/include -c -o wmsmixer.o wmsmixer.cc
