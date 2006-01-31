@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a432b3911cbd96859d24b4b353a04e23 ChangeLog 1448
+MD5 8049bf335cb9844c96ce5eefa1c67a87 ChangeLog 1609
+RMD160 e8575e40b6e241c9b460c3b49d624f3806909bb5 ChangeLog 1609
+SHA256 969d7c88431bc0e70ee059f117be582ad5352de6885423290bd4d986511c02bd ChangeLog 1609
 MD5 6be50c0c2eaa12133da7b8b284ed1946 files/digest-smbldap-tools-0.9.1-r1 68
+RMD160 0e901955e51a41e2ed7422c302759fd251513c86 files/digest-smbldap-tools-0.9.1-r1 68
+SHA256 0278d2a3801cf49a626a87af388f26f7ee7f5604e9760db28896353d052cdcda files/digest-smbldap-tools-0.9.1-r1 68
 MD5 ec0194fe323a6bea2905c0b4ed98b1ce metadata.xml 372
-MD5 1edde34ccd4d87de937ed5daa3278202 smbldap-tools-0.9.1-r1.ebuild 1878
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwogocsIHjyDViGQRAn/aAKDPC3RTMWHvLylR+JcXFWsyzFowPgCfYtac
-E9piNnM7cLYzcuokyG/64NE=
-=bkg2
------END PGP SIGNATURE-----
+RMD160 5658e39fe2c4f2caa32fc36b15766898c1c930dc metadata.xml 372
+SHA256 c3c30a3409a55cf5948e3b11e7d488a97c5d33f0d3f2da65670d9b4ad0c41e0c metadata.xml 372
+MD5 50c25becf9f10a9d170939c93101af5d smbldap-tools-0.9.1-r1.ebuild 1731
+RMD160 c05b83c531a0480dce7f1846923a74bd0a48e396 smbldap-tools-0.9.1-r1.ebuild 1731
+SHA256 3fabf6baf37fc593c64e0a66233f07110337109de055282025dc442fe39bd1af smbldap-tools-0.9.1-r1.ebuild 1731

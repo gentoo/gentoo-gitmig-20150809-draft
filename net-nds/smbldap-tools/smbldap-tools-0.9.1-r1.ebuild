@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.1-r1.ebuild,v 1.4 2006/01/09 15:58:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.1-r1.ebuild,v 1.5 2006/01/31 12:19:59 satya Exp $
 
 
 inherit eutils
@@ -61,7 +61,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	draw_line "                                                           "
 	einfo "A good howto is found on http://samba.idealx.org"
-	draw_line "                                                           "
 }
