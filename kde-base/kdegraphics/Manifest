@@ -1,4 +1,4 @@
-MD5 fce7d1e5b135284848b71e6760a46c41 ChangeLog 32029
+MD5 83b512387780a16dbdd2c774080f5abd ChangeLog 32155
 MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
 MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
 MD5 1a6dde4414b4ad894e4ed7ed3fa919ff files/digest-kdegraphics-3.4.1-r1 71
@@ -20,6 +20,7 @@ MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
 MD5 8db8a9b442f66e9567ad591c8f03530e files/kdegraphics-3.5.0-kpovmodeler.patch 446
 MD5 cba50683fe0c9704ddfcd91fde5129c8 files/kpdf-3.5.0-cropbox-fix.patch 631
 MD5 d18efc8eb0bf3e3b54a33cf04cdba3fd files/kpdf-3.5.0-splitter-io.patch 1415
+MD5 191a45e1b9346c3bbeb4bfda29f3d48a files/kpdf-3.5.1-saveas.patch 926
 MD5 4a4bcdcb2456ab92b7846b6646da1bcb files/post-3.3.1-kdegraphics-4.diff 1797
 MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
 MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
@@ -36,5 +37,5 @@ MD5 5709a55ffcff66d128e042db2770cb23 kdegraphics-3.5.0-r2.ebuild 1967
 MD5 ac5906cf478a42d22cdd61b24fa2514a kdegraphics-3.5.0-r3.ebuild 2109
 MD5 a26db213b1c84e8b28f243cd297c5d88 kdegraphics-3.5.0-r4.ebuild 2401
 MD5 9653b01977a047d3528800df71e30411 kdegraphics-3.5.0.ebuild 1858
-MD5 bfdcc3dcf87c68efb893fc2123aaf660 kdegraphics-3.5.1.ebuild 1860
+MD5 95b0c33b8dedac8ed50ae44f58faccff kdegraphics-3.5.1.ebuild 1948
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
