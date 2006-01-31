@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ieee80211softmac-0.1-r20060125.ebuild,v 1.1 2006/01/31 05:34:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211softmac/ieee80211softmac-0.1-r20060125.ebuild,v 1.2 2006/01/31 17:42:20 josejx Exp $
 
 inherit linux-mod
 
@@ -22,6 +22,7 @@ IUSE=""
 BUILD_TARGETS="modules"
 MODULE_NAMES="ieee80211(net/ieee80211::net/ieee80211) \
 			  ieee80211_crypt(net/ieee80211::net/ieee80211) \
+			  ieee80211_crypt_wep(net/ieee80211::net/ieee80211) \
 			  ieee80211_crypt_ccmp(net/ieee80211::net/ieee80211) \
 			  ieee80211_crypt_tkip(net/ieee80211::net/ieee80211) \
 			  ieee80211softmac(net/ieee80211::net/ieee80211/softmac)"
