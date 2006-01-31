@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/util-macros
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.18 2005/12/26 21:36:28 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.19 2006/01/31 13:11:27 killerfox Exp $
+
+  31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  util-macros-1.0.1.ebuild:
+  Unstable on hppa.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -util-macros-0.99.2-r1.ebuild, -util-macros-1.0.0.ebuild:
