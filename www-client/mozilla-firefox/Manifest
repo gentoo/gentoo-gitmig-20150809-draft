@@ -13,9 +13,9 @@ SHA256 e5ca27ea35d528bd873f1dfe59b15d06cf8e34e1325ca0ccf5b73f7e0307040a files/10
 MD5 c24bf7e058e8e34c7c18e6ad016be1a0 files/digest-mozilla-firefox-1.0.7-r4 435
 RMD160 bd34b43f06a13099276489d5e6d9798312cbc072 files/digest-mozilla-firefox-1.0.7-r4 435
 SHA256 7069e4786ed5d664ec723035af870d4635777477680aca87fe4feb7243ef581d files/digest-mozilla-firefox-1.0.7-r4 435
-MD5 95142bccd7eac9e0bb3bd4b17c8ac360 files/digest-mozilla-firefox-1.5-r9 2523
-RMD160 ee1e28e7a78ceecb52a3eaa5846b82743b484762 files/digest-mozilla-firefox-1.5-r9 2523
-SHA256 a3fb2525c3b483acb2c669db0acf52e683f8e62dbe2b206aca4aafdd9e453ef4 files/digest-mozilla-firefox-1.5-r9 2523
+MD5 ac76975af36529e733d44f796335f228 files/digest-mozilla-firefox-1.5-r9 2523
+RMD160 ef9dabe7dcf2fb22a157e1752cb916af36381f95 files/digest-mozilla-firefox-1.5-r9 2523
+SHA256 b9c1744fb2e60beff947875206724a33d928309efb832ae63ec3931f79677450 files/digest-mozilla-firefox-1.5-r9 2523
 MD5 6a7a2240dc5864e7f8ee444e34e84461 files/firefox.1 2538
 RMD160 4564007d7d5345e9ab09c941015e3cdb78913835 files/firefox.1 2538
 SHA256 3483439a73c74b818bdde98c15223b6d3fcfe78e3ad974fb35f197cf3ad614e7 files/firefox.1 2538
@@ -40,6 +40,6 @@ SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata
 MD5 88a8a7b16c2a9376c68e91be09ea0ba5 mozilla-firefox-1.0.7-r4.ebuild 9847
 RMD160 539d5c3ce8b2d225fa8871fd2722b52506ab5eef mozilla-firefox-1.0.7-r4.ebuild 9847
 SHA256 6dd31547c54e7ddb6e0faca73242aa74a7405ee4c27124a3404fcbbd518536a2 mozilla-firefox-1.0.7-r4.ebuild 9847
-MD5 b1b84d68424c69f2433c1bd19b0e9364 mozilla-firefox-1.5-r9.ebuild 8414
-RMD160 304c8a622f8c5ce8f2448a84c957447579326006 mozilla-firefox-1.5-r9.ebuild 8414
-SHA256 8bb3ed75bc2cab9caa527ce428e32ef7bdc97110532d4bd833e8c24f1af0ffed mozilla-firefox-1.5-r9.ebuild 8414
+MD5 ffc4ca21c72191889c35cc4814c0eb8a mozilla-firefox-1.5-r9.ebuild 8356
+RMD160 22b7d69e59e34626a052e58699a8102965f82404 mozilla-firefox-1.5-r9.ebuild 8356
+SHA256 8e35b951417b3192bb6055fd9a5219ba26edea2394d7bab53b0d8ad851ec7ba6 mozilla-firefox-1.5-r9.ebuild 8356
