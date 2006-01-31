@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.19 2006/01/23 03:08:12 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.20 2006/01/31 04:22:26 karltk Exp $
 
   23 Jan 2006; Joshua Nichols <nichoj@gentoo.org> castor-0.9.9.ebuild:
   Marked stable on amd64 and x86.
@@ -9,11 +9,6 @@
 
   08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> +castor-0.9.9.1.ebuild:
   Version bump.
-
-*castor-0.9.9-r1 (07 Jan 2006)
-
-  07 Jan 2006;  <>  castor-0.9.9-r1.ebuild files/digest-castor-0.9.9-r1
-  # INSERT ENTRY HERE
 
   16 Dec 2005; Joshua Nichols <nichoj@gentoo.org> castor-0.9.5.3-r1.ebuild,
   castor-0.9.7.ebuild, castor-0.9.9.ebuild:
