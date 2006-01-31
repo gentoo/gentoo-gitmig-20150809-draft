@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.137 2006/01/30 22:56:05 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.138 2006/01/31 13:59:32 flameeyes Exp $
+
+  31 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-1.0.2-r2.ebuild:
+  Add check if X is required before checking if it has been built with xv
+  support (bug #121035). Drop DEPEND on autotools (provided by autotools
+  eclass instead), and fix modular X deps. elibtoolize is already run by
+  eautoreconf now.
 
   30 Jan 2006; Joshua Jackson <tsunam@gentoo.org> transcode-1.0.2-r2.ebuild:
   Added ~x86 for bug #93797

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.4 2006/01/30 22:56:05 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.5 2006/01/31 13:59:32 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -49,17 +49,10 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 
 DEPEND="${RDEPEND}
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )
-	X? ( || ( ( x11-base/xorg-server
-			x11-libs/libXaw
-			x11-libs/libXv
-			x11-proto/xextproto )
-		virtual/x11 ) )
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool"
+	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 
 pkg_setup() {
-	if has_version '<x11-base/xorg-x11-7.0' && ! built_with_use x11-base/xorg-x11 xv; then
+	if use X && has_version '<x11-base/xorg-x11-7.0' && ! built_with_use x11-base/xorg-x11 xv; then
 		die "You need xorg-x11 emerged with xv support to compile transcode."
 	fi
 }
@@ -77,7 +70,6 @@ src_unpack() {
 	epatch "${DISTDIR}/${PN}-types.patch.bz2"
 
 	eautoreconf
-	elibtoolize
 }
 
 src_compile() {
