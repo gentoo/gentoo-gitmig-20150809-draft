@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.12 2006/01/31 19:47:50 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.13 2006/01/31 20:12:37 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -527,7 +527,7 @@ mysql_pkg_postinst() {
 	# list of files, to be used
 	# by external utilities
 	mkdir -p "${ROOT}/var/lib/eselect/mysql/"
-	cp "${TMPDIR}/FILELIST" "${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}"
+	cp "${TMPDIR}/FILELIST" "${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
 
 	if ! useq minimal; then
 		if [[ ${SLOT} -gt 0 ]] ; then
