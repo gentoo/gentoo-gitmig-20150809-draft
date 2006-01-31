@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.23-r1.ebuild,v 1.1 2006/01/30 20:44:10 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.23-r1.ebuild,v 1.2 2006/01/31 19:06:41 kevquinn Exp $
 
 inherit libtool gnome.org flag-o-matic eutils
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${P}.tar.${GNOME_TARBALL_SUFFIX}
 	if use test; then
-		mv ${DISTDIR}/${XSTS_TARBALL_1} \
+		cp ${DISTDIR}/${XSTS_TARBALL_1} \
 			${DISTDIR}/${XSTS_TARBALL_2} \
 			${S}/xstc/ \
 			|| die "Failed to install test tarballs"
