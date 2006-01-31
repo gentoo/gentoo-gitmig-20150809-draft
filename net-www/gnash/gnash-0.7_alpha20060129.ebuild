@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7_alpha20060129.ebuild,v 1.1 2006/01/29 20:28:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7_alpha20060129.ebuild,v 1.2 2006/01/31 02:47:20 mr_bones_ Exp $
 
 inherit cvs
 
@@ -22,7 +22,7 @@ DEPEND="virtual/opengl
 	media-libs/jpeg
 	media-libs/libpng
 	sys-libs/zlib
-	|| ( 
+	|| (
 		( x11-libs/libX11
 		x11-libs/libXt
 		x11-proto/xproto )
