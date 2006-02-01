@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/ChangeLog,v 1.15 2006/02/01 14:03:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/ChangeLog,v 1.16 2006/02/01 16:38:38 brix Exp $
+
+  01 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  -madwifi-tools-0.1_pre20051111.ebuild:
+  Removed broken version.
 
 *madwifi-tools-0.1420.20060201 (01 Feb 2006)
 
