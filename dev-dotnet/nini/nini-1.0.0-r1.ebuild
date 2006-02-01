@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/nini-1.0.0-r1.ebuild,v 1.1 2005/11/17 06:12:41 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/nini-1.0.0-r1.ebuild,v 1.2 2006/02/01 21:47:38 metalgod Exp $
 
 inherit mono multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nini/Nini-${PV}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-lang/mono-1.1.8"

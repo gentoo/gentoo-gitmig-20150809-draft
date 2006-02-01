@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nini
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/ChangeLog,v 1.2 2005/11/17 06:12:41 compnerd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/ChangeLog,v 1.3 2006/02/01 21:47:38 metalgod Exp $
+
+  01 Feb 2006; Luis Medinas <metalgod@gentoo.org> nini-1.0.0-r1.ebuild:
+  Added ~amd64 keyword. Closes bug #121115.
 
 *nini-1.0.0-r1 (17 Nov 2005)
 
