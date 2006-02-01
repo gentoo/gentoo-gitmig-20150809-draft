@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-012.ebuild,v 1.3 2006/01/19 17:40:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-012.ebuild,v 1.4 2006/02/01 19:27:39 brix Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/pcmcia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="debug static staticsocket udev"
 RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
