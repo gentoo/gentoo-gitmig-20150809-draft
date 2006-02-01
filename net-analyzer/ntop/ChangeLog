@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.43 2006/01/27 05:21:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.44 2006/02/01 14:11:05 jokey Exp $
+
+*ntop-3.2-r1 (01 Feb 2006)
+
+  01 Feb 2006; Markus Ullmann <jokey@gentoo.org> +files/ntop-3.2-snmp.patch,
+  -ntop-3.2.ebuild, +ntop-3.2-r1.ebuild:
+  Added fix for snmp compile issue, thanks to Jan Boysen
+  (trekkie@media-mission.de) bug #120954
 
   27 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   files/ntop-3.2-build.patch:

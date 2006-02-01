@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2.ebuild,v 1.1 2005/12/30 03:56:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r1.ebuild,v 1.1 2006/02/01 14:11:05 jokey Exp $
 
 inherit eutils autotools
 
@@ -38,6 +38,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/globals-core.c.diff
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-snmp.patch
 	eautoreconf
 }
 
