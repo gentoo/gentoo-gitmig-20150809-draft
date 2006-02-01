@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5-r9.ebuild,v 1.2 2006/01/31 18:08:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5-r9.ebuild,v 1.3 2006/02/01 21:37:10 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -90,6 +90,7 @@ src_compile() {
 	#mozconfig_annotate '' --enable-native-uconv
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate ''  --enable-canvas
+	mozconfig_annotate ''  --without-system-nspr
 
 	# Bug 60668: Galeon doesn't build without oji enabled, so enable it
 	# regardless of java setting.
