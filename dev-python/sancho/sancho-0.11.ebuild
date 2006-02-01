@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11.ebuild,v 1.2 2006/02/01 04:48:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11.ebuild,v 1.3 2006/02/01 17:01:30 marienz Exp $
 
 inherit distutils
 
 MY_P=${P/s/S}
-DESCRIPTION="Python HTML templating framework for developing web applications"
+DESCRIPTION="Sancho is a unit testing framework"
 HOMEPAGE="http://www.mems-exchange.org/software/sancho/"
 SRC_URI="http://cheeseshop.python.org/packages/source/S/Sancho/${MY_P}.tar.gz"
 

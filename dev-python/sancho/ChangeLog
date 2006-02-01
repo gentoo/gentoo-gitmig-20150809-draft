@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sancho
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.2 2006/02/01 04:44:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.3 2006/02/01 17:01:30 marienz Exp $
+
+  01 Feb 2006; Marien Zwart <marienz@gentoo.org> sancho-0.11.ebuild,
+  sancho-2.1.ebuild:
+  Fix DESCRIPTION to match reality.
 
 *sancho-0.11 (01 Feb 2006)
 
