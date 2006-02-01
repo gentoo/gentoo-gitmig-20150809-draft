@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.15 2006/01/03 02:16:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.16 2006/02/01 12:25:38 humpback Exp $
 
 inherit eutils qt3
 
@@ -176,7 +176,7 @@ src_unpack() {
 			epatch ${PATCHDIR}/checkboxes-sound-options.diff
 			epatch ${PATCHDIR}/psi-history_lug.patch
 			epatch ${PATCHDIR}/psi-cli-v2_gentoo.diff
-			epatch ${FILESDIR}/vcard-photo-interface.patch
+			epatch ${FILESDIR}/vcard-photo-interface.patch.bz2
 			epatch ${PATCHDIR}/psi-history-deletion-bugfix.patch
 
 			# from http://tleilax.if.pw.edu.pl/~myak/

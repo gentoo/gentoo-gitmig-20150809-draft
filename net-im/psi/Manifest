@@ -2,34 +2,84 @@
 Hash: SHA1
 
 MD5 60c0cacb292760f315d14cc11bf09919 ChangeLog 10527
+RMD160 b17000e9e428e72d03d00a49f9f25472955d1733 ChangeLog 10527
+SHA256 104c4dc877c93122500d39632f8bb69a86307a9f50fa7c396213714e72b5c556 ChangeLog 10527
 MD5 f13f9686a5acb361193702deb53cb477 files/digest-psi-0.10 2087
+RMD160 1290350d33f5493cb167d2cd344e25b59b3f408c files/digest-psi-0.10 2087
+SHA256 245cac9a05fd275d0942ff680b3a6e445682dde282929c7355a4c8d53dc9354f files/digest-psi-0.10 2087
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
+RMD160 fa611b1cf6512f6257a82fb041e80202ab9fe778 files/digest-psi-0.9.3-r1 1924
+SHA256 f7618c455b358852ac980c889a06c830e2d87846b252a0b7b4c55154548a50b9 files/digest-psi-0.9.3-r1 1924
 MD5 db2a4c5b68dbb0147392a4657f2dbc92 files/digest-psi-0.9.3-r2 2132
+RMD160 099713cad0dbd4b903ea14195ec3350af2f4e7c1 files/digest-psi-0.9.3-r2 2132
+SHA256 0c33361765c681cfe7a5469f0db312083ba3e85af0fbcf2bcf19c8a2264bd55c files/digest-psi-0.9.3-r2 2132
 MD5 839e6fa5502e1f03a660918bc30e48b5 files/digest-psi-0.9.3-r3 2211
+RMD160 ddc27e822237798adca2f9b6f469b527fd7adb40 files/digest-psi-0.9.3-r3 2211
+SHA256 f66a5fe1836e4ec8a23d4baf699ec52cee363a200ce772eea5b436c7921849f2 files/digest-psi-0.9.3-r3 2211
 MD5 beb3eefd03626a48e73775691c6c794b files/digest-psi-0.9.3-r4 1975
+RMD160 f1c7cafa13701a6619748c0e4f9f82083e8b8814 files/digest-psi-0.9.3-r4 1975
+SHA256 882a3b4f92da487427a9ac53405e0fd03bd4ab76855c60048c248737edb00fd4 files/digest-psi-0.9.3-r4 1975
 MD5 b35105d488f11cae19484290159023b1 files/psi-add-status-history.patch 13703
+RMD160 0a70aa4d28c01a8415b0a238d1c37a9805a36c07 files/psi-add-status-history.patch 13703
+SHA256 47e303989fa2d48b2d95f5f7d1d255bcacd6cfe5199a64ad7bd8e1bac3351901 files/psi-add-status-history.patch 13703
 MD5 1c741813b6d820d43475058dbfab3100 files/psi-desktop.patch 492
+RMD160 d042275f34ab3ce53914379b9f469e496bc697a5 files/psi-desktop.patch 492
+SHA256 c37be7b0896331808127d04faa669fce8ab241267e20b3d99fa7a933a296275b files/psi-desktop.patch 492
 MD5 7440595a3fc9d3c73f203443a1014352 files/psi-desktop2.patch 591
+RMD160 3f3da4da45d0c34998649af033b216190b0eac3b files/psi-desktop2.patch 591
+SHA256 28f09bf4bb0e842a39f5eb4e0ae8533414a7297a351a465a14abc5dea9a3cfeb files/psi-desktop2.patch 591
 MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
+RMD160 c992fc2568f4babbc615e416c0c3e290de67ccae files/psi-desktop_file_and_icons_directories.patch 1454
+SHA256 3818e22ba705e78751a385a0b4c692cc4f23bf8bb10c27882a58e35f4f6aab4d files/psi-desktop_file_and_icons_directories.patch 1454
 MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
+RMD160 f1e863c36ccab7ac7399ccc15777e62df9d4344a files/psi-emergency.png 295
+SHA256 df547201b2b1bc144d8e59f2dabd4746433793ad4c76194cf768253147b819a5 files/psi-emergency.png 295
 MD5 b0b03bd664be63fcda744e18e5b4dc5c files/psi-fix_popup_richtext.patch 3903
+RMD160 2be5fa52bf0e2a39192160f8e4181043c1bae3f4 files/psi-fix_popup_richtext.patch 3903
+SHA256 68535c7a6aac496168d6174c6f62e9ebef03f56749d55c8b4bfd8069b19b3021 files/psi-fix_popup_richtext.patch 3903
 MD5 0d5cafd17325fc912c4855252d73378f files/psi-indicator.png 300
+RMD160 507ab090f82276492bbf6af23eab78e2f8c8ccf2 files/psi-indicator.png 300
+SHA256 a0e9adcd0409d23c9033170ceb8f22980ba6d5e14f19234630f9986bfb94bce2 files/psi-indicator.png 300
 MD5 76f5cc28b75698adddaa068e5f4593f5 files/psi-pathfix.patch 462
+RMD160 029146519c64cc1d7d1186889757fb3b01a6677b files/psi-pathfix.patch 462
+SHA256 8d660cacff716cfbd4bd27c73a50b3cb770bcd047b07b977fe799a9104112db0 files/psi-pathfix.patch 462
 MD5 0dacabdec9ce29cc56faadeeff01ec3b files/psi-pathfix2.patch 364
+RMD160 029db596437aba9d85a8cbde30d8f1247f6cf050 files/psi-pathfix2.patch 364
+SHA256 2f9e94219e858f8ea9a8771adac90430dc6199d6f8de2cc6778288583580d0d8 files/psi-pathfix2.patch 364
 MD5 893421922de588e6a40fbe8357976279 files/psi-reverse_trayicon.patch 937
+RMD160 eeda1bd6ae33fab8e9c1be5203df4057a42c8367 files/psi-reverse_trayicon.patch 937
+SHA256 59144bc60fe8c3c447fc3e414027600ffa88b789d1c682aa674e95c6126c1007 files/psi-reverse_trayicon.patch 937
 MD5 c2528c15be8277434647506d791663d8 files/psi-reverse_trayicon2.patch 937
+RMD160 bbf8ba2c512ceab7b3fe82af12ff9b647d6b3c9f files/psi-reverse_trayicon2.patch 937
+SHA256 2a690a7cda661884ce3424530ac6569a7fcb1e6c97342c120767a0d5058c403c files/psi-reverse_trayicon2.patch 937
 MD5 18253b59a4622a06bc3a17a4eef93d22 files/psi-status_indicator++_add-on_roster-nr.patch 9821
-MD5 0250867fe42d1dc91e798336869a09d6 files/vcard-photo-interface.patch 32494
+RMD160 a9110e49851216457aa60d31fb9d839d63c238fc files/psi-status_indicator++_add-on_roster-nr.patch 9821
+SHA256 d93e29e0787614f3977b5979f00c32aee2fdb61951b32efb4bf063aa6d916713 files/psi-status_indicator++_add-on_roster-nr.patch 9821
+MD5 050c3051bea9794f421ae7ad66aeb37d files/vcard-photo-interface.patch.bz2 4232
+RMD160 b671ba1af83dccfa9ca2250893cd6954e651441c files/vcard-photo-interface.patch.bz2 4232
+SHA256 84ab5ac26eab986726b9d0d892c4cbed95d46020d136666e004499b18dbfe536 files/vcard-photo-interface.patch.bz2 4232
 MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
+RMD160 3308bff10b4acedc4271409f1b6e045a267d2570 metadata.xml 306
+SHA256 4ad36ceea919ef27c8072de68c940fb9be37f8f037b1d8b7eddccff16239339b metadata.xml 306
 MD5 f4f2099a2c9090b461f93620bd49f2bc psi-0.10.ebuild 11020
+RMD160 dd5bf44ec58f73e0f023e91175562716d1cce6e7 psi-0.10.ebuild 11020
+SHA256 172e97283902b2055bd60c4ea081ce50bce16d045f24c5309a3985d124354674 psi-0.10.ebuild 11020
 MD5 3c2b96d4564d64824c71f4bc8e35a873 psi-0.9.3-r1.ebuild 8177
+RMD160 d9f2f80c7b0c4dfdae08f27b838a6c34d9c879d7 psi-0.9.3-r1.ebuild 8177
+SHA256 8ca3e31fff2c4803a37367db17b137f89489366a1d68f86f5f2b3a96960cb66c psi-0.9.3-r1.ebuild 8177
 MD5 e526c4a46dc2ead569b41607c46ceb5f psi-0.9.3-r2.ebuild 9464
+RMD160 2dd44183e205e0fb210f77bcab0e574519b8d657 psi-0.9.3-r2.ebuild 9464
+SHA256 9cf6ca71cafa0e5cff0eab0beadce50d3521ce08212cbe5502bae7619f4ff7a9 psi-0.9.3-r2.ebuild 9464
 MD5 9cc6eb11ab3f94a5ebc0506bf57838aa psi-0.9.3-r3.ebuild 9862
-MD5 0c6d6cce6f4af4a0160f4f31c407c237 psi-0.9.3-r4.ebuild 9160
+RMD160 f006d6c2d349e05309699541ad0d28666363d679 psi-0.9.3-r3.ebuild 9862
+SHA256 e8756b0a7a63412b44329e2cf926933fdaa0b23e27fd7dd04eeb55422abad01e psi-0.9.3-r3.ebuild 9862
+MD5 b54e6b28ec253f01936bf4e74944138a psi-0.9.3-r4.ebuild 9167
+RMD160 a836263f7ebc9cec1188b6375a536d0571508105 psi-0.9.3-r4.ebuild 9167
+SHA256 68a43b9b603598f84af5327837d09318188820e487ecc313cfb43e9ebc81b875 psi-0.9.3-r4.ebuild 9167
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD02wW8zY1VwezZiERAupuAKCpp0+vKAv7zgv/WX3PyXKP+c33bwCdGGqw
-eOe+UpZXKXO3CtDjKTxoEiI=
-=RYeq
+iD8DBQFD4KjX8zY1VwezZiERAmznAKCpHTMetehaphyNTCFw++x5RSydfQCfQJFe
+Xdkt5BPV0KqXbOh9o8zGIpc=
+=hXet
 -----END PGP SIGNATURE-----
