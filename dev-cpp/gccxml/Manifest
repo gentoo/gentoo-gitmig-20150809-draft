@@ -1,17 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ebd2ceadad14a00c15ef9a1aeee64575 ChangeLog 1415
+MD5 d23a2b33f8064a2611fc046c333734c2 ChangeLog 1523
+RMD160 f8a6cb96f727f1497ae9977fe07752801c745c54 ChangeLog 1523
+SHA256 0bd2d1c81506dee3708607d6946104c9ccef5f61eb091540782b04f858a16141 ChangeLog 1523
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
+RMD160 5aed8b1305f5cf0c71432a6f2883559eecb13bdf files/digest-gccxml-0.6.0 65
+SHA256 c4d754e16c420613238e700b1e04b0a4e2334a4d6b6927ed92d17c82f52cc905 files/digest-gccxml-0.6.0 65
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0-r1 65
+RMD160 5aed8b1305f5cf0c71432a6f2883559eecb13bdf files/digest-gccxml-0.6.0-r1 65
+SHA256 c4d754e16c420613238e700b1e04b0a4e2334a4d6b6927ed92d17c82f52cc905 files/digest-gccxml-0.6.0-r1 65
 MD5 792c797769c6059ef2f9ebd6ce4b2e65 files/obstack.h.diff 3852
-MD5 8cf90164a16c8c36cf1aa946ce8fff77 gccxml-0.6.0-r1.ebuild 864
+RMD160 95acc6e2df168028e3e516f304ffc0f0ad5e22d8 files/obstack.h.diff 3852
+SHA256 3e9b6f504f57e790bd6d641920477a43ff2fcd06080ee9894bd4a6b28583cff7 files/obstack.h.diff 3852
+MD5 240fac0e89ec6cefb108937d0748985e gccxml-0.6.0-r1.ebuild 865
+RMD160 8369c8cb5a920b78ec717044771efae3ea80a3a2 gccxml-0.6.0-r1.ebuild 865
+SHA256 1e60b9ffa283bbd873c867ee32afc5eac8107c7a34492faf71682a774ba7586e gccxml-0.6.0-r1.ebuild 865
 MD5 a8b450d46ca0ff085af0238d32d858a6 gccxml-0.6.0.ebuild 810
+RMD160 a4354546126edbbf6823e42b2dad1d9edf87778d gccxml-0.6.0.ebuild 810
+SHA256 2071c35340e43d8c57f90faa6966f66b3bb1a971bb4cadccaa898249459b2fe5 gccxml-0.6.0.ebuild 810
 MD5 d698342d42579c976d124866016978c1 metadata.xml 228
+RMD160 5b33409dcdf48004afbd3f326676d56b4bb145dc metadata.xml 228
+SHA256 fa91b1e22ccf171022ea89b415e9a99752ea31889c15f3a199ee8f57f860f3cb metadata.xml 228
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD3Q1i/aM9DdBw91cRAl4wAJ4tfk0J9WbQfEAimsCh66PfD+gxRwCfYraP
-e1uD2GAeVYgXe+2wxuiyaxU=
-=o53Q
+iD8DBQFD4T7fJrHF4yAQTrARArgQAJ4/s7MmTpTazlHT6x2EzB9D8GWK+wCggiJA
+yDOdOAKF+4w6P+8G3qglMH0=
+=HRT0
 -----END PGP SIGNATURE-----
