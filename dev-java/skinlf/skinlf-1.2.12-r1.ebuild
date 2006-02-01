@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12-r1.ebuild,v 1.1 2006/01/24 21:05:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12-r1.ebuild,v 1.2 2006/02/01 14:28:05 chutzpah Exp $
 
 inherit java-pkg eutils
 
@@ -12,7 +12,7 @@ SRC_URI="https://skinlf.dev.java.net/files/documents/66/22128/${MY_P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="source"
 
 RDEPEND=">=virtual/jre-1.3

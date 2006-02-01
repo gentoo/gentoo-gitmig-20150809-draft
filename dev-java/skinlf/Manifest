@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 826a52f3c62f4cdd880fdff01594c0f1 ChangeLog 741
+MD5 1ff1ba2c51620c4077fc93889041b2a2 ChangeLog 861
+RMD160 7c46b5426744e5f3a8f4dbac2568a0df92855678 ChangeLog 861
+SHA256 e55e2517f889bec921439a76b74ac582ec6ca3f0aad7b500375353742712160c ChangeLog 861
 MD5 712c7b8f9a62b32643ac3bbe18b56e36 files/digest-skinlf-1.2.12 71
+RMD160 d17ea964bb12e3063affd1a00cf301babaa94b70 files/digest-skinlf-1.2.12 71
+SHA256 371f32ab3bd8fb66cc4435e7b06cd94904914228707013b035fa4cdd1e798c6e files/digest-skinlf-1.2.12 71
 MD5 712c7b8f9a62b32643ac3bbe18b56e36 files/digest-skinlf-1.2.12-r1 71
+RMD160 d17ea964bb12e3063affd1a00cf301babaa94b70 files/digest-skinlf-1.2.12-r1 71
+SHA256 371f32ab3bd8fb66cc4435e7b06cd94904914228707013b035fa4cdd1e798c6e files/digest-skinlf-1.2.12-r1 71
 MD5 3fb7968ec94470fdcdce84fa8cbe2bab files/skinlf-1.2.12-build.xml 11622
+RMD160 e5bd5810f4f6c52c5252d0ccf9fec9388fd32793 files/skinlf-1.2.12-build.xml 11622
+SHA256 3404b1d02af29a500ae954aa35ca22f5e95378f7c5617095ab5d21fc3015c817 files/skinlf-1.2.12-build.xml 11622
 MD5 ac87465a658ce799c09247109b646312 files/skinlf-1.2.12-common-devjavanet.xml 1370
+RMD160 f52c0ff29296ae06bb97e8777502045d3cb91bb4 files/skinlf-1.2.12-common-devjavanet.xml 1370
+SHA256 348ffcb49ab0ba968415036890963509692db5e930d4fcffe66b7c91dc8f8298 files/skinlf-1.2.12-common-devjavanet.xml 1370
 MD5 5c756abb1a1f464545c91c576b919dfc files/skinlf-1.2.12-common.xml 5452
+RMD160 83142be5733bff326546a59c06846f084674d16e files/skinlf-1.2.12-common.xml 5452
+SHA256 a6ea18e7187684e86797ca51f45c0224f44433184f0473afbb32b08cadc95732 files/skinlf-1.2.12-common.xml 5452
 MD5 a25557204224b7e4a380d42b2df424ee files/skinlf-1.2.12-image-utils-without-jimi.patch 2968
+RMD160 e007efb32e384935e5ff9f92d0e167f0da9ff4ff files/skinlf-1.2.12-image-utils-without-jimi.patch 2968
+SHA256 6cc030349728e30c2593cbb8945b7664ccbe11ee4efe49e87742a34e4506fa8c files/skinlf-1.2.12-image-utils-without-jimi.patch 2968
 MD5 105061490c4431c113a77768131aa5fe files/skinlf-1.2.12-image-utils.patch 1497
+RMD160 2f407cee8a6fa88a8afca7fae2d90319d86ef618 files/skinlf-1.2.12-image-utils.patch 1497
+SHA256 3a8246c1c038684c6c933f6dce6177a2d4488ae7aaccac01bcd24587c530c284 files/skinlf-1.2.12-image-utils.patch 1497
 MD5 2edcd635da8bde46bdfbb82e5929a5da metadata.xml 296
-MD5 886cfaa4683887fc1540dbf8a0c43a9d skinlf-1.2.12-r1.ebuild 1343
+RMD160 90aca187f5983a11f749a6bcd1316f515eb1b350 metadata.xml 296
+SHA256 8e28ce8172f0873f2dbf2a82b1d0cf47873edab69aee8062eabe3818b91be0ce metadata.xml 296
+MD5 e4bd68400a203bb405307e40760d9e1d skinlf-1.2.12-r1.ebuild 1354
+RMD160 bf21a2be3644c9c2c64b8116e24effae8f4ad660 skinlf-1.2.12-r1.ebuild 1354
+SHA256 116974f3ce20b3869da95dc2ed6752e1e606b3dbb4a7a7fb55fede8947991a1f skinlf-1.2.12-r1.ebuild 1354
 MD5 209a8550773afe9b590f9c2edb9196c9 skinlf-1.2.12.ebuild 1406
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1paZZfSl1Kp5KmoRAq7iAKCJvfdGtYaBa9hgEU7zIfKDS05PpwCg6f1W
-skE7zHmghtsIU5ci5U/Y96Q=
-=Pe4r
------END PGP SIGNATURE-----
+RMD160 de881d6235a39524895ff2feb9c45f1f0b265808 skinlf-1.2.12.ebuild 1406
+SHA256 82905722159b3053897d40673f24e9373d9e7ce6226973e74874fa80a34d30d6 skinlf-1.2.12.ebuild 1406
