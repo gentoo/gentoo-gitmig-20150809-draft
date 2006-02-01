@@ -1,4 +1,4 @@
-MD5 89c8694a80c71250ef54ec00506c5695 ChangeLog 20417
+MD5 81d6b3e912c9262f93d7a7d5d63b6241 ChangeLog 20555
 MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
 MD5 496749b5ce596b963241bf5195599719 files/digest-gimp-2.2.10 135
 MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6-r1 134
@@ -12,8 +12,8 @@ MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
 MD5 70dcc2da6614b660f8c3149361b17c1a gimp-1.2.5.ebuild 3253
 MD5 c6740f6ecc91d5c7ca0d21fd764ed2b8 gimp-2.2.10.ebuild 4378
-MD5 1ae2d5bdfd3c754fd9cc521ce4994d6f gimp-2.2.6-r1.ebuild 4303
-MD5 179469a7aecf9aa3b656bd4eb7995164 gimp-2.2.8-r1.ebuild 4422
+MD5 cf365febb442550f571d998daa8e340a gimp-2.2.6-r1.ebuild 4291
+MD5 866f2f5bc6ad6e24c192f946ae4830e3 gimp-2.2.8-r1.ebuild 4410
 MD5 a16e5c16a45fe9813b8a4cb5d76fd811 gimp-2.2.9.ebuild 4377
 MD5 d8b5417ec02d3ed582f5ea34236b12c0 gimp-9999.ebuild 3774
 MD5 cda75d04f4767d3920ffc234e66d95c7 metadata.xml 369

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.8-r1.ebuild,v 1.12 2006/01/12 23:40:28 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.8-r1.ebuild,v 1.13 2006/02/01 08:53:30 lu_zero Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -19,7 +19,7 @@ IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg lcms mmx mng png
 python smp sse svg tiff wmf"
 
 #	X? ( virtual/x11 )"
-RDEPEND="virtual/x11
+RDEPEND="
 	>=dev-libs/glib-2.4.5
 	>=x11-libs/gtk+-2.4.4
 	>=x11-libs/pango-1.4
