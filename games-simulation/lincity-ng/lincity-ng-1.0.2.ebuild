@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.2.ebuild,v 1.1 2005/11/15 03:55:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.2.ebuild,v 1.2 2006/02/01 19:46:15 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
+RDEPEND="
 	virtual/opengl
 	>=sys-libs/zlib-1.0.0
 	>=dev-libs/libxml2-2.6.11
