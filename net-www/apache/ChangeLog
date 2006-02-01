@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.458 2006/02/01 06:22:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.459 2006/02/01 09:37:42 killerfox Exp $
+
+  01 Feb 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  apache-1.3.34-r2.ebuild, apache-1.3.34-r11.ebuild:
+  Stable on hppa. See bug #118875.
 
   01 Feb 2006; Markus Rothe <corsair@gentoo.org> apache-1.3.34-r2.ebuild,
   apache-1.3.34-r11.ebuild:
