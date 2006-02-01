@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9fb6a8368c975fb30fe7a85758ebf32 ChangeLog 1078
+MD5 aeb8e20262769f9505da4897fbf98346 ChangeLog 1175
+RMD160 f436106349cd7f0e4c98bebcac38e54f06f3af40 ChangeLog 1175
+SHA256 6decdf26c60d933bb5f5b6e12ff14ae0615ed2e341ca6b6613df0b7ee5656edb ChangeLog 1175
 MD5 b2e7b89b4346f002ca151f34bff15082 files/1.1-daemon.patch 678
+RMD160 c955528906c71e5e4a8b0764c9b1382ad4d47402 files/1.1-daemon.patch 678
+SHA256 5a4b3e6d8da71e80b5369a875b36849e269ac4b6d9dc36e644fc834a805fc32b files/1.1-daemon.patch 678
 MD5 1db5831c32ce2ee5dc3cf38532019001 files/1.1-libnet-1.0.patch 2428
+RMD160 7f643bae359676b0932bb0dc13d642c9d633181c files/1.1-libnet-1.0.patch 2428
+SHA256 e482b1720b610e452edff22118a11b06b60b79b35f33ad15fc92d679f11885b2 files/1.1-libnet-1.0.patch 2428
 MD5 63ddb9a48ecf47479223ee4525142f44 files/digest-rarpd-1.1-r2 60
+RMD160 5e9343cc1574c1a575b50226db52bb91c76d7a21 files/digest-rarpd-1.1-r2 60
+SHA256 604eec9180de353cb7ea3480bbe340ffa3629114f17d6cdd87ce73342b96dbdf files/digest-rarpd-1.1-r2 60
 MD5 40f2763a6c0a2c8469daa2fd46752149 files/rarpd.conf.d 310
+RMD160 9d9f5fd0ac1a335b76598c09cf8b16aa4f8752b2 files/rarpd.conf.d 310
+SHA256 e335b30861a11f5644f2101a3f51df0aa26d8399fa709c52080d028927851d71 files/rarpd.conf.d 310
 MD5 f4aa40f55704fd28592c39b96ae6afc9 files/rarpd.init.d 643
-MD5 8ed864f1c242395eb06e5bfdfe25529b rarpd-1.1-r2.ebuild 906
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC68bHI1lqEGTUzyQRAoaLAJ9VGza4fw8/HDzNt5c8pF0IpT3cAACgjQdv
-QMD21o4IIRS+nDArwSktCdU=
-=vEkf
------END PGP SIGNATURE-----
+RMD160 4bf617f7c2036a2050abc6dcef226e194ca6004f files/rarpd.init.d 643
+SHA256 da686ebef9f8ea4c43cd435eb7ac58d7cf88a582eeefc6065911b9b02cd217fa files/rarpd.init.d 643
+MD5 3d58ae9c1dcc885959175ca8f7643e68 rarpd-1.1-r2.ebuild 913
+RMD160 c9b7a6eebeadd7976edc2286384c37df8a5adcf8 rarpd-1.1-r2.ebuild 913
+SHA256 45979db330cb03fa85778ed3f16d9509567858364843fe9f8e208e1a245dc0b3 rarpd-1.1-r2.ebuild 913
