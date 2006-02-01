@@ -1,6 +1,9 @@
 # ChangeLog for net-news/charm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/charm/ChangeLog,v 1.3 2005/09/16 23:32:26 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/charm/ChangeLog,v 1.4 2006/02/01 01:46:37 chutzpah Exp $
+
+  01 Feb 2006; Patrick McLean <chutzpah@gentoo.org> charm-1.5.0.ebuild:
+  Add ~amd64 keyword (bug #119758).
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
