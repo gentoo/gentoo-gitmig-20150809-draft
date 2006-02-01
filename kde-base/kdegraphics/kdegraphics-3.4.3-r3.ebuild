@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r3.ebuild,v 1.8 2006/01/22 11:16:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r3.ebuild,v 1.9 2006/02/01 11:54:27 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -25,7 +25,7 @@ DEPEND="~kde-base/kdebase-${PV}
 		  virtual/opengl )"
 
 RDEPEND="${DEPEND}
-	|| ( >=app-text/poppler-0.4.3-r1
+	|| ( >=app-text/poppler-bindings-0.4.3-r1
 	     <app-text/xpdf-3.01-r4 )
 	tetex? (
 	|| ( >=app-text/tetex-2
@@ -36,6 +36,14 @@ RDEPEND="${DEPEND}
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	if ! built_with_use app-text/poppler-bindings qt; then
+		eerror "This package requires app-text/poppler-bindings compiled with Qt support."
+		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
+		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
+	fi
+}
 
 src_unpack() {
 	kde_src_unpack

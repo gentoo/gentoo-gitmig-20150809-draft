@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.69 2006/01/24 19:52:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.70 2006/02/01 11:56:08 carlo Exp $
+
+  01 Feb 2006; Carsten Lohrke <carlo@gentoo.org> kpdf-3.4.3-r3.ebuild:
+  Correct poppler dependency.
 
   24 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kpdf-3.5.1-saveas.patch, kpdf-3.5.1.ebuild:
