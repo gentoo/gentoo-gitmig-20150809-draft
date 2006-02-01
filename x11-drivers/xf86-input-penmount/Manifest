@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a9df0cc93410f446c051a827a42f8d8d ChangeLog 1931
 RMD160 306a38fc0e6755f46dca1a7aa8c95c0ea7975925 ChangeLog 1931
 SHA256 2c0a20103b7a98e67af9386e347d885d6df2627b3c46bfd623bf9be6515f4608 ChangeLog 1931
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 c411578c8ef5d7b9c013ed37dd99cd43 xf86-input-penmount-1.0.0.5.ebuild 524
 RMD160 4087cfcacaf4dd5ba7ba57a630125695b33e79b1 xf86-input-penmount-1.0.0.5.ebuild 524
 SHA256 fe6bb9e346d4e9c4209d1c1e4f9ecf05fc1420ed9a7ce99adc717f2884423053 xf86-input-penmount-1.0.0.5.ebuild 524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD4UFzwUpWvClEHQoRAhCoAJ9TbmWhMiST1stlRiCwMhCsz1gAywCfQXld
+exNmF5gPJeit0lUY9vf54fI=
+=qapZ
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03584e4d1e8631258b7f8143c8d9cea6 ChangeLog 2896
 RMD160 ab7dd5acb9e0f2322b6e9edc4e7ba91f3e3a5142 ChangeLog 2896
 SHA256 b53e49d37c7d1367814ae28453778d3e6da7ddd5d9bbdbd39a15c2a7fb154220 ChangeLog 2896
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 09e1baef7498fabf003ce55f25946f1b xf86-video-via-0.1.33.2.ebuild 832
 RMD160 10f9cad7a515e5e8bfeec3c5edba4509b3f46f13 xf86-video-via-0.1.33.2.ebuild 832
 SHA256 0b0c5a78c5217e1a0cdae6c5e091b85cad97f04be41d6a2fa785d7dc61a660ab xf86-video-via-0.1.33.2.ebuild 832
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD4UBvwUpWvClEHQoRAnybAJwMZxrKfOqfhPBQU6zwKX5JH/POxACfWNbx
+CzoCRllqgHehagnxt32kf58=
+=G3je
+-----END PGP SIGNATURE-----
