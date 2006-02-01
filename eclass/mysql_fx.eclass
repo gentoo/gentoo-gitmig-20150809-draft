@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.6 2006/01/30 17:51:47 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.7 2006/02/01 15:51:44 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -113,8 +113,7 @@ mysql_version_is_at_least() {
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_make_file_list() {
 	local items= left=0
-	items=( ${1}-[[:digit:]][[:digit:]][[:digit:]] )
-	[[ "${items}" == "${1}-[[:digit:]][[:digit:]][[:digit:]]" ]] && items=( )
+	items=$( ls -d ${1}-[[:digit:]][[:digit:]][[:digit:]] )
 
 	while [[ ${left} -lt ${#items[@]} ]] ; do
 		local lowest_idx=${left}
@@ -135,7 +134,7 @@ mysql_make_file_list() {
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_choose_better_version() {
 	local items= better="" i
-	items="$( ls ${1}-[[:digit:]][[:digit:]][[:digit:]] )"
+	items="$( ls -d ${1}-[[:digit:]][[:digit:]][[:digit:]] )"
 	for i in ${items} ; do
 		if [[ "${i}" > "${better}" ]] ; then
 			better="${i}"
@@ -153,7 +152,7 @@ mysql_choose_better_version() {
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_lib_symlinks() {
 	local d dirlist maxdots soname sonameln other better
-	pushd "${ROOT}/usr/$(get_libdir)/" &> /dev/null
+	pushd "${ROOT}/usr/lib" &> /dev/null
 		# dirlist must contain the less significative directory left
 		dirlist="mysql $( mysql_make_file_list mysql )"
 
@@ -179,12 +178,15 @@ mysql_lib_symlinks() {
 	popd &> /dev/null
 
 	# "include"s and "mysql_config", needed to compile other sw
-	for other in "/usr/include/mysql" "/usr/bin/mysql_config" ; do
+	for other in "/usr/lib/mysql" "/usr/include/mysql" "/usr/bin/mysql_config" ; do
 		pushd "${ROOT}${other%/*}" &> /dev/null
+		better=$( mysql_choose_better_version "${other##*/}" )
 		if ! [[ -d "${other##*/}" ]] ; then
-			better=$( mysql_choose_better_version "${other##*/}" )
 			[[ -L "${other##*/}" ]] && rm -f "${other##*/}"
 			! [[ -f "${other##*/}" ]] && ln -sf "${better}" "${other##*/}"
+		else
+			[[ -L "${other##*/}" ]] && rm -f "${other##*/}"
+			! [[ -d "${other##*/}" ]] && ln -s "${better}" "${other##*/}"
 		fi
 		popd &> /dev/null
 	done
