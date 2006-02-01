@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.93.1-r2.ebuild,v 1.1 2006/01/12 08:05:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.93.1-r2.ebuild,v 1.2 2006/02/01 21:41:01 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf makeedit multilib autotools
@@ -75,7 +75,8 @@ src_compile() {
 	# tb-specific settings
 	mozconfig_annotate '' \
 		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
-		--with-user-appdir=.thunderbird
+		--with-user-appdir=.thunderbird \
+		--without-system-nspr
 
 	# Finalize and report settings
 	mozconfig_final
