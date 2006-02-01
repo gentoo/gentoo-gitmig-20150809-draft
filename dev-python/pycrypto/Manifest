@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 947815bc468546ddb90984b1ad7fe1a8 ChangeLog 3230
-RMD160 d26b4c2d26f096de336db74255f214cade20b2c0 ChangeLog 3230
-SHA256 95fb1940cc0631260c13c8968ebc93bba83f2c9b008db9c07c9d9d36ccb5c0be ChangeLog 3230
+MD5 521ffdad6052143161da028a9237bc9c ChangeLog 3343
+RMD160 11724f8d3a9bcbc541840664b12fc01d6bb7d641 ChangeLog 3343
+SHA256 7700de78d7ae45e6f99a02445c42d03aefc4d55e65e10e3aab731f886f626e1f ChangeLog 3343
 MD5 88124038f9bc0fb6771c9d12f9bcbac9 files/digest-pycrypto-1.9_alpha4 66
 RMD160 9bc5964c169b374c397dfcdfafd335938fe056be files/digest-pycrypto-1.9_alpha4 66
 SHA256 f4b768f7e73c299f617c1b422972703759ad6850310546650f9d97c808f14d49 files/digest-pycrypto-1.9_alpha4 66
@@ -37,19 +34,12 @@ SHA256 941bb811cb8e97dbfdc25668570dc240cc1a998f543c07ebdf5875456c5dc5da pycrypto
 MD5 02617d7c68367ab65a8acab0f11acc97 pycrypto-2.0-r1.ebuild 600
 RMD160 e2f5a09e957d0b43ce673ad95bfc681e7cf59f11 pycrypto-2.0-r1.ebuild 600
 SHA256 0bdae681ac3517d60fee2e1b37172f121f8afddeaaa6000295ef166800c8b818 pycrypto-2.0-r1.ebuild 600
-MD5 e4bfc629f93635ba6aac60d502fa733f pycrypto-2.0.1-r1.ebuild 990
-RMD160 aff2ca8112c7d709a49d0ac7af4d79073af714be pycrypto-2.0.1-r1.ebuild 990
-SHA256 a5c8516cab18dc428196b4f29f779a514f11bc801f3ea9a479b9ed45a6b0ab15 pycrypto-2.0.1-r1.ebuild 990
+MD5 1163f65b348d193aaae8f7c2516c68f8 pycrypto-2.0.1-r1.ebuild 1164
+RMD160 632aa88115fef9fff6c554f6af431f77ecd8366b pycrypto-2.0.1-r1.ebuild 1164
+SHA256 6983f7e85395d0cf0104f68849ee80ebe140db5331b684276a9ba477d230f5fa pycrypto-2.0.1-r1.ebuild 1164
 MD5 13d0293b0075a1d14f88ce4df3a1188b pycrypto-2.0.1.ebuild 762
 RMD160 70e38bec63b2448e0cfdbbfe8fbf3ab07a30fe17 pycrypto-2.0.1.ebuild 762
 SHA256 b85d654c25a7403b351ac536c0a855d4f8c898d59a98b88b0e68d7e808b03870 pycrypto-2.0.1.ebuild 762
 MD5 1ff484937e9f3be035fe383ea160e8ad pycrypto-2.0.ebuild 573
 RMD160 6e9022da62464f414b34ac0be186d585f2e20f4c pycrypto-2.0.ebuild 573
 SHA256 da063c1de165847585cc5a452f343a4101a9baee19e6a9c367e77fb54a74f64a pycrypto-2.0.ebuild 573
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4DJL2+ySkm8kpY0RAmjAAJ91iEh+TrWtiia/soHOZjnKsob6HwCfU9by
-+MqdLlq0WgQD5uIOV2gZZw4=
-=bm5Q
------END PGP SIGNATURE-----
