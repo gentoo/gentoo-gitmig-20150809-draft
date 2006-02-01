@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.7 2006/02/01 15:51:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.8 2006/02/01 18:10:10 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -54,7 +54,8 @@ mysql_mv_patches() {
 	local index_file="${1:-"${WORKDIR}/mysql-extras/index.txt"}"
 	local my_ver="${2:-"${MYSQL_VERSION_ID}"}"
 	local my_test_fx=${3:-"_mysql_test_patch_easy"}
-	local dsc=(), ndsc=0 i
+	local dsc ndsc=0 i
+	dsc=( )
 
 	# values for flags are (2^x):
 	#  1 - one patch found
@@ -66,7 +67,7 @@ mysql_mv_patches() {
 			@patch\ *)
 				${my_test_fx} $flags "${pname}" \
 				&& for (( i=0 ; $i < $ndsc ; i++ )) ; do einfo ">    ${dsc[$i]}" ; done
-				flags=1 ; ndsc=0 ; dsc=()
+				flags=1 ; ndsc=0 ; dsc=( )
 				pname=${row#"@patch "}
 				;;
 			@ver\ *)
