@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xbiso
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.8 2006/01/29 23:08:42 gimli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.9 2006/02/01 23:04:58 metalgod Exp $
+
+  01 Feb 2006; Luis Medinas <metalgod@gentoo.org> xbiso-0.6.1.ebuild:
+  Added ~amd64 keyword.
 
 *xbiso-0.6.1 (29 Jan 2006)
 
