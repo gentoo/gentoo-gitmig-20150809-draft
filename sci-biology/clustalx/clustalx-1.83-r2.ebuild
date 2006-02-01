@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.3 2005/12/23 21:23:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.4 2006/02/01 09:10:49 spyderous Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="sci-biology/clustalw
 	sci-biology/ncbi-tools
-	virtual/x11
 	virtual/motif"
 
 S="${WORKDIR}/${PN}${PV}.sun"
