@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmp3
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.8 2005/11/11 09:31:14 s4t4n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.9 2006/02/01 22:58:41 nelchael Exp $
+
+  01 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmmp3-0.12.ebuild:
+  Fixed DEPEND for modular X.
 
   11 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmmp3-0.12.ebuild:
   Remvoed COPYING from dodoc.
