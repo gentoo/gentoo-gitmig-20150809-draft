@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.4.ebuild,v 1.2 2006/01/29 08:44:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.4.ebuild,v 1.3 2006/02/01 12:54:22 carlo Exp $
 
 inherit eutils
 
@@ -21,12 +21,12 @@ RDEPEND="media-libs/freetype
 	fontconfig? ( media-libs/fontconfig )
 	openal?	( media-libs/openal )
 	opengl? ( virtual/opengl virtual/glu )
-	X?	( || ( ( x11-libs/libXt x11-libs/libXext ) virtual/x11 ) )
+	X?      ( || ( ( x11-libs/libXt x11-libs/libXext ) virtual/x11 ) )
 	zlib? 	( sys-libs/zlib )"
 	# java?	( virtual/jdk )
 	# javascript? ( dev-lang/spidermonkey )
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	app-doc/doxygen"
 
 src_compile() {
 	# "waiting" for someone needing mesa, instead opengl
@@ -64,15 +64,9 @@ src_compile() {
 }
 
 src_install() {
-	# Note that this is slightly different from einstall
-	make DESTDIR=${D} \
-		prefix=/usr \
-		datadir=/usr/share \
-		infodir=/usr/share/info \
-		localstatedir=/var/lib \
-		mandir=/usr/share/man \
-		sysconfdir=/etc \
-		install || die "make install failed"
-
+	make DESTDIR=${D} install
 	dodoc AUTHORS COPYING NEWS README* RELEASE RELNOTES THANKS
+
+	# Waiting for a maintainer to fix, see #117756.
+	rm -f ${D}/usr/share/man/man3/_var_tmp* ${D}/usr/sharedoc/coin-2.4.4/html/dir__*
 }
