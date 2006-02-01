@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 51e50a482a295166aa4aba9d8a9ac9be ChangeLog 1210
+MD5 6a171eaaa72776fa468934c85e2989b2 ChangeLog 1330
+RMD160 d264ce587c097609cfb21b57f7104a5983b5252a ChangeLog 1330
+SHA256 c3471f7a101dbfd5a2c95b39e265ab7bde60c80243cafe9e79dec0a767c97bdb ChangeLog 1330
 MD5 55bb9168c33a4920628e959cc1e6c0e9 eselect-mysql-1.0.0.ebuild 623
+RMD160 549d804dcdb47109a4d78530dd006cd8fd2c1133 eselect-mysql-1.0.0.ebuild 623
+SHA256 d0af24d1acae81f15190063d1f265c63c20f7a925beb24b63f03996f8b5b8ebd eselect-mysql-1.0.0.ebuild 623
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-mysql-1.0.0 0
-MD5 6b8f8f5d9e1f816e8321448469c395f2 files/mysql.eselect 8249
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-eselect-mysql-1.0.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-eselect-mysql-1.0.0 0
+MD5 eba08a11b21ec19979da18bec358f65d files/mysql.eselect 8322
+RMD160 f61878e1aaa47eda58e74ad64b89d9dc6b2933a1 files/mysql.eselect 8322
+SHA256 137bbf74a69e9ab187e5474a6ff8171351a2fb2bb7f7d10cca2daee517dba9b3 files/mysql.eselect 8322
 MD5 fa97fe3e6f213f79ccf7ffbd53838095 metadata.xml 338
+RMD160 73a2e747b9cb92a8a03ab792fcc0aa997b31c8d1 metadata.xml 338
+SHA256 6a290284a517ad042ee98313454b6615a0498d59f8dcf428aac3da3da7340065 metadata.xml 338
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD36OpKolR564NvWYRAhvpAJ9OSWm2QcMi2qp2Dvpd7ApNkxmgFwCdFBi/
-+N2SqBB1LxZBJH6CedyZsow=
-=ibKo
+iD8DBQFD4NShKolR564NvWYRAmqqAJ9pggHMeBKMnHfvFNQ5SHc7AH8aDwCcCKFo
+1KGkwweIKnt58K+2keWgXmE=
+=kpNm
 -----END PGP SIGNATURE-----
