@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.1 2006/02/01 17:32:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.2 2006/02/01 20:01:02 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
@@ -55,7 +55,7 @@ src_unpack() {
 	# Fix longlong on AMD64
 	epatch "${FILESDIR}"/${PN}-0.60-qdbusmarshall.patch
 	# Fix sizeof() on AMD64
-	epatch "${FILESDIR}"/${PN}-0.60--mono-arguments.patch
+	epatch "${FILESDIR}"/${PN}-0.60-mono-arguments.patch
 
 	eautoreconf
 }
