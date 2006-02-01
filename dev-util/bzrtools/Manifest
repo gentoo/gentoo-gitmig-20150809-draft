@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb30a7bb649a38022ef418b61de5e301 ChangeLog 445
+MD5 61de59cdbecdee021b3f07ba9fbd5ddd ChangeLog 560
+RMD160 43ef41bb0f08d624cbdde8cc1c6ff21b81ef627c ChangeLog 560
+SHA256 b29a214665e66a8bd756db415dff6a1d340c905308a202b057a82dff55efa5e6 ChangeLog 560
 MD5 f86e5dd6d8957d6332117777f44c3da9 bzrtools-0.6.1.ebuild 531
+RMD160 fb32df8ea7d99ba64b7f7ad4b624aac7de140478 bzrtools-0.6.1.ebuild 531
+SHA256 80f0235a51a68fc2308abd16d702a8af8321e46935304011fd00fa5eb09cb524 bzrtools-0.6.1.ebuild 531
+MD5 38b3c23fa363edea3dcda9cd05d6e7a1 bzrtools-0.7.ebuild 527
+RMD160 eb6ead09a4fdd2a8553fa895b4d28581e6317467 bzrtools-0.7.ebuild 527
+SHA256 ec4d65ea281d4b5d65e8454eb23fee2fc522ef8b541ef2110185b9103c131187 bzrtools-0.7.ebuild 527
 MD5 03e6ce6083f7bb3915faa7db2c234666 files/digest-bzrtools-0.6.1 65
+RMD160 ca547a03838efa4cefc7ce8bb7d14adbb4769ebb files/digest-bzrtools-0.6.1 65
+SHA256 5bccf2f96d163281381688bef3688e2982261fd19a11ad7d61a66a7f9ac9242f files/digest-bzrtools-0.6.1 65
+MD5 a5e5ff9e62b107e7ca6d980da23d5551 files/digest-bzrtools-0.7 235
+RMD160 7b282e2b7772f35f245841b3a89f6d29187871f2 files/digest-bzrtools-0.7 235
+SHA256 7eee8ea2bc490a2cdafbe46ca327667bc7aa557d2762711ae68f9bfe514d01ed files/digest-bzrtools-0.7 235
 MD5 5dff6cc33967055cfde969cbcb7b6d5d metadata.xml 222
+RMD160 01bd2c9180f544353de73063bede0dd6b8ca6152 metadata.xml 222
+SHA256 6e5dda05386711c829057f65bfd0e3ae693232628949c1612163ce9915963a63 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDySIoAiZjviIA2XgRArKoAKCmUL7WglTyE7gOoM50+TOYg9TqFgCaAnM+
-gyPR68NJW1b+WhnU8wuDGDc=
-=/Ucr
+iD8DBQFD4OtVW78445TWHXcRApe4AJ0X/2H4QKUMrxwp6X6TDKxyuoZ2sQCfTJPY
+rlku8RWVBjNw2r1COMb4lvg=
+=1a5y
 -----END PGP SIGNATURE-----
