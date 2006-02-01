@@ -13,6 +13,9 @@ SHA256 e5ca27ea35d528bd873f1dfe59b15d06cf8e34e1325ca0ccf5b73f7e0307040a files/10
 MD5 c24bf7e058e8e34c7c18e6ad016be1a0 files/digest-mozilla-firefox-1.0.7-r4 435
 RMD160 bd34b43f06a13099276489d5e6d9798312cbc072 files/digest-mozilla-firefox-1.0.7-r4 435
 SHA256 7069e4786ed5d664ec723035af870d4635777477680aca87fe4feb7243ef581d files/digest-mozilla-firefox-1.0.7-r4 435
+MD5 9f8e6126a7ba1d8dbf81656147f916cf files/digest-mozilla-firefox-1.5-r11 6611
+RMD160 51c9b78747503d2b850a4ea60988f6cb62e22249 files/digest-mozilla-firefox-1.5-r11 6611
+SHA256 13b98b983eb1c0ff81d314e1c5ddd48c2f0b0cbb13f92b94fa1b1d36957c11d5 files/digest-mozilla-firefox-1.5-r11 6611
 MD5 942724f965942ebb0b378944365971d0 files/digest-mozilla-firefox-1.5-r9 5797
 RMD160 8481d85385633ee60f4116635d6c5d1c117cfdfb files/digest-mozilla-firefox-1.5-r9 5797
 SHA256 30f2e95fb485ef6858d6390b8c921cd368c67a6e65b41a1f818dd4809f4c9e55 files/digest-mozilla-firefox-1.5-r9 5797
@@ -40,6 +43,9 @@ SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata
 MD5 88a8a7b16c2a9376c68e91be09ea0ba5 mozilla-firefox-1.0.7-r4.ebuild 9847
 RMD160 539d5c3ce8b2d225fa8871fd2722b52506ab5eef mozilla-firefox-1.0.7-r4.ebuild 9847
 SHA256 6dd31547c54e7ddb6e0faca73242aa74a7405ee4c27124a3404fcbbd518536a2 mozilla-firefox-1.0.7-r4.ebuild 9847
+MD5 e3cf634bcdf4ad0ecf557403b85ff6c0 mozilla-firefox-1.5-r11.ebuild 9412
+RMD160 e48189d4e7c0225585ea57a26ce650a51b7f0642 mozilla-firefox-1.5-r11.ebuild 9412
+SHA256 9fc7917cdb2275adb873f1683bbaa2fb57ff9ca56daf6337fad68c5393a60c4f mozilla-firefox-1.5-r11.ebuild 9412
 MD5 cbb5d789ecf331b385b63a1b75447eb5 mozilla-firefox-1.5-r9.ebuild 8402
 RMD160 220e973f575c9ba4f701e11c1340870cd68c4d6e mozilla-firefox-1.5-r9.ebuild 8402
 SHA256 3d63df219c0119abd3a835bb8cf7bf55b250b428e8647628b82fc4145e8780b6 mozilla-firefox-1.5-r9.ebuild 8402
