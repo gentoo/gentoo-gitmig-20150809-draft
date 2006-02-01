@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r1.ebuild,v 1.1 2006/01/31 15:50:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r2.ebuild,v 1.1 2006/02/01 19:59:57 dang Exp $
 
 inherit autotools eutils
 
@@ -33,6 +33,8 @@ src_unpack(){
 	epatch ${FILESDIR}/${PN}-0.4.4-bug117481.patch
 	epatch ${FILESDIR}/${PN}-0.4.3-pdf2xml.patch
 	epatch ${FILESDIR}/${PN}-0.4.4-cairo-lines.patch
+	# bug #119898
+	epatch ${FILESDIR}/${P}-try-all-fonts.patch
 	AT_M4DIR="m4" eautoreconf
 }
 

@@ -1,0 +1,99 @@
+diff --exclude-from=/home/dang/.diffrc -u -ruN poppler-0.5.0.orig/poppler/GlobalParams.cc poppler-0.5.0/poppler/GlobalParams.cc
+--- poppler-0.5.0.orig/poppler/GlobalParams.cc	2005-12-21 14:43:55.000000000 -0500
++++ poppler-0.5.0/poppler/GlobalParams.cc	2006-02-01 14:42:09.000000000 -0500
+@@ -1266,7 +1266,7 @@
+ 
+ DisplayFontParam *GlobalParams::getDisplayFont(GfxFont *font) {
+   DisplayFontParam *dfp;
+-  FcPattern *p=0,*m=0;
++  FcPattern *p=0;
+ 
+   GooString *fontName = font->getName();
+   if (!fontName) return NULL;
+@@ -1275,44 +1275,49 @@
+   dfp = (DisplayFontParam *)displayFonts->lookup(fontName);
+   if (!dfp)
+   {
+-    FcChar8* s;
+-    char * ext;
+-    FcResult res;
+-    p = buildFcPattern(font);
+-
+-    if (!p)
+-      goto fin;
+-    FcConfigSubstitute(FCcfg, p, FcMatchPattern);
+-    FcDefaultSubstitute(p);
+-    m = FcFontMatch(FCcfg,p,&res);
+-    if (!m)
+-      goto fin; 
+-    res = FcPatternGetString(m, FC_FILE, 0, &s);
+-    if (res != FcResultMatch || !s)
+-      goto fin; 
+-    ext = strrchr((char*)s,'.');
+-    if (!ext)
+-      goto fin;
+-    if (!strncasecmp(ext,".ttf",4))
+-    {
+-      dfp = new DisplayFontParam(fontName->copy(), displayFontTT);  
+-      dfp->tt.fileName = new GooString((char*)s);
+-    }
+-    else if (!strncasecmp(ext,".pfa",4) || !strncasecmp(ext,".pfb",4)) 
+-    {
+-      dfp = new DisplayFontParam(fontName->copy(), displayFontT1);  
+-      dfp->t1.fileName = new GooString((char*)s);
+-    }
+-    else
+-      goto fin;
+-    displayFonts->add(dfp->name,dfp);
+-  }
+-fin:
+-  if (m)
+-    FcPatternDestroy(m);
+-  if (p)
+-    FcPatternDestroy(p);
+ 
++      FcChar8* s;
++      char * ext;
++      FcResult res;
++      FcFontSet *set;
++      int i;
++      p = buildFcPattern(font);
++  
++      if (!p)
++        goto fin;
++      FcConfigSubstitute(FCcfg, p, FcMatchPattern);
++      FcDefaultSubstitute(p);
++      set = FcFontSort(FCcfg, p, FcFalse, NULL, &res);
++      if (!set)
++        goto fin;
++      for (i = 0; i < set->nfont; ++i)
++      {
++        res = FcPatternGetString(set->fonts[i], FC_FILE, 0, &s);
++        if (res != FcResultMatch || !s)
++          continue;
++        ext = strrchr((char*)s,'.');
++        if (!ext)
++          continue;
++        if (!strncasecmp(ext,".ttf",4) || !strncasecmp(ext,".ttc",4))
++        {
++          dfp = new DisplayFontParam(fontName->copy(), displayFontTT);  
++          dfp->tt.fileName = new GooString((char*)s);
++        }
++        else if (!strncasecmp(ext,".pfa",4) || !strncasecmp(ext,".pfb",4)) 
++        {
++          dfp = new DisplayFontParam(fontName->copy(), displayFontT1);  
++          dfp->t1.fileName = new GooString((char*)s);
++        }
++        else
++          continue;
++        displayFonts->add(dfp->name,dfp);
++        break;
++      }
++      FcFontSetDestroy(set);
++    }
++  fin:
++    if (p)
++      FcPatternDestroy(p);
+   unlockGlobalParams;
+   return dfp;
+ }

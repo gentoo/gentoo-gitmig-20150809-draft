@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 05a5ffae6c461614a168a69fb0c63cc8 ChangeLog 6901
-RMD160 2cdb774a00262a5c07abae1986d8f7f773d74254 ChangeLog 6901
-SHA256 9feb2ca92730d918efd1137782d7b3888d7e22a9bb9431ba6b9f9eff9a1f11a2 ChangeLog 6901
+MD5 2830e1133fd706eb899ea47959e13390 ChangeLog 7116
+RMD160 e5fb0143bff01d7cc7e68ec4a92c66e1b2b2642a ChangeLog 7116
+SHA256 204462d8e05dab0f4e2e1ba9385e47ee43069727310e250fc531376da3c5ac12 ChangeLog 7116
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
 RMD160 b2919594182fe8ee1b221c29f65eaf2664b79924 files/digest-poppler-0.3.0 65
 SHA256 67b1dde2e66bd05a2e886755f4034b5d745566efa1e1798930490a33d6d6998f files/digest-poppler-0.3.0 65
@@ -22,9 +22,9 @@ SHA256 208a764823105d0828f9cb625a1733bbf7b92db4d2d107372ce13b7423f7f1b5 files/di
 MD5 342ecc2fc9aa2b0328c7522269b66049 files/digest-poppler-0.5.0 65
 RMD160 7150003752563b31f5274d13a2f3d38540e42edd files/digest-poppler-0.5.0 65
 SHA256 86cd2107062481b5e7229433736144020c416ca12842062773917ff37da32bd0 files/digest-poppler-0.5.0 65
-MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r1 241
-RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r1 241
-SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r1 241
+MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r2 241
+RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r2 241
+SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r2 241
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 RMD160 f755975637edd27fa4d82c43d2789f489a45b8c8 files/poppler-0.4.1-cairo-ft.patch 470
 SHA256 e9ca00d0a991674199e5214556567e5ad895295bd63d72ce24bf0a6c3b9abb4e files/poppler-0.4.1-cairo-ft.patch 470
@@ -49,6 +49,9 @@ SHA256 7239ee405bfef2b95254721d1c9b52c36dfa33519bd9c8a6191f7e7554af8080 files/po
 MD5 e225a2f3c1263f09bcf7ee2f45b55305 files/poppler-0.5.0-cairo-ft.patch 481
 RMD160 c31fbb2351fa8eef0ac2468a90bc29f58ca27ede files/poppler-0.5.0-cairo-ft.patch 481
 SHA256 bcb87b10de3e045963ae792527331eec8e7b509babcc8edd34362bc0ca33f7c7 files/poppler-0.5.0-cairo-ft.patch 481
+MD5 d7766c9a19980b40524d8050a1f25cff files/poppler-0.5.0-try-all-fonts.patch 2867
+RMD160 7488663a61c327e781e0c66b918e1014941a0d63 files/poppler-0.5.0-try-all-fonts.patch 2867
+SHA256 3af95845d30dc3161b2f9a115c3c2bd2464e4854b831d5cd9e52216ba9f52c5f files/poppler-0.5.0-try-all-fonts.patch 2867
 MD5 f52250f6bc64f4201e663a46ed126f9b files/poppler-gcc41.patch 1131
 RMD160 3c4e9596e4ef7f0f749867914c849ad55ee545eb files/poppler-gcc41.patch 1131
 SHA256 af0b3568beabd2a3802e4358ddcc9a90a58d9d5ae39905755f9756c2f9446ff0 files/poppler-gcc41.patch 1131
@@ -73,16 +76,16 @@ SHA256 e2db934f16109daf1e6a09fcf60f38451e8d56418ad9309e4fcf9a82feb29728 poppler-
 MD5 fb29205148f6f6e6ce94b5587f4aecad poppler-0.4.4.ebuild 1532
 RMD160 bb445634cc405ea5ea00d41471e03bed9c8ef2f4 poppler-0.4.4.ebuild 1532
 SHA256 c54a81ee44a824d9c47c673b545420272085e2f2fd27094aa54ec95e9501150e poppler-0.4.4.ebuild 1532
-MD5 219c3cfdb8cb4b4e079c75b306f3317a poppler-0.5.0-r1.ebuild 1507
-RMD160 750e9d8b5eea955c576db7b44a59389437b44a66 poppler-0.5.0-r1.ebuild 1507
-SHA256 0fc0faf67e08502951500eba9e4d56fed134902e35e09d19070611537e3866af poppler-0.5.0-r1.ebuild 1507
+MD5 4a68b9ce3cede4e4071b9f4c76ac14a3 poppler-0.5.0-r2.ebuild 1567
+RMD160 e77b3c5b3fe6fd09fdf1ffab0db70f1620ce5f33 poppler-0.5.0-r2.ebuild 1567
+SHA256 3fd32cbbe66dbbf40b0703414184ce5db700fbef66fae70daf3db70aec552e03 poppler-0.5.0-r2.ebuild 1567
 MD5 43a6538f57eb03f10b4edb00b6baf1b5 poppler-0.5.0.ebuild 1480
 RMD160 edd74afce12e055ba3bc42d9ea52390dc4c4f3e8 poppler-0.5.0.ebuild 1480
 SHA256 10f88b3040818aecc270089751ec99ae41ab825d7a70a543644a56164bbefb31 poppler-0.5.0.ebuild 1480
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD34dLomPajV0RnrERAnWwAJ93mOg+bxAVroahRR8yYOv+xCKyigCfT+bI
-v/yzOr2cb6yW8TWKeXeowCE=
-=jz7K
+iD8DBQFD4RNRomPajV0RnrERAkhPAJ0WszAZ0HlI2BAP7f9BDUzHQvSEuQCbBGwl
+x/ohJCuYZ08Z+3LehMDp50M=
+=olzK
 -----END PGP SIGNATURE-----
