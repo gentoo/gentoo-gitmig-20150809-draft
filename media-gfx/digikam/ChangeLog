@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.40 2006/01/03 11:01:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.41 2006/02/01 09:22:26 cryos Exp $
+
+*digikam-0.8.1 (01 Feb 2006)
+
+  01 Feb 2006; Marcus D. Hanwell <cryos@gentoo.org> +digikam-0.8.1.ebuild:
+  Version bump, closes bug 120149.
 
   03 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
   digikam-0.7.4-r1.ebuild:
