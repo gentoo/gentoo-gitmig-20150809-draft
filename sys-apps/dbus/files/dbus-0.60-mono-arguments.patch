@@ -1,0 +1,38 @@
+diff -aur dbus-0.60-orig/mono/Arguments.cs dbus-0.60/mono/Arguments.cs
+--- dbus-0.60-orig/mono/Arguments.cs	2005-03-08 20:36:15.000000000 -0800
++++ dbus-0.60/mono/Arguments.cs	2006-01-28 01:41:59.000000000 -0800
+@@ -10,7 +10,7 @@
+ 	public class Arguments : IEnumerable, IDisposable
+   {
+     // Must follow sizeof(DBusMessageIter)
+-    internal const int DBusMessageIterSize = 14*4;
++    internal static readonly int DBusMessageIterSize = Marshal.SizeOf (typeof(_DBusMessageIter));
+     private static Hashtable dbusTypes = null;
+     private Message message;
+     private IntPtr appenderIter;
+@@ -240,6 +240,25 @@
+       return new ArgumentsEnumerator(this);
+     }
+ 
++    [StructLayout(LayoutKind.Sequential)]
++    private class _DBusMessageIter
++    {
++       IntPtr dummy1;
++       IntPtr dummy2;
++       int    dummy3;
++       int    dummy4;
++       int    dummy5;
++       int    dummy6;
++       int    dummy7;
++       int    dummy8;
++       int    dummy9;
++       int    dummy10;
++       int    dummy11;
++       int    pad1;
++       int    pad2;
++       IntPtr pad3;
++   }
++	    
+     private class ArgumentsEnumerator : IEnumerator
+     {
+       private Arguments arguments;

@@ -1,0 +1,29 @@
+--- configure.in.old	2005-11-22 21:42:49.000000000 +0100
++++ configure.in	2006-01-25 13:28:47.000000000 +0100
+@@ -210,6 +210,8 @@
+ if test x$enable_gcj = xyes; then
+     if test x$have_gcj = xno ; then
+ 	AC_MSG_ERROR([Building gcj explicitly required, but gcj not found])
++    else 
++        AC_CHECK_PROGS(JAR, gcj-jar fastjar jar)
+     fi
+ fi
+ 
+@@ -1395,7 +1397,8 @@
+ if test x$enable_gcj = xyes ; then
+ echo \
+ "        gcj:            	  ${GCJ}
+-	gcjflags:	          ${GCJFLAGS}"
++	gcjflags:	          ${GCJFLAGS}
++	jar:                      ${JAR}"
+ else
+ echo \
+ "        gcj:                      (not enabled)"
+--- gcj/Makefile.am.old	2003-06-23 19:39:48.000000000 +0200
++++ gcj/Makefile.am	2006-01-25 14:36:04.000000000 +0100
+@@ -1,5 +1,4 @@
+ SUBDIRS=org
+-JAR=jar
+ 
+ CLEANFILES=dbus-1.jar
+ 

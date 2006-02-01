@@ -1,0 +1,14 @@
+--- qt/qdbusmarshall.cpp	23 Sep 2005 13:08:26 -0000	1.1
++++ qt/qdbusmarshall.cpp	19 Dec 2005 21:40:02 -0000
+@@ -69,9 +69,9 @@ static QVariant qFetchParameter(DBusMess
+     case DBUS_TYPE_BOOLEAN:
+         return qIterGet<dbus_bool_t>(it);
+     case DBUS_TYPE_INT64:
+-        return qIterGet<dbus_int64_t>(it);
++        return QVariant((qlonglong)qIterGet<dbus_int64_t>(it));
+     case DBUS_TYPE_UINT64:
+-        return qIterGet<dbus_uint64_t>(it);
++        return QVariant((qulonglong)qIterGet<dbus_uint64_t>(it));
+     case DBUS_TYPE_STRING:
+     case DBUS_TYPE_OBJECT_PATH:
+     case DBUS_TYPE_SIGNATURE:

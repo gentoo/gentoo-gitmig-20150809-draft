@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.91 2006/01/22 10:25:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.92 2006/02/01 17:32:41 cardoe Exp $
+
+  01 Feb 2006; Doug Goldstein <cardoe@gentoo.org> ChangeLog:
+  New patch for gcj handling detection of jar. Use emake -j1 to let gcj
+  compile. 2 AMD64 fixes as well.
 
   22 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> dbus-0.60-r3.ebuild:
   ppc stable, bug #113826
