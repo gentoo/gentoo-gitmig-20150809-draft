@@ -1,0 +1,123 @@
+diff -Nuarp --exclude '*~' --exclude 'config.*' --exclude ltmain.sh audit-1.1.3/lib/libaudit.h audit-1.1.3.new/lib/libaudit.h
+--- audit-1.1.3/lib/libaudit.h	2006-01-05 13:19:20.000000000 -0800
++++ audit-1.1.3.new/lib/libaudit.h	2006-01-31 18:12:49.057268514 -0800
+@@ -31,6 +31,7 @@ extern "C" {
+ #include <asm/types.h>
+ #include <stdint.h>
+ #include <sys/socket.h>
++#include <signal.h> /* to avoid redefinition of sigval/siginfo */
+ #include <linux/netlink.h>
+ #include <linux/audit.h>
+ #include <stdarg.h>
+diff -Nuarp --exclude '*~' --exclude 'config.*' --exclude ltmain.sh audit-1.1.3/src/auditctl-llist.c audit-1.1.3.new/src/auditctl-llist.c
+--- audit-1.1.3/src/auditctl-llist.c	2006-01-04 08:27:42.000000000 -0800
++++ audit-1.1.3.new/src/auditctl-llist.c	2006-01-31 18:07:52.367438434 -0800
+@@ -126,16 +126,16 @@ int list_find_item(llist *l, unsigned in
+ void list_clear(llist* l)
+ {
+ 	lnode* nextnode;
+-	register lnode* current;
++	register lnode* curnode;
+ 
+-	current = l->head;
+-	while (current)
++	curnode = l->head;
++	while (curnode)
+ 	{
+-		nextnode=current->next;
+-		if (current->w)
+-			free(current->w);
+-		free(current);
+-		current=nextnode;
++		nextnode=curnode->next;
++		if (curnode->w)
++			free(curnode->w);
++		free(curnode);
++		curnode=nextnode;
+ 	}
+ 	l->head = 0;
+ 	l->cur = 0;
+diff -Nuarp --exclude '*~' --exclude 'config.*' --exclude ltmain.sh audit-1.1.3/src/ausearch-int.c audit-1.1.3.new/src/ausearch-int.c
+--- audit-1.1.3/src/ausearch-int.c	2006-01-04 08:27:42.000000000 -0800
++++ audit-1.1.3.new/src/ausearch-int.c	2006-01-31 18:09:11.607132293 -0800
+@@ -112,16 +112,16 @@ int ilist_find_item(ilist *l, unsigned i
+ void ilist_clear(ilist* l)
+ {
+ 	int_node* nextnode;
+-	register int_node* current;
++	register int_node* curnode;
+ 
+ 	if (l == NULL)
+ 		return;
+ 
+-	current = l->head;
+-	while (current) {
+-		nextnode=current->next;
+-		free(current);
+-		current=nextnode;
++	curnode = l->head;
++	while (curnode) {
++		nextnode=curnode->next;
++		free(curnode);
++		curnode=nextnode;
+ 	}
+ 	l->head = NULL;
+ 	l->cur = NULL;
+diff -Nuarp --exclude '*~' --exclude 'config.*' --exclude ltmain.sh audit-1.1.3/src/ausearch-llist.c audit-1.1.3.new/src/ausearch-llist.c
+--- audit-1.1.3/src/ausearch-llist.c	2006-01-04 08:27:42.000000000 -0800
++++ audit-1.1.3.new/src/ausearch-llist.c	2006-01-31 18:08:40.173666993 -0800
+@@ -136,15 +136,15 @@ int list_find_item(llist *l, unsigned in
+ void list_clear(llist* l)
+ {
+ 	lnode* nextnode;
+-	register lnode* current;
++	register lnode* curnode;
+ 
+-	current = l->head;
+-	while (current) {
+-		nextnode=current->next;
+-		if (current->message)
+-			free(current->message);
+-		free(current);
+-		current=nextnode;
++	curnode = l->head;
++	while (curnode) {
++		nextnode=curnode->next;
++		if (curnode->message)
++			free(curnode->message);
++		free(curnode);
++		curnode=nextnode;
+ 	}
+ 	l->head = NULL;
+ 	l->cur = NULL;
+diff -Nuarp --exclude '*~' --exclude 'config.*' --exclude ltmain.sh audit-1.1.3/src/ausearch-string.c audit-1.1.3.new/src/ausearch-string.c
+--- audit-1.1.3/src/ausearch-string.c	2006-01-04 08:27:42.000000000 -0800
++++ audit-1.1.3.new/src/ausearch-string.c	2006-01-31 18:08:54.386329531 -0800
+@@ -130,17 +130,17 @@ int slist_find_item(slist *l, unsigned i
+ void slist_clear(slist* l)
+ {
+ 	snode* nextnode;
+-	register snode* current;
++	register snode* curnode;
+ 
+-	current = l->head;
+-	while (current) {
+-		nextnode=current->next;
+-		if (current->str)
+-			free(current->str);
+-		if (current->key)
+-			free(current->key);
+-		free(current);
+-		current=nextnode;
++	curnode = l->head;
++	while (curnode) {
++		nextnode=curnode->next;
++		if (curnode->str)
++			free(curnode->str);
++		if (curnode->key)
++			free(curnode->key);
++		free(curnode);
++		curnode=nextnode;
+ 	}
+ 	l->head = NULL;
+ 	l->cur = NULL;

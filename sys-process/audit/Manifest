@@ -1,28 +1,63 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23a5c32533900128dac2ca45b5889521 audit-0.8.1.ebuild 1568
-MD5 7b7ff6f6407bc96c457a91f20a6f0c28 audit-0.7.3.ebuild 1564
+MD5 c2b9108775ef718a28ccd28a4cf2d5dc ChangeLog 1696
+RMD160 013d3403e05a6cdf095875795ce02fdb8f36ea50 ChangeLog 1696
+SHA256 d2d3f2938e4a5295d6f2e06bf10e74445e9d3dffe53fbf5d57f4d1b9c3614332 ChangeLog 1696
 MD5 b7ae6b273342ab1c9a026a88c13cafa1 audit-0.7.2-r1.ebuild 1571
-MD5 5b827f7378df0f835535406269d5d301 metadata.xml 296
-MD5 e2d96210e56b001ca85519b16eb2aa78 ChangeLog 1475
+RMD160 f6fa25c23fbd547be702bd294d49fb2463840422 audit-0.7.2-r1.ebuild 1571
+SHA256 487c009299e82b28b743e2d1892b76051d13a5159d3b9fd4525af0a4c7e5f0c2 audit-0.7.2-r1.ebuild 1571
+MD5 7b7ff6f6407bc96c457a91f20a6f0c28 audit-0.7.3.ebuild 1564
+RMD160 304ba124145a91718380c3323dba7a750c60a743 audit-0.7.3.ebuild 1564
+SHA256 4c0ec3c67541629d804eb5aa768cc3fb77b7397ab30c35a7289c792314ad6c18 audit-0.7.3.ebuild 1564
 MD5 800dc38b7b284025611145ab70338ae7 audit-0.7.4.ebuild 1564
+RMD160 8548886ca10bd324cc969887359b243ee1ec72b5 audit-0.7.4.ebuild 1564
+SHA256 ce7620877d6609ff0a045f41cb0bf8afff6ca4b6bb31091c9aa6aba36600b999 audit-0.7.4.ebuild 1564
+MD5 23a5c32533900128dac2ca45b5889521 audit-0.8.1.ebuild 1568
+RMD160 7a33b02295170287c912e63061843a7180a626d3 audit-0.8.1.ebuild 1568
+SHA256 bd5b99c939ab394f891c7bece7c71dcf6b1f537263c774bc15c92ec8bc38a3f9 audit-0.8.1.ebuild 1568
 MD5 f72d5400e4239d7aa72c76c188ecc7c0 audit-0.8.ebuild 1562
+RMD160 fe1045f4888da8e3c9c475bde582667f41934c96 audit-0.8.ebuild 1562
+SHA256 e61f879a74d4ad8597c836768a009029fd73eca50cc361248aabc2a00cdc0eb9 audit-0.8.ebuild 1562
 MD5 ccaf6e8614e3b817335570e1085e2a9a audit-0.9.1.ebuild 1564
-MD5 5c9d503ee28782e29f1c87f4cf9efc3a files/digest-audit-0.7.4 62
-MD5 b6cd1cd6edc78bf88c12015eae5fda21 files/digest-audit-0.8 60
-MD5 7c1f1f14a4750e7d8bbc1de62b3fcf59 files/auditd.initd 708
-MD5 402bf22e8e90b45f8a8349314cd61068 files/auditd.confd-0.7.2-r1 483
-MD5 acc06693c8205b28388a54f7812a5738 files/digest-audit-0.7.2-r1 62
-MD5 d50e111e375e27af12b1c200175cd7b6 files/auditd.initd-0.7.2-r1 709
-MD5 4d90073ff2ad766b0878e6b160e318bd files/digest-audit-0.8.1 62
+RMD160 02e47ad08ae4f58d9f82b2773cf854d9a3aced53 audit-0.9.1.ebuild 1564
+SHA256 a01bf8e0f27c70b7d40183f587bf59c1734ea60bb11733353900632fe9131389 audit-0.9.1.ebuild 1564
+MD5 8f309e2257a2b753ae39350812915d44 audit-1.1.3.ebuild 1683
+RMD160 f13f9ca7af3310ff5c4cb7143e3c18616ac7431f audit-1.1.3.ebuild 1683
+SHA256 2d083b682ac34375136f89b382f9f069002bca645f76992b49de2fb918bdadc8 audit-1.1.3.ebuild 1683
+MD5 fe4a6c96f2df7f9126c1f043610399f2 files/audit-1.1.3-compilefix.patch 3742
+RMD160 dd0a5338aaac12850e771d6baa9d0bfb5d3a4925 files/audit-1.1.3-compilefix.patch 3742
+SHA256 8ffe02eb9ee988996c9cb4ccdcc3ee39903131173260b13b72b94298fb3afff4 files/audit-1.1.3-compilefix.patch 3742
 MD5 d0c04da868c3fe0dff941187f054ecf6 files/auditd.confd 474
+RMD160 c50759bdfda42fb58caedda86a16b37f8c7e4cf9 files/auditd.confd 474
+SHA256 4e1377ee330a3f5e16c9eeaf3f9c56ab9edc76fc7b65140f0f1d917fd77169f4 files/auditd.confd 474
+MD5 402bf22e8e90b45f8a8349314cd61068 files/auditd.confd-0.7.2-r1 483
+RMD160 dcf9352e4c9a82768ebd0290c98d3e89b539b638 files/auditd.confd-0.7.2-r1 483
+SHA256 dce987232ae7bf4545b2aedcd73c4f1023bba949e5335dc7fa60927effa9fc62 files/auditd.confd-0.7.2-r1 483
+MD5 7c1f1f14a4750e7d8bbc1de62b3fcf59 files/auditd.initd 708
+RMD160 64bc9edad5e5367b5b8685ea677974a861982432 files/auditd.initd 708
+SHA256 8bd37af8033abf07eaec1214fe56f607561ee2b436fca05002d0cdc222c27cfc files/auditd.initd 708
+MD5 d50e111e375e27af12b1c200175cd7b6 files/auditd.initd-0.7.2-r1 709
+RMD160 b13f83a40faa483b060e9f888a81138c573618e2 files/auditd.initd-0.7.2-r1 709
+SHA256 4c00b21e22add54e3c5f9a3b95fda9f5c2f03e51b0e6555cb941a8a4d76d6f8e files/auditd.initd-0.7.2-r1 709
+MD5 acc06693c8205b28388a54f7812a5738 files/digest-audit-0.7.2-r1 62
+RMD160 c7938b106e75d61c7868808bdba0e7c0db40f1d4 files/digest-audit-0.7.2-r1 62
+SHA256 12550a0af500cdd68e09a0c5c84cd95ec07c8f72e706482885dc937e2682c657 files/digest-audit-0.7.2-r1 62
 MD5 362246ef4478da970cb07885a1218e39 files/digest-audit-0.7.3 62
+RMD160 f9265b568a5020cff1b4f8c1f6dce4044a2b0e9a files/digest-audit-0.7.3 62
+SHA256 cf76c07c4341c560ca4e554005ad91eb00fe6d00620c811ead9c47c1105325d3 files/digest-audit-0.7.3 62
+MD5 5c9d503ee28782e29f1c87f4cf9efc3a files/digest-audit-0.7.4 62
+RMD160 5a1572021a6072d7c813d5dd3af1edd4c3b94957 files/digest-audit-0.7.4 62
+SHA256 400112be75f1a578ce0b6074a3081d67a1549127e19ac6708b3627557242e235 files/digest-audit-0.7.4 62
+MD5 b6cd1cd6edc78bf88c12015eae5fda21 files/digest-audit-0.8 60
+RMD160 854ba2397c68b56e5a7f0a9b50d6947433e9a7ab files/digest-audit-0.8 60
+SHA256 2888d50e7100daa1b6ddf5b6f2bf8d15d2030615b84f239b6cea6d4443e62d81 files/digest-audit-0.8 60
+MD5 4d90073ff2ad766b0878e6b160e318bd files/digest-audit-0.8.1 62
+RMD160 21eab176797ea2a064d28c7f44052dfd576d8705 files/digest-audit-0.8.1 62
+SHA256 b067bb153d2a93e2b31817bc7d6f749e6a6aa73e5aec66281c995b5fa8d48943 files/digest-audit-0.8.1 62
 MD5 218045283f07df1580cadf6ef3473da0 files/digest-audit-0.9.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCo7eJjUHll2nfF60RAoABAJ9CVf03JdIHVEUJqvNv7uVVb+sPQgCgroLE
-t1Freqsqt46GjlrmQHOp2/k=
-=WJWV
------END PGP SIGNATURE-----
+RMD160 98c3dc5abee6f982dcb17111787ce4aae5669fcf files/digest-audit-0.9.1 62
+SHA256 d524f6988aea8cdce75e53b3b483da30b1ba64805eda5cb35e5b5ed630f27032 files/digest-audit-0.9.1 62
+MD5 a80136feb5f0f97b25b59551791f215d files/digest-audit-1.1.3 235
+RMD160 3fe78764b06dac10476b2362486f9752b682b673 files/digest-audit-1.1.3 235
+SHA256 767ae51f40e78e9455aec4012e2dd1b28b42323e473b811d8d29586c057cd622 files/digest-audit-1.1.3 235
+MD5 5b827f7378df0f835535406269d5d301 metadata.xml 296
+RMD160 6ab135a8e466e887a5a6d02338979f93da0a2acc metadata.xml 296
+SHA256 87bd81cdf18bd09d861194a0a7afd33e8f8f7fc7c91b381a411d6fadc03073ce metadata.xml 296
