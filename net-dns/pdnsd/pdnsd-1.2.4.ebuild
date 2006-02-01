@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.1 2006/02/01 20:24:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.2 2006/02/01 20:29:17 mrness Exp $
 
 inherit eutils
 
@@ -19,8 +19,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	cd ${S} || die
-	local myconf
+	local myconf=""
 
 	if use debug; then
 	 	myconf="${myconf} --with-debug=3"
@@ -50,8 +49,7 @@ pkg_preinst() {
 
 
 src_test() {
-	if [ -x /usr/bin/dig ];
-	then
+	if [ -x /usr/bin/dig ];	then
 		mkdir ${T}/pdnsd
 		echo -n -e "pd12\0\0\0\0" > ${T}/pdnsd/pdnsd.cache
 		IPS=$(grep ^nameserver ${ROOT}/etc/resolv.conf | sed -e 's/nameserver \(.*\)/\tip=\1;/g' | xargs)
@@ -73,7 +71,6 @@ src_test() {
 }
 
 src_install() {
-
 	emake DESTDIR=${D} install || die
 
 	# Copy cache from prev older versions
@@ -113,7 +110,6 @@ src_install() {
 	echo "# Command line options" >> ${config}
 	use ipv6 && echo PDNSDCONFIG="-a" >> ${config} \
 		|| echo PDNSDCONFIG="" >> ${config}
-
 }
 
 pkg_postinst() {

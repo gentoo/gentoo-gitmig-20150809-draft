@@ -13,11 +13,11 @@ MD5 4ddec129fff42063dc6b05493cd55a78 metadata.xml 264
 MD5 45a79e5f7a6854ab6782a75e6f89296a pdnsd-1.1.10.ebuild 3270
 MD5 ca9244827dd64c825a52bfea6a5c5c6c pdnsd-1.2.2.ebuild 4283
 MD5 4fd3c7338d90d7fe69f47e743aed018e pdnsd-1.2.3.ebuild 4284
-MD5 4f935c157ec97aba6e06dd9666807f9b pdnsd-1.2.4.ebuild 4137
+MD5 5959785ddd61ce87347ab590b0dbf87f pdnsd-1.2.4.ebuild 4121
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4RkkjG8pv1lIUX4RApdtAJ0UbOjZCgtaQYVbBunLkpWPTvrfIQCgjIMA
-aLnufUwURvMXJWlcoOmLV94=
-=mUgy
+iD8DBQFD4RopjG8pv1lIUX4RAu+1AKDVbTVevxu/PKP6Ji4uF7IFKjLa0gCg2vUE
+SfiVyYwiwrSjxoqPQmWQa+o=
+=ERUy
 -----END PGP SIGNATURE-----
