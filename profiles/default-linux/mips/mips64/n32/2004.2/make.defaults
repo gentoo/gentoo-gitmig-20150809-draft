@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/make.defaults,v 1.11 2005/04/26 18:50:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/make.defaults,v 1.12 2006/02/01 13:41:15 wolf31o2 Exp $
 
 ARCH="mips"
 
@@ -26,5 +26,3 @@ ACCEPT_KEYWORDS="mips ~mips"
 
 STAGE1_USE="n32"
 USE="${STAGE1_USE} readline fortran gpm berkdb gdbm tcpd pam crypt libwww ssl nls perl python sdl mips -multilib nomultilib"
-GRP_STAGE23_USE="${STAGE1_USE} readline gpm berkdb gdbm tcpd pam crypt libwww ssl nls perl python sdl mips -multilib nomultilib"
-
