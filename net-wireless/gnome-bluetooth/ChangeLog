@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.21 2005/12/22 01:06:59 allanonjl Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.22 2006/02/01 11:51:44 blubb Exp $
+
+  01 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  +files/gnome-bluetooth-0.6.0-libdir.patch, gnome-bluetooth-0.6.0.ebuild:
+  Fix bug 108880 and 113460; thanks to Octavio Ruiz for providing patches
 
   22 Dec 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml:
   remove gnome from metadata

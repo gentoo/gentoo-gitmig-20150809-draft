@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.6.0.ebuild,v 1.2 2005/11/01 14:03:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.6.0.ebuild,v 1.3 2006/02/01 11:51:44 blubb Exp $
 
 inherit distutils gnome2 eutils
 
@@ -41,9 +41,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.5.1-obex_xfer_rate.patch
+	epatch ${FILESDIR}/${P}-libdir.patch
+	export WANT_AUTOMAKE="1.5"
 	libtoolize --force --copy || die
 	aclocal || die
-	automake || die
+	automake -a || die
+	autoconf || die
 }
 
 pkg_postinst() {

@@ -1,0 +1,67 @@
+diff -ur gnome-bluetooth-0.6.0.orig/acinclude.m4 gnome-bluetooth-0.6.0/acinclude.m4
+--- gnome-bluetooth-0.6.0.orig/acinclude.m4     2006-01-24 01:45:57.000000000 -0600
++++ gnome-bluetooth-0.6.0/acinclude.m4  2006-01-24 01:47:15.000000000 -0600
+@@ -103,7 +103,7 @@
+   dnl then the old $(pythondir) was pretty useless.
+
+   AC_SUBST(pythondir)
+-  pythondir=$PYTHON_PREFIX"/lib/python"$PYTHON_VERSION/site-packages
++  pythondir=$libdir"/python"$PYTHON_VERSION/site-package
+
+   dnl pkgpythondir -- $PACKAGE directory under pythondir.  Was
+   dnl   PYTHON_SITE_PACKAGE in previous betas, but this naming is
+@@ -117,7 +117,7 @@
+   dnl   (shared libraries)  Was PYTHON_SITE_EXEC in previous betas.
+
+   AC_SUBST(pyexecdir)
+-  pyexecdir=$PYTHON_EXEC_PREFIX"/lib/python"$PYTHON_VERSION/site-packages
++  pyexecdir=$libdir"/python"$PYTHON_VERSION/site-packages
+
+   dnl pkgpyexecdir -- $(pyexecdir)/$(PACKAGE)
+   dnl   Maybe this should be put in python.am?
+diff -ur gnome-bluetooth-0.6.0.orig/aclocal.m4 gnome-bluetooth-0.6.0/aclocal.m4
+--- gnome-bluetooth-0.6.0.orig/aclocal.m4       2006-01-24 01:45:57.000000000 -0600
++++ gnome-bluetooth-0.6.0/aclocal.m4    2006-01-24 01:58:45.000000000 -0600
+@@ -110,7 +110,7 @@
+   dnl then the old $(pythondir) was pretty useless.
+
+   AC_SUBST(pythondir)
+-  pythondir=$PYTHON_PREFIX"/lib/python"$PYTHON_VERSION/site-packages
++  pythondir=$libdir"/python"$PYTHON_VERSION/site-package
+
+   dnl pkgpythondir -- $PACKAGE directory under pythondir.  Was
+   dnl   PYTHON_SITE_PACKAGE in previous betas, but this naming is
+@@ -124,7 +124,7 @@
+   dnl   (shared libraries)  Was PYTHON_SITE_EXEC in previous betas.
+
+   AC_SUBST(pyexecdir)
+-  pyexecdir=$PYTHON_EXEC_PREFIX"/lib/python"$PYTHON_VERSION/site-packages
++  pyexecdir=$libdir"/python"$PYTHON_VERSION/site-packages
+
+   dnl pkgpyexecdir -- $(pyexecdir)/$(PACKAGE)
+   dnl   Maybe this should be put in python.am?
+diff -ur gnome-bluetooth-0.6.0.orig/python/Makefile.am gnome-bluetooth-0.6.0/python/Makefile.am
+--- gnome-bluetooth-0.6.0.orig/python/Makefile.am       2006-01-24 01:45:57.000000000 -0600
++++ gnome-bluetooth-0.6.0/python/Makefile.am    2006-01-24 01:47:38.000000000 -0600
+@@ -1,7 +1,7 @@
++libdir = @libdir@
+
+-pythondir = $(PYTHON_PREFIX)/lib/python$(PYTHON_VERSION)/site-packages/gnomebt
++pythondir = $(libdir)/python$(PYTHON_VERSION)/site-packages/gnomebt
+ pkgpythondir = $(pythondir)
+-libdir = $(pkgpythondir)
+
+ python_LTLIBRARIES = iconlist.la
+
+diff -ur gnome-bluetooth-0.6.0.orig/src/Makefile.am gnome-bluetooth-0.6.0/src/Makefile.am
+--- gnome-bluetooth-0.6.0.orig/src/Makefile.am  2006-01-24 01:45:57.000000000 -0600
++++ gnome-bluetooth-0.6.0/src/Makefile.am       2006-01-24 01:47:38.000000000 -0600
+@@ -118,7 +118,7 @@
+                --override $(srcdir)/gnomebt-chooser.override \
+                $(srcdir)/gnomebt-chooser.defs > $@
+
+-pydir = $(PYTHON_PREFIX)/lib/python$(PYTHON_VERSION)/site-packages/gnomebt/
++pydir = $(libdir)/python$(PYTHON_VERSION)/site-packages/gnomebt/
+
+ controller_la_SOURCES = gnomebt-controller-py.c gnomebt-controller-pymodule.c
+ controller_la_LIBADD =  libgnomebt.la
