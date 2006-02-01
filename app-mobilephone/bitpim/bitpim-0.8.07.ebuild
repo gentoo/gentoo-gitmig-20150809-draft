@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.07.ebuild,v 1.1 2006/02/01 21:20:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.07.ebuild,v 1.2 2006/02/01 21:23:51 mrness Exp $
 
 inherit eutils rpm
 DESCRIPTION="BitPim is a program that allows you to view and manipulate data on selected cellular phones."
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip"
 DEPEND="|| ( =sys-libs/libstdc++-v3-3.3* =sys-devel/gcc-3.3* )
-	amd64? ( app-emulation/emul-linux-x86-baselibs 
+	amd64? ( app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
