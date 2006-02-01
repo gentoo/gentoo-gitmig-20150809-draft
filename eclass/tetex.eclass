@@ -1,9 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.42 2005/12/11 23:07:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.43 2006/02/01 19:49:48 ehmsen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
+# Author: Martin Ehmsen <ehmsen@gentoo.org>
+# Author: Alexandre Buisse <nattfodd@gentoo.org>
 #
 # A generic eclass to install tetex distributions. This shouldn't be
 # inherited directly in any ebuilds. It should be inherited from
@@ -91,42 +93,6 @@ tetex_src_unpack() {
 			mkdir ${S}/texmf; cd ${S}/texmf
 			umask 022
 			unpack ${TETEX_TEXMF}
-
-			# create update script
-			cat >${T}/texmf-update<<'EOF'
-#!/bin/bash
-#
-# Utility to update Gentoo teTeX distribution configuration files
-#
-
-PATH=/bin:/usr/bin
-
-for conf in texmf.cnf fmtutil.cnf updmap.cfg
-do
-	if [ -d "/etc/texmf/${conf/.*/.d}" ]
-	then
-		echo "Generating /etc/texmf/web2c/${conf} from /etc/texmf/${conf/.*/.d} ..."
-		cat /etc/texmf/${conf/.*/.d}/* > "/etc/texmf/web2c/${conf}"
-	fi
-done
-
-# configure
-echo "Configuring teTeX ..."
-mktexlsr &>/dev/null
-texconfig-sys init &>/dev/null
-texconfig-sys confall &>/dev/null
-texconfig-sys font rw &>/dev/null
-texconfig-sys font vardir /var/cache/fonts &>/dev/null
-texconfig-sys font options varfonts &>/dev/null
-updmap-sys &>/dev/null
-
-# generate
-echo "Generating format files ..."
-fmtutil-sys --missing &>/dev/null
-echo
-echo "Use 'texconfig font ro' to disable font generation for users"
-echo
-EOF
 			;;
 		patch)
 			# Do not run config. Also fix local texmf tree.

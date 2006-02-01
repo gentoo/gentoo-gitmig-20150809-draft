@@ -1,9 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-2.eclass,v 1.5 2005/12/04 22:19:46 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-2.eclass,v 1.6 2006/02/01 19:49:49 ehmsen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
+# Author: Martin Ehmsen <ehmsen@gentoo.org>
+# Author: Alexandre Buisse <nattfodd@gentoo.org>
 #
 # A generic eclass to install tetex 2.0.x distributions.
 
@@ -18,7 +20,42 @@ tetex-2_src_unpack() {
 	cd ${S}/texmf
 
 	unpack ${TETEX_TEXMF_SRC}
-	sed -i -e "s/-sys//g" ${T}/texmf-update || die
+
+	# create update script
+	cat >${T}/texmf-update<<'EOF'
+#!/bin/bash
+#
+# Utility to update Gentoo teTeX distribution configuration files
+#
+
+PATH=/bin:/usr/bin
+
+for conf in texmf.cnf fmtutil.cnf updmap.cfg
+do
+	if [ -d "/etc/texmf/${conf/.*/.d}" ]
+	then
+		echo "Generating /etc/texmf/web2c/${conf} from /etc/texmf/${conf/.*/.d} ..."
+		cat /etc/texmf/${conf/.*/.d}/* > "/etc/texmf/web2c/${conf}"
+	fi
+done
+
+# configure
+echo "Configuring teTeX ..."
+mktexlsr &>/dev/null
+texconfig init &>/dev/null
+texconfig confall &>/dev/null
+texconfig font rw &>/dev/null
+texconfig font vardir /var/cache/fonts &>/dev/null
+texconfig font options varfonts &>/dev/null
+updmap &>/dev/null
+
+# generate
+echo "Generating format files ..."
+fmtutil --missing &>/dev/null
+echo
+echo "Use 'texconfig font ro' to disable font generation for users"
+echo
+EOF
 
 	# fix up misplaced listings.sty in the 2.0.2 archive.
 	# this should be fixed in the next release <obz@gentoo.org>
