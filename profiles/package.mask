@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4939 2006/02/01 12:40:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4940 2006/02/01 16:40:00 brix Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -460,11 +460,6 @@ www-apps/phpgroupware
 # Masking this quake4-bin version because 1.0.5 is actually newer.  I am sure
 # that this will cause some people some confusion, which is why this is here.
 >=games-fps/quake4-bin-1.0.2147.12
-
-# Henrik Brix Andersen <brix@gentoo.org> (09 Nov 2005)
-# Masked for testing due to new configuration method.
-=net-wireless/madwifi-driver-0.1_pre20051111
-=net-wireless/madwifi-tools-0.1_pre20051111
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (07 Nov 2005)
 # Masking Nini for initial import
