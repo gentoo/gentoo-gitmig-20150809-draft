@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.107 2005/12/23 10:15:50 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.108 2006/02/01 12:50:13 carlo Exp $
+
+*kdevelop-3.3.1 (01 Feb 2006)
+
+  01 Feb 2006; Carsten Lohrke <carlo@gentoo.org> +kdevelop-3.3.1.ebuild:
+  version bump
 
   23 Dec 2005; Markus Rothe <corsair@gentoo.org> kdevelop-3.3.0.ebuild:
   Added ~ppc64
