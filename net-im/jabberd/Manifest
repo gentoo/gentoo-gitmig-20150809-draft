@@ -1,10 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2de904c8e65edf417cff840bc509f6fd ChangeLog 10029
+MD5 cc23c36484dce76f661e5d76c4694f86 ChangeLog 10152
 MD5 1a325b6068e591bc222376a7d70f6e17 files/README.Gentoo 984
 MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r4 201
 MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r5 201
+MD5 8524e0a5eec488ceb069462f4650cf1b files/digest-jabberd-2.0.10 66
 MD5 4817e867644d7d7bd2e1a0724571fbe9 files/digest-jabberd-2.0.9 65
 MD5 3a5219d7870e60f5b16d6aefb1c63a0e files/jabber-conf.d 525
 MD5 3d8c2953acd251416c2fdb9a721b9e52 files/jabber.init.bundled 626
@@ -23,12 +21,6 @@ MD5 92ba69168d2fb8c1384e8e13e03dcbc2 files/xdb-ldap.xml 985
 MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
 MD5 910a3e146346e8d123c3cee270e3a920 jabberd-1.4.3-r4.ebuild 5809
 MD5 798d2dd93ed39fc9c20919226a8d51b1 jabberd-1.4.3-r5.ebuild 5844
+MD5 fca62ce7966e503d26de97e498881323 jabberd-2.0.10.ebuild 3493
 MD5 95d2d330856a7b80ead26d0c334d5571 jabberd-2.0.9.ebuild 3621
 MD5 073710b6dd1869d3930f8f2e857341e8 metadata.xml 411
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtorJAiZjviIA2XgRAumPAJ9b6nlpfjDOE1WPFVVKePEVV5zj8wCdEY92
-9V20RYBcu9Pn7VTBw/WDd/M=
-=IjgB
------END PGP SIGNATURE-----
