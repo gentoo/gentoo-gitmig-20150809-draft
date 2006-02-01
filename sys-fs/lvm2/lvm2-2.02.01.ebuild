@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.01.ebuild,v 1.1 2006/02/01 00:10:01 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.01.ebuild,v 1.2 2006/02/01 07:00:21 mr_bones_ Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="readline nolvmstatic clvm nocman nolvm1 nosnapshots nomirrors selinux"
 
 DEPEND=">=sys-fs/device-mapper-1.02
-		clvm? ( >=sys-cluster/dlm-1.01.00 
+		clvm? ( >=sys-cluster/dlm-1.01.00
 			!nocman? ( >=sys-cluster/cman-1.01.00 ) )"
 
 RDEPEND="${DEPEND}
@@ -26,25 +26,25 @@ src_compile() {
 	# http://www.gentoo.org/doc/en/lvm2.xml
 	# fixes http://bugs.gentoo.org/show_bug.cgi?id=84463
 	local myconf
-	
-	if ! use nolvmstatic 
+
+	if ! use nolvmstatic
 	then
 		myconf="${myconf} --enable-static_link"
 		use nosnapshots || myconf="${myconf} --with-snapshots=internal"
 		use nomirrors || myconf="${myconf} --with-mirrors=internal"
-		if use nolvm1 
+		if use nolvm1
 		then
 			myconf="${myconf} --with-lvm1=none"
-		else 
+		else
 			myconf="${myconf} --with-lvm1=internal"
 		fi
 	else
 		use nosnapshots || myconf="${myconf} --with-snapshots=shared"
 		use nomirrors || myconf="${myconf} --with-mirrors=shared"
-		if use nolvm1 
+		if use nolvm1
 		then
 			myconf="${myconf} --with-lvm1=none"
-		else 
+		else
 			myconf="${myconf} --with-lvm1=shared"
 		fi
 	fi
@@ -53,7 +53,7 @@ src_compile() {
 	use hppa && myconf="${myconf} --disable-o_direct"
 
 	if use clvm; then
-		if use nolvmstatic 
+		if use nolvmstatic
 		then
 			myconf="${myconf} --with-cluster=shared"
 		else
