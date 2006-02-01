@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.40 2006/01/19 04:38:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.41 2006/02/01 02:04:54 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -27,7 +27,7 @@
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
-inherit eutils libtool toolchain-funcs
+inherit eutils libtool toolchain-funcs flag-o-matic
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -109,6 +109,23 @@ if [[ "${PN/#xf86-video}" != "${PN}" ]] || [[ "${PN/#xf86-input}" != "${PN}" ]];
 	# Add driver patchset to SRC_URI
 	SRC_URI="${SRC_URI}
 		http://dev.gentoo.org/~joshuabaergen/distfiles/x11-driver-patches-${XDPVER}.tar.bz2"
+fi
+
+# Debugging -- ignore packages that can't be built with debugging
+if [[ -z "${FONT}" ]] \
+	|| [[ "${PN/app-doc}" != "${PN}" ]] \
+	|| [[ "${PN/x11-proto}" != "${PN}" ]] \
+	|| [[ "${PN/util-macros}" != "${PN}" ]] \
+	|| [[ "${PN/xbitmaps}" != "${PN}" ]] \
+	|| [[ "${PN/xkbdata}" != "${PN}" ]] \
+	|| [[ "${PN/xorg-cf-files}" != "${PN}" ]] \
+	|| [[ "${PN/xcursor}" != "${PN}" ]] \
+	; then
+	DEBUGGABLE="yes"
+	IUSE="${IUSE} debug"
+	if use debug; then
+		RESTRICT="${RESTRICT} nostrip"
+	fi
 fi
 
 DEPEND="${DEPEND}
@@ -224,8 +241,18 @@ x-modular_font_configure() {
 	fi
 }
 
+x-modular_debug_setup() {
+	if [[ -n "${DEBUGGABLE}" ]]; then
+		if use debug; then
+			strip-flags
+			append-flags -ggdb
+		fi
+	fi
+}
+
 x-modular_src_configure() {
 	x-modular_font_configure
+	x-modular_debug_setup
 
 	# If prefix isn't set here, .pc files cause problems
 	if [[ -x ./configure ]]; then
