@@ -1,4 +1,4 @@
-MD5 efe479a4bd7f2138da9ec98e2cd899ee ChangeLog 21540
+MD5 3b8612a07566f6c15456569c36898c80 ChangeLog 21728
 MD5 db00eb9aaf23133f903513fea669954f files/digest-ghostscript-esp-7.07.1-r10 212
 MD5 30345d26bed661b454f0bdba79f17947 files/digest-ghostscript-esp-7.07.1-r7 418
 MD5 8a8b22c873ff3d086435ee8c8e419f1c files/digest-ghostscript-esp-7.07.1-r8 276
@@ -35,6 +35,6 @@ MD5 b2ca914ffcff3e5296d6b5acc7fac182 files/gs7.07.1-ps2ps.patch 244
 MD5 0201da09644874147627750546511c36 files/gs7.07.1-tempfile.patch 3125
 MD5 32d445682c030ec35813551b5ddb8814 ghostscript-esp-7.07.1-r10.ebuild 6170
 MD5 87d9695f4326a6755be96ea89362b2db ghostscript-esp-7.07.1-r7.ebuild 4605
-MD5 b584da4517292459eafdb80487029115 ghostscript-esp-7.07.1-r8.ebuild 5617
+MD5 38ee540e88832a99c1656fd46e1d0409 ghostscript-esp-7.07.1-r8.ebuild 5592
 MD5 d3b90c0d4e5b5d12c622c83579d3201a ghostscript-esp-8.15.1.ebuild 4194
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
