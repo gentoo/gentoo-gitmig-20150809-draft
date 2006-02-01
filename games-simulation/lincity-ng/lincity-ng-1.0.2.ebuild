@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.2.ebuild,v 1.2 2006/02/01 19:46:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.2.ebuild,v 1.3 2006/02/01 23:31:45 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,6 +25,10 @@ RDEPEND="
 	>=dev-games/physfs-1.0.0"
 
 DEPEND="${RDEPEND}
+	|| (
+		( x11-libs/libXt x11-libs/libX11 x11-proto/xproto )
+		virtual/x11
+	)
 	dev-util/pkgconfig
 	>=dev-util/jam-2.5"
 
