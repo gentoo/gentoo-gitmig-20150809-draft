@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d81f5218d33f3b966dd39d7692f27126 ChangeLog 23860
-RMD160 ce2603507421eb4ecc1d1503c57e12c58da76738 ChangeLog 23860
-SHA256 a9f92e1bd9ac1ee49e8f7b90310921cb2fcfed72c4ee7f6819df2ab270f9fedc ChangeLog 23860
+MD5 9e45b46fe9caee4024eda2d97bf73672 ChangeLog 24054
+RMD160 1f676413db6ff9de4215b97fc71a67fb312699c1 ChangeLog 24054
+SHA256 f68060616e182a08824d43ae0e898b387aa01ad2e144c5d77ac9e501abec6c96 ChangeLog 24054
 MD5 1c2b632d1118068966049ae41b33c012 files/digest-openssh-3.9_p1-r3 281
 RMD160 163a1b08964455943dd1bc8ee78d3b68764c83eb files/digest-openssh-3.9_p1-r3 281
 SHA256 466d0c5c823c8599749af943d684f8d62885bb360cda16e89ea4e8127bb662dd files/digest-openssh-3.9_p1-r3 281
@@ -16,6 +16,9 @@ SHA256 e41a62b5c48fd3b561dc03f2e4d0ef782ec2f70d3eaa71866292ec7f4fac3070 files/di
 MD5 db2bfdf0d8a833d533ca97e4cd9645b6 files/digest-openssh-4.2_p1 360
 RMD160 7594bb476dba1e45b4442df8fe08cd0a78abf480 files/digest-openssh-4.2_p1 360
 SHA256 9d2dcae75c9746db4c24c3a2e6ba927a94ad65ee5f4ead6a59f92ba34d6fe2a9 files/digest-openssh-4.2_p1 360
+MD5 db2bfdf0d8a833d533ca97e4cd9645b6 files/digest-openssh-4.2_p1-r1 360
+RMD160 7594bb476dba1e45b4442df8fe08cd0a78abf480 files/digest-openssh-4.2_p1-r1 360
+SHA256 9d2dcae75c9746db4c24c3a2e6ba927a94ad65ee5f4ead6a59f92ba34d6fe2a9 files/digest-openssh-4.2_p1-r1 360
 MD5 87593c73e26e1a3825fcb51f2270b694 files/openssh-3.9_p1-chroot.patch 3027
 RMD160 bdbdcadc59c1eda5cb516f8a601d1c8912b36ebb files/openssh-3.9_p1-chroot.patch 3027
 SHA256 14653a7eb8d0458f5a74baa4bbc6ba026d141432af745c5d52f3728328badc04 files/openssh-3.9_p1-chroot.patch 3027
@@ -58,6 +61,9 @@ SHA256 07f684954f8d53c547e125861a4a2ccbbffd8fdeb0bc18d310a3274b06cb99a4 files/op
 MD5 4bee5c8ce11f30487154c3742e004f7d files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
 RMD160 2287950de3385bdffaf6af8eec8b355358891ef1 files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
 SHA256 c6a6f82dd9d5fe34310e2a2bd82558809d28b29cad6e8f0b4a1c3f232ded67be files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
+MD5 4044a10674964d7c34cad8a45cd2264d files/openssh-4.2_p1-CVE-2006-0225.patch 8962
+RMD160 a5c56985d97b32e4624693b27a884c32f0f9de77 files/openssh-4.2_p1-CVE-2006-0225.patch 8962
+SHA256 f11e9d62cb6b33ad38258f4d82446f101b5f4a9ce21b56a4d71377b7850a8734 files/openssh-4.2_p1-CVE-2006-0225.patch 8962
 MD5 8155bbbeb16c552ccb793f05904074b5 files/openssh-4.2_p1-cross-compile.patch 1028
 RMD160 cee147bcb5792d0cc16c6c9c9096b73e4dbcb07d files/openssh-4.2_p1-cross-compile.patch 1028
 SHA256 dc3e7c74189ffa921cb64767e9876e4a7477c15103a4454cd7ddb68edad7943d files/openssh-4.2_p1-cross-compile.patch 1028
@@ -94,13 +100,16 @@ SHA256 d90d9c571aee36988fd95a4723a20c15f28f3b10c6c29fd6439e6fc14f18160f openssh-
 MD5 112e42c96cf751ba3ee3629c2de59b8b openssh-4.1_p1-r1.ebuild 5320
 RMD160 f1ae947350866a8f24b1bd31783055b2860dcdae openssh-4.1_p1-r1.ebuild 5320
 SHA256 243eb9113774122159e05ffe29c83db4e8ce2480e87dac35d77cb9bd54b9ed81 openssh-4.1_p1-r1.ebuild 5320
+MD5 90353df8f87c994d5d5e8a76a669e3d0 openssh-4.2_p1-r1.ebuild 5368
+RMD160 b99191a09b41de426b3bbf0aee50a50b68d148ad openssh-4.2_p1-r1.ebuild 5368
+SHA256 037b11fb49e275ad678ca9399c47e5ae504bf06b7ad501c8212503b37d9501aa openssh-4.2_p1-r1.ebuild 5368
 MD5 c7273be55a352ac07e71c0dedde21882 openssh-4.2_p1.ebuild 5288
 RMD160 4138a80b72faec2285be3bdaf06d1385fb469479 openssh-4.2_p1.ebuild 5288
 SHA256 44f3fc3a8d60205620b40f9efad2219ab881f75e9757d8037ef40d849a28e663 openssh-4.2_p1.ebuild 5288
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3qt/2+ySkm8kpY0RAmWoAKCaqHGeFDR4+8Mjv0m5WpaQLqA28QCcDaDL
-v8gv/0Y84GL0vMm5CmkEXOU=
-=/9/d
+iD8DBQFD4CrA2+ySkm8kpY0RAg4KAJ9Oyxg1VKv75NQYr0+e192nIrDwIQCgq81j
+cCM0H/QSVNNH6amisOGpXWw=
+=V2jM
 -----END PGP SIGNATURE-----

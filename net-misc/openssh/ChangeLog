@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.144 2006/01/29 12:01:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.145 2006/02/01 03:27:21 vapier Exp $
+
+*openssh-4.2_p1-r1 (01 Feb 2006)
+
+  01 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.2_p1-CVE-2006-0225.patch, +openssh-4.2_p1-r1.ebuild:
+  Version bump for security #119232.
 
   29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/openssh-4.2_p1-cross-compile.patch, openssh-4.0_p1-r2.ebuild,
