@@ -2,5 +2,5 @@ MD5 3f6ecb42162efe4456f405a8afb8fdaf ChangeLog 740
 MD5 5f3eb7b5e121753ec78373186ef22a9a files/digest-mcelog-0.4-r1 60
 MD5 6a2dd3e877c2ca2c3b274beb00743597 files/digest-mcelog-0.5 60
 MD5 2db96a48c8f9880c11a58e8c11feb29d mcelog-0.4-r1.ebuild 592
-MD5 a48944bfc1c39da96024629fe425f3c0 mcelog-0.5.ebuild 675
+MD5 d3bae6f6d23315b04486156ea9957375 mcelog-0.5.ebuild 677
 MD5 b4b0772873bb3d0c44751d008a80e68e metadata.xml 372
