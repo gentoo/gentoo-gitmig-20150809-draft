@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/disc-cover
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.25 2006/01/31 23:06:01 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.26 2006/02/01 10:34:50 blubb Exp $
+
+  01 Feb 2006; Simon Stelling <blubb@gentoo.org> disc-cover-1.5.4-r1.ebuild:
+  added ~amd64 keyword
 
   31 Jan 2006; Julien Allanos <dju@gentoo.org> -disc-cover-1.3.1.ebuild,
   -disc-cover-1.5.2.ebuild, disc-cover-1.5.4.ebuild,
