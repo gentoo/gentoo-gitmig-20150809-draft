@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.4 2006/01/04 01:30:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.5 2006/02/01 21:41:58 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -158,7 +158,6 @@ mozconfig_init() {
 		--with-system-jpeg \
 		--with-system-png \
 		--with-system-zlib \
-		--without-system-nspr \
 		--disable-updater \
 		--enable-single-profile \
 		--disable-profilesharing \
