@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.8.0-r1.ebuild,v 1.1 2005/12/03 20:12:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.8.0-r1.ebuild,v 1.2 2006/02/01 11:55:25 cryos Exp $
 
 inherit kde
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-DEPEND="~media-gfx/digikam-${PV}
+DEPEND="|| ( ~media-gfx/digikam-0.8.0 ~media-gfx/digikam-0.8.1 )
 	>=media-gfx/imagemagick-5.5.4
 	>=media-video/mjpegtools-1.6.0
 	virtual/opengl"
