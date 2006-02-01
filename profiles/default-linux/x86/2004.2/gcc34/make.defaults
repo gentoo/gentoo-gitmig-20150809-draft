@@ -1,5 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.2/gcc34/make.defaults,v 1.11 2006/02/01 13:45:48 wolf31o2 Exp $
-
-USE="oss apm arts avi berkdb crypt cups emboss encode foomaticdb gdbm gif gpm imlib jpeg libg++ libwww mad mikmod motif mpeg ncurses nls oggvorbis opengl pam pdflib png python quicktime readline sdl slang spell ssl svga tcpd truetype X xml2 xmms xv zlib"
