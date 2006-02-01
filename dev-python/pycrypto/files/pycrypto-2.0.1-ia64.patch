@@ -1,0 +1,11 @@
+--- src/RIPEMD.c.agriffis	2006-02-01 10:23:31.000000000 -0500
++++ src/RIPEMD.c	2006-02-01 10:23:38.000000000 -0500
+@@ -100,7 +100,7 @@
+    }
+ 
+ typedef    unsigned char        byte;   /* unsigned 8-bit integer */
+-#ifdef __alpha__
++#if defined(__alpha__) || defined(__ia64__)
+ typedef    unsigned int        word;   /* unsigned 32-bit integer */
+ #elif defined(__amd64__)
+ typedef    uint32_t            word;   /* unsigned 32-bit integer */
