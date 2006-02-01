@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.24 2006/01/16 22:48:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.25 2006/02/01 21:25:34 brix Exp $
+
+  01 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  ieee80211-1.0.1.ebuild, ieee80211-1.0.2.ebuild, ieee80211-1.0.3.ebuild,
+  ieee80211-1.0.3-r1.ebuild, ieee80211-1.0.3-r2.ebuild,
+  ieee80211-1.1.5.ebuild, ieee80211-1.1.5-r1.ebuild, ieee80211-1.1.6.ebuild,
+  ieee80211-1.1.7.ebuild, ieee80211-1.1.8.ebuild, ieee80211-1.1.9.ebuild:
+  Fix bug #119854.
 
 *ieee80211-1.1.9 (16 Jan 2006)
 

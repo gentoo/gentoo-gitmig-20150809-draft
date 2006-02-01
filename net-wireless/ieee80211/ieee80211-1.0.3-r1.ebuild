@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.0.3-r1.ebuild,v 1.3 2005/11/24 14:30:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.0.3-r1.ebuild,v 1.4 2006/02/01 21:25:34 brix Exp $
 
 inherit eutils linux-mod
 
@@ -43,7 +43,8 @@ pkg_setup() {
 	fi
 
 	if [[ -f ${KV_DIR}/include/net/ieee80211.h ]] || \
-		[[ -f ${KV_DIR}/include/config/ieee80211.h ]]; then
+		[[ -f ${KV_DIR}/include/config/ieee80211.h ]] || \
+		egrep -q "^#(un)?def.*(CONFIG_IEEE80211.*)" ${KV_DIR}/include/linux/autoconf.h; then
 		eerror
 		eerror "Your kernel source contains an incompatible version of the"
 		eerror "ieee80211 subsystem, which needs to be removed before"
