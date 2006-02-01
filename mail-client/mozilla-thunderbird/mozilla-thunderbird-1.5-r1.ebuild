@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5-r1.ebuild,v 1.1 2006/02/01 22:21:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5-r1.ebuild,v 1.2 2006/02/01 22:23:50 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -18,7 +18,9 @@ SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap crypt"
 
-RDEPEND=">=www-client/mozilla-launcher-1.39"
+RDEPEND=">=www-client/mozilla-launcher-1.39
+	>=dev-libs/nss-3.10
+	>=dev-libs/nspr-4.6.1"
 
 PDEPEND="crypt? ( x11-plugins/enigmail ) "
 
@@ -76,6 +78,8 @@ src_compile() {
 	mozconfig_annotate '' --enable-extensions=default
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
+	mozconfig_annotate '' --with-system-nspr
+	mozconfig_annotate '' --with-system-nss
 
 	# Finalize and report settings
 	mozconfig_final
