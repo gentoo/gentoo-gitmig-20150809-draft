@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.8 2006/01/29 15:39:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.9 2006/02/01 10:11:54 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,8 @@ DESCRIPTION="Open Source File Integrity Checker and IDS"
 HOMEPAGE="http://www.tripwire.org/"
 SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
 	mirror://gentoo/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
-	mirror://gentoo/twpol.txt.gz"
+	mirror://gentoo/twpol.txt.gz
+	mirror://gentoo/tripwire.gif"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -80,7 +81,7 @@ src_install() {
 	doexe ${FILESDIR}/tripwire.cron
 
 	dodoc README Release_Notes ChangeLog policy/policyguide.txt TRADEMARK \
-		${FILESDIR}/tripwire.gif ${FILESDIR}/tripwire.txt
+		${WORKDIR}/tripwire.gif ${FILESDIR}/tripwire.txt
 
 	insinto /etc/tripwire
 	doins ${WORKDIR}/twpol.txt ${FILESDIR}/twcfg.txt
