@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/auctex
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.36 2005/12/20 08:50:13 usata Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.37 2006/02/01 16:06:05 usata Exp $
+
+*auctex-11.82 (01 Feb 2006)
+
+  01 Feb 2006; Mamoru KOMACHI <usata@gentoo.org> +files/51auctex-gentoo.el,
+  +files/60auctex-gentoo.el, +files/auctex-11.82-configure.diff,
+  +auctex-11.82.ebuild:
+  Version bumped and fixed bug #118100. Thanks to Christian Faulhammer
+  <v-li@gmx.de> and Matsui Tetsushi <VED03370@nifty.ne.jp>.
 
 *auctex-11.81 (20 Dec 2005)
 
