@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96213d872a7666cbdeb0a7a75de2788d ChangeLog 18930
-RMD160 efc2e1d6370500c5036c18ab1bf83ca37888eca9 ChangeLog 18930
-SHA256 86e0bf776251783b898eaf717ca22f46e00b8929071c6fac0e746003a9fd04d4 ChangeLog 18930
+MD5 2da25fd2b65b4ab87488c3c63e1c4f61 ChangeLog 19091
+RMD160 70002cbb9c1335caa9c9547ac7d981a122c82479 ChangeLog 19091
+SHA256 fdef2356b6e8f75c8e4c5c823bdfd9ce96573d49b461d63039656ca9a4a8e763 ChangeLog 19091
 MD5 31b0edc023e247961a1743f3661da443 files/digest-hardened-sources-2.4.30-r1 145
 RMD160 af939cb53564d1e27bb4038c092819e2395eb11f files/digest-hardened-sources-2.4.30-r1 145
 SHA256 384649cb1c94a18c48777b8a911c3f89982f31195aa787167ea93d9be3bf8a25 files/digest-hardened-sources-2.4.30-r1 145
@@ -28,6 +28,9 @@ SHA256 4c6e3474df1161d7fc2e05e0a0c064225dcfb8895f8ea9d954bfd9e1003703c0 files/di
 MD5 3d769a01f4f10504097bf061a5a7fe3b files/digest-hardened-sources-2.6.14-r4 228
 RMD160 660134f861b87d5bd0738ed646e08de6584a9280 files/digest-hardened-sources-2.6.14-r4 228
 SHA256 dac73ca8c2dc24a4dcea9cee7eb9d9c887fe964eb11ec16541593d1b9c59ae82 files/digest-hardened-sources-2.6.14-r4 228
+MD5 a89624a3e5f4aeef88789d93ebc43f3c files/digest-hardened-sources-2.6.14-r5 825
+RMD160 cb9a7d2d5082e170d20bacad4b016dafc78fe09e files/digest-hardened-sources-2.6.14-r5 825
+SHA256 46f46090fff4753e8833a879b78d2874f139cb406dae86aa5d004db8eac013fc files/digest-hardened-sources-2.6.14-r5 825
 MD5 d5f0513f9db9b22ddbd1f71d79e887ea hardened-sources-2.4.30-r1.ebuild 780
 RMD160 c22933fd2d53d070f9eb533e218d28aeb6885c9d hardened-sources-2.4.30-r1.ebuild 780
 SHA256 10273b946a575908d1ad1a1c4abf27b15f08529d90109613b5217c1ed463a894 hardened-sources-2.4.30-r1.ebuild 780
@@ -52,15 +55,16 @@ SHA256 02705a9dbbf82ada86b63263ca92c728a528808e0dbb1d6cfb8f88d47224dd41 hardened
 MD5 4360834c28ca8d40e1e48c4a60380f2d hardened-sources-2.6.14-r4.ebuild 705
 RMD160 6f2dfc2084f86b06fe974448102805f5bca7e512 hardened-sources-2.6.14-r4.ebuild 705
 SHA256 f682497daa2fab0fe2dac57fa89280fbdcbbec19d503fdda3bd26f0c5326c4b6 hardened-sources-2.6.14-r4.ebuild 705
+MD5 d7d3d69cbd0169548f7fb5065449b185 hardened-sources-2.6.14-r5.ebuild 704
+RMD160 c50db7331bc88a6d1ffee6269da0fc98b6651c3a hardened-sources-2.6.14-r5.ebuild 704
+SHA256 380357b91aac9e7e20ad041e974f609401ad4b1e9d02e6f672fd266a6848c4c0 hardened-sources-2.6.14-r5.ebuild 704
 MD5 e579a4949e6ca38c8142638e46c0fc3e metadata.xml 844
 RMD160 a5acd7050c6d9b792fd658c81eb65d3fe2e42c06 metadata.xml 844
 SHA256 dd1a85c0a10944dc2ad29ad2fccd6a938653f15cd240df19ea8efda51a1b19fc metadata.xml 844
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iQCVAwUBQ9l2gJ4WFLgrx1GWAQJnGQQAnLMJOP8DHikgejPTAATacKivif9U+ZlJ
-PLfqfBvyyn5qBbVvLAav81ve0YYzA7NOncE9aJ1YSwNMhOKUapRdqGKkI1QiHeoW
-iVvl/up4LNCVoIM7YuVbCY7I4265YjDvoDNHV1kWrQDNiUdP/KDKzgMhe3QtNnq3
-lGctwNs7ssA=
-=OHiR
+iD8DBQFD3/whNzVYcyGvtWURAh5hAKCfKgbCrABwBvz+yP93DFyIDC7opACeIHS/
+7NDFK8vsCTJ/lGqCdWkAOIM=
+=w4so
 -----END PGP SIGNATURE-----
