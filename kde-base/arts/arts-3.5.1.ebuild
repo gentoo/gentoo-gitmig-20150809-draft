@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.1.ebuild,v 1.1 2006/01/22 22:52:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.1.ebuild,v 1.2 2006/02/01 11:59:36 carlo Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
 
-MY_PV=1.5.0
+MY_PV=1.5.1
 S=${WORKDIR}/${PN}-${MY_PV}
 
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
 HOMEPAGE="http://multimedia.kde.org/"
-#SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${MY_PV}.tar.bz2"
-SRC_URI="mirror://kde/stable/3.5/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${MY_PV}.tar.bz2"
+#SRC_URI="mirror://kde/stable/3.5/src/${PN}-${MY_PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="3.5"

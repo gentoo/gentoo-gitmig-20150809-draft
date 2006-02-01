@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.1.ebuild,v 1.1 2006/01/22 22:52:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.1.ebuild,v 1.2 2006/02/01 12:02:30 carlo Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-#SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
-SRC_URI="mirror://kde/stable/3.5/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
+#SRC_URI="mirror://kde/stable/3.5/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
