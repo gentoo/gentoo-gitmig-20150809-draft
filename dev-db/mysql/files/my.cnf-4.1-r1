@@ -1,11 +1,11 @@
 # /etc/mysql/my.cnf: The global mysql configuration file.
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/my.cnf-4.1-r1,v 1.2 2006/02/01 16:35:36 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/my.cnf-4.1-r1,v 1.3 2006/02/01 20:25:56 vivo Exp $
 
 # The following options will be passed to all MySQL clients
 [client]
 #password					= your_password
 port						= 3306
-socket						= /var/run/mysqld/mysqld@MY_SUFFIX@.sock
+socket						= /var/run/mysqld/mysqld.sock
 
 [mysql]
 character-sets-dir=utf8
@@ -47,7 +47,7 @@ character-set-server		= utf8
 default-character-set		= utf8
 user 						= mysql
 port 						= 3306
-socket 						= /var/run/mysqld/mysqld@MY_SUFFIX@.sock
+socket 						= /var/run/mysqld/mysqld.sock
 pid-file 					= /var/run/mysqld/mysqld@MY_SUFFIX@.pid
 log-error 					= /var/log/mysql@MY_SUFFIX@/mysqld.err
 basedir 					= /usr
