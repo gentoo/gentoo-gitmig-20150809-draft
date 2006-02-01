@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sancho
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.3 2006/02/01 17:01:30 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.4 2006/02/01 20:19:06 weeve Exp $
+
+  01 Feb 2006; Jason Wever <weeve@gentoo.org> sancho-0.11.ebuild,
+  sancho-2.1.ebuild:
+  Added ~sparc keywords (fixes broken deps of pycrypto).
 
   01 Feb 2006; Marien Zwart <marienz@gentoo.org> sancho-0.11.ebuild,
   sancho-2.1.ebuild:
