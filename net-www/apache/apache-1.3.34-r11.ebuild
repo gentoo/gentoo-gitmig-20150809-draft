@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r11.ebuild,v 1.5 2006/02/01 16:57:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r11.ebuild,v 1.6 2006/02/01 17:49:53 agriffis Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -24,7 +24,7 @@ SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86"
 IUSE="doc ssl pam lingerd no-suexec static-modules selinux"
 
 DEPEND="dev-lang/perl
