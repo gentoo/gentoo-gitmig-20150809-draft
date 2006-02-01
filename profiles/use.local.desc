@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1706 2006/02/01 08:12:00 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1707 2006/02/01 23:20:10 chainsaw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -656,7 +656,9 @@ media-sound/alsa-tools:fltk - Enable FLTK support
 media-sound/amarok:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
+media-sound/audacious:libvisual - Support visualization plugins through media-libs/libvisual
 media-sound/audacious:modplug - Build with modplug support
+media-sound/audacious:musepack - Build with musepack support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
 media-sound/audacity:ladspa - Enables the ability to support ladspa plugins
