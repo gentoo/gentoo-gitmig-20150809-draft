@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 21aa10363eb06a7809724babe626bd26 ChangeLog 8670
 RMD160 06d014b6e5e3f15535fdf2a1e24ad50558a43dcd ChangeLog 8670
 SHA256 b88568e0c789b0ebb5d419a4bed68df541c3d8776b65d7540d936f0307940879 ChangeLog 8670
 MD5 936964eb16d90289eeaf12ff14d78a3d alsa-oss-1.0.10-r1.ebuild 714
 RMD160 fbe8e43480dc0d68eb17f5291f3cc8eb77b7adcd alsa-oss-1.0.10-r1.ebuild 714
 SHA256 9a7a00edd35a8c9e3e8d732e944ced2fee51cd5044c8a09db58d8b028476e389 alsa-oss-1.0.10-r1.ebuild 714
+MD5 b4a47bf4c57cce18c4bb1e974961d2dd alsa-oss-1.0.11_rc3.ebuild 705
+RMD160 093dda1a1965ee2cad7a8524c0221fbaaace2c68 alsa-oss-1.0.11_rc3.ebuild 705
+SHA256 5827a2ed5281bc2b407983f7a299bfcdcc0ab71881301b5504ab51e2cf4ad049 alsa-oss-1.0.11_rc3.ebuild 705
 MD5 70abfdcf57e22f6b01f8b1a8bb784973 files/digest-alsa-oss-1.0.10-r1 68
 RMD160 61654ffc3c98f92d77e851fdf636d2474f007c17 files/digest-alsa-oss-1.0.10-r1 68
 SHA256 19592be2b840daab2698b47fbac64758c160c49b531cbeee2aed59d5e10a6524 files/digest-alsa-oss-1.0.10-r1 68
+MD5 8ecc0c395eecb27450afd1e69bc2c694 files/digest-alsa-oss-1.0.11_rc3 259
+RMD160 80ade4b078d4af2de4afc324b1f055ed42adfbe2 files/digest-alsa-oss-1.0.11_rc3 259
+SHA256 531ec42fe57660211b270fdba1fb521853171de252b273b8e614e8c2250b92e9 files/digest-alsa-oss-1.0.11_rc3 259
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4cu8AiZjviIA2XgRAiF1AJsH+mb0nATQCOKt6khxsvUk3hhV2ACgiOaN
-4NoY6wZ7Bc2J2eRAXpEB8UQ=
-=e84f
------END PGP SIGNATURE-----
