@@ -1,0 +1,20 @@
+# ChangeLog for www-apps/postfixadmin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.1 2006/02/02 19:35:13 wrobel Exp $
+
+*postfixadmin-2.1.0 (02 Feb 2006)
+
+  02 Feb 2006; <wrobel@gentoo.org> +files/config-hook.sh,
+  +files/postinstall-en.txt, +metadata.xml, +postfixadmin-2.1.0.ebuild:
+  Fixed the use of enewuser. Moved ebuild to portage
+
+  03 Jan 2006; <wrobel@gentoo.org> ChangeLog:
+  Repoman fixes.
+
+  28 Dec 2005; Gunnar Wrobel <php@gunnarwrobel.de> ChangeLog:
+  Minor cleanup for postfixadmin. Seems to work with php5.
+
+  14 Dec 2005; <php@gunnarwrobel.de> ChangeLog:
+  Initial ebuild import into the overlay. Original ebuild from SteveB
+  <tp22a@softhome.net>. See bug #50035
+

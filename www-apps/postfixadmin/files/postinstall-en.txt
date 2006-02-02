@@ -1,0 +1,45 @@
+To complete installation, you must:
+  1. Create the needed MySQL database and tables and user:
+     mysql -u root -p < ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
+  2. Reload MySQL:
+     /etc/init.d/mysql restart
+  3. Change the password for the admin user! Inital password is
+     "admin" (without the qotes).
+
+
+Updating from older version of Postfix Admin:
+  * When you are upgrading from an older Postfix Admin version, make sure you
+  * backup your database before you run the update script on your database.
+  *   mysqldump -a -u root -p > /tmp/postfixadmin-backup.sql
+
+  For update from 2.0.x version of Postfix Admin:
+    1. Please read the BACKUP_MX.TXT
+    2. Update the needed MySQL database and tables:
+       mysql -u root -p < ${MY_SQLSCRIPTSDIR}/mysql/2.0.x_to_${PVR}.sql
+    3. Reload MySQL:
+       /etc/init.d/mysql restart
+
+  For update from 1.5x (or older) version of Postfix Admin:
+    1. Please read the UPGRADE.TXT
+    2. Update the needed MySQL database and tables:
+       mysql -u root -p < ${MY_SQLSCRIPTSDIR}/mysql/1.5x_to_${PVR}.sql
+    3. Reload MySQL:
+       /etc/init.d/mysql restart
+
+
+To use Virtual Vacation, please read VIRTUAL_VACATION_INSTALL.
+
+Check the config.inc.php file. There you can specify settings that are
+relevant to your setup.
+
+Postfix Admin contains 3 views of administration:
+  1. Site Admin view, located at http://${VHOST_HOSTNAME}${VHOST_APPDIR}/admin/.
+  2. Domain Admin view, located at http://${VHOST_HOSTNAME}${VHOST_APPDIR}/.
+  3. User Admin View, located at http://${VHOST_HOSTNAME}${VHOST_APPDIR}/users/.
+
+In order to do the initial configuration you have to go to the Site Admin view.
+
+The default password for the Site Admin view of Postfix Admin is admin/admin.
+
+This is specified in the .htpasswd file in the /admin directory. Make sure
+that the location of the .htpasswd file matches your path.

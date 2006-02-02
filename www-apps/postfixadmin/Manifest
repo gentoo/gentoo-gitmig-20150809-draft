@@ -1,0 +1,6 @@
+MD5 67d698e97f83e6ac673cdb9abd9f39bf ChangeLog 778
+MD5 17d031307a6d7279883bd84e00c7ab36 files/config-hook.sh 202
+MD5 7892309c6746f5bbc334992cc0f90a97 files/digest-postfixadmin-2.1.0 67
+MD5 0d999fdb7bfafcc1fb395b07b38ca939 files/postinstall-en.txt 1859
+MD5 2475b9abb75a74d9fa92ea07cfaf7d41 metadata.xml 300
+MD5 a0b406aafe2e4a659b31678804f5b3e0 postfixadmin-2.1.0.ebuild 4003
