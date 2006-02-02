@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-1.3.6.ebuild,v 1.2 2005/11/08 20:21:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-1.3.6.ebuild,v 1.3 2006/02/02 22:41:35 mr_bones_ Exp $
 
 inherit games
 
@@ -14,9 +14,16 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE="sdl"
 
-RDEPEND="virtual/x11
-	sdl? ( >=media-libs/libsdl-1.2.0 )"
+RDEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
+	!sdl? ( || ( ( x11-libs/libX11 ) virtual/x11 ) )"
 DEPEND="${RDEPEND}
+	!sdl? (
+		|| (
+		( x11-libs/libXt
+			x11-libs/libX11
+			x11-proto/xextproto
+			x11-proto/xproto )
+		virtual/x11 ) )
 	app-arch/unzip"
 
 src_unpack() {
