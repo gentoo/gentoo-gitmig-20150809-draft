@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kalamaris/kalamaris-0.7.1.ebuild,v 1.4 2006/02/02 17:18:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kalamaris/kalamaris-0.7.1-r1.ebuild,v 1.1 2006/02/02 17:18:04 markusle Exp $
 
-inherit kde
+inherit kde flag-o-matic
 
 DESCRIPTION="The KDE Computer Algebra System"
 HOMEPAGE="http://developer.kde.org/~larrosa/kalamaris.html"
 SRC_URI="http://developer.kde.org/~larrosa/bin/${P}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~ppc ~sparc ~x86"
 
 DEPEND="dev-libs/gmp"
 
@@ -28,6 +28,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# need this to make kalamaris compile using gcc-3.4
+	# see bug #103273
+	append-flags -DQT_NO_STL
+
 	PATH="${PATH}:${KDEDIR}/bin:fakebin" econf || die "econf failed"
 	emake || die "emake failed"
 }

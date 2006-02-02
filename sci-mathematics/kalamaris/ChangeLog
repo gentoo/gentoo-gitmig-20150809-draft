@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/kalamaris
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kalamaris/ChangeLog,v 1.4 2005/08/22 15:49:09 phosphan Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kalamaris/ChangeLog,v 1.5 2006/02/02 17:18:04 markusle Exp $
+
+*kalamaris-0.7.1-r1 (02 Feb 2006)
+
+  02 Feb 2006; Markus Dittrich <markusle@gentoo.org>
+  +kalamaris-0.7.1-r1.ebuild:
+  Appended -DQT_NO_STL preprocessor flag to allow kalamaris to 
+  compile with gcc-3.4. This fixes bug #103273.
 
   22 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> kalamaris-0.7.1.ebuild:
   Adding an ugly workaround for the broken 'dependency' on ARTS (bug #96757)
