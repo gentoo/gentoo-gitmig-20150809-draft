@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc2.ebuild,v 1.4 2006/01/10 19:46:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc3.ebuild,v 1.1 2006/02/02 09:38:28 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8fd2d9f6ebe5d1d7a6c164cb7ed0669e ChangeLog 12972
 RMD160 b79fe2ccdf408bc09d19c36b05d6f174282c17a6 ChangeLog 12972
 SHA256 ed8d28964708a90a66109a1a73d0a1985191f47369299cdf0e18886bc47868b4 ChangeLog 12972
 MD5 ffcb7188c78099edf2d2f753c4e5b780 alsa-tools-1.0.10.ebuild 2404
 RMD160 aa90eceadb72dac0a0f54a05f363ccacfba8cbbd alsa-tools-1.0.10.ebuild 2404
 SHA256 c093e49f753d6ed4328c720845f32cba073c14d8ee60ee9e35dad2c7ae685aa5 alsa-tools-1.0.10.ebuild 2404
-MD5 e9311040602c12a69f96d13f5cfa24d0 alsa-tools-1.0.11_rc2.ebuild 2416
-RMD160 caedc3ce95ca6a833a3872ab757fd7128b8404bc alsa-tools-1.0.11_rc2.ebuild 2416
-SHA256 14d576b3524d70246c385854608df92ff35bee623181a953ef874c6826504699 alsa-tools-1.0.11_rc2.ebuild 2416
+MD5 e9311040602c12a69f96d13f5cfa24d0 alsa-tools-1.0.11_rc3.ebuild 2416
+RMD160 caedc3ce95ca6a833a3872ab757fd7128b8404bc alsa-tools-1.0.11_rc3.ebuild 2416
+SHA256 14d576b3524d70246c385854608df92ff35bee623181a953ef874c6826504699 alsa-tools-1.0.11_rc3.ebuild 2416
 MD5 f679ba128fdc2882d1f7197dbc2a04d8 files/digest-alsa-tools-1.0.10 71
 RMD160 dcbf501cb7a97b61e50444fa5c6935e292245851 files/digest-alsa-tools-1.0.10 71
 SHA256 5168d7bf0b826864d5a76c634119923a4f5d25d87d29e2dd56898de913c5ece6 files/digest-alsa-tools-1.0.10 71
-MD5 5b7a5a60080873f6d4a08cf82629a0f8 files/digest-alsa-tools-1.0.11_rc2 74
-RMD160 44b7705f89617bea62968594307614cd2de9421e files/digest-alsa-tools-1.0.11_rc2 74
-SHA256 46dcd93936d3772bda2eaba0ef77aa0a105815dd3eeb5c9e11996c701cd43d47 files/digest-alsa-tools-1.0.11_rc2 74
+MD5 ba78dbc28c6cbbd05f7c519455c36577 files/digest-alsa-tools-1.0.11_rc3 268
+RMD160 7e80dfc41c64ed15f072ef998ed793cb86136a70 files/digest-alsa-tools-1.0.11_rc3 268
+SHA256 074fdaa6dbad994d4811f6c92efda6f257595035813009d65fa8fe0c779c2a02 files/digest-alsa-tools-1.0.11_rc3 268
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4cvZAiZjviIA2XgRAjBWAJ0cHUaGWomrlLzpzctxQ7iIxfa7sQCeIwOn
-FaoQztHtZOvSuDTP1wvZm1I=
-=QLvm
------END PGP SIGNATURE-----
