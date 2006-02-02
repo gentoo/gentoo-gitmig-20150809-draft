@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/njplot
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.5 2005/01/30 17:06:33 ribosome Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.6 2006/02/02 03:41:24 ribosome Exp $
+
+  02 Feb 2006; Olivier Fisette <ribosome@gentoo.org> njplot-20050109.ebuild:
+  Ported to modular X.
 
   30 Jan 2005; Olivier Fisette <ribosome@gentoo.org> njplot-20050109.ebuild:
   Ebuild cleanup.
