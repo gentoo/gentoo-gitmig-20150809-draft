@@ -1,21 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8d3a2e60b8719b95d84df81cdd6a820e trousers-0.2.3.ebuild 2543
-MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
-MD5 6028a85d7ff8329b44f4c3e789ce4e0c ChangeLog 1965
-MD5 96f009653b9a482b8a1f7378693908a0 trousers-0.2.1.ebuild 2504
-MD5 ebde957ee4c398befad5766810be29b0 files/digest-trousers-0.2.3 67
-MD5 05e27e046284f46a7da59bf3dbbdddf0 files/tcsd.confd 372
-MD5 edcaf716f7fc47ab4eeb301291a53fb4 files/tcsd.initd 958
+MD5 a9f786f5199ebe036af583e23b09e9b7 ChangeLog 2089
+RMD160 4c478ed37097cda4d7346493597dd7c5b8491393 ChangeLog 2089
+SHA256 bff9709d224789284b7093c5e7064f46c23266cdbd3b04ab7295c4aa54efdbf1 ChangeLog 2089
 MD5 1973b3178958981f8002711e433d4a39 files/digest-trousers-0.2.1 67
-MD5 9c23455efed7516635345b411ff20496 files/trousers-0.2.3-ldadd.patch 1280
+RMD160 d9754d69e6ffca6a194f26415608eccf1276da51 files/digest-trousers-0.2.1 67
+SHA256 09680bf3f262c0d783fbc2f9b4f98048449817c212f1f40102a73179bc874b49 files/digest-trousers-0.2.1 67
+MD5 ebde957ee4c398befad5766810be29b0 files/digest-trousers-0.2.3 67
+RMD160 bce90f969b3da9d55d871a855f1be82ee6aa18c1 files/digest-trousers-0.2.3 67
+SHA256 6ff29369b98df5e3965deccfd719112acf310746f83dba238d2f349dfc36cb98 files/digest-trousers-0.2.3 67
+MD5 9f6def6794c3baad629688d85b149cf2 files/digest-trousers-0.2.5 247
+RMD160 695525b45dc48ed74024457fbb1ea7810f1e15dd files/digest-trousers-0.2.5 247
+SHA256 f81730b9b821407fb51fde70b586fbf737e59cc61545f03018caea550a18471c files/digest-trousers-0.2.5 247
+MD5 05e27e046284f46a7da59bf3dbbdddf0 files/tcsd.confd 372
+RMD160 d265222136e80a0fe0cdb535abba0e07078f08c2 files/tcsd.confd 372
+SHA256 5a1f9150ce0d8cc3e9e80971e073ee0b1db018ec3af6809087a7c626b9ffa327 files/tcsd.confd 372
+MD5 edcaf716f7fc47ab4eeb301291a53fb4 files/tcsd.initd 958
+RMD160 f90e6d4ec4d2dd0bd8218b3b2ef28328461d50b6 files/tcsd.initd 958
+SHA256 388cef25be74c6263b9cb0e5de3bd08fbc0613e1a9fef958b006c571e4b691c8 files/tcsd.initd 958
 MD5 4b7644dcacf663d68866ec1580d4de57 files/trousers-0.2.1-nouseradd.patch 988
+RMD160 58d429fc0cd5880127b19727e571edb9dd5e1d3a files/trousers-0.2.1-nouseradd.patch 988
+SHA256 dd27e8ff34b13a94b7b810154536d638a375907db76353f8b77267b229c7fb35 files/trousers-0.2.1-nouseradd.patch 988
+MD5 9c23455efed7516635345b411ff20496 files/trousers-0.2.3-ldadd.patch 1280
+RMD160 cf8d48dadd42706c4ca2d7a0884e8471b5fa6b0b files/trousers-0.2.3-ldadd.patch 1280
+SHA256 a43636526b88071b3939cbf0ba751bafcafdddd7be0382c244540debe5c5b988 files/trousers-0.2.3-ldadd.patch 1280
 MD5 4b7644dcacf663d68866ec1580d4de57 files/trousers-0.2.3-nouseradd.patch 988
+RMD160 58d429fc0cd5880127b19727e571edb9dd5e1d3a files/trousers-0.2.3-nouseradd.patch 988
+SHA256 dd27e8ff34b13a94b7b810154536d638a375907db76353f8b77267b229c7fb35 files/trousers-0.2.3-nouseradd.patch 988
+MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
+RMD160 9c13ff790c7419d4e0d2d370036b7f4e4594ea4f metadata.xml 251
+SHA256 1739a4e8833a2a5b9501182eb830cbd3e26014ccef5e9ae1b4d7a0686c665c1b metadata.xml 251
+MD5 96f009653b9a482b8a1f7378693908a0 trousers-0.2.1.ebuild 2504
+RMD160 d96f5347d09686bacb041ba118a4afe91f430550 trousers-0.2.1.ebuild 2504
+SHA256 9ca93ad255010752d175307e751aa29c15db16b9116f6fd207fe8ff6b8232cd7 trousers-0.2.1.ebuild 2504
+MD5 8d3a2e60b8719b95d84df81cdd6a820e trousers-0.2.3.ebuild 2543
+RMD160 3a0d347cf98ca12fe3e78b2eecca62918f5fc805 trousers-0.2.3.ebuild 2543
+SHA256 a341372df4782599c3d0eeb903d8411fd50d70f5393aa1a2a79ef8d42e191fdb trousers-0.2.3.ebuild 2543
+MD5 fd76c1091ef20712f930be4c6d82b3aa trousers-0.2.5.ebuild 2553
+RMD160 22ec42a1fc9e9dfc1ef7e75b5b52ed8d86702dae trousers-0.2.5.ebuild 2553
+SHA256 d9eccf3d030db2885a27739dc6186200b429dc2b44ab11966acd80f0e93eb274 trousers-0.2.5.ebuild 2553
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDLByemdTrptrqvGERAqRfAJ4ik3CuCvgbdirJSeQUCjqbzXjN4QCfWa+Y
-ajtzrxyIqIUA4PFQILfbKIs=
-=sGAI
+iD8DBQFD4g0kmdTrptrqvGERAkROAJ9SLA8mLQ/CwW6XgRtxgbWFsF7u6gCcCAMr
+4zShumgl1/g6ME3axwLxbn4=
+=sn7Q
 -----END PGP SIGNATURE-----
