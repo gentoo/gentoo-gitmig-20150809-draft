@@ -1,6 +1,28 @@
-MD5 f0c6ca8f0dc5964a257097b6cec5534b ChangeLog 2401
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 267e8ba926eb9a764220f7f225f180b6 ChangeLog 2511
+RMD160 bfc930fbe58efc808aa354d4998c94e3c47bcbb5 ChangeLog 2511
+SHA256 984db45e70d503036c64ca5ea8a236422436c0fec22927ea3d495efc58bf5ae5 ChangeLog 2511
 MD5 154b7f0bf57bb9377c49d03565366b15 files/digest-openafs-kernel-1.2.13 144
+RMD160 dab8ce2378890c72e7c751a4b5c104753d6aa397 files/digest-openafs-kernel-1.2.13 144
+SHA256 feb32bad7453da49c74d52f24b4607a87a39e8c406bef4e3cb13f02fbc5be411 files/digest-openafs-kernel-1.2.13 144
 MD5 ef979bba655e75928bb50b7c4d95abf0 files/digest-openafs-kernel-1.4.0 142
+RMD160 4ce7f21c69c842a621cb6fd4537fa5a6a78d48ce files/digest-openafs-kernel-1.4.0 142
+SHA256 16c28a94a9776a5bb89850d5a2bfae9d146ee5892bb29b7088e232353eb34fa9 files/digest-openafs-kernel-1.4.0 142
 MD5 833551f00cc2163ac7f9eb367ee9caa8 metadata.xml 254
+RMD160 1bef8b94265bf2b400fb6235b3e43b504b8d2b71 metadata.xml 254
+SHA256 90d7dcb6aede67bf64f610984a31fc03573512de9e241db42acb32601373db62 metadata.xml 254
 MD5 228eb67d0e3ba6073ade6a9569dda9ec openafs-kernel-1.2.13.ebuild 1548
-MD5 1a487c81f291257b42321feb9c24733f openafs-kernel-1.4.0.ebuild 1237
+RMD160 8b3c8e01b597cf2493a0c42dca7098d948693222 openafs-kernel-1.2.13.ebuild 1548
+SHA256 6d377d407f4dda8f2d1a7a24b109b26f6158f0bd786166c9dbe3b726a09ebc4f openafs-kernel-1.2.13.ebuild 1548
+MD5 e66b864e6328ac7f7c20b7802e2d4d0e openafs-kernel-1.4.0.ebuild 1244
+RMD160 f39a81d909c40481465d0432bd54f3752dc111fb openafs-kernel-1.4.0.ebuild 1244
+SHA256 148a74154d0a052ff07bf07a8b252d584fc2bd53001cccd853c7c9e91d7f9517 openafs-kernel-1.4.0.ebuild 1244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD4pHaJrHF4yAQTrARApHHAJ9Or4oNxMk+rzw1L5KUJU70NS29mwCgsKP9
+sk+0y8OFuvAhbt7BYTRwH6Y=
+=OD6Q
+-----END PGP SIGNATURE-----
