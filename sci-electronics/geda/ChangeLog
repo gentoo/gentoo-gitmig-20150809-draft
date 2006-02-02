@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.11 2006/01/22 00:31:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.12 2006/02/02 19:24:54 wormo Exp $
+
+  02 Feb 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  geda-20050820.ebuild:
+  fix info/man install paths to /usr/share
+  stabling on ppc with plasmaroo's OK (Bug #120148)
 
   22 Jan 2006; Jason Wever <weeve@gentoo.org> geda-20050820.ebuild:
   Added ~sparc keyword wrt bug #119765.
