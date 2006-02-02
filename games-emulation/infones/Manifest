@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 516af1ded0fd3577c086b1004b3635a5 ChangeLog 1102
-MD5 478ea5d48ecdb6fc18c00b2f85e39f88 files/digest-infones-0.92 64
-MD5 32ffe05a6dace448fca7deacb3306ee0 files/digest-infones-0.93 64
 MD5 d0b96812f7b1c8167ea28adb8d42aae2 files/digest-infones-0.97 64
-MD5 a60b4836d546a3528df7a92cd7b69512 infones-0.92.ebuild 865
-MD5 db04f3a0c9434da91dc1ca7a386cdf53 infones-0.93.ebuild 854
 MD5 f7f9c0a7df86f3714326f373bfc460bd infones-0.97.ebuild 888
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDww5m2+ySkm8kpY0RAv5pAKCgJ6zLOtffv1ppHwxfOBQ0wn9DYgCfVx9b
-589ZWqd4d/o7lPswMgX6f9c=
-=zudv
------END PGP SIGNATURE-----
