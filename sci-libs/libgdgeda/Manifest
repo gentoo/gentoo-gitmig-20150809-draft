@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44d9f6f96a121b571e88f37f7d4aa494 ChangeLog 1145
 MD5 ebd85aeeca675d66f010bdee5c69dfff files/digest-libgdgeda-2.0.15 68
 MD5 aaaad89a3170e20693edea5d8ca87fd6 libgdgeda-2.0.15.ebuild 681
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFD4lqY/NoSW7FuNV8RApieAKCkV3z+i+nDHv/jryeLv7L/p13brwCeOqQB
+3Ne6oDJrybWKf1p5S2GbP/0=
+=PjSp
+-----END PGP SIGNATURE-----
