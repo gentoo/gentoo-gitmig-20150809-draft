@@ -13,16 +13,16 @@ SHA256 2522c7770619515dcfa5cdfbbb06e6bcc03e8d41f4a82eccb39e44a3dd28fcba confcach
 MD5 51b4b79fda6cf7a25cbb19a25eec9e0e files/digest-confcache-0.3.3 67
 RMD160 0fd9e2dd76aaeb8380e5cbc4f29d282adeb2198e files/digest-confcache-0.3.3 67
 SHA256 f156c078516c5faa2e8e799e7559265856777547099bf72246276b67a9c3e30d files/digest-confcache-0.3.3 67
-MD5 6a17c3b6c2d30706a6a37b76bccfe01d files/digest-confcache-0.4 241
-RMD160 d5daac39485c27517b1bff15e409462c7a534cf4 files/digest-confcache-0.4 241
-SHA256 f6a346272ae05488679bea179a4cc9b537344ea456e11eb8758235625017daaa files/digest-confcache-0.4 241
+MD5 448e2445ac7becf93f58c8fe93efb91b files/digest-confcache-0.4 241
+RMD160 5f8814fed12c157922294c1ddc16df419d7ab10f files/digest-confcache-0.4 241
+SHA256 f32f3ce4c232abc2aeb74d0628a54c981600b45ee1b8534563e81dce6b212281 files/digest-confcache-0.4 241
 MD5 18b3e4dd99d7c5a2ff111fa3876fe934 metadata.xml 260
 RMD160 2fb205cf551fdedade0ebff7106cf519b4d6dd32 metadata.xml 260
 SHA256 0b5dc3514b10eeca4ca031798572610e1aeb13d1570f19d39444ff689a3f4aa8 metadata.xml 260
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4gVbvdBxRoA3VU0RAnILAJ9PpAOCEBU5eGooOZHpfXHVr5aiZgCgnPng
-ehyIHMpKhBLwHyhxWM7Xzw4=
-=h3ju
+iD8DBQFD4gb4vdBxRoA3VU0RAlqiAJ4qDa6kJ2FPgKajXCekLsmwZfyMTACgjo03
+N2vnYMqSADFtB3tu5d9Re2c=
+=Wbi6
 -----END PGP SIGNATURE-----
