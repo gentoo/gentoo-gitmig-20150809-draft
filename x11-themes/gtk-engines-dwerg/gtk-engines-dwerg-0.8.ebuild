@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-dwerg/gtk-engines-dwerg-0.8.ebuild,v 1.7 2005/10/02 19:40:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-dwerg/gtk-engines-dwerg-0.8.ebuild,v 1.8 2006/02/02 17:16:10 blubb Exp $
 
 DESCRIPTION="GTK+2 Dwerg Theme Engine"
 SRC_URI="http://download.freshmeat.net/themes/dwerg/dwerg-default-${PV}.tar.gz"
 HOMEPAGE="http://themes.freshmeat.net/projects/dwerg/"
 
-KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="static"
 LICENSE="GPL-2"
 SLOT="2"

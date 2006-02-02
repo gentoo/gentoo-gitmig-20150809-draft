@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-flat
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.18 2005/10/02 19:41:40 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.19 2006/02/02 17:16:46 blubb Exp $
+
+  02 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  gtk-engines-flat-2.0-r2.ebuild:
+  stable on amd64
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-flat-2.0-r2.ebuild:
