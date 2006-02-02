@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.5 2006/01/31 12:56:07 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.6 2006/02/02 20:29:46 spyderous Exp $
 
-inherit eutils toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib flag-o-matic
 
 # Arches that need to define their own sets of DRI drivers, please do so in
 # a variable up here, and use that variable below. This helps us to separate the
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/mesa3d/${MY_SRC_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sh ~sparc ~x86"
-IUSE="motif"
+IUSE="debug motif"
 
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
@@ -45,7 +45,16 @@ S="${WORKDIR}/${MY_P}"
 
 # Think about: ggi, svga, fbcon, no-X configs
 
+if use debug; then
+	RESTRICT="${RESTRICT} nostrip"
+fi
+
 pkg_setup() {
+	if use debug; then
+		strip-flags
+		append-flags -ggdb
+	fi
+
 	if [[ ${KERNEL} == "FreeBSD" ]]; then
 		CONFIG="freebsd"
 	elif use x86; then
