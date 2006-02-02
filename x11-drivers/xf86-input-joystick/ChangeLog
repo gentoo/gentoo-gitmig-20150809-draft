@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-joystick
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.10 2005/12/26 20:12:50 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.11 2006/02/02 15:00:36 metalgod Exp $
+
+  02 Feb 2006; Luis Medinas <metalgod@gentoo.org>
+  xf86-input-joystick-1.0.0.5.ebuild:
+  Added ~amd64 keyword.
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xf86-input-joystick-1.0.0.3.ebuild, -xf86-input-joystick-1.0.0.4.ebuild:
