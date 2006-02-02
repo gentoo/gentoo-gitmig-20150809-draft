@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.25 2006/01/22 13:19:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.26 2006/02/02 15:23:17 agriffis Exp $
+
+  02 Feb 2006; Aron Griffis <agriffis@gentoo.org> pari-2.1.7.ebuild:
+  Mark 2.1.7 stable on alpha
 
 *pari-2.1.7-r1 (22 Jan 2006)
 
