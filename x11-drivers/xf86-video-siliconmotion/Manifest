@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 545313f4bdc3ef42ffdacfbdc87ac8b6 ChangeLog 2040
 RMD160 e98523c697706d7172bfcd7ae1ac9f8528b92362 ChangeLog 2040
 SHA256 9e214654a30a557add9df00d11767066b6e7261162465bd07eead1a9a171560e ChangeLog 2040
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 24e330a57e3453558bbaa911572577c2 xf86-video-siliconmotion-1.3.1.5.ebuild 597
 RMD160 e559f71ec9b0d85724cdd6a70ffbdb16c2b3e55c xf86-video-siliconmotion-1.3.1.5.ebuild 597
 SHA256 9a180abcfe6a78bfa222ce878b340b78d6b89c14c8fb929caa487471b2fd86e0 xf86-video-siliconmotion-1.3.1.5.ebuild 597
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD4kT5wUpWvClEHQoRAtGoAJ45PWmFtb2Uyz9wLhTM3/lP8YPCawCdGi5v
+C+0gwQwmTXk5tN2IT5hwM5I=
+=05Vh
+-----END PGP SIGNATURE-----
