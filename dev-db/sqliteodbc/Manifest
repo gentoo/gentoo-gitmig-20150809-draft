@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d009a4770e51e6ff124e18837a72dd0 sqliteodbc-0.64.ebuild 807
-MD5 a9f08a06353274c74d465a997340ae22 ChangeLog 456
-MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
-MD5 f913bd86e7d47123636499d181ccddd8 files/sqliteodbc-0.64-gentoo.patch 1513
+MD5 b830bd0ad93857ab6a2aa1e80963f952 ChangeLog 635
 MD5 c0491eff8f0c25f53320c2fa4b009a1d files/digest-sqliteodbc-0.64 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakKfI1lqEGTUzyQRAsHSAKDTIM3GP7B437CPURKlQ5avNR153gCfdv42
-xT8q/rJqW4QbEfWXvAm5wlc=
-=EyVv
------END PGP SIGNATURE-----
+MD5 c0491eff8f0c25f53320c2fa4b009a1d files/digest-sqliteodbc-0.64-r1 67
+MD5 f913bd86e7d47123636499d181ccddd8 files/sqliteodbc-0.64-gentoo.patch 1513
+MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
+MD5 70e49ca20e8970433523941299569ecc sqliteodbc-0.64-r1.ebuild 1144
+MD5 16692d61ab919626b753eb8a6336f9aa sqliteodbc-0.64.ebuild 802

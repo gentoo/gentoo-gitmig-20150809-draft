@@ -1,7 +1,12 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.2 2005/04/23 12:41:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.3 2006/02/02 19:12:08 arj Exp $
 
+*sqliteodbc-0.64 (02 Feb 2006)
+
+  02 Feb 2006; Anders Rune Jensen <arj@gentoo.org> +sqliteodbc-0.64-r1.ebuild:
+  Allow one to select sqlite library to compile against. Fixes #121185
+	
   23 Apr 2005; Sven Wegener <swegener@gentoo.org> sqliteodbc-0.64.ebuild:
   Fixed invalid atoms in *DEPEND.
 
