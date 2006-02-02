@@ -2,39 +2,81 @@
 Hash: SHA1
 
 MD5 ea5617ce41439f0b5877a7f5893f860a ChangeLog 21260
+RMD160 61b484da88828379d277ad51106f5936a1da33e5 ChangeLog 21260
+SHA256 c1654edb5e893159afdcd87e404bd10fec29bef76ae7c0f22d66eac77311158f ChangeLog 21260
 MD5 756f721b4c0c0646a174993befa199c4 files/1.2.11-files/CAN-2004-0986.patch 1365
-MD5 1d104ede1329b4433cd31e2bf734aaaa files/1.2.11-files/grsecurity-1.2.8-iptables.patch.bz2 763
-MD5 e501a7bffac71e8c86aa8c62414d1621 files/1.2.11-files/install_all_dev_files.patch.bz2 1041
-MD5 0eacca16bacc2e2d7cc125d3aa65b30d files/1.2.11-files/install_ipv6_apps.patch.bz2 334
-MD5 3e4bb17303647ee7a43279f6aa6f0d61 files/1.2.11-files/iptables-1.2.9-imq1.diff.bz2 1420
-MD5 66834df31d6b9d23cac3f4226a865cb2 files/1.2.11-files/iptables-layer7-0.9.0.patch.bz2 3815
-MD5 b0150e53cd00cec2a3c1cff0e2e7673f files/1.2.11-files/round-robin.patch 830
-MD5 bcbdd7e40a2fd78796c9a00a5ae463cb files/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1.bz2 801
-MD5 76a42dd64d1a4f419a5f07de5a6cb0c2 files/1.3.1-files/install_all_dev_files.patch-1.3.1.bz2 1098
-MD5 0eacca16bacc2e2d7cc125d3aa65b30d files/1.3.1-files/install_ipv6_apps.patch.bz2 334
-MD5 628b6569018552e77bd5543d98baa664 files/1.3.1-files/iptables-1.3.1-compilefix.patch 539
+RMD160 a184a41e0b3ad611f271e22e35adf684213307a5 files/1.2.11-files/CAN-2004-0986.patch 1365
+SHA256 15c98cb61c8a2787bb6e4f01f01fd29b0e6a2731e817349bd5fa4c4cd458bef3 files/1.2.11-files/CAN-2004-0986.patch 1365
+MD5 e0672c939baef2c359a2c0e365453228 files/1.2.11-files/grsecurity-1.2.8-iptables.patch 1192
+RMD160 58daa8e044697bd50b0f94bedaa9601dca78c7a2 files/1.2.11-files/grsecurity-1.2.8-iptables.patch 1192
+SHA256 d4e3784157cbd561e69e720eba4864065161c6624a23febc4b5820836b221fd6 files/1.2.11-files/grsecurity-1.2.8-iptables.patch 1192
+MD5 c691998ac49fbed80c6f718ef222dbca files/1.2.11-files/install_all_dev_files.patch 2710
+RMD160 57c46b60ecf46f555e21b7067ad7da96c1c18726 files/1.2.11-files/install_all_dev_files.patch 2710
+SHA256 4231eab305bb52140d7c7ba391be2081cfb8cb6500e436449b99b638268d5b5e files/1.2.11-files/install_all_dev_files.patch 2710
+MD5 ade9674a3d293afd0153fafe34a672d3 files/1.2.11-files/install_ipv6_apps.patch 826
+RMD160 505c5832d20fad96839936da900a12b5f4209045 files/1.2.11-files/install_ipv6_apps.patch 826
+SHA256 0a7f666962e586b2be8d2d3d2947497b3e3837c78b57056ce065455518c78722 files/1.2.11-files/install_ipv6_apps.patch 826
+MD5 6616924151e96a5e9dca31aec2bf5a2b files/1.2.11-files/iptables-1.2.9-imq1.diff 5093
+RMD160 4d66c90d39596f01fee562dac989e17b64c8c205 files/1.2.11-files/iptables-1.2.9-imq1.diff 5093
+SHA256 e3aa898ea102edd1da1a6929767cf7846be23b3eb9763c3e28c4d21613b6bbbc files/1.2.11-files/iptables-1.2.9-imq1.diff 5093
+MD5 6c09e9a3c17fa7f450b73c36643128f0 files/1.2.11-files/iptables-layer7-0.9.0.patch 10240
+RMD160 f4fcaa18d1ea37434558d9f55e64552a19048890 files/1.2.11-files/iptables-layer7-0.9.0.patch 10240
+SHA256 3f35b949929935d24806a3ea2f3c4ce9d371864e9d7cf0d71940ff761342a25b files/1.2.11-files/iptables-layer7-0.9.0.patch 10240
+MD5 25092a0dbe459fedb76c577cc12d78d2 files/1.2.11-files/round-robin.patch 740
+RMD160 a14c756efd235fb16e1025d28f227080d79231e7 files/1.2.11-files/round-robin.patch 740
+SHA256 ab0cc951f72d52f8c60715415fe856d6a03ca59e5f9ed8ecf781812cf2d66932 files/1.2.11-files/round-robin.patch 740
+MD5 319d0b089a495ce1ab8ca02b3820dfe3 files/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1 1315
+RMD160 3665aaa6788261f16372c1e34810fe99fd60453c files/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1 1315
+SHA256 f86e32f84af0e68b927b712a60e5d02d1bc27972537f476c71a311711fdcfc12 files/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1 1315
+MD5 3124fc7d3898ab52264dc9f26890bb44 files/1.3.1-files/install_all_dev_files.patch-1.3.1 2748
+RMD160 9df4ee7b0a26e83b02ef6cbe071d00841d9a070b files/1.3.1-files/install_all_dev_files.patch-1.3.1 2748
+SHA256 c61769413e3a71e008f927b0639d26db6586f921f371a89b3db0e892d064af28 files/1.3.1-files/install_all_dev_files.patch-1.3.1 2748
+MD5 ade9674a3d293afd0153fafe34a672d3 files/1.3.1-files/install_ipv6_apps.patch 826
+RMD160 505c5832d20fad96839936da900a12b5f4209045 files/1.3.1-files/install_ipv6_apps.patch 826
+SHA256 0a7f666962e586b2be8d2d3d2947497b3e3837c78b57056ce065455518c78722 files/1.3.1-files/install_ipv6_apps.patch 826
+MD5 d6121c3a118e7a06de577383c1c99fe0 files/1.3.1-files/iptables-1.3.1-compilefix.patch 358
+RMD160 359adb7cc1876e664a69bba472fa97155df808ab files/1.3.1-files/iptables-1.3.1-compilefix.patch 358
+SHA256 b0e802e86e601f5229a8f1bbbdfbe4c97b13ede4931e5ee2d73f176c7f121e99 files/1.3.1-files/iptables-1.3.1-compilefix.patch 358
 MD5 1457a4df1ce1faccfaccc8c7208bc432 files/digest-iptables-1.2.11-r3 68
-MD5 396ad08a192cd926417a200569060278 files/digest-iptables-1.3.2 206
-MD5 6eb9a9d6ef4fb4b8275a482b4671f1a5 files/digest-iptables-1.3.3-r1 206
-MD5 57dd4f2755bb43094f081d87347571b2 files/digest-iptables-1.3.3-r2 211
+RMD160 a4c430de87f9c25692e845c271d8cea6bb796b0d files/digest-iptables-1.2.11-r3 68
+SHA256 be4f32cf2ace5054244d7792545e5b2e4c1c2a7365f9286623d9dad92b1a433f files/digest-iptables-1.2.11-r3 68
 MD5 7468e344d3bb122269c60c1401e1cf84 files/digest-iptables-1.3.4 206
+RMD160 e945856c1f13519f50bd9f597c44a776fdd69423 files/digest-iptables-1.3.4 206
+SHA256 e6c6345290f98736ccdf46d0332d11980d66661948dc43d0d50c36f442206bea files/digest-iptables-1.3.4 206
 MD5 dd4f4563c89d33fc6987043d95531e05 files/ip6tables-1.2.9-r1.confd 266
+RMD160 e42235c98c8fec22bad9e8953939d7d0dc64cd1d files/ip6tables-1.2.9-r1.confd 266
+SHA256 8434238fad47255691fda04dfff08ab65de44661678d680fab21cc51922a5c68 files/ip6tables-1.2.9-r1.confd 266
 MD5 f74f2424c062e1b2f4b22e4e11db909b files/ip6tables-1.2.9-r1.init 1792
+RMD160 e28e8c86026aac7aa49bd8e5fe84153516ebb28d files/ip6tables-1.2.9-r1.init 1792
+SHA256 e30d2daeb23958482f6655f63267779d1f029f19e1365dddda0febe015ddb8c0 files/ip6tables-1.2.9-r1.init 1792
 MD5 dbef6253ff7e347e7fa35a02652ab684 files/ip6tables-1.3.2.confd 293
+RMD160 2e5399355a930ab3c804c9cc46fe37763555a97e files/ip6tables-1.3.2.confd 293
+SHA256 c93827ac2b8fdd83e2c36788053ee7567ceb13b3cbc5fcf40d186500e05c8104 files/ip6tables-1.3.2.confd 293
 MD5 4e055c59114fd6abc5a27bdaa97d2946 files/iptables-1.2.9-r1.confd 264
+RMD160 9c78d094bbf5e3ee71e4f833f1bab0871bb767d4 files/iptables-1.2.9-r1.confd 264
+SHA256 430d53a0c77cfd0b4d7760b68c36be0010c164cfa99aa0411775b6e88bbe7b74 files/iptables-1.2.9-r1.confd 264
 MD5 8ac77b3fbebfb5ceb9c6166823afe21d files/iptables-1.2.9-r1.init 1829
+RMD160 82233608a26e8e19f7ac910350d80b90de24b1d3 files/iptables-1.2.9-r1.init 1829
+SHA256 489caca55376fe49c613c87ec8e8577b654cf281a96ee94b9eedfafd0f310b22 files/iptables-1.2.9-r1.init 1829
 MD5 956ebf5ab69e5a1e1d3983541eab643b files/iptables-1.3.2.confd 290
+RMD160 cb180068f86a608b16d850635ae909ea7b9cc059 files/iptables-1.3.2.confd 290
+SHA256 351e123ba9e0ec7db2bcff42849aa627d29a3b2e77a47b82386f5e3a7e21bd30 files/iptables-1.3.2.confd 290
 MD5 be57c10dd117e845d0367ac4abfdc6d2 files/iptables-1.3.2.init 2548
-MD5 83b159bf81dca9ddaa1e0b4e9c606a70 iptables-1.2.11-r3.ebuild 5355
-MD5 cdad781be189255fe3fd04bedce629e5 iptables-1.3.2.ebuild 4963
-MD5 b5b107c8cf13e1c278bf83b4daea0c70 iptables-1.3.3-r1.ebuild 5030
-MD5 3e7ee88a2de7f0ffd26b9b1111a09ab8 iptables-1.3.3-r2.ebuild 5030
-MD5 626a2d3e2badda430f6146d525e8e530 iptables-1.3.4.ebuild 5024
+RMD160 fef1e2c096171e32eb3e62e79eb7043033153ef6 files/iptables-1.3.2.init 2548
+SHA256 3ededc7a04ed94ac847d438e7980e1d4a53bfac830eb73c9d420b24b76358e44 files/iptables-1.3.2.init 2548
+MD5 fc6e50abc57966f2b5655301809a6d15 iptables-1.2.11-r3.ebuild 5335
+RMD160 be0e4f868b4f24b39b1a684a6b120d5120ec0763 iptables-1.2.11-r3.ebuild 5335
+SHA256 8ffed50f6d6ebbf4159b72279adda848f5932f615901c4066cbbd466f089054f iptables-1.2.11-r3.ebuild 5335
+MD5 3bbf1fa61aea8f78b2f34239a9d221ef iptables-1.3.4.ebuild 5007
+RMD160 2fc021b3781f17b0658a234b3a3289a5b9ceef67 iptables-1.3.4.ebuild 5007
+SHA256 b8756e9febf9a0d9749c74df13be5022f19422cba56f53ed7a16b162aa35ae23 iptables-1.3.4.ebuild 5007
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvlJCmdTrptrqvGERAnppAJ9LBwiRm0/M+WHXnH2pYFzzR+zq8ACfemhZ
-wz33348FbG+E0i4rjdR89io=
-=oDkl
+iD8DBQFD4WNL2+ySkm8kpY0RAkOEAJ9XUosSMg3ZupmroVvpnKU4ZjcQSwCfcha2
+fbjN6JMk68YGCPWVqFbFyUU=
+=MZ3u
 -----END PGP SIGNATURE-----

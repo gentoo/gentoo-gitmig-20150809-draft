@@ -1,8 +1,6 @@
-===================================================================
 RCS file: /data/cvspublic/iptables/iptables.c,v
 retrieving revision 1.68
 retrieving revision 1.70
-diff -u -r1.68 -r1.70
 --- iptables/iptables.c	2004/05/26 16:04:48	1.68
 +++ iptables/iptables.c	2004/08/03 22:38:39	1.70
 @@ -551,7 +551,7 @@

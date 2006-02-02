@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.4.ebuild,v 1.9 2006/01/06 10:52:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.4.ebuild,v 1.10 2006/02/02 01:40:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -19,7 +19,7 @@ SRC_URI="http://iptables.org/projects/iptables/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="ipv6 static extensions"
 
 DEPEND="virtual/os-headers
@@ -47,13 +47,13 @@ src_unpack() {
 	cd "${S}"
 
 	EPATCH_OPTS="-p0" \
-	epatch "${FILESDIR}"/1.3.1-files/install_ipv6_apps.patch.bz2
+	epatch "${FILESDIR}"/1.3.1-files/install_ipv6_apps.patch
 	EPATCH_OPTS="-p1" \
-	epatch "${FILESDIR}"/1.3.1-files/install_all_dev_files.patch-1.3.1.bz2
+	epatch "${FILESDIR}"/1.3.1-files/install_all_dev_files.patch-1.3.1
 
 	# this provide's grsec's stealth match
 	EPATCH_OPTS="-p0" \
-	epatch "${FILESDIR}"/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1.bz2
+	epatch "${FILESDIR}"/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1
 	sed -i \
 		-e "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" \
 		extensions/Makefile || die "failed to enable stealth extension"
