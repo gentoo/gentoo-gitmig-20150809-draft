@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1.ebuild,v 1.3 2005/05/01 17:24:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1.ebuild,v 1.4 2006/02/02 01:27:31 vapier Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/gmp
 	dev-libs/liboop
 	dev-libs/nettle
 	zlib? ( sys-libs/zlib )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXau ) virtual/x11 ) )
 	tcpd? ( sys-apps/tcp-wrappers )
 	pam? ( sys-libs/pam )"
 #	kerberos? ( virtual/krb5 )
