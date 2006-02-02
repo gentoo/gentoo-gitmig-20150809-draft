@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.90.ebuild,v 1.2 2005/09/17 08:26:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.00.ebuild,v 1.1 2006/02/02 15:37:40 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,8 +15,15 @@ IUSE="gtk ssl"
 
 DEPEND="virtual/libc
 	dev-libs/libpcre
-	gtk? ( =x11-libs/gtk+-1.2* )
+	gtk? ( =x11-libs/gtk+-2* )
 	ssl? ( dev-libs/openssl )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed 's:Icon=icon-network:Icon=nmap-logo-64.png:' -i nmapfe.desktop
+	echo ";" >> nmapfe.desktop
+}
 
 src_compile() {
 	use ppc-macos && filter-flags -fstrict-aliasing -O2
@@ -30,4 +37,10 @@ src_install() {
 	einstall -j1 nmapdatadir=${D}/usr/share/nmap install || die
 	dodoc CHANGELOG HACKING INSTALL docs/README docs/*.txt
 	dohtml docs/*.html
+
+	if use gtk; then
+		dodir /usr/share/pixmaps
+		insinto /usr/share/pixmaps
+		doins ${FILESDIR}/nmap-logo-64.png
+	fi
 }
