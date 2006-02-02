@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.127 2006/02/02 14:25:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.128 2006/02/02 17:58:37 wolf31o2 Exp $
+
+*catalyst-2.0_rc30 (02 Feb 2006)
+
+  02 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_rc29-slot.patch, +files/catalyst-2.0_rc30-slot.patch,
+  -catalyst-2.0_rc29.ebuild, +catalyst-2.0_rc30.ebuild:
+  Version bump to 2.0_rc30.  This resolves an issue with labels on PPC*.
 
 *catalyst-2.0_rc29 (02 Feb 2006)
 
