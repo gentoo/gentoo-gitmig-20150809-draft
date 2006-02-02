@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.2 2005/12/10 21:13:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.3 2006/02/02 02:31:03 joshuabaergen Exp $
 
 inherit eutils libtool
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	# Use the correct includedir for pkg-config
 	epatch "${FILESDIR}/${PV}-ftgl.pc.in.patch"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 	if ! has_version app-doc/doxygen; then
 		cd FTGL/docs
 		tar xzf html.tar.gz || die "unpack html.tar.gz"
