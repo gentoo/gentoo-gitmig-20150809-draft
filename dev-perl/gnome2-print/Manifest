@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ebd7171279550a2a9760743df4200ce ChangeLog 1706
+MD5 ed2fbca881eb1a8ea318002499ce6ecf ChangeLog 1811
+RMD160 c4b6a3fc5e2ccd2e5e8d056f46c4a6095c1d08d1 ChangeLog 1811
+SHA256 9e11137a0313684b05dd3b0ea3a6231a0e18b9f56e5264ede09ce1e2df959833 ChangeLog 1811
 MD5 56cdf1dd834d029ae6150481a37345a2 files/digest-gnome2-print-0.61 68
+RMD160 85c68ff39395c47400f34199c873a9fa501bc1c0 files/digest-gnome2-print-0.61 68
+SHA256 0afe152b9969067edc82acf3dac9a0ac8d3d5e2a8c7b9037da281015022cc3e3 files/digest-gnome2-print-0.61 68
 MD5 107bb37b49bcf391bdf45bf386b308fb files/digest-gnome2-print-0.94 68
+RMD160 09671a3124f7ca2394b29fcfa7bd1f5b94256495 files/digest-gnome2-print-0.94 68
+SHA256 f60ca8ad2cf088fb5846c0e03c8a3845d06a15004be5aa6826c7874ecc45547e files/digest-gnome2-print-0.94 68
 MD5 92f21a3f207db1a99ec423e4c04cf1d6 gnome2-print-0.61.ebuild 728
-MD5 6885a47c1977cca12cd4a4113d3a2925 gnome2-print-0.94.ebuild 734
+RMD160 16b180ee823ffcbb45fc46dac5abfd02289d1f83 gnome2-print-0.61.ebuild 728
+SHA256 9c1838261a51500fd59e9d4240a1c7f024f33301d745b947e8c54cf12dd85805 gnome2-print-0.61.ebuild 728
+MD5 69f71bd6fa8db6ada35192a5cafddf7d gnome2-print-0.94.ebuild 733
+RMD160 e5cb977e0f69e7f1a288f0386d44449e5c785a3d gnome2-print-0.94.ebuild 733
+SHA256 686ea567571f29ce17038d8a7df3200b3bea8f82c83f7f500e4cb25e36f30183 gnome2-print-0.94.ebuild 733
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDzAgkKRy60XGEcJIRAm2PAKCbTR6w3knwXQjc7eixTw3IOAiaUACeJ9a1
-st3lMUoMNzb4Z7lAsKlY4QM=
-=k5X3
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
