@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16d83b3c3e96e5a5666eec6539a61d7a ChangeLog 10775
-RMD160 4e2e45f4e7379f94acbbe0a33a2af3e8a9d8813c ChangeLog 10775
-SHA256 df53df87e0b24381aeea2235e46931ff8704cd8d065c2550008bda093907b379 ChangeLog 10775
+MD5 07e7a343e6b9f7b10e60267682338aa4 ChangeLog 10897
+RMD160 c9536dfffce04b546a7122b4031a69b996de7afa ChangeLog 10897
+SHA256 3c333b2295504df977dd2a2075fc3b4042147b21f1e34cbd16020f27a5c5e7ed ChangeLog 10897
 MD5 98bdbed2d5ce2bec87868d9a46b5f3b0 evolution-data-server-1.0.2.ebuild 1065
 RMD160 776975e43221f79bc5fae1eab410cdfdf221c614 evolution-data-server-1.0.2.ebuild 1065
 SHA256 8200e08ce346d09112df41adef007a273a663bd69a144bb53212d77c078733c3 evolution-data-server-1.0.2.ebuild 1065
@@ -19,9 +19,9 @@ SHA256 cd9ba39f93c59c7d0f1834b4224a4a92a27f88c1f94ccfbeb1de66c3cff4cdab evolutio
 MD5 36265d101a2a38d3dd1d8c529614017b evolution-data-server-1.4.1.1.ebuild 3599
 RMD160 f369ce363b83dff56b78c79b73484c0004a90fb9 evolution-data-server-1.4.1.1.ebuild 3599
 SHA256 06d2dbf653acae537bf9f1edffd87b7c763f5c3d3a91c302d97e9ad2caf94e50 evolution-data-server-1.4.1.1.ebuild 3599
-MD5 0e909858cf125f5dd8bc1f3d40f7529c evolution-data-server-1.4.2.1.ebuild 2807
-RMD160 dd34f6f3a980b221b0123f20142e0bb3d10437f8 evolution-data-server-1.4.2.1.ebuild 2807
-SHA256 7634e3527bf34968c40e99c4fce4350b46c5f9a86dc5339f503bdd6efbaa9dfa evolution-data-server-1.4.2.1.ebuild 2807
+MD5 914bbd713031cc574e0b52846bbad6db evolution-data-server-1.4.2.1.ebuild 2807
+RMD160 854266768fcfd4d6fad7e7efcc7110df44e869d9 evolution-data-server-1.4.2.1.ebuild 2807
+SHA256 5634236404ceab3464fb55e42a8d16353a4ff7474d09b42b18ff684a3a6c9f50 evolution-data-server-1.4.2.1.ebuild 2807
 MD5 e72d151eb141e23240770c222c39e317 files/digest-evolution-data-server-1.0.2 81
 RMD160 287023a31ffd83573f75d2a08e77a93b86d50cbb files/digest-evolution-data-server-1.0.2 81
 SHA256 86965f11b732c3b75605e262c299ef2dfeabf38faff07b16073336ea1dba8209 files/digest-evolution-data-server-1.0.2 81
@@ -62,9 +62,9 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4iH6JrHF4yAQTrARAoe4AKC+3i8kpP818I5ZMWGTUB+HKESDGACgx9BQ
-C48cFN0CVxA5P8uugXeZxwo=
-=Cu7W
+iD8DBQFD4pPsJrHF4yAQTrARAtcTAJ4+Ca/IxVVhaPeCtk50eHf7xSMyQQCglfds
+rLHDsfDwJanNTlCXWZqFFiA=
+=glnq
 -----END PGP SIGNATURE-----

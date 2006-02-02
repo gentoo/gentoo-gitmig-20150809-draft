@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c5c958f85995b316f4519afbaba1e35 ChangeLog 4951
-RMD160 7d6926d0c9bb93f8ba8e2860e06925d0a8281713 ChangeLog 4951
-SHA256 abfd4713ce67bed7d7324d1bb3149b4b21cb8e2be8792a46002002b3fd2ce98e ChangeLog 4951
+MD5 e53f20a21b3e9848dd9c7d319a423163 ChangeLog 5064
+RMD160 3e5fe57d8545fcec9d001fd46a760d5a102f5ba1 ChangeLog 5064
+SHA256 b3c7785f72b777bdc56a00c445bf27bfd1a95732b7c104c312d0cbcfe3617422 ChangeLog 5064
 MD5 29844bae2ecf81b2924fd95d7101db51 evolution-webcal-2.0.1.ebuild 691
 RMD160 5c129ead9ec4395894b941b955f8f8b86d266c50 evolution-webcal-2.0.1.ebuild 691
 SHA256 3bcfa4d266c26fdb578e5372b16aa38f733cf9c70df906c91865be7276d9422c evolution-webcal-2.0.1.ebuild 691
@@ -13,9 +10,9 @@ SHA256 0776bdb0a816fe0958c27bbe278455d5141917db982f8ddc89a174ee905e7898 evolutio
 MD5 d40edf71744b747be01e061e1848b4ff evolution-webcal-2.2.1.ebuild 715
 RMD160 123bcd1dae5f43e340c535f501a6af3edabb3157 evolution-webcal-2.2.1.ebuild 715
 SHA256 b9b4d78e3fab801ce44164e9ef6e60075e2d574998fe65028e30d1d8a67f6104 evolution-webcal-2.2.1.ebuild 715
-MD5 ecef7fe609d65edeee21d75c8993a68b evolution-webcal-2.4.1.ebuild 725
-RMD160 9f79a2ab1716f05a615a3fb20363d7b0a560e814 evolution-webcal-2.4.1.ebuild 725
-SHA256 ed537d38a3fa79412a78dae5f8e2eae9a91c90a624ea8fad9a8069127069d3cc evolution-webcal-2.4.1.ebuild 725
+MD5 6bd007620467d43066cf5b7da9729404 evolution-webcal-2.4.1.ebuild 724
+RMD160 5272aca276e41ee521126f8dea3feaeaa56fc0eb evolution-webcal-2.4.1.ebuild 724
+SHA256 5e595ed133baf4ac0276d322b88f79555a7e36f27bd213fa948cbf60aba4047f evolution-webcal-2.4.1.ebuild 724
 MD5 cf90204d66f7ac8860f2a301c9fcc388 files/digest-evolution-webcal-2.0.1 75
 RMD160 9695a71872913193265941057011760fbf3181a5 files/digest-evolution-webcal-2.0.1 75
 SHA256 da84703507e20268d74c39af5a3fc3e3ae791bbbf0540acc578e376e9fd33f00 files/digest-evolution-webcal-2.0.1 75
@@ -31,10 +28,3 @@ SHA256 45d50d6180921136465ec1b984ba5523663fbe030ca91de31fd923e17c7200a3 files/di
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4iI1JrHF4yAQTrARAinNAKDNvnxaNVz854Ab1PH1oCcfxow0TQCghyhZ
-Ilp2gtlinGCvLHrtkr8w+Wk=
-=Eeb9
------END PGP SIGNATURE-----
