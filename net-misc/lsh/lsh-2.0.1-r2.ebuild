@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.1 2006/02/02 01:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.2 2006/02/02 20:49:42 wormo Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.lysator.liu.se/pub/security/lsh/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 IUSE="pam tcpd ipv6 zlib X"
 
 RDEPEND="dev-libs/gmp
