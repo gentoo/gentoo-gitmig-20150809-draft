@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-<email>web-apps@gentoo.org</email>
-<name>Gentoo Web Application Packages Maintainers</name>
+  <email>wrobel@gentoo.org</email>
+  <name>Gunnar Wrobel</name>
+  <description>Primary maintainer</description>
 </maintainer>
 </pkgmetadata>

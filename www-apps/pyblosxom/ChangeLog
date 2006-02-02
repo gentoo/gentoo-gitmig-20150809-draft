@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/pyblosxom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.1 2006/01/10 21:50:24 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.2 2006/02/02 19:18:00 wrobel Exp $
+
+  02 Feb 2006; <wrobel@gentoo.org> metadata.xml:
+  Modified maintainer
 
 *pyblosxom-1.2.1 (10 Jan 2006)
 
