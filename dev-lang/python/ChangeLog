@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.186 2006/02/02 21:18:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.187 2006/02/02 22:23:41 kloeri Exp $
+
+  02 Feb 2006; Bryan Østergaard <kloeri@gentoo.org
+  +files/python-2.4.2-mmap+fd.patch:
+  Add missing python-2.4.2-mmap+fd.patch.
 
 *python-2.4.2-r1 (02 Feb 2006)
 
