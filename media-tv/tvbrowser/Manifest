@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c977e5e4f9cbdcc2b3206b3b58a734c ChangeLog 578
+MD5 0df98ad6fd4eed869bef02f30a5502ce ChangeLog 917
+RMD160 0e4593a869d073ad0c52f5cef0d6bf8f499a8968 ChangeLog 917
+SHA256 5551498712bfc0cf50bc0d1153465f30015ae71dcdb94c34fbd939c3a0572706 ChangeLog 917
 MD5 45b73b563b0dfda4f6005e25c5a01a44 files/digest-tvbrowser-2.1 129
+RMD160 f1e94f482903c2fcbfed4c731e0f21b671c1a22b files/digest-tvbrowser-2.1 129
+SHA256 cd03ae9e5d7c812e370711e5a64c48b5d6c8bc0fdb7736f89cef291d9a044caf files/digest-tvbrowser-2.1 129
 MD5 2a50d11a23b770a3d4b7b34bbaca2c36 files/tvbrowser-2.1-makefiles.patch 3385
+RMD160 dc09af2ddba09eb90657c9b61eead3e40002cd00 files/tvbrowser-2.1-makefiles.patch 3385
+SHA256 e33caa5f099590fa3c0da2ccbff7189a442f12404775ee19b26319747c7613ed files/tvbrowser-2.1-makefiles.patch 3385
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
-MD5 59a821e32a6909326f5a284e30b59456 tvbrowser-2.1.ebuild 2850
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1nUVZfSl1Kp5KmoRAp+pAKCKkO9urZbt9snLIO5OJyvEFHCMfQCgpe9H
-x3HWg1GuVtOpoD+S/GNr5x0=
-=1x5D
------END PGP SIGNATURE-----
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 4cb7f65fad55ef92aa8879380e0b84ca tvbrowser-2.1.ebuild 3034
+RMD160 8febfecec8a622ecd713a7c075b4ab9d6e34d6a4 tvbrowser-2.1.ebuild 3034
+SHA256 422efa61999578addd34056126db2deee696b1023eb73568a9a6f125a599c1d9 tvbrowser-2.1.ebuild 3034

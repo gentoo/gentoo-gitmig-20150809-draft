@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.2 2006/01/24 18:42:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.3 2006/02/02 16:34:12 chutzpah Exp $
 
 inherit eutils java-pkg libtool flag-o-matic
 
@@ -10,16 +10,26 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
 themes? ( http://www.tvbrowser.org/downloads/themepacks/allthemepacks.zip )"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
-RDEPEND=">=virtual/jre-1.4
-	virtual/x11
+RDEPEND="|| ( ( x11-libs/libXt
+			x11-libs/libSM
+			x11-libs/libICE
+			x11-libs/libXext
+			x11-libs/libXtst
+			x11-libs/libX11
+			x11-libs/libXau
+			x11-libs/libXdmcp
+		)
+		virtual/x11
+	)
+	>=virtual/jre-1.4
 	dev-java/junit
 	dev-java/commons-net
 	dev-java/jgoodies-forms
 	dev-java/bsh
-	dev-java/skinlf
-	"
+	dev-java/skinlf"
+
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.5.4
@@ -28,7 +38,7 @@ DEPEND=">=virtual/jdk-1.4
 
 LICENSE="GPL-2"
 
-IUSE="doc source jikes"
+IUSE="doc jikes themes source"
 
 src_unpack() {
 	unpack ${A}
