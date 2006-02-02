@@ -1,6 +1,11 @@
 # ChangeLog for dev-tinyos/nesc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/ChangeLog,v 1.3 2006/01/29 12:01:07 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/ChangeLog,v 1.4 2006/02/02 20:46:09 sanchan Exp $
+
+*nesc-1.2.3 (02 Feb 2006)
+
+  02 Feb 2006; Sandro Bonazzola <sanchan@gentoo.org> +nesc-1.2.3.ebuild:
+  Version bump. Bugfix release.
 
 *nesc-1.2.2 (29 Jan 2006)
 
