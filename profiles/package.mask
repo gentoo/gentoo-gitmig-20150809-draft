@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4943 2006/02/01 22:29:08 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4944 2006/02/02 05:58:14 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -616,6 +616,8 @@ x11-base/y-windows
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (8 Sep 2005)
 # Only tested against modular x
+# Note that version 0.9.0 should probably stay masked due to old
+# translations.
 x11-misc/driconf
 
 # Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
