@@ -19,9 +19,6 @@ SHA256 ff493c4742eb2bdf30adb6b89bd8d5032d47f76c6738fbda0b6c881531194e7f files/di
 MD5 3000ce781c3e4005337c8d0a9314be72 files/digest-nmap-4.00 235
 RMD160 a4573a09f42b6c26e7131f902c84389523b346ec files/digest-nmap-4.00 235
 SHA256 5cf7ce78ce267d75d7932e6294fb62e35233ea65ba7ae057f391aae701b1b5d9 files/digest-nmap-4.00 235
-MD5 b092d5d6fe8f6bb48da3996626ec4a7f files/nmap-3.93-gcc41.patch 509
-RMD160 d27f76d6941f0ea455c3dafe1309d2eeae635c02 files/nmap-3.93-gcc41.patch 509
-SHA256 54a393461a5f9426c438aca2433ea2dad4f7c1607956a1edd9b09d83c1f4ef09 files/nmap-3.93-gcc41.patch 509
 MD5 4ff03e23202e625a51391b37b3724964 files/nmap-logo-64.png 3289
 RMD160 0f0a9ec49ecffc97517b8d048888a6fd5dce0ab0 files/nmap-logo-64.png 3289
 SHA256 4c72ff1eeffeeaa1039b251d9f2d675936e65db686fe3b57a35c2183ce67a8aa files/nmap-logo-64.png 3289
@@ -46,7 +43,7 @@ SHA256 bb10f05cf0a9d54f0f424806a6d7618d72cf6d06d3d379adaf2a356aa7e38c3d nmap-4.0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4idrchej4aZK9/cRAo/RAJ9pJKOAS81GYzxEorQF8TJXg+X1awCfaPxP
-BivMgIjtQX435sM0h/sJED0=
-=G7sE
+iD8DBQFD4ifechej4aZK9/cRAkBUAJ0ZwAzk0IQ9fznTb/lXBdTVDFkwOACeKBHp
+vr2ne5nkr8mHXiXzmiaEETQ=
+=f5UH
 -----END PGP SIGNATURE-----
