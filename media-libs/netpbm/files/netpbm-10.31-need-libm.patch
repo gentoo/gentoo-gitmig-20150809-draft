@@ -1,0 +1,16 @@
+libnetpbm.so uses libm functions so we need to link with libm
+
+patch by Diego Pettenò
+http://bugs.gentoo.org/121253
+
+--- netpbm-10.31/lib/Makefile
++++ netpbm-10.31/lib/Makefile
+@@ -115,7 +115,7 @@
+ 	$(SYMLINK) $< $@
+ libnetpbm.$(NETPBMLIBSUFFIX).$(MAJ).$(MIN): $(LIBOBJECTS) $(LIBOBJECTS_X)
+ 	$(LD) $(LDSHLIB) -o $@ $(LIBOBJECTS) $(LIBOBJECTS_X) \
+-          $(SHLIB_CLIB) $(LADD)
++          $(SHLIB_CLIB) $(LADD) -lm
+ endif
+ 
+ ifeq ($(NETPBMLIBTYPE),dll)

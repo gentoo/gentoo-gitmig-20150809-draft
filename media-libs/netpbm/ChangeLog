@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.102 2006/01/19 21:01:14 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.103 2006/02/02 22:47:44 vapier Exp $
+
+  02 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.31-need-libm.patch, netpbm-10.31-r1.ebuild:
+  Make sure we link against libm #121253 by Diego Pettenò.
 
   19 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/netpbm-10.31-parallel.patch, netpbm-10.31-r1.ebuild:
