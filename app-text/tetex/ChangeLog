@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.106 2006/01/25 07:44:35 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.107 2006/02/02 16:46:16 ehmsen Exp $
+
+  02 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org> -tetex-1.0.7-r13.ebuild,
+  tetex-3.0_p1-r1.ebuild:
+  added export LC_ALL=C to tetex-3 to fix bug #119856.
+  Removed tetex-1 since it is old, not used and not ported to modular X.
 
   25 Jan 2006; Joshua Jackson <tsunam@gentoo.org> tetex-2.0.2-r8.ebuild:
   stable on x86; bug #115775
