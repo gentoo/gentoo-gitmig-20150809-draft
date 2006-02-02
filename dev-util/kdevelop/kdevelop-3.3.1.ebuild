@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.1.ebuild,v 1.2 2006/02/01 23:12:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.1.ebuild,v 1.3 2006/02/02 00:12:08 carlo Exp $
 
 inherit kde eutils
 
@@ -16,7 +16,7 @@ IUSE="ada clearcase fortran haskell java pascal perforce perl php python ruby sq
 DEPEND="dev-lang/perl
 	sys-devel/flex
 	sys-devel/gdb
-	>=sys-libs/db-4
+	=sys-libs/db-4.1*
 	|| ( kde-base/cervisia kde-base/kdesdk )"
 
 RDEPEND="${DEPEND}
