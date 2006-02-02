@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ed36768b1b5a306112994136b97a7f21 ChangeLog 12965
 RMD160 736a64ce965773abb339367efbe22df8c8050282 ChangeLog 12965
 SHA256 c012af590bd6c40a161339710ba00c0ed4c1017e474a672482f528a27bf55bb6 ChangeLog 12965
@@ -28,16 +25,9 @@ SHA256 6dba9a091f3e14cebf502f752599394ca4652f8d92a34183b4c99dc27e1ad443 libgnome
 MD5 0ae681dfd8e9ede1474caa8d86c2179a libgnomeprintui-2.10.2.ebuild 728
 RMD160 4fc53112bc85ee10188ad04ed42a16a87b975497 libgnomeprintui-2.10.2.ebuild 728
 SHA256 99ae69ed73fba8d78f173af5e1efe4f8d583a1bc3a1b94aed9c28f1ac3b58df1 libgnomeprintui-2.10.2.ebuild 728
-MD5 6b30ce98ce067843f4326176a66d124b libgnomeprintui-2.12.1.ebuild 733
-RMD160 529449d8f8ea05e4d6e4b8d93cc5e3ed97f15f87 libgnomeprintui-2.12.1.ebuild 733
-SHA256 006df13256e565ab83b28dd603f9da8fdfe3984033311e32a6cdccda121411fc libgnomeprintui-2.12.1.ebuild 733
+MD5 9b8e89135171782e5db4831c1637289e libgnomeprintui-2.12.1.ebuild 732
+RMD160 9461ed780c0f30ea6394f78b20689c990f8a0fe9 libgnomeprintui-2.12.1.ebuild 732
+SHA256 ea90afc70da81ca2917346fa45ed5f9c17295ce4291f8684e9188ddca68da8dd libgnomeprintui-2.12.1.ebuild 732
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4hNHJrHF4yAQTrARAje3AKDIP+EF6im4EOQWkpMPhPRokAOzbACbBDPA
-X1CNNbpjpLCHGX+3BtXI1+Q=
-=6IgS
------END PGP SIGNATURE-----
