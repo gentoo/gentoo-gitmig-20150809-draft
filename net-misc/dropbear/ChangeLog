@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.31 2006/02/02 01:24:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.32 2006/02/02 12:17:58 blubb Exp $
+
+  02 Feb 2006; Simon Stelling <blubb@gentoo.org> dropbear-0.47-r1.ebuild:
+  stable on amd64 wrt bug 119232
 
 *dropbear-0.47-r1 (02 Feb 2006)
 
