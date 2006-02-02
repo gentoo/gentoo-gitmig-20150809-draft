@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e7fff5743d1d68192554234760db5f2 ChangeLog 7075
-RMD160 3431737dbe49175d9059e3d8997e33b86d4089b7 ChangeLog 7075
-SHA256 c9138889028cb5ec58166623e6788facca1bb1ae295003a4a6bfdf8e89cc8497 ChangeLog 7075
+MD5 69ee130ac34449a97ebaee91f6de8678 ChangeLog 7185
+RMD160 afcf29d8e8fb12da1244db5b704ce3c3a38b4cb3 ChangeLog 7185
+SHA256 aa29606c596474d24a76b52472cb0fb5a8cada41322be8b5d3a4273af98e72a4 ChangeLog 7185
 MD5 7869b61dbb8436c4c525b9fc10b55c8d files/digest-gnome-keyring-0.4.2 72
 RMD160 47b1d67ed91536763849d98a0a60a06ab053a148 files/digest-gnome-keyring-0.4.2 72
 SHA256 2b000570f08937beac0ae0e4f2fd56052fd47fa6624a353d3bb39a361f64c556 files/digest-gnome-keyring-0.4.2 72
@@ -31,16 +28,9 @@ SHA256 fcd19497271406b885c2b522d3fda5e5f78cf7d749f609eb023835da96fde21c gnome-ke
 MD5 68d816c5f868f1f0ee0f41e7913eb353 gnome-keyring-0.4.5.ebuild 592
 RMD160 da07e51f5f8fe376af28a6d29ba0364610254d8e gnome-keyring-0.4.5.ebuild 592
 SHA256 022cc9e2dc467313d5ad148ab45e2d9edc8fd6a4074ae4958679dadefcfbfd58 gnome-keyring-0.4.5.ebuild 592
-MD5 856eeeadbca6ad7c5e83103f40ab9504 gnome-keyring-0.4.6.ebuild 585
-RMD160 af61268f74bd99ada62e9e039c80ecc1cbdb6403 gnome-keyring-0.4.6.ebuild 585
-SHA256 4bc9cb2bb4d065d0c76be05e0954b523da7091518a5400b3d94778bc5c4f8562 gnome-keyring-0.4.6.ebuild 585
+MD5 744db7afd6e5e09ef99c7051c13ec84e gnome-keyring-0.4.6.ebuild 584
+RMD160 d73126f3eb955fdc2541e56531200b17679932b8 gnome-keyring-0.4.6.ebuild 584
+SHA256 74f085ff22400f2b7b89c1e27bf4d2375c6ef6015b86e77640ea09956e2131d2 gnome-keyring-0.4.6.ebuild 584
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4hAPJrHF4yAQTrARAuCxAJ9wgOcsJM3yqiyUvJREMLYpf02sswCfVCxN
-KnxH/rFfQ8g20huLeUCVhl8=
-=ViCj
------END PGP SIGNATURE-----
