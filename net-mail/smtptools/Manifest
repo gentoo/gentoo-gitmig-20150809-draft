@@ -2,13 +2,21 @@
 Hash: SHA1
 
 MD5 d700f490627e992861947c08896ec0fa ChangeLog 516
-MD5 76d3681a949c983c4790bcd7e89d77bc metadata.xml 254
-MD5 a98b1fad7e5d79bd15e4d43dab07fb8d smtptools-0.2.3.ebuild 995
+RMD160 19fbf7c83dffe0742d5630f299bc8bc96257262c ChangeLog 516
+SHA256 17d7618e46b3f61f3450653c54b856a449592cdb9175a8139b52666ba133b97b ChangeLog 516
 MD5 b9039ecb54e23c7820331c02902fa2a0 files/digest-smtptools-0.2.3 67
+RMD160 6bb33b90af6e49e8cfd314ee572f1b7bf0ff3a79 files/digest-smtptools-0.2.3 67
+SHA256 6692de67469036891f009bdba336651ec5d6a1d064f81a516ef774de18b5280f files/digest-smtptools-0.2.3 67
+MD5 76d3681a949c983c4790bcd7e89d77bc metadata.xml 254
+RMD160 86528bcbd49f8acd5b836ca2a21e268878473345 metadata.xml 254
+SHA256 edb0d38cd8c18831d88ecf51d0f36b155527bef06b1e0b0dc290d3bdcf8f0547 metadata.xml 254
+MD5 841e3365bbdeaff022cfae753fee8843 smtptools-0.2.3.ebuild 1001
+RMD160 2fcb26d0933d2c2f917b964cfbb2af9c39f77ed8 smtptools-0.2.3.ebuild 1001
+SHA256 4c1b7170299f9247b7bd45a644c351fa0a07a93b94acc0ae2da5646007067ac9 smtptools-0.2.3.ebuild 1001
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCs7pEgIKl8Uu19MoRAkACAJ4u+9OC8nA/bhpM+Eu8rBkRFHD1NQCfd4IO
-Qs/Uz8fXd3DHSMb/RdHhgog=
-=l9lo
+iD8DBQFD4pEq2+ySkm8kpY0RAm9jAKCmul7d2vzkQXvoqWMW4vcxf6N+dACaA8xx
+951yvbGiIAGCRKf2NOrFnac=
+=TrEq
 -----END PGP SIGNATURE-----
