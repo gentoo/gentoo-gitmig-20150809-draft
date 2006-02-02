@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.127 2006/01/27 22:07:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.128 2006/02/02 14:38:20 wolf31o2 Exp $
+
+*genkernel-3.3.11_pre8 (02 Feb 2006)
+
+  02 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/bin-keymaps.tar.gz, -genkernel-3.3.11_pre7.ebuild,
+  +genkernel-3.3.11_pre8.ebuild:
+  Version bump and closing bug #120698.
 
 *genkernel-3.3.11_pre7 (27 Jan 2006)
 
