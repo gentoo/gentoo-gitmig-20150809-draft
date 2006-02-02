@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 faaab318a747d824cabe60dfb1006e3e ChangeLog 2432
-RMD160 f66de49bffaa083c159387cc845d11dc5c213568 ChangeLog 2432
-SHA256 5b3d93bf409419dc5ab760f62fae1e1bbeebefb09173b60cf4f99f65b76519b3 ChangeLog 2432
+MD5 0c3b9cc20d7db6794986c6cd48ae8841 ChangeLog 2565
+RMD160 4906c5ad8a5b9699a298061ef4aa7a2f3d7f0c8d ChangeLog 2565
+SHA256 288a6f1f4cabe293ca795778ac82f459a2047d0288b6f4cb58c8de7b9f8b206c ChangeLog 2565
 MD5 b5ac0de9588722b6dc7f188a1feaf051 audacious-0.1-r1.ebuild 2498
 RMD160 5d6f4412b6c9b097d5c1b740d6165c0253139cc0 audacious-0.1-r1.ebuild 2498
 SHA256 5deea884786614fb29ac196b048994360b35f10c86f6aa976fb5b1500e8b2674 audacious-0.1-r1.ebuild 2498
@@ -16,9 +13,9 @@ SHA256 e08f645ee6ffdcc04f7e1bb9afdd3236fa89b524645c2fbe2ced8f8f73c6cb86 audaciou
 MD5 343fbbbf4c755e36e509b34c296929b2 audacious-0.1.ebuild 2402
 RMD160 1ce98e38ba735c524f4b3cfe1e0524b1a6ceb03a audacious-0.1.ebuild 2402
 SHA256 a59cc7ebcff9d2ae59820592216d41d8623f463bef540df4998ad638f141652d audacious-0.1.ebuild 2402
-MD5 21c0bb6f4b86acb1191e64123cf3395d audacious-0.2.ebuild 2764
-RMD160 0e04dc2d005048fae5c1b4dad12e43f3b9665568 audacious-0.2.ebuild 2764
-SHA256 7c3e741f31a7d1bb79215ac8e71d9b9fc2bc5c32fb9b74c93f9ce482fdc4f37a audacious-0.2.ebuild 2764
+MD5 889f58a8b65f5beae79be9fa50809f4b audacious-0.2.ebuild 2764
+RMD160 dcb73d190f6c63f59cab54f01c3e5c486d398360 audacious-0.2.ebuild 2764
+SHA256 15d3ee0b920ec2b2cecba9a4de2ac36a9767a75a9c13fbf80201a86c9c05aa8a audacious-0.2.ebuild 2764
 MD5 91d8a8b27023cfe143010b46f5d97ffb files/0.1-aac-makefile.am 52
 RMD160 3f688d16d3232df2acb0548163182604bf81ae0f files/0.1-aac-makefile.am 52
 SHA256 93c0f6ceeac65d055ec058fe0af789f006e631247d6f1e7c5d5beb36df710bcd files/0.1-aac-makefile.am 52
@@ -40,10 +37,3 @@ SHA256 1093c6c03241b7a885005a425d583eda4e985faabb2a170bf7d96f9dd8b078dd files/di
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
 SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4ULTp5vW4rUFj5oRAgEzAKCeyTbIN6wc4Ty2j6jPuBUN5SO34ACcCt3e
-56uYWjupLhVYpbvuQE1zuHM=
-=Saz3
------END PGP SIGNATURE-----
