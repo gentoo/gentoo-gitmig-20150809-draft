@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e098a70e88f9e363102898cbc2363472 ChangeLog 4767
 RMD160 7168f0fe162f70ab6b2eb66fd074bbced2bcbe11 ChangeLog 4767
 SHA256 257c30e67126769a1176faf1c22d028aeeb33cba1144ce32e8c87eb38ac3add5 ChangeLog 4767
 MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-psycopg-1.1.15 66
 RMD160 9b5188a45df752b4705b876da2d30c884e0f0e32 files/digest-psycopg-1.1.15 66
 SHA256 3a56fa589cb85c23d043d84278c18358b31d483f650b2be8c5161b6043790217 files/digest-psycopg-1.1.15 66
-MD5 29ee1f5bb745b89093f27af00a411426 files/digest-psycopg-1.1.18 244
-RMD160 ffad9ecd74d0c3ca43c5b3c048f815a9c38e3e25 files/digest-psycopg-1.1.18 244
-SHA256 d2fdc44186f2fdc45e63a135d4c436a14e938734204efe0d8e3a805f558ac682 files/digest-psycopg-1.1.18 244
+MD5 85433016479d61db935cff841fcfe284 files/digest-psycopg-1.1.18 244
+RMD160 4753d1757ab58963e63fd8e326c3388086fbabcd files/digest-psycopg-1.1.18 244
+SHA256 dae69a3afb022ae9dfc33811001939e5f6a91943ba72ca155cd37d5a66f8d22e files/digest-psycopg-1.1.18 244
 MD5 9d8d5b9e83c27d9aaa657531bc0fd326 files/digest-psycopg-1.1.21 66
 RMD160 9e7174825033b4683680afc64e01f8d9e3afdda2 files/digest-psycopg-1.1.21 66
 SHA256 0f5ab0540857a9a86586b0aea1164f807249588360a23478237d779922253dfe files/digest-psycopg-1.1.21 66
@@ -31,10 +28,3 @@ SHA256 ad9d69b6b48dac0d6e05a6c4ae9fdf23976388452925ecb8e9a5afee7d1b1f5c psycopg-
 MD5 5c2430ced8abc5d0a5a60411f9ed873c psycopg-2.0_beta5.ebuild 747
 RMD160 7033375b9b8278f5132c27d66ca58e62bb0239b8 psycopg-2.0_beta5.ebuild 747
 SHA256 6ef2fb16cf892dfaa4e47b3103d5a8ce3e606a7010ef959429e442c73149db6f psycopg-2.0_beta5.ebuild 747
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4lmbW78445TWHXcRAj7ZAJ4h2RVQNWcESCZ2qzKH0nes19cP6wCgkOUv
-650ZYThGgBhXA2N+ngWSWgM=
-=bf7S
------END PGP SIGNATURE-----

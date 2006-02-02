@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1cca0a59db47f76b67e3166c4796db65 ChangeLog 3463
 RMD160 d0582ec3611b48b02211ab90fe81bbce8ee57ebb ChangeLog 3463
 SHA256 d2c4712aa468c1bae1e07c8038b158db1f06f8f73aa9ad42a8c43f9c392a3855 ChangeLog 3463
@@ -13,9 +10,9 @@ SHA256 79d007c5f8187687009de51766c552d8fb9a28da40430582db5e24a68d3d22dc files/di
 MD5 0f3ffbc95f303e2b3aee01b3be77d513 files/digest-pyvorbis-1.4 63
 RMD160 3fbafdc32ea5efc3cd0bdc1ea36323f1f02fe6ef files/digest-pyvorbis-1.4 63
 SHA256 57053260744a41c3a480ff1241cef0ab41090745128f5878adf0d0ba4373ece4 files/digest-pyvorbis-1.4 63
-MD5 b03d427191df99e9a9183f666f05c069 files/digest-pyvorbis-1.4-r1 235
-RMD160 e4b34ee8b17522263e68098e7ceaaeeff62e7f49 files/digest-pyvorbis-1.4-r1 235
-SHA256 14c3ad6dd0fc71ac2bec520d052ba1f74e774894bee5eefc0d3c908ab129a01a files/digest-pyvorbis-1.4-r1 235
+MD5 3fa5c5e0c99399a008954e75fb99e973 files/digest-pyvorbis-1.4-r1 235
+RMD160 e635fa03a26bde355fc4d33ad66ec443d89dd550 files/digest-pyvorbis-1.4-r1 235
+SHA256 9392e8b001084b411199fd85ef529019b5e4049b3a801ddd56a3ae484c2e9b07 files/digest-pyvorbis-1.4-r1 235
 MD5 dd05077a480799edc7a1912053b6cc6a files/pyvorbisfile.c-1.4.patch 564
 RMD160 ad2903a6a371519b3214487f97875fe0735b2126 files/pyvorbisfile.c-1.4.patch 564
 SHA256 aa3bae161c934eff79d2ed1ee6d0cf4ee524039674744e0a8c6f608c0a6fcd3e files/pyvorbisfile.c-1.4.patch 564
@@ -34,10 +31,3 @@ SHA256 d6e0a14325ce9cf323de3aa96e8c075767d2403122d16791e0cdf0fc7834c6f1 pyvorbis
 MD5 4069e08113b65ee5705e07e63e3a1b5f pyvorbis-1.4.ebuild 732
 RMD160 cabfea21bce1e3561810624a05d888503e5398e0 pyvorbis-1.4.ebuild 732
 SHA256 ae71c9c0ccaf03a4146ab04c8b92726f4a65df75bce834343d3c27cdcd33d5b1 pyvorbis-1.4.ebuild 732
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4lw5W78445TWHXcRAjFOAJwL5E5KJdlbkIlOncnO0leC4G1zggCgl9Jp
-jK8faxnda7IZ+SAf6Lej2so=
-=fViX
------END PGP SIGNATURE-----

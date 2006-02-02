@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.73 2006/02/02 19:27:51 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.74 2006/02/02 19:47:44 marienz Exp $
+
+  02 Feb 2006; Marien Zwart <marienz@gentoo.org> files/digest-sip-4.2.1,
+  Manifest:
+  Fix rmd160 digests.
 
   02 Feb 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix rmd160 digests.

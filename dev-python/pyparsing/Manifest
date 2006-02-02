@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7521a9648c2d052f1e773a7ef37a009d ChangeLog 1898
 RMD160 18c3e5ce09beeda9b99579e98fa0e82390b033bf ChangeLog 1898
 SHA256 b41e8747ebf6fa5e074d5ff4d8be9a8040db670625dacf1d410446a8ccfcc555 ChangeLog 1898
@@ -16,9 +13,9 @@ SHA256 90fcfb2139a23932829e3b62002bef7f115923cc6fedc0fa0017ca92f4550796 files/di
 MD5 cbb37b613f12c6e27d93dc19f553e180 files/digest-pyparsing-1.3.3 67
 RMD160 e24840ac30bde6ecab2f81c5df2c9c8c0cb580e5 files/digest-pyparsing-1.3.3 67
 SHA256 6442cd4948c33b8c0f2e80355e09432ad0604bbb8bfa4960f9c5495fd5f32539 files/digest-pyparsing-1.3.3 67
-MD5 9b9b8f1e200f1794608435c29cb96de8 files/digest-pyparsing-1.4 241
-RMD160 7a62736c450542873d929cd22549633d0a0efa3f files/digest-pyparsing-1.4 241
-SHA256 cb88eb287fe08e6c934991ad7bce4a3557e4363d14cda465757c159409c5585b files/digest-pyparsing-1.4 241
+MD5 a25c0c2beff9367980007cd7afa89043 files/digest-pyparsing-1.4 241
+RMD160 a28a5dd459d5c7112d86d87c9156647053f412af files/digest-pyparsing-1.4 241
+SHA256 b99cbe3bc0530fe1abda1d2b27e57df00ad0d51efcaae5d60b484406322570c1 files/digest-pyparsing-1.4 241
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
@@ -37,10 +34,3 @@ SHA256 748e3b5ad14238619117c85d07661051309619bdca2e9baa329510b9519ca91c pyparsin
 MD5 35c91c06cf118b1f412aa31a00aac1b2 pyparsing-1.4.ebuild 660
 RMD160 25acff5a6bd4b594e8584650118998956e9afd9b pyparsing-1.4.ebuild 660
 SHA256 3cfac2ecd2dd445208185fd801b2152d1dd04034ab647a72d0def0840bf5ff1c pyparsing-1.4.ebuild 660
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4lnqW78445TWHXcRApsyAJ4zs3Dg4qdIeoxrQZJocQHn2dix8wCeL0+p
-6qTR4QW8rfmzVGi2mcaOhbk=
-=9+Aa
------END PGP SIGNATURE-----
