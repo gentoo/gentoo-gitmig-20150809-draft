@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1dccdc26a858240e4cb731af02fa5604 ChangeLog 1889
 RMD160 da4facc06d962f7f8ba884c94d0bae4cb8190c4a ChangeLog 1889
 SHA256 83f476581f06052f9fee8c1a5ad51b396b52ce354294a19f1f5bee8f89f79d5d ChangeLog 1889
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 572fb8d3b4bc25c852b170aacdc0e080 xf86-input-palmax-1.0.0.5.ebuild 518
 RMD160 1287fc9572d24babde3756f5d2e44502100ad97f xf86-input-palmax-1.0.0.5.ebuild 518
 SHA256 6c39dd252874881e07a33185bde135fa6813c5736859348ed9263fc0acd7f9cf xf86-input-palmax-1.0.0.5.ebuild 518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD4jyDwUpWvClEHQoRAjFKAJ9wws3jDgMbucPU8MrQOJGjH2Vx6wCfSzzk
+9WvcqP2UqPh+QAiR0ALhbww=
+=Xizh
+-----END PGP SIGNATURE-----
