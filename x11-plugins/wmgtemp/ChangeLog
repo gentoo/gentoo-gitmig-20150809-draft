@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmgtemp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.10 2005/11/10 09:13:51 s4t4n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.11 2006/02/02 16:28:10 nelchael Exp $
+
+  02 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> -wmgtemp-0.6.ebuild,
+  wmgtemp-0.7.ebuild:
+  Fixed DEPEND for modular X.
 
   10 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmgtemp-0.7.ebuild,
   wmgtemp-0.6.ebuild:
