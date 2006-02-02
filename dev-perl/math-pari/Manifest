@@ -1,22 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d79b31b8c94cd32cb9826938f711ee37 ChangeLog 3140
+MD5 b6dab8bd30b0de62fa261996beb234ec ChangeLog 3249
+RMD160 ad819f51066f016f36d188d2db7547838ddd06e9 ChangeLog 3249
+SHA256 80bba78da2ea8d68938c1a87e08236b80ee7a9195dddf1b5c29dbbe31a226cf9 ChangeLog 3249
 MD5 c2c4ec5a0ec34e3f7744f2f8220fbf86 files/digest-math-pari-2.010500-r1 132
+RMD160 6b60e066686a44385040bc85a68528197b3624c6 files/digest-math-pari-2.010500-r1 132
+SHA256 69a05ed3cc9ffef2247134e476c049351311ddabf35d2b8ded4ff13ca9e2875e files/digest-math-pari-2.010500-r1 132
 MD5 2946e7c9e5bbdb5a6d5a592cf5d7c523 files/digest-math-pari-2.010603 130
-MD5 7a28837d7d66fda2cbedacc81aea8916 files/digest-math-pari-2.010702 130
+RMD160 45bfe0a3c9486651a97200743a5b586de4d90d5b files/digest-math-pari-2.010603 130
+SHA256 0bfdea30ca9a8d3c9bc8a3a3a7a2add720cf1cb8e7f117d4971828eb4b54b752 files/digest-math-pari-2.010603 130
+MD5 34d62303d3b374f7b058dda0caf161e7 files/digest-math-pari-2.010702 296
+RMD160 69681e92bdae44d19b2a4c22b9ddb608db5c91c2 files/digest-math-pari-2.010702 296
+SHA256 d9ce3cb2d554bf9989030de8f57712b364d4364a2052efdae0d6a5b1a5f38ef4 files/digest-math-pari-2.010702 296
 MD5 7a28837d7d66fda2cbedacc81aea8916 files/digest-math-pari-2.010702-r1 130
+RMD160 90871e285bb0b56edb3279942f0e8c719647a595 files/digest-math-pari-2.010702-r1 130
+SHA256 267f7bc237e7caa4e3afa8297d1272aea050e8ca170309a376ee5273a7f78210 files/digest-math-pari-2.010702-r1 130
 MD5 8bf4d2be76b7b962d6a7a4bea2bd41e4 files/math-pari-2.010702-hppa.patch 641
+RMD160 994e79873fa4e7cd738d748d8513e83bf1fb53a4 files/math-pari-2.010702-hppa.patch 641
+SHA256 9ace7f2f12a7c38e23b37fc1c3a5a549225f76a8ce7db0e74a4a4100dee1e032 files/math-pari-2.010702-hppa.patch 641
 MD5 6e00e9cedff73a1b0100d1a7a0fd8f82 files/math-pari-hppa.patch 641
+RMD160 2801d07f9ed6f39c21b1bb0b9bdc6534aa2674bb files/math-pari-hppa.patch 641
+SHA256 e18b2e7247ddc60afb6824c8bd84a6dd3e80e9fd84214577449555ec93205611 files/math-pari-hppa.patch 641
 MD5 91aad64a08ab5135550d165791a3b1fe math-pari-2.010500-r1.ebuild 899
+RMD160 c859c8afcc5bbac2f734728f1e961f838eb2f79b math-pari-2.010500-r1.ebuild 899
+SHA256 a422bbde15310ee0f29bff923b7db8c14a8e2403309aae16bb4093c401cac405 math-pari-2.010500-r1.ebuild 899
 MD5 21b533121f8bd25448d011b360ddc95f math-pari-2.010603.ebuild 992
+RMD160 7e05939f4489dbd5d6c01739e8b2bde190f2f11e math-pari-2.010603.ebuild 992
+SHA256 abca82c81a106b0958b5c892b43100314796b5a9b72225332b1bd9b347dfae3a math-pari-2.010603.ebuild 992
 MD5 8547068cfbeab3848e70623612397484 math-pari-2.010702-r1.ebuild 997
-MD5 042652afb7b26b0ec41824489bd7cc6d math-pari-2.010702.ebuild 991
+RMD160 022f5a36697c6e225ec7011b228edb55a65e24b8 math-pari-2.010702-r1.ebuild 997
+SHA256 d1eaa12481ce756146b788340ef61731a39815875c03f30b80cc28420287f8ab math-pari-2.010702-r1.ebuild 997
+MD5 9638c11b33913ea0365a34d452fe2f2a math-pari-2.010702.ebuild 989
+RMD160 a002479830ba998ab6bcc052c343b38fa662f40b math-pari-2.010702.ebuild 989
+SHA256 05c15c0d4423fc649cdb2546379ae50196e5d1f89afb3e198169529ca5284963 math-pari-2.010702.ebuild 989
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzseBtG5z4I8BtQoRAtw+AKCRm9jBEeIaCKq7h0WHd3vjHuyrRgCgghOr
-t6G7nn7in44PyfEnNOw6C1M=
-=2Mts
+iD8DBQFD4idGJrHF4yAQTrARApbXAJsHUyJKdzJnOTh/iX8iYn8ohguHOQCeI8uv
+iwupWr5HnUiOpgEEW0GBXik=
+=0Efq
 -----END PGP SIGNATURE-----
