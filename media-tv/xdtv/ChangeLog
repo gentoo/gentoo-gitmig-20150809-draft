@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.17 2006/01/29 13:50:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.18 2006/02/02 19:50:51 flameeyes Exp $
+
+  02 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.0.ebuild:
+  Fix dependency on libtheora to 1_alpha5 (bug #120991).
 
   29 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-xdtv-2.3.0, Manifest:
