@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c49fdc5974895a556599d597555e16b2 ChangeLog 8130
-RMD160 042d483bb4758e99e37ccf5cad4487495eab03c7 ChangeLog 8130
-SHA256 19e10315e1854a12950e502792dc2c362eaa78a4e87ee51d9f6ac778cecf4863 ChangeLog 8130
+MD5 33abe9abf9c6edb1f892f1cd72813d01 ChangeLog 8241
+RMD160 cc3995a6f3abbf3a8b02b03f8211006d65f1d952 ChangeLog 8241
+SHA256 968d7889dd2b06d95720babcd23f47ea3bb329b66493ae9bb6f2f24f44b8f45f ChangeLog 8241
 MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
 RMD160 6fb48c8919339dbc4e993b426839da9905a4190a files/digest-gconf-editor-2.10.0 72
 SHA256 871846f38702b7f94b2f4be66f69916c2ada49c608a6ed13294231713cf300c0 files/digest-gconf-editor-2.10.0 72
@@ -22,19 +19,12 @@ SHA256 ec373afe1df16abfda12dd802ef3c07d93e05371337ea6a247c2f6b53f745601 gconf-ed
 MD5 2bff53343f5d7957c8a7703615dd35b9 gconf-editor-2.12.0.ebuild 722
 RMD160 eb120697147e29dc54c65a2d102601d299787d1d gconf-editor-2.12.0.ebuild 722
 SHA256 9e9338a3896e99a1404ed57500390a98171fdac7b2b3dbb1b55f9d9f38e42c34 gconf-editor-2.12.0.ebuild 722
-MD5 63cfa4f62cfcbcffdce0c9f72e989140 gconf-editor-2.12.1.ebuild 720
-RMD160 38067d66f1772b701519e3f45419fd586ff217a9 gconf-editor-2.12.1.ebuild 720
-SHA256 72340ce2ae093bc3c7e8667ecae3fdb914a055994f70a8d3e78ff39938aaf5eb gconf-editor-2.12.1.ebuild 720
+MD5 e20aeb27bae9cd93b1acfcd81f53fa62 gconf-editor-2.12.1.ebuild 719
+RMD160 770c391edf1575152ab4b38d079ebc463f8915d4 gconf-editor-2.12.1.ebuild 719
+SHA256 3f2463ae3c25dc3d15c0a6a21a90d0e5e4ee1a387c9c4a2b6e11bf752209d496 gconf-editor-2.12.1.ebuild 719
 MD5 e4aa9d6ef39937d97a1324819c0ccc1d gconf-editor-2.8.2.ebuild 687
 RMD160 16c78aa872d05b7a1e3706ebd70fa5298bfd7e33 gconf-editor-2.8.2.ebuild 687
 SHA256 8c327ab22fce1a0005bdf4c3ed8c28a987ccac8b6438d63f6ad490401664eece gconf-editor-2.8.2.ebuild 687
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4iLdJrHF4yAQTrARAn31AJ97cT99Y9x8tBV2JzQj7nKocCJFbwCfb1B6
-+siqgzaJ+CrWPDkHOkaxqJ8=
-=7okR
------END PGP SIGNATURE-----
