@@ -48,7 +48,7 @@ MD5 eaa33949f072a9787c453c37c1236108 files/python-2.4.1-db4.patch 1414
 MD5 5fdb512b55d4ed9b13a5a3af00a5ba40 files/python-2.4.1-libdir.patch 7875
 MD5 47e9455f3e16c3369c9e57388ba3d643 files/python-2.4.1-readline.patch 8984
 MD5 5af982af8ad4befbf15567ae399cf2b9 files/python-2.4.1-st_flags.patch 5649
-MD5 bb94b5ecedcbfd85b7ac283b79ff07be files/python-2.4.2-mmap+fd.patch 4920
+MD5 340e0b5984a715c667ff57088479d2fd files/python-2.4.2-mmap+fd.patch 4610
 MD5 73616f083daf8e22a7bff21c4a51678e files/python-2.4.2-no-threads.patch 591
 MD5 36b36bac050785b8e393dc72f8e51d2f files/python-2.4.2-readline.patch 8628
 MD5 b530d6f9dbcf30239061be3de80932cc files/python-config-2.2 178
@@ -73,7 +73,7 @@ MD5 f9de6829c64c8f780d4c3b90ea5105a9 python-2.4.2.ebuild 9234
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4obFugEuf3OQ0akRAsU3AJ98aAyt1bCNj5YslRarR1Kxpa1FLgCdE5V4
-G5tPpzCVq3Yp+E/8rDI0SaQ=
-=VCMp
+iD8DBQFD4okCugEuf3OQ0akRArSBAJ9bsL8TQsOXW7e5RQc1qIg4BqSypQCfVW+S
+qREIrQZDpPHJW/zQ28baOuc=
+=Lq5r
 -----END PGP SIGNATURE-----

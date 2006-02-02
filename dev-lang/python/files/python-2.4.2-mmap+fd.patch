@@ -1,14 +1,5 @@
 --- Modules/mmapmodule.c.orig	2005-09-20 21:04:42.000000000 +0200
 +++ Modules/mmapmodule.c	2006-02-02 18:50:48.000000000 +0100
-@@ -1,7 +1,7 @@
- /*
-  /  Author: Sam Rushing <rushing@nightmare.com>
-  /  Hacked for Unix by AMK
-- /  $Id: python-2.4.2-mmap+fd.patch,v 1.1 2006/02/02 22:23:41 kloeri Exp $
-+ /  $Id: python-2.4.2-mmap+fd.patch,v 1.1 2006/02/02 22:23:41 kloeri Exp $
- 
-  / mmapmodule.cpp -- map a view of a file into memory
-  /
 @@ -99,6 +99,8 @@
  #endif /* MS_WINDOWS */
  
