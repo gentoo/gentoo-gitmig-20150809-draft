@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.12.0.ebuild,v 1.9 2006/02/02 14:01:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.12.0.ebuild,v 1.10 2006/02/02 20:29:01 agriffis Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/gentoo-splash.png"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="esd ipv6"
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
