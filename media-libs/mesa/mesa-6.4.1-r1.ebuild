@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.6 2006/02/02 20:29:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.7 2006/02/02 22:06:04 herbs Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -81,7 +81,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-amd64-include-assyntax.patch
 
 	# Set default dri drivers directory
-	echo "DRI_DRIVER_DIR = /usr/$(get_libdir)/xorg/modules/dri" >> ${HOSTCONF}
+	echo "DEFINES += -DDEFAULT_DRIVER_DIR='\"/usr/$(get_libdir)/xorg/modules/dri\"'" >> ${HOSTCONF}
 
 	# Set up linux-dri configs
 	if use sparc; then
