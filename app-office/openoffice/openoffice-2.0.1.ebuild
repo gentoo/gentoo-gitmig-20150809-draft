@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.22 2006/01/29 12:12:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.23 2006/02/02 07:09:40 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="binfilter curl eds gnome gtk java kde ldap mozilla xml2"
 
-MY_PV="${PV}.2"
+MY_PV="${PV}.3"
 PATCHLEVEL="OOA680"
 SRC="OOO_2_0_1"
 S="${WORKDIR}/ooo-build-${MY_PV}"
@@ -140,8 +140,6 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/alwayscrystal.diff
-	cp ${FILESDIR}/${PV}/gentoo-pax.diff ${S}/patches/src680/ || die
-	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
@@ -157,14 +155,6 @@ src_unpack() {
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}
 	echo "`use_enable gnome gnome-vfs`" >> ${CONFFILE}
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
-
-	# Gentoo installs both static and dynamic libraries for Xinerama;
-	# Openoffice configure defaults to static if both are present,
-	# unless --with-dynamic-xinerama is specified.  Without this,
-	# libvclplug_gen680li.so links to the static library causing
-	# unnecessary TEXTRELs. This option only takes effect when
-	# both libraries are present so it's safe to enable always.
-	echo "--with-dynamic-xinerama" >> ${CONFFILE}
 
 }
 
