@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.16 2006/01/30 21:59:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.17 2006/02/02 15:32:19 brix Exp $
+
+  02 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  -files/orinoco-0.15rc2-2.6.10.patch,
+  -files/orinoco-0.15rc2-firmware.patch,
+  -files/orinoco-0.15rc3-memleak.patch, -orinoco-0.15_rc2-r2.ebuild,
+  -orinoco-0.15_rc3-r1.ebuild:
+  Pruned old ebuilds.
 
   30 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
   orinoco-0.15_rc4.ebuild:
