@@ -343,9 +343,9 @@ SHA256 9d950b2f45cfbdae6df590137e4aae938380673449fe4507536557fb4c797393 files/gl
 MD5 bbe355d94c5a36e11f543d12b70b5702 files/glibc-sec-hotfix-20040916.patch 3080
 RMD160 3419ab628d16045042f5df9e487386e03c8d979d files/glibc-sec-hotfix-20040916.patch 3080
 SHA256 9f48a55f4207bdf4a9496680f09661a06d4a4bd11dad11cb0986949c0d3cc35d files/glibc-sec-hotfix-20040916.patch 3080
-MD5 c4300e2f8808cb38a308745ed8b77367 files/locales.build 602
-RMD160 121548e0ad367fee30f3bded5d4a7d6dca9a6ce0 files/locales.build 602
-SHA256 429e6bd22bc0870f4220e430e4ce3910c334f17972303f84edafcc6e54be1fba files/locales.build 602
+MD5 e2fcd927c601ed4e8ab2a985a9314716 files/locales.build 699
+RMD160 2a186105be5b00ec48aedef734e9dba5aee19895 files/locales.build 699
+SHA256 094a5e02148d522be5a5ec2b95fb7305d5503f6d13d1ffa9088e9dad21af1c8a files/locales.build 699
 MD5 afafe9d4d5925c8de0f3145faf32c4a8 files/nscd 1379
 RMD160 9c0a17bace0ced3cc4cb4ef98ecdda52703a1b4f files/nscd 1379
 SHA256 f4659e9b5b4d38940df561ccdb1027d4a95993cb99beec7d4c0b3c17d16c3afa files/nscd 1379
@@ -412,7 +412,7 @@ SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4C962+ySkm8kpY0RAl1IAJ0YeXlE31wQuvY4bydPruz+TlWR5wCgxpM9
-DGuVOJV8ojeya+DvCeBJzGo=
-=jBgh
+iD8DBQFD4pFR2+ySkm8kpY0RAhigAKDCxN5EdrGBDVWnHS3lmTdJFkmE3QCgrjWZ
+OKOCZWv7T62vy8dTO7iOZmE=
+=6prq
 -----END PGP SIGNATURE-----

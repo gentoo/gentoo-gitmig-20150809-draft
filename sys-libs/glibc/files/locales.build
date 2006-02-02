@@ -4,6 +4,9 @@
 # in /usr/share/i18n/charmaps/. All blank lines and lines starting with # are
 # ignored. Here is an example:
 # en_US/ISO-8859-1
+#
+# For the full list, see the file SUPPORTED in the glibc tarball:
+# glibc/localedata/SUPPORTED
 
 en_US/ISO-8859-1
 en_US.UTF-8/UTF-8
