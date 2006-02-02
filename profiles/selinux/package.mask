@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.10 2006/01/30 03:00:05 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.11 2006/02/02 00:32:59 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (1 Sep 2005)
 # Masked until net scripts are fixed
@@ -7,3 +7,7 @@
 # Chris PeBenito <pebenito@gentoo.org> (12 Jan 2006)
 # SELinux code won't compile
 =sys-fs/udev-079*
+
+# Chris PeBenito <pebenito@gentoo.org> (1 Feb 2006)
+# CVS ebuild for testing only.
+=sec-policy/selinux-base-policy-99999999
