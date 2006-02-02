@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.24 2005/08/23 23:58:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.25 2006/02/02 01:37:11 vapier Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND="dev-lang/perl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/automake-1.4-nls-nuisances.patch #121151
 	epatch "${FILESDIR}"/${P}-target_hook.patch
 	epatch "${FILESDIR}"/${P}-slot.patch
 	epatch "${FILESDIR}"/${P}-test-fixes.patch #79505

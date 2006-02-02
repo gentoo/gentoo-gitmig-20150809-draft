@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.19 2005/08/23 23:58:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.20 2006/02/02 01:37:11 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/automake-1.4-nls-nuisances.patch #121151
 	epatch "${FILESDIR}"/automake-1.4-libtoolize.patch
 	epatch "${FILESDIR}"/automake-1.4-subdirs-89656.patch
 	epatch "${FILESDIR}"/automake-1.4-ansi2knr-stdlib.patch
