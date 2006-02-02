@@ -1,0 +1,15 @@
+diff -urN cryptsetup-0.1.old/lib/libdevmapper.c cryptsetup-0.1/lib/libdevmapper.c
+--- cryptsetup-0.1.old/lib/libdevmapper.c	2004-06-03 16:33:44.000000000 +0200
++++ cryptsetup-0.1/lib/libdevmapper.c	2005-12-25 10:54:38.000000000 +0100
+@@ -226,6 +226,11 @@
+ 	if (!dm_task_get_info(dmt, &dmi))
+ 		goto out;
+ 
++	if (!dmi.exists) {
++		r = -ENODEV;
++		goto out;
++	}
++
+ 	next = dm_get_next_target(dmt, next, &start, &length,
+ 	                          &target_type, &params);
+ 	if (!target_type || strcmp(target_type, CRYPT_TARGET) != 0 ||
