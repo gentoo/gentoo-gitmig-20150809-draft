@@ -1,43 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 77b1ca4d60a5a886574dc17152c29169 ChangeLog 3350
-RMD160 9227903b6912c55cb7649d5ba8b3ac31f1d29c20 ChangeLog 3350
+RMD160 8996589a7f92ffe703872c3a6eae293b09e00582 ChangeLog 3350
 SHA256 0f3f0cfe916ffdee115737619f0a52fd727fd08f364416209ef4baea10b79939 ChangeLog 3350
 MD5 28ec3622a17a96ac8cc3ef8427ac3e45 files/digest-pyvorbis-1.1 63
-RMD160 f39d0a36e1699428e1bc79f02aef322a0030731b files/digest-pyvorbis-1.1 63
+RMD160 3c3a497e69788f4e13560e4dc2deae957c477798 files/digest-pyvorbis-1.1 63
 SHA256 7ccacfca132cd33d505c6b2de9ec05fb783624d831b156d787048e924d2cda85 files/digest-pyvorbis-1.1 63
 MD5 9cbd7d4ece2e640dc19e9110b51b5128 files/digest-pyvorbis-1.3 63
-RMD160 2aa920cd78edfa2d180b647ae1ccefef60312399 files/digest-pyvorbis-1.3 63
+RMD160 e2cb1d99fbbf1992733176939674a82fc16aff59 files/digest-pyvorbis-1.3 63
 SHA256 79d007c5f8187687009de51766c552d8fb9a28da40430582db5e24a68d3d22dc files/digest-pyvorbis-1.3 63
 MD5 0f3ffbc95f303e2b3aee01b3be77d513 files/digest-pyvorbis-1.4 63
-RMD160 b1c0ef12bb5e8b49609c2de42749d4cc1128f1e7 files/digest-pyvorbis-1.4 63
+RMD160 3fbafdc32ea5efc3cd0bdc1ea36323f1f02fe6ef files/digest-pyvorbis-1.4 63
 SHA256 57053260744a41c3a480ff1241cef0ab41090745128f5878adf0d0ba4373ece4 files/digest-pyvorbis-1.4 63
-MD5 3f98c2f48dc14183691c6001fc46c63b files/digest-pyvorbis-1.4-r1 235
-RMD160 e7f77ddc35885d26260faba7324de4c9ffd3014e files/digest-pyvorbis-1.4-r1 235
-SHA256 6b0e3b7d548cd8ce8aa891c2d5f3400d72b56493f2953e18d385426a0459be84 files/digest-pyvorbis-1.4-r1 235
+MD5 b03d427191df99e9a9183f666f05c069 files/digest-pyvorbis-1.4-r1 235
+RMD160 e4b34ee8b17522263e68098e7ceaaeeff62e7f49 files/digest-pyvorbis-1.4-r1 235
+SHA256 14c3ad6dd0fc71ac2bec520d052ba1f74e774894bee5eefc0d3c908ab129a01a files/digest-pyvorbis-1.4-r1 235
 MD5 dd05077a480799edc7a1912053b6cc6a files/pyvorbisfile.c-1.4.patch 564
-RMD160 6b1c7a5043c64b33c280dee68d9d82dbc2e6ad1b files/pyvorbisfile.c-1.4.patch 564
+RMD160 ad2903a6a371519b3214487f97875fe0735b2126 files/pyvorbisfile.c-1.4.patch 564
 SHA256 aa3bae161c934eff79d2ed1ee6d0cf4ee524039674744e0a8c6f608c0a6fcd3e files/pyvorbisfile.c-1.4.patch 564
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 4d71c9ffd0c70ecaa6c60b8f058cfb1d219ea10a metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 68e27b8fffc1489df6b58a652aac3881 pyvorbis-1.1.ebuild 691
-RMD160 27d712817615a24ca4aa6ca2d9b545a1e62714ba pyvorbis-1.1.ebuild 691
+RMD160 992fa5adafe53e2e77fd791cc84c99f1e5e5582a pyvorbis-1.1.ebuild 691
 SHA256 fbabe911d08e7886d99d7dd3856a90856c610681750adf9b8fdcc2013c0e785e pyvorbis-1.1.ebuild 691
 MD5 4d25842e6ad9295991cdb2703aff023e pyvorbis-1.3.ebuild 759
-RMD160 dd5082082816768681cc8c260495602b55567c7e pyvorbis-1.3.ebuild 759
+RMD160 fc2d5a943a931044a88119cc2556799b677c482d pyvorbis-1.3.ebuild 759
 SHA256 2d804d5effdba41b4ab099e107fd23e349a779265691eeb1058c4de90931c52b pyvorbis-1.3.ebuild 759
 MD5 43bf47ee62e178514920cdace0496645 pyvorbis-1.4-r1.ebuild 821
-RMD160 d89707d8db3f4de74fe30ab967135aa34fb60247 pyvorbis-1.4-r1.ebuild 821
+RMD160 e2ec94324d03917b3e8dd38ac2ec0bb937a307d1 pyvorbis-1.4-r1.ebuild 821
 SHA256 d6e0a14325ce9cf323de3aa96e8c075767d2403122d16791e0cdf0fc7834c6f1 pyvorbis-1.4-r1.ebuild 821
 MD5 4069e08113b65ee5705e07e63e3a1b5f pyvorbis-1.4.ebuild 732
-RMD160 af6c65004e1b301a27b07df8fde42cce203d95c4 pyvorbis-1.4.ebuild 732
+RMD160 cabfea21bce1e3561810624a05d888503e5398e0 pyvorbis-1.4.ebuild 732
 SHA256 ae71c9c0ccaf03a4146ab04c8b92726f4a65df75bce834343d3c27cdcd33d5b1 pyvorbis-1.4.ebuild 732
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD3/qNJrHF4yAQTrARAiseAKC/aN1TsLm2qcEl/g8tvoyNTE0ZZACgoK6d
-sS5MONW3qT4hndTB8Uad3K4=
-=l5AH
------END PGP SIGNATURE-----

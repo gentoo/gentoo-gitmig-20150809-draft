@@ -1,67 +1,57 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 35a963120b9cdc484d3c145f2db5484a ChangeLog 5407
-RMD160 aa9b3714f96efc80c99a1391da1ae8cb83d62fab ChangeLog 5407
+RMD160 ddb93b29170c824ed3916325efb3ff0935868bb3 ChangeLog 5407
 SHA256 b313c2dcb00bd7639419e70e0aff5c829fa10a7736686d5772afc790cd57113f ChangeLog 5407
 MD5 7e1eafa229aad0303d6d04c88c1f89e6 files/digest-imaging-1.1.2-r2 65
-RMD160 d4b2eca58fa894adfad69e9984cb4400e0f7e458 files/digest-imaging-1.1.2-r2 65
+RMD160 f6a299f5faf1ab257f47c3c9826dbca89298f026 files/digest-imaging-1.1.2-r2 65
 SHA256 4e50a788c2a797a23fb6727ffa17cb4b9885ac4cf4eb78398a62441569623704 files/digest-imaging-1.1.2-r2 65
 MD5 a7c02afc37ec55a40b4369ace30d8fdb files/digest-imaging-1.1.3 65
-RMD160 563afebadf6eab5d2133ac78f06d809b157e5e6f files/digest-imaging-1.1.3 65
+RMD160 16c5add6bcdb068b947abd97554a8164873042ff files/digest-imaging-1.1.3 65
 SHA256 cb70f8ab253fbd511c955487e4e17fc9159f5920b7609776933ca7fbe74018e0 files/digest-imaging-1.1.3 65
 MD5 a7c02afc37ec55a40b4369ace30d8fdb files/digest-imaging-1.1.3-r1 65
-RMD160 563afebadf6eab5d2133ac78f06d809b157e5e6f files/digest-imaging-1.1.3-r1 65
+RMD160 16c5add6bcdb068b947abd97554a8164873042ff files/digest-imaging-1.1.3-r1 65
 SHA256 cb70f8ab253fbd511c955487e4e17fc9159f5920b7609776933ca7fbe74018e0 files/digest-imaging-1.1.3-r1 65
 MD5 a7c02afc37ec55a40b4369ace30d8fdb files/digest-imaging-1.1.3-r2 65
-RMD160 563afebadf6eab5d2133ac78f06d809b157e5e6f files/digest-imaging-1.1.3-r2 65
+RMD160 16c5add6bcdb068b947abd97554a8164873042ff files/digest-imaging-1.1.3-r2 65
 SHA256 cb70f8ab253fbd511c955487e4e17fc9159f5920b7609776933ca7fbe74018e0 files/digest-imaging-1.1.3-r2 65
 MD5 171777970922938dc6a815dd2b6a85de files/digest-imaging-1.1.4 65
-RMD160 e35900b8781be67c08e3ed2a0f56e53dd39cf86e files/digest-imaging-1.1.4 65
+RMD160 119ecd2070b3d46e8972f92d2fc943f538ad0f65 files/digest-imaging-1.1.4 65
 SHA256 854900b37a8975f7e36e8a7a17dd23604415ef184cb73a4f8a5f09872e85e19d files/digest-imaging-1.1.4 65
 MD5 171777970922938dc6a815dd2b6a85de files/digest-imaging-1.1.4-r1 65
-RMD160 e35900b8781be67c08e3ed2a0f56e53dd39cf86e files/digest-imaging-1.1.4-r1 65
+RMD160 119ecd2070b3d46e8972f92d2fc943f538ad0f65 files/digest-imaging-1.1.4-r1 65
 SHA256 854900b37a8975f7e36e8a7a17dd23604415ef184cb73a4f8a5f09872e85e19d files/digest-imaging-1.1.4-r1 65
 MD5 3a82b0a4dedf814db88057b586b6e91a files/digest-imaging-1.1.5 65
-RMD160 ad274fc5bc2a0c4980981c46bcab0c00935f2bfa files/digest-imaging-1.1.5 65
+RMD160 3f62b7b29e52113e38f2f803cf9c9047a3d765a3 files/digest-imaging-1.1.5 65
 SHA256 a17bbf11a2a00530cd1407d26925d605b366c1f2bc373c88e2da628d489a16c9 files/digest-imaging-1.1.5 65
 MD5 8f3dd92ea003765c3f18202e3ee6be14 files/imaging-1.1.4-fPIC.patch 373
-RMD160 836d887a06d1656c8874d77c524f017dd0453466 files/imaging-1.1.4-fPIC.patch 373
+RMD160 8d9159c4594eecbeac93742cb5cee84f827d1c35 files/imaging-1.1.4-fPIC.patch 373
 SHA256 f0eed7ebfd1067eab0afd132f2f99f796c6135aff560ddb469431b641a52fcd2 files/imaging-1.1.4-fPIC.patch 373
 MD5 e937d8e178744db225745000b4e42128 files/imaging-1.1.4-ft-2.1.9.patch 301
-RMD160 4c73909c65c97476a5c83dd7de80dbd80d42539d files/imaging-1.1.4-ft-2.1.9.patch 301
+RMD160 deb194723d754fd20815a5e6d7805bf5a02ec264 files/imaging-1.1.4-ft-2.1.9.patch 301
 SHA256 907e5d177d89446a30166c3f8fe9422063b9cbe7b5278a19722f2284925de908 files/imaging-1.1.4-ft-2.1.9.patch 301
 MD5 d0b3528fb0e74be99cf9ac5e9372e317 files/imaging-1.1.4-setup.py.patch 374
-RMD160 84ff920732cf456be867af4e49026aa9b59bd8c1 files/imaging-1.1.4-setup.py.patch 374
+RMD160 48b1941ce8e0209c864da302159aeeee07ace186 files/imaging-1.1.4-setup.py.patch 374
 SHA256 ddd52f034837a7d8fcc225126b1063673e9439ac5d1b91355d4527b32453a3ce files/imaging-1.1.4-setup.py.patch 374
 MD5 49932cad00d3e7633bfc27c52c1663f5 imaging-1.1.2-r2.ebuild 2675
-RMD160 8862ae94e1b5e5fe8a65a2259949c0665f40f479 imaging-1.1.2-r2.ebuild 2675
+RMD160 be950b840b635f3c071ea9b3679164b5db93df4a imaging-1.1.2-r2.ebuild 2675
 SHA256 90bb8b5e81f5ad70adba709c1b496b75942d21490e509e02c434bfa90a23ae58 imaging-1.1.2-r2.ebuild 2675
 MD5 97b3f8a53ac6b8b6a6e7c3f2083cb8ad imaging-1.1.3-r1.ebuild 1280
-RMD160 13c2c832f84b354673ae6d8b5da7445521038bfd imaging-1.1.3-r1.ebuild 1280
+RMD160 81a942a7690e0832100c6d0f7faa6467ee6d163c imaging-1.1.3-r1.ebuild 1280
 SHA256 71f31c010141073f3d91f56c1f89a91ffe7438fc6dbb6d092ac08f5ed2d1760f imaging-1.1.3-r1.ebuild 1280
 MD5 0d7e51a402015d9e3ee03c166109fab7 imaging-1.1.3-r2.ebuild 1334
-RMD160 a0ef12fa4ee72fdf269338a7b667deccaaafc14b imaging-1.1.3-r2.ebuild 1334
+RMD160 b1a4cfe3c9dc4f71267f451437c28ba68d973a27 imaging-1.1.3-r2.ebuild 1334
 SHA256 4163e3d5d97ff99d0f2600ba0dafdf5f459c5309f2bbcf3f6032d6a13d0cee54 imaging-1.1.3-r2.ebuild 1334
 MD5 eff4ab65622885554082eef13071ed27 imaging-1.1.3.ebuild 2672
-RMD160 1cbac5319eff78a6eed8fe65b1b896637cbbd898 imaging-1.1.3.ebuild 2672
+RMD160 6439ed8ba68249d2ae9624ee39bedf257616ca1d imaging-1.1.3.ebuild 2672
 SHA256 454e010085e53c421dc6f5d417d117348ac83c4f1fd6ffe9875979c3da3e86f0 imaging-1.1.3.ebuild 2672
 MD5 348cf7ff1984552bb48a1ee8791fd83c imaging-1.1.4-r1.ebuild 1430
-RMD160 9429f230610e03ada2f2627ec9cab729fb8b7ce2 imaging-1.1.4-r1.ebuild 1430
+RMD160 1f777bd64983631408217f37716b3dd93df9e5ea imaging-1.1.4-r1.ebuild 1430
 SHA256 576e519682c9196e021a7722662f82027f015360e055080b6293aaab0e9c03ef imaging-1.1.4-r1.ebuild 1430
 MD5 11f5da5f34dca45b7ac112e40ee1c8af imaging-1.1.4.ebuild 1419
-RMD160 d23c28e8487199de2769d31279f86f49166f7ae1 imaging-1.1.4.ebuild 1419
+RMD160 231c53daf1633ebc04281e44426edf83d4238bbe imaging-1.1.4.ebuild 1419
 SHA256 5c3ebee0b94e8004c07000892c95ecee46e653888b696b413cf05b0b9518d6cf imaging-1.1.4.ebuild 1419
 MD5 aa46cf37f85824e9ee2790f452da946a imaging-1.1.5.ebuild 1472
-RMD160 c8e1a123475692cdc3cf1b12b9d5d976e6ebc8f0 imaging-1.1.5.ebuild 1472
+RMD160 3ff1981064ae1648433c9c699f99b8c19bb1982f imaging-1.1.5.ebuild 1472
 SHA256 86996ce865f8a0a914680f0db3a0dbb9f36a3bae090ec4bb23cd87d609cf8247 imaging-1.1.5.ebuild 1472
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 4d71c9ffd0c70ecaa6c60b8f058cfb1d219ea10a metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD3/tPJrHF4yAQTrARAlSNAJ4jXlEj9Efrffp0a6J1Vps4rAQOhwCfT1+U
-jQDr7wgmG+5pHEPXcLqa2Jg=
-=e7id
------END PGP SIGNATURE-----

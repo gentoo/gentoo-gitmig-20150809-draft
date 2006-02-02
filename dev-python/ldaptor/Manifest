@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a9bcc73e786c7d7ade73ec3f6e2eacdd ChangeLog 2075
-RMD160 a3fc0f60b710cb58845c190522d52d32a73f255b ChangeLog 2075
+RMD160 8af535cc6d83ebc1b62a70ecc3e20659382477c6 ChangeLog 2075
 SHA256 883536c3f968ad596387aefcda3769d5aed1a91bda46821672a210e4ccf75b0b ChangeLog 2075
 MD5 c0c120daddfdcf9762ee9ca71ea43d54 files/digest-ldaptor-0.0.42 144
-RMD160 379c8ecc3aecb0585546db4b41cd5950ea5641c5 files/digest-ldaptor-0.0.42 144
+RMD160 7142369472281a7d711757182ebffd9f0a87061a files/digest-ldaptor-0.0.42 144
 SHA256 9b4be7d3ff2af3511dcc5c305e9c391b9e0fa25869fa6144634de6bb78c64526 files/digest-ldaptor-0.0.42 144
 MD5 43feb7d34a8c766f9dc97801fb2a7ce5 files/digest-ldaptor-0.0.6 64
-RMD160 c7623d4b829a42a6163f296b2fa64a57a0a844f0 files/digest-ldaptor-0.0.6 64
+RMD160 aec46db55f7c29d02acdf0f964ddfc48d9675cb0 files/digest-ldaptor-0.0.6 64
 SHA256 18c5bee2efb8f63f77692774a244156420e3848b32a45aa011ee1b3e7688f9f6 files/digest-ldaptor-0.0.6 64
 MD5 da3a030bf2a5c7d1aad834223aa777ff files/ldaptor-0.0.42-trial-2.1-compat.patch 794
-RMD160 747616dc4dee010cabfe6b2c0458068bf3b32518 files/ldaptor-0.0.42-trial-2.1-compat.patch 794
+RMD160 68f9c8e6dd4dc0dfe128dac5729b2559afad350e files/ldaptor-0.0.42-trial-2.1-compat.patch 794
 SHA256 e4111a713185f617dc586ac502c7c14a2e264c47051932e200dffc2757561903 files/ldaptor-0.0.42-trial-2.1-compat.patch 794
 MD5 ff3d398b529b72a79460c82de601f2fc ldaptor-0.0.42.ebuild 1969
-RMD160 3d383b2ebd756d4eabdb7a392523564aa467a96b ldaptor-0.0.42.ebuild 1969
+RMD160 247862bfa53c94a712e37488c98a3e0e86d2704b ldaptor-0.0.42.ebuild 1969
 SHA256 620127aeefbe54805a05cf95991d294e87c4d619fd945aa485222fb362bc6fda ldaptor-0.0.42.ebuild 1969
 MD5 c8490f42970655cad51ec6ac8de4e8b5 ldaptor-0.0.6.ebuild 1252
-RMD160 2d65975b8b913c20edaadc7713289b353e81708a ldaptor-0.0.6.ebuild 1252
+RMD160 ee1aee340c051716080c6b200bdf0af7ab930b1e ldaptor-0.0.6.ebuild 1252
 SHA256 819904650a1d1c65f6affeaa327b4f46b840ca4121177331eb2d373ed4c70750 ldaptor-0.0.6.ebuild 1252
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 4d71c9ffd0c70ecaa6c60b8f058cfb1d219ea10a metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD3/ltJrHF4yAQTrARAmZ0AKCFYUdCo9IuHXnP/oXIgAnEPuBfdgCdGzCt
-8eIdBSFxxdW3YvAGQ/p9aHk=
-=SuhT
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.26 2006/02/01 00:37:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.27 2006/02/02 19:26:12 marienz Exp $
+
+  02 Feb 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-reportlab-1.20, Manifest:
+  Fix rmd160 digests.
 
   01 Feb 2006; Aron Griffis <agriffis@gentoo.org> reportlab-1.20.ebuild:
   Mark 1.20 stable on ia64

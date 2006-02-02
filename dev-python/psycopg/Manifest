@@ -1,40 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 235240ac4cc2a1643c4350330672e2b6 ChangeLog 4686
-RMD160 b98cd2f70d8c93722e18382c7c1739acc2aeeb2d ChangeLog 4686
+RMD160 2e95ec74bd3b0d1e8917be73a7e410f61625b138 ChangeLog 4686
 SHA256 435357298e7f5feb8a678e9a8e25a97cfa60823aa516d7179929c9f054e1d63f ChangeLog 4686
 MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-psycopg-1.1.15 66
-RMD160 dc107a313f324c8ce3130ea66793dab9cb04b5d9 files/digest-psycopg-1.1.15 66
+RMD160 9b5188a45df752b4705b876da2d30c884e0f0e32 files/digest-psycopg-1.1.15 66
 SHA256 3a56fa589cb85c23d043d84278c18358b31d483f650b2be8c5161b6043790217 files/digest-psycopg-1.1.15 66
 MD5 29ee1f5bb745b89093f27af00a411426 files/digest-psycopg-1.1.18 244
-RMD160 101597fdaa6eacd10164598a2d1aecfe78e17f3f files/digest-psycopg-1.1.18 244
+RMD160 ffad9ecd74d0c3ca43c5b3c048f815a9c38e3e25 files/digest-psycopg-1.1.18 244
 SHA256 d2fdc44186f2fdc45e63a135d4c436a14e938734204efe0d8e3a805f558ac682 files/digest-psycopg-1.1.18 244
 MD5 9d8d5b9e83c27d9aaa657531bc0fd326 files/digest-psycopg-1.1.21 66
-RMD160 dcdfbfbdcdf1e98b2db5e68d813a38eb7c6ca24b files/digest-psycopg-1.1.21 66
+RMD160 9e7174825033b4683680afc64e01f8d9e3afdda2 files/digest-psycopg-1.1.21 66
 SHA256 0f5ab0540857a9a86586b0aea1164f807249588360a23478237d779922253dfe files/digest-psycopg-1.1.21 66
 MD5 ad48f20eabd11d29c2c865e4f1dcf3d2 files/digest-psycopg-2.0_beta5 66
-RMD160 2d66ae66be837659909d1294f4319fe3712523da files/digest-psycopg-2.0_beta5 66
+RMD160 10eb6cc931c9e793b10d746748bd224ccbe0ae0c files/digest-psycopg-2.0_beta5 66
 SHA256 a18960e07006cfb426537bc5cea75eeeab74788d00c094ff957a4677b6c2a4c9 files/digest-psycopg-2.0_beta5 66
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 4d71c9ffd0c70ecaa6c60b8f058cfb1d219ea10a metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 b80c8e407ccbe56a77368d5ecb52c4de psycopg-1.1.15.ebuild 1230
-RMD160 de8c0d741c5601a435aa973a7d4527bb75fa0d29 psycopg-1.1.15.ebuild 1230
+RMD160 4f054b9710b2d9089b735570c89d912b463e78a1 psycopg-1.1.15.ebuild 1230
 SHA256 4742c303cee96eead23cccbae7fd2d1fa8ff3aa8e7b66f9a71cef968504327f4 psycopg-1.1.15.ebuild 1230
 MD5 861b6dacb38d703e26ca866e6059839c psycopg-1.1.18.ebuild 1236
-RMD160 b21ea6a24f8001f3005f9adcbf24cc28fb6a5b82 psycopg-1.1.18.ebuild 1236
+RMD160 040e87e57c34700960a5c2cc0951cbc3309e2dd8 psycopg-1.1.18.ebuild 1236
 SHA256 219e1900ea148c7499a669e26787b715b2ae381f4d2b172fd112e5746e1887b6 psycopg-1.1.18.ebuild 1236
 MD5 def9cb9999c646d8f118c8cc39d7db8a psycopg-1.1.21.ebuild 1240
-RMD160 a70510bcf8a50f23d5e92c6fb000cfda428d5a56 psycopg-1.1.21.ebuild 1240
+RMD160 a18e7ef47736768ac14b10518f0df8b885c5eda9 psycopg-1.1.21.ebuild 1240
 SHA256 ad9d69b6b48dac0d6e05a6c4ae9fdf23976388452925ecb8e9a5afee7d1b1f5c psycopg-1.1.21.ebuild 1240
 MD5 5c2430ced8abc5d0a5a60411f9ed873c psycopg-2.0_beta5.ebuild 747
-RMD160 82662878dc3c87fe458d81fe45fa811faffc0822 psycopg-2.0_beta5.ebuild 747
+RMD160 7033375b9b8278f5132c27d66ca58e62bb0239b8 psycopg-2.0_beta5.ebuild 747
 SHA256 6ef2fb16cf892dfaa4e47b3103d5a8ce3e606a7010ef959429e442c73149db6f psycopg-2.0_beta5.ebuild 747
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD3/m5JrHF4yAQTrARAjqwAJ0agMRR0Nj//PqvHgJLV1PIrO/KowCcCCbA
-ikov64Cg/rL4nqu91x1pndg=
-=NKZ6
------END PGP SIGNATURE-----

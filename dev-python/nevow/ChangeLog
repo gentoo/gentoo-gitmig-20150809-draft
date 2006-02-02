@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.10 2006/01/31 23:57:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.11 2006/02/02 19:10:48 marienz Exp $
+
+  02 Feb 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fix rmd160 digests.
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> nevow-0.7.0.ebuild:
   Mark 0.7.0 ~alpha/~ia64

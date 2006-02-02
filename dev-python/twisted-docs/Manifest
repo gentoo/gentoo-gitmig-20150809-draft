@@ -1,46 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4ced4b320928293c52227b612be096f7 ChangeLog 2279
-RMD160 1224000cb699f5a317e3af4f657057e5d949a0d6 ChangeLog 2279
+RMD160 394b13e82ebc4b007ebed13e8fc49b826babf266 ChangeLog 2279
 SHA256 4497607ca8c33448759ff8419d514840a9d3663553a1429c432c523bd0a415da ChangeLog 2279
 MD5 7b7856512d8720cdff541fe47a782a29 files/digest-twisted-docs-1.1.0 71
-RMD160 df727332a0f16825d58dea3613e99b2e617f76e8 files/digest-twisted-docs-1.1.0 71
+RMD160 7655058db51758bab3a257bf8fc3d3636152b277 files/digest-twisted-docs-1.1.0 71
 SHA256 a254b25c9c4a9084ab0718b2d908de4b35baf7f766fb74a0e1d1851e85f08494 files/digest-twisted-docs-1.1.0 71
 MD5 e1cc24d837b53bd573bd68ef734a6534 files/digest-twisted-docs-1.1.1 71
-RMD160 0729ff01d92c671212c6fd1a1158c9ef2a38f506 files/digest-twisted-docs-1.1.1 71
+RMD160 ad9fff1cc370e5bb7acdcfa83c1c67d945140d2d files/digest-twisted-docs-1.1.1 71
 SHA256 8ddb646caf31697fb551d7eb1e54f0ed06bc0827e480b8c745084b2508532347 files/digest-twisted-docs-1.1.1 71
 MD5 ae072f34c3e48f56070ffcda8ee8cdc8 files/digest-twisted-docs-1.2.0 71
-RMD160 f17bbefda365e04a908c63a0f342858e90aa8449 files/digest-twisted-docs-1.2.0 71
+RMD160 d6384c074a6df793e35d81dee8b7a65fc50569c7 files/digest-twisted-docs-1.2.0 71
 SHA256 df672b1e36e6d63176e38e14bbf569f6f7460649fcf22531b7a03b059650a43d files/digest-twisted-docs-1.2.0 71
 MD5 2324736dc4ec6d95f959ad493dd251e2 files/digest-twisted-docs-1.2.1_alpha2 77
-RMD160 de16602bd8b98ff3cb85155831a2aad3803762dc files/digest-twisted-docs-1.2.1_alpha2 77
+RMD160 330733682cd6d42901948af662fa46cfdd270947 files/digest-twisted-docs-1.2.1_alpha2 77
 SHA256 6b7f294be8a39d03879b9ac173c4ee58fcc8f407b913f6db1709950c79eb366e files/digest-twisted-docs-1.2.1_alpha2 77
 MD5 65ec9eb27c4de6df611517f5658996bd files/digest-twisted-docs-1.3.0 71
-RMD160 0a63b36e95312769a02add6dfba63617b8bf75a1 files/digest-twisted-docs-1.3.0 71
+RMD160 3b6d341cc26914e9b1bb0aa5ba92e36aee1b7d09 files/digest-twisted-docs-1.3.0 71
 SHA256 c20a403aeddb9b884c06930cfcf912f1eb19025c753535a7c615ace9137b8914 files/digest-twisted-docs-1.3.0 71
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
-RMD160 538e0650e10145de9934e417f4cd1c7761a9f2fc metadata.xml 218
+RMD160 3964ab644953d47933ddf25e2fad8037b7f8eb89 metadata.xml 218
 SHA256 edc3b5b8cb78a5f052118ec236322dc37fb922649530f77d00f0cb71473bde40 metadata.xml 218
 MD5 64923cb789635c9f59a5a5552fb9ca70 twisted-docs-1.1.0.ebuild 909
-RMD160 0d6e714cd63a98e47052473fe92bc07fdc0712bf twisted-docs-1.1.0.ebuild 909
+RMD160 6532c44b9bfd0eb359788a5eec533c8b2befe66f twisted-docs-1.1.0.ebuild 909
 SHA256 b0ea7434942e2942198c5a81c413553be73bedd9b26b9386ce9e0228be661e70 twisted-docs-1.1.0.ebuild 909
 MD5 da6a1e0f68d0e93290f378cf5eaad22f twisted-docs-1.1.1.ebuild 903
-RMD160 33b06037377632ff245091a87ace85f507cfa3c5 twisted-docs-1.1.1.ebuild 903
+RMD160 158c6aed1a4e78638b50b53204a8c530a77fb1e7 twisted-docs-1.1.1.ebuild 903
 SHA256 0029dce1d9fccbd0bff0a71e2adf1e9b03791f76f7ccd6a3951b5e50e3585802 twisted-docs-1.1.1.ebuild 903
 MD5 d148d042ea86caa6d586fc0a5ef20382 twisted-docs-1.2.0.ebuild 910
-RMD160 203d42ee265c48a289cccc3888e2bcf8b591432f twisted-docs-1.2.0.ebuild 910
+RMD160 4cfe8874071292bb8ec7a890d9406a8269b8930c twisted-docs-1.2.0.ebuild 910
 SHA256 40b1f24e2afa5b8d2cd069fb8cb922c04003098622210e169daa6b1a57d2f8c2 twisted-docs-1.2.0.ebuild 910
 MD5 a6ae9d49ede5100a49834c12e1733141 twisted-docs-1.2.1_alpha2.ebuild 975
-RMD160 21158a68acd2b859be79eff13d3430fbef3185e7 twisted-docs-1.2.1_alpha2.ebuild 975
+RMD160 aa877a95a793b9df455d12cc7d8148c31d8bef0b twisted-docs-1.2.1_alpha2.ebuild 975
 SHA256 d034dc706add6e0f750ad1ca42d10270e3a67014a59827c8ba578e8dd8b6ca4c twisted-docs-1.2.1_alpha2.ebuild 975
 MD5 9121c38aa63091517be4e6f114e20a0f twisted-docs-1.3.0.ebuild 1017
-RMD160 1e0e851b3dea8b3a8fbc8ca262f9203e7b7b3e1f twisted-docs-1.3.0.ebuild 1017
+RMD160 b2698007bacbeb7027e041cc38ae115f9e9e59aa twisted-docs-1.3.0.ebuild 1017
 SHA256 525c5f5145511d15c43793ca61959933dd8bbc01a0d166387df98b0eb4a22e90 twisted-docs-1.3.0.ebuild 1017
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD39GMJrHF4yAQTrARAkhiAJ9JVeu+qQK+XTF8oF0hvdwJv6CP/wCgiJN0
-gr62ZdSwv5Ki+HIyYIgxtlI=
-=6IGx
------END PGP SIGNATURE-----

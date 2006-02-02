@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.26 2006/01/31 20:30:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.27 2006/02/02 19:03:28 marienz Exp $
+
+  02 Feb 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-cheetah-2.0_beta5, Manifest:
+  Fix rmd160 digests.
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> cheetah-0.9.18.ebuild:
   Mark 0.9.18 stable on ia64

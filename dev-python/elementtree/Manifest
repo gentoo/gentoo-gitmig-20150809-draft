@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 183558f6e7bc43383ff204585f7ca79e ChangeLog 2214
-RMD160 e6247255253db0565e2ede0625ea51c63263a46f ChangeLog 2214
+RMD160 9a0c77d4ca22f655c966bc03b41b9ddc6bbaeecf ChangeLog 2214
 SHA256 47f2b9e97da8d0a2f0920b2f81d8afb70c6d33797e83e66640cdf32137f20ad8 ChangeLog 2214
 MD5 6fc16ed0c89260c91310d3e9565fca3d elementtree-1.2.6.ebuild 674
-RMD160 594fafe94ee25e8a7fca4f74e688a947705f44a2 elementtree-1.2.6.ebuild 674
+RMD160 5fa1ef10cdaee2a407b506f9f774eb9f13686ceb elementtree-1.2.6.ebuild 674
 SHA256 4d2483a791947ab951f79fa894e12fec6544e7a259dbecc202aa1c637fceeb4e elementtree-1.2.6.ebuild 674
 MD5 ef915194239812a926632f2963c3dbf7 elementtree-1.2.ebuild 591
-RMD160 317d848f852788ac914f51abc1cf0c6c727d5309 elementtree-1.2.ebuild 591
+RMD160 3b3cb461abf686de7284f39e49b6bf610dc9dada elementtree-1.2.ebuild 591
 SHA256 1ff7fc04b572396933540741293ed9aaaaf73777fc2b70b5b704879a910ca892 elementtree-1.2.ebuild 591
 MD5 02d3d673dcd875a82306445f62f5b232 files/digest-elementtree-1.2 75
-RMD160 f10a5c7eaa20dfba24f9b56619806ad6f72fe5a1 files/digest-elementtree-1.2 75
+RMD160 ff11c93b00b7d9714746f09d4eb64e4df7183e5b files/digest-elementtree-1.2 75
 SHA256 5156a38d3f1dcd007dc011695880ddc2d4e4d2d5f9e66f42454fd255fefdd272 files/digest-elementtree-1.2 75
 MD5 34ece01bd958e2f6c0a493fb1fcee254 files/digest-elementtree-1.2.6 77
-RMD160 dc64b664e26639d8aaa0e114f2045e95afd5b11a files/digest-elementtree-1.2.6 77
+RMD160 28b5bcccfccabce706e2af00cb6fd66f330e5b97 files/digest-elementtree-1.2.6 77
 SHA256 44bad520212348fae24f62facd953bad6aea5ccd458490def29cd353c73f8703 files/digest-elementtree-1.2.6 77
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 4d71c9ffd0c70ecaa6c60b8f058cfb1d219ea10a metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD38leJrHF4yAQTrARAg8ZAJ9GKduayKXgICXvs0VY3F8aIQ18CACgyXJ7
-dO4SYqbGKeNs89PW5KTKCAc=
-=vhU0
------END PGP SIGNATURE-----
