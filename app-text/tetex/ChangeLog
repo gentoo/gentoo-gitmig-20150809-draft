@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.107 2006/02/02 16:46:16 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.108 2006/02/02 22:13:19 ehmsen Exp $
+
+  02 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org> +tetex-1.0.7-r13.ebuild:
+  Readded tetex-1.0.7-r13 because stuff depends on it (which they shouldn't).
 
   02 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org> -tetex-1.0.7-r13.ebuild,
   tetex-3.0_p1-r1.ebuild:
