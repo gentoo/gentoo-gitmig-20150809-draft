@@ -1,22 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1e2a1fe16338558a7a15cdd7d3196f0e ChangeLog 11524
-RMD160 c485801af59fa1c8715f46f8f4717716de84647e ChangeLog 11524
-SHA256 95757bda36f06addccd1de38502b9049ce7595fc1e8a453c8a543e165baf652d ChangeLog 11524
+MD5 f67e2a1e96a10c86ad232002625f8895 ChangeLog 11856
+RMD160 4bbe3f221304d218db8e4c73c6659d3d80fd7034 ChangeLog 11856
+SHA256 329a4f7b54da3c626a681170f2fb512ed3f1458d4c983e5f335f748a765e3ef6 ChangeLog 11856
+MD5 0e845ce007e469b90bf7528beb3fec26 files/config 447
+RMD160 e7c65cdee66dd93597f6608c48ab672327dfaf99 files/config 447
+SHA256 8192a534941ef95ca93bfff3a0a078407480e52047048daccb5cb7acac1eaddf files/config 447
 MD5 e98762e20bb0670885487f9d1998489e files/digest-selinux-base-policy-20051022-r1 80
 RMD160 fd8b1e3edbafd7c82e3b3229b8f8ede6a049e178 files/digest-selinux-base-policy-20051022-r1 80
 SHA256 ea385a52842f99c4014977b5369d3fb01d26ffacde34148bbedddd562c1f97de files/digest-selinux-base-policy-20051022-r1 80
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-selinux-base-policy-99999999 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-selinux-base-policy-99999999 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-selinux-base-policy-99999999 0
+MD5 545111b181027cecbe597ca3cc2b2e9c files/modules.conf.strict 641
+RMD160 afa2169228455c8ee742298d2d309f58c4bee840 files/modules.conf.strict 641
+SHA256 6ee3aaf0b43910926fd7523d91005c3332497428d193c914b1542cbbe2e32ef3 files/modules.conf.strict 641
+MD5 26885fb04bb2a84d5cef4ef5b3d1cf9e files/modules.conf.targeted 659
+RMD160 ffeeeea98617c52e3ab8de967ccbcd542d10987d files/modules.conf.targeted 659
+SHA256 7b5731364682c207efcfa39a6d94b5f8105116535c5a7a8d45ffe7c12dfdbce9 files/modules.conf.targeted 659
+MD5 e64f9e3356786fd807e67c514575fd73 files/semanage.conf 673
+RMD160 2559310f799ac23fc5a3318030b088e2a42ea5a1 files/semanage.conf 673
+SHA256 73a23a39b344d0c79970e8c09c3d50ec34f41757694b4461e2c296efd8e16b35 files/semanage.conf 673
 MD5 808b5f7f5d6654666e9193672d463229 metadata.xml 473
 RMD160 2bc7b92e3958e9371896025467bd896501fe19bf metadata.xml 473
 SHA256 c45743d603ee47355e9d7b1b14d850678825e9c1252d96ec44ce21ac0b2a55b9 metadata.xml 473
 MD5 6a260be192432081ffa67def3bf21d4b selinux-base-policy-20051022-r1.ebuild 2702
 RMD160 6a2d95b75e6a10bf9f868526274f3112c54bc846 selinux-base-policy-20051022-r1.ebuild 2702
 SHA256 2a422ccc9eb99504492cc9cde77dab7db66d3b9c9ecb17f55a112ce040d46b15 selinux-base-policy-20051022-r1.ebuild 2702
+MD5 d318a537130d6337d9745e417b7a7be9 selinux-base-policy-99999999.ebuild 2981
+RMD160 b0a8e1c0a779d54fbca3e96a6fb79a998120de21 selinux-base-policy-99999999.ebuild 2981
+SHA256 b5a2336257a06b3518b07ccd2749db237c20b34231f7cc2e43fc38c58540d90f selinux-base-policy-99999999.ebuild 2981
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4VDzJ+ChZlpDtAoRAisGAKCeFvmvXgxRKHsYuo/mw5KcL3kbwwCfWZP+
-QQO7j2Gt5rkjhhaNp4sQXJ4=
-=Y/bb
+iD8DBQFD4VQXJ+ChZlpDtAoRAu8RAJ9e47oXl0YJAMWB1OlRYMhUCe+4SQCcC15Z
+M+Io78mNqA7clqDjeBhmGn8=
+=VzXW
 -----END PGP SIGNATURE-----
