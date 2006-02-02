@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.4.ebuild,v 1.1 2006/02/01 07:49:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.4.ebuild,v 1.2 2006/02/02 01:05:48 compnerd Exp $
 
 inherit gnome2 mono eutils
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 DOCS="AUTHORS Changelog INSTALL NEWS README"
+USE_DESTDIR="1"
 
 pkg_setup() {
 	if ! built_with_use 'sys-apps/dbus' mono ; then
