@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20.ebuild,v 1.6 2006/01/04 16:45:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20.ebuild,v 1.7 2006/02/02 07:23:26 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -22,7 +22,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc4.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 
 	find . -type f -name ".*" -exec rm -f \{\} \;
 	sed -i \
@@ -37,5 +39,6 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc Changelog TODO
+	doman man/flobopuyo.6
 	prepgamesdirs
 }
