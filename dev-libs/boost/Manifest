@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0ee4a194edeb9f628fcef417cd6e0919 ChangeLog 11222
 MD5 48a9e1b7d8d0a0b83513977929156c2d boost-1.31.0.ebuild 3975
 MD5 4bd50ed4ff0b902ac1d78240bec0d3c9 boost-1.33.0-r1.ebuild 5646
@@ -9,3 +12,10 @@ MD5 612f486fa190f86f9be3a17465036dd0 files/digest-boost-1.33.0 67
 MD5 612f486fa190f86f9be3a17465036dd0 files/digest-boost-1.33.0-r1 67
 MD5 afef39b54f8c7050345e448b9cfef207 files/digest-boost-1.33.1 247
 MD5 16a0704d7282649d4c5920e3c8b39bee metadata.xml 343
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD4oQlKRy60XGEcJIRAuCKAJ99lavU0SmIIcxwQ5T0lhwQrZ0zsACfUj2C
+37tsqQ8xyded8Q+kh0CA7Mo=
+=wGKt
+-----END PGP SIGNATURE-----
