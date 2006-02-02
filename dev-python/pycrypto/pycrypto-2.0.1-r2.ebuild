@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r2.ebuild,v 1.1 2006/02/01 15:41:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r2.ebuild,v 1.2 2006/02/02 01:24:11 vapier Exp $
 
 inherit eutils distutils toolchain-funcs flag-o-matic
 
@@ -11,9 +11,10 @@ SRC_URI="http://www.amk.ca/files/python/crypto/${P}.tar.gz"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc-macos ~s390 ~sh ~sparc ~x86"
-IUSE="bindist test"
+IUSE="bindist gmp test"
 
-RDEPEND="virtual/python"
+RDEPEND="virtual/python
+	gmp? ( dev-libs/gmp )"
 DEPEND="${RDEPEND}
 	test? ( =dev-python/sancho-0.11 )"
 
@@ -21,10 +22,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use bindist && epatch "${FILESDIR}"/${P}-bindist.patch
-	epatch "${FILESDIR}/pycrypto-2.0.1-ia64.patch"
+	epatch "${FILESDIR}"/${P}-gmp.patch
+	epatch "${FILESDIR}"/pycrypto-2.0.1-ia64.patch
 }
 
 src_compile() {
+	use gmp \
+		&& export USE_GMP=1 \
+		|| export USE_GMP=0
 	# sha256 hashes occasionally trigger ssp when built with
 	# -finline-functions (implied by -O3).
 	gcc-specs-ssp && append-flags -fno-inline-functions
@@ -32,6 +37,7 @@ src_compile() {
 }
 
 src_test() {
+	export PYTHONPATH=$(ls -d "${S}"/build/lib.*/)
 	python ./test.py || die "test failed"
 	if use test ; then
 		local x
