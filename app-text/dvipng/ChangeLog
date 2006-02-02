@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvipng
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.1 2005/05/29 05:07:05 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.2 2006/02/02 18:12:51 ehmsen Exp $
+
+*dvipng-1.7 (02 Feb 2006)
+
+  02 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org> +dvipng-1.7.ebuild:
+  Version bump thanks to Darren Dale <dd55@cornell.edu>, bug #100860.
 
 *dvipng-1.5 (29 May 2005)
 
