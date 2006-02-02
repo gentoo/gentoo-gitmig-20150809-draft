@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20050820.ebuild,v 1.4 2006/02/02 19:08:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20050820.ebuild,v 1.5 2006/02/02 23:05:51 plasmaroo Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgeda - this library provides functions needed for the gEDA core suite"
@@ -13,7 +13,6 @@ SLOT="0"
 
 DEPEND=">=dev-libs/glib-2.4.8
 	>=x11-libs/gtk+-2.2
-	virtual/x11
 
 	>=dev-util/guile-1.6.3
 	>=dev-util/pkgconfig-0.15.0
