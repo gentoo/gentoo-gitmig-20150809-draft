@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4-r1.ebuild,v 1.2 2006/01/29 12:57:56 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4-r1.ebuild,v 1.3 2006/02/02 11:36:30 genone Exp $
 
 inherit toolchain-funcs
 
@@ -22,7 +22,7 @@ RDEPEND="!build? ( >=sys-apps/sed-4.0.5 \
 		!userland_Darwin? ( app-misc/pax-utils sys-apps/sandbox ) \
 		selinux? ( >=dev-python/python-selinux-2.15 ) \
 		doc? ( app-portage/portage-manpages )
-		>=dev-python/pycrypto-2.0.1"
+		>=dev-python/pycrypto-2.0.1-r2"
 
 PROVIDE="virtual/portage"
 
