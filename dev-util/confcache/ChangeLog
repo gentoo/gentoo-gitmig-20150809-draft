@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/confcache
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.4 2005/12/26 07:29:15 ferringb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.5 2006/02/02 13:12:55 ferringb Exp $
+
+*confcache-0.4 (02 Feb 2006)
+
+  02 Feb 2006; <bharring@gentoo.org> +confcache-0.4.ebuild:
+  version 0.4; bug fixes (namely internal TB's); now able to handle cpufreq
+  enabled kernels also
 
   25 Dec 2005; Brian Harring <ferringb@gentoo.org> confcache-0.3.3.ebuild:
   Fixed bug #113680, minor enough not revbumping it (just was installing extra
