@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.27 2006/02/02 01:24:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.28 2006/02/02 14:08:41 agriffis Exp $
+
+*pycrypto-2.0.1-r3 (02 Feb 2006)
+
+  02 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  +files/pycrypto-2.0.1-uint32.patch, +pycrypto-2.0.1-r3.ebuild:
+  Better solution for bug 121182: use uint32_t for 32-bit unsigned integers
+  instead of using different typedefs per platform
 
   01 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/pycrypto-2.0.1-gmp.patch, pycrypto-2.0.1-r2.ebuild:
