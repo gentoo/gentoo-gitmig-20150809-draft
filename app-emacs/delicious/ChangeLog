@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/delicious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.1 2006/01/22 22:45:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.2 2006/02/02 19:38:53 wrobel Exp $
+
+  02 Feb 2006; <wrobel@gentoo.org> metadata.xml:
+  Modified maintainer
 
   22 Jan 2006; <wrobel@gentoo.org> ChangeLog:
   Added app-emacs/delicious to the tree
