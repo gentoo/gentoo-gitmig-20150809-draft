@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.0.1.ebuild,v 1.2 2006/01/10 02:19:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.0.1.ebuild,v 1.3 2006/02/02 22:55:12 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
 
 inherit x-modular
 
-DESCRIPTION="X.Org xfs application"
+DESCRIPTION="X.Org Font Server"
 
 KEYWORDS="~amd64 ~arm ~mips ~s390 ~sh ~sparc ~x86"
 IUSE="ipv6"
