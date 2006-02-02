@@ -1,5 +1,5 @@
-MD5 945a291e3329b938d438e0d4f509a56c ChangeLog 3934
+MD5 6e54bea80190af52d8f8c23917ab7b4b ChangeLog 4034
 MD5 db251cf00973e0ed3fbf253071c8cec6 files/README.Gentoo 632
 MD5 d87091a1c48c794109dbfb88336d9068 files/digest-phylip-3.65-r1 64
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
-MD5 30ac4044827879fc81f1d927ba3a1566 phylip-3.65-r1.ebuild 1410
+MD5 a341ee916cf5e0b6996ebcd49dd0e82f phylip-3.65-r1.ebuild 1493
