@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.1.ebuild,v 1.2 2006/01/24 23:50:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.1.ebuild,v 1.3 2006/02/02 04:31:43 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ipv6 nls selinux"
+IUSE="ipv6 nls selinux X"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
 	selinux? ( sys-libs/libselinux )"
@@ -47,4 +47,6 @@ src_install() {
 	done
 
 	dodoc AUTHORS ChangeLog NEWS README
+
+	use X || find "${D}" -name pstree.x11 -exec rm {} \;
 }
