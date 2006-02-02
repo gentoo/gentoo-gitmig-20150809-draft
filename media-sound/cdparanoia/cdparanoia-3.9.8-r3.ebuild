@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.1 2006/01/27 18:30:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.2 2006/02/02 22:37:55 chutzpah Exp $
 
 inherit eutils flag-o-matic gnuconfig linux-info
 
@@ -35,7 +35,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-use-destdir.patch
 
 	# Apply Red Hat's SG_IO patches see bug #118189 for more info
-	kernel_is 2 6 && EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
+	kernel_is ge 2 6 15 && EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
 
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
