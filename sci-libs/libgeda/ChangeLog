@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.8 2006/01/22 00:30:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.9 2006/02/02 19:08:53 wormo Exp $
+
+  02 Feb 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  libgeda-20050820.ebuild:
+  stabling on ppc with plasmaroo's OK (Bug #120148)
 
   22 Jan 2006; Jason Wever <weeve@gentoo.org> libgeda-20050820.ebuild:
   Added ~sparc keyword wrt bug #119765.
