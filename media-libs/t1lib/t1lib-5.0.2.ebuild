@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.22 2005/12/31 10:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.23 2006/02/02 06:33:03 flameeyes Exp $
 
 inherit eutils gnuconfig flag-o-matic libtool
 
@@ -24,6 +24,7 @@ RDEPEND="X? ( || ( (
 	virtual/x11 ) )"
 
 DEPEND="${RDEPEND}
+	doc? ( virtual/tetex )
 	X? ( || ( (
 		x11-libs/libXfont
 		x11-proto/xproto
@@ -39,9 +40,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	cd ${S}/doc
-	mv Makefile.in Makefile.in-orig
-	sed -e "s:dvips:#dvips:" Makefile.in-orig>Makefile.in
+	sed -i -e "s:dvips:#dvips:" ${S}/doc/Makefile.in
 
 	sed -i -e "s:\./\(t1lib\.config\):/etc/t1lib/\1:" ${S}/xglyph/xglyph.c
 }
@@ -51,7 +50,7 @@ src_compile() {
 
 	use alpha && append-flags -mieee
 
-	if [ ! -x /usr/bin/latex ] ; then
+	if ! use doc; then
 		myopt="without_doc"
 	else
 		addwrite /var/cache/fonts
@@ -61,7 +60,7 @@ src_compile() {
 		--datadir=/etc \
 		`use_with X x` \
 		 || die
-	make ${myopt} || die
+	emake ${myopt} || die
 }
 
 src_install() {
