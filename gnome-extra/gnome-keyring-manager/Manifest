@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d078389b71e9cd672e8e780a78c073e1 ChangeLog 2069
+MD5 6de8c4d67d6f549e829876f8815c69c6 ChangeLog 2193
+RMD160 5a56d19702f7c75c2606fc5273930d359094fc83 ChangeLog 2193
+SHA256 855ea74feedc93ec15fa7c04ba90d1167d20e8318c220285f12eb146cd9a8f68 ChangeLog 2193
 MD5 4b9470b4bdbe3c5d3c1a599bebce2822 files/digest-gnome-keyring-manager-2.12.0 81
-MD5 3fb688fd64566759a013a08c3db8dae2 gnome-keyring-manager-2.12.0.ebuild 860
+RMD160 2437b5ef563efbc306301deaff008a570ad55160 files/digest-gnome-keyring-manager-2.12.0 81
+SHA256 840d0976f4bdde0e4931939583f8daabc8545c4ca0fc86fe3396283afc0877f1 files/digest-gnome-keyring-manager-2.12.0 81
+MD5 e25395f8582dd0e2154550ba317a4a8c gnome-keyring-manager-2.12.0.ebuild 863
+RMD160 feb5d77bf1cbfc79c2e4f3899e729c21e6644f97 gnome-keyring-manager-2.12.0.ebuild 863
+SHA256 bb1964efafe3fccea8d182808c2bdfbe78212b18448a8374a77c0451b74bf950 gnome-keyring-manager-2.12.0.ebuild 863
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0+eWomPajV0RnrERAmRLAJ4yFkKaPGj8SyKPjBtmdoxmOfg2IgCeLblz
-FeNYORzK/cwm06o/Dwaf6EA=
-=bJ5B
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
