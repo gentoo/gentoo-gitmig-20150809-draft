@@ -1,58 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87fe559df716aedd96a1904ffe804c76 ChangeLog 17335
-RMD160 3b2f32de2723e27f601473c81221d25b9bd2c7d6 ChangeLog 17335
-SHA256 d63bb592b16d5c42f45efedc4b56d4a70687bb6dbc712d8d38cd267443db30bc ChangeLog 17335
+MD5 5370eeef1202e7b0806b343aedadccbc ChangeLog 17419
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r3 64
-RMD160 ebc699448e24dc5d252346644c502aba30a0271d files/digest-gconf-1.0.8-r3 64
-SHA256 d249e722900e836ce4b4c2d8d7e2e508a5e5694f7f377f1a84d5a7c339d60f5d files/digest-gconf-1.0.8-r3 64
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r5 64
-RMD160 ebc699448e24dc5d252346644c502aba30a0271d files/digest-gconf-1.0.8-r5 64
-SHA256 d249e722900e836ce4b4c2d8d7e2e508a5e5694f7f377f1a84d5a7c339d60f5d files/digest-gconf-1.0.8-r5 64
 MD5 faf030a14a8782cfd512c48b4b0d3297 files/digest-gconf-1.0.9 64
-RMD160 b8e6fa304eb164a42a5e2d075928a3dacd3d25ce files/digest-gconf-1.0.9 64
-SHA256 9de56074d71d10c3c8e24c18f7f7d09118c41b4a584820dceb5ffcf15654f028 files/digest-gconf-1.0.9 64
 MD5 117bfac59f5e93e340fe707b61bc5b53 files/digest-gconf-2.10.1-r1 66
-RMD160 fefad893f7cb361931a732ba93eade512183a8d0 files/digest-gconf-2.10.1-r1 66
-SHA256 7199365e31c7d4f443c407dc3ec7481dbfcaac147e49948115a89efee5163e2e files/digest-gconf-2.10.1-r1 66
 MD5 1dd5411bdbfdf13b035f9d03ef9858c1 files/digest-gconf-2.12.0 66
-RMD160 abee8154f2d3730d5733328906c8f413dece73d8 files/digest-gconf-2.12.0 66
-SHA256 3808cca079357dedbe943f8ca73fc2215629c25225970c36588904a6baadca19 files/digest-gconf-2.12.0 66
 MD5 32bee061b8d5bc7a5a41e3587f60f6ad files/digest-gconf-2.12.1 66
-RMD160 14b85da0b347b6b0d03864f75a6d401d57540d61 files/digest-gconf-2.12.1 66
-SHA256 97c7aab32b1dc3c13bec384d1795f84e47fcff9c62589a21d73a6d848e7a0ce1 files/digest-gconf-2.12.1 66
 MD5 aaa79f3ad5c910cfa6f813112e66f79e files/gconf-1.0.9-locallock_mdk.patch 1202
-RMD160 5b9129acba9fbaef871830d0ff5378398d02393c files/gconf-1.0.9-locallock_mdk.patch 1202
-SHA256 98021a78c16f3f21a33c8705907cdfb485a11df1a4acddbd5dfbf40b0738ce23 files/gconf-1.0.9-locallock_mdk.patch 1202
 MD5 8485bd44122f283d1549e1f1cdddd03f files/gconfd-2-fix.patch 1820
-RMD160 126c30484309dc60a72b843697ab0feb352cde67 files/gconfd-2-fix.patch 1820
-SHA256 d311a969cfcfda29a1350c47b8a60068d4da37651a4485521b6889400ad584c4 files/gconfd-2-fix.patch 1820
 MD5 ac7cff50ecafeb03d9e4f489cbbf037f gconf-1.0.8-r3.ebuild 1707
-RMD160 6439ab897e3291f2ce0f3c86f0df261b905bd4aa gconf-1.0.8-r3.ebuild 1707
-SHA256 ea79f0a6bd36ecc3ab4aae6f1f7b5ae34ca3d77ae94293a0ea9fd4c53959a162 gconf-1.0.8-r3.ebuild 1707
 MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
-RMD160 14e4f2c697467c2f3c6bb54fb3ed6878d034b136 gconf-1.0.8-r5.ebuild 1872
-SHA256 85422afbff95f9824be8a5c330992faa3c8740d05b370834aceba6d691f7f75e gconf-1.0.8-r5.ebuild 1872
 MD5 a3295c560e968484fb4d35f2b3bb4d49 gconf-1.0.9.ebuild 1842
-RMD160 a7bff8449dbcecc42c3419832cd93a310c74cb81 gconf-1.0.9.ebuild 1842
-SHA256 8e0c6ba356c22f500a5fe06580bd82a2e6350439e0fe376f61b9aff8484cdf73 gconf-1.0.9.ebuild 1842
 MD5 e9577b3216e9a2ab22f87bf5b234ca27 gconf-2.10.1-r1.ebuild 2015
-RMD160 79b07adb0ef584e8e95f822c4adae39e23b69d93 gconf-2.10.1-r1.ebuild 2015
-SHA256 e21d998847720e4cf15704461a404d9a6c23efd702496efe60bef9f1a2ad38ab gconf-2.10.1-r1.ebuild 2015
 MD5 9f586fcd2813a75ccd7da699616850b9 gconf-2.12.0.ebuild 2011
-RMD160 1ed07fff41d7f3515cb1e334afb56c1dfa6b7488 gconf-2.12.0.ebuild 2011
-SHA256 dc0aa11485424c5c7c59d12f49a73c8c7036a845361456f641aec755a3b36e03 gconf-2.12.0.ebuild 2011
-MD5 5ce01d1eec90b9b507bda1ad22c70f84 gconf-2.12.1.ebuild 1973
-RMD160 2c7f49540c9d1698ab08898bdb52968ea2164241 gconf-2.12.1.ebuild 1973
-SHA256 521465869575a6e9aaa907fca558044c38ac65ed5ace6018703ff59c65cf5eda gconf-2.12.1.ebuild 1973
+MD5 9053b30e0012779041c2157506b5cbbd gconf-2.12.1.ebuild 1970
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4maGJrHF4yAQTrARAlQSAJ45SWyTVwH+1yk96ShumUc4cvHROACghxUE
-PmcSpSdebFOqVZBUJaIJIV0=
-=EvVM
------END PGP SIGNATURE-----
