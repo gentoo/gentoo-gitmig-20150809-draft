@@ -1,6 +1,6 @@
-diff -Nru wvstreams-4.2.1.orig/wvrules.mk wvstreams-4.2.1/wvrules.mk
---- wvstreams-4.2.1.orig/wvrules.mk	2005-11-17 22:45:09.000000000 +0200
-+++ wvstreams-4.2.1/wvrules.mk	2005-12-24 10:31:41.346777500 +0200
+diff -Nur wvstreams-4.2.2.orig/wvrules.mk wvstreams-4.2.2/wvrules.mk
+--- wvstreams-4.2.2.orig/wvrules.mk	2005-11-24 21:46:51.000000000 +0200
++++ wvstreams-4.2.2/wvrules.mk	2006-02-03 21:26:59.439036250 +0200
 @@ -296,7 +296,7 @@
  %.E: %.cc;	$(call wvcxx,$@,$<,$*,,-E)
  %.E: %.cpp;	$(call wvcxx,$@,$<,$*,,-E)

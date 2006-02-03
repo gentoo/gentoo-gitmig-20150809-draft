@@ -1,7 +1,7 @@
-diff -Nru wvstreams-4.2.1.orig/configure.ac wvstreams-4.2.1/configure.ac
---- wvstreams-4.2.1.orig/configure.ac	2005-12-24 16:25:39.000000000 +0200
-+++ wvstreams-4.2.1/configure.ac	2005-12-24 16:35:40.746173500 +0200
-@@ -539,7 +539,6 @@
+diff -Nur wvstreams-4.2.2.orig/configure.ac wvstreams-4.2.2/configure.ac
+--- wvstreams-4.2.2.orig/configure.ac	2006-01-12 20:31:50.000000000 +0200
++++ wvstreams-4.2.2/configure.ac	2006-02-03 21:24:41.546418500 +0200
+@@ -542,7 +542,6 @@
  
  # xplc
  if test "$with_xplc" != "no"; then
@@ -9,7 +9,7 @@ diff -Nru wvstreams-4.2.1.orig/configure.ac wvstreams-4.2.1/configure.ac
  	if pkg-config --modversion xplc-${xplc_version}; then
              WV_APPEND(CPPFLAGS, [`pkg-config --cflags xplc-${xplc_version}`])
  	    WV_APPEND(LDFLAGS, [`pkg-config --libs xplc-${xplc_version}`])
-@@ -551,15 +550,6 @@
+@@ -554,15 +553,6 @@
  	else
  	    with_xplc='no'
  	fi
@@ -25,7 +25,7 @@ diff -Nru wvstreams-4.2.1.orig/configure.ac wvstreams-4.2.1/configure.ac
      # What if we can't find it?
      if test "$with_xplc" = "no" && test -d xplc; then
          WV_APPEND(CPPFLAGS, [-I\$(WVSTREAMS)/xplc/include])
-@@ -567,7 +557,7 @@
+@@ -570,7 +560,7 @@
          AC_CONFIG_SUBDIRS(xplc)
          build_xplc=yes
          with_xplc='$(WVSTREAMS)/xplc'

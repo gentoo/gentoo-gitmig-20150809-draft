@@ -1,7 +1,7 @@
-diff -Nru wvstreams-4.2.1.orig/configure.ac wvstreams-4.2.1/configure.ac
---- wvstreams-4.2.1.orig/configure.ac	2005-11-18 21:02:30.000000000 +0200
-+++ wvstreams-4.2.1/configure.ac	2005-12-24 10:21:53.526041000 +0200
-@@ -480,9 +480,9 @@
+diff -Nur wvstreams-4.2.2.orig/configure.ac wvstreams-4.2.2/configure.ac
+--- wvstreams-4.2.2.orig/configure.ac	2006-01-12 20:31:50.000000000 +0200
++++ wvstreams-4.2.2/configure.ac	2006-02-03 21:22:25.153894500 +0200
+@@ -483,9 +483,9 @@
  # tcl
  if test "$with_tcl" != "no"; then
      CPPFLAGS_save="$CPPFLAGS"
@@ -13,9 +13,9 @@ diff -Nru wvstreams-4.2.1.orig/configure.ac wvstreams-4.2.1/configure.ac
      if test "$with_tcl" != "no"; then
          CPPFLAGS="$CPPFLAGS_save"
      fi
-diff -Nru wvstreams-4.2.1.orig/vars.mk wvstreams-4.2.1/vars.mk
---- wvstreams-4.2.1.orig/vars.mk	2005-11-17 22:45:09.000000000 +0200
-+++ wvstreams-4.2.1/vars.mk	2005-12-24 10:21:53.526041000 +0200
+diff -Nur wvstreams-4.2.2.orig/vars.mk wvstreams-4.2.2/vars.mk
+--- wvstreams-4.2.2.orig/vars.mk	2005-11-24 21:46:51.000000000 +0200
++++ wvstreams-4.2.2/vars.mk	2006-02-03 21:22:25.153894500 +0200
 @@ -234,3 +234,5 @@
  
  libwvgtk.a libwvgtk.so: $(call objects,gtk)

@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e3507320b4851a8ecee83d92e4284649 ChangeLog 12112
+MD5 1bcb9923d5a929df5f837d7042f819a6 ChangeLog 12845
 MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2-r1 68
 MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2-r2 68
-MD5 5e3ce238e271e55db146969b050836da files/digest-wvstreams-4.2.1 68
+MD5 2182d9c21e12e64892b2ff69088ff5e1 files/digest-wvstreams-4.2.2 68
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.2-MOC-fix.patch 479
 MD5 189d6997246f2943d43b5c18d0a78163 files/wvstreams-4.0.2-external-xplc.patch 1659
 MD5 6448ad9ded98b10b600e0b3386d2c4bf files/wvstreams-4.0.2-gcc41.patch 698
@@ -12,21 +12,20 @@ MD5 26127f51d3c7e77edb001d4cb33882d0 files/wvstreams-4.0.2-linux-serial.patch 64
 MD5 b65b1449a0bc6ff06e8c843b37717f05 files/wvstreams-4.0.2-speex-const.patch 951
 MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
 MD5 dbec7770662be21658b4ba9740cf2793 files/wvstreams-4.0.2-wireless-user.patch 466
-MD5 637930659665610f5bfe52f077fe5112 files/wvstreams-4.2.1-MOC-fix.patch 496
-MD5 7325e9c7f69a6d03560dc3b2c5700f7e files/wvstreams-4.2.1-external-xplc.patch 1213
-MD5 661c717a39715ecdc27330245f08c61f files/wvstreams-4.2.1-gcc41.patch 2221
-MD5 fe54c7dbb4770aad4ef9a5dcb44106ec files/wvstreams-4.2.1-linux-serial.patch 1649
-MD5 b44c2e240e03736bc5acc41ce7069455 files/wvstreams-4.2.1-ptr2int-cast.patch 356
-MD5 dcb8a3f592baa616e6123867b2fdced8 files/wvstreams-4.2.1-tcl_8_4.patch 1022
-MD5 62675720135a871a7332b3a924a6c0f9 files/wvstreams-4.2.1-wireless-user.patch 466
+MD5 d5c8bf76b0489abb5a4462b9d2908ced files/wvstreams-4.2.2-MOC-fix.patch 496
+MD5 3ddd94457f929b986d63723ddc9a0107 files/wvstreams-4.2.2-external-xplc.patch 1213
+MD5 cd3499947a721c4f42bfd5f7df77abd3 files/wvstreams-4.2.2-gcc41.patch 2467
+MD5 3728d5a371443c7bf725bd9518bcec6f files/wvstreams-4.2.2-linux-serial.patch 1649
+MD5 eb612ca9150b75c84d0a8dedeb2f483e files/wvstreams-4.2.2-tcl_8_4.patch 1022
+MD5 78cabecec5a214b5919c61cde43ab70c files/wvstreams-4.2.2-wireless-user.patch 466
 MD5 227de7f678ad662524292836709de75f metadata.xml 313
 MD5 e594922148c5a6f7087f083cf392e55c wvstreams-4.0.2-r1.ebuild 2558
 MD5 1176f09d8109b258ee1bbbe54919df5c wvstreams-4.0.2-r2.ebuild 2597
-MD5 c3f188d12bf345985f947c6066d92cc9 wvstreams-4.2.1.ebuild 2529
+MD5 74287de1f6b1e930b6461f2edd0f123d wvstreams-4.2.2.ebuild 2531
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyslfCRZPokWLroQRApC8AKDdnMCw4pGkVy2q4OOT3ZJSPtjTvQCgtpJy
-XIolGvRGiuj00xng/pzIu74=
-=afAp
+iD8DBQFD47pUjG8pv1lIUX4RAr5WAJ4z1EIuBbrIQyYkIIDyOC4s3Tm1IACgiBx8
+fDA+qd0qWhGl1hVXxhGroes=
+=ecSZ
 -----END PGP SIGNATURE-----

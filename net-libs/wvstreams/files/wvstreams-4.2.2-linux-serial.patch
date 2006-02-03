@@ -1,6 +1,6 @@
-diff -Nru wvstreams-4.2.1.orig/streams/wvmodem.cc wvstreams-4.2.1/streams/wvmodem.cc
---- wvstreams-4.2.1.orig/streams/wvmodem.cc	2005-11-17 22:45:09.000000000 +0200
-+++ wvstreams-4.2.1/streams/wvmodem.cc	2005-12-24 10:00:36.990262500 +0200
+diff -Nur wvstreams-4.2.2.orig/streams/wvmodem.cc wvstreams-4.2.2/streams/wvmodem.cc
+--- wvstreams-4.2.2.orig/streams/wvmodem.cc	2005-11-24 21:46:51.000000000 +0200
++++ wvstreams-4.2.2/streams/wvmodem.cc	2006-02-03 21:17:54.993010500 +0200
 @@ -192,22 +192,22 @@
      drain();
      

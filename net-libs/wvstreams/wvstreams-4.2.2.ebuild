@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.1.ebuild,v 1.3 2005/12/31 08:17:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2.ebuild,v 1.1 2006/02/03 20:17:07 mrness Exp $
 
-inherit eutils
+inherit eutils fixheadtails
 
 DESCRIPTION="A network programming library in C++"
 HOMEPAGE="http://open.nit.ca/wiki/?page=WvStreams"
@@ -13,11 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="gtk qt qdbm pam slp doc tcltk debug"
 
-RDEPEND="virtual/libc
-	>=sys-libs/db-3
+RDEPEND=">=sys-libs/db-3
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.7
-	>=dev-libs/xplc-0.3.12
+	>=dev-libs/xplc-0.3.13
 	qt? ( =x11-libs/qt-3* )
 	qdbm? ( dev-db/qdbm )
 	pam? ( >=sys-libs/pam-0.75 )
@@ -33,11 +32,10 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-gcc41.patch
-	epatch ${FILESDIR}/${P}-ptr2int-cast.patch #fix compilation error on non-32-bit arches
 	epatch ${FILESDIR}/${P}-linux-serial.patch
 	epatch ${FILESDIR}/${P}-wireless-user.patch
 
-	if useq tcltk; then
+	if use tcltk; then
 		epatch ${FILESDIR}/${P}-tcl_8_4.patch
 	fi
 
@@ -49,7 +47,9 @@ src_unpack() {
 		|| die "failed to set current xplc version"
 	rm -r "${S}/xplc"
 
-	useq qt && epatch ${FILESDIR}/${P}-MOC-fix.patch
+	use qt && epatch ${FILESDIR}/${P}-MOC-fix.patch
+
+	ht_fix_file "${S}/configure.ac"
 }
 
 src_compile() {
@@ -59,7 +59,7 @@ src_compile() {
 	touch include/wvautoconf.h.in configure
 
 	local myconf
-	if useq qt; then
+	if use qt; then
 		myconf="--with-qt=/usr/qt/3/"
 		export MOC="/usr/qt/3/bin/moc"
 	else
@@ -79,6 +79,10 @@ src_compile() {
 		|| die "configure failed"
 	emake CXXOPTS="-fPIC -DPIC" COPTS="-fPIC -DPIC" || die "compile failed"
 	use doc && doxygen
+}
+
+src_test() {
+	ewarn "Test is disabled for this package!"
 }
 
 src_install() {
