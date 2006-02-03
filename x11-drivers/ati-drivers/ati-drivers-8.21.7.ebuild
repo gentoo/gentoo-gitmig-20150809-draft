@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.21.7.ebuild,v 1.2 2006/01/21 21:15:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.21.7.ebuild,v 1.3 2006/02/03 21:15:45 marienz Exp $
 
 IUSE="opengl"
 
@@ -24,7 +24,7 @@ DEPEND=">=virtual/linux-sources-2.4
 PROVIDE="virtual/opengl"
 
 ATIBIN="${D}/opt/ati/bin"
-RESTRICT="nostrip multilib-pkg-force"
+RESTRICT="nostrip multilib-pkg-force stricter"
 
 MODULE_NAMES="fglrx(video:${WORKDIR}/common/lib/modules/fglrx/build_mod)"
 
@@ -276,7 +276,8 @@ src_install-libs() {
 
 	exeinto ${X11_LIB_DIR}/modules/linux
 	# In X.org 6.8.99 / 6.9 this is a .so
-	if has_version ">=x11-base/xorg-x11-6.8.99"
+	if has_version ">=x11-base/xorg-x11-6.8.99" || \
+		has_version "x11-base/xorg-server"
 	then
 		doexe ${BASE_DIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.so
 	else
