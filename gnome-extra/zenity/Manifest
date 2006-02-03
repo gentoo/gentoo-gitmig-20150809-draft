@@ -1,8 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 81f649be42e058a0c6ad3e9b2c7d6e0a ChangeLog 8851
+RMD160 53554fc7df75e262e1513147e6de2312cb427cd4 ChangeLog 8851
+SHA256 6f8a1ef63f478f05cd5bc5ffd5455049c5e015afc6f74244aa94b99345062f01 ChangeLog 8851
 MD5 0d8795c3b63fac85b8415f3abf724e19 files/digest-zenity-2.10.0 66
+RMD160 466dcdbc279417e3ed0ae51ab46e50f7618a131d files/digest-zenity-2.10.0 66
+SHA256 25976eb1ef470c3fdce6c75a8e03b15d0eae3513de773a1063d074a3c7bf9c98 files/digest-zenity-2.10.0 66
 MD5 d83696e7f4a8132d4807496a5670d32d files/digest-zenity-2.10.1 66
+RMD160 f1c1f0647b8aa3297519e02cf7de3d79630f5790 files/digest-zenity-2.10.1 66
+SHA256 fb4974afaed5650fd818e4f853a91d7945a57cd1264da9bc9cf82a5a21667ce3 files/digest-zenity-2.10.1 66
 MD5 bbf800a2c3c7cf4fa32efba24d5ae71a files/digest-zenity-2.12.1 66
+RMD160 17cceb9dd39e3c33488261638295f0d039cb8413 files/digest-zenity-2.12.1 66
+SHA256 0c9e78e38a85adc1d4993cff1db6a2d7db839f9441ae342e0f347ecfdd50309d files/digest-zenity-2.12.1 66
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 9afae9f5ceafc8617802ad851ce81d1d zenity-2.10.0.ebuild 705
+RMD160 c2630591c2d4eaeab025516bf7445f112e41b9fd zenity-2.10.0.ebuild 705
+SHA256 46645fb749f13364c34a4f8392bcbf9526ecdfe9b6c179acca03732ede70b751 zenity-2.10.0.ebuild 705
 MD5 56be6d557f677bcc9683182a2fa11a62 zenity-2.10.1.ebuild 705
+RMD160 3051e43f3230f3e23be1749cfd5f8f49d6eef086 zenity-2.10.1.ebuild 705
+SHA256 d1dd7613fb10178cba124eb33af6f7ff2a9e03e54359bb235ac53f7746863a36 zenity-2.10.1.ebuild 705
 MD5 419ef077659f3e679e8186a22a3e9b00 zenity-2.12.1.ebuild 811
+RMD160 c440ce46209ea29f2f21276870aa4fea5155c4db zenity-2.12.1.ebuild 811
+SHA256 b103a569edbf587c1c2e78aa3bd6c51e8329c7f6243f5d09b6b6598269c11bdb zenity-2.12.1.ebuild 811
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD431JJrHF4yAQTrARAjX5AJ9dpxvzY5K0LzKjVPtKmX7qr8AP0wCdGGqA
+oDoTz80oejXGqR5kLFkM/4A=
+=dRfc
+-----END PGP SIGNATURE-----
