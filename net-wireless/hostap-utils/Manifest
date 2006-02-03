@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8880e1681b9f3a2f7532d17b6b9e7948 ChangeLog 4406
-MD5 eb77fca21ee97178487299633c12fdd8 files/digest-hostap-utils-0.3.7 69
-MD5 c493e7d880016cc1c366715792fa7041 files/digest-hostap-utils-0.4.0 69
+MD5 e517b0789659d55fa97fd9889b4498ff ChangeLog 4536
 MD5 2e953db0223b1bed53ca392ef5883bf9 files/digest-hostap-utils-0.4.7 69
-MD5 4f4b13d8b57878a737653135f3593e44 hostap-utils-0.3.7.ebuild 747
-MD5 7cd7ffe51584bb98db221f9e24bb8879 hostap-utils-0.4.0.ebuild 756
 MD5 87a265fd6239aa7cb21dcc22e88fec7b hostap-utils-0.4.7.ebuild 757
 MD5 0d08d740672bf3b41532938b6f9c0a19 metadata.xml 337
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4nv75mJXAu5GbtIRAkVQAJ42h5ekzxsjhQvUFNv+Aw4xKBv+pACfYHJg
-OYW3NEmo/ckJ2Hb8K6NmVvM=
-=MdUR
------END PGP SIGNATURE-----
