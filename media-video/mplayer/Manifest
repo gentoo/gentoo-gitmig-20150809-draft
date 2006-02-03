@@ -1,4 +1,4 @@
-MD5 8ea40984bde66b6f17c4d50759be09b0 ChangeLog 62565
+MD5 188235743069b93471fa732dcdb3c8db ChangeLog 62660
 MD5 4165dc479a988a3d1c6424a57d55c447 files/digest-mplayer-1.0.20060102 433
 MD5 bdc2a05b83ca16773f288d75afe99b33 files/digest-mplayer-1.0_pre7-r1 432
 MD5 2328e907ec169e2fa3f930e2bb38dc21 files/mmst_fix_20050415.diff 630
@@ -10,5 +10,5 @@ MD5 38c7908ce49f7f6a272993ba5bc9dd09 files/mplayer-mythtv.patch 13755
 MD5 995f560631c6874f08bf6cc9ae01fb08 files/mplayer.desktop 794
 MD5 1dc7b4b16903461c2ea8663d5dfc5795 files/rtsp_fix_20050415.diff 634
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 714e533450725383fb499b64e880cd29 mplayer-1.0.20060102.ebuild 16414
+MD5 5489f4b741a35a6fa9446ffbd211774f mplayer-1.0.20060102.ebuild 16443
 MD5 dd3f7ad4384151fdc0b9ca2c9efa18c7 mplayer-1.0_pre7-r1.ebuild 16889

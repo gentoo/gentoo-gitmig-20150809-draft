@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060102.ebuild,v 1.4 2006/01/26 09:52:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060102.ebuild,v 1.5 2006/02/03 10:45:10 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,6 +39,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	dga? ( || ( x11-libs/libXxf86dga virtual/x11 ) )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdts )
+	dvb? ( media-tv/linuxtv-dvb-headers )
 	dvd? ( dvdread? ( media-libs/libdvdread ) )
 	encode? (
 		media-sound/lame
@@ -321,7 +322,7 @@ src_compile() {
 	fi
 
 	if use dvb ; then
-		myconf="${myconf} --enable-dvbhead --with-dvbincdir=/usr/src/linux/include"
+		myconf="${myconf} --enable-dvbhead --with-dvbincdir=/usr/include"
 	else
 		myconf="${myconf} --disable-dvbhead"
 	fi
