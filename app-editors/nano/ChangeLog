@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.91 2006/01/17 00:39:09 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.92 2006/02/03 23:22:00 vapier Exp $
+
+*nano-1.3.10-r1 (03 Feb 2006)
+
+  03 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/nano-1.3.10-crash.patch, -nano-1.3.10.ebuild,
+  +nano-1.3.10-r1.ebuild:
+  Grab fix from upstream for segfaults with some files #111564.
 
   17 Jan 2006; Stuart Longland <redhatter@gentoo.org> nano-1.3.9.ebuild:
   Marked nano-1.3.9 stable on mips as per bug #118946
