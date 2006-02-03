@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.5 2006/02/03 00:03:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.6 2006/02/03 00:04:35 vapier Exp $
 
 ECVS_SERVER="cvs.winehq.org:/home/wine"
 ECVS_MODULE="wine"
@@ -88,7 +88,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
-	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch #31557
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
