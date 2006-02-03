@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1707 2006/02/01 23:20:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1708 2006/02/03 05:07:56 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -713,6 +713,7 @@ media-tv/mythtv:frontendonly - Only builds the Frontend component rather then th
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/mythtv:unichrome - Enable VIA Unichrome hardware MPEG decoding
+media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
