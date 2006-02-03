@@ -1,6 +1,10 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.37 2006/01/31 21:10:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.38 2006/02/03 21:55:42 spock Exp $
+
+  03 Feb 2006; Michał Januszewski <spock@gentoo.org>
+  +files/elinks-0.11.0-ruby.patch, elinks-0.11.0.ebuild:
+  Added a patch to fix segfaults caused by ruby scripting (bug #121247).
 
   31 Jan 2006; Jeroen Roovers <jer@gentoo.org> elinks-0.10.6.ebuild,
   elinks-0.11.0.ebuild:
