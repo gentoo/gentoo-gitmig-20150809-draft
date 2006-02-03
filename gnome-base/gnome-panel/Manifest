@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b36d0b9cc35fc27fa71ea5ec6f190bdb ChangeLog 21077
-RMD160 349e2046280ec78c7bb6433522a48202a4c377c8 ChangeLog 21077
-SHA256 9206e753459c51ff0b1b8a1961d30725db508f8a8166a49077aa5ec7e72ed095 ChangeLog 21077
+MD5 efbf78ec25fbde3e835c7c790720ba3a ChangeLog 21184
+RMD160 4e2887724f1f9858539e2f481ac0f53e99157e77 ChangeLog 21184
+SHA256 ebf2cafcd303563869d8a999711260d68e980de1393aa418088b0c1899c9d979 ChangeLog 21184
 MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
 RMD160 59c0e81b00d40c41a069cadd0f99bd7c3c0780e4 files/digest-gnome-panel-1.4.1 70
 SHA256 b16471320e1d63c900629fae0001dd82403bfec5afbc097d593dfb15bb21336b files/digest-gnome-panel-1.4.1 70
@@ -40,9 +40,9 @@ SHA256 ddbdfc4b314a4f8b106c09bd7918e3ffc8be4a394b3d91611daa8180bbcf74a8 gnome-pa
 MD5 eef80d8d68dd53f02ee262d49eae1455 gnome-panel-2.12.1.ebuild 1802
 RMD160 040f22d2371aa36c7ca4515daa2c5dcd4b5e06c5 gnome-panel-2.12.1.ebuild 1802
 SHA256 d2d437071c7fef08baa95571889e908369df7eb7c9ed6bfdf16431dedcf8bc85 gnome-panel-2.12.1.ebuild 1802
-MD5 29514cd1bee6a7fb874c74f6bd7c8baa gnome-panel-2.12.2.ebuild 1981
-RMD160 ba375caf9d82348860e5d6220a6481de0fdc1fb5 gnome-panel-2.12.2.ebuild 1981
-SHA256 bf72901709d743ad6943338ad3620c0cc11bda042ce0f007d7919bfed6c8fdc8 gnome-panel-2.12.2.ebuild 1981
+MD5 85d9c8b03e71b425e2038dfe0c073e4c gnome-panel-2.12.2.ebuild 1982
+RMD160 34bd43e5fb268277aa5f4283b4ff2368a6055f19 gnome-panel-2.12.2.ebuild 1982
+SHA256 106dc43de8c0bf9f35ef904bb4a3c37efa8b8e29b1435c6c7630539418e42f04 gnome-panel-2.12.2.ebuild 1982
 MD5 2b7852739e5647ed45bbbbbfd4d18a24 gnome-panel-2.6.2.ebuild 1553
 RMD160 732421cdef4a9596fa317c808783134f8b21e1ed gnome-panel-2.6.2.ebuild 1553
 SHA256 239ac6d09ee6c7cc9c23c0323b31efc710e712d9be64e94d48e8b9cdf90dedc5 gnome-panel-2.6.2.ebuild 1553
@@ -50,9 +50,9 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD46FLJrHF4yAQTrARAmMxAKCE5OMcbRua8u+SZHV9ST/KTIETjwCfUt+5
-DZjqnOjvXfzV5yAEbwQ4Tbc=
-=f9LT
+iD8DBQFD49ZDJrHF4yAQTrARArHEAJ90eFaO/P4og/3+zj/XoKF9m0tikgCgkjy1
+uJXyT2eurWdL7jU2xyhHvhY=
+=2KGq
 -----END PGP SIGNATURE-----
