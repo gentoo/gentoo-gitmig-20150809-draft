@@ -1,0 +1,420 @@
+diff -Naupr poppler-0.5.0/utils/Makefile.am poppler/utils/Makefile.am
+--- poppler-0.5.0/utils/Makefile.am	2006-01-03 15:55:44.000000000 +0100
++++ poppler/utils/Makefile.am	2006-02-03 23:42:51.000000000 +0100
+@@ -13,7 +13,8 @@ bin_PROGRAMS =					\
+ 	pdfinfo					\
+ 	pdftops					\
+ 	pdftotext				\
+-	pdftohtml
++	pdftohtml				\
++	pdftoppm
+ 
+ dist_man1_MANS =				\
+ 	pdffonts.1				\
+@@ -21,7 +22,8 @@ dist_man1_MANS =				\
+ 	pdfinfo.1				\
+ 	pdftops.1				\
+ 	pdftotext.1				\
+-	pdftohtml.1
++	pdftohtml.1				\
++	pdftoppm.1
+ 
+ common = parseargs.c parseargs.h
+ 
+@@ -56,3 +58,7 @@ pdftohtml_SOURCES =				\
+ 	HtmlOutputDev.cc			\
+ 	HtmlOutputDev.h				\
+ 	$(common)
++
++pdftoppm_SOURCES =				\
++	pdftoppm.cc				\
++	$(common)
+diff -Naupr poppler-0.5.0/utils/Makefile.in poppler/utils/Makefile.in
+--- poppler-0.5.0/utils/Makefile.in	2006-01-10 18:54:56.000000000 +0100
++++ poppler/utils/Makefile.in	2006-02-03 23:43:29.000000000 +0100
+@@ -37,7 +37,8 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ bin_PROGRAMS = pdffonts$(EXEEXT) pdfimages$(EXEEXT) pdfinfo$(EXEEXT) \
+-	pdftops$(EXEEXT) pdftotext$(EXEEXT) pdftohtml$(EXEEXT)
++	pdftops$(EXEEXT) pdftotext$(EXEEXT) pdftohtml$(EXEEXT) \
++	pdftoppm$(EXEEXT)
+ subdir = utils
+ DIST_COMMON = $(dist_man1_MANS) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in
+@@ -73,6 +74,10 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
+ pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
+ pdftohtml_LDADD = $(LDADD)
+ pdftohtml_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT) $(am__objects_1)
++pdftoppm_OBJECTS = $(am_pdftoppm_OBJECTS)
++pdftoppm_LDADD = $(LDADD)
++pdftoppm_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
+ am_pdftops_OBJECTS = pdftops.$(OBJEXT) $(am__objects_1)
+ pdftops_OBJECTS = $(am_pdftops_OBJECTS)
+ pdftops_LDADD = $(LDADD)
+@@ -101,10 +106,11 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --tag=CXX --mode=link $(CXXLD) $(AM_CXXFLAGS) \
+ 	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(pdffonts_SOURCES) $(pdfimages_SOURCES) $(pdfinfo_SOURCES) \
+-	$(pdftohtml_SOURCES) $(pdftops_SOURCES) $(pdftotext_SOURCES)
+-DIST_SOURCES = $(pdffonts_SOURCES) $(pdfimages_SOURCES) \
+-	$(pdfinfo_SOURCES) $(pdftohtml_SOURCES) $(pdftops_SOURCES) \
++	$(pdftohtml_SOURCES) $(pdftoppm_SOURCES) $(pdftops_SOURCES) \
+ 	$(pdftotext_SOURCES)
++DIST_SOURCES = $(pdffonts_SOURCES) $(pdfimages_SOURCES) \
++	$(pdfinfo_SOURCES) $(pdftohtml_SOURCES) $(pdftoppm_SOURCES) \
++	$(pdftops_SOURCES) $(pdftotext_SOURCES)
+ man1dir = $(mandir)/man1
+ NROFF = nroff
+ MANS = $(dist_man1_MANS)
+@@ -278,7 +284,8 @@ dist_man1_MANS = \
+ 	pdfinfo.1				\
+ 	pdftops.1				\
+ 	pdftotext.1				\
+-	pdftohtml.1
++	pdftohtml.1				\
++	pdftoppm.1
+ 
+ common = parseargs.c parseargs.h
+ pdffonts_SOURCES = \
+@@ -313,6 +320,10 @@ pdftohtml_SOURCES = \
+ 	HtmlOutputDev.h				\
+ 	$(common)
+ 
++pdftoppm_SOURCES = \
++	pdftoppm.cc				\
++	$(common)
++
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -386,6 +397,9 @@ pdfinfo$(EXEEXT): $(pdfinfo_OBJECTS) $(p
+ pdftohtml$(EXEEXT): $(pdftohtml_OBJECTS) $(pdftohtml_DEPENDENCIES) 
+ 	@rm -f pdftohtml$(EXEEXT)
+ 	$(CXXLINK) $(pdftohtml_LDFLAGS) $(pdftohtml_OBJECTS) $(pdftohtml_LDADD) $(LIBS)
++pdftoppm$(EXEEXT): $(pdftoppm_OBJECTS) $(pdftoppm_DEPENDENCIES) 
++	@rm -f pdftoppm$(EXEEXT)
++	$(CXXLINK) $(pdftoppm_LDFLAGS) $(pdftoppm_OBJECTS) $(pdftoppm_LDADD) $(LIBS)
+ pdftops$(EXEEXT): $(pdftops_OBJECTS) $(pdftops_DEPENDENCIES) 
+ 	@rm -f pdftops$(EXEEXT)
+ 	$(CXXLINK) $(pdftops_LDFLAGS) $(pdftops_OBJECTS) $(pdftops_LDADD) $(LIBS)
+@@ -408,6 +422,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pdfimages.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pdfinfo.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pdftohtml.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pdftoppm.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pdftops.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pdftotext.Po@am__quote@
+ 
+diff -Naupr poppler-0.5.0/utils/pdftoppm.1 poppler/utils/pdftoppm.1
+--- poppler-0.5.0/utils/pdftoppm.1	1970-01-01 01:00:00.000000000 +0100
++++ poppler/utils/pdftoppm.1	2005-12-12 21:15:11.000000000 +0100
+@@ -0,0 +1,113 @@
++.\" Copyright 2004 Glyph & Cog, LLC
++.TH pdftoppm 1 "22 January 2004"
++.SH NAME
++pdftoppm \- Portable Document Format (PDF) to Portable Pixmap (PPM)
++converter (version 3.00)
++.SH SYNOPSIS
++.B pdftoppm
++[options]
++.I PDF-file PPM-root
++.SH DESCRIPTION
++.B Pdftoppm
++converts Portable Document Format (PDF) files to color image files in
++Portable Pixmap (PPM) format, grayscale image files in Portable
++Graymap (PGM) format, or monochrome image files in Portable Bitmap
++(PBM) format.
++.PP
++Pdftoppm reads the PDF file,
++.IR PDF-file ,
++and writes one PPM file for each page,
++.IR PPM-root - nnnnnn .ppm,
++where
++.I nnnnnn
++is the page number.
++.SH CONFIGURATION FILE
++Pdftoppm reads a configuration file at startup.  It first tries to
++find the user's private config file, ~/.xpdfrc.  If that doesn't
++exist, it looks for a system-wide config file, /etc/xpdf/xpdfrc. See the
++.BR xpdfrc (5)
++man page for details.
++.SH OPTIONS
++Many of the following options can be set with configuration file
++commands.  These are listed in square brackets with the description of
++the corresponding command line option.
++.TP
++.BI \-f " number"
++Specifies the first page to convert.
++.TP
++.BI \-l " number"
++Specifies the last page to convert.
++.TP
++.BI \-r " number"
++Specifies the resolution, in DPI.  The default is 150 DPI.
++.TP
++.B \-mono
++Generate a monochrome PBM file (instead of a color PPM file).
++.TP
++.B \-gray
++Generate a grayscale PGM file (instead of a color PPM file).
++.TP
++.BI \-t1lib " yes | no"
++Enable or disable t1lib (a Type 1 font rasterizer).  This defaults to
++"yes".
++.RB "[config file: " enableT1lib ]
++.TP
++.BI \-freetype " yes | no"
++Enable or disable FreeType (a TrueType / Type 1 font rasterizer).
++This defaults to "yes".
++.RB "[config file: " enableFreeType ]
++.TP
++.BI \-aa " yes | no"
++Enable or disable font anti-aliasing.  This defaults to "yes".
++.RB "[config file: " antialias ]
++.TP
++.BI \-opw " password"
++Specify the owner password for the PDF file.  Providing this will
++bypass all security restrictions.
++.TP
++.BI \-upw " password"
++Specify the user password for the PDF file.
++.TP
++.B \-q
++Don't print any messages or errors.
++.RB "[config file: " errQuiet ]
++.TP
++.B \-v
++Print copyright and version information.
++.TP
++.B \-h
++Print usage information.
++.RB ( \-help
++and
++.B \-\-help
++are equivalent.)
++.SH EXIT CODES
++The Xpdf tools use the following exit codes:
++.TP
++0
++No error.
++.TP
++1
++Error opening a PDF file.
++.TP
++2
++Error opening an output file.
++.TP
++3
++Error related to PDF permissions.
++.TP
++99
++Other error.
++.SH AUTHOR
++The pdftoppm software and documentation are copyright 1996-2004 Glyph
++& Cog, LLC.
++.SH "SEE ALSO"
++.BR xpdf (1),
++.BR pdftops (1),
++.BR pdftotext (1),
++.BR pdfinfo (1),
++.BR pdffonts (1),
++.BR pdfimages (1),
++.BR xpdfrc (5)
++.br
++.B http://www.foolabs.com/xpdf/
+diff -Naupr poppler-0.5.0/utils/pdftoppm.cc poppler/utils/pdftoppm.cc
+--- poppler-0.5.0/utils/pdftoppm.cc	1970-01-01 01:00:00.000000000 +0100
++++ poppler/utils/pdftoppm.cc	2006-02-03 23:57:43.000000000 +0100
+@@ -0,0 +1,190 @@
++//========================================================================
++//
++// pdftoppm.cc
++//
++// Copyright 2003 Glyph & Cog, LLC
++//
++//========================================================================
++
++#include "config.h"
++#include <poppler-config.h>
++#include <stdio.h>
++#include "parseargs.h"
++#include "goo/gmem.h"
++#include "goo/GooString.h"
++#include "GlobalParams.h"
++#include "Object.h"
++#include "PDFDoc.h"
++#include "splash/SplashBitmap.h"
++#include "splash/Splash.h"
++#include "SplashOutputDev.h"
++
++static int firstPage = 1;
++static int lastPage = 0;
++static int resolution = 150;
++static GBool mono = gFalse;
++static GBool gray = gFalse;
++static char enableT1libStr[16] = "";
++static char enableFreeTypeStr[16] = "";
++static char antialiasStr[16] = "";
++static char ownerPassword[33] = "";
++static char userPassword[33] = "";
++static GBool quiet = gFalse;
++static char cfgFileName[256] = "";
++static GBool printVersion = gFalse;
++static GBool printHelp = gFalse;
++
++static ArgDesc argDesc[] = {
++  {"-f",      argInt,      &firstPage,     0,
++   "first page to print"},
++  {"-l",      argInt,      &lastPage,      0,
++   "last page to print"},
++  {"-r",      argInt,      &resolution,    0,
++   "resolution, in DPI (default is 150)"},
++  {"-mono",   argFlag,     &mono,          0,
++   "generate a monochrome PBM file"},
++  {"-gray",   argFlag,     &gray,          0,
++   "generate a grayscale PGM file"},
++#if HAVE_T1LIB_H
++  {"-t1lib",      argString,      enableT1libStr, sizeof(enableT1libStr),
++   "enable t1lib font rasterizer: yes, no"},
++#endif
++#if HAVE_FREETYPE_FREETYPE_H | HAVE_FREETYPE_H
++  {"-freetype",   argString,      enableFreeTypeStr, sizeof(enableFreeTypeStr),
++   "enable FreeType font rasterizer: yes, no"},
++#endif
++  {"-aa",         argString,      antialiasStr,   sizeof(antialiasStr),
++   "enable font anti-aliasing: yes, no"},
++  {"-opw",    argString,   ownerPassword,  sizeof(ownerPassword),
++   "owner password (for encrypted files)"},
++  {"-upw",    argString,   userPassword,   sizeof(userPassword),
++   "user password (for encrypted files)"},
++  {"-q",      argFlag,     &quiet,         0,
++   "don't print any messages or errors"},
++  {"-cfg",        argString,      cfgFileName,    sizeof(cfgFileName),
++   "configuration file to use in place of .xpdfrc"},
++  {"-v",      argFlag,     &printVersion,  0,
++   "print copyright and version info"},
++  {"-h",      argFlag,     &printHelp,     0,
++   "print usage information"},
++  {"-help",   argFlag,     &printHelp,     0,
++   "print usage information"},
++  {"--help",  argFlag,     &printHelp,     0,
++   "print usage information"},
++  {"-?",      argFlag,     &printHelp,     0,
++   "print usage information"},
++  {NULL}
++};
++
++int main(int argc, char *argv[]) {
++  PDFDoc *doc;
++  GooString *fileName;
++  char *ppmRoot;
++  char ppmFile[512];
++  GooString *ownerPW, *userPW;
++  SplashColor paperColor;
++  SplashOutputDev *splashOut;
++  GBool ok;
++  int exitCode;
++  int pg;
++
++  exitCode = 99;
++
++  // parse args
++  ok = parseArgs(argDesc, &argc, argv);
++  if (mono && gray) {
++    ok = gFalse;
++  }
++  if (!ok || argc != 3 || printVersion || printHelp) {
++    fprintf(stderr, "pdftoppm version %s\n", xpdfVersion);
++    fprintf(stderr, "%s\n", xpdfCopyright);
++    if (!printVersion) {
++      printUsage("pdftoppm", "<PDF-file> <PPM-root>", argDesc);
++    }
++    goto err0;
++  }
++  fileName = new GooString(argv[1]);
++  ppmRoot = argv[2];
++
++  // read config file
++  globalParams = new GlobalParams(cfgFileName);
++  if (enableT1libStr[0]) {
++    if (!globalParams->setEnableT1lib(enableT1libStr)) {
++      fprintf(stderr, "Bad '-t1lib' value on command line\n");
++    }
++  }
++  if (enableFreeTypeStr[0]) {
++    if (!globalParams->setEnableFreeType(enableFreeTypeStr)) {
++      fprintf(stderr, "Bad '-freetype' value on command line\n");
++    }
++  }
++  if (antialiasStr[0]) {
++    if (!globalParams->setAntialias(antialiasStr)) {
++      fprintf(stderr, "Bad '-aa' value on command line\n");
++    }
++  }
++  if (quiet) {
++    globalParams->setErrQuiet(quiet);
++  }
++
++  // open PDF file
++  if (ownerPassword[0]) {
++    ownerPW = new GooString(ownerPassword);
++  } else {
++    ownerPW = NULL;
++  }
++  if (userPassword[0]) {
++    userPW = new GooString(userPassword);
++  } else {
++    userPW = NULL;
++  }
++  doc = new PDFDoc(fileName, ownerPW, userPW);
++  if (userPW) {
++    delete userPW;
++  }
++  if (ownerPW) {
++    delete ownerPW;
++  }
++  if (!doc->isOk()) {
++    exitCode = 1;
++    goto err1;
++  }
++
++  // get page range
++  if (firstPage < 1)
++    firstPage = 1;
++  if (lastPage < 1 || lastPage > doc->getNumPages())
++    lastPage = doc->getNumPages();
++
++  // write PPM files
++  paperColor[0] = 255;
++  paperColor[1] = 255;
++  paperColor[2] = 255;
++  splashOut = new SplashOutputDev(mono ? splashModeMono1 :
++				    gray ? splashModeMono8 :
++				             splashModeRGB8, 4,
++				  gFalse, paperColor);
++  splashOut->startDoc(doc->getXRef());
++  for (pg = firstPage; pg <= lastPage; ++pg) {
++    doc->displayPage(splashOut, pg, resolution, resolution, 0, gTrue, gFalse, gFalse);
++    sprintf(ppmFile, "%.*s-%06d.%s",
++	    (int)sizeof(ppmFile) - 32, ppmRoot, pg,
++	    mono ? "pbm" : gray ? "pgm" : "ppm");
++    splashOut->getBitmap()->writePNMFile(ppmFile);
++  }
++  delete splashOut;
++
++  exitCode = 0;
++
++  // clean up
++ err1:
++  delete doc;
++  delete globalParams;
++ err0:
++
++  // check for memory leaks
++  Object::memCheck(stderr);
++  gMemReport(stderr);
++
++  return exitCode;
++}
