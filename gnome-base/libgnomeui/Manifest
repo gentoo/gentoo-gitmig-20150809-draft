@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 833968113702d24c26cc021cac0e3e17 ChangeLog 11949
-RMD160 e96dce34d93059f7f331ca7ec239734d3e658c13 ChangeLog 11949
-SHA256 769dbf88b751b8a5270c2a5800f36330b79c40a198c81511a4ebc648671190c7 ChangeLog 11949
+MD5 dea4566c76525a8cd2bb6cb85618cbc4 ChangeLog 12038
 MD5 de45532214b2589e59dfdafcc4bfaea6 files/digest-libgnomeui-2.10.0 71
-RMD160 beba78610fadc90a9d72f04d072eacf5970313d5 files/digest-libgnomeui-2.10.0 71
-SHA256 33c1fc3ec51036b7eb9ea4dab369aeeb39e24da8bcc4b8eb99366bd893ed1a76 files/digest-libgnomeui-2.10.0 71
 MD5 176f244e66b8eac4b53a2aa9fa48cce9 files/digest-libgnomeui-2.10.1 71
-RMD160 d7aa403ef7cdbdc1e9b27cbd0a5e1dec00612220 files/digest-libgnomeui-2.10.1 71
-SHA256 855496dfc805b79edb34b942f4e7c283ca97f4e6080fe6dd92ee6802eb5f9042 files/digest-libgnomeui-2.10.1 71
 MD5 f0706d5b94c45e0015d0da77c53fb66d files/digest-libgnomeui-2.12.0 71
-RMD160 ab01cd265a58523ac386ff6cb315f667b709bc78 files/digest-libgnomeui-2.12.0 71
-SHA256 ae466caf2db3ebe0cd53577926e81057a3fc6b89bbda292978eb5970c6f122bd files/digest-libgnomeui-2.12.0 71
 MD5 675ca0714915ab850a823d726c0c5f4c files/libgnomeui-2.10.1-gentoo.patch 3902
-RMD160 20bd4a2222975d74d3303028a7a66ea88fa05c63 files/libgnomeui-2.10.1-gentoo.patch 3902
-SHA256 d64d034d76aff735e46a50ebe1480b0fe9d5455c1b5fee17906ba8ee92470d7f files/libgnomeui-2.10.1-gentoo.patch 3902
 MD5 4becd0494324e4349c245e2b95b0f663 files/libgnomeui-2.8.0-ditch_ancient_pics.patch 505
-RMD160 cdba46b36bb82187b5c91616ff11303e7cb7b4e1 files/libgnomeui-2.8.0-ditch_ancient_pics.patch 505
-SHA256 ad344da3b6d62633463a33388eb5d6673549016f1b89589db2eede7e37abcb63 files/libgnomeui-2.8.0-ditch_ancient_pics.patch 505
 MD5 ffcb9cab9748d63cbb564fec4117c859 libgnomeui-2.10.0.ebuild 1152
-RMD160 28557522ffe737d1a397c28b1abb8862d03b1bb9 libgnomeui-2.10.0.ebuild 1152
-SHA256 757eae971ecb9984cc90c90541aa1243bb3e90c3e7cdcf647b4994182daee91a libgnomeui-2.10.0.ebuild 1152
 MD5 cbccf9f886aadc5dd6e32e506753f989 libgnomeui-2.10.1.ebuild 1492
-RMD160 aab6e5dacc1b4977c60df7a94f996b8eff3d7112 libgnomeui-2.10.1.ebuild 1492
-SHA256 7ecce614ce10262d987afbae4242051a9f01d7ebca10c56f8182ca0cf692f903 libgnomeui-2.10.1.ebuild 1492
-MD5 4c7ec4d899aa584f768b4dbcd0448bcb libgnomeui-2.12.0.ebuild 1448
-RMD160 059054e1b23dadbb134d97079ab84c42c4062cf7 libgnomeui-2.12.0.ebuild 1448
-SHA256 005ae9f64a735cfce3f9755157754bd735f28124c3f781332f1bbcb1c60268d9 libgnomeui-2.12.0.ebuild 1448
+MD5 b9488a60bd1cf40475603275a6d5c661 libgnomeui-2.12.0.ebuild 1445
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4nODJrHF4yAQTrARAl8cAKCKygN60VJa2g4GFiw2Y6/57fvaXACdHri4
-wCNW/P+Sh/yVhidlTNKpiX4=
-=Ah/G
------END PGP SIGNATURE-----
