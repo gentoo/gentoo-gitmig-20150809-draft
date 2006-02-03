@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87cb461bc9f629b4b7c6720936be7b8d ChangeLog 9586
-RMD160 d1b9408e9cb6437084b5f618de182db4b4c39f43 ChangeLog 9586
-SHA256 c79287cd93fe3300de0d9d4be01ffa3c741c5a44205765008c6e971af9b23c61 ChangeLog 9586
+MD5 60464e7487f3d5c6814c662cc1bc5021 ChangeLog 9679
 MD5 019e7427481f8aa14ba11634cf02f427 files/digest-libgnomecanvas-2.10.0 74
-RMD160 a6fcdc64bc7823f6eb546d281b85f7f961f6c79c files/digest-libgnomecanvas-2.10.0 74
-SHA256 98f01c217bec6778958e10e059bb98b9be7f0ec9ab03d5615304448caeca6487 files/digest-libgnomecanvas-2.10.0 74
 MD5 2b0668b32da28903ccc2dcabd46ccfbd files/digest-libgnomecanvas-2.10.2 74
-RMD160 f8713c5bc223e219a243b2aa16e8a346b6534a8b files/digest-libgnomecanvas-2.10.2 74
-SHA256 f05b79c99784f91adfa1ac328cb37057e9b4deec77a5a520ed5f3779e7c4762f files/digest-libgnomecanvas-2.10.2 74
 MD5 02f3cae041cd776702c63a07c531d992 files/digest-libgnomecanvas-2.12.0 74
-RMD160 7399f1e093bfe8b685fc1d18483eb0c24b5af081 files/digest-libgnomecanvas-2.12.0 74
-SHA256 cf0eab840c2a5c9039a35a25ba505cdd9ea6cff250189a6d6612f7b098208adb files/digest-libgnomecanvas-2.12.0 74
 MD5 14836365302cf0622a63c0689702c58a libgnomecanvas-2.10.0.ebuild 738
-RMD160 602d8c7a172da1513183c08242f040df09673fa1 libgnomecanvas-2.10.0.ebuild 738
-SHA256 f6d17345529ac8a76abc620e8e67db942dc28eb551a097c4840beddc3bd8119e libgnomecanvas-2.10.0.ebuild 738
 MD5 eabd9d3654738d06a65d9dee0e2440bb libgnomecanvas-2.10.2.ebuild 773
-RMD160 ed2364ae94a61ac744286ac476830f3e8ce51ce3 libgnomecanvas-2.10.2.ebuild 773
-SHA256 85166014b03837e0f9efc18b62fdb4676eaf3d9ff24824b7830368338b130e49 libgnomecanvas-2.10.2.ebuild 773
-MD5 86f3157e8e00a2189a9500ec12434c73 libgnomecanvas-2.12.0.ebuild 791
-RMD160 67a2784f796a04cfdf04540209d683b890fafb62 libgnomecanvas-2.12.0.ebuild 791
-SHA256 6693c5d2fdeaf46cca6365fcdd9d0901958d1653aee8042103b929284962f5c1 libgnomecanvas-2.12.0.ebuild 791
+MD5 144e10b92f42ae5f26d64a3a9cc0dcbf libgnomecanvas-2.12.0.ebuild 788
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4m8BJrHF4yAQTrARArzvAJ4pFbCKXLDZuPlEz9vX5wNrMJZNFQCfSOPX
-lSQjHv01YlcK7G2uVy4g2/I=
-=kiyX
------END PGP SIGNATURE-----
