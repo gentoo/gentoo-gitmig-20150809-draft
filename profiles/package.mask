@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4944 2006/02/02 05:58:14 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4945 2006/02/03 14:16:53 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -71,10 +71,6 @@ app-text/pdftohtml
 # Masked - release candidate, for pre-emptive testing only
 =sys-devel/libperl-5.8.8_rc1
 =dev-lang/perl-5.8.8_rc1
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (22 Jan 2006)
-# x11-libs/libdockapp should be used instead of docklib
-x11-libs/docklib
 
 # George Shapovalov (19 Jan 2006)
 # older versions have problems, leaving only the last in series, 
