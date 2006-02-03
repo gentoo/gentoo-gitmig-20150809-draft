@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aae3573c9e1ab4ba02785bc5d6acfd4e ChangeLog 32133
+MD5 96d4312d83ef8d1d6e3b802f4978f616 ChangeLog 32226
 MD5 95f6cf79b236723dc8e09937391dd4de evolution-1.2.4.ebuild 6245
 MD5 b79c5ccc56e7e370472f66aa4ba28d68 evolution-2.0.3-r2.ebuild 4203
 MD5 872e077d3d53ff79474d1572befbc0a8 evolution-2.0.4.ebuild 4090
 MD5 39fb2d3d92a73b5d802075a3e71dbe0a evolution-2.2.3-r3.ebuild 6060
 MD5 c2143b072b734ff9a01c1bf05c02196c evolution-2.4.1.ebuild 6385
-MD5 9f0ea088d92b145a5c2c166b1b480774 evolution-2.4.2.1.ebuild 5759
+MD5 445771e176abf5fe7f35e08c9f3a71e5 evolution-2.4.2.1.ebuild 5760
 MD5 69340630836c71c73ff1fa374ff69ad3 evolution-2.4.2.ebuild 5663
 MD5 457d67c67b8f0b497d3f667be6e92577 files/digest-evolution-1.2.4 131
 MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3-r2 70
@@ -31,10 +28,3 @@ MD5 c6f7cb2777a5622bc3ea45b046713895 files/evolution-2.4.2.1-link.patch 2625
 MD5 56a0d793e598c8e0c91ec5ab0e2a4e4b files/evolution.formatstring.patch 2146
 MD5 2381d584d4a3104a6c491b21ecc0bc47 files/evolution_mail-account-gui_authtype.diff 737
 MD5 f0750af493d9560f5faf50f39fd644c5 metadata.xml 285
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0+WxomPajV0RnrERAuvIAJ9AV0rs9I8FH2pwk4JqXJDb0SvLyQCaAxi0
-g6GelX4YORnwPCmfocTJoRs=
-=aDGG
------END PGP SIGNATURE-----
