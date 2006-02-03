@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fc27c673ecf5cd7487473a4787bf2a8 ChangeLog 19037
+MD5 065a7e5f09a12ce63dd647d9457a236c ChangeLog 19127
 MD5 5ef08e685400da84661b9f037d81a668 epiphany-1.6.0-r3.ebuild 1539
 MD5 d89a18b9e1f3c752a5ea444c4ccfc52f epiphany-1.6.3.ebuild 1387
 MD5 4c5adfec221fca880f8114d80bcaf86c epiphany-1.6.4.ebuild 1540
 MD5 fd9fa2d2bd4eedbb575ad30d45d423dc epiphany-1.8.2.ebuild 1794
-MD5 c9f58cf53e75940202b8789012e77a04 epiphany-1.8.3.ebuild 1811
+MD5 0659865685ce4b38c5f908c71eee849d epiphany-1.8.3.ebuild 1818
 MD5 6d49238d1100396b965c157b89c7038f files/digest-epiphany-1.6.0-r3 68
 MD5 eb83ab75c0e81a4aff0d93a8d8a4e338 files/digest-epiphany-1.6.3 68
 MD5 f5e29a6e660b776ab387ee60f32007da files/digest-epiphany-1.6.4 68
@@ -18,10 +15,3 @@ MD5 40c2cd3b20e5f2847e868edbc4f58915 files/epiphany-1.6.0-wallet_fix.patch 598
 MD5 2a6d9343d321b67fb737cb87301facfc files/epiphany-1.6.0-wallet_password.patch 1307
 MD5 3e5d6d82d44078ec1c95566207f9bad1 files/epiphany-1.6.3-fix_includes.patch 369
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0+TMomPajV0RnrERAoT3AJ0Z0ee6pPKwJWbiHUaLj6nh0e7VygCfVX9M
-NesmS5Dwu2s/wpcXao6u1Pk=
-=WDXO
------END PGP SIGNATURE-----
