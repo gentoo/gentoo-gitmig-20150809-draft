@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.60 2006/01/22 17:26:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.61 2006/02/03 23:49:26 agriffis Exp $
+
+  03 Feb 2006; Aron Griffis <agriffis@gentoo.org> swig-1.3.25.ebuild:
+  Mark 1.3.25 stable on ia64
 
   22 Jan 2006; Caleb Tennis <caleb@gentoo.org> -swig-1.3.24.ebuild:
   Removing p.masked version
