@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r10.ebuild,v 1.9 2006/01/28 14:43:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r10.ebuild,v 1.10 2006/02/03 23:40:33 genstef Exp $
 
 inherit eutils
 
@@ -24,8 +24,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="motif nodrm truetype"
 
-DEPEND="motif? ( !s390? ( virtual/x11
-	x11-libs/openmotif ) )
+DEPEND="motif? ( !s390? ( x11-libs/openmotif ) )
 	truetype? (
 		>=media-libs/freetype-2.0.5
 		media-libs/t1lib
