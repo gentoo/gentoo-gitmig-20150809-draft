@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc3a95fda216ae2d72686c0bd2d4ab21 ChangeLog 4589
+MD5 bbd2cbf8440d3c1e7af7bcd912e6a03c ChangeLog 4696
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
 MD5 bb9cb80f927bcc2b9e0f512d8a200e18 files/2.0.51.22-fixes.patch 10579
 MD5 e3d8f54d06dce6fa8c4b9a9ff660f96e files/2.1_pre4-r1.patch 1581
@@ -17,11 +14,4 @@ MD5 4df85686b65f5591383e16bf3d6845ba portage-2.0.51.22-r3.ebuild 5796
 MD5 74f65b9f31d3d8baef97314065d2d720 portage-2.0.53.ebuild 3696
 MD5 5039dc82682399a41dfdf6e10384446b portage-2.0.54.ebuild 3697
 MD5 908c5af92ff8ea543ed011aefd0832ea portage-2.1_pre3-r1.ebuild 4715
-MD5 331bc511075753f6b48c350a2b91b810 portage-2.1_pre4-r1.ebuild 4721
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFD4fA76J2i8a8J4okRAkLjAKCGMbbi0zUkVi/PAKEs1da+0bD1UgCeN1Mw
-KrkDDKV33VG9+1hiDTJXsD0=
-=Sp+l
------END PGP SIGNATURE-----
+MD5 904bb846d7121b1824df7d604f8c570f portage-2.1_pre4-r1.ebuild 4729
