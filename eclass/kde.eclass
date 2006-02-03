@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.144 2006/01/30 13:24:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.145 2006/02/03 22:30:13 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
 # Revisions Caleb Tennis <caleb@gentoo.org>
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 
-inherit base eutils kde-functions flag-o-matic
+inherit base eutils kde-functions flag-o-matic libtool
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 IUSE="debug arts xinerama"
@@ -165,6 +165,7 @@ kde_src_compile() {
 						--with-extra-libs=${KDEDIR}/$(get_libdir)"
 				fi
 
+				elibtoolize
 				econf \
 					${myconf} \
 					|| die "died running ./configure, $FUNCNAME:configure"
