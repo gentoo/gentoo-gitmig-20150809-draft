@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.8-r1.ebuild,v 1.1 2006/01/29 15:52:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.8-r1.ebuild,v 1.2 2006/02/03 01:22:09 solar Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}"/${PN}-${PV}-paxelf-fd-mmap.patch || die
+	epatch "${FILESDIR}"/${PN}-${PV}-etrel-notwx.patch || die
 }
 
 src_compile() {
