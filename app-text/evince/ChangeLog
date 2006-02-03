@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.27 2006/01/27 20:50:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.28 2006/02/03 18:27:00 gmsoft Exp $
+
+  03 Feb 2006; Guy Martin <gmsoft@gentoo.org> evince-0.4.0-r3.ebuild:
+  Stable on hppa.
 
   27 Jan 2006; <dang@gentoo.org> evince-0.5.0.ebuild:
   Re-add support for djvu. Bug #101108
