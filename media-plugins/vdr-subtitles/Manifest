@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7113c906abe3f78c865c92199531cd56 ChangeLog 396
+RMD160 168d41278f4f0f1b1b5225696421577bcde8531d ChangeLog 396
+SHA256 9b7cf04c9cc59752b1250e4b7444d4574ea1037bfa587c70fb7faba9e13ca3f1 ChangeLog 396
+MD5 f18ea227f9ba8a0eab85e82059a42231 files/digest-vdr-subtitles-0.3.10 250
+RMD160 a775bea62c92d9012bcf3e142c4597a9ce320eb0 files/digest-vdr-subtitles-0.3.10 250
+SHA256 dadbdbe252edb84c7514929de024cb4fde7410023a237a4a41b6a7b82cb541d5 files/digest-vdr-subtitles-0.3.10 250
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 21ce4daaebf0456b4b503d5b0efba2b2 vdr-subtitles-0.3.10.ebuild 857
+RMD160 7d614a1edb264335104f169ef39d48a8c0afd463 vdr-subtitles-0.3.10.ebuild 857
+SHA256 cedfe5a64c28cfaee4e276e5f5bf5567871d44db4e13b2eac84986bacae8c66d vdr-subtitles-0.3.10.ebuild 857
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD40eXZfSl1Kp5KmoRAjO2AKDC5dEMOSRdt5CI6TPbwo1kI3PGJwCbB7M1
+XkAE8ksqk2ulpFf6e6++xK8=
+=l5EO
+-----END PGP SIGNATURE-----
