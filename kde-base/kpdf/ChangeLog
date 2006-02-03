@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.70 2006/02/01 11:56:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.71 2006/02/03 00:54:13 carlo Exp $
+
+*kpdf-3.5.1-r1 (03 Feb 2006)
+*kpdf-3.4.3-r4 (03 Feb 2006)
+
+  03 Feb 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/post-3.4.3-kdegraphics-CVE-2006-0301.diff,
+  +files/post-3.5.1-kdegraphics-CVE-2006-0301.diff, +kpdf-3.4.3-r4.ebuild,
+  +kpdf-3.5.1-r1.ebuild:
+  xpdf heap based buffer overflow, #121375
 
   01 Feb 2006; Carsten Lohrke <carlo@gentoo.org> kpdf-3.4.3-r3.ebuild:
   Correct poppler dependency.
