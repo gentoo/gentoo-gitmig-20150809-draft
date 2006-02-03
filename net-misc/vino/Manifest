@@ -1,4 +1,4 @@
-MD5 bdb144500e32df85e63ed5f90a765ee1 ChangeLog 4944
+MD5 5b3e15fba78e7482374b344ad0530b52 ChangeLog 5028
 MD5 6a6e29695e536c76e6b01b930d65c430 files/digest-vino-2.10.0 64
 MD5 6a6e29695e536c76e6b01b930d65c430 files/digest-vino-2.10.0-r1 64
 MD5 0c237109a0607583f509fc65514b7825 files/digest-vino-2.12.0 64
@@ -8,5 +8,5 @@ MD5 4bd66cdedeb8bff32c00a891417978e9 files/vino-2.11-zlib_fix.patch 633
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c74ae53d3a170410d2d5e3cf384be71d vino-2.10.0-r1.ebuild 1076
 MD5 66a78e5f9505ed791550c3e65f950de8 vino-2.10.0.ebuild 979
-MD5 d369b0dd6df39549eaeedff6ccef50ab vino-2.12.0.ebuild 1276
+MD5 e8968f93f15171b6acdaae5b631650d8 vino-2.12.0.ebuild 1274
 MD5 b355d978b16a86813ab93eef55b5890f vino-2.8.1.ebuild 973
