@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.63 2006/01/22 00:24:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.64 2006/02/03 22:20:25 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -217,6 +217,13 @@ elibtoolize() {
 			local ret=0
 
 			case "${y}" in
+				"portage")
+					# Stupid test to see if its already applied ...
+					if [[ -z $(grep 'We do not want portage' "${x}/ltmain.sh") ]] ; then
+						ELT_walk_patches "${x}/ltmain.sh" "${y}"
+						ret=$?
+					fi
+					;;
 				"rem-int-dep")
 					ELT_walk_patches "${x}/ltmain.sh" "${y}" "${deptoremove}"
 					ret=$?
