@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/wmmldonkey-0.003.ebuild,v 1.3 2004/08/02 10:03:39 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/wmmldonkey-0.003.ebuild,v 1.4 2006/02/03 13:47:38 nelchael Exp $
 
 DESCRIPTION="wmmsg is a dockapp to show the up and downloadrate from your mldonkey"
 HOMEPAGE="http://dockapps.org/file.php/id/174"
@@ -9,9 +9,15 @@ LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-DEPEND="virtual/x11
-	net-p2p/mldonkey"
 S=${WORKDIR}/wmmldonkey3
+
+RDEPEND="|| ( (
+		x11-libs/libXext
+		x11-libs/libX11
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	net-p2p/mldonkey"
 
 src_install()
 {
