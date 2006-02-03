@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.87 2005/12/26 15:26:44 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.88 2006/02/03 22:07:04 vanquirius Exp $
+
+*rrdtool-1.2.12-r1 (03 Feb 2006)
+
+  03 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +rrdtool-1.2.12-r1.ebuild:
+  Add rrdcgi USE flag and functionality for bug 118679. Thanks to Timothy
+  Bergeron <bugs-gentoo at timothybergeron dot com>.
 
   26 Dec 2005; Simon Stelling <blubb@gentoo.org> rrdtool-1.2.6-r1.ebuild:
   fix multilib-strict wise
