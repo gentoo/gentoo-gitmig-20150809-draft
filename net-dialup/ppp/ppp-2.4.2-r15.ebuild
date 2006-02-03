@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r15.ebuild,v 1.12 2006/01/24 18:09:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r15.ebuild,v 1.13 2006/02/03 17:21:58 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic linux-info
 
@@ -15,7 +15,6 @@ LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="activefilter atm dhcp ipv6 mppe-mppc pam radius"
-RESTRICT="nomirror"
 
 RDEPEND="virtual/libc
 	activefilter? ( >=virtual/libpcap-0.9.3 )
