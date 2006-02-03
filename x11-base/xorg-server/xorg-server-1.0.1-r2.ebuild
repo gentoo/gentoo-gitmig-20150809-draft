@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r2.ebuild,v 1.2 2006/01/31 13:51:10 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r2.ebuild,v 1.3 2006/02/03 07:32:49 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -112,6 +112,9 @@ pkg_setup() {
 		--localstatedir=/var
 		--enable-install-setuid
 		--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1"
+
+	# (#121394) Causes window corruption
+	filter-flags -fweb
 }
 
 src_install() {
