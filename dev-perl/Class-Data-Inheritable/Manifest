@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c3224d164306aa1d7238471423e3f91c ChangeLog 1790
 RMD160 1c5edd7c940fb22fea0706d85f7ac664e12a52d7 ChangeLog 1790
 SHA256 72e66ce3c6ec6a040da7518d7e49e30b16b4a86dc0a13d2aa6a65e8aed481621 ChangeLog 1790
@@ -13,16 +10,9 @@ SHA256 55f1e24a7e85d95d3de018a5393d49beb838c46cbfada5f93711306fb8cf245e Class-Da
 MD5 5833bcb6b531f67b516cd9cf524d9410 files/digest-Class-Data-Inheritable-0.02 77
 RMD160 d470830d861a2bef7aae89ad302239326fda64f8 files/digest-Class-Data-Inheritable-0.02 77
 SHA256 5800add5341c8c4075c4350feca1c46dc13c7a89c0cffaa45c005a4e6228e27d files/digest-Class-Data-Inheritable-0.02 77
-MD5 f5e6af9e9c4b3b5dc85f7e243a503443 files/digest-Class-Data-Inheritable-0.04 277
-RMD160 09f922ea5d6644a6e63d9979e5968ec048f0f41b files/digest-Class-Data-Inheritable-0.04 277
-SHA256 c6192b7fcac1f3a1eed724635036b3440d174f73af9aabfc95b2a9fc581b34e7 files/digest-Class-Data-Inheritable-0.04 277
+MD5 ae934c8bdda6015867f688ff2a0e7fc8 files/digest-Class-Data-Inheritable-0.04 277
+RMD160 0a22969925289c3bc465cd7314fb95dcd6d84a17 files/digest-Class-Data-Inheritable-0.04 277
+SHA256 a4b5c9e921c6c001baff5443e4af69211ecc78d5a984c98e0399bc14ac9bd63b files/digest-Class-Data-Inheritable-0.04 277
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD38buJrHF4yAQTrARAs5aAJ9vmSikUkDelyQ6LLAQORcyK7OLeQCff4p4
-xQjP9cbzSaaQkFPDeSszpAI=
-=2hZ/
------END PGP SIGNATURE-----
