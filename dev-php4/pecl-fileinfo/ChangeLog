@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-fileinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-fileinfo/ChangeLog,v 1.8 2006/01/28 19:18:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-fileinfo/ChangeLog,v 1.9 2006/02/03 18:11:30 nixnut Exp $
+
+  03 Feb 2006; <nixnut@gentoo.org> pecl-fileinfo-1.0.3.ebuild:
+  Added ppc keyword. bug 121460
 
   28 Jan 2006; Markus Rothe <corsair@gentoo.org> pecl-fileinfo-1.0.3.ebuild:
   Stable on ppc64; bug #120460
