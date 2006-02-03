@@ -10,8 +10,6 @@ MD5 655fa0ef1b20ccc6bc2268ee90aecc3a files/hostapd-0.5.0-conf.d 425
 MD5 009d662616f66d64ea566b7b132c8556 files/hostapd-0.5.0-init.d 967
 MD5 a45861d1723db49024fa8affa9bfaebf files/hostapd-0.5.1-conf.d 425
 MD5 b73ba7cf689487ef572d0645f81858f3 files/hostapd-0.5.1-init.d 967
-MD5 3d4f2d29f55f0ee2f8117fa90423bff9 hostapd-0.3.7.ebuild 2131
-MD5 57fa2d7578148cbc15ea6873e4656e7a hostapd-0.3.9-r1.ebuild 2126
 MD5 657b30ed33c277b88ddf007a4d1d55e9 hostapd-0.4.7-r1.ebuild 2738
 MD5 82800065536e36fd14e8399fe3902ae7 hostapd-0.4.7-r2.ebuild 2738
 MD5 6046e7a02b115a94635790e6bbad4087 hostapd-0.5.0-r1.ebuild 3222
