@@ -1,4 +1,4 @@
-MD5 8e84f8d52fed6671270c143b8ebc4f6e ChangeLog 9888
+MD5 33ac4a0d689c7e01207cbabd4d40124b ChangeLog 9974
 MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
 MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28-r1 68
 MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3 66
@@ -13,5 +13,5 @@ MD5 ab2763b9426be6cf518c6febf807aca3 libsoup-1.99.28.ebuild 1380
 MD5 17bd009dd39268c10da424baa69eaf3d libsoup-2.2.3-r1.ebuild 755
 MD5 89428354354ead79d37795ca8c257e63 libsoup-2.2.3.ebuild 724
 MD5 cb80564b5282462a9f9393522be5c048 libsoup-2.2.6.1.ebuild 773
-MD5 c4dc86d5a78b51e3c8c175bd0dc681a9 libsoup-2.2.7.ebuild 774
+MD5 79bec638819864c026bd6e32bbdc6b44 libsoup-2.2.7.ebuild 772
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
