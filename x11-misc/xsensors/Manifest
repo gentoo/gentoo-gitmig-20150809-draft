@@ -1,4 +1,6 @@
-MD5 fbae1e76ad0664f2a4bcdd5becc5b66a ChangeLog 1912
+MD5 2ddbaaef81b96c37fb2a43a1c9cb7a36 ChangeLog 2049
 MD5 e46ca33955a44ab6e75bd1e306997a21 files/digest-xsensors-0.47 65
+MD5 93cf7669ed27a58008ede38fb38c2132 files/digest-xsensors-0.50 65
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 4d43ed53c86f1820b851d7e1d2b62016 xsensors-0.47.ebuild 588
+MD5 f740c6ff438e8a13b7ee130363b329dd xsensors-0.50.ebuild 589
