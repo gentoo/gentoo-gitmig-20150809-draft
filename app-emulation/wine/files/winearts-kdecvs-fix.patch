@@ -1,5 +1,14 @@
---- tools/makedep.c	2003-06-20 21:31:13.000000000 +0000
-+++ tools/makedepnew.c	2003-12-01 13:10:10.490498720 +0000
+http://bugs.gentoo.org/31557
+http://bugs.winehq.org/show_bug.cgi?id=2005
+
+fixed upstream between the Wine-20040121 and Wine-20040213 release
+
+note: the way upstream fixed this was by first removing -pthread from
+the output of `$ARTSCCONFIG --cflags` in configure.ac, and then later
+by only grabbing recognized options from the output (like -I*)
+
+--- tools/makedep.c
++++ tools/makedep.c
 @@ -504,6 +504,8 @@
          if (opt[2]) SrcDir = opt + 2;
          else SrcDir = NULL;
