@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.79 2006/02/03 14:50:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.80 2006/02/03 16:22:36 gmsoft Exp $
+
+  03 Feb 2006; Guy Martin <gmsoft@gentoo.org> hal-0.4.8.ebuild:
+  Stable on hppa.
 
   03 Feb 2006; Guy Martin <gmsoft@gentoo.org> hal-0.5.5.1-r3.ebuild:
   Stable on hppa.
