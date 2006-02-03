@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r4.ebuild,v 1.1 2006/02/03 23:29:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r4.ebuild,v 1.2 2006/02/03 23:46:46 genstef Exp $
 
 inherit autotools eutils
 
@@ -36,7 +36,6 @@ src_unpack(){
 	# bug #119898
 	epatch ${FILESDIR}/${P}-try-all-fonts.patch
 	epatch ${FILESDIR}/${P}-splash-overflow.patch
-	epatch ${FILESDIR}/${P}-fontimprove.patch
 	epatch ${FILESDIR}/${P}-pdftoppm.patch
 	AT_M4DIR="m4" eautoreconf
 }
