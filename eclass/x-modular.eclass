@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.41 2006/02/01 02:04:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.42 2006/02/03 18:09:46 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -245,7 +245,7 @@ x-modular_debug_setup() {
 	if [[ -n "${DEBUGGABLE}" ]]; then
 		if use debug; then
 			strip-flags
-			append-flags -ggdb
+			append-flags -g
 		fi
 	fi
 }
