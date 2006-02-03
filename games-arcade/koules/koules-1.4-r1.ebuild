@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.13 2006/01/18 20:59:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.14 2006/02/03 23:58:14 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,15 +15,23 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="svga joystick tcltk"
 
-DEPEND="|| (
-		svga? ( media-libs/svgalib )
-		virtual/x11 )"
 RDEPEND="|| (
 		svga? ( media-libs/svgalib )
+		( x11-libs/libX11
+		  x11-libs/libXext )
 		virtual/x11 )
 	|| (
 		tcltk? ( dev-lang/tk dev-lang/tcl )
 		dev-util/dialog )"
+
+DEPEND="${RDEPEND}
+		!svga? ( || ( ( x11-proto/xextproto
+						x11-proto/xproto
+						x11-base/xorg-server
+						x11-misc/gccmakedep
+						x11-misc/imake )
+					  virtual/x11 )
+				  app-text/rman )"
 
 S=${WORKDIR}/${PN}${PV}
 
