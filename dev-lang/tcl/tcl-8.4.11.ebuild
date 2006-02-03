@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.11.ebuild,v 1.2 2005/07/02 15:25:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.11.ebuild,v 1.3 2006/02/03 01:33:00 vapier Exp $
 
 inherit eutils
 
@@ -35,6 +35,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-multilib.patch
+	local d
+	for d in */configure ; do
+		cd "${S}"/${d%%/*}
+		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
+		epatch "${FILESDIR}"/tcl-configure-LANG.patch
+	done
 }
 
 src_compile() {

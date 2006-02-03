@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.11-r1.ebuild,v 1.2 2006/01/18 20:15:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.11-r1.ebuild,v 1.3 2006/02/03 01:33:00 vapier Exp $
 
 inherit eutils multilib
 
@@ -38,6 +38,13 @@ src_unpack() {
 
 	# bug 117744
 	sed -i -e "s/relid'/relid/" "${S}"/unix/{configure,tcl.m4} || die
+
+	local d
+	for d in */configure ; do
+		cd "${S}"/${d%%/*}
+		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
+		epatch "${FILESDIR}"/tcl-configure-LANG.patch
+	done
 }
 
 src_compile() {
