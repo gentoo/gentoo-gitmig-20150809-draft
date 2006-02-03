@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.74 2006/02/03 16:32:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.75 2006/02/03 19:54:50 corsair Exp $
+
+  03 Feb 2006; Markus Rothe <corsair@gentoo.org> kpdf-3.4.3-r4.ebuild:
+  Stable on ppc64: bug #121375
 
   03 Feb 2006; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.1-r2.ebuild:
   We need poppler-bindings 0.5.
