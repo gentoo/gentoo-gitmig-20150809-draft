@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mwcollect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.9 2006/02/02 20:05:53 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.10 2006/02/03 15:28:06 chriswhite Exp $
+
+  03 Feb 2006; Chris White <chriswhite@gentoo.org> files/confd:
+  Removed deprecated information per bug #121416.
 
 *mwcollect-3.0.3 (02 Feb 2006)
 

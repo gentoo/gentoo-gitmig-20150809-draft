@@ -12,8 +12,5 @@
 
 OPTIONS=""
 
-# example: add log file
-# OPTIONS="$OPTIONS -l /var/log/mwcollect.log -L 3"
-
 # see http://www.mwcollect.org/wiki/DocConfiguration for
 # more info, which is currently empty, though

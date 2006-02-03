@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea77dda93bdc3bcfcdecd647cf26034d ChangeLog 2061
-MD5 dd4aab16ffc56b3eecd0fa6e3ea536b3 files/confd 560
+MD5 4d995748208a585a0b70a0b99713181d ChangeLog 2177
+MD5 2f259f814a98c467de95996fb25ca882 files/confd 483
 MD5 ee61af624456e7fc0ea870d40435fd70 files/digest-mwcollect-2.1.1 66
 MD5 e25a6bca07df41cad22a6901a200651a files/digest-mwcollect-2.1.2 66
 MD5 e5858653fce66aec74497f826c24257b files/digest-mwcollect-3.0.0 67
@@ -25,7 +25,7 @@ MD5 867246cfc0e682523b2d2a735d52a156 mwcollect-3.0.3.ebuild 1475
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4mYxFdQwWVoAgN4RAqnhAKCDdtH+DGK6nnmUA4ItaSKQFZ5BOACeKoO3
-mn4+QypuKzh+Qcux2BSXNvs=
-=8EHi
+iD8DBQFD43abFdQwWVoAgN4RArG7AJ9Geb7EvYjKVhYgh2UHawFuNqV2rACeOv9d
+vp+uGVwzCwaJCpgf3iLCTr4=
+=D94v
 -----END PGP SIGNATURE-----
