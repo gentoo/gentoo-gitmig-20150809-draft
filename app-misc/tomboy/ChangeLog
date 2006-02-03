@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.16 2006/02/02 01:05:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.17 2006/02/03 22:23:05 compnerd Exp $
+
+*tomboy-0.3.5 (03 Feb 2006)
+
+  03 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +tomboy-0.3.5.ebuild:
+  Version bump from upstream.  Fixes bug #121235
 
   02 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org> tomboy-0.3.4.ebuild:
   Add USE_DESTDIR to fix bug #121153
