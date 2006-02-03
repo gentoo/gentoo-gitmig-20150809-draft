@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1710 2006/02/03 19:25:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1711 2006/02/03 22:02:32 vanquirius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -836,6 +836,7 @@ net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
 net-analyzer/net-snmp:smux - Enable the smux MIBS module
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
+net-analyzer/rrdtool:rrdcgi - Build rrdcgi support
 net-analyzer/sancp:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/scapy:gnuplot - Enable gnuplot support
 net-analyzer/scapy:graphviz - Enable graphviz support
