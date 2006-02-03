@@ -1,18 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fcf27a1bb1a4c84f47a7001884e7fc2d ChangeLog 3943
-RMD160 d2adb1a235136d4ef33f982b9ec4332ca57485f7 ChangeLog 3943
-SHA256 da0fe1913950ecd959c12cc36c48ce10f1162ae4d2483356f86c8d794106a6c4 ChangeLog 3943
-MD5 b1aba6dca2e2f18fcd020e34cd35c41b files/digest-pycrypto-1.9_alpha4 244
-RMD160 25fd677ff406cdaa1d0a2011013368c663bed1b4 files/digest-pycrypto-1.9_alpha4 244
-SHA256 e63f27bec8fb82199c469ef7acc28ad834896537cb86fc7d87d2ed8e19451160 files/digest-pycrypto-1.9_alpha4 244
-MD5 c53d5d337c81204a76511f02a71b5796 files/digest-pycrypto-1.9_alpha6 244
-RMD160 e1e043c21b6472a7967b4e61dc29bf7554fe098e files/digest-pycrypto-1.9_alpha6 244
-SHA256 8ee5b2771bd6f06973833b5ff640b93c1007381ee3ff5d4bbe0c8406e558f3cb files/digest-pycrypto-1.9_alpha6 244
-MD5 2028cad6e63a793de2b2a0fc6ad0131d files/digest-pycrypto-2.0 238
-RMD160 1f1ff26322b0b25a4379120708863ebbfb89e8da files/digest-pycrypto-2.0 238
-SHA256 05154d79a389898ac08f5bbf94cf20aee087db6801a101557118075405b7313d files/digest-pycrypto-2.0 238
+MD5 bc3d11c735c1195637208501a7e10494 ChangeLog 4115
+RMD160 59516e348f150a1712bc9f9cc6d49902f9a0dc0e ChangeLog 4115
+SHA256 4ca44d621f7aab3deb83ab36ff45f9a643d981d1ab82cfcb44ff4db549463464 ChangeLog 4115
 MD5 2028cad6e63a793de2b2a0fc6ad0131d files/digest-pycrypto-2.0-r1 238
 RMD160 1f1ff26322b0b25a4379120708863ebbfb89e8da files/digest-pycrypto-2.0-r1 238
 SHA256 05154d79a389898ac08f5bbf94cf20aee087db6801a101557118075405b7313d files/digest-pycrypto-2.0-r1 238
@@ -43,12 +34,6 @@ SHA256 b8cb928cbf1713eff06c6899cb773c9a02f28e85de02e7d6f45ed1be413b47dd files/py
 MD5 5b03cb0967f5fb96991f2463fa415797 metadata.xml 1774
 RMD160 b0aeda4d69c1dc4ec798f05f617a2d0ddf8c29ab metadata.xml 1774
 SHA256 b4fe5bcbed977469f626a33c8b9c16d860e53e16b02f78ce931f6afa67c98ac2 metadata.xml 1774
-MD5 44877b6ed99242a7cab50a1941a19351 pycrypto-1.9_alpha4.ebuild 710
-RMD160 6318f3e5599c04cca386b1dcebc25db1a136fe78 pycrypto-1.9_alpha4.ebuild 710
-SHA256 3669783185ae423d6c6efa93a07aed138360aea61b1221f135d4b0a37dd69e93 pycrypto-1.9_alpha4.ebuild 710
-MD5 3172f23539eb54a31ad3a7d8321d4557 pycrypto-1.9_alpha6.ebuild 622
-RMD160 eb07504d823fa88c34a7377118202b2ea8bd98d1 pycrypto-1.9_alpha6.ebuild 622
-SHA256 941bb811cb8e97dbfdc25668570dc240cc1a998f543c07ebdf5875456c5dc5da pycrypto-1.9_alpha6.ebuild 622
 MD5 02617d7c68367ab65a8acab0f11acc97 pycrypto-2.0-r1.ebuild 600
 RMD160 e2f5a09e957d0b43ce673ad95bfc681e7cf59f11 pycrypto-2.0-r1.ebuild 600
 SHA256 0bdae681ac3517d60fee2e1b37172f121f8afddeaaa6000295ef166800c8b818 pycrypto-2.0-r1.ebuild 600
@@ -64,13 +49,10 @@ SHA256 2666d676f063ffd504d0cc54e8c09a219eb12ba4004fc87cd15375783d86eac1 pycrypto
 MD5 13d0293b0075a1d14f88ce4df3a1188b pycrypto-2.0.1.ebuild 762
 RMD160 70e38bec63b2448e0cfdbbfe8fbf3ab07a30fe17 pycrypto-2.0.1.ebuild 762
 SHA256 b85d654c25a7403b351ac536c0a855d4f8c898d59a98b88b0e68d7e808b03870 pycrypto-2.0.1.ebuild 762
-MD5 1ff484937e9f3be035fe383ea160e8ad pycrypto-2.0.ebuild 573
-RMD160 6e9022da62464f414b34ac0be186d585f2e20f4c pycrypto-2.0.ebuild 573
-SHA256 da063c1de165847585cc5a452f343a4101a9baee19e6a9c367e77fb54a74f64a pycrypto-2.0.ebuild 573
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4hJzJrHF4yAQTrARAowKAJ4pWoJiEWPkRVlnyRqujLl/XMW9nwCaA/bD
-CylCKsFuiGnRuKl4q2Um3UE=
-=zr7w
+iD8DBQFD44m4JrHF4yAQTrARAvxfAJ4mdvflvh6UZSpGyXBWs87pjcsl7gCeNQVr
+S+EX+7I+1ECOGssIA5AfJHk=
+=xQKr
 -----END PGP SIGNATURE-----

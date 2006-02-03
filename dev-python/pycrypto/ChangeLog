@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.28 2006/02/02 14:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.29 2006/02/03 16:49:48 agriffis Exp $
+
+  03 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  -pycrypto-1.9_alpha4.ebuild, -pycrypto-1.9_alpha6.ebuild,
+  -pycrypto-2.0.ebuild:
+  Remove 2.0, 1.9_alpha6, 1.9_alpha4
 
 *pycrypto-2.0.1-r3 (02 Feb 2006)
 
