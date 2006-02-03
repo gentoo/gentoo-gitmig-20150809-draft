@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/mrbayes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.10 2006/01/09 00:24:50 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.11 2006/02/03 03:54:56 ribosome Exp $
+
+*mrbayes-3.1.2 (03 Feb 2006)
+
+  03 Feb 2006; Olivier Fisette <ribosome@gentoo.org>
+  +files/mb_readline_312.patch, +mrbayes-3.1.2.ebuild:
+  New version. Added readline support. Thanks to Paul van der Mark for his
+  work on this ebuild.
 
   09 Jan 2006; Homer Parker <hparker@gentoo.org> mrbayes-3.1.1.ebuild:
   Marked ~amd64.
