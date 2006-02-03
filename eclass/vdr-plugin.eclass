@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.11 2005/12/10 10:59:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.12 2006/02/03 21:18:52 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -43,7 +43,7 @@
 #     It could be used for special startup actions for this plugins, or to create the
 #     plugin command line options from a nicer version of a conf.d file.
 
-inherit eutils flag-o-matic
+inherit base eutils flag-o-matic
 
 # Name of the plugin stripped from all vdrplugin-, vdr- and -cvs pre- and postfixes
 VDRPLUGIN="${PN/#vdrplugin-/}"
@@ -107,7 +107,7 @@ vdr-plugin_src_unpack() {
 
 		case "$1" in
 		unpack)
-			unpack ${A}
+			base_src_unpack
 			;;
 		patchmakefile)
 			cd ${S}
