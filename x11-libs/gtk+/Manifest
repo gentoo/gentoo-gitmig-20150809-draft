@@ -1,21 +1,73 @@
-MD5 e59a57a204f0ada2d7b0c0101eb1d05f ChangeLog 30921
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6fac7b1747f264b01dad0ed9f3ce529c ChangeLog 31021
+RMD160 9dd747c644a4afda5b21662aa1cd6389998f4d93 ChangeLog 31021
+SHA256 4e678b457c9c25b639029165e347bb4631ec4e9901bcb2edd38c216456289bc6 ChangeLog 31021
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
+RMD160 089774caae5ebadfe26a94913e690a0e2b1edd39 files/digest-gtk+-1.2.10-r10 138
+SHA256 f1c6441519ca2edf919e1163744c97ef7b7ff05bf456efed405eef49e2684048 files/digest-gtk+-1.2.10-r10 138
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
+RMD160 089774caae5ebadfe26a94913e690a0e2b1edd39 files/digest-gtk+-1.2.10-r11 138
+SHA256 f1c6441519ca2edf919e1163744c97ef7b7ff05bf456efed405eef49e2684048 files/digest-gtk+-1.2.10-r11 138
 MD5 f0e0f202bdf17540985215d5384480ed files/digest-gtk+-2.6.10-r1 212
+RMD160 1589e5993ab3c1086fa6b60ed4dec3633fd495fd files/digest-gtk+-2.6.10-r1 212
+SHA256 5ac30a979bdf26948a53b8e96c74733e8d3c68bdddf44bace638b9afba3cf3da files/digest-gtk+-2.6.10-r1 212
 MD5 3d136a29a973e16c88bb0ead86243644 files/digest-gtk+-2.8.11 141
+RMD160 db069c6adfcc2dc1b4be4f22d666c83e18f7bc38 files/digest-gtk+-2.8.11 141
+SHA256 66729e26d2a376aadb69ad3daf8a5da4f5c3da0a5ad3f76912fab5ca685d04ec files/digest-gtk+-2.8.11 141
 MD5 c2395b72772f29144c0b34c311e68b26 files/digest-gtk+-2.8.8 140
+RMD160 f6477660581c85e3ea93da9b51ee00e3a823e9d9 files/digest-gtk+-2.8.8 140
+SHA256 71839aa71eb0523b5315576e62cb32060bf9743c491f8b186dd131846631757e files/digest-gtk+-2.8.8 140
 MD5 5e3ff7fa761495300d3f30c9207c13f8 files/gtk+-1.2-locale_fix.patch 419
+RMD160 a0fbf3fb111f39b7a62c3fa31a803ef2a0ee945a files/gtk+-1.2-locale_fix.patch 419
+SHA256 2e3cf84902d2f318dcbf4f9ad976573295d8d984c7a860291f37f768fc7966cb files/gtk+-1.2-locale_fix.patch 419
 MD5 0ec83a4bf20f79d85eb2976b58c39465 files/gtk+-1.2.10-m4.patch 220
+RMD160 c3f0ac9022a32aeef80ccf77493779fd58884b10 files/gtk+-1.2.10-m4.patch 220
+SHA256 88f45c2f0413f29d62ca138c87b41d24a73b47456f5b469277843de827717324 files/gtk+-1.2.10-m4.patch 220
 MD5 cd1c96c0a81026a3af29449389e455d5 files/gtk+-2-xpm_loader.patch 920
+RMD160 08e77b9df95557e874a193dd45aad84835a2c281 files/gtk+-2-xpm_loader.patch 920
+SHA256 ee01227c6dae5041040aac8d43c16b689cca197ea1fca62401e5011623ee832c files/gtk+-2-xpm_loader.patch 920
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
+RMD160 f2557ee984df766bce0b5e5ea8c41962a2ccff13 files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
+SHA256 f4b916c7d26ba60b5d5af63ff694a5203f0dcd31b7310fb375c324fc1df72e05 files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 MD5 0df92cf64a9324ef85fc72885a4285b1 files/gtk+-2.4.9-ppc64.patch 1732
+RMD160 d7b045fa46eaa30908ec9e9c19c0fed48a5a20fa files/gtk+-2.4.9-ppc64.patch 1732
+SHA256 1635e4cde6206a14dac56fe3eee996ebfe4bcc7e30c47bbe9f30b106110378c7 files/gtk+-2.4.9-ppc64.patch 1732
 MD5 5f35263753f0ad976c13f501247b8d51 files/gtk+-2.8.0-multilib.patch 2456
+RMD160 ba94fb0b16f9002dec8e92700ff3f7931f600548 files/gtk+-2.8.0-multilib.patch 2456
+SHA256 595bddaa3e50a54f47dbcf30381e11bce0baa1ccd683ac1ba30ca0221b78a4fd files/gtk+-2.8.0-multilib.patch 2456
 MD5 8289aa1fb556b38e9fb2f9201a065755 files/gtk+-2.8.10-xinerama.patch 1083
+RMD160 499801f3be2289bdc656563bb5c96797d14512f7 files/gtk+-2.8.10-xinerama.patch 1083
+SHA256 7786691d5f89588abc7174e97cbd374d8cbe98b4e8dfd27005eade03b047aa2d files/gtk+-2.8.10-xinerama.patch 1083
 MD5 9ea5c063ade44a46b279eab398fc969a files/gtk+-gdk-pixbuf-testfix.patch 578
+RMD160 317120af2683d5ac6119a89745b38f71b0581e40 files/gtk+-gdk-pixbuf-testfix.patch 578
+SHA256 f1fb49b3a93db10bdf6f29a641d5bdb6ebb96956623f0492a52efebdfa238fb2 files/gtk+-gdk-pixbuf-testfix.patch 578
 MD5 36d00cf3b4035e6cb9873ade9ed1a9ce files/gtkrc 627
+RMD160 3171e0c9132bb2a9119c51750702db23c4a5f076 files/gtkrc 627
+SHA256 22e4197e5976ed623233399049082383033b613176d77126d246a1f6cb747294 files/gtkrc 627
 MD5 03ae62ac03643ccc0a36779df1bfd6af gtk+-1.2.10-r10.ebuild 1702
+RMD160 3ae454009ab1db14ff8e9573af69f37b2fb9755d gtk+-1.2.10-r10.ebuild 1702
+SHA256 ccfbc648d671ee7f966f8f03d808cba825279c55fd9bdbfbf6331a73332441b5 gtk+-1.2.10-r10.ebuild 1702
 MD5 60b495d6aa1169ba2dc4b20a303b18d7 gtk+-1.2.10-r11.ebuild 1916
+RMD160 06c322a5a109a750b018f237aa21a3aa5c33178a gtk+-1.2.10-r11.ebuild 1916
+SHA256 0efbb8dd9efcd76fb152c5cf403fbaf4644b76cc44cb561a9c2e2bdc8538b0db gtk+-1.2.10-r11.ebuild 1916
 MD5 6017f72966d53602c58c288364dd61a9 gtk+-2.6.10-r1.ebuild 3125
+RMD160 5e55bb7d0485906a46a39dfb72ec99cd8e807e99 gtk+-2.6.10-r1.ebuild 3125
+SHA256 0bb665028002781a421861aae73f864c4b7815867b6829274ca62f1a6f041f1d gtk+-2.6.10-r1.ebuild 3125
 MD5 98c3798b9681eb69ff09d1147d16e602 gtk+-2.8.11.ebuild 4192
-MD5 56805e48f2c78dfdc9578e0189f0aea8 gtk+-2.8.8.ebuild 4112
+RMD160 6e692a0ae91d437641f042279e9c70502c8d7d63 gtk+-2.8.11.ebuild 4192
+SHA256 4ab0c704bb526c5a5e77aeff321d68f5542ca8aa86acd4fd0d80f9a163847eb0 gtk+-2.8.11.ebuild 4192
+MD5 eae2dcc7f50ccdc71d375984f2104005 gtk+-2.8.8.ebuild 4113
+RMD160 2a0a497cc25fecdec658b444eacb1374e7491a36 gtk+-2.8.8.ebuild 4113
+SHA256 11c0c44d19b8efe7994af62a4bed7aec110cb69e2f3b8d0bdd72bbe7cfdfe121 gtk+-2.8.8.ebuild 4113
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
+RMD160 b1748199254d5d0f0db468fdec36f07bb75a3231 metadata.xml 424
+SHA256 8b65272928e676824c407ed438004d9e5d50077a09beee0b60984eadb695bc2d metadata.xml 424
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD49IpJrHF4yAQTrARApwNAJ4ybUAvW1nmANO3HK4ExMzAAuCjngCgtpRr
+jUmD331mwbioJ3CTsMOcxkM=
+=kcTO
+-----END PGP SIGNATURE-----
