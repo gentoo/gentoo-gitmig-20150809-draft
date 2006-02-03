@@ -1,21 +1,73 @@
-MD5 d47e638506a0b515008ace3f92b91ca0 ChangeLog 6085
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 474d09d03f62d600545bb9d5925be24a ChangeLog 6189
+RMD160 62edb02ceb6b63cceddaf1de8039b2972ab3271e ChangeLog 6189
+SHA256 a25f0d6ef714f9d89d2367396f18bbefff93a1c2c0676f925594ffd30a2ff0ff ChangeLog 6189
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
+RMD160 2f76ade4f68e0208d9b33dc365ca2235b43cefb4 files/digest-museseq-0.6.2-r1 64
+SHA256 a658c57c0353cbc9acd1b76feeaf9183488c14277283865c9eb16749a287de6f files/digest-museseq-0.6.2-r1 64
 MD5 20ef97c251eae618ada71d7493308b96 files/digest-museseq-0.7.0-r1 64
+RMD160 a57d86a862120ee541389669a222e7193fb274b9 files/digest-museseq-0.7.0-r1 64
+SHA256 7d6c3fc0c95ef24b2d8587237949c4d972010257541b8f3f4190423bbeba9618 files/digest-museseq-0.7.0-r1 64
 MD5 1006036f5832dc460206b706858ff87b files/digest-museseq-0.7.1 69
+RMD160 784f26d37bc2a8a7cf52eec5a0b918b65800c7ad files/digest-museseq-0.7.1 69
+SHA256 3483704db4eb6fd7239bb779ef7dee9f73deb9283dec1bec9b71358f0177f4b4 files/digest-museseq-0.7.1 69
 MD5 8e4317aae91e4f07628431262e27ad09 files/digest-museseq-0.7.1_pre3 68
+RMD160 11e879a37ad6d26f311a463cea64e1b1bec13430 files/digest-museseq-0.7.1_pre3 68
+SHA256 42948c9b684717abdd84e6359839748a9e7825ae7d4e715332cdbe2c9a86dc32 files/digest-museseq-0.7.1_pre3 68
 MD5 2c6c891ab9c7acc10851768de6961ade files/digest-museseq-0.7.2_pre2 68
-MD5 bb5d649185761033994533106e904174 files/digest-museseq-0.7.2_pre5 67
+RMD160 f886fe97bee22009a20f944df85df61b4d29699b files/digest-museseq-0.7.2_pre2 68
+SHA256 084df92de422a33c5ca8c532f0cbe467c943946a6b23ce86be9232c7b818571d files/digest-museseq-0.7.2_pre2 68
+MD5 fad09d53bfa3d0773d50ad93b6d6e0ab files/digest-museseq-0.7.2_pre5 247
+RMD160 c514888eb4e50a1019844b9a6fffbc285873d04e files/digest-museseq-0.7.2_pre5 247
+SHA256 7f4cdf4a72439fb292936c6c592da5c89a376143a2959b7a060c48cf813f39d0 files/digest-museseq-0.7.2_pre5 247
 MD5 49c3c1f0136766a89c7cd1ba91006bc6 files/museseq-0.6.2-drumport.patch 771
+RMD160 a701a83a322ebd03d4f682b3846cca0aa2cbcd6b files/museseq-0.6.2-drumport.patch 771
+SHA256 2dc2a1b64c5dfe4bb3e27a9d36ffc45792e7b9998659af01ec2d7e3fab707b33 files/museseq-0.6.2-drumport.patch 771
 MD5 08b5947de834c47253a313e6a7d0a3e5 files/museseq-0.6.2-fPIC.patch 4002
+RMD160 1332d900dfc671d8f8d631a840d151f5c815630a files/museseq-0.6.2-fPIC.patch 4002
+SHA256 00e6bf5f01c82a4db5705a3854789fd395c96cdc8b2ff45ca03b51e62ae395bd files/museseq-0.6.2-fPIC.patch 4002
 MD5 8bf0be08b3013a6047aecad1e99bc1fb files/museseq-0.6.2-gcc34.patch 5500
+RMD160 9cba354ade16eed9089dcf8e4789db539afb23d2 files/museseq-0.6.2-gcc34.patch 5500
+SHA256 c35aee58322ddac32ef1621a7094b4c9d946bcc820bd2088b7e9ecea74e13a77 files/museseq-0.6.2-gcc34.patch 5500
 MD5 34b26def47703a0516433e9fb07ed0fd files/museseq-0.6.2-int2ptr.patch 20425
+RMD160 d03e545bdc1f0df3e5370b159b5a5d30aa30aaa3 files/museseq-0.6.2-int2ptr.patch 20425
+SHA256 4567f94666d165270002624bb179e297cf74a6ef5558ba2ebb6b7020243a030b files/museseq-0.6.2-int2ptr.patch 20425
 MD5 7fb0bc9c25aa67018b8c07120f4f16a1 files/museseq-0.6.2-memory.patch 2032
+RMD160 5c53d5ffc0ada346482dba74faa8bfe14cb7b747 files/museseq-0.6.2-memory.patch 2032
+SHA256 962f0e39c7aba8997a4767d958ccb0f6efc6e9dafdc117a1ff048e37a9035ccf files/museseq-0.6.2-memory.patch 2032
 MD5 fd23ed0d1b20d7ed5f18d26d4a45acc1 files/museseq-0.7.0-suidinstall.patch 837
+RMD160 c0ce5ea66c3d0ea054dc5fafe56d409851d928ef files/museseq-0.7.0-suidinstall.patch 837
+SHA256 13f515627e3e93aad88e8544942b8f1939728259ab024849ccc5316a2c9c71ab files/museseq-0.7.0-suidinstall.patch 837
 MD5 5cfdb8a06e52a3113b39a238bd45c860 files/museseq-0.7.2_pre5-rtctimerfix.patch 509
+RMD160 fe785c892e886ef562e9927736055a0946b6561a files/museseq-0.7.2_pre5-rtctimerfix.patch 509
+SHA256 37333b5a59eb209546fcc345d8316830baabb7d1813e16b8832b36f8e0738850 files/museseq-0.7.2_pre5-rtctimerfix.patch 509
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+RMD160 600a2278f8a89283311c5bb10b02d54cebef8ca3 metadata.xml 221
+SHA256 3341e7789c5ba08aade2440d5ce6d2937e8432775731033190f11df5f64d085e metadata.xml 221
 MD5 e3c9d995656f80d91052de1320af5934 museseq-0.6.2-r1.ebuild 3140
+RMD160 38463fb4008e1fc6aa4bdbf449331b45215c1582 museseq-0.6.2-r1.ebuild 3140
+SHA256 905521b1c39c097aa799330234345e52f8a33bcee9b3452c0f3a40e2393b572c museseq-0.6.2-r1.ebuild 3140
 MD5 298a2b1058e54c7d5da5294d1d63e07b museseq-0.7.0-r1.ebuild 1960
+RMD160 e13ae4e0349c4383baed83b4bef4939d47a98b1f museseq-0.7.0-r1.ebuild 1960
+SHA256 1bb3c9b6f3368ef7696c725d3ae4420b0c96fb7c35b5e935bec518029f159059 museseq-0.7.0-r1.ebuild 1960
 MD5 caecf6cff21c5e9ec670b5904f6700ab museseq-0.7.1.ebuild 1752
+RMD160 9943a39a886eff982b60a0b3931c1b878f5f738f museseq-0.7.1.ebuild 1752
+SHA256 933c2bbd80feaa557741fa90b4f77276e7d880af22700cc717da26ea8b60d3c0 museseq-0.7.1.ebuild 1752
 MD5 807a8c3d57d8116a56cc51e6c64db7ff museseq-0.7.1_pre3.ebuild 1696
+RMD160 2c04f497b2a2df43520646c2fdd6afae60f4e7de museseq-0.7.1_pre3.ebuild 1696
+SHA256 33eb0e054bed8372793bdc65ba635366948419c1d754f4e001d10175f2750071 museseq-0.7.1_pre3.ebuild 1696
 MD5 e55b1aaf26a535d85a9ee2353999c80a museseq-0.7.2_pre2.ebuild 1720
-MD5 d0a418e0dc2395d7ed2e59d04e15b216 museseq-0.7.2_pre5.ebuild 1810
+RMD160 9f51b898980546913276f21df3a8752a316c83fc museseq-0.7.2_pre2.ebuild 1720
+SHA256 4c4700b59c26996cc5a6d67964d5b51088a3322368a411bdf03604d7b8c73812 museseq-0.7.2_pre2.ebuild 1720
+MD5 6166fdd458562ccf3658b4a397a02cb3 museseq-0.7.2_pre5.ebuild 1803
+RMD160 df9ba9b6a8b6f6913852a0a35ba5586b80a9613e museseq-0.7.2_pre5.ebuild 1803
+SHA256 42f28e95c2b4ff58594b59429ce2c9a3f28c5b2cc4fca54f021dc8e9ec561ebc museseq-0.7.2_pre5.ebuild 1803
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD49Lpvpz1081QvMkRAgQhAKCfmyC23iU70lXWZfZ7zCjJOYqRJgCcC+VW
+Q9ngBBg7RlWfiCtT8s4VhjY=
+=lpyg
+-----END PGP SIGNATURE-----

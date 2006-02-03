@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre5.ebuild,v 1.2 2006/01/13 21:13:36 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre5.ebuild,v 1.3 2006/02/03 22:01:52 fvdpol Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -9,7 +9,7 @@ MY_P=${MY_P/_/}
 
 DESCRIPTION="MusE is a MIDI/Audio sequencer with recording and editing capabilities"
 SRC_URI="mirror://sourceforge/lmuse/${MY_P}.tar.gz"
-HOMEPAGE="http://http://www.muse-sequencer.org/"
+HOMEPAGE="http://www.muse-sequencer.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
