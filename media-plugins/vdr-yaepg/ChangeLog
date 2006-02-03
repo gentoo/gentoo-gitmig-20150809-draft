@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-yaepg
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.1 2006/02/03 00:17:04 zzam Exp $
+
+*vdr-yaepg-0.0.2.1 (02 Feb 2006)
+
+  02 Feb 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-yaepg-0.0.2.1.ebuild:
+  Imported ebuild from gentoo.de
+
