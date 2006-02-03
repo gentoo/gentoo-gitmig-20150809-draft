@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4b3e5c9d0eaa2faaeef9bf8f2f0f293f ChangeLog 3556
 RMD160 26e8722b2f963e4bc360d346bd0ddbdaaa0d4307 ChangeLog 3556
 SHA256 907bb3465cebc6f9932fcaedb39ef6ed4c0fc5ca3edb9d05df640e09b0a93049 ChangeLog 3556
 MD5 dee99b75f4b766a4a588ddb6b8a086c0 files/digest-gnome-python-extras-2.10.2 79
 RMD160 f87879a97dbea64c4dd6f100fdcd78d4050423f0 files/digest-gnome-python-extras-2.10.2 79
 SHA256 5e1fad2231e98098eb52741a5231a3847b85fd824da90cfaa75d4af31a47e3be files/digest-gnome-python-extras-2.10.2 79
-MD5 b7b0497a04f349977d259c76f5cc887b files/digest-gnome-python-extras-2.12.0 79
-RMD160 39491be5cc1efac5eb794d811b6c0cbacb89c361 files/digest-gnome-python-extras-2.12.0 79
-SHA256 8459d27b619fb0faedeca649fb4e1d0f9e8e51f1f42d5a7e4e125ebfa54ac27a files/digest-gnome-python-extras-2.12.0 79
+MD5 6c58944e47af3b3b32364749b4c97dbe files/digest-gnome-python-extras-2.12.0 283
+RMD160 ce4c5ce5de4c1460a369f54acffe2034d39eb8af files/digest-gnome-python-extras-2.12.0 283
+SHA256 c6908c45b95ca4d1dd00be9960292bb6c2f35442bf4f06cb8e4b3529472df502 files/digest-gnome-python-extras-2.12.0 283
 MD5 f6b648dacaa5c2cfe66a073f44957bef files/digest-gnome-python-extras-2.12.1 79
 RMD160 2ba41728ea8d243ffa374acd320749f92490db7c files/digest-gnome-python-extras-2.12.1 79
 SHA256 7b74d80764f58dda02df554365fbfb5eec527e8495e3f6e900d65d71af935236 files/digest-gnome-python-extras-2.12.1 79
@@ -28,10 +25,3 @@ SHA256 6577ac5ae70d7fb55073e638855c26c0d59fefe32b0b0d422be15e8d88aaa281 gnome-py
 MD5 7815efa8e3c1eece4b748785c644df85 metadata.xml 243
 RMD160 744a2788cbe20380a4d1652d0de573cddd0aa35f metadata.xml 243
 SHA256 1f38898a4be9f039c909d729aca8dbbe5c5c6a8340a6448ab3c4c69a7ff4ccc6 metadata.xml 243
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4X5OJrHF4yAQTrARAqgwAJ4r4ZjcoEr174EyhU6TBlOUsqEXfgCfRGDk
-nslRYbm8QVSa5NOjMvwXMjc=
-=Gz9Z
------END PGP SIGNATURE-----

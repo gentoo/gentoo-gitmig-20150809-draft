@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 20d0075187bf7bf9140ec18947773abd ChangeLog 3262
 RMD160 4fe7d0237cd6ad03d637ab32a6027fbd58bbda05 ChangeLog 3262
 SHA256 d01f728506f04e5128a4e58f3f0332e990843b80e12199826a360d81cda14808 ChangeLog 3262
@@ -25,16 +22,9 @@ SHA256 7d762c7f60a6f105f5517b554ad0c2e7c551a109a78b586c7c914df6330ecdd0 files/di
 MD5 e89e30abad80039c3811d50c3789bb73 files/digest-dnspython-1.3.4 66
 RMD160 fbd388bf23792d146946423015a214c6a95e8476 files/digest-dnspython-1.3.4 66
 SHA256 7e3341d0a2ce4c47e0ea4989aba4fbf07b294ed50a5ad3727d6a14f3a3e3a3cb files/digest-dnspython-1.3.4 66
-MD5 92a9a5780c78e70ffef19544cc1e9c9e files/digest-dnspython-1.3.5 66
-RMD160 ed4377f4e0e07acb410e1da3ed21a71d8e390334 files/digest-dnspython-1.3.5 66
-SHA256 1d8533f231532a8846ff507791c5f4dfda6c1e1bcf1b0722763fb56b09216c26 files/digest-dnspython-1.3.5 66
+MD5 e02657f9157e46894c06618f2e2b3173 files/digest-dnspython-1.3.5 244
+RMD160 ea217ef495a0dc26a051b9bca800f6d738eae73d files/digest-dnspython-1.3.5 244
+SHA256 97037cdd752f2c7b6b7e2ebc5d1dbe0cda177b9c223f6c473b05f7e119fe6dc6 files/digest-dnspython-1.3.5 244
 MD5 d543a62aa1a2072b30094dde66e1da79 metadata.xml 1301
 RMD160 f6d5b7288cb5c351fd4b91c2fea46007d92b8520 metadata.xml 1301
 SHA256 9e6cfdf51a2995ef9ad7df3a2fd664de677ec4ad5e9a6d6394d429d8af0818bd metadata.xml 1301
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4lfsW78445TWHXcRAoyVAJ9LOoTT+WYFHS+mDf6NvJVn2dnEdQCfWLVK
-B+58NtaLY7ZGz8J8lRMj4v0=
-=aMbM
------END PGP SIGNATURE-----

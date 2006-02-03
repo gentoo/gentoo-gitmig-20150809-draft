@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6fbf067a8c850762dd264c605dce527d ChangeLog 4550
 RMD160 3b96db0f9b8c9988e9d4e84c2b5a4686e97092c9 ChangeLog 4550
 SHA256 30bf5e0387b31f92bc79e17d0687a5c035c8924fcdb8bf21ae4129f13c9c3bda ChangeLog 4550
@@ -19,9 +16,9 @@ SHA256 fe5083537a990d82008bfbe9096e36f3a3fc28ec5d82e5e05a427f6e958d61e0 cheetah-
 MD5 4085c86d760d85b5948aa799ec6928fa files/digest-cheetah-0.9.17 66
 RMD160 8be29235d90d269b964584d804510e107bd67d8d files/digest-cheetah-0.9.17 66
 SHA256 281b92f1f6dec3ca8116e342d72c54fe09391bc8e3aa2b6fea549582e367c0e6 files/digest-cheetah-0.9.17 66
-MD5 8c06f8d0e3b94288407944199e356794 files/digest-cheetah-0.9.18 66
-RMD160 567265b4a4a46a46b3d2cd169b49131da81088c6 files/digest-cheetah-0.9.18 66
-SHA256 0937b310c30d6ffe39482a0667dfefe727265eacab5466938ec985d36eead307 files/digest-cheetah-0.9.18 66
+MD5 805c29e5be27597296e47af73ed99eef files/digest-cheetah-0.9.18 244
+RMD160 ba257a1ee962e075bb637b1b278aec60f8d2cef9 files/digest-cheetah-0.9.18 244
+SHA256 a3e1701a156d37a0716401dc61cbfaae8669bed5989db25fa59724ca9b4feb00 files/digest-cheetah-0.9.18 244
 MD5 08fe598c18e1f668917a3e4a0eb773e2 files/digest-cheetah-1.0 63
 RMD160 112498cc17d3896c74b7c7ed9b4a72cfa6e67ddf files/digest-cheetah-1.0 63
 SHA256 fcfb7e7960c87d3a9afb054a7aacafc5e0bd73917e9f0031ddea9fb7f193420b files/digest-cheetah-1.0 63
@@ -31,10 +28,3 @@ SHA256 3dad3ad70dead42b93dbcee85bd1ce01590bfc790e3ac5890b11782d836c9126 files/di
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4leQW78445TWHXcRAhQNAKCX8OAEvihDz2h692uqx1Yi4G/vVwCgnPgx
-3cpMKpCw0Xfvvwsb9vWZ5PY=
-=aQP9
------END PGP SIGNATURE-----
