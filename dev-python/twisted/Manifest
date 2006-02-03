@@ -13,9 +13,9 @@ SHA256 38497fe8d7fea068929208838dc2fd189b5fc172b6449b7ae0fa986f746059fd files/di
 MD5 1d3126a7c14d292951e51397db90bc83 files/digest-twisted-2.0.1 67
 RMD160 82e7e057b3d815cdb19ca0c337296eb150855303 files/digest-twisted-2.0.1 67
 SHA256 7c64aad689e66d0c5d2a61941ae747c7707eaec77d217d61877c3f9d31c7f300 files/digest-twisted-2.0.1 67
-MD5 2b9136e1ddf2b7467c5f6a71d87f90c2 files/digest-twisted-2.1.0 67
-RMD160 ca5ae30c34c0fe5cac710d6ea009a1c2a1e0536c files/digest-twisted-2.1.0 67
-SHA256 d4b38f5266d0197471ce0e472a210beaec7f885d8ab730ede0c1f74002c1d47e files/digest-twisted-2.1.0 67
+MD5 f31de6220dc1b05c4ae5e7d0e4bb06bc files/digest-twisted-2.1.0 247
+RMD160 42077382825c92fc5e929bdb19a1452dfdf9318d files/digest-twisted-2.1.0 247
+SHA256 176d9d35264027ca7dcf72b0d34df0ecaa03d577138f9ce1b73bd436ce657fa2 files/digest-twisted-2.1.0 247
 MD5 7ec438488427334851e2eb977e4d8073 files/twistd.conf 277
 RMD160 c959b879d6f7358b647c71c3b514a4a6c8a49eef files/twistd.conf 277
 SHA256 aa2ffa5b128973bc0c58a1251b8bbb56f6f890728bc902805ea2db7606416119 files/twistd.conf 277
@@ -47,9 +47,9 @@ MD5 594fb659773dc51c1f0c8b03a4f24e90 twisted-2.1.0.ebuild 3044
 RMD160 aa9f70996d8c2b2797e7f80e643277b04ad4bbc9 twisted-2.1.0.ebuild 3044
 SHA256 46ad17bb5d27d534e9b5d5d43c24c4840e6e987dac5fbee4d2547f497e87582a twisted-2.1.0.ebuild 3044
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD4l2MW78445TWHXcRAiZGAKCZQTzgbH4vj8kI61gOsXUQg/ra4ACeO0Co
-wrNnWUhJMvbbcnx5gYJ6gOE=
-=x9Fq
+iD8DBQFD4+dsJrHF4yAQTrARAt3uAKDLzrbQPVGonh6Iv1xQ89pfFintogCdEvTV
+kHw+bBTfrWl7AIARlYVhspA=
+=6sz0
 -----END PGP SIGNATURE-----
