@@ -9,7 +9,7 @@
 	    Spieleplattformen.
 	</longdescription>
 	<longdescription lang="es">
-		La categoría games-emulation contiene emuladores dejuegos de plataforma.
+		La categoría games-emulation contiene emuladores de juegos de plataforma.
 	</longdescription>
 	<longdescription lang="ja">
 		games-emulationカテゴリーにはプラットフォームをエミュレートしたゲームが
@@ -23,6 +23,10 @@
 	</longdescription>
 	<longdescription lang="it">
 		La categoria games-emulation contiene emulatori di piattaforme di gioco.
+	</longdescription>
+	<longdescription lang="pt">
+		A categoria games-emulation contém emuladores de plataformas de
+		jogos.
 	</longdescription>
 </catmetadata>
 
