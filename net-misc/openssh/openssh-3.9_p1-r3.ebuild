@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.11 2006/01/31 00:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.12 2006/02/03 01:55:18 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic ccc pam
 PARCH=${P/_/}
 
 SFTPLOG_PATCH_VER="1.2"
-X509_PATCH="${PARCH}+x509-5.2.diff.gz"
+X509_PATCH="${PARCH}+x509-5.3.diff.gz"
 SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 LDAP_PATCH="${PARCH/-/-lpk-}-0.3.6.patch"
 HPN_PATCH="${PARCH}-hpn11.diff"
@@ -18,7 +18,7 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
-	X509? ( http://roumenpetrov.info/openssh/x509-5.2/${X509_PATCH} )
+	X509? ( http://roumenpetrov.info/openssh/x509-5.3/${X509_PATCH} )
 	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )"
 
 LICENSE="as-is"
