@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.6629.ebuild,v 1.3 2005/06/12 12:15:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.6629.ebuild,v 1.4 2006/02/03 13:39:57 blubb Exp $
 
 inherit eutils
 
@@ -28,8 +28,7 @@ src_unpack() {
 
 	# libXNVCtrl.a is 32 bit built, fixing thanks augustus
 	use amd64 && \
-		bzip2 -dc ${FILESDIR}/libXNVCtrl.a.bz2 \
-			> ${S}/src/libXNVCtrl/libXNVCtrl.a
+		cp ${FILESDIR}/libXNVCtrl.a.bz2 ${S}/src/libXNVCtrl/libXNVCtrl.a
 }
 
 src_compile() {
