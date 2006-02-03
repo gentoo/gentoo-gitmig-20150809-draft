@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f34d6331002203b0fce7331b63324394 ChangeLog 652
+MD5 2211d7516cc2ea8da99583dbb4f86c4b ChangeLog 740
 MD5 5808c16ea2ebf688f36553295fd2caee files/digest-jpgraph-1.19 65
-MD5 7836347de06ae7dfd9f2263effcc303c jpgraph-1.19.ebuild 2507
+MD5 3cbe7705ebe83566da56e634513ac713 jpgraph-1.19.ebuild 2510
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4Po0KRy60XGEcJIRArY2AKCpFImRMQfLeKLibxV1jLe6K09rWgCdHH78
-4Jv45wlKJewTi8odOObZ1Ko=
-=tzVF
+iD8DBQFD47e3oFw4q70f3SsRAsNeAKDE46vtYJKNUhJRzJTrqz3uCeJkzgCgnbIl
+Dndyh+A5f35GpDK0xqEWtgc=
+=prei
 -----END PGP SIGNATURE-----
