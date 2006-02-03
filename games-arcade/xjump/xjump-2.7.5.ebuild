@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.6 2006/01/14 03:25:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.7 2006/02/03 17:52:56 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -45,9 +45,8 @@ src_unpack() {
 	HISCORE_FILENAME=xjump.hiscores
 	HISCORE_FILE="${GAMES_STATEDIR}/${HISCORE_FILENAME}"
 
-	epatch \
-		"${WORKDIR}/${PN}_${PV}-${DEBIAN_PATCH}.diff" \
-		"${S}/debian/patches/"*.dpatch
+	epatch "${WORKDIR}/${PN}_${PV}-${DEBIAN_PATCH}.diff"
+	epatch "${S}/debian/patches/"*.dpatch
 
 	# set up where we will keep the highscores file:
 	sed -i \
