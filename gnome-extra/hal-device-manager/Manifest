@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2a9aae641f89186040d5ed159ed68b5 ChangeLog 1394
+MD5 9c1c902ea9a89f8ebef4c4f4cca0db4b ChangeLog 1504
+RMD160 507b854412aff5b5d889bc83439e1f9e130aca1f ChangeLog 1504
+SHA256 0617bfbd42f22bfbfc5cec0ff8a8dacde70411271477e4037cbde0880042f87f ChangeLog 1504
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.4.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-hal-device-manager-0.4.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-hal-device-manager-0.4.5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-hal-device-manager-0.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-hal-device-manager-0.5 0
 MD5 eb9fc0f14948ace4d2a7ca05b08bedd9 hal-device-manager-0.4.5.ebuild 827
-MD5 0ca035a0b33a97f24fbd5a155298ee67 hal-device-manager-0.5.ebuild 833
+RMD160 c335fb1b6da142edaaf7347f188a1cda4483ab2c hal-device-manager-0.4.5.ebuild 827
+SHA256 72fa49a426284d3eb41c0f39ad5dc749b1a940c848bebffd07265b04d4bea8a6 hal-device-manager-0.4.5.ebuild 827
+MD5 246871c9a0187b84622e0a7de1ab19e3 hal-device-manager-0.5.ebuild 832
+RMD160 84587e02e3cbe57aaad3db3904c043e73954eeb3 hal-device-manager-0.5.ebuild 832
+SHA256 83870b8d8719fe55b1354381591d98980d1d0d9911cb489cf0f5ae3ab80a5f26 hal-device-manager-0.5.ebuild 832
 MD5 12ddc8b02a20377ad04d34bdab42cbc0 metadata.xml 242
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0W7qKRy60XGEcJIRAsjqAKCeqGTxAAGOd6bA7sRsS6wkhFgWvwCfYL1b
-9tcW6YKV4YU4lzYwhPHBbi0=
-=H0Ai
------END PGP SIGNATURE-----
+RMD160 c2d3bf20c64c5f877970970b032596f03342d08c metadata.xml 242
+SHA256 f2bb940d80a2cec5b41a0d87ac150a52e217c2e6821de48c46978f7e3ccb797a metadata.xml 242
