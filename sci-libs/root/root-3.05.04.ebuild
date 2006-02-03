@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-3.05.04.ebuild,v 1.2 2005/01/16 02:43:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-3.05.04.ebuild,v 1.3 2006/02/03 11:07:46 phosphan Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,11 +14,20 @@ LICENSE="as-is"
 KEYWORDS="x86 sparc ppc"
 IUSE="mysql postgres opengl"
 
-DEPEND="virtual/x11
+RDEPEND="|| (
+				virtual/x11
+				x11-libs/libXpm
+			)
 	>=media-libs/freetype-2.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	mysql? ( >=dev-db/mysql-3.23.49 )
 	postgres? ( >=dev-db/postgresql-7.1.3-r4 )"
+
+DEPEND="${RDEPEND}
+		|| (
+			virtual/x11
+			x11-proto/xproto
+		   )"
 
 src_unpack() {
 	unpack ${A}

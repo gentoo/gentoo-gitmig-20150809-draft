@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.5 2005/07/28 21:02:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.6 2006/02/03 11:07:46 phosphan Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,7 +16,10 @@ LICENSE="as-is"
 KEYWORDS="x86 -sparc -ppc"
 IUSE="afs kerberos ldap mysql opengl postgres python qt"
 
-DEPEND="virtual/x11
+RDEPEND="|| (
+				virtual/x11
+				x11-libs/libXpm
+			)
 	>=media-libs/freetype-2.0.9
 	sys-apps/shadow
 	opengl? ( virtual/opengl virtual/glu )
@@ -27,6 +30,12 @@ DEPEND="virtual/x11
 	ldap? ( net-nds/openldap )
 	qt? ( =x11-libs/qt-3* )
 	python? ( dev-lang/python )"
+
+DEPEND="${RDEPEND}
+		|| (
+			virtual/x11
+			x11-proto/xproto
+		   )"
 
 src_compile() {
 
