@@ -1,0 +1,1207 @@
+Originally posted in http://lists.freedesktop.org/archives/poppler/2005-April/000118.html
+From: Albert Astals Cid <tsdgeos at yahoo.es>
+changed to work with current poppler-0.5.0 by Stefan Schweizer <genstef@gentoo.org>
+---
+Patch i got for kpdf from Takashi Iwai <tiwai AT suse DOT de> adapted to 
+poppler
+
+He said
+
+**********
+This patch optimizes the handling of fonts by reducing the use of
+temporary files for embedded fonts.  The fonts are no longer
+written/read via temp files but passed directly on memory.
+
+The exception is T1-type, which still requires a temp file for
+conversion.  But I guess this isn't used so often.
+**********
+
+The patch contains also the ttc patch because is how i got it
+---
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/fofi/FoFiTrueType.cc poppler-0.5.0/fofi/FoFiTrueType.cc
+--- poppler-0.5.0.orig/fofi/FoFiTrueType.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/fofi/FoFiTrueType.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -241,10 +241,10 @@ static char *macGlyphNames[258] = {
+ // FoFiTrueType
+ //------------------------------------------------------------------------
+ 
+-FoFiTrueType *FoFiTrueType::make(char *fileA, int lenA) {
++FoFiTrueType *FoFiTrueType::make(char *fileA, int lenA, int faceIndexA) {
+   FoFiTrueType *ff;
+ 
+-  ff = new FoFiTrueType(fileA, lenA, gFalse);
++  ff = new FoFiTrueType(fileA, lenA, gFalse, faceIndexA);
+   if (!ff->parsedOk) {
+     delete ff;
+     return NULL;
+@@ -252,7 +252,7 @@ FoFiTrueType *FoFiTrueType::make(char *f
+   return ff;
+ }
+ 
+-FoFiTrueType *FoFiTrueType::load(char *fileName) {
++FoFiTrueType *FoFiTrueType::load(char *fileName, int faceIndexA) {
+   FoFiTrueType *ff;
+   char *fileA;
+   int lenA;
+@@ -260,7 +260,7 @@ FoFiTrueType *FoFiTrueType::load(char *f
+   if (!(fileA = FoFiBase::readFile(fileName, &lenA))) {
+     return NULL;
+   }
+-  ff = new FoFiTrueType(fileA, lenA, gTrue);
++  ff = new FoFiTrueType(fileA, lenA, gTrue, faceIndexA);
+   if (!ff->parsedOk) {
+     delete ff;
+     return NULL;
+@@ -268,7 +268,7 @@ FoFiTrueType *FoFiTrueType::load(char *f
+   return ff;
+ }
+ 
+-FoFiTrueType::FoFiTrueType(char *fileA, int lenA, GBool freeFileDataA):
++FoFiTrueType::FoFiTrueType(char *fileA, int lenA, GBool freeFileDataA, int faceIndexA):
+   FoFiBase(fileA, lenA, freeFileDataA)
+ {
+   tables = NULL;
+@@ -277,6 +277,7 @@ FoFiTrueType::FoFiTrueType(char *fileA, 
+   nCmaps = 0;
+   nameToGID = NULL;
+   parsedOk = gFalse;
++  faceIndex = faceIndexA;
+ 
+   parse();
+ }
+@@ -1535,9 +1536,12 @@ Guint FoFiTrueType::computeTableChecksum
+   return checksum;
+ }
+ 
++#define toTag(a,b,c,d) (((unsigned int)(a)<<24) | ((unsigned int)(b)<<16) | ((unsigned int)(c)<<8) | (d))
++
+ void FoFiTrueType::parse() {
+   Guint topTag;
+   int pos, i, j;
++  unsigned int head;
+ 
+   parsedOk = gTrue;
+ 
+@@ -1556,12 +1560,37 @@ void FoFiTrueType::parse() {
+   }
+ 
+   // read the table directory
+-  nTables = getU16BE(pos + 4, &parsedOk);
++  head = getU32BE(pos, &parsedOk);
++  if (! parsedOk)
++    return;
++  if (head == toTag('t','t','c','f')) {
++    /* TTC font */
++    unsigned int tableDir;
++    int dircount;
++
++    dircount = getU32BE(8, &parsedOk);
++    if (!parsedOk)
++      return;
++    if (! dircount) {
++      parsedOk = gFalse;
++      return;
++    }
++
++    if (faceIndex >= dircount)
++      faceIndex = 0;
++    pos = getU32BE(12 + faceIndex * 4, &parsedOk);
++    if (! parsedOk)
++      return;
++  }
++
++  pos += 4;
++  nTables = getU16BE(pos, &parsedOk);
+   if (!parsedOk) {
+     return;
+   }
++
++  pos += 8;
+   tables = (TrueTypeTable *)gmallocn(nTables, sizeof(TrueTypeTable));
+-  pos += 12;
+   for (i = 0; i < nTables; ++i) {
+     tables[i].tag = getU32BE(pos, &parsedOk);
+     tables[i].checksum = getU32BE(pos + 4, &parsedOk);
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/fofi/FoFiTrueType.h poppler-0.5.0/fofi/FoFiTrueType.h
+--- poppler-0.5.0.orig/fofi/FoFiTrueType.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/fofi/FoFiTrueType.h	2006-02-02 22:56:04.000000000 +0100
+@@ -29,11 +29,12 @@ class FoFiTrueType: public FoFiBase {
+ public:
+ 
+   // Create a FoFiTrueType object from a memory buffer.
+-  static FoFiTrueType *make(char *fileA, int lenA);
++  static FoFiTrueType *make(char *fileA, int lenA, int faceIndexA=0);
+ 
+   // Create a FoFiTrueType object from a file on disk.
+-  static FoFiTrueType *load(char *fileName);
++  static FoFiTrueType *load(char *fileName, int faceIndexA=0);
+ 
++  FoFiTrueType(char *fileA, int lenA, GBool freeFileDataA, int faceIndexA=0);
+   virtual ~FoFiTrueType();
+ 
+   // Return the number of cmaps defined by this font.
+@@ -104,7 +105,6 @@ public:
+ 
+ private:
+ 
+-  FoFiTrueType(char *fileA, int lenA, GBool freeFileDataA);
+   void cvtEncoding(char **encoding,
+ 		   FoFiOutputFunc outputFunc,
+ 		   void *outputStream);
+@@ -133,6 +133,7 @@ private:
+   GooHash *nameToGID;
+ 
+   GBool parsedOk;
++  int faceIndex;
+ };
+ 
+ #endif
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/fofi/FoFiType1C.h poppler-0.5.0/fofi/FoFiType1C.h
+--- poppler-0.5.0.orig/fofi/FoFiType1C.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/fofi/FoFiType1C.h	2006-02-02 22:56:04.000000000 +0100
+@@ -138,6 +138,7 @@ public:
+   // Create a FoFiType1C object from a file on disk.
+   static FoFiType1C *load(char *fileName);
+ 
++  FoFiType1C(char *fileA, int lenA, GBool freeFileDataA);
+   virtual ~FoFiType1C();
+ 
+   // Return the font name.
+@@ -173,7 +174,6 @@ public:
+ 
+ private:
+ 
+-  FoFiType1C(char *fileA, int lenA, GBool freeFileDataA);
+   void eexecCvtGlyph(Type1CEexecBuf *eb, char *glyphName,
+ 		     int offset, int nBytes,
+ 		     Type1CIndex *subrIdx,
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/goo/gfile.cc poppler-0.5.0/goo/gfile.cc
+--- poppler-0.5.0.orig/goo/gfile.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/goo/gfile.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -489,6 +489,14 @@ GBool openTempFile(GooString **name, FIL
+     }
+     (*name)->append("/XXXXXX")->append(ext);
+     fd = mkstemps((*name)->getCString(), strlen(ext));
++#elif defined(HAVE_MKSTEMP)
++    if ((s = getenv("TMPDIR"))) {
++      *name = new GooString(s);
++    } else {
++      *name = new GooString("/tmp");
++    }
++    (*name)->append("/XXXXXX")->append(ext);
++    fd = mkstemp((*name)->getCString());
+ #else
+     if (!(s = tmpnam(NULL))) {
+       return gFalse;
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/poppler/GfxFont.cc poppler-0.5.0/poppler/GfxFont.cc
+--- poppler-0.5.0.orig/poppler/GfxFont.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/poppler/GfxFont.cc	2006-02-02 22:57:16.000000000 +0100
+@@ -360,7 +360,7 @@ CharCodeToUnicode *GfxFont::readToUnicod
+ 
+ void GfxFont::findExtFontFile() {
+   static char *type1Exts[] = { ".pfa", ".pfb", ".ps", "", NULL };
+-  static char *ttExts[] = { ".ttf", NULL };
++  static char *ttExts[] = { ".ttf", ".ttc", NULL };
+ 
+   if (name) {
+     if (type == fontType1) {
+@@ -1521,6 +1521,53 @@ GooString *GfxCIDFont::getCollection() {
+   return cMap ? cMap->getCollection() : (GooString *)NULL;
+ }
+ 
++Gushort *GfxCIDFont::getCodeToGIDMap(FoFiTrueType *ff, int *mapsizep) {
++  Gushort *map;
++  int cmapPlatform, cmapEncoding;
++  int unicodeCmap, macRomanCmap, msSymbolCmap, cmap;
++  GBool useMacRoman, useUnicode;
++  char *charName;
++  Unicode u;
++  int code, i;
++  int mapsize;
++  int cidlen;
++
++  *mapsizep = 0;
++
++  /* we use only unicode cmap */
++  cmap = -1;
++  for (i = 0; i < ff->getNumCmaps(); ++i) {
++    cmapPlatform = ff->getCmapPlatform(i);
++    cmapEncoding = ff->getCmapEncoding(i);
++    if ((cmapPlatform == 3 && cmapEncoding == 1) || cmapPlatform == 0)
++      cmap = i;
++  }
++  if (cmap < 0)
++    return NULL;
++
++  cidlen = 0;
++  mapsize = 64;
++  map = (Gushort *)gmalloc(mapsize * sizeof(Gushort));
++
++  while (cidlen < ctu->getLength()) {
++    int n;
++    if ((n = ctu->mapToUnicode((CharCode)cidlen, &u, 1)) == 0) {
++      cidlen++;
++      continue;
++    }
++    if (cidlen >= mapsize) {
++      while (cidlen >= mapsize)
++	mapsize *= 2;
++      map = (Gushort *)grealloc(map, mapsize * sizeof(Gushort));
++    }
++    map[cidlen] = ff->mapCodeToGID(cmap, u);
++    cidlen++;
++  }
++
++  *mapsizep = cidlen;
++  return map;
++}
++
+ //------------------------------------------------------------------------
+ // GfxFontDict
+ //------------------------------------------------------------------------
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/poppler/GfxFont.h poppler-0.5.0/poppler/GfxFont.h
+--- poppler-0.5.0.orig/poppler/GfxFont.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/poppler/GfxFont.h	2006-02-02 22:56:04.000000000 +0100
+@@ -310,6 +310,8 @@ public:
+   Gushort *getCIDToGID() { return cidToGID; }
+   int getCIDToGIDLen() { return cidToGIDLen; }
+ 
++  Gushort *getCodeToGIDMap(FoFiTrueType *ff, int *length);
++
+ private:
+ 
+   CMap *cMap;			// char code --> CID
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/poppler/GlobalParams.h poppler-0.5.0/poppler/GlobalParams.h
+--- poppler-0.5.0.orig/poppler/GlobalParams.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/poppler/GlobalParams.h	2006-02-02 22:56:04.000000000 +0100
+@@ -55,6 +55,7 @@ struct DisplayFontParamT1 {
+ 
+ struct DisplayFontParamTT {
+   GooString *fileName;
++  int faceIndex;
+ };
+ 
+ class DisplayFontParam {
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/poppler/SplashOutputDev.cc poppler-0.5.0/poppler/SplashOutputDev.cc
+--- poppler-0.5.0.orig/poppler/SplashOutputDev.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/poppler/SplashOutputDev.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -941,10 +941,13 @@ void SplashOutputDev::updateFont(GfxStat
+   GfxFontType fontType;
+   SplashOutFontFileID *id;
+   SplashFontFile *fontFile;
++  SplashFontSrc *fontsrc;
+   FoFiTrueType *ff;
+   Ref embRef;
+   Object refObj, strObj;
+-  GooString *tmpFileName, *fileName, *substName;
++  GooString *fileName, *substName;
++  char *tmpBuf;
++  int tmpBufLen;
+   FILE *tmpFile;
+   Gushort *codeToGID;
+   DisplayFontParam *dfp;
+@@ -954,10 +957,12 @@ void SplashOutputDev::updateFont(GfxStat
+   char *name;
+   Unicode uBuf[8];
+   int c, substIdx, n, code, cmap;
++  int faceIndex = 0;
+ 
+   needFontUpdate = gFalse;
+   font = NULL;
+-  tmpFileName = NULL;
++  fileName = NULL;
++  tmpBuf = NULL;
+   substIdx = -1;
+   dfp = NULL;
+ 
+@@ -978,22 +983,9 @@ void SplashOutputDev::updateFont(GfxStat
+ 
+     // if there is an embedded font, write it to disk
+     if (gfxFont->getEmbeddedFontID(&embRef)) {
+-      if (!openTempFile(&tmpFileName, &tmpFile, "wb", NULL)) {
+-	error(-1, "Couldn't create temporary font file");
++      tmpBuf = gfxFont->readEmbFontFile(xref, &tmpBufLen);
++      if (! tmpBuf)
+ 	goto err2;
+-      }
+-      refObj.initRef(embRef.num, embRef.gen);
+-      refObj.fetch(xref, &strObj);
+-      refObj.free();
+-      strObj.streamReset();
+-      while ((c = strObj.streamGetChar()) != EOF) {
+-	fputc(c, tmpFile);
+-      }
+-      strObj.streamClose();
+-      strObj.free();
+-      fclose(tmpFile);
+-      fileName = tmpFileName;
+-
+     // if there is an external font file, use it
+     } else if (!(fileName = gfxFont->getExtFontFile())) {
+ 
+@@ -1016,18 +1008,23 @@ void SplashOutputDev::updateFont(GfxStat
+       case displayFontTT:
+ 	fileName = dfp->tt.fileName;
+ 	fontType = gfxFont->isCIDFont() ? fontCIDType2 : fontTrueType;
++	faceIndex = dfp->tt.faceIndex;
+ 	break;
+       }
+     }
+ 
++    fontsrc = new SplashFontSrc;
++    if (fileName)
++      fontsrc->setFile(fileName, gFalse);
++    else
++      fontsrc->setBuf(tmpBuf, tmpBufLen, gFalse);
++
+     // load the font file
+     switch (fontType) {
+     case fontType1:
+-      if (!(fontFile = fontEngine->loadType1Font(
+-			   id,
+-			   fileName->getCString(),
+-			   fileName == tmpFileName,
+-			   ((Gfx8BitFont *)gfxFont)->getEncoding()))) {
++      fontFile = fontEngine->loadType1Font(id, fontsrc, 
++					   ((Gfx8BitFont *)gfxFont)->getEncoding());
++      if (! fontFile) {
+ 	error(-1, "Couldn't create a font for '%s'",
+ 	      gfxFont->getName() ? gfxFont->getName()->getCString()
+ 	                         : "(unnamed)");
+@@ -1035,11 +1032,9 @@ void SplashOutputDev::updateFont(GfxStat
+       }
+       break;
+     case fontType1C:
+-      if (!(fontFile = fontEngine->loadType1CFont(
+-			   id,
+-			   fileName->getCString(),
+-			   fileName == tmpFileName,
+-			   ((Gfx8BitFont *)gfxFont)->getEncoding()))) {
++      fontFile = fontEngine->loadType1CFont(id, fontsrc,
++					    ((Gfx8BitFont *)gfxFont)->getEncoding());
++      if (! fontFile) {
+ 	error(-1, "Couldn't create a font for '%s'",
+ 	      gfxFont->getName() ? gfxFont->getName()->getCString()
+ 	                         : "(unnamed)");
+@@ -1047,7 +1042,8 @@ void SplashOutputDev::updateFont(GfxStat
+       }
+       break;
+     case fontTrueType:
+-      if ((ff = FoFiTrueType::load(fileName->getCString()))) {
++      if ((ff = FoFiTrueType::load(fileName->getCString())) ||
++      	 (ff = new FoFiTrueType(tmpBuf, tmpBufLen, gFalse))) {
+       codeToGID = ((Gfx8BitFont *)gfxFont)->getCodeToGIDMap(ff);
+ 	n = 256;
+       delete ff;
+@@ -1057,8 +1053,7 @@ void SplashOutputDev::updateFont(GfxStat
+       }
+       if (!(fontFile = fontEngine->loadTrueTypeFont(
+ 			   id,
+-			   fileName->getCString(),
+-			   fileName == tmpFileName,
++			   fontsrc,
+ 			   codeToGID, n))) {
+ 	error(-1, "Couldn't create a font for '%s'",
+ 	      gfxFont->getName() ? gfxFont->getName()->getCString()
+@@ -1068,10 +1063,8 @@ void SplashOutputDev::updateFont(GfxStat
+       break;
+     case fontCIDType0:
+     case fontCIDType0C:
+-      if (!(fontFile = fontEngine->loadCIDFont(
+-			   id,
+-			   fileName->getCString(),
+-			   fileName == tmpFileName))) {
++      fontFile = fontEngine->loadCIDFont(id, fontsrc);
++      if (! fontFile) {
+ 	error(-1, "Couldn't create a font for '%s'",
+ 	      gfxFont->getName() ? gfxFont->getName()->getCString()
+ 	                         : "(unnamed)");
+@@ -1084,7 +1077,8 @@ void SplashOutputDev::updateFont(GfxStat
+       if (dfp) {
+ 	// create a CID-to-GID mapping, via Unicode
+ 	if ((ctu = ((GfxCIDFont *)gfxFont)->getToUnicode())) {
+-	  if ((ff = FoFiTrueType::load(fileName->getCString()))) {
++	  if ((ff = FoFiTrueType::load(fileName->getCString())) ||
++	  	(ff = new FoFiTrueType(tmpBuf, tmpBufLen, gFalse))) {
+ 	    // look for a Unicode cmap
+ 	    for (cmap = 0; cmap < ff->getNumCmaps(); ++cmap) {
+ 	      if ((ff->getCmapPlatform(cmap) == 3 &&
+@@ -1116,16 +1110,28 @@ void SplashOutputDev::updateFont(GfxStat
+       } else {
+ 	if (((GfxCIDFont *)gfxFont)->getCIDToGID()) {
+       n = ((GfxCIDFont *)gfxFont)->getCIDToGIDLen();
+-	  codeToGID = (Gushort *)gmallocn(n, sizeof(Gushort));
+-      memcpy(codeToGID, ((GfxCIDFont *)gfxFont)->getCIDToGID(),
+-	     n * sizeof(Gushort));
++	if (n) {
++		codeToGID = (Gushort *)gmallocn(n, sizeof(Gushort));
++		memcpy(codeToGID, ((GfxCIDFont *)gfxFont)->getCIDToGID(),
++			n * sizeof(Gushort));
++	} else {
++		if (fileName)
++		 ff = FoFiTrueType::load(fileName->getCString());
++		else
++		 ff = new FoFiTrueType(tmpBuf, tmpBufLen, gFalse);
++		if (! ff)
++		 goto err2;
++		codeToGID = ((GfxCIDFont *)gfxFont)->getCodeToGIDMap(ff, &n);
++		delete ff;
++	}
+ 	}
+       }
+       if (!(fontFile = fontEngine->loadTrueTypeFont(
+ 			   id,
+-			   fileName->getCString(),
+-			   fileName == tmpFileName,
+-			   codeToGID, n))) {
++			   fontsrc,
++			   codeToGID,
++			   n,
++			   faceIndex))) {
+ 	error(-1, "Couldn't create a font for '%s'",
+ 	      gfxFont->getName() ? gfxFont->getName()->getCString()
+ 	                         : "(unnamed)");
+@@ -1153,17 +1159,11 @@ void SplashOutputDev::updateFont(GfxStat
+   }
+   font = fontEngine->getFont(fontFile, mat);
+ 
+-  if (tmpFileName) {
+-    delete tmpFileName;
+-  }
+   return;
+ 
+  err2:
+   delete id;
+  err1:
+-  if (tmpFileName) {
+-    delete tmpFileName;
+-  }
+   return;
+ }
+ 
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFontEngine.cc poppler-0.5.0/splash/SplashFontEngine.cc
+--- poppler-0.5.0.orig/splash/SplashFontEngine.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFontEngine.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -105,19 +105,19 @@ SplashFontFile *SplashFontEngine::getFon
+ }
+ 
+ SplashFontFile *SplashFontEngine::loadType1Font(SplashFontFileID *idA,
+-						char *fileName,
+-						GBool deleteFile, char **enc) {
++						SplashFontSrc *src,
++						char **enc) {
+   SplashFontFile *fontFile;
+ 
+   fontFile = NULL;
+ #if HAVE_T1LIB_H
+   if (!fontFile && t1Engine) {
+-    fontFile = t1Engine->loadType1Font(idA, fileName, deleteFile, enc);
++    fontFile = t1Engine->loadType1Font(idA, src, enc);
+   }
+ #endif
+ #if HAVE_FREETYPE_FREETYPE_H || HAVE_FREETYPE_H
+   if (!fontFile && ftEngine) {
+-    fontFile = ftEngine->loadType1Font(idA, fileName, deleteFile, enc);
++    fontFile = ftEngine->loadType1Font(idA, src, enc);
+   }
+ #endif
+ 
+@@ -126,29 +126,26 @@ SplashFontFile *SplashFontEngine::loadTy
+   // semantics, this will remove the last link; otherwise it will
+   // return an error, leaving the file to be deleted later (if
+   // loadXYZFont failed, the file will always be deleted)
+-  if (deleteFile) {
+-    unlink(fontFile ? fontFile->fileName->getCString() : fileName);
+-  }
++  src->unref();
+ #endif
+ 
+   return fontFile;
+ }
+ 
+ SplashFontFile *SplashFontEngine::loadType1CFont(SplashFontFileID *idA,
+-						 char *fileName,
+-						 GBool deleteFile,
++						 SplashFontSrc *src,
+ 						 char **enc) {
+   SplashFontFile *fontFile;
+ 
+   fontFile = NULL;
+ #if HAVE_T1LIB_H
+   if (!fontFile && t1Engine) {
+-    fontFile = t1Engine->loadType1CFont(idA, fileName, deleteFile, enc);
++    fontFile = t1Engine->loadType1CFont(idA, src, enc);
+   }
+ #endif
+ #if HAVE_FREETYPE_FREETYPE_H || HAVE_FREETYPE_H
+   if (!fontFile && ftEngine) {
+-    fontFile = ftEngine->loadType1CFont(idA, fileName, deleteFile, enc);
++    fontFile = ftEngine->loadType1CFont(idA, src, enc);
+   }
+ #endif
+ 
+@@ -157,23 +154,20 @@ SplashFontFile *SplashFontEngine::loadTy
+   // semantics, this will remove the last link; otherwise it will
+   // return an error, leaving the file to be deleted later (if
+   // loadXYZFont failed, the file will always be deleted)
+-  if (deleteFile) {
+-    unlink(fontFile ? fontFile->fileName->getCString() : fileName);
+-  }
++  src->unref();
+ #endif
+ 
+   return fontFile;
+ }
+ 
+ SplashFontFile *SplashFontEngine::loadCIDFont(SplashFontFileID *idA,
+-					      char *fileName,
+-					      GBool deleteFile) {
++					      SplashFontSrc *src) {
+   SplashFontFile *fontFile;
+ 
+   fontFile = NULL;
+ #if HAVE_FREETYPE_FREETYPE_H || HAVE_FREETYPE_H
+   if (!fontFile && ftEngine) {
+-    fontFile = ftEngine->loadCIDFont(idA, fileName, deleteFile);
++    fontFile = ftEngine->loadCIDFont(idA, src);
+   }
+ #endif
+ 
+@@ -182,26 +176,24 @@ SplashFontFile *SplashFontEngine::loadCI
+   // semantics, this will remove the last link; otherwise it will
+   // return an error, leaving the file to be deleted later (if
+   // loadXYZFont failed, the file will always be deleted)
+-  if (deleteFile) {
+-    unlink(fontFile ? fontFile->fileName->getCString() : fileName);
+-  }
++  src->unref();
+ #endif
+ 
+   return fontFile;
+ }
+ 
+ SplashFontFile *SplashFontEngine::loadTrueTypeFont(SplashFontFileID *idA,
+-						   char *fileName,
+-						   GBool deleteFile,
++						   SplashFontSrc *src,
+ 						   Gushort *codeToGID,
+-						   int codeToGIDLen) {
++						   int codeToGIDLen,
++						   int faceIndex) {
+   SplashFontFile *fontFile;
+ 
+   fontFile = NULL;
+ #if HAVE_FREETYPE_FREETYPE_H || HAVE_FREETYPE_H
+   if (!fontFile && ftEngine) {
+-    fontFile = ftEngine->loadTrueTypeFont(idA, fileName, deleteFile,
+-					  codeToGID, codeToGIDLen);
++    fontFile = ftEngine->loadTrueTypeFont(idA, src,
++                                        codeToGID, codeToGIDLen, faceIndex);
+   }
+ #endif
+ 
+@@ -214,9 +206,7 @@ SplashFontFile *SplashFontEngine::loadTr
+   // semantics, this will remove the last link; otherwise it will
+   // return an error, leaving the file to be deleted later (if
+   // loadXYZFont failed, the file will always be deleted)
+-  if (deleteFile) {
+-    unlink(fontFile ? fontFile->fileName->getCString() : fileName);
+-  }
++  src->unref();
+ #endif
+ 
+   return fontFile;
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFontEngine.h poppler-0.5.0/splash/SplashFontEngine.h
+--- poppler-0.5.0.orig/splash/SplashFontEngine.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFontEngine.h	2006-02-02 22:56:04.000000000 +0100
+@@ -19,6 +19,7 @@ class SplashDTFontEngine;
+ class SplashFontFile;
+ class SplashFontFileID;
+ class SplashFont;
++class SplashFontSrc;
+ 
+ //------------------------------------------------------------------------
+ 
+@@ -48,15 +49,12 @@ public:
+   SplashFontFile *getFontFile(SplashFontFileID *id);
+ 
+   // Load fonts - these create new SplashFontFile objects.
+-  SplashFontFile *loadType1Font(SplashFontFileID *idA, char *fileName,
+-				GBool deleteFile, char **enc);
+-  SplashFontFile *loadType1CFont(SplashFontFileID *idA, char *fileName,
+-				 GBool deleteFile, char **enc);
+-  SplashFontFile *loadCIDFont(SplashFontFileID *idA, char *fileName,
+-			      GBool deleteFile);
+-  SplashFontFile *loadTrueTypeFont(SplashFontFileID *idA, char *fileName,
+-				   GBool deleteFile,
+-				   Gushort *codeToGID, int codeToGIDLen);
++  SplashFontFile *loadType1Font(SplashFontFileID *idA, SplashFontSrc *src, char **enc);
++  SplashFontFile *loadType1CFont(SplashFontFileID *idA, SplashFontSrc *src, char **enc);
++  SplashFontFile *loadCIDFont(SplashFontFileID *idA, SplashFontSrc *src);
++  SplashFontFile *loadTrueTypeFont(SplashFontFileID *idA, SplashFontSrc *src,
++				   Gushort *codeToGID, int codeToGIDLen,
++				   int faceIndex=0);
+ 
+   // Get a font - this does a cache lookup first, and if not found,
+   // creates a new SplashFont object and adds it to the cache.  The
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFontFile.cc poppler-0.5.0/splash/SplashFontFile.cc
+--- poppler-0.5.0.orig/splash/SplashFontFile.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFontFile.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -12,6 +12,7 @@
+ 
+ #include <stdio.h>
+ #include <unistd.h>
++#include "goo/gmem.h"
+ #include "goo/GooString.h"
+ #include "SplashFontFile.h"
+ #include "SplashFontFileID.h"
+@@ -26,19 +27,15 @@ extern "C" int unlink(char *filename);
+ // SplashFontFile
+ //------------------------------------------------------------------------
+ 
+-SplashFontFile::SplashFontFile(SplashFontFileID *idA, char *fileNameA,
+-			       GBool deleteFileA) {
++SplashFontFile::SplashFontFile(SplashFontFileID *idA, SplashFontSrc *srcA) {
+   id = idA;
+-  fileName = new GooString(fileNameA);
+-  deleteFile = deleteFileA;
++  src = srcA;
++  src->ref();
+   refCnt = 0;
+ }
+ 
+ SplashFontFile::~SplashFontFile() {
+-  if (deleteFile) {
+-    unlink(fileName->getCString());
+-  }
+-  delete fileName;
++  src->unref();
+   delete id;
+ }
+ 
+@@ -51,3 +48,60 @@ void SplashFontFile::decRefCnt() {
+     delete this;
+   }
+ }
++
++//
++
++SplashFontSrc::SplashFontSrc() {
++  isFile = gFalse;
++  deleteSrc = gFalse;
++  fileName = NULL;
++  buf = NULL;
++  refcnt = 1;
++}
++
++SplashFontSrc::~SplashFontSrc() {
++  if (deleteSrc) {
++    if (isFile) {
++      if (fileName)
++	unlink(fileName->getCString());
++    } else {
++      if (buf)
++	gfree(buf);
++    }
++  }
++
++  if (isFile && fileName)
++    delete fileName;
++}
++
++void SplashFontSrc::ref() {
++  refcnt++;
++}
++
++void SplashFontSrc::unref() {
++  if (! --refcnt)
++    delete this;
++}
++
++void SplashFontSrc::setFile(GooString *file, GBool del)
++{
++  isFile = gTrue;
++  fileName = file->copy();
++  deleteSrc = del;
++}
++
++void SplashFontSrc::setFile(const char *file, GBool del)
++{
++  isFile = gTrue;
++  fileName = new GooString(file);
++  deleteSrc = del;
++}
++
++void SplashFontSrc::setBuf(char *bufA, int bufLenA, GBool del)
++{
++  isFile = gFalse;
++  buf = bufA;
++  bufLen = bufLenA;
++  deleteSrc = del;
++}
++
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFontFile.h poppler-0.5.0/splash/SplashFontFile.h
+--- poppler-0.5.0.orig/splash/SplashFontFile.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFontFile.h	2006-02-02 22:56:04.000000000 +0100
+@@ -23,6 +23,25 @@ class SplashFontFileID;
+ // SplashFontFile
+ //------------------------------------------------------------------------
+ 
++struct SplashFontSrc {
++  SplashFontSrc();
++  ~SplashFontSrc();
++
++  void setFile(GooString *file, GBool del);
++  void setFile(const char *file, GBool del);
++  void setBuf(char *bufA, int buflenA, GBool del);
++
++  void ref();
++  void unref();
++
++  GBool isFile;
++  GooString *fileName;
++  char *buf;
++  int bufLen;
++  GBool deleteSrc;
++  int refcnt;
++};
++
+ class SplashFontFile {
+ public:
+ 
+@@ -44,12 +63,10 @@ public:
+ 
+ protected:
+ 
+-  SplashFontFile(SplashFontFileID *idA, char *fileNameA,
+-		 GBool deleteFileA);
++  SplashFontFile(SplashFontFileID *idA, SplashFontSrc *srcA);
+ 
+   SplashFontFileID *id;
+-  GooString *fileName;
+-  GBool deleteFile;
++  SplashFontSrc *src;
+   int refCnt;
+ 
+   friend class SplashFontEngine;
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFTFontEngine.cc poppler-0.5.0/splash/SplashFTFontEngine.cc
+--- poppler-0.5.0.orig/splash/SplashFTFontEngine.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFTFontEngine.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -64,22 +64,19 @@ SplashFTFontEngine::~SplashFTFontEngine(
+ }
+ 
+ SplashFontFile *SplashFTFontEngine::loadType1Font(SplashFontFileID *idA,
+-						  char *fileName,
+-						  GBool deleteFile,
++						  SplashFontSrc *src,
+ 						  char **enc) {
+-  return SplashFTFontFile::loadType1Font(this, idA, fileName, deleteFile, enc);
++  return SplashFTFontFile::loadType1Font(this, idA, src, enc);
+ }
+ 
+ SplashFontFile *SplashFTFontEngine::loadType1CFont(SplashFontFileID *idA,
+-						   char *fileName,
+-						   GBool deleteFile,
++						   SplashFontSrc *src,
+ 						   char **enc) {
+-  return SplashFTFontFile::loadType1Font(this, idA, fileName, deleteFile, enc);
++  return SplashFTFontFile::loadType1Font(this, idA, src, enc);
+ }
+ 
+ SplashFontFile *SplashFTFontEngine::loadCIDFont(SplashFontFileID *idA,
+-						char *fileName,
+-						GBool deleteFile) {
++						SplashFontSrc *src) {
+   FoFiType1C *ff;
+   Gushort *cidToGIDMap;
+   int nCIDs;
+@@ -89,15 +86,21 @@ SplashFontFile *SplashFTFontEngine::load
+   if (useCIDs) {
+     cidToGIDMap = NULL;
+     nCIDs = 0;
+-  } else if ((ff = FoFiType1C::load(fileName))) {
++  } else {
++    if (src->isFile) {
++      ff = FoFiType1C::load(src->fileName->getCString());
++    } else {
++      ff = new FoFiType1C(src->buf, src->bufLen, gFalse);
++    }
++    if (ff) {
+     cidToGIDMap = ff->getCIDToGIDMap(&nCIDs);
+     delete ff;
+   } else {
+     cidToGIDMap = NULL;
+     nCIDs = 0;
+   }
+-  ret = SplashFTFontFile::loadCIDFont(this, idA, fileName, deleteFile,
+-				      cidToGIDMap, nCIDs);
++  }
++  ret = SplashFTFontFile::loadCIDFont(this, idA, src, cidToGIDMap, nCIDs);
+   if (!ret) {
+     gfree(cidToGIDMap);
+   }
+@@ -105,16 +108,17 @@ SplashFontFile *SplashFTFontEngine::load
+ }
+ 
+ SplashFontFile *SplashFTFontEngine::loadTrueTypeFont(SplashFontFileID *idA,
+-						     char *fileName,
+-						     GBool deleteFile,
++						     SplashFontSrc *src,
+ 						     Gushort *codeToGID,
+-						     int codeToGIDLen) {
++						     int codeToGIDLen,
++						     int faceIndex) {
++#if 0
+   FoFiTrueType *ff;
+   GooString *tmpFileName;
+   FILE *tmpFile;
+   SplashFontFile *ret;
+ 
+-  if (!(ff = FoFiTrueType::load(fileName))) {
++  if (!(ff = FoFiTrueType::load(fileName, faceIndex))) {
+     return NULL;
+   }
+   tmpFileName = NULL;
+@@ -127,7 +131,8 @@ SplashFontFile *SplashFTFontEngine::load
+   fclose(tmpFile);
+   ret = SplashFTFontFile::loadTrueTypeFont(this, idA,
+ 					   tmpFileName->getCString(),
+-					   gTrue, codeToGID, codeToGIDLen);
++					   gTrue, codeToGID, codeToGIDLen,
++					   faceIndex);
+   if (ret) {
+     if (deleteFile) {
+       unlink(fileName);
+@@ -137,6 +142,13 @@ SplashFontFile *SplashFTFontEngine::load
+   }
+   delete tmpFileName;
+   return ret;
++#else
++  SplashFontFile *ret;
++  ret = SplashFTFontFile::loadTrueTypeFont(this, idA, src,
++					   codeToGID, codeToGIDLen,
++					   faceIndex);
++  return ret;
++#endif
+ }
+ 
+ #endif // HAVE_FREETYPE_FREETYPE_H || HAVE_FREETYPE_H
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFTFontEngine.h poppler-0.5.0/splash/SplashFTFontEngine.h
+--- poppler-0.5.0.orig/splash/SplashFTFontEngine.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFTFontEngine.h	2006-02-02 22:56:04.000000000 +0100
+@@ -19,6 +19,7 @@
+ 
+ class SplashFontFile;
+ class SplashFontFileID;
++class SplashFontSrc;
+ 
+ //------------------------------------------------------------------------
+ // SplashFTFontEngine
+@@ -32,15 +33,12 @@ public:
+   ~SplashFTFontEngine();
+ 
+   // Load fonts.
+-  SplashFontFile *loadType1Font(SplashFontFileID *idA, char *fileName,
+-				GBool deleteFile, char **enc);
+-  SplashFontFile *loadType1CFont(SplashFontFileID *idA, char *fileName,
+-				 GBool deleteFile, char **enc);
+-  SplashFontFile *loadCIDFont(SplashFontFileID *idA, char *fileName,
+-			      GBool deleteFile);
+-  SplashFontFile *loadTrueTypeFont(SplashFontFileID *idA, char *fileName,
+-				   GBool deleteFile,
+-				   Gushort *codeToGID, int codeToGIDLen);
++  SplashFontFile *loadType1Font(SplashFontFileID *idA, SplashFontSrc *src, char **enc);
++  SplashFontFile *loadType1CFont(SplashFontFileID *idA, SplashFontSrc *src, char **enc);
++  SplashFontFile *loadCIDFont(SplashFontFileID *idA, SplashFontSrc *src);
++  SplashFontFile *loadTrueTypeFont(SplashFontFileID *idA, SplashFontSrc *src,
++				   Gushort *codeToGID, int codeToGIDLen,
++				   int faceIndex=0);
+ 
+ private:
+ 
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFTFontFile.cc poppler-0.5.0/splash/SplashFTFontFile.cc
+--- poppler-0.5.0.orig/splash/SplashFTFontFile.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFTFontFile.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -13,6 +13,7 @@
+ #endif
+ 
+ #include "goo/gmem.h"
++#include "goo/GooString.h"
+ #include "SplashFTFontEngine.h"
+ #include "SplashFTFont.h"
+ #include "SplashFTFontFile.h"
+@@ -23,16 +24,19 @@
+ 
+ SplashFontFile *SplashFTFontFile::loadType1Font(SplashFTFontEngine *engineA,
+ 						SplashFontFileID *idA,
+-						char *fileNameA,
+-						GBool deleteFileA,
++						SplashFontSrc *src,
+ 						char **encA) {
+   FT_Face faceA;
+   Gushort *codeToGIDA;
+   char *name;
+   int i;
+ 
+-  if (FT_New_Face(engineA->lib, fileNameA, 0, &faceA)) {
+-    return NULL;
++  if (src->isFile) {
++    if (FT_New_Face(engineA->lib, src->fileName->getCString(), 0, &faceA))
++      return NULL;
++  } else {
++    if (FT_New_Memory_Face(engineA->lib, (const FT_Byte *)src->buf, src->bufLen, 0, &faceA))
++      return NULL;
+   }
+   codeToGIDA = (Gushort *)gmallocn(256, sizeof(int));
+   for (i = 0; i < 256; ++i) {
+@@ -42,48 +46,55 @@ SplashFontFile *SplashFTFontFile::loadTy
+     }
+   }
+ 
+-  return new SplashFTFontFile(engineA, idA, fileNameA, deleteFileA,
++  return new SplashFTFontFile(engineA, idA, src,
+ 			      faceA, codeToGIDA, 256);
+ }
+ 
+ SplashFontFile *SplashFTFontFile::loadCIDFont(SplashFTFontEngine *engineA,
+ 					      SplashFontFileID *idA,
+-					      char *fileNameA,
+-					      GBool deleteFileA,
++					      SplashFontSrc *src,
+ 					      Gushort *codeToGIDA,
+ 					      int codeToGIDLenA) {
+   FT_Face faceA;
+ 
+-  if (FT_New_Face(engineA->lib, fileNameA, 0, &faceA)) {
+-    return NULL;
++  if (src->isFile) {
++    if (FT_New_Face(engineA->lib, src->fileName->getCString(), 0, &faceA))
++      return NULL;
++  } else {
++    if (FT_New_Memory_Face(engineA->lib, (const FT_Byte *)src->buf, src->bufLen, 0, &faceA))
++      return NULL;
+   }
+ 
+-  return new SplashFTFontFile(engineA, idA, fileNameA, deleteFileA,
++  return new SplashFTFontFile(engineA, idA, src,
+ 			      faceA, codeToGIDA, codeToGIDLenA);
+ }
+ 
+ SplashFontFile *SplashFTFontFile::loadTrueTypeFont(SplashFTFontEngine *engineA,
+ 						   SplashFontFileID *idA,
+-						   char *fileNameA,
+-						   GBool deleteFileA,
++						   SplashFontSrc *src,
+ 						   Gushort *codeToGIDA,
+-						   int codeToGIDLenA) {
++						   int codeToGIDLenA,
++						   int faceIndexA) {
+   FT_Face faceA;
+ 
+-  if (FT_New_Face(engineA->lib, fileNameA, 0, &faceA)) {
+-    return NULL;
++  if (src->isFile) {
++    if (FT_New_Face(engineA->lib, src->fileName->getCString(), faceIndexA, &faceA))
++      return NULL;
++  } else {
++    if (FT_New_Memory_Face(engineA->lib, (const FT_Byte *)src->buf, src->bufLen, faceIndexA, &faceA))
++      return NULL;
+   }
+ 
+-  return new SplashFTFontFile(engineA, idA, fileNameA, deleteFileA,
++  return new SplashFTFontFile(engineA, idA, src,
+ 			      faceA, codeToGIDA, codeToGIDLenA);
+ }
+ 
+ SplashFTFontFile::SplashFTFontFile(SplashFTFontEngine *engineA,
+ 				   SplashFontFileID *idA,
+-				   char *fileNameA, GBool deleteFileA,
++				   SplashFontSrc *srcA,
+ 				   FT_Face faceA,
+ 				   Gushort *codeToGIDA, int codeToGIDLenA):
+-  SplashFontFile(idA, fileNameA, deleteFileA)
++  SplashFontFile(idA, srcA)
+ {
+   engine = engineA;
+   face = faceA;
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashFTFontFile.h poppler-0.5.0/splash/SplashFTFontFile.h
+--- poppler-0.5.0.orig/splash/SplashFTFontFile.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashFTFontFile.h	2006-02-02 22:56:04.000000000 +0100
+@@ -28,18 +28,18 @@ class SplashFTFontFile: public SplashFon
+ public:
+ 
+   static SplashFontFile *loadType1Font(SplashFTFontEngine *engineA,
+-				       SplashFontFileID *idA, char *fileNameA,
+-				       GBool deleteFileA, char **encA);
++				       SplashFontFileID *idA,
++				       SplashFontSrc *src, char **encA);
+   static SplashFontFile *loadCIDFont(SplashFTFontEngine *engineA,
+-				     SplashFontFileID *idA, char *fileNameA,
+-				     GBool deleteFileA,
+-				     Gushort *codeToCIDA, int codeToGIDLenA);
++					 SplashFontFileID *idA,
++					 SplashFontSrc *src,
++					 Gushort *codeToCIDA, int codeToGIDLenA);
+   static SplashFontFile *loadTrueTypeFont(SplashFTFontEngine *engineA,
+ 					  SplashFontFileID *idA,
+-					  char *fileNameA,
+-					  GBool deleteFileA,
++					  SplashFontSrc *src,
+ 					  Gushort *codeToGIDA,
+-					  int codeToGIDLenA);
++					  int codeToGIDLenA,
++					  int faceIndexA=0);
+ 
+   virtual ~SplashFTFontFile();
+ 
+@@ -51,7 +51,7 @@ private:
+ 
+   SplashFTFontFile(SplashFTFontEngine *engineA,
+ 		   SplashFontFileID *idA,
+-		   char *fileNameA, GBool deleteFileA,
++		   SplashFontSrc *srcA,
+ 		   FT_Face faceA,
+ 		   Gushort *codeToGIDA, int codeToGIDLenA);
+ 
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashT1FontEngine.cc poppler-0.5.0/splash/SplashT1FontEngine.cc
+--- poppler-0.5.0.orig/splash/SplashT1FontEngine.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashT1FontEngine.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -82,22 +82,26 @@ SplashT1FontEngine::~SplashT1FontEngine(
+ }
+ 
+ SplashFontFile *SplashT1FontEngine::loadType1Font(SplashFontFileID *idA,
+-						  char *fileName,
+-						  GBool deleteFile,
++						  SplashFontSrc *src,
+ 						  char **enc) {
+-  return SplashT1FontFile::loadType1Font(this, idA, fileName, deleteFile, enc);
++  return SplashT1FontFile::loadType1Font(this, idA, src, enc);
+ }
+ 
+ SplashFontFile *SplashT1FontEngine::loadType1CFont(SplashFontFileID *idA,
+-						   char *fileName,
+-						   GBool deleteFile,
++						   SplashFontSrc *src,
+ 						   char **enc) {
+   FoFiType1C *ff;
+   GooString *tmpFileName;
+   FILE *tmpFile;
+   SplashFontFile *ret;
+ 
+-  if (!(ff = FoFiType1C::load(fileName))) {
++  SplashFontSrc *newsrc;
++  
++  if (src->isFile)
++    ff = FoFiType1C::load(src->fileName);
++  else
++    ff = new FoFiType1C(src->buf, src->bufLen, gFalse);
++  if (! ff)
+     return NULL;
+   }
+   tmpFileName = NULL;
+@@ -108,16 +112,11 @@ SplashFontFile *SplashT1FontEngine::load
+   ff->convertToType1(NULL, gTrue, &fileWrite, tmpFile);
+   delete ff;
+   fclose(tmpFile);
+-  ret = SplashT1FontFile::loadType1Font(this, idA, tmpFileName->getCString(),
+-					gTrue, enc);
+-  if (ret) {
+-    if (deleteFile) {
+-      unlink(fileName);
+-    }
+-  } else {
+-    unlink(tmpFileName->getCString());
+-  }
++  newsrc = new SplashFontSrc;
++  newsrc->setFile(tmpFileName, gTrue);
+   delete tmpFileName;
++  ret = SplashT1FontFile::loadType1Font(this, idA, newsrc, enc);
++  newsrc->unref();
+   return ret;
+ }
+ 
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashT1FontFile.cc poppler-0.5.0/splash/SplashT1FontFile.cc
+--- poppler-0.5.0.orig/splash/SplashT1FontFile.cc	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashT1FontFile.cc	2006-02-02 22:56:04.000000000 +0100
+@@ -25,8 +25,7 @@
+ 
+ SplashFontFile *SplashT1FontFile::loadType1Font(SplashT1FontEngine *engineA,
+ 						SplashFontFileID *idA,
+-						char *fileNameA,
+-						GBool deleteFileA,
++						SplashFontSrc *src,
+ 						char **encA) {
+   int t1libIDA;
+   char **encTmp;
+@@ -34,9 +33,27 @@ SplashFontFile *SplashT1FontFile::loadTy
+   int encStrSize;
+   char *encPtr;
+   int i;
+-
++  GString *fileNameA;
++  SplashFontSrc *newsrc = NULL;
++  SplashFontFile *ff;
++
++  if (! src->isFile) {
++    GString *tmpFileName;
++    FILE *tmpFile;
++    if (!openTempFile(&tmpFileName, &tmpFile, "wb", NULL))
++      return NULL;
++    fwrite(src->buf, 1, src->bufLen, tmpFile);
++    fclose(tmpFile);
++    newsrc = new SplashFontSrc;
++    newsrc->setFile(tmpFileName, gTrue);
++    src = newsrc;
++    delete tmpFileName;
++  }
++  fileNameA = src->fileName;
+   // load the font file
+   if ((t1libIDA = T1_AddFont(fileNameA)) < 0) {
++    if (newsrc)
++      delete newsrc;
+     return NULL;
+   }
+   T1_LoadFont(t1libIDA);
+@@ -63,15 +80,18 @@ SplashFontFile *SplashT1FontFile::loadTy
+   encTmp[256] = "custom";
+   T1_ReencodeFont(t1libIDA, encTmp);
+ 
+-  return new SplashT1FontFile(engineA, idA, fileNameA, deleteFileA,
++  ff = new SplashT1FontFile(engineA, idA, src,
+ 			      t1libIDA, encTmp, encStrTmp);
++  if (newsrc)
++    newsrc->unref();
++  return ff;
+ }
+ 
+ SplashT1FontFile::SplashT1FontFile(SplashT1FontEngine *engineA,
+ 				   SplashFontFileID *idA,
+-				   char *fileNameA, GBool deleteFileA,
++				   SplashFontSrc *srcA,
+ 				   int t1libIDA, char **encA, char *encStrA):
+-  SplashFontFile(idA, fileNameA, deleteFileA)
++  SplashFontFile(idA, srcA)
+ {
+   engine = engineA;
+   t1libID = t1libIDA;
+diff -Naupr --exclude='*.rej' --exclude='*.orig' poppler-0.5.0.orig/splash/SplashT1FontFile.h poppler-0.5.0/splash/SplashT1FontFile.h
+--- poppler-0.5.0.orig/splash/SplashT1FontFile.h	2006-02-02 22:53:55.000000000 +0100
++++ poppler-0.5.0/splash/SplashT1FontFile.h	2006-02-02 22:56:04.000000000 +0100
+@@ -26,7 +26,7 @@ public:
+ 
+   static SplashFontFile *loadType1Font(SplashT1FontEngine *engineA,
+ 				       SplashFontFileID *idA,
+-				       char *fileNameA, GBool deleteFileA,
++				       SplashFontSrc *src,
+ 				       char **encA);
+ 
+   virtual ~SplashT1FontFile();
+@@ -39,7 +39,7 @@ private:
+ 
+   SplashT1FontFile(SplashT1FontEngine *engineA,
+ 		   SplashFontFileID *idA,
+-		   char *fileNameA, GBool deleteFileA,
++		   SplashFontSrc *src,
+ 		   int t1libIDA, char **encA, char *encStrA);
+ 
+   SplashT1FontEngine *engine;

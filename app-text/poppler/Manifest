@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2830e1133fd706eb899ea47959e13390 ChangeLog 7116
-RMD160 e5fb0143bff01d7cc7e68ec4a92c66e1b2b2642a ChangeLog 7116
-SHA256 204462d8e05dab0f4e2e1ba9385e47ee43069727310e250fc531376da3c5ac12 ChangeLog 7116
+MD5 c25a7c296b5f8bec3e0062d31620fc10 ChangeLog 7423
+RMD160 611bca658384241e8f4fe4d9d552f02fae9edec7 ChangeLog 7423
+SHA256 0afbc19aded1707992cab425852c20e464a47d08ea570887ddf19ba5035a25da ChangeLog 7423
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
 RMD160 b2919594182fe8ee1b221c29f65eaf2664b79924 files/digest-poppler-0.3.0 65
 SHA256 67b1dde2e66bd05a2e886755f4034b5d745566efa1e1798930490a33d6d6998f files/digest-poppler-0.3.0 65
@@ -25,6 +22,9 @@ SHA256 86cd2107062481b5e7229433736144020c416ca12842062773917ff37da32bd0 files/di
 MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r2 241
 RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r2 241
 SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r2 241
+MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r3 241
+RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r3 241
+SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r3 241
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 RMD160 f755975637edd27fa4d82c43d2789f489a45b8c8 files/poppler-0.4.1-cairo-ft.patch 470
 SHA256 e9ca00d0a991674199e5214556567e5ad895295bd63d72ce24bf0a6c3b9abb4e files/poppler-0.4.1-cairo-ft.patch 470
@@ -49,6 +49,12 @@ SHA256 7239ee405bfef2b95254721d1c9b52c36dfa33519bd9c8a6191f7e7554af8080 files/po
 MD5 e225a2f3c1263f09bcf7ee2f45b55305 files/poppler-0.5.0-cairo-ft.patch 481
 RMD160 c31fbb2351fa8eef0ac2468a90bc29f58ca27ede files/poppler-0.5.0-cairo-ft.patch 481
 SHA256 bcb87b10de3e045963ae792527331eec8e7b509babcc8edd34362bc0ca33f7c7 files/poppler-0.5.0-cairo-ft.patch 481
+MD5 bab11de45dcec134e17267935dc0e484 files/poppler-0.5.0-fontimprove.patch 39288
+RMD160 6c22b66df55c7f017a151bca76429e0aea099621 files/poppler-0.5.0-fontimprove.patch 39288
+SHA256 bfe9ff2037e12b4e212888ffec68338b030e812d0c4436b5fbcec22c877667f0 files/poppler-0.5.0-fontimprove.patch 39288
+MD5 c8444c59ca7271ab6a5fc67dc0dd539a files/poppler-0.5.0-splash-overflow.patch 1383
+RMD160 9a203c0be60621d5f5a6e9d0df011e1646da14f5 files/poppler-0.5.0-splash-overflow.patch 1383
+SHA256 69eec22b540bccfc988b26ad3bf7d29039ff04e2dbc19556281342438604f142 files/poppler-0.5.0-splash-overflow.patch 1383
 MD5 d7766c9a19980b40524d8050a1f25cff files/poppler-0.5.0-try-all-fonts.patch 2867
 RMD160 7488663a61c327e781e0c66b918e1014941a0d63 files/poppler-0.5.0-try-all-fonts.patch 2867
 SHA256 3af95845d30dc3161b2f9a115c3c2bd2464e4854b831d5cd9e52216ba9f52c5f files/poppler-0.5.0-try-all-fonts.patch 2867
@@ -79,13 +85,9 @@ SHA256 c54a81ee44a824d9c47c673b545420272085e2f2fd27094aa54ec95e9501150e poppler-
 MD5 4a68b9ce3cede4e4071b9f4c76ac14a3 poppler-0.5.0-r2.ebuild 1567
 RMD160 e77b3c5b3fe6fd09fdf1ffab0db70f1620ce5f33 poppler-0.5.0-r2.ebuild 1567
 SHA256 3fd32cbbe66dbbf40b0703414184ce5db700fbef66fae70daf3db70aec552e03 poppler-0.5.0-r2.ebuild 1567
+MD5 f171d6dcea5aef21c24bd801e5155610 poppler-0.5.0-r3.ebuild 1691
+RMD160 c7c69ff6158eb23283585723eb53e0be08c6e71f poppler-0.5.0-r3.ebuild 1691
+SHA256 7f8fda4905219d37c1ad56cecab8c1b69a966e76a8c92f4af8d4582ba8dd042a poppler-0.5.0-r3.ebuild 1691
 MD5 43a6538f57eb03f10b4edb00b6baf1b5 poppler-0.5.0.ebuild 1480
 RMD160 edd74afce12e055ba3bc42d9ea52390dc4c4f3e8 poppler-0.5.0.ebuild 1480
 SHA256 10f88b3040818aecc270089751ec99ae41ab825d7a70a543644a56164bbefb31 poppler-0.5.0.ebuild 1480
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD4RNRomPajV0RnrERAkhPAJ0WszAZ0HlI2BAP7f9BDUzHQvSEuQCbBGwl
-x/ohJCuYZ08Z+3LehMDp50M=
-=olzK
------END PGP SIGNATURE-----
