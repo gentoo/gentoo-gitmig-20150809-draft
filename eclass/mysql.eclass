@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.13 2006/01/31 20:12:37 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.14 2006/02/03 08:48:37 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -355,7 +355,7 @@ mysql_src_compile() {
 		--with-client-ldflags=-lstdc++ \
 		--enable-thread-safe-client \
 		--with-comment="Gentoo Linux ${PF}" \
-		--with-unix-socket-path="/var/run/mysqld/mysqld${MY_SUFFIX}.sock" \
+		--with-unix-socket-path="/var/run/mysqld/mysqld.sock" \
 		--with-zlib-dir=/usr \
 		--with-lib-ccflags="-fPIC" \
 		--without-readline \
@@ -619,8 +619,8 @@ mysql_pkg_config() {
 		fi
 	fi
 
-	local socket=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
-	local pidfile=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.sock
+	local socket=${ROOT}/var/run/mysqld/mysqld${RANDOM}.sock
+	local pidfile=${ROOT}/var/run/mysqld/mysqld${MY_SUFFIX}${RANDOM}.pid
 	local mysqld="${ROOT}/usr/sbin/mysqld${MY_SUFFIX} \
 		${options} \
 		--user=mysql \
