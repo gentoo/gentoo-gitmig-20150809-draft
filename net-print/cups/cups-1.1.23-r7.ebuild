@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.11 2006/01/15 01:45:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.12 2006/02/03 21:43:54 genstef Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -15,7 +15,7 @@ ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/test/${MY_P}-source.tar.b
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl slp pam samba nls cjk gnutls"
+IUSE="ssl slp pam samba nls gnutls"
 
 DEP="pam? ( virtual/pam )
 	ssl? (
@@ -132,9 +132,6 @@ src_install() {
 	# allow raw printing
 	dosed "s:#application/octet-stream:application/octet-stream:" /etc/cups/mime.types /etc/cups/mime.convs
 
-	# Let foreign charset PDF's print. (Bug: 67493)
-	dosym /etc/xpdfrc /etc/cups/pdftops.conf
-
 	# install pdftops filter
 	exeinto /usr/lib/cups/filter/
 	newexe ${FILESDIR}/pdftops.pl pdftops
@@ -165,11 +162,5 @@ pkg_postinst() {
 	einfo "For more information about installing a printer take a look at:"
 	einfo "http://www.gentoo.org/doc/en/printing-howto.xml."
 
-	if useq cjk ; then
-		einfo
-		einfo "If you want CJK support on PDF's you'll need to re-emerge"
-		einfo "app-text/xpdf with your LINGUAS variable set instead of"
-		einfo "the CJK flag. (Bug: 67493)"
-	fi
 	einfo "You need to emerge ghostscript with the cups-USEflag turned on"
 }
