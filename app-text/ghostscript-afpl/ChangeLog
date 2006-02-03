@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.36 2006/01/19 20:33:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.37 2006/02/03 20:22:12 vanquirius Exp $
+
+*ghostscript-afpl-8.53-r2 (03 Feb 2006)
+
+  03 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/ghostscript-afpl-8.53-assertionfailed.patch,
+  +ghostscript-afpl-8.53-r2.ebuild:
+  Fix gxccman.c: assertion failed for bug 121383. Thanks to Eric Ding
+  <zze8zh602 at sneakemail dot com>.
 
   19 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
   files/digest-ghostscript-afpl-8.53-r1, Manifest:
