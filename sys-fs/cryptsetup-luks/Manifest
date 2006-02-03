@@ -1,55 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 75856750d72274dbeb686371601b0f67 ChangeLog 2981
-RMD160 907d33a064f292099d6b535b8bb711908e31efa2 ChangeLog 2981
-SHA256 bfaef5cba7048a4eb95947d6b5ba1cb1c1432e12dee907a30e37ed16c0b10940 ChangeLog 2981
+MD5 a076a0a8e711561ac52f34f8a8c86346 ChangeLog 3079
 MD5 66c1f7dfa9c09e11c9e248dd7ec07a5e cryptsetup-luks-1.0-r1.ebuild 2126
-RMD160 aa43f85456963a4c57f8dcf11ceaea3c352d317a cryptsetup-luks-1.0-r1.ebuild 2126
-SHA256 f95db6ef67924e2da007e69dd2559c174c426b45898925b5b0ff3b8dfbfc5474 cryptsetup-luks-1.0-r1.ebuild 2126
-MD5 0ed97c04126737096fe27845f4c9ed4d cryptsetup-luks-1.0.1-r1.ebuild 2030
-RMD160 ffa1704a858b46659f8b47a850feefa0f239509e cryptsetup-luks-1.0.1-r1.ebuild 2030
-SHA256 e32f81d0afd59fcb3c41932436ace931a22b60054984f3d2081b63afd242de43 cryptsetup-luks-1.0.1-r1.ebuild 2030
+MD5 8063ea3077505f5b1e18bb8b4be3f975 cryptsetup-luks-1.0.1-r1.ebuild 2033
 MD5 e2ad28e1bea9fc94042e4feb29222d52 cryptsetup-luks-1.0.1-r2.ebuild 2107
-RMD160 6759792253e1555b651d65bf193c3c0ea5dff3de cryptsetup-luks-1.0.1-r2.ebuild 2107
-SHA256 9fa12dd58c74832dc530213f58e5e0626370919b0ac2bb23aa380177b786851d cryptsetup-luks-1.0.1-r2.ebuild 2107
 MD5 99b3cfb6a9eb43a772d29da0f88f849d cryptsetup-luks-1.0.1.ebuild 2148
-RMD160 f6998231d11e09fb9d51e38a90284575241d3d77 cryptsetup-luks-1.0.1.ebuild 2148
-SHA256 640bca45ec339c0a4ca3b7dabc9061fdd9d5bdc770c5632f6a38e50a2d198515 cryptsetup-luks-1.0.1.ebuild 2148
 MD5 6d86b15e07cd0cdf96d8a363b1d778cd files/cryptfs.confd 1548
-RMD160 a009482d77e0c467fc9b26bbf7cd0a46ed5eb26e files/cryptfs.confd 1548
-SHA256 7e6d165edb4e3971d949847629e56849c0839c73f43de07822b4c942171dc16a files/cryptfs.confd 1548
 MD5 906131d3cdd20ac94109052236e469b9 files/cryptsetup-luks-1.0.1-libmapper.patch 534
-RMD160 7a7c29c426cb1d884f000654317b51ed9ca5fc7f files/cryptsetup-luks-1.0.1-libmapper.patch 534
-SHA256 f877a45493d0c5a8031b58d56651ac1d784f29160f73130eb18a3b1900fa0b73 files/cryptsetup-luks-1.0.1-libmapper.patch 534
 MD5 c66058fc1ba9f980485e2b9e3b66df52 files/cryptsetup-luks-1.0.1-no-nls.patch 597
-RMD160 fb2604d5de69ddaeeeb9b771c80cc72663bd95a3 files/cryptsetup-luks-1.0.1-no-nls.patch 597
-SHA256 f147f820e5b0bb391b160161e38454db3f719ee94fbd6e497c7454eb410df0c6 files/cryptsetup-luks-1.0.1-no-nls.patch 597
 MD5 f254479b9a12868d43ab10e4658fab51 files/digest-cryptsetup-luks-1.0-r1 72
-RMD160 f16436326ec991428b4e2a840159408c6eba6b53 files/digest-cryptsetup-luks-1.0-r1 72
-SHA256 fc336d3548b4032af8d91ab885aa6e6b5a717af5d6b76ac8cbe0cf5b3d48eeb6 files/digest-cryptsetup-luks-1.0-r1 72
 MD5 6d83c52472ad8d3b12ec5dbc4e056ed7 files/digest-cryptsetup-luks-1.0.1 74
-RMD160 baf87a565a67086afd4d831176f58f495d05d9f6 files/digest-cryptsetup-luks-1.0.1 74
-SHA256 4953350a9bc5349c28fb9afda4f3df9b0a59ed96d8693f34773f59490a998ee6 files/digest-cryptsetup-luks-1.0.1 74
 MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r1 268
-RMD160 75bee6ae3c1574f5602a48be8f2791985e4a26b5 files/digest-cryptsetup-luks-1.0.1-r1 268
-SHA256 44f9a55c285900d0fbbdc7268257cde094c0968a33f99e993510147af84a5471 files/digest-cryptsetup-luks-1.0.1-r1 268
 MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r2 268
-RMD160 75bee6ae3c1574f5602a48be8f2791985e4a26b5 files/digest-cryptsetup-luks-1.0.1-r2 268
-SHA256 44f9a55c285900d0fbbdc7268257cde094c0968a33f99e993510147af84a5471 files/digest-cryptsetup-luks-1.0.1-r2 268
 MD5 c653a0b4ace27569ccc659b7cb43b4a9 files/dm-crypt-start.sh 4306
-RMD160 558705676a62acdaacb1362ad5459c1719f5b247 files/dm-crypt-start.sh 4306
-SHA256 48669629db92c204f208406cf5ca78acce9088568e0bc03bba511b38a668b0fc files/dm-crypt-start.sh 4306
 MD5 a3bb6598f67c8922ccb6576ff256ced0 files/dm-crypt-stop.sh 1297
-RMD160 aae23fdb24788b31992f61afd750d0be270a586b files/dm-crypt-stop.sh 1297
-SHA256 c160c65b947af563e5e5ee0b090f3d2a4f4097361b1088be05cba3f3461907b7 files/dm-crypt-stop.sh 1297
 MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
-RMD160 4ecb17bc29c5805c7d009098d379f85807f0ff9a metadata.xml 228
-SHA256 157fd3642e30749762584d579cbeb8095379a572897d3f60dc30414cfd0f5c34 metadata.xml 228
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4jU7JrHF4yAQTrARAqAfAJ9V4DYjYdwwEhAZ/+2GBMdNUOIrtwCeOAuH
-6+DZ3ks9KlHJpVVmgDrOnYQ=
-=zdMe
------END PGP SIGNATURE-----
