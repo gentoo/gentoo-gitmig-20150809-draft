@@ -1,25 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.4 2006/01/28 21:56:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.5 2006/02/03 18:24:48 spyderous Exp $
 
 inherit eutils x11 linux-mod
 
 IUSE_VIDEO_CARDS="
-	video_cards_3dfx
+	video_cards_tdfx
 	video_cards_ati
-	video_cards_ffb
-	video_cards_ffb
+	video_cards_sunffb
 	video_cards_i810
-	video_cards_i830
-	video_cards_i915
-	video_cards_mach64
-	video_cards_mach64
 	video_cards_mga
 	video_cards_nv
-	video_cards_radeon
-	video_cards_rage128
 	video_cards_savage
-	video_cards_sis
 	video_cards_sis
 	video_cards_via"
 IUSE="${IUSE_VIDEO_CARDS}"
@@ -51,17 +43,6 @@ DEPEND=">=sys-devel/automake-1.7
 
 pkg_setup() {
 	get_version
-
-	# Require at least one video card
-	if [ -z "${VIDEO_CARDS}" ]
-	then
-		die "Please set at least one video card in VIDEO_CARDS in make.conf or the environment. Possible VIDEO_CARDS values are: ${IUSE_VIDEO_CARDS}."
-	fi
-
-	if [ "${ARCH}" != "sparc" ] && use video_cards_ffb
-	then
-		die "The ffb driver is for sparc-specific hardware. Please remove it from your VIDEO_CARDS."
-	fi
 
 	if linux_chkconfig_builtin "DRM"
 	then
@@ -168,12 +149,12 @@ pkg_postinst() {
 		einfo "SiS framebuffer also needs to be enabled in the kernel."
 	fi
 
-	if use video_cards_mach64
+	if use video_cards_ati
 	then
 		einfo "The Mach64 DRI driver is insecure."
 		einfo "Malicious clients can write to system memory."
 		einfo "For more information, see:"
-		einfo "http://dri.sourceforge.net/cgi-bin/moin.cgi/ATIMach64?value=CategoryHardwareChipset."
+		einfo "http://dri.freedesktop.org/wiki/ATIMach64."
 	fi
 
 	einfo "Checking kernel module dependencies"
@@ -186,38 +167,37 @@ pkg_postinst() {
 set_vidcards() {
 	set_kvobj
 
+	POSSIBLE_VIDCARDS="mga tdfx r128 radeon i810 i830 i915 mach64 nv savage
+		sis via"
+	if use sparc; then
+		POSSIBLE_VIDCARDS="${POSSIBLE_VIDCARDS} ffb"
+	fi
 	VIDCARDS=""
 
-	use video_cards_mga && \
-		VIDCARDS="${VIDCARDS} mga.${KV_OBJ}"
-	use video_cards_3dfx && \
-		VIDCARDS="${VIDCARDS} tdfx.${KV_OBJ}"
-	use video_cards_rage128 && \
-		VIDCARDS="${VIDCARDS} r128.${KV_OBJ}"
-	use video_cards_radeon && \
-		VIDCARDS="${VIDCARDS} radeon.${KV_OBJ}"
-	use video_cards_i810 && \
-		VIDCARDS="${VIDCARDS} i810.${KV_OBJ}"
-	use video_cards_i830 && \
-		VIDCARDS="${VIDCARDS} i830.${KV_OBJ}"
-	use video_cards_i915 && \
-		VIDCARDS="${VIDCARDS} i915.${KV_OBJ}"
-#	use video_cards_gamma && \
-#		VIDCARDS="${VIDCARDS} gamma.${KV_OBJ}"
-	use video_cards_mach64 && \
-		VIDCARDS="${VIDCARDS} mach64.${KV_OBJ}"
-	use video_cards_nv && \
-		VIDCARDS="${VIDCARDS} nv.${KV_OBJ}"
-	use video_cards_savage && \
-		VIDCARDS="${VIDCARDS} savage.${KV_OBJ}"
-	use video_cards_sis && \
-		VIDCARDS="${VIDCARDS} sis.${KV_OBJ}"
-	use video_cards_via && \
-		VIDCARDS="${VIDCARDS} via.${KV_OBJ}"
-	use video_cards_ffb && \
-		VIDCARDS="${VIDCARDS} ffb.${KV_OBJ}"
-	use video_cards_ati && \
-		VIDCARDS="${VIDCARDS} r128.${KV_OBJ} radeon.${KV_OBJ} mach64.${KV_OBJ}"
+	if [[ -n "${VIDEO_CARDS}" ]]; then
+		use video_cards_mga && \
+			VIDCARDS="${VIDCARDS} mga.${KV_OBJ}"
+		use video_cards_tdfx && \
+			VIDCARDS="${VIDCARDS} tdfx.${KV_OBJ}"
+		use video_cards_ati && \
+			VIDCARDS="${VIDCARDS} mach64.${KV_OBJ} r128.${KV_OBJ} radeon.${KV_OBJ}"
+		use video_cards_i810 && \
+			VIDCARDS="${VIDCARDS} i810.${KV_OBJ} i830.${KV_OBJ} i915.${KV_OBJ}"
+		use video_cards_nv && \
+			VIDCARDS="${VIDCARDS} nv.${KV_OBJ}"
+		use video_cards_savage && \
+			VIDCARDS="${VIDCARDS} savage.${KV_OBJ}"
+		use video_cards_sis && \
+			VIDCARDS="${VIDCARDS} sis.${KV_OBJ}"
+		use video_cards_via && \
+			VIDCARDS="${VIDCARDS} via.${KV_OBJ}"
+		use video_cards_sunffb && \
+			VIDCARDS="${VIDCARDS} ffb.${KV_OBJ}"
+	else
+		for card in ${POSSIBLE_VIDCARDS}; do
+			VIDCARDS="${VIDCARDS} ${card}"
+		done
+	fi
 }
 
 patch_prepare() {
