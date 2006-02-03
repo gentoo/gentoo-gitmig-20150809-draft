@@ -1,13 +1,49 @@
-MD5 8e13033048c63af6af5aafc338c576ce ChangeLog 6559
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4fc93a9c17a78c69c531103cd6fc72a4 ChangeLog 6665
+RMD160 4f2ecc9b3c0be29f3b961422449cd71bfb51e19b ChangeLog 6665
+SHA256 f6ce72930201f48cc4271ba6e2209afc9e0a50b49edb003c421df1d91f2d92dd ChangeLog 6665
 MD5 27605cb14e108b005797503b884e6e67 files/digest-gauche-0.8.3 62
+RMD160 e67037796b28bdec141bea21700c0027c89e3c58 files/digest-gauche-0.8.3 62
+SHA256 7d9329feaf61cae712d627283313cdaf752ead8c9c7fae9915eb8dcf1f6b747b files/digest-gauche-0.8.3 62
 MD5 662729c0ca18c20cd945fb332874362a files/digest-gauche-0.8.5 62
+RMD160 444a9778e730ac395dd9022b87412f2f99784f84 files/digest-gauche-0.8.5 62
+SHA256 13ba7ae6bf29c950e3bc4cb52db06c579a334b2649b85c0ef769fdf3b6ba9497 files/digest-gauche-0.8.5 62
 MD5 19f67365f4ce8133b2c98c2e2f525914 files/digest-gauche-0.8.6-r1 62
+RMD160 167d89a8619bc3997aad9cf09e008050c2ded59f files/digest-gauche-0.8.6-r1 62
+SHA256 1d9426da86f10b82256176b79d80a1e3a08c9bfb981f9eff228e9d4956b1e588 files/digest-gauche-0.8.6-r1 62
 MD5 58ca35453cb35833ef880d3e1d3ea5d2 files/gauche-aclocal.m4-1.31.diff 1099
+RMD160 05210e9fdf3d89a0db1bbd9e6dfa3341fe1636a3 files/gauche-aclocal.m4-1.31.diff 1099
+SHA256 558acc3454d98eacc45b971b84e114f58c1c6e3127d4660e8f4d35d1ca579908 files/gauche-aclocal.m4-1.31.diff 1099
 MD5 7bc4cbd7c32584661896116bd48fdee0 files/gauche-aclocal.m4-cc.diff 479
+RMD160 be3433cb1d9aa12edb9ebd338781b97fa7e1ae78 files/gauche-aclocal.m4-cc.diff 479
+SHA256 7bf04160237f0fd0743ae9918adb73a0efd5b9f8b3dc09fa5b386e03bbbe5955 files/gauche-aclocal.m4-cc.diff 479
 MD5 62aab943eb7c2154815470d7b813948f files/gauche-gauche.m4-cc.diff 489
+RMD160 87ba04212549426b4b1cc007999c318f17e8b839 files/gauche-gauche.m4-cc.diff 489
+SHA256 8884b8640fa40bebb83f0022a0669730f1501f41ddb5159383b4ac06bc999b35 files/gauche-gauche.m4-cc.diff 489
 MD5 177cc4fa4c84d465bab80e5b3adb5cc1 files/gauche-gdbm-gentoo.diff 729
+RMD160 be54be5d6a6f7b62831464a9679258ae3667b0d1 files/gauche-gdbm-gentoo.diff 729
+SHA256 6137f0e1c4c4f2fad60ef23a60f5c6a1527ae788b2ac5779a0afecf31e73eb6c files/gauche-gdbm-gentoo.diff 729
 MD5 c69e08c5d4d4342092d1d973bc0eeed2 files/gauche-runpath.diff 509
+RMD160 5271974f738b5a4feaf2f9baf663bce001496c22 files/gauche-runpath.diff 509
+SHA256 9ccb7470904e5a63e0bb9b94e336d2e8ede811d0761c0795a8101ce14bd69e33 files/gauche-runpath.diff 509
 MD5 38d46371d4968b1adc706d093858b6ef gauche-0.8.3.ebuild 1122
+RMD160 d254f72a6764df02749c3d3b162e25000ee2eec3 gauche-0.8.3.ebuild 1122
+SHA256 93c998f2d46eac6498a2c6b6570555740882bbd333029d925119c39647e7c1a4 gauche-0.8.3.ebuild 1122
 MD5 f6ba9a9c631f6bb6f74186ac98077b25 gauche-0.8.5.ebuild 1128
-MD5 97492a113346f0ab95d38b0629475060 gauche-0.8.6-r1.ebuild 1213
+RMD160 a1504dfae373c4d20033f0fffc84afab13d88601 gauche-0.8.5.ebuild 1128
+SHA256 9c185fb9cd91c38ca3eea0ddaefd8ed496abce4f0a869ab2c193e2524b532dee gauche-0.8.5.ebuild 1128
+MD5 98f0d059112a6f223d373b505b7e2cc7 gauche-0.8.6-r1.ebuild 1212
+RMD160 382f6f0e94720a56ec44cab77b1df5dd085dc4a6 gauche-0.8.6-r1.ebuild 1212
+SHA256 a999d916bf02bdd16f2241cf2186b72c32b918d821a87d8b0f0848821b2c8334 gauche-0.8.6-r1.ebuild 1212
 MD5 e9fa98743d1cf3b213a4b04f52baf5f8 metadata.xml 619
+RMD160 1e8a180467bc6ec26d15ed563fe159174c9af22d metadata.xml 619
+SHA256 e05bcee72328b2e35e9a46af398e9073a8dd732f4f2f6c7a32c097801faf4289 metadata.xml 619
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD4+sxJrHF4yAQTrARAv9RAJoCgkFGHavv4B81Oay7EQ7KOJI/ZQCfaE4K
+gP2WI+Ut4wmlRWz9lkQzQKg=
+=w7lP
+-----END PGP SIGNATURE-----
