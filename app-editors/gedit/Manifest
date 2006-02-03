@@ -1,4 +1,4 @@
-MD5 8a162745777feb219b2ea6aa4cb586f8 ChangeLog 14915
+MD5 5166e30937ac6b615155aba86de3ab4f ChangeLog 15000
 MD5 b1cd4f5d4adf64b0c6ce68ebe818a495 files/digest-gedit-0.9.6-r1 64
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3 66
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3-r1 66
@@ -9,5 +9,5 @@ MD5 291dcd2524b897c18af75968be9c0ef3 gedit-0.9.6-r1.ebuild 905
 MD5 2e3a9745a373aa384d93662c048eea05 gedit-2.10.3-r1.ebuild 1078
 MD5 8f1e9c292ba4538868f72a7413279984 gedit-2.10.3.ebuild 923
 MD5 21be6ae25fea18ed5c0045e4dce9e0bb gedit-2.10.5.ebuild 1024
-MD5 4d98a810cf75ed33b19fbb449cb28f9a gedit-2.12.1.ebuild 982
+MD5 c0da20f0651557001b9e8fe9213121cc gedit-2.12.1.ebuild 980
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
