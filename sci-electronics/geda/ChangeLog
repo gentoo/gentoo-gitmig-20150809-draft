@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.12 2006/02/02 19:24:54 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.13 2006/02/03 00:38:36 plasmaroo Exp $
+
+  02 Feb 2006; <plasmaroo@gentoo.org> -geda-20050313.ebuild,
+  geda-20050820.ebuild:
+  Remove stale version; port over to modular X.
 
   02 Feb 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   geda-20050820.ebuild:
