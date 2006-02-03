@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2.ebuild,v 1.1 2006/02/03 18:48:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2.ebuild,v 1.2 2006/02/03 19:22:37 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -20,6 +20,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_sunffb
 	video_cards_i810
 	video_cards_mga
+	video_cards_none
 	video_cards_s3virge
 	video_cards_savage
 	video_cards_sis
