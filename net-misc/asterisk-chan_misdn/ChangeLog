@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/asterisk-chan_misdn
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_misdn/ChangeLog,v 1.1 2006/02/03 19:54:04 genstef Exp $
+
+*asterisk-chan_misdn-0.3.0_rc15 (03 Feb 2006)
+
+  03 Feb 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +asterisk-chan_misdn-0.3.0_rc15.ebuild:
+  New masked ebuild, closes bug 109998
+
