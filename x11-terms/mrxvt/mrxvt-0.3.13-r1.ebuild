@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.13-r1.ebuild,v 1.4 2005/03/19 09:50:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.13-r1.ebuild,v 1.5 2006/02/03 14:01:29 nelchael Exp $
 
 inherit eutils
 
@@ -15,18 +15,22 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc-macos ~amd64 ppc alpha"
 
-RDEPEND="virtual/libc
-	virtual/x11
-	dev-libs/expat
+RDEPEND="dev-libs/expat
 	media-libs/libpng
 	media-libs/jpeg
 	truetype? ( virtual/xft
 		media-libs/fontconfig
-		media-libs/freetype )"
-#	utempter? ( sys-apps/utempter )
+		media-libs/freetype )
+	|| ( (
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-libs/libXpm
+			x11-libs/libXrender )
+		virtual/x11 )"
+#      utempter? ( sys-apps/utempter )
+
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake"
+	|| ( x11-proto/xproto virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

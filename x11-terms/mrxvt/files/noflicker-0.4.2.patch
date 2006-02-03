@@ -1,0 +1,159 @@
+diff -ru /tmp/mrxvt-0.4.2/src/command.c ./src/command.c
+--- /tmp/mrxvt-0.4.2/src/command.c	2005-06-24 17:16:26.000000000 -0500
++++ ./src/command.c	2005-12-21 12:57:21.000000000 -0600
+@@ -36,6 +36,12 @@
+ /*
+ ** $Id: noflicker-0.4.2.patch,v 1.1 2006/02/03 14:01:29 nelchael Exp $
+ */
++/* Modified 2005-12-21 by Gautam Iyer <gautam@math.uchicago.edu>
++ *
++ *	1. Eliminated the "BadMatch" XError sometimes generated
++ *	2. Eliminated "flicker" seen when using a transparent shaded terminal
++ *	   while changing desktop pages.
++ */
+ 
+ #include "../config.h"
+ #include "rxvt.h"
+@@ -3740,10 +3746,22 @@
+ 	}
+ #endif
+ 
+-#ifdef TRANSPARENT		/* XXX: maybe not needed - leave in for now */
++#ifdef TRANSPARENT
++	/*
++	 * Check to see if the previous position we grabbed the background is
++	 * different from the current window position. If yes, then update
++	 * everything.
++	 */
+ 	if (r->Options & Opt_transparent)	{
+-		rxvt_check_our_parents(r);
+-		r->h->want_full_refresh = 1;
++		if( !r->bgGrabbed
++		    || r->prevPos.x != ev->x
++		    || r->prevPos.y != ev->y
++		    || r->prevPos.width != ev->width
++		    || r->prevPos.height != ev->height
++		  ) {
++			rxvt_check_our_parents(r);
++			r->h->want_full_refresh = 1;
++		}
+ 	}
+ #endif
+ }
+@@ -3782,7 +3800,9 @@
+ 	if (ev->atom != r->h->xa[XA_XROOTPMAPID])
+ 		return ;
+ 
+-	if ((r->Options & Opt_transparent) && rxvt_check_our_parents(r)) {
++	if (r->Options & Opt_transparent) {
++		r->bgGrabbed = False;
++		rxvt_check_our_parents(r);
+ 		r->h->want_full_refresh = 1;
+ 	}
+ #endif		/* TRANSPARENT */
+@@ -4549,6 +4569,14 @@
+ 		0, 0, &sx, &sy, &cr);
+ 	nw = r->szHint.width;
+ 	nh = r->szHint.height;
++
++#if DEBUG_LEVEL
++	if( sx + nw <= 0 || sx >= (int) rootw || sy + nh <= 0 || sy >= (int) rooth) {
++	    DBG_MSG( 1, (stderr, "Possible error: grabbing offscreen (%d, %d, %u, %u)\n",
++			    sx, sy, nw, nh));
++	}
++#endif
++
+ 	*nx = *ny = 0;
+ 	if (sx < 0) {
+ 		nw += sx;
+@@ -4707,8 +4735,14 @@
+ 		rootpixmap = *((Pixmap*) prop);
+ 		XFree(prop);
+ 	}
++	else r->bgGrabbed = False;
++
++	/*
++	 * Use "while" instead of "if" so we can break out if transparency
++	 * updates don't need to be performed.
++	 */
++	while (have_pixmap) {
+ 
+-	if (have_pixmap) {
+ 		/*
+ 		** Copy XROOT pixmap transparency
+ 		*/
+@@ -4716,13 +4750,21 @@
+ 		XImage*			imagetw;
+ 
+ 		/*
+-		** handle BadMatch - usually because we're outside the
+-		** pixmap. may need a delay here?
+-		*/
+-		r->h->allowedxerror = -1;
++		 * Calling get_parent_ximage when the terminal window is off
++		 * screen is pointless and generates a "Bad Match" XError while
++		 * calling XGetImage.
++		 */
++
++		if (	r->szHint.x + r->szHint.width  <= 0
++			|| r->szHint.x >= (int) wrootattr.width
++			|| r->szHint.y + r->szHint.height <= 0
++			|| r->szHint.y >= (int) wrootattr.height
++		   )
++			/* We're off screen. Don't update */
++			break;
++
+ 		imagetw = get_parent_ximage (r, rootpixmap,
+ 					wrootattr.width, wrootattr.height, &nx, &ny);
+-		r->h->allowedxerror = 0;
+ 
+ 		if (NULL == imagetw) {
+ 			if (r->h->am_transparent && r->h->am_pixmap_trans) {
+@@ -4746,10 +4788,18 @@
+ 			if ((!r->h->am_transparent || !r->h->am_pixmap_trans) &&
+ 				retvt)
+ 			*/
+-			if (retvt)
++			if (retvt) {
++				r->bgGrabbed = True;
++				r->prevPos.x = r->szHint.x;
++				r->prevPos.y = r->szHint.y;
++				r->prevPos.width = r->szHint.width;
++				r->prevPos.height = r->szHint.height;
++
+ 				have_changed = 1;
++			}
+ 			r->h->am_transparent = r->h->am_pixmap_trans = 1;
+ 		}
++		break;
+ 	}
+ 
+ 	/*
+diff -ru /tmp/mrxvt-0.4.2/src/init.c ./src/init.c
+--- /tmp/mrxvt-0.4.2/src/init.c	2005-10-07 20:07:45.000000000 -0500
++++ ./src/init.c	2005-12-21 12:57:21.000000000 -0600
+@@ -1927,6 +1927,10 @@
+ 	r->szHint.x = 0;
+ 	r->szHint.y = 0;
+ 
++#ifdef TRANSPARENT
++	r->bgGrabbed = False;
++#endif
++
+ 	/* Parse geometry */
+ 	if (r->h->rs[Rs_geometry])
+ 		flags = XParseGeometry(r->h->rs[Rs_geometry], &x, &y, &w, &h);
+diff -ru /tmp/mrxvt-0.4.2/src/rxvtlib.h ./src/rxvtlib.h
+--- /tmp/mrxvt-0.4.2/src/rxvtlib.h	2005-06-23 20:54:07.000000000 -0500
++++ ./src/rxvtlib.h	2005-12-21 12:57:21.000000000 -0600
+@@ -757,6 +757,10 @@
+ 	unsigned long   Options;
+ 	unsigned long   Options2;
+ 	XSizeHints      szHint;
++#ifdef TRANSPARENT
++	XRectangle	prevPos;	/* previous onscreen position */
++	Bool		bgGrabbed;	/* weather the bg was succesfully grabbed at prevPos */
++#endif
+ 
+ 	/* hotkeys */
+ 	hotkeys_t*		hotkeys;
