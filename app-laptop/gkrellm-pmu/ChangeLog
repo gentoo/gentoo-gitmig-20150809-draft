@@ -1,46 +1,10 @@
 # ChangeLog for app-laptop/gkrellm-pmu
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/ChangeLog,v 1.10 2005/12/18 14:42:44 lu_zero Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/ChangeLog,v 1.11 2006/02/03 06:57:10 wormo Exp $
 
-*gkrellm-pmu-2.4 (18 Dec 2005)
+*gkrellm-pmu-2.5 (02 Feb 2006)
 
-  18 Dec 2005; Luca Barbato <lu_zero@gentoo.org> gkrellm-pmu-2.3.ebuild,
-  +gkrellm-pmu-2.4.ebuild:
-  New version, correct deps set
-
-  17 Jul 2005; Lars Weiler <pylon@gentoo.org> -gkrellm-pmu-2.0.ebuild,
-  -gkrellm-pmu-2.2.ebuild, gkrellm-pmu-2.3.ebuild:
-  Stable on ppc.
-
-  08 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
-  gkrellm-pmu-2.3.ebuild:
-  Made it working (again) on ppc. Look into bug #72177.
-
-  03 Nov 2004; <dams@gentoo.org> gkrellm-pmu-2.0.ebuild,
-  gkrellm-pmu-2.2.ebuild, gkrellm-pmu-2.3.ebuild:
-  fixing einstall -> emake install.
-
-*gkrellm-pmu-2.3 (27 Nov 2004)
-
-  27 Nov 2004; Daniel Black <dragonheart@gentoo.org> gkrellm-pmu-2.0.ebuild,
-  gkrellm-pmu-2.2.ebuild, +gkrellm-pmu-2.3.ebuild:
-  Version bump. Homepage change. QA fix removing einstall as per bug #72177.
-  Thanks SpanKY
-
-*gkrellm-pmu-2.2 (03 Jul 2004)
-
-  03 Jul 2004; Lars Weiler <pylon@gentoo.org> gkrellm-pmu-2.0.ebuild,
-  +gkrellm-pmu-2.2.ebuild:
-  Version bump and previous version stable.
-
-  19 Dec 2003; Luca Barbato <lu_zero@gentoo.org> gkrellm-pmu-2.0.ebuild:
-  sandboxing fix
-
-*gkrellm-pmu-2.0 (05 Dec 2003)
-
-  05 Dec 2003; Lars Weiler <pylon@gentoo.org> gkrellm-pmu-2.0.ebuild:
-  Initial import.
-  
-  This GKrellm2-plugin is currently only for Apple-laptop users. This allows
-  you to control your battery without apm-emulation enabled.
+  02 Feb 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +gkrellm-pmu-2.5.ebuild:
+  version bump (Bug #120385)
 
