@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.6 2006/02/03 00:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.7 2006/02/03 03:29:52 vapier Exp $
 
 ECVS_SERVER="cvs.winehq.org:/home/wine"
 ECVS_MODULE="wine"
@@ -87,8 +87,8 @@ src_unpack() {
 	cvs_src_unpack
 	cd "${S}"
 
-	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
+	epatch "${FILESDIR}"/wine-gentoo-no-ssp.patch #66002
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
 
