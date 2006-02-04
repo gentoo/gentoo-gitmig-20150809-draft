@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.2 2005/11/07 10:42:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.3 2006/02/04 15:15:17 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -24,10 +24,6 @@ DEPEND=">=media-libs/libao-0.8.3
 
 RDEPEND="${DEPEND}
 	 dev-python/pysqlite"
-
-DEPEND="${DEPEND}
-	>=sys-devel/autoconf-2.5
-	=sys-devel/automake-1.7*"
 
 src_unpack() {
 	unpack ${A}

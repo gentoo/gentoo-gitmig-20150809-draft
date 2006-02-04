@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.3 2005/12/26 14:55:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.4 2006/02/04 15:15:17 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 IUSE="vorbis mad flac"
 
@@ -23,25 +23,15 @@ DEPEND=">=media-libs/libao-0.8.3
 RDEPEND="${DEPEND}
 	 dev-python/pysqlite"
 
-DEPEND="${DEPEND}
-	>=sys-devel/automake-1.7"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-Makefile.patch
-	touch NEWS AUTHORS
-
-	export WANT_AUTOMAKE=1.7
-	export WANT_AUTOCONF=2.5
-	aclocal || die
-	automake || die
-	autoconf || die
+	eautoreconf
 }
 
 src_compile() {
-	libtoolize --copy --force	# per bug number 83003
 	econf --enable-shout \
 	      `use_enable vorbis` \
 	      `use_enable flac` \

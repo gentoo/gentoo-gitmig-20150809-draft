@@ -1,13 +1,43 @@
-MD5 863039c5c7db51dd668146284e451b36 ChangeLog 2850
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10782a0f52f9f46a1c9f07f8c6fa6643 ChangeLog 3187
+RMD160 57ac411d9d4d5827bac68a6cbacbb18fc88d12b7 ChangeLog 3187
+SHA256 22cddf3a7fee02d3f482c98047f6e623f08bc3e911a669c58429f4ec860cab98 ChangeLog 3187
 MD5 3b423557f64a5705c60b4952da55fbec bossogg-0.13.5.ebuild 1457
-MD5 1430aa69d076b65e5f6cf27fccf89226 bossogg-0.13.6-r2.ebuild 1731
-MD5 9ba7855ea78c0f05c792b402f1108a3c bossogg-0.13.6-r3.ebuild 1670
-MD5 e67c89151eae76f089051e7c37c48b1a bossogg-0.13.6.ebuild 1692
+RMD160 419393aac99f9571f6af6a15c7bbba43bdb3afb6 bossogg-0.13.5.ebuild 1457
+SHA256 cfd35857732076617b32ddd8682c1d415d127b88ac71748acda6fbf17e070de1 bossogg-0.13.5.ebuild 1457
+MD5 dbf0167b3edf02af9306e0363bc4c46d bossogg-0.13.6-r2.ebuild 1537
+RMD160 0b84df257a5dc2cd202177d7d11e44c2fedb9a7f bossogg-0.13.6-r2.ebuild 1537
+SHA256 a5d09f4948afd7af00b795116cba2e4b59fc1fafe5457f65a72472b9a3182282 bossogg-0.13.6-r2.ebuild 1537
+MD5 cd9fced48ac1cd4aa891f5dce7533dd4 bossogg-0.13.6-r3.ebuild 1598
+RMD160 208c53de74e630a98fef4bddcbc63f81a1bd43b8 bossogg-0.13.6-r3.ebuild 1598
+SHA256 839bcbae89e6d85bbe83acd0d28b9502b9a420c523051c4006d3a1554c729920 bossogg-0.13.6-r3.ebuild 1598
 MD5 1258e23a47f430724dd4a6b18798641c files/bossogg-0.13.6-Makefile.patch 1673
+RMD160 2f7396fd8e196f60900b94fc7a5929622c461807 files/bossogg-0.13.6-Makefile.patch 1673
+SHA256 056243759834d76d3dd56879a678a7e6156dcd4e6390d544da5bc61734c562e8 files/bossogg-0.13.6-Makefile.patch 1673
 MD5 986dd155135ce535ebc1b77485b6bd40 files/bossogg-0.13.6-gcc4.patch 1099
+RMD160 59d2896fa29b3de688ef312f605921818d1babcf files/bossogg-0.13.6-gcc4.patch 1099
+SHA256 3b210bf534332cf239ba394bb63e1dbd32e3d0051003c901914e390785c308fc files/bossogg-0.13.6-gcc4.patch 1099
 MD5 3089685b6a78e3a1a57cd7315f1245b4 files/bossogg.initd 609
+RMD160 1a88a35a67bb69461c0811b3c990501e7873894f files/bossogg.initd 609
+SHA256 408683dc3567c89900e2b66ef1106ac54bd425e80d6493c4bce35db9257a373f files/bossogg.initd 609
 MD5 5744dec050eb39224fe02fcdd1e74bed files/digest-bossogg-0.13.5 66
-MD5 ba402f47f5f8d4052e2c61b26b6ba547 files/digest-bossogg-0.13.6 66
+RMD160 136429ebc0d09a79ea14133d79472e4d0456bff4 files/digest-bossogg-0.13.5 66
+SHA256 12205166958317a894c6b9ec1c5cf874ef8072953e9e536c4ebbbdc99b748eb9 files/digest-bossogg-0.13.5 66
 MD5 ba402f47f5f8d4052e2c61b26b6ba547 files/digest-bossogg-0.13.6-r2 66
+RMD160 ab8c0e90de2ebcf1fa97c5e70ceae9395760b1ad files/digest-bossogg-0.13.6-r2 66
+SHA256 2af1206587ef3f2835e94ee6a425c2c82cdfaff1d04bd258a6948ba9368f5ed5 files/digest-bossogg-0.13.6-r2 66
 MD5 ba402f47f5f8d4052e2c61b26b6ba547 files/digest-bossogg-0.13.6-r3 66
+RMD160 ab8c0e90de2ebcf1fa97c5e70ceae9395760b1ad files/digest-bossogg-0.13.6-r3 66
+SHA256 2af1206587ef3f2835e94ee6a425c2c82cdfaff1d04bd258a6948ba9368f5ed5 files/digest-bossogg-0.13.6-r3 66
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5MURAiZjviIA2XgRAtDuAJ9H7XtAZr0MNzi+4BJysFu4dEnINQCeKHp+
+M0escVgXB8/fjhyR67m5q0U=
+=9pB4
+-----END PGP SIGNATURE-----
