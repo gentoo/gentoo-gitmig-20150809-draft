@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-nios2/gcc-nios2-5.1.ebuild,v 1.1 2006/01/02 00:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-nios2/gcc-nios2-5.1.ebuild,v 1.2 2006/02/04 18:14:03 vapier Exp $
 
-[[ ${CTARGET} != nios* ]] && export CTARGET="nios2-elf"
+[[ ${CTARGET} != nios* && ${CATEGORY} == "sys-devel" ]] && export CTARGET="nios2-elf"
 GCC_A_FAKEIT=${A}
 export USE="nocxx -fortran -gcj -objc -multilib"
 
