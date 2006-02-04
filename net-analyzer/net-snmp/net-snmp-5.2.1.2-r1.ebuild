@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2-r1.ebuild,v 1.4 2006/01/23 01:24:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2-r1.ebuild,v 1.5 2006/02/04 18:10:22 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -20,8 +20,8 @@ DEPEND=">=sys-libs/zlib-1.1.4
 		dev-libs/popt
 		app-arch/bzip2
 	)
-	elf? ( dev-libs/elfutils )"
-#	lm_sensors? ( sys-apps/lm_sensors )
+	elf? ( dev-libs/elfutils )
+	lm_sensors? ( sys-apps/lm_sensors )"
 
 RDEPEND="${DEPEND}
 	perl? (
@@ -78,7 +78,7 @@ src_compile() {
 
 	mibs="host ucd-snmp/dlmod"
 	use smux && mibs="${mibs} smux"
-#	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
+	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
 
 	econf \
 		--with-install-prefix="${D}" \
@@ -165,12 +165,5 @@ src_install () {
 		rm -rf ${D}/usr/bin/{net-snmp-config,fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
 		find ${D} -name '*.pl' -exec rm -f '{}' \;
 		use ipv6 || rm -rf ${D}/usr/share/snmp/mibs/IPV6*
-	fi
-}
-
-pkg_postinst() {
-	if use lm_sensors ; then
-		ewarn "lm_sensors support is no longer available because it"
-		ewarn "causes a memory leak."
 	fi
 }
