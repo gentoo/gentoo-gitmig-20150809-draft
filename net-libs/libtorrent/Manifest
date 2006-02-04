@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4c16a2bd6b4b1a7554897c7b880ba9f9 ChangeLog 7379
-RMD160 1eb72f1c0f75ce4f414dc93fb34d813651db9d0c ChangeLog 7379
-SHA256 f6d8ed9b380fae9e08e7dac4259ea97872b64dee39e828e0da6d7e440395f391 ChangeLog 7379
+MD5 3fb5f54075c2524d7db3392c6d3bb8a1 ChangeLog 7517
+RMD160 45fab95b59ea4bcf2778360ac4976672b9f44bbd ChangeLog 7517
+SHA256 e1ea1a6eb81b43d80ebac8f30c81ea292fc2b1c79c7d17e53ccabba4d8dd9f33 ChangeLog 7517
 MD5 07f4fde34f29b1823ba3ece4ddfcb022 files/digest-libtorrent-0.7.6 68
 RMD160 b7b633dff85aab04152f2d5e6ddca99c34fc2bc2 files/digest-libtorrent-0.7.6 68
 SHA256 7bc33fcdf493598c9fd8288e2780840c0c2aee5f344f421be52dcc23b3e9127a files/digest-libtorrent-0.7.6 68
@@ -16,19 +16,19 @@ SHA256 8269ff045b1319dec45422cbef03d93e9bbc906f1e9968dbc3889ea2dad63a3e files/di
 MD5 ae059f1aaf57ca3031303e2d9bff3446 libtorrent-0.7.6.ebuild 927
 RMD160 977b1f6a9c8b1f7c970e8df2570138a4c9286e56 libtorrent-0.7.6.ebuild 927
 SHA256 94e6016f1fbdd529285ce1c4a8fdd2d34bacbddba49e79410a2fb888c6e5a7d5 libtorrent-0.7.6.ebuild 927
-MD5 1b7fdda38e20de56eae4717661e919d9 libtorrent-0.8.3.ebuild 961
-RMD160 cc11d8d97f031cd5652931691f46c9417c171a50 libtorrent-0.8.3.ebuild 961
-SHA256 f9fae483661cbaf9604d5bcfc9d2bc537ac61c16fae5ba6b51bbe84771184893 libtorrent-0.8.3.ebuild 961
-MD5 bf7c4c8af54b5a40c041113882f9247b libtorrent-0.8.4.ebuild 961
-RMD160 f72ddf5428f751670e59ae62850b02c305827ddd libtorrent-0.8.4.ebuild 961
-SHA256 9ee32bb3328dcfc58e7a3d3fed3844ebd23b6c2100fca9d89c1da97f2d65decb libtorrent-0.8.4.ebuild 961
+MD5 ed961550eaac8468445e9c70f3c7f447 libtorrent-0.8.3.ebuild 982
+RMD160 5f4aa8bc13f54edc964af4ed9235dbf5a40beee5 libtorrent-0.8.3.ebuild 982
+SHA256 0727e0e64f8ca1ed38d51388de9ec556f92e898a651f6b37f5ca2aeebd591097 libtorrent-0.8.3.ebuild 982
+MD5 ff4bc90cebbdec8998d1e978455b2855 libtorrent-0.8.4.ebuild 982
+RMD160 45c6455a7167e79654f327b0d032151ff2b646d2 libtorrent-0.8.4.ebuild 982
+SHA256 62e42e940a0dd9e71c49408e6633124783d54d910930c24d85b56d82b32bf17d libtorrent-0.8.4.ebuild 982
 MD5 b59f615ff4e1c464f88d1667a66f6b5d metadata.xml 224
 RMD160 aedcea58a9a1d4c2217c92783ef458ebbcbba257 metadata.xml 224
 SHA256 03531f52debc5e006e7461e5e268c6509dd43582e0980dbe7645ea13c8d94355 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5TOUAiZjviIA2XgRAmakAJwN2H/tliUAlbVRgJwb/0E3HpIzGQCgxgAr
-nJXcrkGkQXzRN9YKNSx2fXU=
-=jEQ/
+iD8DBQFD5TcrAiZjviIA2XgRAp9KAKDwgfauRmL2WXGnZl9fBM2z1a9BQQCeJ3Wf
+B+wlFsBm44/GLOLkWsIyGzE=
+=45AD
 -----END PGP SIGNATURE-----

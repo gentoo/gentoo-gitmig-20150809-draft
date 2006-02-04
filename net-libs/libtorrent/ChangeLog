@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.43 2006/02/04 23:06:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.44 2006/02/04 23:22:07 flameeyes Exp $
+
+  04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libtorrent-0.8.3.ebuild, libtorrent-0.8.4.ebuild:
+  Add missing elibtoolize call.
 
   04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/libtorrent-0.8.0-inttypes.patch, -libtorrent-0.8.0.ebuild,

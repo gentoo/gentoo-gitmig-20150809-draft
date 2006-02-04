@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.8.4.ebuild,v 1.1 2006/02/04 22:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.8.4.ebuild,v 1.2 2006/02/04 23:22:07 flameeyes Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic libtool
 
 DESCRIPTION="LibTorrent is a BitTorrent library written in C++ for *nix."
 HOMEPAGE="http://libtorrent.rakshasa.no/"
@@ -22,6 +22,7 @@ src_compile() {
 	[[ $(tc-arch) = "x86" ]] && filter-flags -fomit-frame-pointer
 	replace-flags -Os -O2
 
+	elibtoolize
 	econf \
 		$(use_enable debug) \
 		--disable-dependency-tracking \
