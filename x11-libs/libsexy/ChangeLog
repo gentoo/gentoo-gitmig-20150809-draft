@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libsexy
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.1 2005/12/23 20:52:49 compnerd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.2 2006/02/04 17:42:27 compnerd Exp $
+
+*libsexy-0.1.5 (04 Feb 2006)
+
+  04 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +libsexy-0.1.5.ebuild:
+  Version bump (bug #119972)
 
 *libsexy-0.1.4 (23 Dec 2005)
 
