@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.1.ebuild,v 1.1 2006/02/04 14:55:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.1.ebuild,v 1.2 2006/02/04 15:05:35 ticho Exp $
 
 inherit gnuconfig
 
@@ -18,6 +18,11 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
+RDEPEND="virtual/libc
+	usb? ( dev-libs/libusb )"
+
+DEPEND="${DEPEND} ${RDEPEND}"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -31,7 +36,6 @@ src_compile() {
 		$(use_enable bluetooth) \
 		$(use_enable usb) \
 		$(use_enable debug) \
-		$(use_enable debug apps) \
 		$(use_enable debug dump) \
 		$(use_enable syslog) || die
 	emake || die
