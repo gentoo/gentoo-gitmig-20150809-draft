@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/a52dec
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.43 2005/11/25 00:28:59 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.44 2006/02/04 15:38:56 flameeyes Exp $
+
+  04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> a52dec-0.7.4-r3.ebuild,
+  a52dec-0.7.4-r5.ebuild:
+  Change old ebuild to use autotools eclass/eautoreconf; remove dependency
+  over automake/autoconf as they are set by autotools eclass.
 
   25 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> -a52dec-0.7.4.ebuild,
   -a52dec-0.7.4-r4.ebuild:

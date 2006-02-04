@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.8 2004/12/28 20:19:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.9 2006/02/04 15:38:56 flameeyes Exp $
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic libtool autotools
 
 DESCRIPTION="library for decoding ATSC A/52 streams used in DVD"
 HOMEPAGE="http://liba52.sourceforge.net/"
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ppc64 ~ppc-macos sparc x86"
 IUSE="oss static djbfft"
 
-DEPEND=">=sys-devel/autoconf-2.5
-	>=sys-devel/automake-1.8
-	djbfft? ( sci-libs/djbfft )"
+DEPEND="djbfft? ( sci-libs/djbfft )"
 RDEPEND="virtual/libc"
 
 src_unpack() {
@@ -23,14 +21,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-build.patch
-	export WANT_AUTOMAKE=1.8
-	export WANT_AUTOCONF=2.5
-	libtoolize --force --copy --automake || die "libtoolize"
-	autoheader || die "autoheader"
-	aclocal || die "aclocal"
-	automake -a -f -c || die "automake"
-	autoconf || die "autoconf"
-
+	eautoreconf
 	epunt_cxx
 }
 
