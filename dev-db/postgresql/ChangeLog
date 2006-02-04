@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.256 2006/01/29 20:39:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.257 2006/02/04 17:43:27 agriffis Exp $
+
+  04 Feb 2006; Aron Griffis <agriffis@gentoo.org> postgresql-8.0.4.ebuild:
+  Mark 8.0.4 stable on alpha
 
   29 Jan 2006; Masatomo Nakano <nakano@gentoo.org>
   -files/postgresql.init-7.3.10, -files/postgresql-7.3.10-gentoo.patch,
