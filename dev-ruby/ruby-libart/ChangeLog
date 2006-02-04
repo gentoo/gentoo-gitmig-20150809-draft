@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libart
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.13 2006/01/31 19:51:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.14 2006/02/04 15:07:41 solar Exp $
+
+  04 Feb 2006; <solar@gentoo.org> :
+  - redigest needed due to bad RMD160. bug #121124
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> ruby-libart-0.34.ebuild:
   Mark 0.34 stable on ia64
