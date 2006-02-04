@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4952 2006/02/04 06:57:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4953 2006/02/04 14:54:54 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Andrej Kacian <andrej@kacian.sk> (04 Feb 2006)
+# Mask for testing, there has been a complete code layout change and at least
+# latest obexftp doesn't build with this version.
+>=dev-libs/openobex-1.1
 
 # Michael Stewart <vericgar@gentoo.org> (03 Feb 2006)
 # Mask for testing of new version
