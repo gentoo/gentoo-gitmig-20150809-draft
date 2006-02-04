@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a799fb4018fffb3d4483bcafec2df429 ChangeLog 2513
-RMD160 b5873a0f0c8f1dc0d9b1ca43bb9c419bfafdc04c ChangeLog 2513
-SHA256 5d0d86f0aabb8d63620d87d329afd266caaa7c74a4638ceab683c2a4a331bddb ChangeLog 2513
+MD5 4da73cc14b5098326fef57c1fe10b6ab ChangeLog 2623
+RMD160 565233ac0df199eae7e9fae751cfcc6d49c67080 ChangeLog 2623
+SHA256 7742ed7a11c5bd54c134af81ac067f125da80c64b74a28450c2324d19ee3de2a ChangeLog 2623
 MD5 d96351b56e0971baaa8354845d9f8318 Devel-StackTrace-1.03.ebuild 612
 RMD160 11faced30df6f878202be92b170df486d2f8dd7b Devel-StackTrace-1.03.ebuild 612
 SHA256 52554ac2a613f394363aa789ded5078f7e24bf418cf285abf9a8c9bf91be60f4 Devel-StackTrace-1.03.ebuild 612
 MD5 0eb925a6805dc1b5df9adcce06b00b95 Devel-StackTrace-1.11.ebuild 612
 RMD160 45eed0232b309ad882d7accb220163c7b00e9b9f Devel-StackTrace-1.11.ebuild 612
 SHA256 b3d9d297d053987bedb46dd1f2fb5d85fd735987ad3b1973233f1b49aea4663f Devel-StackTrace-1.11.ebuild 612
-MD5 7d7a5ccdfcc0e87f54e9da91b933f8ae Devel-StackTrace-1.12.ebuild 612
-RMD160 e2f722703fea262c971386c1c9dd3e6f558126a2 Devel-StackTrace-1.12.ebuild 612
-SHA256 46d850ae4d42ee30b69a47b824c2d864a26df4daf57d3ed7548855070ec4bad1 Devel-StackTrace-1.12.ebuild 612
+MD5 780a3f866ba2d9b91e91e49d127d76cc Devel-StackTrace-1.12.ebuild 611
+RMD160 883a7913ac5348f37023be81699601a2b873d173 Devel-StackTrace-1.12.ebuild 611
+SHA256 dace304867cceec433e7416d546977a19c3c4bb3ec95bcdc7fbb9cb0fa99f043 Devel-StackTrace-1.12.ebuild 611
 MD5 237365ee0c1b7afa2dc1ddeb0a88fe1a files/digest-Devel-StackTrace-1.03 71
 RMD160 81a2383d887552ae5d62854285907bc46bdb459a files/digest-Devel-StackTrace-1.03 71
 SHA256 742f6766cb40292bc100a0b8800ae3aa41c7b03ac570f9544be3dc0188842af6 files/digest-Devel-StackTrace-1.03 71
@@ -25,10 +22,3 @@ SHA256 00a1c76b86777ea6a106734eb07b4f5dbcf324ff53101abcdc875cf9fa504c15 files/di
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD49jjJrHF4yAQTrARAkqsAJ4h6KLxKCVtDGol3PCz5nGaSc4uOQCcC/ID
-vNm6ALG8fQzm1myhXgmSpaU=
-=xTXL
------END PGP SIGNATURE-----
