@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1711 2006/02/03 22:02:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1712 2006/02/04 08:24:01 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -617,6 +617,9 @@ media-libs/coin:fontconfig - Support for mananging custom fonts via fontconfig.
 media-libs/devil:allegro - Add support for Allegro
 media-libs/gd:fontconfig - Support for managing custom fonts via fontconfig.
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
+media-libs/glide-v3:voodoo1 - Support 3DFX Voodoo1 video cards
+media-libs/glide-v3:voodoo2 - Support 3DFX Voodoo2 video cards
+media-libs/glide-v3:voodoo5 - Support 3DFX Voodoo4 and Voodoo5 video cards
 media-libs/libifp:module - Build kernel module for non-root usage
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
