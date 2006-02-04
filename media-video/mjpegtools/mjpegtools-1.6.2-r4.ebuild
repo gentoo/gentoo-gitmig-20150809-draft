@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r4.ebuild,v 1.10 2005/11/13 21:06:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r4.ebuild,v 1.11 2006/02/04 16:30:11 flameeyes Exp $
 
-inherit flag-o-matic toolchain-funcs eutils
+inherit flag-o-matic toolchain-funcs eutils autotools
 
 M4V="1"
 
@@ -33,9 +33,7 @@ DEPEND="${RDEPEND}
 		3dnow? ( dev-lang/nasm )
 		sse? ( dev-lang/nasm )
 		)
-	>=sys-apps/sed-4
-	sys-devel/autoconf
-	=sys-devel/automake-1.5*"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -56,8 +54,7 @@ src_unpack() {
 			${S}/utils/altivec/fdct_idct.c
 	fi
 
-	libtoolize --copy --force
-	ACLOCAL="aclocal -I ${WORKDIR}/m4" autoreconf || die
+	AT_M4DIR="${WORKDIR}/m4" eautoreconf
 
 	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }
