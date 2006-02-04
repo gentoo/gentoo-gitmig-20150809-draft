@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/flex
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.34 2005/09/16 11:19:41 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.35 2006/02/04 00:46:21 vapier Exp $
+
+  04 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/flex-configure-LANG.patch, flex-2.5.4a-r6.ebuild:
+  Fix building in funky locales #121408 by J.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> flex-2.5.4a-r6.ebuild:
   Mark 2.5.4a-r6 stable on alpha
