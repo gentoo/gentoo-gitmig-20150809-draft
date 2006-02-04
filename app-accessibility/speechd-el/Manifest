@@ -7,9 +7,9 @@ SHA256 c7ee76d9061efee12864f74a0e47e2b2325ffb2099ecc4c9489eff9e74242bbc files/di
 MD5 ffe62bb3220ef5a35da89644c4340775 files/digest-speechd-el-0.4 66
 RMD160 f9cdbba9ece84f88edc37834bff33cfbc7bdf796 files/digest-speechd-el-0.4 66
 SHA256 542110c0870a6eef53dc8fb3ee9267fbf0891f9753a07deea3cb1a903b8bff2c files/digest-speechd-el-0.4 66
-MD5 c234a8e13dd376895c35c9be8ccc19f8 files/digest-speechd-el-1.0 244
-RMD160 15c803193c08fbb37294a9eaf7c46f74429b4464 files/digest-speechd-el-1.0 244
-SHA256 b54b29cbd492123e7021f54b9273bb37194de90b8f2115e8269b7f8d0518c57d files/digest-speechd-el-1.0 244
+MD5 00cb194fdf22167ce38f8274b223b1fb files/digest-speechd-el-1.0 244
+RMD160 cac1db61289d6aac600858120c264123f6b55ff8 files/digest-speechd-el-1.0 244
+SHA256 43d976424dccdbcfaed371431a0f39dffd9686d02ddc0ac82b420478077449e8 files/digest-speechd-el-1.0 244
 MD5 f49c8c33105389ec215a01ef378c98e1 metadata.xml 228
 RMD160 eab1a8846c5f4d7218d7f3065702c36abd697537 metadata.xml 228
 SHA256 5caa0f8c17af41df6a1cc2c79b27566dfa6a67bbbd0116241dc7f5d17454f1d7 metadata.xml 228
