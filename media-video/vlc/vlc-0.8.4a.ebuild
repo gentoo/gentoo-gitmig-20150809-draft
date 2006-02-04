@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.8 2006/01/12 01:16:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.9 2006/02/04 16:50:41 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -55,7 +55,7 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		libcaca? ( media-libs/libcaca )
 		arts? ( kde-base/arts )
 		alsa? ( media-libs/alsa-lib )
-		wxwindows? ( =x11-libs/wxGTK-2.6* )
+		wxwindows? ( >=x11-libs/wxGTK-2.6.2-r1 )
 		ncurses? ( sys-libs/ncurses )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )
@@ -101,9 +101,6 @@ DEPEND="${RDEPEND}
 		) virtual/x11 )
 		xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 	)
-	=sys-devel/automake-1.6*
-	sys-devel/autoconf
-	sys-devel/libtool
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
