@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.11_rc3.ebuild,v 1.1 2006/02/02 09:41:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.11_rc3.ebuild,v 1.2 2006/02/04 16:08:18 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -56,14 +56,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you are using an emu10k1 based sound card, and you are upgrading"
-	einfo "from a version of alsalib <1.0.6, you will need to recompile packages"
-	einfo "that link against alsa-lib due to some ABI changes between 1.0.5 and"
-	einfo "1.0.6 unique to that hardware. You can do this by executing:"
-	einfo "revdep-rebuild --soname libasound.so.2"
-	einfo "See the following URL for more information:"
-	einfo "http://bugs.gentoo.org/show_bug.cgi?id=65347"
-	echo
-	ewarn "Please use media-sound/alsa-driver rather than in-kernel drivers as there"
-	ewarn "have been some problems recently with the in-kernel drivers.  See bug #87544."
+	ewarn "Starting from alsa 1.0.11_rc3 the configuration for dmix is changed."
+	ewarn "Leaving around old asound.conf or ~/.asoundrc might make all apps"
+	ewarn "using ALSA output crash."
+	ewarn "Note that dmix output is enabled by default on the 'default' device"
+	ewarn "since ALSA 1.0.9."
+	einfo ""
+	einfo "Please try media-sound/alsa-driver before filing bugs about unstable"
+	einfo "or missing output with in-kernel drivers. Misaligned versions of"
+	einfo "alsa-lib and drivers used can cause problems."
 }
