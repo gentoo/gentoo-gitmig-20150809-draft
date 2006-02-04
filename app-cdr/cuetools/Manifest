@@ -1,16 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e3c26b2cba441bfd5519cd752c758d1 ChangeLog 862
+MD5 4d5ff722c6e72080f124d243eef7df22 ChangeLog 1051
+RMD160 0c9523ca7cb8909382ff7952150a165a0df175a7 ChangeLog 1051
+SHA256 94a18a5697e06cf96b4d9fb9fb16f7b2f3ff8c1cd32747728d394ec314e817b6 ChangeLog 1051
 MD5 2fb6787f5d3b6cd0dbed35b7931ce407 cuetools-0.6.ebuild 650
+RMD160 b457faf94b87eaccc382f7b58f00561a6cf2e7a4 cuetools-0.6.ebuild 650
+SHA256 8fc8395aa1caa363cd124455c497877f15cda1210fa367090ed03aac22e67dab cuetools-0.6.ebuild 650
+MD5 0936b1d5cf3ce49105fcf826ae11c931 cuetools-1.3-r1.ebuild 856
+RMD160 0f32ce9901dd7201e855bd09092d19830b1c3ccb cuetools-1.3-r1.ebuild 856
+SHA256 95e7e7a752181e0697e42564d138ec46bd49bf01f712b415a6a706ef8971981c cuetools-1.3-r1.ebuild 856
 MD5 403f758e76fee5442ce65d0ff286a139 cuetools-1.3.ebuild 643
+RMD160 de0bc95a4cc0512b2518a8aa5ca47b7c0fd5a02a cuetools-1.3.ebuild 643
+SHA256 cdf1625ced35784699c1fd3c9f1c1316399af1e4e078b79d0773ea7191dea02e cuetools-1.3.ebuild 643
+MD5 de40a38cc66b3adbe5b1bba37bb20945 files/cuetools-1.3.patch 1044
+RMD160 c535b73f380b8b0763b685822e2d712e165e706a files/cuetools-1.3.patch 1044
+SHA256 cd5c74f6b71306a936366ac098469bcf5ce8da41068910f12eec5b52acfa6bc2 files/cuetools-1.3.patch 1044
 MD5 3890e579ea3b17a19cd2ddb39f2e6baf files/digest-cuetools-0.6 63
+RMD160 8b84414119e01184610d693cc6288c3f70ae23a3 files/digest-cuetools-0.6 63
+SHA256 f35da70f25acdfa9ffdc6164563b29a5e94882d32203d0a3f124121e027a764d files/digest-cuetools-0.6 63
 MD5 dff73500ef5dea3a4c27272d013bca20 files/digest-cuetools-1.3 64
+RMD160 759841bf415338ecd49c1cafb91d80fe8c9ba0f1 files/digest-cuetools-1.3 64
+SHA256 97acbfbbd77a98d11b72fcc11568f3ce965828350a7f4b476aa14dfd7e2ae487 files/digest-cuetools-1.3 64
+MD5 bcac0f481c83d57ca9bce9b36fc28697 files/digest-cuetools-1.3-r1 238
+RMD160 9b6d92192bd4e0624f1af79a7ea1e02fd64f9321 files/digest-cuetools-1.3-r1 238
+SHA256 efb28965de9da76eb89ac6849d1887b6747219cadfea8bada293f776888d7772 files/digest-cuetools-1.3-r1 238
 MD5 4ce63071510202110ebc72dd9ee3924e metadata.xml 214
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDs1iXwUpWvClEHQoRAvhsAKCFTGQ+cRu4l/Nh51ygO96EOFtCmQCfazjI
-yWIemqXnydACzjP0Ytc0w5o=
-=sxhD
------END PGP SIGNATURE-----
+RMD160 4120d9f1b831e1e14b793d69fcac8404e240747f metadata.xml 214
+SHA256 f246585065033926d43d6fb617cf1c19cca0dd470c7efa44cbf957a9fa9e07b7 metadata.xml 214
