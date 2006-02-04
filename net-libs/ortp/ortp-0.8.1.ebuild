@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.8.1.ebuild,v 1.1 2006/02/04 07:44:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.8.1.ebuild,v 1.2 2006/02/04 21:44:21 hanno Exp $
 
 DESCRIPTION="Open Real-time Transport Protocol (RTP) stack"
 HOMEPAGE="http://www.linphone.org/ortp/"
@@ -16,7 +16,8 @@ DEPEND="=dev-libs/glib-2*
 RDEPEND="=dev-libs/glib-2*"
 
 src_compile() {
-	econf $(use_enable ipv6) || die 'configure failed'
+	econf --disable-ewarning \
+		$(use_enable ipv6) || die 'configure failed'
 	emake || die 'make compile failed'
 }
 
