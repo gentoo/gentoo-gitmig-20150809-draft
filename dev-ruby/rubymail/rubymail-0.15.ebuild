@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.15.ebuild,v 1.6 2005/09/02 12:31:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.15.ebuild,v 1.7 2006/02/04 15:09:55 solar Exp $
 
 DESCRIPTION="A mail handling library for Ruby"
 HOMEPAGE="http://www.lickey.com/rubymail/"
