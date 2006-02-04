@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r3,v 1.1 2006/01/31 00:59:05 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r3,v 1.2 2006/02/04 02:21:15 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -169,9 +169,14 @@ get_slot_config() {
 }
 
 checkconfig() {
-	[[ -n "${NOCHECK}" ]] && return 0
 	wdebug 4 ">>> checkconfig(\"${1}\")"
-	local datadir="$1"
+	local datadir="${1}" pidfile="${2}" socket="${3}"
+
+	if [[ -n "${NOCHECK}" ]] ; then
+		rm -f "${pidfile}" "${socket}"
+		return 0
+	fi
+
 	if [ ! -d "${datadir}" ]; then
 		eerror "MySQL datadir is empty or invalid"
 		eerror "Please check your my.cnf : ${MY_CNF}"
@@ -185,6 +190,28 @@ checkconfig() {
 		wdebug 4 "<<< checkconfig() KO"
 		return 1
 	fi
+
+	if [[ -f "${pidfile}" ]] ; then
+		kill -15 $(< ${pidfile}) 2>/dev/null
+		if [[ $? -eq 0 ]] ; then
+			# the process exist, we have a problem
+			eerror "\"${pidfile}\" is still present."
+			eerror "Please check that no server is running."
+			wdebug 4 "<<< checkconfig() KO"
+			return 1
+		else
+			rm -f "${pidfile}"
+		fi
+	fi
+
+	if [[ -S ${socket} ]] ; then
+		# this is candidate for removal
+		eerror "\"${socket}\" is still present."
+		eerror "Please check that it's not owned by other servers and then remove it."
+		wdebug 4 "<<< checkconfig() KO"
+		return 1
+	fi
+
 	wdebug 4 "<<< checkconfig() ok"
 	return 0
 }
@@ -223,35 +250,25 @@ start() {
 		retstatus=0
 		get_slot_config "${srv_slot}" "${srv_num}" || retstatus=1
 
-		if [[ -f ${pidfile} ]] || [[ -S ${socket} ]] ; then
-			echo "\"${pidfile}\" and/or \"${socket}\" are still present."
-			echo "Please check that no server is running and remove them."
-			retstatus=1 ; continue			
+		# checks
+		if ! checkconfig "${datadir}" "${pidfile}" "${socket}" ; then
+			retstatus=2 ; continue
 		fi
-		
-		# pre_run checks
-		[[ "$retstatus" -eq 0 ]] && checkconfig "${datadir}" || retstatus=2
-		if [[ "$retstatus" -eq 0 ]] ; then
-			if in_list "${pidfile}" "${pidfilelist}" ; then
-				eerror "Sorry, won't start with same pid-file: ${pidfile}"
-				retstatus=3 ; continue
-			fi
-			if in_list "${datadir}" "${datadirlist}" ; then
-				eerror "Sorry, won't start with same datadir: ${datadir}"
-				retstatus=4 ; continue
-			fi
-			if in_list "${socket}" "${socketlist}" ; then
-				eerror "Sorry, won't start with same socket: ${socket}"
-				retstatus=5 ; continue
-			fi
+		if in_list "${pidfile}" "${pidfilelist}" ; then
+			eerror "Sorry, won't start with same pid-file: ${pidfile}"
+			retstatus=3 ; continue
 		fi
-
-		if ! checkconfig "${datadir}" ; then
-			retstatus=6 ; continue
+		if in_list "${datadir}" "${datadirlist}" ; then
+			eerror "Sorry, won't start with same datadir: ${datadir}"
+			retstatus=4 ; continue
+		fi
+		if in_list "${socket}" "${socketlist}" ; then
+			eerror "Sorry, won't start with same socket: ${socket}"
+			retstatus=5 ; continue
 		fi
 
 		einfo "Starting ${myservice} (${MY_CNF})"
-		
+
 		mysqld_thing="${MY_CNF:+"--defaults-file="}${MY_CNF}"
 		mysqld_thing="${mysqld_thing} ${unmanagedparams}"
 		mysqld_thing="${mysqld_thing} --basedir=${basedir}"
@@ -260,7 +277,7 @@ start() {
 		mysqld_thing="${mysqld_thing} --socket=${socket}"
 
 		wdebug 2 "starting mysqld with: ${mysqld_thing}"
-		
+
 		if [[ ${ssd_thing} -eq 1 ]] ; then
 			start-stop-daemon --quiet ${DEBUG/*/"--verbose"} --start \
 			--background ${NICE:+"--nicelevel "}${NICE} \
