@@ -1,6 +1,13 @@
 # ChangeLog for net-print/gtklp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.20 2005/09/20 03:30:29 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.21 2006/02/04 21:56:42 vanquirius Exp $
+
+*gtklp-1.1.0 (04 Feb 2006)
+
+  04 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -gtklp-1.0d.ebuild,
+  -gtklp-1.0f.ebuild, -gtklp-1.0g.ebuild, +gtklp-1.1.0.ebuild:
+  1.1.0 version bump for bug 121592. Thanks to Christian Schlotter <again at
+  gmx dot de>. Christian notes that the nls sed fix has been sent upstream.
 
 *gtklp-1.0g-r1 (20 Sep 2005)
 
